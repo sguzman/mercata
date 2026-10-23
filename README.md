@@ -52,3 +52,5 @@ Licensed under the repository's [LICENSE](LICENSE).
 ## Prepared research inventories
 
 - [YouTube study plan](plans/youtube.md) ([machine-readable tasks](plans/youtube.json)): 164 existing tasks and 235 additional YouTube-specific research questions, **399 pending tasks in all**, across 22 workstreams and four phases. Inventory creation is complete; evidence collection, economic analysis, creator actions, and experiments have not begun.
+
+The [YouTube ontology](ontology/youtube/README.md) contains an independent glossary, category taxonomy, official policy snapshots and measurement dictionary. Its public dossier now includes dated, linked primary-source claims; earnings distributions and community sizes are still unknown.

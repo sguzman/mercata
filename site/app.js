@@ -142,7 +142,7 @@ function showSocialOverview() {
     add(tag,dot,make('span','social-domain',entry.domain.replaceAll('-',' ')));
     const heading=make('h3','',entry.name);
     const caption=make('p','', 'Population · demographics · subcultures · discovery · revenue');
-    const status=make('span','social-pending','Research pending');
+    const status=make('span','social-pending',entry.status==='researching'?'Research underway':'Research pending');
     const action=make('a','inline-link','Explore research queues ↗');
     action.href='#dossier-view';
     action.addEventListener('click',event=>{event.preventDefault();showDossier(entry);});
@@ -289,7 +289,7 @@ function renderStudyPlan(plan) {
   add(shell,make('p','eyebrow','SPECIMEN RESEARCH PLAN'),
     make('h4','audience-atlas-title','Planned investigation'),
     make('p','audience-atlas-description',
-      'Inventory ready; evidence gathering has not started. Expand a phase and its workstreams to inspect the questions and completion criteria.'));
+      plan.status==='researching'?'Research underway. These task percentages reflect partial source-backed work; missing population and income statistics remain unresolved.':'Inventory ready; evidence gathering has not started. Expand a phase and its workstreams to inspect the questions and completion criteria.'));
   const summary=make('div','study-inventory-counts');
   add(summary,blockHeading('Existing tasks',plan.baseline.base_task_count),
     blockHeading('Detailed tasks',plan.detail_task_count),
@@ -334,13 +334,48 @@ function renderStudyPlan(plan) {
   return shell;
 }
 
+
+function renderPlatformPolicies(policy, record) {
+  if(!policy)return null;
+  const section=make('section','platform-policy');
+  add(section,make('p','eyebrow','VERIFIED PLATFORM TERMS'),
+    make('h4','audience-atlas-title','Eligibility and creator payments'),
+    make('p','audience-atlas-description','These are published conditions and percentages, not estimated earnings. They have different revenue bases and may vary by country, feature and application review.'));
+  const grid=make('div','platform-policy-grid');
+  for(const item of policy.items) {
+    const card=make('article','policy-card');
+    card.append(make('h5','',item.title));
+    const pct=item.result?.creator_share_percent;
+    if(pct!==undefined)card.append(make('strong','policy-number',pct+'%'));
+    if(item.result?.base)card.append(make('p','policy-basis','Base: '+item.result.base.replaceAll('_',' ')));
+    if(item.kind==='eligibility') {
+      const list=make('ul','policy-conditions');
+      for(const condition of item.conditions) {
+        const row=make('li','',
+          condition.minimum.toLocaleString()+' '+condition.metric.replaceAll('_',' ')+(condition.window?' within '+condition.window:''));
+        list.append(row);
+      }
+      card.append(list);
+    }
+    if(item.kind==='feature_rule'){
+      const enabled=item.result?.enabled;
+      card.append(make('p','policy-basis',item.result?.feature.replaceAll('_',' ')+': '+(enabled?'available':'restricted')));
+    }
+    card.append(make('p','measure-limit',item.limitations));
+    card.append(audienceSources(item.source_ids,record));
+    grid.append(card);
+  }
+  section.append(grid);
+  return section;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -368,7 +403,7 @@ async function showDossier(entry) {
     add(stats,blockHeading('Research tasks',studyPlan?studyPlan.total_tracked_tasks:tasks.length),blockHeading('Verified tasks',done),
       blockHeading('Sources',record.evidence.length),blockHeading('Claims',record.claims.length));
     outer.append(stats);
-    const intro=make('p','dossier-intro',record.summary||'This marketplace has been admitted for research. No earnings claims, fees or market estimates have been verified yet.');
+    const intro=make('p','dossier-intro',record.summary||'This marketplace has not been researched yet.');
     outer.append(intro);
     const evidenceArea=make('div','dossier-evidence');
     evidenceArea.append(detailSection('Published observations',record.observations,observation=>{
@@ -380,7 +415,9 @@ async function showDossier(entry) {
     }));
     evidenceArea.append(detailSection('Claims and sources',record.claims,claim=>{
       const card=make('div','research-item');
-      add(card,make('strong','',claim.text),make('small','',claim.source_ids.join(', ')));
+      add(card,make('strong','',claim.text),make('small','','Checked '+claim.observed_at+' · '+claim.confidence+' confidence'));
+      if(claim.limitations)card.append(make('p','measure-limit','Limits: '+claim.limitations));
+      card.append(audienceSources(claim.source_ids,record));
       return card;
     }));
     evidenceArea.append(detailSection('Revenue opportunities',record.opportunities,opportunity=>{
@@ -390,6 +427,8 @@ async function showDossier(entry) {
       return add(make('div','research-item'),make('p','',risk.title||risk.id||'Risk'));
     }));
     outer.append(evidenceArea);
+    const policySection=renderPlatformPolicies(platformPolicy,record);
+    if(policySection)outer.append(policySection);
     const audience=renderAudienceResearch(record);
     if(audience)outer.append(audience);
     if(studyPlan)outer.append(renderStudyPlan(studyPlan));
