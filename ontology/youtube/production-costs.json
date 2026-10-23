@@ -356,7 +356,35 @@
         "Respondent share with no podcast revenue is not a YouTube no-earner share."
       ],
       "inference_to_typical_youtube_creator_cost": "prohibited",
-      "recommended_use": "Illustrate measurable labor and cash bin definitions and the importance of zero earners, not set YouTube budget assumptions"
+      "recommended_use": "Illustrate measurable labor and cash bin definitions and the importance of zero earners, not set YouTube budget assumptions",
+      "audio_video_comparisons": [
+        {
+          "id": "monthly_cost_at_least_50_usd",
+          "population": "post_launch_survey_respondents_grouped_by_podcast_video_format",
+          "outcome": "share_spending_usd50_plus_monthly",
+          "unit": "approximate_percent_of_format_subgroup",
+          "video_percent_approx": 50,
+          "audio_only_percent_approx": 28,
+          "video_subsample_n": null,
+          "audio_subsample_n": null,
+          "causal_effect": null,
+          "confidence": "descriptive_only",
+          "notes": "Source says half of full-video podcasters versus 28% of audio-only reported monthly spending of $50 or more."
+        },
+        {
+          "id": "episode_more_than_six_hours",
+          "population": "post_launch_survey_respondents_grouped_by_podcast_video_format",
+          "outcome": "share_reporting_more_than_six_hours_per_episode",
+          "unit": "approximate_percent_of_format_subgroup",
+          "video_percent_approx": 36,
+          "audio_only_percent_approx": 45,
+          "video_subsample_n": null,
+          "audio_subsample_n": null,
+          "causal_effect": null,
+          "confidence": "descriptive_only",
+          "notes": "Approximate source subgroup comparison; no observed causal labor savings from choosing video."
+        }
+      ]
     }
   ]
 }
