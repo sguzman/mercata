@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "updated_at": "2026-10-23",
+  "scope": "External creator revenue linked to YouTube, not direct platform payout and not total creator income.",
+  "datasets": [
+    {
+      "id": "strauss-yang-mazzucato-2026-patreon",
+      "title": "Rich-get-richer? Platform attention and earnings inequality using Patreon earnings data",
+      "authors": [
+        "Ilan Strauss",
+        "Jangho Yang",
+        "Mariana Mazzucato"
+      ],
+      "publication": "Industrial and Corporate Change",
+      "doi": "10.1093/icc/dtag044",
+      "url": "https://doi.org/10.1093/icc/dtag044",
+      "published_year": 2026,
+      "source_type": "peer_reviewed_academic_study",
+      "revenue_channel": "patreon_support",
+      "youtube_relation": "Creators with Patreon income and only one declared social-platform affiliation, YouTube",
+      "years": [
+        2018,
+        2021,
+        2024
+      ],
+      "months": [
+        "March"
+      ],
+      "geography": "Not restricted to an identified country in the published table",
+      "currency": "USD",
+      "reporting_period": "monthly",
+      "observations": 23435,
+      "threshold": "Monthly Patreon earnings greater than USD 10; zero and small earners excluded",
+      "sampling": "Patreon monthly earnings dataset purchased directly from Patreon. Authors filter to Patreon accounts affiliated with only one social platform. Missing earnings imputed with a regression model.",
+      "summary_statistics": {
+        "mean": 250,
+        "median": 47,
+        "standard_deviation": 1490,
+        "q25": 28,
+        "q75": 119,
+        "min": 10,
+        "max": 87802
+      },
+      "limitations": [
+        "The sample does not represent all YouTube creators and excludes non-Patreon and zero/low Patreon earners.",
+        "Patreon earnings are not YouTube native advertising, Premium, memberships, sponsorships or total creator income.",
+        "Some creator earnings are model-imputed; unusually successful creators are more likely to conceal figures.",
+        "Pooled monthly observations over three March periods are not a current-month income forecast.",
+        "Creators affiliated with more than one external social platform were excluded.",
+        "These earnings omit production costs, so they are not creator profit."
+      ],
+      "recommended_use": "Illustrate the degree of dispersion and selection bias in off-platform patron income, not estimate typical YouTube earnings.",
+      "inference_to_general_creator_income": "prohibited"
+    }
+  ],
+  "unanswered": [
+    "Representative mean, median and zero-earner share of native YouTube payouts",
+    "Advertiser-rate heterogeneity across content vertical and audience country",
+    "Mean versus median total creator income including sponsorships and products",
+    "Per-hour income net of failed videos, marketing and production effort",
+    "Comparable income distributions for new channels and small audience cohorts"
+  ]
+}
