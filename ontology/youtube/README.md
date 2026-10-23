@@ -29,3 +29,7 @@ The [399-task YouTube research inventory](../../plans/youtube.md) remains the wo
 ## How discovery works
 
 See the [officially documented search and recommendation surfaces](discovery.md). Search ranking, personalized Home, Up Next and Shorts are different ways audiences find content. Creator RPM and advertiser CPM use different denominators; no per-view revenue rate is assumed.
+
+## Researching communities without inventing their sizes
+
+The [public YouTube sampling protocol](public-sampling.md) defines topic inclusion rules, legal data access, stratified sampling, observed channel counts, demographic survey denominators, missingness, and the August 2026 break in public video view-count definitions. It must be followed before treating any topic sample as representative of people or earnings.
