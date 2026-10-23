@@ -116,7 +116,7 @@ function showCatalog() {
     link.href='#dossier-view';
     link.addEventListener('click',event=>{event.preventDefault();showDossier(entry);});
     add(card,header,title,description,link,
-      make('small','',entry.research_profiles?.includes('social_audience') ? '👥 Audience + subcultures · Admitted '+entry.created_at : 'Admitted '+entry.created_at));
+      make('small','',entry.plan ? '📋 Detailed research inventory · Admitted '+entry.created_at : entry.research_profiles?.includes('social_audience') ? '👥 Audience + subcultures · Admitted '+entry.created_at : 'Admitted '+entry.created_at));
     frag.append(card);
   }
   grid.replaceChildren(frag);
@@ -283,13 +283,64 @@ function renderAudienceResearch(record) {
   return section;
 }
 
+function renderStudyPlan(plan) {
+  const shell=make('section','study-inventory');
+  shell.id='research-plan';
+  add(shell,make('p','eyebrow','SPECIMEN RESEARCH PLAN'),
+    make('h4','audience-atlas-title','Planned investigation'),
+    make('p','audience-atlas-description',
+      'Inventory ready; evidence gathering has not started. Expand a phase and its workstreams to inspect the questions and completion criteria.'));
+  const summary=make('div','study-inventory-counts');
+  add(summary,blockHeading('Existing tasks',plan.baseline.base_task_count),
+    blockHeading('Detailed tasks',plan.detail_task_count),
+    blockHeading('Total tasks',plan.total_tracked_tasks),
+    blockHeading('Research progress',plan.progress_percent+'%'));
+  shell.append(summary);
+  shell.append(progress(plan.progress_percent,'Research completed'));
+  const links=make('div','dossier-links');
+  const json=make('a','inline-link','Complete machine plan ↗');
+  json.href='./plans/'+plan.specimen_id+'.json';
+  const readable=make('a','inline-link','Readable research inventory ↗');
+  readable.href='https://github.com/sguzman/mercata/blob/main/plans/'+encodeURIComponent(plan.specimen_id)+'.md';
+  readable.rel='noopener noreferrer';
+  readable.target='_blank';
+  add(links,json,readable);
+  shell.append(links);
+  for(const phase of plan.phases){
+    const phasePanel=make('details','study-phase');
+    const phaseCount=plan.detail_tasks.filter(t=>t.phase===phase.id).length;
+    const title=make('summary','',phase.emoji+' Phase '+phase.id+': '+phase.title+' · '+phaseCount+' detailed tasks');
+    phasePanel.append(title,make('p','study-phase-description',phase.exit));
+    for(const queueId of phase.queue_ids){
+      const work=plan.workstreams.find(w=>w.id===queueId);
+      if(!work)continue;
+      const groupTasks=plan.detail_tasks.filter(t=>t.queue_id===queueId);
+      const group=make('details','study-workstream');
+      const label=make('summary','',work.emoji+' '+work.name+' · '+groupTasks.length+' planned tasks');
+      group.append(label);
+      const list=make('ol','queue-task-list');
+      for(const task of groupTasks){
+        const row=make('li','study-task');
+        add(row,make('strong','',task.title+' · '+task.percent+'%'),
+          make('p','',task.objective),
+          make('small','', 'Acceptance: '+task.acceptance));
+        list.append(row);
+      }
+      group.append(list);
+      phasePanel.append(group);
+    }
+    shell.append(phasePanel);
+  }
+  return shell;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work]=await Promise.all([read(entry.dossier),read(entry.queue)]);
+    const [record,work,studyPlan]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -314,7 +365,7 @@ async function showDossier(entry) {
     const tasks=work.queues.flatMap(q=>q.tasks);
     const done=tasks.filter(t=>t.status==='complete'&&t.progress===100).length;
     const stats=make('div','dossier-stats');
-    add(stats,blockHeading('Research tasks',tasks.length),blockHeading('Verified tasks',done),
+    add(stats,blockHeading('Research tasks',studyPlan?studyPlan.total_tracked_tasks:tasks.length),blockHeading('Verified tasks',done),
       blockHeading('Sources',record.evidence.length),blockHeading('Claims',record.claims.length));
     outer.append(stats);
     const intro=make('p','dossier-intro',record.summary||'This marketplace has been admitted for research. No earnings claims, fees or market estimates have been verified yet.');
@@ -341,6 +392,7 @@ async function showDossier(entry) {
     outer.append(evidenceArea);
     const audience=renderAudienceResearch(record);
     if(audience)outer.append(audience);
+    if(studyPlan)outer.append(renderStudyPlan(studyPlan));
     outer.append(make('h4','dossier-queues-title','Research queues'));
     const queueList=make('div','dossier-queues');
     for(const group of work.queues){

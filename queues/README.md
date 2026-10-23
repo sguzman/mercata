@@ -8,3 +8,7 @@ Every task remains pending at 0% until supported by documented acceptance eviden
 - [Domain-specific research](../pipeline/domains.json)
 - [Social, audience and subculture research](../pipeline/social.json)
 - [Specimen catalog](../gallery/README.md)
+
+## Prepared deep research inventories
+
+The [YouTube research plan](../plans/youtube.md) adds 235 YouTube-specific questions to its existing 164-item queue, producing 399 tracked tasks, all currently pending at 0%. These detailed tasks live in [a separate machine plan](../plans/youtube.json) and are not counted in the original 3,064 baseline questions.

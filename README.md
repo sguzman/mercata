@@ -48,3 +48,7 @@ Project accent: **#D19A42**, a warm amber. Each specimen receives a separate per
 Mercata follows [Tarium](https://github.com/sguzman/tarium) public-project conventions but is not automatically a member of its central registry. Explicit owner approval is required to register it. All essential ontology, gallery, data, site and tooling live here.
 
 Licensed under the repository's [LICENSE](LICENSE).
+
+## Prepared research inventories
+
+- [YouTube study plan](plans/youtube.md) ([machine-readable tasks](plans/youtube.json)): 164 existing tasks and 235 additional YouTube-specific research questions, **399 pending tasks in all**, across 22 workstreams and four phases. Inventory creation is complete; evidence collection, economic analysis, creator actions, and experiments have not begun.

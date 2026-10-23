@@ -207,3 +207,18 @@ h1 em {font-style:italic;color:var(--accent)}
 .social-market-card .inline-link{display:block;width:max-content}
 @media(max-width:1000px){.social-overview{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.social-overview{grid-template-columns:1fr}}
+
+/* Prepared specimen study plans: a readable inventory, not a completed research dossier */
+.study-inventory {border-top:1px solid var(--line);margin-top:36px;padding-top:27px;scroll-margin-top:95px}
+.study-inventory-counts {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:17px 0}
+.study-inventory-counts .dossier-stat {min-width:0}
+.study-phase {border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:17px 19px;margin-top:11px}
+.study-phase>summary {font-size:15px;font-weight:750;cursor:pointer}
+.study-phase-description {color:var(--muted);font-size:13px;padding-top:10px}
+.study-workstream {margin:12px 0 0 13px;padding:12px 14px;border-left:3px solid var(--accent);background:var(--surface);border-radius:7px}
+.study-workstream>summary {font-size:13px;font-weight:700;cursor:pointer}
+.study-workstream ol {margin-bottom:0}
+.study-task {padding:10px 4px;border-top:1px solid var(--line)}
+.study-task strong {font-size:12px}
+.study-task p,.study-task small {display:block;font-size:12px;line-height:1.6;color:var(--muted);margin:4px 0}
+@media(max-width:650px){.study-inventory-counts{grid-template-columns:repeat(2,minmax(0,1fr))}.study-phase{padding:13px}.study-workstream{margin-left:0}}

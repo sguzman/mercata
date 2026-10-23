@@ -81,6 +81,39 @@ for (const entry of index.specimens) {
       for(const id of insight.source_ids)ensure(sources.has(id),'Unregistered insight source '+id);
     }
   }
+  if(entry.plan) {
+    ensure(queue.plan === entry.plan, 'Study-plan link mismatch');
+    const plan=load(entry.plan);
+    ensure(plan.schema_version===1 && plan.kind==='research_plan' && plan.specimen_id===entry.id,
+      'Invalid study plan');
+    const baseCount=queue.queues.reduce((n,g)=>n+g.tasks.length,0);
+    ensure(plan.baseline.base_task_count===baseCount,'Wrong baseline task count');
+    ensure(plan.baseline.base_queue_count===queue.queues.length,'Wrong baseline queue count');
+    ensure(plan.detail_task_count===plan.detail_tasks.length,'Wrong detailed task count');
+    ensure(plan.total_tracked_tasks===baseCount+plan.detail_tasks.length,'Wrong total task count');
+    const knownQueues=new Set(queue.queues.map(g=>g.id));
+    const ids=new Set();
+    for(const item of plan.detail_tasks){
+      ensure(typeof item.id==='string' && !ids.has(item.id),'Duplicate or missing plan task ID');
+      ids.add(item.id);
+      ensure(knownQueues.has(item.queue_id),'Unknown plan queue: '+item.queue_id);
+      ensure(item.title && item.objective && item.acceptance,'Incomplete plan task: '+item.id);
+      ensure(Number.isInteger(item.percent) && item.percent>=0 && item.percent<=100,'Invalid plan progress');
+      ensure(item.percent<100 || (item.status==='complete' && item.evidence.length>0),
+        'Unverified plan completion: '+item.id);
+    }
+    ensure(plan.workstreams.length===queue.queues.length,'Missing study workstreams');
+    for(const work of plan.workstreams) {
+      ensure(knownQueues.has(work.id),'Unknown plan workstream');
+      ensure(work.detail_tasks.length===plan.detail_tasks.filter(t=>t.queue_id===work.id).length,
+        'Study-plan workstream count mismatch: '+work.id);
+    }
+    const phaseIds=new Set(plan.phases.map(p=>p.id));
+    ensure(plan.detail_tasks.every(t=>phaseIds.has(t.phase)),'Study task lacks a valid phase');
+    const avg=plan.detail_tasks.length?
+      Math.round(plan.detail_tasks.reduce((n,t)=>n+t.percent,0)/plan.detail_tasks.length):0;
+    ensure(plan.progress_percent===avg,'Study-plan percentage mismatch');
+  }
   for(const group of queue.queues) {
   const expectedTasks = expectedByQueue.get(group.id);
   ensure(expectedTasks && group.tasks.length === expectedTasks.length,'Task coverage mismatch in queue '+group.id);
