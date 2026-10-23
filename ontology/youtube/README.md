@@ -1,6 +1,6 @@
 # YouTube ontology — audiences, content and earning
 
-The independent [machine model](model.json) defines **64 concepts** and **23 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **26 candidate overlapping subcultures**, without pretending their populations have been measured.
+The independent [machine model](model.json) defines **64 concepts** and **23 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **28 candidate overlapping subcultures**, without pretending their populations have been measured.
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
@@ -12,7 +12,7 @@ Platform demographics (age, sex, gender, race or ethnicity, political affiliatio
 
 ## Community ontology
 
-The 26 topic definitions include beauty, feminine lifestyle, youth culture, child-directed animation, general animation, gaming, memes, civic/political commentary and other cultural interests. They are open, overlapping coding categories. Labels do not establish that any person belongs to a group, and a topic's video count is not a topic's number of unique viewers. Until an appropriate sampled or aggregate source is found, *every* audience and creator size estimate remains unknown.
+The 28 topic definitions include beauty, feminine lifestyle, youth culture, child-directed animation, general animation, gaming, memes, civic/political commentary and other cultural interests. They are open, overlapping coding categories. Labels do not establish that any person belongs to a group, and a topic's video count is not a topic's number of unique viewers. Until an appropriate sampled or aggregate source is found, *every* audience and creator size estimate remains unknown.
 
 Children's animation requires separating broadly suitable animation from material deliberately directed at children. That classification affects advertisement and social features under YouTube's rules, and individual children must not be profiled.
 
@@ -33,3 +33,7 @@ See the [officially documented search and recommendation surfaces](discovery.md)
 ## Researching communities without inventing their sizes
 
 The [public YouTube sampling protocol](public-sampling.md) defines topic inclusion rules, legal data access, stratified sampling, observed channel counts, demographic survey denominators, missingness, and the August 2026 break in public video view-count definitions. It must be followed before treating any topic sample as representative of people or earnings.
+
+## Measured content activity
+
+The [topic evidence register](topic-observations.md) records 14 observations from YouTube publications, including global gaming views, topic-title-filtered beauty or format views, news watch hours, and animation fan-survey results. The [machine version](topic-observations.json) includes each source, geography, period, unit and limitation. These measures reveal **content activity**, not unique community population. All 28 topic population estimates remain unknown.
