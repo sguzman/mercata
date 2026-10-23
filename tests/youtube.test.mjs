@@ -74,3 +74,25 @@ test('YouTube task percentage matches its original and detailed queues',async()=
   assert(original.every(t=>t.progress<100 || (t.status==='complete'&&t.evidence.length>0)));
   assert(plan.detail_tasks.every(t=>t.percent<100 || (t.status==='complete'&&t.evidence.length>0)));
 });
+
+test('Creator-income sample cannot be mistaken for typical YouTube payments',async()=>{
+  const [study,dossier]=await Promise.all([
+    load('ontology/youtube/creator-income-evidence.json'),load('specimens/youtube.json')
+  ]);
+  assert.equal(study.datasets.length,1);
+  assert.equal(study.datasets[0].revenue_channel,'patreon_support');
+  assert.equal(study.datasets[0].inference_to_general_creator_income,'prohibited');
+  const d=study.datasets[0];
+  const stats=d.summary_statistics;
+  assert(stats.q25<=stats.median&&stats.median<=stats.q75);
+  assert(stats.mean>stats.median);
+  assert(d.threshold&&d.sampling&&d.limitations.length>=3);
+  assert(dossier.evidence.some(x=>x.url===d.url));
+});
+
+test('U.S. adult-use series has explicit survey-mode breaks',async()=>{
+  const series=await load('ontology/youtube/us-adult-usage-history.json');
+  assert.equal(series.points.length,7);
+  assert(series.comparability_notes.some(note=>note.includes('survey mode')));
+  assert.equal(series.points.at(-1).percent,84);
+});
