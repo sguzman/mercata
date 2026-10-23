@@ -1,0 +1,431 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "product_specific_eligibility_matrix",
+  "as_of": "2026-10-23",
+  "status": "published_rules_not_account_decisions",
+  "records": [
+    {
+      "pathway_id": "watch-page-ads",
+      "name": "Watch-page advertising",
+      "product_group": "native_advertising",
+      "source_kind": "official_youtube_product",
+      "tier": "ypp_ads",
+      "minimum_creator_age": null,
+      "official_module": "Watch Page Monetization Module",
+      "child_directed_status": "contextual_advertising_possible",
+      "music_channel_status": "rights_and_content_review",
+      "region": "YPP available countries",
+      "gates": [
+        "Meet the advertising/Premium YPP threshold and pass review",
+        "Accept the Watch Page Monetization Module",
+        "Ads must be suitable and eligible; rights and regional restrictions apply"
+      ],
+      "source_ids": [
+        "earning-help",
+        "ypp-main",
+        "revenue-shares"
+      ],
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "shorts-ads",
+      "name": "Shorts Feed advertising",
+      "product_group": "native_advertising",
+      "source_kind": "official_youtube_product",
+      "tier": "ypp_ads",
+      "minimum_creator_age": null,
+      "official_module": "Shorts Monetization Module",
+      "child_directed_status": "content_policy_review",
+      "music_channel_status": "licensed_audio_pool_rules",
+      "region": "YPP available countries",
+      "gates": [
+        "Meet the ads YPP threshold and pass review",
+        "Accept the Shorts Monetization Module",
+        "Only eligible engaged Shorts views count for pooled revenue"
+      ],
+      "source_ids": [
+        "earning-help",
+        "ypp-main",
+        "shorts-policy"
+      ],
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "premium-revenue",
+      "name": "YouTube Premium allocation",
+      "product_group": "native_subscription_allocation",
+      "source_kind": "official_youtube_product",
+      "tier": "ypp_ads",
+      "minimum_creator_age": null,
+      "official_module": "Applicable Premium revenue terms",
+      "child_directed_status": "content_policy_review",
+      "music_channel_status": "rights_and_content_review",
+      "region": "YPP available countries",
+      "gates": [
+        "Have advertising and Premium revenue-sharing eligibility",
+        "Premium viewers must watch eligible content",
+        "Premium allocation is not a per-view fixed price"
+      ],
+      "source_ids": [
+        "earning-help",
+        "ypp-main"
+      ],
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "channel-memberships",
+      "name": "Channel memberships",
+      "product_group": "native_fan_support",
+      "source_kind": "official_youtube_product",
+      "tier": "expanded_ypp",
+      "minimum_creator_age": 18,
+      "official_module": "Commerce Product Module",
+      "child_directed_status": "ineligible_if_child_directed_channel_or_many_kids_videos",
+      "music_channel_status": "not_music_channel_under_SRAV",
+      "region": "Memberships feature available countries",
+      "gates": [
+        "Meet expanded YPP eligibility and be approved",
+        "Creator age at least 18",
+        "Live in a memberships-eligible country",
+        "Accept Commerce Product Module",
+        "Channel is not made for kids or significantly child-directed",
+        "Not a music channel under SRAV"
+      ],
+      "source_ids": [
+        "earning-help",
+        "revenue-shares"
+      ],
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "super-chat",
+      "name": "Super Chat and Super Stickers",
+      "product_group": "native_fan_support",
+      "source_kind": "official_youtube_product",
+      "tier": "expanded_ypp",
+      "minimum_creator_age": 18,
+      "official_module": "Commerce Product Module",
+      "child_directed_status": "feature_restricted_on_made_for_kids",
+      "music_channel_status": "check_specific_rules",
+      "region": "Super Chat and Super Stickers feature countries",
+      "gates": [
+        "Be accepted into eligible YPP tier",
+        "Creator age at least 18",
+        "Live in eligible country",
+        "Accept Commerce Product Module",
+        "Live chat and individual stream must support paid interactions"
+      ],
+      "source_ids": [
+        "earning-help",
+        "revenue-shares",
+        "child-features"
+      ],
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "super-thanks",
+      "name": "Super Thanks",
+      "product_group": "native_fan_support",
+      "source_kind": "official_youtube_product",
+      "tier": "expanded_ypp",
+      "minimum_creator_age": 18,
+      "official_module": "Commerce Product Module",
+      "child_directed_status": "feature_restricted_on_made_for_kids",
+      "music_channel_status": "not_music_channel_under_SRAV",
+      "region": "Super Thanks feature countries",
+      "gates": [
+        "Be accepted into eligible YPP tier",
+        "Creator age at least 18",
+        "Live in eligible country",
+        "Accept Commerce Product Module",
+        "Check Super Thanks restrictions and music channel requirements"
+      ],
+      "source_ids": [
+        "earning-help",
+        "revenue-shares",
+        "child-features"
+      ],
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "live-gifts",
+      "name": "Live gifts, Jewels and Rubies",
+      "product_group": "native_virtual_items",
+      "source_kind": "official_youtube_product",
+      "tier": "ypp_virtual_items",
+      "minimum_creator_age": 18,
+      "official_module": "Virtual Items Module",
+      "child_directed_status": "individual_made_for_kids_stream_ineligible",
+      "music_channel_status": "check_specific_rules",
+      "region": "Gifts available creator countries",
+      "gates": [
+        "Channel is in YPP",
+        "Creator at least 18 with eligible verified AdSense identity",
+        "Accept Virtual Items Module and meet individual feature rules",
+        "Eligible country and stream; private, unlisted, age-restricted, made-for-kids and fundraiser streams excluded",
+        "Comments or live chat must remain available",
+        "Vertical and horizontal live streams may support gifts where eligible"
+      ],
+      "source_ids": [
+        "virtual-items",
+        "gifts-eligibility"
+      ],
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "shopping-own",
+      "name": "Shopping: own products",
+      "product_group": "commerce_facilitated",
+      "source_kind": "official_youtube_product",
+      "tier": "shopping_own",
+      "minimum_creator_age": null,
+      "official_module": "Connected eligible merchant store",
+      "child_directed_status": "ineligible_if_child_directed_channel_or_many_kids_videos",
+      "music_channel_status": "official_artist_channel_exception_possible",
+      "region": "Own-product Shopping availability subject to linked store and product regions",
+      "gates": [
+        "Channel in YPP",
+        "Meet relevant subscriber threshold or be an Official Artist Channel",
+        "Not made for kids or substantially child-directed",
+        "No hate-speech-related Community Guidelines strikes",
+        "Connect an eligible storefront; independent merchant handles fulfillment and payment"
+      ],
+      "source_ids": [
+        "shopping-own",
+        "store-connection",
+        "earning-help"
+      ],
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "shopping-affiliate",
+      "name": "Shopping: affiliate products",
+      "product_group": "commerce_affiliate",
+      "source_kind": "official_youtube_product",
+      "tier": "shopping_affiliate",
+      "minimum_creator_age": null,
+      "official_module": "YouTube Shopping Affiliate Program terms",
+      "child_directed_status": "ineligible_if_child_directed_channel_or_many_kids_videos",
+      "music_channel_status": "music_artist_and_music_partner_channels_ineligible",
+      "region": "Approved affiliate countries and available merchant catalog; Mexico is listed",
+      "gates": [
+        "Channel in YPP and meeting applicable subscriber threshold",
+        "Based in an eligible affiliate creator country",
+        "Not a music channel, Official Artist Channel or associated with music partners",
+        "Not made for kids or significantly child-directed",
+        "Accept affiliate terms and tag participating seller products",
+        "Sale, refund and commission conditions depend on merchant and program"
+      ],
+      "source_ids": [
+        "shopping-affiliate",
+        "shopping-mexico-launch"
+      ],
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "creator-partnerships",
+      "name": "YouTube Creator Partnerships",
+      "product_group": "deal_facilitation",
+      "source_kind": "official_youtube_product",
+      "tier": "ypp_ads",
+      "minimum_creator_age": 18,
+      "official_module": "Creator Partnerships discovery",
+      "child_directed_status": "content_and_brand_policy_review",
+      "music_channel_status": "check_specific_rules",
+      "region": "Creator Partnerships eligible regions, including Mexico",
+      "gates": [
+        "Creator age at least 18",
+        "In YPP and eligible for advertising revenue sharing",
+        "Located in available country",
+        "No active Community Guidelines strikes",
+        "In Mexico, brand inquiries may arrive via external email or social handles",
+        "Being discoverable does not guarantee a paid brand deal"
+      ],
+      "source_ids": [
+        "creator-partnerships-mx"
+      ],
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "direct-sponsorship",
+      "name": "Independently negotiated sponsorship",
+      "product_group": "external_business_deal",
+      "source_kind": "outside_youtube",
+      "tier": "not_ypp_dependent",
+      "minimum_creator_age": null,
+      "official_module": null,
+      "child_directed_status": "external_and_youtube_rules_apply",
+      "music_channel_status": "rights_and_platform_rules_apply",
+      "region": "Contract, jurisdiction, payment provider and external platform dependent",
+      "gates": [
+        "Requires a separate agreement, storefront or outside payment provider",
+        "Independently check local law, provider access, disclosure, rights, fees, refunds and taxes",
+        "A YouTube channel by itself neither activates nor guarantees this external income"
+      ],
+      "source_ids": [
+        "earning-help"
+      ],
+      "status": "economic_business_model_not_an_official_youtube_monetization_feature",
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "external-affiliates",
+      "name": "External affiliate links",
+      "product_group": "external_affiliate",
+      "source_kind": "outside_youtube",
+      "tier": "not_ypp_dependent",
+      "minimum_creator_age": null,
+      "official_module": null,
+      "child_directed_status": "external_and_youtube_rules_apply",
+      "music_channel_status": "rights_and_platform_rules_apply",
+      "region": "Contract, jurisdiction, payment provider and external platform dependent",
+      "gates": [
+        "Requires a separate agreement, storefront or outside payment provider",
+        "Independently check local law, provider access, disclosure, rights, fees, refunds and taxes",
+        "A YouTube channel by itself neither activates nor guarantees this external income"
+      ],
+      "source_ids": [
+        "earning-help"
+      ],
+      "status": "economic_business_model_not_an_official_youtube_monetization_feature",
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "owned-software",
+      "name": "Own games, applications and digital goods",
+      "product_group": "external_products",
+      "source_kind": "outside_youtube",
+      "tier": "not_ypp_dependent",
+      "minimum_creator_age": null,
+      "official_module": null,
+      "child_directed_status": "external_and_youtube_rules_apply",
+      "music_channel_status": "rights_and_platform_rules_apply",
+      "region": "Contract, jurisdiction, payment provider and external platform dependent",
+      "gates": [
+        "Requires a separate agreement, storefront or outside payment provider",
+        "Independently check local law, provider access, disclosure, rights, fees, refunds and taxes",
+        "A YouTube channel by itself neither activates nor guarantees this external income"
+      ],
+      "source_ids": [
+        "earning-help"
+      ],
+      "status": "economic_business_model_not_an_official_youtube_monetization_feature",
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "external-support",
+      "name": "Independent fan support",
+      "product_group": "external_membership",
+      "source_kind": "outside_youtube",
+      "tier": "not_ypp_dependent",
+      "minimum_creator_age": null,
+      "official_module": null,
+      "child_directed_status": "external_and_youtube_rules_apply",
+      "music_channel_status": "rights_and_platform_rules_apply",
+      "region": "Contract, jurisdiction, payment provider and external platform dependent",
+      "gates": [
+        "Requires a separate agreement, storefront or outside payment provider",
+        "Independently check local law, provider access, disclosure, rights, fees, refunds and taxes",
+        "A YouTube channel by itself neither activates nor guarantees this external income"
+      ],
+      "source_ids": [
+        "earning-help"
+      ],
+      "status": "economic_business_model_not_an_official_youtube_monetization_feature",
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "licensed-content",
+      "name": "Content and IP licensing",
+      "product_group": "external_ip_deal",
+      "source_kind": "outside_youtube",
+      "tier": "not_ypp_dependent",
+      "minimum_creator_age": null,
+      "official_module": null,
+      "child_directed_status": "external_and_youtube_rules_apply",
+      "music_channel_status": "rights_and_platform_rules_apply",
+      "region": "Contract, jurisdiction, payment provider and external platform dependent",
+      "gates": [
+        "Requires a separate agreement, storefront or outside payment provider",
+        "Independently check local law, provider access, disclosure, rights, fees, refunds and taxes",
+        "A YouTube channel by itself neither activates nor guarantees this external income"
+      ],
+      "source_ids": [
+        "earning-help"
+      ],
+      "status": "economic_business_model_not_an_official_youtube_monetization_feature",
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    },
+    {
+      "pathway_id": "external-services",
+      "name": "Client work and teaching derived from videos",
+      "product_group": "external_services",
+      "source_kind": "outside_youtube",
+      "tier": "not_ypp_dependent",
+      "minimum_creator_age": null,
+      "official_module": null,
+      "child_directed_status": "external_and_youtube_rules_apply",
+      "music_channel_status": "rights_and_platform_rules_apply",
+      "region": "Contract, jurisdiction, payment provider and external platform dependent",
+      "gates": [
+        "Requires a separate agreement, storefront or outside payment provider",
+        "Independently check local law, provider access, disclosure, rights, fees, refunds and taxes",
+        "A YouTube channel by itself neither activates nor guarantees this external income"
+      ],
+      "source_ids": [
+        "earning-help"
+      ],
+      "status": "economic_business_model_not_an_official_youtube_monetization_feature",
+      "as_of": "2026-10-23",
+      "eligibility_confirmed_for_any_specific_person": false,
+      "limitations": "Availability and channel approval cannot be determined without the creator's actual situation. No account data or identity information was used."
+    }
+  ],
+  "levels": {
+    "ypp_ads": "Accepted YPP channel meeting full ads/Premium revenue-share eligibility and the relevant module terms.",
+    "expanded_ypp": "Accepted YPP channel meeting lower creator-payment entry route plus product-specific legal and country requirements.",
+    "ypp_virtual_items": "YPP and separately accepted Virtual Items terms, age/identity, country and eligible video/stream rules.",
+    "shopping_own": "YPP plus qualifying channel or OAC exception, linked merchant and relevant audience restrictions.",
+    "shopping_affiliate": "YPP plus specific affiliate-country, seller, music-channel and child-directed content restrictions.",
+    "not_ypp_dependent": "External commercial arrangements are not automatically unlocked or blocked by YPP; platform and independent provider policies apply."
+  },
+  "rules": [
+    "All requirements are necessary research checks, not an eligibility guarantee or product approval.",
+    "An unknown minimum creator age is recorded null, not interpreted as proof that minors qualify.",
+    "Made-for-kids restrictions differ by individual content versus channel designation.",
+    "External commercial routes are not official YouTube revenue-sharing features.",
+    "Region is one gate among account standing, rights, content, age, agreements, product availability and payout conditions.",
+    "No creator's country, age, identity, payment account or audience is determined by this public matrix."
+  ]
+}
