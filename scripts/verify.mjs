@@ -53,6 +53,16 @@ for (const entry of index.specimens) {
     const growth=load('ontology/youtube/creator-growth.json');
     const newsAudience=load('ontology/youtube/community-audience-studies.json');
     const competition=load('ontology/youtube/competition-observations.json');
+    const literature=load('ontology/youtube/academic-studies.json');
+    ensure(literature.studies.length===4,'Incomplete peer-reviewed research catalog');
+    ensure(literature.studies.every(x=>x.sample_n===null || Number.isInteger(x.sample_n)),
+      'Invalid published sample size');
+    ensure(literature.studies.every(x=>x.earnings_mean===null && x.earnings_median===null &&
+      x.zero_earner_fraction===null && x.causal_effect_estimate===null),
+      'Unverified academic earnings or causal effect inferred');
+    ensure(literature.studies.every(x=>sourceIds.has(x.id)),
+      'Academic study missing source record');
+
     ensure(competition.source.sampled_accounts===71177 && competition.source.sampled_videos===799718,
       'Competition sample provenance mismatch');
     ensure(competition.source.representative_of_all_youtube_creators===false,

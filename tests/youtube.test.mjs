@@ -340,3 +340,13 @@ test('Commercial competition sample does not invent new-channel success probabil
   assert(sample.traffic_source_share_of_sampled_organic_views.every(x=>x.denominator==='sampled organic view events'));
   assert(sample.cross_format_association.type.includes('not_causal'));
 });
+
+test('Peer-reviewed study collection preserves narrow populations and unknown earnings',async()=>{
+  const papers=await load('ontology/youtube/academic-studies.json');
+  assert.equal(papers.studies.length,4);
+  assert(papers.studies.some(x=>x.numeric.gini_coefficient===0.89));
+  assert(papers.studies.some(x=>x.sample_n===50 && x.topic_ids.includes('beauty')));
+  assert(papers.studies.some(x=>x.sample_n===1923 && x.topic_ids.includes('virtual-creators')));
+  assert(papers.studies.every(x=>x.earnings_mean===null && x.earnings_median===null));
+  assert(papers.studies.every(x=>x.causal_effect_estimate===null));
+});
