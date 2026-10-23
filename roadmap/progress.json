@@ -405,7 +405,7 @@
       "id": "deployment",
       "emoji": "🌐",
       "name": "Live Pages deployment",
-      "percent": 0,
+      "percent": 100,
       "phases": [
         {
           "id": "launch",
@@ -420,9 +420,13 @@
                 {
                   "id": "pages",
                   "emoji": "🚀",
-                  "title": "Verify public GitHub Pages endpoint",
-                  "percent": 0,
-                  "evidence": []
+                  "title": "Publish Mercata Pages and verify its public catalog endpoint",
+                  "percent": 100,
+                  "evidence": [
+                    ".github/workflows/pages.yml",
+                    ".github/workflows/verify.yml",
+                    "roadmap/pages-verification.md"
+                  ]
                 }
               ]
             }
@@ -433,7 +437,7 @@
     {
       "id": "study",
       "emoji": "📈",
-      "name": "Marketplace research",
+      "name": "Other marketplace research",
       "percent": 0,
       "phases": [
         {
@@ -449,7 +453,7 @@
                 {
                   "id": "analysis",
                   "emoji": "📊",
-                  "title": "Complete source-backed market research",
+                  "title": "Process marketplace specimens beyond YouTube",
                   "percent": 0,
                   "evidence": []
                 }

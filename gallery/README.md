@@ -1,6 +1,6 @@
 # Marketplace gallery
 
-The [Mercata website](../index.html) reads this [machine-readable index](index.json). All 26 specimens are admitted, but none has verified economic or demographic measurements yet.
+The [Mercata website](../index.html) reads this [machine-readable index](index.json). All 26 specimens are admitted. **YouTube is actively being researched**, with dated official policies, independent aggregate audience statistics, bounded creator-income studies, and source-linked activity reports. The other 25 remain queued. None has a verified, representative total creator-income distribution.
 
 | Marketplace | Domain | Study | Work queue |
 |---|---|---|---|
@@ -18,7 +18,7 @@ The [Mercata website](../index.html) reads this [machine-readable index](index.j
 | [Contra](../specimens/contra.json) | services | Economic | [Tasks](../queues/contra.json) |
 | [CodeCanyon](../specimens/codecanyon.json) | software | Economic | [Tasks](../queues/codecanyon.json) |
 | [GitHub Sponsors](../specimens/github-sponsors.json) | subscriptions | Economic | [Tasks](../queues/github-sponsors.json) |
-| [YouTube](../specimens/youtube.json) | video | Economic + social audience | [Tasks](../queues/youtube.json) |
+| [YouTube](../specimens/youtube.json) | video | Researching: economy + audience | [399-task plan](../plans/youtube.md) |
 | [Twitch](../specimens/twitch.json) | video | Economic + social audience | [Tasks](../queues/twitch.json) |
 | [Kick](../specimens/kick.json) | video | Economic + social audience | [Tasks](../queues/kick.json) |
 | [Rumble](../specimens/rumble.json) | video | Economic + social audience | [Tasks](../queues/rumble.json) |
@@ -31,4 +31,4 @@ The [Mercata website](../index.html) reads this [machine-readable index](index.j
 | [Substack](../specimens/substack.json) | subscriptions | Economic + social audience | [Tasks](../queues/substack.json) |
 | [Medium](../specimens/medium.json) | literature | Economic + social audience | [Tasks](../queues/medium.json) |
 
-Each specimen retains its individual, distinct OKLab-derived swatch. Eleven have additional aggregate social audience and subculture investigations. No source-free population, community or earnings figures appear in their empty dossiers.
+Each specimen retains its individual, distinct OKLab-derived swatch. Eleven have additional aggregate social audience and subculture investigations. Unresearched specimens retain empty factual records. The YouTube dossier has sourced findings, but a topic's unique population and a representative creator earnings distribution are still unknown.

@@ -37,7 +37,7 @@ After separately authorized specimen intake:
 `node scripts/intake.mjs --name "Example Market" --url "https://example.org" --domain "literature"`
 This is a synthetic command example, not an admitted specimen.
 
-To publish through GitHub Pages select `main` and `/(root)` in Pages settings. A live Pages deployment must still be independently checked. Intended URL: https://sguzman.github.io/mercata/.
+Mercata is [published through GitHub Pages](https://sguzman.github.io/mercata/) by a dedicated [deployment workflow](.github/workflows/pages.yml). The [initial public endpoint verification](roadmap/pages-verification.md) is recorded; each later deployment has a separate workflow result.
 
 ## Visual identity
 
@@ -54,3 +54,7 @@ Licensed under the repository's [LICENSE](LICENSE).
 - [YouTube study plan](plans/youtube.md) ([machine-readable tasks](plans/youtube.json)): 164 existing tasks and 235 additional YouTube-specific research questions, **399 tasks in all**, across 22 workstreams and four phases. Inventory creation is complete; initial source-backed research has begun. No marketplace account actions, paid experiments or commercial publishing have been performed.
 
 The [YouTube ontology](ontology/youtube/README.md) contains an independent glossary, category taxonomy, official policy snapshots and measurement dictionary. Its public dossier now includes dated, linked primary-source claims; earnings distributions and community sizes are still unknown.
+
+## YouTube: evidence-backed investigation
+
+The [YouTube research ontology](ontology/youtube/README.md) currently covers creator and viewer populations, 29 overlapping content categories, global usage and upload statistics, detailed Analytics numerators and denominators, creator earnings samples and their limits, native earning products, country/payment requirements, and content-specific monetization restrictions. The interactive site includes a blank-input economic calculator. [Source-backed task progress](plans/youtube.json) is maintained separately from the completed admission and infrastructure tasks.
