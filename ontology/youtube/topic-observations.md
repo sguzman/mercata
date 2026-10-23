@@ -32,3 +32,13 @@ Selected virtual creators are not a representative sample of all channel operato
 ## Machine data
 
 See [topic-observations.json](topic-observations.json) and the [community sampling protocol](public-sampling.md). Measured **viewer population** and **creator-income distribution** remain unresolved research questions.
+
+## Added 2025–2026 format-level observations
+
+| Topic | Reported activity | Measurement window | Source |
+|---|---:|---|---|
+| desk-setups | More than 250M views | 2026-01-01 to 2026-06-30 | [YouTube report](https://blog.youtube/culture-and-trends/desk-setup-videos/) |
+| music | More than 500M views | 2026-01-01 to 2026-06-30 | [YouTube report](https://blog.youtube/culture-and-trends/drum-cover-videos-youtube-creators/) |
+| gaming | More than 13B views | 2025-01-01 to 2025-09-25 | [YouTube report](https://blog.youtube/culture-and-trends/horror-gaming/) |
+
+All three measurements are from before the August 24, 2026 view-count definition change. They are not unique-user estimates, and the samples overlap other genres. Historical view totals cannot be compared unadjusted to later totals.

@@ -145,3 +145,13 @@ test('YouTube economic glossary covers payout and commerce distinctions',async()
   assert.equal(ids.size,graph.concepts.length);
   assert(graph.relations.every(r=>ids.has(r.subject)&&ids.has(r.object)));
 });
+
+test('Topic view evidence records its metric-definition revision',async()=>{
+  const data=await load('ontology/youtube/topic-observations.json');
+  const taxonomy=await load('ontology/youtube/taxonomy.json');
+  assert(data.observations.length>=17);
+  assert(taxonomy.topics.some(t=>t.id==='desk-setups'));
+  assert(data.observations.every(x=>x.metric_definition_revision && x.source_url.startsWith('https://')));
+  const pre=data.observations.filter(x=>x.metric==='video_views');
+  assert(pre.every(x=>x.metric_definition_revision==='before_2026_08_24'));
+});
