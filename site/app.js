@@ -71,10 +71,18 @@ function showRoadmap(data) {
     const head=make('div','milestone-head');
     add(head,make('h3','',stage.emoji+' '+stage.name),make('strong','',stage.percent+'%'));
     add(card,head,progress(stage.percent,stage.name));
-    for(const task of stage.tasks) {
-      const row=make('div','task-row');
-      add(row,make('span','',task.emoji+' '+task.title),make('strong','',task.percent+'%'));
-      card.append(row);
+    for(const phase of stage.phases) {
+      const block=make('section','phase-block');
+      block.append(make('h4','phase-title',phase.emoji+' '+phase.name));
+      for(const feature of phase.features) {
+        block.append(make('h5','feature-title',feature.emoji+' '+feature.name));
+        for(const task of feature.tasks) {
+          const row=make('div','task-row');
+          add(row,make('span','',task.emoji+' '+task.title),make('strong','',task.percent+'%'));
+          block.append(row);
+        }
+      }
+      card.append(block);
     }
     fragment.append(card);
   }

@@ -6,79 +6,142 @@
       "id": "foundation",
       "emoji": "🏗️",
       "name": "Public research foundation",
-      "percent": 100,
-      "tasks": [
+      "percent": 96,
+      "phases": [
         {
           "id": "charter",
           "emoji": "📜",
-          "title": "Constitution and public-content boundary",
-          "percent": 100,
-          "evidence": [
-            "CONSTITUTION.md",
-            "AGENTS.md"
+          "name": "Public governance",
+          "features": [
+            {
+              "id": "boundary",
+              "emoji": "🛡️",
+              "name": "Constitution and privacy",
+              "tasks": [
+                {
+                  "id": "charter",
+                  "emoji": "📜",
+                  "title": "Constitution and public-content boundary",
+                  "percent": 100,
+                  "evidence": [
+                    "CONSTITUTION.md",
+                    "AGENTS.md"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "ontology",
+          "id": "research-architecture",
           "emoji": "🧬",
-          "title": "Human and machine ontology",
-          "percent": 100,
-          "evidence": [
-            "ontology/README.md",
-            "ontology/ontology.json",
-            "ontology/specimen.schema.json"
+          "name": "Research model",
+          "features": [
+            {
+              "id": "ontology",
+              "emoji": "🧩",
+              "name": "Domain ontology",
+              "tasks": [
+                {
+                  "id": "ontology",
+                  "emoji": "🧬",
+                  "title": "Human and machine ontology",
+                  "percent": 100,
+                  "evidence": [
+                    "ontology/README.md",
+                    "ontology/ontology.json",
+                    "ontology/specimen.schema.json"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "catalog",
+              "emoji": "🖼️",
+              "name": "Gallery and queues",
+              "tasks": [
+                {
+                  "id": "gallery",
+                  "emoji": "🖼️",
+                  "title": "Independent empty gallery",
+                  "percent": 100,
+                  "evidence": [
+                    "gallery/README.md",
+                    "gallery/index.json"
+                  ]
+                },
+                {
+                  "id": "pipeline",
+                  "emoji": "🔬",
+                  "title": "Rich research intake queues",
+                  "percent": 100,
+                  "evidence": [
+                    "pipeline/queues.json",
+                    "pipeline/domains.json",
+                    "scripts/intake.mjs"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "gallery",
-          "emoji": "🖼️",
-          "title": "Independent empty gallery",
-          "percent": 100,
-          "evidence": [
-            "gallery/README.md",
-            "gallery/index.json"
-          ]
-        },
-        {
-          "id": "pipeline",
-          "emoji": "🔬",
-          "title": "Rich research intake queues",
-          "percent": 100,
-          "evidence": [
-            "pipeline/queues.json",
-            "pipeline/domains.json",
-            "scripts/intake.mjs"
-          ]
-        },
-        {
-          "id": "colors",
+          "id": "presentation",
           "emoji": "🎨",
-          "title": "Distinct OKLab-based specimen palette",
-          "percent": 100,
-          "evidence": [
-            "scripts/palette.mjs",
-            "tests/intake.test.mjs"
+          "name": "Identity and website",
+          "features": [
+            {
+              "id": "visual",
+              "emoji": "🌈",
+              "name": "Colors and themes",
+              "tasks": [
+                {
+                  "id": "colors",
+                  "emoji": "🎨",
+                  "title": "Distinct OKLab-based specimen palette",
+                  "percent": 100,
+                  "evidence": [
+                    "scripts/palette.mjs",
+                    "tests/intake.test.mjs"
+                  ]
+                },
+                {
+                  "id": "website",
+                  "emoji": "🌓",
+                  "title": "Responsive system-first themed website",
+                  "percent": 90,
+                  "evidence": [
+                    "index.html",
+                    "site/styles.css",
+                    "site/app.js"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "website",
-          "emoji": "🌓",
-          "title": "Responsive system-first themed website",
-          "percent": 100,
-          "evidence": [
-            "index.html",
-            "site/styles.css",
-            "site/app.js"
-          ]
-        },
-        {
-          "id": "tests",
+          "id": "testing",
           "emoji": "✅",
-          "title": "Local validation and intake checks",
-          "percent": 100,
-          "evidence": [
-            "scripts/verify.mjs",
-            "tests/intake.test.mjs"
+          "name": "Verification",
+          "features": [
+            {
+              "id": "qa",
+              "emoji": "🔬",
+              "name": "Repository and intake tests",
+              "tasks": [
+                {
+                  "id": "tests",
+                  "emoji": "✅",
+                  "title": "Local validation and intake checks",
+                  "percent": 80,
+                  "evidence": [
+                    "scripts/verify.mjs",
+                    "tests/intake.test.mjs"
+                  ]
+                }
+              ]
+            }
           ]
         }
       ]
@@ -88,13 +151,27 @@
       "emoji": "🌐",
       "name": "Live Pages deployment",
       "percent": 0,
-      "tasks": [
+      "phases": [
         {
-          "id": "pages",
-          "emoji": "🚀",
-          "title": "Verify public GitHub Pages endpoint",
-          "percent": 0,
-          "evidence": []
+          "id": "launch",
+          "emoji": "🌍",
+          "name": "Hosting",
+          "features": [
+            {
+              "id": "pages",
+              "emoji": "🚀",
+              "name": "Public deployment",
+              "tasks": [
+                {
+                  "id": "pages",
+                  "emoji": "🚀",
+                  "title": "Verify public GitHub Pages endpoint",
+                  "percent": 0,
+                  "evidence": []
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -103,27 +180,69 @@
       "emoji": "📈",
       "name": "Marketplace research",
       "percent": 0,
-      "tasks": [
+      "phases": [
         {
           "id": "admission",
           "emoji": "📥",
-          "title": "Admit explicitly approved marketplaces",
-          "percent": 0,
-          "evidence": []
+          "name": "Admissions",
+          "features": [
+            {
+              "id": "specimens",
+              "emoji": "🗃️",
+              "name": "Approved marketplaces",
+              "tasks": [
+                {
+                  "id": "admission",
+                  "emoji": "📥",
+                  "title": "Admit explicitly approved marketplaces",
+                  "percent": 0,
+                  "evidence": []
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "analysis",
           "emoji": "📊",
-          "title": "Complete source-backed market research",
-          "percent": 0,
-          "evidence": []
+          "name": "Research",
+          "features": [
+            {
+              "id": "market-evidence",
+              "emoji": "📈",
+              "name": "Source-backed economics",
+              "tasks": [
+                {
+                  "id": "analysis",
+                  "emoji": "📊",
+                  "title": "Complete source-backed market research",
+                  "percent": 0,
+                  "evidence": []
+                }
+              ]
+            }
+          ]
         },
         {
-          "id": "strategy",
+          "id": "optimization",
           "emoji": "💰",
-          "title": "Validate monetization experiments",
-          "percent": 0,
-          "evidence": []
+          "name": "Experiments",
+          "features": [
+            {
+              "id": "strategies",
+              "emoji": "🧪",
+              "name": "Validated earning routes",
+              "tasks": [
+                {
+                  "id": "strategy",
+                  "emoji": "💰",
+                  "title": "Validate monetization experiments",
+                  "percent": 0,
+                  "evidence": []
+                }
+              ]
+            }
+          ]
         }
       ]
     }

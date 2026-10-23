@@ -40,9 +40,11 @@ for (const entry of index.specimens) {
 }
 const ledger=load('roadmap/progress.json');
 for(const milestone of ledger.milestones) {
-  const avg = Math.round(milestone.tasks.reduce((n,t)=>n+t.percent,0)/milestone.tasks.length);
+  const tasks = milestone.phases.flatMap(phase => phase.features.flatMap(feature => feature.tasks));
+  ensure(tasks.length > 0,'Missing milestone tasks: ' + milestone.id);
+  const avg = Math.round(tasks.reduce((n,t)=>n+t.percent,0)/tasks.length);
   ensure(avg === milestone.percent,'Milestone percent mismatch: ' + milestone.id);
-  for(const task of milestone.tasks) {
+  for(const task of tasks) {
     ensure(task.percent < 100 || (task.evidence.length > 0 && task.evidence.every(has)), 'Unverified ledger item: ' + task.id);
   }
 }
