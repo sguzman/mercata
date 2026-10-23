@@ -72,6 +72,12 @@ try{
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');
     assert.equal(await page.locator('.scale-observation').count(),4,'Missing global scale observations');
+    const reach=page.locator('.country-reach');
+    assert.equal(await reach.locator('.country-reach-card').count(),4,'Missing bounded country/survey rates');
+    assert.equal(await reach.locator('.country-reach-trend').count(),3,'Missing source-consistent UK trend series');
+    await reach.locator('summary').click();
+    assert((await reach.textContent()).includes('Do not sum percentages or device minutes'));
+    assert((await reach.textContent()).includes('global monthly distinct viewers: unknown'));
     assert.equal(await page.locator('.payout-currency').count(),2,'Missing documented payout currencies');
     assert((await page.locator('.topic-catalogue-card').count())>=31,'Missing community taxonomy');
     assert.equal(await page.locator('.community-card').count(),1,'Missing event-specific measured community');
