@@ -56,6 +56,22 @@ for (const entry of index.specimens) {
     const observed=load('ontology/youtube/topic-observations.json');
     const history=load('ontology/youtube/measurement-history.json');
     const economics=load('ontology/youtube/economic-model.json');
+    const patronStudy=load('ontology/youtube/creator-income-evidence.json');
+    const channelStudy=load('ontology/youtube/small-channel-income.json');
+    const usageHistory=load('ontology/youtube/us-adult-usage-history.json');
+    ensure(patronStudy.datasets.every(x=>x.inference_to_general_creator_income==='prohibited'),
+      'Patreon sample must not represent all YouTube income');
+    ensure(channelStudy.cohort.representative_of_all_youtube_creators===false,
+      'Small creator sample incorrectly marked representative');
+    ensure(channelStudy.cohort.zero_and_nonmonetized_creators_included===false,
+      'Monetization sample includes imaginary non-earners');
+    ensure(channelStudy.monthly.values.every(x=>x.q25<=x.median&&x.median<=x.q75),
+      'Invalid small channel income quartile ordering');
+    ensure(usageHistory.points.every((x,i,a)=>i===0 || a[i-1].year<x.year),
+      'Historic adult usage timeline is not chronological');
+    ensure(dossier.evidence.some(x=>x.url===channelStudy.source.url),
+      'Small channel income study lacks dossier citation');
+
     const topicIds=new Set(topic.topics.map(t=>t.id));
     const observationIds=new Set();
     for(const x of observed.observations){
