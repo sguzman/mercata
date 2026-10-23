@@ -42,6 +42,7 @@ try{
     assert((await page.locator('.platform-policy-grid .policy-card').count())>=10,'Missing YouTube policy cards');
     assert((await page.locator('.topic-catalogue-card').count())>=28,'Missing community taxonomy');
     assert((await page.locator('.topic-activity-row').count())>=14,'Missing topic evidence');
+    assert.equal(await page.locator('.usage-history-point').count(),7,'Missing dated U.S. adult usage series');
     assert((await page.locator('#dossier-view .demographic-row').count())>=20,'Missing demographic data');
     const bodyOverflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
     assert.equal(bodyOverflow,false,'Horizontal overflow in '+size.name+' viewport');
