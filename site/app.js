@@ -595,12 +595,61 @@ function renderRevenuePathways(data, payments, dossier, eligibility) {
   return section;
 }
 
-function renderOpportunityFramework(model) {
+function renderOpportunityFramework(model, taxonomy, activity) {
   if(!model)return null;
   const container=make('section','opportunity-framework');
   const details=make('details','opportunity-method-details');
   details.append(make('summary','','How to compare niches · '+model.criteria.length+' research dimensions'));
   details.append(make('p','measure-limit','The '+model.topic_assessments.length+' topics are not ranked. Views, creator income, production time and audience size cannot be substituted for one another.'));
+  if(taxonomy?.topics?.length && model.topic_assessments.length){
+    const picker=make('div','niche-explorer');
+    const field=make('label','niche-explorer-label');
+    field.append(make('span','','Inspect a content community'));
+    const select=make('select','niche-explorer-select');
+    select.setAttribute('aria-label','Select a YouTube content community to inspect');
+    for(const topic of [...taxonomy.topics].sort((a,b)=>a.label.localeCompare(b.label))){
+      const option=make('option','',topic.label);
+      option.value=topic.id;select.append(option);
+    }
+    field.append(select);picker.append(field);
+    const report=make('article','niche-explorer-report');
+    report.setAttribute('aria-live','polite');
+    const draw=()=>{
+      const topic=taxonomy.topics.find(x=>x.id===select.value);
+      const record=model.topic_assessments.find(x=>x.topic_id===select.value);
+      if(!topic || !record)return;
+      report.replaceChildren(make('h5','',topic.label),make('p','',topic.definition));
+      const scoped=(activity?.observations||[]).filter(x=>x.topic_id===topic.id);
+      report.append(make('p','measure-limit',
+        'Opportunity: '+(record.decision==='insufficient_evidence'?'not yet rankable':record.decision)+
+        ' · Unique audience: unknown · Typical creator profit: unknown.'));
+      report.append(make('p','',scoped.length+
+        ' sourced activity observation'+(scoped.length===1?'':'s')+
+        '. These are not unique viewers or comparable earning rates.'));
+      const gaps=make('details','niche-gaps');
+      gaps.append(make('summary','',record.data_gaps.length+' evidence gaps to resolve'));
+      const ul=make('ul','');
+      for(const gap of record.data_gaps){
+        const criterion=model.criteria.find(x=>x.id===gap);
+        ul.append(make('li','',criterion?.label||gap));
+      }
+      gaps.append(ul);report.append(gaps);
+      for(const x of scoped.slice(0,6)){
+        const p=make('p','niche-evidence-row',
+          x.period+' · '+x.geography+' · '+
+          (x.comparison==='>'?'More than ':'')+
+          new Intl.NumberFormat('en',{notation:'compact',maximumFractionDigits:1}).format(x.value)+' '+x.unit);
+        const a=make('a','inline-link','Source ↗');
+        a.href=x.source_url;a.target='_blank';a.rel='noopener noreferrer';p.append(a);
+        report.append(p);
+      }
+    };
+    select.addEventListener('change',draw);
+    const first=taxonomy.topics.some(t=>t.id==='gaming')?'gaming':taxonomy.topics[0].id;
+    select.value=first;
+    draw();
+    picker.append(report);details.append(picker);
+  }
   const grid=make('div','opportunity-method-grid');
   for(const criterion of model.criteria){
     const card=make('article','opportunity-method-item');
@@ -937,7 +986,7 @@ async function showDossier(entry) {
     if(channelStudy)outer.append(channelStudy);
     const catalogue=renderTopicCatalogue(topicCatalog,topicActivity);
     if(catalogue)outer.append(catalogue);
-    const method=renderOpportunityFramework(opportunityFramework);
+    const method=renderOpportunityFramework(opportunityFramework,topicCatalog,topicActivity);
     if(method)outer.append(method);
     if(entry.id==='youtube')outer.append(renderScenarioCalculator());
     if(studyPlan)outer.append(renderStudyPlan(studyPlan));
