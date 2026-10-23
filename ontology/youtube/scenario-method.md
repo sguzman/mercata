@@ -6,6 +6,8 @@ The model sums watch-page and Shorts ad receipts plus independently entered othe
 
 The word *other* means amounts after platform/provider deductions but before the separate expenses the operator enters. If an actual Analytics RPM includes Premium or fan support, it **cannot** be used as the ad-only RPM here and then have those receipts added again. All currency fields must have one nominal currency; the calculator does not convert currencies.
 
+Before entering aggregate expenses and creator hours, use the [production cost categories and cohort protocol](production-costs.md) to prevent double-counting assets, rights fees, paid contractors or provider deductions. The scenario form deliberately does not preload category prices or cost percentages.
+
 A negative result is meaningful: costs may exceed hypothetical receipts. An unknown result is different and is never defaulted to zero. The calculator has no built-in rates, no inferred traffic and no probability-weighted confidence interval. It does not model taxes or noncash opportunity cost unless the operator includes them in their separate cash assumptions; the per-hour figure is cash profit before personal taxes divided by all work hours, not a wage or a measured typical earning.
 
 Calculations run entirely in the reader's browser using [pure arithmetic](../../site/scenario.mjs); no account credentials, external APIs, network submissions or persistent financial inputs are required. [Automated tests](../../tests/scenario.test.mjs) cover exact arithmetic, missing data and negative profit. A calculator does not replace the larger [ten-dimension economic opportunity assessment](opportunity-framework.md).
