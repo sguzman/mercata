@@ -72,7 +72,7 @@ test('social audience profile creates extra queues without pretending to know de
   } finally { await fs.rm(root,{recursive:true,force:true}); }
 });
 
-test('existing social specimens have complete research queues and no fabricated findings', async () => {
+test('existing social specimens retain queue coverage and sourced researched measurements', async () => {
   const index=JSON.parse(await fs.readFile(path.join(project,'gallery/index.json'),'utf8'));
   const social=JSON.parse(await fs.readFile(path.join(project,'pipeline/social.json'),'utf8'));
   const checked=index.specimens.filter(x=>x.research_profiles?.includes('social_audience'));
@@ -81,13 +81,22 @@ test('existing social specimens have complete research queues and no fabricated 
     const record=JSON.parse(await fs.readFile(path.join(project,entry.dossier),'utf8'));
     const queue=JSON.parse(await fs.readFile(path.join(project,entry.queue),'utf8'));
     assert.equal(queue.queues.length,13+social.queues.length);
-    assert.deepEqual(record.audience_research.communities,[]);
-    assert.deepEqual(record.audience_research.demographics,[]);
+    if(entry.status==='queued') {
+      assert.deepEqual(record.audience_research.communities,[]);
+      assert.deepEqual(record.audience_research.demographics,[]);
+    } else {
+      const sourceIds=new Set(record.evidence.map(source=>source.id));
+      for(const metric of [...record.audience_research.populations,...record.audience_research.demographics]) {
+        assert(metric.source_ids.length>0);
+        assert(metric.source_ids.every(id=>sourceIds.has(id)));
+      }
+    }
     for(const group of social.queues) {
       const specimenGroup=queue.queues.find(q=>q.id===group.id);
       assert(specimenGroup);
       assert.equal(specimenGroup.tasks.length,group.tasks.length);
-      assert(specimenGroup.tasks.every(t=>t.progress===0 && t.evidence.length===0));
+      assert(specimenGroup.tasks.every(t=>Number.isInteger(t.progress) && t.progress>=0 && t.progress<=100));
+      assert(specimenGroup.tasks.every(t=>t.progress<100 || (t.status==='complete' && t.evidence.length>0)));
     }
   }
 });
