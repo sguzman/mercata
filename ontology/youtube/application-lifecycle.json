@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "earnings_access_lifecycle",
+  "as_of": "2026-10-23",
+  "status": "official_guidance_not_personal_application_tracking",
+  "steps": [
+    {
+      "id": "meet-threshold",
+      "phase": "application_preparation",
+      "expected_duration_days": null,
+      "source_ids": [
+        "ypp-main",
+        "choose-monetization-modules"
+      ],
+      "action": "Establish eligible subscribers, qualifying public uploads, watch hours or Shorts engaged-view thresholds; meet policies and regional requirements.",
+      "limits": "Paid campaign-generated views/watch time don't count; organic follow-on views can under specific rules."
+    },
+    {
+      "id": "accept-base-terms",
+      "phase": "apply",
+      "expected_duration_days": null,
+      "source_ids": [
+        "ypp-main"
+      ],
+      "action": "Submit the YPP application from Studio and accept relevant base terms.",
+      "limits": "Terms can change and additional module acceptance is required for specific earning products."
+    },
+    {
+      "id": "link-adsense",
+      "phase": "apply",
+      "expected_duration_days": null,
+      "source_ids": [
+        "ypp-main"
+      ],
+      "action": "Set up or link an active AdSense for YouTube account.",
+      "limits": "Valid identity, country, age/payment and verification requirements may apply; no banking information is stored here."
+    },
+    {
+      "id": "initial-review",
+      "phase": "approval",
+      "indicative_duration": "typically about 1 month",
+      "source_ids": [
+        "ypp-main"
+      ],
+      "action": "Automated and human review assesses the channel's policy compliance.",
+      "limits": "Volume, repeat review or disagreement can extend the review process. Meeting numerical thresholds does not guarantee approval."
+    },
+    {
+      "id": "first-rejection-appeal",
+      "phase": "conditional_rejection",
+      "window_days": 21,
+      "source_ids": [
+        "ypp-main"
+      ],
+      "action": "A first rejection can be appealed within the published window.",
+      "limits": "A valid appeal is not guaranteed to succeed."
+    },
+    {
+      "id": "first-rejection-reapply",
+      "phase": "conditional_rejection",
+      "earliest_reapply_after_days": 30,
+      "source_ids": [
+        "ypp-main"
+      ],
+      "action": "First-time rejected applicants can continue compliant uploads and request another review after the waiting period.",
+      "limits": "Rules depend on case history and published program policy."
+    },
+    {
+      "id": "repeat-rejection-reapply",
+      "phase": "conditional_rejection",
+      "earliest_reapply_after_days": 90,
+      "source_ids": [
+        "ypp-main"
+      ],
+      "action": "Later repeat applications usually have a longer cooldown.",
+      "limits": "Do not assume every rejection automatically uses the same path."
+    },
+    {
+      "id": "enable-modules",
+      "phase": "post_approval",
+      "source_ids": [
+        "earning-help",
+        "choose-monetization-modules"
+      ],
+      "action": "Accept product modules and satisfy feature-specific conditions for ads, Supers, memberships, Shopping or gifts.",
+      "limits": "Not all products are automatically available after base YPP approval."
+    },
+    {
+      "id": "accrue-and-settle",
+      "phase": "post_approval",
+      "source_ids": [
+        "adsense-payment-cycle",
+        "adsense-thresholds"
+      ],
+      "action": "Earning activity is subject to adjustments, payout thresholds, verification, withholding and payment timing.",
+      "limits": "Cash settlement may occur much later than view accrual or program approval."
+    }
+  ],
+  "estimated_total_time_to_first_payment": null,
+  "upfront_joining_fee": null,
+  "noncash_resources": [
+    "subscriber_growth",
+    "eligible_watch_hours_or_shorts_views",
+    "three_public_uploads_for_early_access",
+    "original_video_production",
+    "rights_clearance",
+    "application_review_wait",
+    "tax_and_identity_administration"
+  ],
+  "guardrails": [
+    "The typical one-month review is not an approval guarantee or a bound on first payout.",
+    "A reapplication cooldown is not a recommended way to build a business.",
+    "Do not buy advertising views for the purpose of defeating eligibility thresholds.",
+    "No bank account, tax ID, channel credentials or personal appeal information belongs in this public dossier.",
+    "The information is general, not an evaluation of any creator's eligibility."
+  ]
+}
