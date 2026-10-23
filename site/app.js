@@ -443,6 +443,58 @@ function renderAdultUseHistory(history) {
   return section;
 }
 
+function renderSmallChannelStudy(data) {
+  if(!data?.cohort || !data?.monthly?.values)return null;
+  const section=make('section','small-channel-income');
+  add(section,make('p','eyebrow','SELECTED SMALL-CHANNEL STUDY'),
+    make('h4','audience-atlas-title','Earnings after monetization'),
+    make('p','audience-atlas-description',
+      'AIR Media-Tech reviewed Studio reports for 297 already-monetized channels under 10,000 subscribers. These are sample medians, not forecasts for all channels.'));
+  const table=(headers,rows)=>{
+    const wrap=make('div','income-table-wrap');
+    const t=make('table','income-table');
+    const head=make('thead',''),hrow=make('tr','');
+    for(const label of headers)hrow.append(make('th','',label));
+    head.append(hrow);t.append(head);
+    const body=make('tbody','');
+    for(const values of rows) {
+      const row=make('tr','');
+      for(const cell of values)row.append(make('td','',cell));
+      body.append(row);
+    }
+    t.append(body);wrap.append(t);
+    return wrap;
+  };
+  section.append(make('h5','income-table-heading','The first six months'));
+  const months=data.monthly.values.map(x=>[
+    'Month '+x.month+(x.partial?' (partial)':''),
+    'USD '+x.median,'USD '+x.q25+'–'+x.q75,
+    x.median_views.toLocaleString()+' views',
+    'USD '+x.revenue_per_1000_views.toFixed(2)
+  ]);
+  section.append(table(['Month','Median','Middle half','Views (median)','Reported rate / 1k views'],months));
+  const sets=[
+    ['By leading viewer country',data.by_top_audience_country.values,'country'],
+    ['By content niche',data.by_niche.values,'niche']
+  ];
+  for(const [label,rows,field] of sets){
+    const details=make('details','income-details');
+    details.append(make('summary','',label+' · '+rows.length+' groups'));
+    const values=rows.map(x=>[
+      x[field],String(x.channels),'USD '+x.median_usd,
+      'USD '+x.revenue_per_1000_views.toFixed(2)
+    ]);
+    details.append(table([field==='country'?'Top audience country':'Niche','Channels','Median/month','Rate / 1k views'],values));
+    section.append(details);
+  }
+  section.append(make('p','measure-limit',
+    'The cohort excludes channels that did not qualify for monetization. Sample recruitment is not fully disclosed, group sizes are sometimes small, and earnings do not subtract production costs. Viewer country is not the same as channel account location.'));
+  const link=make('a','inline-link','Read the provider’s original analysis ↗');
+  link.href=data.source.url;link.target='_blank';link.rel='noopener noreferrer';
+  section.append(link);
+  return section;
+}
+
 function renderCreatorIncomeEvidence(report) {
   if(!report?.datasets?.length)return null;
   const section=make('section','income-evidence');
@@ -473,7 +525,7 @@ async function showDossier(entry) {
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -533,6 +585,8 @@ async function showDossier(entry) {
     if(history)outer.append(history);
     const incomeStudy=renderCreatorIncomeEvidence(incomeEvidence);
     if(incomeStudy)outer.append(incomeStudy);
+    const channelStudy=renderSmallChannelStudy(channelIncome);
+    if(channelStudy)outer.append(channelStudy);
     const catalogue=renderTopicCatalogue(topicCatalog,topicActivity);
     if(catalogue)outer.append(catalogue);
     if(studyPlan)outer.append(renderStudyPlan(studyPlan));
