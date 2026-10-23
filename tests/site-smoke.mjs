@@ -46,7 +46,11 @@ try{
     const production=page.locator('.production-costs');
     assert.equal(await production.locator('.production-cost-group').count(),2,'Missing money and time classes');
     assert.equal(await production.locator('.production-cost-item').count(),20,'Incomplete creator cost taxonomy');
-    await production.locator('summary').click();
+    await production.locator('.production-costs-details > summary').click();
+    assert.equal(await production.locator('.adjacent-cost-survey').count(),1);
+    await production.locator('.adjacent-cost-survey > summary').click();
+    assert.equal(await production.locator('.adjacent-cost-bin').count(),11);
+    assert((await production.textContent()).includes('not a YouTube zero-earner estimate'));
     assert((await production.textContent()).includes('typical production hours: unknown'));
     const onboarding=page.locator('.channel-onboarding');
     assert.equal(await onboarding.locator('.channel-onboarding-stage').count(),6,'Missing publishing access stages');
