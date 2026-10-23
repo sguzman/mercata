@@ -842,6 +842,86 @@
       "unit": "video",
       "access": "official",
       "measured_value": null
+    },
+    {
+      "id": "audio_library_track",
+      "group": "formats",
+      "definition": "Audio Library music or sound effects used under the specific catalog's license and attribution terms",
+      "unit": "licensed_media",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "creator_music_track",
+      "group": "formats",
+      "definition": "Track made available to eligible creators through Creator Music, subject to owner-defined conditions",
+      "unit": "licensed_media",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "creator_music_revenue_share",
+      "group": "economics",
+      "definition": "Track-specific Creator Music sharing arrangement that can reduce a long-form video's applicable creator receipts",
+      "unit": "contractual_revenue_adjustment",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "creator_music_legacy_paid_license",
+      "group": "economics",
+      "definition": "Paid Creator Music license issued before new purchases ended on August 10, 2026; not a present-day purchase option",
+      "unit": "historical_license",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "music_rights_adjustment",
+      "group": "economics",
+      "definition": "Rights-holder adjustment to reported creator revenue; not a second cash expense if already reflected in net payouts",
+      "unit": "currency_amount",
+      "access": "definition",
+      "measured_value": null
+    },
+    {
+      "id": "content_id_revenue_hold",
+      "group": "economics",
+      "definition": "Creator revenue temporarily withheld during a monetized copyright dispute pending allocation",
+      "unit": "currency_amount",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "copyright_strike",
+      "group": "economics",
+      "definition": "Channel enforcement consequence of an accepted legal copyright removal request, distinct from routine Content ID claims",
+      "unit": "policy_event",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "creator_music_shopping_restriction",
+      "group": "economics",
+      "definition": "Published ineligibility of YouTube Shopping on videos using Creator Music revenue-sharing tracks",
+      "unit": "policy_condition",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "audio_rights_search_hours",
+      "group": "measurement",
+      "definition": "Time spent finding tracks, negotiating permissions and reviewing rights, to be recorded for producer labor costing",
+      "unit": "hours",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "music_license_upfront_cost",
+      "group": "economics",
+      "definition": "Cash expenditure for a specific music use license; may be zero or unknown and is not interchangeable with revenue sharing",
+      "unit": "currency_amount",
+      "access": "definition",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -1159,6 +1239,66 @@
       "subject": "live_replay",
       "predicate": "is_a",
       "object": "video"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_use",
+      "object": "audio_library_track"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_use",
+      "object": "creator_music_track"
+    },
+    {
+      "subject": "creator_music_track",
+      "predicate": "may_use",
+      "object": "creator_music_revenue_share"
+    },
+    {
+      "subject": "creator_music_track",
+      "predicate": "historically_offered",
+      "object": "creator_music_legacy_paid_license"
+    },
+    {
+      "subject": "creator_music_revenue_share",
+      "predicate": "can_generate",
+      "object": "music_rights_adjustment"
+    },
+    {
+      "subject": "copyright_claim",
+      "predicate": "may_cause",
+      "object": "content_id_revenue_hold"
+    },
+    {
+      "subject": "copyright_takedown",
+      "predicate": "can_result_in",
+      "object": "copyright_strike"
+    },
+    {
+      "subject": "creator_music_revenue_share",
+      "predicate": "is_subject_to",
+      "object": "creator_music_shopping_restriction"
+    },
+    {
+      "subject": "creator",
+      "predicate": "can_record",
+      "object": "audio_rights_search_hours"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_incur",
+      "object": "music_license_upfront_cost"
+    },
+    {
+      "subject": "content_rightsholder",
+      "predicate": "can_raise",
+      "object": "copyright_claim"
+    },
+    {
+      "subject": "music_rights_adjustment",
+      "predicate": "can_reduce",
+      "object": "creator_rpm"
     }
   ],
   "rules": [
@@ -1174,7 +1314,9 @@
     "Online Shopping and sponsor discovery are routes to commerce rather than fixed creator payments.",
     "Registered thumbnail impressions, Shorts feed presentations and video starts are separate countable events.",
     "A casual or regular viewer is a lookback-window classification, not a purchasing tier.",
-    "An archived live replay and its original live broadcast can share viewers and should not have their estimated audiences summed without deduplication."
+    "An archived live replay and its original live broadcast can share viewers and should not have their estimated audiences summed without deduplication.",
+    "Copyright claims, legal removal requests, and copyright strikes are different enforcement units.",
+    "Music revenue-sharing adjustments, license cash expenses, and disputed-payment holds cannot be double-counted."
   ],
-  "ontology_version": "1.2"
+  "ontology_version": "1.3"
 }
