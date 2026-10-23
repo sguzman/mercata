@@ -185,6 +185,39 @@
       "evidence_class": "independent",
       "license": "Short attributed quantitative findings; no images or report copied",
       "notes": "NPORS, 5,511 U.S. adults; Jan 30–Jun 18 2026; online, mail and telephone; overall MOE ±1.8 percentage points. Subgroup errors differ."
+    },
+    {
+      "id": "datareportal-2026-mx",
+      "url": "https://datareportal.com/reports/digital-2026-mexico",
+      "publisher": "DataReportal",
+      "title": "Digital 2026: Mexico",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "independent",
+      "license": "Short attributed statistics; no original charts or report text reused",
+      "notes": "Late-2025 Google advertising planning estimates. Not the platform's actual monthly active user count."
+    },
+    {
+      "id": "datareportal-2026-us",
+      "url": "https://datareportal.com/reports/digital-2026-united-states-of-america",
+      "publisher": "DataReportal",
+      "title": "Digital 2026: United States",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "independent",
+      "license": "Short attributed statistics; no original charts or report text reused",
+      "notes": "Late-2025 Google advertising planning estimates. Not the platform's actual monthly active user count."
+    },
+    {
+      "id": "datareportal-2026-br",
+      "url": "https://datareportal.com/reports/digital-2026-brazil",
+      "publisher": "DataReportal",
+      "title": "Digital 2026: Brazil",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "independent",
+      "license": "Short attributed statistics; no original charts or report text reused",
+      "notes": "Late-2025 Google advertising planning estimates. Not the platform's actual monthly active user count."
     }
   ],
   "claims": [
@@ -379,6 +412,18 @@
       "confidence": "high",
       "observed_at": "2026-10-23",
       "limitations": "U.S. adults only; ever-use, not MAU, unique global users or monthly video views."
+    },
+    {
+      "id": "ad-reach-countries-2025",
+      "text": "DataReportal's Digital 2026 country reports give late-2025 estimated YouTube advertising reach of 85 million in Mexico, 254 million in the United States and 150 million in Brazil.",
+      "source_ids": [
+        "datareportal-2026-mx",
+        "datareportal-2026-us",
+        "datareportal-2026-br"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-23",
+      "limitations": "These are advertising-planning estimates, not the platforms' monthly active users or deduplicated viewer counts."
     }
   ],
   "observations": [],
@@ -406,6 +451,51 @@
         "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
         "limitations": "Not global monthly active users, total users or a count of people.",
         "confidence": "high"
+      },
+      {
+        "id": "ad-reach-late-2025-mx",
+        "metric": "Estimated YouTube advertising reach, late 2025",
+        "value": 85000000,
+        "unit": "ad-reach",
+        "population": "Potential advertising audience shown by Google's planning tools",
+        "geography": "Mexico",
+        "period": "late 2025",
+        "method": "DataReportal report reproducing and explaining Google advertising planning output",
+        "source_ids": [
+          "datareportal-2026-mx"
+        ],
+        "limitations": "Potential ad reach is not monthly active users; may not represent deduplicated active people, registered accounts or all content consumers.",
+        "confidence": "medium"
+      },
+      {
+        "id": "ad-reach-late-2025-us",
+        "metric": "Estimated YouTube advertising reach, late 2025",
+        "value": 254000000,
+        "unit": "ad-reach",
+        "population": "Potential advertising audience shown by Google's planning tools",
+        "geography": "United States",
+        "period": "late 2025",
+        "method": "DataReportal report reproducing and explaining Google advertising planning output",
+        "source_ids": [
+          "datareportal-2026-us"
+        ],
+        "limitations": "Potential ad reach is not monthly active users; may not represent deduplicated active people, registered accounts or all content consumers.",
+        "confidence": "medium"
+      },
+      {
+        "id": "ad-reach-late-2025-br",
+        "metric": "Estimated YouTube advertising reach, late 2025",
+        "value": 150000000,
+        "unit": "ad-reach",
+        "population": "Potential advertising audience shown by Google's planning tools",
+        "geography": "Brazil",
+        "period": "late 2025",
+        "method": "DataReportal report reproducing and explaining Google advertising planning output",
+        "source_ids": [
+          "datareportal-2026-br"
+        ],
+        "limitations": "Potential ad reach is not monthly active users; may not represent deduplicated active people, registered accounts or all content consumers.",
+        "confidence": "medium"
       }
     ],
     "demographics": [
@@ -738,6 +828,96 @@
         "period": "2026-01-30 to 2026-06-18",
         "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
         "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "ad-reach-2025-mx-female",
+        "dimension": "gender",
+        "category": "Female",
+        "share_percent": 51.5,
+        "measurement_kind": "audience_composition_share",
+        "population": "Adult YouTube advertising audience in Mexico",
+        "geography": "Mexico",
+        "period": "late 2025",
+        "method": "DataReportal analysis of Google ad-planning demographics (female and male only)",
+        "source_ids": [
+          "datareportal-2026-mx"
+        ],
+        "limitations": "Share among the reported adult advertising audience; not equivalent to a representative platform user survey or the sex distribution of all viewers."
+      },
+      {
+        "id": "ad-reach-2025-mx-male",
+        "dimension": "gender",
+        "category": "Male",
+        "share_percent": 48.5,
+        "measurement_kind": "audience_composition_share",
+        "population": "Adult YouTube advertising audience in Mexico",
+        "geography": "Mexico",
+        "period": "late 2025",
+        "method": "DataReportal analysis of Google ad-planning demographics (female and male only)",
+        "source_ids": [
+          "datareportal-2026-mx"
+        ],
+        "limitations": "Share among the reported adult advertising audience; not equivalent to a representative platform user survey or the sex distribution of all viewers."
+      },
+      {
+        "id": "ad-reach-2025-us-female",
+        "dimension": "gender",
+        "category": "Female",
+        "share_percent": 50.9,
+        "measurement_kind": "audience_composition_share",
+        "population": "Adult YouTube advertising audience in United States",
+        "geography": "United States",
+        "period": "late 2025",
+        "method": "DataReportal analysis of Google ad-planning demographics (female and male only)",
+        "source_ids": [
+          "datareportal-2026-us"
+        ],
+        "limitations": "Share among the reported adult advertising audience; not equivalent to a representative platform user survey or the sex distribution of all viewers."
+      },
+      {
+        "id": "ad-reach-2025-us-male",
+        "dimension": "gender",
+        "category": "Male",
+        "share_percent": 49.1,
+        "measurement_kind": "audience_composition_share",
+        "population": "Adult YouTube advertising audience in United States",
+        "geography": "United States",
+        "period": "late 2025",
+        "method": "DataReportal analysis of Google ad-planning demographics (female and male only)",
+        "source_ids": [
+          "datareportal-2026-us"
+        ],
+        "limitations": "Share among the reported adult advertising audience; not equivalent to a representative platform user survey or the sex distribution of all viewers."
+      },
+      {
+        "id": "ad-reach-2025-br-female",
+        "dimension": "gender",
+        "category": "Female",
+        "share_percent": 51.9,
+        "measurement_kind": "audience_composition_share",
+        "population": "Adult YouTube advertising audience in Brazil",
+        "geography": "Brazil",
+        "period": "late 2025",
+        "method": "DataReportal analysis of Google ad-planning demographics (female and male only)",
+        "source_ids": [
+          "datareportal-2026-br"
+        ],
+        "limitations": "Share among the reported adult advertising audience; not equivalent to a representative platform user survey or the sex distribution of all viewers."
+      },
+      {
+        "id": "ad-reach-2025-br-male",
+        "dimension": "gender",
+        "category": "Male",
+        "share_percent": 48.1,
+        "measurement_kind": "audience_composition_share",
+        "population": "Adult YouTube advertising audience in Brazil",
+        "geography": "Brazil",
+        "period": "late 2025",
+        "method": "DataReportal analysis of Google ad-planning demographics (female and male only)",
+        "source_ids": [
+          "datareportal-2026-br"
+        ],
+        "limitations": "Share among the reported adult advertising audience; not equivalent to a representative platform user survey or the sex distribution of all viewers."
       }
     ],
     "communities": [],
