@@ -74,6 +74,15 @@ for (const entry of index.specimens) {
     const history=load('ontology/youtube/measurement-history.json');
     const economics=load('ontology/youtube/economic-model.json');
     const routes=load('ontology/youtube/revenue-pathways.json');
+    const eligibility=load('ontology/youtube/eligibility-matrix.json');
+    const eligibilityIds=new Set(eligibility.records.map(x=>x.pathway_id));
+    ensure(eligibility.records.length===routes.pathways.length && eligibilityIds.size===routes.pathways.length,
+      'Every earning route must have one eligibility checklist');
+    ensure(eligibility.records.every(x=>routes.pathways.some(r=>r.id===x.pathway_id) &&
+      x.gates.length>0 && x.source_ids.every(id=>sourceIds.has(id)) &&
+      x.eligibility_confirmed_for_any_specific_person===false),
+      'Invalid or unsourced earning eligibility');
+
     const opportunity=load('ontology/youtube/opportunity-framework.json');
     const restrictions=load('ontology/youtube/content-policy-risk.json');
     ensure(restrictions.classifications.length>=4 && restrictions.policy_dimensions.length>=8,

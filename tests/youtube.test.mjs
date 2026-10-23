@@ -222,3 +222,23 @@ test('Platform scale preserves distinct event and human-survey denominators',asy
   assert(scale.observations.filter(x=>x.unit.includes('percent')).length===2);
   assert(scale.observations.every(x=>!x.id.includes('global_mau')));
 });
+
+test('Every YouTube earning route has sourced, nonpersonal eligibility gates',async()=>{
+  const [routes,gates,record]=await Promise.all([
+    load('ontology/youtube/revenue-pathways.json'),
+    load('ontology/youtube/eligibility-matrix.json'),
+    load('specimens/youtube.json')
+  ]);
+  const allowed=new Set(record.evidence.map(x=>x.id));
+  const routeIds=new Set(routes.pathways.map(x=>x.id));
+  assert.equal(gates.records.length,routeIds.size);
+  for(const x of gates.records){
+    assert(routeIds.has(x.pathway_id));
+    assert(x.source_ids.length&&x.source_ids.every(id=>allowed.has(id)));
+    assert(x.gates.length>=2);
+    assert.equal(x.eligibility_confirmed_for_any_specific_person,false);
+  }
+  assert.equal(gates.records.find(x=>x.pathway_id==='live-gifts').minimum_creator_age,18);
+  assert(gates.records.find(x=>x.pathway_id==='shopping-affiliate').music_channel_status.includes('ineligible'));
+  assert.equal(gates.records.find(x=>x.pathway_id==='direct-sponsorship').tier,'not_ypp_dependent');
+});

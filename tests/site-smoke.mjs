@@ -41,6 +41,7 @@ try{
     assert.equal(await page.locator('#dossier-view h3').first().textContent(),'YouTube');
     assert((await page.locator('.platform-policy-grid .policy-card').count())>=10,'Missing YouTube policy cards');
     assert.equal(await page.locator('.revenue-pathway-card').count(),16,'Missing distinct monetization routes');
+    assert.equal(await page.locator('.earning-gate-details').count(),16,'Missing product-specific eligibility checklists');
     assert.equal(await page.locator('.content-policy-item').count(),8,'Missing sourced content restrictions');
     assert.equal(await page.locator('.analytics-metric-item').count(),11,'Missing Youtube Analytics metric guide');
     assert.equal(await page.locator('.scale-observation').count(),4,'Missing global scale observations');

@@ -75,3 +75,7 @@ The [YouTube Analytics measurement guide](analytics-query-guide.md) ([machine re
 ## Worldwide reach and volume
 
 [Platform-scale research](platform-scale.md) separates GWI's monthly self-reported YouTube use among internet users 16+, YouTube's daily video upload supply, and daily Shorts viewing events. Its [machine model](platform-scale.json) preserves denominator, market coverage, publication snapshot and source. No published figure is presented as a verified global count of unique active people.
+
+## Feature eligibility checklists
+
+The [product-specific eligibility matrix](eligibility-matrix.md) ([machine JSON](eligibility-matrix.json)) records the age, product module, country, music-channel and child-directed restrictions for all sixteen earning routes. It separates YPP advertising status from individual memberships, Gifts, Shopping and Creator Partnerships gates. External product sales and sponsorships remain outside YouTube's own payout contract.
