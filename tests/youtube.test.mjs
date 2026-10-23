@@ -23,6 +23,30 @@ test('Unmeasured topics are not represented as counted audiences',async()=>{
   assert(taxonomy.topics.every(x=>x.audience_estimate===null));
 });
 
+test('YouTube onboarding keeps channel creation, feature access and monetization separate',async()=>{
+  const [access,dossier]=await Promise.all([
+    load('ontology/youtube/channel-onboarding.json'),load('specimens/youtube.json')
+  ]);
+  const known=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(access.stages.length,6);
+  assert.deepEqual(access.stages.map(x=>x.sequence),[1,2,3,4,5,6]);
+  assert.equal(access.feature_gates.length,4);
+  assert.equal(access.entry_pathway.length,5);
+  assert(access.stages.every(x=>x.source_ids.length &&
+    x.source_ids.every(id=>known.has(id)) && x.expected_time_days===null));
+  assert(access.objects.every(x=>x.source_ids.every(id=>known.has(id))));
+  assert(access.feature_gates.every(x=>x.source_ids.every(id=>known.has(id))));
+  assert(access.entry_pathway.every(x=>x.operator_work_hours===null &&
+    x.source_ids.every(id=>known.has(id))));
+  assert(access.stages.some(x=>x.id==='standard' && x.requires_phone_verification===false));
+  assert(access.stages.some(x=>x.id==='intermediate' && x.requires_phone_verification===true));
+  assert(access.feature_gates.find(x=>x.id==='advanced')
+    .requires.includes('sufficient_channel_history_OR_optional_id_or_video_verification'));
+  assert.equal(access.accounting.zero_cost_guarantee,false);
+  assert.equal(access.accounting.setup_hours_median,null);
+  assert.equal(access.accounting.time_to_first_payment_distribution,null);
+});
+
 test('YouTube ontology connects audio licensing, Content ID holds and copyright strikes',async()=>{
   const model=await load('ontology/youtube/model.json');
   const known=new Set(model.concepts.map(x=>x.id));
