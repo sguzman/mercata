@@ -38,6 +38,13 @@ jobs:
           npx playwright install --with-deps firefox
       - name: Verify website in Firefox at desktop and mobile widths
         run: node tests/site-smoke.mjs
+      - name: Check public GitHub Pages response
+        run: |
+          if curl --fail --silent --show-error --max-time 25 https://sguzman.github.io/mercata/ -o pages-preview.html && grep -q 'id="catalog-grid"' pages-preview.html; then
+            echo 'PASS: public Pages endpoint returned the Mercata catalog'
+          else
+            echo '::warning::Pages endpoint is not yet verifiably serving the latest Mercata catalog'
+          fi
       - name: Archive website QA screenshots
         if: always()
         uses: actions/upload-artifact@v4
