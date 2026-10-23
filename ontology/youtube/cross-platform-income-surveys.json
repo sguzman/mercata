@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "cross_platform_creator_income_survey_evidence",
+  "as_of": "2026-10-23",
+  "status": "adjacent_cross_platform_samples_not_youtube_income_distribution",
+  "purpose": "Preserve nonrepresentative mixed-platform creator income reports with exact source families, denominator limitations and zero-earner uncertainty.",
+  "independent_dataset_families": 2,
+  "studies": [
+    {
+      "id": "neoreach-2025",
+      "title": "Creator Earnings Report 2025",
+      "lead_organization": "NeoReach",
+      "survey_year": 2025,
+      "source_ids": [
+        "neoreach-earnings-2025",
+        "neoreach-earnings-syndication-2026"
+      ],
+      "source_family_id": "neoreach-2025",
+      "independence_note": "Influencer Marketing Hub is a partner/syndicator of the same NeoReach report, not a second independently sampled dataset.",
+      "sampled_population": "Cross-platform creators recruited for an industry survey; full recruitment frame and response rate unavailable.",
+      "survey_respondents_exact": null,
+      "survey_respondents_lower_bound_exclusive": 3000,
+      "platform_scope": "multiple social and creator platforms, not YouTube-only",
+      "youtube_subgroup_n": null,
+      "non_earning_entrants_covered": null,
+      "data_collection_mode": "creator survey",
+      "representative_of_youtube": false,
+      "representative_of_all_creators": false,
+      "verification_of_earnings": "self-reported; no audited income statements documented on public summary",
+      "geographic_denominator": "worldwide claimed survey outreach, geography weighting not established",
+      "observation_period": "report 2025; exact respondent earnings reference window and fieldwork dates not disclosed on public overview",
+      "monetary_currency": "USD",
+      "earning_definition": "annual creator earnings as reported; whether gross receipts versus profit cannot be established from source overview",
+      "measurements": [
+        {
+          "id": "below_15000_year",
+          "metric": "share_of_surveyed_creators_below_income_threshold",
+          "value": 50.71,
+          "unit": "percent",
+          "threshold_usd_annual": 15000,
+          "scope": "all surveyed creators",
+          "denominator_n": null,
+          "approximate": false
+        },
+        {
+          "id": "full_time_below_44000_year",
+          "metric": "share_of_surveyed_full_time_creators_below_income_threshold",
+          "value": 57,
+          "unit": "approximately_percent",
+          "threshold_usd_annual": 44000,
+          "scope": "full-time subgroup of survey respondents",
+          "denominator_n": null,
+          "approximate": true
+        }
+      ],
+      "missing": [
+        "youtube_specific_earnings_distribution",
+        "youtube_subgroup_sample_n",
+        "zero_earning_creator_share",
+        "recruitment_and_nonresponse_mechanism",
+        "verified_net_profit",
+        "survey_fieldwork_dates",
+        "full_methodology"
+      ],
+      "limitations": [
+        "Sampling is not probability-based from all creator or YouTube accounts.",
+        "YouTube membership or activity of respondents does not isolate their YouTube-native payouts.",
+        "A result marketed as a monetization barrier does not establish a universal causal threshold.",
+        "Survey respondents with income are not a first-year entrant cohort.",
+        "The same source family appears in partner publications and must not be counted twice."
+      ],
+      "inference_to_youtube_median": "prohibited"
+    },
+    {
+      "id": "spotlight-2025",
+      "title": "Creator Spotlight 2025 Monetization Report",
+      "lead_organization": "Creator Spotlight",
+      "survey_year": 2025,
+      "source_ids": [
+        "creator-spotlight-2025"
+      ],
+      "source_family_id": "spotlight-2025",
+      "independence_note": "Original newsletter reader survey; independent from the NeoReach/IMH source family.",
+      "sampled_population": "Adult creator subscribers to an engaged newsletter, mainly in North America; mix of video, newsletter, podcast and social creators.",
+      "survey_respondents_exact": 427,
+      "survey_respondents_lower_bound_exclusive": null,
+      "invited_population_approximate": 300000,
+      "invitation_description": "Nearly 300,000 most-engaged subscribers (not an exact exposure or response denominator).",
+      "platform_scope": "mixed-platform content creators; not YouTube-only",
+      "youtube_subgroup_n": null,
+      "non_earning_entrants_covered": null,
+      "data_collection_mode": "self-reported 28-question Tally survey",
+      "representative_of_youtube": false,
+      "representative_of_all_creators": false,
+      "verification_of_earnings": "self-reported, not audited",
+      "geographic_denominator": "primarily North America",
+      "observation_period": "2025 creator work income; published 2025-12-12",
+      "monetary_currency": "USD",
+      "earning_definition": "self-reported calendar-year creator-work earnings, not confirmed net business profit",
+      "measurements": [
+        {
+          "id": "income_under_500",
+          "metric": "share_below_earnings_threshold",
+          "value": null,
+          "unit": "qualitative_nearly_half",
+          "threshold_usd_annual": 500,
+          "scope": "427 creator respondents",
+          "denominator_n": 427,
+          "approximate": true
+        },
+        {
+          "id": "income_100000_plus_count",
+          "metric": "respondents_earning_six_figures_or_more",
+          "value": 37,
+          "unit": "persons",
+          "threshold_usd_annual": 100000,
+          "scope": "427 creator respondents",
+          "denominator_n": 427,
+          "approximate": false
+        },
+        {
+          "id": "income_100000_plus_percent",
+          "metric": "surveyed_creator_share_earning_six_figures_or_more",
+          "value": 8.7,
+          "unit": "reported_percent",
+          "threshold_usd_annual": 100000,
+          "scope": "427 creator respondents",
+          "denominator_n": 427,
+          "approximate": true
+        },
+        {
+          "id": "income_1000_5000_count",
+          "metric": "respondents_in_reported_income_bracket",
+          "value": 92,
+          "unit": "persons",
+          "lower_usd_annual": 1000,
+          "upper_usd_annual": 5000,
+          "scope": "427 creator respondents",
+          "denominator_n": 427,
+          "approximate": false
+        }
+      ],
+      "missing": [
+        "youtube_specific_earnings_distribution",
+        "youtube_subgroup_sample_n",
+        "survey_nonresponse_profile",
+        "exact_below_500_share",
+        "zero_income_share",
+        "verified_net_income",
+        "entry_cohort_earnings"
+      ],
+      "limitations": [
+        "The responding audience is self-selected newsletter subscribers, not the population of YouTube uploaders.",
+        "Nearly half is qualitative and must not be silently converted to a precise percentage.",
+        "The approximate invitation count is not an exact number of survey recipients or reliable probability-sample response denominator.",
+        "Six-figure earners across mixed creator businesses cannot predict YouTube ad payments.",
+        "Observational revenue-diversification patterns are associations, not proven earnings causes."
+      ],
+      "inference_to_youtube_median": "prohibited"
+    }
+  ],
+  "comparability": {
+    "supported": "Discuss direction of income inequality and survey-selection limitations across different creator samples.",
+    "unsupported": [
+      "pooling_percentages",
+      "claiming_independent_replication_from_same_neoreach_family",
+      "transferring_threshold_rates_to_youtube",
+      "inferring_youtube_zero_earner_rate",
+      "estimating_new_channel_profitability",
+      "inferring_causal_effect_of_sponsors_or_audience_ownership"
+    ],
+    "method": "Do not pool a 2025 cross-platform earnings share with 2018/2021/2024 Patreon observations or a 297-channel already-monetized YouTube cohort; populations, channels, years, methods and currency denominators differ."
+  },
+  "youtube_target_estimates": {
+    "all_creator_annual_income_median": null,
+    "native_youtube_annual_payout_median": null,
+    "never_monetized_creator_share": null,
+    "newly_started_12_month_profit_distribution": null,
+    "zero_income_share": null,
+    "newcomer_earnings_by_format": null
+  },
+  "publication_rules": [
+    "Preserve all source-family IDs to avoid duplicate studies.",
+    "Do not present a multi-platform respondent percentage as a YouTube frequency.",
+    "Do not interpret zero monetization as zero production costs or no work.",
+    "Use null for unknown exact sample sizes, exact proportions, and revenue distributions.",
+    "Do not infer sensitive demographic attributes of individual creators."
+  ]
+}
