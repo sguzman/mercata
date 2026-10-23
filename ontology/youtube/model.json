@@ -714,6 +714,134 @@
       "unit": "percent_per_period",
       "access": "authorized_analytics",
       "measured_value": null
+    },
+    {
+      "id": "thumbnail_impression",
+      "group": "measurement",
+      "definition": "Eligible, registered thumbnail display event, subject to surface and visibility rules",
+      "unit": "event",
+      "access": "authorized_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "impressions_ctr",
+      "group": "measurement",
+      "definition": "Share of registered thumbnail displays producing counted video views",
+      "unit": "fraction",
+      "access": "authorized_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "shorts_feed_presentation",
+      "group": "measurement",
+      "definition": "A presentation of a Short in Shorts Feed, not necessarily watched",
+      "unit": "event",
+      "access": "authorized_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "shorts_stay_rate",
+      "group": "measurement",
+      "definition": "Fraction of feed presentations resulting in a qualified stay rather than immediate swipe",
+      "unit": "fraction",
+      "access": "authorized_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "returning_viewers",
+      "group": "measurement",
+      "definition": "Estimated channel viewers who previously watched and returned",
+      "unit": "people",
+      "access": "authorized_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "new_viewers",
+      "group": "measurement",
+      "definition": "Viewers identified as first-time or effectively new under platform lookback definition",
+      "unit": "people",
+      "access": "authorized_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "casual_viewers",
+      "group": "measurement",
+      "definition": "People watching a channel in one to five months of the last year",
+      "unit": "people",
+      "access": "authorized_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "regular_viewers",
+      "group": "measurement",
+      "definition": "People watching a channel in more than six months of the last year",
+      "unit": "people",
+      "access": "authorized_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "post_engagement",
+      "group": "measurement",
+      "definition": "Engagement events on channel-associated Community Posts",
+      "unit": "event",
+      "access": "authorized_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "traffic_source",
+      "group": "measurement",
+      "definition": "Attribution category such as search, suggested, external link or Shorts feed",
+      "unit": "category",
+      "access": "authorized_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "format_classification",
+      "group": "formats",
+      "definition": "System designation that determines distribution and relevant payment modules",
+      "unit": "category",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "mobile_live_eligibility",
+      "group": "economics",
+      "definition": "Mobile-specific live-stream gate distinct from general webcam live access",
+      "unit": "rule",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "shorts_related_video_link",
+      "group": "economics",
+      "definition": "Platform-supported clickable related-video destination from a Short",
+      "unit": "link",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "external_description_link",
+      "group": "economics",
+      "definition": "Link in supported channel, video or live surface subject to feature access",
+      "unit": "link",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "podcast_show",
+      "group": "formats",
+      "definition": "A podcast-designated playlist of eligible YouTube video episodes",
+      "unit": "playlist",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "live_replay",
+      "group": "formats",
+      "definition": "Archived video of a live stream for later on-demand watching",
+      "unit": "video",
+      "access": "official",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -951,6 +1079,86 @@
       "subject": "channel_membership",
       "predicate": "has_measurable",
       "object": "subscription_churn"
+    },
+    {
+      "subject": "thumbnail_impression",
+      "predicate": "may_lead_to",
+      "object": "impressions_ctr"
+    },
+    {
+      "subject": "shorts_feed_presentation",
+      "predicate": "measured_by",
+      "object": "shorts_stay_rate"
+    },
+    {
+      "subject": "shorts_feed",
+      "predicate": "contains",
+      "object": "shorts_feed_presentation"
+    },
+    {
+      "subject": "channel",
+      "predicate": "has",
+      "object": "returning_viewers"
+    },
+    {
+      "subject": "returning_viewers",
+      "predicate": "segmented_as",
+      "object": "casual_viewers"
+    },
+    {
+      "subject": "returning_viewers",
+      "predicate": "segmented_as",
+      "object": "regular_viewers"
+    },
+    {
+      "subject": "channel",
+      "predicate": "has",
+      "object": "new_viewers"
+    },
+    {
+      "subject": "community_post",
+      "predicate": "generates",
+      "object": "post_engagement"
+    },
+    {
+      "subject": "video",
+      "predicate": "receives",
+      "object": "traffic_source"
+    },
+    {
+      "subject": "video",
+      "predicate": "has",
+      "object": "format_classification"
+    },
+    {
+      "subject": "live_stream",
+      "predicate": "may_require",
+      "object": "mobile_live_eligibility"
+    },
+    {
+      "subject": "shorts_feed",
+      "predicate": "provides",
+      "object": "shorts_related_video_link"
+    },
+    {
+      "subject": "watch_page",
+      "predicate": "may_provide",
+      "object": "external_description_link"
+    },
+    {
+      "subject": "playlist",
+      "predicate": "can_be_classified_as",
+      "object": "podcast_show"
+    },
+    {
+      "subject": "live_stream",
+      "predicate": "may_be_archived_as",
+      "object": "live_replay"
+    },
+    {
+      "subject": "live_replay",
+      "predicate": "is_a",
+      "object": "video"
     }
   ],
   "rules": [
@@ -963,7 +1171,10 @@
     "Use dated public evidence for policy claims and documented methods for population estimands.",
     "Program eligibility, payment-account currency, creator residence, viewer country, and payment address are different concepts.",
     "Virtual gifts pay creators through Rubies; Jewels are not equivalent to a gross-to-creator currency exchange.",
-    "Online Shopping and sponsor discovery are routes to commerce rather than fixed creator payments."
+    "Online Shopping and sponsor discovery are routes to commerce rather than fixed creator payments.",
+    "Registered thumbnail impressions, Shorts feed presentations and video starts are separate countable events.",
+    "A casual or regular viewer is a lookback-window classification, not a purchasing tier.",
+    "An archived live replay and its original live broadcast can share viewers and should not have their estimated audiences summed without deduplication."
   ],
-  "ontology_version": "1.1"
+  "ontology_version": "1.2"
 }

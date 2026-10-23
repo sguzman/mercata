@@ -305,3 +305,13 @@ test('Eight YouTube formats preserve different access and link rules',async()=>{
   assert(formats.formats.every(x=>x.source_ids.every(id=>sourceIds.has(id))));
   assert(formats.formats.every(x=>x.format_median_income===null && x.production_hours===null));
 });
+
+test('YouTube graph distinguishes format and audience event semantics',async()=>{
+  const graph=await load('ontology/youtube/model.json');
+  const ids=new Set(graph.concepts.map(x=>x.id));
+  assert(ids.has('thumbnail_impression') && ids.has('shorts_stay_rate'));
+  assert(ids.has('mobile_live_eligibility') && ids.has('shorts_related_video_link'));
+  assert(ids.has('regular_viewers') && ids.has('new_viewers'));
+  assert.equal(ids.size,graph.concepts.length);
+  assert(graph.relations.every(r=>ids.has(r.subject)&&ids.has(r.object)));
+});
