@@ -999,6 +999,50 @@
       "evidence_class": "self_selected_newsletter_creator_survey",
       "license": "Linked publisher report; only brief quantified paraphrases",
       "notes": "427 self-reported mixed-platform creator respondents. Survey was sent to nearly 300,000 engaged newsletter subscribers; not YouTube-specific."
+    },
+    {
+      "id": "ofcom-uk-online-2025",
+      "url": "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025",
+      "publisher": "Ofcom (UK communications regulator)",
+      "title": "From apps to AI search: how the UK goes online in 2025",
+      "published_at": "2025-12-10",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_regulator_observation",
+      "license": "Independent short paraphrases with primary-source link",
+      "notes": "Ofcom Online Nation adult online-use briefing. TV viewing excluded from reported 51 online minutes; do not add to a different Barb estimate."
+    },
+    {
+      "id": "ofcom-uk-media-nations-2026",
+      "url": "https://www.ofcom.org.uk/media-use-and-attitudes/media-habits-adults/nations-media-habits-revealed-in-annual-ofcom-report",
+      "publisher": "Ofcom (UK communications regulator)",
+      "title": "Nation's media habits revealed in annual Ofcom report",
+      "published_at": "2026-07-29",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_regulator_observation",
+      "license": "Independent numerical summaries with source link",
+      "notes": "Barb in-home YouTube video viewing 2022 vs 2025, TV subset of connected devices, and 75+ weekly reach; not to be added to Online Nation minutes."
+    },
+    {
+      "id": "reuters-dnr-2026",
+      "url": "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2026/dnr-executive-summary",
+      "publisher": "Reuters Institute for the Study of Journalism / University of Oxford",
+      "title": "Overview and key findings of the 2026 Digital News Report",
+      "published_at": "2026-06-16",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "cross_country_online_survey",
+      "license": "Brief numerical facts independently summarized with source link",
+      "notes": "48 markets, online survey respondents. 69% any-purpose YouTube use vs 34% use for news; not worldwide population proportions."
+    },
+    {
+      "id": "reuters-dnr-methods-2026",
+      "url": "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2026/methodology",
+      "publisher": "Reuters Institute for the Study of Journalism",
+      "title": "Digital News Report 2026 methodology",
+      "published_at": "2026-06-16",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "cross_country_survey_methodology",
+      "license": "Linked original research methodology; original text not reproduced",
+      "notes": "Online sampling and market variation caveats, no presumption that respondents represent all humans."
     }
   ],
   "claims": [
@@ -1910,6 +1954,57 @@
       "observed_at": "2026-10-23",
       "confidence": "medium",
       "limitations": "Nearly half is qualitative, not an exact count or percentage; respondents include non-YouTube platforms and are not a representative YouTube cohort."
+    },
+    {
+      "id": "ofcom-uk-youtube-reach-2025",
+      "text": "Ofcom's December 2025 Online Nation public briefing reports YouTube use by 94% of UK adults, on its UK online-audience measurement basis.",
+      "source_ids": [
+        "ofcom-uk-online-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Use/reach from regulator briefing is not a worldwide monthly audience size. Exact time window and weighting must be taken from the full methodology."
+    },
+    {
+      "id": "ofcom-uk-2025-online-minutes",
+      "text": "Ofcom's 2025 Online Nation briefing reports 51 minutes per day on YouTube, excluding television-set viewing.",
+      "source_ids": [
+        "ofcom-uk-online-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Time-per-user versus time-per-all-adults denominator in short briefing is not fully specified; it cannot be summed with Barb in-home viewing minutes."
+    },
+    {
+      "id": "ofcom-uk-2022-2025-tv-minutes",
+      "text": "Ofcom's July 2026 Media Nations briefing says UK per-person daily YouTube viewing on TV sets increased from 9 minutes in 2022 to 19 minutes in 2025; total in-home connected-device viewing was 33 versus 41 minutes per person.",
+      "source_ids": [
+        "ofcom-uk-media-nations-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Barb in-home measures exclude out-of-home/mobile-network viewing; all-device figures already include TV, so amounts may not be added."
+    },
+    {
+      "id": "ofcom-uk-75plus-weekly-2022-2025",
+      "text": "Ofcom reports weekly YouTube reach among UK people aged 75 and over of 28% in 2022 and 33% in 2025.",
+      "source_ids": [
+        "ofcom-uk-media-nations-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "These are prevalence rates within the 75+ age group, not YouTube audience-composition shares or inferred individual identities."
+    },
+    {
+      "id": "reuters-dnr-2026-youtube-any-vs-news",
+      "text": "Reuters Institute's 2026 Digital News Report describes YouTube use for any purpose by 69% of respondents across its surveyed markets and for news by 34%; these are separate questions and measurement windows.",
+      "source_ids": [
+        "reuters-dnr-2026",
+        "reuters-dnr-methods-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "48-market online survey averages do not represent all world residents. News use is not a share of watch time, ads or YouTube videos."
     }
   ],
   "observations": [],
