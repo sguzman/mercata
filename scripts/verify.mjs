@@ -152,6 +152,16 @@ for (const entry of index.specimens) {
     ensure(musicRights.claim_outcomes.every(x=>x.source_ids.length &&
       x.source_ids.every(id=>sourceIds.has(id)) && x.measured_loss===null),
       'Unsupported Content ID earnings loss');
+    ensure(musicRights.enforcement_types.length===2 &&
+      musicRights.enforcement_types.every(x=>x.source_ids.length &&
+        x.source_ids.every(id=>sourceIds.has(id)) && x.creator_loss_estimate===null),
+      'Unsupported copyright claim or strike economics');
+    ensure(musicRights.enforcement_types.some(x=>x.id==='content_id_claim' &&
+      x.copyright_strike_automatic===false), 'Content ID claims mislabeled as strikes');
+    ensure(musicRights.monetization_interactions.length===2 &&
+      musicRights.monetization_interactions.every(x=>x.source_ids.length &&
+        x.source_ids.every(id=>sourceIds.has(id)) && x.creator_earnings_impact===null),
+      'Unattributed music product restrictions or fabricated losses');
     ensure(musicRights.accounting_fields.length>=6 &&
       musicRights.typical_cash_cost===null && musicRights.typical_work_hours===null &&
       musicRights.typical_profit_effect===null, 'Invented typical creator cost or work hours');
