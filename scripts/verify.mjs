@@ -32,6 +32,40 @@ for (const entry of index.specimens) {
   ensure(dossier.id === entry.id && queue.specimen_id === entry.id,'Dossier/index mismatch');
   ensure(dossier.schema_version === 1 && dossier.color.hex === entry.color.hex,'Dossier schema/color mismatch');
   ensure(toHex(dossier.color.oklch) === dossier.color.hex,'Bad specimen color');
+  const sourceIds = new Set();
+  for(const source of dossier.evidence) {
+    ensure(source.id && !sourceIds.has(source.id),'Missing or duplicate source ID');
+    ensure(typeof source.url==='string' && source.url.startsWith('https://'),'Invalid source URL');
+    ensure(typeof source.retrieved_at==='string' && source.publisher,'Incomplete source provenance');
+    sourceIds.add(source.id);
+  }
+  const claimIds=new Set();
+  for(const claim of dossier.claims) {
+    ensure(claim.id && !claimIds.has(claim.id),'Missing or duplicate claim ID');
+    claimIds.add(claim.id);
+    ensure(typeof claim.text==='string' && claim.text.length>0,'Empty claim');
+    ensure(Array.isArray(claim.source_ids) && claim.source_ids.length>0,'Unsourced claim');
+    ensure(claim.source_ids.every(id=>sourceIds.has(id)),'Claim references unknown source');
+    ensure(claim.observed_at && typeof claim.limitations==='string','Claim missing observation date or limits');
+  }
+  if(entry.id==='youtube') {
+    const model=load('ontology/youtube/model.json');
+    const topic=load('ontology/youtube/taxonomy.json');
+    const policy=load('ontology/youtube/policies.json');
+    const measures=load('ontology/youtube/measurements.json');
+    const conceptIds=new Set(model.concepts.map(x=>x.id));
+    ensure(conceptIds.size===model.concepts.length && model.concepts.length>=60,'Incomplete YouTube ontology');
+    ensure(model.relations.every(x=>conceptIds.has(x.subject)&&conceptIds.has(x.object)),'Ontology relation has unknown concept');
+    ensure(new Set(topic.topics.map(t=>t.id)).size===topic.topics.length,'Duplicate topic ID');
+    ensure(topic.topics.every(x=>x.measurement_status!=='researched' || x.audience_estimate!==null),'Invented topic estimate');
+    ensure(policy.items.every(x=>x.source_ids.length>0&&x.source_ids.every(id=>sourceIds.has(id))),'Unattributed policy');
+    ensure(measures.metrics.every(x=>x.source_ids.length>0&&x.source_ids.every(id=>sourceIds.has(id))),'Unattributed metric');
+    for(const m of dossier.audience_research?.demographics||[]) {
+      ensure(m.measurement_kind==='within_group_ever_use_rate' || m.measurement_kind==='audience_composition_share',
+        'Ambiguous demographic percentage denominator');
+    }
+  }
+
   const taskIds = new Set();
   const profiles = dossier.research_profiles || [];
   ensure(JSON.stringify(profiles) === JSON.stringify(entry.research_profiles || []),'Research profile/index mismatch');
