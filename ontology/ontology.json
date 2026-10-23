@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "title": "Mercata marketplace economics ontology",
+  "description": "Complete independent public domain vocabulary for market, earnings and opportunity research.",
+  "entities": [
+    {
+      "id": "marketplace",
+      "definition": "Platform connecting makers, service providers or publishers to buyers or audiences.",
+      "attributes": [
+        "name",
+        "official_url",
+        "roles",
+        "jurisdictions"
+      ],
+      "relates_to": [
+        "opportunity",
+        "fee",
+        "eligibility",
+        "payout"
+      ]
+    },
+    {
+      "id": "platform_role",
+      "definition": "Economic function: marketplace, channel, publisher, payment rail, or broker.",
+      "attributes": [
+        "id",
+        "definition"
+      ],
+      "relates_to": [
+        "marketplace"
+      ]
+    },
+    {
+      "id": "product_type",
+      "definition": "Good, license, digital work, professional service or subscribed benefit.",
+      "attributes": [
+        "id",
+        "type",
+        "delivery"
+      ],
+      "relates_to": [
+        "opportunity"
+      ]
+    },
+    {
+      "id": "opportunity",
+      "definition": "Specific route to revenue through a platform.",
+      "attributes": [
+        "product_type",
+        "buyer",
+        "monetization",
+        "discovery"
+      ],
+      "relates_to": [
+        "marketplace",
+        "experiment"
+      ]
+    },
+    {
+      "id": "eligibility",
+      "definition": "An access, residency, identity, audience or qualification condition.",
+      "attributes": [
+        "condition",
+        "jurisdiction",
+        "effective_date"
+      ],
+      "relates_to": [
+        "marketplace",
+        "claim"
+      ]
+    },
+    {
+      "id": "fee",
+      "definition": "An entry, sale, processing, refund or withdrawal charge.",
+      "attributes": [
+        "kind",
+        "amount",
+        "currency",
+        "rate",
+        "basis"
+      ],
+      "relates_to": [
+        "marketplace",
+        "claim"
+      ]
+    },
+    {
+      "id": "payout",
+      "definition": "Payment method, minimum amount, timing and regional restriction.",
+      "attributes": [
+        "method",
+        "threshold",
+        "country",
+        "settlement"
+      ],
+      "relates_to": [
+        "marketplace",
+        "claim"
+      ]
+    },
+    {
+      "id": "audience",
+      "definition": "Buyers, potential buyers, clients or viewers in a defined segment.",
+      "attributes": [
+        "segment",
+        "period",
+        "sample"
+      ],
+      "relates_to": [
+        "marketplace",
+        "observation"
+      ]
+    },
+    {
+      "id": "market_metric",
+      "definition": "Definition of a measurable market or income quantity.",
+      "attributes": [
+        "unit",
+        "population",
+        "denominator",
+        "gross_net"
+      ],
+      "relates_to": [
+        "observation"
+      ]
+    },
+    {
+      "id": "observation",
+      "definition": "Dated reported or measured value for a defined metric.",
+      "attributes": [
+        "value",
+        "period",
+        "population",
+        "method",
+        "limitations"
+      ],
+      "relates_to": [
+        "market_metric",
+        "claim"
+      ]
+    },
+    {
+      "id": "income_distribution",
+      "definition": "Population income spread and zero-earner inclusion.",
+      "attributes": [
+        "mean",
+        "median",
+        "percentiles",
+        "zeros",
+        "sample"
+      ],
+      "relates_to": [
+        "observation"
+      ]
+    },
+    {
+      "id": "trend",
+      "definition": "Comparable series of metric observations over time.",
+      "attributes": [
+        "metric",
+        "series",
+        "comparability"
+      ],
+      "relates_to": [
+        "observation"
+      ]
+    },
+    {
+      "id": "competition",
+      "definition": "Supply, concentration, pricing and differentiation in a segment.",
+      "attributes": [
+        "population",
+        "prices",
+        "sample"
+      ],
+      "relates_to": [
+        "observation",
+        "claim"
+      ]
+    },
+    {
+      "id": "right",
+      "definition": "Ownership, license, exclusivity, takedown or portability term.",
+      "attributes": [
+        "scope",
+        "jurisdiction",
+        "effective_date"
+      ],
+      "relates_to": [
+        "marketplace",
+        "claim"
+      ]
+    },
+    {
+      "id": "risk",
+      "definition": "Threat to economic access, payout, demand, rights or continuity.",
+      "attributes": [
+        "kind",
+        "likelihood",
+        "impact",
+        "limitations"
+      ],
+      "relates_to": [
+        "claim",
+        "opportunity"
+      ]
+    },
+    {
+      "id": "source",
+      "definition": "Public origin of a checkable assertion.",
+      "attributes": [
+        "url",
+        "publisher",
+        "published_at",
+        "retrieved_at",
+        "evidence_class",
+        "license"
+      ],
+      "relates_to": [
+        "claim"
+      ]
+    },
+    {
+      "id": "claim",
+      "definition": "Atomic statement backed by one or more public sources.",
+      "attributes": [
+        "text",
+        "confidence",
+        "date",
+        "source_ids",
+        "limitations"
+      ],
+      "relates_to": [
+        "source",
+        "observation"
+      ]
+    },
+    {
+      "id": "experiment",
+      "definition": "Bounded test of a strategy with effort, costs and outcomes.",
+      "attributes": [
+        "hypothesis",
+        "cost",
+        "hours",
+        "method",
+        "result"
+      ],
+      "relates_to": [
+        "opportunity",
+        "claim"
+      ]
+    },
+    {
+      "id": "specimen",
+      "definition": "Versioned independent marketplace research dossier.",
+      "attributes": [
+        "id",
+        "marketplace",
+        "status",
+        "color",
+        "sources"
+      ],
+      "relates_to": [
+        "marketplace",
+        "queue"
+      ]
+    },
+    {
+      "id": "queue",
+      "definition": "Group of research tasks on a common topic.",
+      "attributes": [
+        "id",
+        "tasks",
+        "objective"
+      ],
+      "relates_to": [
+        "task",
+        "specimen"
+      ]
+    },
+    {
+      "id": "task",
+      "definition": "Atomic research action with measurable acceptance evidence.",
+      "attributes": [
+        "id",
+        "weight",
+        "percent",
+        "evidence",
+        "acceptance"
+      ],
+      "relates_to": [
+        "queue",
+        "claim"
+      ]
+    }
+  ],
+  "vocabularies": {
+    "domain": [
+      "games",
+      "literature",
+      "software",
+      "services",
+      "video",
+      "art",
+      "digital-products",
+      "subscriptions",
+      "other"
+    ],
+    "role": [
+      "marketplace",
+      "publishing_outlet",
+      "audience_channel",
+      "payment_processor",
+      "contract_broker",
+      "subscription_platform"
+    ],
+    "specimen_status": [
+      "queued",
+      "researching",
+      "review",
+      "published",
+      "archived"
+    ],
+    "evidence_class": [
+      "official",
+      "independent",
+      "survey",
+      "anecdotal",
+      "estimated",
+      "modeled"
+    ],
+    "confidence": [
+      "high",
+      "medium",
+      "low",
+      "unknown"
+    ],
+    "metric_basis": [
+      "gross_revenue",
+      "net_payout",
+      "profit",
+      "effective_hourly_earnings",
+      "cost",
+      "count",
+      "ratio"
+    ],
+    "task_status": [
+      "pending",
+      "in_progress",
+      "blocked",
+      "complete"
+    ]
+  },
+  "relations": [
+    {
+      "subject": "specimen",
+      "predicate": "studies",
+      "object": "marketplace"
+    },
+    {
+      "subject": "marketplace",
+      "predicate": "offers",
+      "object": "opportunity"
+    },
+    {
+      "subject": "opportunity",
+      "predicate": "tested_by",
+      "object": "experiment"
+    },
+    {
+      "subject": "claim",
+      "predicate": "supported_by",
+      "object": "source"
+    },
+    {
+      "subject": "observation",
+      "predicate": "describes",
+      "object": "market_metric"
+    },
+    {
+      "subject": "income_distribution",
+      "predicate": "derived_from",
+      "object": "observation"
+    },
+    {
+      "subject": "trend",
+      "predicate": "contains",
+      "object": "observation"
+    },
+    {
+      "subject": "queue",
+      "predicate": "contains",
+      "object": "task"
+    }
+  ],
+  "rules": [
+    "An empty specimen contains no verified findings.",
+    "Marketplace functions are independent and may overlap.",
+    "A source-backed claim is not necessarily representative of platform-wide earnings.",
+    "Mean, median and zero-earner share require explicit denominator and period.",
+    "Gross revenue, net payout, profit and hourly earnings are distinct metrics.",
+    "Missing numeric values are unknown, not zero.",
+    "Economic claims must record public provenance and applicable jurisdiction.",
+    "Trend comparisons must use compatible definitions.",
+    "Each task at 100 percent needs acceptance evidence.",
+    "Specimen colors are identifiers, never rankings."
+  ],
+  "specimen_schema": "specimen.schema.json"
+}

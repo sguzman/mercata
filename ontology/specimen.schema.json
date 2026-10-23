@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sguzman.github.io/mercata/ontology/specimen.schema.json",
+  "title": "Marketplace specimen",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "official_url",
+    "domain",
+    "roles",
+    "status",
+    "created_at",
+    "color",
+    "evidence",
+    "claims",
+    "observations",
+    "opportunities",
+    "risks",
+    "experiments"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "official_url": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "domain": {
+      "enum": [
+        "games",
+        "literature",
+        "software",
+        "services",
+        "video",
+        "art",
+        "digital-products",
+        "subscriptions",
+        "other"
+      ]
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "enum": [
+        "queued",
+        "researching",
+        "review",
+        "published",
+        "archived"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "color": {
+      "type": "object",
+      "required": [
+        "hex",
+        "oklch"
+      ],
+      "properties": {
+        "hex": {
+          "type": "string",
+          "pattern": "^#[A-Fa-f0-9]{6}$"
+        },
+        "oklch": {
+          "type": "object",
+          "required": [
+            "l",
+            "c",
+            "h"
+          ],
+          "properties": {
+            "l": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "c": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 0.4
+            },
+            "h": {
+              "type": "number",
+              "minimum": 0,
+              "exclusiveMaximum": 360
+            }
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "opportunities": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "experiments": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

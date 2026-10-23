@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-23",
+  "milestones": [
+    {
+      "id": "foundation",
+      "emoji": "🏗️",
+      "name": "Public research foundation",
+      "percent": 100,
+      "tasks": [
+        {
+          "id": "charter",
+          "emoji": "📜",
+          "title": "Constitution and public-content boundary",
+          "percent": 100,
+          "evidence": [
+            "CONSTITUTION.md",
+            "AGENTS.md"
+          ]
+        },
+        {
+          "id": "ontology",
+          "emoji": "🧬",
+          "title": "Human and machine ontology",
+          "percent": 100,
+          "evidence": [
+            "ontology/README.md",
+            "ontology/ontology.json",
+            "ontology/specimen.schema.json"
+          ]
+        },
+        {
+          "id": "gallery",
+          "emoji": "🖼️",
+          "title": "Independent empty gallery",
+          "percent": 100,
+          "evidence": [
+            "gallery/README.md",
+            "gallery/index.json"
+          ]
+        },
+        {
+          "id": "pipeline",
+          "emoji": "🔬",
+          "title": "Rich research intake queues",
+          "percent": 100,
+          "evidence": [
+            "pipeline/queues.json",
+            "pipeline/domains.json",
+            "scripts/intake.mjs"
+          ]
+        },
+        {
+          "id": "colors",
+          "emoji": "🎨",
+          "title": "Distinct OKLab-based specimen palette",
+          "percent": 100,
+          "evidence": [
+            "scripts/palette.mjs",
+            "tests/intake.test.mjs"
+          ]
+        },
+        {
+          "id": "website",
+          "emoji": "🌓",
+          "title": "Responsive system-first themed website",
+          "percent": 100,
+          "evidence": [
+            "index.html",
+            "site/styles.css",
+            "site/app.js"
+          ]
+        },
+        {
+          "id": "tests",
+          "emoji": "✅",
+          "title": "Local validation and intake checks",
+          "percent": 100,
+          "evidence": [
+            "scripts/verify.mjs",
+            "tests/intake.test.mjs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deployment",
+      "emoji": "🌐",
+      "name": "Live Pages deployment",
+      "percent": 0,
+      "tasks": [
+        {
+          "id": "pages",
+          "emoji": "🚀",
+          "title": "Verify public GitHub Pages endpoint",
+          "percent": 0,
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": "study",
+      "emoji": "📈",
+      "name": "Marketplace research",
+      "percent": 0,
+      "tasks": [
+        {
+          "id": "admission",
+          "emoji": "📥",
+          "title": "Admit explicitly approved marketplaces",
+          "percent": 0,
+          "evidence": []
+        },
+        {
+          "id": "analysis",
+          "emoji": "📊",
+          "title": "Complete source-backed market research",
+          "percent": 0,
+          "evidence": []
+        },
+        {
+          "id": "strategy",
+          "emoji": "💰",
+          "title": "Validate monetization experiments",
+          "percent": 0,
+          "evidence": []
+        }
+      ]
+    }
+  ]
+}
