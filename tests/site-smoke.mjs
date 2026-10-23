@@ -53,6 +53,7 @@ try{
     assert((await page.locator('.topic-catalogue-card').count())>=31,'Missing community taxonomy');
     assert.equal(await page.locator('.community-card').count(),1,'Missing event-specific measured community');
     assert.equal(await page.locator('.opportunity-method-item').count(),10,'Missing economic opportunity framework');
+    await page.locator('.opportunity-method-details > summary').click();
     const niche=page.locator('.niche-explorer');
     assert.equal(await niche.locator('select option').count(),31,'Missing research topics');
     assert((await niche.locator('.niche-explorer-report').textContent()).includes('Gaming'));
