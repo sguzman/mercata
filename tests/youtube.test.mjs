@@ -23,6 +23,25 @@ test('Unmeasured topics are not represented as counted audiences',async()=>{
   assert(taxonomy.topics.every(x=>x.audience_estimate===null));
 });
 
+test('Production cost model keeps 10 cash and 10 labor measures separate',async()=>{
+  const [costs,dossier]=await Promise.all([
+    load('ontology/youtube/production-costs.json'),load('specimens/youtube.json')
+  ]);
+  const ids=new Set(dossier.evidence.map(s=>s.id));
+  assert.equal(costs.cash_categories.length,10);
+  assert.equal(costs.labor_categories.length,10);
+  assert.equal(costs.design_experiments.length,3);
+  assert.equal(new Set(costs.cash_categories.map(x=>x.id)).size,10);
+  assert.equal(new Set(costs.labor_categories.map(x=>x.id)).size,10);
+  assert(costs.cash_categories.every(x=>x.amount===null&&x.source_ids.every(id=>ids.has(id))));
+  assert(costs.labor_categories.every(x=>x.value===null));
+  assert(costs.design_experiments.every(x=>x.status==='not_measured' &&
+    x.median_cash_cost===null && x.median_hours===null));
+  assert.equal(costs.model.cash_profit_per_hour,null);
+  assert.equal(costs.model.economic_profit_after_labor_valuation,null);
+  assert(costs.model.accounting_rules.some(x=>x.includes('double-count')||x.includes('double count')));
+});
+
 test('YouTube onboarding keeps channel creation, feature access and monetization separate',async()=>{
   const [access,dossier]=await Promise.all([
     load('ontology/youtube/channel-onboarding.json'),load('specimens/youtube.json')
