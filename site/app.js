@@ -113,7 +113,8 @@ function showCatalog() {
     add(header,swatch,make('span','status',entry.status));
     const title=make('h3','',entry.name),description=make('p','',entry.domain.replaceAll('-',' '));
     const link=make('a','inline-link','View research record ↗');
-    link.href='./'+entry.dossier;
+    link.href='#dossier-view';
+    link.addEventListener('click',event=>{event.preventDefault();showDossier(entry);});
     add(card,header,title,description,link,make('small','', 'Admitted '+entry.created_at));
     frag.append(card);
   }
@@ -121,6 +122,101 @@ function showCatalog() {
   $('#catalog-count').textContent=specimens.length+' specimens';
   $('#count-specimens').textContent=specimens.length;
 }
+
+function blockHeading(label,value) {
+  const row=make('div','dossier-stat');
+  add(row,make('span','',label),make('strong','',value));
+  return row;
+}
+function detailSection(name,items,renderItem) {
+  const section=make('section','dossier-section');
+  add(section,make('h4','',name));
+  if(!items.length) section.append(make('p','unresearched','Not researched yet.'));
+  else for(const item of items) section.append(renderItem(item));
+  return section;
+}
+async function showDossier(entry) {
+  const host=$('#dossier-view');
+  host.hidden=false;
+  host.replaceChildren(make('p','unresearched','Loading research record…'));
+  host.scrollIntoView({behavior:'smooth',block:'start'});
+  try {
+    const [record,work]=await Promise.all([read(entry.dossier),read(entry.queue)]);
+    if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
+    const outer=make('article','dossier-shell');
+    outer.style.setProperty('--specimen',entry.color.hex);
+    const top=make('div','dossier-head');
+    const heading=make('div','');
+    add(heading,make('p','eyebrow',entry.domain.replaceAll('-',' ')+' / '+record.status),
+      make('h3','',record.name));
+    const close=make('button','dossier-close','Close ×');
+    close.type='button';
+    close.addEventListener('click',()=>{host.hidden=true;host.replaceChildren();});
+    add(top,heading,close);
+    outer.append(top);
+    const official=make('a','inline-link','Official website ↗');
+    official.href=record.official_url;
+    official.target='_blank';
+    official.rel='noopener noreferrer';
+    const dossierJson=make('a','inline-link','Dossier JSON ↗');
+    dossierJson.href='./'+entry.dossier;
+    const queueJson=make('a','inline-link','Task JSON ↗');
+    queueJson.href='./'+entry.queue;
+    add(outer,add(make('div','dossier-links'),official,dossierJson,queueJson));
+    const tasks=work.queues.flatMap(q=>q.tasks);
+    const done=tasks.filter(t=>t.status==='complete'&&t.progress===100).length;
+    const stats=make('div','dossier-stats');
+    add(stats,blockHeading('Research tasks',tasks.length),blockHeading('Verified tasks',done),
+      blockHeading('Sources',record.evidence.length),blockHeading('Claims',record.claims.length));
+    outer.append(stats);
+    const intro=make('p','dossier-intro',record.summary||'This marketplace has been admitted for research. No earnings claims, fees or market estimates have been verified yet.');
+    outer.append(intro);
+    const evidenceArea=make('div','dossier-evidence');
+    evidenceArea.append(detailSection('Published observations',record.observations,observation=>{
+      const card=make('div','research-item');
+      add(card,make('strong','',observation.metric||observation.id),
+        make('p','',observation.value===null?'Unknown':String(observation.value)+' '+(observation.unit||'')),
+        make('small','',observation.period||'Period not supplied'));
+      return card;
+    }));
+    evidenceArea.append(detailSection('Claims and sources',record.claims,claim=>{
+      const card=make('div','research-item');
+      add(card,make('strong','',claim.text),make('small','',claim.source_ids.join(', ')));
+      return card;
+    }));
+    evidenceArea.append(detailSection('Revenue opportunities',record.opportunities,opportunity=>{
+      return add(make('div','research-item'),make('p','',opportunity.title||opportunity.id||'Opportunity'));
+    }));
+    evidenceArea.append(detailSection('Risks',record.risks,risk=>{
+      return add(make('div','research-item'),make('p','',risk.title||risk.id||'Risk'));
+    }));
+    outer.append(evidenceArea);
+    outer.append(make('h4','dossier-queues-title','Research queues'));
+    const queueList=make('div','dossier-queues');
+    for(const group of work.queues){
+      const panel=make('details','queue-details');
+      const completed=group.tasks.filter(t=>t.status==='complete'&&t.progress===100).length;
+      const pct=Math.round(group.tasks.reduce((n,t)=>n+t.progress,0)/group.tasks.length);
+      const summary=make('summary','',group.emoji+' '+group.title+' — '+pct+'% ('+completed+'/'+group.tasks.length+' verified)');
+      panel.append(summary,progress(pct,group.title));
+      const list=make('ol','queue-task-list');
+      for(const task of group.tasks){
+        const item=make('li','');
+        add(item,make('strong','',task.emoji+' '+task.title+' · '+task.progress+'%'),
+          make('p','',task.acceptance));
+        list.append(item);
+      }
+      panel.append(list);
+      queueList.append(panel);
+    }
+    outer.append(queueList);
+    host.replaceChildren(outer);
+  } catch(error) {
+    host.replaceChildren(add(make('div','empty-state'),make('h3','', 'Research record unavailable'),
+      make('p','', 'The dossier or task queue could not be loaded. Check the public files.')));
+  }
+}
+
 async function start() {
   const outcomes=await Promise.allSettled([
     read('gallery/index.json'),read('pipeline/queues.json'),
