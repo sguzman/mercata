@@ -53,6 +53,24 @@ for (const entry of index.specimens) {
     const topic=load('ontology/youtube/taxonomy.json');
     const policy=load('ontology/youtube/policies.json');
     const measures=load('ontology/youtube/measurements.json');
+    const observed=load('ontology/youtube/topic-observations.json');
+    const history=load('ontology/youtube/measurement-history.json');
+    const economics=load('ontology/youtube/economic-model.json');
+    const topicIds=new Set(topic.topics.map(t=>t.id));
+    const observationIds=new Set();
+    for(const x of observed.observations){
+      ensure(x.id && !observationIds.has(x.id),'Duplicate topical observation');
+      observationIds.add(x.id);
+      ensure(topicIds.has(x.topic_id),'Topic observation references unknown topic');
+      ensure(Number.isFinite(x.value) && x.value>=0 && x.unit && x.period && x.geography,'Invalid topic measurement');
+      ensure(typeof x.source_url==='string' && x.source_url.startsWith('https://'),'Missing topic source');
+      ensure(typeof x.limitations==='string' && x.limitations.length>0,'Topic observation lacks caveats');
+    }
+    ensure(history.events.length>=1,'Missing metric definition history');
+    const vars=new Set(economics.symbols.map(x=>x.id));
+    const derived=new Set(economics.calculations.map(x=>x.id));
+    ensure(economics.calculations.every(x=>x.inputs.every(id=>vars.has(id)||derived.has(id))),
+      'Economic model has undefined inputs');
     const conceptIds=new Set(model.concepts.map(x=>x.id));
     ensure(conceptIds.size===model.concepts.length && model.concepts.length>=60,'Incomplete YouTube ontology');
     ensure(model.relations.every(x=>conceptIds.has(x.subject)&&conceptIds.has(x.object)),'Ontology relation has unknown concept');
