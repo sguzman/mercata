@@ -99,3 +99,7 @@ The [format comparison](content-formats.md) and [machine catalog](content-format
 ## Measured content-audience studies
 
 The [news-audience survey profile](community-audience-studies.md) uses Pew's 2020–2026 U.S. adult trend and the separate 2025 demographic composition of Americans who regularly get news from YouTube. The [machine file](community-audience-studies.json) retains denominators, survey years and caveats. It does not equate news consumption with an identifiable political affiliation or the broader YouTube audience.
+
+## Sampled competition and discovery evidence
+
+A [2026 commercial sample study](competition-observations.md) describes subscriber-tier movement and traffic sources across 71,177 observed accounts, while exposing its unknown recruitment frame and incomplete observation dates. The [machine record](competition-observations.json) keeps these descriptive statistics out of representative newcomer-success estimates.

@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "as_of": "2026-10-23",
+  "kind": "independent_commercial_channel_and_video_sample",
+  "status": "observed_reported_sample_not_population_census",
+  "source": {
+    "id": "metricool-youtube-2026-sample",
+    "url": "https://metricool.com/youtube-trends/",
+    "publisher": "Metricool",
+    "published_at": "2026-07-29",
+    "source_type": "commercial analytics provider study",
+    "sampled_videos": 799718,
+    "sampled_accounts": 71177,
+    "period": "2025 compared with 2026 as described in July 2026 article; exact observation bounds not specified",
+    "sampling_frame": "unspecified subset of observed accounts and videos; not a known random selection",
+    "population_definition": "Accounts present in the provider's analysis",
+    "representative_of_all_youtube_creators": false
+  },
+  "cohort_tier_transitions": [
+    {
+      "tier": "all",
+      "subscribers_min": null,
+      "subscribers_max": null,
+      "share_moved_up_percent": 10.08
+    },
+    {
+      "tier": "tiny",
+      "subscribers_min": 0,
+      "subscribers_max": 2000,
+      "share_moved_up_percent": 9.59
+    },
+    {
+      "tier": "small",
+      "subscribers_min": 2000,
+      "subscribers_max": 10000,
+      "share_moved_up_percent": 16.01
+    },
+    {
+      "tier": "medium",
+      "subscribers_min": 10000,
+      "subscribers_max": 100000,
+      "share_moved_up_percent": 7.01
+    },
+    {
+      "tier": "big",
+      "subscribers_min": 100000,
+      "subscribers_max": 1000000,
+      "share_moved_up_percent": 2.11
+    }
+  ],
+  "traffic_source_share_of_sampled_organic_views": [
+    {
+      "id": "shorts_feed",
+      "percent": 61,
+      "comparison": ">",
+      "scope": "all organic views in selected dataset",
+      "time_window": "2026 dataset",
+      "denominator": "sampled organic view events"
+    },
+    {
+      "id": "subscribers",
+      "percent": 11,
+      "comparison": "~",
+      "scope": "sampled dataset",
+      "time_window": "2026 dataset",
+      "denominator": "sampled organic view events"
+    },
+    {
+      "id": "youtube_search",
+      "percent": 9,
+      "comparison": "~",
+      "scope": "sampled dataset",
+      "time_window": "2026 dataset",
+      "denominator": "sampled organic view events"
+    },
+    {
+      "id": "related_videos",
+      "percent": 5.77,
+      "comparison": "~",
+      "scope": "sampled dataset",
+      "time_window": "2026 dataset",
+      "denominator": "sampled organic view events"
+    },
+    {
+      "id": "playlists",
+      "percent": 5.05,
+      "comparison": "~",
+      "scope": "sampled dataset",
+      "time_window": "2026 dataset",
+      "denominator": "sampled organic view events"
+    },
+    {
+      "id": "direct_channel",
+      "percent": 3,
+      "comparison": "~",
+      "scope": "sampled dataset",
+      "time_window": "2026 dataset",
+      "denominator": "sampled organic view events"
+    }
+  ],
+  "long_form_reported_changes": [
+    {
+      "id": "views",
+      "relative_percent_change": 76,
+      "qualifier": "approximately"
+    },
+    {
+      "id": "average_view_duration",
+      "baseline_minutes": 3.98,
+      "observed_minutes": 2.51,
+      "relative_percent_change": -37,
+      "qualifier": "approximately"
+    },
+    {
+      "id": "ad_impressions",
+      "relative_percent_change": -51,
+      "qualifier": "reported"
+    },
+    {
+      "id": "monetized_playbacks",
+      "relative_percent_change": -59,
+      "qualifier": "reported"
+    },
+    {
+      "id": "estimated_ad_revenue",
+      "relative_percent_change": -55,
+      "qualifier": "reported"
+    }
+  ],
+  "cross_format_association": {
+    "type": "sampled_group_association_not_causal",
+    "group_a": "No Shorts uploads",
+    "group_a_longform_views_average": 4364,
+    "group_b": "About 5 Shorts uploads per month",
+    "group_b_longform_views_average": 8789,
+    "limitations": "Different cohorts may vary in maturity, upload effort, niche, subscribers and quality. Not a randomized controlled experiment; no causal Short-to-long-form lift established."
+  },
+  "limitations": [
+    "The provider's sample is not a platform-wide random channel sample and might skew toward active businesses or analytics-connected accounts.",
+    "Exact within-year sampling windows and exclusion rules are not fully specified in the public report.",
+    "The reported tier-jump percentages are movements within the cohort, not probabilities that new creators will monetize or earn a living.",
+    "Traffic percentages concern organic view events observed in the sample, not unique people or total platform view share.",
+    "Subscriber tier, average video metrics and advertising earnings are not interchangeable units.",
+    "Year-over-year comparisons may reflect seasonality, changing account mix and platform metric revisions.",
+    "The cited report appeared before the August 24, 2026 YouTube view-count definition change; future comparisons must account for that structural break.",
+    "Observed correlation between Shorts frequency and long-form views cannot establish cause.",
+    "No measure of total creator profits, hours invested, nonparticipating channels, or realistic newcomer earnings can be inferred."
+  ],
+  "allowed_inference": "Within this reported commercial analytics sample, compare reported cohorts and descriptive changes with explicit scope.",
+  "prohibited_inference": "Treat this as representative probability of reaching any income level, a proven best publishing schedule or a platform-wide traffic census."
+}
