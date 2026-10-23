@@ -970,6 +970,70 @@
       "unit": "publication_event",
       "access": "official",
       "measured_value": null
+    },
+    {
+      "id": "cross_platform_creator_survey",
+      "group": "measurement",
+      "definition": "Survey sampling people who publish or earn across more than one creator platform, not a representative YouTube-only population.",
+      "unit": "study",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "income_survey_source_family",
+      "group": "measurement",
+      "definition": "One underlying recruited creator survey, regardless of how many publishers reproduce its results.",
+      "unit": "independent_dataset_family",
+      "access": "research_metadata",
+      "measured_value": null
+    },
+    {
+      "id": "syndicated_income_report",
+      "group": "measurement",
+      "definition": "Second publication derived from the same underlying income respondent sample rather than an independent replication.",
+      "unit": "publication",
+      "access": "public",
+      "measured_value": null
+    },
+    {
+      "id": "survey_income_threshold_share",
+      "group": "measurement",
+      "definition": "Proportion of defined survey respondents below or above a stated annual earnings threshold; not an earning average or channel profit.",
+      "unit": "percent_of_defined_respondents",
+      "access": "research_metadata",
+      "measured_value": null
+    },
+    {
+      "id": "creator_income_sampling_frame",
+      "group": "measurement",
+      "definition": "Population and recruitment design that define which creator accounts or people had an opportunity to enter the earnings study.",
+      "unit": "sampling_design",
+      "access": "research_metadata",
+      "measured_value": null
+    },
+    {
+      "id": "new_channel_zero_earner",
+      "group": "actors",
+      "definition": "New channel operator in a defined entrant cohort with zero receipts during a specified observation window; distinct from a surveyed low earner.",
+      "unit": "creator_or_channel_operator",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "newcomer_income_estimand",
+      "group": "measurement",
+      "definition": "Target of inference for creator earnings after a defined new-channel start, including zero earnings, separate from existing monetized-channel samples.",
+      "unit": "currency_per_creator_period",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "creator_profit_after_costs",
+      "group": "economics",
+      "definition": "Receipts on a consistent net basis less attributable operating cash and an optional explicitly labeled valuation of resources and work.",
+      "unit": "currency_per_creator_period",
+      "access": "independent_study",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -1392,6 +1456,61 @@
       "subject": "advanced_channel_access",
       "predicate": "does_not_grant",
       "object": "monetized_channel"
+    },
+    {
+      "subject": "cross_platform_creator_survey",
+      "predicate": "has",
+      "object": "creator_income_sampling_frame"
+    },
+    {
+      "subject": "cross_platform_creator_survey",
+      "predicate": "belongs_to",
+      "object": "income_survey_source_family"
+    },
+    {
+      "subject": "syndicated_income_report",
+      "predicate": "reuses",
+      "object": "income_survey_source_family"
+    },
+    {
+      "subject": "cross_platform_creator_survey",
+      "predicate": "may_report",
+      "object": "survey_income_threshold_share"
+    },
+    {
+      "subject": "survey_income_threshold_share",
+      "predicate": "is_not",
+      "object": "creator_rpm"
+    },
+    {
+      "subject": "survey_income_threshold_share",
+      "predicate": "does_not_estimate",
+      "object": "newcomer_income_estimand"
+    },
+    {
+      "subject": "new_channel_zero_earner",
+      "predicate": "is_part_of",
+      "object": "newcomer_income_estimand"
+    },
+    {
+      "subject": "monetized_channel",
+      "predicate": "may_appear_in",
+      "object": "creator_income_sampling_frame"
+    },
+    {
+      "subject": "creator_labor_cost",
+      "predicate": "influences",
+      "object": "creator_profit_after_costs"
+    },
+    {
+      "subject": "creator_profit_after_costs",
+      "predicate": "is_not",
+      "object": "survey_income_threshold_share"
+    },
+    {
+      "subject": "newcomer_income_estimand",
+      "predicate": "may_include",
+      "object": "creator_profit_after_costs"
     }
   ],
   "rules": [
@@ -1412,7 +1531,10 @@
     "Music revenue-sharing adjustments, license cash expenses, and disputed-payment holds cannot be double-counted.",
     "A Google Account, YouTube publishing channel, verified feature level and approved monetized channel are separate objects.",
     "Advanced features may be reached through channel history; optional ID/video verification is not a requirement for every channel.",
-    "Uploading a file and publicly publishing a video are distinct events."
+    "Uploading a file and publicly publishing a video are distinct events.",
+    "Syndicated copies of a creator survey count as one independent sample, not independent replication.",
+    "Mixed-platform income thresholds do not identify YouTube-only earnings or a newcomer cohort.",
+    "The intended newcomer earning population must retain zero earners and define time, costs and sampling frame."
   ],
-  "ontology_version": "1.4"
+  "ontology_version": "1.5"
 }
