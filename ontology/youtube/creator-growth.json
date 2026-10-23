@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "as_of": "2026-10-23",
+  "kind": "creator_audience_growth_and_engagement",
+  "status": "official_definitions_and_unmeasured_paths",
+  "stages": [
+    {
+      "id": "exposure",
+      "label": "Exposure",
+      "description": "Eligible thumbnail impression or Shorts feed appearance exposes content to a potential viewer.",
+      "units": [
+        "registered_thumbnail_impression",
+        "shorts_shown_in_feed"
+      ],
+      "access": "authorized_channel_analytics",
+      "source_ids": [
+        "impressions-count-help",
+        "studio-analytics-help"
+      ],
+      "caveat": "Not unique people; thumbnails in external embeds often do not enter the denominator."
+    },
+    {
+      "id": "selection",
+      "label": "Selection or swipe",
+      "description": "Someone clicks a thumbnail or stays rather than swiping away in a Shorts feed.",
+      "units": [
+        "impressions_ctr",
+        "shorts_chose_to_view_rate"
+      ],
+      "access": "authorized_channel_analytics",
+      "source_ids": [
+        "impressions-faq",
+        "studio-analytics-help"
+      ],
+      "caveat": "CTR and Shorts stayed-to-watch are not directly comparable; avoid using all views divided by impressions."
+    },
+    {
+      "id": "engagement",
+      "label": "Watching",
+      "description": "The viewer watches for a measured duration; engaged views and watch time are distinct from playback starts.",
+      "units": [
+        "engaged_views",
+        "watch_time_minutes",
+        "average_view_duration"
+      ],
+      "access": "authorized_channel_analytics",
+      "source_ids": [
+        "studio-analytics-help",
+        "metrics-2026-help"
+      ],
+      "caveat": "Raw public views changed definition in August 2026; watch time remains a different unit."
+    },
+    {
+      "id": "return",
+      "label": "Returning",
+      "description": "A prior channel viewer revisits the channel across sessions.",
+      "units": [
+        "returning_viewers",
+        "monthly_unique_audience",
+        "casual_viewers",
+        "regular_viewers"
+      ],
+      "access": "authorized_channel_analytics",
+      "source_ids": [
+        "audience-analytics-help",
+        "audience-loyalty-help"
+      ],
+      "caveat": "New, casual and regular categories depend on lookback windows; they do not predict purchase behavior."
+    },
+    {
+      "id": "community",
+      "label": "Community interaction",
+      "description": "The person participates through comments, community posts, polls, live chat or recurring viewing.",
+      "units": [
+        "post_likes",
+        "comments",
+        "post_reach",
+        "live_chat_messages"
+      ],
+      "access": "authorized_channel_analytics",
+      "source_ids": [
+        "posts-help",
+        "studio-analytics-help"
+      ],
+      "caveat": "Interactions are events, not distinct fans or necessarily positive relationships. Child-directed feature restrictions may apply."
+    },
+    {
+      "id": "economic",
+      "label": "Paid support or purchase",
+      "description": "A qualified user makes an eligible native payment or purchases through an outside seller.",
+      "units": [
+        "eligible_native_payment",
+        "affiliate_sale",
+        "merchant_net_revenue",
+        "sponsorship_receipt"
+      ],
+      "access": "authorized_creator_and_merchant_accounts",
+      "source_ids": [
+        "earning-help",
+        "shopping-affiliate"
+      ],
+      "caveat": "No universal observable conversion rate from YouTube viewer to buyer, and third-party sales attribution may be incomplete."
+    }
+  ],
+  "metrics": [
+    {
+      "id": "registered_thumbnail_impression",
+      "definition": "count of eligible thumbnail displays",
+      "unit": "event",
+      "access": "authorized",
+      "limitations": "Eligible YouTube surface, 50% visibility, >1 second; not external clicks.",
+      "source_ids": [
+        "impressions-count-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "impressions_ctr",
+      "definition": "views_from_registered_impressions / registered_thumbnail_impressions",
+      "unit": "fraction",
+      "access": "authorized",
+      "limitations": "Official rate only for registered thumbnail impression cohort; no all-view numerator.",
+      "source_ids": [
+        "impressions-faq"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "shorts_shown_in_feed",
+      "definition": "times Short presented in Shorts feed",
+      "unit": "event",
+      "access": "authorized",
+      "limitations": "Not unique people, not watch time, not monetized views.",
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "shorts_chose_to_view_rate",
+      "definition": "share of Shorts feed occasions that viewed instead of swiped",
+      "unit": "fraction",
+      "access": "authorized",
+      "limitations": "Not equivalent to thumbnail CTR or paid engagement.",
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "engaged_views",
+      "definition": "views which pass the format-specific viewing/engagement threshold",
+      "unit": "event",
+      "access": "authorized",
+      "limitations": "Not all raw video playback starts; check report definition.",
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "watch_time_minutes",
+      "definition": "estimated total viewing duration of selected content in minutes",
+      "unit": "minute",
+      "access": "authorized",
+      "limitations": "Can aggregate repeated watches; not deduplicated viewers.",
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "average_view_duration",
+      "definition": "watched minutes / relevant counted playbacks under report definition",
+      "unit": "duration",
+      "access": "authorized",
+      "limitations": "Not unique viewer duration or an independent ranking score.",
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "returning_viewers",
+      "definition": "estimated viewers who had watched the channel previously and watched again",
+      "unit": "people",
+      "access": "authorized",
+      "limitations": "Previous history and session window affect counts.",
+      "source_ids": [
+        "audience-analytics-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "monthly_unique_audience",
+      "definition": "estimated distinct channel viewers over rolling 28 days",
+      "unit": "people",
+      "access": "authorized",
+      "limitations": "Not platform monthly active users or subscriber count.",
+      "source_ids": [
+        "audience-analytics-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "new_viewers",
+      "definition": "viewers identified as first-time or effectively new in the defined period",
+      "unit": "people",
+      "access": "authorized",
+      "limitations": "Private browser, deleted watch history and long absence can count as new.",
+      "source_ids": [
+        "audience-loyalty-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "casual_viewers",
+      "definition": "monthly channel viewers in one to five months of previous year",
+      "unit": "people",
+      "access": "authorized",
+      "limitations": "Category defined by watch history; not a personal demographic or inferred loyalty trait.",
+      "source_ids": [
+        "audience-loyalty-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "regular_viewers",
+      "definition": "monthly channel viewers in more than six months of previous year",
+      "unit": "people",
+      "access": "authorized",
+      "limitations": "Behavior segment not a count of subscribers or patrons.",
+      "source_ids": [
+        "audience-loyalty-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "post_likes",
+      "definition": "likes on YouTube Posts",
+      "unit": "event",
+      "access": "authorized",
+      "limitations": "Does not equal unique viewers or confirmed paid supporters.",
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "search_terms",
+      "definition": "terms used before discovering a creator's video via YouTube search",
+      "unit": "term",
+      "access": "authorized",
+      "limitations": "Not a full population search-intent census; not publicly available for arbitrary competitors.",
+      "source_ids": [
+        "reach-analytics-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "source_suggested_videos",
+      "definition": "videos leading viewers to creator content through recommendations",
+      "unit": "video",
+      "access": "authorized",
+      "limitations": "Not proof of algorithmic rank or complete competitive inventory.",
+      "source_ids": [
+        "reach-analytics-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "external_referrers",
+      "definition": "sites or apps referring permitted video traffic",
+      "unit": "source",
+      "access": "authorized",
+      "limitations": "Unknown or unreported traffic remains missing.",
+      "source_ids": [
+        "reach-analytics-help"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    },
+    {
+      "id": "purchases_attributed",
+      "definition": "orders attributed to an affiliate or creator-owned store",
+      "unit": "order",
+      "access": "external_account",
+      "limitations": "Requires store-side authorization; not computable from YouTube public metrics.",
+      "source_ids": [
+        "shopping-affiliate"
+      ],
+      "observed_value": null,
+      "confidence": "unmeasured"
+    }
+  ],
+  "surface_distinctions": [
+    {
+      "id": "search",
+      "discovery_basis": "query-relevance and eligible ranking",
+      "measurement": "search traffic and terms to an authorized channel",
+      "source_ids": [
+        "reach-analytics-help"
+      ],
+      "caveat": "Search results are not a universal channel discovery probability."
+    },
+    {
+      "id": "home",
+      "discovery_basis": "personalized Home recommendations",
+      "measurement": "registered thumbnail impressions where recorded",
+      "source_ids": [
+        "impressions-count-help",
+        "impressions-context"
+      ],
+      "caveat": "An early loyal core can inflate early CTR."
+    },
+    {
+      "id": "suggested",
+      "discovery_basis": "Up Next and other suggested video placements",
+      "measurement": "suggesting-videos report in authorized Analytics",
+      "source_ids": [
+        "reach-analytics-help"
+      ],
+      "caveat": "Competition and viewer preference vary for each impression."
+    },
+    {
+      "id": "shorts",
+      "discovery_basis": "Shorts feed display and swipe choice",
+      "measurement": "feed appearances and chose-to-view ratio",
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "caveat": "Not a thumbnail impression or long-form click-through funnel."
+    },
+    {
+      "id": "external",
+      "discovery_basis": "link, embed or web/app referral",
+      "measurement": "external referral sources in authorized Analytics",
+      "source_ids": [
+        "reach-analytics-help"
+      ],
+      "caveat": "May contribute views without counted YouTube thumbnail impressions."
+    },
+    {
+      "id": "posts",
+      "discovery_basis": "Community Posts on Home, channel, subscription and other supported surfaces",
+      "measurement": "post-specific authorized Analytics",
+      "source_ids": [
+        "posts-help"
+      ],
+      "caveat": "Not available on made-for-kids channels; does not imply paid community."
+    }
+  ],
+  "study_protocol": [
+    "Define channel cohort, topic, content format, language, period and geography before comparisons.",
+    "Distinguish eligible impressions, public starts, engaged watching, unique viewers and payment events.",
+    "Compare YouTube Search, Suggested, Home, Shorts and external sources as separate mechanisms.",
+    "Sample newcomers and incumbents separately; avoid survivorship bias.",
+    "Use creator-authorized Analytics for cohort performance; public counts cannot provide the complete funnel.",
+    "Record missing events and non-monetized channels rather than discarding zeros.",
+    "Treat interactions as aggregate events; never profile individual children or infer ethnicity or political affiliation.",
+    "Pre-register objective outcomes when designing a small content test; do not promise financial results."
+  ],
+  "invalid_equivalences": [
+    "thumbnail_ctr_is_total_views_divided_by_impressions",
+    "monthly_channel_audience_is_global_mau",
+    "registered_impressions_are_unique_people",
+    "post_likes_are_paid_supporters",
+    "regular_viewers_are_subscribers",
+    "shorts_swipe_rate_is_long_form_ctr",
+    "public_views_are_ypp_qualifying_views",
+    "community_category_is_unique_population"
+  ],
+  "research_questions": [
+    "Which niche has observable unmet search demand in a particular language?",
+    "How are impressions distributed among established and newly created channels?",
+    "How much time is needed to produce one publishable episode in each format?",
+    "What fraction of non-monetized channels remain active after six months?",
+    "How does returning viewership relate to monetization once channel selection is controlled?",
+    "What independent conversion evidence exists for products or memberships?"
+  ]
+}

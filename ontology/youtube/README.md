@@ -87,3 +87,7 @@ The [product-specific eligibility matrix](eligibility-matrix.md) ([machine JSON]
 ## An actual measured event audience
 
 [World Cup 2026 event viewers](event-audiences.md) are the first distinct-viewer content-community observation: YouTube reports over 1.7 billion unique people watching related videos worldwide during the tournament, with over 550 million watching on TV (a subset). This is defined event reach, **not the stable size of the soccer-fan community**. Broad topic population fields remain null. NFL viewing is tracked separately under general sports.
+
+## Discovery and community engagement
+
+The [audience discovery and return model](creator-growth.md) defines counted thumbnail exposure, search and recommendation traffic, Shorts feed choices, engaged watching, rolling 28-day active channel audiences, and new/casual/regular returning viewers. Its [machine ontology](creator-growth.json) keeps 17 defined measurements separate from unknown observed values. Community posts and payment conversion are treated as different events; no private audience records are harvested.

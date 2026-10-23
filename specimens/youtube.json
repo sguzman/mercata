@@ -548,6 +548,105 @@
       "evidence_class": "official_platform_statistic",
       "license": "Attributed reported figures; no visual assets reused",
       "notes": "2025 global NFL-related content views, not unique people. Trend comparisons require consistent definitions."
+    },
+    {
+      "id": "audience-analytics-help",
+      "url": "https://support.google.com/youtube/answer/9314416?hl=en",
+      "title": "Understand your YouTube audience",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Cited short explanations and independent domain definitions; no copied charts or original text",
+      "notes": "Public product metric documentation. Availability and metric definitions may change with product revisions."
+    },
+    {
+      "id": "audience-loyalty-help",
+      "url": "https://support.google.com/youtube/answer/10246996?hl=en",
+      "title": "Understand new, casual and regular viewers",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Cited short explanations and independent domain definitions; no copied charts or original text",
+      "notes": "Public product metric documentation. Availability and metric definitions may change with product revisions."
+    },
+    {
+      "id": "reach-analytics-help",
+      "url": "https://support.google.com/youtube/answer/9314355?hl=en",
+      "title": "Understand your YouTube video reach",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Cited short explanations and independent domain definitions; no copied charts or original text",
+      "notes": "Public product metric documentation. Availability and metric definitions may change with product revisions."
+    },
+    {
+      "id": "impressions-faq",
+      "url": "https://support.google.com/youtube/answer/7628154?hl=en",
+      "title": "Impressions and click-through-rate FAQ",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Cited short explanations and independent domain definitions; no copied charts or original text",
+      "notes": "Public product metric documentation. Availability and metric definitions may change with product revisions."
+    },
+    {
+      "id": "impressions-context",
+      "url": "https://support.google.com/youtube/answer/16767369?hl=en",
+      "title": "Decoding click-through rate and impressions",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Cited short explanations and independent domain definitions; no copied charts or original text",
+      "notes": "Public product metric documentation. Availability and metric definitions may change with product revisions."
+    },
+    {
+      "id": "impressions-count-help",
+      "url": "https://support.google.com/youtube/answer/9314486?hl=en",
+      "title": "Check thumbnail impressions and watch time",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Cited short explanations and independent domain definitions; no copied charts or original text",
+      "notes": "Public product metric documentation. Availability and metric definitions may change with product revisions."
+    },
+    {
+      "id": "posts-help",
+      "url": "https://support.google.com/youtube/answer/9409631?hl=en",
+      "title": "Learn about YouTube Posts",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Cited short explanations and independent domain definitions; no copied charts or original text",
+      "notes": "Public product metric documentation. Availability and metric definitions may change with product revisions."
+    },
+    {
+      "id": "studio-analytics-help",
+      "url": "https://support.google.com/youtube/answer/12220281?hl=en",
+      "title": "Understand your YouTube content performance",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Cited short explanations and independent domain definitions; no copied charts or original text",
+      "notes": "Public product metric documentation. Availability and metric definitions may change with product revisions."
+    },
+    {
+      "id": "metrics-2026-help",
+      "url": "https://support.google.com/youtube/answer/2991785?hl=en",
+      "title": "How engagement metrics are counted",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Cited short explanations and independent domain definitions; no copied charts or original text",
+      "notes": "Public product metric documentation. Availability and metric definitions may change with product revisions."
     }
   ],
   "claims": [
@@ -1031,6 +1130,87 @@
       "observed_at": "2026-10-23",
       "confidence": "medium",
       "limitations": "American football category, not association football; view counts are events, not unique people or representative creator earnings. Longitudinal methods require review."
+    },
+    {
+      "id": "new-regular-viewers",
+      "text": "YouTube describes new, casual and regular viewers as separate channel audience segments. Casual viewers have watched in one to five months during the past year, while regular viewers have watched in more than six months.",
+      "source_ids": [
+        "audience-analytics-help",
+        "audience-loyalty-help"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Authorized channel audience reporting, not counts of all YouTube users. Private viewing and deleted histories can cause a previously seen viewer to be counted as new."
+    },
+    {
+      "id": "monthly-audience-28-days",
+      "text": "YouTube's channel monthly audience measure is a rolling 28-day estimate of unique viewers, recalculated daily.",
+      "source_ids": [
+        "audience-analytics-help"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Not the same as calendar-month active users for YouTube as a whole or subscribers to a channel."
+    },
+    {
+      "id": "impression-count-definition",
+      "text": "YouTube counts a registered thumbnail impression when a thumbnail is at least 50% visible for more than one second on eligible YouTube surfaces.",
+      "source_ids": [
+        "impressions-count-help"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "External links, many notifications, end screens and some product surfaces are excluded from the thumbnail impression denominator."
+    },
+    {
+      "id": "ctr-not-total-views",
+      "text": "YouTube impression click-through rate counts views generated from registered impressions; total video views can exceed registered impressions because other traffic sources contribute.",
+      "source_ids": [
+        "impressions-faq"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "A ratio of all video views to registered impressions is not official impressions CTR."
+    },
+    {
+      "id": "ctr-selection-context",
+      "text": "YouTube notes that early thumbnail CTR may be higher among loyal viewers and later fall as impressions reach more people; low impressions can reflect audience saturation or competition.",
+      "source_ids": [
+        "impressions-context"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "CTR and average view duration are descriptive, not an observed probability of viral recommendation or a causal success rule."
+    },
+    {
+      "id": "traffic-attribution",
+      "text": "YouTube Reach reports can separately show search terms, suggesting videos, external websites or apps, playlists and notification traffic.",
+      "source_ids": [
+        "reach-analytics-help"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Channel-owner reporting, with privacy and product availability limitations; not a complete public record of competitors."
+    },
+    {
+      "id": "community-post-surfaces",
+      "text": "YouTube Posts can use polls, quizzes, GIFs, images, music, text and videos, and may appear on channel pages, Home or Subscriptions feeds.",
+      "source_ids": [
+        "posts-help"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Supervised accounts and channels set as made for kids cannot use Posts. Visibility does not prove an impression, engagement or monetization."
+    },
+    {
+      "id": "views-metrics-aug-2026",
+      "text": "Since August 24, 2026, YouTube's raw public views count playback starts across Shorts, long-form and live video, while YPP earnings and eligibility use other engaged or qualified measures.",
+      "source_ids": [
+        "metrics-2026-help"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Do not compare raw public views before and after the definition change as identical engagement units."
     }
   ],
   "observations": [],
