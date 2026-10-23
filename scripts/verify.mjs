@@ -53,6 +53,44 @@ for (const entry of index.specimens) {
     const growth=load('ontology/youtube/creator-growth.json');
     const newsAudience=load('ontology/youtube/community-audience-studies.json');
     const competition=load('ontology/youtube/competition-observations.json');
+    const crossPlatform=load('ontology/youtube/cross-platform-income-surveys.json');
+    ensure(crossPlatform.studies.length===2 &&
+      crossPlatform.independent_dataset_families===2,
+      'Invalid cross-platform creator income survey inventory');
+    const familyIds=new Set(crossPlatform.studies.map(x=>x.source_family_id));
+    ensure(familyIds.size===2,'Syndicated income source counted twice as independent');
+    for(const study of crossPlatform.studies){
+      ensure(study.source_ids.length>0 && study.source_ids.every(id=>sourceIds.has(id)) &&
+        study.representative_of_youtube===false &&
+        study.representative_of_all_creators===false &&
+        study.youtube_subgroup_n===null &&
+        study.inference_to_youtube_median==='prohibited',
+        'Nonrepresentative creator-income sample mislabeled YouTube population');
+      for(const measure of study.measurements){
+        ensure(measure.value===null ||
+          (Number.isFinite(measure.value) && measure.value>=0 &&
+            (measure.unit!=='persons'||Number.isSafeInteger(measure.value))),
+          'Invalid creator income survey measurement');
+        ensure(measure.denominator_n===null ||
+          (Number.isSafeInteger(measure.denominator_n) && measure.denominator_n>0),
+          'Invalid survey denominator');
+      }
+    }
+    const neoReach=crossPlatform.studies.find(x=>x.id==='neoreach-2025');
+    const spotlight=crossPlatform.studies.find(x=>x.id==='spotlight-2025');
+    ensure(neoReach.survey_respondents_exact===null &&
+      neoReach.survey_respondents_lower_bound_exclusive===3000 &&
+      neoReach.source_ids.length===2 &&
+      neoReach.measurements.find(x=>x.id==='below_15000_year')?.value===50.71,
+      'Misrepresented NeoReach respondents or earnings');
+    ensure(spotlight.survey_respondents_exact===427 &&
+      spotlight.measurements.find(x=>x.id==='income_under_500')?.value===null &&
+      spotlight.measurements.find(x=>x.id==='income_100000_plus_count')?.value===37,
+      'Imprecise or unsupported Creator Spotlight income statistic');
+    ensure(Object.values(crossPlatform.youtube_target_estimates).every(x=>x===null) &&
+      crossPlatform.comparability.unsupported.includes('pooling_percentages'),
+      'Unsupported YouTube income estimate constructed from mixed-platform samples');
+
     const literature=load('ontology/youtube/academic-studies.json');
     ensure(literature.studies.length===4,'Incomplete peer-reviewed research catalog');
     ensure(literature.studies.every(x=>x.sample_n===null || Number.isInteger(x.sample_n)),
