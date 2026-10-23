@@ -32,3 +32,16 @@ jobs:
         run: node scripts/verify.mjs
       - name: Run repository tests
         run: node --test tests/*.test.mjs
+      - name: Install Firefox automation tools
+        run: |
+          npm install --no-save --no-audit --no-fund playwright@1.64.1
+          npx playwright install --with-deps firefox
+      - name: Verify website in Firefox at desktop and mobile widths
+        run: node tests/site-smoke.mjs
+      - name: Archive website QA screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mercata-firefox-screenshots
+          path: screenshots/
+          if-no-files-found: ignore
