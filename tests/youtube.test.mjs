@@ -155,3 +155,15 @@ test('Topic view evidence records its metric-definition revision',async()=>{
   const pre=data.observations.filter(x=>x.metric==='video_views');
   assert(pre.every(x=>x.metric_definition_revision==='before_2026_08_24'));
 });
+
+test('Every YouTube topic has an unranked and unbiased opportunity record',async()=>{
+  const [topics,opportunity]=await Promise.all([
+    load('ontology/youtube/taxonomy.json'),load('ontology/youtube/opportunity-framework.json')
+  ]);
+  assert.equal(opportunity.criteria.length,10);
+  assert.equal(opportunity.topic_assessments.length,topics.topics.length);
+  const known=new Set(topics.topics.map(x=>x.id));
+  assert(opportunity.topic_assessments.every(x=>known.has(x.topic_id)&&x.decision==='insufficient_evidence'));
+  assert(opportunity.topic_assessments.every(x=>x.net_hourly_return===null&&x.creator_supply===null));
+  assert(opportunity.criteria.every(x=>x.normalized_score===null&&x.weight===null));
+});

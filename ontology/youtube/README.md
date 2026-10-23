@@ -55,3 +55,7 @@ AIR Media-Tech's [297-channel studio-data report](small-channel-income.md) conta
 The entity model now distinguishes creator residence, viewers' countries, AdSense payment addresses, payout currency, eligibility tiers, Shopping commissions, sponsored contracts, virtual gifts and Rubies. These are separate legal and financial mechanisms, not interchangeable units.
 
 Three additional [2025–2026 category observations](topic-observations.md) cover workspace tours, drumming and horror gaming. All predate the August 2026 view-count rule change. The research records mark that revision explicitly to prevent invalid comparisons.
+
+## Comparing niches economically
+
+The [opportunity assessment method](opportunity-framework.md) is a ten-dimension framework for comparing real audience demand, competing creator supply, discovery for new channels, revenue mix, cash and labor costs, content-policy restrictions and durability. Its [machine register](opportunity-framework.json) has **29 unranked topics**, each retaining null economic scores until defensible comparative evidence is gathered. A highest-viewed niche is not necessarily the best-paid or easiest to enter.

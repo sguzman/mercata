@@ -570,13 +570,35 @@ function renderRevenuePathways(data, payments, dossier) {
   return section;
 }
 
+function renderOpportunityFramework(model) {
+  if(!model)return null;
+  const container=make('section','opportunity-framework');
+  const details=make('details','opportunity-method-details');
+  details.append(make('summary','','How to compare niches · '+model.criteria.length+' research dimensions'));
+  details.append(make('p','measure-limit','The '+model.topic_assessments.length+' topics are not ranked. Views, creator income, production time and audience size cannot be substituted for one another.'));
+  const grid=make('div','opportunity-method-grid');
+  for(const criterion of model.criteria){
+    const card=make('article','opportunity-method-item');
+    card.append(make('h5','',criterion.label));
+    card.append(make('p','',criterion.definition));
+    card.append(make('small','', 'Research status: '+criterion.confidence));
+    grid.append(card);
+  }
+  details.append(grid);
+  const link=make('a','inline-link','Read the full comparison method ↗');
+  link.href='./ontology/youtube/opportunity-framework.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  container.append(details);
+  return container;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates,opportunityFramework]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -642,6 +664,8 @@ async function showDossier(entry) {
     if(channelStudy)outer.append(channelStudy);
     const catalogue=renderTopicCatalogue(topicCatalog,topicActivity);
     if(catalogue)outer.append(catalogue);
+    const method=renderOpportunityFramework(opportunityFramework);
+    if(method)outer.append(method);
     if(studyPlan)outer.append(renderStudyPlan(studyPlan));
     outer.append(make('h4','dossier-queues-title','Research queues'));
     const queueList=make('div','dossier-queues');

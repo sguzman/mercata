@@ -43,6 +43,7 @@ try{
     assert.equal(await page.locator('.revenue-pathway-card').count(),16,'Missing distinct monetization routes');
     assert.equal(await page.locator('.payout-currency').count(),2,'Missing documented payout currencies');
     assert((await page.locator('.topic-catalogue-card').count())>=28,'Missing community taxonomy');
+    assert.equal(await page.locator('.opportunity-method-item').count(),10,'Missing economic opportunity framework');
     assert((await page.locator('.topic-activity-row').count())>=14,'Missing topic evidence');
     assert.equal(await page.locator('.usage-history-point').count(),7,'Missing dated U.S. adult usage series');
     assert.equal(await page.locator('.income-evidence .income-study').count(),1,'Missing scoped creator earnings study');

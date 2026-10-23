@@ -57,6 +57,16 @@ for (const entry of index.specimens) {
     const history=load('ontology/youtube/measurement-history.json');
     const economics=load('ontology/youtube/economic-model.json');
     const routes=load('ontology/youtube/revenue-pathways.json');
+    const opportunity=load('ontology/youtube/opportunity-framework.json');
+    ensure(opportunity.criteria.length===10,'Incomplete niche-opportunity criteria');
+    const topicSet=new Set(topic.topics.map(x=>x.id));
+    ensure(opportunity.topic_assessments.length===topic.topics.length,'Incomplete opportunity topics');
+    for(const candidate of opportunity.topic_assessments){
+      ensure(topicSet.has(candidate.topic_id),'Opportunity references unknown topic');
+      ensure(candidate.decision==='insufficient_evidence' && candidate.net_hourly_return===null,
+        'Unsupported profitability estimate or niche ranking');
+    }
+
     const payout=load('ontology/youtube/payment-gates.json');
     const routesIds=new Set(routes.pathways.map(x=>x.id));
     ensure(routes.pathways.length===routes.total_pathways && routesIds.size===routes.pathways.length,'Invalid YouTube revenue-pathway inventory');
