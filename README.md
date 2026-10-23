@@ -6,7 +6,7 @@
 
 Mercata researches the cost, demand, competition, access, discovery, fees, payouts, rights, earnings distributions and realistic earning strategies of online platforms. Its goal is clear economic understanding, not promotional income claims.
 
-**26 marketplaces are now admitted as research specimens.** Their dossiers include 3,064 baseline research tasks across 437 work queues. **YouTube research is underway**, with 235 additional platform-specific tasks (399 YouTube tasks total). Other marketplace dossiers remain queued. YouTube's sourced policy and audience findings do not establish typical creator income or reliable community population sizes.
+**26 marketplaces are now admitted as research specimens.** Their dossiers include 3,064 baseline research tasks across 437 work queues. **YouTube research is underway**, with 235 additional platform-specific tasks (399 YouTube tasks total). Other marketplace dossiers remain queued. YouTube's sourced policy and audience findings do not establish a representative total creator-income distribution. Most content-community population sizes remain unknown; a separate U.S. news-consumption survey has a defined, bounded population.
 
 ## Contents
 
@@ -53,8 +53,10 @@ Licensed under the repository's [LICENSE](LICENSE).
 
 - [YouTube study plan](plans/youtube.md) ([machine-readable tasks](plans/youtube.json)): 164 existing tasks and 235 additional YouTube-specific research questions, **399 tasks in all**, across 22 workstreams and four phases. Inventory creation is complete; initial source-backed research has begun. No marketplace account actions, paid experiments or commercial publishing have been performed.
 
-The [YouTube ontology](ontology/youtube/README.md) contains an independent glossary, category taxonomy, official policy snapshots and measurement dictionary. Its public dossier now includes dated, linked primary-source claims; earnings distributions and community sizes are still unknown.
+The [YouTube ontology](ontology/youtube/README.md) contains an independent glossary, category taxonomy, official policy snapshots and measurement dictionary. Its public dossier now includes dated, linked primary-source claims; typical total creator earnings and most community populations are still unknown.
 
 ## YouTube: evidence-backed investigation
 
-The [YouTube research ontology](ontology/youtube/README.md) currently covers creator and viewer populations, 29 overlapping content categories, global usage and upload statistics, detailed Analytics numerators and denominators, creator earnings samples and their limits, native earning products, country/payment requirements, and content-specific monetization restrictions. The interactive site includes a blank-input economic calculator. [Source-backed task progress](plans/youtube.json) is maintained separately from the completed admission and infrastructure tasks.
+The [YouTube research ontology](ontology/youtube/README.md) currently covers creator and viewer populations, 31 overlapping content categories, global usage and upload statistics, detailed Analytics numerators and denominators, creator earnings samples and their limits, native earning products, country/payment requirements, and content-specific monetization restrictions. The interactive site includes a blank-input economic calculator. [Source-backed task progress](plans/youtube.json) is maintained separately from the completed admission and infrastructure tasks.
+
+The current YouTube dossier also includes a [survey-based U.S. news audience profile](ontology/youtube/community-audience-studies.md), a carefully bounded [commercial creator competition sample](ontology/youtube/competition-observations.md), a [format-by-format earning and linking guide](ontology/youtube/content-formats.md), and a [viewer discovery and retention model](ontology/youtube/creator-growth.md). These sources have different denominators and are not combined into a fabricated average or ranking.
