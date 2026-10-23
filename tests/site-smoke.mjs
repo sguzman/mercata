@@ -6,7 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {firefox} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.md':'text/plain'};
+const types={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.md':'text/plain'};
 const server=createServer(async(req,res)=>{
   const requestPath=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
   const resource=path.resolve(root,'.'+(requestPath==='/'?'/index.html':requestPath));
@@ -44,6 +44,17 @@ try{
     assert.equal(await page.locator('.payout-currency').count(),2,'Missing documented payout currencies');
     assert((await page.locator('.topic-catalogue-card').count())>=28,'Missing community taxonomy');
     assert.equal(await page.locator('.opportunity-method-item').count(),10,'Missing economic opportunity framework');
+    const tool=page.locator('.scenario-tool');
+    await tool.locator('summary').click();
+    assert.equal(await tool.locator('input').count(),8,'Missing required scenario inputs');
+    assert((await tool.locator('.scenario-result').textContent()).includes('Enter all fields'));
+    const values={currency:'USD',watch_views:'1000',watch_ad_only_rpm:'2',shorts_engaged_views:'2000',shorts_ad_only_rpm:'1',net_other_receipts:'5',cash_costs:'6',labor_hours:'3'};
+    for(const [name,value] of Object.entries(values)) await tool.locator('input[name='+name+']').fill(value);
+    await tool.locator('.scenario-stats').waitFor();
+    assert((await tool.locator('.scenario-stats').textContent()).includes('1.00'),'Expected synthetic profit per hour');
+    await tool.locator('.scenario-clear').click();
+    assert((await tool.locator('.scenario-result').textContent()).includes('Enter all fields'));
+
     assert((await page.locator('.topic-activity-row').count())>=14,'Missing topic evidence');
     assert.equal(await page.locator('.usage-history-point').count(),7,'Missing dated U.S. adult usage series');
     assert.equal(await page.locator('.income-evidence .income-study').count(),1,'Missing scoped creator earnings study');

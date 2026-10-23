@@ -1,3 +1,4 @@
+import {evaluateIncomeScenario} from './scenario.mjs';
 const $ = selector => document.querySelector(selector);
 const make = (tag, className, text) => {
   const node = document.createElement(tag);
@@ -592,6 +593,70 @@ function renderOpportunityFramework(model) {
   return container;
 }
 
+function renderScenarioCalculator() {
+  const section=make('section','scenario-tool');
+  const details=make('details','scenario-details');
+  details.append(make('summary','','Estimate cash return from your own assumptions'));
+  details.append(make('p','measure-limit','This is not an income forecast. No rates or earnings are prefilled. Enter zero explicitly for any stream that does not apply, and keep all money in one currency.'));
+  const form=make('form','scenario-form');
+  const specs=[
+    ['currency','Currency code (ISO)','text','e.g. USD or MXN'],
+    ['watch_views','Watch-page video views','number','Whole number'],
+    ['watch_ad_only_rpm','Watch ad-only yield per 1,000 views','number','After revenue sharing'],
+    ['shorts_engaged_views','Shorts engaged views','number','Whole number'],
+    ['shorts_ad_only_rpm','Shorts ad-only yield per 1,000 engaged views','number','After allocation'],
+    ['net_other_receipts','Other net creator receipts','number','After provider deductions'],
+    ['cash_costs','Total attributable cash costs','number','Do not double-count fees'],
+    ['labor_hours','Total work hours','number','Production, promotion and administration']
+  ];
+  const inputs={};
+  for(const [id,title,type,hint] of specs){
+    const field=make('label','scenario-field');
+    field.append(make('span','',title));
+    const input=make('input','scenario-input');
+    input.type=type;input.name=id;input.placeholder=hint;input.autocomplete='off';
+    if(type==='number'){input.min='0';input.step=id.includes('views')?'1':'any';}
+    if(id==='currency'){input.maxLength=3;input.autocapitalize='characters';}
+    field.append(input);form.append(field);inputs[id]=input;
+  }
+  const result=make('div','scenario-result');
+  result.setAttribute('aria-live','polite');
+  const message=make('p','measure-limit','Enter all fields before results appear.');
+  result.append(message);
+  const clear=make('button','scenario-clear','Clear inputs');
+  clear.type='reset';
+  form.append(clear);
+  const update=()=>{
+    const values={currency:inputs.currency.value.trim().toUpperCase()};
+    for(const id of Object.keys(inputs)){
+      if(id==='currency')continue;
+      values[id]=inputs[id].value.trim()===''?null:Number(inputs[id].value);
+    }
+    try{
+      const modeled=evaluateIncomeScenario(values);
+      const format=new Intl.NumberFormat('en',{style:'currency',currency:modeled.currency,maximumFractionDigits:2});
+      result.replaceChildren(make('p','scenario-disclaimer','Hypothetical arithmetic only — not observed revenue or a prediction.'));
+      const stats=make('div','scenario-stats');
+      add(stats,
+        blockHeading('Ad-only receipts',format.format(modeled.watch_ad_receipts+modeled.shorts_ad_receipts)),
+        blockHeading('All creator receipts',format.format(modeled.net_receipts)),
+        blockHeading('Cash profit before tax',format.format(modeled.cash_profit_before_tax)),
+        blockHeading('Cash profit per hour',format.format(modeled.cash_profit_per_hour)));
+      result.append(stats);
+    }catch{
+      result.replaceChildren(make('p','measure-limit','Enter a three-letter currency and all seven nonnegative numbers. Use 0 explicitly when a stream does not apply; work hours must be greater than 0.'));
+    }
+  };
+  form.addEventListener('input',update);
+  form.addEventListener('reset',()=>{result.replaceChildren(make('p','measure-limit','Enter all fields before results appear.'));});
+  details.append(form,result);
+  const method=make('a','inline-link','Read calculation definitions and limits ↗');
+  method.href='./ontology/youtube/scenario-method.md';method.target='_blank';method.rel='noopener noreferrer';
+  details.append(method);
+  section.append(details);
+  return section;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
@@ -666,6 +731,7 @@ async function showDossier(entry) {
     if(catalogue)outer.append(catalogue);
     const method=renderOpportunityFramework(opportunityFramework);
     if(method)outer.append(method);
+    if(entry.id==='youtube')outer.append(renderScenarioCalculator());
     if(studyPlan)outer.append(renderStudyPlan(studyPlan));
     outer.append(make('h4','dossier-queues-title','Research queues'));
     const queueList=make('div','dossier-queues');

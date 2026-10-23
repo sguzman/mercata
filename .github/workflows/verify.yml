@@ -28,6 +28,7 @@ jobs:
           node --check scripts/intake.mjs
           node --check scripts/verify.mjs
           node --check site/app.js
+          node --check site/scenario.mjs
       - name: Check public ontology, catalog, queue and website
         run: node scripts/verify.mjs
       - name: Run repository tests
