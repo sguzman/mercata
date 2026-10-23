@@ -6,7 +6,7 @@
 
 Mercata researches the cost, demand, competition, access, discovery, fees, payouts, rights, earnings distributions and realistic earning strategies of online platforms. Its goal is clear economic understanding, not promotional income claims.
 
-**26 marketplaces are now admitted as research specimens.** Their dossiers and 3,064 research tasks across 437 work queues are queued. Economic research has not started; all income, fee, market and eligibility claims remain unverified.
+**26 marketplaces are now admitted as research specimens.** Their dossiers include 3,064 baseline research tasks across 437 work queues. **YouTube research is underway**, with 235 additional platform-specific tasks (399 YouTube tasks total). Other marketplace dossiers remain queued. YouTube's sourced policy and audience findings do not establish typical creator income or reliable community population sizes.
 
 ## Contents
 
@@ -22,7 +22,7 @@ Mercata researches the cost, demand, competition, access, discovery, fees, payou
 
 Distinguish markets from individual opportunities, discovery from payment, gross receipts from profit, reported success stories from representative samples, and unknown values from zero. Claims need dated public sources with transparent populations, methods, and limitations. A platform's economic size does not establish what a new participant can expect to earn.
 
-**Eleven specimens** have an additional social-audience profile that will study active populations, age, sex and gender, race or ethnicity where supported, countries, languages, survey-based political affiliation, and the size and overlap of communities such as beauty, feminine lifestyle, children's animation, memes, politics and gaming. It also tracks competing creators, attention, demand and content economics. None of those population figures has been researched yet.
+**Eleven specimens** have an additional social-audience profile that will study active populations, age, sex and gender, race or ethnicity where supported, countries, languages, survey-based political affiliation, and the size and overlap of communities such as beauty, feminine lifestyle, children's animation, memes, politics and gaming. It also tracks competing creators, attention, demand and content economics. The first YouTube study includes dated U.S. surveys and advertising-reach estimates for selected countries. Those are not demographic profiles of specific subcultures, and most population questions remain open.
 
 Coverage may include games, literature, software, professional services, video, visual art, digital products and subscriptions. All 26 named initial specimens were admitted by explicit authorization; new admissions still require specific authorization.
 
@@ -31,13 +31,13 @@ Coverage may include games, literature, software, professional services, video, 
 The site uses plain HTML, CSS, JavaScript and public JSON with no dependencies. Serve the repository root as static files and visit its index page. Node.js 20+ is required only for the research maintenance scripts.
 
 `node scripts/verify.mjs` checks local repository data.
-`node --test tests/*.test.mjs` runs the color and admission tests.
+`node --test tests/*.test.mjs` runs the color, intake, specimen and YouTube evidence tests. [GitHub Actions](.github/workflows/verify.yml) verifies syntax, ontology, catalog and tests on every push to `main`.
 
 After separately authorized specimen intake:
 `node scripts/intake.mjs --name "Example Market" --url "https://example.org" --domain "literature"`
 This is a synthetic command example, not an admitted specimen.
 
-To publish through GitHub Pages select `main` and `/(root)` in Pages settings. Committed files do not establish that Pages has been enabled. Intended URL: https://sguzman.github.io/mercata/.
+To publish through GitHub Pages select `main` and `/(root)` in Pages settings. A live Pages deployment must still be independently checked. Intended URL: https://sguzman.github.io/mercata/.
 
 ## Visual identity
 
@@ -51,6 +51,6 @@ Licensed under the repository's [LICENSE](LICENSE).
 
 ## Prepared research inventories
 
-- [YouTube study plan](plans/youtube.md) ([machine-readable tasks](plans/youtube.json)): 164 existing tasks and 235 additional YouTube-specific research questions, **399 pending tasks in all**, across 22 workstreams and four phases. Inventory creation is complete; evidence collection, economic analysis, creator actions, and experiments have not begun.
+- [YouTube study plan](plans/youtube.md) ([machine-readable tasks](plans/youtube.json)): 164 existing tasks and 235 additional YouTube-specific research questions, **399 tasks in all**, across 22 workstreams and four phases. Inventory creation is complete; initial source-backed research has begun. No marketplace account actions, paid experiments or commercial publishing have been performed.
 
 The [YouTube ontology](ontology/youtube/README.md) contains an independent glossary, category taxonomy, official policy snapshots and measurement dictionary. Its public dossier now includes dated, linked primary-source claims; earnings distributions and community sizes are still unknown.
