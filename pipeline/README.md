@@ -2,7 +2,7 @@
 
 [Core task catalog](queues.json) · [Specialist tasks](domains.json)
 
-Only the explicitly authorized intake command may add a named platform. Admission generates a versioned, empty-data dossier, a gallery entry, a unique OKLab-based swatch and all 12 core task queues. It also adds the relevant specialist queue. **It does not collect facts, scrape a website, earn money or finish research.**
+Twenty-six approved marketplaces were admitted on 2026-10-23. Future admissions still require explicit authorization. Only the intake command for explicitly approved platforms may add a named platform. Admission generates a versioned, empty-data dossier, a gallery entry, a unique OKLab-based swatch and all 12 core task queues. It also adds the relevant specialist queue. **It does not collect facts, scrape a website, earn money or finish research.**
 
 Each atomic task has an ID, emoji, acceptance criterion, weight, progress (initially 0), status and evidence references. Core queues include market definition, access, fees, demand, discovery, competition, income distribution, rights, conversion, risk, earning strategies and source verification. Specialist tasks cover games, literature, software, services, video, art, downloadable products and subscriptions.
 

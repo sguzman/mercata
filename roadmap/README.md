@@ -8,7 +8,9 @@ All milestones, phases and atomic tasks use meaningful emojis and percentage val
 
 **Deployment:** hosting the committed static website is a separate stage. Do not claim the published URL works without checking.
 
-**Research:** admit named specimens only when authorized, then process all core and relevant domain-specific queues. Measure the platform, actual participant earnings and realistic earning strategies. Preserve unknowns and limitations rather than claiming exhaustive knowledge where information cannot be found.
+**Intake:** 26 expressly approved marketplaces were admitted on 2026-10-23. Every specimen has a dossier, perceptual color and 84 queued tasks.
+
+**Research:** study the admitted specimens through their core and relevant specialist queues. Measure the platform, actual participant earnings and realistic earning strategies. Preserve unknowns and limitations rather than claiming exhaustive knowledge where information cannot be found.
 
 Once a milestone is completed, routine progress reports need only show still-open work. The full evidence ledger remains here.
 

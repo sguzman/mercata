@@ -68,6 +68,7 @@ const write = async (filename, data, flags='w') =>
 await write(dossierFile, record, 'wx');
 await write(queueFile, queue, 'wx');
 index.specimens.push(galleryRecord);
+index.description = `${index.specimens.length} marketplaces admitted as research specimens; all economic findings require source-backed investigation.`;
 await write('gallery/index.json', index);
 console.log(JSON.stringify({admitted:slug,color,queues:groups.length,
   tasks:groups.reduce((count,g)=>count+g.tasks.length,0)},null,2));
