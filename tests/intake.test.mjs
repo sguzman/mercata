@@ -91,3 +91,12 @@ test('existing social specimens have complete research queues and no fabricated 
     }
   }
 });
+
+test('social audience model preserves empty estimates pending evidence', async () => {
+  const social=JSON.parse(await fs.readFile(path.join(project,'pipeline/social.json'),'utf8'));
+  assert.equal(social.queues.length,9);
+  assert.equal(social.queues.flatMap(q=>q.tasks).length,80);
+  const index=JSON.parse(await fs.readFile(path.join(project,'gallery/index.json'),'utf8'));
+  assert.equal(index.specimens.length,26);
+  assert.equal(index.specimens.filter(x=>x.research_profiles?.includes('social_audience')).length,11);
+});

@@ -26,3 +26,7 @@ The private Taria ecosystem and public Tarium registry are separate. Mercata may
 
 ## IX. Operations
 Work on the existing `main` branch unless directed otherwise. Verify changes and their public suitability before committing. Report test limits accurately. A later deletion commit cannot remove leaked information from Git history. Stop work at the user's authorized scope.
+
+## X. Audience and subculture research
+
+Social-marketplace research must separately define platform reach, creator populations, viewers, demographics, and overlapping content communities. Use only legitimately obtained, aggregate published or consent-based data to study sensitive traits such as sex, gender, ethnicity and political affiliation; never infer them for individual users. Political-community research describes audiences rather than planning demographic-targeted political persuasion. Respect child-directed content and data-access restrictions. Each population estimate must state its source, period, sample, geographic scope, and limitations. Unknown figures stay unknown, and overlapping community sizes must not be added as if the groups were disjoint.

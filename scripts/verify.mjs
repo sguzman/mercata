@@ -42,9 +42,43 @@ for (const entry of index.specimens) {
     ...(socialEnabled ? social.queues.map(q => q.id) : [])];
   ensure(expectedQueues.every(id => queue.queues.some(q => q.id === id)),'Missing named queues');
   if(socialEnabled) {
-    ensure(dossier.audience_research?.profile === 'social_audience','Missing social-audience dossier structure');
-    for(const key of ['populations','demographics','communities','overlaps','formats','insights']) {
-      ensure(Array.isArray(dossier.audience_research[key]),'Missing audience research collection '+key);
+    const audience = dossier.audience_research;
+    ensure(audience?.profile === 'social_audience','Missing social-audience dossier structure');
+    for(const key of ['populations','demographics','communities','overlaps','formats','insights'])
+      ensure(Array.isArray(audience[key]),'Missing audience research collection '+key);
+    const sources = new Set(dossier.evidence.map(source => source.id));
+    const sourced = (measure,label,value) => {
+      ensure(typeof measure.id === 'string' && measure.id.length > 0,'Missing measurement ID: '+label);
+      ensure(Array.isArray(measure.source_ids),'Missing source array: '+label);
+      if(value !== null && value !== undefined) {
+        ensure(Number.isFinite(value),'Invalid numeric observation: '+label);
+        ensure(measure.source_ids.length > 0,'Unsourced measurement: '+label);
+        ensure(typeof measure.period === 'string' && measure.period.length > 0,'Missing period: '+label);
+        ensure(typeof measure.method === 'string' && measure.method.length > 0,'Missing method: '+label);
+        ensure(typeof measure.limitations === 'string','Missing limitations: '+label);
+      }
+      for(const id of measure.source_ids)
+        ensure(sources.has(id),'Unregistered source '+id+' for '+label);
+    };
+    for(const x of audience.populations)sourced(x,'population',x.value);
+    for(const x of audience.formats)sourced(x,'format',x.value);
+    for(const x of audience.demographics)sourced(x,'demographic',x.share_percent);
+    const communityIds = new Set();
+    for(const community of audience.communities) {
+      ensure(community.id && community.label && community.definition,'Incomplete community');
+      ensure(!communityIds.has(community.id),'Duplicate community');
+      communityIds.add(community.id);
+      for(const estimate of community.estimates)sourced(estimate,'community '+community.id,estimate.value);
+    }
+    for(const overlap of audience.overlaps) {
+      ensure(overlap.community_ids?.length >= 2 && overlap.community_ids.every(id => communityIds.has(id)),
+        'Community overlap references missing community');
+      sourced(overlap,'overlap',overlap.value);
+    }
+    for(const insight of audience.insights) {
+      ensure(typeof insight.statement === 'string' && insight.statement.length > 0,'Empty audience insight');
+      ensure(insight.source_ids?.length > 0,'Unsourced audience insight');
+      for(const id of insight.source_ids)ensure(sources.has(id),'Unregistered insight source '+id);
     }
   }
   for(const group of queue.queues) {
