@@ -443,13 +443,37 @@ function renderAdultUseHistory(history) {
   return section;
 }
 
+function renderCreatorIncomeEvidence(report) {
+  if(!report?.datasets?.length)return null;
+  const section=make('section','income-evidence');
+  section.append(make('p','eyebrow','EARNINGS STUDY — LIMITED POPULATION'));
+  section.append(make('h4','audience-atlas-title','Patreon income linked to YouTube'));
+  section.append(make('p','audience-atlas-description','Selected off-platform Patreon earnings; not typical YouTube creator income or profit.'));
+  for(const item of report.datasets) {
+    const info=make('article','income-study');
+    info.append(make('p','measure-context','March '+item.years.join(', ')+' · '+item.observations.toLocaleString()+' observations'));
+    const stats=make('div','dossier-stats');
+    add(stats,blockHeading('Monthly median','USD '+item.summary_statistics.median),
+      blockHeading('Monthly mean','USD '+item.summary_statistics.mean),
+      blockHeading('25th percentile','USD '+item.summary_statistics.q25),
+      blockHeading('75th percentile','USD '+item.summary_statistics.q75));
+    info.append(stats);
+    info.append(make('p','measure-limit','Only Patreon earners above USD 10 with YouTube as their sole social-platform affiliation; excludes native YouTube advertising, sponsors, non-earners and production costs. Some missing values were imputed.'));
+    const source=make('a','inline-link','Original academic study ↗');
+    source.href=item.url;source.target='_blank';source.rel='noopener noreferrer';
+    info.append(source);
+    section.append(info);
+  }
+  return section;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -507,6 +531,8 @@ async function showDossier(entry) {
     if(audience)outer.append(audience);
     const history=renderAdultUseHistory(adultUseHistory);
     if(history)outer.append(history);
+    const incomeStudy=renderCreatorIncomeEvidence(incomeEvidence);
+    if(incomeStudy)outer.append(incomeStudy);
     const catalogue=renderTopicCatalogue(topicCatalog,topicActivity);
     if(catalogue)outer.append(catalogue);
     if(studyPlan)outer.append(renderStudyPlan(studyPlan));
