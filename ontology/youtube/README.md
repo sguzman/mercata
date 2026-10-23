@@ -89,6 +89,10 @@ The [YouTube Analytics measurement guide](analytics-query-guide.md) ([machine re
 
 [Platform-scale research](platform-scale.md) separates GWI's monthly self-reported YouTube use among internet users 16+, YouTube's daily video upload supply, and daily Shorts viewing events. Its [machine model](platform-scale.json) preserves denominator, market coverage, publication snapshot and source. No published figure is presented as a verified global count of unique active people.
 
+## Country reach, devices and audience-method comparability
+
+The [regional audience and screen-viewing analysis](country-reach-devices.md) and [machine register](country-reach-devices.json) add official Ofcom UK reach, TV-set and in-home viewing observations from 2022–2025 plus 2026 Reuters Institute survey results across 48 markets. The same Ofcom in-home series may be compared across years, but Online Nation’s 51 online minutes cannot be added to the separate 41 in-home minutes. Age-group weekly reach, country use, mixed-market news use, and the world’s unique monthly viewers remain distinct metrics. Source methods and unknown global totals are explicit.
+
 ## Feature eligibility checklists
 
 The [product-specific eligibility matrix](eligibility-matrix.md) ([machine JSON](eligibility-matrix.json)) records the age, product module, country, music-channel and child-directed restrictions for all sixteen earning routes. It separates YPP advertising status from individual memberships, Gifts, Shopping and Creator Partnerships gates. External product sales and sponsorships remain outside YouTube's own payout contract.
