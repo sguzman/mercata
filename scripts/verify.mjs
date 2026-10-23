@@ -111,7 +111,7 @@ for (const entry of index.specimens) {
     const phaseIds=new Set(plan.phases.map(p=>p.id));
     ensure(plan.detail_tasks.every(t=>phaseIds.has(t.phase)),'Study task lacks a valid phase');
     const avg=plan.detail_tasks.length?
-      Math.round(plan.detail_tasks.reduce((n,t)=>n+t.percent,0)/plan.detail_tasks.length):0;
+      Math.round((plan.detail_tasks.reduce((n,t)=>n+t.percent,0)+queue.queues.reduce((n,q)=>n+q.tasks.reduce((a,t)=>a+t.progress,0),0))/plan.total_tracked_tasks):0;
     ensure(plan.progress_percent===avg,'Study-plan percentage mismatch');
   }
   for(const group of queue.queues) {
