@@ -171,12 +171,14 @@
           "title": "Find commissions and service fees",
           "acceptance": "State fee basis, rate, tiers and effective dates.",
           "weight": 1,
-          "progress": 22,
+          "progress": 35,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
             "ontology/youtube/payment-gates.json",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md"
           ]
         },
         {
@@ -185,12 +187,14 @@
           "title": "Separate payment processing charges",
           "acceptance": "Check transaction, currency conversion, refund and chargeback costs.",
           "weight": 1,
-          "progress": 25,
+          "progress": 34,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
             "ontology/youtube/payment-gates.json",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md"
           ]
         },
         {
@@ -241,14 +245,16 @@
           "title": "Model a transparent net-sale example",
           "acceptance": "Calculate gross less documented fees with assumptions.",
           "weight": 1,
-          "progress": 56,
+          "progress": 74,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
             "ontology/youtube/payment-gates.json",
             "specimens/youtube.json",
             "ontology/youtube/content-policy-risk.json",
-            "ontology/youtube/content-policy-risk.md"
+            "ontology/youtube/content-policy-risk.md",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md"
           ]
         },
         {
@@ -496,13 +502,16 @@
           "title": "Define earning-population denominator",
           "acceptance": "Separate all users, active sellers and paid sellers.",
           "weight": 1,
-          "progress": 45,
+          "progress": 52,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
             "ontology/youtube/creator-income-evidence.md",
             "ontology/youtube/small-channel-income.json",
-            "ontology/youtube/small-channel-income.md"
+            "ontology/youtube/small-channel-income.md",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md",
+            "specimens/youtube.json"
           ]
         },
         {
@@ -511,13 +520,16 @@
           "title": "Find representative mean earnings",
           "acceptance": "Include amount, currency, period, sample and bias or mark unknown.",
           "weight": 1,
-          "progress": 35,
+          "progress": 47,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
             "ontology/youtube/creator-income-evidence.md",
             "ontology/youtube/small-channel-income.json",
-            "ontology/youtube/small-channel-income.md"
+            "ontology/youtube/small-channel-income.md",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md",
+            "specimens/youtube.json"
           ]
         },
         {
@@ -571,13 +583,16 @@
           "title": "Audit selection and survivorship biases",
           "acceptance": "Describe recruitment, response bias and missing populations.",
           "weight": 1,
-          "progress": 60,
+          "progress": 64,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
             "ontology/youtube/creator-income-evidence.md",
             "ontology/youtube/small-channel-income.json",
-            "ontology/youtube/small-channel-income.md"
+            "ontology/youtube/small-channel-income.md",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md",
+            "specimens/youtube.json"
           ]
         },
         {
@@ -763,10 +778,13 @@
           "title": "List seller analytics",
           "acceptance": "Identify reported conversion and traffic metrics, access and gaps.",
           "weight": 1,
-          "progress": 55,
+          "progress": 74,
           "status": "in_progress",
           "evidence": [
-            "ontology/youtube/discovery.md"
+            "ontology/youtube/discovery.md",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md",
+            "specimens/youtube.json"
           ]
         }
       ]
@@ -1031,9 +1049,13 @@
           "title": "Cross-check critical claims",
           "acceptance": "Use independent sources or document why cross-check unavailable.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 30,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md",
+            "specimens/youtube.json"
+          ]
         },
         {
           "id": "review/uncertainty",
@@ -1041,14 +1063,17 @@
           "title": "Audit unknowns and comparability",
           "acceptance": "Inspect denominators, missing data and misleading comparisons.",
           "weight": 1,
-          "progress": 30,
+          "progress": 40,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/opportunity-framework.json",
             "ontology/youtube/opportunity-framework.md",
             "ontology/youtube/scenario-method.md",
             "site/scenario.mjs",
-            "tests/scenario.test.mjs"
+            "tests/scenario.test.mjs",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md",
+            "specimens/youtube.json"
           ]
         },
         {
@@ -1099,12 +1124,14 @@
           "title": "Set a maintenance schedule",
           "acceptance": "Select review dates based on fee, policy and payout volatility.",
           "weight": 1,
-          "progress": 22,
+          "progress": 35,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
             "ontology/youtube/payment-gates.json",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md"
           ]
         }
       ]
@@ -1195,11 +1222,13 @@
           "title": "Distinguish users, accounts, visitors and advertising reach",
           "acceptance": "Define numerator, denominator, eligibility and duplicate-account limits.",
           "weight": 1,
-          "progress": 65,
+          "progress": 70,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
-            "ontology/youtube/us-audience-2026.md"
+            "ontology/youtube/us-audience-2026.md",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md"
           ]
         },
         {
@@ -1296,11 +1325,13 @@
           "title": "Describe age distributions",
           "acceptance": "Use consistent brackets and survey/analytics bases; never infer individuals' ages.",
           "weight": 1,
-          "progress": 60,
+          "progress": 62,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
-            "ontology/youtube/us-audience-2026.md"
+            "ontology/youtube/us-audience-2026.md",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md"
           ]
         },
         {
@@ -1309,11 +1340,13 @@
           "title": "Describe reported gender distributions",
           "acceptance": "State self-report, platform classifications, nonresponse and category limitations.",
           "weight": 1,
-          "progress": 50,
+          "progress": 65,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
-            "ontology/youtube/us-audience-2026.md"
+            "ontology/youtube/us-audience-2026.md",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md"
           ]
         },
         {
@@ -1437,11 +1470,13 @@
           "title": "Audit demographic data access and bias",
           "acceptance": "Record nonresponse, login coverage, suppression, ad-reach modeling and age-report uncertainty.",
           "weight": 1,
-          "progress": 65,
+          "progress": 73,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
-            "ontology/youtube/us-audience-2026.md"
+            "ontology/youtube/us-audience-2026.md",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md"
           ]
         }
       ]
@@ -1880,12 +1915,15 @@
           "title": "Investigate CPM or RPM distribution by geography and category",
           "acceptance": "Use credible samples; do not infer a platform-wide rate from exceptional channels.",
           "weight": 1,
-          "progress": 55,
+          "progress": 76,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/discovery.md",
             "ontology/youtube/small-channel-income.json",
-            "ontology/youtube/small-channel-income.md"
+            "ontology/youtube/small-channel-income.md",
+            "ontology/youtube/analytics-query-guide.json",
+            "ontology/youtube/analytics-query-guide.md",
+            "specimens/youtube.json"
           ]
         },
         {
