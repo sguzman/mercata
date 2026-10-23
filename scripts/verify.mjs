@@ -139,6 +139,23 @@ for (const entry of index.specimens) {
       x.eligibility_confirmed_for_any_specific_person===false),
       'Invalid or unsourced earning eligibility');
 
+    const musicRights=load('ontology/youtube/music-rights-economics.json');
+    ensure(musicRights.options.length===5 && musicRights.claim_outcomes.length===4,
+      'Incomplete music-rights economics model');
+    ensure(musicRights.historical_events.some(x=>x.id==='creator_music_paid_licenses_sunset' &&
+      x.date==='2026-08-10'),'Missing 2026 paid music-license transition');
+    ensure(musicRights.options.some(x=>x.id==='creator_music_paid_license_legacy' &&
+      x.availability==='legacy_only_no_new_paid_licenses'),'Obsolete Creator Music purchase availability');
+    ensure(musicRights.options.every(x=>x.source_ids.length>0 &&
+      x.source_ids.every(id=>sourceIds.has(id)) && x.typical_cost===null && x.typical_net_revenue_effect===null),
+      'Music-rights route without provenance or invented average cost');
+    ensure(musicRights.claim_outcomes.every(x=>x.source_ids.length &&
+      x.source_ids.every(id=>sourceIds.has(id)) && x.measured_loss===null),
+      'Unsupported Content ID earnings loss');
+    ensure(musicRights.accounting_fields.length>=6 &&
+      musicRights.typical_cash_cost===null && musicRights.typical_work_hours===null &&
+      musicRights.typical_profit_effect===null, 'Invented typical creator cost or work hours');
+
     const opportunity=load('ontology/youtube/opportunity-framework.json');
     const restrictions=load('ontology/youtube/content-policy-risk.json');
     ensure(restrictions.classifications.length>=4 && restrictions.policy_dimensions.length>=8,
