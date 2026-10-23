@@ -37,3 +37,7 @@ The [public YouTube sampling protocol](public-sampling.md) defines topic inclusi
 ## Measured content activity
 
 The [topic evidence register](topic-observations.md) records 14 observations from YouTube publications, including global gaming views, topic-title-filtered beauty or format views, news watch hours, and animation fan-survey results. The [machine version](topic-observations.json) includes each source, geography, period, unit and limitation. These measures reveal **content activity**, not unique community population. All 28 topic population estimates remain unknown.
+
+## What creators earn
+
+The first [creator-income evidence review](creator-income-evidence.md) examines a peer-reviewed study of **Patreon earnings for YouTube-affiliated Patreon creators**, rather than YouTube advertising or total creator income. The selected sample's $47 monthly median and $250 mean show why definitions and sample exclusions matter. The [machine evidence](creator-income-evidence.json) preserves period, currency, quartiles, coverage, omitted non-earners, imputation and other limits. Typical total YouTube creator income is **still unknown**.
