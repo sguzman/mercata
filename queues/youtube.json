@@ -25,11 +25,16 @@
           "title": "Classify all platform roles",
           "acceptance": "Separate selling, publishing, payment, discovery and contracting roles.",
           "weight": 1,
-          "progress": 60,
+          "progress": 73,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
-            "ontology/youtube/README.md"
+            "ontology/youtube/README.md",
+            "ontology/youtube/channel-onboarding.json",
+            "ontology/youtube/channel-onboarding.md",
+            "ontology/youtube/model.json",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -76,9 +81,16 @@
           "title": "Document onboarding",
           "acceptance": "Identify signup steps and eligibility documents.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 72,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/channel-onboarding.json",
+            "ontology/youtube/channel-onboarding.md",
+            "specimens/youtube.json",
+            "ontology/youtube/model.json",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
+          ]
         },
         {
           "id": "access/country",
@@ -120,7 +132,7 @@
           "title": "Check thresholds and curation",
           "acceptance": "Document review processes, audience thresholds and approvals.",
           "weight": 1,
-          "progress": 80,
+          "progress": 85,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
@@ -129,7 +141,12 @@
             "ontology/youtube/payment-gates.json",
             "ontology/youtube/application-lifecycle.json",
             "ontology/youtube/eligibility-matrix.json",
-            "ontology/youtube/eligibility-matrix.md"
+            "ontology/youtube/eligibility-matrix.md",
+            "ontology/youtube/channel-onboarding.json",
+            "ontology/youtube/channel-onboarding.md",
+            "ontology/youtube/model.json",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -153,13 +170,18 @@
           "title": "Identify practical barriers",
           "acceptance": "Examine credentials, tools, languages and platform-specific conditions.",
           "weight": 1,
-          "progress": 38,
+          "progress": 51,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/application-lifecycle.json",
             "ontology/youtube/eligibility-matrix.json",
             "ontology/youtube/eligibility-matrix.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/channel-onboarding.json",
+            "ontology/youtube/channel-onboarding.md",
+            "ontology/youtube/model.json",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         }
       ]
