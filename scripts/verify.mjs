@@ -198,6 +198,13 @@ for (const entry of index.specimens) {
           observation.bins.reduce((n,x)=>n+x.percent,0)===100,
           'Incomplete podcaster survey histogram or invented subgroup size');
       }
+      ensure(study.audio_video_comparisons.length===2 &&
+        study.audio_video_comparisons.every(x=>
+          x.video_subsample_n===null && x.audio_subsample_n===null &&
+          x.causal_effect===null && x.confidence==='descriptive_only' &&
+          x.video_percent_approx>=0 && x.video_percent_approx<=100 &&
+          x.audio_only_percent_approx>=0 && x.audio_only_percent_approx<=100),
+        'Podcast video subgroup comparison overstated or implied causal estimates');
       ensure(study.reported_human_work.median_hours===null &&
         study.reported_operating_cash.median_monthly_cost===null,
         'Invented precision for binned podcast time/cost figures');
