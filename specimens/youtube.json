@@ -900,6 +900,61 @@
       "evidence_class": "official",
       "license": "Product documentation linked; short factual paraphrases only",
       "notes": "Official help snapshot; actual outcomes depend on review, content and applicable terms."
+    },
+    {
+      "id": "yt-channel-create",
+      "url": "https://support.google.com/youtube/answer/1646861?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Create a YouTube channel",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Official documentation linked; independently paraphrased short facts only",
+      "notes": "Product access and requirements are time dependent and account-specific."
+    },
+    {
+      "id": "yt-feature-access",
+      "url": "https://support.google.com/youtube/answer/9890437?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Learn about feature access for YouTube creators",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Official documentation linked; independently paraphrased short facts only",
+      "notes": "Product access and requirements are time dependent and account-specific."
+    },
+    {
+      "id": "yt-advanced-access",
+      "url": "https://support.google.com/youtube/answer/9891124?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Get access to intermediate and advanced features",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Official documentation linked; independently paraphrased short facts only",
+      "notes": "Product access and requirements are time dependent and account-specific."
+    },
+    {
+      "id": "yt-phone-verify",
+      "url": "https://support.google.com/youtube/answer/171664?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Verify your YouTube account",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Official documentation linked; independently paraphrased short facts only",
+      "notes": "Product access and requirements are time dependent and account-specific."
+    },
+    {
+      "id": "yt-upload",
+      "url": "https://support.google.com/youtube/answer/57407?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Upload YouTube videos",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Official documentation linked; independently paraphrased short facts only",
+      "notes": "Product access and requirements are time dependent and account-specific."
     }
   ],
   "claims": [
@@ -1687,6 +1742,59 @@
       "confidence": "high",
       "observed_at": "2026-10-23",
       "limitations": "Track-level rules, sponsor-content emphasis and product eligibility differ; this does not measure lost sales."
+    },
+    {
+      "id": "google-account-not-channel",
+      "text": "A Google Account allows signed-in YouTube viewing and interaction, but publishing and commenting require a YouTube channel. Personal and Brand channels have different administration possibilities.",
+      "source_ids": [
+        "yt-channel-create"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Supervised-account and participation restrictions can affect channel creation and specific features."
+    },
+    {
+      "id": "youtube-standard-intermediate-advanced",
+      "text": "YouTube provides standard features on eligible channel creation; intermediate features require phone verification; advanced features require phone verification and sufficient channel history or ID/video verification where offered.",
+      "source_ids": [
+        "yt-feature-access",
+        "yt-advanced-access"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual enabled status is account-specific, subject to strikes, daily limits and separate product gates."
+    },
+    {
+      "id": "youtube-advanced-primary-owner",
+      "text": "Advanced identity verification is reserved for the channel's primary owner and is not available through ID or video to every creator; sufficient channel history is an alternative.",
+      "source_ids": [
+        "yt-advanced-access"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Brand Account management access does not establish authorization to verify; optional identity methods should not be treated as mandatory."
+    },
+    {
+      "id": "youtube-publish-vs-upload",
+      "text": "YouTube Studio separates uploading a video file from making it publicly visible; videos may be private, unlisted, public, or scheduled.",
+      "source_ids": [
+        "yt-upload"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Uploads may be disabled for supervised accounts; publication can be restricted by Community Guidelines."
+    },
+    {
+      "id": "youtube-feature-access-not-income",
+      "text": "Creating a channel or unlocking publishing features does not automatically satisfy YouTube Partner Program eligibility or grant creator payments.",
+      "source_ids": [
+        "yt-feature-access",
+        "ypp-main",
+        "ypp-expanded"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Different products and countries impose separate eligibility, application review and settlement gates."
     }
   ],
   "observations": [],
