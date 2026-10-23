@@ -242,3 +242,17 @@ test('Every YouTube earning route has sourced, nonpersonal eligibility gates',as
   assert(gates.records.find(x=>x.pathway_id==='shopping-affiliate').music_channel_status.includes('ineligible'));
   assert.equal(gates.records.find(x=>x.pathway_id==='direct-sponsorship').tier,'not_ypp_dependent');
 });
+
+test('YouTube entry, review and settlement are distinct milestones',async()=>{
+  const [lifecycle,record]=await Promise.all([
+    load('ontology/youtube/application-lifecycle.json'),load('specimens/youtube.json')
+  ]);
+  assert.equal(lifecycle.steps.length,9);
+  const steps=new Map(lifecycle.steps.map(x=>[x.id,x]));
+  assert.equal(steps.get('first-rejection-appeal').window_days,21);
+  assert.equal(steps.get('first-rejection-reapply').earliest_reapply_after_days,30);
+  assert.equal(steps.get('repeat-rejection-reapply').earliest_reapply_after_days,90);
+  assert.equal(lifecycle.estimated_total_time_to_first_payment,null);
+  const sources=new Set(record.evidence.map(x=>x.id));
+  assert(lifecycle.steps.every(x=>x.source_ids.every(id=>sources.has(id))));
+});

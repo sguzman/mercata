@@ -79,3 +79,7 @@ The [YouTube Analytics measurement guide](analytics-query-guide.md) ([machine re
 ## Feature eligibility checklists
 
 The [product-specific eligibility matrix](eligibility-matrix.md) ([machine JSON](eligibility-matrix.json)) records the age, product module, country, music-channel and child-directed restrictions for all sixteen earning routes. It separates YPP advertising status from individual memberships, Gifts, Shopping and Creator Partnerships gates. External product sales and sponsorships remain outside YouTube's own payout contract.
+
+## Joining and reaching first payout
+
+[Application and review timing](application-lifecycle.md) ([machine model](application-lifecycle.json)) separates subscriber/view thresholds, application submission, policy review, product module activation, and the actual cash payment calendar. Official guidance describes a typical one-month review, appeal/reapplication windows, and restrictions on paid campaign viewing as a qualification shortcut; this is not a guaranteed time to income.

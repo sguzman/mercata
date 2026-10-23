@@ -75,6 +75,12 @@ for (const entry of index.specimens) {
     const economics=load('ontology/youtube/economic-model.json');
     const routes=load('ontology/youtube/revenue-pathways.json');
     const eligibility=load('ontology/youtube/eligibility-matrix.json');
+    const lifecycle=load('ontology/youtube/application-lifecycle.json');
+    ensure(lifecycle.steps.length===9 && lifecycle.estimated_total_time_to_first_payment===null,
+      'Invalid YouTube application lifecycle');
+    ensure(lifecycle.steps.every(x=>x.source_ids.every(id=>sourceIds.has(id))),
+      'Unattributed application milestone');
+
     const eligibilityIds=new Set(eligibility.records.map(x=>x.pathway_id));
     ensure(eligibility.records.length===routes.pathways.length && eligibilityIds.size===routes.pathways.length,
       'Every earning route must have one eligibility checklist');
