@@ -421,3 +421,9 @@ h1 em {font-style:italic;color:var(--accent)}
 .music-rights-card p {font-size:13px;margin:0 0 10px}
 .music-rights-card .measure-context {color:var(--muted)}
 @media(max-width:650px) {.music-rights-details{padding:16px}.music-rights-grid{grid-template-columns:1fr}}
+
+.music-enforcement-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0 20px}
+.music-enforcement-card {border-left:3px solid var(--accent);background:var(--surface-alt);border-radius:7px;padding:14px;min-width:0;overflow-wrap:anywhere}
+.music-enforcement-card h5 {font-size:13px;margin:0 0 8px}
+.music-enforcement-card p {font-size:13px;margin:0 0 8px}
+@media(max-width:650px) {.music-enforcement-grid{grid-template-columns:1fr}}
