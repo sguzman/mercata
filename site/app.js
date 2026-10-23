@@ -852,6 +852,39 @@ function renderPlatformScale(data) {
   return section;
 }
 
+function renderChannelOnboarding(data,dossier) {
+  if(!data?.stages?.length)return null;
+  const section=make('section','channel-onboarding');
+  const details=make('details','channel-onboarding-details');
+  details.append(make('summary','','From a Google Account to a publishing channel · '+data.stages.length+' stages'));
+  details.append(make('p','measure-limit','Creating a channel, publishing, unlocking advanced features and earning money require different permissions. These steps are general policy, not proof of eligibility for a particular person.'));
+  const stages=make('ol','channel-onboarding-stage-list');
+  for(const step of data.stages){
+    const item=make('li','channel-onboarding-stage');
+    item.append(make('h5','',step.label));
+    item.append(make('p','',step.outcome));
+    item.append(make('p','measure-limit',step.limits));
+    item.append(audienceSources(step.source_ids,dossier));
+    stages.append(item);
+  }
+  details.append(stages);
+  const gates=make('div','channel-feature-gates');
+  for(const gate of data.feature_gates){
+    const card=make('article','channel-feature-gate');
+    card.append(make('h5','',gate.label));
+    card.append(make('p','measure-limit','Requirements: '+gate.requires.join(' · ').replaceAll('_',' ')));
+    card.append(make('p','',gate.limits));
+    card.append(audienceSources(gate.source_ids,dossier));
+    gates.append(card);
+  }
+  details.append(gates);
+  details.append(make('p','measure-limit','Typical setup hours: unknown · typical cash costs: unknown · time to first creator payment: unknown. A no-new-purchase path does not mean creator labor or access costs disappear.'));
+  const link=make('a','inline-link','Read source-backed onboarding gates and cost limits ↗');
+  link.href='./ontology/youtube/channel-onboarding.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);
+  return section;
+}
+
 function renderApplicationLifecycle(model) {
   if(!model)return null;
   const section=make('section','application-lifecycle');
@@ -1056,7 +1089,7 @@ async function showDossier(entry) {
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,musicRights,analyticsGuide,platformScale,eligibilityMatrix,applicationLifecycle,creatorGrowth,contentFormats,newsAudienceStudy,competitionSample,academicResearch]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/music-rights-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/competition-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/academic-studies.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,musicRights,analyticsGuide,platformScale,eligibilityMatrix,channelOnboarding,applicationLifecycle,creatorGrowth,contentFormats,newsAudienceStudy,competitionSample,academicResearch]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/music-rights-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-onboarding.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/competition-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/academic-studies.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -1112,6 +1145,8 @@ async function showDossier(entry) {
     if(policySection)outer.append(policySection);
     const routes=renderRevenuePathways(earningRoutes,payoutGates,record,eligibilityMatrix);
     if(routes)outer.append(routes);
+    const entryStages=renderChannelOnboarding(channelOnboarding,record);
+    if(entryStages)outer.append(entryStages);
     const onboarding=renderApplicationLifecycle(applicationLifecycle);
     if(onboarding)outer.append(onboarding);
     const restricted=renderContentRestrictions(contentRestrictions,record);
