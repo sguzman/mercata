@@ -25,3 +25,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 All claim records require official or independently credible sources, observations dates and limitations. Public API statistics are not the same as authorized creator metrics. Statistical inference from samples requires a recorded sampling method, sample size, selection mechanism, exclusions and appropriate uncertainty statement. No individual's political affiliation, sex or ethnicity should be guessed.
 
 The [399-task YouTube research inventory](../../plans/youtube.md) remains the work ledger. This ontology is the vocabulary for research, not a substitute for doing it.
+
+## How discovery works
+
+See the [officially documented search and recommendation surfaces](discovery.md). Search ranking, personalized Home, Up Next and Shorts are different ways audiences find content. Creator RPM and advertiser CPM use different denominators; no per-view revenue rate is assumed.
