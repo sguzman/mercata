@@ -43,6 +43,11 @@ try{
     assert.equal(await page.locator('.revenue-pathway-card').count(),16,'Missing distinct monetization routes');
     assert.equal(await page.locator('.earning-gate-details').count(),16,'Missing product-specific eligibility checklists');
     assert.equal(await page.locator('.application-stage').count(),9,'Missing application stages');
+    const onboarding=page.locator('.channel-onboarding');
+    assert.equal(await onboarding.locator('.channel-onboarding-stage').count(),6,'Missing publishing access stages');
+    assert.equal(await onboarding.locator('.channel-feature-gate').count(),4,'Missing independent feature gates');
+    await onboarding.locator('summary').click();
+    assert((await onboarding.textContent()).includes('time to first creator payment: unknown'));
     assert.equal(await page.locator('.content-policy-item').count(),8,'Missing sourced content restrictions');
     const music=page.locator('.music-rights');
     assert.equal(await music.locator('.music-rights-card').count(),5,'Missing audio licensing routes');
