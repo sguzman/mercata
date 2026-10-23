@@ -42,6 +42,8 @@ Ad-only creator revenue may be *modeled* as matched paid views multiplied by a s
 
 No default CPM, conversion rate, creator income or hours per video is permitted. Zero and "unknown" are different states. A cash-profit scenario based on assumptions is not a prediction or observed distribution.
 
+A new [audio rights and claims register](music-rights-economics.md) provides a concrete accounting stress test: track-specific music revenue sharing affects net receipts, while a Content ID dispute can defer cash without causing a final loss. The August 2026 Creator Music paid-license sunset means prior cost schedules must not be silently reused for a current creator scenario. Until scoped cohorts provide licensing invoices, channel reports and labor logs, rights-related cost medians remain unknown.
+
 ## Source integrity and independent publishing
 
 The [14-plus official topic activity observations](topic-observations.md) show genuine viewing activity for selected topic-title sets, games and news, but no number of distinct people in any community. The [297-channel monetization sample](small-channel-income.md) is restricted to already monetized channels, not all people who attempt to build a channel.
