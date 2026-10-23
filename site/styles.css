@@ -250,3 +250,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .topic-activity-row small{display:block;color:var(--muted)}
 .topic-activity-row a{display:inline-block;margin-top:5px}
 .topic-subtopics ul{margin:8px 0;padding-left:18px;color:var(--muted)}
+
+/* Aggregate U.S. adult YouTube use: full zero baseline, explicit survey mode labels */
+.usage-history{border-top:1px solid var(--line);margin-top:30px;padding-top:27px}
+.usage-history-chart{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px;margin:20px 0 15px}
+.usage-history-point{display:flex;flex-direction:column;align-items:center;min-width:0;text-align:center;gap:7px}
+.usage-history-value{font:18px Georgia,serif;font-variant-numeric:tabular-nums}
+.usage-history-area{width:100%;height:120px;background:var(--surface-alt);border-radius:7px;display:flex;align-items:flex-end;overflow:hidden}
+.usage-history-bar{width:100%;background:var(--accent);border-radius:6px 6px 0 0}
+.usage-history-year{font-size:12px;font-weight:750}
+.usage-history-mode{font-size:10px;color:var(--muted);line-height:1.25}
+@media(max-width:600px){.usage-history-chart{gap:5px}.usage-history-value{font-size:14px}.usage-history-area{height:100px}.usage-history-mode{font-size:9px;overflow-wrap:anywhere}}
