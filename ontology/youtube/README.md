@@ -1,6 +1,6 @@
 # YouTube ontology — audiences, content and earning
 
-The independent [machine model](model.json) defines **64 concepts** and **23 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **28 candidate overlapping subcultures**, without pretending their populations have been measured.
+The independent [machine model](model.json) defines **88 concepts** and **47 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **28 candidate overlapping subcultures**, without pretending their populations have been measured.
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
@@ -51,3 +51,5 @@ AIR Media-Tech's [297-channel studio-data report](small-channel-income.md) conta
 [Revenue pathways](revenue-pathways.md) breaks YouTube earning into 16 documented or separately modeled routes: ordinary and Shorts ads, Premium, channel memberships, Supers, gifts, own-product and affiliate Shopping, brand partnerships, and work sold outside YouTube. The [machine records](revenue-pathways.json) distinguish direct platform payouts, supported transactions, and independent outside business arrangements. None has a made-up average payout, admission fee or conversion rate.
 
 [Payment and geography](payment-gates.md) records currency-specific settlement thresholds and the difference between program, account and viewer country. It includes a public case study of Mexico and a USD reporting-currency comparison, without including any personal financial details.
+
+The entity model now distinguishes creator residence, viewers' countries, AdSense payment addresses, payout currency, eligibility tiers, Shopping commissions, sponsored contracts, virtual gifts and Rubies. These are separate legal and financial mechanisms, not interchangeable units.

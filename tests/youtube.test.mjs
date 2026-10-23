@@ -136,3 +136,12 @@ test('Monetization pathways separate platform payments from independent sales',a
   assert.equal(payout.currencies.find(x=>x.currency==='USD').minimum_payout,100);
   assert(payout.program_access[0].source_ids.every(id=>sources.has(id)));
 });
+
+test('YouTube economic glossary covers payout and commerce distinctions',async()=>{
+  const graph=await load('ontology/youtube/model.json');
+  const ids=new Set(graph.concepts.map(x=>x.id));
+  assert(ids.has('reporting_currency')&&ids.has('payment_address_country')&&ids.has('rubies'));
+  assert(ids.has('shopping_affiliate_products')&&ids.has('sponsorship_contract'));
+  assert.equal(ids.size,graph.concepts.length);
+  assert(graph.relations.every(r=>ids.has(r.subject)&&ids.has(r.object)));
+});

@@ -522,6 +522,198 @@
       "unit": "uncertainty",
       "access": "method",
       "measured_value": null
+    },
+    {
+      "id": "feature_eligibility",
+      "group": "economics",
+      "definition": "Eligibility for a product distinct from YPP acceptance and channel publishing access",
+      "unit": "rule",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "virtual_items_module",
+      "group": "economics",
+      "definition": "Contractual YPP module for creator earning from qualifying virtual gifts",
+      "unit": "agreement",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "jewels",
+      "group": "economics",
+      "definition": "Viewer-purchased virtual items used for supported gifting and hype features",
+      "unit": "virtual_item",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "live_gifts",
+      "group": "economics",
+      "definition": "Viewer-sent live-stream gifts enabled by Jewels",
+      "unit": "gift",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "rubies",
+      "group": "economics",
+      "definition": "Virtual item accounting units representing creator reward from eligible live gifts",
+      "unit": "earning_unit",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "connected_store",
+      "group": "economics",
+      "definition": "External supported merchant account linked for creator-owned product tags",
+      "unit": "merchant_account",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "shopping_own_products",
+      "group": "economics",
+      "definition": "Creator-owned merchandise surfaced through approved Shopping integrations",
+      "unit": "product",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "shopping_affiliate_products",
+      "group": "economics",
+      "definition": "Tagged merchant products earning program-dependent commissions on eligible sales",
+      "unit": "affiliate_product",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "affiliate_commission",
+      "group": "economics",
+      "definition": "Merchant-funded revenue subject to attributable orders and program rules",
+      "unit": "currency",
+      "access": "contractual",
+      "measured_value": null
+    },
+    {
+      "id": "creator_partnerships_discovery",
+      "group": "economics",
+      "definition": "YouTube-supported matching and outreach between eligible YPP channels and advertisers",
+      "unit": "discovery_surface",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "sponsorship_contract",
+      "group": "economics",
+      "definition": "Independently negotiated brand agreement with deliverables and content rights",
+      "unit": "contract",
+      "access": "definition",
+      "measured_value": null
+    },
+    {
+      "id": "sponsored_boost",
+      "group": "economics",
+      "definition": "Optional advertiser promotion of permitted linked creator content",
+      "unit": "paid_media_activity",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "external_product_sales",
+      "group": "economics",
+      "definition": "Sales of independently owned goods or services resulting from off-platform purchases",
+      "unit": "currency",
+      "access": "business_records",
+      "measured_value": null
+    },
+    {
+      "id": "reporting_currency",
+      "group": "economics",
+      "definition": "Currency denomination of AdSense for YouTube payment account thresholds",
+      "unit": "currency",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "adsense_payment_account",
+      "group": "economics",
+      "definition": "Payment account associated with accepted creator earnings",
+      "unit": "account",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "payout_threshold",
+      "group": "economics",
+      "definition": "Minimum accrued report-currency balance to trigger settlement absent holds",
+      "unit": "currency",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "payment_address_country",
+      "group": "economics",
+      "definition": "Country on the creator's payout account governing available withdrawal rails",
+      "unit": "country",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "creator_residence",
+      "group": "economics",
+      "definition": "Creator's location relevant to program and legal eligibility",
+      "unit": "country",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "viewer_country",
+      "group": "economics",
+      "definition": "Viewer-associated geographic market used for advertiser reach and segmentation",
+      "unit": "country",
+      "access": "aggregate_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "tax_withholding",
+      "group": "economics",
+      "definition": "Tax deductions applied to payments in accordance with account and legal requirements",
+      "unit": "currency",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "returns_and_refunds",
+      "group": "economics",
+      "definition": "Reversals of eligible sales or memberships that change realized earnings",
+      "unit": "currency",
+      "access": "merchant_records",
+      "measured_value": null
+    },
+    {
+      "id": "creator_labor_cost",
+      "group": "economics",
+      "definition": "Value of writing, recording, production, marketing and administration time",
+      "unit": "currency",
+      "access": "accounting",
+      "measured_value": null
+    },
+    {
+      "id": "intellectual_property_license",
+      "group": "economics",
+      "definition": "Right granted to a third party for use of creator-owned works, subject to contracts",
+      "unit": "agreement",
+      "access": "legal_research",
+      "measured_value": null
+    },
+    {
+      "id": "subscription_churn",
+      "group": "economics",
+      "definition": "Share of paying members who stop paying across a defined interval",
+      "unit": "percent_per_period",
+      "access": "authorized_analytics",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -639,6 +831,126 @@
       "subject": "income_distribution",
       "predicate": "measures",
       "object": "creator"
+    },
+    {
+      "subject": "channel",
+      "predicate": "may_qualify_for",
+      "object": "feature_eligibility"
+    },
+    {
+      "subject": "feature_eligibility",
+      "predicate": "is_not_the_same_as",
+      "object": "ad_ypp_entry"
+    },
+    {
+      "subject": "viewer",
+      "predicate": "purchases",
+      "object": "jewels"
+    },
+    {
+      "subject": "jewels",
+      "predicate": "enables",
+      "object": "live_gifts"
+    },
+    {
+      "subject": "live_gifts",
+      "predicate": "earns_for_creator",
+      "object": "rubies"
+    },
+    {
+      "subject": "virtual_items_module",
+      "predicate": "covers",
+      "object": "rubies"
+    },
+    {
+      "subject": "creator",
+      "predicate": "operates",
+      "object": "connected_store"
+    },
+    {
+      "subject": "connected_store",
+      "predicate": "sells",
+      "object": "shopping_own_products"
+    },
+    {
+      "subject": "shopping_affiliate_products",
+      "predicate": "may_generate",
+      "object": "affiliate_commission"
+    },
+    {
+      "subject": "channel",
+      "predicate": "may_be_discovered_through",
+      "object": "creator_partnerships_discovery"
+    },
+    {
+      "subject": "creator_partnerships_discovery",
+      "predicate": "can_lead_to",
+      "object": "sponsorship_contract"
+    },
+    {
+      "subject": "sponsorship_contract",
+      "predicate": "may_include",
+      "object": "sponsored_boost"
+    },
+    {
+      "subject": "creator",
+      "predicate": "may_earn",
+      "object": "external_product_sales"
+    },
+    {
+      "subject": "net_payout",
+      "predicate": "held_until",
+      "object": "payout_threshold"
+    },
+    {
+      "subject": "payout_threshold",
+      "predicate": "denominated_in",
+      "object": "reporting_currency"
+    },
+    {
+      "subject": "adsense_payment_account",
+      "predicate": "uses",
+      "object": "reporting_currency"
+    },
+    {
+      "subject": "adsense_payment_account",
+      "predicate": "assigned",
+      "object": "payment_address_country"
+    },
+    {
+      "subject": "payment_address_country",
+      "predicate": "not_equal_to",
+      "object": "viewer_country"
+    },
+    {
+      "subject": "creator_residence",
+      "predicate": "not_necessarily_equal_to",
+      "object": "payment_address_country"
+    },
+    {
+      "subject": "creator",
+      "predicate": "can_incur",
+      "object": "creator_labor_cost"
+    },
+    {
+      "subject": "net_payout",
+      "predicate": "may_be_reduced_by",
+      "object": "tax_withholding"
+    },
+    {
+      "subject": "external_product_sales",
+      "predicate": "may_be_reduced_by",
+      "object": "returns_and_refunds"
+    },
+    {
+      "subject": "creator",
+      "predicate": "may_own",
+      "object": "intellectual_property_license"
+    },
+    {
+      "subject": "channel_membership",
+      "predicate": "has_measurable",
+      "object": "subscription_churn"
     }
   ],
   "rules": [
@@ -648,6 +960,10 @@
     "A user's demographic or political identity cannot be inferred from watched or published content.",
     "Community labels may overlap and cannot be summed without deduplication.",
     "Unobserved quantities remain null.",
-    "Use dated public evidence for policy claims and documented methods for population estimands."
-  ]
+    "Use dated public evidence for policy claims and documented methods for population estimands.",
+    "Program eligibility, payment-account currency, creator residence, viewer country, and payment address are different concepts.",
+    "Virtual gifts pay creators through Rubies; Jewels are not equivalent to a gross-to-creator currency exchange.",
+    "Online Shopping and sponsor discovery are routes to commerce rather than fixed creator payments."
+  ],
+  "ontology_version": "1.1"
 }
