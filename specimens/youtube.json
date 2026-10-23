@@ -493,6 +493,28 @@
       "evidence_class": "official",
       "license": "Public documentation linked; examples independently summarized",
       "notes": "Access to Analytics revenue and demographic metrics requires authorized channel or content-owner scope; documentation does not expose third-party channel income."
+    },
+    {
+      "id": "datareportal-midyear-global-2026",
+      "publisher": "DataReportal / Manochi / We Are Social",
+      "title": "Digital 2026 Mid-Year Global Update Report",
+      "url": "https://datareportal.com/reports/digital-2026-mid-year-global-update-report",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "independent_aggregate_survey_summary",
+      "license": "Short attributed aggregate observations; no report graphics copied",
+      "notes": "GWI 2026 recent data; self-reported use within prior month by internet users age 16+, including/excluding China and Russia. Survey populations differ."
+    },
+    {
+      "id": "youtube-press-2026",
+      "publisher": "YouTube",
+      "title": "YouTube for Press: YouTube by the numbers",
+      "url": "https://blog.youtube/press/",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_platform_statistics",
+      "license": "Concise attributed aggregates; no logos, brand images or press assets reused",
+      "notes": "Platform press headlines checked October 23, 2026. Daily upload and Shorts viewing figures are moving averages without stated measurement windows."
     }
   ],
   "claims": [
@@ -906,6 +928,26 @@
       "confidence": "high",
       "observed_at": "2026-10-23",
       "limitations": "An authorized channel owner's reports still do not identify a representative population of all YouTube channels."
+    },
+    {
+      "id": "gwi-2026-global-monthly-reported-use",
+      "text": "In the GWI data summarized by DataReportal for April 2026, 55.3% of surveyed internet users aged 16+ reported using YouTube in the preceding month; excluding China and Russia from the sample, that share was 70.6%.",
+      "source_ids": [
+        "datareportal-midyear-global-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-23",
+      "limitations": "Different geographic denominators; both are survey percentages rather than global unique-user counts or audience composition."
+    },
+    {
+      "id": "youtube-press-global-daily-content",
+      "text": "YouTube's October 2026 press page reports an average of over 20 million videos uploaded daily and over 200 billion daily Shorts views.",
+      "source_ids": [
+        "youtube-press-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Upload events and view events; not distinct active creators, Shorts engaged revenue views or unique viewers. Exact press reporting interval not stated."
     }
   ],
   "observations": [],
@@ -1083,6 +1125,36 @@
         ],
         "confidence": "medium",
         "limitations": "Reported ever-use, not MAU. Survey modes changed in 2023 and again in 2024; historical percentages are not an uninterrupted fixed-method trend. The 2026 fact sheet republishes historical estimates."
+      },
+      {
+        "id": "gwi-global-past-month-2026",
+        "metric": "Past-month YouTube use",
+        "value": 55.3,
+        "unit": "percent_of_internet_users_age_16_plus",
+        "population": "Surveyed internet users aged 16+ in GWI's latest global sample, including China and Russia",
+        "geography": "Global covered economies",
+        "period": "GWI latest data summarized April 2026",
+        "method": "GWI survey respondents self-report whether they used each named platform within the preceding month",
+        "source_ids": [
+          "datareportal-midyear-global-2026"
+        ],
+        "limitations": "Survey prevalence among internet users 16+, not a unique user census or number of people globally. Countries/regions vary in access and sampling; cannot multiply uncritically by world population.",
+        "confidence": "medium"
+      },
+      {
+        "id": "gwi-global-without-china-russia-2026",
+        "metric": "Past-month YouTube use outside China and Russia",
+        "value": 70.6,
+        "unit": "percent_of_internet_users_age_16_plus",
+        "population": "GWI survey respondents aged 16+ in covered markets excluding China and Russia",
+        "geography": "Covered global economies excluding China and Russia",
+        "period": "GWI latest data summarized April 2026",
+        "method": "Self-reported use during preceding month; aggregate recomputed after excluding China and Russia",
+        "source_ids": [
+          "datareportal-midyear-global-2026"
+        ],
+        "limitations": "This is a different population than the 55.3% global figure. It is not the percentage of YouTube's own users outside China/Russia and not a national share of population.",
+        "confidence": "medium"
       }
     ],
     "demographics": [

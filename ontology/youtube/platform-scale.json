@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "as_of": "2026-10-23",
+  "kind": "aggregate_platform_scale_not_subculture_size",
+  "observations": [
+    {
+      "id": "gwi-global-past-month-2026",
+      "metric": "Past-month YouTube use",
+      "value": 55.3,
+      "unit": "percent_of_internet_users_age_16_plus",
+      "population": "Surveyed internet users aged 16+ in GWI's latest global sample, including China and Russia",
+      "scope": "Global covered economies",
+      "period": "GWI latest data summarized April 2026",
+      "method": "GWI survey respondents self-report whether they used each named platform within the preceding month",
+      "source_id": "datareportal-midyear-global-2026",
+      "limitations": "Survey prevalence among internet users 16+, not a unique user census or number of people globally. Countries/regions vary in access and sampling; cannot multiply uncritically by world population."
+    },
+    {
+      "id": "gwi-global-without-china-russia-2026",
+      "metric": "Past-month YouTube use outside China and Russia",
+      "value": 70.6,
+      "unit": "percent_of_internet_users_age_16_plus",
+      "population": "GWI survey respondents aged 16+ in covered markets excluding China and Russia",
+      "scope": "Covered global economies excluding China and Russia",
+      "period": "GWI latest data summarized April 2026",
+      "method": "Self-reported use during preceding month; aggregate recomputed after excluding China and Russia",
+      "source_id": "datareportal-midyear-global-2026",
+      "limitations": "This is a different population than the 55.3% global figure. It is not the percentage of YouTube's own users outside China/Russia and not a national share of population."
+    },
+    {
+      "id": "youtube-daily-video-uploads-press-2026",
+      "metric": "Videos uploaded daily",
+      "value": 20000000,
+      "comparison": ">",
+      "unit": "uploaded_videos_per_day",
+      "population": "All YouTube uploads in official press-platform aggregate",
+      "scope": "Global",
+      "period": "Press page live as checked 2026-10-23; averaging window not stated",
+      "method": "Platform's official YouTube Press reporting",
+      "source_id": "youtube-press-2026",
+      "limitations": "Reported platform upload count, not distinct creators or videos with sustained views. The press page does not state the sample window; count may change."
+    },
+    {
+      "id": "youtube-shorts-daily-views-press-2026",
+      "metric": "Daily Shorts views",
+      "value": 200000000000,
+      "comparison": ">",
+      "unit": "shorts_views_per_day",
+      "population": "Global YouTube Shorts views on the platform",
+      "scope": "Global",
+      "period": "Press page live as checked 2026-10-23; averaging window not stated",
+      "method": "Official YouTube Press headline average",
+      "source_id": "youtube-press-2026",
+      "limitations": "View events, not unique viewers or engaged views qualified for Shorts revenue. Metric definitions changed in 2026 and this count does not describe creator pay."
+    }
+  ],
+  "rules": [
+    "Past-month survey prevalence is not advertising reach or a unique platform census.",
+    "Internet users aged 16+ excludes younger internet users and does not describe all residents.",
+    "20 million uploads daily is a volume, not the number of active creators.",
+    "200 billion Shorts views daily are events, not unique people or paying plays.",
+    "The two GWI proportions have different geographic denominators and must not be combined.",
+    "No observation defines the size or composition of an individual content subculture."
+  ]
+}
