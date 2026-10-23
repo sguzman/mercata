@@ -147,6 +147,59 @@
       ]
     },
     {
+      "id": "intake",
+      "emoji": "📥",
+      "name": "Marketplace specimen intake",
+      "percent": 100,
+      "phases": [
+        {
+          "id": "approved-platforms",
+          "emoji": "🗂️",
+          "name": "Approved platform catalog",
+          "features": [
+            {
+              "id": "scaffolds",
+              "emoji": "🔬",
+              "name": "Individual dossiers and task queues",
+              "tasks": [
+                {
+                  "id": "admission",
+                  "emoji": "🧾",
+                  "title": "Admit 26 approved marketplaces",
+                  "percent": 100,
+                  "evidence": [
+                    "gallery/index.json",
+                    "gallery/README.md"
+                  ]
+                },
+                {
+                  "id": "queues",
+                  "emoji": "🧪",
+                  "title": "Create 2,184 atomic research tasks",
+                  "percent": 100,
+                  "evidence": [
+                    "pipeline/queues.json",
+                    "pipeline/domains.json",
+                    "queues/steam.json",
+                    "queues/medium.json"
+                  ]
+                },
+                {
+                  "id": "colors",
+                  "emoji": "🎨",
+                  "title": "Assign and verify unique perceptual colors",
+                  "percent": 100,
+                  "evidence": [
+                    "gallery/index.json"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "deployment",
       "emoji": "🌐",
       "name": "Live Pages deployment",
@@ -181,27 +234,6 @@
       "name": "Marketplace research",
       "percent": 0,
       "phases": [
-        {
-          "id": "admission",
-          "emoji": "📥",
-          "name": "Admissions",
-          "features": [
-            {
-              "id": "specimens",
-              "emoji": "🗃️",
-              "name": "Approved marketplaces",
-              "tasks": [
-                {
-                  "id": "admission",
-                  "emoji": "📥",
-                  "title": "Admit explicitly approved marketplaces",
-                  "percent": 0,
-                  "evidence": []
-                }
-              ]
-            }
-          ]
-        },
         {
           "id": "analysis",
           "emoji": "📊",

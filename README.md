@@ -6,7 +6,7 @@
 
 Mercata researches the cost, demand, competition, access, discovery, fees, payouts, rights, earnings distributions and realistic earning strategies of online platforms. Its goal is clear economic understanding, not promotional income claims.
 
-The catalog starts intentionally empty. Marketplace admission and research begin only after explicit authorization.
+**26 marketplaces are now admitted as research specimens.** Their dossiers and 2,184 research tasks are queued. Economic research has not started; all income, fee, market and eligibility claims remain unverified.
 
 ## Contents
 
@@ -21,7 +21,7 @@ The catalog starts intentionally empty. Marketplace admission and research begin
 
 Distinguish markets from individual opportunities, discovery from payment, gross receipts from profit, reported success stories from representative samples, and unknown values from zero. Claims need dated public sources with transparent populations, methods, and limitations. A platform's economic size does not establish what a new participant can expect to earn.
 
-Coverage may include games, literature, software, professional services, video, visual art, digital products and subscriptions. No marketplace is preselected or automatically queued.
+Coverage may include games, literature, software, professional services, video, visual art, digital products and subscriptions. All 26 named initial specimens were admitted by explicit authorization; new admissions still require specific authorization.
 
 ## Running the site
 
