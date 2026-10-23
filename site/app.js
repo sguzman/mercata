@@ -412,13 +412,44 @@ function renderTopicCatalogue(data, activity) {
   return section;
 }
 
+function renderAdultUseHistory(history) {
+  if(!history)return null;
+  const section=make('section','usage-history');
+  add(section,make('p','eyebrow','DATED SURVEY SERIES'),
+    make('h4','audience-atlas-title','U.S. adults who have used YouTube'),
+    make('p','audience-atlas-description',
+      'The share of U.S. adults reporting that they have ever used YouTube. This is not monthly active use or the demographic makeup of YouTube viewers.'));
+  const chart=make('div','usage-history-chart');
+  chart.setAttribute('role','list');
+  for(const point of history.points){
+    const column=make('div','usage-history-point');
+    column.setAttribute('role','listitem');
+    column.setAttribute('aria-label',point.year+': '+point.percent+' percent. Survey by '+point.mode);
+    const area=make('div','usage-history-area');
+    const bar=make('div','usage-history-bar');
+    bar.style.height=point.percent+'%';
+    area.append(bar);
+    add(column,make('strong','usage-history-value',point.percent+'%'),area,
+      make('small','usage-history-year',point.year),
+      make('small','usage-history-mode',point.mode));
+    chart.append(column);
+  }
+  section.append(chart);
+  section.append(make('p','measure-limit',
+    'Pew changed survey modes in 2023 and again in 2024. Differences across those breaks cannot be attributed entirely to changes in YouTube use.'));
+  const link=make('a','inline-link','Read Pew’s source series ↗');
+  link.href=history.source;link.rel='noopener noreferrer';link.target='_blank';
+  section.append(link);
+  return section;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -474,6 +505,8 @@ async function showDossier(entry) {
     if(policySection)outer.append(policySection);
     const audience=renderAudienceResearch(record);
     if(audience)outer.append(audience);
+    const history=renderAdultUseHistory(adultUseHistory);
+    if(history)outer.append(history);
     const catalogue=renderTopicCatalogue(topicCatalog,topicActivity);
     if(catalogue)outer.append(catalogue);
     if(studyPlan)outer.append(renderStudyPlan(studyPlan));
