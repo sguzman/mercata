@@ -325,3 +325,13 @@ h1 em {font-style:italic;color:var(--accent)}
 .content-classification h5,.content-policy-item h5{font-size:14px;margin:0 0 7px}
 .content-classification p,.content-classification small,.content-policy-item p,.content-policy-item small{display:block;font-size:12px;line-height:1.55;color:var(--muted);margin:6px 0}
 @media(max-width:650px){.content-classification-grid,.content-policy-grid{grid-template-columns:1fr}}
+
+.scale-section{border-top:1px solid var(--line);margin:27px 0;padding-top:19px}
+.scale-details{border:1px solid var(--line);background:var(--surface);padding:15px;border-radius:9px}
+.scale-details>summary{cursor:pointer;font-size:14px;font-weight:750}
+.scale-observation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:15px 0}
+.scale-observation{background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:15px;min-width:0}
+.scale-observation .scale-value{font:26px Georgia,serif;font-variant-numeric:tabular-nums}
+.scale-observation h5{font-size:13px;margin:7px 0}
+.scale-observation p,.scale-observation small{font-size:12px;color:var(--muted);line-height:1.5;display:block;margin:5px 0}
+@media(max-width:650px){.scale-observation-grid{grid-template-columns:1fr}}

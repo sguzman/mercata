@@ -209,3 +209,16 @@ test('YouTube metrics distinguish advertiser money from creator receipts',async(
   assert(fields.size>=19);
   for(const entry of guide.field_semantics)assert(entry.source_ids.every(id=>sources.has(id)));
 });
+
+test('Platform scale preserves distinct event and human-survey denominators',async()=>{
+  const [scale,record]=await Promise.all([
+    load('ontology/youtube/platform-scale.json'),load('specimens/youtube.json')
+  ]);
+  const sources=new Set(record.evidence.map(x=>x.id));
+  assert.equal(scale.observations.length,4);
+  for(const x of scale.observations)assert(sources.has(x.source_id)&&x.period&&x.population&&x.limitations);
+  assert(scale.observations.some(x=>x.unit==='uploaded_videos_per_day'));
+  assert(scale.observations.some(x=>x.unit==='shorts_views_per_day'));
+  assert(scale.observations.filter(x=>x.unit.includes('percent')).length===2);
+  assert(scale.observations.every(x=>!x.id.includes('global_mau')));
+});

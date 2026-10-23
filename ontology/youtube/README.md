@@ -71,3 +71,7 @@ The website includes a client-side calculator that begins with **no assumed earn
 ## Analytics and advertising numerators
 
 The [YouTube Analytics measurement guide](analytics-query-guide.md) ([machine records](analytics-query-guide.json)) defines 19 metrics and six reporting dimensions. It separates gross advertising proceeds from net creator ad payments, monetized playbacks from ad impressions, advertiser CPM from creator RPM, and channel-restricted demographics from platform-wide audience estimates. Four official-style authorized query templates are described, but no actual account data are fetched or stored.
+
+## Worldwide reach and volume
+
+[Platform-scale research](platform-scale.md) separates GWI's monthly self-reported YouTube use among internet users 16+, YouTube's daily video upload supply, and daily Shorts viewing events. Its [machine model](platform-scale.json) preserves denominator, market coverage, publication snapshot and source. No published figure is presented as a verified global count of unique active people.

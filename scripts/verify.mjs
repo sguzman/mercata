@@ -51,6 +51,13 @@ for (const entry of index.specimens) {
   if(entry.id==='youtube') {
     const model=load('ontology/youtube/model.json');
     const analytics=load('ontology/youtube/analytics-query-guide.json');
+    const platformScale=load('ontology/youtube/platform-scale.json');
+    ensure(platformScale.observations.length===4,'Missing globally scoped scale observations');
+    ensure(platformScale.observations.every(x=>Number.isFinite(x.value) && x.value>=0 && x.source_id && sourceIds.has(x.source_id)),
+      'Unattributed platform-scale statistic');
+    ensure(platformScale.observations.filter(x=>x.unit.includes('percent')).every(x=>x.population.includes('aged 16+')),
+      'Platform survey lacks its population denominator');
+
     ensure(analytics.field_semantics.length>=19 && analytics.supported_dimensions.length>=6,
       'Incomplete YouTube analytics field definitions');
     const fields=new Set(analytics.field_semantics.map(x=>x.id));

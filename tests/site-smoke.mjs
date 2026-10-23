@@ -43,6 +43,7 @@ try{
     assert.equal(await page.locator('.revenue-pathway-card').count(),16,'Missing distinct monetization routes');
     assert.equal(await page.locator('.content-policy-item').count(),8,'Missing sourced content restrictions');
     assert.equal(await page.locator('.analytics-metric-item').count(),11,'Missing Youtube Analytics metric guide');
+    assert.equal(await page.locator('.scale-observation').count(),4,'Missing global scale observations');
     assert.equal(await page.locator('.payout-currency').count(),2,'Missing documented payout currencies');
     assert((await page.locator('.topic-catalogue-card').count())>=28,'Missing community taxonomy');
     assert.equal(await page.locator('.opportunity-method-item').count(),10,'Missing economic opportunity framework');
