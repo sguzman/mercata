@@ -103,3 +103,7 @@ The [news-audience survey profile](community-audience-studies.md) uses Pew's 202
 ## Sampled competition and discovery evidence
 
 A [2026 commercial sample study](competition-observations.md) describes subscriber-tier movement and traffic sources across 71,177 observed accounts, while exposing its unknown recruitment frame and incomplete observation dates. The [machine record](competition-observations.json) keeps these descriptive statistics out of representative newcomer-success estimates.
+
+## Academic creator economics
+
+The [selected peer-reviewed literature](academic-studies.md) and [machine bibliography](academic-studies.json) compare research on inequality in European YouTube channels, returning viewers and revenue in Korean beauty channels, publishing consistency, and monetized VTuber live-stream participation. Only available abstracts/publisher summaries were reviewed, so exact distributions, causal effects and complete methods are explicitly not claimed.

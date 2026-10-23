@@ -768,6 +768,50 @@
       "evidence_class": "commercial_analytics_report",
       "license": "Short attributed figures, no report visuals or complete prose copied",
       "notes": "Commercial social analytics provider. Reports 799,718 videos across 71,177 accounts, comparing unspecified parts of 2025 and 2026; recruitment, representativeness and exact time windows not fully established from the public article."
+    },
+    {
+      "id": "euso-youtube-inequality-2026",
+      "url": "https://doi.org/10.1162/EUSO.a.42",
+      "publisher": "European Societies / MIT Press",
+      "title": "Working on an algorithm-controlled platform as a content creator: what explains unequal earnings on YouTube?",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "peer_reviewed_abstract",
+      "license": "Linked short independent summaries of article abstracts",
+      "notes": "Publication year 2026; abstract-level verification only, do not imply full article methods were evaluated."
+    },
+    {
+      "id": "korean-beauty-engagement-2025",
+      "url": "https://doi.org/10.1016/j.chb.2025.108741",
+      "publisher": "Computers in Human Behavior / Elsevier",
+      "title": "How do users contribute to YouTube channels’ revenue? An empirical analysis of Korean beauty channels",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "peer_reviewed_abstract",
+      "license": "Linked short independent summaries of article abstracts",
+      "notes": "Publication year 2025; abstract-level verification only, do not imply full article methods were evaluated."
+    },
+    {
+      "id": "korean-beauty-consistency-2026",
+      "url": "https://doi.org/10.1016/j.telpol.2026.103252",
+      "publisher": "Telecommunications Policy / Elsevier",
+      "title": "Creator strategies in the platform economy: How frequency, consistency, and content type affect YouTube engagement, attention, and revenue",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "peer_reviewed_abstract",
+      "license": "Linked short independent summaries of article abstracts",
+      "notes": "Publication year 2026; abstract-level verification only, do not imply full article methods were evaluated."
+    },
+    {
+      "id": "vtuber-superchat-inequality-2025",
+      "url": "https://doi.org/10.1145/3706598.3713877",
+      "publisher": "CHI 2025 / Association for Computing Machinery",
+      "title": "Who Reaps All the Superchats? A Large-Scale Analysis of Income Inequality in Virtual YouTuber Livestreaming",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "peer_reviewed_abstract",
+      "license": "Linked short independent summaries of article abstracts",
+      "notes": "Publication year 2025; abstract-level verification only, do not imply full article methods were evaluated."
     }
   ],
   "claims": [
@@ -1443,6 +1487,46 @@
       "confidence": "medium",
       "observed_at": "2026-10-23",
       "limitations": "Within the observed sample; changes may reflect cohort mix, upload behavior, seasonality, view definition, geography and other confounders. Not a claim about platform total ad revenue or typical creator profit."
+    },
+    {
+      "id": "peer-youtube-earnings-inequality",
+      "text": "A peer-reviewed study of YouTube channels in Germany, Austria and Switzerland reports an earnings Gini coefficient of 0.89 for its measured or estimated channel earnings distribution.",
+      "source_ids": [
+        "euso-youtube-inequality-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-23",
+      "limitations": "The abstract does not resolve the underlying earning-estimation method, country sample frame or inclusion of zero/nonmonetized creators. It is not a global creator earning estimate."
+    },
+    {
+      "id": "peer-beauty-return-watchtime",
+      "text": "In a study of 50 Korean beauty YouTube channels, returning-viewer watch time had the strongest statistical association with monthly revenue among the engagement measures examined.",
+      "source_ids": [
+        "korean-beauty-engagement-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-23",
+      "limitations": "Observational panel regression, narrow sample; not proof that increasing returning watch time causes any specified cash payout."
+    },
+    {
+      "id": "peer-beauty-upload-consistency",
+      "text": "A study of 47 Korean beauty YouTube channels found associations between publishing frequency, consistency, format mix and engagement or revenue, with higher Shorts concentration linked to lower sustained watch time.",
+      "source_ids": [
+        "korean-beauty-consistency-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-23",
+      "limitations": "A small narrow observational sample does not identify a universal best posting frequency or earnings forecast."
+    },
+    {
+      "id": "peer-vtuber-gifts-inequality",
+      "text": "A CHI 2025 study analyzed monetized live contribution activity among 1,923 YouTube virtual creators across over one million hours of streamed content.",
+      "source_ids": [
+        "vtuber-superchat-inequality-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-23",
+      "limitations": "Livestream contribution activity is not equal to total VTuber profit or earnings for all channels."
     }
   ],
   "observations": [],
