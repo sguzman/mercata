@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "creator_production_cost_measurement_protocol",
+  "as_of": "2026-10-23",
+  "status": "unmeasured_methodology_not_a_cost_survey",
+  "purpose": "Collect reproducible per-creator, per-format cash and work-time costs without publishing unsupported typical prices or hours.",
+  "scope": {
+    "unit_of_analysis": "creator_channel_content_project_reporting_period",
+    "reporting_period": "creator_defined_dated_month_or_cohort_window",
+    "currencies": "ISO_4217_three_letter",
+    "privacy": "consented_aggregate_or_publicly_attributable_records_only",
+    "formats": [
+      "long_form_video",
+      "shorts",
+      "live_stream",
+      "podcast_video",
+      "animated_video",
+      "community_post"
+    ],
+    "representative_creator_population": null
+  },
+  "cash_categories": [
+    {
+      "id": "acquisition_hardware",
+      "kind": "capital_purchase",
+      "description": "Camera, microphone, computing and production equipment acquired for content work",
+      "allocation": "Record outlay date and optional documented period allocation separately",
+      "amount": null,
+      "source_ids": []
+    },
+    {
+      "id": "owned_equipment_use",
+      "kind": "asset_use",
+      "description": "Existing equipment consumed or depreciated in production",
+      "allocation": "Mark assumed allocation method; not an additional new cash outlay",
+      "amount": null,
+      "source_ids": []
+    },
+    {
+      "id": "software_subscriptions",
+      "kind": "fixed_or_recurring_cash",
+      "description": "Editing, animation, music, transcription, design and publishing software charges",
+      "allocation": "Allocate actual invoices by agreed project period and workload",
+      "amount": null,
+      "source_ids": []
+    },
+    {
+      "id": "cloud_storage_and_network",
+      "kind": "fixed_or_variable_cash",
+      "description": "Hosting, transfer, online services, internet usage and storage attributable to work",
+      "allocation": "Record incremental cost separately from already-paid household access",
+      "amount": null,
+      "source_ids": []
+    },
+    {
+      "id": "rights_and_music",
+      "kind": "variable_cash",
+      "description": "External footage, images, sound effects, music and content licenses",
+      "allocation": "Do not double count Creator Music revenue-share adjustments as invoice expenses",
+      "amount": null,
+      "source_ids": [
+        "music-creator-music-start",
+        "music-creator-music-share"
+      ]
+    },
+    {
+      "id": "contractor_labor",
+      "kind": "variable_cash",
+      "description": "Cash invoices paid to freelance editing, script, animation, audio or thumbnail contractors",
+      "allocation": "Worker payments as cash costs, not duplicated as personal creator hours",
+      "amount": null,
+      "source_ids": []
+    },
+    {
+      "id": "sets_travel_props",
+      "kind": "variable_cash",
+      "description": "Props, sets, materials, travel, locations and physical consumables",
+      "allocation": "Keep business/personal portions and refunds distinct",
+      "amount": null,
+      "source_ids": []
+    },
+    {
+      "id": "promotion_ad_buy",
+      "kind": "variable_cash",
+      "description": "Paid promotion, creative tests and campaigns",
+      "allocation": "Track promotion receipts and results as separate channels; paid views may not count toward YPP thresholds",
+      "amount": null,
+      "source_ids": [
+        "ypp-main"
+      ]
+    },
+    {
+      "id": "transaction_fulfillment",
+      "kind": "variable_cash",
+      "description": "Merchandise fulfillment, refunds, payment charges and associated product services",
+      "allocation": "Do not deduct once from net commerce receipts and again as operating expenses",
+      "amount": null,
+      "source_ids": []
+    },
+    {
+      "id": "administration_compliance",
+      "kind": "fixed_or_variable_cash",
+      "description": "Business administration, bookkeeping and jurisdiction-specific compliance outlays",
+      "allocation": "Document locality and actual paid date; never fabricate tax rate",
+      "amount": null,
+      "source_ids": []
+    }
+  ],
+  "labor_categories": [
+    {
+      "id": "research_ideation",
+      "unit": "hours",
+      "description": "Market research, topic selection, source review and concept testing",
+      "value": null
+    },
+    {
+      "id": "writing_storyboarding",
+      "unit": "hours",
+      "description": "Scripts, captions, diagrams, plans and storyboards",
+      "value": null
+    },
+    {
+      "id": "filming_capture",
+      "unit": "hours",
+      "description": "Physical/virtual recording, setup and resets",
+      "value": null
+    },
+    {
+      "id": "art_animation",
+      "unit": "hours",
+      "description": "Illustration, compositing, models, motion and animation",
+      "value": null
+    },
+    {
+      "id": "audio_music_clearance",
+      "unit": "hours",
+      "description": "Recording, narration, audio work, permissions and sourcing",
+      "value": null
+    },
+    {
+      "id": "editing_accessibility",
+      "unit": "hours",
+      "description": "Editing, subtitles, transcription, translation and accessible alternatives",
+      "value": null
+    },
+    {
+      "id": "thumbnail_metadata",
+      "unit": "hours",
+      "description": "Title, thumbnail, description, tags, upload and publishing checks",
+      "value": null
+    },
+    {
+      "id": "distribution_promotion",
+      "unit": "hours",
+      "description": "Publicity, collaborations, audience growth and measured promotion",
+      "value": null
+    },
+    {
+      "id": "community_moderation",
+      "unit": "hours",
+      "description": "Moderation, comments, live community operations and support",
+      "value": null
+    },
+    {
+      "id": "business_admin_revision",
+      "unit": "hours",
+      "description": "Bookkeeping, analytics review, policy/claim appeals and revisions",
+      "value": null
+    }
+  ],
+  "content_observation_schema": {
+    "required": [
+      "creator_cohort_id",
+      "period_start",
+      "period_end",
+      "country",
+      "format",
+      "new_or_existing_channel",
+      "published_outputs",
+      "abandoned_drafts",
+      "cash_expense_entries",
+      "personal_labor_entries",
+      "gross_channel_receipts",
+      "net_channel_receipts",
+      "rights_claim_status",
+      "data_access_basis",
+      "nonresponse_note"
+    ],
+    "optional": [
+      "channel_age_at_start",
+      "first_upload_date",
+      "payment_eligibility_state",
+      "viewer_country_mix",
+      "contractor_hours_if_available",
+      "amortization_policy",
+      "equipment_previous_purchase_date",
+      "local_currency",
+      "exchange_rate_source",
+      "deflator_basis"
+    ],
+    "privacy": "No credentials, unpublished invoices, government IDs or private source data in public Mercata unless specifically authorized, adequately redacted, and legally publishable"
+  },
+  "model": {
+    "creator_cash_outlays": null,
+    "creator_labor_hours": null,
+    "optional_capital_allocation": null,
+    "cash_receipts_net_of_platform": null,
+    "noncash_opportunity_cost": null,
+    "cash_profit_before_tax": null,
+    "cash_profit_per_hour": null,
+    "economic_profit_after_labor_valuation": null,
+    "accounting_rules": [
+      "Existing owned equipment is not automatically zero economic cost, nor a new cash purchase.",
+      "Only allocate actual paid subscription/tool charges to the relevant window once.",
+      "Rights-holder reductions already reflected in reported net receipts are not another cash expense.",
+      "Claims under dispute are withheld or uncertain receipts, not automatic final costs.",
+      "Employee or contractor cash invoices are cash outlays; personal creator time remains separately recorded in hours.",
+      "If an external sponsor or product payout is already net of fulfillment/processor fees, do not deduct them again.",
+      "Do not turn unpaid creator hours into a cash expense in a cash-profit calculation.",
+      "Valuing time for an economic-profit measure requires an explicitly labeled counterfactual rate; the rate has no default.",
+      "Zero earners, never-published attempts, unsuccessful drafts, and channels failing to qualify must stay in the defined entrant cohort."
+    ]
+  },
+  "design_experiments": [
+    {
+      "id": "shorts_vs_long_form",
+      "comparison": "Shorts and long-form production on matched channels and content complexity",
+      "estimand": "Distribution of cash outlays and creator hours per completed or abandoned project",
+      "status": "not_measured",
+      "median_cash_cost": null,
+      "median_hours": null,
+      "source_ids": []
+    },
+    {
+      "id": "animated_vs_live_action",
+      "comparison": "Animation and live-action video for matched creator resources and topic scope",
+      "estimand": "Distribution of work-hour components and finished-output unit costs",
+      "status": "not_measured",
+      "median_cash_cost": null,
+      "median_hours": null,
+      "source_ids": []
+    },
+    {
+      "id": "new_vs_incumbent",
+      "comparison": "First twelve months of channel operation versus matched established channels",
+      "estimand": "Startup cash requirements, nonmonetizing share and first-payment survival",
+      "status": "not_measured",
+      "median_cash_cost": null,
+      "median_hours": null,
+      "source_ids": []
+    }
+  ],
+  "limits": [
+    "No representative production or labor-hour cost samples are recorded.",
+    "Do not label illustrative model breakdowns as median production expenses.",
+    "Format categories overlap; denominators for cost per output must be defined.",
+    "No particular software purchase or paid advertising is prescribed.",
+    "Individual creator data requires permission and sanitized publication safeguards."
+  ]
+}
