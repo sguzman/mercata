@@ -56,6 +56,11 @@ The entity model now distinguishes creator residence, viewers' countries, AdSens
 
 Three additional [2025–2026 category observations](topic-observations.md) cover workspace tours, drumming and horror gaming. All predate the August 2026 view-count rule change. The research records mark that revision explicitly to prevent invalid comparisons.
 
+## Music rights, royalties and real cash flow
+
+The [dated audio-licensing economics investigation](music-rights-economics.md) and its [machine ontology](music-rights-economics.json) distinguish permitted Audio Library use, current Creator Music no-cost/revenue-sharing options, the **August 10, 2026 end of new paid Creator Music licenses**, external music rights, and four different Content ID outcomes. A rights-holder revenue adjustment is not an extra cash expense if it has already reduced the reported creator receipts; disputed earnings holds are not automatically permanent losses. Typical licensing prices, hours and earnings reductions remain unknown.
+
+
 ## Comparing niches economically
 
 The [opportunity assessment method](opportunity-framework.md) is a ten-dimension framework for comparing real audience demand, competing creator supply, discovery for new channels, revenue mix, cash and labor costs, content-policy restrictions and durability. Its [machine register](opportunity-framework.json) has **29 unranked topics**, each retaining null economic scores until defensible comparative evidence is gathered. A highest-viewed niche is not necessarily the best-paid or easiest to enter.
