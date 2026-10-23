@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Mercata studies online marketplaces: earning potential, access, fees, demand, competition and evidence.">
+  <title>Mercata — Research the market</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./site/styles.css">
+  <script type="module" src="./site/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <a href="#top" class="brand" aria-label="Mercata, back to top">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span>MERCATA</span>
+    </a>
+    <div class="header-right">
+      <nav class="header-links" aria-label="Primary">
+        <a href="#catalog">Markets</a>
+        <a href="#pipeline">Research</a>
+        <a href="#roadmap">Progress</a>
+      </nav>
+      <label for="theme" class="theme-label">Appearance</label>
+      <select id="theme" class="theme-select" aria-label="Appearance: System, Light, or Dark">
+        <option value="system" selected>System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <a class="github" href="https://github.com/sguzman/mercata" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-diamond" aria-hidden="true"></span> A PUBLIC MARKET RESEARCH ATLAS</p>
+        <h1>Understand the market.<br><em>Then decide what to make.</em></h1>
+        <p class="hero-sub">Where can an independent person earn online? What does it cost to enter? Who gets paid, how much, and why? Mercata organizes the evidence before anyone makes a bet.</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#catalog">Explore marketplaces <span aria-hidden="true">↗</span></a>
+          <a class="text-action" href="#pipeline">How research works <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div>
+        <div class="visual-core"><span>MARKET</span><strong>?</strong><small>Evidence first</small></div>
+        <span class="orbit-label label-one">Demand</span><span class="orbit-label label-two">Fees</span><span class="orbit-label label-three">Income</span><span class="orbit-label label-four">Access</span>
+      </div>
+    </section>
+
+    <section class="metrics-band" aria-label="Public research status">
+      <div class="wrap metric-grid">
+        <div><strong id="count-specimens">0</strong><span>Marketplaces admitted</span></div>
+        <div><strong id="count-queues">12</strong><span>Core research queues</span></div>
+        <div><strong id="count-tasks">—</strong><span>Questions per marketplace</span></div>
+        <div><strong>Public</strong><span>Evidence and methods</span></div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="catalog">
+      <div class="section-head">
+        <div><p class="eyebrow">01 / THE COLLECTION</p><h2>Marketplace specimens</h2><p class="section-copy">Every admitted platform gets its own economic dossier, color and research queue. Names are added by deliberate intake, never by automatic discovery.</p></div>
+        <span class="section-note" id="catalog-count">No specimens yet</span>
+      </div>
+      <div class="catalog-controls">
+        <label class="search-field" for="search"><span class="search-icon" aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search marketplaces" autocomplete="off"></label>
+        <label for="domain" class="screen-reader-only">Filter by domain</label>
+        <select id="domain"><option value="">All domains</option></select>
+      </div>
+      <div id="catalog-grid" class="catalog-grid" aria-live="polite">
+        <div class="empty-state"><div class="empty-icon" aria-hidden="true">◇</div><h3>A clean starting point</h3><p>No marketplaces have been admitted. When research starts, their dossiers will appear here.</p></div>
+      </div>
+    </section>
+
+    <section class="section alternate" id="pipeline">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">02 / THE METHOD</p><h2>Each market gets a full investigation.</h2><p class="section-copy">Admission opens detailed tasks across the entire economic chain. A question is not complete until the evidence and its limitations are recorded.</p></div>
+        </div>
+        <div id="queue-grid" class="queue-grid" aria-live="polite"></div>
+        <p class="below-note">Relevant specialist questions are added for each kind of marketplace. No platform statistics are assumed at intake.</p>
+      </div>
+    </section>
+
+    <section class="wrap section" id="ontology">
+      <div class="section-head"><div><p class="eyebrow">03 / THE MODEL</p><h2>The parts of an online market</h2><p class="section-copy">A marketplace, an audience, a revenue opportunity and an income statistic are not the same thing. The ontology gives each one a clear definition.</p></div><a class="inline-link" href="./ontology/ontology.json">Machine-readable JSON ↗</a></div>
+      <div id="ontology-grid" class="ontology-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section alternate" id="roadmap">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">04 / WORK IN PROGRESS</p><h2>Progress you can check</h2><p class="section-copy">Percentages are backed by files or acceptance evidence. A completed bootstrap is different from a published website or a researched market.</p></div><a class="inline-link" href="./roadmap/progress.json">Progress ledger ↗</a></div>
+        <div id="milestones" class="milestones" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="wrap final-note">
+      <div class="final-inner"><span class="final-symbol" aria-hidden="true">✳</span><div><h2>Good decisions begin with better numbers.</h2><p>Mercata distinguishes what is known, what is estimated and what still needs research.</p></div><a href="https://github.com/sguzman/mercata" rel="noopener noreferrer">View the source ↗</a></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><span>© Mercata · Independent public research</span><span><a href="./CONSTITUTION.md">Constitution</a> · <a href="./ontology/README.md">Ontology</a> · <a href="./gallery/index.json">Data</a></span></div></footer>
+</body>
+</html>
