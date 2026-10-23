@@ -442,3 +442,17 @@ h1 em {font-style:italic;color:var(--accent)}
 .channel-feature-gate h5 {font-size:13px;margin:0 0 8px}
 .channel-feature-gate p {font-size:13px;margin:0 0 8px}
 @media(max-width:650px) {.channel-onboarding-details{padding:16px}.channel-onboarding-stage-list,.channel-feature-gates{grid-template-columns:1fr}}
+
+.production-costs {margin-top:28px}
+.production-costs-details {border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:20px}
+.production-costs-details > summary {cursor:pointer;font-size:16px;font-weight:800}
+.production-costs-details > .measure-limit {margin-top:15px}
+.production-cost-groups {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+.production-cost-group {border:1px solid var(--line);border-radius:10px;padding:17px;min-width:0;background:var(--surface-alt)}
+.production-cost-group h5 {font-size:14px;margin:0 0 14px}
+.production-cost-list {list-style:none;margin:0;padding:0}
+.production-cost-item {display:grid;gap:3px;padding:9px 0;border-top:1px solid var(--line);font-size:12px;overflow-wrap:anywhere}
+.production-cost-item:first-child {border-top:0}
+.production-cost-item strong {font-size:12px;text-transform:capitalize}
+.production-cost-item span {color:var(--muted)}
+@media(max-width:650px) {.production-costs-details{padding:16px}.production-cost-groups{grid-template-columns:1fr}}
