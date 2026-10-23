@@ -1,0 +1,653 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "independent_domain_ontology",
+  "as_of": "2026-10-23",
+  "scope": "Creator economics, platform mechanisms, audiences and topic communities",
+  "groups": [
+    "actors",
+    "formats",
+    "economics",
+    "measurement"
+  ],
+  "concepts": [
+    {
+      "id": "viewer",
+      "group": "actors",
+      "definition": "Person who views content; not necessarily logged in",
+      "unit": "person",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "registered_account",
+      "group": "actors",
+      "definition": "Google/YouTube login; one person may control multiple accounts",
+      "unit": "account",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "creator",
+      "group": "actors",
+      "definition": "Person or entity producing videos, sometimes controlling multiple channels",
+      "unit": "person_or_entity",
+      "access": "definition",
+      "measured_value": null
+    },
+    {
+      "id": "channel",
+      "group": "actors",
+      "definition": "YouTube publishing identity; does not uniquely identify its operator",
+      "unit": "channel",
+      "access": "public_api",
+      "measured_value": null
+    },
+    {
+      "id": "active_uploader",
+      "group": "actors",
+      "definition": "Channel with uploads during a specified interval",
+      "unit": "channel",
+      "access": "sample",
+      "measured_value": null
+    },
+    {
+      "id": "monetized_channel",
+      "group": "actors",
+      "definition": "Channel with active accepted earnings features during a defined interval",
+      "unit": "channel",
+      "access": "restricted",
+      "measured_value": null
+    },
+    {
+      "id": "subscriber",
+      "group": "actors",
+      "definition": "Account following a channel; not necessarily a current viewer",
+      "unit": "account",
+      "access": "public_api",
+      "measured_value": null
+    },
+    {
+      "id": "advertiser",
+      "group": "actors",
+      "definition": "Purchaser of advertising placements, distinct from creators and viewers",
+      "unit": "entity",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "content_rightsholder",
+      "group": "actors",
+      "definition": "Entity that owns or licenses content rights",
+      "unit": "entity",
+      "access": "policy",
+      "measured_value": null
+    },
+    {
+      "id": "platform_operator",
+      "group": "actors",
+      "definition": "Entity administering video distribution and creator agreements",
+      "unit": "entity",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "video",
+      "group": "formats",
+      "definition": "An uploaded audiovisual asset with status and rights attributes",
+      "unit": "video",
+      "access": "public_api",
+      "measured_value": null
+    },
+    {
+      "id": "watch_page",
+      "group": "formats",
+      "definition": "Ordinary playback surface associated with watch-page revenue terms",
+      "unit": "surface",
+      "access": "policy",
+      "measured_value": null
+    },
+    {
+      "id": "shorts_feed",
+      "group": "formats",
+      "definition": "Short-video feed using an allocated creator revenue pool",
+      "unit": "surface",
+      "access": "policy",
+      "measured_value": null
+    },
+    {
+      "id": "live_stream",
+      "group": "formats",
+      "definition": "Synchronous broadcast that may also have archived playback",
+      "unit": "stream",
+      "access": "policy",
+      "measured_value": null
+    },
+    {
+      "id": "premiere",
+      "group": "formats",
+      "definition": "Scheduled video event with optional simultaneous interaction",
+      "unit": "event",
+      "access": "policy",
+      "measured_value": null
+    },
+    {
+      "id": "playlist",
+      "group": "formats",
+      "definition": "Video collection, not a unique viewer population",
+      "unit": "collection",
+      "access": "public_api",
+      "measured_value": null
+    },
+    {
+      "id": "community_post",
+      "group": "formats",
+      "definition": "Channel post distinct from an ordinary video upload",
+      "unit": "post",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "podcast",
+      "group": "formats",
+      "definition": "Episodic audio or video series; distribution format may overlap videos",
+      "unit": "series",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "made_for_kids",
+      "group": "formats",
+      "definition": "Child-directed setting with associated restrictions and review duties",
+      "unit": "classification",
+      "access": "policy",
+      "measured_value": null
+    },
+    {
+      "id": "general_audience",
+      "group": "formats",
+      "definition": "Content not specifically aimed at children even if broadly suitable",
+      "unit": "classification",
+      "access": "policy",
+      "measured_value": null
+    },
+    {
+      "id": "mixed_audience",
+      "group": "formats",
+      "definition": "Content aimed at mixed groups that may qualify as child-directed",
+      "unit": "classification",
+      "access": "policy",
+      "measured_value": null
+    },
+    {
+      "id": "advertiser_suitability",
+      "group": "formats",
+      "definition": "Classification of individual video advertising eligibility",
+      "unit": "status",
+      "access": "policy",
+      "measured_value": null
+    },
+    {
+      "id": "authenticity_review",
+      "group": "formats",
+      "definition": "Evaluation of originality or repetitive mass-produced material",
+      "unit": "status",
+      "access": "policy",
+      "measured_value": null
+    },
+    {
+      "id": "copyright_claim",
+      "group": "formats",
+      "definition": "Asserted claim over material or revenue, not necessarily a removal",
+      "unit": "claim",
+      "access": "policy",
+      "measured_value": null
+    },
+    {
+      "id": "copyright_takedown",
+      "group": "formats",
+      "definition": "Removal request and associated enforcement process",
+      "unit": "action",
+      "access": "policy",
+      "measured_value": null
+    },
+    {
+      "id": "expanded_ypp_entry",
+      "group": "economics",
+      "definition": "Lower feature-entry threshold with country requirements",
+      "unit": "rule",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "ad_ypp_entry",
+      "group": "economics",
+      "definition": "Higher advertising and Premium share entry threshold",
+      "unit": "rule",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "qualified_watch_hours",
+      "group": "economics",
+      "definition": "Program-recognized public watch hours, not all watch time",
+      "unit": "hours",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "qualified_shorts_views",
+      "group": "economics",
+      "definition": "Eligible Shorts views in a defined program window",
+      "unit": "views",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "watch_page_share",
+      "group": "economics",
+      "definition": "Creator share of relevant watch-page net ad proceeds",
+      "unit": "percentage",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "shorts_pool",
+      "group": "economics",
+      "definition": "Allocated Shorts advertising revenue after pool rules",
+      "unit": "currency",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "shorts_creator_allocation",
+      "group": "economics",
+      "definition": "Creator portion of Shorts pool from eligible engaged views",
+      "unit": "currency",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "fan_funding_share",
+      "group": "economics",
+      "definition": "Creator share of defined net viewer-funded features",
+      "unit": "percentage",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "channel_membership",
+      "group": "economics",
+      "definition": "Recurring purchase of specified channel benefits",
+      "unit": "payment",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "super_chat",
+      "group": "economics",
+      "definition": "Viewer-funded highlighted livestream interaction",
+      "unit": "payment",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "super_thanks",
+      "group": "economics",
+      "definition": "Viewer-funded support on eligible content",
+      "unit": "payment",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "premium_share",
+      "group": "economics",
+      "definition": "Subscription-viewing-based creator allocation",
+      "unit": "currency",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "gross_receipts",
+      "group": "economics",
+      "definition": "Receipts before fees and other deductions",
+      "unit": "currency",
+      "access": "accounting",
+      "measured_value": null
+    },
+    {
+      "id": "net_payout",
+      "group": "economics",
+      "definition": "Post-share and applicable platform deductions, before business costs",
+      "unit": "currency",
+      "access": "accounting",
+      "measured_value": null
+    },
+    {
+      "id": "profit",
+      "group": "economics",
+      "definition": "Revenue minus defined attributable economic costs",
+      "unit": "currency",
+      "access": "accounting",
+      "measured_value": null
+    },
+    {
+      "id": "hourly_return",
+      "group": "economics",
+      "definition": "Net profit divided by labor time under documented assumptions",
+      "unit": "currency_per_hour",
+      "access": "accounting",
+      "measured_value": null
+    },
+    {
+      "id": "creator_rpm",
+      "group": "economics",
+      "definition": "Creator revenue per thousand counted views in a stated scope",
+      "unit": "currency_per_thousand_views",
+      "access": "analytics",
+      "measured_value": null
+    },
+    {
+      "id": "advertiser_cpm",
+      "group": "economics",
+      "definition": "Gross ad revenue or bid price per thousand ad impressions",
+      "unit": "currency_per_thousand_impressions",
+      "access": "analytics",
+      "measured_value": null
+    },
+    {
+      "id": "monthly_platform_users",
+      "group": "measurement",
+      "definition": "Distinct people using platform over a defined month; not public API channel count",
+      "unit": "people",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "channel_monthly_audience",
+      "group": "measurement",
+      "definition": "Unique viewers of a channel over rolling 28 days",
+      "unit": "unique_viewers",
+      "access": "owner_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "channel_subscriber_count",
+      "group": "measurement",
+      "definition": "Displayed channel subscriber count, rounded in public API",
+      "unit": "accounts",
+      "access": "public_api",
+      "measured_value": null
+    },
+    {
+      "id": "channel_video_count",
+      "group": "measurement",
+      "definition": "Public uploaded video count",
+      "unit": "videos",
+      "access": "public_api",
+      "measured_value": null
+    },
+    {
+      "id": "age_distribution",
+      "group": "measurement",
+      "definition": "Reported age-group distribution under defined survey/analytics population",
+      "unit": "percentage",
+      "access": "owner_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "gender_distribution",
+      "group": "measurement",
+      "definition": "Gender distribution as explicitly measured by its source",
+      "unit": "percentage",
+      "access": "owner_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "sex_distribution",
+      "group": "measurement",
+      "definition": "Biological sex only where a qualified aggregate source directly measures it",
+      "unit": "percentage",
+      "access": "survey",
+      "measured_value": null
+    },
+    {
+      "id": "ethnicity_distribution",
+      "group": "measurement",
+      "definition": "Voluntarily reported aggregate race/ethnicity; not an inferred attribute",
+      "unit": "percentage",
+      "access": "survey",
+      "measured_value": null
+    },
+    {
+      "id": "country_distribution",
+      "group": "measurement",
+      "definition": "Geographic viewing or participant distribution per source",
+      "unit": "percentage",
+      "access": "owner_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "political_distribution",
+      "group": "measurement",
+      "definition": "Voluntary aggregate political survey identity, not inferred from viewing",
+      "unit": "percentage",
+      "access": "survey",
+      "measured_value": null
+    },
+    {
+      "id": "viewer_language",
+      "group": "measurement",
+      "definition": "Language preference, separate from nationality and ethnicity",
+      "unit": "language",
+      "access": "survey",
+      "measured_value": null
+    },
+    {
+      "id": "subculture",
+      "group": "measurement",
+      "definition": "Revisable overlapping topic/fandom category, not a census",
+      "unit": "topic",
+      "access": "taxonomy",
+      "measured_value": null
+    },
+    {
+      "id": "subculture_viewers",
+      "group": "measurement",
+      "definition": "Deduplicated people participating in a topic under stated method",
+      "unit": "people",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "subculture_creators",
+      "group": "measurement",
+      "definition": "Channels producing topic content in a defined sample/window",
+      "unit": "channels",
+      "access": "sampling_needed",
+      "measured_value": null
+    },
+    {
+      "id": "subculture_views",
+      "group": "measurement",
+      "definition": "Content consumption events, not people",
+      "unit": "views",
+      "access": "public_api",
+      "measured_value": null
+    },
+    {
+      "id": "community_overlap",
+      "group": "measurement",
+      "definition": "Estimated shared members between topic groups",
+      "unit": "people",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "engaged_view",
+      "group": "measurement",
+      "definition": "Engagement-threshold view metric, distinct from raw views",
+      "unit": "view",
+      "access": "analytics",
+      "measured_value": null
+    },
+    {
+      "id": "watch_time",
+      "group": "measurement",
+      "definition": "Estimated viewing duration for stated channel/period",
+      "unit": "minutes",
+      "access": "analytics",
+      "measured_value": null
+    },
+    {
+      "id": "search_result_total",
+      "group": "measurement",
+      "definition": "Approximate search result count, not population size",
+      "unit": "results",
+      "access": "public_api",
+      "measured_value": null
+    },
+    {
+      "id": "income_distribution",
+      "group": "measurement",
+      "definition": "Statistical distribution across a defined creator population, including treatment of non-earners",
+      "unit": "currency",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "selection_bias",
+      "group": "measurement",
+      "definition": "Difference between observable sample and target population",
+      "unit": "uncertainty",
+      "access": "method",
+      "measured_value": null
+    }
+  ],
+  "relations": [
+    {
+      "subject": "creator",
+      "predicate": "controls",
+      "object": "channel"
+    },
+    {
+      "subject": "channel",
+      "predicate": "publishes",
+      "object": "video"
+    },
+    {
+      "subject": "viewer",
+      "predicate": "watches",
+      "object": "video"
+    },
+    {
+      "subject": "registered_account",
+      "predicate": "can_subscribe_to",
+      "object": "channel"
+    },
+    {
+      "subject": "channel",
+      "predicate": "may_be",
+      "object": "monetized_channel"
+    },
+    {
+      "subject": "video",
+      "predicate": "plays_on",
+      "object": "watch_page"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_appear_in",
+      "object": "shorts_feed"
+    },
+    {
+      "subject": "channel",
+      "predicate": "may_publish",
+      "object": "live_stream"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_be_designated",
+      "object": "made_for_kids"
+    },
+    {
+      "subject": "made_for_kids",
+      "predicate": "restricts",
+      "object": "channel_membership"
+    },
+    {
+      "subject": "creator",
+      "predicate": "may_apply_to",
+      "object": "expanded_ypp_entry"
+    },
+    {
+      "subject": "creator",
+      "predicate": "may_apply_to",
+      "object": "ad_ypp_entry"
+    },
+    {
+      "subject": "ad_ypp_entry",
+      "predicate": "requires_route",
+      "object": "qualified_watch_hours"
+    },
+    {
+      "subject": "ad_ypp_entry",
+      "predicate": "alternate_route",
+      "object": "qualified_shorts_views"
+    },
+    {
+      "subject": "watch_page_share",
+      "predicate": "references",
+      "object": "watch_page"
+    },
+    {
+      "subject": "shorts_creator_allocation",
+      "predicate": "derived_from",
+      "object": "shorts_pool"
+    },
+    {
+      "subject": "fan_funding_share",
+      "predicate": "covers",
+      "object": "super_chat"
+    },
+    {
+      "subject": "channel_monthly_audience",
+      "predicate": "describes",
+      "object": "channel"
+    },
+    {
+      "subject": "subculture_viewers",
+      "predicate": "measures",
+      "object": "subculture"
+    },
+    {
+      "subject": "subculture_creators",
+      "predicate": "categorizes",
+      "object": "channel"
+    },
+    {
+      "subject": "community_overlap",
+      "predicate": "connects",
+      "object": "subculture"
+    },
+    {
+      "subject": "creator_rpm",
+      "predicate": "is_not_equivalent_to",
+      "object": "advertiser_cpm"
+    },
+    {
+      "subject": "income_distribution",
+      "predicate": "measures",
+      "object": "creator"
+    }
+  ],
+  "rules": [
+    "Users, registered accounts, channels, viewers, subscribers, videos and views are different units.",
+    "A policy rate is not an income forecast and no rate has the same denominator by default.",
+    "Public API counts are not platform-wide population measures.",
+    "A user's demographic or political identity cannot be inferred from watched or published content.",
+    "Community labels may overlap and cannot be summed without deduplication.",
+    "Unobserved quantities remain null.",
+    "Use dated public evidence for policy claims and documented methods for population estimands."
+  ]
+}
