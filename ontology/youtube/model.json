@@ -1034,6 +1034,70 @@
       "unit": "currency_per_creator_period",
       "access": "independent_study",
       "measured_value": null
+    },
+    {
+      "id": "country_youtube_reach",
+      "group": "measurement",
+      "definition": "Share of a defined country-specific population with YouTube use over an explicitly stated period and research method.",
+      "unit": "percent_of_defined_country_population",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "in_home_youtube_viewing",
+      "group": "measurement",
+      "definition": "Average YouTube viewing minutes across connected devices in the home, on a research-defined per-person basis.",
+      "unit": "minutes_per_person_per_day",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "tv_set_youtube_viewing",
+      "group": "measurement",
+      "definition": "Average in-home YouTube minutes on a television set; subset of connected in-home video viewing.",
+      "unit": "minutes_per_person_per_day",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "online_only_youtube_viewing",
+      "group": "measurement",
+      "definition": "YouTube time on online screens excluding television, as measured by a stated digital activity research frame.",
+      "unit": "minutes_per_day_according_to_source",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "age_group_weekly_reach",
+      "group": "measurement",
+      "definition": "Fraction of respondents in a named age group who use YouTube in a weekly window, not the age composition of platform viewers.",
+      "unit": "percent_of_defined_age_group",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "multimarket_youtube_news_use",
+      "group": "measurement",
+      "definition": "Share of respondents in a basket of online-sampled country markets who used YouTube for news, not a world-population census.",
+      "unit": "reported_percent_of_multimarket_survey",
+      "access": "independent_study",
+      "measured_value": null
+    },
+    {
+      "id": "device_coverage_frame",
+      "group": "measurement",
+      "definition": "Viewing devices and physical locations included or excluded by the statistical methodology.",
+      "unit": "measurement_scope",
+      "access": "research_metadata",
+      "measured_value": null
+    },
+    {
+      "id": "market_survey_weighting",
+      "group": "measurement",
+      "definition": "Survey sampling and cross-market weighting rules required before comparing regional rates or representing a worldwide population.",
+      "unit": "sampling_design",
+      "access": "research_metadata",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -1511,6 +1575,56 @@
       "subject": "newcomer_income_estimand",
       "predicate": "may_include",
       "object": "creator_profit_after_costs"
+    },
+    {
+      "subject": "country_youtube_reach",
+      "predicate": "is_bounded_by",
+      "object": "market_survey_weighting"
+    },
+    {
+      "subject": "country_youtube_reach",
+      "predicate": "uses",
+      "object": "device_coverage_frame"
+    },
+    {
+      "subject": "in_home_youtube_viewing",
+      "predicate": "uses",
+      "object": "device_coverage_frame"
+    },
+    {
+      "subject": "tv_set_youtube_viewing",
+      "predicate": "is_subset_of",
+      "object": "in_home_youtube_viewing"
+    },
+    {
+      "subject": "online_only_youtube_viewing",
+      "predicate": "uses",
+      "object": "device_coverage_frame"
+    },
+    {
+      "subject": "online_only_youtube_viewing",
+      "predicate": "must_not_be_summed_with",
+      "object": "in_home_youtube_viewing"
+    },
+    {
+      "subject": "age_group_weekly_reach",
+      "predicate": "is_not",
+      "object": "channel_monthly_audience"
+    },
+    {
+      "subject": "age_group_weekly_reach",
+      "predicate": "uses",
+      "object": "market_survey_weighting"
+    },
+    {
+      "subject": "multimarket_youtube_news_use",
+      "predicate": "requires",
+      "object": "market_survey_weighting"
+    },
+    {
+      "subject": "multimarket_youtube_news_use",
+      "predicate": "is_not",
+      "object": "country_youtube_reach"
     }
   ],
   "rules": [
@@ -1534,7 +1648,9 @@
     "Uploading a file and publicly publishing a video are distinct events.",
     "Syndicated copies of a creator survey count as one independent sample, not independent replication.",
     "Mixed-platform income thresholds do not identify YouTube-only earnings or a newcomer cohort.",
-    "The intended newcomer earning population must retain zero earners and define time, costs and sampling frame."
+    "The intended newcomer earning population must retain zero earners and define time, costs and sampling frame.",
+    "A TV-set viewing series is a subset of all in-home connected-device viewing; do not add them.",
+    "Country/age prevalence and multi-market online respondent averages are not interchangeable with global people counts."
   ],
-  "ontology_version": "1.5"
+  "ontology_version": "1.6"
 }
