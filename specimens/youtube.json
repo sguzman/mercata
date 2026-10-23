@@ -966,6 +966,39 @@
       "evidence_class": "industry_self_selected_creator_survey",
       "license": "Short numerical findings summarized with attribution and source link; no charts or survey text copied",
       "notes": "558 self-recruited podcasters including prelaunch respondents; cost and hours questions use post-launch only. NOT YouTube-specific or representative of all creators."
+    },
+    {
+      "id": "neoreach-earnings-2025",
+      "url": "https://neoreach.com/reports/creator-earnings-report-2025/",
+      "publisher": "NeoReach Research",
+      "title": "Creator Earnings Report 2025",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "commercial_cross_platform_creator_survey",
+      "license": "Linked summary; short independently written quantitative paraphrases only",
+      "notes": "Original report 2025, more than 3,000 mixed-platform respondents; recruitment frame and YouTube subgroup unknown."
+    },
+    {
+      "id": "neoreach-earnings-syndication-2026",
+      "url": "https://influencermarketinghub.com/creator-earnings-report-2025/",
+      "publisher": "Influencer Marketing Hub with NeoReach",
+      "title": "Creator Earnings Report 2025 (partner publication)",
+      "published_at": "2026-07-06",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "syndication_of_neoreach_survey_not_independent",
+      "license": "Linked partner summary only; independently paraphrased facts",
+      "notes": "Same survey as neoreach-earnings-2025. DO NOT count as independent replication."
+    },
+    {
+      "id": "creator-spotlight-2025",
+      "url": "https://www.creatorspotlight.com/p/monetization-report-2025",
+      "publisher": "Creator Spotlight",
+      "title": "The 2025 monetization report",
+      "published_at": "2025-12-12",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "self_selected_newsletter_creator_survey",
+      "license": "Linked publisher report; only brief quantified paraphrases",
+      "notes": "427 self-reported mixed-platform creator respondents. Survey was sent to nearly 300,000 engaged newsletter subscribers; not YouTube-specific."
     }
   ],
   "claims": [
@@ -1836,6 +1869,47 @@
       "confidence": "medium",
       "observed_at": "2026-10-23",
       "limitations": "Nonrepresentative self-recruited podcast sample; does not establish the YouTube newcomer zero-earning rate."
+    },
+    {
+      "id": "neoreach-2025-mixed-income-below-15000",
+      "text": "In NeoReach's cross-platform 2025 Creator Earnings Report, 50.71% of over 3,000 surveyed creators reported annual creator earnings below USD 15,000.",
+      "source_ids": [
+        "neoreach-earnings-2025",
+        "neoreach-earnings-syndication-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "Commercial, mixed-platform sample with undisclosed probability-sampling frame; the collaborating publishers describe the same study, not independent evidence. Does not measure YouTube income distribution or profit."
+    },
+    {
+      "id": "neoreach-2025-full-time-income-threshold",
+      "text": "NeoReach reported that approximately 57% of its surveyed full-time creators earned below USD 44,000 annually from content alone.",
+      "source_ids": [
+        "neoreach-earnings-2025"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "Full-time subgroup size and survey weights are unavailable on the public summary; not a YouTube-only or causal statement."
+    },
+    {
+      "id": "creator-spotlight-2025-427-year-earnings",
+      "text": "Creator Spotlight's December 2025 survey collected 427 self-reported creator responses, of whom 37 (about 8.7%) reported six-figure creator-work earnings for 2025.",
+      "source_ids": [
+        "creator-spotlight-2025"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "Voluntary responses from engaged newsletter readers across multiple platforms, chiefly North America; cannot establish population-wide or YouTube-newcomer rates."
+    },
+    {
+      "id": "creator-spotlight-2025-low-earners",
+      "text": "Creator Spotlight described nearly half of its 427 surveyed creator respondents as earning less than USD 500 from creator work in 2025, and reported 92 respondents between USD 1,000 and USD 5,000.",
+      "source_ids": [
+        "creator-spotlight-2025"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "Nearly half is qualitative, not an exact count or percentage; respondents include non-YouTube platforms and are not a representative YouTube cohort."
     }
   ],
   "observations": [],
