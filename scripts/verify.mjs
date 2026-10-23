@@ -125,6 +125,28 @@ for (const entry of index.specimens) {
     const economics=load('ontology/youtube/economic-model.json');
     const routes=load('ontology/youtube/revenue-pathways.json');
     const eligibility=load('ontology/youtube/eligibility-matrix.json');
+    const channelOnboarding=load('ontology/youtube/channel-onboarding.json');
+    ensure(channelOnboarding.objects.length===6 && channelOnboarding.stages.length===6 &&
+      channelOnboarding.feature_gates.length===4 && channelOnboarding.entry_pathway.length===5,
+      'Incomplete YouTube onboarding and feature-access model');
+    ensure(channelOnboarding.stages.every((x,i)=>x.sequence===i+1 &&
+      x.source_ids.length && x.source_ids.every(id=>sourceIds.has(id)) &&
+      x.expected_time_days===null && x.cost_if_supported===null),
+      'Unattributed account setup stage or fabricated access time/cost');
+    ensure(channelOnboarding.objects.every(x=>x.source_ids.length &&
+      x.source_ids.every(id=>sourceIds.has(id))),'Onboarding concept missing evidence');
+    ensure(channelOnboarding.feature_gates.every(x=>x.source_ids.length &&
+      x.source_ids.every(id=>sourceIds.has(id))),'Onboarding feature gate missing sources');
+    ensure(channelOnboarding.entry_pathway.every(x=>x.source_ids.length &&
+      x.source_ids.every(id=>sourceIds.has(id)) && x.operator_work_hours===null),
+      'Unsupported creator setup labor cost');
+    ensure(channelOnboarding.feature_gates.some(x=>x.id==='advanced' &&
+      x.requires.includes('sufficient_channel_history_OR_optional_id_or_video_verification')),
+      'Advanced verification wrongly made a mandatory ID upload');
+    ensure(channelOnboarding.accounting.zero_cost_guarantee===false &&
+      channelOnboarding.accounting.setup_hours_median===null &&
+      channelOnboarding.accounting.time_to_first_payment_distribution===null,
+      'Invented zero-cost entry or predictable payment timeline');
     const lifecycle=load('ontology/youtube/application-lifecycle.json');
     ensure(lifecycle.steps.length===9 && lifecycle.estimated_total_time_to_first_payment===null,
       'Invalid YouTube application lifecycle');
