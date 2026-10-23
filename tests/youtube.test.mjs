@@ -49,6 +49,11 @@ test('Production cost model keeps 10 cash and 10 labor measures separate',async(
     assert.equal(hist.bins.reduce((n,x)=>n+x.percent,0),100);
     assert.equal(hist.denominator_n,null);
   }
+  assert.equal(adjacent.audio_video_comparisons.length,2);
+  assert(adjacent.audio_video_comparisons.every(x=>x.video_subsample_n===null &&
+    x.audio_subsample_n===null && x.causal_effect===null));
+  assert(adjacent.audio_video_comparisons.some(x=>x.id==='monthly_cost_at_least_50_usd' &&
+    x.video_percent_approx===50 && x.audio_only_percent_approx===28));
   assert.equal(adjacent.reported_human_work.median_hours,null);
   assert.equal(adjacent.reported_operating_cash.median_monthly_cost,null);
   assert.equal(costs.model.cash_profit_per_hour,null);
