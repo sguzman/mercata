@@ -1,0 +1,458 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "as_of": "2026-10-23",
+  "kind": "revenue_pathways",
+  "status": "official_feature_inventory_with_unpriced_external_models",
+  "total_pathways": 16,
+  "eligibility_tiers": {
+    "ypp_ads": "Channel approved for the advertising/Premium tier; relevant modules and extra content requirements apply.",
+    "expanded_ypp_feature": "Channel accepted to expanded YPP and qualifies for the selected Commerce module and feature, including additional age and country restrictions.",
+    "ypp_virtual_items": "Channel accepted to YPP and the Virtual Items module, eligible country and content.",
+    "shopping_own_eligibility": "YPP or other applicable shopping eligibility, connected eligible store and valid merchandise.",
+    "shopping_affiliate_eligibility": "YPP member with sufficient subscriber threshold in an eligible location, permitted channel type and merchant offerings.",
+    "creator_partnerships_eligibility": "Eligible adult YPP creator meeting ads revenue-sharing and region-specific brand discovery requirements.",
+    "outside_ypp": "Independent contractual or merchant arrangements; YouTube YPP participation is not itself the prerequisite, but YouTube and provider policies still matter."
+  },
+  "pathways": [
+    {
+      "id": "watch-page-ads",
+      "name": "Watch-page advertising",
+      "kind": "native_advertising",
+      "payer": "Advertisers",
+      "revenue_basis": "Eligible net watch-page ad receipts",
+      "surface": "watch_page",
+      "eligibility": "ypp_ads",
+      "eligibility_description": "Channel approved for the advertising/Premium tier; relevant modules and extra content requirements apply.",
+      "source_ids": [
+        "ypp-main",
+        "revenue-shares",
+        "earning-help"
+      ],
+      "mechanism": "Creator receives a contractual share of applicable net watch-page advertising revenue, not a flat fee per playback.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Audience country",
+        "ad suitability",
+        "playback",
+        "fill rate and exclusions; cost of creating videos"
+      ],
+      "status": "documented_feature",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "shorts-ads",
+      "name": "Shorts Feed advertising",
+      "kind": "native_advertising",
+      "payer": "Advertisers",
+      "revenue_basis": "Allocated Shorts Creator Pool receipts",
+      "surface": "shorts_feed",
+      "eligibility": "ypp_ads",
+      "eligibility_description": "Channel approved for the advertising/Premium tier; relevant modules and extra content requirements apply.",
+      "source_ids": [
+        "shorts-policy",
+        "revenue-shares",
+        "earning-help"
+      ],
+      "mechanism": "Creator's share applies after country-level pool allocation and eligible engaged-view attribution, not total raw Shorts views.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Qualified engaged views",
+        "music-use allocation",
+        "advertiser demand and competing eligible creators"
+      ],
+      "status": "documented_feature",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "premium-revenue",
+      "name": "YouTube Premium allocation",
+      "kind": "native_subscription_allocation",
+      "payer": "YouTube Premium customers",
+      "revenue_basis": "Share of relevant Premium subscription receipts",
+      "surface": "watch_and_shorts",
+      "eligibility": "ypp_ads",
+      "eligibility_description": "Channel approved for the advertising/Premium tier; relevant modules and extra content requirements apply.",
+      "source_ids": [
+        "earning-help"
+      ],
+      "mechanism": "The publisher receives a share when Premium viewers watch eligible content; the per-view rate is not universal.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Premium audience behavior",
+        "eligibility and viewing mix"
+      ],
+      "status": "documented_feature",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "channel-memberships",
+      "name": "Channel memberships",
+      "kind": "native_fan_support",
+      "payer": "Paying channel members",
+      "revenue_basis": "Recurring member payments and applicable net creator allocation",
+      "surface": "channel",
+      "eligibility": "expanded_ypp_feature",
+      "eligibility_description": "Channel accepted to expanded YPP and qualifies for the selected Commerce module and feature, including additional age and country restrictions.",
+      "source_ids": [
+        "earning-help",
+        "revenue-shares"
+      ],
+      "mechanism": "Members pay monthly for creator-supplied perks; service and perk-delivery costs matter.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Churn",
+        "paid perks",
+        "taxes and eligibility; not suitable for every channel"
+      ],
+      "status": "documented_feature",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "super-chat",
+      "name": "Super Chat and Super Stickers",
+      "kind": "native_fan_support",
+      "payer": "Viewers",
+      "revenue_basis": "Eligible net viewer contributions subject to Commerce module",
+      "surface": "live_chat",
+      "eligibility": "expanded_ypp_feature",
+      "eligibility_description": "Channel accepted to expanded YPP and qualifies for the selected Commerce module and feature, including additional age and country restrictions.",
+      "source_ids": [
+        "earning-help",
+        "revenue-shares"
+      ],
+      "mechanism": "Viewer contributions highlight live-chat content; features vary by location and content classification.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Live attendance",
+        "eligibility",
+        "interaction limits and payment channel"
+      ],
+      "status": "documented_feature",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "super-thanks",
+      "name": "Super Thanks",
+      "kind": "native_fan_support",
+      "payer": "Viewers",
+      "revenue_basis": "Eligible net viewer contributions subject to Commerce module",
+      "surface": "video_and_shorts_comments",
+      "eligibility": "expanded_ypp_feature",
+      "eligibility_description": "Channel accepted to expanded YPP and qualifies for the selected Commerce module and feature, including additional age and country restrictions.",
+      "source_ids": [
+        "earning-help",
+        "revenue-shares"
+      ],
+      "mechanism": "Viewer pays to highlight supportive engagement on eligible videos/Shorts.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Availability and eligible video types; avoid treating likes as payments"
+      ],
+      "status": "documented_feature",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "live-gifts",
+      "name": "Live gifts, Jewels and Rubies",
+      "kind": "native_virtual_items",
+      "payer": "Viewers buying Jewels",
+      "revenue_basis": "Rubies earned on eligible live gifts",
+      "surface": "eligible_live",
+      "eligibility": "ypp_virtual_items",
+      "eligibility_description": "Channel accepted to YPP and the Virtual Items module, eligible country and content.",
+      "source_ids": [
+        "virtual-items",
+        "gifts-eligibility"
+      ],
+      "mechanism": "Jewels are viewer-side virtual items; creator earns Rubies under Virtual Items terms. No conversion rate inferred.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Country access",
+        "viewer/creator eligibility and live-stream moderation"
+      ],
+      "status": "documented_feature",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "shopping-own",
+      "name": "Shopping: own products",
+      "kind": "commerce_facilitated",
+      "payer": "Retail product buyers",
+      "revenue_basis": "Net merchant sales after storefront, fulfillment and other costs",
+      "surface": "videos_shorts_live_store",
+      "eligibility": "shopping_own_eligibility",
+      "eligibility_description": "YPP or other applicable shopping eligibility, connected eligible store and valid merchandise.",
+      "source_ids": [
+        "shopping-own",
+        "store-connection",
+        "earning-help"
+      ],
+      "mechanism": "YouTube displays tagged products from an eligible connected storefront; actual sales and settlement follow retailer terms.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Storefront fees",
+        "refunds",
+        "production",
+        "shipping",
+        "returns and regional availability"
+      ],
+      "status": "documented_feature",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "shopping-affiliate",
+      "name": "Shopping: affiliate products",
+      "kind": "commerce_affiliate",
+      "payer": "Merchants paying commissions",
+      "revenue_basis": "Merchant-set affiliate commission on attributable orders",
+      "surface": "videos_shorts_live",
+      "eligibility": "shopping_affiliate_eligibility",
+      "eligibility_description": "YPP member with sufficient subscriber threshold in an eligible location, permitted channel type and merchant offerings.",
+      "source_ids": [
+        "shopping-affiliate",
+        "shopping-mexico-launch",
+        "monetization-2026"
+      ],
+      "mechanism": "Tag products from participating sellers and receive eligible commissions; the product commission rate is not fixed globally.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Merchant availability",
+        "attribution",
+        "returns",
+        "threshold",
+        "geography and disclosure"
+      ],
+      "status": "documented_feature",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "creator-partnerships",
+      "name": "YouTube Creator Partnerships",
+      "kind": "deal_facilitation",
+      "payer": "Brand advertisers",
+      "revenue_basis": "Negotiated sponsored content agreements",
+      "surface": "studio_and_video",
+      "eligibility": "creator_partnerships_eligibility",
+      "eligibility_description": "Eligible adult YPP creator meeting ads revenue-sharing and region-specific brand discovery requirements.",
+      "source_ids": [
+        "creator-partnerships-mx",
+        "monetization-2026"
+      ],
+      "mechanism": "Brand discovery and campaign contacts facilitated through YouTube; it is not an automatic platform-paid revenue share.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Negotiated price",
+        "production deliverables",
+        "usage rights and paid boosting"
+      ],
+      "status": "documented_feature",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "direct-sponsorship",
+      "name": "Independently negotiated sponsorship",
+      "kind": "external_business_deal",
+      "payer": "Sponsors",
+      "revenue_basis": "Negotiated contractual revenue",
+      "surface": "video_live_shorts",
+      "eligibility": "outside_ypp",
+      "eligibility_description": "Independent contractual or merchant arrangements; YouTube YPP participation is not itself the prerequisite, but YouTube and provider policies still matter.",
+      "source_ids": [
+        "earning-help"
+      ],
+      "mechanism": "Independent business-to-business sponsored content, subject to disclosure rules; not inherently granted by YPP.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Sales outreach",
+        "contract terms",
+        "reputation",
+        "rights and concentration risk"
+      ],
+      "status": "conceptual_outside_youtube",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "external-affiliates",
+      "name": "External affiliate links",
+      "kind": "external_affiliate",
+      "payer": "Outside merchants",
+      "revenue_basis": "Affiliate contract commissions on eligible sales",
+      "surface": "off_platform_links",
+      "eligibility": "outside_ypp",
+      "eligibility_description": "Independent contractual or merchant arrangements; YouTube YPP participation is not itself the prerequisite, but YouTube and provider policies still matter.",
+      "source_ids": [
+        "earning-help"
+      ],
+      "mechanism": "A link from content to an outside seller; settlement and commissions depend on the independent program.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Link permissions",
+        "disclosure",
+        "attribution and platform terms"
+      ],
+      "status": "conceptual_outside_youtube",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "owned-software",
+      "name": "Own games, applications and digital goods",
+      "kind": "external_products",
+      "payer": "Customers",
+      "revenue_basis": "Product or license sales net of merchant costs",
+      "surface": "video_to_external_store",
+      "eligibility": "outside_ypp",
+      "eligibility_description": "Independent contractual or merchant arrangements; YouTube YPP participation is not itself the prerequisite, but YouTube and provider policies still matter.",
+      "source_ids": [
+        "earning-help"
+      ],
+      "mechanism": "YouTube can refer viewers to independently sold products; its presence does not establish demand or conversion.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Hosting",
+        "marketplace fees",
+        "refunds",
+        "taxes",
+        "license rights and customer service"
+      ],
+      "status": "conceptual_outside_youtube",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "external-support",
+      "name": "Independent fan support",
+      "kind": "external_membership",
+      "payer": "Supporters",
+      "revenue_basis": "Off-platform subscriptions or one-time contributions",
+      "surface": "external_support",
+      "eligibility": "outside_ypp",
+      "eligibility_description": "Independent contractual or merchant arrangements; YouTube YPP participation is not itself the prerequisite, but YouTube and provider policies still matter.",
+      "source_ids": [
+        "earning-help"
+      ],
+      "mechanism": "Support payments through independent providers; distinct from channel memberships and native Supers.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Provider fees",
+        "subscription churn",
+        "portability and payment restrictions"
+      ],
+      "status": "conceptual_outside_youtube",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "licensed-content",
+      "name": "Content and IP licensing",
+      "kind": "external_ip_deal",
+      "payer": "Distributors and licensees",
+      "revenue_basis": "Negotiated license fees or royalties",
+      "surface": "content_rights",
+      "eligibility": "outside_ypp",
+      "eligibility_description": "Independent contractual or merchant arrangements; YouTube YPP participation is not itself the prerequisite, but YouTube and provider policies still matter.",
+      "source_ids": [
+        "earning-help"
+      ],
+      "mechanism": "Owner can separately license original work or derivative rights; do not assume any YouTube upload is automatically licensable.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Originality",
+        "contracts",
+        "rights clearance",
+        "exclusivity and enforcement"
+      ],
+      "status": "conceptual_outside_youtube",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    },
+    {
+      "id": "external-services",
+      "name": "Client work and teaching derived from videos",
+      "kind": "external_services",
+      "payer": "Service clients",
+      "revenue_basis": "Service fees net of delivery costs",
+      "surface": "video_to_services",
+      "eligibility": "outside_ypp",
+      "eligibility_description": "Independent contractual or merchant arrangements; YouTube YPP participation is not itself the prerequisite, but YouTube and provider policies still matter.",
+      "source_ids": [
+        "earning-help"
+      ],
+      "mechanism": "Educational or portfolio content may promote an independently provided service; payment occurs under separate agreement.",
+      "monetization_rate": null,
+      "estimated_median_earnings": null,
+      "upfront_fee": null,
+      "cost_drivers": [
+        "Conversion",
+        "labor hours",
+        "cancellation",
+        "liability and taxes"
+      ],
+      "status": "conceptual_outside_youtube",
+      "observed_at": "2026-10-23",
+      "limitations": "Actual eligibility, cash flow, payment terms and availability require checking for the creator's circumstances. Earnings and entry costs are not estimated."
+    }
+  ],
+  "payment_lifecycle": [
+    "program_eligibility",
+    "feature_approval_or_external_agreement",
+    "activity_or_sale",
+    "revenue_attribution",
+    "platform_or_merchant_deductions",
+    "taxes_and_refunds",
+    "withdrawal_threshold_and_hold",
+    "settlement_to_creator",
+    "production_costs_and_profit"
+  ],
+  "measurement_rules": [
+    "Count official features separately from external business monetization.",
+    "A registered account, eligible channel, approved YPP member, monetized video and paid creator are different populations.",
+    "Do not infer a stable percentage of gross advertising spending from a percentage of net allocated receipts.",
+    "Never treat affiliate sales, GMV or sponsor quotes as creator earnings.",
+    "Do not assume a future announced feature is available until its local live status is documented.",
+    "Not all monetization pathways can operate on child-directed content.",
+    "Unknown fees, earnings and conversions are null, never zero."
+  ]
+}

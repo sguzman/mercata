@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "as_of": "2026-10-23",
+  "kind": "payout_access_and_thresholds",
+  "currencies": [
+    {
+      "currency": "MXN",
+      "account_currency": "MXN",
+      "method_selection_threshold": 120,
+      "minimum_payout": 1200,
+      "cancellation_threshold": 120,
+      "source_ids": [
+        "adsense-thresholds"
+      ],
+      "limitations": "Only where AdSense for YouTube account reports in MXN; not every creator in Mexico necessarily has an MXN payment account."
+    },
+    {
+      "currency": "USD",
+      "account_currency": "USD",
+      "method_selection_threshold": 10,
+      "minimum_payout": 100,
+      "cancellation_threshold": 10,
+      "source_ids": [
+        "adsense-thresholds"
+      ],
+      "limitations": "Reporting-currency denomination, not an estimate of fees or take-home pay."
+    }
+  ],
+  "payment_address_countries": [
+    {
+      "country": "Mexico",
+      "methods_available": [
+        "electronic_funds_transfer",
+        "wire_transfer"
+      ],
+      "methods_unavailable": [
+        "check",
+        "hyperwallet"
+      ],
+      "source_ids": [
+        "adsense-methods"
+      ],
+      "limitations": "Payment options depend on payment address and account eligibility, not merely viewer country."
+    }
+  ],
+  "program_access": [
+    {
+      "country": "Mexico",
+      "ypp_listed": true,
+      "expanded_ypp_listed": true,
+      "shopping_affiliate_listed": true,
+      "gifts_listed": true,
+      "creator_partnerships_listed": true,
+      "source_ids": [
+        "ypp-country",
+        "expanded-ypp-countries",
+        "shopping-affiliate",
+        "gifts-eligibility",
+        "creator-partnerships-mx"
+      ],
+      "limitations": "Country availability does not confer approval or imply all channel types qualify; program terms and interfaces vary."
+    }
+  ],
+  "rules": [
+    "Do not conflate channel residence, audience country, AdSense payment address and reporting currency.",
+    "A revenue threshold is not an entry fee, minimum monthly income or contractual payout percentage.",
+    "Eligibility to apply is distinct from channel review and actual revenue.",
+    "Do not substitute a currency conversion for a threshold defined in the account's actual reporting currency.",
+    "No bank account, tax ID or other private user information belongs in this public research file."
+  ]
+}

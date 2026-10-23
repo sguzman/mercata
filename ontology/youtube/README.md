@@ -45,3 +45,9 @@ The first [creator-income evidence review](creator-income-evidence.md) examines 
 ## Newly monetized small channels
 
 AIR Media-Tech's [297-channel studio-data report](small-channel-income.md) contains six monthly earnings observations and genre and top-viewer-country breakdowns. Its [machine dataset](small-channel-income.json) separates the sample of already monetized channels from the broader platform. It reports a USD 88 median in the first full month and USD 32 in month six, but neither figure is a representative expectation for creators who have not reached monetization. The commercial source's recruitment criteria and sample limitations remain visible alongside every breakdown.
+
+## Revenue routes and getting paid
+
+[Revenue pathways](revenue-pathways.md) breaks YouTube earning into 16 documented or separately modeled routes: ordinary and Shorts ads, Premium, channel memberships, Supers, gifts, own-product and affiliate Shopping, brand partnerships, and work sold outside YouTube. The [machine records](revenue-pathways.json) distinguish direct platform payouts, supported transactions, and independent outside business arrangements. None has a made-up average payout, admission fee or conversion rate.
+
+[Payment and geography](payment-gates.md) records currency-specific settlement thresholds and the difference between program, account and viewer country. It includes a public case study of Mexico and a USD reporting-currency comparison, without including any personal financial details.
