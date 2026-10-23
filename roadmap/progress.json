@@ -6,7 +6,7 @@
       "id": "foundation",
       "emoji": "🏗️",
       "name": "Public research foundation",
-      "percent": 96,
+      "percent": 98,
       "phases": [
         {
           "id": "charter",
@@ -63,7 +63,7 @@
                 {
                   "id": "gallery",
                   "emoji": "🖼️",
-                  "title": "Independent empty gallery",
+                  "title": "Independent public marketplace gallery",
                   "percent": 100,
                   "evidence": [
                     "gallery/README.md",
@@ -134,10 +134,12 @@
                   "id": "tests",
                   "emoji": "✅",
                   "title": "Local validation and intake checks",
-                  "percent": 80,
+                  "percent": 95,
                   "evidence": [
                     "scripts/verify.mjs",
-                    "tests/intake.test.mjs"
+                    "tests/intake.test.mjs",
+                    ".github/workflows/verify.yml",
+                    "tests/youtube.test.mjs"
                   ]
                 }
               ]
@@ -203,7 +205,7 @@
       "id": "social-audience",
       "emoji": "👥",
       "name": "Social audience and community research",
-      "percent": 93,
+      "percent": 96,
       "phases": [
         {
           "id": "model",
@@ -279,10 +281,12 @@
                   "id": "social-tests",
                   "emoji": "🧪",
                   "title": "Test social intake and retrofitted queues",
-                  "percent": 80,
+                  "percent": 95,
                   "evidence": [
                     "scripts/verify.mjs",
-                    "tests/intake.test.mjs"
+                    "tests/intake.test.mjs",
+                    ".github/workflows/verify.yml",
+                    "tests/youtube.test.mjs"
                   ]
                 }
               ]
@@ -341,6 +345,40 @@
                     "gallery/index.json",
                     "site/app.js",
                     "plans/youtube.md"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "youtube-study",
+      "emoji": "📺",
+      "name": "YouTube evidence and economic analysis",
+      "percent": 5,
+      "phases": [
+        {
+          "id": "investigation",
+          "emoji": "🔬",
+          "name": "Source-backed YouTube research",
+          "features": [
+            {
+              "id": "audience-and-economics",
+              "emoji": "📊",
+              "name": "Platform, audiences, subcultures and earnings",
+              "tasks": [
+                {
+                  "id": "youtube-399",
+                  "emoji": "🎬",
+                  "title": "Process 399 YouTube research tasks with cited findings",
+                  "percent": 5,
+                  "evidence": [
+                    "plans/youtube.json",
+                    "queues/youtube.json",
+                    "specimens/youtube.json",
+                    "ontology/youtube/README.md"
                   ]
                 }
               ]
