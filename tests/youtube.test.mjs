@@ -96,3 +96,22 @@ test('U.S. adult-use series has explicit survey-mode breaks',async()=>{
   assert(series.comparability_notes.some(note=>note.includes('survey mode')));
   assert.equal(series.points.at(-1).percent,84);
 });
+
+test('Monetized small-channel data keeps sample boundaries and valid quartiles',async()=>{
+  const [data,dossier]=await Promise.all([
+    load('ontology/youtube/small-channel-income.json'),load('specimens/youtube.json')
+  ]);
+  assert.equal(data.cohort.channels,297);
+  assert.equal(data.cohort.representative_of_all_youtube_creators,false);
+  assert.equal(data.cohort.zero_and_nonmonetized_creators_included,false);
+  assert.equal(data.monthly.values.length,6);
+  for(const row of data.monthly.values){
+    assert(row.q25<=row.median&&row.median<=row.q75);
+    assert(row.median_views>=0);
+    assert(row.revenue_per_1000_views>=0);
+  }
+  assert.equal(data.monthly.values[1].median,88);
+  assert.equal(data.monthly.values[5].median,32);
+  assert(data.by_niche.values.some(x=>x.channels<15));
+  assert(dossier.evidence.some(s=>s.url===data.source.url));
+});
