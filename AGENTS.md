@@ -26,3 +26,11 @@ Read `CONSTITUTION.md` before editing this public repository.
 - Support keyboard navigation, mobile screens and accessible chart/progress labels.
 - Run `node scripts/verify.mjs` and `node --test tests/*.test.mjs`; report missing tests honestly. Avoid unnecessary automated GitHub Actions workflows.
 - Keep reporting concise: in-progress milestones with emoji labels, percentages and visual bars. Once bootstrapping is finished, stop rather than admitting unapproved specimens.
+
+
+## Aggregate social-audience research
+- For any platform carrying the `social_audience` profile, use `pipeline/social.json` in addition to core and domain research queues. Do not equate platform use, ad reach, views, creators or community membership.
+- Use `ontology/audience.schema.json` and populate demographic and subculture estimates only with attributable, dated, legitimately obtained aggregate sources and explicit denominators.
+- Age, sex, gender, ethnicity and political affiliation are not reliably inferable from individual profiles. Do not collect or infer sensitive attributes of individuals. Political content analysis remains descriptive, not demographic-targeted persuasion.
+- Separate child-directed animation from general animation. Respect child-audience data restrictions and never profile children.
+- Preserve overlapping subculture membership rather than adding overlapping populations. Where evidence is missing, say so.

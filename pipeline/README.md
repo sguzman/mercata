@@ -15,3 +15,11 @@ After the owner names a platform:
 `node scripts/intake.mjs --name "Example Market" --url "https://example.org" --domain "literature"`
 
 The example is synthetic and has not been run. Domain choices: games, literature, software, services, video, art, digital-products, subscriptions and other. Repeated IDs fail rather than overwrite. Investigate public claims in later research, not during intake.
+
+## Social audience and subculture profile
+
+For platforms with substantial public social, entertainment or creator-community functions, add the independent `social_audience` profile. The [social task catalog](social.json) adds detailed queues for platform reach, age/gender/ethnicity/country distributions, voluntary survey-based political identity, subculture size and overlap, discovery, engagement, formats, revenue fit, trends, and safeguards.
+
+Unlike ordinary domain specialists, this is a **cross-domain profile**: a video platform, community fiction publisher, or social portfolio site may qualify. The profile is assigned explicitly to admitted platforms; future video admissions receive it by default, and other domains require `--profile social_audience`.
+
+See [audience ontology](../ontology/README.md). Public sources, surveys and platform analytics have different access and denominator limits. Community size figures must distinguish viewers from content impressions or channel counts; all missing measurements remain unknown.

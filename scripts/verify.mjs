@@ -11,8 +11,11 @@ ensure(has(manifest.ontology.index) && has(manifest.ontology.data), 'Missing ont
 ensure(has(manifest.gallery.index) && has(manifest.gallery.data), 'Missing gallery path');
 const model = load('ontology/ontology.json'), schema = load('ontology/specimen.schema.json');
 ensure(model.schema_version === 1 && model.entities.length >= 20, 'Incomplete public ontology');
-ensure(schema.properties.color && schema.properties.evidence, 'Incomplete specimen schema');
-const core = load('pipeline/queues.json'), domains = load('pipeline/domains.json');
+ensure(schema.properties.color && schema.properties.evidence && schema.properties.audience_research, 'Incomplete specimen schema');
+const audienceSchema = load('ontology/audience.schema.json');
+ensure(audienceSchema.properties.communities && audienceSchema.properties.demographics, 'Incomplete audience ontology schema');
+const core = load('pipeline/queues.json'), domains = load('pipeline/domains.json'), social = load('pipeline/social.json');
+ensure(social.queues.length >= 8,'Missing social-audience research queues');
 ensure(core.queues.length >= 12, 'Missing core queues');
 ensure(domains.domains.length >= 9, 'Missing specialist domains');
 const allTasks = core.queues.flatMap(q => q.tasks.map(t => q.id + '/' + t.id));
@@ -30,12 +33,30 @@ for (const entry of index.specimens) {
   ensure(dossier.schema_version === 1 && dossier.color.hex === entry.color.hex,'Dossier schema/color mismatch');
   ensure(toHex(dossier.color.oklch) === dossier.color.hex,'Bad specimen color');
   const taskIds = new Set();
-  ensure(queue.queues.length === core.queues.length + 1,'Incomplete specimen queue');
-  for(const group of queue.queues) for(const task of group.tasks) {
+  const expectedByQueue = new Map([...core.queues, ...domains.domains.map(d => ({id:'special-'+d.id,tasks:d.tasks})).filter(d => d.id === 'special-'+dossier.domain), ...(socialEnabled ? social.queues : [])].map(q => [q.id,q.tasks.map(t => q.id+'/'+t.id)]));
+  const profiles = dossier.research_profiles || [];
+  ensure(JSON.stringify(profiles) === JSON.stringify(entry.research_profiles || []),'Research profile/index mismatch');
+  const socialEnabled = profiles.includes('social_audience');
+  ensure(queue.queues.length === core.queues.length + 1 + (socialEnabled ? social.queues.length : 0),'Incomplete specimen queue');
+  const expectedQueues = [...core.queues.map(q => q.id),'special-' + dossier.domain,
+    ...(socialEnabled ? social.queues.map(q => q.id) : [])];
+  ensure(expectedQueues.every(id => queue.queues.some(q => q.id === id)),'Missing named queues');
+  if(socialEnabled) {
+    ensure(dossier.audience_research?.profile === 'social_audience','Missing social-audience dossier structure');
+    for(const key of ['populations','demographics','communities','overlaps','formats','insights']) {
+      ensure(Array.isArray(dossier.audience_research[key]),'Missing audience research collection '+key);
+    }
+  }
+  for(const group of queue.queues) {
+  const expectedTasks = expectedByQueue.get(group.id);
+  ensure(expectedTasks && group.tasks.length === expectedTasks.length,'Task coverage mismatch in queue '+group.id);
+  ensure(expectedTasks.every(id => group.tasks.some(t => t.id === id)),'Missing task in queue '+group.id);
+  for(const task of group.tasks) {
     ensure(!taskIds.has(task.id),'Duplicate task ID');
     taskIds.add(task.id);
     ensure(Number.isInteger(task.progress) && task.progress >= 0 && task.progress <= 100,'Bad progress');
     ensure(task.progress < 100 || (task.status === 'complete' && task.evidence.length > 0),'Unverified completion: ' + task.id);
+  }
   }
 }
 const ledger=load('roadmap/progress.json');

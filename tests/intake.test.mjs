@@ -27,7 +27,7 @@ test('intake generates full empty research record and rejects duplicates', async
   const root=await fs.mkdtemp(path.join(os.tmpdir(),'mercata-test-'));
   try {
     for (const folder of ['gallery','pipeline','specimens','queues']) await fs.mkdir(path.join(root,folder));
-    for (const file of ['gallery/index.json','pipeline/queues.json','pipeline/domains.json']) {
+    for (const file of ['gallery/index.json','pipeline/queues.json','pipeline/domains.json','pipeline/social.json']) {
       await fs.copyFile(path.join(project,file),path.join(root,file));
     }
     const args=['scripts/intake.mjs','--name','Synthetic Platform','--url','https://example.org/','--domain','literature','--root',root];
@@ -43,5 +43,27 @@ test('intake generates full empty research record and rejects duplicates', async
     assert(queue.queues.flatMap(q=>q.tasks).length>=75);
     assert(queue.queues.every(q=>q.tasks.every(t=>t.progress===0 && t.evidence.length===0)));
     assert.throws(()=>execFileSync(process.execPath,args,{cwd:project,stdio:'pipe'}));
+  } finally { await fs.rm(root,{recursive:true,force:true}); }
+});
+
+test('social audience profile creates extra queues without pretending to know demographics', async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(),'mercata-social-'));
+  try {
+    for (const folder of ['gallery','pipeline','specimens','queues']) await fs.mkdir(path.join(root,folder));
+    for (const file of ['gallery/index.json','pipeline/queues.json','pipeline/domains.json','pipeline/social.json'])
+      await fs.copyFile(path.join(project,file),path.join(root,file));
+    const args=['scripts/intake.mjs','--name','Synthetic Video Platform','--url','https://example.org/',
+      '--domain','video','--root',root];
+    execFileSync(process.execPath,args,{cwd:project,stdio:'pipe'});
+    const record=JSON.parse(await fs.readFile(path.join(root,'specimens/synthetic-video-platform.json')));
+    const queued=JSON.parse(await fs.readFile(path.join(root,'queues/synthetic-video-platform.json')));
+    assert.deepEqual(record.research_profiles,['social_audience']);
+    assert.deepEqual(record.audience_research.populations,[]);
+    assert.deepEqual(record.audience_research.demographics,[]);
+    assert.deepEqual(record.audience_research.communities,[]);
+    assert(queued.queues.some(q=>q.id==='subculture-atlas'));
+    assert(queued.queues.some(q=>q.id==='audience-demography'));
+    assert(queued.queues.length>13);
+    assert(queued.queues.flatMap(q=>q.tasks).every(t=>t.progress===0 && t.evidence.length===0));
   } finally { await fs.rm(root,{recursive:true,force:true}); }
 });

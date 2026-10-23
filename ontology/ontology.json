@@ -292,6 +292,129 @@
         "queue",
         "claim"
       ]
+    },
+    {
+      "id": "platform_audience",
+      "definition": "Population of platform users, visitors, viewers or reachable advertising accounts.",
+      "attributes": [
+        "population_definition",
+        "region",
+        "period",
+        "metric",
+        "source_ids"
+      ],
+      "relates_to": [
+        "marketplace",
+        "audience_estimate"
+      ]
+    },
+    {
+      "id": "audience_segment",
+      "definition": "Descriptive aggregate group defined by one or more measured characteristics.",
+      "attributes": [
+        "definition",
+        "population",
+        "geography",
+        "period"
+      ],
+      "relates_to": [
+        "demographic_measurement",
+        "community"
+      ]
+    },
+    {
+      "id": "demographic_measurement",
+      "definition": "Documented age, gender, sex, ethnicity, country, language or other aggregate distribution.",
+      "attributes": [
+        "dimension",
+        "category",
+        "share_percent",
+        "population",
+        "source_ids",
+        "method"
+      ],
+      "relates_to": [
+        "platform_audience",
+        "audience_segment"
+      ]
+    },
+    {
+      "id": "subculture",
+      "definition": "Documented topical or social content community with flexible, overlapping membership.",
+      "attributes": [
+        "id",
+        "definition",
+        "aliases",
+        "parents",
+        "measurements"
+      ],
+      "relates_to": [
+        "marketplace",
+        "audience_segment",
+        "community_overlap"
+      ]
+    },
+    {
+      "id": "audience_estimate",
+      "definition": "Population or engagement estimate with a distinct statistical unit and method.",
+      "attributes": [
+        "metric",
+        "unit",
+        "value",
+        "population",
+        "geography",
+        "period",
+        "source_ids",
+        "limitations"
+      ],
+      "relates_to": [
+        "platform_audience",
+        "subculture"
+      ]
+    },
+    {
+      "id": "community_overlap",
+      "definition": "Measured intersection of two or more communities.",
+      "attributes": [
+        "community_ids",
+        "value",
+        "unit",
+        "period",
+        "source_ids"
+      ],
+      "relates_to": [
+        "subculture"
+      ]
+    },
+    {
+      "id": "content_format",
+      "definition": "Medium, structure or distribution format for public creative content.",
+      "attributes": [
+        "label",
+        "constraints",
+        "measurement"
+      ],
+      "relates_to": [
+        "subculture"
+      ]
+    },
+    {
+      "id": "audience_opportunity",
+      "definition": "Evidence-backed content niche and commercial hypothesis.",
+      "attributes": [
+        "target_interest",
+        "format",
+        "demand",
+        "supply",
+        "cost",
+        "monetization",
+        "limitations"
+      ],
+      "relates_to": [
+        "opportunity",
+        "audience_segment",
+        "subculture"
+      ]
     }
   ],
   "vocabularies": {
@@ -349,6 +472,38 @@
       "in_progress",
       "blocked",
       "complete"
+    ],
+    "research_profile": [
+      "social_audience"
+    ],
+    "audience_dimension": [
+      "age",
+      "gender",
+      "sex",
+      "race_ethnicity",
+      "country",
+      "language",
+      "education",
+      "household_income",
+      "political_affiliation",
+      "religion",
+      "urbanicity",
+      "other"
+    ],
+    "audience_units": [
+      "people",
+      "users",
+      "accounts",
+      "ad-reach",
+      "creators",
+      "channels",
+      "videos",
+      "posts",
+      "views",
+      "watch-hours",
+      "live-viewers",
+      "percent",
+      "other"
     ]
   },
   "relations": [
@@ -391,6 +546,31 @@
       "subject": "queue",
       "predicate": "contains",
       "object": "task"
+    },
+    {
+      "subject": "marketplace",
+      "predicate": "has_audience",
+      "object": "platform_audience"
+    },
+    {
+      "subject": "subculture",
+      "predicate": "estimated_by",
+      "object": "audience_estimate"
+    },
+    {
+      "subject": "subculture",
+      "predicate": "overlaps",
+      "object": "community_overlap"
+    },
+    {
+      "subject": "audience_segment",
+      "predicate": "measured_by",
+      "object": "demographic_measurement"
+    },
+    {
+      "subject": "audience_opportunity",
+      "predicate": "serves",
+      "object": "subculture"
     }
   ],
   "rules": [
@@ -403,7 +583,18 @@
     "Economic claims must record public provenance and applicable jurisdiction.",
     "Trend comparisons must use compatible definitions.",
     "Each task at 100 percent needs acceptance evidence.",
-    "Specimen colors are identifiers, never rankings."
+    "Specimen colors are identifiers, never rankings.",
+    "Platform MAU, ad reach, registered accounts, creators, channels, viewers and views are different measures.",
+    "Demographic estimates require source, geography, time, survey or analytics population, and limitations.",
+    "Sex and gender are separate measures; identity data is used only in aggregate where reliable and authorized.",
+    "Political affiliation and race or ethnicity must not be inferred from individuals, appearance or consumption.",
+    "Community labels can overlap. Never sum community sizes without deduplication.",
+    "Search result totals and aggregate content views are not unique users.",
+    "Children's content requires child-directed content policy review and cannot justify profiling children.",
+    "Missing data stays unknown. Do not claim exact population size from samples without explicit estimation methods.",
+    "Descriptive political-audience research does not authorize persuasive demographic political targeting."
   ],
-  "specimen_schema": "specimen.schema.json"
+  "specimen_schema": "specimen.schema.json",
+  "audience_schema": "audience.schema.json",
+  "social_research_queues": "../pipeline/social.json"
 }

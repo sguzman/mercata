@@ -1,0 +1,338 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sguzman.github.io/mercata/ontology/audience.schema.json",
+  "title": "Mercata aggregate audience research",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "profile",
+    "populations",
+    "demographics",
+    "communities",
+    "overlaps",
+    "formats",
+    "insights"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "profile": {
+      "const": "social_audience"
+    },
+    "populations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/estimate"
+      }
+    },
+    "demographics": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/demographic"
+      }
+    },
+    "communities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/community"
+      }
+    },
+    "overlaps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/overlap"
+      }
+    },
+    "formats": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/estimate"
+      }
+    },
+    "insights": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/insight"
+      }
+    }
+  },
+  "$defs": {
+    "estimate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "metric",
+        "value",
+        "unit",
+        "population",
+        "geography",
+        "period",
+        "method",
+        "source_ids",
+        "limitations"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "metric": {
+          "type": "string"
+        },
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "people",
+            "users",
+            "accounts",
+            "ad-reach",
+            "creators",
+            "channels",
+            "videos",
+            "posts",
+            "views",
+            "watch-hours",
+            "live-viewers",
+            "percent",
+            "other"
+          ]
+        },
+        "population": {
+          "type": "string"
+        },
+        "geography": {
+          "type": "string"
+        },
+        "period": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limitations": {
+          "type": "string"
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "demographic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "dimension",
+        "category",
+        "share_percent",
+        "population",
+        "geography",
+        "period",
+        "method",
+        "source_ids",
+        "limitations"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "dimension": {
+          "enum": [
+            "age",
+            "gender",
+            "sex",
+            "race_ethnicity",
+            "country",
+            "language",
+            "education",
+            "household_income",
+            "political_affiliation",
+            "religion",
+            "urbanicity",
+            "other"
+          ]
+        },
+        "category": {
+          "type": "string"
+        },
+        "share_percent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "population": {
+          "type": "string"
+        },
+        "geography": {
+          "type": "string"
+        },
+        "period": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limitations": {
+          "type": "string"
+        }
+      }
+    },
+    "community": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "definition",
+        "aliases",
+        "parent_ids",
+        "estimates",
+        "demographic_ids"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "definition": {
+          "type": "string"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "parent_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "estimates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/estimate"
+          }
+        },
+        "demographic_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "overlap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "community_ids",
+        "value",
+        "unit",
+        "period",
+        "method",
+        "source_ids",
+        "limitations"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "community_ids": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string"
+          }
+        },
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "people",
+            "users",
+            "percent",
+            "other"
+          ]
+        },
+        "period": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limitations": {
+          "type": "string"
+        }
+      }
+    },
+    "insight": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "statement",
+        "source_ids",
+        "limitations"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limitations": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

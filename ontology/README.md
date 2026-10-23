@@ -28,3 +28,20 @@ Specimen color pairs contain an OKLCH coordinate and the corresponding sRGB hex 
 ## Relationships
 
 Marketplaces offer opportunities and impose fees, eligibility rules, rights, payouts and risks. Opportunities are tested by experiments. Sources support claims; claims support observations and interpretations. Observations define income distributions and trends. Each specimen owns research queues and tasks. The [pipeline](../pipeline/README.md) documents task acceptance.
+
+
+## Social and community-platform analysis
+
+Some marketplaces double as social networks, entertainment communities, or audience-led publishing venues. The `social_audience` research profile activates a separate set of [social research queues](../pipeline/social.json). This profile is independent of the marketplace's commercial domain; a fiction site can be studied as both a publishing marketplace and a social community.
+
+The supporting [audience schema](audience.schema.json) separates:
+
+- **Platform populations:** active users, registered accounts, ad reach, buyers, creators, views, watch time and countries. These are not interchangeable.
+- **Demographic measurements:** age, sex, gender, race/ethnicity, countries, languages, income, education, political affiliation and other characteristics, only from legitimate aggregate sources.
+- **Subcultures:** named overlapping groups or content verticals with definitions, aliases, parent relationships and multiple independent size estimates.
+- **Overlaps:** intersections between communities. Size estimates cannot simply be added.
+- **Formats and insights:** consumption patterns and commercial hypotheses, linked to dated, reproducible evidence.
+
+A community's *size* must always identify its unit: distinct participants, viewers, followers, creators, channels, posts, total views or watch hours. A search result count is not a user census. Demographic characteristics cannot be assigned to individuals based on what they watch, how they look, or what they post. Aggregate political identity data, if collected, is descriptive rather than a basis for targeted political persuasion. Children’s content has separate data-access and audience-protection rules.
+
+These entities are part of the version-1 ontology; the audience schema is initially empty for admitted platforms. No inferred community or demographic figures have been entered.

@@ -1,0 +1,669 @@
+{
+  "schema_version": 1,
+  "id": "social_audience",
+  "title": "Social-platform audience and subculture research",
+  "description": "Conditional research queues for platforms functioning as social, community, or audience-led publishing systems. No demographic or market facts are assumed.",
+  "applicability": "explicit_profile",
+  "queues": [
+    {
+      "id": "audience-scale",
+      "emoji": "🌍",
+      "title": "Platform population and use",
+      "objective": "Define how many people actually use the platform, in what ways, and where",
+      "tasks": [
+        {
+          "id": "population-definitions",
+          "emoji": "🔎",
+          "title": "Distinguish users, accounts, visitors and advertising reach",
+          "acceptance": "Define numerator, denominator, eligibility and duplicate-account limits.",
+          "weight": 1
+        },
+        {
+          "id": "mau",
+          "emoji": "🔎",
+          "title": "Estimate monthly active users",
+          "acceptance": "Find dated MAU and geographic coverage, or record a documented unknown.",
+          "weight": 1
+        },
+        {
+          "id": "dau",
+          "emoji": "🔎",
+          "title": "Estimate daily active users",
+          "acceptance": "Find dated DAU, activity definition and uncertainty, or record unknown.",
+          "weight": 1
+        },
+        {
+          "id": "ad-reach",
+          "emoji": "🔎",
+          "title": "Measure advertising reach separately",
+          "acceptance": "Separate addressable ad audience from active user or subscriber counts.",
+          "weight": 1
+        },
+        {
+          "id": "countries",
+          "emoji": "🔎",
+          "title": "Map usage across countries",
+          "acceptance": "Build country-level sourced distribution, dates, excluded regions and missing coverage.",
+          "weight": 1
+        },
+        {
+          "id": "regional-change",
+          "emoji": "🔎",
+          "title": "Track population growth by region",
+          "acceptance": "Create comparable historical series for countries and languages without mixing units.",
+          "weight": 1
+        },
+        {
+          "id": "device",
+          "emoji": "🔎",
+          "title": "Study device and access differences",
+          "acceptance": "Source mobile, desktop, TV or other device mix and usage limitations.",
+          "weight": 1
+        },
+        {
+          "id": "deduplication",
+          "emoji": "🔎",
+          "title": "Study duplicate users and cross-platform overlap",
+          "acceptance": "Document account versus person counts and deduplication uncertainty.",
+          "weight": 1
+        },
+        {
+          "id": "participation",
+          "emoji": "🔎",
+          "title": "Separate creators, uploaders, commenters, subscribers and viewers",
+          "acceptance": "Define active consumption and active production populations independently.",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "audience-demography",
+      "emoji": "👥",
+      "title": "Audience demographics",
+      "objective": "Measure age and social composition at defined population and geographic levels",
+      "tasks": [
+        {
+          "id": "age",
+          "emoji": "🔎",
+          "title": "Describe age distributions",
+          "acceptance": "Use consistent brackets and survey/analytics bases; never infer individuals' ages.",
+          "weight": 1
+        },
+        {
+          "id": "gender",
+          "emoji": "🔎",
+          "title": "Describe reported gender distributions",
+          "acceptance": "State self-report, platform classifications, nonresponse and category limitations.",
+          "weight": 1
+        },
+        {
+          "id": "sex",
+          "emoji": "🔎",
+          "title": "Investigate sex breakdowns where independently supported",
+          "acceptance": "Distinguish sex from gender and mark unmeasured or inapplicable categories unknown.",
+          "weight": 1
+        },
+        {
+          "id": "ethnicity",
+          "emoji": "🔎",
+          "title": "Research race and ethnicity where published and meaningful",
+          "acceptance": "Use voluntary aggregate data, survey wording, jurisdiction and sample limits; no inference from appearance.",
+          "weight": 1
+        },
+        {
+          "id": "countries",
+          "emoji": "🔎",
+          "title": "Break down geographic residence and reach",
+          "acceptance": "Document top countries, share or counts, sampling design and dates.",
+          "weight": 1
+        },
+        {
+          "id": "languages",
+          "emoji": "🔎",
+          "title": "Describe primary languages and multilingual audiences",
+          "acceptance": "State measurement method and differences between language and country.",
+          "weight": 1
+        },
+        {
+          "id": "education",
+          "emoji": "🔎",
+          "title": "Find education distributions if available",
+          "acceptance": "Use representative population-specific survey evidence or leave unknown.",
+          "weight": 1
+        },
+        {
+          "id": "income",
+          "emoji": "🔎",
+          "title": "Find socioeconomic and household income distributions",
+          "acceptance": "Provide inflation/time, currency, age sample, country and survey limitations.",
+          "weight": 1
+        },
+        {
+          "id": "political",
+          "emoji": "🔎",
+          "title": "Document aggregate political affiliation if independently surveyed",
+          "acceptance": "Use voluntary, aggregate surveys only; no inference of individuals' political identity or persuasion targeting.",
+          "weight": 1
+        },
+        {
+          "id": "religion",
+          "emoji": "🔎",
+          "title": "Document aggregate religious identity only where robustly surveyed",
+          "acceptance": "Apply local context and privacy limits; leave unsupported splits unknown.",
+          "weight": 1
+        },
+        {
+          "id": "urban",
+          "emoji": "🔎",
+          "title": "Examine urban/rural and regional differences",
+          "acceptance": "Source geographic classifications and survey sampling differences.",
+          "weight": 1
+        },
+        {
+          "id": "intersections",
+          "emoji": "🔎",
+          "title": "Examine credible demographic cross-tabulations",
+          "acceptance": "Specify combinations, sample sizes and representativeness; do not multiply marginal percentages.",
+          "weight": 1
+        },
+        {
+          "id": "bias",
+          "emoji": "🔎",
+          "title": "Audit demographic data access and bias",
+          "acceptance": "Record nonresponse, login coverage, suppression, ad-reach modeling and age-report uncertainty.",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "subculture-atlas",
+      "emoji": "🧩",
+      "title": "Subculture and topic atlas",
+      "objective": "Map communities and measure their audiences without adding overlapping totals",
+      "tasks": [
+        {
+          "id": "taxonomy",
+          "emoji": "🔎",
+          "title": "Define reproducible and revisable content-community taxonomy",
+          "acceptance": "Specify inclusion rules, overlapping labels, aliases and cross-community tagging.",
+          "weight": 1
+        },
+        {
+          "id": "beauty",
+          "emoji": "🔎",
+          "title": "Research beauty, makeup and cosmetics communities",
+          "acceptance": "Define the vertical and seek dated audience, channel, output and engagement estimates.",
+          "weight": 1
+        },
+        {
+          "id": "feminine",
+          "emoji": "🔎",
+          "title": "Research feminine lifestyle, fashion and girl-oriented content",
+          "acceptance": "Separate adult women's content and material directed at girls/minors; document units and labels.",
+          "weight": 1
+        },
+        {
+          "id": "animation",
+          "emoji": "🔎",
+          "title": "Research animation, including children's animation",
+          "acceptance": "Separate all-ages animation from child-directed content and record audience-data restrictions.",
+          "weight": 1
+        },
+        {
+          "id": "politics",
+          "emoji": "🔎",
+          "title": "Research political news, commentary and civic communities",
+          "acceptance": "Define content categories with neutral sourcing; measure content, audiences and geography without persuasion profiling.",
+          "weight": 1
+        },
+        {
+          "id": "memes",
+          "emoji": "🔎",
+          "title": "Research memes, humor and remix cultures",
+          "acceptance": "Define platform-native formats, language and cross-topic overlaps.",
+          "weight": 1
+        },
+        {
+          "id": "gaming",
+          "emoji": "🔎",
+          "title": "Research gaming and live gaming communities",
+          "acceptance": "Separate creators, viewers, games, viewers' countries and formats.",
+          "weight": 1
+        },
+        {
+          "id": "other-verticals",
+          "emoji": "🔎",
+          "title": "Map music, technology, education, fitness, finance and other sizable verticals",
+          "acceptance": "Build an extensible taxonomy using public evidence, not a closed list.",
+          "weight": 1
+        },
+        {
+          "id": "audience-size",
+          "emoji": "🔎",
+          "title": "Estimate audience size of each defined community",
+          "acceptance": "Record metric type, geography, period, data access, assumptions and bounds for every figure.",
+          "weight": 1
+        },
+        {
+          "id": "creator-size",
+          "emoji": "🔎",
+          "title": "Estimate number of active creators or channels per community",
+          "acceptance": "Use a reproducible sampling strategy and distinguish active versus historical accounts.",
+          "weight": 1
+        },
+        {
+          "id": "output-demand",
+          "emoji": "🔎",
+          "title": "Measure views, watch time, posts or live attendance per vertical",
+          "acceptance": "Never substitute content counts for unique people or use raw search hits as exact census.",
+          "weight": 1
+        },
+        {
+          "id": "overlap",
+          "emoji": "🔎",
+          "title": "Measure or bound intersections between communities",
+          "acceptance": "Record audience overlap and explain why community totals must not be summed.",
+          "weight": 1
+        },
+        {
+          "id": "representativeness",
+          "emoji": "🔎",
+          "title": "Audit errors in community labeling and samples",
+          "acceptance": "Check multilingual labels, ambiguous niches, unavailable private channels and sampling bias.",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "content-formats",
+      "emoji": "🎬",
+      "title": "Content formats and behavior",
+      "objective": "Study what audiences consume and which modes of content are growing",
+      "tasks": [
+        {
+          "id": "formats",
+          "emoji": "🔎",
+          "title": "Map shorts, long-form, streams, audio, posts and other formats",
+          "acceptance": "Define format availability, geography and population.",
+          "weight": 1
+        },
+        {
+          "id": "viewing-time",
+          "emoji": "🔎",
+          "title": "Measure watch time or attention by vertical",
+          "acceptance": "Distinguish minutes, sessions, views and unique people.",
+          "weight": 1
+        },
+        {
+          "id": "cadence",
+          "emoji": "🔎",
+          "title": "Estimate creator publication cadence by community",
+          "acceptance": "Study release frequency and variance in a defined creator sample.",
+          "weight": 1
+        },
+        {
+          "id": "completion",
+          "emoji": "🔎",
+          "title": "Research retention and completion where publicly available",
+          "acceptance": "Separate creator-owned analytics from publicly visible estimates.",
+          "weight": 1
+        },
+        {
+          "id": "devices",
+          "emoji": "🔎",
+          "title": "Compare format consumption across devices",
+          "acceptance": "Source differences by country, screen, bandwidth and period.",
+          "weight": 1
+        },
+        {
+          "id": "language",
+          "emoji": "🔎",
+          "title": "Research language and subtitling habits",
+          "acceptance": "Record method and evidence on multilingual accessibility.",
+          "weight": 1
+        },
+        {
+          "id": "cross-format",
+          "emoji": "🔎",
+          "title": "Measure cross-format and cross-vertical transitions",
+          "acceptance": "Identify observable transitions without inventing audience-level attribution.",
+          "weight": 1
+        },
+        {
+          "id": "geographic-timing",
+          "emoji": "🔎",
+          "title": "Study time zones and culturally specific posting patterns",
+          "acceptance": "Use aggregated time and geography evidence, not individual monitoring.",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "social-discovery",
+      "emoji": "🧭",
+      "title": "Social discovery and competition",
+      "objective": "Examine recommendations, community exposure and organic acquisition",
+      "tasks": [
+        {
+          "id": "surfaces",
+          "emoji": "🔎",
+          "title": "Document the major discovery and subscription surfaces",
+          "acceptance": "Use official platform documentation for recommendations, feeds, search and community features.",
+          "weight": 1
+        },
+        {
+          "id": "search-demand",
+          "emoji": "🔎",
+          "title": "Research topic-level search interest",
+          "acceptance": "Use disclosed trends and clearly bounded query samples, not exact search-count claims.",
+          "weight": 1
+        },
+        {
+          "id": "algorithm",
+          "emoji": "🔎",
+          "title": "Document official ranking and distribution signals",
+          "acceptance": "Separate confirmed descriptions from speculative creator lore.",
+          "weight": 1
+        },
+        {
+          "id": "community-gateways",
+          "emoji": "🔎",
+          "title": "Map publicly documented referral hubs and cross-promotion",
+          "acceptance": "Study external referrals, public communities and related content paths.",
+          "weight": 1
+        },
+        {
+          "id": "incumbents",
+          "emoji": "🔎",
+          "title": "Measure concentration among established accounts by vertical",
+          "acceptance": "Sample visible creators with dates, method and concentration limits.",
+          "weight": 1
+        },
+        {
+          "id": "new-creators",
+          "emoji": "🔎",
+          "title": "Investigate discovery for new or small creators",
+          "acceptance": "Find credible cohort studies and separate new-creator results from top channels.",
+          "weight": 1
+        },
+        {
+          "id": "organic-paid",
+          "emoji": "🔎",
+          "title": "Separate paid reach, organic reach and creator partnerships",
+          "acceptance": "Record comparable denominators and any disclosed costs.",
+          "weight": 1
+        },
+        {
+          "id": "policy-change",
+          "emoji": "🔎",
+          "title": "Track changes in algorithmic and eligibility policy",
+          "acceptance": "Record rule dates and affected content formats and regions.",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "community-dynamics",
+      "emoji": "🫂",
+      "title": "Community culture and participation",
+      "objective": "Understand norms, cross-community relationships and audience engagement",
+      "tasks": [
+        {
+          "id": "communities",
+          "emoji": "🔎",
+          "title": "Identify public subculture communities and their definitions",
+          "acceptance": "Source visible communities without scraping private memberships.",
+          "weight": 1
+        },
+        {
+          "id": "norms",
+          "emoji": "🔎",
+          "title": "Record community norms and common formats",
+          "acceptance": "Use public, attributable descriptions rather than stereotypes.",
+          "weight": 1
+        },
+        {
+          "id": "engagement",
+          "emoji": "🔎",
+          "title": "Compare comments, reactions and participation rates",
+          "acceptance": "Normalize metrics by exposure where possible, date and methodology.",
+          "weight": 1
+        },
+        {
+          "id": "retention",
+          "emoji": "🔎",
+          "title": "Study return visits and community loyalty",
+          "acceptance": "Use appropriately scoped panel, survey or creator analytics, not fabricated retention.",
+          "weight": 1
+        },
+        {
+          "id": "interaction",
+          "emoji": "🔎",
+          "title": "Study livestream, forum and creator-community interactions",
+          "acceptance": "Document platform-native social affordances and observable effects.",
+          "weight": 1
+        },
+        {
+          "id": "sentiment",
+          "emoji": "🔎",
+          "title": "Study publicly expressed satisfaction and concerns",
+          "acceptance": "Explain nonrepresentative sample limits and avoid private-person profiling.",
+          "weight": 1
+        },
+        {
+          "id": "spillover",
+          "emoji": "🔎",
+          "title": "Map audience movement and content overlap with other platforms",
+          "acceptance": "Distinguish verified traffic from speculation and double-counting.",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "audience-economics",
+      "emoji": "💸",
+      "title": "Audience and community economics",
+      "objective": "Relate audience segments to viable content economics and creator workloads",
+      "tasks": [
+        {
+          "id": "monetization-vertical",
+          "emoji": "🔎",
+          "title": "Compare monetization models by content category",
+          "acceptance": "Source actual available ads, subscriptions, product sales, tips and sponsorship mechanisms.",
+          "weight": 1
+        },
+        {
+          "id": "rpm",
+          "emoji": "🔎",
+          "title": "Investigate CPM or RPM distribution by geography and category",
+          "acceptance": "Use credible samples; do not infer a platform-wide rate from exceptional channels.",
+          "weight": 1
+        },
+        {
+          "id": "sponsors",
+          "emoji": "🔎",
+          "title": "Map public sponsor demand and brand-safety requirements",
+          "acceptance": "Distinguish advertiser vertical, season, region and audience rules.",
+          "weight": 1
+        },
+        {
+          "id": "revenue-per-effort",
+          "emoji": "🔎",
+          "title": "Compare production cost and effort by content format",
+          "acceptance": "Define editing, research, labor, software, fulfillment and marketing inputs.",
+          "weight": 1
+        },
+        {
+          "id": "funnels",
+          "emoji": "🔎",
+          "title": "Trace content to subscribers, customers and sales",
+          "acceptance": "Document plausible funnels and conversion evidence with dates.",
+          "weight": 1
+        },
+        {
+          "id": "crowding",
+          "emoji": "🔎",
+          "title": "Compare audience demand against creator supply by subculture",
+          "acceptance": "Use consistent observation units and explicitly uncertain opportunity estimates.",
+          "weight": 1
+        },
+        {
+          "id": "scenario",
+          "emoji": "🔎",
+          "title": "Build audience-to-revenue sensitivity scenarios",
+          "acceptance": "Expose assumptions for views, engagement, conversion, revenue splits and effort.",
+          "weight": 1
+        },
+        {
+          "id": "experiments",
+          "emoji": "🔎",
+          "title": "Specify ethical experiments for commercial content formats",
+          "acceptance": "Define hypothesis, audience, measurement, spending limits and failure criteria.",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "audience-trends",
+      "emoji": "📈",
+      "title": "Subculture trends and shifts",
+      "objective": "Watch how community sizes, formats and economics change over time",
+      "tasks": [
+        {
+          "id": "time-series",
+          "emoji": "🔎",
+          "title": "Establish repeatable dated community-size series",
+          "acceptance": "Do not treat changing API search estimates as an exact longitudinal census.",
+          "weight": 1
+        },
+        {
+          "id": "emerging",
+          "emoji": "🔎",
+          "title": "Find emerging communities and formats",
+          "acceptance": "Document evidence threshold, sampling and uncertainty, not hype.",
+          "weight": 1
+        },
+        {
+          "id": "declining",
+          "emoji": "🔎",
+          "title": "Identify shrinking or changing attention shares",
+          "acceptance": "Use compatible historical categories and comparable time windows.",
+          "weight": 1
+        },
+        {
+          "id": "seasonality",
+          "emoji": "🔎",
+          "title": "Study cyclical interest by country and topic",
+          "acceptance": "Account for school calendars, major events and seasonal selection bias.",
+          "weight": 1
+        },
+        {
+          "id": "country-change",
+          "emoji": "🔎",
+          "title": "Compare demographic and interest shifts by region",
+          "acceptance": "Use comparable survey or platform measurements and flag data revisions.",
+          "weight": 1
+        },
+        {
+          "id": "cross-platform",
+          "emoji": "🔎",
+          "title": "Study cross-platform cultural diffusion",
+          "acceptance": "Distinguish first appearance, later adoption and audience migration.",
+          "weight": 1
+        },
+        {
+          "id": "forecast-limits",
+          "emoji": "🔎",
+          "title": "Assess the reliability of niche-growth projections",
+          "acceptance": "Explicitly document model assumptions, uncertainty and failed comparisons.",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "audience-safeguards",
+      "emoji": "🛡️",
+      "title": "Data limitations and audience safeguards",
+      "objective": "Keep audience research aggregate, reproducible and compliant",
+      "tasks": [
+        {
+          "id": "access",
+          "emoji": "🔎",
+          "title": "Inventory lawful official APIs, research reports and survey access",
+          "acceptance": "Document access rights, rate limits, sampling, provenance and Terms compliance.",
+          "weight": 1
+        },
+        {
+          "id": "privacy",
+          "emoji": "🔎",
+          "title": "Verify aggregation and personal-data protections",
+          "acceptance": "Exclude private profiling, scraped sensitive attributes and individual-level inference.",
+          "weight": 1
+        },
+        {
+          "id": "minor-protection",
+          "emoji": "🔎",
+          "title": "Assess child-directed content rules and analytics limitations",
+          "acceptance": "Record child-audience restrictions; do not profile individual children.",
+          "weight": 1
+        },
+        {
+          "id": "political-neutrality",
+          "emoji": "🔎",
+          "title": "Document neutral analysis boundaries for political audiences",
+          "acceptance": "Permit descriptive aggregate research, not demographic-targeted political persuasion.",
+          "weight": 1
+        },
+        {
+          "id": "advertiser",
+          "emoji": "🔎",
+          "title": "Review ad suitability and content-specific restrictions",
+          "acceptance": "Record platform-specific policy revisions with dates.",
+          "weight": 1
+        },
+        {
+          "id": "uncertainty",
+          "emoji": "🔎",
+          "title": "Publish sensitivity ranges and data gaps",
+          "acceptance": "Mark missing demographic and subculture estimates unknown with precise limitations.",
+          "weight": 1
+        },
+        {
+          "id": "audit",
+          "emoji": "🔎",
+          "title": "Independent public evidence and taxonomy review",
+          "acceptance": "Verify every number's denominator, date, labels, source and sample method.",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "illustrative_topics": [
+    "beauty",
+    "feminine-lifestyle",
+    "girls-content",
+    "children-animation",
+    "political-commentary",
+    "memes",
+    "gaming",
+    "music",
+    "technology",
+    "education",
+    "fitness",
+    "literature",
+    "finance",
+    "fashion",
+    "anime"
+  ],
+  "measurement_rules": [
+    "Platform MAU, ad reach, registered accounts, creators, channels, viewers and views are different measures.",
+    "Demographic estimates require source, geography, time, survey or analytics population, and limitations.",
+    "Sex and gender are separate measures; identity data is used only in aggregate where reliable and authorized.",
+    "Political affiliation and race or ethnicity must not be inferred from individuals, appearance or consumption.",
+    "Community labels can overlap. Never sum community sizes without deduplication.",
+    "Search result totals and aggregate content views are not unique users.",
+    "Children's content requires child-directed content policy review and cannot justify profiling children.",
+    "Missing data stays unknown. Do not claim exact population size from samples without explicit estimation methods.",
+    "Descriptive political-audience research does not authorize persuasive demographic political targeting."
+  ]
+}
