@@ -51,6 +51,14 @@ for (const entry of index.specimens) {
   if(entry.id==='youtube') {
     const model=load('ontology/youtube/model.json');
     const growth=load('ontology/youtube/creator-growth.json');
+    const formatStudy=load('ontology/youtube/content-formats.json');
+    ensure(formatStudy.formats.length===8,'Incomplete YouTube format research');
+    ensure(new Set(formatStudy.formats.map(x=>x.id)).size===formatStudy.formats.length,'Duplicate format IDs');
+    ensure(formatStudy.formats.every(x=>x.source_ids.length && x.source_ids.every(id=>sourceIds.has(id))),
+      'Format research without official sources');
+    ensure(formatStudy.formats.every(x=>x.format_median_income===null && x.production_hours===null),
+      'Invented creator format earnings or labor hours');
+
     ensure(growth.stages.length===6,'Incomplete YouTube discovery funnel');
     ensure(growth.metrics.length>=17,'Incomplete YouTube audience metrics');
     const stageIds=new Set(growth.stages.map(x=>x.id));

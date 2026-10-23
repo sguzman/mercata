@@ -289,3 +289,19 @@ test('YouTube discovery metrics keep viewer identities and event counts separate
   assert(growth.metrics.every(x=>x.observed_value===null));
   assert(growth.stages.every(x=>x.source_ids.every(id=>sourceIds.has(id))));
 });
+
+test('Eight YouTube formats preserve different access and link rules',async()=>{
+  const [formats,dossier]=await Promise.all([
+    load('ontology/youtube/content-formats.json'),load('specimens/youtube.json')
+  ]);
+  const sourceIds=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(formats.formats.length,8);
+  const shorts=formats.formats.find(x=>x.id==='shorts');
+  assert(shorts.links.some(x=>x.includes('not clickable')));
+  const mobile=formats.formats.find(x=>x.id==='mobile-live');
+  assert(mobile.entry_gate.includes('50-subscriber'));
+  const podcast=formats.formats.find(x=>x.id==='podcast');
+  assert(podcast.format_rule.includes('playlist'));
+  assert(formats.formats.every(x=>x.source_ids.every(id=>sourceIds.has(id))));
+  assert(formats.formats.every(x=>x.format_median_income===null && x.production_hours===null));
+});

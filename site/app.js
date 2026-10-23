@@ -823,13 +823,43 @@ function renderCreatorGrowth(data,dossier) {
   return section;
 }
 
+function renderContentFormats(data,dossier) {
+  if(!data)return null;
+  const section=make('section','content-format-section');
+  const details=make('details','content-format-details');
+  details.append(make('summary','','Compare '+data.formats.length+' ways to publish and distribute'));
+  details.append(make('p','measure-limit','Different publication formats have different discovery, link and eligibility rules. None has a verified typical profit or success rate.'));
+  const grid=make('div','content-formats-grid');
+  for(const format of data.formats){
+    const card=make('article','content-format-card');
+    card.append(make('h5','',format.label));
+    card.append(make('p','',format.format_rule));
+    card.append(make('small','', 'Access: '+format.entry_gate));
+    const inner=make('details','content-format-inner');
+    inner.append(make('summary','','Discovery and earning details'));
+    inner.append(make('p','', 'Discovery: '+format.discovery.join(', ')));
+    inner.append(make('p','', 'Possible revenue routes: '+format.money.join(', ').replaceAll('_',' ')));
+    inner.append(make('p','', 'Links: '+format.links.join('; ')));
+    inner.append(make('p','measure-limit',format.cautions.join(' ')));
+    inner.append(audienceSources(format.source_ids,dossier));
+    card.append(inner);
+    grid.append(card);
+  }
+  details.append(grid);
+  const link=make('a','inline-link','Read the format and link comparison ↗');
+  link.href='./ontology/youtube/content-formats.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,analyticsGuide,platformScale,eligibilityMatrix,applicationLifecycle,creatorGrowth]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,analyticsGuide,platformScale,eligibilityMatrix,applicationLifecycle,creatorGrowth,contentFormats]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -895,6 +925,8 @@ async function showDossier(entry) {
     if(scale)outer.append(scale);
     const discoveryModel=renderCreatorGrowth(creatorGrowth,record);
     if(discoveryModel)outer.append(discoveryModel);
+    const formats=renderContentFormats(contentFormats,record);
+    if(formats)outer.append(formats);
     const audience=renderAudienceResearch(record);
     if(audience)outer.append(audience);
     const history=renderAdultUseHistory(adultUseHistory);
