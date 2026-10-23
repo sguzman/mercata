@@ -1,6 +1,6 @@
 # YouTube ontology — audiences, content and earning
 
-The independent [machine model](model.json) defines **114 concepts** and **75 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **31 candidate overlapping subcultures**, without pretending their populations have been measured.
+The independent [machine model](model.json) defines **120 concepts** and **84 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **31 candidate overlapping subcultures**, without pretending their populations have been measured.
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
@@ -84,6 +84,10 @@ The [YouTube Analytics measurement guide](analytics-query-guide.md) ([machine re
 ## Feature eligibility checklists
 
 The [product-specific eligibility matrix](eligibility-matrix.md) ([machine JSON](eligibility-matrix.json)) records the age, product module, country, music-channel and child-directed restrictions for all sixteen earning routes. It separates YPP advertising status from individual memberships, Gifts, Shopping and Creator Partnerships gates. External product sales and sponsorships remain outside YouTube's own payout contract.
+
+## Channel creation and feature-access gates
+
+The [channel onboarding study](channel-onboarding.md) and [six-stage machine model](channel-onboarding.json) distinguish a Google Account, a publishing channel, baseline upload features, phone-verified intermediate tools, optional-history-or-identity advanced tools, and the separately reviewed earning program. Five source-backed official help documents describe these transitions; no typical setup hours, guaranteed fixed time to advanced features, or creator income are inferred. An existing-equipment upload scenario is not a proven zero-economic-cost outcome.
 
 ## Joining and reaching first payout
 
