@@ -36,6 +36,8 @@ This is a [machine-readable research protocol](opportunity-framework.json), not 
 
 A candidate must retain its scope: for example, a 90-day sample of Spanish-language long-form software tutorials has a different demand, production cost and revenue audience from a global Shorts comedy trend. Comparing raw view totals across them provides no reliable expected profit.
 
+For any creator-level niche scenario, inventory [cash expenses, existing equipment and work hours separately](production-costs.md) before aggregating them. Costs of abandoned drafts and all promotion work belong in a defined entry cohort; successful videos alone are a selected sample. Cash-profit-per-hour arithmetic does not itself price unpaid labor as a cash expense.
+
 ## Economic arithmetic
 
 Ad-only creator revenue may be *modeled* as matched paid views multiplied by a similarly scoped ad-only yield divided by 1,000. Other net receipts are then included **only when not already counted**, and attributable cash costs deducted. Dividing by all work hours gives a hypothetical cash return per hour. A time value may be added as a separate opportunity cost; this must be labeled to prevent double deduction.
