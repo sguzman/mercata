@@ -922,6 +922,54 @@
       "unit": "currency_amount",
       "access": "definition",
       "measured_value": null
+    },
+    {
+      "id": "brand_account_primary_owner",
+      "group": "actors",
+      "definition": "Owner of a Brand Account publishing channel with primary-owner identity verification authority, unlike ordinary managers",
+      "unit": "owner_role",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "standard_publishing_access",
+      "group": "economics",
+      "definition": "Default basic publishing features of an eligible created channel, independent of earning eligibility",
+      "unit": "feature_access_state",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "phone_verified_intermediate_access",
+      "group": "economics",
+      "definition": "Intermediate feature eligibility after phone verification; does not confer all advanced features",
+      "unit": "feature_access_state",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "advanced_channel_access",
+      "group": "economics",
+      "definition": "Higher-limit feature access following phone verification and sufficient channel history or optional eligible identity verification",
+      "unit": "feature_access_state",
+      "access": "official",
+      "measured_value": null
+    },
+    {
+      "id": "channel_history_qualification",
+      "group": "measurement",
+      "definition": "Platform-maintained channel activity and account-history basis for advanced feature access; threshold is not a guaranteed number of days",
+      "unit": "eligibility_evidence",
+      "access": "platform_only",
+      "measured_value": null
+    },
+    {
+      "id": "public_video_publication",
+      "group": "measurement",
+      "definition": "Event where previously uploaded video becomes publicly visible, distinct from import/upload event",
+      "unit": "publication_event",
+      "access": "official",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -1299,6 +1347,51 @@
       "subject": "music_rights_adjustment",
       "predicate": "can_reduce",
       "object": "creator_rpm"
+    },
+    {
+      "subject": "registered_account",
+      "predicate": "may_manage",
+      "object": "channel"
+    },
+    {
+      "subject": "brand_account_primary_owner",
+      "predicate": "may_verify",
+      "object": "advanced_channel_access"
+    },
+    {
+      "subject": "channel",
+      "predicate": "may_have",
+      "object": "standard_publishing_access"
+    },
+    {
+      "subject": "phone_verified_intermediate_access",
+      "predicate": "may_enable",
+      "object": "advanced_channel_access"
+    },
+    {
+      "subject": "channel_history_qualification",
+      "predicate": "can_qualify_for",
+      "object": "advanced_channel_access"
+    },
+    {
+      "subject": "channel",
+      "predicate": "may_have",
+      "object": "advanced_channel_access"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_become",
+      "object": "public_video_publication"
+    },
+    {
+      "subject": "standard_publishing_access",
+      "predicate": "does_not_grant",
+      "object": "monetized_channel"
+    },
+    {
+      "subject": "advanced_channel_access",
+      "predicate": "does_not_grant",
+      "object": "monetized_channel"
     }
   ],
   "rules": [
@@ -1316,7 +1409,10 @@
     "A casual or regular viewer is a lookback-window classification, not a purchasing tier.",
     "An archived live replay and its original live broadcast can share viewers and should not have their estimated audiences summed without deduplication.",
     "Copyright claims, legal removal requests, and copyright strikes are different enforcement units.",
-    "Music revenue-sharing adjustments, license cash expenses, and disputed-payment holds cannot be double-counted."
+    "Music revenue-sharing adjustments, license cash expenses, and disputed-payment holds cannot be double-counted.",
+    "A Google Account, YouTube publishing channel, verified feature level and approved monetized channel are separate objects.",
+    "Advanced features may be reached through channel history; optional ID/video verification is not a requirement for every channel.",
+    "Uploading a file and publicly publishing a video are distinct events."
   ],
-  "ontology_version": "1.3"
+  "ontology_version": "1.4"
 }
