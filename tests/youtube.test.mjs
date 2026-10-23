@@ -23,6 +23,28 @@ test('Unmeasured topics are not represented as counted audiences',async()=>{
   assert(taxonomy.topics.every(x=>x.audience_estimate===null));
 });
 
+test('Creator Music 2026 transition and Content ID risks preserve cost uncertainty',async()=>{
+  const [rights,dossier]=await Promise.all([
+    load('ontology/youtube/music-rights-economics.json'),load('specimens/youtube.json')
+  ]);
+  const known=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(rights.options.length,5);
+  assert.equal(rights.claim_outcomes.length,4);
+  assert(rights.historical_events.some(x=>x.date==='2026-08-10'));
+  const legacy=rights.options.find(x=>x.id==='creator_music_paid_license_legacy');
+  assert.equal(legacy.availability,'legacy_only_no_new_paid_licenses');
+  assert.equal(legacy.new_paid_license_purchase_end,'2026-08-10');
+  assert(rights.options.every(x=>x.source_ids.length &&
+    x.source_ids.every(id=>known.has(id)) && x.typical_cost===null &&
+    x.typical_net_revenue_effect===null));
+  assert(rights.claim_outcomes.every(x=>x.source_ids.every(id=>known.has(id)) &&
+    x.measured_loss===null));
+  assert(rights.accounting_fields.some(x=>x.id==='revenue_held_during_dispute'));
+  assert(rights.accounting_fields.some(x=>x.id==='creator_music_rights_adjustment'));
+  assert.equal(rights.typical_work_hours,null);
+  assert.equal(rights.typical_profit_effect,null);
+});
+
 test('YouTube economic expressions use declared symbols or earlier computed results',async()=>{
   const model=await load('ontology/youtube/economic-model.json');
   const declared=new Set(model.symbols.map(x=>x.id));
