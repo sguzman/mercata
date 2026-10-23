@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "music_rights_cash_flow_and_risk",
+  "as_of": "2026-10-23",
+  "evidence_status": "official_product_terms_and_qualitative_risk_only",
+  "scope": "YouTube videos and creator income affected by audio sourcing, synchronization rights, Content ID and claim disputes.",
+  "options": [
+    {
+      "id": "audio_library",
+      "name": "YouTube Audio Library",
+      "availability": "available",
+      "geography": "YouTube Studio access subject to account and country rules",
+      "video_scope": "Video use under applicable library track terms",
+      "upfront_license_cash": "not_required_by_audio_library_terms",
+      "youtube_creator_income_effect": "No Content ID claim expected for permitted Audio Library usage",
+      "attribution": "Some Creative Commons tracks require credit; check the track",
+      "source_ids": [
+        "music-audio-library"
+      ],
+      "typical_cost": null,
+      "typical_net_revenue_effect": null
+    },
+    {
+      "id": "creator_music_no_cost",
+      "name": "Creator Music no-cost tracks",
+      "availability": "available_to_eligible_creators",
+      "geography": "Documented availability for US YouTube Partner Program creators; other countries not presumed supported",
+      "video_scope": "Eligible long-form videos subject to each track and license restrictions",
+      "upfront_license_cash": "no_cost_for_eligible_tracked_uses",
+      "youtube_creator_income_effect": "Ordinary applicable creator revenue share if all track conditions met",
+      "attribution": "Track-specific license conditions",
+      "source_ids": [
+        "music-creator-music-start",
+        "music-creator-music-faq"
+      ],
+      "typical_cost": null,
+      "typical_net_revenue_effect": null
+    },
+    {
+      "id": "creator_music_share",
+      "name": "Creator Music rights-holder revenue sharing",
+      "availability": "available_to_eligible_creators",
+      "geography": "Documented availability for US YouTube Partner Program creators; other countries not presumed supported",
+      "video_scope": "Eligible long-form videos, not Shorts or live streams",
+      "upfront_license_cash": "none_for_eligible_revenue_sharing",
+      "youtube_creator_income_effect": "The standard watch-page creator share can be reduced to accommodate track owners and other music-rights costs; track count and conditions matter",
+      "attribution": "Track-specific rights and eligibility conditions",
+      "source_ids": [
+        "music-creator-music-faq",
+        "music-creator-music-share"
+      ],
+      "typical_cost": null,
+      "typical_net_revenue_effect": null
+    },
+    {
+      "id": "creator_music_paid_license_legacy",
+      "name": "Creator Music previously paid licenses",
+      "availability": "legacy_only_no_new_paid_licenses",
+      "geography": "Product rules for eligible US creators before phase-out; do not project availability elsewhere",
+      "video_scope": "Existing applied licenses continue until their terms expire",
+      "upfront_license_cash": "new_paid_purchases_discontinued_2026_08_10",
+      "youtube_creator_income_effect": "Previously licensed usage subject to its original contract; not a new paid-license route",
+      "attribution": "License terms and expiration",
+      "source_ids": [
+        "music-creator-music-start"
+      ],
+      "new_paid_license_purchase_end": "2026-08-10",
+      "unused_license_refunds": "YouTube states unused previously purchased licenses are automatically refunded",
+      "typical_cost": null,
+      "typical_net_revenue_effect": null
+    },
+    {
+      "id": "external_music",
+      "name": "Third-party or self-negotiated music rights",
+      "availability": "terms_depend_on_rights_owner",
+      "geography": "Depends on the actual agreement and territorial permissions",
+      "video_scope": "Rights must cover the specific use, period, platform and countries",
+      "upfront_license_cash": "unmeasured_varies_by_contract",
+      "youtube_creator_income_effect": "External permission does not automatically suppress Content ID claims",
+      "attribution": "License/contract specific",
+      "source_ids": [
+        "music-content-id",
+        "music-audio-library"
+      ],
+      "typical_cost": null,
+      "typical_net_revenue_effect": null
+    }
+  ],
+  "claim_outcomes": [
+    {
+      "id": "block",
+      "meaning": "Matched use can be blocked, potentially in specific territories",
+      "cashflow_risk": "foregone_discovery_or_income",
+      "source_ids": [
+        "music-content-id"
+      ],
+      "measured_loss": null
+    },
+    {
+      "id": "monetize",
+      "meaning": "Rights holder may monetize identified content, sometimes sharing ad revenue with uploader",
+      "cashflow_risk": "creator_revenue_reallocated",
+      "source_ids": [
+        "music-content-id"
+      ],
+      "measured_loss": null
+    },
+    {
+      "id": "track",
+      "meaning": "Rights holder may track video usage without that result itself specifying an earnings loss",
+      "cashflow_risk": "not_automatically_a_deduction",
+      "source_ids": [
+        "music-content-id"
+      ],
+      "measured_loss": null
+    },
+    {
+      "id": "dispute",
+      "meaning": "Disputed monetized claims may have revenue held and later allocated based on the outcome",
+      "cashflow_risk": "timing_and_possible_ownership_reallocation",
+      "source_ids": [
+        "music-claim-disputes"
+      ],
+      "measured_loss": null
+    }
+  ],
+  "accounting_fields": [
+    {
+      "id": "audio_license_outlay",
+      "unit": "currency",
+      "classification": "production_cash_cost",
+      "required_evidence": "Invoice or documented track-specific no-cost terms"
+    },
+    {
+      "id": "audio_work_hours",
+      "unit": "hours",
+      "classification": "creator_labor",
+      "required_evidence": "Contemporaneous logs of track search, recording, permissions and editing"
+    },
+    {
+      "id": "creator_music_rights_adjustment",
+      "unit": "currency",
+      "classification": "deduction_from_creator_revenue",
+      "required_evidence": "Authorized final earnings report or underlying rights-sharing terms; never apply a deduction twice"
+    },
+    {
+      "id": "content_id_diverted_receipts",
+      "unit": "currency",
+      "classification": "revenue_rights_allocation",
+      "required_evidence": "Dated claim decision and channel revenue record; not automatically a cash cost"
+    },
+    {
+      "id": "revenue_held_during_dispute",
+      "unit": "currency",
+      "classification": "temporary_cashflow_hold",
+      "required_evidence": "Dated dispute status and settlement information; do not double-count as final lost income"
+    },
+    {
+      "id": "external_rights_fees",
+      "unit": "currency",
+      "classification": "production_cash_cost",
+      "required_evidence": "Invoice and scope of licensed work"
+    }
+  ],
+  "historical_events": [
+    {
+      "id": "creator_music_paid_licenses_sunset",
+      "date": "2026-08-10",
+      "event": "Last documented date for new paid Creator Music licenses; existing applied purchases remain subject to expiry; unused purchases refunded",
+      "source_ids": [
+        "music-creator-music-start"
+      ],
+      "type": "documented_product_transition"
+    }
+  ],
+  "population_studies": [],
+  "typical_cash_cost": null,
+  "typical_work_hours": null,
+  "typical_profit_effect": null,
+  "prohibitions": [
+    "Do not assume a Creator Music paid-license purchase option still exists in October 2026",
+    "Do not treat Creator Music as generally available in every country",
+    "Do not apply ordinary watch-page 55% creator-share arithmetic to revenue-sharing music without checking track terms",
+    "Do not count held revenue as permanently lost before the dispute is resolved",
+    "Do not treat Audio Library licensing as blanket permission to republish its audio outside authorized scope",
+    "Do not invent creator cost, rights-loss or hourly income distributions"
+  ]
+}
