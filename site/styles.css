@@ -278,3 +278,19 @@ h1 em {font-style:italic;color:var(--accent)}
 .income-details summary{cursor:pointer;font-weight:700;font-size:13px;margin-bottom:4px}
 .income-details .income-table-wrap{margin-top:10px}
 @media(max-width:600px){.income-table th,.income-table td{padding:9px 10px}}
+
+/* YouTube monetization paths and payouts */
+.revenue-pathways{border-top:1px solid var(--line);padding-top:28px;margin-top:30px}
+.revenue-pathway-group{margin:12px 0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:13px 15px}
+.revenue-pathway-group>summary{cursor:pointer;font-weight:750;font-size:14px}
+.revenue-pathway-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0 4px}
+.revenue-pathway-card{min-width:0;border:1px solid var(--line);border-radius:8px;padding:16px;background:var(--bg)}
+.revenue-pathway-card h5{font-size:14px;margin:0 0 8px}
+.revenue-pathway-card p{font-size:12px;line-height:1.6;margin:7px 0}
+.payout-summary{border-top:1px solid var(--line);padding-top:17px;margin:18px 0}
+.payout-summary h5{font-size:14px;margin:0 0 12px}
+.payout-currency-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.payout-currency{background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:14px}
+.payout-currency strong{font:24px Georgia,serif}
+.payout-currency p,.payout-currency small{display:block;margin:8px 0 0;color:var(--muted);font-size:12px}
+@media(max-width:650px){.revenue-pathway-grid{grid-template-columns:1fr}.payout-currency-grid{grid-template-columns:1fr}}

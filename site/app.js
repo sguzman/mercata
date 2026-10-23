@@ -519,13 +519,64 @@ function renderCreatorIncomeEvidence(report) {
   return section;
 }
 
+function renderRevenuePathways(data, payments, dossier) {
+  if(!data)return null;
+  const section=make('section','revenue-pathways');
+  add(section,make('p','eyebrow','WAYS TO EARN'),
+    make('h4','audience-atlas-title','How creators can earn'),
+    make('p','audience-atlas-description','YouTube has different payment products, shopping tools and routes to outside buyers. The presence of a route is not evidence of average earnings or eligibility for every creator.'));
+  const kinds=[
+    {id:'native',label:'YouTube advertising, Premium and fan support',filter:p=>p.kind.startsWith('native_')},
+    {id:'commerce',label:'Shopping and brand collaborations',filter:p=>p.kind.startsWith('commerce_')||p.kind==='deal_facilitation'},
+    {id:'outside',label:'Outside payments and owned work',filter:p=>p.kind.startsWith('external_')}
+  ];
+  for(const category of kinds){
+    const items=data.pathways.filter(category.filter);
+    if(!items.length)continue;
+    const group=make('details','revenue-pathway-group');
+    group.open=category.id==='native';
+    group.append(make('summary','',category.label+' ('+items.length+')'));
+    const grid=make('div','revenue-pathway-grid');
+    for(const item of items){
+      const box=make('article','revenue-pathway-card');
+      box.append(make('h5','',item.name));
+      box.append(make('p','',item.mechanism));
+      box.append(make('p','measure-context','Payer: '+item.payer+' · Basis: '+item.revenue_basis));
+      box.append(make('p','measure-limit','Eligibility: '+item.eligibility_description));
+      box.append(audienceSources(item.source_ids,dossier));
+      grid.append(box);
+    }
+    group.append(grid);
+    section.append(group);
+  }
+  if(payments){
+    const thresholds=make('div','payout-summary');
+    thresholds.append(make('h5','', 'AdSense payout thresholds by account currency'));
+    const grid=make('div','payout-currency-grid');
+    for(const item of payments.currencies){
+      const box=make('article','payout-currency');
+      add(box,make('strong','',item.currency+' '+item.minimum_payout.toLocaleString()),
+        make('p','', 'Minimum payment balance for '+item.currency+' accounts'),
+        make('small','', 'Payment method can be selected at '+item.currency+' '+item.method_selection_threshold));
+      grid.append(box);
+    }
+    thresholds.append(grid);
+    thresholds.append(make('p','measure-limit','These amounts depend on the payment account currency, not the country where a video is watched. Mexico-based payout-method and program availability are documented separately.'));
+    const link=make('a','inline-link','Read payout and regional eligibility rules ↗');
+    link.href='./ontology/youtube/payment-gates.md';link.target='_blank';link.rel='noopener noreferrer';
+    thresholds.append(link);
+    section.append(thresholds);
+  }
+  return section;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -579,6 +630,8 @@ async function showDossier(entry) {
     outer.append(evidenceArea);
     const policySection=renderPlatformPolicies(platformPolicy,record);
     if(policySection)outer.append(policySection);
+    const routes=renderRevenuePathways(earningRoutes,payoutGates,record);
+    if(routes)outer.append(routes);
     const audience=renderAudienceResearch(record);
     if(audience)outer.append(audience);
     const history=renderAdultUseHistory(adultUseHistory);

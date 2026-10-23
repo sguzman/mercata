@@ -115,3 +115,24 @@ test('Monetized small-channel data keeps sample boundaries and valid quartiles',
   assert(data.by_niche.values.some(x=>x.channels<15));
   assert(dossier.evidence.some(s=>s.url===data.source.url));
 });
+
+test('Monetization pathways separate platform payments from independent sales',async()=>{
+  const [routes,payout,dossier]=await Promise.all([
+    load('ontology/youtube/revenue-pathways.json'),
+    load('ontology/youtube/payment-gates.json'),
+    load('specimens/youtube.json')
+  ]);
+  const sources=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(routes.pathways.length,16);
+  assert.equal(new Set(routes.pathways.map(x=>x.id)).size,16);
+  assert(routes.pathways.some(x=>x.kind==='native_virtual_items'));
+  assert(routes.pathways.some(x=>x.kind==='external_products'));
+  for(const p of routes.pathways){
+    assert(p.source_ids.length && p.source_ids.every(id=>sources.has(id)));
+    assert.equal(p.estimated_median_earnings,null);
+    assert.equal(p.upfront_fee,null);
+  }
+  assert.equal(payout.currencies.find(x=>x.currency==='MXN').minimum_payout,1200);
+  assert.equal(payout.currencies.find(x=>x.currency==='USD').minimum_payout,100);
+  assert(payout.program_access[0].source_ids.every(id=>sources.has(id)));
+});

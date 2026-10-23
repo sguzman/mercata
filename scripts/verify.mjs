@@ -56,6 +56,20 @@ for (const entry of index.specimens) {
     const observed=load('ontology/youtube/topic-observations.json');
     const history=load('ontology/youtube/measurement-history.json');
     const economics=load('ontology/youtube/economic-model.json');
+    const routes=load('ontology/youtube/revenue-pathways.json');
+    const payout=load('ontology/youtube/payment-gates.json');
+    const routesIds=new Set(routes.pathways.map(x=>x.id));
+    ensure(routes.pathways.length===routes.total_pathways && routesIds.size===routes.pathways.length,'Invalid YouTube revenue-pathway inventory');
+    for(const pathway of routes.pathways){
+      ensure(pathway.name && pathway.payer && pathway.revenue_basis && pathway.eligibility,'Incomplete revenue pathway');
+      ensure(pathway.source_ids.length>0 && pathway.source_ids.every(id=>sourceIds.has(id)),'Unattributed earning feature');
+      ensure(pathway.estimated_median_earnings===null,'Unverified pathway income must remain unknown');
+    }
+    ensure(payout.currencies.every(x=>Number.isFinite(x.minimum_payout) && x.minimum_payout>0 && x.source_ids.every(id=>sourceIds.has(id))),
+      'Invalid payout thresholds');
+    ensure(payout.program_access.every(x=>x.source_ids.every(id=>sourceIds.has(id))),
+      'Missing payout region provenance');
+
     const patronStudy=load('ontology/youtube/creator-income-evidence.json');
     const channelStudy=load('ontology/youtube/small-channel-income.json');
     const usageHistory=load('ontology/youtube/us-adult-usage-history.json');
