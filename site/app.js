@@ -379,6 +379,14 @@ function renderTopicCatalogue(data) {
     const card=make('article','topic-catalogue-card');
     add(card,make('h5','',topic.label),make('p','',topic.definition),
       make('small','', 'Audience size: unknown · Creators: unknown'));
+    if(topic.research_subtopics?.length) {
+      const details=make('details','topic-subtopics');
+      details.append(make('summary','',topic.research_subtopics.length+' research subtopics'));
+      const list=make('ul','');
+      for(const name of topic.research_subtopics)list.append(make('li','',name));
+      details.append(list);
+      card.append(details);
+    }
     grid.append(card);
   }
   section.append(grid);
