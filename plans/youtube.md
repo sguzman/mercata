@@ -1,8 +1,8 @@
 # YouTube research plan
 
-**Status:** inventory ready; research not started. **0%** of the 399 tracked tasks has been completed.
+**Status:** initial source-backed research underway. No task is accepted as fully complete; see the machine plan for the current percentage.
 
-Mercata's YouTube specimen already has **164 base tasks across 22 queues**. This plan adds **235 YouTube-specific tasks** without marking or altering those base tasks. Research does not begin until separately authorized.
+Mercata's YouTube specimen already has **164 base tasks across 22 queues**. This plan adds **235 YouTube-specific tasks** without marking or altering those base tasks. The inventory has been authorized for research. Source review has started, and most tasks remain unresolved.
 
 ## Work order
 
