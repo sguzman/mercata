@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "multilingual_content_distribution_ontology",
+  "as_of": "2026-10-23",
+  "status": "official_product_rules_and_selected_observation_not_economic_outcome",
+  "scope": "Language, caption, dubbed audio and translated metadata/thumbnail distribution. Language is not a person's location, race, ethnicity or inferred identity.",
+  "facets": [
+    {
+      "id": "original_audio_language",
+      "unit": "bcp47_or_display_label",
+      "meaning": "Language spoken in source video; not creator residence or audience country",
+      "observed_distribution": null
+    },
+    {
+      "id": "manual_multi_language_audio",
+      "unit": "uploaded_secondary_audio_track",
+      "meaning": "Creator-supplied dubbing track uploaded to an eligible long-form video or Short; separate from automatic dubbing",
+      "observed_distribution": null
+    },
+    {
+      "id": "automatic_dubbing",
+      "unit": "platform_generated_audio_track",
+      "meaning": "Generated translation from source audio under eligibility and supported language-pair rules",
+      "observed_distribution": null
+    },
+    {
+      "id": "subtitle_or_caption_language",
+      "unit": "text_track",
+      "meaning": "Manual or automatically generated text synchronized with video; not an audio dub",
+      "observed_distribution": null
+    },
+    {
+      "id": "translated_title_description",
+      "unit": "localized_metadata",
+      "meaning": "Searchable translated title and description, separate from the spoken audio",
+      "observed_distribution": null
+    },
+    {
+      "id": "localized_thumbnail",
+      "unit": "visual_asset_by_language",
+      "meaning": "Thumbnail localization for supported long-form videos, not a second video with distinct audience",
+      "observed_distribution": null
+    },
+    {
+      "id": "viewer_preferred_language",
+      "unit": "viewer_setting",
+      "meaning": "Viewer language preference for audio, title and description, separate from app/interface language and location settings",
+      "observed_distribution": null
+    },
+    {
+      "id": "viewer_country",
+      "unit": "geography",
+      "meaning": "Where the viewer is located, potentially distinct from spoken and preferred languages",
+      "observed_distribution": null
+    }
+  ],
+  "product_surfaces": [
+    {
+      "id": "manual_audio",
+      "label": "Creator-uploaded multi-language audio",
+      "content_formats": [
+        "long_form",
+        "shorts"
+      ],
+      "gates": [
+        "creator_access_to_advanced_features",
+        "eligible_video_or_short",
+        "prepared_audio_file"
+      ],
+      "source_ids": [
+        "youtube-manual-multi-audio"
+      ],
+      "default_cost": null,
+      "default_creation_hours": null,
+      "limits": "Uploaded dub must already exist, fit supported format and approximate video duration. An existing auto dub for the language may have to be removed before adding a manual one."
+    },
+    {
+      "id": "automatic_audio",
+      "label": "Automatic dubbing",
+      "content_formats": [
+        "eligible_uploaded_videos"
+      ],
+      "gates": [
+        "eligible_channel_or_early_access",
+        "supported_original_language",
+        "supported_target_pair",
+        "eligible_original_video"
+      ],
+      "source_ids": [
+        "youtube-auto-dubbing-help",
+        "youtube-auto-dubbing-2026"
+      ],
+      "default_cost": null,
+      "default_creation_hours": null,
+      "limits": "Ineligible cases include videos over 120 minutes, little/no speech, fast speech, undetected or unsupported source language, and some copyright claims. Auto dubs can contain translation or pronunciation errors; review before release where supported."
+    },
+    {
+      "id": "translated_metadata",
+      "label": "Translated titles and descriptions",
+      "content_formats": [
+        "supported_videos"
+      ],
+      "gates": [
+        "creator_can_edit_video_localizations"
+      ],
+      "source_ids": [
+        "youtube-manual-multi-audio",
+        "youtube-preferred-languages"
+      ],
+      "default_cost": null,
+      "default_creation_hours": null,
+      "limits": "Translated metadata can support search discovery; no fixed ranking or reach uplift is guaranteed."
+    },
+    {
+      "id": "localized_thumbnails",
+      "label": "Language-specific long-form thumbnails",
+      "content_formats": [
+        "long_form"
+      ],
+      "gates": [
+        "supported_creator_access_and_video"
+      ],
+      "source_ids": [
+        "youtube-manual-multi-audio"
+      ],
+      "default_cost": null,
+      "default_creation_hours": null,
+      "limits": "Localized images are not documented as available to every channel or format."
+    },
+    {
+      "id": "captions",
+      "label": "Caption and subtitle tracks",
+      "content_formats": [
+        "supported_videos"
+      ],
+      "gates": [
+        "language_specific_text_track_available"
+      ],
+      "source_ids": [
+        "youtube-manual-multi-audio"
+      ],
+      "default_cost": null,
+      "default_creation_hours": null,
+      "limits": "Captions and subtitles do not imply equivalent audio dubbing or identical viewer comprehension."
+    },
+    {
+      "id": "viewer_preferences",
+      "label": "Viewer audio and metadata languages",
+      "content_formats": [
+        "videos_with_supported_localizations"
+      ],
+      "gates": [
+        "viewer_preference_or_player_selection"
+      ],
+      "source_ids": [
+        "youtube-preferred-languages"
+      ],
+      "default_cost": null,
+      "default_creation_hours": null,
+      "limits": "Preferred language is separate from location and app interface. Playback selection is not evidence of viewer nationality."
+    }
+  ],
+  "official_selected_observations": [
+    {
+      "id": "mla-watch-time-non-primary-language-2025",
+      "source_ids": [
+        "youtube-multi-audio-launch-2025",
+        "youtube-manual-multi-audio"
+      ],
+      "source_period": "as_of_2025-07",
+      "published_at": "2025-09-10",
+      "population": "Selected creators who had uploaded Multi-language Audio tracks to videos",
+      "method": "YouTube first-party aggregate for participants; selection procedure not disclosed",
+      "metric": "Share of total video watch time from views using non-primary audio language",
+      "unit": "percent_of_watched_minutes_in_selected_creator_sample",
+      "comparator": "greater_than",
+      "value": 25,
+      "denominator_n": null,
+      "representative_of_all_youtube_creators": false,
+      "causal_lift": null,
+      "estimated_additional_revenue": null,
+      "limits": "Not proportion of unique people, not percent of all YouTube viewing and not a causal result of dubbing."
+    },
+    {
+      "id": "auto-dubbing-language-total-may-2026",
+      "source_ids": [
+        "youtube-auto-dubbing-2026"
+      ],
+      "source_period": "2026-05-15",
+      "published_at": "2026-05-15",
+      "population": "Supported YouTube auto-dubbing languages at that time",
+      "method": "YouTube published product overview",
+      "metric": "Reported number of available auto dubbing languages",
+      "unit": "supported_languages_in_may_2026_snapshot",
+      "comparator": "reported",
+      "value": 27,
+      "denominator_n": null,
+      "representative_of_all_youtube_creators": false,
+      "causal_lift": null,
+      "estimated_additional_revenue": null,
+      "limits": "A dated feature snapshot, not a guarantee every language pair or video is supported, nor the number of languages on each current channel."
+    }
+  ],
+  "automatic_dubbing_example_pairs": [
+    {
+      "original": "English",
+      "targets": [
+        "Arabic",
+        "Bengali",
+        "Dutch",
+        "French",
+        "German",
+        "Hebrew",
+        "Hindi",
+        "Indonesian",
+        "Italian",
+        "Japanese",
+        "Korean",
+        "Malayalam",
+        "Polish",
+        "Portuguese",
+        "Punjabi",
+        "Russian",
+        "Spanish",
+        "Tamil",
+        "Telugu",
+        "Ukrainian"
+      ],
+      "source_ids": [
+        "youtube-auto-dubbing-help"
+      ],
+      "coverage": "official_help_current_example_as_of_snapshot"
+    },
+    {
+      "original": "Spanish",
+      "targets": [
+        "Arabic",
+        "English",
+        "Portuguese"
+      ],
+      "source_ids": [
+        "youtube-auto-dubbing-help"
+      ],
+      "coverage": "official_help_current_example_as_of_snapshot"
+    },
+    {
+      "original": "Chinese",
+      "targets": [
+        "English"
+      ],
+      "source_ids": [
+        "youtube-auto-dubbing-help"
+      ],
+      "coverage": "official_help_current_example_as_of_snapshot"
+    },
+    {
+      "original": "Chinese (Traditional)",
+      "targets": [
+        "English"
+      ],
+      "source_ids": [
+        "youtube-auto-dubbing-help"
+      ],
+      "coverage": "official_help_current_example_as_of_snapshot"
+    },
+    {
+      "original": "Arabic",
+      "targets": [
+        "English"
+      ],
+      "source_ids": [
+        "youtube-auto-dubbing-help"
+      ],
+      "coverage": "official_help_current_example_as_of_snapshot"
+    },
+    {
+      "original": "Hebrew",
+      "targets": [
+        "English"
+      ],
+      "source_ids": [
+        "youtube-auto-dubbing-help"
+      ],
+      "coverage": "official_help_current_example_as_of_snapshot"
+    },
+    {
+      "original": "Portuguese",
+      "targets": [
+        "English",
+        "Spanish"
+      ],
+      "source_ids": [
+        "youtube-auto-dubbing-help"
+      ],
+      "coverage": "official_help_current_example_as_of_snapshot"
+    },
+    {
+      "original": "Hindi",
+      "targets": [
+        "Bengali",
+        "English"
+      ],
+      "source_ids": [
+        "youtube-auto-dubbing-help"
+      ],
+      "coverage": "official_help_current_example_as_of_snapshot"
+    }
+  ],
+  "measurement_design": {
+    "observation_unit": "video_audio_language_geography_reporting_period",
+    "fields": [
+      "video_id_under_consent",
+      "source_language",
+      "dub_language",
+      "track_type_manual_or_auto",
+      "subtitle_language",
+      "metadata_language",
+      "viewer_country_aggregate",
+      "viewer_preference_optional",
+      "watch_time_by_audio_language",
+      "engaged_views_by_language",
+      "analysis_window",
+      "dub_upload_or_release_date",
+      "quality_review_status",
+      "accessibility_score_if_measured",
+      "incremental_production_hours_if_measured",
+      "translation_cost_if_measured"
+    ],
+    "cohort_requirement": "Matched channels/videos and controlled publishing windows are required to attempt causal uplift; a selected successful channel is not a newcomer outcome.",
+    "data_access": "Authorized aggregated YouTube Studio Analytics only; no inferred personal language/nationality or raw viewer profiling.",
+    "median_labor_cost": null,
+    "median_incremental_watch_time": null,
+    "median_income_lift": null,
+    "new_channel_language_impact": null
+  },
+  "rules": [
+    "Audio language, title language, subtitle language, viewer language preference and viewer country are distinct attributes.",
+    "A manually uploaded audio track and automatically generated dub are different production methods and have different accuracy/cost questions.",
+    "Document selected creator watch-time share as an observed fraction, not a before/after or causal lift.",
+    "A single video with multiple audio tracks must not be counted as multiple unique videos or audiences.",
+    "Language support may change over time and differ for particular creators/videos; current per-video access must be verified independently.",
+    "Publishing translated audio does not grant rights to copyrighted music/footage in each jurisdiction.",
+    "Never infer a person's nationality, ethnicity or political affiliation from their selected audio language."
+  ]
+}
