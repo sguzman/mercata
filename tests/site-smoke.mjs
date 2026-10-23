@@ -45,7 +45,7 @@ try{
     assert((await page.locator('#dossier-view .demographic-row').count())>=20,'Missing demographic data');
     const bodyOverflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
     assert.equal(bodyOverflow,false,'Horizontal overflow in '+size.name+' viewport');
-    await page.screenshot({path:path.join(root,'screenshots','mercata-'+size.name+'.png'),fullPage:true});
+    await page.screenshot({path:path.join(root,'screenshots','mercata-'+size.name+'.png'),fullPage:false});
     await page.locator('#theme').selectOption('dark');
     assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),'dark');
     await page.reload({waitUntil:'networkidle'});
