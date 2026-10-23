@@ -110,13 +110,13 @@
     "evidence": {
       "type": "array",
       "items": {
-        "type": "object"
+        "$ref": "#/$defs/source"
       }
     },
     "claims": {
       "type": "array",
       "items": {
-        "type": "object"
+        "$ref": "#/$defs/claim"
       }
     },
     "observations": {
@@ -154,6 +154,90 @@
     },
     "audience_research": {
       "$ref": "audience.schema.json"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": [
+        "id",
+        "url",
+        "publisher",
+        "retrieved_at",
+        "evidence_class"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "evidence_class": {
+          "type": "string"
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "required": [
+        "id",
+        "text",
+        "source_ids",
+        "confidence",
+        "observed_at",
+        "limitations"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "limitations": {
+          "type": "string"
+        }
+      }
     }
   }
 }

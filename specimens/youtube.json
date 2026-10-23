@@ -4,8 +4,13 @@
   "name": "YouTube",
   "official_url": "https://www.youtube.com/",
   "domain": "video",
-  "roles": [],
-  "status": "queued",
+  "roles": [
+    "audience_channel",
+    "publishing_outlet",
+    "marketplace",
+    "payment_processor"
+  ],
+  "status": "researching",
   "created_at": "2026-10-23",
   "color": {
     "hex": "#F05FA3",
@@ -15,8 +20,346 @@
       "h": 354
     }
   },
-  "evidence": [],
-  "claims": [],
+  "evidence": [
+    {
+      "id": "ypp-main",
+      "url": "https://support.google.com/youtube/answer/72851?hl=en",
+      "publisher": "YouTube Help",
+      "title": "YouTube Partner Program overview and eligibility",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "ypp-expanded",
+      "url": "https://support.google.com/youtube/answer/13429240?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Expanded YouTube Partner Program",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "revenue-shares",
+      "url": "https://support.google.com/youtube/answer/72902?hl=en",
+      "publisher": "YouTube Help",
+      "title": "YouTube partner earnings overview",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "shorts-policy",
+      "url": "https://support.google.com/youtube/answer/12504220?hl=en",
+      "publisher": "YouTube Help",
+      "title": "YouTube Shorts monetization policies",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "analytics-audience",
+      "url": "https://support.google.com/youtube/answer/9314416?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Understand your YouTube audience",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "analytics-limits",
+      "url": "https://support.google.com/youtube/answer/9101241?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Understand limited data in YouTube Analytics",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "api-dimensions",
+      "url": "https://developers.google.com/youtube/analytics/dimensions",
+      "publisher": "Google for Developers",
+      "title": "YouTube Analytics dimensions",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "api-metrics",
+      "url": "https://developers.google.com/youtube/analytics/metrics",
+      "publisher": "Google for Developers",
+      "title": "YouTube Analytics metrics",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "api-search",
+      "url": "https://developers.google.com/youtube/v3/docs/search/list",
+      "publisher": "Google for Developers",
+      "title": "YouTube Data API search.list",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "api-channels",
+      "url": "https://developers.google.com/youtube/v3/docs/channels",
+      "publisher": "Google for Developers",
+      "title": "YouTube Data API channel resource",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "kids-policy",
+      "url": "https://support.google.com/youtube/answer/9527654?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Set channel or video audience",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "kids-interpretation",
+      "url": "https://support.google.com/youtube/answer/9528076?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Determining if content is made for kids",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "channel-policy",
+      "url": "https://support.google.com/youtube/answer/1311392?hl=en",
+      "publisher": "YouTube Help",
+      "title": "YouTube channel monetization policies",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "advertiser-policy",
+      "url": "https://support.google.com/youtube/answer/6162278?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Advertiser-friendly content guidelines",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "External source, link only; no source text copied.",
+      "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    }
+  ],
+  "claims": [
+    {
+      "id": "expanded-entry",
+      "text": "In eligible countries, the expanded Partner Program requires 500 subscribers and three valid public uploads in the preceding 90 days, plus either 3,000 qualified watch hours in 12 months or 3 million qualified Shorts views in 90 days.",
+      "source_ids": [
+        "ypp-expanded"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Program eligibility differs by country and feature; thresholds alone do not establish acceptance."
+    },
+    {
+      "id": "ads-entry",
+      "text": "Advertising and YouTube Premium revenue-sharing eligibility requires 1,000 subscribers with either 4,000 qualified watch hours in 12 months or 10 million qualified public Shorts views in 90 days.",
+      "source_ids": [
+        "ypp-main",
+        "ypp-expanded"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Channel review and additional requirements apply; thresholds are not guaranteed approval."
+    },
+    {
+      "id": "watch-hours-not-shorts",
+      "text": "Shorts Feed watch hours do not count toward the 4,000 qualifying public watch-hour threshold.",
+      "source_ids": [
+        "ypp-main"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Eligibility metric, not a statement about ordinary analytics watch time."
+    },
+    {
+      "id": "watch-page-share",
+      "text": "Under the Watch Page Monetization Module, partners receive 55% of defined net revenue from eligible watch-page ads.",
+      "source_ids": [
+        "revenue-shares"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "The base is eligible net advertising revenue, not total advertiser spending or all video views."
+    },
+    {
+      "id": "shorts-share",
+      "text": "Under the Shorts Monetization Module, partners receive 45% of their allocation from the Shorts Creator Pool.",
+      "source_ids": [
+        "revenue-shares",
+        "shorts-policy"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Not 45% of gross ads alongside any single Short; music licensing and eligible engaged-view allocation matter."
+    },
+    {
+      "id": "fan-funding-share",
+      "text": "The Commerce Product Module provides 70% of defined net revenue for eligible fan-funding features including channel memberships and Supers.",
+      "source_ids": [
+        "revenue-shares"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Net base, taxes, purchase channels and eligibility rules require separate consideration."
+    },
+    {
+      "id": "shorts-engaged-views",
+      "text": "Shorts Feed advertising revenue is allocated by qualified engaged views across monetizing creators in each country and subject to the Shorts pool allocation rules.",
+      "source_ids": [
+        "shorts-policy"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "This does not establish a fixed payout per Short or per view."
+    },
+    {
+      "id": "monthly-audience-definition",
+      "text": "YouTube's channel Analytics 'monthly audience' counts unique viewers over a rolling 28-day window.",
+      "source_ids": [
+        "analytics-audience"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "This is a creator's channel audience, not total unique users of YouTube."
+    },
+    {
+      "id": "demography-restrictions",
+      "text": "Age, gender and geographic reports may be limited, withheld or suppressed in YouTube Analytics for insufficient data or other platform restrictions.",
+      "source_ids": [
+        "analytics-limits"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Absence of data is not evidence of zero users in any demographic category."
+    },
+    {
+      "id": "analytics-aggregate-dimensions",
+      "text": "The YouTube Analytics API documents ageGroup, gender and country as supported report dimensions for authorized analytics.",
+      "source_ids": [
+        "api-dimensions"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Logged-in users and access-controlled channel data are not a platform-wide census; sex, ethnicity and political affiliation are not standard listed dimensions."
+    },
+    {
+      "id": "search-estimated-total",
+      "text": "YouTube Data API search.list reports approximate totalResults, not an exact census of matching people, communities or videos.",
+      "source_ids": [
+        "api-search"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Search and relevance sampling cannot establish unique users in a subculture."
+    },
+    {
+      "id": "subscriber-rounded",
+      "text": "YouTube Data API channel statistics return subscriberCount rounded to three significant figures.",
+      "source_ids": [
+        "api-channels"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Public channel subscriber values are approximate and subscribers may not be active viewers."
+    },
+    {
+      "id": "channel-video-count",
+      "text": "YouTube Data API channel statistics expose a count of public uploaded videos, not a count of every video ever created.",
+      "source_ids": [
+        "api-channels"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Private, unlisted or deleted content cannot be inferred from public counts."
+    },
+    {
+      "id": "analytics-metrics",
+      "text": "YouTube Analytics distinguishes views, engagedViews, watch time, estimated creator revenue, gross revenue and CPM-type metrics.",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "The units and reporting basis differ by metric and report; estimated revenues may later be adjusted."
+    },
+    {
+      "id": "kids-classification",
+      "text": "YouTube requires creators to classify made-for-kids content using audience-directed factors; general-audience animation is not automatically made for kids.",
+      "source_ids": [
+        "kids-interpretation"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Classification depends on content and intent; age-directed legal rules vary by jurisdiction."
+    },
+    {
+      "id": "kids-feature-limits",
+      "text": "Made-for-kids content has restrictions including personalized advertising and various social, community and commercial features.",
+      "source_ids": [
+        "kids-policy"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "The exact effects differ for video versus channel settings and may change."
+    },
+    {
+      "id": "authentic-original",
+      "text": "YouTube's channel monetization policies require original, authentic content and address repetitive or mass-produced material.",
+      "source_ids": [
+        "channel-policy"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Content eligibility requires context-sensitive review; a genre alone does not imply monetization."
+    },
+    {
+      "id": "advertiser-suitability",
+      "text": "YouTube distinguishes content that may receive full, limited or no advertising revenue under its advertiser-friendly guidelines.",
+      "source_ids": [
+        "advertiser-policy"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Per-video suitability can change and is context-dependent."
+    }
+  ],
   "observations": [],
   "opportunities": [],
   "risks": [],
@@ -32,6 +375,33 @@
     "communities": [],
     "overlaps": [],
     "formats": [],
-    "insights": []
-  }
+    "insights": [
+      {
+        "id": "rolling-28-day-audience",
+        "statement": "YouTube Studio's monthly audience is a rolling 28-day unique-viewer metric for the creator's own channel, not the total platform user base.",
+        "source_ids": [
+          "analytics-audience"
+        ],
+        "limitations": "Cannot be aggregated across channels without a deduplication method."
+      },
+      {
+        "id": "demographic-data-suppressed",
+        "statement": "Audience demographic breakdowns can be unavailable due to reporting thresholds and privacy restrictions.",
+        "source_ids": [
+          "analytics-limits"
+        ],
+        "limitations": "Do not infer missing categories or replace missing values with zero."
+      },
+      {
+        "id": "no-public-subculture-census",
+        "statement": "API search result totals are approximate and do not directly identify the number of unique people in a topic community.",
+        "source_ids": [
+          "api-search"
+        ],
+        "limitations": "A representative audience-size study requires separate denominators, sampling or independently sourced surveys."
+      }
+    ]
+  },
+  "summary": "YouTube combines video publication and discovery with advertising, subscriptions and creator payments. Primary-source research has begun on monetization eligibility, revenue formulas, audience measurement and policy limits. Platform population, subculture sizes and representative creator earnings are not yet established.",
+  "updated_at": "2026-10-23"
 }

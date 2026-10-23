@@ -33,10 +33,10 @@ for (const entry of index.specimens) {
   ensure(dossier.schema_version === 1 && dossier.color.hex === entry.color.hex,'Dossier schema/color mismatch');
   ensure(toHex(dossier.color.oklch) === dossier.color.hex,'Bad specimen color');
   const taskIds = new Set();
-  const expectedByQueue = new Map([...core.queues, ...domains.domains.map(d => ({id:'special-'+d.id,tasks:d.tasks})).filter(d => d.id === 'special-'+dossier.domain), ...(socialEnabled ? social.queues : [])].map(q => [q.id,q.tasks.map(t => q.id+'/'+t.id)]));
   const profiles = dossier.research_profiles || [];
   ensure(JSON.stringify(profiles) === JSON.stringify(entry.research_profiles || []),'Research profile/index mismatch');
   const socialEnabled = profiles.includes('social_audience');
+  const expectedByQueue = new Map([...core.queues, ...domains.domains.map(d => ({id:'special-'+d.id,tasks:d.tasks})).filter(d => d.id === 'special-'+dossier.domain), ...(socialEnabled ? social.queues : [])].map(q => [q.id,q.tasks.map(t => q.id+'/'+t.id)]));
   ensure(queue.queues.length === core.queues.length + 1 + (socialEnabled ? social.queues.length : 0),'Incomplete specimen queue');
   const expectedQueues = [...core.queues.map(q => q.id),'special-' + dossier.domain,
     ...(socialEnabled ? social.queues.map(q => q.id) : [])];
