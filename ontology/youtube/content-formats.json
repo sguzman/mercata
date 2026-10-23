@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "creator_content_format_economics",
+  "as_of": "2026-10-23",
+  "status": "sourced_format_and_feature_catalog_not_revenue_estimates",
+  "formats": [
+    {
+      "id": "regular-video",
+      "label": "Ordinary watch-page video",
+      "kind": "video",
+      "entry_gate": "Channel can publish eligible video; YPP ad eligibility is separate.",
+      "format_rule": "Upload published as an ordinary video rather than classified as a Short.",
+      "discovery": [
+        "search",
+        "home",
+        "suggested",
+        "external",
+        "playlists"
+      ],
+      "analytics": [
+        "registered_thumbnail_impression",
+        "impressions_ctr",
+        "engaged_views",
+        "watch_time_minutes"
+      ],
+      "money": [
+        "watch-page-ads",
+        "premium-revenue",
+        "super-thanks",
+        "channel-memberships",
+        "shopping-own",
+        "shopping-affiliate",
+        "direct-sponsorship"
+      ],
+      "links": [
+        "long-form descriptions and comments subject to feature access"
+      ],
+      "source_ids": [
+        "studio-analytics-help",
+        "link-surfaces-help",
+        "earning-help"
+      ],
+      "cautions": [
+        "No guaranteed ads on every view.",
+        "External clicks and viewer payments require separate attribution."
+      ],
+      "format_median_income": null,
+      "format_newcomer_conversion_rate": null,
+      "production_hours": null,
+      "cash_cost": null,
+      "population_evidence": null
+    },
+    {
+      "id": "shorts",
+      "label": "Shorts",
+      "kind": "video",
+      "entry_gate": "Eligible standard-channel square or vertical video up to three minutes; rights and channel status apply.",
+      "format_rule": "Standard-channel videos after 2024-10-15 that are square or vertical and up to three minutes generally qualify; artist channel cutoff differs.",
+      "discovery": [
+        "shorts_feed",
+        "search",
+        "home",
+        "related_video"
+      ],
+      "analytics": [
+        "shorts_shown_in_feed",
+        "shorts_chose_to_view_rate",
+        "engaged_views"
+      ],
+      "money": [
+        "shorts-ads",
+        "premium-revenue",
+        "super-thanks",
+        "shopping-affiliate",
+        "shopping-own",
+        "direct-sponsorship"
+      ],
+      "links": [
+        "related-video link can be clickable",
+        "ordinary URLs in Shorts descriptions and comments are not clickable"
+      ],
+      "source_ids": [
+        "shorts-three-minutes",
+        "shorts-upload-help",
+        "link-surfaces-help"
+      ],
+      "cautions": [
+        "A video start is not necessarily a paid engaged view.",
+        "Music and content claims can affect eligibility.",
+        "A Shorts description is not equivalent to a clickable sales-page link."
+      ],
+      "format_median_income": null,
+      "format_newcomer_conversion_rate": null,
+      "production_hours": null,
+      "cash_cost": null,
+      "population_evidence": null
+    },
+    {
+      "id": "live-webcam-encoder",
+      "label": "Webcam or encoded live stream",
+      "kind": "live",
+      "entry_gate": "Verified eligible channel with no live restriction during the previous 90 days, and compliant creator age.",
+      "format_rule": "Real-time transmitted audiovisual content, distinct from scheduled playback of a prerecorded video.",
+      "discovery": [
+        "live_surfaces",
+        "home",
+        "search",
+        "notifications",
+        "external"
+      ],
+      "analytics": [
+        "live_concurrent_viewers",
+        "watch_time_minutes",
+        "live_chat_messages"
+      ],
+      "money": [
+        "watch-page-ads",
+        "super-chat",
+        "live-gifts",
+        "channel-memberships",
+        "direct-sponsorship"
+      ],
+      "links": [
+        "stream description and authorized live-chat surfaces have their own link rules"
+      ],
+      "source_ids": [
+        "live-general-help",
+        "live-chat-help",
+        "link-surfaces-help"
+      ],
+      "cautions": [
+        "Minimum live creator age currently 16.",
+        "Live attendance, replay views and repeat viewers are different populations.",
+        "Paid live features require additional eligibility."
+      ],
+      "format_median_income": null,
+      "format_newcomer_conversion_rate": null,
+      "production_hours": null,
+      "cash_cost": null,
+      "population_evidence": null
+    },
+    {
+      "id": "mobile-live",
+      "label": "Mobile live stream",
+      "kind": "live",
+      "entry_gate": "Mobile-specific 50-subscriber minimum, verification, no live restriction in previous 90 days and activation.",
+      "format_rule": "Real-time broadcast from supported mobile app and device.",
+      "discovery": [
+        "live_surfaces",
+        "home",
+        "notifications"
+      ],
+      "analytics": [
+        "live_concurrent_viewers",
+        "watch_time_minutes"
+      ],
+      "money": [
+        "super-chat",
+        "live-gifts",
+        "channel-memberships",
+        "direct-sponsorship"
+      ],
+      "links": [
+        "subject to live link and channel feature rules"
+      ],
+      "source_ids": [
+        "mobile-stream-help",
+        "live-general-help"
+      ],
+      "cautions": [
+        "Initial activation may take 24 hours.",
+        "Small mobile channels can face audience caps or archive privacy defaults.",
+        "Subscriber minimum for mobile is not the webcam minimum."
+      ],
+      "format_median_income": null,
+      "format_newcomer_conversion_rate": null,
+      "production_hours": null,
+      "cash_cost": null,
+      "population_evidence": null
+    },
+    {
+      "id": "premiere",
+      "label": "Video Premiere",
+      "kind": "event",
+      "entry_gate": "Video publishing and Premiere eligibility; real-time chat/product access checked separately.",
+      "format_rule": "Scheduled shared playback event of uploaded video, which can include live chat.",
+      "discovery": [
+        "upcoming_page",
+        "channel",
+        "notifications",
+        "watch_page"
+      ],
+      "analytics": [
+        "live_chat_messages",
+        "engaged_views",
+        "watch_time_minutes"
+      ],
+      "money": [
+        "super-chat",
+        "super-thanks",
+        "watch-page-ads",
+        "channel-memberships"
+      ],
+      "links": [
+        "ordinary watch-page surface; links and paid chat still subject to access rules"
+      ],
+      "source_ids": [
+        "premiere-tips-help",
+        "live-chat-help"
+      ],
+      "cautions": [
+        "A Premiere is not a freshly filmed live stream.",
+        "Real-time interaction depends on content and chat eligibility."
+      ],
+      "format_median_income": null,
+      "format_newcomer_conversion_rate": null,
+      "production_hours": null,
+      "cash_cost": null,
+      "population_evidence": null
+    },
+    {
+      "id": "podcast",
+      "label": "Podcast show and episodes",
+      "kind": "playlist",
+      "entry_gate": "Eligible video playlist designated as a podcast; episodes must be videos rather than MP3-only files.",
+      "format_rule": "A podcast is a playlist of full episodes, with special YouTube Music listening and discovery options.",
+      "discovery": [
+        "podcast_search",
+        "youtube_music",
+        "watch_page",
+        "recommendations"
+      ],
+      "analytics": [
+        "engaged_views",
+        "watch_time_minutes",
+        "playlist_views"
+      ],
+      "money": [
+        "watch-page-ads",
+        "premium-revenue",
+        "channel-memberships",
+        "direct-sponsorship",
+        "external-support"
+      ],
+      "links": [
+        "watch-page/episode descriptions and channel profile links subject to policy"
+      ],
+      "source_ids": [
+        "podcast-create-help"
+      ],
+      "cautions": [
+        "A show-level playlist is not itself a unique viewer or additional standalone video.",
+        "Copyright-ineligible content may lose podcast distribution."
+      ],
+      "format_median_income": null,
+      "format_newcomer_conversion_rate": null,
+      "production_hours": null,
+      "cash_cost": null,
+      "population_evidence": null
+    },
+    {
+      "id": "community-post",
+      "label": "Community Post",
+      "kind": "post",
+      "entry_gate": "Eligible channel not supervised or designated made for kids.",
+      "format_rule": "Text, images, polls, quizzes, music or videos distributed through supported channel and feed surfaces.",
+      "discovery": [
+        "channel_post_tab",
+        "home",
+        "subscriptions",
+        "some_shorts_feed"
+      ],
+      "analytics": [
+        "post_likes",
+        "post_likes_rate"
+      ],
+      "money": [
+        "indirect_audience_retention",
+        "channel-memberships",
+        "shopping-own"
+      ],
+      "links": [
+        "Post distribution and linking permissions must be checked for each feature"
+      ],
+      "source_ids": [
+        "posts-help",
+        "studio-analytics-help"
+      ],
+      "cautions": [
+        "A Post is not automatically a direct paid product.",
+        "Posts are unavailable on made-for-kids channels."
+      ],
+      "format_median_income": null,
+      "format_newcomer_conversion_rate": null,
+      "production_hours": null,
+      "cash_cost": null,
+      "population_evidence": null
+    },
+    {
+      "id": "archived-live",
+      "label": "Archived live replay",
+      "kind": "video",
+      "entry_gate": "Original stream and archive visibility must permit replay.",
+      "format_rule": "Recording of a live event preserved for later on-demand watching.",
+      "discovery": [
+        "watch_page",
+        "search",
+        "channel",
+        "external"
+      ],
+      "analytics": [
+        "engaged_views",
+        "watch_time_minutes"
+      ],
+      "money": [
+        "watch-page-ads",
+        "premium-revenue",
+        "super-thanks",
+        "direct-sponsorship"
+      ],
+      "links": [
+        "subject to replay and watch-page feature policy"
+      ],
+      "source_ids": [
+        "live-general-help",
+        "studio-analytics-help"
+      ],
+      "cautions": [
+        "Do not sum the live and replay audience into unique people without deduplication.",
+        "Archive retention, availability and visibility are channel-specific."
+      ],
+      "format_median_income": null,
+      "format_newcomer_conversion_rate": null,
+      "production_hours": null,
+      "cash_cost": null,
+      "population_evidence": null
+    }
+  ],
+  "comparability": [
+    "Vertical or square three-minute uploads may be classified as Shorts depending on date and channel type.",
+    "Shorts raw views after August 2026 do not equal engaged views.",
+    "Watch-page impression CTR is not Shorts choose-to-view rate.",
+    "Mobile live subscriber limits are not general desktop live requirements.",
+    "Live viewers and replay viewers can overlap.",
+    "A podcast playlist is a container for episodes, not an independent user population.",
+    "Community Posts have interaction and eligibility rules distinct from videos.",
+    "A clickable sales route depends on which surface carries the link."
+  ],
+  "economic_research": [
+    "Record time and costs to produce a complete release, not just raw runtime.",
+    "For each format separate reach from eligible monetized engagement.",
+    "Measure watch-page versus Shorts paid yield with comparable cohorts and definitions.",
+    "Check which direct revenue features are available to the channel and country.",
+    "For merchandise or affiliates, measure attributable net sales after refunds; views are not customers.",
+    "Test whether format-specific engagement leads to return viewers using authorized analytics.",
+    "No format receives a profitability rank without a representative creator cohort and production costs."
+  ],
+  "rights_and_safety": [
+    "Avoid harvesting private audience viewing history or identifying minors.",
+    "Review owned rights and music clearance for every upload and clip.",
+    "Do not assume all podcast, animated or repurposed media qualify for monetization.",
+    "Current policy can change; keep observation date attached to rules."
+  ]
+}

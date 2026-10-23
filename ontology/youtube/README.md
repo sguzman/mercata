@@ -91,3 +91,7 @@ The [product-specific eligibility matrix](eligibility-matrix.md) ([machine JSON]
 ## Discovery and community engagement
 
 The [audience discovery and return model](creator-growth.md) defines counted thumbnail exposure, search and recommendation traffic, Shorts feed choices, engaged watching, rolling 28-day active channel audiences, and new/casual/regular returning viewers. Its [machine ontology](creator-growth.json) keeps 17 defined measurements separate from unknown observed values. Community posts and payment conversion are treated as different events; no private audience records are harvested.
+
+## Video and distribution formats
+
+The [format comparison](content-formats.md) and [machine catalog](content-formats.json) document eight publication forms, including ordinary videos, Shorts, webcam/encoder live streams, mobile live streams, Premieres, podcasts, Community Posts and live replays. Each records where discovery and links work, candidate earning routes and eligibility restrictions. Neither their profit nor labor requirements are invented.

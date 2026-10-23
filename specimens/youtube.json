@@ -647,6 +647,94 @@
       "evidence_class": "official",
       "license": "Cited short explanations and independent domain definitions; no copied charts or original text",
       "notes": "Public product metric documentation. Availability and metric definitions may change with product revisions."
+    },
+    {
+      "id": "shorts-three-minutes",
+      "url": "https://support.google.com/youtube/answer/15424877?hl=en",
+      "title": "Understand three-minute YouTube Shorts",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Linked and independently described product documentation",
+      "notes": "Product access and regional, age, rights and account requirements may differ."
+    },
+    {
+      "id": "shorts-upload-help",
+      "url": "https://support.google.com/youtube/answer/12779649?hl=en",
+      "title": "Upload YouTube Shorts",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Linked and independently described product documentation",
+      "notes": "Product access and regional, age, rights and account requirements may differ."
+    },
+    {
+      "id": "mobile-stream-help",
+      "url": "https://support.google.com/youtube/answer/9228390?hl=en",
+      "title": "Create a live stream on mobile",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Linked and independently described product documentation",
+      "notes": "Product access and regional, age, rights and account requirements may differ."
+    },
+    {
+      "id": "live-general-help",
+      "url": "https://support.google.com/youtube/answer/2474026?hl=en",
+      "title": "Get started with live streaming",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Linked and independently described product documentation",
+      "notes": "Product access and regional, age, rights and account requirements may differ."
+    },
+    {
+      "id": "podcast-create-help",
+      "url": "https://support.google.com/youtube/answer/12751636?hl=en",
+      "title": "Create a podcast in YouTube Studio",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Linked and independently described product documentation",
+      "notes": "Product access and regional, age, rights and account requirements may differ."
+    },
+    {
+      "id": "link-surfaces-help",
+      "url": "https://support.google.com/youtube/answer/13748639?hl=en",
+      "title": "Sharing links with your audiences",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Linked and independently described product documentation",
+      "notes": "Product access and regional, age, rights and account requirements may differ."
+    },
+    {
+      "id": "premiere-tips-help",
+      "url": "https://support.google.com/youtube/answer/12356784?hl=en",
+      "title": "Premiere tips",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Linked and independently described product documentation",
+      "notes": "Product access and regional, age, rights and account requirements may differ."
+    },
+    {
+      "id": "live-chat-help",
+      "url": "https://support.google.com/youtube/answer/2524549?hl=en",
+      "title": "Use Live Chat during live stream or Premiere",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Linked and independently described product documentation",
+      "notes": "Product access and regional, age, rights and account requirements may differ."
     }
   ],
   "claims": [
@@ -1211,6 +1299,67 @@
       "confidence": "high",
       "observed_at": "2026-10-23",
       "limitations": "Do not compare raw public views before and after the definition change as identical engagement units."
+    },
+    {
+      "id": "shorts-format-2026",
+      "text": "Standard-channel square or vertical uploads up to three minutes made on or after October 15, 2024 generally classify as Shorts; this affects where the video earns advertising revenue.",
+      "source_ids": [
+        "shorts-three-minutes"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Official Artist Channels have a different start date; music and content-rights restrictions can alter availability."
+    },
+    {
+      "id": "mobile-live-access",
+      "text": "Mobile live streaming requires at least 50 subscribers, channel verification, no live-stream restrictions in the preceding 90 days and enabling live features; first activation can take up to 24 hours.",
+      "source_ids": [
+        "mobile-stream-help"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "These are mobile-stream requirements, not a general rule that all webcam or encoder live streams need 50 subscribers."
+    },
+    {
+      "id": "live-creator-minimum-age",
+      "text": "YouTube's current live-streaming guidance requires creators to be at least 16 years old, with additional safeguards when younger teens appear.",
+      "source_ids": [
+        "live-general-help"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Local laws and child-safety requirements still apply; not a substitute for reviewing terms."
+    },
+    {
+      "id": "podcast-playlist",
+      "text": "On YouTube a podcast is a playlist whose episodes are videos, potentially eligible for YouTube Music listening and podcast-specific discovery.",
+      "source_ids": [
+        "podcast-create-help"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "A raw MP3 cannot be converted directly into a YouTube podcast; podcast features depend on ownership and policy eligibility."
+    },
+    {
+      "id": "shorts-links-not-clickable",
+      "text": "YouTube says URLs in Shorts descriptions and comments are not clickable; a Shorts related-video link can be clickable.",
+      "source_ids": [
+        "link-surfaces-help"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Available linking and advanced-feature permissions should be verified for the actual channel; mere text URLs do not provide a one-tap purchase path."
+    },
+    {
+      "id": "premiere-live-chat",
+      "text": "YouTube Premieres can use live chat and related real-time viewer interactions during a scheduled watch event.",
+      "source_ids": [
+        "premiere-tips-help",
+        "live-chat-help"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "This is scheduled playback, not the same as a new live-camera broadcast; eligible paid chats and memberships require separate access."
     }
   ],
   "observations": [],
