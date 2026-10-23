@@ -788,13 +788,48 @@ function renderApplicationLifecycle(model) {
   return section;
 }
 
+function renderCreatorGrowth(data,dossier) {
+  if(!data)return null;
+  const section=make('section','creator-growth');
+  const details=make('details','creator-growth-details');
+  details.append(make('summary','','Audience discovery and returning viewers · '+data.stages.length+' stages'));
+  details.append(make('p','measure-limit','Views, eligible impressions, engaged views, unique channel viewers, subscribers and paying customers are different measurements. No conversion rate is assumed.'));
+  const list=make('ol','creator-growth-stages');
+  for(const stage of data.stages){
+    const item=make('li','creator-growth-stage');
+    item.append(make('h5','',stage.label),make('p','',stage.description),
+      make('small','',stage.caveat));
+    item.append(audienceSources(stage.source_ids,dossier));
+    list.append(item);
+  }
+  details.append(list);
+  const more=make('details','creator-growth-metrics');
+  more.append(make('summary','',data.metrics.length+' metric definitions and measurement limits'));
+  const table=make('div','creator-growth-metric-grid');
+  for(const metric of data.metrics){
+    const card=make('article','creator-growth-metric');
+    card.append(make('h5','',metric.id.replaceAll('_',' ')));
+    card.append(make('p','',metric.definition));
+    card.append(make('small','',metric.unit+' · '+metric.access));
+    card.append(make('p','measure-limit',metric.limitations));
+    table.append(card);
+  }
+  more.append(table);
+  details.append(more);
+  const link=make('a','inline-link','Read the measurement and discovery research ↗');
+  link.href='./ontology/youtube/creator-growth.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,analyticsGuide,platformScale,eligibilityMatrix,applicationLifecycle]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,analyticsGuide,platformScale,eligibilityMatrix,applicationLifecycle,creatorGrowth]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -858,6 +893,8 @@ async function showDossier(entry) {
     if(metricsGuide)outer.append(metricsGuide);
     const scale=renderPlatformScale(platformScale);
     if(scale)outer.append(scale);
+    const discoveryModel=renderCreatorGrowth(creatorGrowth,record);
+    if(discoveryModel)outer.append(discoveryModel);
     const audience=renderAudienceResearch(record);
     if(audience)outer.append(audience);
     const history=renderAdultUseHistory(adultUseHistory);

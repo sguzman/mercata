@@ -276,3 +276,16 @@ test('World Cup event unique viewers are a bounded audience segment, not a fan c
   assert.equal(opportunity.topic_assessments.length,topics.topics.length);
   assert(opportunity.topic_assessments.every(x=>x.decision==='insufficient_evidence'));
 });
+
+test('YouTube discovery metrics keep viewer identities and event counts separate',async()=>{
+  const [dossier,growth]=await Promise.all([
+    load('specimens/youtube.json'),load('ontology/youtube/creator-growth.json')
+  ]);
+  const sourceIds=new Set(dossier.evidence.map(x=>x.id));
+  assert.deepEqual(growth.stages.map(x=>x.id),['exposure','selection','engagement','return','community','economic']);
+  assert(growth.metrics.some(x=>x.id==='impressions_ctr'));
+  assert(growth.metrics.some(x=>x.id==='monthly_unique_audience'));
+  assert(growth.invalid_equivalences.includes('public_views_are_ypp_qualifying_views'));
+  assert(growth.metrics.every(x=>x.observed_value===null));
+  assert(growth.stages.every(x=>x.source_ids.every(id=>sourceIds.has(id))));
+});

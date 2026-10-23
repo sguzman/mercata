@@ -45,6 +45,8 @@ try{
     assert.equal(await page.locator('.application-stage').count(),9,'Missing application stages');
     assert.equal(await page.locator('.content-policy-item').count(),8,'Missing sourced content restrictions');
     assert.equal(await page.locator('.analytics-metric-item').count(),11,'Missing Youtube Analytics metric guide');
+    assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
+    assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.scale-observation').count(),4,'Missing global scale observations');
     assert.equal(await page.locator('.payout-currency').count(),2,'Missing documented payout currencies');
     assert((await page.locator('.topic-catalogue-card').count())>=31,'Missing community taxonomy');

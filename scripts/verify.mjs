@@ -50,6 +50,18 @@ for (const entry of index.specimens) {
   }
   if(entry.id==='youtube') {
     const model=load('ontology/youtube/model.json');
+    const growth=load('ontology/youtube/creator-growth.json');
+    ensure(growth.stages.length===6,'Incomplete YouTube discovery funnel');
+    ensure(growth.metrics.length>=17,'Incomplete YouTube audience metrics');
+    const stageIds=new Set(growth.stages.map(x=>x.id));
+    const growthMetricIds=new Set(growth.metrics.map(x=>x.id));
+    ensure(stageIds.size===growth.stages.length && growthMetricIds.size===growth.metrics.length,
+      'Duplicate growth concepts');
+    ensure(growth.stages.every(x=>x.source_ids.length>0 && x.source_ids.every(s=>sourceIds.has(s))),
+      'Discovery funnel missing primary source');
+    ensure(growth.metrics.every(x=>x.source_ids.length>0 && x.source_ids.every(s=>sourceIds.has(s)) && x.observed_value===null),
+      'Unsupported audience statistic');
+
     const analytics=load('ontology/youtube/analytics-query-guide.json');
     const platformScale=load('ontology/youtube/platform-scale.json');
     ensure(platformScale.observations.length===4,'Missing globally scoped scale observations');
