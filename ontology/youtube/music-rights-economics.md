@@ -20,6 +20,14 @@ YouTube's [Content ID explanation](https://support.google.com/youtube/answer/279
 
 During [claim disputes and appeals](https://support.google.com/youtube/answer/7000961?hl=en), revenue can be held pending a decision. YouTube documents a five-day distinction for the start of withholding and later Analytics adjustment timing. **A hold is a timing/ownership uncertainty**, not necessarily a final expense or an observed zero receipt. Record date and ultimate settlement separately.
 
+## A claim is not a copyright strike
+
+A [Content ID claim](https://support.google.com/youtube/answer/2797370?hl=en) is a rights-matching outcome. It can block, monetize or track specific uses. It **does not automatically give the uploader a copyright strike**. A [copyright removal request](https://support.google.com/youtube/answer/2814000?hl=en) is a separate legal process: when YouTube accepts a valid request it removes the video and applies a copyright strike. Its help page describes a 90-day strike-expiry route after Copyright School when the channel has fewer than three strikes, and potential channel termination for three strikes in a 90-day period. These are rules and risks, not measured monetary losses.
+
+## Music, Shopping and sponsor restrictions
+
+[Creator Music eligibility guidance](https://support.google.com/youtube/answer/11623091?hl=en) limits music use in videos primarily dedicated to paid brand promotion and bars YouTube Shopping features on videos using Creator Music revenue-sharing tracks. A brief sponsor mention is not automatically the same as a paid brand-focused video; the actual commercial use, track terms and policy conditions matter. A creator cannot simply add the estimated value of sponsorship and Shopping on top of a music-sharing video without checking whether those routes are contractually compatible.
+
 ## Measurement protocol
 
 For a research cohort, collect the month, content format, creator country, viewer country mix if legitimately available, license/claim type, total hours spent sourcing and clearing music, actual cash invoices, final creator receipts and any subsequent rights adjustment. The cohort must separately identify new channels, already monetized channels and zero earners, with selection method and nonresponse. No individual earnings or private disputes may be collected without appropriate permission.
