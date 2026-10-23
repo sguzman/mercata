@@ -41,3 +41,7 @@ The [topic evidence register](topic-observations.md) records 14 observations fro
 ## What creators earn
 
 The first [creator-income evidence review](creator-income-evidence.md) examines a peer-reviewed study of **Patreon earnings for YouTube-affiliated Patreon creators**, rather than YouTube advertising or total creator income. The selected sample's $47 monthly median and $250 mean show why definitions and sample exclusions matter. The [machine evidence](creator-income-evidence.json) preserves period, currency, quartiles, coverage, omitted non-earners, imputation and other limits. Typical total YouTube creator income is **still unknown**.
+
+## Newly monetized small channels
+
+AIR Media-Tech's [297-channel studio-data report](small-channel-income.md) contains six monthly earnings observations and genre and top-viewer-country breakdowns. Its [machine dataset](small-channel-income.json) separates the sample of already monetized channels from the broader platform. It reports a USD 88 median in the first full month and USD 32 in month six, but neither figure is a representative expectation for creators who have not reached monetization. The commercial source's recruitment criteria and sample limitations remain visible alongside every breakdown.
