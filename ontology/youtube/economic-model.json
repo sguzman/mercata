@@ -29,9 +29,9 @@
       "value": null
     },
     {
-      "id": "shorts_rpm",
+      "id": "shorts_ad_only_rpm",
       "unit": "currency_per_1000_engaged_views",
-      "definition": "Creator revenue per 1,000 relevant Shorts engaged views in the selected reporting definition",
+      "definition": "Ad-only creator revenue per 1,000 relevant Shorts engaged views; excludes other creator revenue streams.",
       "value": null
     },
     {
@@ -122,9 +122,9 @@
       "expression": "shorts_engaged_views * shorts_rpm / 1000",
       "inputs": [
         "shorts_engaged_views",
-        "shorts_rpm"
+        "shorts_ad_only_rpm"
       ],
-      "note": "Never use raw Shorts viewCount as engaged views by default; product definitions and eligibility vary."
+      "note": "Requires ad-only yield and engaged views; never substitute combined Shorts RPM or raw viewCount."
     },
     {
       "id": "membership_creator_share",
