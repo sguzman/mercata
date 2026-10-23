@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "as_of": "2026-10-23",
+  "kind": "public_and_restricted_measurements",
+  "metrics": [
+    {
+      "id": "search_results",
+      "api_field": "search.list pageInfo.totalResults",
+      "access": "public_api",
+      "unit": "approximate results",
+      "population": "one search query",
+      "limitations": "Not unique people, and result total is approximate.",
+      "source_ids": [
+        "api-search"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "subscriber_count",
+      "api_field": "channels.statistics.subscriberCount",
+      "access": "public_api",
+      "unit": "accounts",
+      "population": "one public channel",
+      "limitations": "Rounded to three significant figures; not active viewers.",
+      "source_ids": [
+        "api-channels"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "public_video_count",
+      "api_field": "channels.statistics.videoCount",
+      "access": "public_api",
+      "unit": "videos",
+      "population": "one channel",
+      "limitations": "Only publicly uploaded videos, not all historical work.",
+      "source_ids": [
+        "api-channels"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "monthly_channel_audience",
+      "api_field": "Studio monthly audience",
+      "access": "authorized_analytics",
+      "unit": "unique viewers",
+      "population": "channel, rolling 28 days",
+      "limitations": "Not platform-wide monthly users.",
+      "source_ids": [
+        "analytics-audience"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "viewer_age",
+      "api_field": "ageGroup",
+      "access": "authorized_analytics",
+      "unit": "percent",
+      "population": "channel report",
+      "limitations": "Logged-in viewer categories; low-coverage reporting may be suppressed.",
+      "source_ids": [
+        "api-dimensions"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "viewer_gender",
+      "api_field": "gender",
+      "access": "authorized_analytics",
+      "unit": "percent",
+      "population": "channel report",
+      "limitations": "Not biological sex or ethnicity; category and response limitations.",
+      "source_ids": [
+        "api-dimensions"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "viewer_country",
+      "api_field": "country",
+      "access": "authorized_analytics",
+      "unit": "percent",
+      "population": "channel report",
+      "limitations": "Missing rows may reflect privacy thresholds.",
+      "source_ids": [
+        "api-dimensions"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "engaged_views",
+      "api_field": "engagedViews",
+      "access": "authorized_analytics",
+      "unit": "views",
+      "population": "reported videos",
+      "limitations": "Not every view and not unique persons.",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "views",
+      "api_field": "views",
+      "access": "authorized_analytics",
+      "unit": "views",
+      "population": "reported videos",
+      "limitations": "View counts can vary by format and definition.",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "watch_time",
+      "api_field": "estimatedMinutesWatched",
+      "access": "authorized_analytics",
+      "unit": "minutes",
+      "population": "report and period",
+      "limitations": "Watch minutes, not viewer population.",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "average_duration",
+      "api_field": "averageViewDuration",
+      "access": "authorized_analytics",
+      "unit": "seconds",
+      "population": "reported playbacks",
+      "limitations": "Playback average, not session length.",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "estimated_revenue",
+      "api_field": "estimatedRevenue",
+      "access": "authorized_analytics",
+      "unit": "currency",
+      "population": "eligible monetizing creator",
+      "limitations": "Estimated and adjustable; not profit or revenue outside YouTube.",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "advertiser_cpm",
+      "api_field": "cpm",
+      "access": "authorized_analytics",
+      "unit": "currency / 1000 impressions",
+      "population": "advertising inventory",
+      "limitations": "Gross impression price, not creator payout per thousand views.",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "monetized_playbacks",
+      "api_field": "monetizedPlaybacks",
+      "access": "authorized_analytics",
+      "unit": "playbacks",
+      "population": "views with at least one ad impression",
+      "limitations": "Not every view has a monetized playback.",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "platform_monthly_people",
+      "api_field": "no public Data API field",
+      "access": "external_aggregate_study",
+      "unit": "people",
+      "population": "full platform",
+      "limitations": "Needs population deduplication, definition and credible methodology.",
+      "source_ids": [
+        "api-search"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "community_unique_viewers",
+      "api_field": "no direct public API measure",
+      "access": "independent_sampling_or_survey",
+      "unit": "people",
+      "population": "defined overlapping subculture",
+      "limitations": "No shortcut from search results or subscriptions.",
+      "source_ids": [
+        "api-search"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "median_creator_earnings",
+      "api_field": "no standard public field",
+      "access": "representative_income_study",
+      "unit": "currency per period",
+      "population": "specified cohort including zero earners",
+      "limitations": "Selection bias and unpaid labor need consideration.",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "viewer_ethnicity",
+      "api_field": "not a listed Analytics dimension",
+      "access": "aggregate_survey",
+      "unit": "percent",
+      "population": "representative survey",
+      "limitations": "Never infer ethnicity from faces, names or video topics.",
+      "source_ids": [
+        "api-dimensions"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "viewer_political_affiliation",
+      "api_field": "not a listed Analytics dimension",
+      "access": "aggregate_survey",
+      "unit": "percent",
+      "population": "voluntary political-identity survey",
+      "limitations": "Descriptive use only; not microtargeting.",
+      "source_ids": [
+        "api-dimensions"
+      ],
+      "value": null,
+      "status": "definition_only"
+    }
+  ],
+  "methodology": [
+    "Predefine the population, dates and geographic scope.",
+    "Record source, access rights, rate limits, sampling, weighting, suppression and uncertainty.",
+    "Separate searches, videos, view events, subscribers, channels, unique viewers and whole-platform users.",
+    "For communities, define overlapping taxonomy and avoid summing duplicated viewer populations.",
+    "Use voluntary aggregate sources for sensitive demographics and never infer individual attributes.",
+    "Keep mean/median creator income distinct, disclose zero earners and sample bias.",
+    "A blank result is unknown, not zero."
+  ]
+}

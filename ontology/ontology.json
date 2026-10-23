@@ -599,5 +599,14 @@
   ],
   "specimen_schema": "specimen.schema.json",
   "audience_schema": "audience.schema.json",
-  "social_research_queues": "../pipeline/social.json"
+  "social_research_queues": "../pipeline/social.json",
+  "platform_specific": {
+    "youtube": {
+      "human": "youtube/README.md",
+      "concepts": "youtube/model.json",
+      "topics": "youtube/taxonomy.json",
+      "policies": "youtube/policies.json",
+      "metrics": "youtube/measurements.json"
+    }
+  }
 }
