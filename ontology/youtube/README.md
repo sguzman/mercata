@@ -95,3 +95,7 @@ The [audience discovery and return model](creator-growth.md) defines counted thu
 ## Video and distribution formats
 
 The [format comparison](content-formats.md) and [machine catalog](content-formats.json) document eight publication forms, including ordinary videos, Shorts, webcam/encoder live streams, mobile live streams, Premieres, podcasts, Community Posts and live replays. Each records where discovery and links work, candidate earning routes and eligibility restrictions. Neither their profit nor labor requirements are invented.
+
+## Measured content-audience studies
+
+The [news-audience survey profile](community-audience-studies.md) uses Pew's 2020–2026 U.S. adult trend and the separate 2025 demographic composition of Americans who regularly get news from YouTube. The [machine file](community-audience-studies.json) retains denominators, survey years and caveats. It does not equate news consumption with an identifiable political affiliation or the broader YouTube audience.
