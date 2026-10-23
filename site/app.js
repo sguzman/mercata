@@ -902,13 +902,59 @@ function renderContentFormats(data,dossier) {
   return section;
 }
 
+function renderCommunityAudienceStudy(data,dossier) {
+  if(!data)return null;
+  const section=make('section','community-survey');
+  const details=make('details','community-survey-details');
+  details.append(make('summary','','Measured audience: U.S. YouTube news consumption'));
+  details.append(make('p','measure-limit','This survey describes U.S. adults who regularly get news on YouTube. It is not a count of political-video viewers, all YouTube users or a prediction of ad revenue.'));
+  const latest=data.trends.at(-1);
+  const summary=make('div','community-survey-numbers');
+  add(summary,
+    blockHeading('U.S. adults',latest.all_adults_percent+'%'),
+    blockHeading('U.S. YouTube users',latest.youtube_users_percent+'%'));
+  details.append(summary);
+  details.append(make('p','measure-context','2026 Pew survey · '+data.methodology.survey_2026));
+  const trends=make('details','community-survey-trends');
+  trends.append(make('summary','','Annual news-use survey rates, 2020–2026'));
+  const list=make('div','community-survey-grid');
+  for(const point of data.trends){
+    const card=make('article','community-survey-year');
+    add(card,make('strong','',point.year),
+      make('p','',point.all_adults_percent+'% of U.S. adults'),
+      make('p','',point.youtube_users_percent+'% of U.S. YouTube users'));
+    list.append(card);
+  }
+  trends.append(list);
+  details.append(trends);
+  const profile=make('details','community-survey-profile');
+  profile.append(make('summary','','Who regularly got YouTube news in 2025'));
+  profile.append(make('p','measure-limit','Each share below describes the makeup of regular YouTube news consumers, not the chance that someone in a demographic group uses the platform. Shares do not necessarily sum to 100%.'));
+  const cards=make('div','community-survey-grid');
+  for(const x of data.demographic_composition){
+    const card=make('article','community-profile-card');
+    add(card,make('h5','',x.category),make('strong','',x.share_percent+'%'),
+      make('small','',x.dimension.replaceAll('_',' ')+' · 2025 survey'));
+    cards.append(card);
+  }
+  profile.append(cards);
+  details.append(profile);
+  details.append(make('p','measure-limit','Political affiliation here is voluntary, aggregate survey reporting. No individual political beliefs or viewing histories are collected or inferred.'));
+  details.append(audienceSources(data.source_ids,dossier));
+  const link=make('a','inline-link','Full survey definitions and caveats ↗');
+  link.href='./ontology/youtube/community-audience-studies.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,analyticsGuide,platformScale,eligibilityMatrix,applicationLifecycle,creatorGrowth,contentFormats]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,analyticsGuide,platformScale,eligibilityMatrix,applicationLifecycle,creatorGrowth,contentFormats,newsAudienceStudy]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -980,6 +1026,8 @@ async function showDossier(entry) {
     if(audience)outer.append(audience);
     const history=renderAdultUseHistory(adultUseHistory);
     if(history)outer.append(history);
+    const newsStudy=renderCommunityAudienceStudy(newsAudienceStudy,record);
+    if(newsStudy)outer.append(newsStudy);
     const incomeStudy=renderCreatorIncomeEvidence(incomeEvidence);
     if(incomeStudy)outer.append(incomeStudy);
     const channelStudy=renderSmallChannelStudy(channelIncome);

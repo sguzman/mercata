@@ -51,6 +51,15 @@ for (const entry of index.specimens) {
   if(entry.id==='youtube') {
     const model=load('ontology/youtube/model.json');
     const growth=load('ontology/youtube/creator-growth.json');
+    const newsAudience=load('ontology/youtube/community-audience-studies.json');
+    ensure(newsAudience.study_topic_id==='news-and-journalism','Unexpected news population');
+    ensure(newsAudience.trends.length===7 && newsAudience.trends.at(-1).all_adults_percent===34,
+      'Incomplete bounded Pew YouTube news trend');
+    ensure(newsAudience.demographic_composition.length>=12,'Incomplete news audience profile');
+    ensure(newsAudience.demographic_composition.every(x=>x.source_ids.every(id=>sourceIds.has(id)) &&
+      x.measurement_kind==='composition_of_news_consumers' && x.share_percent>=0 && x.share_percent<=100),
+      'Invalid news demographic population');
+
     const formatStudy=load('ontology/youtube/content-formats.json');
     ensure(formatStudy.formats.length===8,'Incomplete YouTube format research');
     ensure(new Set(formatStudy.formats.map(x=>x.id)).size===formatStudy.formats.length,'Duplicate format IDs');

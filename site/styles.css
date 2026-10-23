@@ -374,3 +374,16 @@ h1 em {font-style:italic;color:var(--accent)}
 .niche-gaps ul{margin:10px 0 0}
 .niche-evidence-row{border-top:1px solid var(--line);padding-top:8px}
 .niche-evidence-row .inline-link{margin-left:9px}
+
+.community-survey{margin:27px 0;border-top:1px solid var(--line);padding-top:20px}
+.community-survey-details,.community-survey-profile,.community-survey-trends{border:1px solid var(--line);background:var(--surface);padding:14px;border-radius:9px}
+.community-survey-details>summary,.community-survey-profile>summary,.community-survey-trends>summary{font-size:14px;font-weight:750;cursor:pointer}
+.community-survey-numbers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:15px 0}
+.community-survey-profile,.community-survey-trends{margin:12px 0}
+.community-survey-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:13px}
+.community-survey-year,.community-profile-card{min-width:0;background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:13px}
+.community-survey-year strong,.community-profile-card strong{font-size:19px;font-variant-numeric:tabular-nums}
+.community-profile-card h5{font-size:12px;margin:0 0 5px}
+.community-survey-year p,.community-profile-card small{font-size:12px;color:var(--muted)}
+@media(max-width:750px){.community-survey-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:460px){.community-survey-grid,.community-survey-numbers{grid-template-columns:1fr}}

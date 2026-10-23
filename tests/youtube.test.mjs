@@ -315,3 +315,17 @@ test('YouTube graph distinguishes format and audience event semantics',async()=>
   assert.equal(ids.size,graph.concepts.length);
   assert(graph.relations.every(r=>ids.has(r.subject)&&ids.has(r.object)));
 });
+
+test('Pew news survey rates use separate populations and survey years',async()=>{
+  const [source,dossier]=await Promise.all([
+    load('ontology/youtube/community-audience-studies.json'),
+    load('specimens/youtube.json')
+  ]);
+  const known=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(source.trends.length,7);
+  assert.equal(source.trends.at(-1).all_adults_percent,34);
+  assert.equal(source.trends.at(-1).youtube_users_percent,41);
+  assert(source.demographic_composition.every(x=>x.measurement_kind==='composition_of_news_consumers'));
+  assert(source.demographic_composition.every(x=>x.population.includes('regularly get news')));
+  assert(source.demographic_composition.every(x=>x.source_ids.every(id=>known.has(id))));
+});
