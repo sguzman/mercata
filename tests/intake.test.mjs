@@ -28,7 +28,9 @@ test('intake generates full empty research record and rejects duplicates', async
   try {
     for (const folder of ['gallery','pipeline','specimens','queues']) await fs.mkdir(path.join(root,folder));
     for (const file of ['gallery/index.json','pipeline/queues.json','pipeline/domains.json','pipeline/social.json']) {
-      await fs.copyFile(path.join(project,file),path.join(root,file));
+      if (file === 'gallery/index.json') await fs.writeFile(path.join(root,file),
+        JSON.stringify({schema_version:1,description:'Synthetic empty test catalog',specimens:[]}));
+      else await fs.copyFile(path.join(project,file),path.join(root,file));
     }
     const args=['scripts/intake.mjs','--name','Synthetic Platform','--url','https://example.org/','--domain','literature','--root',root];
     execFileSync(process.execPath,args,{cwd:project,stdio:'pipe'});
@@ -51,7 +53,9 @@ test('social audience profile creates extra queues without pretending to know de
   try {
     for (const folder of ['gallery','pipeline','specimens','queues']) await fs.mkdir(path.join(root,folder));
     for (const file of ['gallery/index.json','pipeline/queues.json','pipeline/domains.json','pipeline/social.json'])
-      await fs.copyFile(path.join(project,file),path.join(root,file));
+      if (file === 'gallery/index.json') await fs.writeFile(path.join(root,file),
+        JSON.stringify({schema_version:1,description:'Synthetic empty test catalog',specimens:[]}));
+      else await fs.copyFile(path.join(project,file),path.join(root,file));
     const args=['scripts/intake.mjs','--name','Synthetic Video Platform','--url','https://example.org/',
       '--domain','video','--root',root];
     execFileSync(process.execPath,args,{cwd:project,stdio:'pipe'});
@@ -66,4 +70,24 @@ test('social audience profile creates extra queues without pretending to know de
     assert(queued.queues.length>13);
     assert(queued.queues.flatMap(q=>q.tasks).every(t=>t.progress===0 && t.evidence.length===0));
   } finally { await fs.rm(root,{recursive:true,force:true}); }
+});
+
+test('existing social specimens have complete research queues and no fabricated findings', async () => {
+  const index=JSON.parse(await fs.readFile(path.join(project,'gallery/index.json'),'utf8'));
+  const social=JSON.parse(await fs.readFile(path.join(project,'pipeline/social.json'),'utf8'));
+  const checked=index.specimens.filter(x=>x.research_profiles?.includes('social_audience'));
+  assert.equal(checked.length,11);
+  for(const entry of checked) {
+    const record=JSON.parse(await fs.readFile(path.join(project,entry.dossier),'utf8'));
+    const queue=JSON.parse(await fs.readFile(path.join(project,entry.queue),'utf8'));
+    assert.equal(queue.queues.length,13+social.queues.length);
+    assert.deepEqual(record.audience_research.communities,[]);
+    assert.deepEqual(record.audience_research.demographics,[]);
+    for(const group of social.queues) {
+      const specimenGroup=queue.queues.find(q=>q.id===group.id);
+      assert(specimenGroup);
+      assert.equal(specimenGroup.tasks.length,group.tasks.length);
+      assert(specimenGroup.tasks.every(t=>t.progress===0 && t.evidence.length===0));
+    }
+  }
 });

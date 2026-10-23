@@ -115,7 +115,8 @@ function showCatalog() {
     const link=make('a','inline-link','View research record ↗');
     link.href='#dossier-view';
     link.addEventListener('click',event=>{event.preventDefault();showDossier(entry);});
-    add(card,header,title,description,link,make('small','', 'Admitted '+entry.created_at));
+    add(card,header,title,description,link,
+      make('small','',entry.research_profiles?.includes('social_audience') ? '👥 Audience + subcultures · Admitted '+entry.created_at : 'Admitted '+entry.created_at));
     frag.append(card);
   }
   grid.replaceChildren(frag);
@@ -135,6 +136,125 @@ function detailSection(name,items,renderItem) {
   else for(const item of items) section.append(renderItem(item));
   return section;
 }
+
+function audienceSources(ids,record) {
+  const container=make('div','audience-source-links');
+  const sources=(record.evidence||[]);
+  for(const id of ids||[]) {
+    const source=sources.find(item=>item.id===id);
+    if(source && typeof source.url==='string' && /^https:\/\//i.test(source.url)) {
+      const anchor=make('a','','Source: '+(source.publisher||id)+' ↗');
+      anchor.href=source.url;
+      anchor.target='_blank';anchor.rel='noopener noreferrer';
+      container.append(anchor);
+    } else container.append(make('span','', 'Source: '+id));
+  }
+  return container;
+}
+function audienceEstimate(estimate,record) {
+  const card=make('article','audience-measure');
+  const number=estimate.value===null||estimate.value===undefined?'Unknown':new Intl.NumberFormat().format(estimate.value);
+  add(card,make('span','measure-label',estimate.metric||'Estimate'),
+    make('strong','measure-value',number),
+    make('span','measure-unit',estimate.unit||'unit unspecified'));
+  const context=[estimate.population,estimate.geography,estimate.period].filter(Boolean).join(' · ');
+  if(context)card.append(make('p','measure-context',context));
+  if(estimate.method)card.append(make('p','measure-method','Method: '+estimate.method));
+  if(estimate.limitations)card.append(make('p','measure-limit','Limitations: '+estimate.limitations));
+  card.append(audienceSources(estimate.source_ids,record));
+  return card;
+}
+function audiencePanel(label,description) {
+  const block=make('section','audience-panel');
+  add(block,make('h5','',label),make('p','audience-panel-intro',description));
+  return block;
+}
+function renderAudienceResearch(record) {
+  if(!record.research_profiles?.includes('social_audience'))return null;
+  const data=record.audience_research;
+  const section=make('section','audience-atlas');
+  add(section,make('p','eyebrow','AUDIENCE + COMMUNITY RESEARCH'),
+    make('h4','audience-atlas-title','Who is here, and what do they watch?'),
+    make('p','audience-atlas-description','The figures below distinguish people, accounts, creators, channels, views, advertising reach and overlapping interest groups. No number represents a complete population without the stated method and coverage.'));
+  if(!data) {
+    section.append(make('p','unresearched','Audience research structure is not available for this specimen.'));
+    return section;
+  }
+  const population=audiencePanel('🌍 Platform size and reach','Counts need a defined period, geography and population.');
+  if(!data.populations?.length)population.append(make('p','unresearched','No platform population measurements have been verified.'));
+  else {
+    const grid=make('div','audience-estimates');
+    for(const estimate of data.populations)grid.append(audienceEstimate(estimate,record));
+    population.append(grid);
+  }
+  section.append(population);
+
+  const demographic=audiencePanel('👥 Audience demographics','Age, gender, sex, ethnicity, countries, language and other aggregate survey measures are recorded separately.');
+  if(!data.demographics?.length)demographic.append(make('p','unresearched','No demographic distributions have been verified. Political affiliation and ethnicity are unknown unless supported by aggregate data.'));
+  else {
+    const table=make('div','demographic-table');
+    for(const metric of data.demographics) {
+      const row=make('div','demographic-row');
+      const title=(metric.dimension||'other').replaceAll('_',' ')+' · '+metric.category;
+      const value=metric.share_percent===null?'Unknown':metric.share_percent.toLocaleString()+'%';
+      add(row,make('strong','',title),make('span','',value),
+        make('small','',[metric.population,metric.geography,metric.period].filter(Boolean).join(' · ')));
+      if(metric.share_percent!==null)row.append(progress(metric.share_percent,title));
+      if(metric.limitations)row.append(make('p','measure-limit','Limitations: '+metric.limitations));
+      row.append(audienceSources(metric.source_ids,record));
+      table.append(row);
+    }
+    demographic.append(table);
+  }
+  section.append(demographic);
+
+  const communities=audiencePanel('🧩 Subcultures and communities','Community figures may overlap: view counts, creators and unique viewers must not be added together.');
+  if(!data.communities?.length)communities.append(make('p','unresearched','No communities have been measured yet. Beauty, feminine lifestyle, children’s animation, politics, memes and gaming are among the topics to investigate.'));
+  else {
+    const control=make('input','subculture-filter');
+    control.type='search';control.placeholder='Filter subcultures';
+    control.setAttribute('aria-label','Filter community names');
+    const results=make('div','community-grid');
+    const draw=()=>{
+      const query=control.value.toLocaleLowerCase();
+      const matches=data.communities.filter(c=>(c.label+' '+(c.aliases||[]).join(' ')).toLocaleLowerCase().includes(query));
+      const cards=matches.map(c=>{
+        const card=make('article','community-card');
+        add(card,make('h6','',c.label),make('p','',c.definition));
+        if(!c.estimates?.length)card.append(make('p','unresearched','No reliable size estimate yet.'));
+        else for(const estimate of c.estimates)card.append(audienceEstimate(estimate,record));
+        return card;
+      });
+      results.replaceChildren(...cards);
+      if(!cards.length)results.append(make('p','unresearched','No communities match this filter.'));
+    };
+    control.addEventListener('input',draw);
+    draw();communities.append(control,results);
+  }
+  section.append(communities);
+
+  const overlap=audiencePanel('🔗 Community overlap','People can belong to several subcultures, so a sum of their estimated memberships is not a platform-wide total.');
+  if(!data.overlaps?.length)overlap.append(make('p','unresearched','No independently supported community-overlap estimates.'));
+  else for(const estimate of data.overlaps){
+    const label=(estimate.community_ids||[]).join(' ∩ ');
+    overlap.append(audienceEstimate({...estimate,metric:label,population:label,geography:'',limitations:estimate.limitations},record));
+  }
+  section.append(overlap);
+
+  const formats=audiencePanel('🎬 Formats and creator opportunities','Watch time, format preference and commercial suitability need separate evidence.');
+  if(!data.formats?.length && !data.insights?.length)formats.append(make('p','unresearched','No verified format or monetization findings yet.'));
+  for(const item of data.formats||[])formats.append(audienceEstimate(item,record));
+  for(const insight of data.insights||[]){
+    const row=make('div','research-item');
+    row.append(make('p','',insight.statement));
+    if(insight.limitations)row.append(make('small','',insight.limitations));
+    row.append(audienceSources(insight.source_ids,record));
+    formats.append(row);
+  }
+  section.append(formats);
+  return section;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
@@ -191,6 +311,8 @@ async function showDossier(entry) {
       return add(make('div','research-item'),make('p','',risk.title||risk.id||'Risk'));
     }));
     outer.append(evidenceArea);
+    const audience=renderAudienceResearch(record);
+    if(audience)outer.append(audience);
     outer.append(make('h4','dossier-queues-title','Research queues'));
     const queueList=make('div','dossier-queues');
     for(const group of work.queues){

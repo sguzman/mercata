@@ -200,6 +200,98 @@
       ]
     },
     {
+      "id": "social-audience",
+      "emoji": "👥",
+      "name": "Social audience and community research",
+      "percent": 93,
+      "phases": [
+        {
+          "id": "model",
+          "emoji": "🧬",
+          "name": "Research design",
+          "features": [
+            {
+              "id": "taxonomy",
+              "emoji": "🧩",
+              "name": "Audience and subculture ontology",
+              "tasks": [
+                {
+                  "id": "audience-ontology",
+                  "emoji": "📐",
+                  "title": "Define aggregate audience and community measurements",
+                  "percent": 100,
+                  "evidence": [
+                    "ontology/ontology.json",
+                    "ontology/README.md",
+                    "ontology/audience.schema.json"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "questions",
+              "emoji": "🔎",
+              "name": "Dedicated audience research queues",
+              "tasks": [
+                {
+                  "id": "social-queues",
+                  "emoji": "🗂️",
+                  "title": "Define and attach 80 social research tasks",
+                  "percent": 100,
+                  "evidence": [
+                    "pipeline/social.json",
+                    "queues/youtube.json",
+                    "queues/wattpad.json"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "publication",
+          "emoji": "🎨",
+          "name": "Presentation and verification",
+          "features": [
+            {
+              "id": "display",
+              "emoji": "📊",
+              "name": "Audience atlas",
+              "tasks": [
+                {
+                  "id": "audience-site",
+                  "emoji": "🖼️",
+                  "title": "Render source-backed demographics and community sizes",
+                  "percent": 90,
+                  "evidence": [
+                    "site/app.js",
+                    "site/styles.css"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "test",
+              "emoji": "✅",
+              "name": "Integration assurance",
+              "tasks": [
+                {
+                  "id": "social-tests",
+                  "emoji": "🧪",
+                  "title": "Test social intake and retrofitted queues",
+                  "percent": 80,
+                  "evidence": [
+                    "scripts/verify.mjs",
+                    "tests/intake.test.mjs"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "deployment",
       "emoji": "🌐",
       "name": "Live Pages deployment",

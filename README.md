@@ -6,7 +6,7 @@
 
 Mercata researches the cost, demand, competition, access, discovery, fees, payouts, rights, earnings distributions and realistic earning strategies of online platforms. Its goal is clear economic understanding, not promotional income claims.
 
-**26 marketplaces are now admitted as research specimens.** Their dossiers and 2,184 research tasks are queued. Economic research has not started; all income, fee, market and eligibility claims remain unverified.
+**26 marketplaces are now admitted as research specimens.** Their dossiers and 3,064 research tasks across 437 work queues are queued. Economic research has not started; all income, fee, market and eligibility claims remain unverified.
 
 ## Contents
 
@@ -14,12 +14,15 @@ Mercata researches the cost, demand, competition, access, discovery, fees, payou
 - [Human ontology](ontology/README.md) and [machine ontology](ontology/ontology.json) — independent definitions and validation.
 - [Gallery](gallery/README.md) and [machine index](gallery/index.json) — truthful specimen status.
 - [Research pipeline](pipeline/README.md) — detailed task queues generated for each admitted marketplace.
+- [Social and subculture research](pipeline/social.json) — nine extra workstreams for platforms with substantial public creator communities; [audience schema](ontology/audience.schema.json).
 - [Roadmap](roadmap/README.md) — emoji milestones and evidence-backed percentage bars.
 - [Constitution](CONSTITUTION.md) and [agent rules](AGENTS.md) — public content and quality policy.
 
 ## Research principles
 
 Distinguish markets from individual opportunities, discovery from payment, gross receipts from profit, reported success stories from representative samples, and unknown values from zero. Claims need dated public sources with transparent populations, methods, and limitations. A platform's economic size does not establish what a new participant can expect to earn.
+
+**Eleven specimens** have an additional social-audience profile that will study active populations, age, sex and gender, race or ethnicity where supported, countries, languages, survey-based political affiliation, and the size and overlap of communities such as beauty, feminine lifestyle, children's animation, memes, politics and gaming. It also tracks competing creators, attention, demand and content economics. None of those population figures has been researched yet.
 
 Coverage may include games, literature, software, professional services, video, visual art, digital products and subscriptions. All 26 named initial specimens were admitted by explicit authorization; new admissions still require specific authorization.
 

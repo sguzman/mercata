@@ -164,3 +164,29 @@ h1 em {font-style:italic;color:var(--accent)}
 .queue-task-list p {color:var(--muted);margin:3px 0}
 @media(max-width:700px){.dossier-shell{padding:19px}.dossier-head h3{font-size:29px}.dossier-stats,.dossier-evidence,.dossier-queues{grid-template-columns:repeat(2,1fr)}.dossier-evidence,.dossier-queues{gap:10px}}
 @media(max-width:480px){.dossier-stats{grid-template-columns:repeat(2,1fr)}.dossier-evidence,.dossier-queues{grid-template-columns:1fr}}
+
+/* Per-specimen social audience atlas */
+.audience-atlas {border-top:1px solid var(--line);margin-top:35px;padding-top:30px}
+.audience-atlas-title {font:32px/1.18 Georgia,serif;letter-spacing:-.03em;margin:0 0 12px}
+.audience-atlas-description {max-width:790px;color:var(--muted);font-size:13px;line-height:1.75}
+.audience-panel {border-top:1px solid var(--line);margin-top:24px;padding-top:19px}
+.audience-panel h5 {font-size:16px;margin:0 0 4px}
+.audience-panel-intro {font-size:12px;color:var(--muted);margin:0 0 13px}
+.audience-estimates,.community-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.audience-measure {background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:0}
+.measure-label,.measure-unit {display:block;color:var(--muted);font-size:12px}
+.measure-value {display:block;font:30px/1.4 Georgia,serif;font-variant-numeric:tabular-nums}
+.measure-context,.measure-method,.measure-limit {color:var(--muted);font-size:12px;margin:5px 0}
+.audience-source-links {display:flex;flex-wrap:wrap;gap:7px;font-size:11px;color:var(--muted);margin-top:8px}
+.audience-source-links a {text-decoration:underline;text-underline-offset:3px}
+.demographic-row {border-top:1px solid var(--line);display:grid;grid-template-columns:1fr auto;align-items:center;gap:2px 15px;padding:13px 0;font-size:12px}
+.demographic-row strong {text-transform:capitalize}
+.demographic-row small,.demographic-row .progress-track,.demographic-row .measure-limit,.demographic-row .audience-source-links {grid-column:1/-1}
+.demographic-row small {color:var(--muted)}
+.demographic-row .progress-track {margin:5px 0}
+.community-card {background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:16px}
+.community-card h6 {font-size:15px;margin:0 0 5px}
+.community-card>p {font-size:12px;color:var(--muted)}
+.community-card .audience-measure {margin-top:10px;background:var(--surface)}
+.subculture-filter {display:block;background:var(--surface);border:1px solid var(--line);width:100%;max-width:420px;padding:11px 13px;border-radius:8px;margin:0 0 12px;font-size:13px}
+@media(max-width:700px){.audience-estimates,.community-grid{grid-template-columns:1fr}}

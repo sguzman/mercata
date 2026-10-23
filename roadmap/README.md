@@ -15,3 +15,5 @@ All milestones, phases and atomic tasks use meaningful emojis and percentage val
 Once a milestone is completed, routine progress reports need only show still-open work. The full evidence ledger remains here.
 
 The ledger is hierarchical: **milestones → phases → features → atomic tasks**. Foundation percentages reflect checks that have run; full Node integration and browser rendering remain to be verified.
+
+**Social audience research:** a distinct conditional profile adds nine queues (80 questions) for 11 existing social or creator-community marketplaces. Ontology and queue retrofit are complete; browser verification and full integration tests remain open. Research itself remains at 0%.
