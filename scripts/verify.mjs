@@ -161,6 +161,29 @@ for (const entry of index.specimens) {
       x.eligibility_confirmed_for_any_specific_person===false),
       'Invalid or unsourced earning eligibility');
 
+    const productionCosts=load('ontology/youtube/production-costs.json');
+    ensure(productionCosts.cash_categories.length===10 &&
+      productionCosts.labor_categories.length===10 &&
+      productionCosts.design_experiments.length===3,
+      'Incomplete creator cash and labor cost protocol');
+    const costCashIds=new Set(productionCosts.cash_categories.map(x=>x.id));
+    const costHourIds=new Set(productionCosts.labor_categories.map(x=>x.id));
+    ensure(costCashIds.size===10 && costHourIds.size===10,
+      'Duplicate cost or work-time category');
+    ensure(productionCosts.cash_categories.every(x=>x.amount===null &&
+      x.source_ids.every(id=>sourceIds.has(id))) &&
+      productionCosts.labor_categories.every(x=>x.value===null),
+      'Unattributed production claim or invented costs and hours');
+    ensure(productionCosts.design_experiments.every(x=>
+      x.status==='not_measured' && x.median_cash_cost===null &&
+      x.median_hours===null && x.source_ids.every(id=>sourceIds.has(id))),
+      'Unsupported format cost comparison');
+    ensure(productionCosts.model.creator_cash_outlays===null &&
+      productionCosts.model.creator_labor_hours===null &&
+      productionCosts.model.cash_profit_per_hour===null &&
+      productionCosts.model.economic_profit_after_labor_valuation===null,
+      'Unobserved typical cost or income must stay unknown');
+
     const musicRights=load('ontology/youtube/music-rights-economics.json');
     ensure(musicRights.options.length===5 && musicRights.claim_outcomes.length===4,
       'Incomplete music-rights economics model');
