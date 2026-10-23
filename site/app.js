@@ -369,13 +369,29 @@ function renderPlatformPolicies(policy, record) {
   return section;
 }
 
+function renderTopicCatalogue(data) {
+  if(!data)return null;
+  const section=make('section','topic-catalogue');
+  section.append(make('h4','audience-atlas-title','Content communities to study'));
+  section.append(make('p','audience-atlas-description','These are research categories, not measured populations. Audiences overlap, and topic sizes are currently unknown.'));
+  const grid=make('div','topic-catalogue-grid');
+  for(const topic of data.topics){
+    const card=make('article','topic-catalogue-card');
+    add(card,make('h5','',topic.label),make('p','',topic.definition),
+      make('small','', 'Audience size: unknown · Creators: unknown'));
+    grid.append(card);
+  }
+  section.append(grid);
+  return section;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -431,6 +447,8 @@ async function showDossier(entry) {
     if(policySection)outer.append(policySection);
     const audience=renderAudienceResearch(record);
     if(audience)outer.append(audience);
+    const catalogue=renderTopicCatalogue(topicCatalog);
+    if(catalogue)outer.append(catalogue);
     if(studyPlan)outer.append(renderStudyPlan(studyPlan));
     outer.append(make('h4','dossier-queues-title','Research queues'));
     const queueList=make('div','dossier-queues');

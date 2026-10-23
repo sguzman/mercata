@@ -233,3 +233,11 @@ h1 em {font-style:italic;color:var(--accent)}
 .policy-conditions{padding-left:20px}
 .policy-conditions li{padding:2px 0}
 @media(max-width:650px){.platform-policy-grid{grid-template-columns:1fr}}
+
+.topic-catalogue{border-top:1px solid var(--line);margin-top:30px;padding-top:25px}
+.topic-catalogue-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+.topic-catalogue-card{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:15px}
+.topic-catalogue-card h5{font-size:14px;margin:0 0 5px}
+.topic-catalogue-card p,.topic-catalogue-card small{color:var(--muted);font-size:12px}
+@media(max-width:900px){.topic-catalogue-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.topic-catalogue-grid{grid-template-columns:1fr}}
