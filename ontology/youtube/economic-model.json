@@ -23,9 +23,9 @@
       "value": null
     },
     {
-      "id": "watch_rpm",
+      "id": "watch_ad_only_rpm",
       "unit": "currency_per_1000_views",
-      "definition": "Creator revenue per 1,000 applicable views, after platform allocation, observed for a specific cohort and period",
+      "definition": "Ad-only revenue per 1,000 relevant views after platform share. Excludes Premium, memberships and other funding.",
       "value": null
     },
     {
@@ -113,9 +113,9 @@
       "expression": "watch_views * watch_rpm / 1000",
       "inputs": [
         "watch_views",
-        "watch_rpm"
+        "watch_ad_only_rpm"
       ],
-      "note": "Only valid if RPM scope precisely matches views, format, period and geography. Do not apply 55% again to after-share RPM."
+      "note": "Ad-only yield; never substitute combined YouTube RPM, which can already include memberships and Premium."
     },
     {
       "id": "shorts_ad_estimate",
