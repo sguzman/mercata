@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "creator_channel_onboarding_and_feature_access",
+  "as_of": "2026-10-23",
+  "status": "official_policy_snapshot_not_a_payout_forecast",
+  "purpose": "Separate ability to use YouTube, publish videos, unlock product features, and receive money. No personal account credentials or identity data are required for this public ontology.",
+  "objects": [
+    {
+      "id": "google_account",
+      "label": "Google Account",
+      "unit": "login",
+      "definition": "Signed-in account that can watch, like and subscribe without operating a publishing channel",
+      "source_ids": [
+        "yt-channel-create"
+      ]
+    },
+    {
+      "id": "personal_channel",
+      "label": "Personal YouTube channel",
+      "unit": "channel",
+      "definition": "Publishing identity ordinarily managed by the account holder",
+      "source_ids": [
+        "yt-channel-create"
+      ]
+    },
+    {
+      "id": "brand_channel",
+      "label": "Brand Account channel",
+      "unit": "channel",
+      "definition": "Channel using a business or alternative name that can have multiple owners or managers",
+      "source_ids": [
+        "yt-channel-create"
+      ]
+    },
+    {
+      "id": "feature_eligibility",
+      "label": "YouTube Studio feature eligibility",
+      "unit": "account_specific_access_state",
+      "definition": "Current access to standard, intermediate, and advanced features, dependent on verification and policy record",
+      "source_ids": [
+        "yt-feature-access",
+        "yt-advanced-access"
+      ]
+    },
+    {
+      "id": "published_video",
+      "label": "Published video",
+      "unit": "video",
+      "definition": "Uploaded and made visible according to the selected publication setting; not the same event as uploading a file",
+      "source_ids": [
+        "yt-upload"
+      ]
+    },
+    {
+      "id": "monetized_creator",
+      "label": "Approved earning creator",
+      "unit": "channel_and_payment_product_state",
+      "definition": "A creator meeting independent YPP or external earning gates; uploading and verifying a channel never guarantee this status",
+      "source_ids": [
+        "ypp-main",
+        "yt-feature-access"
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "id": "account",
+      "label": "Use a Google Account",
+      "sequence": 1,
+      "required_for": "signed_in_youtube_use",
+      "entry": "Account sign-in",
+      "outcome": "Viewing, liking and subscribing where available",
+      "verification": "google_account_sign_in",
+      "requires_channel": false,
+      "requires_phone_verification": false,
+      "cost_if_supported": null,
+      "expected_time_days": null,
+      "source_ids": [
+        "yt-channel-create"
+      ],
+      "limits": "Account age and supervised-experience rules may restrict features"
+    },
+    {
+      "id": "channel",
+      "label": "Create a publishing channel",
+      "sequence": 2,
+      "required_for": "video_publishing",
+      "entry": "Create a personal channel or Brand Account-linked channel",
+      "outcome": "YouTube publishing identity with name and handle",
+      "verification": "channel_creation",
+      "requires_channel": true,
+      "requires_phone_verification": false,
+      "cost_if_supported": null,
+      "expected_time_days": null,
+      "source_ids": [
+        "yt-channel-create"
+      ],
+      "limits": "Supervised accounts may be unable to create a channel"
+    },
+    {
+      "id": "standard",
+      "label": "Use standard publishing features",
+      "sequence": 3,
+      "required_for": "initial_uploads",
+      "entry": "Eligible channel without active Community Guidelines strikes",
+      "outcome": "Standard uploads and Shorts, with limited daily quotas",
+      "verification": "no_additional_identity_verification_for_baseline",
+      "requires_channel": true,
+      "requires_phone_verification": false,
+      "cost_if_supported": null,
+      "expected_time_days": null,
+      "source_ids": [
+        "yt-feature-access",
+        "yt-upload"
+      ],
+      "limits": "Uploads are subject to policy, moderation, and service quotas; uploaded is not necessarily publicly published"
+    },
+    {
+      "id": "intermediate",
+      "label": "Unlock intermediate features",
+      "sequence": 4,
+      "required_for": "videos_over_15_minutes_and_other_intermediate_features",
+      "entry": "Verify a phone number through YouTube Studio",
+      "outcome": "Additional features such as longer videos, custom thumbnails and computer live streaming, subject to separate product conditions",
+      "verification": "sms_or_voice_call_code",
+      "requires_channel": true,
+      "requires_phone_verification": true,
+      "cost_if_supported": null,
+      "expected_time_days": null,
+      "source_ids": [
+        "yt-feature-access",
+        "yt-advanced-access",
+        "yt-phone-verify"
+      ],
+      "limits": "Phone or SMS delivery may not be supported by all carriers; mobile live has separate restrictions"
+    },
+    {
+      "id": "advanced",
+      "label": "Unlock advanced features",
+      "sequence": 5,
+      "required_for": "advanced_tools",
+      "entry": "After phone verification, establish sufficient channel history OR, where offered, complete ID or video verification",
+      "outcome": "Examples include pinned comments and higher daily limits",
+      "verification": "channel_history_or_optional_id_or_video",
+      "requires_channel": true,
+      "requires_phone_verification": true,
+      "cost_if_supported": null,
+      "expected_time_days": null,
+      "source_ids": [
+        "yt-feature-access",
+        "yt-advanced-access"
+      ],
+      "limits": "Not all creators can use ID/video verification; history standard is conditional and access can be lost"
+    },
+    {
+      "id": "earning",
+      "label": "Apply separately for monetization",
+      "sequence": 6,
+      "required_for": "native_youtube_revenue",
+      "entry": "Meet the appropriate YPP tier, jurisdiction and product-policy gates, then pass review and set up payment",
+      "outcome": "Potential eligibility for specified earning modules if approved",
+      "verification": "ypp_and_product_specific_review",
+      "requires_channel": true,
+      "requires_phone_verification": null,
+      "cost_if_supported": null,
+      "expected_time_days": null,
+      "source_ids": [
+        "ypp-main",
+        "ypp-expanded"
+      ],
+      "limits": "Standard channel, phone and advanced feature states do not by themselves grant payouts; no representative time-to-first-earnings known"
+    }
+  ],
+  "feature_gates": [
+    {
+      "id": "standard",
+      "label": "Standard",
+      "requires": [
+        "youtube_channel",
+        "no_active_community_guidelines_strikes"
+      ],
+      "features": [
+        "upload_videos_and_shorts_with_daily_limits",
+        "create_public_playlists_with_limits",
+        "community_posts_where_available"
+      ],
+      "personal_identity_submission_required": false,
+      "source_ids": [
+        "yt-feature-access"
+      ],
+      "limits": "Availability varies with account and separate product policies"
+    },
+    {
+      "id": "intermediate",
+      "label": "Intermediate",
+      "requires": [
+        "youtube_channel",
+        "phone_verification"
+      ],
+      "features": [
+        "videos_longer_than_15_minutes",
+        "custom_thumbnails",
+        "computer_live_streaming_under_separate_conditions",
+        "podcast_creation"
+      ],
+      "personal_identity_submission_required": false,
+      "source_ids": [
+        "yt-feature-access",
+        "yt-phone-verify"
+      ],
+      "limits": "No account-specific eligibility can be inferred from this general checklist"
+    },
+    {
+      "id": "advanced",
+      "label": "Advanced",
+      "requires": [
+        "phone_verification",
+        "sufficient_channel_history_OR_optional_id_or_video_verification"
+      ],
+      "features": [
+        "pinned_comments",
+        "higher_daily_upload_limits",
+        "some_advanced_commerce_or_distribution_features"
+      ],
+      "personal_identity_submission_required": null,
+      "source_ids": [
+        "yt-feature-access",
+        "yt-advanced-access"
+      ],
+      "limits": "ID/video verification is optional alternative, not offered to all creators; primary owner alone can perform this method"
+    },
+    {
+      "id": "ypp_product_gates",
+      "label": "Monetization",
+      "requires": [
+        "matching_ypp_tier_if_applicable",
+        "country_product_eligibility",
+        "program_review_and_module_acceptance",
+        "payment_requirements"
+      ],
+      "features": [
+        "ads_or_other_native_revenue_only_as_separately_approved"
+      ],
+      "personal_identity_submission_required": null,
+      "source_ids": [
+        "ypp-main",
+        "ypp-expanded"
+      ],
+      "limits": "Products and geographic conditions differ; published content alone is not monetization"
+    }
+  ],
+  "entry_pathway": [
+    {
+      "id": "create",
+      "order": 1,
+      "action": "Create a personal or Brand channel using an existing eligible Google Account",
+      "source_ids": [
+        "yt-channel-create"
+      ],
+      "confirmed_platform_cash_fee": null,
+      "operator_work_hours": null
+    },
+    {
+      "id": "produce",
+      "order": 2,
+      "action": "Produce a lawful video using already-owned tools and appropriately licensed media",
+      "source_ids": [
+        "yt-upload"
+      ],
+      "confirmed_platform_cash_fee": null,
+      "operator_work_hours": null
+    },
+    {
+      "id": "upload",
+      "order": 3,
+      "action": "Upload to YouTube Studio; choose accurate audience, rights and visibility information",
+      "source_ids": [
+        "yt-upload"
+      ],
+      "confirmed_platform_cash_fee": null,
+      "operator_work_hours": null
+    },
+    {
+      "id": "publish",
+      "order": 4,
+      "action": "Publish or schedule if available, distinguishing private/unlisted content from public access",
+      "source_ids": [
+        "yt-upload"
+      ],
+      "confirmed_platform_cash_fee": null,
+      "operator_work_hours": null
+    },
+    {
+      "id": "measure",
+      "order": 5,
+      "action": "Evaluate public results without claiming earned payouts, audience uniqueness or zero production effort",
+      "source_ids": [
+        "yt-feature-access"
+      ],
+      "confirmed_platform_cash_fee": null,
+      "operator_work_hours": null
+    }
+  ],
+  "accounting": {
+    "baseline_no_cash_outlay_possible": "conditional_if_existing_account_equipment_connectivity_media_rights_and_local_conditions_allow",
+    "zero_cost_guarantee": false,
+    "no_cost_justification": "A creator may already have equipment and network access; platform publishing access must not be equated with economic zero cost.",
+    "total_cash_cost_median": null,
+    "setup_hours_median": null,
+    "time_to_ypp_qualification_distribution": null,
+    "time_to_first_payment_distribution": null,
+    "verified_new_creator_survival_rate": null
+  },
+  "privacy_safeguards": [
+    "Research must not ask a person to upload identity documents, phone verification codes, or account credentials.",
+    "This public source-backed pathway is informational and not personalized proof of eligibility.",
+    "A Brand Account manager is not necessarily the primary owner authorized to perform advanced identity verification.",
+    "Optional identity and video verification should not be presented as mandatory when channel history is accepted."
+  ],
+  "prohibited_inferences": [
+    "google_account_equals_publishing_channel",
+    "channel_created_equals_partner_program_member",
+    "phone_verified_equals_advanced_features",
+    "advanced_features_equals_ypp_approval",
+    "uploaded_video_equals_publicly_published_video",
+    "zero_platform_fee_equals_zero_creator_economic_cost",
+    "channel_history_is_a_fixed_number_of_days"
+  ]
+}
