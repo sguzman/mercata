@@ -466,3 +466,17 @@ h1 em {font-style:italic;color:var(--accent)}
 .adjacent-cost-bin {display:flex;justify-content:space-between;gap:10px;align-items:center;background:var(--surface-alt);border:1px solid var(--line);padding:8px 12px;border-radius:7px;font-size:12px}
 .adjacent-cost-bin strong {font-variant-numeric:tabular-nums}
 @media(max-width:650px) {.adjacent-cost-bins{grid-template-columns:1fr}}
+
+.cross-platform-income {margin:28px 0}
+.cross-platform-income-details {border:1px solid var(--line);border-radius:10px;padding:20px;background:var(--surface)}
+.cross-platform-income-details>summary {font-weight:800;cursor:pointer;font-size:15px}
+.cross-platform-income-details>.measure-limit {margin:13px 0}
+.cross-platform-income-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}
+.cross-platform-income-card {min-width:0;padding:18px;border:1px solid var(--line);border-radius:9px;background:var(--surface-alt);overflow-wrap:anywhere}
+.cross-platform-income-card h5 {font-size:15px;margin:0 0 8px}
+.cross-platform-income-card p {font-size:12px}
+.cross-platform-income-measures {list-style:none;display:grid;gap:9px;margin:13px 0;padding:0}
+.cross-platform-income-measure {display:flex;align-items:baseline;gap:12px;border-top:1px solid var(--line);padding-top:8px}
+.cross-platform-income-measure strong {min-width:84px;font-size:15px;font-variant-numeric:tabular-nums}
+.cross-platform-income-measure span {font-size:12px;color:var(--muted)}
+@media(max-width:650px){.cross-platform-income-grid{grid-template-columns:1fr}.cross-platform-income-details{padding:15px}.cross-platform-income-measure{flex-wrap:wrap;gap:4px}}
