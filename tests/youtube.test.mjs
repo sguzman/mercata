@@ -39,7 +39,8 @@ test('Production cost model keeps 10 cash and 10 labor measures separate',async(
     x.median_cash_cost===null && x.median_hours===null));
   assert.equal(costs.model.cash_profit_per_hour,null);
   assert.equal(costs.model.economic_profit_after_labor_valuation,null);
-  assert(costs.model.accounting_rules.some(x=>x.includes('double-count')||x.includes('double count')));
+  assert(costs.model.accounting_rules.some(x=>x.includes('already reflected')));
+  assert(costs.model.accounting_rules.some(x=>x.includes('again')));
 });
 
 test('YouTube onboarding keeps channel creation, feature access and monetization separate',async()=>{
