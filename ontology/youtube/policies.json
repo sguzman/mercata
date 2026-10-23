@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "documented_policy_snapshot",
+  "as_of": "2026-10-23",
+  "country_scope": "Eligibility varies by territory; country specifics not yet investigated",
+  "items": [
+    {
+      "id": "expanded-watch",
+      "title": "Expanded program, public watch-hour route",
+      "kind": "eligibility",
+      "conditions": [
+        {
+          "metric": "subscribers",
+          "minimum": 500,
+          "window": null
+        },
+        {
+          "metric": "public_uploads",
+          "minimum": 3,
+          "window": "90d"
+        },
+        {
+          "metric": "qualifying_watch_hours",
+          "minimum": 3000,
+          "window": "12mo"
+        }
+      ],
+      "result": null,
+      "source_ids": [
+        "ypp-expanded"
+      ],
+      "as_of": "2026-10-23",
+      "limitations": "Eligible to apply in supported countries; reviewed separately."
+    },
+    {
+      "id": "expanded-shorts",
+      "title": "Expanded program, Shorts route",
+      "kind": "eligibility",
+      "conditions": [
+        {
+          "metric": "subscribers",
+          "minimum": 500,
+          "window": null
+        },
+        {
+          "metric": "public_uploads",
+          "minimum": 3,
+          "window": "90d"
+        },
+        {
+          "metric": "qualifying_shorts_views",
+          "minimum": 3000000,
+          "window": "90d"
+        }
+      ],
+      "result": null,
+      "source_ids": [
+        "ypp-expanded"
+      ],
+      "as_of": "2026-10-23",
+      "limitations": "Eligible Shorts views; not arbitrary API view counts."
+    },
+    {
+      "id": "ads-watch",
+      "title": "Advertising/Premium, watch-hour route",
+      "kind": "eligibility",
+      "conditions": [
+        {
+          "metric": "subscribers",
+          "minimum": 1000,
+          "window": null
+        },
+        {
+          "metric": "qualifying_watch_hours",
+          "minimum": 4000,
+          "window": "12mo"
+        }
+      ],
+      "result": null,
+      "source_ids": [
+        "ypp-main"
+      ],
+      "as_of": "2026-10-23",
+      "limitations": "Shorts Feed watch hours excluded. Channel review still required."
+    },
+    {
+      "id": "ads-shorts",
+      "title": "Advertising/Premium, Shorts route",
+      "kind": "eligibility",
+      "conditions": [
+        {
+          "metric": "subscribers",
+          "minimum": 1000,
+          "window": null
+        },
+        {
+          "metric": "qualifying_shorts_views",
+          "minimum": 10000000,
+          "window": "90d"
+        }
+      ],
+      "result": null,
+      "source_ids": [
+        "ypp-main"
+      ],
+      "as_of": "2026-10-23",
+      "limitations": "Channel review and monetization module acceptance still required."
+    },
+    {
+      "id": "watch-page-share",
+      "title": "Watch-page advertising",
+      "kind": "revenue_share",
+      "conditions": [],
+      "result": {
+        "base": "eligible_net_watch_page_ad_revenue",
+        "creator_share_percent": 55
+      },
+      "source_ids": [
+        "revenue-shares"
+      ],
+      "as_of": "2026-10-23",
+      "limitations": "Not gross advertiser spend and not Shorts revenue."
+    },
+    {
+      "id": "shorts-share",
+      "title": "Shorts pooled advertising",
+      "kind": "revenue_share",
+      "conditions": [],
+      "result": {
+        "base": "allocated_shorts_creator_pool_revenue",
+        "creator_share_percent": 45
+      },
+      "source_ids": [
+        "shorts-policy",
+        "revenue-shares"
+      ],
+      "as_of": "2026-10-23",
+      "limitations": "Revenue is allocated before applying the creator share."
+    },
+    {
+      "id": "commerce-share",
+      "title": "Commerce Product Module",
+      "kind": "revenue_share",
+      "conditions": [],
+      "result": {
+        "base": "eligible_net_fan_funding_revenue",
+        "creator_share_percent": 70
+      },
+      "source_ids": [
+        "revenue-shares"
+      ],
+      "as_of": "2026-10-23",
+      "limitations": "Payment channel and tax terms may affect the net base."
+    },
+    {
+      "id": "kids-ads",
+      "title": "Child-directed personalized advertising",
+      "kind": "feature_rule",
+      "conditions": [],
+      "result": {
+        "feature": "personalized_advertising",
+        "enabled": false
+      },
+      "source_ids": [
+        "kids-policy"
+      ],
+      "as_of": "2026-10-23",
+      "limitations": "Contextual advertising can remain; zero personalized ads is not zero earnings."
+    },
+    {
+      "id": "kids-comments",
+      "title": "Child-directed comments",
+      "kind": "feature_rule",
+      "conditions": [],
+      "result": {
+        "feature": "comments",
+        "enabled": false
+      },
+      "source_ids": [
+        "kids-policy"
+      ],
+      "as_of": "2026-10-23",
+      "limitations": "Video and channel designations differ."
+    },
+    {
+      "id": "kids-memberships",
+      "title": "Child-directed memberships and paid live features",
+      "kind": "feature_rule",
+      "conditions": [],
+      "result": {
+        "feature": "membership_and_live_supers",
+        "enabled": false
+      },
+      "source_ids": [
+        "kids-policy"
+      ],
+      "as_of": "2026-10-23",
+      "limitations": "Read separate channel- and video-level restrictions."
+    }
+  ],
+  "notes": [
+    "Application threshold does not guarantee acceptance.",
+    "Watch Page, Shorts and Commerce percentages apply to different revenue bases.",
+    "No claim about average actual earnings follows from these contract rates.",
+    "Reverify dated policy when doing financial planning."
+  ]
+}
