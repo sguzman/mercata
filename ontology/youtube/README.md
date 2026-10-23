@@ -65,6 +65,10 @@ The [dated audio-licensing economics investigation](music-rights-economics.md) a
 
 The [opportunity assessment method](opportunity-framework.md) is a ten-dimension framework for comparing real audience demand, competing creator supply, discovery for new channels, revenue mix, cash and labor costs, content-policy restrictions and durability. Its [machine register](opportunity-framework.json) has **29 unranked topics**, each retaining null economic scores until defensible comparative evidence is gathered. A highest-viewed niche is not necessarily the best-paid or easiest to enter.
 
+## Measuring equipment, production cash and labor
+
+[Production costs and work-hour measurement](production-costs.md) defines ten expense/asset categories and ten personal-work categories, with a separate [machine-readable study protocol](production-costs.json). It distinguishes hardware already owned from newly paid invoices, external contractors from unpaid creator labor, and rights-holder reductions from second cash expenses. No typical cost, work-hour distribution, economic return, or format-cost ranking has been measured.
+
 ## Scenario calculator
 
 The website includes a client-side calculator that begins with **no assumed earnings or revenue rates**. It asks for currency, ad-only watch/Shorts yields, views, other net receipts, cash costs and total work hours. Its pure [implementation](../../site/scenario.mjs), [methods](scenario-method.md) and [tests](../../tests/scenario.test.mjs) distinguish hypothetical arithmetic from observed creator income and avoid applying platform revenue shares twice.
