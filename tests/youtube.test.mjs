@@ -23,6 +23,19 @@ test('Unmeasured topics are not represented as counted audiences',async()=>{
   assert(taxonomy.topics.every(x=>x.audience_estimate===null));
 });
 
+test('YouTube ontology connects audio licensing, Content ID holds and copyright strikes',async()=>{
+  const model=await load('ontology/youtube/model.json');
+  const known=new Set(model.concepts.map(x=>x.id));
+  const pairs=new Set(model.relations.map(x=>x.subject+'|'+x.predicate+'|'+x.object));
+  assert.equal(model.concepts.length,114);
+  assert.equal(model.relations.length,75);
+  assert(model.relations.every(x=>known.has(x.subject)&&known.has(x.object)));
+  assert(pairs.has('copyright_takedown|can_result_in|copyright_strike'));
+  assert(pairs.has('copyright_claim|may_cause|content_id_revenue_hold'));
+  assert(pairs.has('creator_music_revenue_share|can_generate|music_rights_adjustment'));
+  assert(model.concepts.filter(x=>['music_rights_adjustment','audio_rights_search_hours','music_license_upfront_cost'].includes(x.id)).every(x=>x.measured_value===null));
+});
+
 test('Creator Music 2026 transition and Content ID risks preserve cost uncertainty',async()=>{
   const [rights,dossier]=await Promise.all([
     load('ontology/youtube/music-rights-economics.json'),load('specimens/youtube.json')
