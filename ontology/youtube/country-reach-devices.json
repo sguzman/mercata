@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "regional_youtube_reach_and_screen_viewing",
+  "as_of": "2026-10-23",
+  "status": "bounded_country_and_multimarket_observations",
+  "sources": [
+    {
+      "id": "ofcom-online-nation-2025",
+      "source_id": "ofcom-uk-online-2025",
+      "publication_date": "2025-12-10",
+      "study_area": "United Kingdom",
+      "measurement_family": "Online Nation digital audience and time",
+      "coverage": "Online adult internet activity and YouTube use; press summary does not give every underlying weighting and device denominator"
+    },
+    {
+      "id": "ofcom-media-nations-2026",
+      "source_id": "ofcom-uk-media-nations-2026",
+      "publication_date": "2026-07-29",
+      "study_area": "United Kingdom",
+      "measurement_family": "Barb in-home video viewing and weekly audience measures as presented by Ofcom",
+      "coverage": "In-home Wi-Fi devices and TV sets; explicitly excludes out-of-home and cellular viewing for in-home video series"
+    },
+    {
+      "id": "reuters-dnr-2026",
+      "source_id": "reuters-dnr-2026",
+      "publication_date": "2026-06-16",
+      "study_area": "48 surveyed markets",
+      "measurement_family": "Digital News Report online news audience survey",
+      "coverage": "Online respondents and market averages, not a population-weighted worldwide census"
+    }
+  ],
+  "observations": [
+    {
+      "id": "uk-youtube-adult-use-2025",
+      "source_id": "ofcom-uk-online-2025",
+      "scope": "United Kingdom",
+      "period": "2025",
+      "population": "UK adults in Ofcom Online Nation study",
+      "unit": "percent_of_defined_uk_adult_population",
+      "metric": "YouTube use/reach in official publication",
+      "value": 94,
+      "device_scope": "online platforms; TV viewing not included in time statistics",
+      "frequency": "use within Ofcom survey measurement; not a lifetime or daily rate without method",
+      "definition_notes": "The press summary states YouTube was used by 94% of UK adults; it is not the percentage of all global users from the UK.",
+      "limits": "Full weighting, coverage and exact reach window require report table consultation; do not treat as worldwide monthly active users."
+    },
+    {
+      "id": "uk-youtube-online-minutes-2025",
+      "source_id": "ofcom-uk-online-2025",
+      "scope": "United Kingdom",
+      "period": "2025",
+      "population": "Audience captured by Ofcom Online Nation online-time measurement",
+      "unit": "minutes_per_day",
+      "metric": "Reported average YouTube time excluding the television set",
+      "value": 51,
+      "device_scope": "excludes television set",
+      "frequency": "average daily",
+      "definition_notes": "The press release does not fully specify conditional user versus all-adult denominator; retain this uncertainty.",
+      "limits": "Cannot add to or subtract from Ofcom's separate Barb in-home all-device estimates."
+    },
+    {
+      "id": "uk-television-youtube-2022",
+      "source_id": "ofcom-uk-media-nations-2026",
+      "scope": "United Kingdom",
+      "period": "2022",
+      "population": "Persons in Barb in-home viewing measure",
+      "unit": "minutes_per_person_per_day",
+      "metric": "Average YouTube time on a television set",
+      "value": 9,
+      "device_scope": "TV set, in-home",
+      "frequency": "average daily",
+      "definition_notes": "One point in Ofcom's Barb-based 2022 versus 2025 TV-set series.",
+      "limits": "Does not measure mobile, desktop, out-of-home or mobile-network viewing."
+    },
+    {
+      "id": "uk-television-youtube-2025",
+      "source_id": "ofcom-uk-media-nations-2026",
+      "scope": "United Kingdom",
+      "period": "2025",
+      "population": "Persons in Barb in-home viewing measure",
+      "unit": "minutes_per_person_per_day",
+      "metric": "Average YouTube time on a television set",
+      "value": 19,
+      "device_scope": "TV set, in-home",
+      "frequency": "average daily",
+      "definition_notes": "Comparable to 2022 TV-set measure in the same published series.",
+      "limits": "Does not measure mobile, desktop, out-of-home or mobile-network viewing."
+    },
+    {
+      "id": "uk-home-all-device-youtube-2022",
+      "source_id": "ofcom-uk-media-nations-2026",
+      "scope": "United Kingdom",
+      "period": "2022",
+      "population": "Persons in Barb in-home viewing measure",
+      "unit": "minutes_per_person_per_day",
+      "metric": "YouTube time on all connected devices at home",
+      "value": 33,
+      "device_scope": "in-home connected devices",
+      "frequency": "average daily",
+      "definition_notes": "Same Ofcom/Barb in-home family as 2025 observation.",
+      "limits": "Excludes outside-home and viewing over cellular networks; includes TV viewing, so do not add TV-set minutes again."
+    },
+    {
+      "id": "uk-home-all-device-youtube-2025",
+      "source_id": "ofcom-uk-media-nations-2026",
+      "scope": "United Kingdom",
+      "period": "2025",
+      "population": "Persons in Barb in-home viewing measure",
+      "unit": "minutes_per_person_per_day",
+      "metric": "YouTube time on all connected devices at home",
+      "value": 41,
+      "device_scope": "in-home connected devices",
+      "frequency": "average daily",
+      "definition_notes": "Includes TV viewing; not comparable without caveats to Online Nation internet-only time.",
+      "limits": "Excludes outside-home and viewing over cellular networks."
+    },
+    {
+      "id": "uk-older-weekly-2022",
+      "source_id": "ofcom-uk-media-nations-2026",
+      "scope": "United Kingdom",
+      "period": "2022",
+      "population": "People aged 75 and older in Ofcom-reported weekly video-reach estimate",
+      "unit": "percent_of_age_group",
+      "metric": "Weekly YouTube reach among age 75+",
+      "value": 28,
+      "device_scope": "weekly video reach measured in Media Nations 2026 family",
+      "frequency": "weekly",
+      "definition_notes": "Not a percentage of all YouTube users and not a daily use estimate.",
+      "limits": "Age-group population estimates must not be summed with general adult reach."
+    },
+    {
+      "id": "uk-older-weekly-2025",
+      "source_id": "ofcom-uk-media-nations-2026",
+      "scope": "United Kingdom",
+      "period": "2025",
+      "population": "People aged 75 and older in Ofcom-reported weekly video-reach estimate",
+      "unit": "percent_of_age_group",
+      "metric": "Weekly YouTube reach among age 75+",
+      "value": 33,
+      "device_scope": "weekly video reach measured in Media Nations 2026 family",
+      "frequency": "weekly",
+      "definition_notes": "Age-cohort prevalence, not audience age composition.",
+      "limits": "Do not infer individual older viewers' identities or their content preferences."
+    },
+    {
+      "id": "dnr48-any-use-2026",
+      "source_id": "reuters-dnr-2026",
+      "scope": "48 Digital News Report survey markets",
+      "period": "2026",
+      "population": "Reuters Institute Digital News Report 2026 online survey respondents in 48 markets",
+      "unit": "reported_percent_of_multimarket_respondents",
+      "metric": "YouTube use for any purpose",
+      "value": 69,
+      "device_scope": "multiple platforms/devices; online respondents",
+      "frequency": "survey reported use; exact lookback must follow survey instrument",
+      "definition_notes": "Report labels 69% YouTube use for any purpose. It is not a population-weighted worldwide penetration or UK adult rate.",
+      "limits": "Online samples underrepresent those without internet in many countries; market averages do not constitute a world census."
+    },
+    {
+      "id": "dnr48-news-2026",
+      "source_id": "reuters-dnr-2026",
+      "scope": "48 Digital News Report survey markets",
+      "period": "2026",
+      "population": "Reuters Institute Digital News Report 2026 online survey respondents in 48 markets",
+      "unit": "reported_percent_of_multimarket_respondents",
+      "metric": "YouTube use for news in the previous week",
+      "value": 34,
+      "device_scope": "news platform use, multiple devices",
+      "frequency": "past week",
+      "definition_notes": "News use is a subset of use for any purpose under Reuters survey definitions, not the share of YouTube traffic classified as news.",
+      "limits": "Cannot be called the share of global people watching YouTube news; weighted market averages/online respondents differ from Pew U.S. adults."
+    }
+  ],
+  "valid_series": [
+    {
+      "id": "uk_television_minutes",
+      "members": [
+        "uk-television-youtube-2022",
+        "uk-television-youtube-2025"
+      ],
+      "comparison": "same family, geography, device and unit; time change only"
+    },
+    {
+      "id": "uk_home_all_devices_minutes",
+      "members": [
+        "uk-home-all-device-youtube-2022",
+        "uk-home-all-device-youtube-2025"
+      ],
+      "comparison": "same in-home video family; includes television"
+    },
+    {
+      "id": "uk_75_plus_weekly_reach",
+      "members": [
+        "uk-older-weekly-2022",
+        "uk-older-weekly-2025"
+      ],
+      "comparison": "age-group prevalence on a weekly basis only"
+    }
+  ],
+  "excluded_comparisons": [
+    "Never add 51 Online Nation minutes to 41 Barb in-home minutes as if disjoint viewing periods.",
+    "Never add 19 TV-set minutes to 41 in-home all-device minutes; the latter includes television.",
+    "Never compare 94% UK adult use to 69% across 48 online survey markets as if equally sampled populations.",
+    "Never identify UK age 75+ weekly reach as the age composition of a YouTube user census.",
+    "Never present 34% multi-market news use as a fraction of YouTube video impressions or watch hours.",
+    "Do not combine market reach percentages to estimate an overall unique worldwide audience size."
+  ],
+  "unknowns": {
+    "worldwide_monthly_unique_people": null,
+    "uk_total_distinct_video_viewers_2026": null,
+    "uk_creator_supply": null,
+    "uk_channel_creator_income_distribution": null,
+    "youtube_uk_news_unique_viewers": null,
+    "mexico_platform_unique_adult_users_2026": null
+  }
+}
