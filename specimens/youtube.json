@@ -1043,6 +1043,61 @@
       "evidence_class": "cross_country_survey_methodology",
       "license": "Linked original research methodology; original text not reproduced",
       "notes": "Online sampling and market variation caveats, no presumption that respondents represent all humans."
+    },
+    {
+      "id": "youtube-manual-multi-audio",
+      "url": "https://support.google.com/youtube/answer/13338784?hl=en",
+      "title": "Add multi-language features to your videos",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_feature_documentation",
+      "license": "Source-linked independently summarized public product documentation or short quantitative observations",
+      "notes": "Dated snapshot where available; product support and eligibility vary by time, language and channel."
+    },
+    {
+      "id": "youtube-auto-dubbing-help",
+      "url": "https://support.google.com/youtube/answer/15569972?hl=en",
+      "title": "Use automatic dubbing",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_feature_documentation",
+      "license": "Source-linked independently summarized public product documentation or short quantitative observations",
+      "notes": "Dated snapshot where available; product support and eligibility vary by time, language and channel."
+    },
+    {
+      "id": "youtube-auto-dubbing-2026",
+      "url": "https://blog.youtube/creator-and-artist-stories/youtube-auto-dubbing-explained/",
+      "title": "YouTube auto dubbing, explained",
+      "publisher": "YouTube Creator Liaison",
+      "published_at": "2026-05-15",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_dated_feature_snapshot",
+      "license": "Source-linked independently summarized public product documentation or short quantitative observations",
+      "notes": "Dated snapshot where available; product support and eligibility vary by time, language and channel."
+    },
+    {
+      "id": "youtube-multi-audio-launch-2025",
+      "url": "https://blog.youtube/news-and-events/multi-language-audio/",
+      "title": "Unlock a world of viewers with multi-language audio",
+      "publisher": "YouTube Blog",
+      "published_at": "2025-09-10",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_selected_creator_observation",
+      "license": "Source-linked independently summarized public product documentation or short quantitative observations",
+      "notes": "Dated snapshot where available; product support and eligibility vary by time, language and channel."
+    },
+    {
+      "id": "youtube-preferred-languages",
+      "url": "https://support.google.com/youtube/answer/13339776?hl=en",
+      "title": "Watch videos in your preferred language",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_viewer_feature_documentation",
+      "license": "Source-linked independently summarized public product documentation or short quantitative observations",
+      "notes": "Dated snapshot where available; product support and eligibility vary by time, language and channel."
     }
   ],
   "claims": [
@@ -2005,6 +2060,56 @@
       "confidence": "high",
       "observed_at": "2026-10-23",
       "limitations": "48-market online survey averages do not represent all world residents. News use is not a share of watch time, ads or YouTube videos."
+    },
+    {
+      "id": "youtube-mla-access-and-formats",
+      "text": "YouTube's multi-language audio feature allows creators with supported advanced-feature access to upload secondary audio tracks for eligible videos and Shorts; long-form videos can also receive localized thumbnail artwork.",
+      "source_ids": [
+        "youtube-manual-multi-audio"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Creator-supplied recordings, not automatic audio; eligibility and thumbnail support differ by content format and specific channel."
+    },
+    {
+      "id": "youtube-auto-dub-limitations",
+      "text": "YouTube documents that automatic dubbing can fail eligibility for videos over 120 minutes, without spoken content, in unsupported source languages, with fast speech or copyright claims; generated dubs may contain language errors.",
+      "source_ids": [
+        "youtube-auto-dubbing-help"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Not every translation pair or channel is supported, and operational features may change."
+    },
+    {
+      "id": "youtube-mla-nonprimary-watchtime",
+      "text": "YouTube reported in September 2025 that creators uploading multi-language audio tracks received over 25% of their video watch time from non-primary-language views, in the product sample as of July 2025.",
+      "source_ids": [
+        "youtube-multi-audio-launch-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-23",
+      "limitations": "Selected creators only; denominator is watch minutes, not distinct viewers or causally additional views. No new channel income or costs established."
+    },
+    {
+      "id": "youtube-auto-dub-may-2026-language-snapshot",
+      "text": "YouTube's May 2026 auto-dubbing explanation described support across 27 languages at that time, eight with Expressive Speech.",
+      "source_ids": [
+        "youtube-auto-dubbing-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Dated rollout snapshot, not proof every current channel has every language or translation pair."
+    },
+    {
+      "id": "youtube-viewer-language-is-not-country",
+      "text": "YouTube lets viewers set preferred audio, title and description languages separately from their interface and location settings, and choose available audio tracks per video.",
+      "source_ids": [
+        "youtube-preferred-languages"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Preferred language is not reliable evidence of an individual's nationality, ethnicity, age or other demographic characteristics."
     }
   ],
   "observations": [],
