@@ -201,6 +201,12 @@
         },
         "limitations": {
           "type": "string"
+        },
+        "measurement_kind": {
+          "enum": [
+            "within_group_ever_use_rate",
+            "audience_composition_share"
+          ]
         }
       }
     },
@@ -335,5 +341,5 @@
       }
     }
   },
-  "description": "Public aggregate demographics and communities require dated sources, defined populations, periods, methods, and explicit limitations; never infer sensitive traits for individual people."
+  "description": "All demographic percentages must distinguish usage prevalence within a group from that group's fraction of YouTube's audience."
 }

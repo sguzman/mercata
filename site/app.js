@@ -224,7 +224,7 @@ function renderAudienceResearch(record) {
     for(const metric of data.demographics) {
       const row=make('div','demographic-row');
       const title=(metric.dimension||'other').replaceAll('_',' ')+' · '+metric.category;
-      const value=metric.share_percent===null?'Unknown':metric.share_percent.toLocaleString()+'%';
+      const value=metric.share_percent===null?'Unknown':metric.share_percent.toLocaleString()+'%'+(metric.measurement_kind==='within_group_ever_use_rate'?' of this group use YouTube':metric.measurement_kind==='audience_composition_share'?' of the audience':'');
       add(row,make('strong','',title),make('span','',value),
         make('small','',[metric.population,metric.geography,metric.period].filter(Boolean).join(' · ')));
       if(metric.share_percent!==null)row.append(progress(metric.share_percent,title));

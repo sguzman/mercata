@@ -174,6 +174,17 @@
       "evidence_class": "official",
       "license": "External source, link only; no source text copied.",
       "notes": "Policy/documentation snapshot. Recheck before relying on time-sensitive requirements."
+    },
+    {
+      "id": "pew-us-adults-2026",
+      "url": "https://www.pewresearch.org/internet/fact-sheet/social-media/",
+      "publisher": "Pew Research Center",
+      "title": "Americans' Use of Social Media in 2026",
+      "published_at": "2026-10-19",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "independent",
+      "license": "Short attributed quantitative findings; no images or report copied",
+      "notes": "NPORS, 5,511 U.S. adults; Jan 30–Jun 18 2026; online, mail and telephone; overall MOE ±1.8 percentage points. Subgroup errors differ."
     }
   ],
   "claims": [
@@ -358,6 +369,16 @@
       "confidence": "high",
       "observed_at": "2026-10-23",
       "limitations": "Per-video suitability can change and is context-dependent."
+    },
+    {
+      "id": "pew-us-ever-use-2026",
+      "text": "Pew's 2026 survey found 84% of U.S. adults said they ever use YouTube.",
+      "source_ids": [
+        "pew-us-adults-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "U.S. adults only; ever-use, not MAU, unique global users or monthly video views."
     }
   ],
   "observations": [],
@@ -370,8 +391,355 @@
   "audience_research": {
     "schema_version": 1,
     "profile": "social_audience",
-    "populations": [],
-    "demographics": [],
+    "populations": [
+      {
+        "id": "pew-2026-us-adult-ever-use",
+        "metric": "U.S. adults who say they ever use YouTube",
+        "value": 84,
+        "unit": "percent",
+        "population": "U.S. adults aged 18+",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Not global monthly active users, total users or a count of people.",
+        "confidence": "high"
+      }
+    ],
+    "demographics": [
+      {
+        "id": "pew-2026-age-18-29",
+        "dimension": "age",
+        "category": "18-29",
+        "share_percent": 95,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: 18-29",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-age-30-49",
+        "dimension": "age",
+        "category": "30-49",
+        "share_percent": 91,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: 30-49",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-age-50-64",
+        "dimension": "age",
+        "category": "50-64",
+        "share_percent": 85,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: 50-64",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-age-65",
+        "dimension": "age",
+        "category": "65+",
+        "share_percent": 65,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: 65+",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-gender-men",
+        "dimension": "gender",
+        "category": "Men",
+        "share_percent": 85,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: Men",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-gender-women",
+        "dimension": "gender",
+        "category": "Women",
+        "share_percent": 83,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: Women",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-race_ethnicity-white-non-hispanic",
+        "dimension": "race_ethnicity",
+        "category": "White non-Hispanic",
+        "share_percent": 83,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: White non-Hispanic",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-race_ethnicity-hispanic-any-race",
+        "dimension": "race_ethnicity",
+        "category": "Hispanic any race",
+        "share_percent": 85,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: Hispanic any race",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-race_ethnicity-black-non-hispanic",
+        "dimension": "race_ethnicity",
+        "category": "Black non-Hispanic",
+        "share_percent": 84,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: Black non-Hispanic",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-race_ethnicity-asian-non-hispanic-english-speaking",
+        "dimension": "race_ethnicity",
+        "category": "Asian non-Hispanic, English speaking",
+        "share_percent": 95,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: Asian non-Hispanic, English speaking",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points. Asian estimate represents English speakers only."
+      },
+      {
+        "id": "pew-2026-household_income-under-30k",
+        "dimension": "household_income",
+        "category": "Under $30k",
+        "share_percent": 77,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: Under $30k",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-household_income-30k-to-69-999",
+        "dimension": "household_income",
+        "category": "$30k to $69,999",
+        "share_percent": 84,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: $30k to $69,999",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-household_income-70k-to-99-999",
+        "dimension": "household_income",
+        "category": "$70k to $99,999",
+        "share_percent": 86,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: $70k to $99,999",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-household_income-100k",
+        "dimension": "household_income",
+        "category": "$100k+",
+        "share_percent": 90,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: $100k+",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-education-high-school-or-less",
+        "dimension": "education",
+        "category": "High school or less",
+        "share_percent": 77,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: High school or less",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-education-some-college",
+        "dimension": "education",
+        "category": "Some college",
+        "share_percent": 87,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: Some college",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-education-college-graduate",
+        "dimension": "education",
+        "category": "College graduate",
+        "share_percent": 90,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: College graduate",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-urbanicity-urban",
+        "dimension": "urbanicity",
+        "category": "Urban",
+        "share_percent": 87,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: Urban",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-urbanicity-suburban",
+        "dimension": "urbanicity",
+        "category": "Suburban",
+        "share_percent": 86,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: Suburban",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-urbanicity-rural",
+        "dimension": "urbanicity",
+        "category": "Rural",
+        "share_percent": 78,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: Rural",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-political_affiliation-republican-or-lean-republican",
+        "dimension": "political_affiliation",
+        "category": "Republican or lean Republican",
+        "share_percent": 84,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: Republican or lean Republican",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      },
+      {
+        "id": "pew-2026-political_affiliation-democrat-or-lean-democratic",
+        "dimension": "political_affiliation",
+        "category": "Democrat or lean Democratic",
+        "share_percent": 86,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. adults in group: Democrat or lean Democratic",
+        "source_ids": [
+          "pew-us-adults-2026"
+        ],
+        "geography": "United States",
+        "period": "2026-01-30 to 2026-06-18",
+        "method": "Pew National Public Opinion Reference Survey, n=5,511 U.S. adults, self-reported ever-use; web, mail and phone.",
+        "limitations": "Percent of this group reporting they ever use YouTube; NOT the percent of all YouTube users in the group. Subgroup survey error may be greater than the overall ±1.8 points."
+      }
+    ],
     "communities": [],
     "overlaps": [],
     "formats": [],
