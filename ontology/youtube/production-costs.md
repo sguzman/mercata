@@ -33,6 +33,14 @@ A side-by-side economic analysis requires a shared accounting period, currency c
 
 The [existing scenario calculator](scenario-method.md) already accepts overall cash expenses and total creator hours and reports hypothetical cash profit per hour. These categories help researchers compile its inputs without introducing generic assumed prices. The machine cost model and website report **unknown typical cash costs, unknown typical production hours, and unknown newcomer profitability**. A calculator is arithmetic, not empirical research.
 
+## Measured adjacent evidence: indie podcast creators (2025)
+
+The [Alitu / The Podcast Host survey](https://alitu.com/creator/content-creation/the-independent-podcaster-report-2025), published November 10, 2025, collected voluntary responses from **558 independent podcasters** via its own newsletter, app, blogs, podcast and partners. About 19% had not yet launched. The subsequent episode-hours, monthly-spending and revenue percentages concern **post-launch respondents**, whose exact subgroup count was not published.
+
+For hours spent making an episode, from planning through release, respondents reported: **4% under one hour, 27% at 1–3 hours, 28% at 4–5, 20% at 6–8, 8% at 9–10, and 13% over ten**. Monthly podcast cash spending was **17% none, 7% below USD 10, 40% at USD 10–49, 16% at USD 50–99, and 20% at USD 100 or more**. In the same post-launch survey group, 85% said the podcast did not make money. These are percentages within a selected **podcaster respondent group**, not YouTube-wide rates.
+
+The sample contains audio-only and video makers and was recruited through publisher-affiliated channels, not from all YouTube creators. The source separately reports that adding video was associated with higher spending in this sample, but does not identify an independently representative YouTube cohort. Open-ended time and cash bins preclude exact reconstructed medians, and unpublished subgroup denominators remain `null`. The [machine record](production-costs.json) explicitly prohibits inferring typical YouTube hours, startup costs, profitability or no-earner rates from this adjacent survey.
+
 ## Remaining empirical work
 
 Representative equipment outlays by country, attributable software/storage charges, video-production labor distributions, typical costs per format and niche, failed-project time, first-year profit cohorts and effective hourly earning distributions remain unmeasured. They require scoped and ethically sourced creator records, not anecdotal prices or presumed equipment bundles.
