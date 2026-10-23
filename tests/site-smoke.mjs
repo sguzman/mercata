@@ -50,6 +50,7 @@ try{
     assert.equal(await production.locator('.adjacent-cost-survey').count(),1);
     await production.locator('.adjacent-cost-survey > summary').click();
     assert.equal(await production.locator('.adjacent-cost-bin').count(),11);
+    assert((await production.textContent()).includes('Not a causal comparison.'));
     assert((await production.textContent()).includes('not a YouTube zero-earner estimate'));
     assert((await production.textContent()).includes('typical production hours: unknown'));
     const onboarding=page.locator('.channel-onboarding');
