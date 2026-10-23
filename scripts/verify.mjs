@@ -184,6 +184,24 @@ for (const entry of index.specimens) {
       productionCosts.model.economic_profit_after_labor_valuation===null,
       'Unobserved typical cost or income must stay unknown');
 
+    ensure(productionCosts.adjacent_creator_surveys.length===1,
+      'Missing bounded adjacent creator production evidence');
+    for(const study of productionCosts.adjacent_creator_surveys){
+      ensure(study.respondents_total===558 && study.post_launch_respondents===null &&
+        study.sample_frame_representative===false &&
+        study.google_or_youtube_channels_only===false &&
+        study.inference_to_typical_youtube_creator_cost==='prohibited',
+        'Selected podcaster sample incorrectly used as YouTube cost census');
+      ensure(sourceIds.has(study.source_id),'Unregistered podcast labor study');
+      for(const observation of [study.reported_human_work,study.reported_operating_cash]){
+        ensure(observation.bins.length>=5 && observation.denominator_n===null &&
+          observation.bins.reduce((n,x)=>n+x.percent,0)===100,
+          'Incomplete podcaster survey histogram or invented subgroup size');
+      }
+      ensure(study.reported_human_work.median_hours===null &&
+        study.reported_operating_cash.median_monthly_cost===null,
+        'Invented precision for binned podcast time/cost figures');
+    }
     const musicRights=load('ontology/youtube/music-rights-economics.json');
     ensure(musicRights.options.length===5 && musicRights.claim_outcomes.length===4,
       'Incomplete music-rights economics model');
