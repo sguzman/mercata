@@ -265,3 +265,16 @@ h1 em {font-style:italic;color:var(--accent)}
 .income-evidence{border-top:1px solid var(--line);margin-top:32px;padding-top:27px}
 .income-study{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:18px;margin-top:15px}
 .income-study .dossier-stats{margin:15px 0}
+
+.small-channel-income{border-top:1px solid var(--line);margin-top:32px;padding-top:27px}
+.small-channel-income .audience-atlas-description{margin-bottom:18px}
+.income-table-heading{font-size:16px;margin:12px 0}
+.income-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:9px;background:var(--surface)}
+.income-table{border-collapse:collapse;width:100%;font-size:12px;font-variant-numeric:tabular-nums}
+.income-table th,.income-table td{padding:11px 13px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+.income-table th{background:var(--surface-alt);font-weight:750}
+.income-table tr:last-child td{border-bottom:0}
+.income-details{margin:13px 0;border:1px solid var(--line);padding:13px;border-radius:10px}
+.income-details summary{cursor:pointer;font-weight:700;font-size:13px;margin-bottom:4px}
+.income-details .income-table-wrap{margin-top:10px}
+@media(max-width:600px){.income-table th,.income-table td{padding:9px 10px}}
