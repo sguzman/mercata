@@ -875,6 +875,26 @@ function renderProductionCosts(model) {
     card.append(list);groups.append(card);
   }
   details.append(groups);
+  for(const study of model.adjacent_creator_surveys||[]){
+    const external=make('details','adjacent-cost-survey');
+    external.append(make('summary','','Adjacent context: independent podcast creators (not YouTube)'));
+    external.append(make('p','measure-limit','Self-selected industry survey · '+study.respondents_total+' total respondents · cost/time bins measured only among already launched podcasters. Subgroup sample size and YouTube-specific medians are not reported.'));
+    for(const metric of [study.reported_human_work,study.reported_operating_cash]){
+      const panel=make('div','adjacent-cost-metric');
+      panel.append(make('h5','',metric.metric==='self_reported_episodes_work_hours'?'Hours per finished podcast episode':'Monthly podcast cash spending'));
+      const rows=make('ul','adjacent-cost-bins');
+      for(const bin of metric.bins){
+        const item=make('li','adjacent-cost-bin');
+        add(item,make('span','',bin.label),make('strong','',bin.percent+'%'));
+        rows.append(item);
+      }
+      panel.append(rows);external.append(panel);
+    }
+    external.append(make('p','measure-limit',study.reported_monetization.no_money_percent+'% of surveyed post-launch podcasters said their podcast earned no money. This is not a YouTube zero-earner estimate.'));
+    const source=make('a','inline-link','Read the original podcast survey ↗');
+    source.href=study.source_url;source.target='_blank';source.rel='noopener noreferrer';
+    external.append(source);details.append(external);
+  }
   details.append(make('p','measure-limit','Typical project cash costs: unknown · typical production hours: unknown · average creator profit: unknown. Existing hardware can avoid a new purchase without becoming economically free.'));
   const link=make('a','inline-link','Review production accounting and cohort methodology ↗');
   link.href='./ontology/youtube/production-costs.md';link.target='_blank';link.rel='noopener noreferrer';
