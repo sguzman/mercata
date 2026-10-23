@@ -747,6 +747,18 @@ function renderMusicRights(model,dossier) {
     grid.append(card);
   }
   details.append(grid);
+  const boundaries=make('div','music-enforcement-grid');
+  for(const item of model.enforcement_types||[]) {
+    const card=make('article','music-enforcement-card');
+    card.append(make('h5','',item.id==='copyright_removal_request'?'Copyright removal and strike':'Content ID claim'));
+    card.append(make('p','measure-limit',item.immediate_effects.join('. ')));
+    card.append(audienceSources(item.source_ids,dossier));
+    boundaries.append(card);
+  }
+  details.append(boundaries);
+  for(const item of model.monetization_interactions||[]){
+    details.append(make('p','measure-limit',item.constraint));
+  }
   const summary=make('p','measure-limit','Content ID outcomes: '+model.claim_outcomes.map(x=>x.id).join(', ')+'. A disputed hold is not proof of a permanent loss.');
   details.append(summary);
   details.append(make('p','measure-limit','Typical audio cost: unknown · typical rights-related revenue loss: unknown · typical clearance hours: unknown.'));
