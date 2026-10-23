@@ -58,6 +58,14 @@ for (const entry of index.specimens) {
     const economics=load('ontology/youtube/economic-model.json');
     const routes=load('ontology/youtube/revenue-pathways.json');
     const opportunity=load('ontology/youtube/opportunity-framework.json');
+    const restrictions=load('ontology/youtube/content-policy-risk.json');
+    ensure(restrictions.classifications.length>=4 && restrictions.policy_dimensions.length>=8,
+      'Incomplete policy restrictions');
+    ensure(restrictions.policy_dimensions.every(x=>x.source_ids.length && x.source_ids.every(id=>sourceIds.has(id))),
+      'Content restriction missing official source');
+    ensure(restrictions.classifications.every(x=>x.source_ids.length && x.source_ids.every(id=>sourceIds.has(id))),
+      'Audience classification lacks provenance');
+
     ensure(opportunity.criteria.length===10,'Incomplete niche-opportunity criteria');
     const topicSet=new Set(topic.topics.map(x=>x.id));
     ensure(opportunity.topic_assessments.length===topic.topics.length,'Incomplete opportunity topics');

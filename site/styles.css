@@ -316,3 +316,12 @@ h1 em {font-style:italic;color:var(--accent)}
 .scenario-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .scenario-result{margin:10px 0 15px}
 @media(max-width:650px){.scenario-form,.scenario-stats{grid-template-columns:1fr}}
+
+.content-restrictions{margin:27px 0;border-top:1px solid var(--line);padding-top:18px}
+.content-restrictions-details{padding:15px;border-radius:9px;background:var(--surface);border:1px solid var(--line)}
+.content-restrictions-details>summary{font-size:14px;font-weight:750;cursor:pointer}
+.content-classification-grid,.content-policy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+.content-classification,.content-policy-item{min-width:0;background:var(--bg);border:1px solid var(--line);padding:15px;border-radius:9px}
+.content-classification h5,.content-policy-item h5{font-size:14px;margin:0 0 7px}
+.content-classification p,.content-classification small,.content-policy-item p,.content-policy-item small{display:block;font-size:12px;line-height:1.55;color:var(--muted);margin:6px 0}
+@media(max-width:650px){.content-classification-grid,.content-policy-grid{grid-template-columns:1fr}}

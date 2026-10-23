@@ -182,3 +182,14 @@ test('YouTube earnings payment calendar distinguishes finalization from issue',a
   assert(stages.every(x=>x.source_ids.every(id=>sources.has(id))));
   assert(data.payment_cycle.bank_arrival.every(x=>x.estimated_max_business_days>0));
 });
+
+test('Content policy keeps general animation distinct from child-directed content',async()=>{
+  const [data,dossier]=await Promise.all([
+    load('ontology/youtube/content-policy-risk.json'),load('specimens/youtube.json')
+  ]);
+  const known=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(data.classifications.find(x=>x.id==='general-audience-animation').is_made_for_kids,false);
+  assert.equal(data.classifications.find(x=>x.id==='mixed-audience-child-directed').is_made_for_kids,true);
+  assert(data.policy_dimensions.some(x=>x.id==='originality_and_repetition'));
+  assert(data.policy_dimensions.every(x=>x.source_ids.length && x.source_ids.every(id=>known.has(id))));
+});
