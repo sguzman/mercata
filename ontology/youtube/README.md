@@ -63,3 +63,7 @@ The [opportunity assessment method](opportunity-framework.md) is a ten-dimension
 ## Scenario calculator
 
 The website includes a client-side calculator that begins with **no assumed earnings or revenue rates**. It asks for currency, ad-only watch/Shorts yields, views, other net receipts, cash costs and total work hours. Its pure [implementation](../../site/scenario.mjs), [methods](scenario-method.md) and [tests](../../tests/scenario.test.mjs) distinguish hypothetical arithmetic from observed creator income and avoid applying platform revenue shares twice.
+
+## Content-policy economics
+
+[Content classification and earning restrictions](content-policy-risk.md) distinguishes general-audience animation, child-directed and mixed-audience material, originality, reused content, and advertiser suitability. The [machine map](content-policy-risk.json) keeps product restrictions separate from any claimed income effect; no automatic genre penalty or revenue figure is invented.

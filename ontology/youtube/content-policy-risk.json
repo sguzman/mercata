@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "as_of": "2026-10-23",
+  "kind": "content_policy_effect_on_economics",
+  "status": "official_rules_not_profit_predictions",
+  "classifications": [
+    {
+      "id": "general-audience-animation",
+      "label": "General-audience animation",
+      "is_made_for_kids": false,
+      "definition": "Animation not specifically directed to children, including works for teens or adults.",
+      "impacts": "Normal content policy checks apply; animation format alone is not a child-directed designation.",
+      "source_ids": [
+        "child-classification"
+      ],
+      "limitations": "Depends on actual video intent, characters, themes and presentation."
+    },
+    {
+      "id": "mixed-audience-child-directed",
+      "label": "Mixed audience (child-directed)",
+      "is_made_for_kids": true,
+      "definition": "Content directed to children among other audiences after applying the factors in the official guidance.",
+      "impacts": "Treated as child-directed under the relevant legal framework.",
+      "source_ids": [
+        "child-classification"
+      ],
+      "limitations": "Mixed audience is not synonymous with general audience."
+    },
+    {
+      "id": "made-for-kids",
+      "label": "Made for kids",
+      "is_made_for_kids": true,
+      "definition": "Content targeted at children based on purpose, subjects and other contextual factors.",
+      "impacts": "Selected interactive, commerce and personalized advertising features can be disabled.",
+      "source_ids": [
+        "child-classification",
+        "child-features"
+      ],
+      "limitations": "Children's ages and applicable laws differ by region; this is not legal advice."
+    },
+    {
+      "id": "teen-audience",
+      "label": "Teen-directed general content",
+      "is_made_for_kids": false,
+      "definition": "Content intended for teens or older viewers rather than children under the relevant legal threshold.",
+      "impacts": "May be treated as general audience when genuinely not child-directed.",
+      "source_ids": [
+        "child-classification"
+      ],
+      "limitations": "A label such as 'girls' or 'teen' does not by itself establish YouTube's classification."
+    }
+  ],
+  "policy_dimensions": [
+    {
+      "id": "personalized_advertising",
+      "scope": "made_for_kids",
+      "effect": "restricted",
+      "economic_relevance": "Ads may still be contextual; revenue per view cannot be inferred.",
+      "source_ids": [
+        "child-features"
+      ]
+    },
+    {
+      "id": "channel_memberships",
+      "scope": "made_for_kids",
+      "effect": "restricted",
+      "economic_relevance": "One form of recurring native fan funding may not be available.",
+      "source_ids": [
+        "child-features",
+        "earning-help"
+      ]
+    },
+    {
+      "id": "comments_and_live_chat",
+      "scope": "made_for_kids",
+      "effect": "restricted",
+      "economic_relevance": "Community engagement and some paid live interactions are limited.",
+      "source_ids": [
+        "child-features"
+      ]
+    },
+    {
+      "id": "shopping_and_merchandising",
+      "scope": "made_for_kids",
+      "effect": "restricted",
+      "economic_relevance": "YouTube's own product merchandising features have content restrictions; independent external sales need separate review.",
+      "source_ids": [
+        "child-features",
+        "shopping-affiliate"
+      ]
+    },
+    {
+      "id": "originality_and_repetition",
+      "scope": "all_ypp_channels",
+      "effect": "review_required",
+      "economic_relevance": "Templated, minimally altered or mass-produced videos may jeopardize monetization.",
+      "source_ids": [
+        "channel-policy"
+      ]
+    },
+    {
+      "id": "reused_media_rights",
+      "scope": "all_ypp_channels",
+      "effect": "review_required",
+      "economic_relevance": "Platform reuse assessment and copyright licensing are separate checks.",
+      "source_ids": [
+        "channel-policy"
+      ]
+    },
+    {
+      "id": "advertiser_content_suitability",
+      "scope": "individual_videos_and_shorts",
+      "effect": "varies",
+      "economic_relevance": "A published video may earn full, limited or no ad revenue depending on context.",
+      "source_ids": [
+        "advertiser-policy"
+      ]
+    },
+    {
+      "id": "public_interest_and_politics",
+      "scope": "news_and_civic_content",
+      "effect": "context_dependent",
+      "economic_relevance": "Public-interest discussion can qualify under some advertiser policies; no uniform political category RPM is claimed.",
+      "source_ids": [
+        "advertiser-updates",
+        "advertiser-policy"
+      ]
+    }
+  ],
+  "required_reviews": [
+    "content_intended_audience",
+    "rights_to_images_audio_and_characters",
+    "originality_of_each_video",
+    "paid_ad_suitability",
+    "channel_product_eligibility",
+    "jurisdiction_and_age_limits"
+  ],
+  "prohibited_shortcuts": [
+    "Classify all animation as made for kids",
+    "Label ordinary teen-interest video as made for kids solely to reach children",
+    "Infer viewer age from names, photos or watching patterns",
+    "Promote deceptive or repetitive content as monetization-safe",
+    "Assign a policy penalty RPM without empirical data",
+    "Generate microtargeted political persuasion using demographic findings"
+  ],
+  "rules": [
+    "The facts above describe rules, not legal advice or estimates of creator income.",
+    "A restriction is not automatically a total ban on posting or a zero-revenue result.",
+    "Differentiate content-level flags from channel-level sanctions.",
+    "Audience size, topic volume and payout likelihood remain different quantities."
+  ]
+}

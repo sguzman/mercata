@@ -416,6 +416,39 @@
       "evidence_class": "official",
       "license": "Link and paraphrase only",
       "notes": "General published monthly payment cycle; exact bank arrival varies by payment method, calendar and account conditions."
+    },
+    {
+      "id": "child-classification",
+      "url": "https://support.google.com/youtube/answer/9528076?hl=en",
+      "title": "Determining if your content is made for kids",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Linked primary-source policy, independently paraphrased",
+      "notes": "Content classification and policy enforcement depend on full circumstances and may change."
+    },
+    {
+      "id": "child-features",
+      "url": "https://support.google.com/youtube/answer/9527654?hl=en",
+      "title": "Set your channel or video's audience",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Linked primary-source policy, independently paraphrased",
+      "notes": "Content classification and policy enforcement depend on full circumstances and may change."
+    },
+    {
+      "id": "advertiser-updates",
+      "url": "https://support.google.com/youtube/answer/9725604?hl=en",
+      "title": "Upcoming and recent advertiser-friendly guideline updates",
+      "publisher": "YouTube Help",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official",
+      "license": "Linked primary-source policy, independently paraphrased",
+      "notes": "Content classification and policy enforcement depend on full circumstances and may change."
     }
   ],
   "claims": [
@@ -745,6 +778,47 @@
       "confidence": "high",
       "observed_at": "2026-10-23",
       "limitations": "Issuance is conditional on threshold, verification, tax and account standing, and is not the same as bank arrival. Specific calendars and holds can shift timing."
+    },
+    {
+      "id": "animation-not-automatically-child",
+      "text": "YouTube says content suitable for a wide audience, including animation appealing to adults and teens, is not automatically classified as made for kids.",
+      "source_ids": [
+        "child-classification"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Creators must evaluate the content's actual intended audience and multiple factors; a genre label is not legal advice."
+    },
+    {
+      "id": "made-for-kids-feature-loss",
+      "text": "YouTube lists personalized advertising, comments, certain live interactions, channel memberships and Shopping or merchandise features among restrictions associated with made-for-kids content or channels.",
+      "source_ids": [
+        "child-features"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Exact restricted features differ between individual video and channel-wide designation and can change."
+    },
+    {
+      "id": "repetitive-originality",
+      "text": "YouTube's channel monetization policy distinguishes original, authentic content from mass-produced, repetitive or minimally reused content.",
+      "source_ids": [
+        "channel-policy"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Use of an animation or AI tool alone does not decide eligibility; creators must meet the substance and originality requirements."
+    },
+    {
+      "id": "politics-public-interest-suitability",
+      "text": "YouTube's 2026 advertiser guideline update describes expanded monetization eligibility for certain public-interest debates and discussions of government actions.",
+      "source_ids": [
+        "advertiser-updates",
+        "advertiser-policy"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Context matters; cannot infer that all political content is fully monetized or that any individual creator will qualify."
     }
   ],
   "observations": [],
