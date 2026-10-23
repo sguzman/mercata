@@ -44,6 +44,11 @@ try{
     assert.equal(await page.locator('.earning-gate-details').count(),16,'Missing product-specific eligibility checklists');
     assert.equal(await page.locator('.application-stage').count(),9,'Missing application stages');
     assert.equal(await page.locator('.content-policy-item').count(),8,'Missing sourced content restrictions');
+    const music=page.locator('.music-rights');
+    assert.equal(await music.locator('.music-rights-card').count(),5,'Missing audio licensing routes');
+    await music.locator('summary').click();
+    assert((await music.textContent()).includes('paid Creator Music licenses'));
+    assert((await music.textContent()).includes('Typical audio cost: unknown'));
     assert.equal(await page.locator('.analytics-metric-item').count(),11,'Missing Youtube Analytics metric guide');
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
