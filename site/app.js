@@ -369,7 +369,7 @@ function renderPlatformPolicies(policy, record) {
   return section;
 }
 
-function renderTopicCatalogue(data) {
+function renderTopicCatalogue(data, activity) {
   if(!data)return null;
   const section=make('section','topic-catalogue');
   section.append(make('h4','audience-atlas-title','Content communities to study'));
@@ -379,6 +379,25 @@ function renderTopicCatalogue(data) {
     const card=make('article','topic-catalogue-card');
     add(card,make('h5','',topic.label),make('p','',topic.definition),
       make('small','', 'Audience size: unknown · Creators: unknown'));
+    const observations=(activity?.observations||[]).filter(x=>x.topic_id===topic.id);
+    if(observations.length) {
+      const section=make('details','topic-activity');
+      section.append(make('summary','',observations.length+' sourced activity measurements'));
+      for(const item of observations) {
+        const row=make('div','topic-activity-row');
+        const amount=new Intl.NumberFormat('en',{notation:'compact',maximumFractionDigits:1}).format(item.value);
+        const value=(item.comparison==='>'?'More than ':'')+amount+' '+item.unit;
+        add(row,make('strong','',value),make('p','',item.population),
+          make('small','',item.geography+' · '+item.period));
+        if(typeof item.source_url==='string' && item.source_url.startsWith('https://')) {
+          const link=make('a','inline-link','Original source ↗');
+          link.href=item.source_url;link.rel='noopener noreferrer';link.target='_blank';
+          row.append(link);
+        }
+        section.append(row);
+      }
+      card.append(section);
+    }
     if(topic.research_subtopics?.length) {
       const details=make('details','topic-subtopics');
       details.append(make('summary','',topic.research_subtopics.length+' research subtopics'));
@@ -399,7 +418,7 @@ async function showDossier(entry) {
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -455,7 +474,7 @@ async function showDossier(entry) {
     if(policySection)outer.append(policySection);
     const audience=renderAudienceResearch(record);
     if(audience)outer.append(audience);
-    const catalogue=renderTopicCatalogue(topicCatalog);
+    const catalogue=renderTopicCatalogue(topicCatalog,topicActivity);
     if(catalogue)outer.append(catalogue);
     if(studyPlan)outer.append(renderStudyPlan(studyPlan));
     outer.append(make('h4','dossier-queues-title','Research queues'));
