@@ -704,13 +704,39 @@ function renderContentRestrictions(data,dossier) {
   return section;
 }
 
+function renderMeasurementGuide(guide) {
+  if(!guide)return null;
+  const section=make('section','analytics-guide');
+  const details=make('details','analytics-guide-details');
+  details.append(make('summary','',guide.field_semantics.length+' YouTube Analytics measures explained'));
+  details.append(make('p','measure-limit','These are authorized channel-report fields, not a public list of every channel’s earnings. Advertising impressions, views, gross CPM and net creator revenue have different numerators and denominators.'));
+  const rows=make('div','analytics-metric-grid');
+  const fields=['estimatedRevenue','estimatedAdRevenue','estimatedRedPartnerRevenue','grossRevenue','cpm','playbackBasedCpm','monetizedPlaybacks','adImpressions','views','engagedViews','estimatedMinutesWatched'];
+  for(const id of fields){
+    const metric=guide.field_semantics.find(m=>m.id===id);
+    if(!metric)continue;
+    const card=make('article','analytics-metric-item');
+    card.append(make('h5','',metric.label));
+    card.append(make('p','',metric.definition));
+    card.append(make('small','', 'Unit: '+metric.unit));
+    card.append(make('p','measure-limit',metric.limitations));
+    rows.append(card);
+  }
+  details.append(rows);
+  const link=make('a','inline-link','Read all measures, demographic dimensions, and report restrictions ↗');
+  link.href='./ontology/youtube/analytics-query-guide.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
 async function showDossier(entry) {
   const host=$('#dossier-view');
   host.hidden=false;
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,analyticsGuide]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -768,6 +794,8 @@ async function showDossier(entry) {
     if(routes)outer.append(routes);
     const restricted=renderContentRestrictions(contentRestrictions,record);
     if(restricted)outer.append(restricted);
+    const metricsGuide=renderMeasurementGuide(analyticsGuide);
+    if(metricsGuide)outer.append(metricsGuide);
     const audience=renderAudienceResearch(record);
     if(audience)outer.append(audience);
     const history=renderAdultUseHistory(adultUseHistory);

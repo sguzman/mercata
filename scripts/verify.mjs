@@ -50,6 +50,16 @@ for (const entry of index.specimens) {
   }
   if(entry.id==='youtube') {
     const model=load('ontology/youtube/model.json');
+    const analytics=load('ontology/youtube/analytics-query-guide.json');
+    ensure(analytics.field_semantics.length>=19 && analytics.supported_dimensions.length>=6,
+      'Incomplete YouTube analytics field definitions');
+    const fields=new Set(analytics.field_semantics.map(x=>x.id));
+    ensure(fields.size===analytics.field_semantics.length,'Duplicate Analytics metric ID');
+    ensure(analytics.field_semantics.every(x=>x.source_ids.length && x.source_ids.every(id=>sourceIds.has(id))),
+      'YouTube analytics metric lacks official evidence');
+    ensure(analytics.template_queries.every(x=>x.source_ids.every(id=>sourceIds.has(id)) && x.metrics.every(id=>fields.has(id))),
+      'YouTube analytics template references an unknown source or metric');
+
     const topic=load('ontology/youtube/taxonomy.json');
     const policy=load('ontology/youtube/policies.json');
     const measures=load('ontology/youtube/measurements.json');

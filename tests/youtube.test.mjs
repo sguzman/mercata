@@ -193,3 +193,19 @@ test('Content policy keeps general animation distinct from child-directed conten
   assert(data.policy_dimensions.some(x=>x.id==='originality_and_repetition'));
   assert(data.policy_dimensions.every(x=>x.source_ids.length && x.source_ids.every(id=>known.has(id))));
 });
+
+test('YouTube metrics distinguish advertiser money from creator receipts',async()=>{
+  const [guide,record]=await Promise.all([
+    load('ontology/youtube/analytics-query-guide.json'),load('specimens/youtube.json')
+  ]);
+  const sources=new Set(record.evidence.map(x=>x.id));
+  const fields=new Map(guide.field_semantics.map(x=>[x.id,x]));
+  assert.equal(fields.size,guide.field_semantics.length);
+  assert.equal(fields.get('estimatedRevenue').denominator_type,'net_creator');
+  assert.equal(fields.get('estimatedAdRevenue').denominator_type,'net_creator_ads');
+  assert.equal(fields.get('grossRevenue').denominator_type,'gross_advertiser');
+  assert.equal(fields.get('cpm').unit,'currency_per_1000_ad_impressions');
+  assert.equal(fields.get('playbackBasedCpm').unit,'currency_per_1000_playbacks');
+  assert(fields.size>=19);
+  for(const entry of guide.field_semantics)assert(entry.source_ids.every(id=>sources.has(id)));
+});

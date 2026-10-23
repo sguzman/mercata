@@ -67,3 +67,7 @@ The website includes a client-side calculator that begins with **no assumed earn
 ## Content-policy economics
 
 [Content classification and earning restrictions](content-policy-risk.md) distinguishes general-audience animation, child-directed and mixed-audience material, originality, reused content, and advertiser suitability. The [machine map](content-policy-risk.json) keeps product restrictions separate from any claimed income effect; no automatic genre penalty or revenue figure is invented.
+
+## Analytics and advertising numerators
+
+The [YouTube Analytics measurement guide](analytics-query-guide.md) ([machine records](analytics-query-guide.json)) defines 19 metrics and six reporting dimensions. It separates gross advertising proceeds from net creator ad payments, monetized playbacks from ad impressions, advertiser CPM from creator RPM, and channel-restricted demographics from platform-wide audience estimates. Four official-style authorized query templates are described, but no actual account data are fetched or stored.
