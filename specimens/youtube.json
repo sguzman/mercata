@@ -449,6 +449,50 @@
       "evidence_class": "official",
       "license": "Linked primary-source policy, independently paraphrased",
       "notes": "Content classification and policy enforcement depend on full circumstances and may change."
+    },
+    {
+      "id": "api-sample-queries",
+      "url": "https://developers.google.com/youtube/analytics/sample-requests",
+      "title": "YouTube Analytics API sample requests",
+      "publisher": "Google for Developers",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Public documentation linked; examples independently summarized",
+      "notes": "Access to Analytics revenue and demographic metrics requires authorized channel or content-owner scope; documentation does not expose third-party channel income."
+    },
+    {
+      "id": "api-query-params",
+      "url": "https://developers.google.com/youtube/analytics/reference/reports/query",
+      "title": "YouTube Analytics reports.query parameters",
+      "publisher": "Google for Developers",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Public documentation linked; examples independently summarized",
+      "notes": "Access to Analytics revenue and demographic metrics requires authorized channel or content-owner scope; documentation does not expose third-party channel income."
+    },
+    {
+      "id": "api-owner-reports",
+      "url": "https://developers.google.com/youtube/analytics/content_owner_reports",
+      "title": "YouTube Analytics content owner reports",
+      "publisher": "Google for Developers",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Public documentation linked; examples independently summarized",
+      "notes": "Access to Analytics revenue and demographic metrics requires authorized channel or content-owner scope; documentation does not expose third-party channel income."
+    },
+    {
+      "id": "api-reporting-metrics",
+      "url": "https://developers.google.com/youtube/reporting/v1/reports/metrics",
+      "title": "YouTube Reporting API metrics",
+      "publisher": "Google for Developers",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Public documentation linked; examples independently summarized",
+      "notes": "Access to Analytics revenue and demographic metrics requires authorized channel or content-owner scope; documentation does not expose third-party channel income."
     }
   ],
   "claims": [
@@ -819,6 +863,49 @@
       "confidence": "high",
       "observed_at": "2026-10-23",
       "limitations": "Context matters; cannot infer that all political content is fully monetized or that any individual creator will qualify."
+    },
+    {
+      "id": "analytics-net-ad-v-gross",
+      "text": "The YouTube Analytics API distinguishes estimatedAdRevenue (estimated net creator income from Google-sold ads), grossRevenue (pre-revenue-share gross ad proceeds), and estimatedRevenue (estimated net revenue from ads and specified non-ad revenue); none is interchangeable with the others.",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Authorized reporting only; estimates subject to adjustments and available metrics depend on query, period and account rights."
+    },
+    {
+      "id": "analytics-cpm-v-playback",
+      "text": "YouTube distinguishes CPM per thousand ad impressions from playback-based CPM per thousand monetized playbacks; one playback may generate more than one ad impression.",
+      "source_ids": [
+        "api-metrics",
+        "api-owner-reports"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "Both are advertiser-side gross measures and do not equal creator RPM or profit."
+    },
+    {
+      "id": "analytics-currency-scopes",
+      "text": "YouTube Analytics reports.query uses a three-letter currency parameter for supported revenue and ad-performance metrics; the default reported currency is USD, and conversion uses rates that can change daily.",
+      "source_ids": [
+        "api-query-params"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "A converted analytics display currency is not automatically the settlement currency or the creator's tax currency."
+    },
+    {
+      "id": "analytics-auth-access",
+      "text": "YouTube publishes authenticated channel analytics examples for daily, video-level, and country-specific revenue measurements; other channels' detailed income and audience demographics are not disclosed through unauthenticated public Data API lookups.",
+      "source_ids": [
+        "api-sample-queries",
+        "api-query-params",
+        "api-dimensions"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "An authorized channel owner's reports still do not identify a representative population of all YouTube channels."
     }
   ],
   "observations": [],

@@ -1,0 +1,439 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "as_of": "2026-10-23",
+  "kind": "reporting_semantics_and_query_design",
+  "scope": "Official YouTube Analytics API, requiring permission to view a channel or content owner's aggregated reports; no account connection is requested or used.",
+  "field_semantics": [
+    {
+      "id": "estimatedRevenue",
+      "label": "Net total estimated channel revenue",
+      "unit": "currency",
+      "definition": "creator estimated net revenue from Google-sold advertising and non-ad monetization sources in accessible reports",
+      "denominator_type": "net_creator",
+      "limitations": "not an ad-only variable; subscriptions and fan payments may overlap other financial inputs",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "estimatedAdRevenue",
+      "label": "Net advertising",
+      "unit": "currency",
+      "definition": "estimated creator-side advertising proceeds from Google-sold advertising",
+      "denominator_type": "net_creator_ads",
+      "limitations": "not grossRevenue; does not cover partner-sold ads",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "estimatedRedPartnerRevenue",
+      "label": "YouTube Premium revenue",
+      "unit": "currency",
+      "definition": "estimated creator-side YouTube Premium allocation",
+      "denominator_type": "net_creator_premium",
+      "limitations": "can contribute to estimatedRevenue",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "grossRevenue",
+      "label": "Gross advertising",
+      "unit": "currency",
+      "definition": "gross proceeds before owner share and revenue-sharing agreements",
+      "denominator_type": "gross_advertiser",
+      "limitations": "not a creator payout or profit",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "adImpressions",
+      "label": "Verified advertisements delivered",
+      "unit": "ad_impressions",
+      "definition": "number of verified ad impressions",
+      "denominator_type": "event",
+      "limitations": "can exceed monetized playbacks due to multiple ads",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "monetizedPlaybacks",
+      "label": "Playbacks with at least one ad shown",
+      "unit": "playbacks",
+      "definition": "monetized playback count; may count even if viewer leaves the preroll before video starts",
+      "denominator_type": "event",
+      "limitations": "not total eligible views and not unique people",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "cpm",
+      "label": "Advertiser-side CPM",
+      "unit": "currency_per_1000_ad_impressions",
+      "definition": "gross advertising revenue per thousand ad impressions",
+      "denominator_type": "gross_advertiser",
+      "limitations": "not creator RPM; not equivalent to playbackBasedCpm",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "playbackBasedCpm",
+      "label": "Playback-based CPM",
+      "unit": "currency_per_1000_playbacks",
+      "definition": "gross advertising revenue per thousand monetized playbacks",
+      "denominator_type": "gross_advertiser",
+      "limitations": "uses playbacks, not ad impressions",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "views",
+      "label": "Video view events",
+      "unit": "views",
+      "definition": "platform-defined views in a requested date range and video scope",
+      "denominator_type": "event",
+      "limitations": "platform definition changes; not unique people; long/Shorts definitions can differ",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "engagedViews",
+      "label": "Engaged views",
+      "unit": "engaged_views",
+      "definition": "viewing that meets YouTube's current engaged-view criteria",
+      "denominator_type": "event",
+      "limitations": "not interchangeable with public viewCount or unique viewers",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "estimatedMinutesWatched",
+      "label": "Watch duration",
+      "unit": "minutes",
+      "definition": "total estimated minutes watched",
+      "denominator_type": "duration",
+      "limitations": "not people or advertiser-paid events",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "averageViewDuration",
+      "label": "Average playback duration",
+      "unit": "seconds",
+      "definition": "estimated average playback duration for report scope",
+      "denominator_type": "average_duration",
+      "limitations": "not a per-person lifetime metric",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "viewerPercentage",
+      "label": "Logged-in viewing percentage",
+      "unit": "percent",
+      "definition": "share of viewing involving logged-in viewers according to report definition",
+      "denominator_type": "ratio",
+      "limitations": "not population demographic breakdown",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "videoThumbnailImpressions",
+      "label": "Thumbnail impressions",
+      "unit": "impressions",
+      "definition": "eligible on-YouTube impressions of video thumbnails",
+      "denominator_type": "event",
+      "limitations": "not total video views or paid ad impressions",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "videoThumbnailImpressionsClickRate",
+      "label": "Thumbnail impression click-through rate",
+      "unit": "percent",
+      "definition": "click-through ratio of qualifying thumbnail impressions",
+      "denominator_type": "ratio",
+      "limitations": "not buying conversion or ad click-through rate",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "subscribersGained",
+      "label": "Subscriber gains",
+      "unit": "accounts",
+      "definition": "subscribes attributed to channel in report period",
+      "denominator_type": "event",
+      "limitations": "net subscribers also require losses",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "subscribersLost",
+      "label": "Subscriber losses",
+      "unit": "accounts",
+      "definition": "unsubscribes attributed to channel in report period",
+      "denominator_type": "event",
+      "limitations": "not all viewers who stopped watching",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "likes",
+      "label": "Likes",
+      "unit": "events",
+      "definition": "positive engagements by users",
+      "denominator_type": "event",
+      "limitations": "not unique viewers or sales",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    },
+    {
+      "id": "shares",
+      "label": "Shares",
+      "unit": "events",
+      "definition": "video shares counted under available report",
+      "denominator_type": "event",
+      "limitations": "not directly tracked referral sales",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "value": null,
+      "access": "authorized_channel_or_content_owner"
+    }
+  ],
+  "supported_dimensions": [
+    {
+      "id": "day",
+      "meaning": "Daily time aggregation",
+      "source_ids": [
+        "api-dimensions"
+      ]
+    },
+    {
+      "id": "month",
+      "meaning": "Monthly time aggregation, not unique monthly active viewers",
+      "source_ids": [
+        "api-dimensions"
+      ]
+    },
+    {
+      "id": "country",
+      "meaning": "Country associated with the reported measured activity",
+      "source_ids": [
+        "api-dimensions"
+      ]
+    },
+    {
+      "id": "ageGroup",
+      "meaning": "Age bracket of logged-in audience in permitted reports",
+      "source_ids": [
+        "api-dimensions"
+      ],
+      "categories": [
+        "age13-17",
+        "age18-24",
+        "age25-34",
+        "age35-44",
+        "age45-54",
+        "age55-64",
+        "age65-"
+      ]
+    },
+    {
+      "id": "gender",
+      "meaning": "Gender of logged-in audience in permitted reports",
+      "source_ids": [
+        "api-dimensions"
+      ],
+      "categories": [
+        "female",
+        "male",
+        "user_specified"
+      ]
+    },
+    {
+      "id": "video",
+      "meaning": "Video-level grouping for reports allowing this dimension",
+      "source_ids": [
+        "api-dimensions"
+      ]
+    }
+  ],
+  "template_queries": [
+    {
+      "id": "daily-creator-earnings",
+      "dimensions": [
+        "day"
+      ],
+      "metrics": [
+        "views",
+        "estimatedRevenue",
+        "estimatedAdRevenue",
+        "estimatedRedPartnerRevenue",
+        "grossRevenue",
+        "adImpressions",
+        "cpm",
+        "playbackBasedCpm",
+        "monetizedPlaybacks"
+      ],
+      "access": "owner_authorized",
+      "period": "declared_start_and_end",
+      "source_ids": [
+        "api-sample-queries"
+      ],
+      "purpose": "Track actual channel earning across days; separate gross from net and non-ad streams."
+    },
+    {
+      "id": "country-creator-earnings",
+      "dimensions": [
+        "country"
+      ],
+      "metrics": [
+        "views",
+        "estimatedRevenue",
+        "estimatedAdRevenue",
+        "estimatedRedPartnerRevenue",
+        "grossRevenue",
+        "adImpressions",
+        "cpm",
+        "playbackBasedCpm",
+        "monetizedPlaybacks"
+      ],
+      "access": "owner_authorized",
+      "period": "declared_start_and_end",
+      "source_ids": [
+        "api-sample-queries"
+      ],
+      "purpose": "Compare reporting rows by viewer country, not country of creator residence."
+    },
+    {
+      "id": "single-video-ad-and-income",
+      "dimensions": [
+        "video"
+      ],
+      "metrics": [
+        "views",
+        "estimatedRevenue",
+        "estimatedAdRevenue",
+        "estimatedRedPartnerRevenue",
+        "grossRevenue",
+        "adImpressions",
+        "cpm",
+        "playbackBasedCpm",
+        "monetizedPlaybacks"
+      ],
+      "access": "owner_authorized",
+      "period": "declared_start_and_end",
+      "source_ids": [
+        "api-sample-queries"
+      ],
+      "purpose": "Examine top video revenue observations in a single channel or content owner rights scope."
+    },
+    {
+      "id": "audience-logged-in-age-gender",
+      "dimensions": [
+        "ageGroup",
+        "gender"
+      ],
+      "metrics": [
+        "viewerPercentage"
+      ],
+      "access": "owner_authorized",
+      "period": "declared_start_and_end",
+      "source_ids": [
+        "api-dimensions",
+        "api-metrics"
+      ],
+      "purpose": "Inspect permitted aggregate demographic groups, accepting suppression and limits; not public-platform composition."
+    }
+  ],
+  "invalid_arithmetic": [
+    {
+      "statement": "Creator take-home equals grossRevenue",
+      "reason": "Owner shares, adjustments, taxes and costs are not subtracted."
+    },
+    {
+      "statement": "Ad-only RPM equals estimatedRevenue/views",
+      "reason": "estimatedRevenue also includes eligible non-ad revenue and can double-count later added funding."
+    },
+    {
+      "statement": "Creator RPM equals cpm",
+      "reason": "CPM counts advertising impressions before YouTube's share, while RPM is creator-side and uses video view denominators."
+    },
+    {
+      "statement": "monetizedPlaybacks equals adImpressions",
+      "reason": "One playback can have multiple ads; impressions and playbacks are distinct events."
+    },
+    {
+      "statement": "Unique viewers equal view count",
+      "reason": "A person can watch repeatedly, including autoplay starts after metric changes."
+    },
+    {
+      "statement": "Country report gives country of publisher",
+      "reason": "country is a viewer/activity geographic dimension, not creator residence."
+    },
+    {
+      "statement": "Change of currency parameter changes payout threshold",
+      "reason": "Analytic currency conversion and AdSense payment-account reporting currency are separate."
+    }
+  ],
+  "collection_constraints": [
+    "Require explicit permission of actual channel/account owner; never access private analytics by scraping or impersonation.",
+    "Document query dates, authorization scope, API metric definitions, sample selection and privacy suppression.",
+    "If fields are unavailable to the given authorization scope, record unknown rather than zero.",
+    "Never archive personal viewer histories or identities.",
+    "Do not treat an isolated creator sample as representative of platform-wide creator earnings."
+  ]
+}
