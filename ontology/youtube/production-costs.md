@@ -39,6 +39,8 @@ The [Alitu / The Podcast Host survey](https://alitu.com/creator/content-creation
 
 For hours spent making an episode, from planning through release, respondents reported: **4% under one hour, 27% at 1–3 hours, 28% at 4–5, 20% at 6–8, 8% at 9–10, and 13% over ten**. Monthly podcast cash spending was **17% none, 7% below USD 10, 40% at USD 10–49, 16% at USD 50–99, and 20% at USD 100 or more**. In the same post-launch survey group, 85% said the podcast did not make money. These are percentages within a selected **podcaster respondent group**, not YouTube-wide rates.
 
+In a descriptive subgroup comparison, **about half** of surveyed full-video podcasters spent USD 50 or more per month, versus **28%** of audio-only respondents. For a separate episode-time question, about **36%** of video podcasters and **45%** of audio-only podcasters reported more than six hours per episode. These associations cannot be read as a causal cost or time change from adopting video; subgroup sample counts are not given.
+
 The sample contains audio-only and video makers and was recruited through publisher-affiliated channels, not from all YouTube creators. The source separately reports that adding video was associated with higher spending in this sample, but does not identify an independently representative YouTube cohort. Open-ended time and cash bins preclude exact reconstructed medians, and unpublished subgroup denominators remain `null`. The [machine record](production-costs.json) explicitly prohibits inferring typical YouTube hours, startup costs, profitability or no-earner rates from this adjacent survey.
 
 ## Remaining empirical work
