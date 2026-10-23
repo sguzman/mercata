@@ -49,6 +49,9 @@ try{
     await music.locator('summary').click();
     assert((await music.textContent()).includes('paid Creator Music licenses'));
     assert((await music.textContent()).includes('Typical audio cost: unknown'));
+    assert.equal(await music.locator('.music-enforcement-card').count(),2,'Claims and legal takedowns must be separate');
+    assert((await music.textContent()).includes('Copyright removal and strike'));
+    assert((await music.textContent()).includes('YouTube Shopping'));
     assert.equal(await page.locator('.analytics-metric-item').count(),11,'Missing Youtube Analytics metric guide');
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
