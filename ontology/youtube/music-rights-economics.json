@@ -185,5 +185,55 @@
     "Do not count held revenue as permanently lost before the dispute is resolved",
     "Do not treat Audio Library licensing as blanket permission to republish its audio outside authorized scope",
     "Do not invent creator cost, rights-loss or hourly income distributions"
+  ],
+  "enforcement_types": [
+    {
+      "id": "content_id_claim",
+      "kind": "platform_rights_match_and_claim",
+      "immediate_effects": [
+        "Rights holder may monetize, block by territory, or track usage"
+      ],
+      "copyright_strike_automatic": false,
+      "source_ids": [
+        "music-content-id",
+        "music-copyright-strikes"
+      ],
+      "creator_loss_estimate": null,
+      "limitations": "A claim can later lead to a removal request; do not infer guaranteed monetization or view loss."
+    },
+    {
+      "id": "copyright_removal_request",
+      "kind": "legal_request_and_platform_review",
+      "immediate_effects": [
+        "If a valid removal request is accepted, content is taken down and a copyright strike applies",
+        "Three copyright strikes within a 90-day window can result in channel termination"
+      ],
+      "copyright_strike_automatic": true,
+      "source_ids": [
+        "music-copyright-strikes"
+      ],
+      "creator_loss_estimate": null,
+      "limitations": "The strike follows an accepted valid removal request, not a routine Content ID match. Actual lost income, restoration, and appeal outcomes are unmeasured."
+    }
+  ],
+  "monetization_interactions": [
+    {
+      "id": "creator_music_revenue_share_shopping",
+      "format": "eligible_long_form_video",
+      "constraint": "Creator Music revenue-sharing tracks cannot be used with YouTube Shopping features under the published restrictions",
+      "source_ids": [
+        "music-creator-music-restrictions"
+      ],
+      "creator_earnings_impact": null
+    },
+    {
+      "id": "creator_music_brand_primary_promotion",
+      "format": "creator_music_licensed_video",
+      "constraint": "Published restrictions exclude sponsored content whose main purpose is to promote a brand or service; incidental mentions are a different case",
+      "source_ids": [
+        "music-creator-music-restrictions"
+      ],
+      "creator_earnings_impact": null
+    }
   ]
 }
