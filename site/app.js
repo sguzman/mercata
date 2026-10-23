@@ -890,6 +890,10 @@ function renderProductionCosts(model) {
       }
       panel.append(rows);external.append(panel);
     }
+    for(const comparison of study.audio_video_comparisons||[]){
+      const label=comparison.id==='monthly_cost_at_least_50_usd'?'Monthly spending of at least USD 50':'More than six hours per episode';
+      external.append(make('p','measure-limit',label+': about '+comparison.video_percent_approx+'% of video-podcast respondents versus '+comparison.audio_only_percent_approx+'% of audio-only respondents, in the sampled post-launch group. Not a causal comparison.'));
+    }
     external.append(make('p','measure-limit',study.reported_monetization.no_money_percent+'% of surveyed post-launch podcasters said their podcast earned no money. This is not a YouTube zero-earner estimate.'));
     const source=make('a','inline-link','Read the original podcast survey ↗');
     source.href=study.source_url;source.target='_blank';source.rel='noopener noreferrer';
