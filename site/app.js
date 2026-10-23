@@ -52,7 +52,7 @@ function showQueues(data,domains) {
   }
   container.replaceChildren(fragment);
   const note=$('.below-note');
-  note.textContent=domains.domains.length+' specialist categories supply extra questions; none is queued until a platform is admitted.';
+  note.textContent=domains.domains.length+' domain-specific categories support admitted marketplaces. Social-community platforms have additional audience research workstreams.';
 }
 function showOntology(data) {
   const fragment=document.createDocumentFragment();
@@ -122,6 +122,34 @@ function showCatalog() {
   grid.replaceChildren(frag);
   $('#catalog-count').textContent=specimens.length+' specimens';
   $('#count-specimens').textContent=specimens.length;
+}
+
+
+function showSocialOverview() {
+  const host=$('#social-overview');
+  const social=specimens.filter(s=>s.research_profiles?.includes('social_audience'));
+  if(!social.length){
+    host.replaceChildren(make('p','unresearched','No social or community-platform specimens have been admitted.'));
+    return;
+  }
+  const fragment=document.createDocumentFragment();
+  for(const entry of social) {
+    const card=make('article','social-market-card');
+    card.style.setProperty('--specimen',entry.color.hex);
+    const tag=make('div','social-market-top');
+    const dot=make('span','specimen-color');
+    dot.style.background=entry.color.hex;
+    add(tag,dot,make('span','social-domain',entry.domain.replaceAll('-',' ')));
+    const heading=make('h3','',entry.name);
+    const caption=make('p','', 'Population · demographics · subcultures · discovery · revenue');
+    const status=make('span','social-pending','Research pending');
+    const action=make('a','inline-link','Explore research queues ↗');
+    action.href='#dossier-view';
+    action.addEventListener('click',event=>{event.preventDefault();showDossier(entry);});
+    add(card,tag,heading,caption,status,action);
+    fragment.append(card);
+  }
+  host.replaceChildren(fragment);
 }
 
 function blockHeading(label,value) {
@@ -353,6 +381,7 @@ async function start() {
       $('#domain').append(opt);
     }
     showCatalog();
+    showSocialOverview();
   } else errorFor('#catalog-grid','The public gallery index could not be read.');
   if(outcomes[1].status==='fulfilled' && outcomes[2].status==='fulfilled') showQueues(outcomes[1].value,outcomes[2].value);
   else errorFor('#queue-grid','The research definitions could not be read.');
