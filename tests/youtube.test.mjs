@@ -41,6 +41,16 @@ test('Creator Music 2026 transition and Content ID risks preserve cost uncertain
     x.measured_loss===null));
   assert(rights.accounting_fields.some(x=>x.id==='revenue_held_during_dispute'));
   assert(rights.accounting_fields.some(x=>x.id==='creator_music_rights_adjustment'));
+  assert.equal(rights.enforcement_types.length,2);
+  assert(rights.enforcement_types.some(x=>x.id==='content_id_claim' &&
+    x.copyright_strike_automatic===false));
+  assert(rights.enforcement_types.some(x=>x.id==='copyright_removal_request' &&
+    x.copyright_strike_automatic===true));
+  assert(rights.enforcement_types.every(x=>x.creator_loss_estimate===null &&
+    x.source_ids.every(id=>known.has(id))));
+  assert(rights.monetization_interactions.some(x=>x.id==='creator_music_revenue_share_shopping'));
+  assert(rights.monetization_interactions.every(x=>x.creator_earnings_impact===null &&
+    x.source_ids.every(id=>known.has(id))));
   assert.equal(rights.typical_work_hours,null);
   assert.equal(rights.typical_profit_effect,null);
 });
