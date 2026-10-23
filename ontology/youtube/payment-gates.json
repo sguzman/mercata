@@ -68,5 +68,84 @@
     "Eligibility to apply is distinct from channel review and actual revenue.",
     "Do not substitute a currency conversion for a threshold defined in the account's actual reporting currency.",
     "No bank account, tax ID or other private user information belongs in this public research file."
-  ]
+  ],
+  "payment_cycle": {
+    "basis": "calendar month",
+    "currency_scope": "reporting currency of the specific AdSense for YouTube account",
+    "stages": [
+      {
+        "id": "accrue",
+        "label": "Earnings accrue",
+        "month_offset": 0,
+        "day_min": 1,
+        "day_max": 31,
+        "source_ids": [
+          "adsense-payment-cycle"
+        ],
+        "meaning": "Estimated earnings accrue during the content activity month.",
+        "limitation": "The final amount can change during verification and adjustments."
+      },
+      {
+        "id": "finalize",
+        "label": "YouTube earnings finalized",
+        "month_offset": 1,
+        "day_min": 7,
+        "day_max": 12,
+        "source_ids": [
+          "youtube-payment-process"
+        ],
+        "meaning": "Prior-month finalized YouTube earnings are generally added to AdSense for YouTube.",
+        "limitation": "Estimated YouTube Studio numbers may be adjusted for invalid traffic, rights claims, certain campaigns or tax rules."
+      },
+      {
+        "id": "payout-eligibility",
+        "label": "Threshold and holds evaluated",
+        "month_offset": 1,
+        "day_min": 20,
+        "day_max": 20,
+        "source_ids": [
+          "adsense-payment-cycle",
+          "youtube-payment-process"
+        ],
+        "meaning": "The total balance must reach the payment threshold and payment details or holds must be resolved by the deadline.",
+        "limitation": "Below-threshold or held balances roll forward; the timing is not a promise of payment."
+      },
+      {
+        "id": "issue",
+        "label": "Payment issued",
+        "month_offset": 1,
+        "day_min": 21,
+        "day_max": 26,
+        "source_ids": [
+          "adsense-payment-cycle",
+          "youtube-payment-process"
+        ],
+        "meaning": "Eligible balance payments are generally issued between the 21st and 26th.",
+        "limitation": "Holidays, weekends, compliance holds and account setup can change timing."
+      }
+    ],
+    "bank_arrival": [
+      {
+        "method": "electronic_funds_transfer",
+        "estimated_max_business_days": 7,
+        "source_ids": [
+          "adsense-payment-cycle"
+        ],
+        "caveat": "After issuance; may differ by bank and country."
+      },
+      {
+        "method": "wire_transfer",
+        "estimated_max_business_days": 15,
+        "source_ids": [
+          "adsense-payment-cycle"
+        ],
+        "caveat": "After initiation; may differ by receiving bank."
+      }
+    ],
+    "rules": [
+      "An issuance date is not a guarantee that funds arrived at the bank.",
+      "Do not treat a partial-month earning as an available cash balance.",
+      "Store payment details and tax documents only in the account, never this public repository."
+    ]
+  }
 }

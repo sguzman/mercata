@@ -22,3 +22,11 @@ An available feature still depends on channel standing, program acceptance, cont
 ## Investigations still open
 
 Program approval probabilities, personal legal/tax treatment, currency conversion charges, country-specific actual cash settlement timing, storefront costs, commission rates and fee schedules need separate dated sources. No one should disclose banking, identity or tax documents in this public repository.
+
+## Monthly settlement sequence
+
+According to [YouTube's published monthly cycle](https://support.google.com/youtube/answer/7164703?hl=en) and [AdSense for YouTube payment guide](https://support.google.com/youtube/answer/14728151?hl=en), earnings accrue during a calendar month; the previous month's adjusted amount normally posts on the next **7th–12th**; threshold and account details must be in order by the **20th**; and eligible payments are generally issued on the **21st–26th**.
+
+Issuing money is not the same as receiving it. The help center describes up to seven business days for an EFT and as long as 15 business days for a wire transfer after issuance or initiation, subject to bank and account circumstances. Claims, invalid traffic, taxes, verification and holds can modify or delay amounts. Earnings below the payment threshold carry forward rather than being paid on the normal cycle.
+
+The [machine version](payment-gates.json) keeps stages, offsets, account currency, available rails and exceptions distinct. These dates should never be interpreted as a creator's actual scheduled deposit.

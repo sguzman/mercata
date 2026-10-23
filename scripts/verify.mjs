@@ -77,6 +77,9 @@ for (const entry of index.specimens) {
     }
     ensure(payout.currencies.every(x=>Number.isFinite(x.minimum_payout) && x.minimum_payout>0 && x.source_ids.every(id=>sourceIds.has(id))),
       'Invalid payout thresholds');
+    ensure(payout.payment_cycle?.stages?.length===4,'Incomplete YouTube payout calendar');
+    ensure(payout.payment_cycle.stages.every(x=>x.source_ids.length&&x.source_ids.every(id=>sourceIds.has(id))),'Missing payout date sources');
+    ensure(payout.payment_cycle.bank_arrival.every(x=>x.source_ids.every(id=>sourceIds.has(id))),'Missing bank arrival sources');
     ensure(payout.program_access.every(x=>x.source_ids.every(id=>sourceIds.has(id))),
       'Missing payout region provenance');
 

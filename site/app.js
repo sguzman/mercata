@@ -562,6 +562,21 @@ function renderRevenuePathways(data, payments, dossier) {
       grid.append(box);
     }
     thresholds.append(grid);
+    if(payments.payment_cycle?.stages?.length) {
+      const stages=make('details','payout-cycle-details');
+      stages.append(make('summary','','When an eligible balance is paid'));
+      const list=make('ol','payout-cycle-steps');
+      for(const item of payments.payment_cycle.stages){
+        const row=make('li','');
+        row.append(make('strong','',item.label));
+        row.append(make('p','',item.meaning));
+        row.append(make('small','',item.limitation));
+        list.append(row);
+      }
+      stages.append(list);
+      thresholds.append(stages);
+    }
+
     thresholds.append(make('p','measure-limit','These amounts depend on the payment account currency, not the country where a video is watched. Mexico-based payout-method and program availability are documented separately.'));
     const link=make('a','inline-link','Read payout and regional eligibility rules ↗');
     link.href='./ontology/youtube/payment-gates.md';link.target='_blank';link.rel='noopener noreferrer';

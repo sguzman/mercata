@@ -167,3 +167,18 @@ test('Every YouTube topic has an unranked and unbiased opportunity record',async
   assert(opportunity.topic_assessments.every(x=>x.net_hourly_return===null&&x.creator_supply===null));
   assert(opportunity.criteria.every(x=>x.normalized_score===null&&x.weight===null));
 });
+
+test('YouTube earnings payment calendar distinguishes finalization from issue',async()=>{
+  const [data,dossier]=await Promise.all([
+    load('ontology/youtube/payment-gates.json'),load('specimens/youtube.json')
+  ]);
+  const sources=new Set(dossier.evidence.map(s=>s.id));
+  const stages=data.payment_cycle.stages;
+  assert.deepEqual(stages.map(x=>x.id),['accrue','finalize','payout-eligibility','issue']);
+  assert.equal(stages[1].day_min,7);
+  assert.equal(stages[1].day_max,12);
+  assert.equal(stages[3].day_min,21);
+  assert.equal(stages[3].day_max,26);
+  assert(stages.every(x=>x.source_ids.every(id=>sources.has(id))));
+  assert(data.payment_cycle.bank_arrival.every(x=>x.estimated_max_business_days>0));
+});
