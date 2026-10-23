@@ -1,0 +1,877 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "opportunity_assessment_protocol",
+  "as_of": "2026-10-23",
+  "status": "research_method_only",
+  "purpose": "Compare YouTube content niches as potential economic opportunities without inventing their audience size, income or relative rank.",
+  "criteria": [
+    {
+      "id": "audience_demand",
+      "label": "Audience demand",
+      "definition": "Separate distinct viewers, engaged views, watch hours, search interest and country; topic's published activity is not its population.",
+      "required_fields": [
+        "unique_viewers",
+        "engaged_views",
+        "watch_hours",
+        "country_scope",
+        "period"
+      ],
+      "evidence_standard": "Defensible aggregates, channel-authorized analytics or representative audience research",
+      "observations": [],
+      "confidence": "unmeasured",
+      "normalized_score": null,
+      "weight": null,
+      "uncertainty": null
+    },
+    {
+      "id": "creator_supply",
+      "label": "Creator supply",
+      "definition": "Counts of active channels, upload volume and concentration, with sample selection documented.",
+      "required_fields": [
+        "active_channels",
+        "uploads_per_month",
+        "view_share_top_channels"
+      ],
+      "evidence_standard": "Pre-registered, policy-compliant channel samples",
+      "observations": [],
+      "confidence": "unmeasured",
+      "normalized_score": null,
+      "weight": null,
+      "uncertainty": null
+    },
+    {
+      "id": "new_channel_access",
+      "label": "New-channel discoverability",
+      "definition": "Impressions, clicks and discovery distribution for comparable newly publishing channels, not only incumbents.",
+      "required_fields": [
+        "median_new_channel_impressions",
+        "discovery_sources",
+        "new_channel_cohort_size"
+      ],
+      "evidence_standard": "Consented channel analytics or representative study",
+      "observations": [],
+      "confidence": "unmeasured",
+      "normalized_score": null,
+      "weight": null,
+      "uncertainty": null
+    },
+    {
+      "id": "revenue_mix",
+      "label": "Revenue options",
+      "definition": "Ads, Premium, Shopping, sponsorship, support, product sales and services must be broken out.",
+      "required_fields": [
+        "native_rpm",
+        "member_conversion",
+        "affiliate_net",
+        "sponsor_net",
+        "product_net"
+      ],
+      "evidence_standard": "Direct, properly scoped creator-level or independent business records",
+      "observations": [],
+      "confidence": "unmeasured",
+      "normalized_score": null,
+      "weight": null,
+      "uncertainty": null
+    },
+    {
+      "id": "creator_income",
+      "label": "Creator income distribution",
+      "definition": "Mean, median, dispersion, non-earners, cohort composition and time to first payout, separated by revenue channel.",
+      "required_fields": [
+        "median_net_revenue",
+        "zero_earner_share",
+        "p25",
+        "p75",
+        "sample_size"
+      ],
+      "evidence_standard": "Representative or sharply bounded creator-income datasets",
+      "observations": [],
+      "confidence": "unmeasured",
+      "normalized_score": null,
+      "weight": null,
+      "uncertainty": null
+    },
+    {
+      "id": "cash_cost",
+      "label": "Cash cost",
+      "definition": "Include upfront charges, ongoing tools, rights, equipment, returns and promotion as applicable.",
+      "required_fields": [
+        "upfront_spend",
+        "monthly_fixed_cost",
+        "per_video_cash_cost"
+      ],
+      "evidence_standard": "Public fee schedules and costed production records",
+      "observations": [],
+      "confidence": "unmeasured",
+      "normalized_score": null,
+      "weight": null,
+      "uncertainty": null
+    },
+    {
+      "id": "labor_cost",
+      "label": "Labor and difficulty",
+      "definition": "Hours for idea research, writing, art, filming, editing, uploads, outreach and support.",
+      "required_fields": [
+        "hours_per_video",
+        "hours_marketing",
+        "hours_admin",
+        "revision_hours"
+      ],
+      "evidence_standard": "Measured production logs, not generic effort ratings",
+      "observations": [],
+      "confidence": "unmeasured",
+      "normalized_score": null,
+      "weight": null,
+      "uncertainty": null
+    },
+    {
+      "id": "format_fit",
+      "label": "Content-format fit",
+      "definition": "Separate Shorts, long-form, live, serial releases and localization; each has distinct demand and earnings mechanics.",
+      "required_fields": [
+        "format",
+        "expected_episode_count",
+        "audience_language",
+        "content_reuse_rights"
+      ],
+      "evidence_standard": "Format-specific comparable samples",
+      "observations": [],
+      "confidence": "unmeasured",
+      "normalized_score": null,
+      "weight": null,
+      "uncertainty": null
+    },
+    {
+      "id": "policy_exposure",
+      "label": "Policy and rights",
+      "definition": "Child-directed classification, ad suitability, copyright, seller disclosures, age rules and regional access.",
+      "required_fields": [
+        "restrictions",
+        "copyright_clearance",
+        "eligibility_region",
+        "advertising_suitability"
+      ],
+      "evidence_standard": "Official policies and explicit content review",
+      "observations": [],
+      "confidence": "unmeasured",
+      "normalized_score": null,
+      "weight": null,
+      "uncertainty": null
+    },
+    {
+      "id": "durability",
+      "label": "Durability and portability",
+      "definition": "Evergreen demand versus short-lived interest, audience reach outside YouTube and ability to own resulting products.",
+      "required_fields": [
+        "seasonality",
+        "evergreen_horizon",
+        "email_or_product_portability",
+        "repeat_visit_rate"
+      ],
+      "evidence_standard": "Longitudinal samples and documented export policies",
+      "observations": [],
+      "confidence": "unmeasured",
+      "normalized_score": null,
+      "weight": null,
+      "uncertainty": null
+    }
+  ],
+  "research_stages": [
+    {
+      "id": "scope",
+      "title": "Describe an audience need",
+      "outcome": "Pick specific topic and content format, geography, language, target buyer/interest and timescale before collecting numbers.",
+      "guardrails": [
+        "Do not infer sensitive traits of identifiable viewers.",
+        "Political research may describe aggregate public communities, but must not be turned into demographic-tailored political persuasion."
+      ]
+    },
+    {
+      "id": "triangulate",
+      "title": "Measure demand and competing supply",
+      "outcome": "Compare at least two independent measures when possible and explain selection bias, duplicated content and cohort limitations.",
+      "guardrails": [
+        "Do not treat search totalResults as unique viewers.",
+        "Do not subtract channel views to estimate market share without consistent denominators."
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "Build a channel-specific cost and cash-flow scenario",
+      "outcome": "Enter observed or explicitly assumed ad-only earnings, other net receipts, labor and expense assumptions, with uncertainty intervals.",
+      "guardrails": [
+        "Scenario values are not representative predictions.",
+        "Do not add fan funding to combined RPM twice.",
+        "Cost of labor and refunds must not disappear."
+      ]
+    },
+    {
+      "id": "reversibility",
+      "title": "Write a small, reversible content experiment",
+      "outcome": "Specify outputs, labor ceiling, observation window, publishing cadence, metric thresholds and a decision date.",
+      "guardrails": [
+        "An experiment design is not authorization to publish or spend.",
+        "Do not acquire confidential audience data or profile children."
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "Assess competing opportunities",
+      "outcome": "Choose a plan only after displaying uncertain profit-per-hour ranges and the main unobserved risks. Otherwise publish 'insufficient evidence'.",
+      "guardrails": [
+        "No opaque niche desirability score.",
+        "A small sampled niche median is not a population expectation."
+      ]
+    }
+  ],
+  "topic_assessments": [
+    {
+      "topic_id": "beauty",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "fashion",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "feminine-lifestyle",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "girls-youth-culture",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "child-animation",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "general-animation",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "anime",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "memes",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "comedy",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "political-news",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "political-commentary",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "gaming",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "esports",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "software",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "tech-reviews",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "science",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "history",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "video-essays",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "finance",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "music",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "podcasts",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "cooking",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "crafts",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "fitness",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "livestream",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "shorts-remix",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "news-and-journalism",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "virtual-creators",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "desk-setups",
+      "classification": "candidate_not_ranked",
+      "demand": null,
+      "creator_supply": null,
+      "revenue": null,
+      "net_hourly_return": null,
+      "decision": "insufficient_evidence",
+      "data_gaps": [
+        "audience_demand",
+        "creator_supply",
+        "new_channel_access",
+        "revenue_mix",
+        "creator_income",
+        "cash_cost",
+        "labor_cost",
+        "format_fit",
+        "policy_exposure",
+        "durability"
+      ]
+    }
+  ],
+  "scenario_maths": {
+    "ad_revenue": "valid_monitored_ad_views * matched_ad_only_creator_yield / 1000",
+    "total_receipts": "ad_revenue + net_other_receipts",
+    "cash_profit": "total_receipts - attributable_cash_costs",
+    "net_per_hour": "cash_profit / attributable_total_labor_hours",
+    "notes": [
+      "Monetary unit must be one reporting currency; do not apply unstated conversion.",
+      "User assumptions are explicit hypothetical inputs, not observational findings.",
+      "If labor is zero or missing, per-hour ratio is undefined.",
+      "If ad revenue already includes memberships, do not add membership receipts again.",
+      "A point estimate is not a probability-weighted forecast."
+    ]
+  },
+  "experiment_template": {
+    "status": "not_started",
+    "topic_id": null,
+    "format": null,
+    "country": null,
+    "language": null,
+    "target_audience_need": null,
+    "hypothesis": null,
+    "uploads_planned": null,
+    "max_cash_spend": null,
+    "max_labor_hours": null,
+    "observation_window_days": null,
+    "decision_metric": null,
+    "precommitted_threshold": null,
+    "provenance": [],
+    "actual_evidence": [],
+    "owner_authorized_publication": false
+  },
+  "rules": [
+    "All 29 topic assessments begin unranked and numerically unknown.",
+    "Original YouTube topic activity observations are context, not a verified census of unique viewers.",
+    "Do not use ethnic or political individual profiles for content targeting.",
+    "No candidate topic receives a recommendation solely because a commercial sample showed high median RPM.",
+    "Record actual published outcomes only when separately authorized and verifiable."
+  ]
+}
