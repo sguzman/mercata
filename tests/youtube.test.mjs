@@ -11,6 +11,32 @@ test('YouTube evidence and claim references',async()=>{
     assert(value.source_ids.length&&value.source_ids.every(id=>sources.has(id)));
   }
 });
+test('Country viewing figures keep UK devices and international survey denominators separate',async()=>{
+  const [data,dossier]=await Promise.all([
+    load('ontology/youtube/country-reach-devices.json'),load('specimens/youtube.json')
+  ]);
+  const sourceIds=new Set(dossier.evidence.map(x=>x.id));
+  const observations=new Map(data.observations.map(x=>[x.id,x]));
+  assert.equal(data.observations.length,10);
+  assert.equal(data.valid_series.length,3);
+  assert(data.sources.every(x=>sourceIds.has(x.source_id)));
+  assert(data.observations.every(x=>sourceIds.has(x.source_id) &&
+    Number.isFinite(x.value) && x.population && x.device_scope && x.limits));
+  for(const series of data.valid_series){
+    const items=series.members.map(id=>observations.get(id));
+    assert(items.every(Boolean));
+    assert.equal(items[0].unit,items[1].unit);
+    assert.equal(items[0].scope,items[1].scope);
+    assert.equal(items[0].device_scope,items[1].device_scope);
+  }
+  assert.equal(observations.get('uk-television-youtube-2022').value,9);
+  assert.equal(observations.get('uk-television-youtube-2025').value,19);
+  assert.equal(observations.get('uk-home-all-device-youtube-2025').value,41);
+  assert.equal(observations.get('dnr48-news-2026').value,34);
+  assert(Object.values(data.unknowns).every(x=>x===null));
+  assert(data.excluded_comparisons.some(x=>x.includes('51 Online Nation minutes')));
+});
+
 test('YouTube demographics have explicit percentage type',async()=>{
   const record=await load('specimens/youtube.json');
   for(const group of record.audience_research.demographics){
