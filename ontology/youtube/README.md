@@ -67,7 +67,7 @@ The [opportunity assessment method](opportunity-framework.md) is a ten-dimension
 
 ## Measuring equipment, production cash and labor
 
-[Production costs and work-hour measurement](production-costs.md) defines ten expense/asset categories and ten personal-work categories, with a separate [machine-readable study protocol](production-costs.json). It distinguishes hardware already owned from newly paid invoices, external contractors from unpaid creator labor, and rights-holder reductions from second cash expenses. No typical cost, work-hour distribution, economic return, or format-cost ranking has been measured.
+[Production costs and work-hour measurement](production-costs.md) defines ten expense/asset categories and ten personal-work categories, with a separate [machine-readable study protocol](production-costs.json). It distinguishes hardware already owned from newly paid invoices, external contractors from unpaid creator labor, and rights-holder reductions from second cash expenses. No representative **YouTube-specific** cost, work-hour distribution, economic return, or format-cost ranking has been measured. An adjacent 2025 voluntary survey of 558 independent podcasters is reported separately with its selection and post-launch denominator limits; it is not a YouTube creator benchmark.
 
 ## Scenario calculator
 
