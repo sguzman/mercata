@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "as_of": "2026-10-23",
+  "purpose": "Time-aware measurement definitions and breaks for comparison across sources",
+  "events": [
+    {
+      "id": "video-count-playback-start-2026",
+      "effective_date": "2026-08-24",
+      "metric": "videos.statistics.viewCount",
+      "scope": "public Data API video resource; long-form, live and Shorts",
+      "change": "View count includes video playback starts, including autoplay, hover-to-play and click/tap-to-play.",
+      "comparability": "Treat the 2026-08-24 change as a possible structural break. Do not compare pre/post values as uninterrupted identical viewing events without adjustment.",
+      "source_urls": [
+        "https://developers.google.com/youtube/data/reference/rest/v3/videos"
+      ],
+      "status": "published_definition"
+    },
+    {
+      "id": "search-api-quota-snapshot-2026",
+      "effective_date": null,
+      "metric": "search.list access capacity",
+      "scope": "YouTube Data API project quota",
+      "change": "Current developer documentation describes a separate default search call quota, subject to project settings and policy changes.",
+      "comparability": "Research collection capacity may shift with API project allowances; log actual observed quotas.",
+      "source_urls": [
+        "https://developers.google.com/youtube/data/determine_quota_cost"
+      ],
+      "status": "documented_current_rule"
+    },
+    {
+      "id": "search-total-approximate",
+      "effective_date": null,
+      "metric": "search.list pageInfo.totalResults",
+      "scope": "public video/channel/playlist search",
+      "change": "Total results are approximate and do not enumerate unique people or a complete topic corpus.",
+      "comparability": "Never treat this total as observed unique community size or exact sample frame.",
+      "source_urls": [
+        "https://developers.google.com/youtube/v3/docs/search/list"
+      ],
+      "status": "published_definition"
+    }
+  ],
+  "required_observation_fields": [
+    "source_url",
+    "retrieved_at",
+    "observation_period",
+    "metric_id",
+    "population",
+    "unit",
+    "geographic_scope",
+    "sampling_or_access_method",
+    "definition_revision",
+    "limitations"
+  ],
+  "prohibited_inference": [
+    "raw_views_to_unique_people",
+    "keyword_results_to_subculture_size",
+    "channel_subscribers_to_active_viewers",
+    "country_ad_reach_to_country_mau",
+    "creator_rpm_to_creator_profit"
+  ]
+}
