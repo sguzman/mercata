@@ -387,3 +387,15 @@ h1 em {font-style:italic;color:var(--accent)}
 .community-survey-year p,.community-profile-card small{font-size:12px;color:var(--muted)}
 @media(max-width:750px){.community-survey-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:460px){.community-survey-grid,.community-survey-numbers{grid-template-columns:1fr}}
+
+.competition-sample{border-top:1px solid var(--line);margin-top:28px;padding-top:20px}
+.competition-sample-details,.competition-traffic{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:15px}
+.competition-sample-details>summary,.competition-traffic>summary{font-size:14px;font-weight:750;cursor:pointer}
+.competition-grid,.competition-traffic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.competition-tier,.competition-traffic-item{background:var(--bg);border:1px solid var(--line);padding:13px;border-radius:9px;min-width:0}
+.competition-tier strong,.competition-traffic-item strong{display:block;font:22px Georgia,serif;font-variant-numeric:tabular-nums}
+.competition-tier h5,.competition-traffic-item span{font-size:13px;margin:0 0 6px}
+.competition-tier small{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:8px}
+.competition-traffic{margin:12px 0}
+@media(max-width:680px){.competition-grid,.competition-traffic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:440px){.competition-grid,.competition-traffic-grid{grid-template-columns:1fr}}

@@ -329,3 +329,14 @@ test('Pew news survey rates use separate populations and survey years',async()=>
   assert(source.demographic_composition.every(x=>x.population.includes('regularly get news')));
   assert(source.demographic_composition.every(x=>x.source_ids.every(id=>known.has(id))));
 });
+
+test('Commercial competition sample does not invent new-channel success probability',async()=>{
+  const sample=await load('ontology/youtube/competition-observations.json');
+  assert.equal(sample.source.sampled_accounts,71177);
+  assert.equal(sample.source.sampled_videos,799718);
+  assert.equal(sample.source.representative_of_all_youtube_creators,false);
+  assert(sample.cohort_tier_transitions.some(x=>x.tier==='small' && x.share_moved_up_percent===16.01));
+  assert(sample.traffic_source_share_of_sampled_organic_views.some(x=>x.id==='shorts_feed' && x.percent===61));
+  assert(sample.traffic_source_share_of_sampled_organic_views.every(x=>x.denominator==='sampled organic view events'));
+  assert(sample.cross_format_association.type.includes('not_causal'));
+});

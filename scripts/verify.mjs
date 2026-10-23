@@ -52,6 +52,17 @@ for (const entry of index.specimens) {
     const model=load('ontology/youtube/model.json');
     const growth=load('ontology/youtube/creator-growth.json');
     const newsAudience=load('ontology/youtube/community-audience-studies.json');
+    const competition=load('ontology/youtube/competition-observations.json');
+    ensure(competition.source.sampled_accounts===71177 && competition.source.sampled_videos===799718,
+      'Competition sample provenance mismatch');
+    ensure(competition.source.representative_of_all_youtube_creators===false,
+      'Commercial sample misrepresented as population census');
+    ensure(sourceIds.has(competition.source.id),'Commercial sample source missing');
+    ensure(competition.cohort_tier_transitions.every(x=>x.share_moved_up_percent>=0 && x.share_moved_up_percent<=100),
+      'Invalid observed cohort transition rate');
+    ensure(competition.traffic_source_share_of_sampled_organic_views.every(x=>x.denominator==='sampled organic view events'),
+      'Unknown traffic-share denominator');
+
     ensure(newsAudience.study_topic_id==='news-and-journalism','Unexpected news population');
     ensure(newsAudience.trends.length===7 && newsAudience.trends.at(-1).all_adults_percent===34,
       'Incomplete bounded Pew YouTube news trend');
