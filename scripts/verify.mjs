@@ -139,6 +139,31 @@ for (const entry of index.specimens) {
       'Unsupported audience statistic');
 
     const analytics=load('ontology/youtube/analytics-query-guide.json');
+    const countryReach=load('ontology/youtube/country-reach-devices.json');
+    ensure(countryReach.sources.length===3 &&
+      countryReach.observations.length===10 &&
+      countryReach.valid_series.length===3,
+      'Incomplete UK viewing and multi-market source register');
+    const reachIds=new Set(countryReach.observations.map(x=>x.id));
+    ensure(reachIds.size===countryReach.observations.length &&
+      countryReach.sources.every(x=>sourceIds.has(x.source_id)) &&
+      countryReach.observations.every(x=>sourceIds.has(x.source_id) &&
+        x.population && x.period && x.unit && x.device_scope &&
+        x.limits && Number.isFinite(x.value) && x.value>=0 &&
+        (!x.unit.includes('percent') || x.value<=100)),
+      'Unattributed regional reach figure or ambiguous denominator');
+    ensure(countryReach.valid_series.every(series=>series.members.length===2 &&
+      series.members.every(id=>reachIds.has(id)) &&
+      new Set(series.members.map(id=>countryReach.observations.find(o=>o.id===id).unit)).size===1),
+      'Regional audience comparison with mismatched units');
+    ensure(countryReach.observations.find(x=>x.id==='uk-youtube-adult-use-2025')?.value===94 &&
+      countryReach.observations.find(x=>x.id==='uk-television-youtube-2025')?.value===19 &&
+      countryReach.observations.find(x=>x.id==='dnr48-news-2026')?.value===34,
+      'Missing source-backed UK or Reuters figures');
+    ensure(Object.values(countryReach.unknowns).every(x=>x===null) &&
+      countryReach.excluded_comparisons.length>=6,
+      'Inferred global creator or audience population from incomparable data');
+
     const platformScale=load('ontology/youtube/platform-scale.json');
     ensure(platformScale.observations.length===4,'Missing globally scoped scale observations');
     ensure(platformScale.observations.every(x=>Number.isFinite(x.value) && x.value>=0 && x.source_id && sourceIds.has(x.source_id)),
