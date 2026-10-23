@@ -90,10 +90,13 @@ test('YouTube ontology connects audio licensing, Content ID holds and copyright 
   const model=await load('ontology/youtube/model.json');
   const known=new Set(model.concepts.map(x=>x.id));
   const pairs=new Set(model.relations.map(x=>x.subject+'|'+x.predicate+'|'+x.object));
-  assert.equal(model.concepts.length,120);
-  assert.equal(model.relations.length,84);
+  assert.equal(model.concepts.length,128);
+  assert.equal(model.relations.length,95);
   assert(model.relations.every(x=>known.has(x.subject)&&known.has(x.object)));
   assert(pairs.has('registered_account|may_manage|channel'));
+  assert(pairs.has('syndicated_income_report|reuses|income_survey_source_family'));
+  assert(pairs.has('survey_income_threshold_share|does_not_estimate|newcomer_income_estimand'));
+  assert(pairs.has('new_channel_zero_earner|is_part_of|newcomer_income_estimand'));
   assert(pairs.has('standard_publishing_access|does_not_grant|monetized_channel'));
   assert(pairs.has('advanced_channel_access|does_not_grant|monetized_channel'));
   assert(pairs.has('copyright_takedown|can_result_in|copyright_strike'));
