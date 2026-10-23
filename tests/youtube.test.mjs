@@ -37,6 +37,20 @@ test('Production cost model keeps 10 cash and 10 labor measures separate',async(
   assert(costs.labor_categories.every(x=>x.value===null));
   assert(costs.design_experiments.every(x=>x.status==='not_measured' &&
     x.median_cash_cost===null && x.median_hours===null));
+  const adjacent=costs.adjacent_creator_surveys[0];
+  assert.equal(costs.adjacent_creator_surveys.length,1);
+  assert.equal(adjacent.respondents_total,558);
+  assert.equal(adjacent.post_launch_respondents,null);
+  assert.equal(adjacent.sample_frame_representative,false);
+  assert.equal(adjacent.google_or_youtube_channels_only,false);
+  assert.equal(adjacent.inference_to_typical_youtube_creator_cost,'prohibited');
+  assert(ids.has(adjacent.source_id));
+  for(const hist of [adjacent.reported_human_work,adjacent.reported_operating_cash]){
+    assert.equal(hist.bins.reduce((n,x)=>n+x.percent,0),100);
+    assert.equal(hist.denominator_n,null);
+  }
+  assert.equal(adjacent.reported_human_work.median_hours,null);
+  assert.equal(adjacent.reported_operating_cash.median_monthly_cost,null);
   assert.equal(costs.model.cash_profit_per_hour,null);
   assert.equal(costs.model.economic_profit_after_labor_valuation,null);
   assert(costs.model.accounting_rules.some(x=>x.includes('already reflected')));
