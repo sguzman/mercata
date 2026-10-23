@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "as_of": "2026-10-23",
+  "type": "symbolic_unit_economics",
+  "status": "definitions_only",
+  "sources": [
+    "https://support.google.com/youtube/answer/9314357?hl=en",
+    "https://support.google.com/youtube/answer/72902?hl=en",
+    "https://support.google.com/youtube/answer/12504220?hl=en"
+  ],
+  "symbols": [
+    {
+      "id": "watch_views",
+      "unit": "views",
+      "definition": "Eligible recorded watch-page video views in stated reporting period",
+      "value": null
+    },
+    {
+      "id": "shorts_engaged_views",
+      "unit": "engaged_views",
+      "definition": "Applicable Shorts engaged views, not identical to raw view count",
+      "value": null
+    },
+    {
+      "id": "watch_rpm",
+      "unit": "currency_per_1000_views",
+      "definition": "Creator revenue per 1,000 applicable views, after platform allocation, observed for a specific cohort and period",
+      "value": null
+    },
+    {
+      "id": "shorts_rpm",
+      "unit": "currency_per_1000_engaged_views",
+      "definition": "Creator revenue per 1,000 relevant Shorts engaged views in the selected reporting definition",
+      "value": null
+    },
+    {
+      "id": "memberships_gross",
+      "unit": "currency",
+      "definition": "Viewer-funded membership receipts before applicable platform cuts, taxes and deductions",
+      "value": null
+    },
+    {
+      "id": "memberships_eligible_net",
+      "unit": "currency",
+      "definition": "Eligible net receipts before the applicable creator share, requires definition",
+      "value": null
+    },
+    {
+      "id": "sponsorship_net",
+      "unit": "currency",
+      "definition": "Gross sponsorship receipts net of direct contractual and fulfillment costs",
+      "value": null
+    },
+    {
+      "id": "affiliate_net",
+      "unit": "currency",
+      "definition": "Affiliate commissions after refunds and associated direct costs",
+      "value": null
+    },
+    {
+      "id": "product_net",
+      "unit": "currency",
+      "definition": "Net earnings from owned products or services after direct costs",
+      "value": null
+    },
+    {
+      "id": "fixed_costs",
+      "unit": "currency",
+      "definition": "Project fixed cash costs over reporting period",
+      "value": null
+    },
+    {
+      "id": "production_costs",
+      "unit": "currency",
+      "definition": "Per-video and variable production cash costs",
+      "value": null
+    },
+    {
+      "id": "marketing_costs",
+      "unit": "currency",
+      "definition": "Promotion expenditure attributable to reporting period",
+      "value": null
+    },
+    {
+      "id": "admin_costs",
+      "unit": "currency",
+      "definition": "Non-production cash costs such as banking, subscriptions or tools",
+      "value": null
+    },
+    {
+      "id": "hours_production",
+      "unit": "hours",
+      "definition": "Writing, recording, editing, artwork and verification labor",
+      "value": null
+    },
+    {
+      "id": "hours_marketing",
+      "unit": "hours",
+      "definition": "Promotion, replies, cross-posting and audience work",
+      "value": null
+    },
+    {
+      "id": "hours_admin",
+      "unit": "hours",
+      "definition": "Other operational labor including support and bookkeeping",
+      "value": null
+    }
+  ],
+  "calculations": [
+    {
+      "id": "watch_ad_estimate",
+      "expression": "watch_views * watch_rpm / 1000",
+      "inputs": [
+        "watch_views",
+        "watch_rpm"
+      ],
+      "note": "Only valid if RPM scope precisely matches views, format, period and geography. Do not apply 55% again to after-share RPM."
+    },
+    {
+      "id": "shorts_ad_estimate",
+      "expression": "shorts_engaged_views * shorts_rpm / 1000",
+      "inputs": [
+        "shorts_engaged_views",
+        "shorts_rpm"
+      ],
+      "note": "Never use raw Shorts viewCount as engaged views by default; product definitions and eligibility vary."
+    },
+    {
+      "id": "membership_creator_share",
+      "expression": "memberships_eligible_net * 0.70",
+      "inputs": [
+        "memberships_eligible_net"
+      ],
+      "note": "Contractual creator share for applicable eligible Commerce Product Module receipts; not 70% of gross payment."
+    },
+    {
+      "id": "combined_net_revenue",
+      "expression": "watch_ad_estimate + shorts_ad_estimate + membership_creator_share + sponsorship_net + affiliate_net + product_net",
+      "inputs": [
+        "watch_ad_estimate",
+        "shorts_ad_estimate",
+        "membership_creator_share",
+        "sponsorship_net",
+        "affiliate_net",
+        "product_net"
+      ],
+      "note": "All streams must be net on compatible bases. Null inputs mean unavailable, not zero."
+    },
+    {
+      "id": "cash_profit",
+      "expression": "combined_net_revenue - fixed_costs - production_costs - marketing_costs - admin_costs",
+      "inputs": [
+        "combined_net_revenue",
+        "fixed_costs",
+        "production_costs",
+        "marketing_costs",
+        "admin_costs"
+      ],
+      "note": "Before explicitly accounted taxes and any unmeasured obligations; not take-home earnings automatically."
+    },
+    {
+      "id": "total_labor",
+      "expression": "hours_production + hours_marketing + hours_admin",
+      "inputs": [
+        "hours_production",
+        "hours_marketing",
+        "hours_admin"
+      ],
+      "note": "Capture hours spent on unsuccessful drafts and promotion as well."
+    },
+    {
+      "id": "cash_profit_per_hour",
+      "expression": "cash_profit / total_labor",
+      "inputs": [
+        "cash_profit",
+        "total_labor"
+      ],
+      "note": "Undefined when labor is zero or unknown; not a guaranteed hourly wage."
+    }
+  ],
+  "assumption_constraints": [
+    "All monetary symbols must use the same currency and observation period or provide an explicit conversion method.",
+    "Never represent creator revenue as advertiser CPM times gross public views.",
+    "The contractual 55%, 45% and 70% figures have different denominators and must not be added or used interchangeably.",
+    "A zero for unknown volume, income or time is not an acceptable default.",
+    "Separate historical, observed and scenario revenue from inferred or simulated results.",
+    "Include labor and failure costs when comparing niches or publishing strategies.",
+    "Do not claim which content niche earns more without comparable representative evidence."
+  ]
+}
