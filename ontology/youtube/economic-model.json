@@ -110,7 +110,7 @@
   "calculations": [
     {
       "id": "watch_ad_estimate",
-      "expression": "watch_views * watch_rpm / 1000",
+      "expression": "watch_views * watch_ad_only_rpm / 1000",
       "inputs": [
         "watch_views",
         "watch_ad_only_rpm"
@@ -119,7 +119,7 @@
     },
     {
       "id": "shorts_ad_estimate",
-      "expression": "shorts_engaged_views * shorts_rpm / 1000",
+      "expression": "shorts_engaged_views * shorts_ad_only_rpm / 1000",
       "inputs": [
         "shorts_engaged_views",
         "shorts_ad_only_rpm"
