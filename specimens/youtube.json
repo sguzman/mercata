@@ -218,6 +218,17 @@
       "evidence_class": "independent",
       "license": "Short attributed statistics; no original charts or report text reused",
       "notes": "Late-2025 Google advertising planning estimates. Not the platform's actual monthly active user count."
+    },
+    {
+      "id": "pew-us-teens-2025",
+      "url": "https://www.pewresearch.org/internet/2025/12/09/teens-social-media-and-ai-chatbots-2025/",
+      "publisher": "Pew Research Center",
+      "title": "Teens, Social Media and AI Chatbots 2025",
+      "published_at": "2025-12-09",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "independent",
+      "license": "Attribution for brief quantitative observations; no copied charts",
+      "notes": "U.S. teens 13-17, n=1,458, online survey Sept 25–Oct 9 2025; different sample from the 2026 adult survey."
     }
   ],
   "claims": [
@@ -424,6 +435,16 @@
       "confidence": "medium",
       "observed_at": "2026-10-23",
       "limitations": "These are advertising-planning estimates, not the platforms' monthly active users or deduplicated viewer counts."
+    },
+    {
+      "id": "pew-us-teens-youtube-2025",
+      "text": "In a 2025 Pew survey, 92% of U.S. teens ages 13–17 reported ever using YouTube; the subgroup use rates were 94% among boys and 89% among girls.",
+      "source_ids": [
+        "pew-us-teens-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-23",
+      "limitations": "A U.S. teen sample distinct from the 2026 U.S. adult survey. These figures do not describe the demographic composition or children's content audiences."
     }
   ],
   "observations": [],
@@ -496,6 +517,21 @@
         ],
         "limitations": "Potential ad reach is not monthly active users; may not represent deduplicated active people, registered accounts or all content consumers.",
         "confidence": "medium"
+      },
+      {
+        "id": "pew-2025-teen-youtube-ever-use",
+        "metric": "U.S. teens aged 13–17 reporting ever using YouTube",
+        "value": 92,
+        "unit": "percent",
+        "population": "U.S. teens 13–17",
+        "period": "2025-09-25 to 2025-10-09",
+        "geography": "United States",
+        "source_ids": [
+          "pew-us-teens-2025"
+        ],
+        "method": "Pew survey of 1,458 U.S. teens aged 13–17, recruited with parents through Ipsos KnowledgePanel.",
+        "limitations": "Self-reported ever-use, not platform MAU or child-animation audience size. Not a sample of children under 13.",
+        "confidence": "high"
       }
     ],
     "demographics": [
@@ -918,6 +954,36 @@
           "datareportal-2026-br"
         ],
         "limitations": "Share among the reported adult advertising audience; not equivalent to a representative platform user survey or the sex distribution of all viewers."
+      },
+      {
+        "id": "pew-2025-teen-boys",
+        "dimension": "gender",
+        "category": "Boys",
+        "share_percent": 94,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. teens 13–17: Boys",
+        "period": "2025-09-25 to 2025-10-09",
+        "geography": "United States",
+        "source_ids": [
+          "pew-us-teens-2025"
+        ],
+        "method": "Pew survey of 1,458 U.S. teens aged 13–17, recruited with parents through Ipsos KnowledgePanel.",
+        "limitations": "Within-group share reporting ever using YouTube; not share of the YouTube user base or a content preference."
+      },
+      {
+        "id": "pew-2025-teen-girls",
+        "dimension": "gender",
+        "category": "Girls",
+        "share_percent": 89,
+        "measurement_kind": "within_group_ever_use_rate",
+        "population": "U.S. teens 13–17: Girls",
+        "period": "2025-09-25 to 2025-10-09",
+        "geography": "United States",
+        "source_ids": [
+          "pew-us-teens-2025"
+        ],
+        "method": "Pew survey of 1,458 U.S. teens aged 13–17, recruited with parents through Ipsos KnowledgePanel.",
+        "limitations": "Within-group share reporting ever using YouTube; not share of the YouTube user base or a content preference."
       }
     ],
     "communities": [],
