@@ -241,3 +241,12 @@ h1 em {font-style:italic;color:var(--accent)}
 .topic-catalogue-card p,.topic-catalogue-card small{color:var(--muted);font-size:12px}
 @media(max-width:900px){.topic-catalogue-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.topic-catalogue-grid{grid-template-columns:1fr}}
+
+.topic-activity,.topic-subtopics{border-top:1px solid var(--line);margin-top:12px;padding-top:10px;font-size:12px}
+.topic-activity summary,.topic-subtopics summary{cursor:pointer;font-weight:750}
+.topic-activity-row{padding:11px 0;border-bottom:1px solid var(--line)}
+.topic-activity-row strong{font-size:14px;font-variant-numeric:tabular-nums}
+.topic-activity-row p{font-size:12px;margin:4px 0;color:var(--muted)}
+.topic-activity-row small{display:block;color:var(--muted)}
+.topic-activity-row a{display:inline-block;margin-top:5px}
+.topic-subtopics ul{margin:8px 0;padding-left:18px;color:var(--muted)}
