@@ -186,6 +186,32 @@ test('YouTube task percentage matches its original and detailed queues',async()=
   assert(plan.detail_tasks.every(t=>t.percent<100 || (t.status==='complete'&&t.evidence.length>0)));
 });
 
+test('Mixed-platform creator income surveys remain separate and do not supply YouTube estimates',async()=>{
+  const [report,dossier]=await Promise.all([
+    load('ontology/youtube/cross-platform-income-surveys.json'),load('specimens/youtube.json')
+  ]);
+  const sources=new Set(dossier.evidence.map(s=>s.id));
+  assert.equal(report.studies.length,2);
+  assert.equal(report.independent_dataset_families,2);
+  assert.equal(new Set(report.studies.map(s=>s.source_family_id)).size,2);
+  assert(report.studies.every(s=>s.representative_of_youtube===false &&
+    s.representative_of_all_creators===false &&
+    s.youtube_subgroup_n===null &&
+    s.inference_to_youtube_median==='prohibited' &&
+    s.source_ids.every(id=>sources.has(id))));
+  const neoreach=report.studies.find(s=>s.id==='neoreach-2025');
+  assert.equal(neoreach.survey_respondents_exact,null);
+  assert.equal(neoreach.survey_respondents_lower_bound_exclusive,3000);
+  assert.equal(neoreach.source_ids.length,2);
+  assert.equal(neoreach.measurements.find(x=>x.id==='below_15000_year').value,50.71);
+  const spotlight=report.studies.find(s=>s.id==='spotlight-2025');
+  assert.equal(spotlight.survey_respondents_exact,427);
+  assert.equal(spotlight.measurements.find(x=>x.id==='income_under_500').value,null);
+  assert.equal(spotlight.measurements.find(x=>x.id==='income_100000_plus_count').value,37);
+  assert(Object.values(report.youtube_target_estimates).every(value=>value===null));
+  assert(report.comparability.unsupported.includes('pooling_percentages'));
+});
+
 test('Creator-income sample cannot be mistaken for typical YouTube payments',async()=>{
   const [study,dossier]=await Promise.all([
     load('ontology/youtube/creator-income-evidence.json'),load('specimens/youtube.json')
