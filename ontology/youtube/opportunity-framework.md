@@ -2,7 +2,7 @@
 
 Mercata needs to answer a harder question than "which category gets the most views?": **What can an independent creator make, and what would it cost in cash, time, legal exposure and lost alternatives?**
 
-This is a [machine-readable research protocol](opportunity-framework.json), not a leaderboard. All 29 topics are currently unranked because their distinct viewers, active competing channels, median economic returns and cost distributions have not been measured on comparable bases.
+This is a [machine-readable research protocol](opportunity-framework.json), not a leaderboard. All 31 topics are currently unranked because their distinct viewers, active competing channels, median economic returns and cost distributions have not been measured on comparable bases.
 
 ## Ten dimensions of an opportunity
 

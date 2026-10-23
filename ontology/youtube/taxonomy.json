@@ -12,7 +12,8 @@
     "gaming",
     "technology",
     "education",
-    "arts"
+    "arts",
+    "sports"
   ],
   "topics": [
     {
@@ -1083,6 +1084,90 @@
         "overlap with adjacent categories",
         "monetization eligibility and production cost"
       ]
+    },
+    {
+      "id": "sports-general",
+      "label": "Sports and athletic competition",
+      "definition": "Viewing, explaining, commenting on and participating in sports, including professional and amateur events; overlaps gaming/esports and fitness only where explicitly coded.",
+      "parent_ids": [
+        "sports"
+      ],
+      "aliases": [
+        "Sports videos"
+      ],
+      "research_subtopics": [
+        "match reporting",
+        "sports commentary",
+        "sports history",
+        "live broadcasts",
+        "coaching and analysis"
+      ],
+      "candidate_formats": [
+        "long_form",
+        "shorts",
+        "live"
+      ],
+      "research_query_seeds": [
+        "sports analysis",
+        "match highlights",
+        "sports history"
+      ],
+      "audience_estimate": null,
+      "creator_estimate": null,
+      "views_estimate": null,
+      "overlap_status": "unmeasured",
+      "measurement_status": "unresearched",
+      "research_status": "taxonomy_ready_not_measured",
+      "data_requirements": [
+        "public videos sampled in declared date window",
+        "deduplicated active creator channels",
+        "audience estimates only from defensible studies",
+        "overlap with adjacent categories",
+        "monetization eligibility and production cost"
+      ]
+    },
+    {
+      "id": "football-soccer",
+      "label": "Football and soccer",
+      "definition": "Association football reporting, fandom, analysis, game broadcasts and events such as the FIFA World Cup; event viewers need not be lifelong fans.",
+      "parent_ids": [
+        "sports"
+      ],
+      "aliases": [
+        "Soccer",
+        "Fútbol",
+        "FIFA World Cup"
+      ],
+      "research_subtopics": [
+        "World Cup coverage",
+        "club football",
+        "match analysis",
+        "player profiles",
+        "live match reporting"
+      ],
+      "candidate_formats": [
+        "long_form",
+        "shorts",
+        "live"
+      ],
+      "research_query_seeds": [
+        "FIFA World Cup",
+        "soccer news",
+        "fútbol análisis"
+      ],
+      "audience_estimate": null,
+      "creator_estimate": null,
+      "views_estimate": null,
+      "overlap_status": "unmeasured",
+      "measurement_status": "unresearched",
+      "research_status": "taxonomy_ready_not_measured",
+      "data_requirements": [
+        "public videos sampled in declared date window",
+        "deduplicated active creator channels",
+        "audience estimates only from defensible studies",
+        "overlap with adjacent categories",
+        "monetization eligibility and production cost"
+      ]
     }
   ],
   "rules": [
@@ -1094,6 +1179,6 @@
     "Research query seeds are sampling inputs, not validated keywords or evidence of demand.",
     "Subtopics and candidate formats are conceptual, not a market-size or RPM claim."
   ],
-  "taxonomy_version": "1.3",
+  "taxonomy_version": "1.4",
   "methodology": "ontology/youtube/public-sampling.md"
 }

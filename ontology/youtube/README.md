@@ -1,6 +1,6 @@
 # YouTube ontology — audiences, content and earning
 
-The independent [machine model](model.json) defines **88 concepts** and **47 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **29 candidate overlapping subcultures**, without pretending their populations have been measured.
+The independent [machine model](model.json) defines **88 concepts** and **47 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **31 candidate overlapping subcultures**, without pretending their populations have been measured.
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
@@ -12,7 +12,7 @@ Platform demographics (age, sex, gender, race or ethnicity, political affiliatio
 
 ## Community ontology
 
-The 29 topic definitions include beauty, feminine lifestyle, youth culture, child-directed animation, general animation, gaming, memes, civic/political commentary and other cultural interests. They are open, overlapping coding categories. Labels do not establish that any person belongs to a group, and a topic's video count is not a topic's number of unique viewers. Until an appropriate sampled or aggregate source is found, *every* audience and creator size estimate remains unknown.
+The 31 topic definitions include beauty, feminine lifestyle, youth culture, child-directed animation, general animation, gaming, memes, civic/political commentary and other cultural interests. They are open, overlapping coding categories. Labels do not establish that any person belongs to a group, and a topic's video count is not a topic's number of unique viewers. Until an appropriate sampled or aggregate source is found, *every* audience and creator size estimate remains unknown.
 
 Children's animation requires separating broadly suitable animation from material deliberately directed at children. That classification affects advertisement and social features under YouTube's rules, and individual children must not be profiled.
 
@@ -36,7 +36,7 @@ The [public YouTube sampling protocol](public-sampling.md) defines topic inclusi
 
 ## Measured content activity
 
-The [topic evidence register](topic-observations.md) records 17 observations from YouTube publications, including global gaming views, topic-title-filtered beauty or format views, news watch hours, and animation fan-survey results. The [machine version](topic-observations.json) includes each source, geography, period, unit and limitation. These measures reveal **content activity**, not unique community population. All 29 topic population estimates remain unknown.
+The [topic evidence register](topic-observations.md) records 23 observations from YouTube publications, including global gaming views, topic-title-filtered beauty or format views, news watch hours, and animation fan-survey results. The [machine version](topic-observations.json) includes each source, geography, period, unit and limitation. These measures reveal **content activity**, not unique community population. Persistent audience estimates for all 31 broad topics remain unknown.
 
 ## What creators earn
 
@@ -83,3 +83,7 @@ The [product-specific eligibility matrix](eligibility-matrix.md) ([machine JSON]
 ## Joining and reaching first payout
 
 [Application and review timing](application-lifecycle.md) ([machine model](application-lifecycle.json)) separates subscriber/view thresholds, application submission, policy review, product module activation, and the actual cash payment calendar. Official guidance describes a typical one-month review, appeal/reapplication windows, and restrictions on paid campaign viewing as a qualification shortcut; this is not a guaranteed time to income.
+
+## An actual measured event audience
+
+[World Cup 2026 event viewers](event-audiences.md) are the first distinct-viewer content-community observation: YouTube reports over 1.7 billion unique people watching related videos worldwide during the tournament, with over 550 million watching on TV (a subset). This is defined event reach, **not the stable size of the soccer-fan community**. Broad topic population fields remain null. NFL viewing is tracked separately under general sports.

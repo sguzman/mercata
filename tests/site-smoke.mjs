@@ -47,7 +47,8 @@ try{
     assert.equal(await page.locator('.analytics-metric-item').count(),11,'Missing Youtube Analytics metric guide');
     assert.equal(await page.locator('.scale-observation').count(),4,'Missing global scale observations');
     assert.equal(await page.locator('.payout-currency').count(),2,'Missing documented payout currencies');
-    assert((await page.locator('.topic-catalogue-card').count())>=28,'Missing community taxonomy');
+    assert((await page.locator('.topic-catalogue-card').count())>=31,'Missing community taxonomy');
+    assert.equal(await page.locator('.community-card').count(),1,'Missing event-specific measured community');
     assert.equal(await page.locator('.opportunity-method-item').count(),10,'Missing economic opportunity framework');
     const tool=page.locator('.scenario-tool');
     await tool.locator('summary').click();

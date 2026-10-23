@@ -526,6 +526,28 @@
       "evidence_class": "official",
       "license": "Public policy paraphrase and link",
       "notes": "Feature thresholds, separate modules and rules for paid-promotion views and watch time."
+    },
+    {
+      "id": "yt-fifa-viewership-2026",
+      "url": "https://blog.youtube/culture-and-trends/youtube-fifa-world-cup-2026-viewership-stats/",
+      "publisher": "YouTube Official Blog",
+      "title": "How the world experienced the FIFA World Cup 2026 on YouTube",
+      "published_at": "2026-07-21",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_platform_statistic",
+      "license": "Short attributed quantitative aggregates; no imagery reused",
+      "notes": "Tournament-window global reported unique World Cup-related viewers; TV viewers are a subset. Proprietary deduplication not independently auditable."
+    },
+    {
+      "id": "yt-nfl-culture-2026",
+      "url": "https://blog.youtube/culture-and-trends/nfl-youtube-culture-trends-report/",
+      "publisher": "YouTube Culture and Trends",
+      "title": "New YouTube report shows massive global growth for the NFL",
+      "published_at": "2026-02-05",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_platform_statistic",
+      "license": "Attributed reported figures; no visual assets reused",
+      "notes": "2025 global NFL-related content views, not unique people. Trend comparisons require consistent definitions."
     }
   ],
   "claims": [
@@ -989,6 +1011,26 @@
       "confidence": "high",
       "observed_at": "2026-10-23",
       "limitations": "The option applies to relevant ad revenue eligibility, not automatically to all products requiring an adult creator."
+    },
+    {
+      "id": "fifa-world-cup-2026-distinct-audience",
+      "text": "YouTube reports that more than 1.7 billion unique viewers worldwide watched World Cup-related videos during the FIFA World Cup 2026 event; over 550 million of them watched on TV devices.",
+      "source_ids": [
+        "yt-fifa-viewership-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "Measured event-associated audience and subset, not all soccer fans, continuous monthly community membership, or a value derived from view counts."
+    },
+    {
+      "id": "nfl-2025-global-platform-attention",
+      "text": "YouTube reports more than 20 billion global views on NFL-related videos in 2025, and over 250% growth in annual related views from 2020 to 2025.",
+      "source_ids": [
+        "yt-nfl-culture-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "American football category, not association football; view counts are events, not unique people or representative creator earnings. Longitudinal methods require review."
     }
   ],
   "observations": [],
@@ -1650,7 +1692,51 @@
         "limitations": "Within-group share reporting ever using YouTube; not share of the YouTube user base or a content preference."
       }
     ],
-    "communities": [],
+    "communities": [
+      {
+        "id": "fifa-world-cup-2026-event-audience",
+        "label": "FIFA World Cup 2026 YouTube event audience",
+        "definition": "People watching FIFA World Cup 2026-related videos during the June 11–July 19 event. A one-time observable event segment, not all who identify as football or soccer fans.",
+        "aliases": [
+          "2026 FIFA World Cup YouTube viewers",
+          "World Cup video event audience"
+        ],
+        "parent_ids": [],
+        "demographic_ids": [],
+        "estimates": [
+          {
+            "id": "worldcup-2026-unique-persons",
+            "metric": "More than 1.7 billion unique event viewers",
+            "value": 1700000000,
+            "unit": "people",
+            "population": "Distinct people watching videos related to FIFA World Cup 2026 on YouTube during the event",
+            "geography": "Worldwide",
+            "period": "2026-06-11 to 2026-07-19",
+            "method": "YouTube's internally deduplicated global viewers, published July 21 2026; deduplication method unavailable to independent reviewers",
+            "source_ids": [
+              "yt-fifa-viewership-2026"
+            ],
+            "limitations": "Event-limited lower-bound count; not monthly active users, all soccer fans or a measured population of persistent content community members.",
+            "confidence": "medium"
+          },
+          {
+            "id": "worldcup-2026-unique-tv-subset",
+            "metric": "More than 550 million TV-viewing event audience (subset)",
+            "value": 550000000,
+            "unit": "people",
+            "population": "Subset of those unique World Cup-related YouTube event viewers watching on television",
+            "geography": "Worldwide",
+            "period": "2026-06-11 to 2026-07-19",
+            "method": "Platform-reported subset of event unique viewers on TV devices; underlying viewer deduplication not independently reproduced",
+            "source_ids": [
+              "yt-fifa-viewership-2026"
+            ],
+            "limitations": "Included within the over 1.7 billion unique event viewers; must not add to that total.",
+            "confidence": "medium"
+          }
+        ]
+      }
+    ],
     "overlaps": [],
     "formats": [],
     "insights": [

@@ -42,3 +42,7 @@ See [topic-observations.json](topic-observations.json) and the [community sampli
 | gaming | More than 13B views | 2025-01-01 to 2025-09-25 | [YouTube report](https://blog.youtube/culture-and-trends/horror-gaming/) |
 
 All three measurements are from before the August 24, 2026 view-count definition change. They are not unique-user estimates, and the samples overlap other genres. Historical view totals cannot be compared unadjusted to later totals.
+
+## Sports audience, 2025–2026
+
+The [2026 World Cup audience investigation](event-audiences.md) adds the first source-backed **unique-viewer** measures for a clearly defined YouTube event (over 1.7 billion global viewers, including over 550 million on TV). It also keeps cumulative soccer video views, annual all-sports watch time, NFL view totals and live average-minute audience separate. These measurements must not be added together.

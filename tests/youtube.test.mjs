@@ -256,3 +256,23 @@ test('YouTube entry, review and settlement are distinct milestones',async()=>{
   const sources=new Set(record.evidence.map(x=>x.id));
   assert(lifecycle.steps.every(x=>x.source_ids.every(id=>sources.has(id))));
 });
+
+test('World Cup event unique viewers are a bounded audience segment, not a fan census',async()=>{
+  const [record,activity,topics,opportunity]=await Promise.all([
+    load('specimens/youtube.json'),load('ontology/youtube/topic-observations.json'),
+    load('ontology/youtube/taxonomy.json'),load('ontology/youtube/opportunity-framework.json')
+  ]);
+  const event=record.audience_research.communities.find(x=>x.id==='fifa-world-cup-2026-event-audience');
+  assert(event);
+  assert.equal(event.estimates.length,2);
+  assert.equal(event.estimates[0].value,1700000000);
+  assert.equal(event.estimates[1].value,550000000);
+  assert(event.estimates[1].limitations.includes('must not add'));
+  const obs=new Map(activity.observations.map(x=>[x.id,x]));
+  assert.equal(obs.get('fifa-world-cup-2026-unique-viewers').unit,'unique_viewers');
+  assert.equal(obs.get('fifa-world-cup-2026-tv-unique-viewers').parent_observation_id,'fifa-world-cup-2026-unique-viewers');
+  assert.equal(obs.get('nfl-2025-global-views').topic_id,'sports-general');
+  assert(topics.topics.some(x=>x.id==='football-soccer'));
+  assert.equal(opportunity.topic_assessments.length,topics.topics.length);
+  assert(opportunity.topic_assessments.every(x=>x.decision==='insufficient_evidence'));
+});
