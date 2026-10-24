@@ -1,0 +1,43 @@
+# Video stock, viewing-time concentration and niche exploration: two studies, two populations
+
+**Reviewed October 23, 2026.** [Machine-readable evidence](video-attention-culture-2026.json). The studies below cannot be pooled into a single global YouTube audience, content-demand or earnings statistic.
+
+## Omdia's January 28, 2026 video-stock and viewing analysis
+
+In its original [January 2026 release](https://omdia.tech.informa.com/pr/2026/jan/youtube-reaches-29-billion-videos-as-music-and-shorts-dominate-viewing), research firm Omdia estimated **about 29 billion hosted YouTube videos as of December 2025**. This is a stock of video objects, not videos published per day or a count of humans/channels.
+
+Omdia reported that the **top 1% of observed videos accounted for 91% of video watch time**, leaving 9% for the other 99%. This is concentration by *video object* and *viewing hours*, not by distinct viewer, owner, channel, creator income or newcomer profitability. Its underlying raw frame and weighting are not fully disclosed in the public press summary.
+
+| Other Omdia results reported in January 2026 | Reported value | Measurement and caution |
+| --- | ---: | --- |
+| Shorts share of new video uploads | Greater than 90% | Upload objects; precise observation span unstated |
+| Music videos | 33% | Share of viewing time |
+| News videos | 10% | Share of viewing time |
+| Video podcasts | 5% | Share of viewing time |
+| Professionally filmed content | 46% | Share of viewing time; production-style dimension |
+
+**Do not sum these percentages** as if music, news, podcast and professional production were mutually exclusive genres. Omdia's public summary gives no sufficiently comprehensive cross-classification method. The upload mix and viewing-time mix use different units and denominators.
+
+## YouTube/NRG's September 10, 2026 report on niche communities
+
+The [official Culture & Trends research summary](https://blog.youtube/culture-and-trends/youtube-culture-trends-modern-mainstream-research/) describes a YouTube-commissioned **NRG April 2026 U.S. online survey**, with different age frames across reported questions:
+
+| Survey population | Reported survey result | Value |
+| --- | --- | ---: |
+| U.S. online respondents aged 14–29, n=496 | Reported watching content from communities they considered niche | 69% |
+| U.S. online respondents aged 14–29, n=496 | Reported watching videos explaining fandom or community stories | 71% |
+| U.S. online respondents aged 14–44, n=939 | Agreed YouTube is a particularly good place to explore personal interests deeply | 73% |
+| U.S. online respondents aged 14–44, n=939 | Agreed YouTube helped sustain interest after discovery | 72% |
+
+These results reflect **self-reported viewing or agreement among online U.S. respondents**. The 496 and 939 figures are study sample sizes as supplied in the page's footnotes, not separately verified denominators for each question. Survey sampling probabilities, item nonresponse and full weighting are not documented in this summary; the data are not a probability-based global YouTube audience census.
+
+The younger frame includes people under age 18. Only published aggregate statistics are recorded; Mercata does not collect identifiable youth profiles.
+
+## Implications for research, not promises of opportunity
+
+- Omdia's viewing-time concentration establishes a serious inequality in attention across the video objects studied. It cannot establish how many *new creators* earn nothing, or the causal effects of any publishing strategy.
+- NRG's survey establishes that niche/fandom exploration is a reported behavior for many **surveyed U.S. online participants**, not the distinct global sizes of animation, gaming, technology, beauty, news or other niche audiences.
+- Content supply does not equal viewing attention or monetizable advertising inventory. A music video can be professional, a podcast can be news, and a viewer can participate in several communities.
+- Neither source reports representative creator labor hours, revenue or net profit. Economic success probabilities and country-specific niche sizes remain unknown.
+
+The [community overlap protocol](audience-overlap.md), [historical video linking study](historical-linking-study.md), [newcomer-income cohort](newcomer-income-cohort.md) and [view-definition revision](view-definition-break.md) govern any subsequent modeling.

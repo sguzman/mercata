@@ -1604,6 +1604,28 @@
       "evidence_class": "official_owner_reach_traffic_source_categories",
       "license": "Official Help source linked, independently summarized",
       "notes": "Studio owner-only traffic sources include browse, suggested, Shorts feed, search, notifications, playlists, external and direct/unknown. Not a public competitor traffic report."
+    },
+    {
+      "id": "omdia-video-supply-2026",
+      "url": "https://omdia.tech.informa.com/pr/2026/jan/youtube-reaches-29-billion-videos-as-music-and-shorts-dominate-viewing",
+      "publisher": "Omdia / Informa TechTarget",
+      "title": "YouTube reaches 29 billion videos as music and Shorts dominate viewing",
+      "retrieved_at": "2026-10-23",
+      "published_at": "2026-01-28",
+      "evidence_class": "third_party_commercial_platform_stock_and_watchtime_analysis",
+      "license": "Original analyst press summary; independent short paraphrases and metadata only",
+      "notes": "Based on undisclosed analyst research methods and data access. The release reports stock to Dec 2025, view-time shares and >90% Shorts share of recent new uploads. Categories can overlap and must not be summed."
+    },
+    {
+      "id": "youtube-nrg-mainstream-2026",
+      "url": "https://blog.youtube/culture-and-trends/youtube-culture-trends-modern-mainstream-research/",
+      "publisher": "YouTube Culture & Trends with National Research Group",
+      "title": "Has mainstream culture disappeared? New YouTube trends research says no",
+      "retrieved_at": "2026-10-23",
+      "published_at": "2026-09-10",
+      "evidence_class": "platform_commissioned_us_online_culture_survey",
+      "license": "Official summary page with attributed footnotes, independently paraphrased",
+      "notes": "The 2026 April NRG/YouTube survey uses different reported U.S. online age frames: n=496 ages 14-29 and n=939 ages 14-44. This is neither a YouTube-user census nor a causal trend panel."
     }
   ],
   "claims": [
@@ -3162,6 +3184,46 @@
       "observed_at": "2026-10-23",
       "confidence": "high",
       "limitations": "An observed external or direct/unknown event does not prove retained audience ownership, permission to export user identifiers, or income independence."
+    },
+    {
+      "id": "omdia-2025-video-stock-and-view-time",
+      "text": "Omdia's January 2026 research release estimates 29 billion YouTube videos by December 2025 and reports that the top 1% of observed videos accounted for 91% of viewing time.",
+      "source_ids": [
+        "omdia-video-supply-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "Commercial analyst summary without sufficient public raw sampling design. Video stock and time concentration differ from unique channels, people, creators, income, or current 2026 audience."
+    },
+    {
+      "id": "omdia-2026-format-view-time-proportions",
+      "text": "Omdia's January 2026 press summary reported 33% of viewing time for music, 10% for news, 5% for video podcasts, 46% as professionally filmed content, and Shorts above 90% of new uploads.",
+      "source_ids": [
+        "omdia-video-supply-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "Music, news, podcast and production-style categories may overlap. Different denominators: share of time versus share of newly uploaded videos. No platform-native measurement codebook or earnings model."
+    },
+    {
+      "id": "nrg-niche-fandom-us-youth-survey-2026",
+      "text": "In a platform-commissioned April 2026 U.S. online survey of 496 people aged 14–29, 69% reported watching content they considered niche, and 71% reported watching videos explaining stories within a fandom or community.",
+      "source_ids": [
+        "youtube-nrg-mainstream-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "Selected self-reported U.S. online respondents ages 14–29, including minors. Neither percentage is a census of actual YouTube viewers or a niche audience size. The behaviors and interests can overlap."
+    },
+    {
+      "id": "nrg-youtube-personal-interest-us-online-2026",
+      "text": "In a separate NRG/YouTube 2026 U.S. online respondent group aged 14–44 (n=939), 73% agreed YouTube was the best place to explore personal interests deeply and 72% agreed it helped maintain interest after discovery.",
+      "source_ids": [
+        "youtube-nrg-mainstream-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "Self-reported attitudinal agreement; 939 is the reported study sample, not observed platform behavior, a view-count denominator, earnings evidence or a representative world-wide estimate."
     }
   ],
   "observations": [],
