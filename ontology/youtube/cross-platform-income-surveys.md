@@ -2,7 +2,7 @@
 
 **Review date: 2026-10-23.** [Structured evidence](cross-platform-income-surveys.json).
 
-Two distinct research groups published self-reported creator-income results for 2025. They help test what Mercata knows about the broader creator economy, but **neither is a representative YouTube income sample**, and neither can establish a typical new YouTube channel's earnings, costs, or profit.
+Three separate respondent datasets from 2025–2026 report income and working conditions among creators across different platforms. They help test what Mercata knows about the broader creator economy, but **none is a representative YouTube entrant income sample**, and none can establish a typical new channel's earnings, costs, or profit.
 
 ## NeoReach, 2025 creator-earnings report
 
@@ -18,16 +18,25 @@ For calendar-year 2025 creator-work earnings, the report describes **nearly half
 
 The publisher observes correlations between multiple income streams and high earnings; selection and business maturity could explain those patterns. They are **not experimental evidence** that adopting more revenue channels will cause a specified increase.
 
+## CreatorIQ / Influencers.club, 2026
+
+[The State of Creators 2026](https://www.creatoriq.com/whitepaper/state-of-creators), also described in the [dated August 11 press release](https://www.creatoriq.com/press/releases/creatoriq-state-of-creators-report-2026), reports **5,095 survey respondents from 100 regions**, with fieldwork **May 29–June 29, 2026**. Among those responding to income questions, **67% reported annual creator income below USD 10,000**, and **62% said creator activity was not their primary source of income**. The exact response denominator for each item is not supplied; the full study sample size is not automatically its question-specific denominator.
+
+The survey is across creator platforms and mixes native platform payouts, commercial work and creator businesses. It is **not a YouTube-specific newcomer cohort**, and neither the number of YouTube respondents nor the population share earning exactly zero is established. The sponsor/vendor's research page describes enriched account/platform metadata, which does not establish that **income** was independently audited. Recruitment and nonresponse details are insufficient to demonstrate probability sampling of all creators.
+
+The publisher reports a **±1.4 percentage-point margin of error**. Without a verified probability-based sampling and weighting design, Mercata does not independently treat that as a valid population confidence interval, particularly not for YouTube creators. The original research page and its news release describe the **same 2026 dataset**, not two studies.
+
 ## Do not pool the findings
 
 | Evidence population | Measured or described | Not established |
 | --- | --- | --- |
 | NeoReach mixed-platform respondents (over 3,000) | Self-reported share below an annual USD 15,000 threshold | Worldwide YouTube-only distribution, true zero-earner share, creator net profit |
 | Creator Spotlight newsletter respondents (427) | Selected yearly income brackets and number of six-figure earners | Representative new YouTube creator expectation or rate of monetization |
+| CreatorIQ / Influencers.club respondents (5,095 across 100 reported regions) | Respondents' reported annual creator-income threshold and primary-income status | Native YouTube creator payouts, nonmonetized new entrants, probability-based world earnings or net profit |
 | [AIR Media-Tech already-monetized channels](small-channel-income.md) (297) | First six monetized months for a selected channel group | Income of failed/nonmonetizing new channels |
 | [Patreon-affiliated YouTube creators](creator-income-evidence.md) (23,435 monthly observations) | Selected monthly **Patreon** income in three historical March periods | Native YouTube advertising or a creator's total income |
 
-Neither the years nor the earnings constructs are interchangeable. Broad commercial surveys may include sponsorship and outside businesses. Patreon observations omit those who do not use Patreon; AIR starts **after** a channel is monetized. A sampled six-figure count does not establish a population success probability.
+The three survey groups represent distinct respondent recruitment efforts, but the sources' publication pages and their accompanying press items are not additional independent respondent groups. Neither the years nor the earnings constructs are interchangeable. Broad commercial surveys may include sponsorship and outside businesses. Patreon observations omit those who do not use Patreon; AIR starts **after** a channel is monetized. A sampled six-figure count does not establish a population success probability.
 
 ## Research still required
 

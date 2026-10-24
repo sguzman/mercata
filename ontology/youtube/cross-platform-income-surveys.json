@@ -5,7 +5,7 @@
   "as_of": "2026-10-23",
   "status": "adjacent_cross_platform_samples_not_youtube_income_distribution",
   "purpose": "Preserve nonrepresentative mixed-platform creator income reports with exact source families, denominator limitations and zero-earner uncertainty.",
-  "independent_dataset_families": 2,
+  "independent_dataset_families": 3,
   "studies": [
     {
       "id": "neoreach-2025",
@@ -158,6 +158,71 @@
         "Observational revenue-diversification patterns are associations, not proven earnings causes."
       ],
       "inference_to_youtube_median": "prohibited"
+    },
+    {
+      "id": "creatoriq-2026",
+      "title": "The State of Creators 2026",
+      "lead_organization": "CreatorIQ with Influencers.club",
+      "survey_year": 2026,
+      "source_ids": [
+        "creatoriq-state-creators-2026"
+      ],
+      "source_family_id": "creatoriq-influencers-club-2026",
+      "independence_note": "One survey of 5,095 creators reported on its original research page and in the associated press release; not multiple respondent datasets.",
+      "sampled_population": "Respondents contacted through Influencers.club creator research across reported 100 regions; no probability frame or response-rate denominator established on public report.",
+      "survey_respondents_exact": 5095,
+      "survey_respondents_lower_bound_exclusive": null,
+      "platform_scope": "Creators working across platforms including Instagram, TikTok and YouTube; not a YouTube-only sample",
+      "youtube_subgroup_n": null,
+      "non_earning_entrants_covered": null,
+      "data_collection_mode": "Commercial creator survey with vendor-enriched creator profile and platform metadata",
+      "representative_of_youtube": false,
+      "representative_of_all_creators": false,
+      "verification_of_earnings": "Creator income responses are survey-reported; enrichment of demographic or platform data does not demonstrate independent auditing of respondent income",
+      "geographic_denominator": "100 reported countries or regions; selection and weighting not shown to represent global creator population",
+      "observation_period": "Survey fieldwork May 29 to June 29, 2026, asking annual creator income over the previous year",
+      "monetary_currency": "USD",
+      "earning_definition": "Annual creator income reported by respondents; native payouts vs sponsors, expenses and taxes not separately verified",
+      "measurements": [
+        {
+          "id": "creatoriq_under_10000_year",
+          "metric": "surveyed_creators_reporting_under_10000_usd_annual_creator_income",
+          "value": 67,
+          "unit": "reported_percent",
+          "threshold_usd_annual": 10000,
+          "scope": "respondents answering annual income question",
+          "denominator_n": null,
+          "approximate": false
+        },
+        {
+          "id": "creatoriq_income_not_primary",
+          "metric": "respondents_saying_creator_income_not_primary_source",
+          "value": 62,
+          "unit": "reported_percent",
+          "scope": "respondents answering primary-income question",
+          "denominator_n": null,
+          "approximate": false
+        }
+      ],
+      "reported_margin_of_error_percent": 1.4,
+      "margin_of_error_verifiability": "Publisher reports ±1.4 points; probability-sampling basis and design-based confidence interpretation not established on public page. Do not use as global/YouTube statistical uncertainty.",
+      "missing": [
+        "youtube_specific_income_subgroup_n",
+        "zero_earner_share",
+        "per_item_response_denominators",
+        "probability_sampling_frame",
+        "response_rate",
+        "account_verified_net_profit",
+        "new_entrant_cohort"
+      ],
+      "limitations": [
+        "CreatorIQ/Influencers.club runs commercial creator services and industry surveys, not a population census.",
+        "Recruitment and response probabilities, subgroup denominators and global population weights are not sufficiently documented for probability-based inference.",
+        "The published ±1.4 percentage-point margin of error must not be presented as verified probability-based confidence for all creators.",
+        "Creator earnings span multiple platforms, revenue streams and maturity levels; they are not native YouTube payouts or newcomer profit.",
+        "The source's 67% and 62% figures refer to survey respondents, not to all YouTube creators or all people who attempted to publish."
+      ],
+      "inference_to_youtube_median": "prohibited"
     }
   ],
   "comparability": {
@@ -170,7 +235,7 @@
       "estimating_new_channel_profitability",
       "inferring_causal_effect_of_sponsors_or_audience_ownership"
     ],
-    "method": "Do not pool a 2025 cross-platform earnings share with 2018/2021/2024 Patreon observations or a 297-channel already-monetized YouTube cohort; populations, channels, years, methods and currency denominators differ."
+    "method": "Do not pool a 2025 cross-platform earnings share with 2018/2021/2024 Patreon observations or a 297-channel already-monetized YouTube cohort; populations, channels, years, methods and currency denominators differ. CreatorIQ's separate 2026 mixed-platform vendor survey is an additional respondent dataset, but not evidence of a platform-specific representative earnings distribution."
   },
   "youtube_target_estimates": {
     "all_creator_annual_income_median": null,
