@@ -26,7 +26,7 @@ The [publication rights gate](publication-rights.md), [machine rights manifest](
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **205 references, 198 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **207 references, 200 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -228,6 +228,10 @@ The [official 2026 posts-and-membership research](retention-posts-memberships.md
 ## Promotion spending, paid audiences and organic follow-on YPP eligibility
 
 The [source-bounded YouTube Promote economics study](promote-economics.md) and [machine record](promote-economics.json) distinguish purchased advertising spend from native YouTube earnings. Direct ad-attributed watch hours and subscribers do **not** qualify toward YPP thresholds, but eligible later **organic** follow-on activity may. Promotion impressions, Google Ads format-specific billable TrueView views, public playback starts, credited subscribers and website clicks have different units. Actual campaign expenses, price per acquired retained viewer and incremental net business profit remain unmeasured.
+
+## Comment norms: political channels versus selected climate videos
+
+The [peer-reviewed comment-behavior comparison](comment-norms-evidence.md) and [machine source record](comment-norms-evidence.json) document an observed concentration of comments among a small set of commenters in selected anglophone political channels, separately from a 129-video English-language climate-change sample reporting differences between reply-thread and standalone coded attitudes. Neither is a census of YouTube users, a population-wide harassment rate or evidence of causal effects. No identifiable commenters, text, sensitive traits, or demographic persuasion data are collected.
 
 ## Creator collaborations and fan participation
 

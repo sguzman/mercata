@@ -790,6 +790,31 @@ test('YPP tax-info and payout-withholding model preserves different revenue base
  assert(model.disallowed_model_shortcuts.some(x=>x.includes('twice')));
 });
 
+test('Selected political and climate comment studies retain distinct populations and privacy limits',async()=>{
+ const [model,dossier]=await Promise.all([
+  load('ontology/youtube/comment-norms-evidence.json'),load('specimens/youtube.json')
+ ]);
+ const sources=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'bounded_comment_norms_and_participation_studies');
+ assert.deepEqual(model.studies.map(x=>x.id),['political_anglophone_2025','selected_climate_2026']);
+ assert(model.source_ids.every(id=>sources.has(id)));
+ assert(model.studies.every(x=>sources.has(x.source_id)));
+ const politics=model.studies[0];
+ const pattern=politics.observations[0];
+ assert.equal(pattern.observed_comment_share_percent_approx,50);
+ assert.equal(pattern.observed_commenter_share_percent_strictly_greater_than,2);
+ assert.equal(pattern.commenter_share_exact,null);
+ assert.equal(politics.n_unique_commenters,null);
+ const climate=model.studies[1];
+ assert.equal(climate.n_videos,129);
+ assert.equal(climate.dataset_observation_period,'March 2021 query-based candidate retrieval');
+ assert(climate.observations.every(x=>x.absolute_rate===null));
+ assert.equal(climate.observations[1].causal_effect,null);
+ assert(model.prohibit.some(x=>x.includes('targeted political persuasion')));
+ assert(model.prohibit.some(x=>x.includes('usernames')||x.includes('comment strings')));
+ assert(Object.values(model.unknowns).every(x=>x===null));
+});
+
 test('UK child video-app genres remain separate from YouTube-specific U.S. teen and in-home measures',async()=>{
  const [model,dossier]=await Promise.all([
   load('ontology/youtube/teen-video-format-evidence.json'),load('specimens/youtube.json')

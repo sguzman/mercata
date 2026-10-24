@@ -326,6 +326,13 @@ try{
     assert((await technology.textContent()).includes('More than 250,000,000'));
     assert((await technology.textContent()).includes('More than 5,500,000,000'));
     assert((await technology.textContent()).includes('cannot be divided'));
+    const commentNorms=page.locator('.comment-norms-evidence');
+    assert.equal(await commentNorms.locator('.comment-norms-card').count(),2,'Missing distinct peer-reviewed comment samples');
+    await commentNorms.locator('summary').click();
+    assert((await commentNorms.textContent()).includes('just over 2%'));
+    assert((await commentNorms.textContent()).includes('129 selected videos'));
+    assert((await commentNorms.textContent()).includes('Association is not causation'));
+    assert((await commentNorms.textContent()).includes('No individual comments or profiles are collected'));
     const collab=page.locator('.creator-collaboration-evidence');
     assert.equal(await collab.locator('.creator-fandom-cohort').count(),2,'Missing separate NRG fan survey age groups');
     assert.equal(await collab.locator('.creator-fandom-metric').count(),8,'Missing age-scoped fandom responses');

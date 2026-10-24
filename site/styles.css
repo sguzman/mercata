@@ -1013,3 +1013,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .teen-au-category p{font-size:12px;margin:7px 0 0;font-variant-numeric:tabular-nums}
 @media(max-width:850px){.teen-au-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:500px){.teen-au-grid{grid-template-columns:1fr}}
+
+/* Independent descriptive comment research, never a commenter-level dossier */
+.comment-norms-evidence{margin:28px 0}
+.comment-norms-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.comment-norms-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.comment-norms-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.comment-norms-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.comment-norms-card h5{font-size:14px;margin:0 0 10px}
+.comment-norms-card strong{font-size:15px;line-height:1.5}
+.comment-norms-card p{font-size:12px;margin:9px 0}
+@media(max-width:650px){.comment-norms-details{padding:15px}.comment-norms-grid{grid-template-columns:1fr}}

@@ -111,6 +111,8 @@ The same [child video-genre research](ontology/youtube/teen-video-format-evidenc
 
 A [child and teen video-genre comparison](ontology/youtube/teen-video-format-evidence.md) now brings in Ofcom's May 2026 UK child survey and Pew's 2025 U.S. teen YouTube results. Cross-app format preferences, YouTube platform use and in-home watch hours retain separate denominators; the study does not estimate private minors' identities or format-specific viewer populations.
 
+The [peer-reviewed comment participation comparison](ontology/youtube/comment-norms-evidence.md) adds two bounded studies of selected political and climate-change YouTube comments. It preserves commenter-versus-comment denominators, observational rather than causal associations, and a strict prohibition on individual profiling or political targeting.
+
 The [creator safety and continuity study](ontology/youtube/creator-safety-continuity.md) now includes October 2026 security pauses, Google Account-first hacked-channel recovery, live-chat moderation, harassment reporting and privacy complaint pathways. These are dated official procedures, not inferred incident rates or guaranteed recovery outcomes.
 
 A [2026 publishing cadence study](ontology/youtube/publishing-cadence-evidence.md) adds niche- and size-specific median upload counts with their quartile ranges, alongside a separate 10.2-million-channel analysis of upload-frequency and growth correlation. The studies do not establish causal growth benefits, a creator labor budget, or a universal uploading schedule.
