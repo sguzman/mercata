@@ -64,6 +64,10 @@ The [vendor-indexed channel-size and 360-day milestone study](channel-cohort-obs
 
 The [selected 2026 first-upload vlogging preprint review](first-upload-vlog-study-2026.md), [machine record](first-upload-vlog-study-2026.json) and [regression tests](../../tests/first-upload-vlog-study.test.mjs) distinguish measured public views from modeled ad-value scenarios and assumed hours. This is not verified creator pay, a sampled zero-income rate, or a general YouTube business-profit estimate.
 
+## Link placement and source-attributed product funnels
+
+The [YouTube external-link capability matrix](external-link-funnel-evidence.md), [machine surface register](external-link-funnel-evidence.json), and [rule regression tests](../../tests/external-link-funnel-audit.test.mjs) distinguish clickable long-form comments/descriptions from **non-clickable ordinary Shorts description/comment URLs** and specialized internal related video/Shopping links. All buyer-conversion counts and creator net earnings remain unknown; the website exposes the official rule boundaries.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

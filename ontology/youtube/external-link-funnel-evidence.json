@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "external_link_placement_and_measured_funnel_gates",
+  "as_of": "2026-10-24",
+  "status": "official_link_capabilities_and_experiment_protocol_no_observed_creator_clicks",
+  "source_ids": [
+    "yt-links-clickability-2026",
+    "yt-review-comments-2026",
+    "yt-shorts-related-video-help-2026",
+    "yt-external-links-rules-2026"
+  ],
+  "surfaces": [
+    {
+      "id": "longform_description",
+      "label": "Long-form description",
+      "audience_surface": "regular_watch_page",
+      "external_url_clickable": true,
+      "advanced_access_required": true,
+      "source_ids": [
+        "yt-links-clickability-2026"
+      ],
+      "limitation": "Viewer may need to expand description; one displayed view is not a click or purchase"
+    },
+    {
+      "id": "longform_pinned_comment",
+      "label": "Long-form pinned comment",
+      "audience_surface": "regular_video_comments",
+      "external_url_clickable": true,
+      "advanced_access_required": true,
+      "source_ids": [
+        "yt-links-clickability-2026",
+        "yt-review-comments-2026"
+      ],
+      "limitation": "Pinning depends on channel features, and mobile viewers must expand comments; not everyone sees the link"
+    },
+    {
+      "id": "shorts_description",
+      "label": "Shorts description URL",
+      "audience_surface": "shorts_description",
+      "external_url_clickable": false,
+      "advanced_access_required": false,
+      "source_ids": [
+        "yt-links-clickability-2026"
+      ],
+      "limitation": "Plain URL is not clickable; apparent viewer count does not establish outbound funnel impressions"
+    },
+    {
+      "id": "shorts_comment",
+      "label": "Shorts comment URL",
+      "audience_surface": "shorts_comments",
+      "external_url_clickable": false,
+      "advanced_access_required": false,
+      "source_ids": [
+        "yt-links-clickability-2026"
+      ],
+      "limitation": "Plain URL remains non-clickable even if channel is otherwise approved for advanced features"
+    },
+    {
+      "id": "shorts_related_video",
+      "label": "Shorts related-video link",
+      "audience_surface": "shorts_player",
+      "external_url_clickable": null,
+      "advanced_access_required": true,
+      "source_ids": [
+        "yt-links-clickability-2026",
+        "yt-shorts-related-video-help-2026"
+      ],
+      "limitation": "Clickable internal related-video destination, not a general external merchant URL"
+    },
+    {
+      "id": "channel_profile",
+      "label": "Channel profile site links",
+      "audience_surface": "channel_profile",
+      "external_url_clickable": true,
+      "advanced_access_required": false,
+      "source_ids": [
+        "yt-links-clickability-2026"
+      ],
+      "limitation": "Availability as a channel link does not prove any Short viewer navigated to or used the profile"
+    },
+    {
+      "id": "shopping_affiliate",
+      "label": "YouTube Shopping affiliate link",
+      "audience_surface": "eligible_shopping",
+      "external_url_clickable": true,
+      "advanced_access_required": null,
+      "source_ids": [
+        "yt-links-clickability-2026"
+      ],
+      "limitation": "Separate feature and country/merchant approval is needed; do not substitute for generic Shorts description URLs"
+    }
+  ],
+  "policy": {
+    "external_links_policy_source_id": "yt-external-links-rules-2026",
+    "violating_destinations_prohibited": true,
+    "affiliate_links_universally_banned": false,
+    "excessive_affiliate_spam_risk": true
+  },
+  "measurement_plan": {
+    "hypothesis": "A permitted clickable long-form video URL or pinned comment could route eligible viewers to an owned page or permitted product; the scale and profit are unmeasured.",
+    "preregister": [
+      "Creator advanced-feature eligibility and actual clickable URL behavior per format/device",
+      "One approved offer and final merchant/checkout counterparty",
+      "Source video and placement variant, controlled dates and country/language",
+      "Baseline views, actual clickable-link impressions if accessible, resolved outgoing clicks and consented on-site visits",
+      "Completed non-duplicate buyer orders and net proceeds with refunds, duties and taxes separately handled",
+      "Audience randomization or credible matched comparison, seasonality and other discovery controls",
+      "Creator labor and paid promotion cash, privacy-safe aggregate analytics, minimum worthwhile effect"
+    ],
+    "event_units": {
+      "video_view_event": "not_link_impression",
+      "link_click_event": "outbound_or_internal_link_click",
+      "landing_visit_event": "privacy_safe_page_view_not_buyer",
+      "completed_order": "paid_order_not_same_as_visitor",
+      "creator_net_profit": "net_payout_minus_cost_and_tax_sensitivities"
+    },
+    "unobserved_outbound_click_count": null,
+    "unobserved_deduplicated_buyers": null,
+    "unobserved_incremental_net_profit": null,
+    "validated_experiment_results": []
+  },
+  "unknowns": {
+    "link_click_rate": null,
+    "pinned_comment_visible_share": null,
+    "shorts_to_external_product_conversion": null,
+    "viewer_to_buyer_rate": null,
+    "channel_profile_visits_from_shorts": null,
+    "net_creator_roi": null
+  }
+}
