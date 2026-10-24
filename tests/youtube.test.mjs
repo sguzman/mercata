@@ -168,15 +168,15 @@ test('2026 API sampling budget keeps search calls separate and rejects populatio
   assert(Object.values(budget.target_estimands).every(value=>value===null));
 });
 
-test("32 topic categories distinguish children's music from animation and count 34 bounded observations",async()=>{
+test("33 topic categories and 36 bounded observations retain separate children and learning scopes",async()=>{
   const [topic,activity,opportunity]=await Promise.all([
     load('ontology/youtube/taxonomy.json'),
     load('ontology/youtube/topic-observations.json'),
     load('ontology/youtube/opportunity-framework.json')
   ]);
-  assert.equal(topic.topics.length,32);
+  assert.equal(topic.topics.length,33);
   assert.equal(activity.observations.length,34);
-  assert.equal(opportunity.topic_assessments.length,32);
+  assert.equal(opportunity.topic_assessments.length,33);
   const childMusic=topic.topics.find(x=>x.id==='children-music');
   assert(childMusic);
   assert.equal(childMusic.audience_estimate,null);
@@ -655,6 +655,7 @@ test('Selected video topic upload totals and broad learning views keep different
   assert.equal(b.unit,'views');
   assert.equal(b.geography,'United States');
   assert.equal(b.period,'2025-06-01 to 2025-06-30');
+  assert.equal(b.topic_id,'learning-how-to');
   assert.equal(b.metric_definition_revision,'before_2026_08_24');
   assert(dossier.evidence.some(x=>x.id==='yt-morning-routine-upload-2026' && x.url===a.source_url));
   assert(dossier.evidence.some(x=>x.id==='yt-learning-howto-views-2026' && x.url===b.source_url));

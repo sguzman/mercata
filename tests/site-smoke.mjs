@@ -205,7 +205,7 @@ try{
     assert((await withholding.textContent()).includes('earnings attributed to us viewers'));
     assert((await withholding.textContent()).includes('not personal tax advice'));
     assert.equal(await page.locator('.payout-currency').count(),2,'Missing documented payout currencies');
-    assert((await page.locator('.topic-catalogue-card').count())>=32,'Missing community taxonomy');
+    assert((await page.locator('.topic-catalogue-card').count())>=33,'Missing community taxonomy');
     const sampling=page.locator('.sampling-budget');
     assert.equal(await sampling.locator('.sampling-budget-card').count(),4,'Missing API sampling limits');
     await sampling.locator('summary').click();

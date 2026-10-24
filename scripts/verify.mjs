@@ -560,8 +560,9 @@ for (const entry of index.specimens) {
     const conceptIds=new Set(model.concepts.map(x=>x.id));
     ensure(conceptIds.size===model.concepts.length && model.concepts.length>=60,'Incomplete YouTube ontology');
     ensure(model.relations.every(x=>conceptIds.has(x.subject)&&conceptIds.has(x.object)),'Ontology relation has unknown concept');
-    ensure(topic.topics.length===32 &&
+    ensure(topic.topics.length===33 &&
       topic.topics.some(x=>x.id==='child-animation') &&
+      topic.topics.some(x=>x.id==='learning-how-to' && x.parent_ids.includes('education') && x.audience_estimate===null && x.creator_estimate===null) &&
       topic.topics.some(x=>x.id==='children-music' && x.audience_estimate===null &&
         x.creator_estimate===null),
       'Children musical content missing independent taxonomy scope');
