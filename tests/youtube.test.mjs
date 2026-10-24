@@ -192,7 +192,33 @@ test('Production cost model keeps 10 cash and 10 labor measures separate',async(
   assert(costs.model.accounting_rules.some(x=>x.includes('again')));
 });
 
-test('YouTube onboarding keeps channel creation, feature access and monetization separate',async()=>{
+test('Announced 2027 YPP entry changes distinguish existing Shorts members and Premium pools',async()=>{
+  const [future,dossier,policy]=await Promise.all([
+    load('ontology/youtube/ypp-transition-2027.json'),
+    load('specimens/youtube.json'),
+    load('ontology/youtube/policies.json')
+  ]);
+  const src=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(future.terms_effective_date,'2027-02-01');
+  assert.equal(future.transition_status,'announced_future_terms_not_effective_as_of_research_date');
+  assert.equal(future.policy_windows.length,5);
+  assert(future.policy_windows.every(x=>x.source_ids.every(id=>src.has(id))));
+  const get=id=>future.policy_windows.find(x=>x.id===id);
+  assert.equal(policy.items.find(x=>x.id==='ads-watch').conditions.find(x=>x.metric==='qualifying_watch_hours').minimum,4000);
+  assert.equal(get('current_2026_new_ad_applicant').minimum_subscribers,1000);
+  assert.equal(get('future_2027_new_ad_applicant').watch_hours.qualified_public_hours,8000);
+  assert.equal(get('future_2027_new_ad_applicant').shorts.qualified_shorts_views,20000000);
+  assert.equal(get('future_2027_new_ad_applicant').minimum_subscribers,null);
+  assert.equal(get('existing_ypp_entry_grandfathered').threshold_type,'new_entry_threshold_not_retroactive');
+  assert.equal(get('shorts_ongoing_revenue_share_2027').shorts.qualified_shorts_views,10000000);
+  assert.equal(get('early_access_unchanged').minimum_subscribers,500);
+  assert.deepEqual(future.premium_allocations.map(x=>x.share_of_net_subscription_revenue_percent),[30,60]);
+  assert(future.premium_allocations.every(x=>x.source_ids.every(id=>src.has(id))));
+  assert.equal(future.required_actions[0].deadline_date,'2027-01-31');
+  assert(Object.values(future.comparisons.missing_person_level_estimates).every(x=>x===null));
+});
+
+
   const [access,dossier]=await Promise.all([
     load('ontology/youtube/channel-onboarding.json'),load('specimens/youtube.json')
   ]);
