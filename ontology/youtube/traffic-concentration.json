@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "creator_traffic_source_concentration_protocol",
+  "as_of": "2026-10-23",
+  "source_ids": [
+    "yt-reach-source-types-2026",
+    "studio-analytics-help"
+  ],
+  "status": "owner_metric_framework_no_channel_traffic_observations",
+  "method": "Classify all mutually exclusive Studio-reported attribution rows in one channel and observation window before computing shares. A risk index is a descriptive diagnostic, not observed income risk.",
+  "measurement_definition": {
+    "unit": "view_events",
+    "owner_authorization_required": true,
+    "same_channel": true,
+    "same_time_window": true,
+    "same_format_and_metric_definition": true,
+    "full_source_partition_required": true,
+    "allow_omitting_zero_rows": false,
+    "must_retain_direct_or_unknown": true,
+    "include_paid_source_in_partition": true,
+    "exclude_watch_time_vs_view_mix": true
+  },
+  "source_families": [
+    {
+      "id": "browse_features",
+      "label": "Browse",
+      "source": "YouTube Home, Subscriptions, Watch Later, Explore and other browse surfaces",
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ]
+    },
+    {
+      "id": "suggested_videos",
+      "label": "Suggested videos",
+      "source": "Recommendations adjacent to or after videos and links in descriptions",
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ]
+    },
+    {
+      "id": "shorts_feed",
+      "label": "Shorts",
+      "source": "Shorts vertical viewing experience",
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ]
+    },
+    {
+      "id": "youtube_search",
+      "label": "YouTube search",
+      "source": "YouTube native search results",
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ]
+    },
+    {
+      "id": "notifications",
+      "label": "Notifications",
+      "source": "Notification/email referrals; subscriber notifications are not the subscriber count",
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ]
+    },
+    {
+      "id": "playlists",
+      "label": "Playlists",
+      "source": "Creator or other curated playlists, including liked/favorite videos",
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ]
+    },
+    {
+      "id": "external",
+      "label": "External",
+      "source": "Links/embeds from external websites or applications",
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ]
+    },
+    {
+      "id": "direct_or_unknown",
+      "label": "Direct or unknown",
+      "source": "Bookmarks, direct URLs, signed-out viewers and unidentified apps",
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ]
+    },
+    {
+      "id": "other",
+      "label": "Other Studio source classes",
+      "source": "Remaining channel pages, cards, remixes, sound pages, ads and product placements when reported",
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ]
+    }
+  ],
+  "descriptive_indices": [
+    {
+      "id": "largest_source_share",
+      "formula": "largest reported source view count / total attributed views",
+      "unit": "fraction",
+      "interpretation": "Share attributed to largest distinct reported source; do not infer independent control of that source."
+    },
+    {
+      "id": "hhi",
+      "formula": "sum of squared fractions across all disjoint reported source categories",
+      "unit": "dimensionless_0_to_1",
+      "interpretation": "Descriptive source concentration; different taxonomy granularity changes its value."
+    },
+    {
+      "id": "effective_source_count",
+      "formula": "1 / HHI",
+      "unit": "equivalent_equal_sized_categories",
+      "interpretation": "Only a mathematical equivalent, not the number of algorithms or independently owned audience paths."
+    }
+  ],
+  "risk_conditions": [
+    "Owner-only Studio rows cannot establish competitor source concentration.",
+    "Browse features mix Home and subscriptions; do not label entire browse category algorithmic recommendation.",
+    "Suggested videos can include description links; do not treat the category as exclusively automated suggestions.",
+    "Direct/unknown can include signed-out viewers and unidentified apps; do not declare those independently owned or a deliberate direct audience.",
+    "Shares of views are not shares of revenue, watch time, unique people, sponsor conversions or net profit.",
+    "Include reported paid promotions and all traffic source classes rather than excluding inconvenient categories to raise or lower a share.",
+    "Shorts and long-form viewer sources and the 2026 view definition revision require separate windows/format-specific analysis.",
+    "HHI depends on the partition's detail level; no universal safe threshold or creator success probability is established."
+  ],
+  "research_gates": [
+    {
+      "id": "owner_authorized_views",
+      "pass": false,
+      "reason": "No channel owner data supplied or collected"
+    },
+    {
+      "id": "complete_source_partition",
+      "pass": false,
+      "reason": "Complete counts and explicit zero rows are not available"
+    },
+    {
+      "id": "period_and_format_comparable",
+      "pass": false,
+      "reason": "A consistent channel/metric/format window has not been measured"
+    },
+    {
+      "id": "revenue_and_risk_link",
+      "pass": false,
+      "reason": "No joint revenue, disruptions, retention or causal outcomes measured"
+    }
+  ],
+  "unmeasured": {
+    "any_channel_source_mix": null,
+    "typical_youtube_creator_top_source_share": null,
+    "typical_hhi": null,
+    "viewer_loss_from_algorithm_change": null,
+    "income_loss_from_recommendation_change": null,
+    "owned_audience_share": null,
+    "paid_traffic_dependency": null
+  }
+}

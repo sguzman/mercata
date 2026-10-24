@@ -1593,6 +1593,17 @@
       "evidence_class": "official_owner_analytics_unique_people_measurement_scope",
       "license": "Official Help page independently paraphrased and linked",
       "notes": "Estimated people include signed-in, signed-out, repeat and shared-device viewers. Unique-viewers metric reporting window up to 90 days; Shorts uses engaged views."
+    },
+    {
+      "id": "yt-reach-source-types-2026",
+      "url": "https://support.google.com/youtube/answer/9314355?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Understand your YouTube video reach",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_owner_reach_traffic_source_categories",
+      "license": "Official Help source linked, independently summarized",
+      "notes": "Studio owner-only traffic sources include browse, suggested, Shorts feed, search, notifications, playlists, external and direct/unknown. Not a public competitor traffic report."
     }
   ],
   "claims": [
@@ -3131,6 +3142,26 @@
       "observed_at": "2026-10-23",
       "confidence": "high",
       "limitations": "Self-reported use within Pew's community groups; not a rural or urban active-viewer population, niche preference or causal effect. Per-group uncertainty remains unknown."
+    },
+    {
+      "id": "yt-reach-distinct-owner-traffic-source-categories",
+      "text": "YouTube Studio's owner Reach report classifies traffic from browse features, suggested videos, Shorts, search, notifications, playlists, external referrals and direct-or-unknown sources, among other categories.",
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Actual traffic counts require channel access and source definitions may include signed-out or unidentified sources; a category does not establish algorithmic causes or creator income."
+    },
+    {
+      "id": "yt-external-and-direct-unknown-traffic-not-owned-audience",
+      "text": "YouTube's Reach documentation describes external links and embeds separately from direct or unknown sources, which can include bookmarks, signed-out viewers and unidentified apps.",
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "An observed external or direct/unknown event does not prove retained audience ownership, permission to export user identifiers, or income independence."
     }
   ],
   "observations": [],
