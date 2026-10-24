@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "game_release_event_viewing_study",
+  "as_of": "2026-10-24",
+  "status": "historical_event_observations_no_causal_release_lift_estimate",
+  "source_ids": [
+    "yt-gaming-quiz-2024",
+    "yt-gta6-trailer-2023"
+  ],
+  "events": [
+    {
+      "id": "splatoon2-japan-launch-week-2017",
+      "game": "Splatoon 2",
+      "event_type": "full_game_release",
+      "event_date": "2017-07-21",
+      "window_start": "2017-07-21",
+      "window_end": "2017-07-28",
+      "reported_window": "first_7_days",
+      "country_scope": "JP",
+      "publisher": "YouTube data as presented in 2024 YouTube Gaming quiz",
+      "source_ids": [
+        "yt-gaming-quiz-2024"
+      ],
+      "measures": [
+        {
+          "id": "game_related_video_views",
+          "value": 50000000,
+          "comparison": ">",
+          "unit": "video_views",
+          "scope": "All tracked videos related to Splatoon 2 in Japan, not one game trailer"
+        }
+      ],
+      "before_window_same_metric": null,
+      "after_window_same_metric": null,
+      "comparable_platform_baseline": null,
+      "unique_people": null,
+      "channels": null,
+      "creator_income": null,
+      "limitations": "Dated Japanese views within release week. No matched prelaunch views, country platform denominator, video set definition, or causal launch-effect estimate."
+    },
+    {
+      "id": "gta6-first-trailer-global-2023",
+      "game": "Grand Theft Auto VI",
+      "event_type": "trailer_premiere_not_game_release",
+      "event_date": "2023-12-04",
+      "window_start": "2023-12-04",
+      "window_end": "2023-12-05",
+      "reported_window": "first_24_hours",
+      "country_scope": "Global",
+      "publisher": "YouTube Gaming official event report",
+      "source_ids": [
+        "yt-gta6-trailer-2023"
+      ],
+      "measures": [
+        {
+          "id": "single_official_trailer_views",
+          "value": 93000000,
+          "comparison": ">",
+          "unit": "video_views",
+          "scope": "GTA VI Trailer 1, a single video"
+        },
+        {
+          "id": "all_gta6_related_video_views",
+          "value": 250000000,
+          "comparison": ">",
+          "unit": "video_views",
+          "scope": "Related GTA VI videos, a broader set overlapping the trailer"
+        }
+      ],
+      "before_window_same_metric": null,
+      "after_window_same_metric": null,
+      "comparable_platform_baseline": null,
+      "unique_people": null,
+      "channels": null,
+      "creator_income": null,
+      "limitations": "A pre-release trailer event, not the game's later launch. >93M and >250M are lower bounds on overlapping units; cannot sum, subtract lower bounds, or infer incremental platform growth."
+    }
+  ],
+  "research_protocol": {
+    "unit": "video_view_events_per_named_event_window_country_game_video_scope",
+    "windows": [
+      "pre_event_28d",
+      "pre_event_7d",
+      "event_24h_or_7d",
+      "after_event_7d",
+      "after_event_28d"
+    ],
+    "dimensions": [
+      "game_identifier",
+      "exact_event_type",
+      "release_or_trailer_date",
+      "event_window",
+      "geographic_region",
+      "language",
+      "video_format",
+      "video_count_scope",
+      "metric_definition_before_or_after_2026_08_24",
+      "discovery_sample_selection",
+      "source_ownership",
+      "revision_dates"
+    ],
+    "necessary_for_lift": [
+      "Matched before and after windows for same game and metric",
+      "Same geographic and channel/video observation frame",
+      "Unchanged or reconciled metric definition",
+      "Comparison with other games and platform-wide trends",
+      "Documented pre-registration of window and event type",
+      "Uncertainty and coverage limits"
+    ],
+    "confounders": [
+      "new trailer is itself new video supply",
+      "streaming events",
+      "promotion and ad buys",
+      "existing game franchise history",
+      "algorithm changes",
+      "school and holiday cycles",
+      "cross-region game release timing",
+      "view metric definition change on August 24 2026"
+    ],
+    "prohibited_inferences": [
+      "Gaming views are not unique people or new users of YouTube.",
+      "A prelaunch trailer is not the date of a game release.",
+      "Views of a single trailer overlap all related video views.",
+      "An observed release-window total without a matched baseline cannot establish a causal launch uplift.",
+      "Japanese seven-day video views cannot be compared as if commensurate with global one-day trailer views.",
+      "2017/2023 events cannot directly predict 2026 platform growth or creator revenue."
+    ]
+  },
+  "unmeasured": {
+    "youtube_gaming_active_people_in_2026": null,
+    "game_release_causal_view_growth": null,
+    "post_launch_decay_rate": null,
+    "new_creator_revenue_per_game_launch": null,
+    "baseline_game_related_views": null,
+    "registered_channel_population": null,
+    "viewers_overlap_across_games": null
+  },
+  "view_metric_epoch": "Both event periods predate the August 24, 2026 first-frame public-view revision. Current event studies must record revision boundaries."
+}
