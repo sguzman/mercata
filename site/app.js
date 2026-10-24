@@ -1281,8 +1281,8 @@ function renderChildrenSeasonality(data,dossier){
  if(!data?.yearly_context?.length)return null;
  const section=make('section','children-seasonality');
  const details=make('details','children-seasonality-details');
- details.append(make('summary','','Children's YouTube viewing: UK annual context, seasonal effects unknown'));
- details.append(make('p','measure-limit','Ofcom/Barb estimate UK children's in-home YouTube viewing in 2025. These weekly averages and 2024–2025 changes are not measured school-holiday or Halloween audience effects.'));
+ details.append(make('summary','','UK children and YouTube: annual viewing context, seasonal effects unknown'));
+ details.append(make('p','measure-limit','Ofcom/Barb estimate in-home UK child YouTube viewing in 2025. These weekly averages and 2024–2025 changes are not measured school-holiday or Halloween audience effects.'));
  const grid=make('div','children-seasonality-grid');
  for(const item of data.yearly_context){
   const card=make('article','children-seasonality-card');
