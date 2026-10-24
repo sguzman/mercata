@@ -28,7 +28,7 @@ try{
     const context=await browser.newContext({viewport:{width:size.width,height:size.height}});
     const page=await context.newPage();
     const errors=[];
-    page.on('pageerror',e=>errors.push(String(e)));
+    page.on('pageerror',e=>errors.push('PAGE ERROR '+String(e?.stack || e)));
     page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});
     page.on('response',response=>{if(response.status()>=400)errors.push('HTTP '+response.status()+' '+response.url());});
     const failedRequests=[];
