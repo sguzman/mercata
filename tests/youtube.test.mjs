@@ -26,6 +26,35 @@ test('Geographic research branches retain source denominators and unknown creato
   assert(scope.country_feature_fields.includes('feature_specific_availability'));
 });
 
+test('Country YPP sign-up and payout-method evidence does not assign personal currencies',async()=>{
+  const [data,dossier]=await Promise.all([
+    load('ontology/youtube/country-eligibility-payments.json'),load('specimens/youtube.json')
+  ]);
+  const known=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(data.kind,'country_specific_creator_access_and_payment_reference');
+  assert.deepEqual(data.country_records.map(x=>x.country_code),['MX','US','GB']);
+  for(const record of data.country_records){
+    assert.equal(record.program_access.standard_ypp_listed,true);
+    assert.equal(record.program_access.expanded_ypp_listed,true);
+    assert.equal(record.reporting_currency,null);
+    assert.equal(record.account_payment_threshold,null);
+    assert.equal(record.individual_channel_approved,null);
+    assert(Object.values(record.feature_specific_access).every(v=>v===null));
+    assert([...record.program_access.source_ids,...record.payment_address_methods.source_ids].every(id=>known.has(id)));
+  }
+  const country=code=>data.country_records.find(x=>x.country_code===code);
+  assert.deepEqual(
+    ['MX','US','GB'].map(code=>country(code).payment_address_methods.wire),
+    [true,false,true]);
+  assert.deepEqual(
+    ['MX','US','GB'].map(code=>country(code).payment_address_methods.hyperwallet),
+    [false,true,false]);
+  assert.deepEqual(Object.fromEntries(data.reporting_currency_threshold_examples.map(x=>[x.currency,x.minimum_payment])),
+    {MXN:1200,USD:100,GBP:60});
+  assert(data.reporting_currency_threshold_examples.every(x=>x.source_ids.every(id=>known.has(id))));
+  assert(Object.values(data.unmeasured).every(v=>v===null));
+});
+
 test('Country viewing figures keep UK devices and international survey denominators separate',async()=>{
   const [data,dossier]=await Promise.all([
     load('ontology/youtube/country-reach-devices.json'),load('specimens/youtube.json')
