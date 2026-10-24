@@ -799,6 +799,31 @@ test('Seven video monetization surfaces distinguish inventory, replay and disput
   assert(Object.values(model.unknowns).every(x=>x===null));
 });
 
+test('Animation format timeline keeps publication dates separate from fan-survey measurement years',async()=>{
+ const [model,dossier,taxonomy]=await Promise.all([
+  load('ontology/youtube/animation-format-cycles.json'),
+  load('specimens/youtube.json'),load('ontology/youtube/taxonomy.json')
+ ]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'animation_meme_format_cycle_evidence');
+ assert.equal(model.timeline.length,4);
+ assert.equal(model.survey_observations.length,7);
+ assert(model.timeline.every(x=>ids.has(x.source_id)&&x.is_platform_wide_growth_measure===false&&x.viewers_unique===null));
+ assert(model.survey_observations.every(x=>ids.has(x.source_id)&&x.item_specific_n===null&&x.global_animation_audience_percent===null));
+ assert(model.taxonomy_ids.every(id=>taxonomy.topics.some(t=>t.id===id)));
+ assert(model.timeline.filter(x=>x.published_at.startsWith('2026')).every(x=>x.observation_period==='2025-04'));
+ assert(model.survey_observations.filter(x=>x.fieldwork==='2025-04').length===6);
+ const us=model.survey_observations.find(x=>x.id==='indie_series_us_weekly_2025');
+ const mexico=model.survey_observations.find(x=>x.id==='animation_memes_mx_weekly_2025');
+ assert.equal(us.reported_percent,63);
+ assert.equal(us.sample_total_n,358);
+ assert.equal(mexico.reported_percent,84);
+ assert.equal(mexico.sample_total_n,379);
+ assert.notEqual(us.question,mexico.question);
+ assert.equal(model.acceptance_gates.filter(x=>x.fulfilled).length,2);
+ assert(Object.values(model.unmeasured).every(x=>x===null));
+});
+
 test('Adjacent video comparison is scope-only and does not admit marketplace specimens',async()=>{
  const [model,dossier,gallery]=await Promise.all([
   load('ontology/youtube/comparison-set.json'),load('specimens/youtube.json'),load('gallery/index.json')

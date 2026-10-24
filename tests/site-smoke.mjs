@@ -280,6 +280,12 @@ try{
     assert((await collab.textContent()).includes('up to 10 collaborators'));
     assert((await collab.textContent()).includes('does not split collaboration payouts'));
     assert((await collab.textContent()).includes('No collaboration earnings'));
+    const animation=page.locator('.animation-format-cycles');
+    assert.equal(await animation.locator('.animation-format-event').count(),4,'Missing dated animation editorial evidence');
+    assert.equal(await animation.locator('.animation-format-survey').count(),7,'Missing distinct U.S./Mexico fan-survey items');
+    await animation.locator('summary').click();
+    assert((await animation.textContent()).includes('April 2025'));
+    assert((await animation.textContent()).includes('no 2024–2026 audience growth rate'));
     const attention=page.locator('.video-attention-culture');
     assert.equal(await attention.locator('.video-attention-card').count(),2,'Missing independent video stock and niche survey studies');
     assert.equal(await attention.locator('.video-attention-observation').count(),11,'Missing measured dated stock, watch-time and survey items');

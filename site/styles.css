@@ -863,3 +863,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .technology-metric-card strong{font:21px Georgia,serif;font-variant-numeric:tabular-nums}
 @media(max-width:900px){.technology-subculture-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.technology-subcultures-details{padding:15px}.technology-subculture-grid,.technology-metric-grid{grid-template-columns:1fr}}
+
+/* Dated animation editorial and fan-survey observations, not a growth forecast. */
+.animation-format-cycles{margin:28px 0}
+.animation-format-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.animation-format-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.animation-format-timeline,.animation-format-surveys{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.animation-format-event,.animation-format-survey{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.animation-format-event h5{font-size:13px;text-transform:capitalize;margin:0 0 9px}
+.animation-format-event p,.animation-format-survey p{font-size:12px;margin:7px 0}
+.animation-format-survey strong{font:24px Georgia,serif;font-variant-numeric:tabular-nums}
+@media(max-width:650px){.animation-format-details{padding:15px}.animation-format-timeline,.animation-format-surveys{grid-template-columns:1fr}}

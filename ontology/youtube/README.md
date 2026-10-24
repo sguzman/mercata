@@ -253,6 +253,10 @@ The [news-audience survey profile](community-audience-studies.md) uses Pew's 202
 
 A [2026 commercial sample study](competition-observations.md) describes subscriber-tier movement and traffic sources across 71,177 observed accounts, while exposing its unknown recruitment frame and incomplete observation dates. The [machine record](competition-observations.json) keeps these descriptive statistics out of representative newcomer-success estimates.
 
+## Independent animation and meme format-cycle evidence
+
+The [dated animation and meme format review](animation-format-cycles.md) and [machine observations](animation-format-cycles.json) distinguish a 2024 editorial event, March 2025 curated trend mentions and 2026 publications of **April 2025** U.S./Mexico animation-fan samples. Fan-survey questions and populations differ; neither a year-over-year change rate, seasonal pattern nor typical animation creator earnings has been established. Creator-format hypotheses remain separate from counted audiences and profit observations.
+
 ## Video supply, attention concentration and U.S. niche exploration (2025–2026)
 
 The [Omdia and NRG study comparison](video-attention-culture-2026.md) and [machine observations](video-attention-culture-2026.json) separate a commercial January 2026 analyst release on YouTube's end-2025 video stock, viewing-time concentration, content shares and new Shorts uploads from YouTube/NRG's September 2026 report on U.S. online respondents aged 14–29 or 14–44. Music, news, podcasts and professional production can overlap and are **not** a mutually exclusive distribution. Self-reported niche viewing does not measure distinct people in each niche; neither study supplies creator earnings.
