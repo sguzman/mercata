@@ -215,6 +215,33 @@ for (const entry of index.specimens) {
     const policy=load('ontology/youtube/policies.json');
     const measures=load('ontology/youtube/measurements.json');
     const observed=load('ontology/youtube/topic-observations.json');
+    const viewBreak=load('ontology/youtube/view-definition-break.json');
+    ensure(viewBreak.effective_date==='2026-08-24' &&
+      viewBreak.measurement_levels.length===8 &&
+      viewBreak.format_applicability.length===4,
+      'Missing August 2026 first-frame view semantics');
+    const levelIds=new Set(viewBreak.measurement_levels.map(x=>x.id));
+    ensure(levelIds.size===8 && viewBreak.measurement_levels.every(x=>
+      x.source_ids.length && x.source_ids.every(id=>sourceIds.has(id))),
+      'Duplicate or unsourced YouTube view measurement type');
+    ensure(viewBreak.source_ids.every(id=>sourceIds.has(id)) &&
+      viewBreak.measurement_levels.filter(x=>x.public_video_count_equivalent===true)
+        .map(x=>x.id).join(',')==='public_view',
+      'Public video starts incorrectly equated to other metrics');
+    ensure(viewBreak.api_revision.field==='videos.statistics.viewCount' &&
+      viewBreak.api_revision.effective_date===viewBreak.effective_date &&
+      viewBreak.api_revision.public_api_exposes_engaged_equivalent===false,
+      'Data API read incorrectly implies engaged statistics');
+    ensure(viewBreak.format_applicability.every(x=>
+      x.view_count_first_frame_from==='2026-08-24' &&
+      x.conversion_from_public_to_engaged===null),
+      'Format-level first-frame break or conversion misrepresented');
+    ensure(viewBreak.comparison_protocol.conversion_factor_pre_to_post===null &&
+      viewBreak.comparison_protocol.conversion_factor_public_to_engaged===null &&
+      viewBreak.comparison_protocol.estimated_spurious_growth===null &&
+      viewBreak.comparison_protocol.causal_effect_on_creator_earnings===null &&
+      viewBreak.comparison_protocol.program_qualification_change_due_to_definition===null,
+      'Unsupported creator uplift or view-count conversion from revision');
     const history=load('ontology/youtube/measurement-history.json');
     const economics=load('ontology/youtube/economic-model.json');
     const routes=load('ontology/youtube/revenue-pathways.json');
