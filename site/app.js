@@ -1292,7 +1292,7 @@ function renderChildrenSeasonality(data,dossier){
   grid.append(card);
  }
  details.append(grid);
- details.append(make('p','measure-limit','Measured school-break, winter holiday, summer, Halloween and after-school contrasts: unknown. Age-group and device boundaries must remain consistent; no child-level histories are collected.'));
+ details.append(make('p','measure-limit','Measured seasonal effects: unknown. School-break, winter holiday, summer, Halloween and after-school contrasts require comparable dated data. Age and device boundaries must remain consistent; no child-level histories are collected.'));
  details.append(audienceSources(data.sources,dossier));
  const link=make('a','inline-link','Annual source values and missing seasonal evidence ↗');
  link.href='./ontology/youtube/children-media-seasonality.md';link.target='_blank';link.rel='noopener noreferrer';
