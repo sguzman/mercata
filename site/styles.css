@@ -789,3 +789,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .screen-viewing-card h5{font-size:14px;margin:0 0 9px}
 .screen-viewing-card p{font-size:13px;margin:7px 0}
 @media(max-width:650px){.screen-viewing-details{padding:15px}.screen-viewing-grid{grid-template-columns:1fr}}
+
+/* Public child-directed policy taxonomy; no user-level minor demographics. */
+.child-format-study{margin:28px 0}
+.child-format-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.child-format-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.child-format-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.child-format-card,.child-format-observation{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.child-format-card h5{font-size:14px;margin:0 0 9px}
+.child-format-card p,.child-format-observation p{font-size:12px;margin:7px 0}
+.child-format-observation strong{font-size:23px;font-variant-numeric:tabular-nums}
+@media(max-width:650px){.child-format-details{padding:15px}.child-format-grid{grid-template-columns:1fr}}

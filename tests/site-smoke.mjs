@@ -115,6 +115,12 @@ try{
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');
+    const child=page.locator('.child-format-study');
+    assert.equal(await child.locator('.child-format-card').count(),5,'Missing separate child/general/adult classifications');
+    await child.locator('summary').click();
+    assert((await child.textContent()).includes('safe for a whole family'));
+    assert((await child.textContent()).includes('No individual minors are profiled'));
+    assert((await child.textContent()).includes('96%'));
     const screenStudy=page.locator('.screen-viewing-study');
     assert.equal(await screenStudy.locator('.screen-viewing-card').count(),2,'Missing UK device share subgroups');
     await screenStudy.locator('summary').click();

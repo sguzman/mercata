@@ -612,6 +612,32 @@ test('YPP tax-info and payout-withholding model preserves different revenue base
  assert(model.disallowed_model_shortcuts.some(x=>x.includes('twice')));
 });
 
+test('Child audience/animation gates do not conflate all-ages, mixed, made-for-kids and 18+ policies',async()=>{
+ const [model,dossier]=await Promise.all([
+  load('ontology/youtube/child-age-and-format-gates.json'),load('specimens/youtube.json')
+ ]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'child_audience_eligibility_and_format_distinctions');
+ assert(model.sources.every(x=>ids.has(x)));
+ assert.deepEqual(model.classification_cases.map(x=>x.id),[
+   'made_for_kids','mixed_audience_child_directed','general_family_friendly',
+   'teen_or_older_general','age_restricted_18_plus'
+ ]);
+ assert(model.classification_cases.every(x=>x.source_ids.every(id=>ids.has(id))));
+ assert.equal(model.classification_cases[1].studio_category,'made_for_kids');
+ assert.equal(model.classification_cases[2].studio_category,'not_automatically_made_for_kids');
+ assert.equal(model.classification_cases[4].default_user_age_min,18);
+ assert.equal(model.made_for_kids_platform_impacts.personalized_advertising_allowed,false);
+ assert.equal(model.made_for_kids_platform_impacts.all_advertising_banned,false);
+ assert.equal(model.made_for_kids_platform_impacts.creator_typical_revenue_effect,null);
+ assert.equal(model.age_restricted_18_plus_impacts.signed_out_viewing_allowed,false);
+ assert.equal(model.age_restricted_18_plus_impacts.ads_always_disabled,false);
+ assert.deepEqual(model.population_observations.map(x=>x.value),[96,53]);
+ assert.deepEqual(model.population_observations.map(x=>x.ages),['8–14','4–15']);
+ assert(model.population_observations.every(x=>x.source_ids.every(id=>ids.has(id))&&x.count_unique_children===null));
+ assert(Object.values(model.unmeasured).every(x=>x===null));
+});
+
 test('Barb 2025 device shares are bounded UK Wi-Fi viewing, not people or selected-channel stats',async()=>{
   const [model,dossier]=await Promise.all([
     load('ontology/youtube/screen-viewing-uk-2025.json'),load('specimens/youtube.json')
