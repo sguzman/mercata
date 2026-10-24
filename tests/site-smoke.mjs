@@ -154,7 +154,7 @@ try{
     assert((await teenFormats.textContent()).includes('Boys 5% · Girls 31%'));
     assert((await teenFormats.textContent()).includes('NOT YouTube alone'));
     assert((await teenFormats.textContent()).includes('These are platform-use rates, not genre-use estimates'));
-    assert((await teenFormats.textContent()).includes('Never infer an individual minor'));
+    assert((await teenFormats.textContent()).includes('Never infer a minor’s identity or viewing history'));
     const child=page.locator('.child-format-study');
     assert.equal(await child.locator('.child-format-card').count(),5,'Missing separate child/general/adult classifications');
     await child.locator('summary').click();
