@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "gender_descriptive_community_evidence",
+  "as_of": "2026-10-24",
+  "status": "selected_vendor_panel_and_owner_gender_metrics_not_general_population",
+  "sources": [
+    "analytics-limits",
+    "api-dimensions",
+    "tubular-gaming-beauty-overlap-2025"
+  ],
+  "research_population": "Aggregate gender-labeled owner reports and one vendor-selected U.S. 25–34 female gaming-viewer panel; not individuals or all creators",
+  "measurement_surfaces": [
+    {
+      "id": "owner_gender_dimension",
+      "source_id": "api-dimensions",
+      "unit": "gender_category_of_logged_in_users",
+      "categories": [
+        "female",
+        "male",
+        "user_specified"
+      ],
+      "owner_analytics_only": true,
+      "includes_signed_out_gender_breakdown": false,
+      "verified_individual_identity": false
+    },
+    {
+      "id": "privacy_suppression",
+      "source_id": "analytics-limits",
+      "unit": "owner_viewer_metrics",
+      "threshold_n": null,
+      "missing_means_zero": false,
+      "made_for_kids_restrictions": true
+    }
+  ],
+  "bounded_vendor_study": {
+    "id": "tubular_gaming_beauty_2025",
+    "source_id": "tubular-gaming-beauty-overlap-2025",
+    "window": "2024-07 to 2025-06",
+    "region": "United States",
+    "age": "25–34",
+    "provider_category": "female",
+    "classification_method": null,
+    "sampling_probabilities": null,
+    "population_coverage": null,
+    "gaming_engagements_min": 5,
+    "panel_n": 74276,
+    "reported_beauty_gaming_overlap_percent": 5,
+    "overlap_numerator": null,
+    "overlap_denominator": null,
+    "exact_union": null,
+    "selected_affinity_multiples": [
+      {
+        "label": "YSL Beauty",
+        "value": 6.4
+      },
+      {
+        "label": "Olay",
+        "value": 5.7
+      },
+      {
+        "label": "NYX Professional Makeup",
+        "value": 5.4
+      }
+    ],
+    "represents_all_gender_associated_communities": false,
+    "independently_replicated": false
+  },
+  "comparison_gates": [
+    {
+      "id": "matched_survey_frame",
+      "passed": false,
+      "reason": "No validated person-level or aggregate intersection across beauty, gaming, and other niche groups"
+    },
+    {
+      "id": "consistent_gender_definition",
+      "passed": false,
+      "reason": "Vendor classification not established as equivalent to signed-in owner reporting"
+    },
+    {
+      "id": "complete_demographic_coverage",
+      "passed": false,
+      "reason": "Logged-out viewers and suppressed demographic cells are not characterized"
+    },
+    {
+      "id": "external_representativeness",
+      "passed": false,
+      "reason": "Panel recruitment probabilities and coverage weights missing"
+    }
+  ],
+  "unknowns": {
+    "all_youtube_viewers_by_gender": null,
+    "all_creators_by_gender": null,
+    "genre_viewers_by_gender": null,
+    "viewers_gender_identity": null,
+    "unregistered_viewer_gender": null,
+    "full_population_beauty_gaming_overlap": null,
+    "gender_by_format_effect": null
+  },
+  "safeguards": [
+    "Do not infer gender, sex, politics, religion or sexuality of anyone from names, images, voices or comments.",
+    "An account reporting category is not proof of biological sex or personal identity.",
+    "An unavailable analytics cell is unknown, not zero.",
+    "Vendor 5% overlap is not a known denominator or deduplicated union; do not multiply by panel n.",
+    "Content formats and communities can overlap; no gender stereotype is an empirical population model.",
+    "Do not store person-level demographics, identifiers, OAuth tokens or private watch histories."
+  ]
+}
