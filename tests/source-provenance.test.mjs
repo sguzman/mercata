@@ -11,8 +11,8 @@ test('All duplicate-document URLs and syndicated survey sources are independentl
  const result=auditPublicSources(dossier.evidence,dossier.claims,registry);
  assert.equal(result.source_references,dossier.evidence.length);
  assert.equal(result.claims,dossier.claims.length);
- assert.equal(result.duplicate_document_families.length,6);
- assert.equal(result.registered_shared_source_families,7);
+ assert.equal(result.duplicate_document_families.length,7);
+ assert.equal(result.registered_shared_source_families,8);
  assert.equal(result.unregistered_duplicate_documents.length,0);
  assert.equal(result.invalid_source_family_records.length,0);
  assert.equal(result.missing_claim_sources.length,0);
