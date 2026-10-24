@@ -129,6 +129,12 @@ try{
     await reach.locator('summary').click();
     assert((await reach.textContent()).includes('Do not sum percentages or device minutes'));
     assert((await reach.textContent()).includes('global monthly distinct viewers: unknown'));
+    const people=page.locator('.viewer-person-metrics');
+    assert.equal(await people.locator('.viewer-person-card').count(),8,'Missing public/owner viewer measurement types');
+    await people.locator('summary').click();
+    assert((await people.textContent()).includes('rolling 28-day'));
+    assert((await people.textContent()).includes('up to 90 days'));
+    assert((await people.textContent()).includes('worldwide person census'));
     const overlap=page.locator('.audience-overlap');
     assert.equal(await overlap.locator('.audience-overlap-card').count(),5,'Missing topic overlap evidence cards');
     await overlap.locator('summary').click();

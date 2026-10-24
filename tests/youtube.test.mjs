@@ -473,6 +473,29 @@ test('YouTube task percentage matches its original and detailed queues',async()=
   assert(plan.detail_tasks.every(t=>t.percent<100 || (t.status==='complete'&&t.evidence.length>0)));
 });
 
+test('Public channel counts and owner viewers remain different measurement types',async()=>{
+ const [metrics,dossier]=await Promise.all([
+  load('ontology/youtube/viewer-person-metrics.json'),load('specimens/youtube.json')
+ ]);
+ const sources=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(metrics.kind,'viewer_person_account_and_activity_measurement');
+ assert.equal(metrics.measures.length,8);
+ assert(metrics.measures.every(x=>x.source_ids.length&&x.source_ids.every(id=>sources.has(id))));
+ assert(metrics.access_gates.every(x=>x.source_ids.every(id=>sources.has(id))&&x.global_person_census===false));
+ const get=id=>metrics.measures.find(x=>x.id===id);
+ assert.equal(get('unique_viewers').max_period_days,90);
+ assert.equal(get('unique_viewers').signed_out_included_in_estimate,true);
+ assert.equal(get('unique_viewers').public_channel_api,false);
+ assert.equal(get('monthly_audience').window,'rolling_28_days');
+ assert.equal(get('monthly_audience').max_period_days,28);
+ assert.equal(get('public_channel_views').public_channel_api,true);
+ assert.equal(get('public_subscribers').unit,'subscriptions');
+ assert.equal(get('public_subscribers').signed_out_included_in_estimate,false);
+ assert.equal(get('unique_reach').unit,'estimated_people_exposed');
+ assert.equal(get('co_viewed_views').unit,'estimated_shared_screen_view_events');
+ assert(Object.values(metrics.unmeasured).every(x=>x===null));
+});
+
 test('Creator safety and 2026 temporary hijack pause maintain distinct risk scopes',async()=>{
  const [model,dossier]=await Promise.all([
   load('ontology/youtube/creator-safety-continuity.json'),load('specimens/youtube.json')
