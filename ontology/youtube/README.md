@@ -28,6 +28,10 @@ The [reputation and portability study](reputation-portability.md) and [machine e
 
 The [buyer checkout/refund study](checkout-refund-evidence.md) and [machine evidence matrix](checkout-refund-evidence.json) distinguish channel memberships, one-off Supers and orders fulfilled by external retailers. Published US/Mexico membership tier options are not observed channel prices, currency-conversion rates or creator revenue. The site includes the source-backed audit.
 
+## Member renewals, churn and paid offer experiments
+
+The [paid member cohort and offer-test protocol](member-cohort-protocol.md) and [machine model](member-cohort-protocol.json) require actual billing-due cohorts, distinguish canceled/active/lost members and trials, and refuse unverified causal claims. The tested [aggregate renewal auditor](../../site/member-renewal-audit.mjs) returns interval bounds if due outcomes remain unresolved; no real creator data has been collected. The YouTube dossier displays the method and official measurement definitions.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

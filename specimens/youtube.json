@@ -5136,6 +5136,17 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Policy documentation does not provide merchant cohort prices, conversion rates, refund incidence, effective seller margins or buyer-level transaction observations. Fees and methods vary by region and channel."
+    },
+    {
+      "id": "yt-member-counts-differ-from-renewal-cohorts-2026",
+      "text": "YouTube Studio distinguishes total members with perk access, active noncanceled subscriptions, membership gains/cancellations, access-expired lost members and transactions containing new signups or recurrences; billing periods may span 28, 30 or 31 days, so aggregate counts alone do not establish the renewal rate of a matched entry cohort.",
+      "source_ids": [
+        "yt-membership-analytics-2026",
+        "yt-membership-buyer-refunds-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Official metric definitions, not owner-authorized member-level history or a representative channel sample. Calculating cohort renewal requires actual due dates, aligned entries and settlement outcomes."
     }
   ],
   "observations": [],

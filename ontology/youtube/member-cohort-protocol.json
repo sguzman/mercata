@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "paid_member_cohort_and_offer_test_protocol",
+  "as_of": "2026-10-24",
+  "status": "measurement_design_without_authorized_cohort_or_test_results",
+  "source_ids": [
+    "yt-membership-analytics-2026",
+    "yt-membership-buyer-refunds-2026",
+    "yt-membership-levels-2026",
+    "yt-membership-price-tips-2026",
+    "analytics-audience"
+  ],
+  "population": "Eligible paid channel members and opt-in test participants in individual owner-authorized channels; trial-only users, lapsed viewers and nonpayers are distinct",
+  "definition_rules": [
+    {
+      "id": "active_vs_total",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ],
+      "rule": "Total members may include canceled subscribers with remaining perks; active members exclude canceled subscriptions. Neither snapshot is necessarily a matched eligible-to-renew cohort.",
+      "measurement": null
+    },
+    {
+      "id": "members_lost",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ],
+      "rule": "Members Lost counts canceled members after perk access ends. It is not identical to Members Canceled in a same-date snapshot.",
+      "measurement": null
+    },
+    {
+      "id": "new_vs_recurring",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ],
+      "rule": "Transactions may contain first-time charges and recurrences; total transaction count alone cannot measure renewal propensity.",
+      "measurement": null
+    },
+    {
+      "id": "billing_periods",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ],
+      "rule": "Billing periods can vary with calendar month (28, 30 or 31 days). Do not divide a rolling 28-day viewer audience into billing-cycle renewals.",
+      "measurement": null
+    },
+    {
+      "id": "trial_and_gifts",
+      "source_ids": [
+        "yt-membership-levels-2026",
+        "yt-membership-analytics-2026"
+      ],
+      "rule": "Trial-only and gifted member activity is not proof of a settled recurring paid renewal; use explicit event classification.",
+      "measurement": null
+    },
+    {
+      "id": "refund_settlement",
+      "source_ids": [
+        "yt-membership-analytics-2026",
+        "yt-membership-buyer-refunds-2026"
+      ],
+      "rule": "Canceled access can outlive cancellation and refunded transactions can reduce creator receipts; preserve refund/charge reversal separately.",
+      "measurement": null
+    }
+  ],
+  "cohort_event_requirements": [
+    "Channel-owner authorization and no exposed personal IDs",
+    "A documented consent and privacy-safe aggregate extraction procedure",
+    "Cohort ID and enrollment date window with membership tier, geography and billing provider as permitted",
+    "Actual renewal due windows, not presumed 30-day cycles",
+    "Explicit renewal outcome partition: settled paid, not renewed, unresolved",
+    "Trial-only, gifted and newly subscribed persons excluded from the paid renewal due denominator unless separately qualified",
+    "Date of refunds and their possible adjustments to cash payout, recorded independently",
+    "Right-censoring and missing outcomes reported, not imputed as churn"
+  ],
+  "computation_contract": {
+    "input_field_names": [
+      "cohort_id",
+      "period_start",
+      "period_end",
+      "source",
+      "billing_basis",
+      "due",
+      "paid_renewed",
+      "not_renewed",
+      "unresolved",
+      "trial_only",
+      "gifted"
+    ],
+    "denominator": "all_due_in_cohort",
+    "numerator": "paid_renewed_within_due_cohort",
+    "bound_when_unknown": "lower=paid_renewed/due; upper=(paid_renewed+unresolved)/due",
+    "zero_due": "not_estimable",
+    "causal_effect_from_cohort_counts": false
+  },
+  "offer_test_design": {
+    "hypothesis": "Specific membership perks or creator products address a preregistered, documented audience need; purchase and repeat payment remain hypotheses until observed.",
+    "comparison_unit": "One consenting creator channel and one audience segment per prespecified period; no cross-format mixing without stratification.",
+    "candidate_variants": [
+      {
+        "id": "baseline_existing_offer",
+        "description": "Existing offer and perk package without change",
+        "observed_performance": null
+      },
+      {
+        "id": "lower_labor_perk_offer",
+        "description": "An explicitly designed low-delivery-cost perk package with disclosed benefits",
+        "observed_performance": null
+      }
+    ],
+    "preregister_before_launch": [
+      "Audience need, channel, eligible country and age safeguards",
+      "Perk/offer eligibility and delivery cost",
+      "Displayed country-specific buyer price and payment provider",
+      "Enrollment method and whether control and treatment are comparable",
+      "Primary settled-paid conversion denominator, cohort entry and renewal due windows",
+      "Cash budget, labor hours, explicit stop loss and review date chosen by creator",
+      "Safety and policy review, including refunds, child-directed restrictions and privacy",
+      "Minimum effect or cost ceiling judged worthwhile before viewing results"
+    ],
+    "decision_rules": [
+      "Continue only if prespecified net cash and time thresholds are satisfied with attributable supported evidence.",
+      "Report underpowered, incomplete or incompatible cohorts as inconclusive, not successes.",
+      "Do not infer causal offer effect from one before/after channel period or a self-selected experiment.",
+      "Respect all participant permission boundaries; no buyer-level personal data in public Mercata."
+    ]
+  },
+  "unmeasured": {
+    "sampled_paid_members": null,
+    "eligible_renewal_events": null,
+    "paid_renewal_rate": null,
+    "churn_rate": null,
+    "trial_conversion_rate": null,
+    "incremental_offer_revenue": null,
+    "income_per_creator_hour": null,
+    "causal_test_lift": null,
+    "refund_adjusted_profit": null
+  },
+  "observed_member_cohorts": [],
+  "observed_offer_tests": []
+}
