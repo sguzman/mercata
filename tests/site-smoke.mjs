@@ -100,7 +100,8 @@ try{
       ['.us-news-demographic-crosswalk',8,'Biological sex, overlapping age-by-party'],
       ['.synthetic-media-rights',4,'no AI creator earnings'],
       ['.recommendation-evidence',5,'No minimum Shorts posting cadence'],
-      ['.channel-cohort-evidence',4,'do not prove uploading causes growth']
+      ['.channel-cohort-evidence',4,'do not prove uploading causes growth'],
+      ['.first-upload-vlog',4,'no YouTube payouts']
     ]){
       const section=page.locator(selector);
       assert.equal(await section.locator('.ownership-card').count(),cards,'Missing research cards in '+selector);
