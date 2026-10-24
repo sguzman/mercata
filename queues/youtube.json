@@ -620,9 +620,18 @@
           "title": "Examine seasonality",
           "acceptance": "Compare like periods or mark the pattern unknown.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 63,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/seasonal-discovery-comparison.json",
+            "ontology/youtube/seasonal-discovery-comparison.md",
+            "ontology/youtube/nfl-view-seasonality-2026.json",
+            "ontology/youtube/beauty-fashion-query-series.json",
+            "ontology/youtube/gaming-release-events.json",
+            "ontology/youtube/children-media-seasonality.json",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
+          ]
         },
         {
           "id": "discovery/changes",
@@ -3147,7 +3156,7 @@
           "title": "Study cyclical interest by country and topic",
           "acceptance": "Account for school calendars, major events and seasonal selection bias.",
           "weight": 1,
-          "progress": 59,
+          "progress": 65,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/beauty-fashion-query-series.json",
@@ -3161,7 +3170,9 @@
             "ontology/youtube/gaming-release-events.md",
             "site/app.js",
             "ontology/youtube/children-media-seasonality.json",
-            "ontology/youtube/children-media-seasonality.md"
+            "ontology/youtube/children-media-seasonality.md",
+            "ontology/youtube/seasonal-discovery-comparison.json",
+            "ontology/youtube/seasonal-discovery-comparison.md"
           ]
         },
         {
@@ -3201,7 +3212,7 @@
           "title": "Assess the reliability of niche-growth projections",
           "acceptance": "Explicitly document model assumptions, uncertainty and failed comparisons.",
           "weight": 1,
-          "progress": 80,
+          "progress": 82,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
@@ -3227,7 +3238,11 @@
             "tests/lifecycle-horizons.test.mjs",
             "ontology/youtube/gaming-release-events.json",
             "ontology/youtube/gaming-release-events.md",
-            "site/app.js"
+            "site/app.js",
+            "ontology/youtube/seasonal-discovery-comparison.json",
+            "ontology/youtube/seasonal-discovery-comparison.md",
+            "ontology/youtube/nfl-view-seasonality-2026.json",
+            "ontology/youtube/children-media-seasonality.json"
           ]
         }
       ]
