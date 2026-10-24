@@ -616,6 +616,8 @@ function renderCrossPlatformIncomeSurveys(data,dossier) {
       if(point.id==='income_100000_plus_count')description='Respondents reporting six figures or more';
       if(point.id==='income_100000_plus_percent')description='Reported six-figure share within this sample';
       if(point.id==='income_1000_5000_count')description='Respondents in the USD 1,000–5,000 annual bracket';
+      if(point.id==='creatoriq_under_10000_year')description='CreatorIQ respondents under USD 10,000 annual creator income';
+      if(point.id==='creatoriq_income_not_primary')description='CreatorIQ respondents not relying on creator income as primary';
       item.append(make('span','',description||point.metric.replaceAll('_',' ')));
       measures.append(item);
     }
