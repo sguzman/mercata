@@ -1,6 +1,6 @@
 # Survey and analytics-frame crosswalk — no pooled YouTube population estimate
 
-**Audited October 23, 2026.** [Machine-readable frame audit](study-frame-crosswalk.json). Five source frames used in Mercata's research have different people, time windows, measurement units and recruitment.
+**Audited October 24, 2026.** [Machine-readable frame audit](study-frame-crosswalk.json). Seven source frames used in Mercata's research have different people, time windows, measurement units and recruitment.
 
 | Study | Declared selection frame and period | Sample size / unit | Outcome actually observed |
 | --- | --- | --- | --- |
@@ -9,6 +9,12 @@
 | YouTube/NRG U.S. online respondents 14–44 | April 2026, different age window and question set | 939 survey respondents | Attitudes about interest exploration |
 | [CreatorIQ 2026 creators](https://www.creatoriq.com/whitepaper/state-of-creators) | Commercial creator survey, May 29–June 29 2026, 100 reported regions | 5,095 mixed-platform respondents | Self-reported annual creator income and primary-income status |
 | [AIR 2026 monetized channels](https://air.io/en/air-data-findings/how-much-does-youtube-really-pay-in-2026-real-rpm-data-from-300-channels) | Vendor client channels with 10k–50m subscribers, monetized months May 2025–May 2026 | **300 channels**, **3,595 channel-months** | Selected YouTube Studio RPM (USD per 1,000 views) |
+
+## News-consumer composition is not news-use prevalence
+
+Pew's [October 19, 2026 News Platform Fact Sheet](https://www.pewresearch.org/journalism/fact-sheet/news-platform-fact-sheet/) reports an **August 24–30, 2026 American Trends Panel survey of 5,166 U.S. adults**. It describes news behavior and regular news use, a different outcome from the *January–June 2026 NPORS* question on **ever using YouTube** among 5,511 U.S. adults. Both are Pew studies, but sharing a publisher does not create a shared panel, identical question or common calendar denominator.
+
+Pew's [September 2025 demographic profile of regular social-media news consumers](https://www.pewresearch.org/journalism/2025/09/25/appendix-demographic-profiles-of-regular-social-media-news-consumers-in-the-united-states/) instead describes **the characteristics of people who already regularly consume YouTube news**. A 2025 figure for the share of YouTube news consumers who are men, for example, must not be mistaken for the share of all U.S. men who regularly consume YouTube news. This is a different conditional population and period from the 2026 survey. The exact sample size of that conditioned subgroup remains unknown.
 
 ## The frame determines what each answer means
 

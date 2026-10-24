@@ -163,7 +163,7 @@ try{
     assert((await reach.textContent()).includes('Do not sum percentages or device minutes'));
     assert((await reach.textContent()).includes('global monthly distinct viewers: unknown'));
     const frames=page.locator('.survey-frame-crosswalk');
-    assert.equal(await frames.locator('.survey-frame-card').count(),5,'Missing incompatible U.S. public and creator sampling frames');
+    assert.equal(await frames.locator('.survey-frame-card').count(),7,'Missing Pew news, U.S. platform use, fan surveys and creator frame distinctions');
     await frames.locator('summary').click();
     assert((await frames.textContent()).includes('including zero-earning YouTube entrants remain unknown'));
     assert((await frames.textContent()).includes('5,511 respondents'));
