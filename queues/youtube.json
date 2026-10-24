@@ -782,7 +782,7 @@
           "title": "Study share earning zero",
           "acceptance": "State who is counted and why the measure may be biased.",
           "weight": 1,
-          "progress": 34,
+          "progress": 49,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
@@ -793,7 +793,11 @@
             "ontology/youtube/cross-platform-income-surveys.md",
             "specimens/youtube.json",
             "tests/youtube.test.mjs",
-            "scripts/verify.mjs"
+            "scripts/verify.mjs",
+            "ontology/youtube/newcomer-income-cohort.json",
+            "ontology/youtube/newcomer-income-cohort.md",
+            "scripts/newcomer-income-audit.mjs",
+            "tests/newcomer-cohort.test.mjs"
           ]
         },
         {
@@ -802,7 +806,7 @@
           "title": "Audit selection and survivorship biases",
           "acceptance": "Describe recruitment, response bias and missing populations.",
           "weight": 1,
-          "progress": 84,
+          "progress": 88,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
@@ -817,7 +821,11 @@
             "ontology/youtube/cross-platform-income-surveys.json",
             "ontology/youtube/cross-platform-income-surveys.md",
             "tests/youtube.test.mjs",
-            "scripts/verify.mjs"
+            "scripts/verify.mjs",
+            "ontology/youtube/newcomer-income-cohort.json",
+            "ontology/youtube/newcomer-income-cohort.md",
+            "scripts/newcomer-income-audit.mjs",
+            "tests/newcomer-cohort.test.mjs"
           ]
         },
         {
@@ -826,14 +834,19 @@
           "title": "Estimate effort-adjusted earnings",
           "acceptance": "Count production, marketing, administration and support time.",
           "weight": 1,
-          "progress": 28,
+          "progress": 32,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/production-costs.json",
             "ontology/youtube/production-costs.md",
             "ontology/youtube/scenario-method.md",
             "ontology/youtube/opportunity-framework.md",
-            "tests/youtube.test.mjs"
+            "tests/youtube.test.mjs",
+            "ontology/youtube/newcomer-income-cohort.json",
+            "ontology/youtube/newcomer-income-cohort.md",
+            "scripts/newcomer-income-audit.mjs",
+            "tests/newcomer-cohort.test.mjs",
+            "specimens/youtube.json"
           ]
         },
         {
@@ -1392,7 +1405,7 @@
           "title": "Audit unknowns and comparability",
           "acceptance": "Inspect denominators, missing data and misleading comparisons.",
           "weight": 1,
-          "progress": 80,
+          "progress": 84,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/opportunity-framework.json",
@@ -1419,7 +1432,11 @@
             "ontology/youtube/source-provenance.md",
             "scripts/source-provenance.mjs",
             "tests/source-provenance.test.mjs",
-            "scripts/audit-youtube-sources.mjs"
+            "scripts/audit-youtube-sources.mjs",
+            "ontology/youtube/newcomer-income-cohort.json",
+            "ontology/youtube/newcomer-income-cohort.md",
+            "scripts/newcomer-income-audit.mjs",
+            "tests/newcomer-cohort.test.mjs"
           ]
         },
         {
@@ -1428,14 +1445,19 @@
           "title": "Review all public artifacts",
           "acceptance": "Verify rights, privacy, neutral tone and data suitability.",
           "weight": 1,
-          "progress": 20,
+          "progress": 50,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/opportunity-framework.json",
             "ontology/youtube/opportunity-framework.md",
             "ontology/youtube/scenario-method.md",
             "site/scenario.mjs",
-            "tests/scenario.test.mjs"
+            "tests/scenario.test.mjs",
+            "ontology/youtube/newcomer-income-cohort.json",
+            "ontology/youtube/newcomer-income-cohort.md",
+            "scripts/newcomer-income-audit.mjs",
+            "tests/newcomer-cohort.test.mjs",
+            "specimens/youtube.json"
           ]
         },
         {
@@ -2804,12 +2826,16 @@
           "title": "Verify aggregation and personal-data protections",
           "acceptance": "Exclude private profiling, scraped sensitive attributes and individual-level inference.",
           "weight": 1,
-          "progress": 40,
+          "progress": 60,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/content-policy-risk.json",
             "ontology/youtube/content-policy-risk.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/newcomer-income-cohort.json",
+            "ontology/youtube/newcomer-income-cohort.md",
+            "scripts/newcomer-income-audit.mjs",
+            "tests/newcomer-cohort.test.mjs"
           ]
         },
         {
@@ -2863,7 +2889,7 @@
           "title": "Publish sensitivity ranges and data gaps",
           "acceptance": "Mark missing demographic and subculture estimates unknown with precise limitations.",
           "weight": 1,
-          "progress": 55,
+          "progress": 60,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/content-policy-risk.json",
@@ -2877,7 +2903,11 @@
             "ontology/youtube/source-provenance.md",
             "scripts/source-provenance.mjs",
             "tests/source-provenance.test.mjs",
-            "scripts/audit-youtube-sources.mjs"
+            "scripts/audit-youtube-sources.mjs",
+            "ontology/youtube/newcomer-income-cohort.json",
+            "ontology/youtube/newcomer-income-cohort.md",
+            "scripts/newcomer-income-audit.mjs",
+            "tests/newcomer-cohort.test.mjs"
           ]
         },
         {
