@@ -129,6 +129,11 @@ try{
     await reach.locator('summary').click();
     assert((await reach.textContent()).includes('Do not sum percentages or device minutes'));
     assert((await reach.textContent()).includes('global monthly distinct viewers: unknown'));
+    const overlap=page.locator('.audience-overlap');
+    assert.equal(await overlap.locator('.audience-overlap-card').count(),5,'Missing topic overlap evidence cards');
+    await overlap.locator('summary').click();
+    assert((await overlap.textContent()).includes('Joint audience size: unknown'));
+    assert((await overlap.textContent()).includes('higher-order intersections'));
     const geo=page.locator('.geographic-scope');
     assert.equal(await geo.locator('.geographic-card').count(),5,'Missing regional source and population branches');
     await geo.locator('summary').click();

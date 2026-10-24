@@ -50,6 +50,10 @@ The [official country eligibility and payments comparison](country-eligibility-p
 
 The [2026 public Data API sampling and quota snapshot](public-api-sampling-budget.md) and [machine protocol](public-api-sampling-budget.json) distinguish the **100 daily search.list calls** in their own default bucket from the **10,000 other-method API units**, as documented by Google on October 15, 2026. Search pages can contain up to 50 result slots, while totalResults is approximate and capped. A synthetic 48-call budget illustrates the arithmetic but **no API queries were executed**, and unique community people, active creators and niche supply remain unknown.
 
+## Unique people and overlapping topic communities
+
+The [joint-audience study protocol](audience-overlap.md), [machine record](audience-overlap.json), [validated accounting module](../../site/audience-overlap.mjs), and [unit tests](../../tests/audience-overlap.test.mjs) prevent adding niche audience estimates as though their populations were disjoint. Without a matched common frame and independently measured intersections, combined community populations remain unknown or, for comparable separately measured groups, bounded rather than exact. All example topic overlaps are still unknown.
+
 ## Researching communities without inventing their sizes
 
 The [public YouTube sampling protocol](public-sampling.md) defines topic inclusion rules, legal data access, stratified sampling, observed channel counts, demographic survey denominators, missingness, and the August 2026 break in public video view-count definitions. It must be followed before treating any topic sample as representative of people or earnings.

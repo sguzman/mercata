@@ -674,3 +674,13 @@ h1 em {font-style:italic;color:var(--accent)}
 .brand-disclosure-surface strong{font-size:13px}
 @media(max-width:800px){.brand-disclosure-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.brand-disclosure-details{padding:15px}.brand-disclosure-examples{grid-template-columns:1fr}}
+
+/* Joint audience estimates require same-person sampling, not naive summation. */
+.audience-overlap{margin:28px 0}
+.audience-overlap-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.audience-overlap-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.audience-overlap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:17px 0}
+.audience-overlap-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.audience-overlap-card h5{font-size:13px;text-transform:capitalize;margin:0 0 8px}
+.audience-overlap-card p{font-size:12px;margin:0}
+@media(max-width:650px){.audience-overlap-details{padding:15px}.audience-overlap-grid{grid-template-columns:1fr}}

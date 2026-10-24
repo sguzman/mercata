@@ -2945,7 +2945,7 @@
           "title": "Publish sensitivity ranges and data gaps",
           "acceptance": "Mark missing demographic and subculture estimates unknown with precise limitations.",
           "weight": 1,
-          "progress": 60,
+          "progress": 68,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/content-policy-risk.json",
@@ -2963,7 +2963,13 @@
             "ontology/youtube/newcomer-income-cohort.json",
             "ontology/youtube/newcomer-income-cohort.md",
             "scripts/newcomer-income-audit.mjs",
-            "tests/newcomer-cohort.test.mjs"
+            "tests/newcomer-cohort.test.mjs",
+            "ontology/youtube/audience-overlap.json",
+            "ontology/youtube/audience-overlap.md",
+            "site/audience-overlap.mjs",
+            "tests/audience-overlap.test.mjs",
+            "tests/site-smoke.mjs",
+            "ontology/youtube/taxonomy.json"
           ]
         },
         {
@@ -2972,7 +2978,7 @@
           "title": "Independent public evidence and taxonomy review",
           "acceptance": "Verify every number's denominator, date, labels, source and sample method.",
           "weight": 1,
-          "progress": 72,
+          "progress": 79,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/content-policy-risk.json",
@@ -2990,7 +2996,13 @@
             "ontology/youtube/source-provenance.md",
             "scripts/source-provenance.mjs",
             "tests/source-provenance.test.mjs",
-            "scripts/audit-youtube-sources.mjs"
+            "scripts/audit-youtube-sources.mjs",
+            "ontology/youtube/audience-overlap.json",
+            "ontology/youtube/audience-overlap.md",
+            "site/audience-overlap.mjs",
+            "tests/audience-overlap.test.mjs",
+            "tests/site-smoke.mjs",
+            "ontology/youtube/taxonomy.json"
           ]
         }
       ]
