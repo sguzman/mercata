@@ -14,7 +14,14 @@
       "source_urls": [
         "https://developers.google.com/youtube/data/reference/rest/v3/videos"
       ],
-      "status": "published_definition"
+      "status": "published_definition",
+      "source_ids": [
+        "view-change-official-blog-2026",
+        "view-change-video-api-2026"
+      ],
+      "semantic_bridge": "ontology/youtube/view-definition-break.json",
+      "income_effect_estimate": null,
+      "raw_view_growth_adjustment": null
     },
     {
       "id": "search-api-quota-snapshot-2026",
@@ -51,13 +58,20 @@
     "geographic_scope",
     "sampling_or_access_method",
     "definition_revision",
-    "limitations"
+    "limitations",
+    "video_format",
+    "metric_definition_version",
+    "monetization_or_qualification_basis"
   ],
   "prohibited_inference": [
     "raw_views_to_unique_people",
     "keyword_results_to_subculture_size",
     "channel_subscribers_to_active_viewers",
     "country_ad_reach_to_country_mau",
-    "creator_rpm_to_creator_profit"
+    "creator_rpm_to_creator_profit",
+    "pre_post_public_view_increase_to_engaged_growth",
+    "public_video_starts_to_ypp_qualification",
+    "thumbnail_impressions_to_viewers",
+    "raw_video_start_counts_to_creator_ad_profit"
   ]
 }
