@@ -215,6 +215,11 @@ try{
     assert((await people.textContent()).includes('rolling 28-day'));
     assert((await people.textContent()).includes('up to 90 days'));
     assert((await people.textContent()).includes('worldwide person census'));
+    const seasonality=page.locator('.children-seasonality');
+    assert.equal(await seasonality.locator('.children-seasonality-card').count(),3,'Missing bounded child viewing yearly observations');
+    await seasonality.locator('summary').click();
+    assert((await seasonality.textContent()).includes('7h 07m'));
+    assert((await seasonality.textContent()).includes('seasonal effects: unknown'));
     const genderEvidence=page.locator('.gender-community-evidence');
     assert.equal(await genderEvidence.locator('.gender-community-card').count(),2,'Missing aggregate gender data limits');
     await genderEvidence.locator('summary').click();

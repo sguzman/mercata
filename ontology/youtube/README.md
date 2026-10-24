@@ -283,6 +283,10 @@ The [health and fitness subculture study](health-fitness-content.md) and [machin
 
 The [finance-content classification](finance-content-taxonomy.md) and [eight-family machine record](finance-content-taxonomy.json) separate basic financial literacy, personal-debt explanation, investment concepts, business operations, comparative financial products, sponsored offers, creator-owned products, and securities-tip promotion. They distinguish YouTube advertisement/external-link rules from U.S. FTC material-connection duties and SEC investor-fraud warnings. A topic label is not evidence of a creator's legal status, fraud, profit or region-specific licensing obligations. Audiences, creator populations and niche earnings remain unknown.
 
+## Children's viewing: annual UK benchmark and unmeasured seasonality
+
+The [2025 UK age-specific YouTube viewing baseline](children-media-seasonality.md) and [machine study](children-media-seasonality.json) record Ofcom/Barb in-home weekly averages (ages 4–15: 7h07, ages 4–9: 6h47, ages 10–15: 7h27), alongside year-over-year changes. They **do not** establish school-holiday, summer or winter seasonal effects. Five time-series and child-privacy-safe sampling questions remain open, and all seasonal effect estimates are null. No child profiles or watch histories are collected.
+
 ## Gender-associated communities: aggregate observation versus identity inference
 
 The [bounded descriptive analysis](gender-community-evidence.md) and [machine study](gender-community-evidence.json) separate YouTube owner Analytics gender-reporting categories (logged-in users, privacy suppression) from a selected 2025 U.S. female gaming-engagement panel. Category labels and commercial panel segmentation do not validate any individual's identity, provide complete signed-out demographics, or establish global gender-by-genre audiences. Suppressed data remain unknown, not zero. No personally identifying user histories are collected.

@@ -121,6 +121,8 @@ A [2026 publishing cadence study](ontology/youtube/publishing-cadence-evidence.m
 
 The [source-bounded 2026 sponsorship category study](ontology/youtube/sponsor-category-evidence.md) compares long-form branded-read detections by video type without interpreting them as paid contracts, creator revenue or platform-wide sponsor demand. Two other commercial data sources are included with separate denominators and reporting periods.
 
+The [children's viewing seasonality protocol](ontology/youtube/children-media-seasonality.md) distinguishes UK aggregate 2025 viewing-time benchmarks from unknown school-holiday, summer and winter effects. It forbids deriving seasonality from annual growth or collecting any child-level histories.
+
 The [descriptive gender/community evidence study](ontology/youtube/gender-community-evidence.md) distinguishes owner-only logged-in demographic categories and privacy suppression from an age-bounded commercial Gaming/Beauty panel. It makes no inferences about individual identity or complete audience composition.
 
 The [sponsorship and disclosure research](ontology/youtube/brand-disclosure-risk.md) distinguishes YouTube's branded-content declaration from U.S. FTC endorsement guidance, including the September 2026 rollout of refreshed labels and demographic-region controls. Platform disclosure tools are not a blanket legal safe harbor; non-U.S. requirements and typical sponsorship profits remain unmeasured.

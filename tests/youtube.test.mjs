@@ -181,6 +181,22 @@ test('Gaming and beauty report keeps selected vendor overlap separate from a nat
  assert(Object.values(panel.unmeasured).every(x=>x===null));
  assert.equal(panel.comparability.exact_union_unique_people,null);
 });
+test('Child viewing yearly averages never become an inferred seasonal holiday lift',async()=>{
+ const [model,dossier]=await Promise.all([load('ontology/youtube/children-media-seasonality.json'),load('specimens/youtube.json')]);
+ const sources=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'children_media_seasonality_method_and_annual_baseline');
+ assert(model.sources.every(id=>sources.has(id)));
+ assert.deepEqual(model.yearly_context.map(x=>x.minutes),[427,407,447]);
+ assert.deepEqual(model.yearly_context.map(x=>x.year_on_year_percent),[8,7,9]);
+ assert(model.yearly_context.every(x=>x.seasonal_contrast_measured===false&&sources.has(x.source_id)));
+ assert.equal(model.seasonal_questions.length,5);
+ assert(model.seasonal_questions.every(x=>x.measured_relative_change===null&&x.source_ids.every(id=>sources.has(id))));
+ assert.equal(model.device_context.television_share_percent,53);
+ assert.equal(model.device_context.not_seasonality,true);
+ assert(model.inferential_gates.filter(x=>x.passed).length===1);
+ assert(Object.values(model.unknowns).every(v=>v===null));
+});
+
 test('Gender-associated research preserves reporting privacy and missing denominators',async()=>{
  const [m,dossier]=await Promise.all([load('ontology/youtube/gender-community-evidence.json'),load('specimens/youtube.json')]);
  const ids=new Set(dossier.evidence.map(x=>x.id));

@@ -1046,3 +1046,15 @@ h1 em {font-style:italic;color:var(--accent)}
 .gender-community-card h5{font-size:13px;text-transform:capitalize;margin:0 0 7px}
 .gender-community-card p{font-size:12px;margin:0}
 @media(max-width:650px){.gender-community-details{padding:15px}.gender-community-grid{grid-template-columns:1fr}}
+
+/* Annual child-viewing observations are not inferred holiday effects. */
+.children-seasonality{margin:28px 0}
+.children-seasonality-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.children-seasonality-details>summary{cursor:pointer;font-size:15px;font-weight:800}
+.children-seasonality-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:17px 0}
+.children-seasonality-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.children-seasonality-card h5{font-size:13px;margin:0 0 10px}
+.children-seasonality-value{font:24px Georgia,serif;font-variant-numeric:tabular-nums}
+.children-seasonality-card p{font-size:12px;margin:8px 0 0}
+@media(max-width:850px){.children-seasonality-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.children-seasonality-details{padding:15px}}
