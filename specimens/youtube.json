@@ -1516,6 +1516,72 @@
       "evidence_class": "official_us_social_media_influencer_disclosure_guidance",
       "license": "Public federal agency guidance linked; paraphrased without copying third-party artwork",
       "notes": "Source explains in-video audiovisual disclosures, repeating livestream notices and U.S. consumer reach from posts made abroad."
+    },
+    {
+      "id": "yt-oct-2026-hijack-pause",
+      "url": "https://support.google.com/youtube/blog/473851650/introducing-temporary-feature-pause-for-hacked-accounts",
+      "publisher": "TeamYouTube Community",
+      "title": "Introducing temporary feature pause for hacked accounts",
+      "retrieved_at": "2026-10-23",
+      "published_at": "2026-10-21",
+      "evidence_class": "dated_first_party_channel_security_announcement",
+      "license": "Linked official notice, independently summarized",
+      "notes": "October 21 2026 announcement of automated temporary restrictions, typically 24-hour review and stated continued viewer access and monetization status."
+    },
+    {
+      "id": "yt-hacked-channel-recovery-2026",
+      "url": "https://support.google.com/youtube/answer/76187?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Recover a hacked YouTube channel",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_google_account_first_recovery_guidance",
+      "license": "Official help linked, independently described",
+      "notes": "Google Account recovery precedes channel cleanup and access security; currently describes a nine-month potential hacking support window, not guaranteed recovery."
+    },
+    {
+      "id": "yt-secure-channel-2026",
+      "url": "https://support.google.com/youtube/answer/9701986?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Secure your YouTube channel",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_channel_security_protections",
+      "license": "Official help linked and paraphrased",
+      "notes": "Malware scans, passkey-based 2-Step Verification and account recovery planning, without storing account details."
+    },
+    {
+      "id": "yt-live-chat-moderation-2026",
+      "url": "https://support.google.com/youtube/answer/9826490?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Moderate live chat",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_live_chat_moderation_controls",
+      "license": "Official help linked and independently summarized",
+      "notes": "Chat hold tiers, channel moderators, words, slow mode and hidden users, with current UI-specific and role requirements."
+    },
+    {
+      "id": "yt-harassment-rules-2026",
+      "url": "https://support.google.com/youtube/answer/2802268?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Harassment and cyberbullying policies",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_moderation_policy_and_reporting",
+      "license": "Official public policy linked and independently summarized",
+      "notes": "Policy disallows certain threats, doxxing and coordinated abuse, with additional restrictions for minors; does not quantify prevalence."
+    },
+    {
+      "id": "yt-identity-complaint-2026",
+      "url": "https://support.google.com/youtube/answer/2801895?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Protecting your identity: privacy guidelines",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_privacy_complaint_and_synthetic_likeness_process",
+      "license": "Official help linked, summarized without collecting private complaints",
+      "notes": "Privacy complaints can concern exposure of private info and unauthorized realistic synthetic likeness; no guarantee of removal."
     }
   ],
   "claims": [
@@ -2949,6 +3015,48 @@
       "observed_at": "2026-10-23",
       "confidence": "high",
       "limitations": "Ad revenue still depends on eligibility, advertiser suitability and ad demand; removal from the Kids app is not a claim that the entire video is deleted from YouTube."
+    },
+    {
+      "id": "yt-hijack-pause-2026-account-continuity",
+      "text": "TeamYouTube's October 21, 2026 announcement describes temporary account-action restrictions when unauthorized activity is suspected, while existing videos remain viewable and monetization status is not changed by the security pause.",
+      "source_ids": [
+        "yt-oct-2026-hijack-pause"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "The announced security review is typically within 24 hours, not a fixed recovery deadline; triggering frequency, false positives, and rollout coverage are unknown."
+    },
+    {
+      "id": "yt-account-first-channel-recovery",
+      "text": "YouTube's hacked-channel Help requires recovering and securing the associated Google Account before cleaning up unauthorized channel changes, and currently notes a nine-month window for potential hijacking-support access.",
+      "source_ids": [
+        "yt-hacked-channel-recovery-2026",
+        "yt-secure-channel-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Nine months concerns support/data retention, not a guaranteed appeal or outcome; authentication choices and individual cases vary."
+    },
+    {
+      "id": "yt-live-chat-moderation-does-not-imply-risk-elimination",
+      "text": "YouTube documents live-chat restricted participation, blocked words, moderator actions, slow mode, held messages, and hiding users; these controls do not by themselves establish harassment prevalence or complete safety.",
+      "source_ids": [
+        "yt-live-chat-moderation-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Actual moderation results, community behavior, role permissions and the prevalence of harmful content are unmeasured."
+    },
+    {
+      "id": "yt-harassment-and-privacy-complaints",
+      "text": "YouTube prohibits specified harassment behaviors including some threats, disclosure of non-public personal information, and coordinated abuse, and separately offers privacy complaint procedures for certain unauthorized or realistic synthetic likeness content.",
+      "source_ids": [
+        "yt-harassment-rules-2026",
+        "yt-identity-complaint-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Not every harmful interaction necessarily violates published platform rules or produces a successful removal; no individual victims or reports are profiled."
     }
   ],
   "observations": [],

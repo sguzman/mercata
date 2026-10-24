@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "creator_safety_and_account_continuity",
+  "as_of": "2026-10-23",
+  "status": "official_procedures_documented_not_incidence_measured",
+  "research_population": "Public YouTube channel operators and community moderators as described by official platform documents; not a victim survey or individual case audit.",
+  "modules": [
+    {
+      "id": "comment_and_live_moderation",
+      "title": "Moderating participation",
+      "source_ids": [
+        "yt-live-chat-moderation-2026"
+      ],
+      "controls": [
+        "subscriber_or_member_eligible_chat_moderation",
+        "blocked_words",
+        "basic_or_strict_auto_hold",
+        "slow_mode",
+        "trusted_moderators",
+        "hidden_users",
+        "message_timeouts"
+      ],
+      "constraints": "Settings, moderator roles and available surfaces differ; no control ensures all abusive messages are prevented.",
+      "population_count": null,
+      "harassment_incidents": null
+    },
+    {
+      "id": "policy_reports",
+      "title": "Harassment and public-content reporting",
+      "source_ids": [
+        "yt-harassment-rules-2026"
+      ],
+      "controls": [
+        "report_violating_comment_or_video",
+        "report_channel_for_multiple_violations",
+        "understand_stricter_minor_protections"
+      ],
+      "constraints": "Reports are evaluated under YouTube policy; removal odds, response times and legal outcomes cannot be inferred.",
+      "population_count": null,
+      "harassment_incidents": null
+    },
+    {
+      "id": "privacy_and_likeness",
+      "title": "Personal privacy and likeness complaints",
+      "source_ids": [
+        "yt-identity-complaint-2026"
+      ],
+      "controls": [
+        "privacy_complaint_process",
+        "realistic_synthetic_likeness_complaint"
+      ],
+      "constraints": "The complainant's facts and eligibility matter; do not store private addresses, screenshots of accounts, financial data or identity credentials.",
+      "population_count": null,
+      "harassment_incidents": null
+    },
+    {
+      "id": "account_recovery",
+      "title": "Recovering unauthorized account access",
+      "source_ids": [
+        "yt-hacked-channel-recovery-2026",
+        "yt-secure-channel-2026",
+        "yt-studio-channel-permissions"
+      ],
+      "controls": [
+        "recover_associated_google_account_first",
+        "remove_unauthorized_channel_changes",
+        "review_channel_delegate_roles",
+        "passkey_or_strong_2_step_verification",
+        "malware_scan",
+        "plan_recovery_options"
+      ],
+      "constraints": "Recovery and removal of abuse require separate processes; potential hacking support is limited by published retention terms.",
+      "population_count": null,
+      "harassment_incidents": null
+    }
+  ],
+  "dated_changes": [
+    {
+      "id": "temporary_feature_pause_2026",
+      "announced_at": "2026-10-21",
+      "source_ids": [
+        "yt-oct-2026-hijack-pause"
+      ],
+      "reason": "Suspicious or unauthorized activity detected",
+      "restricted_actions": [
+        "create_or_edit_videos_and_shorts",
+        "start_live_stream",
+        "create_or_add_playlists",
+        "upload_thumbnails",
+        "change_private_video_to_public_or_unlisted"
+      ],
+      "unrestricted_viewer_behavior": [
+        "view_existing_videos",
+        "interact_with_existing_channel"
+      ],
+      "claimed_monetization_status_unchanged": true,
+      "review_timing_typical_hours": 24,
+      "guaranteed_max_hours": null,
+      "review_outcome_known": false,
+      "notes": "Automated pause on detection is a protective product control, not proof an account was compromised or a final penalty. Typical review time is not a service guarantee."
+    }
+  ],
+  "recovery_sequence": [
+    {
+      "id": "recover_google_account",
+      "order": 1,
+      "source_ids": [
+        "yt-hacked-channel-recovery-2026"
+      ],
+      "note": "Secure the owning Google Account and all associated delegates using official recovery flows"
+    },
+    {
+      "id": "reverse_channel_changes",
+      "order": 2,
+      "source_ids": [
+        "yt-hacked-channel-recovery-2026"
+      ],
+      "note": "Review unauthorized videos, account links, descriptions and strikes"
+    },
+    {
+      "id": "reduce_repeat_access_risks",
+      "order": 3,
+      "source_ids": [
+        "yt-hacked-channel-recovery-2026",
+        "yt-secure-channel-2026",
+        "yt-studio-channel-permissions"
+      ],
+      "note": "Use approved role-scoped permissions instead of sharing login credentials"
+    }
+  ],
+  "hacking_support_retention_months_reported": 9,
+  "support_limitations": "Official Help states potential hacked-channel support is limited to incidents within nine months due to retention. This is not a guaranteed channel recovery or a universal appeal deadline.",
+  "important_separations": [
+    "Product security pause is not the same as a Community Guidelines strike, permanent termination, account ban or loss of monetization status.",
+    "Notification in Studio and typical 24-hour security review are not proof of a compromised account or guaranteed restoration time.",
+    "Viewer access to existing uploads can continue even while the account owner cannot publish new videos during the pause.",
+    "Google Account security, YouTube channel delegate permissions, and Studio moderation settings protect different attack surfaces.",
+    "Platform content reports, privacy complaints, and hacked-account recovery have distinct eligibility and appeal paths.",
+    "Never infer harassment, political affiliation, or victim status from public user names, comments, language, gender or audience demographics."
+  ],
+  "unmeasured": {
+    "hijack_incidence": null,
+    "safety_pause_false_positive_rate": null,
+    "review_actual_duration_distribution": null,
+    "moderation_false_positive_rate": null,
+    "moderation_missed_abuse_rate": null,
+    "creator_moderation_labor_hours": null,
+    "recovery_success_rate": null,
+    "privacy_complaint_resolution_rate": null,
+    "financial_loss_from_account_takeover": null
+  }
+}
