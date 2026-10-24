@@ -1,6 +1,6 @@
 // Public source metadata audit. Does not fetch external pages or assess truth of claims.
 export const canonicalSourceUrl = url => typeof url==='string'
-  ?url.trim().replace(/[?#].*$/,'').replace(/\/$/,'').toLowerCase()
+  ?url.trim().replace(/[?#].*$/,'').replace(/\/$/,'').replace(/^https:\/\/([^/]+)/i,(_,host)=>'https://'+host.toLowerCase())
   :'';
 
 export function auditPublicSources(evidence,claims,registry){
