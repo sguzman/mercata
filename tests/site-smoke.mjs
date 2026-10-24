@@ -171,11 +171,12 @@ try{
     assert.equal(await page.locator('.competition-traffic-item').count(),6,'Missing observed traffic shares');
     assert.equal(await page.locator('.academic-study').count(),4,'Missing scoped academic studies');
     const otherIncome=page.locator('.cross-platform-income');
-    assert.equal(await otherIncome.locator('.cross-platform-income-card').count(),2,'Missing selected cross-platform income studies');
+    assert.equal(await otherIncome.locator('.cross-platform-income-card').count(),3,'Missing selected cross-platform income studies');
     await otherIncome.locator('summary').first().click();
     assert((await otherIncome.textContent()).includes('not representative YouTube creator earnings'));
     assert((await otherIncome.textContent()).includes('same underlying respondents'));
     assert((await otherIncome.textContent()).includes('Typical YouTube income: unknown'));
+    assert((await otherIncome.textContent()).includes('5,095 respondents'),'Missing bounded CreatorIQ 2026 survey');
 
     const newcomer=page.locator('.newcomer-income');
     assert.equal(await newcomer.locator('.newcomer-gate').count(),5,'Missing newcomer income methodology gates');
