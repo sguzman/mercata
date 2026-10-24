@@ -2627,6 +2627,17 @@
       "evidence_class": "commercial_vendor_indexed_360_day_channel_cohort",
       "license": "Published aggregate counts independently summarized and arithmetic tested; no bulk extraction or graphics copying",
       "notes": "32,926,088 public indexed channels under 1k subs with >=1 public video at 360-day baseline and nonnegative net video count change. No new-entrant, causal upload or YPP claims."
+    },
+    {
+      "id": "tariq-2026-first-upload-vloggers",
+      "url": "https://arxiv.org/abs/2609.32925",
+      "publisher": "arXiv / Samiha Tariq",
+      "title": "Skill, Luck, or Imitation? What Actually Pays in Creator Markets",
+      "published_at": "2026-09-26",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "author_preprint_selected_vlog_cold_start_views_and_modeled_ad_value",
+      "license": "Linked preprint, independently paraphrased methods and aggregate statistics; no figures copied",
+      "notes": "Keyword-discovered selected first-upload daily-life vloggers. Modeled $1.61 median advertising value and estimated 185 labor hours are NOT observed payouts or logs; paper does not establish representative all-creator income."
     }
   ],
   "claims": [
@@ -5507,6 +5518,36 @@
       "observed_at": "2026-10-24",
       "confidence": "medium",
       "limitations": "Not new-creator entrants, not a random YouTube channel census; excludes unavailable/negative-count histories. Observational correlation is not an upload cause or YPP eligibility rate."
+    },
+    {
+      "id": "tariq-2026-selected-cold-start-views",
+      "text": "A 2026 research preprint examines 107 keyword-discovered daily-life vlog channels selected by first upload dates between November 2025 and August 2026; 51.4% never reached 1,000 lifetime views by its September snapshot, and 11.2% had three or fewer uploads. This is not a probability sample of all new creators.",
+      "source_ids": [
+        "tariq-2026-first-upload-vloggers"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Author preprint, restricted keyword-discovered vlog genres and variable follow-up; modeled monetary return, estimated labor and event-study association do not verify individual payouts, profit or causal generalization."
+    },
+    {
+      "id": "tariq-2026-implied-not-paid-income",
+      "text": "The preprint reports USD 1.61 median hypothetical long-form advertising value across those 107 channels using an assumed USD 2.30 RPM. Its 185 median work hours use an assumed three labor hours per finished video minute; neither represents observed YouTube payouts, expenses, profit or actual recorded work time.",
+      "source_ids": [
+        "tariq-2026-first-upload-vloggers"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Author preprint, restricted keyword-discovered vlog genres and variable follow-up; modeled monetary return, estimated labor and event-study association do not verify individual payouts, profit or causal generalization."
+    },
+    {
+      "id": "tariq-2026-bounded-hit-association",
+      "text": "In the separately selected 420-channel video-history dataset, the preprint reports 56,419 videos and a roughly 164.2% association between a channel's first breakout and subsequent views, not a randomized causal estimate of earning or an all-channel recommendation formula.",
+      "source_ids": [
+        "tariq-2026-first-upload-vloggers"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Author preprint, restricted keyword-discovered vlog genres and variable follow-up; modeled monetary return, estimated labor and event-study association do not verify individual payouts, profit or causal generalization."
     }
   ],
   "observations": [],

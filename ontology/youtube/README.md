@@ -60,6 +60,10 @@ The [five-surface research study](recommendation-surface-evidence.md), [machine 
 
 The [vendor-indexed channel-size and 360-day milestone study](channel-cohort-observations-2026.md), [machine source tables](channel-cohort-observations-2026.json) and [cohort arithmetic tests](../../tests/channel-cohort-audit.test.mjs) register actual aggregate counts from July and September 2026 vidIQ research. The distinct sample frames and published conditional proportions are not all-creator population estimates, newcomer monetary success probabilities, true upload frequencies, or evidence of causal uploading effects; the public dossier shows this distinction.
 
+## First-upload observed views and hypothetical monetary equivalents
+
+The [selected 2026 first-upload vlogging preprint review](first-upload-vlog-study-2026.md), [machine record](first-upload-vlog-study-2026.json) and [regression tests](../../tests/first-upload-vlog-study.test.mjs) distinguish measured public views from modeled ad-value scenarios and assumed hours. This is not verified creator pay, a sampled zero-income rate, or a general YouTube business-profit estimate.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

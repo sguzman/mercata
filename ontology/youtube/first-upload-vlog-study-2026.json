@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "first_upload_vlog_attention_and_modeled_economics",
+  "as_of": "2026-10-24",
+  "source_id": "tariq-2026-first-upload-vloggers",
+  "publication_stage": "unreviewed_preprint",
+  "status": "public_views_observed_payouts_and_work_hours_unobserved",
+  "sampling": {
+    "genre": "selected daily-life vlogs found via search queries",
+    "start_window": "2025-11 through 2026-08",
+    "view_snapshots": "2026-09-16 through 2026-09-20",
+    "search_candidates": 10911,
+    "eligible_format_and_date": 929,
+    "full_histories_channels": 420,
+    "full_histories_videos": 56419,
+    "first_upload_cohort_channels": 107,
+    "all_youtube_creators_representative": false,
+    "uniform_followup": false
+  },
+  "cold_start_public_views": {
+    "below_1000_lifetime_views_percent": 51.4,
+    "three_or_fewer_uploads_percent": 11.2,
+    "denominator_channels": 107,
+    "public_views_not_unique_people": true,
+    "actual_ad_payout_usd": null
+  },
+  "earnings_value_model": {
+    "modeled_not_paid": true,
+    "longform_rpm_usd_per_1000": 2.3,
+    "assumed_labor_hours_per_finished_minute": 3,
+    "median_modeled_longform_value_usd": 1.61,
+    "median_assumed_hours": 185,
+    "median_assumed_hourly_usd": 0.01,
+    "share_below_100_modeled_usd_percent": 79.4,
+    "actual_earnings_usd": null,
+    "actual_labor_hours": null,
+    "actual_cash_costs": null,
+    "verified_ypp_entry": null
+  },
+  "modeled_sensitivity": [
+    {
+      "longform_rpm_usd": 1,
+      "shorts_rpm_usd": null,
+      "median_implied_value_usd": 0.7
+    },
+    {
+      "longform_rpm_usd": 2.3,
+      "shorts_rpm_usd": null,
+      "median_implied_value_usd": 1.61
+    },
+    {
+      "longform_rpm_usd": 4,
+      "shorts_rpm_usd": null,
+      "median_implied_value_usd": 2.81
+    },
+    {
+      "longform_rpm_usd": 2.3,
+      "shorts_rpm_usd": 0.15,
+      "median_implied_value_usd": 9.08
+    }
+  ],
+  "separate_attention_result": {
+    "sample_complete_history_channels": 420,
+    "video_history_n": 56419,
+    "content_features_n": 36,
+    "max_within_channel_r2": 0.011,
+    "breakout_following_video_association_percent": 164.2,
+    "random_assigned_breakout": false
+  },
+  "population_comparison": {
+    "vidiq_below_1000_cohort_same_population": false,
+    "source_ids": [
+      "tariq-2026-first-upload-vloggers",
+      "vidiq-1000-subscribers-2026"
+    ],
+    "reason": "107 keyword-selected first-upload vloggers versus 32.9m vendor-indexed baseline channels with at least one public video; selection frames and time periods differ"
+  },
+  "unmeasured": {
+    "median_actual_payout": null,
+    "zero_actual_earner_share": null,
+    "net_creator_profit": null,
+    "verified_creator_hours": null,
+    "all_creator_population_distribution": null
+  }
+}
