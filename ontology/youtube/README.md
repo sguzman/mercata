@@ -92,6 +92,10 @@ The [fraud/phishing and fake-engagement study](creator-fraud-security.md), [mach
 
 The [merchant order break-even method](break-even-scenario.md), [machine assumption contract](break-even-scenario.json) and [tested calculator](../../site/scenario.mjs) keep fixed cash costs, refund fraction, payment processor charges, attempted-order variable costs, time and chosen labor value separate. The website requires user-supplied blank inputs and marks outputs hypothetical, not a measured creator-income forecast.
 
+## Dated policy changes and metric breaks
+
+The [source-aligned change chronology](policy-measurement-change-crosswalk.md), [machine event record](policy-measurement-change-crosswalk.json) and [date-precision tests](../../tests/policy-measurement-change-crosswalk.test.mjs) distinguish Shorts eligibility, YPP originality guidance, 2026 Analytics rollout, public-view counting revision and advertiser rule changes. No ranking coefficient or causal income effect is claimed.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

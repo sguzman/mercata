@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "dated_policy_and_metric_change_crosswalk",
+  "as_of": "2026-10-24",
+  "status": "sourced_announcements_not_verified_algorithm_rank_changes",
+  "events": [
+    {
+      "date": "2024-10-15",
+      "precision": "day",
+      "id": "shorts_3_min_standard",
+      "kind": "shorts_format_classification",
+      "source_ids": [
+        "shorts-three-minutes"
+      ]
+    },
+    {
+      "date": "2025-07-15",
+      "precision": "day",
+      "id": "inauthentic_ypp_clarification",
+      "kind": "monetization_eligibility",
+      "source_ids": [
+        "yt-ypp-inauthentic-qa-2025",
+        "channel-policy"
+      ]
+    },
+    {
+      "date": "2026-01",
+      "precision": "month",
+      "id": "2026-january-controversial-issues",
+      "kind": "advertiser_suitability_guidance",
+      "source_ids": [
+        "yt-ads-policy-updates-2026",
+        "yt-ads-guidelines-2026"
+      ]
+    },
+    {
+      "date": "2026-03",
+      "precision": "month",
+      "id": "2026-march-young-appearing-distress",
+      "kind": "advertiser_suitability_guidance",
+      "source_ids": [
+        "yt-ads-policy-updates-2026"
+      ]
+    },
+    {
+      "date": "2026-07",
+      "precision": "month",
+      "id": "studio_trends_rollout",
+      "kind": "creator_analytics_ui_rollout",
+      "source_ids": [
+        "yt-studio-trends-demand-2026"
+      ]
+    },
+    {
+      "date": "2026-08",
+      "precision": "month",
+      "id": "2026-august-death-reporting",
+      "kind": "advertiser_suitability_guidance",
+      "source_ids": [
+        "yt-ads-policy-updates-2026",
+        "yt-ads-guidelines-2026"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "precision": "day",
+      "id": "video_playback_start_metric",
+      "kind": "public_view_definition_revision",
+      "source_ids": [
+        "view-change-official-blog-2026"
+      ]
+    },
+    {
+      "date": "2026-09",
+      "precision": "month",
+      "id": "2026-september-drugs-fiction",
+      "kind": "advertiser_suitability_guidance",
+      "source_ids": [
+        "yt-ads-policy-updates-2026",
+        "yt-ads-guidelines-2026"
+      ]
+    },
+    {
+      "date": "2026-09",
+      "precision": "month",
+      "id": "2026-september-game-violence",
+      "kind": "advertiser_suitability_guidance",
+      "source_ids": [
+        "yt-ads-policy-updates-2026",
+        "yt-ads-guidelines-2026"
+      ]
+    },
+    {
+      "date": "2026-10",
+      "precision": "month",
+      "id": "2026-october-public-interest",
+      "kind": "advertiser_suitability_guidance",
+      "source_ids": [
+        "yt-ads-policy-updates-2026"
+      ]
+    }
+  ],
+  "links_to_existing_ledgers": [
+    "ontology/youtube/measurement-history.json",
+    "ontology/youtube/advertiser-policy-history.json"
+  ],
+  "event_rules": [
+    "Keep YYYY-MM exact-source months separate from YYYY-MM-DD exact days",
+    "Separate Shorts format recognition from ranking preferences",
+    "YPP originality guidance is not the same as per-video ad suitability",
+    "Playback-start view definition revision is not observed unique-user or revenue growth",
+    "No ranking weight or measured creator earnings lift inferred from policy publishing"
+  ],
+  "real_ranking_weight_change_observed": false,
+  "actual_creator_policy_revenue_effect": null,
+  "empirical_content_rank_lift": null,
+  "unmeasured": {
+    "channel_specific_policy_changes": null,
+    "ranking_factor_revision_coefficients": null,
+    "creator_profit_change": null,
+    "pre_post_metric_comparable_views": null
+  }
+}
