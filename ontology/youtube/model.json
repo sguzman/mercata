@@ -1386,6 +1386,54 @@
       "unit": "eligibility_rule",
       "access": "official_announced_policy",
       "measured_value": null
+    },
+    {
+      "id": "advertiser_suitability_decision",
+      "group": "economics",
+      "definition": "Per-video ad suitability ruling; distinct from enrollment in the creator revenue-sharing program.",
+      "unit": "decision",
+      "access": "official_policy_or_research_hypothesis",
+      "measured_value": null
+    },
+    {
+      "id": "advertiser_policy_revision",
+      "group": "institutions",
+      "definition": "Dated update to ad-suitability policy or its contextual examples, which may change eligibility without guaranteeing revenue.",
+      "unit": "policy_event",
+      "access": "official_policy_or_research_hypothesis",
+      "measured_value": null
+    },
+    {
+      "id": "human_ad_review",
+      "group": "institutions",
+      "definition": "Human review that can be requested in supported cases following an automated advertiser suitability decision.",
+      "unit": "review_process",
+      "access": "official_policy_or_research_hypothesis",
+      "measured_value": null
+    },
+    {
+      "id": "journalistic_public_interest_context",
+      "group": "formats",
+      "definition": "Editorial context for news, governmental proceedings, documentary or public-interest reporting, not a blanket exemption.",
+      "unit": "content_context",
+      "access": "official_policy_or_research_hypothesis",
+      "measured_value": null
+    },
+    {
+      "id": "gaming_graphic_introduction",
+      "group": "formats",
+      "definition": "Graphic gaming content in the opening seconds, with date-specific ad-suitability context.",
+      "unit": "content_context",
+      "access": "official_policy_or_research_hypothesis",
+      "measured_value": null
+    },
+    {
+      "id": "genre_level_rpm_assumption",
+      "group": "economics",
+      "definition": "Unsupported assumption that a broad content genre has a fixed or causally updated creator ad rate.",
+      "unit": "unverified_rate",
+      "access": "official_policy_or_research_hypothesis",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -2168,6 +2216,51 @@
       "subject": "monetized_channel",
       "predicate": "may_be_in",
       "object": "existing_ypp_partner_cohort"
+    },
+    {
+      "subject": "advertiser_policy_revision",
+      "predicate": "may_change",
+      "object": "advertiser_suitability_decision"
+    },
+    {
+      "subject": "human_ad_review",
+      "predicate": "may_reconsider",
+      "object": "advertiser_suitability_decision"
+    },
+    {
+      "subject": "journalistic_public_interest_context",
+      "predicate": "may_inform",
+      "object": "advertiser_suitability_decision"
+    },
+    {
+      "subject": "gaming_graphic_introduction",
+      "predicate": "may_inform",
+      "object": "advertiser_suitability_decision"
+    },
+    {
+      "subject": "advertiser_policy_revision",
+      "predicate": "does_not_establish",
+      "object": "genre_level_rpm_assumption"
+    },
+    {
+      "subject": "advertiser_suitability_decision",
+      "predicate": "is_not_equivalent_to",
+      "object": "monetized_channel"
+    },
+    {
+      "subject": "advertiser_suitability_decision",
+      "predicate": "is_not_equivalent_to",
+      "object": "creator_rpm"
+    },
+    {
+      "subject": "advertiser_policy_revision",
+      "predicate": "may_affect",
+      "object": "journalistic_public_interest_context"
+    },
+    {
+      "subject": "advertiser_policy_revision",
+      "predicate": "may_affect",
+      "object": "gaming_graphic_introduction"
     }
   ],
   "rules": [
@@ -2204,7 +2297,9 @@
     "Children's music and child-directed animation are overlapping content classifications, not interchangeable populations or proof of a viewer's age.",
     "October 2026 YPP application thresholds and announced February 2027 rules must remain separately dated and scoped to new or existing members.",
     "The rolling 10-million qualified Shorts requirement for continuing YPP members is distinct from the announced 20-million threshold for new YPP ads/Premium applicants.",
-    "Premium and Premium Lite net subscription pools do not imply fixed per-view payouts; their allocation bases differ."
+    "Premium and Premium Lite net subscription pools do not imply fixed per-view payouts; their allocation bases differ.",
+    "Ads suitability on a specific video, participation in YPP, and earning a nonzero ad payout are separate decisions.",
+    "Monthly advertiser guideline revisions are policy observations, not genre-wide income effects or viewer-demographic evidence."
   ],
-  "ontology_version": "2.1"
+  "ontology_version": "2.2"
 }
