@@ -66,6 +66,33 @@ test('Multilingual YouTube product rules distinguish language, country and selec
   assert.equal(model.measurement_design.median_income_lift,null);
 });
 
+test('August 2026 public first-frame view definitions never imply engaged or paid views',async()=>{
+  const [bridge,history,measurements,dossier]=await Promise.all([
+    load('ontology/youtube/view-definition-break.json'),
+    load('ontology/youtube/measurement-history.json'),
+    load('ontology/youtube/measurements.json'),
+    load('specimens/youtube.json')
+  ]);
+  const sources=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(bridge.effective_date,'2026-08-24');
+  assert.equal(bridge.measurement_levels.length,8);
+  assert.equal(bridge.format_applicability.length,4);
+  assert.deepEqual(bridge.measurement_levels.filter(x=>x.public_video_count_equivalent).map(x=>x.id),['public_view']);
+  assert(bridge.measurement_levels.every(x=>x.source_ids.length &&
+    x.source_ids.every(id=>sources.has(id))));
+  assert.equal(bridge.api_revision.public_api_exposes_engaged_equivalent,false);
+  assert(bridge.format_applicability.every(x=>x.view_count_first_frame_from==='2026-08-24' &&
+    x.conversion_from_public_to_engaged===null));
+  assert.equal(bridge.comparison_protocol.conversion_factor_public_to_engaged,null);
+  assert.equal(bridge.comparison_protocol.causal_effect_on_creator_earnings,null);
+  assert.equal(bridge.comparison_protocol.program_qualification_change_due_to_definition,null);
+  assert(history.events.some(x=>x.id==='video-count-playback-start-2026' &&
+    x.semantic_bridge==='ontology/youtube/view-definition-break.json'));
+  const metricIds=new Set(measurements.metrics.map(x=>x.id));
+  assert(['public_video_playback_start','ypp_qualified_short_view',
+    'ypp_qualified_watch_hours','thumbnail_impression_event'].every(id=>metricIds.has(id)));
+});
+
 test('YouTube demographics have explicit percentage type',async()=>{
   const record=await load('specimens/youtube.json');
   for(const group of record.audience_research.demographics){
