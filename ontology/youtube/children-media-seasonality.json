@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "children_media_seasonality_method_and_annual_baseline",
+  "as_of": "2026-10-24",
+  "status": "annual_and_intraday_context_not_a_verified_holiday_seasonality_series",
+  "scope": "Aggregate UK YouTube viewing among ages 4–15 as observed by Barb/Ofcom, not children globally and not a children's genre-only estimate",
+  "sources": [
+    "ofcom-children-parents-media-2026",
+    "barb-uk-screen-share-2025"
+  ],
+  "yearly_context": [
+    {
+      "id": "uk_2025_ages_4_15",
+      "year": 2025,
+      "age": "4–15",
+      "geography": "United Kingdom",
+      "unit": "minutes_per_child_per_week",
+      "minutes": 427,
+      "year_on_year_percent": 8,
+      "source_id": "ofcom-children-parents-media-2026",
+      "population": "In-home YouTube viewing over connected devices; Barb measurement",
+      "seasonal_contrast_measured": false
+    },
+    {
+      "id": "uk_2025_ages_4_9",
+      "year": 2025,
+      "age": "4–9",
+      "geography": "United Kingdom",
+      "unit": "minutes_per_child_per_week",
+      "minutes": 407,
+      "year_on_year_percent": 7,
+      "source_id": "ofcom-children-parents-media-2026",
+      "population": "In-home YouTube viewing on connected devices; Barb measurement",
+      "seasonal_contrast_measured": false
+    },
+    {
+      "id": "uk_2025_ages_10_15",
+      "year": 2025,
+      "age": "10–15",
+      "geography": "United Kingdom",
+      "unit": "minutes_per_child_per_week",
+      "minutes": 447,
+      "year_on_year_percent": 9,
+      "source_id": "ofcom-children-parents-media-2026",
+      "population": "In-home YouTube viewing on connected devices; Barb measurement",
+      "seasonal_contrast_measured": false
+    }
+  ],
+  "device_context": {
+    "source_id": "barb-uk-screen-share-2025",
+    "period": "2025 Q2",
+    "age": "4–15",
+    "television_share_percent": 53,
+    "denominator": "In-home Wi-Fi YouTube viewing in the UK across measured devices",
+    "not_seasonality": true
+  },
+  "seasonal_questions": [
+    {
+      "id": "term_vs_school_holiday",
+      "comparison": "Same age cohort and territory, term weeks versus school-break weeks in the same year, controlling for bank holidays and duration",
+      "measured_relative_change": null,
+      "source_ids": [
+        "ofcom-children-parents-media-2026"
+      ],
+      "data_requirement": "Official weekly or monthly age-filtered YouTube viewing series, school calendar and comparable device scope"
+    },
+    {
+      "id": "christmas_new_year",
+      "comparison": "Winter holiday versus nonholiday weeks, separate month effects and device availability",
+      "measured_relative_change": null,
+      "source_ids": [
+        "barb-uk-screen-share-2025"
+      ],
+      "data_requirement": "Children's age-specific dated watch-minute series, not year-end popularity rankings"
+    },
+    {
+      "id": "summer_break",
+      "comparison": "Country-specific summer school break versus same-age term dates",
+      "measured_relative_change": null,
+      "source_ids": [
+        "ofcom-children-parents-media-2026"
+      ],
+      "data_requirement": "Same-person or same-frame aggregate seasonal viewing with days observed and school-calendar mapping"
+    },
+    {
+      "id": "halloween_content",
+      "comparison": "Time-series reach of child-directed seasonal video category, not total YouTube viewing",
+      "measured_relative_change": null,
+      "source_ids": [
+        "ofcom-children-parents-media-2026"
+      ],
+      "data_requirement": "Privacy-safe child-directed category classification and dated view-time counts, not isolated viral videos"
+    },
+    {
+      "id": "school_day_intraday",
+      "comparison": "After-school versus daytime windows in the same season, not yearly seasonal change",
+      "measured_relative_change": null,
+      "source_ids": [
+        "barb-uk-screen-share-2025"
+      ],
+      "data_requirement": "Clock-hour chart with actual numeric bins under disclosed device/age window"
+    }
+  ],
+  "inferential_gates": [
+    {
+      "id": "dated_repeat_measurements",
+      "passed": false,
+      "reason": "Annual averages do not supply school-term, summer or winter viewing by date"
+    },
+    {
+      "id": "same_child_age_frame",
+      "passed": false,
+      "reason": "Age-group frames and measures must match; parent surveys and Barb meters cannot be pooled"
+    },
+    {
+      "id": "content_genre_partition",
+      "passed": false,
+      "reason": "YouTube use includes adults' videos watched by children, not only content labeled Made for Kids"
+    },
+    {
+      "id": "privacy_safeguards",
+      "passed": true,
+      "reason": "Study uses regulator aggregate statistics only; no child-level watch history, identities or sensitive attributes"
+    }
+  ],
+  "unknowns": {
+    "school_holiday_relative_lift": null,
+    "summer_vs_term_watch_hours": null,
+    "halloween_kids_genre_views": null,
+    "holiday_daypart_effect": null,
+    "uk_2025_children_monthly_youtube_viewing": null,
+    "global_children_viewing_seasonality": null,
+    "creator_revenue_seasonality_from_children": null
+  },
+  "limitations": [
+    "The 2024–2025 percentage change is year-over-year, not seasonal lift within either year.",
+    "TV-set share and total in-home minutes use compatible age and device scopes but measure different units; do not multiply them into unique viewers.",
+    "Barb in-home broadband viewing excludes some out-of-home and cellular traffic, so not the full viewing population.",
+    "Children's viewing time is not synonymous with Made for Kids content, preschool viewing or educational content.",
+    "Shorts, live and copyright-audio-matched selected channel audiences may be excluded from some provider-specific panels.",
+    "Child location, gender, interests, profiles, watch histories and credentials must not be collected for this research.",
+    "UK measures cannot be projected onto all countries without appropriate independent frames."
+  ]
+}
