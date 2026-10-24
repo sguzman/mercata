@@ -1,6 +1,6 @@
 # YouTube ontology — audiences, content and earning
 
-The independent [machine model](model.json) defines **163 concepts** and **144 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **32 candidate overlapping subcultures**, without pretending their populations have been measured.
+The independent [machine model](model.json) defines **172 concepts** and **156 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **32 candidate overlapping subcultures**, without pretending their populations have been measured.
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
@@ -57,6 +57,10 @@ The [2025 creator-income survey comparison](cross-platform-income-surveys.md) an
 ## Newly monetized small channels
 
 AIR Media-Tech's [297-channel studio-data report](small-channel-income.md) contains six monthly earnings observations and genre and top-viewer-country breakdowns. Its [machine dataset](small-channel-income.json) separates the sample of already monetized channels from the broader platform. It reports a USD 88 median in the first full month and USD 32 in month six, but neither figure is a representative expectation for creators who have not reached monetization. The commercial source's recruitment criteria and sample limitations remain visible alongside every breakdown.
+
+## Announced February 2027 YouTube Partner Program changes
+
+The [time-bounded 2027 YPP policy study](ypp-transition-2027.md) and [machine transition model](ypp-transition-2027.json) separate **October 2026 entry rules** from those taking effect **February 1, 2027**. New ads/Premium applicants will face announced thresholds of **8,000 qualifying public watch hours** (365 days) or **20 million qualifying Shorts views** (90 days), while preexisting YPP members are not subject to the higher entry barrier. A separate **rolling 10-million-qualified-Shorts-view gate** will control continued Shorts revenue sharing, without terminating long-form earning for channels that fall below it. Premium and Premium Lite have separate announced net subscription allocations, not fixed payouts. The 2027 new-applicant subscriber floor was not restated in the announcement and remains unknown. Current 2026 thresholds have not been silently overwritten.
 
 ## Revenue routes and getting paid
 
