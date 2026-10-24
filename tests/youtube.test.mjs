@@ -100,6 +100,30 @@ test('YouTube demographics have explicit percentage type',async()=>{
     assert(group.share_percent>=0&&group.share_percent<=100);
   }
 });
+test('2026 API sampling budget keeps search calls separate and rejects population shortcuts',async()=>{
+  const [budget,dossier]=await Promise.all([
+    load('ontology/youtube/public-api-sampling-budget.json'),load('specimens/youtube.json')
+  ]);
+  const sources=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(budget.documentation_updated_at,'2026-10-15');
+  assert(budget.sources.every(x=>sources.has(x.source_id)));
+  const q=budget.default_quota_snapshot;
+  assert.equal(q.search_list.max_calls_per_day_default,100);
+  assert.equal(q.search_list.cost_units_per_call,1);
+  assert.equal(q.other_endpoints.max_units_per_day_default,10000);
+  assert.equal(q.videos_list.max_ids_per_call,50);
+  assert.equal(q.search_total_results.capped_reported_value,1000000);
+  assert.equal(q.search_total_results.is_approximate,true);
+  const x=budget.synthetic_budget_example;
+  assert.equal(x.strata,x.topic_count*x.regions*x.languages*x.formats);
+  assert.equal(x.estimated_search_calls,x.strata*x.pages_per_stratum);
+  assert.equal(x.max_search_result_slots,x.estimated_search_calls*q.search_list.max_items_per_page);
+  assert.equal(x.claimed_observed_videos,null);
+  assert.equal(x.claimed_unique_viewers,null);
+  assert(Object.values(budget.authorization).every(value=>value===false));
+  assert(Object.values(budget.target_estimands).every(value=>value===null));
+});
+
 test('Unmeasured topics are not represented as counted audiences',async()=>{
   const taxonomy=await load('ontology/youtube/taxonomy.json');
   assert(taxonomy.topics.every(x=>x.audience_estimate===null));
