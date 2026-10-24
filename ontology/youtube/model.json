@@ -1298,6 +1298,22 @@
       "unit": "query_metadata",
       "access": "public_api_method_or_research_metadata",
       "measured_value": null
+    },
+    {
+      "id": "childrens_music_genre",
+      "group": "formats",
+      "definition": "Children-oriented songs, rhymes and musical videos that may be live action, animated or mixed media. A content topic, not an individual viewer age inference.",
+      "unit": "content_topic",
+      "access": "research_definition",
+      "measured_value": null
+    },
+    {
+      "id": "child_directed_animation_genre",
+      "group": "formats",
+      "definition": "Animated storytelling, learning and entertainment intended for children; distinct from the entire children's music catalog.",
+      "unit": "content_topic",
+      "access": "research_definition",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -2000,6 +2016,26 @@
       "subject": "sampled_video_id",
       "predicate": "is_not",
       "object": "subculture_viewers"
+    },
+    {
+      "subject": "childrens_music_genre",
+      "predicate": "may_overlap_with",
+      "object": "child_directed_animation_genre"
+    },
+    {
+      "subject": "childrens_music_genre",
+      "predicate": "is_not_equivalent_to",
+      "object": "child_directed_animation_genre"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_be_about",
+      "object": "childrens_music_genre"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_be_about",
+      "object": "child_directed_animation_genre"
     }
   ],
   "rules": [
@@ -2032,7 +2068,8 @@
     "Engaged attention, qualified YPP views, qualified public watch hours, ad impressions and individual playback starts retain separate units.",
     "Search.list has a distinct project quota bucket in the October 2026 API snapshot; never substitute old blanket search-call costs.",
     "Approximate search result totals are not representative enumerations of videos, people or creators.",
-    "Reproducible sampling requires fixed strata, page tokens, deduplicated identifiers and separate disclosure of coverage and missingness."
+    "Reproducible sampling requires fixed strata, page tokens, deduplicated identifiers and separate disclosure of coverage and missingness.",
+    "Children's music and child-directed animation are overlapping content classifications, not interchangeable populations or proof of a viewer's age."
   ],
-  "ontology_version": "1.9"
+  "ontology_version": "2.0"
 }
