@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "video_platform_comparison_scope",
+  "as_of": "2026-10-23",
+  "status": "research_comparison_candidates_not_new_marketplace_specimens",
+  "target_platform": "youtube",
+  "inclusion_rule": "Include distinct video publishing/distribution services with an officially documented route for an independent creator to reach an audience or accept payment; retain non-equivalence of formats and denominators.",
+  "excluded_from_conclusions": [
+    "sampled_creator_income_rankings",
+    "platform_popularity_rankings",
+    "subscriber_to_viewer_conversions",
+    "causal_strategy_recommendations"
+  ],
+  "dimensions": [
+    {
+      "id": "primary_surface",
+      "description": "Long-form, short feed, livestream or paid OTT storefront"
+    },
+    {
+      "id": "creator_monetization_entry",
+      "description": "Official account, age, country, review, module, participation tiers"
+    },
+    {
+      "id": "earning_unit",
+      "description": "Engaged/qualified views, ads, live support, subscription, item purchases or direct customer sales"
+    },
+    {
+      "id": "viewer_or_buyer_denominator",
+      "description": "Who counts as qualified attention or paying customers; not platform-wide unique users"
+    },
+    {
+      "id": "rights_and_portability",
+      "description": "Creator rights, off-platform dependence, export, subscriber/customer relationships"
+    },
+    {
+      "id": "payout_geography",
+      "description": "Creator residence, payment-address country and currency account terms separately"
+    },
+    {
+      "id": "creator_cost_and_hours",
+      "description": "Equipment, software, time, content rights, access fees, failed publishing work"
+    },
+    {
+      "id": "measured_newcomer_outcome",
+      "description": "Zero earners and inactive entrants must be included before comparative profitability"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "twitch",
+      "name": "Twitch",
+      "source_ids": [
+        "compare-twitch-streamer-benefits-2026"
+      ],
+      "primary_surface": "live_streaming_and_community",
+      "comparable_youtube_surface": "YouTube live streaming, memberships and fan support",
+      "earnings_mechanism": "Bits/subscription support after appropriate setup; advertising only for eligible Affiliates/Partners under published tiers",
+      "eligibility_note": "Different streamer monetization setup vs Affiliate/Partner and payout gate; terms as observed in 2026",
+      "current_creator_income_median": null,
+      "zero_earner_rate": null,
+      "typical_labor_hours": null,
+      "limitations": "Live-stream support and ad earnings cannot be converted into Shorts engaged-view RPM."
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok Creator Rewards",
+      "source_ids": [
+        "compare-tiktok-creator-rewards-2026"
+      ],
+      "primary_surface": "short_feed_video",
+      "comparable_youtube_surface": "YouTube Shorts, not long-form Watch Page ads",
+      "earnings_mechanism": "Program rewards for eligible original videos at least one minute long and qualified For You views",
+      "eligibility_note": "Official Help lists country, age, account, follower and view gates; availability and approval require separate evidence",
+      "current_creator_income_median": null,
+      "zero_earner_rate": null,
+      "typical_labor_hours": null,
+      "limitations": "Qualified For You views do not share definition or payout base with YouTube's public Shorts play starts."
+    },
+    {
+      "id": "vimeo_ott",
+      "name": "Vimeo OTT",
+      "source_ids": [
+        "compare-vimeo-ott-payments-2026"
+      ],
+      "primary_surface": "creator_controlled_paid_video_distribution",
+      "comparable_youtube_surface": "YouTube external products, subscriptions and off-platform offers, not ad-supported public play counts",
+      "earnings_mechanism": "Payments from customer content sales made through an OTT distribution offering",
+      "eligibility_note": "Official help documents monthly sales payout; account setup, seller fees and offer types need separate verification",
+      "current_creator_income_median": null,
+      "zero_earner_rate": null,
+      "typical_labor_hours": null,
+      "limitations": "Sales receipts depend on customer acquisition and product prices; paying customers are not equivalent to public video viewers."
+    }
+  ],
+  "acceptance_gates": [
+    {
+      "id": "scope_independence",
+      "fulfilled": true,
+      "evidence": [
+        "documented eligibility and monetization surfaces",
+        "independent source URLs"
+      ],
+      "limitation": "Comparison-set documentation does not constitute a creator income comparison"
+    },
+    {
+      "id": "product_country_rules",
+      "fulfilled": false,
+      "evidence": [],
+      "limitation": "Product-level country restrictions and account decisions are not exhaustively verified"
+    },
+    {
+      "id": "economics_and_fees",
+      "fulfilled": false,
+      "evidence": [],
+      "limitation": "No source-aligned receipts, fees, working-time and cost distributions obtained"
+    },
+    {
+      "id": "representative_newcomer_outcomes",
+      "fulfilled": false,
+      "evidence": [],
+      "limitation": "No cohorts including zero earners and inactive creators measured for multiple services"
+    }
+  ],
+  "specimen_admission": {
+    "authorized_for_any_comparator": false,
+    "created_comparator_specimen": false,
+    "changed_gallery": false,
+    "changed_intake_queues": false
+  },
+  "findings_scope": "Official product-design taxonomy only; not evidence of relative creator income, success likelihood or net profit."
+}
