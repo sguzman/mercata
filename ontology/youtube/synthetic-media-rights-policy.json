@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "synthetic_media_disclosure_monetization_and_rights_study",
+  "as_of": "2026-10-24",
+  "status": "official_rules_and_synthetic_examples_only_no_measured_enforcement",
+  "scope": "General YouTube upload, YPP, privacy, and copyright documentation; account eligibility and country rights separately assessed",
+  "method": "Use distinct official source families to register labeling, authenticity, privacy and copyright gates; classification illustrations are constrained examples, not individual case decisions or legal advice.",
+  "source_ids": [
+    "yt-genai-disclose-2026",
+    "channel-policy",
+    "yt-ypp-inauthentic-qa-2025",
+    "yt-identity-complaint-2026",
+    "yt-ai-likeness-detection-2026",
+    "yt-ai-copyright-guidance-2026"
+  ],
+  "policy_axes": [
+    {
+      "id": "ai_disclosure",
+      "title": "Upload disclosure",
+      "classification": "labeling",
+      "source_ids": [
+        "yt-genai-disclose-2026"
+      ],
+      "rule": "Disclose meaningful, realistic AI alteration or AI-generated music as central content. Some minor/fantasy/production aid cases are excluded.",
+      "automatic_monetization_ban": false,
+      "assessed_individual_case": null
+    },
+    {
+      "id": "ypp_inauthentic",
+      "title": "YPP inauthentic and repetitious material",
+      "classification": "monetization",
+      "source_ids": [
+        "channel-policy",
+        "yt-ypp-inauthentic-qa-2025"
+      ],
+      "rule": "Substantively repetitive or mass-produced low-originality content can be ineligible regardless of AI assistance; the 2025 rename was described as a clarification.",
+      "automatic_monetization_ban": false,
+      "assessed_individual_case": null
+    },
+    {
+      "id": "privacy_likeness",
+      "title": "Privacy and likeness",
+      "classification": "privacy",
+      "source_ids": [
+        "yt-identity-complaint-2026",
+        "yt-ai-likeness-detection-2026"
+      ],
+      "rule": "Realistic altered person-likeness may justify privacy complaint review; experimental likeness tool is limited by country, age and identity verification.",
+      "automatic_monetization_ban": false,
+      "assessed_individual_case": null
+    },
+    {
+      "id": "copyright_ownership",
+      "title": "Copyright ownership and permissions",
+      "classification": "copyright",
+      "source_ids": [
+        "yt-ai-copyright-guidance-2026"
+      ],
+      "rule": "Jurisdiction-specific protection and permissions require separate evaluation; YouTube may ask further details rather than treating an AI label as proof of title.",
+      "automatic_monetization_ban": false,
+      "assessed_individual_case": null
+    }
+  ],
+  "illustrative_examples": [
+    {
+      "id": "fictional_fantasy_animation",
+      "label": "Fantastical non-realistic animation",
+      "flags": {
+        "ai_used": true,
+        "meaningful_realistic_alteration": false,
+        "ai_music_main_focus": false,
+        "minor_or_non_realistic_only": true
+      },
+      "expected": "not_required_under_examples",
+      "source_ids": [
+        "yt-genai-disclose-2026"
+      ],
+      "limits": "A fictional animation alone does not require an AI label under these examples; other policies still apply."
+    },
+    {
+      "id": "ai_script_assistance",
+      "label": "AI help with outline, captions or minor edits",
+      "flags": {
+        "ai_used": true,
+        "meaningful_realistic_alteration": false,
+        "ai_music_main_focus": false,
+        "minor_or_non_realistic_only": true
+      },
+      "expected": "not_required_under_examples",
+      "source_ids": [
+        "yt-genai-disclose-2026"
+      ],
+      "limits": "Assistance does not excuse a separate substantial realistic alteration in the actual upload."
+    },
+    {
+      "id": "fake_real_person_speech",
+      "label": "Real person made to say words they never said",
+      "flags": {
+        "ai_used": true,
+        "meaningful_realistic_alteration": true,
+        "ai_music_main_focus": false,
+        "minor_or_non_realistic_only": false
+      },
+      "expected": "disclosure_required_under_examples",
+      "source_ids": [
+        "yt-genai-disclose-2026"
+      ],
+      "limits": "May also violate privacy or misinformation rules; disclosure is not immunity."
+    },
+    {
+      "id": "fabricated_realistic_event",
+      "label": "Realistic footage of an event that did not happen",
+      "flags": {
+        "ai_used": true,
+        "meaningful_realistic_alteration": true,
+        "ai_music_main_focus": false,
+        "minor_or_non_realistic_only": false
+      },
+      "expected": "disclosure_required_under_examples",
+      "source_ids": [
+        "yt-genai-disclose-2026"
+      ],
+      "limits": "Realistic depictions may have additional context, safety and misinformation limitations."
+    },
+    {
+      "id": "generated_music_feature",
+      "label": "AI-generated music as the main video content",
+      "flags": {
+        "ai_used": true,
+        "meaningful_realistic_alteration": false,
+        "ai_music_main_focus": true,
+        "minor_or_non_realistic_only": false
+      },
+      "expected": "disclosure_required_under_examples",
+      "source_ids": [
+        "yt-genai-disclose-2026"
+      ],
+      "limits": "Disclosure does not establish composition ownership, music licensing, or YPP approval."
+    }
+  ],
+  "disclosure_process": {
+    "interface": "YouTube Studio upload Attributes > AI use selection",
+    "notice": "YouTube may add automatic labels for content using its internal AI tools, verified C2PA metadata, or internal detection; manual review may also fix labels.",
+    "automatic_reach_penalty_for_disclosure_only": false,
+    "source_ids": [
+      "yt-genai-disclose-2026"
+    ]
+  },
+  "likeness_review": {
+    "experimental": true,
+    "global_availability": false,
+    "minimum_age_over_18": true,
+    "verification_requirements": [
+      "government_identity_document",
+      "video_selfie"
+    ],
+    "individual_video_privacy_violation_proven_by_detection": false,
+    "source_ids": [
+      "yt-ai-likeness-detection-2026"
+    ]
+  },
+  "policy_dates": [
+    {
+      "event": "inauthentic_content_policy_rename",
+      "date": "2025-07-15",
+      "change_type": "clarification_of_repetitive_and_mass_produced_ineligibility",
+      "general_ai_content_ban": false,
+      "source_ids": [
+        "channel-policy",
+        "yt-ypp-inauthentic-qa-2025"
+      ]
+    }
+  ],
+  "unmeasured": {
+    "qualified_ai_disclosure_video_count": null,
+    "non_disclosure_enforcement_rate": null,
+    "ai_video_earnings_median": null,
+    "ai_channel_ypp_approval_rate": null,
+    "likeness_match_true_positive_rate": null,
+    "copyright_protection_rate_by_country": null,
+    "creator_net_profit_by_ai_workflow": null,
+    "individual_channel_eligibility": null
+  }
+}

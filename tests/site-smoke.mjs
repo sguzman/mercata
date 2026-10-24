@@ -97,7 +97,8 @@ try{
       ['.member-cohort-protocol',6,'No paid cohort or experiment'],
       ['.shorts-referral-study',4,'not verified click-through events'],
       ['.audience-population-crosswalk',7,'deduplicated worldwide MAU and DAU remain unknown'],
-      ['.us-news-demographic-crosswalk',8,'Biological sex, overlapping age-by-party']
+      ['.us-news-demographic-crosswalk',8,'Biological sex, overlapping age-by-party'],
+      ['.synthetic-media-rights',4,'no AI creator earnings']
     ]){
       const section=page.locator(selector);
       assert.equal(await section.locator('.ownership-card').count(),cards,'Missing research cards in '+selector);

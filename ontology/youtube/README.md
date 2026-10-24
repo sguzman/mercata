@@ -44,6 +44,10 @@ The [audience population and advertising-reach crosswalk](audience-population-cr
 
 The [2026 Pew YouTube use/news demographic crosswalk](us-news-demographic-crosswalk.md), [machine source-aligned aggregates](us-news-demographic-crosswalk.json) and [validator](../../site/us-news-demographic-audit.mjs) document actual U.S. adult age, reported gender and party-lean survey percentages. Ever-use and regular news consumption are not the same behavior or sample, and none of these tables validates biological sex, joint demographic intersections, individual profiling, or creator earnings. The site presents dated subgroup and 2020–2026 news survey context.
 
+## Synthetic-media disclosure and monetization
+
+The [synthetic media disclosure/rights study](synthetic-media-rights-policy.md), [machine policy matrices](synthetic-media-rights-policy.json) and [case auditor](../../site/synthetic-media-audit.mjs) distinguish realistic-content labeling from channel originality eligibility, privacy/likeness review and jurisdiction-dependent copyright. Officially documented AI disclosure alone is not a universal YPP ban; no AI creator earnings or law-specific rights outcomes have been measured.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

@@ -2517,6 +2517,50 @@
       "evidence_class": "survey_of_us_adults_platform_use_frequency",
       "license": "Public research report linked and independently summarized; no images or tables copied",
       "notes": "Separate 2025 U.S. adult survey of 5,123 respondents Feb 24-March 2, 2025: 48% daily YouTube, not a global DAU estimate; 84% ever use from a different survey (n=5,022)."
+    },
+    {
+      "id": "yt-genai-disclose-2026",
+      "url": "https://support.google.com/youtube/answer/14328491?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Disclosing use of GenAI content",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_ai_disclosure_and_label_guidance",
+      "license": "Official Help linked and independently summarized; no media copied",
+      "notes": "Separates realistic/meaningful AI changes and AI music from minor aesthetic edits and assistance; warns about disclosure enforcement and does not declare AI content categorically demonetized."
+    },
+    {
+      "id": "yt-ai-likeness-detection-2026",
+      "url": "https://support.google.com/youtube/answer/16440338?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Likeness detection on YouTube",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_experimental_creator_likeness_review",
+      "license": "Official Help linked and independently summarized",
+      "notes": "Experimental and country-limited voluntary face-likeness tool with adult age, ID, selfie verification and account role requirements; match is not proof of legal violation."
+    },
+    {
+      "id": "yt-ai-copyright-guidance-2026",
+      "url": "https://support.google.com/youtube/answer/2797466?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Copyright on YouTube",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_ai_work_copyright_legal_uncertainty",
+      "license": "Official Help linked and independently summarized",
+      "notes": "Acknowledges evolving jurisdictional law; AI-work originality not automatically protected; YouTube may need details for complaints. Not a global legal ruling."
+    },
+    {
+      "id": "yt-ypp-inauthentic-qa-2025",
+      "url": "https://support.google.com/youtube/thread/356734251?hl=en&msgid=453057053",
+      "publisher": "TeamYouTube / YouTube Community",
+      "title": "Response to creator questions about YPP policies (July 2025)",
+      "retrieved_at": "2026-10-24",
+      "published_at": "2025-07-10",
+      "evidence_class": "official_policy_clarification",
+      "license": "Original official answer linked and independently summarized",
+      "notes": "July 15 2025 clarification/rename of longstanding repetitive content restriction; no universal ban based on AI production method alone."
     }
   ],
   "claims": [
@@ -5262,6 +5306,59 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Survey designs and response context require year-specific interpretation; year-to-year changes are not asserted significant without sampling uncertainty, and these values are not total YouTube MAU or channel-level news demand."
+    },
+    {
+      "id": "yt-meaningful-realistic-ai-disclose-2026",
+      "text": "YouTube's current upload disclosure guidance requires creators to label realistic content that is generated or meaningfully altered using AI, including fabricated depictions of actual people or events and AI-generated music featured as the main content; minor or fantastical edits are distinguished.",
+      "source_ids": [
+        "yt-genai-disclose-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Describes official published rules and feature-gate documentation, not individual legal advice, measured claim prevalence, successful monetization, creator income or automatically adjudicated copyright ownership."
+    },
+    {
+      "id": "yt-ai-label-not-automatic-demonetization-2026",
+      "text": "YouTube states that disclosing AI use alone does not reduce audience reach or automatically remove monetization eligibility, while nondisclosure of qualifying content can prompt labeling or penalties. Eligibility remains subject to separate partner and content policies.",
+      "source_ids": [
+        "yt-genai-disclose-2026",
+        "channel-policy"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Describes official published rules and feature-gate documentation, not individual legal advice, measured claim prevalence, successful monetization, creator income or automatically adjudicated copyright ownership."
+    },
+    {
+      "id": "yt-ypp-mass-produced-rule-independent-ai-2025",
+      "text": "YouTube's July 15, 2025 'inauthentic content' policy rename clarifies that repetitive or mass-produced material may be ineligible for YPP monetization; the publisher described this as a clarification of existing standards, not a ban on all AI-assisted creation.",
+      "source_ids": [
+        "channel-policy",
+        "yt-ypp-inauthentic-qa-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Describes official published rules and feature-gate documentation, not individual legal advice, measured claim prevalence, successful monetization, creator income or automatically adjudicated copyright ownership."
+    },
+    {
+      "id": "yt-ai-likeness-limited-verification-2026",
+      "text": "YouTube describes an experimental, country-limited likeness-detection feature available only to eligible adult channel owners/managers after identity and face-video verification; detected matches may be reviewed and submitted to a privacy complaint process.",
+      "source_ids": [
+        "yt-ai-likeness-detection-2026",
+        "yt-identity-complaint-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Describes official published rules and feature-gate documentation, not individual legal advice, measured claim prevalence, successful monetization, creator income or automatically adjudicated copyright ownership."
+    },
+    {
+      "id": "yt-ai-created-work-copyright-not-universal-2026",
+      "text": "YouTube's copyright help notes that human authorship and legal protection of AI-created work vary by jurisdiction and that an AI-related takedown may need further details; presence or absence of AI disclosure is not a determination of copyright ownership.",
+      "source_ids": [
+        "yt-ai-copyright-guidance-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Describes official published rules and feature-gate documentation, not individual legal advice, measured claim prevalence, successful monetization, creator income or automatically adjudicated copyright ownership."
     }
   ],
   "observations": [],
