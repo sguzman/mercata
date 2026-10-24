@@ -5,7 +5,7 @@ export function auditTrafficConcentration(input={}) {
  const errors=[];
  if(input.owner_authorized!==true)errors.push('Missing authorized owner-data confirmation');
  if(input.complete_partition!==true)errors.push('Unknown or incomplete source partition');
- if(typeof input.period!=='string'||!/^\\d{4}-\\d{2}-\\d{2}\\.\\.\\d{4}-\\d{2}-\\d{2}$/.test(input.period))
+ if(typeof input.period!=='string'||!/^[0-9]{4}-[0-9]{2}-[0-9]{2}[.][.][0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(input.period))
   errors.push('Missing bounded observation period');
  if(input.unit!=='view_events')errors.push('Mixed or unsupported traffic units');
  if(typeof input.channel_scope!=='string'||!input.channel_scope.trim())errors.push('Missing channel scope');
