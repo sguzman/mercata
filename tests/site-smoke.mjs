@@ -105,6 +105,11 @@ try{
     assert((await reach.textContent()).includes('global monthly distinct viewers: unknown'));
     assert.equal(await page.locator('.payout-currency').count(),2,'Missing documented payout currencies');
     assert((await page.locator('.topic-catalogue-card').count())>=31,'Missing community taxonomy');
+    const sampling=page.locator('.sampling-budget');
+    assert.equal(await sampling.locator('.sampling-budget-card').count(),4,'Missing API sampling limits');
+    await sampling.locator('summary').click();
+    assert((await sampling.textContent()).includes('48 search calls'));
+    assert((await sampling.textContent()).includes('actual distinct videos, creators and viewers unknown'));
     assert.equal(await page.locator('.community-card').count(),1,'Missing event-specific measured community');
     assert.equal(await page.locator('.opportunity-method-item').count(),10,'Missing economic opportunity framework');
     await page.locator('.opportunity-method-details > summary').click();
