@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "software_and_technology_content_subculture_scope",
+  "as_of": "2026-10-24",
+  "status": "bounded_educational_examples_and_two_incompatible_view_metrics",
+  "target_questions": [
+    "Which technology/software video purposes can be meaningfully distinguished?",
+    "Which observed platform metrics actually measure technical learning audiences versus adjacent aesthetics?",
+    "What would representative audience and earnings evidence require?"
+  ],
+  "segments": [
+    {
+      "id": "programming",
+      "label": "Programming and coding tutorials",
+      "taxonomy_ids": [
+        "software",
+        "education",
+        "gaming"
+      ],
+      "formats": [
+        "beginner_course",
+        "project_walkthrough",
+        "debugging_demonstration"
+      ],
+      "topics": [
+        "web development",
+        "computer science fundamentals",
+        "game scripting"
+      ],
+      "source_ids": [
+        "yt-coding-guide-2024"
+      ],
+      "audience_unique_people": null,
+      "creator_population": null,
+      "median_creator_profit": null,
+      "provenance": "Illustrative curated examples, not search-volume statistics"
+    },
+    {
+      "id": "application_howto",
+      "label": "Software use and troubleshooting",
+      "taxonomy_ids": [
+        "software",
+        "education"
+      ],
+      "formats": [
+        "step_by_step_app_setup",
+        "short_fix",
+        "full_software_course"
+      ],
+      "topics": [
+        "setup guides",
+        "feature walkthroughs",
+        "troubleshooting"
+      ],
+      "source_ids": [
+        "yt-learning-howto-views-2026"
+      ],
+      "audience_unique_people": null,
+      "creator_population": null,
+      "median_creator_profit": null,
+      "provenance": "Publisher broad learning/how-to views include many nonsoftware subjects"
+    },
+    {
+      "id": "professional_workflows",
+      "label": "Professional software and productivity workflows",
+      "taxonomy_ids": [
+        "software",
+        "desk-setups",
+        "education"
+      ],
+      "formats": [
+        "workflow_walkthrough",
+        "tool_comparison",
+        "project_case_study"
+      ],
+      "topics": [
+        "developer tools",
+        "creative software",
+        "business productivity"
+      ],
+      "source_ids": [
+        "yt-coding-guide-2024",
+        "yt-desksetups-h1-2026"
+      ],
+      "audience_unique_people": null,
+      "creator_population": null,
+      "median_creator_profit": null,
+      "provenance": "Crosses software teaching and lifestyle/workspace publishing; no joint sample"
+    },
+    {
+      "id": "hardware_reviews",
+      "label": "Computing hardware and device reviews",
+      "taxonomy_ids": [
+        "tech-reviews",
+        "desk-setups"
+      ],
+      "formats": [
+        "comparison",
+        "benchmark",
+        "long_term_review"
+      ],
+      "topics": [
+        "laptops",
+        "peripherals",
+        "components"
+      ],
+      "source_ids": [
+        "yt-desksetups-h1-2026"
+      ],
+      "audience_unique_people": null,
+      "creator_population": null,
+      "median_creator_profit": null,
+      "provenance": "Desk setup publisher examples do not quantify all hardware review content"
+    },
+    {
+      "id": "repair_and_diy",
+      "label": "Device repair and technical DIY",
+      "taxonomy_ids": [
+        "tech-reviews",
+        "crafts"
+      ],
+      "formats": [
+        "repair_walkthrough",
+        "diagnosis",
+        "tool_explanation"
+      ],
+      "topics": [
+        "device restoration",
+        "repairability",
+        "hardware modifications"
+      ],
+      "source_ids": [
+        "yt-learning-howto-views-2026"
+      ],
+      "audience_unique_people": null,
+      "creator_population": null,
+      "median_creator_profit": null,
+      "provenance": "Learning/how-to aggregate is broader than repair and not an identified repair sample"
+    },
+    {
+      "id": "workspace_aesthetics",
+      "label": "Desk setup and workspace aesthetics",
+      "taxonomy_ids": [
+        "desk-setups",
+        "tech-reviews",
+        "gaming"
+      ],
+      "formats": [
+        "workspace_tour",
+        "before_after",
+        "ambient_setup"
+      ],
+      "topics": [
+        "home office",
+        "gaming desks",
+        "organization"
+      ],
+      "source_ids": [
+        "yt-desksetups-h1-2026"
+      ],
+      "audience_unique_people": null,
+      "creator_population": null,
+      "median_creator_profit": null,
+      "provenance": "Source reports title-matched views, not distinct people or technology product sales"
+    }
+  ],
+  "observed_public_metrics": [
+    {
+      "id": "global_desk_setup_title_views_h1_2026",
+      "source_id": "yt-desksetups-h1-2026",
+      "value": 250000000,
+      "comparison": "greater_than",
+      "unit": "video_view_events",
+      "geography": "global",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "query": "title includes \"desk setup\" or \"#desksetup\"",
+      "population": "Matching title-query videos across all styles",
+      "unique_people_count": null,
+      "software_tutorial_share": null,
+      "creator_revenue": null
+    },
+    {
+      "id": "us_learning_howto_june2025",
+      "source_id": "yt-learning-howto-views-2026",
+      "value": 5500000000,
+      "comparison": "greater_than",
+      "unit": "video_view_events",
+      "geography": "United States",
+      "start": "2025-06-01",
+      "end": "2025-06-30",
+      "query": "YouTube internal learning and how-to category (coding rules not published)",
+      "population": "All subjects YouTube describes as learning and how-to",
+      "unique_people_count": null,
+      "software_tutorial_share": null,
+      "creator_revenue": null
+    }
+  ],
+  "comparability": {
+    "shared_population": false,
+    "shared_period": false,
+    "shared_category_rule": false,
+    "can_add_metrics": false,
+    "can_calculate_software_percent": false,
+    "can_infer_economic_opportunity": false
+  },
+  "required_research_design": [
+    "Use independent published sampling frame for software, coding, repair, reviews and workspace content; measure overlap rather than assigning exclusive channels.",
+    "Prespecify platform view metric and stable dates, compare only similar units and account for August 24, 2026 counting change.",
+    "Record official creator/upload rates and channel age with ethically accessible public/authorized metadata, not hidden Analytics.",
+    "Do not confuse product review sponsorships, affiliate commissions, teaching revenue and ad money; calculate cost and time separately.",
+    "Include newcomer, zero-income and inactive channels before estimating creator earnings and business viability.",
+    "Study audience country and content language separately; do not extrapolate a US how-to view period to worldwide technology education."
+  ],
+  "unknowns": {
+    "current_global_programming_video_views": null,
+    "technology_channel_count": null,
+    "software_learning_unique_people": null,
+    "proportion_of_howto_that_is_software": null,
+    "device_review_conversion_rate": null,
+    "mean_beginner_creator_income": null,
+    "median_beginner_creator_profit": null,
+    "creator_production_hours": null,
+    "cross_topic_shared_audience": null
+  }
+}
