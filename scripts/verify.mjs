@@ -146,7 +146,6 @@ for (const entry of index.specimens) {
     ensure(autoSnapshot?.value===27 && autoSnapshot.source_period==='2026-05-15',
       'Dated auto dubbing language snapshot incorrectly generalized');
     ensure(multilingual.official_selected_observations.every(x=>x.source_ids.every(id=>sourceIds.has(id))) &&
-      Object.values(multilingual.measurement_design).every((value)=>true) &&
       multilingual.measurement_design.median_income_lift===null &&
       multilingual.measurement_design.median_labor_cost===null,
       'Missing provenance or fabricated dubbing return');
