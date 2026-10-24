@@ -28,6 +28,8 @@ jobs:
           node --check scripts/intake.mjs
           node --check scripts/verify.mjs
           node --check scripts/source-provenance.mjs
+          node --check scripts/newcomer-income-audit.mjs
+          node --check tests/newcomer-cohort.test.mjs
           node --check scripts/audit-youtube-sources.mjs
           node --check tests/source-provenance.test.mjs
           node --check site/app.js
