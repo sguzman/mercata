@@ -93,7 +93,7 @@
         "youtube/identity/define-a-comparison-set-of-video-platforms"
       ],
       "phase": 1,
-      "progress_percent": 29
+      "progress_percent": 30
     },
     {
       "id": "access",
@@ -342,7 +342,7 @@
         "youtube/risk/set-archive-and-continuity-measures"
       ],
       "phase": 3,
-      "progress_percent": 23
+      "progress_percent": 29
     },
     {
       "id": "strategy",
@@ -398,7 +398,7 @@
         "youtube/review/create-a-reproducibility-log"
       ],
       "phase": 1,
-      "progress_percent": 55
+      "progress_percent": 56
     },
     {
       "id": "special-video",
@@ -566,7 +566,7 @@
         "youtube/content-formats/measure-creation-cost-by-format"
       ],
       "phase": 2,
-      "progress_percent": 41
+      "progress_percent": 42
     },
     {
       "id": "social-discovery",
@@ -653,7 +653,7 @@
         "youtube/audience-economics/create-a-buyer-intent-versus-casual-entertainment-framework"
       ],
       "phase": 3,
-      "progress_percent": 37
+      "progress_percent": 38
     },
     {
       "id": "audience-trends",
@@ -681,7 +681,7 @@
         "youtube/audience-trends/create-explicit-uncertainty-ranges-for-niche-forecasts"
       ],
       "phase": 4,
-      "progress_percent": 22
+      "progress_percent": 24
     },
     {
       "id": "audience-safeguards",
@@ -830,13 +830,15 @@
       "objective": "Create an empty dated timeline template for monetization milestones and policy revisions.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and create an empty dated timeline template for monetization milestones and policy revisions.",
       "status": "in_progress",
-      "percent": 68,
+      "percent": 74,
       "evidence": [
         "ontology/youtube/ypp-transition-2027.json",
         "ontology/youtube/ypp-transition-2027.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/advertiser-policy-history.json",
+        "ontology/youtube/advertiser-policy-history.md"
       ],
       "artifact": null,
       "priority": "high",
@@ -2538,11 +2540,15 @@
       "objective": "Build a policy matrix for educational, entertainment and sensitive content.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and build a policy matrix for educational, entertainment and sensitive content.",
       "status": "in_progress",
-      "percent": 62,
+      "percent": 81,
       "evidence": [
         "ontology/youtube/content-policy-risk.json",
         "ontology/youtube/content-policy-risk.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/advertiser-policy-history.json",
+        "ontology/youtube/advertiser-policy-history.md",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
       ],
       "artifact": null,
       "priority": "standard",
@@ -2556,7 +2562,7 @@
       "objective": "Separate video-specific restrictions from channel-level access.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and separate video-specific restrictions from channel-level access.",
       "status": "in_progress",
-      "percent": 48,
+      "percent": 63,
       "evidence": [
         "ontology/youtube/content-policy-risk.json",
         "ontology/youtube/content-policy-risk.md",
@@ -2567,7 +2573,9 @@
         "ontology/youtube/ypp-transition-2027.json",
         "ontology/youtube/ypp-transition-2027.md",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/advertiser-policy-history.json",
+        "ontology/youtube/advertiser-policy-history.md"
       ],
       "artifact": null,
       "priority": "standard",
@@ -2676,9 +2684,15 @@
       "emoji": "🛡️",
       "objective": "Study public rule descriptions neutrally; avoid tailoring political persuasion.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and study public rule descriptions neutrally; avoid tailoring political persuasion.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 38,
+      "evidence": [
+        "ontology/youtube/advertiser-policy-history.json",
+        "ontology/youtube/advertiser-policy-history.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 3
@@ -3000,7 +3014,7 @@
       "objective": "Set rules for preserving older policies and source validity periods.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and set rules for preserving older policies and source validity periods.",
       "status": "in_progress",
-      "percent": 88,
+      "percent": 92,
       "evidence": [
         "ontology/youtube/view-definition-break.json",
         "ontology/youtube/view-definition-break.md",
@@ -3010,7 +3024,9 @@
         "scripts/verify.mjs",
         "specimens/youtube.json",
         "ontology/youtube/ypp-transition-2027.json",
-        "ontology/youtube/ypp-transition-2027.md"
+        "ontology/youtube/ypp-transition-2027.md",
+        "ontology/youtube/advertiser-policy-history.json",
+        "ontology/youtube/advertiser-policy-history.md"
       ],
       "artifact": null,
       "priority": "high",
@@ -4197,9 +4213,15 @@
       "emoji": "🎬",
       "objective": "Identify licensing and reuse risks before economic analysis.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and identify licensing and reuse risks before economic analysis.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 24,
+      "evidence": [
+        "ontology/youtube/advertiser-policy-history.json",
+        "ontology/youtube/advertiser-policy-history.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 2
@@ -4804,11 +4826,15 @@
       "objective": "Account for ad and personalization constraints before scenario modeling.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and account for ad and personalization constraints before scenario modeling.",
       "status": "in_progress",
-      "percent": 40,
+      "percent": 47,
       "evidence": [
         "ontology/youtube/content-policy-risk.json",
         "ontology/youtube/content-policy-risk.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/advertiser-policy-history.json",
+        "ontology/youtube/advertiser-policy-history.md",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
       ],
       "artifact": null,
       "priority": "standard",
@@ -4822,12 +4848,16 @@
       "objective": "Avoid claiming comparable niche RPM from creator self-report alone.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and avoid claiming comparable niche RPM from creator self-report alone.",
       "status": "in_progress",
-      "percent": 48,
+      "percent": 50,
       "evidence": [
         "ontology/youtube/small-channel-income.json",
         "ontology/youtube/academic-studies.json",
         "ontology/youtube/academic-studies.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/advertiser-policy-history.json",
+        "ontology/youtube/advertiser-policy-history.md",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
       ],
       "artifact": null,
       "priority": "standard",
@@ -5014,9 +5044,15 @@
       "emoji": "📈",
       "objective": "Describe public event-linked attention without partisan persuasion.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and describe public event-linked attention without partisan persuasion.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 27,
+      "evidence": [
+        "ontology/youtube/advertiser-policy-history.json",
+        "ontology/youtube/advertiser-policy-history.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 4
