@@ -684,3 +684,13 @@ h1 em {font-style:italic;color:var(--accent)}
 .audience-overlap-card h5{font-size:13px;text-transform:capitalize;margin:0 0 8px}
 .audience-overlap-card p{font-size:12px;margin:0}
 @media(max-width:650px){.audience-overlap-details{padding:15px}.audience-overlap-grid{grid-template-columns:1fr}}
+
+/* Platform-published creator safety and recovery procedures, not incidence data */
+.creator-safety{margin:28px 0}
+.creator-safety-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.creator-safety-details>summary{cursor:pointer;font-size:15px;font-weight:800}
+.creator-safety-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.creator-safety-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.creator-safety-card h5{font-size:14px;margin:0 0 9px}
+.creator-safety-card p{font-size:12px;margin:7px 0}
+@media(max-width:650px){.creator-safety-details{padding:15px}.creator-safety-grid{grid-template-columns:1fr}}

@@ -144,6 +144,12 @@ try{
     assert.equal(await countryPrograms.locator('.country-program-currency').count(),3,'Missing currency-scoped payout thresholds');
     assert((await countryPrograms.textContent()).includes('Account currency and feature-specific permissions: unknown'));
     assert((await countryPrograms.textContent()).includes('MXN 1,200'));
+    const safety=page.locator('.creator-safety');
+    assert.equal(await safety.locator('.creator-safety-card').count(),4,'Missing distinct safety and recovery procedures');
+    await safety.locator('summary').click();
+    assert((await safety.textContent()).includes('October 21, 2026'));
+    assert((await safety.textContent()).includes('not guaranteed'));
+    assert((await safety.textContent()).includes('recovery success are unmeasured'));
     const brand=page.locator('.brand-disclosure');
     assert.equal(await brand.locator('.brand-disclosure-card').count(),3,'Missing independent platform/legal layers');
     assert.equal(await brand.locator('.brand-disclosure-surface').count(),4,'Missing video/live/affiliate disclosure scopes');

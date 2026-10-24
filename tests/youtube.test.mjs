@@ -473,6 +473,28 @@ test('YouTube task percentage matches its original and detailed queues',async()=
   assert(plan.detail_tasks.every(t=>t.percent<100 || (t.status==='complete'&&t.evidence.length>0)));
 });
 
+test('Creator safety and 2026 temporary hijack pause maintain distinct risk scopes',async()=>{
+ const [model,dossier]=await Promise.all([
+  load('ontology/youtube/creator-safety-continuity.json'),load('specimens/youtube.json')
+ ]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'creator_safety_and_account_continuity');
+ assert.deepEqual(model.modules.map(x=>x.id),
+  ['comment_and_live_moderation','policy_reports','privacy_and_likeness','account_recovery']);
+ assert(model.modules.every(x=>x.source_ids.every(id=>ids.has(id))&&x.population_count===null&&x.harassment_incidents===null));
+ const event=model.dated_changes.find(x=>x.id==='temporary_feature_pause_2026');
+ assert.equal(event.announced_at,'2026-10-21');
+ assert.equal(event.review_timing_typical_hours,24);
+ assert.equal(event.guaranteed_max_hours,null);
+ assert.equal(event.claimed_monetization_status_unchanged,true);
+ assert.equal(event.review_outcome_known,false);
+ assert(event.source_ids.every(id=>ids.has(id)));
+ assert.equal(model.hacking_support_retention_months_reported,9);
+ assert.deepEqual(model.recovery_sequence.map(x=>x.order),[1,2,3]);
+ assert(model.recovery_sequence.every(x=>x.source_ids.every(id=>ids.has(id))));
+ assert(Object.values(model.unmeasured).every(x=>x===null));
+});
+
 test('Brand disclosure study separates YouTube declaration from US consumer law',async()=>{
   const [model,dossier]=await Promise.all([
     load('ontology/youtube/brand-disclosure-risk.json'),load('specimens/youtube.json')
