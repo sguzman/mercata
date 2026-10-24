@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "historical_large_channel_offplatform_linking",
+  "as_of": "2026-10-23",
+  "source": {
+    "source_id": "rieder-elite-linking-2019-2023",
+    "published_date": "2023-06-29",
+    "study_observation_period": "end of 2019",
+    "article_type": "peer_reviewed_open_access",
+    "article_doi": "10.1177/20563051231180628"
+  },
+  "population": {
+    "definition": "YouTube channels with at least 100,000 subscribers in end-of-2019 crawl",
+    "channels": 153770,
+    "subscribers_min_inclusive": 100000,
+    "preceding_broad_crawl_channels_greater_than": 36000000,
+    "representative_of_all_youtube_channels": false,
+    "representative_of_new_entrants": false
+  },
+  "video_observations": {
+    "video_records": 136909228,
+    "video_publish_start": "2007-01-01",
+    "video_publish_end": "2019-12-01",
+    "descriptions_containing_any_url": 93186712,
+    "description_url_share_percent_reported": 68,
+    "unique_link_events_extracted": 570996385,
+    "urls_reflected_after_description_edits": true
+  },
+  "channel_linking": {
+    "marketplace": [
+      {
+        "id": "none",
+        "count": 53256,
+        "percent_reported": 34.6,
+        "comparison": "no marketplace links in sampled videos"
+      },
+      {
+        "id": "less_than_20pct",
+        "count": 115904,
+        "percent_reported": 75.37,
+        "comparison": "marketplace URLs on fewer than 20% of channel video descriptions"
+      },
+      {
+        "id": "at_least_80pct",
+        "count": 10221,
+        "percent_reported": 6.6,
+        "comparison": "marketplace URLs on 80% or more of channel video descriptions"
+      }
+    ],
+    "crowdfunding": [
+      {
+        "id": "none",
+        "count": 127805,
+        "percent_reported": 83.1,
+        "comparison": "no crowdfunding links in sampled videos"
+      },
+      {
+        "id": "less_than_20pct",
+        "count": 144521,
+        "percent_reported": 94,
+        "comparison": "crowdfunding URLs on fewer than 20% of channel video descriptions"
+      },
+      {
+        "id": "at_least_80pct",
+        "count": 2675,
+        "percent_reported": 1.74,
+        "comparison": "crowdfunding URLs on 80% or more of channel video descriptions"
+      }
+    ]
+  },
+  "modeled_advertising_revenue_in_article": {
+    "appears_in_article": true,
+    "is_observed_channel_income": false,
+    "use_as_current_rpm": false,
+    "publish_as_empirical_payout": false,
+    "notes": "Authors' 2019 revenue-tier worksheet extrapolates view shares using aggregate ad-revenue disclosure; it is not channel payout microdata."
+  },
+  "unmeasured": {
+    "creator_profit": null,
+    "youtube_native_ad_income": null,
+    "external_sales_income": null,
+    "payouts_from_marketplace_links": null,
+    "first_year_creator_income": null,
+    "nonmonetized_population_size": null,
+    "causal_effect_of_linking": null
+  },
+  "limitations": [
+    "Observations concern a historical end-of-2019 selection of highly subscribed channels, not a randomly sampled all-channel universe.",
+    "Links are traces of promotion and networking, not payments, sales conversion or causal additional revenue.",
+    "Channels can edit old video descriptions, so URLs seen at collection may not describe the original publication date.",
+    "Sample included many markets and languages but high-subscriber inclusion favors already successful publishers.",
+    "The 2023 article's modeled revenue by subscriber tier must not be treated as observed native payouts.",
+    "Counts of videos, channels, descriptions with links and extracted URL events have separate units."
+  ],
+  "reporting_rules": [
+    "Never project 2019 linking shares onto 2026 channels without a comparable dated sample.",
+    "Do not infer zero external earnings from zero links; sponsorships, memberships and offline income can occur without description URLs.",
+    "Do not convert link frequency into revenue, total audience, full-population channel success odds or newcomer earnings.",
+    "Preserve channel-level rather than video-level denominators for marketplace and crowdfunding percentages."
+  ]
+}
