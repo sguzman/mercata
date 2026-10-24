@@ -79,7 +79,7 @@ The dossier also differentiates [multilingual audio, automatic dubbing, captions
 
 New [country, device and audience-frequency observations](ontology/youtube/country-reach-devices.md) distinguish official UK screen-time series from Reuters Institute's multi-market survey. These inputs demonstrate geographic and denominator variation; they do not provide global YouTube user counts or niche profitability.
 
-Two [cross-platform creator-income surveys](ontology/youtube/cross-platform-income-surveys.md) are also tracked as separately scoped evidence, with protection against double-counting a syndicated survey and against projecting respondent income onto all YouTube channels. Neither yields a representative YouTube newcomer earnings figure.
+Three [cross-platform creator-income survey samples](ontology/youtube/cross-platform-income-surveys.md) are tracked as separately scoped evidence, including NeoReach, Creator Spotlight and CreatorIQ/Influencers.club. The research protects against double-counting syndicated publications and projecting mixed-platform respondent incomes onto all YouTube channels. None establishes a representative YouTube newcomer earnings distribution.
 
 The creator-economics work also includes a [production cost and labor-time taxonomy](ontology/youtube/production-costs.md) with separate cash, capital use, creator time and rights-adjustment accounting. As of October 2026, its cost distributions remain unmeasured; the interactive site does not invent typical equipment budgets or hours.
 
