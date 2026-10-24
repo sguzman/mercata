@@ -106,7 +106,8 @@ try{
       ['.retention-observability',11,'full-video completion fraction'],
       ['.search-demand-proxies',4,'No absolute monthly searches'],
       ['.production-cost-audit',5,'No representative equipment costs'],
-      ['.exclusive-rights-audit',5,'No actual creator contract']
+      ['.exclusive-rights-audit',5,'No actual creator contract'],
+      ['.creator-fraud-security',5,'no verified sampled incident rates']
     ]){
       const section=page.locator(selector);
       assert.equal(await section.locator('.ownership-card').count(),cards,'Missing research cards in '+selector);

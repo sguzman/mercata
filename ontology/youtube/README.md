@@ -84,6 +84,10 @@ The [Shorts/horizontal/live production register](video-production-cost-register.
 
 The [rights research matrix](exclusive-rights-evidence.md), [machine model](exclusive-rights-evidence.json), and [source-reference tests](../../tests/exclusive-rights-audit.test.mjs) distinguish YouTube's general non-exclusive hosting rights from the geographically exclusive underlying works required for Content ID claims. These rules do not prove any specific creator's asset ownership or royalty income.
 
+## Creator fraud and platform security
+
+The [fraud/phishing and fake-engagement study](creator-fraud-security.md), [machine evidence](creator-fraud-security.json) and [validation tests](../../tests/creator-fraud-security-audit.test.mjs) distinguish forbidden metric manipulation, fake sponsorship malware, permission/credential attacks and deceptive outbound offers. Policy consequences and controls are documented; representative incident probabilities, monetary losses and causal risk reduction are unmeasured.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

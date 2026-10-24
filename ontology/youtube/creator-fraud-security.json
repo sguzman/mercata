@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "channel_fraud_phishing_and_fake_engagement_risks",
+  "as_of": "2026-10-24",
+  "status": "official_policy_and_prevention_controls_no_incident_sample",
+  "risks": [
+    {
+      "id": "fake_engagement",
+      "label": "Purchased or forced views/subscribers",
+      "kind": "policy_and_monetization",
+      "source_ids": [
+        "yt-artificial-engagement-policy-2026"
+      ],
+      "limit": "Third-party promoter can expose channel to removal; public engagement is not proof of authentic buyers",
+      "verified_incident_rate": null,
+      "verified_median_cash_loss": null,
+      "recorded_creator_events": null
+    },
+    {
+      "id": "sponsor_phishing",
+      "label": "False brand partnership and attachment",
+      "kind": "account_security",
+      "source_ids": [
+        "yt-creator-channel-security-tips-2026"
+      ],
+      "limit": "Verify through independent contact; suspicious documents and software may be malicious",
+      "verified_incident_rate": null,
+      "verified_median_cash_loss": null,
+      "recorded_creator_events": null
+    },
+    {
+      "id": "credential_theft",
+      "label": "Account hijacking through links/downloads",
+      "kind": "account_security",
+      "source_ids": [
+        "yt-secure-channel-2026"
+      ],
+      "limit": "Use passkeys/two-step verification and review access; no rate measured",
+      "verified_incident_rate": null,
+      "verified_median_cash_loss": null,
+      "recorded_creator_events": null
+    },
+    {
+      "id": "scam_link",
+      "label": "Deceptive off-platform purchase or support link",
+      "kind": "external_policy",
+      "source_ids": [
+        "yt-spam-scams-policy-2026"
+      ],
+      "limit": "Scams and misleading destinations can violate platform rules and harm viewers",
+      "verified_incident_rate": null,
+      "verified_median_cash_loss": null,
+      "recorded_creator_events": null
+    },
+    {
+      "id": "contractor_permissions",
+      "label": "Untrusted channel collaborator access",
+      "kind": "governance",
+      "source_ids": [
+        "yt-creator-safety-2026"
+      ],
+      "limit": "Delegate limited permissions without password sharing; periodically remove unknown managers",
+      "verified_incident_rate": null,
+      "verified_median_cash_loss": null,
+      "recorded_creator_events": null
+    }
+  ],
+  "source_ids": [
+    "yt-artificial-engagement-policy-2026",
+    "yt-creator-channel-security-tips-2026",
+    "yt-secure-channel-2026",
+    "yt-spam-scams-policy-2026",
+    "yt-creator-safety-2026"
+  ],
+  "control_groups": [
+    {
+      "id": "auth",
+      "source_ids": [
+        "yt-secure-channel-2026",
+        "yt-creator-safety-2026"
+      ],
+      "controls": [
+        "passkey_and_two_step",
+        "remove_stale_channel_managers",
+        "avoid_untrusted_files"
+      ]
+    },
+    {
+      "id": "sponsor_verification",
+      "source_ids": [
+        "yt-creator-channel-security-tips-2026"
+      ],
+      "controls": [
+        "independent_off_platform_contact",
+        "verify_brand_rep_authorization",
+        "no_untrusted_attachments"
+      ]
+    },
+    {
+      "id": "policy",
+      "source_ids": [
+        "yt-artificial-engagement-policy-2026",
+        "yt-spam-scams-policy-2026"
+      ],
+      "controls": [
+        "no_purchased_metric_inflation",
+        "no_deceptive_diversion",
+        "ensure_contractor_compliance"
+      ]
+    }
+  ],
+  "distinctions": [
+    "A promotional budget spent under allowed rules is not the same as buying illegitimate view or subscriber engagement.",
+    "A claimed hacking threat is not verified compromise; avoid treating anecdotes as incident rates.",
+    "A legitimate sponsor inquiry does not require creator passwords or unsafe software downloads.",
+    "A phishing attempt, copyright claim, artificial engagement ban, and content-policy enforcement are different events.",
+    "Security settings may lower risk but these policy documents cannot estimate a numerical probability or cost reduction."
+  ],
+  "unmeasured": {
+    "scam_attempts_per_channel_year": null,
+    "confirmed_hijacks_per_creator": null,
+    "fake_engagement_provider_prevalence": null,
+    "creator_median_scam_loss": null,
+    "paid_sponsorship_fraud_rate": null,
+    "channel_recovery_median_days": null,
+    "security_control_causal_risk_reduction": null
+  },
+  "observed_incidents": []
+}
