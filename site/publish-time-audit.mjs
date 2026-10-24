@@ -1,7 +1,5 @@
 // Creator-owned schedule audit. This validates civil times and comparable units;
 // it does NOT estimate optimal upload time or establish a causal viewership effect.
-const pad=n=>String(n).padStart(2,'0');
-
 export function resolvePublishInstant({local_date,local_clock,time_zone,release_utc=null}={}) {
   const errors=[];
   if(!/^\d{4}-\d{2}-\d{2}$/.test(local_date||'')||!/^\d{2}:\d{2}$/.test(local_clock||''))

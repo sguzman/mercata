@@ -27,6 +27,10 @@ A video has an actual **instant**, a chosen *civil time zone*, and a possibly di
 
 Even an owner Analytics country table may omit low-volume rows while still including those views in the total. Missing country cells stay *unknown*, rather than being set to zero or allocated proportionally. Owner data also cannot be used to invent competitor performance.
 
+## Reproducible civil-time audit
+
+The [publication instant validator](../../site/publish-time-audit.mjs) and its [synthetic tests](../../tests/publish-time-audit.test.mjs) check that a local date, local clock time and IANA time-zone identifier resolve to a real UTC instant. Nonexistent spring DST times are rejected; repeated autumn clock times require an explicit instant. A second check requires compatible reporting units and owner authorization before descriptive comparisons, while explicitly refusing to claim causation. These are software safeguards, **not measured improvements in audience attendance or earnings**.
+
 ## Valid experiment, not a guessed recommendation
 
 A defensible channel-level experiment would pre-register matched content types, audience periods, public versus engaged view definitions, topic and language controls, randomized scheduling slots when feasible, and measurement horizons at **24 hours, 30 days and 90 days**. It should separately compare live/Premiere attendance outcomes and on-demand video long-term outcomes.
