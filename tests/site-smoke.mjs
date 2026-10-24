@@ -215,6 +215,11 @@ try{
     assert((await people.textContent()).includes('rolling 28-day'));
     assert((await people.textContent()).includes('up to 90 days'));
     assert((await people.textContent()).includes('worldwide person census'));
+    const genderEvidence=page.locator('.gender-community-evidence');
+    assert.equal(await genderEvidence.locator('.gender-community-card').count(),2,'Missing aggregate gender data limits');
+    await genderEvidence.locator('summary').click();
+    assert((await genderEvidence.textContent()).includes('unknown, never zero'));
+    assert((await genderEvidence.textContent()).includes('No gender stereotype'));
     const beautyGaming=page.locator('.beauty-gaming-panel');
     assert.equal(await beautyGaming.locator('.beauty-gaming-card').count(),4,'Missing bounded beauty-gaming panel findings');
     await beautyGaming.locator('summary').click();

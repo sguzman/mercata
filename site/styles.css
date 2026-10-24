@@ -1036,3 +1036,13 @@ h1 em {font-style:italic;color:var(--accent)}
 .beauty-gaming-card p{font-size:12px;margin:8px 0}
 @media(max-width:850px){.beauty-gaming-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.beauty-gaming-details{padding:15px}.beauty-gaming-grid{grid-template-columns:1fr}}
+
+/* Aggregate owner-side demographic categories, never inferred personal identity. */
+.gender-community-evidence{margin:28px 0}
+.gender-community-details{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:20px}
+.gender-community-details>summary{cursor:pointer;font-size:15px;font-weight:800}
+.gender-community-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}
+.gender-community-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;min-width:0;padding:16px;overflow-wrap:anywhere}
+.gender-community-card h5{font-size:13px;text-transform:capitalize;margin:0 0 7px}
+.gender-community-card p{font-size:12px;margin:0}
+@media(max-width:650px){.gender-community-details{padding:15px}.gender-community-grid{grid-template-columns:1fr}}

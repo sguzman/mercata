@@ -283,6 +283,10 @@ The [health and fitness subculture study](health-fitness-content.md) and [machin
 
 The [finance-content classification](finance-content-taxonomy.md) and [eight-family machine record](finance-content-taxonomy.json) separate basic financial literacy, personal-debt explanation, investment concepts, business operations, comparative financial products, sponsored offers, creator-owned products, and securities-tip promotion. They distinguish YouTube advertisement/external-link rules from U.S. FTC material-connection duties and SEC investor-fraud warnings. A topic label is not evidence of a creator's legal status, fraud, profit or region-specific licensing obligations. Audiences, creator populations and niche earnings remain unknown.
 
+## Gender-associated communities: aggregate observation versus identity inference
+
+The [bounded descriptive analysis](gender-community-evidence.md) and [machine study](gender-community-evidence.json) separate YouTube owner Analytics gender-reporting categories (logged-in users, privacy suppression) from a selected 2025 U.S. female gaming-engagement panel. Category labels and commercial panel segmentation do not validate any individual's identity, provide complete signed-out demographics, or establish global gender-by-genre audiences. Suppressed data remain unknown, not zero. No personally identifying user histories are collected.
+
 ## Technology and software tutorial subcultures
 
 The [technology-topic research](technology-subcultures-2026.md) and [six-segment machine record](technology-subcultures-2026.json) separate programming, software troubleshooting, professional workflows, hardware reviews, repairs and workspace aesthetics. YouTube's June 2025 U.S. broad how-to view total and H1 2026 global desk-title-match views have different populations and periods; **neither measures unique software learners, technology creators or profitability**. Segment memberships overlap.

@@ -121,6 +121,8 @@ A [2026 publishing cadence study](ontology/youtube/publishing-cadence-evidence.m
 
 The [source-bounded 2026 sponsorship category study](ontology/youtube/sponsor-category-evidence.md) compares long-form branded-read detections by video type without interpreting them as paid contracts, creator revenue or platform-wide sponsor demand. Two other commercial data sources are included with separate denominators and reporting periods.
 
+The [descriptive gender/community evidence study](ontology/youtube/gender-community-evidence.md) distinguishes owner-only logged-in demographic categories and privacy suppression from an age-bounded commercial Gaming/Beauty panel. It makes no inferences about individual identity or complete audience composition.
+
 The [sponsorship and disclosure research](ontology/youtube/brand-disclosure-risk.md) distinguishes YouTube's branded-content declaration from U.S. FTC endorsement guidance, including the September 2026 rollout of refreshed labels and demographic-region controls. Platform disclosure tools are not a blanket legal safe harbor; non-U.S. requirements and typical sponsorship profits remain unmeasured.
 
 A new [officially sourced tax-withholding study](ontology/youtube/tax-withholding-mechanics.md) distinguishes the U.S.-viewer base, missing-form worldwide deductions, and independent local tax liabilities. It does not infer an individual creator's tax status or rate.

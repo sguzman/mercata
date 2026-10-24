@@ -168,6 +168,33 @@ test('2026 API sampling budget keeps search calls separate and rejects populatio
   assert(Object.values(budget.target_estimands).every(value=>value===null));
 });
 
+test('Gaming and beauty report keeps selected vendor overlap separate from a national union',async()=>{
+ const [panel,dossier]=await Promise.all([load('ontology/youtube/beauty-gaming-overlap-2025.json'),load('specimens/youtube.json')]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(panel.study.panel_count,74276);
+ assert.equal(panel.study.representative_of_all_us_youtube_users,false);
+ assert.equal(panel.findings.find(x=>x.id==='reported_category_overlap').value,5);
+ assert.equal(panel.findings.find(x=>x.id==='reported_category_overlap').denominator_n,null);
+ assert.equal(panel.findings.find(x=>x.id==='reported_category_overlap').raw_joint_unique_people,null);
+ assert(panel.source_ids.every(id=>ids.has(id)));
+ assert.equal(panel.source_independence.independent_research_datasets,1);
+ assert(Object.values(panel.unmeasured).every(x=>x===null));
+ assert.equal(panel.comparability.exact_union_unique_people,null);
+});
+test('Gender-associated research preserves reporting privacy and missing denominators',async()=>{
+ const [m,dossier]=await Promise.all([load('ontology/youtube/gender-community-evidence.json'),load('specimens/youtube.json')]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(m.kind,'gender_descriptive_community_evidence');
+ assert(m.sources.every(id=>ids.has(id)));
+ assert.deepEqual(m.measurement_surfaces[0].categories,['female','male','user_specified']);
+ assert.equal(m.measurement_surfaces[0].includes_signed_out_gender_breakdown,false);
+ assert.equal(m.measurement_surfaces[1].missing_means_zero,false);
+ assert.equal(m.bounded_vendor_study.overlap_numerator,null);
+ assert.equal(m.bounded_vendor_study.overlap_denominator,null);
+ assert(m.comparison_gates.every(g=>g.passed===false));
+ assert(Object.values(m.unknowns).every(v=>v===null));
+});
+
 test("33 topic categories and 36 bounded observations retain separate children and learning scopes",async()=>{
   const [topic,activity,opportunity]=await Promise.all([
     load('ontology/youtube/taxonomy.json'),
