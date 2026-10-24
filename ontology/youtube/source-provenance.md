@@ -1,6 +1,6 @@
 # YouTube source provenance and independence audit
 
-**Snapshot: October 23, 2026.** Mercata's evidence register contained **122 source-reference records**, **129 claims**, and **six normalized URL pairs** that pointed to the same document. **91** records have an unknown exact publication date; these are not automatically defective sources, because public help pages may be continuously updated. Every record must retain a retrieval date.
+**Snapshot: October 23, 2026.** Mercata's evidence register contained **123 source-reference records**, **130 claims**, and **six normalized URL pairs** that pointed to the same document. **91** records have an unknown exact publication date; these are not automatically defective sources, because public help pages may be continuously updated. Every record must retain a retrieval date.
 
 The [machine-readable family declarations](source-families.json) provide a formal list of shared source records, including a separately categorized underlying **NeoReach survey** that also appears in a partner publication. Two different URLs are not always two independently sampled studies.
 
@@ -12,7 +12,7 @@ The [machine-readable family declarations](source-families.json) provide a forma
 - **Claim**: A dated statement about what the source actually supports, with limitations.
 - **Publication date**: May be unknown for living help pages; do not convert a retrieval date to a falsely precise publication date.
 
-The six identical-document pairs concern the YPP help page, audience analytics, two child-directed policy resources, current advertiser suitability and advertiser-policy updates. The NeoReach and partner publications are a separate **same-underlying-survey** family. The original population and sample conditions remain identical even though the two publications have different URLs.
+The six identical-document pairs concern the YPP help page, audience analytics, two child-directed policy resources, current advertiser suitability and advertiser-policy updates. The NeoReach and partner publications are a separate **same-underlying-survey** family. CreatorIQ's 2026 original research page and its companion press release also describe one respondent sample; only the research-page URL is registered as a source record, not both as independent datasets. The original population and sample conditions remain identical even though the two publications have different URLs.
 
 ## Meaningful URL selectors
 
