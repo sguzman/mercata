@@ -167,6 +167,11 @@ try{
     assert.equal(await page.locator('.usage-history-point').count(),7,'Missing dated U.S. adult usage series');
     assert.equal(await page.locator('.community-survey-year').count(),7,'Missing U.S. YouTube news trend');
     assert.equal(await page.locator('.community-profile-card').count(),12,'Missing U.S. news audience composition');
+    const comparators=page.locator('.video-comparators');
+    assert.equal(await comparators.locator('.video-comparator').count(),3,'Missing scoped video-product comparisons');
+    await comparators.locator('summary').click();
+    assert((await comparators.textContent()).includes('not been added as Mercata specimens'));
+    assert((await comparators.textContent()).includes('general profitability: unknown'));
     assert.equal(await page.locator('.competition-tier').count(),5,'Missing sampled subscriber tiers');
     const historyLinking=page.locator('.historical-linking');
     assert.equal(await historyLinking.locator('.historical-link-card').count(),2,'Missing historical linking observations');
