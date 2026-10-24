@@ -2572,6 +2572,39 @@
       "evidence_class": "official_topical_video_view_geography_lower_bound",
       "license": "Linked source and independently summarized quantitative finding; no copied source images",
       "notes": "More than 80% of 2023 global views of anime-related YouTube videos originated outside Japan; topical query and unique viewers not released."
+    },
+    {
+      "id": "yt-recs-surfaces-2026",
+      "url": "https://support.google.com/youtube/answer/16089387?hl=en",
+      "title": "How YouTube recommendations work",
+      "publisher": "YouTube Help",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_distribution_surface_guidance",
+      "license": "Official policy linked and paraphrased; no copied video or media",
+      "notes": "Descriptive current guidance, not disclosed coefficients, creator outcome data or historically verified algorithm release."
+    },
+    {
+      "id": "yt-video-discovery-help-2026",
+      "url": "https://support.google.com/youtube/answer/11914225?co=YOUTUBE._YTVideoType%3Dvideo&hl=en",
+      "title": "Search and discovery tips: Video",
+      "publisher": "YouTube Help",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_distribution_surface_guidance",
+      "license": "Official policy linked and paraphrased; no copied video or media",
+      "notes": "Descriptive current guidance, not disclosed coefficients, creator outcome data or historically verified algorithm release."
+    },
+    {
+      "id": "yt-shorts-discovery-help-2026",
+      "url": "https://support.google.com/youtube/answer/11914225?co=YOUTUBE._YTVideoType%3Dshorts&hl=en",
+      "title": "Search and discovery tips: Shorts",
+      "publisher": "YouTube Help",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_distribution_surface_guidance",
+      "license": "Official policy linked and paraphrased; no copied video or media",
+      "notes": "Descriptive current guidance, not disclosed coefficients, creator outcome data or historically verified algorithm release."
     }
   ],
   "claims": [
@@ -5391,6 +5424,37 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "These are survey total n, not guaranteed item-specific response denominators; fans were the screened population, not all users, creators or the entire age cohort."
+    },
+    {
+      "id": "youtube-2026-home-upnext-signal-difference",
+      "text": "YouTube identifies watch history as a principal signal for personalized Home recommendations and the currently watched video as a main signal for Up Next suggestions; their exact relative signal weights are not published.",
+      "source_ids": [
+        "yt-recs-surfaces-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Official feature documentation does not establish causal creator income effects, exact ranking factors, newcomer channel success probability or platform-wide experiment results."
+    },
+    {
+      "id": "youtube-2026-search-short-distribution-difference",
+      "text": "YouTube Search weighs query relevance in title, description and content and engagement; Shorts discovery has its own personalized feed and other surfaces. YouTube states no minimum Shorts upload cadence is required.",
+      "source_ids": [
+        "yt-video-discovery-help-2026",
+        "yt-shorts-discovery-help-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Official feature documentation does not establish causal creator income effects, exact ranking factors, newcomer channel success probability or platform-wide experiment results."
+    },
+    {
+      "id": "youtube-2026-shorts-no-automatic-longform-penalty",
+      "text": "YouTube's Shorts creator guide states Shorts performance does not intrinsically harm recommendations for ordinary videos; this is a current publisher description, not a measured universal causal study of creator revenue.",
+      "source_ids": [
+        "yt-shorts-discovery-help-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Official feature documentation does not establish causal creator income effects, exact ranking factors, newcomer channel success probability or platform-wide experiment results."
     }
   ],
   "observations": [],

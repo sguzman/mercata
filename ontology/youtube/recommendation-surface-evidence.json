@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "recommendation_surface_evidence",
+  "as_of": "2026-10-24",
+  "status": "official_mechanisms_no_disclosed_weights",
+  "source_ids": [
+    "yt-recs-surfaces-2026",
+    "yt-video-discovery-help-2026",
+    "yt-shorts-discovery-help-2026"
+  ],
+  "method": "Classify distinct official discovery surfaces and their audience-conditioned ranking signals. No owner analytics or private viewing histories collected.",
+  "surfaces": [
+    {
+      "id": "home",
+      "label": "Home recommendations",
+      "context": "viewer_watch_history",
+      "source_ids": [
+        "yt-recs-surfaces-2026"
+      ],
+      "claim": "Personalized viewing history, subscription and satisfaction cues affect Home; no fixed impression quota.",
+      "ranking_weight": null,
+      "observed_creator_reach": null
+    },
+    {
+      "id": "up_next",
+      "label": "Up Next recommendations",
+      "context": "currently_watched_video",
+      "source_ids": [
+        "yt-recs-surfaces-2026"
+      ],
+      "claim": "The video presently being watched helps recommend what comes next; not just subscriber reach.",
+      "ranking_weight": null,
+      "observed_creator_reach": null
+    },
+    {
+      "id": "shorts",
+      "label": "Shorts feed",
+      "context": "short_form_viewer_behavior",
+      "source_ids": [
+        "yt-shorts-discovery-help-2026"
+      ],
+      "claim": "Shorts discovery responds to performance and viewer personalization; view counts do not prove long-form conversions.",
+      "ranking_weight": null,
+      "observed_creator_reach": null
+    },
+    {
+      "id": "search",
+      "label": "YouTube Search",
+      "context": "query_and_content_relevance",
+      "source_ids": [
+        "yt-video-discovery-help-2026"
+      ],
+      "claim": "Search matches title, description and video content against queries plus engagement; not simply lifetime view sorting.",
+      "ranking_weight": null,
+      "observed_creator_reach": null
+    },
+    {
+      "id": "subscriptions",
+      "label": "Subscriptions feed",
+      "context": "followed_channels_and_recency",
+      "source_ids": [
+        "yt-shorts-discovery-help-2026"
+      ],
+      "claim": "Shorts Subscriptions shows recent followed-channel uploads, not guaranteed notices or active people.",
+      "ranking_weight": null,
+      "observed_creator_reach": null
+    }
+  ],
+  "separate_conditions": [
+    {
+      "id": "topic_interest",
+      "source_id": "yt-video-discovery-help-2026",
+      "quantified_lift": null
+    },
+    {
+      "id": "competition",
+      "source_id": "yt-video-discovery-help-2026",
+      "quantified_lift": null
+    },
+    {
+      "id": "seasonality",
+      "source_id": "yt-video-discovery-help-2026",
+      "quantified_lift": null
+    },
+    {
+      "id": "no_shorts_cadence_minimum",
+      "source_id": "yt-shorts-discovery-help-2026",
+      "quantified_lift": null
+    },
+    {
+      "id": "no_inherent_shorts_longform_penalty",
+      "source_id": "yt-shorts-discovery-help-2026",
+      "quantified_lift": null
+    }
+  ],
+  "unsupported_claims": [
+    "Universal best posting time",
+    "A fixed ranking factor coefficient",
+    "Guaranteed impressions for every subscriber",
+    "A Shorts video harms long-form reach merely by existing",
+    "More published video views proves higher net creator profit"
+  ],
+  "unmeasured": {
+    "home_ranking_weights": null,
+    "up_next_ranking_weights": null,
+    "shorts_ranking_weights": null,
+    "search_ranking_weights": null,
+    "first_year_new_channel_reach": null,
+    "organic_creator_profit_lift": null,
+    "universal_optimal_post_cadence": null
+  }
+}

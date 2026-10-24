@@ -543,10 +543,17 @@
           "title": "Document platform search and recommendation",
           "acceptance": "Cite discoverability surfaces, ranking documentation and limits.",
           "weight": 1,
-          "progress": 55,
+          "progress": 73,
           "status": "in_progress",
           "evidence": [
-            "ontology/youtube/discovery.md"
+            "ontology/youtube/discovery.md",
+            "ontology/youtube/recommendation-surface-evidence.json",
+            "ontology/youtube/recommendation-surface-evidence.md",
+            "site/recommendation-evidence-audit.mjs",
+            "tests/recommendation-evidence-audit.test.mjs",
+            "site/app.js",
+            "tests/site-smoke.mjs",
+            "specimens/youtube.json"
           ]
         },
         {
@@ -555,7 +562,7 @@
           "title": "Research evidence of query demand",
           "acceptance": "Record public demand signals and their sample limitations.",
           "weight": 1,
-          "progress": 52,
+          "progress": 67,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
@@ -566,7 +573,13 @@
             "ontology/youtube/multilingual-distribution.json",
             "ontology/youtube/multilingual-distribution.md",
             "tests/youtube.test.mjs",
-            "scripts/verify.mjs"
+            "scripts/verify.mjs",
+            "ontology/youtube/recommendation-surface-evidence.json",
+            "ontology/youtube/recommendation-surface-evidence.md",
+            "site/recommendation-evidence-audit.mjs",
+            "tests/recommendation-evidence-audit.test.mjs",
+            "site/app.js",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -2838,14 +2851,20 @@
           "title": "Document official ranking and distribution signals",
           "acceptance": "Separate confirmed descriptions from speculative creator lore.",
           "weight": 1,
-          "progress": 25,
+          "progress": 81,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
             "ontology/youtube/creator-growth.md",
             "ontology/youtube/content-formats.json",
             "ontology/youtube/content-formats.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/recommendation-surface-evidence.json",
+            "ontology/youtube/recommendation-surface-evidence.md",
+            "site/recommendation-evidence-audit.mjs",
+            "tests/recommendation-evidence-audit.test.mjs",
+            "site/app.js",
+            "tests/site-smoke.mjs"
           ]
         },
         {

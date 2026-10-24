@@ -52,6 +52,10 @@ The [synthetic media disclosure/rights study](synthetic-media-rights-policy.md),
 
 The [animation cycles and anime geography study](animation-format-cycles.md) records YouTube's 2023 share of anime-related **view events** outside Japan and keeps it separate from selected US/Mexico fan survey rates, child-directed animation, and adult-oriented content. The [machine record](animation-format-cycles.json) and verified tests prohibit inventing people counts, creator median income, or universal genre rules.
 
+## YouTube discovery and recommendation rules
+
+The [five-surface research study](recommendation-surface-evidence.md), [machine model](recommendation-surface-evidence.json) and [source-backed validator](../../site/recommendation-evidence-audit.mjs) distinguish Home, Up Next, Shorts, Search and subscriptions. Current official guidance does not establish algorithm coefficients, guaranteed impressions or general creator income outcomes.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

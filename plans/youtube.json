@@ -1638,11 +1638,18 @@
       "objective": "Plan source review for recommendation surfaces without assuming secret ranking rules.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and plan source review for recommendation surfaces without assuming secret ranking rules.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 81,
       "evidence": [
-        "ontology/youtube/discovery.md"
+        "ontology/youtube/discovery.md",
+        "ontology/youtube/recommendation-surface-evidence.json",
+        "ontology/youtube/recommendation-surface-evidence.md",
+        "site/recommendation-evidence-audit.mjs",
+        "tests/recommendation-evidence-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs",
+        "specimens/youtube.json"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/recommendation-surface-evidence.json",
       "priority": "standard",
       "phase": 3
     },
@@ -1654,7 +1661,7 @@
       "objective": "Prepare format-specific measurement tables for impressions, shown-in-feed and views.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and prepare format-specific measurement tables for impressions, shown-in-feed and views.",
       "status": "in_progress",
-      "percent": 79,
+      "percent": 87,
       "evidence": [
         "ontology/youtube/discovery.md",
         "ontology/youtube/analytics-query-guide.json",
@@ -1671,7 +1678,11 @@
         "site/shorts-referral-audit.mjs",
         "tests/shorts-referral-audit.test.mjs",
         "tests/site-smoke.mjs",
-        "site/app.js"
+        "site/app.js",
+        "ontology/youtube/recommendation-surface-evidence.json",
+        "ontology/youtube/recommendation-surface-evidence.md",
+        "site/recommendation-evidence-audit.mjs",
+        "tests/recommendation-evidence-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/shorts-related-video-funnel.json",
       "priority": "standard",
@@ -4929,15 +4940,21 @@
       "objective": "Define official disclosure, observable surfaces and measurement limits.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define official disclosure, observable surfaces and measurement limits.",
       "status": "in_progress",
-      "percent": 62,
+      "percent": 84,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
         "ontology/youtube/content-formats.json",
         "ontology/youtube/content-formats.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/recommendation-surface-evidence.json",
+        "ontology/youtube/recommendation-surface-evidence.md",
+        "site/recommendation-evidence-audit.mjs",
+        "tests/recommendation-evidence-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/recommendation-surface-evidence.json",
       "priority": "standard",
       "phase": 2
     },
