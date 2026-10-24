@@ -649,3 +649,15 @@ h1 em {font-style:italic;color:var(--accent)}
 .video-comparator p{font-size:12px;margin:7px 0}
 @media(max-width:850px){.video-comparators-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.video-comparators-details{padding:15px}}
+
+/* Published withholding bases are not individual tax rate calculations */
+.tax-withholding{margin:28px 0}
+.tax-withholding-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.tax-withholding-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.tax-withholding-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.tax-withholding-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.tax-withholding-card h5{font-size:14px;margin:0 0 8px}
+.tax-withholding-rate{font:19px Georgia,serif}
+.tax-withholding-card p{font-size:12px;margin:7px 0}
+.tax-withholding-base{font-weight:700}
+@media(max-width:650px){.tax-withholding-details{padding:15px}.tax-withholding-grid{grid-template-columns:1fr}}
