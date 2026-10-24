@@ -1472,6 +1472,30 @@ test('YouTube discovery metrics keep viewer identities and event counts separate
   assert(growth.stages.every(x=>x.source_ids.every(id=>sourceIds.has(id))));
 });
 
+test('Publish time study distinguishes owner reports, UTC times, live audiences and unknown lift',async()=>{
+  const [study,dossier]=await Promise.all([
+    load('ontology/youtube/geographic-publishing-time.json'),load('specimens/youtube.json')
+  ]);
+  const ids=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(study.kind,'video_publishing_time_geography_study');
+  assert(study.source_ids.every(id=>ids.has(id)));
+  assert.equal(study.official_findings.length,5);
+  assert(study.official_findings.every(x=>x.source_ids.every(id=>ids.has(id))));
+  const owner=study.official_findings.find(x=>x.id==='owner_online_windows');
+  assert.equal(owner.window_days,28);
+  assert.equal(owner.owner_authorization_required,true);
+  assert(study.official_findings.find(x=>x.id==='longterm_upload_timing').not_proof_of.includes('universal'));
+  const live=study.format_comparison.find(x=>x.format==='live_stream');
+  const ordinary=study.format_comparison.find(x=>x.format==='ordinary_on_demand_video');
+  assert.equal(live.live_attendance_required,true);
+  assert.equal(ordinary.longterm_advantage_verified,false);
+  assert.equal(study.proposed_controlled_study.randomized_episodes_n,null);
+  assert.equal(study.proposed_controlled_study.ninety_day_lift,null);
+  assert(study.acceptance_gates.every(x=>x.pass===false));
+  assert(Object.values(study.unmeasured).every(x=>x===null));
+  assert(study.publication_policy.some(x=>x.includes('suppressed geography')));
+});
+
 test('Eight YouTube formats preserve different access and link rules',async()=>{
   const [formats,dossier]=await Promise.all([
     load('ontology/youtube/content-formats.json'),load('specimens/youtube.json')

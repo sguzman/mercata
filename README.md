@@ -119,6 +119,8 @@ The [peer-reviewed comment participation comparison](ontology/youtube/comment-no
 
 The [creator safety and continuity study](ontology/youtube/creator-safety-continuity.md) now includes October 2026 security pauses, Google Account-first hacked-channel recovery, live-chat moderation, harassment reporting and privacy complaint pathways. These are dated official procedures, not inferred incident rates or guaranteed recovery outcomes.
 
+The [publishing-time and viewer-geography study](ontology/youtube/geographic-publishing-time.md) adds YouTube's 28-day owner-audience activity report, format-specific Live and Premiere scheduling, timezone and privacy limitations, and the platform's explicit warning that upload time is not known to improve long-term video performance. No universal best release hour is inferred.
+
 A [2026 publishing cadence study](ontology/youtube/publishing-cadence-evidence.md) adds niche- and size-specific median upload counts with their quartile ranges, alongside a separate 10.2-million-channel analysis of upload-frequency and growth correlation. The studies do not establish causal growth benefits, a creator labor budget, or a universal uploading schedule.
 
 The [source-bounded 2026 sponsorship category study](ontology/youtube/sponsor-category-evidence.md) compares long-form branded-read detections by video type without interpreting them as paid contracts, creator revenue or platform-wide sponsor demand. Two other commercial data sources are included with separate denominators and reporting periods.

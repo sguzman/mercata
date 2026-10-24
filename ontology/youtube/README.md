@@ -275,6 +275,10 @@ The [Barb Q2 2025 study](screen-viewing-uk-2025.md) and [machine record](screen-
 
 The [seven-format public-policy comparison](video-surfaces-economics.md) and [machine inventory](video-surfaces-economics.json) distinguish watch-page uploads, Shorts, live, Premieres, Clips, podcast playlists and archived replays. Eligible monetized watch-page videos **at least eight minutes** long may enable mid-roll slots; offered slots are not guaranteed ad impressions or income. Live/replay counting uses different owner Analytics denominators, and archives are not guaranteed. The study also flags conflicting localized Help guidance regarding claimed Shorts after September 24, 2026, without asserting a universal rule.
 
+## Geographic publishing time, Live/Premiere schedule and owner-only heatmaps
+
+The [publication-timing study](geographic-publishing-time.md) and [structured source register](geographic-publishing-time.json) distinguish the owner-only 28-day *When your viewers are on YouTube* report from general upload recommendations, live/Premiere attendance, scheduled timezone settings, and geographic privacy suppression. YouTube says ordinary release timing is not known to affect long-term performance. No universal optimum, country-specific hour or causal lift is measured; a future matched channel experiment needs dated UTC instants and compatible outcome definitions.
+
 ## Video and distribution formats
 
 The [format comparison](content-formats.md) and [machine catalog](content-formats.json) document eight publication forms, including ordinary videos, Shorts, webcam/encoder live streams, mobile live streams, Premieres, podcasts, Community Posts and live replays. Each records where discovery and links work, candidate earning routes and eligibility restrictions. Neither their profit nor labor requirements are invented.
