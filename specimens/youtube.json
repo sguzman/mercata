@@ -1131,6 +1131,39 @@
       "evidence_class": "official_product_announcement",
       "license": "Linked official update, limited paraphrase",
       "notes": "Policy announcement; page content can be dynamically served, corroborated with official August 19 blog and Data API."
+    },
+    {
+      "id": "api-quota-oct-2026",
+      "url": "https://developers.google.com/youtube/data/determine_quota_cost",
+      "publisher": "Google for Developers / YouTube Data API",
+      "title": "YouTube Data API Quota Calculator",
+      "published_at": "2026-10-15",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_dated_api_quota_definition",
+      "license": "Official API reference linked with short independently written facts",
+      "notes": "Default separate daily search and videos.insert call buckets, shared other-method quota. Actual project settings may differ."
+    },
+    {
+      "id": "api-videos-list-oct-2026",
+      "url": "https://developers.google.com/youtube/data/reference/rest/v3/videos/list",
+      "publisher": "Google for Developers / YouTube Data API",
+      "title": "Videos: list resource reference",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_api_resource_documentation",
+      "license": "Official API reference linked with factual method description",
+      "notes": "Videos.list metadata/statistics lookup cost 1 other-endpoint unit per call; maximum 50 IDs per batch."
+    },
+    {
+      "id": "api-channels-list-oct-2026",
+      "url": "https://developers.google.com/youtube/data/reference/rest/v3/channels/list",
+      "publisher": "Google for Developers / YouTube Data API",
+      "title": "Channels: list resource reference",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_api_resource_documentation",
+      "license": "Official API reference linked with factual method description",
+      "notes": "Channels.list quota is a general other-endpoint unit; channel subscriber counts do not measure active unique people."
     }
   ],
   "claims": [
@@ -2175,6 +2208,39 @@
       "observed_at": "2026-10-23",
       "confidence": "high",
       "limitations": "Says no change by this counting policy, not evidence that channel monetization or view distributions stayed constant for every creator."
+    },
+    {
+      "id": "quota-oct-2026-distinct-search-bucket",
+      "text": "Google's October 15, 2026 Data API quota guidance lists a default 100 daily search.list call allowance at one unit per call, a separate 100 videos.insert call allowance, and 10,000 daily units for other endpoints.",
+      "source_ids": [
+        "api-quota-oct-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Defaults, not confirmed quotas for any specific project. Each page request consumes its method bucket; daily reset is Pacific Time."
+    },
+    {
+      "id": "search-api-approximate-limit-2026",
+      "text": "YouTube Data API search.list accepts at most 50 result items per call and defines pageInfo.totalResults as an approximate result count capped at 1,000,000; pagination must use nextPageToken.",
+      "source_ids": [
+        "api-search",
+        "api-quota-oct-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Actual returned page size may be lower. This cannot establish population size, completeness of a topic corpus or count of distinct creators."
+    },
+    {
+      "id": "youtube-meta-enrichment-quota-2026",
+      "text": "Google documents one-unit calls to videos.list and channels.list within the shared other-endpoint quota; videos.list permits metadata retrieval of up to 50 specified video IDs per call.",
+      "source_ids": [
+        "api-videos-list-oct-2026",
+        "api-channels-list-oct-2026",
+        "api-quota-oct-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "This describes public resource access, not exhaustive enumeration, a consented creator cohort or authority to collect nonpublic information."
     }
   ],
   "observations": [],
