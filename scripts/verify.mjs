@@ -456,6 +456,24 @@ for (const entry of index.specimens) {
     const conceptIds=new Set(model.concepts.map(x=>x.id));
     ensure(conceptIds.size===model.concepts.length && model.concepts.length>=60,'Incomplete YouTube ontology');
     ensure(model.relations.every(x=>conceptIds.has(x.subject)&&conceptIds.has(x.object)),'Ontology relation has unknown concept');
+    ensure(topic.topics.length===32 &&
+      topic.topics.some(x=>x.id==='child-animation') &&
+      topic.topics.some(x=>x.id==='children-music' && x.audience_estimate===null &&
+        x.creator_estimate===null),
+      'Children musical content missing independent taxonomy scope');
+    ensure(observed.observations.length===31 &&
+      observed.observations.some(x=>x.id==='baby-shark-single-video-jun-2025' &&
+        x.topic_id==='children-music' &&
+        x.metric==='single_video_lifetime_views' &&
+        x.value===16000000000),
+      'Single music-video cumulative count misrepresented as animation population');
+    ensure(observed.observations.filter(x=>[
+      'jewelry-diy-2025','polymer-clay-miniature-2025','draw-with-me-2025',
+      'paint-with-me-2025','bento-title-h1-2026','buldak-ramen-2025',
+      'sewing-beginner-2025','baby-shark-single-video-jun-2025'
+    ].includes(x.id)).every(x=>x.metric_definition_revision==='before_2026_08_24' &&
+      x.unit==='views' && Number.isFinite(x.value)),
+      'New topic findings have incompatible metric definitions');
     ensure(new Set(topic.topics.map(t=>t.id)).size===topic.topics.length,'Duplicate topic ID');
     ensure(topic.topics.every(x=>x.measurement_status!=='researched' || x.audience_estimate!==null),'Invented topic estimate');
     ensure(policy.items.every(x=>x.source_ids.length>0&&x.source_ids.every(id=>sourceIds.has(id))),'Unattributed policy');
