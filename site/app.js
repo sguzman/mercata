@@ -371,6 +371,36 @@ function renderPlatformPolicies(policy, record) {
   return section;
 }
 
+function renderPublicSamplingBudget(data,dossier){
+  if(!data?.default_quota_snapshot)return null;
+  const section=make('section','sampling-budget');
+  const details=make('details','sampling-budget-details');
+  details.append(make('summary','','Sampling YouTube channels without inventing community sizes'));
+  details.append(make('p','measure-limit','These are dated documentation defaults, not an API credential or an executed sample. Search results and estimated totals cannot identify how many people or creators belong to a community.'));
+  const fields=[
+    ['Default daily searches',data.default_quota_snapshot.search_list.max_calls_per_day_default+' calls'],
+    ['Maximum search page',data.default_quota_snapshot.search_list.max_items_per_page+' slots'],
+    ['Other-method quota',data.default_quota_snapshot.other_endpoints.max_units_per_day_default+' units/day'],
+    ['Approximate search total ceiling',data.default_quota_snapshot.search_total_results.capped_reported_value.toLocaleString()]
+  ];
+  const panel=make('div','sampling-budget-grid');
+  for(const [name,value] of fields){
+    const card=make('article','sampling-budget-card');
+    card.append(make('strong','',value));
+    card.append(make('p','',name));
+    panel.append(card);
+  }
+  details.append(panel);
+  const ex=data.synthetic_budget_example;
+  details.append(make('p','measure-limit','Illustrative calculation only: '+ex.topic_count+' topics × '+ex.regions+' regions × '+ex.languages+' languages × '+ex.formats+' formats × '+ex.pages_per_stratum+' page = '+ex.estimated_search_calls+' search calls, at most '+ex.max_search_result_slots.toLocaleString()+' result slots; actual distinct videos, creators and viewers unknown.'));
+  details.append(make('p','measure-limit','Quota settings must be checked on the authorized project. No API calls, credentials, payments or individual profiles have been used here.'));
+  details.append(audienceSources(data.sources.map(x=>x.source_id),dossier));
+  const link=make('a','inline-link','Review quota snapshots, sampling strata and limits ↗');
+  link.href='./ontology/youtube/public-api-sampling-budget.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);
+  section.append(details);return section;
+}
+
 function renderTopicCatalogue(data, activity) {
   if(!data)return null;
   const section=make('section','topic-catalogue');
@@ -1337,7 +1367,7 @@ async function showDossier(entry) {
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,adultUseHistory,incomeEvidence,channelIncome,crossPlatformIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,musicRights,productionCosts,viewDefinition,analyticsGuide,platformScale,countryReach,eligibilityMatrix,channelOnboarding,applicationLifecycle,creatorGrowth,contentFormats,multilingualDistribution,newsAudienceStudy,competitionSample,academicResearch]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/cross-platform-income-surveys.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/music-rights-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-costs.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/view-definition-break.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-reach-devices.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-onboarding.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/multilingual-distribution.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/competition-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/academic-studies.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,samplingBudget,adultUseHistory,incomeEvidence,channelIncome,crossPlatformIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,musicRights,productionCosts,viewDefinition,analyticsGuide,platformScale,countryReach,eligibilityMatrix,channelOnboarding,applicationLifecycle,creatorGrowth,contentFormats,multilingualDistribution,newsAudienceStudy,competitionSample,academicResearch]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/public-api-sampling-budget.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/cross-platform-income-surveys.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/music-rights-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-costs.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/view-definition-break.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-reach-devices.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-onboarding.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/multilingual-distribution.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/competition-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/academic-studies.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -1435,6 +1465,8 @@ async function showDossier(entry) {
     if(channelStudy)outer.append(channelStudy);
     const catalogue=renderTopicCatalogue(topicCatalog,topicActivity);
     if(catalogue)outer.append(catalogue);
+    const sampling=renderPublicSamplingBudget(samplingBudget,record);
+    if(sampling)outer.append(sampling);
     const method=renderOpportunityFramework(opportunityFramework,topicCatalog,topicActivity);
     if(method)outer.append(method);
     if(entry.id==='youtube')outer.append(renderScenarioCalculator());
