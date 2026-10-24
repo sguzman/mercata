@@ -129,6 +129,12 @@ try{
     assert.equal(await geo.locator('.geographic-card').count(),5,'Missing regional source and population branches');
     await geo.locator('summary').click();
     assert((await geo.textContent()).includes('newcomer profit including zero earners: unknown'));
+    const countryPrograms=page.locator('.country-programs');
+    assert.equal(await countryPrograms.locator('.country-program-card').count(),3,'Missing verified YPP/payment country rows');
+    await countryPrograms.locator('summary').click();
+    assert.equal(await countryPrograms.locator('.country-program-currency').count(),3,'Missing currency-scoped payout thresholds');
+    assert((await countryPrograms.textContent()).includes('Account currency and feature-specific permissions: unknown'));
+    assert((await countryPrograms.textContent()).includes('MXN 1,200'));
     assert.equal(await page.locator('.payout-currency').count(),2,'Missing documented payout currencies');
     assert((await page.locator('.topic-catalogue-card').count())>=32,'Missing community taxonomy');
     const sampling=page.locator('.sampling-budget');
