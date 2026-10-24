@@ -40,6 +40,15 @@ try{
     await page.locator('#dossier-view h3').first().waitFor();
     assert.equal(await page.locator('#dossier-view h3').first().textContent(),'YouTube');
     assert((await page.locator('.platform-policy-grid .policy-card').count())>=10,'Missing YouTube policy cards');
+    const future=page.locator('.ypp-transition');
+    assert.equal(await future.locator('.ypp-transition-card').count(),3,'Missing separate current/future membership rules');
+    await future.locator('.ypp-transition-details > summary').click();
+    assert((await future.textContent()).includes('February 1, 2027'));
+    assert((await future.textContent()).includes('future subscriber floor'));
+    assert((await future.textContent()).includes('rolling qualification'));
+    await future.locator('.ypp-transition-pools > summary').click();
+    assert.equal(await future.locator('.ypp-transition-pool').count(),2,'Missing Premium and Premium Lite pools');
+    assert((await future.textContent()).includes('60% of net subscription revenue'));
     assert.equal(await page.locator('.revenue-pathway-card').count(),16,'Missing distinct monetization routes');
     assert.equal(await page.locator('.earning-gate-details').count(),16,'Missing product-specific eligibility checklists');
     assert.equal(await page.locator('.application-stage').count(),9,'Missing application stages');
