@@ -2605,6 +2605,28 @@
       "evidence_class": "official_distribution_surface_guidance",
       "license": "Official policy linked and paraphrased; no copied video or media",
       "notes": "Descriptive current guidance, not disclosed coefficients, creator outcome data or historically verified algorithm release."
+    },
+    {
+      "id": "vidiq-subscriber-benchmarks-2026",
+      "url": "https://vidiq.com/research/youtube-subscriber-benchmarks-2026/",
+      "publisher": "vidIQ Research",
+      "title": "YouTube Subscriber Benchmarks 2026: What 61 Million Channels Reveal",
+      "published_at": "2026-07-20",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commercial_vendor_indexed_channel_snapshot_and_selected_activity_cohort",
+      "license": "Original published aggregate tables linked and independently summarized; no channel records or vendor graphics copied",
+      "notes": "61,186,246 channels with >=1 public subscriber; separate 11,752,034 positive-net-video-count growth subset over trailing 90 days. A vendor index, not all YouTube creators."
+    },
+    {
+      "id": "vidiq-1000-subscribers-2026",
+      "url": "https://vidiq.com/research/youtube-uploads-1000-subscribers/",
+      "publisher": "vidIQ Research",
+      "title": "Reaching 1,000 YouTube Subscribers: What 32.9 Million Channels Reveal",
+      "published_at": "2026-09-11",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commercial_vendor_indexed_360_day_channel_cohort",
+      "license": "Published aggregate counts independently summarized and arithmetic tested; no bulk extraction or graphics copying",
+      "notes": "32,926,088 public indexed channels under 1k subs with >=1 public video at 360-day baseline and nonnegative net video count change. No new-entrant, causal upload or YPP claims."
     }
   ],
   "claims": [
@@ -5455,6 +5477,36 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Official feature documentation does not establish causal creator income effects, exact ranking factors, newcomer channel success probability or platform-wide experiment results."
+    },
+    {
+      "id": "vidiq-2026-indexed-milestones-not-universe",
+      "text": "In vidIQ's July 20, 2026 snapshot, 24,813,187 of 61,186,246 indexed channels with at least one public subscriber had at least 1,000 subscribers; 4,836,743 had at least 10,000 and 792,376 at least 100,000. These are cumulative counts within the provider's covered sample.",
+      "source_ids": [
+        "vidiq-subscriber-benchmarks-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Vendor-selected public channel index excludes zero-subscriber, deleted or unindexed channels and does not identify channel owners, paid creators or a platform census."
+    },
+    {
+      "id": "vidiq-2026-positive-video-net-growth-not-creators",
+      "text": "vidIQ separately tracked 11,752,034 indexed channels that started with at least one subscriber and increased their public video count over the trailing 90 days ending July 20, 2026; the channel counts and median subscriber growth by starting tier do not enumerate unique people or all active creators.",
+      "source_ids": [
+        "vidiq-subscriber-benchmarks-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Net published-video-count change can undercount uploads offset by removals or visibility changes, and selection excludes channels without this positive change."
+    },
+    {
+      "id": "vidiq-2026-small-channel-endpoint-conditional-rates",
+      "text": "In vidIQ's September 2026 study of 32,926,088 indexed channels starting under 1,000 subscribers with at least one video 360 days earlier, a total of 500,409 ended at 1,000 or more. Observed threshold rates rose across groups with larger nonnegative net video-count changes, without matching baseline age or creator resources.",
+      "source_ids": [
+        "vidiq-1000-subscribers-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Not new-creator entrants, not a random YouTube channel census; excludes unavailable/negative-count histories. Observational correlation is not an upload cause or YPP eligibility rate."
     }
   ],
   "observations": [],

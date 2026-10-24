@@ -56,6 +56,10 @@ The [animation cycles and anime geography study](animation-format-cycles.md) rec
 
 The [five-surface research study](recommendation-surface-evidence.md), [machine model](recommendation-surface-evidence.json) and [source-backed validator](../../site/recommendation-evidence-audit.mjs) distinguish Home, Up Next, Shorts, Search and subscriptions. Current official guidance does not establish algorithm coefficients, guaranteed impressions or general creator income outcomes.
 
+## Public channel-size distribution and below-1,000 cohort
+
+The [vendor-indexed channel-size and 360-day milestone study](channel-cohort-observations-2026.md), [machine source tables](channel-cohort-observations-2026.json) and [cohort arithmetic tests](../../tests/channel-cohort-audit.test.mjs) register actual aggregate counts from July and September 2026 vidIQ research. The distinct sample frames and published conditional proportions are not all-creator population estimates, newcomer monetary success probabilities, true upload frequencies, or evidence of causal uploading effects; the public dossier shows this distinction.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.
