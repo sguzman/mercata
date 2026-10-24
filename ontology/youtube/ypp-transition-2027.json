@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "future_partner_program_transition",
+  "research_as_of": "2026-10-23",
+  "announcement_date": "2026-08-10",
+  "terms_effective_date": "2027-02-01",
+  "current_rules_snapshot": "2026-10-23",
+  "transition_status": "announced_future_terms_not_effective_as_of_research_date",
+  "source_ids": [
+    "yt-ypp-2027-announcement",
+    "ypp-main",
+    "yt-ypp-2027-terms-help"
+  ],
+  "policy_windows": [
+    {
+      "id": "current_2026_new_ad_applicant",
+      "effective_from": null,
+      "effective_until": "2027-01-31",
+      "cohort": "new applicant seeking ads or Premium in October 2026",
+      "threshold_type": "either_route_plus_subscribers",
+      "minimum_subscribers": 1000,
+      "watch_hours": {
+        "qualified_public_hours": 4000,
+        "lookback_days": 365
+      },
+      "shorts": {
+        "qualified_shorts_views": 10000000,
+        "lookback_days": 90
+      },
+      "source_ids": [
+        "ypp-main"
+      ],
+      "limitations": "Official Help page uses 12 months; 365 days is modeled as a calendar approximation and not a promise of date inclusivity. Channel review and modules remain required."
+    },
+    {
+      "id": "future_2027_new_ad_applicant",
+      "effective_from": "2027-02-01",
+      "effective_until": null,
+      "cohort": "new creator applying for ads/Premium revenue sharing",
+      "threshold_type": "either_route; confirm subscriber conditions independently",
+      "minimum_subscribers": null,
+      "watch_hours": {
+        "qualified_public_hours": 8000,
+        "lookback_days": 365
+      },
+      "shorts": {
+        "qualified_shorts_views": 20000000,
+        "lookback_days": 90
+      },
+      "source_ids": [
+        "yt-ypp-2027-announcement",
+        "yt-ypp-2027-terms-help"
+      ],
+      "limitations": "August announcement explicitly sets the new qualified watch/Shorts thresholds but does not expressly restate the new-applicant subscriber floor. Do not infer that 1,000 remains or has changed."
+    },
+    {
+      "id": "existing_ypp_entry_grandfathered",
+      "effective_from": "2027-02-01",
+      "effective_until": null,
+      "cohort": "channels already admitted to YPP before rule starts",
+      "threshold_type": "new_entry_threshold_not_retroactive",
+      "minimum_subscribers": null,
+      "watch_hours": null,
+      "shorts": null,
+      "source_ids": [
+        "yt-ypp-2027-announcement"
+      ],
+      "limitations": "Existing YPP membership is not revoked merely because the new admission thresholds rise. Continued account, content and product eligibility remain separate."
+    },
+    {
+      "id": "shorts_ongoing_revenue_share_2027",
+      "effective_from": "2027-02-01",
+      "effective_until": null,
+      "cohort": "YPP channels that seek ongoing Shorts ads and subscription allocation",
+      "threshold_type": "rolling_shorts_product_gate",
+      "minimum_subscribers": null,
+      "watch_hours": null,
+      "shorts": {
+        "qualified_shorts_views": 10000000,
+        "lookback_days": 90
+      },
+      "source_ids": [
+        "yt-ypp-2027-announcement"
+      ],
+      "limitations": "Below-threshold channels remain YPP and continue eligible long-form monetization, but Shorts revenue sharing pauses and resumes after crossing the threshold. Does not mean a new channel can initially join YPP solely on 10m views."
+    },
+    {
+      "id": "early_access_unchanged",
+      "effective_from": "2027-02-01",
+      "effective_until": null,
+      "cohort": "applicants to fan funding/Shopping early-access products",
+      "threshold_type": "unchanged_early_access_rules",
+      "minimum_subscribers": 500,
+      "watch_hours": {
+        "qualified_public_hours": 3000,
+        "lookback_days": 365
+      },
+      "shorts": {
+        "qualified_shorts_views": 3000000,
+        "lookback_days": 90
+      },
+      "additional_public_uploads": 3,
+      "upload_lookback_days": 90,
+      "source_ids": [
+        "yt-ypp-2027-announcement",
+        "ypp-expanded"
+      ],
+      "limitations": "The announcement says thresholds stay unchanged, but feature, country, module and channel eligibility still vary. Early access is not advertising approval."
+    }
+  ],
+  "premium_allocations": [
+    {
+      "id": "premium_subscription_pool",
+      "plan": "YouTube Premium",
+      "announced": "2026-08-10",
+      "effective_from": "2027-02-01",
+      "share_of_net_subscription_revenue_percent": 30,
+      "long_form_creator_share_of_allocated_pool_percent": 55,
+      "shorts_creator_share_of_allocated_pool_percent": 45,
+      "distribution_inputs": [
+        "member_watch_time",
+        "member_views"
+      ],
+      "source_ids": [
+        "yt-ypp-2027-announcement"
+      ],
+      "allocation_unknowns": [
+        "precise_member_allocation_to_each_creator",
+        "absolute_net_subscription_revenue_per_member",
+        "creator_payments_by_format"
+      ],
+      "limitations": "The source describes plan-level pooled allocation and downstream creator shares, not a fixed per-view rate or an unconditional fraction of a particular subscriber bill."
+    },
+    {
+      "id": "premium_lite_subscription_pool",
+      "plan": "YouTube Premium Lite",
+      "announced": "2026-08-10",
+      "effective_from": "2027-02-01",
+      "share_of_net_subscription_revenue_percent": 60,
+      "long_form_creator_share_of_allocated_pool_percent": 55,
+      "shorts_creator_share_of_allocated_pool_percent": 45,
+      "distribution_inputs": [
+        "member_watch_time",
+        "member_views"
+      ],
+      "source_ids": [
+        "yt-ypp-2027-announcement"
+      ],
+      "allocation_unknowns": [
+        "precise_member_allocation_to_each_creator",
+        "absolute_net_subscription_revenue_per_member",
+        "creator_payments_by_format"
+      ],
+      "limitations": "Expansion to countries offering Premium is announced; actual availability to a particular member and the exact account-level distribution cannot be assumed."
+    }
+  ],
+  "required_actions": [
+    {
+      "id": "accept_updated_ypp_terms",
+      "cohort": "current YPP members who want to continue full monetization",
+      "deadline_date": "2027-01-31",
+      "effective_date": "2027-02-01",
+      "source_ids": [
+        "yt-ypp-2027-terms-help",
+        "yt-ypp-2027-announcement"
+      ],
+      "effect": "Review and accept new terms in YouTube Studio before the stated deadline",
+      "limits": "Help document warns about continued full monetization; no unsupported claim of automatic channel termination or exact lost income if terms are not accepted."
+    }
+  ],
+  "incentives": [
+    {
+      "id": "shopping_brand_trends",
+      "announcement": "Additional Shopping, brand-deal and trend-based incentives are planned, including for below-10m Shorts creators",
+      "specific_thresholds": null,
+      "amounts": null,
+      "launch_date": null,
+      "source_ids": [
+        "yt-ypp-2027-announcement"
+      ],
+      "limitations": "Examples of planned support, not a fixed payment contract or guaranteed available feature."
+    }
+  ],
+  "comparisons": {
+    "new_ad_application_watch_hours_ratio": 2,
+    "new_ad_application_shorts_views_ratio": 2,
+    "shorts_share_continuation_threshold": 10000000,
+    "different_populations": "New YPP ads/Premium applicants (20m) and already admitted creators retaining Shorts allocation (rolling 10m) have different conditions. Neither is the early fan funding tier.",
+    "after_date_view_counts": "Public first-frame views are not necessarily qualified Shorts views; never substitute API viewCount for eligibility progress.",
+    "missing_person_level_estimates": {
+      "approval_probability": null,
+      "time_to_entry_days": null,
+      "creator_typical_income_change": null,
+      "shorts_requalification_probability": null,
+      "premium_lite_monthly_payout": null
+    },
+    "no_retrospective_projection": true
+  },
+  "sources_to_recheck": [
+    "Changes to official Help threshold table near 2027-02-01",
+    "Actual terms shown in approved creator's own Studio",
+    "Product availability and payout distributions by territory",
+    "Any newly announced fan-funding and brand incentive requirements"
+  ],
+  "reporting_rules": [
+    "Preserve source-specific observation date and effective date independently.",
+    "Label 2027 thresholds as future rules when publishing before February 2027.",
+    "Do not silently re-label current 4,000/10m YPP entry as current 8,000/20m.",
+    "Do not conflate 10m rolling Shorts product access with 20m new-applicant YPP qualification.",
+    "Do not calculate fixed creator income from the Premium subscription pool percentages.",
+    "Subscriber requirement in the 2027 announcement is not explicit: use null rather than copy a floor without verification."
+  ]
+}
