@@ -331,7 +331,7 @@
           "title": "Model a transparent net-sale example",
           "acceptance": "Calculate gross less documented fees with assumptions.",
           "weight": 1,
-          "progress": 78,
+          "progress": 82,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -348,7 +348,10 @@
             "tests/youtube.test.mjs",
             "ontology/youtube/ypp-transition-2027.json",
             "ontology/youtube/ypp-transition-2027.md",
-            "scripts/verify.mjs"
+            "scripts/verify.mjs",
+            "ontology/youtube/air-studio-benchmarks-2026.json",
+            "ontology/youtube/air-studio-benchmarks-2026.md",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -789,7 +792,7 @@
           "title": "Find representative median earnings",
           "acceptance": "Include zero earners and method or mark unknown.",
           "weight": 1,
-          "progress": 52,
+          "progress": 60,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
@@ -798,7 +801,11 @@
             "ontology/youtube/small-channel-income.md",
             "ontology/youtube/academic-studies.json",
             "ontology/youtube/academic-studies.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/air-studio-benchmarks-2026.json",
+            "ontology/youtube/air-studio-benchmarks-2026.md",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -807,7 +814,7 @@
           "title": "Document earnings percentiles",
           "acceptance": "Seek p10, p25, p75, p90 and top-tail evidence.",
           "weight": 1,
-          "progress": 63,
+          "progress": 67,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
@@ -820,7 +827,10 @@
             "ontology/youtube/cross-platform-income-surveys.json",
             "ontology/youtube/cross-platform-income-surveys.md",
             "tests/youtube.test.mjs",
-            "scripts/verify.mjs"
+            "scripts/verify.mjs",
+            "ontology/youtube/air-studio-benchmarks-2026.json",
+            "ontology/youtube/air-studio-benchmarks-2026.md",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -853,7 +863,7 @@
           "title": "Audit selection and survivorship biases",
           "acceptance": "Describe recruitment, response bias and missing populations.",
           "weight": 1,
-          "progress": 90,
+          "progress": 92,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
@@ -873,7 +883,9 @@
             "ontology/youtube/newcomer-income-cohort.md",
             "scripts/newcomer-income-audit.mjs",
             "tests/newcomer-cohort.test.mjs",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/air-studio-benchmarks-2026.json",
+            "ontology/youtube/air-studio-benchmarks-2026.md"
           ]
         },
         {
@@ -1117,13 +1129,17 @@
           "title": "List seller analytics",
           "acceptance": "Identify reported conversion and traffic metrics, access and gaps.",
           "weight": 1,
-          "progress": 74,
+          "progress": 78,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/discovery.md",
             "ontology/youtube/analytics-query-guide.json",
             "ontology/youtube/analytics-query-guide.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/air-studio-benchmarks-2026.json",
+            "ontology/youtube/air-studio-benchmarks-2026.md",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         }
       ]
