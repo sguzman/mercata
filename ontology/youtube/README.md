@@ -20,6 +20,10 @@ Children's animation requires separating broadly suitable animation from materia
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.
 
+## Source independence and reproducibility
+
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **122 references, 116 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+
 ## Valid evidence
 
 All claim records require official or independently credible sources, observations dates and limitations. Public API statistics are not the same as authorized creator metrics. Statistical inference from samples requires a recorded sampling method, sample size, selection mechanism, exclusions and appropriate uncertainty statement. No individual's political affiliation, sex or ethnicity should be guessed.
