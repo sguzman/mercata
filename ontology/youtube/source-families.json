@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "as_of": "2026-10-23",
+  "kind": "known_shared_source_families",
+  "families": [
+    {
+      "id": "ypp-help-page",
+      "relation": "same_normalized_document_url",
+      "source_ids": [
+        "ypp-main",
+        "yt-ypp-2027-terms-help"
+      ],
+      "notes": "Same official YPP Help page, cited for current thresholds and future terms notice."
+    },
+    {
+      "id": "audience-help-page",
+      "relation": "same_normalized_document_url",
+      "source_ids": [
+        "analytics-audience",
+        "audience-analytics-help"
+      ],
+      "notes": "Two records for the same channel audience Analytics help page."
+    },
+    {
+      "id": "kids-policy-page",
+      "relation": "same_normalized_document_url",
+      "source_ids": [
+        "kids-policy",
+        "child-features"
+      ],
+      "notes": "Same YouTube Help page supports several child-directed video feature rules."
+    },
+    {
+      "id": "kids-classification-page",
+      "relation": "same_normalized_document_url",
+      "source_ids": [
+        "kids-interpretation",
+        "child-classification"
+      ],
+      "notes": "Same interpretation guidance used by separate research workstreams."
+    },
+    {
+      "id": "advertiser-guidelines-page",
+      "relation": "same_normalized_document_url",
+      "source_ids": [
+        "advertiser-policy",
+        "yt-ads-guidelines-2026"
+      ],
+      "notes": "Current ad suitability page, referenced in policy and longitudinal research."
+    },
+    {
+      "id": "advertiser-updates-page",
+      "relation": "same_normalized_document_url",
+      "source_ids": [
+        "advertiser-updates",
+        "yt-ads-policy-updates-2026"
+      ],
+      "notes": "Same official change history, referenced in policy and longitudinal research."
+    },
+    {
+      "id": "neoreach-2025-original-syndication",
+      "relation": "same_underlying_survey_different_urls",
+      "source_ids": [
+        "neoreach-earnings-2025",
+        "neoreach-earnings-syndication-2026"
+      ],
+      "notes": "NeoReach and its partnered/syndicated publication represent one respondent dataset, not two independent samples."
+    }
+  ],
+  "source_records_are_studies": false,
+  "publication_date_policy": "Null means the indexed public resource did not supply a verified publication date; retrieval date still required. Frequently applies to living reference pages.",
+  "duplication_policy": "A source record may be useful in multiple workstreams, but repeated URLs or syndicated reports cannot be counted as independent studies.",
+  "related_documents": [
+    "ontology/youtube/cross-platform-income-surveys.json",
+    "specimens/youtube.json"
+  ],
+  "prohibited_inferences": [
+    "source_reference_count_to_independent_study_count",
+    "published_at_null_to_source_false",
+    "shared_survey_republication_to_replicated_research"
+  ]
+}
