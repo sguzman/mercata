@@ -50,6 +50,10 @@ The [official country eligibility and payments comparison](country-eligibility-p
 
 The [2026 public Data API sampling and quota snapshot](public-api-sampling-budget.md) and [machine protocol](public-api-sampling-budget.json) distinguish the **100 daily search.list calls** in their own default bucket from the **10,000 other-method API units**, as documented by Google on October 15, 2026. Search pages can contain up to 50 result slots, while totalResults is approximate and capped. A synthetic 48-call budget illustrates the arithmetic but **no API queries were executed**, and unique community people, active creators and niche supply remain unknown.
 
+## Crosswalk of incompatible YouTube studies and survey sampling frames
+
+The [human study-frame audit](study-frame-crosswalk.md) and [machine source matrix](study-frame-crosswalk.json) separate five published measurement frames: Pew U.S. adults, two differently aged YouTube/NRG U.S. online populations, a commercial mixed-platform creator survey, and AIR's selected monetized YouTube client cohort. Respondents, channels and channel-months are distinct observational units. Their different recruitment, questions, age eligibility, item nonresponse and unverified cross-study overlap preclude pooled global viewer counts or representative newcomer income claims.
+
 ## U.S. adult YouTube usage by income, education and residence (2026)
 
 The [Pew NPORS demographic comparison](us-demographic-use-2026.md) and [structured 2026 survey cells](us-demographic-use-2026.json) report *ever-use* rates within U.S. adult income, education, and urban/suburban/rural subgroups (5,511 total respondents). These percentages do not measure YouTube audience composition, active monthly audiences, creator income or causal effects. Subgroup counts and margins of error remain unknown and are not replaced with the survey-wide ±1.8-point margin.

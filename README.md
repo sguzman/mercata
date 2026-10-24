@@ -65,6 +65,8 @@ The research also tracks [monthly advertiser-policy revisions during 2026](ontol
 
 A [dated February 2027 YouTube Partner Program transition](ontology/youtube/ypp-transition-2027.md) preserves current 2026 qualifications alongside announced stricter requirements for new applicants and an ongoing Shorts product gate for existing members. Missing subscriber conditions and actual payouts are not inferred.
 
+The [study-frame crosswalk](ontology/youtube/study-frame-crosswalk.md) explicitly prevents pooling Pew adults, YouTube/NRG's differently aged U.S. online participants, CreatorIQ cross-platform creators and AIR's monetized YouTube client channels. Population, sample size, question and time period must be compatible before combined inference.
+
 The [2026 U.S. adult YouTube usage study](ontology/youtube/us-demographic-use-2026.md) adds Pew Research Center's source-specific income, education and urban/rural **ever-use rates**. It does not infer YouTube's viewer demographic composition or convert the survey-wide sampling error into subgroup errors.
 
 The [selected monetized AIR RPM and livestream research](ontology/youtube/air-studio-benchmarks-2026.md) compares real Studio data for client channels but does not promote vendor sample medians to an all-newcomer income forecast. Only channels selected into the studies are measured; missing zero earners, production costs and the unknown overlap between reports remain explicit.

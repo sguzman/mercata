@@ -486,6 +486,22 @@ test('YouTube task percentage matches its original and detailed queues',async()=
   assert(plan.detail_tasks.every(t=>t.percent<100 || (t.status==='complete'&&t.evidence.length>0)));
 });
 
+test('Independent survey population frames are explicitly nonpoolable',async()=>{
+ const [cross,dossier]=await Promise.all([
+  load('ontology/youtube/study-frame-crosswalk.json'),load('specimens/youtube.json')
+ ]);
+ const sources=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(cross.kind,'noncomparable_public_study_frames');
+ assert.deepEqual(cross.frames.map(x=>x.sample_total_n),[5511,496,939,5095,300]);
+ assert(cross.frames.every(x=>x.source_ids.every(id=>sources.has(id))));
+ assert(cross.frames.every(x=>x.per_item_n===null && x.representative_global_users===false));
+ assert.equal(cross.frames.filter(x=>x.may_include_minors===true).length,2);
+ assert.equal(cross.frames.find(x=>x.id==='air_2026_monetized_studio').observed_channel_months,3595);
+ assert.equal(cross.frames.find(x=>x.id==='air_2026_monetized_studio').includes_zero_earning_creators,false);
+ assert.equal(cross.blocked_cross_source_operations.length,4);
+ assert(Object.values(cross.unmeasured).every(x=>x===null));
+});
+
 test('Pew 2026 U.S. demographic ever-use rates never become YouTube audience composition',async()=>{
  const [model,dossier]=await Promise.all([
   load('ontology/youtube/us-demographic-use-2026.json'),load('specimens/youtube.json')

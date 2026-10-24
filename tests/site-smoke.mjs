@@ -129,6 +129,11 @@ try{
     await reach.locator('summary').click();
     assert((await reach.textContent()).includes('Do not sum percentages or device minutes'));
     assert((await reach.textContent()).includes('global monthly distinct viewers: unknown'));
+    const frames=page.locator('.survey-frame-crosswalk');
+    assert.equal(await frames.locator('.survey-frame-card').count(),5,'Missing incompatible U.S. public and creator sampling frames');
+    await frames.locator('summary').click();
+    assert((await frames.textContent()).includes('including zero-earning YouTube entrants remain unknown'));
+    assert((await frames.textContent()).includes('5,511 respondents'));
     const demographics=page.locator('.us-demographic-use');
     assert.equal(await demographics.locator('.us-demographic-card').count(),3,'Missing U.S. adult subgroup study');
     await demographics.locator('summary').click();

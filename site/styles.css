@@ -757,3 +757,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .air-studio-example{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);font-size:12px;padding:8px 0}
 .air-studio-example strong{white-space:nowrap;font-variant-numeric:tabular-nums}
 @media(max-width:700px){.air-studio-details{padding:15px}.air-studio-grid{grid-template-columns:1fr}}
+
+/* Measurement frames are not interchangeable populations or income samples */
+.survey-frame-crosswalk{margin:28px 0}
+.survey-frame-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.survey-frame-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.survey-frame-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.survey-frame-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.survey-frame-card h5{font-size:14px;margin:0 0 8px}
+.survey-frame-card p{font-size:12px;margin:8px 0}
+.survey-frame-count{font:22px Georgia,serif;font-variant-numeric:tabular-nums}
+@media(max-width:650px){.survey-frame-details{padding:15px}.survey-frame-grid{grid-template-columns:1fr}}
