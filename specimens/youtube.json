@@ -1252,6 +1252,28 @@
       "evidence_class": "platform_reported_topic_activity",
       "license": "Short original quantified summary with source URL; no original article/video copied.",
       "notes": "Global scoped video activity, not unique people or representative creator earnings; public view definition predates 2026-08-24."
+    },
+    {
+      "id": "yt-ypp-2027-announcement",
+      "url": "https://blog.youtube/news-and-events/youtube-partner-program-updates-2027-new-opportunities-earn/",
+      "publisher": "YouTube Official Blog",
+      "title": "New opportunities to earn and changes to the YouTube Partner Program",
+      "published_at": "2026-08-10",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_announced_future_program_changes",
+      "license": "Official linked source, independently summarized short factual claims",
+      "notes": "New applicant YPP thresholds, ongoing Shorts 10m window, dedicated subscription pools. Terms take effect February 2027, not October 2026."
+    },
+    {
+      "id": "yt-ypp-2027-terms-help",
+      "url": "https://support.google.com/youtube/answer/72851?hl=en",
+      "publisher": "YouTube Help",
+      "title": "YouTube Partner Program overview and eligibility",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_current_help_with_future_transition_notice",
+      "license": "Linked official help, independently summarized temporal policies",
+      "notes": "Current 2026 thresholds and 2027 terms-acceptance notice. The article may change with transition."
     }
   ],
   "claims": [
@@ -2409,6 +2431,69 @@
       "confidence": "high",
       "observed_at": "2026-10-23",
       "limitations": "Single music video's cumulative plays are not the child-viewer population. Never infer a user's age from viewing."
+    },
+    {
+      "id": "ypp-2027-new-ad-entry-double",
+      "text": "On August 10, 2026 YouTube announced that from February 1, 2027 new YPP ads/Premium applicants will require 8,000 qualified public watch hours in 365 days or 20 million qualified Shorts views in 90 days, replacing current 4,000 or 10 million thresholds.",
+      "source_ids": [
+        "yt-ypp-2027-announcement",
+        "yt-ypp-2027-terms-help"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Announced future rule, not yet operative October 2026. Blog does not expressly restate 2027 subscriber threshold, so it is unknown; channel approval still needed."
+    },
+    {
+      "id": "ypp-2027-existing-grandfathered",
+      "text": "YouTube says the new 2027 YPP ads/Premium entry requirements will not affect creators already in the Partner Program.",
+      "source_ids": [
+        "yt-ypp-2027-announcement"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Does not waive ongoing policy, activity, contract or product-specific qualification rules."
+    },
+    {
+      "id": "ypp-2027-shorts-rolling-product-gate",
+      "text": "From February 1, 2027, Shorts revenue sharing will depend on 10 million qualified Shorts views in the previous 90 days, even for current YPP creators; creators below the threshold remain YPP members and can continue eligible long-form earning while Shorts sharing is paused.",
+      "source_ids": [
+        "yt-ypp-2027-announcement"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Product-specific rolling gate; not equivalent to the 20 million qualified Shorts views required to join YPP ads/Premium as a new 2027 applicant."
+    },
+    {
+      "id": "ypp-2027-premium-lite-pool",
+      "text": "YouTube announced subscription pools from Premium (30%) and Premium Lite (60%) net subscription revenue and downstream creator shares of 55% for long-form and 45% for Shorts, allocated using member watch time and views.",
+      "source_ids": [
+        "yt-ypp-2027-announcement"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Percentages operate on specific net bases, not full retail subscription prices or guaranteed per-view payouts. Actual creator receipts not reported."
+    },
+    {
+      "id": "ypp-2027-terms-deadline",
+      "text": "YouTube Help says YPP creators should accept updated monetization terms by January 31, 2027, for terms effective February 1, 2027, to continue full monetization.",
+      "source_ids": [
+        "yt-ypp-2027-terms-help",
+        "yt-ypp-2027-announcement"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "General guidance; no inference about a particular account's acceptance status or exact outcome of missing deadline."
+    },
+    {
+      "id": "ypp-2027-early-entry-unchanged",
+      "text": "YouTube's August 2026 announcement says fan-funding and Shopping YPP entry thresholds will remain unchanged in the February 2027 update.",
+      "source_ids": [
+        "yt-ypp-2027-announcement",
+        "ypp-expanded"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Other product, regional, age, channel and review restrictions still apply; early access is not automatic advertising revenue sharing."
     }
   ],
   "observations": [],
