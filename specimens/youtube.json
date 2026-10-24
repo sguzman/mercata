@@ -1098,6 +1098,39 @@
       "evidence_class": "official_viewer_feature_documentation",
       "license": "Source-linked independently summarized public product documentation or short quantitative observations",
       "notes": "Dated snapshot where available; product support and eligibility vary by time, language and channel."
+    },
+    {
+      "id": "view-change-official-blog-2026",
+      "url": "https://blog.youtube/inside-youtube/engaged-views-youtube-explained/",
+      "publisher": "YouTube Official Blog",
+      "title": "What are 'Engaged' Views on YouTube?",
+      "published_at": "2026-08-19",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_dated_measurement_policy",
+      "license": "Primary official source linked; independently summarized policy facts",
+      "notes": "Official definition transition effective 2026-08-24, with engagement and payout qualifications kept separate."
+    },
+    {
+      "id": "view-change-video-api-2026",
+      "url": "https://developers.google.com/youtube/data/reference/rest/v3/videos",
+      "publisher": "Google for Developers / YouTube Data API",
+      "title": "YouTube Video resource: statistics.viewCount",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_api_reference",
+      "license": "Source linked; independent paraphrase of field semantics",
+      "notes": "Public API viewCount definition for playback starts, effective 2026-08-24."
+    },
+    {
+      "id": "view-change-official-community-2026",
+      "url": "https://support.google.com/youtube/blog/433409976/an-update-to-how-we-count-public-views-across-youtube",
+      "publisher": "YouTube Help Community",
+      "title": "An update to how we count public views across YouTube",
+      "published_at": "2026-08-17",
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_product_announcement",
+      "license": "Linked official update, limited paraphrase",
+      "notes": "Policy announcement; page content can be dynamically served, corroborated with official August 19 blog and Data API."
     }
   ],
   "claims": [
@@ -2110,6 +2143,38 @@
       "confidence": "high",
       "observed_at": "2026-10-23",
       "limitations": "Preferred language is not reliable evidence of an individual's nationality, ethnicity, age or other demographic characteristics."
+    },
+    {
+      "id": "view-first-frame-global-change-2026",
+      "text": "On August 24, 2026, YouTube began counting public video views from the first playback frame across Shorts, long-form, podcasts and live, including autoplay and hover playback.",
+      "source_ids": [
+        "view-change-official-blog-2026",
+        "view-change-video-api-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Public start-event counts are not unique people or automatically eligible program watch activity. Pre/post raw counts differ in definition."
+    },
+    {
+      "id": "view-engaged-distinction-2026",
+      "text": "YouTube distinguishes public playback starts from engaged views, which reflect an explicit click/tap or watching beyond initial seconds. Passive thumbnail displays without started playback remain impressions.",
+      "source_ids": [
+        "view-change-official-blog-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Engaged activity is still subject to separate product and qualification rules; exact thresholds may differ by context."
+    },
+    {
+      "id": "view-change-not-payout-uplift-2026",
+      "text": "YouTube states that its August 2026 public-view definition change did not directly alter recommendation rules, key engaged-view-based analytics or Partner Program qualification requirements.",
+      "source_ids": [
+        "view-change-official-blog-2026",
+        "view-change-official-community-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Says no change by this counting policy, not evidence that channel monetization or view distributions stayed constant for every creator."
     }
   ],
   "observations": [],
