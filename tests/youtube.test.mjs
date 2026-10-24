@@ -175,7 +175,7 @@ test("33 topic categories and 36 bounded observations retain separate children a
     load('ontology/youtube/opportunity-framework.json')
   ]);
   assert.equal(topic.topics.length,33);
-  assert.equal(activity.observations.length,34);
+  assert.equal(activity.observations.length,36);
   assert.equal(opportunity.topic_assessments.length,33);
   const childMusic=topic.topics.find(x=>x.id==='children-music');
   assert(childMusic);
