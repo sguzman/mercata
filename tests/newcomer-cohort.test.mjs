@@ -31,7 +31,7 @@ test('Synthetic nonprobability cohort can be structurally valid without a popula
 });
 test('Newcomer audit rejects unearned representative claims',()=>{
  const x=make();x.claims_representative=true;
- assert(assessAggregateNewcomerIncome(x).errors.some(e=>e.includes('representative')));
+ assert(assessAggregateNewcomerIncome(x).errors.some(e=>/representative/i.test(e)));
 });
 test('Newcomer audit rejects erased zero earners and mismatched response counts',()=>{
  const x=make();x.sample.observed_income_n=4;x.sample.zero_income_n=9;
