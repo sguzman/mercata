@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "aggregate_race_ethnicity_and_religion_uncertainty",
+  "as_of": "2026-10-24",
+  "status": "bounded_aggregate_race_ethnicity_ever_use_religion_unmeasured",
+  "source_ids": [
+    "pew-us-adults-2026",
+    "analytics-audience"
+  ],
+  "data_access_basis": "Published survey subgroup aggregates only; no person-level or channel-level profile collection",
+  "population": "U.S. adults 18+ in Pew's 2026 National Public Opinion Reference Survey, collected January 30–June 18 via web/mail/phone",
+  "source_overall_n": 5511,
+  "source_overall_moe_pp": 1.8,
+  "metric": "percent_of_eligible_named_group_self_reporting_ever_youtube_use",
+  "race_ethnicity_groups": [
+    {
+      "id": "nonhispanic_white_single_race",
+      "label": "White",
+      "value_percent": 83,
+      "eligible_population": "U.S. adults reporting White as their only race and not Hispanic",
+      "english_only_restriction": false,
+      "source_ids": [
+        "pew-us-adults-2026"
+      ],
+      "sample_n": null,
+      "sampling_moe_pp": null
+    },
+    {
+      "id": "hispanic_any_race",
+      "label": "Hispanic",
+      "value_percent": 85,
+      "eligible_population": "U.S. adults reporting Hispanic identity, of any race",
+      "english_only_restriction": false,
+      "source_ids": [
+        "pew-us-adults-2026"
+      ],
+      "sample_n": null,
+      "sampling_moe_pp": null
+    },
+    {
+      "id": "nonhispanic_black_single_race",
+      "label": "Black",
+      "value_percent": 84,
+      "eligible_population": "U.S. adults reporting Black as their only race and not Hispanic",
+      "english_only_restriction": false,
+      "source_ids": [
+        "pew-us-adults-2026"
+      ],
+      "sample_n": null,
+      "sampling_moe_pp": null
+    },
+    {
+      "id": "nonhispanic_asian_english_speakers",
+      "label": "Asian (English speakers only)",
+      "value_percent": 95,
+      "eligible_population": "Non-Hispanic single-race Asian U.S. adult English speakers; not representative of all Asian-language populations",
+      "english_only_restriction": true,
+      "source_ids": [
+        "pew-us-adults-2026"
+      ],
+      "sample_n": null,
+      "sampling_moe_pp": null
+    }
+  ],
+  "religious_affiliation": {
+    "youtube_ever_use_rates": null,
+    "subgroup_percentages": null,
+    "source_sample": null,
+    "denominator": null,
+    "status": "not_measured_in_cited_youtube_use_table",
+    "permissible_next_step": "Independently locate and review a survey explicitly measuring both YouTube behavior and self-reported religious affiliation in a legally publishable, appropriately sampled aggregate frame"
+  },
+  "publication_limits": [
+    "Race/ethnicity classification comes only from published respondent self-identification; never infer an individual attribute from face, skin tone, voice, name, country, language or comments.",
+    "These are percentages of adults WITHIN each named race/ethnicity group reporting ever-use, not proportions of all YouTube users.",
+    "Single-race non-Hispanic categories and Hispanic-of-any-race categories are defined differently but are grouped as reported by the source; no recoding or inferred identity.",
+    "The Asian estimate is representative of English speakers only and is not a general all-language Asian population rate.",
+    "The survey-wide sample size and ±1.8 point margin cannot be assigned to every race/ethnicity cell; their subgroup sample sizes and errors are unknown.",
+    "Published U.S. adults exclude children and cannot yield YouTube global, regional or creator-population ethnicity distributions.",
+    "Ever use does not mean monthly active, a specific format or community membership, political affiliation or spending.",
+    "Religious identity and religious belief of YouTube users are unmeasured and may not be inferred from the topic of videos, creators' names, comments, emojis or channel aesthetics.",
+    "Exclude person-level profiling, reidentification and lists of users inferred to belong to protected categories.",
+    "Use licensed/released aggregate respondent data only; apply consent and age safeguards for any future collection."
+  ],
+  "unknowns": {
+    "proportion_youtube_users_by_ethnicity": null,
+    "proportion_youtube_creators_by_ethnicity": null,
+    "monthly_active_youtube_users_by_ethnicity": null,
+    "cross_format_youtube_use_by_ethnicity": null,
+    "youtube_users_by_religion": null,
+    "youtube_creators_by_religion": null,
+    "religion_based_platform_use_rates": null,
+    "subgroup_sample_sizes": null,
+    "subgroup_margin_errors": null,
+    "cross_race_religion_intersections": null
+  }
+}
