@@ -638,3 +638,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .historical-link-share{font:28px Georgia,serif;font-variant-numeric:tabular-nums}
 .historical-link-card p{font-size:12px;margin:9px 0 0}
 @media(max-width:650px){.historical-linking-details{padding:15px}.historical-linking-grid{grid-template-columns:1fr}}
+
+/* Product-mechanism comparisons, not pooled creator earnings */
+.video-comparators{margin:28px 0}
+.video-comparators-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.video-comparators-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.video-comparators-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:17px 0}
+.video-comparator{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;overflow-wrap:anywhere}
+.video-comparator h5{font-size:14px;margin:0 0 9px}
+.video-comparator p{font-size:12px;margin:7px 0}
+@media(max-width:850px){.video-comparators-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.video-comparators-details{padding:15px}}
