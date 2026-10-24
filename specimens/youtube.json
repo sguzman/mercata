@@ -2253,6 +2253,17 @@
       "evidence_class": "first_party_dated_pre_release_trailer_views",
       "license": "Official public announcement summarized independently",
       "notes": "Global Dec 4–5, 2023 >93m single trailer views and >250m related GTA VI video views, overlapping separate universes, not 2026 release or unique users."
+    },
+    {
+      "id": "ofcom-children-parents-media-2026",
+      "url": "https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/media-literacy-research/children/2026-children-and-parents-report/children-and-parents-media-use-and-attitudes-report-2025-6.pdf?v=418231",
+      "publisher": "Ofcom",
+      "title": "Children and Parents Media Use and Attitudes Report 2025–6",
+      "published_at": "2026-05-21",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "independent_uk_child_media_tracker_and_barb_tv_device_metrics",
+      "license": "Publicly available regulator report; independently summarized aggregate statistics, no original chart images or child-level observations reproduced.",
+      "notes": "Report page 21 includes children 3–5 and 8–17 watching videos on any platform, differentiated from 2025 Barb YouTube in-home minutes for ages 4–15. Parent/child survey samples 5,008 parent and 3,426 child interviews; denominator per age/format question unknown. Survey instrument changed in 2025/6."
     }
   ],
   "claims": [
@@ -4592,6 +4603,46 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "This was a 2023 trailer pre-release event, not the videogame's release. The single-video count and broad related-video count overlap; the latter is not additional distinct viewers."
+    },
+    {
+      "id": "ofcom-2026-children-video-format-age-uk",
+      "text": "Ofcom's May 2026 UK child-media survey reports that among children aged 3–5 who watch videos on any app/site, 80% watch cartoons or animation, 43% funny videos and 38% learning content; among video watchers aged 8–17, 62% watch funny videos, 46% music videos and 43% gameplay content.",
+      "source_ids": [
+        "ofcom-children-parents-media-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Cross-video-platform child survey, not YouTube-only viewing or unique people. 3–5 observations are parent/guardian reported, older child observations direct; per-module subgroup sample sizes and uncertainty not extracted."
+    },
+    {
+      "id": "ofcom-2026-gender-format-uk-cross-platform",
+      "text": "Ofcom's 2026 UK report describes boys as more likely than girls to watch gameplay and sports videos across video apps/sites, while girls are more likely to watch music, how-to, ASMR and self-improvement videos.",
+      "source_ids": [
+        "ofcom-children-parents-media-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Qualitative direction reported for child video-sharing app use across platforms. No YouTube-specific gender-by-format rate, biological-sex inference, subgroup counts or causal explanation can be derived."
+    },
+    {
+      "id": "ofcom-2025-uk-kids-youtube-inhome-time",
+      "text": "Ofcom reports that in 2025, UK children aged 4–15 averaged 7h07 per week of YouTube viewing captured in in-home measurement, with ages 4–9 at 6h47 and ages 10–15 at 7h27.",
+      "source_ids": [
+        "ofcom-children-parents-media-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Barb in-home device measurement, not all-device total including out-of-home or mobile-network viewing. Does not identify gender by YouTube genre, children from other regions or individual minors."
+    },
+    {
+      "id": "pew-2025-us-teens-youtube-gender-usage",
+      "text": "Pew's December 2025 U.S. teen survey (n=1,458, ages 13–17) finds 94% of boys versus 89% of girls report ever using YouTube; 20% of boys versus 13% of girls say they visit almost constantly.",
+      "source_ids": [
+        "pew-us-teens-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "U.S. self-reported teen YouTube platform use, not a YouTube-specific video-format or topic audience, different geography and frame from Ofcom UK child video-category measures."
     }
   ],
   "observations": [],

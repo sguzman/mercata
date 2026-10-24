@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "child_teen_video_content_gender_age_evidence",
+  "as_of": "2026-10-24",
+  "status": "bounded_official_crossplatform_and_youtube_sources_no_minor_profiling",
+  "source_ids": [
+    "ofcom-children-parents-media-2026",
+    "pew-us-teens-2025"
+  ],
+  "study_units": [
+    {
+      "id": "ofcom_uk_any_video_apps",
+      "source_id": "ofcom-children-parents-media-2026",
+      "country": "United Kingdom",
+      "publication_date": "2026-05-21",
+      "survey_period": "2025-2026",
+      "platform_scope": "any_video_watching_app_or_site_not_youtube_only",
+      "respondents_parent_total": 5008,
+      "respondents_children_total": 3426,
+      "individual_category_denominator": null,
+      "individual_gender_denominator": null,
+      "method": "Ofcom parent and child tracking survey; parents report for children younger than 8; direct children aged 8+; modular online/face-to-face survey redesigned in 2025/6",
+      "frame_caveat": "Reported genre preferences are percentages of video watching children in specific age bands; children can select multiple genres."
+    },
+    {
+      "id": "ofcom_uk_youtube_inhome",
+      "source_id": "ofcom-children-parents-media-2026",
+      "country": "United Kingdom",
+      "publication_date": "2026-05-21",
+      "survey_period": "2025",
+      "platform_scope": "youtube_inhome_device_viewing_only",
+      "respondents_parent_total": null,
+      "respondents_children_total": null,
+      "individual_category_denominator": null,
+      "individual_gender_denominator": null,
+      "method": "Barb average in-home viewing from measured TV/in-home connected devices",
+      "frame_caveat": "Excludes out-of-home and mobile data traffic; age groups differ from survey genres."
+    },
+    {
+      "id": "pew_us_teen_platform_use",
+      "source_id": "pew-us-teens-2025",
+      "country": "United States",
+      "publication_date": "2025-12-09",
+      "survey_period": "2025",
+      "platform_scope": "youtube_platform_ever_use_or_almost_constant_self_report",
+      "respondents_parent_total": null,
+      "respondents_children_total": 1458,
+      "individual_category_denominator": null,
+      "individual_gender_denominator": null,
+      "method": "Pew survey of teens aged 13–17",
+      "frame_caveat": "Gender-specific platform use, not audience genres or viewer watch duration."
+    }
+  ],
+  "video_genre_observations": [
+    {
+      "population": "UK_children_3_to_5_watching_video_any_app",
+      "age_range": "3-5",
+      "platform_scope": "any_video_app",
+      "measure": "percent_reporting_video_genre",
+      "source_id": "ofcom-children-parents-media-2026",
+      "values": [
+        {
+          "genre": "cartoons_animation",
+          "percent": 80
+        },
+        {
+          "genre": "funny_videos",
+          "percent": 43
+        },
+        {
+          "genre": "learning_or_homework",
+          "percent": 38
+        }
+      ],
+      "gender_breakdown": null
+    },
+    {
+      "population": "UK_children_8_to_17_watching_video_any_app",
+      "age_range": "8-17",
+      "platform_scope": "any_video_app",
+      "measure": "percent_reporting_video_genre",
+      "source_id": "ofcom-children-parents-media-2026",
+      "values": [
+        {
+          "genre": "funny_videos",
+          "percent": 62
+        },
+        {
+          "genre": "music_videos",
+          "percent": 46
+        },
+        {
+          "genre": "gameplay_videos",
+          "percent": 43
+        }
+      ],
+      "gender_breakdown": null
+    }
+  ],
+  "directional_gender_evidence": {
+    "source_id": "ofcom-children-parents-media-2026",
+    "country": "United Kingdom",
+    "population": "Child video viewers across video apps/sites in the Ofcom 2025-6 tracker",
+    "question_specific_n": null,
+    "boys_more_likely": [
+      "sports_videos",
+      "gameplay_videos"
+    ],
+    "girls_more_likely": [
+      "music_videos",
+      "how_to_instructions",
+      "asmr",
+      "self_improvement"
+    ],
+    "gender_by_format_percentages": null,
+    "youtube_specific_gender_by_format_percentages": null,
+    "limits": "Ofcom reported relative preferences for its survey gender categories; not universal gender traits, biological sex, an individual identity or every YouTube viewer."
+  },
+  "youtube_inhome_age_minutes_per_week": [
+    {
+      "age_range": "4-15",
+      "minutes": 427,
+      "source_id": "ofcom-children-parents-media-2026",
+      "year": 2025
+    },
+    {
+      "age_range": "4-9",
+      "minutes": 407,
+      "source_id": "ofcom-children-parents-media-2026",
+      "year": 2025
+    },
+    {
+      "age_range": "10-15",
+      "minutes": 447,
+      "source_id": "ofcom-children-parents-media-2026",
+      "year": 2025
+    }
+  ],
+  "us_teen_youtube_use": [
+    {
+      "country": "United States",
+      "age_range": "13-17",
+      "measure": "self_reported_ever_use_youtube",
+      "boys_percent": 94,
+      "girls_percent": 89,
+      "source_id": "pew-us-teens-2025",
+      "year": 2025
+    },
+    {
+      "country": "United States",
+      "age_range": "13-17",
+      "measure": "self_reported_almost_constant_youtube",
+      "boys_percent": 20,
+      "girls_percent": 13,
+      "source_id": "pew-us-teens-2025",
+      "year": 2025
+    }
+  ],
+  "inferred_community_boundaries": [
+    {
+      "label": "Child-directed animation",
+      "category": "child_directed",
+      "restriction": "YouTube made-for-kids classification depends on actual audience intent, not animation style or a female-oriented label"
+    },
+    {
+      "label": "Teen-oriented music, lifestyle, learning or self-improvement",
+      "category": "teen_or_general",
+      "restriction": "Teen-oriented is not synonymous with made-for-kids; the actual age intent, policy and rights must be independently evaluated"
+    },
+    {
+      "label": "General-audience gaming, sports, animation",
+      "category": "general_or_age_conditioned",
+      "restriction": "One theme can serve girls, boys, adults and children; none may be categorized solely by presumed gender of its audience"
+    }
+  ],
+  "validity": {
+    "study_is_youtube_genre_gender_sample": false,
+    "gender_as_biological_sex_inference_allowed": false,
+    "identify_or_profile_minors": false,
+    "join_uk_genre_with_us_youtube_platform_use": false,
+    "interpret_directional_gender_difference_as_causal": false,
+    "subtract_or_add_genre_percentages_as_disjoint_audiences": false,
+    "directly_compare_to_pre_2025_ofcom_series_without_method_review": false
+  },
+  "unmeasured": {
+    "youtube_gender_by_format_audience": null,
+    "youtube_girls_or_teen_unique_audience": null,
+    "creator_populations_by_teen_category": null,
+    "gender_by_genre_subgroup_counts": null,
+    "age_by_gender_by_youtube_genre": null,
+    "overlap_between_music_lifestyle_and_education": null,
+    "country_converted_audience": null,
+    "child_advertising_income": null,
+    "causal_preference_by_gender": null
+  }
+}
