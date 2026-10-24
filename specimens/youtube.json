@@ -1296,6 +1296,72 @@
       "evidence_class": "official_current_ad_suitability_policy",
       "license": "Short independent paraphrases and source URL; no full policy copied",
       "notes": "Detailed per-video ad suitability contexts and access to human review. Distinct from channel YPP entry and copyright enforcement."
+    },
+    {
+      "id": "yt-studio-channel-permissions",
+      "url": "https://support.google.com/youtube/answer/9481328?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Add or remove access to your YouTube channel with channel permissions",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_role_permission_documentation",
+      "license": "Linked official reference and independent condensed description",
+      "notes": "Studio owner role is not Brand Account primary ownership. Limited roles may not view revenue."
+    },
+    {
+      "id": "yt-brand-studio-migration",
+      "url": "https://support.google.com/youtube/answer/9367690?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Migrate from Brand Account user access to channel permissions",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_admin_permission_guide",
+      "license": "Linked official help, short original paraphrase",
+      "notes": "Role-based permissions instead of password sharing; limitations on transfer and delegated API access."
+    },
+    {
+      "id": "google-brand-primary-owner",
+      "url": "https://support.google.com/accounts/answer/7311601?hl=en",
+      "publisher": "Google Account Help",
+      "title": "Change who manages your Brand Account",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_google_brand_ownership_guide",
+      "license": "Linked official help, short original paraphrase",
+      "notes": "Both initiating and receiving manager/owner roles have seven-day tenure rules before transfer."
+    },
+    {
+      "id": "yt-brand-channel-transfer",
+      "url": "https://support.google.com/youtube/answer/3056283?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Move your YouTube channel from one Brand Account to another",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_channel_move_and_irreversible_risk",
+      "license": "Official source linked, independently summarized warnings",
+      "notes": "Replacing destination may permanently delete an existing destination channel and contents."
+    },
+    {
+      "id": "yt-own-video-download",
+      "url": "https://support.google.com/youtube/answer/56100?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Download YouTube videos that you've uploaded",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_creator_content_export",
+      "license": "Linked official help, independent brief factual summary",
+      "notes": "Creator upload downloads through Studio and Google Takeout; source export not guaranteed full original assets."
+    },
+    {
+      "id": "yt-channel-termination",
+      "url": "https://support.google.com/youtube/answer/2802168?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Channel or account terminations",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_account_termination_recovery",
+      "license": "Linked official help, short independent summary",
+      "notes": "Termination appeal and post-termination data rights distinct from copyright counter-notification."
     }
   ],
   "claims": [
@@ -2571,6 +2637,57 @@
       "observed_at": "2026-10-23",
       "confidence": "high",
       "limitations": "Does not prove a particular political or controversial video will earn ads; ads eligibility and channel approval are separate."
+    },
+    {
+      "id": "ownership-brand-seven-day-tenure",
+      "text": "Google documents that changing the primary owner of a Brand Account requires the initiating owner to have held ownership for at least seven days and the incoming owner/manager to have held an eligible role for at least seven days.",
+      "source_ids": [
+        "google-brand-primary-owner"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "This is a role-tenure rule, not a guarantee that all transfers complete in exactly seven days."
+    },
+    {
+      "id": "ownership-studio-permissions-not-transfer",
+      "text": "YouTube Studio channel permissions support roles for collaborators but the Studio Owner role cannot directly transfer Brand Account primary ownership; limited editor/viewer roles restrict access to revenue data.",
+      "source_ids": [
+        "yt-studio-channel-permissions",
+        "yt-brand-studio-migration"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Role capability varies by settings, surface, and channel; not an independent right to sell or assign channel assets."
+    },
+    {
+      "id": "ownership-destination-channel-loss-risk",
+      "text": "YouTube warns that moving a channel between Brand Accounts can permanently delete the existing target channel and its content, and may lose source-side account history/settings.",
+      "source_ids": [
+        "yt-brand-channel-transfer"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Specific losses depend on source and destination; general help does not confirm preservation of all YPP rights, badges, histories or earnings."
+    },
+    {
+      "id": "ownership-export-video-not-entire-business",
+      "text": "YouTube permits owners to download eligible uploaded videos through Studio and use Google Takeout; Studio downloads may be limited by file resolution, strikes, audio rights and daily download frequency.",
+      "source_ids": [
+        "yt-own-video-download"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Downloaded video files do not themselves represent portable subscribers, production projects, paid licenses, monetization approval or customer relationships."
+    },
+    {
+      "id": "ownership-termination-appeals-and-data",
+      "text": "YouTube's termination help describes channel appeals within one year and up to two appeals during that period, while terminated creators lose normal YouTube content downloads and may retain access to Google data.",
+      "source_ids": [
+        "yt-channel-termination"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Legal copyright counter-notices are separate; termination appeal success and timing are unknown, and limits can vary by channel."
     }
   ],
   "observations": [],
