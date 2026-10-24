@@ -1314,6 +1314,78 @@
       "unit": "content_topic",
       "access": "research_definition",
       "measured_value": null
+    },
+    {
+      "id": "ypp_terms_effective_date",
+      "group": "institutions",
+      "definition": "Date a newly announced YPP contract or product requirement takes effect, independent of research snapshot.",
+      "unit": "date",
+      "access": "official_announced_policy",
+      "measured_value": null
+    },
+    {
+      "id": "new_ads_applicant_cohort",
+      "group": "actors",
+      "definition": "Channel that applies for YouTube advertising/Premium YPP entry under rules effective on its application date.",
+      "unit": "channel_cohort",
+      "access": "official_announced_policy",
+      "measured_value": null
+    },
+    {
+      "id": "existing_ypp_partner_cohort",
+      "group": "actors",
+      "definition": "Channel previously admitted to the Partner Program, distinct from new applicants subject to changed entry thresholds.",
+      "unit": "channel_cohort",
+      "access": "official_announced_policy",
+      "measured_value": null
+    },
+    {
+      "id": "future_ypp_ad_threshold",
+      "group": "economics",
+      "definition": "Announced February 2027 new-applicant qualified attention threshold, not the currently operative threshold in October 2026.",
+      "unit": "qualified_attention",
+      "access": "official_announced_policy",
+      "measured_value": null
+    },
+    {
+      "id": "rolling_shorts_monetization_gate",
+      "group": "economics",
+      "definition": "Separate 10-million-qualified-Shorts-view rolling 90-day requirement for 2027 Shorts revenue sharing by admitted channels.",
+      "unit": "qualified_shorts_views_in_90d",
+      "access": "official_announced_policy",
+      "measured_value": null
+    },
+    {
+      "id": "premium_lite_pool",
+      "group": "economics",
+      "definition": "Announced dedicated Premium Lite net-subscription-revenue allocation pool with its own allocation base.",
+      "unit": "net_subscription_pool",
+      "access": "official_announced_policy",
+      "measured_value": null
+    },
+    {
+      "id": "premium_net_subscription_pool",
+      "group": "economics",
+      "definition": "Dedicated net-revenue Premium allocation pool whose creator distribution depends on member viewing and contractual share.",
+      "unit": "net_subscription_pool",
+      "access": "official_announced_policy",
+      "measured_value": null
+    },
+    {
+      "id": "ypp_terms_acceptance_deadline",
+      "group": "institutions",
+      "definition": "Deadline for reviewing updated YPP terms to continue full monetization; not a known account acceptance status.",
+      "unit": "date",
+      "access": "official_announced_policy",
+      "measured_value": null
+    },
+    {
+      "id": "ypp_product_gate",
+      "group": "economics",
+      "definition": "Product-specific qualification maintained after initial YPP membership, including Shorts revenue share eligibility.",
+      "unit": "eligibility_rule",
+      "access": "official_announced_policy",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -2036,6 +2108,66 @@
       "subject": "video",
       "predicate": "may_be_about",
       "object": "child_directed_animation_genre"
+    },
+    {
+      "subject": "new_ads_applicant_cohort",
+      "predicate": "subject_to",
+      "object": "future_ypp_ad_threshold"
+    },
+    {
+      "subject": "future_ypp_ad_threshold",
+      "predicate": "begins_on",
+      "object": "ypp_terms_effective_date"
+    },
+    {
+      "subject": "existing_ypp_partner_cohort",
+      "predicate": "is_not_subject_to",
+      "object": "future_ypp_ad_threshold"
+    },
+    {
+      "subject": "existing_ypp_partner_cohort",
+      "predicate": "may_be_subject_to",
+      "object": "rolling_shorts_monetization_gate"
+    },
+    {
+      "subject": "rolling_shorts_monetization_gate",
+      "predicate": "is_a",
+      "object": "ypp_product_gate"
+    },
+    {
+      "subject": "rolling_shorts_monetization_gate",
+      "predicate": "distinct_from",
+      "object": "future_ypp_ad_threshold"
+    },
+    {
+      "subject": "premium_lite_pool",
+      "predicate": "differs_from",
+      "object": "premium_net_subscription_pool"
+    },
+    {
+      "subject": "premium_net_subscription_pool",
+      "predicate": "may_support",
+      "object": "premium_share"
+    },
+    {
+      "subject": "premium_lite_pool",
+      "predicate": "may_support",
+      "object": "premium_share"
+    },
+    {
+      "subject": "ypp_terms_acceptance_deadline",
+      "predicate": "precedes",
+      "object": "ypp_terms_effective_date"
+    },
+    {
+      "subject": "qualified_shorts_views",
+      "predicate": "may_satisfy",
+      "object": "rolling_shorts_monetization_gate"
+    },
+    {
+      "subject": "monetized_channel",
+      "predicate": "may_be_in",
+      "object": "existing_ypp_partner_cohort"
     }
   ],
   "rules": [
@@ -2069,7 +2201,10 @@
     "Search.list has a distinct project quota bucket in the October 2026 API snapshot; never substitute old blanket search-call costs.",
     "Approximate search result totals are not representative enumerations of videos, people or creators.",
     "Reproducible sampling requires fixed strata, page tokens, deduplicated identifiers and separate disclosure of coverage and missingness.",
-    "Children's music and child-directed animation are overlapping content classifications, not interchangeable populations or proof of a viewer's age."
+    "Children's music and child-directed animation are overlapping content classifications, not interchangeable populations or proof of a viewer's age.",
+    "October 2026 YPP application thresholds and announced February 2027 rules must remain separately dated and scoped to new or existing members.",
+    "The rolling 10-million qualified Shorts requirement for continuing YPP members is distinct from the announced 20-million threshold for new YPP ads/Premium applicants.",
+    "Premium and Premium Lite net subscription pools do not imply fixed per-view payouts; their allocation bases differ."
   ],
-  "ontology_version": "2.0"
+  "ontology_version": "2.1"
 }
