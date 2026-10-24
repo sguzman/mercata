@@ -59,6 +59,8 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 The [YouTube research ontology](ontology/youtube/README.md) currently covers creator and viewer populations, 31 overlapping content categories, global usage and upload statistics, detailed Analytics numerators and denominators, creator earnings samples and their limits, native earning products, country/payment requirements, and content-specific monetization restrictions. The interactive site includes a blank-input economic calculator. [Source-backed task progress](plans/youtube.json) is maintained separately from the completed admission and infrastructure tasks.
 
+The dossier also differentiates [multilingual audio, automatic dubbing, captions and translated discovery](ontology/youtube/multilingual-distribution.md). Dated product examples are not assumed to provide a creator earnings increase, and language is kept distinct from a viewer's country or demographic identity.
+
 New [country, device and audience-frequency observations](ontology/youtube/country-reach-devices.md) distinguish official UK screen-time series from Reuters Institute's multi-market survey. These inputs demonstrate geographic and denominator variation; they do not provide global YouTube user counts or niche profitability.
 
 Two [cross-platform creator-income surveys](ontology/youtube/cross-platform-income-surveys.md) are also tracked as separately scoped evidence, with protection against double-counting a syndicated survey and against projecting respondent income onto all YouTube channels. Neither yields a representative YouTube newcomer earnings figure.
