@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "branded_content_disclosure_risk_research",
+  "as_of": "2026-10-23",
+  "status": "official_policy_and_us_guidance_researched_other_jurisdictions_unverified",
+  "scope": "Platform-wide YouTube branded-content rules versus U.S. FTC endorsement guidance for U.S.-relevant consumers; not individualized legal advice",
+  "jurisdiction_axes": [
+    "creator_residence",
+    "audience_country",
+    "brand_product_market",
+    "paid_placement_surface",
+    "local_age_and_category_restrictions"
+  ],
+  "policy_layers": [
+    {
+      "id": "youtube_platform",
+      "title": "YouTube Studio and branded-content policy",
+      "jurisdiction": "YouTube platform",
+      "source_ids": [
+        "yt-branded-policy-2026",
+        "yt-branded-studio-2026"
+      ],
+      "creator_action": "Declare covered paid promotion in the video's Studio branded-content control, and review product-category, geo and age policies",
+      "does_not_replace": [
+        "applicable_local_law",
+        "creator_authored_clear_disclosure",
+        "brand_legal_duties"
+      ],
+      "coverage": "videos, Shorts, live, descriptions, comments and other features when branded"
+    },
+    {
+      "id": "us_ftc",
+      "title": "U.S. FTC Endorsement Guides and staff guidance",
+      "jurisdiction": "United States; posts from abroad can be covered when impact on U.S. consumers is reasonably foreseeable",
+      "source_ids": [
+        "ftc-endorsement-faq-2023",
+        "ftc-influencer-disclosures-guide-2019"
+      ],
+      "creator_action": "Assess material connection and whether context needs a conspicuous in-content, understandable disclosure",
+      "does_not_replace": [
+        "independent_platform_declaration",
+        "other_country_advertising_law"
+      ],
+      "coverage": "sponsored and materially connected endorsements, including some noncash perks and affiliate links"
+    },
+    {
+      "id": "other_jurisdictions",
+      "title": "Other national or regional requirements",
+      "jurisdiction": "Not comprehensively verified",
+      "source_ids": [
+        "yt-branded-policy-2026"
+      ],
+      "creator_action": "Research the actual countries and product categories involved before publication",
+      "does_not_replace": [
+        "platform_declaration",
+        "applicable_us_consumer_law"
+      ],
+      "coverage": "Unknown without separate jurisdiction and campaign facts"
+    }
+  ],
+  "relationship_cases": [
+    {
+      "id": "cash_sponsorship",
+      "connection": "paid endorsement or product promotion",
+      "platform_declaration": "required_when_brand_content",
+      "ftc_analysis": "disclose_material_connection_if_us_relevant",
+      "source_ids": [
+        "yt-branded-policy-2026",
+        "ftc-endorsement-faq-2023"
+      ],
+      "caveat": "Individual sponsorship terms and audiovisual placement remain fact dependent"
+    },
+    {
+      "id": "free_product_or_discount",
+      "connection": "noncash benefit received in expectation of endorsement or otherwise materially relevant",
+      "platform_declaration": "required_when_brand_content",
+      "ftc_analysis": "disclose_when_material",
+      "source_ids": [
+        "yt-branded-policy-2026",
+        "ftc-influencer-disclosures-guide-2019"
+      ],
+      "caveat": "Tiny incidental gifts may be evaluated contextually; do not make an absolute legal rule for every unsolicited item"
+    },
+    {
+      "id": "affiliate_commission",
+      "connection": "purchase through tracked referral may generate creator commission",
+      "platform_declaration": "requires_review_of_platform_definition",
+      "ftc_analysis": "clear_material_commission_disclosure_near_endorsement",
+      "source_ids": [
+        "ftc-endorsement-faq-2023",
+        "yt-branded-policy-2026"
+      ],
+      "caveat": "Affiliate labels, descriptions and platform commerce modules do not all have identical disclosure rules"
+    },
+    {
+      "id": "own_product",
+      "connection": "creator endorses an owned business or product",
+      "platform_declaration": "requires_review_of_platform_definition",
+      "ftc_analysis": "ownership_should_be_apparent_to_us_consumers_where_material",
+      "source_ids": [
+        "ftc-endorsement-faq-2023"
+      ],
+      "caveat": "No generic assumption that promoting one's own product always requires the same disclaimer"
+    },
+    {
+      "id": "independent_unsponsored_review",
+      "connection": "no financial, familial, employment or brand material connection",
+      "platform_declaration": "not_triggered_by_absence_of_brand_content",
+      "ftc_analysis": "no_disclosure_of_a_nonexistent_relationship",
+      "source_ids": [
+        "ftc-influencer-disclosures-guide-2019"
+      ],
+      "caveat": "Actual relationships must be established; a video topic alone does not prove sponsorship"
+    }
+  ],
+  "surface_guidance": [
+    {
+      "id": "long_video",
+      "surface": "Recorded video",
+      "us_guidance": "In-content disclosure with the endorsement; descriptions alone are insufficient, and audiovisual formats should consider both audible and visible disclosure",
+      "source_ids": [
+        "ftc-endorsement-faq-2023",
+        "ftc-influencer-disclosures-guide-2019"
+      ]
+    },
+    {
+      "id": "shorts",
+      "surface": "Short-form video",
+      "us_guidance": "Conspicuous disclosure visible or audible where endorsements occur, not a hidden or truncated description",
+      "source_ids": [
+        "ftc-endorsement-faq-2023"
+      ]
+    },
+    {
+      "id": "live",
+      "surface": "Livestream",
+      "us_guidance": "Repeat disclosure periodically because audience members may arrive partway through",
+      "source_ids": [
+        "ftc-influencer-disclosures-guide-2019"
+      ]
+    },
+    {
+      "id": "links",
+      "surface": "Affiliate recommendation and link",
+      "us_guidance": "Clearly state commission/material connection near the recommendation and link; bare 'affiliate link' can be inadequate",
+      "source_ids": [
+        "ftc-endorsement-faq-2023"
+      ]
+    }
+  ],
+  "dated_changes": [
+    {
+      "id": "2023_ftc_guides",
+      "announced_at": "2023-06",
+      "description": "U.S. FTC updated the Endorsement Guides including clarity and platform-tool concerns",
+      "source_ids": [
+        "ftc-endorsement-faq-2023"
+      ],
+      "account_rollout_completion": null
+    },
+    {
+      "id": "2026_09_brand_labels",
+      "announced_at": "2026-09-03",
+      "description": "TeamYouTube announced refreshed branded-content labels, age and geographic content controls, and planned automated declaration detection",
+      "source_ids": [
+        "yt-brand-disclosure-update-2026"
+      ],
+      "account_rollout_completion": null
+    }
+  ],
+  "platform_business_consequences": {
+    "video_may_remain_ypp_ad_eligible": true,
+    "depends_on_advertiser_policy": true,
+    "brand_ad_competitor_avoidance": "possible",
+    "youtube_kids_app_removal_for_branded_content": true,
+    "embedded_third_party_commercial_breaks": "not_permitted_by_platform_policy",
+    "source_ids": [
+      "yt-branded-policy-2026"
+    ]
+  },
+  "unmeasured": {
+    "sponsor_contract_prevalence": null,
+    "sponsorship_gross_revenue": null,
+    "compliance_cost_by_country": null,
+    "disclosure_violation_rate": null,
+    "creator_account_feature_rollout_rate": null,
+    "actual_penalties_by_jurisdiction": null,
+    "creator_net_sponsor_profit": null
+  },
+  "safeguards": [
+    "Platform declaration and independent legal obligations are separate gates; no button creates a universal legal safe harbor.",
+    "Never infer sponsorship from a channel's language, topic, age or viewer demographics.",
+    "Review product-category restrictions and age/geo limits before publishing. Do not assume the controls mean content is legal everywhere.",
+    "A September rollout announcement is not a verified global activation date or detection accuracy measurement.",
+    "FTC staff guidance is not a universal rule for all countries or a substitute for legal advice.",
+    "No individual sponsor contracts, creator identities, financial details or confidential campaign documents are collected."
+  ]
+}

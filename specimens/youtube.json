@@ -1461,6 +1461,61 @@
       "evidence_class": "commercial_us_cross_platform_creator_hours_survey",
       "license": "Official public report linked, independent aggregate paraphrase; no graphics/figures redistributed",
       "notes": "PDF page 20, U.S. creator sample n=1000 age 18-65 collected January 2026. Weekly time brackets are selected reported response categories, not exhaustive, with question-specific denominator unavailable."
+    },
+    {
+      "id": "yt-branded-policy-2026",
+      "url": "https://support.google.com/youtube/answer/17596007?hl=en",
+      "publisher": "YouTube Help",
+      "title": "YouTube Branded Content Policies",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_brand_content_disclosure_policy",
+      "license": "Official policy linked, independently summarized without reproducing original text",
+      "notes": "Policy covers paid, free and otherwise valuable brand considerations across YouTube surfaces; policy and regional legal rules remain separate."
+    },
+    {
+      "id": "yt-branded-studio-2026",
+      "url": "https://support.google.com/youtube/answer/154235?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Add branded content restrictions and disclosure labels",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_branded_content_studio_tools",
+      "license": "Official policy linked with independent summary",
+      "notes": "Branded promotion declaration, viewer label, age and geographic limitations; account-specific compliance not inferred."
+    },
+    {
+      "id": "yt-brand-disclosure-update-2026",
+      "url": "https://support.google.com/youtube/blog/458476782/giving-you-tools-to-easily-disclose-paid-partnerships-with-new-controls-automated-disclosures",
+      "publisher": "TeamYouTube Help Community",
+      "title": "Giving you tools to easily disclose paid partnerships with new controls and automated disclosures",
+      "retrieved_at": "2026-10-23",
+      "published_at": "2026-09-03",
+      "evidence_class": "dated_official_brand_tool_rollout_announcement",
+      "license": "Dated first-party product announcement; separately paraphrased",
+      "notes": "September 3, 2026 rollout announcement of refreshed labels, granular age/geography settings and staged automated detection; availability may evolve."
+    },
+    {
+      "id": "ftc-endorsement-faq-2023",
+      "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+      "publisher": "U.S. Federal Trade Commission",
+      "title": "FTC Endorsement Guides: What People Are Asking",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_us_endorsement_disclosure_staff_guidance",
+      "license": "U.S. government guidance linked and independently paraphrased",
+      "notes": "Material connection, clear conspicuous placement, in-video vs description-only, affiliate commissions, and platform-tool insufficiency; case-specific, no legal safe harbor."
+    },
+    {
+      "id": "ftc-influencer-disclosures-guide-2019",
+      "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
+      "publisher": "U.S. Federal Trade Commission",
+      "title": "Disclosures 101 for Social Media Influencers",
+      "retrieved_at": "2026-10-23",
+      "published_at": "2019-11",
+      "evidence_class": "official_us_social_media_influencer_disclosure_guidance",
+      "license": "Public federal agency guidance linked; paraphrased without copying third-party artwork",
+      "notes": "Source explains in-video audiovisual disclosures, repeating livestream notices and U.S. consumer reach from posts made abroad."
     }
   ],
   "claims": [
@@ -2850,6 +2905,50 @@
       "observed_at": "2026-10-23",
       "confidence": "medium",
       "limitations": "Cross-platform vendor survey with unverified sampling frame, response probabilities, and per-question respondent count; does not establish YouTube-only creator hours, median production effort, full-time employment, costs or profit."
+    },
+    {
+      "id": "brand-content-policy-not-universal-legal-compliance",
+      "text": "YouTube requires creators to declare brand-influenced paid or in-kind consideration through Studio; the paid-promotion disclosure does not by itself settle distinct local legal obligations.",
+      "source_ids": [
+        "yt-branded-policy-2026",
+        "yt-branded-studio-2026",
+        "ftc-endorsement-faq-2023"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Jurisdiction, advertiser or endorsement circumstance and the content surface can require additional prominent disclosures; no individual legal determination."
+    },
+    {
+      "id": "brand-disclosure-2026-tools-and-rollout",
+      "text": "In September 2026 TeamYouTube announced updated viewer labels, creator-set age and geographic limits for branded content and a staged automated detection and labeling rollout.",
+      "source_ids": [
+        "yt-brand-disclosure-update-2026",
+        "yt-branded-policy-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "A rollout announcement does not establish universal account-level feature availability, successful enforcement, or immunity from platform or legal review."
+    },
+    {
+      "id": "ftc-in-video-vs-description-endorsement",
+      "text": "FTC guidance for U.S.-consumer-relevant endorsements distinguishes money and in-kind material connections, warns that a platform label alone may not suffice, and says a video description alone is inadequate to disclose an endorsement made in the video.",
+      "source_ids": [
+        "ftc-endorsement-faq-2023",
+        "ftc-influencer-disclosures-guide-2019"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "FTC staff guidance is context-specific and not a legal safe harbor; the FTC's U.S. consumer scope must not be generalized as worldwide law."
+    },
+    {
+      "id": "branded-content-policy-monetization-and-kids",
+      "text": "YouTube describes possible continued advertising monetization on policy-compliant branded videos by eligible YPP channels, but also states that branded-content videos are removed from YouTube Kids.",
+      "source_ids": [
+        "yt-branded-policy-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Ad revenue still depends on eligibility, advertiser suitability and ad demand; removal from the Kids app is not a claim that the entire video is deleted from YouTube."
     }
   ],
   "observations": [],
