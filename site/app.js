@@ -1873,7 +1873,7 @@ function renderTeenVideoFormatEvidence(data,dossier){
   const au=data.australia_youtube_genres;
   if(au?.gender_conditioned_genres?.length){
     details.append(make('h5','teen-au-heading','Australian children aged 6–13 who watch YouTube · 2025'));
-    details.append(make('p','measure-limit','Roy Morgan surveyed 1,129 Australian children aged 6–13 in 2025. Values below are each genre watched within survey boy and girl YouTube-watcher groups, NOT the gender mix within genres. Exact gender subgroup sample sizes are unknown.'));
+    details.append(make('p','measure-limit','The Roy Morgan survey covered 1,129 Australian children aged 6–13 in 2025. Values below are each genre watched within survey boy and girl YouTube-watcher groups, NOT the gender mix within genres. Exact gender subgroup sample sizes are unknown.'));
     const auGrid=make('div','teen-au-grid');
     for(const category of au.gender_conditioned_genres){
       const row=make('article','teen-au-category');
