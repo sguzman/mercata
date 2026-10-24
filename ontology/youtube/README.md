@@ -66,6 +66,10 @@ The first [creator-income evidence review](creator-income-evidence.md) examines 
 
 The [2025 creator-income survey comparison](cross-platform-income-surveys.md) and its [machine evidence](cross-platform-income-surveys.json) document **two independent mixed-platform respondent samples**: NeoReach (more than 3,000) and Creator Spotlight (427). Influencer Marketing Hub's partnered NeoReach publication is the *same survey*, not independent replication. Reported annual earnings thresholds cannot be applied to the general YouTube creator population, nor pooled with the selected Patreon or newly monetized Studio datasets. YouTube-wide newcomer income, profits and zero-earner rates remain unknown.
 
+## Newcomer income sampling and survivor-bias safeguards
+
+The [new-creator cohort protocol](newcomer-income-cohort.md) and [machine model](newcomer-income-cohort.json) define a first-entry cohort including nonmonetized, inactive and zero-earning publishers. A [pure-JavaScript aggregate audit](../../scripts/newcomer-income-audit.mjs) and [tests](../../tests/newcomer-cohort.test.mjs) reject inconsistent sample counts, public person-level rows and unsupported population claims. This is a research acceptance framework, **not a sample**: median income, zero-earner share, net profit and labor hours remain unknown.
+
 ## Newly monetized small channels
 
 AIR Media-Tech's [297-channel studio-data report](small-channel-income.md) contains six monthly earnings observations and genre and top-viewer-country breakdowns. Its [machine dataset](small-channel-income.json) separates the sample of already monetized channels from the broader platform. It reports a USD 88 median in the first full month and USD 32 in month six, but neither figure is a representative expectation for creators who have not reached monetization. The commercial source's recruitment criteria and sample limitations remain visible alongside every breakdown.
