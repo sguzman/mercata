@@ -57,6 +57,8 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The research also tracks [monthly advertiser-policy revisions during 2026](ontology/youtube/advertiser-policy-history.md), including gaming and public-interest reporting. Eligibility changes are not presented as measured increases in creator income.
+
 A [dated February 2027 YouTube Partner Program transition](ontology/youtube/ypp-transition-2027.md) preserves current 2026 qualifications alongside announced stricter requirements for new applicants and an ongoing Shorts product gate for existing members. Missing subscriber conditions and actual payouts are not inferred.
 
 The [YouTube research ontology](ontology/youtube/README.md) currently covers creator and viewer populations, 32 overlapping content categories, global usage and upload statistics, detailed Analytics numerators and denominators, creator earnings samples and their limits, native earning products, country/payment requirements, and content-specific monetization restrictions. The interactive site includes a blank-input economic calculator. [Source-backed task progress](plans/youtube.json) is maintained separately from the completed admission and infrastructure tasks.
