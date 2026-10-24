@@ -6,7 +6,8 @@
   "status": "bounded_official_crossplatform_and_youtube_sources_no_minor_profiling",
   "source_ids": [
     "ofcom-children-parents-media-2026",
-    "pew-us-teens-2025"
+    "pew-us-teens-2025",
+    "roymorgan-young-australians-youtube-2025"
   ],
   "study_units": [
     {
@@ -50,6 +51,20 @@
       "individual_gender_denominator": null,
       "method": "Pew survey of teens aged 13–17",
       "frame_caveat": "Gender-specific platform use, not audience genres or viewer watch duration."
+    },
+    {
+      "id": "roymorgan_au_youtube_watchers",
+      "source_id": "roymorgan-young-australians-youtube-2025",
+      "country": "Australia",
+      "publication_date": "2026-02-17",
+      "survey_period": "2025-04_to_2025-12",
+      "platform_scope": "youtube_watching_children_6_to_13",
+      "respondents_parent_total": null,
+      "respondents_children_total": 1129,
+      "individual_category_denominator": null,
+      "individual_gender_denominator": null,
+      "method": "Roy Morgan Young Australians Survey; original research company survey release of nationwide ages 6–13 collected April–December 2025",
+      "frame_caveat": "YouTube genre and gender shares are percentages conditional on each respondent's reported child/gender and YouTube watching; exact YouTube watcher n, subgroup n, response rate, and sampling weights not specified in public release."
     }
   ],
   "video_genre_observations": [
@@ -181,7 +196,10 @@
     "join_uk_genre_with_us_youtube_platform_use": false,
     "interpret_directional_gender_difference_as_causal": false,
     "subtract_or_add_genre_percentages_as_disjoint_audiences": false,
-    "directly_compare_to_pre_2025_ofcom_series_without_method_review": false
+    "directly_compare_to_pre_2025_ofcom_series_without_method_review": false,
+    "australia_youtube_specific_child_genre_sample": true,
+    "australia_genre_sample_is_worldwide_or_all_ages": false,
+    "roy_morgan_gender_categories_imply_individual_attributes": false
   },
   "unmeasured": {
     "youtube_gender_by_format_audience": null,
@@ -192,6 +210,118 @@
     "overlap_between_music_lifestyle_and_education": null,
     "country_converted_audience": null,
     "child_advertising_income": null,
-    "causal_preference_by_gender": null
+    "causal_preference_by_gender": null,
+    "global_youtube_gender_by_format_audience": null,
+    "roy_morgan_gender_subgroup_sizes": null,
+    "roy_morgan_gender_genre_sampling_errors": null
+  },
+  "australia_youtube_genres": {
+    "source_id": "roymorgan-young-australians-youtube-2025",
+    "country": "Australia",
+    "period": "2025-04_to_2025-12",
+    "publication_date": "2026-02-17",
+    "age_range": "6-13",
+    "total_respondents_n": 1129,
+    "estimated_any_youtube_use_percent": 89,
+    "estimated_total_youtube_child_watchers_from_publisher": 2500000,
+    "estimate_not_platform_census": true,
+    "video_genre_population": "children_aged_6_to_13_who_watch_youtube",
+    "youtube_watching_subgroup_n": null,
+    "boys_youtube_watching_subgroup_n": null,
+    "girls_youtube_watching_subgroup_n": null,
+    "per_genre_uncertainty": null,
+    "selected_overall_genres": [
+      {
+        "id": "gaming",
+        "percent": 53
+      },
+      {
+        "id": "animation",
+        "percent": 37
+      },
+      {
+        "id": "comedy",
+        "percent": 36
+      },
+      {
+        "id": "music",
+        "percent": 34
+      },
+      {
+        "id": "animals",
+        "percent": 34
+      }
+    ],
+    "gender_conditioned_genres": [
+      {
+        "id": "gaming",
+        "boys_percent": 67,
+        "girls_percent": 39
+      },
+      {
+        "id": "sports",
+        "boys_percent": 36,
+        "girls_percent": 17
+      },
+      {
+        "id": "animals",
+        "boys_percent": 25,
+        "girls_percent": 44
+      },
+      {
+        "id": "music",
+        "boys_percent": 27,
+        "girls_percent": 41
+      },
+      {
+        "id": "fashion",
+        "boys_percent": 5,
+        "girls_percent": 31
+      },
+      {
+        "id": "unboxing",
+        "boys_percent": 18,
+        "girls_percent": 31
+      },
+      {
+        "id": "diy",
+        "boys_percent": 11,
+        "girls_percent": 25
+      },
+      {
+        "id": "cooking",
+        "boys_percent": 14,
+        "girls_percent": 24
+      },
+      {
+        "id": "animation",
+        "boys_percent": 38,
+        "girls_percent": 36
+      },
+      {
+        "id": "comedy",
+        "boys_percent": 36,
+        "girls_percent": 35
+      },
+      {
+        "id": "challenges",
+        "boys_percent": 32,
+        "girls_percent": 34
+      },
+      {
+        "id": "educational",
+        "boys_percent": 22,
+        "girls_percent": 26
+      }
+    ],
+    "limitations": [
+      "Percentages are within each gender among children who watch YouTube, not gender composition of each genre audience.",
+      "These categories are overlapping video interests and cannot be summed to an exact population.",
+      "The sample of all eligible children is 1,129; subgroup YouTube-watchers and boys/girls cell counts are not specified.",
+      "The nationwide estimate of 2.5 million is Roy Morgan's model, not a platform-administered unique viewer census.",
+      "No demographic attribute may be inferred for individuals and no minors' account data is used.",
+      "Adult, teen 14–17, and other country viewership are not represented.",
+      "Survey gender labels are those reported by study, not a verified biological-sex measure."
+    ]
   }
 }

@@ -2264,6 +2264,17 @@
       "evidence_class": "independent_uk_child_media_tracker_and_barb_tv_device_metrics",
       "license": "Publicly available regulator report; independently summarized aggregate statistics, no original chart images or child-level observations reproduced.",
       "notes": "Report page 21 includes children 3–5 and 8–17 watching videos on any platform, differentiated from 2025 Barb YouTube in-home minutes for ages 4–15. Parent/child survey samples 5,008 parent and 3,426 child interviews; denominator per age/format question unknown. Survey instrument changed in 2025/6."
+    },
+    {
+      "id": "roymorgan-young-australians-youtube-2025",
+      "url": "https://www.roymorgan.com/findings/10131-yas-youtube-for-young-australians-survey-december-2025",
+      "publisher": "Roy Morgan Research",
+      "title": "2.5 million Young Australians aged 6-13 watch YouTube",
+      "published_at": "2026-02-17",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "survey_australian_children_youtube_genre_gender_age_2025",
+      "license": "Public original survey release, independently summarized aggregated observations and sampling scope; no photographs or identifying child responses reproduced.",
+      "notes": "Young Australians Survey April–December 2025 nationwide n=1,129 children aged 6–13. Category-by-boy/girl percentages use the subset of YouTube-watching children by reported gender; subgroup n and uncertainty not publicly specified. Multiple genre membership allowed."
     }
   ],
   "claims": [
@@ -4643,6 +4654,36 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "U.S. self-reported teen YouTube platform use, not a YouTube-specific video-format or topic audience, different geography and frame from Ofcom UK child video-category measures."
+    },
+    {
+      "id": "roymorgan-australian-kids-youtube-2025-use",
+      "text": "In Roy Morgan's April–December 2025 Young Australians Survey of 1,129 children aged 6–13, 89% were estimated to watch YouTube; among child YouTube watchers the reported leading genres were gaming (53%), animation (37%) and comedy (36%).",
+      "source_ids": [
+        "roymorgan-young-australians-youtube-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Australia-only 2025 survey, 89% is the publisher's estimate for the age range and genre percentages condition on YouTube watchers. Per-group sample denominators, confidence intervals, unique overlapping genres and exact national child-count precision remain unverified."
+    },
+    {
+      "id": "roymorgan-australian-kids-youtube-genre-by-reported-gender",
+      "text": "Roy Morgan's Australian 2025 YouTube-watching children aged 6–13 survey reported gender-specific genre-use rates: gaming 67% boys versus 39% girls, fashion 5% boys versus 31% girls, and animation 38% boys versus 36% girls.",
+      "source_ids": [
+        "roymorgan-young-australians-youtube-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Percentages condition on YouTube-watching children within each survey boy/girl group; they are not the composition of the genre audience, not inherent traits or individual identities, and do not generalize outside Australian ages 6–13."
+    },
+    {
+      "id": "roymorgan-australian-kids-youtube-lifestyle-categories",
+      "text": "Within Roy Morgan's 2025 Australian child YouTube-watching survey, music was reported by 41% of girls versus 27% of boys, animals 44% versus 25%, and cooking 24% versus 14%.",
+      "source_ids": [
+        "roymorgan-young-australians-youtube-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Girls and boys are reported survey groups; category selections overlap; exact group respondent counts and margins of error unavailable, no causal explanation or prediction for individuals."
     }
   ],
   "observations": [],
