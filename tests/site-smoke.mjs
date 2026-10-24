@@ -135,6 +135,12 @@ try{
     assert.equal(await countryPrograms.locator('.country-program-currency').count(),3,'Missing currency-scoped payout thresholds');
     assert((await countryPrograms.textContent()).includes('Account currency and feature-specific permissions: unknown'));
     assert((await countryPrograms.textContent()).includes('MXN 1,200'));
+    const withholding=page.locator('.tax-withholding');
+    assert.equal(await withholding.locator('.tax-withholding-card').count(),4,'Missing documented withholding cases');
+    await withholding.locator('summary').click();
+    assert((await withholding.textContent()).includes('worldwide youtube earnings'));
+    assert((await withholding.textContent()).includes('earnings attributed to us viewers'));
+    assert((await withholding.textContent()).includes('not personal tax advice'));
     assert.equal(await page.locator('.payout-currency').count(),2,'Missing documented payout currencies');
     assert((await page.locator('.topic-catalogue-card').count())>=32,'Missing community taxonomy');
     const sampling=page.locator('.sampling-budget');
