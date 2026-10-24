@@ -532,3 +532,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .view-comparison-result{font-size:13px;border-left:3px solid var(--line);padding:8px 12px;margin:0}
 .view-comparison-result[data-status="definition_conflict"]{border-left-color:var(--accent)}
 @media(max-width:650px){.view-comparison-form{grid-template-columns:1fr}}
+
+.sampling-budget{margin:28px 0}
+.sampling-budget-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.sampling-budget-details>summary{cursor:pointer;font-size:15px;font-weight:800}
+.sampling-budget-details>.measure-limit{margin:14px 0}
+.sampling-budget-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}
+.sampling-budget-card{min-width:0;padding:14px;background:var(--surface-alt);border:1px solid var(--line);border-radius:8px;overflow-wrap:anywhere}
+.sampling-budget-card strong{font-size:18px;font-variant-numeric:tabular-nums}
+.sampling-budget-card p{font-size:12px;color:var(--muted);margin:6px 0 0}
+@media(max-width:900px){.sampling-budget-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.sampling-budget-details{padding:16px}.sampling-budget-grid{grid-template-columns:1fr}}
