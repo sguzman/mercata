@@ -3021,9 +3021,15 @@
           "title": "Study cyclical interest by country and topic",
           "acceptance": "Account for school calendars, major events and seasonal selection bias.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 20,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/beauty-fashion-query-series.json",
+            "ontology/youtube/beauty-fashion-query-series.md",
+            "specimens/youtube.json",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
+          ]
         },
         {
           "id": "audience-trends/country-change",
@@ -3062,7 +3068,7 @@
           "title": "Assess the reliability of niche-growth projections",
           "acceptance": "Explicitly document model assumptions, uncertainty and failed comparisons.",
           "weight": 1,
-          "progress": 65,
+          "progress": 69,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
@@ -3079,7 +3085,9 @@
             "ontology/youtube/animation-format-cycles.json",
             "ontology/youtube/animation-format-cycles.md",
             "tests/youtube.test.mjs",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/beauty-fashion-query-series.json",
+            "ontology/youtube/beauty-fashion-query-series.md"
           ]
         }
       ]

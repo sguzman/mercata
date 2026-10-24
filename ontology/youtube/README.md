@@ -253,6 +253,10 @@ The [news-audience survey profile](community-audience-studies.md) uses Pew's 202
 
 A [2026 commercial sample study](competition-observations.md) describes subscriber-tier movement and traffic sources across 71,177 observed accounts, while exposing its unknown recruitment frame and incomplete observation dates. The [machine record](competition-observations.json) keeps these descriptive statistics out of representative newcomer-success estimates.
 
+## Dated beauty/fashion title queries, seasonal hypotheses and incompatible units
+
+The [beauty and fashion title-query review](beauty-fashion-query-series.md) and [machine query register](beauty-fashion-query-series.json) keep GRWM, prom, Halloween makeup, beginner sewing and morning-routine **uploads** separate by source date, search predicate and measurement unit. Event-related seasonality and category turnover remain hypotheses because repeated same-definition monthly series are unavailable. The 2026 playback-start metric break also prohibits careless old/new view comparisons. Unique people, year-over-year growth and creator profit remain unknown.
+
 ## Independent animation and meme format-cycle evidence
 
 The [dated animation and meme format review](animation-format-cycles.md) and [machine observations](animation-format-cycles.json) distinguish a 2024 editorial event, March 2025 curated trend mentions and 2026 publications of **April 2025** U.S./Mexico animation-fan samples. Fan-survey questions and populations differ; neither a year-over-year change rate, seasonal pattern nor typical animation creator earnings has been established. Creator-format hypotheses remain separate from counted audiences and profit observations.

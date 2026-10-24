@@ -799,6 +799,26 @@ test('Seven video monetization surfaces distinguish inventory, replay and disput
   assert(Object.values(model.unknowns).every(x=>x===null));
 });
 
+test('Beauty/fashion title-query observations never mix uploads, views and seasonal growth',async()=>{
+ const [model,dossier,observations]=await Promise.all([
+  load('ontology/youtube/beauty-fashion-query-series.json'),load('specimens/youtube.json'),load('ontology/youtube/topic-observations.json')
+ ]);
+ const sources=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'beauty_fashion_title_query_series_review');
+ assert.equal(model.source_observations.length,5);
+ assert(model.source_observations.every(x=>sources.has(x.source_id)&&x.comparison==='greater_than'&&x.seasonal_effect_measured===false));
+ const uploads=model.source_observations.filter(x=>x.unit==='public_video_uploads');
+ assert.deepEqual(uploads.map(x=>x.id),['morning_routine_h1_2026']);
+ assert.equal(uploads[0].value,450000);
+ assert.equal(model.source_observations.filter(x=>x.unit==='video_views').length,4);
+ assert.equal(model.source_observations.find(x=>x.id==='halloween_makeup_2025').period_end,'2025-10-05');
+ assert(model.source_observations.filter(x=>x.observed_topic_record_id!==null)
+   .every(x=>observations.observations.some(o=>o.id===x.observed_topic_record_id)));
+ assert.equal(model.series_protocol.query_id_requires_frozen_definition,true);
+ assert.equal(model.acceptance_gates.filter(x=>x.fulfilled).length,1);
+ assert(Object.values(model.unmeasured).every(x=>x===null));
+});
+
 test('Animation format timeline keeps publication dates separate from fan-survey measurement years',async()=>{
  const [model,dossier,taxonomy]=await Promise.all([
   load('ontology/youtube/animation-format-cycles.json'),

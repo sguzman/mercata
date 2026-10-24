@@ -81,6 +81,8 @@ The [selected monetized AIR RPM and livestream research](ontology/youtube/air-st
 
 The [video attention and niche culture research](ontology/youtube/video-attention-culture-2026.md) preserves Omdia's 2025 video-stock/watch-time observations separately from YouTube/NRG's April 2026 U.S. online youth and adult-attitude surveys. These data do not establish niche populations, probabilities of income or mutually exclusive genre market shares.
 
+The [beauty/fashion title-query study](ontology/youtube/beauty-fashion-query-series.md) separately records GRWM, prom, Halloween, sewing and morning-routine observations. Units and title predicates differ, so it does not invent a cross-year audience growth or seasonal profitability curve.
+
 The [animation and meme format-cycle research](ontology/youtube/animation-format-cycles.md) separates independently produced animation and remix examples from dated U.S. and Mexican fan-survey samples. Report publication dates are not treated as the years that audience questions were measured; an animation-audience growth rate remains unknown.
 
 The [viewer/person measurement study](ontology/youtube/viewer-person-metrics.md) distinguishes public channel views and subscribers from owner-only unique viewer estimates, including signed-out watching. Rolling 28-day channel audience and up-to-90-day unique-viewer estimates are not a global census; unrelated channels cannot be summed into an exact user population.
