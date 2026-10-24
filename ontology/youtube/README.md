@@ -279,6 +279,10 @@ The [seven-format public-policy comparison](video-surfaces-economics.md) and [ma
 
 The [plain-language synthesis](research-synthesis-2026.md) and [machine evidence map](research-synthesis-2026.json) condense independently source-checked platform eligibility, aggregate audience statistics, selected creator earnings samples, monetization routes, trends, publishing-time limits and safety risks. The seven subject areas identify which conclusions are supported and where representative zero-earner income, creator costs, deduplicated people and long-run causal comparisons remain unresolved. A readable document is only part of the research; it is not empirical completion.
 
+## Apparent declining niches versus incomparable time series
+
+The [declining-topic audit](declining-content-evidence.md), [machine research gates](declining-content-evidence.json), [strict comparison function](../../site/topic-decline-audit.mjs) and [synthetic tests](../../tests/topic-decline-audit.test.mjs) distinguish a measured descriptive fall between two comparable periods from a sustained or causal niche decline. The reviewed NFL growth, prom/Halloween title totals and August 2026 public-view change do not identify an actually declining YouTube creator category; no such topic count or earnings forecast is fabricated.
+
 ## Calendar-driven discovery: five bounded temporal examples
 
 The [seasonal-discovery comparison](seasonal-discovery-comparison.md) and [machine crosswalk](seasonal-discovery-comparison.json) retain the 2025 NFL offseason share, 2024 prom title-query views, 2025 Halloween title-query views, a 2017 game release-week count and the 2025 UK children's annual weekly viewing baseline as **five different period/population units**. Only the NFL source provides a directly observed within-year offseason share; none establishes causal seasonal lift, a repeatable universal publishing month or creator revenue.

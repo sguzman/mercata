@@ -1089,3 +1089,13 @@ h1 em {font-style:italic;color:var(--accent)}
 .evidence-synthesis-card h5{font-size:14px;margin:0 0 9px}
 .evidence-synthesis-card p{font-size:12px;margin:7px 0}
 @media(max-width:650px){.evidence-synthesis-details{padding:15px}.evidence-synthesis-grid{grid-template-columns:1fr}}
+
+/* Distinguish comparable descriptive changes from unmeasured secular declines */
+.declining-topic-audit{margin:28px 0}
+.declining-topic-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.declining-topic-details>summary{cursor:pointer;font-size:15px;font-weight:800}
+.declining-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.declining-topic-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.declining-topic-card h5{font-size:14px;margin:0 0 9px;text-transform:capitalize}
+.declining-topic-card p{font-size:12px;margin:7px 0}
+@media(max-width:650px){.declining-topic-details{padding:15px}.declining-topic-grid{grid-template-columns:1fr}}

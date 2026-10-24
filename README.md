@@ -119,6 +119,8 @@ The [peer-reviewed comment participation comparison](ontology/youtube/comment-no
 
 The [creator safety and continuity study](ontology/youtube/creator-safety-continuity.md) now includes October 2026 security pauses, Google Account-first hacked-channel recovery, live-chat moderation, harassment reporting and privacy complaint pathways. These are dated official procedures, not inferred incident rates or guaranteed recovery outcomes.
 
+A [declining-topic validation study](ontology/youtube/declining-content-evidence.md) prevents incomplete date windows, lower-bound view counts, mismatched content queries, or the August 2026 view-definition break from being advertised as proof that a niche is losing demand. No verified declining-topic population or revenue forecast has been measured.
+
 The [interim YouTube marketplace dossier](ontology/youtube/research-synthesis-2026.md) summarizes seven sourced finding areas, evidence-quality tiers and five major open empirical gates. It states clearly that new-entrant median income, zero-earner share, creator net profit and unique global audience are still unknown.
 
 A [seasonal-discovery evidence comparison](ontology/youtube/seasonal-discovery-comparison.md) separates an actual NFL offseason share from annual prom titles, partial-year Halloween views, game release-week events and annual UK child-viewing minutes. Different populations and windows do not support a universal seasonal lift or optimal posting month.

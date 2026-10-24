@@ -150,6 +150,11 @@ try{
     await synthesis.locator('summary').click();
     assert((await synthesis.textContent()).includes('zero-earner share'));
     assert((await synthesis.textContent()).includes('Not measured'));
+    const declining=page.locator('.declining-topic-audit');
+    assert.equal(await declining.locator('.declining-topic-card').count(),4,'Missing candidate decline inference audit');
+    await declining.locator('summary').click();
+    assert((await declining.textContent()).includes('No verified YouTube niche decline'));
+    assert((await declining.textContent()).includes('not a proven persistent trend'));
     const season=page.locator('.seasonal-discovery');
     assert.equal(await season.locator('.seasonal-discovery-card').count(),5,'Missing distinct seasonal evidence cases');
     await season.locator('summary').click();
