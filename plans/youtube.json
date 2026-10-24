@@ -653,7 +653,7 @@
         "youtube/audience-economics/create-a-buyer-intent-versus-casual-entertainment-framework"
       ],
       "phase": 3,
-      "progress_percent": 39
+      "progress_percent": 46
     },
     {
       "id": "audience-trends",
@@ -5112,10 +5112,17 @@
       "emoji": "💸",
       "objective": "Use advertiser categories and publicly reportable deals where available.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and use advertiser categories and publicly reportable deals where available.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
-      "artifact": null,
+      "status": "in_progress",
+      "percent": 70,
+      "evidence": [
+        "ontology/youtube/sponsor-category-evidence.json",
+        "ontology/youtube/sponsor-category-evidence.md",
+        "specimens/youtube.json",
+        "site/app.js",
+        "tests/sponsor-categories.test.mjs",
+        "tests/site-smoke.mjs"
+      ],
+      "artifact": "ontology/youtube/sponsor-category-evidence.json",
       "priority": "standard",
       "phase": 3
     },

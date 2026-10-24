@@ -2809,7 +2809,7 @@
           "title": "Compare monetization models by content category",
           "acceptance": "Source actual available ads, subscriptions, product sales, tips and sponsorship mechanisms.",
           "weight": 1,
-          "progress": 49,
+          "progress": 56,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/small-channel-income.json",
@@ -2820,7 +2820,12 @@
             "ontology/youtube/advertiser-policy-history.json",
             "ontology/youtube/advertiser-policy-history.md",
             "tests/youtube.test.mjs",
-            "scripts/verify.mjs"
+            "scripts/verify.mjs",
+            "ontology/youtube/sponsor-category-evidence.json",
+            "ontology/youtube/sponsor-category-evidence.md",
+            "site/app.js",
+            "tests/sponsor-categories.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -2846,9 +2851,16 @@
           "title": "Map public sponsor demand and brand-safety requirements",
           "acceptance": "Distinguish advertiser vertical, season, region and audience rules.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 65,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/sponsor-category-evidence.json",
+            "ontology/youtube/sponsor-category-evidence.md",
+            "specimens/youtube.json",
+            "site/app.js",
+            "tests/sponsor-categories.test.mjs",
+            "tests/site-smoke.mjs"
+          ]
         },
         {
           "id": "audience-economics/revenue-per-effort",
