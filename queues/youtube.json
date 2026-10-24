@@ -1008,7 +1008,7 @@
           "title": "Estimate effort-adjusted earnings",
           "acceptance": "Count production, marketing, administration and support time.",
           "weight": 1,
-          "progress": 68,
+          "progress": 80,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/production-costs.json",
@@ -1028,7 +1028,12 @@
             "tests/production-effort.test.mjs",
             "ontology/youtube/first-upload-vlog-study-2026.json",
             "ontology/youtube/first-upload-vlog-study-2026.md",
-            "tests/first-upload-vlog-study.test.mjs"
+            "tests/first-upload-vlog-study.test.mjs",
+            "ontology/youtube/break-even-scenario.json",
+            "ontology/youtube/break-even-scenario.md",
+            "site/scenario.mjs",
+            "tests/scenario.test.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -1604,14 +1609,18 @@
           "title": "Calculate break-even conditions",
           "acceptance": "Include fixed costs, time, variable fees and refunds.",
           "weight": 1,
-          "progress": 38,
+          "progress": 85,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/opportunity-framework.json",
             "ontology/youtube/opportunity-framework.md",
             "ontology/youtube/scenario-method.md",
             "site/scenario.mjs",
-            "tests/scenario.test.mjs"
+            "tests/scenario.test.mjs",
+            "ontology/youtube/break-even-scenario.json",
+            "ontology/youtube/break-even-scenario.md",
+            "site/app.js",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -1690,7 +1699,7 @@
           "title": "Write evidence-bounded recommendation",
           "acceptance": "State who may benefit, uncertainties, risks and next test.",
           "weight": 1,
-          "progress": 47,
+          "progress": 68,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/opportunity-framework.json",
@@ -1703,7 +1712,10 @@
             "site/member-renewal-audit.mjs",
             "tests/member-renewal-audit.test.mjs",
             "site/app.js",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/break-even-scenario.json",
+            "ontology/youtube/break-even-scenario.md",
+            "tests/site-smoke.mjs"
           ]
         }
       ]

@@ -1,4 +1,4 @@
-import {evaluateIncomeScenario} from './scenario.mjs';
+import {evaluateIncomeScenario,evaluateBreakEvenScenario} from './scenario.mjs';
 import {assessViewComparison,MEASUREMENT_KINDS} from './metric-compatibility.mjs';
 const $ = selector => document.querySelector(selector);
 const make = (tag, className, text) => {
@@ -888,6 +888,51 @@ function renderOpportunityFramework(model, taxonomy, activity) {
   details.append(link);
   container.append(details);
   return container;
+}
+
+function renderBreakEvenCalculator(){
+ const section=make('section','break-even-tool'),details=make('details','scenario-details');
+ details.append(make('summary','','Model required orders from entered fees, refunds and work hours'));
+ details.append(make('p','measure-limit','User assumptions only. This models attempted product orders, not YouTube views, customers or real income; no prices or rates are prefilled.'));
+ const form=make('form','break-even-form'),inputs={};
+ const fields=[
+ ['currency','Three-letter currency','text'],
+ ['gross_order_price','Gross product price per attempted order','number'],
+ ['refund_probability','Refund fraction (0 to 1)','number'],
+ ['processor_rate','Processor fraction of gross price (0 to 1)','number'],
+ ['processor_fixed_fee','Processor fee per attempted order','number'],
+ ['refund_extra_cost','Additional unrecovered cost per refunded order','number'],
+ ['variable_nonpayment_cost','Other cost per attempted order','number'],
+ ['fixed_cash_cost','Fixed cash costs for modeled period','number'],
+ ['creator_hours','Creator hours for modeled period','number'],
+ ['target_hourly_compensation','Desired compensation per labor hour','number']];
+ for(const [key,label,type] of fields){
+  const field=make('label','scenario-field');field.append(make('span','',label));
+  const input=make('input','scenario-input');input.type=type;input.name=key;input.autocomplete='off';
+  if(type==='number'){input.min='0';input.step='any';}
+  else{input.placeholder='e.g. USD or MXN';input.maxLength=3;}
+  field.append(input);form.append(field);inputs[key]=input;
+ }
+ const result=make('div','scenario-result');result.setAttribute('aria-live','polite');
+ result.append(make('p','measure-limit','Enter currency and all nine nonnegative numbers to calculate.'));
+ const clear=make('button','scenario-clear','Clear inputs');clear.type='reset';form.append(clear);
+ const update=()=>{
+  const values={currency:inputs.currency.value.trim().toUpperCase()};
+  for(const key of Object.keys(inputs))if(key!=='currency')values[key]=inputs[key].value.trim()===''?null:Number(inputs[key].value);
+  try{
+   const r=evaluateBreakEvenScenario(values),money=new Intl.NumberFormat('en',{style:'currency',currency:r.currency,maximumFractionDigits:2});
+   result.replaceChildren(make('p','scenario-disclaimer','Hypothetical merchant order arithmetic; no actual earnings.'));
+   const stats=make('div','scenario-stats');
+   add(stats,blockHeading('Contribution / attempted order',money.format(r.contribution_per_attempted_order)),
+    blockHeading('Cash break-even order attempts',r.cash_break_even_orders===null?'Not attainable':r.cash_break_even_orders),
+    blockHeading('With chosen labor compensation',r.labor_compensated_break_even_orders===null?'Not attainable':r.labor_compensated_break_even_orders));
+   result.append(stats);
+  }catch{result.replaceChildren(make('p','measure-limit','Enter all values. Refund and fee fractions must be from 0 to 1.'));}
+ };
+ form.addEventListener('input',update);
+ form.addEventListener('reset',()=>result.replaceChildren(make('p','measure-limit','Enter currency and all nine nonnegative numbers to calculate.')));
+ details.append(form,result);
+ const link=make('a','inline-link','Read the mathematical assumptions and limits ↗');link.href='./ontology/youtube/break-even-scenario.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
 }
 
 function renderScenarioCalculator() {
@@ -3206,6 +3251,7 @@ async function showDossier(entry) {
     const method=renderOpportunityFramework(opportunityFramework,topicCatalog,topicActivity);
     if(method)outer.append(method);
     if(entry.id==='youtube')outer.append(renderScenarioCalculator());
+    if(entry.id==='youtube')outer.append(renderBreakEvenCalculator());
     if(studyPlan)outer.append(renderStudyPlan(studyPlan));
     outer.append(make('h4','dossier-queues-title','Research queues'));
     const queueList=make('div','dossier-queues');

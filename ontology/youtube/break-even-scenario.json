@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "hypothetical_creator_product_break_even",
+  "as_of": "2026-10-24",
+  "status": "interactive_arithmetic_no_empirical_order_rates",
+  "method": "Per attempted order revenue contribution from user-provided gross price, refund fraction, payment processing fraction and fixed fee, extra refund cost and non-payment variable costs. Cash break even versus creator labor compensation target.",
+  "sources": [
+    "ontology/youtube/checkout-refund-evidence.json",
+    "ontology/youtube/video-production-cost-register.json"
+  ],
+  "form_fields": [
+    "currency",
+    "gross_order_price",
+    "refund_probability",
+    "processor_rate",
+    "processor_fixed_fee",
+    "refund_extra_cost",
+    "variable_nonpayment_cost",
+    "fixed_cash_cost",
+    "creator_hours",
+    "target_hourly_compensation"
+  ],
+  "assumptions": [
+    "Refused and refunded orders return the gross product price in full.",
+    "Payment processing charges are assumed incurred even if an order is refunded; policies vary by seller and channel.",
+    "A nonpayment variable cost is incurred per attempted order, including any nonrefundable fulfillment/delivery charges.",
+    "Refund_extra_cost represents additional expenses per refunded attempt and is separate from gross refunded price.",
+    "Creator labor is valued at a chosen target compensation amount, not a measured market hourly wage.",
+    "No defaults or unknown fee rates; all numeric inputs must be explicitly supplied by the user.",
+    "YouTube ad views, Shorts engaged views and membership subscribers are not attempts at a merchant checkout."
+  ],
+  "outputs": [
+    "contribution_per_attempted_order",
+    "cash_break_even_orders",
+    "labor_compensated_break_even_orders",
+    "unreachable_if_contribution_nonpositive"
+  ],
+  "actual_orders_observed": null,
+  "actual_net_profit_observed": null,
+  "creator_order_record_count": 0,
+  "unmeasured": {
+    "population_mean_buyer_refund_fraction": null,
+    "population_mean_creator_fees": null,
+    "typical_merch_net_profit": null,
+    "real_customer_conversion": null,
+    "median_break_even_creator_sales": null
+  }
+}
