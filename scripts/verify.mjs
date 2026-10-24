@@ -244,6 +244,44 @@ for (const entry of index.specimens) {
 
     const topic=load('ontology/youtube/taxonomy.json');
     const policy=load('ontology/youtube/policies.json');
+    const future=load('ontology/youtube/ypp-transition-2027.json');
+    ensure(future.transition_status==='announced_future_terms_not_effective_as_of_research_date' &&
+      future.research_as_of==='2026-10-23' &&
+      future.terms_effective_date==='2027-02-01',
+      '2027 YPP conditions incorrectly made current');
+    ensure(future.source_ids.every(x=>sourceIds.has(x)) &&
+      future.policy_windows.length===5 &&
+      future.policy_windows.every(x=>x.source_ids.every(id=>sourceIds.has(id))),
+      'Missing official source for February 2027 transition');
+    const byFutureId=id=>future.policy_windows.find(x=>x.id===id);
+    const current=byFutureId('current_2026_new_ad_applicant');
+    const next=byFutureId('future_2027_new_ad_applicant');
+    const recurring=byFutureId('shorts_ongoing_revenue_share_2027');
+    const existing=byFutureId('existing_ypp_entry_grandfathered');
+    const early=byFutureId('early_access_unchanged');
+    ensure(current?.minimum_subscribers===1000 &&
+      current.watch_hours.qualified_public_hours===4000 &&
+      current.shorts.qualified_shorts_views===10000000 &&
+      next?.minimum_subscribers===null &&
+      next.watch_hours.qualified_public_hours===8000 &&
+      next.shorts.qualified_shorts_views===20000000,
+      'Current and announced new YPP applicant thresholds conflated');
+    ensure(recurring?.shorts.qualified_shorts_views===10000000 &&
+      recurring.shorts.lookback_days===90 &&
+      existing?.threshold_type==='new_entry_threshold_not_retroactive' &&
+      early?.minimum_subscribers===500,
+      'Rolling Shorts product gate or existing members misrepresented');
+    ensure(future.premium_allocations.length===2 &&
+      future.premium_allocations.every(x=>x.source_ids.every(id=>sourceIds.has(id)) &&
+        x.long_form_creator_share_of_allocated_pool_percent===55 &&
+        x.shorts_creator_share_of_allocated_pool_percent===45) &&
+      future.premium_allocations.find(x=>x.id==='premium_subscription_pool')?.share_of_net_subscription_revenue_percent===30 &&
+      future.premium_allocations.find(x=>x.id==='premium_lite_subscription_pool')?.share_of_net_subscription_revenue_percent===60,
+      'Net subscription pools confused with guaranteed creator income');
+    ensure(future.required_actions.some(x=>x.deadline_date==='2027-01-31' && x.source_ids.every(id=>sourceIds.has(id))) &&
+      Object.values(future.comparisons.missing_person_level_estimates).every(x=>x===null),
+      'Future terms acceptance or income estimates unsupported');
+
     const measures=load('ontology/youtube/measurements.json');
     const observed=load('ontology/youtube/topic-observations.json');
     const viewBreak=load('ontology/youtube/view-definition-break.json');
