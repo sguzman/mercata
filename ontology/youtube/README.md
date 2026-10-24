@@ -1,6 +1,6 @@
 # YouTube ontology — audiences, content and earning
 
-The independent [machine model](model.json) defines **161 concepts** and **140 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **32 candidate overlapping subcultures**, without pretending their populations have been measured.
+The independent [machine model](model.json) defines **163 concepts** and **144 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **32 candidate overlapping subcultures**, without pretending their populations have been measured.
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
