@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {toHex,verifyPalette} from './palette.mjs';
+import {auditPublicSources} from './source-provenance.mjs';
 const root = path.resolve(process.argv[2] || process.cwd());
 const load = name => JSON.parse(fs.readFileSync(path.join(root,name),'utf8'));
 const has = name => fs.existsSync(path.join(root,name));
@@ -49,6 +50,16 @@ for (const entry of index.specimens) {
     ensure(claim.observed_at && typeof claim.limitations==='string','Claim missing observation date or limits');
   }
   if(entry.id==='youtube') {
+    const familyRegister=load('ontology/youtube/source-families.json');
+    const audit=auditPublicSources(dossier.evidence,dossier.claims,familyRegister);
+    ensure(audit.unregistered_duplicate_documents.length===0 &&
+      audit.invalid_source_family_records.length===0 &&
+      audit.missing_claim_sources.length===0 &&
+      audit.missing_retrieval_dates.length===0 &&
+      audit.inferred_independent_studies===null,
+      'Unregistered reused source document or broken provenance family');
+    ensure(audit.registered_shared_source_families>=7,
+      'Missing the known 2025 creator survey and duplicated official references');
     const model=load('ontology/youtube/model.json');
     const growth=load('ontology/youtube/creator-growth.json');
     const newsAudience=load('ontology/youtube/community-audience-studies.json');
