@@ -244,6 +244,21 @@ for (const entry of index.specimens) {
 
     const topic=load('ontology/youtube/taxonomy.json');
     const policy=load('ontology/youtube/policies.json');
+    const adUpdates=load('ontology/youtube/advertiser-policy-history.json');
+    ensure(adUpdates.revisions.length===6 &&
+      adUpdates.status_levels.length===5 &&
+      adUpdates.review_scope.includes('thumbnail') &&
+      adUpdates.review_mechanism.human_review_available===true,
+      'Incomplete 2026 advertiser suitability history');
+    ensure(adUpdates.source_ids.every(x=>sourceIds.has(x)) &&
+      adUpdates.revisions.every(x=>x.effective_day===null && x.announced_month &&
+        x.source_ids.every(id=>sourceIds.has(id)) && x.limitations),
+      'Unsourced advertising eligibility claim or fabricated effective day');
+    ensure(adUpdates.revisions.some(x=>x.id==='2026-october-public-interest') &&
+      adUpdates.revisions.some(x=>x.id==='2026-september-game-violence') &&
+      adUpdates.revisions.some(x=>x.id==='2026-september-drugs-fiction') &&
+      Object.values(adUpdates.uncertainty).every(x=>x===null),
+      'Missing political/news/gaming policy context or invented income uplift');
     const future=load('ontology/youtube/ypp-transition-2027.json');
     ensure(future.transition_status==='announced_future_terms_not_effective_as_of_research_date' &&
       future.research_as_of==='2026-10-23' &&
