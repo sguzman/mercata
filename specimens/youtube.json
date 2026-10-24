@@ -2352,6 +2352,39 @@
       "evidence_class": "official_paid_service_contract_and_paid_product",
       "license": "Official terms linked, independently paraphrased",
       "notes": "Paid-services terms identify Google LLC and list purchases, rentals, paid subscriptions and channel memberships."
+    },
+    {
+      "id": "yt-publish-performance-faq-2026",
+      "url": "https://support.google.com/youtube/answer/141805?hl=en",
+      "publisher": "YouTube Help",
+      "title": "YouTube performance FAQ: publish time and long-term viewership",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_creator_distribution_guidance",
+      "license": "Linked official Help; independently summarized",
+      "notes": "YouTube says upload timing can help initial viewing but is not known to affect long-term performance. Live/Premiere timing matters for shared live audiences."
+    },
+    {
+      "id": "yt-schedule-publishing-2026",
+      "url": "https://support.google.com/youtube/answer/1270709?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Schedule a video's publication time",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_schedule_timezone_and_visibility_rules",
+      "license": "Linked official Help; independently summarized",
+      "notes": "Scheduled private-to-public video uses selected time zone; Community Guidelines strike may block scheduled publishing; watch-page date is based on Pacific Standard Time."
+    },
+    {
+      "id": "yt-audience-timing-ideas-2026",
+      "url": "https://support.google.com/youtube/answer/13616337?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Tips to learn what viewers are watching",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_creator_audience_report_uses",
+      "license": "Linked official guidance; independently summarized",
+      "notes": "Audience activity and watched format reports are owner-specific contextual inputs, not exact viewer geography or evidence of a universal best time."
     }
   ],
   "claims": [
@@ -4875,6 +4908,47 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Structural map, not measured income or transaction prevalence. An uploader need not monetize and an ad-viewer need not be the advertiser paying."
+    },
+    {
+      "id": "yt-owner-audience-online-28day",
+      "text": "YouTube Studio's owner-facing 'When your viewers are on YouTube' report shows the channel's audience online across YouTube in the preceding 28 days, and is offered as a guide for live and Premiere scheduling.",
+      "source_ids": [
+        "analytics-audience",
+        "yt-audience-timing-ideas-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Channel owner data are not publicly available for competitors and do not contain a reliable universal time-zone breakdown or long-term causal lift estimate."
+    },
+    {
+      "id": "yt-scheduled-publishing-timezones",
+      "text": "YouTube Studio scheduling can make a private upload public at a chosen local date, time and time zone; a strike can block scheduled publication and the watch-page publication date may reflect Pacific Standard Time.",
+      "source_ids": [
+        "yt-schedule-publishing-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Time-zone choice does not establish where viewers live, which hour maximizes revenue, or immunity from daylight-saving or scheduling mistakes."
+    },
+    {
+      "id": "yt-upload-time-does-not-predict-longterm",
+      "text": "YouTube's performance FAQ says publishing while an audience is active can aid early views, but upload time is not known to affect long-term video performance; live and Premiere broadcasts have different timing needs.",
+      "source_ids": [
+        "yt-publish-performance-faq-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Publisher guidance is not a randomized cross-country causal test, and channel-specific timing outcomes are unmeasured."
+    },
+    {
+      "id": "yt-geography-analytics-suppression",
+      "text": "YouTube warns that geography breakdowns may omit low-volume countries for privacy or system reasons; a report total can exceed the sum of displayed geographic rows, and realtime/private/unlisted video geography is unavailable.",
+      "source_ids": [
+        "analytics-limits"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Suppressed geography cannot be coded as zero or as an absence of viewers, and exact suppression thresholds are unpublished."
     }
   ],
   "observations": [],
