@@ -1070,7 +1070,7 @@
           "title": "Check intellectual property terms",
           "acceptance": "Document license grants, owner rights and source dates.",
           "weight": 1,
-          "progress": 78,
+          "progress": 86,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/content-policy-risk.json",
@@ -1084,7 +1084,11 @@
             "ontology/youtube/synthetic-media-rights-policy.md",
             "site/synthetic-media-audit.mjs",
             "tests/synthetic-media-audit.test.mjs",
-            "site/app.js"
+            "site/app.js",
+            "ontology/youtube/exclusive-rights-evidence.json",
+            "ontology/youtube/exclusive-rights-evidence.md",
+            "site/exclusive-rights-audit.mjs",
+            "tests/exclusive-rights-audit.test.mjs"
           ]
         },
         {
@@ -1093,14 +1097,20 @@
           "title": "Check exclusivity and restrictions",
           "acceptance": "State duration, geography and affected rights.",
           "weight": 1,
-          "progress": 31,
+          "progress": 83,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/channel-ownership-continuity.json",
             "ontology/youtube/channel-ownership-continuity.md",
             "specimens/youtube.json",
             "tests/youtube.test.mjs",
-            "scripts/verify.mjs"
+            "scripts/verify.mjs",
+            "ontology/youtube/exclusive-rights-evidence.json",
+            "ontology/youtube/exclusive-rights-evidence.md",
+            "site/exclusive-rights-audit.mjs",
+            "tests/exclusive-rights-audit.test.mjs",
+            "tests/site-smoke.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -1171,7 +1181,7 @@
           "title": "Check rights to reuse research inputs",
           "acceptance": "Verify copyright, API and database licensing constraints.",
           "weight": 1,
-          "progress": 69,
+          "progress": 77,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/content-policy-risk.json",
@@ -1185,7 +1195,11 @@
             "site/synthetic-media-audit.mjs",
             "tests/synthetic-media-audit.test.mjs",
             "site/app.js",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/exclusive-rights-evidence.json",
+            "ontology/youtube/exclusive-rights-evidence.md",
+            "site/exclusive-rights-audit.mjs",
+            "tests/exclusive-rights-audit.test.mjs"
           ]
         }
       ]

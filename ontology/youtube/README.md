@@ -80,6 +80,10 @@ The [search-demand source audit](search-demand-proxy-crosswalk.md), [machine sou
 
 The [Shorts/horizontal/live production register](video-production-cost-register.md), [machine formats and cost protocol](video-production-cost-register.json) and [tested owner-input cost arithmetic](../../site/video-production-cost-audit.mjs) distinguish an already-owned smartphone capture option, optional live encoder investment, logged work hours, cash expenses, amortization and *verified* receipts. No purchase is mandatory or recommended; no creator production-cost median or net earnings were observed.
 
+## Exclusive content claims versus non-exclusive creator upload licenses
+
+The [rights research matrix](exclusive-rights-evidence.md), [machine model](exclusive-rights-evidence.json), and [source-reference tests](../../tests/exclusive-rights-audit.test.mjs) distinguish YouTube's general non-exclusive hosting rights from the geographically exclusive underlying works required for Content ID claims. These rules do not prove any specific creator's asset ownership or royalty income.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

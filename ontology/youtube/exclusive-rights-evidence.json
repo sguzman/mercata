@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "exclusive_claim_rights_vs_nonexclusive_upload_license",
+  "as_of": "2026-10-24",
+  "status": "official_rights_framework_no_specific_contracts",
+  "scopes": [
+    {
+      "id": "owned_original",
+      "label": "Original creator-owned uploaded video",
+      "ordinary_use": "creator_owns",
+      "content_id_reference": "conditional_on_exclusive_reference_rights",
+      "source_ids": [
+        "youtube-general-terms-provider-2026",
+        "yt-exclusive-content-id-reference-2026"
+      ],
+      "rights_contract_sample": null,
+      "observed_creator_royalties": null
+    },
+    {
+      "id": "nonexclusive_stock",
+      "label": "Third-party material licensed non-exclusively",
+      "ordinary_use": "permission_subject_to_contract",
+      "content_id_reference": "not_eligible",
+      "source_ids": [
+        "yt-exclusive-content-id-reference-2026"
+      ],
+      "rights_contract_sample": null,
+      "observed_creator_royalties": null
+    },
+    {
+      "id": "public_domain",
+      "label": "Public-domain material",
+      "ordinary_use": "not_exclusive",
+      "content_id_reference": "not_eligible",
+      "source_ids": [
+        "yt-exclusive-content-id-reference-2026"
+      ],
+      "rights_contract_sample": null,
+      "observed_creator_royalties": null
+    },
+    {
+      "id": "creative_commons",
+      "label": "CC BY licensed work",
+      "ordinary_use": "reuse_with_attribution",
+      "content_id_reference": "not_eligible",
+      "source_ids": [
+        "yt-youtube-ccby-options-2026",
+        "yt-exclusive-content-id-reference-2026"
+      ],
+      "rights_contract_sample": null,
+      "observed_creator_royalties": null
+    },
+    {
+      "id": "commentary_excerpts",
+      "label": "Third-party excerpts under claimed exception",
+      "ordinary_use": "case_specific_exception",
+      "content_id_reference": "not_eligible",
+      "source_ids": [
+        "yt-exclusive-content-id-reference-2026"
+      ],
+      "rights_contract_sample": null,
+      "observed_creator_royalties": null
+    }
+  ],
+  "source_ids": [
+    "youtube-general-terms-provider-2026",
+    "yt-exclusive-content-id-reference-2026",
+    "yt-youtube-ccby-options-2026",
+    "yt-claim-policy-2026-conflict"
+  ],
+  "service_licence": {
+    "retains_owned_copyright": true,
+    "nonexclusive": true,
+    "worldwide": true,
+    "royalty_free": true,
+    "transferable_and_sublicensable": true,
+    "creator_entitled_to_payment_by_terms_alone": false,
+    "source_id": "youtube-general-terms-provider-2026"
+  },
+  "content_id": {
+    "requires_exclusive_reference_rights": true,
+    "exclusive_rights_by_territory": true,
+    "platform_approval_required": true,
+    "source_ids": [
+      "yt-exclusive-content-id-reference-2026",
+      "yt-content-id-rights-qualification-2026"
+    ]
+  },
+  "claim_actions": [
+    "monetize",
+    "track",
+    "block"
+  ],
+  "contract_fields": [
+    "copyright_owner",
+    "asset",
+    "scope_of_licensed_use",
+    "territory",
+    "exclusive_or_nonexclusive",
+    "effective_date",
+    "end_date",
+    "termination_rights",
+    "underlying_audio_visual_rights",
+    "payout_split"
+  ],
+  "unmeasured": {
+    "content_id_claim_prevalence": null,
+    "licensed_creator_costs": null,
+    "royalty_median": null,
+    "exclusive_contract_fraction": null,
+    "territory_specific_income_impact": null
+  },
+  "observed_contracts": []
+}
