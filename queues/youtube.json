@@ -1076,12 +1076,17 @@
           "title": "Trace sale or contract flow",
           "acceptance": "Describe transaction steps and who collects payment.",
           "weight": 1,
-          "progress": 25,
+          "progress": 34,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
             "ontology/youtube/payment-gates.json",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/retention-posts-memberships.json",
+            "ontology/youtube/retention-posts-memberships.md",
+            "site/app.js",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -1114,14 +1119,19 @@
           "title": "Study repeat and recurring purchases",
           "acceptance": "Define retention, subscriptions, renewal and churn measurements.",
           "weight": 1,
-          "progress": 32,
+          "progress": 71,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
             "ontology/youtube/creator-growth.md",
             "ontology/youtube/content-formats.json",
             "ontology/youtube/content-formats.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/retention-posts-memberships.json",
+            "ontology/youtube/retention-posts-memberships.md",
+            "site/app.js",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -1130,7 +1140,7 @@
           "title": "List seller analytics",
           "acceptance": "Identify reported conversion and traffic metrics, access and gaps.",
           "weight": 1,
-          "progress": 78,
+          "progress": 83,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/discovery.md",
@@ -1140,7 +1150,10 @@
             "ontology/youtube/air-studio-benchmarks-2026.json",
             "ontology/youtube/air-studio-benchmarks-2026.md",
             "tests/youtube.test.mjs",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/retention-posts-memberships.json",
+            "ontology/youtube/retention-posts-memberships.md",
+            "site/app.js"
           ]
         }
       ]
