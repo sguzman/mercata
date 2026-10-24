@@ -113,4 +113,6 @@ A [peer-reviewed historical study of external links](ontology/youtube/historical
 
 A [source-backed comparison of adjacent video services](ontology/youtube/comparison-set.md) establishes research dimensions for Twitch, TikTok Creator Rewards and Vimeo OTT, while preserving their fundamentally different money and engagement units. This is **not** authorization to admit new marketplace specimens, and no cross-platform creator-income ranking is inferred.
 
+The [creator Posts and membership-retention study](ontology/youtube/retention-posts-memberships.md) separates post impressions, returning-viewer classifications, paid member access, billing renewals and distinct people. The related dashboard does not claim post-attributed loyalty, unique repeat buyers or retention percentages without measured cohorts.
+
 The current YouTube dossier also includes a [survey-based U.S. news audience profile](ontology/youtube/community-audience-studies.md), a carefully bounded [commercial creator competition sample](ontology/youtube/competition-observations.md), a [format-by-format earning and linking guide](ontology/youtube/content-formats.md), and a [viewer discovery and retention model](ontology/youtube/creator-growth.md). These sources have different denominators and are not combined into a fabricated average or ranking.

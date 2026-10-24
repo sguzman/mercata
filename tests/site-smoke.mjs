@@ -112,6 +112,12 @@ try{
     await checker.locator('input[type=date]').nth(0).fill('2026-08-23');
     await checker.locator('select').selectOption('engaged_view');
     assert((await checker.locator('.view-comparison-result').textContent()).includes('must be checked across dates'));
+    const posting=page.locator('.post-membership-retention');
+    assert.equal(await posting.locator('.post-membership-surface').count(),3,'Missing distinct Posts / Communities / members-only distinctions');
+    assert.equal(await posting.locator('.post-membership-metric').count(),7,'Missing membership event and stock denominators');
+    await posting.locator('summary').click();
+    assert((await posting.textContent()).includes('not a distinct buyer'));
+    assert((await posting.textContent()).includes('renewal rate and net member profit: unknown'));
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');

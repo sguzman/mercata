@@ -521,6 +521,30 @@ test('Pew 2026 U.S. demographic ever-use rates never become YouTube audience com
  assert(Object.values(model.unmeasured).every(v=>v===null));
 });
 
+test('Posts and membership retention preserve impressions, people and transaction boundaries',async()=>{
+ const [data,dossier]=await Promise.all([
+  load('ontology/youtube/retention-posts-memberships.json'),load('specimens/youtube.json')
+ ]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(data.kind,'posts_viewer_retention_and_membership_measurement');
+ assert.deepEqual(data.channel_surfaces.map(x=>x.id),['creator_posts','community_discussions','members_only_posts']);
+ assert.equal(data.post_metric_register.length,6);
+ assert.deepEqual(data.viewer_segments.map(x=>x.id),['new','casual','regular']);
+ assert.equal(data.viewer_segments.find(x=>x.id==='regular').minimum_months,7);
+ assert.equal(data.viewer_segments.find(x=>x.id==='casual').maximum_months,5);
+ assert.equal(data.membership_register.length,7);
+ assert.equal(data.membership_register.find(x=>x.id==='transactions').unit,'payment_events');
+ assert.equal(data.membership_register.find(x=>x.id==='total_members').unit,'people_with_current_perk_access');
+ assert.equal(data.membership_register.find(x=>x.id==='active_members').unit,'active_subscriptions');
+ assert.deepEqual(data.billing.reported_period_length_days,[28,30,31]);
+ assert(data.channel_surfaces.every(x=>x.post_to_video_return_rate===null));
+ assert(data.source_ids.every(id=>ids.has(id)));
+ assert(data.membership_register.every(x=>x.source_ids.every(id=>ids.has(id))));
+ assert(data.post_metric_register.every(x=>x.source_ids.every(id=>ids.has(id))));
+ assert(Object.values(data.unknowns).every(x=>x===null));
+ assert(data.inference_safeguards.some(x=>x.includes('causal')));
+});
+
 test('Public channel counts and owner viewers remain different measurement types',async()=>{
  const [metrics,dossier]=await Promise.all([
   load('ontology/youtube/viewer-person-metrics.json'),load('specimens/youtube.json')

@@ -800,3 +800,16 @@ h1 em {font-style:italic;color:var(--accent)}
 .child-format-card p,.child-format-observation p{font-size:12px;margin:7px 0}
 .child-format-observation strong{font-size:23px;font-variant-numeric:tabular-nums}
 @media(max-width:650px){.child-format-details{padding:15px}.child-format-grid{grid-template-columns:1fr}}
+
+/* Distinguish post impressions, channel viewers and membership transactions. */
+.post-membership-retention{margin:28px 0}
+.post-membership-retention-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.post-membership-retention-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.post-membership-surfaces{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.post-membership-surface,.post-membership-metric{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;overflow-wrap:anywhere}
+.post-membership-surface h5,.post-membership-metric h5{font-size:13px;text-transform:capitalize;margin:0 0 8px}
+.post-membership-surface p,.post-membership-metric p{font-size:12px;margin:7px 0}
+.post-membership-heading{font-size:14px;margin:18px 0 10px}
+.post-membership-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media(max-width:850px){.post-membership-surfaces{grid-template-columns:1fr}}
+@media(max-width:650px){.post-membership-retention-details{padding:15px}.post-membership-metrics{grid-template-columns:1fr}}

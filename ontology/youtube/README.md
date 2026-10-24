@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **162 references, 155 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **167 references, 160 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -188,6 +188,10 @@ The [channel onboarding study](channel-onboarding.md) and [six-stage machine mod
 ## An actual measured event audience
 
 [World Cup 2026 event viewers](event-audiences.md) are the first distinct-viewer content-community observation: YouTube reports over 1.7 billion unique people watching related videos worldwide during the tournament, with over 550 million watching on TV (a subset). This is defined event reach, **not the stable size of the soccer-fan community**. Broad topic population fields remain null. NFL viewing is tracked separately under general sports.
+
+## Posts, subscriber Communities and paid member retention
+
+The [official 2026 posts-and-membership research](retention-posts-memberships.md) and [structured denominator register](retention-posts-memberships.json) separate creator Posts, subscriber-origin Communities and members-only posts; post impressions, votes and likes are **not** unique returning viewers. YouTube's new/casual/regular audience segments measure viewing history, and membership transactions can be renewals rather than distinct buyers. Matching post recipients to later viewers or repeated purchasers requires independently authorized cohort data; none is collected here, so retention effects and buyer cohort rates remain unknown.
 
 ## Discovery and community engagement
 
