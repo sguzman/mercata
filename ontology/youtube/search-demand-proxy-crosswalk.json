@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "search_demand_proxy_crosswalk",
+  "as_of": "2026-10-24",
+  "status": "official_feature_definitions_no_collected_keyword_panel",
+  "method": "Keep creator topic suggestions, Google Trends normalized YouTube Search index, autocomplete, and approximate API supply counts separate.",
+  "source_ids": [
+    "yt-studio-trends-demand-2026",
+    "google-trends-relative-index-2026",
+    "yt-query-predictions-2026",
+    "api-search",
+    "gni-youtube-search-type-2026"
+  ],
+  "proxies": [
+    {
+      "id": "studio_trends",
+      "label": "Studio Trends",
+      "unit": "ordinal_interest_or_gap",
+      "access": "owner_28_day",
+      "scope": "Audience/search interests and saved terms; limited by geography, language, device",
+      "source_ids": [
+        "yt-studio-trends-demand-2026"
+      ],
+      "absolute_searches": null,
+      "unique_searchers": null,
+      "observed_value": null
+    },
+    {
+      "id": "google_trends_youtube",
+      "label": "Google Trends: YouTube Search",
+      "unit": "indexed_interest_0_to_100",
+      "access": "public_sampled",
+      "scope": "Normalized relative search interest in fixed country, date, service and comparison panel",
+      "source_ids": [
+        "google-trends-relative-index-2026"
+      ],
+      "absolute_searches": null,
+      "unique_searchers": null,
+      "observed_value": null
+    },
+    {
+      "id": "youtube_autocomplete",
+      "label": "YouTube autocomplete",
+      "unit": "suggested_text",
+      "access": "public_personalized",
+      "scope": "Queries shaped by account history, location, typed term and trends",
+      "source_ids": [
+        "yt-query-predictions-2026"
+      ],
+      "absolute_searches": null,
+      "unique_searchers": null,
+      "observed_value": null
+    },
+    {
+      "id": "public_api_results",
+      "label": "Public YouTube search results",
+      "unit": "approximate_indexed_video_results",
+      "access": "quota_limited",
+      "scope": "Result count from video index, not searches or unique creators",
+      "source_ids": [
+        "api-search"
+      ],
+      "absolute_searches": null,
+      "unique_searchers": null,
+      "observed_value": null
+    }
+  ],
+  "published_limits": {
+    "studio_window_days": 28,
+    "studio_interest_threshold_weekly_video_views_exclusive": 1000,
+    "studio_interest_scale": [
+      "very_low",
+      "low",
+      "medium",
+      "high",
+      "very_high"
+    ],
+    "google_trends_min_index": 0,
+    "google_trends_max_index": 100,
+    "google_trends_is_absolute": false,
+    "source_ids": [
+      "yt-studio-trends-demand-2026",
+      "google-trends-relative-index-2026"
+    ]
+  },
+  "comparison_keys": [
+    "query",
+    "query_kind",
+    "search_service",
+    "country",
+    "language",
+    "time_range",
+    "category",
+    "comparison_panel",
+    "definition_epoch"
+  ],
+  "protocol": [
+    "Pre-register topics and search types, country and language",
+    "Save dates and comparison-panel metadata; avoid resetting a denominator mid comparison",
+    "Do not interpret Google Trends index 100 as 100 monthly searches",
+    "A Studio content gap suggests editorial opportunity, not conversion proof",
+    "Do not infer people or buyer counts from autocomplete or API search results"
+  ],
+  "recorded_keyword_panels": [],
+  "unmeasured": {
+    "monthly_absolute_youtube_search_volume": null,
+    "unique_searchers": null,
+    "country_absolute_demand": null,
+    "buyer_conversion": null,
+    "net_creator_profit": null,
+    "causal_content_gap_value": null
+  }
+}

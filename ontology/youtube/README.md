@@ -72,6 +72,10 @@ The [YouTube external-link capability matrix](external-link-funnel-evidence.md),
 
 The [retention/completion measurement audit](retention-observability.md), [machine access/unit matrix](retention-observability.json), and [comparison validator](../../site/retention-observability-audit.mjs) distinguish public playback starts, owner-only engagement and time curves, engaged Shorts and true (unmeasured) full-video completion. No private creator analytics, individual views or audience sessions have been collected; the public site labels all units and unknowns.
 
+## Search demand and normalized interest
+
+The [search-demand source audit](search-demand-proxy-crosswalk.md), [machine source frame](search-demand-proxy-crosswalk.json) and [validator](../../site/search-demand-proxy-audit.mjs) distinguish Studio content gaps, Google Trends YouTube Search normalized 0–100 interest, autocomplete, and approximate video-result totals. None is absolute monthly searches, deduplicated viewers or confirmed buyer demand.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

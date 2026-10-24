@@ -456,7 +456,7 @@
           "title": "Measure transaction or revenue scale",
           "acceptance": "Distinguish GMV, platform sales, revenue and payouts.",
           "weight": 1,
-          "progress": 51,
+          "progress": 60,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/country-reach-devices.json",
@@ -470,7 +470,12 @@
             "ontology/youtube/measurements.json",
             "ontology/youtube/video-attention-culture-2026.json",
             "ontology/youtube/video-attention-culture-2026.md",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/search-demand-proxy-crosswalk.json",
+            "ontology/youtube/search-demand-proxy-crosswalk.md",
+            "site/search-demand-proxy-audit.mjs",
+            "tests/search-demand-proxy-audit.test.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -574,7 +579,7 @@
           "title": "Research evidence of query demand",
           "acceptance": "Record public demand signals and their sample limitations.",
           "weight": 1,
-          "progress": 67,
+          "progress": 78,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
@@ -591,7 +596,11 @@
             "site/recommendation-evidence-audit.mjs",
             "tests/recommendation-evidence-audit.test.mjs",
             "site/app.js",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/search-demand-proxy-crosswalk.json",
+            "ontology/youtube/search-demand-proxy-crosswalk.md",
+            "site/search-demand-proxy-audit.mjs",
+            "tests/search-demand-proxy-audit.test.mjs"
           ]
         },
         {
@@ -2883,14 +2892,20 @@
           "title": "Research topic-level search interest",
           "acceptance": "Use disclosed trends and clearly bounded query samples, not exact search-count claims.",
           "weight": 1,
-          "progress": 30,
+          "progress": 76,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
             "ontology/youtube/creator-growth.md",
             "ontology/youtube/content-formats.json",
             "ontology/youtube/content-formats.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/search-demand-proxy-crosswalk.json",
+            "ontology/youtube/search-demand-proxy-crosswalk.md",
+            "site/search-demand-proxy-audit.mjs",
+            "tests/search-demand-proxy-audit.test.mjs",
+            "site/app.js",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -3404,14 +3419,19 @@
           "title": "Find emerging communities and formats",
           "acceptance": "Document evidence threshold, sampling and uncertainty, not hype.",
           "weight": 1,
-          "progress": 30,
+          "progress": 43,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/animation-format-cycles.json",
             "ontology/youtube/animation-format-cycles.md",
             "specimens/youtube.json",
             "tests/youtube.test.mjs",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/search-demand-proxy-crosswalk.json",
+            "ontology/youtube/search-demand-proxy-crosswalk.md",
+            "site/search-demand-proxy-audit.mjs",
+            "tests/search-demand-proxy-audit.test.mjs",
+            "site/app.js"
           ]
         },
         {

@@ -2660,6 +2660,50 @@
       "evidence_class": "official_owner_analytics_engagement_measures",
       "license": "Official documentation linked, metrics independently defined",
       "notes": "Owner-only Engagement tab summarizes watch time, average view duration and video retention."
+    },
+    {
+      "id": "yt-studio-trends-demand-2026",
+      "url": "https://support.google.com/youtube/answer/11962757?hl=en",
+      "title": "Explore trends on YouTube",
+      "publisher": "YouTube Help",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "owner_28_day_trends_content_gap",
+      "license": "Public source linked, original summary without copying graphical assets",
+      "notes": "Official feature and normalization definitions, not sampled creator profit or absolute search volume."
+    },
+    {
+      "id": "google-trends-relative-index-2026",
+      "url": "https://support.google.com/trends/answer/4365533?hl=en",
+      "title": "FAQ about Google Trends data",
+      "publisher": "Google",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "sampled_normalized_index",
+      "license": "Public source linked, original summary without copying graphical assets",
+      "notes": "Official feature and normalization definitions, not sampled creator profit or absolute search volume."
+    },
+    {
+      "id": "gni-youtube-search-type-2026",
+      "url": "https://newsinitiative.withgoogle.com/en-gb/resources/trainings/advanced-google-trends/",
+      "title": "Advanced Google Trends",
+      "publisher": "Google",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "youtube_search_filter",
+      "license": "Public source linked, original summary without copying graphical assets",
+      "notes": "Official feature and normalization definitions, not sampled creator profit or absolute search volume."
+    },
+    {
+      "id": "yt-query-predictions-2026",
+      "url": "https://support.google.com/youtube/answer/9872296?hl=en",
+      "title": "Find videos faster",
+      "publisher": "YouTube Help",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "personalized_query_prediction",
+      "license": "Public source linked, original summary without copying graphical assets",
+      "notes": "Official feature and normalization definitions, not sampled creator profit or absolute search volume."
     }
   ],
   "claims": [
@@ -5632,6 +5676,37 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "No actual segment-level owner data, view-person deduplication or sampled completion curve collected."
+    },
+    {
+      "id": "studio-trends-not-search-count-2026",
+      "text": "The Studio Trends tab identifies saved/audience topics and Shorts content gaps over a recent 28-day window. Its interest categories are not observed absolute monthly search counts or buying customers.",
+      "source_ids": [
+        "yt-studio-trends-demand-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Documented official mechanics, no actual query panel, keyword volume, distinct users, revenue or causal creator outcome."
+    },
+    {
+      "id": "google-youtube-search-index-not-volume-2026",
+      "text": "Google Trends can filter to YouTube Search and displays sampled search interest normalized to a 0–100 index within a geography, time range and comparison frame, not the number of monthly searches.",
+      "source_ids": [
+        "google-trends-relative-index-2026",
+        "gni-youtube-search-type-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Documented official mechanics, no actual query panel, keyword volume, distinct users, revenue or causal creator outcome."
+    },
+    {
+      "id": "youtube-autocomplete-not-search-census-2026",
+      "text": "YouTube search suggestions may vary by user history, typed term, location and regional trends, and cannot establish population search frequencies.",
+      "source_ids": [
+        "yt-query-predictions-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Documented official mechanics, no actual query panel, keyword volume, distinct users, revenue or causal creator outcome."
     }
   ],
   "observations": [],

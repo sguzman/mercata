@@ -103,7 +103,8 @@ try{
       ['.channel-cohort-evidence',4,'do not prove uploading causes growth'],
       ['.first-upload-vlog',4,'no YouTube payouts'],
       ['.external-link-funnel',7,'no test has been launched'],
-      ['.retention-observability',11,'full-video completion fraction']
+      ['.retention-observability',11,'full-video completion fraction'],
+      ['.search-demand-proxies',4,'No absolute monthly searches']
     ]){
       const section=page.locator(selector);
       assert.equal(await section.locator('.ownership-card').count(),cards,'Missing research cards in '+selector);
