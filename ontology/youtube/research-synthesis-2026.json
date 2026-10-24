@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "reader_facing_marketplace_dossier_synthesis",
+  "as_of": "2026-10-24",
+  "status": "partial_evidence_synthesis_not_a_complete_market_or_income_measurement",
+  "population_scope": "YouTube global policies and platform-defined activity where noted; independent U.S. adult surveys and vendor creator samples have separate denominators",
+  "evidence_levels": [
+    {
+      "id": "official_rules",
+      "label": "Operator-documented product and policy mechanics",
+      "permitted": "Describe qualified routes, eligibility gates, changed terms and conditional risks",
+      "not_permitted": "Infer typical individual approval, profit, violations or personal outcomes"
+    },
+    {
+      "id": "independent_population_surveys",
+      "label": "Third-party surveys with stated respondents and geography",
+      "permitted": "Bounded within-sample population rates",
+      "not_permitted": "Equate surveyed adult use with global distinct people or creator income"
+    },
+    {
+      "id": "selected_vendor_creator_samples",
+      "label": "Self-selected/multiplatform creator studies",
+      "permitted": "Descriptive respondent statistics and recruitment-bias discussion",
+      "not_permitted": "Typical YouTube newcomer profit inclusive of zero earners"
+    },
+    {
+      "id": "first_party_platform_aggregates",
+      "label": "Platform-reported viewing and uploads",
+      "permitted": "Reproduce dated aggregate units and limitations",
+      "not_permitted": "Unique people, causation or a current creator profitability distribution"
+    }
+  ],
+  "findings": [
+    {
+      "id": "population_definitions",
+      "title": "Reach and audience counts are different quantities",
+      "source_ids": [
+        "pew-us-adults-2026",
+        "datareportal-midyear-global-2026",
+        "yt-unique-viewer-estimates-2026"
+      ],
+      "document_refs": [
+        "platform-scale.json",
+        "viewer-person-metrics.json"
+      ],
+      "supported": "U.S. adult survey ever-use and internet-user past-month percentages are sample-defined; Studio unique viewers are owner-only estimates.",
+      "unknown": "Global deduplicated monthly unique people, signed-out population, complete niche overlaps and country-comparable unique-user rankings"
+    },
+    {
+      "id": "publishing_supply",
+      "title": "Very large public video supply does not identify distinct creators",
+      "source_ids": [
+        "youtube-press-2026"
+      ],
+      "document_refs": [
+        "platform-scale.json"
+      ],
+      "supported": "YouTube Press reports over 20 million uploaded videos daily; this is uploads not unique channels or people.",
+      "unknown": "Number of active independent creators, first-year channel survival and distribution of meaningful view opportunity"
+    },
+    {
+      "id": "entry_and_revenue",
+      "title": "Sixteen modeled monetization routes have independent gates",
+      "source_ids": [
+        "ypp-main",
+        "yt-ypp-2027-announcement"
+      ],
+      "document_refs": [
+        "revenue-pathways.json",
+        "ypp-transition-2027.json"
+      ],
+      "supported": "YPP, advertising and commerce routes have different eligibility; new February 2027 entry rules were announced but have not yet taken effect in October 2026.",
+      "unknown": "Typical probability and time to qualify, per-format newcomer net earnings, individual approval and country feature access"
+    },
+    {
+      "id": "creator_earnings",
+      "title": "Selected surveys do not establish new entrant earnings",
+      "source_ids": [
+        "creatoriq-state-creators-2026"
+      ],
+      "document_refs": [
+        "cross-platform-income-surveys.json",
+        "newcomer-income-cohort.json",
+        "production-costs.json"
+      ],
+      "supported": "CreatorIQ's 2026 vendor survey of 5,095 cross-platform creator respondents reports many below an annual threshold; the sample is not a first-time YouTube cohort.",
+      "unknown": "Representative YouTube earnings including zero earners, net cash profit, actual production labor costs and share that never monetize"
+    },
+    {
+      "id": "time_and_seasonality",
+      "title": "Publishing time and topical seasons require distinct inference",
+      "source_ids": [
+        "yt-publish-performance-faq-2026",
+        "yt-nfl-culture-2026"
+      ],
+      "document_refs": [
+        "geographic-publishing-time.json",
+        "seasonal-discovery-comparison.json"
+      ],
+      "supported": "YouTube says upload time is not known to affect long-term video viewership; over 30% of 2025 NFL video views occurred in the offseason.",
+      "unknown": "Causal ideal publishing hour, repeatable seasonal lift, matched country/topic period curves or profit timing"
+    },
+    {
+      "id": "brand_and_security",
+      "title": "Compliance and resilience affect routes but do not set earnings",
+      "source_ids": [
+        "yt-brand-disclosure-update-2026",
+        "yt-oct-2026-hijack-pause"
+      ],
+      "document_refs": [
+        "brand-disclosure-risk.json",
+        "creator-safety-continuity.json"
+      ],
+      "supported": "2026 YouTube updates address branded labels and temporary restrictions for suspected account compromise; independent legal disclosure duties and recovery conditions remain.",
+      "unknown": "Creator-level breach incidence, brand deal prevalence, violation rates, compliance cost, and measured revenue losses"
+    },
+    {
+      "id": "discovery_concentration",
+      "title": "Traffic-source risk is measurable only from scoped own-channel data",
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ],
+      "document_refs": [
+        "traffic-concentration.json"
+      ],
+      "supported": "YouTube categorizes browse, suggested, search, direct/unknown and other traffic origins in owner Analytics; study can predefine descriptive concentration indices.",
+      "unknown": "Typical new-creator source concentration, causal effect of any traffic source and cross-channel income risk"
+    }
+  ],
+  "evidence_acceptance_gates": [
+    {
+      "id": "representative_newcomer_income",
+      "fulfilled": false,
+      "needed": "Measure a defensible cohort of all entrants including nonmonetized and zero earners, cash costs and labor hours."
+    },
+    {
+      "id": "country_comparable_populations",
+      "fulfilled": false,
+      "needed": "Same-age, same-period, same-unit probability or validated samples for country and niche unique people."
+    },
+    {
+      "id": "independently_auditable_longitudinal_trends",
+      "fulfilled": false,
+      "needed": "Repeat date- and metric-compatible monthly observations across topic and format groups, plus uncertainty."
+    },
+    {
+      "id": "creator_cost_and_profit",
+      "fulfilled": false,
+      "needed": "Joint actual cash expenses, separate labor, payouts and local settlement per creator-period and zero observation handling."
+    },
+    {
+      "id": "external_policy_refresh",
+      "fulfilled": false,
+      "needed": "Revalidate October 2026 official policies before later operational decisions, especially February 2027 announcements."
+    }
+  ],
+  "nonfindings": {
+    "representative_youtube_newcomer_median_income": null,
+    "typical_creator_net_profit": null,
+    "zero_earner_population_share": null,
+    "global_unique_monthly_people": null,
+    "global_distinct_creator_population": null,
+    "cross_topic_unique_people": null,
+    "universal_optimal_publish_time": null,
+    "general_causal_seasonal_lift": null
+  },
+  "scope_rules": [
+    "Each finding must preserve the listed source-family type, period, and population.",
+    "No platform aggregate view count is a unique person count.",
+    "No mixed-platform respondent survey is a representative YouTube all-entrant cohort.",
+    "Platform fees, approval probabilities and taxation cannot be estimated from source summaries alone.",
+    "Do not turn missing values into zeros or impute relative performance from incompatible topical observations.",
+    "Do not use public materials to infer individual religious, sexual, gender, political or financial attributes.",
+    "This reader-facing synthesis is a partial research product; acceptance gates and unknowns remain open."
+  ]
+}
