@@ -397,7 +397,7 @@
           "title": "Identify meaningful product segments",
           "acceptance": "Use a reproducible category taxonomy.",
           "weight": 1,
-          "progress": 43,
+          "progress": 57,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/small-channel-income.json",
@@ -405,7 +405,13 @@
             "ontology/youtube/competition-observations.json",
             "ontology/youtube/competition-observations.md",
             "ontology/youtube/community-audience-studies.json",
-            "ontology/youtube/community-audience-studies.md"
+            "ontology/youtube/community-audience-studies.md",
+            "ontology/youtube/taxonomy.json",
+            "ontology/youtube/topic-observations.json",
+            "ontology/youtube/topic-observations.md",
+            "ontology/youtube/opportunity-framework.json",
+            "specimens/youtube.json",
+            "tests/youtube.test.mjs"
           ]
         },
         {
@@ -1802,11 +1808,16 @@
           "title": "Define reproducible and revisable content-community taxonomy",
           "acceptance": "Specify inclusion rules, overlapping labels, aliases and cross-community tagging.",
           "weight": 1,
-          "progress": 60,
+          "progress": 76,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
-            "ontology/youtube/README.md"
+            "ontology/youtube/README.md",
+            "ontology/youtube/taxonomy.json",
+            "ontology/youtube/topic-observations.json",
+            "ontology/youtube/topic-observations.md",
+            "ontology/youtube/opportunity-framework.json",
+            "tests/youtube.test.mjs"
           ]
         },
         {
@@ -1892,12 +1903,17 @@
           "title": "Map music, technology, education, fitness, finance and other sizable verticals",
           "acceptance": "Build an extensible taxonomy using public evidence, not a closed list.",
           "weight": 1,
-          "progress": 26,
+          "progress": 52,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/academic-studies.json",
             "ontology/youtube/academic-studies.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/taxonomy.json",
+            "ontology/youtube/topic-observations.json",
+            "ontology/youtube/topic-observations.md",
+            "ontology/youtube/opportunity-framework.json",
+            "tests/youtube.test.mjs"
           ]
         },
         {
@@ -1954,9 +1970,16 @@
           "title": "Measure or bound intersections between communities",
           "acceptance": "Record audience overlap and explain why community totals must not be summed.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 50,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/taxonomy.json",
+            "ontology/youtube/topic-observations.json",
+            "ontology/youtube/topic-observations.md",
+            "ontology/youtube/opportunity-framework.json",
+            "specimens/youtube.json",
+            "tests/youtube.test.mjs"
+          ]
         },
         {
           "id": "subculture-atlas/representativeness",
@@ -1964,7 +1987,7 @@
           "title": "Audit errors in community labeling and samples",
           "acceptance": "Check multilingual labels, ambiguous niches, unavailable private channels and sampling bias.",
           "weight": 1,
-          "progress": 70,
+          "progress": 77,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/competition-observations.json",
@@ -1976,7 +1999,11 @@
             "ontology/youtube/public-sampling.md",
             "specimens/youtube.json",
             "tests/youtube.test.mjs",
-            "scripts/verify.mjs"
+            "scripts/verify.mjs",
+            "ontology/youtube/taxonomy.json",
+            "ontology/youtube/topic-observations.json",
+            "ontology/youtube/topic-observations.md",
+            "ontology/youtube/opportunity-framework.json"
           ]
         }
       ]
