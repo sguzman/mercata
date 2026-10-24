@@ -2310,7 +2310,7 @@ async function showDossier(entry) {
     outer.append(queueList);
     host.replaceChildren(outer);
   } catch(error) {
-    console.error('Mercata dossier failed to render:', error);
+    console.error('Mercata dossier failed to render: '+String(error?.stack || error));
     host.replaceChildren(add(make('div','empty-state'),make('h3','', 'Research record unavailable'),
       make('p','', 'The dossier or task queue could not be loaded. Check the public files.')));
   }
