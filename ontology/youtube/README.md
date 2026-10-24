@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **136 references, 130 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **142 references, 136 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -89,6 +89,10 @@ The [time-bounded 2027 YPP policy study](ypp-transition-2027.md) and [machine tr
 ## Branded-content disclosures: platform rules versus U.S. FTC guidance
 
 The [October 2026 disclosure risk review](brand-disclosure-risk.md) and [machine record](brand-disclosure-risk.json) separate the platform's Studio branded-content control from independent U.S. FTC endorsement guidance and unverified local requirements. They date YouTube's September 3, 2026 rollout announcement for refreshed labels, age/geography controls and potential automatic labeling. Paid deals, in-kind items, affiliate relationships and independent reviews are evaluated as different cases. Platform labels alone do not guarantee legal compliance. Sponsor profits and enforcement rates remain unknown.
+
+## Channel safety, moderation and October 2026 unauthorized-access pauses
+
+The [official-source creator safety study](creator-safety-continuity.md) and [machine record](creator-safety-continuity.json) differentiate moderation controls, prohibited harassment, privacy and realistic-likeness complaints, and compromised account recovery. They also track TeamYouTube's October 21, 2026 temporary publishing restrictions for suspected unauthorized access. The published typical review time is not a guaranteed recovery period; existing video access and monetization status are stated to continue during the pause. Recovery success, incident rates, real interruptions and income loss remain unknown.
 
 ## U.S.-viewer withholding versus worldwide missing-form deductions
 
