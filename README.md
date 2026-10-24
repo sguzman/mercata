@@ -83,4 +83,6 @@ Three [cross-platform creator-income survey samples](ontology/youtube/cross-plat
 
 The creator-economics work also includes a [production cost and labor-time taxonomy](ontology/youtube/production-costs.md) with separate cash, capital use, creator time and rights-adjustment accounting. As of October 2026, its cost distributions remain unmeasured; the interactive site does not invent typical equipment budgets or hours.
 
+A [peer-reviewed historical study of external links](ontology/youtube/historical-linking-study.md) now records marketplace and crowdfunding linking among 153,770 highly subscribed YouTube channels sampled in 2019. External links are not observed purchases or creator earnings; the original paper's modeled ad-income table is not used as a measured payout dataset.
+
 The current YouTube dossier also includes a [survey-based U.S. news audience profile](ontology/youtube/community-audience-studies.md), a carefully bounded [commercial creator competition sample](ontology/youtube/competition-observations.md), a [format-by-format earning and linking guide](ontology/youtube/content-formats.md), and a [viewer discovery and retention model](ontology/youtube/creator-growth.md). These sources have different denominators and are not combined into a fabricated average or ranking.
