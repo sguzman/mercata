@@ -1,6 +1,6 @@
 # YouTube ontology — audiences, content and earning
 
-The independent [machine model](model.json) defines **178 concepts** and **165 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **32 candidate overlapping subcultures**, without pretending their populations have been measured.
+The independent [machine model](model.json) defines **184 concepts** and **175 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **32 candidate overlapping subcultures**, without pretending their populations have been measured.
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
@@ -112,6 +112,10 @@ The [regional audience and screen-viewing analysis](country-reach-devices.md) an
 ## Feature eligibility checklists
 
 The [product-specific eligibility matrix](eligibility-matrix.md) ([machine JSON](eligibility-matrix.json)) records the age, product module, country, music-channel and child-directed restrictions for all sixteen earning routes. It separates YPP advertising status from individual memberships, Gifts, Shopping and Creator Partnerships gates. External product sales and sponsorships remain outside YouTube's own payout contract.
+
+## Channel ownership, delegation and backup limits
+
+The [channel ownership and continuity study](channel-ownership-continuity.md) and [structured role/risk records](channel-ownership-continuity.json) separate Studio collaborator permissions, Google Brand Account primary ownership, destructive Brand Account channel moves and uploaded-video exports. Google documents seven-day owner-role tenure conditions before a primary-owner change; channel moves may delete the destination channel. A downloaded video is not a transferable subscriber base or ad-revenue contract. Private credentials, financial documents and real account transfer details are excluded.
 
 ## Channel creation and feature-access gates
 
