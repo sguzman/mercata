@@ -221,7 +221,7 @@ try{
     assert.equal(await page.locator('.opportunity-method-item').count(),10,'Missing economic opportunity framework');
     await page.locator('.opportunity-method-details > summary').click();
     const niche=page.locator('.niche-explorer');
-    assert.equal(await niche.locator('select option').count(),32,'Missing research topics');
+    assert.equal(await niche.locator('select option').count(),33,'Missing research topics');
     assert((await niche.locator('.niche-explorer-report').textContent()).includes('Gaming'));
     await niche.locator('select').selectOption('beauty');
     assert((await niche.locator('.niche-explorer-report').textContent()).includes('Beauty'));
