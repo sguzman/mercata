@@ -168,6 +168,11 @@ try{
     assert.equal(await page.locator('.community-survey-year').count(),7,'Missing U.S. YouTube news trend');
     assert.equal(await page.locator('.community-profile-card').count(),12,'Missing U.S. news audience composition');
     assert.equal(await page.locator('.competition-tier').count(),5,'Missing sampled subscriber tiers');
+    const historyLinking=page.locator('.historical-linking');
+    assert.equal(await historyLinking.locator('.historical-link-card').count(),2,'Missing historical linking observations');
+    await historyLinking.locator('summary').click();
+    assert((await historyLinking.textContent()).includes('end of 2019'));
+    assert((await historyLinking.textContent()).includes('not observed channel payout data'));
     assert.equal(await page.locator('.competition-traffic-item').count(),6,'Missing observed traffic shares');
     assert.equal(await page.locator('.academic-study').count(),4,'Missing scoped academic studies');
     const otherIncome=page.locator('.cross-platform-income');
