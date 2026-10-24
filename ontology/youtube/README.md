@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **123 references, 117 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **124 references, 118 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -164,6 +164,10 @@ The [news-audience survey profile](community-audience-studies.md) uses Pew's 202
 ## Sampled competition and discovery evidence
 
 A [2026 commercial sample study](competition-observations.md) describes subscriber-tier movement and traffic sources across 71,177 observed accounts, while exposing its unknown recruitment frame and incomplete observation dates. The [machine record](competition-observations.json) keeps these descriptive statistics out of representative newcomer-success estimates.
+
+## Historical cross-platform links of established YouTube channels
+
+The [historical 2019 high-subscriber linking study](historical-linking-study.md) and [machine record](historical-linking-study.json) distinguish observed marketplace and crowdfunding URLs in 153,770 channels from transactions and earnings. Counts apply only to an end-of-2019 selection of channels with at least 100,000 subscribers. A separate advertising-income table in the original paper is explicitly modeled rather than observed payout data; no values from it are promoted into creator earnings estimates.
 
 ## Academic creator economics
 
