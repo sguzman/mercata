@@ -458,6 +458,25 @@ test('YouTube task percentage matches its original and detailed queues',async()=
   assert(plan.detail_tasks.every(t=>t.percent<100 || (t.status==='complete'&&t.evidence.length>0)));
 });
 
+test('Adjacent video comparison is scope-only and does not admit marketplace specimens',async()=>{
+ const [model,dossier,gallery]=await Promise.all([
+  load('ontology/youtube/comparison-set.json'),load('specimens/youtube.json'),load('gallery/index.json')
+ ]);
+ const sourceIds=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.status,'research_comparison_candidates_not_new_marketplace_specimens');
+ assert.deepEqual(model.candidates.map(x=>x.id),['twitch','tiktok','vimeo_ott']);
+ assert.equal(model.specimen_admission.authorized_for_any_comparator,false);
+ assert.equal(model.specimen_admission.created_comparator_specimen,false);
+ assert.equal(model.specimen_admission.changed_intake_queues,false);
+ assert.equal(model.acceptance_gates.length,4);
+ assert.equal(model.acceptance_gates.filter(x=>x.fulfilled).length,1);
+ assert(model.candidates.every(x=>x.source_ids.every(id=>sourceIds.has(id))));
+ assert(model.candidates.every(x=>x.current_creator_income_median===null &&
+   x.zero_earner_rate===null && x.typical_labor_hours===null));
+ assert.equal(gallery.specimens.length,26);
+ assert(model.excluded_from_conclusions.includes('sampled_creator_income_rankings'));
+});
+
 test('2019 high-subscriber linking evidence is not a creator-income distribution',async()=>{
   const [study,dossier]=await Promise.all([
     load('ontology/youtube/historical-linking-study.json'),load('specimens/youtube.json')
