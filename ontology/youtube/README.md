@@ -1,6 +1,6 @@
 # YouTube ontology — audiences, content and earning
 
-The independent [machine model](model.json) defines **161 concepts** and **140 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **31 candidate overlapping subcultures**, without pretending their populations have been measured.
+The independent [machine model](model.json) defines **161 concepts** and **140 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **32 candidate overlapping subcultures**, without pretending their populations have been measured.
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
@@ -12,7 +12,7 @@ Platform demographics (age, sex, gender, race or ethnicity, political affiliatio
 
 ## Community ontology
 
-The 31 topic definitions include beauty, feminine lifestyle, youth culture, child-directed animation, general animation, gaming, memes, civic/political commentary and other cultural interests. They are open, overlapping coding categories. Labels do not establish that any person belongs to a group, and a topic's video count is not a topic's number of unique viewers. Until an appropriate sampled or aggregate source is found, *every* audience and creator size estimate remains unknown.
+The 32 topic definitions include beauty, feminine lifestyle, youth culture, child-directed animation, general animation, gaming, memes, civic/political commentary and other cultural interests. They are open, overlapping coding categories. Labels do not establish that any person belongs to a group, and a topic's video count is not a topic's number of unique viewers. Until an appropriate sampled or aggregate source is found, *every* audience and creator size estimate remains unknown.
 
 Children's animation requires separating broadly suitable animation from material deliberately directed at children. That classification affects advertisement and social features under YouTube's rules, and individual children must not be profiled.
 
@@ -44,7 +44,7 @@ The [public YouTube sampling protocol](public-sampling.md) defines topic inclusi
 
 ## Measured content activity
 
-The [topic evidence register](topic-observations.md) records 23 observations from YouTube publications, including global gaming views, topic-title-filtered beauty or format views, news watch hours, and animation fan-survey results. The [machine version](topic-observations.json) includes each source, geography, period, unit and limitation. These measures reveal **content activity**, not unique community population. Persistent audience estimates for all 31 broad topics remain unknown.
+The [topic evidence register](topic-observations.md) records 31 observations from YouTube publications, including global gaming views, topic-title-filtered beauty or format views, news watch hours, and animation fan-survey results. The [machine version](topic-observations.json) includes each source, geography, period, unit and limitation. These measures reveal **content activity**, not unique community population. Persistent audience estimates for all 32 broad topics remain unknown.
 
 ## What creators earn
 
@@ -75,7 +75,7 @@ The [dated audio-licensing economics investigation](music-rights-economics.md) a
 
 ## Comparing niches economically
 
-The [opportunity assessment method](opportunity-framework.md) is a ten-dimension framework for comparing real audience demand, competing creator supply, discovery for new channels, revenue mix, cash and labor costs, content-policy restrictions and durability. Its [machine register](opportunity-framework.json) has **29 unranked topics**, each retaining null economic scores until defensible comparative evidence is gathered. A highest-viewed niche is not necessarily the best-paid or easiest to enter.
+The [opportunity assessment method](opportunity-framework.md) is a ten-dimension framework for comparing real audience demand, competing creator supply, discovery for new channels, revenue mix, cash and labor costs, content-policy restrictions and durability. Its [machine register](opportunity-framework.json) has **32 unranked topics**, each retaining null economic scores until defensible comparative evidence is gathered. A highest-viewed niche is not necessarily the best-paid or easiest to enter.
 
 ## Measuring equipment, production cash and labor
 
