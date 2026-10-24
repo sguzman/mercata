@@ -633,7 +633,7 @@
           "title": "Define comparable competitor sample",
           "acceptance": "Record sampling query, category, time and selection method.",
           "weight": 1,
-          "progress": 89,
+          "progress": 92,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/opportunity-framework.json",
@@ -654,7 +654,11 @@
             "ontology/youtube/historical-linking-study.json",
             "ontology/youtube/historical-linking-study.md",
             "tests/site-smoke.mjs",
-            "ontology/youtube/topic-observations.json"
+            "ontology/youtube/topic-observations.json",
+            "ontology/youtube/publishing-cadence-evidence.json",
+            "ontology/youtube/publishing-cadence-evidence.md",
+            "site/app.js",
+            "tests/publishing-cadence.test.mjs"
           ]
         },
         {
@@ -2405,14 +2409,19 @@
           "title": "Estimate creator publication cadence by community",
           "acceptance": "Study release frequency and variance in a defined creator sample.",
           "weight": 1,
-          "progress": 24,
+          "progress": 52,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
             "ontology/youtube/creator-growth.md",
             "ontology/youtube/content-formats.json",
             "ontology/youtube/content-formats.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/publishing-cadence-evidence.json",
+            "ontology/youtube/publishing-cadence-evidence.md",
+            "site/app.js",
+            "tests/publishing-cadence.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
