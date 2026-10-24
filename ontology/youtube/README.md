@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **143 references, 137 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **144 references, 138 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -97,6 +97,10 @@ The [time-bounded 2027 YPP policy study](ypp-transition-2027.md) and [machine tr
 ## Branded-content disclosures: platform rules versus U.S. FTC guidance
 
 The [October 2026 disclosure risk review](brand-disclosure-risk.md) and [machine record](brand-disclosure-risk.json) separate the platform's Studio branded-content control from independent U.S. FTC endorsement guidance and unverified local requirements. They date YouTube's September 3, 2026 rollout announcement for refreshed labels, age/geography controls and potential automatic labeling. Paid deals, in-kind items, affiliate relationships and independent reviews are evaluated as different cases. Platform labels alone do not guarantee legal compliance. Sponsor profits and enforcement rates remain unknown.
+
+## Traffic-source concentration and dependence without invented earnings
+
+The [source-concentration study](traffic-concentration.md), [machine model](traffic-concentration.json), [pure diagnostic](../../site/traffic-concentration.mjs) and [unit tests](../../tests/traffic-concentration.test.mjs) describe nine classes of owner-only YouTube Studio traffic referrals. The diagnostic refuses incomplete source partitions, unavailable authorization, incompatible units and missing periods, and only computes descriptive proportions and HHI from synthetically tested inputs. No typical actual dependence ratio, causal platform risk or sponsor income effect is established.
 
 ## Channel safety, moderation and October 2026 unauthorized-access pauses
 

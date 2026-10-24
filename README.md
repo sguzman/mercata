@@ -69,6 +69,8 @@ The [2026 U.S. adult YouTube usage study](ontology/youtube/us-demographic-use-20
 
 The [viewer/person measurement study](ontology/youtube/viewer-person-metrics.md) distinguishes public channel views and subscribers from owner-only unique viewer estimates, including signed-out watching. Rolling 28-day channel audience and up-to-90-day unique-viewer estimates are not a global census; unrelated channels cannot be summed into an exact user population.
 
+The [traffic-source concentration protocol](ontology/youtube/traffic-concentration.md) distinguishes owner-only Browse, suggested, Shorts, search, notifications and external attribution with explicit unit checks. No measured channel source mix or income exposure is assumed, and its diagnostic rejects partial source partitions.
+
 The [creator safety and continuity study](ontology/youtube/creator-safety-continuity.md) now includes October 2026 security pauses, Google Account-first hacked-channel recovery, live-chat moderation, harassment reporting and privacy complaint pathways. These are dated official procedures, not inferred incident rates or guaranteed recovery outcomes.
 
 The [sponsorship and disclosure research](ontology/youtube/brand-disclosure-risk.md) distinguishes YouTube's branded-content declaration from U.S. FTC endorsement guidance, including the September 2026 rollout of refreshed labels and demographic-region controls. Platform disclosure tools are not a blanket legal safe harbor; non-U.S. requirements and typical sponsorship profits remain unmeasured.

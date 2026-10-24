@@ -718,3 +718,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .us-demographic-row strong{white-space:nowrap;font-variant-numeric:tabular-nums}
 @media(max-width:850px){.us-demographic-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.us-demographic-details{padding:15px}}
+
+/* Owner-only reach source dependencies: no implied channel income data. */
+.traffic-concentration{margin:28px 0}
+.traffic-concentration-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.traffic-concentration-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.traffic-concentration-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.traffic-concentration-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.traffic-concentration-card h5{font-size:13px;margin:0 0 8px}
+.traffic-concentration-card p{font-size:12px;margin:0}
+@media(max-width:850px){.traffic-concentration-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.traffic-concentration-details{padding:15px}}

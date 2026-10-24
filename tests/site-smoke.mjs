@@ -156,6 +156,11 @@ try{
     assert.equal(await countryPrograms.locator('.country-program-currency').count(),3,'Missing currency-scoped payout thresholds');
     assert((await countryPrograms.textContent()).includes('Account currency and feature-specific permissions: unknown'));
     assert((await countryPrograms.textContent()).includes('MXN 1,200'));
+    const reach=page.locator('.traffic-concentration');
+    assert.equal(await reach.locator('.traffic-concentration-card').count(),9,'Missing Studio traffic source classes');
+    await reach.locator('summary').click();
+    assert((await reach.textContent()).includes('No channel traffic mix'));
+    assert((await reach.textContent()).includes('does not measure ownership'));
     const safety=page.locator('.creator-safety');
     assert.equal(await safety.locator('.creator-safety-card').count(),4,'Missing distinct safety and recovery procedures');
     await safety.locator('summary').click();
