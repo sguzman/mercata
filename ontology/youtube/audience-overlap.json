@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "overlapping_community_audience_protocol",
+  "as_of": "2026-10-23",
+  "status": "methodology_only_no_measured_joint_community_audiences",
+  "purpose": "Protect study outputs against inflated audience totals from overlapping niche interests, multi-account behavior and heterogeneous source populations.",
+  "dimensions_required": [
+    "respondent_frame_id",
+    "source_ids",
+    "geography",
+    "survey_period",
+    "unique_person_unit",
+    "inclusion_question",
+    "sampling_method",
+    "age_range",
+    "survey_mode",
+    "weighted_or_unweighted",
+    "reported_recall_window",
+    "nonresponse_scope"
+  ],
+  "topic_links": [
+    {
+      "topic_ids": [
+        "beauty",
+        "fashion",
+        "feminine-lifestyle"
+      ],
+      "relation": "possible_same_people",
+      "joint_population": null,
+      "overlap_percent": null
+    },
+    {
+      "topic_ids": [
+        "gaming",
+        "esports",
+        "tech-reviews"
+      ],
+      "relation": "possible_same_people",
+      "joint_population": null,
+      "overlap_percent": null
+    },
+    {
+      "topic_ids": [
+        "child-animation",
+        "general-animation",
+        "children-music"
+      ],
+      "relation": "format_and_audience_may_overlap",
+      "joint_population": null,
+      "overlap_percent": null
+    },
+    {
+      "topic_ids": [
+        "news-and-journalism",
+        "political-news",
+        "political-commentary"
+      ],
+      "relation": "possible_same_people_not_political_identity",
+      "joint_population": null,
+      "overlap_percent": null
+    },
+    {
+      "topic_ids": [
+        "science",
+        "software",
+        "video-essays"
+      ],
+      "relation": "possible_same_people",
+      "joint_population": null,
+      "overlap_percent": null
+    }
+  ],
+  "formal_method": {
+    "symbol_definitions": {
+      "N": "Count of distinct eligible people in one declared common frame (if measured)",
+      "A_i": "Count of distinct people reporting membership in one category i in that frame",
+      "O_ij": "Deduplicated count of people in both categories i and j, from the same matched sample"
+    },
+    "two_group_formula": "|A ∪ B| = |A| + |B| − |A ∩ B|, but only with directly validated joint-membership overlap",
+    "without_overlap_bounds": "max(|A_i|) ≤ |union(A_i)| ≤ min(N, sum(|A_i|)) when all counts refer to the same unique-person frame",
+    "more_than_two_groups": "Pairwise overlaps alone do not establish a unique combined count because triple and higher intersections remain unknown.",
+    "method": "A joint respondent-level survey with consent, a matched and deduplicated person-level panel, or a legitimately obtained aggregate joint-frequency table with identical units and survey population is required for exact union.",
+    "cannot_apply_to": "Views, impressions, subscribers, channels, advertisements served, search events, language groups, overlapping country/platform samples, or differing survey frames without validated reconciliation."
+  },
+  "source_bounded_examples": [
+    {
+      "source_id": "pew-us-adults-2026",
+      "scope": "U.S. adult self-reported platform use, not niche membership",
+      "valid_use": "Illustrate the need for explicit U.S. adult denominator, age and period.",
+      "cannot_supply": "A joint beauty-gaming niche overlap count"
+    },
+    {
+      "source_id": "pew-youtube-news-2026",
+      "scope": "U.S. survey responses for news-on-YouTube behavior",
+      "valid_use": "Observe an explicitly news-specific audience construct.",
+      "cannot_supply": "Disjoint political/entertainment niche populations"
+    },
+    {
+      "source_id": "datareportal-2026-mx",
+      "scope": "Mexico advertiser-reachable platform account estimate",
+      "valid_use": "Illustrate that ad reach is not unique people or a deduplicated multi-niche census.",
+      "cannot_supply": "A Mexican union of creator-interest community audiences"
+    }
+  ],
+  "publication_gates": [
+    {
+      "id": "same_sampling_frame",
+      "pass": false,
+      "reason": "No matched, deduplicated joint frame across the five example topic groupings is collected."
+    },
+    {
+      "id": "same_person_unit",
+      "pass": false,
+      "reason": "Public view, impression and channel counts may not be substituted for survey respondents."
+    },
+    {
+      "id": "measured_intersections",
+      "pass": false,
+      "reason": "Overlap counts or full cross-tabulations are not yet available."
+    },
+    {
+      "id": "source_method_metadata",
+      "pass": false,
+      "reason": "Response/weighting and group inclusion questions are unmeasured for cross-topic joint membership."
+    }
+  ],
+  "measurement_results": {
+    "beauty_fashion_joint_unique_people": null,
+    "gaming_esports_joint_unique_people": null,
+    "kids_animation_general_animation_joint_unique_people": null,
+    "news_political_commentary_joint_unique_people": null,
+    "science_software_joint_unique_people": null,
+    "platform_wide_unique_topic_union": null
+  },
+  "privacy_policy": [
+    "Do not infer ethnicity, religion, gender identity or political affiliation from individual viewing history, names, comments, or faces.",
+    "Do not publish respondent-level observations, account tokens or identifying cross-platform matching keys.",
+    "Only use aggregation compatible with audience source permissions and informed consent where required.",
+    "Separate children and teenagers from adult surveys; do not profile individual minors.",
+    "Keep the union unknown when denominators, population frames or deduplication are missing."
+  ]
+}
