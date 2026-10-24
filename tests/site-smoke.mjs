@@ -104,7 +104,7 @@ try{
     assert((await reach.textContent()).includes('Do not sum percentages or device minutes'));
     assert((await reach.textContent()).includes('global monthly distinct viewers: unknown'));
     assert.equal(await page.locator('.payout-currency').count(),2,'Missing documented payout currencies');
-    assert((await page.locator('.topic-catalogue-card').count())>=31,'Missing community taxonomy');
+    assert((await page.locator('.topic-catalogue-card').count())>=32,'Missing community taxonomy');
     const sampling=page.locator('.sampling-budget');
     assert.equal(await sampling.locator('.sampling-budget-card').count(),4,'Missing API sampling limits');
     await sampling.locator('summary').click();
@@ -114,7 +114,7 @@ try{
     assert.equal(await page.locator('.opportunity-method-item').count(),10,'Missing economic opportunity framework');
     await page.locator('.opportunity-method-details > summary').click();
     const niche=page.locator('.niche-explorer');
-    assert.equal(await niche.locator('select option').count(),31,'Missing research topics');
+    assert.equal(await niche.locator('select option').count(),32,'Missing research topics');
     assert((await niche.locator('.niche-explorer-report').textContent()).includes('Gaming'));
     await niche.locator('select').selectOption('beauty');
     assert((await niche.locator('.niche-explorer-report').textContent()).includes('Beauty'));
@@ -131,7 +131,7 @@ try{
     await tool.locator('.scenario-clear').click();
     assert((await tool.locator('.scenario-result').textContent()).includes('Enter all fields'));
 
-    assert((await page.locator('.topic-activity-row').count())>=14,'Missing topic evidence');
+    assert((await page.locator('.topic-activity-row').count())>=31,'Missing topic evidence');
     assert.equal(await page.locator('.usage-history-point').count(),7,'Missing dated U.S. adult usage series');
     assert.equal(await page.locator('.community-survey-year').count(),7,'Missing U.S. YouTube news trend');
     assert.equal(await page.locator('.community-profile-card').count(),12,'Missing U.S. news audience composition');
