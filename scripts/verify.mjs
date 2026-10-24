@@ -65,11 +65,12 @@ for (const entry of index.specimens) {
     const newsAudience=load('ontology/youtube/community-audience-studies.json');
     const competition=load('ontology/youtube/competition-observations.json');
     const crossPlatform=load('ontology/youtube/cross-platform-income-surveys.json');
-    ensure(crossPlatform.studies.length===2 &&
-      crossPlatform.independent_dataset_families===2,
+    ensure(crossPlatform.studies.length>=3 &&
+      crossPlatform.independent_dataset_families===crossPlatform.studies.length,
       'Invalid cross-platform creator income survey inventory');
     const familyIds=new Set(crossPlatform.studies.map(x=>x.source_family_id));
-    ensure(familyIds.size===2,'Syndicated income source counted twice as independent');
+    ensure(familyIds.size===crossPlatform.studies.length,
+      'Syndicated income source counted twice as independent');
     for(const study of crossPlatform.studies){
       ensure(study.source_ids.length>0 && study.source_ids.every(id=>sourceIds.has(id)) &&
         study.representative_of_youtube===false &&
