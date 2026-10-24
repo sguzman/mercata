@@ -337,6 +337,48 @@ function renderStudyPlan(plan) {
 }
 
 
+function renderYppFutureTransition(data,dossier) {
+  if(!data?.policy_windows?.length)return null;
+  const section=make('section','ypp-transition');
+  const details=make('details','ypp-transition-details');
+  details.append(make('summary','','Announced February 2027 YPP changes · future, not yet in effect'));
+  details.append(make('p','measure-limit','These rules were announced on August 10, 2026 and take effect February 1, 2027. Current applicants still use the October 2026 thresholds. Being eligible never guarantees approval or payment.'));
+  const new2027=data.policy_windows.find(x=>x.id==='future_2027_new_ad_applicant');
+  const now=data.policy_windows.find(x=>x.id==='current_2026_new_ad_applicant');
+  const rolling=data.policy_windows.find(x=>x.id==='shorts_ongoing_revenue_share_2027');
+  const cards=make('div','ypp-transition-grid');
+  const entries=[
+    {title:'October 2026: applicants now',value:now.watch_hours.qualified_public_hours.toLocaleString()+' hours / '+(now.shorts.qualified_shorts_views/1000000)+'M Shorts',notes:'Either qualified attention route, plus '+now.minimum_subscribers.toLocaleString()+' subscribers and channel review.'},
+    {title:'February 2027: new applicants',value:new2027.watch_hours.qualified_public_hours.toLocaleString()+' hours / '+(new2027.shorts.qualified_shorts_views/1000000)+'M Shorts',notes:'Either announced route. The future subscriber floor was not expressly restated; unknown.'},
+    {title:'February 2027: continuing Shorts share',value:(rolling.shorts.qualified_shorts_views/1000000)+'M in 90 days',notes:'Rolling qualification for Shorts revenue sharing within YPP; falling below does not end YPP or eligible long-form earnings.'}
+  ];
+  for(const e of entries){
+    const card=make('article','ypp-transition-card');
+    card.append(make('h5','',e.title));
+    card.append(make('strong','ypp-transition-number',e.value));
+    card.append(make('p','measure-limit',e.notes));
+    cards.append(card);
+  }
+  details.append(cards);
+  const pool=make('details','ypp-transition-pools');
+  pool.append(make('summary','','Announced Premium subscription allocation'));
+  const table=make('div','ypp-transition-pool-grid');
+  for(const item of data.premium_allocations){
+    const c=make('article','ypp-transition-pool');
+    c.append(make('h5','',item.plan));
+    c.append(make('strong','',item.share_of_net_subscription_revenue_percent+'% of net subscription revenue into a pool'));
+    c.append(make('p','measure-limit',item.long_form_creator_share_of_allocated_pool_percent+'% long-form and '+item.shorts_creator_share_of_allocated_pool_percent+'% Shorts shares from the allocated pool; no fixed per-view payout.'));
+    table.append(c);
+  }
+  pool.append(table);details.append(pool);
+  details.append(make('p','measure-limit','Existing YPP members are not newly subject to the higher entrance thresholds. Early fan-funding and Shopping entry thresholds are unchanged. Current partners are told to accept updated terms by January 31, 2027.'));
+  details.append(make('p','measure-limit','No representative creator earnings uplift, requalification probability, or first-payment timeline is known from this announcement.'));
+  details.append(audienceSources(data.source_ids,dossier));
+  const link=make('a','inline-link','Read the dated policy cohorts and future earnings limits ↗');
+  link.href='./ontology/youtube/ypp-transition-2027.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
 function renderPlatformPolicies(policy, record) {
   if(!policy)return null;
   const section=make('section','platform-policy');
@@ -1367,7 +1409,7 @@ async function showDossier(entry) {
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,topicCatalog,topicActivity,samplingBudget,adultUseHistory,incomeEvidence,channelIncome,crossPlatformIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,musicRights,productionCosts,viewDefinition,analyticsGuide,platformScale,countryReach,eligibilityMatrix,channelOnboarding,applicationLifecycle,creatorGrowth,contentFormats,multilingualDistribution,newsAudienceStudy,competitionSample,academicResearch]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/public-api-sampling-budget.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/cross-platform-income-surveys.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/music-rights-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-costs.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/view-definition-break.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-reach-devices.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-onboarding.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/multilingual-distribution.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/competition-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/academic-studies.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,yppFuture,topicCatalog,topicActivity,samplingBudget,adultUseHistory,incomeEvidence,channelIncome,crossPlatformIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,musicRights,productionCosts,viewDefinition,analyticsGuide,platformScale,countryReach,eligibilityMatrix,channelOnboarding,applicationLifecycle,creatorGrowth,contentFormats,multilingualDistribution,newsAudienceStudy,competitionSample,academicResearch]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/ypp-transition-2027.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/public-api-sampling-budget.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/cross-platform-income-surveys.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/music-rights-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-costs.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/view-definition-break.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-reach-devices.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-onboarding.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/multilingual-distribution.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/competition-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/academic-studies.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -1421,6 +1463,8 @@ async function showDossier(entry) {
     outer.append(evidenceArea);
     const policySection=renderPlatformPolicies(platformPolicy,record);
     if(policySection)outer.append(policySection);
+    const transition=renderYppFutureTransition(yppFuture,record);
+    if(transition)outer.append(transition);
     const routes=renderRevenuePathways(earningRoutes,payoutGates,record,eligibilityMatrix);
     if(routes)outer.append(routes);
     const entryStages=renderChannelOnboarding(channelOnboarding,record);
