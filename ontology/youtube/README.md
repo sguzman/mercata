@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **158 references, 151 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **159 references, 152 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -196,6 +196,10 @@ The [multilingual distribution study](multilingual-distribution.md) and [machine
 ## Comparable video distribution products (without authorizing new specimens)
 
 The [comparison-set methodology](comparison-set.md) and [machine criteria](comparison-set.json) delimit YouTube's adjacent services: Twitch's livestream supporter/ads tiers, TikTok's qualified short-video rewards and Vimeo OTT's paid content sales. Product entry, money flows and viewer/buyer units differ. No creator earnings ranking, newcomer probability or market-size comparison is inferred. These are **research comparators only**, not admissions to Mercata's independent marketplace gallery.
+
+## TV versus smartphone viewing — UK measured device evidence
+
+The [Barb Q2 2025 study](screen-viewing-uk-2025.md) and [machine record](screen-viewing-uk-2025.json) distinguish **shares of UK in-home Wi-Fi YouTube viewing** on TV sets (43%) versus smartphones (32%) for people aged 16+, alongside 53% TV-set share for children aged 4–15. These are not counts of unique people or full UK mobile-network audiences. Barb's separate 200-channel ACR study excludes certain formats; those selection constraints are **not** a definition of the service-wide device shares. Device-specific RPM, creator conversion and worldwide screen shares remain unknown.
 
 ## YouTube publishing surfaces, ad length and live replay economics
 

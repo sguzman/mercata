@@ -69,6 +69,8 @@ The [study-frame crosswalk](ontology/youtube/study-frame-crosswalk.md) explicitl
 
 The [2026 U.S. adult YouTube usage study](ontology/youtube/us-demographic-use-2026.md) adds Pew Research Center's source-specific income, education and urban/rural **ever-use rates**. It does not infer YouTube's viewer demographic composition or convert the survey-wide sampling error into subgroup errors.
 
+Barb's [UK television and smartphone screen study](ontology/youtube/screen-viewing-uk-2025.md) adds source-bounded Q2 2025 device viewing shares while keeping its at-home Wi-Fi observation frame separate from both globally mobile viewing and a restricted 200-channel TV panel. It provides no platform-wide person share or creator revenue by screen.
+
 The [video-format and ad-inventory research](ontology/youtube/video-surfaces-economics.md) now distinguishes seven publication surfaces, the conditional eight-minute watch-page mid-roll gate, live-versus-replay accounting, and contradictory localized 2026 Shorts rights guidance. It does not infer an optimal video length, paid ad fill, or guaranteed replay returns.
 
 The [selected monetized AIR RPM and livestream research](ontology/youtube/air-studio-benchmarks-2026.md) compares real Studio data for client channels but does not promote vendor sample medians to an all-newcomer income forecast. Only channels selected into the studies are measured; missing zero earners, production costs and the unknown overlap between reports remain explicit.
