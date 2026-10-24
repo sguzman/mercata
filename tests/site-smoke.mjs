@@ -74,6 +74,18 @@ try{
     assert((await countBreak.textContent()).includes('August 24, 2026'));
     assert((await countBreak.textContent()).includes('does not establish more attentive viewers'));
     assert((await countBreak.locator('.view-definition-invalid-list li').count())>=5);
+    const checker=countBreak.locator('.view-comparison-tool');
+    assert.equal(await checker.locator('select option').count(),7,'Missing distinct comparison metrics');
+    await checker.locator('input[type=date]').nth(0).fill('2026-08-23');
+    await checker.locator('input[type=date]').nth(1).fill('2026-08-24');
+    await checker.locator('input[type=date]').nth(1).dispatchEvent('change');
+    assert((await checker.locator('.view-comparison-result').textContent()).includes('straddle August 24'));
+    await checker.locator('input[type=date]').nth(0).fill('2026-08-25');
+    await checker.locator('input[type=date]').nth(0).dispatchEvent('change');
+    assert((await checker.locator('.view-comparison-result').textContent()).includes('These dates do not cross'));
+    await checker.locator('input[type=date]').nth(0).fill('2026-08-23');
+    await checker.locator('select').selectOption('engaged_view');
+    assert((await checker.locator('.view-comparison-result').textContent()).includes('must be checked across dates'));
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');
