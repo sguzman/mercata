@@ -177,6 +177,11 @@ try{
     assert((await otherIncome.textContent()).includes('same underlying respondents'));
     assert((await otherIncome.textContent()).includes('Typical YouTube income: unknown'));
 
+    const newcomer=page.locator('.newcomer-income');
+    assert.equal(await newcomer.locator('.newcomer-gate').count(),5,'Missing newcomer income methodology gates');
+    await newcomer.locator('summary').click();
+    assert((await newcomer.textContent()).includes('Median native payout: unknown'));
+    assert((await newcomer.textContent()).includes('Zero-income share: unknown'));
     assert.equal(await page.locator('.income-evidence .income-study').count(),1,'Missing scoped creator earnings study');
     assert.equal(await page.locator('.small-channel-income .income-table').count(),3,'Missing sampled channel month, country and niche tables');
     assert((await page.locator('#dossier-view .demographic-row').count())>=20,'Missing demographic data');
