@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "noncomparable_public_study_frames",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-24",
   "status": "source_frame_audit_not_pooled_population_measurement",
   "scope": "Public aggregate research sources with different target populations, study unit, sampling methods and creator outcome selection.",
   "frames": [
@@ -121,6 +121,52 @@
       "age_max": null,
       "may_include_minors": null,
       "representative_global_users": false
+    },
+    {
+      "id": "pew_2026_news_atp",
+      "source_ids": [
+        "pew-youtube-news-2026"
+      ],
+      "owner": "Pew Research Center",
+      "date": "2026-08-24_to_2026-08-30",
+      "geography": "United States",
+      "unit": "individual_adult_survey_respondent",
+      "sample_total_n": 5166,
+      "eligibility": "U.S. adults age 18+, American Trends Panel members",
+      "selection": "Pew American Trends Panel survey; exact subgroup and question-cell weights not reproduced here",
+      "quantity": "regular_youtube_news_consumption_within_us_adults_or_youtube_users",
+      "is_youtube_user_only": false,
+      "is_creator_only": false,
+      "includes_nonusers": true,
+      "includes_zero_earning_creators": null,
+      "per_item_n": null,
+      "age_min": 18,
+      "age_max": null,
+      "may_include_minors": false,
+      "representative_global_users": false
+    },
+    {
+      "id": "pew_2025_news_composition",
+      "source_ids": [
+        "pew-youtube-news-profile-2025"
+      ],
+      "owner": "Pew Research Center",
+      "date": "2025-08-18_to_2025-08-24",
+      "geography": "United States",
+      "unit": "regular_youtube_news_consuming_adult_respondent",
+      "sample_total_n": null,
+      "eligibility": "U.S. adults regularly getting news from YouTube; composition chart conditioned on this audience",
+      "selection": "Pew adult survey; exact eligible subsample, denominators and subgroup uncertainty not reported in Mercata's reviewed source summary",
+      "quantity": "demographic_composition_of_regular_youtube_news_consumers",
+      "is_youtube_user_only": true,
+      "is_creator_only": false,
+      "includes_nonusers": false,
+      "includes_zero_earning_creators": null,
+      "per_item_n": null,
+      "age_min": 18,
+      "age_max": null,
+      "may_include_minors": false,
+      "representative_global_users": false
     }
   ],
   "blocked_cross_source_operations": [
@@ -155,6 +201,22 @@
         "pew_2026_us_adults"
       ],
       "reason": "Selected channels with earnings cannot be scaled to the general U.S. adult population or attempted publisher cohort."
+    },
+    {
+      "id": "pew_npors_vs_atp_2026",
+      "frames": [
+        "pew_2026_us_adults",
+        "pew_2026_news_atp"
+      ],
+      "reason": "NPORS 2026 adult ever-use across January–June and American Trends Panel August 2026 adult news behavior have different selection panels, time windows and questions."
+    },
+    {
+      "id": "pew_news_2025_composition_vs_2026_prevalence",
+      "frames": [
+        "pew_2025_news_composition",
+        "pew_2026_news_atp"
+      ],
+      "reason": "Demographic composition within 2025 regular YouTube news consumers and 2026 share of adults who get news on YouTube have reversed conditional denominators, different periods and unknown joint response frames."
     }
   ],
   "required_before_comparison": [
