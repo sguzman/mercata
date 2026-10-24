@@ -211,6 +211,38 @@ for (const entry of index.specimens) {
     ensure(analytics.template_queries.every(x=>x.source_ids.every(id=>sourceIds.has(id)) && x.metrics.every(id=>fields.has(id))),
       'YouTube analytics template references an unknown source or metric');
 
+    const samplingBudget=load('ontology/youtube/public-api-sampling-budget.json');
+    ensure(samplingBudget.sources.length===4 &&
+      samplingBudget.collection_protocol.length===7 &&
+      samplingBudget.stratum_definition.length>=10,
+      'Incomplete public sampling and API quota protocol');
+    ensure(samplingBudget.sources.every(x=>sourceIds.has(x.source_id)),
+      'Sampling budget missing registered official documentation');
+    const q=samplingBudget.default_quota_snapshot;
+    ensure(q.documentation_updated_at===undefined &&
+      q.search_list.bucket==='search_calls' &&
+      q.search_list.max_calls_per_day_default===100 &&
+      q.search_list.cost_units_per_call===1 &&
+      q.search_list.max_items_per_page===50 &&
+      q.other_endpoints.max_units_per_day_default===10000,
+      'Obsolete or incorrect separate YouTube search quota model');
+    ensure(q.search_total_results.is_approximate===true &&
+      q.search_total_results.capped_reported_value===1000000 &&
+      q.search_total_results.is_complete_enumeration===false,
+      'Approximate search result count mistaken for population');
+    const example=samplingBudget.synthetic_budget_example;
+    ensure(example.kind==='illustration_not_actual_query_plan' &&
+      example.strata===example.topic_count*example.regions*example.languages*example.formats &&
+      example.estimated_search_calls===example.strata*example.pages_per_stratum &&
+      example.max_search_result_slots===example.estimated_search_calls*q.search_list.max_items_per_page &&
+      example.estimated_search_calls<=q.search_list.max_calls_per_day_default &&
+      example.claimed_observed_videos===null &&
+      example.claimed_unique_viewers===null,
+      'Illustrative quota budget misleading or inconsistent');
+    ensure(Object.values(samplingBudget.target_estimands).every(x=>x===null) &&
+      Object.values(samplingBudget.authorization).every(x=>x===false),
+      'Accidental actual collection or invented audience estimates');
+
     const topic=load('ontology/youtube/taxonomy.json');
     const policy=load('ontology/youtube/policies.json');
     const measures=load('ontology/youtube/measurements.json');
