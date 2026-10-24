@@ -112,6 +112,12 @@ try{
     await checker.locator('input[type=date]').nth(0).fill('2026-08-23');
     await checker.locator('select').selectOption('engaged_view');
     assert((await checker.locator('.view-comparison-result').textContent()).includes('must be checked across dates'));
+    const promote=page.locator('.promote-economics');
+    assert.equal(await promote.locator('.promote-format-card').count(),3,'Missing CPV billing format distinctions');
+    assert.equal(await promote.locator('.promote-metric-card').count(),8,'Missing campaign ad cost/attribution units');
+    await promote.locator('summary').click();
+    assert((await promote.textContent()).includes('generated directly by ad campaigns do not meet YPP'));
+    assert((await promote.textContent()).includes('net creator profit remain unknown'));
     const posting=page.locator('.post-membership-retention');
     assert.equal(await posting.locator('.post-membership-surface').count(),3,'Missing distinct Posts / Communities / members-only distinctions');
     assert.equal(await posting.locator('.post-membership-metric').count(),7,'Missing membership event and stock denominators');

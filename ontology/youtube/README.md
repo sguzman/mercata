@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **167 references, 160 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **172 references, 165 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -192,6 +192,10 @@ The [channel onboarding study](channel-onboarding.md) and [six-stage machine mod
 ## Posts, subscriber Communities and paid member retention
 
 The [official 2026 posts-and-membership research](retention-posts-memberships.md) and [structured denominator register](retention-posts-memberships.json) separate creator Posts, subscriber-origin Communities and members-only posts; post impressions, votes and likes are **not** unique returning viewers. YouTube's new/casual/regular audience segments measure viewing history, and membership transactions can be renewals rather than distinct buyers. Matching post recipients to later viewers or repeated purchasers requires independently authorized cohort data; none is collected here, so retention effects and buyer cohort rates remain unknown.
+
+## Promotion spending, paid audiences and organic follow-on YPP eligibility
+
+The [source-bounded YouTube Promote economics study](promote-economics.md) and [machine record](promote-economics.json) distinguish purchased advertising spend from native YouTube earnings. Direct ad-attributed watch hours and subscribers do **not** qualify toward YPP thresholds, but eligible later **organic** follow-on activity may. Promotion impressions, Google Ads format-specific billable TrueView views, public playback starts, credited subscribers and website clicks have different units. Actual campaign expenses, price per acquired retained viewer and incremental net business profit remain unmeasured.
 
 ## Discovery and community engagement
 

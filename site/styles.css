@@ -813,3 +813,16 @@ h1 em {font-style:italic;color:var(--accent)}
 .post-membership-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 @media(max-width:850px){.post-membership-surfaces{grid-template-columns:1fr}}
 @media(max-width:650px){.post-membership-retention-details{padding:15px}.post-membership-metrics{grid-template-columns:1fr}}
+
+/* Purchased promotion metrics are not organic channel monetization. */
+.promote-economics{margin:28px 0}
+.promote-economics-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.promote-economics-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.promote-format-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.promote-format-card,.promote-metric-card{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;overflow-wrap:anywhere}
+.promote-format-card h5,.promote-metric-card h5{font-size:13px;text-transform:capitalize;margin:0 0 8px}
+.promote-format-card p,.promote-metric-card p{font-size:12px;margin:7px 0}
+.promote-heading{font-size:14px;margin:18px 0 12px}
+.promote-metrics-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media(max-width:850px){.promote-format-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.promote-economics-details{padding:15px}.promote-metrics-grid{grid-template-columns:1fr}}

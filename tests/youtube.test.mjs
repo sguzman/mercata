@@ -521,6 +521,24 @@ test('Pew 2026 U.S. demographic ever-use rates never become YouTube audience com
  assert(Object.values(model.unmeasured).every(v=>v===null));
 });
 
+test('Promotion paid billable views, YPP eligibility and owner attribution remain separate',async()=>{
+ const [model,dossier]=await Promise.all([load('ontology/youtube/promote-economics.json'),load('specimens/youtube.json')]);
+ const sources=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'paid_promotion_cost_and_attribution_protocol');
+ assert.equal(model.metric_register.length,8);
+ assert.equal(model.ad_format_billing.length,3);
+ assert.deepEqual(model.ad_format_billing.map(x=>x.id),['in_stream','in_feed','shorts']);
+ assert(model.ad_format_billing.every(x=>x.source_ids.every(id=>sources.has(id))));
+ assert(model.metric_register.every(x=>x.source_ids.every(id=>sources.has(id))));
+ assert.equal(model.ypp_eligibility_rules.find(x=>x.metric==='promoted_subscribers').ad_attributed_counts_to_ypp_threshold,false);
+ assert.equal(model.ypp_eligibility_rules.find(x=>x.metric==='promoted_watch_hours').ad_attributed_counts_to_ypp_threshold,false);
+ assert.equal(model.ypp_eligibility_rules.find(x=>x.metric==='follow_on_views').organic_qualified_activity_can_count,true);
+ assert.equal(model.cost_protocol.ad_budget_is_not_observed_actual_spend,true);
+ assert.equal(model.cost_protocol.can_calculate_general_typical_cp_subscriber_without_sample,false);
+ assert.equal(model.approval_and_delivery.guaranteed_review_max_days,null);
+ assert(Object.values(model.unknowns).every(x=>x===null));
+});
+
 test('Posts and membership retention preserve impressions, people and transaction boundaries',async()=>{
  const [data,dossier]=await Promise.all([
   load('ontology/youtube/retention-posts-memberships.json'),load('specimens/youtube.json')
