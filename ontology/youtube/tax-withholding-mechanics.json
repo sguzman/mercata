@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "platform_withholding_scope_not_personal_tax_advice",
+  "as_of": "2026-10-23",
+  "status": "official_payout_tax_rules_and_unmeasured_individual_liability",
+  "audience": "Researchers comparing payout mechanics, not personal tax planning",
+  "source_ids": [
+    "youtube-us-tax-requirements-2026",
+    "youtube-tax-info-submission-2026",
+    "adsense-tax-forms-faq-2026",
+    "adsense-thresholds",
+    "revenue-shares"
+  ],
+  "tax_info_requirement": {
+    "applies_to": "all monetizing YPP creators worldwide",
+    "needs_tax_information": true,
+    "required_before_first_payment": true,
+    "form_status_must_be_reviewed": true,
+    "sources": [
+      "youtube-us-tax-requirements-2026",
+      "youtube-tax-info-submission-2026"
+    ],
+    "expiration_rule": "Existing forms may expire at the end of the third full calendar year after signing; review annually and resubmit on material changes.",
+    "periodic_reminder_month_day": "12-10",
+    "deadline_not_a_general_tax_filing_date": true
+  },
+  "payer_withholding_cases": [
+    {
+      "id": "non_us_valid_tax_info",
+      "payee": "Non-US creator with accepted tax information",
+      "base": "earnings_attributed_to_us_viewers",
+      "published_rate_bounds_percent": {
+        "min": 0,
+        "max": 30
+      },
+      "account_type": null,
+      "treaty_eligibility": null,
+      "actual_rate_percent": null,
+      "applicability": "Conditional on country/residence, beneficial owner/entity type and any accepted tax treaty documentation",
+      "source_ids": [
+        "youtube-us-tax-requirements-2026"
+      ]
+    },
+    {
+      "id": "non_us_business_tax_info_missing",
+      "payee": "Non-US business-account payee with no valid information",
+      "base": "earnings_attributed_to_us_viewers",
+      "published_default_rate_percent": 30,
+      "account_type": "business",
+      "treaty_eligibility": null,
+      "actual_rate_percent": null,
+      "applicability": "YouTube documents this as a default withholding case; not a substitute for determining actual account classification",
+      "source_ids": [
+        "youtube-us-tax-requirements-2026"
+      ]
+    },
+    {
+      "id": "individual_tax_info_missing",
+      "payee": "Individual-account payee without required tax information",
+      "base": "worldwide_youtube_earnings",
+      "published_default_rate_percent": 24,
+      "account_type": "individual",
+      "treaty_eligibility": null,
+      "actual_rate_percent": null,
+      "applicability": "Google warns of backup withholding on total worldwide earnings when required tax info is missing",
+      "source_ids": [
+        "youtube-us-tax-requirements-2026"
+      ]
+    },
+    {
+      "id": "us_creator_valid_tax_info",
+      "payee": "US creator with valid tax information",
+      "base": "applicable_platform_withholding",
+      "published_default_rate_percent": 0,
+      "account_type": null,
+      "treaty_eligibility": null,
+      "actual_rate_percent": null,
+      "applicability": "YouTube states it does not withhold U.S. taxes for U.S. creators who provided valid info; separate income-tax liability may still apply",
+      "source_ids": [
+        "youtube-us-tax-requirements-2026"
+      ]
+    }
+  ],
+  "form_categories": [
+    {
+      "id": "w9",
+      "applies_generally_to": "US persons and US entities",
+      "source_ids": [
+        "adsense-tax-forms-faq-2026"
+      ]
+    },
+    {
+      "id": "w8ben",
+      "applies_generally_to": "Non-US individuals claiming beneficial ownership",
+      "source_ids": [
+        "adsense-tax-forms-faq-2026"
+      ]
+    },
+    {
+      "id": "w8bene",
+      "applies_generally_to": "Non-US entities claiming beneficial ownership",
+      "source_ids": [
+        "adsense-tax-forms-faq-2026"
+      ]
+    }
+  ],
+  "creator_cash_flow_variables": [
+    "gross_attributable_youtube_payout_pre_tax",
+    "us_viewer_component_of_native_payout",
+    "non_us_viewer_component_of_native_payout",
+    "platform_withholding_deduction",
+    "finalized_adsense_for_youtube_balance",
+    "account_reporting_currency",
+    "country_specific_local_tax_liability",
+    "creator_business_cash_costs",
+    "creator_labor_hours"
+  ],
+  "disallowed_model_shortcuts": [
+    "Do not apply any U.S.-viewer withholding percentage to worldwide native earnings unless the documented payee case explicitly permits that base.",
+    "Do not subtract taxes twice when computing payout balance and later after-tax cash proceeds.",
+    "Do not treat Google payment withholding as comprehensive tax liability, tax advice or a country-wide applicable rate.",
+    "Do not infer treaty benefits from language, audience geography, name or creator's approximate location.",
+    "Do not identify the creator's tax form from a platform or country label; tax classification and individual circumstances govern.",
+    "No personally identifying tax forms, numbers or financial account data may enter the public study."
+  ],
+  "unknowns": {
+    "creator_residence": null,
+    "payee_account_type": null,
+    "form_status": null,
+    "us_viewer_revenue_share": null,
+    "applicable_treaty_rate": null,
+    "creator_withholding_amount": null,
+    "creator_local_tax_liability": null,
+    "creator_after_tax_profit": null
+  }
+}

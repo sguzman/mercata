@@ -1417,6 +1417,39 @@
       "evidence_class": "official_comparator_direct_content_sales_and_payouts",
       "license": "Official Help linked; independently summarized payout mechanics",
       "notes": "OTT content sales are paid monthly to a supported financial account; no per-YouTube-view rate comparability."
+    },
+    {
+      "id": "youtube-us-tax-requirements-2026",
+      "url": "https://support.google.com/youtube/answer/10391362?hl=en",
+      "publisher": "YouTube Help",
+      "title": "U.S. tax requirements for YouTube earnings",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_earnings_tax_withholding_policy",
+      "license": "Official policy linked and independently described",
+      "notes": "All monetizing creators must submit U.S. tax info; withholding base and conditional rates vary by payee status, account type, and treaty eligibility."
+    },
+    {
+      "id": "youtube-tax-info-submission-2026",
+      "url": "https://support.google.com/youtube/answer/10390801?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Submitting U.S. tax info to Google",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_youtube_tax_submission_and_expiration",
+      "license": "Official help linked and independently summarized",
+      "notes": "Official December 10 reminder, form revalidation and approved-status checks; no personal tax instruction or data."
+    },
+    {
+      "id": "adsense-tax-forms-faq-2026",
+      "url": "https://support.google.com/adsense/answer/10735961?hl=en",
+      "publisher": "Google AdSense Help",
+      "title": "FAQs about submitting US tax info in AdSense",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_form_category_definitions",
+      "license": "Official help linked, independently paraphrased",
+      "notes": "Tax form categories include W-9 for U.S. persons and W-8BEN/W-8BEN-E for many non-U.S. beneficial owners; exact form selection cannot be inferred."
     }
   ],
   "claims": [
@@ -2775,6 +2808,27 @@
       "observed_at": "2026-10-23",
       "confidence": "high",
       "limitations": "This is a comparison of product mechanisms documented by their operators, not a representative comparison of earnings, demand, creator populations, viewer populations, or return per hour."
+    },
+    {
+      "id": "tax-info-all-ypp-and-us-viewer-conditional-withholding",
+      "text": "YouTube requires all monetizing YPP creators to submit U.S. tax information. For a non-U.S. payee with accepted tax information, applicable U.S. withholding concerns earnings attributable to U.S. viewers and can vary with residence, tax-treaty eligibility and payee status.",
+      "source_ids": [
+        "youtube-us-tax-requirements-2026",
+        "youtube-tax-info-submission-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Google's documentation defines platform withholding, not any creator's final total tax liability. No treaty entitlement, personal rate, income or tax filing details are inferred."
+    },
+    {
+      "id": "tax-info-missing-changes-withholding-base",
+      "text": "YouTube's official help warns that missing required tax information can cause withholding up to 24% of worldwide earnings for individual accounts, while specified non-U.S. business accounts can face a different maximum withholding base on U.S. earnings.",
+      "source_ids": [
+        "youtube-us-tax-requirements-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "These are conditional Google payment deductions and document-status rules, not a universal tax rate or final creator net profit; actual rates vary by residency, account type and recognized documentation."
     }
   ],
   "observations": [],
