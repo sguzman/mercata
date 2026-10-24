@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "bounded_comment_norms_and_participation_studies",
+  "as_of": "2026-10-24",
+  "status": "two_peer_reviewed_nonrepresentative_community_cases",
+  "source_ids": [
+    "munger-political-youtube-comments-2025",
+    "aharonson-climate-youtube-comments-2026"
+  ],
+  "studies": [
+    {
+      "id": "political_anglophone_2025",
+      "source_id": "munger-political-youtube-comments-2025",
+      "published": "2025-02",
+      "dataset_observation_period": null,
+      "country": null,
+      "language_scope": "English-language YouTube political channels",
+      "selection": "Authors' large-scale analyzed anglophone political channels, videos and comments, not the whole YouTube platform",
+      "n_channels": null,
+      "n_videos": null,
+      "n_comments": null,
+      "n_unique_commenters": null,
+      "methods": "quantitative descriptive study of channels, videos, comments and commenter activity",
+      "observations": [
+        {
+          "id": "prolific_commenter_activity",
+          "measure": "fraction_of_observed_comments_written_by_small_group",
+          "observed_comment_share_percent_approx": 50,
+          "observed_commenter_share_percent_strictly_greater_than": 2,
+          "commenter_share_exact": null,
+          "denominator": "commenters in selected anglophone political channel sample",
+          "source_ids": [
+            "munger-political-youtube-comments-2025"
+          ]
+        },
+        {
+          "id": "toxicity_frequency_pattern",
+          "measure": "relative_toxicity_pattern_by_commenting_frequency",
+          "direction": "more_pronounced_among_infrequent_commenters",
+          "absolute_rate": null,
+          "source_ids": [
+            "munger-political-youtube-comments-2025"
+          ]
+        }
+      ],
+      "limits": [
+        "A prolific commenter is not necessarily a unique voter, political supporter or representative audience member.",
+        "The paper's abstract does not support a global number of political commenters or a precise share beyond 'just over 2%'.",
+        "The observed association between posting frequency and coded toxicity cannot be extrapolated to all topics or a personalized behavior prediction."
+      ]
+    },
+    {
+      "id": "selected_climate_2026",
+      "source_id": "aharonson-climate-youtube-comments-2026",
+      "published": "2026-04-28",
+      "dataset_observation_period": "March 2021 query-based candidate retrieval",
+      "country": null,
+      "language_scope": "At least 90% of comments English, by study inclusion",
+      "selection": "Top 200 search hits for climate change in March 2021, filtered to videos with >=200 comments, 90% or more comments in English, and alignment with scientific consensus; final 129 videos",
+      "n_channels": null,
+      "n_videos": 129,
+      "n_comments": null,
+      "n_unique_commenters": null,
+      "methods": "video presenter/framing hand-coding and supervised NLP on comments, thread vs. independent comment comparison",
+      "observations": [
+        {
+          "id": "threaded_comment_attitudes",
+          "measure": "coded_positive_attitude_prevalence_by_reply_thread_type",
+          "direction": "higher_in_threaded_replies_than_independent_comments",
+          "absolute_rate": null,
+          "source_ids": [
+            "aharonson-climate-youtube-comments-2026"
+          ]
+        },
+        {
+          "id": "presenter_and_framing",
+          "measure": "coded_attitudes_associated_with_video_attributes",
+          "direction": "expert_and_solution_oriented_presentations_more_positive_in_sample",
+          "absolute_rate": null,
+          "causal_effect": null,
+          "source_ids": [
+            "aharonson-climate-youtube-comments-2026"
+          ]
+        }
+      ],
+      "limits": [
+        "English, engagement-threshold and consensus selection exclude much climate content and distort representativeness.",
+        "Automated classifiers and manual codes estimate attitudes from comments, not identities, actual beliefs or causal effects.",
+        "Videos are source-query based from 2021, not a fresh randomized sample of 2026 topics."
+      ]
+    }
+  ],
+  "shared_analysis_axes": [
+    "observation_population",
+    "unit_of_analysis",
+    "collection_time_vs_publication_date",
+    "commenter_sampling_concentration",
+    "top_level_vs_reply",
+    "ranking_exposure",
+    "channel_moderation_and_deleted_comments",
+    "language",
+    "classification_method_and_uncertainty",
+    "privacy_and_legal_use"
+  ],
+  "prohibit": [
+    "Do not infer commenter sex, gender identity, age, ethnicity, religion, partisanship or psychological traits from posts.",
+    "Do not store usernames, comment strings, channel identifiers, raw comment ID lists or deduplication keys in public artifacts.",
+    "Do not use descriptive findings to design targeted political persuasion or individual manipulation.",
+    "Do not sum sample counts across studies or treat study-selected toxicity scores as interchangeable measures.",
+    "Do not claim that replies cause more constructive conversations from correlations alone.",
+    "Do not generalize anglophone politics or selected English-language climate videos to all YouTube communities or countries.",
+    "Do not imply that visible public comments represent all viewers or the community's true opinion distribution."
+  ],
+  "unknowns": {
+    "platform_wide_commenter_population": null,
+    "global_comments_per_person_distribution": null,
+    "genre_comparative_toxicity_rate": null,
+    "political_ideology_of_viewers": null,
+    "creator_moderation_labor_hours": null,
+    "absolute_threaded_comment_positivity_rate": null,
+    "causal_effect_of_replying": null,
+    "unseen_or_deleted_comment_fraction": null,
+    "unique_commenter_population_across_channels": null
+  },
+  "followup_method": "Use only properly licensed public or consented aggregate corpora and preregistered non-identifying categories; report discovered, sampled, moderated and deleted-comment selection as distinct limitations."
+}

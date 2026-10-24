@@ -2275,6 +2275,28 @@
       "evidence_class": "survey_australian_children_youtube_genre_gender_age_2025",
       "license": "Public original survey release, independently summarized aggregated observations and sampling scope; no photographs or identifying child responses reproduced.",
       "notes": "Young Australians Survey April–December 2025 nationwide n=1,129 children aged 6–13. Category-by-boy/girl percentages use the subset of YouTube-watching children by reported gender; subgroup n and uncertainty not publicly specified. Multiple genre membership allowed."
+    },
+    {
+      "id": "munger-political-youtube-comments-2025",
+      "url": "https://orca.cardiff.ac.uk/id/eprint/176263/",
+      "publisher": "Cardiff ORCA / Journal of Quantitative Description: Digital Media",
+      "title": "Pressing play on politics: Quantitative description of YouTube",
+      "published_at": "2025-02",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "peer_reviewed_anglophone_political_youtube_comments",
+      "license": "Source PDF marked CC BY-NC-ND; linked bibliographic record and independently paraphrased aggregate abstract only, no comment texts or figures copied.",
+      "notes": "Large-scale 2025 article with channels/videos/comments units; abstract reports 50% of comments written by just over 2% of commenters. No exact count for channel/comment frame taken from abstract."
+    },
+    {
+      "id": "aharonson-climate-youtube-comments-2026",
+      "url": "https://acml.teddylazebnik.com/publications/audience-engagement-climate-change-content-youtube-analysis/",
+      "publisher": "Frontiers in Climate / author-hosted full article",
+      "title": "Audience engagement with climate change content on YouTube: an analysis of video attributes and user interactions",
+      "published_at": "2026-04-28",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "peer_reviewed_selected_english_climate_youtube_comment_threads",
+      "license": "Original article linked; independently described method and aggregate results, not copied commenters or figures.",
+      "notes": "129 selected videos from March 2021 YouTube keyword results, English predominance, >=200 comments and climate consensus selection. Findings are not global or representative of all climate content."
     }
   ],
   "claims": [
@@ -4684,6 +4706,46 @@
       "observed_at": "2026-10-24",
       "confidence": "medium",
       "limitations": "Girls and boys are reported survey groups; category selections overlap; exact group respondent counts and margins of error unavailable, no causal explanation or prediction for individuals."
+    },
+    {
+      "id": "political-youtube-commenter-concentration-2025",
+      "text": "A 2025 analysis of English-language YouTube politics channels reports approximately half of observed comments came from just over 2% of the commenters in its study sample.",
+      "source_ids": [
+        "munger-political-youtube-comments-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Based on the paper's selected anglophone political YouTube scope, not all platform commenters, all political categories, a unique user census or the composition of political opinion. Rounded fraction and population unit retained."
+    },
+    {
+      "id": "political-youtube-infrequent-commenter-toxicity-2025",
+      "text": "The same 2025 quantitative YouTube politics study reports that its observed toxicity tended to be more pronounced among infrequent rather than the most prolific commenters.",
+      "source_ids": [
+        "munger-political-youtube-comments-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Statement is relative and study-specific; an absolute toxicity rate, all-channel ranking, causal interpretation, inferred commenter ideology or personalized risk score is unsupported."
+    },
+    {
+      "id": "climate-youtube-threaded-attitudes-2026",
+      "text": "A 2026 analysis of 129 selected English-language climate-change YouTube videos found a higher proportion of positive attitudes among reply-thread conversations than independent top-level comments.",
+      "source_ids": [
+        "aharonson-climate-youtube-comments-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Videos selected via March 2021 search results and restricted by English content, minimum comments and scientific-consensus criteria; observational association not proof that replying causes positivity or a result for all YouTube communities."
+    },
+    {
+      "id": "climate-youtube-video-frame-association-2026",
+      "text": "The selected 129-video climate study found presenter type and solution-versus-blame framing were associated with differences in coded comment attitudes in the analyzed sample.",
+      "source_ids": [
+        "aharonson-climate-youtube-comments-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Associations within narrow subject sample, automated sentiment classifier and manual coding; no proof of causal persuasion, user demographics, gender/political identity, or optimal messaging strategy."
     }
   ],
   "observations": [],
