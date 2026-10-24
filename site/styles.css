@@ -1079,3 +1079,13 @@ h1 em {font-style:italic;color:var(--accent)}
 .seasonal-discovery-card p{font-size:12px;margin:7px 0}
 .seasonal-observation{font-weight:650}
 @media(max-width:650px){.seasonal-discovery-details{padding:15px}.seasonal-discovery-grid{grid-template-columns:1fr}}
+
+/* Source-scoped research narrative, with unknown economic outputs visible */
+.evidence-synthesis{margin:28px 0}
+.evidence-synthesis-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.evidence-synthesis-details>summary{cursor:pointer;font-size:15px;font-weight:800}
+.evidence-synthesis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.evidence-synthesis-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.evidence-synthesis-card h5{font-size:14px;margin:0 0 9px}
+.evidence-synthesis-card p{font-size:12px;margin:7px 0}
+@media(max-width:650px){.evidence-synthesis-details{padding:15px}.evidence-synthesis-grid{grid-template-columns:1fr}}

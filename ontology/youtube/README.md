@@ -275,6 +275,10 @@ The [Barb Q2 2025 study](screen-viewing-uk-2025.md) and [machine record](screen-
 
 The [seven-format public-policy comparison](video-surfaces-economics.md) and [machine inventory](video-surfaces-economics.json) distinguish watch-page uploads, Shorts, live, Premieres, Clips, podcast playlists and archived replays. Eligible monetized watch-page videos **at least eight minutes** long may enable mid-roll slots; offered slots are not guaranteed ad impressions or income. Live/replay counting uses different owner Analytics denominators, and archives are not guaranteed. The study also flags conflicting localized Help guidance regarding claimed Shorts after September 24, 2026, without asserting a universal rule.
 
+## Interim market dossier, evidence tiers and remaining gates
+
+The [plain-language synthesis](research-synthesis-2026.md) and [machine evidence map](research-synthesis-2026.json) condense independently source-checked platform eligibility, aggregate audience statistics, selected creator earnings samples, monetization routes, trends, publishing-time limits and safety risks. The seven subject areas identify which conclusions are supported and where representative zero-earner income, creator costs, deduplicated people and long-run causal comparisons remain unresolved. A readable document is only part of the research; it is not empirical completion.
+
 ## Calendar-driven discovery: five bounded temporal examples
 
 The [seasonal-discovery comparison](seasonal-discovery-comparison.md) and [machine crosswalk](seasonal-discovery-comparison.json) retain the 2025 NFL offseason share, 2024 prom title-query views, 2025 Halloween title-query views, a 2017 game release-week count and the 2025 UK children's annual weekly viewing baseline as **five different period/population units**. Only the NFL source provides a directly observed within-year offseason share; none establishes causal seasonal lift, a repeatable universal publishing month or creator revenue.

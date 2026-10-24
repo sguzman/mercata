@@ -1472,6 +1472,19 @@ test('YouTube discovery metrics keep viewer identities and event counts separate
   assert(growth.stages.every(x=>x.source_ids.every(id=>sourceIds.has(id))));
 });
 
+test('Reader-facing research synthesis preserves source attribution and unresolved population income',async()=>{
+ const [report,dossier]=await Promise.all([load('ontology/youtube/research-synthesis-2026.json'),load('specimens/youtube.json')]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(report.kind,'reader_facing_marketplace_dossier_synthesis');
+ assert.equal(report.findings.length,7);
+ assert(report.findings.every(x=>x.source_ids.length>0&&x.source_ids.every(id=>ids.has(id))));
+ assert(report.findings.every(x=>x.supported&&x.unknown&&x.document_refs.length));
+ assert(report.evidence_acceptance_gates.every(x=>x.fulfilled===false));
+ assert(Object.values(report.nonfindings).every(x=>x===null));
+ assert(report.findings.find(x=>x.id==='entry_and_revenue').supported.includes('February 2027'));
+ assert(report.scope_rules.some(x=>x.includes('missing values into zeros')));
+});
+
 test('Seasonal observations preserve year, country and incompatible population units',async()=>{
  const [study,dossier]=await Promise.all([
   load('ontology/youtube/seasonal-discovery-comparison.json'),load('specimens/youtube.json')

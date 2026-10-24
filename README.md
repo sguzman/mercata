@@ -119,6 +119,8 @@ The [peer-reviewed comment participation comparison](ontology/youtube/comment-no
 
 The [creator safety and continuity study](ontology/youtube/creator-safety-continuity.md) now includes October 2026 security pauses, Google Account-first hacked-channel recovery, live-chat moderation, harassment reporting and privacy complaint pathways. These are dated official procedures, not inferred incident rates or guaranteed recovery outcomes.
 
+The [interim YouTube marketplace dossier](ontology/youtube/research-synthesis-2026.md) summarizes seven sourced finding areas, evidence-quality tiers and five major open empirical gates. It states clearly that new-entrant median income, zero-earner share, creator net profit and unique global audience are still unknown.
+
 A [seasonal-discovery evidence comparison](ontology/youtube/seasonal-discovery-comparison.md) separates an actual NFL offseason share from annual prom titles, partial-year Halloween views, game release-week events and annual UK child-viewing minutes. Different populations and windows do not support a universal seasonal lift or optimal posting month.
 
 The [publishing-time and viewer-geography study](ontology/youtube/geographic-publishing-time.md) adds YouTube's 28-day owner-audience activity report, format-specific Live and Premiere scheduling, timezone and privacy limitations, and the platform's explicit warning that upload time is not known to improve long-term video performance. No universal best release hour is inferred.

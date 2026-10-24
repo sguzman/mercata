@@ -145,6 +145,11 @@ try{
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');
+    const synthesis=page.locator('.evidence-synthesis');
+    assert.equal(await synthesis.locator('.evidence-synthesis-card').count(),7,'Missing bounded review narrative');
+    await synthesis.locator('summary').click();
+    assert((await synthesis.textContent()).includes('zero-earner share'));
+    assert((await synthesis.textContent()).includes('Not measured'));
     const season=page.locator('.seasonal-discovery');
     assert.equal(await season.locator('.seasonal-discovery-card').count(),5,'Missing distinct seasonal evidence cases');
     await season.locator('summary').click();
