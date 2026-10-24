@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "seasonal_discovery_evidence_comparability",
+  "as_of": "2026-10-24",
+  "status": "bounded_temporal_observations_no_general_seasonal_lift_estimate",
+  "scope": "Selected historical platform-reported topic and annual audience observations; time-specific discovery is not identical to seasonal creator income",
+  "cases": [
+    {
+      "id": "nfl_2025_offseason",
+      "topic": "nfl_football",
+      "source_ids": [
+        "yt-nfl-culture-2026"
+      ],
+      "period": "2025_between_super_bowl_and_regular_season_start",
+      "geography": "Global",
+      "unit": "share_of_2025_NFL_related_video_views",
+      "value": 30,
+      "comparison": "greater_than",
+      "measurement_type": "within_year_share",
+      "valid_statement": "Over 30% of global NFL-related 2025 views occurred in the offseason",
+      "seasonal_causal_effect": null,
+      "seasonal_recurrence_verified": false,
+      "limitations": "No matched monthly baseline, day count adjustment or offseason share for earlier years; not an NFL fan/person count."
+    },
+    {
+      "id": "prom_grwm_2024",
+      "topic": "prom_fashion",
+      "source_ids": [
+        "yt-prom-grwm-2025"
+      ],
+      "period": "2024_full_calendar_year",
+      "geography": "Global",
+      "unit": "video_view_events_for_titles_containing_prom_and_GRWM",
+      "value": 25000000,
+      "comparison": "greater_than",
+      "measurement_type": "annual_topic_total",
+      "valid_statement": "Over 25 million global views of videos with both prom and GRWM in titles over 2024",
+      "seasonal_causal_effect": null,
+      "seasonal_recurrence_verified": false,
+      "limitations": "No within-year monthly distribution or matched nonprom control; not all prom content or unique prom viewers."
+    },
+    {
+      "id": "halloween_makeup_2025",
+      "topic": "halloween_makeup",
+      "source_ids": [
+        "yt-halloween-makeup-2025"
+      ],
+      "period": "2025_01_01_to_2025_10_05",
+      "geography": "Global",
+      "unit": "video_view_events_for_titles_containing_halloween_and_makeup",
+      "value": 1000000000,
+      "comparison": "greater_than",
+      "measurement_type": "partial_year_topic_total",
+      "valid_statement": "Over 1 billion global views for specified Halloween-makeup titles through October 5, 2025",
+      "seasonal_causal_effect": null,
+      "seasonal_recurrence_verified": false,
+      "limitations": "Jan–Oct 5 is not a Halloween-week or full-year count; no monthly seasonality curve."
+    },
+    {
+      "id": "splatoon2_japan_launch_2017",
+      "topic": "game_release",
+      "source_ids": [
+        "yt-gaming-quiz-2024"
+      ],
+      "period": "2017_07_21_to_2017_07_28",
+      "geography": "Japan",
+      "unit": "all_related_game_video_views",
+      "value": 50000000,
+      "comparison": "greater_than",
+      "measurement_type": "single_event_week_total",
+      "valid_statement": "Over 50 million related views in Japanese launch week of Splatoon 2",
+      "seasonal_causal_effect": null,
+      "seasonal_recurrence_verified": false,
+      "limitations": "Game event, not annual recurring seasonality; no matched baseline and not a single-trailer count."
+    },
+    {
+      "id": "uk_children_weekly_2025",
+      "topic": "children_youtube",
+      "source_ids": [
+        "ofcom-children-parents-media-2026"
+      ],
+      "period": "2025_annual_weekly_mean",
+      "geography": "United Kingdom",
+      "unit": "minutes_per_child_per_week_ages_4_to_15_in_home",
+      "value": 427,
+      "comparison": "reported_point_estimate",
+      "measurement_type": "annual_weekly_average",
+      "valid_statement": "UK 4–15-year-olds averaged 427 minutes/week of in-home YouTube viewing in 2025",
+      "seasonal_causal_effect": null,
+      "seasonal_recurrence_verified": false,
+      "limitations": "Annual weekly mean is not term-time versus school-holiday change; no child-level observation collected."
+    }
+  ],
+  "cross_case_comparisons": [
+    {
+      "id": "nfl_vs_prom",
+      "permitted": false,
+      "reason": "NFL share denominator (all 2025 NFL views) is not a 2024 annual query-title view-event count"
+    },
+    {
+      "id": "prom_vs_halloween",
+      "permitted": false,
+      "reason": "Different year lengths and title queries; prom full year versus Halloween partial year"
+    },
+    {
+      "id": "game_week_vs_nfl_offseason",
+      "permitted": false,
+      "reason": "Japan launch week is one-off event and not comparable to global annual sport season share"
+    },
+    {
+      "id": "child_weekly_minutes_vs_views",
+      "permitted": false,
+      "reason": "In-home measured minutes per UK child and worldwide view events use different population and units"
+    }
+  ],
+  "required_for_credible_lift": [
+    "Pre-register topic and content inclusion rule; preserve specific title and classification definitions",
+    "Use equal-duration bins in the same geography, viewer/device population and metric definition epoch",
+    "Repeat multiple full calendar cycles and declare coverage, time zone and missing months",
+    "Reconcile the August 24 2026 playback-start metric change",
+    "Compare a reference category or otherwise model secular platform activity and topic supply",
+    "Report missing cells, overlap, uncertainty, nonzero counts and avoidance of post-hoc window selection",
+    "Do not infer unique people, subscriber growth, creator gross receipts or profitability from topic view totals"
+  ],
+  "acceptance_gates": [
+    {
+      "id": "dated_aggregate_examples",
+      "fulfilled": true,
+      "evidence_case_ids": [
+        "nfl_2025_offseason",
+        "prom_grwm_2024",
+        "halloween_makeup_2025",
+        "splatoon2_japan_launch_2017",
+        "uk_children_weekly_2025"
+      ]
+    },
+    {
+      "id": "same_topic_multi_year_monthly_series",
+      "fulfilled": false,
+      "evidence_case_ids": []
+    },
+    {
+      "id": "matched_season_comparator",
+      "fulfilled": false,
+      "evidence_case_ids": []
+    },
+    {
+      "id": "proven_comparable_units_and_metric_revision",
+      "fulfilled": false,
+      "evidence_case_ids": []
+    },
+    {
+      "id": "causal_or_predictive_validation",
+      "fulfilled": false,
+      "evidence_case_ids": []
+    }
+  ],
+  "unmeasured": {
+    "seasonal_viewership_lift": null,
+    "seasonal_returning_viewers": null,
+    "country_specific_holiday_uplift": null,
+    "evergreen_competitor_seasonality": null,
+    "niche_creator_profit_seasonality": null,
+    "repeatable_optimal_upload_month": null,
+    "forecast_uncertainty": null
+  }
+}
