@@ -11,6 +11,21 @@ test('YouTube evidence and claim references',async()=>{
     assert(value.source_ids.length&&value.source_ids.every(id=>sources.has(id)));
   }
 });
+test('Geographic research branches retain source denominators and unknown creator income',async()=>{
+  const [scope,dossier]=await Promise.all([
+    load('ontology/youtube/geographic-scope.json'),load('specimens/youtube.json')
+  ]);
+  const sources=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(scope.kind,'geographic_scope_protocol');
+  assert.deepEqual(scope.branches.map(x=>x.id),['global','us','uk','mx','reuters_48']);
+  assert.equal(scope.axes.length,5);
+  assert(scope.branches.every(x=>x.source_ids.length&&x.source_ids.every(id=>sources.has(id))));
+  assert(scope.branches.every(x=>x.unique_people_count===null&&x.newcomer_profit_distribution===null));
+  assert(Object.values(scope.unresolved).every(x=>x===null));
+  assert(scope.country_feature_fields.includes('payout_currency'));
+  assert(scope.country_feature_fields.includes('feature_specific_availability'));
+});
+
 test('Country viewing figures keep UK devices and international survey denominators separate',async()=>{
   const [data,dossier]=await Promise.all([
     load('ontology/youtube/country-reach-devices.json'),load('specimens/youtube.json')

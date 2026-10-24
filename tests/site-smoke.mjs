@@ -125,6 +125,10 @@ try{
     await reach.locator('summary').click();
     assert((await reach.textContent()).includes('Do not sum percentages or device minutes'));
     assert((await reach.textContent()).includes('global monthly distinct viewers: unknown'));
+    const geo=page.locator('.geographic-scope');
+    assert.equal(await geo.locator('.geographic-card').count(),5,'Missing regional source and population branches');
+    await geo.locator('summary').click();
+    assert((await geo.textContent()).includes('newcomer profit including zero earners: unknown'));
     assert.equal(await page.locator('.payout-currency').count(),2,'Missing documented payout currencies');
     assert((await page.locator('.topic-catalogue-card').count())>=32,'Missing community taxonomy');
     const sampling=page.locator('.sampling-budget');

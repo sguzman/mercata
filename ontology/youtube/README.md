@@ -38,6 +38,10 @@ The [dated first-frame view-count study](view-definition-break.md) and [metric b
 
 See the [officially documented search and recommendation surfaces](discovery.md). Search ranking, personalized Home, Up Next and Shorts are different ways audiences find content. Creator RPM and advertiser CPM use different denominators; no per-view revenue rate is assumed.
 
+## Geographic research scope
+
+The [country and population protocol](geographic-scope.md) and [machine record](geographic-scope.json) separate viewer location, creator eligibility, advertising market, payment country and language. Five source-bounded branches cover global survey evidence, the United States, the United Kingdom, Mexico and Reuters Institute's 48-market online news survey. They do not represent an exhaustive worldwide census or any individual's product approval.
+
 ## Quota-aware public content sampling
 
 The [2026 public Data API sampling and quota snapshot](public-api-sampling-budget.md) and [machine protocol](public-api-sampling-budget.json) distinguish the **100 daily search.list calls** in their own default bucket from the **10,000 other-method API units**, as documented by Google on October 15, 2026. Search pages can contain up to 50 result slots, while totalResults is approximate and capped. A synthetic 48-call budget illustrates the arithmetic but **no API queries were executed**, and unique community people, active creators and niche supply remain unknown.
