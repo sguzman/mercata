@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "advertiser_suitability_policy_history",
+  "reviewed_at": "2026-10-23",
+  "source_ids": [
+    "yt-ads-policy-updates-2026",
+    "yt-ads-guidelines-2026"
+  ],
+  "scope": "Advertiser suitability for individual content, separate from YPP membership, copyright, Community Guidelines and earnings distributions.",
+  "revisions": [
+    {
+      "id": "2026-october-public-interest",
+      "announced_month": "2026-10",
+      "effective_day": null,
+      "category": [
+        "hateful_derogatory",
+        "harmful_acts_unreliable_content"
+      ],
+      "topic_class": [
+        "public_interest",
+        "news_documentary",
+        "government_proceedings"
+      ],
+      "rule": "Certain public-interest coverage, including congressional proceedings and debates over ongoing government actions, may earn advertising revenue under updated hateful/harmful content context guidance.",
+      "limitations": "No claim that every political or governmental video is ad-eligible. Specific context and other rules still apply.",
+      "source_ids": [
+        "yt-ads-policy-updates-2026"
+      ]
+    },
+    {
+      "id": "2026-september-drugs-fiction",
+      "announced_month": "2026-09",
+      "effective_day": null,
+      "category": [
+        "recreational_drugs"
+      ],
+      "topic_class": [
+        "gaming",
+        "scripted_drama",
+        "educational_documentary"
+      ],
+      "rule": "Gaming or scripted depictions of recreational-drug use, sale or promotion may earn ads under revised guidance; non-glorifying educational material and PSAs about drug trafficking may also qualify.",
+      "limitations": "Other safety, explicit instructions, glorification, age and contextual restrictions continue; not approval of all drug-related footage.",
+      "source_ids": [
+        "yt-ads-policy-updates-2026",
+        "yt-ads-guidelines-2026"
+      ]
+    },
+    {
+      "id": "2026-september-game-violence",
+      "announced_month": "2026-09",
+      "effective_day": null,
+      "category": [
+        "violence"
+      ],
+      "topic_class": [
+        "gaming"
+      ],
+      "rule": "Official guidance clarifies graphic gaming scenes in the 8–15-second introduction window can earn ad revenue, whereas content featuring graphic gaming in the first 7 seconds remains ineligible.",
+      "limitations": "Do not presume arbitrary gameplay always earns money; titles, thumbnails, gore focus and specific review can restrict ads.",
+      "source_ids": [
+        "yt-ads-policy-updates-2026",
+        "yt-ads-guidelines-2026"
+      ]
+    },
+    {
+      "id": "2026-august-death-reporting",
+      "announced_month": "2026-08",
+      "effective_day": null,
+      "category": [
+        "violence"
+      ],
+      "topic_class": [
+        "documentary",
+        "journalism",
+        "education"
+      ],
+      "rule": "Clarification addresses context-dependent depictions of death in educational, documentary and news reporting content.",
+      "limitations": "Historical event, graphicness, shock, context, and other policy rules can differ; not a blanket clearance for violent videos.",
+      "source_ids": [
+        "yt-ads-policy-updates-2026",
+        "yt-ads-guidelines-2026"
+      ]
+    },
+    {
+      "id": "2026-march-young-appearing-distress",
+      "announced_month": "2026-03",
+      "effective_day": null,
+      "category": [
+        "shocking_content"
+      ],
+      "topic_class": [
+        "animation",
+        "youth_appearing_content"
+      ],
+      "rule": "Young-appearing subjects, human or nonhuman, depicted in distress with graphic/shocking imagery are ineligible for advertising under the clarified shocking content policy.",
+      "limitations": "Appearance in a video is not reliable proof that a performer or viewer is a minor; no individual classification is inferred.",
+      "source_ids": [
+        "yt-ads-policy-updates-2026"
+      ]
+    },
+    {
+      "id": "2026-january-controversial-issues",
+      "announced_month": "2026-01",
+      "effective_day": null,
+      "category": [
+        "controversial_issues"
+      ],
+      "topic_class": [
+        "fictional_drama",
+        "education",
+        "news"
+      ],
+      "rule": "Non-graphic dramatized treatments of controversial issues may earn ad revenue; content focused on child abuse or eating disorders remains subject to limitations on full monetization.",
+      "limitations": "Not a promise that discussing any controversial issue earns full ads, or that all educational content is restricted.",
+      "source_ids": [
+        "yt-ads-policy-updates-2026",
+        "yt-ads-guidelines-2026"
+      ]
+    }
+  ],
+  "status_levels": [
+    {
+      "id": "full_ads_possible",
+      "meaning": "Content may earn advertising revenue if all applicable rules pass; not an RPM prediction."
+    },
+    {
+      "id": "limited_ads_possible",
+      "meaning": "Some content may receive restricted advertisement demand or earnings."
+    },
+    {
+      "id": "no_ads",
+      "meaning": "Content does not qualify to earn advertising revenue under the applicable ad suitability policy."
+    },
+    {
+      "id": "creator_eligibility_separate",
+      "meaning": "YPP membership, feature-specific modules, and payment account gates remain independently required."
+    },
+    {
+      "id": "removal_separate",
+      "meaning": "Community Guidelines removal, legal takedown, copyright claims and channel strikes are different processes."
+    }
+  ],
+  "review_scope": [
+    "video_content",
+    "shorts",
+    "livestream",
+    "title",
+    "thumbnail",
+    "description",
+    "tags"
+  ],
+  "review_mechanism": {
+    "automated_checks": true,
+    "human_review_available": true,
+    "review_guarantees_monetization": false,
+    "source_ids": [
+      "yt-ads-guidelines-2026"
+    ]
+  },
+  "uncertainty": {
+    "measured_income_uplift": null,
+    "representative_rpm_by_policy_category": null,
+    "ad_review_error_rate": null,
+    "appeal_success_probability": null,
+    "affected_creator_population": null
+  },
+  "research_rules": [
+    "Preserve month-level date when official source lacks exact effective day.",
+    "Eligibility to earn ads is not guaranteed receipt of revenue or an estimate of typical earnings.",
+    "Advertiser suitability, YPP program membership and content takedown have different gates.",
+    "Public-interest context and educational/documentary status are not universal exceptions.",
+    "Do not infer minors' ages, identities or viewer attributes from video content.",
+    "Treat changes as period-specific; never retroactively apply October 2026 standards to older video earnings."
+  ]
+}
