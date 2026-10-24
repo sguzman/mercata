@@ -115,6 +115,13 @@ try{
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');
+    const screenStudy=page.locator('.screen-viewing-study');
+    assert.equal(await screenStudy.locator('.screen-viewing-card').count(),2,'Missing UK device share subgroups');
+    await screenStudy.locator('summary').click();
+    assert((await screenStudy.textContent()).includes('Q2 2025'));
+    assert((await screenStudy.textContent()).includes('TV-set viewing share: 43%'));
+    assert((await screenStudy.textContent()).includes('Smartphone viewing share: 32%'));
+    assert((await screenStudy.textContent()).includes('unknown in cited source'));
     const surfaces=page.locator('.video-surface-study');
     assert.equal(await surfaces.locator('.video-surface-card').count(),7,'Missing format and ad-inventory study');
     await surfaces.locator('summary').click();

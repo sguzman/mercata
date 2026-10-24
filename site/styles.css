@@ -779,3 +779,13 @@ h1 em {font-style:italic;color:var(--accent)}
 .video-surface-card p{font-size:12px;margin:7px 0}
 @media(max-width:840px){.video-surface-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.video-surface-details{padding:15px}.video-surface-grid{grid-template-columns:1fr}}
+
+/* Barb UK at-home Wi-Fi device view shares, not share of distinct users. */
+.screen-viewing-study{margin:28px 0}
+.screen-viewing-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.screen-viewing-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.screen-viewing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.screen-viewing-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.screen-viewing-card h5{font-size:14px;margin:0 0 9px}
+.screen-viewing-card p{font-size:13px;margin:7px 0}
+@media(max-width:650px){.screen-viewing-details{padding:15px}.screen-viewing-grid{grid-template-columns:1fr}}

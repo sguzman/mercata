@@ -612,6 +612,29 @@ test('YPP tax-info and payout-withholding model preserves different revenue base
  assert(model.disallowed_model_shortcuts.some(x=>x.includes('twice')));
 });
 
+test('Barb 2025 device shares are bounded UK Wi-Fi viewing, not people or selected-channel stats',async()=>{
+  const [model,dossier]=await Promise.all([
+    load('ontology/youtube/screen-viewing-uk-2025.json'),load('specimens/youtube.json')
+  ]);
+  const sources=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(model.kind,'uk_wifi_at_home_device_screen_comparison');
+  assert(sources.has(model.source_id));
+  assert(sources.has(model.related_ofcom_2026.source_id));
+  assert.equal(model.service_level.period,'2025-Q2');
+  assert.equal(model.service_level.adult_16_plus.tv_set_percent,43);
+  assert.equal(model.service_level.adult_16_plus.smartphone_percent,32);
+  assert.equal(model.service_level.children_4_to_15.tv_set_percent,53);
+  assert.equal(model.service_level.children_4_to_15.smartphone_percent,null);
+  assert.equal(model.service_level.adult_16_plus.person_count,null);
+  assert.equal(model.service_level.population_unit,'viewing_activity_not_unique_people');
+  assert.equal(model.separate_channel_measurement.selected_channel_count,200);
+  assert.equal(model.separate_channel_measurement.separate_from_service_level_device_shares,true);
+  assert(model.separate_channel_measurement.excluded_from_acr_channel_sample.includes('shorts'));
+  assert.equal(model.related_ofcom_2026.values.find(x=>x.id==='tv_set_2025').minutes_per_person_per_day,19);
+  assert.equal(model.related_ofcom_2026.values.find(x=>x.id==='all_connected_home_devices_2025').minutes_per_person_per_day,41);
+  assert(Object.values(model.unknowns).every(x=>x===null));
+});
+
 test('Seven video monetization surfaces distinguish inventory, replay and disputed Shorts claims',async()=>{
   const [model,dossier]=await Promise.all([
     load('ontology/youtube/video-surfaces-economics.json'),
