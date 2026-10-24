@@ -590,3 +590,13 @@ h1 em {font-style:italic;color:var(--accent)}
 .ownership-limits{padding-left:18px}
 .ownership-limits li{margin:6px 0}
 @media(max-width:650px){.ownership-details{padding:15px}.ownership-grid{grid-template-columns:1fr}}
+
+/* Bounded country research cards */
+.geographic-scope{margin:28px 0}
+.geographic-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.geographic-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.geographic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.geographic-card{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;overflow-wrap:anywhere}
+.geographic-card h5{font-size:14px;margin:0 0 9px}
+.geographic-card p{font-size:12px;margin:6px 0}
+@media(max-width:650px){.geographic-details{padding:15px}.geographic-grid{grid-template-columns:1fr}}
