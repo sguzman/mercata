@@ -2077,9 +2077,16 @@
           "title": "Examine credible demographic cross-tabulations",
           "acceptance": "Specify combinations, sample sizes and representativeness; do not multiply marginal percentages.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 24,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/study-frame-crosswalk.json",
+            "ontology/youtube/study-frame-crosswalk.md",
+            "specimens/youtube.json",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs",
+            "ontology/youtube/community-audience-studies.json"
+          ]
         },
         {
           "id": "audience-demography/bias",
@@ -2087,13 +2094,18 @@
           "title": "Audit demographic data access and bias",
           "acceptance": "Record nonresponse, login coverage, suppression, ad-reach modeling and age-report uncertainty.",
           "weight": 1,
-          "progress": 73,
+          "progress": 83,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
             "ontology/youtube/us-audience-2026.md",
             "ontology/youtube/analytics-query-guide.json",
-            "ontology/youtube/analytics-query-guide.md"
+            "ontology/youtube/analytics-query-guide.md",
+            "ontology/youtube/study-frame-crosswalk.json",
+            "ontology/youtube/study-frame-crosswalk.md",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs",
+            "ontology/youtube/community-audience-studies.json"
           ]
         }
       ]

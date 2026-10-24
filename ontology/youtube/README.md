@@ -56,7 +56,7 @@ The [2026 public Data API sampling and quota snapshot](public-api-sampling-budge
 
 ## Crosswalk of incompatible YouTube studies and survey sampling frames
 
-The [human study-frame audit](study-frame-crosswalk.md) and [machine source matrix](study-frame-crosswalk.json) separate five published measurement frames: Pew U.S. adults, two differently aged YouTube/NRG U.S. online populations, a commercial mixed-platform creator survey, and AIR's selected monetized YouTube client cohort. Respondents, channels and channel-months are distinct observational units. Their different recruitment, questions, age eligibility, item nonresponse and unverified cross-study overlap preclude pooled global viewer counts or representative newcomer income claims.
+The [human study-frame audit](study-frame-crosswalk.md) and [machine source matrix](study-frame-crosswalk.json) separate seven published measurement frames: Pew's NPORS 2026 platform-use survey, the 2026 American Trends Panel news survey, a distinct 2025 YouTube-news audience composition study, two age-defined YouTube/NRG U.S. online groups, a commercial mixed-platform creator survey, and AIR's selected monetized client cohort. Respondents, channels and channel-months are distinct observational units. Their different recruitment, questions, age eligibility, item nonresponse and unverified cross-study overlap preclude pooled global viewer counts or representative newcomer income claims.
 
 ## U.S. adult YouTube usage by income, education and residence (2026)
 
