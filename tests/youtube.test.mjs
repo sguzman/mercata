@@ -472,6 +472,9 @@ test('2019 high-subscriber linking evidence is not a creator-income distribution
   assert.equal(study.channel_linking.marketplace.find(x=>x.id==='less_than_20pct').percent_reported,75.37);
   assert.equal(study.channel_linking.crowdfunding.find(x=>x.id==='less_than_20pct').percent_reported,94);
   assert.equal(study.channel_linking.crowdfunding.find(x=>x.id==='none').percent_reported,83.1);
+  assert.equal(study.historical_view_concentration.top_channel_share_percent_reported,0.4);
+  assert.equal(study.historical_view_concentration.views_accounted_for_percent_reported,62);
+  assert(study.historical_view_concentration.limitations.includes('2019'));
   assert.equal(study.modeled_advertising_revenue_in_article.is_observed_channel_income,false);
   assert.equal(study.modeled_advertising_revenue_in_article.publish_as_empirical_payout,false);
   assert(Object.values(study.unmeasured).every(x=>x===null));
