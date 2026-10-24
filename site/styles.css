@@ -600,3 +600,20 @@ h1 em {font-style:italic;color:var(--accent)}
 .geographic-card h5{font-size:14px;margin:0 0 9px}
 .geographic-card p{font-size:12px;margin:6px 0}
 @media(max-width:650px){.geographic-details{padding:15px}.geographic-grid{grid-template-columns:1fr}}
+
+/* Source-bounded country program and payment lookup */
+.country-programs{margin:28px 0}
+.country-programs-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.country-programs-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.country-programs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.country-program-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.country-program-card h5{font-size:14px;margin:0 0 9px}
+.country-program-card p{font-size:12px;margin:7px 0}
+.country-program-methods{line-height:1.7}
+.country-currency-heading{font-size:14px;margin:20px 0 12px}
+.country-currency-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.country-currency-card{background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:15px;min-width:0;overflow-wrap:anywhere}
+.country-currency-card strong{font:22px Georgia,serif;font-variant-numeric:tabular-nums}
+.country-currency-card p{font-size:12px;margin:7px 0}
+@media(max-width:750px){.country-programs-grid,.country-currency-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.country-programs-details{padding:15px}}
