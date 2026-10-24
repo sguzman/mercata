@@ -34,7 +34,16 @@ try{
     const failedRequests=[];
     page.on('requestfailed',request=>failedRequests.push(request.url()));
     await page.goto(base,{waitUntil:'networkidle'});
-    await page.waitForFunction(()=>document.querySelector('#count-specimens')?.textContent==='26');
+    try {
+      await page.waitForFunction(()=>document.querySelector('#count-specimens')?.textContent==='26',null,{timeout:12000});
+    } catch(error) {
+      const state=await page.evaluate(()=>({
+        count:document.querySelector('#count-specimens')?.textContent ?? null,
+        catalog:document.querySelector('#catalog-grid')?.textContent?.slice(0,400) ?? null,
+        readyState:document.readyState
+      })).catch(e=>({browserStateError:String(e)}));
+      throw new Error('Mercata catalog startup failed: '+JSON.stringify({state,errors,failedRequests,originalError:String(error)}));
+    }
     assert.equal(await page.locator('#theme').inputValue(),'system','System theme should be default');
     await page.locator('#search').fill('YouTube');
     assert.equal(await page.locator('#catalog-grid .specimen-card').count(),1,'YouTube filter');
