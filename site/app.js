@@ -1161,14 +1161,15 @@ function renderSurveyFrameCrosswalk(data,dossier){
  if(!data?.frames?.length)return null;
  const section=make('section','survey-frame-crosswalk');
  const details=make('details','survey-frame-details');
- details.append(make('summary','','Why major YouTube surveys cannot be pooled · five documented source frames'));
+ details.append(make('summary','','Why major YouTube surveys cannot be pooled · '+data.frames.length+' documented source frames'));
  details.append(make('p','measure-limit','The sample unit, geography, recruitment, ages and economic metric differ across Pew, YouTube/NRG, CreatorIQ and AIR. A sample of channels, channel-months or online respondents is not the entire global audience.'));
  const grid=make('div','survey-frame-grid');
  for(const item of data.frames){
    const card=make('article','survey-frame-card');
    card.append(make('h5','',item.owner));
    card.append(make('p','measure-context',item.eligibility));
-   card.append(make('strong','survey-frame-count',item.sample_total_n.toLocaleString()+' '+(item.id==='air_2026_monetized_studio'?'channels':'respondents')));
+   const sizeLabel=item.sample_total_n===null?'Sample size: unknown':item.sample_total_n.toLocaleString()+' '+(item.id==='air_2026_monetized_studio'?'channels':'respondents');
+   card.append(make('strong','survey-frame-count',sizeLabel));
    card.append(make('p','measure-limit','Measured: '+item.quantity.replaceAll('_',' ')));
    card.append(make('p','measure-limit','Global YouTube user census: not established'));
    card.append(audienceSources(item.source_ids,dossier));
