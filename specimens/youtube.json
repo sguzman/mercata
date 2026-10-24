@@ -1934,6 +1934,39 @@
       "evidence_class": "platform_sponsored_eu_creator_consultation_summary",
       "license": "Linked primary YouTube report summary, independent limited numerical paraphrase",
       "notes": "More than 20,000 voluntary creator responses from EU27, public article provides selected question percentages but not recruitment probabilities, item denominators or creator earnings microdata. EU GDP/FTE statistics derive separately from Oxford Economics modeled impact study cited by platform."
+    },
+    {
+      "id": "yt-collaborations-help-2026",
+      "url": "https://support.google.com/youtube/answer/16554898?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Invite collaborators to your video",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_studio_collaboration_and_revenue_rule",
+      "license": "Official Help page linked; independently summarized, no original screenshots or long text copied",
+      "notes": "Current Help documents up to 10 collaborators, eligible recorded formats, potential recommendation overlap, creator subscribe labels, and uploader-received revenue. Tool access and results are not guaranteed."
+    },
+    {
+      "id": "yt-collaborations-rollout-2025",
+      "url": "https://support.google.com/youtube/blog/372291417/new-youtube-updates-to-help-you-create-connect-with-fans-drive-business?hl=en-JE",
+      "publisher": "TeamYouTube Help Community",
+      "title": "New YouTube updates to help you create, connect with fans, and drive business",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "historical_first_party_creator_collaborations_announcement",
+      "license": "Official older rollout notice linked and independently summarized",
+      "notes": "Initial rollout stated five collaborators per video and gradual availability. Historical announcement is not current account-level limit."
+    },
+    {
+      "id": "yt-year-trends-2025",
+      "url": "https://blog.youtube/culture-and-trends/end-of-year-summary-2025/",
+      "publisher": "YouTube Culture & Trends",
+      "title": "The year on YouTube: the topics, creators, music, and podcasts that defined 2025",
+      "retrieved_at": "2026-10-24",
+      "published_at": "2025-12-02",
+      "evidence_class": "platform_curated_cross_fandom_examples",
+      "license": "Platform roundup independently paraphrased without reproducing assets or full creative examples",
+      "notes": "Editorial examples of fan recreations, K-pop fandom video forms, and creator-driven game culture in 2025; not a probability sample of memes or audience travel."
     }
   ],
   "claims": [
@@ -3862,6 +3895,67 @@
       "observed_at": "2026-10-23",
       "confidence": "medium",
       "limitations": "Cross-border watch-time fraction differs from unique international viewers; Oxford GDP and FTE are modeled macroeconomic impacts, not earned creator payouts, unique creators or consultation respondent employment."
+    },
+    {
+      "id": "collaboration-studio-ten-upload-channel-payout",
+      "text": "YouTube's current Collaborations Help allows inviting up to ten creators to a long-form video, Short, or archived livestream, with collaborators' channel labels after acceptance and generated YouTube revenue accruing to the channel that uploaded the video, not split automatically.",
+      "source_ids": [
+        "yt-collaborations-help-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Invitation is not proof of acceptance; revenue distribution is the platform's native allocation, not a claim about any separate creator contract or actual revenue amount."
+    },
+    {
+      "id": "collaboration-discovery-goal-not-result",
+      "text": "YouTube says collaboration-video recommendations may reach both the uploader's and collaborators' audiences, but it does not guarantee immediate changes in search, impressions or recommendations.",
+      "source_ids": [
+        "yt-collaborations-help-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "No observed cross-channel incremental reach, subscription gain, watch-hour change, collaboration fee, or newcomer profitability was measured."
+    },
+    {
+      "id": "collaboration-2025-initial-five-versus-2026-ten",
+      "text": "A historical YouTube product rollout described a five-collaborator limit; the Help page retrieved in October 2026 specifies a ten-collaborator limit, illustrating a changed product specification rather than a controlled growth experiment.",
+      "source_ids": [
+        "yt-collaborations-rollout-2025",
+        "yt-collaborations-help-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Exact rollout availability by account, geographical market and intermediate revision dates are unknown. Historical limits must not be presented as current."
+    },
+    {
+      "id": "nrg-2026-creator-and-meme-perceived-mainstream",
+      "text": "YouTube's April 2026 NRG U.S. online sample of 496 people aged 14–29 reported perceptions that YouTube creators (77%) and memes (78%) are widely known. These are survey perceptions, not measured video view or community-unique-person populations.",
+      "source_ids": [
+        "youtube-nrg-mainstream-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Commissioned, nonprobability sampling design not established publicly; question-level respondent counts and variance not independently verified. Do not treat source categories as nonoverlapping."
+    },
+    {
+      "id": "nrg-2026-fandom-perceived-creator-success",
+      "text": "YouTube's April 2026 NRG U.S. online sample of 939 people aged 14–44 reported 63% agreement that a favored person's success felt like their own and 60% pride in having contributed to that success.",
+      "source_ids": [
+        "youtube-nrg-mainstream-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Platform-commissioned attitudinal survey, not validated donation, fandom membership, direct creator earnings, or causal influence of fans on creator success."
+    },
+    {
+      "id": "yt-2025-fandom-remix-examples-not-diffusion-sample",
+      "text": "YouTube's December 2025 cultural roundup described fan-made adaptations of television and music phenomena and creator-originated Roblox trends as illustrative cases of remix and community co-creation.",
+      "source_ids": [
+        "yt-year-trends-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Editorially selected examples, not a dated network diffusion panel or representative estimate of how frequently memes cross channels."
     }
   ],
   "observations": [],
