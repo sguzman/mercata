@@ -1857,6 +1857,61 @@
       "evidence_class": "official_post_types_scheduling_and_limitations",
       "license": "Linked official Help source; independently summarized",
       "notes": "Text, images, GIFs, video, polls, quizzes and scheduling; number of posts per day is limited but not universally quantified."
+    },
+    {
+      "id": "yt-promote-official-2026",
+      "url": "https://support.google.com/youtube/answer/12199105?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Get started with YouTube Promote",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_youtube_promote_advertising_eligibility",
+      "license": "Linked official Help page, independently paraphrased",
+      "notes": "Promote vs Google Ads, organic recommendation separation, direct paid subscriber/watch-hour YPP exclusions, and qualifying organic follow-on views."
+    },
+    {
+      "id": "yt-promote-campaign-2026",
+      "url": "https://support.google.com/youtube/answer/16869935?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Create and manage promotions on YouTube",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_promotions_cost_and_attribution_metric_definitions",
+      "license": "Linked official Help page, independently paraphrased",
+      "notes": "Owner Studio displays promotion cost, impressions, views, attributed subscribers and website visits; subscriber attribution uses 10-second or click followed by subscription within three days."
+    },
+    {
+      "id": "gads-video-view-cost-2026",
+      "url": "https://support.google.com/google-ads/answer/2472735?hl=en",
+      "publisher": "Google Ads Help",
+      "title": "About YouTube cost-per-view (CPV) bidding",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_paid_ad_format_view_billing_criteria",
+      "license": "Linked official Google Ads Help page, independently paraphrased",
+      "notes": "Billable CPV TrueView differs across in-stream, in-feed and Shorts formats and does not equal public video view starts."
+    },
+    {
+      "id": "gads-organic-paid-video-analytics-2026",
+      "url": "https://support.google.com/google-ads/answer/6086441?hl=en",
+      "publisher": "Google Ads Help",
+      "title": "Measure video performance with video analytics",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_ads_and_organic_reporting_surface_separation",
+      "license": "Linked official Help page, independently paraphrased",
+      "notes": "Ads and organic reports differ; organic reporting in Google Ads requires linked channel, ad costs are campaign-specific."
+    },
+    {
+      "id": "yt-promote-troubleshooting-2026",
+      "url": "https://support.google.com/youtube/answer/16869853?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Troubleshoot issues with Promote",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_ad_approval_and_delivery_constraints",
+      "license": "Linked official Help page, independently paraphrased",
+      "notes": "Promotion policy review may take 1–2 days; disapproval, targeting and insufficient budgets can prevent delivery."
     }
   ],
   "claims": [
@@ -3694,6 +3749,47 @@
       "observed_at": "2026-10-23",
       "confidence": "high",
       "limitations": "A membership transaction count is not unique paying humans or a cohort retention probability; monthly billing periods can be 28, 30 or 31 days. Individual channel financial outcomes are not published."
+    },
+    {
+      "id": "promote-direct-vs-follow-on-ypp-2026",
+      "text": "YouTube Promote distinguishes ad-attributed subscribers and watch hours, which do not count toward YPP eligibility, from later organic Follow-on Views after exposure to promotion, which can contribute to eligible YPP activity under product rules.",
+      "source_ids": [
+        "yt-promote-official-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Promotion metrics are not a verified causal incremental lift or channel-specific profitability outcome; other YPP qualification requirements still apply."
+    },
+    {
+      "id": "promote-owner-metrics-attribution-2026",
+      "text": "Promote's Studio dashboard reports actual ad spend, impressions, paid views, subscribed-after-ad attribution and website clicks; the product defines promotion subscribers by video watch of at least 10 seconds or ad click with subscription within three days.",
+      "source_ids": [
+        "yt-promote-campaign-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Attributed subscriber count does not equal an independently randomized effect, future loyalty or a YPP-qualifying organic subscriber."
+    },
+    {
+      "id": "googleads-cpv-differs-by-format-2026",
+      "text": "Google Ads defines billed TrueView video views differently: in-stream requires 30 seconds, video end if shorter or an interaction; in-feed may count a clicked thumbnail or at least 10 seconds autoplay; Shorts requires 10 seconds, video end if shorter or CTA click.",
+      "source_ids": [
+        "gads-video-view-cost-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Billable video ad TrueView views are not identical to public YouTube playback starts, unique people, or organic engaged-view standards; no universal CPV is supported."
+    },
+    {
+      "id": "promotion-review-cost-not-typical-rpm-2026",
+      "text": "YouTube Promotions can undergo advertising-policy review for approximately one or two days, be disapproved or serve slowly under restrictive targeting, and Google Ads reports paid and organic video performance under distinct reporting views.",
+      "source_ids": [
+        "yt-promote-troubleshooting-2026",
+        "gads-organic-paid-video-analytics-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Review durations are guidance, not guaranteed. No cross-channel average promotion spend, attributable incremental revenue or break-even return is measured."
     }
   ],
   "observations": [],

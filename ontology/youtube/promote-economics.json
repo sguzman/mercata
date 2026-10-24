@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "paid_promotion_cost_and_attribution_protocol",
+  "as_of": "2026-10-23",
+  "status": "official_paid_organic_metrics_and_budget_controls_no_observed_campaign_outcomes",
+  "source_ids": [
+    "yt-promote-official-2026",
+    "yt-promote-campaign-2026",
+    "gads-video-view-cost-2026",
+    "gads-organic-paid-video-analytics-2026",
+    "yt-promote-troubleshooting-2026",
+    "analytics-audience"
+  ],
+  "campaign_product": {
+    "name": "YouTube Promote",
+    "type": "simplified_google_ads_campaign_created_and_managed_in_youtube",
+    "related_product": "Google Ads with advanced targeting and analytics",
+    "youtube_created_campaigns_not_managed_in_google_ads": true,
+    "official_goal_options": [
+      "subscribers",
+      "views",
+      "website_clicks"
+    ],
+    "source_ids": [
+      "yt-promote-official-2026"
+    ],
+    "merchant_or_advertiser_spend_purchaser": "channel_operator_or_advertising_account_owner"
+  },
+  "metric_register": [
+    {
+      "id": "promotion_cost",
+      "unit": "ad_spend_in_billing_currency",
+      "owner_only": true,
+      "definition": "Amount spent to date subject to selected campaign budget",
+      "source_ids": [
+        "yt-promote-campaign-2026"
+      ]
+    },
+    {
+      "id": "promotion_impressions",
+      "unit": "ad_thumbnail_or_ad_placement_impression_events",
+      "owner_only": true,
+      "definition": "Display events according to promotion reporting",
+      "source_ids": [
+        "yt-promote-campaign-2026"
+      ]
+    },
+    {
+      "id": "promotion_views",
+      "unit": "paid_ad_views_per_ad_format",
+      "owner_only": true,
+      "definition": "Advertised content view event under format-specific ad definition",
+      "source_ids": [
+        "yt-promote-campaign-2026",
+        "gads-video-view-cost-2026"
+      ]
+    },
+    {
+      "id": "promoted_subscribers",
+      "unit": "ad_attributed_subscription_events",
+      "owner_only": true,
+      "definition": "Subscribed within three days after campaign click or after at least ten seconds of the video",
+      "source_ids": [
+        "yt-promote-campaign-2026"
+      ]
+    },
+    {
+      "id": "website_visits",
+      "unit": "tracked_click_events",
+      "owner_only": true,
+      "definition": "Clicks on the included website link, not distinct buyers or paid orders",
+      "source_ids": [
+        "yt-promote-campaign-2026"
+      ]
+    },
+    {
+      "id": "follow_on_views",
+      "unit": "organic_view_events_after_paid_exposure",
+      "owner_only": true,
+      "definition": "A viewer's later organic video views after seeing advertised content; counted as separate views",
+      "source_ids": [
+        "yt-promote-official-2026"
+      ]
+    },
+    {
+      "id": "organic_recommendation_views",
+      "unit": "organic_view_events",
+      "owner_only": true,
+      "definition": "Organic discovery distinct from purchased ad placements",
+      "source_ids": [
+        "gads-organic-paid-video-analytics-2026"
+      ]
+    },
+    {
+      "id": "creator_cash_profit",
+      "unit": "currency_net_of_ad_spend_and_business_costs",
+      "owner_only": true,
+      "definition": "Not a direct Studio Promote metric; requires observed revenue, associated costs and timing",
+      "source_ids": [
+        "yt-promote-campaign-2026"
+      ]
+    }
+  ],
+  "ypp_eligibility_rules": [
+    {
+      "metric": "promoted_subscribers",
+      "ad_attributed_counts_to_ypp_threshold": false,
+      "source_ids": [
+        "yt-promote-official-2026"
+      ]
+    },
+    {
+      "metric": "promoted_watch_hours",
+      "ad_attributed_counts_to_ypp_threshold": false,
+      "source_ids": [
+        "yt-promote-official-2026"
+      ]
+    },
+    {
+      "metric": "follow_on_views",
+      "ad_attributed_counts_to_ypp_threshold": null,
+      "organic_qualified_activity_can_count": true,
+      "source_ids": [
+        "yt-promote-official-2026"
+      ]
+    }
+  ],
+  "ad_format_billing": [
+    {
+      "id": "in_stream",
+      "billable_trueview_condition": "30 seconds watched, full duration if shorter, or interaction, whichever first",
+      "source_ids": [
+        "gads-video-view-cost-2026"
+      ]
+    },
+    {
+      "id": "in_feed",
+      "billable_trueview_condition": "Thumbnail click to watch or at least 10 seconds autoplay, with shorter-video completion case",
+      "source_ids": [
+        "gads-video-view-cost-2026"
+      ]
+    },
+    {
+      "id": "shorts",
+      "billable_trueview_condition": "10 seconds watched, full duration if shorter, or CTA click",
+      "source_ids": [
+        "gads-video-view-cost-2026"
+      ]
+    }
+  ],
+  "cost_protocol": {
+    "spend_cost_observed_from": "promote_cost_metric",
+    "ad_budget_is_not_observed_actual_spend": true,
+    "target_metrics": [
+      "campaign_cost",
+      "ad_impressions",
+      "billable_trueview_views",
+      "promotion_attributed_subscriptions",
+      "organic_follow_on_views",
+      "qualified_organic_watch_time",
+      "verified_downstream_customer_revenue",
+      "creator_production_and_support_costs"
+    ],
+    "non_identification": "A ratio of ad spend to attributed subscriptions estimates a conditional attributed event cost, not incremental causal acquisition, long-run profit or an YPP-qualified subscriber.",
+    "incremental_effect_study": "Would require predeclared matched or randomized comparable channels or users (when permitted), matched windows and organic controls, accounting for seasonality, uploads and other promotion.",
+    "can_calculate_ad_cost_per_attributed_subscriber_with_campaign_data": true,
+    "can_calculate_general_typical_cp_subscriber_without_sample": false,
+    "uncertainty_scope": "No representative campaigns, selection probabilities, attribution windows or returns are yet observed"
+  },
+  "approval_and_delivery": {
+    "estimated_review_days_min": 1,
+    "estimated_review_days_max": 2,
+    "guaranteed_review_max_days": null,
+    "possible_zero_spend_due_to_nonapproval_or_narrow_targeting": true,
+    "source_ids": [
+      "yt-promote-troubleshooting-2026"
+    ]
+  },
+  "unknowns": {
+    "typical_campaign_spend": null,
+    "typical_ad_cost_per_view": null,
+    "typical_cost_per_attributed_subscriber": null,
+    "incremental_new_subscribers": null,
+    "incremental_organic_views": null,
+    "ypp_qualifying_growth_from_promotion": null,
+    "paid_to_regular_viewer_conversion": null,
+    "incremental_website_buyers": null,
+    "typical_roi": null,
+    "typical_net_creator_profit": null
+  },
+  "rules": [
+    "Paid video views, TrueView billable ad views, public playback starts and organic follow-on view events are not interchangeable.",
+    "Attributed paid subscribers cannot satisfy the YPP subscriber minimum; observed organic follows may qualify according to current rules.",
+    "Campaign impressions, attributed subscribers, website clicks and paying customers have distinct units and conversion stages.",
+    "Do not treat advertising budget as actual spend or typical spend; record transactions, currency and dates when available.",
+    "No observational count proves an incremental causal effect without valid counterfactual controls.",
+    "Only source and analyze a creator's campaign performance with their permitted authorization; do not publish private campaign or buyer records.",
+    "2027 announced YPP rule changes and 2026 Promote rules should be date-scoped before claims about eligible watch hours or Shorts."
+  ]
+}
