@@ -2132,6 +2132,28 @@
       "evidence_class": "commercial_10m_plus_public_channel_upload_cadence_sample",
       "license": "Source-linked aggregate bins and median growth independently summarized",
       "notes": "10,210,278 YouTube channels with at least 1,000 subscribers, April 2025–March 2026; long form plus Shorts; correlational median growth across monthly upload tiers."
+    },
+    {
+      "id": "streams-charts-h1-2026-game-releases",
+      "url": "https://streamscharts.com/news/top-h1-2026-game-launches-publisher",
+      "publisher": "Streams Charts",
+      "title": "H1 2026 game launch live-streaming watch hours",
+      "published_at": "2026-07-22",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commercial_multiplatform_game_livestream_hours",
+      "license": "Vendor public aggregate facts independently paraphrased; no raw audience records",
+      "notes": "Multi-platform live streaming (YouTube, Twitch, others), not YouTube-only, nonlive VOD or Shorts. Selected game release weeks and subsequent retention."
+    },
+    {
+      "id": "hatchet-youtube-gaming-2025-live-hours",
+      "url": "https://hatchet.gg/resources/guides/2025-youtube-gaming-live-streaming-trends/",
+      "publisher": "Hatchet / Stream Hatchet",
+      "title": "YouTube Gaming 2025 Live Streaming Trends Report",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commercial_youtube_gaming_annual_livestream_hours",
+      "license": "Official research report landing page paraphrased; no proprietary report downloaded",
+      "notes": "8.8b annual YouTube Gaming live hours 2025; +12% vs 2024; 24% of all tracked gaming live hours. Not launch-week 2026 game data."
     }
   ],
   "claims": [
@@ -4305,6 +4327,36 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Neither study establishes median uploads among all first-time publishers, the marginal profit of an extra upload, or matched per-channel format-specific labor hours."
+    },
+    {
+      "id": "game-launchs-2026-multi-platform-live-watch-spike",
+      "text": "Streams Charts reports 43,692,090 hours watched across tracked live-streaming platforms during the first week of Resident Evil: Requiem in H1 2026, with week-two watch hours 68.8% below launch week.",
+      "source_ids": [
+        "streams-charts-h1-2026-game-releases"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "All tracked live-streaming platforms combined, not YouTube Gaming alone, not unique viewers, Shorts or nonlive views; week-two decline is title-specific, not platform-wide."
+    },
+    {
+      "id": "game-launch-2026-cross-platform-retention-differences",
+      "text": "Streams Charts reports 9,537,065 cross-platform livestream hours watched in Tomodachi Life: Living the Dream's debut week and a 9.2% decline in week two, while counted streaming channels rose 4.2% during that second week.",
+      "source_ids": [
+        "streams-charts-h1-2026-game-releases"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Selected game and publisher vendor records, not independent YouTube-only title viewing, not long-term fan growth or profit."
+    },
+    {
+      "id": "youtube-gaming-2025-annual-hours-distinct-from-launch-week",
+      "text": "Hatchet's 2025 YouTube Gaming livestream report cites 8.8 billion hours watched in 2025, up 12% versus 2024, representing about 24% of its tracked gaming livestreaming watch hours across platforms.",
+      "source_ids": [
+        "hatchet-youtube-gaming-2025-live-hours"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Calendar 2025 YouTube Gaming live-video annual benchmark, not 2026 individual game release viewing or all YouTube long-form and Shorts play counts."
     }
   ],
   "observations": [],
