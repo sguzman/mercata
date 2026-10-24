@@ -124,6 +124,7 @@ try{
     await posting.locator('summary').click();
     assert((await posting.textContent()).includes('not a distinct buyer'));
     assert((await posting.textContent()).includes('renewal rate and net member profit: unknown'));
+    assert((await posting.textContent()).includes('300 million users engaging with Posts'));
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');
@@ -142,6 +143,7 @@ try{
     assert((await screenStudy.textContent()).includes('unknown in cited source'));
     const surfaces=page.locator('.video-surface-study');
     assert.equal(await surfaces.locator('.video-surface-card').count(),7,'Missing format and ad-inventory study');
+    assert((await surfaces.textContent()).includes('6.5 billion microdrama views'));
     await surfaces.locator('summary').click();
     assert((await surfaces.textContent()).includes('8 minutes (480 seconds)'));
     assert((await surfaces.textContent()).includes('not a served ad'));

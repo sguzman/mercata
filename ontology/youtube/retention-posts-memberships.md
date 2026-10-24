@@ -10,6 +10,12 @@
 
 Official [creation guidance](https://support.google.com/youtube/answer/7124474?hl=en) supports creator scheduling and different post formats. None of those features proves reach, returning viewers or income, and the company does not publish a general incremental return-rate effect from Posts.
 
+## A source-reported Posts scale estimate, not creator retention
+
+[YouTube's dated September 23, 2026 TV and Shorts announcement](https://blog.youtube/news-and-events/made-on-youtube-creators-shorts-series-tv-features/) states that on average **more than 300 million users engage with Posts daily**. The platform did not specify its underlying account/person deduplication, country, age eligibility, reporting window, methodology or engagement-action threshold. Mercata records this as the **platform's claim about daily engaging users** — not an audited global unique-person count, a per-creator Posts reach, an additive public video audience, or a causal Posts-to-loyalty result.
+
+That announcement also describes plans to recommend more Posts in Shorts feeds and a future TV Posts experience. A future-rollout claim is not evidence that all channel owners have access now or that posting guarantees a larger viewer cohort.
+
 ## Owner Analytics metrics cannot be pooled into a conversion rate
 
 [YouTube's Posts Analytics help](https://support.google.com/youtube/answer/12340301?hl=en) defines **post impressions**, likes and votes under the owner-only Content → Posts view. Impressions reflect displayed events, not unique viewers; a vote is an engagement, not a subscriber renewal.

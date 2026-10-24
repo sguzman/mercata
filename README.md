@@ -115,6 +115,8 @@ A [source-backed comparison of adjacent video services](ontology/youtube/compari
 
 The [YouTube Promote cost and attribution analysis](ontology/youtube/promote-economics.md) separates paid advertiser spends and billable ad views from organic distribution and YPP-eligible follow-on viewing. It does not invent typical promotional budgets, causal subscriber lift, or profitability.
 
+The [September 2026 platform-use evidence](ontology/youtube/retention-posts-memberships.md) now records YouTube's reported average daily Posts engagement and [first-half microdrama figures](ontology/youtube/video-surfaces-economics.md), while keeping player events, users, watch-time and TV-view growth separate.
+
 The [creator Posts and membership-retention study](ontology/youtube/retention-posts-memberships.md) separates post impressions, returning-viewer classifications, paid member access, billing renewals and distinct people. The related dashboard does not claim post-attributed loyalty, unique repeat buyers or retention percentages without measured cohorts.
 
 The current YouTube dossier also includes a [survey-based U.S. news audience profile](ontology/youtube/community-audience-studies.md), a carefully bounded [commercial creator competition sample](ontology/youtube/competition-observations.md), a [format-by-format earning and linking guide](ontology/youtube/content-formats.md), and a [viewer discovery and retention model](ontology/youtube/creator-growth.md). These sources have different denominators and are not combined into a fabricated average or ranking.

@@ -539,6 +539,21 @@ test('Promotion paid billable views, YPP eligibility and owner attribution remai
  assert(Object.values(model.unknowns).every(x=>x===null));
 });
 
+test('Reported H1 2026 microdrama viewing distinguishes events, watch time and TV growth',async()=>{
+ const [data,dossier]=await Promise.all([
+  load('ontology/youtube/video-surfaces-economics.json'),load('specimens/youtube.json')
+ ]);
+ const ids=new Set(dossier.evidence.map(s=>s.id));
+ const events=data.microdrama_observations;
+ assert.equal(events.length,3);
+ assert(events.every(x=>ids.has(x.source_id)&&x.unique_people===null&&x.creator_count===null&&x.revenues===null));
+ assert.equal(events.find(x=>x.id==='h1_2026_microdrama_views').value,6500000000);
+ assert.equal(events.find(x=>x.id==='h1_2026_microdrama_views').metric_definition_revision,'before_2026_08_24');
+ assert.equal(events.find(x=>x.id==='h1_2026_microdrama_watchtime_growth').value,50);
+ assert.equal(events.find(x=>x.id==='h1_2026_tv_microdrama_view_growth').value,90);
+ assert(events.slice(1).every(x=>x.denominator===null&&x.baseline_value===null));
+});
+
 test('Posts and membership retention preserve impressions, people and transaction boundaries',async()=>{
  const [data,dossier]=await Promise.all([
   load('ontology/youtube/retention-posts-memberships.json'),load('specimens/youtube.json')
@@ -560,6 +575,13 @@ test('Posts and membership retention preserve impressions, people and transactio
  assert(data.membership_register.every(x=>x.source_ids.every(id=>ids.has(id))));
  assert(data.post_metric_register.every(x=>x.source_ids.every(id=>ids.has(id))));
  assert(Object.values(data.unknowns).every(x=>x===null));
+ const posts=data.platform_scale_claims?.[0];
+ assert.equal(posts.id,'daily_posts_engaging_users');
+ assert.equal(posts.reported_value,300000000);
+ assert.equal(posts.comparison,'>');
+ assert.equal(posts.actual_unique_people_deduplication,null);
+ assert.equal(posts.post_to_returning_viewer_effect,null);
+ assert(ids.has(posts.source_id));
  assert(data.inference_safeguards.some(x=>x.includes('causal')));
 });
 

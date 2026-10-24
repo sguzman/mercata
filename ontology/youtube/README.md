@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **172 references, 165 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **173 references, 166 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -188,6 +188,10 @@ The [channel onboarding study](channel-onboarding.md) and [six-stage machine mod
 ## An actual measured event audience
 
 [World Cup 2026 event viewers](event-audiences.md) are the first distinct-viewer content-community observation: YouTube reports over 1.7 billion unique people watching related videos worldwide during the tournament, with over 550 million watching on TV (a subset). This is defined event reach, **not the stable size of the soccer-fan community**. Broad topic population fields remain null. NFL viewing is tracked separately under general sports.
+
+## Dated September 2026 Posts and microdrama activity
+
+YouTube's [September 23, 2026 announcement](https://blog.youtube/news-and-events/made-on-youtube-creators-shorts-series-tv-features/) provides a reported average of over 300 million users interacting with Posts daily and historical H1 2026 microdrama viewing. [Post study](retention-posts-memberships.md) and [format study](video-surfaces-economics.md) retain the distinct user, view, watch-time, and TV-device event units; neither publisher claim verifies global person counts, creator-specific engagement or earnings.
 
 ## Posts, subscriber Communities and paid member retention
 

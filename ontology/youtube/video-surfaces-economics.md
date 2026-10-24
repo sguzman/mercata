@@ -2,6 +2,12 @@
 
 **Policy and evidence snapshot: October 24, 2026.** [Structured surface inventory](video-surfaces-economics.json). This documents what an eligible creator can potentially publish and monetize. It does **not** establish a profitable video length, average ad fill, typical first-year income, or cost by format.
 
+## September 2026 report on microdramas: three different metrics
+
+[YouTube's September 23, 2026 product announcement](https://blog.youtube/news-and-events/made-on-youtube-creators-shorts-series-tv-features/) reported **more than 6.5 billion microdrama views in January–June 2026**, **more than 50% year-over-year microdrama watch-time growth**, and **more than 90% year-over-year microdrama views on TVs**. These are *three different denominators*: a historical video-view count, a relative change in aggregate hours watched and a relative change in TV-device view events. The baseline watch-time and TV view counts and genre coding are not publicly disclosed there.
+
+These historical H1 video-view events precede the August 24, 2026 public-playback-start metric revision. Do not multiply the 6.5 billion cumulative views by watch-time or TV growth rates, interpret any figure as global distinct people, or derive individual creator revenue, subscriptions, publishing labor or causality from it. The [machine record](video-surfaces-economics.json) retains unknown baseline and outcome values as `null`.
+
 ## Seven distinct content surfaces
 
 | Surface | Officially documented behavior | What must not be inferred |

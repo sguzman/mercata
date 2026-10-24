@@ -1643,6 +1643,11 @@ function renderPostAndMembershipRetention(data,dossier) {
  }
  details.append(make('h5','post-membership-heading','Membership measurement units'));
  details.append(members);
+ const postsScale=data.platform_scale_claims?.find(x=>x.id==='daily_posts_engaging_users');
+ if(postsScale){
+   details.append(make('p','measure-limit','YouTube reported more than '+(postsScale.reported_value/1000000)+' million users engaging with Posts on an average day in September 2026. Independent user deduplication and channel-specific return effects are unknown.'));
+   details.append(audienceSources([postsScale.source_id],dossier));
+ }
  details.append(make('p','measure-limit','Regular viewers watched at least monthly for more than six months of the past year. A membership transaction may be a new sign-up or a renewal, not a distinct buyer.'));
  details.append(make('p','measure-limit','Average posting effect, unique membership buyers, renewal rate and net member profit: unknown.'));
  const link=make('a','inline-link','Read official measurement definitions, study design and caveats ↗');
@@ -1761,6 +1766,13 @@ function renderVideoSurfaceEconomics(data,dossier) {
   details.append(grid);
   details.append(make('p','measure-limit','Watch-page mid-roll eligibility begins at 8 minutes (480 seconds); actual delivery depends on ad demand, video experience and policy. Shorts revenue is not an 8-minute watch-page ad scheme.'));
   details.append(make('p','measure-limit','Live and archived replay audience, ad revenue and labor must be tracked separately, without adding cumulative views or people twice.'));
+  const drama=data.microdrama_observations||[];
+  if(drama.length){
+    const views=drama.find(x=>x.id==='h1_2026_microdrama_views');
+    details.append(make('p','measure-limit','YouTube reported more than '+(views.value/1000000000)+' billion microdrama views in January–June 2026, plus more than 50% year-over-year watch-time growth and more than 90% TV-device view growth. These are historical event and relative metrics, not unique people or creator payouts.'));
+    details.append(audienceSources([views.source_id],dossier));
+  }
+
   details.append(make('p','measure-limit','Official localized Help pages conflict on whether new claimed Shorts over one minute are automatically blocked after September 24, 2026; account-specific rights status remains unresolved.'));
   const anchor=make('a','inline-link','Read source-specific rules, rights inconsistency and replay research fields ↗');
   anchor.href='./ontology/youtube/video-surfaces-economics.md';anchor.target='_blank';anchor.rel='noopener noreferrer';
