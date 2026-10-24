@@ -3153,9 +3153,15 @@
           "title": "Identify shrinking or changing attention shares",
           "acceptance": "Use compatible historical categories and comparable time windows.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 54,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/declining-content-evidence.json",
+            "ontology/youtube/declining-content-evidence.md",
+            "site/topic-decline-audit.mjs",
+            "tests/topic-decline-audit.test.mjs",
+            "tests/site-smoke.mjs"
+          ]
         },
         {
           "id": "audience-trends/seasonality",
@@ -3219,7 +3225,7 @@
           "title": "Assess the reliability of niche-growth projections",
           "acceptance": "Explicitly document model assumptions, uncertainty and failed comparisons.",
           "weight": 1,
-          "progress": 82,
+          "progress": 86,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
@@ -3249,7 +3255,11 @@
             "ontology/youtube/seasonal-discovery-comparison.json",
             "ontology/youtube/seasonal-discovery-comparison.md",
             "ontology/youtube/nfl-view-seasonality-2026.json",
-            "ontology/youtube/children-media-seasonality.json"
+            "ontology/youtube/children-media-seasonality.json",
+            "ontology/youtube/declining-content-evidence.json",
+            "ontology/youtube/declining-content-evidence.md",
+            "site/topic-decline-audit.mjs",
+            "tests/topic-decline-audit.test.mjs"
           ]
         }
       ]
