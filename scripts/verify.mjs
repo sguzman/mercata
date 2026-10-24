@@ -421,10 +421,29 @@ for (const entry of index.specimens) {
       productionCosts.model.economic_profit_after_labor_valuation===null,
       'Unobserved typical cost or income must stay unknown');
 
-    ensure(productionCosts.adjacent_creator_surveys.length===1,
-      'Missing bounded adjacent creator production evidence');
+    ensure(productionCosts.adjacent_creator_surveys.length===2 &&
+      new Set(productionCosts.adjacent_creator_surveys.map(x=>x.id)).size===2,
+      'Missing or duplicated adjacent creator production evidence');
     for(const study of productionCosts.adjacent_creator_surveys){
-      ensure(study.respondents_total===558 && study.post_launch_respondents===null &&
+      ensure(sourceIds.has(study.source_id),'Unregistered adjacent creator labor study');
+      if(study.id==='timf-creators-2026'){
+        ensure(study.respondents_total===1000 && study.fieldwork_period==='2026-01' &&
+          study.country==='United States' && study.sample_frame_representative===false &&
+          study.google_or_youtube_channels_only===false &&
+          study.inference_to_typical_youtube_creator_cost==='prohibited',
+          'US cross-platform creator survey improperly used as YouTube labor census');
+        ensure(study.reported_human_work.denominator_n===null &&
+          study.reported_human_work.exhaustive_categories===false &&
+          study.reported_human_work.selected_bins.length===2 &&
+          study.reported_human_work.median_hours===null &&
+          study.reported_operating_cash===null &&
+          study.youtube_subgroup_n===null &&
+          study.creator_profit_median===null,
+          'Unsupported labor histogram, YouTube subgroup or creator profit inferred');
+        continue;
+      }
+      ensure(study.id==='alitu-indiepod-2025' &&
+        study.respondents_total===558 && study.post_launch_respondents===null &&
         study.sample_frame_representative===false &&
         study.google_or_youtube_channels_only===false &&
         study.inference_to_typical_youtube_creator_cost==='prohibited',
