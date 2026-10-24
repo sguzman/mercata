@@ -236,6 +236,7 @@ test('Announced 2027 YPP entry changes distinguish existing Shorts members and P
 });
 
 
+test('YouTube onboarding keeps channel creation, feature access and monetization separate',async()=>{
   const [access,dossier]=await Promise.all([
     load('ontology/youtube/channel-onboarding.json'),load('specimens/youtube.json')
   ]);
