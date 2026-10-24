@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "channel_ownership_and_continuity",
+  "reviewed_at": "2026-10-23",
+  "scope": "Public account and channel governance, not legal assignment of copyrighted assets or financial valuation.",
+  "operations": [
+    {
+      "id": "delegate_studio",
+      "label": "Delegate channel work",
+      "authority": "YouTube Studio channel permissions",
+      "roles": [
+        "owner",
+        "manager",
+        "editor",
+        "editor_limited",
+        "viewer",
+        "viewer_limited"
+      ],
+      "source_ids": [
+        "yt-studio-channel-permissions",
+        "yt-brand-studio-migration"
+      ],
+      "effect": "Granular access to upload, edit, manage or inspect a channel without handing over Google sign-in credentials.",
+      "restrictions": [
+        "Studio permission owner role does not transfer Brand Account primary ownership.",
+        "Editor Limited and Viewer Limited cannot inspect revenue analytics.",
+        "Managers may delete drafts but cannot delete the channel.",
+        "Delegated access may not support all third-party API operations."
+      ],
+      "estimated_cost": null,
+      "estimated_time_days": null,
+      "irreversible": false
+    },
+    {
+      "id": "transfer_brand_primary_owner",
+      "label": "Transfer primary ownership of a Brand Account",
+      "authority": "Google Brand Account ownership permissions",
+      "roles": [
+        "primary_owner",
+        "owner",
+        "manager"
+      ],
+      "source_ids": [
+        "google-brand-primary-owner",
+        "yt-brand-studio-migration"
+      ],
+      "effect": "Change the Google Account with primary ownership control of the Brand Account and associated channel.",
+      "restrictions": [
+        "Current owner making change has held ownership at least seven days.",
+        "New primary owner candidate has been an owner or manager for at least seven days.",
+        "An account must retain one primary owner.",
+        "Transfer may require opting out of YouTube Studio channel permissions."
+      ],
+      "minimum_days_as_owner_source": 7,
+      "new_owner_or_manager_minimum_days": 7,
+      "estimated_cost": null,
+      "irreversible": false
+    },
+    {
+      "id": "move_between_brand_accounts",
+      "label": "Move channel into another Brand Account",
+      "authority": "YouTube advanced settings and primary Google Account owner",
+      "roles": [
+        "primary_owner"
+      ],
+      "source_ids": [
+        "yt-brand-channel-transfer"
+      ],
+      "effect": "Move one channel and its uploaded videos between eligible Brand Accounts associated with the same Google Account.",
+      "restrictions": [
+        "Destination channel can be permanently deleted upon replacement.",
+        "Source-side watch/search history, creator demographics given by owner, and gift settings may be lost.",
+        "Destination videos, messages, playlists, channel history and verification badge may be lost.",
+        "Opt out of Studio permissions and remove invited delegates if required before transfer.",
+        "Requires correct account selection and reauthentication.",
+        "Supervised accounts cannot complete the standard transfer."
+      ],
+      "estimated_cost": null,
+      "irreversible_risk": true,
+      "guaranteed_preservation_of_assets": false
+    },
+    {
+      "id": "export_own_content",
+      "label": "Export uploaded videos",
+      "authority": "YouTube Studio or Google Takeout",
+      "roles": [
+        "authorized_owner"
+      ],
+      "source_ids": [
+        "yt-own-video-download"
+      ],
+      "effect": "Download creator-owned uploaded video files according to service features and availability.",
+      "restrictions": [
+        "YouTube Studio MP4 downloads can be 720p or 360p depending on video.",
+        "Google Takeout is an option to obtain uploaded videos in bulk.",
+        "Removed videos, videos with certain strikes or preapproved audio may be unavailable via Studio download.",
+        "An individual video can be downloaded at most five times a day using Studio.",
+        "Exporting uploaded video does not mean exporting subscribers, comments, monetization eligibility, watch histories or transferable creator income."
+      ],
+      "guaranteed_original_editing_project": false,
+      "guaranteed_full_channel_export": false,
+      "estimated_cost": null
+    },
+    {
+      "id": "termination_appeal",
+      "label": "Appeal channel termination",
+      "authority": "YouTube Studio termination appeal process",
+      "roles": [
+        "affected_channel_owner"
+      ],
+      "source_ids": [
+        "yt-channel-termination"
+      ],
+      "effect": "Challenge a termination through published appeal options.",
+      "restrictions": [
+        "YouTube says appeal can be submitted within one year of termination.",
+        "Only two appeals can be submitted within the one-year period and further single-channel limits can apply.",
+        "Copyright takedown counter-notifications are legal processes, separate from ordinary terminations.",
+        "After termination, YouTube content cannot be downloaded through normal YouTube export while Google data access can remain."
+      ],
+      "appeal_window_max_days": null,
+      "appeal_window_text": "up to one year",
+      "appeals_within_one_year_max": 2,
+      "successful_appeal_probability": null
+    }
+  ],
+  "security_principles": [
+    "Use role-based delegated access rather than password sharing.",
+    "Use 2-Step Verification and retain secure account recovery methods, with secrets outside the research repository.",
+    "Assign only the least privileges needed; limited viewer/editor access can conceal revenue figures from delegates.",
+    "Protect the primary owner's Google Account; deleting it can also delete a linked channel.",
+    "Retain original production assets, licenses and rights documentation independently from YouTube Studio exports.",
+    "Do not perform channel relocation without identifying both the source and destination and explicitly checking potential irreversible deletion.",
+    "Never store private account emails, sign-in factors, transfer tokens, ownership contracts or uploaded content in this public research dataset."
+  ],
+  "business_value_limits": {
+    "can_assume_channel_is_freely_saleable": false,
+    "legal_transferability_of_revenue_contract": null,
+    "transferability_of_subscribers_as_individual_asset": null,
+    "retention_of_verification_badge_on_move": false,
+    "preservation_of_current_ypp_contract_after_move": null,
+    "tax_or_business_sale_valuation": null,
+    "expected_downtime_days": null,
+    "account_recovery_success_probability": null
+  },
+  "study_state": "official_documented_general_rules_no_accounts_accessed",
+  "research_gaps": [
+    "Business asset assignment and legal contract terms",
+    "Transfer outcomes and payout continuity verified across cases",
+    "Representative channel recovery risk and restoration times",
+    "Retention of creator metrics, comments, playlists and income contracts in transfers",
+    "Cost of creating independent backup and licensing workflow"
+  ]
+}
