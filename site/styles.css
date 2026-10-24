@@ -885,3 +885,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .beauty-fashion-query-card strong{font:20px Georgia,serif;font-variant-numeric:tabular-nums}
 .beauty-fashion-query-card p{font-size:12px;margin:7px 0}
 @media(max-width:650px){.beauty-fashion-query-details{padding:15px}.beauty-fashion-query-grid{grid-template-columns:1fr}}
+
+/* Observed sports growth endpoints and offshore share are not a full time series. */
+.nfl-seasonality{margin:28px 0}
+.nfl-seasonality-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.nfl-seasonality-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.nfl-seasonality-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:17px 0}
+.nfl-seasonality-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.nfl-seasonality-card strong{font:23px Georgia,serif;font-variant-numeric:tabular-nums}
+.nfl-seasonality-card h5{font-size:13px;margin:10px 0 7px}
+.nfl-seasonality-card p{font-size:12px;margin:0}
+@media(max-width:650px){.nfl-seasonality-details{padding:15px}.nfl-seasonality-grid{grid-template-columns:1fr}}

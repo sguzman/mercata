@@ -1,6 +1,6 @@
 # YouTube source provenance and independence audit
 
-**Snapshot: October 23, 2026.** Mercata's evidence register contained **187 source-reference records**, **203 claims**, and **seven normalized URL pairs** that pointed to the same document. **131** records have an unknown exact publication date; these are not automatically defective sources, because public help pages may be continuously updated. Every record must retain a retrieval date.
+**Snapshot: October 23, 2026.** Mercata's evidence register contained **187 source-reference records**, **204 claims**, and **seven normalized URL pairs** that pointed to the same document. **131** records have an unknown exact publication date; these are not automatically defective sources, because public help pages may be continuously updated. Every record must retain a retrieval date.
 
 The [machine-readable family declarations](source-families.json) provide a formal list of shared source records, including a separately categorized underlying **NeoReach survey** that also appears in a partner publication. Two different URLs are not always two independently sampled studies.
 

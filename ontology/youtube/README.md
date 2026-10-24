@@ -253,6 +253,10 @@ The [news-audience survey profile](community-audience-studies.md) uses Pew's 202
 
 A [2026 commercial sample study](competition-observations.md) describes subscriber-tier movement and traffic sources across 71,177 observed accounts, while exposing its unknown recruitment frame and incomplete observation dates. The [machine record](competition-observations.json) keeps these descriptive statistics out of representative newcomer-success estimates.
 
+## NFL content: measured multi-year growth and offseason activity
+
+The [NFL video trend and seasonality study](nfl-view-seasonality-2026.md) and [machine observation case](nfl-view-seasonality-2026.json) retain an official 2025 global view count, bounded 2020–2025 view/upload growth rates and the reported **more than 30% within-2025 offseason viewing share**. This is not a complete annual or monthly series, nor a causal measure of seasonal lift or a creator-income forecast. All missing intermediate annual data, unique viewers and profit outcomes remain unknown.
+
 ## Dated beauty/fashion title queries, seasonal hypotheses and incompatible units
 
 The [beauty and fashion title-query review](beauty-fashion-query-series.md) and [machine query register](beauty-fashion-query-series.json) keep GRWM, prom, Halloween makeup, beginner sewing and morning-routine **uploads** separate by source date, search predicate and measurement unit. Event-related seasonality and category turnover remain hypotheses because repeated same-definition monthly series are unavailable. The 2026 playback-start metric break also prohibits careless old/new view comparisons. Unique people, year-over-year growth and creator profit remain unknown.

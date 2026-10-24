@@ -280,6 +280,12 @@ try{
     assert((await collab.textContent()).includes('up to 10 collaborators'));
     assert((await collab.textContent()).includes('does not split collaboration payouts'));
     assert((await collab.textContent()).includes('No collaboration earnings'));
+    const nfl=page.locator('.nfl-seasonality');
+    assert.equal(await nfl.locator('.nfl-seasonality-card').count(),4,'Missing measured NFL view/upload/offseason distinctions');
+    await nfl.locator('summary').click();
+    assert((await nfl.textContent()).includes('More than 20 billion'));
+    assert((await nfl.textContent()).includes('not 30% seasonal growth'));
+    assert((await nfl.textContent()).includes('must not be interpolated'));
     const styleQueries=page.locator('.beauty-fashion-query-series');
     assert.equal(await styleQueries.locator('.beauty-fashion-query-card').count(),5,'Missing source-scoped beauty/fashion title observations');
     await styleQueries.locator('summary').click();

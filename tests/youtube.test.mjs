@@ -799,6 +799,24 @@ test('Seven video monetization surfaces distinguish inventory, replay and disput
   assert(Object.values(model.unknowns).every(x=>x===null));
 });
 
+test('2020–25 NFL source distinguishes views, uploads and within-year offseason proportion',async()=>{
+ const [model,dossier]=await Promise.all([
+  load('ontology/youtube/nfl-view-seasonality-2026.json'),load('specimens/youtube.json')
+ ]);
+ assert.equal(model.kind,'nfl_viewing_seasonality_and_growth_case');
+ assert.equal(model.source_id,'yt-nfl-culture-2026');
+ assert(dossier.evidence.some(x=>x.id===model.source_id));
+ assert.deepEqual(model.observations.map(x=>x.value),[20000000000,250,400,30]);
+ assert.deepEqual(model.observations.map(x=>x.unit),[
+  'view_events','relative_percent_increase','relative_percent_increase','percent_of_2025_nfl_related_view_events'
+ ]);
+ assert(model.observations.every(x=>x.comparator==='greater_than'&&x.is_interpolated===false));
+ assert.equal(model.sampling_gaps.annual_view_series_2021_2024,null);
+ assert.equal(model.sampling_gaps.month_by_month_view_series,null);
+ assert.equal(model.publication_gates.filter(x=>x.fulfilled).length,2);
+ assert(Object.values(model.unmeasured).every(x=>x===null));
+});
+
 test('Beauty/fashion title-query observations never mix uploads, views and seasonal growth',async()=>{
  const [model,dossier,observations]=await Promise.all([
   load('ontology/youtube/beauty-fashion-query-series.json'),load('specimens/youtube.json'),load('ontology/youtube/topic-observations.json')
