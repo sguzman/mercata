@@ -1856,7 +1856,7 @@ function renderTeenVideoFormatEvidence(data,dossier){
   const section=make('section','teen-format-evidence');
   const details=make('details','teen-format-details');
   details.append(make('summary','','Child video genres: Australia YouTube, UK cross-app, US teen surveys'));
-  details.append(make('p','measure-limit','Australia's 2025 Young Australians Survey directly measured YouTube genres among children aged 6–13. UK genre percentages concern all video apps, NOT YouTube alone; U.S. teen platform use has no genre breakdown. These studies do not establish global genre audiences or individual identities.'));
+  details.append(make('p','measure-limit','A 2025 Australian youth survey directly measured YouTube genres among children aged 6–13. UK genre percentages concern all video apps, NOT YouTube alone; U.S. teen platform use has no genre breakdown. These studies do not establish global genre audiences or individual identities.'));
   const grid=make('div','teen-format-grid');
   for(const block of data.video_genre_observations){
     const card=make('article','teen-format-card');
