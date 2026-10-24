@@ -1,0 +1,444 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "content_production_barrier_and_educational_entertainment_comparison",
+  "as_of": "2026-10-24",
+  "status": "documented_platform_constraints_and_comparison_design_not_empirical_labor_benchmark",
+  "method": "Constructive production-stage mapping and matched-cohort comparison design grounded in official format/rights constraints; required stages are a research template, not a mandatory YouTube workflow or observed typical requirements.",
+  "population": "Independent YouTube creator businesses, including first-time participants, unmonetized channels, abandoned projects, published videos, and unsuccessful attempts",
+  "cost_protocol_path": "ontology/youtube/production-costs.json",
+  "source_ids": [
+    "shorts-upload-help",
+    "live-general-help",
+    "podcast-create-help",
+    "music-content-id",
+    "music-audio-library",
+    "music-copyright-strikes",
+    "timf-creators-2026",
+    "indiepod-2025",
+    "metricool-youtube-2026-sample"
+  ],
+  "stage_dictionary": [
+    "research_ideation",
+    "writing_storyboarding",
+    "filming_capture",
+    "art_animation",
+    "audio_music_clearance",
+    "editing_accessibility",
+    "thumbnail_metadata",
+    "distribution_promotion",
+    "community_moderation",
+    "business_admin_revision"
+  ],
+  "cash_dictionary": [
+    "acquisition_hardware",
+    "owned_equipment_use",
+    "software_subscriptions",
+    "cloud_storage_and_network",
+    "rights_and_music",
+    "contractor_labor",
+    "sets_travel_props",
+    "promotion_ad_buy",
+    "transaction_fulfillment",
+    "administration_compliance"
+  ],
+  "gate_definitions": [
+    {
+      "id": "recording_and_setup",
+      "type": "production",
+      "source_ids": [
+        "live-general-help"
+      ],
+      "condition": "Live or recorded workflows require the selected capture approach and its setup; no particular hardware purchase is compulsory."
+    },
+    {
+      "id": "rights_clearance",
+      "type": "rights",
+      "source_ids": [
+        "music-content-id",
+        "music-audio-library",
+        "music-copyright-strikes"
+      ],
+      "condition": "Third-party audio/visual assets may require proof of permission; Content ID may cause blocks, tracking or rights-holder monetization."
+    },
+    {
+      "id": "shorts_constraints",
+      "type": "platform",
+      "source_ids": [
+        "shorts-upload-help"
+      ],
+      "condition": "Shorts publishing has duration/orientation and rights rules; do not assume the same editing or monetization conditions as watch-page videos."
+    },
+    {
+      "id": "live_eligibility_and_reliability",
+      "type": "platform",
+      "source_ids": [
+        "live-general-help"
+      ],
+      "condition": "Channel verification, minimum age and restrictions apply. Live operation may add monitoring, connectivity and audience moderation."
+    },
+    {
+      "id": "production_effort_accounting",
+      "type": "method",
+      "source_ids": [
+        "timf-creators-2026",
+        "indiepod-2025"
+      ],
+      "condition": "Measure creator time by stage and completed/abandoned outcome. Existing cross-platform surveys are neither representative YouTube-only hours nor causal format comparisons."
+    }
+  ],
+  "workflows": [
+    {
+      "id": "scripted_educational_explainer",
+      "title": "Scripted educational explainer",
+      "content_kind": "education",
+      "publishing_surface": "regular-video",
+      "required_stage_ids": [
+        "research_ideation",
+        "writing_storyboarding",
+        "filming_capture",
+        "editing_accessibility",
+        "thumbnail_metadata",
+        "business_admin_revision"
+      ],
+      "conditional_stage_ids": [
+        "art_animation",
+        "audio_music_clearance",
+        "distribution_promotion",
+        "community_moderation"
+      ],
+      "candidate_cash_category_ids": [
+        "software_subscriptions",
+        "cloud_storage_and_network",
+        "rights_and_music",
+        "contractor_labor",
+        "administration_compliance"
+      ],
+      "primary_execution_risks": [
+        "source_accuracy",
+        "demonstration_accessibility",
+        "third_party_footage_rights"
+      ],
+      "official_source_ids": [
+        "music-content-id",
+        "music-audio-library"
+      ],
+      "measured_median_labor_hours": null,
+      "measured_median_cash_cost": null,
+      "representative_completed_projects_n": null,
+      "representative_abandoned_projects_n": null,
+      "notes": "Research verification is a defined study-stage hypothesis, not a measured hours advantage or proof educational content is always expensive."
+    },
+    {
+      "id": "unscripted_entertainment",
+      "title": "Unscripted entertainment or commentary",
+      "content_kind": "entertainment",
+      "publishing_surface": "regular-video",
+      "required_stage_ids": [
+        "research_ideation",
+        "filming_capture",
+        "editing_accessibility",
+        "thumbnail_metadata",
+        "business_admin_revision"
+      ],
+      "conditional_stage_ids": [
+        "writing_storyboarding",
+        "audio_music_clearance",
+        "distribution_promotion",
+        "community_moderation",
+        "art_animation"
+      ],
+      "candidate_cash_category_ids": [
+        "acquisition_hardware",
+        "owned_equipment_use",
+        "cloud_storage_and_network",
+        "rights_and_music",
+        "sets_travel_props"
+      ],
+      "primary_execution_risks": [
+        "improvised_capture_retake",
+        "rights_to_clips_music",
+        "post_capture_editing"
+      ],
+      "official_source_ids": [
+        "music-content-id"
+      ],
+      "measured_median_labor_hours": null,
+      "measured_median_cash_cost": null,
+      "representative_completed_projects_n": null,
+      "representative_abandoned_projects_n": null,
+      "notes": "Lack of a full script does not prove fewer hours; retrospective selection and revisions can dominate."
+    },
+    {
+      "id": "gameplay_commentary",
+      "title": "Gameplay commentary or review",
+      "content_kind": "entertainment",
+      "publishing_surface": "regular-video",
+      "required_stage_ids": [
+        "research_ideation",
+        "filming_capture",
+        "editing_accessibility",
+        "thumbnail_metadata",
+        "business_admin_revision"
+      ],
+      "conditional_stage_ids": [
+        "writing_storyboarding",
+        "audio_music_clearance",
+        "distribution_promotion",
+        "community_moderation",
+        "art_animation"
+      ],
+      "candidate_cash_category_ids": [
+        "owned_equipment_use",
+        "software_subscriptions",
+        "cloud_storage_and_network",
+        "rights_and_music"
+      ],
+      "primary_execution_risks": [
+        "gameplay_reuse_and_rights",
+        "recording_performance",
+        "commentary_clarity"
+      ],
+      "official_source_ids": [
+        "music-content-id"
+      ],
+      "measured_median_labor_hours": null,
+      "measured_median_cash_cost": null,
+      "representative_completed_projects_n": null,
+      "representative_abandoned_projects_n": null,
+      "notes": "Game licensing, game footage, music and commentary rights are separate; computing-power requirements are not universal."
+    },
+    {
+      "id": "animated_explainer",
+      "title": "Animated educational explainer",
+      "content_kind": "education",
+      "publishing_surface": "regular-video",
+      "required_stage_ids": [
+        "research_ideation",
+        "writing_storyboarding",
+        "art_animation",
+        "audio_music_clearance",
+        "editing_accessibility",
+        "thumbnail_metadata",
+        "business_admin_revision"
+      ],
+      "conditional_stage_ids": [
+        "filming_capture",
+        "distribution_promotion",
+        "community_moderation"
+      ],
+      "candidate_cash_category_ids": [
+        "software_subscriptions",
+        "rights_and_music",
+        "contractor_labor",
+        "owned_equipment_use"
+      ],
+      "primary_execution_risks": [
+        "research_accuracy",
+        "animation_asset_provenance",
+        "voice_and_audio_clearance"
+      ],
+      "official_source_ids": [
+        "music-content-id",
+        "music-audio-library"
+      ],
+      "measured_median_labor_hours": null,
+      "measured_median_cash_cost": null,
+      "representative_completed_projects_n": null,
+      "representative_abandoned_projects_n": null,
+      "notes": "Animation production can overlap with editing and graphic assets; double-counted creator hours must be prevented."
+    },
+    {
+      "id": "animated_entertainment",
+      "title": "Animated entertainment or skit",
+      "content_kind": "entertainment",
+      "publishing_surface": "regular-video",
+      "required_stage_ids": [
+        "research_ideation",
+        "writing_storyboarding",
+        "art_animation",
+        "audio_music_clearance",
+        "editing_accessibility",
+        "thumbnail_metadata",
+        "business_admin_revision"
+      ],
+      "conditional_stage_ids": [
+        "filming_capture",
+        "distribution_promotion",
+        "community_moderation"
+      ],
+      "candidate_cash_category_ids": [
+        "software_subscriptions",
+        "rights_and_music",
+        "contractor_labor",
+        "owned_equipment_use"
+      ],
+      "primary_execution_risks": [
+        "character_and_music_rights",
+        "voice_recording",
+        "asset_reuse_and_revision"
+      ],
+      "official_source_ids": [
+        "music-content-id",
+        "music-audio-library"
+      ],
+      "measured_median_labor_hours": null,
+      "measured_median_cash_cost": null,
+      "representative_completed_projects_n": null,
+      "representative_abandoned_projects_n": null,
+      "notes": "Same stage presence does not mean same difficulty; narrative complexity and reuse must be matched."
+    },
+    {
+      "id": "live_educational_session",
+      "title": "Live demonstration or teaching",
+      "content_kind": "education",
+      "publishing_surface": "live-webcam-encoder",
+      "required_stage_ids": [
+        "research_ideation",
+        "filming_capture",
+        "community_moderation",
+        "business_admin_revision"
+      ],
+      "conditional_stage_ids": [
+        "writing_storyboarding",
+        "art_animation",
+        "audio_music_clearance",
+        "editing_accessibility",
+        "thumbnail_metadata",
+        "distribution_promotion"
+      ],
+      "candidate_cash_category_ids": [
+        "cloud_storage_and_network",
+        "owned_equipment_use",
+        "software_subscriptions",
+        "contractor_labor"
+      ],
+      "primary_execution_risks": [
+        "live_channel_eligibility",
+        "stream_health",
+        "live_moderation",
+        "live_replay_rights"
+      ],
+      "official_source_ids": [
+        "live-general-help",
+        "music-content-id"
+      ],
+      "measured_median_labor_hours": null,
+      "measured_median_cash_cost": null,
+      "representative_completed_projects_n": null,
+      "representative_abandoned_projects_n": null,
+      "notes": "Streaming shifts some editing work to real-time operation and possible archive/replay editing; does not eliminate labor."
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "id": "scripted_education_vs_unscripted_entertainment",
+      "a": "scripted_educational_explainer",
+      "b": "unscripted_entertainment",
+      "match_on": [
+        "creator_experience",
+        "format_length_target",
+        "country",
+        "language",
+        "video_complexity",
+        "publication_period",
+        "equipment_access"
+      ],
+      "outcomes": [
+        "creator_hours_per_project_including_abandoned",
+        "cash_expense_per_attempt",
+        "eligible_completed_outputs",
+        "post_publish_moderation_hours"
+      ],
+      "expected_direction": null,
+      "observed_effect_size": null,
+      "causal_identification": false
+    },
+    {
+      "id": "animated_education_vs_animated_entertainment",
+      "a": "animated_explainer",
+      "b": "animated_entertainment",
+      "match_on": [
+        "creator_experience",
+        "animation_style_complexity",
+        "duration",
+        "character_assets_available",
+        "reuse_policy",
+        "country",
+        "year"
+      ],
+      "outcomes": [
+        "creator_hours_per_finished_video",
+        "rights_cost",
+        "abandoned_fraction"
+      ],
+      "expected_direction": null,
+      "observed_effect_size": null,
+      "causal_identification": false
+    },
+    {
+      "id": "recorded_education_vs_live_teaching",
+      "a": "scripted_educational_explainer",
+      "b": "live_educational_session",
+      "match_on": [
+        "same_topic",
+        "expected_target_audience",
+        "creator_experience",
+        "planning_depth",
+        "technology_access"
+      ],
+      "outcomes": [
+        "total_hours_including_mod_and_replay",
+        "successful_publish_share",
+        "cash_outlays"
+      ],
+      "expected_direction": null,
+      "observed_effect_size": null,
+      "causal_identification": false
+    }
+  ],
+  "reporting_unit": "creator_business_content_attempt",
+  "reporting_basis": "per attempted project and per completed project separately",
+  "required_observation_fields": [
+    "project_id_pseudonymous",
+    "creator_cohort_id_pseudonymous",
+    "entry_status",
+    "source_and_consent_basis",
+    "country",
+    "currency",
+    "format",
+    "topic_complexity",
+    "attempt_start",
+    "attempt_end",
+    "published_at_or_null",
+    "published_duration_or_null",
+    "stage_hours_recorded",
+    "hours_missing_reason",
+    "cash_outlays_by_category",
+    "asset_use_without_new_cash",
+    "rights_status",
+    "completion_status",
+    "audience_and_earnings_outcomes_separately",
+    "source_ids"
+  ],
+  "prohibitions": [
+    "Do not equate an enumerated production stage with a compulsory step or observed amount of work.",
+    "Do not rank education above entertainment based on the number of listed stages; stages differ in intensity and can run concurrently.",
+    "No synthetic numeric default hours, salaries, equipment prices or RPM are reported as empirical outcomes.",
+    "Include work on failed drafts, discarded projects, and channels that never monetize rather than completed content only.",
+    "Creator-owned equipment is not a zero economic cost or an automatic new cash purchase on every project.",
+    "Vendor surveys of mixed-platform creators or podcasts are context, not representative YouTube format comparisons.",
+    "Content ID claims, copyright removal requests and platform policy flags are distinct events.",
+    "Production complexity can vary more within a format than between broad education/entertainment labels."
+  ],
+  "results": {
+    "median_creator_hours_by_format": null,
+    "median_cash_cost_by_format": null,
+    "median_hours_education": null,
+    "median_hours_entertainment": null,
+    "creative_barrier_distribution": null,
+    "format_entry_cost_distribution": null,
+    "creator_profit_by_format": null,
+    "representative_format_causal_effect": null
+  }
+}
