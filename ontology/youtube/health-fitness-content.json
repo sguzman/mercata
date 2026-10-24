@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "fitness_wellness_health_content_research_scope",
+  "as_of": "2026-10-24",
+  "status": "public_policy_and_topic_scope_not_population_or_income_measurement",
+  "parent_topic_id": "fitness",
+  "related_topic_ids": [
+    "science",
+    "cooking",
+    "feminine-lifestyle",
+    "sports-general",
+    "beauty",
+    "news-and-journalism"
+  ],
+  "content_categories": [
+    {
+      "id": "exercise_guidance",
+      "label": "Routine exercise and workouts",
+      "examples": [
+        "bodyweight instruction",
+        "strength technique",
+        "low-impact movement"
+      ],
+      "medical_claim_classification": "not_assumed_from_topic_alone",
+      "claim_review_required": "When treatments, prevention or guaranteed physical outcomes are asserted",
+      "sources": [
+        "yt-medical-misinformation-2026",
+        "yt-ads-guidelines-2026"
+      ],
+      "unique_audience": null,
+      "creator_count": null,
+      "revenue_per_view": null
+    },
+    {
+      "id": "sport_training",
+      "label": "Sport-specific conditioning",
+      "examples": [
+        "running training",
+        "sport drills",
+        "movement mechanics"
+      ],
+      "medical_claim_classification": "depends_on_actual_claims",
+      "claim_review_required": "Check injury-treatment claims and dangerous imitable activity separately",
+      "sources": [
+        "yt-medical-misinformation-2026",
+        "yt-ads-guidelines-2026"
+      ],
+      "unique_audience": null,
+      "creator_count": null,
+      "revenue_per_view": null
+    },
+    {
+      "id": "yoga_mobility",
+      "label": "Yoga, stretching and mobility",
+      "examples": [
+        "guided mobility",
+        "meditative movement",
+        "accessible stretches"
+      ],
+      "medical_claim_classification": "depends_on_actual_claims",
+      "claim_review_required": "Do not treat relaxation or movement practice as a proven cure for a diagnosed condition",
+      "sources": [
+        "yt-medical-misinformation-2026"
+      ],
+      "unique_audience": null,
+      "creator_count": null,
+      "revenue_per_view": null
+    },
+    {
+      "id": "nutrition_lifestyle",
+      "label": "Nutrition and general wellness education",
+      "examples": [
+        "meal patterns",
+        "food literacy",
+        "evidence explainer"
+      ],
+      "medical_claim_classification": "depends_on_treatment_and_prevention_claims",
+      "claim_review_required": "Avoid unsubstantiated disease cures, unsafe dietary claims and eating-disorder promotion",
+      "sources": [
+        "yt-medical-misinformation-2026",
+        "yt-eating-disorders-2026"
+      ],
+      "unique_audience": null,
+      "creator_count": null,
+      "revenue_per_view": null
+    },
+    {
+      "id": "clinical_education",
+      "label": "Health conditions and clinical explainers",
+      "examples": [
+        "health literacy",
+        "condition definitions",
+        "professional educational lectures"
+      ],
+      "medical_claim_classification": "health_claims_possible",
+      "claim_review_required": "Medical prevention/treatment guidance is subject to local health-authority standards and contextual policies",
+      "sources": [
+        "yt-medical-misinformation-2026",
+        "yt-health-features-2026"
+      ],
+      "unique_audience": null,
+      "creator_count": null,
+      "revenue_per_view": null
+    },
+    {
+      "id": "first_aid",
+      "label": "First aid and emergency topics",
+      "examples": [
+        "first aid orientation",
+        "basic safety awareness"
+      ],
+      "medical_claim_classification": "health_claims_possible",
+      "claim_review_required": "Health-source first aid shelf is separately curated and region-limited; publishing does not confer an endorsement",
+      "sources": [
+        "yt-health-features-2026",
+        "yt-health-source-application-2026"
+      ],
+      "unique_audience": null,
+      "creator_count": null,
+      "revenue_per_view": null
+    },
+    {
+      "id": "mental_wellness",
+      "label": "Mental-health awareness and supportive discussion",
+      "examples": [
+        "stress education",
+        "supportive recovery stories"
+      ],
+      "medical_claim_classification": "sensitive_context_dependent",
+      "claim_review_required": "Distinguish awareness and personal experience from treatment claims, unsafe self-harm advice or targeted minor content",
+      "sources": [
+        "yt-eating-disorders-2026",
+        "yt-medical-misinformation-2026"
+      ],
+      "unique_audience": null,
+      "creator_count": null,
+      "revenue_per_view": null
+    },
+    {
+      "id": "body_image",
+      "label": "Body image, weight and eating-disorder topics",
+      "examples": [
+        "body image education",
+        "recovery-oriented discussion"
+      ],
+      "medical_claim_classification": "sensitive_context_dependent",
+      "claim_review_required": "Promotion of dangerous restrictive behaviors and content aimed at minors faces stricter platform and advertising scrutiny",
+      "sources": [
+        "yt-eating-disorders-2026",
+        "yt-ads-guidelines-2026"
+      ],
+      "unique_audience": null,
+      "creator_count": null,
+      "revenue_per_view": null
+    },
+    {
+      "id": "products_and_affiliates",
+      "label": "Fitness products and commercial claims",
+      "examples": [
+        "equipment reviews",
+        "training subscriptions",
+        "sponsored supplements"
+      ],
+      "medical_claim_classification": "depends_on_advertised_claims_and_product",
+      "claim_review_required": "Separate creator disclosure, platform merchandising/ads, local regulated-product law, and medical evidence",
+      "sources": [
+        "yt-ads-guidelines-2026",
+        "yt-medical-misinformation-2026"
+      ],
+      "unique_audience": null,
+      "creator_count": null,
+      "revenue_per_view": null
+    }
+  ],
+  "policy_layers": [
+    {
+      "id": "medical_misinformation",
+      "source_ids": [
+        "yt-medical-misinformation-2026"
+      ],
+      "domain": "Community Guidelines",
+      "applies_to": "High-risk claims contradicting specified local health authority guidance about prevention/treatment of covered conditions and substances",
+      "not_equivalent_to": "all wellness content forbidden",
+      "scientific_context_matters": true,
+      "medical_authority_and_country_dependent": true
+    },
+    {
+      "id": "self_harm_eating_disorders",
+      "source_ids": [
+        "yt-eating-disorders-2026"
+      ],
+      "domain": "Community Guidelines",
+      "applies_to": "Promotion of self-harm/eating-disorder risks; context, target age, recovery and awareness distinctions",
+      "not_equivalent_to": "all discussion of eating disorders prohibited",
+      "scientific_context_matters": true,
+      "medical_authority_and_country_dependent": false
+    },
+    {
+      "id": "advertiser_suitability",
+      "source_ids": [
+        "yt-ads-guidelines-2026"
+      ],
+      "domain": "Ads eligibility",
+      "applies_to": "Ad suitability of videos, including harmful/unreliable medical claims and eating-disorder triggering details",
+      "not_equivalent_to": "all videos with limited ads are removed",
+      "scientific_context_matters": true,
+      "medical_authority_and_country_dependent": false
+    },
+    {
+      "id": "health_source_discovery",
+      "source_ids": [
+        "yt-health-features-2026",
+        "yt-health-source-application-2026"
+      ],
+      "domain": "Optional discovery and health-source labels",
+      "applies_to": "Eligible vetted health providers/channels and country/language supported feature sets",
+      "not_equivalent_to": "all fitness creators receive verified health badge",
+      "scientific_context_matters": false,
+      "medical_authority_and_country_dependent": true
+    }
+  ],
+  "health_features": {
+    "source_ids": [
+      "yt-health-features-2026",
+      "yt-health-source-application-2026"
+    ],
+    "types": [
+      "health_source_context_panels",
+      "search_health_content_shelves",
+      "select_first_aid_shelves"
+    ],
+    "available_everywhere": false,
+    "professionally_vetted_applicant_countries": [
+      "US",
+      "GB",
+      "DE",
+      "BR",
+      "ID",
+      "JP",
+      "FR",
+      "KR",
+      "CA",
+      "MX"
+    ],
+    "application_requires_eligible_health_profession": true,
+    "watch_hour_alternative": {
+      "valid_public_watch_hours": 1500,
+      "period_days": 365,
+      "strictly_greater_than": true
+    },
+    "shorts_alternative": {
+      "valid_public_shorts_views": 1500000,
+      "period_days": 90,
+      "strictly_greater_than": false
+    },
+    "no_active_community_guideline_strikes": true,
+    "review_outcome_guaranteed": false,
+    "related_shelf_access_not_a_payout_or_monetization_right": true,
+    "notes": "Snapshot of official policy. Geographic applications, thresholds and source status must be reverified. Shelf availability varies by language, condition and country."
+  },
+  "research_protocol": {
+    "eligible_aggregate_unit": "public_video_by_observation_period_with_topic_annotations_not_assumed_medical_qualification",
+    "required_fields": [
+      "source_url",
+      "sampling_frame",
+      "observation_date",
+      "region",
+      "video_format",
+      "topic_definition",
+      "claims_policy_layer",
+      "content_safety_context",
+      "views_metric_revision",
+      "channel_deduplication",
+      "source_license",
+      "sampling_limitations"
+    ],
+    "disallowed_inferences": [
+      "topic-to-medical-license",
+      "content-creator-gender-or-health-status",
+      "audience-minor-or-patient-status-from-views",
+      "policy-category-to-measured-monetization-rate",
+      "title-keyword-to-verified-diagnosis",
+      "views-or-subscribers-to-unique-person-population"
+    ],
+    "privacy": "Aggregate public research only; no diagnosis from user comments, no sensitive profiling, no individual minors, no identifiable medical histories."
+  },
+  "unmeasured": {
+    "fitness_monthly_unique_people": null,
+    "fitness_active_channels": null,
+    "fitness_evergreen_views": null,
+    "health_claim_violation_rate": null,
+    "fitness_newcomer_income_median": null,
+    "fitness_production_cost_median": null,
+    "health_source_shelf_incremental_traffic": null,
+    "fitness_policy_revenue_impact": null
+  }
+}

@@ -2187,6 +2187,50 @@
       "evidence_class": "official_creator_revenue_metric_definitions",
       "license": "Official documentation linked, independently summarized",
       "notes": "Owner-only estimated revenue, ad revenue and RPM are different bases; sponsorships, direct commerce and some external income excluded. Earnings are adjustable."
+    },
+    {
+      "id": "yt-medical-misinformation-2026",
+      "url": "https://support.google.com/youtube/answer/13813322?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Medical misinformation policy",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_platform_content_health_policy",
+      "license": "Official help reference; independent brief paraphrase",
+      "notes": "Prevention and treatment misinformation policy, local health authority basis, EDSA exception possibility, external links included."
+    },
+    {
+      "id": "yt-eating-disorders-2026",
+      "url": "https://support.google.com/youtube/answer/2802245?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Suicide, self-harm, and eating disorders policy",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_sensitive_health_and_eating_disorder_policy",
+      "license": "Official help reference; independent summary",
+      "notes": "Distinguishes promotion from recovery discussion, context and minor-targeting constraints."
+    },
+    {
+      "id": "yt-health-features-2026",
+      "url": "https://support.google.com/youtube/answer/9795167?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Get health information on YouTube",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_health_search_feature_scope",
+      "license": "Official help reference; independent summary",
+      "notes": "Health-source shelves and panels, source and eligibility distinctions; country/language coverage not universal."
+    },
+    {
+      "id": "yt-health-source-application-2026",
+      "url": "https://support.google.com/youtube/answer/12796915?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Apply to be a source in YouTube Health features",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_health_source_eligibility_and_country_policy",
+      "license": "Official help reference; independent summary",
+      "notes": "Some professional channels can apply under regional eligibility, license verification, and watch-hour/Shorts gating; not a generic fitness badge."
     }
   ],
   "claims": [
@@ -4463,6 +4507,49 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Video age, traffic-source window, format, analytics access, geography and measurement revision must be documented; cross-sectional source shares are not causal longevity estimates."
+    },
+    {
+      "id": "health-content-health-authority-specific-misinformation",
+      "text": "YouTube's medical-misinformation policy addresses high-risk prevention or treatment misinformation conflicting with local health authority guidance and may consider educational or documentary context; it can apply to external links as well as videos.",
+      "source_ids": [
+        "yt-medical-misinformation-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "The existence of the policy does not classify all exercise or diet instruction as medical treatment or establish enforcement statistics."
+    },
+    {
+      "id": "health-eating-disorder-recovery-vs-promotion",
+      "text": "YouTube's eating disorder policy differentiates awareness and recovery content from content promoting eating disorders or self-harm, and may consider contextual age restrictions or removal.",
+      "source_ids": [
+        "yt-eating-disorders-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Context-specific policy judgement is not a blanket permission or a measured suitability rate for fitness creators."
+    },
+    {
+      "id": "health-source-feature-not-general-fitness-endorsement",
+      "text": "YouTube's health search shelves and source panels are geographically and linguistically limited optional discovery features; qualifying health-source applicants follow professional, channel and country conditions distinct from regular YouTube publishing.",
+      "source_ids": [
+        "yt-health-features-2026",
+        "yt-health-source-application-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Eligibility is not guaranteed acceptance, professional certification for all fitness channels, universal feature availability, additional ad revenue, or measured audience traffic."
+    },
+    {
+      "id": "fitness-sensitive-ads-separate-from-takedown",
+      "text": "YouTube's advertiser-friendly guidelines can limit ads on harmful/unreliable medical claims or detailed eating-disorder triggers independently from whether the video's wider Community Guidelines permit it.",
+      "source_ids": [
+        "yt-ads-guidelines-2026",
+        "yt-medical-misinformation-2026",
+        "yt-eating-disorders-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Policy categories cannot be transformed into average RPM, rejection rates or earnings projections without observed data."
     }
   ],
   "observations": [],
