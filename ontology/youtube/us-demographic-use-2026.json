@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "us_2026_education_income_community_usage",
+  "as_of": "2026-10-23",
+  "source_id": "pew-us-adults-2026",
+  "publication_date": "2026-10-19",
+  "status": "observed_survey_rates_not_audience_composition",
+  "survey": {
+    "publisher": "Pew Research Center",
+    "name": "Americans' Use of Social Media in 2026",
+    "fieldwork_start": "2026-01-30",
+    "fieldwork_end": "2026-06-18",
+    "study": "National Public Opinion Reference Survey",
+    "total_respondents_n": 5511,
+    "population": "U.S. adults 18+",
+    "modes": [
+      "web",
+      "mail",
+      "telephone"
+    ],
+    "reported_overall_moe_pp": 1.8,
+    "subgroup_n": null,
+    "subgroup_moe_pp": null
+  },
+  "measurement": {
+    "id": "ever_use_of_youtube",
+    "unit": "percent_of_us_adults_within_named_demographic_subgroup",
+    "recollection": "self_reported_ever_use",
+    "is_monthly_active_use": false,
+    "is_youtube_audience_composition": false,
+    "is_distinct_person_population_count": false,
+    "is_earnings_sample": false
+  },
+  "strata": [
+    {
+      "id": "household_income",
+      "title": "Household income",
+      "currency": "USD",
+      "categories": [
+        {
+          "id": "under_30000",
+          "label": "Under USD 30,000",
+          "percent": 77,
+          "subgroup_n": null,
+          "subgroup_moe_pp": null
+        },
+        {
+          "id": "30000_69999",
+          "label": "USD 30,000–69,999",
+          "percent": 84,
+          "subgroup_n": null,
+          "subgroup_moe_pp": null
+        },
+        {
+          "id": "70000_99999",
+          "label": "USD 70,000–99,999",
+          "percent": 86,
+          "subgroup_n": null,
+          "subgroup_moe_pp": null
+        },
+        {
+          "id": "100000_plus",
+          "label": "USD 100,000 or more",
+          "percent": 90,
+          "subgroup_n": null,
+          "subgroup_moe_pp": null
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "currency": null,
+      "categories": [
+        {
+          "id": "high_school_or_less",
+          "label": "High school or less",
+          "percent": 77,
+          "subgroup_n": null,
+          "subgroup_moe_pp": null
+        },
+        {
+          "id": "some_college",
+          "label": "Some college",
+          "percent": 87,
+          "subgroup_n": null,
+          "subgroup_moe_pp": null
+        },
+        {
+          "id": "college_graduate",
+          "label": "College graduate",
+          "percent": 90,
+          "subgroup_n": null,
+          "subgroup_moe_pp": null
+        }
+      ]
+    },
+    {
+      "id": "residence",
+      "title": "Residential community",
+      "currency": null,
+      "categories": [
+        {
+          "id": "urban",
+          "label": "Urban",
+          "percent": 87,
+          "subgroup_n": null,
+          "subgroup_moe_pp": null
+        },
+        {
+          "id": "suburban",
+          "label": "Suburban",
+          "percent": 86,
+          "subgroup_n": null,
+          "subgroup_moe_pp": null
+        },
+        {
+          "id": "rural",
+          "label": "Rural",
+          "percent": 78,
+          "subgroup_n": null,
+          "subgroup_moe_pp": null
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Percentages use each demographic subgroup as denominator and are not the composition of YouTube viewers.",
+    "Total n of 5,511 and overall ±1.8 percentage point margin of error cannot be substituted for subgroup n or subgroup uncertainty.",
+    "Ever-use self-report is not monthly unique viewers, watch time, creator activity, children or global platform use.",
+    "Pew's 2026 mixed collection modes require separate compatibility review before constructing historical causal trends.",
+    "Education, income and residence are descriptive associations, not causal effects.",
+    "The survey does not yield joint income-by-community or income-by-education intersections."
+  ],
+  "unmeasured": {
+    "youtube_viewer_income_composition": null,
+    "youtube_viewer_education_composition": null,
+    "youtube_viewer_urban_rural_composition": null,
+    "subgroup_absolute_user_counts": null,
+    "subgroup_margins_of_error": null,
+    "joint_income_community_estimates": null,
+    "creator_income_by_stratum": null,
+    "causal_effects": null
+  }
+}
