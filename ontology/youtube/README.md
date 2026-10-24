@@ -1,6 +1,6 @@
 # YouTube ontology — audiences, content and earning
 
-The independent [machine model](model.json) defines **172 concepts** and **156 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **32 candidate overlapping subcultures**, without pretending their populations have been measured.
+The independent [machine model](model.json) defines **178 concepts** and **165 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **32 candidate overlapping subcultures**, without pretending their populations have been measured.
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
@@ -88,6 +88,10 @@ The [opportunity assessment method](opportunity-framework.md) is a ten-dimension
 ## Scenario calculator
 
 The website includes a client-side calculator that begins with **no assumed earnings or revenue rates**. It asks for currency, ad-only watch/Shorts yields, views, other net receipts, cash costs and total work hours. Its pure [implementation](../../site/scenario.mjs), [methods](scenario-method.md) and [tests](../../tests/scenario.test.mjs) distinguish hypothetical arithmetic from observed creator income and avoid applying platform revenue shares twice.
+
+## Advertiser-suitability history (2026)
+
+The [2026 advertising guideline chronology](advertiser-policy-history.md) and [machine ledger](advertiser-policy-history.json) record six month-dated changes affecting public-interest reporting, gaming violence, fictional drug use, documentary death coverage and sensitive topics. They separate **video suitability for ads** from YPP enrollment, Community Guidelines/copyright removal, and actual money earned. YouTube's official update notices give calendar months rather than exact effective days, so no day or genre-level RPM uplift is invented.
 
 ## Content-policy economics
 
