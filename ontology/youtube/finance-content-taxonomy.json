@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "finance_and_business_content_risk_taxonomy",
+  "as_of": "2026-10-24",
+  "status": "sourced_content_classification_not_population_measurement",
+  "topic_id": "finance",
+  "reporting_unit": "YouTube content object or series with overlapping topic tags; not creator's inferred profession or financial status",
+  "platform_source_ids": [
+    "advertiser-policy",
+    "yt-branded-policy-2026",
+    "youtube-external-link-policy-finance"
+  ],
+  "jurisdictional_source_ids": [
+    "sec-2026-social-stock-tip-alert",
+    "ftc-endorsement-faq-2023"
+  ],
+  "content_families": [
+    {
+      "id": "budgeting_education",
+      "label": "Personal budgeting and cash-flow literacy",
+      "parent": "educational_explainer",
+      "illustrative_topics": [
+        "budget mechanics",
+        "expenses and saving concepts",
+        "budget spreadsheet tutorial"
+      ],
+      "commercial_posture": "no_sale_assumed",
+      "additional_risk_review": "Accuracy and context of financial claims",
+      "topic_population": null,
+      "creator_count": null,
+      "niche_revenue": null
+    },
+    {
+      "id": "debt_explanation",
+      "label": "Debt and credit education",
+      "parent": "educational_explainer",
+      "illustrative_topics": [
+        "interest calculation",
+        "loan terms explanation",
+        "credit reports and disclosures"
+      ],
+      "commercial_posture": "no_sale_assumed",
+      "additional_risk_review": "Do not infer individual eligibility or credit terms",
+      "topic_population": null,
+      "creator_count": null,
+      "niche_revenue": null
+    },
+    {
+      "id": "investment_literacy",
+      "label": "Investing concepts and market education",
+      "parent": "educational_explainer",
+      "illustrative_topics": [
+        "diversification concepts",
+        "securities disclosures",
+        "financial statement education"
+      ],
+      "commercial_posture": "no_sale_assumed",
+      "additional_risk_review": "Distinguish general concepts from paid securities recommendations or false expertise",
+      "topic_population": null,
+      "creator_count": null,
+      "niche_revenue": null
+    },
+    {
+      "id": "financial_product_review",
+      "label": "Financial services and product comparison",
+      "parent": "product_comparison",
+      "illustrative_topics": [
+        "checking account review",
+        "credit card comparison",
+        "brokerage feature comparison"
+      ],
+      "commercial_posture": "affiliate_or_brand_connection_possible_not_implied",
+      "additional_risk_review": "FTC/other applicable endorsement law, material connections, verification of terms and eligibility",
+      "topic_population": null,
+      "creator_count": null,
+      "niche_revenue": null
+    },
+    {
+      "id": "sponsored_financial_offer",
+      "label": "Sponsored credit, banking or investment product placement",
+      "parent": "paid_promotion",
+      "illustrative_topics": [
+        "paid product integration",
+        "sponsored financial app walkthrough"
+      ],
+      "commercial_posture": "sponsorship_material_connection",
+      "additional_risk_review": "Platform declaration, audience-facing disclosure and separate product/jurisdiction conditions",
+      "topic_population": null,
+      "creator_count": null,
+      "niche_revenue": null
+    },
+    {
+      "id": "business_skills_tutorial",
+      "label": "Business operations and entrepreneurship instruction",
+      "parent": "educational_explainer",
+      "illustrative_topics": [
+        "invoicing",
+        "unit economics",
+        "business planning",
+        "software workflows"
+      ],
+      "commercial_posture": "no_sale_assumed",
+      "additional_risk_review": "Fact-check claims, avoid income guarantees",
+      "topic_population": null,
+      "creator_count": null,
+      "niche_revenue": null
+    },
+    {
+      "id": "creator_course_or_software_sales",
+      "label": "Selling training, digital tools or business services",
+      "parent": "creator_owned_product",
+      "illustrative_topics": [
+        "course walkthrough",
+        "template sale",
+        "software tutorial with offer"
+      ],
+      "commercial_posture": "owned_product_or_paid_link_possible",
+      "additional_risk_review": "Ownership disclosure, external-link compliance, buyer terms, local consumer rules",
+      "topic_population": null,
+      "creator_count": null,
+      "niche_revenue": null
+    },
+    {
+      "id": "stock_tip_or_return_promotion",
+      "label": "Securities tips, stock calls or claimed guaranteed returns",
+      "parent": "high_scrutiny_financial_promotion",
+      "illustrative_topics": [
+        "specific security recommendations",
+        "investment chat solicitation",
+        "risk-free return claims"
+      ],
+      "commercial_posture": "possible_promotion_not_proven",
+      "additional_risk_review": "SEC social stock tip alert, possible compensation/conflicts, impersonation risks, jurisdiction-specific registration and anti-fraud law",
+      "topic_population": null,
+      "creator_count": null,
+      "niche_revenue": null
+    }
+  ],
+  "dimension_flags": [
+    {
+      "id": "educational_content",
+      "meaning": "Teaches concepts without automatically assuming a product sale or securities recommendation"
+    },
+    {
+      "id": "commercial_promotion",
+      "meaning": "A sale, affiliate commission, paid relationship or financial solicitation may be present; verify evidence"
+    },
+    {
+      "id": "investor_protection_risk",
+      "meaning": "Specific securities tips, high-return claims, impersonation or group-chat solicitations need distinct source-based review"
+    },
+    {
+      "id": "content_niche",
+      "meaning": "Finance content is an overlapping broad topical niche; cross-tags with software/education/business possible"
+    }
+  ],
+  "measurement_and_classification_rules": [
+    "Classify observable content/topic and disclosed business relationships; never infer whether the creator is licensed, truthful, a fraudster or a registered adviser without independent public evidence.",
+    "General budgeting education is not by itself a paid product advertisement; sponsoring a finance lesson does not by itself make all lessons investment advice.",
+    "Financial-product affiliate partnerships and owned products are separate revenue pathways from YouTube ad sharing, and need distinct revenue and compliance records.",
+    "Do not treat a platform paid-promotion toggle as a substitute for local consumer, banking, securities, lending, or advertising requirements.",
+    "Do not infer investment adviser registration, local financial regulation or treaty jurisdiction from language, creator ethnicity, channel location or viewer comments.",
+    "Do not assume a topic is advertiser-friendly, profitable, or restricted simply because it concerns finance.",
+    "All eight categories can overlap and cannot be summed as disjoint populations.",
+    "Search/download methods must follow platform permissions and avoid collecting individualized financial details or claims about private people."
+  ],
+  "data_collection_requirements": [
+    "date_range",
+    "country_and_viewer_geography_separate",
+    "language",
+    "format",
+    "topic_codes_multi_label",
+    "advertisement_or_affiliate_connection_if_documented",
+    "specific_offer_or_product_type",
+    "source_and_provenance",
+    "rights_access_basis",
+    "view_metric_definition",
+    "creator_population_denominator_if_verified",
+    "cash_and_labor_costs_if_observed"
+  ],
+  "regional_status": {
+    "united_states": "Selected primary FTC and SEC federal guidance researched; specific product state laws and registration facts unverified",
+    "mexico": null,
+    "united_kingdom": null,
+    "other_countries": null
+  },
+  "unknowns": {
+    "finance_monthly_unique_viewers": null,
+    "finance_unique_creator_count": null,
+    "finance_video_output_count": null,
+    "finance_niche_rpm": null,
+    "finance_sponsorship_rate": null,
+    "finance_affiliate_conversion_rate": null,
+    "finance_newcomer_net_profit": null,
+    "financial_fraud_prevalence_on_youtube": null,
+    "education_vs_promotion_audience_overlap": null
+  }
+}
