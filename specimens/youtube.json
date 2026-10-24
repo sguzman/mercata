@@ -1582,6 +1582,17 @@
       "evidence_class": "official_privacy_complaint_and_synthetic_likeness_process",
       "license": "Official help linked, summarized without collecting private complaints",
       "notes": "Privacy complaints can concern exposure of private info and unauthorized realistic synthetic likeness; no guarantee of removal."
+    },
+    {
+      "id": "yt-unique-viewer-estimates-2026",
+      "url": "https://support.google.com/youtube/answer/7577916?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Understand your unique viewers data",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "official_owner_analytics_unique_people_measurement_scope",
+      "license": "Official Help page independently paraphrased and linked",
+      "notes": "Estimated people include signed-in, signed-out, repeat and shared-device viewers. Unique-viewers metric reporting window up to 90 days; Shorts uses engaged views."
     }
   ],
   "claims": [
@@ -3057,6 +3068,39 @@
       "observed_at": "2026-10-23",
       "confidence": "high",
       "limitations": "Not every harmful interaction necessarily violates published platform rules or produces a successful removal; no individual victims or reports are profiled."
+    },
+    {
+      "id": "signed-out-estimated-unique-viewer-scope",
+      "text": "YouTube owner-facing unique-viewer estimates account for signed-in and signed-out viewers and people watching across devices, with a reporting period of up to 90 days; Shorts use engaged views in estimation.",
+      "source_ids": [
+        "yt-unique-viewer-estimates-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Owner-facing channel and video estimates do not identify individual persons, logged-out share or total global platform users."
+    },
+    {
+      "id": "channel-monthly-audience-is-rolling-28-days",
+      "text": "YouTube Studio's monthly audience is a channel-specific estimated unique-person audience measured over a rolling past 28 days and recalculated daily, not an exact calendar-month worldwide user count.",
+      "source_ids": [
+        "analytics-audience",
+        "yt-unique-viewer-estimates-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Period and population differ from owner unique viewers, co-viewing and public channel statistics."
+    },
+    {
+      "id": "public-channel-api-not-person-census",
+      "text": "YouTube's public Data API provides channel view events, rounded subscribers and public upload counts; Analytics reporting requires authorized channel/content-owner access and does not offer public competitor unique-person data.",
+      "source_ids": [
+        "api-channels",
+        "api-query-params",
+        "analytics-audience"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Those public counts describe channel objects and activity, not global unique viewers, independent people or a survey-weighted population."
     }
   ],
   "observations": [],
