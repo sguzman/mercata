@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "uk_wifi_at_home_device_screen_comparison",
+  "as_of": "2026-10-24",
+  "status": "official_aggregate_device_shares_2025_with_noncomparable_samples",
+  "source_id": "barb-uk-screen-share-2025",
+  "source_published_at": "2025-07-31",
+  "service_level": {
+    "measurement": "YouTube viewing on home Wi-Fi devices",
+    "geography": "United Kingdom",
+    "period": "2025-Q2",
+    "source_id": "barb-uk-screen-share-2025",
+    "unit": "percent_of_in_home_wifi_youtube_viewing_time_by_device",
+    "population_unit": "viewing_activity_not_unique_people",
+    "share_scope": "Barb service-level measurement across in-home connected devices; separate from channel-level 200-channel panel",
+    "adult_16_plus": {
+      "age_range": "16+",
+      "tv_set_percent": 43,
+      "smartphone_percent": 32,
+      "other_devices_combined_percent": null,
+      "person_count": null
+    },
+    "children_4_to_15": {
+      "age_range": "4–15",
+      "tv_set_percent": 53,
+      "smartphone_percent": null,
+      "other_devices_combined_percent": null,
+      "person_count": null
+    }
+  },
+  "separate_channel_measurement": {
+    "method": "audio_matching_acr_to_identify_tv_set_viewing_of_selected_channels_plus_wifi_source_confirmation",
+    "selected_channel_count": 200,
+    "population": "Selected high-viewing channels, not a YouTube channel census",
+    "device": "TV set only",
+    "separate_from_service_level_device_shares": true,
+    "excluded_from_acr_channel_sample": [
+      "shorts",
+      "live_streaming",
+      "music_or_karaoke",
+      "channels_only_with_clips_or_highlights_without_original_commentary"
+    ],
+    "source_id": "barb-uk-screen-share-2025",
+    "unmeasured_channel_rpm": null,
+    "unmeasured_channel_income": null
+  },
+  "related_ofcom_2026": {
+    "source_id": "ofcom-uk-media-nations-2026",
+    "publication_date": "2026-07-29",
+    "metric": "UK YouTube minutes per person per day (Barb in-home)",
+    "values": [
+      {
+        "id": "tv_set_2022",
+        "year": 2022,
+        "minutes_per_person_per_day": 9
+      },
+      {
+        "id": "tv_set_2025",
+        "year": 2025,
+        "minutes_per_person_per_day": 19
+      },
+      {
+        "id": "all_connected_home_devices_2022",
+        "year": 2022,
+        "minutes_per_person_per_day": 33
+      },
+      {
+        "id": "all_connected_home_devices_2025",
+        "year": 2025,
+        "minutes_per_person_per_day": 41
+      }
+    ],
+    "relationship": "TV time is a SUBSET of all in-home device time, not extra time to add.",
+    "not_comparable_with": "Ofcom Online Nation 2025 average of 51 minutes excluding television, which uses a different methodology."
+  },
+  "uncertainty": {
+    "observed_device_shares_are_reported": true,
+    "public_subgroup_panel_counts": null,
+    "per_device_sample_size": null,
+    "device_share_confidence_interval": null,
+    "unique_viewer_overlap_between_devices": null,
+    "privacy_consent_details": null
+  },
+  "unknowns": {
+    "worldwide_tv_share": null,
+    "uk_all_networks_tv_share": null,
+    "uk_total_mobile_share_including_cellular": null,
+    "creator_tv_viewer_conversion": null,
+    "tv_vs_phone_youtube_ad_rpm": null,
+    "device_effect_on_creator_income": null,
+    "average_creator_production_hours_by_screen": null,
+    "video_format_device_share": null,
+    "uk_4_to_15_unique_youtube_people": null
+  },
+  "comparison_prohibitions": [
+    "Do not identify 43% TV viewing with 43% of distinct adult people who use YouTube.",
+    "Do not treat the 32% smartphone share as all UK smartphone viewing; home Wi-Fi only.",
+    "Do not apply the 200 selected-channel ACR exclusions to the separate all-service device share observations.",
+    "Do not add 19 minutes of television viewing to 41 minutes of all-device in-home YouTube; television is included in all devices.",
+    "Do not combine Ofcom's 51 minutes excluding TV with Barb's 41 home-device minutes, which have different sample and observation frames.",
+    "Do not infer a causal content or monetization advantage for either device from viewing shares.",
+    "Children's aggregated device share is not permission to profile, identify or target individual minors."
+  ]
+}
