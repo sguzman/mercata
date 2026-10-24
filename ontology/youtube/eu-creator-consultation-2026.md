@@ -32,4 +32,4 @@ These findings inform several *potential* business barriers: access to capital, 
 
 A defensible future EU27 economic survey would require a declared universe of new entrant creators (including nonmonetized and inactive attempts), regional strata and coverage, representative selection or transparent nonprobability limits, gross and net earnings, costs, labor hours, funding access, channel activity and confidence/uncertainty measures.
 
-Mercata's [newcomer-income protocol](newcomer-income-cohort.md), [geographic scope](geographic-scope.md), [production cost model](production-costs.md), and [traffic-source concentration guide](traffic-source-concentration.md) preserve these boundaries. No individual EU creator profiles or accounts were collected.
+Mercata's [newcomer-income protocol](newcomer-income-cohort.md), [geographic scope](geographic-scope.md), [production cost model](production-costs.md), and [traffic-source concentration guide](traffic-concentration.md) preserve these boundaries. No individual EU creator profiles or accounts were collected.
