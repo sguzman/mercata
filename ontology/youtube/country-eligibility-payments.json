@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "country_specific_creator_access_and_payment_reference",
+  "as_of": "2026-10-23",
+  "scope": "Selected official lists for three countries, not an exhaustive jurisdiction catalog or an account eligibility decision",
+  "country_records": [
+    {
+      "country_code": "MX",
+      "country": "Mexico",
+      "program_access": {
+        "standard_ypp_listed": true,
+        "expanded_ypp_listed": true,
+        "source_ids": [
+          "ypp-country",
+          "expanded-ypp-countries"
+        ],
+        "meaning": "Geographic sign-up listing only; channel review, residence and other thresholds remain necessary"
+      },
+      "payment_address_methods": {
+        "cheque": false,
+        "eft": true,
+        "wire": true,
+        "hyperwallet": false,
+        "source_ids": [
+          "adsense-methods"
+        ],
+        "meaning": "Listed availability for a payment address in this territory; actual AdSense for YouTube account options control"
+      },
+      "reporting_currency": null,
+      "account_payment_threshold": null,
+      "bank_account_verified": null,
+      "individual_channel_approved": null,
+      "feature_specific_access": {
+        "shopping_affiliate": null,
+        "memberships": null,
+        "super_chat": null,
+        "gifts": null,
+        "brand_partnerships": null
+      },
+      "tax_withholding_for_individual": null,
+      "limitations": "Do not infer reporting currency, personal tax position, an individual account's payment methods or any specific feature from the country listing alone."
+    },
+    {
+      "country_code": "US",
+      "country": "United States",
+      "program_access": {
+        "standard_ypp_listed": true,
+        "expanded_ypp_listed": true,
+        "source_ids": [
+          "ypp-country",
+          "expanded-ypp-countries"
+        ],
+        "meaning": "Geographic sign-up listing only; channel review, residence and other thresholds remain necessary"
+      },
+      "payment_address_methods": {
+        "cheque": false,
+        "eft": true,
+        "wire": false,
+        "hyperwallet": true,
+        "source_ids": [
+          "adsense-methods"
+        ],
+        "meaning": "Listed availability for a payment address in this territory; actual AdSense for YouTube account options control"
+      },
+      "reporting_currency": null,
+      "account_payment_threshold": null,
+      "bank_account_verified": null,
+      "individual_channel_approved": null,
+      "feature_specific_access": {
+        "shopping_affiliate": null,
+        "memberships": null,
+        "super_chat": null,
+        "gifts": null,
+        "brand_partnerships": null
+      },
+      "tax_withholding_for_individual": null,
+      "limitations": "Do not infer reporting currency, personal tax position, an individual account's payment methods or any specific feature from the country listing alone."
+    },
+    {
+      "country_code": "GB",
+      "country": "United Kingdom",
+      "program_access": {
+        "standard_ypp_listed": true,
+        "expanded_ypp_listed": true,
+        "source_ids": [
+          "ypp-country",
+          "expanded-ypp-countries"
+        ],
+        "meaning": "Geographic sign-up listing only; channel review, residence and other thresholds remain necessary"
+      },
+      "payment_address_methods": {
+        "cheque": false,
+        "eft": true,
+        "wire": true,
+        "hyperwallet": false,
+        "source_ids": [
+          "adsense-methods"
+        ],
+        "meaning": "Listed availability for a payment address in this territory; actual AdSense for YouTube account options control"
+      },
+      "reporting_currency": null,
+      "account_payment_threshold": null,
+      "bank_account_verified": null,
+      "individual_channel_approved": null,
+      "feature_specific_access": {
+        "shopping_affiliate": null,
+        "memberships": null,
+        "super_chat": null,
+        "gifts": null,
+        "brand_partnerships": null
+      },
+      "tax_withholding_for_individual": null,
+      "limitations": "Do not infer reporting currency, personal tax position, an individual account's payment methods or any specific feature from the country listing alone."
+    }
+  ],
+  "reporting_currency_threshold_examples": [
+    {
+      "currency": "MXN",
+      "payment_method_selection": 120,
+      "minimum_payment": 1200,
+      "cancellation": 120,
+      "source_ids": [
+        "adsense-thresholds"
+      ],
+      "condition": "Only when the AdSense for YouTube account itself reports in MXN; not a residence mapping"
+    },
+    {
+      "currency": "USD",
+      "payment_method_selection": 10,
+      "minimum_payment": 100,
+      "cancellation": 10,
+      "source_ids": [
+        "adsense-thresholds"
+      ],
+      "condition": "Only when the account reports in USD"
+    },
+    {
+      "currency": "GBP",
+      "payment_method_selection": 10,
+      "minimum_payment": 60,
+      "cancellation": 10,
+      "source_ids": [
+        "adsense-thresholds"
+      ],
+      "condition": "Only when the account reports in GBP"
+    }
+  ],
+  "account_level_gates": [
+    "AdSense for YouTube reporting currency must be read from the account rather than deduced from creator residence.",
+    "Payment-method selection and actual disbursement are distinct stages; holds and account verification may delay payment.",
+    "Bank location and payment address must match the same country or region for wire transfer acceptance under official policy.",
+    "Tax information submission applies to YPP creators; individual obligations and withholding cannot be inferred from country alone.",
+    "Neither listed YPP nor expanded YPP availability proves approval, monetization, earnings or subscriber qualification."
+  ],
+  "unmeasured": {
+    "approved_creator_count_by_country": null,
+    "typical_time_to_first_payment": null,
+    "mean_creator_profit": null,
+    "median_newcomer_profit_including_zero": null,
+    "individual_tax_rate": null
+  }
+}
