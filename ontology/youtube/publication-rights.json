@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "public_research_publication_rights_review",
+  "as_of": "2026-10-24",
+  "scope": "Repository-linked YouTube research source metadata and explicit third-party media reuse manifests. Neither a public URL nor a citation grants media copying permission.",
+  "source_id": "cc-attribution-practices",
+  "publication_modes": [
+    {
+      "id": "link",
+      "description": "Link to original source, independently authored fact summary",
+      "source_citation_required": true,
+      "requires_asset_copy_permission": false,
+      "limits": "No reproduction of publisher charts, graphics or full articles"
+    },
+    {
+      "id": "aggregate_paraphrase",
+      "description": "Brief attributed aggregate result in original words",
+      "source_citation_required": true,
+      "requires_asset_copy_permission": false,
+      "limits": "Avoid reconstructing proprietary data tables, unlicensed datasets or lengthy text"
+    },
+    {
+      "id": "direct_quote",
+      "description": "Quoted source wording",
+      "source_citation_required": true,
+      "requires_asset_copy_permission": null,
+      "limits": "Quote-length and legal context must be inspected manually; automatic counting is not a safe harbor"
+    },
+    {
+      "id": "third_party_licensed_media",
+      "description": "Copied image, chart, photograph, screenshot, source video or audio",
+      "source_citation_required": true,
+      "requires_asset_copy_permission": true,
+      "limits": "Needs actual license/permission and attributable creator, source, license and adaptations as appropriate"
+    },
+    {
+      "id": "original_chart",
+      "description": "Mercata-built chart from properly attributable and permitted public aggregates",
+      "source_citation_required": true,
+      "requires_asset_copy_permission": null,
+      "limits": "Original design does not solve source-data licensing or misleading units"
+    }
+  ],
+  "source_record_quality": "All current registered sources are required to supply publisher/title, retrieval date, a human-readable license/reuse note, and HTTPS source address. These source-level notes are not actual license grants.",
+  "third_party_asset_manifest": [],
+  "manifest_completeness": "Unknown pending a manual byte/file audit. Empty list must not be used to assert repository contains no external-media reuse.",
+  "manual_repository_review": {
+    "completed": false,
+    "checked_all_media_files": false,
+    "checked_quoted_text": false,
+    "checked_dataset_transformation_rights": false,
+    "reviewer_evidence": null
+  },
+  "review_workflow": [
+    "Enumerate all published media, copied text, downloaded datasets and embedded external visual assets, including generated thumbnails and hidden metadata.",
+    "Distinguish linked external material from a local copy or a derived visual.",
+    "Check creator/owner attribution, original source URL and applicable license or permissions when actually reusing copyrighted assets.",
+    "Check CC TASL elements only for CC-licensed works; do not label commercial Help pages or news photos as CC-licensed without evidence.",
+    "Verify research aggregate source terms separately from visual and raw dataset rights; a short attributed statistic is not proof that the underlying dataset can be redistributed.",
+    "Review quote lengths, copyright context, attribution, translation, charts and publisher license updates manually.",
+    "Require rights-specific reviewer signoff before publishing any new third-party asset; never import private materials or personal financial records."
+  ],
+  "open_questions": {
+    "published_asset_census_complete": false,
+    "all_embedded_media_owned_or_permitted": null,
+    "all_quotes_manually_reviewed": null,
+    "third_party_dataset_export_rights": null,
+    "repository_rights_clearance": null
+  }
+}
