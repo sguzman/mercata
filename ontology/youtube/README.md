@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **127 references, 121 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **130 references, 124 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -77,6 +77,10 @@ AIR Media-Tech's [297-channel studio-data report](small-channel-income.md) conta
 ## Announced February 2027 YouTube Partner Program changes
 
 The [time-bounded 2027 YPP policy study](ypp-transition-2027.md) and [machine transition model](ypp-transition-2027.json) separate **October 2026 entry rules** from those taking effect **February 1, 2027**. New ads/Premium applicants will face announced thresholds of **8,000 qualifying public watch hours** (365 days) or **20 million qualifying Shorts views** (90 days), while preexisting YPP members are not subject to the higher entry barrier. A separate **rolling 10-million-qualified-Shorts-view gate** will control continued Shorts revenue sharing, without terminating long-form earning for channels that fall below it. Premium and Premium Lite have separate announced net subscription allocations, not fixed payouts. The 2027 new-applicant subscriber floor was not restated in the announcement and remains unknown. Current 2026 thresholds have not been silently overwritten.
+
+## U.S.-viewer withholding versus worldwide missing-form deductions
+
+The [official platform-withholding study](tax-withholding-mechanics.md) and [machine distinction](tax-withholding-mechanics.json) separate required worldwide submission of U.S. tax information from conditional deductions on U.S.-viewer revenue and missing-form cases using worldwide earnings. Google tax withholding is not a creator's total tax liability, and personal account type, form validity, treaty eligibility, income mix and applicable tax rate are unknown. This is an economic policy model, not individualized tax guidance.
 
 ## Revenue routes and getting paid
 
