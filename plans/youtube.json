@@ -231,7 +231,7 @@
         "youtube/competition/catalog-substitutes-outside-youtube"
       ],
       "phase": 3,
-      "progress_percent": 28
+      "progress_percent": 31
     },
     {
       "id": "income",
@@ -314,7 +314,7 @@
         "youtube/sales/separate-analytics-unavailable-to-outsiders"
       ],
       "phase": 3,
-      "progress_percent": 26
+      "progress_percent": 28
     },
     {
       "id": "risk",
@@ -1796,7 +1796,7 @@
       "objective": "Choose channel-size cohorts, genres, format, age and geography fields.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and choose channel-size cohorts, genres, format, age and geography fields.",
       "status": "in_progress",
-      "percent": 78,
+      "percent": 82,
       "evidence": [
         "ontology/youtube/opportunity-framework.json",
         "ontology/youtube/opportunity-framework.md",
@@ -1812,7 +1812,10 @@
         "ontology/youtube/public-sampling.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/historical-linking-study.json",
+        "ontology/youtube/historical-linking-study.md",
+        "tests/site-smoke.mjs"
       ],
       "artifact": null,
       "priority": "standard",
@@ -1826,12 +1829,17 @@
       "objective": "Plan matched cohort comparisons instead of comparing all channels to stars.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and plan matched cohort comparisons instead of comparing all channels to stars.",
       "status": "in_progress",
-      "percent": 35,
+      "percent": 40,
       "evidence": [
         "ontology/youtube/competition-observations.json",
         "ontology/youtube/competition-observations.md",
         "ontology/youtube/community-audience-studies.json",
-        "ontology/youtube/community-audience-studies.md"
+        "ontology/youtube/community-audience-studies.md",
+        "ontology/youtube/historical-linking-study.json",
+        "ontology/youtube/historical-linking-study.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
       ],
       "artifact": null,
       "priority": "standard",
@@ -1900,7 +1908,7 @@
       "objective": "Define view and watch-time denominators and concentration measures.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define view and watch-time denominators and concentration measures.",
       "status": "in_progress",
-      "percent": 40,
+      "percent": 48,
       "evidence": [
         "ontology/youtube/competition-observations.json",
         "ontology/youtube/competition-observations.md",
@@ -1911,7 +1919,10 @@
         "ontology/youtube/public-sampling.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/historical-linking-study.json",
+        "ontology/youtube/historical-linking-study.md",
+        "tests/site-smoke.mjs"
       ],
       "artifact": null,
       "priority": "standard",
@@ -2535,9 +2546,15 @@
       "emoji": "🛒",
       "objective": "Identify relevant external traffic metrics and platform rule limits.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and identify relevant external traffic metrics and platform rule limits.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 15,
+      "evidence": [
+        "ontology/youtube/historical-linking-study.json",
+        "ontology/youtube/historical-linking-study.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 3
@@ -3070,7 +3087,7 @@
       "objective": "Build checks against mixing views, viewers, creators and registered accounts.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and build checks against mixing views, viewers, creators and registered accounts.",
       "status": "in_progress",
-      "percent": 93,
+      "percent": 94,
       "evidence": [
         "ontology/youtube/analytics-query-guide.json",
         "ontology/youtube/analytics-query-guide.md",
@@ -3087,7 +3104,9 @@
         "ontology/youtube/view-definition-break.json",
         "ontology/youtube/view-definition-break.md",
         "ontology/youtube/measurement-history.json",
-        "ontology/youtube/measurements.json"
+        "ontology/youtube/measurements.json",
+        "ontology/youtube/historical-linking-study.json",
+        "ontology/youtube/historical-linking-study.md"
       ],
       "artifact": null,
       "priority": "high",
@@ -5253,7 +5272,7 @@
       "objective": "Require source weighting, nonresponse and demographic question wording.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and require source weighting, nonresponse and demographic question wording.",
       "status": "in_progress",
-      "percent": 86,
+      "percent": 89,
       "evidence": [
         "ontology/youtube/analytics-query-guide.json",
         "ontology/youtube/analytics-query-guide.md",
@@ -5271,7 +5290,9 @@
         "ontology/youtube/newcomer-income-cohort.md",
         "scripts/newcomer-income-audit.mjs",
         "tests/newcomer-cohort.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/historical-linking-study.json",
+        "ontology/youtube/historical-linking-study.md"
       ],
       "artifact": null,
       "priority": "high",
