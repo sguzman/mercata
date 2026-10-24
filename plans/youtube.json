@@ -119,7 +119,7 @@
         "youtube/access/differentiate-each-earning-feature-s-eligibility"
       ],
       "phase": 1,
-      "progress_percent": 68
+      "progress_percent": 71
     },
     {
       "id": "economics",
@@ -151,7 +151,7 @@
         "youtube/economics/measure-the-cost-of-testing-a-new-niche"
       ],
       "phase": 1,
-      "progress_percent": 56
+      "progress_percent": 58
     },
     {
       "id": "market",
@@ -968,14 +968,18 @@
       "objective": "Specify a repeatable jurisdiction table for creator access and payouts.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify a repeatable jurisdiction table for creator access and payouts.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 78,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
         "specimens/youtube.json",
         "ontology/youtube/application-lifecycle.json",
         "ontology/youtube/eligibility-matrix.json",
-        "ontology/youtube/eligibility-matrix.md"
+        "ontology/youtube/eligibility-matrix.md",
+        "ontology/youtube/country-eligibility-payments.json",
+        "ontology/youtube/country-eligibility-payments.md",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1242,11 +1246,15 @@
       "objective": "List payout documents, withholding possibilities and country-dependent rules to verify.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and list payout documents, withholding possibilities and country-dependent rules to verify.",
       "status": "in_progress",
-      "percent": 28,
+      "percent": 38,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/country-eligibility-payments.json",
+        "ontology/youtube/country-eligibility-payments.md",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
       ],
       "artifact": null,
       "priority": "standard",
