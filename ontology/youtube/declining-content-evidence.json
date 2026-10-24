@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "declining_content_trend_detection_protocol",
+  "as_of": "2026-10-24",
+  "status": "methodology_only_no_verified_declining_youtube_niches",
+  "research_question": "When do repeated YouTube content observations justify describing a category as declining rather than differently sampled?",
+  "source_ids": [
+    "yt-nfl-culture-2026",
+    "yt-prom-grwm-2025",
+    "yt-halloween-makeup-2025",
+    "view-change-official-blog-2026"
+  ],
+  "registered_example_checks": [
+    {
+      "id": "nfl_2020_2025",
+      "source_ids": [
+        "yt-nfl-culture-2026"
+      ],
+      "finding": "Reported NFL-related view and upload growth between 2020 and 2025",
+      "observed_direction": "increase",
+      "can_establish_decline": false,
+      "reason": "Two positive-growth endpoint comparisons, no intermediate monthly series and no declining period evidence."
+    },
+    {
+      "id": "prom_grwm_2024",
+      "source_ids": [
+        "yt-prom-grwm-2025"
+      ],
+      "finding": "One global annual 2024 view lower bound for a specific title query",
+      "observed_direction": "not_determined",
+      "can_establish_decline": false,
+      "reason": "No same-title predicate observations for other full years."
+    },
+    {
+      "id": "halloween_2025",
+      "source_ids": [
+        "yt-halloween-makeup-2025"
+      ],
+      "finding": "One partial 2025 global view lower bound for a different title query",
+      "observed_direction": "not_determined",
+      "can_establish_decline": false,
+      "reason": "Does not share topic predicate or period with the prom study."
+    },
+    {
+      "id": "august_2026_view_epoch",
+      "source_ids": [
+        "view-change-official-blog-2026"
+      ],
+      "finding": "Public playback-start measurement changed August 24 2026",
+      "observed_direction": "definition_change",
+      "can_establish_decline": false,
+      "reason": "Raw before/after public counts have noncomparable measurement definitions without explicit reconciliation."
+    }
+  ],
+  "single_comparison_requirements": [
+    "Same topic classification or frozen video title predicate",
+    "Same observed population, country and language inclusion",
+    "Same video format and public view versus engaged view definition",
+    "Same observation unit and complete equal-duration period",
+    "Same API method, query sampling frame and comparable missingness",
+    "Same pre/post August 24 2026 view epoch or source-verified reconciliation",
+    "Exact bounded numeric counts; two lower bounds cannot be subtracted or interpreted as a precisely measured change"
+  ],
+  "trend_inference_gates": [
+    {
+      "id": "multiple_matched_periods",
+      "passed": false,
+      "reason": "No registered candidate has comparable multi-year sequential observations sufficient for a decline trajectory."
+    },
+    {
+      "id": "multiple_seasonal_cycles",
+      "passed": false,
+      "reason": "A one-off event or partial year cannot distinguish recurrence and secular decline."
+    },
+    {
+      "id": "control_platform_supply_and_benchmark",
+      "passed": false,
+      "reason": "Platform supply, algorithm shifts and dated format changes remain unadjusted."
+    },
+    {
+      "id": "measurement_revisions_reconciled",
+      "passed": false,
+      "reason": "The August 2026 public playback-start revision is not fully reconciled across historical candidate series."
+    },
+    {
+      "id": "uncertainty_coverage_and_income",
+      "passed": false,
+      "reason": "No audited sample variance, within-topic inclusion and creator profit distribution."
+    }
+  ],
+  "output_discipline": {
+    "two_compatible_exact_points": "Can describe a change between two observed periods; never label it a persistent trend or causal drop.",
+    "two_incompatible_points": "Must refuse numeric comparison.",
+    "repeated_decline": "Requires repeated comparable period bins, stable sampling, uncertainty, seasonality controls and appropriately bounded claim.",
+    "creator_competition": "Declining view events do not directly establish reduced active viewers, fewer creators or profit."
+  },
+  "unmeasured": {
+    "number_of_declining_topics": null,
+    "confirmed_declining_niche": null,
+    "country_specific_secular_decline": null,
+    "causal_competitor_shift": null,
+    "topic_view_change_reconciled_across_metric_break": null,
+    "first_year_creator_profit_decline": null,
+    "declining_category_forecast": null
+  }
+}
