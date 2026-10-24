@@ -1178,6 +1178,62 @@
       "unit": "hours",
       "access": "research_method_or_documented_feature",
       "measured_value": null
+    },
+    {
+      "id": "public_playback_start",
+      "group": "measurement",
+      "definition": "Video first-frame playback start under the August 24, 2026 public counting rule; not automatically engaged.",
+      "unit": "start_event",
+      "access": "public_api",
+      "measured_value": null
+    },
+    {
+      "id": "engaged_playback",
+      "group": "measurement",
+      "definition": "Clicked playback or watching past initial seconds, separate from the broad first-frame public start measure.",
+      "unit": "attention_event",
+      "access": "authorized_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "qualified_short_view",
+      "group": "measurement",
+      "definition": "Program-eligible Shorts attention under applicable YPP policy, not interchangeable with public first-frame starts.",
+      "unit": "eligible_short_attention_event",
+      "access": "creator_eligibility",
+      "measured_value": null
+    },
+    {
+      "id": "qualified_watch_hour",
+      "group": "measurement",
+      "definition": "Program-eligible public video watch time relevant to YPP thresholds, not all estimated watch time.",
+      "unit": "eligible_hour",
+      "access": "creator_eligibility",
+      "measured_value": null
+    },
+    {
+      "id": "monetized_playback_event",
+      "group": "measurement",
+      "definition": "Playback with an ad impression, distinct from public start events and ad-impression count.",
+      "unit": "ad_related_playback",
+      "access": "authorized_analytics",
+      "measured_value": null
+    },
+    {
+      "id": "metric_definition_revision",
+      "group": "measurement",
+      "definition": "Dated change in measurement counting semantics that can cause a structural break in long-term studies.",
+      "unit": "dated_definition",
+      "access": "research_metadata",
+      "measured_value": null
+    },
+    {
+      "id": "view_count_comparability_break",
+      "group": "measurement",
+      "definition": "Incompatible pre/post raw public view series requiring version-aligned metrics or a defensible correction.",
+      "unit": "comparison_constraint",
+      "access": "research_metadata",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -1770,6 +1826,61 @@
       "subject": "manual_dub",
       "predicate": "requires",
       "object": "translation_production_hours"
+    },
+    {
+      "subject": "thumbnail_impression",
+      "predicate": "is_not",
+      "object": "public_playback_start"
+    },
+    {
+      "subject": "public_playback_start",
+      "predicate": "may_precede",
+      "object": "engaged_playback"
+    },
+    {
+      "subject": "public_playback_start",
+      "predicate": "is_not",
+      "object": "qualified_short_view"
+    },
+    {
+      "subject": "public_playback_start",
+      "predicate": "is_not",
+      "object": "qualified_watch_hour"
+    },
+    {
+      "subject": "public_playback_start",
+      "predicate": "is_not",
+      "object": "monetized_playback_event"
+    },
+    {
+      "subject": "engaged_playback",
+      "predicate": "may_qualify_as",
+      "object": "qualified_short_view"
+    },
+    {
+      "subject": "engaged_playback",
+      "predicate": "may_contribute_to",
+      "object": "qualified_watch_hour"
+    },
+    {
+      "subject": "public_playback_start",
+      "predicate": "is_affected_by",
+      "object": "metric_definition_revision"
+    },
+    {
+      "subject": "metric_definition_revision",
+      "predicate": "creates",
+      "object": "view_count_comparability_break"
+    },
+    {
+      "subject": "view_count_comparability_break",
+      "predicate": "affects",
+      "object": "subculture_views"
+    },
+    {
+      "subject": "public_playback_start",
+      "predicate": "is_not",
+      "object": "channel_monthly_audience"
     }
   ],
   "rules": [
@@ -1797,7 +1908,9 @@
     "A TV-set viewing series is a subset of all in-home connected-device viewing; do not add them.",
     "Country/age prevalence and multi-market online respondent averages are not interchangeable with global people counts.",
     "Multi-language audio tracks attached to one video do not create independent video objects or distinct viewer populations.",
-    "Selected non-primary-language watch-time share is neither observed causal uplift nor equivalent to foreign-country user reach."
+    "Selected non-primary-language watch-time share is neither observed causal uplift nor equivalent to foreign-country user reach.",
+    "August 24, 2026 changed public viewCount to first-frame playback starts, creating a public view series comparability break.",
+    "Engaged attention, qualified YPP views, qualified public watch hours, ad impressions and individual playback starts retain separate units."
   ],
-  "ontology_version": "1.7"
+  "ontology_version": "1.8"
 }
