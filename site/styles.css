@@ -704,3 +704,17 @@ h1 em {font-style:italic;color:var(--accent)}
 .viewer-person-card h5{font-size:14px;margin:0 0 8px;text-transform:capitalize}
 .viewer-person-card p{font-size:12px;margin:7px 0}
 @media(max-width:650px){.viewer-person-details{padding:15px}.viewer-person-grid{grid-template-columns:1fr}}
+
+/* Conditional U.S. adult YouTube use, never composition of platform viewers. */
+.us-demographic-use{margin:28px 0}
+.us-demographic-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.us-demographic-details>summary{cursor:pointer;font-size:15px;font-weight:800}
+.us-demographic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.us-demographic-card{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px}
+.us-demographic-card h5{font-size:14px;margin:0 0 12px}
+.us-demographic-rows{list-style:none;padding:0;margin:0}
+.us-demographic-row{display:flex;justify-content:space-between;gap:12px;font-size:12px;padding:8px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.us-demographic-row:last-child{border-bottom:0}
+.us-demographic-row strong{white-space:nowrap;font-variant-numeric:tabular-nums}
+@media(max-width:850px){.us-demographic-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.us-demographic-details{padding:15px}}

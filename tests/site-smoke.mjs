@@ -129,6 +129,12 @@ try{
     await reach.locator('summary').click();
     assert((await reach.textContent()).includes('Do not sum percentages or device minutes'));
     assert((await reach.textContent()).includes('global monthly distinct viewers: unknown'));
+    const demographics=page.locator('.us-demographic-use');
+    assert.equal(await demographics.locator('.us-demographic-card').count(),3,'Missing U.S. adult subgroup study');
+    await demographics.locator('summary').click();
+    assert.equal(await demographics.locator('.us-demographic-row').count(),10,'Missing conditional usage figures');
+    assert((await demographics.textContent()).includes('IN THAT GROUP'));
+    assert((await demographics.textContent()).includes('subgroup sample sizes and uncertainty'));
     const people=page.locator('.viewer-person-metrics');
     assert.equal(await people.locator('.viewer-person-card').count(),8,'Missing public/owner viewer measurement types');
     await people.locator('summary').click();

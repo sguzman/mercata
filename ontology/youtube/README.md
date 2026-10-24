@@ -50,6 +50,10 @@ The [official country eligibility and payments comparison](country-eligibility-p
 
 The [2026 public Data API sampling and quota snapshot](public-api-sampling-budget.md) and [machine protocol](public-api-sampling-budget.json) distinguish the **100 daily search.list calls** in their own default bucket from the **10,000 other-method API units**, as documented by Google on October 15, 2026. Search pages can contain up to 50 result slots, while totalResults is approximate and capped. A synthetic 48-call budget illustrates the arithmetic but **no API queries were executed**, and unique community people, active creators and niche supply remain unknown.
 
+## U.S. adult YouTube usage by income, education and residence (2026)
+
+The [Pew NPORS demographic comparison](us-demographic-use-2026.md) and [structured 2026 survey cells](us-demographic-use-2026.json) report *ever-use* rates within U.S. adult income, education, and urban/suburban/rural subgroups (5,511 total respondents). These percentages do not measure YouTube audience composition, active monthly audiences, creator income or causal effects. Subgroup counts and margins of error remain unknown and are not replaced with the survey-wide ±1.8-point margin.
+
 ## People, accounts, signed-out viewers and owner-only Analytics
 
 The [unique-viewer measurement research](viewer-person-metrics.md) and [machine metric register](viewer-person-metrics.json) separate owner-facing estimated people (including signed-out traffic), rolling 28-day monthly audience and up-to-90-day unique viewers from public channel views, rounded subscribers and public upload objects. Access to creator Analytics is owner-authorized; the public Data API does not supply global distinct people or the nonregistered share. No platform-wide person counts are inferred.

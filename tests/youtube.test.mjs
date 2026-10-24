@@ -473,6 +473,25 @@ test('YouTube task percentage matches its original and detailed queues',async()=
   assert(plan.detail_tasks.every(t=>t.percent<100 || (t.status==='complete'&&t.evidence.length>0)));
 });
 
+test('Pew 2026 U.S. demographic ever-use rates never become YouTube audience composition',async()=>{
+ const [model,dossier]=await Promise.all([
+  load('ontology/youtube/us-demographic-use-2026.json'),load('specimens/youtube.json')
+ ]);
+ assert.equal(model.kind,'us_2026_education_income_community_usage');
+ assert.equal(model.source_id,'pew-us-adults-2026');
+ assert(dossier.evidence.some(s=>s.id===model.source_id));
+ assert.equal(model.survey.total_respondents_n,5511);
+ assert.equal(model.survey.reported_overall_moe_pp,1.8);
+ assert.equal(model.survey.subgroup_n,null);
+ assert.equal(model.survey.subgroup_moe_pp,null);
+ assert.deepEqual(model.strata.map(s=>s.id),['household_income','education','residence']);
+ assert.deepEqual(model.strata.map(s=>s.categories.map(x=>x.percent)),[[77,84,86,90],[77,87,90],[87,86,78]]);
+ assert(model.strata.every(g=>g.categories.every(x=>x.subgroup_n===null&&x.subgroup_moe_pp===null)));
+ assert.equal(model.measurement.is_youtube_audience_composition,false);
+ assert.equal(model.measurement.is_monthly_active_use,false);
+ assert(Object.values(model.unmeasured).every(v=>v===null));
+});
+
 test('Public channel counts and owner viewers remain different measurement types',async()=>{
  const [metrics,dossier]=await Promise.all([
   load('ontology/youtube/viewer-person-metrics.json'),load('specimens/youtube.json')
