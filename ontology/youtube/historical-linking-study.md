@@ -10,6 +10,10 @@ The researchers drew on a prior crawl of **more than 36 million channels**, then
 
 The article explicitly notes that the high-subscriber focus **does not represent all YouTube videos**. These figures are historical; they do not establish the number of channels at any subscriber tier in October 2026.
 
+## Historical view concentration in the underlying crawl
+
+The authors report that the top **0.4% of channels in their broad historical sample accounted for 62% of observed views**. This is a descriptive result of the source's **end-of-2019 crawl** and is distinct from the high-subscriber linking subset. It does not establish 2026 platform concentration, income inequality, audience uniqueness or newcomer success odds.
+
 ## Reported use of promotion links
 
 | Category, across the sampled high-subscriber channels | No such URLs | URLs in fewer than 20% of videos | URLs in at least 80% of videos |
