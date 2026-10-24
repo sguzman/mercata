@@ -57,6 +57,8 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+Mercata also has a [reproducible YouTube source-independence audit](ontology/youtube/source-provenance.md) that flags reused official document URLs and syndicated study data without confusing unknown publication dates with invalid sources.
+
 An [ownership, delegation and continuity study](ontology/youtube/channel-ownership-continuity.md) explains which roles can manage a YouTube channel, the risk of destination deletion during transfers, and the limits of uploaded-video exports. General platform access does not establish legal transferability of a creator's business.
 
 The research also tracks [monthly advertiser-policy revisions during 2026](ontology/youtube/advertiser-policy-history.md), including gaming and public-interest reporting. Eligibility changes are not presented as measured increases in creator income.
