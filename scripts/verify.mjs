@@ -539,7 +539,7 @@ for(const milestone of ledger.milestones) {
     ensure(task.percent < 100 || (task.evidence.length > 0 && task.evidence.every(has)), 'Unverified ledger item: ' + task.id);
   }
 }
-for(const file of ['index.html','site/app.js','site/styles.css','assets/swatch.svg']) ensure(has(file),'Missing website asset '+file);
+for(const file of ['index.html','site/app.js','site/styles.css','site/metric-compatibility.mjs','tests/metric-compatibility.test.mjs','assets/swatch.svg']) ensure(has(file),'Missing website asset '+file);
 const web = fs.readFileSync(path.join(root,'index.html'),'utf8');
 ensure(web.includes('id="theme"') && web.includes('value="system"'),'No system-first theme control');
 console.log('PASS: ontology, schema, queues (' + allTasks.length + ' core), catalog (' +
