@@ -2638,6 +2638,28 @@
       "evidence_class": "author_preprint_selected_vlog_cold_start_views_and_modeled_ad_value",
       "license": "Linked preprint, independently paraphrased methods and aggregate statistics; no figures copied",
       "notes": "Keyword-discovered selected first-upload daily-life vloggers. Modeled $1.61 median advertising value and estimated 185 labor hours are NOT observed payouts or logs; paper does not establish representative all-creator income."
+    },
+    {
+      "id": "youtube-retention-key-moments-2026",
+      "url": "https://support.google.com/youtube/answer/9314415?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Measure key moments for audience retention",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_owner_video_retention_measures_and_availability",
+      "license": "Official documentation referenced and independently summarized; no charts copied",
+      "notes": "Owner video-level retention, intro at 30s, dips/spikes, typical comparison, thresholds for highlighted moments and 1-2 day processing delay."
+    },
+    {
+      "id": "youtube-engagement-help-2026",
+      "url": "https://support.google.com/youtube/answer/9313698?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Understand your YouTube engagement",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_owner_analytics_engagement_measures",
+      "license": "Official documentation linked, metrics independently defined",
+      "notes": "Owner-only Engagement tab summarizes watch time, average view duration and video retention."
     }
   ],
   "claims": [
@@ -5580,6 +5602,36 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Policy eligibility is conditional and does not guarantee a specific product's compliance, checkout effectiveness or commercial payout."
+    },
+    {
+      "id": "youtube-retention-owner-not-public-2026",
+      "text": "YouTube's key-moments audience retention report is a video-level creator Studio Analytics feature, typically processing after 1–2 days; highlighted retention moments require sufficient qualifying video duration and views and do not appear as public video statistics.",
+      "source_ids": [
+        "youtube-retention-key-moments-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Availability, advanced segments and processing vary; no owner-authorized cohort analytics were collected. Does not supply public channel-wide completion rates."
+    },
+    {
+      "id": "youtube-shorts-stayed-not-completion-2026",
+      "text": "YouTube Studio labels 'Stayed to watch' for Shorts as the share of times viewers stayed past the first seconds rather than swiping away. Engaged views exclude loops, and average duration/percentage viewed are computed among engaged-view events; none independently supplies the percentage completing the entire Short.",
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Measurement definitions apply to current Studio guidance and can vary by metric epoch; public Shorts views are not a valid denominator for a fabricated completed-viewer rate."
+    },
+    {
+      "id": "youtube-retention-segment-rewatch-not-people-2026",
+      "text": "An audience-retention segment may record more segment views than overall video views because a viewer can watch that segment repeatedly. A retention spike is not necessarily new distinct viewers or proof of positive sentiment.",
+      "source_ids": [
+        "youtube-retention-key-moments-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "No actual segment-level owner data, view-person deduplication or sampled completion curve collected."
     }
   ],
   "observations": [],

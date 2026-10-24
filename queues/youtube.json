@@ -2744,14 +2744,20 @@
           "title": "Research retention and completion where publicly available",
           "acceptance": "Separate creator-owned analytics from publicly visible estimates.",
           "weight": 1,
-          "progress": 22,
+          "progress": 82,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
             "ontology/youtube/creator-growth.md",
             "ontology/youtube/content-formats.json",
             "ontology/youtube/content-formats.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/retention-observability.json",
+            "ontology/youtube/retention-observability.md",
+            "site/retention-observability-audit.mjs",
+            "tests/retention-observability-audit.test.mjs",
+            "tests/site-smoke.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -3486,7 +3492,7 @@
           "title": "Assess the reliability of niche-growth projections",
           "acceptance": "Explicitly document model assumptions, uncertainty and failed comparisons.",
           "weight": 1,
-          "progress": 86,
+          "progress": 91,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
@@ -3520,7 +3526,11 @@
             "ontology/youtube/declining-content-evidence.json",
             "ontology/youtube/declining-content-evidence.md",
             "site/topic-decline-audit.mjs",
-            "tests/topic-decline-audit.test.mjs"
+            "tests/topic-decline-audit.test.mjs",
+            "ontology/youtube/retention-observability.json",
+            "ontology/youtube/retention-observability.md",
+            "site/retention-observability-audit.mjs",
+            "tests/retention-observability-audit.test.mjs"
           ]
         }
       ]

@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "retention_completion_observability_matrix",
+  "as_of": "2026-10-24",
+  "status": "public_metric_dictionary_and_owner_only_report_capabilities_no_actual_completion_dataset",
+  "purpose": "Separate public playback starts, owner-only engagement, replaying retention segments, and unobserved video completion and cross-video session durations.",
+  "source_ids": [
+    "studio-analytics-help",
+    "youtube-retention-key-moments-2026",
+    "youtube-engagement-help-2026"
+  ],
+  "metrics": [
+    {
+      "id": "public_video_views",
+      "label": "Public watch-page views",
+      "unit": "view_start_events",
+      "access": "public",
+      "observed": false,
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "limit": "Playback-start event count; not unique people or whole-video completions",
+      "value": null
+    },
+    {
+      "id": "unique_viewers",
+      "label": "Estimated unique viewers",
+      "unit": "estimated_people",
+      "access": "owner_only",
+      "observed": false,
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "limit": "Estimated distinct viewers in selected window; not a number of completed videos",
+      "value": null
+    },
+    {
+      "id": "thumbnail_ctr",
+      "label": "Impressions click-through rate",
+      "unit": "thumbnail_impression_events",
+      "access": "owner_only",
+      "observed": false,
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "limit": "Selection after eligible shown thumbnail, not viewer retention after click",
+      "value": null
+    },
+    {
+      "id": "shorts_stayed",
+      "label": "Shorts stayed to watch",
+      "unit": "initial_short_view_opportunities",
+      "access": "owner_only",
+      "observed": false,
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "limit": "Stayed past initial seconds rather than swiped away; not full Short completion",
+      "value": null
+    },
+    {
+      "id": "shorts_engaged",
+      "label": "Shorts engaged views",
+      "unit": "engaged_short_playbacks",
+      "access": "owner_only",
+      "observed": false,
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "limit": "View events passing initial watch threshold, excluding loops; not completion",
+      "value": null
+    },
+    {
+      "id": "average_view_duration",
+      "label": "Average view duration",
+      "unit": "time_per_engaged_playback",
+      "access": "owner_only",
+      "observed": false,
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "limit": "Average viewed minutes among engaged events; not an entire viewing session across videos",
+      "value": null
+    },
+    {
+      "id": "average_percentage_viewed",
+      "label": "Average percentage viewed",
+      "unit": "average_fraction_video_duration",
+      "access": "owner_only",
+      "observed": false,
+      "source_ids": [
+        "studio-analytics-help"
+      ],
+      "limit": "Average percent among engaged watch events, not the fraction of people who reached end",
+      "value": null
+    },
+    {
+      "id": "intro_30s",
+      "label": "Intro at 30 seconds",
+      "unit": "relative_retention_at_timestamp",
+      "access": "owner_only",
+      "observed": false,
+      "source_ids": [
+        "youtube-retention-key-moments-2026"
+      ],
+      "limit": "Only owner video-level report; relative survival to 30 seconds, not completion",
+      "value": null
+    },
+    {
+      "id": "retention_segment",
+      "label": "Segment replay or abandonment",
+      "unit": "playback_events_at_timestamp",
+      "access": "owner_only",
+      "observed": false,
+      "source_ids": [
+        "youtube-retention-key-moments-2026"
+      ],
+      "limit": "May exceed overall video view count because of rewatches, not number of unique people",
+      "value": null
+    },
+    {
+      "id": "watch_time",
+      "label": "Watch time hours",
+      "unit": "total_watched_hours",
+      "access": "owner_only",
+      "observed": false,
+      "source_ids": [
+        "youtube-engagement-help-2026"
+      ],
+      "limit": "Aggregate hours are not a unique viewer count, completion count, or net revenue",
+      "value": null
+    },
+    {
+      "id": "cross_video_session",
+      "label": "Time in cross-video YouTube session",
+      "unit": "minutes_per_viewer_session",
+      "access": "not_established",
+      "observed": false,
+      "source_ids": [
+        "youtube-engagement-help-2026"
+      ],
+      "limit": "General total YouTube multi-video session duration is not disclosed by these reports",
+      "value": null
+    }
+  ],
+  "owner_report": {
+    "source_id": "youtube-retention-key-moments-2026",
+    "availability": "video_level_Studio_Analytics_only",
+    "processing_delay_days_typical": "1–2",
+    "highlight_duration_min_seconds": 60,
+    "highlight_min_views": 100,
+    "retention_curve_observed": false,
+    "shorts_full_completion_distribution": null,
+    "sampled_creators_with_access": null
+  },
+  "unit_comparison_gates": [
+    "Require owner authorization to access retention curves; never infer private engagement metrics from public counts.",
+    "Record metric definition, format, video duration, observation window and the August 2026 counting epoch.",
+    "Shorts stayed-to-watch is initial threshold retention; it does not provide full end-card completion.",
+    "Average percentage viewed is an average across engaged watch events, not a binary count of completed people.",
+    "Watch-time totals and average view duration do not identify a visitor's total session across videos.",
+    "Replay spikes and repeat segment views may exceed the number of video view events; a spike is not an audience growth rate.",
+    "Different formats and length cohorts need comparable definitions; missing values are null, not zero."
+  ],
+  "unmeasured": {
+    "representative_full_video_completion_share": null,
+    "shorts_end_reach_fraction": null,
+    "longform_end_reach_fraction": null,
+    "cross_video_session_minutes": null,
+    "segment_unique_viewers": null,
+    "causal_retention_income_gain": null,
+    "owner_authorized_video_series": null
+  },
+  "sampled_video_retention_records": []
+}
