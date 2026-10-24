@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "legal_operator_and_market_transaction_roles",
+  "as_of": "2026-10-24",
+  "status": "official_terms_and_product_roles_not_market_census",
+  "legal_service_provider": {
+    "entity": "Google LLC",
+    "legal_basis": "YouTube Terms of Service and Paid Service Terms for covered contracts",
+    "source_ids": [
+      "youtube-general-terms-provider-2026",
+      "youtube-paid-terms-provider-2026"
+    ],
+    "historical_operator_changes": null,
+    "all_country_contract_coverage_verified": false,
+    "local_ad_sales_entity": null,
+    "local_tax_payee": null
+  },
+  "participants": [
+    {
+      "id": "platform_provider",
+      "role": "Platform service and policy operator",
+      "provides": "Hosting, discovery, product controls, monetization access and contracted paid services",
+      "pays_for_content_only_conditionally": true,
+      "source_ids": [
+        "youtube-general-terms-provider-2026",
+        "revenue-shares"
+      ]
+    },
+    {
+      "id": "uploading_creator",
+      "role": "Content and channel publisher",
+      "provides": "Video/live/Shorts/audio/community media and work effort",
+      "paid_guaranteed": false,
+      "source_ids": [
+        "ypp-main",
+        "revenue-shares"
+      ]
+    },
+    {
+      "id": "viewer",
+      "role": "Attention participant; may be signed out",
+      "provides": "Viewing activity and optional community engagement",
+      "always_pays_money": false,
+      "source_ids": [
+        "youtube-general-terms-provider-2026"
+      ]
+    },
+    {
+      "id": "advertiser",
+      "role": "Buyer of advertising inventory",
+      "provides": "Advertising spend and creative",
+      "same_as_end_viewer": false,
+      "source_ids": [
+        "revenue-shares"
+      ]
+    },
+    {
+      "id": "paid_viewer_customer",
+      "role": "Buyer of memberships, subscriptions, rentals or purchases",
+      "provides": "Money for chosen paid product",
+      "all_viewers_pay": false,
+      "source_ids": [
+        "youtube-paid-terms-provider-2026"
+      ]
+    },
+    {
+      "id": "sponsor_or_brand",
+      "role": "Contracting counterparty for creator paid promotion",
+      "provides": "Negotiated cash or other consideration",
+      "necessarily_pays_through_youtube": false,
+      "source_ids": [
+        "yt-branded-policy-2026"
+      ]
+    },
+    {
+      "id": "rights_holder",
+      "role": "Controller of audio/video copyrights",
+      "provides": "Rights and sometimes licensing claims; may enforce, monetize or block matches",
+      "is_video_uploader_necessarily": false,
+      "source_ids": [
+        "music-content-id"
+      ]
+    },
+    {
+      "id": "channel_delegate",
+      "role": "Authorized editor or manager within channel permissions",
+      "provides": "Operational work scoped by role",
+      "is_legal_owner_by_default": false,
+      "source_ids": [
+        "yt-studio-channel-permissions"
+      ]
+    },
+    {
+      "id": "payment_account",
+      "role": "AdSense for YouTube payout account and verification",
+      "provides": "Payment routing, holds and disbursement settings",
+      "is_creator_revenue_source": false,
+      "source_ids": [
+        "adsense-payment-cycle",
+        "adsense-methods"
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "id": "free_public_view",
+      "from": "uploading_creator",
+      "to": "viewer",
+      "offering": "Publicly viewable content",
+      "financial_buyer": null,
+      "unit": "video_or_live_consumption",
+      "access": "Can be watched free to viewer with platform conditions",
+      "source_ids": [
+        "youtube-general-terms-provider-2026"
+      ],
+      "known_revenue_per_view": null
+    },
+    {
+      "id": "advertising",
+      "from": "advertiser",
+      "to": "platform_provider",
+      "offering": "Advertising placement/inventory",
+      "financial_buyer": "advertiser",
+      "unit": "ad_impression_or_campaign",
+      "access": "Advertiser buying/serving policies and viewer market",
+      "source_ids": [
+        "revenue-shares"
+      ],
+      "known_revenue_per_view": null
+    },
+    {
+      "id": "ypp_ad_revenue_share",
+      "from": "platform_provider",
+      "to": "uploading_creator",
+      "offering": "Conditional eligible creator revenue share",
+      "financial_buyer": null,
+      "unit": "monetized_ad_revenue_share",
+      "access": "Program approval, suitable content, applicable module and payment account",
+      "source_ids": [
+        "ypp-main",
+        "revenue-shares"
+      ],
+      "known_revenue_per_view": null
+    },
+    {
+      "id": "paid_service_customer",
+      "from": "paid_viewer_customer",
+      "to": "platform_provider",
+      "offering": "Paid subscriptions, rentals/purchases, membership features",
+      "financial_buyer": "paid_viewer_customer",
+      "unit": "subscription_or_order",
+      "access": "Covered paid service and territory-specific contract",
+      "source_ids": [
+        "youtube-paid-terms-provider-2026"
+      ],
+      "known_revenue_per_view": null
+    },
+    {
+      "id": "sponsor_to_creator",
+      "from": "sponsor_or_brand",
+      "to": "uploading_creator",
+      "offering": "Contracted placement/endorsement",
+      "financial_buyer": "sponsor_or_brand",
+      "unit": "negotiated_agreement",
+      "access": "Advertising policy, disclosure, contract and payment channels differ",
+      "source_ids": [
+        "yt-branded-policy-2026"
+      ],
+      "known_revenue_per_view": null
+    },
+    {
+      "id": "rights_claim",
+      "from": "rights_holder",
+      "to": "platform_provider",
+      "offering": "Content ID match policy may monetize, track, block",
+      "financial_buyer": null,
+      "unit": "video_rights_claim",
+      "access": "Exclusive rights and approved matching, sometimes territory-specific",
+      "source_ids": [
+        "music-content-id"
+      ],
+      "known_revenue_per_view": null
+    }
+  ],
+  "product_classes": [
+    {
+      "id": "public_content",
+      "kind": "distribution",
+      "examples": [
+        "Watch pages",
+        "Shorts",
+        "Live streams",
+        "Podcasts",
+        "Music videos"
+      ],
+      "sale_assumed": false,
+      "source_ids": [
+        "youtube-general-terms-provider-2026"
+      ]
+    },
+    {
+      "id": "advertising",
+      "kind": "ad_inventory",
+      "examples": [
+        "Ad placements"
+      ],
+      "sale_assumed": true,
+      "source_ids": [
+        "revenue-shares"
+      ]
+    },
+    {
+      "id": "paid_access",
+      "kind": "youtube_paid_service",
+      "examples": [
+        "Paid subscriptions",
+        "Channel memberships",
+        "Movie rentals and purchases"
+      ],
+      "sale_assumed": true,
+      "source_ids": [
+        "youtube-paid-terms-provider-2026"
+      ]
+    },
+    {
+      "id": "creator_sponsorship",
+      "kind": "external_agreement",
+      "examples": [
+        "Paid promotions",
+        "Free product consideration"
+      ],
+      "sale_assumed": null,
+      "source_ids": [
+        "yt-branded-policy-2026"
+      ]
+    },
+    {
+      "id": "rights_enforcement",
+      "kind": "copyright_management",
+      "examples": [
+        "Content ID policy",
+        "Copyright claims"
+      ],
+      "sale_assumed": false,
+      "source_ids": [
+        "music-content-id"
+      ]
+    },
+    {
+      "id": "off_platform_commerce",
+      "kind": "merchant_or_external_payment",
+      "examples": [
+        "External merch/affiliate offers"
+      ],
+      "sale_assumed": null,
+      "source_ids": [
+        "yt-branded-policy-2026"
+      ]
+    }
+  ],
+  "not_interchangeable": [
+    "Viewer count ≠ unique buyer count ≠ advertiser accounts ≠ creator channels ≠ legal creator owners.",
+    "Creator upload ≠ YPP qualification ≠ creator payee ≠ contracted sponsor ≠ rights holder.",
+    "YouTube service legal provider ≠ each tax or AdSense payee entity; relevant country contracts require separate checks.",
+    "Free video viewing is not a financial transaction, even if ads are displayed.",
+    "Brand sponsorship receipt may be paid off-platform and not through AdSense for YouTube.",
+    "Content ID claim can monetize, block or track copyrighted material; a claim is not proof of revenue or copyright strike.",
+    "Creator-paid products and external offers differ in eligibility, terms, fees and buyer protections.",
+    "Channel delegate permissions do not establish legal ownership or a creator's personal profile."
+  ],
+  "unmeasured": {
+    "unique_legal_creator_owners": null,
+    "active_uploading_creators": null,
+    "active_sellers_by_product": null,
+    "paying_viewer_customers": null,
+    "advertising_spend_per_creator": null,
+    "platform_net_sales_volume": null,
+    "rightsholder_receipts": null,
+    "third_party_intermediary_fee_distribution": null,
+    "commercial_transaction_conversion": null
+  }
+}
