@@ -1434,6 +1434,54 @@
       "unit": "unverified_rate",
       "access": "official_policy_or_research_hypothesis",
       "measured_value": null
+    },
+    {
+      "id": "studio_collaborator_role",
+      "group": "institutions",
+      "definition": "Role-based editor/viewer/manager or Studio owner access, not identical to Brand Account primary ownership.",
+      "unit": "delegation_role",
+      "access": "official_general_policy_or_research_definition",
+      "measured_value": null
+    },
+    {
+      "id": "brand_channel_migration",
+      "group": "institutions",
+      "definition": "Channel movement between eligible Brand Accounts with potential permanent deletion of destination content.",
+      "unit": "migration_operation",
+      "access": "official_general_policy_or_research_definition",
+      "measured_value": null
+    },
+    {
+      "id": "creator_upload_export",
+      "group": "institutions",
+      "definition": "Creator-initiated export of eligible uploaded videos, not a full portable channel or creator business.",
+      "unit": "video_export",
+      "access": "official_general_policy_or_research_definition",
+      "measured_value": null
+    },
+    {
+      "id": "channel_termination_appeal",
+      "group": "institutions",
+      "definition": "Formal challenge to a channel termination, distinct from copyright counter-notification.",
+      "unit": "appeal_procedure",
+      "access": "official_general_policy_or_research_definition",
+      "measured_value": null
+    },
+    {
+      "id": "unverified_channel_saleability",
+      "group": "economics",
+      "definition": "Unknown legal and platform transferability of a channel's full creator business, revenue contract and subscribers.",
+      "unit": "unverified_business_right",
+      "access": "official_general_policy_or_research_definition",
+      "measured_value": null
+    },
+    {
+      "id": "channel_backup_continuity",
+      "group": "economics",
+      "definition": "Independent retention of original media, licenses and recovery options, separate from YouTube's downloaded transcodes.",
+      "unit": "continuity_practice",
+      "access": "official_general_policy_or_research_definition",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -2261,6 +2309,56 @@
       "subject": "advertiser_policy_revision",
       "predicate": "may_affect",
       "object": "gaming_graphic_introduction"
+    },
+    {
+      "subject": "studio_collaborator_role",
+      "predicate": "is_not",
+      "object": "brand_account_primary_owner"
+    },
+    {
+      "subject": "brand_account_primary_owner",
+      "predicate": "may_authorize",
+      "object": "brand_channel_migration"
+    },
+    {
+      "subject": "brand_channel_migration",
+      "predicate": "may_destroy",
+      "object": "video"
+    },
+    {
+      "subject": "brand_channel_migration",
+      "predicate": "does_not_verify",
+      "object": "unverified_channel_saleability"
+    },
+    {
+      "subject": "creator_upload_export",
+      "predicate": "is_not",
+      "object": "brand_channel_migration"
+    },
+    {
+      "subject": "creator_upload_export",
+      "predicate": "supports",
+      "object": "channel_backup_continuity"
+    },
+    {
+      "subject": "creator_upload_export",
+      "predicate": "is_not",
+      "object": "unverified_channel_saleability"
+    },
+    {
+      "subject": "channel_termination_appeal",
+      "predicate": "is_not",
+      "object": "brand_channel_migration"
+    },
+    {
+      "subject": "channel_backup_continuity",
+      "predicate": "supports",
+      "object": "creator"
+    },
+    {
+      "subject": "brand_account_primary_owner",
+      "predicate": "may_control",
+      "object": "channel"
     }
   ],
   "rules": [
@@ -2299,7 +2397,9 @@
     "The rolling 10-million qualified Shorts requirement for continuing YPP members is distinct from the announced 20-million threshold for new YPP ads/Premium applicants.",
     "Premium and Premium Lite net subscription pools do not imply fixed per-view payouts; their allocation bases differ.",
     "Ads suitability on a specific video, participation in YPP, and earning a nonzero ad payout are separate decisions.",
-    "Monthly advertiser guideline revisions are policy observations, not genre-wide income effects or viewer-demographic evidence."
+    "Monthly advertiser guideline revisions are policy observations, not genre-wide income effects or viewer-demographic evidence.",
+    "YouTube Studio delegated owners cannot be assumed to hold Google Brand Account primary-owner authority.",
+    "Moving a channel, exporting uploaded video files and assigning a revenue-generating business have distinct legal and technical effects."
   ],
-  "ontology_version": "2.2"
+  "ontology_version": "2.3"
 }
