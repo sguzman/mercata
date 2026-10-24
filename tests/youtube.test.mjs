@@ -37,6 +37,35 @@ test('Country viewing figures keep UK devices and international survey denominat
   assert(data.excluded_comparisons.some(x=>x.includes('51 Online Nation minutes')));
 });
 
+test('Multilingual YouTube product rules distinguish language, country and selected watch time',async()=>{
+  const [model,dossier]=await Promise.all([
+    load('ontology/youtube/multilingual-distribution.json'),load('specimens/youtube.json')
+  ]);
+  const sources=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(model.facets.length,8);
+  assert.equal(model.product_surfaces.length,6);
+  assert.equal(model.automatic_dubbing_example_pairs.length,8);
+  assert(model.facets.every(x=>x.observed_distribution===null));
+  assert(model.product_surfaces.every(x=>x.source_ids.length &&
+    x.source_ids.every(id=>sources.has(id)) &&
+    x.default_cost===null && x.default_creation_hours===null));
+  const manual=model.product_surfaces.find(x=>x.id==='manual_audio');
+  const automatic=model.product_surfaces.find(x=>x.id==='automatic_audio');
+  assert(manual.content_formats.includes('shorts'));
+  assert(automatic.gates.includes('supported_target_pair'));
+  const observation=model.official_selected_observations.find(x=>x.id==='mla-watch-time-non-primary-language-2025');
+  assert.equal(observation.comparator,'greater_than');
+  assert.equal(observation.value,25);
+  assert.equal(observation.causal_lift,null);
+  assert.equal(observation.denominator_n,null);
+  assert.equal(observation.representative_of_all_youtube_creators,false);
+  const snapshot=model.official_selected_observations.find(x=>x.id==='auto-dubbing-language-total-may-2026');
+  assert.equal(snapshot.value,27);
+  assert.equal(snapshot.source_period,'2026-05-15');
+  assert(model.automatic_dubbing_example_pairs.every(x=>x.source_ids.every(id=>sources.has(id))));
+  assert.equal(model.measurement_design.median_income_lift,null);
+});
+
 test('YouTube demographics have explicit percentage type',async()=>{
   const record=await load('specimens/youtube.json');
   for(const group of record.audience_research.demographics){
