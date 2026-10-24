@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **124 references, 118 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **127 references, 121 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -152,6 +152,10 @@ The [audience discovery and return model](creator-growth.md) defines counted thu
 ## Multilingual audio, localized metadata and viewer language
 
 The [multilingual distribution study](multilingual-distribution.md) and [machine ontology](multilingual-distribution.json) distinguish manually uploaded multi-language audio, automatic dubbing, subtitles/captions, localized titles and descriptions, localized thumbnails and viewer-preference settings. YouTube's September 2025 report says selected creators already uploading multilingual audio received **over 25% of their watch time** from non-primary-language views (as of July 2025), not 25% incremental audience growth or profit. The May 2026 count of 27 auto-dubbing languages is recorded only as a dated snapshot. Cost, language-market income and causal improvements remain unknown.
+
+## Comparable video distribution products (without authorizing new specimens)
+
+The [comparison-set methodology](comparison-set.md) and [machine criteria](comparison-set.json) delimit YouTube's adjacent services: Twitch's livestream supporter/ads tiers, TikTok's qualified short-video rewards and Vimeo OTT's paid content sales. Product entry, money flows and viewer/buyer units differ. No creator earnings ranking, newcomer probability or market-size comparison is inferred. These are **research comparators only**, not admissions to Mercata's independent marketplace gallery.
 
 ## Video and distribution formats
 
