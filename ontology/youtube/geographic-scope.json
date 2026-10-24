@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "geographic_scope_protocol",
+  "as_of": "2026-10-23",
+  "status": "source_bounded_plan_not_global_census",
+  "axes": [
+    {
+      "id": "viewer_geography",
+      "population": "Audience geography as measured by source, not inferred from content language"
+    },
+    {
+      "id": "creator_residence",
+      "population": "Creator-country eligibility and legal conditions, distinct from viewer origin"
+    },
+    {
+      "id": "payout_country",
+      "population": "AdSense payment account and payout rules, not automatically creator audience"
+    },
+    {
+      "id": "advertising_market",
+      "population": "Market of the advertiser or matched inventory; separate revenue denominator"
+    },
+    {
+      "id": "content_language",
+      "population": "Audio, subtitle and metadata language; never a residency or sensitive demographic proxy"
+    }
+  ],
+  "branches": [
+    {
+      "id": "global",
+      "title": "Global source-specific scope",
+      "population": "GWI surveyed internet users age 16+ in defined covered markets and separate official platform activity events",
+      "source_ids": [
+        "datareportal-midyear-global-2026",
+        "youtube-press-2026"
+      ],
+      "limitations": "Including vs excluding China/Russia changes the survey denominator. Uploads and Shorts plays are events, not unique people.",
+      "unique_people_count": null,
+      "newcomer_profit_distribution": null
+    },
+    {
+      "id": "us",
+      "title": "United States",
+      "population": "Pew U.S. adult survey and distinct DataReportal advertising reach",
+      "source_ids": [
+        "pew-us-adults-2026",
+        "datareportal-2026-us",
+        "ypp-country"
+      ],
+      "limitations": "Surveyed adult usage is not advertiser reach, a creator census or per-channel income.",
+      "unique_people_count": null,
+      "newcomer_profit_distribution": null
+    },
+    {
+      "id": "uk",
+      "title": "United Kingdom",
+      "population": "Ofcom UK adults, TV-set and in-home viewing under source-specific definitions",
+      "source_ids": [
+        "ofcom-uk-online-2025",
+        "ofcom-uk-media-nations-2026",
+        "ypp-country"
+      ],
+      "limitations": "TV time is already inside all-device in-home viewing; online reach and age 75+ weekly reach have different denominators.",
+      "unique_people_count": null,
+      "newcomer_profit_distribution": null
+    },
+    {
+      "id": "mx",
+      "title": "Mexico",
+      "population": "DataReportal advertising-reach estimate and separately documented creator product access",
+      "source_ids": [
+        "datareportal-2026-mx",
+        "ypp-country",
+        "creator-partnerships-mx"
+      ],
+      "limitations": "YPP availability does not confirm access to every product, approved account status or typical local earnings.",
+      "unique_people_count": null,
+      "newcomer_profit_distribution": null
+    },
+    {
+      "id": "reuters_48",
+      "title": "Reuters 48 online news markets",
+      "population": "Digital News Report 2026 quota-sampled online respondents from 48 markets",
+      "source_ids": [
+        "reuters-dnr-2026",
+        "reuters-dnr-methods-2026"
+      ],
+      "limitations": "Nonprobability online news survey with different coverage by market; not a worldwide audience census.",
+      "unique_people_count": null,
+      "newcomer_profit_distribution": null
+    }
+  ],
+  "country_feature_fields": [
+    "territory",
+    "observation_date",
+    "creator_residence",
+    "ypp_available",
+    "expanded_ypp_available",
+    "named_product",
+    "feature_specific_availability",
+    "age_gate",
+    "accepted_module",
+    "payout_country",
+    "payout_currency",
+    "payout_threshold",
+    "bank_and_tax_requirements",
+    "source_ids",
+    "verification_status"
+  ],
+  "cross_region_rules": [
+    "Preserve population, sampling method, age, time window, geography, device and definition with every estimate.",
+    "Do not add TV-set minutes to total in-home device minutes or sum overlapping content communities.",
+    "Do not treat ad reach, online survey respondents, upload counts, Shorts views or channel counts as unique viewers.",
+    "General YPP country availability does not confirm individual approval or every paid feature.",
+    "Do not infer creator residence, audience country, ethnicity or affiliation from language.",
+    "Unmeasured geographies, populations and earnings remain unknown, not zero."
+  ],
+  "unresolved": {
+    "global_unique_monthly_youtube_viewers": null,
+    "country_total_creator_populations": null,
+    "country_newcomer_profit_including_zero": null,
+    "country_content_community_populations": null,
+    "country_production_cost_distributions": null
+  }
+}
