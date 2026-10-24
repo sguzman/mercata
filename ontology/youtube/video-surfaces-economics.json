@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "video_format_ad_inventory_and_live_replay_research",
+  "as_of": "2026-10-24",
+  "status": "official_product_rules_documented_creator_outcomes_unmeasured",
+  "research_basis": "Official public YouTube Help only; channel revenue, audience size, ad fill, watch duration and production labor are not measured.",
+  "surfaces": [
+    {
+      "id": "watch_page_upload",
+      "name": "Watch-page upload",
+      "primary_unit": "public_video_view_events",
+      "distribution": "YouTube watch page, subscriptions and recommendations",
+      "source_ids": [
+        "yt-midroll-2026",
+        "yt-premiere-2026"
+      ],
+      "entry": "Ordinary eligible uploaded video, including horizontal videos under 8 minutes",
+      "ad_mechanism": "Eligible monetized uploads 8 minutes or longer may enable mid-roll slots, but ads are separately selected",
+      "midroll_threshold_seconds": 480,
+      "min_seconds": null,
+      "max_seconds": null,
+      "transition": "Published upload remains ordinary video",
+      "revenue_per_view": null,
+      "creator_cost": null,
+      "owner_analytics_required": true
+    },
+    {
+      "id": "shorts",
+      "name": "Shorts Feed",
+      "primary_unit": "shorts_engaged_views_for_revenue_or_qualified_views",
+      "distribution": "Shorts Feed, with separate public play starts",
+      "source_ids": [
+        "shorts-three-minutes",
+        "shorts-policy"
+      ],
+      "entry": "Square or vertical up to 3 minutes, using channel-type-specific date rules",
+      "ad_mechanism": "Shorts Feed Creator Pool sharing for eligible YPP creators, not watch-page mid-rolls",
+      "midroll_threshold_seconds": null,
+      "min_seconds": null,
+      "max_seconds": 180,
+      "transition": "Classification depends on original upload date and channel type",
+      "revenue_per_view": null,
+      "creator_cost": null,
+      "owner_analytics_required": true
+    },
+    {
+      "id": "live",
+      "name": "Live stream",
+      "primary_unit": "live_view_events_and_peak_concurrent_viewers",
+      "distribution": "Real-time video, chat and channel live discovery",
+      "source_ids": [
+        "yt-live-ads-2026",
+        "yt-live-metrics-2026"
+      ],
+      "entry": "Eligibility and activation differ by live setup and creator account",
+      "ad_mechanism": "Eligible pre-roll and live mid-roll ads; fan support and memberships are separate money flows",
+      "midroll_threshold_seconds": null,
+      "min_seconds": null,
+      "max_seconds": null,
+      "transition": "May generate a separately visible archived replay after broadcast",
+      "revenue_per_view": null,
+      "creator_cost": null,
+      "owner_analytics_required": true
+    },
+    {
+      "id": "premiere",
+      "name": "Premiere",
+      "primary_unit": "premiere_watch_events_and_postpremiere_video_views",
+      "distribution": "Scheduled or instant shared first viewing with live chat/reminders",
+      "source_ids": [
+        "yt-premiere-2026"
+      ],
+      "entry": "Uploaded video using Premiere settings; Shorts and output over 1080p not supported in current policy",
+      "ad_mechanism": "Video monetization if eligible; Premiere is not a distinct guaranteed ad-rate tier",
+      "midroll_threshold_seconds": null,
+      "min_seconds": null,
+      "max_seconds": null,
+      "transition": "Becomes a regular channel upload afterwards; Premiere view count transfers to the video",
+      "revenue_per_view": null,
+      "creator_cost": null,
+      "owner_analytics_required": true
+    },
+    {
+      "id": "clip",
+      "name": "Clip",
+      "primary_unit": "clip_playback_events_on_original_video_page",
+      "distribution": "Shareable looping selection attached to an accessible original video or stream",
+      "source_ids": [
+        "yt-clips-2026"
+      ],
+      "entry": "Clipping available under relevant video/channel settings",
+      "ad_mechanism": "No separately documented universal Clip payout; cannot infer independent gross revenue",
+      "midroll_threshold_seconds": null,
+      "min_seconds": 5,
+      "max_seconds": 60,
+      "transition": "Selection continues to depend on original video's visibility and rights",
+      "revenue_per_view": null,
+      "creator_cost": null,
+      "owner_analytics_required": false
+    },
+    {
+      "id": "podcast",
+      "name": "Podcast playlist and episodes",
+      "primary_unit": "full_length_video_episode_events",
+      "distribution": "Episodes as videos in a designated playlist with potential YouTube Music features",
+      "source_ids": [
+        "podcast-create-help"
+      ],
+      "entry": "Full-length owned episodes in a creator's podcast playlist; playlist may have product eligibility constraints",
+      "ad_mechanism": "Underlying episode/video revenue pathways apply when eligible; podcast designation is not a guaranteed independent payout",
+      "midroll_threshold_seconds": null,
+      "min_seconds": null,
+      "max_seconds": null,
+      "transition": "Same source episodes can exist as videos and playlist entries; avoid treating each playlist entry as an additional upload",
+      "revenue_per_view": null,
+      "creator_cost": null,
+      "owner_analytics_required": true
+    },
+    {
+      "id": "live_replay",
+      "name": "Archived live replay (VOD)",
+      "primary_unit": "post_live_replay_views_by_date_cohort",
+      "distribution": "Replay or highlights posted after live broadcast",
+      "source_ids": [
+        "yt-live-archive-2026",
+        "yt-live-metrics-2026",
+        "yt-live-ads-2026"
+      ],
+      "entry": "YouTube may automatically archive streams shorter than 12 hours; longer streams may not be captured, so local backup is recommended",
+      "ad_mechanism": "If eligible, replay ads depend on VOD/watch-page monetization and demand; not equal to live ads",
+      "midroll_threshold_seconds": null,
+      "min_seconds": null,
+      "max_seconds": null,
+      "transition": "A recording with live history is not a new independently created person, channel or guaranteed second revenue",
+      "revenue_per_view": null,
+      "creator_cost": null,
+      "owner_analytics_required": true
+    }
+  ],
+  "inventory": {
+    "watch_page_midroll": {
+      "threshold_seconds_inclusive": 480,
+      "source_ids": [
+        "yt-midroll-2026"
+      ],
+      "eligible_slot_types": [
+        "manual",
+        "automatic",
+        "combined"
+      ],
+      "chosen_slot_is_ad_guarantee": false,
+      "notes": "Natural breaks are more likely to serve ads, but ad demand and experience still determine delivery."
+    },
+    "live_midroll": {
+      "source_ids": [
+        "yt-live-ads-2026"
+      ],
+      "placement_types": [
+        "automatic",
+        "scheduled",
+        "manual"
+      ],
+      "slot_guaranteed_to_serve": false,
+      "viewers_not_all_shown_same_ad": true,
+      "owner_analytics_required": true
+    },
+    "shorts_feed_ads": {
+      "source_ids": [
+        "shorts-policy"
+      ],
+      "placement": "between_short_videos",
+      "is_watch_page_midroll": false,
+      "average_rpm": null
+    }
+  },
+  "live_replay_comparison": {
+    "source_ids": [
+      "yt-live-metrics-2026",
+      "yt-live-archive-2026",
+      "yt-live-ads-2026",
+      "air-livestream-404-2026"
+    ],
+    "key_fields": [
+      "stream_id",
+      "stream_start_utc",
+      "stream_end_utc",
+      "live_views_during_broadcast",
+      "peak_concurrent_live_viewers",
+      "live_watch_time_hours",
+      "post_live_replay_views_by_fixed_followup_window",
+      "post_live_replay_watch_time",
+      "live_ads_net_creator_revenue",
+      "replay_ads_net_creator_revenue",
+      "supers_and_memberships_counted_once",
+      "production_and_moderation_labor_hours",
+      "archive_visibility"
+    ],
+    "selected_vendor_evidence": "AIR's selected 404-channel sample offers bounded cross-channel evidence but lacks a representative new-entrant live-versus-replay experiment; it is not a census.",
+    "replay_days_after_end": [
+      7,
+      30,
+      90
+    ],
+    "live_same_viewer_rewatch_is_distinct_person": false,
+    "creator_earnings_relative_to_regular_videos": null,
+    "replay_share_of_total_income": null,
+    "newcomer_probabilities": null,
+    "production_labor_hours": null,
+    "casual_effect": null
+  },
+  "dated_policy_conflict": {
+    "id": "shorts_claims_2026_09_24",
+    "claimed_effective_at": "2026-09-24",
+    "source_ids": [
+      "shorts-three-minutes",
+      "yt-claim-policy-2026-conflict"
+    ],
+    "old_or_conflicting_version": "General English Shorts 3-minute article still says any Short longer than 1 minute with an active Content ID claim is blocked.",
+    "new_or_conflicting_version": "Localized Help article describes a relaxation from September 24, 2026 for new Shorts longer than one minute with claims.",
+    "resolved_uniform_rule": null,
+    "account_specific_application": null,
+    "monetization_when_claimed": null,
+    "publication_instruction": "Do not assert a universal claim-blocking rule or universal exemption until official Help language, content owner type, market and upload-date requirements are reconciled."
+  },
+  "unknowns": {
+    "optimal_video_length": null,
+    "format_revenue_median": null,
+    "watch_page_midroll_fill_rate": null,
+    "live_midroll_fill_rate": null,
+    "replay_lifetime_revenue_share": null,
+    "production_costs_by_format": null,
+    "creator_labor_hours_by_format": null,
+    "representative_replay_conversion": null,
+    "causal_effect_of_premiere": null
+  },
+  "verification_rules": [
+    "Format type and surface must be declared before attaching any watch-time, views, CPM, ad-fill or paid-member claims.",
+    "Do not substitute public Shorts playback starts for eligible Shorts paid engaged/qualified views.",
+    "Mid-roll eligibility at 480 seconds means a slot can be enabled, not that an ad will be served or that longer is more profitable.",
+    "A live concurrent-viewer peak is not a count of unique viewers or a replay audience.",
+    "Premiere views transfer to the underlying upload; playlist membership and Clips are not additional unique content/people for summation.",
+    "Live and post-live ad revenues can be tracked separately by owner Analytics if provided, but must not be counted twice in a total.",
+    "An archived replay may never be available, so no live stream is guaranteed additional evergreen income.",
+    "Shorts music and Content ID policy conflicts must remain unresolved in this study until confirmed across official docs."
+  ]
+}

@@ -1681,6 +1681,83 @@
       "evidence_class": "vendor_studio_analytics_selected_live_creator_cohort",
       "license": "Original vendor research linked; independently summarized bounded analytics statistics",
       "notes": "Page last updated 2026-07-10. 404 AIR-affiliated channels, 3893 video-performance channel-months; 127 monetized streamers and 1287 monetized streaming channel-months. Overlap with AIR 300-channel RPM analysis unknown."
+    },
+    {
+      "id": "yt-midroll-2026",
+      "url": "https://support.google.com/youtube/answer/6175006?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Manage mid-roll ad breaks in long videos",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_watch_page_ad_slot_rules",
+      "license": "Official platform documentation linked; independently paraphrased factual policy.",
+      "notes": "Public policy snapshot, not a creator revenue study; content eligibility and regional differences require verification."
+    },
+    {
+      "id": "yt-live-ads-2026",
+      "url": "https://support.google.com/youtube/answer/7385599?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Monetize your live stream",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_live_ads_and_replay_revenue",
+      "license": "Official platform documentation linked; independently paraphrased factual policy.",
+      "notes": "Public policy snapshot, not a creator revenue study; content eligibility and regional differences require verification."
+    },
+    {
+      "id": "yt-premiere-2026",
+      "url": "https://support.google.com/youtube/answer/9080341?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Premiere a new video",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_premiere_launch_and_postpremiere_behavior",
+      "license": "Official platform documentation linked; independently paraphrased factual policy.",
+      "notes": "Public policy snapshot, not a creator revenue study; content eligibility and regional differences require verification."
+    },
+    {
+      "id": "yt-clips-2026",
+      "url": "https://support.google.com/youtube/answer/10332730?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Learn about managing Clips",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_clips_source_link_and_duration",
+      "license": "Official platform documentation linked; independently paraphrased factual policy.",
+      "notes": "Public policy snapshot, not a creator revenue study; content eligibility and regional differences require verification."
+    },
+    {
+      "id": "yt-live-archive-2026",
+      "url": "https://support.google.com/youtube/answer/6247592?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Archive live streams",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_live_archive_eligibility_and_backup",
+      "license": "Official platform documentation linked; independently paraphrased factual policy.",
+      "notes": "Public policy snapshot, not a creator revenue study; content eligibility and regional differences require verification."
+    },
+    {
+      "id": "yt-live-metrics-2026",
+      "url": "https://support.google.com/youtube/answer/2853833?hl=en",
+      "publisher": "YouTube Help",
+      "title": "See your live stream's metrics",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_live_viewing_analytics_vs_replay",
+      "license": "Official platform documentation linked; independently paraphrased factual policy.",
+      "notes": "Public policy snapshot, not a creator revenue study; content eligibility and regional differences require verification."
+    },
+    {
+      "id": "yt-claim-policy-2026-conflict",
+      "url": "https://support.google.com/youtube/answer/6013276?hl=en-GB",
+      "publisher": "YouTube Help",
+      "title": "Learn about copyright claims",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_localized_shorts_claim_policy_change_with_conflict",
+      "license": "Official platform documentation linked; independently paraphrased factual policy.",
+      "notes": "Public policy snapshot, not a creator revenue study; content eligibility and regional differences require verification."
     }
   ],
   "claims": [
@@ -3339,6 +3416,60 @@
       "observed_at": "2026-10-23",
       "confidence": "medium",
       "limitations": "Streaming months are repeated observations, not 1,287 independent channels; nonmonetized, new and unrepresented streamer earnings not measured. Livestream view counts use historical 2025-early-2026 view definitions."
+    },
+    {
+      "id": "format-midroll-eight-minute-eligible-not-guaranteed",
+      "text": "YouTube permits mid-roll ad slots for eligible monetized watch-page videos at least eight minutes long, with manual and automated placement; a slot does not promise an ad impression or revenue.",
+      "source_ids": [
+        "yt-midroll-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Eligibility, source permissions, device, rights and account status govern individual results; no creator earnings inferred."
+    },
+    {
+      "id": "format-shorts-three-minute-upload-date",
+      "text": "YouTube classifies qualifying square or vertical uploads up to three minutes as Shorts from October 15, 2024 for ordinary channels and December 8, 2025 for official artist channels; older qualifying uploads may retain watch-page treatment.",
+      "source_ids": [
+        "shorts-three-minutes"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Eligibility, source permissions, device, rights and account status govern individual results; no creator earnings inferred."
+    },
+    {
+      "id": "format-live-replay-podcast-clip-distinct",
+      "text": "YouTube Live, Premieres, Clips and podcast-designated playlists are different surfaces: a Premiere becomes a regular upload afterwards, a clip references an original video, and a podcast episode is a video belonging to a designated podcast playlist.",
+      "source_ids": [
+        "yt-live-ads-2026",
+        "yt-premiere-2026",
+        "yt-clips-2026",
+        "podcast-create-help"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Eligibility, source permissions, device, rights and account status govern individual results; no creator earnings inferred."
+    },
+    {
+      "id": "format-archiving-twelve-hour-conditional",
+      "text": "YouTube says it can archive livestreams under twelve hours, recommends a local recording, and warns that longer streams might not be captured; an archive's replay demand is not guaranteed.",
+      "source_ids": [
+        "yt-live-archive-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Eligibility, source permissions, device, rights and account status govern individual results; no creator earnings inferred."
+    },
+    {
+      "id": "format-short-claim-language-policy-inconsistency",
+      "text": "Official YouTube Help pages disagree about current treatment of claimed Shorts longer than one minute: the English overview still describes automatic blocking, while another localized Help page describes a September 24, 2026 relaxation for new uploads.",
+      "source_ids": [
+        "shorts-three-minutes",
+        "yt-claim-policy-2026-conflict"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Conflicting locale Help documents: no universal claim-blocking outcome or new monetization eligibility is inferred."
     }
   ],
   "observations": [],
