@@ -4,6 +4,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
+## Legal service provider and economic counterparties
+
+The [dated operator and transaction map](operator-market-roles.md) and [machine taxonomy](operator-market-roles.json) cite YouTube's current legal terms identifying Google LLC as the covered service provider, while separating public video viewing, advertiser-funded placements, conditional YPP revenue sharing, paid viewer subscriptions and purchases, sponsorships, rights holders and channel delegates. Free viewers are not necessarily paying customers; AdSense for YouTube is a payment-routing account, not an independent source of creator demand. No seller or buyer population sizes, deal volumes or typical incomes are inferred.
+
 ## Participants, accounts and audiences
 
 A viewer, registered account, channel, subscriber, publisher, monetized creator, view and advertising impression are not interchangeable units. One person can operate channels; subscribers may never watch; viewers can be unregistered. The rolling 28-day unique audience of a channel must not be called YouTube's monthly global user base.

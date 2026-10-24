@@ -91,6 +91,8 @@ The [animation and meme format-cycle research](ontology/youtube/animation-format
 
 The [bounded Beauty–Gaming overlap study](ontology/youtube/beauty-gaming-overlap-2025.md) records one 2025 vendor panel, including its sample frame, 5% reported category overlap and missing matched-person denominator. It does not claim a representative national union or infer individual viewer traits.
 
+The [YouTube operator and transaction-role map](ontology/youtube/operator-market-roles.md) identifies the service provider under the current official terms and distinguishes creators, ad buyers, rights holders, paying customers and payment accounts without inventing a single buyer/seller population.
+
 The [viewer/person measurement study](ontology/youtube/viewer-person-metrics.md) distinguishes public channel views and subscribers from owner-only unique viewer estimates, including signed-out watching. Rolling 28-day channel audience and up-to-90-day unique-viewer estimates are not a global census; unrelated channels cannot be summed into an exact user population.
 
 The [traffic-source concentration protocol](ontology/youtube/traffic-concentration.md) distinguishes owner-only Browse, suggested, Shorts, search, notifications and external attribution with explicit unit checks. No measured channel source mix or income exposure is assumed, and its diagnostic rejects partial source partitions.

@@ -168,6 +168,26 @@ test('2026 API sampling budget keeps search calls separate and rejects populatio
   assert(Object.values(budget.target_estimands).every(value=>value===null));
 });
 
+test('YouTube legal operator and transaction taxonomy separate suppliers payers and rights',async()=>{
+ const [model,dossier]=await Promise.all([load('ontology/youtube/operator-market-roles.json'),load('specimens/youtube.json')]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'legal_operator_and_market_transaction_roles');
+ assert.equal(model.legal_service_provider.entity,'Google LLC');
+ assert.equal(model.legal_service_provider.all_country_contract_coverage_verified,false);
+ assert(model.legal_service_provider.source_ids.every(id=>ids.has(id)));
+ assert.equal(model.participants.length,9);
+ assert.equal(model.flows.length,6);
+ assert.equal(model.product_classes.length,6);
+ assert(model.participants.every(x=>x.source_ids.length&&x.source_ids.every(id=>ids.has(id))));
+ assert(model.flows.every(x=>x.source_ids.length&&x.source_ids.every(id=>ids.has(id))));
+ assert(model.product_classes.every(x=>x.source_ids.length&&x.source_ids.every(id=>ids.has(id))));
+ assert.equal(model.flows.find(x=>x.id==='free_public_view').financial_buyer,null);
+ assert.equal(model.flows.find(x=>x.id==='advertising').financial_buyer,'advertiser');
+ assert.equal(model.flows.find(x=>x.id==='sponsor_to_creator').financial_buyer,'sponsor_or_brand');
+ assert.equal(model.participants.find(x=>x.id==='channel_delegate').is_legal_owner_by_default,false);
+ assert(Object.values(model.unmeasured).every(value=>value===null));
+});
+
 test('Gaming and beauty report keeps selected vendor overlap separate from a national union',async()=>{
  const [panel,dossier]=await Promise.all([load('ontology/youtube/beauty-gaming-overlap-2025.json'),load('specimens/youtube.json')]);
  const ids=new Set(dossier.evidence.map(x=>x.id));
