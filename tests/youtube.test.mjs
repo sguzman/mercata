@@ -236,6 +236,25 @@ test('Announced 2027 YPP entry changes distinguish existing Shorts members and P
 });
 
 
+test('YouTube ownership operations distinguish delegation from irreversible channel migration',async()=>{
+  const [data,dossier]=await Promise.all([
+    load('ontology/youtube/channel-ownership-continuity.json'),
+    load('specimens/youtube.json')
+  ]);
+  const known=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(data.operations.length,5);
+  assert(data.operations.every(x=>x.source_ids.every(id=>known.has(id))));
+  const byId=id=>data.operations.find(x=>x.id===id);
+  assert.equal(byId('transfer_brand_primary_owner').minimum_days_as_owner_source,7);
+  assert.equal(byId('transfer_brand_primary_owner').new_owner_or_manager_minimum_days,7);
+  assert.equal(byId('move_between_brand_accounts').irreversible_risk,true);
+  assert.equal(byId('move_between_brand_accounts').guaranteed_preservation_of_assets,false);
+  assert.equal(byId('export_own_content').guaranteed_full_channel_export,false);
+  assert.equal(byId('termination_appeal').appeals_within_one_year_max,2);
+  assert.equal(byId('termination_appeal').successful_appeal_probability,null);
+  assert(Object.values(data.business_value_limits).every(x=>x===null||x===false));
+});
+
 test('YouTube onboarding keeps channel creation, feature access and monetization separate',async()=>{
   const [access,dossier]=await Promise.all([
     load('ontology/youtube/channel-onboarding.json'),load('specimens/youtube.json')
