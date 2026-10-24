@@ -463,9 +463,9 @@ test('Mixed-platform creator income surveys remain separate and do not supply Yo
     load('ontology/youtube/cross-platform-income-surveys.json'),load('specimens/youtube.json')
   ]);
   const sources=new Set(dossier.evidence.map(s=>s.id));
-  assert.equal(report.studies.length,2);
-  assert.equal(report.independent_dataset_families,2);
-  assert.equal(new Set(report.studies.map(s=>s.source_family_id)).size,2);
+  assert.equal(report.studies.length,3);
+  assert.equal(report.independent_dataset_families,3);
+  assert.equal(new Set(report.studies.map(s=>s.source_family_id)).size,3);
   assert(report.studies.every(s=>s.representative_of_youtube===false &&
     s.representative_of_all_creators===false &&
     s.youtube_subgroup_n===null &&
@@ -480,6 +480,15 @@ test('Mixed-platform creator income surveys remain separate and do not supply Yo
   assert.equal(spotlight.survey_respondents_exact,427);
   assert.equal(spotlight.measurements.find(x=>x.id==='income_under_500').value,null);
   assert.equal(spotlight.measurements.find(x=>x.id==='income_100000_plus_count').value,37);
+  const creatoriq=report.studies.find(s=>s.id==='creatoriq-2026');
+  assert.equal(creatoriq.survey_respondents_exact,5095);
+  assert.equal(creatoriq.youtube_subgroup_n,null);
+  assert.equal(creatoriq.non_earning_entrants_covered,null);
+  assert.equal(creatoriq.measurements.find(x=>x.id==='creatoriq_under_10000_year').value,67);
+  assert.equal(creatoriq.measurements.find(x=>x.id==='creatoriq_income_not_primary').value,62);
+  assert(creatoriq.measurements.every(x=>x.denominator_n===null));
+  assert(creatoriq.margin_of_error_verifiability.includes('not established'));
+
   assert(Object.values(report.youtube_target_estimates).every(value=>value===null));
   assert(report.comparability.unsupported.includes('pooling_percentages'));
 });
