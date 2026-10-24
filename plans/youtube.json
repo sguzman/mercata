@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-23",
-  "progress_percent": 42,
+  "progress_percent": 43,
   "permission_required_before_execution": false,
   "scope": "Evidence-based research into YouTube's economics, platform use, population, creator earnings, audience demographics, subcultures, competition, content formats and practical monetization strategies.",
   "baseline": {
@@ -151,7 +151,7 @@
         "youtube/economics/measure-the-cost-of-testing-a-new-niche"
       ],
       "phase": 1,
-      "progress_percent": 58
+      "progress_percent": 62
     },
     {
       "id": "market",
@@ -1165,11 +1165,15 @@
       "objective": "Build a sourced gross-to-creator net worksheet with all terms left unknown.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and build a sourced gross-to-creator net worksheet with all terms left unknown.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 61,
       "evidence": [
         "ontology/youtube/analytics-query-guide.json",
         "ontology/youtube/analytics-query-guide.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/tax-withholding-mechanics.json",
+        "ontology/youtube/tax-withholding-mechanics.md",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
       ],
       "artifact": null,
       "priority": "standard",
@@ -1252,7 +1256,7 @@
       "objective": "List payout documents, withholding possibilities and country-dependent rules to verify.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and list payout documents, withholding possibilities and country-dependent rules to verify.",
       "status": "in_progress",
-      "percent": 38,
+      "percent": 71,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
@@ -1260,7 +1264,9 @@
         "ontology/youtube/country-eligibility-payments.json",
         "ontology/youtube/country-eligibility-payments.md",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/tax-withholding-mechanics.json",
+        "ontology/youtube/tax-withholding-mechanics.md"
       ],
       "artifact": null,
       "priority": "standard",
@@ -1274,7 +1280,7 @@
       "objective": "Define monthly settlement, payout minimum, holds and FX questions with dates.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define monthly settlement, payout minimum, holds and FX questions with dates.",
       "status": "in_progress",
-      "percent": 77,
+      "percent": 79,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
@@ -1285,7 +1291,10 @@
         "ontology/youtube/ypp-transition-2027.json",
         "ontology/youtube/ypp-transition-2027.md",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/tax-withholding-mechanics.json",
+        "ontology/youtube/tax-withholding-mechanics.md",
+        "tests/site-smoke.mjs"
       ],
       "artifact": null,
       "priority": "standard",

@@ -250,14 +250,18 @@
           "title": "Separate payment processing charges",
           "acceptance": "Check transaction, currency conversion, refund and chargeback costs.",
           "weight": 1,
-          "progress": 34,
+          "progress": 43,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
             "ontology/youtube/payment-gates.json",
             "specimens/youtube.json",
             "ontology/youtube/analytics-query-guide.json",
-            "ontology/youtube/analytics-query-guide.md"
+            "ontology/youtube/analytics-query-guide.md",
+            "ontology/youtube/tax-withholding-mechanics.json",
+            "ontology/youtube/tax-withholding-mechanics.md",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -266,7 +270,7 @@
           "title": "Check payout rails and countries",
           "acceptance": "Document payment methods and geographic availability.",
           "weight": 1,
-          "progress": 76,
+          "progress": 81,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -275,7 +279,9 @@
             "ontology/youtube/country-eligibility-payments.json",
             "ontology/youtube/country-eligibility-payments.md",
             "tests/youtube.test.mjs",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/tax-withholding-mechanics.json",
+            "ontology/youtube/tax-withholding-mechanics.md"
           ]
         },
         {
@@ -305,7 +311,7 @@
           "title": "Identify published tax obligations",
           "acceptance": "Document required forms, withholding and merchant-of-record terms.",
           "weight": 1,
-          "progress": 31,
+          "progress": 69,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -314,7 +320,9 @@
             "ontology/youtube/country-eligibility-payments.json",
             "ontology/youtube/country-eligibility-payments.md",
             "tests/youtube.test.mjs",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/tax-withholding-mechanics.json",
+            "ontology/youtube/tax-withholding-mechanics.md"
           ]
         },
         {
@@ -876,7 +884,7 @@
           "title": "Separate sales, payout and net profit",
           "acceptance": "Define each economic quantity and all known expenses.",
           "weight": 1,
-          "progress": 51,
+          "progress": 54,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
@@ -885,7 +893,11 @@
             "ontology/youtube/production-costs.md",
             "ontology/youtube/scenario-method.md",
             "ontology/youtube/opportunity-framework.md",
-            "tests/youtube.test.mjs"
+            "tests/youtube.test.mjs",
+            "ontology/youtube/tax-withholding-mechanics.json",
+            "ontology/youtube/tax-withholding-mechanics.md",
+            "specimens/youtube.json",
+            "tests/site-smoke.mjs"
           ]
         }
       ]
