@@ -119,6 +119,38 @@ for (const entry of index.specimens) {
       x.measurement_kind==='composition_of_news_consumers' && x.share_percent>=0 && x.share_percent<=100),
       'Invalid news demographic population');
 
+    const multilingual=load('ontology/youtube/multilingual-distribution.json');
+    ensure(multilingual.facets.length===8 &&
+      multilingual.product_surfaces.length===6 &&
+      multilingual.official_selected_observations.length===2 &&
+      multilingual.automatic_dubbing_example_pairs.length===8,
+      'Incomplete multilingual distribution research ontology');
+    ensure(new Set(multilingual.facets.map(x=>x.id)).size===8 &&
+      multilingual.facets.every(x=>x.observed_distribution===null),
+      'Invented or duplicate language demographics');
+    ensure(multilingual.product_surfaces.every(x=>
+      x.source_ids.length>0 && x.source_ids.every(id=>sourceIds.has(id)) &&
+      x.default_cost===null && x.default_creation_hours===null),
+      'Unsourced multilingual product or assumed translation cost');
+    ensure(multilingual.automatic_dubbing_example_pairs.every(x=>
+      x.targets.length>0 && x.source_ids.every(id=>sourceIds.has(id))),
+      'Translation pair without an official source');
+    const multilingualWatch=multilingual.official_selected_observations.find(x=>x.id==='mla-watch-time-non-primary-language-2025');
+    const autoSnapshot=multilingual.official_selected_observations.find(x=>x.id==='auto-dubbing-language-total-may-2026');
+    ensure(multilingualWatch?.value===25 && multilingualWatch.comparator==='greater_than' &&
+      multilingualWatch.denominator_n===null &&
+      multilingualWatch.representative_of_all_youtube_creators===false &&
+      multilingualWatch.causal_lift===null &&
+      multilingualWatch.estimated_additional_revenue===null,
+      'Selected multilingual watch-time fraction distorted into growth or profit');
+    ensure(autoSnapshot?.value===27 && autoSnapshot.source_period==='2026-05-15',
+      'Dated auto dubbing language snapshot incorrectly generalized');
+    ensure(multilingual.official_selected_observations.every(x=>x.source_ids.every(id=>sourceIds.has(id))) &&
+      Object.values(multilingual.measurement_design).every((value)=>true) &&
+      multilingual.measurement_design.median_income_lift===null &&
+      multilingual.measurement_design.median_labor_cost===null,
+      'Missing provenance or fabricated dubbing return');
+
     const formatStudy=load('ontology/youtube/content-formats.json');
     ensure(formatStudy.formats.length===8,'Incomplete YouTube format research');
     ensure(new Set(formatStudy.formats.map(x=>x.id)).size===formatStudy.formats.length,'Duplicate format IDs');
