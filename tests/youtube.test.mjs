@@ -528,6 +528,26 @@ test('Independent survey population frames are explicitly nonpoolable',async()=>
  assert(Object.values(cross.unmeasured).every(x=>x===null));
 });
 
+test('Self-reported ethnic-group YouTube use cannot be inferred from identities or generalized to religion',async()=>{
+ const [study,dossier]=await Promise.all([
+   load('ontology/youtube/demographic-identity-uncertainty.json'),
+   load('specimens/youtube.json')
+ ]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(study.kind,'aggregate_race_ethnicity_and_religion_uncertainty');
+ assert(study.source_ids.every(id=>ids.has(id)));
+ assert.equal(study.source_overall_n,5511);
+ assert.equal(study.source_overall_moe_pp,1.8);
+ assert.deepEqual(study.race_ethnicity_groups.map(x=>x.value_percent),[83,85,84,95]);
+ assert.equal(study.race_ethnicity_groups[3].english_only_restriction,true);
+ assert(study.race_ethnicity_groups.every(x=>x.sample_n===null&&x.sampling_moe_pp===null));
+ assert.equal(study.religious_affiliation.youtube_ever_use_rates,null);
+ assert.equal(study.religious_affiliation.subgroup_percentages,null);
+ assert(Object.values(study.unknowns).every(v=>v===null));
+ assert(study.publication_limits.some(x=>x.includes('never infer an individual attribute')));
+ assert(study.publication_limits.some(x=>x.includes('English speakers only')));
+});
+
 test('Pew 2026 U.S. demographic ever-use rates never become YouTube audience composition',async()=>{
  const [model,dossier]=await Promise.all([
   load('ontology/youtube/us-demographic-use-2026.json'),load('specimens/youtube.json')

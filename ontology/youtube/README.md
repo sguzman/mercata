@@ -58,6 +58,10 @@ The [2026 public Data API sampling and quota snapshot](public-api-sampling-budge
 
 The [human study-frame audit](study-frame-crosswalk.md) and [machine source matrix](study-frame-crosswalk.json) separate seven published measurement frames: Pew's NPORS 2026 platform-use survey, the 2026 American Trends Panel news survey, a distinct 2025 YouTube-news audience composition study, two age-defined YouTube/NRG U.S. online groups, a commercial mixed-platform creator survey, and AIR's selected monetized client cohort. Respondents, channels and channel-months are distinct observational units. Their different recruitment, questions, age eligibility, item nonresponse and unverified cross-study overlap preclude pooled global viewer counts or representative newcomer income claims.
 
+## Aggregate race/ethnicity use and unknown religious identity
+
+The [published-group methodology](demographic-identity-uncertainty.md) and [source-scoped machine record](demographic-identity-uncertainty.json) document Pew's 2026 U.S.-adult ever-use rates by self-reported race/ethnicity. The non-Hispanic single-race definitions, Hispanic-of-any-race definition and **English-only Asian estimate** are preserved. Group sample sizes and uncertainty are not replaced by the survey-wide statistics. No religious-affiliation YouTube measure is available from that source. Names, faces, channels and comments must never be used to infer anyone's sensitive demographic identity.
+
 ## U.S. adult YouTube usage by income, education and residence (2026)
 
 The [Pew NPORS demographic comparison](us-demographic-use-2026.md) and [structured 2026 survey cells](us-demographic-use-2026.json) report *ever-use* rates within U.S. adult income, education, and urban/suburban/rural subgroups (5,511 total respondents). These percentages do not measure YouTube audience composition, active monthly audiences, creator income or causal effects. Subgroup counts and margins of error remain unknown and are not replaced with the survey-wide ±1.8-point margin.

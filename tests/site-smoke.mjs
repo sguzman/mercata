@@ -178,6 +178,12 @@ try{
     assert((await frames.textContent()).includes('Sample size: unknown'),'Null survey counts must render without suppressing dossier');
     assert((await frames.textContent()).includes('7 documented source frames'));
 
+    const identity=page.locator('.identity-research');
+    assert.equal(await identity.locator('.identity-research-card').count(),4,'Missing explicitly scoped race/ethnicity study');
+    await identity.locator('summary').click();
+    assert((await identity.textContent()).includes('English speakers only'));
+    assert((await identity.textContent()).includes('Religion-specific YouTube use: unknown'));
+    assert((await identity.textContent()).includes('ADULTS WITHIN EACH NAMED GROUP'));
     const demographics=page.locator('.us-demographic-use');
     assert.equal(await demographics.locator('.us-demographic-card').count(),3,'Missing U.S. adult subgroup study');
     await demographics.locator('summary').click();

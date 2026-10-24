@@ -67,6 +67,8 @@ A [dated February 2027 YouTube Partner Program transition](ontology/youtube/ypp-
 
 The [study-frame crosswalk](ontology/youtube/study-frame-crosswalk.md) explicitly prevents pooling Pew adults, YouTube/NRG's differently aged U.S. online participants, CreatorIQ cross-platform creators and AIR's monetized YouTube client channels. Population, sample size, question and time period must be compatible before combined inference.
 
+The [race/ethnicity aggregate-use protocol](ontology/youtube/demographic-identity-uncertainty.md) records Pew's published U.S. adult survey group rates, including the Asian English-speaker restriction, while leaving religious affiliation unmeasured. It prohibits using public profiles to infer individuals' sensitive demographic identities.
+
 The [2026 U.S. adult YouTube usage study](ontology/youtube/us-demographic-use-2026.md) adds Pew Research Center's source-specific income, education and urban/rural **ever-use rates**. It does not infer YouTube's viewer demographic composition or convert the survey-wide sampling error into subgroup errors.
 
 Additional [topic-level activity evidence](ontology/youtube/topic-observations.json) separately records a global 2026 title-filtered upload count and June 2025 U.S. learning/how-to views. They must not be compared as popularity rankings, unique people or earnings.

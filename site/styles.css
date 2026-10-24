@@ -945,3 +945,15 @@ h1 em {font-style:italic;color:var(--accent)}
 .finance-content-card h5{font-size:14px;margin:0 0 9px}
 .finance-content-card p{font-size:12px;margin:7px 0}
 @media(max-width:650px){.finance-content-details{padding:15px}.finance-content-grid{grid-template-columns:1fr}}
+
+/* Source-bound survey percentages, never inferred demographic identities. */
+.identity-research{margin:28px 0}
+.identity-research-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.identity-research-details>summary{cursor:pointer;font-size:15px;font-weight:800}
+.identity-research-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}
+.identity-research-card{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;overflow-wrap:anywhere}
+.identity-research-card h5{font-size:14px;margin:0 0 8px}
+.identity-research-value{font:28px Georgia,serif;font-variant-numeric:tabular-nums}
+.identity-research-card p{font-size:12px;margin:8px 0 0}
+@media(max-width:900px){.identity-research-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.identity-research-details{padding:15px}.identity-research-grid{grid-template-columns:1fr}}
