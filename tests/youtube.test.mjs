@@ -196,8 +196,8 @@ test('YouTube ontology connects audio licensing, Content ID holds and copyright 
   const model=await load('ontology/youtube/model.json');
   const known=new Set(model.concepts.map(x=>x.id));
   const pairs=new Set(model.relations.map(x=>x.subject+'|'+x.predicate+'|'+x.object));
-  assert.equal(model.concepts.length,161);
-  assert.equal(model.relations.length,140);
+  assert.equal(model.concepts.length,163);
+  assert.equal(model.relations.length,144);
   assert(model.relations.every(x=>known.has(x.subject)&&known.has(x.object)));
   assert(pairs.has('registered_account|may_manage|channel'));
   assert(pairs.has('syndicated_income_report|reuses|income_survey_source_family'));
@@ -206,6 +206,7 @@ test('YouTube ontology connects audio licensing, Content ID holds and copyright 
   assert(pairs.has('public_playback_start|is_not|qualified_short_view'));
   assert(pairs.has('public_search_stratum|consumes|youtube_search_quota_bucket'));
   assert(pairs.has('sampled_channel_id|is_not|subculture_creators'));
+  assert(pairs.has('childrens_music_genre|is_not_equivalent_to|child_directed_animation_genre'));
   assert(pairs.has('metric_definition_revision|creates|view_count_comparability_break'));
   assert(pairs.has('secondary_audio_track|can_be|machine_dub'));
   assert(pairs.has('language_watch_time|is_not|channel_monthly_audience'));
