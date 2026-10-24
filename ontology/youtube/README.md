@@ -1,6 +1,6 @@
 # YouTube ontology — audiences, content and earning
 
-The independent [machine model](model.json) defines **153 concepts** and **129 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **31 candidate overlapping subcultures**, without pretending their populations have been measured.
+The independent [machine model](model.json) defines **161 concepts** and **140 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **31 candidate overlapping subcultures**, without pretending their populations have been measured.
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
@@ -33,6 +33,10 @@ The [dated first-frame view-count study](view-definition-break.md) and [metric b
 ## How discovery works
 
 See the [officially documented search and recommendation surfaces](discovery.md). Search ranking, personalized Home, Up Next and Shorts are different ways audiences find content. Creator RPM and advertiser CPM use different denominators; no per-view revenue rate is assumed.
+
+## Quota-aware public content sampling
+
+The [2026 public Data API sampling and quota snapshot](public-api-sampling-budget.md) and [machine protocol](public-api-sampling-budget.json) distinguish the **100 daily search.list calls** in their own default bucket from the **10,000 other-method API units**, as documented by Google on October 15, 2026. Search pages can contain up to 50 result slots, while totalResults is approximate and capped. A synthetic 48-call budget illustrates the arithmetic but **no API queries were executed**, and unique community people, active creators and niche supply remain unknown.
 
 ## Researching communities without inventing their sizes
 
