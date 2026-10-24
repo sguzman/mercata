@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "shorts_to_regular_video_referral_study",
+  "as_of": "2026-10-24",
+  "status": "official_link_mechanics_and_funnel_attribution_gates_no_observed_conversion",
+  "research_question": "Do Shorts cause viewers to continue to related ordinary videos, and what cost and earned value could be measured?",
+  "source_ids": [
+    "yt-shorts-related-video-help-2026",
+    "yt-mixed-format-analytics-help-2026",
+    "yt-feature-access-guide-2026"
+  ],
+  "population": "YouTube Shorts viewers exposed to creators' linked videos and eligible owners, with no sampled channel cohort",
+  "method": "Document the official linked-video mechanism, distinguish observable format summaries from directly linked events, and prespecify a comparison with a complete paid and labor-cost ledger.",
+  "surfaces": [
+    {
+      "id": "shorts_feed",
+      "kind": "shorts_view",
+      "label": "Short discovery event",
+      "source_ids": [
+        "yt-mixed-format-analytics-help-2026"
+      ],
+      "measurement": "shorts_views_or_engaged_views_with_named_epoch",
+      "unit": "playback_or_engagement_events",
+      "not_equivalent_to": "unique_people_exposed_to_related_link",
+      "measured": null
+    },
+    {
+      "id": "shorts_related_video",
+      "kind": "clickable_video_link",
+      "label": "Related video in Shorts player",
+      "source_ids": [
+        "yt-shorts-related-video-help-2026",
+        "yt-feature-access-guide-2026"
+      ],
+      "measurement": "link_destination_and_advanced_feature_gate",
+      "unit": "feature_eligibility_not_an_event_count",
+      "not_equivalent_to": "link_impressions_or_click_rate",
+      "measured": null
+    },
+    {
+      "id": "destination_video",
+      "kind": "regular_video",
+      "label": "Watch-page destination",
+      "source_ids": [
+        "yt-mixed-format-analytics-help-2026"
+      ],
+      "measurement": "destination_views_or_traffic_by_source",
+      "unit": "playback_events",
+      "not_equivalent_to": "visitors_referred_by_a_particular_short",
+      "measured": null
+    },
+    {
+      "id": "format_overlap",
+      "kind": "aggregate_audience_overlap",
+      "label": "Viewers across formats",
+      "source_ids": [
+        "yt-mixed-format-analytics-help-2026"
+      ],
+      "measurement": "format_specific_unique_viewer_overlap",
+      "unit": "estimated_people",
+      "not_equivalent_to": "linked_short_to_video_journey_or_click",
+      "measured": null
+    }
+  ],
+  "feature_rules": [
+    "Related-video selection uses a video/Short/Live from the same channel and links within the Shorts player.",
+    "Advanced feature access is required; selected related video must be public or unlisted and follow Community Guidelines.",
+    "A related-video link is not a guaranteed recommendation or proof of exposure to each Shorts viewer.",
+    "Creator-access Studio reports are not a public dataset of per-Short onward clicks.",
+    "Ordinary video view events, Shorts engaged views and unique people are different counting units, especially around the August 24 2026 revision."
+  ],
+  "identifiability_gates": [
+    {
+      "id": "eligible_link",
+      "required": "Verified advanced features, link destination and effective release period",
+      "passed": false
+    },
+    {
+      "id": "joined_events",
+      "required": "Authorized source-specific referral events connected to the named Short and destination, with documented source mechanism",
+      "passed": false
+    },
+    {
+      "id": "event_units",
+      "required": "Numerator and denominator in compatible event units, same metric epoch, disjoint populations or documented repeats",
+      "passed": false
+    },
+    {
+      "id": "counterfactual",
+      "required": "Prerecorded randomized or sufficiently controlled comparison rather than unrelated before/after video totals",
+      "passed": false
+    },
+    {
+      "id": "net_costs",
+      "required": "Documented creator hours and cash for both source Short and destination video, adjusted for other traffic",
+      "passed": false
+    }
+  ],
+  "example_refusal_cases": [
+    {
+      "input": "one Short has 1000 views and destination video has 200 views",
+      "result": "not_identifiable",
+      "reason": "No verified link exposure, clicks or attributed destination events"
+    },
+    {
+      "input": "500 Shorts viewers also watch an ordinary video",
+      "result": "not_identifiable",
+      "reason": "Undirected viewer overlap does not establish sequence or origin"
+    },
+    {
+      "input": "video receives 50 extra views after link creation",
+      "result": "not_identifiable",
+      "reason": "No control for recommendations, direct visits, temporal/seasonal changes or other traffic"
+    }
+  ],
+  "unmeasured": {
+    "sampled_short_exposures": null,
+    "related_link_clicks": null,
+    "verified_short_referred_destinations": null,
+    "unique_funnel_participants": null,
+    "cross_format_attributed_conversion": null,
+    "incremental_video_watch_hours": null,
+    "incremental_net_profit": null,
+    "creator_labor_cost": null,
+    "causal_lift": null
+  },
+  "research_outputs": [],
+  "actual_funnel_experiments": []
+}

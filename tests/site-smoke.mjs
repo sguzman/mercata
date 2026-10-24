@@ -91,6 +91,18 @@ try{
     assert.equal(await onboarding.locator('.channel-feature-gate').count(),4,'Missing independent feature gates');
     const ownership=page.locator('.ownership-continuity');
     assert.equal(await ownership.locator('.ownership-card').count(),5,'Missing channel management and continuity operations');
+    for(const [selector,cards,phrase] of [
+      ['.reputation-portability',7,'not verified buyer ratings'],
+      ['.checkout-refund-evidence',3,'Membership cancellation'],
+      ['.member-cohort-protocol',6,'No paid cohort or experiment'],
+      ['.shorts-referral-study',4,'not verified click-through events']
+    ]){
+      const section=page.locator(selector);
+      assert.equal(await section.locator('.ownership-card').count(),cards,'Missing research cards in '+selector);
+      await section.locator('summary').click();
+      assert((await section.textContent()).includes(phrase),'Missing uncertainty boundary in '+selector);
+    }
+
     await ownership.locator('.ownership-details > summary').click();
     assert((await ownership.textContent()).includes('seven-day role tenure'));
     assert((await ownership.textContent()).includes('permanently delete the target channel'));

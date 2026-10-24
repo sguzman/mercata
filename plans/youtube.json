@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-23",
-  "progress_percent": 58,
+  "progress_percent": 59,
   "permission_required_before_execution": false,
   "scope": "Evidence-based research into YouTube's economics, platform use, population, creator earnings, audience demographics, subcultures, competition, content formats and practical monetization strategies.",
   "baseline": {
@@ -1654,7 +1654,7 @@
       "objective": "Prepare format-specific measurement tables for impressions, shown-in-feed and views.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and prepare format-specific measurement tables for impressions, shown-in-feed and views.",
       "status": "in_progress",
-      "percent": 58,
+      "percent": 79,
       "evidence": [
         "ontology/youtube/discovery.md",
         "ontology/youtube/analytics-query-guide.json",
@@ -1665,9 +1665,15 @@
         "ontology/youtube/measurement-history.json",
         "ontology/youtube/measurements.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/shorts-related-video-funnel.json",
+        "ontology/youtube/shorts-related-video-funnel.md",
+        "site/shorts-referral-audit.mjs",
+        "tests/shorts-referral-audit.test.mjs",
+        "tests/site-smoke.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/shorts-related-video-funnel.json",
       "priority": "standard",
       "phase": 3
     },
@@ -2555,14 +2561,18 @@
       "objective": "Build a funnel with impressions, views, retention, subscribers and repeat attention.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and build a funnel with impressions, views, retention, subscribers and repeat attention.",
       "status": "in_progress",
-      "percent": 64,
+      "percent": 70,
       "evidence": [
         "ontology/youtube/retention-posts-memberships.json",
         "ontology/youtube/retention-posts-memberships.md",
         "specimens/youtube.json",
         "site/app.js",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/shorts-related-video-funnel.json",
+        "ontology/youtube/shorts-related-video-funnel.md",
+        "site/shorts-referral-audit.mjs",
+        "tests/shorts-referral-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/retention-posts-memberships.json",
       "priority": "standard",
@@ -3097,15 +3107,22 @@
       "objective": "Keep conversion unknown until measured.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and keep conversion unknown until measured.",
       "status": "in_progress",
-      "percent": 20,
+      "percent": 81,
       "evidence": [
         "ontology/youtube/opportunity-framework.json",
         "ontology/youtube/opportunity-framework.md",
         "ontology/youtube/scenario-method.md",
         "site/scenario.mjs",
-        "tests/scenario.test.mjs"
+        "tests/scenario.test.mjs",
+        "ontology/youtube/shorts-related-video-funnel.json",
+        "ontology/youtube/shorts-related-video-funnel.md",
+        "site/shorts-referral-audit.mjs",
+        "tests/shorts-referral-audit.test.mjs",
+        "tests/site-smoke.mjs",
+        "site/app.js",
+        "specimens/youtube.json"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/shorts-related-video-funnel.json",
       "priority": "standard",
       "phase": 4
     },

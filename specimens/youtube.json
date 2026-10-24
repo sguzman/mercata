@@ -2495,6 +2495,39 @@
       "evidence_class": "official_external_retail_checkout_policy",
       "license": "Official help page linked and independently summarized; no copied charts, images or datasets",
       "notes": "Current Help description; pricing and purchasing conditions can vary by country, storefront, membership vintage and payment channel."
+    },
+    {
+      "id": "yt-shorts-related-video-help-2026",
+      "url": "https://support.google.com/youtube/answer/14075157?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Add a related video to your YouTube Shorts",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_shorts_related_video_link_and_access",
+      "license": "Official Help linked; independently summarized without copying media",
+      "notes": "Related video in Shorts player may target channel Videos, Shorts or Live; advanced feature access and visibility restrictions apply."
+    },
+    {
+      "id": "yt-mixed-format-analytics-help-2026",
+      "url": "https://support.google.com/youtubecreatorstudio/answer/12220281?co=GENIE.Platform%3DDesktop&hl=en",
+      "publisher": "YouTube Studio Help",
+      "title": "Understand your YouTube content performance",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_format_metrics_traffic_and_view_epoch",
+      "license": "Official Help linked; independently summarized without copying media",
+      "notes": "Channel-level video/Short/live format breakdowns and format audience overlap are not measured referrals between individual uploads; August 2026 view counting change."
+    },
+    {
+      "id": "yt-feature-access-guide-2026",
+      "url": "https://support.google.com/youtube/answer/9890437?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Learn about feature access for YouTube Creators",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_feature_access_requirements",
+      "license": "Official Help linked; independently summarized without copying media",
+      "notes": "The Shorts related video link is an advanced feature; feature eligibility may depend on channel account status."
     }
   ],
   "claims": [
@@ -5147,6 +5180,37 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Official metric definitions, not owner-authorized member-level history or a representative channel sample. Calculating cohort renewal requires actual due dates, aligned entries and settlement outcomes."
+    },
+    {
+      "id": "yt-shorts-related-video-link-exists-2026",
+      "text": "A creator with advanced feature access can select one of their public or unlisted Videos, Shorts or Live streams as a clickable related video below a Short's channel handle; the feature is not proof that viewers clicked or continued watching.",
+      "source_ids": [
+        "yt-shorts-related-video-help-2026",
+        "yt-feature-access-guide-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Owner ability to use the feature and geographic/device visibility may vary; no link-level click population or conversion rate obtained."
+    },
+    {
+      "id": "yt-analytics-mixed-format-overlap-not-funnel-2026",
+      "text": "YouTube Studio includes format-specific traffic reports and an across-formats viewer-overlap report, but neither its general views nor overlapping audiences independently establishes a Short-to-long-form referral or an individual linked viewing path.",
+      "source_ids": [
+        "yt-mixed-format-analytics-help-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Analytics report availability and exact export dimensions vary. Viewer overlap is undirected; causal gain, click attribution and source-specific economic return remain unknown."
+    },
+    {
+      "id": "yt-post-august-view-redefinition-short-funnel-2026",
+      "text": "Since August 24, 2026, YouTube's public playback-start view measure applies to Shorts, ordinary videos and Live, while YPP earnings/eligibility retain distinct engaged or qualified view/hour measures; their numerators cannot be pooled into a single funnel conversion rate.",
+      "source_ids": [
+        "yt-mixed-format-analytics-help-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Mixed-format and pre/post-revision counts require compatible epochs and separate counting units; no real creator observed."
     }
   ],
   "observations": [],
