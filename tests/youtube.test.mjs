@@ -192,6 +192,23 @@ test('Production cost model keeps 10 cash and 10 labor measures separate',async(
   assert(costs.model.accounting_rules.some(x=>x.includes('again')));
 });
 
+test('Advertiser guideline revisions preserve month, contextual scope and unknown income effects',async()=>{
+  const [history,dossier]=await Promise.all([
+    load('ontology/youtube/advertiser-policy-history.json'),
+    load('specimens/youtube.json')
+  ]);
+  const known=new Set(dossier.evidence.map(s=>s.id));
+  assert.equal(history.revisions.length,6);
+  assert.equal(history.status_levels.length,5);
+  assert(history.revisions.every(x=>x.announced_month.match(/^2026-(0[1-9]|1[0-2])$/) &&
+    x.effective_day===null && x.source_ids.every(id=>known.has(id))));
+  assert(history.revisions.some(x=>x.id==='2026-october-public-interest'));
+  assert(history.revisions.some(x=>x.id==='2026-september-game-violence'));
+  assert(history.revisions.some(x=>x.id==='2026-september-drugs-fiction'));
+  assert.equal(history.review_mechanism.human_review_available,true);
+  assert(Object.values(history.uncertainty).every(v=>v===null));
+});
+
 test('Announced 2027 YPP entry changes distinguish existing Shorts members and Premium pools',async()=>{
   const [future,dossier,policy]=await Promise.all([
     load('ontology/youtube/ypp-transition-2027.json'),
