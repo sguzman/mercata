@@ -790,6 +790,29 @@ test('YPP tax-info and payout-withholding model preserves different revenue base
  assert(model.disallowed_model_shortcuts.some(x=>x.includes('twice')));
 });
 
+test('UK child video-app genres remain separate from YouTube-specific U.S. teen and in-home measures',async()=>{
+ const [model,dossier]=await Promise.all([
+  load('ontology/youtube/teen-video-format-evidence.json'),load('specimens/youtube.json')
+ ]);
+ const sources=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'child_teen_video_content_gender_age_evidence');
+ assert.deepEqual(model.source_ids,['ofcom-children-parents-media-2026','pew-us-teens-2025']);
+ assert(model.source_ids.every(id=>sources.has(id)));
+ assert.equal(model.study_units[0].respondents_parent_total,5008);
+ assert.equal(model.study_units[0].respondents_children_total,3426);
+ assert.equal(model.study_units[0].individual_category_denominator,null);
+ assert.equal(model.study_units[0].individual_gender_denominator,null);
+ assert(model.video_genre_observations.every(x=>x.platform_scope==='any_video_app'&&x.gender_breakdown===null));
+ assert.deepEqual(model.video_genre_observations.map(x=>x.values.map(v=>v.percent)),[[80,43,38],[62,46,43]]);
+ assert.deepEqual(model.youtube_inhome_age_minutes_per_week.map(x=>x.minutes),[427,407,447]);
+ assert.deepEqual(model.us_teen_youtube_use.map(x=>[x.boys_percent,x.girls_percent]),[[94,89],[20,13]]);
+ assert.equal(model.directional_gender_evidence.youtube_specific_gender_by_format_percentages,null);
+ assert.equal(model.validity.study_is_youtube_genre_gender_sample,false);
+ assert.equal(model.validity.identify_or_profile_minors,false);
+ assert.equal(model.validity.join_uk_genre_with_us_youtube_platform_use,false);
+ assert(Object.values(model.unmeasured).every(x=>x===null));
+});
+
 test('Child audience/animation gates do not conflate all-ages, mixed, made-for-kids and 18+ policies',async()=>{
  const [model,dossier]=await Promise.all([
   load('ontology/youtube/child-age-and-format-gates.json'),load('specimens/youtube.json')

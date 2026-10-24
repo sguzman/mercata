@@ -136,6 +136,13 @@ try{
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');
+    const teenFormats=page.locator('.teen-format-evidence');
+    assert.equal(await teenFormats.locator('.teen-format-card').count(),2,'Missing separated UK age-band video genre samples');
+    await teenFormats.locator('summary').click();
+    assert.equal(await teenFormats.locator('.teen-format-row').count(),6);
+    assert((await teenFormats.textContent()).includes('NOT YouTube alone'));
+    assert((await teenFormats.textContent()).includes('These are platform-use rates, not genre-use estimates'));
+    assert((await teenFormats.textContent()).includes('Never infer an individual minor'));
     const child=page.locator('.child-format-study');
     assert.equal(await child.locator('.child-format-card').count(),5,'Missing separate child/general/adult classifications');
     await child.locator('summary').click();

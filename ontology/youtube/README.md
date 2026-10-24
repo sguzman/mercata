@@ -26,7 +26,7 @@ The [publication rights gate](publication-rights.md), [machine rights manifest](
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **203 references, 196 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **204 references, 197 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -244,6 +244,10 @@ The [multilingual distribution study](multilingual-distribution.md) and [machine
 ## Comparable video distribution products (without authorizing new specimens)
 
 The [comparison-set methodology](comparison-set.md) and [machine criteria](comparison-set.json) delimit YouTube's adjacent services: Twitch's livestream supporter/ads tiers, TikTok's qualified short-video rewards and Vimeo OTT's paid content sales. Product entry, money flows and viewer/buyer units differ. No creator earnings ranking, newcomer probability or market-size comparison is inferred. These are **research comparators only**, not admissions to Mercata's independent marketplace gallery.
+
+## Child and teen video genres: UK app formats versus US YouTube platform use
+
+The [Ofcom/Pew child and teen video evidence study](teen-video-format-evidence.md) and [machine record](teen-video-format-evidence.json) distinguish UK child genre preferences **across all video apps** from U.S. teen **YouTube platform use** and independently measured UK in-home YouTube minutes. Ofcom's 2026 report supplies age-specific animation, humor, music and gaming genre percentages plus directional survey gender differences; Pew supplies U.S. gender-specific teen platform-use rates. These cannot be pooled to invent YouTube girls' genre percentages, child creator populations or earnings, and no individual minors are profiled.
 
 ## Child audiences, mixed-target animation and adult age gates
 

@@ -107,6 +107,8 @@ The [creator-collaboration and fandom research](ontology/youtube/creator-collabo
 
 The [evergreen-versus-event horizon study](ontology/youtube/lifecycle-horizons.md) adds a reproducible 30-, 90- and 365-day publication-age design with strict censoring, source permissions and unit tests. It does not invent income for unmeasured videos or infer causal evergreen profitability.
 
+A [child and teen video-genre comparison](ontology/youtube/teen-video-format-evidence.md) now brings in Ofcom's May 2026 UK child survey and Pew's 2025 U.S. teen YouTube results. Cross-app format preferences, YouTube platform use and in-home watch hours retain separate denominators; the study does not estimate private minors' identities or format-specific viewer populations.
+
 The [creator safety and continuity study](ontology/youtube/creator-safety-continuity.md) now includes October 2026 security pauses, Google Account-first hacked-channel recovery, live-chat moderation, harassment reporting and privacy complaint pathways. These are dated official procedures, not inferred incident rates or guaranteed recovery outcomes.
 
 A [2026 publishing cadence study](ontology/youtube/publishing-cadence-evidence.md) adds niche- and size-specific median upload counts with their quartile ranges, alongside a separate 10.2-million-channel analysis of upload-frequency and growth correlation. The studies do not establish causal growth benefits, a creator labor budget, or a universal uploading schedule.
