@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "nfl_viewing_seasonality_and_growth_case",
+  "as_of": "2026-10-24",
+  "source_id": "yt-nfl-culture-2026",
+  "source_published_at": "2026-02-05",
+  "status": "bounded_first_party_endpoints_and_one_offseason_share",
+  "population": "Global YouTube videos that the platform classified as related to the NFL, not individual NFL fans or sports creators.",
+  "observations": [
+    {
+      "id": "nfl_views_2025",
+      "measure": "nfl_related_video_views",
+      "unit": "view_events",
+      "period": "2025",
+      "geography": "Global",
+      "value": 20000000000,
+      "comparator": "greater_than",
+      "is_interpolated": false
+    },
+    {
+      "id": "nfl_views_growth_2020_to_2025",
+      "measure": "annual_nfl_related_view_growth",
+      "unit": "relative_percent_increase",
+      "period": "2020_to_2025",
+      "geography": "Global",
+      "value": 250,
+      "comparator": "greater_than",
+      "is_interpolated": false
+    },
+    {
+      "id": "nfl_uploads_growth_2020_to_2025",
+      "measure": "annual_nfl_related_upload_growth",
+      "unit": "relative_percent_increase",
+      "period": "2020_to_2025",
+      "geography": "Global",
+      "value": 400,
+      "comparator": "greater_than",
+      "is_interpolated": false
+    },
+    {
+      "id": "nfl_2025_offseason_share",
+      "measure": "share_of_nfl_related_views_during_offseason",
+      "unit": "percent_of_2025_nfl_related_view_events",
+      "period": "2025_between_super_bowl_and_regular_season_start",
+      "geography": "Global",
+      "value": 30,
+      "comparator": "greater_than",
+      "is_interpolated": false
+    }
+  ],
+  "sampling_gaps": {
+    "year_2020_absolute_view_total": null,
+    "annual_view_series_2021_2024": null,
+    "annual_upload_series_2021_2024": null,
+    "month_by_month_view_series": null,
+    "offseason_2020_2024_shares": null,
+    "actual_dated_video_identifiers": null,
+    "matched_non_nfl_reference_series": null,
+    "source_relatedness_classifier": null,
+    "confidence_intervals": null
+  },
+  "publication_gates": [
+    {
+      "id": "metric_population_units",
+      "fulfilled": true,
+      "reason": "Platform reported source metric scope and global period for the four published comparisons."
+    },
+    {
+      "id": "longitudinal_endpoints",
+      "fulfilled": true,
+      "reason": "Source reports relative 2020–2025 annual view and upload growth; endpoint magnitude bounds only."
+    },
+    {
+      "id": "complete_annual_or_monthly_series",
+      "fulfilled": false,
+      "reason": "Intermediate years and per-month data not publicly reconstructed."
+    },
+    {
+      "id": "causal_seasonality",
+      "fulfilled": false,
+      "reason": "One reported within-year offseason share does not identify an annual recurring causal seasonal lift."
+    },
+    {
+      "id": "newcomer_income_and_profit",
+      "fulfilled": false,
+      "reason": "No creator compensation, production hours, licensing costs or newcomer sample."
+    }
+  ],
+  "interpretation_rules": [
+    "More than 30% of 2025 NFL-related views in the offseason is a within-year share, NOT 30% growth and not all-year monthly distribution.",
+    "More than 250% view growth over five years and over 400% upload growth apply to different metric units and cannot be added or divided into creator profits.",
+    "Do not fill missing 2021–24 years with an exponential or linear interpolated time series.",
+    "Source-defined related-video classification and public-view history must be treated as first-party platform aggregates.",
+    "View events are not distinct fans, active unique people or measured audience earnings.",
+    "An NFL sports audience must not be confused with football/soccer video or general youth audience estimates."
+  ],
+  "unmeasured": {
+    "monthly_nfl_viewers_unique": null,
+    "creator_count_nfl": null,
+    "creator_net_profit_nfl": null,
+    "nfl_seasonal_lift_relative_to_control": null,
+    "yearly_intra_period_growth": null,
+    "view_forecast_2027": null
+  }
+}
