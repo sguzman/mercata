@@ -2297,7 +2297,7 @@
           "title": "Map shorts, long-form, streams, audio, posts and other formats",
           "acceptance": "Define format availability, geography and population.",
           "weight": 1,
-          "progress": 79,
+          "progress": 84,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
@@ -2309,7 +2309,9 @@
             "ontology/youtube/video-surfaces-economics.md",
             "site/app.js",
             "tests/youtube.test.mjs",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/child-age-and-format-gates.json",
+            "ontology/youtube/child-age-and-format-gates.md"
           ]
         },
         {
@@ -2416,14 +2418,19 @@
           "title": "Measure cross-format and cross-vertical transitions",
           "acceptance": "Identify observable transitions without inventing audience-level attribution.",
           "weight": 1,
-          "progress": 55,
+          "progress": 61,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
             "ontology/youtube/creator-growth.md",
             "ontology/youtube/content-formats.json",
             "ontology/youtube/content-formats.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/child-age-and-format-gates.json",
+            "ontology/youtube/child-age-and-format-gates.md",
+            "site/app.js",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -3017,7 +3024,7 @@
           "title": "Assess child-directed content rules and analytics limitations",
           "acceptance": "Record child-audience restrictions; do not profile individual children.",
           "weight": 1,
-          "progress": 73,
+          "progress": 81,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/content-policy-risk.json",
@@ -3025,7 +3032,12 @@
             "specimens/youtube.json",
             "ontology/youtube/application-lifecycle.json",
             "ontology/youtube/eligibility-matrix.json",
-            "ontology/youtube/eligibility-matrix.md"
+            "ontology/youtube/eligibility-matrix.md",
+            "ontology/youtube/child-age-and-format-gates.json",
+            "ontology/youtube/child-age-and-format-gates.md",
+            "site/app.js",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {

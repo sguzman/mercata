@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **159 references, 152 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **160 references, 153 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -196,6 +196,10 @@ The [multilingual distribution study](multilingual-distribution.md) and [machine
 ## Comparable video distribution products (without authorizing new specimens)
 
 The [comparison-set methodology](comparison-set.md) and [machine criteria](comparison-set.json) delimit YouTube's adjacent services: Twitch's livestream supporter/ads tiers, TikTok's qualified short-video rewards and Vimeo OTT's paid content sales. Product entry, money flows and viewer/buyer units differ. No creator earnings ranking, newcomer probability or market-size comparison is inferred. These are **research comparators only**, not admissions to Mercata's independent marketplace gallery.
+
+## Child audiences, mixed-target animation and adult age gates
+
+The [age-and-format classification study](child-age-and-format-gates.md) and [machine policy record](child-age-and-format-gates.json) keep child-directed videos and deliberately mixed-audience content separate from ordinary family-safe animation, teen-or-older general content and 18+ age restrictions. They document the loss of personalized advertising and several participation/fan-funding features on made-for-kids videos, without interpreting that as a ban on all ads or a measured revenue reduction. A UK Ofcom age 8–14 use estimate and separate Barb ages 4–15 home-Wi-Fi device share have non-interchangeable denominators; adult-only survey exclusions do not imply child non-use. No individual children or private viewer data are profiled.
 
 ## TV versus smartphone viewing — UK measured device evidence
 

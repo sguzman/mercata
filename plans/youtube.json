@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-23",
-  "progress_percent": 47,
+  "progress_percent": 48,
   "permission_required_before_execution": false,
   "scope": "Evidence-based research into YouTube's economics, platform use, population, creator earnings, audience demographics, subcultures, competition, content formats and practical monetization strategies.",
   "baseline": {
@@ -456,7 +456,7 @@
         "youtube/audience-scale/create-a-multi-year-audience-source-comparison"
       ],
       "phase": 2,
-      "progress_percent": 37
+      "progress_percent": 41
     },
     {
       "id": "audience-demography",
@@ -566,7 +566,7 @@
         "youtube/content-formats/measure-creation-cost-by-format"
       ],
       "phase": 2,
-      "progress_percent": 44
+      "progress_percent": 48
     },
     {
       "id": "social-discovery",
@@ -3565,13 +3565,18 @@
       "objective": "Separate eligibility, personalization, commenting, discovery and revenue rules.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and separate eligibility, personalization, commenting, discovery and revenue rules.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 82,
       "evidence": [
         "ontology/youtube/content-policy-risk.json",
         "ontology/youtube/content-policy-risk.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/child-age-and-format-gates.json",
+        "ontology/youtube/child-age-and-format-gates.md",
+        "site/app.js",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/child-age-and-format-gates.json",
       "priority": "standard",
       "phase": 3
     },
@@ -3746,10 +3751,17 @@
       "emoji": "🌍",
       "objective": "Do not treat excluded minors as absent platform use.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and do not treat excluded minors as absent platform use.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
-      "artifact": null,
+      "status": "in_progress",
+      "percent": 77,
+      "evidence": [
+        "ontology/youtube/child-age-and-format-gates.json",
+        "ontology/youtube/child-age-and-format-gates.md",
+        "specimens/youtube.json",
+        "site/app.js",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
+      ],
+      "artifact": "ontology/youtube/child-age-and-format-gates.json",
       "priority": "high",
       "phase": 2
     },
@@ -4461,10 +4473,17 @@
       "emoji": "🎬",
       "objective": "Separate general family formats from child-directed restrictions.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and separate general family formats from child-directed restrictions.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
-      "artifact": null,
+      "status": "in_progress",
+      "percent": 74,
+      "evidence": [
+        "ontology/youtube/child-age-and-format-gates.json",
+        "ontology/youtube/child-age-and-format-gates.md",
+        "specimens/youtube.json",
+        "site/app.js",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
+      ],
+      "artifact": "ontology/youtube/child-age-and-format-gates.json",
       "priority": "standard",
       "phase": 2
     },
