@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "viewer_person_account_and_activity_measurement",
+  "as_of": "2026-10-23",
+  "status": "official_metric_definitions_verified_no_platform_person_census",
+  "measurement_axes": [
+    "unit",
+    "population",
+    "time_window",
+    "access_ownership",
+    "geography",
+    "signed_out_coverage",
+    "shared_device_method",
+    "source_ids"
+  ],
+  "measures": [
+    {
+      "id": "unique_viewers",
+      "unit": "estimated_individual_people",
+      "scope": "Owner's channel or video",
+      "window": "selected_period_up_to_90_days",
+      "max_period_days": 90,
+      "public_channel_api": false,
+      "studio_owner_view": true,
+      "signed_out_included_in_estimate": true,
+      "source_ids": [
+        "yt-unique-viewer-estimates-2026"
+      ],
+      "limit": "Modeled deduplication across devices and viewing sessions; Shorts estimation uses engaged views. Not a global people count."
+    },
+    {
+      "id": "monthly_audience",
+      "unit": "estimated_individual_people",
+      "scope": "Owner's channel across formats",
+      "window": "rolling_28_days",
+      "max_period_days": 28,
+      "public_channel_api": false,
+      "studio_owner_view": true,
+      "signed_out_included_in_estimate": null,
+      "source_ids": [
+        "analytics-audience"
+      ],
+      "limit": "Calculated daily over rolling previous 28 days, not a fixed calendar month."
+    },
+    {
+      "id": "unique_reach",
+      "unit": "estimated_people_exposed",
+      "scope": "Channel or video owner analytics",
+      "window": "owner_analytics_window",
+      "max_period_days": null,
+      "public_channel_api": false,
+      "studio_owner_view": true,
+      "signed_out_included_in_estimate": null,
+      "source_ids": [
+        "analytics-audience"
+      ],
+      "limit": "Shared-screen co-viewing aware estimate of people reached, not the same as people who watched."
+    },
+    {
+      "id": "co_viewed_views",
+      "unit": "estimated_shared_screen_view_events",
+      "scope": "Channel or video owner analytics",
+      "window": "owner_analytics_window",
+      "max_period_days": null,
+      "public_channel_api": false,
+      "studio_owner_view": true,
+      "signed_out_included_in_estimate": null,
+      "source_ids": [
+        "analytics-audience"
+      ],
+      "limit": "Events adjusted for co-viewing, not number of distinct people."
+    },
+    {
+      "id": "public_channel_views",
+      "unit": "playback_start_events",
+      "scope": "One channel's public view statistics",
+      "window": "cumulative_with_2026_08_24_revision",
+      "max_period_days": null,
+      "public_channel_api": true,
+      "studio_owner_view": true,
+      "signed_out_included_in_estimate": null,
+      "source_ids": [
+        "api-channels"
+      ],
+      "limit": "Playback-start event counts revised August 24, 2026 and cannot be summed to people."
+    },
+    {
+      "id": "public_subscribers",
+      "unit": "subscriptions",
+      "scope": "One channel's subscriber count",
+      "window": "current_snapshot",
+      "max_period_days": null,
+      "public_channel_api": true,
+      "studio_owner_view": true,
+      "signed_out_included_in_estimate": false,
+      "source_ids": [
+        "api-channels"
+      ],
+      "limit": "Public subscribers rounded down to three significant digits, overlapping across channels and not necessarily active."
+    },
+    {
+      "id": "public_videos",
+      "unit": "public_video_objects",
+      "scope": "One channel's public uploads",
+      "window": "current_snapshot",
+      "max_period_days": null,
+      "public_channel_api": true,
+      "studio_owner_view": true,
+      "signed_out_included_in_estimate": null,
+      "source_ids": [
+        "api-channels"
+      ],
+      "limit": "Public content objects only; excludes private and unlisted videos and cannot measure people."
+    },
+    {
+      "id": "advertiser_reach",
+      "unit": "ad_reachable_accounts_or_estimated_audience",
+      "scope": "Specific target country and advertiser-defined age eligibility",
+      "window": "external_country_report",
+      "max_period_days": null,
+      "public_channel_api": false,
+      "studio_owner_view": false,
+      "signed_out_included_in_estimate": null,
+      "source_ids": [
+        "datareportal-2026-mx"
+      ],
+      "limit": "Advertiser reach is a separate estimate from channel unique viewers and surveyed person use."
+    }
+  ],
+  "access_gates": [
+    {
+      "id": "public_channel_api",
+      "source_ids": [
+        "api-channels"
+      ],
+      "owner_authorization": false,
+      "global_person_census": false
+    },
+    {
+      "id": "creator_studio",
+      "source_ids": [
+        "analytics-audience",
+        "yt-unique-viewer-estimates-2026"
+      ],
+      "owner_authorization": true,
+      "global_person_census": false
+    },
+    {
+      "id": "analytics_api",
+      "source_ids": [
+        "api-query-params"
+      ],
+      "owner_authorization": true,
+      "global_person_census": false
+    },
+    {
+      "id": "independent_adult_survey",
+      "source_ids": [
+        "pew-us-adults-2026"
+      ],
+      "owner_authorization": false,
+      "global_person_census": false
+    }
+  ],
+  "comparison_rules": [
+    "Views and co-viewed views represent events, not people.",
+    "Subscriptions to distinct channels overlap and are not a distinct account or person census.",
+    "Estimated channel unique viewers overlap across channels; do not sum channel-level uniques to a worldwide unique count.",
+    "Monthly audience uses rolling 28 days; unique viewers are owner estimates for windows up to 90 days.",
+    "Signed-out traffic is included in estimated owner-viewer metrics, but its count/share is not publicly exposed.",
+    "Ad reach, co-viewed unique reach, channel views, public subscribers and survey respondents have different denominators.",
+    "Do not request or store private competitor Analytics or OAuth tokens without actual authorization."
+  ],
+  "unmeasured": {
+    "global_monthly_unique_people": null,
+    "country_monthly_unique_people": null,
+    "country_signed_out_viewers": null,
+    "nonregistered_view_share": null,
+    "independent_channel_owners": null,
+    "duplicate_channels_per_owner": null,
+    "cross_channel_person_overlap": null,
+    "unique_topic_audiences": null
+  }
+}
