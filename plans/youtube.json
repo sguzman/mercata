@@ -710,7 +710,7 @@
         "youtube/audience-safeguards/audit-publication-of-third-party-material"
       ],
       "phase": 1,
-      "progress_percent": 62
+      "progress_percent": 66
     }
   ],
   "deliverables": [
@@ -5728,10 +5728,16 @@
       "emoji": "🛡️",
       "objective": "Check quotations, copyright, attribution and dataset licenses.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and check quotations, copyright, attribution and dataset licenses.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
-      "artifact": null,
+      "status": "in_progress",
+      "percent": 58,
+      "evidence": [
+        "ontology/youtube/publication-rights.json",
+        "ontology/youtube/publication-rights.md",
+        "scripts/publication-rights.mjs",
+        "tests/publication-rights.test.mjs",
+        "specimens/youtube.json"
+      ],
+      "artifact": "ontology/youtube/publication-rights.json",
       "priority": "high",
       "phase": 1
     }

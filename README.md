@@ -85,6 +85,8 @@ The [viewer/person measurement study](ontology/youtube/viewer-person-metrics.md)
 
 The [traffic-source concentration protocol](ontology/youtube/traffic-concentration.md) distinguishes owner-only Browse, suggested, Shorts, search, notifications and external attribution with explicit unit checks. No measured channel source mix or income exposure is assumed, and its diagnostic rejects partial source partitions.
 
+Mercata's [third-party publication audit](ontology/youtube/publication-rights.md) now tests source metadata and rights-manifest fields separately from legal reuse permission. Automated metadata checks are not a substitute for reviewing copied images, long quotations, licensing and dataset rights; the latter remain explicitly uncleared.
+
 The [software and technology subculture study](ontology/youtube/technology-subcultures-2026.md) separates tutorials, troubleshooting, device reviews, repairs and desk aesthetics. Source-backed public views for broad U.S. learning content and global desk-title queries cannot be combined into a software-learner population or an earnings estimate.
 
 The [creator-collaboration and fandom research](ontology/youtube/creator-collaboration-fandom-2026.md) documents Studio's up-to-ten invited collaborators and uploader-only native revenue, plus two age-scoped U.S. online fandom surveys. It does not claim verified collaboration income or causal cross-channel audience migration.
