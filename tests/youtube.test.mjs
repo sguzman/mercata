@@ -124,6 +124,30 @@ test('2026 API sampling budget keeps search calls separate and rejects populatio
   assert(Object.values(budget.target_estimands).every(value=>value===null));
 });
 
+test('32 topic categories distinguish children's music from animation and count 31 bounded observations',async()=>{
+  const [topic,activity,opportunity]=await Promise.all([
+    load('ontology/youtube/taxonomy.json'),
+    load('ontology/youtube/topic-observations.json'),
+    load('ontology/youtube/opportunity-framework.json')
+  ]);
+  assert.equal(topic.topics.length,32);
+  assert.equal(activity.observations.length,31);
+  assert.equal(opportunity.topic_assessments.length,32);
+  const childMusic=topic.topics.find(x=>x.id==='children-music');
+  assert(childMusic);
+  assert.equal(childMusic.audience_estimate,null);
+  assert.equal(childMusic.creator_estimate,null);
+  const baby=activity.observations.find(x=>x.id==='baby-shark-single-video-jun-2025');
+  assert.equal(baby.topic_id,'children-music');
+  assert.equal(baby.metric,'single_video_lifetime_views');
+  assert.equal(baby.value,16000000000);
+  assert.equal(baby.metric_definition_revision,'before_2026_08_24');
+  assert(activity.observations.filter(x=>x.topic_id==='crafts').length>=4);
+  assert(activity.observations.filter(x=>x.topic_id==='cooking').length>=2);
+  assert(opportunity.topic_assessments.every(x=>x.decision==='insufficient_evidence' &&
+    x.net_hourly_return===null));
+});
+
 test('Unmeasured topics are not represented as counted audiences',async()=>{
   const taxonomy=await load('ontology/youtube/taxonomy.json');
   assert(taxonomy.topics.every(x=>x.audience_estimate===null));
