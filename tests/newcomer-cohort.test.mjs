@@ -54,8 +54,11 @@ test('Newcomer audit rejects invalid money and missing methodology',()=>{
 });
 test('Synthetic probability-sample gate requires coverage, nonresponse and uncertainty together',()=>{
  const x=make();x.probability_sampling=true;x.frame_coverage_verified=true;
- x.nonresponse_adjustment_documented=true;x.uncertainty_reported=true;x.claims_representative=true;
+ x.nonresponse_adjustment_documented=true;x.uncertainty_reported=true;x.claims_representative=false;
  const result=assessAggregateNewcomerIncome(x);
  assert.equal(result.structurally_valid,true,JSON.stringify(result.errors));
- assert.equal(result.population_inference_permitted,true);
+ assert.equal(result.eligible_for_independent_method_review,true);
+ assert.equal(result.population_inference_permitted,false);
+ x.claims_representative=true;
+ assert(assessAggregateNewcomerIncome(x).errors.some(e=>e.includes('independent methodological review')));
 });
