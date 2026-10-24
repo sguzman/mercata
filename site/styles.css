@@ -523,3 +523,12 @@ h1 em {font-style:italic;color:var(--accent)}
 .view-definition-invalid-list{font-size:12px;padding-left:20px}
 .view-definition-invalid-list li{margin:7px 0}
 @media(max-width:650px){.view-definition-details{padding:16px}.view-definition-grid{grid-template-columns:1fr}}
+
+.view-comparison-tool{border-top:1px solid var(--line);padding-top:18px;margin-top:22px}
+.view-comparison-tool h5{font-size:14px;margin:0 0 8px}
+.view-comparison-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0}
+.view-comparison-field{display:flex;flex-direction:column;gap:8px;min-width:0;font-size:12px;font-weight:700}
+.view-comparison-field input,.view-comparison-field select{min-width:0;width:100%;padding:9px;background:var(--bg);border:1px solid var(--line);border-radius:8px;color:var(--ink)}
+.view-comparison-result{font-size:13px;border-left:3px solid var(--line);padding:8px 12px;margin:0}
+.view-comparison-result[data-status="definition_conflict"]{border-left-color:var(--accent)}
+@media(max-width:650px){.view-comparison-form{grid-template-columns:1fr}}
