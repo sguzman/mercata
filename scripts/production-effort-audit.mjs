@@ -45,7 +45,7 @@ export function auditProductionEffort(model,production,sourceIds){
   if(Object.values(model?.results||{}).length<6||
      Object.values(model.results).some(x=>x!==null))
     errors.push('Unknown typical hours/cost/profit fields must remain null');
-  if(!model?.prohibitions?.some(x=>x.includes('abandoned')))
+  if(!model?.prohibitions?.some(x=>/abandoned|failed drafts|discarded projects/i.test(x)))
     errors.push('Survivorship accounting omitted');
   return {valid:errors.length===0,errors};
 }
