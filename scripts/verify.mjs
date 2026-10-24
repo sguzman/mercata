@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {toHex,verifyPalette} from './palette.mjs';
 import {auditPublicSources} from './source-provenance.mjs';
+import {auditPublicationRights} from './publication-rights.mjs';
+import {auditLocalPublicationMedia} from './publication-asset-scan.mjs';
 const root = path.resolve(process.argv[2] || process.cwd());
 const load = name => JSON.parse(fs.readFileSync(path.join(root,name),'utf8'));
 const has = name => fs.existsSync(path.join(root,name));
@@ -50,6 +52,11 @@ for (const entry of index.specimens) {
     ensure(claim.observed_at && typeof claim.limitations==='string','Claim missing observation date or limits');
   }
   if(entry.id==='youtube') {
+    const rights=load('ontology/youtube/publication-rights.json');
+    const rightsMetadata=auditPublicationRights(dossier.evidence,dossier.claims,rights);
+    ensure(rightsMetadata.metadata_valid,'Incomplete third-party source and claim rights metadata: '+rightsMetadata.errors.join('; '));
+    const mediaScan=auditLocalPublicationMedia(root,rights);
+    ensure(mediaScan.metadata_inventory_valid,'Unreviewed published media paths: '+mediaScan.errors.join('; '));
     const familyRegister=load('ontology/youtube/source-families.json');
     const audit=auditPublicSources(dossier.evidence,dossier.claims,familyRegister);
     ensure(audit.unregistered_duplicate_documents.length===0 &&
