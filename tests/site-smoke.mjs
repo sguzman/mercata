@@ -45,7 +45,7 @@ try{
     await future.locator('.ypp-transition-details > summary').click();
     assert((await future.textContent()).includes('February 1, 2027'));
     assert((await future.textContent()).includes('future subscriber floor'));
-    assert((await future.textContent()).includes('rolling qualification'));
+    assert((await future.textContent()).includes('Rolling qualification'));
     await future.locator('.ypp-transition-pools > summary').click();
     assert.equal(await future.locator('.ypp-transition-pool').count(),2,'Missing Premium and Premium Lite pools');
     assert((await future.textContent()).includes('60% of net subscription revenue'));
