@@ -33,6 +33,12 @@ This affects lifetime-view growth plots, topic watch-volume comparisons, creator
 
 Record the precise field and date, each video format and age, geography, sampling method, observation window, and whether the metric is public, engaged, watch hours or program-qualified. Existing [measurement history](measurement-history.json), [Analytics research](analytics-query-guide.md) and [public sampling protocol](public-sampling.md) must use the revised dictionary.
 
+## Checking two dates in the website
+
+Mercata's YouTube dossier includes a small client-side [comparison checker](../../site/metric-compatibility.mjs) with [unit tests](../../tests/metric-compatibility.test.mjs). Supply two valid observation dates and the *same* recorded metric. It rejects public video-view comparisons crossing August 24, 2026. For other measures spanning the date, it requires source-specific method review rather than automatically declaring compatibility. Dates on the same side of the change can be described as *structurally comparable*, but sampling, geography, format, and reporting-window equality must still be established externally.
+
+The checker uses no fetched creator information, guesses, default audience estimates, time-series conversion coefficients, or revenue values.
+
 ## What did not change into a free earning shortcut?
 
 The [YouTube explanation](https://blog.youtube/inside-youtube/engaged-views-youtube-explained/) says the public count revision does not by itself revise recommendation mechanisms or the YPP threshold system. Creator payment eligibility still depends on qualifying attention, suitable/public content, account and regional policy requirements, channel review and payout modules. A visible view count alone cannot establish creator income.
