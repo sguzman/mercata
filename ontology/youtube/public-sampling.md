@@ -15,6 +15,8 @@ Never assume that a keyword search enumerates all videos about an interest. Sear
 - [YouTube Analytics API dimensions](https://developers.google.com/youtube/analytics/dimensions): gives reporting dimensions including age group, gender and country to appropriately authorized channel or content-owner reports. It is not an unrestricted census.
 - Published population surveys, panels and original research may provide representative estimates of broader audiences. Record study population, sample construction, dates, non-response and geography.
 
+An [October 2026 source-backed quota and sampling budget](public-api-sampling-budget.md) gives the current separate search-list call bucket, 50-result page ceiling, 1,000,000 cap on approximate totalResults, page-token rules and metadata lookup budget. It is a planning artifact only, with no actual creator/channel population estimated.
+
 According to Google's [quota calculator](https://developers.google.com/youtube/data/determine_quota_cost), current documentation describes a separate default quota for search.list calls and a shared quota for many other methods. Do not hard-code a universal daily quota; record the quota reported by the credential actually in use and respect Terms and audit requirements. Do not create credentials or spend money without authorization.
 
 ## Critical break in public view counts
