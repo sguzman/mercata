@@ -1168,6 +1168,47 @@
         "overlap with adjacent categories",
         "monetization eligibility and production cost"
       ]
+    },
+    {
+      "id": "children-music",
+      "label": "Children's Music",
+      "definition": "Songs, nursery rhymes and music performances primarily intended for young children; includes live-action and animated music videos, but is not synonymous with child-directed animation.",
+      "parent_ids": [
+        "arts"
+      ],
+      "aliases": [
+        "kids-music",
+        "nursery-songs"
+      ],
+      "audience_estimate": null,
+      "creator_estimate": null,
+      "views_estimate": null,
+      "overlap_status": "unmeasured",
+      "measurement_status": "unresearched",
+      "research_subtopics": [
+        "nursery songs",
+        "sing-along music videos",
+        "live-action children's performances",
+        "children's music animation"
+      ],
+      "candidate_formats": [
+        "long_form",
+        "shorts"
+      ],
+      "research_query_seeds": [
+        "children music video",
+        "nursery rhymes song",
+        "kids sing along"
+      ],
+      "data_requirements": [
+        "public videos sampled in declared date window",
+        "deduplicated active creator channels",
+        "audience estimates only from defensible studies",
+        "overlap with adjacent categories",
+        "monetization eligibility and production cost",
+        "made-for-kids classification determined from actual content"
+      ],
+      "research_status": "taxonomy_ready_not_measured"
     }
   ],
   "rules": [
@@ -1177,8 +1218,9 @@
     "General-audience animation and child-directed animation must be distinguished.",
     "Political content categories are not individual political affiliation.",
     "Research query seeds are sampling inputs, not validated keywords or evidence of demand.",
-    "Subtopics and candidate formats are conceptual, not a market-size or RPM claim."
+    "Subtopics and candidate formats are conceptual, not a market-size or RPM claim.",
+    "Children's music can be live-action or animated; neither single-video view counts nor genre labels establish the size or age composition of children watching."
   ],
-  "taxonomy_version": "1.4",
+  "taxonomy_version": "1.5",
   "methodology": "ontology/youtube/public-sampling.md"
 }
