@@ -2077,6 +2077,39 @@
       "retrieved_at": "2026-10-24",
       "evidence_class": "official_title_scoped_video_event_measurement",
       "license": "First-party public blog statistics summarized independently; no licensed images copied"
+    },
+    {
+      "id": "thoughtleaders-oct2026-sponsor-index",
+      "url": "https://thoughtleaders.ai/blog/2026-10-15-youtube-sponsorship-market-october-2026/",
+      "publisher": "ThoughtLeaders",
+      "title": "YouTube sponsorship market: October 2026 update",
+      "published_at": "2026-10-15",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "vendor_observed_public_video_sponsorship_detection",
+      "license": "Public vendor summary independently paraphrased; no raw video records copied",
+      "notes": "Data pulled Oct 15, 2026; corrected Oct 17 to exclude Locked On dynamic ads. Categories long-form only; one detection is not an observed payment or signed deal."
+    },
+    {
+      "id": "sponsorradar-2026-tracked-placements",
+      "url": "https://sponsorradar.com/state-of-youtube-sponsorships",
+      "publisher": "SponsorRadar",
+      "title": "The State of YouTube Sponsorships 2026",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commercial_video_sponsorship_detection_index",
+      "license": "Public vendor-indexed aggregates independently paraphrased; no video data copied",
+      "notes": "660,985 detected placements Feb 2025–Jan 2026 from a growing sample of tracked channels; dense coverage above 50K subscriptions, no observed payout contracts."
+    },
+    {
+      "id": "upfluence-q1-2026-applications",
+      "url": "https://www.upfluence.com/research/creator-economy-industry-study-q1-2026/",
+      "publisher": "Upfluence Research",
+      "title": "Creator economy industry study: Q1 2026 application share, paid price and CPM",
+      "published_at": "2026-05-15",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "vendor_platform_creators_campaign_applications_not_youtube_only",
+      "license": "Public commercial platform report summarized independently; no third-party artwork or records reproduced",
+      "notes": "17,288 creator applications to 2,605 platform brand campaigns Jan 1–Mar 27 2026. Application mix is not YouTube-sponsored video frequency or market spend."
     }
   ],
   "claims": [
@@ -4179,6 +4212,46 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Offseason share is within the 2025 NFL-related YouTube view event population, not people; it is not season-over-season growth. Uploads and views use different units, intermediate annual data are absent, and source-defined related-video classification is not independently replicated."
+    },
+    {
+      "id": "youtube-2026-longform-detected-sponsor-density",
+      "text": "ThoughtLeaders' October 15, 2026 index detected sponsor-style reads in 176,686 long-form videos published September 15–October 14, or 6.1% of roughly 2.9 million scanned long-form uploads; the prior 30-day share was 5.9% and the year-prior share was 4.8%.",
+      "source_ids": [
+        "thoughtleaders-oct2026-sponsor-index"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Commercial detection index, not a platform-wide probability sample. Creator codes and promotional reads need not represent contracted or paid advertising; sample-channel mix changes and Shorts are excluded."
+    },
+    {
+      "id": "youtube-2026-sponsored-longform-niche-rates",
+      "text": "ThoughtLeaders' September 15–October 14, 2026 scanned long-form video categories report detected-sponsor shares ranging from 1.9% in news/politics to 15.0% in health/fitness, while gaming had 37,093 detected sponsored videos at 8.6% of scanned gaming uploads.",
+      "source_ids": [
+        "thoughtleaders-oct2026-sponsor-index"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Conditional shares within each vendor-defined channel category; not probability of earning sponsor revenue for a new creator, confirmed contract counts, spend or creator profit."
+    },
+    {
+      "id": "sponsorradar-selected-2025-26-niche-deals",
+      "text": "SponsorRadar reports 660,985 detected YouTube sponsor placements for February 2025–January 2026, including 147,964 gaming placements and 66,217 education placements in its indexed sample, with coverage densest on larger channels.",
+      "source_ids": [
+        "sponsorradar-2026-tracked-placements"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Detected placements, not actual signed contracts or payout transactions. Its 12-month category counts cannot be combined with ThoughtLeaders' 30-day counts; growing sample coverage prevents straightforward time-series growth inference."
+    },
+    {
+      "id": "upfluence-2026-campaign-application-mix",
+      "text": "Upfluence's Q1 2026 platform report covers 17,288 creator applications and 2,605 brand campaigns, with the share of applications in fashion/apparel rising from 6.2% in January to 12.8% in March; these are cross-platform applications, not YouTube sponsorship revenue.",
+      "source_ids": [
+        "upfluence-q1-2026-applications"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "A commercial platform's market-specific applicant mix and campaign tags; not all creators, YouTube-only projects, or probability-weighted brand demand."
     }
   ],
   "observations": [],

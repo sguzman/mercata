@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "bounded_sponsored_content_activity_by_category",
+  "as_of": "2026-10-24",
+  "status": "observed_vendor_indexes_not_paid_contract_census",
+  "research_question": "Which video categories show detected branded promotion activity within explicitly bounded 2025–2026 vendor samples?",
+  "datasets": [
+    {
+      "id": "thoughtleaders-oct-2026",
+      "source_ids": [
+        "thoughtleaders-oct2026-sponsor-index"
+      ],
+      "type": "detected_sponsor_style_read_per_video",
+      "unit": "videos_with_detected_promotion",
+      "platform_scope": "YouTube tracked long-form uploads only; no Shorts detection",
+      "publication_date": "2026-10-15",
+      "data_extracted_on": "2026-10-15",
+      "correction_date": "2026-10-17",
+      "last_window": {
+        "start": "2026-09-15",
+        "end": "2026-10-14",
+        "sponsored_longform_videos": 176686,
+        "scanned_longform_uploads_approx": 2900000,
+        "density_percent": 6.1
+      },
+      "prior_window": {
+        "start": "2026-08-16",
+        "end": "2026-09-14",
+        "density_percent": 5.9
+      },
+      "year_prior_window": {
+        "start": "2025-09-15",
+        "end": "2025-10-14",
+        "density_percent": 4.8
+      },
+      "exclusions": [
+        "Locked On network of 292 channels: dynamic inserted ads confound individually booked sponsor reads",
+        "Shorts not scanned for sponsorship detection",
+        "Creator-program mentions may occur without a paid brand contract"
+      ],
+      "missing": {
+        "signed_contract_count": null,
+        "paid_creator_revenue": null,
+        "shorts_sponsorship_count": null,
+        "creator_level_unpaid_or_zero_rate": null,
+        "scanned_video_channel_sampling_probability": null
+      },
+      "categories": [
+        {
+          "id": "gaming",
+          "sponsored_videos": 37093,
+          "density_last_pct": 8.6,
+          "density_prior_pct": 8.1,
+          "density_year_prior_pct": 6.2,
+          "category_population": "tracked long-form uploads in vendor's classified channel category",
+          "source_ids": [
+            "thoughtleaders-oct2026-sponsor-index"
+          ]
+        },
+        {
+          "id": "lifestyle",
+          "sponsored_videos": 30997,
+          "density_last_pct": 4.9,
+          "density_prior_pct": 5,
+          "density_year_prior_pct": 3.8,
+          "category_population": "tracked long-form uploads in vendor's classified channel category",
+          "source_ids": [
+            "thoughtleaders-oct2026-sponsor-index"
+          ]
+        },
+        {
+          "id": "technology",
+          "sponsored_videos": 21888,
+          "density_last_pct": 12.2,
+          "density_prior_pct": 12,
+          "density_year_prior_pct": 11.2,
+          "category_population": "tracked long-form uploads in vendor's classified channel category",
+          "source_ids": [
+            "thoughtleaders-oct2026-sponsor-index"
+          ]
+        },
+        {
+          "id": "how_to_crafts",
+          "sponsored_videos": 18724,
+          "density_last_pct": 13.8,
+          "density_prior_pct": 13.1,
+          "density_year_prior_pct": 10.6,
+          "category_population": "tracked long-form uploads in vendor's classified channel category",
+          "source_ids": [
+            "thoughtleaders-oct2026-sponsor-index"
+          ]
+        },
+        {
+          "id": "sports",
+          "sponsored_videos": 18440,
+          "density_last_pct": 9.1,
+          "density_prior_pct": 8.4,
+          "density_year_prior_pct": 6.6,
+          "category_population": "tracked long-form uploads in vendor's classified channel category",
+          "source_ids": [
+            "thoughtleaders-oct2026-sponsor-index"
+          ]
+        },
+        {
+          "id": "general_knowledge",
+          "sponsored_videos": 17005,
+          "density_last_pct": 7.6,
+          "density_prior_pct": 8,
+          "density_year_prior_pct": 6.7,
+          "category_population": "tracked long-form uploads in vendor's classified channel category",
+          "source_ids": [
+            "thoughtleaders-oct2026-sponsor-index"
+          ]
+        },
+        {
+          "id": "entertainment",
+          "sponsored_videos": 10422,
+          "density_last_pct": 2.8,
+          "density_prior_pct": 2.8,
+          "density_year_prior_pct": 2.3,
+          "category_population": "tracked long-form uploads in vendor's classified channel category",
+          "source_ids": [
+            "thoughtleaders-oct2026-sponsor-index"
+          ]
+        },
+        {
+          "id": "music",
+          "sponsored_videos": 7077,
+          "density_last_pct": 3,
+          "density_prior_pct": 3,
+          "density_year_prior_pct": 2,
+          "category_population": "tracked long-form uploads in vendor's classified channel category",
+          "source_ids": [
+            "thoughtleaders-oct2026-sponsor-index"
+          ]
+        },
+        {
+          "id": "news_politics",
+          "sponsored_videos": 6458,
+          "density_last_pct": 1.9,
+          "density_prior_pct": 1.8,
+          "density_year_prior_pct": 1.2,
+          "category_population": "tracked long-form uploads in vendor's classified channel category",
+          "source_ids": [
+            "thoughtleaders-oct2026-sponsor-index"
+          ]
+        },
+        {
+          "id": "food",
+          "sponsored_videos": 5191,
+          "density_last_pct": 5.2,
+          "density_prior_pct": 5.2,
+          "density_year_prior_pct": 4.5,
+          "category_population": "tracked long-form uploads in vendor's classified channel category",
+          "source_ids": [
+            "thoughtleaders-oct2026-sponsor-index"
+          ]
+        },
+        {
+          "id": "health_fitness",
+          "sponsored_videos": 2018,
+          "density_last_pct": 15,
+          "density_prior_pct": 13.9,
+          "density_year_prior_pct": 11.1,
+          "category_population": "tracked long-form uploads in vendor's classified channel category",
+          "source_ids": [
+            "thoughtleaders-oct2026-sponsor-index"
+          ]
+        }
+      ],
+      "notes": "The percent is sponsored detected uploads divided by all scanned long-form uploads in that vendor category, not share of channels or a probability of creator monetization."
+    },
+    {
+      "id": "sponsorradar-feb2025-jan2026",
+      "source_ids": [
+        "sponsorradar-2026-tracked-placements"
+      ],
+      "type": "detected_sponsor_placement",
+      "unit": "sponsor_placement_in_video",
+      "platform_scope": "Sample of tracked YouTube channels; published placements categorized by channel niche",
+      "period": {
+        "start": "2025-02-01",
+        "end": "2026-01-31"
+      },
+      "reported_tracked_channels_as_of_aug_2026": 129386,
+      "detected_placements_all_categories": 660985,
+      "known_selection_biases": [
+        "Tracker coverage densest above 50,000 subscribers",
+        "Video coverage expanded throughout observation window",
+        "A detected placement is not an independently verified commercial contract"
+      ],
+      "categories": [
+        {
+          "id": "gaming",
+          "detected_placements": 147964,
+          "reported_share_percent": 22.4,
+          "unit": "detected_placements",
+          "source_ids": [
+            "sponsorradar-2026-tracked-placements"
+          ]
+        },
+        {
+          "id": "entertainment",
+          "detected_placements": 89298,
+          "reported_share_percent": 13.5,
+          "unit": "detected_placements",
+          "source_ids": [
+            "sponsorradar-2026-tracked-placements"
+          ]
+        },
+        {
+          "id": "education",
+          "detected_placements": 66217,
+          "reported_share_percent": 10,
+          "unit": "detected_placements",
+          "source_ids": [
+            "sponsorradar-2026-tracked-placements"
+          ]
+        },
+        {
+          "id": "lifestyle",
+          "detected_placements": 55438,
+          "reported_share_percent": 8.4,
+          "unit": "detected_placements",
+          "source_ids": [
+            "sponsorradar-2026-tracked-placements"
+          ]
+        },
+        {
+          "id": "finance_business",
+          "detected_placements": 51743,
+          "reported_share_percent": 7.8,
+          "unit": "detected_placements",
+          "source_ids": [
+            "sponsorradar-2026-tracked-placements"
+          ]
+        },
+        {
+          "id": "technology",
+          "detected_placements": 42694,
+          "reported_share_percent": 6.5,
+          "unit": "detected_placements",
+          "source_ids": [
+            "sponsorradar-2026-tracked-placements"
+          ]
+        },
+        {
+          "id": "sports",
+          "detected_placements": 40217,
+          "reported_share_percent": 6.1,
+          "unit": "detected_placements",
+          "source_ids": [
+            "sponsorradar-2026-tracked-placements"
+          ]
+        },
+        {
+          "id": "automotive",
+          "detected_placements": 33483,
+          "reported_share_percent": 5.1,
+          "unit": "detected_placements",
+          "source_ids": [
+            "sponsorradar-2026-tracked-placements"
+          ]
+        },
+        {
+          "id": "beauty_fashion",
+          "detected_placements": 10272,
+          "reported_share_percent": 1.6,
+          "unit": "detected_placements",
+          "source_ids": [
+            "sponsorradar-2026-tracked-placements"
+          ]
+        },
+        {
+          "id": "health_fitness",
+          "detected_placements": 13422,
+          "reported_share_percent": 2,
+          "unit": "detected_placements",
+          "source_ids": [
+            "sponsorradar-2026-tracked-placements"
+          ]
+        }
+      ],
+      "missing": {
+        "typical_sponsor_fee": null,
+        "contract_verification_count": null,
+        "all_youtube_creator_population": null,
+        "share_of_unsponsored_new_entrants": null,
+        "platform_wide_median_sponsor_income": null
+      }
+    },
+    {
+      "id": "upfluence-q1-2026",
+      "source_ids": [
+        "upfluence-q1-2026-applications"
+      ],
+      "type": "brand_campaign_application_mix",
+      "unit": "creator_applications",
+      "platform_scope": "Upfluence's commercial influencer marketplace, multiple social platforms, not YouTube-specific",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-03-27"
+      },
+      "reported_applications_total": 17288,
+      "reported_brand_campaigns": 2605,
+      "selected_macro_industry_shares": [
+        {
+          "id": "fashion_apparel",
+          "january_pct": 6.2,
+          "march_pct": 12.8
+        },
+        {
+          "id": "home_living",
+          "january_pct": 6.5,
+          "march_pct": 12.7
+        },
+        {
+          "id": "health_wellness",
+          "january_pct": 17,
+          "march_pct": 10.7
+        }
+      ],
+      "missing": {
+        "youtube_application_count": null,
+        "youtube_creator_sponsorship_conversions": null,
+        "youtube_sponsor_payouts": null
+      },
+      "caveat": "Commercial application's industry label is not the genre of a YouTube video or a detected paid brand placement."
+    }
+  ],
+  "cross_dataset_rules": [
+    "Do not add detections from different vendors or reporting windows: coverage and event definitions differ.",
+    "Detected sponsor-style mentions are not payment records; creator codes, affiliate promotion and ad reads may be unpaid.",
+    "Percent of uploads within a channel category is not percent of channels sponsored, and not percent of sponsor dollars.",
+    "SponsorRadar's detected placements can count multiple brands on one video; ThoughtLeaders counts category-level videos with at least one sponsor.",
+    "Q1 Upfluence applications are a cross-platform commercial applicant mix, not a YouTube-specific observation.",
+    "Repeated sponsor promotions must not be inferred to represent separate contracts, unique creators, advertiser demand budgets or renewal rates.",
+    "Never extrapolate from commercial sample detections to zero-earning/new-channel sponsor probability without a representative frame.",
+    "Financially or legally restricted sponsor categories need independent platform policy and local advertising-law review."
+  ],
+  "unmeasured": {
+    "platform_paid_sponsorship_contract_count": null,
+    "total_sponsorship_spend": null,
+    "median_creator_sponsor_profit": null,
+    "zero_sponsor_income_share_all_new_entrants": null,
+    "brand_budget_by_category": null,
+    "shorts_sponsorship_density": null,
+    "creator_cost_of_sponsor_approval": null,
+    "sponsorship_revenue_per_work_hour": null
+  }
+}
