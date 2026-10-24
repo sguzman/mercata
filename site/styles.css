@@ -617,3 +617,13 @@ h1 em {font-style:italic;color:var(--accent)}
 .country-currency-card p{font-size:12px;margin:7px 0}
 @media(max-width:750px){.country-programs-grid,.country-currency-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.country-programs-details{padding:15px}}
+
+/* New-entrant earnings protocol: disclose missing evidence, never fake an income chart */
+.newcomer-income{margin:28px 0}
+.newcomer-income-details{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:20px}
+.newcomer-income-details>summary{cursor:pointer;font-size:15px;font-weight:800}
+.newcomer-gates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.newcomer-gate{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;overflow-wrap:anywhere}
+.newcomer-gate h5{font-size:13px;text-transform:capitalize;margin:0 0 9px}
+.newcomer-gate p{font-size:12px;margin:0}
+@media(max-width:650px){.newcomer-income-details{padding:15px}.newcomer-gates{grid-template-columns:1fr}}
