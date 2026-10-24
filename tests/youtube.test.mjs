@@ -521,6 +521,23 @@ test('Pew 2026 U.S. demographic ever-use rates never become YouTube audience com
  assert(Object.values(model.unmeasured).every(v=>v===null));
 });
 
+test('EU27 creator consultation preserves sponsor and question-specific denominators',async()=>{
+ const [data,register]=await Promise.all([
+  load('ontology/youtube/eu-creator-consultation-2026.json'),load('specimens/youtube.json')
+ ]);
+ assert.equal(data.kind,'eu_creator_consultation_and_impact_scope');
+ assert(register.evidence.some(x=>x.id===data.source_id));
+ assert.equal(data.survey.respondents_lower_bound_exclusive,20000);
+ assert.equal(data.survey.respondents_exact,null);
+ assert.equal(data.survey.sampling_frame,null);
+ assert.equal(data.survey.margin_of_error,null);
+ assert.deepEqual(data.reported_responses.map(x=>x.reported_percent),[63,64,60,65,65,83,71]);
+ assert(data.reported_responses.every(x=>x.item_n===null&&x.source_ids.includes(data.source_id)));
+ assert(data.reported_responses.find(x=>x.id==='professional_creator_studio_access_gap').question_population.includes('Professional-creator'));
+ assert(data.separate_platform_and_impact_claims.every(x=>x.not_people_or_revenue));
+ assert(Object.values(data.unmeasured).every(x=>x===null));
+});
+
 test('Promotion paid billable views, YPP eligibility and owner attribution remain separate',async()=>{
  const [model,dossier]=await Promise.all([load('ontology/youtube/promote-economics.json'),load('specimens/youtube.json')]);
  const sources=new Set(dossier.evidence.map(x=>x.id));

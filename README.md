@@ -113,6 +113,8 @@ A [peer-reviewed historical study of external links](ontology/youtube/historical
 
 A [source-backed comparison of adjacent video services](ontology/youtube/comparison-set.md) establishes research dimensions for Twitch, TikTok Creator Rewards and Vimeo OTT, while preserving their fundamentally different money and engagement units. This is **not** authorization to admit new marketplace specimens, and no cross-platform creator-income ranking is inferred.
 
+The [October 2026 EU27 creator consultation](ontology/youtube/eu-creator-consultation-2026.md) records the reported grant, training, workspace and recommendation-discovery barriers among selected survey respondents, not a probability sample of European creators or a measured income distribution.
+
 The [YouTube Promote cost and attribution analysis](ontology/youtube/promote-economics.md) separates paid advertiser spends and billable ad views from organic distribution and YPP-eligible follow-on viewing. It does not invent typical promotional budgets, causal subscriber lift, or profitability.
 
 The [September 2026 platform-use evidence](ontology/youtube/retention-posts-memberships.md) now records YouTube's reported average daily Posts engagement and [first-half microdrama figures](ontology/youtube/video-surfaces-economics.md), while keeping player events, users, watch-time and TV-view growth separate.

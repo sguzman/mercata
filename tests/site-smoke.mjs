@@ -194,6 +194,11 @@ try{
     assert.equal(await countryPrograms.locator('.country-program-currency').count(),3,'Missing currency-scoped payout thresholds');
     assert((await countryPrograms.textContent()).includes('Account currency and feature-specific permissions: unknown'));
     assert((await countryPrograms.textContent()).includes('MXN 1,200'));
+    const eu=page.locator('.eu-consultation');
+    assert.equal(await eu.locator('.eu-consultation-card').count(),7,'Missing bounded EU27 consultation responses');
+    await eu.locator('summary').click();
+    assert((await eu.textContent()).includes('over 20,000 EU27 creators'));
+    assert((await eu.textContent()).includes('only to professional creators'));
     const trafficPanel=page.locator('.traffic-concentration');
     assert.equal(await trafficPanel.locator('.traffic-concentration-card').count(),9,'Missing Studio traffic source classes');
     await trafficPanel.locator('summary').click();

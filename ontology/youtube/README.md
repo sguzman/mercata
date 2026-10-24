@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **173 references, 166 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **174 references, 167 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -109,6 +109,10 @@ The [time-bounded 2027 YPP policy study](ypp-transition-2027.md) and [machine tr
 ## Branded-content disclosures: platform rules versus U.S. FTC guidance
 
 The [October 2026 disclosure risk review](brand-disclosure-risk.md) and [machine record](brand-disclosure-risk.json) separate the platform's Studio branded-content control from independent U.S. FTC endorsement guidance and unverified local requirements. They date YouTube's September 3, 2026 rollout announcement for refreshed labels, age/geography controls and potential automatic labeling. Paid deals, in-kind items, affiliate relationships and independent reviews are evaluated as different cases. Platform labels alone do not guarantee legal compliance. Sponsor profits and enforcement rates remain unknown.
+
+## EU27 creator barriers and recommendation-algorithm dependence (October 2026)
+
+The [Creative Capital EU27 consultation](eu-creator-consultation-2026.md) and [machine study](eu-creator-consultation-2026.json) record seven selected support and algorithm-reliance responses from more than 20,000 platform-surveyed creators. Question denominators, weights and probabilities are missing; studio-space access applies only to professional respondents. An Oxford Economics EU GDP/FTE estimate referenced in the same article is separately modeled, **not** participant income.
 
 ## Traffic-source concentration and dependence without invented earnings
 

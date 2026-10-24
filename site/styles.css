@@ -826,3 +826,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .promote-metrics-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 @media(max-width:850px){.promote-format-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.promote-economics-details{padding:15px}.promote-metrics-grid{grid-template-columns:1fr}}
+
+/* Platform-sponsored EU creator responses, not EU population rates */
+.eu-consultation{margin:28px 0}
+.eu-consultation-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.eu-consultation-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.eu-consultation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.eu-consultation-card{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;overflow-wrap:anywhere}
+.eu-consultation-percent{font:26px Georgia,serif;font-variant-numeric:tabular-nums}
+.eu-consultation-card h5{font-size:13px;margin:7px 0}
+.eu-consultation-card p{font-size:12px;margin:6px 0}
+@media(max-width:650px){.eu-consultation-details{padding:15px}.eu-consultation-grid{grid-template-columns:1fr}}
