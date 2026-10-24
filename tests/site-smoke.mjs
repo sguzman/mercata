@@ -68,6 +68,11 @@ try{
     await onboarding.locator('summary').click();
     assert((await onboarding.textContent()).includes('time to first creator payment: unknown'));
     assert.equal(await page.locator('.content-policy-item').count(),8,'Missing sourced content restrictions');
+    const adsHistory=page.locator('.advertiser-policy-history');
+    assert.equal(await adsHistory.locator('.advertiser-revision-card').count(),6,'Missing 2026 advertiser revisions');
+    await adsHistory.locator('.advertiser-policy-details > summary').click();
+    assert((await adsHistory.textContent()).includes('2026-10'));
+    assert((await adsHistory.textContent()).includes('review error rate and appeal success'));
     const music=page.locator('.music-rights');
     assert.equal(await music.locator('.music-rights-card').count(),5,'Missing audio licensing routes');
     await music.locator('summary').click();
