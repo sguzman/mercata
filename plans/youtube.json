@@ -204,7 +204,7 @@
         "youtube/discovery/model-discovery-by-language"
       ],
       "phase": 3,
-      "progress_percent": 40
+      "progress_percent": 42
     },
     {
       "id": "competition",
@@ -342,7 +342,7 @@
         "youtube/risk/set-archive-and-continuity-measures"
       ],
       "phase": 3,
-      "progress_percent": 55
+      "progress_percent": 63
     },
     {
       "id": "strategy",
@@ -1673,15 +1673,20 @@
       "objective": "List referrals, notifications, playlists, search engines and other attributable sources.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and list referrals, notifications, playlists, search engines and other attributable sources.",
       "status": "in_progress",
-      "percent": 43,
+      "percent": 59,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
         "ontology/youtube/content-formats.json",
         "ontology/youtube/content-formats.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/traffic-concentration.json",
+        "ontology/youtube/traffic-concentration.md",
+        "site/traffic-concentration.mjs",
+        "tests/traffic-concentration.test.mjs",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/traffic-concentration.json",
       "priority": "standard",
       "phase": 3
     },
@@ -2684,10 +2689,17 @@
       "emoji": "🛡️",
       "objective": "Identify audience and income concentration metrics.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and identify audience and income concentration metrics.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
-      "artifact": null,
+      "status": "in_progress",
+      "percent": 72,
+      "evidence": [
+        "ontology/youtube/traffic-concentration.json",
+        "ontology/youtube/traffic-concentration.md",
+        "site/traffic-concentration.mjs",
+        "tests/traffic-concentration.test.mjs",
+        "specimens/youtube.json",
+        "tests/site-smoke.mjs"
+      ],
+      "artifact": "ontology/youtube/traffic-concentration.json",
       "priority": "standard",
       "phase": 3
     },

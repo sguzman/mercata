@@ -541,14 +541,19 @@
           "title": "Map external acquisition channels",
           "acceptance": "Compare search, social, referral, newsletters and paid traffic.",
           "weight": 1,
-          "progress": 42,
+          "progress": 56,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
             "ontology/youtube/creator-growth.md",
             "ontology/youtube/content-formats.json",
             "ontology/youtube/content-formats.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/traffic-concentration.json",
+            "ontology/youtube/traffic-concentration.md",
+            "site/traffic-concentration.mjs",
+            "tests/traffic-concentration.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -557,14 +562,19 @@
           "title": "Specify the acquisition funnel",
           "acceptance": "Define impressions, click-through, visits, leads, conversion and purchase.",
           "weight": 1,
-          "progress": 58,
+          "progress": 62,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-growth.json",
             "ontology/youtube/creator-growth.md",
             "ontology/youtube/content-formats.json",
             "ontology/youtube/content-formats.md",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/traffic-concentration.json",
+            "ontology/youtube/traffic-concentration.md",
+            "site/traffic-concentration.mjs",
+            "tests/traffic-concentration.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -1189,9 +1199,16 @@
           "title": "Measure single-platform dependency",
           "acceptance": "Assess portable audience, payment and customer relationships.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 66,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/traffic-concentration.json",
+            "ontology/youtube/traffic-concentration.md",
+            "site/traffic-concentration.mjs",
+            "tests/traffic-concentration.test.mjs",
+            "specimens/youtube.json",
+            "tests/site-smoke.mjs"
+          ]
         },
         {
           "id": "risk/privacy",
