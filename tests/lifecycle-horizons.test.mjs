@@ -58,7 +58,7 @@ test('Matched descriptive comparison retains source cohort denominator and obser
  assert.deepEqual(r.groups.map(g=>g.entry_n),[1,1]);
  assert.deepEqual(r.groups.map(g=>g.observed_zero_n),[1,0]);
  assert.equal(r.groups[0].sample_median,0);
- assert.equal(r.groups[1].sample_mean,36);
+ assert(Math.abs(r.groups[1].sample_mean-36)<1e-8);
 });
 test('Cross-geography, cross-format, currency and unregistered cohort invalid',()=>{
  const a=make(),b=make({cohort:'trend_or_event'});

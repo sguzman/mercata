@@ -345,6 +345,12 @@ try{
     assert((await air.textContent()).includes('USD 2.30'));
     assert((await air.textContent()).includes('127 monetized livestreamers'));
     assert((await air.textContent()).includes('newcomer zero-earner share'));
+    const lifecycle=page.locator('.lifecycle-horizons');
+    assert.equal(await lifecycle.locator('.lifecycle-horizon-card').count(),3,'Missing video lifecycle horizons');
+    await lifecycle.locator('summary').click();
+    assert((await lifecycle.textContent()).includes('30 days after publishing'));
+    assert((await lifecycle.textContent()).includes('365 days after publishing'));
+    assert.equal(await lifecycle.locator('.lifecycle-horizon-unknown').count(),3,'Unsupported earnings shown as measured');
     const otherIncome=page.locator('.cross-platform-income');
     assert.equal(await otherIncome.locator('.cross-platform-income-card').count(),3,'Missing selected cross-platform income studies');
     await otherIncome.locator('summary').first().click();

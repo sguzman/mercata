@@ -101,6 +101,8 @@ The [software and technology subculture study](ontology/youtube/technology-subcu
 
 The [creator-collaboration and fandom research](ontology/youtube/creator-collaboration-fandom-2026.md) documents Studio's up-to-ten invited collaborators and uploader-only native revenue, plus two age-scoped U.S. online fandom surveys. It does not claim verified collaboration income or causal cross-channel audience migration.
 
+The [evergreen-versus-event horizon study](ontology/youtube/lifecycle-horizons.md) adds a reproducible 30-, 90- and 365-day publication-age design with strict censoring, source permissions and unit tests. It does not invent income for unmeasured videos or infer causal evergreen profitability.
+
 The [creator safety and continuity study](ontology/youtube/creator-safety-continuity.md) now includes October 2026 security pauses, Google Account-first hacked-channel recovery, live-chat moderation, harassment reporting and privacy complaint pathways. These are dated official procedures, not inferred incident rates or guaranteed recovery outcomes.
 
 A [2026 publishing cadence study](ontology/youtube/publishing-cadence-evidence.md) adds niche- and size-specific median upload counts with their quartile ranges, alongside a separate 10.2-million-channel analysis of upload-frequency and growth correlation. The studies do not establish causal growth benefits, a creator labor budget, or a universal uploading schedule.

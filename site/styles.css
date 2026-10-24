@@ -957,3 +957,15 @@ h1 em {font-style:italic;color:var(--accent)}
 .identity-research-card p{font-size:12px;margin:8px 0 0}
 @media(max-width:900px){.identity-research-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.identity-research-details{padding:15px}.identity-research-grid{grid-template-columns:1fr}}
+
+/* Conservative video publication-age comparison: display missing evidence rather than earnings guesses. */
+.lifecycle-horizons{margin:28px 0}
+.lifecycle-horizons-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.lifecycle-horizons-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.lifecycle-horizons-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.lifecycle-horizon-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.lifecycle-horizon-card h5{font-size:14px;margin:0 0 12px}
+.lifecycle-horizon-card strong{font:18px Georgia,serif}
+.lifecycle-horizon-card p{font-size:12px;margin:9px 0}
+@media(max-width:800px){.lifecycle-horizons-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.lifecycle-horizons-details{padding:15px}}
