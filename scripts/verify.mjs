@@ -565,7 +565,7 @@ for (const entry of index.specimens) {
       topic.topics.some(x=>x.id==='children-music' && x.audience_estimate===null &&
         x.creator_estimate===null),
       'Children musical content missing independent taxonomy scope');
-    ensure(observed.observations.length===34 &&
+    ensure(observed.observations.length===36 &&
       observed.observations.some(x=>x.id==='baby-shark-single-video-jun-2025' &&
         x.topic_id==='children-music' &&
         x.metric==='single_video_lifetime_views' &&
@@ -578,6 +578,15 @@ for (const entry of index.specimens) {
     ].includes(x.id)).every(x=>x.metric_definition_revision==='before_2026_08_24' &&
       x.unit==='views' && Number.isFinite(x.value)),
       'New topic findings have incompatible metric definitions');
+    ensure(observed.observations.some(x=>x.id==='morning-routine-title-uploads-h1-2026' &&
+      x.metric==='video_uploads' && x.unit==='uploaded_videos' &&
+      x.value===450000 && x.comparison==='>' &&
+      x.metric_definition_revision==='not_applicable_upload_count') &&
+      observed.observations.some(x=>x.id==='us-learning-howto-views-jun2025' &&
+      x.metric==='video_views' && x.unit==='views' &&
+      x.value===5500000000 && x.comparison==='>' &&
+      x.metric_definition_revision==='before_2026_08_24'),
+      'Upload activity and historical viewing events are incompatible metrics');
     ensure(new Set(topic.topics.map(t=>t.id)).size===topic.topics.length,'Duplicate topic ID');
     ensure(topic.topics.every(x=>x.measurement_status!=='researched' || x.audience_estimate!==null),'Invented topic estimate');
     ensure(policy.items.every(x=>x.source_ids.length>0&&x.source_ids.every(id=>sourceIds.has(id))),'Unattributed policy');

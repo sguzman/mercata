@@ -232,7 +232,7 @@ try{
     await tool.locator('.scenario-clear').click();
     assert((await tool.locator('.scenario-result').textContent()).includes('Enter all fields'));
 
-    assert((await page.locator('.topic-activity-row').count())>=31,'Missing topic evidence');
+    assert((await page.locator('.topic-activity-row').count())>=36,'Missing dated topic evidence');
     assert.equal(await page.locator('.usage-history-point').count(),7,'Missing dated U.S. adult usage series');
     assert.equal(await page.locator('.community-survey-year').count(),7,'Missing U.S. YouTube news trend');
     assert.equal(await page.locator('.community-profile-card').count(),12,'Missing U.S. news audience composition');

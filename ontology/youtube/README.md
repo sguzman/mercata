@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **160 references, 153 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **162 references, 155 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -73,6 +73,10 @@ The [public YouTube sampling protocol](public-sampling.md) defines topic inclusi
 ## Measured content activity
 
 The [topic evidence register](topic-observations.md) records 34 observations from YouTube publications, including global gaming views, topic-title-filtered beauty or format views, news watch hours, and animation fan-survey results. The [machine version](topic-observations.json) includes each source, geography, period, unit and limitation. These measures reveal **content activity**, not unique community population. Persistent audience estimates for all 32 broad topics remain unknown.
+
+## Selected topical activity: upload volume versus broad education views
+
+The [topic evidence catalog](topic-observations.json) now includes over 450,000 **title-filtered global 'morning routine' uploads** in January–June 2026 and more than 5.5 billion **U.S. learning/how-to view events** in June 2025, published by YouTube. These are separate units, regions and periods, with the latter predating the August 2026 view-definition change. Neither is a unique niche audience, an independent creator count, a software-tutorial estimate or proof of demand/profit for a channel.
 
 ## Adjacent creator work-hour measurements
 

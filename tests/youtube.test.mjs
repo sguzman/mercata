@@ -638,6 +638,28 @@ test('Child audience/animation gates do not conflate all-ages, mixed, made-for-k
  assert(Object.values(model.unmeasured).every(x=>x===null));
 });
 
+test('Selected video topic upload totals and broad learning views keep different units',async()=>{
+  const [observed,dossier]=await Promise.all([
+    load('ontology/youtube/topic-observations.json'),load('specimens/youtube.json')
+  ]);
+  assert.equal(observed.observations.length,36);
+  const get=id=>observed.observations.find(x=>x.id===id);
+  const a=get('morning-routine-title-uploads-h1-2026');
+  const b=get('us-learning-howto-views-jun2025');
+  assert.equal(a.value,450000);
+  assert.equal(a.comparison,'>');
+  assert.equal(a.unit,'uploaded_videos');
+  assert.equal(a.period,'2026-01-01 to 2026-06-30');
+  assert.equal(a.metric_definition_revision,'not_applicable_upload_count');
+  assert.equal(b.value,5500000000);
+  assert.equal(b.unit,'views');
+  assert.equal(b.geography,'United States');
+  assert.equal(b.period,'2025-06-01 to 2025-06-30');
+  assert.equal(b.metric_definition_revision,'before_2026_08_24');
+  assert(dossier.evidence.some(x=>x.id==='yt-morning-routine-upload-2026' && x.url===a.source_url));
+  assert(dossier.evidence.some(x=>x.id==='yt-learning-howto-views-2026' && x.url===b.source_url));
+});
+
 test('Barb 2025 device shares are bounded UK Wi-Fi viewing, not people or selected-channel stats',async()=>{
   const [model,dossier]=await Promise.all([
     load('ontology/youtube/screen-viewing-uk-2025.json'),load('specimens/youtube.json')
