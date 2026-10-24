@@ -44,7 +44,7 @@
   ],
   "source_record_quality": "All current registered sources are required to supply publisher/title, retrieval date, a human-readable license/reuse note, and HTTPS source address. These source-level notes are not actual license grants.",
   "third_party_asset_manifest": [],
-  "manifest_completeness": "Unknown pending a manual byte/file audit. Empty list must not be used to assert repository contains no external-media reuse.",
+  "manifest_completeness": "The checked-in tree's recognized media file paths are now guarded against unregistered additions, but quotation, dataset-rights and non-file embedded material remain subject to manual review.",
   "manual_repository_review": {
     "completed": false,
     "checked_all_media_files": false,
@@ -67,5 +67,53 @@
     "all_quotes_manually_reviewed": null,
     "third_party_dataset_export_rights": null,
     "repository_rights_clearance": null
+  },
+  "reviewed_original_graphics": [
+    {
+      "path": "assets/favicon.svg",
+      "visual_description": "Simple repository-native letter M inside rounded rectangle, made from SVG rect/text elements",
+      "inspection": "File markup inspected 2026-10-24; no embedded external image or font asset",
+      "copyright_authorship_independently_certified": false
+    },
+    {
+      "path": "assets/swatch.svg",
+      "visual_description": "Repository project identity-color swatch made from SVG rect/text elements",
+      "inspection": "File markup inspected 2026-10-24; no embedded external image or font asset",
+      "copyright_authorship_independently_certified": false
+    }
+  ],
+  "automated_media_file_inventory": {
+    "observed_repo_tree_entries": 235,
+    "observed_at": "2026-10-24",
+    "tracked_media_extensions": [
+      "svg",
+      "png",
+      "jpg",
+      "jpeg",
+      "gif",
+      "webp",
+      "avif",
+      "mp4",
+      "webm",
+      "mp3",
+      "wav",
+      "ogg",
+      "woff",
+      "woff2",
+      "ttf",
+      "otf",
+      "pdf"
+    ],
+    "observed_local_files": [
+      "assets/favicon.svg",
+      "assets/swatch.svg"
+    ],
+    "markup_inspected": [
+      "index.html",
+      "site/styles.css",
+      "site/app.js"
+    ],
+    "external_media_detected_in_inspected_markup": false,
+    "confidence": "File-extension and simple URL patterns only; cannot validate visual authorship, dynamic script sourcing, quotes, licensed datasets or cross-origin runtime content"
   }
 }
