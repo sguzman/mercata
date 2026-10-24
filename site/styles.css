@@ -980,3 +980,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .health-fitness-card p{font-size:12px;margin:7px 0}
 @media(max-width:850px){.health-fitness-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.health-fitness-details{padding:15px}}
+
+/* Historical game announcement and release periods have distinct populations */
+.gaming-release-events{margin:28px 0}
+.gaming-release-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.gaming-release-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.gaming-release-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.gaming-release-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.gaming-release-card h5{font-size:14px;margin:0 0 9px}
+.gaming-release-card p{font-size:12px;margin:7px 0}
+.gaming-release-measure{font-weight:800;font-variant-numeric:tabular-nums}
+@media(max-width:650px){.gaming-release-details{padding:15px}.gaming-release-grid{grid-template-columns:1fr}}

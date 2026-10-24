@@ -469,6 +469,31 @@ test('YouTube economic expressions use declared symbols or earlier computed resu
   }
 });
 
+test('Historical gaming launch metrics do not become YouTube platform growth or creator profit',async()=>{
+ const [study,dossier]=await Promise.all([
+  load('ontology/youtube/gaming-release-events.json'),
+  load('specimens/youtube.json')
+ ]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(study.kind,'game_release_event_viewing_study');
+ assert.equal(study.events.length,2);
+ assert(study.events.every(e=>e.source_ids.every(id=>ids.has(id))&&e.unique_people===null&&e.creator_income===null));
+ const release=study.events.find(x=>x.event_type==='full_game_release');
+ assert.equal(release.country_scope,'JP');
+ assert.equal(release.reported_window,'first_7_days');
+ assert.equal(release.measures[0].value,50000000);
+ assert.equal(release.measures[0].comparison,'>');
+ const trailer=study.events.find(x=>x.event_type==='trailer_premiere_not_game_release');
+ assert.equal(trailer.reported_window,'first_24_hours');
+ assert.deepEqual(trailer.measures.map(x=>x.value),[93000000,250000000]);
+ assert(trailer.measures.every(x=>x.comparison==='>'));
+ assert(trailer.limitations.includes('overlapping'));
+ assert(study.events.every(x=>x.before_window_same_metric===null&&
+   x.after_window_same_metric===null&&x.comparable_platform_baseline===null));
+ assert(Object.values(study.unmeasured).every(x=>x===null));
+ assert(study.research_protocol.prohibited_inferences.some(x=>x.includes('not the date of a game release')));
+});
+
 test('Fitness and wellness policy study keeps unmeasured audiences and earnings null',async()=>{
  const [study,dossier,taxonomy]=await Promise.all([
   load('ontology/youtube/health-fitness-content.json'),

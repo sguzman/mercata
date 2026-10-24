@@ -314,6 +314,13 @@ try{
     assert((await collab.textContent()).includes('up to 10 collaborators'));
     assert((await collab.textContent()).includes('does not split collaboration payouts'));
     assert((await collab.textContent()).includes('No collaboration earnings'));
+    const gameRelease=page.locator('.gaming-release-events');
+    assert.equal(await gameRelease.locator('.gaming-release-card').count(),2,'Missing dated gaming launch events');
+    assert.equal(await gameRelease.locator('.gaming-release-measure').count(),3,'Missing independently qualified gaming view units');
+    await gameRelease.locator('summary').click();
+    assert((await gameRelease.textContent()).includes('Over 50,000,000'));
+    assert((await gameRelease.textContent()).includes('Over 93,000,000'));
+    assert((await gameRelease.textContent()).includes('cannot be summed'));
     const nfl=page.locator('.nfl-seasonality');
     assert.equal(await nfl.locator('.nfl-seasonality-card').count(),4,'Missing measured NFL view/upload/offseason distinctions');
     await nfl.locator('summary').click();

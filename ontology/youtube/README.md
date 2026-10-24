@@ -26,7 +26,7 @@ The [publication rights gate](publication-rights.md), [machine rights manifest](
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **201 references, 194 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **203 references, 196 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -280,6 +280,10 @@ The [news-audience survey profile](community-audience-studies.md) uses Pew's 202
 ## Sampled competition and discovery evidence
 
 A [2026 commercial sample study](competition-observations.md) describes subscriber-tier movement and traffic sources across 71,177 observed accounts, while exposing its unknown recruitment frame and incomplete observation dates. The [machine record](competition-observations.json) keeps these descriptive statistics out of representative newcomer-success estimates.
+
+## Game-release viewing versus platform-wide gaming growth
+
+The [historical gaming-event study](gaming-release-events.md) and [machine record](gaming-release-events.json) preserve YouTube's reported Splatoon 2 release-week views in Japan (2017) and GTA VI trailer-premiere views globally (2023) with separate country, period, game-event and video-scope denominators. A trailer is not a game release; the single-video count overlaps the broader related-video count. There is no pre-event baseline, causal lift, unique-viewer estimate or creator earnings observation.
 
 ## NFL content: measured multi-year growth and offseason activity
 
