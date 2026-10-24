@@ -76,6 +76,10 @@ The [retention/completion measurement audit](retention-observability.md), [machi
 
 The [search-demand source audit](search-demand-proxy-crosswalk.md), [machine source frame](search-demand-proxy-crosswalk.json) and [validator](../../site/search-demand-proxy-audit.mjs) distinguish Studio content gaps, Google Trends YouTube Search normalized 0–100 interest, autocomplete, and approximate video-result totals. None is absolute monthly searches, deduplicated viewers or confirmed buyer demand.
 
+## Equipment, production labor and video-format economics
+
+The [Shorts/horizontal/live production register](video-production-cost-register.md), [machine formats and cost protocol](video-production-cost-register.json) and [tested owner-input cost arithmetic](../../site/video-production-cost-audit.mjs) distinguish an already-owned smartphone capture option, optional live encoder investment, logged work hours, cash expenses, amortization and *verified* receipts. No purchase is mandatory or recommended; no creator production-cost median or net earnings were observed.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

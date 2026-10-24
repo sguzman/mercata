@@ -104,7 +104,8 @@ try{
       ['.first-upload-vlog',4,'no YouTube payouts'],
       ['.external-link-funnel',7,'no test has been launched'],
       ['.retention-observability',11,'full-video completion fraction'],
-      ['.search-demand-proxies',4,'No absolute monthly searches']
+      ['.search-demand-proxies',4,'No absolute monthly searches'],
+      ['.production-cost-audit',5,'No representative equipment costs']
     ]){
       const section=page.locator(selector);
       assert.equal(await section.locator('.ownership-card').count(),cards,'Missing research cards in '+selector);

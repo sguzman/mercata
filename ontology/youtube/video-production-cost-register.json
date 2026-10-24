@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "creator_video_format_cost_and_labor_register",
+  "as_of": "2026-10-24",
+  "status": "official_capture_paths_plus_unit_cost_protocol_no_observed_market_prices",
+  "format_paths": [
+    {
+      "id": "short_phone",
+      "label": "Shorts captured and edited on already owned phone",
+      "method": "vertical_or_square_up_to_3_minutes",
+      "source_ids": [
+        "yt-shorts-mobile-production-2026"
+      ],
+      "limit": "No mandatory dedicated purchased camera or software claimed; work, storage, connectivity and rights still matter",
+      "observed_median_cash_cost": null,
+      "observed_median_labor_hours": null
+    },
+    {
+      "id": "horizontal_video",
+      "label": "Standard horizontal recorded video",
+      "method": "responsive_player_16_9_common",
+      "source_ids": [
+        "yt-video-adaptive-aspect-2026"
+      ],
+      "limit": "Video editing, scripting, sound, accessibility and rights costs vary by project; 16:9 is not a paid-equipment mandate",
+      "observed_median_cash_cost": null,
+      "observed_median_labor_hours": null
+    },
+    {
+      "id": "live_webcam",
+      "label": "Webcam live stream",
+      "method": "webcam_method_with_eligible_channel",
+      "source_ids": [
+        "yt-stream-setup-modes-2026"
+      ],
+      "limit": "Uninterrupted network, moderation, preflight and post-live archive work matter",
+      "observed_median_cash_cost": null,
+      "observed_median_labor_hours": null
+    },
+    {
+      "id": "live_encoder",
+      "label": "Software or hardware encoded live stream",
+      "method": "encoder_method_with_setup",
+      "source_ids": [
+        "yt-stream-encoder-process-2026"
+      ],
+      "limit": "Capture/encoder setup, stream key control, ongoing network and monitoring effort can raise labor",
+      "observed_median_cash_cost": null,
+      "observed_median_labor_hours": null
+    },
+    {
+      "id": "multicamera_live",
+      "label": "Complex live production",
+      "method": "multiple_audio_video_devices_optional",
+      "source_ids": [
+        "yt-stream-encoder-process-2026"
+      ],
+      "limit": "Multiple cameras/microphones/mixers are optional production choices, not YouTube-wide minimum spending",
+      "observed_median_cash_cost": null,
+      "observed_median_labor_hours": null
+    }
+  ],
+  "source_ids": [
+    "yt-shorts-mobile-production-2026",
+    "yt-video-adaptive-aspect-2026",
+    "yt-stream-setup-modes-2026",
+    "yt-stream-encoder-process-2026",
+    "yt-stream-network-planning-2026"
+  ],
+  "budget_levels": [
+    {
+      "id": "no_new_purchase",
+      "description": "Use already-owned suitable hardware and no mandatory new purchase; record electricity, connectivity, licenses and labor separately.",
+      "required_new_equipment_usd": 0,
+      "actual_total_cost": null
+    },
+    {
+      "id": "existing_gear",
+      "description": "Allocate fair use of existing camera/phone, microphone and computer using actual invoice and estimated useful life, with permission to reuse gear.",
+      "required_new_equipment_usd": null,
+      "actual_total_cost": null
+    },
+    {
+      "id": "optional_upgrade",
+      "description": "Optionally add equipment, software or contractor inputs only after a creator provides actual price and expected lifetime. No purchase recommendation.",
+      "required_new_equipment_usd": null,
+      "actual_total_cost": null
+    }
+  ],
+  "record_required": [
+    "format",
+    "currency",
+    "observation_period",
+    "equipment_purchase_or_ownership_basis",
+    "eligible_use_count_or_hours",
+    "amortization_policy",
+    "production_hours_research_recording_editing_publishing_moderation",
+    "electricity_network_storage_cost",
+    "rights_and_asset_costs",
+    "paid_hired_labor",
+    "creator_cash_revenue_verified_or_null",
+    "creator_invoice_and_log_provenance"
+  ],
+  "live_network": {
+    "source_id": "yt-stream-network-planning-2026",
+    "minimum_recommended_bandwidth_headroom_fraction": 0.2,
+    "actual_creator_upload_mbps": null,
+    "required_stream_bitrate_mbps": null,
+    "measured_outage_fraction": null
+  },
+  "unmeasured": {
+    "median_short_creation_cost": null,
+    "median_horizontal_video_cost": null,
+    "median_live_stream_cash_cost": null,
+    "median_work_hours_by_format": null,
+    "mean_production_spend_per_creator": null,
+    "representative_cost_hourly_rate": null,
+    "net_creator_profit": null
+  },
+  "creator_cost_records": []
+}
