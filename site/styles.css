@@ -729,3 +729,17 @@ h1 em {font-style:italic;color:var(--accent)}
 .traffic-concentration-card p{font-size:12px;margin:0}
 @media(max-width:850px){.traffic-concentration-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.traffic-concentration-details{padding:15px}}
+
+/* Date-scoped commercial video stock and U.S. online survey are deliberately distinct */
+.video-attention-culture{margin:28px 0}
+.video-attention-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.video-attention-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.video-attention-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.video-attention-card{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;overflow-wrap:anywhere}
+.video-attention-card h5{font-size:14px;margin:0 0 10px}
+.video-attention-card p{font-size:12px;margin:8px 0}
+.video-attention-observations{padding:0;list-style:none;margin:14px 0}
+.video-attention-observation{display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--line);padding:8px 0}
+.video-attention-observation strong{min-width:94px;white-space:nowrap;font:18px Georgia,serif;font-variant-numeric:tabular-nums}
+.video-attention-observation span{font-size:12px;overflow-wrap:anywhere}
+@media(max-width:700px){.video-attention-details{padding:15px}.video-attention-grid{grid-template-columns:1fr}}

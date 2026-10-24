@@ -218,6 +218,13 @@ try{
     assert((await comparators.textContent()).includes('not been added as Mercata specimens'));
     assert((await comparators.textContent()).includes('general profitability: unknown'));
     assert.equal(await page.locator('.competition-tier').count(),5,'Missing sampled subscriber tiers');
+    const attention=page.locator('.video-attention-culture');
+    assert.equal(await attention.locator('.video-attention-card').count(),2,'Missing independent video stock and niche survey studies');
+    assert.equal(await attention.locator('.video-attention-observation').count(),11,'Missing measured dated stock, watch-time and survey items');
+    await attention.locator('summary').click();
+    assert((await attention.textContent()).includes('~29 billion'));
+    assert((await attention.textContent()).includes('Distinct niche viewers'));
+    assert((await attention.textContent()).includes('must not be added to 100%'));
     const historyLinking=page.locator('.historical-linking');
     assert.equal(await historyLinking.locator('.historical-link-card').count(),2,'Missing historical linking observations');
     await historyLinking.locator('summary').click();

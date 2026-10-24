@@ -602,6 +602,30 @@ test('Adjacent video comparison is scope-only and does not admit marketplace spe
  assert(model.excluded_from_conclusions.includes('sampled_creator_income_rankings'));
 });
 
+test('2025 Omdia video watch time and 2026 NRG U.S. survey cannot be pooled',async()=>{
+ const [model,dossier]=await Promise.all([
+   load('ontology/youtube/video-attention-culture-2026.json'),load('specimens/youtube.json')
+ ]);
+ const sourceIds=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'observed_video_supply_and_niche_culture_survey');
+ assert.deepEqual(model.source_families.map(x=>x.id),['omdia-2026','nrg-youtube-2026']);
+ assert(model.source_families.every(x=>x.source_ids.every(id=>sourceIds.has(id))));
+ assert(model.observations.every(x=>sourceIds.has(x.source_id)));
+ assert.equal(model.observations.length,11);
+ const get=id=>model.observations.find(x=>x.id===id);
+ assert.equal(get('omdia-video-stock-dec2025').value,29000000000);
+ assert.equal(get('omdia-video-stock-dec2025').unit,'video_objects');
+ assert.equal(get('omdia-top-1pct-watchtime').value,91);
+ assert.equal(get('omdia-top-1pct-watchtime').unit,'percent_of_video_watch_time');
+ assert.equal(get('omdia-shorts-new-uploads').unit,'percent_new_uploads');
+ assert.equal(get('omdia-shorts-new-uploads').comparison,'greater_than');
+ assert.deepEqual(['omdia-music-watchtime','omdia-news-watchtime','omdia-video-podcasts-watchtime','omdia-professional-watchtime'].map(id=>get(id).value),[33,10,5,46]);
+ assert.deepEqual(['nrg-niche-watched','nrg-fandom-explainer-watched','nrg-personal-interests','nrg-stays-interested'].map(id=>get(id).sample_n),[496,496,939,939]);
+ assert(model.observations.filter(x=>x.id.startsWith('nrg-')).every(x=>x.per_question_n===null));
+ assert(Object.values(model.unmeasured).every(x=>x===null));
+ assert(model.inference_rules.some(x=>x.includes('must not be pooled')));
+});
+
 test('2019 high-subscriber linking evidence is not a creator-income distribution',async()=>{
   const [study,dossier]=await Promise.all([
     load('ontology/youtube/historical-linking-study.json'),load('specimens/youtube.json')

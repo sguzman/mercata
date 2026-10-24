@@ -67,6 +67,8 @@ A [dated February 2027 YouTube Partner Program transition](ontology/youtube/ypp-
 
 The [2026 U.S. adult YouTube usage study](ontology/youtube/us-demographic-use-2026.md) adds Pew Research Center's source-specific income, education and urban/rural **ever-use rates**. It does not infer YouTube's viewer demographic composition or convert the survey-wide sampling error into subgroup errors.
 
+The [video attention and niche culture research](ontology/youtube/video-attention-culture-2026.md) preserves Omdia's 2025 video-stock/watch-time observations separately from YouTube/NRG's April 2026 U.S. online youth and adult-attitude surveys. These data do not establish niche populations, probabilities of income or mutually exclusive genre market shares.
+
 The [viewer/person measurement study](ontology/youtube/viewer-person-metrics.md) distinguishes public channel views and subscribers from owner-only unique viewer estimates, including signed-out watching. Rolling 28-day channel audience and up-to-90-day unique-viewer estimates are not a global census; unrelated channels cannot be summed into an exact user population.
 
 The [traffic-source concentration protocol](ontology/youtube/traffic-concentration.md) distinguishes owner-only Browse, suggested, Shorts, search, notifications and external attribution with explicit unit checks. No measured channel source mix or income exposure is assumed, and its diagnostic rejects partial source partitions.

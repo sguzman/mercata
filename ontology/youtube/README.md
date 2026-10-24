@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **144 references, 137 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **146 references, 139 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -200,6 +200,10 @@ The [news-audience survey profile](community-audience-studies.md) uses Pew's 202
 ## Sampled competition and discovery evidence
 
 A [2026 commercial sample study](competition-observations.md) describes subscriber-tier movement and traffic sources across 71,177 observed accounts, while exposing its unknown recruitment frame and incomplete observation dates. The [machine record](competition-observations.json) keeps these descriptive statistics out of representative newcomer-success estimates.
+
+## Video supply, attention concentration and U.S. niche exploration (2025–2026)
+
+The [Omdia and NRG study comparison](video-attention-culture-2026.md) and [machine observations](video-attention-culture-2026.json) separate a commercial January 2026 analyst release on YouTube's end-2025 video stock, viewing-time concentration, content shares and new Shorts uploads from YouTube/NRG's September 2026 report on U.S. online respondents aged 14–29 or 14–44. Music, news, podcasts and professional production can overlap and are **not** a mutually exclusive distribution. Self-reported niche viewing does not measure distinct people in each niche; neither study supplies creator earnings.
 
 ## Historical cross-platform links of established YouTube channels
 
