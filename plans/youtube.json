@@ -342,7 +342,7 @@
         "youtube/risk/set-archive-and-continuity-measures"
       ],
       "phase": 3,
-      "progress_percent": 63
+      "progress_percent": 64
     },
     {
       "id": "strategy",
@@ -398,7 +398,7 @@
         "youtube/review/create-a-reproducibility-log"
       ],
       "phase": 1,
-      "progress_percent": 69
+      "progress_percent": 70
     },
     {
       "id": "special-video",
@@ -2750,16 +2750,19 @@
       "objective": "Identify audience and income concentration metrics.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and identify audience and income concentration metrics.",
       "status": "in_progress",
-      "percent": 72,
+      "percent": 78,
       "evidence": [
         "ontology/youtube/traffic-concentration.json",
         "ontology/youtube/traffic-concentration.md",
         "site/traffic-concentration.mjs",
         "tests/traffic-concentration.test.mjs",
         "specimens/youtube.json",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/eu-creator-consultation-2026.json",
+        "ontology/youtube/eu-creator-consultation-2026.md",
+        "tests/youtube.test.mjs"
       ],
-      "artifact": "ontology/youtube/traffic-concentration.json",
+      "artifact": "ontology/youtube/eu-creator-consultation-2026.json",
       "priority": "standard",
       "phase": 3
     },
@@ -3172,7 +3175,7 @@
       "objective": "Separate verified primary material, independent population studies and anecdotes.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and separate verified primary material, independent population studies and anecdotes.",
       "status": "in_progress",
-      "percent": 54,
+      "percent": 59,
       "evidence": [
         "ontology/youtube/source-families.json",
         "ontology/youtube/source-provenance.md",
@@ -3184,9 +3187,11 @@
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
         "tests/site-smoke.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/eu-creator-consultation-2026.json",
+        "ontology/youtube/eu-creator-consultation-2026.md"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/eu-creator-consultation-2026.json",
       "priority": "high",
       "phase": 1
     },
@@ -3291,7 +3296,7 @@
       "objective": "Provide consistent language for unavailable demographic or earnings data.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and provide consistent language for unavailable demographic or earnings data.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 59,
       "evidence": [
         "ontology/youtube/opportunity-framework.json",
         "ontology/youtube/opportunity-framework.md",
@@ -3302,9 +3307,13 @@
         "ontology/youtube/newcomer-income-cohort.md",
         "scripts/newcomer-income-audit.mjs",
         "tests/newcomer-cohort.test.mjs",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/eu-creator-consultation-2026.json",
+        "ontology/youtube/eu-creator-consultation-2026.md",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/eu-creator-consultation-2026.json",
       "priority": "high",
       "phase": 1
     },
