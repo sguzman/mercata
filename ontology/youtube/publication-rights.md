@@ -8,6 +8,14 @@
 
 When a CC-licensed work is actually reused, [Creative Commons](https://creativecommons.org/reusing-cc-licensed-content/) recommends the *title, author/licensor, source and license* attribution framework, tailored to supplied information. Public-domain and CC0 materials have different conditions; proprietary press releases and journal images must not silently be treated as CC content.
 
+## Verified file-path inventory
+
+A repository-tree inspection found two checked-in media files: `assets/favicon.svg` and `assets/swatch.svg`. Both contain simple SVG text and rectangle shapes, without an embedded photograph, external image or font file. The inspected site HTML and CSS had no remote media imports.
+
+The [media-path audit](../../scripts/publication-asset-scan.mjs) now runs during repository verification and rejects new unregistered images, audiovisual files, fonts or PDFs, as well as direct remote media embeds in HTML and CSS. [Tests](../../tests/publication-asset-scan.test.mjs) check the current inventory and reject synthetic unregistered assets.
+
+This covers enumerated file paths, **not** proof of legal authorship, every quotation, Markdown embed, dataset transformation or a complete rights determination. The manual review gate stays open.
+
 ## Machine-checked versus manually reviewed
 
 The new audit validates unique source IDs, HTTPS URLs, title, publisher, retrieval date and a source reuse note; every public claim must cite known source IDs and state its limitations. It rejects duplicate asset paths or a registered third-party copied asset without a documented source, licensor, actual permission/license reference and individual review.
