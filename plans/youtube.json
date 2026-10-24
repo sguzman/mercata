@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-23",
-  "progress_percent": 65,
+  "progress_percent": 66,
   "permission_required_before_execution": false,
   "scope": "Evidence-based research into YouTube's economics, platform use, population, creator earnings, audience demographics, subcultures, competition, content formats and practical monetization strategies.",
   "baseline": {
@@ -1473,15 +1473,18 @@
       "objective": "Separate registered accounts, monthly users, visitors, ad reach and hours watched.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and separate registered accounts, monthly users, visitors, ad reach and hours watched.",
       "status": "in_progress",
-      "percent": 37,
+      "percent": 63,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/country-ad-reach-comparisons.json",
+        "ontology/youtube/country-ad-reach-comparisons.md",
+        "tests/country-ad-reach-comparisons.test.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/country-ad-reach-comparisons.json",
       "priority": "standard",
       "phase": 2
     },
@@ -1493,15 +1496,18 @@
       "objective": "Choose consistent observations and dates to avoid mixing estimates.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and choose consistent observations and dates to avoid mixing estimates.",
       "status": "in_progress",
-      "percent": 53,
+      "percent": 76,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/country-ad-reach-comparisons.json",
+        "ontology/youtube/country-ad-reach-comparisons.md",
+        "tests/country-ad-reach-comparisons.test.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/country-ad-reach-comparisons.json",
       "priority": "standard",
       "phase": 2
     },
@@ -1557,15 +1563,18 @@
       "objective": "Keep language, geography and multi-language use distinct.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and keep language, geography and multi-language use distinct.",
       "status": "in_progress",
-      "percent": 42,
+      "percent": 52,
       "evidence": [
         "ontology/youtube/multilingual-distribution.json",
         "ontology/youtube/multilingual-distribution.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/country-ad-reach-comparisons.json",
+        "ontology/youtube/country-ad-reach-comparisons.md",
+        "tests/country-ad-reach-comparisons.test.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/country-ad-reach-comparisons.json",
       "priority": "standard",
       "phase": 2
     },
@@ -3938,7 +3947,7 @@
       "objective": "Specify consistent country samples and survey limitations.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify consistent country samples and survey limitations.",
       "status": "in_progress",
-      "percent": 35,
+      "percent": 57,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
@@ -3950,7 +3959,10 @@
         "site/audience-population-audit.mjs",
         "tests/audience-population-audit.test.mjs",
         "tests/site-smoke.mjs",
-        "site/app.js"
+        "site/app.js",
+        "ontology/youtube/country-ad-reach-comparisons.json",
+        "ontology/youtube/country-ad-reach-comparisons.md",
+        "tests/country-ad-reach-comparisons.test.mjs"
       ],
       "artifact": "ontology/youtube/audience-population-crosswalk.json",
       "priority": "high",
@@ -4184,15 +4196,18 @@
       "objective": "Set a panel of countries and comparable years.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and set a panel of countries and comparable years.",
       "status": "in_progress",
-      "percent": 30,
+      "percent": 59,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/country-ad-reach-comparisons.json",
+        "ontology/youtube/country-ad-reach-comparisons.md",
+        "tests/country-ad-reach-comparisons.test.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/country-ad-reach-comparisons.json",
       "priority": "high",
       "phase": 2
     },
@@ -5849,7 +5864,7 @@
       "objective": "Preserve geography and sampling changes.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and preserve geography and sampling changes.",
       "status": "in_progress",
-      "percent": 41,
+      "percent": 49,
       "evidence": [
         "ontology/youtube/multilingual-distribution.json",
         "ontology/youtube/multilingual-distribution.md",
@@ -5861,7 +5876,10 @@
         "site/search-demand-proxy-audit.mjs",
         "tests/search-demand-proxy-audit.test.mjs",
         "site/app.js",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/country-ad-reach-comparisons.json",
+        "ontology/youtube/country-ad-reach-comparisons.md",
+        "tests/country-ad-reach-comparisons.test.mjs"
       ],
       "artifact": "ontology/youtube/search-demand-proxy-crosswalk.json",
       "priority": "standard",
