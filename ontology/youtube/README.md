@@ -113,6 +113,10 @@ The [channel onboarding study](channel-onboarding.md) and [six-stage machine mod
 
 The [audience discovery and return model](creator-growth.md) defines counted thumbnail exposure, search and recommendation traffic, Shorts feed choices, engaged watching, rolling 28-day active channel audiences, and new/casual/regular returning viewers. Its [machine ontology](creator-growth.json) keeps 17 defined measurements separate from unknown observed values. Community posts and payment conversion are treated as different events; no private audience records are harvested.
 
+## Multilingual audio, localized metadata and viewer language
+
+The [multilingual distribution study](multilingual-distribution.md) and [machine ontology](multilingual-distribution.json) distinguish manually uploaded multi-language audio, automatic dubbing, subtitles/captions, localized titles and descriptions, localized thumbnails and viewer-preference settings. YouTube's September 2025 report says selected creators already uploading multilingual audio received **over 25% of their watch time** from non-primary-language views (as of July 2025), not 25% incremental audience growth or profit. The May 2026 count of 27 auto-dubbing languages is recorded only as a dated snapshot. Cost, language-market income and causal improvements remain unknown.
+
 ## Video and distribution formats
 
 The [format comparison](content-formats.md) and [machine catalog](content-formats.json) document eight publication forms, including ordinary videos, Shorts, webcam/encoder live streams, mobile live streams, Premieres, podcasts, Community Posts and live replays. Each records where discovery and links work, candidate earning routes and eligibility restrictions. Neither their profit nor labor requirements are invented.
