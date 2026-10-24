@@ -7,8 +7,8 @@
   "research_question": "Do Shorts cause viewers to continue to related ordinary videos, and what cost and earned value could be measured?",
   "source_ids": [
     "yt-shorts-related-video-help-2026",
-    "yt-mixed-format-analytics-help-2026",
-    "yt-feature-access-guide-2026"
+    "studio-analytics-help",
+    "yt-feature-access"
   ],
   "population": "YouTube Shorts viewers exposed to creators' linked videos and eligible owners, with no sampled channel cohort",
   "method": "Document the official linked-video mechanism, distinguish observable format summaries from directly linked events, and prespecify a comparison with a complete paid and labor-cost ledger.",
@@ -18,7 +18,7 @@
       "kind": "shorts_view",
       "label": "Short discovery event",
       "source_ids": [
-        "yt-mixed-format-analytics-help-2026"
+        "studio-analytics-help"
       ],
       "measurement": "shorts_views_or_engaged_views_with_named_epoch",
       "unit": "playback_or_engagement_events",
@@ -31,7 +31,7 @@
       "label": "Related video in Shorts player",
       "source_ids": [
         "yt-shorts-related-video-help-2026",
-        "yt-feature-access-guide-2026"
+        "yt-feature-access"
       ],
       "measurement": "link_destination_and_advanced_feature_gate",
       "unit": "feature_eligibility_not_an_event_count",
@@ -43,7 +43,7 @@
       "kind": "regular_video",
       "label": "Watch-page destination",
       "source_ids": [
-        "yt-mixed-format-analytics-help-2026"
+        "studio-analytics-help"
       ],
       "measurement": "destination_views_or_traffic_by_source",
       "unit": "playback_events",
@@ -55,7 +55,7 @@
       "kind": "aggregate_audience_overlap",
       "label": "Viewers across formats",
       "source_ids": [
-        "yt-mixed-format-analytics-help-2026"
+        "studio-analytics-help"
       ],
       "measurement": "format_specific_unique_viewer_overlap",
       "unit": "estimated_people",
