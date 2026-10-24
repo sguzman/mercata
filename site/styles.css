@@ -627,3 +627,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .newcomer-gate h5{font-size:13px;text-transform:capitalize;margin:0 0 9px}
 .newcomer-gate p{font-size:12px;margin:0}
 @media(max-width:650px){.newcomer-income-details{padding:15px}.newcomer-gates{grid-template-columns:1fr}}
+
+/* 2019 high-subscriber channel link analysis, not an income estimate */
+.historical-linking{margin:28px 0}
+.historical-linking-details{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:20px}
+.historical-linking-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.historical-linking-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}
+.historical-link-card{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;overflow-wrap:anywhere}
+.historical-link-card h5{font-size:14px;margin:0 0 10px}
+.historical-link-share{font:28px Georgia,serif;font-variant-numeric:tabular-nums}
+.historical-link-card p{font-size:12px;margin:9px 0 0}
+@media(max-width:650px){.historical-linking-details{padding:15px}.historical-linking-grid{grid-template-columns:1fr}}
