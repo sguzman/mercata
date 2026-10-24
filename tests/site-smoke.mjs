@@ -169,6 +169,9 @@ try{
     await frames.locator('summary').click();
     assert((await frames.textContent()).includes('including zero-earning YouTube entrants remain unknown'));
     assert((await frames.textContent()).includes('5,511 respondents'));
+    assert((await frames.textContent()).includes('Sample size: unknown'),'Null survey counts must render without suppressing dossier');
+    assert((await frames.textContent()).includes('7 documented source frames'));
+
     const demographics=page.locator('.us-demographic-use');
     assert.equal(await demographics.locator('.us-demographic-card').count(),3,'Missing U.S. adult subgroup study');
     await demographics.locator('summary').click();
