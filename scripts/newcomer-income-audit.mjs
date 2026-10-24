@@ -57,7 +57,14 @@ export function assessAggregateNewcomerIncome(report) {
   const inference=report.probability_sampling===true&&report.frame_coverage_verified===true &&
     report.nonresponse_adjustment_documented===true&&report.uncertainty_reported===true &&
     report.excludes_nonmonetized!==true&&report.excludes_inactive!==true;
-  if(report.claims_representative===true&&!inference)
-    errors.push('Unsupported representative population inference');
-  return {structurally_valid:errors.length===0,population_inference_permitted:errors.length===0&&inference,errors};
+  // Flags are self-reported protocol metadata, not verification of probability sampling.
+  // An automated validator cannot certify representative population inference.
+  if(report.claims_representative===true)
+    errors.push('Representative population claim requires independent methodological review, not only self-declared sampling flags');
+  return {
+    structurally_valid:errors.length===0,
+    eligible_for_independent_method_review:errors.length===0&&inference,
+    population_inference_permitted:false,
+    errors
+  };
 }
