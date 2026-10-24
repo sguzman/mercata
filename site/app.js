@@ -1,4 +1,5 @@
 import {evaluateIncomeScenario} from './scenario.mjs';
+import {assessViewComparison,MEASUREMENT_KINDS} from './metric-compatibility.mjs';
 const $ = selector => document.querySelector(selector);
 const make = (tag, className, text) => {
   const node = document.createElement(tag);
@@ -868,6 +869,42 @@ function renderViewDefinitionBreak(data,dossier) {
   for(const note of data.comparison_protocol.invalid_reuse.slice(0,5))items.append(make('li','',note));
   warning.append(items);
   details.append(warning);
+  const tool=make('div','view-comparison-tool');
+  tool.append(make('h5','','Check whether two measurement snapshots are comparable'));
+  tool.append(make('p','measure-limit','This checks metric identity and the August 2026 counting break only; it cannot establish matched samples or genuine growth.'));
+  const form=make('form','view-comparison-form');
+  const choose=(title)=>{
+    const label=make('label','view-comparison-field');
+    label.append(make('span','',title));
+    const input=make('input','view-comparison-date');
+    input.type='date';input.required=true;
+    label.append(input);form.append(label);return input;
+  };
+  const dateA=choose('First observation date');
+  const dateB=choose('Second observation date');
+  const measureField=make('label','view-comparison-field');
+  measureField.append(make('span','','Metric used in both observations'));
+  const select=make('select','view-comparison-kind');
+  select.setAttribute('aria-label','Metric to compare');
+  for(const metric of MEASUREMENT_KINDS){
+    const option=make('option','',metric.label);option.value=metric.id;
+    select.append(option);
+  }
+  measureField.append(select);form.append(measureField);
+  const result=make('p','view-comparison-result','Choose both dates to check structural comparability.');
+  result.setAttribute('role','status');
+  result.setAttribute('aria-live','polite');
+  const update=()=>{
+    const assessed=assessViewComparison(
+      {date:dateA.value,metric:select.value},
+      {date:dateB.value,metric:select.value}
+    );
+    result.textContent=assessed.reason;
+    result.dataset.status=assessed.status;
+  };
+  for(const input of [dateA,dateB,select])input.addEventListener('change',update);
+  form.addEventListener('submit',event=>{event.preventDefault();update();});
+  tool.append(form,result);details.append(tool);
   details.append(make('p','measure-limit','Unknown: pre/post conversion factor, public-to-engaged conversion, artificial growth component and causal earnings effect. The change in counting does not establish more attentive viewers.'));
   details.append(audienceSources(data.source_ids,dossier));
   const link=make('a','inline-link','Read dated view-count methodology and historical limitations ↗');
