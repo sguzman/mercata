@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "public_view_count_definition_break_and_metric_bridge",
+  "as_of": "2026-10-23",
+  "effective_date": "2026-08-24",
+  "event_id": "video-count-playback-start-2026",
+  "source_ids": [
+    "view-change-official-blog-2026",
+    "view-change-video-api-2026",
+    "view-change-official-community-2026"
+  ],
+  "status": "documented_2026_policy_and_measurement_change_not_empirical_growth",
+  "before": "Prior public video view threshold was based on watching or clicking, now referred to as engaged viewing in the August 2026 explanation; formats may have had differing historical counting rules.",
+  "after": "Public views count from the first playback frame for Shorts, long-form videos, podcasts and live streams, including autoplay/hover or Shorts feed playback.",
+  "measurement_levels": [
+    {
+      "id": "thumbnail_impression",
+      "unit": "registered_thumbnail_display_event",
+      "data_access": "authorized_analytics_if_eligible",
+      "description": "A thumbnail shown without initiating playback. Exposure is not a view.",
+      "public_video_count_equivalent": false,
+      "eligibility_signal": false,
+      "source_ids": [
+        "view-change-official-blog-2026"
+      ]
+    },
+    {
+      "id": "public_view",
+      "unit": "playback_start_event",
+      "data_access": "public_video_data_api_or_display",
+      "description": "First playback frame, including autoplay, hover playback, clicked video starts, and Shorts starts from Aug 24 2026.",
+      "public_video_count_equivalent": true,
+      "eligibility_signal": false,
+      "source_ids": [
+        "view-change-official-blog-2026",
+        "view-change-video-api-2026"
+      ]
+    },
+    {
+      "id": "engaged_view",
+      "unit": "qualified_initial_attention_event",
+      "data_access": "authorized_analytics_and_creator_ui",
+      "description": "Playback initiated by click/tap or watched beyond the initial seconds, subject to platform counting criteria.",
+      "public_video_count_equivalent": false,
+      "eligibility_signal": "necessary_not_sufficient",
+      "source_ids": [
+        "view-change-official-blog-2026"
+      ]
+    },
+    {
+      "id": "qualified_ypp_view",
+      "unit": "program_eligible_attention_event",
+      "data_access": "platform_eligibility_ui",
+      "description": "Views that count toward the corresponding YouTube Partner Program threshold, subject to format, public availability and policy exclusions.",
+      "public_video_count_equivalent": false,
+      "eligibility_signal": true,
+      "source_ids": [
+        "view-change-official-blog-2026",
+        "ypp-main",
+        "shorts-policy"
+      ]
+    },
+    {
+      "id": "qualified_watch_hour",
+      "unit": "qualified_video_watch_hours",
+      "data_access": "platform_eligibility_ui",
+      "description": "Public watch hours eligible toward applicable program requirements, distinct from all minutes watched or raw playback starts.",
+      "public_video_count_equivalent": false,
+      "eligibility_signal": true,
+      "source_ids": [
+        "ypp-main",
+        "view-change-official-community-2026"
+      ]
+    },
+    {
+      "id": "monetized_playback",
+      "unit": "playback_with_ad_impression",
+      "data_access": "authorized_channel_analytics",
+      "description": "Creator Analytics ad-serving-related playback count, not a synonym for raw public video views or qualified program views.",
+      "public_video_count_equivalent": false,
+      "eligibility_signal": false,
+      "source_ids": [
+        "api-metrics"
+      ]
+    },
+    {
+      "id": "ad_impression",
+      "unit": "ad_display_event",
+      "data_access": "authorized_channel_analytics",
+      "description": "Individual ad display; one monetized playback may involve different numbers of ads.",
+      "public_video_count_equivalent": false,
+      "eligibility_signal": false,
+      "source_ids": [
+        "api-metrics"
+      ]
+    },
+    {
+      "id": "unique_viewer",
+      "unit": "deduplicated_person_estimate",
+      "data_access": "authorized_channel_analytics_or_representative_aggregate",
+      "description": "Distinct people estimated within a defined audience and period; cannot be computed directly from view events.",
+      "public_video_count_equivalent": false,
+      "eligibility_signal": false,
+      "source_ids": [
+        "analytics-audience"
+      ]
+    }
+  ],
+  "format_applicability": [
+    {
+      "format": "long_form",
+      "view_count_first_frame_from": "2026-08-24",
+      "policy_effect": "Raw public start counts can include previews and autoplay; channel earnings and program qualification still require their separate measures.",
+      "conversion_from_public_to_engaged": null
+    },
+    {
+      "format": "shorts",
+      "view_count_first_frame_from": "2026-08-24",
+      "policy_effect": "Shorts first-frame starts are counted; creator earnings still require qualified attention and pooled Shorts payout rules.",
+      "conversion_from_public_to_engaged": null
+    },
+    {
+      "format": "live",
+      "view_count_first_frame_from": "2026-08-24",
+      "policy_effect": "Public playback start metric standardized, but live watch time, engaged behavior and paid features are separate.",
+      "conversion_from_public_to_engaged": null
+    },
+    {
+      "format": "podcast",
+      "view_count_first_frame_from": "2026-08-24",
+      "policy_effect": "Podcast-designated video playback starts adopt the same public first-frame definition, distinct from playlist reach and unique listeners.",
+      "conversion_from_public_to_engaged": null
+    }
+  ],
+  "api_revision": {
+    "field": "videos.statistics.viewCount",
+    "effective_date": "2026-08-24",
+    "observation_level": "public video",
+    "current_definition": "Video playback starts, including hover-to-play, autoplay and click-to-play starts.",
+    "public_api_exposes_engaged_equivalent": false,
+    "source_ids": [
+      "view-change-video-api-2026"
+    ]
+  },
+  "comparison_protocol": {
+    "required_fields": [
+      "metric_id",
+      "metric_definition_version",
+      "observation_date",
+      "observation_period",
+      "video_format",
+      "source_url",
+      "access_method",
+      "geography",
+      "population",
+      "aggregation_scope",
+      "units",
+      "missing_data",
+      "sampling_method",
+      "limitations"
+    ],
+    "valid_reuse": [
+      "Snapshots entirely within the post-2026-08-24 public-view definition, with compatible scope and sampling.",
+      "Engaged-to-engaged measures with the same reporting conditions and definitions, subject to source validation.",
+      "Within-period comparisons of qualified watch hours for a single program-eligible cohort, with applicable exclusions documented."
+    ],
+    "invalid_reuse": [
+      "Treat a rise in raw public views across Aug 24 as observed growth in active watching.",
+      "Divide post-change public video views by pre-change public views and call it retention gain.",
+      "Use raw public views to establish YPP qualification or monetization eligibility.",
+      "Use an engaged-views result to estimate unique humans without deduplication.",
+      "Compute revenue per public playback start by reusing an engaged-views RPM denominator.",
+      "Assume the view-count revision changed the underlying recommendation system or payments by the same percentage.",
+      "Infer a universal engaged/public ratio or causal traffic multiplier from YouTube's policy update."
+    ],
+    "conversion_factor_pre_to_post": null,
+    "conversion_factor_public_to_engaged": null,
+    "estimated_spurious_growth": null,
+    "causal_effect_on_creator_earnings": null,
+    "program_qualification_change_due_to_definition": null
+  },
+  "reported_unaffected": [
+    "Core metrics including click-through rate, average view duration and retention remain anchored on engaged viewing under the official explanation.",
+    "Recommendations and partner-program qualification rules were not directly revised by this public count redefinition."
+  ],
+  "research_application": "Use metric-consistent cohorts to investigate topics, creator supply and revenue. Mark series crossing August 2026 with an explicit break and either stratify or seek a legitimate reprocessed comparable series.",
+  "limits": [
+    "YouTube has not publicly provided a general conversion between pre-August and post-August raw public view counts.",
+    "Platform rules distinguish engaged attention from fully qualified Partner Program thresholds; do not equate them automatically.",
+    "A browser page view, thumbnail impression, initiated video and unique human are separate quantities."
+  ]
+}
