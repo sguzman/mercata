@@ -29,6 +29,10 @@ jobs:
           node --check scripts/verify.mjs
           node --check site/app.js
           node --check site/scenario.mjs
+          node --check site/metric-compatibility.mjs
+          node --check tests/youtube.test.mjs
+          node --check tests/site-smoke.mjs
+          node --check tests/metric-compatibility.test.mjs
       - name: Check public ontology, catalog, queue and website
         run: node scripts/verify.mjs
       - name: Run repository tests
