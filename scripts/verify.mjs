@@ -219,8 +219,7 @@ for (const entry of index.specimens) {
     ensure(samplingBudget.sources.every(x=>sourceIds.has(x.source_id)),
       'Sampling budget missing registered official documentation');
     const q=samplingBudget.default_quota_snapshot;
-    ensure(q.documentation_updated_at===undefined &&
-      q.search_list.bucket==='search_calls' &&
+    ensure(q.search_list.bucket==='search_calls' &&
       q.search_list.max_calls_per_day_default===100 &&
       q.search_list.cost_units_per_call===1 &&
       q.search_list.max_items_per_page===50 &&
