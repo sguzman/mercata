@@ -93,7 +93,7 @@
         "youtube/identity/define-a-comparison-set-of-video-platforms"
       ],
       "phase": 1,
-      "progress_percent": 32
+      "progress_percent": 38
     },
     {
       "id": "access",
@@ -821,10 +821,18 @@
       "emoji": "🪪",
       "objective": "Specify worldwide and country-specific branches, missing geographies and coverage rules.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify worldwide and country-specific branches, missing geographies and coverage rules.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
-      "artifact": null,
+      "status": "in_progress",
+      "percent": 70,
+      "evidence": [
+        "ontology/youtube/geographic-scope.json",
+        "ontology/youtube/geographic-scope.md",
+        "ontology/youtube/country-reach-devices.json",
+        "ontology/youtube/platform-scale.json",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
+      ],
+      "artifact": "ontology/youtube/geographic-scope.json",
       "priority": "high",
       "phase": 1
     },
