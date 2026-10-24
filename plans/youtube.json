@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-23",
-  "progress_percent": 39,
+  "progress_percent": 40,
   "permission_required_before_execution": false,
   "scope": "Evidence-based research into YouTube's economics, platform use, population, creator earnings, audience demographics, subcultures, competition, content formats and practical monetization strategies.",
   "baseline": {
@@ -93,7 +93,7 @@
         "youtube/identity/define-a-comparison-set-of-video-platforms"
       ],
       "phase": 1,
-      "progress_percent": 30
+      "progress_percent": 32
     },
     {
       "id": "access",
@@ -119,7 +119,7 @@
         "youtube/access/differentiate-each-earning-feature-s-eligibility"
       ],
       "phase": 1,
-      "progress_percent": 67
+      "progress_percent": 68
     },
     {
       "id": "economics",
@@ -288,7 +288,7 @@
         "youtube/rights/track-licensing-terms-over-time"
       ],
       "phase": 3,
-      "progress_percent": 43
+      "progress_percent": 59
     },
     {
       "id": "sales",
@@ -342,7 +342,7 @@
         "youtube/risk/set-archive-and-continuity-measures"
       ],
       "phase": 3,
-      "progress_percent": 29
+      "progress_percent": 42
     },
     {
       "id": "strategy",
@@ -780,9 +780,15 @@
       "emoji": "🪪",
       "objective": "List precisely what counts as a channel, creator, active uploader, viewer, subscriber and paid customer.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and list precisely what counts as a channel, creator, active uploader, viewer, subscriber and paid customer.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 28,
+      "evidence": [
+        "ontology/youtube/channel-ownership-continuity.json",
+        "ontology/youtube/channel-ownership-continuity.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 1
@@ -908,14 +914,17 @@
       "objective": "Make an onboarding checklist distinguishing basic publishing from eligibility to earn.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and make an onboarding checklist distinguishing basic publishing from eligibility to earn.",
       "status": "in_progress",
-      "percent": 82,
+      "percent": 88,
       "evidence": [
         "ontology/youtube/channel-onboarding.json",
         "ontology/youtube/channel-onboarding.md",
         "specimens/youtube.json",
         "ontology/youtube/model.json",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/channel-ownership-continuity.json",
+        "ontology/youtube/channel-ownership-continuity.md",
+        "scripts/verify.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2343,9 +2352,15 @@
       "emoji": "⚖️",
       "objective": "Define exports, mailing lists, subscriber access and migration limits.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define exports, mailing lists, subscriber access and migration limits.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 68,
+      "evidence": [
+        "ontology/youtube/channel-ownership-continuity.json",
+        "ontology/youtube/channel-ownership-continuity.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 3
@@ -2357,9 +2372,15 @@
       "emoji": "⚖️",
       "objective": "Plan review of channel ownership, account roles and asset sale restrictions.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and plan review of channel ownership, account roles and asset sale restrictions.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 76,
+      "evidence": [
+        "ontology/youtube/channel-ownership-continuity.json",
+        "ontology/youtube/channel-ownership-continuity.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 3
@@ -2562,7 +2583,7 @@
       "objective": "Separate video-specific restrictions from channel-level access.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and separate video-specific restrictions from channel-level access.",
       "status": "in_progress",
-      "percent": 63,
+      "percent": 71,
       "evidence": [
         "ontology/youtube/content-policy-risk.json",
         "ontology/youtube/content-policy-risk.md",
@@ -2575,7 +2596,9 @@
         "tests/youtube.test.mjs",
         "scripts/verify.mjs",
         "ontology/youtube/advertiser-policy-history.json",
-        "ontology/youtube/advertiser-policy-history.md"
+        "ontology/youtube/advertiser-policy-history.md",
+        "ontology/youtube/channel-ownership-continuity.json",
+        "ontology/youtube/channel-ownership-continuity.md"
       ],
       "artifact": null,
       "priority": "standard",
@@ -2650,9 +2673,15 @@
       "emoji": "🛡️",
       "objective": "Inventory two-factor, permissions, backups and recovery risks.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and inventory two-factor, permissions, backups and recovery risks.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 59,
+      "evidence": [
+        "ontology/youtube/channel-ownership-continuity.json",
+        "ontology/youtube/channel-ownership-continuity.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 3
@@ -2704,9 +2733,15 @@
       "emoji": "🛡️",
       "objective": "Specify public-data-safe preservation options and limits.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify public-data-safe preservation options and limits.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 68,
+      "evidence": [
+        "ontology/youtube/channel-ownership-continuity.json",
+        "ontology/youtube/channel-ownership-continuity.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 3
