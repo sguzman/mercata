@@ -1956,13 +1956,18 @@
           "title": "Describe reported gender distributions",
           "acceptance": "State self-report, platform classifications, nonresponse and category limitations.",
           "weight": 1,
-          "progress": 65,
+          "progress": 69,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
             "ontology/youtube/us-audience-2026.md",
             "ontology/youtube/analytics-query-guide.json",
-            "ontology/youtube/analytics-query-guide.md"
+            "ontology/youtube/analytics-query-guide.md",
+            "ontology/youtube/teen-video-format-evidence.json",
+            "ontology/youtube/teen-video-format-evidence.md",
+            "site/app.js",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -2198,9 +2203,16 @@
           "title": "Research feminine lifestyle, fashion and girl-oriented content",
           "acceptance": "Separate adult women's content and material directed at girls/minors; document units and labels.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 49,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/teen-video-format-evidence.json",
+            "ontology/youtube/teen-video-format-evidence.md",
+            "specimens/youtube.json",
+            "site/app.js",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
+          ]
         },
         {
           "id": "subculture-atlas/animation",
@@ -3229,7 +3241,7 @@
           "title": "Assess child-directed content rules and analytics limitations",
           "acceptance": "Record child-audience restrictions; do not profile individual children.",
           "weight": 1,
-          "progress": 81,
+          "progress": 85,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/content-policy-risk.json",
@@ -3242,7 +3254,9 @@
             "ontology/youtube/child-age-and-format-gates.md",
             "site/app.js",
             "tests/youtube.test.mjs",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/teen-video-format-evidence.json",
+            "ontology/youtube/teen-video-format-evidence.md"
           ]
         },
         {
