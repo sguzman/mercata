@@ -210,6 +210,28 @@ test('Unmeasured topics are not represented as counted audiences',async()=>{
   assert(taxonomy.topics.every(x=>x.audience_estimate===null));
 });
 
+test('Finance and business content taxonomy distinguishes promotion from educational subject matter',async()=>{
+ const [data,dossier,taxonomy]=await Promise.all([
+  load('ontology/youtube/finance-content-taxonomy.json'),
+  load('specimens/youtube.json'),
+  load('ontology/youtube/taxonomy.json')
+ ]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(data.kind,'finance_and_business_content_risk_taxonomy');
+ assert.equal(data.topic_id,'finance');
+ assert(taxonomy.topics.some(x=>x.id===data.topic_id));
+ assert.equal(data.content_families.length,8);
+ assert.equal(new Set(data.content_families.map(x=>x.id)).size,8);
+ assert(data.platform_source_ids.every(id=>ids.has(id)));
+ assert(data.jurisdictional_source_ids.every(id=>ids.has(id)));
+ assert(data.content_families.every(x=>x.topic_population===null&&x.creator_count===null&&x.niche_revenue===null));
+ assert(Object.values(data.unknowns).every(x=>x===null));
+ assert.equal(data.regional_status.mexico,null);
+ assert.equal(data.regional_status.united_kingdom,null);
+ assert(data.content_families.some(x=>x.id==='budgeting_education'&&x.commercial_posture==='no_sale_assumed'));
+ assert(data.content_families.some(x=>x.id==='stock_tip_or_return_promotion'));
+});
+
 test('Production cost model keeps 10 cash and 10 labor measures separate',async()=>{
   const [costs,dossier]=await Promise.all([
     load('ontology/youtube/production-costs.json'),load('specimens/youtube.json')

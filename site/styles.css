@@ -935,3 +935,13 @@ h1 em {font-style:italic;color:var(--accent)}
 .production-pairs-heading{font-size:14px;margin:18px 0 8px}
 @media(max-width:850px){.production-effort-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.production-effort-details{padding:15px}}
+
+/* Overlapping finance topic classes; neither endorsement nor income classifier. */
+.finance-content{margin:28px 0}
+.finance-content-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.finance-content-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.finance-content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.finance-content-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.finance-content-card h5{font-size:14px;margin:0 0 9px}
+.finance-content-card p{font-size:12px;margin:7px 0}
+@media(max-width:650px){.finance-content-details{padding:15px}.finance-content-grid{grid-template-columns:1fr}}

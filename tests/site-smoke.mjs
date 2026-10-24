@@ -283,6 +283,11 @@ try{
     assert((await comparators.textContent()).includes('not been added as Mercata specimens'));
     assert((await comparators.textContent()).includes('general profitability: unknown'));
     assert.equal(await page.locator('.competition-tier').count(),5,'Missing sampled subscriber tiers');
+    const finance=page.locator('.finance-content');
+    assert.equal(await finance.locator('.finance-content-card').count(),8,'Missing finance-content families');
+    await finance.locator('summary').click();
+    assert((await finance.textContent()).includes('investor warning does not determine'));
+    assert((await finance.textContent()).includes('creator profits are unknown'));
     const technology=page.locator('.technology-subcultures');
     assert.equal(await technology.locator('.technology-subculture-card').count(),6,'Missing separate technology/video topics');
     assert.equal(await technology.locator('.technology-metric-card').count(),2,'Missing separate technology observation bases');

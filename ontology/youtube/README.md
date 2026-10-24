@@ -26,7 +26,7 @@ The [publication rights gate](publication-rights.md), [machine rights manifest](
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **192 references, 185 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **196 references, 189 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -252,6 +252,10 @@ The [seven-format public-policy comparison](video-surfaces-economics.md) and [ma
 ## Video and distribution formats
 
 The [format comparison](content-formats.md) and [machine catalog](content-formats.json) document eight publication forms, including ordinary videos, Shorts, webcam/encoder live streams, mobile live streams, Premieres, podcasts, Community Posts and live replays. Each records where discovery and links work, candidate earning routes and eligibility restrictions. Neither their profit nor labor requirements are invented.
+
+## Finance and business topics: education versus paid promotion
+
+The [finance-content classification](finance-content-taxonomy.md) and [eight-family machine record](finance-content-taxonomy.json) separate basic financial literacy, personal-debt explanation, investment concepts, business operations, comparative financial products, sponsored offers, creator-owned products, and securities-tip promotion. They distinguish YouTube advertisement/external-link rules from U.S. FTC material-connection duties and SEC investor-fraud warnings. A topic label is not evidence of a creator's legal status, fraud, profit or region-specific licensing obligations. Audiences, creator populations and niche earnings remain unknown.
 
 ## Technology and software tutorial subcultures
 
