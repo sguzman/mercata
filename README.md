@@ -65,6 +65,10 @@ The research also tracks [monthly advertiser-policy revisions during 2026](ontol
 
 A [dated February 2027 YouTube Partner Program transition](ontology/youtube/ypp-transition-2027.md) preserves current 2026 qualifications alongside announced stricter requirements for new applicants and an ongoing Shorts product gate for existing members. Missing subscriber conditions and actual payouts are not inferred.
 
+The [country eligibility and payment reference](ontology/youtube/country-eligibility-payments.md) records sourced YPP listings, country-specific payment methods and account-currency thresholds for Mexico, the United States and the United Kingdom. It deliberately leaves individual approval and account currency unknown.
+
+The [new-entrant income cohort protocol](ontology/youtube/newcomer-income-cohort.md) defines a population including creators who never monetize or earn anything. Its [aggregate acceptance audit](scripts/newcomer-income-audit.mjs) guards against survivor-only inference, missingness errors and public individual-level data. No representative YouTube newcomer earnings measurement has yet been obtained.
+
 The [YouTube research ontology](ontology/youtube/README.md) currently covers creator and viewer populations, 32 overlapping content categories, global usage and upload statistics, detailed Analytics numerators and denominators, creator earnings samples and their limits, native earning products, country/payment requirements, and content-specific monetization restrictions. The interactive site includes a blank-input economic calculator. [Source-backed task progress](plans/youtube.json) is maintained separately from the completed admission and infrastructure tasks.
 
 A [dated API sampling budget](ontology/youtube/public-api-sampling-budget.md) records distinct search and metadata quota buckets, approximate search totals, and a reproducible sampling workflow without creating credentials or performing a crawl.
