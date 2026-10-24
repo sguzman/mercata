@@ -1981,11 +1981,15 @@
           "title": "Research race and ethnicity where published and meaningful",
           "acceptance": "Use voluntary aggregate data, survey wording, jurisdiction and sample limits; no inference from appearance.",
           "weight": 1,
-          "progress": 45,
+          "progress": 66,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
-            "ontology/youtube/us-audience-2026.md"
+            "ontology/youtube/us-audience-2026.md",
+            "ontology/youtube/demographic-identity-uncertainty.json",
+            "ontology/youtube/demographic-identity-uncertainty.md",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
@@ -2077,9 +2081,15 @@
           "title": "Document aggregate religious identity only where robustly surveyed",
           "acceptance": "Apply local context and privacy limits; leave unsupported splits unknown.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 22,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/demographic-identity-uncertainty.json",
+            "ontology/youtube/demographic-identity-uncertainty.md",
+            "specimens/youtube.json",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
+          ]
         },
         {
           "id": "audience-demography/urban",
@@ -3176,7 +3186,7 @@
           "title": "Verify aggregation and personal-data protections",
           "acceptance": "Exclude private profiling, scraped sensitive attributes and individual-level inference.",
           "weight": 1,
-          "progress": 60,
+          "progress": 72,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/content-policy-risk.json",
@@ -3185,7 +3195,11 @@
             "ontology/youtube/newcomer-income-cohort.json",
             "ontology/youtube/newcomer-income-cohort.md",
             "scripts/newcomer-income-audit.mjs",
-            "tests/newcomer-cohort.test.mjs"
+            "tests/newcomer-cohort.test.mjs",
+            "ontology/youtube/demographic-identity-uncertainty.json",
+            "ontology/youtube/demographic-identity-uncertainty.md",
+            "tests/youtube.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {
