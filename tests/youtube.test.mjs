@@ -458,6 +458,26 @@ test('YouTube task percentage matches its original and detailed queues',async()=
   assert(plan.detail_tasks.every(t=>t.percent<100 || (t.status==='complete'&&t.evidence.length>0)));
 });
 
+test('2019 high-subscriber linking evidence is not a creator-income distribution',async()=>{
+  const [study,dossier]=await Promise.all([
+    load('ontology/youtube/historical-linking-study.json'),load('specimens/youtube.json')
+  ]);
+  assert(dossier.evidence.some(x=>x.id===study.source.source_id));
+  assert.equal(study.population.channels,153770);
+  assert.equal(study.population.subscribers_min_inclusive,100000);
+  assert.equal(study.population.representative_of_all_youtube_channels,false);
+  assert.equal(study.population.representative_of_new_entrants,false);
+  assert.equal(study.video_observations.video_records,136909228);
+  assert.equal(study.video_observations.descriptions_containing_any_url,93186712);
+  assert.equal(study.channel_linking.marketplace.find(x=>x.id==='less_than_20pct').percent_reported,75.37);
+  assert.equal(study.channel_linking.crowdfunding.find(x=>x.id==='less_than_20pct').percent_reported,94);
+  assert.equal(study.channel_linking.crowdfunding.find(x=>x.id==='none').percent_reported,83.1);
+  assert.equal(study.modeled_advertising_revenue_in_article.is_observed_channel_income,false);
+  assert.equal(study.modeled_advertising_revenue_in_article.publish_as_empirical_payout,false);
+  assert(Object.values(study.unmeasured).every(x=>x===null));
+  assert(study.reporting_rules.some(x=>x.includes('2019')));
+});
+
 test('Mixed-platform creator income surveys remain separate and do not supply YouTube estimates',async()=>{
   const [report,dossier]=await Promise.all([
     load('ontology/youtube/cross-platform-income-surveys.json'),load('specimens/youtube.json')
