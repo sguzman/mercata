@@ -1234,6 +1234,70 @@
       "unit": "comparison_constraint",
       "access": "research_metadata",
       "measured_value": null
+    },
+    {
+      "id": "youtube_search_quota_bucket",
+      "group": "economics",
+      "definition": "Dated YouTube Data API search.list quota allocated as calls per day, distinct from general endpoint units.",
+      "unit": "search_calls_per_day",
+      "access": "public_api_method_or_research_metadata",
+      "measured_value": null
+    },
+    {
+      "id": "youtube_general_quota_bucket",
+      "group": "economics",
+      "definition": "Separate shared quota for methods such as videos.list and channels.list, subject to actual project settings.",
+      "unit": "api_units_per_day",
+      "access": "public_api_method_or_research_metadata",
+      "measured_value": null
+    },
+    {
+      "id": "public_search_stratum",
+      "group": "measurement",
+      "definition": "A predeclared topic, time window, region, language, format and query combination for public discovery.",
+      "unit": "query_sampling_stratum",
+      "access": "public_api_method_or_research_metadata",
+      "measured_value": null
+    },
+    {
+      "id": "search_page_result",
+      "group": "measurement",
+      "definition": "One paginated API response with at most the method's requested maximum item slots.",
+      "unit": "query_result_page",
+      "access": "public_api_method_or_research_metadata",
+      "measured_value": null
+    },
+    {
+      "id": "sampled_video_id",
+      "group": "measurement",
+      "definition": "Deduplicated video identifier actually observed in documented search result pages, not the platform video population.",
+      "unit": "observed_video",
+      "access": "public_api_method_or_research_metadata",
+      "measured_value": null
+    },
+    {
+      "id": "sampled_channel_id",
+      "group": "measurement",
+      "definition": "Deduplicated channel identifier observed through a defined sample, not the platform creator population.",
+      "unit": "observed_channel",
+      "access": "public_api_method_or_research_metadata",
+      "measured_value": null
+    },
+    {
+      "id": "sampling_coverage_gap",
+      "group": "measurement",
+      "definition": "Unknown gap between discoverable, observed and all relevant published items, affected by search ranking and policy limits.",
+      "unit": "uncertainty_dimension",
+      "access": "public_api_method_or_research_metadata",
+      "measured_value": null
+    },
+    {
+      "id": "api_query_provenance",
+      "group": "measurement",
+      "definition": "Versioned parameters, return token, request time, quota settings and source data defining reproducible collection.",
+      "unit": "query_metadata",
+      "access": "public_api_method_or_research_metadata",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -1881,6 +1945,61 @@
       "subject": "public_playback_start",
       "predicate": "is_not",
       "object": "channel_monthly_audience"
+    },
+    {
+      "subject": "public_search_stratum",
+      "predicate": "consumes",
+      "object": "youtube_search_quota_bucket"
+    },
+    {
+      "subject": "public_search_stratum",
+      "predicate": "produces",
+      "object": "search_page_result"
+    },
+    {
+      "subject": "search_page_result",
+      "predicate": "may_contain",
+      "object": "sampled_video_id"
+    },
+    {
+      "subject": "sampled_video_id",
+      "predicate": "belongs_to",
+      "object": "video"
+    },
+    {
+      "subject": "sampled_video_id",
+      "predicate": "can_map_to",
+      "object": "sampled_channel_id"
+    },
+    {
+      "subject": "sampled_channel_id",
+      "predicate": "may_correspond_to",
+      "object": "channel"
+    },
+    {
+      "subject": "search_page_result",
+      "predicate": "requires",
+      "object": "api_query_provenance"
+    },
+    {
+      "subject": "search_page_result",
+      "predicate": "has",
+      "object": "sampling_coverage_gap"
+    },
+    {
+      "subject": "sampled_channel_id",
+      "predicate": "is_not",
+      "object": "subculture_creators"
+    },
+    {
+      "subject": "search_result_total",
+      "predicate": "has",
+      "object": "sampling_coverage_gap"
+    },
+    {
+      "subject": "sampled_video_id",
+      "predicate": "is_not",
+      "object": "subculture_viewers"
     }
   ],
   "rules": [
@@ -1910,7 +2029,10 @@
     "Multi-language audio tracks attached to one video do not create independent video objects or distinct viewer populations.",
     "Selected non-primary-language watch-time share is neither observed causal uplift nor equivalent to foreign-country user reach.",
     "August 24, 2026 changed public viewCount to first-frame playback starts, creating a public view series comparability break.",
-    "Engaged attention, qualified YPP views, qualified public watch hours, ad impressions and individual playback starts retain separate units."
+    "Engaged attention, qualified YPP views, qualified public watch hours, ad impressions and individual playback starts retain separate units.",
+    "Search.list has a distinct project quota bucket in the October 2026 API snapshot; never substitute old blanket search-call costs.",
+    "Approximate search result totals are not representative enumerations of videos, people or creators.",
+    "Reproducible sampling requires fixed strata, page tokens, deduplicated identifiers and separate disclosure of coverage and missingness."
   ],
-  "ontology_version": "1.8"
+  "ontology_version": "1.9"
 }
