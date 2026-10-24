@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "creator_collaboration_fandom_participation_evidence",
+  "as_of": "2026-10-24",
+  "status": "bounded_official_product_rules_and_selected_commissioned_survey_not_actual_collaboration_effect",
+  "evidence_families": [
+    {
+      "id": "current_collab_help",
+      "source_ids": [
+        "yt-collaborations-help-2026"
+      ],
+      "population": "Creator videos eligible for official Studio Collaborations feature",
+      "method": "Current first-party Help instructions, not platform-wide feature adoption statistics",
+      "date": "retrieved 2026-10-24"
+    },
+    {
+      "id": "initial_rollout",
+      "source_ids": [
+        "yt-collaborations-rollout-2025"
+      ],
+      "population": "Historical release announcement for initial rollout",
+      "method": "Product announcement, not an experiment or creator population sample",
+      "date": "2025 release; exact day not verified"
+    },
+    {
+      "id": "nrg_april_2026",
+      "source_ids": [
+        "youtube-nrg-mainstream-2026"
+      ],
+      "population": "U.S. online survey respondents ages 14–29 (N=496) and ages 14–44 (N=939), different question sets",
+      "method": "YouTube-commissioned NRG survey with question-level respondent counts, recruitment probabilities and uncertainty not publicly verified",
+      "date": "2026-04"
+    },
+    {
+      "id": "curated_2025_examples",
+      "source_ids": [
+        "yt-year-trends-2025"
+      ],
+      "population": "Editorially highlighted videos and cultural topics, not randomly selected posts",
+      "method": "YouTube Culture & Trends year-end editorial examples",
+      "date": "2025-12-02"
+    }
+  ],
+  "collaboration_policy": {
+    "max_invited_creators_current": 10,
+    "max_invited_creators_initial_rollout": 5,
+    "formats_eligible": [
+      "long_form_video",
+      "shorts",
+      "archived_livestream"
+    ],
+    "active_livestream_eligible": false,
+    "requires_invitation_acceptance_for_visible_credit": true,
+    "visible_credit_surfaces": [
+      "collaborator_names",
+      "per_channel_subscribe_buttons"
+    ],
+    "revenue_recipient": "uploading_channel_only",
+    "platform_splits_ad_revenue_automatically": false,
+    "discovery_intent": "May recommend collaboration upload to both the uploading channel and collaborators' audiences",
+    "guaranteed_search_lift": false,
+    "guaranteed_recommendation_lift": false,
+    "guaranteed_creator_profit": false,
+    "separate_contract_revenue_sharing": null,
+    "collab_availability_by_country": null,
+    "source_ids": [
+      "yt-collaborations-help-2026",
+      "yt-collaborations-rollout-2025"
+    ]
+  },
+  "survey_groups": [
+    {
+      "id": "online_us_14_29",
+      "n_total": 496,
+      "source_id": "youtube-nrg-mainstream-2026",
+      "fieldwork": "2026-04",
+      "population": "U.S. online people ages 14–29",
+      "questions": [
+        {
+          "id": "creators_widely_known",
+          "percent": 77,
+          "unit": "percentage_of_survey_respondents",
+          "meaning": "Perception that YouTube creators are widely known"
+        },
+        {
+          "id": "memes_widely_known",
+          "percent": 78,
+          "unit": "percentage_of_survey_respondents",
+          "meaning": "Perception that memes are widely known"
+        },
+        {
+          "id": "fandom_explainer_watched",
+          "percent": 71,
+          "unit": "percentage_of_survey_respondents",
+          "meaning": "Self-report having watched videos unpacking stories in fandom"
+        },
+        {
+          "id": "niche_community_watched",
+          "percent": 69,
+          "unit": "percentage_of_survey_respondents",
+          "meaning": "Self-report watching content from a self-described niche community"
+        }
+      ]
+    },
+    {
+      "id": "online_us_14_44",
+      "n_total": 939,
+      "source_id": "youtube-nrg-mainstream-2026",
+      "fieldwork": "2026-04",
+      "population": "U.S. online people ages 14–44",
+      "questions": [
+        {
+          "id": "fan_success_self_identification",
+          "percent": 63,
+          "unit": "percentage_of_survey_respondents",
+          "meaning": "Agreement that a fan subject's success feels like respondent's own success"
+        },
+        {
+          "id": "pride_building_success",
+          "percent": 60,
+          "unit": "percentage_of_survey_respondents",
+          "meaning": "Agreement with pride in helping the fan subject achieve success"
+        },
+        {
+          "id": "explore_personal_interests",
+          "percent": 73,
+          "unit": "percentage_of_survey_respondents",
+          "meaning": "Agreement that YouTube is the best place to explore personal interests"
+        },
+        {
+          "id": "long_term_interest",
+          "percent": 72,
+          "unit": "percentage_of_survey_respondents",
+          "meaning": "Agreement that YouTube keeps interest long after discovery"
+        }
+      ]
+    }
+  ],
+  "survey_shared_limits": {
+    "question_specific_n": null,
+    "respondent_sampling_probability": null,
+    "weighted_uncertainty": null,
+    "global_population_representative": false,
+    "source_family": "One YouTube/NRG 2026 commissioned research family, with separate age-specific question groups; not eight independent datasets",
+    "cannot_infer": [
+      "creator_revenue",
+      "actual_paid_patronage",
+      "niche_unique_population",
+      "meme_migration_rate",
+      "causal_creator_success"
+    ]
+  },
+  "illustrative_cross_channel_forms": [
+    {
+      "id": "tv_fan_recreation",
+      "format": "Fan remakes, skits, reinterpretations and theory videos linked to television franchises",
+      "source_ids": [
+        "yt-year-trends-2025"
+      ],
+      "actual_cross_channel_path_unverified": true
+    },
+    {
+      "id": "kpop_fan_video_editing",
+      "format": "Fancams and fan-created narratives reframing fictional artists and songs",
+      "source_ids": [
+        "yt-year-trends-2025"
+      ],
+      "actual_cross_channel_path_unverified": true
+    },
+    {
+      "id": "game_creator_worlds",
+      "format": "Independent creators' Roblox game trends adapted as video-community topics",
+      "source_ids": [
+        "yt-year-trends-2025"
+      ],
+      "actual_cross_channel_path_unverified": true
+    }
+  ],
+  "study_protocol": {
+    "unit": "Publicly observed content item plus explicit accepted collaborator relationship, not a deduced private viewer migration",
+    "candidate_observables": [
+      "publish_date",
+      "format",
+      "topic_taxonomy_id",
+      "collaboration_invitation_accepted_or_unknown",
+      "uploading_channel_public_id",
+      "credited_channel_count",
+      "visible_author_mention",
+      "public_view_events_by_date_if_accessible",
+      "public_links_to_predecessor_with_rights_review"
+    ],
+    "design": "Pre-register fixed genre/country/date strata, sample eligible channels and independent creators, record uploads with and without collaborators, and separately report selected/nonselected and missing data.",
+    "comparison": "Require truly comparable 30- and 90-day pre/post windows with publication cadence, content topic, channel size, viewing metric revisions and observed promotion accounted for; do not equate association with causal lift.",
+    "conditions": [
+      "Use officially public/authorized source records, no individual viewer profiling",
+      "Do not collect unpublished collaboration invitations, revenue contracts or private analytics",
+      "Public followers and collaborators can overlap; subscriptions are not deduplicated people",
+      "Do not infer who first invented a meme from timestamps of a selectively found sample",
+      "A mention, remix or recurring trope does not prove causal audience migration",
+      "Audio/video copyright, attribution and license restrictions still apply"
+    ],
+    "unobserved": {
+      "total_current_collaboration_videos": null,
+      "collaborator_adoption_rate": null,
+      "shared_audience_unique_people": null,
+      "causal_subscriber_lift": null,
+      "causal_watchtime_lift": null,
+      "platform_native_creator_income_gain": null,
+      "contractual_revenue_shares": null,
+      "median_creator_time_cost": null,
+      "actual_meme_cross_channel_transfer_rate": null
+    }
+  },
+  "acceptance_gates": [
+    {
+      "id": "product_state",
+      "verified": true,
+      "limitations": "Current official Help and prior announcement establish differing numerical product ceilings"
+    },
+    {
+      "id": "age_scoped_fandom_survey",
+      "verified": true,
+      "limitations": "Single commissioned research family; no probability-based population generalization"
+    },
+    {
+      "id": "collaborator_population_sample",
+      "verified": false,
+      "limitations": "No selected or random creator video sample and disclosure of collaboration adoption"
+    },
+    {
+      "id": "cross_channel_audience_deduplication",
+      "verified": false,
+      "limitations": "No verified unique-person overlaps or access-authorized analytics"
+    },
+    {
+      "id": "causal_economic_outcomes",
+      "verified": false,
+      "limitations": "No measured collaboration costs, payouts or comparable untreated creators"
+    }
+  ]
+}
