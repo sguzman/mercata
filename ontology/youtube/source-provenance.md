@@ -14,6 +14,12 @@ The [machine-readable family declarations](source-families.json) provide a forma
 
 The six identical-document pairs concern the YPP help page, audience analytics, two child-directed policy resources, current advertiser suitability and advertiser-policy updates. The NeoReach and partner publications are a separate **same-underlying-survey** family. The original population and sample conditions remain identical even though the two publications have different URLs.
 
+## Meaningful URL selectors
+
+Source normalization drops fragment identifiers, display-language (hl) parameters and named tracking parameters such as utm_*. It **retains substantive query selectors** including co=GENIE.CountryCode%3DMX, study version, report year or dataset IDs. Removing every query string would incorrectly merge different country-conditioned help pages or year-specific reports. Query parameter order is normalized without changing the meaning of a selector.
+
+This audit establishes only likely document identity from URLs. Different documents can still publish the same underlying dataset, and content can change at one stable URL; explicitly recorded source families and dated retrievals remain necessary.
+
 ## Reproducibility rules
 
 The [source audit script](../../scripts/audit-youtube-sources.mjs) should report reference count, claim count, distinct normalized URLs, missing publication dates, source-family membership and any **unregistered same-document duplicates**. It should not delete individual provenance IDs, treat living help pages as inherently poor-quality research, or silently presume commercial earnings sources are independently sampled.

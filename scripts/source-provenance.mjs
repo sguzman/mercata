@@ -1,7 +1,20 @@
 // Public source metadata audit. Does not fetch external pages or assess truth of claims.
-export const canonicalSourceUrl = url => typeof url==='string'
-  ?url.trim().replace(/[?#].*$/,'').replace(/\/$/,'').replace(/^https:\/\/([^/]+)/i,(_,host)=>'https://'+host.toLowerCase())
-  :'';
+// Discard localization/tracking decoration without discarding country, version, or study selectors.
+export function canonicalSourceUrl(value){
+  if(typeof value!=='string')return '';
+  try{
+    const url=new URL(value.trim());
+    if(url.protocol!=='https:')return '';
+    url.hash='';
+    if(url.pathname!=='/')url.pathname=url.pathname.replace(/\/+$/,'');
+    const selectors=[...url.searchParams.entries()]
+      .filter(([key])=>!/^utm_/i.test(key)&&!['hl','fbclid','gclid','mc_cid','mc_eid'].includes(key.toLowerCase()))
+      .sort(([ak,av],[bk,bv])=>ak.localeCompare(bk)||av.localeCompare(bv));
+    url.search='';
+    for(const [key,entryValue] of selectors)url.searchParams.append(key,entryValue);
+    return url.href.replace(/\/$/,'');
+  }catch{return ''}
+}
 
 export function auditPublicSources(evidence,claims,registry){
   if(!Array.isArray(evidence)||!Array.isArray(claims)||!Array.isArray(registry?.families))
@@ -13,6 +26,7 @@ export function auditPublicSources(evidence,claims,registry){
       throw Error('Incomplete source provenance for '+source.id);
     byId.set(source.id,source);
     const canonical=canonicalSourceUrl(source.url);
+    if(!canonical)throw Error('Invalid HTTPS source URL for '+source.id);
     const ids=byUrl.get(canonical)||[];
     ids.push(source.id);
     byUrl.set(canonical,ids);

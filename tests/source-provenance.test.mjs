@@ -25,6 +25,26 @@ test('Normalization recognizes help-page locales without merging different resea
  assert.notEqual(canonicalSourceUrl('https://example.org/research/a'),
    canonicalSourceUrl('https://example.org/research/b'));
 });
+test('Source identity preserves country selectors, report editions, and query order',()=>{
+ assert.notEqual(canonicalSourceUrl('https://support.google.com/youtube/answer/9385307?co=GENIE.CountryCode%3DMX&hl=en'),
+   canonicalSourceUrl('https://support.google.com/youtube/answer/9385307?co=GENIE.CountryCode%3DUS&hl=en'));
+ assert.notEqual(canonicalSourceUrl('https://example.org/report?year=2025'),
+   canonicalSourceUrl('https://example.org/report?year=2026'));
+ assert.equal(canonicalSourceUrl('https://example.org/report?year=2026&co=MX'),
+   canonicalSourceUrl('https://example.org/report?co=MX&year=2026'));
+ assert.equal(canonicalSourceUrl('https://example.org/report?year=2026&utm_source=mail#figure'),
+   canonicalSourceUrl('https://example.org/report?year=2026'));
+ assert.equal(canonicalSourceUrl('http://example.org/report'),'');
+ assert.equal(canonicalSourceUrl('not a URL'),'');
+ const src=[
+   {id:'a',url:'https://example.org/report?year=2025',publisher:'Publisher',published_at:null,retrieved_at:'2026-10-23'},
+   {id:'b',url:'https://example.org/report?year=2026',publisher:'Publisher',published_at:null,retrieved_at:'2026-10-23'}
+ ];
+ const audit=auditPublicSources(src,[{id:'report2025',source_ids:['a']},{id:'report2026',source_ids:['b']}],{families:[]});
+ assert.equal(audit.distinct_normalized_urls,2);
+ assert.equal(audit.unregistered_duplicate_documents.length,0);
+});
+
 test('Unregistered shared URLs are rejected while unknown source date is allowed',()=>{
  const src=[
   {id:'a',url:'https://example.org/post?hl=en',publisher:'Publisher',published_at:null,retrieved_at:'2026-10-23'},
