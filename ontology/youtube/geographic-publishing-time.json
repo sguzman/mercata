@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "video_publishing_time_geography_study",
+  "as_of": "2026-10-24",
+  "status": "official_policy_and_methodology_observed_no_representative_timing_lift",
+  "scope": "YouTube creator publishing and Live/Premiere planning; viewer geography, time-zone conversion, and owned-channel audience indicators kept distinct",
+  "source_ids": [
+    "analytics-audience",
+    "analytics-limits",
+    "yt-premiere-2026",
+    "yt-publish-performance-faq-2026",
+    "yt-schedule-publishing-2026",
+    "yt-audience-timing-ideas-2026"
+  ],
+  "official_findings": [
+    {
+      "id": "owner_online_windows",
+      "description": "When your viewers are on YouTube is a channel-owner 28-day lookback for online activity across the service",
+      "unit": "relative_audience_activity_by_day_and_time",
+      "population": "People who watch the specific channel's content, not all people of a country",
+      "window_days": 28,
+      "owner_authorization_required": true,
+      "source_ids": [
+        "analytics-audience"
+      ],
+      "not_proof_of": "causal_upload_hour_effect"
+    },
+    {
+      "id": "longterm_upload_timing",
+      "description": "YouTube says publication time can help early viewing but is not known to affect long-term viewership",
+      "unit": "official_distribution_guidance_not_a_measured_experiment",
+      "population": "General video upload guidance, not a country-wide audience distribution",
+      "window_days": null,
+      "owner_authorization_required": false,
+      "source_ids": [
+        "yt-publish-performance-faq-2026"
+      ],
+      "not_proof_of": "a_universal_recommended_publish_hour"
+    },
+    {
+      "id": "live_and_premiere",
+      "description": "Live and Premiere occur at a shared real-world time and may benefit from audience-online scheduling",
+      "unit": "event_start_utc_instant",
+      "population": "Channel viewers able to attend",
+      "window_days": null,
+      "owner_authorization_required": true,
+      "source_ids": [
+        "yt-premiere-2026",
+        "yt-publish-performance-faq-2026"
+      ],
+      "not_proof_of": "higher_longterm_video_earnings"
+    },
+    {
+      "id": "publish_timezone",
+      "description": "Scheduled video publication accepts date, time and time zone, while watch-page published-on date may use PST",
+      "unit": "scheduled_absolute_instant_and_display_date",
+      "population": "One video owned by scheduling account",
+      "window_days": null,
+      "owner_authorization_required": true,
+      "source_ids": [
+        "yt-schedule-publishing-2026"
+      ],
+      "not_proof_of": "viewer_local_timezone_or_country"
+    },
+    {
+      "id": "suppressed_countries",
+      "description": "Low-volume geographic breakdown may omit rows even though report totals include that traffic",
+      "unit": "view_events_by_geography_subject_to_omission",
+      "population": "Eligible owner Analytics reports; no realtime/private/unlisted geography",
+      "window_days": null,
+      "owner_authorization_required": true,
+      "source_ids": [
+        "analytics-limits"
+      ],
+      "not_proof_of": "zero_viewers_for_a_missing_country"
+    }
+  ],
+  "distinct_research_dimensions": [
+    {
+      "id": "creator_timezone",
+      "unit": "IANA_time_zone_id",
+      "known": null,
+      "note": "Creator computer timezone is not automatically the viewers' time zones"
+    },
+    {
+      "id": "platform_schedule_instant",
+      "unit": "UTC_timestamp",
+      "known": null,
+      "note": "Resolve daylight-saving transitions, offset and selected time zone before comparing slots"
+    },
+    {
+      "id": "public_watch_page_date",
+      "unit": "date_pst",
+      "known": null,
+      "note": "Watch-page published-on display can differ from creator's local civil date"
+    },
+    {
+      "id": "audience_online_report",
+      "unit": "owner_only_28_day_relative_slots",
+      "known": null,
+      "note": "Activity includes viewer use across all YouTube, not only visits to this channel"
+    },
+    {
+      "id": "country_view_rows",
+      "unit": "geography_bounded_view_events",
+      "known": null,
+      "note": "Privacy suppression may remove countries from the breakdown even when included in total"
+    },
+    {
+      "id": "first_24h_distribution",
+      "unit": "public_view_or_analytics_event_metric_explicitly_specified",
+      "known": null,
+      "note": "Do not mix public views with engaged Shorts views or changing view definitions"
+    },
+    {
+      "id": "long_horizon_performance",
+      "unit": "cumulative_views_watchtime_or_revenue_at_fixed_30_90_day_followup",
+      "known": null,
+      "note": "No causality without a defensible controlled design"
+    }
+  ],
+  "format_comparison": [
+    {
+      "format": "ordinary_on_demand_video",
+      "release_time_matters_for": "potential_early_views",
+      "longterm_advantage_verified": false,
+      "live_attendance_required": false,
+      "source_ids": [
+        "yt-publish-performance-faq-2026"
+      ]
+    },
+    {
+      "format": "youtube_short",
+      "release_time_matters_for": "potential_early_views",
+      "longterm_advantage_verified": false,
+      "live_attendance_required": false,
+      "source_ids": [
+        "yt-publish-performance-faq-2026"
+      ],
+      "caveat": "Shorts platform view starts and engaged views must be separately defined"
+    },
+    {
+      "format": "live_stream",
+      "release_time_matters_for": "simultaneous_attendance",
+      "longterm_advantage_verified": null,
+      "live_attendance_required": true,
+      "source_ids": [
+        "yt-publish-performance-faq-2026",
+        "analytics-audience"
+      ]
+    },
+    {
+      "format": "premiere",
+      "release_time_matters_for": "scheduled_shared_watch_event_and_reminders",
+      "longterm_advantage_verified": null,
+      "live_attendance_required": true,
+      "source_ids": [
+        "yt-premiere-2026",
+        "yt-publish-performance-faq-2026"
+      ],
+      "caveat": "Official Premiere help excludes Shorts"
+    }
+  ],
+  "proposed_controlled_study": {
+    "design": "Pre-register within-creator comparable format, topic, language, audience market and upload-quality controls; randomize feasible release slots across matched content batches.",
+    "comparison_units": "creator_video_event_not_unique_global_viewer",
+    "primary_estimands": [
+      "first_24h_view_events",
+      "live_attendance_rate_when_applicable",
+      "30_day_watch_time_or_views",
+      "90_day_watch_time_or_views"
+    ],
+    "required_metadata": [
+      "channel_owner_authorization",
+      "publish_utc_timestamp",
+      "creator_iana_timezone",
+      "source_id",
+      "format",
+      "geo_report_coverage",
+      "frame_period",
+      "actual_experiment_assignment",
+      "content_topic_and_length",
+      "audience_sample_size",
+      "report_suppression",
+      "view_definition_revision"
+    ],
+    "invalid_controls": [
+      "Comparing dissimilar channels as if they share recommendation demand",
+      "Treating owner heatmap as public country population",
+      "Imputing a suppressed geography row as zero",
+      "Assuming early video lift implies higher long-term payout",
+      "Converting a watch-page PST publication date into a creator-local publication hour",
+      "Scheduling in fixed UTC offset across daylight-saving changes without resolution"
+    ],
+    "population_sampling_frame": null,
+    "channel_sample_n": null,
+    "randomized_episodes_n": null,
+    "first_day_view_lift": null,
+    "thirty_day_lift": null,
+    "ninety_day_lift": null,
+    "live_attendance_lift": null,
+    "geography_representativeness": null
+  },
+  "acceptance_gates": [
+    {
+      "id": "document_ownership_and_report_access",
+      "pass": false,
+      "reason": "No consented owned-channel release-slot dataset acquired"
+    },
+    {
+      "id": "obtain_period_matching",
+      "pass": false,
+      "reason": "No matched comparable topics/formats and release cohorts measured"
+    },
+    {
+      "id": "resolve_utc_dst_and_display_date",
+      "pass": false,
+      "reason": "No actual selected time zones or scheduled UTC instants observed"
+    },
+    {
+      "id": "independent_causal_or_controlled_inference",
+      "pass": false,
+      "reason": "No randomized or defensibly controlled comparison of long-term performance"
+    },
+    {
+      "id": "record_missing_geography_and_view_metrics",
+      "pass": false,
+      "reason": "No geographic reporting coverage/withheld rows or per-format numerator measurement recorded"
+    }
+  ],
+  "unmeasured": {
+    "optimal_utc_upload_time": null,
+    "optimal_local_publish_time": null,
+    "country_specific_upload_hours": null,
+    "channel_viewer_timezone_distribution": null,
+    "longterm_upload_hour_causal_effect": null,
+    "live_attendance_timezone_effect": null,
+    "shorts_hour_effect": null
+  },
+  "publication_policy": [
+    "No universal best publication hour can be claimed from these sources.",
+    "Keep privacy-suppressed geography cells unknown, not zero.",
+    "Do not extrapolate private owner Analytics to public competitor channels or country-wide populations.",
+    "Use an IANA time zone and a full UTC instant for any later schedule comparison; never infer from language or viewer nationality.",
+    "Mark early viewing correlations separately from long-term causal performance."
+  ]
+}
