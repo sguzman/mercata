@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "beauty_fashion_title_query_series_review",
+  "as_of": "2026-10-24",
+  "status": "disjoint_source_windows_and_query_units_not_a_valid_annual_trend",
+  "categories": [
+    "beauty",
+    "fashion",
+    "feminine-lifestyle"
+  ],
+  "source_observations": [
+    {
+      "id": "grwm_title_2023",
+      "source_id": "yt-grwm-history-2023",
+      "observed_topic_record_id": null,
+      "published_at": "2023-08-28",
+      "period_start": "2023-01-01",
+      "period_end": "2023-08-28",
+      "period_end_qualification": "observed by publication, exact data cutoff unverified",
+      "geography": "Global",
+      "title_rule": "GRWM variants in title; exact variant list not published",
+      "unit": "video_views",
+      "comparison": "greater_than",
+      "value": 6000000000,
+      "theme": "general_get_ready_with_me",
+      "candidate_cycle": "evergreen_social_routine",
+      "seasonal_effect_measured": false
+    },
+    {
+      "id": "prom_grwm_2024",
+      "source_id": "yt-prom-grwm-2025",
+      "observed_topic_record_id": "prom-grwm-2024",
+      "published_at": "2025-05-08",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "period_end_qualification": "full calendar year",
+      "geography": "Global",
+      "title_rule": "both prom and GRWM in video title",
+      "unit": "video_views",
+      "comparison": "greater_than",
+      "value": 25000000,
+      "theme": "prom_fashion",
+      "candidate_cycle": "school_calendar_event",
+      "seasonal_effect_measured": false
+    },
+    {
+      "id": "halloween_makeup_2025",
+      "source_id": "yt-halloween-makeup-2025",
+      "observed_topic_record_id": "halloween-makeup-2025",
+      "published_at": "2025-10-21",
+      "period_start": "2025-01-01",
+      "period_end": "2025-10-05",
+      "period_end_qualification": "partial year explicitly ending October 5",
+      "geography": "Global",
+      "title_rule": "both halloween and makeup in video title",
+      "unit": "video_views",
+      "comparison": "greater_than",
+      "value": 1000000000,
+      "theme": "halloween_makeup",
+      "candidate_cycle": "annual_holiday",
+      "seasonal_effect_measured": false
+    },
+    {
+      "id": "sewing_beginner_2025",
+      "source_id": "fashion-sewing-2026",
+      "observed_topic_record_id": "sewing-beginner-2025",
+      "published_at": "2026-05-04",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "period_end_qualification": "full calendar year",
+      "geography": "Global",
+      "title_rule": "video related to sewing machines AND beginner in title; related-to classifier unpublished",
+      "unit": "video_views",
+      "comparison": "greater_than",
+      "value": 100000000,
+      "theme": "beginner_sewing_tutorials",
+      "candidate_cycle": "instructional_evergreen",
+      "seasonal_effect_measured": false
+    },
+    {
+      "id": "morning_routine_h1_2026",
+      "source_id": "yt-morning-routine-upload-2026",
+      "observed_topic_record_id": "morning-routine-title-uploads-h1-2026",
+      "published_at": "2026-08-31",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "period_end_qualification": "first six months",
+      "geography": "Global",
+      "title_rule": "morning routine OR morningroutine in video title",
+      "unit": "public_video_uploads",
+      "comparison": "greater_than",
+      "value": 450000,
+      "theme": "adjacent_morning_routine",
+      "candidate_cycle": "everyday_routine",
+      "seasonal_effect_measured": false
+    }
+  ],
+  "series_protocol": {
+    "query_id_requires_frozen_definition": true,
+    "publish_query_strings_and_title_tokenization": true,
+    "record_video_id_deduplication": true,
+    "unit_policy": "Never mix view-event totals with upload-object counts in one trend line.",
+    "period_policy": "Use identical calendar bins and compare only when a repeated same-definition source series exists.",
+    "format_policy": "Report Shorts versus long-form separately where historical format metadata permits.",
+    "measurement_break": "2026-08-24 first-frame viewing definition; do not interpret a methodological break as demand growth.",
+    "seasonality_policy": "Multiple comparable annual cycles and date-aligned reference genres are required to identify seasonality beyond a calendar-themed title.",
+    "novelty_policy": "A source's editorial trend mention is an observation of curation, not a quantitative adoption estimate.",
+    "sampling_limits": "Publisher aggregate title rule and related-content algorithm may not be reproducible through public search or public API; do not invent a census.",
+    "overlap_policy": "Some videos may qualify for several title queries; sums of topic counts are not distinct events or people."
+  },
+  "hypotheses": [
+    {
+      "id": "halloween_holiday",
+      "title": "Halloween makeup",
+      "expected_cycle": "annual seasonal period around October",
+      "verified_monthly_lift": null,
+      "source_ids": [
+        "yt-halloween-makeup-2025"
+      ]
+    },
+    {
+      "id": "school_prom",
+      "title": "Prom GRWM",
+      "expected_cycle": "school-year event with geography-dependent timing",
+      "verified_monthly_lift": null,
+      "source_ids": [
+        "yt-prom-grwm-2025"
+      ]
+    },
+    {
+      "id": "general_grwm",
+      "title": "GRWM routine",
+      "expected_cycle": "evergreen with context-specific variants",
+      "verified_monthly_lift": null,
+      "source_ids": [
+        "yt-grwm-history-2023"
+      ]
+    },
+    {
+      "id": "beginner_sewing",
+      "title": "Sewing tutorials",
+      "expected_cycle": "instructional demand potentially recurring",
+      "verified_monthly_lift": null,
+      "source_ids": [
+        "fashion-sewing-2026"
+      ]
+    },
+    {
+      "id": "morning_routines",
+      "title": "Morning routines",
+      "expected_cycle": "everyday and possible back-to-school event context",
+      "verified_monthly_lift": null,
+      "source_ids": [
+        "yt-morning-routine-upload-2026"
+      ]
+    }
+  ],
+  "acceptance_gates": [
+    {
+      "id": "dated_source_queries_and_units",
+      "fulfilled": true,
+      "reason": "Five dated first-party title-scoped observations with explicit periods, units and uncertainty."
+    },
+    {
+      "id": "replicable_monthly_same_query",
+      "fulfilled": false,
+      "reason": "No consistent monthly observations over more than one year for the same query."
+    },
+    {
+      "id": "seasonality_vs_trend_counterfactual",
+      "fulfilled": false,
+      "reason": "No comparable reference genre, annual cycles or identified baseline."
+    },
+    {
+      "id": "view_definition_harmonized",
+      "fulfilled": false,
+      "reason": "No longitudinal views series spanning 2026 metric-definition break."
+    },
+    {
+      "id": "unique_people_creator_profit",
+      "fulfilled": false,
+      "reason": "No sample covering unique interested people, creator counts, labor hours and profits."
+    }
+  ],
+  "unmeasured": {
+    "combined_beauty_unique_people": null,
+    "year_over_year_beauty_topic_growth": null,
+    "halloween_monthly_seasonal_peak": null,
+    "prom_monthly_seasonal_peak": null,
+    "morning_routine_video_views": null,
+    "grwm_2023_full_calendar_views": null,
+    "beauty_creator_income": null,
+    "creator_count_by_query": null
+  },
+  "conclusion": "Five title-scoped examples support research query specification and labeled seasonal hypotheses, not an empirical 2023–2026 trend or forecast."
+}
