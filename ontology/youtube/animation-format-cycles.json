@@ -232,7 +232,11 @@
     "change_rate_2024_to_2026": null,
     "seasonality_index": null,
     "reproducible_audience_growth": null,
-    "creator_income_from_animation_memes": null
+    "creator_income_from_animation_memes": null,
+    "anime_distinct_viewers_2023": null,
+    "estimated_anime_creator_population": null,
+    "adult_anime_fraction": null,
+    "anime_creator_income_median": null
   },
   "constraints": [
     "2024 awareness of one series is not the same variable as 2025 weekly genre viewing.",
@@ -241,5 +245,47 @@
     "Company-selected examples are useful discovery signals, not exhaustive trend censuses or causal studies.",
     "Do not assign age/gender identities to individual creators or viewers. Sensitive demographic inference is prohibited.",
     "Novelty, repetition and annual cycles require multiple identically defined dated observations before claims of rise/fall or seasonality."
+  ],
+  "anime_view_geography_2023": {
+    "source_id": "yt-anime-views-geography-2024",
+    "publication_date": "2024-03-24",
+    "measurement_year": 2023,
+    "geography": "Global",
+    "region_numerator": "countries_outside_japan",
+    "unit": "share_of_video_view_events",
+    "comparison": ">",
+    "percent_lower_bound_exclusive": 80,
+    "topic_definition": "publisher-defined videos related to anime",
+    "total_topic_views": null,
+    "unique_viewers": null,
+    "creator_population": null,
+    "post_august_2026_measurement_equivalence": null
+  },
+  "animation_classification_distinctions": [
+    {
+      "label": "anime_related_video",
+      "description": "Broad topical category: reviews, music-video fan edits, clips, cosplay and original art can overlap",
+      "age_rating_inferable": false
+    },
+    {
+      "label": "independent_animated_series",
+      "description": "Creator-produced animated fiction including original non-anime series",
+      "age_rating_inferable": false
+    },
+    {
+      "label": "animated_memes",
+      "description": "Animated character/audio meme remixes that can overlap anime and independently drawn work",
+      "age_rating_inferable": false
+    },
+    {
+      "label": "adult_oriented_animation",
+      "description": "Requires content-specific audience suitability evidence, not simply Japanese-inspired style",
+      "age_rating_inferable": false
+    },
+    {
+      "label": "made_for_kids",
+      "description": "Separate intended-audience classification with YouTube child-directed feature restrictions",
+      "age_rating_inferable": false
+    }
   ]
 }

@@ -2665,6 +2665,11 @@ function renderAnimationFormatCycles(data,dossier){
   const details=make('details','animation-format-details');
   details.append(make('summary','','Independent animation and meme formats · 2024–2026 evidence'));
   details.append(make('p','measure-limit','Publication dates are not necessarily measurement dates. The U.S. and Mexico survey findings released in 2026 both used April 2025 samples of online animation fans, not all YouTube users.'));
+  if(data.anime_view_geography_2023){
+    const evidence=data.anime_view_geography_2023;
+    details.append(make('p','measure-limit','Anime geography: >'+evidence.percent_lower_bound_exclusive+'% of 2023 global anime-related video views occurred outside Japan. View events are not unique viewers or an adult-audience percentage.'));
+    details.append(audienceSources([evidence.source_id],dossier));
+  }
   const timeline=make('div','animation-format-timeline');
   for(const item of data.timeline){
     const card=make('article','animation-format-event');

@@ -1066,6 +1066,15 @@ test('Animation format timeline keeps publication dates separate from fan-survey
  ]);
  const ids=new Set(dossier.evidence.map(x=>x.id));
  assert.equal(model.kind,'animation_meme_format_cycle_evidence');
+ assert.equal(model.anime_view_geography_2023.unit,'share_of_video_view_events');
+ assert.equal(model.anime_view_geography_2023.percent_lower_bound_exclusive,80);
+ assert.equal(model.anime_view_geography_2023.comparison,'>');
+ assert.equal(model.anime_view_geography_2023.unique_viewers,null);
+ assert.equal(model.anime_view_geography_2023.creator_population,null);
+ assert(ids.has(model.anime_view_geography_2023.source_id));
+ assert.equal(model.animation_classification_distinctions.length,5);
+ assert(model.animation_classification_distinctions.every(x=>x.age_rating_inferable===false));
+
  assert.equal(model.timeline.length,4);
  assert.equal(model.survey_observations.length,7);
  assert(model.timeline.every(x=>ids.has(x.source_id)&&x.is_platform_wide_growth_measure===false&&x.viewers_unique===null));

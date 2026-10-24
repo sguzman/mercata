@@ -165,6 +165,10 @@ try{
     await synthesis.locator('summary').click();
     assert((await synthesis.textContent()).includes('zero-earner share'));
     assert((await synthesis.textContent()).includes('Not measured'));
+    const animeFrame=page.locator('.animation-format-cycles');
+    await animeFrame.locator('summary').click();
+    assert((await animeFrame.textContent()).includes('outside Japan. View events are not unique viewers'));
+    await animeFrame.locator('summary').click();
     const declining=page.locator('.declining-topic-audit');
     assert.equal(await declining.locator('.declining-topic-card').count(),4,'Missing candidate decline inference audit');
     await declining.locator('summary').click();
