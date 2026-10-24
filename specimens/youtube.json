@@ -2638,28 +2638,6 @@
       "evidence_class": "author_preprint_selected_vlog_cold_start_views_and_modeled_ad_value",
       "license": "Linked preprint, independently paraphrased methods and aggregate statistics; no figures copied",
       "notes": "Keyword-discovered selected first-upload daily-life vloggers. Modeled $1.61 median advertising value and estimated 185 labor hours are NOT observed payouts or logs; paper does not establish representative all-creator income."
-    },
-    {
-      "id": "yt-links-clickability-2026",
-      "url": "https://support.google.com/youtube/answer/13748639?hl=en",
-      "publisher": "YouTube Help",
-      "title": "Sharing links with your audiences",
-      "retrieved_at": "2026-10-24",
-      "published_at": null,
-      "evidence_class": "official_creator_link_placement_clickability",
-      "license": "Official Help linked and independently described; no copied images",
-      "notes": "Identifies clickable long-form comments/descriptions with advanced features and unclickable Shorts comment/description URLs; specific exceptions have own link locations."
-    },
-    {
-      "id": "yt-external-links-rules-2026",
-      "url": "https://support.google.com/youtube/answer/9054257?hl=en",
-      "publisher": "YouTube Help",
-      "title": "External links policy",
-      "retrieved_at": "2026-10-24",
-      "published_at": null,
-      "evidence_class": "official_external_link_safety_and_community_policy",
-      "license": "Official policy linked and independently summarized; no copied media",
-      "notes": "Prohibits links to content violating YouTube guidelines, applies to clickable/text/audio/obfuscated promotion. Affiliate links not categorically prohibited but excessive affiliate spam can be restricted."
     }
   ],
   "claims": [
@@ -5575,7 +5553,7 @@
       "id": "yt-clickable-longform-vs-shorts-2026",
       "text": "YouTube's link-sharing Help says normal URLs in Shorts descriptions and comments are non-clickable, whereas external URLs in long-form video descriptions and comments can be clickable if channel advanced features are enabled.",
       "source_ids": [
-        "yt-links-clickability-2026"
+        "link-surfaces-help"
       ],
       "observed_at": "2026-10-24",
       "confidence": "high",
@@ -5585,7 +5563,7 @@
       "id": "yt-links-profile-pinned-advanced-2026",
       "text": "YouTube allows creator profile links and creator-pinned comments but documents separate display constraints and advanced-feature access for clickable external links; pinned comment exposure on mobile requires opening the comments section.",
       "source_ids": [
-        "yt-links-clickability-2026",
+        "link-surfaces-help",
         "yt-review-comments-2026",
         "yt-feature-access"
       ],
@@ -5597,7 +5575,7 @@
       "id": "yt-external-affiliate-links-policy-2026",
       "text": "YouTube's external-links policy covers links in videos, audio, comments and descriptions and forbids links to Community Guidelines-violating destinations. Ordinary affiliate linking is not inherently a violation, but excessive affiliate-focused spam may violate platform rules.",
       "source_ids": [
-        "yt-external-links-rules-2026"
+        "youtube-external-link-policy-finance"
       ],
       "observed_at": "2026-10-24",
       "confidence": "high",
