@@ -1024,3 +1024,15 @@ h1 em {font-style:italic;color:var(--accent)}
 .comment-norms-card strong{font-size:15px;line-height:1.5}
 .comment-norms-card p{font-size:12px;margin:9px 0}
 @media(max-width:650px){.comment-norms-details{padding:15px}.comment-norms-grid{grid-template-columns:1fr}}
+
+/* Dated vendor audience panel; no exact person-population inference. */
+.beauty-gaming-panel{margin:28px 0}
+.beauty-gaming-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.beauty-gaming-details>summary{cursor:pointer;font-weight:800;font-size:15px}
+.beauty-gaming-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}
+.beauty-gaming-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.beauty-gaming-card h5{font-size:13px;margin:0 0 8px}
+.beauty-gaming-value{font:25px Georgia,serif;font-variant-numeric:tabular-nums}
+.beauty-gaming-card p{font-size:12px;margin:8px 0}
+@media(max-width:850px){.beauty-gaming-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.beauty-gaming-details{padding:15px}.beauty-gaming-grid{grid-template-columns:1fr}}

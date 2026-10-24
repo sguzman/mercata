@@ -70,6 +70,10 @@ The [Pew NPORS demographic comparison](us-demographic-use-2026.md) and [structur
 
 The [unique-viewer measurement research](viewer-person-metrics.md) and [machine metric register](viewer-person-metrics.json) separate owner-facing estimated people (including signed-out traffic), rolling 28-day monthly audience and up-to-90-day unique viewers from public channel views, rounded subscribers and public upload objects. Access to creator Analytics is owner-authorized; the public Data API does not supply global distinct people or the nonregistered share. No platform-wide person counts are inferred.
 
+## Gaming and Beauty: observed but not population-representative overlap
+
+The [Tubular Labs 2025 beauty/gaming audience study](beauty-gaming-overlap-2025.md) and [machine record](beauty-gaming-overlap-2025.json) cover a vendor-defined panel of **74,276 U.S. female viewers aged 25–34** who repeatedly engaged with Gaming videos between July 2024 and June 2025. The report highlights **5% reported overlap** and selected high Beauty-channel affinities, but the exact overlap numerator, denominator and sampling method are not independently established. The panel therefore **cannot** supply a national deduplicated union or an all-age gender inference. Original report, vendor summary and secondary commentary are registered as one underlying research family.
+
 ## Unique people and overlapping topic communities
 
 The [joint-audience study protocol](audience-overlap.md), [machine record](audience-overlap.json), [validated accounting module](../../site/audience-overlap.mjs), and [unit tests](../../tests/audience-overlap.test.mjs) prevent adding niche audience estimates as though their populations were disjoint. Without a matched common frame and independently measured intersections, combined community populations remain unknown or, for comparable separately measured groups, bounded rather than exact. All example topic overlaps are still unknown.

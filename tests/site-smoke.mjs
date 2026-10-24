@@ -215,6 +215,12 @@ try{
     assert((await people.textContent()).includes('rolling 28-day'));
     assert((await people.textContent()).includes('up to 90 days'));
     assert((await people.textContent()).includes('worldwide person census'));
+    const beautyGaming=page.locator('.beauty-gaming-panel');
+    assert.equal(await beautyGaming.locator('.beauty-gaming-card').count(),4,'Missing bounded beauty-gaming panel findings');
+    await beautyGaming.locator('summary').click();
+    assert((await beautyGaming.textContent()).includes('74,276'));
+    assert((await beautyGaming.textContent()).includes('5%'));
+    assert((await beautyGaming.textContent()).includes('Exact intersection count and percentage denominator: unknown'));
     const overlap=page.locator('.audience-overlap');
     assert.equal(await overlap.locator('.audience-overlap-card').count(),5,'Missing topic overlap evidence cards');
     await overlap.locator('summary').click();
