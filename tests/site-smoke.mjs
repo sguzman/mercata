@@ -61,7 +61,11 @@ try{
     await production.locator('.production-costs-details > summary').click();
     assert.equal(await production.locator('.adjacent-cost-survey').count(),1);
     await production.locator('.adjacent-cost-survey > summary').click();
-    assert.equal(await production.locator('.adjacent-cost-bin').count(),11);
+    assert.equal(await production.locator('.adjacent-cost-survey .adjacent-cost-bin').count(),11);
+    assert.equal(await production.locator('.adjacent-labor-survey').count(),1,'Missing separate 2026 creator weekly hours study');
+    await production.locator('.adjacent-labor-survey > summary').click();
+    assert.equal(await production.locator('.adjacent-labor-survey .adjacent-cost-bin').count(),2);
+    assert((await production.locator('.adjacent-labor-survey').textContent()).includes('These two highlighted bins are not a complete distribution'));
     assert((await production.textContent()).includes('Not a causal comparison.'));
     assert((await production.textContent()).includes('not a YouTube zero-earner estimate'));
     assert((await production.textContent()).includes('typical production hours: unknown'));
