@@ -29,6 +29,8 @@ try{
     const page=await context.newPage();
     const errors=[];
     page.on('pageerror',e=>errors.push(String(e)));
+    page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});
+    page.on('response',response=>{if(response.status()>=400)errors.push('HTTP '+response.status()+' '+response.url());});
     const failedRequests=[];
     page.on('requestfailed',request=>failedRequests.push(request.url()));
     await page.goto(base,{waitUntil:'networkidle'});
@@ -38,7 +40,7 @@ try{
     assert.equal(await page.locator('#catalog-grid .specimen-card').count(),1,'YouTube filter');
     await page.locator('#catalog-grid .specimen-card a.inline-link').click();
     await page.locator('#dossier-view h3').first().waitFor();
-    assert.equal(await page.locator('#dossier-view h3').first().textContent(),'YouTube');
+    assert.equal(await page.locator('#dossier-view h3').first().textContent(),'YouTube',errors.join('\n')||'Expected YouTube dossier');
     assert((await page.locator('.platform-policy-grid .policy-card').count())>=10,'Missing YouTube policy cards');
     const future=page.locator('.ypp-transition');
     assert.equal(await future.locator('.ypp-transition-card').count(),3,'Missing separate current/future membership rules');
