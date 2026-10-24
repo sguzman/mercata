@@ -212,7 +212,7 @@ test('Production cost model keeps 10 cash and 10 labor measures separate',async(
   assert(costs.design_experiments.every(x=>x.status==='not_measured' &&
     x.median_cash_cost===null && x.median_hours===null));
   const adjacent=costs.adjacent_creator_surveys[0];
-  assert.equal(costs.adjacent_creator_surveys.length,1);
+  assert.equal(costs.adjacent_creator_surveys.length,2);
   assert.equal(adjacent.respondents_total,558);
   assert.equal(adjacent.post_launch_respondents,null);
   assert.equal(adjacent.sample_frame_representative,false);
@@ -230,6 +230,21 @@ test('Production cost model keeps 10 cash and 10 labor measures separate',async(
     x.video_percent_approx===50 && x.audio_only_percent_approx===28));
   assert.equal(adjacent.reported_human_work.median_hours,null);
   assert.equal(adjacent.reported_operating_cash.median_monthly_cost,null);
+  const timf=costs.adjacent_creator_surveys.find(s=>s.id==='timf-creators-2026');
+  assert.equal(timf.respondents_total,1000);
+  assert.equal(timf.country,'United States');
+  assert.equal(timf.fieldwork_period,'2026-01');
+  assert.equal(timf.google_or_youtube_channels_only,false);
+  assert.equal(timf.sample_frame_representative,false);
+  assert.equal(timf.reported_human_work.denominator_n,null);
+  assert.equal(timf.reported_human_work.exhaustive_categories,false);
+  assert.deepEqual(timf.reported_human_work.selected_bins.map(b=>b.percent),[37,8.4]);
+  assert.equal(timf.reported_human_work.median_hours,null);
+  assert.equal(timf.reported_operating_cash,null);
+  assert.equal(timf.youtube_subgroup_n,null);
+  assert.equal(timf.creator_profit_median,null);
+  assert.equal(timf.inference_to_typical_youtube_creator_cost,'prohibited');
+  assert(ids.has(timf.source_id));
   assert.equal(costs.model.cash_profit_per_hour,null);
   assert.equal(costs.model.economic_profit_after_labor_valuation,null);
   assert(costs.model.accounting_rules.some(x=>x.includes('already reflected')));
