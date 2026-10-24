@@ -126,9 +126,9 @@ try{
     const reach=page.locator('.country-reach');
     assert.equal(await reach.locator('.country-reach-card').count(),4,'Missing bounded country/survey rates');
     assert.equal(await reach.locator('.country-reach-trend').count(),3,'Missing source-consistent UK trend series');
-    await trafficPanel.locator('summary').click();
-    assert((await trafficPanel.textContent()).includes('Do not sum percentages or device minutes'));
-    assert((await trafficPanel.textContent()).includes('global monthly distinct viewers: unknown'));
+    await reach.locator('summary').click();
+    assert((await reach.textContent()).includes('Do not sum percentages or device minutes'));
+    assert((await reach.textContent()).includes('global monthly distinct viewers: unknown'));
     const demographics=page.locator('.us-demographic-use');
     assert.equal(await demographics.locator('.us-demographic-card').count(),3,'Missing U.S. adult subgroup study');
     await demographics.locator('summary').click();
