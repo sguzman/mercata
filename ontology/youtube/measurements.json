@@ -250,6 +250,63 @@
       ],
       "value": null,
       "status": "definition_only"
+    },
+    {
+      "id": "public_video_playback_start",
+      "api_field": "videos.statistics.viewCount",
+      "access": "public_api",
+      "unit": "playback_start_events",
+      "population": "public video on and after 2026-08-24",
+      "limitations": "First-frame play starts including autoplay and hover. Not engaged, qualified or deduplicated viewers.",
+      "source_ids": [
+        "view-change-video-api-2026",
+        "view-change-official-blog-2026"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "ypp_qualified_short_view",
+      "api_field": "no standard public video API field",
+      "access": "creator_partner_program_eligibility",
+      "unit": "qualifying_shorts_attention_events",
+      "population": "eligible public Shorts within YPP lookback window",
+      "limitations": "Raw video viewCount does not establish Shorts YPP qualification or payout; use eligible official Studio status.",
+      "source_ids": [
+        "ypp-main",
+        "shorts-policy",
+        "view-change-official-blog-2026"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "ypp_qualified_watch_hours",
+      "api_field": "creator YPP eligibility progress",
+      "access": "creator_partner_program_eligibility",
+      "unit": "qualifying_public_watch_hours",
+      "population": "eligible public content for given YPP threshold and time window",
+      "limitations": "Not every video minute or public playback start counts toward eligibility.",
+      "source_ids": [
+        "ypp-main",
+        "view-change-official-community-2026"
+      ],
+      "value": null,
+      "status": "definition_only"
+    },
+    {
+      "id": "thumbnail_impression_event",
+      "api_field": "eligible reach reports",
+      "access": "authorized_analytics",
+      "unit": "thumbnail_impressions",
+      "population": "eligible YouTube thumbnail exposure events",
+      "limitations": "Thumbnail exposure without playback does not generate a video view.",
+      "source_ids": [
+        "view-change-official-blog-2026",
+        "reach-analytics-help"
+      ],
+      "value": null,
+      "status": "definition_only"
     }
   ],
   "methodology": [
@@ -259,6 +316,8 @@
     "For communities, define overlapping taxonomy and avoid summing duplicated viewer populations.",
     "Use voluntary aggregate sources for sensitive demographics and never infer individual attributes.",
     "Keep mean/median creator income distinct, disclose zero earners and sample bias.",
-    "A blank result is unknown, not zero."
+    "A blank result is unknown, not zero.",
+    "The 2026-08-24 public first-frame view definition is a structural break: tag before/after series and never assume a general adjustment multiplier.",
+    "Video playback starts, engaged watching, qualifying YPP attention, eligible watch hours, monetized playbacks and ad impressions require different denominators."
   ]
 }
