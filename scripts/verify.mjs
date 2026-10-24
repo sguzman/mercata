@@ -330,6 +330,26 @@ for (const entry of index.specimens) {
     const economics=load('ontology/youtube/economic-model.json');
     const routes=load('ontology/youtube/revenue-pathways.json');
     const eligibility=load('ontology/youtube/eligibility-matrix.json');
+    const continuity=load('ontology/youtube/channel-ownership-continuity.json');
+    ensure(continuity.operations.length===5 &&
+      continuity.operations.every(x=>x.source_ids.length && x.source_ids.every(id=>sourceIds.has(id)) && x.restrictions.length),
+      'Channel control operation without official provenance or risks');
+    const transfer=continuity.operations.find(x=>x.id==='transfer_brand_primary_owner');
+    const relocation=continuity.operations.find(x=>x.id==='move_between_brand_accounts');
+    const exportOwn=continuity.operations.find(x=>x.id==='export_own_content');
+    const termination=continuity.operations.find(x=>x.id==='termination_appeal');
+    ensure(transfer?.minimum_days_as_owner_source===7 &&
+      transfer?.new_owner_or_manager_minimum_days===7,
+      'Brand Account primary-owner waiting rules omitted');
+    ensure(relocation?.irreversible_risk===true &&
+      relocation?.guaranteed_preservation_of_assets===false,
+      'Irreversible channel replacement risk understated');
+    ensure(exportOwn?.guaranteed_full_channel_export===false &&
+      termination?.successful_appeal_probability===null &&
+      termination?.appeals_within_one_year_max===2,
+      'Video exports or recovery overstated');
+    ensure(Object.values(continuity.business_value_limits).every(x=>
+      x===null||x===false),'Unsupported channel contract portability or business valuation');
     const channelOnboarding=load('ontology/youtube/channel-onboarding.json');
     ensure(channelOnboarding.objects.length===6 && channelOnboarding.stages.length===6 &&
       channelOnboarding.feature_gates.length===4 && channelOnboarding.entry_pathway.length===5,
