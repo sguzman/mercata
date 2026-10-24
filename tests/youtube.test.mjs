@@ -168,14 +168,14 @@ test('2026 API sampling budget keeps search calls separate and rejects populatio
   assert(Object.values(budget.target_estimands).every(value=>value===null));
 });
 
-test("32 topic categories distinguish children's music from animation and count 31 bounded observations",async()=>{
+test("32 topic categories distinguish children's music from animation and count 34 bounded observations",async()=>{
   const [topic,activity,opportunity]=await Promise.all([
     load('ontology/youtube/taxonomy.json'),
     load('ontology/youtube/topic-observations.json'),
     load('ontology/youtube/opportunity-framework.json')
   ]);
   assert.equal(topic.topics.length,32);
-  assert.equal(activity.observations.length,31);
+  assert.equal(activity.observations.length,34);
   assert.equal(opportunity.topic_assessments.length,32);
   const childMusic=topic.topics.find(x=>x.id==='children-music');
   assert(childMusic);
@@ -188,6 +188,19 @@ test("32 topic categories distinguish children's music from animation and count 
   assert.equal(baby.metric_definition_revision,'before_2026_08_24');
   assert(activity.observations.filter(x=>x.topic_id==='crafts').length>=4);
   assert(activity.observations.filter(x=>x.topic_id==='cooking').length>=2);
+  const essay=activity.observations.find(x=>x.id==='video-essays-2024');
+  const craft=activity.observations.find(x=>x.id==='upcycle-title-uploads-2025');
+  const artemis=activity.observations.find(x=>x.id==='artemis-ii-primary-stream-april-2026');
+  assert.equal(essay.topic_id,'video-essays');
+  assert.equal(essay.value,200000000);
+  assert.equal(essay.metric_definition_revision,'before_2026_08_24');
+  assert.equal(craft.metric,'video_uploads');
+  assert.equal(craft.value,80000);
+  assert.equal(craft.metric_definition_revision,'not_applicable_upload_count');
+  assert.equal(artemis.topic_id,'science');
+  assert.equal(artemis.value,79000000);
+  assert(artemis.population.includes('primary Artemis II'));
+
   assert(opportunity.topic_assessments.every(x=>x.decision==='insufficient_evidence' &&
     x.net_hourly_return===null));
 });

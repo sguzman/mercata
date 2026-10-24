@@ -65,3 +65,13 @@ These eight measurements describe **view events**, not the number of distinct pe
 A *single-video lifetime view count* is especially different from a topic query across many videos. Children's music includes live-action and animated performances; it is not synonymous with child-directed animation. No child-identifying data or audience-age inference is supported.
 
 These findings identify active content formats and example measurement designs, but provide **no representative supply count, audience population estimate, creator revenue distribution, or profit-by-genre comparison**.
+
+## Further source-bounded topic examples (2024–2026)
+
+| Topic / scope | Observation | Population and date | Source |
+| --- | --- | --- | --- |
+| Video essays | More than **200 million views** | Videos related to video essays, **global calendar 2024** | [YouTube, April 2025](https://blog.youtube/culture-and-trends/the-joy-of-video-essays/) |
+| Craft/upcycling titles | More than **80,000 uploads** | Videos with *upcycle* or *upcycling* in the title, **global calendar 2025** | [YouTube, June 2026](https://blog.youtube/culture-and-trends/youtube-diy-upcycling-trends/) |
+| Science/spaceflight event | More than **79 million views** | NASA's **primary Artemis II mission stream**, **April 1–13, 2026** | [YouTube, April 2026](https://blog.youtube/news-and-events/americans-learn-us-history-science-innovation/) |
+
+The three rows have **different units and population-selection methods**: category-related plays, title-matched video objects, and one event livestream. They cannot be added together or interpreted as three comparable topic market sizes. All viewing observations predate the August 24, 2026 playback-start definition revision; uploaded objects are not affected by the view definition at all. No unique niche viewer, distinct creator, average profit or causal trend measurement follows from these figures.

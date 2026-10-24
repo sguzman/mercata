@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **146 references, 139 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **149 references, 142 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -68,7 +68,7 @@ The [public YouTube sampling protocol](public-sampling.md) defines topic inclusi
 
 ## Measured content activity
 
-The [topic evidence register](topic-observations.md) records 31 observations from YouTube publications, including global gaming views, topic-title-filtered beauty or format views, news watch hours, and animation fan-survey results. The [machine version](topic-observations.json) includes each source, geography, period, unit and limitation. These measures reveal **content activity**, not unique community population. Persistent audience estimates for all 32 broad topics remain unknown.
+The [topic evidence register](topic-observations.md) records 34 observations from YouTube publications, including global gaming views, topic-title-filtered beauty or format views, news watch hours, and animation fan-survey results. The [machine version](topic-observations.json) includes each source, geography, period, unit and limitation. These measures reveal **content activity**, not unique community population. Persistent audience estimates for all 32 broad topics remain unknown.
 
 ## Adjacent creator work-hour measurements
 

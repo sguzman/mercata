@@ -565,7 +565,7 @@ for (const entry of index.specimens) {
       topic.topics.some(x=>x.id==='children-music' && x.audience_estimate===null &&
         x.creator_estimate===null),
       'Children musical content missing independent taxonomy scope');
-    ensure(observed.observations.length===31 &&
+    ensure(observed.observations.length===34 &&
       observed.observations.some(x=>x.id==='baby-shark-single-video-jun-2025' &&
         x.topic_id==='children-music' &&
         x.metric==='single_video_lifetime_views' &&
