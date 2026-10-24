@@ -1659,6 +1659,28 @@
       "evidence_class": "first_party_science_event_stream_views",
       "license": "Public source linked; separately summarized mission-stream view metric",
       "notes": "NASA primary Artemis II mission stream more than 79M views Apr 1–13 2026, not all science content views or independent visitors."
+    },
+    {
+      "id": "air-studio-rpm-300-2026",
+      "url": "https://air.io/en/air-data-findings/how-much-does-youtube-really-pay-in-2026-real-rpm-data-from-300-channels",
+      "publisher": "AIR Media-Tech",
+      "title": "How Much Does YouTube Really Pay in 2026? Real RPM Data From 300 Channels",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "vendor_studio_analytics_selected_monetized_channels",
+      "license": "Original analysis linked, metadata and short independently paraphrased aggregates only",
+      "notes": "Page last updated 2026-07-01. 300 AIR-affiliated channels spanning 10k–50m subscribers; 3,595 monetized channel-months May 2025–May 2026. Not a representative new entrant sample. Niche sample n often undisclosed."
+    },
+    {
+      "id": "air-livestream-404-2026",
+      "url": "https://air.io/en/air-data-findings/are-youtube-livestreams-worth-it-real-data-on-revenue-and-growth-from-404-channels",
+      "publisher": "AIR Media-Tech",
+      "title": "Are YouTube Livestreams Worth It? Real Data on Revenue and Growth from 404 Channels",
+      "retrieved_at": "2026-10-23",
+      "published_at": null,
+      "evidence_class": "vendor_studio_analytics_selected_live_creator_cohort",
+      "license": "Original vendor research linked; independently summarized bounded analytics statistics",
+      "notes": "Page last updated 2026-07-10. 404 AIR-affiliated channels, 3893 video-performance channel-months; 127 monetized streamers and 1287 monetized streaming channel-months. Overlap with AIR 300-channel RPM analysis unknown."
     }
   ],
   "claims": [
@@ -3287,6 +3309,36 @@
       "observed_at": "2026-10-23",
       "confidence": "high",
       "limitations": "One event stream, not all science explainers, original viewers, cumulative science-learning hours, child audiences or creator income."
+    },
+    {
+      "id": "air-select-300-median-rpm-2026",
+      "text": "AIR Media-Tech reports a USD 2.30 median RPM per 1,000 views among 300 selected monetized client channels, using 3,595 observed channel-months from May 2025 to May 2026.",
+      "source_ids": [
+        "air-studio-rpm-300-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "Not a probability sample of YouTube creators; client channels had 10,000 to 50 million subscribers and only monetized months. RPM is after platform's revenue allocation but not creator profit, hourly income or pay including zero-earning entrants."
+    },
+    {
+      "id": "air-selected-rpm-variation-by-niche-2026",
+      "text": "In AIR's 300-channel monetized sample, publisher-reported median RPMs were USD 10.22 for Education & Science, USD 2.05 for Gaming, and USD 0.33 for Kids & Teens; their P25/P75 spreads differ considerably.",
+      "source_ids": [
+        "air-studio-rpm-300-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "Selected AIR affiliates with uneven small niche samples and unknown per-niche sample counts; not defensible as platform-wide RPM floors or niche rankings, and no cost, retention or margin outcomes shown."
+    },
+    {
+      "id": "air-live-127-monetized-streamers-2026",
+      "text": "AIR's livestream report covers 404 channels over 3,893 performance channel-months, but its monetized live revenue cohort consists of 127 streaming channels and 1,287 monetized streaming channel-months; that subsample had a reported median of 45 views per livestream.",
+      "source_ids": [
+        "air-livestream-404-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "medium",
+      "limitations": "Streaming months are repeated observations, not 1,287 independent channels; nonmonetized, new and unrepresented streamer earnings not measured. Livestream view counts use historical 2025-early-2026 view definitions."
     }
   ],
   "observations": [],

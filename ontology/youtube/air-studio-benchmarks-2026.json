@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "selected_monetized_studio_rpm_and_livestream_benchmarks",
+  "as_of": "2026-10-23",
+  "status": "observed_selected_vendor_channels_not_representative_creator_income",
+  "publisher": "AIR Media-Tech",
+  "selection_caveat": "Both studies examine AIR-affiliated channels; membership selection, missing/inactive/nonmonetized publishers and participant overlap across AIR studies prevent platform-wide inference.",
+  "studies": [
+    {
+      "id": "monetized_rpm_sample_300",
+      "source_ids": [
+        "air-studio-rpm-300-2026"
+      ],
+      "last_updated_at": "2026-07-01",
+      "period_start": "2025-05",
+      "period_end": "2026-05",
+      "selected_channels_n": 300,
+      "observed_channel_months": 3595,
+      "selection": "300 AIR-affiliated monetized channels, 10,000 to 50 million subscribers across 13 niches; only monetized months",
+      "audience": "YouTube view events on selected channels; unique people not measured",
+      "data_access": "consented_vendor_client_youtube_studio_analytics",
+      "representative_of_first_year_entrants": false,
+      "includes_zero_earners": false,
+      "reported_overall_median_rpm_usd": 2.3,
+      "overall_median_rpm_unit": "usd_per_1000_views_after_platform_revenue_share",
+      "reported_median_profit": null,
+      "creator_cash_costs": null,
+      "creator_hours": null,
+      "zero_earner_share": null,
+      "niche_examples": [
+        {
+          "id": "education_science",
+          "name": "Education & Science",
+          "median_rpm_usd": 10.22,
+          "p25_rpm_usd": 2.31,
+          "p75_rpm_usd": 19.5,
+          "niche_channels_n": null,
+          "small_n_warning": false
+        },
+        {
+          "id": "gaming",
+          "name": "Gaming",
+          "median_rpm_usd": 2.05,
+          "p25_rpm_usd": 0.7,
+          "p75_rpm_usd": 3.62,
+          "niche_channels_n": null,
+          "small_n_warning": false
+        },
+        {
+          "id": "kids_teens",
+          "name": "Kids & Teens",
+          "median_rpm_usd": 0.33,
+          "p25_rpm_usd": 0.16,
+          "p75_rpm_usd": 0.88,
+          "niche_channels_n": null,
+          "small_n_warning": false
+        },
+        {
+          "id": "business_finance",
+          "name": "Business & Finance",
+          "median_rpm_usd": 2.01,
+          "p25_rpm_usd": 0.73,
+          "p75_rpm_usd": 5.17,
+          "niche_channels_n": null,
+          "small_n_warning": true
+        }
+      ],
+      "limits": [
+        "Overall median belongs to selected AIR client channels and monetized months, not all video views or all YouTube owners.",
+        "RPM already expresses creator revenue per thousand views after the platform share, but is not cash profit or income per work hour.",
+        "Niche sample sizes are unreported in displayed table; starred niches have fewer than ten channels and must be flagged directional.",
+        "Do not use the observed 300-channel median to estimate creator labor productivity, platform-wide success or newcomer earnings."
+      ]
+    },
+    {
+      "id": "monetized_live_sample_127",
+      "source_ids": [
+        "air-livestream-404-2026"
+      ],
+      "last_updated_at": "2026-07-10",
+      "period_start": "2025-01",
+      "period_end": "2026-03",
+      "all_studied_channels_n": 404,
+      "observed_all_channel_months": 3893,
+      "monetized_live_channels_n": 127,
+      "monetized_live_channel_months": 1287,
+      "selection": "AIR client channels across 13 niches; 127 channels supplied monetized streaming revenue/subscriber monthly observations",
+      "representative_of_first_year_entrants": false,
+      "includes_zero_earners": false,
+      "data_access": "vendor_client_youtube_studio_analytics",
+      "median_views_per_live_stream": 45,
+      "median_views_source_unit": "median_views_per_stream_across_1287_monetized_streaming_months",
+      "live_views_comparable_to_post_august_2026": false,
+      "reported_live_revenue_median_usd": null,
+      "streamer_labor_hours": null,
+      "nonmonetized_streamer_share": null,
+      "limits": [
+        "The 404 total channels and 127 monetized live channels are different analysis populations.",
+        "1,287 channel-months are repeated measurements, not independent channels, a unique viewer count or streamer population.",
+        "45 is the study's median livestream view-count measure in monetized streaming months, not a median creator income or all livestreams.",
+        "Within-channel streaming/nonstreaming comparisons are observational with seasonality and upload effort confounding, not a universal causal streaming effect."
+      ]
+    }
+  ],
+  "cross_study_deduplication": {
+    "publisher": "AIR Media-Tech",
+    "same_organization": true,
+    "overlapping_channels": null,
+    "independent_samples_verified": false,
+    "combine_into_pooled_channel_dataset": false,
+    "method": "Do not add 300 and 404 to assert 704 unique channels. Obtain anonymized sample IDs and consented cross-study overlap data first."
+  },
+  "unmeasured": {
+    "typical_all_creator_rpm": null,
+    "typical_new_creator_rpm": null,
+    "share_of_first_year_creators_earning_zero": null,
+    "median_total_creator_income": null,
+    "creator_net_profit": null,
+    "streaming_net_profit": null,
+    "newcomer_livestream_success_rate": null,
+    "sample_overlap_channels": null
+  }
+}
