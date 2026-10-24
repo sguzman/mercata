@@ -473,6 +473,27 @@ test('YouTube task percentage matches its original and detailed queues',async()=
   assert(plan.detail_tasks.every(t=>t.percent<100 || (t.status==='complete'&&t.evidence.length>0)));
 });
 
+test('Brand disclosure study separates YouTube declaration from US consumer law',async()=>{
+  const [model,dossier]=await Promise.all([
+    load('ontology/youtube/brand-disclosure-risk.json'),load('specimens/youtube.json')
+  ]);
+  const ids=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(model.kind,'branded_content_disclosure_risk_research');
+  assert.deepEqual(model.policy_layers.map(x=>x.id),['youtube_platform','us_ftc','other_jurisdictions']);
+  assert.equal(model.relationship_cases.length,5);
+  assert.equal(model.surface_guidance.length,4);
+  assert(model.policy_layers.every(x=>x.source_ids.every(id=>ids.has(id))));
+  assert(model.relationship_cases.every(x=>x.source_ids.every(id=>ids.has(id))));
+  assert(model.surface_guidance.every(x=>x.source_ids.every(id=>ids.has(id))));
+  assert(model.dated_changes.every(x=>x.source_ids.every(id=>ids.has(id))&&x.account_rollout_completion===null));
+  assert.equal(model.dated_changes.find(x=>x.id==='2026_09_brand_labels').announced_at,'2026-09-03');
+  assert.equal(model.platform_business_consequences.youtube_kids_app_removal_for_branded_content,true);
+  assert.equal(model.platform_business_consequences.video_may_remain_ypp_ad_eligible,true);
+  assert(Object.values(model.unmeasured).every(v=>v===null));
+  assert(model.policy_layers.find(x=>x.id==='us_ftc').does_not_replace.includes('independent_platform_declaration'));
+  assert(model.policy_layers.find(x=>x.id==='youtube_platform').does_not_replace.includes('applicable_local_law'));
+});
+
 test('YPP tax-info and payout-withholding model preserves different revenue bases',async()=>{
  const [model,dossier]=await Promise.all([
   load('ontology/youtube/tax-withholding-mechanics.json'),load('specimens/youtube.json')

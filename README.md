@@ -65,6 +65,8 @@ The research also tracks [monthly advertiser-policy revisions during 2026](ontol
 
 A [dated February 2027 YouTube Partner Program transition](ontology/youtube/ypp-transition-2027.md) preserves current 2026 qualifications alongside announced stricter requirements for new applicants and an ongoing Shorts product gate for existing members. Missing subscriber conditions and actual payouts are not inferred.
 
+The [sponsorship and disclosure research](ontology/youtube/brand-disclosure-risk.md) distinguishes YouTube's branded-content declaration from U.S. FTC endorsement guidance, including the September 2026 rollout of refreshed labels and demographic-region controls. Platform disclosure tools are not a blanket legal safe harbor; non-U.S. requirements and typical sponsorship profits remain unmeasured.
+
 A new [officially sourced tax-withholding study](ontology/youtube/tax-withholding-mechanics.md) distinguishes the U.S.-viewer base, missing-form worldwide deductions, and independent local tax liabilities. It does not infer an individual creator's tax status or rate.
 
 The [country eligibility and payment reference](ontology/youtube/country-eligibility-payments.md) records sourced YPP listings, country-specific payment methods and account-currency thresholds for Mexico, the United States and the United Kingdom. It deliberately leaves individual approval and account currency unknown.

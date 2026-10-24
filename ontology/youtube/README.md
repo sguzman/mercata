@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **131 references, 125 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **136 references, 130 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -81,6 +81,10 @@ AIR Media-Tech's [297-channel studio-data report](small-channel-income.md) conta
 ## Announced February 2027 YouTube Partner Program changes
 
 The [time-bounded 2027 YPP policy study](ypp-transition-2027.md) and [machine transition model](ypp-transition-2027.json) separate **October 2026 entry rules** from those taking effect **February 1, 2027**. New ads/Premium applicants will face announced thresholds of **8,000 qualifying public watch hours** (365 days) or **20 million qualifying Shorts views** (90 days), while preexisting YPP members are not subject to the higher entry barrier. A separate **rolling 10-million-qualified-Shorts-view gate** will control continued Shorts revenue sharing, without terminating long-form earning for channels that fall below it. Premium and Premium Lite have separate announced net subscription allocations, not fixed payouts. The 2027 new-applicant subscriber floor was not restated in the announcement and remains unknown. Current 2026 thresholds have not been silently overwritten.
+
+## Branded-content disclosures: platform rules versus U.S. FTC guidance
+
+The [October 2026 disclosure risk review](brand-disclosure-risk.md) and [machine record](brand-disclosure-risk.json) separate the platform's Studio branded-content control from independent U.S. FTC endorsement guidance and unverified local requirements. They date YouTube's September 3, 2026 rollout announcement for refreshed labels, age/geography controls and potential automatic labeling. Paid deals, in-kind items, affiliate relationships and independent reviews are evaluated as different cases. Platform labels alone do not guarantee legal compliance. Sponsor profits and enforcement rates remain unknown.
 
 ## U.S.-viewer withholding versus worldwide missing-form deductions
 

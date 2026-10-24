@@ -139,6 +139,13 @@ try{
     assert.equal(await countryPrograms.locator('.country-program-currency').count(),3,'Missing currency-scoped payout thresholds');
     assert((await countryPrograms.textContent()).includes('Account currency and feature-specific permissions: unknown'));
     assert((await countryPrograms.textContent()).includes('MXN 1,200'));
+    const brand=page.locator('.brand-disclosure');
+    assert.equal(await brand.locator('.brand-disclosure-card').count(),3,'Missing independent platform/legal layers');
+    assert.equal(await brand.locator('.brand-disclosure-surface').count(),4,'Missing video/live/affiliate disclosure scopes');
+    await brand.locator('summary').click();
+    assert((await brand.textContent()).includes('not a universal legal safe harbor'));
+    assert((await brand.textContent()).includes('September 3, 2026'));
+    assert((await brand.textContent()).includes('revenue, country compliance expense'));
     const withholding=page.locator('.tax-withholding');
     assert.equal(await withholding.locator('.tax-withholding-card').count(),4,'Missing documented withholding cases');
     await withholding.locator('summary').click();

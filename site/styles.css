@@ -661,3 +661,16 @@ h1 em {font-style:italic;color:var(--accent)}
 .tax-withholding-card p{font-size:12px;margin:7px 0}
 .tax-withholding-base{font-weight:700}
 @media(max-width:650px){.tax-withholding-details{padding:15px}.tax-withholding-grid{grid-template-columns:1fr}}
+
+/* Sourced endorsement risk research; platform and legal jurisdictions stay separate */
+.brand-disclosure{margin:28px 0}
+.brand-disclosure-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.brand-disclosure-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.brand-disclosure-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.brand-disclosure-card,.brand-disclosure-surface{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.brand-disclosure-card h5{font-size:14px;margin:0 0 8px}
+.brand-disclosure-card p,.brand-disclosure-surface p{font-size:12px;margin:7px 0}
+.brand-disclosure-examples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}
+.brand-disclosure-surface strong{font-size:13px}
+@media(max-width:800px){.brand-disclosure-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.brand-disclosure-details{padding:15px}.brand-disclosure-examples{grid-template-columns:1fr}}
