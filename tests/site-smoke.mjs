@@ -167,9 +167,25 @@ try{
     assert.equal(await page.locator('.income-evidence .income-study').count(),1,'Missing scoped creator earnings study');
     assert.equal(await page.locator('.small-channel-income .income-table').count(),3,'Missing sampled channel month, country and niche tables');
     assert((await page.locator('#dossier-view .demographic-row').count())>=20,'Missing demographic data');
-    const bodyOverflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
-    assert.equal(bodyOverflow,false,'Horizontal overflow in '+size.name+' viewport');
+    const overflowReport=await page.evaluate(()=>{
+      const viewportWidth=document.documentElement.clientWidth;
+      const documentWidth=document.documentElement.scrollWidth;
+      const offenders=[...document.querySelectorAll('body *')].map(element=>{
+        const rect=element.getBoundingClientRect();
+        return {element,rect};
+      }).filter(({rect})=>rect.right>viewportWidth+1 && rect.width>1)
+        .sort((a,b)=>b.rect.right-a.rect.right).slice(0,12)
+        .map(({element,rect})=>({
+          tag:element.tagName.toLowerCase(),
+          className:typeof element.className==='string'?element.className.slice(0,100):'',
+          right:Math.round(rect.right),
+          width:Math.round(rect.width)
+        }));
+      return {viewportWidth,documentWidth,offenders};
+    });
     await page.screenshot({path:path.join(root,'screenshots','mercata-'+size.name+'.png'),fullPage:false});
+    assert(overflowReport.documentWidth<=overflowReport.viewportWidth+1,
+      'Horizontal overflow in '+size.name+' viewport: '+JSON.stringify(overflowReport));
     await page.locator('#theme').selectOption('dark');
     assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),'dark');
     await page.reload({waitUntil:'networkidle'});
