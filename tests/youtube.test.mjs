@@ -458,6 +458,31 @@ test('YouTube task percentage matches its original and detailed queues',async()=
   assert(plan.detail_tasks.every(t=>t.percent<100 || (t.status==='complete'&&t.evidence.length>0)));
 });
 
+test('YPP tax-info and payout-withholding model preserves different revenue bases',async()=>{
+ const [model,dossier]=await Promise.all([
+  load('ontology/youtube/tax-withholding-mechanics.json'),load('specimens/youtube.json')
+ ]);
+ const sources=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'platform_withholding_scope_not_personal_tax_advice');
+ assert(model.source_ids.every(id=>sources.has(id)));
+ assert.equal(model.tax_info_requirement.needs_tax_information,true);
+ assert.equal(model.tax_info_requirement.deadline_not_a_general_tax_filing_date,true);
+ assert.equal(model.payer_withholding_cases.length,4);
+ const get=id=>model.payer_withholding_cases.find(x=>x.id===id);
+ assert.equal(get('non_us_valid_tax_info').base,'earnings_attributed_to_us_viewers');
+ assert.equal(get('non_us_valid_tax_info').published_rate_bounds_percent.max,30);
+ assert.equal(get('non_us_business_tax_info_missing').published_default_rate_percent,30);
+ assert.equal(get('non_us_business_tax_info_missing').base,'earnings_attributed_to_us_viewers');
+ assert.equal(get('individual_tax_info_missing').base,'worldwide_youtube_earnings');
+ assert.equal(get('individual_tax_info_missing').published_default_rate_percent,24);
+ assert.equal(get('us_creator_valid_tax_info').published_default_rate_percent,0);
+ assert(model.payer_withholding_cases.every(x=>x.actual_rate_percent===null&&
+    x.source_ids.every(id=>sources.has(id))));
+ assert.deepEqual(model.form_categories.map(x=>x.id),['w9','w8ben','w8bene']);
+ assert(Object.values(model.unknowns).every(x=>x===null));
+ assert(model.disallowed_model_shortcuts.some(x=>x.includes('twice')));
+});
+
 test('Adjacent video comparison is scope-only and does not admit marketplace specimens',async()=>{
  const [model,dossier,gallery]=await Promise.all([
   load('ontology/youtube/comparison-set.json'),load('specimens/youtube.json'),load('gallery/index.json')
