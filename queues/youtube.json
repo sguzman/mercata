@@ -2076,7 +2076,7 @@
           "title": "Describe age distributions",
           "acceptance": "Use consistent brackets and survey/analytics bases; never infer individuals' ages.",
           "weight": 1,
-          "progress": 67,
+          "progress": 78,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
@@ -2086,7 +2086,13 @@
             "ontology/youtube/competition-observations.json",
             "ontology/youtube/competition-observations.md",
             "ontology/youtube/community-audience-studies.json",
-            "ontology/youtube/community-audience-studies.md"
+            "ontology/youtube/community-audience-studies.md",
+            "ontology/youtube/us-news-demographic-crosswalk.json",
+            "ontology/youtube/us-news-demographic-crosswalk.md",
+            "site/us-news-demographic-audit.mjs",
+            "tests/us-news-demographic-audit.test.mjs",
+            "tests/site-smoke.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -2095,7 +2101,7 @@
           "title": "Describe reported gender distributions",
           "acceptance": "State self-report, platform classifications, nonresponse and category limitations.",
           "weight": 1,
-          "progress": 80,
+          "progress": 88,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
@@ -2106,7 +2112,11 @@
             "ontology/youtube/teen-video-format-evidence.md",
             "site/app.js",
             "tests/youtube.test.mjs",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/us-news-demographic-crosswalk.json",
+            "ontology/youtube/us-news-demographic-crosswalk.md",
+            "site/us-news-demographic-audit.mjs",
+            "tests/us-news-demographic-audit.test.mjs"
           ]
         },
         {
@@ -2115,9 +2125,17 @@
           "title": "Investigate sex breakdowns where independently supported",
           "acceptance": "Distinguish sex from gender and mark unmeasured or inapplicable categories unknown.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 76,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/us-news-demographic-crosswalk.json",
+            "ontology/youtube/us-news-demographic-crosswalk.md",
+            "site/us-news-demographic-audit.mjs",
+            "tests/us-news-demographic-audit.test.mjs",
+            "tests/site-smoke.mjs",
+            "site/app.js",
+            "specimens/youtube.json"
+          ]
         },
         {
           "id": "audience-demography/ethnicity",
@@ -2208,7 +2226,7 @@
           "title": "Document aggregate political affiliation if independently surveyed",
           "acceptance": "Use voluntary, aggregate surveys only; no inference of individuals' political identity or persuasion targeting.",
           "weight": 1,
-          "progress": 51,
+          "progress": 68,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
@@ -2216,7 +2234,13 @@
             "ontology/youtube/competition-observations.json",
             "ontology/youtube/competition-observations.md",
             "ontology/youtube/community-audience-studies.json",
-            "ontology/youtube/community-audience-studies.md"
+            "ontology/youtube/community-audience-studies.md",
+            "ontology/youtube/us-news-demographic-crosswalk.json",
+            "ontology/youtube/us-news-demographic-crosswalk.md",
+            "site/us-news-demographic-audit.mjs",
+            "tests/us-news-demographic-audit.test.mjs",
+            "tests/site-smoke.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -2258,7 +2282,7 @@
           "title": "Examine credible demographic cross-tabulations",
           "acceptance": "Specify combinations, sample sizes and representativeness; do not multiply marginal percentages.",
           "weight": 1,
-          "progress": 24,
+          "progress": 48,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/study-frame-crosswalk.json",
@@ -2266,7 +2290,12 @@
             "specimens/youtube.json",
             "tests/youtube.test.mjs",
             "tests/site-smoke.mjs",
-            "ontology/youtube/community-audience-studies.json"
+            "ontology/youtube/community-audience-studies.json",
+            "ontology/youtube/us-news-demographic-crosswalk.json",
+            "ontology/youtube/us-news-demographic-crosswalk.md",
+            "site/us-news-demographic-audit.mjs",
+            "tests/us-news-demographic-audit.test.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -2374,13 +2403,20 @@
           "title": "Research political news, commentary and civic communities",
           "acceptance": "Define content categories with neutral sourcing; measure content, audiences and geography without persuasion profiling.",
           "weight": 1,
-          "progress": 30,
+          "progress": 45,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/competition-observations.json",
             "ontology/youtube/competition-observations.md",
             "ontology/youtube/community-audience-studies.json",
-            "ontology/youtube/community-audience-studies.md"
+            "ontology/youtube/community-audience-studies.md",
+            "ontology/youtube/us-news-demographic-crosswalk.json",
+            "ontology/youtube/us-news-demographic-crosswalk.md",
+            "site/us-news-demographic-audit.mjs",
+            "tests/us-news-demographic-audit.test.mjs",
+            "tests/site-smoke.mjs",
+            "site/app.js",
+            "specimens/youtube.json"
           ]
         },
         {

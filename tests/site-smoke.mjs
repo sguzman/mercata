@@ -96,7 +96,8 @@ try{
       ['.checkout-refund-evidence',3,'Membership cancellation'],
       ['.member-cohort-protocol',6,'No paid cohort or experiment'],
       ['.shorts-referral-study',4,'not verified click-through events'],
-      ['.audience-population-crosswalk',7,'deduplicated worldwide MAU and DAU remain unknown']
+      ['.audience-population-crosswalk',7,'deduplicated worldwide MAU and DAU remain unknown'],
+      ['.us-news-demographic-crosswalk',8,'Biological sex, overlapping age-by-party']
     ]){
       const section=page.locator(selector);
       assert.equal(await section.locator('.ownership-card').count(),cards,'Missing research cards in '+selector);

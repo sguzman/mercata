@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-23",
-  "progress_percent": 59,
+  "progress_percent": 60,
   "permission_required_before_execution": false,
   "scope": "Evidence-based research into YouTube's economics, platform use, population, creator earnings, audience demographics, subcultures, competition, content formats and practical monetization strategies.",
   "baseline": {
@@ -3977,14 +3977,20 @@
       "objective": "Specify how incompatible survey age ranges will be compared without guessing.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify how incompatible survey age ranges will be compared without guessing.",
       "status": "in_progress",
-      "percent": 63,
+      "percent": 79,
       "evidence": [
         "specimens/youtube.json",
         "ontology/youtube/us-audience-2026.md",
         "ontology/youtube/analytics-query-guide.json",
-        "ontology/youtube/analytics-query-guide.md"
+        "ontology/youtube/analytics-query-guide.md",
+        "ontology/youtube/us-news-demographic-crosswalk.json",
+        "ontology/youtube/us-news-demographic-crosswalk.md",
+        "site/us-news-demographic-audit.mjs",
+        "tests/us-news-demographic-audit.test.mjs",
+        "tests/site-smoke.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/us-news-demographic-crosswalk.json",
       "priority": "high",
       "phase": 2
     },
@@ -3996,13 +4002,19 @@
       "objective": "Record each study's exact question wording and nonresponse.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and record each study's exact question wording and nonresponse.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 90,
       "evidence": [
         "ontology/youtube/analytics-query-guide.json",
         "ontology/youtube/analytics-query-guide.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/us-news-demographic-crosswalk.json",
+        "ontology/youtube/us-news-demographic-crosswalk.md",
+        "site/us-news-demographic-audit.mjs",
+        "tests/us-news-demographic-audit.test.mjs",
+        "tests/site-smoke.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/us-news-demographic-crosswalk.json",
       "priority": "high",
       "phase": 2
     },
@@ -4115,16 +4127,22 @@
       "objective": "Do not deduce political identity from subscriptions or topics watched.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and do not deduce political identity from subscriptions or topics watched.",
       "status": "in_progress",
-      "percent": 67,
+      "percent": 84,
       "evidence": [
         "specimens/youtube.json",
         "ontology/youtube/us-audience-2026.md",
         "ontology/youtube/competition-observations.json",
         "ontology/youtube/competition-observations.md",
         "ontology/youtube/community-audience-studies.json",
-        "ontology/youtube/community-audience-studies.md"
+        "ontology/youtube/community-audience-studies.md",
+        "ontology/youtube/us-news-demographic-crosswalk.json",
+        "ontology/youtube/us-news-demographic-crosswalk.md",
+        "site/us-news-demographic-audit.mjs",
+        "tests/us-news-demographic-audit.test.mjs",
+        "tests/site-smoke.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/us-news-demographic-crosswalk.json",
       "priority": "high",
       "phase": 2
     },
@@ -4156,16 +4174,22 @@
       "objective": "Do not multiply independent percentages to fabricate cross-tabs.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and do not multiply independent percentages to fabricate cross-tabs.",
       "status": "in_progress",
-      "percent": 48,
+      "percent": 56,
       "evidence": [
         "specimens/youtube.json",
         "ontology/youtube/us-audience-2026.md",
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/us-news-demographic-crosswalk.json",
+        "ontology/youtube/us-news-demographic-crosswalk.md",
+        "site/us-news-demographic-audit.mjs",
+        "tests/us-news-demographic-audit.test.mjs",
+        "tests/site-smoke.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/us-news-demographic-crosswalk.json",
       "priority": "high",
       "phase": 2
     },

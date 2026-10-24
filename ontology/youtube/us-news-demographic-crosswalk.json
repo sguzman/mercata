@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "us_youtube_use_news_demographic_measurement_crosswalk",
+  "as_of": "2026-10-24",
+  "status": "published_separate_2026_us_survey_aggregates_no_joint_microdata",
+  "scope": "2026 U.S. adults 18+; two different Pew surveys with distinct fieldwork, samples and questions. Not all YouTube viewers, creators, news viewers abroad or children.",
+  "sources": [
+    {
+      "id": "npors_2026",
+      "source_id": "pew-us-adults-2026",
+      "fieldwork_start": "2026-01-30",
+      "fieldwork_end": "2026-06-18",
+      "respondents_n": 5511,
+      "method": "National Public Opinion Reference Survey; web, mail and phone",
+      "published_at": "2026-10-19",
+      "measure": "ever_uses_youtube",
+      "denominator": "all U.S. adults within each named subgroup",
+      "overall_margin_of_error_pp": 1.8,
+      "subgroup_margin_of_error_pp": null
+    },
+    {
+      "id": "atp_august_2026",
+      "source_id": "pew-youtube-news-2026",
+      "fieldwork_start": "2026-08-24",
+      "fieldwork_end": "2026-08-30",
+      "respondents_n": 5166,
+      "method": "American Trends Panel",
+      "published_at": "2026-10-19",
+      "measure": "regularly_gets_news_from_youtube",
+      "denominator": "all U.S. adults within each named subgroup",
+      "overall_margin_of_error_pp": null,
+      "subgroup_margin_of_error_pp": null
+    }
+  ],
+  "strata": [
+    {
+      "dimension": "published_gender",
+      "subgroup": "men",
+      "ever_use_pct": 85,
+      "regular_news_pct": 41,
+      "ever_use_source_id": "pew-us-adults-2026",
+      "regular_news_source_id": "pew-youtube-news-2026",
+      "ever_use_survey": "npors_2026",
+      "news_survey": "atp_august_2026",
+      "within_subgroup_denominator": true,
+      "independent_user_distribution": false,
+      "subgroup_n": null,
+      "subgroup_margin_of_error_pp": null
+    },
+    {
+      "dimension": "published_gender",
+      "subgroup": "women",
+      "ever_use_pct": 83,
+      "regular_news_pct": 28,
+      "ever_use_source_id": "pew-us-adults-2026",
+      "regular_news_source_id": "pew-youtube-news-2026",
+      "ever_use_survey": "npors_2026",
+      "news_survey": "atp_august_2026",
+      "within_subgroup_denominator": true,
+      "independent_user_distribution": false,
+      "subgroup_n": null,
+      "subgroup_margin_of_error_pp": null
+    },
+    {
+      "dimension": "age",
+      "subgroup": "18_29",
+      "ever_use_pct": 95,
+      "regular_news_pct": 39,
+      "ever_use_source_id": "pew-us-adults-2026",
+      "regular_news_source_id": "pew-youtube-news-2026",
+      "ever_use_survey": "npors_2026",
+      "news_survey": "atp_august_2026",
+      "within_subgroup_denominator": true,
+      "independent_user_distribution": false,
+      "subgroup_n": null,
+      "subgroup_margin_of_error_pp": null
+    },
+    {
+      "dimension": "age",
+      "subgroup": "30_49",
+      "ever_use_pct": 91,
+      "regular_news_pct": 38,
+      "ever_use_source_id": "pew-us-adults-2026",
+      "regular_news_source_id": "pew-youtube-news-2026",
+      "ever_use_survey": "npors_2026",
+      "news_survey": "atp_august_2026",
+      "within_subgroup_denominator": true,
+      "independent_user_distribution": false,
+      "subgroup_n": null,
+      "subgroup_margin_of_error_pp": null
+    },
+    {
+      "dimension": "age",
+      "subgroup": "50_64",
+      "ever_use_pct": 85,
+      "regular_news_pct": 33,
+      "ever_use_source_id": "pew-us-adults-2026",
+      "regular_news_source_id": "pew-youtube-news-2026",
+      "ever_use_survey": "npors_2026",
+      "news_survey": "atp_august_2026",
+      "within_subgroup_denominator": true,
+      "independent_user_distribution": false,
+      "subgroup_n": null,
+      "subgroup_margin_of_error_pp": null
+    },
+    {
+      "dimension": "age",
+      "subgroup": "65_plus",
+      "ever_use_pct": 65,
+      "regular_news_pct": 26,
+      "ever_use_source_id": "pew-us-adults-2026",
+      "regular_news_source_id": "pew-youtube-news-2026",
+      "ever_use_survey": "npors_2026",
+      "news_survey": "atp_august_2026",
+      "within_subgroup_denominator": true,
+      "independent_user_distribution": false,
+      "subgroup_n": null,
+      "subgroup_margin_of_error_pp": null
+    },
+    {
+      "dimension": "political_affiliation",
+      "subgroup": "republican_or_lean_republican",
+      "ever_use_pct": 84,
+      "regular_news_pct": 35,
+      "ever_use_source_id": "pew-us-adults-2026",
+      "regular_news_source_id": "pew-youtube-news-2026",
+      "ever_use_survey": "npors_2026",
+      "news_survey": "atp_august_2026",
+      "within_subgroup_denominator": true,
+      "independent_user_distribution": false,
+      "subgroup_n": null,
+      "subgroup_margin_of_error_pp": null
+    },
+    {
+      "dimension": "political_affiliation",
+      "subgroup": "democratic_or_lean_democratic",
+      "ever_use_pct": 86,
+      "regular_news_pct": 36,
+      "ever_use_source_id": "pew-us-adults-2026",
+      "regular_news_source_id": "pew-youtube-news-2026",
+      "ever_use_survey": "npors_2026",
+      "news_survey": "atp_august_2026",
+      "within_subgroup_denominator": true,
+      "independent_user_distribution": false,
+      "subgroup_n": null,
+      "subgroup_margin_of_error_pp": null
+    }
+  ],
+  "regular_news_us_adult_series": [
+    {
+      "year": 2020,
+      "regular_news_youtube_pct_of_us_adults": 23,
+      "source_id": "pew-youtube-news-2026",
+      "survey_design_reconciled": false
+    },
+    {
+      "year": 2021,
+      "regular_news_youtube_pct_of_us_adults": 22,
+      "source_id": "pew-youtube-news-2026",
+      "survey_design_reconciled": false
+    },
+    {
+      "year": 2022,
+      "regular_news_youtube_pct_of_us_adults": 25,
+      "source_id": "pew-youtube-news-2026",
+      "survey_design_reconciled": false
+    },
+    {
+      "year": 2023,
+      "regular_news_youtube_pct_of_us_adults": 26,
+      "source_id": "pew-youtube-news-2026",
+      "survey_design_reconciled": false
+    },
+    {
+      "year": 2024,
+      "regular_news_youtube_pct_of_us_adults": 32,
+      "source_id": "pew-youtube-news-2026",
+      "survey_design_reconciled": false
+    },
+    {
+      "year": 2025,
+      "regular_news_youtube_pct_of_us_adults": 35,
+      "source_id": "pew-youtube-news-2026",
+      "survey_design_reconciled": false
+    },
+    {
+      "year": 2026,
+      "regular_news_youtube_pct_of_us_adults": 34,
+      "source_id": "pew-youtube-news-2026",
+      "survey_design_reconciled": false
+    }
+  ],
+  "distinct_2026_overall_news_denominators": [
+    {
+      "value": 34,
+      "unit": "percent",
+      "population": "all_us_adults",
+      "measure": "regularly_get_news_from_youtube",
+      "survey": "atp_august_2026",
+      "source_id": "pew-youtube-news-2026"
+    },
+    {
+      "value": 41,
+      "unit": "percent",
+      "population": "us_adults_who_use_youtube",
+      "measure": "regularly_get_news_from_youtube_among_youtube_users",
+      "survey": "atp_august_2026",
+      "source_id": "pew-youtube-news-2026"
+    }
+  ],
+  "categorical_semantics": {
+    "published_gender_labels": [
+      "men",
+      "women"
+    ],
+    "biological_sex_measurement_verified": false,
+    "biological_sex_specific_ever_use": null,
+    "biological_sex_specific_news_use": null,
+    "note": "Pew's published men/women subgroup labels are retained as survey reporting categories; they do not permit an independent biological sex classification or individual identity inference."
+  },
+  "comparison_limitations": [
+    "The two published surveys asked different use and news questions at different fieldwork dates; subgroup percentages cannot be subtracted to infer conversion, causal behavior changes or the share of YouTube users who watch news without a matching joint sample.",
+    "Pew's 2026 use survey n=5,511 and ATP news survey n=5,166 are whole-sample totals. They are not subgroup n or per-cell margin of error.",
+    "Men and women are labels of the published survey demographic grouping, not observed biological sex or inferred attributes of online profiles.",
+    "Age, reported gender and political lean are separate marginal breakdowns. Age-by-gender, age-by-party and group-by-country intersections are not published here.",
+    "Different denominator: 34% of all U.S. adults regularly get YouTube news; 41% of YouTube users do. These should not be interchanged.",
+    "Annual 2020-2026 news series is a sequence of population surveys, not a fixed-person panel or country-generalized YouTube news consumption trend.",
+    "Neither use prevalence nor news consumption rate gives the count, identity, genre choice, money or political preferences of particular creators and viewers."
+  ],
+  "unmeasured": {
+    "gender_by_age_joint_us_youtube_use": null,
+    "gender_by_party_joint_youtube_news": null,
+    "sex_specific_youtube_news_prevalence": null,
+    "news_consumers_share_of_all_youtube_people": null,
+    "non_binary_or_other_labels_coverage": null,
+    "subgroup_exact_n": null,
+    "subgroup_margin_of_error": null,
+    "causal_news_engagement_gap": null,
+    "creator_affiliation_distribution": null,
+    "niche_specific_monetization_effect": null
+  }
+}
