@@ -71,6 +71,13 @@ try{
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');
+    const language=page.locator('.multilingual-distribution');
+    assert.equal(await language.locator('.multilingual-product-card').count(),6,'Missing multilingual feature catalog');
+    assert.equal(await language.locator('.multilingual-observation').count(),2,'Missing selected product observations');
+    await language.locator('summary').first().click();
+    assert((await language.textContent()).includes('not additional traffic or causal income lift'));
+    await language.locator('.multilingual-language-examples > summary').click();
+    assert.equal(await language.locator('.multilingual-language-list li').count(),8,'Missing documented language examples');
     assert.equal(await page.locator('.scale-observation').count(),4,'Missing global scale observations');
     const reach=page.locator('.country-reach');
     assert.equal(await reach.locator('.country-reach-card').count(),4,'Missing bounded country/survey rates');
