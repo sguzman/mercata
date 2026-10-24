@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "noncomparable_public_study_frames",
+  "as_of": "2026-10-23",
+  "status": "source_frame_audit_not_pooled_population_measurement",
+  "scope": "Public aggregate research sources with different target populations, study unit, sampling methods and creator outcome selection.",
+  "frames": [
+    {
+      "id": "pew_2026_us_adults",
+      "source_ids": [
+        "pew-us-adults-2026"
+      ],
+      "owner": "Pew Research Center",
+      "date": "2026-01-30_to_2026-06-18",
+      "geography": "United States",
+      "unit": "individual_adult_survey_respondent",
+      "sample_total_n": 5511,
+      "eligibility": "U.S. adults 18+, general population survey with web, mail and phone collection",
+      "selection": "NPORS survey frame and Pew weighting, not reconstructed here",
+      "quantity": "reported_ever_use_of_youtube",
+      "is_youtube_user_only": false,
+      "is_creator_only": false,
+      "includes_nonusers": true,
+      "includes_zero_earning_creators": null,
+      "per_item_n": null,
+      "age_min": 18,
+      "age_max": null,
+      "may_include_minors": false,
+      "representative_global_users": false
+    },
+    {
+      "id": "nrg_2026_online_14_29",
+      "source_ids": [
+        "youtube-nrg-mainstream-2026"
+      ],
+      "owner": "National Research Group for YouTube",
+      "date": "2026-04",
+      "geography": "United States",
+      "unit": "online_survey_respondent",
+      "sample_total_n": 496,
+      "eligibility": "Active online U.S. respondents ages 14–29",
+      "selection": "YouTube-commissioned online culture survey; probability design not established on public summary",
+      "quantity": "attitudes_and_self_reported_niche_or_fandom_viewing",
+      "is_youtube_user_only": null,
+      "is_creator_only": false,
+      "includes_nonusers": null,
+      "includes_zero_earning_creators": null,
+      "per_item_n": null,
+      "age_min": 14,
+      "age_max": 29,
+      "may_include_minors": true,
+      "representative_global_users": false
+    },
+    {
+      "id": "nrg_2026_online_14_44",
+      "source_ids": [
+        "youtube-nrg-mainstream-2026"
+      ],
+      "owner": "National Research Group for YouTube",
+      "date": "2026-04",
+      "geography": "United States",
+      "unit": "online_survey_respondent",
+      "sample_total_n": 939,
+      "eligibility": "Active online U.S. respondents ages 14–44",
+      "selection": "YouTube-commissioned online culture survey; probability design not established on public summary",
+      "quantity": "attitudes_towards_youtube_interest_exploration",
+      "is_youtube_user_only": null,
+      "is_creator_only": false,
+      "includes_nonusers": null,
+      "includes_zero_earning_creators": null,
+      "per_item_n": null,
+      "age_min": 14,
+      "age_max": 44,
+      "may_include_minors": true,
+      "representative_global_users": false
+    },
+    {
+      "id": "creatoriq_2026_vendor_creators",
+      "source_ids": [
+        "creatoriq-state-creators-2026"
+      ],
+      "owner": "CreatorIQ and Influencers.club",
+      "date": "2026-05-29_to_2026-06-29",
+      "geography": "100_reported_countries_or_regions",
+      "unit": "cross_platform_creator_survey_respondent",
+      "sample_total_n": 5095,
+      "eligibility": "Vendor-recruited creators across Instagram, TikTok, YouTube and other media",
+      "selection": "Commercial creator survey with unknown probability weights and participation rate",
+      "quantity": "self_reported_annual_creator_income_and_primary_income_status",
+      "is_youtube_user_only": false,
+      "is_creator_only": true,
+      "includes_nonusers": null,
+      "includes_zero_earning_creators": null,
+      "per_item_n": null,
+      "age_min": null,
+      "age_max": null,
+      "may_include_minors": null,
+      "representative_global_users": false
+    },
+    {
+      "id": "air_2026_monetized_studio",
+      "source_ids": [
+        "air-studio-rpm-300-2026"
+      ],
+      "owner": "AIR Media-Tech",
+      "date": "2025-05_to_2026-05",
+      "geography": "client_audience_geographies_not_enumerated",
+      "unit": "monetized_client_channel_and_channel_month",
+      "sample_total_n": 300,
+      "observed_channel_months": 3595,
+      "eligibility": "Selected client channels with 10k–50m subscribers and monetized channel-months",
+      "selection": "Vendor existing client population, not an entry cohort or public YouTube sample",
+      "quantity": "native_creator_rpm_per_1000_views",
+      "is_youtube_user_only": false,
+      "is_creator_only": true,
+      "includes_nonusers": null,
+      "includes_zero_earning_creators": false,
+      "per_item_n": null,
+      "age_min": null,
+      "age_max": null,
+      "may_include_minors": null,
+      "representative_global_users": false
+    }
+  ],
+  "blocked_cross_source_operations": [
+    {
+      "id": "pew_to_nrg_adoption",
+      "frames": [
+        "pew_2026_us_adults",
+        "nrg_2026_online_14_29"
+      ],
+      "reason": "General-population ever-use respondents 18+ versus selected online culture respondents 14–29, including minors and distinct questionnaire."
+    },
+    {
+      "id": "nrg_age_groups_are_not_replicates",
+      "frames": [
+        "nrg_2026_online_14_29",
+        "nrg_2026_online_14_44"
+      ],
+      "reason": "Different age ranges and survey questions from the same commissioned study; no shared-person overlap data or item denominators."
+    },
+    {
+      "id": "creatoriq_income_to_youtube",
+      "frames": [
+        "creatoriq_2026_vendor_creators",
+        "air_2026_monetized_studio"
+      ],
+      "reason": "Cross-platform annual self-report respondent income versus selected monetized monthly YouTube client RPM."
+    },
+    {
+      "id": "air_rpm_to_newcomers",
+      "frames": [
+        "air_2026_monetized_studio",
+        "pew_2026_us_adults"
+      ],
+      "reason": "Selected channels with earnings cannot be scaled to the general U.S. adult population or attempted publisher cohort."
+    }
+  ],
+  "required_before_comparison": [
+    "Same person_or_channel_unit",
+    "Same inclusion_criteria_and_age",
+    "Same regional_population_and_period",
+    "Same measured_question_or_economic_variable",
+    "Verified_sampling_frame_and_nonresponse",
+    "Source-specific_uncertainty_and_weighting",
+    "Deduplicated_subjects_where_overlap_possible"
+  ],
+  "disclosure_rules": [
+    "Do not use the total survey n as an individual item denominator when the report does not provide item response n.",
+    "Do not apply Pew's full-sample ±1.8-point uncertainty to a subgroup or external survey.",
+    "Do not infer identifiable respondent age, sex, ethnicity, religion or political opinions from usernames or view histories.",
+    "Aggregates covering ages under 18 do not authorize tracing or profiling individual minors.",
+    "Selected monetized YouTube channel-months exclude zero earners and cannot estimate first-time creator income.",
+    "Three 2026 survey samples and AIR client data are not independent measurements of one population outcome.",
+    "AI, paid creator marketing, public platform views, or advertiser reach do not provide survey-based unique-person identities."
+  ],
+  "unmeasured": {
+    "common_us_youtube_user_frame": null,
+    "valid_joint_sampling_weights": null,
+    "overlap_of_panel_respondents": null,
+    "common_creator_earnings_estimand": null,
+    "cross_study_combined_creator_income": null,
+    "representative_newcomer_zero_earning_share": null
+  }
+}
