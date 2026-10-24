@@ -65,6 +65,11 @@ try{
     const onboarding=page.locator('.channel-onboarding');
     assert.equal(await onboarding.locator('.channel-onboarding-stage').count(),6,'Missing publishing access stages');
     assert.equal(await onboarding.locator('.channel-feature-gate').count(),4,'Missing independent feature gates');
+    const ownership=page.locator('.ownership-continuity');
+    assert.equal(await ownership.locator('.ownership-card').count(),5,'Missing channel management and continuity operations');
+    await ownership.locator('.ownership-details > summary').click();
+    assert((await ownership.textContent()).includes('seven-day role tenure'));
+    assert((await ownership.textContent()).includes('permanently delete the target channel'));
     await onboarding.locator('summary').click();
     assert((await onboarding.textContent()).includes('time to first creator payment: unknown'));
     assert.equal(await page.locator('.content-policy-item').count(),8,'Missing sourced content restrictions');
