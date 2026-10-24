@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-23",
-  "progress_percent": 33,
+  "progress_percent": 35,
   "permission_required_before_execution": false,
   "scope": "Evidence-based research into YouTube's economics, platform use, population, creator earnings, audience demographics, subcultures, competition, content formats and practical monetization strategies.",
   "baseline": {
@@ -119,7 +119,7 @@
         "youtube/access/differentiate-each-earning-feature-s-eligibility"
       ],
       "phase": 1,
-      "progress_percent": 64
+      "progress_percent": 66
     },
     {
       "id": "economics",
@@ -177,7 +177,7 @@
         "youtube/market/set-historical-comparison-windows"
       ],
       "phase": 2,
-      "progress_percent": 31
+      "progress_percent": 34
     },
     {
       "id": "discovery",
@@ -204,7 +204,7 @@
         "youtube/discovery/model-discovery-by-language"
       ],
       "phase": 3,
-      "progress_percent": 33
+      "progress_percent": 39
     },
     {
       "id": "competition",
@@ -426,7 +426,7 @@
         "youtube/special-video/study-child-directed-video-restrictions"
       ],
       "phase": 3,
-      "progress_percent": 37
+      "progress_percent": 41
     },
     {
       "id": "audience-scale",
@@ -456,7 +456,7 @@
         "youtube/audience-scale/create-a-multi-year-audience-source-comparison"
       ],
       "phase": 2,
-      "progress_percent": 23
+      "progress_percent": 27
     },
     {
       "id": "audience-demography",
@@ -493,7 +493,7 @@
         "youtube/audience-demography/audit-differences-among-survey-panels"
       ],
       "phase": 2,
-      "progress_percent": 34
+      "progress_percent": 38
     },
     {
       "id": "subculture-atlas",
@@ -537,7 +537,7 @@
         "youtube/subculture-atlas/document-subculture-taxonomy-drift"
       ],
       "phase": 2,
-      "progress_percent": 21
+      "progress_percent": 22
     },
     {
       "id": "content-formats",
@@ -566,7 +566,7 @@
         "youtube/content-formats/measure-creation-cost-by-format"
       ],
       "phase": 2,
-      "progress_percent": 30
+      "progress_percent": 38
     },
     {
       "id": "social-discovery",
@@ -594,7 +594,7 @@
         "youtube/social-discovery/track-changes-to-official-recommendation-explanations"
       ],
       "phase": 2,
-      "progress_percent": 36
+      "progress_percent": 38
     },
     {
       "id": "community-dynamics",
@@ -681,7 +681,7 @@
         "youtube/audience-trends/create-explicit-uncertainty-ranges-for-niche-forecasts"
       ],
       "phase": 4,
-      "progress_percent": 19
+      "progress_percent": 20
     },
     {
       "id": "audience-safeguards",
@@ -1059,14 +1059,17 @@
       "objective": "Research supported interface, caption, language and regional access conditions.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and research supported interface, caption, language and regional access conditions.",
       "status": "in_progress",
-      "percent": 18,
+      "percent": 49,
       "evidence": [
         "ontology/youtube/channel-onboarding.json",
         "ontology/youtube/channel-onboarding.md",
         "specimens/youtube.json",
         "ontology/youtube/model.json",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/multilingual-distribution.json",
+        "ontology/youtube/multilingual-distribution.md",
+        "scripts/verify.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1448,9 +1451,15 @@
       "emoji": "🌐",
       "objective": "Keep language, geography and multi-language use distinct.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and keep language, geography and multi-language use distinct.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 42,
+      "evidence": [
+        "ontology/youtube/multilingual-distribution.json",
+        "ontology/youtube/multilingual-distribution.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 2
@@ -1588,13 +1597,17 @@
       "objective": "Specify a testable observation methodology and confounding factors.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify a testable observation methodology and confounding factors.",
       "status": "in_progress",
-      "percent": 36,
+      "percent": 46,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
         "ontology/youtube/content-formats.json",
         "ontology/youtube/content-formats.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/multilingual-distribution.json",
+        "ontology/youtube/multilingual-distribution.md",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
       ],
       "artifact": null,
       "priority": "standard",
@@ -1681,9 +1694,15 @@
       "emoji": "🧭",
       "objective": "Design comparison samples for translated titles, dubbing, captions and original-language videos.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and design comparison samples for translated titles, dubbing, captions and original-language videos.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 63,
+      "evidence": [
+        "ontology/youtube/multilingual-distribution.json",
+        "ontology/youtube/multilingual-distribution.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 3
@@ -3138,9 +3157,15 @@
       "emoji": "🎥",
       "objective": "List dubbing, translated captions and multilingual publication choices.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and list dubbing, translated captions and multilingual publication choices.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 68,
+      "evidence": [
+        "ontology/youtube/multilingual-distribution.json",
+        "ontology/youtube/multilingual-distribution.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 3
@@ -3256,9 +3281,15 @@
       "emoji": "🌍",
       "objective": "Plan primary and secondary language measurements.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and plan primary and secondary language measurements.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 30,
+      "evidence": [
+        "ontology/youtube/multilingual-distribution.json",
+        "ontology/youtube/multilingual-distribution.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 2
@@ -3427,9 +3458,15 @@
       "emoji": "👥",
       "objective": "Avoid equating language with national origin or ethnicity.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and avoid equating language with national origin or ethnicity.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 63,
+      "evidence": [
+        "ontology/youtube/multilingual-distribution.json",
+        "ontology/youtube/multilingual-distribution.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 2
@@ -3833,9 +3870,15 @@
       "emoji": "🧩",
       "objective": "Define regional scenes without assuming languages indicate ethnicity.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define regional scenes without assuming languages indicate ethnicity.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 18,
+      "evidence": [
+        "ontology/youtube/multilingual-distribution.json",
+        "ontology/youtube/multilingual-distribution.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 2
@@ -3985,9 +4028,15 @@
       "emoji": "🎬",
       "objective": "Specify observable language access without assumed conversion effects.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify observable language access without assumed conversion effects.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 76,
+      "evidence": [
+        "ontology/youtube/multilingual-distribution.json",
+        "ontology/youtube/multilingual-distribution.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 2
@@ -4122,13 +4171,17 @@
       "objective": "Define sample queries and repeatable dates.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define sample queries and repeatable dates.",
       "status": "in_progress",
-      "percent": 26,
+      "percent": 42,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
         "ontology/youtube/content-formats.json",
         "ontology/youtube/content-formats.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/multilingual-distribution.json",
+        "ontology/youtube/multilingual-distribution.md",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
       ],
       "artifact": null,
       "priority": "standard",
@@ -4182,13 +4235,17 @@
       "objective": "Define causal tests rather than correlational success stories.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define causal tests rather than correlational success stories.",
       "status": "in_progress",
-      "percent": 40,
+      "percent": 49,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
         "ontology/youtube/content-formats.json",
         "ontology/youtube/content-formats.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/multilingual-distribution.json",
+        "ontology/youtube/multilingual-distribution.md",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
       ],
       "artifact": null,
       "priority": "standard",
@@ -4680,9 +4737,15 @@
       "emoji": "📈",
       "objective": "Preserve geography and sampling changes.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and preserve geography and sampling changes.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 23,
+      "evidence": [
+        "ontology/youtube/multilingual-distribution.json",
+        "ontology/youtube/multilingual-distribution.md",
+        "specimens/youtube.json",
+        "tests/youtube.test.mjs",
+        "scripts/verify.mjs"
+      ],
       "artifact": null,
       "priority": "standard",
       "phase": 4
