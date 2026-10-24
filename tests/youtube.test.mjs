@@ -844,6 +844,28 @@ test('Selected monetized AIR Studio RPM and live analyses keep denominators sepa
  assert(Object.values(model.unmeasured).every(x=>x===null));
 });
 
+test('Technology and software subculture scope cannot turn general how-to or desk views into learners',async()=>{
+ const [model,dossier,taxonomy]=await Promise.all([
+  load('ontology/youtube/technology-subcultures-2026.json'),
+  load('specimens/youtube.json'),
+  load('ontology/youtube/taxonomy.json')
+ ]);
+ const sources=new Set(dossier.evidence.map(x=>x.id));
+ const categories=new Set(taxonomy.topics.map(x=>x.id).concat(taxonomy.groups));
+ assert.equal(model.kind,'software_and_technology_content_subculture_scope');
+ assert.equal(model.segments.length,6);
+ assert(model.segments.every(x=>x.source_ids.every(s=>sources.has(s))&&x.taxonomy_ids.every(t=>categories.has(t))));
+ assert(model.segments.every(x=>x.audience_unique_people===null&&x.creator_population===null&&x.median_creator_profit===null));
+ assert.equal(model.observed_public_metrics.length,2);
+ assert.deepEqual(model.observed_public_metrics.map(x=>x.value),[250000000,5500000000]);
+ assert.notEqual(model.observed_public_metrics[0].geography,model.observed_public_metrics[1].geography);
+ assert.notEqual(model.observed_public_metrics[0].end,model.observed_public_metrics[1].end);
+ assert(model.observed_public_metrics.every(x=>sources.has(x.source_id)&&x.software_tutorial_share===null&&x.creator_revenue===null));
+ assert.equal(model.comparability.can_calculate_software_percent,false);
+ assert.equal(model.comparability.can_add_metrics,false);
+ assert(Object.values(model.unknowns).every(x=>x===null));
+});
+
 test('Collaborations distinguish historical limits, native payout and scoped fan survey respondents',async()=>{
  const [model,dossier]=await Promise.all([load('ontology/youtube/creator-collaboration-fandom-2026.json'),load('specimens/youtube.json')]);
  const ids=new Set(dossier.evidence.map(s=>s.id));

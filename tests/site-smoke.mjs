@@ -261,6 +261,13 @@ try{
     assert((await comparators.textContent()).includes('not been added as Mercata specimens'));
     assert((await comparators.textContent()).includes('general profitability: unknown'));
     assert.equal(await page.locator('.competition-tier').count(),5,'Missing sampled subscriber tiers');
+    const technology=page.locator('.technology-subcultures');
+    assert.equal(await technology.locator('.technology-subculture-card').count(),6,'Missing separate technology/video topics');
+    assert.equal(await technology.locator('.technology-metric-card').count(),2,'Missing separate technology observation bases');
+    await technology.locator('summary').click();
+    assert((await technology.textContent()).includes('More than 250,000,000'));
+    assert((await technology.textContent()).includes('More than 5,500,000,000'));
+    assert((await technology.textContent()).includes('cannot be divided'));
     const collab=page.locator('.creator-collaboration-evidence');
     assert.equal(await collab.locator('.creator-fandom-cohort').count(),2,'Missing separate NRG fan survey age groups');
     assert.equal(await collab.locator('.creator-fandom-metric').count(),8,'Missing age-scoped fandom responses');

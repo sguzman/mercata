@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **177 references, 170 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **179 references, 172 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -236,6 +236,10 @@ The [seven-format public-policy comparison](video-surfaces-economics.md) and [ma
 ## Video and distribution formats
 
 The [format comparison](content-formats.md) and [machine catalog](content-formats.json) document eight publication forms, including ordinary videos, Shorts, webcam/encoder live streams, mobile live streams, Premieres, podcasts, Community Posts and live replays. Each records where discovery and links work, candidate earning routes and eligibility restrictions. Neither their profit nor labor requirements are invented.
+
+## Technology and software tutorial subcultures
+
+The [technology-topic research](technology-subcultures-2026.md) and [six-segment machine record](technology-subcultures-2026.json) separate programming, software troubleshooting, professional workflows, hardware reviews, repairs and workspace aesthetics. YouTube's June 2025 U.S. broad how-to view total and H1 2026 global desk-title-match views have different populations and periods; **neither measures unique software learners, technology creators or profitability**. Segment memberships overlap.
 
 ## Measured content-audience studies
 

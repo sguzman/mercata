@@ -851,3 +851,15 @@ h1 em {font-style:italic;color:var(--accent)}
 .creator-fandom-cohort p{font-size:12px;margin:10px 0 0}
 @media(max-width:750px){.creator-collaboration-groups{grid-template-columns:1fr}}
 @media(max-width:650px){.creator-collaboration-details{padding:15px}}
+
+.technology-subcultures{margin:28px 0}
+.technology-subcultures-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.technology-subcultures-details>summary{cursor:pointer;font-size:15px;font-weight:800}
+.technology-subculture-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.technology-subculture-card,.technology-metric-card{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;overflow-wrap:anywhere}
+.technology-subculture-card h5{font-size:14px;margin:0 0 8px}
+.technology-subculture-card p,.technology-metric-card p{font-size:12px;margin:8px 0}
+.technology-metric-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}
+.technology-metric-card strong{font:21px Georgia,serif;font-variant-numeric:tabular-nums}
+@media(max-width:900px){.technology-subculture-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.technology-subcultures-details{padding:15px}.technology-subculture-grid,.technology-metric-grid{grid-template-columns:1fr}}
