@@ -837,3 +837,17 @@ h1 em {font-style:italic;color:var(--accent)}
 .eu-consultation-card h5{font-size:13px;margin:7px 0}
 .eu-consultation-card p{font-size:12px;margin:6px 0}
 @media(max-width:650px){.eu-consultation-details{padding:15px}.eu-consultation-grid{grid-template-columns:1fr}}
+
+.creator-collaboration-evidence{margin:28px 0}
+.creator-collaboration-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.creator-collaboration-details>summary{cursor:pointer;font-size:15px;font-weight:800}
+.creator-collaboration-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.creator-fandom-cohort{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.creator-fandom-cohort h5{font-size:13px;margin:0 0 10px}
+.creator-fandom-metrics{list-style:none;padding:0;margin:0}
+.creator-fandom-metric{display:flex;justify-content:space-between;gap:15px;padding:8px 0;border-bottom:1px solid var(--line);font-size:12px}
+.creator-fandom-metric:last-child{border-bottom:0}
+.creator-fandom-metric strong{font-variant-numeric:tabular-nums;white-space:nowrap}
+.creator-fandom-cohort p{font-size:12px;margin:10px 0 0}
+@media(max-width:750px){.creator-collaboration-groups{grid-template-columns:1fr}}
+@media(max-width:650px){.creator-collaboration-details{padding:15px}}

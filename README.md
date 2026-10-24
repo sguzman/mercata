@@ -85,6 +85,8 @@ The [viewer/person measurement study](ontology/youtube/viewer-person-metrics.md)
 
 The [traffic-source concentration protocol](ontology/youtube/traffic-concentration.md) distinguishes owner-only Browse, suggested, Shorts, search, notifications and external attribution with explicit unit checks. No measured channel source mix or income exposure is assumed, and its diagnostic rejects partial source partitions.
 
+The [creator-collaboration and fandom research](ontology/youtube/creator-collaboration-fandom-2026.md) documents Studio's up-to-ten invited collaborators and uploader-only native revenue, plus two age-scoped U.S. online fandom surveys. It does not claim verified collaboration income or causal cross-channel audience migration.
+
 The [creator safety and continuity study](ontology/youtube/creator-safety-continuity.md) now includes October 2026 security pauses, Google Account-first hacked-channel recovery, live-chat moderation, harassment reporting and privacy complaint pathways. These are dated official procedures, not inferred incident rates or guaranteed recovery outcomes.
 
 The [sponsorship and disclosure research](ontology/youtube/brand-disclosure-risk.md) distinguishes YouTube's branded-content declaration from U.S. FTC endorsement guidance, including the September 2026 rollout of refreshed labels and demographic-region controls. Platform disclosure tools are not a blanket legal safe harbor; non-U.S. requirements and typical sponsorship profits remain unmeasured.

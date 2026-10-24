@@ -261,6 +261,13 @@ try{
     assert((await comparators.textContent()).includes('not been added as Mercata specimens'));
     assert((await comparators.textContent()).includes('general profitability: unknown'));
     assert.equal(await page.locator('.competition-tier').count(),5,'Missing sampled subscriber tiers');
+    const collab=page.locator('.creator-collaboration-evidence');
+    assert.equal(await collab.locator('.creator-fandom-cohort').count(),2,'Missing separate NRG fan survey age groups');
+    assert.equal(await collab.locator('.creator-fandom-metric').count(),8,'Missing age-scoped fandom responses');
+    await collab.locator('summary').click();
+    assert((await collab.textContent()).includes('up to 10 collaborators'));
+    assert((await collab.textContent()).includes('does not split collaboration payouts'));
+    assert((await collab.textContent()).includes('No collaboration earnings'));
     const attention=page.locator('.video-attention-culture');
     assert.equal(await attention.locator('.video-attention-card').count(),2,'Missing independent video stock and niche survey studies');
     assert.equal(await attention.locator('.video-attention-observation').count(),11,'Missing measured dated stock, watch-time and survey items');

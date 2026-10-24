@@ -844,6 +844,26 @@ test('Selected monetized AIR Studio RPM and live analyses keep denominators sepa
  assert(Object.values(model.unmeasured).every(x=>x===null));
 });
 
+test('Collaborations distinguish historical limits, native payout and scoped fan survey respondents',async()=>{
+ const [model,dossier]=await Promise.all([load('ontology/youtube/creator-collaboration-fandom-2026.json'),load('specimens/youtube.json')]);
+ const ids=new Set(dossier.evidence.map(s=>s.id));
+ assert(model.evidence_families.every(f=>f.source_ids.every(id=>ids.has(id))));
+ assert.equal(model.collaboration_policy.max_invited_creators_current,10);
+ assert.equal(model.collaboration_policy.max_invited_creators_initial_rollout,5);
+ assert.equal(model.collaboration_policy.active_livestream_eligible,false);
+ assert.equal(model.collaboration_policy.revenue_recipient,'uploading_channel_only');
+ assert.equal(model.collaboration_policy.platform_splits_ad_revenue_automatically,false);
+ assert.equal(model.collaboration_policy.guaranteed_recommendation_lift,false);
+ assert.equal(model.collaboration_policy.separate_contract_revenue_sharing,null);
+ assert.deepEqual(model.survey_groups.map(g=>g.n_total),[496,939]);
+ assert.deepEqual(model.survey_groups.map(g=>g.questions.map(q=>q.percent)),[[77,78,71,69],[63,60,73,72]]);
+ assert.equal(model.survey_shared_limits.question_specific_n,null);
+ assert.equal(model.survey_shared_limits.global_population_representative,false);
+ assert(model.illustrative_cross_channel_forms.every(f=>f.actual_cross_channel_path_unverified));
+ assert(Object.values(model.study_protocol.unobserved).every(v=>v===null));
+ assert(model.acceptance_gates.some(g=>g.verified===false));
+});
+
 test('2025 Omdia video watch time and 2026 NRG U.S. survey cannot be pooled',async()=>{
  const [model,dossier]=await Promise.all([
    load('ontology/youtube/video-attention-culture-2026.json'),load('specimens/youtube.json')

@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **174 references, 167 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **177 references, 170 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -204,6 +204,10 @@ The [official 2026 posts-and-membership research](retention-posts-memberships.md
 ## Promotion spending, paid audiences and organic follow-on YPP eligibility
 
 The [source-bounded YouTube Promote economics study](promote-economics.md) and [machine record](promote-economics.json) distinguish purchased advertising spend from native YouTube earnings. Direct ad-attributed watch hours and subscribers do **not** qualify toward YPP thresholds, but eligible later **organic** follow-on activity may. Promotion impressions, Google Ads format-specific billable TrueView views, public playback starts, credited subscribers and website clicks have different units. Actual campaign expenses, price per acquired retained viewer and incremental net business profit remain unmeasured.
+
+## Creator collaborations and fan participation
+
+The [2025–2026 collaboration and fandom report](creator-collaboration-fandom-2026.md) and [machine record](creator-collaboration-fandom-2026.json) distinguish YouTube's current ten invited collaborators from five at initial rollout, the uploading channel's native payout, and two age-specific NRG U.S. online fan survey groups. These source-backed observations do not measure audience transfer, monetization gains, or the rate at which memes move between creators.
 
 ## Discovery and community engagement
 
