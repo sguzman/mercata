@@ -27,6 +27,9 @@ jobs:
         run: |
           node --check scripts/intake.mjs
           node --check scripts/verify.mjs
+          node --check scripts/source-provenance.mjs
+          node --check scripts/audit-youtube-sources.mjs
+          node --check tests/source-provenance.test.mjs
           node --check site/app.js
           node --check site/scenario.mjs
           node --check site/metric-compatibility.mjs
@@ -37,6 +40,8 @@ jobs:
         run: node scripts/verify.mjs
       - name: Run repository tests
         run: node --test tests/*.test.mjs
+      - name: Check YouTube source independence and publication dates
+        run: node scripts/audit-youtube-sources.mjs
       - name: Install Firefox automation tools
         run: |
           npm install --no-save --no-audit --no-fund playwright@1.64.1
