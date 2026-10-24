@@ -43,6 +43,16 @@ In a descriptive subgroup comparison, **about half** of surveyed full-video podc
 
 The sample contains audio-only and video makers and was recruited through publisher-affiliated channels, not from all YouTube creators. The source separately reports that adding video was associated with higher spending in this sample, but does not identify an independently representative YouTube cohort. Open-ended time and cash bins preclude exact reconstructed medians, and unpublished subgroup denominators remain `null`. The [machine record](production-costs.json) explicitly prohibits inferring typical YouTube hours, startup costs, profitability or no-earner rates from this adjacent survey.
 
+## Measured adjacent evidence: U.S. cross-platform creator hours (2026)
+
+The original [2026 Creator Economy Report](https://theinfluencermarketingfactory.com/wp-content/uploads/2026/02/Creator-Economy-Report-2026.pdf), published by The Influencer Marketing Factory, includes an **January 2026 survey of 1,000 U.S. social content creators aged 18–65**. The report's page 20 asks about typical weekly content-creation time and highlights **37% responding 5–10 hours per week** and **8.4% responding 20–40 hours per week**.
+
+The report is a commercial creator-economy survey, not a YouTube-specific work log. Recruitment, nonresponse, weighting, question-specific denominator and zero-earning creator inclusion are not established from these displayed chart values. The two highlighted intervals are **selected bins**, not an exhaustive distribution that can be forced to sum to 100%. Without complete mutually exclusive response bins, Mercata does not calculate an apparent median or a mean weekly work time.
+
+The hours are self-reported time typically **creating content** rather than objectively logged full-business labor, and cannot be mapped onto editing, community, learning and administrative work separately. No costs, verified net income, hourly profit or individual YouTube channel figures can be computed from these results.
+
+This study and the 2025 independent-podcaster sample are **different adjacent creator groups**. Neither is a sample of all YouTube entrants, and pooling them would falsely combine respondents, age/geographic frames, weeks and per-episode labor units. Machine data retain the missing questions and denominator fields as `null`.
+
 ## Remaining empirical work
 
 Representative equipment outlays by country, attributable software/storage charges, video-production labor distributions, typical costs per format and niche, failed-project time, first-year profit cohorts and effective hourly earning distributions remain unmeasured. They require scoped and ethically sourced creator records, not anecdotal prices or presumed equipment bundles.
