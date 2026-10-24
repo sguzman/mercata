@@ -181,7 +181,25 @@ try{
           right:Math.round(rect.right),
           width:Math.round(rect.width)
         }));
-      return {viewportWidth,documentWidth,offenders};
+      const unclipped=offenders;
+      const visibleOffenders=[...document.querySelectorAll('body *')].flatMap(element=>{
+        const rect=element.getBoundingClientRect();
+        if(rect.right<=viewportWidth+1||rect.width<=1)return [];
+        let ancestor=element.parentElement;
+        while(ancestor){
+          const style=getComputedStyle(ancestor);
+          if(['auto','scroll','hidden','clip'].includes(style.overflowX) &&
+             ancestor.getBoundingClientRect().right<=viewportWidth+1)return [];
+          ancestor=ancestor.parentElement;
+        }
+        return [{
+          tag:element.tagName.toLowerCase(),
+          className:typeof element.className==='string'?element.className.slice(0,100):'',
+          right:Math.round(rect.right),
+          width:Math.round(rect.width)
+        }];
+      }).sort((a,b)=>b.right-a.right).slice(0,15);
+      return {viewportWidth,documentWidth,visibleOffenders,offenders:unclipped};
     });
     await page.screenshot({path:path.join(root,'screenshots','mercata-'+size.name+'.png'),fullPage:false});
     assert(overflowReport.documentWidth<=overflowReport.viewportWidth+1,
