@@ -1098,6 +1098,86 @@
       "unit": "sampling_design",
       "access": "research_metadata",
       "measured_value": null
+    },
+    {
+      "id": "original_audio_language",
+      "group": "measurement",
+      "definition": "The source speech/audio language of a YouTube video, independent of channel country and viewer nationality.",
+      "unit": "language_label",
+      "access": "research_method_or_documented_feature",
+      "measured_value": null
+    },
+    {
+      "id": "secondary_audio_track",
+      "group": "formats",
+      "definition": "Additional audio-language track on an eligible video or Short, attached to the same video identity.",
+      "unit": "media_track",
+      "access": "research_method_or_documented_feature",
+      "measured_value": null
+    },
+    {
+      "id": "manual_dub",
+      "group": "formats",
+      "definition": "Creator-recorded or acquired secondary audio translation deliberately uploaded, distinct from YouTube's auto dub.",
+      "unit": "media_track",
+      "access": "research_method_or_documented_feature",
+      "measured_value": null
+    },
+    {
+      "id": "machine_dub",
+      "group": "formats",
+      "definition": "Automatically generated dubbed audio with variable source/target support and imperfect speech quality.",
+      "unit": "media_track",
+      "access": "research_method_or_documented_feature",
+      "measured_value": null
+    },
+    {
+      "id": "translated_metadata",
+      "group": "formats",
+      "definition": "Translated title and description for discovery or viewer display, independent of spoken audio.",
+      "unit": "metadata_translation",
+      "access": "research_method_or_documented_feature",
+      "measured_value": null
+    },
+    {
+      "id": "caption_language",
+      "group": "formats",
+      "definition": "Language of a subtitle/caption text track rather than the audio track.",
+      "unit": "language_label",
+      "access": "research_method_or_documented_feature",
+      "measured_value": null
+    },
+    {
+      "id": "localized_thumbnail",
+      "group": "formats",
+      "definition": "Alternate permitted long-form thumbnail art selected for a preferred viewer language.",
+      "unit": "image_variant",
+      "access": "research_method_or_documented_feature",
+      "measured_value": null
+    },
+    {
+      "id": "viewer_language_preference",
+      "group": "measurement",
+      "definition": "Viewer-designated audio/title/description language preference separate from app region and interface language.",
+      "unit": "language_setting",
+      "access": "research_method_or_documented_feature",
+      "measured_value": null
+    },
+    {
+      "id": "language_watch_time",
+      "group": "measurement",
+      "definition": "Watch minutes attributed to an audio-track language within a defined video and reporting window.",
+      "unit": "minutes_by_audio_language",
+      "access": "research_method_or_documented_feature",
+      "measured_value": null
+    },
+    {
+      "id": "translation_production_hours",
+      "group": "economics",
+      "definition": "Actual extra labor devoted to localization and review; currently unmeasured population distribution.",
+      "unit": "hours",
+      "access": "research_method_or_documented_feature",
+      "measured_value": null
     }
   ],
   "relations": [
@@ -1625,6 +1705,71 @@
       "subject": "multimarket_youtube_news_use",
       "predicate": "is_not",
       "object": "country_youtube_reach"
+    },
+    {
+      "subject": "video",
+      "predicate": "has",
+      "object": "original_audio_language"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_have",
+      "object": "secondary_audio_track"
+    },
+    {
+      "subject": "secondary_audio_track",
+      "predicate": "can_be",
+      "object": "manual_dub"
+    },
+    {
+      "subject": "secondary_audio_track",
+      "predicate": "can_be",
+      "object": "machine_dub"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_have",
+      "object": "translated_metadata"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_have",
+      "object": "caption_language"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_have",
+      "object": "localized_thumbnail"
+    },
+    {
+      "subject": "viewer",
+      "predicate": "may_choose",
+      "object": "viewer_language_preference"
+    },
+    {
+      "subject": "viewer_language_preference",
+      "predicate": "may_select",
+      "object": "secondary_audio_track"
+    },
+    {
+      "subject": "video",
+      "predicate": "may_report",
+      "object": "language_watch_time"
+    },
+    {
+      "subject": "language_watch_time",
+      "predicate": "is_not",
+      "object": "channel_monthly_audience"
+    },
+    {
+      "subject": "advanced_channel_access",
+      "predicate": "may_enable",
+      "object": "manual_dub"
+    },
+    {
+      "subject": "manual_dub",
+      "predicate": "requires",
+      "object": "translation_production_hours"
     }
   ],
   "rules": [
@@ -1650,7 +1795,9 @@
     "Mixed-platform income thresholds do not identify YouTube-only earnings or a newcomer cohort.",
     "The intended newcomer earning population must retain zero earners and define time, costs and sampling frame.",
     "A TV-set viewing series is a subset of all in-home connected-device viewing; do not add them.",
-    "Country/age prevalence and multi-market online respondent averages are not interchangeable with global people counts."
+    "Country/age prevalence and multi-market online respondent averages are not interchangeable with global people counts.",
+    "Multi-language audio tracks attached to one video do not create independent video objects or distinct viewer populations.",
+    "Selected non-primary-language watch-time share is neither observed causal uplift nor equivalent to foreign-country user reach."
   ],
-  "ontology_version": "1.6"
+  "ontology_version": "1.7"
 }
