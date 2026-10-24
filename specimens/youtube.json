@@ -2330,6 +2330,28 @@
       "evidence_class": "secondary_vendor_study_commentary",
       "license": "News commentary linked and independently summarized",
       "notes": "Secondary editorial coverage of Tubular Labs 2025 study, not independently sampled audience; distinguishes YouTube gender shares from Instagram campaign engagements."
+    },
+    {
+      "id": "youtube-general-terms-provider-2026",
+      "url": "https://www.youtube.com/t/terms",
+      "publisher": "YouTube",
+      "title": "YouTube Terms of Service — Your Service Provider",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_service_provider_contract",
+      "license": "Official legal terms linked, independently summarized",
+      "notes": "Current general YouTube Terms identify Google LLC as service provider; local/additional service terms may vary."
+    },
+    {
+      "id": "youtube-paid-terms-provider-2026",
+      "url": "https://www.youtube.com/t/terms_paidservice",
+      "publisher": "YouTube",
+      "title": "YouTube Paid Service Terms of Service",
+      "published_at": "2026-02-11",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_paid_service_contract_and_paid_product",
+      "license": "Official terms linked, independently paraphrased",
+      "notes": "Paid-services terms identify Google LLC and list purchases, rentals, paid subscriptions and channel memberships."
     }
   ],
   "claims": [
@@ -4830,6 +4852,29 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Barb in-home broadband-connected viewing only; content genre and holiday/term seasonal subdivisions not available from these annual averages. Age bases overlap and survey modes are distinct."
+    },
+    {
+      "id": "youtube-legal-provider-google-llc-2026",
+      "text": "Current YouTube general and paid-service terms identify Google LLC as the service provider under the cited contract scope; they do not by themselves identify every local payment, ad sales or tax entity.",
+      "source_ids": [
+        "youtube-general-terms-provider-2026",
+        "youtube-paid-terms-provider-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Legal provider identity is conditional on applicable territory and terms; no separate global corporate-history conclusion."
+    },
+    {
+      "id": "youtube-operator-creator-advertiser-buyer-flows-2026",
+      "text": "YouTube distinguishes advertiser-funded creator revenue shares, paid viewer subscriptions and purchases, and claims held by content rights holders, so a viewer, advertiser, creator, buyer and rightsholder are not interchangeable economic units.",
+      "source_ids": [
+        "youtube-paid-terms-provider-2026",
+        "revenue-shares",
+        "music-content-id"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Structural map, not measured income or transaction prevalence. An uploader need not monetize and an ad-viewer need not be the advertiser paying."
     }
   ],
   "observations": [],
