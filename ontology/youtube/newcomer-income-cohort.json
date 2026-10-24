@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "new_creator_income_cohort_protocol",
+  "as_of": "2026-10-23",
+  "status": "protocol_only_no_new_entrant_income_measurements",
+  "question": "What are earnings, costs and time returns for people who attempt to start publishing on YouTube, including those who never earn?",
+  "target_population": {
+    "unit": "person_or_independently_owned_creator_business",
+    "entry_event": "first attempt to start an owned YouTube publishing channel during a predefined entry window",
+    "include_nonmonetized": true,
+    "include_inactive_after_entry": true,
+    "include_zero_income": true,
+    "include_negative_profit": true,
+    "include_multiple_channels_under_one_owner": true,
+    "exclude_only": "ineligible data use; non-consent; genuinely outside the preregistered population",
+    "geography": null,
+    "cohort_window_start": null,
+    "cohort_window_end": null,
+    "follow_up_months": null
+  },
+  "strata": [
+    "geography_and_payment_country_separately",
+    "entry_month_and_age_of_channel",
+    "never_published_vs_ever_published",
+    "not_YPP_vs_early_access_YPP_vs_ad_Premium_YPP",
+    "active_vs_inactive_vs_deleted",
+    "video_format_and_niche_with_overlap",
+    "revenue_reporting_currency",
+    "self_reported_vs_document_verified"
+  ],
+  "outcomes": [
+    {
+      "id": "youtube_native_payouts",
+      "unit": "money_per_creator_business_per_period",
+      "scope": "YouTube revenue after native platform allocation, before external expenses and taxes"
+    },
+    {
+      "id": "external_creator_receipts",
+      "unit": "money_per_creator_business_per_period",
+      "scope": "Sponsors, off-platform sales or donations attributable to the endeavor; do not double count YouTube native payouts"
+    },
+    {
+      "id": "gross_creator_receipts",
+      "unit": "money_per_creator_business_per_period",
+      "scope": "Native payout plus external receipts before cash costs"
+    },
+    {
+      "id": "cash_outlays",
+      "unit": "money_per_creator_business_per_period",
+      "scope": "Software, equipment amortization, licenses, subcontracting and other cash costs"
+    },
+    {
+      "id": "labor_hours",
+      "unit": "hours_per_creator_business_per_period",
+      "scope": "Production, learning, editing, marketing, audience work and administration, including unsuccessful attempts"
+    },
+    {
+      "id": "net_cash_profit_before_tax",
+      "unit": "money_per_creator_business_per_period",
+      "scope": "Gross receipts minus cash outlays; may be negative"
+    },
+    {
+      "id": "cash_profit_per_hour",
+      "unit": "money_per_hour",
+      "scope": "Only defined when recorded labor hours are positive; never invent a zero-hour rate"
+    }
+  ],
+  "required_aggregate_study_fields": [
+    "study_id",
+    "source_ids",
+    "cohort_definition",
+    "geographic_coverage",
+    "observation_start",
+    "observation_end",
+    "sampling_frame",
+    "selection_method",
+    "inclusion_of_nonmonetized",
+    "inclusion_of_inactive",
+    "respondents_n",
+    "income_observed_n",
+    "zero_income_n",
+    "missing_income_n",
+    "verified_account_income_n",
+    "known_sampling_probability",
+    "weighted_estimates",
+    "coverage_limitations",
+    "currency_and_fx_method",
+    "income_basis",
+    "median_income",
+    "mean_income",
+    "median_profit",
+    "median_labor_hours",
+    "uncertainty_method",
+    "authoritative_population_claim"
+  ],
+  "existing_evidence_cases": [
+    {
+      "id": "patreon_affiliate_sample",
+      "source_ids": [
+        "academic-youtube-patreon-income-2026"
+      ],
+      "sample_scope": "Patreon accounts linked to YouTube affiliation, selected by positive Patreon earnings",
+      "cannot_estimate": "all YouTube creators' native payouts, zero-income proportion or profits"
+    },
+    {
+      "id": "air_post_ypp_sample",
+      "source_ids": [
+        "air-small-youtube-income-2026"
+      ],
+      "sample_scope": "297 already-monetized small channels",
+      "cannot_estimate": "new entrant earnings, including channels that never monetize"
+    },
+    {
+      "id": "neoreach_mixed_platform",
+      "source_ids": [
+        "neoreach-earnings-2025",
+        "neoreach-earnings-syndication-2026"
+      ],
+      "sample_scope": "Cross-platform self-selected creator survey and a republication of the same respondents",
+      "cannot_estimate": "YouTube-only earnings or independent replication from the syndicated article"
+    },
+    {
+      "id": "spotlight_mixed_platform",
+      "source_ids": [
+        "creator-spotlight-2025"
+      ],
+      "sample_scope": "Engaged newsletter audience responding to a mixed-platform creator survey",
+      "cannot_estimate": "a probability sample of all YouTube entrants or creator net profit"
+    },
+    {
+      "id": "academic_dach_income_abstract",
+      "source_ids": [
+        "euso-youtube-inequality-2026"
+      ],
+      "sample_scope": "YouTube inequality research from Germany, Austria and Switzerland; abstract-only review",
+      "cannot_estimate": "whole-platform median including zeros without full method review"
+    }
+  ],
+  "acceptance_gates": [
+    {
+      "id": "frame_and_selection",
+      "pass": false,
+      "reason": "No independently established target-population frame or documented selection probabilities for all new entrants"
+    },
+    {
+      "id": "non_earners_and_attrition",
+      "pass": false,
+      "reason": "No collected sample reliably includes inactive, deleted and never-monetized entrants"
+    },
+    {
+      "id": "gross_net_cost_hours",
+      "pass": false,
+      "reason": "No representative joint observations of creator payout, off-platform receipts, cash costs and labor hours"
+    },
+    {
+      "id": "geography_period_fx",
+      "pass": false,
+      "reason": "No comparable country/entry-period strata and declared FX/price method"
+    },
+    {
+      "id": "missingness_and_uncertainty",
+      "pass": false,
+      "reason": "No documented nonresponse analysis, survey weights or confidence interval for target population"
+    }
+  ],
+  "results": {
+    "target_population_size": null,
+    "sample_n": null,
+    "zero_youtube_payout_share": null,
+    "median_native_income": null,
+    "mean_native_income": null,
+    "median_total_receipts": null,
+    "median_cash_profit": null,
+    "median_labor_hours": null,
+    "share_negative_cash_profit": null,
+    "uncertainty_intervals": null
+  },
+  "release_policy": {
+    "publish_aggregate_only": true,
+    "ban_public_person_level_raw_rows": true,
+    "consent_and_terms_review_required": true,
+    "never_substitute_ad_reach_or_view_count_for_population": true,
+    "never_replace_missing_with_zero": true,
+    "never_treat_above_zero_selected_study_as_representative": true,
+    "never_pool_duplicate_source_families": true,
+    "no_estimates_without_acceptance_gates": true
+  }
+}
