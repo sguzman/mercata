@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "posts_viewer_retention_and_membership_measurement",
+  "as_of": "2026-10-23",
+  "status": "official_owner_analytics_definitions_and_protocol_only_no_cohort_outcomes",
+  "source_ids": [
+    "yt-posts-analytics-2026",
+    "yt-regular-viewers-2026",
+    "yt-membership-analytics-2026",
+    "yt-community-participation-2026",
+    "yt-create-post-2026",
+    "posts-help",
+    "analytics-audience"
+  ],
+  "channel_surfaces": [
+    {
+      "id": "creator_posts",
+      "description": "Creator-origin Posts surface",
+      "post_formats": [
+        "text",
+        "image",
+        "gif",
+        "video",
+        "poll",
+        "quiz"
+      ],
+      "placements": [
+        "channel_posts_tab",
+        "home_feed",
+        "subscriptions_feed",
+        "some_image_posts_in_shorts_feed"
+      ],
+      "eligibility_note": "Channel and audience settings apply; posts unavailable on Made-for-Kids channels and supervised accounts",
+      "source_ids": [
+        "posts-help",
+        "yt-create-post-2026"
+      ],
+      "revenue": null,
+      "unique_reached_people": null,
+      "post_to_video_return_rate": null
+    },
+    {
+      "id": "community_discussions",
+      "description": "Subscriber-origin posts in channel Communities",
+      "post_formats": [
+        "text",
+        "images",
+        "poll"
+      ],
+      "placements": [
+        "channel_community"
+      ],
+      "eligibility_note": "Must subscribe for creator-chosen minimum period to contribute; moderation can apply",
+      "source_ids": [
+        "yt-community-participation-2026"
+      ],
+      "revenue": null,
+      "unique_reached_people": null,
+      "post_to_video_return_rate": null
+    },
+    {
+      "id": "members_only_posts",
+      "description": "Posts available to eligible paid members",
+      "post_formats": [
+        "post"
+      ],
+      "placements": [
+        "channel_membership_perks"
+      ],
+      "eligibility_note": "Requires enabled and eligible channel membership program with appropriate levels",
+      "source_ids": [
+        "yt-membership-analytics-2026",
+        "posts-help"
+      ],
+      "revenue": null,
+      "unique_reached_people": null,
+      "post_to_video_return_rate": null
+    }
+  ],
+  "post_metric_register": [
+    {
+      "id": "post_impressions",
+      "unit": "impression_events",
+      "access": "channel_owner_studio_content_posts",
+      "source_ids": [
+        "yt-posts-analytics-2026"
+      ],
+      "not_equivalent_to": "distinct_viewers_or_unique_people"
+    },
+    {
+      "id": "post_likes",
+      "unit": "reaction_events",
+      "access": "channel_owner_studio_content_posts",
+      "source_ids": [
+        "yt-posts-analytics-2026"
+      ],
+      "not_equivalent_to": "incremental_watchers_or_retention"
+    },
+    {
+      "id": "post_votes",
+      "unit": "poll_or_quiz_engagement_events",
+      "access": "channel_owner_studio_content_posts",
+      "source_ids": [
+        "yt-posts-analytics-2026"
+      ],
+      "not_equivalent_to": "new_members_or_earnings"
+    },
+    {
+      "id": "returning_viewers",
+      "unit": "estimated_channel_viewers_returning",
+      "access": "channel_owner_studio_audience",
+      "source_ids": [
+        "analytics-audience"
+      ],
+      "not_equivalent_to": "people_returning_because_of_a_post"
+    },
+    {
+      "id": "regular_viewers",
+      "unit": "estimated_viewers_with_monthly_watch_behavior",
+      "access": "channel_owner_studio_audience",
+      "source_ids": [
+        "yt-regular-viewers-2026"
+      ],
+      "not_equivalent_to": "subscribers_or_membership_renewals"
+    },
+    {
+      "id": "membership_transactions",
+      "unit": "payment_events",
+      "access": "channel_owner_studio_analytics_revenue",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ],
+      "not_equivalent_to": "unique_buyers_or_retained_members"
+    }
+  ],
+  "viewer_segments": [
+    {
+      "id": "new",
+      "definition": "First-time viewing for selected channel period, including history-cleared, private-mode or long-inactive viewers",
+      "minimum_months": null,
+      "maximum_months": null,
+      "source_ids": [
+        "yt-regular-viewers-2026"
+      ]
+    },
+    {
+      "id": "casual",
+      "definition": "Watched the channel at least once per month for 1 to 5 months in past year",
+      "minimum_months": 1,
+      "maximum_months": 5,
+      "source_ids": [
+        "yt-regular-viewers-2026"
+      ]
+    },
+    {
+      "id": "regular",
+      "definition": "Watched the channel at least once per month for more than 6 months in past year",
+      "minimum_months": 7,
+      "maximum_months": 12,
+      "source_ids": [
+        "yt-regular-viewers-2026"
+      ]
+    }
+  ],
+  "membership_register": [
+    {
+      "id": "total_members",
+      "unit": "people_with_current_perk_access",
+      "definition": "Includes canceled memberships still accessing perks until billing period ends",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ]
+    },
+    {
+      "id": "active_members",
+      "unit": "active_subscriptions",
+      "definition": "Total members minus canceled subscribers who retain access",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ]
+    },
+    {
+      "id": "members_gained",
+      "unit": "join_events_in_reporting_period",
+      "definition": "Members signing up in the period",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ]
+    },
+    {
+      "id": "members_canceled",
+      "unit": "cancel_events_in_reporting_period",
+      "definition": "Member cancels even though access may remain through paid period",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ]
+    },
+    {
+      "id": "members_lost",
+      "unit": "ended_access_events",
+      "definition": "Previously canceled members whose paid period has ended",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ]
+    },
+    {
+      "id": "transactions",
+      "unit": "payment_events",
+      "definition": "New sign-ups or recurring payments; not unique individuals",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ]
+    },
+    {
+      "id": "membership_revenue",
+      "unit": "money_in_account_reporting_currency",
+      "definition": "Creator's reported membership revenue for selected billing period, after applicable platform rules",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ]
+    }
+  ],
+  "cohort_protocol": {
+    "target": "Creator-owned channel with defined geographic audience and stable publishing format; compare consecutive eligible calendar cohorts and matched controls where lawful",
+    "study_unit": "channel_by_observation_period; aggregate viewer and paying-member cohorts, no person-level collection",
+    "entry_event": "Channel post publication, or first eligible appearance in viewer's channel watch series, declared before analysis",
+    "comparison": "Matched non-post days/channels with similar uploads, content mix, recent impressions, baseline returning viewers and seasonal audience conditions",
+    "primary_response": "Change in comparable estimated returning-viewer outcome over specified following window; no causal effect without research identification",
+    "confounders": [
+      "new_video_uploads",
+      "other_promotions",
+      "notification_delivery",
+      "seasonality",
+      "channel_size_and_subscriber_age",
+      "content_topic_and_quality",
+      "algorithmic_distribution",
+      "paid_advertising",
+      "member_rewards",
+      "public_holidays"
+    ],
+    "valid_methods": [
+      "pre_registered_aggregate_before_after_with_disclosed_confounders",
+      "independently_authorized_matched_creator_channel_cohorts",
+      "randomized_assignment_where_permitted_by_platform_and_participant_consent"
+    ],
+    "unavailable_join": "Public-data interface does not link post impression recipients to unique returned-video viewers or membership payers",
+    "documentation_required": [
+      "dated_creator_permission",
+      "time_window",
+      "post_type",
+      "post_impressions",
+      "channel_returning_viewers_window",
+      "baseline_upload_frequency",
+      "outcome_denominator",
+      "sample_selection",
+      "controls_and_uncertainty",
+      "content_cadence",
+      "missingness"
+    ]
+  },
+  "billing": {
+    "reported_period_length_days": [
+      28,
+      30,
+      31
+    ],
+    "source_ids": [
+      "yt-membership-analytics-2026"
+    ],
+    "repeat_purchase_definition": "Retention by unique original purchaser cohort needs distinct billing identity and renewal events across eligible cycles; payment event counts alone are insufficient",
+    "privacy_rule": "Never publish member identifiers or exports in public repository"
+  },
+  "unknowns": {
+    "typical_post_reach": null,
+    "post_to_viewer_return_conversion": null,
+    "average_post_retention_effect": null,
+    "average_membership_renewal_rate": null,
+    "unique_membership_buyers": null,
+    "cohort_churn_rate": null,
+    "net_membership_profit": null,
+    "owner_sample_count": null,
+    "representative_creator_cohort_n": null
+  },
+  "inference_safeguards": [
+    "Post impressions and likes are events, not independently matched human channel viewers.",
+    "New, casual and regular viewers are channel watch-behavior classifications and are not post-attributed.",
+    "Posts, subscriber Communities and members-only perks differ in origin, eligibility and permitted audience.",
+    "Membership sign-ups, cancellations, membership access and payment renewals have distinct clocks.",
+    "A count of payment transactions does not count unique payers or prove repeated purchases by the same cohort.",
+    "Never claim causal retention benefit from coincident posting and audience change without identification and controls.",
+    "Never collect or commit individual membership exports, account identifiers or private analytics without consent."
+  ]
+}

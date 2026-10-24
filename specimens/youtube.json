@@ -1802,6 +1802,61 @@
       "evidence_class": "first_party_broad_learning_view_metric",
       "license": "Original first-party blog aggregate linked; independently paraphrased metadata.",
       "notes": "Reports over 5.5 billion U.S. learning and how-to views in June 2025, prior to YouTube's August 2026 public view-definition change."
+    },
+    {
+      "id": "yt-posts-analytics-2026",
+      "url": "https://support.google.com/youtube/answer/12340301?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Posts and channel performance: Content tab tips",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_owner_posts_analytics_documentation",
+      "license": "Linked official Help source; independently summarized",
+      "notes": "Owner-facing post impressions, top posts by votes and likes, and format comparisons; no tracked post-to-retention causal measurement."
+    },
+    {
+      "id": "yt-regular-viewers-2026",
+      "url": "https://support.google.com/youtube/answer/10246996/understand-returning-amp-new-viewers-data",
+      "publisher": "YouTube Help",
+      "title": "Understand new, casual, and regular viewers",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_owner_viewer_loyalty_segmentation_documentation",
+      "license": "Linked official Help source; independently summarized",
+      "notes": "New/casual/regular month-based audience classifications; at least once monthly 1–5 months vs more than six months in the last year. Not user cohort retention."
+    },
+    {
+      "id": "yt-membership-analytics-2026",
+      "url": "https://support.google.com/youtube/answer/7491256?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Analyze and manage your YouTube channel memberships program",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_owner_membership_transaction_and_cancel_definitions",
+      "license": "Linked official Help source; independently summarized",
+      "notes": "Total vs active members, cancellations vs lost, member revenue and transaction events, varying billing windows, creator share."
+    },
+    {
+      "id": "yt-community-participation-2026",
+      "url": "https://support.google.com/youtube/answer/15739409?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Participate in Communities",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_subscriber_created_community_discussion_controls",
+      "license": "Linked official Help source; independently summarized",
+      "notes": "Subscriber-created Communities discussions can require minimum subscription tenure set by creator; not the same as creator Posts."
+    },
+    {
+      "id": "yt-create-post-2026",
+      "url": "https://support.google.com/youtube/answer/7124474?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Create a post",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "evidence_class": "official_post_types_scheduling_and_limitations",
+      "license": "Linked official Help source; independently summarized",
+      "notes": "Text, images, GIFs, video, polls, quizzes and scheduling; number of posts per day is limited but not universally quantified."
     }
   ],
   "claims": [
@@ -3595,6 +3650,50 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Publisher-defined broad topic and monthly view events from June 2025, before 2026 play-start revision; not unique people, tutorial creators, earnings or a time series."
+    },
+    {
+      "id": "post-impressions-are-not-viewer-conversion",
+      "text": "YouTube Studio offers owner-only post impressions and top-post engagement metrics, but these counters do not directly identify distinct people who subsequently became recurring video viewers.",
+      "source_ids": [
+        "yt-posts-analytics-2026",
+        "analytics-audience"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Per-post impression, vote and likes metrics differ in units and do not prove an incremental retention effect or a cross-surface joined attribution funnel."
+    },
+    {
+      "id": "community-discussion-differs-from-creator-posts",
+      "text": "YouTube distinguishes creator Posts from subscriber-generated discussions inside Communities; subscriber participation in a Community can require a creator-selected minimum subscription period.",
+      "source_ids": [
+        "posts-help",
+        "yt-community-participation-2026",
+        "yt-create-post-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "Community feature availability and moderation vary; participation counts are not recurring video viewers."
+    },
+    {
+      "id": "regular-viewer-months-not-post-attribution",
+      "text": "YouTube defines casual viewers as watching at least monthly for one to five months of the past year and regular viewers as watching at least monthly for more than six months; these are owner-channel viewing classifications, not measured effects of any Post.",
+      "source_ids": [
+        "yt-regular-viewers-2026",
+        "analytics-audience"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "The owner's rolling 28-day monthly audience and 12-month viewer watch history use different windows; new viewers may include those with cleared histories or a year of inactivity."
+    },
+    {
+      "id": "membership-active-vs-total-vs-transactions",
+      "text": "YouTube Studio differentiates total members who retain perk access from active paid subscribers, gained/canceled/lost members and membership transactions, which can be new sign-ups or recurring charges.",
+      "source_ids": [
+        "yt-membership-analytics-2026"
+      ],
+      "observed_at": "2026-10-23",
+      "confidence": "high",
+      "limitations": "A membership transaction count is not unique paying humans or a cohort retention probability; monthly billing periods can be 28, 30 or 31 days. Individual channel financial outcomes are not published."
     }
   ],
   "observations": [],
