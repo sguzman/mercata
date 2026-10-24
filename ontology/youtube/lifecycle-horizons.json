@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "video_lifecycle_and_revenue_horizon_protocol",
+  "as_of": "2026-10-24",
+  "status": "study_design_no_measured_evergreen_income_advantage",
+  "age_windows_days": [
+    30,
+    90,
+    365
+  ],
+  "window_boundaries": "Cumulative days since publication: [0,30), [0,90), [0,365). Incremental [30,90) and [90,365) require paired complete observations.",
+  "source_ids": [
+    "api-metrics",
+    "api-query-params",
+    "api-reporting-metrics",
+    "studio-analytics-help",
+    "yt-revenue-studio-2026"
+  ],
+  "study_unit": "One eligible video, with owner-authorized financial series only when consent and usage rights allow",
+  "stratification_fields": [
+    "geography",
+    "content_format",
+    "publication_month",
+    "language",
+    "channel_maturity",
+    "monetization_status_at_publication",
+    "estimated_revenue_currency",
+    "topic_category"
+  ],
+  "labels": {
+    "evergreen": "Searchable persistent-intent content classified prior to measuring outcomes",
+    "trend_or_event": "Event, release, news, seasonal or short-horizon topical content classified prior to measuring outcomes"
+  },
+  "metric_types": [
+    {
+      "id": "views",
+      "unit": "views",
+      "access": "public_or_owner",
+      "limitation": "Events not people; 2026-08-24 count definition break, Shorts engaged views separate."
+    },
+    {
+      "id": "estimated_revenue",
+      "unit": "creator_reported_currency",
+      "access": "authorized_owner_only",
+      "limitation": "Estimated native YouTube revenue can be revised; not external sponsorship/merch, before cash production costs, sometimes impossible to allocate fully per video."
+    },
+    {
+      "id": "traffic_source",
+      "unit": "owner_view_events_by_source",
+      "access": "authorized_owner_only",
+      "limitation": "Search, Browse, Suggested, External are different sources; no causal longevity inference."
+    }
+  ],
+  "right_censoring": "Every age horizon must be observed through its final day; missing days are unknown, not zero. Compare complete cohorts and separately report enrollment and attrition.",
+  "population_rules": [
+    "Include zero-view and never-monetized entrant videos if ethically and methodologically observable.",
+    "Never treat only currently monetized channels as typical of all entrants.",
+    "Classify evergreen/trend before looking at outcome curves; prospective classification must not leak view counts.",
+    "Keep long form, Shorts, live replay, language, geographic market and currencies separated.",
+    "Use identical publication-age windows and publish the viewer-metric revision era.",
+    "Do not use ordinary CPM/RPM to assign a public video's owner earnings; get authorized creator statements for financial outcome.",
+    "Do not conflate lifetime views with calendar-month views, or search traffic with guaranteed evergreen cash flow.",
+    "Review holidays/release cycles and date cohort censoring instead of attributing short-term spikes to platform-wide growth."
+  ],
+  "acceptance_gates": [
+    {
+      "id": "predeclared_video_cohort_frame",
+      "pass": false,
+      "reason": "No first-time-publisher representative sampling frame or preregistered inclusion exclusions."
+    },
+    {
+      "id": "completed_matched_age_windows",
+      "pass": false,
+      "reason": "No accessible, independently source-documented 30/90/365-day video-level panel with complete zeros and missingness."
+    },
+    {
+      "id": "authorized_owner_income_and_cost",
+      "pass": false,
+      "reason": "Native revenue, sponsor receipts, creator work hours and expenses unavailable for a representative cohort."
+    },
+    {
+      "id": "comparability_and_bias",
+      "pass": false,
+      "reason": "No predeclared matching, selection analysis, monetization eligibility and geographic/time-window uncertainty."
+    }
+  ],
+  "unmeasured": {
+    "median_evergreen_30day_payout": null,
+    "median_evergreen_90day_payout": null,
+    "median_evergreen_365day_payout": null,
+    "median_trend_365day_payout": null,
+    "evergreen_trend_profit_difference": null,
+    "zero_income_share_by_age": null,
+    "typical_production_hours": null,
+    "causal_longevity_effect": null
+  }
+}

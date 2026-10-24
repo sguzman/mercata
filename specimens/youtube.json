@@ -2176,6 +2176,17 @@
       "evidence_class": "official_platform_external_link_and_spam_policy",
       "license": "Official Help linked and paraphrased",
       "notes": "Links to phishing, malware or Community Guidelines-violating destinations are prohibited; ordinary affiliate links are not inherently banned, spam may be."
+    },
+    {
+      "id": "yt-revenue-studio-2026",
+      "url": "https://support.google.com/youtube/answer/9314357?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Understand ad revenue analytics",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_creator_revenue_metric_definitions",
+      "license": "Official documentation linked, independently summarized",
+      "notes": "Owner-only estimated revenue, ad revenue and RPM are different bases; sponsorships, direct commerce and some external income excluded. Earnings are adjustable."
     }
   ],
   "claims": [
@@ -4430,6 +4441,28 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Subgroup-conditional self-reported ever-use in 5,511 total U.S. adult respondents, not percentages of all YouTube viewers or of creators; per-cell n and sampling margins are unverified. Categories follow Pew grouping and cannot be imposed on individuals or extrapolated worldwide."
+    },
+    {
+      "id": "owner-estimated-revenue-not-public-view-pay",
+      "text": "YouTube Studio's owner-facing estimatedRevenue covers several native creator-income sources after applicable platform shares and is not interchangeable with CPM, ad-only earnings or sponsor/merchandise income.",
+      "source_ids": [
+        "yt-revenue-studio-2026",
+        "api-metrics"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Owner data require authorization, native estimated revenue may be adjusted later, and not all native revenue can be assigned to a single video; public view totals cannot determine creator payout."
+    },
+    {
+      "id": "yt-discovery-surface-not-equivalent-to-content-lifecycle",
+      "text": "YouTube Analytics separates traffic from YouTube Search, Browse features, Suggested videos and external sources, while thumbnail impressions omit several playback surfaces; traffic source alone does not establish an evergreen earnings horizon.",
+      "source_ids": [
+        "studio-analytics-help",
+        "api-query-params"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Video age, traffic-source window, format, analytics access, geography and measurement revision must be documented; cross-sectional source shares are not causal longevity estimates."
     }
   ],
   "observations": [],
