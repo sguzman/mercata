@@ -1911,13 +1911,19 @@
           "title": "Distinguish users, accounts, visitors and advertising reach",
           "acceptance": "Define numerator, denominator, eligibility and duplicate-account limits.",
           "weight": 1,
-          "progress": 70,
+          "progress": 83,
           "status": "in_progress",
           "evidence": [
             "specimens/youtube.json",
             "ontology/youtube/us-audience-2026.md",
             "ontology/youtube/analytics-query-guide.json",
-            "ontology/youtube/analytics-query-guide.md"
+            "ontology/youtube/analytics-query-guide.md",
+            "ontology/youtube/audience-population-crosswalk.json",
+            "ontology/youtube/audience-population-crosswalk.md",
+            "site/audience-population-audit.mjs",
+            "tests/audience-population-audit.test.mjs",
+            "tests/site-smoke.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -1926,9 +1932,17 @@
           "title": "Estimate monthly active users",
           "acceptance": "Find dated MAU and geographic coverage, or record a documented unknown.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 67,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/audience-population-crosswalk.json",
+            "ontology/youtube/audience-population-crosswalk.md",
+            "site/audience-population-audit.mjs",
+            "tests/audience-population-audit.test.mjs",
+            "tests/site-smoke.mjs",
+            "site/app.js",
+            "specimens/youtube.json"
+          ]
         },
         {
           "id": "audience-scale/dau",
@@ -1936,9 +1950,17 @@
           "title": "Estimate daily active users",
           "acceptance": "Find dated DAU, activity definition and uncertainty, or record unknown.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 68,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/audience-population-crosswalk.json",
+            "ontology/youtube/audience-population-crosswalk.md",
+            "site/audience-population-audit.mjs",
+            "tests/audience-population-audit.test.mjs",
+            "tests/site-smoke.mjs",
+            "site/app.js",
+            "specimens/youtube.json"
+          ]
         },
         {
           "id": "audience-scale/ad-reach",
@@ -1946,9 +1968,17 @@
           "title": "Measure advertising reach separately",
           "acceptance": "Separate addressable ad audience from active user or subscriber counts.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 79,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/audience-population-crosswalk.json",
+            "ontology/youtube/audience-population-crosswalk.md",
+            "site/audience-population-audit.mjs",
+            "tests/audience-population-audit.test.mjs",
+            "tests/site-smoke.mjs",
+            "site/app.js",
+            "specimens/youtube.json"
+          ]
         },
         {
           "id": "audience-scale/countries",
@@ -2004,9 +2034,17 @@
           "title": "Study duplicate users and cross-platform overlap",
           "acceptance": "Document account versus person counts and deduplication uncertainty.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 65,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/audience-population-crosswalk.json",
+            "ontology/youtube/audience-population-crosswalk.md",
+            "site/audience-population-audit.mjs",
+            "tests/audience-population-audit.test.mjs",
+            "tests/site-smoke.mjs",
+            "site/app.js",
+            "specimens/youtube.json"
+          ]
         },
         {
           "id": "audience-scale/participation",

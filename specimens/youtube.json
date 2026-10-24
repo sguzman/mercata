@@ -2506,6 +2506,17 @@
       "evidence_class": "official_shorts_related_video_link_and_access",
       "license": "Official Help linked; independently summarized without copying media",
       "notes": "Related video in Shorts player may target channel Videos, Shorts or Live; advanced feature access and visibility restrictions apply."
+    },
+    {
+      "id": "pew-us-daily-youtube-2025",
+      "url": "https://www.pewresearch.org/internet/2025/11/20/americans-social-media-use-2025/",
+      "publisher": "Pew Research Center",
+      "title": "Americans' Social Media Use 2025",
+      "published_at": "2025-11-20",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "survey_of_us_adults_platform_use_frequency",
+      "license": "Public research report linked and independently summarized; no images or tables copied",
+      "notes": "Separate 2025 U.S. adult survey of 5,123 respondents Feb 24-March 2, 2025: 48% daily YouTube, not a global DAU estimate; 84% ever use from a different survey (n=5,022)."
     }
   ],
   "claims": [
@@ -5189,6 +5200,38 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Mixed-format and pre/post-revision counts require compatible epochs and separate counting units; no real creator observed."
+    },
+    {
+      "id": "yt-2025-us-daily-self-reported-not-global-dau",
+      "text": "In Pew's U.S. adult February-March 2025 daily-use survey (n=5,123), 48% said they visit YouTube at least daily and 33% said several times daily; this survey percentage is neither a deduplicated daily global user count nor the same survey base as Pew's 84% ever-use prevalence.",
+      "source_ids": [
+        "pew-us-daily-youtube-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Self-reported U.S. adults only, with frequency response categories rather than server-measured users; adjacent ever-use sample n=5,022 surveyed February-June 2025."
+    },
+    {
+      "id": "yt-gwi-monthly-prevalence-not-platform-mau-2026",
+      "text": "GWI's DataReportal April 2026 global past-month YouTube use figures are 55.3% of surveyed internet users aged 16+ including China and Russia, versus 70.6% for a different covered-market sample excluding them; neither is a verified count of distinct monthly YouTube users worldwide.",
+      "source_ids": [
+        "datareportal-midyear-global-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Survey prevalence among covered internet users not platform account logs, not all residents or children, and the two geographic populations differ."
+    },
+    {
+      "id": "yt-country-ad-reach-is-not-mau-2026",
+      "text": "Late-2025 YouTube advertiser planning estimates reported in DataReportal's 2026 country reports describe 85 million ad-reachable people/accounts in Mexico, 254 million in the US and 150 million in Brazil; they do not establish monthly platform users or deduplicated cross-country people.",
+      "source_ids": [
+        "datareportal-2026-mx",
+        "datareportal-2026-us",
+        "datareportal-2026-br"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Google advertising-planner addressable estimates, subject to planning assumptions, age targeting and methodology changes; adult male/female ratios are for the adult ad audience and no summed global census is derived."
     }
   ],
   "observations": [],

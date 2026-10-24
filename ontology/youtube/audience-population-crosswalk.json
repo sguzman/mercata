@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "population_prevalence_and_ad_reach_crosswalk",
+  "as_of": "2026-10-24",
+  "status": "bounded_surveys_and_planner_estimates_no_global_person_mau_or_dau",
+  "method": "Record survey prevalence, daily frequency and country ad planner outputs with explicit distinct denominators; verify no attempt to convert a percentage to unique global people or to add account/ad estimates.",
+  "population": "Surveyed internet users 16+ in GWI covered markets, Pew survey U.S. adults 18+, and independently planned advertising audiences in 3 countries",
+  "source_ids": [
+    "datareportal-midyear-global-2026",
+    "pew-us-daily-youtube-2025",
+    "datareportal-2026-mx",
+    "datareportal-2026-us",
+    "datareportal-2026-br"
+  ],
+  "observations": [
+    {
+      "id": "gwi_global_2026",
+      "value": 55.3,
+      "unit": "percent",
+      "metric": "past_month_self_report",
+      "population": "surveyed_internet_users_16_plus",
+      "scope": "GWI covered markets including China and Russia",
+      "time": "2026 April summary",
+      "denominator": "surveyed internet users age 16+",
+      "source_ids": [
+        "datareportal-midyear-global-2026"
+      ],
+      "kind": "survey_prevalence",
+      "equivalent_to_global_mau": false,
+      "notes": "Cannot scale to the entire global population or count unique platform accounts."
+    },
+    {
+      "id": "gwi_excl_cn_ru_2026",
+      "value": 70.6,
+      "unit": "percent",
+      "metric": "past_month_self_report",
+      "population": "surveyed_internet_users_16_plus_excluding_cn_ru",
+      "scope": "GWI covered markets excluding China and Russia",
+      "time": "2026 April summary",
+      "denominator": "surveyed internet users 16+ in reduced geography",
+      "source_ids": [
+        "datareportal-midyear-global-2026"
+      ],
+      "kind": "survey_prevalence",
+      "equivalent_to_global_mau": false,
+      "notes": "Different geography and denominator from the 55.3% figure."
+    },
+    {
+      "id": "pew_us_daily_2025",
+      "value": 48,
+      "unit": "percent",
+      "metric": "daily_self_report",
+      "population": "us_adults",
+      "scope": "United States",
+      "time": "2025-02-24 to 2025-03-02",
+      "denominator": "5,123 U.S. adult survey respondents",
+      "source_ids": [
+        "pew-us-daily-youtube-2025"
+      ],
+      "kind": "survey_prevalence",
+      "equivalent_to_global_mau": false,
+      "notes": "Daily includes once or several times per day; not a measured count of server-active accounts or global persons."
+    },
+    {
+      "id": "pew_us_daily_multiple_2025",
+      "value": 33,
+      "unit": "percent",
+      "metric": "several_times_daily_self_report",
+      "population": "us_adults",
+      "scope": "United States",
+      "time": "2025-02-24 to 2025-03-02",
+      "denominator": "Same 5,123 U.S. adult survey respondents",
+      "source_ids": [
+        "pew-us-daily-youtube-2025"
+      ],
+      "kind": "survey_prevalence",
+      "equivalent_to_global_mau": false,
+      "notes": "A subset of at-least-daily use; never add to 48%."
+    },
+    {
+      "id": "mexico_2025_ad_reach",
+      "value": 85,
+      "unit": "million_ad_reachable",
+      "metric": "ad_planner_reach",
+      "population": "country_addressable_ad_accounts_or_people",
+      "scope": "Mexico",
+      "time": "late 2025 reported in Digital 2026",
+      "denominator": "Google advertising audience planning estimate",
+      "source_ids": [
+        "datareportal-2026-mx"
+      ],
+      "kind": "ad_estimate",
+      "equivalent_to_global_mau": false,
+      "notes": "Planner estimate, not daily use, monthly use or deduplicated person count."
+    },
+    {
+      "id": "us_2025_ad_reach",
+      "value": 254,
+      "unit": "million_ad_reachable",
+      "metric": "ad_planner_reach",
+      "population": "country_addressable_ad_accounts_or_people",
+      "scope": "United States",
+      "time": "late 2025 reported in Digital 2026",
+      "denominator": "Google advertising audience planning estimate",
+      "source_ids": [
+        "datareportal-2026-us"
+      ],
+      "kind": "ad_estimate",
+      "equivalent_to_global_mau": false,
+      "notes": "Cannot compare to U.S. adult daily use percentage as population count."
+    },
+    {
+      "id": "brazil_2025_ad_reach",
+      "value": 150,
+      "unit": "million_ad_reachable",
+      "metric": "ad_planner_reach",
+      "population": "country_addressable_ad_accounts_or_people",
+      "scope": "Brazil",
+      "time": "late 2025 reported in Digital 2026",
+      "denominator": "Google advertising audience planning estimate",
+      "source_ids": [
+        "datareportal-2026-br"
+      ],
+      "kind": "ad_estimate",
+      "equivalent_to_global_mau": false,
+      "notes": "Neither a MAU nor adult-only population census."
+    }
+  ],
+  "denominator_crosswalk_rules": [
+    "Monthly platform persons require a defined monthly window, geography, signed-out handling, deduplication, and coverage across all eligible audiences; a survey percentage is not a census.",
+    "Global daily active users require a comparable calendar day or clearly defined rolling daily window of deduplicated platform people; annual daily-frequency survey response is not that count.",
+    "Ad-planner reach may change with campaign settings, eligible ages, geography and inventory; it is not a DAU, MAU or count of paying or creating people.",
+    "An online survey denominator of internet users 16+ excludes offline residents, younger people and some markets; ever-use is not past-month use.",
+    "Pew's 48% at least daily and 33% several times daily concern the same 2025 surveyed adult base; the latter is contained in the former.",
+    "Survey country and ad-planner figures have different data sources, periods, geographic coverage and measurement units: do not sum them into world MAU.",
+    "Co-viewing, logged-out use, multiple Google accounts, channel/account duplication and anonymized user models require explicit reconciliation."
+  ],
+  "no_valid_cross_platform_intersection_or_world_total": true,
+  "unmeasured": {
+    "global_unique_mau": null,
+    "global_unique_dau": null,
+    "us_unique_mau": null,
+    "us_unique_dau": null,
+    "platformwide_account_deduplication_rate": null,
+    "world_ad_reach_deduplicated": null,
+    "new_user_cohort_count": null,
+    "active_unique_creator_count": null
+  },
+  "reported_independent_population_measure": null
+}

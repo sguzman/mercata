@@ -3757,14 +3757,18 @@
       "objective": "Require independent definitions and duplicate-account caveats.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and require independent definitions and duplicate-account caveats.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 83,
       "evidence": [
         "ontology/youtube/viewer-person-metrics.json",
         "ontology/youtube/viewer-person-metrics.md",
         "specimens/youtube.json",
         "site/app.js",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/audience-population-crosswalk.json",
+        "ontology/youtube/audience-population-crosswalk.md",
+        "site/audience-population-audit.mjs",
+        "tests/audience-population-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/viewer-person-metrics.json",
       "priority": "high",
@@ -3778,14 +3782,18 @@
       "objective": "Identify when a campaign estimate excludes users or overlaps regions.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and identify when a campaign estimate excludes users or overlaps regions.",
       "status": "in_progress",
-      "percent": 42,
+      "percent": 81,
       "evidence": [
         "ontology/youtube/viewer-person-metrics.json",
         "ontology/youtube/viewer-person-metrics.md",
         "specimens/youtube.json",
         "site/app.js",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/audience-population-crosswalk.json",
+        "ontology/youtube/audience-population-crosswalk.md",
+        "site/audience-population-audit.mjs",
+        "tests/audience-population-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/viewer-person-metrics.json",
       "priority": "high",
@@ -3799,15 +3807,21 @@
       "objective": "Specify consistent country samples and survey limitations.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify consistent country samples and survey limitations.",
       "status": "in_progress",
-      "percent": 16,
+      "percent": 35,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/audience-population-crosswalk.json",
+        "ontology/youtube/audience-population-crosswalk.md",
+        "site/audience-population-audit.mjs",
+        "tests/audience-population-audit.test.mjs",
+        "tests/site-smoke.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/audience-population-crosswalk.json",
       "priority": "high",
       "phase": 2
     },

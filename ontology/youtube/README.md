@@ -36,6 +36,10 @@ The [paid member cohort and offer-test protocol](member-cohort-protocol.md) and 
 
 The [related-video funnel study](shorts-related-video-funnel.md), [machine measurement gates](shorts-related-video-funnel.json), and [pure event-pair audit](../../site/shorts-referral-audit.mjs) distinguish a link that can be placed in a Shorts player from observed clicks, destination views, overlapping format audiences or causal profit. The website documents which official reports exist and what cannot yet be measured without authorized source-specific attribution.
 
+## Global and country audience measurement
+
+The [audience population and advertising-reach crosswalk](audience-population-crosswalk.md), [machine evidence table](audience-population-crosswalk.json), and [metric comparator](../../site/audience-population-audit.mjs) distinguish GWI past-month survey rates, Pew U.S. adult self-reported daily use, and DataReportal's advertiser addressability estimates. The website displays evidence units; global deduplicated monthly and daily YouTube people remain unmeasured.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.
