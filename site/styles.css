@@ -768,3 +768,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .survey-frame-card p{font-size:12px;margin:8px 0}
 .survey-frame-count{font:22px Georgia,serif;font-variant-numeric:tabular-nums}
 @media(max-width:650px){.survey-frame-details{padding:15px}.survey-frame-grid{grid-template-columns:1fr}}
+
+/* Source-scoped YouTube format eligibility and ad slots (not a revenue forecast). */
+.video-surface-study{margin:28px 0}
+.video-surface-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.video-surface-details>summary{cursor:pointer;font-size:15px;font-weight:800}
+.video-surface-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.video-surface-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.video-surface-card h5{font-size:14px;margin:0 0 9px}
+.video-surface-card p{font-size:12px;margin:7px 0}
+@media(max-width:840px){.video-surface-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.video-surface-details{padding:15px}.video-surface-grid{grid-template-columns:1fr}}

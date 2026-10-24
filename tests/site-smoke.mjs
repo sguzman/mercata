@@ -115,6 +115,12 @@ try{
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');
+    const surfaces=page.locator('.video-surface-study');
+    assert.equal(await surfaces.locator('.video-surface-card').count(),7,'Missing format and ad-inventory study');
+    await surfaces.locator('summary').click();
+    assert((await surfaces.textContent()).includes('8 minutes (480 seconds)'));
+    assert((await surfaces.textContent()).includes('not a served ad'));
+    assert((await surfaces.textContent()).includes('Shorts over one minute'));
     const language=page.locator('.multilingual-distribution');
     assert.equal(await language.locator('.multilingual-product-card').count(),6,'Missing multilingual feature catalog');
     assert.equal(await language.locator('.multilingual-observation').count(),2,'Missing selected product observations');

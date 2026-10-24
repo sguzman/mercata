@@ -612,6 +612,36 @@ test('YPP tax-info and payout-withholding model preserves different revenue base
  assert(model.disallowed_model_shortcuts.some(x=>x.includes('twice')));
 });
 
+test('Seven video monetization surfaces distinguish inventory, replay and disputed Shorts claims',async()=>{
+  const [model,dossier]=await Promise.all([
+    load('ontology/youtube/video-surfaces-economics.json'),
+    load('specimens/youtube.json')
+  ]);
+  const known=new Set(dossier.evidence.map(x=>x.id));
+  assert.equal(model.kind,'video_format_ad_inventory_and_live_replay_research');
+  assert.deepEqual(model.surfaces.map(x=>x.id),[
+    'watch_page_upload','shorts','live','premiere','clip','podcast','live_replay'
+  ]);
+  assert(model.surfaces.every(x=>x.source_ids.length&&x.source_ids.every(id=>known.has(id))));
+  assert(model.surfaces.every(x=>x.revenue_per_view===null&&x.creator_cost===null));
+  assert.equal(model.inventory.watch_page_midroll.threshold_seconds_inclusive,480);
+  assert.equal(model.inventory.watch_page_midroll.chosen_slot_is_ad_guarantee,false);
+  assert.equal(model.inventory.live_midroll.slot_guaranteed_to_serve,false);
+  assert.equal(model.inventory.shorts_feed_ads.is_watch_page_midroll,false);
+  assert.equal(model.surfaces.find(x=>x.id==='shorts').max_seconds,180);
+  assert.equal(model.surfaces.find(x=>x.id==='clip').min_seconds,5);
+  assert.equal(model.surfaces.find(x=>x.id==='clip').max_seconds,60);
+  assert.equal(model.live_replay_comparison.replay_share_of_total_income,null);
+  assert.equal(model.live_replay_comparison.production_labor_hours,null);
+  assert.deepEqual(model.live_replay_comparison.replay_days_after_end,[7,30,90]);
+  assert(model.live_replay_comparison.source_ids.every(id=>known.has(id)));
+  assert.equal(model.dated_policy_conflict.claimed_effective_at,'2026-09-24');
+  assert.equal(model.dated_policy_conflict.resolved_uniform_rule,null);
+  assert.equal(model.dated_policy_conflict.account_specific_application,null);
+  assert(model.dated_policy_conflict.source_ids.every(id=>known.has(id)));
+  assert(Object.values(model.unknowns).every(x=>x===null));
+});
+
 test('Adjacent video comparison is scope-only and does not admit marketplace specimens',async()=>{
  const [model,dossier,gallery]=await Promise.all([
   load('ontology/youtube/comparison-set.json'),load('specimens/youtube.json'),load('gallery/index.json')
