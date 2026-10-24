@@ -2110,6 +2110,28 @@
       "evidence_class": "vendor_platform_creators_campaign_applications_not_youtube_only",
       "license": "Public commercial platform report summarized independently; no third-party artwork or records reproduced",
       "notes": "17,288 creator applications to 2,605 platform brand campaigns Jan 1–Mar 27 2026. Application mix is not YouTube-sponsored video frequency or market spend."
+    },
+    {
+      "id": "air-2026-publishing-cadence-282",
+      "url": "https://air.io/en/air-data-findings/does-posting-more-on-youtube-hurt-your-rpm",
+      "publisher": "AIR Media-Tech",
+      "title": "Does Posting More On YouTube Hurt Your RPM?",
+      "published_at": "2026-07-14",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commercial_partner_channel_owner_analytics_within_channel_sample",
+      "license": "Vendor's public aggregate table summarized independently; no raw partner analytics copied",
+      "notes": "282 monetizing-access partner channels, 13 niches, medians and p25–p75 volume by niche/channel size. Not representative of new or never-monetized channels; months and eligible population not fully reported."
+    },
+    {
+      "id": "vidiq-july2026-upload-frequency",
+      "url": "https://vidiq.com/research/youtube-upload-frequency-study/",
+      "publisher": "vidIQ Research",
+      "title": "YouTube Upload Frequency Study: How Often Should You Upload?",
+      "published_at": "2026-07-08",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commercial_10m_plus_public_channel_upload_cadence_sample",
+      "license": "Source-linked aggregate bins and median growth independently summarized",
+      "notes": "10,210,278 YouTube channels with at least 1,000 subscribers, April 2025–March 2026; long form plus Shorts; correlational median growth across monthly upload tiers."
     }
   ],
   "claims": [
@@ -4252,6 +4274,37 @@
       "observed_at": "2026-10-24",
       "confidence": "medium",
       "limitations": "A commercial platform's market-specific applicant mix and campaign tags; not all creators, YouTube-only projects, or probability-weighted brand demand."
+    },
+    {
+      "id": "air-2026-peer-cadence-niche-quartiles",
+      "text": "AIR Media-Tech reports monthly upload medians and 25th–75th percentile ranges from a 282-channel YouTube Analytics-access study: small gaming channels 3 (2–8), medium gaming channels 10 (4–19), and medium educational channels 26 (13–31) uploads per month.",
+      "source_ids": [
+        "air-2026-publishing-cadence-282"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Partner/selected owner-access channels and size-specific niche groups; not an all-new-creator cadence population or causal RPM effect. Percentiles describe this vendor sample."
+    },
+    {
+      "id": "vidiq-2026-upload-volume-not-causal-growth",
+      "text": "vidIQ's July 2026 report grouped 10,210,278 channels with at least 1,000 subscribers by average monthly uploads from April 2025 through March 2026, reporting median monthly view growth of 0.53% below one upload and 2.18% at 12 or more.",
+      "source_ids": [
+        "vidiq-july2026-upload-frequency"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Includes Shorts and long-form, excludes channels below 1,000 subscribers; observational association confounded by established channels, content formats, teams and demand, not evidence that frequency causes growth."
+    },
+    {
+      "id": "cadence-benchmarks-format-and-population-non-equivalence",
+      "text": "A 2026 niche-specific publishing-cadence table drawn from 282 owner-Analytics channels is not directly comparable to a 10.2-million-channel index combining Shorts and long-form uploads at an at-least-1,000-subscriber entry threshold.",
+      "source_ids": [
+        "air-2026-publishing-cadence-282",
+        "vidiq-july2026-upload-frequency"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Neither study establishes median uploads among all first-time publishers, the marginal profit of an extra upload, or matched per-channel format-specific labor hours."
     }
   ],
   "observations": [],
