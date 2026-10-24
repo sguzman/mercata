@@ -896,3 +896,15 @@ h1 em {font-style:italic;color:var(--accent)}
 .nfl-seasonality-card h5{font-size:13px;margin:10px 0 7px}
 .nfl-seasonality-card p{font-size:12px;margin:0}
 @media(max-width:650px){.nfl-seasonality-details{padding:15px}.nfl-seasonality-grid{grid-template-columns:1fr}}
+
+/* Observed promotional-video detections, not creator cash earnings */
+.sponsor-categories{margin:28px 0}
+.sponsor-categories-details{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:20px}
+.sponsor-categories-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.sponsor-categories-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.sponsor-category-card{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;overflow-wrap:anywhere}
+.sponsor-category-card h5{font-size:14px;text-transform:capitalize;margin:0 0 8px}
+.sponsor-category-density{font:26px Georgia,serif;font-variant-numeric:tabular-nums}
+.sponsor-category-card p{font-size:12px;margin:8px 0}
+@media(max-width:900px){.sponsor-categories-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.sponsor-categories-details{padding:15px}.sponsor-categories-grid{grid-template-columns:1fr}}

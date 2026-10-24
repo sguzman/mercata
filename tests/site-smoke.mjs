@@ -215,6 +215,11 @@ try{
     assert((await safety.textContent()).includes('October 21, 2026'));
     assert((await safety.textContent()).includes('not guaranteed'));
     assert((await safety.textContent()).includes('recovery success are unmeasured'));
+    const sponsorStudy=page.locator('.sponsor-categories');
+    assert.equal(await sponsorStudy.locator('.sponsor-category-card').count(),11,'Missing sourced long-form sponsorship categories');
+    await sponsorStudy.locator('summary').click();
+    assert((await sponsorStudy.textContent()).includes('176,686 detections (6.1%)'));
+    assert((await sponsorStudy.textContent()).includes('newcomer zero-earner share'));
     const brand=page.locator('.brand-disclosure');
     assert.equal(await brand.locator('.brand-disclosure-card').count(),3,'Missing independent platform/legal layers');
     assert.equal(await brand.locator('.brand-disclosure-surface').count(),4,'Missing video/live/affiliate disclosure scopes');

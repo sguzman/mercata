@@ -26,7 +26,7 @@ The [publication rights gate](publication-rights.md), [machine rights manifest](
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **180 references, 173 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **190 references, 183 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -125,6 +125,10 @@ The [source-concentration study](traffic-concentration.md), [machine model](traf
 ## Channel safety, moderation and October 2026 unauthorized-access pauses
 
 The [official-source creator safety study](creator-safety-continuity.md) and [machine record](creator-safety-continuity.json) differentiate moderation controls, prohibited harassment, privacy and realistic-likeness complaints, and compromised account recovery. They also track TeamYouTube's October 21, 2026 temporary publishing restrictions for suspected unauthorized access. The published typical review time is not a guaranteed recovery period; existing video access and monetization status are stated to continue during the pause. Recovery success, incident rates, real interruptions and income loss remain unknown.
+
+## Sponsorship detections by content category, 2025–2026
+
+The [dated research comparison](sponsor-category-evidence.md) and [machine samples](sponsor-category-evidence.json) separate ThoughtLeaders long-form videos with detected sponsor-style reads, SponsorRadar video placement detections, and Upfluence multi-platform campaign applications. Each reports different units, populations and dates. They do not supply paid-contract amounts or representative new-creator sponsorship income; Shorts detection and creator costs remain unknown.
 
 ## U.S.-viewer withholding versus worldwide missing-form deductions
 

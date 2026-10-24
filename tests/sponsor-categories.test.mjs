@@ -1,0 +1,40 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const read=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
+test('Three sponsorship datasets retain incompatible category, time and payment units',async()=>{
+ const [data,dossier]=await Promise.all([
+   read('ontology/youtube/sponsor-category-evidence.json'),read('specimens/youtube.json')
+ ]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(data.kind,'bounded_sponsored_content_activity_by_category');
+ assert.equal(data.datasets.length,3);
+ assert(data.datasets.every(x=>x.source_ids.every(id=>ids.has(id))));
+ const thought=data.datasets.find(x=>x.id==='thoughtleaders-oct-2026');
+ assert.equal(thought.categories.length,11);
+ assert.equal(thought.last_window.sponsored_longform_videos,176686);
+ assert.equal(thought.last_window.density_percent,6.1);
+ assert.equal(thought.last_window.start,'2026-09-15');
+ assert.equal(thought.last_window.end,'2026-10-14');
+ assert.equal(thought.correction_date,'2026-10-17');
+ assert.equal(thought.missing.signed_contract_count,null);
+ assert.equal(thought.missing.paid_creator_revenue,null);
+ assert.equal(thought.missing.shorts_sponsorship_count,null);
+ assert.equal(thought.categories.find(x=>x.id==='gaming').sponsored_videos,37093);
+ assert.equal(thought.categories.find(x=>x.id==='gaming').density_last_pct,8.6);
+ assert.equal(thought.categories.find(x=>x.id==='health_fitness').density_last_pct,15);
+ assert.equal(thought.categories.find(x=>x.id==='news_politics').density_last_pct,1.9);
+ assert(thought.categories.every(x=>x.sponsored_videos>0 && x.density_last_pct>0 &&
+    x.density_last_pct<=100 && x.source_ids.every(id=>ids.has(id))));
+ const radar=data.datasets.find(x=>x.id==='sponsorradar-feb2025-jan2026');
+ assert.equal(radar.detected_placements_all_categories,660985);
+ assert.equal(radar.categories.find(x=>x.id==='gaming').detected_placements,147964);
+ assert.equal(radar.missing.typical_sponsor_fee,null);
+ const upfluence=data.datasets.find(x=>x.id==='upfluence-q1-2026');
+ assert.equal(upfluence.reported_applications_total,17288);
+ assert.equal(upfluence.reported_brand_campaigns,2605);
+ assert.equal(upfluence.missing.youtube_application_count,null);
+ assert(Object.values(data.unmeasured).every(x=>x===null));
+ assert(data.cross_dataset_rules.some(x=>x.includes('Do not add detections')));
+ assert(data.cross_dataset_rules.some(x=>x.includes('contracts')));
+});
