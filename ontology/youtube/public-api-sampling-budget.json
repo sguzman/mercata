@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "public_content_sampling_and_quota_plan",
+  "as_of": "2026-10-23",
+  "documentation_updated_at": "2026-10-15",
+  "status": "methodology_and_illustrative_budget_no_api_execution",
+  "sources": [
+    {
+      "id": "api-quota-oct-2026",
+      "source_id": "api-quota-oct-2026",
+      "url": "https://developers.google.com/youtube/data/determine_quota_cost",
+      "scope": "Default quota allocations and per-method costs at the dated documentation snapshot"
+    },
+    {
+      "id": "api-search",
+      "source_id": "api-search",
+      "url": "https://developers.google.com/youtube/data/reference/rest/v3/search/list",
+      "scope": "Public content search response limits and approximate totalResults"
+    },
+    {
+      "id": "api-videos-list-oct-2026",
+      "source_id": "api-videos-list-oct-2026",
+      "url": "https://developers.google.com/youtube/data/reference/rest/v3/videos/list",
+      "scope": "Video metadata/statistics lookup scope and quota"
+    },
+    {
+      "id": "api-channels-list-oct-2026",
+      "source_id": "api-channels-list-oct-2026",
+      "url": "https://developers.google.com/youtube/data/reference/rest/v3/channels/list",
+      "scope": "Channel metadata lookup scope and quota"
+    }
+  ],
+  "default_quota_snapshot": {
+    "daily_reset": "midnight Pacific Time",
+    "not_a_guarantee_for_every_project": true,
+    "requires_check_of_actual_project_settings": true,
+    "search_list": {
+      "bucket": "search_calls",
+      "max_calls_per_day_default": 100,
+      "cost_units_per_call": 1,
+      "min_items_per_page": 0,
+      "max_items_per_page": 50,
+      "default_items_per_page": 5
+    },
+    "video_insert": {
+      "bucket": "upload_calls",
+      "max_calls_per_day_default": 100,
+      "cost_units_per_call": 1,
+      "used_in_research": false
+    },
+    "other_endpoints": {
+      "bucket": "general_api_units",
+      "max_units_per_day_default": 10000
+    },
+    "videos_list": {
+      "bucket": "general_api_units",
+      "cost_units_per_call": 1,
+      "max_ids_per_call": 50
+    },
+    "channels_list": {
+      "bucket": "general_api_units",
+      "cost_units_per_call": 1
+    },
+    "search_total_results": {
+      "is_approximate": true,
+      "capped_reported_value": 1000000,
+      "is_complete_enumeration": false
+    },
+    "scoping_note": "Search requests, including pagination, debit the separate search call bucket; video/channel lookups use the shared other-method bucket. Values are defaults, not a credential's observed allocations."
+  },
+  "stratum_definition": [
+    "topic_id",
+    "query_text",
+    "language_tag",
+    "region_code",
+    "format",
+    "published_after",
+    "published_before",
+    "ordering",
+    "collection_timestamp",
+    "retrieval_method",
+    "inclusion_rules",
+    "exclusion_rules"
+  ],
+  "collection_protocol": [
+    {
+      "id": "pre_register",
+      "action": "Specify intended estimand, topics, geography, language, content formats, fixed time windows and explicit target units before searching",
+      "outputs": [
+        "public_study_plan"
+      ],
+      "access": "no_api"
+    },
+    {
+      "id": "quota_snapshot",
+      "action": "Read the actual project quota page and calendar reset time before any authorized API use; record effective configuration",
+      "outputs": [
+        "actual_quota_snapshot"
+      ],
+      "access": "authorized_project_admin_only"
+    },
+    {
+      "id": "search",
+      "action": "Request a limited number of search.list result pages per predeclared stratum. Track each actual nextPageToken, request timestamp and returned count",
+      "outputs": [
+        "search_pages",
+        "query_manifest"
+      ],
+      "access": "public_api_subject_to_terms"
+    },
+    {
+      "id": "deduplicate",
+      "action": "Deduplicate video/channel identifiers within and across topic strata, counting overlap explicitly",
+      "outputs": [
+        "unique_video_ids",
+        "unique_channel_ids",
+        "overlap_matrix"
+      ],
+      "access": "local_metadata"
+    },
+    {
+      "id": "enrich",
+      "action": "Use videos.list and channels.list for authorized public metadata of already discovered IDs, with separate quota accounting",
+      "outputs": [
+        "public_observation_records"
+      ],
+      "access": "public_api_subject_to_terms"
+    },
+    {
+      "id": "classify",
+      "action": "Apply blinded or reproducible inclusion/exclusion judgments and uncertainty coding without profiling viewers",
+      "outputs": [
+        "classified_aggregate"
+      ],
+      "access": "local_aggregation"
+    },
+    {
+      "id": "publish",
+      "action": "Publish aggregate counts of observed items, sampling coverage, missingness, source snapshots and limitations; not inferred unique people",
+      "outputs": [
+        "audit_log",
+        "aggregate_results"
+      ],
+      "access": "public_publish_after_rights_review"
+    }
+  ],
+  "synthetic_budget_example": {
+    "kind": "illustration_not_actual_query_plan",
+    "topic_count": 4,
+    "regions": 3,
+    "languages": 2,
+    "formats": 2,
+    "pages_per_stratum": 1,
+    "strata": 48,
+    "estimated_search_calls": 48,
+    "default_search_calls_remaining": 52,
+    "max_search_result_slots": 2400,
+    "videos_list_calls_if_2400_unique_ids": 48,
+    "claimed_observed_videos": null,
+    "claimed_observed_creators": null,
+    "claimed_unique_viewers": null,
+    "estimated_search_coverage_fraction": null
+  },
+  "sampling_limitations": [
+    "Search ranking, region, language, date, privacy settings and index coverage create nonprobability discovery samples.",
+    "Each request may return fewer than requested maximum; pagination requires actual nextPageToken.",
+    "Search.pageInfo.totalResults is approximate, capped at one million, and not a list of members, channels, videos or viewers.",
+    "Channels can post in multiple topics; duplicated IDs must be counted once within an estimand but their multiple labels retained.",
+    "Archived/deleted/unavailable/private videos are unobserved; lack of search appearance is not proof of absence.",
+    "Public video first-frame view counts after August 24, 2026 differ from prior counting definitions.",
+    "No individual sensitive demographics are inferred from channel names, photos, descriptions or topic memberships.",
+    "A quota budget is a technical upper bound, not a representative sample or actual achieved coverage.",
+    "Actual API requests, credentials, rights, billing and public sharing require separate explicit authorization and applicable terms."
+  ],
+  "target_estimands": {
+    "all_active_channels_in_topic": null,
+    "all_uploads_in_topic": null,
+    "worldwide_unique_viewers_in_topic": null,
+    "mean_creator_revenue_in_topic": null,
+    "median_creator_profit_in_topic": null
+  },
+  "authorization": {
+    "created_api_credentials": false,
+    "api_queries_executed": false,
+    "paid_services_used": false,
+    "individual_profiles_collected": false
+  }
+}
