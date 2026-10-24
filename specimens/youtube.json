@@ -2385,6 +2385,39 @@
       "evidence_class": "official_creator_audience_report_uses",
       "license": "Linked official guidance; independently summarized",
       "notes": "Audience activity and watched format reports are owner-specific contextual inputs, not exact viewer geography or evidence of a universal best time."
+    },
+    {
+      "id": "yt-comments-settings-2026",
+      "url": "https://support.google.com/youtube/answer/9483359?hl=en",
+      "title": "Learn about comment settings",
+      "publisher": "YouTube Help",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_comment_moderation",
+      "license": "Official documentation linked and independently summarized; no media copied",
+      "notes": "Describes platform-native capabilities, not representative buyer sentiment, conversion rates or business valuation."
+    },
+    {
+      "id": "yt-review-comments-2026",
+      "url": "https://support.google.com/youtube/answer/9482367?hl=en",
+      "title": "Review and reply to comments",
+      "publisher": "YouTube Help",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_reactions_and_pinning",
+      "license": "Official documentation linked and independently summarized; no media copied",
+      "notes": "Describes platform-native capabilities, not representative buyer sentiment, conversion rates or business valuation."
+    },
+    {
+      "id": "yt-community-controls-2026",
+      "url": "https://support.google.com/youtube/answer/16622701?hl=en",
+      "title": "Manage your channel's moderation settings",
+      "publisher": "YouTube Help",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_moderation_controls",
+      "license": "Official documentation linked and independently summarized; no media copied",
+      "notes": "Describes platform-native capabilities, not representative buyer sentiment, conversion rates or business valuation."
     }
   ],
   "claims": [
@@ -4949,6 +4982,40 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Suppressed geography cannot be coded as zero or as an absence of viewers, and exact suppression thresholds are unpublished."
+    },
+    {
+      "id": "yt-native-feedback-moderated-2026",
+      "text": "Video comments can be moderated, held, paused, disabled or highlighted; visible comments are neither verified purchase reviews nor an unbiased sample of viewers.",
+      "source_ids": [
+        "yt-comments-settings-2026",
+        "yt-review-comments-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Based on documented features and exclusions, not measured creator switching costs, migration outcomes or revenue effects; unlisted data-transfer options remain unassessed."
+    },
+    {
+      "id": "yt-audience-relationship-not-customer-export-2026",
+      "text": "Studio distinguishes subscribers, returning viewers and monthly unique channel viewers. These measures are not a transferable customer contact record.",
+      "source_ids": [
+        "analytics-audience",
+        "yt-regular-viewers-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Based on documented features and exclusions, not measured creator switching costs, migration outcomes or revenue effects; unlisted data-transfer options remain unassessed."
+    },
+    {
+      "id": "yt-internal-channel-move-differs-from-export-2026",
+      "text": "YouTube documents conditional download of uploaded videos and separately a Brand Account channel transfer that risks losing destination content; these features do not establish export of followers or reviews to another platform.",
+      "source_ids": [
+        "yt-own-video-download",
+        "yt-brand-channel-transfer",
+        "yt-studio-channel-permissions"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Based on documented features and exclusions, not measured creator switching costs, migration outcomes or revenue effects; unlisted data-transfer options remain unassessed."
     }
   ],
   "observations": [],
@@ -5685,5 +5752,5 @@
     ]
   },
   "summary": "YouTube combines video publication and discovery with advertising, subscriptions and creator payments. Primary-source research has begun on monetization eligibility, revenue formulas, audience measurement and policy limits. Platform population, subculture sizes and representative creator earnings are not yet established.",
-  "updated_at": "2026-10-23"
+  "updated_at": "2026-10-24"
 }

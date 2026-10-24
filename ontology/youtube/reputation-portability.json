@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "native_feedback_and_portability_study",
+  "as_of": "2026-10-24",
+  "status": "official_feature_review_no_observed_economic_or_audience_transfer",
+  "method": "Classify each official feedback, audience, asset or governance surface by unit and documented movement boundary. Reviewed Help pages do not constitute a representative creator or viewer sample.",
+  "population": "YouTube creators, viewers, subscribers and channel delegates; no sampled economic-outcome cohort",
+  "source_ids": [
+    "yt-comments-settings-2026",
+    "yt-review-comments-2026",
+    "yt-community-controls-2026",
+    "analytics-audience",
+    "yt-regular-viewers-2026",
+    "yt-own-video-download",
+    "yt-brand-channel-transfer",
+    "yt-studio-channel-permissions"
+  ],
+  "native_marketplace_rating_verified": false,
+  "verified_buyer_review_population": null,
+  "surfaces": [
+    {
+      "id": "comments",
+      "title": "Video comments, hearts and pins",
+      "kind": "feedback",
+      "transfer_scope": "native_feedback",
+      "mechanism": "Creators can review, reply, heart, pin, remove or hold video comments.",
+      "limit": "Visible feedback is moderated, not a verified purchase review or representative audience sample.",
+      "source_ids": [
+        "yt-comments-settings-2026",
+        "yt-review-comments-2026"
+      ],
+      "observed_net_revenue_effect": null,
+      "verified_buyer_score": null
+    },
+    {
+      "id": "community",
+      "title": "Live chat and Community posts",
+      "kind": "feedback",
+      "transfer_scope": "native_feedback",
+      "mechanism": "YouTube Studio supports controls for live chat, comments and community posts.",
+      "limit": "Published community participation is not a deduplicated population or loyalty probability.",
+      "source_ids": [
+        "yt-community-controls-2026"
+      ],
+      "observed_net_revenue_effect": null,
+      "verified_buyer_score": null
+    },
+    {
+      "id": "subscribers",
+      "title": "Channel subscriptions",
+      "kind": "audience",
+      "transfer_scope": "transfer_unverified",
+      "mechanism": "Studio distinguishes subscriber relationships from active viewers.",
+      "limit": "Subscribers are not consenting off-platform contacts, guaranteed views or paying buyers.",
+      "source_ids": [
+        "analytics-audience"
+      ],
+      "observed_net_revenue_effect": null,
+      "verified_buyer_score": null
+    },
+    {
+      "id": "returning_viewers",
+      "title": "Monthly and returning viewers",
+      "kind": "audience",
+      "transfer_scope": "owner_aggregate_only",
+      "mechanism": "Studio displays estimated monthly, new, returning and regular viewers.",
+      "limit": "Aggregated owner analytics do not provide the identities of reachable customers.",
+      "source_ids": [
+        "analytics-audience",
+        "yt-regular-viewers-2026"
+      ],
+      "observed_net_revenue_effect": null,
+      "verified_buyer_score": null
+    },
+    {
+      "id": "video_assets",
+      "title": "Uploaded creator video files",
+      "kind": "asset",
+      "transfer_scope": "conditional_content_export",
+      "mechanism": "Studio and Google Takeout can download eligible creator uploads.",
+      "limit": "Copying videos does not transfer their recommendation history, subscriber relationships or earnings.",
+      "source_ids": [
+        "yt-own-video-download"
+      ],
+      "observed_net_revenue_effect": null,
+      "verified_buyer_score": null
+    },
+    {
+      "id": "brand_move",
+      "title": "Brand Account channel moves",
+      "kind": "governance",
+      "transfer_scope": "conditional_internal_move",
+      "mechanism": "A channel may be moved to an eligible Brand Account with a documented deletion risk.",
+      "limit": "This is an internal YouTube transfer, not cross-platform export or assignment of a commercial contract.",
+      "source_ids": [
+        "yt-brand-channel-transfer"
+      ],
+      "observed_net_revenue_effect": null,
+      "verified_buyer_score": null
+    },
+    {
+      "id": "studio_access",
+      "title": "Studio collaborator permissions",
+      "kind": "governance",
+      "transfer_scope": "delegation_only",
+      "mechanism": "YouTube Studio grants role-limited access without sharing a Google password.",
+      "limit": "Delegation is not channel sale, copyright transfer or portable social reputation.",
+      "source_ids": [
+        "yt-studio-channel-permissions"
+      ],
+      "observed_net_revenue_effect": null,
+      "verified_buyer_score": null
+    }
+  ],
+  "measurement_requirements": [
+    "Sample a defined entry cohort including inactive and zero-engagement channels.",
+    "Separate visible from held, deleted or moderated comments; never infer unbiased sentiment.",
+    "Use comparable dated view, subscriber and unique-audience denominators.",
+    "Document consented off-platform reach and measured actual migration rather than assuming subscribers follow.",
+    "Separate downloadable creator-owned videos, within-platform account movement and delegated staff access.",
+    "Measure actual labor/cash interruption and net revenue before inferring switching costs."
+  ],
+  "unmeasured": {
+    "creator_buyer_rating_distribution": null,
+    "verified_buyer_review_share": null,
+    "off_platform_audience_migration_rate": null,
+    "median_switching_cash_cost": null,
+    "median_switching_hours": null,
+    "causal_reputation_sales_lift": null,
+    "channel_business_resale_value": null
+  },
+  "limitations": [
+    "No documented off-platform follower export is not a proof no conceivable lawful transfer mechanism exists.",
+    "Comments are not a transaction-verified buyer sample.",
+    "A Brand Account move is not a cross-platform move.",
+    "Public engagement is not verified creator profit."
+  ]
+}

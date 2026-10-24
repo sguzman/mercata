@@ -745,7 +745,7 @@
           "title": "Review buyer and creator switching costs",
           "acceptance": "Document lock-in, export, reviews and transferability.",
           "weight": 1,
-          "progress": 22,
+          "progress": 62,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/competition-observations.json",
@@ -756,7 +756,12 @@
             "ontology/youtube/comparison-set.md",
             "specimens/youtube.json",
             "tests/youtube.test.mjs",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/reputation-portability.json",
+            "ontology/youtube/reputation-portability.md",
+            "site/reputation-portability.mjs",
+            "tests/reputation-portability.test.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -1047,14 +1052,19 @@
           "title": "Study portability of content and audience",
           "acceptance": "Record exports, email access, ratings and account limits.",
           "weight": 1,
-          "progress": 65,
+          "progress": 78,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/channel-ownership-continuity.json",
             "ontology/youtube/channel-ownership-continuity.md",
             "specimens/youtube.json",
             "tests/youtube.test.mjs",
-            "scripts/verify.mjs"
+            "scripts/verify.mjs",
+            "ontology/youtube/reputation-portability.json",
+            "ontology/youtube/reputation-portability.md",
+            "site/reputation-portability.mjs",
+            "tests/reputation-portability.test.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -1157,9 +1167,16 @@
           "title": "Document buyer feedback mechanisms",
           "acceptance": "Describe ratings, reviews, moderation and reputation transfer.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 76,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/reputation-portability.json",
+            "ontology/youtube/reputation-portability.md",
+            "site/reputation-portability.mjs",
+            "tests/reputation-portability.test.mjs",
+            "site/app.js",
+            "specimens/youtube.json"
+          ]
         },
         {
           "id": "sales/retention",
