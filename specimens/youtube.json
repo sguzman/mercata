@@ -1769,6 +1769,17 @@
       "evidence_class": "official_audience_measurement_release",
       "license": "Barb public methodological news release linked; independently paraphrased limited aggregate observations.",
       "notes": "Q2 2025 in-home Wi-Fi YouTube viewing device shares for 16+ and children 4-15. Device shares are service-level. Separate ACR selected 200-channel TV-only panel excludes Shorts/live/music and other specified formats; don't conflate."
+    },
+    {
+      "id": "yt-age-restricted-content-2026",
+      "url": "https://support.google.com/youtube/answer/2802167?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Age-restricted content",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_adult_age_gate_and_ad_eligibility_policy",
+      "license": "Official product policy cited; independently summarized",
+      "notes": "18+ signed-in requirement, limitations on embedding, ads may be limited. Not a made-for-kids designation."
     }
   ],
   "claims": [
@@ -3501,6 +3512,47 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Child device share is aggregate service-level viewing, not identification of individual minors. The 200-channel ACR sample cannot represent all YouTube, and its exclusions must not be incorrectly applied to the service-wide device shares."
+    },
+    {
+      "id": "kids-general-animation-not-automatically-directed",
+      "text": "YouTube explicitly distinguishes child-directed mixed audiences from general-family animation: being family-friendly or including cartoons does not automatically make content intended for children.",
+      "source_ids": [
+        "kids-interpretation"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Content classification, legal age definitions and survey populations are conditional on the specific source, country and period; no individual child or creator income inferred."
+    },
+    {
+      "id": "made-for-kids-restricts-personalized-ads-engagement",
+      "text": "YouTube's made-for-kids designation removes personalized advertising and disables or restricts comments, notification features, live chat and several fan-funding or commerce interactions for affected videos.",
+      "source_ids": [
+        "kids-policy"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Content classification, legal age definitions and survey populations are conditional on the specific source, country and period; no individual child or creator income inferred."
+    },
+    {
+      "id": "age-restricted-18-plus-distinct-from-made-for-kids",
+      "text": "YouTube 18+ age-restricted content is unavailable to signed-out or underage viewers and may have limited ads; it is a different classification from made-for-kids or general-audience animation.",
+      "source_ids": [
+        "yt-age-restricted-content-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Content classification, legal age definitions and survey populations are conditional on the specific source, country and period; no individual child or creator income inferred."
+    },
+    {
+      "id": "ofcom-child-viewers-not-zero-2025",
+      "text": "Ofcom reported that 96% of UK children aged 8–14 in its 2025 online measurement used YouTube, while the sample population differs from adult survey frames and from 4–15-year-old in-home Barb viewing measures.",
+      "source_ids": [
+        "ofcom-uk-online-2025",
+        "barb-uk-screen-share-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Content classification, legal age definitions and survey populations are conditional on the specific source, country and period; no individual child or creator income inferred."
     }
   ],
   "observations": [],

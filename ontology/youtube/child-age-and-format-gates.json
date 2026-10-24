@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "child_audience_eligibility_and_format_distinctions",
+  "as_of": "2026-10-24",
+  "status": "official_content_policy_and_separately_bounded_age_surveys_no_minor_profile",
+  "sources": [
+    "kids-policy",
+    "kids-interpretation",
+    "yt-age-restricted-content-2026",
+    "ofcom-uk-online-2025",
+    "barb-uk-screen-share-2025"
+  ],
+  "classification_cases": [
+    {
+      "id": "made_for_kids",
+      "label": "Made for kids",
+      "intended_audience": "Children are the primary or among the deliberately targeted audiences under applicable child-directed criteria",
+      "studio_category": "made_for_kids",
+      "us_legal_child_age_under": 13,
+      "country_specific_legal_child_age": null,
+      "default_user_age_min": null,
+      "source_ids": [
+        "kids-policy",
+        "kids-interpretation"
+      ],
+      "limitations": "Classification needs actual intent and multi-factor review; no video genre or animation style independently proves this designation."
+    },
+    {
+      "id": "mixed_audience_child_directed",
+      "label": "Mixed audience that is child directed",
+      "intended_audience": "Children are one intentionally targeted audience, even if not primary",
+      "studio_category": "made_for_kids",
+      "us_legal_child_age_under": 13,
+      "country_specific_legal_child_age": null,
+      "default_user_age_min": null,
+      "source_ids": [
+        "kids-interpretation"
+      ],
+      "limitations": "Mixed audience in COPPA context is not the same as content merely safe for a wide family audience."
+    },
+    {
+      "id": "general_family_friendly",
+      "label": "General/family-friendly content",
+      "intended_audience": "Content possibly appealing to all ages without deliberately addressing children",
+      "studio_category": "not_automatically_made_for_kids",
+      "us_legal_child_age_under": null,
+      "country_specific_legal_child_age": null,
+      "default_user_age_min": null,
+      "source_ids": [
+        "kids-interpretation"
+      ],
+      "limitations": "Animated characters, hobbies and family-safe presentation do not alone determine made-for-kids classification."
+    },
+    {
+      "id": "teen_or_older_general",
+      "label": "Teen-or-older general audience",
+      "intended_audience": "Teen or adult viewers; not deliberately targeted at children under applicable child-directed criteria",
+      "studio_category": "generally_not_made_for_kids",
+      "us_legal_child_age_under": null,
+      "country_specific_legal_child_age": null,
+      "default_user_age_min": null,
+      "source_ids": [
+        "kids-interpretation"
+      ],
+      "limitations": "This is about creator intent and content criteria, not a verified age composition of actual viewers."
+    },
+    {
+      "id": "age_restricted_18_plus",
+      "label": "18+ age-restricted video",
+      "intended_audience": "People aged 18+ who are signed in; different from children's content classification",
+      "studio_category": "age_restricted",
+      "us_legal_child_age_under": null,
+      "country_specific_legal_child_age": null,
+      "default_user_age_min": 18,
+      "source_ids": [
+        "yt-age-restricted-content-2026"
+      ],
+      "limitations": "Restricted from signed-out and under-18 viewing and most third-party embeds; ad availability may be limited."
+    }
+  ],
+  "made_for_kids_platform_impacts": {
+    "source_ids": [
+      "kids-policy"
+    ],
+    "personalized_advertising_allowed": false,
+    "comments_enabled": false,
+    "live_chat_enabled": false,
+    "super_chat_or_stickers_enabled": false,
+    "channel_memberships_on_affected_video": false,
+    "notification_bell_enabled": false,
+    "merchandise_ticketing_on_affected_video": false,
+    "posts_on_wholly_child_directed_channel": false,
+    "all_advertising_banned": false,
+    "creator_typical_revenue_effect": null,
+    "source_limit": "Disabled personalized ads do not imply no contextual ads, no views or zero revenue; exact payout effect unmeasured."
+  },
+  "age_restricted_18_plus_impacts": {
+    "source_ids": [
+      "yt-age-restricted-content-2026"
+    ],
+    "signed_out_viewing_allowed": false,
+    "under_18_viewing_allowed": false,
+    "ads_always_disabled": false,
+    "eligible_for_some_ads": true,
+    "typical_rpm": null,
+    "notes": "Viewer must be signed in and 18+, with policy and geo verification variations. Not equivalent to child-directed classification."
+  },
+  "population_observations": [
+    {
+      "id": "uk_ofcom_8_14_2025_use",
+      "source_ids": [
+        "ofcom-uk-online-2025"
+      ],
+      "country": "United Kingdom",
+      "year": 2025,
+      "ages": "8–14",
+      "measure": "reported_use_of_youtube",
+      "value": 96,
+      "unit": "percent_of_defined_age_group",
+      "count_unique_children": null,
+      "survey_error": null,
+      "frame": "Ofcom 2025 online audience study, method reported by publisher",
+      "limitations": "Does not measure children of all ages, U.S. children, actual daily unique accounts or platform-wide child population."
+    },
+    {
+      "id": "uk_barb_4_15_2025_tv",
+      "source_ids": [
+        "barb-uk-screen-share-2025"
+      ],
+      "country": "United Kingdom",
+      "year": 2025,
+      "ages": "4–15",
+      "measure": "tv_set_share_of_in_home_wifi_youtube_viewing",
+      "value": 53,
+      "unit": "percent_of_measured_youtube_viewing_not_people",
+      "count_unique_children": null,
+      "survey_error": null,
+      "frame": "Barb service-level home Wi-Fi YouTube viewing, Q2 2025",
+      "limitations": "Different age range, denominator and method from Ofcom 8–14 platform use; not 53% of children personally watching TV."
+    }
+  ],
+  "excluded_frame_warning": "Adult-only surveys legitimately exclude minors; that exclusion establishes no zero-use claim about children and must not be filled by multiplying adult rates.",
+  "unmeasured": {
+    "global_children_unique_youtube_people": null,
+    "us_under_13_youtube_users": null,
+    "share_made_for_kids_videos": null,
+    "share_of_youtube_viewing_from_children": null,
+    "adult_minors_overlap_in_home": null,
+    "personalized_ad_revenue_loss": null,
+    "child_directed_earnings_median": null,
+    "mixed_audience_channel_prevalence": null,
+    "age_gate_viewer_effect": null,
+    "gender_associated_children_interests": null
+  },
+  "privacy_gates": [
+    "No individual or device-level child profiles, raw histories, inferred age/gender/identity, pictures or comments may be collected for this study.",
+    "Use dated aggregate institutional statistics with explicit age range, geography and method.",
+    "Do not derive child populations by subtracting one adult survey percentage from another unrelated total.",
+    "Distinct format targeting and video classifier rules must be evaluated from intent and public policy, not assumed from title, animated style or presumed viewer demographics.",
+    "Do not publish guidance for circumventing minor protections or personalized-ad restrictions.",
+    "No sponsorship, RPM, creator profitability or number of children inferred from a platform feature restriction."
+  ]
+}
