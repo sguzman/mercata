@@ -57,6 +57,12 @@ try{
     assert.equal(await page.locator('.revenue-pathway-card').count(),16,'Missing distinct monetization routes');
     assert.equal(await page.locator('.earning-gate-details').count(),16,'Missing product-specific eligibility checklists');
     assert.equal(await page.locator('.application-stage').count(),9,'Missing application stages');
+    const effort=page.locator('.production-effort');
+    assert.equal(await effort.locator('.production-effort-card').count(),6,'Missing educational/entertainment production workflows');
+    await effort.locator('summary').click();
+    assert((await effort.textContent()).includes('NOT difficulty scores'));
+    assert((await effort.textContent()).includes('typical hour difference unknown'));
+    assert((await effort.textContent()).includes('abandoned projects and zero earners'));
     const production=page.locator('.production-costs');
     assert.equal(await production.locator('.production-cost-group').count(),2,'Missing money and time classes');
     assert.equal(await production.locator('.production-cost-item').count(),20,'Incomplete creator cost taxonomy');

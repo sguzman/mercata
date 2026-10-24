@@ -157,6 +157,10 @@ The [dated audio-licensing economics investigation](music-rights-economics.md) a
 
 The [opportunity assessment method](opportunity-framework.md) is a ten-dimension framework for comparing real audience demand, competing creator supply, discovery for new channels, revenue mix, cash and labor costs, content-policy restrictions and durability. Its [machine register](opportunity-framework.json) has **33 unranked topics**, each retaining null economic scores until defensible comparative evidence is gathered. A highest-viewed niche is not necessarily the best-paid or easiest to enter.
 
+## Reproducible production barriers and education-versus-entertainment effort
+
+The [production effort comparison](production-effort-comparison.md) and [machine stage/risk mapping](production-effort-comparison.json) cover six educational and entertainment workflows and three matched format contrasts. They distinguish technical eligibility and rights risks from economic choices, and reuse Mercata's ten labor and ten cost categories without inventing hours, price tags or a difficulty score. The [independent structural audit](../../scripts/production-effort-audit.mjs) and [tests](../../tests/production-effort.test.mjs) reject unsupported source IDs, overlapping stage classes and invented comparative effects. No representative format-specific workload or profit distribution exists yet.
+
 ## Measuring equipment, production cash and labor
 
 [Production costs and work-hour measurement](production-costs.md) defines ten expense/asset categories and ten personal-work categories, with a separate [machine-readable study protocol](production-costs.json). It distinguishes hardware already owned from newly paid invoices, external contractors from unpaid creator labor, and rights-holder reductions from second cash expenses. No representative **YouTube-specific** cost, work-hour distribution, economic return, or format-cost ranking has been measured. An adjacent 2025 voluntary survey of 558 independent podcasters is reported separately with its selection and post-launch denominator limits; it is not a YouTube creator benchmark.
