@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "buyer_checkout_price_refund_boundary",
+  "as_of": "2026-10-24",
+  "status": "verified_official_purchase_rules_price_options_not_observed_creator_prices",
+  "method": "Compare distinct supported purchase mechanisms by billing counterparty, charge unit, cancellation/refund policy and evidence. Price examples are entries from official published country-level price schedules, not scraped channel-level offers or currency conversions.",
+  "population": "Eligible YouTube viewers considering paid channel memberships, Supers or external Shopping links; not an observed purchaser sample",
+  "source_ids": [
+    "yt-membership-levels-2026",
+    "yt-membership-price-tips-2026",
+    "yt-membership-buyer-refunds-2026",
+    "yt-supers-buyer-refunds-2026",
+    "yt-shopping-buyer-policies-2026",
+    "yt-membership-us-price-schedule-2026",
+    "yt-membership-mx-price-schedule-2026"
+  ],
+  "products": [
+    {
+      "id": "channel_membership",
+      "label": "Channel memberships",
+      "transaction_type": "recurring_membership",
+      "checkout_owner": "youtube_or_purchase_platform",
+      "money_unit": "per_member_subscription_charge",
+      "buyer_action": "Viewer chooses an enabled channel membership level and signs up through the supported purchase flow.",
+      "price_rule": "Country-specific official membership price options; price and legacy tier may vary by signup date. A channel's displayed member price must be verified directly.",
+      "refund_rule": "Cancellation stops future charges; unused portion normally not refunded. Problems or unauthorized charges have a support route; Apple-billed buyers use Apple refund policy.",
+      "source_ids": [
+        "yt-membership-levels-2026",
+        "yt-membership-price-tips-2026",
+        "yt-membership-buyer-refunds-2026"
+      ],
+      "measured_merchant_seller_offer": null,
+      "median_buyer_price": null,
+      "refund_rate": null,
+      "conversion_rate": null
+    },
+    {
+      "id": "supers",
+      "label": "Super Chat, Stickers and Thanks",
+      "transaction_type": "one_time_voluntary_payment",
+      "checkout_owner": "youtube_or_app_payment_channel",
+      "money_unit": "per_voluntary_payment",
+      "buyer_action": "Viewer initiates a paid on-platform support interaction where eligible.",
+      "price_rule": "Chosen purchase values depend on feature, region and platform; not a standard channel-listing price.",
+      "refund_rule": "Voluntary payments described as non-refundable. An unauthorized charge may be reported.",
+      "source_ids": [
+        "yt-supers-buyer-refunds-2026"
+      ],
+      "measured_merchant_seller_offer": null,
+      "median_buyer_price": null,
+      "refund_rate": null,
+      "conversion_rate": null
+    },
+    {
+      "id": "external_shopping",
+      "label": "Shopping links to a retailer or marketplace",
+      "transaction_type": "external_merchandise_or_service_order",
+      "checkout_owner": "external_retailer_or_marketplace",
+      "money_unit": "per_external_order",
+      "buyer_action": "Viewer follows a retailer or marketplace offering and completes purchase under that seller's terms.",
+      "price_rule": "Merchant sets final price and applicable charges; a displayed product price is not a universal YouTube creator price.",
+      "refund_rule": "Retailer/marketplace handles order, support, returns and refunds for external checkout.",
+      "source_ids": [
+        "yt-shopping-buyer-policies-2026"
+      ],
+      "measured_merchant_seller_offer": null,
+      "median_buyer_price": null,
+      "refund_rate": null,
+      "conversion_rate": null
+    }
+  ],
+  "published_membership_price_examples": {
+    "source_rollout_note": "Price changes began rolling out in May 2025; timing and legacy prices can vary. Country schedules are not a sample of actual creator offers.",
+    "platform_scope": "Published country price options only, not current price of any sampled creator's membership",
+    "observed_creator_price_count": 0,
+    "points": [
+      {
+        "currency": "USD",
+        "country": "US",
+        "tier_usd": 0.99,
+        "local_price": 0.99,
+        "source_id": "yt-membership-us-price-schedule-2026"
+      },
+      {
+        "currency": "USD",
+        "country": "US",
+        "tier_usd": 4.99,
+        "local_price": 4.99,
+        "source_id": "yt-membership-us-price-schedule-2026"
+      },
+      {
+        "currency": "USD",
+        "country": "US",
+        "tier_usd": 9.99,
+        "local_price": 9.99,
+        "source_id": "yt-membership-us-price-schedule-2026"
+      },
+      {
+        "currency": "MXN",
+        "country": "MX",
+        "tier_usd": 0.99,
+        "local_price": 19,
+        "source_id": "yt-membership-mx-price-schedule-2026"
+      },
+      {
+        "currency": "MXN",
+        "country": "MX",
+        "tier_usd": 4.99,
+        "local_price": 69,
+        "source_id": "yt-membership-mx-price-schedule-2026"
+      },
+      {
+        "currency": "MXN",
+        "country": "MX",
+        "tier_usd": 9.99,
+        "local_price": 219,
+        "source_id": "yt-membership-mx-price-schedule-2026"
+      }
+    ]
+  },
+  "buyer_flow_gates": [
+    "Record actual country, device, billing provider, product, price tier and sign-up vintage before attributing an amount.",
+    "Separate YouTube-managed member charges from voluntary one-off Supers and purchases finalized by outside retailers.",
+    "Record taxes and app-store/billing fees only with transaction-specific evidence; do not assume the posted buyer price equals creator cash received.",
+    "Refundability is product- and processor-specific; buyer cancellation does not prove automatic refund.",
+    "A published tier is an offered option, not a representative market-price observation or platform-wide median.",
+    "Do not treat views and ad impressions as a viewer's direct purchase; YouTube advertising is a different payer path."
+  ],
+  "unmeasured": {
+    "median_channel_membership_display_price": null,
+    "representative_creators_by_tier": null,
+    "purchase_conversion_rate": null,
+    "mean_refund_rate": null,
+    "merchant_take_home_after_refunds": null,
+    "return_shipping_cost": null,
+    "creator_net_profit": null,
+    "country_actual_buyers": null
+  },
+  "sampled_real_channel_prices": [],
+  "sampled_real_refund_outcomes": [],
+  "sampled_external_retailer_offers": []
+}

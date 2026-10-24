@@ -2418,6 +2418,83 @@
       "evidence_class": "official_moderation_controls",
       "license": "Official documentation linked and independently summarized; no media copied",
       "notes": "Describes platform-native capabilities, not representative buyer sentiment, conversion rates or business valuation."
+    },
+    {
+      "id": "yt-membership-price-tips-2026",
+      "url": "https://support.google.com/youtube/answer/15085977?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Channel memberships pricing tips",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_membership_levels_and_price_setting",
+      "license": "Official help page linked and independently summarized; no copied charts, images or datasets",
+      "notes": "Current Help description; pricing and purchasing conditions can vary by country, storefront, membership vintage and payment channel."
+    },
+    {
+      "id": "yt-membership-levels-2026",
+      "url": "https://support.google.com/youtube/answer/7544492?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Create or manage your YouTube channel's memberships levels and perks",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_membership_configuration",
+      "license": "Official help page linked and independently summarized; no copied charts, images or datasets",
+      "notes": "Current Help description; pricing and purchasing conditions can vary by country, storefront, membership vintage and payment channel."
+    },
+    {
+      "id": "yt-membership-mx-price-schedule-2026",
+      "url": "https://support.google.com/youtube/answer/10120159?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Pricing for channel memberships: Caribbean and Latin America",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_country_membership_price_schedule",
+      "license": "Official help page linked and independently summarized; no copied charts, images or datasets",
+      "notes": "Current Help description; pricing and purchasing conditions can vary by country, storefront, membership vintage and payment channel."
+    },
+    {
+      "id": "yt-membership-us-price-schedule-2026",
+      "url": "https://support.google.com/youtube/answer/10119895?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Pricing for channel memberships: North America",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_country_membership_price_schedule",
+      "license": "Official help page linked and independently summarized; no copied charts, images or datasets",
+      "notes": "Current Help description; pricing and purchasing conditions can vary by country, storefront, membership vintage and payment channel."
+    },
+    {
+      "id": "yt-membership-buyer-refunds-2026",
+      "url": "https://support.google.com/youtube/answer/12016111?hl=en",
+      "publisher": "YouTube Help",
+      "title": "YouTube channel membership refunds",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_refund_and_cancellation_rules",
+      "license": "Official help page linked and independently summarized; no copied charts, images or datasets",
+      "notes": "Current Help description; pricing and purchasing conditions can vary by country, storefront, membership vintage and payment channel."
+    },
+    {
+      "id": "yt-supers-buyer-refunds-2026",
+      "url": "https://support.google.com/youtube/answer/12017323?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Refunds for Super Chat, Super Stickers, and Super Thanks",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_refund_policy",
+      "license": "Official help page linked and independently summarized; no copied charts, images or datasets",
+      "notes": "Current Help description; pricing and purchasing conditions can vary by country, storefront, membership vintage and payment channel."
+    },
+    {
+      "id": "yt-shopping-buyer-policies-2026",
+      "url": "https://support.google.com/youtube/answer/12257787?hl=en",
+      "publisher": "YouTube Help",
+      "title": "YouTube Shopping support policies for buyers",
+      "retrieved_at": "2026-10-24",
+      "published_at": null,
+      "evidence_class": "official_external_retail_checkout_policy",
+      "license": "Official help page linked and independently summarized; no copied charts, images or datasets",
+      "notes": "Current Help description; pricing and purchasing conditions can vary by country, storefront, membership vintage and payment channel."
     }
   ],
   "claims": [
@@ -5016,6 +5093,49 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Based on documented features and exclusions, not measured creator switching costs, migration outcomes or revenue effects; unlisted data-transfer options remain unassessed."
+    },
+    {
+      "id": "yt-membership-tier-choice-2026",
+      "text": "YouTube's official membership guidance allows up to six channel membership levels and notes that viewer price schedules differ by country and member sign-up timing. Published price options are not measured actual channel prices.",
+      "source_ids": [
+        "yt-membership-levels-2026",
+        "yt-membership-price-tips-2026",
+        "yt-membership-mx-price-schedule-2026",
+        "yt-membership-us-price-schedule-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Policy documentation does not provide merchant cohort prices, conversion rates, refund incidence, effective seller margins or buyer-level transaction observations. Fees and methods vary by region and channel."
+    },
+    {
+      "id": "yt-membership-refund-policy-2026",
+      "text": "A canceled channel membership normally remains accessible until the end of its billing cycle without refund of the unused part; separate support or Apple-purchase procedures may apply to faults or payment disputes.",
+      "source_ids": [
+        "yt-membership-buyer-refunds-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Policy documentation does not provide merchant cohort prices, conversion rates, refund incidence, effective seller margins or buyer-level transaction observations. Fees and methods vary by region and channel."
+    },
+    {
+      "id": "yt-super-payments-nonrefundable-2026",
+      "text": "YouTube describes Super Chat, Super Stickers and Super Thanks as voluntary, generally non-refundable payments, while unauthorized charges have a reporting path.",
+      "source_ids": [
+        "yt-supers-buyer-refunds-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Policy documentation does not provide merchant cohort prices, conversion rates, refund incidence, effective seller margins or buyer-level transaction observations. Fees and methods vary by region and channel."
+    },
+    {
+      "id": "yt-shopping-retailer-checkout-responsibility-2026",
+      "text": "For YouTube Shopping transactions completed on external retailer or marketplace sites, the merchant determines final price, fees and taxes and handles payment, fulfillment, returns and refunds, not YouTube.",
+      "source_ids": [
+        "yt-shopping-buyer-policies-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Policy documentation does not provide merchant cohort prices, conversion rates, refund incidence, effective seller margins or buyer-level transaction observations. Fees and methods vary by region and channel."
     }
   ],
   "observations": [],

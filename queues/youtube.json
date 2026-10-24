@@ -248,7 +248,7 @@
           "title": "Find commissions and service fees",
           "acceptance": "State fee basis, rate, tiers and effective dates.",
           "weight": 1,
-          "progress": 64,
+          "progress": 73,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -258,7 +258,12 @@
             "ontology/youtube/analytics-query-guide.md",
             "ontology/youtube/music-rights-economics.json",
             "ontology/youtube/music-rights-economics.md",
-            "tests/youtube.test.mjs"
+            "tests/youtube.test.mjs",
+            "ontology/youtube/checkout-refund-evidence.json",
+            "ontology/youtube/checkout-refund-evidence.md",
+            "site/checkout-refund-audit.mjs",
+            "tests/checkout-refund-audit.test.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -693,9 +698,16 @@
           "title": "Measure comparable price distributions",
           "acceptance": "Report sampled price ranges, currency and denominator.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 63,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/youtube/checkout-refund-evidence.json",
+            "ontology/youtube/checkout-refund-evidence.md",
+            "site/checkout-refund-audit.mjs",
+            "tests/checkout-refund-audit.test.mjs",
+            "site/app.js",
+            "specimens/youtube.json"
+          ]
         },
         {
           "id": "competition/quality",
@@ -1134,7 +1146,7 @@
           "title": "Trace sale or contract flow",
           "acceptance": "Describe transaction steps and who collects payment.",
           "weight": 1,
-          "progress": 34,
+          "progress": 75,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -1144,7 +1156,11 @@
             "ontology/youtube/retention-posts-memberships.md",
             "site/app.js",
             "tests/youtube.test.mjs",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/checkout-refund-evidence.json",
+            "ontology/youtube/checkout-refund-evidence.md",
+            "site/checkout-refund-audit.mjs",
+            "tests/checkout-refund-audit.test.mjs"
           ]
         },
         {
@@ -1153,12 +1169,17 @@
           "title": "Study refunds and disputes",
           "acceptance": "Identify who bears losses and processing charges.",
           "weight": 1,
-          "progress": 20,
+          "progress": 82,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
             "ontology/youtube/payment-gates.json",
-            "specimens/youtube.json"
+            "specimens/youtube.json",
+            "ontology/youtube/checkout-refund-evidence.json",
+            "ontology/youtube/checkout-refund-evidence.md",
+            "site/checkout-refund-audit.mjs",
+            "tests/checkout-refund-audit.test.mjs",
+            "site/app.js"
           ]
         },
         {

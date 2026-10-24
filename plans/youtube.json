@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-23",
-  "progress_percent": 57,
+  "progress_percent": 58,
   "permission_required_before_execution": false,
   "scope": "Evidence-based research into YouTube's economics, platform use, population, creator earnings, audience demographics, subcultures, competition, content formats and practical monetization strategies.",
   "baseline": {
@@ -1242,7 +1242,7 @@
       "objective": "Plan an itemized ledger of platform shares, payment charges and refunds.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and plan an itemized ledger of platform shares, payment charges and refunds.",
       "status": "in_progress",
-      "percent": 67,
+      "percent": 81,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
@@ -1253,9 +1253,14 @@
         "ontology/youtube/ypp-transition-2027.json",
         "ontology/youtube/ypp-transition-2027.md",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/checkout-refund-evidence.json",
+        "ontology/youtube/checkout-refund-evidence.md",
+        "site/checkout-refund-audit.mjs",
+        "tests/checkout-refund-audit.test.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/checkout-refund-evidence.json",
       "priority": "standard",
       "phase": 1
     },
@@ -2571,13 +2576,18 @@
       "objective": "Define outbound clicks, memberships, sponsorship response and conversion.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define outbound clicks, memberships, sponsorship response and conversion.",
       "status": "in_progress",
-      "percent": 22,
+      "percent": 71,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/checkout-refund-evidence.json",
+        "ontology/youtube/checkout-refund-evidence.md",
+        "site/checkout-refund-audit.mjs",
+        "tests/checkout-refund-audit.test.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/checkout-refund-evidence.json",
       "priority": "standard",
       "phase": 3
     },
@@ -2589,16 +2599,21 @@
       "objective": "List storefront, fulfillment, payout and product constraints to verify.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and list storefront, fulfillment, payout and product constraints to verify.",
       "status": "in_progress",
-      "percent": 67,
+      "percent": 80,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
         "specimens/youtube.json",
         "ontology/youtube/application-lifecycle.json",
         "ontology/youtube/eligibility-matrix.json",
-        "ontology/youtube/eligibility-matrix.md"
+        "ontology/youtube/eligibility-matrix.md",
+        "ontology/youtube/checkout-refund-evidence.json",
+        "ontology/youtube/checkout-refund-evidence.md",
+        "site/checkout-refund-audit.mjs",
+        "tests/checkout-refund-audit.test.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/checkout-refund-evidence.json",
       "priority": "standard",
       "phase": 3
     },
@@ -2610,7 +2625,7 @@
       "objective": "Plan tier, cancellation, churn, benefits and fulfillment measures.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and plan tier, cancellation, churn, benefits and fulfillment measures.",
       "status": "in_progress",
-      "percent": 69,
+      "percent": 85,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
@@ -2622,7 +2637,11 @@
         "ontology/youtube/retention-posts-memberships.md",
         "site/app.js",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/checkout-refund-evidence.json",
+        "ontology/youtube/checkout-refund-evidence.md",
+        "site/checkout-refund-audit.mjs",
+        "tests/checkout-refund-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/retention-posts-memberships.json",
       "priority": "standard",
@@ -5282,13 +5301,18 @@
       "objective": "Model buyer intent, payouts and disclosure requirements.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and model buyer intent, payouts and disclosure requirements.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 67,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/checkout-refund-evidence.json",
+        "ontology/youtube/checkout-refund-evidence.md",
+        "site/checkout-refund-audit.mjs",
+        "tests/checkout-refund-audit.test.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/checkout-refund-evidence.json",
       "priority": "standard",
       "phase": 3
     },
