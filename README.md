@@ -59,6 +59,8 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 The [YouTube research ontology](ontology/youtube/README.md) currently covers creator and viewer populations, 31 overlapping content categories, global usage and upload statistics, detailed Analytics numerators and denominators, creator earnings samples and their limits, native earning products, country/payment requirements, and content-specific monetization restrictions. The interactive site includes a blank-input economic calculator. [Source-backed task progress](plans/youtube.json) is maintained separately from the completed admission and infrastructure tasks.
 
+A [dated API sampling budget](ontology/youtube/public-api-sampling-budget.md) records distinct search and metadata quota buckets, approximate search totals, and a reproducible sampling workflow without creating credentials or performing a crawl.
+
 A [historical public-view measurement bridge](ontology/youtube/view-definition-break.md) guards against comparing pre- and post-August-24-2026 first-frame view counts as equivalent active viewing or creator income. The website distinguishes public playback starts from engaged and qualifying views.
 
 The dossier also differentiates [multilingual audio, automatic dubbing, captions and translated discovery](ontology/youtube/multilingual-distribution.md). Dated product examples are not assumed to provide a creator earnings increase, and language is kept distinct from a viewer's country or demographic identity.
