@@ -68,6 +68,12 @@ try{
     assert((await music.textContent()).includes('Copyright removal and strike'));
     assert((await music.textContent()).includes('YouTube Shopping'));
     assert.equal(await page.locator('.analytics-metric-item').count(),11,'Missing Youtube Analytics metric guide');
+    const countBreak=page.locator('.view-definition-break');
+    assert.equal(await countBreak.locator('.view-definition-card').count(),8,'Missing distinct view metric units');
+    await countBreak.locator('summary').click();
+    assert((await countBreak.textContent()).includes('August 24, 2026'));
+    assert((await countBreak.textContent()).includes('does not establish more attentive viewers'));
+    assert((await countBreak.locator('.view-definition-invalid-list li').count())>=5);
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');
