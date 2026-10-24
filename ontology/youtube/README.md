@@ -275,6 +275,10 @@ The [Barb Q2 2025 study](screen-viewing-uk-2025.md) and [machine record](screen-
 
 The [seven-format public-policy comparison](video-surfaces-economics.md) and [machine inventory](video-surfaces-economics.json) distinguish watch-page uploads, Shorts, live, Premieres, Clips, podcast playlists and archived replays. Eligible monetized watch-page videos **at least eight minutes** long may enable mid-roll slots; offered slots are not guaranteed ad impressions or income. Live/replay counting uses different owner Analytics denominators, and archives are not guaranteed. The study also flags conflicting localized Help guidance regarding claimed Shorts after September 24, 2026, without asserting a universal rule.
 
+## Calendar-driven discovery: five bounded temporal examples
+
+The [seasonal-discovery comparison](seasonal-discovery-comparison.md) and [machine crosswalk](seasonal-discovery-comparison.json) retain the 2025 NFL offseason share, 2024 prom title-query views, 2025 Halloween title-query views, a 2017 game release-week count and the 2025 UK children's annual weekly viewing baseline as **five different period/population units**. Only the NFL source provides a directly observed within-year offseason share; none establishes causal seasonal lift, a repeatable universal publishing month or creator revenue.
+
 ## Geographic publishing time, Live/Premiere schedule and owner-only heatmaps
 
 The [publication-timing study](geographic-publishing-time.md) and [structured source register](geographic-publishing-time.json) distinguish the owner-only 28-day *When your viewers are on YouTube* report from general upload recommendations, live/Premiere attendance, scheduled timezone settings, and geographic privacy suppression. YouTube says ordinary release timing is not known to affect long-term performance. No universal optimum, country-specific hour or causal lift is measured; a future matched channel experiment needs dated UTC instants and compatible outcome definitions.

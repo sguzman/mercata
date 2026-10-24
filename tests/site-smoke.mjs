@@ -145,6 +145,11 @@ try{
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');
+    const season=page.locator('.seasonal-discovery');
+    assert.equal(await season.locator('.seasonal-discovery-card').count(),5,'Missing distinct seasonal evidence cases');
+    await season.locator('summary').click();
+    assert((await season.textContent()).includes('offseason'));
+    assert((await season.textContent()).includes('best upload month'));
     const publishing=page.locator('.publish-time-study');
     assert.equal(await publishing.locator('.publish-time-card').count(),4,'Missing separate publication format timing cases');
     await publishing.locator('summary').click();

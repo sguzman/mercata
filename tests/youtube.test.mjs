@@ -1472,6 +1472,24 @@ test('YouTube discovery metrics keep viewer identities and event counts separate
   assert(growth.stages.every(x=>x.source_ids.every(id=>sourceIds.has(id))));
 });
 
+test('Seasonal observations preserve year, country and incompatible population units',async()=>{
+ const [study,dossier]=await Promise.all([
+  load('ontology/youtube/seasonal-discovery-comparison.json'),load('specimens/youtube.json')
+ ]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(study.kind,'seasonal_discovery_evidence_comparability');
+ assert.equal(study.cases.length,5);
+ assert(study.cases.every(x=>x.source_ids.every(id=>ids.has(id))&&x.seasonal_causal_effect===null&&!x.seasonal_recurrence_verified));
+ assert.equal(study.cases.find(x=>x.id==='nfl_2025_offseason').value,30);
+ assert.equal(study.cases.find(x=>x.id==='nfl_2025_offseason').measurement_type,'within_year_share');
+ assert.equal(study.cases.find(x=>x.id==='prom_grwm_2024').measurement_type,'annual_topic_total');
+ assert.equal(study.cases.find(x=>x.id==='halloween_makeup_2025').period,'2025_01_01_to_2025_10_05');
+ assert.equal(study.cases.find(x=>x.id==='uk_children_weekly_2025').unit,'minutes_per_child_per_week_ages_4_to_15_in_home');
+ assert(study.cross_case_comparisons.every(x=>x.permitted===false));
+ assert(study.acceptance_gates.filter(x=>x.fulfilled).length===1);
+ assert(Object.values(study.unmeasured).every(x=>x===null));
+});
+
 test('Publish time study distinguishes owner reports, UTC times, live audiences and unknown lift',async()=>{
   const [study,dossier]=await Promise.all([
     load('ontology/youtube/geographic-publishing-time.json'),load('specimens/youtube.json')

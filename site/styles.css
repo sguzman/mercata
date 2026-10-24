@@ -1068,3 +1068,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .publish-time-card h5{font-size:14px;margin:0 0 9px;text-transform:capitalize}
 .publish-time-card p{font-size:12px;margin:7px 0}
 @media(max-width:650px){.publish-time-details{padding:15px}.publish-time-grid{grid-template-columns:1fr}}
+
+/* Seasonal observations retain independent units, scopes and observation windows */
+.seasonal-discovery{margin:28px 0}
+.seasonal-discovery-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.seasonal-discovery-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.seasonal-discovery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.seasonal-discovery-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.seasonal-discovery-card h5{font-size:14px;text-transform:capitalize;margin:0 0 9px}
+.seasonal-discovery-card p{font-size:12px;margin:7px 0}
+.seasonal-observation{font-weight:650}
+@media(max-width:650px){.seasonal-discovery-details{padding:15px}.seasonal-discovery-grid{grid-template-columns:1fr}}
