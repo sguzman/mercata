@@ -908,3 +908,18 @@ h1 em {font-style:italic;color:var(--accent)}
 .sponsor-category-card p{font-size:12px;margin:8px 0}
 @media(max-width:900px){.sponsor-categories-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.sponsor-categories-details{padding:15px}.sponsor-categories-grid{grid-template-columns:1fr}}
+
+/* Bounded niche-level publishing cadence with explicit middle-half dispersion */
+.publishing-cadence{margin:28px 0}
+.publishing-cadence-details{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:20px}
+.publishing-cadence-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.publishing-cadence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.publishing-cadence-card{min-width:0;background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;overflow-wrap:anywhere}
+.publishing-cadence-card h5{font-size:13px;margin:0 0 8px;text-transform:capitalize}
+.publishing-cadence-median{font-size:16px;font-weight:800}
+.publishing-cadence-card p{font-size:12px;margin:8px 0}
+.publishing-cadence-tiers{display:grid;gap:8px;margin:12px 0}
+.publishing-cadence-tier{display:flex;justify-content:space-between;gap:12px;font-size:12px;border-bottom:1px solid var(--line);padding:8px 0;overflow-wrap:anywhere}
+.publishing-cadence-tier strong{font-variant-numeric:tabular-nums}
+@media(max-width:900px){.publishing-cadence-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.publishing-cadence-details{padding:15px}.publishing-cadence-grid{grid-template-columns:1fr}.publishing-cadence-tier{flex-direction:column;gap:3px}}

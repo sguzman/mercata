@@ -26,7 +26,7 @@ The [publication rights gate](publication-rights.md), [machine rights manifest](
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **190 references, 183 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **192 references, 185 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -125,6 +125,10 @@ The [source-concentration study](traffic-concentration.md), [machine model](traf
 ## Channel safety, moderation and October 2026 unauthorized-access pauses
 
 The [official-source creator safety study](creator-safety-continuity.md) and [machine record](creator-safety-continuity.json) differentiate moderation controls, prohibited harassment, privacy and realistic-likeness complaints, and compromised account recovery. They also track TeamYouTube's October 21, 2026 temporary publishing restrictions for suspected unauthorized access. The published typical review time is not a guaranteed recovery period; existing video access and monetization status are stated to continue during the pause. Recovery success, incident rates, real interruptions and income loss remain unknown.
+
+## Upload frequency by peer niche and channel size: 2026 distributions
+
+The [dated publishing-cadence comparison](publishing-cadence-evidence.md) and [structured sampling notes](publishing-cadence-evidence.json) give 14 selected AIR Media-Tech niche/size medians with 25th–75th percentile monthly upload ranges, and separate vidIQ counts and median growth associations in a sample of 10.2 million channels with at least 1,000 subscribers. These are different channel populations and format definitions; they do not establish an optimal posting rate, causality, or marginal creator profit.
 
 ## Sponsorship detections by content category, 2025–2026
 

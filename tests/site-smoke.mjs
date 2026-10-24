@@ -215,6 +215,12 @@ try{
     assert((await safety.textContent()).includes('October 21, 2026'));
     assert((await safety.textContent()).includes('not guaranteed'));
     assert((await safety.textContent()).includes('recovery success are unmeasured'));
+    const cadenceStudy=page.locator('.publishing-cadence');
+    assert.equal(await cadenceStudy.locator('.publishing-cadence-card').count(),14,'Missing observed upload cadence niche/tier dispersion');
+    await cadenceStudy.locator('summary').click();
+    assert.equal(await cadenceStudy.locator('.publishing-cadence-tier').count(),5,'Missing separate vidIQ cadence bins');
+    assert((await cadenceStudy.textContent()).includes('Middle half: 2–8 uploads/month'));
+    assert((await cadenceStudy.textContent()).includes('does not establish causation'));
     const sponsorStudy=page.locator('.sponsor-categories');
     assert.equal(await sponsorStudy.locator('.sponsor-category-card').count(),11,'Missing sourced long-form sponsorship categories');
     await sponsorStudy.locator('summary').click();
