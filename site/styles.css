@@ -1004,3 +1004,12 @@ h1 em {font-style:italic;color:var(--accent)}
 .teen-format-row:last-child{border-bottom:0}
 .teen-format-row strong{font-variant-numeric:tabular-nums;white-space:nowrap}
 @media(max-width:650px){.teen-format-details{padding:15px}.teen-format-grid{grid-template-columns:1fr}}
+
+/* Age-bounded original Australian YouTube genre survey, conditional on boy/girl YouTube-watchers. */
+.teen-au-heading{font-size:14px;margin:22px 0 8px}
+.teen-au-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:15px 0}
+.teen-au-category{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:12px;min-width:0;overflow-wrap:anywhere}
+.teen-au-category strong{font-size:13px;text-transform:capitalize}
+.teen-au-category p{font-size:12px;margin:7px 0 0;font-variant-numeric:tabular-nums}
+@media(max-width:850px){.teen-au-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:500px){.teen-au-grid{grid-template-columns:1fr}}

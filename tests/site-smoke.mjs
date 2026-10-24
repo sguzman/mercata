@@ -140,6 +140,9 @@ try{
     assert.equal(await teenFormats.locator('.teen-format-card').count(),2,'Missing separated UK age-band video genre samples');
     await teenFormats.locator('summary').click();
     assert.equal(await teenFormats.locator('.teen-format-row').count(),6);
+    assert.equal(await teenFormats.locator('.teen-au-category').count(),12,'Missing measured Australian YouTube genre-by-gender sample');
+    assert((await teenFormats.textContent()).includes('Boys 67% · Girls 39%'));
+    assert((await teenFormats.textContent()).includes('Boys 5% · Girls 31%'));
     assert((await teenFormats.textContent()).includes('NOT YouTube alone'));
     assert((await teenFormats.textContent()).includes('These are platform-use rates, not genre-use estimates'));
     assert((await teenFormats.textContent()).includes('Never infer an individual minor'));

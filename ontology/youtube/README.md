@@ -26,7 +26,7 @@ The [publication rights gate](publication-rights.md), [machine rights manifest](
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **204 references, 197 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **205 references, 198 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -244,6 +244,8 @@ The [multilingual distribution study](multilingual-distribution.md) and [machine
 ## Comparable video distribution products (without authorizing new specimens)
 
 The [comparison-set methodology](comparison-set.md) and [machine criteria](comparison-set.json) delimit YouTube's adjacent services: Twitch's livestream supporter/ads tiers, TikTok's qualified short-video rewards and Vimeo OTT's paid content sales. Product entry, money flows and viewer/buyer units differ. No creator earnings ranking, newcomer probability or market-size comparison is inferred. These are **research comparators only**, not admissions to Mercata's independent marketplace gallery.
+
+The [direct Australian YouTube genre sample](teen-video-format-evidence.md) adds **Roy Morgan's April–December 2025 Young Australians Survey of 1,129 children aged 6–13**: observed genre watching conditional on boy/girl YouTube-viewer groups, including gaming (67% vs 39%) and fashion (5% vs 31%). This is distinct from Ofcom's UK cross-app genre surveys and Pew's U.S. platform-use questions. It is neither a global child audience census nor permission to profile individual minors.
 
 ## Child and teen video genres: UK app formats versus US YouTube platform use
 

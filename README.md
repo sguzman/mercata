@@ -107,6 +107,8 @@ The [creator-collaboration and fandom research](ontology/youtube/creator-collabo
 
 The [evergreen-versus-event horizon study](ontology/youtube/lifecycle-horizons.md) adds a reproducible 30-, 90- and 365-day publication-age design with strict censoring, source permissions and unit tests. It does not invent income for unmeasured videos or infer causal evergreen profitability.
 
+The same [child video-genre research](ontology/youtube/teen-video-format-evidence.md) now includes original Australian YouTube-specific gender-by-genre survey rates for children aged 6–13, separately from UK video apps and U.S. teen platform use. Group differences never license individual-level profiling.
+
 A [child and teen video-genre comparison](ontology/youtube/teen-video-format-evidence.md) now brings in Ofcom's May 2026 UK child survey and Pew's 2025 U.S. teen YouTube results. Cross-app format preferences, YouTube platform use and in-home watch hours retain separate denominators; the study does not estimate private minors' identities or format-specific viewer populations.
 
 The [creator safety and continuity study](ontology/youtube/creator-safety-continuity.md) now includes October 2026 security pauses, Google Account-first hacked-channel recovery, live-chat moderation, harassment reporting and privacy complaint pathways. These are dated official procedures, not inferred incident rates or guaranteed recovery outcomes.

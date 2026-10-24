@@ -1855,8 +1855,8 @@ function renderTeenVideoFormatEvidence(data,dossier){
   if(!data?.video_genre_observations?.length)return null;
   const section=make('section','teen-format-evidence');
   const details=make('details','teen-format-details');
-  details.append(make('summary','','Child and teen video genres: Ofcom UK and Pew US evidence'));
-  details.append(make('p','measure-limit','UK genre percentages concern all video apps, NOT YouTube alone. Separately, U.S. teen YouTube platform use does not reveal which genres they watched. Neither supports a unique population of girls watching any particular format.'));
+  details.append(make('summary','','Child video genres: Australia YouTube, UK cross-app, US teen surveys'));
+  details.append(make('p','measure-limit','Australia's 2025 Young Australians Survey directly measured YouTube genres among children aged 6–13. UK genre percentages concern all video apps, NOT YouTube alone; U.S. teen platform use has no genre breakdown. These studies do not establish global genre audiences or individual identities.'));
   const grid=make('div','teen-format-grid');
   for(const block of data.video_genre_observations){
     const card=make('article','teen-format-card');
@@ -1870,11 +1870,24 @@ function renderTeenVideoFormatEvidence(data,dossier){
     card.append(list);grid.append(card);
   }
   details.append(grid);
+  const au=data.australia_youtube_genres;
+  if(au?.gender_conditioned_genres?.length){
+    details.append(make('h5','teen-au-heading','Australian children aged 6–13 who watch YouTube · 2025'));
+    details.append(make('p','measure-limit','Roy Morgan surveyed 1,129 Australian children aged 6–13 in 2025. Values below are each genre watched within survey boy and girl YouTube-watcher groups, NOT the gender mix within genres. Exact gender subgroup sample sizes are unknown.'));
+    const auGrid=make('div','teen-au-grid');
+    for(const category of au.gender_conditioned_genres){
+      const row=make('article','teen-au-category');
+      row.append(make('strong','',category.id.replaceAll('_',' ')));
+      row.append(make('p','','Boys '+category.boys_percent+'% · Girls '+category.girls_percent+'%'));
+      auGrid.append(row);
+    }
+    details.append(auGrid);
+  }
   const times=make('p','measure-limit','Separate Barb YouTube 2025 in-home weekly averages: '+data.youtube_inhome_age_minutes_per_week.map(x=>x.age_range+' years '+Math.floor(x.minutes/60)+'h '+String(x.minutes%60).padStart(2,'0')+'m').join(' · ')+'. These include neither out-of-home nor all mobile viewing.');
   details.append(times);
   const pew=make('p','measure-limit','Pew US teens aged 13–17, 2025: YouTube ever use boys 94%, girls 89%; almost constant use boys 20%, girls 13%. These are platform-use rates, not genre-use estimates.');
   details.append(pew);
-  details.append(make('p','measure-limit','Reported UK gender differences in video genres are directional, not YouTube-specific percentage gaps. Never infer an individual minor’s identity, demographic category or behavior.'));
+  details.append(make('p','measure-limit','UK cross-app gender patterns remain directional, but the Australia study reports YouTube-specific genre differences only among children aged 6–13 in its local 2025 sample. Never infer a minor’s identity or viewing history.'));
   details.append(audienceSources(data.source_ids,dossier));
   const link=make('a','inline-link','Read age-specific denominators, collection methods and limits ↗');
   link.href='./ontology/youtube/teen-video-format-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
