@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-23",
-  "progress_percent": 43,
+  "progress_percent": 44,
   "permission_required_before_execution": false,
   "scope": "Evidence-based research into YouTube's economics, platform use, population, creator earnings, audience demographics, subcultures, competition, content formats and practical monetization strategies.",
   "baseline": {
@@ -456,7 +456,7 @@
         "youtube/audience-scale/create-a-multi-year-audience-source-comparison"
       ],
       "phase": 2,
-      "progress_percent": 28
+      "progress_percent": 37
     },
     {
       "id": "audience-demography",
@@ -710,7 +710,7 @@
         "youtube/audience-safeguards/audit-publication-of-third-party-material"
       ],
       "phase": 1,
-      "progress_percent": 61
+      "progress_percent": 62
     }
   ],
   "deliverables": [
@@ -3518,10 +3518,17 @@
       "emoji": "🌍",
       "objective": "Require independent definitions and duplicate-account caveats.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and require independent definitions and duplicate-account caveats.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
-      "artifact": null,
+      "status": "in_progress",
+      "percent": 70,
+      "evidence": [
+        "ontology/youtube/viewer-person-metrics.json",
+        "ontology/youtube/viewer-person-metrics.md",
+        "specimens/youtube.json",
+        "site/app.js",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
+      ],
+      "artifact": "ontology/youtube/viewer-person-metrics.json",
       "priority": "high",
       "phase": 2
     },
@@ -3532,10 +3539,17 @@
       "emoji": "🌍",
       "objective": "Identify when a campaign estimate excludes users or overlaps regions.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and identify when a campaign estimate excludes users or overlaps regions.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
-      "artifact": null,
+      "status": "in_progress",
+      "percent": 42,
+      "evidence": [
+        "ontology/youtube/viewer-person-metrics.json",
+        "ontology/youtube/viewer-person-metrics.md",
+        "specimens/youtube.json",
+        "site/app.js",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
+      ],
+      "artifact": "ontology/youtube/viewer-person-metrics.json",
       "priority": "high",
       "phase": 2
     },
@@ -3647,10 +3661,17 @@
       "emoji": "🌍",
       "objective": "Account for missing login-based measurements.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and account for missing login-based measurements.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
-      "artifact": null,
+      "status": "in_progress",
+      "percent": 65,
+      "evidence": [
+        "ontology/youtube/viewer-person-metrics.json",
+        "ontology/youtube/viewer-person-metrics.md",
+        "specimens/youtube.json",
+        "site/app.js",
+        "tests/youtube.test.mjs",
+        "tests/site-smoke.mjs"
+      ],
+      "artifact": "ontology/youtube/viewer-person-metrics.json",
       "priority": "high",
       "phase": 2
     },
@@ -5437,7 +5458,7 @@
       "objective": "Reject mixing views, unique viewers, channels and users.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and reject mixing views, unique viewers, channels and users.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 86,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
@@ -5447,9 +5468,13 @@
         "ontology/youtube/view-definition-break.json",
         "ontology/youtube/view-definition-break.md",
         "ontology/youtube/measurement-history.json",
-        "ontology/youtube/measurements.json"
+        "ontology/youtube/measurements.json",
+        "ontology/youtube/viewer-person-metrics.json",
+        "ontology/youtube/viewer-person-metrics.md",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/viewer-person-metrics.json",
       "priority": "high",
       "phase": 1
     },

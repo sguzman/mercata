@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **142 references, 136 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **143 references, 137 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -49,6 +49,10 @@ The [official country eligibility and payments comparison](country-eligibility-p
 ## Quota-aware public content sampling
 
 The [2026 public Data API sampling and quota snapshot](public-api-sampling-budget.md) and [machine protocol](public-api-sampling-budget.json) distinguish the **100 daily search.list calls** in their own default bucket from the **10,000 other-method API units**, as documented by Google on October 15, 2026. Search pages can contain up to 50 result slots, while totalResults is approximate and capped. A synthetic 48-call budget illustrates the arithmetic but **no API queries were executed**, and unique community people, active creators and niche supply remain unknown.
+
+## People, accounts, signed-out viewers and owner-only Analytics
+
+The [unique-viewer measurement research](viewer-person-metrics.md) and [machine metric register](viewer-person-metrics.json) separate owner-facing estimated people (including signed-out traffic), rolling 28-day monthly audience and up-to-90-day unique viewers from public channel views, rounded subscribers and public upload objects. Access to creator Analytics is owner-authorized; the public Data API does not supply global distinct people or the nonregistered share. No platform-wide person counts are inferred.
 
 ## Unique people and overlapping topic communities
 
