@@ -46,3 +46,22 @@ All three measurements are from before the August 24, 2026 view-count definition
 ## Sports audience, 2025–2026
 
 The [2026 World Cup audience investigation](event-audiences.md) adds the first source-backed **unique-viewer** measures for a clearly defined YouTube event (over 1.7 billion global viewers, including over 550 million on TV). It also keeps cumulative soccer video views, annual all-sports watch time, NFL view totals and live average-minute audience separate. These measurements must not be added together.
+
+## Added crafts, cooking, fashion and children's music activity
+
+These eight measurements describe **view events**, not the number of distinct people involved. Each was published before the August 24, 2026 public-view definition change; the title-term and topic filters differ, and overlapping counts **must not be summed** as independent communities.
+
+| Topic | Source-defined content set | Reported volume | Window |
+| --- | --- | ---: | --- |
+| Crafts | [Handmade-jewelry videos with "DIY" in the title](https://blog.youtube/culture-and-trends/youtube-jewelry-making-craftsmanship/) | More than 250 million views | 2025 |
+| Crafts | [Polymer-clay videos with "miniature" in the title](https://blog.youtube/culture-and-trends/polymer-clay/) | More than 300 million views | 2025 |
+| Crafts | [Videos with "draw with me" / #drawwithme in title](https://blog.youtube/culture-and-trends/line-art/) | More than 100 million views | 2025 |
+| Crafts | [Videos with "paint with me" / #paintwithme in title](https://blog.youtube/culture-and-trends/watercolor-yoodle/) | More than 100 million views | 2025 |
+| Cooking | [Videos with "bento box" / #bentobox in title](https://blog.youtube/culture-and-trends/youtube-bento-box-meal-prep-trend/) | More than 250 million views | 2026 H1 |
+| Cooking | [Videos with both "buldak" and "ramen" in title](https://blog.youtube/culture-and-trends/ramen/) | More than 620 million views | Jan 1–Oct 10, 2025 |
+| Fashion | [Sewing-machine videos with "beginner" in title](https://blog.youtube/culture-and-trends/fashion-design-creators-youtube/) | More than 100 million views | 2025 |
+| Children's music | [Single "Baby Shark Dance" music video](https://blog.youtube/culture-and-trends/baby-shark/) | More than 16 billion cumulative views | Through June 2025 |
+
+A *single-video lifetime view count* is especially different from a topic query across many videos. Children's music includes live-action and animated performances; it is not synonymous with child-directed animation. No child-identifying data or audience-age inference is supported.
+
+These findings identify active content formats and example measurement designs, but provide **no representative supply count, audience population estimate, creator revenue distribution, or profit-by-genre comparison**.
