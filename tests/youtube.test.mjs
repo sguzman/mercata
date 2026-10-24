@@ -469,6 +469,32 @@ test('YouTube economic expressions use declared symbols or earlier computed resu
   }
 });
 
+test('Fitness and wellness policy study keeps unmeasured audiences and earnings null',async()=>{
+ const [study,dossier,taxonomy]=await Promise.all([
+  load('ontology/youtube/health-fitness-content.json'),
+  load('specimens/youtube.json'),
+  load('ontology/youtube/taxonomy.json')
+ ]);
+ const src=new Set(dossier.evidence.map(x=>x.id));
+ const topics=new Set(taxonomy.topics.map(x=>x.id));
+ assert.equal(study.kind,'fitness_wellness_health_content_research_scope');
+ assert.equal(study.parent_topic_id,'fitness');
+ assert(study.related_topic_ids.every(x=>topics.has(x)));
+ assert.equal(study.content_categories.length,9);
+ assert.equal(new Set(study.content_categories.map(x=>x.id)).size,9);
+ assert(study.content_categories.every(x=>x.sources.every(id=>src.has(id))));
+ assert(study.content_categories.every(x=>x.unique_audience===null&&x.creator_count===null&&x.revenue_per_view===null));
+ assert.deepEqual(study.policy_layers.map(x=>x.id),
+  ['medical_misinformation','self_harm_eating_disorders','advertiser_suitability','health_source_discovery']);
+ assert(study.policy_layers.every(x=>x.source_ids.every(id=>src.has(id))));
+ assert.equal(study.health_features.available_everywhere,false);
+ assert.equal(study.health_features.application_requires_eligible_health_profession,true);
+ assert.equal(study.health_features.watch_hour_alternative.valid_public_watch_hours,1500);
+ assert.equal(study.health_features.shorts_alternative.valid_public_shorts_views,1500000);
+ assert.equal(study.health_features.related_shelf_access_not_a_payout_or_monetization_right,true);
+ assert(Object.values(study.unmeasured).every(x=>x===null));
+});
+
 test('YouTube topical observations use known topics and explicit units',async()=>{
   const [data,taxonomy]=await Promise.all([
     load('ontology/youtube/topic-observations.json'),load('ontology/youtube/taxonomy.json')

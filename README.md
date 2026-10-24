@@ -95,6 +95,8 @@ The [traffic-source concentration protocol](ontology/youtube/traffic-concentrati
 
 Mercata's [third-party publication audit](ontology/youtube/publication-rights.md) now tests source metadata and rights-manifest fields separately from legal reuse permission. Automated metadata checks are not a substitute for reviewing copied images, long quotations, licensing and dataset rights; the latter remain explicitly uncleared.
 
+The [health and fitness research](ontology/youtube/health-fitness-content.md) distinguishes workout, wellness, clinical and commercial health content by official safety and discovery rules. All sector audience, creator and profit estimates remain unmeasured.
+
 The [finance and business video subculture study](ontology/youtube/finance-content-taxonomy.md) distinguishes educational literacy from affiliate product comparisons, sponsored promotions, and stock-tip solicitations. Regulatory risks are source- and jurisdiction-bounded; no creator's legal status, niche audience or profit is inferred.
 
 The [software and technology subculture study](ontology/youtube/technology-subcultures-2026.md) separates tutorials, troubleshooting, device reviews, repairs and desk aesthetics. Source-backed public views for broad U.S. learning content and global desk-title queries cannot be combined into a software-learner population or an earnings estimate.

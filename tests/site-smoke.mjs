@@ -289,6 +289,12 @@ try{
     assert((await comparators.textContent()).includes('not been added as Mercata specimens'));
     assert((await comparators.textContent()).includes('general profitability: unknown'));
     assert.equal(await page.locator('.competition-tier').count(),5,'Missing sampled subscriber tiers');
+    const fitness=page.locator('.health-fitness-research');
+    assert.equal(await fitness.locator('.health-fitness-card').count(),9,'Missing fitness subcategory policy cards');
+    await fitness.locator('summary').click();
+    assert((await fitness.textContent()).includes('Unique audience, creator count and creator earnings: unknown'));
+    assert((await fitness.textContent()).includes('medical misinformation'));
+    assert((await fitness.textContent()).includes('does not automatically qualify'));
     const finance=page.locator('.finance-content');
     assert.equal(await finance.locator('.finance-content-card').count(),8,'Missing finance-content families');
     await finance.locator('summary').click();

@@ -26,7 +26,7 @@ The [publication rights gate](publication-rights.md), [machine rights manifest](
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **196 references, 189 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **201 references, 194 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -260,6 +260,10 @@ The [seven-format public-policy comparison](video-surfaces-economics.md) and [ma
 ## Video and distribution formats
 
 The [format comparison](content-formats.md) and [machine catalog](content-formats.json) document eight publication forms, including ordinary videos, Shorts, webcam/encoder live streams, mobile live streams, Premieres, podcasts, Community Posts and live replays. Each records where discovery and links work, candidate earning routes and eligibility restrictions. Neither their profit nor labor requirements are invented.
+
+## Fitness, wellness and health-information content
+
+The [health and fitness subculture study](health-fitness-content.md) and [machine matrix](health-fitness-content.json) separate nine proposed content types and four independent official policy/discovery layers: medical misinformation, eating-disorder safety, advertiser suitability and professionally vetted health-source features. The policy record establishes neither niche audience populations nor typical creator income, and source shelves do not guarantee monetization.
 
 ## Finance and business topics: education versus paid promotion
 

@@ -969,3 +969,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .lifecycle-horizon-card p{font-size:12px;margin:9px 0}
 @media(max-width:800px){.lifecycle-horizons-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.lifecycle-horizons-details{padding:15px}}
+
+/* Policy-bounded fitness content families; no implied audience or earnings size */
+.health-fitness-research{margin:28px 0}
+.health-fitness-details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.health-fitness-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.health-fitness-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.health-fitness-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.health-fitness-card h5{font-size:14px;margin:0 0 9px}
+.health-fitness-card p{font-size:12px;margin:7px 0}
+@media(max-width:850px){.health-fitness-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.health-fitness-details{padding:15px}}
