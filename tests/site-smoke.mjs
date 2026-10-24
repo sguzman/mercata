@@ -46,6 +46,9 @@ try{
     assert((await future.textContent()).includes('February 1, 2027'));
     assert((await future.textContent()).includes('future subscriber floor'));
     assert((await future.textContent()).includes('Rolling qualification'));
+    assert.equal(await future.locator('.ypp-shorts-card').count(),2,'Missing distinct pooled and direct Shorts ad routes');
+    assert((await future.textContent()).includes('15th of the preceding month'));
+    assert((await future.textContent()).includes('5 or fewer channels'));
     await future.locator('.ypp-transition-pools > summary').click();
     assert.equal(await future.locator('.ypp-transition-pool').count(),2,'Missing Premium and Premium Lite pools');
     assert((await future.textContent()).includes('60% of net subscription revenue'));

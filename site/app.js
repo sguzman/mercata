@@ -360,6 +360,25 @@ function renderYppFutureTransition(data,dossier) {
     cards.append(card);
   }
   details.append(cards);
+  if(data.shorts_revenue_mechanisms?.length){
+    const methods=make('section','ypp-shorts-methods');
+    methods.append(make('h5','','2027 Shorts revenue: two distinct ad routes'));
+    const cutoff=rolling.monthly_qualification_measurement;
+    if(cutoff)methods.append(make('p','measure-limit','For each earning month, the qualified Shorts views window ends on the 15th of the preceding month. The 90-day measure is not a daily guarantee of earnings.'));
+    const grid=make('div','ypp-shorts-grid');
+    for(const item of data.shorts_revenue_mechanisms){
+      const card=make('article','ypp-shorts-card');
+      card.append(make('h6','',item.display_name));
+      card.append(make('strong','',item.creator_share_percent+'%'));
+      card.append(make('p','measure-limit','Base: '+item.share_base+'.'));
+      if(item.targeted_channel_count_max!==null)
+        card.append(make('p','measure-limit','Only ads targeted to 5 or fewer channels; additional to pooled Shorts ad revenue.'));
+      card.append(make('p','measure-limit',item.limitations));
+      grid.append(card);
+    }
+    methods.append(grid);
+    details.append(methods);
+  }
   const pool=make('details','ypp-transition-pools');
   pool.append(make('summary','','Announced Premium subscription allocation'));
   const table=make('div','ypp-transition-pool-grid');

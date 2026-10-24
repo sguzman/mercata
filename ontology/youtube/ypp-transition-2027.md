@@ -16,6 +16,19 @@
 
 For Shorts, a channel falling below the **rolling 10-million-view** product threshold can **remain a YPP member and continue eligible long-form monetization**; its Shorts share resumes once the rolling threshold is met. This condition is *not* the same as the 20-million-view admission rule for **new** ad/Premium applicants. Qualified metrics are distinct from public playback starts, particularly after [the August 2026 video-count redefinition](view-definition-break.md).
 
+## Monthly Shorts accounting and targeted advertising
+
+The [official Shorts monetization policy](https://support.google.com/youtube/answer/12504220?hl=en) adds a timing detail to the announced **10-million-qualified-views** requirement. For each earning month, eligibility is measured over the 90-day period **ending on the 15th day of the preceding calendar month**. That is not the same as simply checking the prior 90 days on an arbitrary day in YouTube Studio. The source does not identify the measurement timezone; Mercata does not invent one. The Shorts Monetization Module must also have been accepted, and views before acceptance do not become payable retrospectively.
+
+Two advertising routes have distinct bases:
+
+| Route | Creator share | Share base | Extra scope |
+| --- | ---: | --- | --- |
+| **Ordinary Shorts Feed advertising** | 45% | The eligible creator's country-allocated share of the **Shorts Creator Pool** after music-related allocation | Aggregated feed ads; eligible engaged views, music usage and country allocations matter |
+| **Direct channel-targeted Shorts ads**, beginning February 1, 2027 | 45% | **Net revenue from the specific targeted ad** | Applies when the ad targets specific channels in groups of **five or fewer**; is **additional to** the Creator Pool mechanism |
+
+The direct route is not a 45% share of all Shorts views, nor is it a guarantee of advertisers buying such inventory. It must not be mixed with the pooled revenue base or added twice in cash-flow projections. The policy does not publish representative creator receipts from either route.
+
 ## Premium and Premium Lite allocation
 
 YouTube's announcement describes dedicated subscription pools, each defined against **net subscription revenue** for that subscription type:

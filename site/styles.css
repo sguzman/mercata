@@ -554,6 +554,14 @@ h1 em {font-style:italic;color:var(--accent)}
 .ypp-transition-card h5,.ypp-transition-pool h5{font-size:13px;margin:0 0 12px}
 .ypp-transition-number{font:19px Georgia,serif;font-variant-numeric:tabular-nums}
 .ypp-transition-card p,.ypp-transition-pool p{font-size:12px;line-height:1.55;margin:10px 0 0}
+.ypp-shorts-methods{border-top:1px solid var(--line);padding-top:15px;margin-top:18px}
+.ypp-shorts-methods>h5{font-size:14px;margin:0 0 8px}
+.ypp-shorts-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:13px 0}
+.ypp-shorts-card{border:1px solid var(--line);background:var(--bg);padding:15px;border-radius:9px;min-width:0;overflow-wrap:anywhere}
+.ypp-shorts-card h6{font-size:13px;margin:0 0 8px}
+.ypp-shorts-card strong{font:21px Georgia,serif}
+.ypp-shorts-card p{font-size:12px;margin:8px 0 0}
+@media(max-width:650px){.ypp-shorts-grid{grid-template-columns:1fr}}
 .ypp-transition-pools{border-top:1px solid var(--line);padding-top:13px;margin-top:17px}
 .ypp-transition-pools>summary{font-size:13px;font-weight:750;cursor:pointer}
 .ypp-transition-pool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}

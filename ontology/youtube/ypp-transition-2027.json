@@ -10,7 +10,8 @@
   "source_ids": [
     "yt-ypp-2027-announcement",
     "ypp-main",
-    "yt-ypp-2027-terms-help"
+    "yt-ypp-2027-terms-help",
+    "shorts-policy"
   ],
   "policy_windows": [
     {
@@ -83,7 +84,17 @@
       "source_ids": [
         "yt-ypp-2027-announcement"
       ],
-      "limitations": "Below-threshold channels remain YPP and continue eligible long-form monetization, but Shorts revenue sharing pauses and resumes after crossing the threshold. Does not mean a new channel can initially join YPP solely on 10m views."
+      "limitations": "Below-threshold channels remain YPP and continue eligible long-form monetization, but Shorts revenue sharing pauses and resumes after crossing the threshold. Does not mean a new channel can initially join YPP solely on 10m views.",
+      "monthly_qualification_measurement": {
+        "applies_to": "Shorts Feed ads and Shorts subscription revenue sharing for the earning month",
+        "lookback_days": 90,
+        "window_end_day_of_preceding_calendar_month": 15,
+        "window_timezone": null,
+        "source_ids": [
+          "shorts-policy"
+        ],
+        "limitations": "The published Help page identifies the preceding month's 15th as the end of the 90-day measurement window; it does not specify a timezone or guarantee payout after reaching the threshold."
+      }
     },
     {
       "id": "early_access_unchanged",
@@ -210,5 +221,31 @@
     "Do not conflate 10m rolling Shorts product access with 20m new-applicant YPP qualification.",
     "Do not calculate fixed creator income from the Premium subscription pool percentages.",
     "Subscriber requirement in the 2027 announcement is not explicit: use null rather than copy a floor without verification."
+  ],
+  "shorts_revenue_mechanisms": [
+    {
+      "id": "shorts_feed_creator_pool",
+      "display_name": "Pooled Shorts Feed advertising",
+      "creator_share_percent": 45,
+      "share_base": "creator's allocated portion of the Shorts Creator Pool",
+      "targeted_channel_count_max": null,
+      "source_ids": [
+        "shorts-policy"
+      ],
+      "limitations": "Pool size depends on ad revenue, eligible engaged views, music licensing and country allocation; this is not a fixed revenue rate per view."
+    },
+    {
+      "id": "direct_channel_targeted_shorts_ads_2027",
+      "display_name": "Direct channel-targeted Shorts advertising",
+      "effective_from": "2027-02-01",
+      "creator_share_percent": 45,
+      "share_base": "net revenue from the specific targeted Shorts ad",
+      "targeted_channel_count_max": 5,
+      "additional_to_creator_pool": true,
+      "source_ids": [
+        "shorts-policy"
+      ],
+      "limitations": "Only ads targeted to specific channels in groups of five or fewer qualify for this direct revenue mechanism; no volume, advertiser demand or creator payout is guaranteed."
+    }
   ]
 }
