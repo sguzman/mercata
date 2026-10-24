@@ -1152,6 +1152,31 @@ function renderProductionCosts(model) {
   return section;
 }
 
+function renderChannelOwnership(data,dossier){
+  if(!data?.operations?.length)return null;
+  const section=make('section','ownership-continuity');
+  const details=make('details','ownership-details');
+  details.append(make('summary','','Channel ownership, safe delegation and business continuity'));
+  details.append(make('p','measure-limit','YouTube Studio collaborators, Brand Account primary owners and account-to-account channel moves are different operations. A video export is not a portable channel, subscriber list or creator revenue contract.'));
+  const grid=make('div','ownership-grid');
+  for(const item of data.operations){
+    const card=make('article','ownership-card');
+    card.append(make('h5','',item.label));
+    card.append(make('p','',item.effect));
+    const limitations=make('ul','ownership-limits');
+    for(const rule of item.restrictions.slice(0,3))limitations.append(make('li','',rule));
+    card.append(limitations);
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Brand Account primary ownership changes require documented seven-day role tenure. A mistaken channel move can permanently delete the target channel. None of these rules proves a channel or revenue contract is freely saleable.'));
+  details.append(make('p','measure-limit','Store original content, licenses and recovery factors independently. Do not place private account credentials or ownership records in public research.'));
+  const link=make('a','inline-link','Review primary-owner and export limitations ↗');
+  link.href='./ontology/youtube/channel-ownership-continuity.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
 function renderChannelOnboarding(data,dossier) {
   if(!data?.stages?.length)return null;
   const section=make('section','channel-onboarding');
@@ -1432,7 +1457,7 @@ async function showDossier(entry) {
   host.replaceChildren(make('p','unresearched','Loading research record…'));
   host.scrollIntoView({behavior:'smooth',block:'start'});
   try {
-    const [record,work,studyPlan,platformPolicy,yppFuture,topicCatalog,topicActivity,samplingBudget,adultUseHistory,incomeEvidence,channelIncome,crossPlatformIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,advertiserHistory,musicRights,productionCosts,viewDefinition,analyticsGuide,platformScale,countryReach,eligibilityMatrix,channelOnboarding,applicationLifecycle,creatorGrowth,contentFormats,multilingualDistribution,newsAudienceStudy,competitionSample,academicResearch]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/ypp-transition-2027.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/public-api-sampling-budget.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/cross-platform-income-surveys.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/advertiser-policy-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/music-rights-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-costs.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/view-definition-break.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-reach-devices.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-onboarding.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/multilingual-distribution.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/competition-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/academic-studies.json'):Promise.resolve(null)]);
+    const [record,work,studyPlan,platformPolicy,yppFuture,topicCatalog,topicActivity,samplingBudget,adultUseHistory,incomeEvidence,channelIncome,crossPlatformIncome,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,advertiserHistory,musicRights,productionCosts,viewDefinition,analyticsGuide,platformScale,countryReach,eligibilityMatrix,channelOnboarding,channelOwnership,applicationLifecycle,creatorGrowth,contentFormats,multilingualDistribution,newsAudienceStudy,competitionSample,academicResearch]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/ypp-transition-2027.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/public-api-sampling-budget.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/cross-platform-income-surveys.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/advertiser-policy-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/music-rights-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-costs.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/view-definition-break.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-reach-devices.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-onboarding.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-ownership-continuity.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/multilingual-distribution.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/competition-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/academic-studies.json'):Promise.resolve(null)]);
     if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
     const outer=make('article','dossier-shell');
     outer.style.setProperty('--specimen',entry.color.hex);
@@ -1492,6 +1517,8 @@ async function showDossier(entry) {
     if(routes)outer.append(routes);
     const entryStages=renderChannelOnboarding(channelOnboarding,record);
     if(entryStages)outer.append(entryStages);
+    const ownership=renderChannelOwnership(channelOwnership,record);
+    if(ownership)outer.append(ownership);
     const onboarding=renderApplicationLifecycle(applicationLifecycle);
     if(onboarding)outer.append(onboarding);
     const restricted=renderContentRestrictions(contentRestrictions,record);
