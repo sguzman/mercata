@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **122 references, 116 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **123 references, 117 distinct normalized URLs, six repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -64,7 +64,7 @@ The first [creator-income evidence review](creator-income-evidence.md) examines 
 
 ## Cross-platform income surveys and duplicate research sources
 
-The [2025 creator-income survey comparison](cross-platform-income-surveys.md) and its [machine evidence](cross-platform-income-surveys.json) document **two independent mixed-platform respondent samples**: NeoReach (more than 3,000) and Creator Spotlight (427). Influencer Marketing Hub's partnered NeoReach publication is the *same survey*, not independent replication. Reported annual earnings thresholds cannot be applied to the general YouTube creator population, nor pooled with the selected Patreon or newly monetized Studio datasets. YouTube-wide newcomer income, profits and zero-earner rates remain unknown.
+The [2025–2026 creator-income survey comparison](cross-platform-income-surveys.md) and its [machine evidence](cross-platform-income-surveys.json) document **three separate mixed-platform respondent samples**: NeoReach (more than 3,000), Creator Spotlight (427), and CreatorIQ/Influencers.club (5,095). Influencer Marketing Hub's partnered NeoReach publication is the *same survey*, not independent replication. CreatorIQ's vendor-reported margin of error is not independently validated as a probability-based population interval. Reported annual earnings thresholds cannot be applied to the general YouTube creator population, nor pooled with the selected Patreon or newly monetized Studio datasets. YouTube-wide newcomer income, profits and zero-earner rates remain unknown.
 
 ## Newcomer income sampling and survivor-bias safeguards
 
