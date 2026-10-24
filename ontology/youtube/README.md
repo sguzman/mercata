@@ -1,6 +1,6 @@
 # YouTube ontology — audiences, content and earning
 
-The independent [machine model](model.json) defines **146 concepts** and **118 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **31 candidate overlapping subcultures**, without pretending their populations have been measured.
+The independent [machine model](model.json) defines **153 concepts** and **129 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **31 candidate overlapping subcultures**, without pretending their populations have been measured.
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
@@ -25,6 +25,10 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 All claim records require official or independently credible sources, observations dates and limitations. Public API statistics are not the same as authorized creator metrics. Statistical inference from samples requires a recorded sampling method, sample size, selection mechanism, exclusions and appropriate uncertainty statement. No individual's political affiliation, sex or ethnicity should be guessed.
 
 The [399-task YouTube research inventory](../../plans/youtube.md) remains the work ledger. This ontology is the vocabulary for research, not a substitute for doing it.
+
+## The August 2026 playback-start measurement break
+
+The [dated first-frame view-count study](view-definition-break.md) and [metric bridge](view-definition-break.json) document YouTube's **August 24, 2026** switch to public views counted from first-frame playback starts. The change affects Shorts, ordinary videos, live and podcasts, but does not make public starts synonymous with engaged viewing, qualifying Partner Program views, monetized playbacks, thumbnail impressions or unique people. Pre/post public-view series are structurally incomparable without further adjustment; no conversion factor, income gain or artificial audience-growth estimate is invented.
 
 ## How discovery works
 
