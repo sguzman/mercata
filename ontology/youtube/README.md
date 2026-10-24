@@ -22,7 +22,7 @@ Use independent contracts and earning paths for ordinary Watch Page ads, pooled 
 
 ## Source independence and reproducibility
 
-The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **151 references, 144 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
+The [YouTube evidence provenance audit](source-provenance.md), [machine source families](source-families.json) and [audit script](../../scripts/audit-youtube-sources.mjs) identify repeated official Help pages and the same underlying commercial creator survey appearing in different publications. The registered October 2026 snapshot has **158 references, 151 distinct normalized URLs, seven repeated-document pairs and one separately syndicated survey family**. A living Help page may have an unknown original publication date while retaining an observed retrieval date. Reference counts are not independent-study counts.
 
 ## Valid evidence
 
@@ -196,6 +196,10 @@ The [multilingual distribution study](multilingual-distribution.md) and [machine
 ## Comparable video distribution products (without authorizing new specimens)
 
 The [comparison-set methodology](comparison-set.md) and [machine criteria](comparison-set.json) delimit YouTube's adjacent services: Twitch's livestream supporter/ads tiers, TikTok's qualified short-video rewards and Vimeo OTT's paid content sales. Product entry, money flows and viewer/buyer units differ. No creator earnings ranking, newcomer probability or market-size comparison is inferred. These are **research comparators only**, not admissions to Mercata's independent marketplace gallery.
+
+## YouTube publishing surfaces, ad length and live replay economics
+
+The [seven-format public-policy comparison](video-surfaces-economics.md) and [machine inventory](video-surfaces-economics.json) distinguish watch-page uploads, Shorts, live, Premieres, Clips, podcast playlists and archived replays. Eligible monetized watch-page videos **at least eight minutes** long may enable mid-roll slots; offered slots are not guaranteed ad impressions or income. Live/replay counting uses different owner Analytics denominators, and archives are not guaranteed. The study also flags conflicting localized Help guidance regarding claimed Shorts after September 24, 2026, without asserting a universal rule.
 
 ## Video and distribution formats
 
