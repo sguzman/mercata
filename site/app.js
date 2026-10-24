@@ -1248,6 +1248,23 @@ function renderProductionCosts(model) {
   }
   details.append(groups);
   for(const study of model.adjacent_creator_surveys||[]){
+    if(study.id==='timf-creators-2026'){
+      const labor=make('details','adjacent-labor-survey');
+      labor.append(make('summary','','Adjacent context: U.S. social creator weekly hours (not YouTube)'));
+      labor.append(make('p','measure-limit','Commercial, cross-platform survey of '+study.respondents_total.toLocaleString()+' U.S. creators aged '+study.respondents_age_min+'–'+study.respondents_age_max+' in January 2026. Question-specific denominator, survey selection probabilities, and YouTube subgroup are unknown.'));
+      const metric=study.reported_human_work;
+      const rows=make('ul','adjacent-cost-bins');
+      for(const bin of metric.selected_bins){
+        const item=make('li','adjacent-cost-bin');
+        add(item,make('span','',bin.label),make('strong','',bin.percent+'%'));
+        rows.append(item);
+      }
+      labor.append(rows);
+      labor.append(make('p','measure-limit','These two highlighted bins are not a complete distribution. No typical YouTube work hours, hourly profit or creator costs are inferred.'));
+      const source=make('a','inline-link','Original cross-platform creator survey ↗');
+      source.href=study.source_url;source.target='_blank';source.rel='noopener noreferrer';
+      labor.append(source);details.append(labor);continue;
+    }
     const external=make('details','adjacent-cost-survey');
     external.append(make('summary','','Adjacent context: independent podcast creators (not YouTube)'));
     external.append(make('p','measure-limit','Self-selected industry survey · '+study.respondents_total+' total respondents · cost/time bins measured only among already launched podcasters. Subgroup sample size and YouTube-specific medians are not reported.'));
