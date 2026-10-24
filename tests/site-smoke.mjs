@@ -232,6 +232,12 @@ try{
     assert((await historyLinking.textContent()).includes('not observed channel payout data'));
     assert.equal(await page.locator('.competition-traffic-item').count(),6,'Missing observed traffic shares');
     assert.equal(await page.locator('.academic-study').count(),4,'Missing scoped academic studies');
+    const air=page.locator('.air-studio-benchmarks');
+    assert.equal(await air.locator('.air-studio-card').count(),2,'Missing selected AIR RPM and live cohorts');
+    await air.locator('summary').click();
+    assert((await air.textContent()).includes('USD 2.30'));
+    assert((await air.textContent()).includes('127 monetized livestreamers'));
+    assert((await air.textContent()).includes('newcomer zero-earner share'));
     const otherIncome=page.locator('.cross-platform-income');
     assert.equal(await otherIncome.locator('.cross-platform-income-card').count(),3,'Missing selected cross-platform income studies');
     await otherIncome.locator('summary').first().click();

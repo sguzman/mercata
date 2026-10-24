@@ -615,6 +615,36 @@ test('Adjacent video comparison is scope-only and does not admit marketplace spe
  assert(model.excluded_from_conclusions.includes('sampled_creator_income_rankings'));
 });
 
+test('Selected monetized AIR Studio RPM and live analyses keep denominators separate',async()=>{
+ const [model,dossier]=await Promise.all([
+  load('ontology/youtube/air-studio-benchmarks-2026.json'),load('specimens/youtube.json')
+ ]);
+ const sourceIds=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'selected_monetized_studio_rpm_and_livestream_benchmarks');
+ assert.equal(model.studies.length,2);
+ assert(model.studies.every(s=>s.source_ids.every(id=>sourceIds.has(id))));
+ const rpm=model.studies.find(s=>s.id==='monetized_rpm_sample_300');
+ const live=model.studies.find(s=>s.id==='monetized_live_sample_127');
+ assert.equal(rpm.selected_channels_n,300);
+ assert.equal(rpm.observed_channel_months,3595);
+ assert.equal(rpm.reported_overall_median_rpm_usd,2.3);
+ assert.equal(rpm.reported_median_profit,null);
+ assert.equal(rpm.includes_zero_earners,false);
+ assert.deepEqual(rpm.niche_examples.map(x=>x.median_rpm_usd),[10.22,2.05,0.33,2.01]);
+ assert.equal(rpm.niche_examples[3].small_n_warning,true);
+ assert(rpm.niche_examples.every(x=>x.niche_channels_n===null));
+ assert.equal(live.all_studied_channels_n,404);
+ assert.equal(live.observed_all_channel_months,3893);
+ assert.equal(live.monetized_live_channels_n,127);
+ assert.equal(live.monetized_live_channel_months,1287);
+ assert.equal(live.median_views_per_live_stream,45);
+ assert.equal(live.includes_zero_earners,false);
+ assert.equal(live.reported_live_revenue_median_usd,null);
+ assert.equal(model.cross_study_deduplication.overlapping_channels,null);
+ assert.equal(model.cross_study_deduplication.combine_into_pooled_channel_dataset,false);
+ assert(Object.values(model.unmeasured).every(x=>x===null));
+});
+
 test('2025 Omdia video watch time and 2026 NRG U.S. survey cannot be pooled',async()=>{
  const [model,dossier]=await Promise.all([
    load('ontology/youtube/video-attention-culture-2026.json'),load('specimens/youtube.json')

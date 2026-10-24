@@ -743,3 +743,17 @@ h1 em {font-style:italic;color:var(--accent)}
 .video-attention-observation strong{min-width:94px;white-space:nowrap;font:18px Georgia,serif;font-variant-numeric:tabular-nums}
 .video-attention-observation span{font-size:12px;overflow-wrap:anywhere}
 @media(max-width:700px){.video-attention-details{padding:15px}.video-attention-grid{grid-template-columns:1fr}}
+
+/* Studio earnings of selected monetized vendor channels, never newcomer income */
+.air-studio-benchmarks{margin:28px 0}
+.air-studio-details{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:20px}
+.air-studio-details>summary{font-size:15px;font-weight:800;cursor:pointer}
+.air-studio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.air-studio-card{background:var(--surface-alt);border:1px solid var(--line);border-radius:9px;min-width:0;overflow-wrap:anywhere;padding:16px}
+.air-studio-card h5{font-size:14px;margin:0 0 12px}
+.air-studio-value{font:27px Georgia,serif}
+.air-studio-card p{font-size:12px;margin:7px 0}
+.air-studio-examples{list-style:none;margin:14px 0 0;padding:0}
+.air-studio-example{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);font-size:12px;padding:8px 0}
+.air-studio-example strong{white-space:nowrap;font-variant-numeric:tabular-nums}
+@media(max-width:700px){.air-studio-details{padding:15px}.air-studio-grid{grid-template-columns:1fr}}
