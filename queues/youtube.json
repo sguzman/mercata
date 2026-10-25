@@ -672,7 +672,7 @@
           "title": "Establish comparable growth series",
           "acceptance": "Compare consistently defined observations over time.",
           "weight": 1,
-          "progress": 88,
+          "progress": 90,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/country-reach-devices.json",
@@ -696,7 +696,11 @@
             "ontology/youtube/agentio-engaged-view-series-2026.json",
             "ontology/youtube/agentio-engaged-view-series-2026.md",
             "site/agentio-engaged-view-audit.mjs",
-            "tests/agentio-engaged-view-audit.test.mjs"
+            "tests/agentio-engaged-view-audit.test.mjs",
+            "ontology/youtube/nielsen-us-tv-youtube-share-2026.json",
+            "ontology/youtube/nielsen-us-tv-youtube-share-2026.md",
+            "site/nielsen-tv-share-audit.mjs",
+            "tests/nielsen-tv-share-audit.test.mjs"
           ]
         },
         {
@@ -2619,14 +2623,20 @@
           "title": "Study device and access differences",
           "acceptance": "Source mobile, desktop, TV or other device mix and usage limitations.",
           "weight": 1,
-          "progress": 63,
+          "progress": 76,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/country-reach-devices.json",
             "ontology/youtube/country-reach-devices.md",
             "specimens/youtube.json",
             "tests/youtube.test.mjs",
-            "scripts/verify.mjs"
+            "scripts/verify.mjs",
+            "ontology/youtube/nielsen-us-tv-youtube-share-2026.json",
+            "ontology/youtube/nielsen-us-tv-youtube-share-2026.md",
+            "site/nielsen-tv-share-audit.mjs",
+            "tests/nielsen-tv-share-audit.test.mjs",
+            "site/app.js",
+            "tests/site-smoke.mjs"
           ]
         },
         {

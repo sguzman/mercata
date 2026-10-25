@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [Nielsen May/July/August 2026 TV-device viewing study](ontology/youtube/nielsen-us-tv-youtube-share-2026.md) records official U.S. television watch-time shares in source-defined age 2+ denominators, without mistaking television viewing for global unique people, phone use or creator income.
+
+
 The [creator localization and accessibility feature comparison](ontology/youtube/creator-localization-access-2026.md) separates owner captions, fallible automatic speech recognition, translated metadata, manually dubbed audio, conditional automatic dubbing and viewer language preferences without inventing foreign-language audience demand or new payouts.
 
 

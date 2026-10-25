@@ -3485,6 +3485,39 @@
       "evidence_class": "official_ypp_appeal_window_and_resolution_timeline",
       "license": "Official Help center linked, concise independently authored rules",
       "notes": "Rejected applicant can appeal within21days, review decision within14days after submission, successful appeal YPP approval or readmission within30 days; reapplication restrictions depend on reason. Dates of notice and suspension matter."
+    },
+    {
+      "id": "nielsen-gauge-may-2026",
+      "url": "https://www.nielsen.com/news-center/2026/streaming-embarks-on-annual-summer-ascent-in-nielsens-may-2026-gauge-reports/",
+      "title": "Streaming Embarks on Annual Summer Ascent in Nielsen's May 2026 Gauge Reports",
+      "published_at": "2026-07-28",
+      "notes": "US persons2+ total TV watch time: YouTube 13.8%, streaming 48.6%, during May 2026; not mobile viewing.",
+      "publisher": "Nielsen",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_us_household_tv_time_tracking",
+      "license": "Public source linked; short independently authored original facts and comparisons, no figure images copied."
+    },
+    {
+      "id": "nielsen-gauge-july-2026",
+      "url": "https://www.nielsen.com/news-center/2026/tv-usage-kicks-usual-summer-slowdown-fueled-by-world-cup-and-streaming-in-nielsens-july-gauge-reports/",
+      "title": "TV Usage Kicks Usual Summer Slowdown in Nielsen's July Gauge Reports",
+      "published_at": "2026-09-10",
+      "notes": "US persons2+ TV time: YouTube 14.2%, streaming 49.0%, July 2026.",
+      "publisher": "Nielsen",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_us_household_tv_time_tracking",
+      "license": "Public source linked; short independently authored original facts and comparisons, no figure images copied."
+    },
+    {
+      "id": "nielsen-gauge-august-2026",
+      "url": "https://www.nielsen.com/news-center/2026/tv-viewing-cools-off-in-nielsens-august-gauge-reports-as-sports-take-a-breather-and-school-resumes/",
+      "title": "TV Viewing Cools Off in Nielsen's August Gauge Reports as Sports Take a Breather and School Resumes",
+      "published_at": "2026-10-22",
+      "notes": "US persons2+ TV time: YouTube 15.8%, streaming 49.6%, August 2026. YouTube viewing event trend is not total YouTube people or all device use.",
+      "publisher": "Nielsen",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_us_household_tv_time_tracking",
+      "license": "Public source linked; short independently authored original facts and comparisons, no figure images copied."
     }
   ],
   "claims": [
@@ -7681,6 +7714,29 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Different time origins: rejection notice versus appeal submission; appeal/suspension-specific exceptions exist. None guarantees program acceptance, actual earnings, or bank settlement."
+    },
+    {
+      "id": "nielsen-2026-us-tv-youtube-share-periods",
+      "text": "Nielsen The Gauge reports that YouTube represented 13.8% of all US TV-set viewing time in May 2026, 14.2% in July and 15.8% in August, with all-streaming TV shares of 48.6%, 49.0% and 49.6% in the same months.",
+      "source_ids": [
+        "nielsen-gauge-may-2026",
+        "nielsen-gauge-july-2026",
+        "nielsen-gauge-august-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "TV-device US persons 2+ viewing-time denominator; not mobile traffic, total unique users, monetized views or creator income; the dates May and July are not adjacent months."
+    },
+    {
+      "id": "nielsen-2026-tv-share-vs-mobile-difference",
+      "text": "YouTube gained 1.6 percentage points of reported US TV viewing share between July and August 2026 in Nielsen's TV set sample; this percentage-point change does not measure changes in YouTube's mobile usage, overall YouTube unique visitors or creator revenue.",
+      "source_ids": [
+        "nielsen-gauge-july-2026",
+        "nielsen-gauge-august-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Seasonality, World Cup programming and school calendar affect the TV denominator; no cross-device causal comparison or viewership panel across individual screens is supplied."
     }
   ],
   "observations": [],

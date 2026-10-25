@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "nielsen_us_television_device_time_share_2026",
+  "as_of": "2026-10-25",
+  "scope": {
+    "country": "US",
+    "population": "Nielsen The Gauge persons age 2+ using television screens",
+    "device": "television_set",
+    "unit": "share_of_total_tv_watch_time_percent",
+    "not_mobile": true,
+    "not_global": true,
+    "platform_definition": "YouTube Media Distributor Gauge watch-time contribution, not YouTube users or creator revenue"
+  },
+  "sources": [
+    "nielsen-gauge-may-2026",
+    "nielsen-gauge-july-2026",
+    "nielsen-gauge-august-2026"
+  ],
+  "observations": [
+    {
+      "period": "2026-05",
+      "source_id": "nielsen-gauge-may-2026",
+      "published_at": "2026-07-28",
+      "youtube_share_total_tv_percent": 13.8,
+      "streaming_share_total_tv_percent": 48.6,
+      "comparison": "Share of total US TV viewing time"
+    },
+    {
+      "period": "2026-07",
+      "source_id": "nielsen-gauge-july-2026",
+      "published_at": "2026-09-10",
+      "youtube_share_total_tv_percent": 14.2,
+      "streaming_share_total_tv_percent": 49,
+      "comparison": "Share of total US TV viewing time"
+    },
+    {
+      "period": "2026-08",
+      "source_id": "nielsen-gauge-august-2026",
+      "published_at": "2026-10-22",
+      "youtube_share_total_tv_percent": 15.8,
+      "streaming_share_total_tv_percent": 49.6,
+      "comparison": "Share of total US TV viewing time"
+    }
+  ],
+  "monthly_comparisons": [
+    {
+      "prior": "2026-07",
+      "following": "2026-08",
+      "unit": "percentage_points",
+      "reported_delta": 1.6,
+      "not_relative_percent": true
+    }
+  ],
+  "restrictions": [
+    "These are U.S. TV-set viewing-time shares in a Nielsen methodology, not proportions of all YouTube viewers, mobile traffic or persons who watched videos.",
+    "YouTube share and all-streaming share use the same all-television denominator; they are nested, not additive categories.",
+    "May and July are not consecutive; July and August refer to month periods with Nielsen's methodological definitions for those releases.",
+    "July-to-August +1.6 is percentage points of TV share, not a 1.6 percent relative increase or individual viewing-minute growth rate.",
+    "The July and August published record values are not forecasts; seasonality, school calendars and sports programming change total TV usage.",
+    "Mobile app usage, cross-device unique viewers, total YouTube revenue, creator earnings and watch minutes per person cannot be recovered from these TV shares.",
+    "Nielsen's The Gauge and Media Distributor Gauge report TV-device US populations; one must not combine them with GWI self-reported global past-month YouTube use as a single sample."
+  ],
+  "unmeasured": {
+    "us_mobile_youtube_view_time_share": null,
+    "us_tv_unique_youtube_viewers": null,
+    "global_youtube_tv_view_time_share": null,
+    "average_tv_minutes_per_person": null,
+    "multi_device_overlap": null,
+    "creator_payouts": null,
+    "subscriber_population": null,
+    "causal_platform_growth": null
+  }
+}

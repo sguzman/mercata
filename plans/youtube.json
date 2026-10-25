@@ -177,7 +177,7 @@
         "youtube/market/set-historical-comparison-windows"
       ],
       "phase": 2,
-      "progress_percent": 79
+      "progress_percent": 80
     },
     {
       "id": "discovery",
@@ -456,7 +456,7 @@
         "youtube/audience-scale/create-a-multi-year-audience-source-comparison"
       ],
       "phase": 2,
-      "progress_percent": 70
+      "progress_percent": 72
     },
     {
       "id": "audience-demography",
@@ -1831,15 +1831,21 @@
       "objective": "Inventory questions on television, phone and desktop use by country.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and inventory questions on television, phone and desktop use by country.",
       "status": "in_progress",
-      "percent": 73,
+      "percent": 81,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/nielsen-us-tv-youtube-share-2026.json",
+        "ontology/youtube/nielsen-us-tv-youtube-share-2026.md",
+        "site/nielsen-tv-share-audit.mjs",
+        "tests/nielsen-tv-share-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/nielsen-us-tv-youtube-share-2026.json",
       "priority": "standard",
       "phase": 2
     },
@@ -4350,7 +4356,7 @@
       "objective": "Prepare an observable device/format comparison.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and prepare an observable device/format comparison.",
       "status": "in_progress",
-      "percent": 78,
+      "percent": 84,
       "evidence": [
         "ontology/youtube/screen-viewing-uk-2025.json",
         "ontology/youtube/screen-viewing-uk-2025.md",
@@ -4361,7 +4367,11 @@
         "ontology/youtube/retention-posts-memberships.json",
         "ontology/youtube/retention-posts-memberships.md",
         "ontology/youtube/video-surfaces-economics.json",
-        "ontology/youtube/video-surfaces-economics.md"
+        "ontology/youtube/video-surfaces-economics.md",
+        "ontology/youtube/nielsen-us-tv-youtube-share-2026.json",
+        "ontology/youtube/nielsen-us-tv-youtube-share-2026.md",
+        "site/nielsen-tv-share-audit.mjs",
+        "tests/nielsen-tv-share-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/screen-viewing-uk-2025.json",
       "priority": "standard",
@@ -4615,15 +4625,21 @@
       "objective": "Record definitions of device ownership and actual viewing.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and record definitions of device ownership and actual viewing.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 76,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/nielsen-us-tv-youtube-share-2026.json",
+        "ontology/youtube/nielsen-us-tv-youtube-share-2026.md",
+        "site/nielsen-tv-share-audit.mjs",
+        "tests/nielsen-tv-share-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/nielsen-us-tv-youtube-share-2026.json",
       "priority": "high",
       "phase": 2
     },

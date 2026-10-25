@@ -158,6 +158,7 @@ try{
       ['.photography-production-labor',6,'not representative creator hourly wages'],
       ['.creator-hourly-bounds',6,'not an observed income distribution'],
       ['.monthly-income-volatility',6,'no payment is not proof of zero earnings'],
+      ['.nielsen-tv-device-share',3,'not a mobile viewing share or total unique viewers'],
       ['.creator-localization-access',6,'not measured multilingual audience or creator income'],
       ['.creator-entry-gates',7,'not actual account approval or creator income'],
       ['.monthly-creator-cash-flow',4,'Bank arrival is not the same as issuance'],

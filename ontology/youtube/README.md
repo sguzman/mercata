@@ -1,5 +1,7 @@
 # YouTube ontology — audiences, content and earning
 
+The [2026 U.S. Nielsen TV-device measurement record](nielsen-us-tv-youtube-share-2026.md), [monthly source data](nielsen-us-tv-youtube-share-2026.json) and [denominator guard](../../site/nielsen-tv-share-audit.mjs) separate YouTube's share of total TV-set watch-time from global or mobile audience use, with no inferred unique people or creator revenue.
+
 The [multilingual accessibility workflow study](creator-localization-access-2026.md), [six-route machine matrix](creator-localization-access-2026.json) and [capability audit](../../site/creator-localization-access.mjs) distinguish manual captions, ASR, localized metadata, separately supplied audio and conditional automatic dubbing. Missing language-specific watch time, creator pay and translation accuracy remain unknown.
 
 The [minimum-new-purchase channel entry protocol](creator-entry-gates-2026.md), [seven official capability gates](creator-entry-gates-2026.json) and [permission validator](../../site/creator-entry-gates.mjs) distinguish YPP review and reapplication clocks from cash receipt, as well as standard uploads, verification, live streaming, the age-18 payee restriction, conditional guardian receipts and Brazil's supervision requirement from real costs or personal account approvals. Mandatory platform purchases are not inferred from optional production upgrades.
