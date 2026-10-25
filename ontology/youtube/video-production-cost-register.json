@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "creator_video_format_cost_and_labor_register",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "official_capture_paths_plus_unit_cost_protocol_no_observed_market_prices",
   "format_paths": [
     {
@@ -118,5 +118,61 @@
     "representative_cost_hourly_rate": null,
     "net_creator_profit": null
   },
-  "creator_cost_records": []
+  "creator_cost_records": [],
+  "matched_format_attempt_cost_protocol": {
+    "as_of": "2026-10-25",
+    "kind": "matched_creator_format_attempts_prospective_arithmetic_not_market_survey",
+    "source_ids": [
+      "yt-shorts-mobile-production-2026",
+      "yt-video-adaptive-aspect-2026",
+      "live-general-help",
+      "yt-stream-encoder-process-2026"
+    ],
+    "scope_fields": [
+      "country",
+      "currency",
+      "topic_scope",
+      "creator_experience_band",
+      "period_start",
+      "period_end"
+    ],
+    "attempt_fields": [
+      "attempt_id",
+      "disposition",
+      "new_cash_paid_cents",
+      "owned_gear_allocation_cents",
+      "personal_creator_hours_by_stage"
+    ],
+    "dispositions": [
+      "published",
+      "abandoned"
+    ],
+    "stage_ids": [
+      "research_ideation",
+      "writing_storyboarding",
+      "filming_capture",
+      "art_animation",
+      "audio_music_clearance",
+      "editing_accessibility",
+      "thumbnail_metadata",
+      "distribution_promotion",
+      "community_moderation",
+      "business_admin_revision"
+    ],
+    "estimator": "Sum all attempted project labor/cash/gear allocations within each consented matched group. Divide by attempted count or published count separately; zero completions yield null rather than a finite per-published estimate.",
+    "limits": [
+      "No unobserved unfinished or unpublished attempt may be dropped to create a low cost-per-video success estimate.",
+      "Paid contractor invoices belong to new cash paid; do not also add their working hours to the personal creator-hour total.",
+      "Owned equipment use allocations are noncash accounting costs and are not new equipment purchase invoices paid twice.",
+      "Both comparison groups must have a matching declared country, currency, topic, experience band and date frame.",
+      "Matching known fields does not remove creator self-selection; cannot attribute a difference causally to format.",
+      "Rates calculated on entered private or synthetic records cannot be published as a YouTube representative wage or median.",
+      "Comparing cost per published video requires counting all abandoned attempts' cash and labor in the group total.",
+      "Only a duly consented, documented sample can provide empirical descriptive estimates; no external account scraping is authorized."
+    ],
+    "real_matched_format_study": null,
+    "median_animation_vs_video_cost_difference": null,
+    "representative_high_cost_niche_rank": null,
+    "typical_creator_labor_per_attempt": null
+  }
 }

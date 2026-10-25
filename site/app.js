@@ -1926,7 +1926,9 @@ function renderVideoProductionCosts(data,dossier){
   card.append(make('h5','',x.label));card.append(make('p','',x.limit));card.append(audienceSources(x.source_ids,dossier));grid.append(card);
  }
  details.append(grid);
- details.append(make('p','measure-limit','No representative equipment costs, work-hour samples, FX-adjusted expenses or verified creator net profits were collected.'));
+ details.append(make('p','measure-limit','No representative equipment costs, work-hour samples, FX-adjusted expenses or verified creator net profits were collected.'))
+ if(data.matched_format_attempt_cost_protocol){details.append(make('p','measure-limit','The matched-format attempt calculator includes abandoned work in the per-completed-video denominator and keeps paid cash distinct from noncash gear use. No real creator sample is collected.'));}
+;
  const link=make('a','inline-link','Review source-backed production and cost methodology ↗');link.href='./ontology/youtube/video-production-cost-register.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
 }
 

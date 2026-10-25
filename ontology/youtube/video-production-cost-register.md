@@ -21,3 +21,13 @@ Across all formats, capture research, shooting, writing, editing, thumbnails, di
 ## Unresolved acceptance gates
 
 No representative source supplies median Shorts/horizontal/live creation costs, complete input invoices, actual labor records, local amortization, full production-failure rates, fair currency conversions or resulting net creator profit. Data remain null rather than substituting an attractive equipment-shopping estimate.
+
+## Matched high-cost-format comparison with unfinished work included (October 25, 2026)
+
+Mercata's [attempt-cost arithmetic](../../site/format-attempt-costs.mjs) now accepts **two explicitly matched format cohorts** in one documented country, currency, topic, creator-experience category and date window. The input consists of every **published or abandoned** production attempt, creator-paid cash, noncash allocation of already owned equipment, and ten non-overlapping personal work-stage hour totals. A separate paid contractor's invoice belongs in cash, not again in personal creator hours.
+
+The output distinguishes cost and hours **per attempted project** from costs and hours **per published output**. If a group contains two attempts and just one completed video, its unfinished project's expenses and time still enter the cost per published video. If it has zero published outputs, the per-published denominator is **undefined** (`null`), never a fabricated zero.
+
+The code rejects missing work-stage observations, duplicated attempt IDs, non-finalized items, unmatched periods and unsupported negative/unsafe counts. Its regression fixtures are **synthetic**. The output does not assert that animation is more expensive than filming, that paid gear is mandatory, that format caused the difference, or that any creator or niche earns a positive hourly wage.
+
+To reach an empirical production-cost comparison, separately collect legitimately authorized matching creator cohorts including abandoned projects, independent price/currency records, complete personal work logs and nonrespondents. No real attempts were obtained in this revision.
