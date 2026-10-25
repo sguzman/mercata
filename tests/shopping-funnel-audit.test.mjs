@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {auditShoppingInference,assessMerchantMetric} from '../site/shopping-funnel-audit.mjs';
+import {auditShoppingInference,assessMerchantMetric,auditShoppingIntentFrames} from '../site/shopping-funnel-audit.mjs';
 const load=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 test('Ranked 2025 commercial samples and 500-person Gen Z survey use different units',async()=>{
  const [m,d]=await Promise.all([load('ontology/youtube/shopping-funnel-evidence-2025.json'),load('specimens/youtube.json')]);
@@ -34,4 +34,28 @@ test('Public website labels actual attribution and missing conversions',async()=
  assert(site.includes('renderShoppingFunnelEvidence'));
  assert(site.includes('shopping-funnel-evidence-2025.json'));
  assert(site.includes('no verified public conversion rate'));
+});
+
+test('Independent 2025 Kantar attitudes and 2023 Material shopper typology are distinct bounded samples',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/shopping-funnel-evidence-2025.json'),load('specimens/youtube.json')]);
+ const audit=auditShoppingIntentFrames(m,new Set(d.evidence.map(x=>x.id)));
+ assert.deepEqual(audit,{valid:true,errors:[]});
+ const [k,j]=m.intent_reference_frames;
+ assert.equal(k.overall_sample_n,2160);
+ assert.equal(k.per_question_n,null);
+ assert.deepEqual(k.observations.map(x=>x.percent),[69,70,63,91,81,76,81]);
+ assert.equal(j.survey_sample_n,2420);
+ assert.equal(j.journeys.length,7);
+ assert.equal(j.youtube_attributable_orders,null);
+ assert.equal(k.verified_purchase_events,null);
+});
+test('Survey awareness and shopper categories cannot be promoted to measured YouTube conversions',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/shopping-funnel-evidence-2025.json'),load('specimens/youtube.json')]);
+ const s=new Set(d.evidence.map(x=>x.id));
+ const a=structuredClone(m);a.intent_reference_frames[0].verified_purchase_events=132;
+ assert(auditShoppingIntentFrames(a,s).errors.includes('survey attitudinal claims converted to transactions'));
+ const b=structuredClone(m);b.intent_reference_frames[1].category_proportions={impulse:30};
+ assert(auditShoppingIntentFrames(b,s).errors.includes('invented shopper journey outcomes'));
+ const c=structuredClone(m);c.intent_reference_frames[0].per_question_n=2160;
+ assert(auditShoppingIntentFrames(c,s).errors.includes('misrepresented Kantar denominator or scope'));
 });

@@ -2914,7 +2914,21 @@ function renderShoppingFunnelEvidence(model,dossier){
   card.append(make('h5','',x.name));card.append(make('strong','',x.value));
   card.append(make('p','measure-limit',x.limit));grid.append(card);
  }
- details.append(grid);details.append(audienceSources(model.source_ids,dossier));
+ details.append(grid);
+ if(model.intent_reference_frames?.length===2){
+  const [k,m]=model.intent_reference_frames;
+  const panel=make('div','shopping-intent-surveys');
+  panel.append(make('h5','','Buyer intent: research preference is not completed shopping'));
+  panel.append(make('p','measure-limit','Google/Kantar 2025: '+k.overall_sample_n.toLocaleString('en-US')+
+   ' selected US weekly video viewers ages 18–64. '+k.observations[0].percent+
+   '% preferred video to learn a skill; '+k.observations[4].percent+
+   '% agreed YouTube has the best product reviews. Survey opinions, not orders; question-level sample sizes unknown.'));
+  panel.append(make('p','measure-limit','Google/Material 2023: '+m.survey_sample_n.toLocaleString('en-US')+
+   ' US adult online-video shoppers; seven descriptive shopping journeys from impulse discovery to deliberation and urgent replacement. The 2025 marketing summary rounds the respondent count to 2,000.'));
+  panel.append(make('p','measure-limit','Different study populations and fieldwork years cannot be pooled. No matched YouTube purchase conversions, creator profits, or causal shopping lift are observed.'));
+  panel.append(audienceSources([k.source_id,m.source_id],dossier));details.append(panel);
+ }
+ details.append(audienceSources(model.source_ids,dossier));
  details.append(make('p','measure-limit','Merchant Center data can suppress low-volume metrics and prohibits re-identifying people or linking sensitive profiles.'));
  const link=make('a','inline-link','Read shopping research units and attribution restrictions ↗');
  link.href='./ontology/youtube/shopping-funnel-evidence-2025.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);

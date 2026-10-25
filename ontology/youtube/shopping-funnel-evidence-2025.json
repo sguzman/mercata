@@ -2,10 +2,12 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "shopping_transaction_selection_vs_discovery_survey_and_merchant_outcomes",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "source_ids": [
     "yt-shopping-2025-transactions-and-survey",
-    "google-merchant-affiliate-analytics-2026"
+    "google-merchant-affiliate-analytics-2026",
+    "google-kantar-future-video-us-2025",
+    "google-material-video-shopping-journeys-us-2023"
   ],
   "frames": [
     {
@@ -134,6 +136,133 @@
     "all_creator_merchant_profit": null,
     "genz_actual_verified_purchases": null,
     "distinct_click_to_order_buyers": null,
-    "creator_hourly_affiliate_profit": null
-  }
+    "creator_hourly_affiliate_profit": null,
+    "youtube_preference_to_verified_purchase_rate": null,
+    "journey_specific_youtube_order_rate": null,
+    "kantar_item_level_weighted_n": null
+  },
+  "intent_reference_frames": [
+    {
+      "id": "kantar_video_learning_and_product_research_2025",
+      "source_id": "google-kantar-future-video-us-2025",
+      "study": "Google/Kantar Future of Video",
+      "source_publication": "2025-08",
+      "fieldwork_start": "2025-01-28",
+      "fieldwork_end": "2025-02-10",
+      "geography": "United States",
+      "survey_population": "weekly video viewers ages 18–64",
+      "overall_sample_n": 2160,
+      "source_separately_cites_youtube_viewer_subset_n": 1001,
+      "per_question_n": null,
+      "sponsor": "Google",
+      "survey_conducted_by": "Kantar",
+      "study_type": "sponsor_published_self_report_attitudes",
+      "observations": [
+        {
+          "id": "rather_video_learn_skill",
+          "percent": 69,
+          "unit": "respondents_preferring_video_over_text_or_audio_for_skill_learning",
+          "not_youtube_unique": true
+        },
+        {
+          "id": "rather_video_build_something",
+          "percent": 70,
+          "unit": "respondents_preferring_video_over_text_or_audio_for_building_instructions",
+          "not_youtube_unique": true
+        },
+        {
+          "id": "rather_video_cook_something",
+          "percent": 63,
+          "unit": "respondents_preferring_video_over_text_or_audio_for_cooking_instructions",
+          "not_youtube_unique": true
+        },
+        {
+          "id": "youtube_best_instructional_content",
+          "percent": 91,
+          "unit": "respondents_agreeing_youtube_has_best_instructional_content",
+          "not_youtube_unique": false
+        },
+        {
+          "id": "youtube_best_product_reviews",
+          "percent": 81,
+          "unit": "respondents_agreeing_youtube_has_best_product_reviews",
+          "not_youtube_unique": false
+        },
+        {
+          "id": "youtube_best_unboxing",
+          "percent": 76,
+          "unit": "respondents_agreeing_youtube_has_best_unboxing_content",
+          "not_youtube_unique": false
+        },
+        {
+          "id": "youtube_creator_product_research_discovery",
+          "percent": 81,
+          "unit": "respondents_agreeing_youtube_has_creator_content_helpful_for_product_research_or_discovery",
+          "not_youtube_unique": false
+        }
+      ],
+      "data_capture": "Reported percentages only; full item-specific sample counts, error margins and exact question weighting not available in cited marketing summary.",
+      "verified_purchase_events": null,
+      "video_to_purchase_conversion": null,
+      "global_generalization_allowed": false,
+      "causal_creator_sales_effect": null
+    },
+    {
+      "id": "material_video_shopping_journeys_2023",
+      "source_id": "google-material-video-shopping-journeys-us-2023",
+      "study": "Google/Material Role of Video in Shopping Journey",
+      "source_publication": "2025-05_summary_of_2023_study",
+      "fieldwork_start": "2023-08",
+      "fieldwork_end": "2023-09",
+      "geography": "United States",
+      "survey_population": "Americans 18+ who used an online video platform to shop",
+      "survey_sample_n": 2420,
+      "study_mixed_method": true,
+      "marketing_article_body_rounded_sample": "2,000",
+      "study_is_youtube_only": false,
+      "journeys": [
+        {
+          "id": "impulse",
+          "intent": "triggered_discovery",
+          "purchase_certainty": "low"
+        },
+        {
+          "id": "passion_pursuit",
+          "intent": "longer_term_interest",
+          "purchase_certainty": "unknown"
+        },
+        {
+          "id": "vision_to_reality",
+          "intent": "visual_product_exploration",
+          "purchase_certainty": "unknown"
+        },
+        {
+          "id": "rookie",
+          "intent": "new_category_guidance",
+          "purchase_certainty": "unknown"
+        },
+        {
+          "id": "quest_for_best",
+          "intent": "high_deliberation_comparison",
+          "purchase_certainty": "unknown"
+        },
+        {
+          "id": "buy_and_try",
+          "intent": "compare_and_trial_with_possible_returns",
+          "purchase_certainty": "unknown"
+        },
+        {
+          "id": "quick_fire",
+          "intent": "replacement_or_urgent_purchase",
+          "purchase_certainty": "highest_in_source_typology_not_quantified"
+        }
+      ],
+      "category_proportions": null,
+      "buyer_counts_by_journey": null,
+      "raw_purchase_event_data_obtained": false,
+      "youtube_attributable_orders": null,
+      "causal_effect_of_video": null,
+      "proven_unique_youtube_conversions": null
+    }
+  ]
 }

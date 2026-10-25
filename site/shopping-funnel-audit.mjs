@@ -19,3 +19,32 @@ export function assessMerchantMetric(model,metric,{authorized=false}={}){
  if(!authorized)return {available:false,reason:'merchant_authorization_required'};
  return {available:true,meaning:entry.meaning,observed_value:null,settled_approved_only:entry.approved_only};
 }
+
+export function auditShoppingIntentFrames(model,sourceIds){
+ const errors=[],frames=model?.intent_reference_frames||[];
+ if(frames.length!==2||frames[0].id!=='kantar_video_learning_and_product_research_2025'||
+    frames[1].id!=='material_video_shopping_journeys_2023')errors.push('wrong intent survey frames');
+ const [k,m]=frames;
+ if(!k||!m)return {valid:false,errors};
+ if(!sourceIds.has(k.source_id)||!sourceIds.has(m.source_id)||k.source_id===m.source_id)errors.push('missing or duplicated survey source');
+ if(k.overall_sample_n!==2160||k.source_separately_cites_youtube_viewer_subset_n!==1001||
+    k.per_question_n!==null||k.geography!=='United States'||k.global_generalization_allowed!==false||
+    k.sponsor!=='Google')errors.push('misrepresented Kantar denominator or scope');
+ const labels=['rather_video_learn_skill','rather_video_build_something','rather_video_cook_something',
+   'youtube_best_instructional_content','youtube_best_product_reviews','youtube_best_unboxing',
+   'youtube_creator_product_research_discovery'];
+ const pcts=[69,70,63,91,81,76,81];
+ if(k.observations?.length!==labels.length||k.observations.some((x,i)=>
+    x.id!==labels[i]||x.percent!==pcts[i]||!x.unit))errors.push('survey percentages or predicates unsupported');
+ if(k.verified_purchase_events!==null||k.video_to_purchase_conversion!==null||
+    k.causal_creator_sales_effect!==null)errors.push('survey attitudinal claims converted to transactions');
+ if(m.survey_sample_n!==2420||m.marketing_article_body_rounded_sample!=='2,000'||
+    m.study_is_youtube_only!==false||m.journeys?.length!==7||
+    new Set(m.journeys.map(x=>x.id)).size!==7)errors.push('shopping typology frame corrupted');
+ if(m.category_proportions!==null||m.buyer_counts_by_journey!==null||
+    m.raw_purchase_event_data_obtained!==false||
+    m.youtube_attributable_orders!==null||m.causal_effect_of_video!==null||
+    m.proven_unique_youtube_conversions!==null)errors.push('invented shopper journey outcomes');
+ if(Object.values(model?.unmeasured||{}).some(x=>x!==null))errors.push('invented missing shopping outcome');
+ return {valid:errors.length===0,errors};
+}

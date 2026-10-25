@@ -210,6 +210,11 @@ try{
     assert((await chatCulture.textContent()).includes('0.4%–8.7%'));
     assert((await chatCulture.textContent()).includes('8–38 seconds'));
     assert((await chatCulture.textContent()).includes('No individual chat identities'));
+    const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
+    assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
+    assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));
+    assert((await shoppingIntent.textContent()).includes('seven descriptive shopping journeys'));
+    assert((await shoppingIntent.textContent()).includes('No matched YouTube purchase conversions'));
     const nicheMaturity=page.locator('.channel-cohort-evidence .niche-maturity-evidence');
     assert.equal(await nicheMaturity.count(),1,'Missing bounded new/mature channel niche evidence');
     assert((await nicheMaturity.textContent()).includes('TubeAI curated active 10k+ subscriber channels'));
