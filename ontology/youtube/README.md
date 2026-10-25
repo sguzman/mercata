@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [channel and active-creator population study](creator-activity-population-2026.md), [vendor frame crosswalk](creator-activity-population-2026.json), and [sample-boundary test](../../site/creator-population-audit.mjs) distinguish channel objects, upload events, unique owners, approved payees and professional creator businesses.
+
+
 The [income scenario uncertainty study](niche-uncertainty-ranges-2026.md), [required-input record](niche-uncertainty-ranges-2026.json) and [interval audit](../../site/niche-uncertainty.mjs) reuse tested revenue accounting to bound user-assumption outcomes while leaving all observed creator earnings and probabilities unknown.
 
 

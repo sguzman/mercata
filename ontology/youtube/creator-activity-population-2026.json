@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "creator_channel_activity_population_crosswalk",
+  "as_of": "2026-10-25",
+  "method": "Retain four observed, vendor-specific index and endpoint quantities with their denominator and selection rules; do not replace a channel account by a unique human creator or confuse subscriber stock with current publishing activity.",
+  "population": "Four dated vendor-indexed YouTube channel frames, not all channel accounts, all uploaders, all paying creators, or all unique humans worldwide",
+  "source_ids": [
+    "vidiq-subscriber-benchmarks-2026",
+    "vidiq-1000-subscribers-2026",
+    "creatordb-june2026-index",
+    "analytics-audience"
+  ],
+  "source_data": [
+    "ontology/youtube/channel-cohort-observations-2026.json",
+    "ontology/youtube/creator-index-comparison-2026.json"
+  ],
+  "frames": [
+    {
+      "id": "vidiq_indexed_1_plus_july",
+      "source_id": "vidiq-subscriber-benchmarks-2026",
+      "reported_snapshot": "2026-07-20",
+      "period_days": null,
+      "sampling_frame": "public indexed YouTube channels with >=1 public subscriber",
+      "quantity_kind": "indexed_channel_stock",
+      "channel_count": 61186246,
+      "subscribers_min": 1,
+      "account_owner_people_count": null,
+      "active_uploader_count": null,
+      "advertising_approved_creators": null,
+      "creator_profit": null,
+      "limitations": "At least one subscriber, indexed vendor coverage; includes idle channels and excludes zero-subscriber or unindexed channels."
+    },
+    {
+      "id": "vidiq_positive_90_day_net_video_delta",
+      "source_id": "vidiq-subscriber-benchmarks-2026",
+      "reported_snapshot": "2026-07-20",
+      "period_days": 90,
+      "sampling_frame": "channels with >=1 public subscriber at window start AND net increase in public video count",
+      "quantity_kind": "selected_channels_positive_net_public_video_object_count",
+      "channel_count": 11752034,
+      "subscribers_min": 1,
+      "account_owner_people_count": null,
+      "active_uploader_count": null,
+      "advertising_approved_creators": null,
+      "creator_profit": null,
+      "limitations": "Net increase of public video objects can omit actual uploads canceled by removals, private visibility, deletions or a no-net-change period. The selected subset is not all observed active posting."
+    },
+    {
+      "id": "vidiq_sub1000_360day_endpoint",
+      "source_id": "vidiq-1000-subscribers-2026",
+      "reported_snapshot": "2026-09-10",
+      "period_days": 360,
+      "sampling_frame": "<1000 subscribers and >=1 public video at baseline 360 days earlier, endpoint counts present, nonnegative net video count delta",
+      "quantity_kind": "longitudinal_selected_channel_endpoint_frame",
+      "channel_count": 32926088,
+      "subscribers_min": null,
+      "account_owner_people_count": null,
+      "active_uploader_count": null,
+      "advertising_approved_creators": null,
+      "creator_profit": null,
+      "limitations": "Channels had under 1,000 subs and at least one public video at baseline, both visible endpoints and nonnegative public video count changes; not a pure newly launched channel cohort."
+    },
+    {
+      "id": "creatordb_indexed_1000_plus_june",
+      "source_id": "creatordb-june2026-index",
+      "reported_snapshot": "2026-06-27",
+      "period_days": null,
+      "sampling_frame": "vendor indexed YouTube channels with at least 1,000 subscribers",
+      "quantity_kind": "different_vendor_indexed_channel_stock",
+      "channel_count": 2153140,
+      "subscribers_min": 1000,
+      "account_owner_people_count": null,
+      "active_uploader_count": null,
+      "advertising_approved_creators": null,
+      "creator_profit": null,
+      "limitations": "Different provider index, coverage, date and threshold; counts cannot be added to or subtracted from vidIQ samples to estimate churn or business growth."
+    }
+  ],
+  "distinct_population_definitions": [
+    {
+      "id": "channel",
+      "unit": "channel_object",
+      "minimum_evidence": "A platform or vendor channel ID within a specified observation frame",
+      "not_equivalent_to": "one distinct individual creator or an active publisher"
+    },
+    {
+      "id": "creator_owner",
+      "unit": "consenting_person_or_legal_entity",
+      "minimum_evidence": "Legitimate deduplicated ownership data with business/organization roles",
+      "not_equivalent_to": "a public channel title or ID"
+    },
+    {
+      "id": "publishing_activity",
+      "unit": "verified_dated_upload_or_live_event",
+      "minimum_evidence": "Actual public/private lifecycle events, time window and right-censoring with authorized tracking",
+      "not_equivalent_to": "a single net difference in count of public video objects"
+    },
+    {
+      "id": "monetized_creator",
+      "unit": "approved_creator_business_for_named_revenue_feature",
+      "minimum_evidence": "YPP authorization, active module, net reported receipts and clear account controls",
+      "not_equivalent_to": "a channel with 1,000 subscribers"
+    },
+    {
+      "id": "professional_earning_creator",
+      "unit": "creators_or_businesses_with_valid_paid_work_definition",
+      "minimum_evidence": "Independent labor and receipt data including zero earners, unapproved and failed attempts",
+      "not_equivalent_to": "sponsor rate card, video view, or observed large channel"
+    }
+  ],
+  "sampling_design_next": [
+    "Fix the first-publication date for new entrants with legitimate evidence before classifying channels as new.",
+    "Do not use subscriber count alone to infer the age of a channel.",
+    "Keep first upload and first channel creation as different clocks.",
+    "Select niches by explicit content inclusion predicate and match geography, format and observation time.",
+    "Include zero-subscriber channels, invisible/deleted channels and entrants who never published where the target frame includes them.",
+    "Record repeat channel snapshots and actual dated uploads where available, not just net video-count changes.",
+    "Estimate earning creator population only from valid paid status and receipt records, including nonmonetized and zero earning."
+  ],
+  "unmeasured": {
+    "all_eligible_active_global_creators": null,
+    "global_monthly_creators_with_upload_event": null,
+    "first_year_newcomer_creator_count": null,
+    "zero_subscriber_active_uploader_population": null,
+    "unique_person_to_channel_mapping": null,
+    "creator_income_count": null,
+    "channel_niche_age_distribution": null
+  },
+  "not_independent_dataset_sum": true,
+  "not_a_global_monthly_active_creators_estimate": true
+}

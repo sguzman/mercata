@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [active-creator population index study](ontology/youtube/creator-activity-population-2026.md) separates vidIQ and CreatorDB channel stocks and positive net video-count cohorts from actual publishers, distinct people and earning creators, preserving their unmatched sampling frames.
+
+
 The [creator income sensitivity-envelope study](ontology/youtube/niche-uncertainty-ranges-2026.md) extends the original scenario math with strictly bounded, explicitly provided assumptions, and never labels a hypothetical interval a calibrated earnings prediction, niche rank or empirical confidence interval.
 
 
