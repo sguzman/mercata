@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [YTLive 2024 empirical attendance sample](ontology/youtube/ytlive-attendance-observations-2026.md) documents five-minute concurrency measurements across 12,156 selected streams and the distinction between simultaneous viewers, unique people and creator income.
+
+
 The [peer-reviewed live chat culture study](ontology/youtube/live-chat-culture-observations-2025.md) records a 92,412-message selected 2025 observational model and platform display-filter caveats without profiling participants or inventing creator earnings.
 
 

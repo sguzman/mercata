@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "ytlive_2024_public_concurrent_livestream_sample",
+  "as_of": "2026-10-24",
+  "source_id": "ytlive-research-sessions-2026",
+  "original_dataset_url": "https://github.com/ghalandar/YTLive",
+  "publication": {
+    "original_preprint": "2025-10-24",
+    "conference": "NOMS 2026",
+    "paper_url": "https://arxiv.org/abs/2510.24769"
+  },
+  "sample": {
+    "window_start": "2024-05-01",
+    "window_end": "2024-06-30",
+    "number_of_streams": 12156,
+    "measurement_records_strictly_greater_than": 507000,
+    "sampling_interval_minutes": 5,
+    "time_reference": "UTC",
+    "included_metric": "sampled_concurrent_viewers_per_stream_at_time_interval",
+    "included_duration": "recorded_broadcast_start_end_and_length",
+    "stream_ids_hashed": true,
+    "unique_viewer_count_recorded": false,
+    "chat_message_count_recorded": false,
+    "subscriber_or_payment_recorded": false
+  },
+  "author_findings": [
+    {
+      "id": "weekend",
+      "statement": "The sampled streams showed greater and steadier concurrent viewership on weekends, especially some afternoons; magnitude is not a universal platform estimate",
+      "verified_numeric_effect_size": null
+    },
+    {
+      "id": "stream_length",
+      "statement": "Shorter sampled streams had higher and more stable concurrency; longer streams often developed viewership more gradually with more variance",
+      "verified_numeric_effect_size": null
+    }
+  ],
+  "duration_categories_minutes": [
+    {
+      "id": "short",
+      "lower_inclusive": 0,
+      "upper_exclusive": 120
+    },
+    {
+      "id": "medium",
+      "lower_inclusive": 120,
+      "upper_exclusive": 240
+    },
+    {
+      "id": "long",
+      "lower_inclusive": 240,
+      "upper_exclusive": null
+    }
+  ],
+  "limitations": [
+    "Five-minute snapshots of simultaneous viewers are not unique people, whole-broadcast view events, total watch hours or audience retention cohorts.",
+    "Dataset selection is not a census of worldwide YouTube streams or creator earnings and covers only May–June 2024.",
+    "A 120-minute broadcast is not a 120-minute average viewing session for any viewer.",
+    "Weekday/weekend and length observations are associational; channel sizes, programming and creator schedules may confound patterns.",
+    "No experimental best upload time, individual watch behavior, 2026 audience growth or revenue conversion is measured.",
+    "Hashed stream IDs and the author's aggregate public observations must not be used to reconstruct individual viewer histories."
+  ],
+  "observed_creator_analytics": [],
+  "unmeasured": {
+    "unique_viewers": null,
+    "paid_chatters": null,
+    "viewer_retention_minutes": null,
+    "shorts_comparator": null,
+    "vod_comparator": null,
+    "creator_income": null,
+    "causal_schedule_effect": null
+  }
+}

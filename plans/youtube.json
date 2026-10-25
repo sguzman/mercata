@@ -314,7 +314,7 @@
         "youtube/sales/separate-analytics-unavailable-to-outsiders"
       ],
       "phase": 3,
-      "progress_percent": 75
+      "progress_percent": 76
     },
     {
       "id": "risk",
@@ -566,7 +566,7 @@
         "youtube/content-formats/measure-creation-cost-by-format"
       ],
       "phase": 2,
-      "progress_percent": 67
+      "progress_percent": 68
     },
     {
       "id": "social-discovery",
@@ -681,7 +681,7 @@
         "youtube/audience-trends/create-explicit-uncertainty-ranges-for-niche-forecasts"
       ],
       "phase": 4,
-      "progress_percent": 63
+      "progress_percent": 64
     },
     {
       "id": "audience-safeguards",
@@ -2993,13 +2993,18 @@
       "objective": "Specify comparable windows and measures of watch time, chat and repeat visits.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify comparable windows and measures of watch time, chat and repeat visits.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 60,
       "evidence": [
         "ontology/youtube/air-studio-benchmarks-2026.json",
         "ontology/youtube/air-studio-benchmarks-2026.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/ytlive-attendance-observations-2026.json",
+        "ontology/youtube/ytlive-attendance-observations-2026.md",
+        "site/ytlive-attendance-audit.mjs",
+        "tests/ytlive-attendance-audit.test.mjs",
+        "site/app.js"
       ],
       "artifact": "ontology/youtube/air-studio-benchmarks-2026.json",
       "priority": "standard",
@@ -5053,7 +5058,7 @@
       "objective": "Specify separate impressions, viewing duration and distinct audience denominators.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify separate impressions, viewing duration and distinct audience denominators.",
       "status": "in_progress",
-      "percent": 83,
+      "percent": 86,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
@@ -5065,9 +5070,14 @@
         "site/publish-time-audit.mjs",
         "tests/publish-time-audit.test.mjs",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/ytlive-attendance-observations-2026.json",
+        "ontology/youtube/ytlive-attendance-observations-2026.md",
+        "site/ytlive-attendance-audit.mjs",
+        "tests/ytlive-attendance-audit.test.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/ytlive-attendance-observations-2026.json",
       "priority": "standard",
       "phase": 2
     },
@@ -5223,7 +5233,7 @@
       "objective": "Require cohort and measurement basis, not public impressions alone.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and require cohort and measurement basis, not public impressions alone.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 83,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
@@ -5241,7 +5251,11 @@
         "site/retention-observability-audit.mjs",
         "tests/retention-observability-audit.test.mjs",
         "tests/site-smoke.mjs",
-        "site/app.js"
+        "site/app.js",
+        "ontology/youtube/ytlive-attendance-observations-2026.json",
+        "ontology/youtube/ytlive-attendance-observations-2026.md",
+        "site/ytlive-attendance-audit.mjs",
+        "tests/ytlive-attendance-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/retention-observability.json",
       "priority": "standard",

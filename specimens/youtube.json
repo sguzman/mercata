@@ -3111,6 +3111,17 @@
       "evidence_class": "official_live_chat_display_and_replay_rules",
       "license": "Official platform help linked, policies independently paraphrased",
       "notes": "Top Chat filtered vs Live Chat display, made-for-kids restriction, stream-edit replay removal and polling unreplayed; not complete unmoderated archive."
+    },
+    {
+      "id": "ytlive-research-sessions-2026",
+      "url": "https://arxiv.org/abs/2510.24769",
+      "publisher": "YTLive authors / NOMS 2026 / arXiv",
+      "title": "YTLive: A Dataset of Real-World YouTube Live Streaming Sessions",
+      "published_at": "2025-10-24",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "published_empirical_livestream_concurrency_sample",
+      "license": "Author dataset and abstract linked; brief independently authored aggregate observations, no raw viewer records copied",
+      "notes": "NOMS 2026 study, May–June 2024 YouTube Researcher Program 12,156 streams, over 507k five-minute concurrency observations; companion public dataset at github.com/ghalandar/YTLive; not unique viewers or creator revenue."
     }
   ],
   "claims": [
@@ -6722,6 +6733,26 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Moderation and privacy protections also affect available display data; no participant-level records are collected."
+    },
+    {
+      "id": "ytlive-2024-live-concurrency-panel",
+      "text": "The published YTLive sample contains more than 507,000 five-minute concurrent-viewer observations across 12,156 selected YouTube livestreams in May–June 2024, with recorded broadcast durations and hashed stream identifiers.",
+      "source_ids": [
+        "ytlive-research-sessions-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Stream-level and five-minute concurrency only; neither distinct viewers nor watch-person sessions, donations, Shorts, VOD or net creator income."
+    },
+    {
+      "id": "ytlive-2024-timing-length-association",
+      "text": "YTLive's 2024 selected livestream analysis reports descriptive daypart/weekend and broadcast-length differences in sampled concurrent viewership, not experimentally verified optimal times, guaranteed creator engagement or monetization outcomes.",
+      "source_ids": [
+        "ytlive-research-sessions-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Limited May–June 2024 selection, uncontrolled stream category, channel size and geographic differences; no cause or financial benefit can be inferred."
     }
   ],
   "observations": [],

@@ -100,6 +100,7 @@ try{
       ['.country-ad-reach',4,'Advertiser planning can be revised'],
       ['.us-news-demographic-crosswalk',8,'Biological sex, overlapping age-by-party'],
       ['.synthetic-media-rights',4,'no AI creator earnings'],
+      ['.ytlive-attendance-study',4,'not unique viewers or earnings'],
       ['.live-chat-culture-study',4,'not verified creator earnings'],
       ['.vtuber-superchat-cohort',7,'not zero total earnings'],
       ['.playlist-series-observability',9,'not unique returning viewers'],
