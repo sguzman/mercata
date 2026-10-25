@@ -297,6 +297,10 @@ The [official survey review](mexico-encca-audiovisual-2024.md), [machine source 
 
 The [creator-hourly accounting algorithm](hourly-income-accounting.md), [machine computation contract](hourly-income-accounting.json), [implementation](../../site/creator-hourly-audit.mjs) and [synthetic regression tests](../../tests/creator-hourly-audit.test.mjs) calculate net receipts divided by actual labor, including failed attempts, refunds and zero revenue. No private records, matched creator population or typical YouTube hourly pay were supplied.
 
+## Shorts country-level pooled advertising and future targeted ads
+
+The [current Shorts Creator Pool and future targeted-ad study](shorts-pool-economics.md), [source-linked rules](shorts-pool-economics.json) and [hypothetical denominator validator](../../site/shorts-pool-economics.mjs) separate eligible engaged views, music cost contributions, country-specific pool allocations and 45% creator shares. The 2027 targeted five-or-fewer-channel route remains future policy, not 2026 earnings.
+
 ## Premium member watch time and announced subscription pools
 
 The [current and 2027 Premium allocation research](premium-allocation-boundaries.md), [machine policy](premium-allocation-boundaries.json) and [hypothetical evaluator](../../site/premium-allocation-boundaries.mjs) distinguish Premium viewer subscriptions from channel memberships and current viewing eligibility from future pools. Actual creator share and payout remain unknown.

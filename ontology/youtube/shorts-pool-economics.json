@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "shorts_country_creator_pool_vs_future_direct_targeted_ads",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "shorts-policy",
+    "revenue-shares",
+    "yt-ypp-2027-announcement",
+    "api-metrics"
+  ],
+  "current_2026": {
+    "pool_per_country": true,
+    "country_engaged_view_weighting": true,
+    "source_metric": "eligible_engaged_views",
+    "input_sources": [
+      "eligible_shorts_feed_ad_receipts",
+      "relevant_eligible_shorts_viewer_countries",
+      "music_cost_allocations",
+      "accepted_shorts_module"
+    ],
+    "original_or_policy_ineligible_views_excluded": true,
+    "module_acceptance_prospective_not_retroactive": true,
+    "creator_share_of_allocated_pool": 0.45,
+    "monetized_shorts_viewer_ad_required_on_each_short": false,
+    "known_country_pool_revenue": null,
+    "actual_eligible_creator_engaged_views": null,
+    "music_revenue_pool_fraction_examples": [
+      {
+        "tracks": 0,
+        "pool_fraction": 1
+      },
+      {
+        "tracks": 1,
+        "pool_fraction": 0.5
+      },
+      {
+        "tracks": 2,
+        "pool_fraction": 0.3333333333333333
+      }
+    ],
+    "music_tracks_affect_pool_before_creator_allocation": true,
+    "creator_own_engaged_view_allocation_unchanged_by_own_music_tracks": true
+  },
+  "future_2027": {
+    "effective_from": "2027-02-01",
+    "status": "announced_future_as_of_oct_2026",
+    "monthly_short_qualification_minimum_views": 10000000,
+    "qualified_window_days": 90,
+    "measurement_window_end_day_of_previous_calendar_month": 15,
+    "direct_targeted_shorts_ad_new_route": true,
+    "direct_targeted_max_channels": 5,
+    "direct_targeted_share_of_eligible_net": 0.45,
+    "targeted_direct_ads_not_creator_pool_ad_revenue": true,
+    "qualifying_short_monthly_gate_does_not_revoke_ypp_or_long_form_entitlements": true,
+    "actual_creator_targeted_ad_contract_net_revenue": null
+  },
+  "observed_account_reports": [],
+  "observed_creator_pool_balances": [],
+  "prohibitions": [
+    "Do not multiply long-form watch-page CPM or public Shorts views by 45% to infer creator Shorts ads payout.",
+    "Creator share is 45% of a country-specific allocated Creator Pool, not 45% of all advertiser gross Shorts Feed spending.",
+    "Music-track examples concern pool funding composition, not a creator-specific earnings discount for playing licensed music.",
+    "Views before acceptance of the Shorts Monetization Module are not retroactively entitled to pooled ads.",
+    "Country-eligible engaged-view shares cannot be calculated from raw public viewCount or non-country-matched samples.",
+    "Targeted direct Shorts ads to five or fewer channels are announced for February 2027 and must not be treated as current 2026 creator revenues or added to the pool twice.",
+    "2027 rolling Shorts qualification is not a retroactive ban on previously earned long-form revenue.",
+    "No specific account's qualified engaged views, country pool balance, net ad receipts, taxes or settled cash were observed."
+  ],
+  "unmeasured": {
+    "country_creator_pool_size": null,
+    "all_eligible_engaged_views_by_country": null,
+    "creator_eligible_engaged_views_by_country": null,
+    "actual_youtube_shorts_earnings": null,
+    "creator_qualified_rolling_views": null,
+    "creator_cash_profit": null
+  }
+}
