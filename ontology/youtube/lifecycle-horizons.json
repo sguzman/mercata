@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "video_lifecycle_and_revenue_horizon_protocol",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "study_design_no_measured_evergreen_income_advantage",
   "age_windows_days": [
     30,
@@ -15,7 +15,8 @@
     "api-query-params",
     "api-reporting-metrics",
     "studio-analytics-help",
-    "yt-revenue-studio-2026"
+    "yt-revenue-studio-2026",
+    "fpsy-psychotherapy-video-longitudinal-2026"
   ],
   "study_unit": "One eligible video, with owner-authorized financial series only when consent and usage rights allow",
   "stratification_fields": [
@@ -94,5 +95,46 @@
     "zero_income_share_by_age": null,
     "typical_production_hours": null,
     "causal_longevity_effect": null
+  },
+  "single_channel_evergreen_longitudinal_observation": {
+    "as_of": "2026-10-25",
+    "source_id": "fpsy-psychotherapy-video-longitudinal-2026",
+    "publication_date": "2026-03-05",
+    "observed_channel": "GREMO HUS academic psychotherapy education",
+    "sample_scope": "51 videos published 2018–2022, three educational video playlists, French-speaking clinical context",
+    "data_access": "Researchers' channel-owned YouTube observations",
+    "selected_video_count": 51,
+    "matched_non_educational_trend_control": null,
+    "channel_monthly_views_pre": {
+      "years": "2019-2020",
+      "mean": 365.3,
+      "unit": "channel_monthly_view_events"
+    },
+    "channel_monthly_views_later": {
+      "years": "2021-2022",
+      "mean": 1669.5,
+      "unit": "channel_monthly_view_events"
+    },
+    "average_retention_pre": {
+      "years": "2019-2020",
+      "percent": 24.7
+    },
+    "average_retention_later": {
+      "years": "2021-2022",
+      "percent": 33.9
+    },
+    "time_series_association": "Study reports that average video monthly views increased with time since publication and calendar year; results are observations within one channel.",
+    "identified_causal_effect": null,
+    "owner_total_revenue": null,
+    "net_earnings": null,
+    "production_labor_hours": null,
+    "limitations": [
+      "Results measure the studied psychotherapy education channel, not a sample of independent YouTube earning businesses across topics.",
+      "Channel age, publication frequency, professional referral networks, change in video mix and platform distribution are not randomized or fully separated.",
+      "Increase in historical views is not a causal effect of timeless or evergreen content and not a comparison with a matched trend-video cohort.",
+      "2018–2022 playback event definitions predate the August 2026 platform revision; do not compare raw views across epochs without harmonization.",
+      "The authors' potential role of offline professional recommendations is a nonrandom explanation, not an experimental conversion or verified commercial revenue result.",
+      "Channel averages aggregate views from multiple videos and are not the same as video-age cumulative 30/90/365-day payout windows."
+    ]
   }
 }

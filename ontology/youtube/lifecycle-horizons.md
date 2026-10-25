@@ -29,3 +29,16 @@ A valid matched comparison requires common geography, publication cohort, video 
 No sourced sample has supplied the required prospective video enrollment, daily owner-revenue observations, matched 365-day follow-up, production costs or creator work hours. Accordingly the study does **not** report that evergreen videos earn more (or less), and cannot estimate an evergreen creator's hourly profit, zero-earner share or effective horizon.
 
 This protocol complements the [newcomer-income cohort requirements](newcomer-income-cohort.md) and the [source-backed analytics query guide](analytics-query-guide.md). Public aggregate-only publication remains mandatory.
+
+## A measured educational-video longevity case: 51 French-language psychotherapy videos
+
+A [peer-reviewed 2026 observational study](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1744748/full) tracked **51 videos** published **2018–2022** on the academic GREMO HUS YouTube channel, covering meditation, DBT skills and compassion-focused therapy. The authors report:
+
+| Defined channel-level interval | Mean monthly views | Average viewer retention |
+| --- | ---: | ---: |
+| **2019–2020** | **365.3** | **24.7%** |
+| **2021–2022** | **1,669.5** | **33.9%** |
+
+The paper also describes growing monthly video views with both age since publication and calendar year. These are useful **observed longitudinal channel outcomes**, not a random sample of evergreen creator businesses. They concern a professional psychotherapy channel and may reflect clinician recommendation, changing publication and audience behavior, channel growth and platform changes. The study did **not** randomize referrals, choose a matched trend-video control, or report creator receipts, costs, net cash profit, demographic audience prevalence or revenue over the proposed 30/90/365-day payment windows.
+
+**Conclusion bounded to the measured sample:** ongoing view activity can persist and grow in a selected educational channel. This does not prove that evergreen YouTube videos on average earn more than trend-led formats. Mercata's original [machine protocol](lifecycle-horizons.json) now records this empirical case separately from unexecuted matched earning cohorts; the [case audit](../../site/longitudinal-education-audit.mjs) prevents its reclassification as a general creator-income distribution.

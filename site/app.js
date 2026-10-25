@@ -673,7 +673,9 @@ function renderLifecycleHorizons(data,dossier){
    grid.append(card);
  }
  details.append(grid);
- details.append(make('p','measure-limit','Native owner revenue differs from public views, RPM, sponsor receipts, external sales, cash costs and unpaid labor. Mixed 2026 view definitions cannot be pooled.'));
+ details.append(make('p','measure-limit','Native owner revenue differs from public views, RPM, sponsor receipts, external sales, cash costs and unpaid labor. Mixed 2026 view definitions cannot be pooled.'))
+ if(data.single_channel_evergreen_longitudinal_observation){details.append(make('p','measure-limit','A 51-video French-language educational channel study observed 365.3 monthly views in 2019–20 versus 1,669.5 in 2021–22, but no randomized format comparison or creator profit.'));}
+;
  details.append(audienceSources(data.source_ids,dossier));
  const link=make('a','inline-link','Study design, missingness safeguards and tested horizon evaluator ↗');
  link.href='./ontology/youtube/lifecycle-horizons.md';link.target='_blank';link.rel='noopener noreferrer';
