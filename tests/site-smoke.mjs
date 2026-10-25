@@ -151,7 +151,7 @@ try{
       ['.air-revenue-concentration',5,'not global creator profit or zero earner prevalence'],
       ['.evergreen-search-study',5,'not absolute keyword search volume or creator earnings'],
       ['.air-country-cpm',10,'not creator RPM or resident income'],
-      ['.fashion-lifestyle-signals',4,'not audience sex or gender or typical creator earnings'],
+      ['.fashion-lifestyle-signals',7,'not audience sex or gender or typical creator earnings'],
       ['.small-channel-discovery',5,'not owner-only thumbnail impressions'],
       ['.video-essay-cohort',5,'not a representative creator income or attention study'],
       ['.country-policy-crosswalk',3,'not verified account approval or creator income'],
