@@ -3276,6 +3276,17 @@
       "evidence_class": "peer_reviewed_historical_platform_curated_rank_archive",
       "license": "Peer-reviewed dataset paper linked, public aggregate paper statistics independently paraphrased; no dataset video texts copied",
       "notes": "104 country lists, four daily captures July2022–June2025, 446,971 snapshots, 78.4M ranked entries but 726,627 unique video IDs; Trending retired July2025."
+    },
+    {
+      "id": "oecd-comparative-consumption-ppp-2026",
+      "url": "https://www.oecd.org/en/data/datasets/purchasing-power-parities.html",
+      "publisher": "Organisation for Economic Co-operation and Development",
+      "title": "Purchasing Power Parities (PPPs), comparative price levels and private consumption data",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_intercountry_price_comparison_methodology",
+      "license": "Official data definitions linked; no exchange-rate or price observations copied",
+      "notes": "PPP based on matched price baskets adjusts purchasing power, distinct from nominal FX; GDP PPP and private-consumption PPP have different target aggregates. No values extracted."
     }
   ],
   "claims": [
@@ -7129,6 +7140,41 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Survey question about perceived popularity is not a watching-rate denominator; niche and lore responses overlap and do not count all users, unique viewers or creators globally."
+    },
+    {
+      "id": "youtube-viewer-country-revenue-not-creator-residence-2026",
+      "text": "YouTube Analytics country dimension attributes activity and authorized monetized owner estimated revenue to a viewer's country, not to the creator's own residence, passport, payout address or tax country.",
+      "source_ids": [
+        "api-dimensions",
+        "yt-channel-playlist-report-rules-2026",
+        "api-metrics"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Only authorized monetized owner reports may expose monetary metrics; missing country attribution and restrictions cannot be filled from public channel metadata."
+    },
+    {
+      "id": "youtube-country-analytics-limits-2026",
+      "text": "YouTube documents potential suppression of country-related viewer metrics but states revenue-by-geography data is not limited; monetary country reports still require authorized YPP access and do not supply representative creator distributions.",
+      "source_ids": [
+        "analytics-limits",
+        "yt-channel-playlist-report-rules-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "No private channel report, creator-residence panel or zero-earner information was retrieved."
+    },
+    {
+      "id": "country-payout-currency-vs-consumption-ppp-2026",
+      "text": "Country-specific YouTube access and actual AdSense payment currency thresholds must not be inferred from the viewer geography; international individual income comparisons additionally require dated real receipts and private-consumption purchasing-power methods, distinct from nominal FX and GDP PPP.",
+      "source_ids": [
+        "adsense-thresholds",
+        "adsense-methods",
+        "oecd-comparative-consumption-ppp-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "No observed owner settlement currencies, country-specific creator earnings, actual FX/PPP rates, withholding or local cash expenses are available."
     }
   ],
   "observations": [],

@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "viewer_geography_versus_creator_residence_income_comparability_protocol",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "api-dimensions",
+    "yt-channel-playlist-report-rules-2026",
+    "api-metrics",
+    "analytics-limits",
+    "adsense-thresholds",
+    "adsense-methods",
+    "oecd-comparative-consumption-ppp-2026"
+  ],
+  "country_codes": [
+    "MX",
+    "US",
+    "GB"
+  ],
+  "source_data": {
+    "user_country_dimension": "country",
+    "country_code_standard": "ISO_3166_1_alpha2",
+    "unknown_country_code": "ZZ",
+    "audience_geography_is_creator_residence": false,
+    "owner_revenue_access": "monetized_channel_owner_oauth_with_yt_analytics_monetary_readonly",
+    "requires_ypp": true,
+    "unauthorized_queries_executed": false,
+    "panel_scope": "single_channel_same_reporting_currency_same_complete_date_period",
+    "report_family": "YouTube Analytics API channel user activity by country",
+    "country_report_dimensions": [
+      "country"
+    ],
+    "metric_names": [
+      "estimatedRevenue",
+      "estimatedAdRevenue",
+      "views",
+      "monetizedPlaybacks"
+    ],
+    "monthly_country_filter_report": {
+      "dimensions": [
+        "month"
+      ],
+      "filter_template": "country==<ISO2>",
+      "reason": "The documented time-based channel report supports month and a country filter. Do not assume month,country is a supported joint combination."
+    },
+    "estimatedRevenue_not_cash_deposit": true,
+    "adRevenue_not_advertiser_gross": true,
+    "revenue_geo_suppression": "YouTube says revenue by geography is not limited; other geography/audience metrics may be privacy-suppressed",
+    "creator_residence_country_from_country_dimension": false
+  },
+  "comparison_types": [
+    {
+      "id": "within_one_owner_by_viewer_country",
+      "status": "report_schema_supported_no_data_observed",
+      "can_measure": "same owner's estimated channel revenue attributed to viewer countries for a stated compatible date range",
+      "cannot_measure": "income of representative creators residing in each country"
+    },
+    {
+      "id": "between_creator_residence_countries",
+      "status": "missing_representative_creator_panel",
+      "can_measure": null,
+      "cannot_measure": "median and zero-inclusive net creator earnings across creator-residence populations without a representative owner panel and documented expenses"
+    },
+    {
+      "id": "creator_local_purchase_power",
+      "status": "missing_owner_receipts_expenses_and_dated_ppp",
+      "can_measure": null,
+      "cannot_measure": "actual after-expense creator living standard using generic viewer-country earnings, spot FX alone, or arbitrary GDP PPP"
+    }
+  ],
+  "account_context": {
+    "eligibility_country_not_audience_country": true,
+    "accounts_cannot_be_inferred_from_channel_language": true,
+    "reporting_currency_not_automatically_local_currency": true,
+    "payment_threshold_uses_own_account_reporting_currency": true,
+    "estimated_revenue_not_settled_cash": true,
+    "withholding_taxes_costs_labor_are_unmeasured": true
+  },
+  "purchasing_power": {
+    "reference": "OECD purchasing power parities and comparative price levels",
+    "preferred_for_personal_consumption": "private_consumption_PPP_or_actual_individual_consumption_PPP",
+    "not_automatic_substitute": "GDP_PPP",
+    "data_retrieved": false,
+    "actual_ppp_by_country_year": null,
+    "actual_fx_by_date": null,
+    "rule": "Dated matching currency base, location, consumer-basket definition, price index and year are essential. No rate may be manufactured or defaulted."
+  },
+  "public_observations": [],
+  "unmeasured": {
+    "creator_residence_income_distribution_by_country": null,
+    "creator_zero_income_share_by_residence": null,
+    "authorized_viewer_country_revenue_rows": null,
+    "fx_adjusted_creator_take_home": null,
+    "ppp_adjusted_creator_profit": null,
+    "owner_tax_after_expenses": null,
+    "representative_survey_inclusion_probabilities": null
+  },
+  "invalid_inferences": [
+    "Viewer country is not channel owner or creator residence.",
+    "Channel language is not audience country, creator nationality or tax residence.",
+    "The existence of a monetization feature in a listed country is not creator YPP approval or earnings.",
+    "Different currencies, time windows, channels and monetized status cannot be pooled as a creator income distribution.",
+    "Country ZZ is unknown geography and must not be assigned to a named market.",
+    "Estimated revenue is not bank-deposited cash or after-expense personal income.",
+    "Raw ad revenue is not an advertiser gross CPM, creator profit or personal earnings.",
+    "FX conversion is not a purchasing-power adjustment and GDP PPP is not automatically an individual-consumption PPP.",
+    "Missing privacy-limited geography must not be replaced with inferred user demographics or zero rows."
+  ]
+}

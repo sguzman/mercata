@@ -119,7 +119,7 @@
         "youtube/access/differentiate-each-earning-feature-s-eligibility"
       ],
       "phase": 1,
-      "progress_percent": 71
+      "progress_percent": 72
     },
     {
       "id": "economics",
@@ -151,7 +151,7 @@
         "youtube/economics/measure-the-cost-of-testing-a-new-niche"
       ],
       "phase": 1,
-      "progress_percent": 76
+      "progress_percent": 77
     },
     {
       "id": "market",
@@ -177,7 +177,7 @@
         "youtube/market/set-historical-comparison-windows"
       ],
       "phase": 2,
-      "progress_percent": 76
+      "progress_percent": 77
     },
     {
       "id": "discovery",
@@ -262,7 +262,7 @@
         "youtube/income/construct-transparent-earning-scenarios"
       ],
       "phase": 3,
-      "progress_percent": 79
+      "progress_percent": 80
     },
     {
       "id": "rights",
@@ -342,7 +342,7 @@
         "youtube/risk/set-archive-and-continuity-measures"
       ],
       "phase": 3,
-      "progress_percent": 74
+      "progress_percent": 75
     },
     {
       "id": "strategy",
@@ -996,7 +996,7 @@
       "objective": "Specify a repeatable jurisdiction table for creator access and payouts.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify a repeatable jurisdiction table for creator access and payouts.",
       "status": "in_progress",
-      "percent": 78,
+      "percent": 83,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
@@ -1007,9 +1007,14 @@
         "ontology/youtube/country-eligibility-payments.json",
         "ontology/youtube/country-eligibility-payments.md",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/creator-country-income-comparability.json",
+        "ontology/youtube/creator-country-income-comparability.md",
+        "site/creator-country-income-audit.mjs",
+        "tests/creator-country-income-audit.test.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/creator-country-income-comparability.json",
       "priority": "high",
       "phase": 1
     },
@@ -1331,7 +1336,7 @@
       "objective": "Define monthly settlement, payout minimum, holds and FX questions with dates.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define monthly settlement, payout minimum, holds and FX questions with dates.",
       "status": "in_progress",
-      "percent": 79,
+      "percent": 82,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
@@ -1345,9 +1350,14 @@
         "scripts/verify.mjs",
         "ontology/youtube/tax-withholding-mechanics.json",
         "ontology/youtube/tax-withholding-mechanics.md",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/creator-country-income-comparability.json",
+        "ontology/youtube/creator-country-income-comparability.md",
+        "site/creator-country-income-audit.mjs",
+        "tests/creator-country-income-audit.test.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/creator-country-income-comparability.json",
       "priority": "standard",
       "phase": 1
     },
@@ -1581,7 +1591,7 @@
       "objective": "Choose consistent observations and dates to avoid mixing estimates.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and choose consistent observations and dates to avoid mixing estimates.",
       "status": "in_progress",
-      "percent": 83,
+      "percent": 87,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
@@ -1596,7 +1606,11 @@
         "site/oxford-creator-impact-audit.mjs",
         "tests/oxford-creator-impact.test.mjs",
         "site/app.js",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/creator-country-income-comparability.json",
+        "ontology/youtube/creator-country-income-comparability.md",
+        "site/creator-country-income-audit.mjs",
+        "tests/creator-country-income-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/country-ad-reach-comparisons.json",
       "priority": "standard",
@@ -2479,14 +2493,20 @@
       "objective": "Plan purchasing power, ad-market and regional settlement caveats.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and plan purchasing power, ad-market and regional settlement caveats.",
       "status": "in_progress",
-      "percent": 52,
+      "percent": 77,
       "evidence": [
         "ontology/youtube/small-channel-income.json",
         "ontology/youtube/analytics-query-guide.json",
         "ontology/youtube/analytics-query-guide.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/creator-country-income-comparability.json",
+        "ontology/youtube/creator-country-income-comparability.md",
+        "site/creator-country-income-audit.mjs",
+        "tests/creator-country-income-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/creator-country-income-comparability.json",
       "priority": "standard",
       "phase": 3
     },
