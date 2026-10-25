@@ -1635,6 +1635,16 @@ function renderPublishingCadenceStudy(data,dossier){
   details.append(make('p','measure-limit','Separate AIR June 2026 study: '+data.additional_study.reported_sample_channels.toLocaleString()+' selected channels and vendor-suggested weekly niche ranges. Its proposed posting targets are not the July 282-channel monthly medians or causal creator-profit evidence.'));
   details.append(audienceSources([data.additional_study.source_id],dossier));
  }
+ const caseStudy=data.peer_reviewed_observational_case;
+ if(caseStudy?.sample_channels===47){
+  const casePanel=make('div','cadence-korean-beauty-evidence');
+  casePanel.append(make('h5','','Separate peer-reviewed study: Korean beauty channels'));
+  casePanel.append(make('p','measure-limit',caseStudy.sample_channels+
+    ' selected South Korean beauty channels: upload frequency correlated with engagement/revenue; consistent uploads with reported loyalty; greater Shorts concentration with less sustained watch time.'));
+  casePanel.append(make('p','measure-limit','Abstract-level evidence only; regression coefficients, causal effect, median upload rate, channel profit and global extrapolation are unavailable.'));
+  casePanel.append(audienceSources([caseStudy.source_id],dossier));
+  details.append(casePanel);
+ }
  details.append(audienceSources([...new Set(data.datasets.flatMap(x=>x.source_ids))],dossier));
  const link=make('a','inline-link','Compare source sampling rules, medians and uncertainty ↗');
  link.href='./ontology/youtube/publishing-cadence-evidence.md';link.target='_blank';link.rel='noopener noreferrer';

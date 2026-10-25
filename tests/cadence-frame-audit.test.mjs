@@ -13,3 +13,19 @@ test('Cadence audit rejects invented pooled or causal outcomes',async()=>{
  const b=clone();b.cross_study_comparability.third_sample_compatible=true;assert(!auditCadenceFrames(b,ids).valid);
  const c=clone();c.additional_study.source_id='fake';assert(!auditCadenceFrames(c,ids).valid);
 });
+
+test('Independent 47-channel Korean beauty abstract cannot supply causal upload effects or RPM',async()=>{
+ const [s,d]=await Promise.all([load('ontology/youtube/publishing-cadence-evidence.json'),load('specimens/youtube.json')]);
+ const ids=new Set(d.evidence.map(x=>x.id)),a=s.peer_reviewed_observational_case;
+ assert.deepEqual(auditCadenceFrames(s,ids),{valid:true,errors:[]});
+ assert.equal(a.sample_channels,47);
+ assert.equal(a.source_access,'publisher_abstract_and_university_bibliography_only');
+ assert.deepEqual(a.exposures,['upload_frequency','upload_consistency','shorts_content_type_concentration']);
+ assert.equal(a.shorts_to_longform_marginal_effect,null);
+ assert.equal(a.upload_rate_median,null);
+ assert.equal(a.net_creator_profit,null);
+ const fake=structuredClone(s);fake.peer_reviewed_observational_case.qualitative_reported_associations[0].coefficient=0.5;
+ assert(auditCadenceFrames(fake,ids).errors.includes('fabricated statistical significance or causal effect'));
+ const fake2=structuredClone(s);fake2.cross_study_comparability.can_pool_peer_reviewed_beauty_cohort=true;
+ assert(auditCadenceFrames(fake2,ids).errors.includes('invented quantified cadence or pooled revenue'));
+});

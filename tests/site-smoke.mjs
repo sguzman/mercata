@@ -220,6 +220,10 @@ try{
     assert((await shows.textContent()).includes('serial shows list oldest first'));
     assert((await shows.textContent()).includes('maximum 180 seconds'));
     assert((await shows.textContent()).includes('No verified show completion'));
+    const cadenceCase=page.locator('.publishing-cadence .cadence-korean-beauty-evidence');
+    assert.equal(await cadenceCase.count(),1,'Missing bounded beauty cohort research');
+    assert((await cadenceCase.textContent()).includes('47 selected South Korean beauty channels'));
+    assert((await cadenceCase.textContent()).includes('Abstract-level evidence only'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));

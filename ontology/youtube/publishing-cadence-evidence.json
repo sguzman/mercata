@@ -268,7 +268,8 @@
     "reason": "One sample is 282 owner-Analytics-access, category/size-stratified channels; the other is a 10.2m channel index with an explicit 1,000-subscriber threshold and both Shorts and long-form uploads.",
     "safe_usage": "Display separate within-sample upload medians, quartiles and correlations with original denominators and source labels only.",
     "third_sample_compatible": false,
-    "third_sample_reason": "AIR June 8 study selects 18,000 channels and reports proposed niche growth-oriented weekly ranges; AIR July 14 study selects 282 owner-analytics partner channels and reports monthly medians/quantiles plus other outcomes. The reported statistics do not estimate the same parameter."
+    "third_sample_reason": "AIR June 8 study selects 18,000 channels and reports proposed niche growth-oriented weekly ranges; AIR July 14 study selects 282 owner-analytics partner channels and reports monthly medians/quantiles plus other outcomes. The reported statistics do not estimate the same parameter.",
+    "can_pool_peer_reviewed_beauty_cohort": false
   },
   "unmeasured": {
     "all_new_creators_median_uploads": null,
@@ -313,6 +314,81 @@
       "Study populations, outcome targets and samples differ, so a recommendation must not be directly subtracted from the July 282-channel median.",
       "Publisher's claimed best posting range is not a causal intervention, universally optimal schedule or forecast newcomer income.",
       "Weekly recommendation ranges are not automatically equal to monthly published video counts; do not assume four-week calendar months."
+    ]
+  },
+  "peer_reviewed_observational_case": {
+    "id": "korean_beauty_47_2026",
+    "source_id": "korean-beauty-consistency-2026",
+    "authors": "Choi et al.",
+    "journal": "Telecommunications Policy",
+    "journal_volume": 50,
+    "journal_issue": 8,
+    "year": 2026,
+    "doi": "10.1016/j.telpol.2026.103252",
+    "source_access": "publisher_abstract_and_university_bibliography_only",
+    "sample_channels": 47,
+    "creator_country": "South Korea",
+    "content_niche": "beauty",
+    "sampling_probability_known": false,
+    "independent_probability_sample": false,
+    "reported_study_period": null,
+    "controls": [
+      "channel_active_duration"
+    ],
+    "exposures": [
+      "upload_frequency",
+      "upload_consistency",
+      "shorts_content_type_concentration"
+    ],
+    "outcomes": [
+      "views",
+      "likes",
+      "comments",
+      "watch_time",
+      "sustained_watch_time",
+      "channel_revenue"
+    ],
+    "qualitative_reported_associations": [
+      {
+        "predictor": "upload_frequency",
+        "outcome": "engagement_and_revenue",
+        "direction": "positive_predictive_association",
+        "causal": false,
+        "coefficient": null,
+        "exact_p_value": null
+      },
+      {
+        "predictor": "upload_consistency",
+        "outcome": "audience_loyalty",
+        "direction": "positive_association",
+        "causal": false,
+        "coefficient": null,
+        "exact_p_value": null
+      },
+      {
+        "predictor": "shorts_content_type_concentration",
+        "outcome": "sustained_watch_time",
+        "direction": "negative_association",
+        "causal": false,
+        "coefficient": null,
+        "exact_p_value": null
+      }
+    ],
+    "unit": "selected_channel_aggregate_regression_not_person_sample",
+    "upload_rate_median": null,
+    "upload_rate_quartiles": null,
+    "channel_revenue_median": null,
+    "shorts_to_longform_marginal_effect": null,
+    "actual_rpm": null,
+    "net_creator_profit": null,
+    "global_generalization_supported": false,
+    "independent_overlap_with_existing_vendor_samples": null,
+    "limitations": [
+      "Publisher abstract and university metadata, not an audit of sampling or regression tables; coefficients, denominators and uncertainty not reproduced.",
+      "Selected 47 South Korean beauty channels are not a worldwide or cross-niche representative sample.",
+      "Observational regression and duration controls do not provide randomized changes to cadence or format, or establish an optimal upload frequency.",
+      "Sustained viewing is not unique long-form viewers, complete videos, purchase conversions, or after-expense creator profit.",
+      "The 47-channel cohort is not proven disjoint from any other source sample and cannot be pooled with the AIR or vidIQ commercial indexes."
     ]
   }
 }
