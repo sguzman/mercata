@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [quality-signal and production-workload crosswalk](video-quality-production-crosswalk-2026.md), [bounded cohort evidence](video-quality-production-crosswalk-2026.json) and [audit](../../site/video-quality-audit.mjs) separate self-logged creator effort, educational owner analytics, public interaction events and rights constraints, while preserving unknown learning and earning outcomes.
+
+
 The [cross-platform switching and portability study](cross-platform-portability-2026.md), [evidence matrix](cross-platform-portability-2026.json) and [testable validator](../../site/creator-portability-audit.mjs) distinguish copying videos from exporting actual seller customer lists, subscriber relationships, and monetization rights.
 
 

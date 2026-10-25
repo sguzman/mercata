@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "video_quality_proxies_and_production_effort_crosswalk",
+  "as_of": "2026-10-25",
+  "method": "Crosswalk separately published self-logged production hours, owner-only educational watch-time reports and public engagement counts. Quality is a measurement question, not a ranked index; cohort means/medians are not combined across sources.",
+  "population": "One selected photography creator's published videos, two single-channel education video datasets and one selected high-view mathematics video set; no representative creator sample",
+  "source_ids": [
+    "zenagainst-photography-time-diary-2025",
+    "stem-spanish-youtube-124-videos-2026",
+    "indonesian-instruction-test-youtube-139-videos-2025",
+    "turkish-math-youtube-126-videos-2025",
+    "music-content-id"
+  ],
+  "dimensions": [
+    {
+      "id": "production_work_hours",
+      "meaning": "Self-logged creation time by production stage, not an aesthetic or instructional quality scale",
+      "measurement_access": "creator_time_diary",
+      "unit": "hours_per_completed_video",
+      "source_ids": [
+        "zenagainst-photography-time-diary-2025"
+      ],
+      "observable_in_bounded_sample": true,
+      "universal_quality_cutoff": null
+    },
+    {
+      "id": "audience_retention",
+      "meaning": "Owner-observed average duration and retention, conditioned on reached viewers; not causal instructional quality",
+      "measurement_access": "owner_analytics",
+      "unit": "watch_duration_or_retention_by_selected_video",
+      "source_ids": [
+        "stem-spanish-youtube-124-videos-2026",
+        "indonesian-instruction-test-youtube-139-videos-2025"
+      ],
+      "observable_in_bounded_sample": true,
+      "universal_quality_cutoff": null
+    },
+    {
+      "id": "public_engagement",
+      "meaning": "Public views, likes and comments reflect selected exposures, not lesson correctness or viewer satisfaction",
+      "measurement_access": "public_counter",
+      "unit": "view_like_comment_events_on_selected_videos",
+      "source_ids": [
+        "turkish-math-youtube-126-videos-2025"
+      ],
+      "observable_in_bounded_sample": true,
+      "universal_quality_cutoff": null
+    },
+    {
+      "id": "music_and_footage_rights",
+      "meaning": "Third-party content use may trigger Content ID; rights checks are distinct from production craft",
+      "measurement_access": "official_platform_process_and_creator_rights_records",
+      "unit": "claim_block_tracking_or_approved_usage",
+      "source_ids": [
+        "music-content-id"
+      ],
+      "observable_in_bounded_sample": false,
+      "universal_quality_cutoff": null
+    },
+    {
+      "id": "viewer_learning_or_satisfaction",
+      "meaning": "Requires a defined consented learner outcome or satisfaction instrument; cannot be read from view events",
+      "measurement_access": "not_recorded_in_selected_samples",
+      "unit": "independent_learning_assessment_or_survey",
+      "source_ids": [
+        "stem-spanish-youtube-124-videos-2026",
+        "indonesian-instruction-test-youtube-139-videos-2025",
+        "turkish-math-youtube-126-videos-2025"
+      ],
+      "observable_in_bounded_sample": false,
+      "universal_quality_cutoff": null
+    },
+    {
+      "id": "comparative_creator_income",
+      "meaning": "Would require matched receipts, eligibility, royalties, paid labor, costs, rights deductions and failures",
+      "measurement_access": "not_recorded",
+      "unit": "cash_profit_per_creator_project",
+      "source_ids": [
+        "zenagainst-photography-time-diary-2025"
+      ],
+      "observable_in_bounded_sample": false,
+      "universal_quality_cutoff": null
+    }
+  ],
+  "bounded_observations": [
+    {
+      "id": "single_photography_work_diary",
+      "sampled_creator_count": 1,
+      "sampled_video_count": 61,
+      "observation_kind": "published_video_self_logged_work_hours",
+      "source_id": "zenagainst-photography-time-diary-2025",
+      "reported_hour_mean": 9.74,
+      "reported_hour_median": 7.37,
+      "reported_stage_mean_hours": {
+        "preproduction": 1.33,
+        "production": 2.95,
+        "postproduction": 4.87,
+        "publishing": 0.43,
+        "marketing": 0.12,
+        "other": 0.03
+      },
+      "rounded_sum_hours": 9.73,
+      "missing_unfinished_projects": true,
+      "owner_analytics_retention_available": false,
+      "representative_of_youtube_creators": false,
+      "profit_observed": false
+    },
+    {
+      "id": "spanish_stem_channel_retention",
+      "sampled_creator_count": 1,
+      "sampled_video_count": 124,
+      "observation_kind": "selected_stem_channel_owner_watch_retention",
+      "source_id": "stem-spanish-youtube-124-videos-2026",
+      "reported_hour_mean": null,
+      "reported_hour_median": null,
+      "measured_metrics": [
+        "average_view_duration",
+        "retention_after_30_seconds"
+      ],
+      "within_study_signal": "Within one selected channel, dissemination and under-eight-minute videos showed stronger reported retention than comparison formats; observational association only.",
+      "representative_of_youtube_creators": false,
+      "profit_observed": false
+    },
+    {
+      "id": "indonesian_learning_channel",
+      "sampled_creator_count": 1,
+      "sampled_video_count": 139,
+      "observation_kind": "owner_analytics_139_selected_from_218",
+      "source_id": "indonesian-instruction-test-youtube-139-videos-2025",
+      "sampling_frame_videos": 218,
+      "reported_hour_mean": null,
+      "reported_hour_median": null,
+      "measured_metrics": [
+        "video_views",
+        "shares",
+        "likes",
+        "watch_time",
+        "average_view_duration"
+      ],
+      "within_study_signal": "Instructional items had higher sampled views/shares; practice-test items had higher likes and watch-time measures; neither is randomized.",
+      "representative_of_youtube_creators": false,
+      "profit_observed": false
+    },
+    {
+      "id": "turkish_high_view_math",
+      "sampled_creator_count": null,
+      "sampled_video_count": 126,
+      "observation_kind": "selected_highly_viewed_public_metrics",
+      "source_id": "turkish-math-youtube-126-videos-2025",
+      "reported_hour_mean": null,
+      "reported_hour_median": null,
+      "measured_metrics": [
+        "views",
+        "likes",
+        "comments"
+      ],
+      "within_study_signal": "The selected high-view math videos showed no significant reported link of duration with these public engagement metrics.",
+      "representative_of_youtube_creators": false,
+      "profit_observed": false
+    }
+  ],
+  "matching_requirements": [
+    "Define education or entertainment format and topic independently of outcome ranking",
+    "Record channel age, subscriber band and language before matched comparisons",
+    "Use a fixed publication/observation window and comparable Shorts versus long-form surfaces",
+    "Capture measured owner-only retention separately from public likes and views",
+    "Separate completed projects and abandoned drafts including non-published labor",
+    "Record authorized media rights, editing accessibility, production cash cost and creator labor without double-counting",
+    "Use independent learner outcome or defined satisfaction survey before claiming measured instructional quality",
+    "Never pool unaligned cross-study samples to infer typical YouTube creator hours or quality"
+  ],
+  "prohibited_conclusions": [
+    "The four samples' video counts are a single pooled estimate of YouTube quality",
+    "9.74 hours is typical production time or an optimal quality threshold",
+    "Higher likes, watch time or video length proves better instruction or profitability",
+    "Selected channel engagement is representative of new channel success probabilities",
+    "A rights claim is evidence of poor quality or of a measured loss of net profit"
+  ],
+  "unknowns": {
+    "typical_creator_quality_score": null,
+    "quality_to_revenue_causal_effect": null,
+    "median_video_production_hours_across_youtube": null,
+    "representative_learning_gain": null,
+    "creator_net_profit": null,
+    "unpublished_abandoned_labor_hours": null
+  }
+}

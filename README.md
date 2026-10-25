@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [video quality and workload evidence crosswalk](ontology/youtube/video-quality-production-crosswalk-2026.md) separates a 61-video work diary from three selected educational-video observation samples, without treating views, video duration, retention or logged labor as a universal quality or profit measure.
+
+
 The [cross-platform creator-portability evidence](ontology/youtube/cross-platform-portability-2026.md) distinguishes YouTube and Twitch media exports, TikTok data requests and Vimeo OTT consent-aware customer CSVs, without claiming transferable follower relationships or measured switching profits.
 
 
