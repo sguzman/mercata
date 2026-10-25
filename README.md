@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [Pew virtual-worship survey crosswalk](ontology/youtube/virtual-worship-not-youtube-audience-2025.md) distinguishes U.S. adults reporting online-or-TV religious services from unmeasured YouTube-specific religious audiences and personal beliefs.
+
+
 The [cross-language public community protocol](ontology/youtube/public-comment-language-protocol-2026.md) separates public comment/reply events, creator video metadata language and actual viewer language, requiring complete accessible pagination and aggregate-only privacy protections.
 
 

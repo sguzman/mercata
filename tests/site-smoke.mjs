@@ -135,6 +135,7 @@ try{
       ['.audience-population-crosswalk',7,'deduplicated worldwide MAU and DAU remain unknown'],
       ['.country-ad-reach',4,'Advertiser planning can be revised'],
       ['.topic-evidence-coverage',4,'not measured unique audiences'],
+      ['.virtual-worship-boundary',4,'not specifically YouTube religious audiences'],
       ['.neutral-news-attention',5,'not any channel audience political affiliation'],
       ['.us-news-demographic-crosswalk',8,'Biological sex, overlapping age-by-party'],
       ['.synthetic-media-rights',4,'no AI creator earnings'],
