@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "mexico_audiovisual_survey_population_crosswalk",
+  "as_of": "2026-10-24",
+  "source_ids": [
+    "ift-encca-mexico-2024"
+  ],
+  "survey": {
+    "year": 2024,
+    "country": "MX",
+    "whole_sample_n": 8750,
+    "urban_n": 6125,
+    "rural_n": 2625,
+    "whole_sample_represents_all_youtube_users": false,
+    "platform_use_item_n": null,
+    "method": "National ENCCA survey; detailed weights and question-specific population not independently reconstructed"
+  },
+  "observations": [
+    {
+      "id": "internet_av_2015",
+      "year": 2015,
+      "percent": 26,
+      "population": "ENCCA surveyed people",
+      "metric": "internet_audiovisual_consumption",
+      "comparable_weighted_frame_verified": false
+    },
+    {
+      "id": "internet_av_2024",
+      "year": 2024,
+      "percent": 55,
+      "population": "ENCCA surveyed people",
+      "metric": "internet_audiovisual_consumption",
+      "comparable_weighted_frame_verified": false
+    },
+    {
+      "id": "youtube_conditional_2024",
+      "year": 2024,
+      "percent": 66,
+      "population": "2024 internet audiovisual consumer survey subgroup",
+      "metric": "named_platform_youtube",
+      "comparable_weighted_frame_verified": false
+    }
+  ],
+  "other_conditional_platform_percent": {
+    "netflix": 32,
+    "tiktok": 29,
+    "facebook": 29,
+    "disney_plus": 13
+  },
+  "conditional_platform_choices_allow_overlap": true,
+  "reporting_restrictions": [
+    "55% online audiovisual use is not 55% YouTube use",
+    "66% is within the internet audiovisual consumer survey subgroup, not all Mexican residents",
+    "National 8,750 is not the question-specific conditional YouTube item denominator",
+    "Platform responses overlap and should not sum to 100%",
+    "2015 and 2024 proportions are not a matched longitudinal YouTube MAU series",
+    "The online audiovisual viewing share is neither advertising reach nor active creators"
+  ],
+  "unmeasured": {
+    "youtube_mexico_mau": null,
+    "youtube_mexico_dau": null,
+    "conditional_item_sample_n": null,
+    "paid_viewer_count": null,
+    "local_monetized_creators": null,
+    "causal_youtube_growth_rate": null
+  }
+}
