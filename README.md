@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [Alphabet SEC YouTube ad-revenue time series](ontology/youtube/alphabet-youtube-ads-sec-2026.md) adds publicly filed corporate annual and interim revenue figures with matched-period growth calculations, without mistaking them for creator earnings, viewership, or all-product YouTube revenue.
+
+
 The [Oxford Economics 2026 YouTube creator-survey methodology](ontology/youtube/oxford-creator-impact-2026.md) registers original country response counts, source-defined creator/user populations, non-additive EU27 rows and the difference between modeled U.S. GDP/FTE impacts and creator cash earnings. It does not infer median creator income or ordinary labor hours.
 
 

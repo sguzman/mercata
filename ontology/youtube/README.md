@@ -40,6 +40,10 @@ The [related-video funnel study](shorts-related-video-funnel.md), [machine measu
 
 The [Oxford Economics creator, business and user survey frame](oxford-creator-impact-2026.md), [machine response counts](oxford-creator-impact-2026.json) and [survey comparison audit](../../site/oxford-creator-impact-audit.mjs) preserve the January–March 2026 country sample counts. YouTube recruited the creator respondents; EU27 overlaps France and Germany. The estimated 2025 U.S. GDP contribution and full-time-equivalent jobs are **not** creator income, headcount or measured typical work hours. Zero-earner rates and representative creator income remain unknown.
 
+## SEC annual versus interim YouTube advertising revenue
+
+The [Alphabet advertising-revenue filings study](alphabet-youtube-ads-sec-2026.md) and [dated accounting observations](alphabet-youtube-ads-sec-2026.json) distinguish 2023–2025 reported annual revenue, 2025–2026 second-quarter and half-year reports. The [period auditor](../../site/alphabet-ad-revenue-audit.mjs) prevents adding overlapping half-year and quarterly values or using corporate advertising revenues as creator payouts. YouTube subscriptions, typical creator earnings, the 2026 full year and viewer populations are not measured by these filings.
+
 ## Global and country audience measurement
 
 The [audience population and advertising-reach crosswalk](audience-population-crosswalk.md), [machine evidence table](audience-population-crosswalk.json), and [metric comparator](../../site/audience-population-audit.mjs) distinguish GWI past-month survey rates, Pew U.S. adult self-reported daily use, and DataReportal's advertiser addressability estimates. The website displays evidence units; global deduplicated monthly and daily YouTube people remain unmeasured.

@@ -19,7 +19,8 @@ export function selectSurveyResponses(model, frame, jurisdictions) {
     population_estimate: null, earnings_distribution: null};
 }
 export function assessCreatorIncomeInference(model, candidate) {
-  if (candidate?.unit !== 'verified_creator_cash_income' || !candidate?.representative_all_creator_sampling ||
+  if (model.survey.creator_sample_is_representative_of_all_creators !== true || model.survey.measured_youtube_creator_median_income === null || model.survey.measured_all_creator_zero_earner_rate === null ||
+    candidate?.unit !== 'verified_creator_cash_income' || !candidate?.representative_all_creator_sampling ||
     !candidate?.actual_creator_receipts || !candidate?.known_zero_earner_denominator) {
     return {allowed: false, reason: 'No representative creator receipts with a known including-zero denominator'};
   }

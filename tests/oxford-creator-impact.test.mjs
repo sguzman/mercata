@@ -30,7 +30,7 @@ test('Macroeconomic GDP and conditional work hours cannot become median creator 
     {unit:'verified_creator_cash_income',representative_all_creator_sampling:false,actual_creator_receipts:true,known_zero_earner_denominator:true}]) {
     assert.equal(assessCreatorIncomeInference(m,candidate).allowed,false);
   }
-  assert.equal(assessCreatorIncomeInference(m,{unit:'verified_creator_cash_income',representative_all_creator_sampling:true,actual_creator_receipts:true,known_zero_earner_denominator:true}).allowed,true);
+  assert.equal(assessCreatorIncomeInference(m,{unit:'verified_creator_cash_income',representative_all_creator_sampling:true,actual_creator_receipts:true,known_zero_earner_denominator:true}).allowed,false);
 });
 test('Site exposes the observed survey frames with explicit measurement boundary',async()=>{
   const app=await readFile(new URL('../site/app.js',import.meta.url),'utf8');

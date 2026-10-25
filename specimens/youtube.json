@@ -3001,6 +3001,28 @@
       "evidence_class": "official_commissioned_macro_impact_estimates",
       "license": "Official release linked; quantitative thresholds paraphrased; no report copied",
       "notes": "U.S. estimated GDP contribution more than USD 60B and more than 540k FTE in 2025; not individual payouts or measured profit."
+    },
+    {
+      "id": "alphabet-2025-form10k-youtube-ads",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "publisher": "Alphabet Inc. / U.S. SEC EDGAR",
+      "title": "Alphabet Inc. 2025 Form 10-K, Note 2 Disaggregated Revenues",
+      "published_at": "2026-02-05",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_sec_filing_annual_revenue_table",
+      "license": "SEC filing linked; independently paraphrased disclosed data points, not copied financial statement",
+      "notes": "YouTube ads USD millions: 2023 31,510; 2024 36,147; 2025 40,367. This is corporate advertising revenue, not creator payments."
+    },
+    {
+      "id": "alphabet-2026-q2-form10q-youtube-ads",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+      "publisher": "Alphabet Inc. / U.S. SEC EDGAR",
+      "title": "Alphabet Inc. Q2 2026 Form 10-Q, Note 2 Disaggregated Revenues",
+      "published_at": "2026-07-23",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_sec_filing_interim_unaudited_revenue_table",
+      "license": "SEC filing linked; independently paraphrased accounting figures, no copied report images",
+      "notes": "YouTube ads USD millions: Q2 2025 9,796 / Q2 2026 11,055; H1 2025 18,723 / H1 2026 20,938. Q2 included in H1."
     }
   ],
   "claims": [
@@ -6455,6 +6477,37 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Commissioned macroeconomic estimates use modeled downstream effects, YouTube-provided aggregate payout information and survey-based off-platform revenue estimates; individual receipts, zero-earner counts and hours are unavailable."
+    },
+    {
+      "id": "alphabet-2025-sec-youtube-ad-revenue",
+      "text": "Alphabet's FY2025 SEC filing separately reports YouTube advertising revenue of USD 31.510B for 2023, USD 36.147B for 2024 and USD 40.367B for 2025. These are annual corporate revenues, not amounts paid to creators.",
+      "source_ids": [
+        "alphabet-2025-form10k-youtube-ads"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "No per-creator payout distribution, subscription allocation, unique audience count or cost information; the adjacent Google subscriptions category bundles products outside YouTube."
+    },
+    {
+      "id": "alphabet-q2-2026-sec-youtube-ad-revenue",
+      "text": "Alphabet's Q2 2026 SEC filing reports YouTube ad revenue of USD 11.055B in Q2 2026 versus USD 9.796B in Q2 2025, and USD 20.938B in H1 2026 versus USD 18.723B in H1 2025. Q2 is included in each corresponding half-year, so the figures are not additive.",
+      "source_ids": [
+        "alphabet-2026-q2-form10q-youtube-ads"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Unaudited interim corporate revenue in different time windows, not full-year 2026 revenue, direct creator receipts, payouts, engagement or income."
+    },
+    {
+      "id": "alphabet-sec-ad-market-growth-bounds",
+      "text": "The annual YouTube advertising revenue line increased about 14.72% from 2023 to 2024 and 11.67% from 2024 to 2025; Q2 2026 and H1 2026 can be compared only against the corresponding prior-year calendar windows.",
+      "source_ids": [
+        "alphabet-2025-form10k-youtube-ads",
+        "alphabet-2026-q2-form10q-youtube-ads"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Simple nominal USD revenue growth, not inflation-adjusted, causal effects, viewership growth, creator earnings growth, or all-stream YouTube revenue."
     }
   ],
   "observations": [],
