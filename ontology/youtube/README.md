@@ -1,5 +1,7 @@
 # YouTube ontology — audiences, content and earning
 
+The [minimum-new-purchase channel entry protocol](creator-entry-gates-2026.md), [seven official capability gates](creator-entry-gates-2026.json) and [permission validator](../../site/creator-entry-gates.mjs) distinguish standard uploads, verification, live streaming and monetization from real costs or personal account approvals. Mandatory platform purchases are not inferred from optional production upgrades.
+
 The [source-backed opportunity/risk comparison](opportunity-risk-matrix.md) extends the existing unranked niche method with ten documented policy or settlement gates and measurement gaps; the [audit module](../../site/opportunity-risk-audit.mjs) rejects fabricated probability/expected-profit rankings.
 
 The [16-route revenue-stack and settlement crosswalk](revenue-stack-accounting.md) extends the existing official earning-path inventory with editable compatibility selection and guards against counting Shopping affiliate commissions twice in the [monthly cash-flow ledger](monthly-creator-cash-flow-protocol.md). No creator account approval or earnings are inferred.

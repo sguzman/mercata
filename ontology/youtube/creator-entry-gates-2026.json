@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "nonmonetized_creation_vs_feature_permission_and_incremental_cost_protocol",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "yt-channel-create",
+    "yt-upload",
+    "yt-feature-access",
+    "yt-advanced-access",
+    "yt-phone-verify",
+    "mobile-stream-help",
+    "live-general-help",
+    "ypp-main"
+  ],
+  "scope": "Account and feature rules documented for prospective creators, not user-specific eligibility, legal or financial advice",
+  "activity_gates": [
+    {
+      "id": "create_channel",
+      "label": "Create a public channel",
+      "feature_group": "standard",
+      "minimum_subscribers": 0,
+      "requires": [
+        "google_account",
+        "channel_creation_permitted"
+      ],
+      "source_ids": [
+        "yt-channel-create"
+      ],
+      "outcome": "Channel may upload, comment and make playlists; supported account and supervision status are separate"
+    },
+    {
+      "id": "standard_upload",
+      "label": "Publish an ordinary video",
+      "feature_group": "standard",
+      "minimum_subscribers": 0,
+      "requires": [
+        "channel_exists",
+        "standard_features_allowed"
+      ],
+      "source_ids": [
+        "yt-upload",
+        "yt-feature-access"
+      ],
+      "outcome": "YouTube Studio permits eligible uploads; file, rights and internet access remain necessary"
+    },
+    {
+      "id": "long_upload_custom_thumbnail",
+      "label": "Long video and custom thumbnail",
+      "feature_group": "intermediate",
+      "minimum_subscribers": 0,
+      "requires": [
+        "channel_exists",
+        "phone_verified"
+      ],
+      "source_ids": [
+        "yt-phone-verify",
+        "yt-feature-access"
+      ],
+      "outcome": "Phone verification enables uploads over 15 minutes and custom thumbnails"
+    },
+    {
+      "id": "desktop_live",
+      "label": "Webcam or encoder live stream",
+      "feature_group": "streaming",
+      "minimum_subscribers": 0,
+      "requires": [
+        "channel_exists",
+        "phone_verified",
+        "live_access_enabled",
+        "age_at_least_16",
+        "no_recent_stream_restriction"
+      ],
+      "source_ids": [
+        "live-general-help",
+        "yt-phone-verify"
+      ],
+      "outcome": "May need activation time; webcam/encoder methods use suitable equipment and stable connection"
+    },
+    {
+      "id": "mobile_live",
+      "label": "Mobile livestream",
+      "feature_group": "streaming",
+      "minimum_subscribers": 50,
+      "requires": [
+        "channel_exists",
+        "phone_verified",
+        "live_access_enabled",
+        "age_at_least_16",
+        "no_recent_stream_restriction",
+        "mobile_os_supported"
+      ],
+      "source_ids": [
+        "mobile-stream-help",
+        "live-general-help"
+      ],
+      "outcome": "50 subscribers required, and under 1000 subscribers mobile audience may be limited and archive private by default"
+    },
+    {
+      "id": "advanced_creator_tools",
+      "label": "Advanced feature access",
+      "feature_group": "advanced",
+      "minimum_subscribers": 0,
+      "requires": [
+        "channel_exists",
+        "phone_verified",
+        "advanced_access_granted"
+      ],
+      "source_ids": [
+        "yt-advanced-access",
+        "yt-feature-access"
+      ],
+      "outcome": "Sufficient channel history or available ID/video verification after phone check; method availability varies"
+    },
+    {
+      "id": "receive_ypp_revenue",
+      "label": "Receive native monetization payouts",
+      "feature_group": "monetization",
+      "minimum_subscribers": null,
+      "requires": [
+        "channel_exists",
+        "advanced_access_granted",
+        "ypp_accepted",
+        "payment_setup_complete"
+      ],
+      "source_ids": [
+        "ypp-main"
+      ],
+      "outcome": "Eligible thresholds, geography, reviews, monetization module terms and account settlement are separate; cannot infer approval from views"
+    }
+  ],
+  "flags": [
+    "google_account",
+    "channel_creation_permitted",
+    "channel_exists",
+    "standard_features_allowed",
+    "phone_verified",
+    "live_access_enabled",
+    "age_at_least_16",
+    "no_recent_stream_restriction",
+    "mobile_os_supported",
+    "advanced_access_granted",
+    "ypp_accepted",
+    "payment_setup_complete"
+  ],
+  "verification_rules": {
+    "standard": "Standard features are normally available after channel creation if there are no active Community Guidelines strikes.",
+    "intermediate": "Phone verification unlocks longer videos and custom thumbnail capability.",
+    "advanced": "Phone verification plus sufficient channel history, or eligible ID/video verification, does not guarantee immediate access to every tool.",
+    "live": "At least age 16, channel verified, no livestream restrictions for 90 days, activation may require up to 24 hours.",
+    "mobile": "At least 50 subscribers and compatible mobile OS; restrictions may remain until 1000 subscribers and can persist for weeks.",
+    "monetization": "YPP review and module/location/payment eligibility independent of uploading; no earnings, minimum cash flow or mandatory creator payout assumed."
+  },
+  "cost_categories": [
+    {
+      "id": "platform_channel_creation_fee",
+      "class": "published_mandatory_platform_purchase",
+      "amount": null,
+      "source_note": "No paid channel-creation license or equipment purchase listed in the official setup steps; this does not establish all real costs are zero"
+    },
+    {
+      "id": "existing_hardware",
+      "class": "opportunity_or_allocated_cost",
+      "amount": null,
+      "source_note": "Phone/computer already owned can have maintenance, power and depreciation"
+    },
+    {
+      "id": "connectivity",
+      "class": "cash_or_metered_usage",
+      "amount": null,
+      "source_note": "Uploads and live sessions consume connectivity; bandwidth prices depend on plan"
+    },
+    {
+      "id": "production_labor",
+      "class": "creator_unpaid_effort",
+      "amount": null,
+      "source_note": "Editing, recording, moderation and abandoned attempts require work hours"
+    },
+    {
+      "id": "third_party_media_rights",
+      "class": "conditional_cash_or_permission",
+      "amount": null,
+      "source_note": "Licensed footage, images, audio or trademarks may require permission and payment"
+    },
+    {
+      "id": "equipment_upgrade",
+      "class": "optional_purchase",
+      "amount": null,
+      "source_note": "Not a universal platform prerequisite for standard eligible uploads"
+    },
+    {
+      "id": "bank_and_tax_compliance",
+      "class": "earning_contingent_cost_or_hold",
+      "amount": null,
+      "source_note": "Monetization requires account-specific tax and payment setup but no bank information is requested for research"
+    }
+  ],
+  "timelines": [
+    {
+      "id": "first_live_activation",
+      "day_lower_bound": 0,
+      "day_upper_bound": 1,
+      "unit": "elapsed_days",
+      "source_ids": [
+        "live-general-help",
+        "mobile-stream-help"
+      ],
+      "condition": "Live streaming enabled and channel otherwise eligible; activation may take up to 24 hours",
+      "not_creator_payout_timeline": true
+    },
+    {
+      "id": "new_mobile_stream_audience_caps",
+      "day_lower_bound": null,
+      "day_upper_bound": null,
+      "unit": "elapsed_days",
+      "source_ids": [
+        "mobile-stream-help"
+      ],
+      "condition": "Between 50 and 999 subscribers additional audience restriction and private archive may apply",
+      "not_creator_payout_timeline": true
+    },
+    {
+      "id": "ypp_approval",
+      "day_lower_bound": null,
+      "day_upper_bound": null,
+      "unit": "elapsed_days",
+      "source_ids": [
+        "ypp-main"
+      ],
+      "condition": "Not inferred from channel creation, subscribers, view counts or upload dates",
+      "not_creator_payout_timeline": false
+    }
+  ],
+  "rule_boundaries": [
+    "Feature gate checks operate on hypothetical explicit booleans; absent flags are unknown, never silently false or verified true.",
+    "No mandatory paid software, advertising, camera or hardware purchase appears in official channel creation/upload instructions; this is not proof that operating a creator channel costs zero money or time.",
+    "A Google Account and a public YouTube channel are different access states.",
+    "An upload, a published video, an enabled streaming tool, approval for YPP and a cleared bank transfer are different events.",
+    "Mobile livestream subscriber and age requirements are not generic requirements for publishing ordinary videos.",
+    "Phone verification is a conditional feature gate, not a mandatory prerequisite for all standard uploads.",
+    "YPP criteria may change; do not hard-code monetary thresholds from a different effective period into a zero-budget entry claim."
+  ],
+  "account_evaluations_performed": [],
+  "measured_real_cash_costs": null,
+  "measured_median_startup_cost": null,
+  "verified_creator_income": null,
+  "private_documents_collected": false
+}

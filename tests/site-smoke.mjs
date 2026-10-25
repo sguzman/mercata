@@ -156,6 +156,7 @@ try{
       ['.photography-production-labor',6,'not representative creator hourly wages'],
       ['.creator-hourly-bounds',6,'not an observed income distribution'],
       ['.monthly-income-volatility',6,'no payment is not proof of zero earnings'],
+      ['.creator-entry-gates',7,'not actual account approval or creator income'],
       ['.monthly-creator-cash-flow',4,'Bank arrival is not the same as issuance'],
       ['.agentio-sponsor-study',6,'not representative creator pay or verified incremental sales'],
       ['.shopping-funnel-evidence',4,'no verified public conversion rate'],
