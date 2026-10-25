@@ -4,6 +4,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
+## Viewer-country advertiser CPM (not creator RPM)
+
+The [original AIR 2025 advertiser CPM study](air-2025-viewer-cpm-countries.md), [machine price sample](air-2025-viewer-cpm-countries.json) and [unit comparator](../../site/air-country-cpm-audit.mjs) report selected ad-impression prices from 3,000+ vendor channels by viewer geography. Missing countries remain unknown. CPM cannot be treated as creator take-home pay or residence-country income.
+
 ## Creator payment processing, refunds and settlement delays
 
 The [official native versus Shopping affiliate settlement study](creator-processing-settlement-2026.md), [payment routing matrix](creator-processing-settlement-2026.json) and [processing audit](../../site/creator-processing-settlement-audit.mjs) preserve the distinctions among tax/fee deductions before native Commerce Product Module shares, YouTube-covered card-processing expenses, refund reversals, and Shopify-affiliate pending, locked, merchant-billed and actually deposited stages. No individual creator profit is inferred.

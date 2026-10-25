@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "vendor_selected_audience_country_advertiser_cpm_2025",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "air-2025-viewer-country-cpm-3000"
+  ],
+  "study": {
+    "publisher": "AIR Media-Tech",
+    "published_at": "2025-06-27",
+    "reported_client_channels_lower_bound": 3000,
+    "sample_recruitment": "selected AIR-managed creator channels, not random creators or advertiser population",
+    "metric": "advertiser_cpm_usd_per_1000_ad_impressions_before_creator_revenue_share",
+    "data_period": "2025 reporting at June 2025 update; exact ad-auction event time window not specified",
+    "sample_country_specific_n": null,
+    "mean_or_median_per_country_not_specified": true,
+    "unique_viewers_per_country": null,
+    "creator_residence_country_observed": false,
+    "advertiser_cpm_is_creator_rpm": false,
+    "representative_of_all_youtube_advertisers": false
+  },
+  "observations": [
+    {
+      "country_code": "US",
+      "country_name": "United States",
+      "value_usd_per_thousand_ad_impressions": 14.67,
+      "metric": "advertiser_cpm",
+      "measurement_status": "vendor_reported_sampled_region",
+      "source_id": "air-2025-viewer-country-cpm-3000"
+    },
+    {
+      "country_code": "AU",
+      "country_name": "Australia",
+      "value_usd_per_thousand_ad_impressions": 13.3,
+      "metric": "advertiser_cpm",
+      "measurement_status": "vendor_reported_sampled_region",
+      "source_id": "air-2025-viewer-country-cpm-3000"
+    },
+    {
+      "country_code": "CH",
+      "country_name": "Switzerland",
+      "value_usd_per_thousand_ad_impressions": 12.98,
+      "metric": "advertiser_cpm",
+      "measurement_status": "vendor_reported_sampled_region",
+      "source_id": "air-2025-viewer-country-cpm-3000"
+    },
+    {
+      "country_code": "GB",
+      "country_name": "United Kingdom",
+      "value_usd_per_thousand_ad_impressions": 8.91,
+      "metric": "advertiser_cpm",
+      "measurement_status": "vendor_reported_sampled_region",
+      "source_id": "air-2025-viewer-country-cpm-3000"
+    },
+    {
+      "country_code": "JP",
+      "country_name": "Japan",
+      "value_usd_per_thousand_ad_impressions": 5.68,
+      "metric": "advertiser_cpm",
+      "measurement_status": "vendor_reported_sampled_region",
+      "source_id": "air-2025-viewer-country-cpm-3000"
+    },
+    {
+      "country_code": "IN",
+      "country_name": "India",
+      "value_usd_per_thousand_ad_impressions": 0.74,
+      "metric": "advertiser_cpm",
+      "measurement_status": "vendor_reported_sampled_region",
+      "source_id": "air-2025-viewer-country-cpm-3000"
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "value_usd_per_thousand_ad_impressions": 0.84,
+      "metric": "advertiser_cpm",
+      "measurement_status": "vendor_reported_sampled_region",
+      "source_id": "air-2025-viewer-country-cpm-3000"
+    },
+    {
+      "country_code": "PK",
+      "country_name": "Pakistan",
+      "value_usd_per_thousand_ad_impressions": 0.53,
+      "metric": "advertiser_cpm",
+      "measurement_status": "vendor_reported_sampled_region",
+      "source_id": "air-2025-viewer-country-cpm-3000"
+    },
+    {
+      "country_code": "BD",
+      "country_name": "Bangladesh",
+      "value_usd_per_thousand_ad_impressions": 0.53,
+      "metric": "advertiser_cpm",
+      "measurement_status": "vendor_reported_sampled_region",
+      "source_id": "air-2025-viewer-country-cpm-3000"
+    },
+    {
+      "country_code": "YE",
+      "country_name": "Yemen",
+      "value_usd_per_thousand_ad_impressions": 0.48,
+      "metric": "advertiser_cpm",
+      "measurement_status": "vendor_reported_sampled_region",
+      "source_id": "air-2025-viewer-country-cpm-3000"
+    }
+  ],
+  "unreported_reference_markets": [
+    {
+      "country_code": "MX",
+      "country_name": "Mexico",
+      "reported_cpm": null,
+      "source_id": "air-2025-viewer-country-cpm-3000"
+    }
+  ],
+  "separation_rules": [
+    "These rates index audiences/ad inventory by country, not the home country of the creator, subscriber nationality, or platform-wide earnings distributions.",
+    "CPM is advertiser-side gross ad-impression price, not ad-only creator RPM per 1,000 video views and not a payout.",
+    "Do not apply a flat 55% revenue-share multiple to country CPM and call it creator RPM: video monetization fill, eligibility, ad formats, Premium and other denominators differ.",
+    "AIR-client sample is not random; individual market channel/impression n and exact aggregation statistic are not supplied.",
+    "Exact sampling period and standard errors by country are not published in the reviewed country table, so descriptive price ordering is not a confidence interval or causal ranking.",
+    "MX is not shown in the high/low market table; preserve null rather than interpolate between other markets.",
+    "The AIR 2025 3,000+ creator sample could overlap AIR's separately published 300 monetized 2025–2026 channels; do not count them as independent random replications.",
+    "Reported 2025 CPM observations do not establish current 2026 CPM, creator labor productivity, FX purchasing power, or personal tax geography.",
+    "Do not confuse a country-level CPM price with the number of active viewers, distinct creators, market size, or potential paying customers."
+  ],
+  "inferred_creator_rpm": null,
+  "typical_creator_monthly_income_by_residence": null,
+  "verified_net_creator_profit": null,
+  "downloaded_creator_analytics": false
+}
