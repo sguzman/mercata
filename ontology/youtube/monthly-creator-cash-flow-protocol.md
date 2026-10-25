@@ -28,3 +28,9 @@ Also supply opening YouTube payment-account balance, opening transfers already i
 Taxes that are not already included in posted net amounts, merchant refunds not recorded, currency conversion, billed-but-unpaid sponsorships, commitments, depreciation and direct/indirect noncash expenses require a separate accounting record. The underlying model is a scoped **liquidity** model, not a GAAP profit-and-loss statement or an IRS/local tax calculation. None of Mercata's fixtures contains real participant income, bank records or personal identifiers.
 
 [Machine contract](monthly-creator-cash-flow-protocol.json) · [Pure reconciliation engine](../../site/monthly-creator-cash-flow.mjs) · [Regression cases](../../tests/monthly-creator-cash-flow.test.mjs).
+
+## Completed model acceptance versus unmeasured creator outcomes
+
+The research task **Create a monthly creator cash-flow model** meets its specified model and protocol acceptance criteria: explicit production, promotion and administrative hours; publication counts; finalized payment-account credits; issued transfers; cleared bank deposits; sponsor/affiliate/product receipts; paid refunds and expenses. A tested pure reconciliation engine rejects omitted fields, incompatible currencies, invalid money precision, nonconsecutive months, impossible payment receipts and unsupported payout issuance. The registered official Google/YouTube payment schedule and currency thresholds supply the underlying rules.
+
+Completion means the **model and method**, not the broader creator-income population study, are verified. Mercata does not hold actual participant financial records, observed taxes, representative income distributions, verified individual cash profit or wages. Synthetic test fixtures are never counted as real earnings data.
