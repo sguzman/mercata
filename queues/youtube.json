@@ -4598,7 +4598,7 @@
           "title": "Review ad suitability and content-specific restrictions",
           "acceptance": "Record platform-specific policy revisions with dates.",
           "weight": 1,
-          "progress": 54,
+          "progress": 80,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/content-policy-risk.json",
@@ -4610,7 +4610,11 @@
             "tests/youtube.test.mjs",
             "tests/site-smoke.mjs",
             "ontology/youtube/health-fitness-content.json",
-            "ontology/youtube/health-fitness-content.md"
+            "ontology/youtube/health-fitness-content.md",
+            "ontology/youtube/advertiser-policy-history.json",
+            "ontology/youtube/advertiser-policy-history.md",
+            "site/advertiser-revision-audit.mjs",
+            "tests/advertiser-revision-audit.test.mjs"
           ]
         },
         {
