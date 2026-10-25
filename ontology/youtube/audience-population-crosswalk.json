@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "population_prevalence_and_ad_reach_crosswalk",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "bounded_surveys_and_planner_estimates_no_global_person_mau_or_dau",
   "method": "Record survey prevalence, daily frequency and country ad planner outputs with explicit distinct denominators; verify no attempt to convert a percentage to unique global people or to add account/ad estimates.",
   "population": "Surveyed internet users 16+ in GWI covered markets, Pew survey U.S. adults 18+, and independently planned advertising audiences in 3 countries",
@@ -147,5 +147,113 @@
     "new_user_cohort_count": null,
     "active_unique_creator_count": null
   },
-  "reported_independent_population_measure": null
+  "reported_independent_population_measure": null,
+  "us_adult_ever_use_history": {
+    "reviewed_at": "2026-10-25",
+    "published_at": "2026-10-19",
+    "source_id": "pew-us-adults-2026",
+    "metric": "percent_of_us_adults_who_say_they_ever_use_youtube",
+    "survey_population": "separate_yearly_us_adult_samples_not_fixed_person_panel",
+    "year_values": [
+      {
+        "date": "2018-01-10",
+        "percent": 73,
+        "collection_mode": "telephone",
+        "source_id": "pew-us-adults-2026",
+        "whole_sample_margin_pp": null,
+        "unique_monthly_people": null,
+        "unique_daily_people": null,
+        "creator_income": null
+      },
+      {
+        "date": "2019-02-07",
+        "percent": 73,
+        "collection_mode": "telephone",
+        "source_id": "pew-us-adults-2026",
+        "whole_sample_margin_pp": null,
+        "unique_monthly_people": null,
+        "unique_daily_people": null,
+        "creator_income": null
+      },
+      {
+        "date": "2021-02-08",
+        "percent": 81,
+        "collection_mode": "telephone",
+        "source_id": "pew-us-adults-2026",
+        "whole_sample_margin_pp": null,
+        "unique_monthly_people": null,
+        "unique_daily_people": null,
+        "creator_income": null
+      },
+      {
+        "date": "2023-09-05",
+        "percent": 83,
+        "collection_mode": "web_mail",
+        "source_id": "pew-us-adults-2026",
+        "whole_sample_margin_pp": null,
+        "unique_monthly_people": null,
+        "unique_daily_people": null,
+        "creator_income": null
+      },
+      {
+        "date": "2024-06-10",
+        "percent": 85,
+        "collection_mode": "web_mail_phone",
+        "source_id": "pew-us-adults-2026",
+        "whole_sample_margin_pp": null,
+        "unique_monthly_people": null,
+        "unique_daily_people": null,
+        "creator_income": null
+      },
+      {
+        "date": "2025-06-18",
+        "percent": 84,
+        "collection_mode": "web_mail_phone",
+        "source_id": "pew-us-adults-2026",
+        "whole_sample_margin_pp": null,
+        "unique_monthly_people": null,
+        "unique_daily_people": null,
+        "creator_income": null
+      },
+      {
+        "date": "2026-06-18",
+        "percent": 84,
+        "collection_mode": "web_mail_phone",
+        "source_id": "pew-us-adults-2026",
+        "whole_sample_margin_pp": 1.8,
+        "unique_monthly_people": null,
+        "unique_daily_people": null,
+        "creator_income": null
+      }
+    ],
+    "missing_years": [
+      2020,
+      2022
+    ],
+    "mode_epochs": [
+      {
+        "period": "2018-2021",
+        "method": "telephone"
+      },
+      {
+        "period": "2023",
+        "method": "web_mail"
+      },
+      {
+        "period": "2024-2026",
+        "method": "web_mail_phone"
+      }
+    ],
+    "comparative_claims": [
+      "2025 and 2026 both have reported 84% point estimates in separate U.S. adult surveys; not proof of no individual movement.",
+      "Differences across survey modes are not a causal platform growth series.",
+      "The full-sample 2026 ±1.8pp margin is not the significance interval for historical differences.",
+      "Ever-use is not active monthly or daily use, unique worldwide people or paid creators.",
+      "Missing years 2020 and 2022 remain missing rather than interpolated."
+    ],
+    "global_mau": null,
+    "global_dau": null,
+    "significant_growth_verified": null,
+    "deduplicated_youtube_people": null
+  }
 }

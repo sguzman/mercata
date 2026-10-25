@@ -3127,7 +3127,9 @@ function renderAudiencePopulationCrosswalk(data,dossier){
   card.append(audienceSources(x.source_ids,dossier));grid.append(card);
  }
  details.append(grid);
- details.append(make('p','measure-limit','The deduplicated worldwide MAU and DAU remain unknown, as does cross-account deduplication.'));
+ details.append(make('p','measure-limit','The deduplicated worldwide MAU and DAU remain unknown, as does cross-account deduplication.'))
+ if(data.us_adult_ever_use_history?.year_values?.length){details.append(make('p','measure-limit','Pew U.S.-adult ever-use series 2018–2026: seven survey observations, with 2020/2022 missing and collection modes changing. Both 2025 and 2026 report 84%; these are not global MAU/DAU.'));}
+;
  const link=make('a','inline-link','Read each observation and its denominator ↗');
  link.href='./ontology/youtube/audience-population-crosswalk.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
 }

@@ -27,3 +27,19 @@ These are neither confirmed monthly *active users* nor views or subscribers. Est
 ## What remains unknown
 
 Worldwide distinct MAU, distinct DAU, deduplication of signed-in vs signed-out accounts and shared-device viewers, the distribution of paying/creating people, and cross-market reach under one population frame all remain **unmeasured**. Survey rates and ad-reach menu estimates are useful *bounded* evidence, but reporting them as MAU/DAU counts would invent a denominator and could mislead opportunity research.
+
+## Seven dated U.S. adult ever-use observations (2018–2026)
+
+The [2026 Pew social media historical fact sheet](https://www.pewresearch.org/internet/fact-sheet/social-media/) publishes successive U.S.-adult **ever-used-YouTube** survey percentages, not platform MAU or accounts. Missing YouTube years are not estimated.
+
+| Survey closing date | Ever use | Survey collection mode |
+| --- | ---: | --- |
+| 2018-01-10 | 73% | telephone |
+| 2019-02-07 | 73% | telephone |
+| 2021-02-08 | 81% | telephone |
+| 2023-09-05 | 83% | web / mail |
+| 2024-06-10 | 85% | web / mail / phone |
+| 2025-06-18 | 84% | web / mail / phone |
+| 2026-06-18 | 84% | web / mail / phone |
+
+No YouTube observation is published here for **2020** or **2022**. Pew's surveys used telephone through 2021, web/mail in 2023, and web/mail/phone from 2024 onward. The source's 2026 overall margin of error is ±1.8 percentage points, not a margin for older years or changes. Both **2025 and 2026 = 84%** are point estimates from different samples; they are not zero subscriber turnover, constant population size or measured platform active users. The machine register and [audit](../../site/us-ever-use-history-audit.mjs) enforce these limits.
