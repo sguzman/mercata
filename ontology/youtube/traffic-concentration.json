@@ -2,10 +2,13 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "creator_traffic_source_concentration_protocol",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-25",
   "source_ids": [
     "yt-reach-source-types-2026",
-    "studio-analytics-help"
+    "studio-analytics-help",
+    "api-dimensions",
+    "api-metrics",
+    "yt-shorts-discovery-help-2026"
   ],
   "status": "owner_metric_framework_no_channel_traffic_observations",
   "method": "Classify all mutually exclusive Studio-reported attribution rows in one channel and observation window before computing shares. A risk index is a descriptive diagnostic, not observed income risk.",
@@ -155,5 +158,199 @@
     "income_loss_from_recommendation_change": null,
     "owned_audience_share": null,
     "paid_traffic_dependency": null
+  },
+  "api_attribution_crosswalk": {
+    "as_of": "2026-10-25",
+    "source_ids": [
+      "api-dimensions",
+      "yt-reach-source-types-2026"
+    ],
+    "access": "authorized_owner_analytics_report",
+    "api_dimension": "insightTrafficSourceType",
+    "categories": [
+      {
+        "api_code": "EXT_URL",
+        "studio_group": "external",
+        "meaning": "Website link outside YouTube, including Google Search referrals",
+        "origin": "outside_website_link",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "Google Search traffic is external, not YT_SEARCH."
+      },
+      {
+        "api_code": "NO_LINK_EMBEDDED",
+        "studio_group": "external",
+        "meaning": "An embedded video on another website",
+        "origin": "external_embed",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "Embedding does not prove visitor ownership or portable account contacts."
+      },
+      {
+        "api_code": "NO_LINK_OTHER",
+        "studio_group": "direct_or_unknown",
+        "meaning": "No identified referrer, including direct links and mobile app traffic",
+        "origin": "unidentified_or_direct",
+        "subscription_status": "unknown",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "Direct/unknown cannot be relabeled loyal users or subscriber acquisitions."
+      },
+      {
+        "api_code": "RELATED_VIDEO",
+        "studio_group": "suggested_videos",
+        "meaning": "A related-video listing on another video's watch page",
+        "origin": "on_platform_adjacent",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "Suggested Studio reporting can also include certain video-description links; no public causal algorithm weights."
+      },
+      {
+        "api_code": "SHORTS",
+        "studio_group": "shorts_feed",
+        "meaning": "A vertical swipe from a previous Short in Shorts viewing",
+        "origin": "shorts_vertical_feed",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "This traffic-source code is not the same as creatorContentType=SHORTS or raw Shorts play starts."
+      },
+      {
+        "api_code": "YT_SEARCH",
+        "studio_group": "youtube_search",
+        "meaning": "A native YouTube search result",
+        "origin": "on_platform_search",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "Distinct from Google Search, which may appear under EXT_URL."
+      },
+      {
+        "api_code": "SUBSCRIBER",
+        "studio_group": "browse_features",
+        "meaning": "Homepage feeds or subscription features",
+        "origin": "on_platform_feed_or_subscription_feature",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "Referral source does not establish viewer subscribedStatus at event time."
+      },
+      {
+        "api_code": "NOTIFICATION",
+        "studio_group": "notifications",
+        "meaning": "A YouTube notification or email alert",
+        "origin": "youtube_notification",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "A notification-origin visit is not a unique subscriber or guaranteed opted-in contact."
+      },
+      {
+        "api_code": "ADVERTISING",
+        "studio_group": "other",
+        "meaning": "Video was reached through advertising",
+        "origin": "paid_ad_referral",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "Track separately from organic referral; paid viewers are not earned subscribers or creator income."
+      },
+      {
+        "api_code": "PLAYLIST",
+        "studio_group": "playlists",
+        "meaning": "A video was played from a playlist",
+        "origin": "on_platform_playlist",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "Includes playlist contexts that may be owned by another channel."
+      },
+      {
+        "api_code": "YT_CHANNEL",
+        "studio_group": "other",
+        "meaning": "Video watched or reached from channel page",
+        "origin": "channel_page",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "Channel page views may originate from owner or unrelated channel pages."
+      },
+      {
+        "api_code": "YT_OTHER_PAGE",
+        "studio_group": "other",
+        "meaning": "Other YouTube page links",
+        "origin": "other_youtube_page",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "Generic source, not necessarily organic algorithmic exposure."
+      },
+      {
+        "api_code": "VIDEO_REMIXES",
+        "studio_group": "other",
+        "meaning": "A remix player's link to the original",
+        "origin": "on_platform_remix",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "A remix referral is not an automatically licensed commercial derivative."
+      },
+      {
+        "api_code": "SOUND_PAGE",
+        "studio_group": "other",
+        "meaning": "Shared Shorts audio pivot page",
+        "origin": "on_platform_sound_page",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "Audio page source is different from a Shorts-feed swipe."
+      },
+      {
+        "api_code": "END_SCREEN",
+        "studio_group": "other",
+        "meaning": "Link from another video's end screen",
+        "origin": "on_platform_end_screen",
+        "subscription_status": "not_proven",
+        "private_person_identity": null,
+        "portable_customer_relationship": null,
+        "creator_income_by_source": null,
+        "limits": "No inference about paid partnerships or cross-channel audience identity."
+      }
+    ],
+    "semantic_boundaries": [
+      "YouTube Search (YT_SEARCH) and Google Search external links (EXT_URL) are different acquisition families.",
+      "API SUBSCRIBER is a referral type for homepage/subscriptions and is not subscribedStatus (SUBSCRIBED or UNSUBSCRIBED), creator subscriber count, or an owner-controlled export.",
+      "API SHORTS as traffic origin is different from content format creatorContentType=SHORTS; the vertical feed is also distinct from sound pages and remix referral.",
+      "NO_LINK_OTHER does not establish a direct loyal subscriber or a source entirely controlled by a creator.",
+      "Source-type splits require owner authorization and compatible date, content format, metric, geography, and category completeness; source-detail reports may show only top referring terms or pages.",
+      "A video may be found from outside websites by search engines without the viewer ever entering YouTube native search.",
+      "Referral view counts cannot infer unique people, actual click-through without matched impressions, paid media costs, net income, or niche competition.",
+      "YouTube's August 24, 2026 view-count revision requires a metric-definition boundary for historical comparisons."
+    ],
+    "observed_creator_rows": [],
+    "metrics_in_study": {
+      "organic_recommendation_share": null,
+      "external_returning_people": null,
+      "external_customer_conversions": null,
+      "suggested_video_position_effect": null,
+      "shorts_feed_income": null
+    }
   }
 }

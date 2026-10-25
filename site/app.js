@@ -1548,7 +1548,11 @@ function renderTrafficConcentration(data,dossier){
   grid.append(card);
  }
  details.append(grid);
- details.append(make('p','measure-limit','With a complete authorized same-period source partition, calculate largest source share and HHI. An HHI does not measure ownership, profit, volatility or the probability of algorithmic harm.'));
+ details.append(make('p','measure-limit','With a complete authorized same-period source partition, calculate largest source share and HHI. An HHI does not measure ownership, profit, volatility or the probability of algorithmic harm.'))
+ if(data.api_attribution_crosswalk?.categories?.length){
+  details.append(make('p','measure-limit','API distinctions: Google Search appears under EXT_URL, unlike YT_SEARCH. SHORTS refers to vertical feed swipes, not all Short videos. SUBSCRIBER identifies a referral feature, not a verified subscribing viewer. NO_LINK_OTHER is not proof of direct relationships.'));
+ }
+;
  details.append(audienceSources(data.source_ids,dossier));
  const link=make('a','inline-link','Source taxonomy, measured-unit requirements and synthetic audit tests ↗');
  link.href='./ontology/youtube/traffic-concentration.md';link.target='_blank';link.rel='noopener noreferrer';
