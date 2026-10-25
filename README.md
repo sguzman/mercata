@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [conditional YouTube withholding calculation audit](ontology/youtube/tax-withholding-mechanics.md) applies source-defined U.S.-viewer versus worldwide income bases correctly and excludes personal tax outcomes, FX assumptions and double deductions from settled cash.
+
+
 The [US/Mexico channel membership price-option audit](ontology/youtube/membership-price-options-mx-2026.md) records 25 allowed menus and compares older/newer local nominal prices without inventing paid channel tiers, transaction volume or creator earnings.
 
 

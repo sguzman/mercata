@@ -32,3 +32,11 @@ Account country, tax residence, payment address, audience geography and reportin
 Researching creator cash flow requires separate observations for native payouts, U.S.-viewer-attributable proceeds, any already-deducted Google withholding, potential local income-tax liability, cash production costs, and unpaid labor time. Applying a U.S.-viewer rate to all revenue or deducting the same withholding twice would corrupt net-profit analysis.
 
 The correct individual percentage, revenue split, applicable treaty, paid tax, take-home profit and earnings volatility all remain **unknown** in the [machine study](tax-withholding-mechanics.json). The [newcomer-income protocol](newcomer-income-cohort.md) must measure these values separately, with consent and aggregate reporting. No tax IDs, bank details, identity documents or individual forms are collected or stored.
+
+## Conditional arithmetic, separate from actual tax advice
+
+A [pure JavaScript withholding test model](../../site/youtube-withholding-scenario.mjs), verified by [regression tests](../../tests/youtube-withholding-scenario.test.mjs), now applies each documented rule to its **source-defined base**. It does **not** infer anyone's country, eligible treaty rate or residence; values and payee category must be supplied explicitly for the scenario. The non-U.S. case with accepted tax information requires an input rate within the official 0–30% conditional range; no default country rate is selected.
+
+Using **synthetic USD 1,000 worldwide YouTube earnings** of which **USD 100 arose from U.S. viewers**: an explicit 10% valid-information scenario deducts USD 10 from U.S. earnings; the documented non-U.S. business missing-information 30% scenario deducts USD 30 from U.S. earnings; the missing-information individual backup 24% scenario applies to the worldwide USD 1,000 and yields USD 240. The U.S. accepted-information platform-withholding scenario yields USD 0 *Google withholding*, not a zero eventual tax bill.
+
+Those amounts are **mathematical fixtures**, not observations, financial advice, approval decisions, Google settlement balances or bank transfers. The independent [monthly cash-flow ledger](monthly-creator-cash-flow-protocol.md) accepts only finalized already-net account postings and must **not subtract the same withholding again**.

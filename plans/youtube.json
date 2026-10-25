@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-23",
-  "progress_percent": 79,
+  "progress_percent": 80,
   "permission_required_before_execution": false,
   "scope": "Evidence-based research into YouTube's economics, platform use, population, creator earnings, audience demographics, subcultures, competition, content formats and practical monetization strategies.",
   "baseline": {
@@ -151,7 +151,7 @@
         "youtube/economics/measure-the-cost-of-testing-a-new-niche"
       ],
       "phase": 1,
-      "progress_percent": 85
+      "progress_percent": 86
     },
     {
       "id": "market",
@@ -1402,7 +1402,7 @@
       "objective": "List payout documents, withholding possibilities and country-dependent rules to verify.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and list payout documents, withholding possibilities and country-dependent rules to verify.",
       "status": "in_progress",
-      "percent": 71,
+      "percent": 83,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
@@ -1412,7 +1412,9 @@
         "tests/youtube.test.mjs",
         "tests/site-smoke.mjs",
         "ontology/youtube/tax-withholding-mechanics.json",
-        "ontology/youtube/tax-withholding-mechanics.md"
+        "ontology/youtube/tax-withholding-mechanics.md",
+        "site/youtube-withholding-scenario.mjs",
+        "tests/youtube-withholding-scenario.test.mjs"
       ],
       "artifact": null,
       "priority": "standard",

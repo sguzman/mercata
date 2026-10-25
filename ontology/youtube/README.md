@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [withholding basis research](tax-withholding-mechanics.md), [published payee-case data](tax-withholding-mechanics.json) and [tested conditional arithmetic](../../site/youtube-withholding-scenario.mjs) separate U.S.-viewer deduction bases, missing-form worldwide backup withholding, Google withholding from local tax, and finalized bank cash.
+
+
 The [official membership price menu crosswalk](membership-price-options-mx-2026.md), [priced tier records](membership-price-options-mx-2026.json), and [source-value audit](../../site/membership-price-options-audit.mjs) preserve legacy and newer May 2025-onward Mexico menu levels and do not infer transaction prices or net creator payouts.
 
 

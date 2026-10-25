@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "platform_withholding_scope_not_personal_tax_advice",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-25",
   "status": "official_payout_tax_rules_and_unmeasured_individual_liability",
   "audience": "Researchers comparing payout mechanics, not personal tax planning",
   "source_ids": [
@@ -133,5 +133,23 @@
     "creator_withholding_amount": null,
     "creator_local_tax_liability": null,
     "creator_after_tax_profit": null
+  },
+  "conditional_arithmetic": {
+    "engine": "site/youtube-withholding-scenario.mjs",
+    "unit": "explicit_account_reporting_currency_2_decimal_amounts",
+    "case_source": "payer_withholding_cases",
+    "approved_rate_mandatory_for_non_us_valid_info": true,
+    "never_estimate_individual_tax_liability": true,
+    "already_deducted_platform_withholding_must_not_be_deducted_again": true,
+    "observed_cases": [],
+    "local_tax_rate": null,
+    "creator_tax_paid": null,
+    "limits": [
+      "Scenario requires the correct tax-account case from official approved records; selecting one hypothetically does not validate residence, beneficial ownership or tax form.",
+      "The amount only models potential Google withholding from the published case base. Final financial liability and any local-country obligations are not inferred.",
+      "Accepted tax information outside the US needs an explicitly supplied, confirmed rate; no country- or treaty-based default is populated.",
+      "Currency is the account currency, with no currency conversion, and amounts use integer cents. Actual tax processing can apply its own rounding and adjustment rules.",
+      "Input worldwide/native revenue must not already have had tax withholding deducted, otherwise scenario deductions would be counted twice."
+    ]
   }
 }
