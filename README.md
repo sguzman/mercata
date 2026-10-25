@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [fashion/beauty content taxonomy](ontology/youtube/fashion-lifestyle-content-signals-2026.md) groups GRWM, prom, sewing and other style formats with source-defined reporting dates while avoiding demographic or creator-income inferences from content interest.
+
+
 The [small-channel discoverability evidence design](ontology/youtube/small-channel-discoverability-protocol.md) keeps public subscriber-index milestones apart from the owner-only impressions/CTR data required for genuine newcomer discovery comparisons.
 
 

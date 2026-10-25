@@ -16,6 +16,10 @@ The [December 2025/2026 Adobe Express respondent study](adobe-ai-production-surv
 
 The [61-completed-video first-person time log](photography-production-time-diary-2025.md), [machine record](photography-production-time-diary-2025.json) and [rounding/unit audit](../../site/photography-production-labor-audit.mjs) document one channel's mean 9.74 and median 7.37 hours of production per finished video. No creator earnings, abandoned-attempt hours, net wages or other-genre labor estimates were observed.
 
+## Beauty and fashion genres with incompatible topic windows
+
+The [fashion and lifestyle content study](fashion-lifestyle-content-signals-2026.md), [machine category crosswalk](fashion-lifestyle-content-signals-2026.json) and [denominator auditor](../../site/fashion-lifestyle-audit.mjs) distinguish GRWM, occasion fashion, sewing and beauty topics without gender stereotyping. Published 2023/2024/2025 video view-event aggregates have different windows and title filters and cannot establish a creator-income or viewer-population trend.
+
 ## Small creator discoverability and owned impressions
 
 The [channel discovery sampling protocol](small-channel-discoverability-protocol.md), [metric frame](small-channel-discoverability-protocol.json) and [inference checker](../../site/small-channel-discovery-audit.mjs) distinguish large public subscriber indexes from owner-only impressions/CTR. A public below-1k subscriber cohort is not a first-time creator census and has no published income conversion denominator.

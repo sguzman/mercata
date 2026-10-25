@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "fashion_beauty_lifestyle_content_taxonomy_with_dated_video_event_proxies",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "yt-grwm-history-2023",
+    "yt-prom-grwm-2025",
+    "fashion-sewing-2026",
+    "yt-halloween-makeup-2025"
+  ],
+  "content_categories": [
+    {
+      "id": "grwm_storytelling",
+      "label": "Get Ready With Me routines and conversational narrative",
+      "format_examples": [
+        "long_form",
+        "short_voiceover"
+      ],
+      "intent_examples": [
+        "social_story",
+        "style_routine",
+        "outfit_reveal"
+      ],
+      "audience_gender_requirement": null
+    },
+    {
+      "id": "makeup_instruction",
+      "label": "Makeup technique and creative transformations",
+      "format_examples": [
+        "tutorial",
+        "short",
+        "live"
+      ],
+      "intent_examples": [
+        "skill",
+        "art",
+        "product_experiment"
+      ],
+      "audience_gender_requirement": null
+    },
+    {
+      "id": "fashion_production",
+      "label": "Sewing, upcycling and garment design",
+      "format_examples": [
+        "process_documentary",
+        "tutorial",
+        "short"
+      ],
+      "intent_examples": [
+        "beginner_skill",
+        "design",
+        "repair"
+      ],
+      "audience_gender_requirement": null
+    },
+    {
+      "id": "occasion_style",
+      "label": "Prom, costumes and occasion preparation",
+      "format_examples": [
+        "short",
+        "long_form"
+      ],
+      "intent_examples": [
+        "occasion",
+        "fashion",
+        "social_story"
+      ],
+      "audience_gender_requirement": null
+    },
+    {
+      "id": "fashion_history",
+      "label": "Historical costumes and fashion criticism",
+      "format_examples": [
+        "video_essay",
+        "demonstration"
+      ],
+      "intent_examples": [
+        "history",
+        "craft",
+        "analysis"
+      ],
+      "audience_gender_requirement": null
+    },
+    {
+      "id": "product_evaluation",
+      "label": "Beauty/fashion reviews, hauls and shopping-linked demonstrations",
+      "format_examples": [
+        "long_form",
+        "short"
+      ],
+      "intent_examples": [
+        "buyer_research",
+        "entertainment"
+      ],
+      "audience_gender_requirement": null
+    }
+  ],
+  "observations": [
+    {
+      "id": "grwm_2023_jan_jun_title",
+      "source_id": "yt-grwm-history-2023",
+      "population": "global YouTube videos with GRWM title variants",
+      "window_start": "2023-01-01",
+      "window_end": "2023-06-05",
+      "metric": "video_view_events",
+      "strict_lower_bound": 6000000000,
+      "unit": "views",
+      "new_unique_audience_population": null,
+      "creator_income": null
+    },
+    {
+      "id": "prom_grwm_2024",
+      "source_id": "yt-prom-grwm-2025",
+      "population": "global YouTube videos with both prom and GRWM in titles",
+      "window_start": "2024-01-01",
+      "window_end": "2024-12-31",
+      "metric": "video_view_events",
+      "strict_lower_bound": 25000000,
+      "unit": "views",
+      "new_unique_audience_population": null,
+      "creator_income": null
+    },
+    {
+      "id": "beginner_sewing_machine_2025",
+      "source_id": "fashion-sewing-2026",
+      "population": "global YouTube videos related to sewing machines with beginner in title",
+      "window_start": "2025-01-01",
+      "window_end": "2025-12-31",
+      "metric": "video_view_events",
+      "strict_lower_bound": 100000000,
+      "unit": "views",
+      "new_unique_audience_population": null,
+      "creator_income": null
+    }
+  ],
+  "observation_rules": [
+    "GRWM and occasion GRWM can overlap as genres and must not be added into a deduplicated unique audience.",
+    "2023 partial-year GRWM, 2024 calendar prom/GRWM and 2025 beginner sewing are different dates and title/content filters, not a coherent trend series.",
+    "Counts are YouTube video view events, not unique viewers, active creators, people of a specific gender, buyers or creator earnings.",
+    "No category exclusively defines women or girls; content interest is not validated demographic identity.",
+    "The publication of an editorial report about a topic is not evidence of universal creator demand, causal ad lift, monetization eligibility or stable RPM.",
+    "A specific product-review video can fit several categories; sample coding must specify overlap and a primary code before summing upload counts.",
+    "Avoid describing selected GRWM views as all personal-care consumers or prom viewers as all teenagers."
+  ],
+  "measurement_protocol": {
+    "unit": "public_video_in_prespecified_fixed_window",
+    "one_primary_code_plus_optional_secondary_codes": true,
+    "labels": [
+      "content_subject",
+      "narrative_style",
+      "format",
+      "language",
+      "publishing_month",
+      "video_length",
+      "public_views_at_fixed_age",
+      "product_tag_visible_if_observable"
+    ],
+    "privacy_rule": "do_not_infer_viewer_sex_gender_orientation_age_from_content_interest",
+    "needs_creator_authorized_data_for": [
+      "unique_viewers",
+      "repeat_audience",
+      "platform_ad_revenue",
+      "paid_customer_conversion"
+    ],
+    "specific_topic_demand_forecast": null
+  },
+  "unmeasured": {
+    "total_fashion_content_creator_population": null,
+    "global_unique_grwm_viewers": null,
+    "channel_earnings_by_fashion_subtype": null,
+    "paid_shopping_conversion": null,
+    "year_over_year_same_definition_growth": null,
+    "audience_sex_or_gender": null
+  }
+}
