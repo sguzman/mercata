@@ -120,6 +120,10 @@ The [music-chart and independent creator rights study](music-viewing-charts-righ
 
 The [vendor direct-payment distribution](brand-campaign-payment-concentration-2026.md), [machine source-frame audit](brand-campaign-payment-concentration-2026.json), and [tests](../../tests/brand-campaign-payment-concentration.test.mjs) document the top 1%, top 10% and remaining paid creators' portions of CreatorIQ-recorded 2025 campaign payments, with 2023/2024 historical comparator shares. The vendor's payment data are separate from its Influencers.club survey and exclude **unpaid creators**, YouTube-native ad receipts, net profit and reliable subscriber-tier income cohorts.
 
+## Independently indexed subscriber tiers and public engagement
+
+The [CreatorDB/vidIQ channel-sample crosswalk](creator-index-comparison-2026.md), [machine evidence records](creator-index-comparison-2026.json), and [regression checks](../../tests/creator-index-comparison.test.mjs) compare vendor channel coverage, 30-day subscriber growth in established tiers and broad creator-category counts. Different indexes and observation units **cannot** estimate new-entrant success, all-channel supply, verified creator earnings or changes in the true global platform population.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

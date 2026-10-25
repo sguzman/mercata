@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "independent_vendor_channel_tiers_engagement_and_category_index",
+  "as_of": "2026-10-24",
+  "status": "vendor_indexed_30_day_channel_metrics_not_all_creators_or_income",
+  "source_ids": [
+    "creatordb-june2026-index",
+    "vidiq-subscriber-benchmarks-2026"
+  ],
+  "creatordb": {
+    "source_id": "creatordb-june2026-index",
+    "published_at": "2026-06-27",
+    "indexed_channels_at_least_1000_subscribers": 2153140,
+    "unit": "indexed_channels_not_people",
+    "cumulative_subscriber_thresholds": [
+      {
+        "subscriber_min": 1000,
+        "channel_count": 2153140
+      },
+      {
+        "subscriber_min": 10000,
+        "channel_count": 1710226
+      },
+      {
+        "subscriber_min": 50000,
+        "channel_count": 927022
+      },
+      {
+        "subscriber_min": 100000,
+        "channel_count": 601232
+      },
+      {
+        "subscriber_min": 250000,
+        "channel_count": 291409
+      },
+      {
+        "subscriber_min": 500000,
+        "channel_count": 158023
+      },
+      {
+        "subscriber_min": 1000000,
+        "channel_count": 76736
+      },
+      {
+        "subscriber_min": 5000000,
+        "channel_count": 9177
+      },
+      {
+        "subscriber_min": 10000000,
+        "channel_count": 2991
+      },
+      {
+        "subscriber_min": 50000000,
+        "channel_count": 105
+      },
+      {
+        "subscriber_min": 100000000,
+        "channel_count": 17
+      }
+    ],
+    "engagement_and_growth_tiers": [
+      {
+        "id": "10k_100k",
+        "subscribers_min": 10000,
+        "subscribers_max_exclusive": 100000,
+        "channels_with_engagement_measure": 1104357,
+        "median_engagement_percent": 3.2,
+        "share_engagement_above_5_percent": 30.4,
+        "median_30d_subscriber_growth_percent": 0.7,
+        "share_growing_more_than_10_percent": 0.89,
+        "share_growing_at_all_percent": 37.1
+      },
+      {
+        "id": "100k_1m",
+        "subscribers_min": 100000,
+        "subscribers_max_exclusive": 1000000,
+        "channels_with_engagement_measure": 523619,
+        "median_engagement_percent": 3.1,
+        "share_engagement_above_5_percent": 27.9,
+        "median_30d_subscriber_growth_percent": 0.7,
+        "share_growing_more_than_10_percent": 0.81,
+        "share_growing_at_all_percent": 38
+      },
+      {
+        "id": "1m_plus",
+        "subscribers_min": 1000000,
+        "subscribers_max_exclusive": null,
+        "channels_with_engagement_measure": 76736,
+        "median_engagement_percent": 2.5,
+        "share_engagement_above_5_percent": 20,
+        "median_30d_subscriber_growth_percent": 0.7,
+        "share_growing_more_than_10_percent": 0.5,
+        "share_growing_at_all_percent": 36.3
+      }
+    ],
+    "engagement_measure_definition": "Vendor engagement measured relative to estimated active followers, not all subscriber accounts",
+    "reported_growth_window": "trailing 30 days at June 2026 snapshot",
+    "same_creator_longitudinal_panel": false,
+    "unique_creator_owner_count": null,
+    "category_assignment": "one vendor-coded primary YouTube category, potentially broad and imperfect",
+    "primary_category_counts": [
+      {
+        "name": "People & Blogs",
+        "channels": 322869
+      },
+      {
+        "name": "Entertainment",
+        "channels": 288977
+      },
+      {
+        "name": "Gaming",
+        "channels": 222645
+      },
+      {
+        "name": "Education",
+        "channels": 198440
+      },
+      {
+        "name": "Music",
+        "channels": 196340
+      },
+      {
+        "name": "How-to & Style",
+        "channels": 138164
+      },
+      {
+        "name": "Travel & Events",
+        "channels": 124865
+      },
+      {
+        "name": "Science & Technology",
+        "channels": 114689
+      },
+      {
+        "name": "News & Politics",
+        "channels": 91418
+      },
+      {
+        "name": "Sports",
+        "channels": 87536
+      },
+      {
+        "name": "Autos & Vehicles",
+        "channels": 82073
+      },
+      {
+        "name": "Film & Animation",
+        "channels": 67722
+      }
+    ],
+    "top_100k_country_counts": [
+      {
+        "country": "US",
+        "channels": 109575
+      },
+      {
+        "country": "India",
+        "channels": 103548
+      },
+      {
+        "country": "Brazil",
+        "channels": 29495
+      },
+      {
+        "country": "Mexico",
+        "channels": 10235
+      }
+    ],
+    "primary_category_covers_all_indexed_channels_verified": false
+  },
+  "comparison_to_vidiq": {
+    "source_id": "vidiq-subscriber-benchmarks-2026",
+    "snapshot": "2026-07-20",
+    "vidiq_index_channels_1plus_subscribers": 61186246,
+    "vidiq_cumulative_1000plus_subscriber_channels": 24813187,
+    "vidiq_cumulative_100000plus_subscriber_channels": 792376,
+    "creator_db_100000plus": 601232,
+    "source_coverage_equivalent": false,
+    "independent_entity_level_deduplication": false,
+    "different_threshold_and_vendor_inclusion": true,
+    "interpretable_as_platform_growth_between_months": false
+  },
+  "measurement_constraints": [
+    "No claims that 2.15M tracked channels represent every 1000+ channel; the provider index may be a limited subset.",
+    "Median engagement uses proprietary active-follower estimate, not a fraction of total subscribers or viewed-video completions.",
+    "A single 30-day change cannot be an annual growth distribution or a new entrant cohort.",
+    "Cumulative subscriber thresholds describe a provider sample; these counts cannot be summed to estimate channels.",
+    "Selected first-category counts reflect CreatorDB classification, not video-upload count or demand; categories do not measure average creator income.",
+    "CreatorDB and vidIQ have unknown overlapping channels and different index frames, so their numerical differences are not platform births, losses or site growth."
+  ],
+  "unmeasured": {
+    "representative_channel_growth_median": null,
+    "all_new_creator_30d_growth": null,
+    "unique_owner_count": null,
+    "genre_specific_channel_income": null,
+    "video_output_by_category": null,
+    "per_tier_net_creator_wages": null,
+    "all_youtube_coverage_fraction": null
+  }
+}
