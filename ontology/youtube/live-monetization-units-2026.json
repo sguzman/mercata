@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "live_native_commerce_and_virtual_item_denominators",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "virtual-items",
+    "revenue-shares",
+    "gifts-eligibility",
+    "yt-live-gifts-horizontal-vertical-2026",
+    "yt-live-supers-current-eligibility-2026"
+  ],
+  "live_surfaces": [
+    "eligible_horizontal_live",
+    "eligible_vertical_live",
+    "eligible_premiere_super_chat"
+  ],
+  "commerce_products": [
+    {
+      "id": "super_chat_and_stickers",
+      "module": "Commerce Product Module",
+      "surface": "eligible_live_or_premiere_chat",
+      "creator_share": 0.7,
+      "share_denominator": "eligible_net_revenue_not_gross_viewer_spend",
+      "source_ids": [
+        "revenue-shares",
+        "yt-live-supers-current-eligibility-2026"
+      ]
+    },
+    {
+      "id": "channel_memberships",
+      "module": "Commerce Product Module",
+      "surface": "recurring_channel_membership_not_per_live_gift",
+      "creator_share": 0.7,
+      "share_denominator": "eligible_net_revenue_not_price_times_subscribers",
+      "source_ids": [
+        "revenue-shares"
+      ]
+    }
+  ],
+  "gifts": {
+    "module": "Virtual Items Module",
+    "surface": "eligible_vertical_and_horizontal_live_streams",
+    "viewer_item": "Jewels",
+    "creator_accounting_item": "Rubies",
+    "jewels_redeemed_per_ruby": 2,
+    "usd_per_ruby": 0.01,
+    "revenue_unit": "USD",
+    "source_ids": [
+      "virtual-items",
+      "gifts-eligibility",
+      "yt-live-gifts-horizontal-vertical-2026"
+    ],
+    "items_purchased_by_viewers_are_not_rubies_earned": true,
+    "eligibility_is_not_guaranteed_for_any_channel": true,
+    "after_tax_and_bank_conversion_not_inferred": true
+  },
+  "per_stream_exclusions": [
+    {
+      "id": "age_restricted",
+      "super_chat": true,
+      "gifts": true
+    },
+    {
+      "id": "unlisted",
+      "super_chat": true,
+      "gifts": true
+    },
+    {
+      "id": "private",
+      "super_chat": true,
+      "gifts": true
+    },
+    {
+      "id": "made_for_kids",
+      "super_chat": true,
+      "gifts": true
+    },
+    {
+      "id": "youtube_giving_fundraiser",
+      "super_chat": true,
+      "gifts": true
+    },
+    {
+      "id": "live_chat_disabled",
+      "super_chat": true,
+      "gifts": true
+    }
+  ],
+  "separated_other_paths": [
+    {
+      "id": "watch_page_ads",
+      "basis": "watch_page_eligible_net_ad_revenue",
+      "not_from": "Super Chat net or Ruby count"
+    },
+    {
+      "id": "live_direct_sponsorship",
+      "basis": "independent_negotiated_contract",
+      "not_from": "guaranteed native platform payment"
+    },
+    {
+      "id": "premiere_supers",
+      "basis": "eligible Commerce live chat interaction during a Premiere",
+      "not_from": "virtual item gifts on all Premieres"
+    }
+  ],
+  "eligibility_requirements": [
+    "YPP approval and matching module acceptance",
+    "age and geographic eligibility",
+    "AdSense verification and feature-level review",
+    "individual livestream requirements and enabled chat"
+  ],
+  "examples_prohibited": [
+    "purchase Jewels = directly paid USD amount",
+    "70 percent of gross Supers including VAT and app fees",
+    "70 percent of Rubies again",
+    "70 percent of all membership list prices",
+    "all participants in a live chat bought something",
+    "paid live chat is crowdfunding",
+    "cash recorded before finalized earnings and bank deposit"
+  ],
+  "unmeasured": {
+    "actual_live_creator_receipts": null,
+    "stream_to_payer_conversion_rate": null,
+    "distinct_gift_buyers": null,
+    "net_creator_profit": null,
+    "creator_labor_hours": null,
+    "refund_and_chargeback_rates": null,
+    "viewer_jewel_price_and_usd_conversion": null
+  }
+}

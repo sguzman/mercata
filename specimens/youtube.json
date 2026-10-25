@@ -3188,6 +3188,28 @@
       "evidence_class": "selected_permissioned_postchange_public_and_engaged_video_event_totals",
       "license": "External vendor cohort linked and independently summarized; no video-level or participant data copied",
       "notes": "Over 75k selected videos (published since June 1) report post-Aug24 549M public events and 330M engaged events, reported 60% ratio, category/tier/surface differences; not universal YouTube rate."
+    },
+    {
+      "id": "yt-live-gifts-horizontal-vertical-2026",
+      "url": "https://support.google.com/youtube/answer/15534883?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Turn on and manage gifts, powered by Jewels",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_current_horizontal_and_vertical_live_gifts_scope",
+      "license": "Official page linked; current eligibility scope independently paraphrased",
+      "notes": "Current Gifts management guidance explicitly covers eligible vertical and horizontal streams; separate Virtual Items Program policy defines value of Rubies, not all current stream surfaces."
+    },
+    {
+      "id": "yt-live-supers-current-eligibility-2026",
+      "url": "https://support.google.com/youtube/answer/9277801?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Super Chat & Super Stickers eligibility, availability, and policies",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_current_paid_live_chat_restrictions",
+      "license": "Official help page linked; independently paraphrased feature requirements",
+      "notes": "Supers require fan-funding/YPP eligibility and Commerce Product Module, eligible location, permitted video; kids, private/unlisted, age-restricted, Giving fundraiser and chat-disabled ineligible."
     }
   ],
   "claims": [
@@ -6915,6 +6937,39 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Timing assumes a standard compliant AdSense for YouTube account and its actual reporting currency, with no unpaid holds; issued or projected settlement must not be presented as observed bank cash."
+    },
+    {
+      "id": "youtube-live-2026-commerce-versus-rubies",
+      "text": "YouTube's Commerce Product Module allocates 70% of eligible net membership, Super Chat and Super Sticker receipts to partners, while live Gifts under the separate Virtual Items Module earn Rubies at USD 0.01 per Ruby (one Ruby per two redeemed Jewels). The formulas use different denominators and must not be combined.",
+      "source_ids": [
+        "revenue-shares",
+        "virtual-items"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "A viewer Jewel purchase is not a redeemed gift or a confirmed creator balance; net Commerce excludes taxes and certain fees. Eligibility, actual transfers and creator profit remain unknown."
+    },
+    {
+      "id": "youtube-live-2026-gifts-horizontal-and-vertical",
+      "text": "YouTube's current Gifts setup instructions say eligible vertical and horizontal livestreams can use Jewels-powered gifts. It remains subject to Virtual Items module acceptance, region, stream and child-directed restrictions; older vertical-only policy wording does not describe the full current documented surface.",
+      "source_ids": [
+        "yt-live-gifts-horizontal-vertical-2026",
+        "virtual-items",
+        "gifts-eligibility"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "No individual channel eligibility checked; current Gifts availability, exact supported effects and reporting rules can change."
+    },
+    {
+      "id": "youtube-live-2026-supers-exclusions",
+      "text": "YouTube excludes Super Chat and Super Stickers from private, unlisted, age-restricted, made-for-kids and fundraising videos and when live chat/comments are unavailable, independent of follower or audience counts.",
+      "source_ids": [
+        "yt-live-supers-current-eligibility-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Published feature restrictions are not an account-specific ruling or measured monetization rate."
     }
   ],
   "observations": [],

@@ -151,7 +151,7 @@
         "youtube/economics/measure-the-cost-of-testing-a-new-niche"
       ],
       "phase": 1,
-      "progress_percent": 72
+      "progress_percent": 74
     },
     {
       "id": "market",
@@ -314,7 +314,7 @@
         "youtube/sales/separate-analytics-unavailable-to-outsiders"
       ],
       "phase": 3,
-      "progress_percent": 79
+      "progress_percent": 80
     },
     {
       "id": "risk",
@@ -426,7 +426,7 @@
         "youtube/special-video/study-child-directed-video-restrictions"
       ],
       "phase": 3,
-      "progress_percent": 76
+      "progress_percent": 78
     },
     {
       "id": "audience-scale",
@@ -812,16 +812,23 @@
       "objective": "Inventory watch pages, Shorts, live, music, podcasts, TV viewing, community posts and paid products as research targets.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and inventory watch pages, Shorts, live, music, podcasts, TV viewing, community posts and paid products as research targets.",
       "status": "in_progress",
-      "percent": 42,
+      "percent": 49,
       "evidence": [
         "ontology/youtube/channel-onboarding.json",
         "ontology/youtube/channel-onboarding.md",
         "specimens/youtube.json",
         "ontology/youtube/model.json",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/live-monetization-units-2026.json",
+        "ontology/youtube/live-monetization-units-2026.md",
+        "site/live-monetization-denominators.mjs",
+        "tests/live-monetization-denominators.test.mjs",
+        "site/app.js",
+        "ontology/youtube/revenue-pathways.json",
+        "ontology/youtube/eligibility-matrix.json"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/live-monetization-units-2026.json",
       "priority": "high",
       "phase": 1
     },
@@ -1240,13 +1247,20 @@
       "objective": "List paid live interactions, memberships, gifts and associated deductions as research questions.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and list paid live interactions, memberships, gifts and associated deductions as research questions.",
       "status": "in_progress",
-      "percent": 43,
+      "percent": 86,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/live-monetization-units-2026.json",
+        "ontology/youtube/live-monetization-units-2026.md",
+        "site/live-monetization-denominators.mjs",
+        "tests/live-monetization-denominators.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs",
+        "ontology/youtube/eligibility-matrix.json"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/live-monetization-units-2026.json",
       "priority": "standard",
       "phase": 1
     },
@@ -2969,7 +2983,7 @@
       "objective": "Plan tier, cancellation, churn, benefits and fulfillment measures.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and plan tier, cancellation, churn, benefits and fulfillment measures.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 89,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
@@ -2985,7 +2999,11 @@
         "ontology/youtube/checkout-refund-evidence.json",
         "ontology/youtube/checkout-refund-evidence.md",
         "site/checkout-refund-audit.mjs",
-        "tests/checkout-refund-audit.test.mjs"
+        "tests/checkout-refund-audit.test.mjs",
+        "ontology/youtube/live-monetization-units-2026.json",
+        "ontology/youtube/live-monetization-units-2026.md",
+        "site/live-monetization-denominators.mjs",
+        "tests/live-monetization-denominators.test.mjs"
       ],
       "artifact": "ontology/youtube/retention-posts-memberships.json",
       "priority": "standard",
@@ -5930,7 +5948,7 @@
       "objective": "Avoid assuming paid conversion from overall subscriber counts.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and avoid assuming paid conversion from overall subscriber counts.",
       "status": "in_progress",
-      "percent": 68,
+      "percent": 72,
       "evidence": [
         "ontology/youtube/revenue-pathways.json",
         "ontology/youtube/payment-gates.json",
@@ -5943,7 +5961,12 @@
         "ontology/youtube/vtuber-superchat-cohort-2025.json",
         "ontology/youtube/vtuber-superchat-cohort-2025.md",
         "site/vtuber-superchat-audit.mjs",
-        "tests/vtuber-superchat-audit.test.mjs"
+        "tests/vtuber-superchat-audit.test.mjs",
+        "ontology/youtube/live-monetization-units-2026.json",
+        "ontology/youtube/live-monetization-units-2026.md",
+        "site/live-monetization-denominators.mjs",
+        "tests/live-monetization-denominators.test.mjs",
+        "ontology/youtube/eligibility-matrix.json"
       ],
       "artifact": "ontology/youtube/patreon-earnings-timeframe-2026.json",
       "priority": "standard",

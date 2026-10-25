@@ -4,6 +4,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
+## Live Supers, paid memberships and Gems/Jewels rewards
+
+The [live fan-funding product matrix](live-monetization-units-2026.md), [source keyed definitions](live-monetization-units-2026.json) and [denominator calculator](../../site/live-monetization-denominators.mjs) distinguish Commerce Product Module's net 70% share from Virtual Items Rubies at USD 0.01 each, and document current eligible horizontal/vertical Gifts surfaces. No producer earnings or customer conversion outcomes are inferred.
+
 ## Creator cash-flow accounting and payment settlement
 
 The [monthly cashbook research protocol](monthly-creator-cash-flow-protocol.md), [machine field contract](monthly-creator-cash-flow-protocol.json) and [tested ledger engine](../../site/monthly-creator-cash-flow.mjs) reconcile standard AdSense for YouTube finalized credit, payment cutoff, issue and bank arrival with independent sponsorship/product receipts and actual labor, refunds and paid cash expenses. The model never guesses real creator earnings or wages.
