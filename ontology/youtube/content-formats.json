@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "creator_content_format_economics",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-25",
   "status": "sourced_format_and_feature_catalog_not_revenue_estimates",
   "formats": [
     {
@@ -361,5 +361,191 @@
     "Review owned rights and music clearance for every upload and clip.",
     "Do not assume all podcast, animated or repurposed media qualify for monetization.",
     "Current policy can change; keep observation date attached to rules."
+  ],
+  "surface_layers": [
+    {
+      "id": "watch_page",
+      "label": "Video watch page",
+      "kind": "playback_surface",
+      "format_ids": [
+        "regular-video",
+        "archived-live",
+        "premiere"
+      ],
+      "money_pathway_ids": [
+        "watch-page-ads",
+        "premium-revenue"
+      ],
+      "source_ids": [
+        "studio-analytics-help",
+        "revenue-shares"
+      ],
+      "boundary": "Watch-page playback and revenue-eligible ad events are different quantities; replay does not create a new creator.",
+      "observed_unique_people": null,
+      "observed_creator_median_income": null,
+      "measured_cross_surface_conversion": null,
+      "account_specific_product_eligibility_verified": false
+    },
+    {
+      "id": "shorts_feed",
+      "label": "Shorts feed",
+      "kind": "playback_surface",
+      "format_ids": [
+        "shorts"
+      ],
+      "money_pathway_ids": [
+        "shorts-ads"
+      ],
+      "source_ids": [
+        "shorts-policy",
+        "shorts-three-minutes"
+      ],
+      "boundary": "Raw Shorts play starts, eligible engaged views and watch-page ad views have distinct definitions.",
+      "observed_unique_people": null,
+      "observed_creator_median_income": null,
+      "measured_cross_surface_conversion": null,
+      "account_specific_product_eligibility_verified": false
+    },
+    {
+      "id": "live_event",
+      "label": "Live and Premiere interaction",
+      "kind": "live_and_chat",
+      "format_ids": [
+        "live-webcam-encoder",
+        "mobile-live",
+        "premiere"
+      ],
+      "money_pathway_ids": [
+        "super-chat",
+        "live-gifts"
+      ],
+      "source_ids": [
+        "live-general-help",
+        "virtual-items"
+      ],
+      "boundary": "Concurrent viewers are not paid interactions; Jewels purchased and Rubies earned are not interchangeable.",
+      "observed_unique_people": null,
+      "observed_creator_median_income": null,
+      "measured_cross_surface_conversion": null,
+      "account_specific_product_eligibility_verified": false
+    },
+    {
+      "id": "youtube_music",
+      "label": "Music discovery and YouTube Music",
+      "kind": "music_service_and_catalog",
+      "format_ids": [
+        "regular-video",
+        "shorts"
+      ],
+      "money_pathway_ids": [
+        "premium-revenue",
+        "watch-page-ads"
+      ],
+      "source_ids": [
+        "yt-music-charts-metric-rules-2026",
+        "music-content-id"
+      ],
+      "boundary": "Music charts, Content ID rights and music payouts have different units and permissions.",
+      "observed_unique_people": null,
+      "observed_creator_median_income": null,
+      "measured_cross_surface_conversion": null,
+      "account_specific_product_eligibility_verified": false
+    },
+    {
+      "id": "podcast_collection",
+      "label": "Podcast show and episodes",
+      "kind": "playlist_label",
+      "format_ids": [
+        "podcast",
+        "regular-video"
+      ],
+      "money_pathway_ids": [
+        "watch-page-ads",
+        "premium-revenue"
+      ],
+      "source_ids": [
+        "podcast-create-help",
+        "yt-podcast-distribution-help-2026"
+      ],
+      "boundary": "Podcast show playlist is a grouping of video episodes, not additional uploaded videos or unique viewers.",
+      "observed_unique_people": null,
+      "observed_creator_median_income": null,
+      "measured_cross_surface_conversion": null,
+      "account_specific_product_eligibility_verified": false
+    },
+    {
+      "id": "connected_tv",
+      "label": "TV and living-room viewing",
+      "kind": "device_context",
+      "format_ids": [
+        "regular-video",
+        "archived-live",
+        "podcast"
+      ],
+      "money_pathway_ids": [],
+      "source_ids": [
+        "nielsen-gauge-august-2026",
+        "youtube-2025-living-room-podcast-hours"
+      ],
+      "boundary": "TV is a device/viewing frame, not a separate native upload or standalone creator earnings rate.",
+      "observed_unique_people": null,
+      "observed_creator_median_income": null,
+      "measured_cross_surface_conversion": null,
+      "account_specific_product_eligibility_verified": false
+    },
+    {
+      "id": "community_posts",
+      "label": "Posts and community interactions",
+      "kind": "social_post_surface",
+      "format_ids": [
+        "community-post"
+      ],
+      "money_pathway_ids": [],
+      "source_ids": [
+        "posts-help",
+        "yt-posts-analytics-2026"
+      ],
+      "boundary": "Post displays and votes are neither video views nor deduplicated subscriber people.",
+      "observed_unique_people": null,
+      "observed_creator_median_income": null,
+      "measured_cross_surface_conversion": null,
+      "account_specific_product_eligibility_verified": false
+    },
+    {
+      "id": "earning_products",
+      "label": "Native products and external commerce",
+      "kind": "transaction_or_contract_layer",
+      "format_ids": [
+        "regular-video",
+        "shorts",
+        "live-webcam-encoder",
+        "podcast",
+        "community-post"
+      ],
+      "money_pathway_ids": [
+        "channel-memberships",
+        "shopping-own",
+        "shopping-affiliate",
+        "super-thanks",
+        "external-support"
+      ],
+      "source_ids": [
+        "earning-help",
+        "revenue-shares",
+        "shopping-affiliate"
+      ],
+      "boundary": "Payer transactions and creator net receipts are not views; module, rights and merchant eligibility differ.",
+      "observed_unique_people": null,
+      "observed_creator_median_income": null,
+      "measured_cross_surface_conversion": null,
+      "account_specific_product_eligibility_verified": false
+    }
+  ],
+  "surface_layer_method": "Functional delivery, program, device, social and transaction layers mapped to existing publication formats. Overlaps are intentional and cannot be summed as unique people, content or creator revenue.",
+  "surface_layer_cautions": [
+    "One uploaded video can appear in watch-page, TV, podcast and other contexts without becoming multiple video IDs.",
+    "A program playlist is not a new standalone video upload.",
+    "Paid transactions, watch time, video views, impressions and viewer populations use different denominators.",
+    "Eligibility varies by creator account, policy, rights, module, region, content and time; a money pathway is not guaranteed revenue."
   ]
 }

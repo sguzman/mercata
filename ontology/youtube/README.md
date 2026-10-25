@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [eight-layer functional YouTube surface study](content-formats.md), [machine feature inventory](content-formats.json), and [surface-to-metric audit](../../site/surface-layer-audit.mjs) distinguish watch-page, Shorts, livestream, Music, podcast, TV, Posts and paid products without double-counting videos or payers.
+
+
 The [six-path localization delivery choice table](multilingual-distribution.md) and [same-video versus separate-channel audit](../../site/multilingual-decision-audit.mjs) distinguish captions, translated metadata, manual and automatic dubbing, thumbnails, and viewer language preferences without claiming observed financial or audience gains.
 
 

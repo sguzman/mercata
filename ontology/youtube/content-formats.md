@@ -1,6 +1,6 @@
 # YouTube formats: distribution, revenue and sales links
 
-**Public policy snapshot: 2026-10-23.** This [machine catalog](content-formats.json) separates 8 publication or distribution formats. **No format has a measured average creator profit, success probability, startup cost or required work hours.**
+**Public policy snapshot: 2026-10-25.** This [machine catalog](content-formats.json) separates 8 publication or distribution formats. **No format has a measured average creator profit, success probability, startup cost or required work hours.**
 
 ## Ordinary watch-page video
 
@@ -127,3 +127,20 @@ For **podcasts**, [YouTube's model](https://support.google.com/youtube/answer/12
 ## What remains unknown
 
 All 8 format income medians, entry-cohort outcomes, labor-hour distributions, equipment costs, share of total viewers reaching a store or membership, and first-year survival rates are explicitly `null`. Those questions require representative samples or a separately authorized, measured experiment, not intuition or success stories.
+
+## Eight overlapping YouTube surface layers
+
+These are **surface classifications**, not eight disjoint audiences. The [machine source-linked map](content-formats.json) joins the existing publication-format inventory to playback, playlist, device, social and transaction surfaces.
+
+| Functional surface | Measurement boundary |
+| --- | --- |
+| Video watch page | Watch-page playback and revenue-eligible ad events are different quantities; replay does not create a new creator. |
+| Shorts feed | Raw Shorts play starts, eligible engaged views and watch-page ad views have distinct definitions. |
+| Live and Premiere interaction | Concurrent viewers are not paid interactions; Jewels purchased and Rubies earned are not interchangeable. |
+| Music discovery and YouTube Music | Music charts, Content ID rights and music payouts have different units and permissions. |
+| Podcast show and episodes | Podcast show playlist is a grouping of video episodes, not additional uploaded videos or unique viewers. |
+| TV and living-room viewing | TV is a device/viewing frame, not a separate native upload or standalone creator earnings rate. |
+| Posts and community interactions | Post displays and votes are neither video views nor deduplicated subscriber people. |
+| Native products and external commerce | Payer transactions and creator net receipts are not views; module, rights and merchant eligibility differ. |
+
+A single video may be played on a TV, appear on an ordinary watch page, and participate in a podcast playlist without becoming three creator publications. Memberships or gifts are independent transaction records, not additional video view events. The study therefore leaves unique people, profit and cross-surface conversion `null`. Public sources include [YouTube Studio](https://support.google.com/youtube/answer/12220281?hl=en), [Shorts policy](https://support.google.com/youtube/answer/12504220?hl=en), [podcast shows](https://support.google.com/youtube/answer/12751636?hl=en), [Posts](https://support.google.com/youtube/answer/9409631?hl=en), [music charts](https://support.google.com/youtube/answer/9014376?hl=en), [Nielsen TV measurement](https://www.nielsen.com/news-center/2026/tv-viewing-cools-off-in-nielsens-august-gauge-reports-as-sports-take-a-breather-and-school-resumes/) and [creator earning rules](https://support.google.com/youtube/answer/72902?hl=en).

@@ -4131,6 +4131,18 @@ function renderContentFormats(data,dossier) {
     grid.append(card);
   }
   details.append(grid);
+  const layerDetails=make('details','content-surface-layers');
+  layerDetails.append(make('summary','','Playback, TV, music, podcast, Posts and payment layers'));
+  layerDetails.append(make('p','measure-limit','Overlapping units; these are not separate audiences or creator profits.'));
+  const layerGrid=make('div','content-formats-grid');
+  for(const item of data.surface_layers||[]){
+    const card=make('article','content-surface-layer-card');
+    card.append(make('h5','',item.label));
+    card.append(make('p','',item.boundary));
+    card.append(audienceSources(item.source_ids,dossier));
+    layerGrid.append(card);
+  }
+  layerDetails.append(layerGrid);details.append(layerDetails);
   const link=make('a','inline-link','Read the format and link comparison ↗');
   link.href='./ontology/youtube/content-formats.md';link.target='_blank';link.rel='noopener noreferrer';
   details.append(link);

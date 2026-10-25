@@ -256,6 +256,7 @@ try{
     assert.equal(await page.locator('.creator-growth-stage').count(),6,'Missing audience lifecycle stages');
     assert.equal(await page.locator('.creator-growth-metric').count(),17,'Missing audience measurement glossary');
     assert.equal(await page.locator('.content-format-card').count(),8,'Missing format-by-format comparison');
+    assert.equal(await page.locator('.content-surface-layer-card').count(),8,'Missing functional product-surface crosswalk');
     const synthesis=page.locator('.evidence-synthesis');
     assert.equal(await synthesis.locator('.evidence-synthesis-card').count(),7,'Missing bounded review narrative');
     await synthesis.locator('summary').click();
