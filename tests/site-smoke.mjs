@@ -128,6 +128,7 @@ try{
       ['.air-revenue-concentration',5,'not global creator profit or zero earner prevalence'],
       ['.evergreen-search-study',5,'not absolute keyword search volume or creator earnings'],
       ['.air-country-cpm',10,'not creator RPM or resident income'],
+      ['.country-policy-crosswalk',3,'not verified account approval or creator income'],
       ['.content-id-appeals',5,'not creator payout or automatic copyright strikes'],
       ['.content-id-revenue',6,'held revenue is not creator bank cash'],
       ['.creator-processing-settlement',4,'not verified creator bank cash'],

@@ -16,6 +16,10 @@ The [December 2025/2026 Adobe Express respondent study](adobe-ai-production-surv
 
 The [61-completed-video first-person time log](photography-production-time-diary-2025.md), [machine record](photography-production-time-diary-2025.json) and [rounding/unit audit](../../site/photography-production-labor-audit.mjs) document one channel's mean 9.74 and median 7.37 hours of production per finished video. No creator earnings, abandoned-attempt hours, net wages or other-genre labor estimates were observed.
 
+## Country-specific program and payments eligibility crosswalk
+
+The [Mexico/U.S./U.K. country access and rights study](country-policy-and-payout-crosswalk-2026.md), [machine matrix](country-policy-and-payout-crosswalk-2026.json) and [eligibility checker](../../site/country-policy-crosswalk-audit.mjs) distinguish YPP availability lists, payment-address method lists, account-specific thresholds and per-video geographic rights. No creator was verified approved or observed earning.
+
 ## Content ID appeals and distinct takedown routes
 
 The [Content ID dispute and appeal timing study](content-id-appeal-routes-2026.md), [state matrix](content-id-appeal-routes-2026.json) and [route validator](../../site/content-id-appeal-audit.mjs) distinguish 30-day first disputes, 7-day appeals, narrow blocking-claim escalation and the separate copyright removal request. Neither a claim nor a pending appeal establishes a copyright strike, a revenue entitlement or legal fees.

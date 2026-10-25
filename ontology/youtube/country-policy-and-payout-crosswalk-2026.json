@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "region_specific_program_listings_vs_payment_and_content_rights",
+  "as_of": "2026-10-25",
+  "country_reference": "ontology/youtube/country-eligibility-payments.json",
+  "source_ids": [
+    "ypp-country",
+    "expanded-ypp-countries",
+    "adsense-methods",
+    "adsense-thresholds",
+    "music-content-id",
+    "child-features"
+  ],
+  "observations": [
+    {
+      "country_code": "MX",
+      "country": "Mexico",
+      "standard_ypp_geography_listed": true,
+      "expanded_ypp_geography_listed": true,
+      "payment_methods_by_address": {
+        "cheque": false,
+        "eft": true,
+        "wire": true,
+        "hyperwallet": false,
+        "source_ids": [
+          "adsense-methods"
+        ],
+        "meaning": "Listed availability for a payment address in this territory; actual AdSense for YouTube account options control"
+      },
+      "actual_account_reporting_currency": null,
+      "specific_feature_approved": null,
+      "creator_tax_and_fx_cost": null,
+      "per_video_content_id_territory_policy": null,
+      "creator_receipts": null,
+      "known_source_ids": [
+        "ypp-country",
+        "expanded-ypp-countries",
+        "adsense-methods",
+        "music-content-id",
+        "child-features"
+      ]
+    },
+    {
+      "country_code": "US",
+      "country": "United States",
+      "standard_ypp_geography_listed": true,
+      "expanded_ypp_geography_listed": true,
+      "payment_methods_by_address": {
+        "cheque": false,
+        "eft": true,
+        "wire": false,
+        "hyperwallet": true,
+        "source_ids": [
+          "adsense-methods"
+        ],
+        "meaning": "Listed availability for a payment address in this territory; actual AdSense for YouTube account options control"
+      },
+      "actual_account_reporting_currency": null,
+      "specific_feature_approved": null,
+      "creator_tax_and_fx_cost": null,
+      "per_video_content_id_territory_policy": null,
+      "creator_receipts": null,
+      "known_source_ids": [
+        "ypp-country",
+        "expanded-ypp-countries",
+        "adsense-methods",
+        "music-content-id",
+        "child-features"
+      ]
+    },
+    {
+      "country_code": "GB",
+      "country": "United Kingdom",
+      "standard_ypp_geography_listed": true,
+      "expanded_ypp_geography_listed": true,
+      "payment_methods_by_address": {
+        "cheque": false,
+        "eft": true,
+        "wire": true,
+        "hyperwallet": false,
+        "source_ids": [
+          "adsense-methods"
+        ],
+        "meaning": "Listed availability for a payment address in this territory; actual AdSense for YouTube account options control"
+      },
+      "actual_account_reporting_currency": null,
+      "specific_feature_approved": null,
+      "creator_tax_and_fx_cost": null,
+      "per_video_content_id_territory_policy": null,
+      "creator_receipts": null,
+      "known_source_ids": [
+        "ypp-country",
+        "expanded-ypp-countries",
+        "adsense-methods",
+        "music-content-id",
+        "child-features"
+      ]
+    }
+  ],
+  "currency_examples": [
+    {
+      "currency": "MXN",
+      "payout_minimum": 1200,
+      "payment_method_selection_minimum": 120,
+      "condition": "applies_only_if_account_itself_reports_in_MXN",
+      "source_ids": [
+        "adsense-thresholds"
+      ]
+    },
+    {
+      "currency": "USD",
+      "payout_minimum": 100,
+      "payment_method_selection_minimum": 10,
+      "condition": "applies_only_if_account_itself_reports_in_USD",
+      "source_ids": [
+        "adsense-thresholds"
+      ]
+    },
+    {
+      "currency": "GBP",
+      "payout_minimum": 60,
+      "payment_method_selection_minimum": 10,
+      "condition": "applies_only_if_account_itself_reports_in_GBP",
+      "source_ids": [
+        "adsense-thresholds"
+      ]
+    }
+  ],
+  "content_policy_axes": [
+    {
+      "id": "content_id",
+      "scope": "rightsholder_policy_on_specific_video_and_territory",
+      "can_vary_by_territory": true,
+      "per_country_action_from_public_list": null,
+      "source_ids": [
+        "music-content-id"
+      ]
+    },
+    {
+      "id": "made_for_kids",
+      "scope": "video_classification_and_local_legal_context",
+      "restricted_interactive_features": true,
+      "country_specific_ad_rpm_penalty": null,
+      "source_ids": [
+        "child-features"
+      ]
+    }
+  ],
+  "privacy_and_inference": [
+    "Program sign-up listed in a territory does not guarantee YPP approval or a product-specific grant.",
+    "Payment address method options are not the real bank/AdSense account's verified available methods.",
+    "Account reporting currency cannot be derived from residence, payment address, destination bank or viewer geography.",
+    "Documented content rights may block one video in one territory and monetize the same video in another, but no per-video territory rights policy has been observed here.",
+    "Made-for-kids classification changes product features; a general legal statement is not an exact country-specific advertising RPM loss.",
+    "Country-level policy differences cannot be converted into creator earnings, payment success, audience size, legal compliance advice or revenue rate.",
+    "The three-country reference is illustrative, not an exhaustive country list or approval determination."
+  ],
+  "real_account_data_accessed": false,
+  "unmeasured": {
+    "individual_creator_eligibility": null,
+    "feature_approval": null,
+    "claimed_video_rights_by_country": null,
+    "specific_tax_rate": null,
+    "settlement_fx_fee": null,
+    "median_creator_income": null,
+    "actual_payout": null
+  }
+}
