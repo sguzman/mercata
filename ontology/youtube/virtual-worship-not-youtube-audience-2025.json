@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "external_us_online_or_tv_religious_worship_survey_not_youtube",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "pew-religious-landscape-virtual-worship-2025",
+    "pew-religious-landscape-method-2025"
+  ],
+  "status": "reported_general_population_survey_no_youtube_specific_estimate",
+  "survey": {
+    "population": "US_adults_age_18_plus",
+    "respondents": 36908,
+    "fieldwork_from": "2023-07-17",
+    "fieldwork_to": "2024-03-04",
+    "survey_method": "stratified_address_based_online_paper_or_phone",
+    "published_at": "2025-02-26",
+    "national_sampling_margin_of_error_percent_points": 0.8,
+    "question": "reported_frequency_of_watching_religious_services_online_or_on_television",
+    "explicitly_measures_youtube": false,
+    "explicitly_measures_a_specific_digital_platform": false,
+    "monthly_or_more_pct": 23,
+    "weekly_or_more_pct": 16,
+    "once_or_twice_a_month_pct": 7,
+    "a_few_times_per_year_pct": 11,
+    "seldom_or_never_pct": 65,
+    "categories_not_exhaustive_due_to_rounding_or_missing": true,
+    "measurement_kind": "self_reported_frequency_broad_online_or_tv_channel"
+  },
+  "non_equivalent_observations": [
+    {
+      "id": "youtube_ever_use_2026",
+      "source_id": "pew-us-adults-2026",
+      "scope": "distinct January–June 2026 survey and ever-used-YouTube question",
+      "cross_tab_religion_and_youtube": null
+    },
+    {
+      "id": "online_or_tv_religious_services_2023_24",
+      "source_id": "pew-religious-landscape-virtual-worship-2025",
+      "scope": "2023–24 broad online OR television religious service question, no platform",
+      "youtube_source_share": null
+    }
+  ],
+  "no_religious_profile_collection": true,
+  "forbidden_inferences": [
+    "23% monthly online/TV religious services is not 23% watching on YouTube.",
+    "Viewing services can occur on linear television, congregational sites, broadcast apps, other web platforms or YouTube; no service-specific denominator is supplied.",
+    "The 2023–24 worship survey is not a joint sample with Pew's January–June 2026 general YouTube ever-use estimate; multiplication or subtraction across the two does not yield a valid cross-tab.",
+    "An individual's religion, community membership or other sensitive traits cannot be inferred from video metadata, comments or content viewed.",
+    "2025 published survey results describe the 2023–24 fieldwork period, not 2025 or 2026 platform traffic.",
+    "Comparison with historical Pew religious attendance surveys requires accounting for survey mode and question wording changes."
+  ],
+  "unknown": {
+    "people_watching_religious_services_on_youtube": null,
+    "youtube_unique_religious_content_viewers": null,
+    "viewers_affiliation_distribution": null,
+    "by_religion_youtube_platform_usage": null,
+    "religious_content_creator_population": null,
+    "religious_video_revenue": null,
+    "channel_religious_affiliation_by_viewer": null
+  }
+}

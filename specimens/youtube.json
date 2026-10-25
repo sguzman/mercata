@@ -3617,6 +3617,28 @@
       "evidence_class": "official_public_comment_reply_pagination_api",
       "license": "Public API documentation linked; independently paraphrased fields and access limitations",
       "notes": "Separate authorized/unrestricted public reply enumeration via parentId pagination, max 100/page, not native commenter spoken language or unique user population."
+    },
+    {
+      "id": "pew-religious-landscape-virtual-worship-2025",
+      "url": "https://www.pewresearch.org/religion/2025/02/26/religious-attendance-and-congregational-involvement/",
+      "publisher": "Pew Research Center",
+      "title": "Religious attendance and congregational involvement",
+      "published_at": "2025-02-26",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "representative_national_religious_services_online_or_tv_survey",
+      "license": "Original survey linked, concise independently authored quantitative observations; no personal survey data copied",
+      "notes": "2023–24 nationally representative U.S. Religious Landscape Study broad online/TV service watching, not YouTube-specific."
+    },
+    {
+      "id": "pew-religious-landscape-method-2025",
+      "url": "https://www.pewresearch.org/2025/02/26/religious-landscape-study-methodology/",
+      "publisher": "Pew Research Center",
+      "title": "Methodology for the 2023–24 Religious Landscape Study",
+      "published_at": "2025-02-26",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "survey_methodology_sampling_frame",
+      "license": "Source methodology linked and summarized",
+      "notes": "National address-based sample n=36,908, English and Spanish, fielded July 17 2023–March 4 2024; whole-sample sampling margin ±0.8 pp."
     }
   ],
   "claims": [
@@ -7993,6 +8015,17 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "No actual comments or persons were collected. Moderator deletions, disabled comments, code-switching, metadata gaps and sample choice prevent estimating total YouTube users by language or sensitive user identities."
+    },
+    {
+      "id": "pew-virtual-worship-general-not-youtube",
+      "text": "Pew's representative 2023–24 U.S. Religious Landscape Study (n=36,908) reports 23% of adults watched religious services online or on TV at least monthly (16% at least weekly). Its question did not distinguish YouTube from television or other digital sources, so no YouTube-specific religious audience share follows.",
+      "source_ids": [
+        "pew-religious-landscape-virtual-worship-2025",
+        "pew-religious-landscape-method-2025"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "A self-reported broad-media survey cannot identify individual viewer religions, YouTube usage, specific channel membership, monetization or 2026 platform engagement."
     }
   ],
   "observations": [],
