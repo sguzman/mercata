@@ -93,7 +93,7 @@
         "youtube/identity/define-a-comparison-set-of-video-platforms"
       ],
       "phase": 1,
-      "progress_percent": 71
+      "progress_percent": 72
     },
     {
       "id": "access",
@@ -566,7 +566,7 @@
         "youtube/content-formats/measure-creation-cost-by-format"
       ],
       "phase": 2,
-      "progress_percent": 76
+      "progress_percent": 77
     },
     {
       "id": "social-discovery",
@@ -812,7 +812,7 @@
       "objective": "Inventory watch pages, Shorts, live, music, podcasts, TV viewing, community posts and paid products as research targets.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and inventory watch pages, Shorts, live, music, podcasts, TV viewing, community posts and paid products as research targets.",
       "status": "in_progress",
-      "percent": 49,
+      "percent": 57,
       "evidence": [
         "ontology/youtube/channel-onboarding.json",
         "ontology/youtube/channel-onboarding.md",
@@ -826,7 +826,11 @@
         "tests/live-monetization-denominators.test.mjs",
         "site/app.js",
         "ontology/youtube/revenue-pathways.json",
-        "ontology/youtube/eligibility-matrix.json"
+        "ontology/youtube/eligibility-matrix.json",
+        "ontology/youtube/podcast-viewing-frames-2026.json",
+        "ontology/youtube/podcast-viewing-frames-2026.md",
+        "site/podcast-viewing-audit.mjs",
+        "tests/podcast-viewing-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/live-monetization-units-2026.json",
       "priority": "high",
@@ -4356,7 +4360,7 @@
       "objective": "Prepare an observable device/format comparison.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and prepare an observable device/format comparison.",
       "status": "in_progress",
-      "percent": 84,
+      "percent": 88,
       "evidence": [
         "ontology/youtube/screen-viewing-uk-2025.json",
         "ontology/youtube/screen-viewing-uk-2025.md",
@@ -4371,7 +4375,11 @@
         "ontology/youtube/nielsen-us-tv-youtube-share-2026.json",
         "ontology/youtube/nielsen-us-tv-youtube-share-2026.md",
         "site/nielsen-tv-share-audit.mjs",
-        "tests/nielsen-tv-share-audit.test.mjs"
+        "tests/nielsen-tv-share-audit.test.mjs",
+        "ontology/youtube/podcast-viewing-frames-2026.json",
+        "ontology/youtube/podcast-viewing-frames-2026.md",
+        "site/podcast-viewing-audit.mjs",
+        "tests/podcast-viewing-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/screen-viewing-uk-2025.json",
       "priority": "standard",
@@ -4625,7 +4633,7 @@
       "objective": "Record definitions of device ownership and actual viewing.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and record definitions of device ownership and actual viewing.",
       "status": "in_progress",
-      "percent": 76,
+      "percent": 79,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
@@ -4637,7 +4645,11 @@
         "site/nielsen-tv-share-audit.mjs",
         "tests/nielsen-tv-share-audit.test.mjs",
         "site/app.js",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/podcast-viewing-frames-2026.json",
+        "ontology/youtube/podcast-viewing-frames-2026.md",
+        "site/podcast-viewing-audit.mjs",
+        "tests/podcast-viewing-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/nielsen-us-tv-youtube-share-2026.json",
       "priority": "high",
@@ -5616,15 +5628,21 @@
       "objective": "Distinguish audio-first viewing from foreground video watch time.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and distinguish audio-first viewing from foreground video watch time.",
       "status": "in_progress",
-      "percent": 61,
+      "percent": 81,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
         "ontology/youtube/content-formats.json",
         "ontology/youtube/content-formats.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/podcast-viewing-frames-2026.json",
+        "ontology/youtube/podcast-viewing-frames-2026.md",
+        "site/podcast-viewing-audit.mjs",
+        "tests/podcast-viewing-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/podcast-viewing-frames-2026.json",
       "priority": "standard",
       "phase": 2
     },

@@ -3518,6 +3518,50 @@
       "retrieved_at": "2026-10-25",
       "evidence_class": "official_us_household_tv_time_tracking",
       "license": "Public source linked; short independently authored original facts and comparisons, no figure images copied."
+    },
+    {
+      "id": "youtube-2025-podcast-1b-viewers",
+      "url": "https://blog.youtube/news-and-events/1-billion-monthly-podcast-users/",
+      "publisher": "YouTube Official Blog",
+      "title": "Drop the mic: Celebrating 1 billion monthly podcast users on YouTube",
+      "published_at": "2025-02-26",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_platform_podcast_reach_announcement",
+      "license": "Linked platform statement paraphrased; no artwork reproduced",
+      "notes": "Over 1 billion global monthly active podcast viewers as of January 2025, not US TV unique people or paying subscribers."
+    },
+    {
+      "id": "youtube-2025-living-room-podcast-hours",
+      "url": "https://blog.youtube/news-and-events/podcasts-living-room-in-2025/",
+      "publisher": "YouTube Official Blog",
+      "title": "How podcasts took over the living room in 2025",
+      "published_at": "2025-12-18",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_platform_living_room_watch_time_aggregate",
+      "license": "First-party public numbers paraphrased",
+      "notes": "More than 700 million podcast viewing hours on living-room devices October 2025, versus about 400 million in October 2024. Device hours not unique persons or per-viewer minutes."
+    },
+    {
+      "id": "youtube-premium-podcast-2026-hours",
+      "url": "https://blog.youtube/news-and-events/new-youtube-premium-features-podcast-fans/",
+      "publisher": "YouTube Official Blog",
+      "title": "New YouTube Premium features podcast fans will love",
+      "published_at": "2026-05-28",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_paid_product_usage_aggregate",
+      "license": "Platform public aggregate paraphrased",
+      "notes": "Premium users watched more than 800 million podcast hours in April 2026, not a subset of October 2025 living-room viewing or a creator royalty report."
+    },
+    {
+      "id": "edison-podcast-consumer-2026-video-audio",
+      "url": "https://www.edisonresearch.com/the-podcast-consumer-2026/",
+      "publisher": "Edison Research at SSRS",
+      "title": "The Podcast Consumer 2026",
+      "published_at": "2026-06-04",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "publisher_podcast_metric_selected_us_weekly_consumer_survey",
+      "license": "Short public aggregate facts independently described, no charts or respondent-level data copied",
+      "notes": "Q3 2025 podcast metrics: 82% of US weekly podcast consumers watched video and 78% listened to audio-only. Nonexclusive formats, not YouTube-only or global use."
     }
   ],
   "claims": [
@@ -7737,6 +7781,28 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Seasonality, World Cup programming and school calendar affect the TV denominator; no cross-device causal comparison or viewership panel across individual screens is supplied."
+    },
+    {
+      "id": "youtube-2025-global-podcast-1b-viewers-living-room-hours",
+      "text": "YouTube stated it had over one billion monthly active podcast viewers as of January 2025 and more than 700 million hours of podcast viewing on living-room devices in October 2025, compared with about 400 million in October 2024. Monthly people and TV watch hours are distinct units.",
+      "source_ids": [
+        "youtube-2025-podcast-1b-viewers",
+        "youtube-2025-living-room-podcast-hours"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "First-party platform press figures; no public cross-device deduplication method or precise session minutes per person, creator revenue or comparable universal viewer census."
+    },
+    {
+      "id": "youtube-premium-podcast-hours-and-edison-2026-format-behavior",
+      "text": "YouTube reported over 800 million podcast viewing hours among Premium users in April 2026. Edison independently reported that in Q3 2025, 82% of U.S. weekly podcast consumers watched video podcasts and 78% listened to audio-only podcasts, overlapping behaviors rather than exclusive population groups.",
+      "source_ids": [
+        "youtube-premium-podcast-2026-hours",
+        "edison-podcast-consumer-2026-video-audio"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Premium paid-user product watch hours and Edison US weekly survey respondents use different frames and cannot be added to October living-room watch hours or used to estimate creator income."
     }
   ],
   "observations": [],

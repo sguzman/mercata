@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [podcast viewing versus listening study](ontology/youtube/podcast-viewing-frames-2026.md) separates YouTube global active podcast viewers, living-room watch hours, Premium-only hours and Edison's US weekly video/audio behavior survey; none becomes a synthetic person count or creator payout.
+
+
 The [Nielsen May/July/August 2026 TV-device viewing study](ontology/youtube/nielsen-us-tv-youtube-share-2026.md) records official U.S. television watch-time shares in source-defined age 2+ denominators, without mistaking television viewing for global unique people, phone use or creator income.
 
 

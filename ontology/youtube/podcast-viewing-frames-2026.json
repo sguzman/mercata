@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "podcast_viewer_usage_vs_tv_watch_hours_vs_paid_product_and_survey",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "youtube-2025-podcast-1b-viewers",
+    "youtube-2025-living-room-podcast-hours",
+    "youtube-premium-podcast-2026-hours",
+    "edison-podcast-consumer-2026-video-audio"
+  ],
+  "observations": [
+    {
+      "id": "jan2025_global_podcast_viewers",
+      "source_id": "youtube-2025-podcast-1b-viewers",
+      "period": "2025-01",
+      "value": 1000000000,
+      "operator": "strict_greater_than",
+      "unit": "monthly_active_podcast_viewers",
+      "population": "YouTube platform global podcast content users",
+      "device": "all_reported_platform_devices",
+      "nonunique_view_events": false
+    },
+    {
+      "id": "oct2024_living_room_hours",
+      "source_id": "youtube-2025-living-room-podcast-hours",
+      "period": "2024-10",
+      "value": 400000000,
+      "operator": "reported_approximate",
+      "unit": "podcast_watch_hours",
+      "population": "YouTube podcast content on living_room_devices",
+      "device": "living_room_devices",
+      "nonunique_view_events": null
+    },
+    {
+      "id": "oct2025_living_room_hours",
+      "source_id": "youtube-2025-living-room-podcast-hours",
+      "period": "2025-10",
+      "value": 700000000,
+      "operator": "strict_greater_than",
+      "unit": "podcast_watch_hours",
+      "population": "YouTube podcast content on living_room_devices",
+      "device": "living_room_devices",
+      "nonunique_view_events": null
+    },
+    {
+      "id": "apr2026_premium_podcast_hours",
+      "source_id": "youtube-premium-podcast-2026-hours",
+      "period": "2026-04",
+      "value": 800000000,
+      "operator": "strict_greater_than",
+      "unit": "podcast_watch_hours",
+      "population": "YouTube Premium subscribers podcast viewing across eligible_devices",
+      "device": "mixed_devices",
+      "nonunique_view_events": null
+    },
+    {
+      "id": "q3_2025_weekly_video_audio_format",
+      "source_id": "edison-podcast-consumer-2026-video-audio",
+      "period": "2025-Q3",
+      "value": null,
+      "operator": "survey_percentages",
+      "unit": "percent_of_us_weekly_podcast_consumers",
+      "population": "Edison US weekly podcast consumers (not just YouTube)",
+      "device": "multi_device_self_reported",
+      "watched_video_percent": 82,
+      "listened_audio_only_percent": 78,
+      "format_usage_categories_overlap": true
+    }
+  ],
+  "valid_comparison": [
+    {
+      "a": "oct2024_living_room_hours",
+      "b": "oct2025_living_room_hours",
+      "status": "compatible_device_and_calendar_month_but_bounded_estimates",
+      "exact_growth_rate": null
+    }
+  ],
+  "excluded": [
+    "One billion monthly active podcast viewers (platform global Jan 2025) is not U.S. weekly podcast consumer count, number of paying subscribers or screen watch hours.",
+    "The greater-than-700-million October 2025 living-room hours and approximately 400-million October 2024 living-room hours are not exact comparable denominators from which a precise growth rate may be claimed.",
+    "April 2026 Premium podcast watch hours use a paid-user all-device frame; do not add them to or compare as a trend against October living-room watch hours.",
+    "Edison percentages measure US weekly podcast consumers across providers, not YouTube customers or independent survey draws of global platform users.",
+    "82% watching video and 78% listening to audio-only can overlap and must not be summed or treated as complementary shares.",
+    "TV watch hours, audio listening, total unique people, impressions, advertisements and creator payouts cannot be inferred from one another.",
+    "The presence of native podcast charts or Premium benefits does not establish median creator income, net profit or expected listening retention."
+  ],
+  "unmeasured": {
+    "median_per_person_podcast_minutes": null,
+    "global_unique_podcast_consumers_per_platform": null,
+    "creator_podcast_net_payouts": null,
+    "video_only_podcast_people": null,
+    "audio_only_youtube_podcast_plays": null,
+    "share_of_podcasts_watched_on_mobile": null,
+    "unique_premium_podcast_viewers": null
+  }
+}
