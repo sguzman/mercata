@@ -184,7 +184,10 @@ try{
       ['.creator-fraud-security',5,'no verified sampled incident rates']
     ]){
       const section=page.locator(selector);
-      assert.equal(await section.locator('.ownership-card').count(),cards,'Missing research cards in '+selector);
+      const researchCards=selector==='.creator-entry-gates'
+        ?section.locator(':scope > details > .ownership-grid > .ownership-card')
+        :section.locator('.ownership-card');
+      assert.equal(await researchCards.count(),cards,'Missing research cards in '+selector);
       await section.locator('summary').click();
       assert((await section.textContent()).includes(phrase),'Missing uncertainty boundary in '+selector);
     }
