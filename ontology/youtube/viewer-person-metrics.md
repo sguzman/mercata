@@ -31,3 +31,13 @@ YouTube can include signed-out viewing in its **owner-facing modeled unique view
 Neither the total number of channels, the independent channel owners, full-platform unique viewers, registered-user population, signed-out viewer share, nor cross-channel unique-person overlap is measured here. Every one of those fields is `null` in the machine record.
 
 See [audience-overlap study](audience-overlap.md) for the separate problem of double counting people across niches and [metric history](view-definition-break.md) for YouTube's 2026 view-count revision.
+
+## Logged-in viewing is not a count of signed-out people (October 25, 2026)
+
+YouTube's [Analytics metric specification](https://developers.google.com/youtube/analytics/metrics) defines `viewerPercentage` as the **percentage of viewers logged in when watching the video or playlist**. This is a scope-specific, authorized report variable. It is **not** a public channel attribute, universal percentage of people registered with Google, or a deduplicated global login-state sample. The API definition alone does not provide an exact count of unique people watching signed out.
+
+The [Studio unique-viewer guidance](https://support.google.com/youtube/answer/7577916?hl=en) separately describes an owner-only modeled estimate of distinct viewers that can account for signed-in and signed-out activity. A video has playback starts and may have several people co-watching, while a **monthly audience** is a rolling 28-day channel estimate. None of those is interchangeable with API `viewerPercentage`, public subscriptions or [direct/unknown traffic](https://support.google.com/youtube/answer/9314355?hl=en).
+
+A hypothetical report of 80% logged-in viewing **does not** establish that 20% of unique global YouTube viewers are unregistered, that 20% of one channel's fans are unsubscribed, or that 20% of the audience comprises new people. That inference would require a specifically authorized, properly defined deduplicated and representative population frame, not the reported metric.
+
+The updated [machine observability contract](viewer-person-metrics.json) and [regression validator](../../site/viewer-login-audit.mjs) record these non-equivalences. **No actual owner API row, unregistered viewer count, platform registration population or conversion outcome was observed.**

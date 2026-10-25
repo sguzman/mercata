@@ -1390,7 +1390,9 @@ function renderViewerPersonMetrics(data,dossier){
    grid.append(card);
  }
  details.append(grid);
- details.append(make('p','measure-limit','Monthly audience = rolling 28-day channel estimate. Unique viewers = owner-scoped modeled people for selected periods up to 90 days. Neither is a published worldwide person census.'));
+ details.append(make('p','measure-limit','Monthly audience = rolling 28-day channel estimate. Unique viewers = owner-scoped modeled people for selected periods up to 90 days. Neither is a published worldwide person census.'))
+ if(data.login_state_observability){details.append(make('p','measure-limit','The API viewerPercentage refers to login status while watching, not a distinct count of signed-out people, unique world users, or customer accounts. No owner report was obtained.'));}
+;
  details.append(make('p','measure-limit','Global unique people, nonregistered usage share, independent channel owners and cross-channel unique viewer overlap: unknown.'));
  const link=make('a','inline-link','Read source-backed units, access rules and remaining census gaps ↗');
  link.href='./ontology/youtube/viewer-person-metrics.md';link.target='_blank';link.rel='noopener noreferrer';

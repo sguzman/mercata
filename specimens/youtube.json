@@ -8576,6 +8576,18 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Living product documentation, no owner report collected. Studio group descriptions and API codes need compatible source versioning; no public creator-level viewing, income, audience identity or referral conversion measurements."
+    },
+    {
+      "id": "youtube-logged-in-viewerpercentage-vs-nonregistered-people-2026",
+      "text": "The YouTube Analytics API's `viewerPercentage` denotes the percentage of viewers logged in when watching a scoped video or playlist; owner-modeled unique viewers may include signed-out viewing, while public channel views, direct/unknown referrals and subscribers do not provide deduplicated nonregistered human counts.",
+      "source_ids": [
+        "api-metrics",
+        "yt-unique-viewer-estimates-2026",
+        "analytics-audience"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "No owner-level viewerPercentage observations, counts of unregistered people, country shares or general platform person census. Do not turn a scoped percentage into a population count."
     }
   ],
   "observations": [],

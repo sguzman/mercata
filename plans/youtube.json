@@ -456,7 +456,7 @@
         "youtube/audience-scale/create-a-multi-year-audience-source-comparison"
       ],
       "phase": 2,
-      "progress_percent": 75
+      "progress_percent": 76
     },
     {
       "id": "audience-demography",
@@ -4810,14 +4810,16 @@
       "objective": "Account for missing login-based measurements.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and account for missing login-based measurements.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 81,
       "evidence": [
         "ontology/youtube/viewer-person-metrics.json",
         "ontology/youtube/viewer-person-metrics.md",
         "specimens/youtube.json",
         "site/app.js",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "site/viewer-login-audit.mjs",
+        "tests/viewer-login-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/viewer-person-metrics.json",
       "priority": "high",

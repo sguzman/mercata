@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "viewer_person_account_and_activity_measurement",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-25",
   "status": "official_metric_definitions_verified_no_platform_person_census",
   "measurement_axes": [
     "unit",
@@ -181,5 +181,85 @@
     "duplicate_channels_per_owner": null,
     "cross_channel_person_overlap": null,
     "unique_topic_audiences": null
+  },
+  "login_state_observability": {
+    "as_of": "2026-10-25",
+    "source_ids": [
+      "api-metrics",
+      "analytics-audience",
+      "yt-unique-viewer-estimates-2026",
+      "api-channels",
+      "yt-reach-source-types-2026"
+    ],
+    "scope": "owner_authorized_video_or_playlist_analytics_not_global_people",
+    "official_login_metric": {
+      "id": "viewerPercentage",
+      "source_id": "api-metrics",
+      "official_meaning": "Percentage of viewers logged in when watching a video or playlist under the permitted report's definitions",
+      "access": "authorized_youtube_analytics_report",
+      "unit": "percentage_in_source_report",
+      "observed_value": null,
+      "not_a_public_channel_metric": true,
+      "not_verified_unique_person_share": true,
+      "not_global_login_rate": true
+    },
+    "official_modeled_unique_people": {
+      "id": "unique_viewers",
+      "source_id": "yt-unique-viewer-estimates-2026",
+      "scope": "owner_video_or_channel",
+      "can_include_signed_out": true,
+      "source_measurement": "modeled_deduplicated_people_from_view_activity",
+      "observed_value": null,
+      "not_derived_from_viewerPercentage": true
+    },
+    "contrasted_counts": [
+      {
+        "id": "public_view_count",
+        "unit": "view_events",
+        "source_id": "api-channels",
+        "supports_deduplicated_signed_out_person_count": false
+      },
+      {
+        "id": "direct_or_unknown_referrals",
+        "unit": "referral_activity_events",
+        "source_id": "yt-reach-source-types-2026",
+        "supports_deduplicated_signed_out_person_count": false
+      },
+      {
+        "id": "monthly_audience",
+        "unit": "model_estimate_rolling_28_day_channel_viewers",
+        "source_id": "analytics-audience",
+        "supports_deduplicated_signed_out_person_count": false
+      },
+      {
+        "id": "ad_reach",
+        "unit": "estimated_addressable_ad_audience",
+        "source_id": "analytics-audience",
+        "supports_deduplicated_signed_out_person_count": false
+      }
+    ],
+    "required_report_context": [
+      "owner_authorization",
+      "video_or_playlist_scope",
+      "start_date",
+      "end_date",
+      "current_metric_definition",
+      "geographic_filter_or_none",
+      "content_format_or_none",
+      "data_availability_and_privacy_limitations"
+    ],
+    "incompatible_substitutions": [
+      "Do not call the complement of viewerPercentage a measured count or share of unique unregistered human users worldwide.",
+      "Do not treat direct or unknown traffic as entirely signed-out traffic.",
+      "Do not equate signed-out watch events with new viewers or potential customer records.",
+      "Do not sum owner channel unique viewers to obtain world-wide deduplicated users.",
+      "Do not treat logged-in viewer percentage as platform user registration prevalence.",
+      "Do not combine subscriber account counts with co-viewed or playback-start counts as one population."
+    ],
+    "collected_owner_rows": [],
+    "global_unique_signed_out_people": null,
+    "creator_channel_signed_out_unique_people": null,
+    "all_global_viewer_login_fraction": null,
+    "logged_out_conversion_to_customer": null
   }
 }
