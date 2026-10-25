@@ -3122,6 +3122,28 @@
       "evidence_class": "published_empirical_livestream_concurrency_sample",
       "license": "Author dataset and abstract linked; brief independently authored aggregate observations, no raw viewer records copied",
       "notes": "NOMS 2026 study, May–June 2024 YouTube Researcher Program 12,156 streams, over 507k five-minute concurrency observations; companion public dataset at github.com/ghalandar/YTLive; not unique viewers or creator revenue."
+    },
+    {
+      "id": "yt-shopping-2025-transactions-and-survey",
+      "url": "https://blog.youtube/culture-and-trends/tr25-youtube-shopping-report/",
+      "publisher": "YouTube Official Blog",
+      "title": "YouTube Shopping: The Evolving World of Shopping on YouTube",
+      "published_at": "2025-10-16",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "first_party_selected_transaction_products_and_survey",
+      "license": "Linked official source; specific brief quantitative results independently described; no source images copied",
+      "notes": "Top 5000 purchased products H1 2025, top 1000 transaction-ranked tagged videos in a 60-day 2025 window, separate April 2025 n=500 US Gen Z 14–24 survey with 61% self-reported YouTube brand discovery."
+    },
+    {
+      "id": "google-merchant-affiliate-analytics-2026",
+      "url": "https://support.google.com/merchants/answer/14947975?hl=en",
+      "publisher": "Google Merchant Center Help",
+      "title": "About analytics in the YouTube Shopping affiliate program",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_merchant_private_metrics_and_privacy_policy",
+      "license": "Official documentation linked; only independently authored short metric definitions",
+      "notes": "Owner Merchant Center analytics: gross/net sales, commissions, clicks, tagged-video views, tag impressions, orders including pending approvals and privacy-based suppression."
     }
   ],
   "claims": [
@@ -6753,6 +6775,26 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Limited May–June 2024 selection, uncontrolled stream category, channel size and geographic differences; no cause or financial benefit can be inferred."
+    },
+    {
+      "id": "yt-shopping-2025-samples-not-purchase-denominators",
+      "text": "YouTube's October 2025 shopping research selected 5,000 top-purchased products in H1 2025 and 1,000 transaction-ranked tagged videos from another 60-day 2025 window; a separate April 2025 U.S. Gen Z survey of 500 people recorded 61% agreeing YouTube helped discover unfamiliar brands/products. None supplies a universal buyer conversion rate.",
+      "source_ids": [
+        "yt-shopping-2025-transactions-and-survey"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Ranked company-selected products/videos are not totals of purchases or buyers; survey reports discovery opinions among online Gen Z ages 14–24, not tracked sales."
+    },
+    {
+      "id": "google-merchant-affiliate-sales-metric-definitions",
+      "text": "Google Merchant Center YouTube affiliate reports distinguish merchant-tag clicks, order events, gross and net sales, and commissions; several include pending transactions and hybrid fixed fees. Merchant analytics are restricted account data rather than public creator profit statistics.",
+      "source_ids": [
+        "google-merchant-affiliate-analytics-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "No merchant account or transaction data accessed; privacy thresholds hide small groups and prohibit re-identification, dataset joins and sensitive inference."
     }
   ],
   "observations": [],

@@ -40,6 +40,10 @@ The [related-video funnel study](shorts-related-video-funnel.md), [machine measu
 
 The [Oxford Economics creator, business and user survey frame](oxford-creator-impact-2026.md), [machine response counts](oxford-creator-impact-2026.json) and [survey comparison audit](../../site/oxford-creator-impact-audit.mjs) preserve the January–March 2026 country sample counts. YouTube recruited the creator respondents; EU27 overlaps France and Germany. The estimated 2024 and 2025 U.S. GDP contributions and supported full-time-equivalent jobs are **not** creator income, headcount or measured typical work hours. The different annual lower bounds are insufficient to compute an actual year-over-year growth rate. Zero-earner rates and representative creator income remain unknown.
 
+## YouTube Shopping: discovery versus merchant orders
+
+The [official commerce evidence crosswalk](shopping-funnel-evidence-2025.md), [machine frames](shopping-funnel-evidence-2025.json) and [metric auditor](../../site/shopping-funnel-audit.mjs) distinguish ranked products/videos, the US online Gen Z discovery survey and private Merchant Center order/commission metrics, including pending transactions. None establishes public buyer conversion or net creator profit.
+
 ## YTLive livestream concurrency and duration
 
 The [YTLive 2024 attendance sample](ytlive-attendance-observations-2026.md), [machine cohort](ytlive-attendance-observations-2026.json) and [unit validator](../../site/ytlive-attendance-audit.mjs) register over 507,000 five-minute measurements from 12,156 selected live streams, not unique people, verified viewers completing a video, payouts or a causal recommended publication time.

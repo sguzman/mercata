@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [YouTube Shopping conversion evidence crosswalk](ontology/youtube/shopping-funnel-evidence-2025.md) records transaction-ranked products, a dated Gen Z brand-discovery survey, and authorized merchant analytics metrics without inventing completed sales, creator payouts, or buyer conversion rates.
+
+
 The [YTLive 2024 empirical attendance sample](ontology/youtube/ytlive-attendance-observations-2026.md) documents five-minute concurrency measurements across 12,156 selected streams and the distinction between simultaneous viewers, unique people and creator income.
 
 

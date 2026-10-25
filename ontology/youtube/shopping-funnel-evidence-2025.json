@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "shopping_transaction_selection_vs_discovery_survey_and_merchant_outcomes",
+  "as_of": "2026-10-24",
+  "source_ids": [
+    "yt-shopping-2025-transactions-and-survey",
+    "google-merchant-affiliate-analytics-2026"
+  ],
+  "frames": [
+    {
+      "id": "company_selected_transaction_top_items",
+      "source_id": "yt-shopping-2025-transactions-and-survey",
+      "population": "top_5000_ranked_purchased_tagged_products_first_half_2025",
+      "records_selected": 5000,
+      "period": "2025-H1",
+      "denominator_all_transactions": null,
+      "total_purchases": null,
+      "creator_net_earnings": null,
+      "limitations": "Ranked product SKUs, not a tally of 5,000 orders or a representative sample of all YouTube products"
+    },
+    {
+      "id": "company_selected_transaction_top_videos",
+      "source_id": "yt-shopping-2025-transactions-and-survey",
+      "population": "top_1000_videos_ranked_by_tagged_product_transactions",
+      "records_selected": 1000,
+      "period": "60-day period during 2025, exact dates undisclosed",
+      "denominator_all_videos": null,
+      "total_purchases": null,
+      "limitations": "Selected ranked videos; do not infer overall view-to-purchase rate or successful creator median"
+    },
+    {
+      "id": "self_reported_us_genz_brand_discovery",
+      "source_id": "yt-shopping-2025-transactions-and-survey",
+      "population": "US online Gen Z ages 14–24",
+      "surveyed_respondents": 500,
+      "fielded": "2025-04",
+      "percent_agree_youtube_helped_discover_unfamiliar_brands_or_products": 61,
+      "unit": "percentage_of_surveyed_people_agreeing_to_brand_discovery_statement",
+      "verified_purchase_events": null,
+      "limitations": "Agreement with a discovery statement, not tracked actual purchases, all-age US rate or YouTube creator conversion"
+    }
+  ],
+  "merchant_center": {
+    "authorization": "merchant_account_private_dashboard_not_a_public_global_report",
+    "metrics": [
+      {
+        "id": "gross_sales",
+        "meaning": "Program driven gross sales including pending and approved states",
+        "approved_only": false
+      },
+      {
+        "id": "net_sales",
+        "meaning": "Sales net of returns; report can still include pending and approved states",
+        "approved_only": false
+      },
+      {
+        "id": "commissions",
+        "meaning": "Creator commissions and possibly fixed-fee/guarantee hybrid campaign amounts; may include pending",
+        "approved_only": false
+      },
+      {
+        "id": "tagged_video_views",
+        "meaning": "Views on videos containing tagged products, not tag impressions or buyers",
+        "approved_only": false
+      },
+      {
+        "id": "tag_impressions",
+        "meaning": "Times the product tag was seen, not guaranteed outbound clicks",
+        "approved_only": false
+      },
+      {
+        "id": "merchant_clicks",
+        "meaning": "Clicks from creator-tagged products toward merchant's online store, not verified distinct buyers",
+        "approved_only": false
+      },
+      {
+        "id": "orders",
+        "meaning": "Orders in reporting period, including pending and approved, not unique purchasers",
+        "approved_only": false
+      }
+    ],
+    "traffic_splits": [
+      "affiliate_organic",
+      "paid_ads"
+    ],
+    "privacy_thresholds_can_suppress_views_and_clicks": true,
+    "no_merchants_connected": true,
+    "merchant_orders_observed": null,
+    "merchant_creator_commissions_observed": null,
+    "verified_creator_after_cost_profit": null,
+    "privacy_rules": [
+      "Do not re-identify individual viewers",
+      "Do not join merchant analytics with other datasets to build individual profiles",
+      "Do not infer sensitive health, political or religious viewer traits"
+    ]
+  },
+  "contrast": [
+    {
+      "id": "casual_discovery",
+      "unit": "self_reported_brand_discovery_agreement",
+      "transaction_verified": false
+    },
+    {
+      "id": "tag_exposure",
+      "unit": "product_tag_impressions",
+      "transaction_verified": false
+    },
+    {
+      "id": "outbound_intent",
+      "unit": "merchant_click_events",
+      "transaction_verified": false
+    },
+    {
+      "id": "order",
+      "unit": "orders_including_pending",
+      "transaction_verified": false
+    },
+    {
+      "id": "settled_purchase",
+      "unit": "approved_and_reconciled_orders",
+      "transaction_verified": true,
+      "observed": false
+    },
+    {
+      "id": "creator_profit",
+      "unit": "after_fees_returns_taxes_and_labor",
+      "transaction_verified": true,
+      "observed": false
+    }
+  ],
+  "unmeasured": {
+    "platform_wide_youtube_shopping_conversion_rate": null,
+    "all_creator_merchant_profit": null,
+    "genz_actual_verified_purchases": null,
+    "distinct_click_to_order_buyers": null,
+    "creator_hourly_affiliate_profit": null
+  }
+}
