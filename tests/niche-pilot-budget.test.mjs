@@ -62,7 +62,7 @@ test('Real matched owner analytics is necessary but never enough to assert causa
 test('Reject missing spend, date violations, duplicate episodes and undeclared inputs',()=>{
  const a=attempt('a');
  const missing={...a};delete missing.network_power_cash_cents;
- assert.throws(()=>evaluateNichePilot(plan,[missing],{as_of:'2026-10-15'}),/Missing/);
+ assert.throws(()=>evaluateNichePilot(plan,[missing],{as_of:'2026-10-15'}),/Invalid integer/);
  assert.throws(()=>evaluateNichePilot(plan,[a,a],{as_of:'2026-10-15'}),/Duplicate/);
  assert.throws(()=>evaluateNichePilot(plan,[{...a,attempt_date:'2026-11-01'}],{as_of:'2026-11-01'}),/outside/);
  assert.throws(()=>evaluateNichePilot(plan,[a],{as_of:'2026-13-01'}),/explicit as_of/);
