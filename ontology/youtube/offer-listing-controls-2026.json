@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "creator_offer_listing_and_price_control_surface_audit",
+  "as_of": "2026-10-25",
+  "method": "Classify platform uploader metadata, native paid channel membership offers and connected merchant product tags by control owner and economic unit. Do not equate video metadata/traffic with a priced marketplace listing.",
+  "population": "Public video settings and conditional YPP or connected-store product features, not sampled actual customer transactions or creator earnings",
+  "source_ids": [
+    "yt-video-settings-listing-2026",
+    "yt-membership-levels-2026",
+    "yt-membership-price-tips-2026",
+    "shopping-own",
+    "store-connection"
+  ],
+  "surfaces": [
+    {
+      "id": "ordinary_video_presentation",
+      "scope": "publisher_upload_video",
+      "source_ids": [
+        "yt-video-settings-listing-2026"
+      ],
+      "editable_fields": [
+        "title",
+        "description",
+        "thumbnail",
+        "tags",
+        "video_visibility",
+        "audience_designation",
+        "language_and_captions"
+      ],
+      "title_max_characters": 100,
+      "description_max_characters": 5000,
+      "price_control": "not_applicable_to_ordinary_public_video",
+      "price_owner": "not_applicable",
+      "buyer_transaction_on_listing": false,
+      "click_through_measurement": "owner_analytics_if_authorized",
+      "gross_unit": "video_attention_not_product_checkout",
+      "transaction_count": null,
+      "creator_net_price": null,
+      "observed_purchase_rate": null,
+      "notes": "Tags and thumbnails are discoverability/description controls, not the same as selling a commercial product; video views are not sales."
+    },
+    {
+      "id": "channel_membership_levels",
+      "scope": "eligible_ypp_channel_subscription",
+      "source_ids": [
+        "yt-membership-levels-2026",
+        "yt-membership-price-tips-2026"
+      ],
+      "editable_fields": [
+        "tier_perks",
+        "tier_selection_from_offered_prices",
+        "member_only_content",
+        "perks_description"
+      ],
+      "max_levels": 6,
+      "min_perks_per_level": 1,
+      "max_perks_per_level": 5,
+      "price_control": "eligible_level_prices_with_country_platform_localization",
+      "price_owner": "youtube_membership_pricing_schedule_creator_selects_level",
+      "buyer_transaction_on_listing": true,
+      "click_through_measurement": "owner_membership_analytics_if_authorized",
+      "gross_unit": "monthly_member_billing_not_ad_view",
+      "transaction_count": null,
+      "creator_net_price": null,
+      "observed_purchase_rate": null,
+      "notes": "Higher tiers inherit lower-tier perks; exact country/member price, approval and refunds are separate from public channel subscriber totals."
+    },
+    {
+      "id": "youtube_shopping_own_products",
+      "scope": "shopping_eligible_channel_connected_merchant",
+      "source_ids": [
+        "shopping-own",
+        "store-connection"
+      ],
+      "editable_fields": [
+        "store_connection",
+        "eligible_product_tags",
+        "channel_store",
+        "product_shelf"
+      ],
+      "price_control": "price_stock_tax_fulfillment_from_external_merchant",
+      "price_owner": "connected_store_or_merchant",
+      "buyer_transaction_on_listing": true,
+      "click_through_measurement": "owner_shopping_and_merchant_analytics_if_authorized",
+      "gross_unit": "external_product_order_or_merchant_sale_not_youtube_video_view",
+      "transaction_count": null,
+      "creator_net_price": null,
+      "observed_purchase_rate": null,
+      "notes": "YouTube displays/tags eligible store products; merchant/product eligibility, geographic sale, processor, refunds and fulfillment remain separate."
+    }
+  ],
+  "commercial_funnels": [
+    {
+      "entry": "ordinary_video",
+      "subsequent_action": "view_or_watch_event",
+      "payment_unit": null,
+      "payment_collected_by": null
+    },
+    {
+      "entry": "channel_membership_offer",
+      "subsequent_action": "eligible_viewer_joins_paid_level",
+      "payment_unit": "recurring_membership_charge",
+      "payment_collected_by": "youtube_paid_memberships"
+    },
+    {
+      "entry": "connected_store_product_tag",
+      "subsequent_action": "eligible_viewer_visits_merchant_purchase_flow",
+      "payment_unit": "merchant_product_transaction",
+      "payment_collected_by": "connected_store_or_merchant"
+    }
+  ],
+  "publication_gates": [
+    "Plain video metadata may affect discoverability but is not a guaranteed ranking mechanism or direct price for watching.",
+    "Membership tiers require YPP-specific approval and may vary in price by region or platform; do not infer full net proceeds from nominal tier prices.",
+    "Shopping product titles, eligible tags and stock derive from a separately connected merchant catalog; a tagged product is not a completed order.",
+    "A video creator's description link or pinned comment is separate from a verified purchase and must comply with external link and content policies.",
+    "Do not combine member payments, ad RPM, storefront gross orders and merchant net transfers as if they have the same money unit.",
+    "Owned analytics and linked merchant reports have separate permissions; public views, likes and subscribers do not prove click or conversion counts."
+  ],
+  "unmeasured": {
+    "observed_listing_impression_click_through": null,
+    "eligible_shopping_buyer_conversion": null,
+    "merchant_fulfillment_cost_distribution": null,
+    "native_membership_typical_price": null,
+    "creator_net_membership_revenue": null,
+    "creator_net_shopping_profit": null
+  }
+}

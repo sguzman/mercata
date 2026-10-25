@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [video, membership and product offer control study](ontology/youtube/offer-listing-controls-2026.md) separates ordinary video metadata from paid membership levels and external merchant Shopping catalogs, with no fabricated sales, creator prices or conversions.
+
+
 The [falsifiable audience-needs study](ontology/youtube/viewer-need-hypotheses-2026.md) uses three dated public video/podcast observations solely to frame testable comparisons and stop rules; no audience demand, ranking, business return or actual experiment is presumed.
 
 

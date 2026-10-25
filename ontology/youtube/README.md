@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [offer listing study](offer-listing-controls-2026.md), [three native/merchant surface records](offer-listing-controls-2026.json), and [monetary-unit test](../../site/offer-listing-audit.mjs) distinguish video upload metadata, tier prices and merchant stock from observed purchases and creator payout.
+
+
 The [public-source motivated viewer-need study](viewer-need-hypotheses-2026.md), [three machine-readable hypothesis protocols](viewer-need-hypotheses-2026.json) and [prespecification guard](../../site/viewer-need-audit.mjs) distinguish possible viewer problems, negative-result checks, sampled data gates and unknown niche profitability.
 
 
