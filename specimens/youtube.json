@@ -3287,6 +3287,39 @@
       "evidence_class": "official_intercountry_price_comparison_methodology",
       "license": "Official data definitions linked; no exchange-rate or price observations copied",
       "notes": "PPP based on matched price baskets adjusts purchasing power, distinct from nominal FX; GDP PPP and private-consumption PPP have different target aggregates. No values extracted."
+    },
+    {
+      "id": "youtube-supers-payment-processing-2026",
+      "url": "https://support.google.com/youtube/answer/7288782?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Manage YouTube Super Chat and Super Stickers for live chat",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_supperfan_payment_deductions",
+      "license": "Official source linked and key allocation rules independently paraphrased",
+      "notes": "70% of Google confirmed Super revenue after sales taxes and iOS App Store fees; YouTube covers transaction card costs, not an extra 2.9% creator deduction."
+    },
+    {
+      "id": "merchant-shopify-commission-pending-2026",
+      "url": "https://support.google.com/merchants/answer/13773820?hl=en",
+      "publisher": "Google Merchant Center Help",
+      "title": "Shopify YouTube affiliate pending and attribution periods",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_shopify_affiliate_merchant_pending_rules",
+      "license": "Official source linked; numbers and conditions briefly paraphrased",
+      "notes": "Attribution recommended default 30 days and last YouTube creator qualifying click; commission pending 30–50 days and reversible on return/cancellation."
+    },
+    {
+      "id": "merchant-shopify-commission-billing-2026",
+      "url": "https://support.google.com/merchants/answer/14235796?hl=en",
+      "publisher": "Google Merchant Center Help",
+      "title": "Shopify YouTube affiliate merchant commission billing",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_shopify_merchant_billing_mechanics",
+      "license": "Official source linked; recorded mechanic independently described, no client data copied",
+      "notes": "Commissions calculated on purchase amount excluding taxes and other fees; billed merchant for prior-month locked commission on 1st of next month. Not creator bank settlement date."
     }
   ],
   "claims": [
@@ -7175,6 +7208,30 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "No observed owner settlement currencies, country-specific creator earnings, actual FX/PPP rates, withholding or local cash expenses are available."
+    },
+    {
+      "id": "youtube-native-funding-processing-fees-2026",
+      "text": "YouTube documents 70% of eligible net memberships and Supers revenue for relevant Commerce products, with sales tax and applicable fees excluded before allocation; YouTube currently covers credit card processing transaction costs, not an extra creator-assessed rate.",
+      "source_ids": [
+        "revenue-shares",
+        "yt-membership-analytics-2026",
+        "youtube-supers-payment-processing-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Individual MCN agreements, sales-tax breakdowns, payout currency conversion, withholding and producer expenses remain account-specific."
+    },
+    {
+      "id": "youtube-affiliate-shopify-lock-billing-2026",
+      "text": "Google's Shopify YouTube Shopping affiliate terms describe a configurable 30–50-day pending commission period, a recommended 30-day last-click attribution window and next-month merchant billing for locked transactions. Returns can reverse pending commission amounts.",
+      "source_ids": [
+        "merchant-shopify-commission-pending-2026",
+        "merchant-shopify-commission-billing-2026",
+        "google-merchant-affiliate-analytics-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Merchant-side accounting instructions may not apply to all merchants, countries or creator agreements; pending, locked and merchant-billed commissions do not document actual creator bank deposits."
     }
   ],
   "observations": [],

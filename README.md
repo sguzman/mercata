@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [creator processing, refunds and affiliate settlement audit](ontology/youtube/creator-processing-settlement-2026.md) separates YouTube-paid card processing in fan funding from merchant Shopify commission reversals, and never counts pending/locked transactions as creator bank cash.
+
+
 The [cross-country creator income comparison protocol](ontology/youtube/creator-country-income-comparability.md) distinguishes viewer-country attributed revenue, creator residence, payment currency and dated consumption purchasing power, with no fabricated country earnings or PPP rates.
 
 

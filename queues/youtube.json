@@ -265,7 +265,7 @@
           "title": "Find commissions and service fees",
           "acceptance": "State fee basis, rate, tiers and effective dates.",
           "weight": 1,
-          "progress": 80,
+          "progress": 84,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -286,7 +286,11 @@
             "site/live-monetization-denominators.mjs",
             "tests/live-monetization-denominators.test.mjs",
             "tests/site-smoke.mjs",
-            "ontology/youtube/eligibility-matrix.json"
+            "ontology/youtube/eligibility-matrix.json",
+            "ontology/youtube/creator-processing-settlement-2026.json",
+            "ontology/youtube/creator-processing-settlement-2026.md",
+            "site/creator-processing-settlement-audit.mjs",
+            "tests/creator-processing-settlement-audit.test.mjs"
           ]
         },
         {
@@ -295,7 +299,7 @@
           "title": "Separate payment processing charges",
           "acceptance": "Check transaction, currency conversion, refund and chargeback costs.",
           "weight": 1,
-          "progress": 43,
+          "progress": 73,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -306,7 +310,12 @@
             "ontology/youtube/tax-withholding-mechanics.json",
             "ontology/youtube/tax-withholding-mechanics.md",
             "tests/youtube.test.mjs",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/creator-processing-settlement-2026.json",
+            "ontology/youtube/creator-processing-settlement-2026.md",
+            "site/creator-processing-settlement-audit.mjs",
+            "tests/creator-processing-settlement-audit.test.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -315,7 +324,7 @@
           "title": "Check payout rails and countries",
           "acceptance": "Document payment methods and geographic availability.",
           "weight": 1,
-          "progress": 86,
+          "progress": 88,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -331,7 +340,11 @@
             "ontology/youtube/monthly-creator-cash-flow-protocol.md",
             "site/monthly-creator-cash-flow.mjs",
             "tests/monthly-creator-cash-flow.test.mjs",
-            "site/app.js"
+            "site/app.js",
+            "ontology/youtube/creator-processing-settlement-2026.json",
+            "ontology/youtube/creator-processing-settlement-2026.md",
+            "site/creator-processing-settlement-audit.mjs",
+            "tests/creator-processing-settlement-audit.test.mjs"
           ]
         },
         {
@@ -1251,7 +1264,7 @@
           "title": "Separate sales, payout and net profit",
           "acceptance": "Define each economic quantity and all known expenses.",
           "weight": 1,
-          "progress": 82,
+          "progress": 84,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
@@ -1275,7 +1288,11 @@
             "ontology/youtube/monthly-creator-cash-flow-protocol.md",
             "site/monthly-creator-cash-flow.mjs",
             "tests/monthly-creator-cash-flow.test.mjs",
-            "site/app.js"
+            "site/app.js",
+            "ontology/youtube/creator-processing-settlement-2026.json",
+            "ontology/youtube/creator-processing-settlement-2026.md",
+            "site/creator-processing-settlement-audit.mjs",
+            "tests/creator-processing-settlement-audit.test.mjs"
           ]
         }
       ]
@@ -1473,7 +1490,7 @@
           "title": "Trace sale or contract flow",
           "acceptance": "Describe transaction steps and who collects payment.",
           "weight": 1,
-          "progress": 79,
+          "progress": 83,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -1491,7 +1508,11 @@
             "ontology/youtube/shopping-funnel-evidence-2025.json",
             "ontology/youtube/shopping-funnel-evidence-2025.md",
             "site/shopping-funnel-audit.mjs",
-            "tests/shopping-funnel-audit.test.mjs"
+            "tests/shopping-funnel-audit.test.mjs",
+            "ontology/youtube/creator-processing-settlement-2026.json",
+            "ontology/youtube/creator-processing-settlement-2026.md",
+            "site/creator-processing-settlement-audit.mjs",
+            "tests/creator-processing-settlement-audit.test.mjs"
           ]
         },
         {
@@ -1500,7 +1521,7 @@
           "title": "Study refunds and disputes",
           "acceptance": "Identify who bears losses and processing charges.",
           "weight": 1,
-          "progress": 82,
+          "progress": 89,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -1510,7 +1531,12 @@
             "ontology/youtube/checkout-refund-evidence.md",
             "site/checkout-refund-audit.mjs",
             "tests/checkout-refund-audit.test.mjs",
-            "site/app.js"
+            "site/app.js",
+            "ontology/youtube/creator-processing-settlement-2026.json",
+            "ontology/youtube/creator-processing-settlement-2026.md",
+            "site/creator-processing-settlement-audit.mjs",
+            "tests/creator-processing-settlement-audit.test.mjs",
+            "tests/site-smoke.mjs"
           ]
         },
         {

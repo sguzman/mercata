@@ -107,6 +107,7 @@ try{
       ['.public-community-post-protocol',4,'no verified unique member count or earnings'],
       ['.language-audience-crosswalk',7,'country is not language'],
       ['.niche-pilot-budget',4,'not measured creator earnings or a guaranteed viable niche'],
+      ['.creator-processing-settlement',4,'not verified creator bank cash'],
       ['.creator-country-income',4,'Viewer country is not creator residence'],
       ['.monthly-creator-cash-flow',4,'Bank arrival is not the same as issuance'],
       ['.agentio-sponsor-study',6,'not representative creator pay or verified incremental sales'],

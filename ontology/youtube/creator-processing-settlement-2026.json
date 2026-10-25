@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "creator_payment_processing_and_refund_allocation",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "yt-membership-analytics-2026",
+    "yt-membership-buyer-refunds-2026",
+    "yt-supers-buyer-refunds-2026",
+    "revenue-shares",
+    "shopping-affiliate",
+    "google-merchant-affiliate-analytics-2026",
+    "youtube-supers-payment-processing-2026",
+    "merchant-shopify-commission-pending-2026",
+    "merchant-shopify-commission-billing-2026"
+  ],
+  "channels": [
+    {
+      "id": "membership",
+      "payer": "viewer",
+      "product": "eligible_channel_membership",
+      "contract_module": "Commerce Product Module",
+      "creator_share_of_eligible_net": 0.7,
+      "share_base": "recognized_membership_revenue_after_applicable_sales_taxes_and_platform_dependent_fees",
+      "credit_card_processor_cost_payer": "youtube",
+      "actual_creator_separately_charged_card_processing_rate": null,
+      "refund_payer": "creator_share_reversed_from_adsense_when_youtube_grants_refund",
+      "mcn_additional_share_possible": true,
+      "individual_after_tax_income": null,
+      "source_ids": [
+        "yt-membership-analytics-2026",
+        "yt-membership-buyer-refunds-2026",
+        "revenue-shares"
+      ]
+    },
+    {
+      "id": "supers",
+      "payer": "viewer",
+      "product": "eligible_super_chat_stickers_thanks",
+      "contract_module": "Commerce Product Module",
+      "creator_share_of_eligible_net": 0.7,
+      "share_base": "recognized_revenue_after_local_sales_tax_and_app_store_ios_fees",
+      "credit_card_processor_cost_payer": "youtube",
+      "actual_creator_separately_charged_card_processing_rate": null,
+      "refund_payer": "generally_nonrefundable_voluntary_payment_but_unauthorized_charges_can_be_disputed",
+      "mcn_additional_share_possible": null,
+      "individual_after_tax_income": null,
+      "source_ids": [
+        "youtube-supers-payment-processing-2026",
+        "yt-supers-buyer-refunds-2026",
+        "revenue-shares"
+      ]
+    },
+    {
+      "id": "shopify_affiliate_merchant",
+      "payer": "merchant",
+      "product": "creator_product_tag_affiliate_commission",
+      "contract_module": "merchant_center_affiliate_shopify",
+      "creator_share_of_eligible_net": null,
+      "share_base": "qualifying_purchase_amount_excluding_taxes_and_other_fees_times_merchant_set_commission_rate",
+      "credit_card_processor_cost_payer": "not_specified_for_individual_merchant_contract",
+      "actual_creator_separately_charged_card_processing_rate": null,
+      "refund_payer": "commission_can_be_reversed_during_pending_period_if_transaction_cancelled_or_returned",
+      "mcn_additional_share_possible": null,
+      "individual_after_tax_income": null,
+      "source_ids": [
+        "merchant-shopify-commission-pending-2026",
+        "merchant-shopify-commission-billing-2026",
+        "google-merchant-affiliate-analytics-2026"
+      ]
+    }
+  ],
+  "affiliate_shopify": {
+    "default_pending_days": 30,
+    "min_pending_days": 30,
+    "max_pending_days": 50,
+    "default_attribution_days": 30,
+    "last_qualifying_creator_click_receives_attribution": true,
+    "pending_is_finalized": false,
+    "locked_is_bank_receipt": false,
+    "affiliate_commission_basis_excludes_tax_and_other_fees": true,
+    "merchant_billing": "first_of_month_for_locked_transactions_from_prior_month",
+    "marketplace_pending_metrics_may_include_pending_and_approved": true,
+    "conditional_scope": "Shopify merchant setup documented by Google, not a claim every merchant/product/country has the same terms"
+  },
+  "prohibited": [
+    "Never apply Commerce Product Module 70% to YouTube Shopping affiliate commissions.",
+    "Never deduct a second assumed credit-card processing fee from channel-membership or Supers creator shares: YouTube states it currently covers credit-card transaction costs.",
+    "Never compute the 70% fan-funding share from full consumer charge before sales taxes and applicable app store deductions.",
+    "Never treat merchant-reported pending orders, commissions or gross sales as final bank deposits.",
+    "Do not assume every independent merchandise sale or off-platform sponsor has the same fees or same payment processor as YouTube native fan funding.",
+    "Pending commissions can be reversed by cancellations and returns; locked merchant charges are not proof of a finalized creator bank deposit.",
+    "Do not impute any personal tax or FX conversion costs from customer country or transaction gross.",
+    "Standard consumer refund policy exceptions and unauthorized-charge reviews are not a known creator-specific refund event."
+  ],
+  "observed_owner_cash_records": [],
+  "unknown": {
+    "creator_bank_net_receipt_after_tax": null,
+    "currency_conversion_costs_by_payment_address": null,
+    "merchant_payment_processor_contract_rates": null,
+    "specific_mcn_share": null,
+    "creator_cash_profit": null,
+    "refund_fraction_all_creators": null,
+    "platform_wide_chargeback_rate": null
+  }
+}

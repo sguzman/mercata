@@ -4,6 +4,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
+## Creator payment processing, refunds and settlement delays
+
+The [official native versus Shopping affiliate settlement study](creator-processing-settlement-2026.md), [payment routing matrix](creator-processing-settlement-2026.json) and [processing audit](../../site/creator-processing-settlement-audit.mjs) preserve the distinctions among tax/fee deductions before native Commerce Product Module shares, YouTube-covered card-processing expenses, refund reversals, and Shopify-affiliate pending, locked, merchant-billed and actually deposited stages. No individual creator profit is inferred.
+
 ## Viewer country, creator residence and comparable local income
 
 The [source-backed country income comparison protocol](creator-country-income-comparability.md), [machine measurement contract](creator-country-income-comparability.json) and [scope validator](../../site/creator-country-income-audit.mjs) distinguish owner-authorized country-attributed estimated revenue from representative creators residing in different countries, account settlement currency, and dated consumption PPPs. No actual country-level creator income sample, FX rate or PPP-adjusted wage is inferred.
