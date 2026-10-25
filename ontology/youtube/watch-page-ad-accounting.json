@@ -8,7 +8,8 @@
     "revenue-shares",
     "api-metrics",
     "yt-midroll-2026",
-    "adsense-payment-cycle"
+    "adsense-payment-cycle",
+    "api-query-params"
   ],
   "format": "symbolic_worksheet_no_accounts_accessed",
   "platform_share_of_eligible_net_watch_page_ads": 0.55,
@@ -21,7 +22,7 @@
   "authorized_reporting_metrics": [
     {
       "id": "grossRevenue",
-      "unit": "USD_gross_advertising_revenue",
+      "unit": "gross_ad_revenue_default_USD_or_explicit_API_query_currency",
       "economics": "gross_google_sold_or_doubleclick_partner_sold",
       "known_value": null,
       "source_id": "api-metrics",
@@ -69,7 +70,7 @@
     },
     {
       "id": "cpm",
-      "unit": "gross_USD_per_1000_ad_impressions",
+      "unit": "gross_revenue_per_1000_ad_impressions_default_USD_or_API_currency",
       "economics": "advertiser_ad_impression_yield",
       "known_value": null,
       "source_id": "api-metrics",
@@ -77,7 +78,7 @@
     },
     {
       "id": "playbackBasedCpm",
-      "unit": "gross_USD_per_1000_monetized_playbacks",
+      "unit": "gross_revenue_per_1000_monetized_playbacks_default_USD_or_API_currency",
       "economics": "advertiser_playback_yield",
       "known_value": null,
       "source_id": "api-metrics",
@@ -133,6 +134,23 @@
     "Do not add estimatedRevenue to estimatedAdRevenue or estimatedRedPartnerRevenue; those are potential subcomponents of the total.",
     "Ad impressions count ads; monetized playbacks count video-playback events with at least one ad; raw public views are a third denominator.",
     "An ad slot on an eight-minute eligible long-form video is an opportunity, not a guaranteed impression, payment or minimum creator wage.",
-    "Even known creator estimated net ad revenue is not bank-settled net take-home or after-expense profit."
-  ]
+    "Even known creator estimated net ad revenue is not bank-settled net take-home or after-expense profit.",
+    "The reports.query currency parameter can convert estimated creator revenue, advertiser grossRevenue, CPM and playbackBasedCpm using daily-changing exchange rates. Record the requested API currency and never equate a converted report with actual payout account currency or an observed FX fee."
+  ],
+  "reporting_currency": {
+    "source_id": "api-query-params",
+    "default_currency": "USD",
+    "optional_api_currency_parameter": "currency",
+    "converted_report_metrics": [
+      "estimatedRevenue",
+      "estimatedAdRevenue",
+      "estimatedRedPartnerRevenue",
+      "grossRevenue",
+      "cpm",
+      "playbackBasedCpm"
+    ],
+    "fx_rates_daily_estimated": true,
+    "report_query_currency_not_payment_account_currency": true,
+    "actual_query_invoked": false
+  }
 }

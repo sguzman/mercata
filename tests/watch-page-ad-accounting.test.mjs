@@ -50,7 +50,13 @@ test('Owner report cannot infer creator payout from advertiser gross CPM, views 
  assert.equal(x.creator_contractual_share_inferred_from_gross,null);
  assert.equal(x.cash_settled,null);
  assert.throws(()=>reportAdMetrics(m,{...input,owner_authorized:false}),/authorized/);
- assert.throws(()=>reportAdMetrics(m,{...input,currency:'MXN'}),/grossRevenue metric is reported in USD/);
+ assert.throws(()=>reportAdMetrics(m,{...input,currency:'MXN'}),/Explicit matching API currency parameter/);
+ const converted=reportAdMetrics(m,{...input,currency:'MXN',api_currency_parameter:'MXN'});
+ assert.equal(converted.currency,'MXN');assert.equal(converted.api_currency_parameter,'MXN');
+ assert.equal(converted.advertiser_gross_revenue,1000);
+ assert.equal(converted.creator_contractual_share_inferred_from_gross,null);
+ assert.throws(()=>reportAdMetrics(m,{...input,currency:'MXN',api_currency_parameter:'EUR'}),/parameter differs/);
+ assert.throws(()=>reportAdMetrics(m,{...input,currency:'USD',api_currency_parameter:'MXN'}),/parameter differs/);
  assert.throws(()=>reportAdMetrics(m,{...input,monetizedPlaybacks:0.2}),/Integer/);
  assert.throws(()=>reportAdMetrics(m,{owner_authorized:true,currency:'USD',period:'2026-07'}),/No observed/);
 });

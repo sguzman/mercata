@@ -43,10 +43,16 @@ export function reportAdMetrics(model,input){
   provided[k]=input[k];
  }
  if(Object.keys(provided).length===0)throw Error('No observed owner metrics provided');
- if('grossRevenue' in provided&&input.currency!=='USD')
-  throw Error('The grossRevenue metric is reported in USD; do not combine it with a non-USD frame');
+ const currencySensitive=['grossRevenue','estimatedRevenue','estimatedAdRevenue','estimatedRedPartnerRevenue','cpm','playbackBasedCpm'];
+ const hasMoney=currencySensitive.some(k=>provided[k]!==undefined);
+ if(input.api_currency_parameter!==undefined && input.api_currency_parameter!==input.currency)
+  throw Error('API currency parameter differs from the reporting currency');
+ if(hasMoney&&input.currency!=='USD'&&input.api_currency_parameter!==input.currency)
+  throw Error('Explicit matching API currency parameter required for non-USD monetary reports');
+ // USD is the API default; non-USD monetary reports are valid only with an explicitly recorded API conversion request.
  return {kind:'owner_supplied_estimated_analytics_not_final_bank_receipt',
    currency:input.currency,period:input.period,
+   api_currency_parameter:input.api_currency_parameter??null,
    advertiser_gross_revenue:provided.grossRevenue??null,
    creator_estimated_net_ads:provided.estimatedAdRevenue??null,
    creator_estimated_net_total:provided.estimatedRevenue??null,
