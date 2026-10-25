@@ -4,6 +4,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
+## One creator's recorded photography production labor
+
+The [61-completed-video first-person time log](photography-production-time-diary-2025.md), [machine record](photography-production-time-diary-2025.json) and [rounding/unit audit](../../site/photography-production-labor-audit.mjs) document one channel's mean 9.74 and median 7.37 hours of production per finished video. No creator earnings, abandoned-attempt hours, net wages or other-genre labor estimates were observed.
+
 ## Monthly cash-flow volatility and payout timing
 
 The [monthly variability research](monthly-income-volatility-protocol.md) distinguishes **within-creator consecutive cash flows** from **cross-sectional** dispersion in selected YouTube-affiliated Patreon snapshots (23,435 observed records; USD 1,490 pooled standard deviation). The latter is not a native YouTube payout or individual creator month-to-month volatility.

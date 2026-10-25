@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [61-video self-recorded production case](ontology/youtube/photography-production-time-diary-2025.md) records work hours per published photography video and workflow phase, while keeping uncompleted effort, creator receipts and representative hourly wages unknown.
+
+
 The [monthly income volatility protocol](ontology/youtube/monthly-income-volatility-protocol.md) extends the verified YouTube cashbook to separate finalized credits, issued transfers, cleared cash, paid costs, and zero-payment months from creator zero earnings. Its arithmetic is tested without user financial records.
 
 
