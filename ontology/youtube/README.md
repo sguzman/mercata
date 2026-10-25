@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [demographic cross-tab and nonresponse study](demographic-cross-tab-availability-2026.md), [source-aligned joint-table gap register](demographic-cross-tab-availability-2026.json) and [validator](../../site/demographic-cross-tab-audit.mjs) distinguish one-dimensional Pew rates from unavailable joint age, geography, identity and topic cells.
+
+
 The [child-directed economics study](child-directed-economics-2026.md), [16-product crosswalk](child-directed-economics-2026.json), and [policy audit](../../site/child-economics-audit.mjs) distinguish contextual ads, disabled native fan interactions, conditional channel product eligibility and external business terms, with no personal child data or creator revenue imputation.
 
 

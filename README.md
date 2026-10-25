@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [2026 demographic intersection and nonresponse audit](ontology/youtube/demographic-cross-tab-availability-2026.md) preserves Pew subgroup rates, distinct survey frames and missing joint sample counts without multiplying marginal usage percentages or misusing the whole-sample confidence margin.
+
+
 The [made-for-kids creator economics crosswalk](ontology/youtube/child-directed-economics-2026.md) classifies all sixteen recorded earning pathways by video, channel and external contracting restrictions, without treating child-directed animation as automatically ad-free or assigning fabricated profit rates.
 
 

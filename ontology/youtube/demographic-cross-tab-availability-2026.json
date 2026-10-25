@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "demographic_cross_tabulation_nonresponse_and_availability_audit",
+  "reviewed_at": "2026-10-25",
+  "method": "Compare the 2026 Pew NPORS one-dimensional ever-use subgroup estimates and separate ATP news rows; register each missing joint-frequency table, subgroup count, mode, sampling restriction and access condition. No synthetic cross-tabs or individual sensitive-trait inference.",
+  "population": "Pew 2026 NPORS U.S. adults 18+ (n=5,511; web/mail/phone) and separately 2026 ATP U.S. adults (n=5,166; news question); not all YouTube users, children or creators",
+  "source_ids": [
+    "pew-us-adults-2026",
+    "pew-youtube-news-2026",
+    "analytics-audience"
+  ],
+  "npors": {
+    "fieldwork_start": "2026-01-30",
+    "fieldwork_end": "2026-06-18",
+    "whole_sample_n": 5511,
+    "whole_sample_moe_pp": 1.8,
+    "subgroup_n": null,
+    "subgroup_moe_pp": null,
+    "nonresponse_rate_by_cell": null,
+    "excluded_under_18": true,
+    "english_only_asian_estimate": true,
+    "published_question": "ever_used_youtube"
+  },
+  "atp_news": {
+    "whole_sample_n": 5166,
+    "fieldwork_start": "2026-08-24",
+    "fieldwork_end": "2026-08-30",
+    "published_question": "regularly_gets_news_from_youtube",
+    "subgroup_n": null,
+    "subgroup_moe_pp": null,
+    "nonresponse_by_cell": null
+  },
+  "published_marginal_rates": [
+    {
+      "dimension": "household_income",
+      "source_id": "pew-us-adults-2026",
+      "denominator": "us_adults_within_one_named_group",
+      "kind": "published_one_dimensional_ever_use_rate",
+      "cells": [
+        {
+          "id": "under_30000",
+          "percent": 77,
+          "subgroup_n": null,
+          "subgroup_margin_of_error_pp": null
+        },
+        {
+          "id": "30000_69999",
+          "percent": 84,
+          "subgroup_n": null,
+          "subgroup_margin_of_error_pp": null
+        },
+        {
+          "id": "70000_99999",
+          "percent": 86,
+          "subgroup_n": null,
+          "subgroup_margin_of_error_pp": null
+        },
+        {
+          "id": "100000_plus",
+          "percent": 90,
+          "subgroup_n": null,
+          "subgroup_margin_of_error_pp": null
+        }
+      ],
+      "joint_frequency_table_available": false
+    },
+    {
+      "dimension": "education",
+      "source_id": "pew-us-adults-2026",
+      "denominator": "us_adults_within_one_named_group",
+      "kind": "published_one_dimensional_ever_use_rate",
+      "cells": [
+        {
+          "id": "high_school_or_less",
+          "percent": 77,
+          "subgroup_n": null,
+          "subgroup_margin_of_error_pp": null
+        },
+        {
+          "id": "some_college",
+          "percent": 87,
+          "subgroup_n": null,
+          "subgroup_margin_of_error_pp": null
+        },
+        {
+          "id": "college_graduate",
+          "percent": 90,
+          "subgroup_n": null,
+          "subgroup_margin_of_error_pp": null
+        }
+      ],
+      "joint_frequency_table_available": false
+    },
+    {
+      "dimension": "residence",
+      "source_id": "pew-us-adults-2026",
+      "denominator": "us_adults_within_one_named_group",
+      "kind": "published_one_dimensional_ever_use_rate",
+      "cells": [
+        {
+          "id": "urban",
+          "percent": 87,
+          "subgroup_n": null,
+          "subgroup_margin_of_error_pp": null
+        },
+        {
+          "id": "suburban",
+          "percent": 86,
+          "subgroup_n": null,
+          "subgroup_margin_of_error_pp": null
+        },
+        {
+          "id": "rural",
+          "percent": 78,
+          "subgroup_n": null,
+          "subgroup_margin_of_error_pp": null
+        }
+      ],
+      "joint_frequency_table_available": false
+    }
+  ],
+  "unavailable_joint_tables": [
+    {
+      "id": "income_by_residence",
+      "dimensions": [
+        "household_income",
+        "residence"
+      ],
+      "frame": "npors2026",
+      "source_id": "pew-us-adults-2026",
+      "cell_count": null,
+      "joint_sample_n": null,
+      "intersection_prevalence_percent": null,
+      "intersection_margin_of_error_pp": null,
+      "representativeness_verified": false,
+      "denominator_match_verified": false,
+      "release_and_consent_verified": false,
+      "status": "unmeasured_or_incompatible",
+      "reason": "Same 2026 survey published separate household-income and community subgroup tables, not the income × residence joint frequencies."
+    },
+    {
+      "id": "age_by_reported_gender",
+      "dimensions": [
+        "age",
+        "published_gender"
+      ],
+      "frame": "npors2026",
+      "source_id": "pew-us-adults-2026",
+      "cell_count": null,
+      "joint_sample_n": null,
+      "intersection_prevalence_percent": null,
+      "intersection_margin_of_error_pp": null,
+      "representativeness_verified": false,
+      "denominator_match_verified": false,
+      "release_and_consent_verified": false,
+      "status": "unmeasured_or_incompatible",
+      "reason": "Pew provides age and men/women rows independently; products of percentages are not the rate of use for age-by-reported-gender cells."
+    },
+    {
+      "id": "race_by_religion",
+      "dimensions": [
+        "race_ethnicity",
+        "religious_affiliation"
+      ],
+      "frame": "npors2026",
+      "source_id": "pew-us-adults-2026",
+      "cell_count": null,
+      "joint_sample_n": null,
+      "intersection_prevalence_percent": null,
+      "intersection_margin_of_error_pp": null,
+      "representativeness_verified": false,
+      "denominator_match_verified": false,
+      "release_and_consent_verified": false,
+      "status": "unmeasured_or_incompatible",
+      "reason": "Race/ethnicity rates include a narrowly English-speaking Asian cohort; cited YouTube use table has no religion-by-race or religion-specific use."
+    },
+    {
+      "id": "age_by_country",
+      "dimensions": [
+        "age",
+        "country"
+      ],
+      "frame": "npors2026",
+      "source_id": "pew-us-adults-2026",
+      "cell_count": null,
+      "joint_sample_n": null,
+      "intersection_prevalence_percent": null,
+      "intersection_margin_of_error_pp": null,
+      "representativeness_verified": false,
+      "denominator_match_verified": false,
+      "release_and_consent_verified": false,
+      "status": "unmeasured_or_incompatible",
+      "reason": "The source studies U.S. adults, not a country-level panel; country × age YouTube use cannot be recovered from this U.S. survey."
+    },
+    {
+      "id": "income_by_news_use",
+      "dimensions": [
+        "household_income",
+        "regular_youtube_news"
+      ],
+      "frame": "different_2026_pew_survey_frames",
+      "source_id": "pew-youtube-news-2026",
+      "cell_count": null,
+      "joint_sample_n": null,
+      "intersection_prevalence_percent": null,
+      "intersection_margin_of_error_pp": null,
+      "representativeness_verified": false,
+      "denominator_match_verified": false,
+      "release_and_consent_verified": false,
+      "status": "unmeasured_or_incompatible",
+      "reason": "The general use measure is Pew NPORS January–June, news use is a distinct ATP August sample and question. No linkable joint panel is documented."
+    },
+    {
+      "id": "age_by_party_news",
+      "dimensions": [
+        "age",
+        "political_affiliation"
+      ],
+      "frame": "atp_news2026",
+      "source_id": "pew-youtube-news-2026",
+      "cell_count": null,
+      "joint_sample_n": null,
+      "intersection_prevalence_percent": null,
+      "intersection_margin_of_error_pp": null,
+      "representativeness_verified": false,
+      "denominator_match_verified": false,
+      "release_and_consent_verified": false,
+      "status": "unmeasured_or_incompatible",
+      "reason": "Age and political-party news use are separate within-group published rates; no joint age-by-party table or subgroup n is available."
+    },
+    {
+      "id": "children_by_viewer_interest",
+      "dimensions": [
+        "under_18",
+        "niche_interest"
+      ],
+      "frame": "npors2026",
+      "source_id": "pew-us-adults-2026",
+      "cell_count": null,
+      "joint_sample_n": null,
+      "intersection_prevalence_percent": null,
+      "intersection_margin_of_error_pp": null,
+      "representativeness_verified": false,
+      "denominator_match_verified": false,
+      "release_and_consent_verified": false,
+      "status": "unmeasured_or_incompatible",
+      "reason": "The adult national survey explicitly excludes minors; no child records or inferred viewer identities may be added."
+    }
+  ],
+  "documented_suppression_and_exclusion": [
+    {
+      "id": "npors_total_moe_not_cell_moe",
+      "source_id": "pew-us-adults-2026",
+      "rule": "Overall ±1.8 percentage points does not transfer to any unreported subgroup or two-axis cell.",
+      "measured_subgroup_error": null
+    },
+    {
+      "id": "excluded_nonresponse",
+      "source_id": "pew-us-adults-2026",
+      "rule": "Published demographic tables omit non-answers; exact item-by-cell nonresponse counts are not published in this evidence register.",
+      "measured_nonresponse_rate": null
+    },
+    {
+      "id": "asian_english_speakers_only",
+      "source_id": "pew-us-adults-2026",
+      "rule": "Asian single-race non-Hispanic estimate in the published figure is restricted to English-speaking adults; not all Asian-language populations.",
+      "measured_missing_population": null
+    },
+    {
+      "id": "child_excluded",
+      "source_id": "pew-us-adults-2026",
+      "rule": "Adult sampling cannot supply values for minors or child-directed content audience.",
+      "measured_children_n": null
+    },
+    {
+      "id": "owner_only_studio_analytics",
+      "source_id": "analytics-audience",
+      "rule": "Aggregated creator dashboard audience demographics require authorized owner analytics; publicly visible video views are not an age/gender joint census.",
+      "public_subgroup_n": null
+    },
+    {
+      "id": "distinct_news_study",
+      "source_id": "pew-youtube-news-2026",
+      "rule": "The ATP news table uses different dates and survey questions and is not individual-level linked to NPORS.",
+      "joined_respondents_n": null
+    }
+  ],
+  "acceptance_gates": [
+    "Obtain released, legally usable aggregate joint-frequency table or permissioned microdata from a specified single source frame.",
+    "Use survey weighting, design, respondent consent and effective cell n per intersection; avoid exposing individuals.",
+    "Report excluded groups, exact survey question, nonanswers and suppressed/small samples.",
+    "Give intersection uncertainty if available; do not reuse the entire survey n and survey-wide margin for an individual cell.",
+    "Separate adults and minors, US and other countries, YouTube ever-use and news watching, and registered viewers and creator channels."
+  ],
+  "forbidden_inference": [
+    "Multiply 2026 income ever-use by community ever-use to estimate joint YouTube viewers.",
+    "Multiply age-group and gender-group conditional rates to estimate age-by-gender YouTube users.",
+    "Use whole-sample n=5511 as intersection cell sample count.",
+    "Use ±1.8pp as the confidence interval for all demographic cells.",
+    "Use user names, images or comments to infer political, religious or racial identities."
+  ],
+  "unmeasured": {
+    "joint_income_by_residence_youtube_ever_use": null,
+    "age_by_reported_gender_use": null,
+    "age_by_country_use": null,
+    "religion_by_race_use": null,
+    "age_by_party_news_use": null,
+    "source_matched_income_by_news_use": null,
+    "cell_nonresponse_counts": null,
+    "subgroup_standard_errors": null
+  }
+}

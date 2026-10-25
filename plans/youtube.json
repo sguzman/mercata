@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-23",
-  "progress_percent": 77,
+  "progress_percent": 78,
   "permission_required_before_execution": false,
   "scope": "Evidence-based research into YouTube's economics, platform use, population, creator earnings, audience demographics, subcultures, competition, content formats and practical monetization strategies.",
   "baseline": {
@@ -493,7 +493,7 @@
         "youtube/audience-demography/audit-differences-among-survey-panels"
       ],
       "phase": 2,
-      "progress_percent": 73
+      "progress_percent": 75
     },
     {
       "id": "subculture-atlas",
@@ -5039,7 +5039,7 @@
       "objective": "Do not multiply independent percentages to fabricate cross-tabs.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and do not multiply independent percentages to fabricate cross-tabs.",
       "status": "in_progress",
-      "percent": 56,
+      "percent": 72,
       "evidence": [
         "specimens/youtube.json",
         "ontology/youtube/us-audience-2026.md",
@@ -5052,7 +5052,11 @@
         "site/us-news-demographic-audit.mjs",
         "tests/us-news-demographic-audit.test.mjs",
         "tests/site-smoke.mjs",
-        "site/app.js"
+        "site/app.js",
+        "ontology/youtube/demographic-cross-tab-availability-2026.json",
+        "ontology/youtube/demographic-cross-tab-availability-2026.md",
+        "site/demographic-cross-tab-audit.mjs",
+        "tests/demographic-cross-tab-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/us-news-demographic-crosswalk.json",
       "priority": "high",
@@ -5087,7 +5091,7 @@
       "objective": "Document omitted groups and inaccessible analytics.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and document omitted groups and inaccessible analytics.",
       "status": "in_progress",
-      "percent": 57,
+      "percent": 72,
       "evidence": [
         "ontology/youtube/analytics-query-guide.json",
         "ontology/youtube/analytics-query-guide.md",
@@ -5097,7 +5101,11 @@
         "site/virtual-worship-boundary-audit.mjs",
         "tests/virtual-worship-boundary-audit.test.mjs",
         "site/app.js",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/demographic-cross-tab-availability-2026.json",
+        "ontology/youtube/demographic-cross-tab-availability-2026.md",
+        "site/demographic-cross-tab-audit.mjs",
+        "tests/demographic-cross-tab-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/virtual-worship-not-youtube-audience-2025.json",
       "priority": "high",
