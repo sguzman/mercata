@@ -1,5 +1,5 @@
 const dateDay=x=>{
- if(typeof x!=='string'||!/^\\d{4}-\\d{2}-\\d{2}$/.test(x))return null;
+ if(typeof x!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(x))return null;
  const d=new Date(x+'T00:00:00.000Z');
  if(!Number.isFinite(d.getTime())||d.toISOString().slice(0,10)!==x)return null;
  return Math.floor(d.getTime()/86400000);
