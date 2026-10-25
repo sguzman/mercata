@@ -12,7 +12,7 @@ const median=values=>{
  return s.length%2?s[m]:(s[m-1]+s[m])/2;
 };
 const toMonth=v=>{
- if(typeof v!=='string'||!/^\\d{4}-(0[1-9]|1[0-2])$/.test(v))bad('Invalid month');
+ if(typeof v!=='string'||!/^\d{4}-(0[1-9]|1[0-2])$/.test(v))bad('Invalid month');
  const [y,m]=v.split('-').map(Number);
  return y*12+m-1;
 };
