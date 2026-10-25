@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [account/product identity study](ontology/youtube/product-account-population-graph-2026.md) distinguishes YouTube channels, Google accounts, managing delegates, Analytics, Google Ads and AdSense payouts from viewers and unique creator businesses.
+
+
 The [four-country YouTube ad-planner reach comparison](ontology/youtube/country-planner-change-windows-2026.md) preserves the source-reported two 2025 change windows and explicitly disallows interpreting revisions in advertiser reach as changes in verified unique viewer populations.
 
 

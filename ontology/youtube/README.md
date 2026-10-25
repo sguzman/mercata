@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [YouTube and Google product population study](product-account-population-graph-2026.md), [16-node source-backed graph](product-account-population-graph-2026.json) and [person/cardinality audit](../../site/product-account-population-audit.mjs) distinguish channel IDs, viewers, advertising campaign metrics, owner-authorized Studio analytics and payout accounts.
+
+
 The [four-country ad-planner change study](country-planner-change-windows-2026.md), [machine publisher window records](country-planner-change-windows-2026.json) and [source alignment audit](../../site/country-planner-change-audit.mjs) distinguish 2025 advertiser estimates from actual real-person, subgroup or creator population growth.
 
 

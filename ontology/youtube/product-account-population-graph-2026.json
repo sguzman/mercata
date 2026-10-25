@@ -1,0 +1,400 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "youtube_google_product_account_and_person_population_graph",
+  "as_of": "2026-10-25",
+  "method": "Compile existing Google and YouTube official documentation about owner/manager permissions, public channel resources, owner Analytics reports, video ads reporting, payment settlement and paid services. Use many-to-many conceptual relationships with no private identity mapping or financial records.",
+  "population": "Product, account, role and measurement definitions only; no unique people or creator cash samples",
+  "source_ids": [
+    "yt-brand-channel-transfer",
+    "api-channels",
+    "yt-studio-channel-permissions",
+    "analytics-audience",
+    "api-metrics",
+    "api-query-params",
+    "gads-organic-paid-video-analytics-2026",
+    "adsense-payment-cycle",
+    "revenue-shares",
+    "youtube-paid-terms-provider-2026",
+    "gads-video-view-cost-2026"
+  ],
+  "nodes": [
+    {
+      "id": "google_account",
+      "label": "Google Account",
+      "kind": "identity",
+      "description": "Authenticated Google sign-in principal",
+      "not_equivalent_to": "Not a unique YouTube creator or a channel",
+      "source_ids": [
+        "yt-brand-channel-transfer"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "brand_account",
+      "label": "Brand Account",
+      "kind": "account_container",
+      "description": "Shared ownership and manager association for a channel",
+      "not_equivalent_to": "Not a distinct human or a view event",
+      "source_ids": [
+        "yt-brand-channel-transfer"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "channel",
+      "label": "YouTube channel",
+      "kind": "publishing_object",
+      "description": "Channel ID and public metadata",
+      "not_equivalent_to": "Not always an active human publisher or paid business",
+      "source_ids": [
+        "api-channels"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "owner",
+      "label": "Creator owner",
+      "kind": "person_or_organization",
+      "description": "Person or business with controlling rights",
+      "not_equivalent_to": "Not deducible from the channel count or subscriber total",
+      "source_ids": [
+        "yt-studio-channel-permissions"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "delegate",
+      "label": "Channel delegate",
+      "kind": "permission_role",
+      "description": "Authorized manager or editor access",
+      "not_equivalent_to": "Not automatically a legal owner, payee or rights holder",
+      "source_ids": [
+        "yt-studio-channel-permissions"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "viewer",
+      "label": "Viewing person",
+      "kind": "human_or_modeled_person",
+      "description": "A signed-in, signed-out or co-viewing person estimated within scope",
+      "not_equivalent_to": "Not identical to a Google Account or one playback event",
+      "source_ids": [
+        "analytics-audience"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "subscription",
+      "label": "Channel subscription",
+      "kind": "relationship",
+      "description": "Account relationship to channel",
+      "not_equivalent_to": "Not a unique active person, order or membership payment",
+      "source_ids": [
+        "api-channels"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "playback",
+      "label": "Video playback",
+      "kind": "event",
+      "description": "Time-scoped legitimate view event",
+      "not_equivalent_to": "Not a unique person, ad payment, or creator wage",
+      "source_ids": [
+        "api-metrics"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "studio",
+      "label": "YouTube Studio",
+      "kind": "creator_app",
+      "description": "Permissioned management and analytics interface",
+      "not_equivalent_to": "Not a separate population of people or advertiser bills",
+      "source_ids": [
+        "yt-studio-channel-permissions"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "analytics_api",
+      "label": "YouTube Analytics API",
+      "kind": "owner_reporting",
+      "description": "Authorized channel metric and dimension reports",
+      "not_equivalent_to": "Not public competitor earnings or all YouTube unique viewers",
+      "source_ids": [
+        "api-query-params"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "data_api",
+      "label": "YouTube Data API",
+      "kind": "resource_reporting",
+      "description": "Public channel/video resources and conditionally authorized actions",
+      "not_equivalent_to": "Not owner-only Analytics or unique human counts",
+      "source_ids": [
+        "api-channels"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "google_ads",
+      "label": "Google Ads",
+      "kind": "ad_campaign",
+      "description": "Paid advertising campaign performance and billing",
+      "not_equivalent_to": "Not YouTube public views or creator net revenues",
+      "source_ids": [
+        "gads-organic-paid-video-analytics-2026"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "adsense",
+      "label": "AdSense for YouTube",
+      "kind": "payout_system",
+      "description": "Conditional finalized publisher payment routing",
+      "not_equivalent_to": "Not an advertising buyer or cash profit before costs",
+      "source_ids": [
+        "adsense-payment-cycle"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "ypp",
+      "label": "YouTube Partner Program",
+      "kind": "eligibility_program",
+      "description": "Approved channel monetization and module eligibility",
+      "not_equivalent_to": "Not a guarantee of positive income",
+      "source_ids": [
+        "revenue-shares"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "paid_customer",
+      "label": "Paid service customer",
+      "kind": "transaction_role",
+      "description": "Consumer buying an applicable YouTube paid product",
+      "not_equivalent_to": "Not every free viewer or channel subscriber",
+      "source_ids": [
+        "youtube-paid-terms-provider-2026"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    },
+    {
+      "id": "advertiser",
+      "label": "Advertiser",
+      "kind": "counterparty",
+      "description": "Entity purchasing video advertising",
+      "not_equivalent_to": "Not a creator by default or video viewer population",
+      "source_ids": [
+        "gads-video-view-cost-2026"
+      ],
+      "measured_unique_people": null,
+      "measured_net_creator_profit": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "google_account",
+      "to": "channel",
+      "kind": "may_manage",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "yt-brand-channel-transfer",
+        "api-channels"
+      ]
+    },
+    {
+      "from": "brand_account",
+      "to": "channel",
+      "kind": "may_enable_shared_management",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "yt-brand-channel-transfer",
+        "api-channels"
+      ]
+    },
+    {
+      "from": "owner",
+      "to": "channel",
+      "kind": "may_control",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "yt-studio-channel-permissions",
+        "api-channels"
+      ]
+    },
+    {
+      "from": "delegate",
+      "to": "channel",
+      "kind": "operates_with_permissions",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "yt-studio-channel-permissions",
+        "api-channels"
+      ]
+    },
+    {
+      "from": "viewer",
+      "to": "playback",
+      "kind": "may_generate_multiple",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "analytics-audience",
+        "api-metrics"
+      ]
+    },
+    {
+      "from": "viewer",
+      "to": "subscription",
+      "kind": "may_enter_relationship",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "analytics-audience",
+        "api-channels"
+      ]
+    },
+    {
+      "from": "subscription",
+      "to": "channel",
+      "kind": "links_to",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "api-channels",
+        "api-channels"
+      ]
+    },
+    {
+      "from": "studio",
+      "to": "channel",
+      "kind": "manages",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "yt-studio-channel-permissions",
+        "api-channels"
+      ]
+    },
+    {
+      "from": "analytics_api",
+      "to": "channel",
+      "kind": "reports_authorized_metrics_for",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "api-query-params",
+        "api-channels"
+      ]
+    },
+    {
+      "from": "data_api",
+      "to": "channel",
+      "kind": "describes_resources_for",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "api-channels",
+        "api-channels"
+      ]
+    },
+    {
+      "from": "google_ads",
+      "to": "playback",
+      "kind": "measures_distinct_billable_ad_events",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "gads-organic-paid-video-analytics-2026",
+        "api-metrics"
+      ]
+    },
+    {
+      "from": "adsense",
+      "to": "ypp",
+      "kind": "processes_conditional_payments_from",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "adsense-payment-cycle",
+        "revenue-shares"
+      ]
+    },
+    {
+      "from": "ypp",
+      "to": "channel",
+      "kind": "reviews_channel_for",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "revenue-shares",
+        "api-channels"
+      ]
+    },
+    {
+      "from": "paid_customer",
+      "to": "channel",
+      "kind": "can_purchase_products_associated_with",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "youtube-paid-terms-provider-2026",
+        "api-channels"
+      ]
+    },
+    {
+      "from": "advertiser",
+      "to": "google_ads",
+      "kind": "buys_campaigns_through",
+      "one_to_one_guaranteed": false,
+      "measured_person_count": null,
+      "source_ids": [
+        "gads-video-view-cost-2026",
+        "gads-organic-paid-video-analytics-2026"
+      ]
+    }
+  ],
+  "rules": [
+    "Google sign-in, Brand Account, YouTube channel and legal publisher are different objects; no one-to-one count can be assumed.",
+    "Studio and the Analytics API serve authorized channel reports, whereas public Data API resource counts cannot expose a competitor's owner earnings.",
+    "Advertiser-side Google Ads view/billing events and YouTube public/engaged playback counts have different definitions.",
+    "AdSense for YouTube settles conditional earnings, which are different from advertiser invoices and creator profit after costs.",
+    "Channel subscribers, people watching, paid service customers and advertisers are overlapping but not interchangeable populations.",
+    "An account delegate may operate one or more channels without automatically becoming the payee or sole legal owner.",
+    "No individual or channel credentials, linked unique identifiers, earnings or consumer histories were queried."
+  ],
+  "unmeasured": {
+    "google_accounts_per_creator_person": null,
+    "channels_per_unique_person": null,
+    "active_creators": null,
+    "paid_creators": null,
+    "viewers_per_channel": null,
+    "subscribers_who_purchase": null,
+    "actual_creator_net_profit": null
+  }
+}
