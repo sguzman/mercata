@@ -2227,6 +2227,29 @@ function renderChannelCohorts(model,dossier){
   card.append(audienceSources([s.source_id],dossier));grid.append(card);
  }
  details.append(grid);
+ const cross=model.niche_maturity_contrasts;
+ if(cross?.kind==='new_vs_established_conditional_niche_crosswalk'){
+  const group=make('div','niche-maturity-evidence');
+  group.append(make('h5','','Newer versus established channels: two distinct vendor samples'));
+  const tube=cross.tubeai,band=tube.selected_band;
+  group.append(make('p','measure-limit',
+    'TubeAI curated active 10k+ subscriber channels: '+tube.new_at_10k.toLocaleString('en-US')+
+    ' of '+tube.eligible_indexed_10k_channels.toLocaleString('en-US')+' indexed channels were created in 2024 or later. Not the chance of success for a newcomer.'));
+  const selected=tube.niches.filter(n=>['ai_machine_learning','gaming','animation_vfx'].includes(n.id));
+  group.append(make('p','measure-limit',selected.map(n=>
+    n.label+': '+n.published_newer_share_percent+'% of indexed active 10k+ channels are newer'
+   ).join(' · ')+'. These are outcome-conditioned shares, not probabilities of building a successful channel.'));
+  group.append(make('p','measure-limit','Within already-successful 10k–99k subscriber accounts, '+band.newer.channels.toLocaleString('en-US')+
+   ' newer channels had a median catalog of '+band.newer.median_public_catalog_videos+
+   ' videos, versus '+band.older.median_public_catalog_videos+' among '+band.older.channels.toLocaleString('en-US')+
+   ' older channels. Channel age and selection are confounded.'));
+  const vi=cross.vidiq;
+  group.append(make('p','measure-limit','Separate vidIQ 360-day selected newer gaming cohort ('+vi.indexed_channels.toLocaleString('en-US')+
+   ' channels): '+vi.niches.map(n=>n.id.replaceAll('_',' ')+': '+n.published_1k_percent+'% ended at 1k+ subscribers').join(' · ')+
+   '. Not a matched mature cohort, representative newcomer odds, YouTube Partner Program outcome or creator profit.'));
+  group.append(audienceSources([tube.source_id,vi.source_id],dossier));
+  details.append(group);
+ }
  details.append(make('p','measure-limit','Separate July distribution: '+m.included_channels.toLocaleString('en-US')+' indexed channels with at least one subscriber. The group comparisons do not prove uploading causes growth or that creators earn money.'));
  const link=make('a','inline-link','Read cohort sampling, percentages and non-causal limitations ↗');
  link.href='./ontology/youtube/channel-cohort-observations-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;

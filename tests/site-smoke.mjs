@@ -204,6 +204,12 @@ try{
       assert((await section.textContent()).includes(phrase),'Missing uncertainty boundary in '+selector);
     }
 
+    const nicheMaturity=page.locator('.channel-cohort-evidence .niche-maturity-evidence');
+    assert.equal(await nicheMaturity.count(),1,'Missing bounded new/mature channel niche evidence');
+    assert((await nicheMaturity.textContent()).includes('TubeAI curated active 10k+ subscriber channels'));
+    assert((await nicheMaturity.textContent()).includes('Gaming: 13.7%'));
+    assert((await nicheMaturity.textContent()).includes('roblox: 42.32%'));
+    assert((await nicheMaturity.textContent()).includes('Not a matched mature cohort'));
     await ownership.locator('.ownership-details > summary').click();
     assert((await ownership.textContent()).includes('seven-day role tenure'));
     assert((await ownership.textContent()).includes('permanently delete the target channel'));

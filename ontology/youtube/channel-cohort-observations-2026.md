@@ -38,3 +38,23 @@ The source says this is a **360-day** two-endpoint comparison, **not** a record 
 The two studies and an [earlier vidIQ upload-frequency study](publishing-cadence-evidence.md) may draw from overlapping vendor coverage and must not be added as distinct samples of people or claimed to independently replicate the same outcome. Representative zero-subscriber entrants, inactive/deleted channels, distinct owner counts, native payouts, costs, hours, causal uplift and an all-channel frequency distribution remain **unknown**.
 
 The audit checks all subgroup counts sum exactly to the publisher totals, cumulative milestones decrease appropriately, and **published percentages are rounded**. It explicitly rejects a monetization or causal interpretation of threshold crossing.
+
+## Newer versus established channels: niche-conditional vendor studies (September 2026)
+
+The following two selected studies address different questions. **Neither is a representative sample of all new channels.**
+
+**TubeAI's [September 2026 niche analysis](https://tubeai.app/blog/youtube-growth/too-late-to-start-youtube)** selects **122,341 vendor-served creator channels** with at least **10,000 subscribers** and an upload in the prior 180 days. Of them, 14,624 were created on or after January 1, 2024. Its category table describes **newer channels' fraction among currently successful, still-active, indexed channels**, not the fraction of all new entrants who succeeded.
+
+| Selected niche | All active, indexed channels with 10k+ | Newer (created 2024+) | Newer fraction |
+| --- | ---: | ---: | ---: |
+| AI & Machine Learning | 990 | 245 | 24.7% |
+| History & Society | 1,588 | 357 | 22.5% |
+| Gaming | 24,958 | 3,420 | 13.7% |
+| Animation & VFX | 3,931 | 573 | 14.6% |
+
+Among **80,139 selected channels** with 10k–99,999 subscribers, the source reports 11,928 newer and 68,211 older channels. Their reported medians were **146 versus 410 catalog videos** and **17,622 versus 10,474 average views per video**; median subscriber counts were **22,400 versus 26,300**. These are success- and activity-conditioned descriptive measures, not causal estimates of whether an older or newer *initially comparable* channel can grow. The article identifies its writer as a vendor AI strategist; the vendor's stated measurements have not been independently audited against raw data. Its article metadata says published September 27, with data queried September 28, 2026; do not imply an earlier query time.
+
+In contrast, [vidIQ's September 2026 360-day niche cohort](https://vidiq.com/research/minecraft-roblox-small-creators/) follows **36,163 selected newer gaming channels** (age at baseline ≤365 days, below 1,000 subscribers, and meeting initial content/metadata filters). Endpoint ≥1,000 subscriber counts were **718/2,752 Minecraft (26.09%)**, **1,102/2,604 Roblox (42.32%)** and **4,977/30,807 other gaming (16.16%)**. The respective endpoint ≥10,000 counts were **75, 136 and 400**. These figures are conditional on a *different* provider's inclusion criteria, not the startup odds of all new creators and not a matched established-channel comparison. A channel account's age is not a creator's first upload or first professional activity.
+
+**Do not pool these datasets.** TubeAI's composition is conditional on already reaching 10k subscribers and staying active; vidIQ's endpoint counts are conditional on vendor-indexed, initially small, eligible newer gaming channels. Even the gaming labels and age-selection definitions differ. The studies cannot determine a universal least-crowded niche, creator earnings, causal upload frequency, creator-exit rate, all-newcomer survival curve, or probability that a person launching a new channel will succeed. Those remain `null` in the machine record.
+

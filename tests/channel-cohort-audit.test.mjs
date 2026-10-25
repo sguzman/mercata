@@ -26,3 +26,29 @@ test('Published 360-day subgroup bin estimates are conditional observations only
  assert.equal(m.datasets[2].actual_upload_events_observed,false);
  assert(m.prohibited_interpretations.some(x=>x.includes('causes')));
 });
+
+test('Two distinct newer/mature niche vendor frames remain conditional and cannot be pooled',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/channel-cohort-observations-2026.json'),load('specimens/youtube.json')]);
+ const x=m.niche_maturity_contrasts;
+ assert.equal(x.tubeai.eligible_indexed_10k_channels,122341);
+ assert.equal(x.tubeai.selected_band.newer.channels+x.tubeai.selected_band.older.channels,80139);
+ assert.equal(x.tubeai.niches.find(n=>n.id==='gaming').published_newer_share_percent,13.7);
+ assert.equal(x.vidiq.indexed_channels,36163);
+ assert.deepEqual(x.vidiq.niches.map(n=>n.endpoint_1k),[718,1102,4977]);
+ assert.equal(x.cross_dataset.probability_an_newcomer_reaches_10k,null);
+ assert.equal(x.cross_dataset.sampling_frames_equivalent,false);
+ assert.deepEqual(auditChannelCohorts(m,new Set(d.evidence.map(s=>s.id))),{valid:true,errors:[]});
+});
+test('Niche maturity audit rejects fabricated newcomer odds or misreported conditional denominators',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/channel-cohort-observations-2026.json'),load('specimens/youtube.json')]);
+ const known=new Set(d.evidence.map(s=>s.id));
+ const a=structuredClone(m);
+ a.niche_maturity_contrasts.tubeai.niches[0].newer_10k_active_channels=1000;
+ assert(auditChannelCohorts(a,known).errors.includes('invalid conditional niche composition'));
+ const b=structuredClone(m);
+ b.niche_maturity_contrasts.vidiq.niches[1].endpoint_1k=800;
+ assert(auditChannelCohorts(b,known).errors.includes('newer gaming endpoint count/rate mismatch'));
+ const c=structuredClone(m);
+ c.niche_maturity_contrasts.cross_dataset.probability_an_newcomer_reaches_10k=0.25;
+ assert(auditChannelCohorts(c,known).errors.includes('incompatible vendor frames conflated'));
+});
