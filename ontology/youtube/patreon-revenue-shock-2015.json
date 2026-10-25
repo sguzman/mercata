@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "historical_patreon_subscription_shock_natural_experiment",
+  "reviewed_at": "2026-10-24",
+  "publication_year": 2026,
+  "publication_venue": "Information Economics and Policy 72 (June 2026), article 101163",
+  "doi": "10.1016/j.infoecopol.2026.101163",
+  "source_ids": [
+    "panjwani-xiong-patreon-revenue-shock-2026"
+  ],
+  "study_population": {
+    "definition": "YouTube channels monetizing through Patreon before the widely publicized 2015 hack-related extortion versus later Patreon-adopting YouTubers not on Patreon during comparison",
+    "treated_group_n": null,
+    "control_group_n": null,
+    "countries_covered": null,
+    "all_youtube_channels_representative": false,
+    "current_2026_entrant_sample": false
+  },
+  "shock": {
+    "initial_cyberattack_period": "2015-09",
+    "public_extortion_campaign_period": "2015-11",
+    "payment_path": "Patreon viewer subscription payments",
+    "metric": "treated_prepost_mean_patreon_monthly_revenue",
+    "reported_change_percent": -33.59,
+    "control_adjusted_effect_same_estimate": false
+  },
+  "identification": {
+    "model": "difference_in_differences",
+    "treatment": "pre-attack Patreon creators subject to disruption",
+    "comparison": "later adopters who had no Patreon account during evaluated period",
+    "robustness": [
+      "coarsened_exact_matching_on_pre_period_views_likes_dislikes_comments",
+      "synthetic_difference_in_differences",
+      "treated_only_prepost_comparison"
+    ],
+    "parallel_trends_universally_proven": false,
+    "causal_interpretation": "supported_conditional_on_identification_assumptions"
+  },
+  "results": [
+    {
+      "id": "video_output",
+      "metric": "monthly_video_output",
+      "reported_effect_percent": -7.7,
+      "comparison": "conservative difference-in-differences estimate",
+      "duration_post_event_months_reported": 7,
+      "inference_class": "study_identified_estimate_conditional",
+      "unit": "relative_percent_change",
+      "actual_creator_net_profit": null
+    },
+    {
+      "id": "affiliate_links",
+      "metric": "affiliate_link_frequency_or_share",
+      "direction": "increase",
+      "effect_size_percent": null,
+      "inference_class": "treated_vs_control_change_conditional"
+    },
+    {
+      "id": "sponsorship",
+      "metric": "sponsored_content_occurrence",
+      "direction": "increase",
+      "effect_size_percent": null,
+      "inference_class": "treated_vs_control_change_conditional"
+    },
+    {
+      "id": "ad_break_proxy",
+      "metric": "duration_at_least_10_minutes_historical_ad_break_proxy",
+      "direction": "no_statistically_significant_increase",
+      "effect_size_percent": null,
+      "inference_class": "historical_threshold_proxy_not_actual_ad_impressions"
+    },
+    {
+      "id": "engagement",
+      "metric": "video_views_and_engagement",
+      "direction": "no_statistically_significant_adverse_change",
+      "effect_size_percent": null,
+      "inference_class": "non_rejection_not_zero_effect"
+    }
+  ],
+  "heterogeneity": [
+    {
+      "id": "high_viewership_top_decile",
+      "population": "creators in top decile of average pre-period viewership",
+      "reported_strategy": "additional_sponsored_content",
+      "incremental_sponsor_cash": null
+    },
+    {
+      "id": "outside_top_decile",
+      "population": "other sampled creators",
+      "reported_strategy": "additional_affiliate_links",
+      "incremental_affiliate_cash": null
+    },
+    {
+      "id": "less_commercial_categories",
+      "population": "education_news_science_nonprofit_activism",
+      "reported_strategy": "advertising_shift_largely_absent",
+      "causal_niche_comparison_verified": false
+    }
+  ],
+  "interpretation_gates": [
+    "2015 Patreon subscriber loss is a historically dated shock, not a forecast of present-day YouTube memberships or security conditions.",
+    "33.59% is the treated sample's revenue change; do not call it the DiD causal estimate or use it as a universal Patreon churn rate.",
+    "7.7% is a conservative regression-based relative decline in publication frequency conditional on parallel trends, selection, model and matching assumptions.",
+    "Affiliate and sponsorship increase describe observable incidence and link mentions, not confirmed advertiser-paid gross or creator net income.",
+    "Historical 10-minute video-duration indicator proxies ad-roll eligibility; it cannot establish actual ad placement, impression count or creator advertising revenue.",
+    "Absence of a statistically significant viewership change is not evidence of zero economic audience cost.",
+    "Early- versus later-Patreon-adopter groups are not a random sample of all YouTube entrants and may differ in reach, content, locale and production costs."
+  ],
+  "unmeasured": {
+    "individual_creator_monthly_payments": null,
+    "treated_creator_count": null,
+    "control_creator_count": null,
+    "mean_net_creator_profit": null,
+    "actual_sponsor_invoice_value": null,
+    "incremental_affiliate_commission": null,
+    "actual_midroll_impression_count": null,
+    "creator_work_hours": null,
+    "new_creator_2026_causal_effect": null
+  },
+  "recommended_followup": "If creator-authorized data become available, measure gross sponsorship, affiliate receipts, native ad payouts, recurrent fan receipts and net labor/cash costs as independent revenue components, with dated counterfactual comparison."
+}

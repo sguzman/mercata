@@ -128,6 +128,10 @@ The [CreatorDB/vidIQ channel-sample crosswalk](creator-index-comparison-2026.md)
 
 The [AIR native-RPM niche comparison](rpm-niche-quartile-crosswalk-2026.md), [machine quartiles](rpm-niche-quartile-crosswalk-2026.json) and [source reconciliation tests](../../tests/rpm-niche-quartile-crosswalk.test.mjs) document genre-specific median/p25/p75 rates from the existing 300-channel monetized AIR dataset. It is not a representative income comparison, includes no zero-earners, and cannot rank niche net profit without matched audience, expenses and creative labor.
 
+## Historical Patreon subscriber-loss shock and advertising substitution
+
+The [peer-reviewed Patreon subscription shock study](patreon-revenue-shock-2015.md), [machine design/estimates record](patreon-revenue-shock-2015.json), and [regression tests](../../tests/patreon-revenue-shock.test.mjs) distinguish a 2015 treated-group decline in Patreon receipts (33.59%) from a conservative comparative decline in video output (7.7%). Affiliate and sponsorship use changed but actual sales proceeds, profitability and creator labor remain unobserved. The public site presents the dated study and its limitations.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

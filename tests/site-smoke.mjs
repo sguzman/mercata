@@ -105,6 +105,7 @@ try{
       ['.first-upload-vlog',4,'no YouTube payouts'],
       ['.external-link-funnel',7,'no test has been launched'],
       ['.retention-observability',11,'full-video completion fraction'],
+      ['.patreon-shock-study',4,'creator labor and profit are unknown'],
       ['.crossplatform-posting',4,'no viewer migration measured'],
       ['.gaming-period-study',4,'external migration remain unknown'],
       ['.search-demand-proxies',4,'No absolute monthly searches'],

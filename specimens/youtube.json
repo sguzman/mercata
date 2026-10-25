@@ -2946,6 +2946,17 @@
       "evidence_class": "commercial_vendored_public_channel_index_and_growth_metrics",
       "license": "Original provider research linked and independently summarized aggregate tables; no underlying channel data copied",
       "notes": "Sample of 2,153,140 indexed YouTube channels >=1,000 subscribers. Growth data snapshot one 30-day window. Classification of audience, engagement and countries is proprietary and conditional on data availability; not a full YouTube census. Overlap with vidIQ unknown."
+    },
+    {
+      "id": "panjwani-xiong-patreon-revenue-shock-2026",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167624526000053",
+      "title": "The effect of subscription revenue on content creation and advertising strategies",
+      "publisher": "Information Economics and Policy / Elsevier",
+      "published_at": "2026-06",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "peer_reviewed_natural_experiment_2015_patreon_shock_youtube_creator_output",
+      "license": "Publisher-hosted study linked; independently paraphrased, aggregate results only, no protected charts or transcripts copied",
+      "notes": "Historical 2015 Patreon data-breach revelation used as an unexpected earnings shock. Selected early Patreon YouTubers compared with later Patreon joiners using difference-in-differences, matching and synthetic DiD. 33.59% observed treatment revenue drop; conservative 7.7% modeled output decline. Exact channel counts and intervals not independently established in readable publisher summary."
     }
   ],
   "claims": [
@@ -6257,6 +6268,46 @@
       "observed_at": "2026-10-24",
       "confidence": "medium",
       "limitations": "The index’s broad primary-category taxonomy excludes other overlapping interests, channel coverage and completeness differ by genre, and category counts do not measure demand or profitability."
+    },
+    {
+      "id": "panjwani-xiong-2015-patreon-shock-income",
+      "text": "In a YouTuber cohort studied by Panjwani and Xiong (2026), monthly Patreon receipts fell 33.59% from the treated group's prior baseline around disclosure and extortion following the 2015 Patreon cyberattack. This is a historical conditional-group change, not a platform-wide decline or a verified counterfactual income effect.",
+      "source_ids": [
+        "panjwani-xiong-patreon-revenue-shock-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "2026 journal publication analyzes 2015-era shock and selected early/later Patreon adopting YouTubers; precise study sample counts and standard errors unconfirmed from publisher text, and results are not universal content-policy or profit estimates."
+    },
+    {
+      "id": "panjwani-xiong-2015-shock-output",
+      "text": "The paper's conservative difference-in-differences robustness estimate finds a 7.7% reduction in monthly YouTube video output among sampled creators after the Patreon subscription-revenue shock relative to later Patreon joiners, with output depressed through seven post-shock months. Causal interpretation depends on the natural-experiment design assumptions.",
+      "source_ids": [
+        "panjwani-xiong-patreon-revenue-shock-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "2026 journal publication analyzes 2015-era shock and selected early/later Patreon adopting YouTubers; precise study sample counts and standard errors unconfirmed from publisher text, and results are not universal content-policy or profit estimates."
+    },
+    {
+      "id": "panjwani-xiong-2015-ads-substitution",
+      "text": "After the sampled Patreon revenue shock, affected YouTubers increased affiliate promotion and sponsored-content incidence while the paper found no significant rise in ad-break frequency proxied by crossing a historical 10-minute duration threshold. The paper reports top-decile viewed channels favored sponsorship while lower-view channels favored affiliate links; neither proves incremental profit.",
+      "source_ids": [
+        "panjwani-xiong-patreon-revenue-shock-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "2026 journal publication analyzes 2015-era shock and selected early/later Patreon adopting YouTubers; precise study sample counts and standard errors unconfirmed from publisher text, and results are not universal content-policy or profit estimates."
+    },
+    {
+      "id": "panjwani-xiong-2015-limited-adverse-engagement",
+      "text": "The study did not find statistically significant adverse viewership or engagement effects accompanying increased affiliate and sponsorship advertising in its historical treated creator comparison. Nonsignificance does not establish zero effect or predict audience response to present-day promotions.",
+      "source_ids": [
+        "panjwani-xiong-patreon-revenue-shock-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "2026 journal publication analyzes 2015-era shock and selected early/later Patreon adopting YouTubers; precise study sample counts and standard errors unconfirmed from publisher text, and results are not universal content-policy or profit estimates."
     }
   ],
   "observations": [],
