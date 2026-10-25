@@ -105,6 +105,7 @@ try{
       ['.first-upload-vlog',4,'no YouTube payouts'],
       ['.external-link-funnel',7,'no test has been launched'],
       ['.retention-observability',11,'full-video completion fraction'],
+      ['.crossplatform-posting',4,'no viewer migration measured'],
       ['.search-demand-proxies',4,'No absolute monthly searches'],
       ['.production-cost-audit',5,'No representative equipment costs'],
       ['.exclusive-rights-audit',5,'No actual creator contract'],

@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "crossplatform_publishing_vs_audience_migration",
+  "as_of": "2026-10-24",
+  "status": "observed_selected_saas_posts_and_historical_creator_response_no_measured_follower_migration",
+  "source_ids": [
+    "shortsync-crossposting-oct16-2026",
+    "abolfathi-youtube-twitch-2025"
+  ],
+  "scope": "Comparison research only; no marketplace specimen added for ShortSync, Twitch, TikTok or Instagram.",
+  "vendor_posting_snapshot": {
+    "source_id": "shortsync-crossposting-oct16-2026",
+    "window_start": "2025-11-04",
+    "window_end": "2026-10-16",
+    "published_snapshot": "2026-10-16",
+    "creators": 6175,
+    "uploads": 66318,
+    "successful_post_events": 199276,
+    "pre_scheduled_post_fraction_percent": 67,
+    "share_uploads_multi_platform_percent": 76,
+    "share_uploads_three_plus_platforms_percent": 58,
+    "successful_youtube_posts_share_percent": 18,
+    "successful_youtube_posting_creators": 1749,
+    "multiplatform_uploads": 50175,
+    "multiple_platform_pair_percent": [
+      {
+        "pair": "Instagram+YouTube",
+        "percent": 56
+      },
+      {
+        "pair": "TikTok+YouTube",
+        "percent": 55
+      },
+      {
+        "pair": "Facebook+YouTube",
+        "percent": 36
+      }
+    ],
+    "upload_destinations_distribution": [
+      {
+        "platforms": 1,
+        "percent": 24
+      },
+      {
+        "platforms": 2,
+        "percent": 18
+      },
+      {
+        "platforms": 3,
+        "percent": 23
+      },
+      {
+        "platforms": 4,
+        "percent": 19
+      },
+      {
+        "platforms": "5+",
+        "percent": 16
+      }
+    ],
+    "selection": "Creators using a cross-posting service, disproportionately multiplatform, not a random sample",
+    "denominator_warning": "Platform share is share of posts; pair shares are among 50,175 multi-platform uploads; an upload generates one or more successful post events.",
+    "excluded": [
+      "drafts",
+      "failed posts",
+      "imports of historic posts"
+    ],
+    "license": "CC BY 4.0 for published aggregate figures",
+    "audience_viewers_observed": null,
+    "measured_cross_platform_follower_migration": null
+  },
+  "historical_competition_paper": {
+    "source_id": "abolfathi-youtube-twitch-2025",
+    "published_at": "2025-09-11",
+    "event_date": "2016-09",
+    "event": "Twitch Prime exposure increase after Amazon Prime bundling",
+    "population": "studied YouTube and Twitch content creators single-homing versus multihoming; historical competitive shock",
+    "design": "quasi-experimental difference in observed relative creator responses; theoretical game model",
+    "publisher_conclusion": "After exposure increased, sampled multihomers reduced effort and underperformed relative to single-homers",
+    "causal_transport_to_2026_shorts_verified": false,
+    "reported_per_creators_cash_proceeds": null,
+    "observed_viewer_migrations": null,
+    "notes": "Not evidence every channel should single-home; channel incentives and competitive context differ."
+  },
+  "mechanism_gates": [
+    {
+      "id": "multi_destination_publish",
+      "observed_in_vendor_sample": true,
+      "measured_audience_shift": false
+    },
+    {
+      "id": "external_platform_referral",
+      "observed_in_vendor_sample": false,
+      "measured_audience_shift": false
+    },
+    {
+      "id": "consented_same_person_overlap",
+      "observed_in_vendor_sample": false,
+      "measured_audience_shift": false
+    },
+    {
+      "id": "attributed_cross_platform_arrival",
+      "observed_in_vendor_sample": false,
+      "measured_audience_shift": false
+    },
+    {
+      "id": "paid_cross_platform_retention",
+      "observed_in_vendor_sample": false,
+      "measured_audience_shift": false
+    }
+  ],
+  "decision_protocol": [
+    "Export legally eligible owned assets independently from audiences, followers, watch histories and platform recommendations.",
+    "Measure creator publication effort, original vs cross-posted videos, rights and device-specific content compatibility.",
+    "Use opt-in first-party links or legitimately reported aggregate referral categories; never infer a cross-platform journey from reused hashtags or similar profile names.",
+    "Preregister target destination, identical time units, creator cohorts, acceptable cost and actual net receipts.",
+    "Account for simultaneous posting and selection into a cross-posting tool; no causal uplift without an appropriate counterfactual.",
+    "Do not pool the 2016 Twitch Prime event with October 2026 ShortSync publishing logs as if they measured one audience."
+  ],
+  "unmeasured": {
+    "distinct_youtube_creators_crossposting_rate": null,
+    "distinct_platform_migrating_viewers": null,
+    "youtube_to_tiktok_conversion": null,
+    "youtube_to_twitch_conversion": null,
+    "relative_impression_lift": null,
+    "causal_crosspost_net_profit": null,
+    "true_creator_switching_hours": null
+  }
+}

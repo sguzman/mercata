@@ -100,6 +100,10 @@ The [source-aligned change chronology](policy-measurement-change-crosswalk.md), 
 
 The [India, Indonesia, Japan and Philippines 2025 country research](country-ad-reach-comparisons.md), [machine country observations](country-ad-reach-comparisons.json) and [unit validation](../../tests/country-ad-reach-comparisons.test.mjs) preserve publisher-reported end-2024 to 2025 ad-planner change estimates, without relabeling them as unique viewers, national creator populations, or revenue. These values supplement previously established US/Mexico/Brazil ad reach separately from surveys.
 
+## Multi-platform uploads and actual viewer movement
+
+The [bounded crossposting observation and historical YouTube–Twitch study](crossplatform-posting-evidence.md), [machine source frames](crossplatform-posting-evidence.json) and [provenance tests](../../tests/crossplatform-posting-audit.test.mjs) establish multi-destination **publishing events** in a commercial service and distinct creator responses to competition. They do not verify any modern cross-site viewer migration, additional buyers or causal creator profit. No other marketplace specimen was added.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

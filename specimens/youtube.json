@@ -2869,6 +2869,28 @@
       "evidence_class": "google_youtube_country_ad_planning_estimates",
       "license": "Numerical observations independently summarized with source attribution, no media copied",
       "notes": "2026 report contains late-2025 ad planning estimate and publisher-stated change; not a unique-user census."
+    },
+    {
+      "id": "shortsync-crossposting-oct16-2026",
+      "url": "https://www.shortsync.app/data/short-form-posting-report",
+      "publisher": "ShortSync",
+      "title": "Short-form video posting report",
+      "published_at": "2026-10-16",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commercial_saas_self_selected_publishing_log_aggregate",
+      "license": "ShortSync states CC BY 4.0 for published figures; credit and source link retained",
+      "notes": "Snapshot as displayed for October 16, 2026: 6,175 creators, 66,318 uploads, 199,276 successful posts. Rolling updated figures; not representative of all YouTube creators. Disjoint uploads vs post events."
+    },
+    {
+      "id": "abolfathi-youtube-twitch-2025",
+      "url": "https://doi.org/10.1002/smj.70016",
+      "publisher": "Strategic Management Journal / Niloofar Abolfathi",
+      "title": "Multihoming and single-homing complementors' responses to intensified between-platform competition: Evidence from the YouTube–Twitch rivalry",
+      "published_at": "2025-09-11",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "peer_reviewed_historical_platform_competition_quasi_experiment",
+      "license": "Open-access publisher page linked; independently summarized without copying figures",
+      "notes": "Analyzes September 2016 Twitch Prime launch and differential creator responses, not a contemporary audience migration count or 2026 causal upload strategy estimate."
     }
   ],
   "claims": [
@@ -6027,6 +6049,36 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Advertising planner estimates can be revised and may differ from active person counts; this is not an income or creator estimate."
+    },
+    {
+      "id": "shortsync-2026-selective-crosspost-logs",
+      "text": "ShortSync's October 16, 2026 vendor report counts 199,276 successful cross-platform posts from 66,318 uploaded videos by 6,175 tool users. Its upload-level table reports 76% posted to multiple platforms; this tool-user rate is not a population-wide YouTube creator multihoming percentage.",
+      "source_ids": [
+        "shortsync-crossposting-oct16-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Publisher explicitly warns of self-selection toward cross-posters, failed/draft and imported-account history exclusion, variable monthly observation windows, and a rolling page whose numbers can change."
+    },
+    {
+      "id": "shortsync-2026-youtube-crosspost-vs-viewer-migration",
+      "text": "In ShortSync's October 16 snapshot, YouTube accounts for 18% of successful post events; among multi-platform uploads, 56% include an Instagram+YouTube pair and 55% a TikTok+YouTube pair. Posting the same video to two platforms does not establish that any viewer moved between them.",
+      "source_ids": [
+        "shortsync-crossposting-oct16-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Multiple pairs can describe the same upload and are not disjoint. Post shares are not user/audience shares, and no deduplicated view or cross-service consumer journey is observed."
+    },
+    {
+      "id": "abolfathi-2025-historical-multihoming-responses",
+      "text": "Abolfathi's peer-reviewed YouTube–Twitch analysis uses Twitch Prime's September 2016 exposure change to compare single-platform and dual-platform creator behavior; it reports lower relative production effort and weaker outcomes for multihomers after the shock, rather than an unconditional advantage to cross-posting.",
+      "source_ids": [
+        "abolfathi-youtube-twitch-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Historical gaming-streaming context and identification assumptions limit transport to 2026 Shorts cross-posting. The paper does not measure an actual creator's cross-platform follower migration or monetization conversion."
     }
   ],
   "observations": [],
