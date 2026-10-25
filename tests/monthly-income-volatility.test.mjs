@@ -11,7 +11,8 @@ const month=(month,changes={})=>({month,platform_posted_net:0,platform_issued:0,
  refunds_paid:0,production_cash_paid:0,marketing_cash_paid:0,admin_cash_paid:0,
  hours_production:0,hours_marketing:0,hours_admin:0,published_video_count:0,payment_hold:false,...changes});
 test('Public protocol reuses original official sources without inventing recipient data',()=>{
- assert.equal(model.source_ids.length,3);
+ assert.equal(model.source_ids.length,4);
+ assert(model.source_ids.includes('academic-youtube-patreon-income-2026'));
  assert(model.source_ids.every(id=>dossier.evidence.some(s=>s.id===id)));
  assert.equal(model.minimum_complete_months,3);
  assert.equal(model.authorized_observation_rows.length,0);
