@@ -1,3 +1,20 @@
+test('Alphabet company-wide annual revenue bound stays separate from GDP impacts and payouts',async()=>{
+ const m=await load('ontology/youtube/alphabet-youtube-ads-sec-2026.json');
+ const total=m.disclosed_2025_total;
+ assert(m.source_ids.includes(total.source_id));
+ assert.equal(total.total_usd_millions_exact,null);
+ assert.equal(total.disclosed_strict_lower_bound_usd_millions,60000);
+ assert.equal(total.annual_advertising_component_usd_millions,40367);
+ assert.equal(total.derived_non_ad_subscription_component_strict_lower_bound_usd_millions,19633);
+ assert.equal(total.disclosed_strict_lower_bound_usd_millions-total.annual_advertising_component_usd_millions,
+   total.derived_non_ad_subscription_component_strict_lower_bound_usd_millions);
+ assert.equal(total.distinct_from_us_gdp_value_added,true);
+ assert.equal(total.distinct_from_youtube_direct_creator_payouts,true);
+ assert.equal(total.specific_youtube_subscription_revenue_exact,null);
+ assert.equal(total.membership_revenue_exact,null);
+ assert.equal(total.subscriber_population,null);
+});
+
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';

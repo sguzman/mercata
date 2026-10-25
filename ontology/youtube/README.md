@@ -42,7 +42,7 @@ The [Oxford Economics creator, business and user survey frame](oxford-creator-im
 
 ## SEC annual versus interim YouTube advertising revenue
 
-The [Alphabet advertising-revenue filings study](alphabet-youtube-ads-sec-2026.md) and [dated accounting observations](alphabet-youtube-ads-sec-2026.json) distinguish 2023–2025 reported annual revenue, 2025–2026 second-quarter and half-year reports. The [period auditor](../../site/alphabet-ad-revenue-audit.mjs) prevents adding overlapping half-year and quarterly values or using corporate advertising revenues as creator payouts. YouTube subscriptions, typical creator earnings, the 2026 full year and viewer populations are not measured by these filings.
+The [Alphabet advertising-revenue filings study](alphabet-youtube-ads-sec-2026.md) and [dated accounting observations](alphabet-youtube-ads-sec-2026.json) distinguish 2023–2025 reported annual revenue, 2025–2026 second-quarter and half-year reports, and the separately disclosed strict 2025 ad-plus-subscription revenue lower bound above USD 60 billion. The [period auditor](../../site/alphabet-ad-revenue-audit.mjs) prevents adding overlapping half-year and quarterly values or using corporate advertising revenues as creator payouts. YouTube subscriptions, typical creator earnings, the 2026 full year and viewer populations are not measured by these filings.
 
 ## Global and country audience measurement
 

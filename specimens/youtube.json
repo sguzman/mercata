@@ -3023,6 +3023,17 @@
       "evidence_class": "official_sec_filing_interim_unaudited_revenue_table",
       "license": "SEC filing linked; independently paraphrased accounting figures, no copied report images",
       "notes": "YouTube ads USD millions: Q2 2025 9,796 / Q2 2026 11,055; H1 2025 18,723 / H1 2026 20,938. Q2 included in H1."
+    },
+    {
+      "id": "alphabet-2025-q4-earnings-youtube-total",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/googexhibit991q42025.htm",
+      "publisher": "Alphabet Inc. / U.S. SEC EDGAR",
+      "title": "Alphabet Announces Fourth Quarter and Fiscal Year 2025 Results — Exhibit 99.1",
+      "published_at": "2026-02-04",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_sec_furnished_earnings_release",
+      "license": "SEC-furnished corporate earnings release linked; brief numeric facts paraphrased",
+      "notes": "Reports >USD 60 billion YouTube 2025 revenue across ads and subscriptions, not the distinct Oxford >USD 60 billion U.S. GDP impact estimate. Includes mixed subscription products, not all direct creator payments."
     }
   ],
   "claims": [
@@ -6508,6 +6519,17 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Simple nominal USD revenue growth, not inflation-adjusted, causal effects, viewership growth, creator earnings growth, or all-stream YouTube revenue."
+    },
+    {
+      "id": "alphabet-2025-youtube-total-over-60b",
+      "text": "Alphabet's February 2026 SEC-furnished earnings release reports that 2025 YouTube advertising-plus-subscription revenue exceeded USD 60 billion. Given separately reported 2025 YouTube advertising revenue of USD 40.367 billion, the broad subscription component implied by those two annual statements is greater than USD 19.633 billion, not an exact figure or verified channel-membership revenue.",
+      "source_ids": [
+        "alphabet-2025-q4-earnings-youtube-total",
+        "alphabet-2025-form10k-youtube-ads"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "The strict bound includes YouTube subscription categories with different economics, including consumer services and television; neither subscriptions nor creator payments are separately itemized in the SEC revenue table. This is not the similarly sized commissioned U.S. GDP economic-impact estimate."
     }
   ],
   "observations": [],

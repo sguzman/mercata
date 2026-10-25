@@ -5,7 +5,8 @@
   "as_of": "2026-10-24",
   "source_ids": [
     "alphabet-2025-form10k-youtube-ads",
-    "alphabet-2026-q2-form10q-youtube-ads"
+    "alphabet-2026-q2-form10q-youtube-ads",
+    "alphabet-2025-q4-earnings-youtube-total"
   ],
   "reported_currency": "USD",
   "reported_unit": "millions_of_us_dollars",
@@ -108,7 +109,11 @@
     "These are Alphabet corporate YouTube advertising revenues, not YouTube creator payouts, platform GMV, unique viewers, impressions, average creator income or profits.",
     "Google subscriptions, platforms and devices is a combined line, not a separately disclosed YouTube Premium or channel-memberships allocation.",
     "Do not divide these totals by sampled channel counts, registered accounts, viewer estimates or users to manufacture creator RPM.",
-    "2025 10-K is annual reporting; 2026 10-Q is unaudited quarterly reporting, with different fiscal and reporting periods."
+    "2025 10-K is annual reporting; 2026 10-Q is unaudited quarterly reporting, with different fiscal and reporting periods.",
+    "Alphabet's February 2026 earnings release states full-year 2025 YouTube revenue across advertising and subscriptions exceeded USD 60 billion. This is a strict lower bound, not exactly USD 60 billion.",
+    "By subtraction from the FY2025 separately reported USD 40.367 billion advertising line, the broad subscription component is strictly greater than USD 19.633 billion, but the exact subscription and membership amounts remain unpublished.",
+    "The reported >USD 60 billion 2025 corporate revenue is fundamentally different from Oxford Economics' >USD 60 billion estimated 2025 U.S. economic GDP contribution. Neither represents all individual creator payouts.",
+    "Alphabet's 325 million total paid consumer subscriptions includes Google One and other products; it cannot be presented as the number of YouTube Premium or YouTube channel members."
   ],
   "unknown": {
     "all_youtube_revenue_including_subscriptions": null,
@@ -119,5 +124,24 @@
     "creator_work_hours": null,
     "ads_per_platform_view": null,
     "active_creators": null
+  },
+  "disclosed_2025_total": {
+    "source_id": "alphabet-2025-q4-earnings-youtube-total",
+    "reporting_period": "2025-01-01_to_2025-12-31",
+    "measure": "youtube_advertising_plus_youtube_subscriptions_corporate_revenue",
+    "total_usd_millions_exact": null,
+    "disclosed_strict_lower_bound_usd_millions": 60000,
+    "strict_lower_bound": true,
+    "annual_advertising_component_usd_millions": 40367,
+    "derived_non_ad_subscription_component_strict_lower_bound_usd_millions": 19633,
+    "derived_formula": "(2025 ads + subscriptions) > 60000; annual ads = 40367; therefore subscription component > 60000 - 40367 = 19633, all USD millions",
+    "excludes_non_youtube_google_one_subscriptions": true,
+    "specific_youtube_subscription_revenue_exact": null,
+    "membership_revenue_exact": null,
+    "creator_distribution": null,
+    "subscriber_population": null,
+    "distinct_from_us_gdp_value_added": true,
+    "distinct_from_youtube_direct_creator_payouts": true,
+    "limitation": "Lower bound derived from a strict total threshold in a furnished earnings release and separate annual reported ad revenue. Includes subscription products such as Premium and TV, not a measured total of channel-member payments or payout to creators."
   }
 }

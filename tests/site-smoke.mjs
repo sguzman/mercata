@@ -101,7 +101,7 @@ try{
       ['.us-news-demographic-crosswalk',8,'Biological sex, overlapping age-by-party'],
       ['.synthetic-media-rights',4,'no AI creator earnings'],
       ['.recommendation-evidence',5,'No minimum Shorts posting cadence'],
-      ['.alphabet-ad-revenue',7,'not creator payouts'],
+      ['.alphabet-ad-revenue',8,'not creator payouts'],
       ['.oxford-creator-study',12,'EU27 includes France and Germany'],
       ['.channel-cohort-evidence',4,'do not prove uploading causes growth'],
       ['.first-upload-vlog',4,'no YouTube payouts'],

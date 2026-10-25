@@ -18,6 +18,14 @@ The reported **YouTube ads** line is in millions of U.S. dollars. It measures Al
 
 These are simple derived comparisons of like periods. First-half revenue includes second quarter, so the first-half and Q2 figures **must not be added**. Neither a six-month period nor one quarter establishes annual 2026 revenue or future market growth.
 
+## Broader YouTube advertising-plus-subscription revenue (strict bound)
+
+In its [February 4, 2026 SEC-furnished Q4 and FY2025 earnings release](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/googexhibit991q42025.htm), Alphabet separately disclosed that **YouTube's total 2025 corporate revenue across ads and subscriptions exceeded USD 60 billion**. This is a strict lower bound, not a reported exact total. Its independently disclosed ad component was USD 40.367 billion for that same calendar year. Therefore, if the broad total comprises those advertising and subscription components, the implied **2025 subscription component exceeds USD 19.633 billion** (60 − 40.367). This is a mathematical *lower bound*, not a reported exact subscription figure.
+
+The bound includes YouTube subscriptions of multiple types, potentially including YouTube Music/Premium and television subscriptions; it cannot be represented as channel memberships, Premium-only sales, creator payouts, or individual customers. Alphabet also separately discussed **over 325 million paid consumer subscriptions across multiple Google services**, including Google One. That multi-product consumer subscription number is not YouTube's subscriber count.
+
+**Do not confuse two different >USD 60 billion statements:** the figure in the Alphabet release refers to *worldwide annual YouTube corporate ad-plus-subscription revenues*. The [Oxford impact study](oxford-creator-impact-2026.md) reported *estimated U.S. GDP value added by a broader YouTube-related economic ecosystem*. Gross revenue and modeled economic value added are different measures, denominators and geographic scopes; they are not additive or interchangeable with creator earnings.
+
 ## Critical economic boundaries
 
 Alphabet does not report YouTube subscriptions separately in this table. The category "Google subscriptions, platforms, and devices" combines multiple businesses and cannot be attributed wholesale to YouTube or added to the ads line as a verified total of YouTube revenue. These corporate figures are neither gross advertiser expenditure nor a count of customers.

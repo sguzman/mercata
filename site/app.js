@@ -2040,6 +2040,14 @@ function renderAlphabetAdRevenue(model,dossier){
   grid.append(card);
  }
  details.append(grid);
+ if(model.disclosed_2025_total){
+  const summary=make('article','ownership-card');
+  summary.append(make('h5','','2025 YouTube ads + subscriptions'));
+  summary.append(make('strong','','More than USD 60 billion'));
+  summary.append(make('p','measure-limit','Strict corporate annual revenue lower bound, not the separate US GDP impact estimate or creator payouts.'));
+  summary.append(audienceSources([model.disclosed_2025_total.source_id],dossier));
+  details.append(summary);
+ }
  details.append(make('p','measure-limit','The first half includes the second quarter: do not add those values. Alphabet does not disclose YouTube subscriptions separately in these tables. Global 2026 annual revenue, typical creator cash earnings and zero-earner prevalence remain unknown.'));
  const link=make('a','inline-link','Read SEC revenue reconciliation and limits ↗');
  link.href='./ontology/youtube/alphabet-youtube-ads-sec-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
