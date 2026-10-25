@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "language_market_longitudinal_comparability_register",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "youtube-multi-audio-launch-2025",
+    "youtube-auto-dubbing-2026",
+    "google-trends-relative-index-2026",
+    "datareportal-2026-india",
+    "datareportal-2026-indonesia",
+    "datareportal-2026-japan",
+    "datareportal-2026-philippines"
+  ],
+  "method": "Track three incompatible public observation families (MLA use, dubbing feature support, and country ad-reach planning). Only the first two measure a language-related product property; neither measures language-specific user-market change. Country estimates supply no language denominators.",
+  "source_artifacts": [
+    "ontology/youtube/multilingual-distribution.json",
+    "ontology/youtube/search-demand-proxy-crosswalk.json",
+    "ontology/youtube/country-ad-reach-comparisons.json"
+  ],
+  "observations": [
+    {
+      "id": "non_primary_language_watch_minutes_2025",
+      "source_id": "youtube-multi-audio-launch-2025",
+      "measurement_date": "2025-07",
+      "publisher_date": "2025-09-10",
+      "unit": "percent_watch_time_for_selected_multi_audio_creators",
+      "value_lower_bound_exclusive": 25,
+      "value_exact": null,
+      "language": null,
+      "country": null,
+      "denominator": "selected creators already using MLA, non-primary-language watch time / all their watched minutes",
+      "realized_incremental_revenue": null
+    },
+    {
+      "id": "auto_dubbing_language_support_2026",
+      "source_id": "youtube-auto-dubbing-2026",
+      "measurement_date": "2026-05-15",
+      "publisher_date": "2026-05-15",
+      "unit": "supported_product_languages_count",
+      "value_lower_bound_exclusive": null,
+      "value_exact": 27,
+      "language": null,
+      "country": null,
+      "denominator": "YouTube auto-dubbing supported languages at product snapshot, not individual country users or per-video enabled pairs",
+      "realized_incremental_revenue": null
+    },
+    {
+      "id": "advertiser_reach_in_2025",
+      "source_id": "datareportal-2026-india",
+      "measurement_date": "2025-10",
+      "publisher_date": null,
+      "unit": "millions_advertiser_reachable_accounts_or_people_estimate",
+      "value_lower_bound_exclusive": null,
+      "value_exact": 500,
+      "language": null,
+      "country": "IN",
+      "denominator": "Google advertising planner addressable reach, not platform users or language listeners",
+      "realized_incremental_revenue": null
+    },
+    {
+      "id": "advertiser_reach_id_2025",
+      "source_id": "datareportal-2026-indonesia",
+      "measurement_date": "2025-10",
+      "publisher_date": null,
+      "unit": "millions_advertiser_reachable_accounts_or_people_estimate",
+      "value_lower_bound_exclusive": null,
+      "value_exact": 151,
+      "language": null,
+      "country": "ID",
+      "denominator": "Google advertising planner addressable reach, not platform users or language listeners",
+      "realized_incremental_revenue": null
+    },
+    {
+      "id": "advertiser_reach_jp_2025",
+      "source_id": "datareportal-2026-japan",
+      "measurement_date": "2025-10",
+      "publisher_date": null,
+      "unit": "millions_advertiser_reachable_accounts_or_people_estimate",
+      "value_lower_bound_exclusive": null,
+      "value_exact": 78.5,
+      "language": null,
+      "country": "JP",
+      "denominator": "Google advertising planner addressable reach, not platform users or language listeners",
+      "realized_incremental_revenue": null
+    },
+    {
+      "id": "advertiser_reach_ph_2025",
+      "source_id": "datareportal-2026-philippines",
+      "measurement_date": "2025-10",
+      "publisher_date": null,
+      "unit": "millions_advertiser_reachable_accounts_or_people_estimate",
+      "value_lower_bound_exclusive": null,
+      "value_exact": 59.6,
+      "language": null,
+      "country": "PH",
+      "denominator": "Google advertising planner addressable reach, not platform users or language listeners",
+      "realized_incremental_revenue": null
+    }
+  ],
+  "shared_language_by_year_person_panel": [],
+  "testable_panel_fields": [
+    "query",
+    "search_service",
+    "comparison_panel",
+    "normalization_batch",
+    "country",
+    "language",
+    "definition_epoch",
+    "metric",
+    "period_granularity",
+    "period",
+    "sample_inclusion_rules"
+  ],
+  "ad_reach_not_a_language_market": true,
+  "language_not_equal_to_country_or_ethnicity": true,
+  "known_source_frame_mismatch": true,
+  "unmeasured": {
+    "language_specific_unique_active_viewers": null,
+    "language_country_joint_distribution": null,
+    "multi_audio_causal_demand_growth": null,
+    "translated_video_incremental_profit": null,
+    "language_market_annual_growth": null,
+    "real_normalized_joint_keyword_series": null
+  }
+}

@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+[Language market longitudinal comparability](ontology/youtube/language-market-comparability-2026.md) now separates localized video feature support from country-based advertising reach and measured viewer demand.
+
+
 [Video attention concentration: niche denominator and validated HHI/Gini](ontology/youtube/niche-attention-concentration-2026.md).
 
 

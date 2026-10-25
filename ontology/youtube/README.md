@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [language-market comparison audit](language-market-comparability-2026.md) rejects mismatched service, normalization panel, country and language trend figures without making up viewer populations.
+
+
 [Video concentration methodology](niche-attention-concentration-2026.md) and [pure audit](../../site/niche-attention-concentration.mjs) distinguish sampled videos from creator earnings.
 
 
