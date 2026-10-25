@@ -4,6 +4,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
+## Research gallery acceptance and source visibility
+
+The [claim-link and unknown-display acceptance contract](gallery-evidence-acceptance.md), [machine contract](gallery-evidence-acceptance.json) and [source-coverage audit](../../site/gallery-evidence-audit.mjs) require all claims to render with dated text, limitations and clickable registered HTTPS source anchors. Desktop/mobile Firefox smoke checks verify rendered source links and never substitute unknown earnings.
+
 ## Cross-platform self-reported AI video workflow changes
 
 The [December 2025/2026 Adobe Express respondent study](adobe-ai-production-survey-2026.md), [machine frame](adobe-ai-production-survey-2026.json) and [denominator validator](../../site/adobe-ai-production-audit.mjs) distinguish 384 US Prolific video creators, selected AI users and platform-posting subgroups. Self-reported 30-minute/four-hour nested saving thresholds are not measured cost reductions or expected YouTube earnings.

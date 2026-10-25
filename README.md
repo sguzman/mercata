@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [public dossier source-link acceptance gate](ontology/youtube/gallery-evidence-acceptance.md) checks visible per-claim date/limits, registered clickable HTTPS source links, JSON navigation, browser source indicators, and explicit unknowns across desktop and mobile.
+
+
 The [384-creator Adobe cross-platform AI video workflow survey](ontology/youtube/adobe-ai-production-survey-2026.md) records self-reported time-saving thresholds, weekly usage and spending intentions without treating them as independently measured labor, YouTube-only payouts, or causal productivity improvements.
 
 

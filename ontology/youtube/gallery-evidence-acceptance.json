@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "public_dossier_claim_link_and_unknown_acceptance_contract",
+  "as_of": "2026-10-25",
+  "source_record": "specimens/youtube.json",
+  "site_file": "site/app.js",
+  "required_outputs": [
+    "official_website_link",
+    "dossier_json_link",
+    "queue_json_link",
+    "claim_text",
+    "date_and_confidence",
+    "claim_limitations",
+    "at_least_one_registered_https_source_link_per_claim",
+    "unknown_not_coerced_to_zero"
+  ],
+  "security": [
+    "public_sources_https",
+    "source_links_target_blank",
+    "source_links_rel_noopener_noreferrer",
+    "no_plaintext_private_accounts"
+  ],
+  "observability": {
+    "evidence_and_claim_counts_derived_live": true,
+    "do_not_pin_source_counts_to_fixed_baseline": true,
+    "source_urls_must_match_claim_source_ids": true,
+    "no_observation_is_not_a_zero_observation": true,
+    "external_link_http_status_not_verified_by_browser_tests": true
+  },
+  "validation_artifacts": [
+    "site/gallery-evidence-audit.mjs",
+    "tests/gallery-evidence-audit.test.mjs",
+    "tests/site-smoke.mjs"
+  ],
+  "limitations": [
+    "An HTTPS URL in the register and a rendered anchor do not establish that the external page remains online or independently verifies a claim.",
+    "Some sources contain no published date; a retrieval date is not a publication date.",
+    "A factual claim can share sources with other claims; per-claim link count is not a number of independent studies.",
+    "The site displays explicit unknowns but does not invent missing creator earnings or infer attributes of individual people.",
+    "The gallery is a public view of source-backed research, not a user-identifying data interface."
+  ],
+  "observed_browser_errors": null
+}

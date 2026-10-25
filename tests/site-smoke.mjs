@@ -50,6 +50,24 @@ try{
     await page.locator('#catalog-grid .specimen-card a.inline-link').click();
     await page.locator('#dossier-view h3').first().waitFor();
     assert.equal(await page.locator('#dossier-view h3').first().textContent(),'YouTube',errors.join('\n')||'Expected YouTube dossier');
+    // Gallery claim source anchor contract: every claim is visible, dated, limited and linked.
+    const currentDossier=JSON.parse(await readFile(path.join(root,'specimens/youtube.json'),'utf8'));
+    const allClaims=page.locator('#dossier-view .dossier-evidence .dossier-section').nth(1).locator('.research-item');
+    assert.equal(await allClaims.count(),currentDossier.claims.length,'Missing claim cards in research gallery');
+    assert.equal(await allClaims.locator('.measure-limit').count(),currentDossier.claims.length,'Claim limitations not fully displayed');
+    const expectedSourceReferences=currentDossier.claims.reduce((n,c)=>n+c.source_ids.length,0);
+    const sourceAnchors=allClaims.locator('.audience-source-links a');
+    assert.equal(await sourceAnchors.count(),expectedSourceReferences,'Research source anchors do not match registered claims');
+    assert.equal(await allClaims.locator('.audience-source-links span').count(),0,'Unresolved source ID rendered as plain text');
+    assert(await sourceAnchors.evaluateAll(anchors=>anchors.every(a=>
+       a.href.startsWith('https://')&&a.target==='_blank'&&a.rel.includes('noopener')&&a.rel.includes('noreferrer')&&a.textContent.startsWith('Source:'))),
+      'Gallery source anchors require HTTPS, source indicators and new-tab isolation');
+    assert.equal(await allClaims.locator('small').count(),currentDossier.claims.length,'Claim date and confidence labels are missing');
+    const galleryNav=page.locator('#dossier-view .dossier-links a');
+    assert.equal(await galleryNav.count(),3,'Gallery navigation must include official, dossier JSON and task JSON');
+    assert((await galleryNav.allTextContents()).some(x=>x.includes('Dossier JSON')),'Missing public dossier JSON link');
+    assert((await galleryNav.allTextContents()).some(x=>x.includes('Task JSON')),'Missing public task JSON link');
+
     assert((await page.locator('.platform-policy-grid .policy-card').count())>=10,'Missing YouTube policy cards');
     const future=page.locator('.ypp-transition');
     assert.equal(await future.locator('.ypp-transition-card').count(),3,'Missing separate current/future membership rules');
