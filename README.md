@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [US/Mexico channel membership price-option audit](ontology/youtube/membership-price-options-mx-2026.md) records 25 allowed menus and compares older/newer local nominal prices without inventing paid channel tiers, transaction volume or creator earnings.
+
+
 The [public comments literature correction](ontology/youtube/comment-source-reconciliation-2026.md) records a contradiction between a Cardiff abstract and the journal-formatted author's manuscript about prolific commenter toxicity, and preserves distinct 2025 political-channel and 2026 climate-video study denominators.
 
 

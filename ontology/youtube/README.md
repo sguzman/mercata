@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [official membership price menu crosswalk](membership-price-options-mx-2026.md), [priced tier records](membership-price-options-mx-2026.json), and [source-value audit](../../site/membership-price-options-audit.mjs) preserve legacy and newer May 2025-onward Mexico menu levels and do not infer transaction prices or net creator payouts.
+
+
 The [eight-layer functional YouTube surface study](content-formats.md), [machine feature inventory](content-formats.json), and [surface-to-metric audit](../../site/surface-layer-audit.mjs) distinguish watch-page, Shorts, livestream, Music, podcast, TV, Posts and paid products without double-counting videos or payers.
 
 
