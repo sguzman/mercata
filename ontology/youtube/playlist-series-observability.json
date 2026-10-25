@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "official_owner_playlist_report_measurement",
+  "as_of": "2026-10-24",
+  "source_ids": [
+    "api-metrics",
+    "yt-channel-playlist-report-rules-2026",
+    "yt-channel-playlist-query-examples-2026"
+  ],
+  "requires_channel_owner_authorization": true,
+  "authorized_api_calls_performed": false,
+  "metric_definitions": [
+    {
+      "id": "views",
+      "report_family": "owner_video_aggregate",
+      "web_only": false,
+      "limitation": "Owned-video playbacks across contexts, not strictly in the playlist"
+    },
+    {
+      "id": "estimatedMinutesWatched",
+      "report_family": "owner_video_aggregate",
+      "web_only": false,
+      "limitation": "Owned-video minutes across contexts, not strictly in the playlist"
+    },
+    {
+      "id": "playlistViews",
+      "report_family": "in_playlist",
+      "web_only": false,
+      "limitation": "In-playlist video views including videos owned by other channels"
+    },
+    {
+      "id": "playlistEstimatedMinutesWatched",
+      "report_family": "in_playlist",
+      "web_only": false,
+      "limitation": "Minutes watched within a playlist context"
+    },
+    {
+      "id": "playlistAverageViewDuration",
+      "report_family": "in_playlist",
+      "web_only": false,
+      "limitation": "Seconds per video view, not a duration per playlist visit"
+    },
+    {
+      "id": "playlistStarts",
+      "report_family": "in_playlist",
+      "web_only": true,
+      "limitation": "Starts counted only when playlist playback begins on the web"
+    },
+    {
+      "id": "viewsPerPlaylistStart",
+      "report_family": "in_playlist",
+      "web_only": true,
+      "limitation": "Video views per web playlist initiation, not a series-completion percentage"
+    },
+    {
+      "id": "averageTimeInPlaylist",
+      "report_family": "in_playlist",
+      "web_only": true,
+      "limitation": "Estimated minutes after web playlist initiation"
+    },
+    {
+      "id": "playlistSaves",
+      "report_family": "in_playlist",
+      "web_only": false,
+      "limitation": "Net saved playlist change, not unique subscribers"
+    }
+  ],
+  "official_sample_query": {
+    "ids": "channel==MINE",
+    "metrics": [
+      "views",
+      "estimatedMinutesWatched",
+      "playlistStarts",
+      "playlistViews",
+      "viewsPerPlaylistStart"
+    ],
+    "filter": "playlist==PLAYLIST_ID",
+    "source_id": "yt-channel-playlist-query-examples-2026",
+    "executed": false
+  },
+  "warnings": [
+    "Owner aggregate views and watch minutes are for channel-owned videos and may include non-playlist contexts.",
+    "In-playlist metrics can include videos owned by other channels.",
+    "playlistStarts, viewsPerPlaylistStart and averageTimeInPlaylist are web-only measures.",
+    "Playlist initiations and video view events are not deduplicated people.",
+    "Views per playlist start is not episode completion, repeat-person retention, or sales conversion.",
+    "No private owner analytics, repeat viewer cohorts, actual payout or series completion were measured."
+  ],
+  "observations": [],
+  "unmeasured": {
+    "all_device_playlist_starts": null,
+    "unique_playlist_people": null,
+    "returning_people": null,
+    "final_episode_completers": null,
+    "buyer_conversion": null,
+    "net_creator_profit": null
+  }
+}

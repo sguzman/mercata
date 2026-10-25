@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [playlist and series engagement measurement study](ontology/youtube/playlist-series-observability.md) distinguishes owner-video views, playlist-context playback, web-only depth indicators and unknown repeat visitor or buyer conversion rates.
+
+
 The [native title and thumbnail A/B test study](ontology/youtube/native-packaging-ab-tests.md) documents YouTube's concurrent watch-time experiment, supported variants, restricted surfaces and outcome uncertainty without pretending that a channel experiment or verified buyer conversion was run.
 
 

@@ -100,6 +100,7 @@ try{
       ['.country-ad-reach',4,'Advertiser planning can be revised'],
       ['.us-news-demographic-crosswalk',8,'Biological sex, overlapping age-by-party'],
       ['.synthetic-media-rights',4,'no AI creator earnings'],
+      ['.playlist-series-observability',9,'not unique returning viewers'],
       ['.native-packaging-ab',3,'not click-through rate'],
       ['.recommendation-evidence',5,'No minimum Shorts posting cadence'],
       ['.creator-payout-scale',3,'not individual earnings'],

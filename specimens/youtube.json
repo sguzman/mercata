@@ -3078,6 +3078,28 @@
       "evidence_class": "official_current_creator_experiment_feature",
       "license": "Official feature documentation linked and independently paraphrased",
       "notes": "Desktop advanced-feature gated, up to 3 concurrent title/thumbnail variants; winner by watch-time share; includes Shorts, Premiere, kids and privacy exclusion rules."
+    },
+    {
+      "id": "yt-channel-playlist-report-rules-2026",
+      "url": "https://developers.google.com/youtube/analytics/channel_reports",
+      "publisher": "Google for Developers",
+      "title": "YouTube Analytics channel playlist reports",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_api_reporting",
+      "license": "Official public documentation linked; research definitions independently authored",
+      "notes": "Owner authorization required; owned-channel video aggregate and in-playlist reports differ; playlist metrics include videos from other channels."
+    },
+    {
+      "id": "yt-channel-playlist-query-examples-2026",
+      "url": "https://developers.google.com/youtube/analytics/sample-requests",
+      "publisher": "Google for Developers",
+      "title": "YouTube Analytics sample playlist requests",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_api_sample_queries",
+      "license": "Public query structures referenced; no private query execution or data copied",
+      "notes": "Sample playlist metric/filer query with channel==MINE and playlist==PLAYLIST_ID."
     }
   ],
   "claims": [
@@ -6626,6 +6648,28 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Requires advanced features and desktop owner access, which were not accessed for this study."
+    },
+    {
+      "id": "yt-playlist-aggregates-versus-context",
+      "text": "YouTube's authorized playlist reports distinguish aggregate activity for channel-owned videos from activity in a playlist that may contain other owners' videos.",
+      "source_ids": [
+        "yt-channel-playlist-report-rules-2026",
+        "yt-channel-playlist-query-examples-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Official definitions only; no creator analytics queried."
+    },
+    {
+      "id": "yt-playlist-web-restrictions",
+      "text": "Playlist starts, views per playlist start and average time in playlist are restricted to web-initiated playlist usage and cannot measure all-device unique viewers or series completion.",
+      "source_ids": [
+        "api-metrics",
+        "yt-channel-playlist-report-rules-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "No available private watch histories, repeated-person cohort data or buyer events."
     }
   ],
   "observations": [],
