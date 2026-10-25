@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+[Historical YouTube ownership and monetization chronology](monetization-history-2006-2027.md) · [machine timeline](monetization-history-2006-2027.json) · [validation](../../site/youtube-history-audit.mjs). The thirteen dated primary-source events are not an individual earnings panel or current eligibility promises.
+
+
 The [podcast publication rights and RSS ingestion study](podcast-publication-routes-2026.md), [machine route matrix](podcast-publication-routes-2026.json) and [permission audit](../../site/podcast-publication-audit.mjs) separate manual video episodes, conditional RSS-created static-image videos and most podcasts' YouTube Music audio-playback rights without inferring creators' income or external podcast syndication.
 
 The [video/audio podcast frame comparison](podcast-viewing-frames-2026.md), [machine data](podcast-viewing-frames-2026.json) and [metric guard](../../site/podcast-viewing-audit.mjs) separate living-room podcast watching, Premium account viewing, global monthly platform audience and nonexclusive US podcast-consumer audio/video behavior without double-counting or inventing individual wages.

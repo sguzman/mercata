@@ -89,14 +89,19 @@
           "title": "Record changes in marketplace structure",
           "acceptance": "Cite dated launches, acquisitions and economic changes.",
           "weight": 1,
-          "progress": 58,
+          "progress": 78,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/ypp-transition-2027.json",
             "ontology/youtube/ypp-transition-2027.md",
             "specimens/youtube.json",
             "tests/youtube.test.mjs",
-            "scripts/verify.mjs"
+            "scripts/verify.mjs",
+            "ontology/youtube/monetization-history-2006-2027.json",
+            "ontology/youtube/monetization-history-2006-2027.md",
+            "site/youtube-history-audit.mjs",
+            "tests/youtube-history-audit.test.mjs",
+            "site/app.js"
           ]
         }
       ]
@@ -513,7 +518,7 @@
           "title": "Build a dated fee and payout history",
           "acceptance": "Compare sourced changes without overwriting previous rules.",
           "weight": 1,
-          "progress": 73,
+          "progress": 79,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -527,7 +532,12 @@
             "tests/youtube.test.mjs",
             "scripts/verify.mjs",
             "ontology/youtube/advertiser-policy-history.json",
-            "ontology/youtube/advertiser-policy-history.md"
+            "ontology/youtube/advertiser-policy-history.md",
+            "ontology/youtube/monetization-history-2006-2027.json",
+            "ontology/youtube/monetization-history-2006-2027.md",
+            "site/youtube-history-audit.mjs",
+            "tests/youtube-history-audit.test.mjs",
+            "site/app.js"
           ]
         }
       ]
