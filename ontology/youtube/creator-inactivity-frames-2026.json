@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "selected_creator_activity_and_inactivity_measurement",
+  "as_of": "2026-10-25",
+  "method": "Preserve three separate creator or channel-account samples and each vendor's observation-window behavior. For company sites use separately linked public channels; for brand indexed creators use 2025 vendor coverage; for below-1000 subscriber channels use vidIQ public net video count changes, explicitly not inactivity.",
+  "population": "Indexed 10k+ channel accounts, website-linked company channels with a published video, and below-1000 tracked accounts with 360-day endpoint visibility; no representative all-creator inception cohort",
+  "source_ids": [
+    "clickanalytic-youtube-activity-2026",
+    "rudyi-company-channel-publishing-2026",
+    "vidiq-1000-subscribers-2026"
+  ],
+  "frames": [
+    {
+      "id": "clickanalytic_2025_10k_plus",
+      "source_id": "clickanalytic-youtube-activity-2026",
+      "snapshot_or_observation_date": "2025",
+      "cohort": "commercial_index_youtube_creators_10000_plus_subscribers",
+      "sampled_channels_exact": null,
+      "sampled_channels_approximate": 1900000,
+      "eligibility": "at_least_10000_public_subscribers_in_vendor_cohort",
+      "window_days": 30,
+      "metric": "vendor_defined_recent_account_activity",
+      "active_pct": 43,
+      "dormant_pct": 57,
+      "no_upload_pct": null,
+      "no_net_video_growth_count": null,
+      "no_net_video_growth_denominator": null,
+      "dead_or_closed_pct": null,
+      "earnings_zero_rate": null,
+      "limitations": [
+        "The publisher does not supply full verified sample-selection mechanics or a calendar-day end for the previous-30-day window.",
+        "Dormant in a 30-day activity measure is not irreversible abandonment or account closure.",
+        "Established 10k+ channel accounts exclude many smaller or new channels, and distinct account ownership is not verified."
+      ]
+    },
+    {
+      "id": "rudyi_2026_company_channels",
+      "source_id": "rudyi-company-channel-publishing-2026",
+      "snapshot_or_observation_date": "2026-08-31",
+      "cohort": "public_company_website_linked_channels_with_at_least_one_public_video",
+      "sampled_channels_exact": 3375,
+      "sampled_channels_approximate": null,
+      "source_company_websites_checked": 18284,
+      "window_days": 90,
+      "metric": "days_since_last_public_upload",
+      "active_pct": null,
+      "dormant_pct": null,
+      "no_upload_pct": 46,
+      "no_upload_one_year_pct": 27,
+      "no_upload_two_year_pct": 18.6,
+      "no_upload_three_year_pct": 14.3,
+      "no_net_video_growth_count": null,
+      "no_net_video_growth_denominator": null,
+      "dead_or_closed_pct": null,
+      "earnings_zero_rate": null,
+      "limitations": [
+        "Company website inclusion and link discovery are not a randomized creator sample; website inaccessibility and unpublished channel links are selection filters.",
+        "No public upload for 90 days or one year does not show company closure, creator career end, or zero past revenue.",
+        "The company-channel sample is not a matched subset of Click Analytic's established influencer index."
+      ]
+    },
+    {
+      "id": "vidiq_2026_net_video_count",
+      "source_id": "vidiq-1000-subscribers-2026",
+      "snapshot_or_observation_date": "2026-09-10",
+      "cohort": "tracked_channels_under_1000_subscribers_at_baseline_with_one_or_more_public_videos_and_two_endpoints",
+      "sampled_channels_exact": 32926088,
+      "sampled_channels_approximate": null,
+      "window_days": 360,
+      "metric": "zero_net_change_in_public_video_count_not_verified_upload_inactivity",
+      "active_pct": null,
+      "dormant_pct": null,
+      "no_upload_pct": null,
+      "no_net_video_growth_count": 27360211,
+      "no_net_video_growth_denominator": 32926088,
+      "dead_or_closed_pct": null,
+      "earnings_zero_rate": null,
+      "limitations": [
+        "Zero net count can conceal uploads offset by deletions, private/visibility changes or reprocessing.",
+        "Channels with negative net video count changes, missing history, and zero public baseline videos were excluded.",
+        "Subscriber gate attainment is not channel activity, continued earning, retirement or first-year entrant survivorship."
+      ]
+    }
+  ],
+  "cross_frame_comparison_allowed": false,
+  "matched_birth_and_exit_records": null,
+  "known_platform_wide_closed_channel_rate": null,
+  "safe_reading": "Do not combine 57% vendor-defined nonactivity over 30 days, 46% company-channel upload silence over 90 days, or zero public-video-count change in a selected 360-day cohort into one attrition percentage.",
+  "required_future_measurements": [
+    "Defined first-publication or independently verified channel start date and selection frame",
+    "Repeated dated actual upload events with deletions/visibility changes resolved",
+    "Channel/platform suspension versus voluntary stop versus a long creative pause",
+    "Nonresponse, missing-history, removed channel and right-censoring records",
+    "Owner-consented receipts and unpaid work by entrant cohort, including never-monetizing channels",
+    "Matched niche/geography cohort before new-versus-mature attrition comparisons"
+  ],
+  "unmeasured": {
+    "all_youtube_creators_dormant_pct": null,
+    "creator_first_year_exit_rate": null,
+    "closed_channels_vs_inactive": null,
+    "median_creator_profit": null,
+    "causal_effect_of_inactivity": null
+  }
+}

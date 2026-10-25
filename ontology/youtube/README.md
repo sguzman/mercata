@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [creator inactivity vs closure study](creator-inactivity-frames-2026.md), [machine cohort records](creator-inactivity-frames-2026.json), and [validation guard](../../site/creator-inactivity-audit.mjs) compare vendor activity definitions across separate 30/90/360-day samples without calling an upload pause a permanent creator exit.
+
+
 The [supply-versus-topic observation source-frame audit](channel-supply-topic-attention-2026.md), [machine comparison cases](channel-supply-topic-attention-2026.json) and [unit/denominator validator](../../site/channel-topic-join-audit.mjs) rule out synthetic audience-per-creator and scarcity rankings from unmatched indexed channel counts and title/survey activity.
 
 
