@@ -20,3 +20,24 @@ test('Bad account source, duplicate participants and malformed money are rejecte
  assert.equal(audit({...input,records:[row('a',0,1),row('a',10,2)]}).status,'invalid');
  assert.equal(audit({...input,records:[row('a',-10,2)]}).status,'invalid');
 });
+
+test('Refunds for prior-period transactions can exceed new receipts and yield negative cash',()=>{
+ const x=audit({...input,records:[{...row('carryover',0,5),refund_cents:1000}]});
+ assert.equal(x.status,'descriptive_cohort_only');
+ assert.equal(x.hourly_usd.median,-2);
+ assert.equal(x.zero_receipt_creators,1);
+});
+test('Incomplete accounting never claims a full-cohort hourly distribution',()=>{
+ const x=audit({...input,records:[...input.records,row('missing',null,20)]});
+ assert.equal(x.partial_records_limit_inference,true);
+ assert.equal(x.complete_cohort_hourly_usd,null);
+ assert.equal(x.hourly_sample_n,3);
+ const complete=audit(input);
+ assert.deepEqual(complete.complete_cohort_hourly_usd,complete.hourly_usd);
+});
+test('Malformed dates, impossible date order and unsafe cent sums are rejected',()=>{
+ for(const date of ['not-a-date','2026-02-30','2026-00-01'])assert.equal(audit({...input,period_start:date}).status,'invalid');
+ assert.equal(audit({...input,period_start:'2026-04-01'}).status,'invalid');
+ const rowTooLarge={...row('huge',Number.MAX_SAFE_INTEGER,1),cash_costs_cents:1000000000000000,refund_cents:1};
+ assert.equal(audit({...input,records:[rowTooLarge]}).status,'invalid');
+});

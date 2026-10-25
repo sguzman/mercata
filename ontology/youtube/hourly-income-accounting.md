@@ -5,3 +5,9 @@ This source-backed [cohort calculator](../../site/creator-hourly-audit.mjs) and 
 For every attempted creator in one prespecified period, record gross paid receipts in USD cents, refunds, fees, cash production costs, and actual current-period hours. Include creators whose attempts yielded **zero revenue** and those whose cash profit was negative. Report incomplete records as unknown, never zero. Exclude zero-hour denominators from hourly quantiles but report their count. Keep historical sunk labor separate from current-period effort rather than repeatedly allocating it to each subsequent period.
 
 This is not an all-creator estimate. The existing [cross-platform earnings survey](cross-platform-income-surveys.md), [selected Patreon-affiliated income sample](creator-income-evidence.md) and [first-upload vlog study](first-upload-vlog-study-2026.md) have different, unmatched populations; their earnings and labor medians cannot be divided to invent typical hourly wages. Any actual private records must remain outside the public repository, with aggregate reports only and explicit creator authorization. Tax liability, income stability and probability of paid success remain unknown.
+
+## Accounting edge cases
+
+Refunds may reverse a prior-month transaction, so a recorded refund can exceed new receipts in the current month. The model **allows a negative current-period cash result** rather than incorrectly rejecting the record. Actual refund cash still needs dated support.
+
+Missing or non-estimable creator records make the full-cohort hourly distribution unavailable. Complete-case quartiles remain visible only as explicitly partial evidence, and `complete_cohort_hourly_usd` stays null. Dates are validated as calendar days and cent arithmetic must remain within JavaScript's safe-integer range.

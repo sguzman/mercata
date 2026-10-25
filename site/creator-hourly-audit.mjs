@@ -4,7 +4,8 @@ const rank=(sorted,p)=>sorted.length?sorted[Math.max(0,Math.ceil(p*sorted.length
 export function auditCreatorHourlyCohort(input){
  const bad=reason=>({status:'invalid',reason,observed:false});
  if(!input||!['synthetic_fixture','creator_authorized_aggregate'].includes(input.origin))return bad('unknown origin');
- if(input.privacy_safe_aggregation!==true||!input.cohort_frame||!input.period_start||!input.period_end||input.period_start>input.period_end)return bad('incomplete sampling frame');
+ const validDate=value=>typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&!Number.isNaN(Date.parse(value))&&new Date(value+'T00:00:00.000Z').toISOString().slice(0,10)===value;
+ if(input.privacy_safe_aggregation!==true||typeof input.cohort_frame!=='string'||!input.cohort_frame.trim()||!validDate(input.period_start)||!validDate(input.period_end)||input.period_start>input.period_end)return bad('incomplete sampling frame');
  if(!Array.isArray(input.records)||!input.records.length)return bad('empty cohort');
  const seen=new Set(),rates=[];let eligible=0,unknown=0,zero=0,unpaid=0,noHours=0;
  for(const r of input.records){
@@ -13,11 +14,13 @@ export function auditCreatorHourlyCohort(input){
   if(typeof r.labor_hours!=='number'||r.labor_hours<0||!Number.isFinite(r.labor_hours)||!Number.isFinite(r.historical_sunk_hours)||r.historical_sunk_hours<0)return bad('invalid labor');
   if(cash.some(k=>r[k]!==null&&(!Number.isSafeInteger(r[k])||r[k]<0)))return bad('invalid cents');
   if(cash.some(k=>r[k]==null)){unknown++;continue;}
-  if(r.refund_cents>r.gross_cents)return bad('refund exceeds gross');
+  // Refunds can reverse earlier-period sales even when this period has no new receipts.
+  const netCents=r.gross_cents-r.refund_cents-r.fees_cents-r.cash_costs_cents;
+  if(!Number.isSafeInteger(netCents))return bad('net cents overflow');
   eligible++;
   if(r.gross_cents===0){zero++;if(r.labor_hours>0)unpaid++;}
   if(r.labor_hours===0){noHours++;continue;}
-  rates.push((r.gross_cents-r.refund_cents-r.fees_cents-r.cash_costs_cents)/100/r.labor_hours);
+  rates.push(netCents/100/r.labor_hours);
  }
  rates.sort((a,b)=>a-b);
  return {status:unknown?'incomplete_accounting':'descriptive_cohort_only',
@@ -25,6 +28,9 @@ export function auditCreatorHourlyCohort(input){
  complete_records:eligible,missing_receipt_records:unknown,zero_receipt_creators:zero,
  unpaid_attempts_with_labor:unpaid,zero_hour_exclusions:noHours,
  hourly_sample_n:rates.length,hourly_usd:{q25:rank(rates,.25),median:rank(rates,.5),q75:rank(rates,.75)},
+ // The complete-case distribution is NOT a population estimate when even one outcome is missing.
+ complete_cohort_hourly_usd:(unknown||noHours)?null:{q25:rank(rates,.25),median:rank(rates,.5),q75:rank(rates,.75)},
+ partial_records_limit_inference:Boolean(unknown||noHours),
  zero_receipt_share:eligible?zero/eligible:null,
  past_sunk_hours_excluded_from_current_denominator:true,missing_cash_imputed_as_zero:false,
  representative_of_all_youtube_creators:false,causal_return_established:false};
