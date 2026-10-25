@@ -2518,7 +2518,19 @@ function renderFashionLifestyleSignals(model,dossier){
   const card=make('article','ownership-card');card.append(make('h5','',name));
   card.append(make('strong','',value));card.append(make('p','measure-limit',limitation));grid.append(card);
  }
- details.append(grid);details.append(audienceSources(model.source_ids,dossier));
+ details.append(grid);
+ if(model.beauty_subtopic_frames?.length){
+  const sample=make('div','ownership-grid');
+  for(const item of model.beauty_subtopic_frames){
+   const card=make('article','ownership-card');
+   card.append(make('h5','',item.content_family.replaceAll('_',' ')));
+   card.append(make('strong','',item.lower_bound.toLocaleString()+'+ historical video view events'));
+   card.append(make('p','measure-limit',item.window_start+' – '+item.window_end+' · '+item.population));
+   card.append(audienceSources([item.source_id],dossier));sample.append(card);
+  }
+  details.append(sample);
+ }
+ details.append(audienceSources(model.source_ids,dossier));
  const link=make('a','inline-link','Read genre boundaries and incompatible dates ↗');
  link.href='./ontology/youtube/fashion-lifestyle-content-signals-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
  section.append(details);return section;
