@@ -7925,6 +7925,28 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Future eligibility is not a current 2026 payout. Individual targeted ad net amounts, engaged-view qualification and settled creator income are unknown."
+    },
+    {
+      "id": "youtube-live-replay-owned-report-split-2026",
+      "text": "YouTube Analytics liveOrOnDemand separates view events during a live broadcast from view events outside it for a given livestream video. The compatible report supports views and watch minutes, but not averageViewPercentage when liveOrOnDemand is included.",
+      "source_ids": [
+        "api-dimensions",
+        "yt-channel-playlist-report-rules-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "No authorized creator analytics or distinct-person retention or revenue observations were collected."
+    },
+    {
+      "id": "youtube-live-archive-selective-capture-2026",
+      "text": "YouTube's streaming archive rules say broadcasts under 12 hours can be automatically archived, while ones over 12 hours might not be captured; editing a live archive removes chat replay. Missing archives are not evidence of zero viewing demand.",
+      "source_ids": [
+        "yt-live-archive-2026",
+        "yt-live-chat-displays-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Archive availability, privacy and editor activity select which live broadcasts can be compared after the fact."
     }
   ],
   "observations": [],

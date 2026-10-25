@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "owner_same_video_live_and_replay_activity_crosswalk",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "api-dimensions",
+    "yt-channel-playlist-report-rules-2026",
+    "yt-live-archive-2026",
+    "yt-live-chat-displays-2026"
+  ],
+  "split": {
+    "dimension": "liveOrOnDemand",
+    "values": [
+      "LIVE",
+      "ON_DEMAND"
+    ],
+    "content_type_dimension": "creatorContentType",
+    "video_classification": "LIVE_STREAM",
+    "on_demand_activity_does_not_change_video_classification": true
+  },
+  "official_report": {
+    "owner_required": true,
+    "dimensions": [
+      "liveOrOnDemand"
+    ],
+    "metrics": [
+      "engagedViews",
+      "views",
+      "estimatedMinutesWatched",
+      "averageViewDuration"
+    ],
+    "disallowed_combined_metric": "averageViewPercentage",
+    "filter": "video==VIDEO_ID",
+    "queries_executed": false
+  },
+  "archive_rules": {
+    "streams_under_12_hours_can_be_autoarchived": true,
+    "streams_over_12_hours_may_fail_to_archive": true,
+    "edited_archive_loses_live_chat_replay": true
+  },
+  "comparability": [
+    "Compare LIVE and ON_DEMAND rows for the same owned livestream video, period and country, not unrelated videos.",
+    "LIVE describes activity during broadcast; ON_DEMAND describes activity outside broadcast, not a standard video's creatorContentType.",
+    "Cannot request averageViewPercentage grouped by liveOrOnDemand in this report family.",
+    "Event counts and watched minutes do not prove unique return visitors, completion rates, sponsored transactions or net creator income.",
+    "Archive visibility and missing edited chat replay introduce selection and coverage bias; absence of replay metrics cannot be recorded as zero demand.",
+    "Peak concurrency, playback views and watch minutes are separate denominators; cannot convert concurrency samples to unique people."
+  ],
+  "reports_observed": [],
+  "unmeasured": {
+    "live_view_events": null,
+    "on_demand_view_events": null,
+    "unique_live_people": null,
+    "unique_replay_people": null,
+    "broadcaster_replay_income": null,
+    "observed_replay_profit": null,
+    "causal_value_of_archiving": null
+  }
+}

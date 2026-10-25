@@ -297,6 +297,10 @@ The [official survey review](mexico-encca-audiovisual-2024.md), [machine source 
 
 The [creator-hourly accounting algorithm](hourly-income-accounting.md), [machine computation contract](hourly-income-accounting.json), [implementation](../../site/creator-hourly-audit.mjs) and [synthetic regression tests](../../tests/creator-hourly-audit.test.mjs) calculate net receipts divided by actual labor, including failed attempts, refunds and zero revenue. No private records, matched creator population or typical YouTube hourly pay were supplied.
 
+## Live broadcast versus same-video replay measurement
+
+The [liveOrOnDemand report comparison](live-replay-observability.md), [source-backed machine rules](live-replay-observability.json) and [unit validator](../../site/live-replay-observability.mjs) separate LIVE broadcast playback from ON_DEMAND activity on the same livestream video. Archive loss, cross-video mismatches, unique people and creator cash remain unmeasured.
+
 ## Shorts country-level pooled advertising and future targeted ads
 
 The [current Shorts Creator Pool and future targeted-ad study](shorts-pool-economics.md), [source-linked rules](shorts-pool-economics.json) and [hypothetical denominator validator](../../site/shorts-pool-economics.mjs) separate eligible engaged views, music cost contributions, country-specific pool allocations and 45% creator shares. The 2027 targeted five-or-fewer-channel route remains future policy, not 2026 earnings.

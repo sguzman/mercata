@@ -314,7 +314,7 @@
         "youtube/sales/separate-analytics-unavailable-to-outsiders"
       ],
       "phase": 3,
-      "progress_percent": 81
+      "progress_percent": 82
     },
     {
       "id": "risk",
@@ -426,7 +426,7 @@
         "youtube/special-video/study-child-directed-video-restrictions"
       ],
       "phase": 3,
-      "progress_percent": 80
+      "progress_percent": 81
     },
     {
       "id": "audience-scale",
@@ -3332,7 +3332,7 @@
       "objective": "Specify comparable windows and measures of watch time, chat and repeat visits.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify comparable windows and measures of watch time, chat and repeat visits.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 76,
       "evidence": [
         "ontology/youtube/air-studio-benchmarks-2026.json",
         "ontology/youtube/air-studio-benchmarks-2026.md",
@@ -3343,9 +3343,13 @@
         "ontology/youtube/ytlive-attendance-observations-2026.md",
         "site/ytlive-attendance-audit.mjs",
         "tests/ytlive-attendance-audit.test.mjs",
-        "site/app.js"
+        "site/app.js",
+        "ontology/youtube/live-replay-observability.json",
+        "ontology/youtube/live-replay-observability.md",
+        "site/live-replay-observability.mjs",
+        "tests/live-replay-observability.test.mjs"
       ],
-      "artifact": "ontology/youtube/air-studio-benchmarks-2026.json",
+      "artifact": "ontology/youtube/live-replay-observability.json",
       "priority": "standard",
       "phase": 3
     },
@@ -4451,16 +4455,20 @@
       "objective": "Compare live attendance with archived demand.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and compare live attendance with archived demand.",
       "status": "in_progress",
-      "percent": 66,
+      "percent": 82,
       "evidence": [
         "ontology/youtube/video-surfaces-economics.json",
         "ontology/youtube/video-surfaces-economics.md",
         "specimens/youtube.json",
         "site/app.js",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/live-replay-observability.json",
+        "ontology/youtube/live-replay-observability.md",
+        "site/live-replay-observability.mjs",
+        "tests/live-replay-observability.test.mjs"
       ],
-      "artifact": "ontology/youtube/video-surfaces-economics.json",
+      "artifact": "ontology/youtube/live-replay-observability.json",
       "priority": "standard",
       "phase": 3
     },
