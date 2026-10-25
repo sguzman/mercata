@@ -2891,6 +2891,28 @@
       "evidence_class": "peer_reviewed_historical_platform_competition_quasi_experiment",
       "license": "Open-access publisher page linked; independently summarized without copying figures",
       "notes": "Analyzes September 2016 Twitch Prime launch and differential creator responses, not a contemporary audience migration count or 2026 causal upload strategy estimate."
+    },
+    {
+      "id": "streamlabs-hatchet-q1-2026",
+      "url": "https://streamlabs.com/content-hub/post/streamlabs-and-stream-hatchet-q1-2026-live-streaming-report",
+      "title": "Streamlabs x Stream Hatchet Q1 2026 Live Streaming Report",
+      "publisher": "Streamlabs / Stream Hatchet",
+      "published_at": "2026-06-10",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commercial_tracking_of_gaming_live_stream_hours_and_channel_counts",
+      "license": "Publisher data linked and independently summarized",
+      "notes": "Q1 YouTube Gaming 2.22bn hours watched, 1.07m unique broadcasting channels; Q4 2025 2.19bn watched hours and 1.11m channels. Non-independent of Q2 report."
+    },
+    {
+      "id": "streamlabs-hatchet-q2-2026",
+      "url": "https://streamlabs.com/content-hub/post/streamlabs-and-hatchet-q2-2026-live-streaming-report",
+      "title": "Streamlabs and Hatchet Q2 2026 Live Streaming Report",
+      "publisher": "Streamlabs / Stream Hatchet",
+      "published_at": "2026-08-27",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commercial_tracking_of_gaming_and_general_live_streaming",
+      "license": "Publisher data linked and independently summarized",
+      "notes": "Q2 YouTube Gaming 1.79bn watched hours and 878k broadcasting channels vs separately categorized general YouTube Live 12.97bn watched hours. Same research family as Q1."
     }
   ],
   "claims": [
@@ -6079,6 +6101,38 @@
       "observed_at": "2026-10-24",
       "confidence": "medium",
       "limitations": "Historical gaming-streaming context and identification assumptions limit transport to 2026 Shorts cross-posting. The paper does not measure an actual creator's cross-platform follower migration or monetization conversion."
+    },
+    {
+      "id": "gaming-live-2026-quarterly-watch-hours",
+      "text": "Stream Hatchet/Streamlabs tracked 2.22 billion YouTube Gaming watched hours in Q1 2026 and 1.79 billion in Q2, a reported 19.3% quarterly decline; these are tracked gaming livestream viewer-hours, not unique people or publisher revenue.",
+      "source_ids": [
+        "streamlabs-hatchet-q1-2026",
+        "streamlabs-hatchet-q2-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Commercial third-party tracking with report-specific categories and rounded numbers. Not a census of actual people, income, cross-platform migration or causality."
+    },
+    {
+      "id": "gaming-live-2026-broadcast-channel-counts",
+      "text": "Stream Hatchet/Streamlabs reported 1.07 million distinct YouTube Gaming broadcasting channels in Q1 2026 and 878,000 in Q2; a channel is neither a unique creator-owner nor a verified monetized publisher.",
+      "source_ids": [
+        "streamlabs-hatchet-q1-2026",
+        "streamlabs-hatchet-q2-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Commercial third-party tracking with report-specific categories and rounded numbers. Not a census of actual people, income, cross-platform migration or causality."
+    },
+    {
+      "id": "gaming-vs-general-live-q2-2026-scope",
+      "text": "The Q2 2026 report separately presents 12.97 billion watched hours for general YouTube Live, up 2.7% quarter-over-quarter, and 1.79 billion for YouTube Gaming, down 19.3%; the classification must not be collapsed to one identical gaming audience.",
+      "source_ids": [
+        "streamlabs-hatchet-q2-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Commercial third-party tracking with report-specific categories and rounded numbers. Not a census of actual people, income, cross-platform migration or causality."
     }
   ],
   "observations": [],

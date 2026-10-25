@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "gaming_livestream_quarterly_measurement",
+  "as_of": "2026-10-24",
+  "status": "bounded_same_source_family_quarterly_aggregate_not_unique_people",
+  "source_ids": [
+    "streamlabs-hatchet-q1-2026",
+    "streamlabs-hatchet-q2-2026",
+    "hatchet-youtube-gaming-2025-live-hours"
+  ],
+  "provider_family": "Stream Hatchet including Streamlabs distribution",
+  "independent_samples": 1,
+  "gaming": [
+    {
+      "period": "2025-Q4",
+      "watch_hours_billion": 2.19,
+      "channels_million": 1.11,
+      "broadcast_hours_million": 29.4,
+      "source_id": "streamlabs-hatchet-q1-2026"
+    },
+    {
+      "period": "2026-Q1",
+      "watch_hours_billion": 2.22,
+      "channels_million": 1.07,
+      "broadcast_hours_million": 29,
+      "source_id": "streamlabs-hatchet-q1-2026"
+    },
+    {
+      "period": "2026-Q2",
+      "watch_hours_billion": 1.79,
+      "channels_million": 0.878,
+      "broadcast_hours_million": null,
+      "source_id": "streamlabs-hatchet-q2-2026"
+    }
+  ],
+  "reported_q2": {
+    "watch_hours_qoq_pct": -19.3,
+    "watch_hours_yoy_pct": -18.9,
+    "channels_qoq_pct": -17.9,
+    "channels_yoy_pct": -28.2
+  },
+  "annual_2025": {
+    "gaming_watch_hours_billion": 8.8,
+    "source_id": "hatchet-youtube-gaming-2025-live-hours",
+    "same_period_as_quarters": false
+  },
+  "general_live_q2": {
+    "watch_hours_billion": 12.97,
+    "channels_million": 0.699,
+    "watch_hours_qoq_pct": 2.7,
+    "category": "YouTube Live",
+    "source_id": "streamlabs-hatchet-q2-2026",
+    "identical_to_gaming": false,
+    "verified_disjoint_category_boundaries": false
+  },
+  "units": {
+    "watch_hours": "aggregate time spent viewing tracked broadcasts",
+    "broadcast_hours": "aggregate time transmitted by channels",
+    "channels": "unique broadcaster channel identifiers, not unique people"
+  },
+  "unmeasured": {
+    "gaming_unique_viewer_population": null,
+    "unique_creator_owners": null,
+    "monetized_channel_fraction": null,
+    "gaming_creator_net_income": null,
+    "causal_other_platform_shift": null,
+    "coverage_adjusted_total": null
+  }
+}
