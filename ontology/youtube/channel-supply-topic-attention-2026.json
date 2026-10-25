@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "channel_category_vs_topic_attention_compatibility_audit",
+  "as_of": "2026-10-25",
+  "method": "Crosswalk existing June 2026 CreatorDB primary category channel counts against selected, differently scoped YouTube title events and one US online animation-fan survey. Evaluate denominator, topic definition, observation period and geography before doing arithmetic. All three selected examples fail comparability.",
+  "source_ids": [
+    "creatordb-june2026-index",
+    "yt-morning-routine-upload-2026",
+    "yt-drum-cover-views-h1-2026",
+    "yt-independent-animation-us-2026"
+  ],
+  "source_data_paths": [
+    "ontology/youtube/creator-index-comparison-2026.json",
+    "ontology/youtube/topic-observations.json"
+  ],
+  "cases": [
+    {
+      "id": "people_blogs_vs_morning_routine",
+      "supply_category": "People & Blogs",
+      "supply_index_source_id": "creatordb-june2026-index",
+      "supply_index_snapshot": "2026-06-27",
+      "supply_unit": "vendor_indexed_channels_primary_category",
+      "indexed_channels": 322869,
+      "attention_topic_id": "feminine-lifestyle",
+      "attention_observation_id": "morning-routine-title-uploads-h1-2026",
+      "attention_source_id": "yt-morning-routine-upload-2026",
+      "attention_unit": "video_uploads",
+      "attention_value": 450000,
+      "attention_qualifier": ">",
+      "attention_geography": "Global",
+      "attention_period": "2026-01-01 to 2026-06-30",
+      "attention_population": "Videos uploaded with 'morning routine' or 'morningroutine' in the title (not all lifestyle videos)",
+      "join_status": "incompatible_scope_or_unit",
+      "audience_per_creator": null,
+      "active_audience_size": null,
+      "estimated_creator_profit": null,
+      "reason": "Broad vendor People & Blogs primary category is not the same as videos with a morning-routine title predicate; uploads are production events, not audience demand or unique creators."
+    },
+    {
+      "id": "music_vs_drum_cover",
+      "supply_category": "Music",
+      "supply_index_source_id": "creatordb-june2026-index",
+      "supply_index_snapshot": "2026-06-27",
+      "supply_unit": "vendor_indexed_channels_primary_category",
+      "indexed_channels": 196340,
+      "attention_topic_id": "music",
+      "attention_observation_id": "drum-cover-h1-2026",
+      "attention_source_id": "yt-drum-cover-views-h1-2026",
+      "attention_unit": "video_views",
+      "attention_value": 500000000,
+      "attention_qualifier": ">",
+      "attention_geography": "Global",
+      "attention_period": "2026-01-01 to 2026-06-30",
+      "attention_population": "Videos with \"drum cover\" in the title",
+      "join_status": "incompatible_scope_or_unit",
+      "audience_per_creator": null,
+      "active_audience_size": null,
+      "estimated_creator_profit": null,
+      "reason": "Broad vendor Music channel category is not a defined cohort of all video titles with drum cover; half-year video view events are not deduplicated viewers, creator earnings or monthly channel audiences."
+    },
+    {
+      "id": "film_animation_vs_us_fans",
+      "supply_category": "Film & Animation",
+      "supply_index_source_id": "creatordb-june2026-index",
+      "supply_index_snapshot": "2026-06-27",
+      "supply_unit": "vendor_indexed_channels_primary_category",
+      "indexed_channels": 67722,
+      "attention_topic_id": "general-animation",
+      "attention_observation_id": "indie-animation-weekly-us-2025",
+      "attention_source_id": "yt-independent-animation-us-2026",
+      "attention_unit": "within_fan_sample_percent",
+      "attention_value": 63,
+      "attention_qualifier": "=",
+      "attention_geography": "United States",
+      "attention_period": "2025-04",
+      "attention_population": "Online animation fans aged 14–24, n=358, who watch animated series created for YouTube weekly or more",
+      "join_status": "incompatible_scope_or_unit",
+      "audience_per_creator": null,
+      "active_audience_size": null,
+      "estimated_creator_profit": null,
+      "reason": "CreatorDB global primary-category channel counts do not share the denominator of an April 2025 US online animation-fan survey aged 14–24. A percentage of 358 surveyed fans is not global audience size."
+    }
+  ],
+  "valid_join_requirements": [
+    "The same defined category or exact inclusion predicate for creator supply and topic attention",
+    "A common observation date or explicitly comparable period for counted active creators and viewing",
+    "Same region and visibility frame, with missing-channel selection documented",
+    "Audience measured as deduplicated people where a person-to-creator ratio is claimed",
+    "Only comparable observed metric units; views, uploads, ad reach and survey percentages cannot convert without a validated bridge",
+    "Account for overlapping subcultures and channels posting in multiple topics",
+    "Attributable income and production work are independently measured before profitability claims"
+  ],
+  "declared_not_audience_demand_metrics": [
+    "vendor_channel_count",
+    "title_filtered_video_uploads",
+    "within_selected_fans_survey_share"
+  ],
+  "unmeasured": {
+    "matched_topic_active_organizers": null,
+    "matched_topic_unique_viewers": null,
+    "category_audience_per_creator": null,
+    "per_niche_channel_profit": null,
+    "relative_topic_undersupply": null
+  },
+  "scope_note": "Three selected illustrative incompatibilities from existing sourced research, not a new channel index, census of subcultures, creator-matching exercise or total demand ranking."
+}

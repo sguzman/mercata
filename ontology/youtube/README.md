@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [supply-versus-topic observation source-frame audit](channel-supply-topic-attention-2026.md), [machine comparison cases](channel-supply-topic-attention-2026.json) and [unit/denominator validator](../../site/channel-topic-join-audit.mjs) rule out synthetic audience-per-creator and scarcity rankings from unmatched indexed channel counts and title/survey activity.
+
+
 The [quality-signal and production-workload crosswalk](video-quality-production-crosswalk-2026.md), [bounded cohort evidence](video-quality-production-crosswalk-2026.json) and [audit](../../site/video-quality-audit.mjs) separate self-logged creator effort, educational owner analytics, public interaction events and rights constraints, while preserving unknown learning and earning outcomes.
 
 

@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [audience-versus-creator supply frame audit](ontology/youtube/channel-supply-topic-attention-2026.md) tests three published cross-source pairs and demonstrates why channel categories cannot be divided into mismatched title-filtered views, upload events or sample survey percentages to infer niche scarcity or profit.
+
+
 The [video quality and workload evidence crosswalk](ontology/youtube/video-quality-production-crosswalk-2026.md) separates a 61-video work diary from three selected educational-video observation samples, without treating views, video duration, retention or logged labor as a universal quality or profit measure.
 
 
