@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "creator_collaboration_fandom_participation_evidence",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "bounded_official_product_rules_and_selected_commissioned_survey_not_actual_collaboration_effect",
   "evidence_families": [
     {
@@ -40,6 +40,15 @@
       "population": "Editorially highlighted videos and cultural topics, not randomly selected posts",
       "method": "YouTube Culture & Trends year-end editorial examples",
       "date": "2025-12-02"
+    },
+    {
+      "id": "study_with_me_2026_peer_reviewed",
+      "source_ids": [
+        "liu-deng-zhou-2026-study-with-me-comments"
+      ],
+      "population": "393 title-filtered pre-recorded YouTube study-with-me videos and 164,611 associated selected comments",
+      "method": "2024 public API title-query selection, post-collection filtering, topic modeling and sentiment classification; selected public comment events are not unique people",
+      "date": "September 2024 retrieval, article published February 2026"
     }
   ],
   "collaboration_policy": {
@@ -238,5 +247,55 @@
       "verified": false,
       "limitations": "No measured collaboration costs, payouts or comparable untreated creators"
     }
-  ]
+  ],
+  "study_with_me_observation": {
+    "source_id": "liu-deng-zhou-2026-study-with-me-comments",
+    "article_publication": "2026-02",
+    "data_collection": "2024-09",
+    "study_field": "informal_educational_co_viewing_and_comment_discourse",
+    "selection": "Prerecorded YouTube videos matched title phrase 'study with me' in September 2024 through the public YouTube Data API",
+    "selected_videos": 393,
+    "analyzed_comments": 164611,
+    "unit": "public_comment_events_not_unique_commenters",
+    "videos_published_after_2023": 211,
+    "reported_total_views": "greater_than_400_million_in_selected_public_video_metadata",
+    "distinct_viewer_count": null,
+    "research_methods": [
+      "modified_topic_modeling",
+      "automated_comment_sentiment_classification",
+      "video_feature_observation"
+    ],
+    "observed_comment_topics": [
+      "study_video_design_and_ambience",
+      "self_regulation_self_reports",
+      "social_interaction_and_support"
+    ],
+    "reported_positive_comment_share": "about_half_not_exact_percentage",
+    "positive_percent_exact": null,
+    "documented_video_features": [
+      "lighting",
+      "timers",
+      "ambient_music",
+      "on_screen_text"
+    ],
+    "study_overall_youtube_content_share": null,
+    "representative_comment_population": false,
+    "silent_viewers_observed": false,
+    "experimental_design": false,
+    "objectively_measured_learning_improvement": null,
+    "participants_psychological_states_validated": null,
+    "causal_effect_on_motivation": null,
+    "unique_engaged_people": null,
+    "viewer_to_creator_payment_rate": null,
+    "creator_net_earnings": null,
+    "youth_profiles_or_comment_bodies_collected": false,
+    "source_limitations": [
+      "Title search selected videos explicitly named 'study with me' and excludes other formats, names and silent/noncommenting viewers.",
+      "The published article's analyzed comment count is a comment-event count, not a count of unique commenters or verified learners.",
+      "Sentiment and study-habit claims are machine-coded text, not personally verified mental states, education gains or clinical outcomes.",
+      "Publication-date and comment-sample availability may bias videos toward visible, searchable material; the sample is not a worldwide YouTube content or audience census.",
+      "No retrieved raw comments, usernames, channel identities, transcripts or minors' records are republished.",
+      "Selection is observational, so causal video-design or creator-earnings effects are not established."
+    ]
+  }
 }

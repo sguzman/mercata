@@ -1624,3 +1624,26 @@ test('Peer-reviewed study collection preserves narrow populations and unknown ea
   assert(papers.studies.every(x=>x.earnings_mean===null && x.earnings_median===null));
   assert(papers.studies.every(x=>x.causal_effect_estimate===null));
 });
+
+test('Study With Me participation uses selected public comment events, never unique people or verified learning outcomes',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/creator-collaboration-fandom-2026.json'),load('specimens/youtube.json')]);
+ const study=m.study_with_me_observation,known=new Set(d.evidence.map(s=>s.id));
+ assert(known.has(study.source_id));
+ assert(m.evidence_families.some(f=>f.id==='study_with_me_2026_peer_reviewed'&&f.source_ids.includes(study.source_id)));
+ assert.equal(study.selected_videos,393);
+ assert.equal(study.analyzed_comments,164611);
+ assert.equal(study.data_collection,'2024-09');
+ assert.equal(study.videos_published_after_2023,211);
+ assert.equal(study.positive_percent_exact,null);
+ assert.equal(study.representative_comment_population,false);
+ assert.equal(study.experimental_design,false);
+ assert.equal(study.silent_viewers_observed,false);
+ assert.equal(study.participants_psychological_states_validated,null);
+ assert.equal(study.objectively_measured_learning_improvement,null);
+ assert.equal(study.causal_effect_on_motivation,null);
+ assert.equal(study.unique_engaged_people,null);
+ assert.equal(study.viewer_to_creator_payment_rate,null);
+ assert.equal(study.creator_net_earnings,null);
+ assert.equal(study.youth_profiles_or_comment_bodies_collected,false);
+ assert(d.claims.some(c=>c.id==='study-with-me-2026-title-selected-video-comments'&&c.source_ids.includes(study.source_id)));
+});

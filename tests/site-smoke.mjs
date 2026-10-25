@@ -210,6 +210,11 @@ try{
     assert((await chatCulture.textContent()).includes('0.4%–8.7%'));
     assert((await chatCulture.textContent()).includes('8–38 seconds'));
     assert((await chatCulture.textContent()).includes('No individual chat identities'));
+    const studyWithMe=page.locator('.creator-collaboration-evidence .study-with-me-comment-evidence');
+    assert.equal(await studyWithMe.count(),1,'Missing bounded study-comment research');
+    assert((await studyWithMe.textContent()).includes('393 title-selected prerecorded videos'));
+    assert((await studyWithMe.textContent()).includes('164,611 analyzed public comments'));
+    assert((await studyWithMe.textContent()).includes('causal learning and creator-profit effects were not measured'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));

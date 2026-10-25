@@ -4542,6 +4542,17 @@ function renderCreatorCollaborationEvidence(data,dossier){
   grid.append(card);
  }
  details.append(grid);
+ const study=data.study_with_me_observation;
+ if(study?.source_id&&study.selected_videos===393&&study.analyzed_comments===164611){
+  const extra=make('div','study-with-me-comment-evidence');
+  extra.append(make('h5','','Study With Me: empirical comments, not all viewers'));
+  extra.append(make('p','measure-limit',
+   study.selected_videos+' title-selected prerecorded videos, '+study.analyzed_comments.toLocaleString('en-US')+
+   ' analyzed public comments, collected in '+study.data_collection+'. Selection includes commenters, not distinct viewers or all participants.'));
+  extra.append(make('p','measure-limit','About half the selected comments were coded positive, but the exact rate and verified psychological states are unknown. Design themes include lighting, timers, ambient music and social companionship; causal learning and creator-profit effects were not measured.'));
+  extra.append(audienceSources([study.source_id],dossier));
+  details.append(extra);
+ }
  details.append(make('p','measure-limit','Shared recommendations are an intended feature, not guaranteed. No collaboration earnings, unique shared audience, or causal growth lift has been measured.'));
  details.append(audienceSources([...new Set(data.evidence_families.flatMap(x=>x.source_ids))],dossier));
  const link=make('a','inline-link','Read the payout rules and fandom-sample limitations ↗');
