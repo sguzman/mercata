@@ -36,6 +36,10 @@ The [paid member cohort and offer-test protocol](member-cohort-protocol.md) and 
 
 The [related-video funnel study](shorts-related-video-funnel.md), [machine measurement gates](shorts-related-video-funnel.json), and [pure event-pair audit](../../site/shorts-referral-audit.mjs) distinguish a link that can be placed in a Shorts player from observed clicks, destination views, overlapping format audiences or causal profit. The website documents which official reports exist and what cannot yet be measured without authorized source-specific attribution.
 
+## 2026 commissioned creator survey versus macroeconomic impact
+
+The [Oxford Economics creator, business and user survey frame](oxford-creator-impact-2026.md), [machine response counts](oxford-creator-impact-2026.json) and [survey comparison audit](../../site/oxford-creator-impact-audit.mjs) preserve the January–March 2026 country sample counts. YouTube recruited the creator respondents; EU27 overlaps France and Germany. The estimated 2025 U.S. GDP contribution and full-time-equivalent jobs are **not** creator income, headcount or measured typical work hours. Zero-earner rates and representative creator income remain unknown.
+
 ## Global and country audience measurement
 
 The [audience population and advertising-reach crosswalk](audience-population-crosswalk.md), [machine evidence table](audience-population-crosswalk.json), and [metric comparator](../../site/audience-population-audit.mjs) distinguish GWI past-month survey rates, Pew U.S. adult self-reported daily use, and DataReportal's advertiser addressability estimates. The website displays evidence units; global deduplicated monthly and daily YouTube people remain unmeasured.

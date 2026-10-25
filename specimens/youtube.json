@@ -2979,6 +2979,28 @@
       "evidence_class": "mexico_government_national_audiovisual_consumption_survey",
       "license": "Official dated public survey summary linked and independently paraphrased",
       "notes": "Survey 8,750 people, 6,125 urban, 2,625 rural. 55% consumed audiovisual material online; 66% of surveyed online audiovisual consumers used YouTube. The conditional item N is not specified in press release."
+    },
+    {
+      "id": "oxford-youtube-impact-methodology-2026",
+      "url": "https://www.oxfordeconomics.com/youtubes-creator-economy-impact/",
+      "publisher": "Oxford Economics",
+      "title": "YouTube’s Creator Economy Impact — definitions, 2026 survey methods and country response counts",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commissioned_economic_impact_methodology",
+      "license": "Public methodology linked; concise independently authored observations, no data collection or copied figures",
+      "notes": "Jan–Mar 2026 separate creator, user and business surveys; creators were recruited by YouTube; EU27 includes separate France and Germany rows; response counts not creator populations."
+    },
+    {
+      "id": "youtube-us-impact-report-2025",
+      "url": "https://blog.youtube/news-and-events/2025-us-youtube-impact-report/",
+      "publisher": "YouTube Official Blog",
+      "title": "Exploring YouTube's U.S. impact in 2025",
+      "published_at": "2026-07-16",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_commissioned_macro_impact_estimates",
+      "license": "Official release linked; quantitative thresholds paraphrased; no report copied",
+      "notes": "U.S. estimated GDP contribution more than USD 60B and more than 540k FTE in 2025; not individual payouts or measured profit."
     }
   ],
   "claims": [
@@ -6402,6 +6424,37 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "The published regulator summary does not provide the conditional platform question's item count, individual respondent records, unique monthly users, YPP creator population or a harmonized 2015-to-2024 YouTube series."
+    },
+    {
+      "id": "oxford-2026-creator-survey-frame",
+      "text": "Oxford Economics fielded separate creator, business and user surveys in January–March 2026. YouTube recruited the creator sample; 6,100 U.S. and 43,300 India creator responses are sample counts, not respective national creator populations.",
+      "source_ids": [
+        "oxford-youtube-impact-methodology-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Non-probability creator recruitment does not cover an identifiable population of all uploaders or zero earners; sample mixing with other studies is invalid."
+    },
+    {
+      "id": "oxford-2026-eu27-overlap",
+      "text": "Oxford Economics lists 12,100 EU27 creator responses plus separate France (1,100) and Germany (1,400) rows. Because France and Germany fall within EU27, the regional rows are not independent additive geographic populations.",
+      "source_ids": [
+        "oxford-youtube-impact-methodology-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Publication does not provide respondent-level country IDs or cross-row deduplication, so the country table is not a global population estimator."
+    },
+    {
+      "id": "oxford-2026-us-macro-not-income",
+      "text": "YouTube's published 2025 U.S. economic-impact estimates exceed USD 60 billion in GDP and 540,000 supported full-time-equivalent jobs. The underlying Oxford model includes downstream effects and an eight-hour-week filter for creator work in its FTE component; neither number is a creator earnings distribution.",
+      "source_ids": [
+        "oxford-youtube-impact-methodology-2026",
+        "youtube-us-impact-report-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Commissioned macroeconomic estimates use modeled downstream effects, YouTube-provided aggregate payout information and survey-based off-platform revenue estimates; individual receipts, zero-earner counts and hours are unavailable."
     }
   ],
   "observations": [],

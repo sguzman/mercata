@@ -93,7 +93,7 @@
         "youtube/identity/define-a-comparison-set-of-video-platforms"
       ],
       "phase": 1,
-      "progress_percent": 69
+      "progress_percent": 71
     },
     {
       "id": "access",
@@ -151,7 +151,7 @@
         "youtube/economics/measure-the-cost-of-testing-a-new-niche"
       ],
       "phase": 1,
-      "progress_percent": 63
+      "progress_percent": 68
     },
     {
       "id": "market",
@@ -177,7 +177,7 @@
         "youtube/market/set-historical-comparison-windows"
       ],
       "phase": 2,
-      "progress_percent": 50
+      "progress_percent": 67
     },
     {
       "id": "discovery",
@@ -204,7 +204,7 @@
         "youtube/discovery/model-discovery-by-language"
       ],
       "phase": 3,
-      "progress_percent": 53
+      "progress_percent": 67
     },
     {
       "id": "competition",
@@ -231,7 +231,7 @@
         "youtube/competition/catalog-substitutes-outside-youtube"
       ],
       "phase": 3,
-      "progress_percent": 49
+      "progress_percent": 61
     },
     {
       "id": "income",
@@ -262,7 +262,7 @@
         "youtube/income/construct-transparent-earning-scenarios"
       ],
       "phase": 3,
-      "progress_percent": 57
+      "progress_percent": 75
     },
     {
       "id": "rights",
@@ -288,7 +288,7 @@
         "youtube/rights/track-licensing-terms-over-time"
       ],
       "phase": 3,
-      "progress_percent": 59
+      "progress_percent": 78
     },
     {
       "id": "sales",
@@ -314,7 +314,7 @@
         "youtube/sales/separate-analytics-unavailable-to-outsiders"
       ],
       "phase": 3,
-      "progress_percent": 50
+      "progress_percent": 74
     },
     {
       "id": "risk",
@@ -342,7 +342,7 @@
         "youtube/risk/set-archive-and-continuity-measures"
       ],
       "phase": 3,
-      "progress_percent": 66
+      "progress_percent": 74
     },
     {
       "id": "strategy",
@@ -372,7 +372,7 @@
         "youtube/strategy/create-a-platform-diversification-checklist"
       ],
       "phase": 4,
-      "progress_percent": 41
+      "progress_percent": 66
     },
     {
       "id": "review",
@@ -426,7 +426,7 @@
         "youtube/special-video/study-child-directed-video-restrictions"
       ],
       "phase": 3,
-      "progress_percent": 70
+      "progress_percent": 76
     },
     {
       "id": "audience-scale",
@@ -456,7 +456,7 @@
         "youtube/audience-scale/create-a-multi-year-audience-source-comparison"
       ],
       "phase": 2,
-      "progress_percent": 41
+      "progress_percent": 68
     },
     {
       "id": "audience-demography",
@@ -493,7 +493,7 @@
         "youtube/audience-demography/audit-differences-among-survey-panels"
       ],
       "phase": 2,
-      "progress_percent": 59
+      "progress_percent": 69
     },
     {
       "id": "subculture-atlas",
@@ -537,7 +537,7 @@
         "youtube/subculture-atlas/document-subculture-taxonomy-drift"
       ],
       "phase": 2,
-      "progress_percent": 52
+      "progress_percent": 63
     },
     {
       "id": "content-formats",
@@ -566,7 +566,7 @@
         "youtube/content-formats/measure-creation-cost-by-format"
       ],
       "phase": 2,
-      "progress_percent": 55
+      "progress_percent": 66
     },
     {
       "id": "social-discovery",
@@ -594,7 +594,7 @@
         "youtube/social-discovery/track-changes-to-official-recommendation-explanations"
       ],
       "phase": 2,
-      "progress_percent": 44
+      "progress_percent": 71
     },
     {
       "id": "community-dynamics",
@@ -622,7 +622,7 @@
         "youtube/community-dynamics/compare-community-participation-across-languages"
       ],
       "phase": 3,
-      "progress_percent": 54
+      "progress_percent": 57
     },
     {
       "id": "audience-economics",
@@ -653,7 +653,7 @@
         "youtube/audience-economics/create-a-buyer-intent-versus-casual-entertainment-framework"
       ],
       "phase": 3,
-      "progress_percent": 50
+      "progress_percent": 64
     },
     {
       "id": "audience-trends",
@@ -681,7 +681,7 @@
         "youtube/audience-trends/create-explicit-uncertainty-ranges-for-niche-forecasts"
       ],
       "phase": 4,
-      "progress_percent": 53
+      "progress_percent": 63
     },
     {
       "id": "audience-safeguards",
@@ -784,7 +784,7 @@
       "objective": "List precisely what counts as a channel, creator, active uploader, viewer, subscriber and paid customer.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and list precisely what counts as a channel, creator, active uploader, viewer, subscriber and paid customer.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 61,
       "evidence": [
         "ontology/youtube/channel-ownership-continuity.json",
         "ontology/youtube/channel-ownership-continuity.md",
@@ -792,7 +792,13 @@
         "tests/youtube.test.mjs",
         "scripts/verify.mjs",
         "ontology/youtube/operator-market-roles.json",
-        "ontology/youtube/operator-market-roles.md"
+        "ontology/youtube/operator-market-roles.md",
+        "ontology/youtube/oxford-creator-impact-2026.json",
+        "ontology/youtube/oxford-creator-impact-2026.md",
+        "site/oxford-creator-impact-audit.mjs",
+        "tests/oxford-creator-impact.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
       "artifact": "ontology/youtube/operator-market-roles.json",
       "priority": "high",
@@ -1463,13 +1469,19 @@
       "objective": "Specify the transactions each population participates in and their appropriate denominators.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify the transactions each population participates in and their appropriate denominators.",
       "status": "in_progress",
-      "percent": 40,
+      "percent": 51,
       "evidence": [
         "ontology/youtube/analytics-query-guide.json",
         "ontology/youtube/analytics-query-guide.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/oxford-creator-impact-2026.json",
+        "ontology/youtube/oxford-creator-impact-2026.md",
+        "site/oxford-creator-impact-audit.mjs",
+        "tests/oxford-creator-impact.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/oxford-creator-impact-2026.json",
       "priority": "standard",
       "phase": 2
     },
@@ -1481,7 +1493,7 @@
       "objective": "Separate registered accounts, monthly users, visitors, ad reach and hours watched.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and separate registered accounts, monthly users, visitors, ad reach and hours watched.",
       "status": "in_progress",
-      "percent": 63,
+      "percent": 70,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
@@ -1490,7 +1502,13 @@
         "scripts/verify.mjs",
         "ontology/youtube/country-ad-reach-comparisons.json",
         "ontology/youtube/country-ad-reach-comparisons.md",
-        "tests/country-ad-reach-comparisons.test.mjs"
+        "tests/country-ad-reach-comparisons.test.mjs",
+        "ontology/youtube/oxford-creator-impact-2026.json",
+        "ontology/youtube/oxford-creator-impact-2026.md",
+        "site/oxford-creator-impact-audit.mjs",
+        "tests/oxford-creator-impact.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
       "artifact": "ontology/youtube/country-ad-reach-comparisons.json",
       "priority": "standard",
@@ -1504,7 +1522,7 @@
       "objective": "Choose consistent observations and dates to avoid mixing estimates.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and choose consistent observations and dates to avoid mixing estimates.",
       "status": "in_progress",
-      "percent": 76,
+      "percent": 83,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
@@ -1513,7 +1531,13 @@
         "scripts/verify.mjs",
         "ontology/youtube/country-ad-reach-comparisons.json",
         "ontology/youtube/country-ad-reach-comparisons.md",
-        "tests/country-ad-reach-comparisons.test.mjs"
+        "tests/country-ad-reach-comparisons.test.mjs",
+        "ontology/youtube/oxford-creator-impact-2026.json",
+        "ontology/youtube/oxford-creator-impact-2026.md",
+        "site/oxford-creator-impact-audit.mjs",
+        "tests/oxford-creator-impact.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
       "artifact": "ontology/youtube/country-ad-reach-comparisons.json",
       "priority": "standard",
@@ -1554,15 +1578,21 @@
       "objective": "Prepare an evidence comparison between official disclosures, surveys and independent estimates.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and prepare an evidence comparison between official disclosures, surveys and independent estimates.",
       "status": "in_progress",
-      "percent": 42,
+      "percent": 58,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/oxford-creator-impact-2026.json",
+        "ontology/youtube/oxford-creator-impact-2026.md",
+        "site/oxford-creator-impact-audit.mjs",
+        "tests/oxford-creator-impact.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/oxford-creator-impact-2026.json",
       "priority": "standard",
       "phase": 2
     },
@@ -2187,7 +2217,7 @@
       "objective": "Set source selection criteria and record when no reliable distribution exists.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and set source selection criteria and record when no reliable distribution exists.",
       "status": "in_progress",
-      "percent": 86,
+      "percent": 88,
       "evidence": [
         "ontology/youtube/creator-income-evidence.json",
         "ontology/youtube/academic-studies.json",
@@ -2202,7 +2232,12 @@
         "ontology/youtube/air-studio-benchmarks-2026.md",
         "ontology/youtube/first-upload-vlog-study-2026.json",
         "ontology/youtube/first-upload-vlog-study-2026.md",
-        "tests/first-upload-vlog-study.test.mjs"
+        "tests/first-upload-vlog-study.test.mjs",
+        "ontology/youtube/oxford-creator-impact-2026.json",
+        "ontology/youtube/oxford-creator-impact-2026.md",
+        "site/oxford-creator-impact-audit.mjs",
+        "tests/oxford-creator-impact.test.mjs",
+        "site/app.js"
       ],
       "artifact": "ontology/youtube/air-studio-benchmarks-2026.json",
       "priority": "standard",
@@ -2279,13 +2314,19 @@
       "objective": "Prepare disjoint intervals by subscribers, views and active production.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and prepare disjoint intervals by subscribers, views and active production.",
       "status": "in_progress",
-      "percent": 42,
+      "percent": 49,
       "evidence": [
         "ontology/youtube/small-channel-income.json",
         "ontology/youtube/brand-campaign-payment-concentration-2026.json",
         "ontology/youtube/brand-campaign-payment-concentration-2026.md",
         "tests/brand-campaign-payment-concentration.test.mjs",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/oxford-creator-impact-2026.json",
+        "ontology/youtube/oxford-creator-impact-2026.md",
+        "site/oxford-creator-impact-audit.mjs",
+        "tests/oxford-creator-impact.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
       "artifact": "ontology/youtube/brand-campaign-payment-concentration-2026.json",
       "priority": "standard",
@@ -2350,7 +2391,7 @@
       "objective": "Include research, recording, editing, thumbnail design, publishing and support.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and include research, recording, editing, thumbnail design, publishing and support.",
       "status": "in_progress",
-      "percent": 86,
+      "percent": 89,
       "evidence": [
         "ontology/youtube/production-costs.json",
         "ontology/youtube/production-costs.md",
@@ -2368,7 +2409,12 @@
         "tests/first-upload-vlog-study.test.mjs",
         "ontology/youtube/hourly-income-accounting.md",
         "site/creator-hourly-audit.mjs",
-        "tests/creator-hourly-audit.test.mjs"
+        "tests/creator-hourly-audit.test.mjs",
+        "ontology/youtube/oxford-creator-impact-2026.json",
+        "ontology/youtube/oxford-creator-impact-2026.md",
+        "site/oxford-creator-impact-audit.mjs",
+        "tests/oxford-creator-impact.test.mjs",
+        "site/app.js"
       ],
       "artifact": "ontology/youtube/first-upload-vlog-study-2026.json",
       "priority": "standard",
@@ -3519,7 +3565,7 @@
       "objective": "Build checks against mixing views, viewers, creators and registered accounts.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and build checks against mixing views, viewers, creators and registered accounts.",
       "status": "in_progress",
-      "percent": 94,
+      "percent": 95,
       "evidence": [
         "ontology/youtube/analytics-query-guide.json",
         "ontology/youtube/analytics-query-guide.md",
@@ -3538,9 +3584,14 @@
         "ontology/youtube/measurement-history.json",
         "ontology/youtube/measurements.json",
         "ontology/youtube/historical-linking-study.json",
-        "ontology/youtube/historical-linking-study.md"
+        "ontology/youtube/historical-linking-study.md",
+        "ontology/youtube/oxford-creator-impact-2026.json",
+        "ontology/youtube/oxford-creator-impact-2026.md",
+        "site/oxford-creator-impact-audit.mjs",
+        "tests/oxford-creator-impact.test.mjs",
+        "site/app.js"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/oxford-creator-impact-2026.json",
       "priority": "high",
       "phase": 1
     },

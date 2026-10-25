@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [Oxford Economics 2026 YouTube creator-survey methodology](ontology/youtube/oxford-creator-impact-2026.md) registers original country response counts, source-defined creator/user populations, non-additive EU27 rows and the difference between modeled U.S. GDP/FTE impacts and creator cash earnings. It does not infer median creator income or ordinary labor hours.
+
+
 Mercata also has a [reproducible YouTube source-independence audit](ontology/youtube/source-provenance.md) that flags reused official document URLs and syndicated study data without confusing unknown publication dates with invalid sources.
 
 An [ownership, delegation and continuity study](ontology/youtube/channel-ownership-continuity.md) explains which roles can manage a YouTube channel, the risk of destination deletion during transfers, and the limits of uploaded-video exports. General platform access does not establish legal transferability of a creator's business.

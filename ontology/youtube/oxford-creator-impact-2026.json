@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "commissioned_economic_impact_creator_survey_frames",
+  "as_of": "2026-10-24",
+  "source_ids": [
+    "oxford-youtube-impact-methodology-2026",
+    "youtube-us-impact-report-2025"
+  ],
+  "survey": {
+    "fielded_from": "2026-01",
+    "fielded_to": "2026-03",
+    "mode": "online",
+    "sampling": {
+      "creator": "YouTube recruited respondents through its creator community; Oxford checked for a mix of subscriber audience sizes, not a representative probability sample of all YouTube creators",
+      "user": "Country surveys were recruited to represent age and gender in each country and weighted to characteristics of YouTube's user base",
+      "business": "Firms using YouTube for video publishing, advertising or other business purposes; groups may overlap"
+    },
+    "definitions": {
+      "creator": "Person who uploads at least one YouTube video regardless of revenue",
+      "youtube_paid_creator": "Creator receiving money directly from YouTube; excludes off-platform-only earnings",
+      "user": "Person aged at least 18 who watches YouTube at least monthly",
+      "creative_entrepreneur": "Individual or business with 10,000 or more subscribers on largest channel, or smaller creator with direct YouTube earnings, related off-platform earnings, or permanent employees"
+    },
+    "response_count_unit": "survey_responses_not_population_or_unique_global_users",
+    "response_counts": [
+      {
+        "id": "BR",
+        "place": "Brazil",
+        "creator": 5200,
+        "business": 600,
+        "user": 3000
+      },
+      {
+        "id": "US",
+        "place": "United States",
+        "creator": 6100,
+        "business": 600,
+        "user": 5700
+      },
+      {
+        "id": "CA",
+        "place": "Canada",
+        "creator": 2200,
+        "business": 600,
+        "user": 3000
+      },
+      {
+        "id": "EU27",
+        "place": "European Union (27)",
+        "creator": 12100,
+        "business": 2400,
+        "user": 13700
+      },
+      {
+        "id": "FR",
+        "place": "France",
+        "creator": 1100,
+        "business": 600,
+        "user": 3000
+      },
+      {
+        "id": "DE",
+        "place": "Germany",
+        "creator": 1400,
+        "business": 600,
+        "user": 3000
+      },
+      {
+        "id": "UK",
+        "place": "United Kingdom",
+        "creator": 3200,
+        "business": 600,
+        "user": 3000
+      },
+      {
+        "id": "AU",
+        "place": "Australia",
+        "creator": 1100,
+        "business": 600,
+        "user": 3000
+      },
+      {
+        "id": "IN",
+        "place": "India",
+        "creator": 43300,
+        "business": 600,
+        "user": 3000
+      },
+      {
+        "id": "ID",
+        "place": "Indonesia",
+        "creator": 5500,
+        "business": 600,
+        "user": 3000
+      },
+      {
+        "id": "JP",
+        "place": "Japan",
+        "creator": 3400,
+        "business": 600,
+        "user": 3000
+      },
+      {
+        "id": "KR",
+        "place": "South Korea",
+        "creator": 1200,
+        "business": 600,
+        "user": 3000
+      }
+    ],
+    "nested_jurisdictions": [
+      {
+        "parent": "EU27",
+        "members": [
+          "FR",
+          "DE"
+        ],
+        "note": "France and Germany are included within the EU27 geographic scope. Do not sum them with EU27 counts as independent population frames."
+      }
+    ],
+    "creator_sample_is_representative_of_all_creators": false,
+    "measured_youtube_creator_median_income": null,
+    "measured_all_creator_zero_earner_rate": null
+  },
+  "economic_impact": {
+    "method": "Oxford Economics models direct value added from associated revenue minus intermediate costs, then indirect and induced effects with input-output methods; U.S. uses IMPLAN",
+    "creator_revenue_sources": "YouTube supplied aggregate 2025 platform payouts; off-platform revenues estimated from survey responses",
+    "fte_work_hours": "Creative entrepreneurs' reported weekly YouTube work hours, filtered to those working at least eight hours; employee and supply-chain jobs additionally modeled",
+    "fte_min_weekly_creator_hours": 8,
+    "fte_is_person_headcount": false,
+    "fte_is_average_creator_work_hours": false,
+    "us_2025": {
+      "currency": "USD",
+      "gdp_contribution_lower_bound_billion": 60,
+      "fte_jobs_lower_bound": 540000,
+      "bounds": "strict_lower",
+      "economic_period": "2025",
+      "published_at": "2026-07-16",
+      "unit": "estimated GDP value added and supported full-time-equivalent jobs, not creator payments"
+    },
+    "us_2025_actual_creator_payout_distribution": null,
+    "all_creator_hourly_profit_distribution": null,
+    "sponsorship_and_off_platform_sales_are_direct_youtube_payouts": false,
+    "impact_is_individual_income": false
+  },
+  "interpretation_gates": [
+    "Creator and business survey respondent counts are not population totals or independent creator/channel IDs.",
+    "EU27 overlaps France and Germany; do not sum the rows into a worldwide or European creator population.",
+    "YouTube-invited creator respondents are not a representative all-creator probability frame, and lack missing-channel and zero-earner denominators.",
+    "Gross economic contribution or employment supported is not a typical creator payout, personal income, net cash profit, or observed job headcount.",
+    "At-least-eight-hours filter excludes lower-hour creators from the reported creative-entrepreneur FTE calculation.",
+    "Do not derive hourly earnings from GDP/FTE or survey sample counts."
+  ],
+  "unmeasured": {
+    "all_creator_population": null,
+    "global_active_creator_population": null,
+    "creator_income_median": null,
+    "creator_income_mean": null,
+    "share_earning_zero": null,
+    "work_hours_distribution_all_creators": null,
+    "net_profit_distribution": null,
+    "causal_effect_of_youtube": null
+  }
+}
