@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [monthly income volatility protocol](ontology/youtube/monthly-income-volatility-protocol.md) extends the verified YouTube cashbook to separate finalized credits, issued transfers, cleared cash, paid costs, and zero-payment months from creator zero earnings. Its arithmetic is tested without user financial records.
+
+
 The [AIR 300-channel revenue concentration and monthly RPM synthesis](ontology/youtube/air-300-revenue-concentration-2026.md) adds observed nested top-decile ad revenue shares and calendar-month medians while recording that it reuses the same monetized channel cohort as AIR's July study.
 
 

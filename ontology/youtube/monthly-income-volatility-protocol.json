@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "monthly_creator_cash_inflow_and_volatility_measurement_protocol",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "youtube-payment-process",
+    "adsense-payment-cycle",
+    "adsense-thresholds"
+  ],
+  "existing_ledger": "ontology/youtube/monthly-creator-cash-flow-protocol.json",
+  "existing_engine": "site/monthly-creator-cash-flow.mjs",
+  "measurement_engine": "site/monthly-income-volatility.mjs",
+  "sample": "single_authorized_creator_payment_account_per_currency",
+  "minimum_complete_months": 3,
+  "origin_required": "explicit_operator_entries_only",
+  "expected_metrics": [
+    {
+      "id": "posted_net",
+      "unit": "reporting_currency_per_month",
+      "meaning": "Finalized net account credits, not necessarily current-month production earnings"
+    },
+    {
+      "id": "cleared_cash_inflows",
+      "unit": "reporting_currency_per_month",
+      "meaning": "Actually deposited YouTube payments plus disjoint outside-platform cash receipts"
+    },
+    {
+      "id": "net_cash_movement",
+      "unit": "reporting_currency_per_month",
+      "meaning": "Cleared cash inflows minus recorded paid refunds and expenses"
+    },
+    {
+      "id": "zero_cleared_youtube_payment_months",
+      "unit": "months",
+      "meaning": "Months with no observed bank payment, not months of zero creator earnings"
+    },
+    {
+      "id": "positive_credit_without_cleared_payment_months",
+      "unit": "months",
+      "meaning": "Months with finalized posting but no cleared YouTube bank payment, not necessarily an account hold"
+    },
+    {
+      "id": "maximum_consecutive_no_youtube_payment_months",
+      "unit": "months",
+      "meaning": "Run length without cleared platform receipts; may reflect thresholds, transit, pauses or holds"
+    },
+    {
+      "id": "population_cv_cleared_inflows",
+      "unit": "unitless",
+      "meaning": "Descriptive standard deviation divided by positive average cash inflow, not an industry risk forecast"
+    },
+    {
+      "id": "negative_cash_movement_months",
+      "unit": "months",
+      "meaning": "Negative recorded monthly liquidity change, not necessarily negative accrued accounting profit"
+    }
+  ],
+  "required_data": [
+    "consecutive_months",
+    "matching_reporting_currency",
+    "complete_explicit_inputs",
+    "separate_finalized_issued_and_received",
+    "paid_cash_costs",
+    "owner_permission_before_real_data"
+  ],
+  "analysis_rules": [
+    "Only an already reconciled result from the verified monthly ledger is accepted; summary row consistency is independently rechecked.",
+    "A finalized amount posted to AdSense is distinct from a cleared YouTube bank receipt. No bank payment can be inferred from an eligible payout threshold.",
+    "Bank transfer date and upload month differ. A zero-payment calendar month does not establish zero revenue or a failed channel.",
+    "A large deposit can be delayed accumulated balances, not a spike of current-month video earnings.",
+    "CV is descriptive and computed only for nonnegative cash inflows with a strictly positive mean; it is null if the mean is zero.",
+    "The rolling window must be at least three consecutive complete months; smaller, missing or nonconsecutive observations are rejected.",
+    "Monthly cash movement is not net income, wage, taxable profit or expected future creator earnings.",
+    "No cross-creator volatility distribution can be produced from one account; representative cohorts require consent, matching currency and period, and explicit no-earnings inclusion.",
+    "Static repository fixtures contain no real bank accounts, individual receipts, private credentials or creator-income forecasts."
+  ],
+  "public_account_data_collected": false,
+  "authorized_observation_rows": [],
+  "unknowns": {
+    "representative_monthly_creator_volatility": null,
+    "typical_creator_payout_gap": null,
+    "zero_earnings_share": null,
+    "median_income": null,
+    "real_creator_bank_receipts": null,
+    "creator_net_accrual_profit": null
+  }
+}
