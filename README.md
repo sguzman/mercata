@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [seven-market country/language denominator audit](ontology/youtube/country-language-matrix-2026.md) preserves official late-2025 advertiser-reach source figures without assuming those counts reveal a creator's residence, video audio language, or the viewer population's primary or secondary languages.
+
+
 The [conditional YouTube withholding calculation audit](ontology/youtube/tax-withholding-mechanics.md) applies source-defined U.S.-viewer versus worldwide income bases correctly and excludes personal tax outcomes, FX assumptions and double deductions from settled cash.
 
 

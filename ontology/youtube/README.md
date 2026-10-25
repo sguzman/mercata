@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [country/language sampling and denominator matrix](country-language-matrix-2026.md), [sourced seven-market data](country-language-matrix-2026.json), and [validator](../../site/country-language-matrix-audit.mjs) preserve country advertiser-reach estimates separately from content metadata, playback audio, captions and viewer languages.
+
+
 The [withholding basis research](tax-withholding-mechanics.md), [published payee-case data](tax-withholding-mechanics.json) and [tested conditional arithmetic](../../site/youtube-withholding-scenario.mjs) separate U.S.-viewer deduction bases, missing-form worldwide backup withholding, Google withholding from local tax, and finalized bank cash.
 
 
