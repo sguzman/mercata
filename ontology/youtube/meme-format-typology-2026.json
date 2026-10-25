@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "public_short_humor_and_remix_format_typology",
+  "as_of": "2026-10-25",
+  "method": "Categorize six overlapping public formats, separating official Shorts Remix mechanics, ranking template activity, and editorial comedic forms. Only one title-filtered view count is directly documented; no human fan population or format profits inferred.",
+  "source_ids": [
+    "yt-tier-list-formats-2025",
+    "yt-shorts-remix-guide-2026",
+    "yt-shorts-remix-attribution-2026",
+    "yt-animation-memes-editorial-2025",
+    "yt-year-trends-2025"
+  ],
+  "formats": [
+    {
+      "id": "shorts_remix",
+      "definition": "Source-attributed video/audio transformation through Shorts tools such as Cut, Green Screen or Collab",
+      "source_ids": [
+        "yt-shorts-remix-guide-2026",
+        "yt-shorts-remix-attribution-2026"
+      ],
+      "format_category": "platform_remix_feature",
+      "may_overlap": [
+        "animated_audio_meme",
+        "reaction_commentary"
+      ],
+      "attribution_verified_for_every_video": false,
+      "unique_audience_size": null,
+      "creator_income": null
+    },
+    {
+      "id": "tier_list",
+      "definition": "Reusable ranking template across subjects; can be earnest analysis, entertainment or humor, not necessarily a single meme genre",
+      "source_ids": [
+        "yt-tier-list-formats-2025"
+      ],
+      "format_category": "cross_topic_ranking_template",
+      "may_overlap": [
+        "reaction_commentary",
+        "sketch_parody"
+      ],
+      "attribution_verified_for_every_video": null,
+      "unique_audience_size": null,
+      "creator_income": null
+    },
+    {
+      "id": "animated_audio_meme",
+      "definition": "Repeated animated character/audio reinterpretation observed in selected editorial examples",
+      "source_ids": [
+        "yt-animation-memes-editorial-2025"
+      ],
+      "format_category": "editorial_cultural_form",
+      "may_overlap": [
+        "shorts_remix",
+        "sketch_parody"
+      ],
+      "attribution_verified_for_every_video": null,
+      "unique_audience_size": null,
+      "creator_income": null
+    },
+    {
+      "id": "reaction_commentary",
+      "definition": "Publisher's explicit reaction, response or interpretation of another public topic",
+      "source_ids": [
+        "yt-year-trends-2025"
+      ],
+      "format_category": "commentary_video",
+      "may_overlap": [
+        "tier_list",
+        "shorts_remix"
+      ],
+      "attribution_verified_for_every_video": null,
+      "unique_audience_size": null,
+      "creator_income": null
+    },
+    {
+      "id": "sketch_parody",
+      "definition": "Original performed reinterpretation or comedic sketch, with separate content-rights checks where it quotes another work",
+      "source_ids": [
+        "yt-year-trends-2025"
+      ],
+      "format_category": "performed_humor",
+      "may_overlap": [
+        "reaction_commentary",
+        "animated_audio_meme"
+      ],
+      "attribution_verified_for_every_video": null,
+      "unique_audience_size": null,
+      "creator_income": null
+    },
+    {
+      "id": "language_specific_humor",
+      "definition": "Language-sensitive wordplay, captions, accents or references; descriptive content coding, not inferred viewer ethnicity or origin",
+      "source_ids": [
+        "yt-year-trends-2025"
+      ],
+      "format_category": "cross_cutting_language_layer",
+      "may_overlap": [
+        "sketch_parody",
+        "reaction_commentary",
+        "shorts_remix"
+      ],
+      "attribution_verified_for_every_video": null,
+      "unique_audience_size": null,
+      "creator_income": null
+    }
+  ],
+  "dated_bounded_observation": {
+    "id": "tier_list_h1_2025",
+    "source_id": "yt-tier-list-formats-2025",
+    "metric": "video_views",
+    "comparison": ">",
+    "value": 1000000000,
+    "period_start": "2025-01-01",
+    "period_end": "2025-06-30",
+    "geography": "Global",
+    "selection": "videos with tier list in title",
+    "distinct_viewers": null,
+    "unique_creators": null,
+    "comedy_only_fraction": null
+  },
+  "remix_controls": {
+    "source_id": "yt-shorts-remix-attribution-2026",
+    "link_back_to_original": true,
+    "visual_opt_out_possible": true,
+    "remixes_may_be_removed_when_source_opting_out": true,
+    "studio_collaborations_same_feature": false,
+    "monetization_share_implied": false
+  },
+  "exclusions": [
+    "Format categories are not mutually exclusive; no total by adding categories.",
+    "Remix link and paid Studio collaborator credit are different product signals.",
+    "A title-filtered view count is not fan counts or all comedy/meme videos.",
+    "Do not infer race, nationality, political affiliation, gender or age from audio language, memes or creator names.",
+    "Do not turn a public remix edge into deduplicated viewer movement or creator profit.",
+    "Respect takedowns, opt-outs, rights and content policy."
+  ],
+  "actual_format_specific_counts": {
+    "shorts_remix_eligible_videos": null,
+    "comedic_meme_viewers": null,
+    "unique_creator_owners": null,
+    "cross_format_user_overlap": null,
+    "profits": null
+  }
+}

@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+[Video meme and short humor format taxonomy](ontology/youtube/meme-format-typology-2026.md) preserves source attribution and overlapping audience limits.
+
+
 [2024–2026 niche upload-volume observations](ontology/youtube/niche-upload-volume-2024-2026.md) now record five first-party video count lower bounds without confusing uploads, creators and audiences.
 
 

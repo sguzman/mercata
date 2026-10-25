@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [meme and Shorts remix format study](meme-format-typology-2026.md) distinguishes licensed platform remix features from broad meme formats and unique-audience assumptions.
+
+
 The [topic-constrained upload count study](niche-upload-volume-2024-2026.md) and [non-additive frame validator](../../site/niche-upload-audit.mjs) preserve dates, title-versus-related predicates and unmeasured creator populations.
 
 
