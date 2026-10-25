@@ -124,6 +124,10 @@ The [vendor direct-payment distribution](brand-campaign-payment-concentration-20
 
 The [CreatorDB/vidIQ channel-sample crosswalk](creator-index-comparison-2026.md), [machine evidence records](creator-index-comparison-2026.json), and [regression checks](../../tests/creator-index-comparison.test.mjs) compare vendor channel coverage, 30-day subscriber growth in established tiers and broad creator-category counts. Different indexes and observation units **cannot** estimate new-entrant success, all-channel supply, verified creator earnings or changes in the true global platform population.
 
+## Video revenue rates by genre with quartile uncertainty
+
+The [AIR native-RPM niche comparison](rpm-niche-quartile-crosswalk-2026.md), [machine quartiles](rpm-niche-quartile-crosswalk-2026.json) and [source reconciliation tests](../../tests/rpm-niche-quartile-crosswalk.test.mjs) document genre-specific median/p25/p75 rates from the existing 300-channel monetized AIR dataset. It is not a representative income comparison, includes no zero-earners, and cannot rank niche net profit without matched audience, expenses and creative labor.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

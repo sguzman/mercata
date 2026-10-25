@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "selected_native_rpm_niche_quartile_crosswalk",
+  "as_of": "2026-10-24",
+  "source_id": "air-studio-rpm-300-2026",
+  "source_family_reused": true,
+  "original_path": "ontology/youtube/air-studio-benchmarks-2026.json",
+  "status": "monetized_client_sample_niche_rpm_not_all_creator_profit",
+  "sample": {
+    "channels": 300,
+    "channel_months": 3595,
+    "period_start": "2025-05",
+    "period_end": "2026-05",
+    "selected_monetized_months_only": true,
+    "zero_earners_included": false,
+    "first_year_entrants_represented": false,
+    "source_median_rpm_usd": 2.3
+  },
+  "niches": [
+    {
+      "id": "education_science",
+      "name": "Education & Science",
+      "median_rpm_usd": 10.22,
+      "p25_rpm_usd": 2.31,
+      "p75_rpm_usd": 19.5,
+      "small_n_warning": false,
+      "reported_niche_sample_n": null,
+      "median_creator_profit_usd": null
+    },
+    {
+      "id": "gaming",
+      "name": "Gaming",
+      "median_rpm_usd": 2.05,
+      "p25_rpm_usd": 0.7,
+      "p75_rpm_usd": 3.62,
+      "small_n_warning": false,
+      "reported_niche_sample_n": null,
+      "median_creator_profit_usd": null
+    },
+    {
+      "id": "kids_teens",
+      "name": "Kids & Teens",
+      "median_rpm_usd": 0.33,
+      "p25_rpm_usd": 0.16,
+      "p75_rpm_usd": 0.88,
+      "small_n_warning": false,
+      "reported_niche_sample_n": null,
+      "median_creator_profit_usd": null
+    },
+    {
+      "id": "business_finance",
+      "name": "Business & Finance",
+      "median_rpm_usd": 2.01,
+      "p25_rpm_usd": 0.73,
+      "p75_rpm_usd": 5.17,
+      "small_n_warning": true,
+      "reported_niche_sample_n": null,
+      "median_creator_profit_usd": null
+    }
+  ],
+  "pair_education_vs_gaming": {
+    "ratio_of_sample_medians": 4.9854,
+    "quartile_intervals_overlap": true,
+    "observed_creator_profit_difference": null,
+    "causal_earnings_effect": false
+  },
+  "constraints": [
+    "Selected AIR client monetized channel-months, not the population of YouTube uploaders.",
+    "Reported native RPM after platform revenue share is not advertiser CPM or creator profit.",
+    "Overall median RPM is not the average of niche medians; niche group sample counts not supplied.",
+    "Business and Finance has a small sample warning.",
+    "Overlapping percentile ranges reject deterministic genre earnings guarantees.",
+    "A niche choice also needs evidence of audience demand, production labor, rights, monetary costs and creator-level earnings, absent from this sample."
+  ],
+  "unmeasured": {
+    "all_creators_niche_rpm_median": null,
+    "first_year_niche_revenue": null,
+    "genre_creator_income_median": null,
+    "creator_hours_by_niche": null,
+    "per_genre_net_profit": null,
+    "niche_specific_zero_earner_share": null
+  }
+}
