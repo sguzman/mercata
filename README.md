@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [observed post-August 2026 engaged-view comparison](ontology/youtube/agentio-engaged-view-series-2026.md) registers 549M public and 330M engaged events from a selected 75k-video vendor cohort, contrasting measured data with an earlier 35.8k-video modeled projection and preserving metric breaks.
+
+
 The [paid sponsorship integration cohort](ontology/youtube/agentio-sponsor-delivery-2026.md) reports actual selected long-tail views and clicks, repeat-partnership CTR/CVR ratios and advertiser CPM changes, while rejecting causal creator-income extrapolation and double-counted time windows.
 
 

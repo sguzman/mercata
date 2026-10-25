@@ -40,6 +40,10 @@ The [related-video funnel study](shorts-related-video-funnel.md), [machine measu
 
 The [Oxford Economics creator, business and user survey frame](oxford-creator-impact-2026.md), [machine response counts](oxford-creator-impact-2026.json) and [survey comparison audit](../../site/oxford-creator-impact-audit.mjs) preserve the January–March 2026 country sample counts. YouTube recruited the creator respondents; EU27 overlaps France and Germany. The estimated 2024 and 2025 U.S. GDP contributions and supported full-time-equivalent jobs are **not** creator income, headcount or measured typical work hours. The different annual lower bounds are insufficient to compute an actual year-over-year growth rate. Zero-earner rates and representative creator income remain unknown.
 
+## 2026 public versus engaged video-event measurement
+
+The [modeled/observed permissioned comparison](agentio-engaged-view-series-2026.md), [machine cohort](agentio-engaged-view-series-2026.json) and [unit evaluator](../../site/agentio-engaged-view-audit.mjs) separate a hypothetical prechange 30-second retention threshold from a distinct post-August sample of 75k+ videos (549M public vs 330M engaged events). These do not establish a universal public-to-engaged rate, real audience growth, or creator payout.
+
 ## Paid sponsorship integration delivery and advertiser response
 
 The [Agentio paid integration cohort review](agentio-sponsor-delivery-2026.md), [machine metric frame](agentio-sponsor-delivery-2026.json) and [event-unit validator](../../site/agentio-sponsor-audit.mjs) describe a provider-selected sponsorship sample with post-day-30/90 view delivery, tracked clicks and repeat-relationship ratios, without presenting its advertiser metrics as causal or representative creator take-home pay. Primary and secondary presentations share one source family.

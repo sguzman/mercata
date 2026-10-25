@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "vendor_permissioned_public_vs_engaged_video_event_measurement_2026",
+  "as_of": "2026-10-24",
+  "official_measurement_change_source_id": "view-change-official-blog-2026",
+  "source_ids": [
+    "agentio-projected-view-definition-2026",
+    "agentio-observed-engaged-view-cohort-2026"
+  ],
+  "definition_change": {
+    "effective_date": "2026-08-24",
+    "public_view": "first_frame_playback_event",
+    "engaged_view": "qualified_attention_event_creator_authorized_not_public",
+    "universal_public_to_engaged_factor_available": false
+  },
+  "studies": [
+    {
+      "id": "prechange_retention_proxy",
+      "source_id": "agentio-projected-view-definition-2026",
+      "published_at": "2026-08-21",
+      "status": "model_based_prechange_forecast",
+      "creator_videos": 35800,
+      "video_publication_window": "2026-06_to_2026-07",
+      "video_duration_seconds_min": 181,
+      "video_duration_seconds_max": 3000,
+      "method": "Retention at an assumed 30-second threshold used as a proxy for unpublished organic engagement definition",
+      "organic_engagement_threshold_confirmed_by_youtube": false,
+      "assumed_threshold_seconds": 30,
+      "hypothetical_public_views_above_engaged_percent": 30,
+      "reported_directional_only": true,
+      "selected_shorts_sample": 550,
+      "measured_shorts_public_view_inflation_percent": 65,
+      "shorts_measurement_is_distinct_study_frame": true,
+      "actual_postchange_organic_engaged_views_observed": false
+    },
+    {
+      "id": "postchange_permissioned_counts",
+      "source_id": "agentio-observed-engaged-view-cohort-2026",
+      "published_at": "2026-09-03",
+      "status": "observed_vendor_channel_authorized_event_totals",
+      "sample_videos_strictly_greater_than": 75000,
+      "published_from": "2026-06-01",
+      "count_observation_start": "2026-08-24",
+      "count_observation_end": null,
+      "public_views_millions_rounded": 549,
+      "engaged_views_millions_rounded": 330,
+      "reported_engaged_views_per_public_views_percent_approx": 60,
+      "meaning": "Provider's permissioned event totals across selected connected creators, not all active people on YouTube",
+      "format_coverage_global_representative": false,
+      "channel_size_tiers": [
+        {
+          "id": "micro",
+          "min_avg_engaged_views": null,
+          "max_avg_engaged_views_exclusive": 50000,
+          "reported_engaged_rate_percent": 54
+        },
+        {
+          "id": "mid",
+          "min_avg_engaged_views": 50000,
+          "max_avg_engaged_views_exclusive": 300000,
+          "reported_engaged_rate_percent": 57
+        },
+        {
+          "id": "macro",
+          "min_avg_engaged_views": 300000,
+          "max_avg_engaged_views_exclusive": null,
+          "reported_engaged_rate_percent": 67
+        }
+      ],
+      "topics": [
+        {
+          "id": "education",
+          "rate_percent": 63
+        },
+        {
+          "id": "entertainment_culture",
+          "rate_percent": 60
+        },
+        {
+          "id": "food_drink",
+          "rate_percent": 59
+        },
+        {
+          "id": "fashion_beauty",
+          "rate_percent": 57
+        },
+        {
+          "id": "lifestyle",
+          "rate_percent": 57
+        },
+        {
+          "id": "gaming",
+          "rate_percent": 56
+        },
+        {
+          "id": "fitness",
+          "rate_percent": 52
+        },
+        {
+          "id": "technology",
+          "rate_percent": 46
+        }
+      ],
+      "surfaces": [
+        {
+          "id": "browse_feed",
+          "rate_percent": 20,
+          "reported_share_of_unengaged_gap_percent": 77,
+          "reported_share_of_public_views_percent": 38
+        },
+        {
+          "id": "watch_page",
+          "rate_percent": 85,
+          "reported_share_of_unengaged_gap_percent": 23,
+          "reported_share_of_public_views_percent": null
+        }
+      ],
+      "pct_of_gap_is_not_pct_of_all_views": true,
+      "relative_event_ratio_public_per_engaged_from_rounded_totals": null,
+      "actual_creator_revenue_effect": null,
+      "causal_policy_effect_on_viewer_behavior": null,
+      "dataset_independent_from_vendor_prechange_cohort_verified": false
+    }
+  ],
+  "audit_rules": [
+    "Prechange 35,800-video 30-second retention proxy is modeled, not a directly measured organic engaged-view count; 30 seconds was an assumption, not an official definition.",
+    "Postchange >75,000-video sample is provider-selected, linked to creator channel permissions and not a representative census of YouTube content, audiences or small creators.",
+    "549 million public-view events and 330 million engaged-view events have rounded totals; their ratio is a selected aggregate, not a universal new-views-to-old-views conversion.",
+    "Any increase in public view count across August 24, 2026 cannot establish more viewing, buyer conversions, monetization qualification or higher creator earnings.",
+    "Macro/mid/micro and genre rates describe nonrandom provider cohorts; they cannot determine new creators' earnings or expected revenue by niche.",
+    "77 percent of the unengaged gap arising from feed browse is not 77 percent of all public views, and cannot be summed with 38 percent of all views.",
+    "View-definition revision itself does not establish causal behavioral changes or creator-profit effects.",
+    "Prechange and postchange Agentio datasets may contain overlapping creators or videos, so they cannot be counted as independent samples."
+  ],
+  "unmeasured": {
+    "global_engaged_view_rate": null,
+    "population_all_creator_earnings": null,
+    "causal_incremental_watch_time": null,
+    "individual_unique_people": null,
+    "verified_creator_profit_per_1000_public_views": null,
+    "conversion_rate_to_buyers": null
+  }
+}

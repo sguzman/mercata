@@ -3166,6 +3166,28 @@
       "evidence_class": "secondary_methodology_of_shared_agentio_vendor_sample",
       "license": "Brief distinct attribution of population geography and period; same underlying Agentio data, not independent statistical replication",
       "notes": "Agentio Jan 2026 creator marketing playbook: >10k integrations Oct2023–Dec2025, sample creators ~92% US, 5% CA, 2% UK, <1% AU; not a new independent participant cohort."
+    },
+    {
+      "id": "agentio-projected-view-definition-2026",
+      "url": "https://www.agentio.com/blog/youtube-view-vs-engaged-view",
+      "publisher": "Agentio",
+      "title": "New Agentio Data: YouTube Views Are About to Jump by ~30%",
+      "published_at": "2026-08-21",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "selected_creator_long_form_prechange_retention_proxy_forecast",
+      "license": "External vendor research linked, limited independently authored observations and assumptions, no creator records copied",
+      "notes": "35,800 videos long-form June–July 2026, 30-second early-retention proxy is an assumed engagement threshold not observed official post-change long-form engaged views; separate 550 Shorts actual gap."
+    },
+    {
+      "id": "agentio-observed-engaged-view-cohort-2026",
+      "url": "https://www.agentio.com/blog/youtube-new-view-count-60-engaged-view-rate",
+      "publisher": "Agentio",
+      "title": "One Week Later: YouTube's New View Count Has a 60% Engaged View Rate",
+      "published_at": "2026-09-03",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "selected_permissioned_postchange_public_and_engaged_video_event_totals",
+      "license": "External vendor cohort linked and independently summarized; no video-level or participant data copied",
+      "notes": "Over 75k selected videos (published since June 1) report post-Aug24 549M public events and 330M engaged events, reported 60% ratio, category/tier/surface differences; not universal YouTube rate."
     }
   ],
   "claims": [
@@ -6848,6 +6870,38 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Geography shares are rounded and may not sum to exactly 100%; downstream revenue, zero earners and all-platform opportunities remain unknown."
+    },
+    {
+      "id": "agentio-2026-prechange-model-distinct-from-real",
+      "text": "An August 21 Agentio report predicted approximately 30% higher public video views under YouTube's Aug 24 counting change using a presumed 30-second retention proxy in 35,800 selected June–July long-form videos; it did not directly observe a postchange long-form engaged-view conversion.",
+      "source_ids": [
+        "agentio-projected-view-definition-2026",
+        "view-change-official-blog-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Unpublished YouTube organic engaged threshold, selected vendor client cohort, assumed early attention period and distinct smaller Shorts sample; a modeled projection is not observed actual growth."
+    },
+    {
+      "id": "agentio-2026-postchange-observed-engaged-share",
+      "text": "After Aug 24, a separate Agentio report measured about 549M public playback-start events and 330M engaged-view events across more than 75,000 connected-creator videos, reporting an approximately 60% engaged-to-public share in that selected sample.",
+      "source_ids": [
+        "agentio-observed-engaged-view-cohort-2026",
+        "view-change-official-blog-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Provider-selected videos published after June 1; event totals rounded and time window limited. No deduplicated people, all-platform ratio, causal traffic growth or after-cost creator payout estimates."
+    },
+    {
+      "id": "agentio-2026-browse-view-gap-not-population",
+      "text": "In Agentio's selected postchange videos, feed/browse views had approximately 20% engagement versus 85% on watch pages, with browse contributing 77% of the *non-engaged view gap*; those shares do not equal unique people, creator monetization, or the distribution of all YouTube content views.",
+      "source_ids": [
+        "agentio-observed-engaged-view-cohort-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Vendor-specific surface definition, non-random permissioned creators, rounded rates; 77% of non-engaged gap is not share of all public views."
     }
   ],
   "observations": [],
