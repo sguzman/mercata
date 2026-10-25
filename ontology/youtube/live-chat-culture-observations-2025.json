@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "platform": {
+    "chat_modes": [
+      {
+        "id": "top_chat",
+        "filtered": true,
+        "consequence": "Potential spam, inappropriate or otherwise downranked messages may not appear"
+      },
+      {
+        "id": "live_chat",
+        "filtered": false,
+        "consequence": "Display shows messages without the Top Chat filter; channel moderation/deletion and eligibility still constrain visibility"
+      }
+    ],
+    "replay": {
+      "archived_with_unedited_stream": true,
+      "edited_stream_replay_available": false,
+      "live_polls_in_replay": false,
+      "source_id": "yt-live-chat-displays-2026"
+    },
+    "made_for_kids_default_live_chat_enabled": false,
+    "individual_user_archives_collected": false
+  },
+  "kind": "live_chat_behavior_selected_model_and_visibility_modes",
+  "as_of": "2026-10-24",
+  "source_ids": [
+    "nature-youtube-live-emotion-2025",
+    "yt-live-chat-displays-2026"
+  ],
+  "paper": {
+    "publisher": "Communications Psychology",
+    "published_at": "2025-11-28",
+    "study_kind": "nonexperimental_multivariate_hawkes_emotion_intensity_model",
+    "initial_filtered_videos": 1957,
+    "initial_filtered_chat_messages": 673551,
+    "final_model_videos": 397,
+    "final_model_chat_messages": 92412,
+    "final_model_total_video_hours": 780,
+    "final_median_video_length_minutes": 107,
+    "final_median_chat_messages_per_video": 204,
+    "reported_topical_categories": 27,
+    "selection_rules": [
+      "Live Chat display data and available video transcripts; not Top Chat's filtered view",
+      "English language filter removes non-English chat messages, excludes streams with >70 percent non-English messages",
+      "Median inter-message interval 1 second to 5 minutes",
+      "Additional 20th–80th quantile filtering of average emotion-message rate per video"
+    ],
+    "emotional_categories": [
+      "joy",
+      "surprise",
+      "anger",
+      "disgust",
+      "fear",
+      "sadness"
+    ],
+    "emotion_labels_source": "machine_classification_of_text_with_nonexclusive_labels",
+    "endogenous_peer_to_video_influence_ratio_reported_up_to": 4,
+    "observed_causal_peer_effect_proven": false,
+    "model_dependency": "Hawkes self-exciting process; observational with untested counterfactuals",
+    "distinct_viewers": null,
+    "revenue": null
+  },
+  "prohibited_inferences": [
+    "Initial 673,551 messages across 1,957 videos and model sample 92,412 messages across 397 videos are successive selected frames, not disjoint studies or population totals.",
+    "Live Chat display is not a guarantee of retaining deleted, moderated or inaccessible posts.",
+    "Emotional language labels are algorithmic text classifications, not users' validated mental states or demographic identities.",
+    "Model-based peer versus video intensity comparisons are associational/model-dependent and do not establish experimental causality.",
+    "Sample uses English-related filters and selected message frequency; it does not represent global YouTube live chats or unique viewers.",
+    "Chat volume, chat emotion and show metadata do not provide creator revenue, paying customer conversions or online-community membership sizes."
+  ],
+  "unmeasured": {
+    "all_youtube_live_chat_participants": null,
+    "all_youtube_live_chat_message_population": null,
+    "unique_engaged_viewers": null,
+    "paid_participation_rate": null,
+    "creator_revenue_effect": null,
+    "experimental_peer_causal_lift": null
+  }
+}

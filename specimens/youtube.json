@@ -3089,6 +3089,28 @@
       "evidence_class": "official_api_reporting",
       "license": "Official public documentation linked; research definitions independently authored",
       "notes": "Owner authorization required; owned-channel video aggregate and in-playlist reports differ; playlist metrics include videos from other channels."
+    },
+    {
+      "id": "nature-youtube-live-emotion-2025",
+      "url": "https://www.nature.com/articles/s44271-025-00370-y",
+      "publisher": "Communications Psychology / Springer Nature",
+      "title": "Social feedback amplifies emotional language in online video live chats",
+      "published_at": "2025-11-28",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "peer_reviewed_observational_model_selected_youtube_live_chat",
+      "license": "Linked scientific paper, short independently authored quantitative observations; no figures or message content copied",
+      "notes": "Initial 673,551 messages/1,957 selected videos, final 92,412 messages/397 videos. Model-dependent peer-emotion intensity, not experimental causal proof or population census."
+    },
+    {
+      "id": "yt-live-chat-displays-2026",
+      "url": "https://support.google.com/youtube/answer/15268877?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Learn about Live Chat",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_live_chat_display_and_replay_rules",
+      "license": "Official platform help linked, policies independently paraphrased",
+      "notes": "Top Chat filtered vs Live Chat display, made-for-kids restriction, stream-edit replay removal and polling unreplayed; not complete unmoderated archive."
     }
   ],
   "claims": [
@@ -6679,6 +6701,27 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Historical selected public chat-posting account frame, not all viewers, unique offline people, causal membership conversion or total paying audience share."
+    },
+    {
+      "id": "live-chat-psychology-selected-2025",
+      "text": "A November 2025 peer-reviewed study modeled 92,412 filtered YouTube live-chat messages from 397 selected videos (780 hours) after screening a larger 673,551-message/1,957-video corpus; its peer-versus-video emotional influence estimate is model-based rather than an experimental causal effect.",
+      "source_ids": [
+        "nature-youtube-live-emotion-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "English and message-rate selection; model-classified non-exclusive labels are not user self-reports; no viewer or creator payout population estimated."
+    },
+    {
+      "id": "live-chat-display-visibility-2026",
+      "text": "YouTube distinguishes filtered Top chat from less filtered Live Chat displays; edited livestream archives lose chat replay, and live polls are not available in replay. These visibility conditions obstruct treating visible messages as a complete archive of all participants.",
+      "source_ids": [
+        "yt-live-chat-displays-2026",
+        "yt-live-chat-moderation-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Moderation and privacy protections also affect available display data; no participant-level records are collected."
     }
   ],
   "observations": [],

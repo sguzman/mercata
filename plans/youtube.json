@@ -622,7 +622,7 @@
         "youtube/community-dynamics/compare-community-participation-across-languages"
       ],
       "phase": 3,
-      "progress_percent": 57
+      "progress_percent": 62
     },
     {
       "id": "audience-economics",
@@ -5597,16 +5597,20 @@
       "objective": "Develop a transparent sampling protocol that excludes sensitive individual profiling.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and develop a transparent sampling protocol that excludes sensitive individual profiling.",
       "status": "in_progress",
-      "percent": 64,
+      "percent": 68,
       "evidence": [
         "ontology/youtube/comment-norms-evidence.json",
         "ontology/youtube/comment-norms-evidence.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
         "tests/site-smoke.mjs",
-        "site/app.js"
+        "site/app.js",
+        "ontology/youtube/live-chat-culture-observations-2025.json",
+        "ontology/youtube/live-chat-culture-observations-2025.md",
+        "site/live-chat-culture-audit.mjs",
+        "tests/live-chat-culture-audit.test.mjs"
       ],
-      "artifact": "ontology/youtube/comment-norms-evidence.json",
+      "artifact": "ontology/youtube/live-chat-culture-observations-2025.json",
       "priority": "standard",
       "phase": 3
     },
@@ -5639,15 +5643,21 @@
       "objective": "Account for moderation, visibility and limited access.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and account for moderation, visibility and limited access.",
       "status": "in_progress",
-      "percent": 25,
+      "percent": 69,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
         "ontology/youtube/content-formats.json",
         "ontology/youtube/content-formats.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/live-chat-culture-observations-2025.json",
+        "ontology/youtube/live-chat-culture-observations-2025.md",
+        "site/live-chat-culture-audit.mjs",
+        "tests/live-chat-culture-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/live-chat-culture-observations-2025.json",
       "priority": "standard",
       "phase": 3
     },

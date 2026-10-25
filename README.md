@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [peer-reviewed live chat culture study](ontology/youtube/live-chat-culture-observations-2025.md) records a 92,412-message selected 2025 observational model and platform display-filter caveats without profiling participants or inventing creator earnings.
+
+
 The [1,923-channel VTuber Super Chat study](ontology/youtube/vtuber-superchat-cohort-2025.md) adds measured historical mean, median, zero-Super-Chat channels, income concentration and paying-chat-account fractions from a peer-reviewed cohort without mistaking these for average YouTube creator payouts.
 
 

@@ -40,6 +40,10 @@ The [related-video funnel study](shorts-related-video-funnel.md), [machine measu
 
 The [Oxford Economics creator, business and user survey frame](oxford-creator-impact-2026.md), [machine response counts](oxford-creator-impact-2026.json) and [survey comparison audit](../../site/oxford-creator-impact-audit.mjs) preserve the January–March 2026 country sample counts. YouTube recruited the creator respondents; EU27 overlaps France and Germany. The estimated 2024 and 2025 U.S. GDP contributions and supported full-time-equivalent jobs are **not** creator income, headcount or measured typical work hours. The different annual lower bounds are insufficient to compute an actual year-over-year growth rate. Zero-earner rates and representative creator income remain unknown.
 
+## Empirical live chat language and visibility
+
+The [November 2025 live-chat observational study](live-chat-culture-observations-2025.md), [machine cohort](live-chat-culture-observations-2025.json) and [interpretation audit](../../site/live-chat-culture-audit.mjs) distinguish a large initial message-selection frame from a smaller 397-video emotional-language model. Its results are not verified causal changes, demographic profiles, total engagement populations or creator income.
+
 ## Selected VTuber Super Chat distributions
 
 The [peer-reviewed 2017–2023 VTuber cohort study](vtuber-superchat-cohort-2025.md), [source-preserving observation data](vtuber-superchat-cohort-2025.json) and [inference auditor](../../site/vtuber-superchat-audit.mjs) report historical public Super Chat mean, median, a zero-Super-Chat event share, and conditional paying-chat-account fractions. These are not typical all-creator receipts or verified net profit.
