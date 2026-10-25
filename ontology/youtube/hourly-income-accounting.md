@@ -1,6 +1,6 @@
 # Audited creator hourly-income calculation
 
-This source-backed [cohort calculator](../../site/creator-hourly-audit.mjs) and its [tests](../../tests/creator-hourly-audit.test.mjs) compute descriptive net receipts per tracked creator labor hour. Test numbers are **synthetic fixtures**, not measured YouTube earnings.
+The [machine-readable computation contract](hourly-income-accounting.json) accompanies this implementation. This source-backed [cohort calculator](../../site/creator-hourly-audit.mjs) and its [tests](../../tests/creator-hourly-audit.test.mjs) compute descriptive net receipts per tracked creator labor hour. Test numbers are **synthetic fixtures**, not measured YouTube earnings.
 
 For every attempted creator in one prespecified period, record gross paid receipts in USD cents, refunds, fees, cash production costs, and actual current-period hours. Include creators whose attempts yielded **zero revenue** and those whose cash profit was negative. Report incomplete records as unknown, never zero. Exclude zero-hour denominators from hourly quantiles but report their count. Keep historical sunk labor separate from current-period effort rather than repeatedly allocating it to each subsequent period.
 

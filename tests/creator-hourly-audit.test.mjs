@@ -41,3 +41,15 @@ test('Malformed dates, impossible date order and unsafe cent sums are rejected',
  const rowTooLarge={...row('huge',0,1),fees_cents:Number.MAX_SAFE_INTEGER,cash_costs_cents:1000000000000000};
  assert.equal(audit({...input,records:[rowTooLarge]}).status,'invalid');
 });
+
+test('The research contract exposes no observed creator outcomes and retains public source IDs',async()=>{
+ const {readFile}=await import('node:fs/promises');
+ const load=async name=>JSON.parse(await readFile(new URL('../'+name,import.meta.url),'utf8'));
+ const [model,dossier]=await Promise.all([load('ontology/youtube/hourly-income-accounting.json'),load('specimens/youtube.json')]);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ assert.equal(model.kind,'creator_hourly_income_cohort_accounting');
+ assert(model.source_ids.every(x=>ids.has(x)));
+ assert.equal(model.observed_cohort_median_net_hourly,null);
+ assert.equal(model.observed_creator_data.length,0);
+ assert(Object.values(model.unknowns).every(x=>x===null));
+});

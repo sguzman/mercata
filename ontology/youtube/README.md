@@ -142,7 +142,7 @@ The [official survey review](mexico-encca-audiovisual-2024.md), [machine source 
 
 ## Creator hourly earnings and zero-income accounting
 
-The [creator-hourly accounting algorithm](hourly-income-accounting.md), [implementation](../../site/creator-hourly-audit.mjs) and [synthetic regression tests](../../tests/creator-hourly-audit.test.mjs) calculate net receipts divided by actual labor, including failed attempts, refunds and zero revenue. No private records, matched creator population or typical YouTube hourly pay were supplied.
+The [creator-hourly accounting algorithm](hourly-income-accounting.md), [machine computation contract](hourly-income-accounting.json), [implementation](../../site/creator-hourly-audit.mjs) and [synthetic regression tests](../../tests/creator-hourly-audit.test.mjs) calculate net receipts divided by actual labor, including failed attempts, refunds and zero revenue. No private records, matched creator population or typical YouTube hourly pay were supplied.
 
 ## Earning model
 

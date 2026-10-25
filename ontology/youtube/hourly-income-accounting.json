@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "creator_hourly_income_cohort_accounting",
+  "reviewed_at": "2026-10-24",
+  "status": "tested_implementation_no_actual_creator_records",
+  "human_reference": "ontology/youtube/hourly-income-accounting.md",
+  "implementation": "site/creator-hourly-audit.mjs",
+  "verification": "tests/creator-hourly-audit.test.mjs",
+  "source_ids": [
+    "timf-creators-2026",
+    "academic-youtube-patreon-income-2026",
+    "tariq-2026-first-upload-vloggers"
+  ],
+  "source_limitations": [
+    "Commercial creator-hours survey respondents are not matched with independently sampled Patreon earnings respondents.",
+    "Selected Patreon earnings data excluded non-earners and do not measure YouTube payouts or all creator income.",
+    "First-upload vlog paper modeled dollars and time from public video data rather than verified cash and labor records."
+  ],
+  "cohort_unit": "one attempted creator per prespecified calendar period",
+  "money_unit": "integer_usd_cents",
+  "effort_unit": "tracked_hours",
+  "required_record_fields": [
+    "token",
+    "attempted",
+    "gross_cents",
+    "refund_cents",
+    "fees_cents",
+    "cash_costs_cents",
+    "labor_hours",
+    "historical_sunk_hours"
+  ],
+  "reporting_rules": [
+    "Include all attempted creator-period records, including failures, zero gross receipts and negative cash outcomes.",
+    "Net cash equals gross receipts less in-period refunds, fees and cash expenses.",
+    "Refunds may exceed same-period receipts when earlier purchases are reversed.",
+    "Unknown gross or expense amounts remain null and are not imputed to zero.",
+    "Zero tracked hours precludes an hourly ratio and is counted as an exclusion.",
+    "Current-hour ratios divide net period cash by tracked hours; historic sunk hours are separately reported.",
+    "Quantiles over complete cases are not a representative full-cohort distribution when records are missing.",
+    "Units, survey sources and channels must not be pooled across mismatched populations.",
+    "No model output is a platform-wide earnings forecast or causal productivity claim."
+  ],
+  "observed_creator_data": [],
+  "observed_cohort_median_net_hourly": null,
+  "observed_zero_earner_share": null,
+  "unknowns": {
+    "representative_creator_net_income": null,
+    "all_creator_zero_earnings": null,
+    "creator_hours_distribution": null,
+    "creator_tax_labor_adjustment": null,
+    "survivorship_adjusted_hourly_distribution": null
+  }
+}
