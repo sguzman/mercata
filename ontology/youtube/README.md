@@ -108,6 +108,10 @@ The [bounded crossposting observation and historical YouTube–Twitch study](cro
 
 The [quarterly gaming broadcast evidence](gaming-livestream-quarterly-2026.md), [machine table](gaming-livestream-quarterly-2026.json), and [regression tests](../../tests/gaming-livestream-quarterly.test.mjs) preserve observed watched hours and broadcasting channel IDs separately from a general YouTube Live category. No distinct viewer population, monetized creator population or net profit was measured.
 
+## YouTube-affiliated Patreon revenue vs native creator income
+
+The [peer-reviewed Patreon monthly income panel](patreon-earnings-timeframe-2026.md) and [machine source data](patreon-earnings-timeframe-2026.json) add March 2018, 2021 and 2024 YouTube-affiliated Patreon summary tables and a comparative 2024 sample of external platform affiliations. The analysis **reuses** the existing Patreon academic source family, counts only >$10 Patreon earners and cannot identify native YouTube advertising earnings, creator profits or membership conversion by niche.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

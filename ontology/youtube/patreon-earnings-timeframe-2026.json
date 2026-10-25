@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "patreon_single_affiliation_earnings_temporal_comparison",
+  "as_of": "2026-10-24",
+  "status": "peer_reviewed_platform_affiliated_patreon_earnings_not_youtube_native_payouts",
+  "source_ids": [
+    "academic-youtube-patreon-income-2026"
+  ],
+  "dataset_family": "Patreon purchased by study authors, March snapshots 2018 2021 2024, single external affiliation; not new independent source vs creator-income-evidence.json",
+  "frame": "Patreon creators above US$10 monthly with only one listed external social platform, or Patreon-only. Missing earnings sometimes statistically imputed.",
+  "source_academic": "Strauss, Yang and Mazzucato, Industrial and Corporate Change, DOI 10.1093/icc/dtag044 (2026).",
+  "youtube_affiliated_march_snapshots": [
+    {
+      "year": 2018,
+      "n": 2143,
+      "mean_usd": 199,
+      "median_usd": 44
+    },
+    {
+      "year": 2021,
+      "n": 6835,
+      "mean_usd": 280,
+      "median_usd": 53
+    },
+    {
+      "year": 2024,
+      "n": 14457,
+      "mean_usd": 243,
+      "median_usd": 43
+    }
+  ],
+  "youtube_affiliated_pooled": {
+    "year_scope": [
+      2018,
+      2021,
+      2024
+    ],
+    "observations": 23435,
+    "mean_usd_month": 250,
+    "median_usd_month": 47,
+    "q25_usd_month": 28,
+    "q75_usd_month": 119,
+    "stddev_usd_month": 1490,
+    "minimum_in_sample_usd_month": 10,
+    "maximum_in_sample_usd_month": 87802,
+    "zero_income_creators_included": false
+  },
+  "march_2024_other_affiliations": [
+    {
+      "affiliation": "YouTube",
+      "n": 14457,
+      "mean_usd": 243,
+      "median_usd": 43
+    },
+    {
+      "affiliation": "Twitch",
+      "n": 870,
+      "mean_usd": 236,
+      "median_usd": 42
+    },
+    {
+      "affiliation": "Instagram",
+      "n": 20876,
+      "mean_usd": 216,
+      "median_usd": 53
+    },
+    {
+      "affiliation": "Facebook",
+      "n": 2520,
+      "mean_usd": 146,
+      "median_usd": 44
+    },
+    {
+      "affiliation": "Twitter/X",
+      "n": 23966,
+      "mean_usd": 399,
+      "median_usd": 72
+    },
+    {
+      "affiliation": "Patreon-only",
+      "n": 37961,
+      "mean_usd": 307,
+      "median_usd": 55
+    }
+  ],
+  "community_tail_qualitative": {
+    "source_id": "academic-youtube-patreon-income-2026",
+    "platforms_pooled": true,
+    "more_heavy_tailed_earnings_categories": [
+      "Animation",
+      "Podcasts"
+    ],
+    "less_heavy_tailed_earnings_categories": [
+      "Music",
+      "Comics",
+      "Writing"
+    ],
+    "per_category_median_youtube_usd": null,
+    "per_category_conversion_rate": null,
+    "per_category_exact_tail_alpha": null
+  },
+  "missingness_criteria": [
+    "Creators with no Patreon account or <= US$10 monthly Patreon income excluded",
+    "Some creator earnings imputed by source study regression",
+    "Counts are monthly selected cross sections, not a stable birth cohort",
+    "Cross-affiliated multihoming creators excluded",
+    "Different social affiliations have different genre and audience mixes",
+    "Income is Patreon monthly gross revenue proxy, not native YouTube advertising or net creator wages"
+  ],
+  "interpretation_limits": [
+    "Annual March medians are descriptive for different observed creator samples; not individual income changes",
+    "2024 affiliation medians compare a common Patreon mechanism but cannot identify native platform recommendation causes",
+    "Category tails pooled across platforms, so never assert YouTube-only animation buyers have a specified income",
+    "Mean > median here documents sample right-skew and does not establish representative all-creator mean"
+  ],
+  "unmeasured": {
+    "youtube_native_payout_median": null,
+    "all_creators_zero_income_fraction": null,
+    "membership_purchase_conversion_per_channel": null,
+    "category_specific_youtube_revenue": null,
+    "creator_hours": null,
+    "expenses_and_taxes": null,
+    "causal_algorithm_effect": null,
+    "channel_age_specific_income": null
+  }
+}

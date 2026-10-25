@@ -1857,6 +1857,6139 @@ function renderSearchDemandProxy(d,dossier){
  const link=make('a','inline-link','Read the search-demand source audit ↗');link.href='./ontology/youtube/search-demand-proxy-crosswalk.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
 }
 
+function renderPatreonIncomeFrames(data,dossier){
+ if(!data?.youtube_affiliated_march_snapshots)return null;
+ const section=make('section','patreon-income-frames');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','YouTube-affiliated Patreon earnings in selected March samples'));
+ details.append(make('p','measure-limit','One peer-reviewed Patreon dataset, with some model-imputed amounts. Excludes non-Patreon and lower-earning creators; not native YouTube payout or net profit.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.youtube_affiliated_march_snapshots){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.year+' · YouTube-linked Patreon'));
+  card.append(make('strong','','
+ if(!data?.gaming?.length)return null;
+ const section=make('section','gaming-period-study');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Live gaming watched hours: distinct from people and creators'));
+ details.append(make('p','measure-limit','Q4 2025 to Q2 2026. Commercial livestream tracking, not a population census.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.gaming){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.period+' · Gaming'));
+  card.append(make('strong','',x.watch_hours_billion.toFixed(2)+' billion hours watched'));
+  card.append(make('p','',x.channels_million+' million broadcast channel identifiers'));
+  card.append(audienceSources([x.source_id],dossier));grid.append(card);
+ }
+ const live=data.general_live_q2;
+ const c=make('article','ownership-card');
+ c.append(make('h5','','Q2 2026 · general YouTube Live'));
+ c.append(make('strong','',live.watch_hours_billion.toFixed(2)+' billion hours watched'));
+ c.append(make('p','measure-limit','Separate category, not automatically combinable with gaming'));
+ c.append(audienceSources([live.source_id],dossier));grid.append(c);
+ details.append(grid);
+ details.append(make('p','measure-limit','Gaming hours fell 19.3% Q2 versus Q1 as reported; distinct viewers, pay and external migration remain unknown.'));
+ const link=make('a','inline-link','Read gaming evidence, scope and source notes ↗');
+ link.href='./ontology/youtube/gaming-livestream-quarterly-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
+ section.append(details);return section;
+}
+
+function renderCrossplatformPosting(data,dossier){
+ if(!data?.vendor_posting_snapshot)return null;
+ const section=make('section','crossplatform-posting');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Crossposting videos is not moving audiences'));
+ details.append(make('p','measure-limit','A selected scheduling-tool sample counts multi-platform publishing, not fans who migrated across websites.'));
+ const s=data.vendor_posting_snapshot;
+ const grid=make('div','ownership-grid');
+ for(const [title,value,explanation] of [
+ ['Publishing tool creators',s.creators.toLocaleString('en-US'),'Users of a cross-posting service, not all creators'],
+ ['Distinct uploads',s.uploads.toLocaleString('en-US'),'One uploaded video can become multiple posts'],
+ ['Successful published posts',s.successful_post_events.toLocaleString('en-US'),'Posting events, not distinct viewers'],
+ ['Uploads sent to several platforms',s.share_uploads_multi_platform_percent+'%','Selected tool-user uploads; no viewer migration measured']
+ ]){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',title));card.append(make('strong','',value));card.append(make('p','measure-limit',explanation));
+  card.append(audienceSources([s.source_id],dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Separate 2016 YouTube–Twitch rivalry research found context-specific creator effort changes; neither study estimates modern buyer or follower migration.'));
+ details.append(audienceSources([data.historical_competition_paper.source_id],dossier));
+ const link=make('a','inline-link','Read both dated studies, denominators and missing evidence ↗');
+ link.href='./ontology/youtube/crossplatform-posting-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderRetentionObservability(data,dossier){
+ if(!data?.metrics?.length)return null;
+ const section=make('section','retention-observability');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Audience retention, completed plays and viewing sessions'));
+ details.append(make('p','measure-limit','Public playback-start views, owner-only video retention, initial Shorts engagement and cross-video sessions have different units. None establishes an observed full-video completion fraction.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.metrics){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.label));
+  card.append(make('p','',item.unit.replaceAll('_',' ')+' · '+item.access.replaceAll('_',' ')));
+  card.append(make('p','measure-limit',item.limit));
+  card.append(audienceSources(item.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Owner video-level retention reports require processing time and sufficiently viewed clips for highlighted moments; all real completion rates and cross-video session lengths remain unknown.'));
+ const link=make('a','inline-link','Read measurement units and privacy boundaries ↗');link.href='./ontology/youtube/retention-observability.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderExternalLinkFunnel(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','external-link-funnel');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Clickable links, Shorts limitations and product funnels'));
+ details.append(make('p','measure-limit','A URL in a Shorts comment or description is not clickable, even though a related-video link can be. Long-form external links require advanced-feature eligibility.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.label));
+  const status=item.external_url_clickable===null?'Internal route':item.external_url_clickable?'External URL may be clickable':'External URL not clickable';
+  card.append(make('p','',status));
+  card.append(make('p','measure-limit',item.limitation));
+  card.append(audienceSources(item.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Actual link clicks, distinct buyers, marketing costs and net revenue are not measured; no test has been launched.'));
+ const link=make('a','inline-link','Read platform links policy and funnel measurement gates ↗');link.href='./ontology/youtube/external-link-funnel-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderFirstUploadVlogStudy(data,dossier){
+ if(!data?.earnings_value_model)return null;
+ const section=make('section','first-upload-vlog');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','New daily-life vloggers: observed views versus hypothetical ad value'));
+ details.append(make('p','measure-limit','A selected 107-channel preprint finds 51.4% below 1,000 lifetime views. Its dollar amounts model advertising value from views; no YouTube payouts, cash costs or measured creator time were obtained.'));
+ const grid=make('div','ownership-grid');
+ for(const item of [
+  {title:'Sampled first-upload channels',value:data.sampling.first_upload_cohort_channels,reason:'Keyword-discovered, two daily-life vlog genres'},
+  {title:'Below 1,000 lifetime views',value:data.cold_start_public_views.below_1000_lifetime_views_percent+'%',reason:'Observed public view counts in sampled channels'},
+  {title:'Modeled median long-form ad value',value:'USD '+data.earnings_value_model.median_modeled_longform_value_usd.toFixed(2),reason:'Assumed USD 2.30 RPM; not actual paid income'},
+  {title:'Modeled median labor',value:data.earnings_value_model.median_assumed_hours+' hours',reason:'Assumed three labor hours per finished video minute; no time logs'}
+ ]){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.title));
+  card.append(make('strong','',item.value));
+  card.append(make('p','measure-limit',item.reason));
+  card.append(audienceSources([data.source_id],dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','All-creator zero-earner fraction, real channel profit and any causal benefit of additional uploads remain unmeasured.'));
+ const link=make('a','inline-link','Read the study and its modeled-income limitations ↗');
+ link.href='./ontology/youtube/first-upload-vlog-study-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderChannelCohorts(model,dossier){
+ if(!model?.datasets?.length)return null;
+ const section=make('section','channel-cohort-evidence');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Indexed channels and 360-day subscriber milestone outcomes'));
+ details.append(make('p','measure-limit','61.2 million sampled public-subscriber channels and a distinct 32.9 million-channel below-1k cohort. Both are selected vendor index populations, not a census or verified first-year creator income.'));
+ const grid=make('div','ownership-grid');
+ const m=model.datasets[0],s=model.datasets[2];
+ for(const band of s.bins){
+  const card=make('article','ownership-card');
+  const end=band.video_delta_max===null?' or more':'–'+band.video_delta_max;
+  card.append(make('h5','','Net public video count +'+band.video_delta_min+end));
+  card.append(make('strong','',band.reported_percent.toFixed(2)+'% ending at 1,000+ subscribers'));
+  card.append(make('p','',band.reached_1000_at_end.toLocaleString('en-US')+' of '+band.channels.toLocaleString('en-US')+' indexed channels'));
+  card.append(make('p','measure-limit','360 days, no random assignment, new-entrant identification, actual uploads or YPP earnings'));
+  card.append(audienceSources([s.source_id],dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Separate July distribution: '+m.included_channels.toLocaleString('en-US')+' indexed channels with at least one subscriber. The group comparisons do not prove uploading causes growth or that creators earn money.'));
+ const link=make('a','inline-link','Read cohort sampling, percentages and non-causal limitations ↗');
+ link.href='./ontology/youtube/channel-cohort-observations-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderRecommendationEvidence(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','recommendation-evidence');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Home, Suggested, Shorts and Search: distinct discovery rules'));
+ details.append(make('p','measure-limit','Official guidance describes different ranking contexts, not public fixed weights or guaranteed creator reach.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.label));card.append(make('p','',x.claim));
+  card.append(audienceSources(x.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','No minimum Shorts posting cadence is required. Exact signal weights, newcomer impressions and net creator income effects are unknown.'));
+ const link=make('a','inline-link','Read official recommendation sources ↗');
+ link.href='./ontology/youtube/recommendation-surface-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderSyntheticMediaPolicy(data,dossier){
+ if(!data?.policy_axes?.length)return null;
+ const section=make('section','synthetic-media-rights');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','AI-altered video: disclosure, originality, likeness and rights'));
+ details.append(make('p','measure-limit','A realistic AI-use disclosure can be required without automatic demonetization. YPP originality, privacy complaints and copyright protection have separate rules.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.policy_axes){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.title));
+  card.append(make('p','',x.rule));
+  card.append(audienceSources(x.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Five policy examples are hypothetical; no AI creator earnings, enforcement prevalence or individual legality was measured.'));
+ const link=make('a','inline-link','Read official AI-content and rights rules ↗');
+ link.href='./ontology/youtube/synthetic-media-rights-policy.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderUSNewsDemographics(data,dossier){
+ if(!data?.strata?.length)return null;
+ const section=make('section','us-news-demographic-crosswalk');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','U.S. YouTube use versus regular news use by surveyed groups'));
+ details.append(make('p','measure-limit','Two separate Pew surveys: overall YouTube ever-use is not regular news use, a verified biological-sex category or a sample of YouTube creators. Percentages are within the published adult subgroups.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.strata){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.subgroup.replaceAll('_',' ')));
+  card.append(make('p','',item.ever_use_pct+'% ever use YouTube · '+item.regular_news_pct+'% regularly get YouTube news'));
+  card.append(make('p','measure-limit','Different survey respondents and date windows; subgroup uncertainty not published in this comparison.'));
+  card.append(audienceSources([item.ever_use_source_id,item.regular_news_source_id],dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','2020–2026 U.S. adult regular YouTube news series: '+data.regular_news_us_adult_series.map(x=>x.regular_news_youtube_pct_of_us_adults+'%').join(', ')+'. Descriptive survey estimates, not causal changes or viewer counts.'));
+ details.append(make('p','measure-limit','Biological sex, overlapping age-by-party or age-by-gender audience counts, and subgroup margins of error are unknown.'));
+ const link=make('a','inline-link','Read the dated survey comparison and missing evidence ↗');
+ link.href='./ontology/youtube/us-news-demographic-crosswalk.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCountryAdReach(d,dossier){
+ if(!d?.observations?.length)return null;
+ const section=make('section','country-ad-reach'),details=make('details','ownership-details');
+ details.append(make('summary','','Country reach: four dated YouTube advertiser estimates'));
+ details.append(make('p','measure-limit','Google ad-planner reach, reported in DataReportal Digital 2026 and measured in October 2025, is not monthly active YouTube viewers or verified country growth.'));
+ const grid=make('div','ownership-grid');
+ for(const x of d.observations){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.country));card.append(make('strong','',x.ad_reach_million+' million ad-reachable'));
+  const change=x.reported_end_2024_to_2025_change_percent;
+  card.append(make('p','',('End-2024 to late-2025 planner change: ')+(change>0?'+':'')+change+'%'));
+  card.append(make('p','measure-limit','Potential ad reach, not unique viewers, subscribers or creator income'));
+  card.append(audienceSources([x.source_id],dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Advertiser planning can be revised; published changes do not prove actual people entered or left YouTube.'));
+ const link=make('a','inline-link','Read sources and comparability limits ↗');link.href='./ontology/youtube/country-ad-reach-comparisons.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderAudiencePopulationCrosswalk(data,dossier){
+ if(!data?.observations?.length)return null;
+ const section=make('section','audience-population-crosswalk');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Audience scale: past-month surveys, daily visits and ad reach'));
+ details.append(make('p','measure-limit','Distinct survey prevalences and country ad-planner reach estimates cannot be combined into an invented platform MAU/DAU count.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.observations){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.id.replaceAll('_',' ')));
+  card.append(make('strong','',String(x.value)+(x.unit==='percent'?'%':' million')));
+  card.append(make('p','',x.scope+' · '+x.time));
+  card.append(make('p','measure-limit',x.notes));
+  card.append(audienceSources(x.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','The deduplicated worldwide MAU and DAU remain unknown, as does cross-account deduplication.'));
+ const link=make('a','inline-link','Read each observation and its denominator ↗');
+ link.href='./ontology/youtube/audience-population-crosswalk.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderShortsReferralStudy(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','shorts-referral-study');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Shorts-to-video links and the missing referral measurements'));
+ details.append(make('p','measure-limit','Advanced feature access can allow a clickable related video below a Short. A view of that Short, a destination view and an overlapping viewer are not verified click-through events.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.label));
+  card.append(make('p','',x.measurement));
+  card.append(make('p','measure-limit','Not equivalent to: '+x.not_equivalent_to.replaceAll('_',' ')));
+  card.append(audienceSources(x.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Short-specific link impressions, click-through, deduplicated linked viewers, incremental video value and profit remain unmeasured.'));
+ const link=make('a','inline-link','Read the related-video feature and event-attribution gates ↗');
+ link.href='./ontology/youtube/shorts-related-video-funnel.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderMemberCohortResearch(data,dossier){
+ if(!data?.definition_rules?.length)return null;
+ const section=make('section','member-cohort-protocol');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Paying member renewals and repeat-offer test design'));
+ details.append(make('p','measure-limit','Studio active members, canceled members, access-expired members and recurring transactions have different denominators. No paid cohort or experiment was observed.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.definition_rules){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.id.replaceAll('_',' ')));
+  card.append(make('p','',item.rule));
+  card.append(audienceSources(item.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','A rate needs real paid renewals due by actual billing date, separated from trials and gifts; unresolved events get bounds, not point estimates.'));
+ const link=make('a','inline-link','Review cohort arithmetic, missing-data gates and offer-test protocol ↗');
+ link.href='./ontology/youtube/member-cohort-protocol.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCheckoutRefundEvidence(data,dossier){
+ if(!data?.products?.length)return null;
+ const section=make('section','checkout-refund-evidence');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Buyer payments, published membership prices and refunds'));
+ details.append(make('p','measure-limit','Membership cancellation, non-refundable Supers and external retailer refunds follow distinct processes. Country price schedules are options, not a sample of channel prices or creator profit.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.products){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.label));
+  card.append(make('p','',item.buyer_action));
+  card.append(make('p','measure-limit',item.refund_rule));
+  card.append(audienceSources(item.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Official examples: US $0.99/$4.99/$9.99 and Mexico MXN $19/$69/$219. These are published country-tier options, not a real-channel price sample, currency conversion, or guaranteed buyer charge.'));
+ details.append(make('p','measure-limit','Creator-specific median prices, refund rates, external merchant margins and net earnings remain unmeasured.'));
+ const link=make('a','inline-link','Read checkout and refund source audit ↗');
+ link.href='./ontology/youtube/checkout-refund-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderReputationPortability(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','reputation-portability');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Channel feedback, reputation and portability'));
+ details.append(make('p','measure-limit','Moderated comments are not verified buyer ratings, and a subscriber count is not a portable customer list. Media exports, roles and internal channel moves have different limits.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.title));
+  card.append(make('p','',x.mechanism));
+  card.append(make('p','measure-limit',x.limit));
+  card.append(audienceSources(x.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Off-platform migration rate, verified buyer scores and net earnings effects remain unmeasured.'));
+ const link=make('a','inline-link','Read the feedback and portability audit ↗');
+ link.href='./ontology/youtube/reputation-portability.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderChannelOnboarding(data,dossier) {
+  if(!data?.stages?.length)return null;
+  const section=make('section','channel-onboarding');
+  const details=make('details','channel-onboarding-details');
+  details.append(make('summary','','From a Google Account to a publishing channel · '+data.stages.length+' stages'));
+  details.append(make('p','measure-limit','Creating a channel, publishing, unlocking advanced features and earning money require different permissions. These steps are general policy, not proof of eligibility for a particular person.'));
+  const stages=make('ol','channel-onboarding-stage-list');
+  for(const step of data.stages){
+    const item=make('li','channel-onboarding-stage');
+    item.append(make('h5','',step.label));
+    item.append(make('p','',step.outcome));
+    item.append(make('p','measure-limit',step.limits));
+    item.append(audienceSources(step.source_ids,dossier));
+    stages.append(item);
+  }
+  details.append(stages);
+  const gates=make('div','channel-feature-gates');
+  for(const gate of data.feature_gates){
+    const card=make('article','channel-feature-gate');
+    card.append(make('h5','',gate.label));
+    card.append(make('p','measure-limit','Requirements: '+gate.requires.join(' · ').replaceAll('_',' ')));
+    card.append(make('p','',gate.limits));
+    card.append(audienceSources(gate.source_ids,dossier));
+    gates.append(card);
+  }
+  details.append(gates);
+  details.append(make('p','measure-limit','Typical setup hours: unknown · typical cash costs: unknown · time to first creator payment: unknown. A no-new-purchase path does not mean creator labor or access costs disappear.'));
+  const link=make('a','inline-link','Read source-backed onboarding gates and cost limits ↗');
+  link.href='./ontology/youtube/channel-onboarding.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);
+  return section;
+}
+
+function renderApplicationLifecycle(model) {
+  if(!model)return null;
+  const section=make('section','application-lifecycle');
+  const details=make('details','application-details');
+  details.append(make('summary','','Getting approved and reaching your first payout'));
+  details.append(make('p','measure-limit','Numerical entry thresholds, channel review, product activation and actual payment are separate. These timelines are official guidance, not guarantees.'));
+  const list=make('ol','application-stage-list');
+  for(const step of model.steps){
+    const item=make('li','application-stage');
+    item.append(make('strong','',step.action));
+    item.append(make('p','measure-limit',step.limits));
+    if(step.indicative_duration)item.append(make('small','',step.indicative_duration));
+    if(step.window_days)item.append(make('small','', 'Published appeal window: '+step.window_days+' days'));
+    if(step.earliest_reapply_after_days)item.append(make('small','', 'Reapplication wait: '+step.earliest_reapply_after_days+' days'));
+    list.append(item);
+  }
+  details.append(list);
+  const link=make('a','inline-link','Read the full application and payment lifecycle ↗');
+  link.href='./ontology/youtube/application-lifecycle.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderPromoteResearch(data,dossier){
+ if(!data?.ad_format_billing?.length)return null;
+ const section=make('section','promote-economics');
+ const details=make('details','promote-economics-details');
+ details.append(make('summary','','YouTube Promote: paid costs versus organic YPP-eligible follow-on views'));
+ details.append(make('p','measure-limit','A promotion is purchased advertising, not creator earnings. Subscribers and watch hours generated directly by ad campaigns do not meet YPP eligibility thresholds. Organic follow-on views are tracked separately.'));
+ const grid=make('div','promote-format-grid');
+ for(const item of data.ad_format_billing){
+   const card=make('article','promote-format-card');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','',item.billable_trueview_condition));
+   card.append(audienceSources(item.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ const ad=make('div','promote-metrics-grid');
+ for(const item of data.metric_register){
+   const card=make('article','promote-metric-card');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','measure-limit',item.unit.replaceAll('_',' ')));
+   ad.append(card);
+ }
+ details.append(make('h5','promote-heading','Distinct attribution and accounting units'));
+ details.append(ad);
+ details.append(make('p','measure-limit','Typical budget, realized cost per acquired viewer, organic conversion, and net creator profit remain unknown. Attribution without a valid comparison cohort does not establish incremental results.'));
+ const link=make('a','inline-link','Read ad billing formats, YPP qualification and missing ROI evidence ↗');
+ link.href='./ontology/youtube/promote-economics.md';link.rel='noopener noreferrer';link.target='_blank';
+ details.append(link);section.append(details);return section;
+}
+
+function renderPostAndMembershipRetention(data,dossier) {
+ if(!data?.channel_surfaces?.length)return null;
+ const section=make('section','post-membership-retention');
+ const details=make('details','post-membership-retention-details');
+ details.append(make('summary','','Creator Posts, regular viewers and paid membership renewals'));
+ details.append(make('p','measure-limit','Official analytics measure different populations: post impressions, channel return viewers, subscribers with member perks and recurring payment events. They cannot be joined into an attributed retention rate without actual owner-authorized cohorts.'));
+ const grid=make('div','post-membership-surfaces');
+ for(const surface of data.channel_surfaces){
+   const card=make('article','post-membership-surface');
+   card.append(make('h5','',surface.id.replaceAll('_',' ')));
+   card.append(make('p','',surface.description));
+   card.append(make('p','measure-limit',surface.eligibility_note));
+   card.append(audienceSources(surface.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ const members=make('div','post-membership-metrics');
+ for(const item of data.membership_register){
+   const card=make('article','post-membership-metric');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','',item.definition));
+   card.append(make('p','measure-limit','Unit: '+item.unit.replaceAll('_',' ')));
+   members.append(card);
+ }
+ details.append(make('h5','post-membership-heading','Membership measurement units'));
+ details.append(members);
+ const postsScale=data.platform_scale_claims?.find(x=>x.id==='daily_posts_engaging_users');
+ if(postsScale){
+   details.append(make('p','measure-limit','YouTube reported more than '+(postsScale.reported_value/1000000)+' million users engaging with Posts on an average day in September 2026. Independent user deduplication and channel-specific return effects are unknown.'));
+   details.append(audienceSources([postsScale.source_id],dossier));
+ }
+ details.append(make('p','measure-limit','Regular viewers watched at least monthly for more than six months of the past year. A membership transaction may be a new sign-up or a renewal, not a distinct buyer.'));
+ details.append(make('p','measure-limit','Average posting effect, unique membership buyers, renewal rate and net member profit: unknown.'));
+ const link=make('a','inline-link','Read official measurement definitions, study design and caveats ↗');
+ link.href='./ontology/youtube/retention-posts-memberships.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCreatorGrowth(data,dossier) {
+  if(!data)return null;
+  const section=make('section','creator-growth');
+  const details=make('details','creator-growth-details');
+  details.append(make('summary','','Audience discovery and returning viewers · '+data.stages.length+' stages'));
+  details.append(make('p','measure-limit','Views, eligible impressions, engaged views, unique channel viewers, subscribers and paying customers are different measurements. No conversion rate is assumed.'));
+  const list=make('ol','creator-growth-stages');
+  for(const stage of data.stages){
+    const item=make('li','creator-growth-stage');
+    item.append(make('h5','',stage.label),make('p','',stage.description),
+      make('small','',stage.caveat));
+    item.append(audienceSources(stage.source_ids,dossier));
+    list.append(item);
+  }
+  details.append(list);
+  const more=make('details','creator-growth-metrics');
+  more.append(make('summary','',data.metrics.length+' metric definitions and measurement limits'));
+  const table=make('div','creator-growth-metric-grid');
+  for(const metric of data.metrics){
+    const card=make('article','creator-growth-metric');
+    card.append(make('h5','',metric.id.replaceAll('_',' ')));
+    card.append(make('p','',metric.definition));
+    card.append(make('small','',metric.unit+' · '+metric.access));
+    card.append(make('p','measure-limit',metric.limitations));
+    table.append(card);
+  }
+  more.append(table);
+  details.append(more);
+  const link=make('a','inline-link','Read the measurement and discovery research ↗');
+  link.href='./ontology/youtube/creator-growth.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderTeenVideoFormatEvidence(data,dossier){
+  if(!data?.video_genre_observations?.length)return null;
+  const section=make('section','teen-format-evidence');
+  const details=make('details','teen-format-details');
+  details.append(make('summary','','Child video genres: Australia YouTube, UK cross-app, US teen surveys'));
+  details.append(make('p','measure-limit','A 2025 Australian youth survey directly measured YouTube genres among children aged 6–13. UK genre percentages concern all video apps, NOT YouTube alone; U.S. teen platform use has no genre breakdown. These studies do not establish global genre audiences or individual identities.'));
+  const grid=make('div','teen-format-grid');
+  for(const block of data.video_genre_observations){
+    const card=make('article','teen-format-card');
+    card.append(make('h5','', 'UK children aged '+block.age_range+' · any video app'));
+    const list=make('ul','teen-format-list');
+    for(const measure of block.values){
+      const item=make('li','teen-format-row');
+      add(item,make('span','',measure.genre.replaceAll('_',' ')),make('strong','',measure.percent+'%'));
+      list.append(item);
+    }
+    card.append(list);grid.append(card);
+  }
+  details.append(grid);
+  const au=data.australia_youtube_genres;
+  if(au?.gender_conditioned_genres?.length){
+    details.append(make('h5','teen-au-heading','Australian children aged 6–13 who watch YouTube · 2025'));
+    details.append(make('p','measure-limit','The Roy Morgan survey covered 1,129 Australian children aged 6–13 in 2025. Values below are each genre watched within survey boy and girl YouTube-watcher groups, NOT the gender mix within genres. Exact gender subgroup sample sizes are unknown.'));
+    const auGrid=make('div','teen-au-grid');
+    for(const category of au.gender_conditioned_genres){
+      const row=make('article','teen-au-category');
+      row.append(make('strong','',category.id.replaceAll('_',' ')));
+      row.append(make('p','','Boys '+category.boys_percent+'% · Girls '+category.girls_percent+'%'));
+      auGrid.append(row);
+    }
+    details.append(auGrid);
+  }
+  const times=make('p','measure-limit','Separate Barb YouTube 2025 in-home weekly averages: '+data.youtube_inhome_age_minutes_per_week.map(x=>x.age_range+' years '+Math.floor(x.minutes/60)+'h '+String(x.minutes%60).padStart(2,'0')+'m').join(' · ')+'. These include neither out-of-home nor all mobile viewing.');
+  details.append(times);
+  const pew=make('p','measure-limit','Pew US teens aged 13–17, 2025: YouTube ever use boys 94%, girls 89%; almost constant use boys 20%, girls 13%. These are platform-use rates, not genre-use estimates.');
+  details.append(pew);
+  details.append(make('p','measure-limit','UK cross-app gender patterns remain directional, but the Australia study reports YouTube-specific genre differences only among children aged 6–13 in its local 2025 sample. Never infer a minor’s identity or viewing history.'));
+  details.append(audienceSources(data.source_ids,dossier));
+  const link=make('a','inline-link','Read age-specific denominators, collection methods and limits ↗');
+  link.href='./ontology/youtube/teen-video-format-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderChildAgeFormatStudy(data,dossier){
+ if(!data?.classification_cases?.length)return null;
+ const section=make('section','child-format-study');
+ const details=make('details','child-format-details');
+ details.append(make('summary','','Child-directed versus family animation and 18+ video rules'));
+ details.append(make('p','measure-limit','Being a cartoon or safe for a whole family does not by itself make a video child-directed. Age-gated 18+ content is a different policy. Adult-only surveys cannot establish that younger viewers are absent.'));
+ const grid=make('div','child-format-grid');
+ for(const item of data.classification_cases){
+   const card=make('article','child-format-card');
+   card.append(make('h5','',item.label));
+   card.append(make('p','measure-limit',item.limitations));
+   card.append(audienceSources(item.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ const measures=make('div','child-format-observed');
+ for(const item of data.population_observations){
+   const card=make('article','child-format-observation');
+   card.append(make('strong','',item.value+'%'));
+   card.append(make('p','',item.ages+' · '+item.measure.replaceAll('_',' ')));
+   card.append(make('p','measure-limit',item.limitations));
+   grid.append(card);
+ }
+ details.append(make('p','measure-limit','Ofcom ages 8–14 platform use and Barb ages 4–15 television viewing share have different denominators. No individual minors are profiled; global child audiences and income changes remain unknown.'));
+ const link=make('a','inline-link','Read content classification, privacy restrictions and aggregate UK survey frames ↗');
+ link.href='./ontology/youtube/child-age-and-format-gates.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderScreenViewingStudy(data,dossier){
+ if(!data?.service_level?.adult_16_plus)return null;
+ const section=make('section','screen-viewing-study');
+ const details=make('details','screen-viewing-details');
+ details.append(make('summary','','UK TV sets versus smartphone YouTube viewing — Barb 2025'));
+ details.append(make('p','measure-limit','Q2 2025, UK viewing at home over Wi-Fi. Percentages describe share of measured viewing, NOT share of distinct people or worldwide screen use.'));
+ const grid=make('div','screen-viewing-grid');
+ const adults=data.service_level.adult_16_plus;
+ const kids=data.service_level.children_4_to_15;
+ for(const row of [
+   {label:'Adults aged 16+',tv:adults.tv_set_percent,phone:adults.smartphone_percent},
+   {label:'Children aged 4–15',tv:kids.tv_set_percent,phone:kids.smartphone_percent}
+ ]){
+   const card=make('article','screen-viewing-card');
+   card.append(make('h5','',row.label));
+   card.append(make('p','', 'TV-set viewing share: '+row.tv+'%'));
+   card.append(make('p','measure-limit', 'Smartphone viewing share: '+(row.phone===null?'unknown in cited source':row.phone+'%')));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','The separate 200 selected-channel TV-only ACR program excludes Shorts, live and certain music channels. Its exclusions do not redefine the device shares for YouTube service-wide viewing.'));
+ details.append(make('p','measure-limit','UK smartphone viewing over cellular networks, device-specific creator payout, format mix and global screen share: unknown.'));
+ details.append(audienceSources([data.source_id,data.related_ofcom_2026.source_id],dossier));
+ const link=make('a','inline-link','Read Barb methodology, Ofcom viewing series and source restrictions ↗');
+ link.href='./ontology/youtube/screen-viewing-uk-2025.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderVideoSurfaceEconomics(data,dossier) {
+  if(!data?.surfaces?.length)return null;
+  const section=make('section','video-surface-study');
+  const details=make('details','video-surface-details');
+  details.append(make('summary','','Video formats, 8-minute mid-roll threshold and live replay evidence'));
+  details.append(make('p','measure-limit','Seven distinct YouTube publishing surfaces have different money and measurement units. An eligible mid-roll slot is not a served ad, and a replay is not guaranteed additional earnings.'));
+  const grid=make('div','video-surface-grid');
+  for(const item of data.surfaces){
+    const card=make('article','video-surface-card');
+    card.append(make('h5','',item.name));
+    card.append(make('p','measure-context','Unit: '+item.primary_unit.replaceAll('_',' ')));
+    card.append(make('p','',item.entry));
+    card.append(make('p','measure-limit',item.ad_mechanism));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Watch-page mid-roll eligibility begins at 8 minutes (480 seconds); actual delivery depends on ad demand, video experience and policy. Shorts revenue is not an 8-minute watch-page ad scheme.'));
+  details.append(make('p','measure-limit','Live and archived replay audience, ad revenue and labor must be tracked separately, without adding cumulative views or people twice.'));
+  const drama=data.microdrama_observations||[];
+  if(drama.length){
+    const views=drama.find(x=>x.id==='h1_2026_microdrama_views');
+    details.append(make('p','measure-limit','YouTube reported more than '+(views.value/1000000000)+' billion microdrama views in January–June 2026, plus more than 50% year-over-year watch-time growth and more than 90% TV-device view growth. These are historical event and relative metrics, not unique people or creator payouts.'));
+    details.append(audienceSources([views.source_id],dossier));
+  }
+
+  details.append(make('p','measure-limit','Official localized Help pages conflict on whether new claimed Shorts over one minute are automatically blocked after September 24, 2026; account-specific rights status remains unresolved.'));
+  const anchor=make('a','inline-link','Read source-specific rules, rights inconsistency and replay research fields ↗');
+  anchor.href='./ontology/youtube/video-surfaces-economics.md';anchor.target='_blank';anchor.rel='noopener noreferrer';
+  details.append(anchor);
+  section.append(details);
+  return section;
+}
+
+function renderEvidenceSynthesis(data,dossier){
+  if(!data?.findings?.length)return null;
+  const section=make('section','evidence-synthesis');
+  const details=make('details','evidence-synthesis-details');
+  details.append(make('summary','','Interim research synthesis: supported findings and unresolved economics'));
+  details.append(make('p','measure-limit','Evidence-backed account of what is documented, without turning platform events, selected creator surveys or annual culture totals into typical newcomer income.'));
+  const grid=make('div','evidence-synthesis-grid');
+  for(const finding of data.findings){
+    const card=make('article','evidence-synthesis-card');
+    card.append(make('h5','',finding.title));
+    card.append(make('p','',finding.supported));
+    card.append(make('p','measure-limit','Not measured: '+finding.unknown));
+    card.append(audienceSources(finding.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Representative zero-earner share, first-year creator net profit and deduplicated global monthly audience: unknown.'));
+  const link=make('a','inline-link','Read the source-by-source interim marketplace dossier ↗');
+  link.href='./ontology/youtube/research-synthesis-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderDecliningTopicAudit(data,dossier){
+ if(!data?.registered_example_checks?.length)return null;
+ const section=make('section','declining-topic-audit');
+ const details=make('details','declining-topic-details');
+ details.append(make('summary','','Declining content claims: measured change or incompatible samples?'));
+ details.append(make('p','measure-limit','No verified YouTube niche decline is established here. One annual or partial-year aggregate cannot prove recurring falling demand, and the August 2026 public-view definition changed.'));
+ const grid=make('div','declining-topic-grid');
+ for(const item of data.registered_example_checks){
+   const card=make('article','declining-topic-card');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','',item.finding));
+   card.append(make('p','measure-limit',item.reason));
+   card.append(audienceSources(item.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Topic declines, active people changes, creator income effects and forecasts: unknown. A descriptive two-period change is not a proven persistent trend.'));
+ const link=make('a','inline-link','Read comparison requirements and sample audit tests ↗');
+ link.href='./ontology/youtube/declining-content-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderSeasonalDiscovery(data,dossier){
+  if(!data?.cases?.length)return null;
+  const section=make('section','seasonal-discovery');
+  const details=make('details','seasonal-discovery-details');
+  details.append(make('summary','','Calendar-driven video discovery: what observed seasonal evidence can show'));
+  details.append(make('p','measure-limit','The NFL report measures a within-year offseason share. Prom and Halloween reports cover different annual or partial-year title queries. None supports a universal seasonal lift or best upload month.'));
+  const grid=make('div','seasonal-discovery-grid');
+  for(const item of data.cases){
+    const card=make('article','seasonal-discovery-card');
+    card.append(make('h5','',item.topic.replaceAll('_',' ')));
+    card.append(make('p','seasonal-observation',item.valid_statement));
+    card.append(make('p','measure-limit',item.limitations));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Seasonal causal effect, creator profit seasonality and reliable optimal upload month: unknown. A repeatable trend needs matched bins, stable measures and multiple annual cycles.'));
+  const link=make('a','inline-link','Review temporal units, source windows and remaining evidence gaps ↗');
+  link.href='./ontology/youtube/seasonal-discovery-comparison.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderPublishingTimeResearch(data,dossier){
+  if(!data?.official_findings?.length)return null;
+  const section=make('section','publish-time-study');
+  const details=make('details','publish-time-details');
+  details.append(make('summary','','Publishing times by format, geography and owner audience activity'));
+  details.append(make('p','measure-limit','YouTube Studio reports when a channel\'s viewers were online over the past 28 days. Publishing while they are active may help early views but is not known to improve a video\'s long-term performance.'));
+  const grid=make('div','publish-time-grid');
+  for(const item of data.format_comparison){
+    const card=make('article','publish-time-card');
+    card.append(make('h5','',item.format.replaceAll('_',' ')));
+    card.append(make('p','',item.release_time_matters_for.replaceAll('_',' ')));
+    card.append(make('p','measure-limit','Verified long-term advantage: '+(item.longterm_advantage_verified===null?'unknown':'no evidence of a verified advantage')));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Scheduling uses a selected time zone while watch-page dates may follow PST. Missing country rows in Analytics can be suppressed for privacy and must not be recorded as zero viewers.'));
+  details.append(make('p','measure-limit','Universal optimal publication hour, geography-specific lift and causal long-term effect: unknown.'));
+  const link=make('a','inline-link','Read official timing guidance, DST and experimental evidence gates ↗');
+  link.href='./ontology/youtube/geographic-publishing-time.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderContentFormats(data,dossier) {
+  if(!data)return null;
+  const section=make('section','content-format-section');
+  const details=make('details','content-format-details');
+  details.append(make('summary','','Compare '+data.formats.length+' ways to publish and distribute'));
+  details.append(make('p','measure-limit','Different publication formats have different discovery, link and eligibility rules. None has a verified typical profit or success rate.'));
+  const grid=make('div','content-formats-grid');
+  for(const format of data.formats){
+    const card=make('article','content-format-card');
+    card.append(make('h5','',format.label));
+    card.append(make('p','',format.format_rule));
+    card.append(make('small','', 'Access: '+format.entry_gate));
+    const inner=make('details','content-format-inner');
+    inner.append(make('summary','','Discovery and earning details'));
+    inner.append(make('p','', 'Discovery: '+format.discovery.join(', ')));
+    inner.append(make('p','', 'Possible revenue routes: '+format.money.join(', ').replaceAll('_',' ')));
+    inner.append(make('p','', 'Links: '+format.links.join('; ')));
+    inner.append(make('p','measure-limit',format.cautions.join(' ')));
+    inner.append(audienceSources(format.source_ids,dossier));
+    card.append(inner);
+    grid.append(card);
+  }
+  details.append(grid);
+  const link=make('a','inline-link','Read the format and link comparison ↗');
+  link.href='./ontology/youtube/content-formats.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderMultilingualDistribution(data,dossier) {
+  if(!data?.product_surfaces?.length)return null;
+  const section=make('section','multilingual-distribution');
+  const details=make('details','multilingual-distribution-details');
+  details.append(make('summary','','Languages, audio dubbing, captions and translated discovery'));
+  details.append(make('p','measure-limit','Spoken language, dub language, subtitles, viewer preference and country are independent attributes. Product access varies; language shares do not give a creator earnings forecast.'));
+  const observations=make('div','multilingual-observations');
+  for(const entry of data.official_selected_observations){
+    const card=make('article','multilingual-observation');
+    card.append(make('strong','',entry.comparator==='greater_than'?'Over '+entry.value+'%':entry.value));
+    card.append(make('p','',entry.metric.replaceAll('_',' ')));
+    card.append(make('small','',entry.source_period.replaceAll('_',' ')+' · '+entry.population));
+    card.append(make('p','measure-limit',entry.limits));
+    card.append(audienceSources(entry.source_ids,dossier));
+    observations.append(card);
+  }
+  details.append(observations);
+  const products=make('div','multilingual-product-grid');
+  for(const feature of data.product_surfaces){
+    const card=make('article','multilingual-product-card');
+    card.append(make('h5','',feature.label));
+    card.append(make('p','',feature.limits));
+    card.append(make('small','', 'Eligible formats: '+feature.content_formats.join(', ').replaceAll('_',' ')));
+    card.append(audienceSources(feature.source_ids,dossier));
+    products.append(card);
+  }
+  details.append(products);
+  const examples=make('details','multilingual-language-examples');
+  examples.append(make('summary','','Selected automatic-dubbing language pairs · current help snapshot'));
+  const list=make('ul','multilingual-language-list');
+  for(const pair of data.automatic_dubbing_example_pairs){
+    const li=make('li','');
+    add(li,make('strong','',pair.original+' → '),make('span','',pair.targets.join(', ')));
+    list.append(li);
+  }
+  examples.append(list);details.append(examples);
+  details.append(make('p','measure-limit','The over-25% finding is a share of watch time for selected multilingual-audio creators, not additional traffic or causal income lift. Typical dubbing hours, prices and newcomer outcomes remain unknown.'));
+  const link=make('a','inline-link','Review language-pair definitions and study limitations ↗');
+  link.href='./ontology/youtube/multilingual-distribution.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);
+  section.append(details);return section;
+}
+
+function renderCommunityAudienceStudy(data,dossier) {
+  if(!data)return null;
+  const section=make('section','community-survey');
+  const details=make('details','community-survey-details');
+  details.append(make('summary','','Measured audience: U.S. YouTube news consumption'));
+  details.append(make('p','measure-limit','This survey describes U.S. adults who regularly get news on YouTube. It is not a count of political-video viewers, all YouTube users or a prediction of ad revenue.'));
+  const latest=data.trends.at(-1);
+  const summary=make('div','community-survey-numbers');
+  add(summary,
+    blockHeading('U.S. adults',latest.all_adults_percent+'%'),
+    blockHeading('U.S. YouTube users',latest.youtube_users_percent+'%'));
+  details.append(summary);
+  details.append(make('p','measure-context','2026 Pew survey · '+data.methodology.survey_2026));
+  const trends=make('details','community-survey-trends');
+  trends.append(make('summary','','Annual news-use survey rates, 2020–2026'));
+  const list=make('div','community-survey-grid');
+  for(const point of data.trends){
+    const card=make('article','community-survey-year');
+    add(card,make('strong','',point.year),
+      make('p','',point.all_adults_percent+'% of U.S. adults'),
+      make('p','',point.youtube_users_percent+'% of U.S. YouTube users'));
+    list.append(card);
+  }
+  trends.append(list);
+  details.append(trends);
+  const profile=make('details','community-survey-profile');
+  profile.append(make('summary','','Who regularly got YouTube news in 2025'));
+  profile.append(make('p','measure-limit','Each share below describes the makeup of regular YouTube news consumers, not the chance that someone in a demographic group uses the platform. Shares do not necessarily sum to 100%.'));
+  const cards=make('div','community-survey-grid');
+  for(const x of data.demographic_composition){
+    const card=make('article','community-profile-card');
+    add(card,make('h5','',x.category),make('strong','',x.share_percent+'%'),
+      make('small','',x.dimension.replaceAll('_',' ')+' · 2025 survey'));
+    cards.append(card);
+  }
+  profile.append(cards);
+  details.append(profile);
+  details.append(make('p','measure-limit','Political affiliation here is voluntary, aggregate survey reporting. No individual political beliefs or viewing histories are collected or inferred.'));
+  details.append(audienceSources(data.source_ids,dossier));
+  const link=make('a','inline-link','Full survey definitions and caveats ↗');
+  link.href='./ontology/youtube/community-audience-studies.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderPlatformComparisonSet(data,dossier){
+  if(!data?.candidates?.length)return null;
+  const section=make('section','video-comparators');
+  const details=make('details','video-comparators-details');
+  details.append(make('summary','','Comparable video creator products · not comparable earnings'));
+  details.append(make('p','measure-limit','These adjacent services are candidates for YouTube research comparisons only; they have not been added as Mercata specimens. Audience counts, qualified views, subscribers and paid customer transactions are different units.'));
+  const grid=make('div','video-comparators-grid');
+  for(const item of data.candidates){
+    const card=make('article','video-comparator');
+    card.append(make('h5','',item.name));
+    card.append(make('p','measure-context','Compared with: '+item.comparable_youtube_surface));
+    card.append(make('p','',item.earnings_mechanism));
+    card.append(make('p','measure-limit',item.limitations));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Creator income, zero-earner share, typical work hours and general profitability: unknown for these comparison cohorts.'));
+  const link=make('a','inline-link','Source-specific comparison criteria and exclusions ↗');
+  link.href='./ontology/youtube/comparison-set.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);section.append(details);return section;
+}
+
+function renderHealthFitnessResearch(data,dossier){
+ if(!data?.content_categories?.length)return null;
+ const section=make('section','health-fitness-research');
+ const details=make('details','health-fitness-details');
+ details.append(make('summary','','Fitness, wellness and health information: source-checked policy boundaries'));
+ details.append(make('p','measure-limit','Nine proposed research categories, not measured audience populations. Ordinary exercise, treatment claims, body-image content and professional health-source status require different evidence.'));
+ const grid=make('div','health-fitness-grid');
+ for(const item of data.content_categories){
+   const card=make('article','health-fitness-card');
+   card.append(make('h5','',item.label));
+   card.append(make('p','',item.examples.join(' · ')));
+   card.append(make('p','measure-limit',item.claim_review_required));
+   card.append(make('p','measure-limit','Unique audience, creator count and creator earnings: unknown'));
+   card.append(audienceSources(item.sources,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Four independent layers: medical misinformation, eating-disorder content safety, advertiser suitability and optional professional health-source discovery. A public video does not automatically qualify for health-source panels.'));
+ details.append(make('p','measure-limit','Health-feature eligibility differs from general YPP advertising entry and varies by country and language. The observed policies do not measure earnings, medical quality, audience size or enforcement frequency.'));
+ const link=make('a','inline-link','Read official policy scope, professional source rules and unknown measurements ↗');
+ link.href='./ontology/youtube/health-fitness-content.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderFinanceContentTaxonomy(data,dossier){
+ if(!data?.content_families?.length)return null;
+ const section=make('section','finance-content');
+ const details=make('details','finance-content-details');
+ details.append(make('summary','','Finance and business videos · education, marketing and promotion'));
+ details.append(make('p','measure-limit','These eight overlapping content classes distinguish general education, affiliate/owned-product marketing, and risk-sensitive financial promotions. The taxonomy is NOT a financial-advice service or an estimate of niche profitability.'));
+ const grid=make('div','finance-content-grid');
+ for(const item of data.content_families){
+   const card=make('article','finance-content-card');
+   card.append(make('h5','',item.label));
+   card.append(make('p','measure-context',item.parent.replaceAll('_',' ')));
+   card.append(make('p','',item.illustrative_topics.join(' · ')));
+   card.append(make('p','measure-limit',item.additional_risk_review));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Commercial affiliate links and paid sponsorships require separate policy and material-connection review. An SEC investor warning does not determine the conduct of an individual creator.'));
+ details.append(audienceSources([...data.platform_source_ids,...data.jurisdictional_source_ids],dossier));
+ details.append(make('p','measure-limit','Unique viewers, finance creators, niche RPM, audience overlap and creator profits are unknown. U.S. consumer and investor guidance is not worldwide law.'));
+ const link=make('a','inline-link','Read category definitions, policy references and measurement gaps ↗');
+ link.href='./ontology/youtube/finance-content-taxonomy.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderTechnologySubcultures(data,dossier){
+ if(!data?.segments?.length)return null;
+ const section=make('section','technology-subcultures');
+ const details=make('details','technology-subcultures-details');
+ details.append(make('summary','','Software tutorials, hardware reviews and workspace videos · separate categories'));
+ details.append(make('p','measure-limit','Programming, application troubleshooting, product reviews, repair and workspace aesthetics overlap. No tech-only unique audience, channel population or creator earnings has been measured.'));
+ const grid=make('div','technology-subculture-grid');
+ for(const item of data.segments){
+  const card=make('article','technology-subculture-card');
+  card.append(make('h5','',item.label));
+  card.append(make('p','measure-context',item.formats.map(x=>x.replaceAll('_',' ')).join(' · ')));
+  card.append(make('p','measure-limit',item.provenance));
+  card.append(audienceSources(item.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ const figures=make('div','technology-metric-grid');
+ for(const value of data.observed_public_metrics){
+  const card=make('article','technology-metric-card');
+  card.append(make('strong','',value.comparison==='greater_than'?'More than '+value.value.toLocaleString():value.value.toLocaleString()));
+  card.append(make('p','',value.population));
+  card.append(make('p','measure-limit',value.geography+' · '+value.start+' to '+value.end+' · view events, not unique people'));
+  card.append(audienceSources([value.source_id],dossier));
+  figures.append(card);
+ }
+ details.append(figures);
+ details.append(make('p','measure-limit','The two metrics have different countries, dates and inclusion rules. Neither is a software tutorial market-size estimate, and they cannot be divided into a niche audience share.'));
+ const link=make('a','inline-link','Read segmented subcultures and original observation limitations ↗');
+ link.href='./ontology/youtube/technology-subcultures-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCommentNormsEvidence(data,dossier){
+  if(!data?.studies?.length)return null;
+  const section=make('section','comment-norms-evidence');
+  const details=make('details','comment-norms-details');
+  details.append(make('summary','','Comment behavior in selected YouTube communities · bounded studies'));
+  details.append(make('p','measure-limit','Comment counts are not unique viewers or representative public opinion. Two peer-reviewed studies examine different English-language samples, populations and coding methods.'));
+  const grid=make('div','comment-norms-grid');
+  for(const study of data.studies){
+    const card=make('article','comment-norms-card');
+    if(study.id==='political_anglophone_2025'){
+      card.append(make('h5','','English-language political channels · 2025 paper'));
+      card.append(make('strong','','About half of comments from just over 2% of commenters'));
+      card.append(make('p','measure-limit','This is a selected sample of political channels, not a platform-wide commenter census or a measure of political belief.'));
+    }else{
+      card.append(make('h5','','Selected climate-change videos · 2026 paper'));
+      card.append(make('strong','',study.n_videos+' selected videos'));
+      card.append(make('p','measure-limit','Reply threads had a greater share of positively coded comments than independent comments within the selected sample. Association is not causation.'));
+    }
+    card.append(make('p','measure-limit',study.selection));
+    card.append(audienceSources([study.source_id],dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Commenter identities, political affiliations, population toxicity rates, causal reply effects and moderation labor hours: unknown. No individual comments or profiles are collected.'));
+  const link=make('a','inline-link','Read original study frames, methods and limitations ↗');
+  link.href='./ontology/youtube/comment-norms-evidence.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);section.append(details);return section;
+}
+
+function renderCreatorCollaborationEvidence(data,dossier){
+ if(!data?.survey_groups?.length)return null;
+ const section=make('section','creator-collaboration-evidence');
+ const details=make('details','creator-collaboration-details');
+ details.append(make('summary','','Creator collaborations and fandom participation · dated evidence'));
+ details.append(make('p','measure-limit','Current Studio documentation permits up to '+data.collaboration_policy.max_invited_creators_current+' collaborators, versus '+data.collaboration_policy.max_invited_creators_initial_rollout+' at initial rollout. The uploading channel receives native video revenue; YouTube does not split collaboration payouts automatically.'));
+ const grid=make('div','creator-collaboration-groups');
+ for(const cohort of data.survey_groups){
+  const card=make('article','creator-fandom-cohort');
+  card.append(make('h5','',cohort.population+' · study N='+cohort.n_total));
+  const list=make('ul','creator-fandom-metrics');
+  for(const item of cohort.questions){
+   const row=make('li','creator-fandom-metric');
+   row.append(make('span','',item.meaning));row.append(make('strong','',item.percent+'%'));
+   list.append(row);
+  }
+  card.append(list);
+  card.append(make('p','measure-limit','Commissioned online survey: question-specific n and probability weights unverified.'));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Shared recommendations are an intended feature, not guaranteed. No collaboration earnings, unique shared audience, or causal growth lift has been measured.'));
+ details.append(audienceSources([...new Set(data.evidence_families.flatMap(x=>x.source_ids))],dossier));
+ const link=make('a','inline-link','Read the payout rules and fandom-sample limitations ↗');
+ link.href='./ontology/youtube/creator-collaboration-fandom-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderGamingReleaseEvents(data,dossier){
+ if(!data?.events?.length)return null;
+ const section=make('section','gaming-release-events');
+ const details=make('details','gaming-release-details');
+ details.append(make('summary','','Game-release spikes: dated view events, not platform-wide growth'));
+ details.append(make('p','measure-limit','Two different historic events: Splatoon 2 at its 2017 game launch in Japan and a GTA VI trailer premiere in 2023 worldwide. Video views are events, not distinct people or attributable creator earnings.'));
+ const grid=make('div','gaming-release-grid');
+ for(const event of data.events){
+   const card=make('article','gaming-release-card');
+   card.append(make('h5','',event.game+' · '+event.event_type.replaceAll('_',' ')));
+   card.append(make('p','measure-context',event.country_scope+' · '+event.window_start+' to '+event.window_end));
+   for(const x of event.measures){
+     const row=make('p','gaming-release-measure',(x.comparison==='>'?'Over ':'')+x.value.toLocaleString()+' '+x.unit.replaceAll('_',' '));
+     card.append(row);
+     card.append(make('p','measure-limit',x.scope));
+   }
+   card.append(make('p','measure-limit',event.limitations));
+   card.append(audienceSources(event.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','A single trailer belongs to the wider related-video count. Counts for different events, geographies or windows cannot be summed or treated as comparable release-day growth.'));
+ details.append(make('p','measure-limit','Matched pre-release and post-release baselines, causal lift, viewer populations, new channel incomes and effects of the 2026 view-definition change: unknown.'));
+ const link=make('a','inline-link','Read source dates and reproducible release-window comparison rules ↗');
+ link.href='./ontology/youtube/gaming-release-events.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderNflSeasonality(data,dossier){
+ if(!data?.observations?.length)return null;
+ const section=make('section','nfl-seasonality');
+ const details=make('details','nfl-seasonality-details');
+ details.append(make('summary','','NFL videos · measured 2020–2025 growth and 2025 offseason share'));
+ details.append(make('p','measure-limit','YouTube reports bounded NFL-related global video activity, not unique fans or creator earnings. View events and uploaded videos have different denominators.'));
+ const grid=make('div','nfl-seasonality-grid');
+ const labels={
+   nfl_views_2025:'2025 NFL-related view events',
+   nfl_views_growth_2020_to_2025:'2020–2025 annual views increase',
+   nfl_uploads_growth_2020_to_2025:'2020–2025 annual uploads increase',
+   nfl_2025_offseason_share:'Share of 2025 NFL-related views in offseason'
+ };
+ for(const item of data.observations){
+   const card=make('article','nfl-seasonality-card');
+   const display=item.unit==='view_events'?'More than '+(item.value/1000000000)+' billion':'More than '+item.value+'%';
+   card.append(make('strong','',display));
+   card.append(make('h5','',labels[item.id]||item.measure.replaceAll('_',' ')));
+   card.append(make('p','measure-limit',item.period.replaceAll('_',' ')));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','More than 30% offseason views is a share within 2025, not 30% seasonal growth. Intermediate 2021–24 annual points and monthly views are unmeasured and must not be interpolated.'));
+ details.append(audienceSources([data.source_id],dossier));
+ const link=make('a','inline-link','Read dates, units, source methods and missing series ↗');
+ link.href='./ontology/youtube/nfl-view-seasonality-2026.md';link.rel='noopener noreferrer';link.target='_blank';
+ details.append(link);section.append(details);return section;
+}
+
+function renderBeautyFashionQuerySeries(data,dossier){
+  if(!data?.source_observations?.length)return null;
+  const section=make('section','beauty-fashion-query-series');
+  const details=make('details','beauty-fashion-query-details');
+  details.append(make('summary','','Beauty, fashion and routine title-query evidence · units and seasons'));
+  details.append(make('p','measure-limit','Five global platform-reported title searches use different date ranges, predicates and units. Their values cannot be combined into a popularity ranking or year-over-year growth line.'));
+  const grid=make('div','beauty-fashion-query-grid');
+  for(const item of data.source_observations){
+    const card=make('article','beauty-fashion-query-card');
+    card.append(make('h5','',item.theme.replaceAll('_',' ')));
+    const figure=(item.value/1000000).toLocaleString()+'M '+item.unit.replaceAll('_',' ');
+    card.append(make('strong','', 'More than '+figure));
+    card.append(make('p','',item.period_start+' to '+item.period_end));
+    card.append(make('p','measure-limit','Selection: '+item.title_rule));
+    card.append(make('p','measure-limit',item.period_end_qualification));
+    card.append(audienceSources([item.source_id],dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Prom and Halloween may be calendar-linked, but seasonal effects were not measured. The 2026 morning-routine value counts uploads, not views. The August 24, 2026 public viewing-definition break also prevents naive cross-year comparisons.'));
+  details.append(make('p','measure-limit','Year-over-year trend, unique people, creator population, seasonality magnitude and creator income: unknown.'));
+  const link=make('a','inline-link','Read exact source predicates, observation windows and query-series protocol ↗');
+  link.href='./ontology/youtube/beauty-fashion-query-series.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderAnimationFormatCycles(data,dossier){
+  if(!data?.timeline?.length)return null;
+  const section=make('section','animation-format-cycles');
+  const details=make('details','animation-format-details');
+  details.append(make('summary','','Independent animation and meme formats · 2024–2026 evidence'));
+  details.append(make('p','measure-limit','Publication dates are not necessarily measurement dates. The U.S. and Mexico survey findings released in 2026 both used April 2025 samples of online animation fans, not all YouTube users.'));
+  if(data.anime_view_geography_2023){
+    const evidence=data.anime_view_geography_2023;
+    details.append(make('p','measure-limit','Anime geography: >'+evidence.percent_lower_bound_exclusive+'% of 2023 global anime-related video views occurred outside Japan. View events are not unique viewers or an adult-audience percentage.'));
+    details.append(audienceSources([evidence.source_id],dossier));
+  }
+  const timeline=make('div','animation-format-timeline');
+  for(const item of data.timeline){
+    const card=make('article','animation-format-event');
+    card.append(make('h5','',item.published_at+' · '+item.format.replaceAll('_',' ')));
+    card.append(make('p','',item.description));
+    card.append(make('p','measure-limit','Evidence type: '+item.event_type.replaceAll('_',' ')+' · Fieldwork: '+item.observation_period));
+    card.append(audienceSources([item.source_id],dossier));
+    timeline.append(card);
+  }
+  details.append(timeline);
+  const observations=make('div','animation-format-surveys');
+  for(const item of data.survey_observations){
+    const card=make('article','animation-format-survey');
+    card.append(make('strong','',item.reported_percent+'%'));
+    card.append(make('p','',item.country+' · '+item.ages+' · '+item.question.replaceAll('_',' ')));
+    card.append(make('p','measure-limit','Online sample N='+item.sample_total_n+'; per-question respondent count unknown.'));
+    observations.append(card);
+  }
+  details.append(observations);
+  details.append(make('p','measure-limit','These are different questions and populations; no 2024–2026 audience growth rate, seasonality, format profit or representative animation-creator count is measured.'));
+  const link=make('a','inline-link','Source frames, event dates and limits on trend claims ↗');
+  link.href='./ontology/youtube/animation-format-cycles.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);section.append(details);return section;
+}
+
+function renderVideoAttentionCulture(data,dossier){
+  if(!data?.source_families?.length)return null;
+  const section=make('section','video-attention-culture');
+  const details=make('details','video-attention-details');
+  details.append(make('summary','','YouTube video attention and niche culture · distinct 2025–2026 evidence'));
+  details.append(make('p','measure-limit','Omdia studied the supply and viewing time of videos; YouTube/NRG surveyed U.S. online respondents about niches and personal interests. Their categories, units, periods and audiences cannot be merged into one user or creator estimate.'));
+  const grid=make('div','video-attention-grid');
+  for(const family of data.source_families){
+    const card=make('article','video-attention-card');
+    card.append(make('h5','',family.id==='omdia-2026'?'Omdia · video supply and watch time':'YouTube/NRG · U.S. niche and fandom survey'));
+    card.append(make('p','measure-context',family.population));
+    const list=make('ul','video-attention-observations');
+    const matches=data.observations.filter(x=>family.source_ids.includes(x.source_id));
+    for(const obs of matches){
+      const item=make('li','video-attention-observation');
+      const number=obs.id==='omdia-video-stock-dec2025'?'~29 billion':obs.comparison==='greater_than'?'More than '+obs.value+'%':obs.value+'%';
+      const label=obs.id==='omdia-video-stock-dec2025'?'Estimated hosted videos, December 2025':obs.measurement.replaceAll('_',' ');
+      item.append(make('strong','',number));
+      item.append(make('span','',label));
+      list.append(item);
+    }
+    card.append(list);
+    card.append(make('p','measure-limit',family.method));
+    card.append(audienceSources(family.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','The Omdia video genres and production categories may overlap; they must not be added to 100%. The 496-person and 939-person NRG respondent frames are age-dependent, not global YouTube audience populations.'));
+  details.append(make('p','measure-limit','Distinct niche viewers, creator income, per-niche profit, active creators and cross-category audience intersections remain unknown.'));
+  const link=make('a','inline-link','Read the dated studies, denominators and methodological exclusions ↗');
+  link.href='./ontology/youtube/video-attention-culture-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderHistoricalLinkingStudy(data,dossier){
+  if(!data?.population?.channels)return null;
+  const section=make('section','historical-linking');
+  const details=make('details','historical-linking-details');
+  details.append(make('summary','','Historical 2019 channel linking · not creator earnings'));
+  details.append(make('p','measure-limit',data.population.channels.toLocaleString()+' channels with at least 100,000 subscribers, observed at the end of 2019. This selected sample is not representative of new creators or all channels in 2026.'));
+  const grid=make('div','historical-linking-grid');
+  for(const [label,key] of [['Marketplace links','marketplace'],['Crowdfunding links','crowdfunding']]){
+    const item=data.channel_linking[key].find(x=>x.id==='less_than_20pct');
+    const zero=data.channel_linking[key].find(x=>x.id==='none');
+    const card=make('article','historical-link-card');
+    card.append(make('h5','',label));
+    card.append(make('strong','historical-link-share',item.percent_reported+'%'));
+    card.append(make('p','measure-limit','Of sampled channels had links in fewer than 20% of videos; includes '+zero.percent_reported+'% with no such links.'));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','A URL in a video description is not evidence of sales, sponsorship revenue, creator profit or a causal strategy. The paper also models advertising revenue; that model is not observed channel payout data.'));
+  details.append(audienceSources([data.source.source_id],dossier));
+  const link=make('a','inline-link','Read the historical sample and its denominator limits ↗');
+  link.href='./ontology/youtube/historical-linking-study.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderCompetitionSample(data,dossier) {
+  if(!data)return null;
+  const section=make('section','competition-sample');
+  const details=make('details','competition-sample-details');
+  details.append(make('summary','','Creator competition: one commercial analytics sample'));
+  details.append(make('p','measure-limit','Metricool analyzed '+data.source.sampled_videos.toLocaleString()+' videos from '+data.source.sampled_accounts.toLocaleString()+' accounts. The recruitment frame and exact date windows are not fully disclosed; these figures are not universal creator success rates.'));
+  const groups=make('div','competition-grid');
+  for(const item of data.cohort_tier_transitions){
+    const cell=make('article','competition-tier');
+    cell.append(make('h5','',item.tier+' channels'));
+    cell.append(make('strong','',item.share_moved_up_percent+'%'));
+    cell.append(make('small','', 'Moved to a higher subscriber tier in the observed cohort'));
+    groups.append(cell);
+  }
+  details.append(groups);
+  const sources=make('details','competition-traffic');
+  sources.append(make('summary','','Traffic attribution in this sampled dataset'));
+  const list=make('div','competition-traffic-grid');
+  for(const item of data.traffic_source_share_of_sampled_organic_views){
+    const row=make('article','competition-traffic-item');
+    row.append(make('strong','',item.percent+'%'));
+    row.append(make('span','',item.id.replaceAll('_',' ')));
+    list.append(row);
+  }
+  sources.append(list);details.append(sources);
+  details.append(make('p','measure-limit','These movements and traffic shares are descriptive, not the probability of monetizing a new channel. Short-form and long-form revenue changes can also reflect selection, seasonality and viewing-metric revisions.'));
+  details.append(audienceSources([data.source.id],dossier));
+  const link=make('a','inline-link','Read study limitations and exact cohorts ↗');
+  link.href='./ontology/youtube/competition-observations.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);return section;
+}
+
+function renderAcademicResearch(data,dossier) {
+  if(!data?.studies?.length)return null;
+  const section=make('section','academic-research');
+  const details=make('details','academic-research-details');
+  details.append(make('summary','','Academic studies of creator income and viewing · '+data.studies.length+' studies'));
+  details.append(make('p','measure-limit','The studies measure different regions, creators and types of income. Their abstracts were checked, but complete methods and source datasets have not yet been audited. They cannot be pooled into a typical YouTube salary.'));
+  const grid=make('div','academic-studies-grid');
+  for(const paper of data.studies){
+    const card=make('article','academic-study');
+    card.append(make('h5','',paper.title));
+    card.append(make('p','',paper.year+' · '+paper.scope));
+    if(paper.numeric?.gini_coefficient!==undefined){
+      card.append(make('p','', 'Reported sample earnings Gini: '+paper.numeric.gini_coefficient));
+    } else if(paper.sample_n!==null){
+      card.append(make('p','', 'Studied channels/creators: '+paper.sample_n.toLocaleString()));
+    }
+    const findings=make('ul','academic-findings');
+    for(const sentence of paper.findings)findings.append(make('li','',sentence));
+    card.append(findings);
+    card.append(make('p','measure-limit',paper.limitations[0]));
+    card.append(audienceSources([paper.id],dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  const link=make('a','inline-link','Read the research boundaries and bibliography ↗');
+  link.href='./ontology/youtube/academic-studies.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);
+  return section;
+}
+
+async function showDossier(entry) {
+  const host=$('#dossier-view');
+  host.hidden=false;
+  host.replaceChildren(make('p','unresearched','Loading research record…'));
+  host.scrollIntoView({behavior:'smooth',block:'start'});
+  try {
+    const [record,work,studyPlan,platformPolicy,yppFuture,topicCatalog,topicActivity,samplingBudget,adultUseHistory,incomeEvidence,channelIncome,crossPlatformIncome,airStudioBenchmarks,lifecycleHorizons,newcomerIncomeProtocol,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,advertiserHistory,musicRights,productionCosts,productionEffort,viewDefinition,analyticsGuide,platformScale,countryReach,geographicScope,audienceOverlap,beautyGamingPanel,genderCommunityEvidence,childrenSeasonality,viewerPersonMetrics,usDemographicUse,identityResearch,surveyFrameCrosswalk,countryProgramAccess,taxWithholding,brandDisclosure,sponsorCategoryEvidence,publishingCadence,creatorSafety,trafficConcentration,euCreatorConsultation,eligibilityMatrix,channelOnboarding,channelOwnership,applicationLifecycle,creatorGrowth,retentionPostsMemberships,promoteEconomics,contentFormats,publishTimeStudy,seasonalDiscovery,decliningTopicAudit,researchSynthesis,videoSurfaceEconomics,screenViewingStudy,childAgeFormat,teenFormatEvidence,multilingualDistribution,newsAudienceStudy,competitionSample,historicalLinking,videoAttentionCulture,animationFormatCycles,beautyFashionQueries,nflSeasonality,gamingReleaseEvents,creatorCollaboration,commentNormsEvidence,technologySubcultures,financeContent,healthFitness,comparisonSet,academicResearch,reputationPortability,checkoutRefundEvidence,memberCohortProtocol,shortsReferralStudy,audiencePopulationCrosswalk,countryAdReach,usNewsDemographics,syntheticMediaPolicy,recommendationEvidence,channelCohortEvidence,firstUploadVlogStudy,externalLinkFunnel,retentionObservability,crossplatformPosting,gamingPeriods,patreonIncomeFrames,searchDemandProxy,videoProductionCosts,exclusiveRightsEvidence,fraudSecurity]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/ypp-transition-2027.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/public-api-sampling-budget.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/cross-platform-income-surveys.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/air-studio-benchmarks-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/lifecycle-horizons.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/newcomer-income-cohort.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/advertiser-policy-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/music-rights-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-costs.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-effort-comparison.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/view-definition-break.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-reach-devices.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/geographic-scope.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/audience-overlap.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/beauty-gaming-overlap-2025.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/gender-community-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/children-media-seasonality.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/viewer-person-metrics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-demographic-use-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/demographic-identity-uncertainty.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/study-frame-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-eligibility-payments.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/tax-withholding-mechanics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/brand-disclosure-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/sponsor-category-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/publishing-cadence-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-safety-continuity.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/traffic-concentration.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eu-creator-consultation-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-onboarding.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-ownership-continuity.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/retention-posts-memberships.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/promote-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/geographic-publishing-time.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/seasonal-discovery-comparison.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/declining-content-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/research-synthesis-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/video-surfaces-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/screen-viewing-uk-2025.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/child-age-and-format-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/teen-video-format-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/multilingual-distribution.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/competition-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/historical-linking-study.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/video-attention-culture-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/animation-format-cycles.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/beauty-fashion-query-series.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/nfl-view-seasonality-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/gaming-release-events.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-collaboration-fandom-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/comment-norms-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/technology-subcultures-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/finance-content-taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/health-fitness-content.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/comparison-set.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/academic-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/reputation-portability.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/checkout-refund-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/member-cohort-protocol.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/shorts-related-video-funnel.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/audience-population-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-ad-reach-comparisons.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-news-demographic-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/synthetic-media-rights-policy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/recommendation-surface-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-cohort-observations-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/first-upload-vlog-study-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/external-link-funnel-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/retention-observability.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/crossplatform-posting-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/gaming-livestream-quarterly-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/patreon-earnings-timeframe-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/search-demand-proxy-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/video-production-cost-register.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/exclusive-rights-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-fraud-security.json'):Promise.resolve(null)]);
+    if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
+    const outer=make('article','dossier-shell');
+    outer.style.setProperty('--specimen',entry.color.hex);
+    const top=make('div','dossier-head');
+    const heading=make('div','');
+    add(heading,make('p','eyebrow',entry.domain.replaceAll('-',' ')+' / '+record.status),
+      make('h3','',record.name));
+    const close=make('button','dossier-close','Close ×');
+    close.type='button';
+    close.addEventListener('click',()=>{host.hidden=true;host.replaceChildren();});
+    add(top,heading,close);
+    outer.append(top);
+    const official=make('a','inline-link','Official website ↗');
+    official.href=record.official_url;
+    official.target='_blank';
+    official.rel='noopener noreferrer';
+    const dossierJson=make('a','inline-link','Dossier JSON ↗');
+    dossierJson.href='./'+entry.dossier;
+    const queueJson=make('a','inline-link','Task JSON ↗');
+    queueJson.href='./'+entry.queue;
+    add(outer,add(make('div','dossier-links'),official,dossierJson,queueJson));
+    const tasks=work.queues.flatMap(q=>q.tasks);
+    const done=tasks.filter(t=>t.status==='complete'&&t.progress===100).length;
+    const stats=make('div','dossier-stats');
+    add(stats,blockHeading('Research tasks',studyPlan?studyPlan.total_tracked_tasks:tasks.length),blockHeading('Verified tasks',done),
+      blockHeading('Sources',record.evidence.length),blockHeading('Claims',record.claims.length));
+    outer.append(stats);
+    const intro=make('p','dossier-intro',record.summary||'This marketplace has not been researched yet.');
+    outer.append(intro);
+    const evidenceArea=make('div','dossier-evidence');
+    evidenceArea.append(detailSection('Published observations',record.observations,observation=>{
+      const card=make('div','research-item');
+      add(card,make('strong','',observation.metric||observation.id),
+        make('p','',observation.value===null?'Unknown':String(observation.value)+' '+(observation.unit||'')),
+        make('small','',observation.period||'Period not supplied'));
+      return card;
+    }));
+    evidenceArea.append(detailSection('Claims and sources',record.claims,claim=>{
+      const card=make('div','research-item');
+      add(card,make('strong','',claim.text),make('small','','Checked '+claim.observed_at+' · '+claim.confidence+' confidence'));
+      if(claim.limitations)card.append(make('p','measure-limit','Limits: '+claim.limitations));
+      card.append(audienceSources(claim.source_ids,record));
+      return card;
+    }));
+    evidenceArea.append(detailSection('Revenue opportunities',record.opportunities,opportunity=>{
+      return add(make('div','research-item'),make('p','',opportunity.title||opportunity.id||'Opportunity'));
+    }));
+    evidenceArea.append(detailSection('Risks',record.risks,risk=>{
+      return add(make('div','research-item'),make('p','',risk.title||risk.id||'Risk'));
+    }));
+    outer.append(evidenceArea);
+    const policySection=renderPlatformPolicies(platformPolicy,record);
+    if(policySection)outer.append(policySection);
+    const transition=renderYppFutureTransition(yppFuture,record);
+    if(transition)outer.append(transition);
+    const routes=renderRevenuePathways(earningRoutes,payoutGates,record,eligibilityMatrix);
+    if(routes)outer.append(routes);
+    const entryStages=renderChannelOnboarding(channelOnboarding,record);
+    if(entryStages)outer.append(entryStages);
+    const ownership=renderChannelOwnership(channelOwnership,record);
+    if(ownership)outer.append(ownership);
+    const reputation=renderReputationPortability(reputationPortability,record);
+    if(reputation)outer.append(reputation);
+    const checkoutAudit=renderCheckoutRefundEvidence(checkoutRefundEvidence,record);
+    if(checkoutAudit)outer.append(checkoutAudit);
+    const cohortStudy=renderMemberCohortResearch(memberCohortProtocol,record);
+    if(cohortStudy)outer.append(cohortStudy);
+    const shortsFlow=renderShortsReferralStudy(shortsReferralStudy,record);
+    if(shortsFlow)outer.append(shortsFlow);
+    const audienceBase=renderAudiencePopulationCrosswalk(audiencePopulationCrosswalk,record);
+    if(audienceBase)outer.append(audienceBase);
+    const adCountries=renderCountryAdReach(countryAdReach,record);
+    if(adCountries)outer.append(adCountries);
+    const usNews=renderUSNewsDemographics(usNewsDemographics,record);
+    if(usNews)outer.append(usNews);
+    const syntheticPolicy=renderSyntheticMediaPolicy(syntheticMediaPolicy,record);
+    if(syntheticPolicy)outer.append(syntheticPolicy);
+    const recs=renderRecommendationEvidence(recommendationEvidence,record);
+    if(recs)outer.append(recs);
+    const cohorts=renderChannelCohorts(channelCohortEvidence,record);
+    if(cohorts)outer.append(cohorts);
+    const vlog=renderFirstUploadVlogStudy(firstUploadVlogStudy,record);
+    if(vlog)outer.append(vlog);
+    const linkFunnel=renderExternalLinkFunnel(externalLinkFunnel,record);
+    if(linkFunnel)outer.append(linkFunnel);
+    const retention=renderRetentionObservability(retentionObservability,record);
+    if(retention)outer.append(retention);
+    const crossposting=renderCrossplatformPosting(crossplatformPosting,record);
+    if(crossposting)outer.append(crossposting);
+    const gamingStudy=renderGamingPeriods(gamingPeriods,record);
+    if(gamingStudy)outer.append(gamingStudy);
+    const patreon=renderPatreonIncomeFrames(patreonIncomeFrames,record);
+    if(patreon)outer.append(patreon);
+    const demand=renderSearchDemandProxy(searchDemandProxy,record);
+    if(demand)outer.append(demand);
+    const production=renderVideoProductionCosts(videoProductionCosts,record);
+    if(production)outer.append(production);
+    const exRights=renderExclusiveRights(exclusiveRightsEvidence,record);
+    if(exRights)outer.append(exRights);
+    const fraud=renderFraudSecurity(fraudSecurity,record);
+    if(fraud)outer.append(fraud);
+    const onboarding=renderApplicationLifecycle(applicationLifecycle);
+    if(onboarding)outer.append(onboarding);
+    const restricted=renderContentRestrictions(contentRestrictions,record);
+    if(restricted)outer.append(restricted);
+    const adsChanges=renderAdvertiserPolicyHistory(advertiserHistory,record);
+    if(adsChanges)outer.append(adsChanges);
+    const music=renderMusicRights(musicRights,record);
+    if(music)outer.append(music);
+    const costStudy=renderProductionCosts(productionCosts);
+    if(costStudy)outer.append(costStudy);
+    const effort=renderProductionEffortComparison(productionEffort,record);
+    if(effort)outer.append(effort);
+    const metricsGuide=renderMeasurementGuide(analyticsGuide);
+    if(metricsGuide)outer.append(metricsGuide);
+    const counted=renderViewDefinitionBreak(viewDefinition,record);
+    if(counted)outer.append(counted);
+    const scale=renderPlatformScale(platformScale);
+    if(scale)outer.append(scale);
+    const country=renderCountryReachDevices(countryReach,record);
+    if(country)outer.append(country);
+    const geography=renderGeographicScope(geographicScope,record);
+    if(geography)outer.append(geography);
+    const overlap=renderAudienceOverlapResearch(audienceOverlap,record);
+    if(overlap)outer.append(overlap);
+    const overlapPanel=renderBeautyGamingOverlap(beautyGamingPanel,record);
+    if(overlapPanel)outer.append(overlapPanel);
+    const genderGroups=renderGenderCommunityEvidence(genderCommunityEvidence,record);
+    if(genderGroups)outer.append(genderGroups);
+    const childSeasonality=renderChildrenSeasonality(childrenSeasonality,record);
+    if(childSeasonality)outer.append(childSeasonality);
+    const personMetrics=renderViewerPersonMetrics(viewerPersonMetrics,record);
+    if(personMetrics)outer.append(personMetrics);
+    const demo=renderUsDemographicUse(usDemographicUse,record);
+    if(demo)outer.append(demo);
+    const identity=renderIdentityResearch(identityResearch,record);
+    if(identity)outer.append(identity);
+    const frame=renderSurveyFrameCrosswalk(surveyFrameCrosswalk,record);
+    if(frame)outer.append(frame);
+    const countryPrograms=renderCountryProgramAccess(countryProgramAccess,record);
+    if(countryPrograms)outer.append(countryPrograms);
+    const taxes=renderTaxWithholdingResearch(taxWithholding,record);
+    if(taxes)outer.append(taxes);
+    const brand=renderBrandDisclosureRisk(brandDisclosure,record);
+    if(brand)outer.append(brand);
+    const sponsors=renderSponsorCategoryResearch(sponsorCategoryEvidence,record);
+    if(sponsors)outer.append(sponsors);
+    const cadence=renderPublishingCadenceStudy(publishingCadence,record);
+    if(cadence)outer.append(cadence);
+    const safety=renderCreatorSafety(creatorSafety,record);
+    if(safety)outer.append(safety);
+    const concentration=renderTrafficConcentration(trafficConcentration,record);
+    if(concentration)outer.append(concentration);
+    const eu=renderEuCreatorConsultation(euCreatorConsultation,record);
+    if(eu)outer.append(eu);
+    const discoveryModel=renderCreatorGrowth(creatorGrowth,record);
+    if(discoveryModel)outer.append(discoveryModel);
+    const returnStudy=renderPostAndMembershipRetention(retentionPostsMemberships,record);
+    if(returnStudy)outer.append(returnStudy);
+    const promotion=renderPromoteResearch(promoteEconomics,record);
+    if(promotion)outer.append(promotion);
+    const formats=renderContentFormats(contentFormats,record);
+    if(formats)outer.append(formats);
+    const publishTimes=renderPublishingTimeResearch(publishTimeStudy,record);
+    if(publishTimes)outer.append(publishTimes);
+    const seasonal=renderSeasonalDiscovery(seasonalDiscovery,record);
+    if(seasonal)outer.append(seasonal);
+    const declineAudit=renderDecliningTopicAudit(decliningTopicAudit,record);
+    if(declineAudit)outer.append(declineAudit);
+    const synthesis=renderEvidenceSynthesis(researchSynthesis,record);
+    if(synthesis)outer.append(synthesis);
+    const surfaces=renderVideoSurfaceEconomics(videoSurfaceEconomics,record);
+    if(surfaces)outer.append(surfaces);
+    const screen=renderScreenViewingStudy(screenViewingStudy,record);
+    if(screen)outer.append(screen);
+    const kids=renderChildAgeFormatStudy(childAgeFormat,record);
+    if(kids)outer.append(kids);
+    const youthFormats=renderTeenVideoFormatEvidence(teenFormatEvidence,record);
+    if(youthFormats)outer.append(youthFormats);
+    const multilingual=renderMultilingualDistribution(multilingualDistribution,record);
+    if(multilingual)outer.append(multilingual);
+    const audience=renderAudienceResearch(record);
+    if(audience)outer.append(audience);
+    const history=renderAdultUseHistory(adultUseHistory);
+    if(history)outer.append(history);
+    const newsStudy=renderCommunityAudienceStudy(newsAudienceStudy,record);
+    if(newsStudy)outer.append(newsStudy);
+    const competitors=renderCompetitionSample(competitionSample,record);
+    if(competitors)outer.append(competitors);
+    const historicalLinks=renderHistoricalLinkingStudy(historicalLinking,record);
+    if(historicalLinks)outer.append(historicalLinks);
+    const attention=renderVideoAttentionCulture(videoAttentionCulture,record);
+    if(attention)outer.append(attention);
+    const animation=renderAnimationFormatCycles(animationFormatCycles,record);
+    if(animation)outer.append(animation);
+    const beauty=renderBeautyFashionQuerySeries(beautyFashionQueries,record);
+    if(beauty)outer.append(beauty);
+    const nfl=renderNflSeasonality(nflSeasonality,record);
+    if(nfl)outer.append(nfl);
+    const gamingEvent=renderGamingReleaseEvents(gamingReleaseEvents,record);
+    if(gamingEvent)outer.append(gamingEvent);
+    const collab=renderCreatorCollaborationEvidence(creatorCollaboration,record);
+    if(collab)outer.append(collab);
+    const commentNorms=renderCommentNormsEvidence(commentNormsEvidence,record);
+    if(commentNorms)outer.append(commentNorms);
+    const finance=renderFinanceContentTaxonomy(financeContent,record);
+    if(finance)outer.append(finance);
+    const fitness=renderHealthFitnessResearch(healthFitness,record);
+    if(fitness)outer.append(fitness);
+    const technologies=renderTechnologySubcultures(technologySubcultures,record);
+    if(technologies)outer.append(technologies);
+    const comparators=renderPlatformComparisonSet(comparisonSet,record);
+    if(comparators)outer.append(comparators);
+    const literature=renderAcademicResearch(academicResearch,record);
+    if(literature)outer.append(literature);
+    const crossIncome=renderCrossPlatformIncomeSurveys(crossPlatformIncome,record);
+    if(crossIncome)outer.append(crossIncome);
+    const horizons=renderLifecycleHorizons(lifecycleHorizons,record);
+    if(horizons)outer.append(horizons);
+    const air=renderAirStudioBenchmarks(airStudioBenchmarks,record);
+    if(air)outer.append(air);
+    const newcomer=renderNewcomerIncomeProtocol(newcomerIncomeProtocol,record);
+    if(newcomer)outer.append(newcomer);
+    const incomeStudy=renderCreatorIncomeEvidence(incomeEvidence);
+    if(incomeStudy)outer.append(incomeStudy);
+    const channelStudy=renderSmallChannelStudy(channelIncome);
+    if(channelStudy)outer.append(channelStudy);
+    const catalogue=renderTopicCatalogue(topicCatalog,topicActivity);
+    if(catalogue)outer.append(catalogue);
+    const sampling=renderPublicSamplingBudget(samplingBudget,record);
+    if(sampling)outer.append(sampling);
+    const method=renderOpportunityFramework(opportunityFramework,topicCatalog,topicActivity);
+    if(method)outer.append(method);
+    if(entry.id==='youtube')outer.append(renderScenarioCalculator());
+    if(entry.id==='youtube')outer.append(renderBreakEvenCalculator());
+    if(studyPlan)outer.append(renderStudyPlan(studyPlan));
+    outer.append(make('h4','dossier-queues-title','Research queues'));
+    const queueList=make('div','dossier-queues');
+    for(const group of work.queues){
+      const panel=make('details','queue-details');
+      const completed=group.tasks.filter(t=>t.status==='complete'&&t.progress===100).length;
+      const pct=Math.round(group.tasks.reduce((n,t)=>n+t.progress,0)/group.tasks.length);
+      const summary=make('summary','',group.emoji+' '+group.title+' — '+pct+'% ('+completed+'/'+group.tasks.length+' verified)');
+      panel.append(summary,progress(pct,group.title));
+      const list=make('ol','queue-task-list');
+      for(const task of group.tasks){
+        const item=make('li','');
+        add(item,make('strong','',task.emoji+' '+task.title+' · '+task.progress+'%'),
+          make('p','',task.acceptance));
+        list.append(item);
+      }
+      panel.append(list);
+      queueList.append(panel);
+    }
+    outer.append(queueList);
+    host.replaceChildren(outer);
+  } catch(error) {
+    console.error('Mercata dossier failed to render: '+String(error?.stack || error));
+    host.replaceChildren(add(make('div','empty-state'),make('h3','', 'Research record unavailable'),
+      make('p','', 'The dossier or task queue could not be loaded. Check the public files.')));
+  }
+}
+
+async function start() {
+  const outcomes=await Promise.allSettled([
+    read('gallery/index.json'),read('pipeline/queues.json'),
+    read('pipeline/domains.json'),read('ontology/ontology.json'),
+    read('roadmap/progress.json')
+  ]);
+  if(outcomes[0].status==='fulfilled') {
+    specimens=outcomes[0].value.specimens;
+    const domains=[...new Set(specimens.map(s=>s.domain))].sort();
+    for(const domain of domains) {
+      const opt=make('option','',domain.replaceAll('-',' ')); opt.value=domain;
+      $('#domain').append(opt);
+    }
+    showCatalog();
+    showSocialOverview();
+  } else errorFor('#catalog-grid','The public gallery index could not be read.');
+  if(outcomes[1].status==='fulfilled' && outcomes[2].status==='fulfilled') showQueues(outcomes[1].value,outcomes[2].value);
+  else errorFor('#queue-grid','The research definitions could not be read.');
+  if(outcomes[3].status==='fulfilled') showOntology(outcomes[3].value);
+  else errorFor('#ontology-grid','The ontology could not be read.');
+  if(outcomes[4].status==='fulfilled') showRoadmap(outcomes[4].value);
+  else errorFor('#milestones','The progress ledger could not be read.');
+}
+$('#search').addEventListener('input',showCatalog);
+$('#domain').addEventListener('change',showCatalog);
+start();
++x.median_usd+' median monthly Patreon'));
+  card.append(make('p','',x.n.toLocaleString('en-US')+' selected observations · 
+ if(!data?.gaming?.length)return null;
+ const section=make('section','gaming-period-study');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Live gaming watched hours: distinct from people and creators'));
+ details.append(make('p','measure-limit','Q4 2025 to Q2 2026. Commercial livestream tracking, not a population census.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.gaming){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.period+' · Gaming'));
+  card.append(make('strong','',x.watch_hours_billion.toFixed(2)+' billion hours watched'));
+  card.append(make('p','',x.channels_million+' million broadcast channel identifiers'));
+  card.append(audienceSources([x.source_id],dossier));grid.append(card);
+ }
+ const live=data.general_live_q2;
+ const c=make('article','ownership-card');
+ c.append(make('h5','','Q2 2026 · general YouTube Live'));
+ c.append(make('strong','',live.watch_hours_billion.toFixed(2)+' billion hours watched'));
+ c.append(make('p','measure-limit','Separate category, not automatically combinable with gaming'));
+ c.append(audienceSources([live.source_id],dossier));grid.append(c);
+ details.append(grid);
+ details.append(make('p','measure-limit','Gaming hours fell 19.3% Q2 versus Q1 as reported; distinct viewers, pay and external migration remain unknown.'));
+ const link=make('a','inline-link','Read gaming evidence, scope and source notes ↗');
+ link.href='./ontology/youtube/gaming-livestream-quarterly-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
+ section.append(details);return section;
+}
+
+function renderCrossplatformPosting(data,dossier){
+ if(!data?.vendor_posting_snapshot)return null;
+ const section=make('section','crossplatform-posting');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Crossposting videos is not moving audiences'));
+ details.append(make('p','measure-limit','A selected scheduling-tool sample counts multi-platform publishing, not fans who migrated across websites.'));
+ const s=data.vendor_posting_snapshot;
+ const grid=make('div','ownership-grid');
+ for(const [title,value,explanation] of [
+ ['Publishing tool creators',s.creators.toLocaleString('en-US'),'Users of a cross-posting service, not all creators'],
+ ['Distinct uploads',s.uploads.toLocaleString('en-US'),'One uploaded video can become multiple posts'],
+ ['Successful published posts',s.successful_post_events.toLocaleString('en-US'),'Posting events, not distinct viewers'],
+ ['Uploads sent to several platforms',s.share_uploads_multi_platform_percent+'%','Selected tool-user uploads; no viewer migration measured']
+ ]){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',title));card.append(make('strong','',value));card.append(make('p','measure-limit',explanation));
+  card.append(audienceSources([s.source_id],dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Separate 2016 YouTube–Twitch rivalry research found context-specific creator effort changes; neither study estimates modern buyer or follower migration.'));
+ details.append(audienceSources([data.historical_competition_paper.source_id],dossier));
+ const link=make('a','inline-link','Read both dated studies, denominators and missing evidence ↗');
+ link.href='./ontology/youtube/crossplatform-posting-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderRetentionObservability(data,dossier){
+ if(!data?.metrics?.length)return null;
+ const section=make('section','retention-observability');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Audience retention, completed plays and viewing sessions'));
+ details.append(make('p','measure-limit','Public playback-start views, owner-only video retention, initial Shorts engagement and cross-video sessions have different units. None establishes an observed full-video completion fraction.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.metrics){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.label));
+  card.append(make('p','',item.unit.replaceAll('_',' ')+' · '+item.access.replaceAll('_',' ')));
+  card.append(make('p','measure-limit',item.limit));
+  card.append(audienceSources(item.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Owner video-level retention reports require processing time and sufficiently viewed clips for highlighted moments; all real completion rates and cross-video session lengths remain unknown.'));
+ const link=make('a','inline-link','Read measurement units and privacy boundaries ↗');link.href='./ontology/youtube/retention-observability.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderExternalLinkFunnel(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','external-link-funnel');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Clickable links, Shorts limitations and product funnels'));
+ details.append(make('p','measure-limit','A URL in a Shorts comment or description is not clickable, even though a related-video link can be. Long-form external links require advanced-feature eligibility.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.label));
+  const status=item.external_url_clickable===null?'Internal route':item.external_url_clickable?'External URL may be clickable':'External URL not clickable';
+  card.append(make('p','',status));
+  card.append(make('p','measure-limit',item.limitation));
+  card.append(audienceSources(item.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Actual link clicks, distinct buyers, marketing costs and net revenue are not measured; no test has been launched.'));
+ const link=make('a','inline-link','Read platform links policy and funnel measurement gates ↗');link.href='./ontology/youtube/external-link-funnel-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderFirstUploadVlogStudy(data,dossier){
+ if(!data?.earnings_value_model)return null;
+ const section=make('section','first-upload-vlog');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','New daily-life vloggers: observed views versus hypothetical ad value'));
+ details.append(make('p','measure-limit','A selected 107-channel preprint finds 51.4% below 1,000 lifetime views. Its dollar amounts model advertising value from views; no YouTube payouts, cash costs or measured creator time were obtained.'));
+ const grid=make('div','ownership-grid');
+ for(const item of [
+  {title:'Sampled first-upload channels',value:data.sampling.first_upload_cohort_channels,reason:'Keyword-discovered, two daily-life vlog genres'},
+  {title:'Below 1,000 lifetime views',value:data.cold_start_public_views.below_1000_lifetime_views_percent+'%',reason:'Observed public view counts in sampled channels'},
+  {title:'Modeled median long-form ad value',value:'USD '+data.earnings_value_model.median_modeled_longform_value_usd.toFixed(2),reason:'Assumed USD 2.30 RPM; not actual paid income'},
+  {title:'Modeled median labor',value:data.earnings_value_model.median_assumed_hours+' hours',reason:'Assumed three labor hours per finished video minute; no time logs'}
+ ]){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.title));
+  card.append(make('strong','',item.value));
+  card.append(make('p','measure-limit',item.reason));
+  card.append(audienceSources([data.source_id],dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','All-creator zero-earner fraction, real channel profit and any causal benefit of additional uploads remain unmeasured.'));
+ const link=make('a','inline-link','Read the study and its modeled-income limitations ↗');
+ link.href='./ontology/youtube/first-upload-vlog-study-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderChannelCohorts(model,dossier){
+ if(!model?.datasets?.length)return null;
+ const section=make('section','channel-cohort-evidence');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Indexed channels and 360-day subscriber milestone outcomes'));
+ details.append(make('p','measure-limit','61.2 million sampled public-subscriber channels and a distinct 32.9 million-channel below-1k cohort. Both are selected vendor index populations, not a census or verified first-year creator income.'));
+ const grid=make('div','ownership-grid');
+ const m=model.datasets[0],s=model.datasets[2];
+ for(const band of s.bins){
+  const card=make('article','ownership-card');
+  const end=band.video_delta_max===null?' or more':'–'+band.video_delta_max;
+  card.append(make('h5','','Net public video count +'+band.video_delta_min+end));
+  card.append(make('strong','',band.reported_percent.toFixed(2)+'% ending at 1,000+ subscribers'));
+  card.append(make('p','',band.reached_1000_at_end.toLocaleString('en-US')+' of '+band.channels.toLocaleString('en-US')+' indexed channels'));
+  card.append(make('p','measure-limit','360 days, no random assignment, new-entrant identification, actual uploads or YPP earnings'));
+  card.append(audienceSources([s.source_id],dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Separate July distribution: '+m.included_channels.toLocaleString('en-US')+' indexed channels with at least one subscriber. The group comparisons do not prove uploading causes growth or that creators earn money.'));
+ const link=make('a','inline-link','Read cohort sampling, percentages and non-causal limitations ↗');
+ link.href='./ontology/youtube/channel-cohort-observations-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderRecommendationEvidence(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','recommendation-evidence');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Home, Suggested, Shorts and Search: distinct discovery rules'));
+ details.append(make('p','measure-limit','Official guidance describes different ranking contexts, not public fixed weights or guaranteed creator reach.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.label));card.append(make('p','',x.claim));
+  card.append(audienceSources(x.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','No minimum Shorts posting cadence is required. Exact signal weights, newcomer impressions and net creator income effects are unknown.'));
+ const link=make('a','inline-link','Read official recommendation sources ↗');
+ link.href='./ontology/youtube/recommendation-surface-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderSyntheticMediaPolicy(data,dossier){
+ if(!data?.policy_axes?.length)return null;
+ const section=make('section','synthetic-media-rights');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','AI-altered video: disclosure, originality, likeness and rights'));
+ details.append(make('p','measure-limit','A realistic AI-use disclosure can be required without automatic demonetization. YPP originality, privacy complaints and copyright protection have separate rules.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.policy_axes){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.title));
+  card.append(make('p','',x.rule));
+  card.append(audienceSources(x.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Five policy examples are hypothetical; no AI creator earnings, enforcement prevalence or individual legality was measured.'));
+ const link=make('a','inline-link','Read official AI-content and rights rules ↗');
+ link.href='./ontology/youtube/synthetic-media-rights-policy.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderUSNewsDemographics(data,dossier){
+ if(!data?.strata?.length)return null;
+ const section=make('section','us-news-demographic-crosswalk');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','U.S. YouTube use versus regular news use by surveyed groups'));
+ details.append(make('p','measure-limit','Two separate Pew surveys: overall YouTube ever-use is not regular news use, a verified biological-sex category or a sample of YouTube creators. Percentages are within the published adult subgroups.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.strata){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.subgroup.replaceAll('_',' ')));
+  card.append(make('p','',item.ever_use_pct+'% ever use YouTube · '+item.regular_news_pct+'% regularly get YouTube news'));
+  card.append(make('p','measure-limit','Different survey respondents and date windows; subgroup uncertainty not published in this comparison.'));
+  card.append(audienceSources([item.ever_use_source_id,item.regular_news_source_id],dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','2020–2026 U.S. adult regular YouTube news series: '+data.regular_news_us_adult_series.map(x=>x.regular_news_youtube_pct_of_us_adults+'%').join(', ')+'. Descriptive survey estimates, not causal changes or viewer counts.'));
+ details.append(make('p','measure-limit','Biological sex, overlapping age-by-party or age-by-gender audience counts, and subgroup margins of error are unknown.'));
+ const link=make('a','inline-link','Read the dated survey comparison and missing evidence ↗');
+ link.href='./ontology/youtube/us-news-demographic-crosswalk.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCountryAdReach(d,dossier){
+ if(!d?.observations?.length)return null;
+ const section=make('section','country-ad-reach'),details=make('details','ownership-details');
+ details.append(make('summary','','Country reach: four dated YouTube advertiser estimates'));
+ details.append(make('p','measure-limit','Google ad-planner reach, reported in DataReportal Digital 2026 and measured in October 2025, is not monthly active YouTube viewers or verified country growth.'));
+ const grid=make('div','ownership-grid');
+ for(const x of d.observations){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.country));card.append(make('strong','',x.ad_reach_million+' million ad-reachable'));
+  const change=x.reported_end_2024_to_2025_change_percent;
+  card.append(make('p','',('End-2024 to late-2025 planner change: ')+(change>0?'+':'')+change+'%'));
+  card.append(make('p','measure-limit','Potential ad reach, not unique viewers, subscribers or creator income'));
+  card.append(audienceSources([x.source_id],dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Advertiser planning can be revised; published changes do not prove actual people entered or left YouTube.'));
+ const link=make('a','inline-link','Read sources and comparability limits ↗');link.href='./ontology/youtube/country-ad-reach-comparisons.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderAudiencePopulationCrosswalk(data,dossier){
+ if(!data?.observations?.length)return null;
+ const section=make('section','audience-population-crosswalk');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Audience scale: past-month surveys, daily visits and ad reach'));
+ details.append(make('p','measure-limit','Distinct survey prevalences and country ad-planner reach estimates cannot be combined into an invented platform MAU/DAU count.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.observations){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.id.replaceAll('_',' ')));
+  card.append(make('strong','',String(x.value)+(x.unit==='percent'?'%':' million')));
+  card.append(make('p','',x.scope+' · '+x.time));
+  card.append(make('p','measure-limit',x.notes));
+  card.append(audienceSources(x.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','The deduplicated worldwide MAU and DAU remain unknown, as does cross-account deduplication.'));
+ const link=make('a','inline-link','Read each observation and its denominator ↗');
+ link.href='./ontology/youtube/audience-population-crosswalk.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderShortsReferralStudy(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','shorts-referral-study');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Shorts-to-video links and the missing referral measurements'));
+ details.append(make('p','measure-limit','Advanced feature access can allow a clickable related video below a Short. A view of that Short, a destination view and an overlapping viewer are not verified click-through events.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.label));
+  card.append(make('p','',x.measurement));
+  card.append(make('p','measure-limit','Not equivalent to: '+x.not_equivalent_to.replaceAll('_',' ')));
+  card.append(audienceSources(x.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Short-specific link impressions, click-through, deduplicated linked viewers, incremental video value and profit remain unmeasured.'));
+ const link=make('a','inline-link','Read the related-video feature and event-attribution gates ↗');
+ link.href='./ontology/youtube/shorts-related-video-funnel.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderMemberCohortResearch(data,dossier){
+ if(!data?.definition_rules?.length)return null;
+ const section=make('section','member-cohort-protocol');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Paying member renewals and repeat-offer test design'));
+ details.append(make('p','measure-limit','Studio active members, canceled members, access-expired members and recurring transactions have different denominators. No paid cohort or experiment was observed.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.definition_rules){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.id.replaceAll('_',' ')));
+  card.append(make('p','',item.rule));
+  card.append(audienceSources(item.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','A rate needs real paid renewals due by actual billing date, separated from trials and gifts; unresolved events get bounds, not point estimates.'));
+ const link=make('a','inline-link','Review cohort arithmetic, missing-data gates and offer-test protocol ↗');
+ link.href='./ontology/youtube/member-cohort-protocol.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCheckoutRefundEvidence(data,dossier){
+ if(!data?.products?.length)return null;
+ const section=make('section','checkout-refund-evidence');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Buyer payments, published membership prices and refunds'));
+ details.append(make('p','measure-limit','Membership cancellation, non-refundable Supers and external retailer refunds follow distinct processes. Country price schedules are options, not a sample of channel prices or creator profit.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.products){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.label));
+  card.append(make('p','',item.buyer_action));
+  card.append(make('p','measure-limit',item.refund_rule));
+  card.append(audienceSources(item.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Official examples: US $0.99/$4.99/$9.99 and Mexico MXN $19/$69/$219. These are published country-tier options, not a real-channel price sample, currency conversion, or guaranteed buyer charge.'));
+ details.append(make('p','measure-limit','Creator-specific median prices, refund rates, external merchant margins and net earnings remain unmeasured.'));
+ const link=make('a','inline-link','Read checkout and refund source audit ↗');
+ link.href='./ontology/youtube/checkout-refund-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderReputationPortability(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','reputation-portability');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Channel feedback, reputation and portability'));
+ details.append(make('p','measure-limit','Moderated comments are not verified buyer ratings, and a subscriber count is not a portable customer list. Media exports, roles and internal channel moves have different limits.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.title));
+  card.append(make('p','',x.mechanism));
+  card.append(make('p','measure-limit',x.limit));
+  card.append(audienceSources(x.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Off-platform migration rate, verified buyer scores and net earnings effects remain unmeasured.'));
+ const link=make('a','inline-link','Read the feedback and portability audit ↗');
+ link.href='./ontology/youtube/reputation-portability.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderChannelOnboarding(data,dossier) {
+  if(!data?.stages?.length)return null;
+  const section=make('section','channel-onboarding');
+  const details=make('details','channel-onboarding-details');
+  details.append(make('summary','','From a Google Account to a publishing channel · '+data.stages.length+' stages'));
+  details.append(make('p','measure-limit','Creating a channel, publishing, unlocking advanced features and earning money require different permissions. These steps are general policy, not proof of eligibility for a particular person.'));
+  const stages=make('ol','channel-onboarding-stage-list');
+  for(const step of data.stages){
+    const item=make('li','channel-onboarding-stage');
+    item.append(make('h5','',step.label));
+    item.append(make('p','',step.outcome));
+    item.append(make('p','measure-limit',step.limits));
+    item.append(audienceSources(step.source_ids,dossier));
+    stages.append(item);
+  }
+  details.append(stages);
+  const gates=make('div','channel-feature-gates');
+  for(const gate of data.feature_gates){
+    const card=make('article','channel-feature-gate');
+    card.append(make('h5','',gate.label));
+    card.append(make('p','measure-limit','Requirements: '+gate.requires.join(' · ').replaceAll('_',' ')));
+    card.append(make('p','',gate.limits));
+    card.append(audienceSources(gate.source_ids,dossier));
+    gates.append(card);
+  }
+  details.append(gates);
+  details.append(make('p','measure-limit','Typical setup hours: unknown · typical cash costs: unknown · time to first creator payment: unknown. A no-new-purchase path does not mean creator labor or access costs disappear.'));
+  const link=make('a','inline-link','Read source-backed onboarding gates and cost limits ↗');
+  link.href='./ontology/youtube/channel-onboarding.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);
+  return section;
+}
+
+function renderApplicationLifecycle(model) {
+  if(!model)return null;
+  const section=make('section','application-lifecycle');
+  const details=make('details','application-details');
+  details.append(make('summary','','Getting approved and reaching your first payout'));
+  details.append(make('p','measure-limit','Numerical entry thresholds, channel review, product activation and actual payment are separate. These timelines are official guidance, not guarantees.'));
+  const list=make('ol','application-stage-list');
+  for(const step of model.steps){
+    const item=make('li','application-stage');
+    item.append(make('strong','',step.action));
+    item.append(make('p','measure-limit',step.limits));
+    if(step.indicative_duration)item.append(make('small','',step.indicative_duration));
+    if(step.window_days)item.append(make('small','', 'Published appeal window: '+step.window_days+' days'));
+    if(step.earliest_reapply_after_days)item.append(make('small','', 'Reapplication wait: '+step.earliest_reapply_after_days+' days'));
+    list.append(item);
+  }
+  details.append(list);
+  const link=make('a','inline-link','Read the full application and payment lifecycle ↗');
+  link.href='./ontology/youtube/application-lifecycle.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderPromoteResearch(data,dossier){
+ if(!data?.ad_format_billing?.length)return null;
+ const section=make('section','promote-economics');
+ const details=make('details','promote-economics-details');
+ details.append(make('summary','','YouTube Promote: paid costs versus organic YPP-eligible follow-on views'));
+ details.append(make('p','measure-limit','A promotion is purchased advertising, not creator earnings. Subscribers and watch hours generated directly by ad campaigns do not meet YPP eligibility thresholds. Organic follow-on views are tracked separately.'));
+ const grid=make('div','promote-format-grid');
+ for(const item of data.ad_format_billing){
+   const card=make('article','promote-format-card');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','',item.billable_trueview_condition));
+   card.append(audienceSources(item.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ const ad=make('div','promote-metrics-grid');
+ for(const item of data.metric_register){
+   const card=make('article','promote-metric-card');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','measure-limit',item.unit.replaceAll('_',' ')));
+   ad.append(card);
+ }
+ details.append(make('h5','promote-heading','Distinct attribution and accounting units'));
+ details.append(ad);
+ details.append(make('p','measure-limit','Typical budget, realized cost per acquired viewer, organic conversion, and net creator profit remain unknown. Attribution without a valid comparison cohort does not establish incremental results.'));
+ const link=make('a','inline-link','Read ad billing formats, YPP qualification and missing ROI evidence ↗');
+ link.href='./ontology/youtube/promote-economics.md';link.rel='noopener noreferrer';link.target='_blank';
+ details.append(link);section.append(details);return section;
+}
+
+function renderPostAndMembershipRetention(data,dossier) {
+ if(!data?.channel_surfaces?.length)return null;
+ const section=make('section','post-membership-retention');
+ const details=make('details','post-membership-retention-details');
+ details.append(make('summary','','Creator Posts, regular viewers and paid membership renewals'));
+ details.append(make('p','measure-limit','Official analytics measure different populations: post impressions, channel return viewers, subscribers with member perks and recurring payment events. They cannot be joined into an attributed retention rate without actual owner-authorized cohorts.'));
+ const grid=make('div','post-membership-surfaces');
+ for(const surface of data.channel_surfaces){
+   const card=make('article','post-membership-surface');
+   card.append(make('h5','',surface.id.replaceAll('_',' ')));
+   card.append(make('p','',surface.description));
+   card.append(make('p','measure-limit',surface.eligibility_note));
+   card.append(audienceSources(surface.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ const members=make('div','post-membership-metrics');
+ for(const item of data.membership_register){
+   const card=make('article','post-membership-metric');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','',item.definition));
+   card.append(make('p','measure-limit','Unit: '+item.unit.replaceAll('_',' ')));
+   members.append(card);
+ }
+ details.append(make('h5','post-membership-heading','Membership measurement units'));
+ details.append(members);
+ const postsScale=data.platform_scale_claims?.find(x=>x.id==='daily_posts_engaging_users');
+ if(postsScale){
+   details.append(make('p','measure-limit','YouTube reported more than '+(postsScale.reported_value/1000000)+' million users engaging with Posts on an average day in September 2026. Independent user deduplication and channel-specific return effects are unknown.'));
+   details.append(audienceSources([postsScale.source_id],dossier));
+ }
+ details.append(make('p','measure-limit','Regular viewers watched at least monthly for more than six months of the past year. A membership transaction may be a new sign-up or a renewal, not a distinct buyer.'));
+ details.append(make('p','measure-limit','Average posting effect, unique membership buyers, renewal rate and net member profit: unknown.'));
+ const link=make('a','inline-link','Read official measurement definitions, study design and caveats ↗');
+ link.href='./ontology/youtube/retention-posts-memberships.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCreatorGrowth(data,dossier) {
+  if(!data)return null;
+  const section=make('section','creator-growth');
+  const details=make('details','creator-growth-details');
+  details.append(make('summary','','Audience discovery and returning viewers · '+data.stages.length+' stages'));
+  details.append(make('p','measure-limit','Views, eligible impressions, engaged views, unique channel viewers, subscribers and paying customers are different measurements. No conversion rate is assumed.'));
+  const list=make('ol','creator-growth-stages');
+  for(const stage of data.stages){
+    const item=make('li','creator-growth-stage');
+    item.append(make('h5','',stage.label),make('p','',stage.description),
+      make('small','',stage.caveat));
+    item.append(audienceSources(stage.source_ids,dossier));
+    list.append(item);
+  }
+  details.append(list);
+  const more=make('details','creator-growth-metrics');
+  more.append(make('summary','',data.metrics.length+' metric definitions and measurement limits'));
+  const table=make('div','creator-growth-metric-grid');
+  for(const metric of data.metrics){
+    const card=make('article','creator-growth-metric');
+    card.append(make('h5','',metric.id.replaceAll('_',' ')));
+    card.append(make('p','',metric.definition));
+    card.append(make('small','',metric.unit+' · '+metric.access));
+    card.append(make('p','measure-limit',metric.limitations));
+    table.append(card);
+  }
+  more.append(table);
+  details.append(more);
+  const link=make('a','inline-link','Read the measurement and discovery research ↗');
+  link.href='./ontology/youtube/creator-growth.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderTeenVideoFormatEvidence(data,dossier){
+  if(!data?.video_genre_observations?.length)return null;
+  const section=make('section','teen-format-evidence');
+  const details=make('details','teen-format-details');
+  details.append(make('summary','','Child video genres: Australia YouTube, UK cross-app, US teen surveys'));
+  details.append(make('p','measure-limit','A 2025 Australian youth survey directly measured YouTube genres among children aged 6–13. UK genre percentages concern all video apps, NOT YouTube alone; U.S. teen platform use has no genre breakdown. These studies do not establish global genre audiences or individual identities.'));
+  const grid=make('div','teen-format-grid');
+  for(const block of data.video_genre_observations){
+    const card=make('article','teen-format-card');
+    card.append(make('h5','', 'UK children aged '+block.age_range+' · any video app'));
+    const list=make('ul','teen-format-list');
+    for(const measure of block.values){
+      const item=make('li','teen-format-row');
+      add(item,make('span','',measure.genre.replaceAll('_',' ')),make('strong','',measure.percent+'%'));
+      list.append(item);
+    }
+    card.append(list);grid.append(card);
+  }
+  details.append(grid);
+  const au=data.australia_youtube_genres;
+  if(au?.gender_conditioned_genres?.length){
+    details.append(make('h5','teen-au-heading','Australian children aged 6–13 who watch YouTube · 2025'));
+    details.append(make('p','measure-limit','The Roy Morgan survey covered 1,129 Australian children aged 6–13 in 2025. Values below are each genre watched within survey boy and girl YouTube-watcher groups, NOT the gender mix within genres. Exact gender subgroup sample sizes are unknown.'));
+    const auGrid=make('div','teen-au-grid');
+    for(const category of au.gender_conditioned_genres){
+      const row=make('article','teen-au-category');
+      row.append(make('strong','',category.id.replaceAll('_',' ')));
+      row.append(make('p','','Boys '+category.boys_percent+'% · Girls '+category.girls_percent+'%'));
+      auGrid.append(row);
+    }
+    details.append(auGrid);
+  }
+  const times=make('p','measure-limit','Separate Barb YouTube 2025 in-home weekly averages: '+data.youtube_inhome_age_minutes_per_week.map(x=>x.age_range+' years '+Math.floor(x.minutes/60)+'h '+String(x.minutes%60).padStart(2,'0')+'m').join(' · ')+'. These include neither out-of-home nor all mobile viewing.');
+  details.append(times);
+  const pew=make('p','measure-limit','Pew US teens aged 13–17, 2025: YouTube ever use boys 94%, girls 89%; almost constant use boys 20%, girls 13%. These are platform-use rates, not genre-use estimates.');
+  details.append(pew);
+  details.append(make('p','measure-limit','UK cross-app gender patterns remain directional, but the Australia study reports YouTube-specific genre differences only among children aged 6–13 in its local 2025 sample. Never infer a minor’s identity or viewing history.'));
+  details.append(audienceSources(data.source_ids,dossier));
+  const link=make('a','inline-link','Read age-specific denominators, collection methods and limits ↗');
+  link.href='./ontology/youtube/teen-video-format-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderChildAgeFormatStudy(data,dossier){
+ if(!data?.classification_cases?.length)return null;
+ const section=make('section','child-format-study');
+ const details=make('details','child-format-details');
+ details.append(make('summary','','Child-directed versus family animation and 18+ video rules'));
+ details.append(make('p','measure-limit','Being a cartoon or safe for a whole family does not by itself make a video child-directed. Age-gated 18+ content is a different policy. Adult-only surveys cannot establish that younger viewers are absent.'));
+ const grid=make('div','child-format-grid');
+ for(const item of data.classification_cases){
+   const card=make('article','child-format-card');
+   card.append(make('h5','',item.label));
+   card.append(make('p','measure-limit',item.limitations));
+   card.append(audienceSources(item.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ const measures=make('div','child-format-observed');
+ for(const item of data.population_observations){
+   const card=make('article','child-format-observation');
+   card.append(make('strong','',item.value+'%'));
+   card.append(make('p','',item.ages+' · '+item.measure.replaceAll('_',' ')));
+   card.append(make('p','measure-limit',item.limitations));
+   grid.append(card);
+ }
+ details.append(make('p','measure-limit','Ofcom ages 8–14 platform use and Barb ages 4–15 television viewing share have different denominators. No individual minors are profiled; global child audiences and income changes remain unknown.'));
+ const link=make('a','inline-link','Read content classification, privacy restrictions and aggregate UK survey frames ↗');
+ link.href='./ontology/youtube/child-age-and-format-gates.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderScreenViewingStudy(data,dossier){
+ if(!data?.service_level?.adult_16_plus)return null;
+ const section=make('section','screen-viewing-study');
+ const details=make('details','screen-viewing-details');
+ details.append(make('summary','','UK TV sets versus smartphone YouTube viewing — Barb 2025'));
+ details.append(make('p','measure-limit','Q2 2025, UK viewing at home over Wi-Fi. Percentages describe share of measured viewing, NOT share of distinct people or worldwide screen use.'));
+ const grid=make('div','screen-viewing-grid');
+ const adults=data.service_level.adult_16_plus;
+ const kids=data.service_level.children_4_to_15;
+ for(const row of [
+   {label:'Adults aged 16+',tv:adults.tv_set_percent,phone:adults.smartphone_percent},
+   {label:'Children aged 4–15',tv:kids.tv_set_percent,phone:kids.smartphone_percent}
+ ]){
+   const card=make('article','screen-viewing-card');
+   card.append(make('h5','',row.label));
+   card.append(make('p','', 'TV-set viewing share: '+row.tv+'%'));
+   card.append(make('p','measure-limit', 'Smartphone viewing share: '+(row.phone===null?'unknown in cited source':row.phone+'%')));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','The separate 200 selected-channel TV-only ACR program excludes Shorts, live and certain music channels. Its exclusions do not redefine the device shares for YouTube service-wide viewing.'));
+ details.append(make('p','measure-limit','UK smartphone viewing over cellular networks, device-specific creator payout, format mix and global screen share: unknown.'));
+ details.append(audienceSources([data.source_id,data.related_ofcom_2026.source_id],dossier));
+ const link=make('a','inline-link','Read Barb methodology, Ofcom viewing series and source restrictions ↗');
+ link.href='./ontology/youtube/screen-viewing-uk-2025.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderVideoSurfaceEconomics(data,dossier) {
+  if(!data?.surfaces?.length)return null;
+  const section=make('section','video-surface-study');
+  const details=make('details','video-surface-details');
+  details.append(make('summary','','Video formats, 8-minute mid-roll threshold and live replay evidence'));
+  details.append(make('p','measure-limit','Seven distinct YouTube publishing surfaces have different money and measurement units. An eligible mid-roll slot is not a served ad, and a replay is not guaranteed additional earnings.'));
+  const grid=make('div','video-surface-grid');
+  for(const item of data.surfaces){
+    const card=make('article','video-surface-card');
+    card.append(make('h5','',item.name));
+    card.append(make('p','measure-context','Unit: '+item.primary_unit.replaceAll('_',' ')));
+    card.append(make('p','',item.entry));
+    card.append(make('p','measure-limit',item.ad_mechanism));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Watch-page mid-roll eligibility begins at 8 minutes (480 seconds); actual delivery depends on ad demand, video experience and policy. Shorts revenue is not an 8-minute watch-page ad scheme.'));
+  details.append(make('p','measure-limit','Live and archived replay audience, ad revenue and labor must be tracked separately, without adding cumulative views or people twice.'));
+  const drama=data.microdrama_observations||[];
+  if(drama.length){
+    const views=drama.find(x=>x.id==='h1_2026_microdrama_views');
+    details.append(make('p','measure-limit','YouTube reported more than '+(views.value/1000000000)+' billion microdrama views in January–June 2026, plus more than 50% year-over-year watch-time growth and more than 90% TV-device view growth. These are historical event and relative metrics, not unique people or creator payouts.'));
+    details.append(audienceSources([views.source_id],dossier));
+  }
+
+  details.append(make('p','measure-limit','Official localized Help pages conflict on whether new claimed Shorts over one minute are automatically blocked after September 24, 2026; account-specific rights status remains unresolved.'));
+  const anchor=make('a','inline-link','Read source-specific rules, rights inconsistency and replay research fields ↗');
+  anchor.href='./ontology/youtube/video-surfaces-economics.md';anchor.target='_blank';anchor.rel='noopener noreferrer';
+  details.append(anchor);
+  section.append(details);
+  return section;
+}
+
+function renderEvidenceSynthesis(data,dossier){
+  if(!data?.findings?.length)return null;
+  const section=make('section','evidence-synthesis');
+  const details=make('details','evidence-synthesis-details');
+  details.append(make('summary','','Interim research synthesis: supported findings and unresolved economics'));
+  details.append(make('p','measure-limit','Evidence-backed account of what is documented, without turning platform events, selected creator surveys or annual culture totals into typical newcomer income.'));
+  const grid=make('div','evidence-synthesis-grid');
+  for(const finding of data.findings){
+    const card=make('article','evidence-synthesis-card');
+    card.append(make('h5','',finding.title));
+    card.append(make('p','',finding.supported));
+    card.append(make('p','measure-limit','Not measured: '+finding.unknown));
+    card.append(audienceSources(finding.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Representative zero-earner share, first-year creator net profit and deduplicated global monthly audience: unknown.'));
+  const link=make('a','inline-link','Read the source-by-source interim marketplace dossier ↗');
+  link.href='./ontology/youtube/research-synthesis-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderDecliningTopicAudit(data,dossier){
+ if(!data?.registered_example_checks?.length)return null;
+ const section=make('section','declining-topic-audit');
+ const details=make('details','declining-topic-details');
+ details.append(make('summary','','Declining content claims: measured change or incompatible samples?'));
+ details.append(make('p','measure-limit','No verified YouTube niche decline is established here. One annual or partial-year aggregate cannot prove recurring falling demand, and the August 2026 public-view definition changed.'));
+ const grid=make('div','declining-topic-grid');
+ for(const item of data.registered_example_checks){
+   const card=make('article','declining-topic-card');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','',item.finding));
+   card.append(make('p','measure-limit',item.reason));
+   card.append(audienceSources(item.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Topic declines, active people changes, creator income effects and forecasts: unknown. A descriptive two-period change is not a proven persistent trend.'));
+ const link=make('a','inline-link','Read comparison requirements and sample audit tests ↗');
+ link.href='./ontology/youtube/declining-content-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderSeasonalDiscovery(data,dossier){
+  if(!data?.cases?.length)return null;
+  const section=make('section','seasonal-discovery');
+  const details=make('details','seasonal-discovery-details');
+  details.append(make('summary','','Calendar-driven video discovery: what observed seasonal evidence can show'));
+  details.append(make('p','measure-limit','The NFL report measures a within-year offseason share. Prom and Halloween reports cover different annual or partial-year title queries. None supports a universal seasonal lift or best upload month.'));
+  const grid=make('div','seasonal-discovery-grid');
+  for(const item of data.cases){
+    const card=make('article','seasonal-discovery-card');
+    card.append(make('h5','',item.topic.replaceAll('_',' ')));
+    card.append(make('p','seasonal-observation',item.valid_statement));
+    card.append(make('p','measure-limit',item.limitations));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Seasonal causal effect, creator profit seasonality and reliable optimal upload month: unknown. A repeatable trend needs matched bins, stable measures and multiple annual cycles.'));
+  const link=make('a','inline-link','Review temporal units, source windows and remaining evidence gaps ↗');
+  link.href='./ontology/youtube/seasonal-discovery-comparison.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderPublishingTimeResearch(data,dossier){
+  if(!data?.official_findings?.length)return null;
+  const section=make('section','publish-time-study');
+  const details=make('details','publish-time-details');
+  details.append(make('summary','','Publishing times by format, geography and owner audience activity'));
+  details.append(make('p','measure-limit','YouTube Studio reports when a channel\'s viewers were online over the past 28 days. Publishing while they are active may help early views but is not known to improve a video\'s long-term performance.'));
+  const grid=make('div','publish-time-grid');
+  for(const item of data.format_comparison){
+    const card=make('article','publish-time-card');
+    card.append(make('h5','',item.format.replaceAll('_',' ')));
+    card.append(make('p','',item.release_time_matters_for.replaceAll('_',' ')));
+    card.append(make('p','measure-limit','Verified long-term advantage: '+(item.longterm_advantage_verified===null?'unknown':'no evidence of a verified advantage')));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Scheduling uses a selected time zone while watch-page dates may follow PST. Missing country rows in Analytics can be suppressed for privacy and must not be recorded as zero viewers.'));
+  details.append(make('p','measure-limit','Universal optimal publication hour, geography-specific lift and causal long-term effect: unknown.'));
+  const link=make('a','inline-link','Read official timing guidance, DST and experimental evidence gates ↗');
+  link.href='./ontology/youtube/geographic-publishing-time.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderContentFormats(data,dossier) {
+  if(!data)return null;
+  const section=make('section','content-format-section');
+  const details=make('details','content-format-details');
+  details.append(make('summary','','Compare '+data.formats.length+' ways to publish and distribute'));
+  details.append(make('p','measure-limit','Different publication formats have different discovery, link and eligibility rules. None has a verified typical profit or success rate.'));
+  const grid=make('div','content-formats-grid');
+  for(const format of data.formats){
+    const card=make('article','content-format-card');
+    card.append(make('h5','',format.label));
+    card.append(make('p','',format.format_rule));
+    card.append(make('small','', 'Access: '+format.entry_gate));
+    const inner=make('details','content-format-inner');
+    inner.append(make('summary','','Discovery and earning details'));
+    inner.append(make('p','', 'Discovery: '+format.discovery.join(', ')));
+    inner.append(make('p','', 'Possible revenue routes: '+format.money.join(', ').replaceAll('_',' ')));
+    inner.append(make('p','', 'Links: '+format.links.join('; ')));
+    inner.append(make('p','measure-limit',format.cautions.join(' ')));
+    inner.append(audienceSources(format.source_ids,dossier));
+    card.append(inner);
+    grid.append(card);
+  }
+  details.append(grid);
+  const link=make('a','inline-link','Read the format and link comparison ↗');
+  link.href='./ontology/youtube/content-formats.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderMultilingualDistribution(data,dossier) {
+  if(!data?.product_surfaces?.length)return null;
+  const section=make('section','multilingual-distribution');
+  const details=make('details','multilingual-distribution-details');
+  details.append(make('summary','','Languages, audio dubbing, captions and translated discovery'));
+  details.append(make('p','measure-limit','Spoken language, dub language, subtitles, viewer preference and country are independent attributes. Product access varies; language shares do not give a creator earnings forecast.'));
+  const observations=make('div','multilingual-observations');
+  for(const entry of data.official_selected_observations){
+    const card=make('article','multilingual-observation');
+    card.append(make('strong','',entry.comparator==='greater_than'?'Over '+entry.value+'%':entry.value));
+    card.append(make('p','',entry.metric.replaceAll('_',' ')));
+    card.append(make('small','',entry.source_period.replaceAll('_',' ')+' · '+entry.population));
+    card.append(make('p','measure-limit',entry.limits));
+    card.append(audienceSources(entry.source_ids,dossier));
+    observations.append(card);
+  }
+  details.append(observations);
+  const products=make('div','multilingual-product-grid');
+  for(const feature of data.product_surfaces){
+    const card=make('article','multilingual-product-card');
+    card.append(make('h5','',feature.label));
+    card.append(make('p','',feature.limits));
+    card.append(make('small','', 'Eligible formats: '+feature.content_formats.join(', ').replaceAll('_',' ')));
+    card.append(audienceSources(feature.source_ids,dossier));
+    products.append(card);
+  }
+  details.append(products);
+  const examples=make('details','multilingual-language-examples');
+  examples.append(make('summary','','Selected automatic-dubbing language pairs · current help snapshot'));
+  const list=make('ul','multilingual-language-list');
+  for(const pair of data.automatic_dubbing_example_pairs){
+    const li=make('li','');
+    add(li,make('strong','',pair.original+' → '),make('span','',pair.targets.join(', ')));
+    list.append(li);
+  }
+  examples.append(list);details.append(examples);
+  details.append(make('p','measure-limit','The over-25% finding is a share of watch time for selected multilingual-audio creators, not additional traffic or causal income lift. Typical dubbing hours, prices and newcomer outcomes remain unknown.'));
+  const link=make('a','inline-link','Review language-pair definitions and study limitations ↗');
+  link.href='./ontology/youtube/multilingual-distribution.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);
+  section.append(details);return section;
+}
+
+function renderCommunityAudienceStudy(data,dossier) {
+  if(!data)return null;
+  const section=make('section','community-survey');
+  const details=make('details','community-survey-details');
+  details.append(make('summary','','Measured audience: U.S. YouTube news consumption'));
+  details.append(make('p','measure-limit','This survey describes U.S. adults who regularly get news on YouTube. It is not a count of political-video viewers, all YouTube users or a prediction of ad revenue.'));
+  const latest=data.trends.at(-1);
+  const summary=make('div','community-survey-numbers');
+  add(summary,
+    blockHeading('U.S. adults',latest.all_adults_percent+'%'),
+    blockHeading('U.S. YouTube users',latest.youtube_users_percent+'%'));
+  details.append(summary);
+  details.append(make('p','measure-context','2026 Pew survey · '+data.methodology.survey_2026));
+  const trends=make('details','community-survey-trends');
+  trends.append(make('summary','','Annual news-use survey rates, 2020–2026'));
+  const list=make('div','community-survey-grid');
+  for(const point of data.trends){
+    const card=make('article','community-survey-year');
+    add(card,make('strong','',point.year),
+      make('p','',point.all_adults_percent+'% of U.S. adults'),
+      make('p','',point.youtube_users_percent+'% of U.S. YouTube users'));
+    list.append(card);
+  }
+  trends.append(list);
+  details.append(trends);
+  const profile=make('details','community-survey-profile');
+  profile.append(make('summary','','Who regularly got YouTube news in 2025'));
+  profile.append(make('p','measure-limit','Each share below describes the makeup of regular YouTube news consumers, not the chance that someone in a demographic group uses the platform. Shares do not necessarily sum to 100%.'));
+  const cards=make('div','community-survey-grid');
+  for(const x of data.demographic_composition){
+    const card=make('article','community-profile-card');
+    add(card,make('h5','',x.category),make('strong','',x.share_percent+'%'),
+      make('small','',x.dimension.replaceAll('_',' ')+' · 2025 survey'));
+    cards.append(card);
+  }
+  profile.append(cards);
+  details.append(profile);
+  details.append(make('p','measure-limit','Political affiliation here is voluntary, aggregate survey reporting. No individual political beliefs or viewing histories are collected or inferred.'));
+  details.append(audienceSources(data.source_ids,dossier));
+  const link=make('a','inline-link','Full survey definitions and caveats ↗');
+  link.href='./ontology/youtube/community-audience-studies.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderPlatformComparisonSet(data,dossier){
+  if(!data?.candidates?.length)return null;
+  const section=make('section','video-comparators');
+  const details=make('details','video-comparators-details');
+  details.append(make('summary','','Comparable video creator products · not comparable earnings'));
+  details.append(make('p','measure-limit','These adjacent services are candidates for YouTube research comparisons only; they have not been added as Mercata specimens. Audience counts, qualified views, subscribers and paid customer transactions are different units.'));
+  const grid=make('div','video-comparators-grid');
+  for(const item of data.candidates){
+    const card=make('article','video-comparator');
+    card.append(make('h5','',item.name));
+    card.append(make('p','measure-context','Compared with: '+item.comparable_youtube_surface));
+    card.append(make('p','',item.earnings_mechanism));
+    card.append(make('p','measure-limit',item.limitations));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Creator income, zero-earner share, typical work hours and general profitability: unknown for these comparison cohorts.'));
+  const link=make('a','inline-link','Source-specific comparison criteria and exclusions ↗');
+  link.href='./ontology/youtube/comparison-set.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);section.append(details);return section;
+}
+
+function renderHealthFitnessResearch(data,dossier){
+ if(!data?.content_categories?.length)return null;
+ const section=make('section','health-fitness-research');
+ const details=make('details','health-fitness-details');
+ details.append(make('summary','','Fitness, wellness and health information: source-checked policy boundaries'));
+ details.append(make('p','measure-limit','Nine proposed research categories, not measured audience populations. Ordinary exercise, treatment claims, body-image content and professional health-source status require different evidence.'));
+ const grid=make('div','health-fitness-grid');
+ for(const item of data.content_categories){
+   const card=make('article','health-fitness-card');
+   card.append(make('h5','',item.label));
+   card.append(make('p','',item.examples.join(' · ')));
+   card.append(make('p','measure-limit',item.claim_review_required));
+   card.append(make('p','measure-limit','Unique audience, creator count and creator earnings: unknown'));
+   card.append(audienceSources(item.sources,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Four independent layers: medical misinformation, eating-disorder content safety, advertiser suitability and optional professional health-source discovery. A public video does not automatically qualify for health-source panels.'));
+ details.append(make('p','measure-limit','Health-feature eligibility differs from general YPP advertising entry and varies by country and language. The observed policies do not measure earnings, medical quality, audience size or enforcement frequency.'));
+ const link=make('a','inline-link','Read official policy scope, professional source rules and unknown measurements ↗');
+ link.href='./ontology/youtube/health-fitness-content.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderFinanceContentTaxonomy(data,dossier){
+ if(!data?.content_families?.length)return null;
+ const section=make('section','finance-content');
+ const details=make('details','finance-content-details');
+ details.append(make('summary','','Finance and business videos · education, marketing and promotion'));
+ details.append(make('p','measure-limit','These eight overlapping content classes distinguish general education, affiliate/owned-product marketing, and risk-sensitive financial promotions. The taxonomy is NOT a financial-advice service or an estimate of niche profitability.'));
+ const grid=make('div','finance-content-grid');
+ for(const item of data.content_families){
+   const card=make('article','finance-content-card');
+   card.append(make('h5','',item.label));
+   card.append(make('p','measure-context',item.parent.replaceAll('_',' ')));
+   card.append(make('p','',item.illustrative_topics.join(' · ')));
+   card.append(make('p','measure-limit',item.additional_risk_review));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Commercial affiliate links and paid sponsorships require separate policy and material-connection review. An SEC investor warning does not determine the conduct of an individual creator.'));
+ details.append(audienceSources([...data.platform_source_ids,...data.jurisdictional_source_ids],dossier));
+ details.append(make('p','measure-limit','Unique viewers, finance creators, niche RPM, audience overlap and creator profits are unknown. U.S. consumer and investor guidance is not worldwide law.'));
+ const link=make('a','inline-link','Read category definitions, policy references and measurement gaps ↗');
+ link.href='./ontology/youtube/finance-content-taxonomy.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderTechnologySubcultures(data,dossier){
+ if(!data?.segments?.length)return null;
+ const section=make('section','technology-subcultures');
+ const details=make('details','technology-subcultures-details');
+ details.append(make('summary','','Software tutorials, hardware reviews and workspace videos · separate categories'));
+ details.append(make('p','measure-limit','Programming, application troubleshooting, product reviews, repair and workspace aesthetics overlap. No tech-only unique audience, channel population or creator earnings has been measured.'));
+ const grid=make('div','technology-subculture-grid');
+ for(const item of data.segments){
+  const card=make('article','technology-subculture-card');
+  card.append(make('h5','',item.label));
+  card.append(make('p','measure-context',item.formats.map(x=>x.replaceAll('_',' ')).join(' · ')));
+  card.append(make('p','measure-limit',item.provenance));
+  card.append(audienceSources(item.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ const figures=make('div','technology-metric-grid');
+ for(const value of data.observed_public_metrics){
+  const card=make('article','technology-metric-card');
+  card.append(make('strong','',value.comparison==='greater_than'?'More than '+value.value.toLocaleString():value.value.toLocaleString()));
+  card.append(make('p','',value.population));
+  card.append(make('p','measure-limit',value.geography+' · '+value.start+' to '+value.end+' · view events, not unique people'));
+  card.append(audienceSources([value.source_id],dossier));
+  figures.append(card);
+ }
+ details.append(figures);
+ details.append(make('p','measure-limit','The two metrics have different countries, dates and inclusion rules. Neither is a software tutorial market-size estimate, and they cannot be divided into a niche audience share.'));
+ const link=make('a','inline-link','Read segmented subcultures and original observation limitations ↗');
+ link.href='./ontology/youtube/technology-subcultures-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCommentNormsEvidence(data,dossier){
+  if(!data?.studies?.length)return null;
+  const section=make('section','comment-norms-evidence');
+  const details=make('details','comment-norms-details');
+  details.append(make('summary','','Comment behavior in selected YouTube communities · bounded studies'));
+  details.append(make('p','measure-limit','Comment counts are not unique viewers or representative public opinion. Two peer-reviewed studies examine different English-language samples, populations and coding methods.'));
+  const grid=make('div','comment-norms-grid');
+  for(const study of data.studies){
+    const card=make('article','comment-norms-card');
+    if(study.id==='political_anglophone_2025'){
+      card.append(make('h5','','English-language political channels · 2025 paper'));
+      card.append(make('strong','','About half of comments from just over 2% of commenters'));
+      card.append(make('p','measure-limit','This is a selected sample of political channels, not a platform-wide commenter census or a measure of political belief.'));
+    }else{
+      card.append(make('h5','','Selected climate-change videos · 2026 paper'));
+      card.append(make('strong','',study.n_videos+' selected videos'));
+      card.append(make('p','measure-limit','Reply threads had a greater share of positively coded comments than independent comments within the selected sample. Association is not causation.'));
+    }
+    card.append(make('p','measure-limit',study.selection));
+    card.append(audienceSources([study.source_id],dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Commenter identities, political affiliations, population toxicity rates, causal reply effects and moderation labor hours: unknown. No individual comments or profiles are collected.'));
+  const link=make('a','inline-link','Read original study frames, methods and limitations ↗');
+  link.href='./ontology/youtube/comment-norms-evidence.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);section.append(details);return section;
+}
+
+function renderCreatorCollaborationEvidence(data,dossier){
+ if(!data?.survey_groups?.length)return null;
+ const section=make('section','creator-collaboration-evidence');
+ const details=make('details','creator-collaboration-details');
+ details.append(make('summary','','Creator collaborations and fandom participation · dated evidence'));
+ details.append(make('p','measure-limit','Current Studio documentation permits up to '+data.collaboration_policy.max_invited_creators_current+' collaborators, versus '+data.collaboration_policy.max_invited_creators_initial_rollout+' at initial rollout. The uploading channel receives native video revenue; YouTube does not split collaboration payouts automatically.'));
+ const grid=make('div','creator-collaboration-groups');
+ for(const cohort of data.survey_groups){
+  const card=make('article','creator-fandom-cohort');
+  card.append(make('h5','',cohort.population+' · study N='+cohort.n_total));
+  const list=make('ul','creator-fandom-metrics');
+  for(const item of cohort.questions){
+   const row=make('li','creator-fandom-metric');
+   row.append(make('span','',item.meaning));row.append(make('strong','',item.percent+'%'));
+   list.append(row);
+  }
+  card.append(list);
+  card.append(make('p','measure-limit','Commissioned online survey: question-specific n and probability weights unverified.'));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Shared recommendations are an intended feature, not guaranteed. No collaboration earnings, unique shared audience, or causal growth lift has been measured.'));
+ details.append(audienceSources([...new Set(data.evidence_families.flatMap(x=>x.source_ids))],dossier));
+ const link=make('a','inline-link','Read the payout rules and fandom-sample limitations ↗');
+ link.href='./ontology/youtube/creator-collaboration-fandom-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderGamingReleaseEvents(data,dossier){
+ if(!data?.events?.length)return null;
+ const section=make('section','gaming-release-events');
+ const details=make('details','gaming-release-details');
+ details.append(make('summary','','Game-release spikes: dated view events, not platform-wide growth'));
+ details.append(make('p','measure-limit','Two different historic events: Splatoon 2 at its 2017 game launch in Japan and a GTA VI trailer premiere in 2023 worldwide. Video views are events, not distinct people or attributable creator earnings.'));
+ const grid=make('div','gaming-release-grid');
+ for(const event of data.events){
+   const card=make('article','gaming-release-card');
+   card.append(make('h5','',event.game+' · '+event.event_type.replaceAll('_',' ')));
+   card.append(make('p','measure-context',event.country_scope+' · '+event.window_start+' to '+event.window_end));
+   for(const x of event.measures){
+     const row=make('p','gaming-release-measure',(x.comparison==='>'?'Over ':'')+x.value.toLocaleString()+' '+x.unit.replaceAll('_',' '));
+     card.append(row);
+     card.append(make('p','measure-limit',x.scope));
+   }
+   card.append(make('p','measure-limit',event.limitations));
+   card.append(audienceSources(event.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','A single trailer belongs to the wider related-video count. Counts for different events, geographies or windows cannot be summed or treated as comparable release-day growth.'));
+ details.append(make('p','measure-limit','Matched pre-release and post-release baselines, causal lift, viewer populations, new channel incomes and effects of the 2026 view-definition change: unknown.'));
+ const link=make('a','inline-link','Read source dates and reproducible release-window comparison rules ↗');
+ link.href='./ontology/youtube/gaming-release-events.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderNflSeasonality(data,dossier){
+ if(!data?.observations?.length)return null;
+ const section=make('section','nfl-seasonality');
+ const details=make('details','nfl-seasonality-details');
+ details.append(make('summary','','NFL videos · measured 2020–2025 growth and 2025 offseason share'));
+ details.append(make('p','measure-limit','YouTube reports bounded NFL-related global video activity, not unique fans or creator earnings. View events and uploaded videos have different denominators.'));
+ const grid=make('div','nfl-seasonality-grid');
+ const labels={
+   nfl_views_2025:'2025 NFL-related view events',
+   nfl_views_growth_2020_to_2025:'2020–2025 annual views increase',
+   nfl_uploads_growth_2020_to_2025:'2020–2025 annual uploads increase',
+   nfl_2025_offseason_share:'Share of 2025 NFL-related views in offseason'
+ };
+ for(const item of data.observations){
+   const card=make('article','nfl-seasonality-card');
+   const display=item.unit==='view_events'?'More than '+(item.value/1000000000)+' billion':'More than '+item.value+'%';
+   card.append(make('strong','',display));
+   card.append(make('h5','',labels[item.id]||item.measure.replaceAll('_',' ')));
+   card.append(make('p','measure-limit',item.period.replaceAll('_',' ')));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','More than 30% offseason views is a share within 2025, not 30% seasonal growth. Intermediate 2021–24 annual points and monthly views are unmeasured and must not be interpolated.'));
+ details.append(audienceSources([data.source_id],dossier));
+ const link=make('a','inline-link','Read dates, units, source methods and missing series ↗');
+ link.href='./ontology/youtube/nfl-view-seasonality-2026.md';link.rel='noopener noreferrer';link.target='_blank';
+ details.append(link);section.append(details);return section;
+}
+
+function renderBeautyFashionQuerySeries(data,dossier){
+  if(!data?.source_observations?.length)return null;
+  const section=make('section','beauty-fashion-query-series');
+  const details=make('details','beauty-fashion-query-details');
+  details.append(make('summary','','Beauty, fashion and routine title-query evidence · units and seasons'));
+  details.append(make('p','measure-limit','Five global platform-reported title searches use different date ranges, predicates and units. Their values cannot be combined into a popularity ranking or year-over-year growth line.'));
+  const grid=make('div','beauty-fashion-query-grid');
+  for(const item of data.source_observations){
+    const card=make('article','beauty-fashion-query-card');
+    card.append(make('h5','',item.theme.replaceAll('_',' ')));
+    const figure=(item.value/1000000).toLocaleString()+'M '+item.unit.replaceAll('_',' ');
+    card.append(make('strong','', 'More than '+figure));
+    card.append(make('p','',item.period_start+' to '+item.period_end));
+    card.append(make('p','measure-limit','Selection: '+item.title_rule));
+    card.append(make('p','measure-limit',item.period_end_qualification));
+    card.append(audienceSources([item.source_id],dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Prom and Halloween may be calendar-linked, but seasonal effects were not measured. The 2026 morning-routine value counts uploads, not views. The August 24, 2026 public viewing-definition break also prevents naive cross-year comparisons.'));
+  details.append(make('p','measure-limit','Year-over-year trend, unique people, creator population, seasonality magnitude and creator income: unknown.'));
+  const link=make('a','inline-link','Read exact source predicates, observation windows and query-series protocol ↗');
+  link.href='./ontology/youtube/beauty-fashion-query-series.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderAnimationFormatCycles(data,dossier){
+  if(!data?.timeline?.length)return null;
+  const section=make('section','animation-format-cycles');
+  const details=make('details','animation-format-details');
+  details.append(make('summary','','Independent animation and meme formats · 2024–2026 evidence'));
+  details.append(make('p','measure-limit','Publication dates are not necessarily measurement dates. The U.S. and Mexico survey findings released in 2026 both used April 2025 samples of online animation fans, not all YouTube users.'));
+  if(data.anime_view_geography_2023){
+    const evidence=data.anime_view_geography_2023;
+    details.append(make('p','measure-limit','Anime geography: >'+evidence.percent_lower_bound_exclusive+'% of 2023 global anime-related video views occurred outside Japan. View events are not unique viewers or an adult-audience percentage.'));
+    details.append(audienceSources([evidence.source_id],dossier));
+  }
+  const timeline=make('div','animation-format-timeline');
+  for(const item of data.timeline){
+    const card=make('article','animation-format-event');
+    card.append(make('h5','',item.published_at+' · '+item.format.replaceAll('_',' ')));
+    card.append(make('p','',item.description));
+    card.append(make('p','measure-limit','Evidence type: '+item.event_type.replaceAll('_',' ')+' · Fieldwork: '+item.observation_period));
+    card.append(audienceSources([item.source_id],dossier));
+    timeline.append(card);
+  }
+  details.append(timeline);
+  const observations=make('div','animation-format-surveys');
+  for(const item of data.survey_observations){
+    const card=make('article','animation-format-survey');
+    card.append(make('strong','',item.reported_percent+'%'));
+    card.append(make('p','',item.country+' · '+item.ages+' · '+item.question.replaceAll('_',' ')));
+    card.append(make('p','measure-limit','Online sample N='+item.sample_total_n+'; per-question respondent count unknown.'));
+    observations.append(card);
+  }
+  details.append(observations);
+  details.append(make('p','measure-limit','These are different questions and populations; no 2024–2026 audience growth rate, seasonality, format profit or representative animation-creator count is measured.'));
+  const link=make('a','inline-link','Source frames, event dates and limits on trend claims ↗');
+  link.href='./ontology/youtube/animation-format-cycles.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);section.append(details);return section;
+}
+
+function renderVideoAttentionCulture(data,dossier){
+  if(!data?.source_families?.length)return null;
+  const section=make('section','video-attention-culture');
+  const details=make('details','video-attention-details');
+  details.append(make('summary','','YouTube video attention and niche culture · distinct 2025–2026 evidence'));
+  details.append(make('p','measure-limit','Omdia studied the supply and viewing time of videos; YouTube/NRG surveyed U.S. online respondents about niches and personal interests. Their categories, units, periods and audiences cannot be merged into one user or creator estimate.'));
+  const grid=make('div','video-attention-grid');
+  for(const family of data.source_families){
+    const card=make('article','video-attention-card');
+    card.append(make('h5','',family.id==='omdia-2026'?'Omdia · video supply and watch time':'YouTube/NRG · U.S. niche and fandom survey'));
+    card.append(make('p','measure-context',family.population));
+    const list=make('ul','video-attention-observations');
+    const matches=data.observations.filter(x=>family.source_ids.includes(x.source_id));
+    for(const obs of matches){
+      const item=make('li','video-attention-observation');
+      const number=obs.id==='omdia-video-stock-dec2025'?'~29 billion':obs.comparison==='greater_than'?'More than '+obs.value+'%':obs.value+'%';
+      const label=obs.id==='omdia-video-stock-dec2025'?'Estimated hosted videos, December 2025':obs.measurement.replaceAll('_',' ');
+      item.append(make('strong','',number));
+      item.append(make('span','',label));
+      list.append(item);
+    }
+    card.append(list);
+    card.append(make('p','measure-limit',family.method));
+    card.append(audienceSources(family.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','The Omdia video genres and production categories may overlap; they must not be added to 100%. The 496-person and 939-person NRG respondent frames are age-dependent, not global YouTube audience populations.'));
+  details.append(make('p','measure-limit','Distinct niche viewers, creator income, per-niche profit, active creators and cross-category audience intersections remain unknown.'));
+  const link=make('a','inline-link','Read the dated studies, denominators and methodological exclusions ↗');
+  link.href='./ontology/youtube/video-attention-culture-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderHistoricalLinkingStudy(data,dossier){
+  if(!data?.population?.channels)return null;
+  const section=make('section','historical-linking');
+  const details=make('details','historical-linking-details');
+  details.append(make('summary','','Historical 2019 channel linking · not creator earnings'));
+  details.append(make('p','measure-limit',data.population.channels.toLocaleString()+' channels with at least 100,000 subscribers, observed at the end of 2019. This selected sample is not representative of new creators or all channels in 2026.'));
+  const grid=make('div','historical-linking-grid');
+  for(const [label,key] of [['Marketplace links','marketplace'],['Crowdfunding links','crowdfunding']]){
+    const item=data.channel_linking[key].find(x=>x.id==='less_than_20pct');
+    const zero=data.channel_linking[key].find(x=>x.id==='none');
+    const card=make('article','historical-link-card');
+    card.append(make('h5','',label));
+    card.append(make('strong','historical-link-share',item.percent_reported+'%'));
+    card.append(make('p','measure-limit','Of sampled channels had links in fewer than 20% of videos; includes '+zero.percent_reported+'% with no such links.'));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','A URL in a video description is not evidence of sales, sponsorship revenue, creator profit or a causal strategy. The paper also models advertising revenue; that model is not observed channel payout data.'));
+  details.append(audienceSources([data.source.source_id],dossier));
+  const link=make('a','inline-link','Read the historical sample and its denominator limits ↗');
+  link.href='./ontology/youtube/historical-linking-study.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderCompetitionSample(data,dossier) {
+  if(!data)return null;
+  const section=make('section','competition-sample');
+  const details=make('details','competition-sample-details');
+  details.append(make('summary','','Creator competition: one commercial analytics sample'));
+  details.append(make('p','measure-limit','Metricool analyzed '+data.source.sampled_videos.toLocaleString()+' videos from '+data.source.sampled_accounts.toLocaleString()+' accounts. The recruitment frame and exact date windows are not fully disclosed; these figures are not universal creator success rates.'));
+  const groups=make('div','competition-grid');
+  for(const item of data.cohort_tier_transitions){
+    const cell=make('article','competition-tier');
+    cell.append(make('h5','',item.tier+' channels'));
+    cell.append(make('strong','',item.share_moved_up_percent+'%'));
+    cell.append(make('small','', 'Moved to a higher subscriber tier in the observed cohort'));
+    groups.append(cell);
+  }
+  details.append(groups);
+  const sources=make('details','competition-traffic');
+  sources.append(make('summary','','Traffic attribution in this sampled dataset'));
+  const list=make('div','competition-traffic-grid');
+  for(const item of data.traffic_source_share_of_sampled_organic_views){
+    const row=make('article','competition-traffic-item');
+    row.append(make('strong','',item.percent+'%'));
+    row.append(make('span','',item.id.replaceAll('_',' ')));
+    list.append(row);
+  }
+  sources.append(list);details.append(sources);
+  details.append(make('p','measure-limit','These movements and traffic shares are descriptive, not the probability of monetizing a new channel. Short-form and long-form revenue changes can also reflect selection, seasonality and viewing-metric revisions.'));
+  details.append(audienceSources([data.source.id],dossier));
+  const link=make('a','inline-link','Read study limitations and exact cohorts ↗');
+  link.href='./ontology/youtube/competition-observations.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);return section;
+}
+
+function renderAcademicResearch(data,dossier) {
+  if(!data?.studies?.length)return null;
+  const section=make('section','academic-research');
+  const details=make('details','academic-research-details');
+  details.append(make('summary','','Academic studies of creator income and viewing · '+data.studies.length+' studies'));
+  details.append(make('p','measure-limit','The studies measure different regions, creators and types of income. Their abstracts were checked, but complete methods and source datasets have not yet been audited. They cannot be pooled into a typical YouTube salary.'));
+  const grid=make('div','academic-studies-grid');
+  for(const paper of data.studies){
+    const card=make('article','academic-study');
+    card.append(make('h5','',paper.title));
+    card.append(make('p','',paper.year+' · '+paper.scope));
+    if(paper.numeric?.gini_coefficient!==undefined){
+      card.append(make('p','', 'Reported sample earnings Gini: '+paper.numeric.gini_coefficient));
+    } else if(paper.sample_n!==null){
+      card.append(make('p','', 'Studied channels/creators: '+paper.sample_n.toLocaleString()));
+    }
+    const findings=make('ul','academic-findings');
+    for(const sentence of paper.findings)findings.append(make('li','',sentence));
+    card.append(findings);
+    card.append(make('p','measure-limit',paper.limitations[0]));
+    card.append(audienceSources([paper.id],dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  const link=make('a','inline-link','Read the research boundaries and bibliography ↗');
+  link.href='./ontology/youtube/academic-studies.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);
+  return section;
+}
+
+async function showDossier(entry) {
+  const host=$('#dossier-view');
+  host.hidden=false;
+  host.replaceChildren(make('p','unresearched','Loading research record…'));
+  host.scrollIntoView({behavior:'smooth',block:'start'});
+  try {
+    const [record,work,studyPlan,platformPolicy,yppFuture,topicCatalog,topicActivity,samplingBudget,adultUseHistory,incomeEvidence,channelIncome,crossPlatformIncome,airStudioBenchmarks,lifecycleHorizons,newcomerIncomeProtocol,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,advertiserHistory,musicRights,productionCosts,productionEffort,viewDefinition,analyticsGuide,platformScale,countryReach,geographicScope,audienceOverlap,beautyGamingPanel,genderCommunityEvidence,childrenSeasonality,viewerPersonMetrics,usDemographicUse,identityResearch,surveyFrameCrosswalk,countryProgramAccess,taxWithholding,brandDisclosure,sponsorCategoryEvidence,publishingCadence,creatorSafety,trafficConcentration,euCreatorConsultation,eligibilityMatrix,channelOnboarding,channelOwnership,applicationLifecycle,creatorGrowth,retentionPostsMemberships,promoteEconomics,contentFormats,publishTimeStudy,seasonalDiscovery,decliningTopicAudit,researchSynthesis,videoSurfaceEconomics,screenViewingStudy,childAgeFormat,teenFormatEvidence,multilingualDistribution,newsAudienceStudy,competitionSample,historicalLinking,videoAttentionCulture,animationFormatCycles,beautyFashionQueries,nflSeasonality,gamingReleaseEvents,creatorCollaboration,commentNormsEvidence,technologySubcultures,financeContent,healthFitness,comparisonSet,academicResearch,reputationPortability,checkoutRefundEvidence,memberCohortProtocol,shortsReferralStudy,audiencePopulationCrosswalk,countryAdReach,usNewsDemographics,syntheticMediaPolicy,recommendationEvidence,channelCohortEvidence,firstUploadVlogStudy,externalLinkFunnel,retentionObservability,crossplatformPosting,gamingPeriods,searchDemandProxy,videoProductionCosts,exclusiveRightsEvidence,fraudSecurity]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/ypp-transition-2027.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/public-api-sampling-budget.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/cross-platform-income-surveys.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/air-studio-benchmarks-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/lifecycle-horizons.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/newcomer-income-cohort.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/advertiser-policy-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/music-rights-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-costs.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-effort-comparison.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/view-definition-break.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-reach-devices.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/geographic-scope.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/audience-overlap.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/beauty-gaming-overlap-2025.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/gender-community-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/children-media-seasonality.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/viewer-person-metrics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-demographic-use-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/demographic-identity-uncertainty.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/study-frame-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-eligibility-payments.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/tax-withholding-mechanics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/brand-disclosure-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/sponsor-category-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/publishing-cadence-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-safety-continuity.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/traffic-concentration.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eu-creator-consultation-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-onboarding.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-ownership-continuity.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/retention-posts-memberships.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/promote-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/geographic-publishing-time.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/seasonal-discovery-comparison.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/declining-content-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/research-synthesis-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/video-surfaces-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/screen-viewing-uk-2025.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/child-age-and-format-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/teen-video-format-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/multilingual-distribution.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/competition-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/historical-linking-study.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/video-attention-culture-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/animation-format-cycles.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/beauty-fashion-query-series.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/nfl-view-seasonality-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/gaming-release-events.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-collaboration-fandom-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/comment-norms-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/technology-subcultures-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/finance-content-taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/health-fitness-content.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/comparison-set.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/academic-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/reputation-portability.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/checkout-refund-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/member-cohort-protocol.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/shorts-related-video-funnel.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/audience-population-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-ad-reach-comparisons.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-news-demographic-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/synthetic-media-rights-policy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/recommendation-surface-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-cohort-observations-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/first-upload-vlog-study-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/external-link-funnel-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/retention-observability.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/crossplatform-posting-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/gaming-livestream-quarterly-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/search-demand-proxy-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/video-production-cost-register.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/exclusive-rights-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-fraud-security.json'):Promise.resolve(null)]);
+    if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
+    const outer=make('article','dossier-shell');
+    outer.style.setProperty('--specimen',entry.color.hex);
+    const top=make('div','dossier-head');
+    const heading=make('div','');
+    add(heading,make('p','eyebrow',entry.domain.replaceAll('-',' ')+' / '+record.status),
+      make('h3','',record.name));
+    const close=make('button','dossier-close','Close ×');
+    close.type='button';
+    close.addEventListener('click',()=>{host.hidden=true;host.replaceChildren();});
+    add(top,heading,close);
+    outer.append(top);
+    const official=make('a','inline-link','Official website ↗');
+    official.href=record.official_url;
+    official.target='_blank';
+    official.rel='noopener noreferrer';
+    const dossierJson=make('a','inline-link','Dossier JSON ↗');
+    dossierJson.href='./'+entry.dossier;
+    const queueJson=make('a','inline-link','Task JSON ↗');
+    queueJson.href='./'+entry.queue;
+    add(outer,add(make('div','dossier-links'),official,dossierJson,queueJson));
+    const tasks=work.queues.flatMap(q=>q.tasks);
+    const done=tasks.filter(t=>t.status==='complete'&&t.progress===100).length;
+    const stats=make('div','dossier-stats');
+    add(stats,blockHeading('Research tasks',studyPlan?studyPlan.total_tracked_tasks:tasks.length),blockHeading('Verified tasks',done),
+      blockHeading('Sources',record.evidence.length),blockHeading('Claims',record.claims.length));
+    outer.append(stats);
+    const intro=make('p','dossier-intro',record.summary||'This marketplace has not been researched yet.');
+    outer.append(intro);
+    const evidenceArea=make('div','dossier-evidence');
+    evidenceArea.append(detailSection('Published observations',record.observations,observation=>{
+      const card=make('div','research-item');
+      add(card,make('strong','',observation.metric||observation.id),
+        make('p','',observation.value===null?'Unknown':String(observation.value)+' '+(observation.unit||'')),
+        make('small','',observation.period||'Period not supplied'));
+      return card;
+    }));
+    evidenceArea.append(detailSection('Claims and sources',record.claims,claim=>{
+      const card=make('div','research-item');
+      add(card,make('strong','',claim.text),make('small','','Checked '+claim.observed_at+' · '+claim.confidence+' confidence'));
+      if(claim.limitations)card.append(make('p','measure-limit','Limits: '+claim.limitations));
+      card.append(audienceSources(claim.source_ids,record));
+      return card;
+    }));
+    evidenceArea.append(detailSection('Revenue opportunities',record.opportunities,opportunity=>{
+      return add(make('div','research-item'),make('p','',opportunity.title||opportunity.id||'Opportunity'));
+    }));
+    evidenceArea.append(detailSection('Risks',record.risks,risk=>{
+      return add(make('div','research-item'),make('p','',risk.title||risk.id||'Risk'));
+    }));
+    outer.append(evidenceArea);
+    const policySection=renderPlatformPolicies(platformPolicy,record);
+    if(policySection)outer.append(policySection);
+    const transition=renderYppFutureTransition(yppFuture,record);
+    if(transition)outer.append(transition);
+    const routes=renderRevenuePathways(earningRoutes,payoutGates,record,eligibilityMatrix);
+    if(routes)outer.append(routes);
+    const entryStages=renderChannelOnboarding(channelOnboarding,record);
+    if(entryStages)outer.append(entryStages);
+    const ownership=renderChannelOwnership(channelOwnership,record);
+    if(ownership)outer.append(ownership);
+    const reputation=renderReputationPortability(reputationPortability,record);
+    if(reputation)outer.append(reputation);
+    const checkoutAudit=renderCheckoutRefundEvidence(checkoutRefundEvidence,record);
+    if(checkoutAudit)outer.append(checkoutAudit);
+    const cohortStudy=renderMemberCohortResearch(memberCohortProtocol,record);
+    if(cohortStudy)outer.append(cohortStudy);
+    const shortsFlow=renderShortsReferralStudy(shortsReferralStudy,record);
+    if(shortsFlow)outer.append(shortsFlow);
+    const audienceBase=renderAudiencePopulationCrosswalk(audiencePopulationCrosswalk,record);
+    if(audienceBase)outer.append(audienceBase);
+    const adCountries=renderCountryAdReach(countryAdReach,record);
+    if(adCountries)outer.append(adCountries);
+    const usNews=renderUSNewsDemographics(usNewsDemographics,record);
+    if(usNews)outer.append(usNews);
+    const syntheticPolicy=renderSyntheticMediaPolicy(syntheticMediaPolicy,record);
+    if(syntheticPolicy)outer.append(syntheticPolicy);
+    const recs=renderRecommendationEvidence(recommendationEvidence,record);
+    if(recs)outer.append(recs);
+    const cohorts=renderChannelCohorts(channelCohortEvidence,record);
+    if(cohorts)outer.append(cohorts);
+    const vlog=renderFirstUploadVlogStudy(firstUploadVlogStudy,record);
+    if(vlog)outer.append(vlog);
+    const linkFunnel=renderExternalLinkFunnel(externalLinkFunnel,record);
+    if(linkFunnel)outer.append(linkFunnel);
+    const retention=renderRetentionObservability(retentionObservability,record);
+    if(retention)outer.append(retention);
+    const crossposting=renderCrossplatformPosting(crossplatformPosting,record);
+    if(crossposting)outer.append(crossposting);
+    const gamingStudy=renderGamingPeriods(gamingPeriods,record);
+    if(gamingStudy)outer.append(gamingStudy);
+    const demand=renderSearchDemandProxy(searchDemandProxy,record);
+    if(demand)outer.append(demand);
+    const production=renderVideoProductionCosts(videoProductionCosts,record);
+    if(production)outer.append(production);
+    const exRights=renderExclusiveRights(exclusiveRightsEvidence,record);
+    if(exRights)outer.append(exRights);
+    const fraud=renderFraudSecurity(fraudSecurity,record);
+    if(fraud)outer.append(fraud);
+    const onboarding=renderApplicationLifecycle(applicationLifecycle);
+    if(onboarding)outer.append(onboarding);
+    const restricted=renderContentRestrictions(contentRestrictions,record);
+    if(restricted)outer.append(restricted);
+    const adsChanges=renderAdvertiserPolicyHistory(advertiserHistory,record);
+    if(adsChanges)outer.append(adsChanges);
+    const music=renderMusicRights(musicRights,record);
+    if(music)outer.append(music);
+    const costStudy=renderProductionCosts(productionCosts);
+    if(costStudy)outer.append(costStudy);
+    const effort=renderProductionEffortComparison(productionEffort,record);
+    if(effort)outer.append(effort);
+    const metricsGuide=renderMeasurementGuide(analyticsGuide);
+    if(metricsGuide)outer.append(metricsGuide);
+    const counted=renderViewDefinitionBreak(viewDefinition,record);
+    if(counted)outer.append(counted);
+    const scale=renderPlatformScale(platformScale);
+    if(scale)outer.append(scale);
+    const country=renderCountryReachDevices(countryReach,record);
+    if(country)outer.append(country);
+    const geography=renderGeographicScope(geographicScope,record);
+    if(geography)outer.append(geography);
+    const overlap=renderAudienceOverlapResearch(audienceOverlap,record);
+    if(overlap)outer.append(overlap);
+    const overlapPanel=renderBeautyGamingOverlap(beautyGamingPanel,record);
+    if(overlapPanel)outer.append(overlapPanel);
+    const genderGroups=renderGenderCommunityEvidence(genderCommunityEvidence,record);
+    if(genderGroups)outer.append(genderGroups);
+    const childSeasonality=renderChildrenSeasonality(childrenSeasonality,record);
+    if(childSeasonality)outer.append(childSeasonality);
+    const personMetrics=renderViewerPersonMetrics(viewerPersonMetrics,record);
+    if(personMetrics)outer.append(personMetrics);
+    const demo=renderUsDemographicUse(usDemographicUse,record);
+    if(demo)outer.append(demo);
+    const identity=renderIdentityResearch(identityResearch,record);
+    if(identity)outer.append(identity);
+    const frame=renderSurveyFrameCrosswalk(surveyFrameCrosswalk,record);
+    if(frame)outer.append(frame);
+    const countryPrograms=renderCountryProgramAccess(countryProgramAccess,record);
+    if(countryPrograms)outer.append(countryPrograms);
+    const taxes=renderTaxWithholdingResearch(taxWithholding,record);
+    if(taxes)outer.append(taxes);
+    const brand=renderBrandDisclosureRisk(brandDisclosure,record);
+    if(brand)outer.append(brand);
+    const sponsors=renderSponsorCategoryResearch(sponsorCategoryEvidence,record);
+    if(sponsors)outer.append(sponsors);
+    const cadence=renderPublishingCadenceStudy(publishingCadence,record);
+    if(cadence)outer.append(cadence);
+    const safety=renderCreatorSafety(creatorSafety,record);
+    if(safety)outer.append(safety);
+    const concentration=renderTrafficConcentration(trafficConcentration,record);
+    if(concentration)outer.append(concentration);
+    const eu=renderEuCreatorConsultation(euCreatorConsultation,record);
+    if(eu)outer.append(eu);
+    const discoveryModel=renderCreatorGrowth(creatorGrowth,record);
+    if(discoveryModel)outer.append(discoveryModel);
+    const returnStudy=renderPostAndMembershipRetention(retentionPostsMemberships,record);
+    if(returnStudy)outer.append(returnStudy);
+    const promotion=renderPromoteResearch(promoteEconomics,record);
+    if(promotion)outer.append(promotion);
+    const formats=renderContentFormats(contentFormats,record);
+    if(formats)outer.append(formats);
+    const publishTimes=renderPublishingTimeResearch(publishTimeStudy,record);
+    if(publishTimes)outer.append(publishTimes);
+    const seasonal=renderSeasonalDiscovery(seasonalDiscovery,record);
+    if(seasonal)outer.append(seasonal);
+    const declineAudit=renderDecliningTopicAudit(decliningTopicAudit,record);
+    if(declineAudit)outer.append(declineAudit);
+    const synthesis=renderEvidenceSynthesis(researchSynthesis,record);
+    if(synthesis)outer.append(synthesis);
+    const surfaces=renderVideoSurfaceEconomics(videoSurfaceEconomics,record);
+    if(surfaces)outer.append(surfaces);
+    const screen=renderScreenViewingStudy(screenViewingStudy,record);
+    if(screen)outer.append(screen);
+    const kids=renderChildAgeFormatStudy(childAgeFormat,record);
+    if(kids)outer.append(kids);
+    const youthFormats=renderTeenVideoFormatEvidence(teenFormatEvidence,record);
+    if(youthFormats)outer.append(youthFormats);
+    const multilingual=renderMultilingualDistribution(multilingualDistribution,record);
+    if(multilingual)outer.append(multilingual);
+    const audience=renderAudienceResearch(record);
+    if(audience)outer.append(audience);
+    const history=renderAdultUseHistory(adultUseHistory);
+    if(history)outer.append(history);
+    const newsStudy=renderCommunityAudienceStudy(newsAudienceStudy,record);
+    if(newsStudy)outer.append(newsStudy);
+    const competitors=renderCompetitionSample(competitionSample,record);
+    if(competitors)outer.append(competitors);
+    const historicalLinks=renderHistoricalLinkingStudy(historicalLinking,record);
+    if(historicalLinks)outer.append(historicalLinks);
+    const attention=renderVideoAttentionCulture(videoAttentionCulture,record);
+    if(attention)outer.append(attention);
+    const animation=renderAnimationFormatCycles(animationFormatCycles,record);
+    if(animation)outer.append(animation);
+    const beauty=renderBeautyFashionQuerySeries(beautyFashionQueries,record);
+    if(beauty)outer.append(beauty);
+    const nfl=renderNflSeasonality(nflSeasonality,record);
+    if(nfl)outer.append(nfl);
+    const gamingEvent=renderGamingReleaseEvents(gamingReleaseEvents,record);
+    if(gamingEvent)outer.append(gamingEvent);
+    const collab=renderCreatorCollaborationEvidence(creatorCollaboration,record);
+    if(collab)outer.append(collab);
+    const commentNorms=renderCommentNormsEvidence(commentNormsEvidence,record);
+    if(commentNorms)outer.append(commentNorms);
+    const finance=renderFinanceContentTaxonomy(financeContent,record);
+    if(finance)outer.append(finance);
+    const fitness=renderHealthFitnessResearch(healthFitness,record);
+    if(fitness)outer.append(fitness);
+    const technologies=renderTechnologySubcultures(technologySubcultures,record);
+    if(technologies)outer.append(technologies);
+    const comparators=renderPlatformComparisonSet(comparisonSet,record);
+    if(comparators)outer.append(comparators);
+    const literature=renderAcademicResearch(academicResearch,record);
+    if(literature)outer.append(literature);
+    const crossIncome=renderCrossPlatformIncomeSurveys(crossPlatformIncome,record);
+    if(crossIncome)outer.append(crossIncome);
+    const horizons=renderLifecycleHorizons(lifecycleHorizons,record);
+    if(horizons)outer.append(horizons);
+    const air=renderAirStudioBenchmarks(airStudioBenchmarks,record);
+    if(air)outer.append(air);
+    const newcomer=renderNewcomerIncomeProtocol(newcomerIncomeProtocol,record);
+    if(newcomer)outer.append(newcomer);
+    const incomeStudy=renderCreatorIncomeEvidence(incomeEvidence);
+    if(incomeStudy)outer.append(incomeStudy);
+    const channelStudy=renderSmallChannelStudy(channelIncome);
+    if(channelStudy)outer.append(channelStudy);
+    const catalogue=renderTopicCatalogue(topicCatalog,topicActivity);
+    if(catalogue)outer.append(catalogue);
+    const sampling=renderPublicSamplingBudget(samplingBudget,record);
+    if(sampling)outer.append(sampling);
+    const method=renderOpportunityFramework(opportunityFramework,topicCatalog,topicActivity);
+    if(method)outer.append(method);
+    if(entry.id==='youtube')outer.append(renderScenarioCalculator());
+    if(entry.id==='youtube')outer.append(renderBreakEvenCalculator());
+    if(studyPlan)outer.append(renderStudyPlan(studyPlan));
+    outer.append(make('h4','dossier-queues-title','Research queues'));
+    const queueList=make('div','dossier-queues');
+    for(const group of work.queues){
+      const panel=make('details','queue-details');
+      const completed=group.tasks.filter(t=>t.status==='complete'&&t.progress===100).length;
+      const pct=Math.round(group.tasks.reduce((n,t)=>n+t.progress,0)/group.tasks.length);
+      const summary=make('summary','',group.emoji+' '+group.title+' — '+pct+'% ('+completed+'/'+group.tasks.length+' verified)');
+      panel.append(summary,progress(pct,group.title));
+      const list=make('ol','queue-task-list');
+      for(const task of group.tasks){
+        const item=make('li','');
+        add(item,make('strong','',task.emoji+' '+task.title+' · '+task.progress+'%'),
+          make('p','',task.acceptance));
+        list.append(item);
+      }
+      panel.append(list);
+      queueList.append(panel);
+    }
+    outer.append(queueList);
+    host.replaceChildren(outer);
+  } catch(error) {
+    console.error('Mercata dossier failed to render: '+String(error?.stack || error));
+    host.replaceChildren(add(make('div','empty-state'),make('h3','', 'Research record unavailable'),
+      make('p','', 'The dossier or task queue could not be loaded. Check the public files.')));
+  }
+}
+
+async function start() {
+  const outcomes=await Promise.allSettled([
+    read('gallery/index.json'),read('pipeline/queues.json'),
+    read('pipeline/domains.json'),read('ontology/ontology.json'),
+    read('roadmap/progress.json')
+  ]);
+  if(outcomes[0].status==='fulfilled') {
+    specimens=outcomes[0].value.specimens;
+    const domains=[...new Set(specimens.map(s=>s.domain))].sort();
+    for(const domain of domains) {
+      const opt=make('option','',domain.replaceAll('-',' ')); opt.value=domain;
+      $('#domain').append(opt);
+    }
+    showCatalog();
+    showSocialOverview();
+  } else errorFor('#catalog-grid','The public gallery index could not be read.');
+  if(outcomes[1].status==='fulfilled' && outcomes[2].status==='fulfilled') showQueues(outcomes[1].value,outcomes[2].value);
+  else errorFor('#queue-grid','The research definitions could not be read.');
+  if(outcomes[3].status==='fulfilled') showOntology(outcomes[3].value);
+  else errorFor('#ontology-grid','The ontology could not be read.');
+  if(outcomes[4].status==='fulfilled') showRoadmap(outcomes[4].value);
+  else errorFor('#milestones','The progress ledger could not be read.');
+}
+$('#search').addEventListener('input',showCatalog);
+$('#domain').addEventListener('change',showCatalog);
+start();
++x.mean_usd+' mean'));
+  card.append(audienceSources(data.source_ids,dossier));grid.append(card);
+ }
+ const pooled=data.youtube_affiliated_pooled;
+ const card=make('article','ownership-card');
+ card.append(make('h5','','Pooled March cross sections'));
+ card.append(make('strong','','
+ if(!data?.gaming?.length)return null;
+ const section=make('section','gaming-period-study');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Live gaming watched hours: distinct from people and creators'));
+ details.append(make('p','measure-limit','Q4 2025 to Q2 2026. Commercial livestream tracking, not a population census.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.gaming){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.period+' · Gaming'));
+  card.append(make('strong','',x.watch_hours_billion.toFixed(2)+' billion hours watched'));
+  card.append(make('p','',x.channels_million+' million broadcast channel identifiers'));
+  card.append(audienceSources([x.source_id],dossier));grid.append(card);
+ }
+ const live=data.general_live_q2;
+ const c=make('article','ownership-card');
+ c.append(make('h5','','Q2 2026 · general YouTube Live'));
+ c.append(make('strong','',live.watch_hours_billion.toFixed(2)+' billion hours watched'));
+ c.append(make('p','measure-limit','Separate category, not automatically combinable with gaming'));
+ c.append(audienceSources([live.source_id],dossier));grid.append(c);
+ details.append(grid);
+ details.append(make('p','measure-limit','Gaming hours fell 19.3% Q2 versus Q1 as reported; distinct viewers, pay and external migration remain unknown.'));
+ const link=make('a','inline-link','Read gaming evidence, scope and source notes ↗');
+ link.href='./ontology/youtube/gaming-livestream-quarterly-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
+ section.append(details);return section;
+}
+
+function renderCrossplatformPosting(data,dossier){
+ if(!data?.vendor_posting_snapshot)return null;
+ const section=make('section','crossplatform-posting');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Crossposting videos is not moving audiences'));
+ details.append(make('p','measure-limit','A selected scheduling-tool sample counts multi-platform publishing, not fans who migrated across websites.'));
+ const s=data.vendor_posting_snapshot;
+ const grid=make('div','ownership-grid');
+ for(const [title,value,explanation] of [
+ ['Publishing tool creators',s.creators.toLocaleString('en-US'),'Users of a cross-posting service, not all creators'],
+ ['Distinct uploads',s.uploads.toLocaleString('en-US'),'One uploaded video can become multiple posts'],
+ ['Successful published posts',s.successful_post_events.toLocaleString('en-US'),'Posting events, not distinct viewers'],
+ ['Uploads sent to several platforms',s.share_uploads_multi_platform_percent+'%','Selected tool-user uploads; no viewer migration measured']
+ ]){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',title));card.append(make('strong','',value));card.append(make('p','measure-limit',explanation));
+  card.append(audienceSources([s.source_id],dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Separate 2016 YouTube–Twitch rivalry research found context-specific creator effort changes; neither study estimates modern buyer or follower migration.'));
+ details.append(audienceSources([data.historical_competition_paper.source_id],dossier));
+ const link=make('a','inline-link','Read both dated studies, denominators and missing evidence ↗');
+ link.href='./ontology/youtube/crossplatform-posting-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderRetentionObservability(data,dossier){
+ if(!data?.metrics?.length)return null;
+ const section=make('section','retention-observability');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Audience retention, completed plays and viewing sessions'));
+ details.append(make('p','measure-limit','Public playback-start views, owner-only video retention, initial Shorts engagement and cross-video sessions have different units. None establishes an observed full-video completion fraction.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.metrics){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.label));
+  card.append(make('p','',item.unit.replaceAll('_',' ')+' · '+item.access.replaceAll('_',' ')));
+  card.append(make('p','measure-limit',item.limit));
+  card.append(audienceSources(item.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Owner video-level retention reports require processing time and sufficiently viewed clips for highlighted moments; all real completion rates and cross-video session lengths remain unknown.'));
+ const link=make('a','inline-link','Read measurement units and privacy boundaries ↗');link.href='./ontology/youtube/retention-observability.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderExternalLinkFunnel(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','external-link-funnel');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Clickable links, Shorts limitations and product funnels'));
+ details.append(make('p','measure-limit','A URL in a Shorts comment or description is not clickable, even though a related-video link can be. Long-form external links require advanced-feature eligibility.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.label));
+  const status=item.external_url_clickable===null?'Internal route':item.external_url_clickable?'External URL may be clickable':'External URL not clickable';
+  card.append(make('p','',status));
+  card.append(make('p','measure-limit',item.limitation));
+  card.append(audienceSources(item.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Actual link clicks, distinct buyers, marketing costs and net revenue are not measured; no test has been launched.'));
+ const link=make('a','inline-link','Read platform links policy and funnel measurement gates ↗');link.href='./ontology/youtube/external-link-funnel-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderFirstUploadVlogStudy(data,dossier){
+ if(!data?.earnings_value_model)return null;
+ const section=make('section','first-upload-vlog');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','New daily-life vloggers: observed views versus hypothetical ad value'));
+ details.append(make('p','measure-limit','A selected 107-channel preprint finds 51.4% below 1,000 lifetime views. Its dollar amounts model advertising value from views; no YouTube payouts, cash costs or measured creator time were obtained.'));
+ const grid=make('div','ownership-grid');
+ for(const item of [
+  {title:'Sampled first-upload channels',value:data.sampling.first_upload_cohort_channels,reason:'Keyword-discovered, two daily-life vlog genres'},
+  {title:'Below 1,000 lifetime views',value:data.cold_start_public_views.below_1000_lifetime_views_percent+'%',reason:'Observed public view counts in sampled channels'},
+  {title:'Modeled median long-form ad value',value:'USD '+data.earnings_value_model.median_modeled_longform_value_usd.toFixed(2),reason:'Assumed USD 2.30 RPM; not actual paid income'},
+  {title:'Modeled median labor',value:data.earnings_value_model.median_assumed_hours+' hours',reason:'Assumed three labor hours per finished video minute; no time logs'}
+ ]){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.title));
+  card.append(make('strong','',item.value));
+  card.append(make('p','measure-limit',item.reason));
+  card.append(audienceSources([data.source_id],dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','All-creator zero-earner fraction, real channel profit and any causal benefit of additional uploads remain unmeasured.'));
+ const link=make('a','inline-link','Read the study and its modeled-income limitations ↗');
+ link.href='./ontology/youtube/first-upload-vlog-study-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderChannelCohorts(model,dossier){
+ if(!model?.datasets?.length)return null;
+ const section=make('section','channel-cohort-evidence');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Indexed channels and 360-day subscriber milestone outcomes'));
+ details.append(make('p','measure-limit','61.2 million sampled public-subscriber channels and a distinct 32.9 million-channel below-1k cohort. Both are selected vendor index populations, not a census or verified first-year creator income.'));
+ const grid=make('div','ownership-grid');
+ const m=model.datasets[0],s=model.datasets[2];
+ for(const band of s.bins){
+  const card=make('article','ownership-card');
+  const end=band.video_delta_max===null?' or more':'–'+band.video_delta_max;
+  card.append(make('h5','','Net public video count +'+band.video_delta_min+end));
+  card.append(make('strong','',band.reported_percent.toFixed(2)+'% ending at 1,000+ subscribers'));
+  card.append(make('p','',band.reached_1000_at_end.toLocaleString('en-US')+' of '+band.channels.toLocaleString('en-US')+' indexed channels'));
+  card.append(make('p','measure-limit','360 days, no random assignment, new-entrant identification, actual uploads or YPP earnings'));
+  card.append(audienceSources([s.source_id],dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Separate July distribution: '+m.included_channels.toLocaleString('en-US')+' indexed channels with at least one subscriber. The group comparisons do not prove uploading causes growth or that creators earn money.'));
+ const link=make('a','inline-link','Read cohort sampling, percentages and non-causal limitations ↗');
+ link.href='./ontology/youtube/channel-cohort-observations-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderRecommendationEvidence(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','recommendation-evidence');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Home, Suggested, Shorts and Search: distinct discovery rules'));
+ details.append(make('p','measure-limit','Official guidance describes different ranking contexts, not public fixed weights or guaranteed creator reach.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.label));card.append(make('p','',x.claim));
+  card.append(audienceSources(x.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','No minimum Shorts posting cadence is required. Exact signal weights, newcomer impressions and net creator income effects are unknown.'));
+ const link=make('a','inline-link','Read official recommendation sources ↗');
+ link.href='./ontology/youtube/recommendation-surface-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderSyntheticMediaPolicy(data,dossier){
+ if(!data?.policy_axes?.length)return null;
+ const section=make('section','synthetic-media-rights');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','AI-altered video: disclosure, originality, likeness and rights'));
+ details.append(make('p','measure-limit','A realistic AI-use disclosure can be required without automatic demonetization. YPP originality, privacy complaints and copyright protection have separate rules.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.policy_axes){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.title));
+  card.append(make('p','',x.rule));
+  card.append(audienceSources(x.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Five policy examples are hypothetical; no AI creator earnings, enforcement prevalence or individual legality was measured.'));
+ const link=make('a','inline-link','Read official AI-content and rights rules ↗');
+ link.href='./ontology/youtube/synthetic-media-rights-policy.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderUSNewsDemographics(data,dossier){
+ if(!data?.strata?.length)return null;
+ const section=make('section','us-news-demographic-crosswalk');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','U.S. YouTube use versus regular news use by surveyed groups'));
+ details.append(make('p','measure-limit','Two separate Pew surveys: overall YouTube ever-use is not regular news use, a verified biological-sex category or a sample of YouTube creators. Percentages are within the published adult subgroups.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.strata){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.subgroup.replaceAll('_',' ')));
+  card.append(make('p','',item.ever_use_pct+'% ever use YouTube · '+item.regular_news_pct+'% regularly get YouTube news'));
+  card.append(make('p','measure-limit','Different survey respondents and date windows; subgroup uncertainty not published in this comparison.'));
+  card.append(audienceSources([item.ever_use_source_id,item.regular_news_source_id],dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','2020–2026 U.S. adult regular YouTube news series: '+data.regular_news_us_adult_series.map(x=>x.regular_news_youtube_pct_of_us_adults+'%').join(', ')+'. Descriptive survey estimates, not causal changes or viewer counts.'));
+ details.append(make('p','measure-limit','Biological sex, overlapping age-by-party or age-by-gender audience counts, and subgroup margins of error are unknown.'));
+ const link=make('a','inline-link','Read the dated survey comparison and missing evidence ↗');
+ link.href='./ontology/youtube/us-news-demographic-crosswalk.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCountryAdReach(d,dossier){
+ if(!d?.observations?.length)return null;
+ const section=make('section','country-ad-reach'),details=make('details','ownership-details');
+ details.append(make('summary','','Country reach: four dated YouTube advertiser estimates'));
+ details.append(make('p','measure-limit','Google ad-planner reach, reported in DataReportal Digital 2026 and measured in October 2025, is not monthly active YouTube viewers or verified country growth.'));
+ const grid=make('div','ownership-grid');
+ for(const x of d.observations){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.country));card.append(make('strong','',x.ad_reach_million+' million ad-reachable'));
+  const change=x.reported_end_2024_to_2025_change_percent;
+  card.append(make('p','',('End-2024 to late-2025 planner change: ')+(change>0?'+':'')+change+'%'));
+  card.append(make('p','measure-limit','Potential ad reach, not unique viewers, subscribers or creator income'));
+  card.append(audienceSources([x.source_id],dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Advertiser planning can be revised; published changes do not prove actual people entered or left YouTube.'));
+ const link=make('a','inline-link','Read sources and comparability limits ↗');link.href='./ontology/youtube/country-ad-reach-comparisons.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderAudiencePopulationCrosswalk(data,dossier){
+ if(!data?.observations?.length)return null;
+ const section=make('section','audience-population-crosswalk');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Audience scale: past-month surveys, daily visits and ad reach'));
+ details.append(make('p','measure-limit','Distinct survey prevalences and country ad-planner reach estimates cannot be combined into an invented platform MAU/DAU count.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.observations){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.id.replaceAll('_',' ')));
+  card.append(make('strong','',String(x.value)+(x.unit==='percent'?'%':' million')));
+  card.append(make('p','',x.scope+' · '+x.time));
+  card.append(make('p','measure-limit',x.notes));
+  card.append(audienceSources(x.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','The deduplicated worldwide MAU and DAU remain unknown, as does cross-account deduplication.'));
+ const link=make('a','inline-link','Read each observation and its denominator ↗');
+ link.href='./ontology/youtube/audience-population-crosswalk.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderShortsReferralStudy(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','shorts-referral-study');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Shorts-to-video links and the missing referral measurements'));
+ details.append(make('p','measure-limit','Advanced feature access can allow a clickable related video below a Short. A view of that Short, a destination view and an overlapping viewer are not verified click-through events.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.label));
+  card.append(make('p','',x.measurement));
+  card.append(make('p','measure-limit','Not equivalent to: '+x.not_equivalent_to.replaceAll('_',' ')));
+  card.append(audienceSources(x.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Short-specific link impressions, click-through, deduplicated linked viewers, incremental video value and profit remain unmeasured.'));
+ const link=make('a','inline-link','Read the related-video feature and event-attribution gates ↗');
+ link.href='./ontology/youtube/shorts-related-video-funnel.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderMemberCohortResearch(data,dossier){
+ if(!data?.definition_rules?.length)return null;
+ const section=make('section','member-cohort-protocol');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Paying member renewals and repeat-offer test design'));
+ details.append(make('p','measure-limit','Studio active members, canceled members, access-expired members and recurring transactions have different denominators. No paid cohort or experiment was observed.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.definition_rules){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.id.replaceAll('_',' ')));
+  card.append(make('p','',item.rule));
+  card.append(audienceSources(item.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','A rate needs real paid renewals due by actual billing date, separated from trials and gifts; unresolved events get bounds, not point estimates.'));
+ const link=make('a','inline-link','Review cohort arithmetic, missing-data gates and offer-test protocol ↗');
+ link.href='./ontology/youtube/member-cohort-protocol.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCheckoutRefundEvidence(data,dossier){
+ if(!data?.products?.length)return null;
+ const section=make('section','checkout-refund-evidence');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Buyer payments, published membership prices and refunds'));
+ details.append(make('p','measure-limit','Membership cancellation, non-refundable Supers and external retailer refunds follow distinct processes. Country price schedules are options, not a sample of channel prices or creator profit.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.products){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.label));
+  card.append(make('p','',item.buyer_action));
+  card.append(make('p','measure-limit',item.refund_rule));
+  card.append(audienceSources(item.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Official examples: US $0.99/$4.99/$9.99 and Mexico MXN $19/$69/$219. These are published country-tier options, not a real-channel price sample, currency conversion, or guaranteed buyer charge.'));
+ details.append(make('p','measure-limit','Creator-specific median prices, refund rates, external merchant margins and net earnings remain unmeasured.'));
+ const link=make('a','inline-link','Read checkout and refund source audit ↗');
+ link.href='./ontology/youtube/checkout-refund-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderReputationPortability(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','reputation-portability');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Channel feedback, reputation and portability'));
+ details.append(make('p','measure-limit','Moderated comments are not verified buyer ratings, and a subscriber count is not a portable customer list. Media exports, roles and internal channel moves have different limits.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.title));
+  card.append(make('p','',x.mechanism));
+  card.append(make('p','measure-limit',x.limit));
+  card.append(audienceSources(x.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Off-platform migration rate, verified buyer scores and net earnings effects remain unmeasured.'));
+ const link=make('a','inline-link','Read the feedback and portability audit ↗');
+ link.href='./ontology/youtube/reputation-portability.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderChannelOnboarding(data,dossier) {
+  if(!data?.stages?.length)return null;
+  const section=make('section','channel-onboarding');
+  const details=make('details','channel-onboarding-details');
+  details.append(make('summary','','From a Google Account to a publishing channel · '+data.stages.length+' stages'));
+  details.append(make('p','measure-limit','Creating a channel, publishing, unlocking advanced features and earning money require different permissions. These steps are general policy, not proof of eligibility for a particular person.'));
+  const stages=make('ol','channel-onboarding-stage-list');
+  for(const step of data.stages){
+    const item=make('li','channel-onboarding-stage');
+    item.append(make('h5','',step.label));
+    item.append(make('p','',step.outcome));
+    item.append(make('p','measure-limit',step.limits));
+    item.append(audienceSources(step.source_ids,dossier));
+    stages.append(item);
+  }
+  details.append(stages);
+  const gates=make('div','channel-feature-gates');
+  for(const gate of data.feature_gates){
+    const card=make('article','channel-feature-gate');
+    card.append(make('h5','',gate.label));
+    card.append(make('p','measure-limit','Requirements: '+gate.requires.join(' · ').replaceAll('_',' ')));
+    card.append(make('p','',gate.limits));
+    card.append(audienceSources(gate.source_ids,dossier));
+    gates.append(card);
+  }
+  details.append(gates);
+  details.append(make('p','measure-limit','Typical setup hours: unknown · typical cash costs: unknown · time to first creator payment: unknown. A no-new-purchase path does not mean creator labor or access costs disappear.'));
+  const link=make('a','inline-link','Read source-backed onboarding gates and cost limits ↗');
+  link.href='./ontology/youtube/channel-onboarding.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);
+  return section;
+}
+
+function renderApplicationLifecycle(model) {
+  if(!model)return null;
+  const section=make('section','application-lifecycle');
+  const details=make('details','application-details');
+  details.append(make('summary','','Getting approved and reaching your first payout'));
+  details.append(make('p','measure-limit','Numerical entry thresholds, channel review, product activation and actual payment are separate. These timelines are official guidance, not guarantees.'));
+  const list=make('ol','application-stage-list');
+  for(const step of model.steps){
+    const item=make('li','application-stage');
+    item.append(make('strong','',step.action));
+    item.append(make('p','measure-limit',step.limits));
+    if(step.indicative_duration)item.append(make('small','',step.indicative_duration));
+    if(step.window_days)item.append(make('small','', 'Published appeal window: '+step.window_days+' days'));
+    if(step.earliest_reapply_after_days)item.append(make('small','', 'Reapplication wait: '+step.earliest_reapply_after_days+' days'));
+    list.append(item);
+  }
+  details.append(list);
+  const link=make('a','inline-link','Read the full application and payment lifecycle ↗');
+  link.href='./ontology/youtube/application-lifecycle.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderPromoteResearch(data,dossier){
+ if(!data?.ad_format_billing?.length)return null;
+ const section=make('section','promote-economics');
+ const details=make('details','promote-economics-details');
+ details.append(make('summary','','YouTube Promote: paid costs versus organic YPP-eligible follow-on views'));
+ details.append(make('p','measure-limit','A promotion is purchased advertising, not creator earnings. Subscribers and watch hours generated directly by ad campaigns do not meet YPP eligibility thresholds. Organic follow-on views are tracked separately.'));
+ const grid=make('div','promote-format-grid');
+ for(const item of data.ad_format_billing){
+   const card=make('article','promote-format-card');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','',item.billable_trueview_condition));
+   card.append(audienceSources(item.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ const ad=make('div','promote-metrics-grid');
+ for(const item of data.metric_register){
+   const card=make('article','promote-metric-card');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','measure-limit',item.unit.replaceAll('_',' ')));
+   ad.append(card);
+ }
+ details.append(make('h5','promote-heading','Distinct attribution and accounting units'));
+ details.append(ad);
+ details.append(make('p','measure-limit','Typical budget, realized cost per acquired viewer, organic conversion, and net creator profit remain unknown. Attribution without a valid comparison cohort does not establish incremental results.'));
+ const link=make('a','inline-link','Read ad billing formats, YPP qualification and missing ROI evidence ↗');
+ link.href='./ontology/youtube/promote-economics.md';link.rel='noopener noreferrer';link.target='_blank';
+ details.append(link);section.append(details);return section;
+}
+
+function renderPostAndMembershipRetention(data,dossier) {
+ if(!data?.channel_surfaces?.length)return null;
+ const section=make('section','post-membership-retention');
+ const details=make('details','post-membership-retention-details');
+ details.append(make('summary','','Creator Posts, regular viewers and paid membership renewals'));
+ details.append(make('p','measure-limit','Official analytics measure different populations: post impressions, channel return viewers, subscribers with member perks and recurring payment events. They cannot be joined into an attributed retention rate without actual owner-authorized cohorts.'));
+ const grid=make('div','post-membership-surfaces');
+ for(const surface of data.channel_surfaces){
+   const card=make('article','post-membership-surface');
+   card.append(make('h5','',surface.id.replaceAll('_',' ')));
+   card.append(make('p','',surface.description));
+   card.append(make('p','measure-limit',surface.eligibility_note));
+   card.append(audienceSources(surface.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ const members=make('div','post-membership-metrics');
+ for(const item of data.membership_register){
+   const card=make('article','post-membership-metric');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','',item.definition));
+   card.append(make('p','measure-limit','Unit: '+item.unit.replaceAll('_',' ')));
+   members.append(card);
+ }
+ details.append(make('h5','post-membership-heading','Membership measurement units'));
+ details.append(members);
+ const postsScale=data.platform_scale_claims?.find(x=>x.id==='daily_posts_engaging_users');
+ if(postsScale){
+   details.append(make('p','measure-limit','YouTube reported more than '+(postsScale.reported_value/1000000)+' million users engaging with Posts on an average day in September 2026. Independent user deduplication and channel-specific return effects are unknown.'));
+   details.append(audienceSources([postsScale.source_id],dossier));
+ }
+ details.append(make('p','measure-limit','Regular viewers watched at least monthly for more than six months of the past year. A membership transaction may be a new sign-up or a renewal, not a distinct buyer.'));
+ details.append(make('p','measure-limit','Average posting effect, unique membership buyers, renewal rate and net member profit: unknown.'));
+ const link=make('a','inline-link','Read official measurement definitions, study design and caveats ↗');
+ link.href='./ontology/youtube/retention-posts-memberships.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCreatorGrowth(data,dossier) {
+  if(!data)return null;
+  const section=make('section','creator-growth');
+  const details=make('details','creator-growth-details');
+  details.append(make('summary','','Audience discovery and returning viewers · '+data.stages.length+' stages'));
+  details.append(make('p','measure-limit','Views, eligible impressions, engaged views, unique channel viewers, subscribers and paying customers are different measurements. No conversion rate is assumed.'));
+  const list=make('ol','creator-growth-stages');
+  for(const stage of data.stages){
+    const item=make('li','creator-growth-stage');
+    item.append(make('h5','',stage.label),make('p','',stage.description),
+      make('small','',stage.caveat));
+    item.append(audienceSources(stage.source_ids,dossier));
+    list.append(item);
+  }
+  details.append(list);
+  const more=make('details','creator-growth-metrics');
+  more.append(make('summary','',data.metrics.length+' metric definitions and measurement limits'));
+  const table=make('div','creator-growth-metric-grid');
+  for(const metric of data.metrics){
+    const card=make('article','creator-growth-metric');
+    card.append(make('h5','',metric.id.replaceAll('_',' ')));
+    card.append(make('p','',metric.definition));
+    card.append(make('small','',metric.unit+' · '+metric.access));
+    card.append(make('p','measure-limit',metric.limitations));
+    table.append(card);
+  }
+  more.append(table);
+  details.append(more);
+  const link=make('a','inline-link','Read the measurement and discovery research ↗');
+  link.href='./ontology/youtube/creator-growth.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderTeenVideoFormatEvidence(data,dossier){
+  if(!data?.video_genre_observations?.length)return null;
+  const section=make('section','teen-format-evidence');
+  const details=make('details','teen-format-details');
+  details.append(make('summary','','Child video genres: Australia YouTube, UK cross-app, US teen surveys'));
+  details.append(make('p','measure-limit','A 2025 Australian youth survey directly measured YouTube genres among children aged 6–13. UK genre percentages concern all video apps, NOT YouTube alone; U.S. teen platform use has no genre breakdown. These studies do not establish global genre audiences or individual identities.'));
+  const grid=make('div','teen-format-grid');
+  for(const block of data.video_genre_observations){
+    const card=make('article','teen-format-card');
+    card.append(make('h5','', 'UK children aged '+block.age_range+' · any video app'));
+    const list=make('ul','teen-format-list');
+    for(const measure of block.values){
+      const item=make('li','teen-format-row');
+      add(item,make('span','',measure.genre.replaceAll('_',' ')),make('strong','',measure.percent+'%'));
+      list.append(item);
+    }
+    card.append(list);grid.append(card);
+  }
+  details.append(grid);
+  const au=data.australia_youtube_genres;
+  if(au?.gender_conditioned_genres?.length){
+    details.append(make('h5','teen-au-heading','Australian children aged 6–13 who watch YouTube · 2025'));
+    details.append(make('p','measure-limit','The Roy Morgan survey covered 1,129 Australian children aged 6–13 in 2025. Values below are each genre watched within survey boy and girl YouTube-watcher groups, NOT the gender mix within genres. Exact gender subgroup sample sizes are unknown.'));
+    const auGrid=make('div','teen-au-grid');
+    for(const category of au.gender_conditioned_genres){
+      const row=make('article','teen-au-category');
+      row.append(make('strong','',category.id.replaceAll('_',' ')));
+      row.append(make('p','','Boys '+category.boys_percent+'% · Girls '+category.girls_percent+'%'));
+      auGrid.append(row);
+    }
+    details.append(auGrid);
+  }
+  const times=make('p','measure-limit','Separate Barb YouTube 2025 in-home weekly averages: '+data.youtube_inhome_age_minutes_per_week.map(x=>x.age_range+' years '+Math.floor(x.minutes/60)+'h '+String(x.minutes%60).padStart(2,'0')+'m').join(' · ')+'. These include neither out-of-home nor all mobile viewing.');
+  details.append(times);
+  const pew=make('p','measure-limit','Pew US teens aged 13–17, 2025: YouTube ever use boys 94%, girls 89%; almost constant use boys 20%, girls 13%. These are platform-use rates, not genre-use estimates.');
+  details.append(pew);
+  details.append(make('p','measure-limit','UK cross-app gender patterns remain directional, but the Australia study reports YouTube-specific genre differences only among children aged 6–13 in its local 2025 sample. Never infer a minor’s identity or viewing history.'));
+  details.append(audienceSources(data.source_ids,dossier));
+  const link=make('a','inline-link','Read age-specific denominators, collection methods and limits ↗');
+  link.href='./ontology/youtube/teen-video-format-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderChildAgeFormatStudy(data,dossier){
+ if(!data?.classification_cases?.length)return null;
+ const section=make('section','child-format-study');
+ const details=make('details','child-format-details');
+ details.append(make('summary','','Child-directed versus family animation and 18+ video rules'));
+ details.append(make('p','measure-limit','Being a cartoon or safe for a whole family does not by itself make a video child-directed. Age-gated 18+ content is a different policy. Adult-only surveys cannot establish that younger viewers are absent.'));
+ const grid=make('div','child-format-grid');
+ for(const item of data.classification_cases){
+   const card=make('article','child-format-card');
+   card.append(make('h5','',item.label));
+   card.append(make('p','measure-limit',item.limitations));
+   card.append(audienceSources(item.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ const measures=make('div','child-format-observed');
+ for(const item of data.population_observations){
+   const card=make('article','child-format-observation');
+   card.append(make('strong','',item.value+'%'));
+   card.append(make('p','',item.ages+' · '+item.measure.replaceAll('_',' ')));
+   card.append(make('p','measure-limit',item.limitations));
+   grid.append(card);
+ }
+ details.append(make('p','measure-limit','Ofcom ages 8–14 platform use and Barb ages 4–15 television viewing share have different denominators. No individual minors are profiled; global child audiences and income changes remain unknown.'));
+ const link=make('a','inline-link','Read content classification, privacy restrictions and aggregate UK survey frames ↗');
+ link.href='./ontology/youtube/child-age-and-format-gates.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderScreenViewingStudy(data,dossier){
+ if(!data?.service_level?.adult_16_plus)return null;
+ const section=make('section','screen-viewing-study');
+ const details=make('details','screen-viewing-details');
+ details.append(make('summary','','UK TV sets versus smartphone YouTube viewing — Barb 2025'));
+ details.append(make('p','measure-limit','Q2 2025, UK viewing at home over Wi-Fi. Percentages describe share of measured viewing, NOT share of distinct people or worldwide screen use.'));
+ const grid=make('div','screen-viewing-grid');
+ const adults=data.service_level.adult_16_plus;
+ const kids=data.service_level.children_4_to_15;
+ for(const row of [
+   {label:'Adults aged 16+',tv:adults.tv_set_percent,phone:adults.smartphone_percent},
+   {label:'Children aged 4–15',tv:kids.tv_set_percent,phone:kids.smartphone_percent}
+ ]){
+   const card=make('article','screen-viewing-card');
+   card.append(make('h5','',row.label));
+   card.append(make('p','', 'TV-set viewing share: '+row.tv+'%'));
+   card.append(make('p','measure-limit', 'Smartphone viewing share: '+(row.phone===null?'unknown in cited source':row.phone+'%')));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','The separate 200 selected-channel TV-only ACR program excludes Shorts, live and certain music channels. Its exclusions do not redefine the device shares for YouTube service-wide viewing.'));
+ details.append(make('p','measure-limit','UK smartphone viewing over cellular networks, device-specific creator payout, format mix and global screen share: unknown.'));
+ details.append(audienceSources([data.source_id,data.related_ofcom_2026.source_id],dossier));
+ const link=make('a','inline-link','Read Barb methodology, Ofcom viewing series and source restrictions ↗');
+ link.href='./ontology/youtube/screen-viewing-uk-2025.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderVideoSurfaceEconomics(data,dossier) {
+  if(!data?.surfaces?.length)return null;
+  const section=make('section','video-surface-study');
+  const details=make('details','video-surface-details');
+  details.append(make('summary','','Video formats, 8-minute mid-roll threshold and live replay evidence'));
+  details.append(make('p','measure-limit','Seven distinct YouTube publishing surfaces have different money and measurement units. An eligible mid-roll slot is not a served ad, and a replay is not guaranteed additional earnings.'));
+  const grid=make('div','video-surface-grid');
+  for(const item of data.surfaces){
+    const card=make('article','video-surface-card');
+    card.append(make('h5','',item.name));
+    card.append(make('p','measure-context','Unit: '+item.primary_unit.replaceAll('_',' ')));
+    card.append(make('p','',item.entry));
+    card.append(make('p','measure-limit',item.ad_mechanism));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Watch-page mid-roll eligibility begins at 8 minutes (480 seconds); actual delivery depends on ad demand, video experience and policy. Shorts revenue is not an 8-minute watch-page ad scheme.'));
+  details.append(make('p','measure-limit','Live and archived replay audience, ad revenue and labor must be tracked separately, without adding cumulative views or people twice.'));
+  const drama=data.microdrama_observations||[];
+  if(drama.length){
+    const views=drama.find(x=>x.id==='h1_2026_microdrama_views');
+    details.append(make('p','measure-limit','YouTube reported more than '+(views.value/1000000000)+' billion microdrama views in January–June 2026, plus more than 50% year-over-year watch-time growth and more than 90% TV-device view growth. These are historical event and relative metrics, not unique people or creator payouts.'));
+    details.append(audienceSources([views.source_id],dossier));
+  }
+
+  details.append(make('p','measure-limit','Official localized Help pages conflict on whether new claimed Shorts over one minute are automatically blocked after September 24, 2026; account-specific rights status remains unresolved.'));
+  const anchor=make('a','inline-link','Read source-specific rules, rights inconsistency and replay research fields ↗');
+  anchor.href='./ontology/youtube/video-surfaces-economics.md';anchor.target='_blank';anchor.rel='noopener noreferrer';
+  details.append(anchor);
+  section.append(details);
+  return section;
+}
+
+function renderEvidenceSynthesis(data,dossier){
+  if(!data?.findings?.length)return null;
+  const section=make('section','evidence-synthesis');
+  const details=make('details','evidence-synthesis-details');
+  details.append(make('summary','','Interim research synthesis: supported findings and unresolved economics'));
+  details.append(make('p','measure-limit','Evidence-backed account of what is documented, without turning platform events, selected creator surveys or annual culture totals into typical newcomer income.'));
+  const grid=make('div','evidence-synthesis-grid');
+  for(const finding of data.findings){
+    const card=make('article','evidence-synthesis-card');
+    card.append(make('h5','',finding.title));
+    card.append(make('p','',finding.supported));
+    card.append(make('p','measure-limit','Not measured: '+finding.unknown));
+    card.append(audienceSources(finding.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Representative zero-earner share, first-year creator net profit and deduplicated global monthly audience: unknown.'));
+  const link=make('a','inline-link','Read the source-by-source interim marketplace dossier ↗');
+  link.href='./ontology/youtube/research-synthesis-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderDecliningTopicAudit(data,dossier){
+ if(!data?.registered_example_checks?.length)return null;
+ const section=make('section','declining-topic-audit');
+ const details=make('details','declining-topic-details');
+ details.append(make('summary','','Declining content claims: measured change or incompatible samples?'));
+ details.append(make('p','measure-limit','No verified YouTube niche decline is established here. One annual or partial-year aggregate cannot prove recurring falling demand, and the August 2026 public-view definition changed.'));
+ const grid=make('div','declining-topic-grid');
+ for(const item of data.registered_example_checks){
+   const card=make('article','declining-topic-card');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','',item.finding));
+   card.append(make('p','measure-limit',item.reason));
+   card.append(audienceSources(item.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Topic declines, active people changes, creator income effects and forecasts: unknown. A descriptive two-period change is not a proven persistent trend.'));
+ const link=make('a','inline-link','Read comparison requirements and sample audit tests ↗');
+ link.href='./ontology/youtube/declining-content-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderSeasonalDiscovery(data,dossier){
+  if(!data?.cases?.length)return null;
+  const section=make('section','seasonal-discovery');
+  const details=make('details','seasonal-discovery-details');
+  details.append(make('summary','','Calendar-driven video discovery: what observed seasonal evidence can show'));
+  details.append(make('p','measure-limit','The NFL report measures a within-year offseason share. Prom and Halloween reports cover different annual or partial-year title queries. None supports a universal seasonal lift or best upload month.'));
+  const grid=make('div','seasonal-discovery-grid');
+  for(const item of data.cases){
+    const card=make('article','seasonal-discovery-card');
+    card.append(make('h5','',item.topic.replaceAll('_',' ')));
+    card.append(make('p','seasonal-observation',item.valid_statement));
+    card.append(make('p','measure-limit',item.limitations));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Seasonal causal effect, creator profit seasonality and reliable optimal upload month: unknown. A repeatable trend needs matched bins, stable measures and multiple annual cycles.'));
+  const link=make('a','inline-link','Review temporal units, source windows and remaining evidence gaps ↗');
+  link.href='./ontology/youtube/seasonal-discovery-comparison.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderPublishingTimeResearch(data,dossier){
+  if(!data?.official_findings?.length)return null;
+  const section=make('section','publish-time-study');
+  const details=make('details','publish-time-details');
+  details.append(make('summary','','Publishing times by format, geography and owner audience activity'));
+  details.append(make('p','measure-limit','YouTube Studio reports when a channel\'s viewers were online over the past 28 days. Publishing while they are active may help early views but is not known to improve a video\'s long-term performance.'));
+  const grid=make('div','publish-time-grid');
+  for(const item of data.format_comparison){
+    const card=make('article','publish-time-card');
+    card.append(make('h5','',item.format.replaceAll('_',' ')));
+    card.append(make('p','',item.release_time_matters_for.replaceAll('_',' ')));
+    card.append(make('p','measure-limit','Verified long-term advantage: '+(item.longterm_advantage_verified===null?'unknown':'no evidence of a verified advantage')));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Scheduling uses a selected time zone while watch-page dates may follow PST. Missing country rows in Analytics can be suppressed for privacy and must not be recorded as zero viewers.'));
+  details.append(make('p','measure-limit','Universal optimal publication hour, geography-specific lift and causal long-term effect: unknown.'));
+  const link=make('a','inline-link','Read official timing guidance, DST and experimental evidence gates ↗');
+  link.href='./ontology/youtube/geographic-publishing-time.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderContentFormats(data,dossier) {
+  if(!data)return null;
+  const section=make('section','content-format-section');
+  const details=make('details','content-format-details');
+  details.append(make('summary','','Compare '+data.formats.length+' ways to publish and distribute'));
+  details.append(make('p','measure-limit','Different publication formats have different discovery, link and eligibility rules. None has a verified typical profit or success rate.'));
+  const grid=make('div','content-formats-grid');
+  for(const format of data.formats){
+    const card=make('article','content-format-card');
+    card.append(make('h5','',format.label));
+    card.append(make('p','',format.format_rule));
+    card.append(make('small','', 'Access: '+format.entry_gate));
+    const inner=make('details','content-format-inner');
+    inner.append(make('summary','','Discovery and earning details'));
+    inner.append(make('p','', 'Discovery: '+format.discovery.join(', ')));
+    inner.append(make('p','', 'Possible revenue routes: '+format.money.join(', ').replaceAll('_',' ')));
+    inner.append(make('p','', 'Links: '+format.links.join('; ')));
+    inner.append(make('p','measure-limit',format.cautions.join(' ')));
+    inner.append(audienceSources(format.source_ids,dossier));
+    card.append(inner);
+    grid.append(card);
+  }
+  details.append(grid);
+  const link=make('a','inline-link','Read the format and link comparison ↗');
+  link.href='./ontology/youtube/content-formats.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderMultilingualDistribution(data,dossier) {
+  if(!data?.product_surfaces?.length)return null;
+  const section=make('section','multilingual-distribution');
+  const details=make('details','multilingual-distribution-details');
+  details.append(make('summary','','Languages, audio dubbing, captions and translated discovery'));
+  details.append(make('p','measure-limit','Spoken language, dub language, subtitles, viewer preference and country are independent attributes. Product access varies; language shares do not give a creator earnings forecast.'));
+  const observations=make('div','multilingual-observations');
+  for(const entry of data.official_selected_observations){
+    const card=make('article','multilingual-observation');
+    card.append(make('strong','',entry.comparator==='greater_than'?'Over '+entry.value+'%':entry.value));
+    card.append(make('p','',entry.metric.replaceAll('_',' ')));
+    card.append(make('small','',entry.source_period.replaceAll('_',' ')+' · '+entry.population));
+    card.append(make('p','measure-limit',entry.limits));
+    card.append(audienceSources(entry.source_ids,dossier));
+    observations.append(card);
+  }
+  details.append(observations);
+  const products=make('div','multilingual-product-grid');
+  for(const feature of data.product_surfaces){
+    const card=make('article','multilingual-product-card');
+    card.append(make('h5','',feature.label));
+    card.append(make('p','',feature.limits));
+    card.append(make('small','', 'Eligible formats: '+feature.content_formats.join(', ').replaceAll('_',' ')));
+    card.append(audienceSources(feature.source_ids,dossier));
+    products.append(card);
+  }
+  details.append(products);
+  const examples=make('details','multilingual-language-examples');
+  examples.append(make('summary','','Selected automatic-dubbing language pairs · current help snapshot'));
+  const list=make('ul','multilingual-language-list');
+  for(const pair of data.automatic_dubbing_example_pairs){
+    const li=make('li','');
+    add(li,make('strong','',pair.original+' → '),make('span','',pair.targets.join(', ')));
+    list.append(li);
+  }
+  examples.append(list);details.append(examples);
+  details.append(make('p','measure-limit','The over-25% finding is a share of watch time for selected multilingual-audio creators, not additional traffic or causal income lift. Typical dubbing hours, prices and newcomer outcomes remain unknown.'));
+  const link=make('a','inline-link','Review language-pair definitions and study limitations ↗');
+  link.href='./ontology/youtube/multilingual-distribution.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);
+  section.append(details);return section;
+}
+
+function renderCommunityAudienceStudy(data,dossier) {
+  if(!data)return null;
+  const section=make('section','community-survey');
+  const details=make('details','community-survey-details');
+  details.append(make('summary','','Measured audience: U.S. YouTube news consumption'));
+  details.append(make('p','measure-limit','This survey describes U.S. adults who regularly get news on YouTube. It is not a count of political-video viewers, all YouTube users or a prediction of ad revenue.'));
+  const latest=data.trends.at(-1);
+  const summary=make('div','community-survey-numbers');
+  add(summary,
+    blockHeading('U.S. adults',latest.all_adults_percent+'%'),
+    blockHeading('U.S. YouTube users',latest.youtube_users_percent+'%'));
+  details.append(summary);
+  details.append(make('p','measure-context','2026 Pew survey · '+data.methodology.survey_2026));
+  const trends=make('details','community-survey-trends');
+  trends.append(make('summary','','Annual news-use survey rates, 2020–2026'));
+  const list=make('div','community-survey-grid');
+  for(const point of data.trends){
+    const card=make('article','community-survey-year');
+    add(card,make('strong','',point.year),
+      make('p','',point.all_adults_percent+'% of U.S. adults'),
+      make('p','',point.youtube_users_percent+'% of U.S. YouTube users'));
+    list.append(card);
+  }
+  trends.append(list);
+  details.append(trends);
+  const profile=make('details','community-survey-profile');
+  profile.append(make('summary','','Who regularly got YouTube news in 2025'));
+  profile.append(make('p','measure-limit','Each share below describes the makeup of regular YouTube news consumers, not the chance that someone in a demographic group uses the platform. Shares do not necessarily sum to 100%.'));
+  const cards=make('div','community-survey-grid');
+  for(const x of data.demographic_composition){
+    const card=make('article','community-profile-card');
+    add(card,make('h5','',x.category),make('strong','',x.share_percent+'%'),
+      make('small','',x.dimension.replaceAll('_',' ')+' · 2025 survey'));
+    cards.append(card);
+  }
+  profile.append(cards);
+  details.append(profile);
+  details.append(make('p','measure-limit','Political affiliation here is voluntary, aggregate survey reporting. No individual political beliefs or viewing histories are collected or inferred.'));
+  details.append(audienceSources(data.source_ids,dossier));
+  const link=make('a','inline-link','Full survey definitions and caveats ↗');
+  link.href='./ontology/youtube/community-audience-studies.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderPlatformComparisonSet(data,dossier){
+  if(!data?.candidates?.length)return null;
+  const section=make('section','video-comparators');
+  const details=make('details','video-comparators-details');
+  details.append(make('summary','','Comparable video creator products · not comparable earnings'));
+  details.append(make('p','measure-limit','These adjacent services are candidates for YouTube research comparisons only; they have not been added as Mercata specimens. Audience counts, qualified views, subscribers and paid customer transactions are different units.'));
+  const grid=make('div','video-comparators-grid');
+  for(const item of data.candidates){
+    const card=make('article','video-comparator');
+    card.append(make('h5','',item.name));
+    card.append(make('p','measure-context','Compared with: '+item.comparable_youtube_surface));
+    card.append(make('p','',item.earnings_mechanism));
+    card.append(make('p','measure-limit',item.limitations));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Creator income, zero-earner share, typical work hours and general profitability: unknown for these comparison cohorts.'));
+  const link=make('a','inline-link','Source-specific comparison criteria and exclusions ↗');
+  link.href='./ontology/youtube/comparison-set.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);section.append(details);return section;
+}
+
+function renderHealthFitnessResearch(data,dossier){
+ if(!data?.content_categories?.length)return null;
+ const section=make('section','health-fitness-research');
+ const details=make('details','health-fitness-details');
+ details.append(make('summary','','Fitness, wellness and health information: source-checked policy boundaries'));
+ details.append(make('p','measure-limit','Nine proposed research categories, not measured audience populations. Ordinary exercise, treatment claims, body-image content and professional health-source status require different evidence.'));
+ const grid=make('div','health-fitness-grid');
+ for(const item of data.content_categories){
+   const card=make('article','health-fitness-card');
+   card.append(make('h5','',item.label));
+   card.append(make('p','',item.examples.join(' · ')));
+   card.append(make('p','measure-limit',item.claim_review_required));
+   card.append(make('p','measure-limit','Unique audience, creator count and creator earnings: unknown'));
+   card.append(audienceSources(item.sources,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Four independent layers: medical misinformation, eating-disorder content safety, advertiser suitability and optional professional health-source discovery. A public video does not automatically qualify for health-source panels.'));
+ details.append(make('p','measure-limit','Health-feature eligibility differs from general YPP advertising entry and varies by country and language. The observed policies do not measure earnings, medical quality, audience size or enforcement frequency.'));
+ const link=make('a','inline-link','Read official policy scope, professional source rules and unknown measurements ↗');
+ link.href='./ontology/youtube/health-fitness-content.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderFinanceContentTaxonomy(data,dossier){
+ if(!data?.content_families?.length)return null;
+ const section=make('section','finance-content');
+ const details=make('details','finance-content-details');
+ details.append(make('summary','','Finance and business videos · education, marketing and promotion'));
+ details.append(make('p','measure-limit','These eight overlapping content classes distinguish general education, affiliate/owned-product marketing, and risk-sensitive financial promotions. The taxonomy is NOT a financial-advice service or an estimate of niche profitability.'));
+ const grid=make('div','finance-content-grid');
+ for(const item of data.content_families){
+   const card=make('article','finance-content-card');
+   card.append(make('h5','',item.label));
+   card.append(make('p','measure-context',item.parent.replaceAll('_',' ')));
+   card.append(make('p','',item.illustrative_topics.join(' · ')));
+   card.append(make('p','measure-limit',item.additional_risk_review));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Commercial affiliate links and paid sponsorships require separate policy and material-connection review. An SEC investor warning does not determine the conduct of an individual creator.'));
+ details.append(audienceSources([...data.platform_source_ids,...data.jurisdictional_source_ids],dossier));
+ details.append(make('p','measure-limit','Unique viewers, finance creators, niche RPM, audience overlap and creator profits are unknown. U.S. consumer and investor guidance is not worldwide law.'));
+ const link=make('a','inline-link','Read category definitions, policy references and measurement gaps ↗');
+ link.href='./ontology/youtube/finance-content-taxonomy.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderTechnologySubcultures(data,dossier){
+ if(!data?.segments?.length)return null;
+ const section=make('section','technology-subcultures');
+ const details=make('details','technology-subcultures-details');
+ details.append(make('summary','','Software tutorials, hardware reviews and workspace videos · separate categories'));
+ details.append(make('p','measure-limit','Programming, application troubleshooting, product reviews, repair and workspace aesthetics overlap. No tech-only unique audience, channel population or creator earnings has been measured.'));
+ const grid=make('div','technology-subculture-grid');
+ for(const item of data.segments){
+  const card=make('article','technology-subculture-card');
+  card.append(make('h5','',item.label));
+  card.append(make('p','measure-context',item.formats.map(x=>x.replaceAll('_',' ')).join(' · ')));
+  card.append(make('p','measure-limit',item.provenance));
+  card.append(audienceSources(item.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ const figures=make('div','technology-metric-grid');
+ for(const value of data.observed_public_metrics){
+  const card=make('article','technology-metric-card');
+  card.append(make('strong','',value.comparison==='greater_than'?'More than '+value.value.toLocaleString():value.value.toLocaleString()));
+  card.append(make('p','',value.population));
+  card.append(make('p','measure-limit',value.geography+' · '+value.start+' to '+value.end+' · view events, not unique people'));
+  card.append(audienceSources([value.source_id],dossier));
+  figures.append(card);
+ }
+ details.append(figures);
+ details.append(make('p','measure-limit','The two metrics have different countries, dates and inclusion rules. Neither is a software tutorial market-size estimate, and they cannot be divided into a niche audience share.'));
+ const link=make('a','inline-link','Read segmented subcultures and original observation limitations ↗');
+ link.href='./ontology/youtube/technology-subcultures-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCommentNormsEvidence(data,dossier){
+  if(!data?.studies?.length)return null;
+  const section=make('section','comment-norms-evidence');
+  const details=make('details','comment-norms-details');
+  details.append(make('summary','','Comment behavior in selected YouTube communities · bounded studies'));
+  details.append(make('p','measure-limit','Comment counts are not unique viewers or representative public opinion. Two peer-reviewed studies examine different English-language samples, populations and coding methods.'));
+  const grid=make('div','comment-norms-grid');
+  for(const study of data.studies){
+    const card=make('article','comment-norms-card');
+    if(study.id==='political_anglophone_2025'){
+      card.append(make('h5','','English-language political channels · 2025 paper'));
+      card.append(make('strong','','About half of comments from just over 2% of commenters'));
+      card.append(make('p','measure-limit','This is a selected sample of political channels, not a platform-wide commenter census or a measure of political belief.'));
+    }else{
+      card.append(make('h5','','Selected climate-change videos · 2026 paper'));
+      card.append(make('strong','',study.n_videos+' selected videos'));
+      card.append(make('p','measure-limit','Reply threads had a greater share of positively coded comments than independent comments within the selected sample. Association is not causation.'));
+    }
+    card.append(make('p','measure-limit',study.selection));
+    card.append(audienceSources([study.source_id],dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Commenter identities, political affiliations, population toxicity rates, causal reply effects and moderation labor hours: unknown. No individual comments or profiles are collected.'));
+  const link=make('a','inline-link','Read original study frames, methods and limitations ↗');
+  link.href='./ontology/youtube/comment-norms-evidence.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);section.append(details);return section;
+}
+
+function renderCreatorCollaborationEvidence(data,dossier){
+ if(!data?.survey_groups?.length)return null;
+ const section=make('section','creator-collaboration-evidence');
+ const details=make('details','creator-collaboration-details');
+ details.append(make('summary','','Creator collaborations and fandom participation · dated evidence'));
+ details.append(make('p','measure-limit','Current Studio documentation permits up to '+data.collaboration_policy.max_invited_creators_current+' collaborators, versus '+data.collaboration_policy.max_invited_creators_initial_rollout+' at initial rollout. The uploading channel receives native video revenue; YouTube does not split collaboration payouts automatically.'));
+ const grid=make('div','creator-collaboration-groups');
+ for(const cohort of data.survey_groups){
+  const card=make('article','creator-fandom-cohort');
+  card.append(make('h5','',cohort.population+' · study N='+cohort.n_total));
+  const list=make('ul','creator-fandom-metrics');
+  for(const item of cohort.questions){
+   const row=make('li','creator-fandom-metric');
+   row.append(make('span','',item.meaning));row.append(make('strong','',item.percent+'%'));
+   list.append(row);
+  }
+  card.append(list);
+  card.append(make('p','measure-limit','Commissioned online survey: question-specific n and probability weights unverified.'));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Shared recommendations are an intended feature, not guaranteed. No collaboration earnings, unique shared audience, or causal growth lift has been measured.'));
+ details.append(audienceSources([...new Set(data.evidence_families.flatMap(x=>x.source_ids))],dossier));
+ const link=make('a','inline-link','Read the payout rules and fandom-sample limitations ↗');
+ link.href='./ontology/youtube/creator-collaboration-fandom-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderGamingReleaseEvents(data,dossier){
+ if(!data?.events?.length)return null;
+ const section=make('section','gaming-release-events');
+ const details=make('details','gaming-release-details');
+ details.append(make('summary','','Game-release spikes: dated view events, not platform-wide growth'));
+ details.append(make('p','measure-limit','Two different historic events: Splatoon 2 at its 2017 game launch in Japan and a GTA VI trailer premiere in 2023 worldwide. Video views are events, not distinct people or attributable creator earnings.'));
+ const grid=make('div','gaming-release-grid');
+ for(const event of data.events){
+   const card=make('article','gaming-release-card');
+   card.append(make('h5','',event.game+' · '+event.event_type.replaceAll('_',' ')));
+   card.append(make('p','measure-context',event.country_scope+' · '+event.window_start+' to '+event.window_end));
+   for(const x of event.measures){
+     const row=make('p','gaming-release-measure',(x.comparison==='>'?'Over ':'')+x.value.toLocaleString()+' '+x.unit.replaceAll('_',' '));
+     card.append(row);
+     card.append(make('p','measure-limit',x.scope));
+   }
+   card.append(make('p','measure-limit',event.limitations));
+   card.append(audienceSources(event.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','A single trailer belongs to the wider related-video count. Counts for different events, geographies or windows cannot be summed or treated as comparable release-day growth.'));
+ details.append(make('p','measure-limit','Matched pre-release and post-release baselines, causal lift, viewer populations, new channel incomes and effects of the 2026 view-definition change: unknown.'));
+ const link=make('a','inline-link','Read source dates and reproducible release-window comparison rules ↗');
+ link.href='./ontology/youtube/gaming-release-events.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderNflSeasonality(data,dossier){
+ if(!data?.observations?.length)return null;
+ const section=make('section','nfl-seasonality');
+ const details=make('details','nfl-seasonality-details');
+ details.append(make('summary','','NFL videos · measured 2020–2025 growth and 2025 offseason share'));
+ details.append(make('p','measure-limit','YouTube reports bounded NFL-related global video activity, not unique fans or creator earnings. View events and uploaded videos have different denominators.'));
+ const grid=make('div','nfl-seasonality-grid');
+ const labels={
+   nfl_views_2025:'2025 NFL-related view events',
+   nfl_views_growth_2020_to_2025:'2020–2025 annual views increase',
+   nfl_uploads_growth_2020_to_2025:'2020–2025 annual uploads increase',
+   nfl_2025_offseason_share:'Share of 2025 NFL-related views in offseason'
+ };
+ for(const item of data.observations){
+   const card=make('article','nfl-seasonality-card');
+   const display=item.unit==='view_events'?'More than '+(item.value/1000000000)+' billion':'More than '+item.value+'%';
+   card.append(make('strong','',display));
+   card.append(make('h5','',labels[item.id]||item.measure.replaceAll('_',' ')));
+   card.append(make('p','measure-limit',item.period.replaceAll('_',' ')));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','More than 30% offseason views is a share within 2025, not 30% seasonal growth. Intermediate 2021–24 annual points and monthly views are unmeasured and must not be interpolated.'));
+ details.append(audienceSources([data.source_id],dossier));
+ const link=make('a','inline-link','Read dates, units, source methods and missing series ↗');
+ link.href='./ontology/youtube/nfl-view-seasonality-2026.md';link.rel='noopener noreferrer';link.target='_blank';
+ details.append(link);section.append(details);return section;
+}
+
+function renderBeautyFashionQuerySeries(data,dossier){
+  if(!data?.source_observations?.length)return null;
+  const section=make('section','beauty-fashion-query-series');
+  const details=make('details','beauty-fashion-query-details');
+  details.append(make('summary','','Beauty, fashion and routine title-query evidence · units and seasons'));
+  details.append(make('p','measure-limit','Five global platform-reported title searches use different date ranges, predicates and units. Their values cannot be combined into a popularity ranking or year-over-year growth line.'));
+  const grid=make('div','beauty-fashion-query-grid');
+  for(const item of data.source_observations){
+    const card=make('article','beauty-fashion-query-card');
+    card.append(make('h5','',item.theme.replaceAll('_',' ')));
+    const figure=(item.value/1000000).toLocaleString()+'M '+item.unit.replaceAll('_',' ');
+    card.append(make('strong','', 'More than '+figure));
+    card.append(make('p','',item.period_start+' to '+item.period_end));
+    card.append(make('p','measure-limit','Selection: '+item.title_rule));
+    card.append(make('p','measure-limit',item.period_end_qualification));
+    card.append(audienceSources([item.source_id],dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Prom and Halloween may be calendar-linked, but seasonal effects were not measured. The 2026 morning-routine value counts uploads, not views. The August 24, 2026 public viewing-definition break also prevents naive cross-year comparisons.'));
+  details.append(make('p','measure-limit','Year-over-year trend, unique people, creator population, seasonality magnitude and creator income: unknown.'));
+  const link=make('a','inline-link','Read exact source predicates, observation windows and query-series protocol ↗');
+  link.href='./ontology/youtube/beauty-fashion-query-series.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderAnimationFormatCycles(data,dossier){
+  if(!data?.timeline?.length)return null;
+  const section=make('section','animation-format-cycles');
+  const details=make('details','animation-format-details');
+  details.append(make('summary','','Independent animation and meme formats · 2024–2026 evidence'));
+  details.append(make('p','measure-limit','Publication dates are not necessarily measurement dates. The U.S. and Mexico survey findings released in 2026 both used April 2025 samples of online animation fans, not all YouTube users.'));
+  if(data.anime_view_geography_2023){
+    const evidence=data.anime_view_geography_2023;
+    details.append(make('p','measure-limit','Anime geography: >'+evidence.percent_lower_bound_exclusive+'% of 2023 global anime-related video views occurred outside Japan. View events are not unique viewers or an adult-audience percentage.'));
+    details.append(audienceSources([evidence.source_id],dossier));
+  }
+  const timeline=make('div','animation-format-timeline');
+  for(const item of data.timeline){
+    const card=make('article','animation-format-event');
+    card.append(make('h5','',item.published_at+' · '+item.format.replaceAll('_',' ')));
+    card.append(make('p','',item.description));
+    card.append(make('p','measure-limit','Evidence type: '+item.event_type.replaceAll('_',' ')+' · Fieldwork: '+item.observation_period));
+    card.append(audienceSources([item.source_id],dossier));
+    timeline.append(card);
+  }
+  details.append(timeline);
+  const observations=make('div','animation-format-surveys');
+  for(const item of data.survey_observations){
+    const card=make('article','animation-format-survey');
+    card.append(make('strong','',item.reported_percent+'%'));
+    card.append(make('p','',item.country+' · '+item.ages+' · '+item.question.replaceAll('_',' ')));
+    card.append(make('p','measure-limit','Online sample N='+item.sample_total_n+'; per-question respondent count unknown.'));
+    observations.append(card);
+  }
+  details.append(observations);
+  details.append(make('p','measure-limit','These are different questions and populations; no 2024–2026 audience growth rate, seasonality, format profit or representative animation-creator count is measured.'));
+  const link=make('a','inline-link','Source frames, event dates and limits on trend claims ↗');
+  link.href='./ontology/youtube/animation-format-cycles.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);section.append(details);return section;
+}
+
+function renderVideoAttentionCulture(data,dossier){
+  if(!data?.source_families?.length)return null;
+  const section=make('section','video-attention-culture');
+  const details=make('details','video-attention-details');
+  details.append(make('summary','','YouTube video attention and niche culture · distinct 2025–2026 evidence'));
+  details.append(make('p','measure-limit','Omdia studied the supply and viewing time of videos; YouTube/NRG surveyed U.S. online respondents about niches and personal interests. Their categories, units, periods and audiences cannot be merged into one user or creator estimate.'));
+  const grid=make('div','video-attention-grid');
+  for(const family of data.source_families){
+    const card=make('article','video-attention-card');
+    card.append(make('h5','',family.id==='omdia-2026'?'Omdia · video supply and watch time':'YouTube/NRG · U.S. niche and fandom survey'));
+    card.append(make('p','measure-context',family.population));
+    const list=make('ul','video-attention-observations');
+    const matches=data.observations.filter(x=>family.source_ids.includes(x.source_id));
+    for(const obs of matches){
+      const item=make('li','video-attention-observation');
+      const number=obs.id==='omdia-video-stock-dec2025'?'~29 billion':obs.comparison==='greater_than'?'More than '+obs.value+'%':obs.value+'%';
+      const label=obs.id==='omdia-video-stock-dec2025'?'Estimated hosted videos, December 2025':obs.measurement.replaceAll('_',' ');
+      item.append(make('strong','',number));
+      item.append(make('span','',label));
+      list.append(item);
+    }
+    card.append(list);
+    card.append(make('p','measure-limit',family.method));
+    card.append(audienceSources(family.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','The Omdia video genres and production categories may overlap; they must not be added to 100%. The 496-person and 939-person NRG respondent frames are age-dependent, not global YouTube audience populations.'));
+  details.append(make('p','measure-limit','Distinct niche viewers, creator income, per-niche profit, active creators and cross-category audience intersections remain unknown.'));
+  const link=make('a','inline-link','Read the dated studies, denominators and methodological exclusions ↗');
+  link.href='./ontology/youtube/video-attention-culture-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderHistoricalLinkingStudy(data,dossier){
+  if(!data?.population?.channels)return null;
+  const section=make('section','historical-linking');
+  const details=make('details','historical-linking-details');
+  details.append(make('summary','','Historical 2019 channel linking · not creator earnings'));
+  details.append(make('p','measure-limit',data.population.channels.toLocaleString()+' channels with at least 100,000 subscribers, observed at the end of 2019. This selected sample is not representative of new creators or all channels in 2026.'));
+  const grid=make('div','historical-linking-grid');
+  for(const [label,key] of [['Marketplace links','marketplace'],['Crowdfunding links','crowdfunding']]){
+    const item=data.channel_linking[key].find(x=>x.id==='less_than_20pct');
+    const zero=data.channel_linking[key].find(x=>x.id==='none');
+    const card=make('article','historical-link-card');
+    card.append(make('h5','',label));
+    card.append(make('strong','historical-link-share',item.percent_reported+'%'));
+    card.append(make('p','measure-limit','Of sampled channels had links in fewer than 20% of videos; includes '+zero.percent_reported+'% with no such links.'));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','A URL in a video description is not evidence of sales, sponsorship revenue, creator profit or a causal strategy. The paper also models advertising revenue; that model is not observed channel payout data.'));
+  details.append(audienceSources([data.source.source_id],dossier));
+  const link=make('a','inline-link','Read the historical sample and its denominator limits ↗');
+  link.href='./ontology/youtube/historical-linking-study.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderCompetitionSample(data,dossier) {
+  if(!data)return null;
+  const section=make('section','competition-sample');
+  const details=make('details','competition-sample-details');
+  details.append(make('summary','','Creator competition: one commercial analytics sample'));
+  details.append(make('p','measure-limit','Metricool analyzed '+data.source.sampled_videos.toLocaleString()+' videos from '+data.source.sampled_accounts.toLocaleString()+' accounts. The recruitment frame and exact date windows are not fully disclosed; these figures are not universal creator success rates.'));
+  const groups=make('div','competition-grid');
+  for(const item of data.cohort_tier_transitions){
+    const cell=make('article','competition-tier');
+    cell.append(make('h5','',item.tier+' channels'));
+    cell.append(make('strong','',item.share_moved_up_percent+'%'));
+    cell.append(make('small','', 'Moved to a higher subscriber tier in the observed cohort'));
+    groups.append(cell);
+  }
+  details.append(groups);
+  const sources=make('details','competition-traffic');
+  sources.append(make('summary','','Traffic attribution in this sampled dataset'));
+  const list=make('div','competition-traffic-grid');
+  for(const item of data.traffic_source_share_of_sampled_organic_views){
+    const row=make('article','competition-traffic-item');
+    row.append(make('strong','',item.percent+'%'));
+    row.append(make('span','',item.id.replaceAll('_',' ')));
+    list.append(row);
+  }
+  sources.append(list);details.append(sources);
+  details.append(make('p','measure-limit','These movements and traffic shares are descriptive, not the probability of monetizing a new channel. Short-form and long-form revenue changes can also reflect selection, seasonality and viewing-metric revisions.'));
+  details.append(audienceSources([data.source.id],dossier));
+  const link=make('a','inline-link','Read study limitations and exact cohorts ↗');
+  link.href='./ontology/youtube/competition-observations.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);return section;
+}
+
+function renderAcademicResearch(data,dossier) {
+  if(!data?.studies?.length)return null;
+  const section=make('section','academic-research');
+  const details=make('details','academic-research-details');
+  details.append(make('summary','','Academic studies of creator income and viewing · '+data.studies.length+' studies'));
+  details.append(make('p','measure-limit','The studies measure different regions, creators and types of income. Their abstracts were checked, but complete methods and source datasets have not yet been audited. They cannot be pooled into a typical YouTube salary.'));
+  const grid=make('div','academic-studies-grid');
+  for(const paper of data.studies){
+    const card=make('article','academic-study');
+    card.append(make('h5','',paper.title));
+    card.append(make('p','',paper.year+' · '+paper.scope));
+    if(paper.numeric?.gini_coefficient!==undefined){
+      card.append(make('p','', 'Reported sample earnings Gini: '+paper.numeric.gini_coefficient));
+    } else if(paper.sample_n!==null){
+      card.append(make('p','', 'Studied channels/creators: '+paper.sample_n.toLocaleString()));
+    }
+    const findings=make('ul','academic-findings');
+    for(const sentence of paper.findings)findings.append(make('li','',sentence));
+    card.append(findings);
+    card.append(make('p','measure-limit',paper.limitations[0]));
+    card.append(audienceSources([paper.id],dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  const link=make('a','inline-link','Read the research boundaries and bibliography ↗');
+  link.href='./ontology/youtube/academic-studies.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);
+  return section;
+}
+
+async function showDossier(entry) {
+  const host=$('#dossier-view');
+  host.hidden=false;
+  host.replaceChildren(make('p','unresearched','Loading research record…'));
+  host.scrollIntoView({behavior:'smooth',block:'start'});
+  try {
+    const [record,work,studyPlan,platformPolicy,yppFuture,topicCatalog,topicActivity,samplingBudget,adultUseHistory,incomeEvidence,channelIncome,crossPlatformIncome,airStudioBenchmarks,lifecycleHorizons,newcomerIncomeProtocol,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,advertiserHistory,musicRights,productionCosts,productionEffort,viewDefinition,analyticsGuide,platformScale,countryReach,geographicScope,audienceOverlap,beautyGamingPanel,genderCommunityEvidence,childrenSeasonality,viewerPersonMetrics,usDemographicUse,identityResearch,surveyFrameCrosswalk,countryProgramAccess,taxWithholding,brandDisclosure,sponsorCategoryEvidence,publishingCadence,creatorSafety,trafficConcentration,euCreatorConsultation,eligibilityMatrix,channelOnboarding,channelOwnership,applicationLifecycle,creatorGrowth,retentionPostsMemberships,promoteEconomics,contentFormats,publishTimeStudy,seasonalDiscovery,decliningTopicAudit,researchSynthesis,videoSurfaceEconomics,screenViewingStudy,childAgeFormat,teenFormatEvidence,multilingualDistribution,newsAudienceStudy,competitionSample,historicalLinking,videoAttentionCulture,animationFormatCycles,beautyFashionQueries,nflSeasonality,gamingReleaseEvents,creatorCollaboration,commentNormsEvidence,technologySubcultures,financeContent,healthFitness,comparisonSet,academicResearch,reputationPortability,checkoutRefundEvidence,memberCohortProtocol,shortsReferralStudy,audiencePopulationCrosswalk,countryAdReach,usNewsDemographics,syntheticMediaPolicy,recommendationEvidence,channelCohortEvidence,firstUploadVlogStudy,externalLinkFunnel,retentionObservability,crossplatformPosting,gamingPeriods,searchDemandProxy,videoProductionCosts,exclusiveRightsEvidence,fraudSecurity]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/ypp-transition-2027.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/public-api-sampling-budget.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/cross-platform-income-surveys.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/air-studio-benchmarks-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/lifecycle-horizons.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/newcomer-income-cohort.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/advertiser-policy-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/music-rights-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-costs.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-effort-comparison.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/view-definition-break.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-reach-devices.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/geographic-scope.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/audience-overlap.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/beauty-gaming-overlap-2025.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/gender-community-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/children-media-seasonality.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/viewer-person-metrics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-demographic-use-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/demographic-identity-uncertainty.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/study-frame-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-eligibility-payments.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/tax-withholding-mechanics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/brand-disclosure-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/sponsor-category-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/publishing-cadence-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-safety-continuity.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/traffic-concentration.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eu-creator-consultation-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-onboarding.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-ownership-continuity.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/retention-posts-memberships.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/promote-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/geographic-publishing-time.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/seasonal-discovery-comparison.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/declining-content-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/research-synthesis-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/video-surfaces-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/screen-viewing-uk-2025.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/child-age-and-format-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/teen-video-format-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/multilingual-distribution.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/competition-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/historical-linking-study.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/video-attention-culture-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/animation-format-cycles.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/beauty-fashion-query-series.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/nfl-view-seasonality-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/gaming-release-events.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-collaboration-fandom-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/comment-norms-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/technology-subcultures-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/finance-content-taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/health-fitness-content.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/comparison-set.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/academic-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/reputation-portability.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/checkout-refund-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/member-cohort-protocol.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/shorts-related-video-funnel.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/audience-population-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-ad-reach-comparisons.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-news-demographic-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/synthetic-media-rights-policy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/recommendation-surface-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-cohort-observations-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/first-upload-vlog-study-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/external-link-funnel-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/retention-observability.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/crossplatform-posting-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/gaming-livestream-quarterly-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/search-demand-proxy-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/video-production-cost-register.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/exclusive-rights-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-fraud-security.json'):Promise.resolve(null)]);
+    if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
+    const outer=make('article','dossier-shell');
+    outer.style.setProperty('--specimen',entry.color.hex);
+    const top=make('div','dossier-head');
+    const heading=make('div','');
+    add(heading,make('p','eyebrow',entry.domain.replaceAll('-',' ')+' / '+record.status),
+      make('h3','',record.name));
+    const close=make('button','dossier-close','Close ×');
+    close.type='button';
+    close.addEventListener('click',()=>{host.hidden=true;host.replaceChildren();});
+    add(top,heading,close);
+    outer.append(top);
+    const official=make('a','inline-link','Official website ↗');
+    official.href=record.official_url;
+    official.target='_blank';
+    official.rel='noopener noreferrer';
+    const dossierJson=make('a','inline-link','Dossier JSON ↗');
+    dossierJson.href='./'+entry.dossier;
+    const queueJson=make('a','inline-link','Task JSON ↗');
+    queueJson.href='./'+entry.queue;
+    add(outer,add(make('div','dossier-links'),official,dossierJson,queueJson));
+    const tasks=work.queues.flatMap(q=>q.tasks);
+    const done=tasks.filter(t=>t.status==='complete'&&t.progress===100).length;
+    const stats=make('div','dossier-stats');
+    add(stats,blockHeading('Research tasks',studyPlan?studyPlan.total_tracked_tasks:tasks.length),blockHeading('Verified tasks',done),
+      blockHeading('Sources',record.evidence.length),blockHeading('Claims',record.claims.length));
+    outer.append(stats);
+    const intro=make('p','dossier-intro',record.summary||'This marketplace has not been researched yet.');
+    outer.append(intro);
+    const evidenceArea=make('div','dossier-evidence');
+    evidenceArea.append(detailSection('Published observations',record.observations,observation=>{
+      const card=make('div','research-item');
+      add(card,make('strong','',observation.metric||observation.id),
+        make('p','',observation.value===null?'Unknown':String(observation.value)+' '+(observation.unit||'')),
+        make('small','',observation.period||'Period not supplied'));
+      return card;
+    }));
+    evidenceArea.append(detailSection('Claims and sources',record.claims,claim=>{
+      const card=make('div','research-item');
+      add(card,make('strong','',claim.text),make('small','','Checked '+claim.observed_at+' · '+claim.confidence+' confidence'));
+      if(claim.limitations)card.append(make('p','measure-limit','Limits: '+claim.limitations));
+      card.append(audienceSources(claim.source_ids,record));
+      return card;
+    }));
+    evidenceArea.append(detailSection('Revenue opportunities',record.opportunities,opportunity=>{
+      return add(make('div','research-item'),make('p','',opportunity.title||opportunity.id||'Opportunity'));
+    }));
+    evidenceArea.append(detailSection('Risks',record.risks,risk=>{
+      return add(make('div','research-item'),make('p','',risk.title||risk.id||'Risk'));
+    }));
+    outer.append(evidenceArea);
+    const policySection=renderPlatformPolicies(platformPolicy,record);
+    if(policySection)outer.append(policySection);
+    const transition=renderYppFutureTransition(yppFuture,record);
+    if(transition)outer.append(transition);
+    const routes=renderRevenuePathways(earningRoutes,payoutGates,record,eligibilityMatrix);
+    if(routes)outer.append(routes);
+    const entryStages=renderChannelOnboarding(channelOnboarding,record);
+    if(entryStages)outer.append(entryStages);
+    const ownership=renderChannelOwnership(channelOwnership,record);
+    if(ownership)outer.append(ownership);
+    const reputation=renderReputationPortability(reputationPortability,record);
+    if(reputation)outer.append(reputation);
+    const checkoutAudit=renderCheckoutRefundEvidence(checkoutRefundEvidence,record);
+    if(checkoutAudit)outer.append(checkoutAudit);
+    const cohortStudy=renderMemberCohortResearch(memberCohortProtocol,record);
+    if(cohortStudy)outer.append(cohortStudy);
+    const shortsFlow=renderShortsReferralStudy(shortsReferralStudy,record);
+    if(shortsFlow)outer.append(shortsFlow);
+    const audienceBase=renderAudiencePopulationCrosswalk(audiencePopulationCrosswalk,record);
+    if(audienceBase)outer.append(audienceBase);
+    const adCountries=renderCountryAdReach(countryAdReach,record);
+    if(adCountries)outer.append(adCountries);
+    const usNews=renderUSNewsDemographics(usNewsDemographics,record);
+    if(usNews)outer.append(usNews);
+    const syntheticPolicy=renderSyntheticMediaPolicy(syntheticMediaPolicy,record);
+    if(syntheticPolicy)outer.append(syntheticPolicy);
+    const recs=renderRecommendationEvidence(recommendationEvidence,record);
+    if(recs)outer.append(recs);
+    const cohorts=renderChannelCohorts(channelCohortEvidence,record);
+    if(cohorts)outer.append(cohorts);
+    const vlog=renderFirstUploadVlogStudy(firstUploadVlogStudy,record);
+    if(vlog)outer.append(vlog);
+    const linkFunnel=renderExternalLinkFunnel(externalLinkFunnel,record);
+    if(linkFunnel)outer.append(linkFunnel);
+    const retention=renderRetentionObservability(retentionObservability,record);
+    if(retention)outer.append(retention);
+    const crossposting=renderCrossplatformPosting(crossplatformPosting,record);
+    if(crossposting)outer.append(crossposting);
+    const gamingStudy=renderGamingPeriods(gamingPeriods,record);
+    if(gamingStudy)outer.append(gamingStudy);
+    const demand=renderSearchDemandProxy(searchDemandProxy,record);
+    if(demand)outer.append(demand);
+    const production=renderVideoProductionCosts(videoProductionCosts,record);
+    if(production)outer.append(production);
+    const exRights=renderExclusiveRights(exclusiveRightsEvidence,record);
+    if(exRights)outer.append(exRights);
+    const fraud=renderFraudSecurity(fraudSecurity,record);
+    if(fraud)outer.append(fraud);
+    const onboarding=renderApplicationLifecycle(applicationLifecycle);
+    if(onboarding)outer.append(onboarding);
+    const restricted=renderContentRestrictions(contentRestrictions,record);
+    if(restricted)outer.append(restricted);
+    const adsChanges=renderAdvertiserPolicyHistory(advertiserHistory,record);
+    if(adsChanges)outer.append(adsChanges);
+    const music=renderMusicRights(musicRights,record);
+    if(music)outer.append(music);
+    const costStudy=renderProductionCosts(productionCosts);
+    if(costStudy)outer.append(costStudy);
+    const effort=renderProductionEffortComparison(productionEffort,record);
+    if(effort)outer.append(effort);
+    const metricsGuide=renderMeasurementGuide(analyticsGuide);
+    if(metricsGuide)outer.append(metricsGuide);
+    const counted=renderViewDefinitionBreak(viewDefinition,record);
+    if(counted)outer.append(counted);
+    const scale=renderPlatformScale(platformScale);
+    if(scale)outer.append(scale);
+    const country=renderCountryReachDevices(countryReach,record);
+    if(country)outer.append(country);
+    const geography=renderGeographicScope(geographicScope,record);
+    if(geography)outer.append(geography);
+    const overlap=renderAudienceOverlapResearch(audienceOverlap,record);
+    if(overlap)outer.append(overlap);
+    const overlapPanel=renderBeautyGamingOverlap(beautyGamingPanel,record);
+    if(overlapPanel)outer.append(overlapPanel);
+    const genderGroups=renderGenderCommunityEvidence(genderCommunityEvidence,record);
+    if(genderGroups)outer.append(genderGroups);
+    const childSeasonality=renderChildrenSeasonality(childrenSeasonality,record);
+    if(childSeasonality)outer.append(childSeasonality);
+    const personMetrics=renderViewerPersonMetrics(viewerPersonMetrics,record);
+    if(personMetrics)outer.append(personMetrics);
+    const demo=renderUsDemographicUse(usDemographicUse,record);
+    if(demo)outer.append(demo);
+    const identity=renderIdentityResearch(identityResearch,record);
+    if(identity)outer.append(identity);
+    const frame=renderSurveyFrameCrosswalk(surveyFrameCrosswalk,record);
+    if(frame)outer.append(frame);
+    const countryPrograms=renderCountryProgramAccess(countryProgramAccess,record);
+    if(countryPrograms)outer.append(countryPrograms);
+    const taxes=renderTaxWithholdingResearch(taxWithholding,record);
+    if(taxes)outer.append(taxes);
+    const brand=renderBrandDisclosureRisk(brandDisclosure,record);
+    if(brand)outer.append(brand);
+    const sponsors=renderSponsorCategoryResearch(sponsorCategoryEvidence,record);
+    if(sponsors)outer.append(sponsors);
+    const cadence=renderPublishingCadenceStudy(publishingCadence,record);
+    if(cadence)outer.append(cadence);
+    const safety=renderCreatorSafety(creatorSafety,record);
+    if(safety)outer.append(safety);
+    const concentration=renderTrafficConcentration(trafficConcentration,record);
+    if(concentration)outer.append(concentration);
+    const eu=renderEuCreatorConsultation(euCreatorConsultation,record);
+    if(eu)outer.append(eu);
+    const discoveryModel=renderCreatorGrowth(creatorGrowth,record);
+    if(discoveryModel)outer.append(discoveryModel);
+    const returnStudy=renderPostAndMembershipRetention(retentionPostsMemberships,record);
+    if(returnStudy)outer.append(returnStudy);
+    const promotion=renderPromoteResearch(promoteEconomics,record);
+    if(promotion)outer.append(promotion);
+    const formats=renderContentFormats(contentFormats,record);
+    if(formats)outer.append(formats);
+    const publishTimes=renderPublishingTimeResearch(publishTimeStudy,record);
+    if(publishTimes)outer.append(publishTimes);
+    const seasonal=renderSeasonalDiscovery(seasonalDiscovery,record);
+    if(seasonal)outer.append(seasonal);
+    const declineAudit=renderDecliningTopicAudit(decliningTopicAudit,record);
+    if(declineAudit)outer.append(declineAudit);
+    const synthesis=renderEvidenceSynthesis(researchSynthesis,record);
+    if(synthesis)outer.append(synthesis);
+    const surfaces=renderVideoSurfaceEconomics(videoSurfaceEconomics,record);
+    if(surfaces)outer.append(surfaces);
+    const screen=renderScreenViewingStudy(screenViewingStudy,record);
+    if(screen)outer.append(screen);
+    const kids=renderChildAgeFormatStudy(childAgeFormat,record);
+    if(kids)outer.append(kids);
+    const youthFormats=renderTeenVideoFormatEvidence(teenFormatEvidence,record);
+    if(youthFormats)outer.append(youthFormats);
+    const multilingual=renderMultilingualDistribution(multilingualDistribution,record);
+    if(multilingual)outer.append(multilingual);
+    const audience=renderAudienceResearch(record);
+    if(audience)outer.append(audience);
+    const history=renderAdultUseHistory(adultUseHistory);
+    if(history)outer.append(history);
+    const newsStudy=renderCommunityAudienceStudy(newsAudienceStudy,record);
+    if(newsStudy)outer.append(newsStudy);
+    const competitors=renderCompetitionSample(competitionSample,record);
+    if(competitors)outer.append(competitors);
+    const historicalLinks=renderHistoricalLinkingStudy(historicalLinking,record);
+    if(historicalLinks)outer.append(historicalLinks);
+    const attention=renderVideoAttentionCulture(videoAttentionCulture,record);
+    if(attention)outer.append(attention);
+    const animation=renderAnimationFormatCycles(animationFormatCycles,record);
+    if(animation)outer.append(animation);
+    const beauty=renderBeautyFashionQuerySeries(beautyFashionQueries,record);
+    if(beauty)outer.append(beauty);
+    const nfl=renderNflSeasonality(nflSeasonality,record);
+    if(nfl)outer.append(nfl);
+    const gamingEvent=renderGamingReleaseEvents(gamingReleaseEvents,record);
+    if(gamingEvent)outer.append(gamingEvent);
+    const collab=renderCreatorCollaborationEvidence(creatorCollaboration,record);
+    if(collab)outer.append(collab);
+    const commentNorms=renderCommentNormsEvidence(commentNormsEvidence,record);
+    if(commentNorms)outer.append(commentNorms);
+    const finance=renderFinanceContentTaxonomy(financeContent,record);
+    if(finance)outer.append(finance);
+    const fitness=renderHealthFitnessResearch(healthFitness,record);
+    if(fitness)outer.append(fitness);
+    const technologies=renderTechnologySubcultures(technologySubcultures,record);
+    if(technologies)outer.append(technologies);
+    const comparators=renderPlatformComparisonSet(comparisonSet,record);
+    if(comparators)outer.append(comparators);
+    const literature=renderAcademicResearch(academicResearch,record);
+    if(literature)outer.append(literature);
+    const crossIncome=renderCrossPlatformIncomeSurveys(crossPlatformIncome,record);
+    if(crossIncome)outer.append(crossIncome);
+    const horizons=renderLifecycleHorizons(lifecycleHorizons,record);
+    if(horizons)outer.append(horizons);
+    const air=renderAirStudioBenchmarks(airStudioBenchmarks,record);
+    if(air)outer.append(air);
+    const newcomer=renderNewcomerIncomeProtocol(newcomerIncomeProtocol,record);
+    if(newcomer)outer.append(newcomer);
+    const incomeStudy=renderCreatorIncomeEvidence(incomeEvidence);
+    if(incomeStudy)outer.append(incomeStudy);
+    const channelStudy=renderSmallChannelStudy(channelIncome);
+    if(channelStudy)outer.append(channelStudy);
+    const catalogue=renderTopicCatalogue(topicCatalog,topicActivity);
+    if(catalogue)outer.append(catalogue);
+    const sampling=renderPublicSamplingBudget(samplingBudget,record);
+    if(sampling)outer.append(sampling);
+    const method=renderOpportunityFramework(opportunityFramework,topicCatalog,topicActivity);
+    if(method)outer.append(method);
+    if(entry.id==='youtube')outer.append(renderScenarioCalculator());
+    if(entry.id==='youtube')outer.append(renderBreakEvenCalculator());
+    if(studyPlan)outer.append(renderStudyPlan(studyPlan));
+    outer.append(make('h4','dossier-queues-title','Research queues'));
+    const queueList=make('div','dossier-queues');
+    for(const group of work.queues){
+      const panel=make('details','queue-details');
+      const completed=group.tasks.filter(t=>t.status==='complete'&&t.progress===100).length;
+      const pct=Math.round(group.tasks.reduce((n,t)=>n+t.progress,0)/group.tasks.length);
+      const summary=make('summary','',group.emoji+' '+group.title+' — '+pct+'% ('+completed+'/'+group.tasks.length+' verified)');
+      panel.append(summary,progress(pct,group.title));
+      const list=make('ol','queue-task-list');
+      for(const task of group.tasks){
+        const item=make('li','');
+        add(item,make('strong','',task.emoji+' '+task.title+' · '+task.progress+'%'),
+          make('p','',task.acceptance));
+        list.append(item);
+      }
+      panel.append(list);
+      queueList.append(panel);
+    }
+    outer.append(queueList);
+    host.replaceChildren(outer);
+  } catch(error) {
+    console.error('Mercata dossier failed to render: '+String(error?.stack || error));
+    host.replaceChildren(add(make('div','empty-state'),make('h3','', 'Research record unavailable'),
+      make('p','', 'The dossier or task queue could not be loaded. Check the public files.')));
+  }
+}
+
+async function start() {
+  const outcomes=await Promise.allSettled([
+    read('gallery/index.json'),read('pipeline/queues.json'),
+    read('pipeline/domains.json'),read('ontology/ontology.json'),
+    read('roadmap/progress.json')
+  ]);
+  if(outcomes[0].status==='fulfilled') {
+    specimens=outcomes[0].value.specimens;
+    const domains=[...new Set(specimens.map(s=>s.domain))].sort();
+    for(const domain of domains) {
+      const opt=make('option','',domain.replaceAll('-',' ')); opt.value=domain;
+      $('#domain').append(opt);
+    }
+    showCatalog();
+    showSocialOverview();
+  } else errorFor('#catalog-grid','The public gallery index could not be read.');
+  if(outcomes[1].status==='fulfilled' && outcomes[2].status==='fulfilled') showQueues(outcomes[1].value,outcomes[2].value);
+  else errorFor('#queue-grid','The research definitions could not be read.');
+  if(outcomes[3].status==='fulfilled') showOntology(outcomes[3].value);
+  else errorFor('#ontology-grid','The ontology could not be read.');
+  if(outcomes[4].status==='fulfilled') showRoadmap(outcomes[4].value);
+  else errorFor('#milestones','The progress ledger could not be read.');
+}
+$('#search').addEventListener('input',showCatalog);
+$('#domain').addEventListener('change',showCatalog);
+start();
++pooled.median_usd_month+' median · 
+ if(!data?.gaming?.length)return null;
+ const section=make('section','gaming-period-study');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Live gaming watched hours: distinct from people and creators'));
+ details.append(make('p','measure-limit','Q4 2025 to Q2 2026. Commercial livestream tracking, not a population census.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.gaming){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.period+' · Gaming'));
+  card.append(make('strong','',x.watch_hours_billion.toFixed(2)+' billion hours watched'));
+  card.append(make('p','',x.channels_million+' million broadcast channel identifiers'));
+  card.append(audienceSources([x.source_id],dossier));grid.append(card);
+ }
+ const live=data.general_live_q2;
+ const c=make('article','ownership-card');
+ c.append(make('h5','','Q2 2026 · general YouTube Live'));
+ c.append(make('strong','',live.watch_hours_billion.toFixed(2)+' billion hours watched'));
+ c.append(make('p','measure-limit','Separate category, not automatically combinable with gaming'));
+ c.append(audienceSources([live.source_id],dossier));grid.append(c);
+ details.append(grid);
+ details.append(make('p','measure-limit','Gaming hours fell 19.3% Q2 versus Q1 as reported; distinct viewers, pay and external migration remain unknown.'));
+ const link=make('a','inline-link','Read gaming evidence, scope and source notes ↗');
+ link.href='./ontology/youtube/gaming-livestream-quarterly-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
+ section.append(details);return section;
+}
+
+function renderCrossplatformPosting(data,dossier){
+ if(!data?.vendor_posting_snapshot)return null;
+ const section=make('section','crossplatform-posting');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Crossposting videos is not moving audiences'));
+ details.append(make('p','measure-limit','A selected scheduling-tool sample counts multi-platform publishing, not fans who migrated across websites.'));
+ const s=data.vendor_posting_snapshot;
+ const grid=make('div','ownership-grid');
+ for(const [title,value,explanation] of [
+ ['Publishing tool creators',s.creators.toLocaleString('en-US'),'Users of a cross-posting service, not all creators'],
+ ['Distinct uploads',s.uploads.toLocaleString('en-US'),'One uploaded video can become multiple posts'],
+ ['Successful published posts',s.successful_post_events.toLocaleString('en-US'),'Posting events, not distinct viewers'],
+ ['Uploads sent to several platforms',s.share_uploads_multi_platform_percent+'%','Selected tool-user uploads; no viewer migration measured']
+ ]){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',title));card.append(make('strong','',value));card.append(make('p','measure-limit',explanation));
+  card.append(audienceSources([s.source_id],dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Separate 2016 YouTube–Twitch rivalry research found context-specific creator effort changes; neither study estimates modern buyer or follower migration.'));
+ details.append(audienceSources([data.historical_competition_paper.source_id],dossier));
+ const link=make('a','inline-link','Read both dated studies, denominators and missing evidence ↗');
+ link.href='./ontology/youtube/crossplatform-posting-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderRetentionObservability(data,dossier){
+ if(!data?.metrics?.length)return null;
+ const section=make('section','retention-observability');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Audience retention, completed plays and viewing sessions'));
+ details.append(make('p','measure-limit','Public playback-start views, owner-only video retention, initial Shorts engagement and cross-video sessions have different units. None establishes an observed full-video completion fraction.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.metrics){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.label));
+  card.append(make('p','',item.unit.replaceAll('_',' ')+' · '+item.access.replaceAll('_',' ')));
+  card.append(make('p','measure-limit',item.limit));
+  card.append(audienceSources(item.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Owner video-level retention reports require processing time and sufficiently viewed clips for highlighted moments; all real completion rates and cross-video session lengths remain unknown.'));
+ const link=make('a','inline-link','Read measurement units and privacy boundaries ↗');link.href='./ontology/youtube/retention-observability.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderExternalLinkFunnel(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','external-link-funnel');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Clickable links, Shorts limitations and product funnels'));
+ details.append(make('p','measure-limit','A URL in a Shorts comment or description is not clickable, even though a related-video link can be. Long-form external links require advanced-feature eligibility.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.label));
+  const status=item.external_url_clickable===null?'Internal route':item.external_url_clickable?'External URL may be clickable':'External URL not clickable';
+  card.append(make('p','',status));
+  card.append(make('p','measure-limit',item.limitation));
+  card.append(audienceSources(item.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Actual link clicks, distinct buyers, marketing costs and net revenue are not measured; no test has been launched.'));
+ const link=make('a','inline-link','Read platform links policy and funnel measurement gates ↗');link.href='./ontology/youtube/external-link-funnel-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderFirstUploadVlogStudy(data,dossier){
+ if(!data?.earnings_value_model)return null;
+ const section=make('section','first-upload-vlog');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','New daily-life vloggers: observed views versus hypothetical ad value'));
+ details.append(make('p','measure-limit','A selected 107-channel preprint finds 51.4% below 1,000 lifetime views. Its dollar amounts model advertising value from views; no YouTube payouts, cash costs or measured creator time were obtained.'));
+ const grid=make('div','ownership-grid');
+ for(const item of [
+  {title:'Sampled first-upload channels',value:data.sampling.first_upload_cohort_channels,reason:'Keyword-discovered, two daily-life vlog genres'},
+  {title:'Below 1,000 lifetime views',value:data.cold_start_public_views.below_1000_lifetime_views_percent+'%',reason:'Observed public view counts in sampled channels'},
+  {title:'Modeled median long-form ad value',value:'USD '+data.earnings_value_model.median_modeled_longform_value_usd.toFixed(2),reason:'Assumed USD 2.30 RPM; not actual paid income'},
+  {title:'Modeled median labor',value:data.earnings_value_model.median_assumed_hours+' hours',reason:'Assumed three labor hours per finished video minute; no time logs'}
+ ]){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.title));
+  card.append(make('strong','',item.value));
+  card.append(make('p','measure-limit',item.reason));
+  card.append(audienceSources([data.source_id],dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','All-creator zero-earner fraction, real channel profit and any causal benefit of additional uploads remain unmeasured.'));
+ const link=make('a','inline-link','Read the study and its modeled-income limitations ↗');
+ link.href='./ontology/youtube/first-upload-vlog-study-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderChannelCohorts(model,dossier){
+ if(!model?.datasets?.length)return null;
+ const section=make('section','channel-cohort-evidence');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Indexed channels and 360-day subscriber milestone outcomes'));
+ details.append(make('p','measure-limit','61.2 million sampled public-subscriber channels and a distinct 32.9 million-channel below-1k cohort. Both are selected vendor index populations, not a census or verified first-year creator income.'));
+ const grid=make('div','ownership-grid');
+ const m=model.datasets[0],s=model.datasets[2];
+ for(const band of s.bins){
+  const card=make('article','ownership-card');
+  const end=band.video_delta_max===null?' or more':'–'+band.video_delta_max;
+  card.append(make('h5','','Net public video count +'+band.video_delta_min+end));
+  card.append(make('strong','',band.reported_percent.toFixed(2)+'% ending at 1,000+ subscribers'));
+  card.append(make('p','',band.reached_1000_at_end.toLocaleString('en-US')+' of '+band.channels.toLocaleString('en-US')+' indexed channels'));
+  card.append(make('p','measure-limit','360 days, no random assignment, new-entrant identification, actual uploads or YPP earnings'));
+  card.append(audienceSources([s.source_id],dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Separate July distribution: '+m.included_channels.toLocaleString('en-US')+' indexed channels with at least one subscriber. The group comparisons do not prove uploading causes growth or that creators earn money.'));
+ const link=make('a','inline-link','Read cohort sampling, percentages and non-causal limitations ↗');
+ link.href='./ontology/youtube/channel-cohort-observations-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderRecommendationEvidence(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','recommendation-evidence');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Home, Suggested, Shorts and Search: distinct discovery rules'));
+ details.append(make('p','measure-limit','Official guidance describes different ranking contexts, not public fixed weights or guaranteed creator reach.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.label));card.append(make('p','',x.claim));
+  card.append(audienceSources(x.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','No minimum Shorts posting cadence is required. Exact signal weights, newcomer impressions and net creator income effects are unknown.'));
+ const link=make('a','inline-link','Read official recommendation sources ↗');
+ link.href='./ontology/youtube/recommendation-surface-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderSyntheticMediaPolicy(data,dossier){
+ if(!data?.policy_axes?.length)return null;
+ const section=make('section','synthetic-media-rights');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','AI-altered video: disclosure, originality, likeness and rights'));
+ details.append(make('p','measure-limit','A realistic AI-use disclosure can be required without automatic demonetization. YPP originality, privacy complaints and copyright protection have separate rules.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.policy_axes){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.title));
+  card.append(make('p','',x.rule));
+  card.append(audienceSources(x.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Five policy examples are hypothetical; no AI creator earnings, enforcement prevalence or individual legality was measured.'));
+ const link=make('a','inline-link','Read official AI-content and rights rules ↗');
+ link.href='./ontology/youtube/synthetic-media-rights-policy.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderUSNewsDemographics(data,dossier){
+ if(!data?.strata?.length)return null;
+ const section=make('section','us-news-demographic-crosswalk');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','U.S. YouTube use versus regular news use by surveyed groups'));
+ details.append(make('p','measure-limit','Two separate Pew surveys: overall YouTube ever-use is not regular news use, a verified biological-sex category or a sample of YouTube creators. Percentages are within the published adult subgroups.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.strata){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.subgroup.replaceAll('_',' ')));
+  card.append(make('p','',item.ever_use_pct+'% ever use YouTube · '+item.regular_news_pct+'% regularly get YouTube news'));
+  card.append(make('p','measure-limit','Different survey respondents and date windows; subgroup uncertainty not published in this comparison.'));
+  card.append(audienceSources([item.ever_use_source_id,item.regular_news_source_id],dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','2020–2026 U.S. adult regular YouTube news series: '+data.regular_news_us_adult_series.map(x=>x.regular_news_youtube_pct_of_us_adults+'%').join(', ')+'. Descriptive survey estimates, not causal changes or viewer counts.'));
+ details.append(make('p','measure-limit','Biological sex, overlapping age-by-party or age-by-gender audience counts, and subgroup margins of error are unknown.'));
+ const link=make('a','inline-link','Read the dated survey comparison and missing evidence ↗');
+ link.href='./ontology/youtube/us-news-demographic-crosswalk.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCountryAdReach(d,dossier){
+ if(!d?.observations?.length)return null;
+ const section=make('section','country-ad-reach'),details=make('details','ownership-details');
+ details.append(make('summary','','Country reach: four dated YouTube advertiser estimates'));
+ details.append(make('p','measure-limit','Google ad-planner reach, reported in DataReportal Digital 2026 and measured in October 2025, is not monthly active YouTube viewers or verified country growth.'));
+ const grid=make('div','ownership-grid');
+ for(const x of d.observations){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.country));card.append(make('strong','',x.ad_reach_million+' million ad-reachable'));
+  const change=x.reported_end_2024_to_2025_change_percent;
+  card.append(make('p','',('End-2024 to late-2025 planner change: ')+(change>0?'+':'')+change+'%'));
+  card.append(make('p','measure-limit','Potential ad reach, not unique viewers, subscribers or creator income'));
+  card.append(audienceSources([x.source_id],dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Advertiser planning can be revised; published changes do not prove actual people entered or left YouTube.'));
+ const link=make('a','inline-link','Read sources and comparability limits ↗');link.href='./ontology/youtube/country-ad-reach-comparisons.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderAudiencePopulationCrosswalk(data,dossier){
+ if(!data?.observations?.length)return null;
+ const section=make('section','audience-population-crosswalk');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Audience scale: past-month surveys, daily visits and ad reach'));
+ details.append(make('p','measure-limit','Distinct survey prevalences and country ad-planner reach estimates cannot be combined into an invented platform MAU/DAU count.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.observations){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.id.replaceAll('_',' ')));
+  card.append(make('strong','',String(x.value)+(x.unit==='percent'?'%':' million')));
+  card.append(make('p','',x.scope+' · '+x.time));
+  card.append(make('p','measure-limit',x.notes));
+  card.append(audienceSources(x.source_ids,dossier));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','The deduplicated worldwide MAU and DAU remain unknown, as does cross-account deduplication.'));
+ const link=make('a','inline-link','Read each observation and its denominator ↗');
+ link.href='./ontology/youtube/audience-population-crosswalk.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
+}
+
+function renderShortsReferralStudy(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','shorts-referral-study');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Shorts-to-video links and the missing referral measurements'));
+ details.append(make('p','measure-limit','Advanced feature access can allow a clickable related video below a Short. A view of that Short, a destination view and an overlapping viewer are not verified click-through events.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.label));
+  card.append(make('p','',x.measurement));
+  card.append(make('p','measure-limit','Not equivalent to: '+x.not_equivalent_to.replaceAll('_',' ')));
+  card.append(audienceSources(x.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Short-specific link impressions, click-through, deduplicated linked viewers, incremental video value and profit remain unmeasured.'));
+ const link=make('a','inline-link','Read the related-video feature and event-attribution gates ↗');
+ link.href='./ontology/youtube/shorts-related-video-funnel.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderMemberCohortResearch(data,dossier){
+ if(!data?.definition_rules?.length)return null;
+ const section=make('section','member-cohort-protocol');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Paying member renewals and repeat-offer test design'));
+ details.append(make('p','measure-limit','Studio active members, canceled members, access-expired members and recurring transactions have different denominators. No paid cohort or experiment was observed.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.definition_rules){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.id.replaceAll('_',' ')));
+  card.append(make('p','',item.rule));
+  card.append(audienceSources(item.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','A rate needs real paid renewals due by actual billing date, separated from trials and gifts; unresolved events get bounds, not point estimates.'));
+ const link=make('a','inline-link','Review cohort arithmetic, missing-data gates and offer-test protocol ↗');
+ link.href='./ontology/youtube/member-cohort-protocol.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCheckoutRefundEvidence(data,dossier){
+ if(!data?.products?.length)return null;
+ const section=make('section','checkout-refund-evidence');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Buyer payments, published membership prices and refunds'));
+ details.append(make('p','measure-limit','Membership cancellation, non-refundable Supers and external retailer refunds follow distinct processes. Country price schedules are options, not a sample of channel prices or creator profit.'));
+ const grid=make('div','ownership-grid');
+ for(const item of data.products){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',item.label));
+  card.append(make('p','',item.buyer_action));
+  card.append(make('p','measure-limit',item.refund_rule));
+  card.append(audienceSources(item.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Official examples: US $0.99/$4.99/$9.99 and Mexico MXN $19/$69/$219. These are published country-tier options, not a real-channel price sample, currency conversion, or guaranteed buyer charge.'));
+ details.append(make('p','measure-limit','Creator-specific median prices, refund rates, external merchant margins and net earnings remain unmeasured.'));
+ const link=make('a','inline-link','Read checkout and refund source audit ↗');
+ link.href='./ontology/youtube/checkout-refund-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderReputationPortability(data,dossier){
+ if(!data?.surfaces?.length)return null;
+ const section=make('section','reputation-portability');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Channel feedback, reputation and portability'));
+ details.append(make('p','measure-limit','Moderated comments are not verified buyer ratings, and a subscriber count is not a portable customer list. Media exports, roles and internal channel moves have different limits.'));
+ const grid=make('div','ownership-grid');
+ for(const x of data.surfaces){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',x.title));
+  card.append(make('p','',x.mechanism));
+  card.append(make('p','measure-limit',x.limit));
+  card.append(audienceSources(x.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Off-platform migration rate, verified buyer scores and net earnings effects remain unmeasured.'));
+ const link=make('a','inline-link','Read the feedback and portability audit ↗');
+ link.href='./ontology/youtube/reputation-portability.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderChannelOnboarding(data,dossier) {
+  if(!data?.stages?.length)return null;
+  const section=make('section','channel-onboarding');
+  const details=make('details','channel-onboarding-details');
+  details.append(make('summary','','From a Google Account to a publishing channel · '+data.stages.length+' stages'));
+  details.append(make('p','measure-limit','Creating a channel, publishing, unlocking advanced features and earning money require different permissions. These steps are general policy, not proof of eligibility for a particular person.'));
+  const stages=make('ol','channel-onboarding-stage-list');
+  for(const step of data.stages){
+    const item=make('li','channel-onboarding-stage');
+    item.append(make('h5','',step.label));
+    item.append(make('p','',step.outcome));
+    item.append(make('p','measure-limit',step.limits));
+    item.append(audienceSources(step.source_ids,dossier));
+    stages.append(item);
+  }
+  details.append(stages);
+  const gates=make('div','channel-feature-gates');
+  for(const gate of data.feature_gates){
+    const card=make('article','channel-feature-gate');
+    card.append(make('h5','',gate.label));
+    card.append(make('p','measure-limit','Requirements: '+gate.requires.join(' · ').replaceAll('_',' ')));
+    card.append(make('p','',gate.limits));
+    card.append(audienceSources(gate.source_ids,dossier));
+    gates.append(card);
+  }
+  details.append(gates);
+  details.append(make('p','measure-limit','Typical setup hours: unknown · typical cash costs: unknown · time to first creator payment: unknown. A no-new-purchase path does not mean creator labor or access costs disappear.'));
+  const link=make('a','inline-link','Read source-backed onboarding gates and cost limits ↗');
+  link.href='./ontology/youtube/channel-onboarding.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);
+  return section;
+}
+
+function renderApplicationLifecycle(model) {
+  if(!model)return null;
+  const section=make('section','application-lifecycle');
+  const details=make('details','application-details');
+  details.append(make('summary','','Getting approved and reaching your first payout'));
+  details.append(make('p','measure-limit','Numerical entry thresholds, channel review, product activation and actual payment are separate. These timelines are official guidance, not guarantees.'));
+  const list=make('ol','application-stage-list');
+  for(const step of model.steps){
+    const item=make('li','application-stage');
+    item.append(make('strong','',step.action));
+    item.append(make('p','measure-limit',step.limits));
+    if(step.indicative_duration)item.append(make('small','',step.indicative_duration));
+    if(step.window_days)item.append(make('small','', 'Published appeal window: '+step.window_days+' days'));
+    if(step.earliest_reapply_after_days)item.append(make('small','', 'Reapplication wait: '+step.earliest_reapply_after_days+' days'));
+    list.append(item);
+  }
+  details.append(list);
+  const link=make('a','inline-link','Read the full application and payment lifecycle ↗');
+  link.href='./ontology/youtube/application-lifecycle.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderPromoteResearch(data,dossier){
+ if(!data?.ad_format_billing?.length)return null;
+ const section=make('section','promote-economics');
+ const details=make('details','promote-economics-details');
+ details.append(make('summary','','YouTube Promote: paid costs versus organic YPP-eligible follow-on views'));
+ details.append(make('p','measure-limit','A promotion is purchased advertising, not creator earnings. Subscribers and watch hours generated directly by ad campaigns do not meet YPP eligibility thresholds. Organic follow-on views are tracked separately.'));
+ const grid=make('div','promote-format-grid');
+ for(const item of data.ad_format_billing){
+   const card=make('article','promote-format-card');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','',item.billable_trueview_condition));
+   card.append(audienceSources(item.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ const ad=make('div','promote-metrics-grid');
+ for(const item of data.metric_register){
+   const card=make('article','promote-metric-card');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','measure-limit',item.unit.replaceAll('_',' ')));
+   ad.append(card);
+ }
+ details.append(make('h5','promote-heading','Distinct attribution and accounting units'));
+ details.append(ad);
+ details.append(make('p','measure-limit','Typical budget, realized cost per acquired viewer, organic conversion, and net creator profit remain unknown. Attribution without a valid comparison cohort does not establish incremental results.'));
+ const link=make('a','inline-link','Read ad billing formats, YPP qualification and missing ROI evidence ↗');
+ link.href='./ontology/youtube/promote-economics.md';link.rel='noopener noreferrer';link.target='_blank';
+ details.append(link);section.append(details);return section;
+}
+
+function renderPostAndMembershipRetention(data,dossier) {
+ if(!data?.channel_surfaces?.length)return null;
+ const section=make('section','post-membership-retention');
+ const details=make('details','post-membership-retention-details');
+ details.append(make('summary','','Creator Posts, regular viewers and paid membership renewals'));
+ details.append(make('p','measure-limit','Official analytics measure different populations: post impressions, channel return viewers, subscribers with member perks and recurring payment events. They cannot be joined into an attributed retention rate without actual owner-authorized cohorts.'));
+ const grid=make('div','post-membership-surfaces');
+ for(const surface of data.channel_surfaces){
+   const card=make('article','post-membership-surface');
+   card.append(make('h5','',surface.id.replaceAll('_',' ')));
+   card.append(make('p','',surface.description));
+   card.append(make('p','measure-limit',surface.eligibility_note));
+   card.append(audienceSources(surface.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ const members=make('div','post-membership-metrics');
+ for(const item of data.membership_register){
+   const card=make('article','post-membership-metric');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','',item.definition));
+   card.append(make('p','measure-limit','Unit: '+item.unit.replaceAll('_',' ')));
+   members.append(card);
+ }
+ details.append(make('h5','post-membership-heading','Membership measurement units'));
+ details.append(members);
+ const postsScale=data.platform_scale_claims?.find(x=>x.id==='daily_posts_engaging_users');
+ if(postsScale){
+   details.append(make('p','measure-limit','YouTube reported more than '+(postsScale.reported_value/1000000)+' million users engaging with Posts on an average day in September 2026. Independent user deduplication and channel-specific return effects are unknown.'));
+   details.append(audienceSources([postsScale.source_id],dossier));
+ }
+ details.append(make('p','measure-limit','Regular viewers watched at least monthly for more than six months of the past year. A membership transaction may be a new sign-up or a renewal, not a distinct buyer.'));
+ details.append(make('p','measure-limit','Average posting effect, unique membership buyers, renewal rate and net member profit: unknown.'));
+ const link=make('a','inline-link','Read official measurement definitions, study design and caveats ↗');
+ link.href='./ontology/youtube/retention-posts-memberships.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCreatorGrowth(data,dossier) {
+  if(!data)return null;
+  const section=make('section','creator-growth');
+  const details=make('details','creator-growth-details');
+  details.append(make('summary','','Audience discovery and returning viewers · '+data.stages.length+' stages'));
+  details.append(make('p','measure-limit','Views, eligible impressions, engaged views, unique channel viewers, subscribers and paying customers are different measurements. No conversion rate is assumed.'));
+  const list=make('ol','creator-growth-stages');
+  for(const stage of data.stages){
+    const item=make('li','creator-growth-stage');
+    item.append(make('h5','',stage.label),make('p','',stage.description),
+      make('small','',stage.caveat));
+    item.append(audienceSources(stage.source_ids,dossier));
+    list.append(item);
+  }
+  details.append(list);
+  const more=make('details','creator-growth-metrics');
+  more.append(make('summary','',data.metrics.length+' metric definitions and measurement limits'));
+  const table=make('div','creator-growth-metric-grid');
+  for(const metric of data.metrics){
+    const card=make('article','creator-growth-metric');
+    card.append(make('h5','',metric.id.replaceAll('_',' ')));
+    card.append(make('p','',metric.definition));
+    card.append(make('small','',metric.unit+' · '+metric.access));
+    card.append(make('p','measure-limit',metric.limitations));
+    table.append(card);
+  }
+  more.append(table);
+  details.append(more);
+  const link=make('a','inline-link','Read the measurement and discovery research ↗');
+  link.href='./ontology/youtube/creator-growth.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderTeenVideoFormatEvidence(data,dossier){
+  if(!data?.video_genre_observations?.length)return null;
+  const section=make('section','teen-format-evidence');
+  const details=make('details','teen-format-details');
+  details.append(make('summary','','Child video genres: Australia YouTube, UK cross-app, US teen surveys'));
+  details.append(make('p','measure-limit','A 2025 Australian youth survey directly measured YouTube genres among children aged 6–13. UK genre percentages concern all video apps, NOT YouTube alone; U.S. teen platform use has no genre breakdown. These studies do not establish global genre audiences or individual identities.'));
+  const grid=make('div','teen-format-grid');
+  for(const block of data.video_genre_observations){
+    const card=make('article','teen-format-card');
+    card.append(make('h5','', 'UK children aged '+block.age_range+' · any video app'));
+    const list=make('ul','teen-format-list');
+    for(const measure of block.values){
+      const item=make('li','teen-format-row');
+      add(item,make('span','',measure.genre.replaceAll('_',' ')),make('strong','',measure.percent+'%'));
+      list.append(item);
+    }
+    card.append(list);grid.append(card);
+  }
+  details.append(grid);
+  const au=data.australia_youtube_genres;
+  if(au?.gender_conditioned_genres?.length){
+    details.append(make('h5','teen-au-heading','Australian children aged 6–13 who watch YouTube · 2025'));
+    details.append(make('p','measure-limit','The Roy Morgan survey covered 1,129 Australian children aged 6–13 in 2025. Values below are each genre watched within survey boy and girl YouTube-watcher groups, NOT the gender mix within genres. Exact gender subgroup sample sizes are unknown.'));
+    const auGrid=make('div','teen-au-grid');
+    for(const category of au.gender_conditioned_genres){
+      const row=make('article','teen-au-category');
+      row.append(make('strong','',category.id.replaceAll('_',' ')));
+      row.append(make('p','','Boys '+category.boys_percent+'% · Girls '+category.girls_percent+'%'));
+      auGrid.append(row);
+    }
+    details.append(auGrid);
+  }
+  const times=make('p','measure-limit','Separate Barb YouTube 2025 in-home weekly averages: '+data.youtube_inhome_age_minutes_per_week.map(x=>x.age_range+' years '+Math.floor(x.minutes/60)+'h '+String(x.minutes%60).padStart(2,'0')+'m').join(' · ')+'. These include neither out-of-home nor all mobile viewing.');
+  details.append(times);
+  const pew=make('p','measure-limit','Pew US teens aged 13–17, 2025: YouTube ever use boys 94%, girls 89%; almost constant use boys 20%, girls 13%. These are platform-use rates, not genre-use estimates.');
+  details.append(pew);
+  details.append(make('p','measure-limit','UK cross-app gender patterns remain directional, but the Australia study reports YouTube-specific genre differences only among children aged 6–13 in its local 2025 sample. Never infer a minor’s identity or viewing history.'));
+  details.append(audienceSources(data.source_ids,dossier));
+  const link=make('a','inline-link','Read age-specific denominators, collection methods and limits ↗');
+  link.href='./ontology/youtube/teen-video-format-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderChildAgeFormatStudy(data,dossier){
+ if(!data?.classification_cases?.length)return null;
+ const section=make('section','child-format-study');
+ const details=make('details','child-format-details');
+ details.append(make('summary','','Child-directed versus family animation and 18+ video rules'));
+ details.append(make('p','measure-limit','Being a cartoon or safe for a whole family does not by itself make a video child-directed. Age-gated 18+ content is a different policy. Adult-only surveys cannot establish that younger viewers are absent.'));
+ const grid=make('div','child-format-grid');
+ for(const item of data.classification_cases){
+   const card=make('article','child-format-card');
+   card.append(make('h5','',item.label));
+   card.append(make('p','measure-limit',item.limitations));
+   card.append(audienceSources(item.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ const measures=make('div','child-format-observed');
+ for(const item of data.population_observations){
+   const card=make('article','child-format-observation');
+   card.append(make('strong','',item.value+'%'));
+   card.append(make('p','',item.ages+' · '+item.measure.replaceAll('_',' ')));
+   card.append(make('p','measure-limit',item.limitations));
+   grid.append(card);
+ }
+ details.append(make('p','measure-limit','Ofcom ages 8–14 platform use and Barb ages 4–15 television viewing share have different denominators. No individual minors are profiled; global child audiences and income changes remain unknown.'));
+ const link=make('a','inline-link','Read content classification, privacy restrictions and aggregate UK survey frames ↗');
+ link.href='./ontology/youtube/child-age-and-format-gates.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderScreenViewingStudy(data,dossier){
+ if(!data?.service_level?.adult_16_plus)return null;
+ const section=make('section','screen-viewing-study');
+ const details=make('details','screen-viewing-details');
+ details.append(make('summary','','UK TV sets versus smartphone YouTube viewing — Barb 2025'));
+ details.append(make('p','measure-limit','Q2 2025, UK viewing at home over Wi-Fi. Percentages describe share of measured viewing, NOT share of distinct people or worldwide screen use.'));
+ const grid=make('div','screen-viewing-grid');
+ const adults=data.service_level.adult_16_plus;
+ const kids=data.service_level.children_4_to_15;
+ for(const row of [
+   {label:'Adults aged 16+',tv:adults.tv_set_percent,phone:adults.smartphone_percent},
+   {label:'Children aged 4–15',tv:kids.tv_set_percent,phone:kids.smartphone_percent}
+ ]){
+   const card=make('article','screen-viewing-card');
+   card.append(make('h5','',row.label));
+   card.append(make('p','', 'TV-set viewing share: '+row.tv+'%'));
+   card.append(make('p','measure-limit', 'Smartphone viewing share: '+(row.phone===null?'unknown in cited source':row.phone+'%')));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','The separate 200 selected-channel TV-only ACR program excludes Shorts, live and certain music channels. Its exclusions do not redefine the device shares for YouTube service-wide viewing.'));
+ details.append(make('p','measure-limit','UK smartphone viewing over cellular networks, device-specific creator payout, format mix and global screen share: unknown.'));
+ details.append(audienceSources([data.source_id,data.related_ofcom_2026.source_id],dossier));
+ const link=make('a','inline-link','Read Barb methodology, Ofcom viewing series and source restrictions ↗');
+ link.href='./ontology/youtube/screen-viewing-uk-2025.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderVideoSurfaceEconomics(data,dossier) {
+  if(!data?.surfaces?.length)return null;
+  const section=make('section','video-surface-study');
+  const details=make('details','video-surface-details');
+  details.append(make('summary','','Video formats, 8-minute mid-roll threshold and live replay evidence'));
+  details.append(make('p','measure-limit','Seven distinct YouTube publishing surfaces have different money and measurement units. An eligible mid-roll slot is not a served ad, and a replay is not guaranteed additional earnings.'));
+  const grid=make('div','video-surface-grid');
+  for(const item of data.surfaces){
+    const card=make('article','video-surface-card');
+    card.append(make('h5','',item.name));
+    card.append(make('p','measure-context','Unit: '+item.primary_unit.replaceAll('_',' ')));
+    card.append(make('p','',item.entry));
+    card.append(make('p','measure-limit',item.ad_mechanism));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Watch-page mid-roll eligibility begins at 8 minutes (480 seconds); actual delivery depends on ad demand, video experience and policy. Shorts revenue is not an 8-minute watch-page ad scheme.'));
+  details.append(make('p','measure-limit','Live and archived replay audience, ad revenue and labor must be tracked separately, without adding cumulative views or people twice.'));
+  const drama=data.microdrama_observations||[];
+  if(drama.length){
+    const views=drama.find(x=>x.id==='h1_2026_microdrama_views');
+    details.append(make('p','measure-limit','YouTube reported more than '+(views.value/1000000000)+' billion microdrama views in January–June 2026, plus more than 50% year-over-year watch-time growth and more than 90% TV-device view growth. These are historical event and relative metrics, not unique people or creator payouts.'));
+    details.append(audienceSources([views.source_id],dossier));
+  }
+
+  details.append(make('p','measure-limit','Official localized Help pages conflict on whether new claimed Shorts over one minute are automatically blocked after September 24, 2026; account-specific rights status remains unresolved.'));
+  const anchor=make('a','inline-link','Read source-specific rules, rights inconsistency and replay research fields ↗');
+  anchor.href='./ontology/youtube/video-surfaces-economics.md';anchor.target='_blank';anchor.rel='noopener noreferrer';
+  details.append(anchor);
+  section.append(details);
+  return section;
+}
+
+function renderEvidenceSynthesis(data,dossier){
+  if(!data?.findings?.length)return null;
+  const section=make('section','evidence-synthesis');
+  const details=make('details','evidence-synthesis-details');
+  details.append(make('summary','','Interim research synthesis: supported findings and unresolved economics'));
+  details.append(make('p','measure-limit','Evidence-backed account of what is documented, without turning platform events, selected creator surveys or annual culture totals into typical newcomer income.'));
+  const grid=make('div','evidence-synthesis-grid');
+  for(const finding of data.findings){
+    const card=make('article','evidence-synthesis-card');
+    card.append(make('h5','',finding.title));
+    card.append(make('p','',finding.supported));
+    card.append(make('p','measure-limit','Not measured: '+finding.unknown));
+    card.append(audienceSources(finding.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Representative zero-earner share, first-year creator net profit and deduplicated global monthly audience: unknown.'));
+  const link=make('a','inline-link','Read the source-by-source interim marketplace dossier ↗');
+  link.href='./ontology/youtube/research-synthesis-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderDecliningTopicAudit(data,dossier){
+ if(!data?.registered_example_checks?.length)return null;
+ const section=make('section','declining-topic-audit');
+ const details=make('details','declining-topic-details');
+ details.append(make('summary','','Declining content claims: measured change or incompatible samples?'));
+ details.append(make('p','measure-limit','No verified YouTube niche decline is established here. One annual or partial-year aggregate cannot prove recurring falling demand, and the August 2026 public-view definition changed.'));
+ const grid=make('div','declining-topic-grid');
+ for(const item of data.registered_example_checks){
+   const card=make('article','declining-topic-card');
+   card.append(make('h5','',item.id.replaceAll('_',' ')));
+   card.append(make('p','',item.finding));
+   card.append(make('p','measure-limit',item.reason));
+   card.append(audienceSources(item.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Topic declines, active people changes, creator income effects and forecasts: unknown. A descriptive two-period change is not a proven persistent trend.'));
+ const link=make('a','inline-link','Read comparison requirements and sample audit tests ↗');
+ link.href='./ontology/youtube/declining-content-evidence.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderSeasonalDiscovery(data,dossier){
+  if(!data?.cases?.length)return null;
+  const section=make('section','seasonal-discovery');
+  const details=make('details','seasonal-discovery-details');
+  details.append(make('summary','','Calendar-driven video discovery: what observed seasonal evidence can show'));
+  details.append(make('p','measure-limit','The NFL report measures a within-year offseason share. Prom and Halloween reports cover different annual or partial-year title queries. None supports a universal seasonal lift or best upload month.'));
+  const grid=make('div','seasonal-discovery-grid');
+  for(const item of data.cases){
+    const card=make('article','seasonal-discovery-card');
+    card.append(make('h5','',item.topic.replaceAll('_',' ')));
+    card.append(make('p','seasonal-observation',item.valid_statement));
+    card.append(make('p','measure-limit',item.limitations));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Seasonal causal effect, creator profit seasonality and reliable optimal upload month: unknown. A repeatable trend needs matched bins, stable measures and multiple annual cycles.'));
+  const link=make('a','inline-link','Review temporal units, source windows and remaining evidence gaps ↗');
+  link.href='./ontology/youtube/seasonal-discovery-comparison.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderPublishingTimeResearch(data,dossier){
+  if(!data?.official_findings?.length)return null;
+  const section=make('section','publish-time-study');
+  const details=make('details','publish-time-details');
+  details.append(make('summary','','Publishing times by format, geography and owner audience activity'));
+  details.append(make('p','measure-limit','YouTube Studio reports when a channel\'s viewers were online over the past 28 days. Publishing while they are active may help early views but is not known to improve a video\'s long-term performance.'));
+  const grid=make('div','publish-time-grid');
+  for(const item of data.format_comparison){
+    const card=make('article','publish-time-card');
+    card.append(make('h5','',item.format.replaceAll('_',' ')));
+    card.append(make('p','',item.release_time_matters_for.replaceAll('_',' ')));
+    card.append(make('p','measure-limit','Verified long-term advantage: '+(item.longterm_advantage_verified===null?'unknown':'no evidence of a verified advantage')));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Scheduling uses a selected time zone while watch-page dates may follow PST. Missing country rows in Analytics can be suppressed for privacy and must not be recorded as zero viewers.'));
+  details.append(make('p','measure-limit','Universal optimal publication hour, geography-specific lift and causal long-term effect: unknown.'));
+  const link=make('a','inline-link','Read official timing guidance, DST and experimental evidence gates ↗');
+  link.href='./ontology/youtube/geographic-publishing-time.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderContentFormats(data,dossier) {
+  if(!data)return null;
+  const section=make('section','content-format-section');
+  const details=make('details','content-format-details');
+  details.append(make('summary','','Compare '+data.formats.length+' ways to publish and distribute'));
+  details.append(make('p','measure-limit','Different publication formats have different discovery, link and eligibility rules. None has a verified typical profit or success rate.'));
+  const grid=make('div','content-formats-grid');
+  for(const format of data.formats){
+    const card=make('article','content-format-card');
+    card.append(make('h5','',format.label));
+    card.append(make('p','',format.format_rule));
+    card.append(make('small','', 'Access: '+format.entry_gate));
+    const inner=make('details','content-format-inner');
+    inner.append(make('summary','','Discovery and earning details'));
+    inner.append(make('p','', 'Discovery: '+format.discovery.join(', ')));
+    inner.append(make('p','', 'Possible revenue routes: '+format.money.join(', ').replaceAll('_',' ')));
+    inner.append(make('p','', 'Links: '+format.links.join('; ')));
+    inner.append(make('p','measure-limit',format.cautions.join(' ')));
+    inner.append(audienceSources(format.source_ids,dossier));
+    card.append(inner);
+    grid.append(card);
+  }
+  details.append(grid);
+  const link=make('a','inline-link','Read the format and link comparison ↗');
+  link.href='./ontology/youtube/content-formats.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderMultilingualDistribution(data,dossier) {
+  if(!data?.product_surfaces?.length)return null;
+  const section=make('section','multilingual-distribution');
+  const details=make('details','multilingual-distribution-details');
+  details.append(make('summary','','Languages, audio dubbing, captions and translated discovery'));
+  details.append(make('p','measure-limit','Spoken language, dub language, subtitles, viewer preference and country are independent attributes. Product access varies; language shares do not give a creator earnings forecast.'));
+  const observations=make('div','multilingual-observations');
+  for(const entry of data.official_selected_observations){
+    const card=make('article','multilingual-observation');
+    card.append(make('strong','',entry.comparator==='greater_than'?'Over '+entry.value+'%':entry.value));
+    card.append(make('p','',entry.metric.replaceAll('_',' ')));
+    card.append(make('small','',entry.source_period.replaceAll('_',' ')+' · '+entry.population));
+    card.append(make('p','measure-limit',entry.limits));
+    card.append(audienceSources(entry.source_ids,dossier));
+    observations.append(card);
+  }
+  details.append(observations);
+  const products=make('div','multilingual-product-grid');
+  for(const feature of data.product_surfaces){
+    const card=make('article','multilingual-product-card');
+    card.append(make('h5','',feature.label));
+    card.append(make('p','',feature.limits));
+    card.append(make('small','', 'Eligible formats: '+feature.content_formats.join(', ').replaceAll('_',' ')));
+    card.append(audienceSources(feature.source_ids,dossier));
+    products.append(card);
+  }
+  details.append(products);
+  const examples=make('details','multilingual-language-examples');
+  examples.append(make('summary','','Selected automatic-dubbing language pairs · current help snapshot'));
+  const list=make('ul','multilingual-language-list');
+  for(const pair of data.automatic_dubbing_example_pairs){
+    const li=make('li','');
+    add(li,make('strong','',pair.original+' → '),make('span','',pair.targets.join(', ')));
+    list.append(li);
+  }
+  examples.append(list);details.append(examples);
+  details.append(make('p','measure-limit','The over-25% finding is a share of watch time for selected multilingual-audio creators, not additional traffic or causal income lift. Typical dubbing hours, prices and newcomer outcomes remain unknown.'));
+  const link=make('a','inline-link','Review language-pair definitions and study limitations ↗');
+  link.href='./ontology/youtube/multilingual-distribution.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);
+  section.append(details);return section;
+}
+
+function renderCommunityAudienceStudy(data,dossier) {
+  if(!data)return null;
+  const section=make('section','community-survey');
+  const details=make('details','community-survey-details');
+  details.append(make('summary','','Measured audience: U.S. YouTube news consumption'));
+  details.append(make('p','measure-limit','This survey describes U.S. adults who regularly get news on YouTube. It is not a count of political-video viewers, all YouTube users or a prediction of ad revenue.'));
+  const latest=data.trends.at(-1);
+  const summary=make('div','community-survey-numbers');
+  add(summary,
+    blockHeading('U.S. adults',latest.all_adults_percent+'%'),
+    blockHeading('U.S. YouTube users',latest.youtube_users_percent+'%'));
+  details.append(summary);
+  details.append(make('p','measure-context','2026 Pew survey · '+data.methodology.survey_2026));
+  const trends=make('details','community-survey-trends');
+  trends.append(make('summary','','Annual news-use survey rates, 2020–2026'));
+  const list=make('div','community-survey-grid');
+  for(const point of data.trends){
+    const card=make('article','community-survey-year');
+    add(card,make('strong','',point.year),
+      make('p','',point.all_adults_percent+'% of U.S. adults'),
+      make('p','',point.youtube_users_percent+'% of U.S. YouTube users'));
+    list.append(card);
+  }
+  trends.append(list);
+  details.append(trends);
+  const profile=make('details','community-survey-profile');
+  profile.append(make('summary','','Who regularly got YouTube news in 2025'));
+  profile.append(make('p','measure-limit','Each share below describes the makeup of regular YouTube news consumers, not the chance that someone in a demographic group uses the platform. Shares do not necessarily sum to 100%.'));
+  const cards=make('div','community-survey-grid');
+  for(const x of data.demographic_composition){
+    const card=make('article','community-profile-card');
+    add(card,make('h5','',x.category),make('strong','',x.share_percent+'%'),
+      make('small','',x.dimension.replaceAll('_',' ')+' · 2025 survey'));
+    cards.append(card);
+  }
+  profile.append(cards);
+  details.append(profile);
+  details.append(make('p','measure-limit','Political affiliation here is voluntary, aggregate survey reporting. No individual political beliefs or viewing histories are collected or inferred.'));
+  details.append(audienceSources(data.source_ids,dossier));
+  const link=make('a','inline-link','Full survey definitions and caveats ↗');
+  link.href='./ontology/youtube/community-audience-studies.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);
+  return section;
+}
+
+function renderPlatformComparisonSet(data,dossier){
+  if(!data?.candidates?.length)return null;
+  const section=make('section','video-comparators');
+  const details=make('details','video-comparators-details');
+  details.append(make('summary','','Comparable video creator products · not comparable earnings'));
+  details.append(make('p','measure-limit','These adjacent services are candidates for YouTube research comparisons only; they have not been added as Mercata specimens. Audience counts, qualified views, subscribers and paid customer transactions are different units.'));
+  const grid=make('div','video-comparators-grid');
+  for(const item of data.candidates){
+    const card=make('article','video-comparator');
+    card.append(make('h5','',item.name));
+    card.append(make('p','measure-context','Compared with: '+item.comparable_youtube_surface));
+    card.append(make('p','',item.earnings_mechanism));
+    card.append(make('p','measure-limit',item.limitations));
+    card.append(audienceSources(item.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Creator income, zero-earner share, typical work hours and general profitability: unknown for these comparison cohorts.'));
+  const link=make('a','inline-link','Source-specific comparison criteria and exclusions ↗');
+  link.href='./ontology/youtube/comparison-set.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);section.append(details);return section;
+}
+
+function renderHealthFitnessResearch(data,dossier){
+ if(!data?.content_categories?.length)return null;
+ const section=make('section','health-fitness-research');
+ const details=make('details','health-fitness-details');
+ details.append(make('summary','','Fitness, wellness and health information: source-checked policy boundaries'));
+ details.append(make('p','measure-limit','Nine proposed research categories, not measured audience populations. Ordinary exercise, treatment claims, body-image content and professional health-source status require different evidence.'));
+ const grid=make('div','health-fitness-grid');
+ for(const item of data.content_categories){
+   const card=make('article','health-fitness-card');
+   card.append(make('h5','',item.label));
+   card.append(make('p','',item.examples.join(' · ')));
+   card.append(make('p','measure-limit',item.claim_review_required));
+   card.append(make('p','measure-limit','Unique audience, creator count and creator earnings: unknown'));
+   card.append(audienceSources(item.sources,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Four independent layers: medical misinformation, eating-disorder content safety, advertiser suitability and optional professional health-source discovery. A public video does not automatically qualify for health-source panels.'));
+ details.append(make('p','measure-limit','Health-feature eligibility differs from general YPP advertising entry and varies by country and language. The observed policies do not measure earnings, medical quality, audience size or enforcement frequency.'));
+ const link=make('a','inline-link','Read official policy scope, professional source rules and unknown measurements ↗');
+ link.href='./ontology/youtube/health-fitness-content.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderFinanceContentTaxonomy(data,dossier){
+ if(!data?.content_families?.length)return null;
+ const section=make('section','finance-content');
+ const details=make('details','finance-content-details');
+ details.append(make('summary','','Finance and business videos · education, marketing and promotion'));
+ details.append(make('p','measure-limit','These eight overlapping content classes distinguish general education, affiliate/owned-product marketing, and risk-sensitive financial promotions. The taxonomy is NOT a financial-advice service or an estimate of niche profitability.'));
+ const grid=make('div','finance-content-grid');
+ for(const item of data.content_families){
+   const card=make('article','finance-content-card');
+   card.append(make('h5','',item.label));
+   card.append(make('p','measure-context',item.parent.replaceAll('_',' ')));
+   card.append(make('p','',item.illustrative_topics.join(' · ')));
+   card.append(make('p','measure-limit',item.additional_risk_review));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Commercial affiliate links and paid sponsorships require separate policy and material-connection review. An SEC investor warning does not determine the conduct of an individual creator.'));
+ details.append(audienceSources([...data.platform_source_ids,...data.jurisdictional_source_ids],dossier));
+ details.append(make('p','measure-limit','Unique viewers, finance creators, niche RPM, audience overlap and creator profits are unknown. U.S. consumer and investor guidance is not worldwide law.'));
+ const link=make('a','inline-link','Read category definitions, policy references and measurement gaps ↗');
+ link.href='./ontology/youtube/finance-content-taxonomy.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderTechnologySubcultures(data,dossier){
+ if(!data?.segments?.length)return null;
+ const section=make('section','technology-subcultures');
+ const details=make('details','technology-subcultures-details');
+ details.append(make('summary','','Software tutorials, hardware reviews and workspace videos · separate categories'));
+ details.append(make('p','measure-limit','Programming, application troubleshooting, product reviews, repair and workspace aesthetics overlap. No tech-only unique audience, channel population or creator earnings has been measured.'));
+ const grid=make('div','technology-subculture-grid');
+ for(const item of data.segments){
+  const card=make('article','technology-subculture-card');
+  card.append(make('h5','',item.label));
+  card.append(make('p','measure-context',item.formats.map(x=>x.replaceAll('_',' ')).join(' · ')));
+  card.append(make('p','measure-limit',item.provenance));
+  card.append(audienceSources(item.source_ids,dossier));
+  grid.append(card);
+ }
+ details.append(grid);
+ const figures=make('div','technology-metric-grid');
+ for(const value of data.observed_public_metrics){
+  const card=make('article','technology-metric-card');
+  card.append(make('strong','',value.comparison==='greater_than'?'More than '+value.value.toLocaleString():value.value.toLocaleString()));
+  card.append(make('p','',value.population));
+  card.append(make('p','measure-limit',value.geography+' · '+value.start+' to '+value.end+' · view events, not unique people'));
+  card.append(audienceSources([value.source_id],dossier));
+  figures.append(card);
+ }
+ details.append(figures);
+ details.append(make('p','measure-limit','The two metrics have different countries, dates and inclusion rules. Neither is a software tutorial market-size estimate, and they cannot be divided into a niche audience share.'));
+ const link=make('a','inline-link','Read segmented subcultures and original observation limitations ↗');
+ link.href='./ontology/youtube/technology-subcultures-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderCommentNormsEvidence(data,dossier){
+  if(!data?.studies?.length)return null;
+  const section=make('section','comment-norms-evidence');
+  const details=make('details','comment-norms-details');
+  details.append(make('summary','','Comment behavior in selected YouTube communities · bounded studies'));
+  details.append(make('p','measure-limit','Comment counts are not unique viewers or representative public opinion. Two peer-reviewed studies examine different English-language samples, populations and coding methods.'));
+  const grid=make('div','comment-norms-grid');
+  for(const study of data.studies){
+    const card=make('article','comment-norms-card');
+    if(study.id==='political_anglophone_2025'){
+      card.append(make('h5','','English-language political channels · 2025 paper'));
+      card.append(make('strong','','About half of comments from just over 2% of commenters'));
+      card.append(make('p','measure-limit','This is a selected sample of political channels, not a platform-wide commenter census or a measure of political belief.'));
+    }else{
+      card.append(make('h5','','Selected climate-change videos · 2026 paper'));
+      card.append(make('strong','',study.n_videos+' selected videos'));
+      card.append(make('p','measure-limit','Reply threads had a greater share of positively coded comments than independent comments within the selected sample. Association is not causation.'));
+    }
+    card.append(make('p','measure-limit',study.selection));
+    card.append(audienceSources([study.source_id],dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Commenter identities, political affiliations, population toxicity rates, causal reply effects and moderation labor hours: unknown. No individual comments or profiles are collected.'));
+  const link=make('a','inline-link','Read original study frames, methods and limitations ↗');
+  link.href='./ontology/youtube/comment-norms-evidence.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);section.append(details);return section;
+}
+
+function renderCreatorCollaborationEvidence(data,dossier){
+ if(!data?.survey_groups?.length)return null;
+ const section=make('section','creator-collaboration-evidence');
+ const details=make('details','creator-collaboration-details');
+ details.append(make('summary','','Creator collaborations and fandom participation · dated evidence'));
+ details.append(make('p','measure-limit','Current Studio documentation permits up to '+data.collaboration_policy.max_invited_creators_current+' collaborators, versus '+data.collaboration_policy.max_invited_creators_initial_rollout+' at initial rollout. The uploading channel receives native video revenue; YouTube does not split collaboration payouts automatically.'));
+ const grid=make('div','creator-collaboration-groups');
+ for(const cohort of data.survey_groups){
+  const card=make('article','creator-fandom-cohort');
+  card.append(make('h5','',cohort.population+' · study N='+cohort.n_total));
+  const list=make('ul','creator-fandom-metrics');
+  for(const item of cohort.questions){
+   const row=make('li','creator-fandom-metric');
+   row.append(make('span','',item.meaning));row.append(make('strong','',item.percent+'%'));
+   list.append(row);
+  }
+  card.append(list);
+  card.append(make('p','measure-limit','Commissioned online survey: question-specific n and probability weights unverified.'));
+  grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Shared recommendations are an intended feature, not guaranteed. No collaboration earnings, unique shared audience, or causal growth lift has been measured.'));
+ details.append(audienceSources([...new Set(data.evidence_families.flatMap(x=>x.source_ids))],dossier));
+ const link=make('a','inline-link','Read the payout rules and fandom-sample limitations ↗');
+ link.href='./ontology/youtube/creator-collaboration-fandom-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderGamingReleaseEvents(data,dossier){
+ if(!data?.events?.length)return null;
+ const section=make('section','gaming-release-events');
+ const details=make('details','gaming-release-details');
+ details.append(make('summary','','Game-release spikes: dated view events, not platform-wide growth'));
+ details.append(make('p','measure-limit','Two different historic events: Splatoon 2 at its 2017 game launch in Japan and a GTA VI trailer premiere in 2023 worldwide. Video views are events, not distinct people or attributable creator earnings.'));
+ const grid=make('div','gaming-release-grid');
+ for(const event of data.events){
+   const card=make('article','gaming-release-card');
+   card.append(make('h5','',event.game+' · '+event.event_type.replaceAll('_',' ')));
+   card.append(make('p','measure-context',event.country_scope+' · '+event.window_start+' to '+event.window_end));
+   for(const x of event.measures){
+     const row=make('p','gaming-release-measure',(x.comparison==='>'?'Over ':'')+x.value.toLocaleString()+' '+x.unit.replaceAll('_',' '));
+     card.append(row);
+     card.append(make('p','measure-limit',x.scope));
+   }
+   card.append(make('p','measure-limit',event.limitations));
+   card.append(audienceSources(event.source_ids,dossier));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','A single trailer belongs to the wider related-video count. Counts for different events, geographies or windows cannot be summed or treated as comparable release-day growth.'));
+ details.append(make('p','measure-limit','Matched pre-release and post-release baselines, causal lift, viewer populations, new channel incomes and effects of the 2026 view-definition change: unknown.'));
+ const link=make('a','inline-link','Read source dates and reproducible release-window comparison rules ↗');
+ link.href='./ontology/youtube/gaming-release-events.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
+function renderNflSeasonality(data,dossier){
+ if(!data?.observations?.length)return null;
+ const section=make('section','nfl-seasonality');
+ const details=make('details','nfl-seasonality-details');
+ details.append(make('summary','','NFL videos · measured 2020–2025 growth and 2025 offseason share'));
+ details.append(make('p','measure-limit','YouTube reports bounded NFL-related global video activity, not unique fans or creator earnings. View events and uploaded videos have different denominators.'));
+ const grid=make('div','nfl-seasonality-grid');
+ const labels={
+   nfl_views_2025:'2025 NFL-related view events',
+   nfl_views_growth_2020_to_2025:'2020–2025 annual views increase',
+   nfl_uploads_growth_2020_to_2025:'2020–2025 annual uploads increase',
+   nfl_2025_offseason_share:'Share of 2025 NFL-related views in offseason'
+ };
+ for(const item of data.observations){
+   const card=make('article','nfl-seasonality-card');
+   const display=item.unit==='view_events'?'More than '+(item.value/1000000000)+' billion':'More than '+item.value+'%';
+   card.append(make('strong','',display));
+   card.append(make('h5','',labels[item.id]||item.measure.replaceAll('_',' ')));
+   card.append(make('p','measure-limit',item.period.replaceAll('_',' ')));
+   grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','More than 30% offseason views is a share within 2025, not 30% seasonal growth. Intermediate 2021–24 annual points and monthly views are unmeasured and must not be interpolated.'));
+ details.append(audienceSources([data.source_id],dossier));
+ const link=make('a','inline-link','Read dates, units, source methods and missing series ↗');
+ link.href='./ontology/youtube/nfl-view-seasonality-2026.md';link.rel='noopener noreferrer';link.target='_blank';
+ details.append(link);section.append(details);return section;
+}
+
+function renderBeautyFashionQuerySeries(data,dossier){
+  if(!data?.source_observations?.length)return null;
+  const section=make('section','beauty-fashion-query-series');
+  const details=make('details','beauty-fashion-query-details');
+  details.append(make('summary','','Beauty, fashion and routine title-query evidence · units and seasons'));
+  details.append(make('p','measure-limit','Five global platform-reported title searches use different date ranges, predicates and units. Their values cannot be combined into a popularity ranking or year-over-year growth line.'));
+  const grid=make('div','beauty-fashion-query-grid');
+  for(const item of data.source_observations){
+    const card=make('article','beauty-fashion-query-card');
+    card.append(make('h5','',item.theme.replaceAll('_',' ')));
+    const figure=(item.value/1000000).toLocaleString()+'M '+item.unit.replaceAll('_',' ');
+    card.append(make('strong','', 'More than '+figure));
+    card.append(make('p','',item.period_start+' to '+item.period_end));
+    card.append(make('p','measure-limit','Selection: '+item.title_rule));
+    card.append(make('p','measure-limit',item.period_end_qualification));
+    card.append(audienceSources([item.source_id],dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','Prom and Halloween may be calendar-linked, but seasonal effects were not measured. The 2026 morning-routine value counts uploads, not views. The August 24, 2026 public viewing-definition break also prevents naive cross-year comparisons.'));
+  details.append(make('p','measure-limit','Year-over-year trend, unique people, creator population, seasonality magnitude and creator income: unknown.'));
+  const link=make('a','inline-link','Read exact source predicates, observation windows and query-series protocol ↗');
+  link.href='./ontology/youtube/beauty-fashion-query-series.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderAnimationFormatCycles(data,dossier){
+  if(!data?.timeline?.length)return null;
+  const section=make('section','animation-format-cycles');
+  const details=make('details','animation-format-details');
+  details.append(make('summary','','Independent animation and meme formats · 2024–2026 evidence'));
+  details.append(make('p','measure-limit','Publication dates are not necessarily measurement dates. The U.S. and Mexico survey findings released in 2026 both used April 2025 samples of online animation fans, not all YouTube users.'));
+  if(data.anime_view_geography_2023){
+    const evidence=data.anime_view_geography_2023;
+    details.append(make('p','measure-limit','Anime geography: >'+evidence.percent_lower_bound_exclusive+'% of 2023 global anime-related video views occurred outside Japan. View events are not unique viewers or an adult-audience percentage.'));
+    details.append(audienceSources([evidence.source_id],dossier));
+  }
+  const timeline=make('div','animation-format-timeline');
+  for(const item of data.timeline){
+    const card=make('article','animation-format-event');
+    card.append(make('h5','',item.published_at+' · '+item.format.replaceAll('_',' ')));
+    card.append(make('p','',item.description));
+    card.append(make('p','measure-limit','Evidence type: '+item.event_type.replaceAll('_',' ')+' · Fieldwork: '+item.observation_period));
+    card.append(audienceSources([item.source_id],dossier));
+    timeline.append(card);
+  }
+  details.append(timeline);
+  const observations=make('div','animation-format-surveys');
+  for(const item of data.survey_observations){
+    const card=make('article','animation-format-survey');
+    card.append(make('strong','',item.reported_percent+'%'));
+    card.append(make('p','',item.country+' · '+item.ages+' · '+item.question.replaceAll('_',' ')));
+    card.append(make('p','measure-limit','Online sample N='+item.sample_total_n+'; per-question respondent count unknown.'));
+    observations.append(card);
+  }
+  details.append(observations);
+  details.append(make('p','measure-limit','These are different questions and populations; no 2024–2026 audience growth rate, seasonality, format profit or representative animation-creator count is measured.'));
+  const link=make('a','inline-link','Source frames, event dates and limits on trend claims ↗');
+  link.href='./ontology/youtube/animation-format-cycles.md';link.rel='noopener noreferrer';link.target='_blank';
+  details.append(link);section.append(details);return section;
+}
+
+function renderVideoAttentionCulture(data,dossier){
+  if(!data?.source_families?.length)return null;
+  const section=make('section','video-attention-culture');
+  const details=make('details','video-attention-details');
+  details.append(make('summary','','YouTube video attention and niche culture · distinct 2025–2026 evidence'));
+  details.append(make('p','measure-limit','Omdia studied the supply and viewing time of videos; YouTube/NRG surveyed U.S. online respondents about niches and personal interests. Their categories, units, periods and audiences cannot be merged into one user or creator estimate.'));
+  const grid=make('div','video-attention-grid');
+  for(const family of data.source_families){
+    const card=make('article','video-attention-card');
+    card.append(make('h5','',family.id==='omdia-2026'?'Omdia · video supply and watch time':'YouTube/NRG · U.S. niche and fandom survey'));
+    card.append(make('p','measure-context',family.population));
+    const list=make('ul','video-attention-observations');
+    const matches=data.observations.filter(x=>family.source_ids.includes(x.source_id));
+    for(const obs of matches){
+      const item=make('li','video-attention-observation');
+      const number=obs.id==='omdia-video-stock-dec2025'?'~29 billion':obs.comparison==='greater_than'?'More than '+obs.value+'%':obs.value+'%';
+      const label=obs.id==='omdia-video-stock-dec2025'?'Estimated hosted videos, December 2025':obs.measurement.replaceAll('_',' ');
+      item.append(make('strong','',number));
+      item.append(make('span','',label));
+      list.append(item);
+    }
+    card.append(list);
+    card.append(make('p','measure-limit',family.method));
+    card.append(audienceSources(family.source_ids,dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','The Omdia video genres and production categories may overlap; they must not be added to 100%. The 496-person and 939-person NRG respondent frames are age-dependent, not global YouTube audience populations.'));
+  details.append(make('p','measure-limit','Distinct niche viewers, creator income, per-niche profit, active creators and cross-category audience intersections remain unknown.'));
+  const link=make('a','inline-link','Read the dated studies, denominators and methodological exclusions ↗');
+  link.href='./ontology/youtube/video-attention-culture-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderHistoricalLinkingStudy(data,dossier){
+  if(!data?.population?.channels)return null;
+  const section=make('section','historical-linking');
+  const details=make('details','historical-linking-details');
+  details.append(make('summary','','Historical 2019 channel linking · not creator earnings'));
+  details.append(make('p','measure-limit',data.population.channels.toLocaleString()+' channels with at least 100,000 subscribers, observed at the end of 2019. This selected sample is not representative of new creators or all channels in 2026.'));
+  const grid=make('div','historical-linking-grid');
+  for(const [label,key] of [['Marketplace links','marketplace'],['Crowdfunding links','crowdfunding']]){
+    const item=data.channel_linking[key].find(x=>x.id==='less_than_20pct');
+    const zero=data.channel_linking[key].find(x=>x.id==='none');
+    const card=make('article','historical-link-card');
+    card.append(make('h5','',label));
+    card.append(make('strong','historical-link-share',item.percent_reported+'%'));
+    card.append(make('p','measure-limit','Of sampled channels had links in fewer than 20% of videos; includes '+zero.percent_reported+'% with no such links.'));
+    grid.append(card);
+  }
+  details.append(grid);
+  details.append(make('p','measure-limit','A URL in a video description is not evidence of sales, sponsorship revenue, creator profit or a causal strategy. The paper also models advertising revenue; that model is not observed channel payout data.'));
+  details.append(audienceSources([data.source.source_id],dossier));
+  const link=make('a','inline-link','Read the historical sample and its denominator limits ↗');
+  link.href='./ontology/youtube/historical-linking-study.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);return section;
+}
+
+function renderCompetitionSample(data,dossier) {
+  if(!data)return null;
+  const section=make('section','competition-sample');
+  const details=make('details','competition-sample-details');
+  details.append(make('summary','','Creator competition: one commercial analytics sample'));
+  details.append(make('p','measure-limit','Metricool analyzed '+data.source.sampled_videos.toLocaleString()+' videos from '+data.source.sampled_accounts.toLocaleString()+' accounts. The recruitment frame and exact date windows are not fully disclosed; these figures are not universal creator success rates.'));
+  const groups=make('div','competition-grid');
+  for(const item of data.cohort_tier_transitions){
+    const cell=make('article','competition-tier');
+    cell.append(make('h5','',item.tier+' channels'));
+    cell.append(make('strong','',item.share_moved_up_percent+'%'));
+    cell.append(make('small','', 'Moved to a higher subscriber tier in the observed cohort'));
+    groups.append(cell);
+  }
+  details.append(groups);
+  const sources=make('details','competition-traffic');
+  sources.append(make('summary','','Traffic attribution in this sampled dataset'));
+  const list=make('div','competition-traffic-grid');
+  for(const item of data.traffic_source_share_of_sampled_organic_views){
+    const row=make('article','competition-traffic-item');
+    row.append(make('strong','',item.percent+'%'));
+    row.append(make('span','',item.id.replaceAll('_',' ')));
+    list.append(row);
+  }
+  sources.append(list);details.append(sources);
+  details.append(make('p','measure-limit','These movements and traffic shares are descriptive, not the probability of monetizing a new channel. Short-form and long-form revenue changes can also reflect selection, seasonality and viewing-metric revisions.'));
+  details.append(audienceSources([data.source.id],dossier));
+  const link=make('a','inline-link','Read study limitations and exact cohorts ↗');
+  link.href='./ontology/youtube/competition-observations.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);
+  section.append(details);return section;
+}
+
+function renderAcademicResearch(data,dossier) {
+  if(!data?.studies?.length)return null;
+  const section=make('section','academic-research');
+  const details=make('details','academic-research-details');
+  details.append(make('summary','','Academic studies of creator income and viewing · '+data.studies.length+' studies'));
+  details.append(make('p','measure-limit','The studies measure different regions, creators and types of income. Their abstracts were checked, but complete methods and source datasets have not yet been audited. They cannot be pooled into a typical YouTube salary.'));
+  const grid=make('div','academic-studies-grid');
+  for(const paper of data.studies){
+    const card=make('article','academic-study');
+    card.append(make('h5','',paper.title));
+    card.append(make('p','',paper.year+' · '+paper.scope));
+    if(paper.numeric?.gini_coefficient!==undefined){
+      card.append(make('p','', 'Reported sample earnings Gini: '+paper.numeric.gini_coefficient));
+    } else if(paper.sample_n!==null){
+      card.append(make('p','', 'Studied channels/creators: '+paper.sample_n.toLocaleString()));
+    }
+    const findings=make('ul','academic-findings');
+    for(const sentence of paper.findings)findings.append(make('li','',sentence));
+    card.append(findings);
+    card.append(make('p','measure-limit',paper.limitations[0]));
+    card.append(audienceSources([paper.id],dossier));
+    grid.append(card);
+  }
+  details.append(grid);
+  const link=make('a','inline-link','Read the research boundaries and bibliography ↗');
+  link.href='./ontology/youtube/academic-studies.md';link.target='_blank';link.rel='noopener noreferrer';
+  details.append(link);section.append(details);
+  return section;
+}
+
+async function showDossier(entry) {
+  const host=$('#dossier-view');
+  host.hidden=false;
+  host.replaceChildren(make('p','unresearched','Loading research record…'));
+  host.scrollIntoView({behavior:'smooth',block:'start'});
+  try {
+    const [record,work,studyPlan,platformPolicy,yppFuture,topicCatalog,topicActivity,samplingBudget,adultUseHistory,incomeEvidence,channelIncome,crossPlatformIncome,airStudioBenchmarks,lifecycleHorizons,newcomerIncomeProtocol,earningRoutes,payoutGates,opportunityFramework,contentRestrictions,advertiserHistory,musicRights,productionCosts,productionEffort,viewDefinition,analyticsGuide,platformScale,countryReach,geographicScope,audienceOverlap,beautyGamingPanel,genderCommunityEvidence,childrenSeasonality,viewerPersonMetrics,usDemographicUse,identityResearch,surveyFrameCrosswalk,countryProgramAccess,taxWithholding,brandDisclosure,sponsorCategoryEvidence,publishingCadence,creatorSafety,trafficConcentration,euCreatorConsultation,eligibilityMatrix,channelOnboarding,channelOwnership,applicationLifecycle,creatorGrowth,retentionPostsMemberships,promoteEconomics,contentFormats,publishTimeStudy,seasonalDiscovery,decliningTopicAudit,researchSynthesis,videoSurfaceEconomics,screenViewingStudy,childAgeFormat,teenFormatEvidence,multilingualDistribution,newsAudienceStudy,competitionSample,historicalLinking,videoAttentionCulture,animationFormatCycles,beautyFashionQueries,nflSeasonality,gamingReleaseEvents,creatorCollaboration,commentNormsEvidence,technologySubcultures,financeContent,healthFitness,comparisonSet,academicResearch,reputationPortability,checkoutRefundEvidence,memberCohortProtocol,shortsReferralStudy,audiencePopulationCrosswalk,countryAdReach,usNewsDemographics,syntheticMediaPolicy,recommendationEvidence,channelCohortEvidence,firstUploadVlogStudy,externalLinkFunnel,retentionObservability,crossplatformPosting,gamingPeriods,searchDemandProxy,videoProductionCosts,exclusiveRightsEvidence,fraudSecurity]=await Promise.all([read(entry.dossier),read(entry.queue),entry.plan?read(entry.plan):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/policies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/ypp-transition-2027.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/topic-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/public-api-sampling-budget.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-adult-usage-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-income-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/small-channel-income.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/cross-platform-income-surveys.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/air-studio-benchmarks-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/lifecycle-horizons.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/newcomer-income-cohort.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/revenue-pathways.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/payment-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/opportunity-framework.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-policy-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/advertiser-policy-history.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/music-rights-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-costs.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/production-effort-comparison.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/view-definition-break.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/analytics-query-guide.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/platform-scale.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-reach-devices.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/geographic-scope.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/audience-overlap.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/beauty-gaming-overlap-2025.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/gender-community-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/children-media-seasonality.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/viewer-person-metrics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-demographic-use-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/demographic-identity-uncertainty.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/study-frame-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-eligibility-payments.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/tax-withholding-mechanics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/brand-disclosure-risk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/sponsor-category-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/publishing-cadence-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-safety-continuity.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/traffic-concentration.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eu-creator-consultation-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/eligibility-matrix.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-onboarding.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-ownership-continuity.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/application-lifecycle.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-growth.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/retention-posts-memberships.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/promote-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/content-formats.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/geographic-publishing-time.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/seasonal-discovery-comparison.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/declining-content-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/research-synthesis-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/video-surfaces-economics.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/screen-viewing-uk-2025.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/child-age-and-format-gates.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/teen-video-format-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/multilingual-distribution.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/community-audience-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/competition-observations.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/historical-linking-study.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/video-attention-culture-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/animation-format-cycles.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/beauty-fashion-query-series.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/nfl-view-seasonality-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/gaming-release-events.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-collaboration-fandom-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/comment-norms-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/technology-subcultures-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/finance-content-taxonomy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/health-fitness-content.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/comparison-set.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/academic-studies.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/reputation-portability.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/checkout-refund-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/member-cohort-protocol.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/shorts-related-video-funnel.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/audience-population-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/country-ad-reach-comparisons.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/us-news-demographic-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/synthetic-media-rights-policy.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/recommendation-surface-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/channel-cohort-observations-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/first-upload-vlog-study-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/external-link-funnel-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/retention-observability.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/crossplatform-posting-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/gaming-livestream-quarterly-2026.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/search-demand-proxy-crosswalk.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/video-production-cost-register.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/exclusive-rights-evidence.json'):Promise.resolve(null),entry.id==='youtube'?read('ontology/youtube/creator-fraud-security.json'):Promise.resolve(null)]);
+    if(record.id!==entry.id || work.specimen_id!==entry.id) throw Error('Index and dossier disagree.');
+    const outer=make('article','dossier-shell');
+    outer.style.setProperty('--specimen',entry.color.hex);
+    const top=make('div','dossier-head');
+    const heading=make('div','');
+    add(heading,make('p','eyebrow',entry.domain.replaceAll('-',' ')+' / '+record.status),
+      make('h3','',record.name));
+    const close=make('button','dossier-close','Close ×');
+    close.type='button';
+    close.addEventListener('click',()=>{host.hidden=true;host.replaceChildren();});
+    add(top,heading,close);
+    outer.append(top);
+    const official=make('a','inline-link','Official website ↗');
+    official.href=record.official_url;
+    official.target='_blank';
+    official.rel='noopener noreferrer';
+    const dossierJson=make('a','inline-link','Dossier JSON ↗');
+    dossierJson.href='./'+entry.dossier;
+    const queueJson=make('a','inline-link','Task JSON ↗');
+    queueJson.href='./'+entry.queue;
+    add(outer,add(make('div','dossier-links'),official,dossierJson,queueJson));
+    const tasks=work.queues.flatMap(q=>q.tasks);
+    const done=tasks.filter(t=>t.status==='complete'&&t.progress===100).length;
+    const stats=make('div','dossier-stats');
+    add(stats,blockHeading('Research tasks',studyPlan?studyPlan.total_tracked_tasks:tasks.length),blockHeading('Verified tasks',done),
+      blockHeading('Sources',record.evidence.length),blockHeading('Claims',record.claims.length));
+    outer.append(stats);
+    const intro=make('p','dossier-intro',record.summary||'This marketplace has not been researched yet.');
+    outer.append(intro);
+    const evidenceArea=make('div','dossier-evidence');
+    evidenceArea.append(detailSection('Published observations',record.observations,observation=>{
+      const card=make('div','research-item');
+      add(card,make('strong','',observation.metric||observation.id),
+        make('p','',observation.value===null?'Unknown':String(observation.value)+' '+(observation.unit||'')),
+        make('small','',observation.period||'Period not supplied'));
+      return card;
+    }));
+    evidenceArea.append(detailSection('Claims and sources',record.claims,claim=>{
+      const card=make('div','research-item');
+      add(card,make('strong','',claim.text),make('small','','Checked '+claim.observed_at+' · '+claim.confidence+' confidence'));
+      if(claim.limitations)card.append(make('p','measure-limit','Limits: '+claim.limitations));
+      card.append(audienceSources(claim.source_ids,record));
+      return card;
+    }));
+    evidenceArea.append(detailSection('Revenue opportunities',record.opportunities,opportunity=>{
+      return add(make('div','research-item'),make('p','',opportunity.title||opportunity.id||'Opportunity'));
+    }));
+    evidenceArea.append(detailSection('Risks',record.risks,risk=>{
+      return add(make('div','research-item'),make('p','',risk.title||risk.id||'Risk'));
+    }));
+    outer.append(evidenceArea);
+    const policySection=renderPlatformPolicies(platformPolicy,record);
+    if(policySection)outer.append(policySection);
+    const transition=renderYppFutureTransition(yppFuture,record);
+    if(transition)outer.append(transition);
+    const routes=renderRevenuePathways(earningRoutes,payoutGates,record,eligibilityMatrix);
+    if(routes)outer.append(routes);
+    const entryStages=renderChannelOnboarding(channelOnboarding,record);
+    if(entryStages)outer.append(entryStages);
+    const ownership=renderChannelOwnership(channelOwnership,record);
+    if(ownership)outer.append(ownership);
+    const reputation=renderReputationPortability(reputationPortability,record);
+    if(reputation)outer.append(reputation);
+    const checkoutAudit=renderCheckoutRefundEvidence(checkoutRefundEvidence,record);
+    if(checkoutAudit)outer.append(checkoutAudit);
+    const cohortStudy=renderMemberCohortResearch(memberCohortProtocol,record);
+    if(cohortStudy)outer.append(cohortStudy);
+    const shortsFlow=renderShortsReferralStudy(shortsReferralStudy,record);
+    if(shortsFlow)outer.append(shortsFlow);
+    const audienceBase=renderAudiencePopulationCrosswalk(audiencePopulationCrosswalk,record);
+    if(audienceBase)outer.append(audienceBase);
+    const adCountries=renderCountryAdReach(countryAdReach,record);
+    if(adCountries)outer.append(adCountries);
+    const usNews=renderUSNewsDemographics(usNewsDemographics,record);
+    if(usNews)outer.append(usNews);
+    const syntheticPolicy=renderSyntheticMediaPolicy(syntheticMediaPolicy,record);
+    if(syntheticPolicy)outer.append(syntheticPolicy);
+    const recs=renderRecommendationEvidence(recommendationEvidence,record);
+    if(recs)outer.append(recs);
+    const cohorts=renderChannelCohorts(channelCohortEvidence,record);
+    if(cohorts)outer.append(cohorts);
+    const vlog=renderFirstUploadVlogStudy(firstUploadVlogStudy,record);
+    if(vlog)outer.append(vlog);
+    const linkFunnel=renderExternalLinkFunnel(externalLinkFunnel,record);
+    if(linkFunnel)outer.append(linkFunnel);
+    const retention=renderRetentionObservability(retentionObservability,record);
+    if(retention)outer.append(retention);
+    const crossposting=renderCrossplatformPosting(crossplatformPosting,record);
+    if(crossposting)outer.append(crossposting);
+    const gamingStudy=renderGamingPeriods(gamingPeriods,record);
+    if(gamingStudy)outer.append(gamingStudy);
+    const demand=renderSearchDemandProxy(searchDemandProxy,record);
+    if(demand)outer.append(demand);
+    const production=renderVideoProductionCosts(videoProductionCosts,record);
+    if(production)outer.append(production);
+    const exRights=renderExclusiveRights(exclusiveRightsEvidence,record);
+    if(exRights)outer.append(exRights);
+    const fraud=renderFraudSecurity(fraudSecurity,record);
+    if(fraud)outer.append(fraud);
+    const onboarding=renderApplicationLifecycle(applicationLifecycle);
+    if(onboarding)outer.append(onboarding);
+    const restricted=renderContentRestrictions(contentRestrictions,record);
+    if(restricted)outer.append(restricted);
+    const adsChanges=renderAdvertiserPolicyHistory(advertiserHistory,record);
+    if(adsChanges)outer.append(adsChanges);
+    const music=renderMusicRights(musicRights,record);
+    if(music)outer.append(music);
+    const costStudy=renderProductionCosts(productionCosts);
+    if(costStudy)outer.append(costStudy);
+    const effort=renderProductionEffortComparison(productionEffort,record);
+    if(effort)outer.append(effort);
+    const metricsGuide=renderMeasurementGuide(analyticsGuide);
+    if(metricsGuide)outer.append(metricsGuide);
+    const counted=renderViewDefinitionBreak(viewDefinition,record);
+    if(counted)outer.append(counted);
+    const scale=renderPlatformScale(platformScale);
+    if(scale)outer.append(scale);
+    const country=renderCountryReachDevices(countryReach,record);
+    if(country)outer.append(country);
+    const geography=renderGeographicScope(geographicScope,record);
+    if(geography)outer.append(geography);
+    const overlap=renderAudienceOverlapResearch(audienceOverlap,record);
+    if(overlap)outer.append(overlap);
+    const overlapPanel=renderBeautyGamingOverlap(beautyGamingPanel,record);
+    if(overlapPanel)outer.append(overlapPanel);
+    const genderGroups=renderGenderCommunityEvidence(genderCommunityEvidence,record);
+    if(genderGroups)outer.append(genderGroups);
+    const childSeasonality=renderChildrenSeasonality(childrenSeasonality,record);
+    if(childSeasonality)outer.append(childSeasonality);
+    const personMetrics=renderViewerPersonMetrics(viewerPersonMetrics,record);
+    if(personMetrics)outer.append(personMetrics);
+    const demo=renderUsDemographicUse(usDemographicUse,record);
+    if(demo)outer.append(demo);
+    const identity=renderIdentityResearch(identityResearch,record);
+    if(identity)outer.append(identity);
+    const frame=renderSurveyFrameCrosswalk(surveyFrameCrosswalk,record);
+    if(frame)outer.append(frame);
+    const countryPrograms=renderCountryProgramAccess(countryProgramAccess,record);
+    if(countryPrograms)outer.append(countryPrograms);
+    const taxes=renderTaxWithholdingResearch(taxWithholding,record);
+    if(taxes)outer.append(taxes);
+    const brand=renderBrandDisclosureRisk(brandDisclosure,record);
+    if(brand)outer.append(brand);
+    const sponsors=renderSponsorCategoryResearch(sponsorCategoryEvidence,record);
+    if(sponsors)outer.append(sponsors);
+    const cadence=renderPublishingCadenceStudy(publishingCadence,record);
+    if(cadence)outer.append(cadence);
+    const safety=renderCreatorSafety(creatorSafety,record);
+    if(safety)outer.append(safety);
+    const concentration=renderTrafficConcentration(trafficConcentration,record);
+    if(concentration)outer.append(concentration);
+    const eu=renderEuCreatorConsultation(euCreatorConsultation,record);
+    if(eu)outer.append(eu);
+    const discoveryModel=renderCreatorGrowth(creatorGrowth,record);
+    if(discoveryModel)outer.append(discoveryModel);
+    const returnStudy=renderPostAndMembershipRetention(retentionPostsMemberships,record);
+    if(returnStudy)outer.append(returnStudy);
+    const promotion=renderPromoteResearch(promoteEconomics,record);
+    if(promotion)outer.append(promotion);
+    const formats=renderContentFormats(contentFormats,record);
+    if(formats)outer.append(formats);
+    const publishTimes=renderPublishingTimeResearch(publishTimeStudy,record);
+    if(publishTimes)outer.append(publishTimes);
+    const seasonal=renderSeasonalDiscovery(seasonalDiscovery,record);
+    if(seasonal)outer.append(seasonal);
+    const declineAudit=renderDecliningTopicAudit(decliningTopicAudit,record);
+    if(declineAudit)outer.append(declineAudit);
+    const synthesis=renderEvidenceSynthesis(researchSynthesis,record);
+    if(synthesis)outer.append(synthesis);
+    const surfaces=renderVideoSurfaceEconomics(videoSurfaceEconomics,record);
+    if(surfaces)outer.append(surfaces);
+    const screen=renderScreenViewingStudy(screenViewingStudy,record);
+    if(screen)outer.append(screen);
+    const kids=renderChildAgeFormatStudy(childAgeFormat,record);
+    if(kids)outer.append(kids);
+    const youthFormats=renderTeenVideoFormatEvidence(teenFormatEvidence,record);
+    if(youthFormats)outer.append(youthFormats);
+    const multilingual=renderMultilingualDistribution(multilingualDistribution,record);
+    if(multilingual)outer.append(multilingual);
+    const audience=renderAudienceResearch(record);
+    if(audience)outer.append(audience);
+    const history=renderAdultUseHistory(adultUseHistory);
+    if(history)outer.append(history);
+    const newsStudy=renderCommunityAudienceStudy(newsAudienceStudy,record);
+    if(newsStudy)outer.append(newsStudy);
+    const competitors=renderCompetitionSample(competitionSample,record);
+    if(competitors)outer.append(competitors);
+    const historicalLinks=renderHistoricalLinkingStudy(historicalLinking,record);
+    if(historicalLinks)outer.append(historicalLinks);
+    const attention=renderVideoAttentionCulture(videoAttentionCulture,record);
+    if(attention)outer.append(attention);
+    const animation=renderAnimationFormatCycles(animationFormatCycles,record);
+    if(animation)outer.append(animation);
+    const beauty=renderBeautyFashionQuerySeries(beautyFashionQueries,record);
+    if(beauty)outer.append(beauty);
+    const nfl=renderNflSeasonality(nflSeasonality,record);
+    if(nfl)outer.append(nfl);
+    const gamingEvent=renderGamingReleaseEvents(gamingReleaseEvents,record);
+    if(gamingEvent)outer.append(gamingEvent);
+    const collab=renderCreatorCollaborationEvidence(creatorCollaboration,record);
+    if(collab)outer.append(collab);
+    const commentNorms=renderCommentNormsEvidence(commentNormsEvidence,record);
+    if(commentNorms)outer.append(commentNorms);
+    const finance=renderFinanceContentTaxonomy(financeContent,record);
+    if(finance)outer.append(finance);
+    const fitness=renderHealthFitnessResearch(healthFitness,record);
+    if(fitness)outer.append(fitness);
+    const technologies=renderTechnologySubcultures(technologySubcultures,record);
+    if(technologies)outer.append(technologies);
+    const comparators=renderPlatformComparisonSet(comparisonSet,record);
+    if(comparators)outer.append(comparators);
+    const literature=renderAcademicResearch(academicResearch,record);
+    if(literature)outer.append(literature);
+    const crossIncome=renderCrossPlatformIncomeSurveys(crossPlatformIncome,record);
+    if(crossIncome)outer.append(crossIncome);
+    const horizons=renderLifecycleHorizons(lifecycleHorizons,record);
+    if(horizons)outer.append(horizons);
+    const air=renderAirStudioBenchmarks(airStudioBenchmarks,record);
+    if(air)outer.append(air);
+    const newcomer=renderNewcomerIncomeProtocol(newcomerIncomeProtocol,record);
+    if(newcomer)outer.append(newcomer);
+    const incomeStudy=renderCreatorIncomeEvidence(incomeEvidence);
+    if(incomeStudy)outer.append(incomeStudy);
+    const channelStudy=renderSmallChannelStudy(channelIncome);
+    if(channelStudy)outer.append(channelStudy);
+    const catalogue=renderTopicCatalogue(topicCatalog,topicActivity);
+    if(catalogue)outer.append(catalogue);
+    const sampling=renderPublicSamplingBudget(samplingBudget,record);
+    if(sampling)outer.append(sampling);
+    const method=renderOpportunityFramework(opportunityFramework,topicCatalog,topicActivity);
+    if(method)outer.append(method);
+    if(entry.id==='youtube')outer.append(renderScenarioCalculator());
+    if(entry.id==='youtube')outer.append(renderBreakEvenCalculator());
+    if(studyPlan)outer.append(renderStudyPlan(studyPlan));
+    outer.append(make('h4','dossier-queues-title','Research queues'));
+    const queueList=make('div','dossier-queues');
+    for(const group of work.queues){
+      const panel=make('details','queue-details');
+      const completed=group.tasks.filter(t=>t.status==='complete'&&t.progress===100).length;
+      const pct=Math.round(group.tasks.reduce((n,t)=>n+t.progress,0)/group.tasks.length);
+      const summary=make('summary','',group.emoji+' '+group.title+' — '+pct+'% ('+completed+'/'+group.tasks.length+' verified)');
+      panel.append(summary,progress(pct,group.title));
+      const list=make('ol','queue-task-list');
+      for(const task of group.tasks){
+        const item=make('li','');
+        add(item,make('strong','',task.emoji+' '+task.title+' · '+task.progress+'%'),
+          make('p','',task.acceptance));
+        list.append(item);
+      }
+      panel.append(list);
+      queueList.append(panel);
+    }
+    outer.append(queueList);
+    host.replaceChildren(outer);
+  } catch(error) {
+    console.error('Mercata dossier failed to render: '+String(error?.stack || error));
+    host.replaceChildren(add(make('div','empty-state'),make('h3','', 'Research record unavailable'),
+      make('p','', 'The dossier or task queue could not be loaded. Check the public files.')));
+  }
+}
+
+async function start() {
+  const outcomes=await Promise.allSettled([
+    read('gallery/index.json'),read('pipeline/queues.json'),
+    read('pipeline/domains.json'),read('ontology/ontology.json'),
+    read('roadmap/progress.json')
+  ]);
+  if(outcomes[0].status==='fulfilled') {
+    specimens=outcomes[0].value.specimens;
+    const domains=[...new Set(specimens.map(s=>s.domain))].sort();
+    for(const domain of domains) {
+      const opt=make('option','',domain.replaceAll('-',' ')); opt.value=domain;
+      $('#domain').append(opt);
+    }
+    showCatalog();
+    showSocialOverview();
+  } else errorFor('#catalog-grid','The public gallery index could not be read.');
+  if(outcomes[1].status==='fulfilled' && outcomes[2].status==='fulfilled') showQueues(outcomes[1].value,outcomes[2].value);
+  else errorFor('#queue-grid','The research definitions could not be read.');
+  if(outcomes[3].status==='fulfilled') showOntology(outcomes[3].value);
+  else errorFor('#ontology-grid','The ontology could not be read.');
+  if(outcomes[4].status==='fulfilled') showRoadmap(outcomes[4].value);
+  else errorFor('#milestones','The progress ledger could not be read.');
+}
+$('#search').addEventListener('input',showCatalog);
+$('#domain').addEventListener('change',showCatalog);
+start();
++pooled.mean_usd_month+' mean'));
+ card.append(make('p','measure-limit','23,435 observations across 2018/2021/2024; not a follow-the-same-creator panel'));
+ card.append(audienceSources(data.source_ids,dossier));grid.append(card);
+ details.append(grid);
+ details.append(make('p','measure-limit','Animation and podcast Patreon earnings appear more concentrated across all platforms, but YouTube-specific community conversion and zero-earner rates remain unknown.'));
+ const link=make('a','inline-link','Read platform and category comparability limits ↗');
+ link.href='./ontology/youtube/patreon-earnings-timeframe-2026.md';link.target='_blank';link.rel='noopener noreferrer';
+ details.append(link);section.append(details);return section;
+}
+
 function renderGamingPeriods(data,dossier){
  if(!data?.gaming?.length)return null;
  const section=make('section','gaming-period-study');
