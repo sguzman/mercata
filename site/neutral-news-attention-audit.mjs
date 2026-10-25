@@ -1,6 +1,6 @@
 export function validateNewsEventFrame(model,x){
  if(!x||typeof x!=='object')return {valid:false,reason:'missing_frame'};
- if(!/^\\d{4}-\\d{2}-\\d{2}$/.test(x.eventDate||'')||!Number.isFinite(Date.parse(x.eventDate+'T00:00:00Z')))return {valid:false,reason:'invalid_event_date'};
+ if(!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(x.eventDate||'')||!Number.isFinite(Date.parse(x.eventDate+'T00:00:00Z')))return {valid:false,reason:'invalid_event_date'};
  const day=(Date.parse(x.eventDate+'T00:00:00Z'))/86400000;
  if(!Number.isInteger(x.beforeDays)||!Number.isInteger(x.afterDays)||x.beforeDays<=0||x.afterDays<=0||x.beforeDays!==x.afterDays)return {valid:false,reason:'noncomparable_window'};
  if(!x.query||!x.regionCode||!x.relevanceLanguage||!x.snapshotMethod)return {valid:false,reason:'missing_query_or_capture_parameters'};
