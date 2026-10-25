@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [Content ID appeal procedure comparison](ontology/youtube/content-id-appeal-routes-2026.md) preserves distinct initial disputes, appeals, block escalations and copyright removal requests with official 30-day and seven-day response windows, without interpreting them as creator payments or proven violations.
+
+
 The [Content ID revenue diversion protocol](ontology/youtube/content-id-revenue-dispute-audit.md) distinguishes geographic blocks, rightsholder claims, approved sharing and disputed advertising revenue held from the documented claim/dispute dates, without manufacturing creator profit or legal costs.
 
 

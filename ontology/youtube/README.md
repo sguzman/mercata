@@ -16,6 +16,10 @@ The [December 2025/2026 Adobe Express respondent study](adobe-ai-production-surv
 
 The [61-completed-video first-person time log](photography-production-time-diary-2025.md), [machine record](photography-production-time-diary-2025.json) and [rounding/unit audit](../../site/photography-production-labor-audit.mjs) document one channel's mean 9.74 and median 7.37 hours of production per finished video. No creator earnings, abandoned-attempt hours, net wages or other-genre labor estimates were observed.
 
+## Content ID appeals and distinct takedown routes
+
+The [Content ID dispute and appeal timing study](content-id-appeal-routes-2026.md), [state matrix](content-id-appeal-routes-2026.json) and [route validator](../../site/content-id-appeal-audit.mjs) distinguish 30-day first disputes, 7-day appeals, narrow blocking-claim escalation and the separate copyright removal request. Neither a claim nor a pending appeal establishes a copyright strike, a revenue entitlement or legal fees.
+
 ## Content ID rights diversions and held revenue
 
 The [Content ID revenue-diversion research](content-id-revenue-dispute-audit.md), [dated policy record](content-id-revenue-dispute-audit.json) and [pure dispute-date validator](../../site/content-id-revenue-audit.mjs) separate territorial claim actions, rightsholder revenue, possible authorized sharing, and the source-defined five-day held-revenue window. Held proceeds are not recognized creator cash until a real appropriate allocation and bank receipt is established.

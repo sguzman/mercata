@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "content_id_claim_dispute_appeal_and_copyright_removal_separation",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "music-content-id",
+    "music-claim-disputes",
+    "yt-content-id-initial-dispute-2026",
+    "yt-content-id-appeal-responses-2026"
+  ],
+  "stages": [
+    {
+      "id": "initial_dispute",
+      "requires_claim_policy": [
+        "block",
+        "monetize",
+        "track"
+      ],
+      "claimant_response_days": 30,
+      "claimant_no_response": "claim_released",
+      "outcomes": [
+        "release",
+        "reinstate",
+        "copyright_removal_request",
+        "timeout_release"
+      ],
+      "creator_automatically_paid": false,
+      "source_id": "yt-content-id-initial-dispute-2026"
+    },
+    {
+      "id": "appeal_reinstated_claim",
+      "requires_prior_reinstatement": true,
+      "claimant_response_days": 7,
+      "claimant_no_response": "claim_released",
+      "outcomes": [
+        "release",
+        "removal_request",
+        "timeout_release"
+      ],
+      "creator_automatically_paid": false,
+      "source_id": "yt-content-id-appeal-responses-2026"
+    },
+    {
+      "id": "escalate_block_to_appeal",
+      "requires_claim_policy": [
+        "block"
+      ],
+      "requires_creator_appeal_eligibility": true,
+      "skips_initial_dispute": true,
+      "claimant_response_days": 7,
+      "claimant_no_response": "claim_released",
+      "outcomes": [
+        "release",
+        "removal_request",
+        "timeout_release"
+      ],
+      "creator_automatically_paid": false,
+      "source_id": "yt-content-id-appeal-responses-2026"
+    },
+    {
+      "id": "scheduled_removal_after_appeal",
+      "requires_valid_scheduled_copyright_removal_request": true,
+      "creator_cancel_appeal_window_days": 7,
+      "automatically_finalized": false,
+      "source_id": "yt-content-id-appeal-responses-2026"
+    }
+  ],
+  "status_categories": [
+    {
+      "id": "content_id_claim",
+      "is_copyright_strike": false,
+      "automatically_proves_infringement": false
+    },
+    {
+      "id": "reinstated_claim",
+      "is_copyright_strike": false,
+      "automatically_proves_infringement": false
+    },
+    {
+      "id": "valid_copyright_removal_request",
+      "can_cause_strike": true,
+      "must_pass_legal_validation": true
+    },
+    {
+      "id": "counter_notification",
+      "legal_submission_after_valid_takedown": true,
+      "not_an_appeal_within_content_id": true
+    }
+  ],
+  "appeal_economic_uncertainty": {
+    "claimed_video_monetization_may_continue_when_both_parties_monetize": true,
+    "held_ad_revenue_creator_cash": null,
+    "refund_or_payment_lag": null,
+    "final_beneficiary_must_be_resolved": true,
+    "actual_claimant_share": null,
+    "claimants_filing_removals_count": null,
+    "appeal_success_probability": null,
+    "lawyer_or_legal_cost": null
+  },
+  "constraints": [
+    "Content ID initial dispute claimant response window (30 days) differs from an appeal response window (7 days); neither is a bank payout schedule.",
+    "Escalate to Appeal can skip the initial dispute only for claims blocking a video, subject to creator eligibility and rights confidence.",
+    "An unsuccessful appeal can lead to a copyright removal request; a strike follows only if the takedown request meets applicable validity requirements.",
+    "The scheduled removal request option gives a seven-day appeal cancellation window; it is not a grace period for every Content ID claim.",
+    "If a claimant fails to respond in the prescribed window YouTube says the claim expires/releases; this does not prove compensation, back-pay, profit or successful legal counter-notification.",
+    "YouTube does not determine whether the creator has a lawful exception or should appeal in their specific jurisdiction.",
+    "If the claim is released, monetization settings may be restored if all claims are resolved; final money allocation is distinct from automatic bank receipt.",
+    "Creator legal representation fees, appeal probabilities and the share of falsely claimed videos remain unknown."
+  ],
+  "observed_appeals": [],
+  "unmeasured": {
+    "platform_appeal_success_rate": null,
+    "creator_bank_receipt": null,
+    "legal_fees": null,
+    "claimant_challenge_frequency": null,
+    "final_creator_net_profit": null
+  }
+}
