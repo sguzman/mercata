@@ -398,7 +398,7 @@
         "youtube/review/create-a-reproducibility-log"
       ],
       "phase": 1,
-      "progress_percent": 82
+      "progress_percent": 83
     },
     {
       "id": "special-video",
@@ -493,7 +493,7 @@
         "youtube/audience-demography/audit-differences-among-survey-panels"
       ],
       "phase": 2,
-      "progress_percent": 71
+      "progress_percent": 73
     },
     {
       "id": "subculture-atlas",
@@ -710,7 +710,7 @@
         "youtube/audience-safeguards/audit-publication-of-third-party-material"
       ],
       "phase": 1,
-      "progress_percent": 77
+      "progress_percent": 78
     }
   ],
   "deliverables": [
@@ -5055,13 +5055,19 @@
       "objective": "Document omitted groups and inaccessible analytics.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and document omitted groups and inaccessible analytics.",
       "status": "in_progress",
-      "percent": 52,
+      "percent": 57,
       "evidence": [
         "ontology/youtube/analytics-query-guide.json",
         "ontology/youtube/analytics-query-guide.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/virtual-worship-not-youtube-audience-2025.json",
+        "ontology/youtube/virtual-worship-not-youtube-audience-2025.md",
+        "site/virtual-worship-boundary-audit.mjs",
+        "tests/virtual-worship-boundary-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/virtual-worship-not-youtube-audience-2025.json",
       "priority": "high",
       "phase": 2
     },
@@ -7102,12 +7108,18 @@
       "objective": "Document that creator Analytics is not a platform-wide public census.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and document that creator Analytics is not a platform-wide public census.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 70,
       "evidence": [
         "specimens/youtube.json",
-        "ontology/youtube/README.md"
+        "ontology/youtube/README.md",
+        "ontology/youtube/virtual-worship-not-youtube-audience-2025.json",
+        "ontology/youtube/virtual-worship-not-youtube-audience-2025.md",
+        "site/virtual-worship-boundary-audit.mjs",
+        "tests/virtual-worship-boundary-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/virtual-worship-not-youtube-audience-2025.json",
       "priority": "high",
       "phase": 1
     },
@@ -7164,13 +7176,18 @@
       "objective": "Use appropriate population samples; no inference from names or faces.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and use appropriate population samples; no inference from names or faces.",
       "status": "in_progress",
-      "percent": 82,
+      "percent": 87,
       "evidence": [
         "ontology/youtube/demographic-identity-uncertainty.json",
         "ontology/youtube/demographic-identity-uncertainty.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/virtual-worship-not-youtube-audience-2025.json",
+        "ontology/youtube/virtual-worship-not-youtube-audience-2025.md",
+        "site/virtual-worship-boundary-audit.mjs",
+        "tests/virtual-worship-boundary-audit.test.mjs",
+        "site/app.js"
       ],
       "artifact": "ontology/youtube/demographic-identity-uncertainty.json",
       "priority": "high",
