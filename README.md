@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [public meme-reference graph protocol](ontology/youtube/public-meme-reference-graph-2026.md) accepts documented content edges without mistaking linked videos for unique-person movement or creator earnings.
+
+
 [Language market longitudinal comparability](ontology/youtube/language-market-comparability-2026.md) now separates localized video feature support from country-based advertising reach and measured viewer demand.
 
 

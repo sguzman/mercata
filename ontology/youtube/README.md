@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [public video reference study](public-meme-reference-graph-2026.md) and [link-graph validator](../../site/public-reference-graph.mjs) constrain meme-propagation research to public, dated, rights-compatible content relationships.
+
+
 The [language-market comparison audit](language-market-comparability-2026.md) rejects mismatched service, normalization panel, country and language trend figures without making up viewer populations.
 
 

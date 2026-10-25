@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "public_video_cross_reference_meme_propagation_protocol",
+  "reviewed_at": "2026-10-25",
+  "source_ids": [
+    "yt-collaborations-help-2026",
+    "yt-year-trends-2025",
+    "yt-animation-memes-editorial-2025"
+  ],
+  "method": "Represent public video-to-video mentions or explicitly credited remixes as directed links supported by on-page evidence, after verifying publication times and retaining selection/censoring. A directed reference is not the origin of a meme or audience transfer.",
+  "unit_of_analysis": "publicly visible source video referencing another public video at a dated snapshot, not an identifiable audience member",
+  "edge_types": [
+    "description_link",
+    "credited_remix",
+    "explicit_on_video_reference",
+    "accepted_creator_collaboration"
+  ],
+  "selection_and_privacy": [
+    "Link only from a specific public video to a specifically named or linked public target, not visually similar tropes or a keyword match.",
+    "Retain source URL and observation timestamp, excerpt locator, and rights/permission notes; do not reproduce media or comments.",
+    "Crawl or record only permissible public page metadata; no API quota abuse, bulk user profiling, commenter handles or private watch histories.",
+    "For dated references, distinguish target published before referring video; contemporaneous formal collaboration is not evidence of source origin.",
+    "Include unlinked source videos, deleted/inaccessible nodes and denominator selection in a real panel to avoid only successful references.",
+    "Document cross-format, language, geography and reporting dates before comparing public link incidence.",
+    "A graph edge is a public citation, not measured subscriber/viewer migration or causal recommendation lift."
+  ],
+  "registered_nodes": [],
+  "registered_edges": [],
+  "observed_network": {
+    "eligible_video_count": null,
+    "verified_public_edges": null,
+    "linked_video_fraction": null,
+    "earliest_original_meme_creator": null,
+    "unique_people_trafficked": null,
+    "causal_viewer_transfer": null,
+    "creator_profit_from_memes": null
+  },
+  "known_product_fact": {
+    "source_id": "yt-collaborations-help-2026",
+    "official_credit_feature_exists": true,
+    "acceptance_required_for_visible_credit": true,
+    "automatic_revenue_split": false,
+    "guaranteed_reach_lift": false
+  },
+  "editorial_examples_are_not_population_frame": true
+}
