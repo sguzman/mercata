@@ -3265,6 +3265,28 @@
       "evidence_class": "academic_selected_high_viewed_math_youtube_sample",
       "license": "Academic abstract linked; no reproduced paper tables or private data",
       "notes": "126 highly viewed Turkish math instruction YouTube videos; length showed no significant correlation with views, likes or comment counts; not watch-time data."
+    },
+    {
+      "id": "icwsm-trending-global-archive-2026",
+      "url": "https://ojs.aaai.org/index.php/ICWSM/article/view/42784",
+      "publisher": "Proceedings of the International AAAI Conference on Web and Social Media",
+      "title": "Global YouTube Trending Dataset (2022–2025): Three Years of Platform-Curated, Cross-National Trends in Digital Culture",
+      "published_at": "2026-05-25",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "peer_reviewed_historical_platform_curated_rank_archive",
+      "license": "Peer-reviewed dataset paper linked, public aggregate paper statistics independently paraphrased; no dataset video texts copied",
+      "notes": "104 country lists, four daily captures July2022–June2025, 446,971 snapshots, 78.4M ranked entries but 726,627 unique video IDs; Trending retired July2025."
+    },
+    {
+      "id": "youtube-nrg-mainstream-meme-survey-2026",
+      "url": "https://blog.youtube/culture-and-trends/youtube-culture-trends-modern-mainstream-research/",
+      "publisher": "YouTube Official Blog / NRG",
+      "title": "Has mainstream culture disappeared? New YouTube trends research says no",
+      "published_at": "2026-09-10",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_commissioned_us_online_meme_and_fandom_survey_2026",
+      "license": "Official release linked, selected short independent aggregate summary, no charts copied",
+      "notes": "NRG U.S. April2026 survey N=496 online ages14-29 for perceived meme and creator recognition, watched fandom lore and niche. This is not observed platform view counts."
     }
   ],
   "claims": [
@@ -7098,6 +7120,26 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Selected successful-visibility population and public reaction counters, not creator income, unique learning cohorts, session duration, or a platform-wide optimal video length."
+    },
+    {
+      "id": "icwsm-youtube-trending-2022-2025-unique-video-denominator",
+      "text": "A peer-reviewed 2026 ICWSM archival research dataset collected 446,971 YouTube Trending captures across 104 countries from July 2022 through June 2025, yielding roughly 78.4 million ranked entries representing 726,627 unique video IDs. Trending pages were retired in July 2025.",
+      "source_ids": [
+        "icwsm-trending-global-archive-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Former platform-selected ranked-list snapshots, not a representative video population or all viewers; repeated video appearances across periods and countries prevent entry count being a unique-user or upload total."
+    },
+    {
+      "id": "youtube-nrg-meme-awareness-niche-viewing-us2026",
+      "text": "In YouTube's April 2026 commissioned NRG U.S. online survey of 496 respondents aged 14–29, 78% perceived memes as widely known; 71% reported watching fandom story explainers and 69% reported watching self-described niche community content.",
+      "source_ids": [
+        "youtube-nrg-mainstream-meme-survey-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Survey question about perceived popularity is not a watching-rate denominator; niche and lore responses overlap and do not count all users, unique viewers or creators globally."
     }
   ],
   "observations": [],

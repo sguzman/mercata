@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [YouTube meme visibility and trend-archive crosswalk](ontology/youtube/meme-trending-observability-2026.md) records a published 104-country historical curated Trending archive plus a distinct U.S. niche/fandom awareness survey without double-counting repeated videos or inventing audiences.
+
+
 The [educational-video format evidence comparison](ontology/youtube/educational-video-format-cohorts-2026.md) adds three actual selected YouTube research cohorts and explicitly separates owner watch-time retention from public likes/views and unmeasured creator profit.
 
 

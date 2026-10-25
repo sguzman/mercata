@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "historical_curated_trending_videos_vs_surveyed_meme_awareness",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "icwsm-trending-global-archive-2026",
+    "youtube-nrg-mainstream-meme-survey-2026"
+  ],
+  "archive": {
+    "source_id": "icwsm-trending-global-archive-2026",
+    "platform_curated_trending_retired_on": "2025-07-01",
+    "captured_from": "2022-07-01",
+    "captured_through": "2025-06-30",
+    "countries": 104,
+    "snapshots": 446971,
+    "snapshots_per_day_per_country_target": 4,
+    "total_video_entries": 78400000,
+    "entries_rounded": true,
+    "unique_video_ids": 726627,
+    "max_trending_rank_per_snapshot": 200,
+    "included_metadata": [
+      "country",
+      "snapshot_time",
+      "rank",
+      "video_id",
+      "channel_id",
+      "publication_date",
+      "title",
+      "category",
+      "language",
+      "view_count",
+      "comment_count"
+    ],
+    "units": [
+      "trending_snapshot",
+      "ranked_video_entry",
+      "unique_video_id"
+    ],
+    "audience_persons_measured": false,
+    "total_youtube_uploads_measured": false,
+    "selected_by": "YouTube former platform-curated trending lists, not probability sampling of ordinary public videos",
+    "limitations": [
+      "78.4 million country/timestamp ranked entries contain repeated video IDs, not 78.4 million independent uploads or people.",
+      "A country-specific trending list is a platform-curated visibility surface, not a count of unique viewers residing in that country.",
+      "Video metadata language is not the spoken language or audience language and is not a census of all memes or humor.",
+      "Public Trending pages retired on 2025-07-01; longitudinal historical visibility cannot be treated as an active 2026 distribution channel."
+    ]
+  },
+  "survey": {
+    "source_id": "youtube-nrg-mainstream-meme-survey-2026",
+    "conducted": "2026-04",
+    "geography": "United States",
+    "online_age_14_29_sample_size": 496,
+    "observation": [
+      {
+        "id": "memes_perceived_widely_known",
+        "percent": 78,
+        "question_type": "what lots of people seem to be into nowadays",
+        "unit": "percent_of_us_online_survey_respondents"
+      },
+      {
+        "id": "youtube_creators_perceived_widely_known",
+        "percent": 77,
+        "question_type": "what lots of people seem to be into nowadays",
+        "unit": "percent_of_us_online_survey_respondents"
+      },
+      {
+        "id": "hollywood_celebrities_perceived_widely_known",
+        "percent": 79,
+        "question_type": "what lots of people seem to be into nowadays",
+        "unit": "percent_of_us_online_survey_respondents"
+      },
+      {
+        "id": "watched_fandom_lore_explainers",
+        "percent": 71,
+        "question_type": "self_reported_ever_watching_niche_or_fandom_story_videos",
+        "unit": "percent_of_us_online_survey_respondents"
+      },
+      {
+        "id": "watched_content_from_self_described_niche_community",
+        "percent": 69,
+        "question_type": "self_reported_watched_niche_community_video",
+        "unit": "percent_of_us_online_survey_respondents"
+      }
+    ],
+    "nonexclusive_response_sets": true,
+    "panel_representative_world_population": false,
+    "actual_video_views": null,
+    "unique_meme_viewers": null,
+    "creator_profit": null
+  },
+  "categorization_protocol": [
+    {
+      "id": "original_sketch",
+      "definition": "Original scripted comic performance or recurring gag"
+    },
+    {
+      "id": "reaction",
+      "definition": "Public reaction or commentary about a source clip"
+    },
+    {
+      "id": "remix",
+      "definition": "Adaptation of another meme, character or cultural reference"
+    },
+    {
+      "id": "fan_lore_explainer",
+      "definition": "Explanatory content about community stories, characters, lore or jokes"
+    },
+    {
+      "id": "short_edit",
+      "definition": "Brief edited humorous montage or audio/text template"
+    }
+  ],
+  "inference_restrictions": [
+    "A trending appearance does not classify a video as a meme: content coding and publicly documented taxonomy are required.",
+    "The survey's 78% perceived meme visibility is not a measured 78% meme-viewing rate.",
+    "The survey's 69% watching niche content and 71% watching lore cannot be added because respondents and activities overlap.",
+    "Trending appearance in multiple countries is not evidence that people migrated between countries, languages or channels.",
+    "Ranks in the historical pre-July-2025 curated list cannot estimate present-day Shorts recommendations or future income.",
+    "No source estimates the number of small meme creators, their hourly wages or monetized fan purchases."
+  ],
+  "measured_meme_video_counts": null,
+  "representative_meme_watch_hours": null,
+  "actual_fan_creator_migration": null,
+  "creator_payout_distribution": null
+}

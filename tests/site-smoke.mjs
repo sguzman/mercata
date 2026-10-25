@@ -102,6 +102,7 @@ try{
       ['.synthetic-media-rights',4,'no AI creator earnings'],
       ['.agentio-engaged-view-study',6,'not a universal engaged-to-public conversion factor'],
       ['.live-monetization-units',4,'Rubies do not take a further 70% Commerce cut'],
+      ['.meme-trending-study',5,'not individual viewers or measured creator earnings'],
       ['.educational-video-studies',3,'not a universal best video length or typical creator earnings'],
       ['.public-community-post-protocol',4,'no verified unique member count or earnings'],
       ['.language-audience-crosswalk',7,'country is not language'],
