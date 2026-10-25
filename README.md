@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [384-creator Adobe cross-platform AI video workflow survey](ontology/youtube/adobe-ai-production-survey-2026.md) records self-reported time-saving thresholds, weekly usage and spending intentions without treating them as independently measured labor, YouTube-only payouts, or causal productivity improvements.
+
+
 The [61-video self-recorded production case](ontology/youtube/photography-production-time-diary-2025.md) records work hours per published photography video and workflow phase, while keeping uncompleted effort, creator receipts and representative hourly wages unknown.
 
 

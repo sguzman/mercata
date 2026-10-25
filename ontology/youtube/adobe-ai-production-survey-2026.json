@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "cross_platform_us_creator_self_report_video_ai_tool_workflow",
+  "as_of": "2026-10-25",
+  "source_id": "adobe-express-ai-video-creator-survey-2026",
+  "publisher": "Adobe Express (commercial AI video software vendor)",
+  "fielded": "2025-12-01_to_2025-12-05",
+  "published_at": "2026-03-25",
+  "survey": {
+    "n": 384,
+    "country": "US",
+    "recruitment": "Prolific",
+    "population": "people_who_create_video_content_cross_platforms",
+    "team_size_share_percent": {
+      "solo": 86,
+      "team_two_three": 11,
+      "team_four_plus": 3
+    },
+    "youtube_only_probability_sample": false,
+    "ai_video_tool_ever_used_percent": 71,
+    "weekly_use_among_ai_users_percent": 41,
+    "youtube_posting_creator_ai_use_percent": 74,
+    "self_reported_ai_saves_over_30_min_percent": 56,
+    "self_reported_ai_saves_over_4h_percent": 10,
+    "intended_increase_ai_tools_budget_percent": 50,
+    "intended_maintain_budget_percent": 33,
+    "reported_watch_time_increase_percent": 19,
+    "reported_engagement_increase_percent": 17,
+    "reported_more_sponsors_among_prior_brand_deal_creators_percent": 24
+  },
+  "denominators": [
+    {
+      "id": "weekly_use",
+      "population": "respondents_who_have_used_ai_video_tools",
+      "not_all_creators": true
+    },
+    {
+      "id": "youtube_ai_use",
+      "population": "respondents_in_cross_platform_sample_who_post_on_youtube",
+      "not_youtube_census": true
+    },
+    {
+      "id": "time_savings",
+      "population": "survey_respondents_self_reporting_ai_workflow_savings",
+      "not_instrumented_time": true
+    },
+    {
+      "id": "brand_deals",
+      "population": "respondents_who_have_done_brand_deals",
+      "not_all_youtube_creators": true
+    }
+  ],
+  "incomparability": [
+    "Vendor survey asked selected US cross-platform video creators, not a population-based YouTube channel sample.",
+    "Respondents may post on several platforms, so YouTube, Instagram and TikTok platform percentages overlap.",
+    "More than 30 minutes and more than four hours are nested thresholds; do not add percentages.",
+    "Weekly AI-tool usage denominator is a subset of ever-users, not all 384 respondents.",
+    "Time savings, watch-time growth and sponsor growth are self-reports, not instrumented before/after experiments.",
+    "Intended tool spending is not actual future spending, upfront mandatory software cost, or a revenue increase.",
+    "Do not combine the vendor's reported minutes saved with one photography channel's measured hours to infer a net industry labor median.",
+    "There are no observed invoices, subscription costs, causal income effects, or creator net wages in this sample."
+  ],
+  "unmeasured": {
+    "youtube_wide_median_hours_saved": null,
+    "verified_before_after_labor_hours": null,
+    "net_tool_subscription_costs": null,
+    "randomized_adoption_effect": null,
+    "youtube_creator_net_profit": null
+  }
+}
