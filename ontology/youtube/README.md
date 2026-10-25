@@ -8,6 +8,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 The [live fan-funding product matrix](live-monetization-units-2026.md), [source keyed definitions](live-monetization-units-2026.json) and [denominator calculator](../../site/live-monetization-denominators.mjs) distinguish Commerce Product Module's net 70% share from Virtual Items Rubies at USD 0.01 each, and document current eligible horizontal/vertical Gifts surfaces. No producer earnings or customer conversion outcomes are inferred.
 
+## Language metadata versus actual geographic audiences
+
+The [2026 official API language crosswalk](language-audience-api-crosswalk-2026.md), [machine measurement specification](language-audience-api-crosswalk-2026.json) and [public video metadata count validator](../../site/language-audience-crosswalk.mjs) distinguish default audio, translated text, captions and owner-authorized viewer country. The selected video's language is not a person or a national language population; global language-speaker totals remain unknown.
+
 ## Controlled niche-pilot cost and abandonment measurement
 
 The [prespecified niche-pilot budget protocol](niche-pilot-budget-protocol.md), [machine trial contract](niche-pilot-budget-protocol.json) and [validated budget/stopping engine](../../site/niche-pilot-budget.mjs) separate actual new equipment/cash expense, allocated existing gear use and creator labor across published or abandoned attempts. Actual viewership, prospective buyers and net profit remain unknown until separately observed; caps do not establish a causal niche failure.

@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [language and audience API crosswalk](ontology/youtube/language-audience-api-crosswalk-2026.md) distinguishes video metadata language, original audio, subtitles, localizations and owner-only viewer geography, with a reproducible sample counter and no false global language population.
+
+
 The [bounded niche-pilot measurement protocol](ontology/youtube/niche-pilot-budget-protocol.md) includes cash and labor stop rules, abandoned attempts and an explicit owner-analytics evidence gate; no creator-success probabilities or costs are fabricated.
 
 

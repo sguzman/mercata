@@ -3210,6 +3210,28 @@
       "evidence_class": "official_current_paid_live_chat_restrictions",
       "license": "Official help page linked; independently paraphrased feature requirements",
       "notes": "Supers require fan-funding/YPP eligibility and Commerce Product Module, eligible location, permitted video; kids, private/unlisted, age-restricted, Giving fundraiser and chat-disabled ineligible."
+    },
+    {
+      "id": "yt-api-video-language-metadata-2026",
+      "url": "https://developers.google.com/youtube/data/reference/rest/v3/videos",
+      "publisher": "Google for Developers",
+      "title": "YouTube Data API video resource: default metadata and audio language semantics",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_youtube_video_resource_api_reference",
+      "license": "Official API reference linked, short independent semantics only",
+      "notes": "defaultLanguage describes snippet title/description, defaultAudioLanguage describes default spoken audio; localizations are metadata translations, not unique viewers."
+    },
+    {
+      "id": "yt-api-caption-track-list-2026",
+      "url": "https://developers.google.com/youtube/data/reference/rest/v3/captions/list",
+      "publisher": "Google for Developers",
+      "title": "YouTube Data API captions.list: authorized track metadata and quota",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_caption_track_list_authorization_and_access",
+      "license": "Official API reference linked, no third-party caption tracks copied",
+      "notes": "captions.list requires approved authorization, costs 50 quota units per request, returns track metadata without transcript content."
     }
   ],
   "claims": [
@@ -6970,6 +6992,28 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Published feature restrictions are not an account-specific ruling or measured monetization rate."
+    },
+    {
+      "id": "yt-video-default-metadata-vs-audio-language",
+      "text": "The official YouTube video resource distinguishes defaultLanguage (language of the video's title and description) from defaultAudioLanguage (language in the video's default spoken audio). Translations, dubbing and country-of-viewing are different units and do not count unique language speakers.",
+      "source_ids": [
+        "yt-api-video-language-metadata-2026",
+        "api-dimensions",
+        "youtube-manual-multi-audio"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Public metadata may be missing and sample selection biased. No worldwide YouTube language-person denominator or public speaker distribution is available."
+    },
+    {
+      "id": "yt-caption-api-authorization-language-scope",
+      "text": "YouTube's official captions.list API returns language-labeled track metadata rather than transcripts, requires authorized access, and documents a 50-unit query quota. It does not disclose the fraction of viewers using each subtitle language.",
+      "source_ids": [
+        "yt-api-caption-track-list-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "No authorization, caption track enumeration, downloads, or user-level data were collected for the Mercata language protocol."
     }
   ],
   "observations": [],

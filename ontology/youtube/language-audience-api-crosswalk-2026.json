@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "language_video_metadata_vs_viewer_geography_measurement_crosswalk",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "api-dimensions",
+    "api-videos-list-oct-2026",
+    "youtube-manual-multi-audio",
+    "yt-api-video-language-metadata-2026",
+    "yt-api-caption-track-list-2026"
+  ],
+  "sources_and_units": [
+    {
+      "id": "defaultLanguage",
+      "source": "videos.snippet.defaultLanguage",
+      "unit": "bcp47_language_tag_for_title_and_description",
+      "accessible": "public_video_snippet_when_supplied",
+      "population": "individual_public_video_metadata",
+      "cannot_establish": "the audio language or viewer preferred language"
+    },
+    {
+      "id": "defaultAudioLanguage",
+      "source": "videos.snippet.defaultAudioLanguage",
+      "unit": "bcp47_default_audio_track_language",
+      "accessible": "public_video_snippet_when_supplied",
+      "population": "individual_public_video_metadata",
+      "cannot_establish": "actual listening language for multilingual dubs or viewer origin"
+    },
+    {
+      "id": "localizations",
+      "source": "videos.localizations",
+      "unit": "localized_title_and_description_map",
+      "accessible": "public localized video metadata when available",
+      "population": "zero_or_more_video_localizations",
+      "cannot_establish": "unique speaker counts or viewers choosing translation"
+    },
+    {
+      "id": "captionTrackLanguage",
+      "source": "captions.list.snippet.language",
+      "unit": "caption_track_language",
+      "accessible": "owner_or_partner_authorization_required_for_listing",
+      "population": "track_for_a_specified_video",
+      "cannot_establish": "spoken audio distribution or download rights to transcripts"
+    },
+    {
+      "id": "ownerViewerCountry",
+      "source": "analytics.reports.query.dimensions=country",
+      "unit": "ISO_3166_1_country_for_viewing_activity",
+      "accessible": "authorized_channel_owner_only",
+      "population": "report_rows_by_country_and_period",
+      "cannot_establish": "language, nationality, religion or ethnicity of viewers"
+    },
+    {
+      "id": "viewerPreferredPlaybackLanguage",
+      "source": "viewer_setting_not_census_dimension",
+      "unit": "unavailable_aggregate_for_public_research",
+      "accessible": "no_verified_public_platform_language_population",
+      "population": null,
+      "cannot_establish": "country-specific language participation without separately eligible source"
+    },
+    {
+      "id": "viewerSpokenLanguage",
+      "source": "person_level_language_proficiency",
+      "unit": "not_observed",
+      "accessible": "not_in_public_video_metadata",
+      "population": null,
+      "cannot_establish": "counts of real YouTube users by first or secondary language"
+    }
+  ],
+  "denominator_constraints": [
+    "Videos, caption tracks, language-localized metadata entries and viewer geography events are different units and cannot be summed into unique people.",
+    "A video's metadata language is for title/description; defaultAudioLanguage refers to its default audio track, not all additional dubbed tracks.",
+    "Video subtitles, multiple audio tracks or localized thumbnails may include multiple languages for one video; counting them per language double-counts videos without a disjoint primary classification.",
+    "Country-level owner analytics represents the location of reporting activity, not the viewers' mother tongue or ethnicity; international language communities overlap.",
+    "Blank or absent metadata language must remain an explicit unknown class, not guessed from a country, creator name or video category.",
+    "A public search by language, locale or region is a selected/discoverability-biased sample, not an unbiased count of all active creators or YouTube audiences.",
+    "Caption metadata access is authorized and does not itself contain the transcript; it must not trigger unauthorized scraping or inference about private people.",
+    "Selected multilingual creator watch-time percentages are not global language adoption or causal translation lifts."
+  ],
+  "sampling_protocol": {
+    "unit": "video_in_a_prespecified_channel_or_explicitly_selected_public_corpus",
+    "time_window_required": true,
+    "allowed_audio_language_code": "explicit_BCP47_or_null",
+    "sample_entry_unique_video_ids": true,
+    "sort_canonical": "one video per video_id, with primary metadata and audio language separate",
+    "track_unknowns": true,
+    "report_required": [
+      "selection_method",
+      "publication_period",
+      "video_count",
+      "default_audio_language_counts",
+      "unknown_audio_count",
+      "default_metadata_language_counts",
+      "unknown_metadata_count",
+      "sampling_bias",
+      "authorized_viewer_analytics_if_any"
+    ],
+    "country_comparison": "separate authorized owner country rows by period from public video language metadata; no cross-tab of viewer languages without matched measurement",
+    "language_categories": [
+      "source_audio_primary",
+      "metadata_primary",
+      "additional_audio_track",
+      "subtitle_track",
+      "translated_title_description",
+      "viewer_country"
+    ]
+  },
+  "actual_observations": [],
+  "global_user_language_counts": null,
+  "national_language_participation_counts": null,
+  "creator_revenue_by_language": null,
+  "representative_primary_language_distribution": null,
+  "representative_multilingual_audience_overlap": null
+}
