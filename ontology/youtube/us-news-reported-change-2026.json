@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "us_adult_youtube_news_survey_descriptive_period_changes",
+  "reviewed_at": "2026-10-25",
+  "source_ids": [
+    "pew-youtube-news-2026"
+  ],
+  "source_artifacts": [
+    "ontology/youtube/us-news-demographic-crosswalk.json",
+    "ontology/youtube/neutral-news-attention-protocol-2026.json"
+  ],
+  "method": "Keep 2020–2026 Pew-published U.S. adult self-reported regular YouTube-news use point estimates in the same survey question family; compute only adjacent and six-year percentage-point differences. No claim of statistically significant trend or actual event-level YouTube viewership.",
+  "population": "2020–2026 separate nationally representative U.S. adult survey waves, not a fixed-person longitudinal panel, unique YouTube accounts or video views",
+  "question": "regularly_gets_news_from_youtube",
+  "denominator": "all_us_adults_with_survey_weighting_for_each_wave",
+  "series": [
+    {
+      "year": 2020,
+      "regular_youtube_news_percent_of_all_us_adults": 23,
+      "reported_by": "pew-youtube-news-2026",
+      "prior_year_pp_change": null,
+      "yearly_standard_error_pp": null,
+      "statistically_significant_vs_prior_year": null,
+      "same_respondents_as_prior_year": false,
+      "matched_definition_and_survey_design_verified": false,
+      "actual_youtube_news_viewer_people": null,
+      "niche_video_view_events": null,
+      "creator_news_income": null
+    },
+    {
+      "year": 2021,
+      "regular_youtube_news_percent_of_all_us_adults": 22,
+      "reported_by": "pew-youtube-news-2026",
+      "prior_year_pp_change": -1,
+      "yearly_standard_error_pp": null,
+      "statistically_significant_vs_prior_year": null,
+      "same_respondents_as_prior_year": false,
+      "matched_definition_and_survey_design_verified": false,
+      "actual_youtube_news_viewer_people": null,
+      "niche_video_view_events": null,
+      "creator_news_income": null
+    },
+    {
+      "year": 2022,
+      "regular_youtube_news_percent_of_all_us_adults": 25,
+      "reported_by": "pew-youtube-news-2026",
+      "prior_year_pp_change": 3,
+      "yearly_standard_error_pp": null,
+      "statistically_significant_vs_prior_year": null,
+      "same_respondents_as_prior_year": false,
+      "matched_definition_and_survey_design_verified": false,
+      "actual_youtube_news_viewer_people": null,
+      "niche_video_view_events": null,
+      "creator_news_income": null
+    },
+    {
+      "year": 2023,
+      "regular_youtube_news_percent_of_all_us_adults": 26,
+      "reported_by": "pew-youtube-news-2026",
+      "prior_year_pp_change": 1,
+      "yearly_standard_error_pp": null,
+      "statistically_significant_vs_prior_year": null,
+      "same_respondents_as_prior_year": false,
+      "matched_definition_and_survey_design_verified": false,
+      "actual_youtube_news_viewer_people": null,
+      "niche_video_view_events": null,
+      "creator_news_income": null
+    },
+    {
+      "year": 2024,
+      "regular_youtube_news_percent_of_all_us_adults": 32,
+      "reported_by": "pew-youtube-news-2026",
+      "prior_year_pp_change": 6,
+      "yearly_standard_error_pp": null,
+      "statistically_significant_vs_prior_year": null,
+      "same_respondents_as_prior_year": false,
+      "matched_definition_and_survey_design_verified": false,
+      "actual_youtube_news_viewer_people": null,
+      "niche_video_view_events": null,
+      "creator_news_income": null
+    },
+    {
+      "year": 2025,
+      "regular_youtube_news_percent_of_all_us_adults": 35,
+      "reported_by": "pew-youtube-news-2026",
+      "prior_year_pp_change": 3,
+      "yearly_standard_error_pp": null,
+      "statistically_significant_vs_prior_year": null,
+      "same_respondents_as_prior_year": false,
+      "matched_definition_and_survey_design_verified": false,
+      "actual_youtube_news_viewer_people": null,
+      "niche_video_view_events": null,
+      "creator_news_income": null
+    },
+    {
+      "year": 2026,
+      "regular_youtube_news_percent_of_all_us_adults": 34,
+      "reported_by": "pew-youtube-news-2026",
+      "prior_year_pp_change": -1,
+      "yearly_standard_error_pp": null,
+      "statistically_significant_vs_prior_year": null,
+      "same_respondents_as_prior_year": false,
+      "matched_definition_and_survey_design_verified": false,
+      "actual_youtube_news_viewer_people": null,
+      "niche_video_view_events": null,
+      "creator_news_income": null
+    }
+  ],
+  "comparison_summaries": {
+    "from_2020_to_2026_pp": 11,
+    "from_2025_to_2026_pp": -1,
+    "direction_2025_to_2026": "reported_point_estimate_down",
+    "true_population_decline_verified": false,
+    "statistical_significance_established": false
+  },
+  "latest_wave": {
+    "survey": "Pew American Trends Panel",
+    "fieldwork_start": "2026-08-24",
+    "fieldwork_end": "2026-08-30",
+    "respondents_n": 5166,
+    "source_published_at": "2026-10-19",
+    "latest_percent": 34
+  },
+  "readout_constraints": [
+    "The year-on-year -1 point is a difference between two published rounded estimates, not proof that people stopped watching YouTube news.",
+    "A regular U.S.-adult news-use survey rate cannot be converted into platform news watch hours, unique viewers, political ideology, or creator earnings.",
+    "Reconciled survey design across every pair is not established here, and each year has sample error.",
+    "A survey respondent who answered regularly uses YouTube for news may also use other services and may appear in different other samples.",
+    "No quantitative event-spike effect, age-by-party changes or causal election influence are inferred."
+  ],
+  "unmeasured": {
+    "standard_errors_for_annual_differences": null,
+    "statistically_tested_annual_declines": null,
+    "cohort_specific_news_trends": null,
+    "all_youtube_users_news_fraction_history": null,
+    "niche_news_video_view_counts": null,
+    "creator_news_channel_income": null,
+    "news_audience_unique_person_count": null
+  }
+}

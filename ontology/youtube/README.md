@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [Pew U.S. adult YouTube-news trend audit](us-news-reported-change-2026.md), [dated published series](us-news-reported-change-2026.json), and [change validator](../../site/us-news-differences.mjs) preserve differences of published population survey point estimates without deriving unique viewers or statistically significant video-attention shifts.
+
+
 The [video-level concentration audit](video-concentration-2026.md), [bounded Omdia observation](video-concentration-2026.json), and [pure sample statistics](../../site/video-concentration.mjs) distinguish broad video watch-time inequality from unmeasured niche competition and channel earnings.
 
 

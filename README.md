@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [U.S. adult YouTube-news self-report series](ontology/youtube/us-news-reported-change-2026.md) computes published annual point differences from 2020–2026 without claiming statistically verified audience decline, channel revenue trends or causal political effects.
+
+
 The [video attention concentration study](ontology/youtube/video-concentration-2026.md) distinguishes Omdia's published top-video watch-time estimate from unsupported creator-income, individual-viewer, or per-niche competition claims, and adds a tested sample-scoped top-share/HHI/Gini calculator.
 
 
