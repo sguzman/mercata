@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [creator income sensitivity-envelope study](ontology/youtube/niche-uncertainty-ranges-2026.md) extends the original scenario math with strictly bounded, explicitly provided assumptions, and never labels a hypothetical interval a calibrated earnings prediction, niche rank or empirical confidence interval.
+
+
 The [subscriber versus non-subscriber attention measurement study](ontology/youtube/subscriber-status-reach-2026.md) distinguishes owner-only YouTube `subscribedStatus` events from public subscriber counts and referral sources, with executable validated-split arithmetic and no fabricated actual channel analytics.
 
 

@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "explicit_scenario_input_range_and_profit_boundary_protocol",
+  "reviewed_at": "2026-10-25",
+  "method": "Enumerate only declared min/max endpoint assumptions of the existing seven-field income scenario, reusing site/scenario.mjs to compute algebraically enclosing illustrative cash-profit outcomes. No assumed statistical distribution, optimization over measured creator observations or calibrated forecast probability.",
+  "source_ids": [
+    "api-metrics",
+    "revenue-shares",
+    "shorts-policy",
+    "yt-reach-source-types-2026",
+    "earning-help"
+  ],
+  "links_to_existing_models": [
+    "site/scenario.mjs",
+    "ontology/youtube/opportunity-framework.json",
+    "ontology/youtube/niche-pilot-budget-protocol.json",
+    "ontology/youtube/evergreen-search-window-protocol.json"
+  ],
+  "currency": null,
+  "scenario_scope": "hypothetical_inputs_only",
+  "input_intervals": [
+    {
+      "id": "watch_views",
+      "unit": "valid_watch_page_view_events",
+      "quantity": "nonnegative_safe_integer",
+      "min": null,
+      "max": null,
+      "observed_sample_size": null,
+      "source_specific_empirical_percentile": null
+    },
+    {
+      "id": "watch_ad_only_rpm",
+      "unit": "currency_per_1000_matching_watch_page_views",
+      "quantity": "nonnegative_finite",
+      "min": null,
+      "max": null,
+      "observed_sample_size": null,
+      "source_specific_empirical_percentile": null
+    },
+    {
+      "id": "shorts_engaged_views",
+      "unit": "eligible_shorts_engaged_view_events",
+      "quantity": "nonnegative_safe_integer",
+      "min": null,
+      "max": null,
+      "observed_sample_size": null,
+      "source_specific_empirical_percentile": null
+    },
+    {
+      "id": "shorts_ad_only_rpm",
+      "unit": "currency_per_1000_matching_shorts_engaged_views",
+      "quantity": "nonnegative_finite",
+      "min": null,
+      "max": null,
+      "observed_sample_size": null,
+      "source_specific_empirical_percentile": null
+    },
+    {
+      "id": "net_other_receipts",
+      "unit": "currency_after_external_platform_fees_not_included_in_ads",
+      "quantity": "nonnegative_finite",
+      "min": null,
+      "max": null,
+      "observed_sample_size": null,
+      "source_specific_empirical_percentile": null
+    },
+    {
+      "id": "cash_costs",
+      "unit": "currency_actual_attributable_cash_outlays",
+      "quantity": "nonnegative_finite",
+      "min": null,
+      "max": null,
+      "observed_sample_size": null,
+      "source_specific_empirical_percentile": null
+    },
+    {
+      "id": "labor_hours",
+      "unit": "creator_work_hours_including_unpublished_attempts",
+      "quantity": "strictly_positive_finite",
+      "min": null,
+      "max": null,
+      "observed_sample_size": null,
+      "source_specific_empirical_percentile": null
+    }
+  ],
+  "required_unit_guards": [
+    "Watch-page creator ad-only RPM is never advertiser CPM or total combined channel RPM.",
+    "Shorts RPM and views must use comparable engaged/eligible-view definitions, not raw public play starts.",
+    "Other net receipts exclude the same ad money, refunds, or processor costs already counted elsewhere.",
+    "Cash costs are actually paid outlays, not hypothetical labor compensation, and labor time appears separately.",
+    "All minima, maxima, dates, format, geography, and currency are explicit user inputs; there are no implicit platform defaults.",
+    "An observed historical range is not automatically a forecast confidence interval or future constraint.",
+    "Range arithmetic is a conditional envelope over the user's chosen assumptions, not a statistical confidence or credibility interval."
+  ],
+  "blocked_defaults": {
+    "default_watch_rpm": null,
+    "default_shorts_rpm": null,
+    "default_views": null,
+    "default_conversion": null,
+    "default_costs": null,
+    "default_hours": null,
+    "forecast_probability": null
+  },
+  "real_creator_samples": [],
+  "unmeasured": {
+    "representative_creator_rpm_distribution": null,
+    "first_year_newcomer_hourly_profit_percentiles": null,
+    "unknowns_outside_user_range": null,
+    "likelihood_of_assumption_endpoints": null,
+    "real_niche_forecast_confidence": null
+  }
+}

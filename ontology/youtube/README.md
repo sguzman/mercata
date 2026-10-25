@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [income scenario uncertainty study](niche-uncertainty-ranges-2026.md), [required-input record](niche-uncertainty-ranges-2026.json) and [interval audit](../../site/niche-uncertainty.mjs) reuse tested revenue accounting to bound user-assumption outcomes while leaving all observed creator earnings and probabilities unknown.
+
+
 The [subscription-status event measurement protocol](subscriber-status-reach-2026.md), [owner-only API data contract](subscriber-status-reach-2026.json) and [arithmetic audit](../../site/subscriber-status-audit.mjs) require matched time/content-surface rows and never equate subscriber status with new viewers, unique people or purchaser conversion.
 
 
