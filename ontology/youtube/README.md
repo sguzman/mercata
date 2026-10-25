@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+[Video concentration methodology](niche-attention-concentration-2026.md) and [pure audit](../../site/niche-attention-concentration.mjs) distinguish sampled videos from creator earnings.
+
+
 The [offer listing study](offer-listing-controls-2026.md), [three native/merchant surface records](offer-listing-controls-2026.json), and [monetary-unit test](../../site/offer-listing-audit.mjs) distinguish video upload metadata, tier prices and merchant stock from observed purchases and creator payout.
 
 

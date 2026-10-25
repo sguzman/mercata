@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "per_niche_video_attention_concentration_protocol",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "omdia-video-supply-2026",
+    "api-metrics"
+  ],
+  "global_study": {
+    "source_id": "omdia-video-supply-2026",
+    "top_video_percent": 1,
+    "share_of_watchtime_percent": 91,
+    "scope": "Omdia global video objects, not creators or each niche",
+    "sample_size": null
+  },
+  "required_cohort_fields": [
+    "video_id",
+    "frame_id",
+    "topic",
+    "country",
+    "language",
+    "format",
+    "start",
+    "end",
+    "views_or_minutes"
+  ],
+  "sampled_rows": [],
+  "rules": [
+    "Use the same population selection, topic inclusion predicate, geography, language and measured window.",
+    "Distinguish public view events from authorized owner-only estimated minutes watched.",
+    "Include zero-view items and missing/deleted/reuploaded video objects in denominator accounting.",
+    "Video concentration is not a creator-income distribution or unique-person population.",
+    "A public API search relevance-ranked sample is not a niche census.",
+    "Omdia global watch-time concentration cannot be attributed to an individual niche."
+  ],
+  "actual_niche": {
+    "sample_size": null,
+    "top_video_share": null,
+    "video_hhi": null,
+    "video_gini": null,
+    "unique_viewers": null,
+    "creator_profit": null
+  }
+}

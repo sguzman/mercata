@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+[Video attention concentration: niche denominator and validated HHI/Gini](ontology/youtube/niche-attention-concentration-2026.md).
+
+
 The [video, membership and product offer control study](ontology/youtube/offer-listing-controls-2026.md) separates ordinary video metadata from paid membership levels and external merchant Shopping catalogs, with no fabricated sales, creator prices or conversions.
 
 
