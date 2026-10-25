@@ -106,6 +106,7 @@ try{
       ['.external-link-funnel',7,'no test has been launched'],
       ['.retention-observability',11,'full-video completion fraction'],
       ['.patreon-shock-study',4,'creator labor and profit are unknown'],
+      ['.reaction-compilation-rights',7,'No case-specific fair-use finding'],
       ['.crossplatform-posting',4,'no viewer migration measured'],
       ['.gaming-period-study',4,'external migration remain unknown'],
       ['.search-demand-proxies',4,'No absolute monthly searches'],

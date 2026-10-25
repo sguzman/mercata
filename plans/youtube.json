@@ -2478,7 +2478,7 @@
       "objective": "List questions about music, film clips, stock assets and original work.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and list questions about music, film clips, stock assets and original work.",
       "status": "in_progress",
-      "percent": 89,
+      "percent": 92,
       "evidence": [
         "ontology/youtube/content-policy-risk.json",
         "ontology/youtube/content-policy-risk.md",
@@ -2495,7 +2495,11 @@
         "ontology/youtube/exclusive-rights-evidence.json",
         "ontology/youtube/exclusive-rights-evidence.md",
         "site/exclusive-rights-audit.mjs",
-        "tests/exclusive-rights-audit.test.mjs"
+        "tests/exclusive-rights-audit.test.mjs",
+        "ontology/youtube/reaction-compilation-rights.json",
+        "ontology/youtube/reaction-compilation-rights.md",
+        "site/reaction-rights-audit.mjs",
+        "tests/reaction-compilation-rights.test.mjs"
       ],
       "artifact": "ontology/youtube/synthetic-media-rights-policy.json",
       "priority": "standard",
@@ -2551,7 +2555,7 @@
       "objective": "Separate legal doctrine, platform enforcement and regional differences.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and separate legal doctrine, platform enforcement and regional differences.",
       "status": "in_progress",
-      "percent": 73,
+      "percent": 89,
       "evidence": [
         "ontology/youtube/content-policy-risk.json",
         "ontology/youtube/content-policy-risk.md",
@@ -2565,7 +2569,11 @@
         "ontology/youtube/exclusive-rights-evidence.json",
         "ontology/youtube/exclusive-rights-evidence.md",
         "site/exclusive-rights-audit.mjs",
-        "tests/exclusive-rights-audit.test.mjs"
+        "tests/exclusive-rights-audit.test.mjs",
+        "ontology/youtube/reaction-compilation-rights.json",
+        "ontology/youtube/reaction-compilation-rights.md",
+        "site/reaction-rights-audit.mjs",
+        "tests/reaction-compilation-rights.test.mjs"
       ],
       "artifact": "ontology/youtube/synthetic-media-rights-policy.json",
       "priority": "standard",
@@ -5014,15 +5022,21 @@
       "objective": "Identify licensing and reuse risks before economic analysis.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and identify licensing and reuse risks before economic analysis.",
       "status": "in_progress",
-      "percent": 24,
+      "percent": 80,
       "evidence": [
         "ontology/youtube/advertiser-policy-history.json",
         "ontology/youtube/advertiser-policy-history.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/reaction-compilation-rights.json",
+        "ontology/youtube/reaction-compilation-rights.md",
+        "site/reaction-rights-audit.mjs",
+        "tests/reaction-compilation-rights.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/reaction-compilation-rights.json",
       "priority": "standard",
       "phase": 2
     },
