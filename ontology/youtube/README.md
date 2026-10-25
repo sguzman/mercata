@@ -40,6 +40,10 @@ The [related-video funnel study](shorts-related-video-funnel.md), [machine measu
 
 The [Oxford Economics creator, business and user survey frame](oxford-creator-impact-2026.md), [machine response counts](oxford-creator-impact-2026.json) and [survey comparison audit](../../site/oxford-creator-impact-audit.mjs) preserve the January–March 2026 country sample counts. YouTube recruited the creator respondents; EU27 overlaps France and Germany. The estimated 2025 U.S. GDP contribution and full-time-equivalent jobs are **not** creator income, headcount or measured typical work hours. Zero-earner rates and representative creator income remain unknown.
 
+## Global creator, artist and music rights payments
+
+The [company-disclosed cumulative payout study](platform-creator-payout-scale.md), [machine figures](platform-creator-payout-scale.json) and [non-additivity auditor](../../site/creator-payout-scale-audit.mjs) register more than/about USD 100 billion in four-year YouTube disbursements and a USD 8 billion music-industry window. These include media companies and rights owners with overlapping periods; none estimates median individual creator cash income or profits.
+
 ## SEC annual versus interim YouTube advertising revenue
 
 The [Alphabet advertising-revenue filings study](alphabet-youtube-ads-sec-2026.md) and [dated accounting observations](alphabet-youtube-ads-sec-2026.json) distinguish 2023–2025 reported annual revenue, 2025–2026 second-quarter and half-year reports, and the separately disclosed strict 2025 ad-plus-subscription revenue lower bound above USD 60 billion. The [period auditor](../../site/alphabet-ad-revenue-audit.mjs) prevents adding overlapping half-year and quarterly values or using corporate advertising revenues as creator payouts. YouTube subscriptions, typical creator earnings, the 2026 full year and viewer populations are not measured by these filings.

@@ -3034,6 +3034,28 @@
       "evidence_class": "official_sec_furnished_earnings_release",
       "license": "SEC-furnished corporate earnings release linked; brief numeric facts paraphrased",
       "notes": "Reports >USD 60 billion YouTube 2025 revenue across ads and subscriptions, not the distinct Oxford >USD 60 billion U.S. GDP impact estimate. Includes mixed subscription products, not all direct creator payments."
+    },
+    {
+      "id": "yt-artists-creator-payout-music-2025",
+      "url": "https://artists.youtube/resources/monetization/",
+      "publisher": "YouTube for Artists",
+      "title": "How Artists Make Money on YouTube — global payouts and music industry reporting windows",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_youtube_first_party_aggregate_payout_disclosures",
+      "license": "Official page linked; brief figures, time windows and economic distinctions independently explained",
+      "notes": "The page displays USD 100B across creators/artists/media companies Jan 2021–Dec 2024 and USD 8B music industry July 2024–June 2025, without payee-level distribution or independent assurance."
+    },
+    {
+      "id": "yt-ceo-2026-four-year-payout",
+      "url": "https://blog.youtube/inside-youtube/the-future-of-youtube-2026/",
+      "publisher": "YouTube Official Blog",
+      "title": "From the CEO: What's coming to YouTube in 2026",
+      "published_at": "2026-01-21",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_youtube_rolling_four_year_payout_statement",
+      "license": "First-party CEO letter linked; short factual claim paraphrased",
+      "notes": "CEO reports more than USD 100B over previous four years, not individual-creator earnings or independently sampled global recipients; exact rolling date endpoints unstated."
     }
   ],
   "claims": [
@@ -6530,6 +6552,27 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "The strict bound includes YouTube subscription categories with different economics, including consumer services and television; neither subscriptions nor creator payments are separately itemized in the SEC revenue table. This is not the similarly sized commissioned U.S. GDP economic-impact estimate."
+    },
+    {
+      "id": "yt-direct-payout-over-100b-four-years",
+      "text": "YouTube reports aggregate payments of roughly or more than USD 100 billion to global creators, artists and media companies over four-year windows, with an explicit January 2021–December 2024 window on its official artist page and a later rolling-four-year statement in its January 2026 CEO letter.",
+      "source_ids": [
+        "yt-artists-creator-payout-music-2025",
+        "yt-ceo-2026-four-year-payout"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Different or overlapping four-year windows and rounded/threshold disclosures. Includes companies and rightsholders; cannot determine unique individual recipients or creator-income distribution."
+    },
+    {
+      "id": "yt-music-industry-payout-8b-window",
+      "text": "YouTube for Artists reports USD 8 billion paid to the music industry from July 2024 through June 2025, including possible rights owners and intermediaries. This overlaps and is not additive to broad creator, artist and media-company distribution figures.",
+      "source_ids": [
+        "yt-artists-creator-payout-music-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Music industry payout total is first-party, rounded, and not evidence of net incomes directly received by individual musicians, independent creators or channel members."
     }
   ],
   "observations": [],

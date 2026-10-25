@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "global_payments_to_creators_artists_rightsholders_and_media_companies",
+  "as_of": "2026-10-24",
+  "source_ids": [
+    "yt-artists-creator-payout-music-2025",
+    "yt-ceo-2026-four-year-payout"
+  ],
+  "unit": "usd_billions",
+  "population": "YouTube-paid creators, artists, music industry intermediaries, rights holders and media companies; not individual creator earners only",
+  "reported_windows": [
+    {
+      "id": "four_years_to_dec2024",
+      "value_usd_billions": 100,
+      "operator": "at_least_rounded_company_figure",
+      "reporting_window_start": "2021-01-01",
+      "reporting_window_end": "2024-12-31",
+      "time_basis": "source_explicit",
+      "population": "global_creator_artist_and_media_company_payees",
+      "source_id": "yt-artists-creator-payout-music-2025",
+      "individual_creator_only": false,
+      "includes_intermediaries": true,
+      "limitations": "The official artist page displays 100B as a rounded figure. Separate September 2025 official product announcement says >100B over four years. Unknown recipient counts, exact payout sum, annual split and distribution."
+    },
+    {
+      "id": "four_years_before_jan2026",
+      "value_usd_billions": 100,
+      "operator": "strictly_greater_than",
+      "reporting_window_start": null,
+      "reporting_window_end": null,
+      "time_basis": "rolling_four_year_statement_in_january_2026_exact_date_bounds_not_stated",
+      "population": "global_creator_artist_and_media_company_payees",
+      "source_id": "yt-ceo-2026-four-year-payout",
+      "individual_creator_only": false,
+      "includes_intermediaries": true,
+      "limitations": "The CEO's January 2026 four-year statement is not a separate, additive cumulative cohort. The exact payout window is not provided in the letter."
+    },
+    {
+      "id": "music_jul2024_jun2025",
+      "value_usd_billions": 8,
+      "operator": "reported_rounded",
+      "reporting_window_start": "2024-07-01",
+      "reporting_window_end": "2025-06-30",
+      "time_basis": "source_explicit",
+      "population": "global_music_industry_payees_including_rights_holders",
+      "source_id": "yt-artists-creator-payout-music-2025",
+      "individual_creator_only": false,
+      "includes_intermediaries": true,
+      "limitations": "Music-industry payouts include rights-owner intermediaries; artists may be paid indirectly. This period overlaps global creator payout windows and music payments are a subset of YouTube's payments, not additive."
+    }
+  ],
+  "rules": [
+    "Neither a published rolling-four-year global payout statement nor a selected 12-month music-industry payout is a distribution of individual YouTube creator income.",
+    "The music-industry payout observation may include companies and rights holders; do not equate the recipient count to artists or the amount to take-home musician income.",
+    "One official 100B four-year window and a later official four-year statement are not independent disjoint totals and must not be added.",
+    "The July 2024 to June 2025 music payout period overlaps the other windows and cannot be added to either global sum.",
+    "Do not divide the published aggregates by channel counts, subscriber counts, video counts or surveyed creators to invent mean or median creator receipts.",
+    "The USD 100B creator/industry payout measure is not Alphabet's 2025 USD 40.367B advertising revenue, the more-than-USD 60B 2025 YouTube company revenue bound, or the separate more-than-USD 60B estimated U.S. GDP contribution."
+  ],
+  "unmeasured": {
+    "actual_payee_count": null,
+    "active_creator_recipient_count": null,
+    "payout_mean": null,
+    "payout_median": null,
+    "zero_earner_fraction": null,
+    "distribution_percentiles": null,
+    "individual_annual_hours": null,
+    "individual_net_profit": null,
+    "unique_recipients_across_periods": null
+  }
+}

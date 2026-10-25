@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [global creator, artist and media payout study](ontology/youtube/platform-creator-payout-scale.md) records YouTube's first-party four-year payout headlines and overlapping music-industry payments, separating corporate transfers to media/rights holders from individual creator earnings and profits.
+
+
 The [Alphabet SEC YouTube ad-revenue time series](ontology/youtube/alphabet-youtube-ads-sec-2026.md) adds publicly filed corporate annual and interim revenue figures with matched-period growth calculations and the separate strict 2025 ads-plus-subscriptions revenue bound above USD 60 billion, without mistaking them for creator earnings, viewership, or the distinct U.S. GDP contribution.
 
 
