@@ -3430,6 +3430,39 @@
       "evidence_class": "official_adult_payee_age_and_guardian_rule",
       "license": "Official public policy linked, independently summarized",
       "notes": "Publisher at least 18; approved parent/guardian account can receive payments for eligible underage channel arrangement; payment to adult not minor."
+    },
+    {
+      "id": "yt-caption-tracks-authoring-2026",
+      "url": "https://support.google.com/youtube/answer/2734796?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Add subtitles & captions",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_subtitles_manual_and_auto_sync_feature_guidance",
+      "license": "Official creator documentation linked; short independent descriptions",
+      "notes": "Manual caption file upload, autoscync and typing via Studio; default-language ASR not a universal translation or audience measurement."
+    },
+    {
+      "id": "yt-auto-caption-quality-2026",
+      "url": "https://support.google.com/youtube/answer/6373554?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Use automatic captioning",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_asr_quality_and_language_coverage_boundaries",
+      "license": "Official documentation linked; concise independently authored measurement limits",
+      "notes": "ASR may be delayed, unsupported, inaccurate with accents/dialects/noise/overlap; creators should review and correct; live auto-captions can have separate restrictions."
+    },
+    {
+      "id": "yt-translated-video-metadata-2026",
+      "url": "https://support.google.com/youtube/answer/6289575?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Translate your own video titles & descriptions",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_localized_title_description_publishing",
+      "license": "Official creator guidance linked and independently summarized",
+      "notes": "Creator can add translated titles and descriptions per video/language; documented discoverability in readers' language but no search volume or conversion measurement."
     }
   ],
   "claims": [
@@ -7580,6 +7613,29 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "No general country-by-country age catalog supplied, and a compliant supervised channel still must satisfy content, feature and payment eligibility. The Brazil requirement must not be generalized worldwide."
+    },
+    {
+      "id": "yt-caption-manual-versus-asr-access-2026",
+      "text": "YouTube Studio permits owner-supplied captions by timed file, supported transcript auto-sync or manual editing, while automatic caption generation uses speech recognition in supported languages and may contain accent, dialect, overlap and noise errors.",
+      "source_ids": [
+        "yt-caption-tracks-authoring-2026",
+        "yt-auto-caption-quality-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Feature documentation only; not a per-language caption availability count, measured transcript accuracy or a population survey."
+    },
+    {
+      "id": "yt-localized-title-audio-and-autodub-boundaries-2026",
+      "text": "YouTube has separate creator workflows for localized video titles/descriptions, creator-provided alternate audio, and conditionally available automatic dubbed speech; source-target language, rights, content and video length can restrict automatic dubbing, including videos over 120 minutes.",
+      "source_ids": [
+        "yt-translated-video-metadata-2026",
+        "youtube-manual-multi-audio",
+        "youtube-auto-dubbing-help"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "No owner Studio permissions or translated audience reports were accessed; availability differs per video and neither a localization option nor a viewer preference establishes new sales or reach."
     }
   ],
   "observations": [],

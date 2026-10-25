@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [creator localization and accessibility feature comparison](ontology/youtube/creator-localization-access-2026.md) separates owner captions, fallible automatic speech recognition, translated metadata, manually dubbed audio, conditional automatic dubbing and viewer language preferences without inventing foreign-language audience demand or new payouts.
+
+
 The [creator entry and feature-gate audit](ontology/youtube/creator-entry-gates-2026.md) distinguishes ordinary video publishing, intermediate phone verification, mobile livestream restrictions, Brazil's under-16 supervision rule, adult AdSense payees, conditional guardian payout routing and YPP earning approval, without inventing a total zero-cost creator business or a first-payment date.
 
 

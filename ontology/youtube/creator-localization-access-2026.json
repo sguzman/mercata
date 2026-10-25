@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "creator_language_access_caption_translation_and_audio_distribution_routes",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "yt-caption-tracks-authoring-2026",
+    "yt-auto-caption-quality-2026",
+    "yt-translated-video-metadata-2026",
+    "youtube-manual-multi-audio",
+    "youtube-auto-dubbing-help",
+    "youtube-preferred-languages"
+  ],
+  "verified_public_creator_channel": false,
+  "account_linked": false,
+  "language_specific_audience_measurements": [],
+  "routes": [
+    {
+      "id": "manual_caption",
+      "label": "Creator-supplied subtitles/captions",
+      "media": "timed_text",
+      "source_ids": [
+        "yt-caption-tracks-authoring-2026"
+      ],
+      "required_flags": [
+        "owns_video",
+        "language_selected",
+        "caption_text_ready"
+      ],
+      "restrictions": "Can upload a caption file, auto-sync eligible transcript or type manually; source text and timing require review; not a dubbing or speech replacement tool"
+    },
+    {
+      "id": "automatic_caption",
+      "label": "Automatically recognized original-language captions",
+      "media": "machine_transcribed_text",
+      "source_ids": [
+        "yt-auto-caption-quality-2026",
+        "yt-caption-tracks-authoring-2026"
+      ],
+      "required_flags": [
+        "owns_video",
+        "language_supported_for_asr",
+        "recognized_speech"
+      ],
+      "restrictions": "May not appear promptly or correctly for accents, dialects, noise, overlapping speakers and unsupported languages; review and correct"
+    },
+    {
+      "id": "localized_title_description",
+      "label": "Translated title and description",
+      "media": "language_specific_metadata",
+      "source_ids": [
+        "yt-translated-video-metadata-2026"
+      ],
+      "required_flags": [
+        "owns_video",
+        "language_selected",
+        "translated_metadata_ready"
+      ],
+      "restrictions": "Translated titles and descriptions may be discoverable to viewers in that language, but search queries and viewers are not measured"
+    },
+    {
+      "id": "manual_multi_audio",
+      "label": "Creator-uploaded alternate audio",
+      "media": "creator_supplied_dub",
+      "source_ids": [
+        "youtube-manual-multi-audio"
+      ],
+      "required_flags": [
+        "owns_video",
+        "multi_audio_feature_access",
+        "alternate_audio_file_ready"
+      ],
+      "restrictions": "The feature is not universally available; creator must produce/upload a supported audio-only file and have rights to the track"
+    },
+    {
+      "id": "automatic_dubbing",
+      "label": "Eligible automatic dubbed audio",
+      "media": "machine_translated_audio",
+      "source_ids": [
+        "youtube-auto-dubbing-help"
+      ],
+      "required_flags": [
+        "owns_video",
+        "auto_dubbing_access",
+        "source_language_recognized",
+        "spoken_content_present",
+        "supported_language_pair",
+        "no_disqualifying_rights_claim"
+      ],
+      "restrictions": "Video longer than 120 minutes may be ineligible; tracks can be mistranslated; creator cannot edit generated dubbed audio directly",
+      "maximum_minutes": 120
+    },
+    {
+      "id": "viewer_preferred_language",
+      "label": "Viewer audio and metadata language preference",
+      "media": "viewer_setting_not_creator_impression",
+      "source_ids": [
+        "youtube-preferred-languages"
+      ],
+      "required_flags": [
+        "alternate_audio_or_metadata_available"
+      ],
+      "restrictions": "Preferred language setting is distinct from app language and location, and does not change search results or recommendations"
+    }
+  ],
+  "critical_boundaries": [
+    "A caption track is not an additional original audio track; translated metadata, ASR, manual dubbing and automatic dubbing are different creator workflows.",
+    "Original-language automatic captions are not guaranteed for all languages, dialects or recordings and must not be treated as complete observed transcripts.",
+    "Publisher auto-dubbing availability depends on channel eligibility and source-target language support; do not create a fixed universal language-pair table.",
+    "The 120-minute automatic dubbing exclusion is not a maximum length for all uploads or manual subtitles.",
+    "Viewers' preferred language selection does not imply a measured change to algorithmic recommendations or search volume.",
+    "A multilingual title does not make an impression count, deduplicated multilingual audience or revenue measurement.",
+    "All costs of translation, editing, re-recording, accessibility testing and correction remain unknown without creator records.",
+    "Source documents establish possible features, not the actual presence of subtitles, voice quality, an approved account or monetization."
+  ],
+  "unknown": {
+    "viewer_language_audience_size": null,
+    "caption_accuracy_by_dialect": null,
+    "translated_search_volume": null,
+    "incremental_watch_time": null,
+    "incremental_creator_income": null,
+    "number_of_creators_using_feature": null,
+    "typical_localization_labor_hours": null
+  }
+}
