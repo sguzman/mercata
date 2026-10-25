@@ -1,6 +1,6 @@
 # Evidence quality depends on the claim, not a universal source score
 
-**Review date: October 25, 2026.** [Machine-reviewed selected evidence](evidence-quality-scope-2026.json) and [regression audit](../../site/evidence-quality-audit.mjs). This crosswalk covers **8 deliberately different sources** out of the existing register of **355**; it is not a comprehensive recertification or a fresh full-text verification.
+**Review date: October 25, 2026.** [Machine-reviewed selected evidence](evidence-quality-scope-2026.json) and [regression audit](../../site/evidence-quality-audit.mjs). This crosswalk covers **8 deliberately different sources** out of the existing register of **360**; it is not a comprehensive recertification or a fresh full-text verification.
 
 First-party YouTube documentation is authoritative about the platform's published **rules as retrieved**; an independent, properly scoped survey is preferable for measured usage within its sampling population. A vendor's channel index is evidence for the *vendor-covered channels*, not unique YouTube people or creator profits. An abstract can support what the abstract states but not unexamined methods. A first-person work diary can support that person's effort but not the typical creator.
 
