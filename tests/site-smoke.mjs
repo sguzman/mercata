@@ -101,6 +101,7 @@ try{
       ['.us-news-demographic-crosswalk',8,'Biological sex, overlapping age-by-party'],
       ['.synthetic-media-rights',4,'no AI creator earnings'],
       ['.agentio-engaged-view-study',6,'not a universal engaged-to-public conversion factor'],
+      ['.monthly-creator-cash-flow',4,'Bank arrival is not the same as issuance'],
       ['.agentio-sponsor-study',6,'not representative creator pay or verified incremental sales'],
       ['.shopping-funnel-evidence',4,'no verified public conversion rate'],
       ['.ytlive-attendance-study',4,'not unique viewers or earnings'],

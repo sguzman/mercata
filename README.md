@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [source-backed monthly creator cash-flow protocol](ontology/youtube/monthly-creator-cash-flow-protocol.md) includes an executable, fully explicit liquidity ledger that separates finalized YouTube account credits, issued payouts, delayed bank receipts, sponsorship/merchant receipts, refunds, expenses and production labor. No real creator financial records or earnings rates are presumed.
+
+
 The [observed post-August 2026 engaged-view comparison](ontology/youtube/agentio-engaged-view-series-2026.md) registers 549M public and 330M engaged events from a selected 75k-video vendor cohort, contrasting measured data with an earlier 35.8k-video modeled projection and preserving metric breaks.
 
 

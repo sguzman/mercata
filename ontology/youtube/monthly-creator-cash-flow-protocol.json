@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "documented_monthly_creator_liquidity_ledger_protocol",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "youtube-payment-process",
+    "adsense-payment-cycle",
+    "adsense-thresholds",
+    "adsense-methods"
+  ],
+  "payment_rule_file": "ontology/youtube/payment-gates.json",
+  "engine_file": "site/monthly-creator-cash-flow.mjs",
+  "reporting_scope": "single_reporting_currency_YouTube_payment_account_and_disjoint_external_cash_receipts",
+  "native_cycle": {
+    "finalization_days": [
+      7,
+      12
+    ],
+    "payment_cutoff_day": 20,
+    "issuance_days": [
+      21,
+      26
+    ],
+    "posted_earnings_are_cash": false,
+    "issued_transfers_are_bank_receipts": false,
+    "below_threshold_rollover": true
+  },
+  "monetary_input_fields": [
+    "platform_posted_net",
+    "platform_issued",
+    "platform_bank_received",
+    "sponsor_cash_received",
+    "affiliate_cash_received",
+    "merch_cash_received",
+    "other_non_youtube_cash_received",
+    "refunds_paid",
+    "production_cash_paid",
+    "marketing_cash_paid",
+    "admin_cash_paid"
+  ],
+  "labor_input_fields": [
+    "hours_production",
+    "hours_marketing",
+    "hours_admin"
+  ],
+  "other_required_fields": [
+    "month",
+    "published_video_count",
+    "payment_hold"
+  ],
+  "configuration_fields": [
+    "currency",
+    "opening_platform_balance",
+    "opening_issued_not_received",
+    "opening_cash_balance"
+  ],
+  "source_semantics": [
+    "platform_posted_net is observed finalized net credit added to the AdSense for YouTube balance, not estimated current-month video earnings or a gross figure before withholding and adjustments.",
+    "platform_issued is an actual issued balance payment, not an eligibility prediction; platform_bank_received is actually cleared cash, potentially in a later calendar month.",
+    "sponsor_cash_received, affiliate_cash_received, merch_cash_received and other_non_youtube_cash_received are outside-platform received transfers, not contracted but unpaid invoices and not native YouTube payments.",
+    "refunds_paid and cash expense fields are paid costs only and must not duplicate amounts already netted upstream.",
+    "hours include unsuccessful productions, publishing, marketing and administrative labor; cash movement per working hour is not wages, profit or a causal result.",
+    "payment_hold and source-defined account currency threshold determine only conditional standard issuance eligibility; account approval, policy review and settlement timing remain separate.",
+    "All monetary and hour values are mandatory explicit numbers; missing is never implicitly zero. Test fixtures are invented solely to verify arithmetic and are not observations."
+  ],
+  "constraints": {
+    "supported_reporting_currencies_from_reference": true,
+    "whole_video_counts": true,
+    "two_decimal_account_money": true,
+    "months_must_be_consecutive": true,
+    "issued_only_if_standard_eligibility": true,
+    "no_automatic_payout_or_bank_arrival": true
+  },
+  "unmeasured": {
+    "real_participant_cash_transactions": null,
+    "creator_median_monthly_income": null,
+    "representative_profit_distribution": null,
+    "creator_effective_hourly_wage": null,
+    "creator_tax_liability": null
+  }
+}

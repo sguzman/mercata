@@ -4,6 +4,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
+## Creator cash-flow accounting and payment settlement
+
+The [monthly cashbook research protocol](monthly-creator-cash-flow-protocol.md), [machine field contract](monthly-creator-cash-flow-protocol.json) and [tested ledger engine](../../site/monthly-creator-cash-flow.mjs) reconcile standard AdSense for YouTube finalized credit, payment cutoff, issue and bank arrival with independent sponsorship/product receipts and actual labor, refunds and paid cash expenses. The model never guesses real creator earnings or wages.
+
 ## Legal service provider and economic counterparties
 
 The [dated operator and transaction map](operator-market-roles.md) and [machine taxonomy](operator-market-roles.json) cite YouTube's current legal terms identifying Google LLC as the covered service provider, while separating public video viewing, advertiser-funded placements, conditional YPP revenue sharing, paid viewer subscriptions and purchases, sponsorships, rights holders and channel delegates. Free viewers are not necessarily paying customers; AdSense for YouTube is a payment-routing account, not an independent source of creator demand. No seller or buyer population sizes, deal volumes or typical incomes are inferred.

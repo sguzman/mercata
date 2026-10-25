@@ -298,7 +298,7 @@
           "title": "Check payout rails and countries",
           "acceptance": "Document payment methods and geographic availability.",
           "weight": 1,
-          "progress": 81,
+          "progress": 86,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -309,7 +309,12 @@
             "tests/youtube.test.mjs",
             "tests/site-smoke.mjs",
             "ontology/youtube/tax-withholding-mechanics.json",
-            "ontology/youtube/tax-withholding-mechanics.md"
+            "ontology/youtube/tax-withholding-mechanics.md",
+            "ontology/youtube/monthly-creator-cash-flow-protocol.json",
+            "ontology/youtube/monthly-creator-cash-flow-protocol.md",
+            "site/monthly-creator-cash-flow.mjs",
+            "tests/monthly-creator-cash-flow.test.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -318,7 +323,7 @@
           "title": "Record withdrawal minimums and delays",
           "acceptance": "State payout minimum, frequency, holds and reserve policies.",
           "weight": 1,
-          "progress": 80,
+          "progress": 86,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -330,7 +335,12 @@
             "scripts/verify.mjs",
             "ontology/youtube/country-eligibility-payments.json",
             "ontology/youtube/country-eligibility-payments.md",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/monthly-creator-cash-flow-protocol.json",
+            "ontology/youtube/monthly-creator-cash-flow-protocol.md",
+            "site/monthly-creator-cash-flow.mjs",
+            "tests/monthly-creator-cash-flow.test.mjs",
+            "site/app.js"
           ]
         },
         {
@@ -359,7 +369,7 @@
           "title": "Model a transparent net-sale example",
           "acceptance": "Calculate gross less documented fees with assumptions.",
           "weight": 1,
-          "progress": 89,
+          "progress": 92,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/revenue-pathways.json",
@@ -388,7 +398,11 @@
             "ontology/youtube/alphabet-youtube-ads-sec-2026.json",
             "ontology/youtube/alphabet-youtube-ads-sec-2026.md",
             "site/alphabet-ad-revenue-audit.mjs",
-            "tests/alphabet-ad-revenue-audit.test.mjs"
+            "tests/alphabet-ad-revenue-audit.test.mjs",
+            "ontology/youtube/monthly-creator-cash-flow-protocol.json",
+            "ontology/youtube/monthly-creator-cash-flow-protocol.md",
+            "site/monthly-creator-cash-flow.mjs",
+            "tests/monthly-creator-cash-flow.test.mjs"
           ]
         },
         {
@@ -1199,7 +1213,7 @@
           "title": "Separate sales, payout and net profit",
           "acceptance": "Define each economic quantity and all known expenses.",
           "weight": 1,
-          "progress": 77,
+          "progress": 82,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
@@ -1218,7 +1232,12 @@
             "tests/first-upload-vlog-study.test.mjs",
             "ontology/youtube/hourly-income-accounting.md",
             "site/creator-hourly-audit.mjs",
-            "tests/creator-hourly-audit.test.mjs"
+            "tests/creator-hourly-audit.test.mjs",
+            "ontology/youtube/monthly-creator-cash-flow-protocol.json",
+            "ontology/youtube/monthly-creator-cash-flow-protocol.md",
+            "site/monthly-creator-cash-flow.mjs",
+            "tests/monthly-creator-cash-flow.test.mjs",
+            "site/app.js"
           ]
         }
       ]
@@ -1788,14 +1807,21 @@
           "title": "Model bounded revenue scenarios",
           "acceptance": "State assumptions; never invent likelihoods or expected earnings.",
           "weight": 1,
-          "progress": 50,
+          "progress": 66,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/opportunity-framework.json",
             "ontology/youtube/opportunity-framework.md",
             "ontology/youtube/scenario-method.md",
             "site/scenario.mjs",
-            "tests/scenario.test.mjs"
+            "tests/scenario.test.mjs",
+            "ontology/youtube/monthly-creator-cash-flow-protocol.json",
+            "ontology/youtube/monthly-creator-cash-flow-protocol.md",
+            "site/monthly-creator-cash-flow.mjs",
+            "tests/monthly-creator-cash-flow.test.mjs",
+            "site/app.js",
+            "tests/site-smoke.mjs",
+            "specimens/youtube.json"
           ]
         },
         {
