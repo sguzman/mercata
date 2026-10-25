@@ -1,5 +1,5 @@
 // Pure safeguards for source-authorized country panels; never fetches private creator data.
-const isoDate = s=>typeof s==='string'&&/^\\d{4}-\\d{2}-\\d{2}$/.test(s)&&
+const isoDate = s=>typeof s==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(s)&&
  !Number.isNaN(Date.parse(s))&&new Date(s+'T00:00:00Z').toISOString().slice(0,10)===s;
 export function validateOwnerCountryPanel(model,req){
  if(!req || typeof req!=='object')return {ready:false,reason:'missing_owner_request'};
