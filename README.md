@@ -57,7 +57,7 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
-The [creator entry and feature-gate audit](ontology/youtube/creator-entry-gates-2026.md) distinguishes ordinary video publishing, intermediate phone verification, mobile livestream restrictions and YPP earning approval, without inventing a total zero-cost creator business or a first-payment date.
+The [creator entry and feature-gate audit](ontology/youtube/creator-entry-gates-2026.md) distinguishes ordinary video publishing, intermediate phone verification, mobile livestream restrictions, Brazil's under-16 supervision rule, adult AdSense payees, conditional guardian payout routing and YPP earning approval, without inventing a total zero-cost creator business or a first-payment date.
 
 
 The [opportunity and risk matrix](ontology/youtube/opportunity-risk-matrix.md) separates ten grounded eligibility, rights, payment and evidence-gap axes without manufacturing personal probabilities, financial losses or niche rankings.

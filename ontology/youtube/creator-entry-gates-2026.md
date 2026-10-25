@@ -22,6 +22,16 @@ A possible first pilot uses an already-owned suitable device, an authorized Goog
 
 For reproducibility, record the exact month, jurisdiction, owned versus newly purchased gear, actual cash paid, internet/network usage, hours spent (including abandoned attempts), and the distinction between a created channel, an uploaded file and a *publicly published* video. Never assign unknown costs a fabricated zero. Nothing in the public Help Center describes a representative real-world creator startup price or income.
 
+## Minor creators, livestream age, adult payees and country-specific supervision
+
+Three separate and **non-interchangeable** official restrictions require a country- and role-aware audit:
+
+- **Channel access in Brazil:** [YouTube's supervised teen policy](https://support.google.com/youtube/answer/15253498?hl=en) says Brazilian users **under 16** must have parental supervision to create or maintain a channel. It does not supply a global age-of-channel-creation table, so local ages outside Brazil remain unknown here.
+- **Livestreaming:** [YouTube's livestream entry page](https://support.google.com/youtube/answer/2474026?hl=en) sets a minimum livestreaming age of **16**, independently of channel supervision, mobile subscriber floors and content moderation.
+- **Receiving AdSense for YouTube cash:** [YouTube](https://support.google.com/youtube/answer/2533300?hl=en) and [Google AdSense](https://support.google.com/adsense/answer/14230?hl=en) require the **direct AdSense payee to be at least 18**. An under-18 creator can monetize only through a separately approved adult parent/guardian's AdSense for YouTube account, assuming all other YPP conditions are met. That adult, **not the minor**, receives the payment.
+
+The [age-route validator](../../site/creator-entry-gates.mjs) checks these three distinct ages and roles, returns an *unknown* outcome when a local age or account authorization is unspecified, and never treats a guardian account as automatic channel approval. It does not collect private documents.
+
 ## Eligibility, timelines, and privacy
 
 Standard publication, long videos, mobile livestreaming, advanced features and paid YPP each require their own evaluation. Livestream conditions differ from monetization conditions. YPP subscriber/watch-hour/Shorts thresholds and regional features can change; treat the platform's contemporaneous approval record as authoritative, not a planned creator scenario.

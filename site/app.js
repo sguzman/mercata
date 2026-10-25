@@ -3097,6 +3097,19 @@ function renderCreatorEntryGates(model,dossier){
   card.append(audienceSources(gate.source_ids,dossier));grid.append(card);
  }
  details.append(grid);
+ if(model.age_and_guardian_routes?.length){
+  const ageGroup=make('div','age-entry-routes');
+  ageGroup.append(make('h4','','Separate age, supervision and payment-recipient restrictions'));
+  const ageGrid=make('div','ownership-grid');
+  for(const rule of model.age_and_guardian_routes) {
+   const card=make('article','ownership-card');
+   card.append(make('h5','',rule.label));
+   card.append(make('p','',rule.condition));
+   card.append(audienceSources(rule.source_ids,dossier));ageGrid.append(card);
+  }
+  ageGroup.append(ageGrid);
+  details.append(ageGroup);
+ }
  details.append(make('p','measure-limit','Mobile live requires 50 subscribers and may have audience caps under 1,000. Phone-verified long uploads are a different gate. No new paid equipment mandated does not mean zero operating cost.'));
  const link=make('a','inline-link','Read minimum-purchase entry and 2026 feature gate protocol ↗');
  link.href='./ontology/youtube/creator-entry-gates-2026.md';link.target='_blank';link.rel='noopener noreferrer';

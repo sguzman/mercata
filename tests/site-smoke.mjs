@@ -120,6 +120,7 @@ try{
     assert((await production.textContent()).includes('Not a causal comparison.'));
     assert((await production.textContent()).includes('not a YouTube zero-earner estimate'));
     assert((await production.textContent()).includes('typical production hours: unknown'));
+    assert.equal(await page.locator('.creator-entry-gates .age-entry-routes .ownership-card').count(),4,'Missing distinct minor account and payee age gates');
     const onboarding=page.locator('.channel-onboarding');
     assert.equal(await onboarding.locator('.channel-onboarding-stage').count(),6,'Missing publishing access stages');
     assert.equal(await onboarding.locator('.channel-feature-gate').count(),4,'Missing independent feature gates');

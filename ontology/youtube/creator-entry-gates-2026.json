@@ -11,7 +11,10 @@
     "yt-phone-verify",
     "mobile-stream-help",
     "live-general-help",
-    "ypp-main"
+    "ypp-main",
+    "yt-under18-adsense-guardian-2026",
+    "yt-supervised-teen-regional-2026",
+    "google-adsense-age-2026"
   ],
   "scope": "Account and feature rules documented for prospective creators, not user-specific eligibility, legal or financial advice",
   "activity_gates": [
@@ -238,11 +241,64 @@
     "An upload, a published video, an enabled streaming tool, approval for YPP and a cleared bank transfer are different events.",
     "Mobile livestream subscriber and age requirements are not generic requirements for publishing ordinary videos.",
     "Phone verification is a conditional feature gate, not a mandatory prerequisite for all standard uploads.",
-    "YPP criteria may change; do not hard-code monetary thresholds from a different effective period into a zero-budget entry claim."
+    "YPP criteria may change; do not hard-code monetary thresholds from a different effective period into a zero-budget entry claim.",
+    "Brazil-only channel supervision requirement for users younger than 16 must not be generalized to every country; other local account access ages are not established by this study.",
+    "Age 16 governs YouTube live-stream hosting, not ordinary video publication or direct AdSense payee identity.",
+    "The age-18 AdSense rule governs the direct payee. An under-18 creator may use an approved adult guardian's account under YouTube rules, but that does not approve the creator for YPP.",
+    "Guardian payment routing does not make the minor the verified recipient or demonstrate that any income was earned."
   ],
   "account_evaluations_performed": [],
   "measured_real_cash_costs": null,
   "measured_median_startup_cost": null,
   "verified_creator_income": null,
-  "private_documents_collected": false
+  "private_documents_collected": false,
+  "age_and_guardian_routes": [
+    {
+      "id": "channel_creation_brazil_under16",
+      "label": "Brazil: channel supervision below age 16",
+      "min_age": 16,
+      "region": "BR",
+      "condition": "Parental supervision is required to create or maintain a YouTube channel for an account holder below age 16",
+      "source_ids": [
+        "yt-supervised-teen-regional-2026"
+      ],
+      "automatic_channel_approval": false
+    },
+    {
+      "id": "livestreaming_min16",
+      "label": "Livestream host age requirement",
+      "min_age": 16,
+      "region": "all_documented_regions_with_account_specific_exceptions_unknown",
+      "condition": "YouTube livestream creator must be at least 16; moderation and content restrictions apply independently",
+      "source_ids": [
+        "live-general-help"
+      ],
+      "automatic_channel_approval": false
+    },
+    {
+      "id": "direct_adsense_min18",
+      "label": "Direct AdSense for YouTube payee",
+      "min_age": 18,
+      "region": "adSense_for_youtube",
+      "condition": "A payee applying personally for an AdSense for YouTube account must be at least 18",
+      "source_ids": [
+        "yt-under18-adsense-guardian-2026",
+        "google-adsense-age-2026"
+      ],
+      "automatic_channel_approval": false
+    },
+    {
+      "id": "guardian_adsense_under18",
+      "label": "Under-18 creator with adult guardian payee",
+      "min_age": null,
+      "region": "adSense_for_youtube",
+      "condition": "A minor's otherwise eligible YouTube channel can link an approved AdSense for YouTube account owned by parent or guardian aged at least 18; payment goes to adult",
+      "source_ids": [
+        "yt-under18-adsense-guardian-2026",
+        "google-adsense-age-2026"
+      ],
+      "automatic_channel_approval": false
+    }
+  ],
+  "unmeasured_local_ages_outside_brazil": null
 }

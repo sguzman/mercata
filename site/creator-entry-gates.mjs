@@ -18,3 +18,26 @@ export function assessNoNewPurchaseClaims(protocol,claim) {
   return {supported:true,strictly_no_incremental_purchases_only:true,total_creator_cost:null};
  return {supported:false,total_creator_cost:null,reason:'not_supported_by_official_required_purchases'};
 }
+
+export function evaluateCreatorAgeRoute(protocol, routeId, context) {
+ const r=protocol.age_and_guardian_routes.find(x=>x.id===routeId);
+ if(!r)return {status:'unsupported_route',actual_approval:null};
+ if(!context||!Number.isSafeInteger(context.age)||context.age<0)
+  return {status:'unknown',actual_approval:null};
+ if(routeId==='channel_creation_brazil_under16') {
+  if(context.region!=='BR')return {status:'unknown_jurisdiction_rules',actual_approval:null};
+  if(context.age>=16)return {status:'age_specific_supervision_not_required',actual_approval:null};
+  if(typeof context.supervisionLinked!=='boolean')return {status:'unknown',actual_approval:null};
+  return {status:context.supervisionLinked?'passes_documented_supervision_gate':'needs_parent_supervision',actual_approval:null};
+ }
+ if(routeId==='livestreaming_min16')
+  return {status:context.age>=16?'passes_age_requirement_only':'under_16_not_eligible',actual_approval:null};
+ if(routeId==='direct_adsense_min18')
+  return {status:context.age>=18?'passes_direct_payee_age_only':'direct_payee_under_18',actual_approval:null};
+ if(routeId==='guardian_adsense_under18') {
+  if(context.age>=18)return {status:'not_minor_guardian_route',actual_approval:null};
+  if(typeof context.approvedGuardianAdSense!=='boolean')return {status:'unknown',actual_approval:null};
+  return {status:context.approvedGuardianAdSense?'adult_payee_route_condition_met':'no_approved_adult_payee',actual_approval:null};
+ }
+ return {status:'unsupported_route',actual_approval:null};
+}

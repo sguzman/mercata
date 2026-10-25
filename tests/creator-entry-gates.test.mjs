@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {evaluateCreatorEntryGate,assessNoNewPurchaseClaims} from '../site/creator-entry-gates.mjs';
+import {evaluateCreatorEntryGate,assessNoNewPurchaseClaims,evaluateCreatorAgeRoute} from '../site/creator-entry-gates.mjs';
 const load=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 test('Seven official feature gates reference existing registered sources, not new account data',async()=>{
  const [m,d]=await Promise.all([load('ontology/youtube/creator-entry-gates-2026.json'),load('specimens/youtube.json')]);
@@ -42,4 +42,23 @@ test('Dossier renders the rule stages and uncertainty boundary',async()=>{
  assert(app.includes('renderCreatorEntryGates'));
  assert(app.includes('creator-entry-gates-2026.json'));
  assert(app.includes('not actual account approval or creator income'));
+});
+
+test('Age gates split Brazilian channel supervision, age-16 live streaming and age-18 AdSense payees',async()=>{
+ const m=await load('ontology/youtube/creator-entry-gates-2026.json');
+ const d=await load('specimens/youtube.json');
+ assert.equal(m.age_and_guardian_routes.length,4);
+ assert(m.age_and_guardian_routes.every(x=>x.source_ids.every(id=>d.evidence.some(y=>y.id===id))));
+ assert.equal(evaluateCreatorAgeRoute(m,'channel_creation_brazil_under16',{age:15,region:'BR',supervisionLinked:false}).status,'needs_parent_supervision');
+ assert.equal(evaluateCreatorAgeRoute(m,'channel_creation_brazil_under16',{age:15,region:'BR',supervisionLinked:true}).status,'passes_documented_supervision_gate');
+ assert.equal(evaluateCreatorAgeRoute(m,'channel_creation_brazil_under16',{age:15,region:'MX',supervisionLinked:true}).status,'unknown_jurisdiction_rules');
+ assert.equal(evaluateCreatorAgeRoute(m,'livestreaming_min16',{age:15}).status,'under_16_not_eligible');
+ assert.equal(evaluateCreatorAgeRoute(m,'livestreaming_min16',{age:16}).status,'passes_age_requirement_only');
+ assert.equal(evaluateCreatorAgeRoute(m,'direct_adsense_min18',{age:17}).status,'direct_payee_under_18');
+ assert.equal(evaluateCreatorAgeRoute(m,'direct_adsense_min18',{age:18}).status,'passes_direct_payee_age_only');
+ assert.equal(evaluateCreatorAgeRoute(m,'guardian_adsense_under18',{age:17,approvedGuardianAdSense:true}).status,'adult_payee_route_condition_met');
+ assert.equal(evaluateCreatorAgeRoute(m,'guardian_adsense_under18',{age:17,approvedGuardianAdSense:false}).status,'no_approved_adult_payee');
+ assert.equal(evaluateCreatorAgeRoute(m,'guardian_adsense_under18',{age:17}).status,'unknown');
+ assert.equal(evaluateCreatorAgeRoute(m,'guardian_adsense_under18',{age:17,approvedGuardianAdSense:true}).actual_approval,null);
+ assert.equal(m.unmeasured_local_ages_outside_brazil,null);
 });

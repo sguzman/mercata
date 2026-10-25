@@ -3397,6 +3397,39 @@
       "evidence_class": "expert_curated_nominations_nonrandom_video_essay_selection",
       "license": "Independent aggregate paraphrase with direct attribution, no video images or criticism text copied",
       "notes": "47 voters/17 countries, 183 works, 256 nominations, 70 selected YouTube publications mean 36min, 56 Vimeo publications mean11min; selections not representative of global essays or income."
+    },
+    {
+      "id": "yt-under18-adsense-guardian-2026",
+      "url": "https://support.google.com/youtube/answer/2533300?hl=en",
+      "publisher": "YouTube Help",
+      "title": "I want to monetize my videos, but I was disapproved for being under 18",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_youtube_underage_payment_account_rule",
+      "license": "Official public policy linked, independently summarized",
+      "notes": "AdSense for YouTube requires an 18+ payee; under18 creator can link approved account of parent/guardian over18 for monetization. Does not override other YPP requirements."
+    },
+    {
+      "id": "yt-supervised-teen-regional-2026",
+      "url": "https://support.google.com/youtube/answer/15253498?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Supervised teen account",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_regional_supervision_and_channel_access",
+      "license": "Official public Help article linked, brief independent summary",
+      "notes": "In Brazil under16 mandatory supervision for creating/maintaining a YouTube channel; restrictions elsewhere may differ and cannot be inferred."
+    },
+    {
+      "id": "google-adsense-age-2026",
+      "url": "https://support.google.com/adsense/answer/14230?hl=en",
+      "publisher": "Google AdSense Help",
+      "title": "Age requirement for an AdSense account",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_adult_payee_age_and_guardian_rule",
+      "license": "Official public policy linked, independently summarized",
+      "notes": "Publisher at least 18; approved parent/guardian account can receive payments for eligible underage channel arrangement; payment to adult not minor."
     }
   ],
   "claims": [
@@ -7523,6 +7556,30 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Mobile restrictions do not apply to ordinary uploads and can vary by account; no individual's channel eligibility, audience or live income is observed."
+    },
+    {
+      "id": "youtube-under18-guardian-payee-versus-channel-2026",
+      "text": "YouTube's AdSense for YouTube program requires an adult payee aged at least 18. An otherwise eligible under-18 creator may link a parent/guardian's approved AdSense for YouTube account, with payments received by the adult rather than the minor. Neither arrangement guarantees a channel's monetization approval.",
+      "source_ids": [
+        "yt-under18-adsense-guardian-2026",
+        "google-adsense-age-2026",
+        "ypp-main"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Account linking and identity compliance remain conditional; no user's identity, guardianship, jurisdiction, payout or bank details collected."
+    },
+    {
+      "id": "youtube-brazil-teen-channel-supervision-2026",
+      "text": "YouTube's published supervision policy requires parental supervision to create or maintain a channel in Brazil for users under 16. This jurisdiction-specific account gate is distinct from its age-16 live streaming floor and its age-18 direct AdSense payment rule.",
+      "source_ids": [
+        "yt-supervised-teen-regional-2026",
+        "live-general-help",
+        "yt-under18-adsense-guardian-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "No general country-by-country age catalog supplied, and a compliant supervised channel still must satisfy content, feature and payment eligibility. The Brazil requirement must not be generalized worldwide."
     }
   ],
   "observations": [],
