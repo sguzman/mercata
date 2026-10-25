@@ -4165,6 +4165,19 @@ function renderMultilingualDistribution(data,dossier) {
     products.append(card);
   }
   details.append(products);
+  const publishing=make('details','multilingual-publication-choices');
+  publishing.append(make('summary','','Choosing localization assets and publication structure'));
+  const choices=make('div','multilingual-product-grid');
+  for(const choice of data.localization_choices||[]){
+    const card=make('article','multilingual-product-card');
+    card.append(make('h5','',choice.goal));
+    card.append(make('p','',choice.creator_control));
+    card.append(make('small','',choice.delivery_unit.replaceAll('_',' ')));
+    card.append(audienceSources(choice.source_ids,dossier));choices.append(card);
+  }
+  publishing.append(choices);
+  publishing.append(make('p','measure-limit','One video with alternate language assets does not create extra videos or guarantee a larger audience; separate channel publishing has no verified comparative uplift.'));
+  details.append(publishing);
   const examples=make('details','multilingual-language-examples');
   examples.append(make('summary','','Selected automatic-dubbing language pairs · current help snapshot'));
   const list=make('ul','multilingual-language-list');

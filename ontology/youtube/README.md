@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [six-path localization delivery choice table](multilingual-distribution.md) and [same-video versus separate-channel audit](../../site/multilingual-decision-audit.mjs) distinguish captions, translated metadata, manual and automatic dubbing, thumbnails, and viewer language preferences without claiming observed financial or audience gains.
+
+
 The [comment-study full-text reconciliation](comment-source-reconciliation-2026.md), [bounded samples and discrepancy record](comment-source-reconciliation-2026.json) and [published-claim correction audit](../../site/comment-source-correction-audit.mjs) correct the reversed commenter-toxicity statement while excluding person-level profiling and causal claims.
 
 

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "multilingual_content_distribution_ontology",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-25",
   "status": "official_product_rules_and_selected_observation_not_economic_outcome",
   "scope": "Language, caption, dubbed audio and translated metadata/thumbnail distribution. Language is not a person's location, race, ethnicity or inferred identity.",
   "facets": [
@@ -342,5 +342,155 @@
     "Language support may change over time and differ for particular creators/videos; current per-video access must be verified independently.",
     "Publishing translated audio does not grant rights to copyrighted music/footage in each jurisdiction.",
     "Never infer a person's nationality, ethnicity or political affiliation from their selected audio language."
+  ],
+  "method": "Feature-level 2026 official YouTube documentation. Mechanism, required creator action, content format, rights and quality gates remain separate from observed reach or economic outcomes.",
+  "localization_choices": [
+    {
+      "id": "text_accessibility",
+      "goal": "Readable spoken words without changing audio",
+      "workflows": [
+        "manual_caption",
+        "automatic_caption_with_creator_quality_review"
+      ],
+      "delivery_unit": "video_text_track",
+      "creator_control": "Creator supplies or corrects timed text; automatic speech recognition requires review",
+      "source_ids": [
+        "yt-caption-tracks-authoring-2026",
+        "yt-auto-caption-quality-2026"
+      ],
+      "requires_advanced_features": false,
+      "creates_additional_audio": false,
+      "default_cost": null,
+      "measured_engagement_effect": null
+    },
+    {
+      "id": "metadata_discoverability",
+      "goal": "Make a video title and description readable in another language",
+      "workflows": [
+        "creator_published_translated_title_and_description"
+      ],
+      "delivery_unit": "video_localization_metadata",
+      "creator_control": "Creator writes and publishes translated title and description in the video's target language",
+      "source_ids": [
+        "yt-translated-video-metadata-2026"
+      ],
+      "requires_advanced_features": false,
+      "creates_additional_audio": false,
+      "default_cost": null,
+      "measured_engagement_effect": null
+    },
+    {
+      "id": "human_dub",
+      "goal": "Provide creator-controlled alternative spoken audio",
+      "workflows": [
+        "prepare_dubbed_audio",
+        "upload_manual_secondary_audio"
+      ],
+      "delivery_unit": "alternate_audio_track_same_video_or_short",
+      "creator_control": "Creator records/obtains a rights-cleared audio-only track and uploads under supported advanced creator features; remove existing auto-dub in that language first when applicable",
+      "source_ids": [
+        "youtube-manual-multi-audio"
+      ],
+      "requires_advanced_features": true,
+      "creates_additional_audio": true,
+      "default_cost": null,
+      "measured_engagement_effect": null
+    },
+    {
+      "id": "machine_dub",
+      "goal": "Provide an automatically generated alternative spoken track",
+      "workflows": [
+        "check_eligible_video_and_language_pair",
+        "generate_and_review_auto_dub",
+        "review_publication_controls"
+      ],
+      "delivery_unit": "platform_generated_secondary_audio_track",
+      "creator_control": "Owner may manage publication and remove generated dubs but cannot directly edit generated audio; unsupported pair, poor audio, rights claims or over-120-minute video may block it",
+      "source_ids": [
+        "youtube-auto-dubbing-help"
+      ],
+      "requires_advanced_features": null,
+      "creates_additional_audio": true,
+      "default_cost": null,
+      "measured_engagement_effect": null
+    },
+    {
+      "id": "localized_visual_presentation",
+      "goal": "Prepare a target-language thumbnail without creating a new long-form video",
+      "workflows": [
+        "eligible_long_form_localized_thumbnail"
+      ],
+      "delivery_unit": "localized_thumbnail_same_long_form_video",
+      "creator_control": "Availability and supported creator features must be checked; the published support documentation describes this for long-form video, not all Shorts",
+      "source_ids": [
+        "youtube-manual-multi-audio"
+      ],
+      "requires_advanced_features": true,
+      "creates_additional_audio": false,
+      "default_cost": null,
+      "measured_engagement_effect": null
+    },
+    {
+      "id": "language_preference",
+      "goal": "Allow available track or metadata selection for the individual viewer",
+      "workflows": [
+        "viewer_sets_preferred_audio_metadata_languages",
+        "viewer_selects_available_audio_track"
+      ],
+      "delivery_unit": "viewer_setting_or_video_playback_track_selection",
+      "creator_control": "Viewer preferences are distinct from app language and location; this setting itself does not change search results or recommendations",
+      "source_ids": [
+        "youtube-preferred-languages"
+      ],
+      "requires_advanced_features": false,
+      "creates_additional_audio": false,
+      "default_cost": null,
+      "measured_engagement_effect": null
+    }
+  ],
+  "publication_architectures": [
+    {
+      "id": "same_video_multi_language",
+      "label": "One uploaded video or Short with supported alternate audio, caption and translated metadata",
+      "media_object_count_per_original": 1,
+      "source_ids": [
+        "youtube-manual-multi-audio",
+        "yt-translated-video-metadata-2026"
+      ],
+      "supported_documented": true,
+      "conditions": [
+        "Audio-track controls require an eligible channel and supported asset; long-form thumbnail translation has separate conditions.",
+        "Manual and automatic dubbing are different methods; one target-language auto dub may need removal before uploading a manual version.",
+        "Different language media assets and viewer language preferences are not separate new viewers or creator businesses."
+      ],
+      "incremental_reach": null,
+      "creator_profit": null
+    },
+    {
+      "id": "separately_published_language_video",
+      "label": "Separate language-targeted uploads or channels, subject to ordinary publishing and rights controls",
+      "media_object_count_per_original": null,
+      "source_ids": [
+        "youtube-manual-multi-audio",
+        "yt-translated-video-metadata-2026"
+      ],
+      "supported_documented": false,
+      "conditions": [
+        "An alternative editorial/publishing architecture, not the documented multi-language-audio product or an observed best practice.",
+        "Each separate upload requires independent production, distribution, metadata, rights and management verification.",
+        "No documented comparison of unique audience, search rankings, monetization or costs against same-video multi-audio is available in this dossier."
+      ],
+      "incremental_reach": null,
+      "creator_profit": null
+    }
+  ],
+  "prohibited_inferences": [
+    "Viewer preferred language is a viewer's nationality or spoken mother tongue.",
+    "Localized metadata guarantees search impressions or translates actual speech.",
+    "A subtitle track constitutes another audio dub.",
+    "An automatically dubbed track can be manually edited in place.",
+    "A 2025 selected creator 25% watch-time share is a universal uplift.",
+    "Publishing translated tracks or separate channels multiplies unique viewers or creator net profit.",
+    "A machine-generated track is always accurate or eligible for every language pair."
   ]
 }

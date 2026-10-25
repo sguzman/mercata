@@ -1,6 +1,6 @@
 # YouTube multilingual distribution: audio, metadata, captions and language
 
-**Official-source snapshot: October 23, 2026.** [Machine-readable vocabulary and product rules](multilingual-distribution.json). YouTube offers several distinct ways to localize content. None of them establishes that a creator will increase watch time or income by a particular percentage.
+**Official-source snapshot: October 25, 2026.** [Machine-readable vocabulary and product rules](multilingual-distribution.json). YouTube offers several distinct ways to localize content. None of them establishes that a creator will increase watch time or income by a particular percentage.
 
 ## Six mechanisms are not the same feature
 
@@ -36,3 +36,20 @@ A legitimate study should record language-specific watch minutes and engaged vie
 ## Still unmeasured
 
 Representative extra cost of dubbing, labor hours per track, engagement or subscriber conversion from particular translations, income uplift, captions versus audio cost-effectiveness, and country/language market rankings remain unknown. All are recorded as `null` rather than filled with assumed values.
+
+## How to choose a localization delivery route
+
+The official functions can be grouped by the **thing changed**, rather than by the language's geography or an assumed economic return:
+
+| Goal | Delivered asset | Decision constraint |
+| --- | --- | --- |
+| Let viewers read dialogue | Creator-reviewed caption or subtitle text | Text timing, original speech recognition and translation accuracy need verification |
+| Translate search-visible presentation | Localized title and description | No change to spoken audio; [YouTube metadata help](https://support.google.com/youtube/answer/6289575?hl=en) documents a target-language publishing step |
+| Offer a controlled translated voice | Creator-recorded/commissioned audio track on the same eligible video or Short | [Manual multilingual audio](https://support.google.com/youtube/answer/13338784?hl=en) needs supported advanced features, rights clearance, and a prepared file; an existing same-language auto dub may need removal |
+| Offer generated speech translation | YouTube automatic dubbing on an eligible video | [Automatic dubbing guidance](https://support.google.com/youtube/answer/15569972?hl=en) cites the 120-minute, language pair, pronunciation, audio and copyright gates; its generated audio cannot be edited directly |
+| Change a language-specific image | Localized thumbnail on a supported long-form video | Do not assume availability on Shorts or every channel |
+| Play available localized content | Viewer language setting or player audio-track choice | [Language preference help](https://support.google.com/youtube/answer/13339776?hl=en) says this is separate from app language/location and does not itself change search or recommendations |
+
+**Single-video versus separate uploads.** Multi-language audio allows multiple tracks under **one** eligible video ID, without creating separate channels. Publishing separately dubbed videos or running separate language-targeted channels is a different editorial and rights-management workflow, **not** the same feature and not a documented superior reach strategy. There is no matched outcome dataset in Mercata establishing which approach yields higher unique attention, creator profit, or localization work hours. The `publication_architectures` entries in the [machine record](multilingual-distribution.json) deliberately leave those outcomes `null`.
+
+The same video can have audio in one language, timed captions in another, and translated titles in several others. Count that as **one video with multiple localizations**, not multiple independent videos or independent creator businesses. Compare results only with authorized, consistently dated and format-aligned measurements. These options do not justify inferring a viewer's nationality, ethnicity, buying power or first language.
