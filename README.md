@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+[2024–2026 niche upload-volume observations](ontology/youtube/niche-upload-volume-2024-2026.md) now record five first-party video count lower bounds without confusing uploads, creators and audiences.
+
+
 The [public meme-reference graph protocol](ontology/youtube/public-meme-reference-graph-2026.md) accepts documented content edges without mistaking linked videos for unique-person movement or creator earnings.
 
 

@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [topic-constrained upload count study](niche-upload-volume-2024-2026.md) and [non-additive frame validator](../../site/niche-upload-audit.mjs) preserve dates, title-versus-related predicates and unmeasured creator populations.
+
+
 The [public video reference study](public-meme-reference-graph-2026.md) and [link-graph validator](../../site/public-reference-graph.mjs) constrain meme-propagation research to public, dated, rights-compatible content relationships.
 
 
