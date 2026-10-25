@@ -6,7 +6,7 @@ export function classifyPremiumField(model,id){
 }
 export function calculateFuturePremiumHypothetical(model,inputs){
  if(!inputs||typeof inputs!=='object')throw Error('Explicit hypothetical input required');
- if(!/^\\d{4}-\\d{2}$/.test(inputs.month||'')||inputs.month<'2027-02')
+ if(!/^\d{4}-\d{2}$/.test(inputs.month||'')||inputs.month<'2027-02')
    throw Error('Announced 2027 Premium pool not yet effective for month');
  const pool=model.announced_2027.pools.find(x=>x.id===inputs.subscription_type);
  const format=model.announced_2027.creator_format_rates.find(x=>x.id===inputs.format);
