@@ -2967,7 +2967,25 @@ function renderLiveChatCultureStudy(model,dossier){
   card.append(make('h5','',name));card.append(make('strong','',value));
   card.append(make('p','measure-limit',limitation));grid.append(card);
  }
- details.append(grid);details.append(audienceSources(model.source_ids,dossier));
+ details.append(grid);
+ const live=model.interaction_paper;
+ if(live?.observations?.length===10 && live.excluded_paid_superchats){
+  const panel=make('div','live-chat-language-study');
+  panel.append(make('h5','','Japanese VTuber chat replies: selected conversational evidence'));
+  panel.append(make('p','measure-limit',live.selected_chat_messages.toLocaleString('en-US')+
+   ' messages across '+live.streams+' chosen livestreams (first '+live.minutes_per_stream_examined+
+   ' minutes each). Public paid Super Chats excluded.'));
+  const min=Math.min(...live.observations.map(x=>x.published_referenced_percent));
+  const max=Math.max(...live.observations.map(x=>x.published_referenced_percent));
+  const delays=live.observations.map(x=>x.mean_reference_lag_seconds);
+  panel.append(make('p','measure-limit','Explicitly referenced messages by stream: '+min+'%–'+max+
+   '%; mean lag among identifiable references: '+Math.min(...delays)+'–'+Math.max(...delays)+
+   ' seconds by stream. Neither figure describes all messages being noticed or a platform-wide audience.'));
+  panel.append(make('p','measure-limit','Purposefully selected Japanese-language just-chatting content with researcher-agreed manual coding. No individual chat identities, paid-message responsiveness, causal effect or creator earnings measured.'));
+  panel.append(audienceSources([live.source_id],dossier));
+  details.append(panel);
+ }
+ details.append(audienceSources(model.source_ids,dossier));
  details.append(make('p','measure-limit','Top Chat filtering, user moderation, archival edit changes and English-only sampling prevent equating visible chat with the complete livestream audience.'));
  const link=make('a','inline-link','Read sampling, display-mode and model limitations ↗');
  link.href='./ontology/youtube/live-chat-culture-observations-2025.md';link.target='_blank';link.rel='noopener noreferrer';

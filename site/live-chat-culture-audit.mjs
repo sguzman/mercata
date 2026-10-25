@@ -17,3 +17,23 @@ export function assessLiveChatClaim(model,claim){
  }
  return {allowed:false,reason:'unregistered_inference'};
 }
+
+export function auditLiveChatInteraction(model,sources){
+ const errors=[],p=model?.interaction_paper;
+ if(!p||!sources.has(p.source_id)||p.streams!==10||p.minutes_per_stream_examined!==60||
+    p.selected_chat_messages!==64279)errors.push('interaction source or first-hour frame invalid');
+ const rows=p?.observations||[];
+ if(rows.length!==10||rows.map(x=>x.stream_id).join(',')!=='A,B,C,D,E,F,G,H,I,J'||
+    rows.reduce((s,x)=>s+x.messages,0)!==p?.selected_chat_messages)errors.push('per-stream messages inconsistent');
+ for(const row of rows){
+  if(!Number.isInteger(row.messages)||!Number.isInteger(row.referenced)||row.messages<row.referenced||
+     Math.abs(row.referenced/row.messages*100-row.published_referenced_percent)>0.051||
+     row.mean_reference_lag_seconds<8||row.mean_reference_lag_seconds>38)
+    errors.push('referenced-message fraction or delay invalid');
+ }
+ if(p?.excluded_paid_superchats!==true||p?.source_streamer_identifiers_collected!==false||
+    p?.source_chatter_identifiers_collected!==false||p?.total_unique_people!==null||
+    p?.representative_responded_chat_fraction!==null||p?.platform_average_response_lag!==null||
+    p?.paid_response_effect!==null||p?.channel_income!==null)errors.push('privacy or inference boundary violated');
+ return {valid:errors.length===0,errors};
+}

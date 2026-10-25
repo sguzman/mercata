@@ -204,6 +204,12 @@ try{
       assert((await section.textContent()).includes(phrase),'Missing uncertainty boundary in '+selector);
     }
 
+    const chatCulture=page.locator('.live-chat-culture-study .live-chat-language-study');
+    assert.equal(await chatCulture.count(),1,'Missing selected Japanese-language VTuber interaction cohort');
+    assert((await chatCulture.textContent()).includes('64,279 messages across 10 chosen livestreams'));
+    assert((await chatCulture.textContent()).includes('0.4%–8.7%'));
+    assert((await chatCulture.textContent()).includes('8–38 seconds'));
+    assert((await chatCulture.textContent()).includes('No individual chat identities'));
     const nicheMaturity=page.locator('.channel-cohort-evidence .niche-maturity-evidence');
     assert.equal(await nicheMaturity.count(),1,'Missing bounded new/mature channel niche evidence');
     assert((await nicheMaturity.textContent()).includes('TubeAI curated active 10k+ subscriber channels'));

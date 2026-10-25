@@ -23,10 +23,11 @@
     "individual_user_archives_collected": false
   },
   "kind": "live_chat_behavior_selected_model_and_visibility_modes",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "source_ids": [
     "nature-youtube-live-emotion-2025",
-    "yt-live-chat-displays-2026"
+    "yt-live-chat-displays-2026",
+    "ochiai-niiyama-2025-japanese-vtuber-live-interactions"
   ],
   "paper": {
     "publisher": "Communications Psychology",
@@ -67,7 +68,9 @@
     "Emotional language labels are algorithmic text classifications, not users' validated mental states or demographic identities.",
     "Model-based peer versus video intensity comparisons are associational/model-dependent and do not establish experimental causality.",
     "Sample uses English-related filters and selected message frequency; it does not represent global YouTube live chats or unique viewers.",
-    "Chat volume, chat emotion and show metadata do not provide creator revenue, paying customer conversions or online-community membership sizes."
+    "Chat volume, chat emotion and show metadata do not provide creator revenue, paying customer conversions or online-community membership sizes.",
+    "A 0.4%–8.7% referenced-message rate from ten selected Japanese VTubers is not the platform-wide response probability or a paid-chat priority measure.",
+    "The observed 8–38 second delay applies only to manually identifiable references and excludes unaddressed chat messages."
   ],
   "unmeasured": {
     "all_youtube_live_chat_participants": null,
@@ -76,5 +79,110 @@
     "paid_participation_rate": null,
     "creator_revenue_effect": null,
     "experimental_peer_causal_lift": null
+  },
+  "interaction_paper": {
+    "source_id": "ochiai-niiyama-2025-japanese-vtuber-live-interactions",
+    "title": "Discourse analysis of just-chatting streams on YouTube Live",
+    "publisher": "Journal of Japanese Linguistics",
+    "published_at": "2025-10-30",
+    "observed_stream_year": 2023,
+    "method": "Manual conversational-reference alignment of first 60 minutes of 10 selected Japanese-language independent VTuber just-chatting livestreams; only author-agreed references counted; paid Super Chats excluded",
+    "population": "10 intentionally chosen public Japanese-language just-chatting streams, not all Japanese VTubers or all streaming",
+    "streams": 10,
+    "minutes_per_stream_examined": 60,
+    "selected_chat_messages": 64279,
+    "counts_unit": "public_regular_chat_message_events_not_unique_people",
+    "observations": [
+      {
+        "stream_id": "A",
+        "messages": 23170,
+        "referenced": 100,
+        "published_referenced_percent": 0.4,
+        "mean_reference_lag_seconds": 11
+      },
+      {
+        "stream_id": "B",
+        "messages": 10129,
+        "referenced": 187,
+        "published_referenced_percent": 1.8,
+        "mean_reference_lag_seconds": 8
+      },
+      {
+        "stream_id": "C",
+        "messages": 7346,
+        "referenced": 28,
+        "published_referenced_percent": 0.4,
+        "mean_reference_lag_seconds": 12
+      },
+      {
+        "stream_id": "D",
+        "messages": 672,
+        "referenced": 51,
+        "published_referenced_percent": 7.6,
+        "mean_reference_lag_seconds": 38
+      },
+      {
+        "stream_id": "E",
+        "messages": 1777,
+        "referenced": 70,
+        "published_referenced_percent": 3.9,
+        "mean_reference_lag_seconds": 12
+      },
+      {
+        "stream_id": "F",
+        "messages": 3177,
+        "referenced": 276,
+        "published_referenced_percent": 8.7,
+        "mean_reference_lag_seconds": 9
+      },
+      {
+        "stream_id": "G",
+        "messages": 826,
+        "referenced": 70,
+        "published_referenced_percent": 8.5,
+        "mean_reference_lag_seconds": 16
+      },
+      {
+        "stream_id": "H",
+        "messages": 3310,
+        "referenced": 129,
+        "published_referenced_percent": 3.9,
+        "mean_reference_lag_seconds": 8
+      },
+      {
+        "stream_id": "I",
+        "messages": 11426,
+        "referenced": 87,
+        "published_referenced_percent": 0.8,
+        "mean_reference_lag_seconds": 9
+      },
+      {
+        "stream_id": "J",
+        "messages": 2446,
+        "referenced": 86,
+        "published_referenced_percent": 3.5,
+        "mean_reference_lag_seconds": 22
+      }
+    ],
+    "reported_methods": [
+      "repeating_message_content_aloud",
+      "speaking_usernames",
+      "adjacency_pair_response"
+    ],
+    "excluded_paid_superchats": true,
+    "source_streamer_identifiers_collected": false,
+    "source_chatter_identifiers_collected": false,
+    "total_unique_people": null,
+    "representative_responded_chat_fraction": null,
+    "platform_average_response_lag": null,
+    "paid_response_effect": null,
+    "channel_income": null,
+    "limitations": [
+      "The ten streams were purposefully selected, in Japanese, independently produced, and restricted to the first hour; fractions are per stream, not platform probabilities.",
+      "Message matching counted only matched author judgments and assigned special handling to repeated similar chat, so the unit is a methodological coding decision.",
+      "Per-stream averages of 8–38 seconds are delays for identified references, not response times for the many unaddressed messages.",
+      "Public chat messages and accounts do not reveal the number of passive viewers or identify unique people across streams.",
+      "Paid Super Chats were omitted; observed references cannot be used to estimate paid-message attention, creator income or purchase conversion."
+    ]
   }
 }

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {getLiveChatObservation,assessLiveChatClaim} from '../site/live-chat-culture-audit.mjs';
+import {getLiveChatObservation,assessLiveChatClaim,auditLiveChatInteraction} from '../site/live-chat-culture-audit.mjs';
 const load=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 test('Two historical study frames are nested messages, not people or incomes',async()=>{
  const [m,d]=await Promise.all([load('ontology/youtube/live-chat-culture-observations-2025.json'),load('specimens/youtube.json')]);
@@ -36,4 +36,27 @@ test('Website presents selected emotion-study data with limits',async()=>{
  assert(app.includes('renderLiveChatCultureStudy'));
  assert(app.includes('live-chat-culture-observations-2025.json'));
  assert(app.includes('not verified creator earnings'));
+});
+
+test('Japanese-language selected VTuber messages and explicit-reference rates reconcile to the published study',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/live-chat-culture-observations-2025.json'),load('specimens/youtube.json')]);
+ const known=new Set(d.evidence.map(x=>x.id));
+ assert.deepEqual(auditLiveChatInteraction(m,known),{valid:true,errors:[]});
+ assert.equal(m.interaction_paper.streams,10);
+ assert.equal(m.interaction_paper.selected_chat_messages,64279);
+ assert.equal(m.interaction_paper.excluded_paid_superchats,true);
+ assert.deepEqual(m.interaction_paper.observations.map(x=>x.mean_reference_lag_seconds),[11,8,12,38,12,9,16,8,9,22]);
+ assert.equal(m.interaction_paper.total_unique_people,null);
+ assert.notEqual(m.interaction_paper.source_id,m.source_ids[0]);
+});
+test('VTuber live-chat audit rejects invented aggregate response odds, identifiers and incorrect per-stream counts',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/live-chat-culture-observations-2025.json'),load('specimens/youtube.json')]);
+ const known=new Set(d.evidence.map(x=>x.id));
+ const a=structuredClone(m);
+ a.interaction_paper.representative_responded_chat_fraction=0.05;
+ assert(auditLiveChatInteraction(a,known).errors.includes('privacy or inference boundary violated'));
+ const b=structuredClone(m);b.interaction_paper.observations[0].messages+=100;
+ assert(auditLiveChatInteraction(b,known).errors.includes('per-stream messages inconsistent'));
+ const c=structuredClone(m);c.interaction_paper.excluded_paid_superchats=false;
+ assert(auditLiveChatInteraction(c,known).errors.includes('privacy or inference boundary violated'));
 });
