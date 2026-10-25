@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [four-country ad-planner change study](country-planner-change-windows-2026.md), [machine publisher window records](country-planner-change-windows-2026.json) and [source alignment audit](../../site/country-planner-change-audit.mjs) distinguish 2025 advertiser estimates from actual real-person, subgroup or creator population growth.
+
+
 The [selected source-quality scope study](evidence-quality-scope-2026.md), [eight-case machine register](evidence-quality-scope-2026.json) and [provenance/inference audit](../../site/evidence-quality-audit.mjs) separate source roles, intended inference and sampling limits without claiming complete examination of every public reference.
 
 

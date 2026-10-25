@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [four-country YouTube ad-planner reach comparison](ontology/youtube/country-planner-change-windows-2026.md) preserves the source-reported two 2025 change windows and explicitly disallows interpreting revisions in advertiser reach as changes in verified unique viewer populations.
+
+
 The [purpose-specific evidence quality register](ontology/youtube/evidence-quality-scope-2026.md) distinguishes first-party rules, independent population surveys, commercial channel indexes, platform-commissioned consultation, peer-reviewed abstracts and individual self-logs; no universal numerical authority score is assigned.
 
 

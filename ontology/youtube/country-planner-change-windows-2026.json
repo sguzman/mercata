@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "four_country_publisher_reported_planner_change_windows",
+  "reviewed_at": "2026-10-25",
+  "method": "Recheck four original DataReportal Digital 2026 country YouTube ad-planner sections and preserve each publisher-reported, internally scoped end-2024-to-late-2025 and July-to-October 2025 change as two separate windows. Neither window provides matched unique-person activity or a verified stable planner methodology.",
+  "population": "Google YouTube advertising planner targetable reach estimates in four selected country reports, not global persons, logged-in DAU/MAU, creators or a multiyear audience panel",
+  "source_ids": [
+    "datareportal-2026-india",
+    "datareportal-2026-indonesia",
+    "datareportal-2026-japan",
+    "datareportal-2026-philippines"
+  ],
+  "baseline_artifact": "ontology/youtube/country-ad-reach-comparisons.json",
+  "countries": [
+    {
+      "country": "India",
+      "code": "IN",
+      "source_id": "datareportal-2026-india",
+      "source_url": "https://datareportal.com/reports/digital-2026-india",
+      "source_report_title": "Digital 2026: India",
+      "source_published_at": "2025-12",
+      "report_edition": "Digital 2026",
+      "underlying_observation": "2025-10",
+      "unit": "millions_google_ad_reach_estimate",
+      "advertiser_planner_reach_million": 500,
+      "reported_end_2024_to_late_2025": {
+        "change_million": 9,
+        "change_percent": 1.8
+      },
+      "reported_july_to_oct_2025": {
+        "change_million": -9,
+        "change_percent": -1.8
+      },
+      "active_people_change": null,
+      "unique_mau": null,
+      "unique_dau": null,
+      "creator_income": null,
+      "measurement_break_contribution": null,
+      "source_limit": "Publisher-reported advertiser planner revision-sensitive comparisons; not deduplicated active person change."
+    },
+    {
+      "country": "Indonesia",
+      "code": "ID",
+      "source_id": "datareportal-2026-indonesia",
+      "source_url": "https://datareportal.com/reports/digital-2026-indonesia",
+      "source_report_title": "Digital 2026: Indonesia",
+      "source_published_at": "2025-12",
+      "report_edition": "Digital 2026",
+      "underlying_observation": "2025-10",
+      "unit": "millions_google_ad_reach_estimate",
+      "advertiser_planner_reach_million": 151,
+      "reported_end_2024_to_late_2025": {
+        "change_million": 8,
+        "change_percent": 5.6
+      },
+      "reported_july_to_oct_2025": {
+        "change_million": 6,
+        "change_percent": 4.1
+      },
+      "active_people_change": null,
+      "unique_mau": null,
+      "unique_dau": null,
+      "creator_income": null,
+      "measurement_break_contribution": null,
+      "source_limit": "Publisher-reported advertiser planner revision-sensitive comparisons; not deduplicated active person change."
+    },
+    {
+      "country": "Japan",
+      "code": "JP",
+      "source_id": "datareportal-2026-japan",
+      "source_url": "https://datareportal.com/reports/digital-2026-japan",
+      "source_report_title": "Digital 2026: Japan",
+      "source_published_at": "2025-12",
+      "report_edition": "Digital 2026",
+      "underlying_observation": "2025-10",
+      "unit": "millions_google_ad_reach_estimate",
+      "advertiser_planner_reach_million": 78.5,
+      "reported_end_2024_to_late_2025": {
+        "change_million": -0.2,
+        "change_percent": -0.3
+      },
+      "reported_july_to_oct_2025": {
+        "change_million": 3.1,
+        "change_percent": 4.1
+      },
+      "active_people_change": null,
+      "unique_mau": null,
+      "unique_dau": null,
+      "creator_income": null,
+      "measurement_break_contribution": null,
+      "source_limit": "Publisher-reported advertiser planner revision-sensitive comparisons; not deduplicated active person change."
+    },
+    {
+      "country": "Philippines",
+      "code": "PH",
+      "source_id": "datareportal-2026-philippines",
+      "source_url": "https://datareportal.com/reports/digital-2026-philippines",
+      "source_report_title": "Digital 2026: Philippines",
+      "source_published_at": "2025-12",
+      "report_edition": "Digital 2026",
+      "underlying_observation": "2025-10",
+      "unit": "millions_google_ad_reach_estimate",
+      "advertiser_planner_reach_million": 59.6,
+      "reported_end_2024_to_late_2025": {
+        "change_million": 1.9,
+        "change_percent": 3.3
+      },
+      "reported_july_to_oct_2025": {
+        "change_million": 1.8,
+        "change_percent": 3.1
+      },
+      "active_people_change": null,
+      "unique_mau": null,
+      "unique_dau": null,
+      "creator_income": null,
+      "measurement_break_contribution": null,
+      "source_limit": "Publisher-reported advertiser planner revision-sensitive comparisons; not deduplicated active person change."
+    }
+  ],
+  "windows": [
+    {
+      "id": "end_2024_to_late_2025",
+      "start": "end of 2024",
+      "end": "late 2025",
+      "type": "publisher_reported_ad_planner_comparison",
+      "fixed_person_panel": false,
+      "method_revision_effect_measured": false
+    },
+    {
+      "id": "july_to_oct_2025",
+      "start": "2025-07",
+      "end": "2025-10",
+      "type": "publisher_reported_ad_planner_comparison",
+      "fixed_person_panel": false,
+      "method_revision_effect_measured": false
+    }
+  ],
+  "cross_country_rules": [
+    "Same platform (YouTube), same planner family and DataReportal report edition; nevertheless vendor corrections and market targeting affect reported ad reach.",
+    "Do not assume the 2025 quarter-level and end-2024-to-late-2025 comparisons are interchangeable time periods.",
+    "July–October figures cover only the final portion of the longer reported annual comparison, with no additional inferred intermediate points.",
+    "Treat 500 million reported India targetable ad reach and its change as planner-facing quantities, never 500 million verified unique monthly people.",
+    "A negative ad reach change can reflect eligibility rules, deduplication or platform-tool corrections and is not proof humans stopped watching.",
+    "The figures cannot be summed into worldwide distinct monthly viewers or used to back out creator revenue, geography of actual watching, or language/ethnicity.",
+    "The comparisons do not establish rates of demographic groups or active viewer segments."
+  ],
+  "unmeasured": {
+    "all_region_unique_user_change": null,
+    "subscriber_growth_by_country": null,
+    "creator_population_change": null,
+    "demographic_composition_change": null,
+    "real_people_growth": null,
+    "ad_planner_correction_contribution": null,
+    "country_level_creator_income_effect": null
+  }
+}
