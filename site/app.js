@@ -1,4 +1,5 @@
 import {evaluateIncomeScenario,evaluateBreakEvenScenario} from './scenario.mjs';
+import {auditRevenueStreamSelection} from './revenue-stack-audit.mjs';
 import {assessViewComparison,MEASUREMENT_KINDS} from './metric-compatibility.mjs';
 const $ = selector => document.querySelector(selector);
 const make = (tag, className, text) => {
@@ -782,6 +783,35 @@ function renderRevenuePathways(data, payments, dossier, eligibility) {
     }
     group.append(grid);
     section.append(group);
+  }
+  if(data.accounting_matrix?.pathways?.length){
+    const stack=make('details','earning-stream-stack');
+    stack.append(make('summary','','Compare multiple revenue streams and settlement ledgers'));
+    stack.append(make('p','measure-limit','Revenue paths are independently conditional. Selecting a pathway is not enrollment, a sale, a payout or an earnings prediction.'));
+    const options=make('div','revenue-pathway-grid'),chosen=new Set();
+    const report=make('p','measure-limit','No pathways selected. Actual income and approval are unknown.');
+    const refresh=()=>{
+      const outcome=auditRevenueStreamSelection(data,[...chosen]);
+      const payment=outcome.settlement;
+      const ambiguous=outcome.possible_duplicate_deals.length?'; check overlapping underlying orders or contracts: '+outcome.possible_duplicate_deals.map(x=>x.ids.join(' + ')).join(', '):'';
+      report.textContent=outcome.selected_count+' selected · AdSense for YouTube '+payment.adsense_for_youtube.length+
+        ' · outside providers '+payment.separate_provider_or_merchant.length+
+        ' · contract-defined '+payment.contract_defined.length+ambiguous+'. No actual earnings, approval or creator profit inferred.';
+    };
+    for(const route of data.pathways){
+      const mapping=data.accounting_matrix.pathways.find(x=>x.id===route.id);
+      const label=make('label','earning-stack-item');
+      const input=make('input','earning-stack-checkbox');
+      input.type='checkbox';input.value=route.id;input.setAttribute('aria-label','Compare '+route.name);
+      input.addEventListener('change',()=>{if(input.checked)chosen.add(route.id);else chosen.delete(route.id);refresh();});
+      label.append(input);label.append(make('span','',route.name+' · '+mapping.settlement.replaceAll('_',' ')));
+      options.append(label);
+    }
+    stack.append(options);stack.append(report);
+    stack.append(make('p','measure-limit','Accounting conflict: adding estimatedRevenue to component ad or Premium reports, or counting platform-posted commission and its later bank deposit as separate revenues, is invalid.'));
+    const link=make('a','inline-link','Read the 16-route accounting and double-counting rules ↗');
+    link.href='./ontology/youtube/revenue-stack-accounting.md';link.target='_blank';link.rel='noopener noreferrer';stack.append(link);
+    section.append(stack);
   }
   if(payments){
     const thresholds=make('div','payout-summary');

@@ -82,6 +82,18 @@ try{
     assert.equal(await future.locator('.ypp-transition-pool').count(),2,'Missing Premium and Premium Lite pools');
     assert((await future.textContent()).includes('60% of net subscription revenue'));
     assert.equal(await page.locator('.revenue-pathway-card').count(),16,'Missing distinct monetization routes');
+    const stack=page.locator('.earning-stream-stack');
+    assert.equal(await stack.locator('.earning-stack-checkbox').count(),16,'Missing independently conditional earning routes');
+    await stack.locator('summary').click();
+    await stack.locator('.earning-stack-checkbox[value="watch-page-ads"]').check();
+    await stack.locator('.earning-stack-checkbox[value="shopping-affiliate"]').check();
+    await stack.locator('.earning-stack-checkbox[value="external-affiliates"]').check();
+    assert((await stack.textContent()).includes('AdSense for YouTube 2'));
+    assert((await stack.textContent()).includes('outside providers 1'));
+    assert((await stack.textContent()).includes('shopping-affiliate + external-affiliates'));
+    await stack.locator('.earning-stack-checkbox[value="shopping-affiliate"]').uncheck();
+    assert((await stack.textContent()).includes('AdSense for YouTube 1'));
+
     assert.equal(await page.locator('.earning-gate-details').count(),16,'Missing product-specific eligibility checklists');
     assert.equal(await page.locator('.application-stage').count(),9,'Missing application stages');
     const effort=page.locator('.production-effort');

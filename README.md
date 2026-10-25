@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [16-pathway editable revenue-stack matrix](ontology/youtube/revenue-stack-accounting.md) now distinguishes AdSense-funded monetization, off-platform cash and contract-specific deals, with duplicate-payment tests and a corrected native Shopping-affiliate payment boundary.
+
+
 The [fashion/beauty content taxonomy](ontology/youtube/fashion-lifestyle-content-signals-2026.md) groups GRWM, prom, sewing and other style formats with source-defined reporting dates while avoiding demographic or creator-income inferences from content interest.
 
 

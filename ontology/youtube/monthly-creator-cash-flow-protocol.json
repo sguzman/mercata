@@ -62,7 +62,8 @@
     "refunds_paid and cash expense fields are paid costs only and must not duplicate amounts already netted upstream.",
     "hours include unsuccessful productions, publishing, marketing and administrative labor; cash movement per working hour is not wages, profit or a causal result.",
     "payment_hold and source-defined account currency threshold determine only conditional standard issuance eligibility; account approval, policy review and settlement timing remain separate.",
-    "All monetary and hour values are mandatory explicit numbers; missing is never implicitly zero. Test fixtures are invented solely to verify arithmetic and are not observations."
+    "All monetary and hour values are mandatory explicit numbers; missing is never implicitly zero. Test fixtures are invented solely to verify arithmetic and are not observations.",
+    "YouTube Shopping affiliate commissions are credited and paid via AdSense for YouTube following merchant confirmation (typically 60–120 days after purchase). Include an actual finalized shopping-affiliate credit in platform_posted_net if it is part of the account posting, and later in bank_received exactly once. The affiliate_cash_received field is for independent external affiliate schemes, not duplicate Shopping commissions."
   ],
   "constraints": {
     "supported_reporting_currencies_from_reference": true,
@@ -78,5 +79,13 @@
     "representative_profit_distribution": null,
     "creator_effective_hourly_wage": null,
     "creator_tax_liability": null
+  },
+  "affiliates_and_external_cash": {
+    "youtube_shopping_affiliate_account": "adsense_for_youtube",
+    "outside_affiliate_account": "external_provider",
+    "shopping_merchant_settlement_min_days": 60,
+    "shopping_merchant_settlement_max_days": 120,
+    "source_id": "shopping-affiliate",
+    "double_count_prohibited": true
   }
 }

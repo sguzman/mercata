@@ -455,5 +455,287 @@
     "Do not assume a future announced feature is available until its local live status is documented.",
     "Not all monetization pathways can operate on child-directed content.",
     "Unknown fees, earnings and conversions are null, never zero."
-  ]
+  ],
+  "accounting_matrix": {
+    "kind": "independently_eligible_revenue_pathways_and_nonadditive_cash_flows",
+    "as_of": "2026-10-25",
+    "source_ids": [
+      "revenue-shares",
+      "choose-monetization-modules",
+      "shopping-affiliate",
+      "adsense-payment-cycle",
+      "youtube-payment-process"
+    ],
+    "status": "published_route_conditions_not_account_approval_or_recorded_creator_cash",
+    "pathways": [
+      {
+        "id": "watch-page-ads",
+        "source_ids": [
+          "ypp-main",
+          "revenue-shares",
+          "earning-help"
+        ],
+        "settlement": "adsense_for_youtube",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "shorts-ads",
+        "source_ids": [
+          "shorts-policy",
+          "revenue-shares",
+          "earning-help"
+        ],
+        "settlement": "adsense_for_youtube",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "premium-revenue",
+        "source_ids": [
+          "earning-help"
+        ],
+        "settlement": "adsense_for_youtube",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "channel-memberships",
+        "source_ids": [
+          "earning-help",
+          "revenue-shares"
+        ],
+        "settlement": "adsense_for_youtube",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "super-chat",
+        "source_ids": [
+          "earning-help",
+          "revenue-shares"
+        ],
+        "settlement": "adsense_for_youtube",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "super-thanks",
+        "source_ids": [
+          "earning-help",
+          "revenue-shares"
+        ],
+        "settlement": "adsense_for_youtube",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "live-gifts",
+        "source_ids": [
+          "virtual-items",
+          "gifts-eligibility",
+          "yt-live-gifts-horizontal-vertical-2026"
+        ],
+        "settlement": "adsense_for_youtube",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "shopping-own",
+        "source_ids": [
+          "shopping-own",
+          "store-connection",
+          "earning-help"
+        ],
+        "settlement": "separate_provider_or_merchant",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "shopping-affiliate",
+        "source_ids": [
+          "shopping-affiliate",
+          "shopping-mexico-launch",
+          "monetization-2026"
+        ],
+        "settlement": "adsense_for_youtube",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "creator-partnerships",
+        "source_ids": [
+          "creator-partnerships-mx",
+          "monetization-2026"
+        ],
+        "settlement": "contract_defined",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "direct-sponsorship",
+        "source_ids": [
+          "earning-help"
+        ],
+        "settlement": "contract_defined",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "external-affiliates",
+        "source_ids": [
+          "earning-help"
+        ],
+        "settlement": "separate_provider_or_merchant",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "owned-software",
+        "source_ids": [
+          "earning-help"
+        ],
+        "settlement": "separate_provider_or_merchant",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "external-support",
+        "source_ids": [
+          "earning-help"
+        ],
+        "settlement": "separate_provider_or_merchant",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "licensed-content",
+        "source_ids": [
+          "earning-help"
+        ],
+        "settlement": "separate_provider_or_merchant",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      },
+      {
+        "id": "external-services",
+        "source_ids": [
+          "earning-help"
+        ],
+        "settlement": "separate_provider_or_merchant",
+        "needs_actual_eligibility_check": true,
+        "accounts_as_income": "only_after_verified_receipt_or_eligible_finalized_receivable_with_matched_accounting_basis",
+        "observed_creator_receipts": null
+      }
+    ],
+    "affiliate_settlement": {
+      "native_pathway": "shopping-affiliate",
+      "native_payment_account": "adsense_for_youtube",
+      "posted_then_issued_then_bank_received": true,
+      "official_typical_days_after_purchase_min": 60,
+      "official_typical_days_after_purchase_max": 120,
+      "return_or_cancellation_can_reverse_unsettled_commission": true,
+      "outside_affiliates_pathway": "external-affiliates",
+      "outside_affiliates_settlement": "separate_provider_or_merchant",
+      "rule": "Never enter native shopping-affiliate commission in affiliate_cash_received as external bank cash when already included in platform_posted_net; recognize only cleared AdSense bank receipt in platform_bank_received."
+    },
+    "accounting_nonadditivity": [
+      {
+        "id": "yt_aggregate_and_ads",
+        "measure_ids": [
+          "estimatedRevenue",
+          "estimatedAdRevenue"
+        ],
+        "why": "Channel total estimated revenue already includes applicable advertiser net allocations"
+      },
+      {
+        "id": "yt_aggregate_and_premium",
+        "measure_ids": [
+          "estimatedRevenue",
+          "estimatedRedPartnerRevenue"
+        ],
+        "why": "Channel total estimated revenue already includes allocated Premium payments"
+      },
+      {
+        "id": "gross_and_creator_ads",
+        "measure_ids": [
+          "grossRevenue",
+          "estimatedAdRevenue"
+        ],
+        "why": "Advertiser gross receipts and creator net advertising use different accounting bases and cannot be summed"
+      },
+      {
+        "id": "posting_and_cleared",
+        "measure_ids": [
+          "platform_posted_net",
+          "platform_bank_received"
+        ],
+        "why": "Finalized platform accrual and its later deposited cash are separate balance movements, not two revenues"
+      },
+      {
+        "id": "affiliate_and_platform_bank",
+        "measure_ids": [
+          "shopping_affiliate_commission_already_in_platform_posted_net",
+          "affiliate_cash_received"
+        ],
+        "why": "Native shopping-affiliate pay is in AdSense, not an external merchant affiliate receipt"
+      }
+    ],
+    "possible_duplicate_underlying_transactions": [
+      {
+        "ids": [
+          "shopping-affiliate",
+          "external-affiliates"
+        ],
+        "needs": "Prove merchant orders and commission contracts are separate"
+      },
+      {
+        "ids": [
+          "creator-partnerships",
+          "direct-sponsorship"
+        ],
+        "needs": "Prove brand integrations or invoices are separate"
+      },
+      {
+        "ids": [
+          "shopping-own",
+          "owned-software"
+        ],
+        "needs": "Prove product sale settlements are separate"
+      },
+      {
+        "ids": [
+          "channel-memberships",
+          "external-support"
+        ],
+        "needs": "Prove supporters' payments were not counted in both systems"
+      }
+    ],
+    "constraints": [
+      "Selections indicate hypothetical pathways to compare; no route is eligible, funded or approved merely because it is selected.",
+      "Watch-page ads, Shorts, Premium, memberships and fan payments have distinct units and product gates; do not add overlapping aggregate estimatedRevenue to its component reports.",
+      "Shopping affiliate uses AdSense for YouTube with 60–120-day purchase-to-payment schedule and reversals on returns, not direct cash from a merchant.",
+      "External affiliate contracts, owned products, off-site support and services have distinct processors and refund obligations.",
+      "Sponsor contracts facilitated by YouTube and independent sponsorships may represent the same brand invoice; prohibit double-counting absent invoice identifiers.",
+      "All amounts, taxes, rights deductions, channel eligibility, regions, bank receipts and labor remain unmeasured."
+    ],
+    "observed_creator_cash": null,
+    "representative_conversion_probability": null,
+    "net_hourly_profit": null
+  }
 }
