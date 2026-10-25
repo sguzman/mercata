@@ -16,6 +16,10 @@ The [December 2025/2026 Adobe Express respondent study](adobe-ai-production-surv
 
 The [61-completed-video first-person time log](photography-production-time-diary-2025.md), [machine record](photography-production-time-diary-2025.json) and [rounding/unit audit](../../site/photography-production-labor-audit.mjs) document one channel's mean 9.74 and median 7.37 hours of production per finished video. No creator earnings, abandoned-attempt hours, net wages or other-genre labor estimates were observed.
 
+## Content ID rights diversions and held revenue
+
+The [Content ID revenue-diversion research](content-id-revenue-dispute-audit.md), [dated policy record](content-id-revenue-dispute-audit.json) and [pure dispute-date validator](../../site/content-id-revenue-audit.mjs) separate territorial claim actions, rightsholder revenue, possible authorized sharing, and the source-defined five-day held-revenue window. Held proceeds are not recognized creator cash until a real appropriate allocation and bank receipt is established.
+
 ## Partial-identification bounds for creator hourly outcomes
 
 The [hourly cohort accounting study](hourly-income-accounting.md), [machine contract](hourly-income-accounting.json) and [tested calculator](../../site/creator-hourly-audit.mjs) report worst-case quartile ranges when individual creator cash is missing, plus bounds on the zero-gross share among all attempted creators. Null endpoints represent unbounded unknown values, not zero. The sample is not an independently recruited YouTube creator population, and there are no observed hourly-earnings distributions.

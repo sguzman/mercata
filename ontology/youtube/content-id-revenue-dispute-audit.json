@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "content_id_rights_claim_cash_diversion_and_dispute_holds",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "music-content-id",
+    "music-claim-disputes"
+  ],
+  "scope": "one_policy_action_in_one_territory_and_one_original_content_id_dispute",
+  "actions": [
+    {
+      "id": "block",
+      "access": "not_viewable_in_claimed_region",
+      "creator_ads_proceeds": null,
+      "claimant_ads_proceeds": null,
+      "reason": "A block does not yield an observed revenue amount."
+    },
+    {
+      "id": "track",
+      "access": "generally_viewable_subject_to_other_policies",
+      "creator_ads_proceeds": null,
+      "claimant_ads_proceeds": null,
+      "reason": "Tracking is an audience-data rights action and does not establish payment."
+    },
+    {
+      "id": "monetize",
+      "access": "generally_viewable_subject_to_other_policies",
+      "creator_ads_proceeds": null,
+      "claimant_ads_proceeds": null,
+      "reason": "Ads can run for the rightsholder and sometimes be shared with the uploader; no rate is disclosed."
+    }
+  ],
+  "same_video_policies_vary_by_geography": true,
+  "dispute": {
+    "type": "initial_content_id_dispute",
+    "claim_day_is_day_zero": true,
+    "retroactive_claim_day_if_filed_within_days": 5,
+    "late_filing_hold_starts_on_dispute_day": true,
+    "withheld_revenue_is_issued_payout": false,
+    "held_funds_released_after_dispute_to": "appropriate_party_after_resolution_not_preauthorized_creator",
+    "creator_analytics_disputed_revenue_visible_while_active": false,
+    "analytics_restoration_lag_possible": true,
+    "accepted_resolution_outcomes": [
+      "claim_released",
+      "claim_upheld",
+      "still_pending"
+    ],
+    "automatic_appeal_and_DMCA_same_process": false,
+    "source_id": "music-claim-disputes"
+  },
+  "claiming_scenarios": [
+    {
+      "id": "license_clearance",
+      "stage": "licensed_use_under_specific_contract",
+      "actual_license_fee": null,
+      "creator_share": null,
+      "permission_verified": false
+    },
+    {
+      "id": "rightsholder_monetizes",
+      "stage": "active_monetize_claim",
+      "actual_creator_share": null,
+      "recipient_after_resolution": null
+    },
+    {
+      "id": "shared_revenue",
+      "stage": "explicit_valid_share_agreement_required",
+      "share_fraction": null,
+      "actual_creator_receipt": null
+    },
+    {
+      "id": "creator_disputes",
+      "stage": "revenue_held_pending_claim_review",
+      "eventual_recipient": null,
+      "real_dispute_cost": null
+    },
+    {
+      "id": "blocked_video",
+      "stage": "territory_specific_block",
+      "unobserved_lost_ad_revenue": null,
+      "real_dispute_cost": null
+    }
+  ],
+  "rules": [
+    "Content ID tracking, monetization and blocking are claim-policy actions, not separate verified financial transfers.",
+    "An uploader can share rights revenue only when an applicable authorized arrangement permits it; never assume a contractual percentage.",
+    "If the original dispute is filed no later than the fifth calendar day after claim placement, held revenue begins on the claim day; filing later means holding from dispute filing.",
+    "Held during dispute does not mean creator-owned money, a bank deposit, realized loss or automatic entitlement to the gross advertising amount.",
+    "If the claim remains unchallenged, YouTube describes a five-day release-to-claimant rule for held revenues; this is not proof of any particular creator's earnings.",
+    "Content ID claims and formal copyright removal notices/strikes are distinct and can have different appeal and legal consequences.",
+    "Claim policy may differ across territories. A single country observation cannot establish worldwide lost views or payouts.",
+    "Do not infer payment amount, creator profit, actual license pricing, tax obligations, legal fees, or opportunity cost from documented procedures."
+  ],
+  "observed_creator_claims": [],
+  "unmeasured": {
+    "withheld_cash_amount": null,
+    "actual_creator_share": null,
+    "claimant_share": null,
+    "license_cost": null,
+    "creator_dispute_legal_cost": null,
+    "actual_bank_receipts": null,
+    "creator_net_profit": null,
+    "territorial_revenue_loss": null
+  }
+}

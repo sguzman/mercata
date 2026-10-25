@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [Content ID revenue diversion protocol](ontology/youtube/content-id-revenue-dispute-audit.md) distinguishes geographic blocks, rightsholder claims, approved sharing and disputed advertising revenue held from the documented claim/dispute dates, without manufacturing creator profit or legal costs.
+
+
 The [creator hourly-outcome partial-identification audit](ontology/youtube/hourly-income-accounting.md) adds worst-case quantile and zero-gross-share bounds for incomplete creator cohorts. It never imputes missing receipts, claims a typical creator wage or mistakes isolated income surveys for matched labor accounts.
 
 
