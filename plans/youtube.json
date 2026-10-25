@@ -288,7 +288,7 @@
         "youtube/rights/track-licensing-terms-over-time"
       ],
       "phase": 3,
-      "progress_percent": 82
+      "progress_percent": 84
     },
     {
       "id": "sales",
@@ -566,7 +566,7 @@
         "youtube/content-formats/measure-creation-cost-by-format"
       ],
       "phase": 2,
-      "progress_percent": 77
+      "progress_percent": 78
     },
     {
       "id": "social-discovery",
@@ -812,7 +812,7 @@
       "objective": "Inventory watch pages, Shorts, live, music, podcasts, TV viewing, community posts and paid products as research targets.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and inventory watch pages, Shorts, live, music, podcasts, TV viewing, community posts and paid products as research targets.",
       "status": "in_progress",
-      "percent": 57,
+      "percent": 66,
       "evidence": [
         "ontology/youtube/channel-onboarding.json",
         "ontology/youtube/channel-onboarding.md",
@@ -830,7 +830,11 @@
         "ontology/youtube/podcast-viewing-frames-2026.json",
         "ontology/youtube/podcast-viewing-frames-2026.md",
         "site/podcast-viewing-audit.mjs",
-        "tests/podcast-viewing-audit.test.mjs"
+        "tests/podcast-viewing-audit.test.mjs",
+        "ontology/youtube/podcast-publication-routes-2026.json",
+        "ontology/youtube/podcast-publication-routes-2026.md",
+        "site/podcast-publication-audit.mjs",
+        "tests/podcast-publication-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/live-monetization-units-2026.json",
       "priority": "high",
@@ -3028,14 +3032,20 @@
       "objective": "Identify category-specific licensing and distribution constraints.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and identify category-specific licensing and distribution constraints.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 77,
       "evidence": [
         "ontology/youtube/music-rights-economics.json",
         "ontology/youtube/music-rights-economics.md",
         "specimens/youtube.json",
-        "tests/youtube.test.mjs"
+        "tests/youtube.test.mjs",
+        "ontology/youtube/podcast-publication-routes-2026.json",
+        "ontology/youtube/podcast-publication-routes-2026.md",
+        "site/podcast-publication-audit.mjs",
+        "tests/podcast-publication-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/podcast-publication-routes-2026.json",
       "priority": "standard",
       "phase": 3
     },
@@ -5628,7 +5638,7 @@
       "objective": "Distinguish audio-first viewing from foreground video watch time.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and distinguish audio-first viewing from foreground video watch time.",
       "status": "in_progress",
-      "percent": 81,
+      "percent": 90,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
@@ -5640,7 +5650,11 @@
         "site/podcast-viewing-audit.mjs",
         "tests/podcast-viewing-audit.test.mjs",
         "site/app.js",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/podcast-publication-routes-2026.json",
+        "ontology/youtube/podcast-publication-routes-2026.md",
+        "site/podcast-publication-audit.mjs",
+        "tests/podcast-publication-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/podcast-viewing-frames-2026.json",
       "priority": "standard",

@@ -3562,6 +3562,39 @@
       "evidence_class": "publisher_podcast_metric_selected_us_weekly_consumer_survey",
       "license": "Short public aggregate facts independently described, no charts or respondent-level data copied",
       "notes": "Q3 2025 podcast metrics: 82% of US weekly podcast consumers watched video and 78% listened to audio-only. Nonexclusive formats, not YouTube-only or global use."
+    },
+    {
+      "id": "yt-podcast-distribution-help-2026",
+      "url": "https://support.google.com/youtube/answer/13175969?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Distribute podcasts on YouTube",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_podcast_distribution_and_rights_guidance",
+      "license": "Official page linked, short independently authored descriptions",
+      "notes": "Podcast episodes video entries in show playlist; audio-first producers can use RSS or upload audiovisual files, distribution eligibility separate from YPP."
+    },
+    {
+      "id": "yt-podcast-rss-ingestion-2026",
+      "url": "https://support.google.com/youtubemusic/answer/13525207?hl=en",
+      "publisher": "YouTube Music Help",
+      "title": "Deliver podcasts using an RSS feed",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_podcast_rss_import_and_rights_workflow",
+      "license": "Linked official process paraphrased, no RSS content or media copied",
+      "notes": "RSS in select countries creates videos with show artwork as static image; initially private imports, owns feed verification, edits/reuploads and sponsored content disclosures."
+    },
+    {
+      "id": "yt-podcast-rss-publish-help-2026",
+      "url": "https://support.google.com/youtube/answer/13973017?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Publish or disconnect episodes from an RSS feed on YouTube",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_rss_account_permission_and_eligibility",
+      "license": "Public official guidance linked, concise original limitation descriptions",
+      "notes": "RSS channel workflow requires country/region eligibility and identity verification when advanced creator features unavailable."
     }
   ],
   "claims": [
@@ -7803,6 +7836,29 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Premium paid-user product watch hours and Edison US weekly survey respondents use different frames and cannot be added to October living-room watch hours or used to estimate creator income."
+    },
+    {
+      "id": "yt-podcast-playlist-video-and-rss-static-2026",
+      "text": "YouTube defines a podcast show as a playlist of episode videos, while a separately eligible RSS importer can create static-image videos from authorized audio feeds; manually uploading an MP3 alone is not ordinary video uploading and the RSS path does not syndicate to outside providers.",
+      "source_ids": [
+        "podcast-create-help",
+        "yt-podcast-rss-ingestion-2026",
+        "yt-podcast-rss-publish-help-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "RSS available in selected countries with verification, no channel access checked or actual published podcast catalog sampled."
+    },
+    {
+      "id": "yt-podcast-audio-playback-vs-rights-2026",
+      "text": "YouTube says eligible podcasts can be available in YouTube Music with audio-only or background playback, and most do not require a Music Premium subscription; supporting Shorts and copyright-claimed or otherwise ineligible playlists may not receive podcast features.",
+      "source_ids": [
+        "podcast-create-help",
+        "yt-podcast-distribution-help-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "'Most' is not all creators, tracks, territories or devices; no platform share of audio-only users or creator earnings observed."
     }
   ],
   "observations": [],

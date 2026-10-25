@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "owner_podcast_playlist_rss_and_rights_route_matrix",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "podcast-create-help",
+    "yt-podcast-distribution-help-2026",
+    "yt-podcast-rss-ingestion-2026",
+    "yt-podcast-rss-publish-help-2026"
+  ],
+  "channel_account_data_accessed": false,
+  "actual_podcast_episode_corpus": [],
+  "routes": [
+    {
+      "id": "studio_podcast_playlist",
+      "label": "Studio-designated podcast playlist",
+      "source_ids": [
+        "podcast-create-help"
+      ],
+      "required": [
+        "channel_allowed",
+        "creator_controls_playlist",
+        "full_episodes_owned"
+      ],
+      "optional": [
+        "square_show_art"
+      ],
+      "status": "defined_platform_route",
+      "limitations": "A podcast is a playlist of episode videos; a designated playlist may still be ineligible for podcast features"
+    },
+    {
+      "id": "studio_existing_video_episode",
+      "label": "Existing creator-owned video episodes",
+      "source_ids": [
+        "podcast-create-help"
+      ],
+      "required": [
+        "channel_allowed",
+        "video_file_ready",
+        "creator_owns_episode"
+      ],
+      "optional": [],
+      "status": "defined_platform_route",
+      "limitations": "A direct audio-only MP3 is not an ordinary episode video upload; existing/new videos are added to a podcast playlist"
+    },
+    {
+      "id": "rss_auto_image_video",
+      "label": "RSS audio to static-image video importer",
+      "source_ids": [
+        "yt-podcast-rss-ingestion-2026",
+        "yt-podcast-rss-publish-help-2026"
+      ],
+      "required": [
+        "rss_region_supported",
+        "feed_authorized",
+        "rss_owner_email_access"
+      ],
+      "any_of": [
+        "advanced_features_granted",
+        "identity_verified_for_rss"
+      ],
+      "optional": [
+        "artwork_rights"
+      ],
+      "status": "conditional_platform_route",
+      "limitations": "YouTube creates a static-image video for RSS audio; back catalog imports can start private; it will not syndicate to outside podcast apps"
+    },
+    {
+      "id": "youtube_music_audio_playback",
+      "label": "YouTube Music podcast audio-only experience",
+      "source_ids": [
+        "podcast-create-help",
+        "yt-podcast-distribution-help-2026"
+      ],
+      "required": [
+        "eligible_podcast_playlist",
+        "published_podcast_episodes"
+      ],
+      "optional": [],
+      "status": "conditional_platform_route",
+      "limitations": "Most podcast content may permit background and download without YouTube Music Premium; no guarantee for each show"
+    },
+    {
+      "id": "shorts_clips_visibility",
+      "label": "Short clips separate from podcast episodes",
+      "source_ids": [
+        "podcast-create-help"
+      ],
+      "required": [
+        "channel_allowed",
+        "shorts_upload_allowed"
+      ],
+      "optional": [],
+      "status": "separate_content_route",
+      "limitations": "Promotional Shorts are not episodes in YouTube Music podcast listings"
+    },
+    {
+      "id": "copyright_and_disclosures",
+      "label": "Rights and sponsor disclosure gate",
+      "source_ids": [
+        "yt-podcast-rss-ingestion-2026",
+        "yt-podcast-distribution-help-2026"
+      ],
+      "required": [
+        "rights_cleared",
+        "embedded_promotions_disclosed_if_present"
+      ],
+      "optional": [],
+      "status": "publication_policy_gate",
+      "limitations": "Copyright claims can remove podcast feature eligibility; sponsored segments need policy-compliant disclosure"
+    }
+  ],
+  "constraints": [
+    "Manual audio-file upload as an ordinary YouTube video is not the same as the RSS converter creating static-image videos automatically.",
+    "RSS import is supported only in selected regions and may require additional verification. Do not infer a specific creator's access.",
+    "Podcast episodes are video entries inside a playlist; unrelated Shorts or other channels' videos do not become YouTube Music podcast episodes automatically.",
+    "Background play/download availability for most YouTube Music podcasts does not mean every show or listener gets unrestricted free Premium music services.",
+    "RSS delivery uploads to YouTube/YouTube Music only, not to external podcast directories.",
+    "RSS-episode titles, artwork, music, recordings, show ownership and embedded brand disclosures retain underlying licensing and platform-policy requirements.",
+    "Podcast ranking, watch-time analytics and cash are different measurements; no observed creator profit follows from upload permission."
+  ],
+  "unavailable_measurements": {
+    "actual_creator_rss_uploads": null,
+    "geographic_import_adoption": null,
+    "paid_podcast_income": null,
+    "creator_music_licensing_costs": null,
+    "viewer_retention": null,
+    "ad_impressions": null
+  }
+}

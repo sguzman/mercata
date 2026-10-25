@@ -1,5 +1,7 @@
 # YouTube ontology — audiences, content and earning
 
+The [podcast publication rights and RSS ingestion study](podcast-publication-routes-2026.md), [machine route matrix](podcast-publication-routes-2026.json) and [permission audit](../../site/podcast-publication-audit.mjs) separate manual video episodes, conditional RSS-created static-image videos and most podcasts' YouTube Music audio-playback rights without inferring creators' income or external podcast syndication.
+
 The [video/audio podcast frame comparison](podcast-viewing-frames-2026.md), [machine data](podcast-viewing-frames-2026.json) and [metric guard](../../site/podcast-viewing-audit.mjs) separate living-room podcast watching, Premium account viewing, global monthly platform audience and nonexclusive US podcast-consumer audio/video behavior without double-counting or inventing individual wages.
 
 The [2026 U.S. Nielsen TV-device measurement record](nielsen-us-tv-youtube-share-2026.md), [monthly source data](nielsen-us-tv-youtube-share-2026.json) and [denominator guard](../../site/nielsen-tv-share-audit.mjs) separate YouTube's share of total TV-set watch-time from global or mobile audience use, with no inferred unique people or creator revenue.

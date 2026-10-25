@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [podcast publication and rights routes](ontology/youtube/podcast-publication-routes-2026.md) separate direct video episode upload from country-eligible RSS static-image conversion, YouTube Music podcast background playback, promotional Shorts and rights/brand disclosures.
+
+
 The [podcast viewing versus listening study](ontology/youtube/podcast-viewing-frames-2026.md) separates YouTube global active podcast viewers, living-room watch hours, Premium-only hours and Edison's US weekly video/audio behavior survey; none becomes a synthetic person count or creator payout.
 
 
