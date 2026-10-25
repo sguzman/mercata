@@ -12,7 +12,7 @@ const allocKey='allocated_owned_gear_usage_cents';
 const hoursKeys=['research','writing','recording','editing','artwork','publishing','moderation','marketing','administration'];
 const formats=['short_phone','horizontal_video','live_webcam','live_encoder','multicamera_live'];
 const metrics=['impressions','views','engaged_views','eligible_watch_minutes'];
-const validDate=s=>typeof s==='string'&&/^\\d{4}-\\d{2}-\\d{2}$/.test(s)&&!Number.isNaN(Date.parse(s))&&new Date(s).toISOString().slice(0,10)===s;
+const validDate=s=>typeof s==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(s)&&!Number.isNaN(Date.parse(s))&&new Date(s).toISOString().slice(0,10)===s;
 export function evaluateNichePilot(plan,attempts,{as_of}={}){
  if(!plan||!Array.isArray(attempts)||!validDate(as_of))throw Error('Plan, episodes and explicit as_of date required');
  if(typeof plan.pilot_id!=='string'||!plan.pilot_id.trim()||!plan.topic?.trim()||!formats.includes(plan.format))throw Error('Missing topic or unsupported format');
