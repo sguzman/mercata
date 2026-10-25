@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "topic_taxonomy_version_and_reclassification_safety_protocol",
+  "reviewed_at": "2026-10-25",
+  "current_taxonomy_version": "1.6",
+  "proposed_new_taxonomy_version": null,
+  "topics_at_baseline": 33,
+  "selected_observations_at_baseline": 36,
+  "method": "Hold topic IDs and observed source populations fixed at the version recorded with each observation. Treat joins, category splits and cross-listing as hypothetical until original video/aggregate-level records and a compatible source frame support exact classifications and non-overlapping units.",
+  "original_files": [
+    "ontology/youtube/taxonomy.json",
+    "ontology/youtube/topic-observations.json",
+    "ontology/youtube/topic-observation-coverage-2026.json"
+  ],
+  "candidate_overlap_examples": [
+    {
+      "observation_id": "indie-animation-weekly-us-2025",
+      "original_topic_id": "general-animation",
+      "original_source_url": "https://blog.youtube/culture-and-trends/independent-animation-trends-report/",
+      "original_metric": "within_fan_sample_percent",
+      "original_unit": "percent",
+      "original_value": 63,
+      "original_comparison": "=",
+      "original_period": "2025-04",
+      "original_population": "Online animation fans aged 14–24, n=358, who watch animated series created for YouTube weekly or more",
+      "candidate_related_topic_ids": [
+        "child-animation",
+        "anime"
+      ],
+      "proposed_relation": "possible_overlap_requires_record_level_review",
+      "observed_relation_count": null,
+      "reassigned_metric_value": null,
+      "reassigned_people_count": null,
+      "confirmed_split_fraction": null,
+      "new_source_classification": null,
+      "status": "example_only_no_reclassification",
+      "reason": "A selected online animation-fan survey is not individually classified into child-directed versus anime or all animation audience groups."
+    },
+    {
+      "observation_id": "halloween-makeup-2025",
+      "original_topic_id": "beauty",
+      "original_source_url": "https://blog.youtube/culture-and-trends/halloween-makeup/",
+      "original_metric": "video_views",
+      "original_unit": "views",
+      "original_value": 1000000000,
+      "original_comparison": ">",
+      "original_period": "2025-01-01 to 2025-10-05",
+      "original_population": "Videos with both halloween and makeup in the title",
+      "candidate_related_topic_ids": [
+        "fashion",
+        "feminine-lifestyle"
+      ],
+      "proposed_relation": "possible_overlap_requires_record_level_review",
+      "observed_relation_count": null,
+      "reassigned_metric_value": null,
+      "reassigned_people_count": null,
+      "confirmed_split_fraction": null,
+      "new_source_classification": null,
+      "status": "example_only_no_reclassification",
+      "reason": "A beauty title-keyword view sample cannot be reassigned into styling, fashion or personal lifestyle audiences without video-level inclusion records."
+    },
+    {
+      "observation_id": "minecraft-cumulative-2024",
+      "original_topic_id": "gaming",
+      "original_source_url": "https://blog.youtube/culture-and-trends/minecraft-15/",
+      "original_metric": "video_views",
+      "original_unit": "views",
+      "original_value": 1500000000000,
+      "original_comparison": ">",
+      "original_period": "through 2024-05-28",
+      "original_population": "Videos related to Minecraft; cumulative lifetime",
+      "candidate_related_topic_ids": [
+        "esports"
+      ],
+      "proposed_relation": "possible_overlap_requires_record_level_review",
+      "observed_relation_count": null,
+      "reassigned_metric_value": null,
+      "reassigned_people_count": null,
+      "confirmed_split_fraction": null,
+      "new_source_classification": null,
+      "status": "example_only_no_reclassification",
+      "reason": "All videos related to Minecraft are not the same as organized esports and cannot be allocated by sport-like competitive status."
+    },
+    {
+      "observation_id": "news-watch-hours-2025",
+      "original_topic_id": "news-and-journalism",
+      "original_source_url": "https://blog.youtube/inside-youtube/youtube-news-working-group-tools-future/",
+      "original_metric": "watch_hours",
+      "original_unit": "watch-hours",
+      "original_value": 35000000000,
+      "original_comparison": ">",
+      "original_period": "2025",
+      "original_population": "News content watched on YouTube",
+      "candidate_related_topic_ids": [
+        "political-news",
+        "political-commentary"
+      ],
+      "proposed_relation": "possible_overlap_requires_record_level_review",
+      "observed_relation_count": null,
+      "reassigned_metric_value": null,
+      "reassigned_people_count": null,
+      "confirmed_split_fraction": null,
+      "new_source_classification": null,
+      "status": "example_only_no_reclassification",
+      "reason": "Platform-defined news watch-time cannot be split into political reporting and commentary without validated video labels, and viewer ideology cannot be inferred."
+    }
+  ],
+  "change_categories": [
+    {
+      "id": "rename",
+      "condition": "Same definition, only presentation label changes",
+      "historical_value_transfer": "possible_only_with_proved_unchanged_predicate"
+    },
+    {
+      "id": "split",
+      "condition": "New buckets partition old membership in a validated underlying microdata or joint table",
+      "historical_value_transfer": "forbidden_without_measured_mutually_exclusive_assignment"
+    },
+    {
+      "id": "merge",
+      "condition": "Source categories' identity and overlap must be measured before aggregation",
+      "historical_value_transfer": "forbidden_without_deduplication_and_compatible_units"
+    },
+    {
+      "id": "cross_list",
+      "condition": "Same video may belong to more than one content taxonomy",
+      "historical_value_transfer": "new_label_can_be_added_without_doubling_the_metric_total_if_identity_verified"
+    },
+    {
+      "id": "deprecate",
+      "condition": "Old ID retained as historical definition and linked to a new vocabulary",
+      "historical_value_transfer": "retain_original_series_with_source_version"
+    }
+  ],
+  "audit_fields": [
+    "taxonomy_version",
+    "category_id",
+    "source_video_or_aggregate_selection_predicate",
+    "observation_date_or_period",
+    "metric_type_and_unit",
+    "geography",
+    "age_and_format_scope",
+    "original_value",
+    "replacement_classification_evidence",
+    "overlap_numerator_and_denominator",
+    "crosswalk_effective_date"
+  ],
+  "change_policy": [
+    "Never overwrite or delete an existing historical observation on the basis of a newly preferred label.",
+    "Keep old source scope, original title/keyword predicate and original metric definition alongside a published taxonomy version.",
+    "A topical video-views aggregate cannot turn into a count of distinctive people, active creators or a newly split category without matching underlying records.",
+    "If split labels overlap, do not sum or assign percentages unless true overlap or mutually exclusive records are measured.",
+    "An adult or child audience classification is not inferred from animation format or a channel title.",
+    "Political article labels and actual viewer political identity are different concepts; no personal partisan profiling.",
+    "No change of the existing 33 topic IDs or reassignment of existing 36 source observations is performed by this protocol.",
+    "All unmeasured recoding fractions stay null and are not represented as zeros."
+  ],
+  "unmeasured": {
+    "reclassification_of_all_36_observations": null,
+    "overlap_by_category": null,
+    "merged_distinct_topic_audience": null,
+    "split_person_counts": null,
+    "children_animation_fraction": null,
+    "political_news_creator_proportions": null
+  }
+}

@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [versioned YouTube topic taxonomy change protocol](ontology/youtube/taxonomy-drift-protocol-2026.md) describes split/merge/overlap conditions without assigning old source view events to unmeasured new topic or audience populations.
+
+
 The [account/product identity study](ontology/youtube/product-account-population-graph-2026.md) distinguishes YouTube channels, Google accounts, managing delegates, Analytics, Google Ads and AdSense payouts from viewers and unique creator businesses.
 
 

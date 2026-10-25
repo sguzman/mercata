@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [taxonomy drift safety study](taxonomy-drift-protocol-2026.md), [four source-tied hypothetical overlap examples](taxonomy-drift-protocol-2026.json) and [metric-preservation audit](../../site/taxonomy-drift-audit.mjs) protect the 33 existing topic IDs and 36 public observations against unsourced split, merge or cross-listing arithmetic.
+
+
 The [YouTube and Google product population study](product-account-population-graph-2026.md), [16-node source-backed graph](product-account-population-graph-2026.json) and [person/cardinality audit](../../site/product-account-population-audit.mjs) distinguish channel IDs, viewers, advertising campaign metrics, owner-authorized Studio analytics and payout accounts.
 
 
