@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [subscriber versus non-subscriber attention measurement study](ontology/youtube/subscriber-status-reach-2026.md) distinguishes owner-only YouTube `subscribedStatus` events from public subscriber counts and referral sources, with executable validated-split arithmetic and no fabricated actual channel analytics.
+
+
 The [2026 demographic intersection and nonresponse audit](ontology/youtube/demographic-cross-tab-availability-2026.md) preserves Pew subgroup rates, distinct survey frames and missing joint sample counts without multiplying marginal usage percentages or misusing the whole-sample confidence margin.
 
 

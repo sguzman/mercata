@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "subscriber_status_attention_measurement_protocol",
+  "as_of": "2026-10-25",
+  "method": "Owner-authorized YouTube Analytics user-activity report with subscribedStatus at event time and matched views/engagedViews/watch minutes, with format and date stratification; no public subscriber roster or account actions used.",
+  "population": "Viewed activity on one authorized creator channel per matching report window, not global subscribers, deduplicated people or confirmed purchasers",
+  "source_ids": [
+    "api-dimensions",
+    "api-metrics",
+    "analytics-audience",
+    "yt-channel-playlist-report-rules-2026",
+    "youtube-retention-key-moments-2026"
+  ],
+  "api_scope": {
+    "owner_authorization_required": true,
+    "query_endpoint": "reports.query",
+    "dimensions": [
+      "subscribedStatus",
+      "creatorContentType",
+      "month"
+    ],
+    "alternative_time_dimension": "day",
+    "statuses": [
+      "SUBSCRIBED",
+      "UNSUBSCRIBED"
+    ],
+    "metrics": [
+      "views",
+      "engagedViews",
+      "estimatedMinutesWatched"
+    ],
+    "required_shared_filters": [
+      "channel",
+      "period_start",
+      "period_end",
+      "creatorContentType",
+      "region_filter_if_any"
+    ],
+    "subscriber_status_at_event_time": true,
+    "viewer_can_contribute_to_both_categories_in_one_period": true,
+    "subscriber_feed_traffic_source_equivalent": false,
+    "new_vs_returning_viewer_equivalent": false,
+    "subscriber_count_equivalent": false,
+    "public_api_without_owner_authorization": false
+  },
+  "public_visibility": {
+    "subscriber_count_visible_possible": true,
+    "subscribed_status_viewer_activity_split_public": false,
+    "owner_only_aggregated": true,
+    "individual_subscriber_identity_observed": false
+  },
+  "separations": [
+    {
+      "id": "current_subscriber_count",
+      "unit": "channel_subscriber_accounts_at_snapshot",
+      "distinct_from": "user_activity_views_by_status",
+      "reason": "Current subscription relationships do not guarantee watching or unique viewers."
+    },
+    {
+      "id": "subscribed_status_views",
+      "unit": "view_events_when_viewer_was_subscribed",
+      "distinct_from": "unique_active_subscriber_people",
+      "reason": "A person can watch multiple times and switch subscription state during a reporting period."
+    },
+    {
+      "id": "non_subscribed_status_views",
+      "unit": "view_events_when_viewer_was_not_subscribed",
+      "distinct_from": "new_people_or_paid_acquisition",
+      "reason": "Returning non-subscribers may watch repeatedly; status does not identify first-time audiences."
+    },
+    {
+      "id": "subscriber_traffic_source",
+      "unit": "traffic_referral_category",
+      "distinct_from": "viewer_subscription_status",
+      "reason": "The subscriber-feed referral class is a traffic origin, not the same as whether every viewer is subscribed."
+    },
+    {
+      "id": "engaged_shorts_views",
+      "unit": "engaged_view_events",
+      "distinct_from": "public_raw_shorts_play_starts",
+      "reason": "After platform view definition changes, engaged and raw starts differ; never pool without metric compatibility."
+    },
+    {
+      "id": "watch_time",
+      "unit": "minutes_watched",
+      "distinct_from": "viewer_people_count_or_payout",
+      "reason": "Minutes are additive within the same report grain but not a user population or a cash measurement."
+    }
+  ],
+  "eligible_report": {
+    "status": "design_only_not_executed",
+    "authorized_rows": [],
+    "sample_period": null,
+    "channel_id": null,
+    "reported_subscribed_views": null,
+    "reported_unsubscribed_views": null,
+    "source_reconciled_view_total": null,
+    "subscriber_share_of_views": null,
+    "non_subscriber_share_of_views": null,
+    "viewer_persons_by_status": null,
+    "creator_revenue_by_status": null
+  },
+  "measurement_gates": [
+    "Only accept the two distinct status category rows if the owner report actually includes both, including explicit zero rows where returned.",
+    "Match period, format, region, channel, metric definition and access basis between rows before calculating shares.",
+    "Reconcile subscriber-status view totals against a compatible owner total and identify omitted/suppressed activity before treating them as complete.",
+    "Do not substitute subscriber growth, viewer demographics or public video views for owner-only subscriber-status views.",
+    "A switch of status within the period is not two different unique people.",
+    "Do not infer subscriptions, transactions, conversion rate or earnings from attention status."
+  ],
+  "unmeasured": {
+    "all_youtube_subscriber_status_view_share": null,
+    "typical_small_channel_nonsubscriber_share": null,
+    "person_level_subscriber_reach": null,
+    "subscriber_to_buyer_conversion": null,
+    "creator_income_by_subscribed_status": null
+  }
+}

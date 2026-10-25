@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [subscription-status event measurement protocol](subscriber-status-reach-2026.md), [owner-only API data contract](subscriber-status-reach-2026.json) and [arithmetic audit](../../site/subscriber-status-audit.mjs) require matched time/content-surface rows and never equate subscriber status with new viewers, unique people or purchaser conversion.
+
+
 The [demographic cross-tab and nonresponse study](demographic-cross-tab-availability-2026.md), [source-aligned joint-table gap register](demographic-cross-tab-availability-2026.json) and [validator](../../site/demographic-cross-tab-audit.mjs) distinguish one-dimensional Pew rates from unavailable joint age, geography, identity and topic cells.
 
 
