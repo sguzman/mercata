@@ -537,7 +537,7 @@
         "youtube/subculture-atlas/document-subculture-taxonomy-drift"
       ],
       "phase": 2,
-      "progress_percent": 65
+      "progress_percent": 66
     },
     {
       "id": "content-formats",
@@ -566,7 +566,7 @@
         "youtube/content-formats/measure-creation-cost-by-format"
       ],
       "phase": 2,
-      "progress_percent": 74
+      "progress_percent": 76
     },
     {
       "id": "social-discovery",
@@ -5252,15 +5252,21 @@
       "objective": "Distinguish original essays, clips and discussion channels.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and distinguish original essays, clips and discussion channels.",
       "status": "in_progress",
-      "percent": 49,
+      "percent": 73,
       "evidence": [
         "ontology/youtube/topic-observations.json",
         "ontology/youtube/topic-observations.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "ontology/youtube/video-essay-sample-observations-2024.json",
+        "ontology/youtube/video-essay-sample-observations-2024.md",
+        "site/video-essay-evidence-audit.mjs",
+        "tests/video-essay-evidence-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": "ontology/youtube/topic-observations.json",
+      "artifact": "ontology/youtube/video-essay-sample-observations-2024.json",
       "priority": "high",
       "phase": 2
     },
@@ -5417,7 +5423,7 @@
       "objective": "Define production length, cadence and attention metrics.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define production length, cadence and attention metrics.",
       "status": "in_progress",
-      "percent": 42,
+      "percent": 73,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
@@ -5429,9 +5435,13 @@
         "site/retention-observability-audit.mjs",
         "tests/retention-observability-audit.test.mjs",
         "tests/site-smoke.mjs",
-        "site/app.js"
+        "site/app.js",
+        "ontology/youtube/video-essay-sample-observations-2024.json",
+        "ontology/youtube/video-essay-sample-observations-2024.md",
+        "site/video-essay-evidence-audit.mjs",
+        "tests/video-essay-evidence-audit.test.mjs"
       ],
-      "artifact": "ontology/youtube/retention-observability.json",
+      "artifact": "ontology/youtube/video-essay-sample-observations-2024.json",
       "priority": "standard",
       "phase": 2
     },

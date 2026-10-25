@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [video essay and documentary format study](ontology/youtube/video-essay-sample-observations-2024.md) distinguishes YouTube's 2024 video-essay view events from BFI's expert-selected works and their published runtimes, without turning these into average viewers, labor or income.
+
+
 The [country-specific policy and creator earnings access study](ontology/youtube/country-policy-and-payout-crosswalk-2026.md) separates three official geographic program listings from account reporting currencies, actual feature approvals, payment-address options and video-specific rightsholder restrictions.
 
 

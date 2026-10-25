@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "video_essay_platform_interest_vs_curated_criticism_cohort",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "yt-video-essays-2025",
+    "bfi-2024-video-essay-poll"
+  ],
+  "frame_1": {
+    "id": "platform_related_view_events",
+    "metric": "videos_related_to_video_essays",
+    "source_id": "yt-video-essays-2025",
+    "reporting_period": "2024-01-01_to_2024-12-31",
+    "geo": "global",
+    "reported_view_events_strictly_greater_than": 200000000,
+    "unit": "views",
+    "unique_viewers": null,
+    "creator_channels": null,
+    "ad_receipts": null,
+    "eligible_videos_denominator": null,
+    "topic_tag_and_boundary_publicly_reproducible": false
+  },
+  "frame_2": {
+    "id": "curated_cinema_criticism_poll",
+    "source_id": "bfi-2024-video-essay-poll",
+    "published_at": "2024-12-18",
+    "voters": 47,
+    "voters_countries": 17,
+    "nominations": 256,
+    "distinct_selected_video_essays": 183,
+    "named_creators_or_teams": 165,
+    "creator_countries": 32,
+    "languages_at_least": 14,
+    "youtube_published_essays_selected": 70,
+    "vimeo_published_essays_selected": 56,
+    "all_selected_essay_mean_minutes": 30,
+    "selected_youtube_mean_minutes": 36,
+    "selected_vimeo_mean_minutes": 11,
+    "selected_youtube_essays_external_support_link_percent_strictly_greater_than": 70,
+    "source_selection": "expert_invited_curated_favorites_not_random_uploads",
+    "selected_nominations_cross_platform_nonexclusive": true,
+    "production_hours": null,
+    "creator_net_payouts": null,
+    "number_of_active_global_essayists": null
+  },
+  "coding_protocol": {
+    "unit": "one_published_video_per_platform_and_calendar_release_month",
+    "candidate_format_codes": [
+      "thesis_driven_video_essay",
+      "video_documentary_observational",
+      "explanatory_educational",
+      "commentary_or_reaction",
+      "clip_compilation",
+      "other_or_ambiguous"
+    ],
+    "subject_axes": [
+      "film_and_television",
+      "gaming",
+      "culture_and_fashion",
+      "history_and_technology",
+      "other"
+    ],
+    "measurement_columns": [
+      "release_date",
+      "primary_video_length_minutes",
+      "platform",
+      "language",
+      "creator_id_from_public_channel",
+      "recorded_narration_mode",
+      "public_video_view_events_as_of_date",
+      "copyright_claim_state_if_owner_authorized",
+      "repeat_publication_interval_days"
+    ],
+    "unknown_owner_only_columns": [
+      "viewer_average_watch_minutes",
+      "unique_returning_viewers",
+      "retention_curve",
+      "native_youtube_ad_payout",
+      "creator_personal_labor_hours"
+    ],
+    "disjoint_cohort_required": true,
+    "genre_boundaries_not_subscriber_identity": true,
+    "claimed_revenue_data_prohibited": true
+  },
+  "limits": [
+    "Over 200 million 2024 platform views of videos related to video essays are playback events, not distinct persons, unique essays, genre market value or creator wages.",
+    "The BFI selected poll is 47 expert voters' favorites, with overlapping platform publication and international works, not all YouTube uploaders or videos.",
+    "An average video runtime of 36 minutes for nominated YouTube uploads is not average viewer session length, typical scripting time or global video duration.",
+    "The 70%+ external support-link statistic applies only to the curated subset of YouTube-published video essays and does not prove any paid patron conversion.",
+    "YouTube and Vimeo selected work counts are not disjoint genre populations and cannot be added to the platform's annual view event count.",
+    "An authored essay is thesis-driven or interpretive; documentaries, compilations, review and educational explanation may overlap and need transparent content coding.",
+    "No monthly publishing cadence or actual earnings distribution is observed in either source; avoid turning exceptional nominees into representative creators.",
+    "Nonexclusive selected nominations in BFI poll cannot be interpreted as a probability sample or unbiased share of all published YouTube video essays."
+  ],
+  "unmeasured": {
+    "all_youtube_video_essay_channel_population": null,
+    "creator_earnings_distribution": null,
+    "genre_mean_work_hours": null,
+    "typical_video_essay_upload_cadence": null,
+    "unique_viewers": null,
+    "viewer_retention": null,
+    "paid_conversion": null
+  }
+}
