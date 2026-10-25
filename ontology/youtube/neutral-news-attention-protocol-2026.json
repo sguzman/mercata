@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "neutral_public_news_survey_and_event_attention_measurement_protocol",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "pew-youtube-news-2026",
+    "google-trends-relative-index-2026",
+    "api-search"
+  ],
+  "required_scope": "public_descriptive_aggregate_observations_only",
+  "private_user_records_collected": false,
+  "polls": {
+    "study": "Pew Research Center American Trends Panel August 2026",
+    "geographic_population": "US adults aged 18 and older, not all worldwide YouTube users",
+    "sample_size": 5166,
+    "survey_start": "2026-08-24",
+    "survey_end": "2026-08-30",
+    "public_attendance_metric": "regularly_gets_news_on_youtube",
+    "overall_2026_pct_us_adults": 34,
+    "yearly_series": [
+      {
+        "year": 2020,
+        "value_pct": 23
+      },
+      {
+        "year": 2021,
+        "value_pct": 22
+      },
+      {
+        "year": 2022,
+        "value_pct": 25
+      },
+      {
+        "year": 2023,
+        "value_pct": 26
+      },
+      {
+        "year": 2024,
+        "value_pct": 32
+      },
+      {
+        "year": 2025,
+        "value_pct": 35
+      },
+      {
+        "year": 2026,
+        "value_pct": 34
+      }
+    ],
+    "party_subgroups": [
+      {
+        "group": "republican_or_lean_republican",
+        "value_pct": 35,
+        "denominator": "US adults within Republican/lean-Republican subgroup"
+      },
+      {
+        "group": "democratic_or_lean_democratic",
+        "value_pct": 36,
+        "denominator": "US adults within Democratic/lean-Democratic subgroup"
+      }
+    ],
+    "excluded_interpretations": [
+      "not_the_share_of_youtube_news_viewers_who_are_partisans",
+      "not_the_party_distribution_of_subscribers_to_any_news_channel",
+      "not_individual_voter_party_registration",
+      "different_years_not_a_fixed_person_panel",
+      "point_estimate_differences_not_verified_statistically_significant_without_variance_information"
+    ],
+    "source_id": "pew-youtube-news-2026"
+  },
+  "taxonomy": {
+    "observation_unit": "video_or_public_channel_at_a_named_snapshot",
+    "content_types": [
+      {
+        "id": "reported_news",
+        "scope": "reported current affairs or independently attributed journalism"
+      },
+      {
+        "id": "election_procedure_explainer",
+        "scope": "nonpartisan explanation of institutions, ballots and processes"
+      },
+      {
+        "id": "policy_analysis",
+        "scope": "substantive discussion of proposed or implemented public policy"
+      },
+      {
+        "id": "editorial_opinion",
+        "scope": "explicit argument or ideological opinion by the publisher"
+      },
+      {
+        "id": "satire_commentary",
+        "scope": "satirical or comedic treatment of events"
+      },
+      {
+        "id": "uncertain_or_mixed",
+        "scope": "insufficient context or more than one distinct type"
+      }
+    ],
+    "observation_fields": [
+      "snapshot_utc",
+      "video_id",
+      "publication_utc",
+      "content_type",
+      "public_source_url",
+      "topic_statement",
+      "selection_window",
+      "selection_method",
+      "language_declared",
+      "region_query",
+      "view_event_count_snapshot_or_null"
+    ],
+    "do_not_store": [
+      "viewer_ids",
+      "commenter_handles",
+      "subscriber_rosters",
+      "account_level_party_inference",
+      "sensitive_individual_profiles"
+    ],
+    "publisher_explicit_position_not_audience_ideology": true,
+    "classification_requires_public_content_evidence": true
+  },
+  "event_window_design": {
+    "status": "not_executed",
+    "records": [],
+    "default_pre_days": 14,
+    "default_post_days": 14,
+    "pre_period_is_calendar_days_before_event": true,
+    "post_period_is_calendar_days_after_event": true,
+    "event_day_reported_separately": true,
+    "require_comparable": "same topic/query, geography, language and API parameters; fixed observation capture schedule",
+    "youtube_api_fields": [
+      "q",
+      "type=video",
+      "publishedAfter",
+      "publishedBefore",
+      "regionCode",
+      "relevanceLanguage",
+      "order",
+      "pageToken"
+    ],
+    "source_id": "api-search",
+    "warnings": [
+      "Search results are relevance-filtered and incomplete; totalResults is an estimate, not an upload census.",
+      "regionCode restricts viewable videos and is not the residence of actual viewers or creator.",
+      "relevanceLanguage is a ranking preference, not verified audio or creator language.",
+      "Published-after/before is upload time, not when an audience watched content.",
+      "Use fixed pre/post periods and comparable sources; views accumulated since upload are age-confounded.",
+      "Changes in platform ranking, real-world events and competitor posts confound non-random historical contrasts."
+    ]
+  },
+  "google_trends": {
+    "status": "not_queried",
+    "source_id": "google-trends-relative-index-2026",
+    "scale_min": 0,
+    "scale_max": 100,
+    "population": "sampled Google Search interest for a chosen term/time/geography; not YouTube video discovery",
+    "directly_comparable_separately_normalized_requests": false,
+    "zero_means_zero_absolute_searches": false,
+    "relative_index_is_absolute_monthly_search_count": false,
+    "causality_of_event_spike_established": false
+  },
+  "constraints": [
+    "Research content topics and visible public channel output, never individual viewers' political identity or susceptibility.",
+    "Descriptive surveys of aggregate party affiliation are not estimates of any individual channel audience.",
+    "Do not rank political groups or recommend demographic-targeted persuasion or political advertising tactics.",
+    "Pew source estimates are 2026 U.S. adult self-reports; yearly survey percentages are not global news viewers or video impressions.",
+    "Google Trends 0–100 index cannot be converted to absolute searches or to YouTube searches.",
+    "YouTube search.list is discovery metadata, not exhaustive platform uploads, audience size, unique viewers or causal impact."
+  ],
+  "unmeasured": {
+    "public_video_event_time_series": null,
+    "video_level_ideological_audience": null,
+    "channel_ideological_audience": null,
+    "exact_event_effect": null,
+    "causal_news_traffic_effect": null,
+    "absolute_searches": null,
+    "political_community_sizes": null,
+    "advertising_revenue_effect": null
+  }
+}

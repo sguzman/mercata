@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [neutral political/news content and event-window study](ontology/youtube/neutral-news-attention-protocol-2026.md) records Pew's 2026 U.S. regular YouTube news estimate and correct within-party denominators, plus source-backed YouTube/Google Trends measurement limits. It explicitly forbids inferring individual viewers' political beliefs or pretending a content taxonomy is an audience census.
+
+
 The [watch-page ads gross-to-net accounting worksheet](ontology/youtube/watch-page-ad-accounting.md) verifies the contractual 55% share of **eligible net**, rather than gross advertiser revenue, and guards against double-counting owner analytics, CPM and non-guaranteed mid-roll slots.
 
 

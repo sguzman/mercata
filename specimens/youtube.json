@@ -7947,6 +7947,27 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Archive availability, privacy and editor activity select which live broadcasts can be compared after the fact."
+    },
+    {
+      "id": "neutral-2026-news-survey-and-event-evidence",
+      "text": "Pew's Aug. 24–30 2026 survey of 5,166 U.S. adults reports 34% regularly get news on YouTube, including 35% of Republican/lean-Republican adults and 36% of Democratic/lean-Democratic adults within their respective subgroups; this does not describe any specific channel's audience party composition.",
+      "source_ids": [
+        "pew-youtube-news-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Self-reported U.S. adults, party-specific denominator; not verified individual viewers, other countries, political behavior, creator pay or statistical significance of small differences."
+    },
+    {
+      "id": "youtube-news-political-events-search-proxy-limits",
+      "text": "YouTube Data API search.list supports geographic, language-relevance and publication-window discovery filters but does not supply an exhaustive upload census or unique viewers; Google Trends provides normalized Google Search interest and cannot be interpreted as absolute YouTube searches or political support.",
+      "source_ids": [
+        "api-search",
+        "google-trends-relative-index-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Event panel was not executed; index values must stay scoped to request frame and no causal event effect or individual political inference is supported."
     }
   ],
   "observations": [],
