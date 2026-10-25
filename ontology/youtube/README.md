@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [child-directed economics study](child-directed-economics-2026.md), [16-product crosswalk](child-directed-economics-2026.json), and [policy audit](../../site/child-economics-audit.mjs) distinguish contextual ads, disabled native fan interactions, conditional channel product eligibility and external business terms, with no personal child data or creator revenue imputation.
+
+
 The [creator inactivity vs closure study](creator-inactivity-frames-2026.md), [machine cohort records](creator-inactivity-frames-2026.json), and [validation guard](../../site/creator-inactivity-audit.mjs) compare vendor activity definitions across separate 30/90/360-day samples without calling an upload pause a permanent creator exit.
 
 

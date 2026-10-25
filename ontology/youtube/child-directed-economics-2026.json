@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "child_directed_video_monetization_boundary_matrix",
+  "reviewed_at": "2026-10-25",
+  "method": "Join the 16 existing revenue pathways to the existing product eligibility matrix, then apply current YouTube audience setting and channel quality rules. Preserve video-versus-channel-versus-external contracting distinctions and do not create synthetic RPM.",
+  "population": "Creator products and videos designated made for kids under actual intent/age-classification rules; not an observed population of child viewers, channels or earnings",
+  "source_ids": [
+    "kids-policy",
+    "kids-interpretation",
+    "channel-policy",
+    "ypp-main"
+  ],
+  "source_artifacts": [
+    "ontology/youtube/child-age-and-format-gates.json",
+    "ontology/youtube/eligibility-matrix.json",
+    "ontology/youtube/revenue-pathways.json"
+  ],
+  "classification_rules": [
+    {
+      "case": "made_for_kids",
+      "studio_status": "made_for_kids",
+      "economic_handling": "apply_restrictions",
+      "inference": "Child-directed designation requires official intent-based criteria, not animation graphics alone."
+    },
+    {
+      "case": "mixed_audience_child_directed",
+      "studio_status": "made_for_kids",
+      "economic_handling": "apply_restrictions",
+      "inference": "A deliberately child-directed mixed audience is subject to the child-directed rules."
+    },
+    {
+      "case": "general_family_friendly",
+      "studio_status": "not_automatically_made_for_kids",
+      "economic_handling": "classify_on_actual_content",
+      "inference": "All-ages style or suitability does not by itself prove child-directed monetization restrictions."
+    },
+    {
+      "case": "teen_or_older_general",
+      "studio_status": "generally_not_made_for_kids",
+      "economic_handling": "classify_on_actual_content",
+      "inference": "Not an authorization to relabel genuinely child-directed works."
+    },
+    {
+      "case": "age_restricted_18_plus",
+      "studio_status": "age_restricted",
+      "economic_handling": "separate_18_plus_policy",
+      "inference": "An 18+ age gate is conceptually different from intended child audience designation."
+    }
+  ],
+  "feature_restrictions": {
+    "source_ids": [
+      "kids-policy"
+    ],
+    "personalized_advertising_allowed": false,
+    "comments_enabled": false,
+    "live_chat_enabled": false,
+    "super_chat_or_stickers_enabled": false,
+    "channel_memberships_on_affected_video": false,
+    "notification_bell_enabled": false,
+    "merchandise_ticketing_on_affected_video": false,
+    "posts_on_wholly_child_directed_channel": false,
+    "all_advertising_banned": false,
+    "creator_typical_revenue_effect": null,
+    "source_limit": "Disabled personalized ads do not imply no contextual ads, no views or zero revenue; exact payout effect unmeasured."
+  },
+  "pathways": [
+    {
+      "id": "watch-page-ads",
+      "label": "Watch-page advertising",
+      "revenue_path_kind": "native_advertising",
+      "official_scope": "video",
+      "child_status_from_matrix": "contextual_advertising_possible",
+      "assessment": "contextual_ads_may_remain",
+      "consequence": "Personalized ads are disabled; contextual advertising may still appear. Revenue and eligibility are unmeasured.",
+      "source_ids": [
+        "earning-help",
+        "ypp-main",
+        "revenue-shares",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "shorts-ads",
+      "label": "Shorts Feed advertising",
+      "revenue_path_kind": "native_advertising",
+      "official_scope": "video",
+      "child_status_from_matrix": "content_policy_review",
+      "assessment": "requires_separate_review",
+      "consequence": "Child-directed treatment and the respective monetization module must be independently checked; no universal permission, ban, or payout is asserted.",
+      "source_ids": [
+        "earning-help",
+        "ypp-main",
+        "shorts-policy",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "premium-revenue",
+      "label": "YouTube Premium allocation",
+      "revenue_path_kind": "native_subscription_allocation",
+      "official_scope": "video",
+      "child_status_from_matrix": "content_policy_review",
+      "assessment": "requires_separate_review",
+      "consequence": "Child-directed treatment and the respective monetization module must be independently checked; no universal permission, ban, or payout is asserted.",
+      "source_ids": [
+        "earning-help",
+        "ypp-main",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "channel-memberships",
+      "label": "Channel memberships",
+      "revenue_path_kind": "native_fan_support",
+      "official_scope": "channel",
+      "child_status_from_matrix": "ineligible_if_child_directed_channel_or_many_kids_videos",
+      "assessment": "restricted_channel_eligibility",
+      "consequence": "Official eligibility excludes qualifying child-directed channels; exact channel-level assessment and individual approval remain unknown.",
+      "source_ids": [
+        "earning-help",
+        "revenue-shares",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "super-chat",
+      "label": "Super Chat and Super Stickers",
+      "revenue_path_kind": "native_fan_support",
+      "official_scope": "video",
+      "child_status_from_matrix": "feature_restricted_on_made_for_kids",
+      "assessment": "not_available_on_designated_video",
+      "consequence": "Made-for-kids playback suppresses this native paid interaction; not a statement about unrelated videos.",
+      "source_ids": [
+        "earning-help",
+        "revenue-shares",
+        "child-features",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "super-thanks",
+      "label": "Super Thanks",
+      "revenue_path_kind": "native_fan_support",
+      "official_scope": "video",
+      "child_status_from_matrix": "feature_restricted_on_made_for_kids",
+      "assessment": "not_available_on_designated_video",
+      "consequence": "Made-for-kids playback suppresses this native paid interaction; not a statement about unrelated videos.",
+      "source_ids": [
+        "earning-help",
+        "revenue-shares",
+        "child-features",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "live-gifts",
+      "label": "Live gifts, Jewels and Rubies",
+      "revenue_path_kind": "native_virtual_items",
+      "official_scope": "stream",
+      "child_status_from_matrix": "individual_made_for_kids_stream_ineligible",
+      "assessment": "not_available_on_designated_stream",
+      "consequence": "Individual child-directed livestreams are ineligible for native live Gifts, distinct from general live program access.",
+      "source_ids": [
+        "virtual-items",
+        "gifts-eligibility",
+        "yt-live-gifts-horizontal-vertical-2026",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "shopping-own",
+      "label": "Shopping: own products",
+      "revenue_path_kind": "commerce_facilitated",
+      "official_scope": "channel",
+      "child_status_from_matrix": "ineligible_if_child_directed_channel_or_many_kids_videos",
+      "assessment": "restricted_channel_eligibility",
+      "consequence": "Official eligibility excludes qualifying child-directed channels; exact channel-level assessment and individual approval remain unknown.",
+      "source_ids": [
+        "shopping-own",
+        "store-connection",
+        "earning-help",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "shopping-affiliate",
+      "label": "Shopping: affiliate products",
+      "revenue_path_kind": "commerce_affiliate",
+      "official_scope": "channel",
+      "child_status_from_matrix": "ineligible_if_child_directed_channel_or_many_kids_videos",
+      "assessment": "restricted_channel_eligibility",
+      "consequence": "Official eligibility excludes qualifying child-directed channels; exact channel-level assessment and individual approval remain unknown.",
+      "source_ids": [
+        "shopping-affiliate",
+        "shopping-mexico-launch",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "creator-partnerships",
+      "label": "YouTube Creator Partnerships",
+      "revenue_path_kind": "deal_facilitation",
+      "official_scope": "channel",
+      "child_status_from_matrix": "content_and_brand_policy_review",
+      "assessment": "requires_separate_review",
+      "consequence": "Brand deal facilitation and commercial disclosures require content and advertiser review; no child-directed profitability inferred.",
+      "source_ids": [
+        "creator-partnerships-mx",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "direct-sponsorship",
+      "label": "Independently negotiated sponsorship",
+      "revenue_path_kind": "external_business_deal",
+      "official_scope": "external_transaction",
+      "child_status_from_matrix": "external_and_youtube_rules_apply",
+      "assessment": "outside_platform_rules_apply",
+      "consequence": "A separate business contract and child-audience safeguards are independently relevant; YouTube cannot verify a creator's external sale.",
+      "source_ids": [
+        "earning-help",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "external-affiliates",
+      "label": "External affiliate links",
+      "revenue_path_kind": "external_affiliate",
+      "official_scope": "external_transaction",
+      "child_status_from_matrix": "external_and_youtube_rules_apply",
+      "assessment": "outside_platform_rules_apply",
+      "consequence": "A separate business contract and child-audience safeguards are independently relevant; YouTube cannot verify a creator's external sale.",
+      "source_ids": [
+        "earning-help",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "owned-software",
+      "label": "Own games, applications and digital goods",
+      "revenue_path_kind": "external_products",
+      "official_scope": "external_transaction",
+      "child_status_from_matrix": "external_and_youtube_rules_apply",
+      "assessment": "outside_platform_rules_apply",
+      "consequence": "A separate business contract and child-audience safeguards are independently relevant; YouTube cannot verify a creator's external sale.",
+      "source_ids": [
+        "earning-help",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "external-support",
+      "label": "Independent fan support",
+      "revenue_path_kind": "external_membership",
+      "official_scope": "external_transaction",
+      "child_status_from_matrix": "external_and_youtube_rules_apply",
+      "assessment": "outside_platform_rules_apply",
+      "consequence": "A separate business contract and child-audience safeguards are independently relevant; YouTube cannot verify a creator's external sale.",
+      "source_ids": [
+        "earning-help",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "licensed-content",
+      "label": "Content and IP licensing",
+      "revenue_path_kind": "external_ip_deal",
+      "official_scope": "external_transaction",
+      "child_status_from_matrix": "external_and_youtube_rules_apply",
+      "assessment": "outside_platform_rules_apply",
+      "consequence": "A separate business contract and child-audience safeguards are independently relevant; YouTube cannot verify a creator's external sale.",
+      "source_ids": [
+        "earning-help",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    },
+    {
+      "id": "external-services",
+      "label": "Client work and teaching derived from videos",
+      "revenue_path_kind": "external_services",
+      "official_scope": "external_transaction",
+      "child_status_from_matrix": "external_and_youtube_rules_apply",
+      "assessment": "outside_platform_rules_apply",
+      "consequence": "A separate business contract and child-audience safeguards are independently relevant; YouTube cannot verify a creator's external sale.",
+      "source_ids": [
+        "earning-help",
+        "kids-policy"
+      ],
+      "verified_account_approval": null,
+      "expected_revenue_per_view": null,
+      "median_earnings": null,
+      "profit_effect": null
+    }
+  ],
+  "quality_review": {
+    "source_ids": [
+      "channel-policy"
+    ],
+    "children_animation_quality_principles_can_limit_ad_revenue": true,
+    "channel_can_lose_ypp_for_persistent_low_quality_kids_content": true,
+    "documented_risk": "Official monetization policies state that made-for-kids content with low-quality signals may have restricted ads and channels primarily focused on such content may lose YPP.",
+    "actual_penalty_rate": null,
+    "actual_channel_penalty_incidence": null
+  },
+  "research_firebreak": [
+    "No individual child age or viewer identity inference",
+    "All child-directed animation is not equivalent to all animation or all family-friendly content",
+    "No personalized ads does not mean all advertising is banned",
+    "Do not sum an absent native paid product into an earnings projection",
+    "Do not infer any numeric contextual ad RPM or revenue decline",
+    "External sponsorship and merchandise require independent legal and platform review and cannot be presumed lawful or profitable",
+    "Channel-level restrictions are not automatically identical to video-level restrictions",
+    "No demographic-targeted child advertising recommendations"
+  ],
+  "unmeasured": {
+    "kids_viewers_global": null,
+    "child_directed_creator_count": null,
+    "share_of_animation_made_for_kids": null,
+    "contextual_ad_rpm": null,
+    "creator_profit_per_video": null,
+    "children_personalized_ads_revenue_delta": null,
+    "share_passing_ypp_review": null
+  }
+}

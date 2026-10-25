@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [made-for-kids creator economics crosswalk](ontology/youtube/child-directed-economics-2026.md) classifies all sixteen recorded earning pathways by video, channel and external contracting restrictions, without treating child-directed animation as automatically ad-free or assigning fabricated profit rates.
+
+
 The [2025–26 creator publishing-inactivity frame audit](ontology/youtube/creator-inactivity-frames-2026.md) separates large established-account activity, company channel upload silence, and below-1k-channel net video-count changes, with no invented creator-closure or profit statistics.
 
 
