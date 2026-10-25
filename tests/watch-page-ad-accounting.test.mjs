@@ -21,7 +21,7 @@ test('55 percent applies only to a supplied hypothetical eligible net base',asyn
  const input={input_basis:'eligible_net_ad_revenues_watch_page_module',currency:'USD',period:'2026-07',
    watch_page_module_accepted:true,eligible_public_video:true,eligible_net_ad_revenues:200};
  const x=evaluateWatchPageEligibleNet(m,input);
- assert.equal(x.creator_contractual_share,110);assert.equal(x.actual_creator_payout,null);
+ assert(Math.abs(x.creator_contractual_share-110)<1e-9,'Floating-point representation of 55% should be numerically equal to USD 110');assert.equal(x.actual_creator_payout,null);
  assert.equal(x.actual_creator_profit,null);assert.equal(x.bank_cash_received,null);
  assert.throws(()=>evaluateWatchPageEligibleNet(m,{...input,input_basis:'grossRevenue'}),/Cannot use advertiser gross/);
  assert.throws(()=>evaluateWatchPageEligibleNet(m,{...input,eligible_net_ad_revenues:null}),/Missing or invalid/);
