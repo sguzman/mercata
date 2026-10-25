@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "vtuber_superchat_public_event_observations",
+  "as_of": "2026-10-24",
+  "source_id": "vtuber-superchat-inequality-2025",
+  "published_at": "2025-04-25",
+  "study_period": {
+    "start": "2017",
+    "end": "2023-07",
+    "end_censoring": true
+  },
+  "frame": {
+    "category": "selected_youtube_vtubers_public_archives",
+    "studied_channels": 1923,
+    "reported_livestream_sessions_approx": 450000,
+    "stream_hours_lower_bound": 1000000,
+    "stream_hours_is_strict_lower_bound": true,
+    "viewer_frame": "distinct_chat_posting_accounts_in_public_study_not_all_viewers_or_unique_offline_people",
+    "authors_used_public_superchat_currency_values": true,
+    "authors_converted_using_historical_exchange_rates": true,
+    "independent_creators_only": false,
+    "representative_all_youtube_creators": false
+  },
+  "creator_superchats": {
+    "reported_monthly_mean_usd_equivalent": 2667,
+    "reported_monthly_median_usd_equivalent": 127,
+    "units": "published_usd_equivalent_public_superchat_revenue_proxy",
+    "channels_with_any_superchat_reported_fraction": 0.75,
+    "channels_without_superchat_reported_fraction": 0.25,
+    "zero_event_definition": "zero_recorded_superchats_in_study_period_not_zero_youtube_earnings",
+    "gini_2018_approx": 0.6,
+    "gini_2023_approx": 0.75,
+    "other_revenue_streams_included_in_mean": false,
+    "verified_net_cash_profit": null
+  },
+  "commenter_conversion": {
+    "public_chat_posting_accounts_approx": 6750000,
+    "posted_at_least_one_superchat_percent": 7.96,
+    "purchased_at_least_one_membership_percent": 12.65,
+    "audience_includes_noncommenting_viewers": false,
+    "chatters_are_unique_people_verified": false,
+    "superchat_and_membership_purchasers_disjoint": false,
+    "reported_median_superchat_sender_fraction_per_channel_percent": 5,
+    "reported_median_superchat_sender_fraction_loyal_chatters_percent": 14,
+    "reported_median_superchat_sender_fraction_members_percent": 22,
+    "no_valid_subscriber_to_buyer_conversion_rate": true
+  },
+  "retention": {
+    "author_reported_median_first_to_last_stream_months": 24,
+    "channels_stopped_within_3_years": 1057,
+    "status_not_verified_business_failure": true
+  },
+  "non_inferences": [
+    "25% without observed Superchats is NOT 25% of all YouTube creators earning zero dollars.",
+    "USD 2,667 mean and USD 127 median are publisher-derived public Superchat amounts in the selected VTuber sample, not verified net payouts or profit.",
+    "6.75 million commenting accounts are NOT all viewers, global unique users, or 6.75 million potential buyers.",
+    "7.96% paying public chatters is NOT a conversion rate among all viewers, all followers, or all YouTube users.",
+    "Superchat and channel-membership purchaser groups overlap and cannot be added.",
+    "Agency concentration and selected creator cohort are not all creator populations, and stopping streams is not verified business failure.",
+    "Historic 2017–2023 sample cannot determine 2026 pricing, payout, or future creator returns."
+  ],
+  "unmeasured": {
+    "all_youtube_creator_zero_earner_rate": null,
+    "net_creator_superchat_receipts": null,
+    "after_platform_take_home": null,
+    "expenses": null,
+    "individual_creator_labor_hours": null,
+    "unique_all_viewers": null,
+    "member_and_superchat_overlap": null,
+    "buyer_purchase_conversion_all_viewers": null
+  }
+}
