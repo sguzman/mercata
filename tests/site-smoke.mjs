@@ -143,6 +143,7 @@ try{
       ['.live-monetization-units',4,'Rubies do not take a further 70% Commerce cut'],
       ['.meme-trending-study',5,'not individual viewers or measured creator earnings'],
       ['.educational-video-studies',3,'not a universal best video length or typical creator earnings'],
+      ['.public-comment-language-study',4,'not unique people or viewer language'],
       ['.public-community-post-protocol',4,'no verified unique member count or earnings'],
       ['.language-audience-crosswalk',7,'country is not language'],
       ['.niche-pilot-budget',4,'not measured creator earnings or a guaranteed viable niche'],

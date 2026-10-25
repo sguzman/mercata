@@ -105,6 +105,10 @@ The [33-topic observation crosswalk](topic-observation-coverage-2026.md), [machi
 
 The [2026 U.S. adult news-survey crosswalk and event protocol](neutral-news-attention-protocol-2026.md), [machine frame](neutral-news-attention-protocol-2026.json) and [abstention tests](../../tests/neutral-news-attention-audit.test.mjs) keep reported news use, public video categories, Google Trends search indexes and YouTube upload discovery in separate denominators. It contains no inferred political profiles of channel audiences and no claimed experimental event effects.
 
+## Cross-language public comment events and community participation
+
+The [public comment language protocol](public-comment-language-protocol-2026.md), [machine research frame](public-comment-language-protocol-2026.json) and [privacy guards](../../site/public-comment-language-audit.mjs) document top-level and reply sampling, multilingual uncertainty and why visible written language is neither an audience census nor individual-language or demographic identity.
+
 ## Public creator Posts and comment-community observation
 
 The [public community Post research protocol](public-community-post-protocol.md), [machine selection and privacy contract](public-community-post-protocol.json), and [public event counter validator](../../site/public-community-post-audit.mjs) distinguish Posts from YouTube video comments, lack of public reach denominators and individual-person privacy. No comment bodies or people are collected.

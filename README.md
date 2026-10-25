@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [cross-language public community protocol](ontology/youtube/public-comment-language-protocol-2026.md) separates public comment/reply events, creator video metadata language and actual viewer language, requiring complete accessible pagination and aggregate-only privacy protections.
+
+
 The [topic evidence coverage audit](ontology/youtube/topic-observation-coverage-2026.md) crosschecks 33 conceptual subcultures and 36 dated observations, distinguishing event counts, uploads, watch hours, selected survey samples and missing audience estimates.
 
 
