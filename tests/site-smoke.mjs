@@ -82,6 +82,10 @@ try{
     assert.equal(await future.locator('.ypp-transition-pool').count(),2,'Missing Premium and Premium Lite pools');
     assert((await future.textContent()).includes('60% of net subscription revenue'));
     assert.equal(await page.locator('.revenue-pathway-card').count(),16,'Missing distinct monetization routes');
+    const riskMatrix=page.locator('.opportunity-risk-matrix');
+    assert.equal(await riskMatrix.locator('.opportunity-method-item').count(),10,'Missing sourced risk axes');
+    assert((await riskMatrix.textContent()).includes('No probability of profit or financial loss was inferred'));
+
     const stack=page.locator('.earning-stream-stack');
     assert.equal(await stack.locator('.earning-stack-checkbox').count(),16,'Missing independently conditional earning routes');
     await stack.locator('summary').click();

@@ -958,5 +958,183 @@
     "No candidate topic receives a recommendation solely because a commercial sample showed high median RPM.",
     "Record actual published outcomes only when separately authorized and verifiable.",
     "Children's music and child-directed animation are overlapping but distinct topic labels; no child's demographic identity is inferred."
-  ]
+  ],
+  "opportunity_risk_matrix": {
+    "kind": "sourced_restrictions_and_unmeasured_decision_risks",
+    "as_of": "2026-10-25",
+    "status": "conditional_decision_method_no_personal_probability_or_recommendation",
+    "source_ids": [
+      "ypp-main",
+      "child-features",
+      "music-content-id",
+      "advertiser-policy",
+      "shopping-affiliate",
+      "adsense-payment-cycle",
+      "yt-branded-policy-2026",
+      "timf-creators-2026",
+      "api-metrics",
+      "neoreach-earnings-2025"
+    ],
+    "axes": [
+      {
+        "id": "ypp_eligibility",
+        "classification": "conditional_entitlement",
+        "label": "YPP access and channel review",
+        "source_ids": [
+          "ypp-main"
+        ],
+        "observable_gate": "Approval and modules vary by channel, region, product and dated requirements",
+        "invalid_shortcut": "No monetization or guaranteed payment without channel-specific checks",
+        "probability": null,
+        "expected_loss": null,
+        "creator_income_impact": null,
+        "verified_for_specific_channel": false
+      },
+      {
+        "id": "child_audience",
+        "classification": "documented_restriction",
+        "label": "Child-directed content feature restrictions",
+        "source_ids": [
+          "child-features"
+        ],
+        "observable_gate": "Correct audience designation may disable memberships, comments and certain advertising or shopping features",
+        "invalid_shortcut": "Do not treat all animation as made for kids or infer zero revenue",
+        "probability": null,
+        "expected_loss": null,
+        "creator_income_impact": null,
+        "verified_for_specific_channel": false
+      },
+      {
+        "id": "content_rights",
+        "classification": "documented_restriction",
+        "label": "Third-party rights and Content ID allocations",
+        "source_ids": [
+          "music-content-id"
+        ],
+        "observable_gate": "Rights owners may claim, block or monetize qualifying reused media",
+        "invalid_shortcut": "Do not treat a public upload or reused asset as approved commercially",
+        "probability": null,
+        "expected_loss": null,
+        "creator_income_impact": null,
+        "verified_for_specific_channel": false
+      },
+      {
+        "id": "advertiser_suitability",
+        "classification": "documented_restriction",
+        "label": "Advertiser-suitable video context",
+        "source_ids": [
+          "advertiser-policy"
+        ],
+        "observable_gate": "Individual-video reviews can limit ad suitability",
+        "invalid_shortcut": "Do not assume a universal ad-only RPM or full monetization per view",
+        "probability": null,
+        "expected_loss": null,
+        "creator_income_impact": null,
+        "verified_for_specific_channel": false
+      },
+      {
+        "id": "shopping_refunds",
+        "classification": "documented_settlement",
+        "label": "Shopping affiliate commissions, returns and delays",
+        "source_ids": [
+          "shopping-affiliate"
+        ],
+        "observable_gate": "Eligible native Shopping affiliate commissions settle via AdSense after returns window",
+        "invalid_shortcut": "Do not treat provisional commissions as cash or add platform and outside receipts twice",
+        "probability": null,
+        "expected_loss": null,
+        "creator_income_impact": null,
+        "verified_for_specific_channel": false
+      },
+      {
+        "id": "adsense_holds",
+        "classification": "documented_settlement",
+        "label": "Payment thresholds, holds and transfer delays",
+        "source_ids": [
+          "adsense-payment-cycle"
+        ],
+        "observable_gate": "Threshold and account holds can postpone issuance; issued is not deposited",
+        "invalid_shortcut": "Do not equate monthly views, finalized credit and bank receipt",
+        "probability": null,
+        "expected_loss": null,
+        "creator_income_impact": null,
+        "verified_for_specific_channel": false
+      },
+      {
+        "id": "sponsor_terms",
+        "classification": "contract_specific",
+        "label": "Sponsor fee and paid-content disclosure",
+        "source_ids": [
+          "yt-branded-policy-2026"
+        ],
+        "observable_gate": "Brand agreements need actual written terms, disclosure and fulfillment accounting",
+        "invalid_shortcut": "Do not infer gross invoice equals post-expense creator profit",
+        "probability": null,
+        "expected_loss": null,
+        "creator_income_impact": null,
+        "verified_for_specific_channel": false
+      },
+      {
+        "id": "production_labor",
+        "classification": "measurement_gap",
+        "label": "Unobserved research and production labor",
+        "source_ids": [
+          "timf-creators-2026"
+        ],
+        "observable_gate": "Surveys and format comparisons do not reveal typical all-creator hourly returns",
+        "invalid_shortcut": "Require direct logs including abandoned attempts before hourly-profit comparisons",
+        "probability": null,
+        "expected_loss": null,
+        "creator_income_impact": null,
+        "verified_for_specific_channel": false
+      },
+      {
+        "id": "market_size",
+        "classification": "measurement_gap",
+        "label": "Public views versus unique people and buyers",
+        "source_ids": [
+          "api-metrics"
+        ],
+        "observable_gate": "View events, Shorts engaged views, ad impressions and unique viewers have distinct definitions",
+        "invalid_shortcut": "Do not manufacture audience size or product conversion from public views",
+        "probability": null,
+        "expected_loss": null,
+        "creator_income_impact": null,
+        "verified_for_specific_channel": false
+      },
+      {
+        "id": "creator_income",
+        "classification": "measurement_gap",
+        "label": "Creator income dispersion and zero-earner coverage",
+        "source_ids": [
+          "neoreach-earnings-2025"
+        ],
+        "observable_gate": "Selected creator surveys can exclude non-earning channels, abandoned work and inactive creators",
+        "invalid_shortcut": "Do not infer a population mean, median or earnings probability from biased respondents",
+        "probability": null,
+        "expected_loss": null,
+        "creator_income_impact": null,
+        "verified_for_specific_channel": false
+      }
+    ],
+    "method": "Before comparing any niche, verify that applicable official gates are satisfied; then collect the required creator effort, rights, eligible features, cash receipts and audience measures with matched time and population denominators.",
+    "compare_unit": "scenario-specific constraints, not probabilistic future returns",
+    "default_niche_risk_score": null,
+    "required_further_observations": [
+      "documented_account_eligibility",
+      "target_video_rights",
+      "format_and_audience_classification",
+      "viewer_and_seller_population_frame",
+      "net_receipts_and_cash_timing",
+      "full_production_and_failed_pilot_hours",
+      "refunds_and_merchant_costs"
+    ],
+    "prohibited": [
+      "invent_risk_probabilities",
+      "assign_arbitrary_opportunity_rank",
+      "conflate_view_count_with_people_or_purchases",
+      "use_advertiser_gross_revenue_as_creator_net",
+      "infer_real_client_account_status"
+    ]
+  }
 }

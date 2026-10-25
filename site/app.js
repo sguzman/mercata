@@ -913,6 +913,23 @@ function renderOpportunityFramework(model, taxonomy, activity) {
     grid.append(card);
   }
   details.append(grid);
+  if(model.opportunity_risk_matrix?.axes?.length){
+    const matrix=make('details','opportunity-risk-matrix');
+    matrix.append(make('summary','','Evidence-backed opportunity and risk restrictions · '+model.opportunity_risk_matrix.axes.length+' axes'));
+    matrix.append(make('p','measure-limit','No probability of profit or financial loss was inferred. Published rules are not an account-level eligibility decision; measured creator outcomes remain unknown.'));
+    const list=make('div','opportunity-method-grid');
+    for(const axis of model.opportunity_risk_matrix.axes){
+      const card=make('article','opportunity-method-item');
+      card.append(make('h5','',axis.label));
+      card.append(make('p','',axis.observable_gate));
+      card.append(make('p','measure-limit','Class: '+axis.classification.replaceAll('_',' ')+' · '+axis.invalid_shortcut));
+      list.append(card);
+    }
+    matrix.append(list);
+    const doc=make('a','inline-link','Read sourced risk-classification boundaries ↗');
+    doc.href='./ontology/youtube/opportunity-risk-matrix.md';doc.target='_blank';doc.rel='noopener noreferrer';
+    matrix.append(doc);details.append(matrix);
+  }
   const link=make('a','inline-link','Read the full comparison method ↗');
   link.href='./ontology/youtube/opportunity-framework.md';link.target='_blank';link.rel='noopener noreferrer';
   details.append(link);

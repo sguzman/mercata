@@ -1,5 +1,7 @@
 # YouTube ontology — audiences, content and earning
 
+The [source-backed opportunity/risk comparison](opportunity-risk-matrix.md) extends the existing unranked niche method with ten documented policy or settlement gates and measurement gaps; the [audit module](../../site/opportunity-risk-audit.mjs) rejects fabricated probability/expected-profit rankings.
+
 The [16-route revenue-stack and settlement crosswalk](revenue-stack-accounting.md) extends the existing official earning-path inventory with editable compatibility selection and guards against counting Shopping affiliate commissions twice in the [monthly cash-flow ledger](monthly-creator-cash-flow-protocol.md). No creator account approval or earnings are inferred.
 
 The independent [machine model](model.json) defines **184 concepts** and **175 relationships**. [Policy ledger](policies.json) captures cited eligibility, platform-fee and child-directed restrictions. [Measurement dictionary](measurements.json) explains which statistics exist, what they measure and whether the public can access them. The [topic taxonomy](taxonomy.json) describes **33 candidate overlapping subcultures**, without pretending their populations have been measured.

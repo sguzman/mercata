@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [opportunity and risk matrix](ontology/youtube/opportunity-risk-matrix.md) separates ten grounded eligibility, rights, payment and evidence-gap axes without manufacturing personal probabilities, financial losses or niche rankings.
+
+
 The [16-pathway editable revenue-stack matrix](ontology/youtube/revenue-stack-accounting.md) now distinguishes AdSense-funded monetization, off-platform cash and contract-specific deals, with duplicate-payment tests and a corrected native Shopping-affiliate payment boundary.
 
 
