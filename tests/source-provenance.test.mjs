@@ -12,7 +12,10 @@ test('All duplicate-document URLs and syndicated survey sources are independentl
  assert.equal(result.source_references,dossier.evidence.length);
  assert.equal(result.claims,dossier.claims.length);
  assert.equal(result.duplicate_document_families.length,7);
- assert.equal(result.registered_shared_source_families,9);
+ assert.equal(result.registered_shared_source_families,registry.families.length);
+ assert(result.registered_shared_source_families>=9,'Known shared source families must remain registered');
+ assert(registry.families.some(x=>x.id==='agentio-creator-playbook-syndication' && x.relation==='same_underlying_survey_different_urls'),
+   'Repeated vendor observations and their secondary reporting must retain one shared study family');
  assert(result.duplicate_document_families.length<result.registered_shared_source_families,'Shared respondent datasets may span different URLs');
  assert.equal(result.unregistered_duplicate_documents.length,0);
  assert.equal(result.invalid_source_family_records.length,0);
