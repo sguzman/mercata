@@ -4808,8 +4808,8 @@ async function showDossier(entry) {
     if(viewerHypotheses)outer.append(viewerHypotheses);
     const languageCountries=renderCountryLanguageMatrix(countryLanguageStudy,record);
     if(languageCountries)outer.append(languageCountries);
-    const concentration=renderVideoConcentration(videoConcentrationStudy,record);
-    if(concentration)outer.append(concentration);
+    const videoConcentrationCard=renderVideoConcentration(videoConcentrationStudy,record);
+    if(videoConcentrationCard)outer.append(videoConcentrationCard);
     const officialPrices=renderMembershipPriceOptions(priceOptionsStudy,record);
     if(officialPrices)outer.append(officialPrices);
     const qualitySection=renderEvidenceQuality(evidenceQualityStudy,record);

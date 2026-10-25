@@ -50,6 +50,8 @@ try{
     await page.locator('#catalog-grid .specimen-card a.inline-link').click();
     await page.locator('#dossier-view h3').first().waitFor();
     assert.equal(await page.locator('#dossier-view h3').first().textContent(),'YouTube',errors.join('\n')||'Expected YouTube dossier');
+    assert.equal(await page.locator('#dossier-view .video-concentration').count(),1,'Video-concentration research section failed to render');
+    assert((await page.locator('#dossier-view .video-concentration').textContent()).includes('91%'),'Source-backed concentration result absent from rendered site');
     // Gallery claim source anchor contract: every claim is visible, dated, limited and linked.
     const currentDossier=JSON.parse(await readFile(path.join(root,'specimens/youtube.json'),'utf8'));
     const allClaims=page.locator('#dossier-view .dossier-evidence .dossier-section').nth(1).locator('.research-item');
