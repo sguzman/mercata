@@ -8,6 +8,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 The [live fan-funding product matrix](live-monetization-units-2026.md), [source keyed definitions](live-monetization-units-2026.json) and [denominator calculator](../../site/live-monetization-denominators.mjs) distinguish Commerce Product Module's net 70% share from Virtual Items Rubies at USD 0.01 each, and document current eligible horizontal/vertical Gifts surfaces. No producer earnings or customer conversion outcomes are inferred.
 
+## Controlled niche-pilot cost and abandonment measurement
+
+The [prespecified niche-pilot budget protocol](niche-pilot-budget-protocol.md), [machine trial contract](niche-pilot-budget-protocol.json) and [validated budget/stopping engine](../../site/niche-pilot-budget.mjs) separate actual new equipment/cash expense, allocated existing gear use and creator labor across published or abandoned attempts. Actual viewership, prospective buyers and net profit remain unknown until separately observed; caps do not establish a causal niche failure.
+
 ## Creator cash-flow accounting and payment settlement
 
 The [monthly cashbook research protocol](monthly-creator-cash-flow-protocol.md), [machine field contract](monthly-creator-cash-flow-protocol.json) and [tested ledger engine](../../site/monthly-creator-cash-flow.mjs) reconcile standard AdSense for YouTube finalized credit, payment cutoff, issue and bank arrival with independent sponsorship/product receipts and actual labor, refunds and paid cash expenses. The model never guesses real creator earnings or wages.

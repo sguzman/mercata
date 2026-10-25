@@ -102,6 +102,7 @@ try{
       ['.synthetic-media-rights',4,'no AI creator earnings'],
       ['.agentio-engaged-view-study',6,'not a universal engaged-to-public conversion factor'],
       ['.live-monetization-units',4,'Rubies do not take a further 70% Commerce cut'],
+      ['.niche-pilot-budget',4,'not measured creator earnings or a guaranteed viable niche'],
       ['.monthly-creator-cash-flow',4,'Bank arrival is not the same as issuance'],
       ['.agentio-sponsor-study',6,'not representative creator pay or verified incremental sales'],
       ['.shopping-funnel-evidence',4,'no verified public conversion rate'],

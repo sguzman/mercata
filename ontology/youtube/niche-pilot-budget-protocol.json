@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "prespecified_niche_content_pilot_cost_and_stop_rules",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "yt-shorts-mobile-production-2026",
+    "yt-video-adaptive-aspect-2026",
+    "yt-stream-encoder-process-2026",
+    "api-metrics"
+  ],
+  "linked_evidence_files": [
+    "ontology/youtube/video-production-cost-register.json",
+    "ontology/youtube/production-costs.json",
+    "ontology/youtube/creator-hourly-accounting.json",
+    "ontology/youtube/monthly-creator-cash-flow-protocol.json",
+    "ontology/youtube/analytics-query-guide.json"
+  ],
+  "status": "tested_decision_protocol_no_real_creator_pilot",
+  "unit_of_analysis": "each_attempted_episode_including_abandoned_and_unpublished_attempts",
+  "required_plan_fields": [
+    "pilot_id",
+    "topic",
+    "format",
+    "currency",
+    "start_date",
+    "end_date",
+    "planned_episodes",
+    "maximum_new_cash_cents",
+    "maximum_total_labor_hours",
+    "primary_metric",
+    "minimum_eligible_exposures"
+  ],
+  "allowed_formats": [
+    "short_phone",
+    "horizontal_video",
+    "live_webcam",
+    "live_encoder",
+    "multicamera_live"
+  ],
+  "primary_metric_options": [
+    "impressions",
+    "views",
+    "engaged_views",
+    "eligible_watch_minutes"
+  ],
+  "required_attempt_cost_fields": [
+    "new_equipment_cash_cents",
+    "third_party_assets_cash_cents",
+    "contractor_cash_cents",
+    "software_cash_cents",
+    "network_power_cash_cents",
+    "marketing_cash_cents",
+    "other_cash_cents",
+    "allocated_owned_gear_usage_cents"
+  ],
+  "required_attempt_hours_fields": [
+    "research",
+    "writing",
+    "recording",
+    "editing",
+    "artwork",
+    "publishing",
+    "moderation",
+    "marketing",
+    "administration"
+  ],
+  "stopping_rules": [
+    "Stop when explicitly capped new cash has been spent, even if planned episodes remain",
+    "Stop when explicitly capped creator labor has been spent, including abandoned attempts",
+    "Require every attempted episode's costs and hours, including zero-result episodes, before calculation",
+    "Metric outcomes must be owner-observed comparable units within the preregistered scope; views do not imply purchases or creator cash",
+    "An exhausted time window without complete episodes is a discontinued or incomplete pilot, not proof the niche is commercially unviable",
+    "Minimum exposure protects against declaring an unsupported positive result; if missing, no audience conclusion is made"
+  ],
+  "boundary_conditions": [
+    "Already-owned equipment usage allocation is an economic cost, not new cash expenditure. Do not also charge its original purchase price as paid in the same period unless actually paid.",
+    "No numeric sample outcomes, expected conversion probabilities or creator hourly earnings can be inferred from source documentation alone.",
+    "Native YouTube Analytics data is owner-authorized; public video views and simulated fixtures are not observations of income.",
+    "The scoring engine is not an estimate of all-creator success rates, causal performance or audience representativeness."
+  ],
+  "research_inputs_observed": [],
+  "real_pilot_results": null,
+  "typical_creator_cash_cost": null,
+  "typical_creator_labor_hours": null,
+  "representative_success_probability": null,
+  "measured_creator_profit": null
+}

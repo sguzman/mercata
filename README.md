@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [bounded niche-pilot measurement protocol](ontology/youtube/niche-pilot-budget-protocol.md) includes cash and labor stop rules, abandoned attempts and an explicit owner-analytics evidence gate; no creator-success probabilities or costs are fabricated.
+
+
 The [current live monetization product comparison](ontology/youtube/live-monetization-units-2026.md) distinguishes Commerce net receipts from Jewels/Rubies, updates horizontal livestream Gifts access and adds audited conditional revenue/eligibility calculations without inventing purchases or creator cash profits.
 
 
