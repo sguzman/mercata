@@ -1158,7 +1158,7 @@
           "title": "Document earnings percentiles",
           "acceptance": "Seek p10, p25, p75, p90 and top-tail evidence.",
           "weight": 1,
-          "progress": 78,
+          "progress": 81,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
@@ -1184,7 +1184,11 @@
             "ontology/youtube/air-300-revenue-concentration-2026.md",
             "site/air-300-concentration-audit.mjs",
             "tests/air-300-concentration-audit.test.mjs",
-            "ontology/youtube/source-families.json"
+            "ontology/youtube/source-families.json",
+            "ontology/youtube/hourly-income-accounting.json",
+            "ontology/youtube/hourly-income-accounting.md",
+            "site/creator-hourly-audit.mjs",
+            "tests/creator-hourly-audit.test.mjs"
           ]
         },
         {
@@ -1193,7 +1197,7 @@
           "title": "Study share earning zero",
           "acceptance": "State who is counted and why the measure may be biased.",
           "weight": 1,
-          "progress": 80,
+          "progress": 84,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
@@ -1220,7 +1224,8 @@
             "site/vtuber-superchat-audit.mjs",
             "tests/vtuber-superchat-audit.test.mjs",
             "site/app.js",
-            "tests/site-smoke.mjs"
+            "tests/site-smoke.mjs",
+            "ontology/youtube/hourly-income-accounting.json"
           ]
         },
         {
@@ -1315,7 +1320,7 @@
           "title": "Separate sales, payout and net profit",
           "acceptance": "Define each economic quantity and all known expenses.",
           "weight": 1,
-          "progress": 86,
+          "progress": 89,
           "status": "in_progress",
           "evidence": [
             "ontology/youtube/creator-income-evidence.json",
@@ -1347,7 +1352,8 @@
             "ontology/youtube/monthly-income-volatility-protocol.json",
             "ontology/youtube/monthly-income-volatility-protocol.md",
             "site/monthly-income-volatility.mjs",
-            "tests/monthly-income-volatility.test.mjs"
+            "tests/monthly-income-volatility.test.mjs",
+            "ontology/youtube/hourly-income-accounting.json"
           ]
         }
       ]

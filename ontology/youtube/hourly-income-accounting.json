@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "creator_hourly_income_cohort_accounting",
-  "reviewed_at": "2026-10-24",
+  "reviewed_at": "2026-10-25",
   "status": "tested_implementation_no_actual_creator_records",
   "human_reference": "ontology/youtube/hourly-income-accounting.md",
   "implementation": "site/creator-hourly-audit.mjs",
@@ -39,7 +39,11 @@
     "Current-hour ratios divide net period cash by tracked hours; historic sunk hours are separately reported.",
     "Quantiles over complete cases are not a representative full-cohort distribution when records are missing.",
     "Units, survey sources and channels must not be pooled across mismatched populations.",
-    "No model output is a platform-wide earnings forecast or causal productivity claim."
+    "No model output is a platform-wide earnings forecast or causal productivity claim.",
+    "For missing receipts or expenses, report partial-identification intervals for q25, median and q75 among attempted creators with positive tracked hours; unbounded endpoints are null, never zero.",
+    "Quantile intervals use source-defined nearest-rank order statistics and place missing positive-hour outcomes at arbitrary lower or upper extremes without claiming their values.",
+    "Compute zero gross-receipt share as a lower and upper bound over all attempted creators, including records with unknown gross. Zero gross receipts are not necessarily zero overall creator income or net profit.",
+    "Zero-hour attempted creators remain counted in the cohort frame but cannot contribute to any per-hour rate; report this coverage loss separately."
   ],
   "observed_creator_data": [],
   "observed_cohort_median_net_hourly": null,
@@ -50,5 +54,15 @@
     "creator_hours_distribution": null,
     "creator_tax_labor_adjustment": null,
     "survivorship_adjusted_hourly_distribution": null
+  },
+  "partial_identification": {
+    "method": "nearest_rank_quantile_worst_case_missing_positive_hourly_outcomes",
+    "coverage": "all_attempted_creators_with_positive_tracked_hours",
+    "undefined_unbounded_endpoint": null,
+    "output": "q25_median_q75_interval_lower_upper",
+    "does_not_replace_complete_cohort_hourly_usd": true,
+    "source_population_estimate": false,
+    "zero_gross_denominator": "all_attempted_creators_in_cohort",
+    "max_imputation_of_unreported_money": 0
   }
 }

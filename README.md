@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [creator hourly-outcome partial-identification audit](ontology/youtube/hourly-income-accounting.md) adds worst-case quantile and zero-gross-share bounds for incomplete creator cohorts. It never imputes missing receipts, claims a typical creator wage or mistakes isolated income surveys for matched labor accounts.
+
+
 The [public dossier source-link acceptance gate](ontology/youtube/gallery-evidence-acceptance.md) checks visible per-claim date/limits, registered clickable HTTPS source links, JSON navigation, browser source indicators, and explicit unknowns across desktop and mobile.
 
 

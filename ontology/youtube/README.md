@@ -16,6 +16,10 @@ The [December 2025/2026 Adobe Express respondent study](adobe-ai-production-surv
 
 The [61-completed-video first-person time log](photography-production-time-diary-2025.md), [machine record](photography-production-time-diary-2025.json) and [rounding/unit audit](../../site/photography-production-labor-audit.mjs) document one channel's mean 9.74 and median 7.37 hours of production per finished video. No creator earnings, abandoned-attempt hours, net wages or other-genre labor estimates were observed.
 
+## Partial-identification bounds for creator hourly outcomes
+
+The [hourly cohort accounting study](hourly-income-accounting.md), [machine contract](hourly-income-accounting.json) and [tested calculator](../../site/creator-hourly-audit.mjs) report worst-case quartile ranges when individual creator cash is missing, plus bounds on the zero-gross share among all attempted creators. Null endpoints represent unbounded unknown values, not zero. The sample is not an independently recruited YouTube creator population, and there are no observed hourly-earnings distributions.
+
 ## Monthly cash-flow volatility and payout timing
 
 The [monthly variability research](monthly-income-volatility-protocol.md) distinguishes **within-creator consecutive cash flows** from **cross-sectional** dispersion in selected YouTube-affiliated Patreon snapshots (23,435 observed records; USD 1,490 pooled standard deviation). The latter is not a native YouTube payout or individual creator month-to-month volatility.

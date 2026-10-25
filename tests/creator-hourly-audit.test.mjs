@@ -53,3 +53,34 @@ test('The research contract exposes no observed creator outcomes and retains pub
  assert.equal(model.observed_creator_data.length,0);
  assert(Object.values(model.unknowns).every(x=>x===null));
 });
+
+test('Partial identification bounds retain all attempted labor-bearing creators without filling missing cash',()=>{
+ const oneMissing=audit({...input,records:[...input.records,row('unknown',null,10)]});
+ assert.equal(oneMissing.status,'incomplete_accounting');
+ assert.equal(oneMissing.hourly_rate_partially_identified_for_n,4);
+ assert.equal(oneMissing.missing_hourly_rate_records,1);
+ assert.deepEqual(oneMissing.partial_identification_hourly_usd.median,{lower:-.5,upper:4.5,identified:false});
+ assert.deepEqual(oneMissing.partial_identification_hourly_usd.q25,{lower:null,upper:-.5,identified:false});
+ assert.deepEqual(oneMissing.partial_identification_hourly_usd.q75,{lower:4.5,upper:5,identified:false});
+ assert.deepEqual(oneMissing.zero_gross_share_of_all_attempts_bounds,{
+  lower:.25,upper:.5,known_zero_gross:1,missing_gross:1,denominator_attempted_creators:4
+ });
+ assert.equal(oneMissing.complete_cohort_hourly_usd,null);
+});
+test('Missing expenses are not zero earnings and known zero gross remains countable',()=>{
+ const missingCost={...row('missingcost',0,20),cash_costs_cents:null};
+ const x=audit({...input,records:[...input.records,missingCost]});
+ assert.equal(x.missing_receipt_records,1);
+ assert.equal(x.missing_hourly_rate_records,1);
+ assert.equal(x.zero_gross_share_of_all_attempts_bounds.lower,.5);
+ assert.equal(x.zero_gross_share_of_all_attempts_bounds.upper,.5);
+ assert.equal(x.complete_cohort_hourly_usd,null);
+});
+test('No unknown hourly creators collapses identified quantile endpoints even when zero-hour account is incomplete',()=>{
+ const emptyHours={...row('zero-hours-missing',null,0)};
+ const x=audit({...input,records:[...input.records,emptyHours]});
+ assert.equal(x.missing_hourly_rate_records,0);
+ assert.equal(x.partial_identification_hourly_usd.median.identified,true);
+ assert.deepEqual(x.partial_identification_hourly_usd.median,{lower:4.5,upper:4.5,identified:true});
+ assert.equal(x.complete_cohort_hourly_usd,null);
+});

@@ -11,3 +11,11 @@ This is not an all-creator estimate. The existing [cross-platform earnings surve
 Refunds may reverse a prior-month transaction, so a recorded refund can exceed new receipts in the current month. The model **allows a negative current-period cash result** rather than incorrectly rejecting the record. Actual refund cash still needs dated support.
 
 Missing or non-estimable creator records make the full-cohort hourly distribution unavailable. Complete-case quartiles remain visible only as explicitly partial evidence, and `complete_cohort_hourly_usd` stays null. Dates are validated as calendar days and cent arithmetic must remain within JavaScript's safe-integer range.
+
+## Partial identification when receipts or expenses are missing
+
+The calculator now provides **worst-case quantile bounds** across *all attempted creators with positive recorded labor hours*, not just complete cases. For a quantile with rank `ceil(p × n)`, where `m` hourly outcomes are missing, the minimum possible rank can be at or below the lowest known outcome, and the maximum can be above the highest known outcome. Unknown unbounded endpoints are **null**, not zero. A bound collapses to a point only when known observations pin down that order statistic despite the missing entries. These are purely arithmetic partial-identification intervals, **not statistical confidence intervals** and not empirical data about YouTube creators.
+
+Likewise, the fraction of attempted creators with zero gross receipts is bounded by `known zeros / all attempts` and `(known zeros + unknown-gross attempts) / all attempts`. Missing expenses with explicitly recorded zero gross leave that zero-gross count known without implying zero net profit or zero alternative income. Zero-hour attempts remain visible in the cohort coverage audit but have no defined per-hour outcome. Any unresolved record still leaves `complete_cohort_hourly_usd` as null. Synthetic regression fixtures never count as actual paid creators.
+
+The YouTube creator-hours respondent survey, selected Patreon earnings sample and public first-upload paper cited in the [model](hourly-income-accounting.json) cannot be joined at a person or period level, so these new bounds **do not** create a representative earnings figure from those separate studies.

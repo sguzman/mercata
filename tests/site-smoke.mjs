@@ -132,6 +132,7 @@ try{
       ['.creator-country-income',4,'Viewer country is not creator residence'],
       ['.adobe-ai-production-survey',6,'not measured creator profit or causal savings'],
       ['.photography-production-labor',6,'not representative creator hourly wages'],
+      ['.creator-hourly-bounds',6,'not an observed income distribution'],
       ['.monthly-income-volatility',6,'no payment is not proof of zero earnings'],
       ['.monthly-creator-cash-flow',4,'Bank arrival is not the same as issuance'],
       ['.agentio-sponsor-study',6,'not representative creator pay or verified incremental sales'],
