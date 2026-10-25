@@ -116,6 +116,10 @@ The [peer-reviewed Patreon monthly income panel](patreon-earnings-timeframe-2026
 
 The [music-chart and independent creator rights study](music-viewing-charts-rights-2026.md), [machine source matrix](music-viewing-charts-rights-2026.json) and [metric tests](../../tests/music-viewing-charts-rights.test.mjs) distinguish Omdia's music-video watch-time share from the official video-view and Shorts-music-creation chart units. Music rights and claimed revenues are not the same as views or actual musician net profit.
 
+## Brand campaign payments and concentration among payees
+
+The [vendor direct-payment distribution](brand-campaign-payment-concentration-2026.md), [machine source-frame audit](brand-campaign-payment-concentration-2026.json), and [tests](../../tests/brand-campaign-payment-concentration.test.mjs) document the top 1%, top 10% and remaining paid creators' portions of CreatorIQ-recorded 2025 campaign payments, with 2023/2024 historical comparator shares. The vendor's payment data are separate from its Influencers.club survey and exclude **unpaid creators**, YouTube-native ad receipts, net profit and reliable subscriber-tier income cohorts.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

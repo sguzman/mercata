@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "crossplatform_creatoriq_direct_campaign_payment_concentration",
+  "as_of": "2026-10-24",
+  "status": "vendor_paid_campaign_creator_cohort_not_youtube_specific_or_zero_earner_population",
+  "source_ids": [
+    "creatoriq-direct-payments-2025",
+    "creatoriq-state-creators-2026"
+  ],
+  "datasets": [
+    {
+      "id": "2025_direct_campaign_payments",
+      "source_id": "creatoriq-direct-payments-2025",
+      "publisher": "CreatorIQ",
+      "period": "2025",
+      "reported_analysis_month": "2025-12",
+      "payee_creator_sample_approximate": 14400,
+      "unit": "share_of_total_vendor_recorded_direct_campaign_payment_volume_among_receiving_creators",
+      "recipient_requirement": "received at least one eligible vendor direct payment",
+      "nonpaid_creators_included": false,
+      "youtube_only_payment_records": false,
+      "creator_payment_fraction": [
+        {
+          "segment": "top_1_percent",
+          "percent_of_recipients": 1,
+          "share_of_paid_amount_percent": 21
+        },
+        {
+          "segment": "next_9_percent",
+          "percent_of_recipients": 9,
+          "share_of_paid_amount_percent": 41
+        },
+        {
+          "segment": "remaining_90_percent",
+          "percent_of_recipients": 90,
+          "share_of_paid_amount_percent": 38
+        }
+      ],
+      "observed_all_creator_income": null,
+      "unique_youtube_creator_count": null
+    },
+    {
+      "id": "2023_2025_top_payee_shares",
+      "source_id": "creatoriq-direct-payments-2025",
+      "periods": [
+        {
+          "year": 2023,
+          "top_1_share_percent": 15,
+          "top_10_share_percent": 53
+        },
+        {
+          "year": 2024,
+          "top_1_share_percent": 18,
+          "top_10_share_percent": 60
+        },
+        {
+          "year": 2025,
+          "top_1_share_percent": 21,
+          "top_10_share_percent": 62
+        }
+      ],
+      "same_population_cohort_verified": false,
+      "tracking_same_creators_verified": false,
+      "claims_change_is_caused_by_platform_algorithm": false
+    },
+    {
+      "id": "income_unit_mismatch",
+      "source_id": "creatoriq-direct-payments-2025",
+      "reported_mean_payment_per_campaign_usd": 11400,
+      "reported_median_per_creator_usd": 3000,
+      "denominators_compatible": false,
+      "mathematically_comparable_mean_vs_median": false,
+      "creator_net_profit_established": false
+    },
+    {
+      "id": "2026_survey_different_family",
+      "source_id": "creatoriq-state-creators-2026",
+      "partner": "Influencers.club",
+      "respondents": 5095,
+      "annual_creator_income_under_usd_10000_share_percent": 67,
+      "source_method": "voluntary cross-platform creator respondent survey",
+      "same_creator_records_as_direct_campaign_payment_study_verified": false,
+      "add_survey_and_payee_populations": false
+    }
+  ],
+  "methodology_gates": [
+    "Never equate CreatorIQ vendor-direct brand campaign payments with native YouTube ads, channel memberships, Patreon or all sponsorship contracts.",
+    "Only positive recipients in vendor campaigns qualify for payment-concentration denominators; zero-earner population is excluded.",
+    "Mean dollars per campaign and median dollars per creator use different units; never portray their difference as earnings skew.",
+    "Direct payee records and the CreatorIQ/Influencers.club voluntary survey are distinct research programs, neither representative of all YouTube publishers.",
+    "Comparing 2023, 2024 and 2025 payee shares is a trend among potentially changing commercial vendor cohorts, not a fixed-person panel.",
+    "Source does not publish the exact subscriber-count by income joint distribution for all YouTube creators, and neither ad revenue nor creator expenses are included."
+  ],
+  "unmeasured": {
+    "native_youtube_creator_sponsor_share": null,
+    "all_creators_no_payment_share": null,
+    "median_all_youtube_sponsorship_income": null,
+    "median_net_income_by_subscriber_tier": null,
+    "representative_paid_campaign_rate": null,
+    "creator_expenses": null,
+    "causal_change_in_payment_inequality": null
+  }
+}

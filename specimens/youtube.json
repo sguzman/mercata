@@ -2924,6 +2924,17 @@
       "evidence_class": "official_artist_music_chart_view_and_shorts_creation_rules",
       "license": "Linked official help; independently summarized metric rules",
       "notes": "Weekly Top Songs includes official, user-made soundtrack and lyric video views; Top Songs on Shorts uses number of Shorts created featuring song; Music Insights excludes Shorts views."
+    },
+    {
+      "id": "creatoriq-direct-payments-2025",
+      "url": "https://www.creatoriq.com/press/releases/state-of-creator-compensation-",
+      "publisher": "CreatorIQ",
+      "title": "State of Creator Compensation 2026: reported 2025 direct campaign payments",
+      "published_at": "2026-01-21",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commercial_vendor_records_of_positive_direct_campaign_payments",
+      "license": "Original official press release cited, independently summarized aggregates, no illustrations copied",
+      "notes": "Distinct from CreatorIQ+Influencers.club 5,095-respondent survey. Provider's selected payee/campaign transactions, around 14.4k payees in December 2025 analysis; absent nonrecipients and native-platform YPP payouts. 2023/24 cohort counts and observation comparability not established."
     }
   ],
   "claims": [
@@ -6175,6 +6186,36 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Music-chart audience activity is not identical to artist ownership, paid music subscribers, royalty distribution or creator net revenue."
+    },
+    {
+      "id": "creatoriq-directpay-2025-top10",
+      "text": "CreatorIQ's creator campaign payment report states that the top 10% of creators paid through its system received 62% of recorded 2025 creator payment volume, versus 60% in 2024 and 53% in 2023. This is concentration among payees, not all creator earnings or YouTube receipts.",
+      "source_ids": [
+        "creatoriq-direct-payments-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Commercial payment intermediary data, campaigns and participating brands may change year to year; no verified independent probability sampling, nonpaying creators, or YouTube-only group denominators."
+    },
+    {
+      "id": "creatoriq-directpay-2025-top1",
+      "text": "CreatorIQ's direct-payment study reports a top 1% payee share of 21% in 2025 (18% in 2024, 15% in 2023), while the bottom 90% of 2025 payee creators received 38%; category group shares are on recipient payment volume, not views or numbers of videos.",
+      "source_ids": [
+        "creatoriq-direct-payments-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Payee identity/denominator limited to vendor-managed campaigns and positive disbursements; historical comparability unknown; not a longitudinal all-YouTube creator earnings panel."
+    },
+    {
+      "id": "creatoriq-mean-campaign-vs-median-creator",
+      "text": "CreatorIQ's press release contrasts a reported USD 11.4k average per campaign with a USD 3k median creator earnings figure. Because those statistics have different entity denominators, dividing them or comparing as like-for-like mean versus median is unsound.",
+      "source_ids": [
+        "creatoriq-direct-payments-2025"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Source methodology does not fully align campaign average and individual payee median; unit mismatch must remain visible, and neither amount accounts for YouTube native receipts or creator labor/cash costs."
     }
   ],
   "observations": [],
