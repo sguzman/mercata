@@ -3606,6 +3606,17 @@
       "evidence_class": "official_premium_member_watch_time_and_creator_module_rules",
       "license": "Link and independently authored concise research; no copied media or private viewer data",
       "notes": "Watch Page Module/ads for long-form, Shorts Module for Shorts, Premium member watch allocation, background and delayed recorded downloaded watching."
+    },
+    {
+      "id": "yt-public-comment-replies-api-2026",
+      "url": "https://developers.google.com/youtube/data/reference/rest/v3/comments/list",
+      "publisher": "Google for Developers",
+      "title": "Comments: list — YouTube Data API",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_public_comment_reply_pagination_api",
+      "license": "Public API documentation linked; independently paraphrased fields and access limitations",
+      "notes": "Separate authorized/unrestricted public reply enumeration via parentId pagination, max 100/page, not native commenter spoken language or unique user population."
     }
   ],
   "claims": [
@@ -7968,6 +7979,20 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Event panel was not executed; index values must stay scoped to request frame and no causal event effect or individual political inference is supported."
+    },
+    {
+      "id": "yt-public-comment-language-denominators-2026",
+      "text": "YouTube's public video metadata language, default audio track language and public comment text are separate fields and observation units; public commentThreads and comments endpoints enumerate published comment events with pagination but do not provide the viewer's spoken language or all reply/user participation denominators.",
+      "source_ids": [
+        "yt-public-comment-thread-api-2026",
+        "yt-public-comment-replies-api-2026",
+        "api-videos-list-oct-2026",
+        "api-search",
+        "api-dimensions"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "No actual comments or persons were collected. Moderator deletions, disabled comments, code-switching, metadata gaps and sample choice prevent estimating total YouTube users by language or sensitive user identities."
     }
   ],
   "observations": [],

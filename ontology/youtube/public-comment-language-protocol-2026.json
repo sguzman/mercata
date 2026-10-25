@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "public_comment_language_participation_research_protocol",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "yt-public-comment-thread-api-2026",
+    "yt-public-comment-replies-api-2026",
+    "api-videos-list-oct-2026",
+    "api-search",
+    "api-dimensions"
+  ],
+  "status": "unexecuted_aggregate_sampling_protocol_no_comment_content_retained",
+  "video_language_fields": [
+    {
+      "id": "defaultLanguage",
+      "unit": "video_title_description_metadata_language",
+      "availability": "public_if_set",
+      "meaning": "Language of video metadata, not speaker or viewer"
+    },
+    {
+      "id": "defaultAudioLanguage",
+      "unit": "default_audio_track_language",
+      "availability": "public_if_set",
+      "meaning": "Only the video's default audio track, not each multilingual dub"
+    },
+    {
+      "id": "relevanceLanguage",
+      "unit": "search_result_ranking_preference",
+      "availability": "public_search_parameter",
+      "meaning": "Language relevance may still return other-language videos"
+    }
+  ],
+  "comment_population": {
+    "top_level_endpoint": "commentThreads.list",
+    "replies_endpoint": "comments.list(parentId=TOP_LEVEL_COMMENT_ID)",
+    "max_results_per_page": 100,
+    "pagination_required": true,
+    "comment_language_metadata_provided_by_youtube": false,
+    "modeled_language_assignment": "optional_manual_or_declared_language_detection_with_unknown_and_mixed_classes",
+    "accepted_unit": "public_published_comment_event_not_person",
+    "distinct_commenting_people_measured": false,
+    "all_replies_in_thread_endpoint_complete": false,
+    "comment_visibility_changes_with_moderation": true,
+    "no_public_person_records_retained": true,
+    "unknown_or_mixed_language_class_required": true
+  },
+  "study_frame": {
+    "status": "not_executed",
+    "sampled_video_count": 0,
+    "sampled_comment_event_count": 0,
+    "required_fields": [
+      "creator_sample_frame",
+      "video_snapshot_date_utc",
+      "video_publication_window",
+      "video_identifier_for_transient_collection_only",
+      "channel_selection_rule",
+      "top_level_pagination_complete",
+      "reply_pagination_complete",
+      "metadata_language_or_null",
+      "audio_language_or_null",
+      "comment_language_classification_method",
+      "unknown_and_mixed_comment_counts",
+      "privacy_suppression_limit",
+      "observation_denominator_public_comment_events"
+    ],
+    "outputs_allowed": [
+      "public_top_level_comment_event_counts_by_coded_language",
+      "published_reply_event_counts_by_coded_language",
+      "unknown_language_events",
+      "percent_of_collected_public_comment_events_within_a_named_selection_frame"
+    ],
+    "outputs_disallowed": [
+      "unique_commenting_people_by_language",
+      "all_language_youtube_users",
+      "viewer_spoken_language",
+      "viewer_country_from_comment_language",
+      "creator_native_language",
+      "viewer_demographic_or_political_identity",
+      "comment_to_customer_conversion",
+      "earnings_by_comment_language"
+    ]
+  },
+  "denominator_constraints": [
+    "Public comment events are from a self-selected comment-posting population, not all video viewers or unique users.",
+    "Default video audio language, localized metadata language and coded public comment language are distinct units.",
+    "A person's language use, ethnicity, religion or geographic origin cannot be inferred from a comment or video language label.",
+    "Top-level commentThreads results do not imply complete replies; comments.list requires explicit parentId pagination.",
+    "Comments can be removed or moderated, and language detectors can misclassify short text, emoji, multilingual sentences and code-switching.",
+    "Read-only language labeling may be done transiently for aggregates but no handles, author/channel identifiers or comment bodies are stored.",
+    "Do not compare language-event totals across different sized video samples or time windows as if they were underlying YouTube user populations.",
+    "Privacy: suppress small language cells and avoid attributing uncommon writing style to an individual."
+  ],
+  "survey_language_community_counts": null,
+  "all_youtube_language_users": null,
+  "source_video_lifetime_audiences": null,
+  "actual_public_comment_language_observations": []
+}
