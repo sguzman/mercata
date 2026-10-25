@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [unresolved evidence register](missing-data-blockers-2026.md), [twelve source pointers](missing-data-blockers-2026.json) and [CI validator](../../scripts/missing-data-audit.mjs) distinguish evidence absence from work in progress without inventing user-level data or claims of fully measured creator income.
+
+
 The [public metadata privacy lint](publication-privacy-gate-2026.md), [conservative policy](publication-privacy-gate-2026.json), and [CI-enforced auditor](../../scripts/public-privacy-audit.mjs) reject recognizable credentials and private identifiers in published evidence/claim fields while preserving the separate manual rights/privacy review requirements.
 
 

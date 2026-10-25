@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [12 machine-checked evidence gaps](ontology/youtube/missing-data-blockers-2026.md) explain what remains empirically unknown about people, creators, profits, and niches while linking to exact unresolved source fields. Verification requires reviewing a blocker if its source changes.
+
+
 The [public research metadata privacy guard](ontology/youtube/publication-privacy-gate-2026.md) now runs in repository verification, rejecting recognizeable secret signatures, email addresses, and disallowed individual-record keys in YouTube sources/claims without claiming complete privacy or legal clearance.
 
 

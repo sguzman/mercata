@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "evidence_backed_missing_data_dependencies",
+  "as_of": "2026-10-25",
+  "scope": "Twelve selected unresolved high-impact questions from existing YouTube research; not additional roadmap tasks",
+  "blockers": [
+    {
+      "id": "global_viewers",
+      "path": "ontology/youtube/audience-population-crosswalk.json",
+      "section": "unmeasured",
+      "field": "global_unique_mau",
+      "evidence_gate": "unpublished_platform_measure",
+      "required_to_measure": "Deduplicated active people over a defined global monthly window",
+      "invalid_shortcut": "Ad reach and surveys are not world MAU",
+      "currently_measured": false,
+      "expected_source_value": null,
+      "actual_people_observed": 0
+    },
+    {
+      "id": "active_creators",
+      "path": "ontology/youtube/creator-activity-population-2026.json",
+      "section": "unmeasured",
+      "field": "global_monthly_creators_with_upload_event",
+      "evidence_gate": "requires_representative_new_research",
+      "required_to_measure": "Dated uploader event cohort including vanished and zero-subscriber channels",
+      "invalid_shortcut": "Indexed channels and net video counts do not identify active human creators",
+      "currently_measured": false,
+      "expected_source_value": null,
+      "actual_people_observed": 0
+    },
+    {
+      "id": "creator_profits",
+      "path": "ontology/youtube/monthly-creator-cash-flow-protocol.json",
+      "section": "unmeasured",
+      "field": "representative_profit_distribution",
+      "evidence_gate": "requires_consented_records",
+      "required_to_measure": "Consented receipts, expenses, all labor and zero earners",
+      "invalid_shortcut": "Official monetization rules cannot establish realized profit",
+      "currently_measured": false,
+      "expected_source_value": null,
+      "actual_people_observed": 0
+    },
+    {
+      "id": "niche_concentration",
+      "path": "ontology/youtube/video-concentration-2026.json",
+      "section": "unmeasured",
+      "field": "niche_top_one_percent_share",
+      "evidence_gate": "requires_representative_new_research",
+      "required_to_measure": "Matched niche video census or weighted watch-time panel",
+      "invalid_shortcut": "Omdia platform-wide watch-time share is not niche competition",
+      "currently_measured": false,
+      "expected_source_value": null,
+      "actual_people_observed": 0
+    },
+    {
+      "id": "multilingual_people",
+      "path": "ontology/youtube/country-language-matrix-2026.json",
+      "section": "unmeasured",
+      "field": "country_bilingual_viewer_share",
+      "evidence_gate": "privacy_constrained",
+      "required_to_measure": "Representatively sampled consented joint viewer-country/language statistics",
+      "invalid_shortcut": "Video locale and viewing geography cannot infer personal language ability",
+      "currently_measured": false,
+      "expected_source_value": null,
+      "actual_people_observed": 0
+    },
+    {
+      "id": "kids_contextual_rpm",
+      "path": "ontology/youtube/child-directed-economics-2026.json",
+      "section": "unmeasured",
+      "field": "contextual_ad_rpm",
+      "evidence_gate": "requires_consented_records",
+      "required_to_measure": "Eligible made-for-kids creator statements and matched ad-view denominators",
+      "invalid_shortcut": "Ads not personalized does not mean ads forbidden or fixed loss",
+      "currently_measured": false,
+      "expected_source_value": null,
+      "actual_people_observed": 0
+    },
+    {
+      "id": "true_completions",
+      "path": "ontology/youtube/retention-observability.json",
+      "section": "unmeasured",
+      "field": "representative_full_video_completion_share",
+      "evidence_gate": "requires_owner_analytics",
+      "required_to_measure": "Authorized retained video-age/format cohorts",
+      "invalid_shortcut": "Public views and average percentage are not full completion of people",
+      "currently_measured": false,
+      "expected_source_value": null,
+      "actual_people_observed": 0
+    },
+    {
+      "id": "news_significance",
+      "path": "ontology/youtube/us-news-reported-change-2026.json",
+      "section": "unmeasured",
+      "field": "standard_errors_for_annual_differences",
+      "evidence_gate": "methodology_gap",
+      "required_to_measure": "Compatible published survey-wave uncertainty and design comparisons",
+      "invalid_shortcut": "A one-point difference of rounded Pew estimates is not a tested decline",
+      "currently_measured": false,
+      "expected_source_value": null,
+      "actual_people_observed": 0
+    },
+    {
+      "id": "rpm_distribution",
+      "path": "ontology/youtube/niche-uncertainty-ranges-2026.json",
+      "section": "unmeasured",
+      "field": "representative_creator_rpm_distribution",
+      "evidence_gate": "requires_consented_records",
+      "required_to_measure": "Matched eligible creator receipts and view measurements",
+      "invalid_shortcut": "User-entered interval calculations are not observed revenue",
+      "currently_measured": false,
+      "expected_source_value": null,
+      "actual_people_observed": 0
+    },
+    {
+      "id": "subscriber_status",
+      "path": "ontology/youtube/subscriber-status-reach-2026.json",
+      "section": "unmeasured",
+      "field": "typical_small_channel_nonsubscriber_share",
+      "evidence_gate": "requires_owner_analytics",
+      "required_to_measure": "Authorized matched subscribedStatus video-event cohorts",
+      "invalid_shortcut": "Public subscriber totals cannot show viewing subscription state",
+      "currently_measured": false,
+      "expected_source_value": null,
+      "actual_people_observed": 0
+    },
+    {
+      "id": "follower_migration",
+      "path": "ontology/youtube/cross-platform-portability-2026.json",
+      "section": "unmeasured",
+      "field": "fraction_of_followers_who_migrate",
+      "evidence_gate": "requires_consented_records",
+      "required_to_measure": "Opt-in matched migration cohorts and consistent source/destination counts",
+      "invalid_shortcut": "Media copying or CSV export does not move native followers",
+      "currently_measured": false,
+      "expected_source_value": null,
+      "actual_people_observed": 0
+    },
+    {
+      "id": "creator_exit",
+      "path": "ontology/youtube/creator-inactivity-frames-2026.json",
+      "section": "unmeasured",
+      "field": "creator_first_year_exit_rate",
+      "evidence_gate": "requires_representative_new_research",
+      "required_to_measure": "True creator-start cohort with right censoring and repeat observations",
+      "invalid_shortcut": "Upload pauses and zero net count are not verified permanent exit",
+      "currently_measured": false,
+      "expected_source_value": null,
+      "actual_people_observed": 0
+    }
+  ],
+  "principles": [
+    "Unknown differs from measured zero",
+    "A protocol's existence does not imply observed data",
+    "Private or minor user records must not be obtained without authorization and protections",
+    "Do not declare empirical completeness when evidence is absent"
+  ],
+  "all_blockers_resolved": false,
+  "representative_profit_observed": false,
+  "privacy_clearance_claimed": false
+}

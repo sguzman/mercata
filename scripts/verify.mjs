@@ -5,6 +5,7 @@ import {auditPublicSources} from './source-provenance.mjs';
 import {auditPublicationRights} from './publication-rights.mjs';
 import {auditLocalPublicationMedia} from './publication-asset-scan.mjs';
 import {auditPublicResearchPrivacy} from './public-privacy-audit.mjs';
+import {auditMissingDataDependencies} from './missing-data-audit.mjs';
 const root = path.resolve(process.argv[2] || process.cwd());
 const load = name => JSON.parse(fs.readFileSync(path.join(root,name),'utf8'));
 const has = name => fs.existsSync(path.join(root,name));
@@ -56,6 +57,8 @@ for (const entry of index.specimens) {
     const privacyPolicy=load('ontology/youtube/publication-privacy-gate-2026.json');
     const privacyAudit=auditPublicResearchPrivacy(dossier.evidence,dossier.claims,privacyPolicy);
     ensure(privacyAudit.metadata_safe,'Public research data signature guard failed: '+privacyAudit.errors.join('; '));
+    const blockerAudit=auditMissingDataDependencies(load('ontology/youtube/missing-data-blockers-2026.json'),load);
+    ensure(blockerAudit.valid,'Evidence blocker register out of sync: '+blockerAudit.errors.join('; '));
     const rights=load('ontology/youtube/publication-rights.json');
     const rightsMetadata=auditPublicationRights(dossier.evidence,dossier.claims,rights);
     ensure(rightsMetadata.metadata_valid,'Incomplete third-party source and claim rights metadata: '+rightsMetadata.errors.join('; '));
