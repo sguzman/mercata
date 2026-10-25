@@ -13,11 +13,11 @@
       "id": "political_anglophone_2025",
       "source_id": "munger-political-youtube-comments-2025",
       "published": "2025-02",
-      "dataset_observation_period": null,
+      "dataset_observation_period": "YouTube channel/video/comment observation through February 2023; described as June 2020 to February 2023",
       "country": null,
       "language_scope": "English-language YouTube political channels",
       "selection": "Authors' large-scale analyzed anglophone political channels, videos and comments, not the whole YouTube platform",
-      "n_channels": null,
+      "n_channels": 2940,
       "n_videos": null,
       "n_comments": null,
       "n_unique_commenters": null,
@@ -37,18 +37,33 @@
         {
           "id": "toxicity_frequency_pattern",
           "measure": "relative_toxicity_pattern_by_commenting_frequency",
-          "direction": "more_pronounced_among_infrequent_commenters",
+          "direction": "more_pronounced_among_prolific_commenters",
           "absolute_rate": null,
           "source_ids": [
             "munger-political-youtube-comments-2025"
-          ]
+          ],
+          "study_code": "Perspective_API_selected_comment_sample_not_behavioral_diagnosis"
         }
       ],
       "limits": [
         "A prolific commenter is not necessarily a unique voter, political supporter or representative audience member.",
         "The paper's abstract does not support a global number of political commenters or a precise share beyond 'just over 2%'.",
-        "The observed association between posting frequency and coded toxicity cannot be extrapolated to all topics or a personalized behavior prediction."
-      ]
+        "The observed association between posting frequency and coded toxicity cannot be extrapolated to all topics or a personalized behavior prediction.",
+        "The Cardiff landing-page abstract reverses the toxicity comparison. The linked author manuscript's abstract, page 21 analysis and Figure 11 consistently place higher coded toxicity among more active commenters; the discrepancy is recorded.",
+        "The Perspective API score is classifier-based and may be biased or inaccurate; activity association is neither a personal diagnosis nor proof that frequent participation causes toxicity."
+      ],
+      "n_videos_approx": 2500000,
+      "n_comments_lower_bound_exclusive": 320000000,
+      "n_unique_commenters_lower_bound_exclusive": 17000000,
+      "source_variant_conflict": {
+        "bibliography_abstract": "Cardiff ORCA landing-page abstract describes higher toxicity among infrequent commenters.",
+        "author_manuscript_abstract": "Authors' journal-formatted PDF page 1 describes higher toxicity among superusers.",
+        "author_manuscript_body": "Authors' journal-formatted PDF page 21 describes higher Perspective API toxicity among more active commenters, consistent with Figure 11 on page 22.",
+        "manuscript_url": "https://orca.cardiff.ac.uk/id/eprint/176263/8/Manuscript.pdf",
+        "review_resolution": "use_full_text_methods_and_figure_direction_with_discrepancy_disclosed",
+        "original_page_specific_review": true,
+        "independent_reproduction_of_classifier_scores": false
+      }
     },
     {
       "id": "selected_climate_2026",

@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [comment-study full-text reconciliation](comment-source-reconciliation-2026.md), [bounded samples and discrepancy record](comment-source-reconciliation-2026.json) and [published-claim correction audit](../../site/comment-source-correction-audit.mjs) correct the reversed commenter-toxicity statement while excluding person-level profiling and causal claims.
+
+
 The [taxonomy drift safety study](taxonomy-drift-protocol-2026.md), [four source-tied hypothetical overlap examples](taxonomy-drift-protocol-2026.json) and [metric-preservation audit](../../site/taxonomy-drift-audit.mjs) protect the 33 existing topic IDs and 36 public observations against unsourced split, merge or cross-listing arithmetic.
 
 

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "public_comment_study_source_conflict_and_denominator_reconciliation",
+  "reviewed_at": "2026-10-25",
+  "method": "Compare Cardiff's bibliographic abstract with the authors' journal-formatted manuscript abstract, analysis on page 21, Figure 11 on page 22, and the separate full-text 2026 Frontiers climate study. Preserve incompatible samples/metrics and explicitly prioritize the manuscript's substantiated finding over its contradictory metadata.",
+  "source_ids": [
+    "munger-political-youtube-comments-2025",
+    "aharonson-climate-youtube-comments-2026"
+  ],
+  "original_artifact": "ontology/youtube/comment-norms-evidence.json",
+  "political_sample": {
+    "source_id": "munger-political-youtube-comments-2025",
+    "observed_channel_count": 2940,
+    "observed_video_count_approx": 2500000,
+    "observed_comments_lower_bound_exclusive": 320000000,
+    "observed_comment_authors_lower_bound_exclusive": 17000000,
+    "comment_share_percent_approx": 50,
+    "commenter_share_percent_lower_bound_exclusive": 2,
+    "coded_toxicity_relative_direction": "higher_among_prolific_in_sample",
+    "toxicity_rate_percent": null,
+    "representative_all_youtube_viewers": false,
+    "author_manuscript_pdf": "https://orca.cardiff.ac.uk/id/eprint/176263/8/Manuscript.pdf",
+    "landing_page_abstract": "https://orca.cardiff.ac.uk/id/eprint/176263/",
+    "source_variant_conflict_disclosed": true,
+    "causal_commenting_frequency_effect": null
+  },
+  "climate_sample": {
+    "source_id": "aharonson-climate-youtube-comments-2026",
+    "selected_video_count": 129,
+    "retrieval": "March 2021 top 200 query results, with >=200 comments, >=90% English, consensus-aligned filters",
+    "manual_attitude_labels_count": 2580,
+    "manually_labeled_comments_per_video": 20,
+    "relative_threaded_positive_association": "higher_in_threaded_replies_than_independent_comments",
+    "source_url": "https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2026.1803829/full",
+    "population_probability_sample": false,
+    "all_youtube_sentiment_rate": null,
+    "causal_effect_of_replying": null
+  },
+  "comparison_gates": [
+    "Comment-count shares and commenters are different units; prolific commenters are not the whole watching audience.",
+    "The political study's selected channels and 2020–23 comment collection are not the March 2021 search-ranked climate video sample.",
+    "Publisher bibliography metadata contradicts the journal-formatted full-text analysis; disclose both versions, do not silently choose the shorter record.",
+    "Classifier-derived relative toxicity differs in construct from manually supervised positive attitudes about climate messages.",
+    "Published 2025 and 2026 journal dates are not contemporary live 2026 comment samples.",
+    "No individual commenter handles, comments, political labels, protected traits or predictions are collected.",
+    "Neither study measures advertiser response, sponsor revenue, creator wages or population-wide opinion."
+  ],
+  "unmeasured": {
+    "global_commenter_count": null,
+    "global_toxic_comment_fraction": null,
+    "matched_political_climate_sentiment_difference": null,
+    "absolute_share_of_unique_viewers_commenting": null,
+    "personal_partisanship": null,
+    "creator_profit_effect": null
+  }
+}

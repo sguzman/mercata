@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [public comments literature correction](ontology/youtube/comment-source-reconciliation-2026.md) records a contradiction between a Cardiff abstract and the journal-formatted author's manuscript about prolific commenter toxicity, and preserves distinct 2025 political-channel and 2026 climate-video study denominators.
+
+
 The [versioned YouTube topic taxonomy change protocol](ontology/youtube/taxonomy-drift-protocol-2026.md) describes split/merge/overlap conditions without assigning old source view events to unmeasured new topic or audience populations.
 
 
