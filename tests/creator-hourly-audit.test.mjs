@@ -38,6 +38,6 @@ test('Incomplete accounting never claims a full-cohort hourly distribution',()=>
 test('Malformed dates, impossible date order and unsafe cent sums are rejected',()=>{
  for(const date of ['not-a-date','2026-02-30','2026-00-01'])assert.equal(audit({...input,period_start:date}).status,'invalid');
  assert.equal(audit({...input,period_start:'2026-04-01'}).status,'invalid');
- const rowTooLarge={...row('huge',Number.MAX_SAFE_INTEGER,1),cash_costs_cents:1000000000000000,refund_cents:1};
+ const rowTooLarge={...row('huge',0,1),fees_cents:Number.MAX_SAFE_INTEGER,cash_costs_cents:1000000000000000};
  assert.equal(audit({...input,records:[rowTooLarge]}).status,'invalid');
 });
