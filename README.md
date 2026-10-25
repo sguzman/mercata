@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [AIR 300-channel revenue concentration and monthly RPM synthesis](ontology/youtube/air-300-revenue-concentration-2026.md) adds observed nested top-decile ad revenue shares and calendar-month medians while recording that it reuses the same monetized channel cohort as AIR's July study.
+
+
 The [evergreen tutorials and repeat-search protocol](ontology/youtube/evergreen-search-window-protocol.md) separates initial, middle and later age-matched owner video Search traffic from recent Studio Trends interest, without asserting observed passive income or absolute search volume.
 
 

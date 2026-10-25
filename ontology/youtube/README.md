@@ -4,6 +4,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
+## Selected 300-channel ad concentration and monthly RPM
+
+The [October 2026 AIR shared-cohort synthesis](air-300-revenue-concentration-2026.md), [machine revenue shares and month medians](air-300-revenue-concentration-2026.json) and [selection auditor](../../site/air-300-concentration-audit.mjs) report that top 10%, top 25% and top 50% shares are nested within the same 300 monetized channels and cannot be added or projected to all creator earnings. Source family registration avoids treating the synthesis as a second independent study.
+
 ## Repeat-search tutorials and long-tail discovery
 
 The [YouTube Search longitudinal cohort protocol](evergreen-search-window-protocol.md), [data contract](evergreen-search-window-protocol.json) and [age-window verifier](../../site/evergreen-search-window-audit.mjs) define owner-authorized Search/Browse/Suggested traffic by disjoint video-age intervals; Studio Trends' 28-day interest signals are not absolute keyword volumes, causal creator profits or forecasts.

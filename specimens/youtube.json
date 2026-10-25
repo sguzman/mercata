@@ -3331,6 +3331,17 @@
       "evidence_class": "vendor_selected_owner_channel_advertiser_cpm_by_audience_country",
       "license": "Original article linked; subset of its short quantitative country observations independently tabulated",
       "notes": "Vendor used CPM data from >3000 AIR-affiliated channels; 20 highest and 20 lowest advertiser-side USD CPM markets; source's exact country sample n, sampling period and aggregate statistic missing. Not creator RPM."
+    },
+    {
+      "id": "air-2026-monetization-summary-300",
+      "url": "https://air.io/en/air-data-findings/youtube-monetization-statistics-2026",
+      "publisher": "AIR Media-Tech",
+      "title": "State of YouTube Monetization 2026: Statistics From 300 Channels",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "secondary_vendor_synthesis_of_same_300_monetized_client_channels",
+      "license": "Source linked and independently paraphrased short data values; no individual/channel data copied",
+      "notes": "Reuses same May2025–May2026 AIR 300-channel 3595 monetized channel-month sample, adds top10/top25/top50 revenue shares and month-of-year RPM. Same underlying study as air-studio-rpm-300-2026."
     }
   ],
   "claims": [
@@ -7286,6 +7297,28 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Owner authorization required; no empirical long-tail cohort was accessed. Suppressed or unobserved data are not zeros, and raw lifetime views are not age-normalized."
+    },
+    {
+      "id": "air-selected-top-decile-ad-revenue-concentration-2026",
+      "text": "AIR's October 2026 reuse of its selected 300 monetized-client channels reports 58% of sampled ad revenue in the top 30 ranked channels, 82% in the top 75 and 96% in the top 150, with the bottom 150 accounting for 4%. These are overlapping percentile groups within one selected advertiser-funded revenue cohort.",
+      "source_ids": [
+        "air-2026-monetization-summary-300",
+        "air-studio-rpm-300-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Already monetized participating AIR clients, not all YouTube creator income, no zero-earner population, sponsorship receipts, costs, taxes or labor hours."
+    },
+    {
+      "id": "air-selected-seasonal-rpm-jan-nov-2026",
+      "text": "Across AIR's same 300 monetized channels and 3,595 selected channel-months in May 2025–May 2026, its published calendar-month median RPM values were USD 1.56 in January and USD 2.35 in November; distinct 10K–100K and 100K–10M subscriber groups had selected median RPM of USD 2.14 and USD 2.04 respectively.",
+      "source_ids": [
+        "air-2026-monetization-summary-300",
+        "air-studio-rpm-300-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Monthly published medians are not matched panel estimates of all creator earnings or causal seasonal effects, and subscriber counts are not view counts, unique channels per month, net income or wages."
     }
   ],
   "observations": [],

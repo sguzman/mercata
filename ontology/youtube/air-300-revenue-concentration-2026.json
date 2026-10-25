@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "selected_air_300_channel_ad_revenue_concentration_and_monthly_rpm",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "air-studio-rpm-300-2026",
+    "air-2026-monetization-summary-300"
+  ],
+  "shared_underlying_study_family": "air-2025-2026-300-channel-rpm-shared-frame",
+  "sample": {
+    "total_channels": 300,
+    "monetized_channel_months": 3595,
+    "period_start": "2025-05",
+    "period_end": "2026-05",
+    "recruitment": "AIR Media-Tech managed/partner monetized YouTube channels, not representative global or zero-earning creator cohort",
+    "includes_unmonetized_creators": false,
+    "includes_no_upload_creators": false,
+    "representative_of_first_year_creators": false,
+    "exact_channels_per_country": null,
+    "raw_transactions_downloaded": false
+  },
+  "ad_revenue_distribution": {
+    "measurement": "share_of_total_selected_sample_ad_revenue_by_ranked_channel_cumulative_groups",
+    "groups": [
+      {
+        "id": "top_10_percent",
+        "channels": 30,
+        "rank_share_percent": 10,
+        "ad_revenue_share_percent": 58
+      },
+      {
+        "id": "top_25_percent",
+        "channels": 75,
+        "rank_share_percent": 25,
+        "ad_revenue_share_percent": 82
+      },
+      {
+        "id": "top_50_percent",
+        "channels": 150,
+        "rank_share_percent": 50,
+        "ad_revenue_share_percent": 96
+      },
+      {
+        "id": "bottom_50_percent",
+        "channels": 150,
+        "rank_share_percent": 50,
+        "ad_revenue_share_percent": 4
+      }
+    ],
+    "not_total_creator_income": true,
+    "not_net_profit": true,
+    "overlap_rule": "Top-10, top-25, top-50 are nested and must not be summed; bottom-50 is the complement of top-50 in this selected 300-channel sample"
+  },
+  "subscriber_size_rpm": {
+    "metric": "selected_channel_median_usd_per_1000_video_views_after_platform_share",
+    "groups": [
+      {
+        "id": "small_10k_100k",
+        "subscriber_band": "10K–100K",
+        "median_rpm_usd": 2.14,
+        "exact_channel_n": null
+      },
+      {
+        "id": "medium_100k_10m",
+        "subscriber_band": "100K–10M",
+        "median_rpm_usd": 2.04,
+        "exact_channel_n": null
+      }
+    ],
+    "creator_monthly_income_observed": false,
+    "year_zero_earner_fraction": null
+  },
+  "month_of_year_rpm": {
+    "metric": "USD_median_RPM_per_1000_views_by_calendar_month_from_selected_monetized_channel_months",
+    "pooled_across_same_underlying_300_channel_study": true,
+    "values": [
+      {
+        "month": 1,
+        "month_name": "January",
+        "rpm_usd": 1.56
+      },
+      {
+        "month": 2,
+        "month_name": "February",
+        "rpm_usd": 1.82
+      },
+      {
+        "month": 3,
+        "month_name": "March",
+        "rpm_usd": 1.84
+      },
+      {
+        "month": 4,
+        "month_name": "April",
+        "rpm_usd": 1.93
+      },
+      {
+        "month": 5,
+        "month_name": "May",
+        "rpm_usd": 1.9
+      },
+      {
+        "month": 6,
+        "month_name": "June",
+        "rpm_usd": 2.05
+      },
+      {
+        "month": 7,
+        "month_name": "July",
+        "rpm_usd": 1.91
+      },
+      {
+        "month": 8,
+        "month_name": "August",
+        "rpm_usd": 1.98
+      },
+      {
+        "month": 9,
+        "month_name": "September",
+        "rpm_usd": 2.15
+      },
+      {
+        "month": 10,
+        "month_name": "October",
+        "rpm_usd": 2.19
+      },
+      {
+        "month": 11,
+        "month_name": "November",
+        "rpm_usd": 2.35
+      },
+      {
+        "month": 12,
+        "month_name": "December",
+        "rpm_usd": 2.12
+      }
+    ],
+    "seasonality_future_forecast_supported": false,
+    "limitations": "Publisher grouped available monetized channel-months by calendar month; cohorts and observation counts by month are not provided, and Jan/Nov may not be the same within-channel period."
+  },
+  "comparison_gates": [
+    "AIR's October synthesis and its July original 300-channel analysis reuse the same underlying period and cohort; no duplicated independent sample counts.",
+    "Nested top-share groups are not additive: 58% and 82% refer to overlapping leading channels, not 140% of revenue.",
+    "The selected top-ten share is not the concentration of all YouTube earnings, sponsors, merchandise or the population of zero-earner creators.",
+    "RPM is revenue per 1,000 video views after platform share, not creator cash profit or full-time hourly wage.",
+    "10K–100K and 100K–10M subscriber bands exclude smaller, unmonetized and inactive channels; median RPM is not median monthly earnings.",
+    "Published calendar-month medians from a partial rolling period do not guarantee November 2026 or January 2027 outcomes.",
+    "No causal effects of changing upload calendar, subscriber size or topic are identified by descriptive cohort contrasts."
+  ],
+  "unmeasured": {
+    "all_creator_ad_income_distribution": null,
+    "zero_earner_fraction_all_creators": null,
+    "channel_level_raw_monthly_series": null,
+    "creator_cash_expenses": null,
+    "creator_net_profit": null,
+    "effective_hourly_income": null,
+    "causal_holiday_RPM_effect": null
+  }
+}
