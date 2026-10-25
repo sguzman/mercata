@@ -2332,7 +2332,9 @@ function renderEducationalVideoStudies(model,dossier){
   card.append(make('p','measure-limit',x.warning));grid.append(card);
  }
  details.append(grid);details.append(audienceSources(model.source_ids,dossier));
- details.append(make('p','measure-limit','Study outcomes include owner-authorized retention metrics versus public views, likes and comments, which are not interchangeable.'));
+ details.append(make('p','measure-limit','Study outcomes include owner-authorized retention metrics versus public views, likes and comments, which are not interchangeable.'))
+ if(model.statistics_search_quality_case){details.append(make('p','measure-limit','A separate 2025 search sample screened 200 statistics-video URLs to 114 English videos; 87 rated high quality by expert rubric. Not a population estimate or measured creator profit.'));}
+;
  const link=make('a','inline-link','Read study samples and measurement constraints ↗');
  link.href='./ontology/youtube/educational-video-format-cohorts-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
  section.append(details);return section;

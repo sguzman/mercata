@@ -27,3 +27,19 @@ A valid future experiment should preregister an educational category (demonstrat
 No universal **best video length**, causal growth lift, typical scientific creator earnings, all-channel viewing-session median or direct sales conversion is available in these studies.
 
 [Machine comparison](educational-video-format-cohorts-2026.json) · [Inference auditor](../../site/educational-video-evidence.mjs) · [Tests](../../tests/educational-video-evidence.test.mjs).
+
+## Cross-sectional statistics lesson quality: a fourth, differently sampled case
+
+[An original 2026 journal study](https://pmc.ncbi.nlm.nih.gov/articles/PMC13659105/) reviewed **200 initially returned YouTube URLs** from the top 50 results for four statistics/analysis queries (November 17, 2025). After removing **41 duplicates**, **22 non-English videos**, and **23 off-topic videos**, **114 English statistics videos** remained. Two researchers scored their educational quality, with a third evaluating disagreements using the Global Quality Scale and a modified DISCERN tool.
+
+| Observed attribute of selected 114 videos | Count |
+| --- | ---: |
+| Rated high quality on the study's rubric | **87 (76.3%)** |
+| Slide-based presentation | **45** |
+| Narrative-focused | **24** |
+| Animation | **29** |
+| Screen demonstration of statistics software | **16** |
+
+The authors also reported a **625,438.5 median lifetime view count** in this selection, which was visibly conditioned on search relevance and sampled *surviving* results. Their reported *views per day* was **lifetime views divided by days since upload**, not a time series of actual daily viewers.
+
+**Crucial boundary:** This study does not establish that 76.3% of *all* educational YouTube videos are high quality, nor that animation causes superior learning, that longer videos monetize worse, that these viewers are unique people, or that an independent statistical educator will earn money. The 114 selected videos are **not** added to the older STEM (124), Indonesian (139), or Turkish mathematics (126) cohorts as though they were one randomly sampled population. The [case validator](../../site/statistics-video-quality-audit.mjs) enforces the exact original counts and missing outcomes.

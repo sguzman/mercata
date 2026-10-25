@@ -6,7 +6,8 @@
   "source_ids": [
     "stem-spanish-youtube-124-videos-2026",
     "indonesian-instruction-test-youtube-139-videos-2025",
-    "turkish-math-youtube-126-videos-2025"
+    "turkish-math-youtube-126-videos-2025",
+    "j-korean-med-sci-statistics-video-quality-2026"
   ],
   "studies": [
     {
@@ -96,5 +97,63 @@
   "representative_education_video_earnings": null,
   "global_education_watch_minutes": null,
   "all_education_unique_viewers": null,
-  "observed_creator_hourly_profit": null
+  "observed_creator_hourly_profit": null,
+  "statistics_search_quality_case": {
+    "source_id": "j-korean-med-sci-statistics-video-quality-2026",
+    "reviewed_at": "2026-10-25",
+    "search_snapshot": "2025-11-17",
+    "sampling": "Four fixed YouTube queries: statistical analysis, data analysis, statistics, statistical methods; top 50 relevance-ranked URLs from each query, cookie-cleared private browsing",
+    "initial_urls": 200,
+    "duplicate_urls_excluded": 41,
+    "language_excluded": 22,
+    "off_topic_excluded": 23,
+    "eligible_videos": 114,
+    "unit": "selected_public_english_statistics_video",
+    "manually_rated_quality": {
+      "rating_system": "Global Quality Scale 1-5 and modified DISCERN; two independent subject-expert raters plus adjudicator",
+      "high_quality_videos": 87,
+      "high_quality_percent_reported": 76.3,
+      "low_quality_videos": 12,
+      "intermediate_quality_videos": 15,
+      "true_population_share": null,
+      "causal_effect_on_watchtime": null
+    },
+    "content_formats": [
+      {
+        "id": "slides",
+        "videos": 45
+      },
+      {
+        "id": "narrative",
+        "videos": 24
+      },
+      {
+        "id": "animated",
+        "videos": 29
+      },
+      {
+        "id": "software_demonstration",
+        "videos": 16
+      }
+    ],
+    "public_metadata": {
+      "median_lifetime_views_selected_videos": 625438.5,
+      "median_video_age_days_at_collection": 1626,
+      "reported_median_daily_lifetime_average_views": 529.36,
+      "actual_observed_daily_view_events_series": null,
+      "owner_video_retention": null
+    },
+    "limitations": [
+      "Relevant top-50 search results are selected by YouTube relevance ranking, not a probability sample of all statistics uploads or people.",
+      "Only English results were eligible; excludes 22 other-language and 23 off-topic entries as well as 41 duplicates.",
+      "Reported 'daily views' is lifetime public views divided by days since upload, not daily longitudinal owner Analytics.",
+      "Expert GQS ratings are content-quality judgments under this article's methodology, not demonstrated learning gains or financial returns.",
+      "Observational differences in ratings and public engagement have no random assignment; channel audience and exposure are confounded.",
+      "This study is different from the three original video-format/retention cohorts and must not be pooled into their sample denominator."
+    ],
+    "measured_unique_people": null,
+    "creator_cash_profit": null,
+    "creator_labor_hours": null,
+    "representative_all_educational_video_quality_rate": null
+  }
 }
