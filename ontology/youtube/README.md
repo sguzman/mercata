@@ -140,6 +140,10 @@ The [reaction/compilation policy comparison](reaction-compilation-rights.md), [m
 
 The [official survey review](mexico-encca-audiovisual-2024.md), [machine source crosswalk](mexico-encca-audiovisual-2024.json) and [regression test](../../tests/mexico-encca-audiovisual.test.mjs) distinguish a national 55% rate of online audiovisual consumption from 66% YouTube platform use **within the online-audiovisual subgroup**. Neither is YouTube MAU, advertiser reach, or an exclusive share of spending.
 
+## Creator hourly earnings and zero-income accounting
+
+The [creator-hourly accounting algorithm](hourly-income-accounting.md), [implementation](../../site/creator-hourly-audit.mjs) and [synthetic regression tests](../../tests/creator-hourly-audit.test.mjs) calculate net receipts divided by actual labor, including failed attempts, refunds and zero revenue. No private records, matched creator population or typical YouTube hourly pay were supplied.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.
