@@ -16,6 +16,10 @@ The [December 2025/2026 Adobe Express respondent study](adobe-ai-production-surv
 
 The [61-completed-video first-person time log](photography-production-time-diary-2025.md), [machine record](photography-production-time-diary-2025.json) and [rounding/unit audit](../../site/photography-production-labor-audit.mjs) document one channel's mean 9.74 and median 7.37 hours of production per finished video. No creator earnings, abandoned-attempt hours, net wages or other-genre labor estimates were observed.
 
+## Small creator discoverability and owned impressions
+
+The [channel discovery sampling protocol](small-channel-discoverability-protocol.md), [metric frame](small-channel-discoverability-protocol.json) and [inference checker](../../site/small-channel-discovery-audit.mjs) distinguish large public subscriber indexes from owner-only impressions/CTR. A public below-1k subscriber cohort is not a first-time creator census and has no published income conversion denominator.
+
 ## Video essay formats, curated runtimes and event counts
 
 The [BFI/YouTube video-essay study](video-essay-sample-observations-2024.md), [machine cohort](video-essay-sample-observations-2024.json) and [scope audit](../../site/video-essay-evidence-audit.mjs) distinguish over 200 million YouTube-related 2024 view events from expert-selected video essay works. Selected 36-minute YouTube runtimes do not describe typical viewers, production time or creator cash.

@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [small-channel discoverability evidence design](ontology/youtube/small-channel-discoverability-protocol.md) keeps public subscriber-index milestones apart from the owner-only impressions/CTR data required for genuine newcomer discovery comparisons.
+
+
 The [video essay and documentary format study](ontology/youtube/video-essay-sample-observations-2024.md) distinguishes YouTube's 2024 video-essay view events from BFI's expert-selected works and their published runtimes, without turning these into average viewers, labor or income.
 
 

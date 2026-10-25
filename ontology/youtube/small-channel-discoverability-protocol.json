@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "small_channel_discovery_reproducible_sample_design",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "impressions-count-help",
+    "yt-reach-source-types-2026",
+    "vidiq-subscriber-benchmarks-2026",
+    "vidiq-1000-subscribers-2026",
+    "api-metrics"
+  ],
+  "external_channel_observations": [
+    {
+      "id": "july_indexed_channels",
+      "source_id": "vidiq-subscriber-benchmarks-2026",
+      "observation_scope": "public_subscriber_index_at_least_one_subscriber",
+      "indexed_channels": 61186246,
+      "impressions": null,
+      "click_through_rate": null,
+      "creator_revenue": null,
+      "channel_first_published_video": null
+    },
+    {
+      "id": "september_under_1000_cohort",
+      "source_id": "vidiq-1000-subscribers-2026",
+      "observation_scope": "selected_channels_under_1000_at_baseline_with_360_day_public_video_history",
+      "indexed_channels": 32926088,
+      "reached_1000_at_endpoint": 500409,
+      "impressions": null,
+      "click_through_rate": null,
+      "net_platform_payout": null
+    }
+  ],
+  "metrics": [
+    {
+      "id": "public_subscribers",
+      "access": "public",
+      "unit": "channel_subscriber_count",
+      "denominator": "channels_in_selected_cohort",
+      "limitations": "May be hidden/rounded; not impressions, views, unique people, or earnings"
+    },
+    {
+      "id": "public_video_count_delta",
+      "access": "public_with_two_snapshots",
+      "unit": "net_change_in_public_video_objects",
+      "denominator": "selected_channels_with_both_snapshots",
+      "limitations": "Not dated upload events or cadence when deletions/private video changes occur"
+    },
+    {
+      "id": "public_views",
+      "access": "public",
+      "unit": "platform_defined_video_view_events",
+      "denominator": "specific_videos_in_fixed_window",
+      "limitations": "Not impressions, unique viewers, monetized playbacks or Shorts-engaged events"
+    },
+    {
+      "id": "thumbnail_impressions",
+      "access": "authorized_owner_youtube_studio",
+      "unit": "registered_thumbnail_impressions",
+      "denominator": "eligible_surfaces_for_specific_videos",
+      "limitations": "YouTube does not count all placements, embedding or off-platform exposures as impressions"
+    },
+    {
+      "id": "impressions_ctr",
+      "access": "authorized_owner_youtube_studio",
+      "unit": "fraction_of_registered_impressions_leading_to_views",
+      "denominator": "registered_thumbnail_impressions",
+      "limitations": "Not all-view CTR, purchase conversion or revenue per thousand views"
+    },
+    {
+      "id": "traffic_source_type",
+      "access": "authorized_owner_youtube_studio",
+      "unit": "reporting_source_categories",
+      "denominator": "owner_report_video_views_per_source_type",
+      "limitations": "Home, Suggested, Search, External and other categories use product-specific semantics"
+    },
+    {
+      "id": "estimated_creator_ad_revenue",
+      "access": "authorized_owner_monetization",
+      "unit": "creator_side_earned_account_currency",
+      "denominator": "eligible monetized report and covered time",
+      "limitations": "Requires YPP permissions, correct reporting currency, adjustments and payment receipts; not available from public stats"
+    }
+  ],
+  "proposed_strata": [
+    {
+      "id": "new_verified_entry",
+      "condition": "owner_confirmed_channel_first_publication_date_within_previous_90_days",
+      "included_in_vendor_baseline": false
+    },
+    {
+      "id": "small_incumbent",
+      "condition": "public_subscriber_count_1_to_999_with_channel_creation_or_earliest_publication_older_than_90_days",
+      "included_in_vendor_baseline": null
+    },
+    {
+      "id": "medium_incumbent",
+      "condition": "public_subscriber_count_1000_to_9999_with_publication_history_older_than_90_days",
+      "included_in_vendor_baseline": null
+    }
+  ],
+  "method": {
+    "unit": "channel_video_day_in_fixed_observation_window",
+    "owner_permission_required_for_impressions": true,
+    "content_surface_separation_required": true,
+    "date_windows": [
+      "first_48_hours",
+      "day_3_to_7",
+      "day_8_to_30",
+      "day_31_to_90"
+    ],
+    "stratify_by": [
+      "channel_first_publication_age",
+      "subscribers_at_window_start",
+      "topic",
+      "video_format",
+      "language",
+      "country_if_known_from_owner_and_relevant",
+      "posting_frequency_if_real_upload_log"
+    ],
+    "measure_both_zero_impression_and_zero_view_videos": true,
+    "read_endpoints_within_same_cohort": true,
+    "public_video_and_earning_population_not_equivalent": true
+  },
+  "hard_stops": [
+    "Never call a channel newly established merely because it had fewer than 1000 subscribers at baseline.",
+    "The 61M July indexed channels and 32.9M September selected channels are overlapping vendor frames, not disjoint samples.",
+    "Subscriber growth and net video count changes cannot yield thumbnail impressions, CTR, watch minutes, YPP qualification, buyer conversions or creator profit.",
+    "Owner-only Reach impressions and traffic source reports cannot be imputed from public video views.",
+    "Zero-subscriber, deleted and non-indexed channels may be missing from vendor indexes and must not be treated as successful zero-income participants.",
+    "Impressions vary by counted product surface, language, content format, title/thumbnail and age; fixed windows and consistent eligible exposures are mandatory.",
+    "Authorized channel reporting may contain private account data; aggregate privacy-preserving results rather than uploading individual analytics or private creator credentials.",
+    "Neither source proves a causal effect of posting more video objects or a probability of new-creator success."
+  ],
+  "observed_authorized_channel_rows": [],
+  "unmeasured": {
+    "creator_discovery_ctr_distribution": null,
+    "first_upload_48_hour_impressions": null,
+    "representative_newcomer_growth": null,
+    "zero_impression_rate": null,
+    "viewer_to_customer_conversion": null,
+    "creator_ad_profit": null
+  }
+}

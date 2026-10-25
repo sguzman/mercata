@@ -231,7 +231,7 @@
         "youtube/competition/catalog-substitutes-outside-youtube"
       ],
       "phase": 3,
-      "progress_percent": 62
+      "progress_percent": 65
     },
     {
       "id": "income",
@@ -594,7 +594,7 @@
         "youtube/social-discovery/track-changes-to-official-recommendation-explanations"
       ],
       "phase": 2,
-      "progress_percent": 73
+      "progress_percent": 74
     },
     {
       "id": "community-dynamics",
@@ -2336,14 +2336,21 @@
       "objective": "Design samples that separate impressions, views and follower counts.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and design samples that separate impressions, views and follower counts.",
       "status": "in_progress",
-      "percent": 39,
+      "percent": 72,
       "evidence": [
         "ontology/youtube/competition-observations.json",
         "ontology/youtube/competition-observations.md",
         "ontology/youtube/community-audience-studies.json",
-        "ontology/youtube/community-audience-studies.md"
+        "ontology/youtube/community-audience-studies.md",
+        "ontology/youtube/small-channel-discoverability-protocol.json",
+        "ontology/youtube/small-channel-discoverability-protocol.md",
+        "site/small-channel-discovery-audit.mjs",
+        "tests/small-channel-discovery-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs",
+        "specimens/youtube.json"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/small-channel-discoverability-protocol.json",
       "priority": "standard",
       "phase": 3
     },
@@ -5781,7 +5788,7 @@
       "objective": "Use recent active accounts with comparable publication cadence.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and use recent active accounts with comparable publication cadence.",
       "status": "in_progress",
-      "percent": 72,
+      "percent": 80,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
@@ -5793,9 +5800,13 @@
         "site/channel-cohort-audit.mjs",
         "tests/channel-cohort-audit.test.mjs",
         "tests/site-smoke.mjs",
-        "site/app.js"
+        "site/app.js",
+        "ontology/youtube/small-channel-discoverability-protocol.json",
+        "ontology/youtube/small-channel-discoverability-protocol.md",
+        "site/small-channel-discovery-audit.mjs",
+        "tests/small-channel-discovery-audit.test.mjs"
       ],
-      "artifact": "ontology/youtube/channel-cohort-observations-2026.json",
+      "artifact": "ontology/youtube/small-channel-discoverability-protocol.json",
       "priority": "standard",
       "phase": 2
     },
@@ -6543,7 +6554,7 @@
       "objective": "Establish cohort definitions before projecting category growth.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and establish cohort definitions before projecting category growth.",
       "status": "in_progress",
-      "percent": 46,
+      "percent": 51,
       "evidence": [
         "ontology/youtube/competition-observations.json",
         "ontology/youtube/competition-observations.md",
@@ -6558,9 +6569,13 @@
         "specimens/youtube.json",
         "ontology/youtube/creator-index-comparison-2026.json",
         "ontology/youtube/creator-index-comparison-2026.md",
-        "tests/creator-index-comparison.test.mjs"
+        "tests/creator-index-comparison.test.mjs",
+        "ontology/youtube/small-channel-discoverability-protocol.json",
+        "ontology/youtube/small-channel-discoverability-protocol.md",
+        "site/small-channel-discovery-audit.mjs",
+        "tests/small-channel-discovery-audit.test.mjs"
       ],
-      "artifact": "ontology/youtube/channel-cohort-observations-2026.json",
+      "artifact": "ontology/youtube/small-channel-discoverability-protocol.json",
       "priority": "standard",
       "phase": 4
     },
