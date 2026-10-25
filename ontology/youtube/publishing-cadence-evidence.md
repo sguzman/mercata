@@ -48,3 +48,9 @@ The AIR figures condition on niche and size among a small owner-Analytics sample
 A robust next study must separate format, country, channel age, effort and audience scale, collect an independently specified sample of peers, calculate median and dispersion *within each compatible cohort*, and retain nonpublishing and failed entrants when the target is newcomer outcomes. Avoid storing creator identities or unpublished private analytics.
 
 Related: [creator production cost and time](production-costs.md), [newcomer income methodology](newcomer-income-cohort.md), and [competition sampling](competition-observations.md).
+
+## Another provider sample: June 2026 AIR's 18,000-channel recommendation study
+
+AIR's [June 8, 2026 report](https://air.io/en/audience-growth/does-posting-more-on-youtube-help-we-studied-18000-channels-to-find-out) claims a sample of **18,000 channels** and offers recommended weekly publishing ranges: **5–10 videos/week for Gaming**, **5–10/week for Kids & Animation**, and **0.5–1.5/week for Education**. These are author-recommended ranges derived from a selected observational study, **not the medians** in the independently sampled July 282-channel study or a verified optimal causal dose.
+
+The July study's **26 uploads/month among medium Education channels** and June's **0.5–1.5/week Education recommendation** therefore do not represent contradicting measures of the same statistic. One describes selected channels' observed frequency; the other advises a growth-oriented target from a distinct dataset and objective. The scope, owner overlap, country, production format, cohort composition and confounders remain unknown. No pooled platform-wide upload rate or income effect is justified.

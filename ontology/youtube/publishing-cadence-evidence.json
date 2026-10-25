@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "bounded_publishing_cadence_peer_research",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "reported_niche_quartiles_and_cross_channel_bins_not_entrant_cadence_census",
   "research_question": "What publishing cadence do comparable sampled YouTube channels sustain, and how much dispersion is hidden by their medians?",
   "datasets": [
@@ -266,7 +266,9 @@
     "can_merge_monthly_medians": false,
     "can_estimate_marginal_revenue_from_frequency": false,
     "reason": "One sample is 282 owner-Analytics-access, category/size-stratified channels; the other is a 10.2m channel index with an explicit 1,000-subscriber threshold and both Shorts and long-form uploads.",
-    "safe_usage": "Display separate within-sample upload medians, quartiles and correlations with original denominators and source labels only."
+    "safe_usage": "Display separate within-sample upload medians, quartiles and correlations with original denominators and source labels only.",
+    "third_sample_compatible": false,
+    "third_sample_reason": "AIR June 8 study selects 18,000 channels and reports proposed niche growth-oriented weekly ranges; AIR July 14 study selects 282 owner-analytics partner channels and reports monthly medians/quantiles plus other outcomes. The reported statistics do not estimate the same parameter."
   },
   "unmeasured": {
     "all_new_creators_median_uploads": null,
@@ -275,5 +277,42 @@
     "median_creator_labor_per_upload": null,
     "causal_incremental_upload_profit": null,
     "platform_wide_optimal_upload_rate": null
+  },
+  "additional_study": {
+    "id": "air_18000_june_2026",
+    "source_id": "air-2026-publishing-study-18000",
+    "published_at": "2026-06-08",
+    "reported_sample_channels": 18000,
+    "sampling_frame": "AIR selected YouTube channels across niches; complete random selection and pre/post controls not validated here",
+    "statistic": "publisher_recommended_videos_per_week_from_observational_association",
+    "objective": "publisher-defined subscriber growth association, not median channel output or measured marginal creator profit",
+    "recommendations": [
+      {
+        "niche": "gaming",
+        "min_per_week": 5,
+        "max_per_week": 10
+      },
+      {
+        "niche": "kids_animation",
+        "min_per_week": 5,
+        "max_per_week": 10
+      },
+      {
+        "niche": "education",
+        "min_per_week": 0.5,
+        "max_per_week": 1.5
+      }
+    ],
+    "outcome_effect_randomized": false,
+    "source_cohort_overlap_with_air282": null,
+    "median_uploads_per_month": null,
+    "causal_optimal_frequency": null,
+    "creator_net_profit": null,
+    "limitations": [
+      "This source recommends ranges from selected channel associations; it does not report AIR's July 282-channel observed monthly medians for the same set.",
+      "Study populations, outcome targets and samples differ, so a recommendation must not be directly subtracted from the July 282-channel median.",
+      "Publisher's claimed best posting range is not a causal intervention, universally optimal schedule or forecast newcomer income.",
+      "Weekly recommendation ranges are not automatically equal to monthly published video counts; do not assume four-week calendar months."
+    ]
   }
 }
