@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [educational-video format evidence comparison](ontology/youtube/educational-video-format-cohorts-2026.md) adds three actual selected YouTube research cohorts and explicitly separates owner watch-time retention from public likes/views and unmeasured creator profit.
+
+
 The [public community-Post sampling method](ontology/youtube/public-community-post-protocol.md) distinguishes eligible creator Posts, published video comments, and aggregate engagement counts without collecting commenter identities or inventing community membership sizes.
 
 

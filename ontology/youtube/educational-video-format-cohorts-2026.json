@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "three_selected_educational_video_format_analytics_cohorts",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "stem-spanish-youtube-124-videos-2026",
+    "indonesian-instruction-test-youtube-139-videos-2025",
+    "turkish-math-youtube-126-videos-2025"
+  ],
+  "studies": [
+    {
+      "id": "spanish_stem_exercise_vs_dissemination",
+      "source_id": "stem-spanish-youtube-124-videos-2026",
+      "publication_date": "2026-02-04",
+      "underlying_video_publication_window": "2019_to_2025",
+      "selected_videos": 124,
+      "selection": "one_Spanish_language_STEM_channel_physics_and_engineering",
+      "access": "creator_youtube_analytics_aggregated",
+      "metrics": [
+        "average_view_duration",
+        "audience_retention_after_30_seconds"
+      ],
+      "within_study_findings": [
+        "Science dissemination videos had higher retention than exercise/problem-solving videos within this channel's analyzed sample",
+        "Videos shorter than eight minutes in the sample were associated with stronger retention",
+        "Fixed standard introductions were associated with early retention loss",
+        "Narration speed showed limited association with retention in reported abstract"
+      ],
+      "no_causal_assignment": true,
+      "creator_cash_profit_observed": false,
+      "warning": "Single Spanish-language STEM channel; no randomized video-length assignment, viewer income, all-platform success rate or repeat-person retention."
+    },
+    {
+      "id": "indonesian_instruction_vs_test",
+      "source_id": "indonesian-instruction-test-youtube-139-videos-2025",
+      "publication_date": "2025-03-05",
+      "selected_videos": 139,
+      "sampling_frame_videos": 218,
+      "selection": "proportionally_random_within_two_video_categories_on_one_Indonesian_educational_channel",
+      "access": "creator_youtube_analytics_aggregated",
+      "metrics": [
+        "video_views",
+        "shares",
+        "likes",
+        "watch_time",
+        "average_view_duration"
+      ],
+      "within_study_findings": [
+        "Instructional-video group had higher view and share measurements",
+        "Practice-test group had higher likes, watch-time duration and average view duration"
+      ],
+      "no_causal_assignment": true,
+      "creator_cash_profit_observed": false,
+      "warning": "One channel, sampled videos within pre-existing categories; absolute viewer cohorts, purchase outcomes and all-channel generalization are not established."
+    },
+    {
+      "id": "turkish_highly_viewed_mathematics",
+      "source_id": "turkish-math-youtube-126-videos-2025",
+      "publication_date": "2025-09-01",
+      "selected_videos": 126,
+      "selection": "highly_viewed_Turkish_language_mathematics_education_videos",
+      "access": "published_public_YouTube_video_counter_analysis",
+      "metrics": [
+        "views",
+        "likes",
+        "comments"
+      ],
+      "within_study_findings": [
+        "Video duration was not significantly correlated with the selected view, like or comment engagement metrics",
+        "Context and mathematical content categories matter; a single length rule did not emerge"
+      ],
+      "no_causal_assignment": true,
+      "creator_cash_profit_observed": false,
+      "warning": "Highly viewed selected videos are conditioned on prior visibility, do not include owner retention or actual learning completion, and are not representative of new channels."
+    }
+  ],
+  "comparability_rules": [
+    "Spanish STEM channel owner-only average view duration and 30-second retention are not equivalent to Turkish public views, likes and comments.",
+    "Instructional and practice-test video groups on one Indonesian channel are not independent samples of all learners.",
+    "A selected under-eight-minute retention association and a separate null length correlation in Turkish math videos do not contradict each other because samples and outcome metrics differ.",
+    "The studies are observational; educational format and video length are selected, not randomly assigned to interchangeable viewer populations.",
+    "View events, shares, likes, measured watch minutes and learning outcomes do not reveal an income model, repeat unique viewers or proven educational effectiveness.",
+    "Online-course learning-system view statistics from non-YouTube platforms must not be silently pooled with YouTube analytics.",
+    "No source supports a universal ideal video duration or causal claim that fixed introductions lower creator revenue."
+  ],
+  "never_infer": [
+    "universal_best_minutes",
+    "typical_learning_minutes",
+    "creator_revenue",
+    "creator_profit",
+    "viewer_to_buyer_conversion",
+    "causal_duration_uplift"
+  ],
+  "actual_mercata_channel_observations": [],
+  "representative_education_video_earnings": null,
+  "global_education_watch_minutes": null,
+  "all_education_unique_viewers": null,
+  "observed_creator_hourly_profit": null
+}

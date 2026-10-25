@@ -8,6 +8,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 The [live fan-funding product matrix](live-monetization-units-2026.md), [source keyed definitions](live-monetization-units-2026.json) and [denominator calculator](../../site/live-monetization-denominators.mjs) distinguish Commerce Product Module's net 70% share from Virtual Items Rubies at USD 0.01 each, and document current eligible horizontal/vertical Gifts surfaces. No producer earnings or customer conversion outcomes are inferred.
 
+## Empirical educational YouTube video format comparisons
+
+The [three peer-reviewed educational video comparisons](educational-video-format-cohorts-2026.md), [machine population crosswalk](educational-video-format-cohorts-2026.json) and [metric compatibility auditor](../../site/educational-video-evidence.mjs) report 124 Spanish STEM, 139 sampled Indonesian instruction/practice and 126 selected Turkish mathematics videos without pooling incompatible owner retention, public reactions, or claiming a universal ideal video length.
+
 ## Public creator Posts and comment-community observation
 
 The [public community Post research protocol](public-community-post-protocol.md), [machine selection and privacy contract](public-community-post-protocol.json), and [public event counter validator](../../site/public-community-post-audit.mjs) distinguish Posts from YouTube video comments, lack of public reach denominators and individual-person privacy. No comment bodies or people are collected.
