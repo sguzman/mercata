@@ -16,11 +16,24 @@ These are **yearly averages and year-on-year changes**. None measures a change b
 
 In a distinct Q2 2025 report, [Barb](https://www.barb.co.uk/news/barb-starts-reporting-tv-set-viewing-to-youtube-channels-in-world-first-initiative/) estimated that **TV sets accounted for 53% of the in-home Wi-Fi YouTube viewing of children aged 4–15**. That share is a **device distribution**, not a seasonal percentage, and does not describe cellular or out-of-home viewing.
 
+## Adjacent seasonal evidence: U.S. children's television (not YouTube)
+
+[Nielsen's July 2025 account of its June TV measurement](https://www.nielsen.com/insights/2025/what-us-kids-watched-tv-streaming-summer-june/) reports a comparison for **U.S. children aged 6–17**, June 2025 against May 2025:
+
+| Nielsen TV-screen measure | June relative to May 2025 |
+| --- | ---: |
+| Television impressions, all sources | +27% |
+| Television impressions, streaming sources combined | +25% |
+
+This is a **measured month-on-month change in television impressions**, not unique viewers, YouTube watch minutes, YouTube creator earnings, or specifically children's programming. The measured streaming bucket includes services other than YouTube; no YouTube-specific change is given. The period coincides with the beginning of U.S. summer breaks, but does not isolate a causal school-calendar effect from releases, device use, household composition or other changes. Neither percentage can be transferred to the UK's Barb age 4–15 annual YouTube baseline or treated as a projected seasonal lift for a child-directed channel.
+
+The machine record stores this as an **adjacent comparator**, with YouTube-specific summer lift, sample size and causal effect remaining `null`.
+
 ## What still needs measurement
 
 Seasonality requires comparable **dated age-specific viewing series**, using a consistent territory, device coverage, child age range, content category and sampling method. Plausible hypotheses include school-term versus holiday weeks, Christmas and New Year, summer breaks, Halloween-related categories, and after-school clock hours. The appropriate school calendar must match the country; the same holiday names do not have universal dates or usage effects.
 
-The sources inspected so far do not provide a validated cross-month school-break contrast for UK YouTube viewing or a trend series specific to children's music/animation. An annual +8% change **must not** be relabeled a summer lift. An after-school daily pattern (if independently measured) is not the same as seasonality across the year. A single viral nursery-rhyme video is not an age-specific child audience sample.
+The inspected sources still do not provide a validated cross-month school-break contrast for UK YouTube viewing or a trend series specific to children's music/animation. An annual +8% change **must not** be relabeled a summer lift. An after-school daily pattern (if independently measured) is not the same as seasonality across the year. A single viral nursery-rhyme video is not an age-specific child audience sample.
 
 ## Integrity and child privacy
 

@@ -7,7 +7,8 @@
   "scope": "Aggregate UK YouTube viewing among ages 4–15 as observed by Barb/Ofcom, not children globally and not a children's genre-only estimate",
   "sources": [
     "ofcom-children-parents-media-2026",
-    "barb-uk-screen-share-2025"
+    "barb-uk-screen-share-2025",
+    "nielsen-us-children-june-tv-2025"
   ],
   "yearly_context": [
     {
@@ -140,6 +141,37 @@
     "Children's viewing time is not synonymous with Made for Kids content, preschool viewing or educational content.",
     "Shorts, live and copyright-audio-matched selected channel audiences may be excluded from some provider-specific panels.",
     "Child location, gender, interests, profiles, watch histories and credentials must not be collected for this research.",
-    "UK measures cannot be projected onto all countries without appropriate independent frames."
-  ]
+    "UK measures cannot be projected onto all countries without appropriate independent frames.",
+    "The U.S. Nielsen May-to-June 2025 changes are TV impressions for ages 6–17 across all sources or all streaming; neither is the change in YouTube child viewers or viewing minutes.",
+    "Month-on-month TV increases at the beginning of summer are not causal estimates of school breaks, nor UK seasonality or made-for-kids video demand."
+  ],
+  "adjacent_seasonal_context": {
+    "id": "us_child_tv_may_june_2025",
+    "source_id": "nielsen-us-children-june-tv-2025",
+    "source_period": "2025-05_to_2025-06",
+    "geography": "United States",
+    "age_range": "6–17",
+    "context": "TV-screen usage as schools let out, not a YouTube-specific viewing series",
+    "unit": "month_on_month_relative_percent_change_in_tv_impressions",
+    "observations": [
+      {
+        "id": "all_tv",
+        "description": "All television sources",
+        "relative_change_percent": 27
+      },
+      {
+        "id": "streaming_tv",
+        "description": "Streaming sources combined",
+        "relative_change_percent": 25
+      }
+    ],
+    "matched_age_scope": true,
+    "youtube_platform_specific": false,
+    "measured_child_directed_content_only": false,
+    "unique_viewer_count": null,
+    "child_youtube_monthly_change_percent": null,
+    "causal_school_break_effect_percent": null,
+    "sample_n": null,
+    "comparability_to_uk_annual_youtube_minutes": "incompatible_platform_geography_period_and_metric"
+  }
 }

@@ -1416,6 +1416,16 @@ function renderChildrenSeasonality(data,dossier){
   grid.append(card);
  }
  details.append(grid);
+ const adjacent=data.adjacent_seasonal_context;
+ if(adjacent?.observations?.length===2 && adjacent.youtube_platform_specific===false){
+  const all=adjacent.observations.find(item=>item.id==='all_tv');
+  const streaming=adjacent.observations.find(item=>item.id==='streaming_tv');
+  if(all && streaming){
+   details.append(make('p','children-seasonality-comparator measure-limit',
+    'U.S. TV context (ages '+adjacent.age_range+', May–June 2025): all-source TV impressions +'+all.relative_change_percent+'%; streaming impressions +'+streaming.relative_change_percent+'%. Nielsen\'s TV-screen changes are not a YouTube-specific seasonal rate or causal school-break effect.'));
+   details.append(audienceSources([adjacent.source_id],dossier));
+  }
+ }
  details.append(make('p','measure-limit','Measured seasonal effects: unknown. School-break, winter holiday, summer, Halloween and after-school contrasts require comparable dated data. Age and device boundaries must remain consistent; no child-level histories are collected.'));
  details.append(audienceSources(data.sources,dossier));
  const link=make('a','inline-link','Annual source values and missing seasonal evidence ↗');

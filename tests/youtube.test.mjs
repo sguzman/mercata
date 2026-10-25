@@ -213,6 +213,21 @@ test('Child viewing yearly averages never become an inferred seasonal holiday li
  assert(model.seasonal_questions.every(x=>x.measured_relative_change===null&&x.source_ids.every(id=>sources.has(id))));
  assert.equal(model.device_context.television_share_percent,53);
  assert.equal(model.device_context.not_seasonality,true);
+ const adjacent=model.adjacent_seasonal_context;
+ assert.equal(adjacent.source_id,'nielsen-us-children-june-tv-2025');
+ assert.deepEqual(adjacent.observations.map(x=>x.relative_change_percent),[27,25]);
+ assert.deepEqual(adjacent.observations.map(x=>x.id),['all_tv','streaming_tv']);
+ assert.equal(adjacent.unit,'month_on_month_relative_percent_change_in_tv_impressions');
+ assert.equal(adjacent.age_range,'6–17');
+ assert.equal(adjacent.youtube_platform_specific,false);
+ assert.equal(adjacent.measured_child_directed_content_only,false);
+ assert.equal(adjacent.unique_viewer_count,null);
+ assert.equal(adjacent.child_youtube_monthly_change_percent,null);
+ assert.equal(adjacent.causal_school_break_effect_percent,null);
+ assert.equal(adjacent.sample_n,null);
+ assert(sources.has(adjacent.source_id));
+ assert(dossier.claims.some(claim=>claim.id==='us-child-tv-monthly-context-not-youtube-2025' &&
+  claim.source_ids.includes(adjacent.source_id)));
  assert(model.inferential_gates.filter(x=>x.passed).length===1);
  assert(Object.values(model.unknowns).every(v=>v===null));
 });

@@ -360,6 +360,9 @@ try{
     await seasonality.locator('summary').click();
     assert((await seasonality.textContent()).includes('7h 07m'));
     assert((await seasonality.textContent()).includes('seasonal effects: unknown'));
+    assert((await seasonality.textContent()).includes('all-source TV impressions +27%'));
+    assert((await seasonality.textContent()).includes('streaming impressions +25%'));
+    assert((await seasonality.textContent()).includes('not a YouTube-specific seasonal rate'));
     const genderEvidence=page.locator('.gender-community-evidence');
     assert.equal(await genderEvidence.locator('.gender-community-card').count(),2,'Missing aggregate gender data limits');
     await genderEvidence.locator('summary').click();
