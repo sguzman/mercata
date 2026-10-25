@@ -35,3 +35,7 @@ Before claiming one service is more accessible or profitable for a defined perso
 No normalized earnings median, zero-earner rate, hourly profit distribution, creator population count, cross-platform audience overlap, or causal best strategy has been measured. The [newcomer-income sampling protocol](newcomer-income-cohort.md) defines the necessary empirical standard. The [YouTube geographic scope](geographic-scope.md) guards against comparing regional figures with different denominators.
 
 These candidates remain only a **comparison methodology within the YouTube dossier**. Any separate specimen research requires explicit authorization and independent admission.
+
+## Documented switching and consent boundaries (October 2026)
+
+The [four-service portability crosswalk](cross-platform-portability-2026.md) records separate media-file copying, limited-duration Twitch recordings, account data requests, and Vimeo OTT customer CSV exports. None is treated as an empirical follower migration rate or a comparative earnings test.

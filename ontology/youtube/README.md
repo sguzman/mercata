@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [cross-platform switching and portability study](cross-platform-portability-2026.md), [evidence matrix](cross-platform-portability-2026.json) and [testable validator](../../site/creator-portability-audit.mjs) distinguish copying videos from exporting actual seller customer lists, subscriber relationships, and monetization rights.
+
+
 [Historical YouTube ownership and monetization chronology](monetization-history-2006-2027.md) · [machine timeline](monetization-history-2006-2027.json) · [validation](../../site/youtube-history-audit.mjs). The thirteen dated primary-source events are not an individual earnings panel or current eligibility promises.
 
 

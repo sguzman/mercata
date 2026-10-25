@@ -3771,6 +3771,39 @@
       "evidence_class": "dated_original_youtube_program_history_or_corporate_filing",
       "license": "Source URL and original research summary only; no third-party media copied",
       "notes": "Historical platform event; old thresholds, launch dates and corporate amounts are not current personal payouts."
+    },
+    {
+      "id": "twitch-vod-export-retention-2026",
+      "url": "https://help.twitch.tv/s/article/video-on-demand",
+      "publisher": "Twitch Help",
+      "title": "On-Demand Content on Twitch",
+      "notes": "Creator-enabled VOD capture; tiered 7, 14 and 60-day retention, individual VOD downloads or linked YouTube media export, not a social audience export.",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "first_party_video_creator_media_or_customer_export_help",
+      "license": "Linked official documentation, independently paraphrased feature boundaries; no actual account or customer data collected"
+    },
+    {
+      "id": "tiktok-user-data-request-2026",
+      "url": "https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/requesting-your-data",
+      "publisher": "TikTok Support",
+      "title": "Requesting your data",
+      "notes": "TikTok describes requesting a user account data file; downloaded-data contents and third-party audience transfer are not established by this comparison.",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "first_party_video_creator_media_or_customer_export_help",
+      "license": "Linked official documentation, independently paraphrased feature boundaries; no actual account or customer data collected"
+    },
+    {
+      "id": "vimeo-ott-customer-export-2026",
+      "url": "https://help.vimeo.com/hc/en-us/articles/12427213530257-Managing-your-customers-on-Vimeo-OTT",
+      "publisher": "Vimeo Help Center",
+      "title": "Managing your customers on Vimeo OTT",
+      "notes": "Seller-side transaction and customer CSV export includes current status and marketing opt-in flag; not consent for marketing unopted buyers or subscriber account migration.",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "first_party_video_creator_media_or_customer_export_help",
+      "license": "Linked official documentation, independently paraphrased feature boundaries; no actual account or customer data collected"
     }
   ],
   "claims": [
@@ -8173,6 +8206,18 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Original platform statements and company filings, not an economic creator cohort, representative payment series or causal outcome study."
+    },
+    {
+      "id": "youtube-video-vs-buyer-portability-distinction",
+      "text": "Official YouTube and Twitch support materials distinguish downloading or exporting uploaded/recorded media from migration of subscriber relationships. Vimeo OTT provides seller-side customer and transaction CSV exports with marketing opt-in fields. These are different portability units and do not establish a measured creator migration success rate.",
+      "source_ids": [
+        "yt-own-video-download",
+        "twitch-vod-export-retention-2026",
+        "vimeo-ott-customer-export-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Account-specific media may be unavailable or expire; Vimeo seller CSVs carry privacy restrictions; no cross-platform follower transfer, reactivation probability, creator profit or actual buyer migration was measured."
     }
   ],
   "observations": [],

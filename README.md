@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [cross-platform creator-portability evidence](ontology/youtube/cross-platform-portability-2026.md) distinguishes YouTube and Twitch media exports, TikTok data requests and Vimeo OTT consent-aware customer CSVs, without claiming transferable follower relationships or measured switching profits.
+
+
 The [2006–2027 platform and monetization chronology](ontology/youtube/monetization-history-2006-2027.md) tracks thirteen dated ownership, earning-product and program-eligibility events with source links, separated effective dates and unknown creator profit.
 
 

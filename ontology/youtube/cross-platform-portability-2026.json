@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "public_cross_platform_creator_portability_crosswalk",
+  "as_of": "2026-10-25",
+  "method": "Compare four first-party help routes using separate columns for copying media, exporting audience relationships, accessing consented sales records and retaining historic engagement. Unknown is null rather than no.",
+  "population": "Account-owner capabilities of YouTube, Twitch, TikTok and Vimeo OTT; no observed migration cohort or private records",
+  "source_ids": [
+    "yt-own-video-download",
+    "yt-brand-channel-transfer",
+    "analytics-audience",
+    "twitch-vod-export-retention-2026",
+    "tiktok-user-data-request-2026",
+    "vimeo-ott-customer-export-2026"
+  ],
+  "routes": [
+    {
+      "platform": "youtube",
+      "route": "Owner downloads eligible uploaded videos with Studio or Google Takeout.",
+      "media_copy_possible": true,
+      "native_follower_or_subscriber_transfer_verified": null,
+      "authorized_customer_csv_possible": null,
+      "retained_engagement_and_recommendation_history_verified": null,
+      "source_ids": [
+        "yt-own-video-download",
+        "yt-brand-channel-transfer",
+        "analytics-audience"
+      ],
+      "restrictions": [
+        "Downloaded MP4 copies are not necessarily original editing projects or a complete channel archive.",
+        "Brand Account transfer is internal, carries possible deletion and eligibility risks, and is not a transfer to Twitch, TikTok or Vimeo.",
+        "Subscribers and aggregated returning viewer reports are not a consented external customer contact list."
+      ],
+      "retention_days_by_tier": null,
+      "measured_conversion_of_audience": null,
+      "median_creator_switching_cost_usd": null,
+      "median_creator_switching_hours": null
+    },
+    {
+      "platform": "twitch",
+      "route": "Enabled past broadcasts can be downloaded individually or exported directly to a linked YouTube account.",
+      "media_copy_possible": true,
+      "native_follower_or_subscriber_transfer_verified": null,
+      "authorized_customer_csv_possible": null,
+      "retained_engagement_and_recommendation_history_verified": null,
+      "source_ids": [
+        "twitch-vod-export-retention-2026"
+      ],
+      "restrictions": [
+        "Past Broadcast storage must have been enabled before streaming; a past broadcast is not guaranteed to exist.",
+        "Twitch's Help says single-video download/export rather than built-in bulk downloading; muted audio may stay muted.",
+        "Exporting a video to YouTube does not transfer followers, live subscriptions, Bits, comments or monetization approval.",
+        "Vertical/2K variants may expire sooner than the remaining horizontal/1080p video."
+      ],
+      "retention_days_by_tier": {
+        "non_affiliate": 7,
+        "affiliate": 14,
+        "partner_or_prime_or_turbo": 60,
+        "high_quality_or_vertical_variant": 7
+      },
+      "measured_conversion_of_audience": null,
+      "median_creator_switching_cost_usd": null,
+      "median_creator_switching_hours": null
+    },
+    {
+      "platform": "tiktok",
+      "route": "Account holder may request an account data download through TikTok settings; specific video/audience transfer capability is not validated here.",
+      "media_copy_possible": null,
+      "native_follower_or_subscriber_transfer_verified": null,
+      "authorized_customer_csv_possible": null,
+      "retained_engagement_and_recommendation_history_verified": null,
+      "source_ids": [
+        "tiktok-user-data-request-2026"
+      ],
+      "restrictions": [
+        "The request workflow is not a documented platform-to-platform transfer mechanism.",
+        "The public help snippet reviewed here does not establish that TikTok exports all media files, subscribers, recommendation data or contact consent.",
+        "No inference about global completeness or country-specific access is made."
+      ],
+      "retention_days_by_tier": null,
+      "measured_conversion_of_audience": null,
+      "median_creator_switching_cost_usd": null,
+      "median_creator_switching_hours": null
+    },
+    {
+      "platform": "vimeo_ott",
+      "route": "Authorized seller may export Customers and Transactions CSVs, including customer status and marketing opt-in fields.",
+      "media_copy_possible": null,
+      "native_follower_or_subscriber_transfer_verified": null,
+      "authorized_customer_csv_possible": true,
+      "retained_engagement_and_recommendation_history_verified": null,
+      "source_ids": [
+        "vimeo-ott-customer-export-2026"
+      ],
+      "restrictions": [
+        "A customer CSV is sensitive account data; this research records only the publicly documented schema, not real customers.",
+        "Marketing opt-in must be respected; having billing records is not universal marketing authorization.",
+        "A CSV export does not prove automatic transfer of active subscriptions, app-store billing agreements or buyer logins to another platform.",
+        "Video asset export and historic recommendations are not established by this customer-management help document."
+      ],
+      "retention_days_by_tier": null,
+      "measured_conversion_of_audience": null,
+      "median_creator_switching_cost_usd": null,
+      "median_creator_switching_hours": null
+    }
+  ],
+  "required_cost_observations": [
+    "Creator's own asset/archive preparation time and missing media",
+    "Rights/license checks before reuse across hosts",
+    "Replacement channel onboarding, payout eligibility and payment delays",
+    "Viewer/customer communications with opt-in permissions where applicable",
+    "Receipts and labor before and after switch, including zeros, abandoned attempts and churn"
+  ],
+  "known_asymmetry": "Twitch documents copying/exporting selected recorded media to YouTube; Vimeo OTT documents an authorized seller customer CSV with marketing consent flags; neither proves native migration of followers or paying subscriptions.",
+  "privacy_rule": "Only document public feature rules. Never export or publish actual customer CSVs, follower identities, account tokens or payment data.",
+  "unmeasured": {
+    "fraction_of_followers_who_migrate": null,
+    "subscriber_reactivation_rate": null,
+    "customer_retention_after_switch": null,
+    "median_switching_cost": null,
+    "median_switching_labor": null,
+    "relative_creator_profit": null
+  }
+}
