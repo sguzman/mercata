@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {evaluateCreatorEntryGate,assessNoNewPurchaseClaims,evaluateCreatorAgeRoute} from '../site/creator-entry-gates.mjs';
+import {evaluateCreatorEntryGate,assessNoNewPurchaseClaims,evaluateCreatorAgeRoute,assessYPPReviewDeadline} from '../site/creator-entry-gates.mjs';
 const load=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 test('Seven official feature gates reference existing registered sources, not new account data',async()=>{
  const [m,d]=await Promise.all([load('ontology/youtube/creator-entry-gates-2026.json'),load('specimens/youtube.json')]);
@@ -61,4 +61,21 @@ test('Age gates split Brazilian channel supervision, age-16 live streaming and a
  assert.equal(evaluateCreatorAgeRoute(m,'guardian_adsense_under18',{age:17}).status,'unknown');
  assert.equal(evaluateCreatorAgeRoute(m,'guardian_adsense_under18',{age:17,approvedGuardianAdSense:true}).actual_approval,null);
  assert.equal(m.unmeasured_local_ages_outside_brazil,null);
+});
+
+test('YPP review clocks use rejection notice, appeal submission or success as distinct start events',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/creator-entry-gates-2026.json'),load('specimens/youtube.json')]);
+ assert.equal(m.ypp_review_lifecycle.stages.length,6);
+ assert(m.ypp_review_lifecycle.source_ids.every(id=>d.evidence.some(x=>x.id===id)));
+ assert.equal(assessYPPReviewDeadline(m,'first_rejection_appeal',21).status,'within_published_appeal_window');
+ assert.equal(assessYPPReviewDeadline(m,'first_rejection_appeal',22).status,'appeal_window_elapsed');
+ assert.equal(assessYPPReviewDeadline(m,'first_rejection_reapply',29).status,'must_wait_to_reapply');
+ assert.equal(assessYPPReviewDeadline(m,'first_rejection_reapply',30).status,'minimum_reapply_wait_elapsed');
+ assert.equal(assessYPPReviewDeadline(m,'repeat_rejection_reapply',89).status,'must_wait_to_reapply');
+ assert.equal(assessYPPReviewDeadline(m,'repeat_rejection_reapply',90).status,'minimum_reapply_wait_elapsed');
+ assert.equal(assessYPPReviewDeadline(m,'initial_application_review',31).status,'published_service_timing_not_a_deterministic_eligibility_window');
+ assert.equal(assessYPPReviewDeadline(m,'appeal_response',15).status,'published_service_timing_not_a_deterministic_eligibility_window');
+ assert.equal(assessYPPReviewDeadline(m,'first_rejection_reapply',-1).status,'unknown');
+ assert.equal(assessYPPReviewDeadline(m,'first_rejection_reapply',30).bank_receipt,null);
+ assert.equal(m.ypp_review_lifecycle.approval_probability,null);
 });

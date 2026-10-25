@@ -14,7 +14,9 @@
     "ypp-main",
     "yt-under18-adsense-guardian-2026",
     "yt-supervised-teen-regional-2026",
-    "google-adsense-age-2026"
+    "google-adsense-age-2026",
+    "yt-ypp-denial-faq-2026",
+    "yt-ypp-rejection-appeal-guidance-2026"
   ],
   "scope": "Account and feature rules documented for prospective creators, not user-specific eligibility, legal or financial advice",
   "activity_gates": [
@@ -300,5 +302,89 @@
       "automatic_channel_approval": false
     }
   ],
-  "unmeasured_local_ages_outside_brazil": null
+  "unmeasured_local_ages_outside_brazil": null,
+  "ypp_review_lifecycle": {
+    "source_ids": [
+      "ypp-main",
+      "yt-ypp-denial-faq-2026",
+      "yt-ypp-rejection-appeal-guidance-2026"
+    ],
+    "stages": [
+      {
+        "id": "initial_application_review",
+        "label": "New qualifying YPP application",
+        "reference_point": "terms_accepted_and_adsense_linked_review_queue_entry",
+        "timing_days_fixed": null,
+        "timing_description": "typically_about_one_month_not_an_sla",
+        "source_ids": [
+          "ypp-main"
+        ],
+        "result_is_automatic_approval": false
+      },
+      {
+        "id": "first_rejection_appeal",
+        "label": "Appeal first rejection",
+        "reference_point": "rejection_notice_date",
+        "last_submission_day_inclusive": 21,
+        "source_ids": [
+          "yt-ypp-denial-faq-2026",
+          "yt-ypp-rejection-appeal-guidance-2026"
+        ],
+        "result_is_automatic_approval": false
+      },
+      {
+        "id": "first_rejection_reapply",
+        "label": "First rejection: reapply",
+        "reference_point": "rejection_notice_date",
+        "first_eligible_day": 30,
+        "source_ids": [
+          "yt-ypp-denial-faq-2026",
+          "yt-ypp-rejection-appeal-guidance-2026"
+        ],
+        "result_is_automatic_approval": false
+      },
+      {
+        "id": "repeat_rejection_reapply",
+        "label": "Repeat rejection: reapply",
+        "reference_point": "rejection_notice_date",
+        "first_eligible_day": 90,
+        "source_ids": [
+          "yt-ypp-denial-faq-2026",
+          "yt-ypp-rejection-appeal-guidance-2026"
+        ],
+        "result_is_automatic_approval": false
+      },
+      {
+        "id": "appeal_response",
+        "label": "Appeal decision service target",
+        "reference_point": "appeal_submission_date",
+        "published_response_days": 14,
+        "source_ids": [
+          "yt-ypp-rejection-appeal-guidance-2026"
+        ],
+        "result_is_automatic_approval": false
+      },
+      {
+        "id": "successful_appeal_readmission",
+        "label": "Accepted appeal: YPP approval/readmission",
+        "reference_point": "appeal_success_decision_date",
+        "published_readmission_days": 30,
+        "source_ids": [
+          "yt-ypp-rejection-appeal-guidance-2026"
+        ],
+        "result_is_automatic_approval": false
+      }
+    ],
+    "cautions": [
+      "A typical one-month application review is not a statistical processing-time sample, maximum deadline or probability of success.",
+      "The 21-day rejection appeal deadline and 30- or 90-day reapplication waits have different purposes and may run from a rejection notice.",
+      "The 14-day appeal response timeframe starts at appeal submission and does not imply cash payment within 14 days.",
+      "A successful appeal can cause approval/readmission within 30 days of that outcome, but does not establish when creator revenue clears a bank.",
+      "Review a live account's exact notice, policy, applicable region and event dates before applying a route; no account state is inferred."
+    ],
+    "reviewed_applications": [],
+    "actual_processing_time_distribution": null,
+    "approval_probability": null,
+    "first_revenue_payment_date": null
+  }
 }

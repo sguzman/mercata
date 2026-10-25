@@ -3130,6 +3130,19 @@ function renderCreatorEntryGates(model,dossier){
   ageGroup.append(ageGrid);
   details.append(ageGroup);
  }
+ if(model.ypp_review_lifecycle?.stages?.length){
+  const reviewGroup=make('div','ypp-review-gates');
+  reviewGroup.append(make('h4','','Review and appeal timing is not settlement timing'));
+  const reviewGrid=make('div','ownership-grid');
+  for(const rule of model.ypp_review_lifecycle.stages){
+   const card=make('article','ownership-card');
+   card.append(make('h5','',rule.label));
+   card.append(make('p','',rule.timing_description||('Clock starts: '+rule.reference_point)));
+   card.append(make('p','measure-limit','No automatic YPP acceptance or bank payment'));
+   card.append(audienceSources(rule.source_ids,dossier));reviewGrid.append(card);
+  }
+  reviewGroup.append(reviewGrid);details.append(reviewGroup);
+ }
  details.append(make('p','measure-limit','Mobile live requires 50 subscribers and may have audience caps under 1,000. Phone-verified long uploads are a different gate. No new paid equipment mandated does not mean zero operating cost.'));
  const link=make('a','inline-link','Read minimum-purchase entry and 2026 feature gate protocol ↗');
  link.href='./ontology/youtube/creator-entry-gates-2026.md';link.target='_blank';link.rel='noopener noreferrer';

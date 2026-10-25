@@ -41,3 +41,18 @@ export function evaluateCreatorAgeRoute(protocol, routeId, context) {
  }
  return {status:'unsupported_route',actual_approval:null};
 }
+
+export function assessYPPReviewDeadline(protocol,routeId,elapsedDays) {
+ const row=protocol.ypp_review_lifecycle.stages.find(x=>x.id===routeId);
+ if(!row)return {status:'unsupported_route',verified_acceptance:null,bank_receipt:null};
+ if(!Number.isSafeInteger(elapsedDays)||elapsedDays<0)
+  return {status:'unknown',verified_acceptance:null,bank_receipt:null};
+ if(Number.isInteger(row.last_submission_day_inclusive))
+  return {status:elapsedDays<=row.last_submission_day_inclusive?'within_published_appeal_window':'appeal_window_elapsed',
+    days_since_reference_event:elapsedDays,verified_acceptance:null,bank_receipt:null};
+ if(Number.isInteger(row.first_eligible_day))
+  return {status:elapsedDays>=row.first_eligible_day?'minimum_reapply_wait_elapsed':'must_wait_to_reapply',
+    days_since_reference_event:elapsedDays,verified_acceptance:null,bank_receipt:null};
+ return {status:'published_service_timing_not_a_deterministic_eligibility_window',
+  days_since_reference_event:elapsedDays,verified_acceptance:null,bank_receipt:null};
+}

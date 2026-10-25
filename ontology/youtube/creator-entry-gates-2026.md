@@ -32,6 +32,24 @@ Three separate and **non-interchangeable** official restrictions require a count
 
 The [age-route validator](../../site/creator-entry-gates.mjs) checks these three distinct ages and roles, returns an *unknown* outcome when a local age or account authorization is unspecified, and never treats a guardian account as automatic channel approval. It does not collect private documents.
 
+## YPP review, rejection and reapplication: clock starts matter
+
+Official [YPP application guidance](https://support.google.com/youtube/answer/72851?hl=en) says a completed qualifying application ordinarily receives a decision in **about one month**, but volume, system issues, resource limitations, or multiple reviews can delay the decision. This is **not a guaranteed maximum or observed distribution**.
+
+YouTube's [rejection FAQ](https://support.google.com/youtube/answer/9235730?hl=en) and [appeal process](https://support.google.com/youtube/answer/9564590?hl=en) describe distinct situations:
+
+| Route | Relative date reference | Official timing |
+|---|---|---|
+| Appeal an application rejection | Rejection notice | File within **21 days** |
+| First rejection, reapply | Rejection email date | Wait **30 days** |
+| Subsequent rejection, reapply | Rejection email date | Wait **90 days** |
+| Appeal response | Appeal submission | YouTube says response within **14 days** |
+| Successful appeal, approval or readmission | Favorable appeal decision | YouTube says within **30 days** |
+
+These are separate rule clocks; adding 21, 30, 14 and 90 together would create a fictional applicant journey. Application review, accepted appeal, YPP enrollment, earning accrual, AdSense finalization and bank receipt are **different events**. Not a single applicant or appeal was observed for this record.
+
+The [review clock evaluator](../../site/creator-entry-gates.mjs) reports only whether a hypothetical explicit number of days passes a documented submission/reapplication rule, not whether a reviewer would approve the channel. Suspension paths and special notice rules require consulting their exact source and cannot be presumed identical to an initial rejection.
+
 ## Eligibility, timelines, and privacy
 
 Standard publication, long videos, mobile livestreaming, advanced features and paid YPP each require their own evaluation. Livestream conditions differ from monetization conditions. YPP subscriber/watch-hour/Shorts thresholds and regional features can change; treat the platform's contemporaneous approval record as authoritative, not a planned creator scenario.

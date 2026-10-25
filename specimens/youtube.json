@@ -3463,6 +3463,28 @@
       "evidence_class": "official_localized_title_description_publishing",
       "license": "Official creator guidance linked and independently summarized",
       "notes": "Creator can add translated titles and descriptions per video/language; documented discoverability in readers' language but no search volume or conversion measurement."
+    },
+    {
+      "id": "yt-ypp-denial-faq-2026",
+      "url": "https://support.google.com/youtube/answer/9235730?hl=en",
+      "publisher": "YouTube Help",
+      "title": "My channel was rejected for monetization FAQs",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_first_repeat_ypp_rejection_timelines",
+      "license": "Official guidance linked and separately paraphrased",
+      "notes": "First denied application: appeal within21 days or reapply after30; repeat denied reapply after90. Re-evaluation not guaranteed approval."
+    },
+    {
+      "id": "yt-ypp-rejection-appeal-guidance-2026",
+      "url": "https://support.google.com/youtube/answer/9564590?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Appeal a YouTube Partner Program suspension or application rejection",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_ypp_appeal_window_and_resolution_timeline",
+      "license": "Official Help center linked, concise independently authored rules",
+      "notes": "Rejected applicant can appeal within21days, review decision within14days after submission, successful appeal YPP approval or readmission within30 days; reapplication restrictions depend on reason. Dates of notice and suspension matter."
     }
   ],
   "claims": [
@@ -7636,6 +7658,29 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "No owner Studio permissions or translated audience reports were accessed; availability differs per video and neither a localization option nor a viewer preference establishes new sales or reach."
+    },
+    {
+      "id": "ypp-2026-application-review-not-guaranteed",
+      "text": "YouTube states its YPP application decision is typically provided in about one month once a channel is in review, with possible queue or repeated-review delays; neither qualifying subscriber/view thresholds nor passing time makes acceptance automatic.",
+      "source_ids": [
+        "ypp-main",
+        "yt-ypp-denial-faq-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Typical review timing is an indicative service period, not a fixed maximum or guarantee of payout; no applicant records or observed processing durations collected."
+    },
+    {
+      "id": "ypp-2026-rejection-and-appeal-timeframes",
+      "text": "YouTube documents a 21-day appeal window for YPP application rejection, first-rejection reapplication after 30 days, and repeat-rejection reapplication after 90 days. Appeal response is stated within 14 days, and success may lead to YPP approval/readmission within 30 days, subject to channel policy review.",
+      "source_ids": [
+        "yt-ypp-denial-faq-2026",
+        "yt-ypp-rejection-appeal-guidance-2026",
+        "ypp-main"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Different time origins: rejection notice versus appeal submission; appeal/suspension-specific exceptions exist. None guarantees program acceptance, actual earnings, or bank settlement."
     }
   ],
   "observations": [],
