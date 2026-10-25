@@ -112,6 +112,10 @@ The [quarterly gaming broadcast evidence](gaming-livestream-quarterly-2026.md), 
 
 The [peer-reviewed Patreon monthly income panel](patreon-earnings-timeframe-2026.md) and [machine source data](patreon-earnings-timeframe-2026.json) add March 2018, 2021 and 2024 YouTube-affiliated Patreon summary tables and a comparative 2024 sample of external platform affiliations. The analysis **reuses** the existing Patreon academic source family, counts only >$10 Patreon earners and cannot identify native YouTube advertising earnings, creator profits or membership conversion by niche.
 
+## Independent music and chart measurement
+
+The [music-chart and independent creator rights study](music-viewing-charts-rights-2026.md), [machine source matrix](music-viewing-charts-rights-2026.json) and [metric tests](../../tests/music-viewing-charts-rights.test.mjs) distinguish Omdia's music-video watch-time share from the official video-view and Shorts-music-creation chart units. Music rights and claimed revenues are not the same as views or actual musician net profit.
+
 ## Earning model
 
 Use independent contracts and earning paths for ordinary Watch Page ads, pooled Shorts Feed advertising, viewer-funded features, subscriptions, and external products or sponsors. The [policy ledger](policies.json) defines distinct application thresholds, share bases and content restrictions. Neither 55%, 45% nor 70% is a guaranteed percentage of total viewer spending or total video views. Creator earnings depend on monetized playbacks, audience, geography, eligibility and other product-specific circumstances. Costs, time, taxes and revenue volatility must be analyzed separately.

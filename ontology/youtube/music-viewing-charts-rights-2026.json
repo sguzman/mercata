@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "music_views_charts_and_creator_rights_boundary",
+  "as_of": "2026-10-24",
+  "status": "official_chart_definitions_and_industry_watch_share_no_measured_music_creator_net_returns",
+  "source_ids": [
+    "yt-music-charts-metric-rules-2026",
+    "omdia-video-supply-2026",
+    "music-content-id"
+  ],
+  "industry_watch_time": {
+    "source_id": "omdia-video-supply-2026",
+    "published_at": "2026-01-28",
+    "reported_music_videos_share_of_youtube_watch_time_percent": 33,
+    "unit": "estimated_share_of_playback_time",
+    "unique_listeners": null,
+    "artist_income": null,
+    "independent_reproduction_verified": false
+  },
+  "music_charts": [
+    {
+      "id": "weekly_top_songs",
+      "unit": "attributed_video_view_events",
+      "source_ids": [
+        "yt-music-charts-metric-rules-2026"
+      ],
+      "inputs": [
+        "official_music_video",
+        "user_video_with_recording",
+        "lyric_video"
+      ],
+      "exclude_shorts_certain": false,
+      "reported_creator_royalties": null
+    },
+    {
+      "id": "daily_music_videos",
+      "unit": "official_music_video_view_events",
+      "source_ids": [
+        "yt-music-charts-metric-rules-2026"
+      ],
+      "inputs": [
+        "official_music_video"
+      ],
+      "exclude_shorts_certain": null,
+      "reported_creator_royalties": null
+    },
+    {
+      "id": "daily_and_weekly_shorts_music",
+      "unit": "number_of_shorts_created_using_song",
+      "source_ids": [
+        "yt-music-charts-metric-rules-2026"
+      ],
+      "inputs": [
+        "shorts_creations_with_song"
+      ],
+      "exclude_shorts_certain": false,
+      "reported_creator_royalties": null
+    },
+    {
+      "id": "weekly_top_artists",
+      "unit": "attributed_artist_catalog_video_views",
+      "source_ids": [
+        "yt-music-charts-metric-rules-2026"
+      ],
+      "inputs": [
+        "official_videos",
+        "official_live_performances",
+        "remixes",
+        "lyrics",
+        "collaborations"
+      ],
+      "exclude_shorts_certain": null,
+      "reported_creator_royalties": null
+    },
+    {
+      "id": "music_insights",
+      "unit": "attributed_song_views_excluding_shorts",
+      "source_ids": [
+        "yt-music-charts-metric-rules-2026"
+      ],
+      "inputs": [
+        "official_music_video",
+        "user_video_with_song",
+        "lyric_video"
+      ],
+      "exclude_shorts_certain": true,
+      "reported_creator_royalties": null
+    }
+  ],
+  "creator_content_formats": [
+    {
+      "id": "official_music_video",
+      "label": "Official song / music video",
+      "rights": "Artist or label recording and composition, with eligible rights administration; ownership not implied by chart rank",
+      "measure": "official video views",
+      "source_ids": [
+        "music-content-id",
+        "yt-music-charts-metric-rules-2026"
+      ],
+      "sampled_unique_creators": null,
+      "measured_net_income": null
+    },
+    {
+      "id": "lyric_and_fan_ugc",
+      "label": "Lyric and user-generated music video",
+      "rights": "Song, sound recording, visuals and uploaders can have distinct rights holders",
+      "measure": "song-attributed views, not a second unique listener count",
+      "source_ids": [
+        "music-content-id",
+        "yt-music-charts-metric-rules-2026"
+      ],
+      "sampled_unique_creators": null,
+      "measured_net_income": null
+    },
+    {
+      "id": "shorts_music_use",
+      "label": "Shorts made with music",
+      "rights": "Rights and eligibility depend on the platform's music use and claims policy",
+      "measure": "Shorts using recording, not listener population",
+      "source_ids": [
+        "music-content-id",
+        "yt-music-charts-metric-rules-2026"
+      ],
+      "sampled_unique_creators": null,
+      "measured_net_income": null
+    },
+    {
+      "id": "original_independent_artist",
+      "label": "Original independent musician uploads",
+      "rights": "Recording and composition may be original yet use separately licensed materials",
+      "measure": "artist uploads and view events; no representative income",
+      "source_ids": [
+        "music-content-id",
+        "yt-music-charts-metric-rules-2026"
+      ],
+      "sampled_unique_creators": null,
+      "measured_net_income": null
+    },
+    {
+      "id": "cover_and_reaction_music",
+      "label": "Covers, reviews and reaction clips",
+      "rights": "Performance, composition, synchronization and reused recording permissions differ",
+      "measure": "video events cannot establish who gets advertising proceeds",
+      "source_ids": [
+        "music-content-id",
+        "yt-music-charts-metric-rules-2026"
+      ],
+      "sampled_unique_creators": null,
+      "measured_net_income": null
+    },
+    {
+      "id": "live_performance_or_instruction",
+      "label": "Live performance and music tutorials",
+      "rights": "Live and archived content may involve composition and recording rights",
+      "measure": "stream watch hours not equivalent to music video chart rank",
+      "source_ids": [
+        "music-content-id",
+        "yt-music-charts-metric-rules-2026"
+      ],
+      "sampled_unique_creators": null,
+      "measured_net_income": null
+    }
+  ],
+  "rights_coverage": {
+    "source_id": "music-content-id",
+    "matched_video_actions": [
+      "block",
+      "monetize_or_share_some_revenue",
+      "track"
+    ],
+    "jurisdiction_variation": true,
+    "payout_rates_measured": false
+  },
+  "restrictions": [
+    "Publisher music-video viewing share is not total music listening or distinct people.",
+    "Top Songs on Shorts count creations, not views; they cannot be added to song video-view rankings.",
+    "Music Insights omits Shorts, and its song attribution may span numerous uploaders.",
+    "Content ID owner rules and claimant geography can alter availability and advertising payout independently of video popularity.",
+    "Selected chart rankings are not a random sample of emerging or nonmonetized independent music creators."
+  ],
+  "unmeasured": {
+    "unique_music_listeners": null,
+    "independent_musicians_on_platform": null,
+    "median_music_creator_ad_rpm": null,
+    "typical_cover_video_profit": null,
+    "royalty_rate_per_music_view": null,
+    "eligible_monetized_music_channels": null,
+    "music_fan_conversion": null,
+    "creator_cost_per_music_format": null
+  }
+}

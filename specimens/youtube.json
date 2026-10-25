@@ -2913,6 +2913,17 @@
       "evidence_class": "commercial_tracking_of_gaming_and_general_live_streaming",
       "license": "Publisher data linked and independently summarized",
       "notes": "Q2 YouTube Gaming 1.79bn watched hours and 878k broadcasting channels vs separately categorized general YouTube Live 12.97bn watched hours. Same research family as Q1."
+    },
+    {
+      "id": "yt-music-charts-metric-rules-2026",
+      "url": "https://support.google.com/youtube/answer/9014376?hl=en",
+      "publisher": "YouTube Help",
+      "title": "YouTube Charts & Insights",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_artist_music_chart_view_and_shorts_creation_rules",
+      "license": "Linked official help; independently summarized metric rules",
+      "notes": "Weekly Top Songs includes official, user-made soundtrack and lyric video views; Top Songs on Shorts uses number of Shorts created featuring song; Music Insights excludes Shorts views."
     }
   ],
   "claims": [
@@ -6133,6 +6144,37 @@
       "observed_at": "2026-10-24",
       "confidence": "medium",
       "limitations": "Commercial third-party tracking with report-specific categories and rounded numbers. Not a census of actual people, income, cross-platform migration or causality."
+    },
+    {
+      "id": "omdia-2026-music-watch-time-33pct",
+      "text": "Omdia's January 2026 industry release estimates that music videos accounted for 33% of overall YouTube viewing time in its analysis. This is a viewing-time share, not a fraction of unique users, song uploads or creator receipts.",
+      "source_ids": [
+        "omdia-video-supply-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Omdia methodological scope and independently verifiable denominators are not fully specified in the public press release; category share does not measure music-creator profitability."
+    },
+    {
+      "id": "yt-music-charts-differing-units",
+      "text": "YouTube's weekly Top Songs combines official music video, user-made soundtrack and lyric video viewing, while Top Songs on Shorts ranks songs by how many Shorts were made using them, not by all YouTube music plays; these metrics are not interchangeable.",
+      "source_ids": [
+        "yt-music-charts-metric-rules-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Chart eligibility, country, ranking window and publisher policies matter. Song view totals can include content uploaded by creators other than rights holders."
+    },
+    {
+      "id": "yt-music-insights-no-shorts",
+      "text": "YouTube Music Insights ranks attributed song or artist interest by official and user-generated video views but excludes Shorts views; Content ID holders may monetize, track or block matching videos in different countries.",
+      "source_ids": [
+        "yt-music-charts-metric-rules-2026",
+        "music-content-id"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Music-chart audience activity is not identical to artist ownership, paid music subscribers, royalty distribution or creator net revenue."
     }
   ],
   "observations": [],
