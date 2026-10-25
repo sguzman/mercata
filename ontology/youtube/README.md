@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [selected source-quality scope study](evidence-quality-scope-2026.md), [eight-case machine register](evidence-quality-scope-2026.json) and [provenance/inference audit](../../site/evidence-quality-audit.mjs) separate source roles, intended inference and sampling limits without claiming complete examination of every public reference.
+
+
 The [meme and Shorts remix format study](meme-format-typology-2026.md) distinguishes licensed platform remix features from broad meme formats and unique-audience assumptions.
 
 
