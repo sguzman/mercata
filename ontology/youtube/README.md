@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [public-source motivated viewer-need study](viewer-need-hypotheses-2026.md), [three machine-readable hypothesis protocols](viewer-need-hypotheses-2026.json) and [prespecification guard](../../site/viewer-need-audit.mjs) distinguish possible viewer problems, negative-result checks, sampled data gates and unknown niche profitability.
+
+
 The [channel and active-creator population study](creator-activity-population-2026.md), [vendor frame crosswalk](creator-activity-population-2026.json), and [sample-boundary test](../../site/creator-population-audit.mjs) distinguish channel objects, upload events, unique owners, approved payees and professional creator businesses.
 
 

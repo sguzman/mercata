@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [falsifiable audience-needs study](ontology/youtube/viewer-need-hypotheses-2026.md) uses three dated public video/podcast observations solely to frame testable comparisons and stop rules; no audience demand, ranking, business return or actual experiment is presumed.
+
+
 The [active-creator population index study](ontology/youtube/creator-activity-population-2026.md) separates vidIQ and CreatorDB channel stocks and positive net video-count cohorts from actual publishers, distinct people and earning creators, preserving their unmatched sampling frames.
 
 
