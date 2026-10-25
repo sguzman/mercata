@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "video_level_attention_concentration_bounded_evidence_and_sample_metric",
+  "reviewed_at": "2026-10-25",
+  "method": "Reproduce one published broad Omdia observation while separating platform-level video time concentration from unmeasured per-niche or per-channel market concentration. Supply tested pure arithmetic for scoped, legitimate nonrepresentative video samples, never infer payouts.",
+  "source_ids": [
+    "omdia-video-supply-2026"
+  ],
+  "source_artifacts": [
+    "ontology/youtube/video-attention-culture-2026.json",
+    "site/video-concentration.mjs"
+  ],
+  "published_video_level_observation": {
+    "source_id": "omdia-video-supply-2026",
+    "publication_date": "2026-01-28",
+    "observation_period": "late_2025_as_described_by_omdia",
+    "population": "Omdia analyst YouTube video viewing-time study, described as global; precise coverage/coding unreported",
+    "unit": "share_of_watch_time_across_videos_in_analyst_study",
+    "upper_share_of_ranked_video_objects_percent": 1,
+    "upper_share_of_watch_time_percent": 91,
+    "complementary_share_of_video_objects_percent": 99,
+    "complementary_share_of_watch_time_percent": 9,
+    "creator_revenue_share": null,
+    "share_of_newcomer_video_views": null,
+    "topic_specific_concentration": null,
+    "share_of_all_channels": null,
+    "raw_sample_size": null,
+    "reporting_precision": "rounded_research_firm_statement_not_reproducible_microdata"
+  },
+  "sample_metric_contract": {
+    "input_unit": "one video_id with one comparable nonnegative observed count for a single metric and observation window",
+    "allowed_metric_ids": [
+      "view_events",
+      "engaged_view_events",
+      "estimated_watch_minutes"
+    ],
+    "required_scope": [
+      "topic_id",
+      "period_start",
+      "period_end",
+      "selection_method",
+      "metric",
+      "video_rows"
+    ],
+    "top_fraction": "explicit_predeclared_fraction_of_included_videos",
+    "top_rule": "ceil_sample_size_times_fraction",
+    "hhi_definition": "sum of squared video shares within this sample only",
+    "gini_definition": "relative mean difference of counts within this sample, not an income inequality estimate",
+    "zero_sum_handling": "no concentration statistic when all counted events sum to zero",
+    "privacy": "Use only authorized owner aggregates or properly selected public video metrics; no individual viewers tracked",
+    "missing_data_handling": "Unknown or negative measures reject input; do not coerce to zero",
+    "true_all_niche_concentration_requires": "A clearly defined and complete/representatively weighted niche frame, same metric, format and observation window"
+  },
+  "measured_niche_samples": [],
+  "limitations": [
+    "The Omdia top-video watch-time share does not establish the fraction of top creators, viewer people, subscribers or income.",
+    "Omdia's methodology details and denominator are not independently available; the 91/9 split is a rounded published result, not a reproducible category panel.",
+    "Omdia reports a platform-level distribution, not the category concentration of gaming, beauty, education or politics.",
+    "Public video views and owner-only watch-time are different units and must never be swapped.",
+    "Selected search results, top-ranked videos and highly watched channels suffer exposure and survival selection bias.",
+    "Do not treat a synthetic test case as a factual video or earnings observation."
+  ],
+  "unmeasured": {
+    "niche_top_one_percent_share": null,
+    "topic_watch_time_herfindahl": null,
+    "platform_channel_earning_concentration": null,
+    "observed_channel_owner_count": null,
+    "niche_video_census_size": null,
+    "creator_profit_concentration": null,
+    "independent_replicated_omdia_share": null
+  }
+}

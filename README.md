@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [video attention concentration study](ontology/youtube/video-concentration-2026.md) distinguishes Omdia's published top-video watch-time estimate from unsupported creator-income, individual-viewer, or per-niche competition claims, and adds a tested sample-scoped top-share/HHI/Gini calculator.
+
+
 The [seven-market country/language denominator audit](ontology/youtube/country-language-matrix-2026.md) preserves official late-2025 advertiser-reach source figures without assuming those counts reveal a creator's residence, video audio language, or the viewer population's primary or secondary languages.
 
 

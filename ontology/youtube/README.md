@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [video-level concentration audit](video-concentration-2026.md), [bounded Omdia observation](video-concentration-2026.json), and [pure sample statistics](../../site/video-concentration.mjs) distinguish broad video watch-time inequality from unmeasured niche competition and channel earnings.
+
+
 The [country/language sampling and denominator matrix](country-language-matrix-2026.md), [sourced seven-market data](country-language-matrix-2026.json), and [validator](../../site/country-language-matrix-audit.mjs) preserve country advertiser-reach estimates separately from content metadata, playback audio, captions and viewer languages.
 
 
