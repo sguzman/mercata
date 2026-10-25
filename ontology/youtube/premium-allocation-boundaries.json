@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "premium_member_watch_time_versus_2027_net_pool_share",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "yt-premium-member-view-creator-guide-2026",
+    "yt-ypp-2027-announcement",
+    "api-metrics",
+    "revenue-shares"
+  ],
+  "current_2026": {
+    "effective_through": "2027-01-31",
+    "long_form_requires": [
+      "accepted_Watch_Page_Module",
+      "watch_page_ads_enabled",
+      "eligible_video"
+    ],
+    "shorts_requires": [
+      "accepted_Shorts_Module",
+      "eligible_short"
+    ],
+    "subscriber_watch_basis": "eligible_premium_member_watch_time",
+    "downloaded_playback": "counts_after_member_device_next_connects_online",
+    "background_playback": "counts_toward_watch_time",
+    "creator_fixed_per_view_fee": null
+  },
+  "announced_2027": {
+    "effective_from": "2027-02-01",
+    "status": "future_as_of_2026-10-25",
+    "pools": [
+      {
+        "id": "premium",
+        "share_of_net_subscriptions": 0.3
+      },
+      {
+        "id": "premium_lite",
+        "share_of_net_subscriptions": 0.6
+      }
+    ],
+    "creator_format_rates": [
+      {
+        "id": "long_form",
+        "share_of_creator_allocated_pool": 0.55
+      },
+      {
+        "id": "shorts",
+        "share_of_creator_allocated_pool": 0.45
+      }
+    ],
+    "creator_allocated_by": "eligible_member_watch_time_and_views",
+    "shorts_gate_qualified_views": 10000000,
+    "shorts_gate_days": 90,
+    "actual_creator_pool_fraction": null,
+    "verified_net_pool_revenue": null,
+    "net_subscription_pools_are_creators_personal_payout": false
+  },
+  "authorized_api_fields": [
+    {
+      "metric": "redViews",
+      "unit": "premium_member_video_view_events",
+      "not": "unique_paid_subscribers"
+    },
+    {
+      "metric": "estimatedRedMinutesWatched",
+      "unit": "premium_member_video_watch_minutes",
+      "not": "creator_revenue_or_unique_people"
+    },
+    {
+      "metric": "estimatedRedPartnerRevenue",
+      "unit": "estimated_premium_creator_revenue",
+      "not": "final_cash_bank_deposit"
+    }
+  ],
+  "rules": [
+    "Paid YouTube Premium platform customers are not the same as paid subscribers to an individual creator's channel memberships.",
+    "2026 current eligibility and 2027 announced pool and rolling Shorts terms must be assigned to their correct effective periods.",
+    "A pool percentage is applied to a product-specific net subscription base. Individual creators receive a further view/watch-time-based allocation and format share.",
+    "The exact creator allocation fraction is unknown; multiplying a buyer subscription price directly by two published percentages invents earnings.",
+    "Background and downloaded playback can contribute to Premium watch time; raw public views or global subscriber counts cannot infer a creator share.",
+    "estimatedRedPartnerRevenue can overlap estimatedRevenue; do not double count, nor assume an estimated figure has cleared the bank."
+  ],
+  "observed_creator_account_reports": [],
+  "unmeasured": {
+    "creator_pool_share": null,
+    "premium_paid_subscriber_count": null,
+    "platform_subscription_revenue_2026": null,
+    "platform_subscription_revenue_2027": null,
+    "creator_subscription_profit": null,
+    "individual_paid_conversion": null,
+    "actual_creator_payout": null
+  }
+}
