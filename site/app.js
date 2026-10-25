@@ -4169,7 +4169,7 @@ function renderMultilingualDistribution(data,dossier) {
   publishing.append(make('summary','','Choosing localization assets and publication structure'));
   const choices=make('div','multilingual-product-grid');
   for(const choice of data.localization_choices||[]){
-    const card=make('article','multilingual-product-card');
+    const card=make('article','multilingual-choice-card');
     card.append(make('h5','',choice.goal));
     card.append(make('p','',choice.creator_control));
     card.append(make('small','',choice.delivery_unit.replaceAll('_',' ')));

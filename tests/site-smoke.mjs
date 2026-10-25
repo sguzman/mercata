@@ -313,6 +313,7 @@ try{
     assert((await surfaces.textContent()).includes('Shorts over one minute'));
     const language=page.locator('.multilingual-distribution');
     assert.equal(await language.locator('.multilingual-product-card').count(),6,'Missing multilingual feature catalog');
+    assert.equal(await language.locator('.multilingual-choice-card').count(),6,'Missing localized media decision matrix');
     assert.equal(await language.locator('.multilingual-observation').count(),2,'Missing selected product observations');
     await language.locator('summary').first().click();
     assert((await language.textContent()).includes('not additional traffic or causal income lift'));
