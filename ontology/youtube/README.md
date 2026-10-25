@@ -6,6 +6,9 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 ## Monthly cash-flow volatility and payout timing
 
+The [monthly variability research](monthly-income-volatility-protocol.md) distinguishes **within-creator consecutive cash flows** from **cross-sectional** dispersion in selected YouTube-affiliated Patreon snapshots (23,435 observed records; USD 1,490 pooled standard deviation). The latter is not a native YouTube payout or individual creator month-to-month volatility.
+
+
 The [monthly creator cash-volatility protocol](monthly-income-volatility-protocol.md), [machine record](monthly-income-volatility-protocol.json), [pure metric auditor](../../site/monthly-income-volatility.mjs) and [regressions](../../tests/monthly-income-volatility.test.mjs) distinguish no-deposit months, paid costs and delayed finalized credits. All real creator income, industry distribution and tax outcomes remain unknown.
 
 ## Selected 300-channel ad concentration and monthly RPM

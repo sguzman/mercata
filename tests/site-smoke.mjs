@@ -112,7 +112,7 @@ try{
       ['.air-country-cpm',10,'not creator RPM or resident income'],
       ['.creator-processing-settlement',4,'not verified creator bank cash'],
       ['.creator-country-income',4,'Viewer country is not creator residence'],
-      ['.monthly-income-volatility',5,'no payment is not proof of zero earnings'],
+      ['.monthly-income-volatility',6,'no payment is not proof of zero earnings'],
       ['.monthly-creator-cash-flow',4,'Bank arrival is not the same as issuance'],
       ['.agentio-sponsor-study',6,'not representative creator pay or verified incremental sales'],
       ['.shopping-funnel-evidence',4,'no verified public conversion rate'],

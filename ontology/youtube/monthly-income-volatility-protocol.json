@@ -6,7 +6,8 @@
   "source_ids": [
     "youtube-payment-process",
     "adsense-payment-cycle",
-    "adsense-thresholds"
+    "adsense-thresholds",
+    "academic-youtube-patreon-income-2026"
   ],
   "existing_ledger": "ontology/youtube/monthly-creator-cash-flow-protocol.json",
   "existing_engine": "site/monthly-creator-cash-flow.mjs",
@@ -73,7 +74,9 @@
     "The rolling window must be at least three consecutive complete months; smaller, missing or nonconsecutive observations are rejected.",
     "Monthly cash movement is not net income, wage, taxable profit or expected future creator earnings.",
     "No cross-creator volatility distribution can be produced from one account; representative cohorts require consent, matching currency and period, and explicit no-earnings inclusion.",
-    "Static repository fixtures contain no real bank accounts, individual receipts, private credentials or creator-income forecasts."
+    "Static repository fixtures contain no real bank accounts, individual receipts, private credentials or creator-income forecasts.",
+    "The 2026 Strauss/Yang/Mazzucato study's 23,435 selected YouTube-affiliated Patreon observations and USD 1,490 pooled standard deviation are cross-sectional dispersion across March 2018/2021/2024, not within-creator monthly earnings volatility.",
+    "Creators without eligible Patreon income and some multi-affiliated creators were omitted; the pooled Patreon sample is not all YouTube channel owners or YouTube's own payouts."
   ],
   "public_account_data_collected": false,
   "authorized_observation_rows": [],
@@ -84,5 +87,27 @@
     "median_income": null,
     "real_creator_bank_receipts": null,
     "creator_net_accrual_profit": null
+  },
+  "cross_sectional_patron_dispersion": {
+    "source_id": "academic-youtube-patreon-income-2026",
+    "original_file": "ontology/youtube/patreon-earnings-timeframe-2026.json",
+    "dates": [
+      2018,
+      2021,
+      2024
+    ],
+    "month_of_year": "March",
+    "pooled_selected_observations": 23435,
+    "creator_monthly_mean_usd": 250,
+    "creator_monthly_median_usd": 47,
+    "creator_monthly_sd_across_observations_usd": 1490,
+    "only_selected_single_social_affiliation": true,
+    "excludes_creators_below_or_at_usd_10_patreon": true,
+    "youtube_native_earnings_included": false,
+    "months_per_individual_observed_consecutively": null,
+    "unique_person_identifiers_available": false,
+    "within_person_month_to_month_variance": null,
+    "cannot_estimate_all_youtube_creators": true,
+    "interpretation": "Dispersion across Patreon creator observations pooled from three March snapshots; distinct from consecutive months of the same YouTube creator."
   }
 }

@@ -20,6 +20,14 @@ The model distinguishes these monthly series:
 | Negative cash movement | Count of months | Spending exceeded cleared inflow, not necessarily accounting net loss |
 | Inflow mean, median, population standard deviation and CV | Currency / month and ratio | Descriptive cash variability; CV is undefined if the mean inflow is zero |
 
+## Cross-sectional dispersion is not a creator's own month-to-month volatility
+
+A separate [2026 peer-reviewed Patreon dataset analysis](https://doi.org/10.1093/icc/dtag044), already registered in [Mercata's Patreon comparison](patreon-earnings-timeframe-2026.md), pools **23,435 observations of YouTube-affiliated Patreon creators** drawn from March 2018, March 2021 and March 2024. That selected frame reports **USD 250 mean**, **USD 47 median** and **USD 1,490 standard deviation** of **monthly Patreon revenue across those observations**. Creators without eligible Patreon earnings, certain multiple-affiliation creators and other missing populations are excluded.
+
+The USD 1,490 standard deviation is **between observed creators and snapshots**, not a time-series standard deviation of one creator's monthly income. Three March snapshots spaced years apart do not provide the consecutive month-by-month earnings of identified individuals. Even the observed Patreon amounts are neither native YouTube payouts nor verified after-expense income. Dividing the pooled SD by the mean produces a valid statistic for *this pooled selected cross-sectional distribution*, but **not** a creator's individual temporal volatility or representative YouTube income risk.
+
+The [cross-sectional guard](../../site/monthly-income-volatility.mjs) and regression tests distinguish these quantities. No observed owner-matched monthly income series exists here.
+
 ## Reproducibility and boundaries
 
 Start with three or more consecutive months from a **single verified reporting-currency payment account**. Pass only the output of [the existing reconciler](../../site/monthly-creator-cash-flow.mjs) into [the volatility audit](../../site/monthly-income-volatility.mjs). The audit separately checks continuity, currency, two-decimal balances, and cash-flow identities. It compares nonnegative cash inflows with **signed** net cash movement, and distinguishes months with positive finalized credit but no cleared platform receipt. Results require explicitly entered account events; unknowns are never silently treated as zero.

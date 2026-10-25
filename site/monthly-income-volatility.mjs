@@ -63,3 +63,18 @@ export function analyzeMonthlyIncomeVolatility(ledger,protocol){
     actual_creator_profit:null,creator_income_distribution:null,zero_earnings_share:null,
     observations_from_repository:null,causal_statement:null};
 }
+
+// Distinguish Patreon cross-sectional dispersion from a repeated individual income panel.
+export function assessPatreonIncomeVariationFrame(patreon,purpose){
+ const sample=patreon?.youtube_affiliated_pooled;
+ const years=patreon?.youtube_affiliated_march_snapshots?.map(x=>x.year);
+ if(!sample||sample.observations!==23435||!Array.isArray(years)||years.join(',')!=='2018,2021,2024')
+  return {allowed:false,reason:'unknown_or_changed_cross_sectional_source'};
+ if(purpose==='selected_patreon_cross_sectional_dispersion'){
+  return {allowed:true,frame:'selected_youtube_affiliated_patreon_pooled_march_snapshots',
+   observations:sample.observations,mean_usd:sample.mean_usd_month,
+   median_usd:sample.median_usd_month,stddev_usd:sample.stddev_usd_month,
+   temporal_creator_volatility:null,net_youtube_creator_income:null};
+ }
+ return {allowed:false,reason:'not_within_creator_monthly_data',temporal_creator_volatility:null};
+}

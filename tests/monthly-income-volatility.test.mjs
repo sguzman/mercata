@@ -58,3 +58,14 @@ test('Website documents volatility without reporting fictional earnings',async()
  assert(app.includes('monthly-income-volatility-protocol.json'));
  assert(app.includes('no payment is not proof of zero earnings'));
 });
+
+test('Patreon selected cross-sectional standard deviation is not a monthly within-creator volatility estimate',async()=>{
+ const patreon=await load('ontology/youtube/patreon-earnings-timeframe-2026.json');
+ const {assessPatreonIncomeVariationFrame} = await import('../site/monthly-income-volatility.mjs');
+ const x=assessPatreonIncomeVariationFrame(patreon,'selected_patreon_cross_sectional_dispersion');
+ assert.equal(x.allowed,true);assert.equal(x.observations,23435);
+ assert.equal(x.mean_usd,250);assert.equal(x.median_usd,47);assert.equal(x.stddev_usd,1490);
+ assert.equal(x.temporal_creator_volatility,null);assert.equal(x.net_youtube_creator_income,null);
+ assert.equal(assessPatreonIncomeVariationFrame(patreon,'within_creator_monthly_variance').allowed,false);
+ assert.equal(assessPatreonIncomeVariationFrame(patreon,'all_youtube_creator_income').allowed,false);
+});

@@ -2419,7 +2419,8 @@ function renderMonthlyVolatilityProtocol(model,dossier){
   ['Cleared receipts','Bank + disjoint external receipts','Only money actually received; issuance alone is not cash'],
   ['Cash movement','Receipts less paid costs','Can be negative without proving negative accrual profit'],
   ['Zero-deposit streaks','Count consecutive months','Not a count of months with no creator earnings'],
-  ['Relative volatility','CV when inflow mean is positive','Descriptive within an observed account, not a creator earnings forecast']
+  ['Relative volatility','CV when inflow mean is positive','Descriptive within an observed account, not a creator earnings forecast'],
+  ['Selected Patreon cross section','23,435 creator observations','USD 1,490 standard deviation across pooled March samples, not personal month-to-month income volatility']
  ];
  const grid=make('div','ownership-grid');
  for(const [label,value,limit] of entries){
