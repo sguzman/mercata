@@ -39,3 +39,19 @@ test('Site exposes the observed survey frames with explicit measurement boundary
   assert(app.includes('Creator responses:'));
   assert(app.includes('EU27 includes France and Germany'));
 });
+
+test('2024 versus 2025 Oxford U.S. impact reports cannot imply a measured GDP or employment growth rate',async()=>{
+ const [m,s]=await Promise.all([load('ontology/youtube/oxford-creator-impact-2026.json'),load('specimens/youtube.json')]);
+ assert(m.source_ids.every(id=>s.evidence.some(x=>x.id===id)));
+ assert.equal(m.economic_impact.us_2024.gdp_contribution_lower_bound_billion,55);
+ assert.equal(m.economic_impact.us_2024.fte_jobs_reported_approx,490000);
+ assert.equal(m.economic_impact.us_2024.gdp_bound,'strict_lower');
+ assert.equal(m.economic_impact.us_2025.gdp_contribution_lower_bound_billion,60);
+ assert.equal(m.economic_impact.us_2025.fte_jobs_lower_bound,540000);
+ const c=m.economic_impact.cross_year_growth;
+ assert.equal(c.estimated_us_2024_vs_2025_gdp_growth_percent,null);
+ assert.equal(c.estimated_us_2024_vs_2025_supported_fte_growth_percent,null);
+ assert.equal(c.disclosure_values_sufficient_for_growth_rate,false);
+ assert.equal(c.year2024_model_comparable_with_year2025_without_methods_check,false);
+ assert.equal(m.financial_reconciliation.gdp_2024_2025_not_equivalent_to_alphabet_corporate_youtube_revenue,true);
+});

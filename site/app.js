@@ -2094,6 +2094,7 @@ function renderOxfordCreatorImpact(model,dossier){
  }
  details.append(grid);
  details.append(make('p','measure-limit','2025 U.S. modeled impact: more than USD 60 billion contributed to GDP and more than 540,000 supported full-time-equivalent jobs. Neither is median creator income, verified creator payout, or headcount. The creator FTE component excludes those reporting fewer than eight YouTube work hours per week.'));
+ details.append(make('p','measure-limit','Earlier 2024 U.S. Oxford impact headline: over USD 55 billion GDP and approximately 490,000 supported FTE jobs. Both annual reports use modeled and rounded bounds; no year-on-year growth rate or actual headcount is established.'));
  details.append(audienceSources(model.source_ids,dossier));
  const link=make('a','inline-link','Read Oxford sampling and income-interpretation limits ↗');
  link.href='./ontology/youtube/oxford-creator-impact-2026.md';link.target='_blank';link.rel='noopener noreferrer';

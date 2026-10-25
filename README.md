@@ -63,7 +63,7 @@ The [global creator, artist and media payout study](ontology/youtube/platform-cr
 The [Alphabet SEC YouTube ad-revenue time series](ontology/youtube/alphabet-youtube-ads-sec-2026.md) adds publicly filed corporate annual and interim revenue figures with matched-period growth calculations and the separate strict 2025 ads-plus-subscriptions revenue bound above USD 60 billion, without mistaking them for creator earnings, viewership, or the distinct U.S. GDP contribution.
 
 
-The [Oxford Economics 2026 YouTube creator-survey methodology](ontology/youtube/oxford-creator-impact-2026.md) registers original country response counts, source-defined creator/user populations, non-additive EU27 rows and the difference between modeled U.S. GDP/FTE impacts and creator cash earnings. It does not infer median creator income or ordinary labor hours.
+The [Oxford Economics 2026 YouTube creator-survey methodology](ontology/youtube/oxford-creator-impact-2026.md) registers original country response counts, source-defined creator/user populations, non-additive EU27 rows, 2024/2025 U.S. modeled-impact headlines without a fabricated growth rate, and the difference between GDP/FTE impacts and creator cash earnings. It does not infer median creator income or ordinary labor hours.
 
 
 Mercata also has a [reproducible YouTube source-independence audit](ontology/youtube/source-provenance.md) that flags reused official document URLs and syndicated study data without confusing unknown publication dates with invalid sources.

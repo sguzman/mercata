@@ -38,7 +38,7 @@ The [related-video funnel study](shorts-related-video-funnel.md), [machine measu
 
 ## 2026 commissioned creator survey versus macroeconomic impact
 
-The [Oxford Economics creator, business and user survey frame](oxford-creator-impact-2026.md), [machine response counts](oxford-creator-impact-2026.json) and [survey comparison audit](../../site/oxford-creator-impact-audit.mjs) preserve the January–March 2026 country sample counts. YouTube recruited the creator respondents; EU27 overlaps France and Germany. The estimated 2025 U.S. GDP contribution and full-time-equivalent jobs are **not** creator income, headcount or measured typical work hours. Zero-earner rates and representative creator income remain unknown.
+The [Oxford Economics creator, business and user survey frame](oxford-creator-impact-2026.md), [machine response counts](oxford-creator-impact-2026.json) and [survey comparison audit](../../site/oxford-creator-impact-audit.mjs) preserve the January–March 2026 country sample counts. YouTube recruited the creator respondents; EU27 overlaps France and Germany. The estimated 2024 and 2025 U.S. GDP contributions and supported full-time-equivalent jobs are **not** creator income, headcount or measured typical work hours. The different annual lower bounds are insufficient to compute an actual year-over-year growth rate. Zero-earner rates and representative creator income remain unknown.
 
 ## Global creator, artist and music rights payments
 

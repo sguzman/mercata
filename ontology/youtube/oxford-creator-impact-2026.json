@@ -5,7 +5,8 @@
   "as_of": "2026-10-24",
   "source_ids": [
     "oxford-youtube-impact-methodology-2026",
-    "youtube-us-impact-report-2025"
+    "youtube-us-impact-report-2025",
+    "youtube-us-impact-report-2024"
   ],
   "survey": {
     "fielded_from": "2026-01",
@@ -142,7 +143,25 @@
     "us_2025_actual_creator_payout_distribution": null,
     "all_creator_hourly_profit_distribution": null,
     "sponsorship_and_off_platform_sales_are_direct_youtube_payouts": false,
-    "impact_is_individual_income": false
+    "impact_is_individual_income": false,
+    "us_2024": {
+      "currency": "USD",
+      "gdp_contribution_lower_bound_billion": 55,
+      "fte_jobs_reported_approx": 490000,
+      "gdp_bound": "strict_lower",
+      "jobs_precision": "reported_rounded_about",
+      "economic_period": "2024",
+      "published_at": "2025-06-10",
+      "unit": "modeled_GDP_value_added_and_supported_FTE_not_creator_income_or_observed_job_headcount",
+      "source_id": "youtube-us-impact-report-2024"
+    },
+    "cross_year_growth": {
+      "estimated_us_2024_vs_2025_gdp_growth_percent": null,
+      "estimated_us_2024_vs_2025_supported_fte_growth_percent": null,
+      "disclosure_values_sufficient_for_growth_rate": false,
+      "year2024_model_comparable_with_year2025_without_methods_check": false,
+      "reason": "A strict lower bound in one year and a different strict lower bound the next do not determine actual year-over-year growth; model, sample and precision may differ."
+    }
   },
   "interpretation_gates": [
     "Creator and business survey respondent counts are not population totals or independent creator/channel IDs.",
@@ -161,5 +180,10 @@
     "work_hours_distribution_all_creators": null,
     "net_profit_distribution": null,
     "causal_effect_of_youtube": null
+  },
+  "financial_reconciliation": {
+    "gdp_2024_2025_not_equivalent_to_alphabet_corporate_youtube_revenue": true,
+    "us_gdp_model_cannot_determine_global_individual_creator_payouts": true,
+    "not_additive_with_global_youTube_payouts": true
   }
 }

@@ -35,6 +35,14 @@ The July 2026 announcement says that in 2025 the YouTube creative ecosystem cont
 
 The entrepreneur FTE component uses self-reported weekly hours **only for creative entrepreneurs reporting at least eight hours per week**; permanent staff and downstream workers use different modeling. That selection prevents converting the FTE result into observed typical creator work hours or income per hour. Income medians, zero-earner fractions, direct payout distribution and post-expense hourly rates all remain **unknown**.
 
+## Earlier U.S. economic-impact release: 2024 versus 2025
+
+YouTube's [June 10, 2025 report about 2024](https://blog.youtube/news-and-events/2024-us-youtube-impact-report/) describes an Oxford Economics estimate of **over USD 55 billion in U.S. GDP contribution** and approximately **490,000 supported FTE jobs**. The [July 16, 2026 release about 2025](https://blog.youtube/news-and-events/2025-us-youtube-impact-report/) gives **more than USD 60 billion** and **more than 540,000 FTE jobs**, respectively.
+
+These are modeled U.S. economic-impact estimates with rounded figures and lower bounds, not the actual number of individual people working on YouTube, earned dollars for any creator, or payouts from YouTube. A larger reported **lower bound** in 2025 does *not* prove that the unknown actual 2025 value exceeded the unknown actual 2024 value: both could be arbitrarily higher than their respective published thresholds. Even with exact figures, a valid trend would require verifying consistency of methods, sample frames and assumptions year to year. Therefore **no numerical growth rate or causal effect is inferred** from this pair.
+
+For a separate accounting comparison, see [Alphabet's corporate advertising and subscription revenue statements](alphabet-youtube-ads-sec-2026.md), which report different entities, geographies, units and reporting rules.
+
 ## Study limits
 
 The creator sample is platform-recruited; documented random-draw probabilities and all-creator inclusion rates are unavailable. Jurisdiction counts overlap. Business categories can overlap. Results are commissioned by an interested party. The estimates are gross economic contributions without a counterfactual for displaced uses of labor or investment. Neither creator-selection bias nor unobserved zero earners can be repaired by adding response counts. Do not combine these samples with Pew adult-use surveys, CreatorIQ creators or vendor channel indexes as one population.
