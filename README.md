@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [topic evidence coverage audit](ontology/youtube/topic-observation-coverage-2026.md) crosschecks 33 conceptual subcultures and 36 dated observations, distinguishing event counts, uploads, watch hours, selected survey samples and missing audience estimates.
+
+
 The [neutral political/news content and event-window study](ontology/youtube/neutral-news-attention-protocol-2026.md) records Pew's 2026 U.S. regular YouTube news estimate and correct within-party denominators, plus source-backed YouTube/Google Trends measurement limits. It explicitly forbids inferring individual viewers' political beliefs or pretending a content taxonomy is an audience census.
 
 

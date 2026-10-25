@@ -463,6 +463,34 @@ function renderPublicSamplingBudget(data,dossier){
   section.append(details);return section;
 }
 
+function renderTopicEvidenceCoverage(taxonomy,observations){
+ if(!taxonomy?.topics?.length)return null;
+ const recorded=observations?.observations||[];
+ const known=new Set(taxonomy.topics.map(t=>t.id));
+ const populated=new Set(recorded.map(x=>x.topic_id).filter(x=>known.has(x)));
+ const section=make('section','topic-evidence-coverage');
+ const details=make('details','ownership-details');
+ details.append(make('summary','','Topic atlas evidence: public observations versus actual audience size'));
+ details.append(make('p','measure-limit','Original published source observations, not measured unique audiences or total creator populations. Topic categories overlap.'));
+ const grid=make('div','ownership-grid');
+ const entries=[
+  ['Named research categories',taxonomy.topics.length,'Not mutually exclusive people or channels'],
+  ['Selected source observations',recorded.length,'Several units, periods and sampled populations'],
+  ['Categories with observations',populated.size,'Any evidence, not an audience census'],
+  ['Categories without observations',taxonomy.topics.length-populated.size,'Missing evidence is not zero popularity']
+ ];
+ for(const [label,value,limitation] of entries){
+  const card=make('article','ownership-card');
+  card.append(make('h5','',label));card.append(make('strong','',String(value)));
+  card.append(make('p','measure-limit',limitation));grid.append(card);
+ }
+ details.append(grid);
+ details.append(make('p','measure-limit','Lifetime video views, watch hours, single-event audiences, uploads and selected fan percentages cannot be added into audience totals. Historical taxonomy splits need explicit versioning.'));
+ const link=make('a','inline-link','Read all topic measurements and source boundaries ↗');
+ link.href='./ontology/youtube/topic-observation-coverage-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
+ section.append(details);return section;
+}
+
 function renderTopicCatalogue(data, activity) {
   if(!data)return null;
   const section=make('section','topic-catalogue');
@@ -4487,6 +4515,8 @@ async function showDossier(entry) {
     if(incomeStudy)outer.append(incomeStudy);
     const channelStudy=renderSmallChannelStudy(channelIncome);
     if(channelStudy)outer.append(channelStudy);
+    const coverage=renderTopicEvidenceCoverage(topicCatalog,topicActivity);
+    if(coverage)outer.append(coverage);
     const catalogue=renderTopicCatalogue(topicCatalog,topicActivity);
     if(catalogue)outer.append(catalogue);
     const sampling=renderPublicSamplingBudget(samplingBudget,record);

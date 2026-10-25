@@ -97,6 +97,10 @@ The [2022–2025 curated YouTube Trending archive and 2026 NRG survey](meme-tren
 
 The [three peer-reviewed educational video comparisons](educational-video-format-cohorts-2026.md), [machine population crosswalk](educational-video-format-cohorts-2026.json) and [metric compatibility auditor](../../site/educational-video-evidence.mjs) report 124 Spanish STEM, 139 sampled Indonesian instruction/practice and 126 selected Turkish mathematics videos without pooling incompatible owner retention, public reactions, or claiming a universal ideal video length.
 
+## Cross-topic measurement coverage and taxonomy versioning
+
+The [33-topic observation crosswalk](topic-observation-coverage-2026.md), [machine record](topic-observation-coverage-2026.json) and [comparison tests](../../tests/topic-observation-coverage-audit.test.mjs) preserve source boundaries for 36 observations. Only 18 of 33 topic labels currently have an observation; none has a verified all-platform unique-person audience size.
+
 ## Neutral news consumption and political content measurement
 
 The [2026 U.S. adult news-survey crosswalk and event protocol](neutral-news-attention-protocol-2026.md), [machine frame](neutral-news-attention-protocol-2026.json) and [abstention tests](../../tests/neutral-news-attention-audit.test.mjs) keep reported news use, public video categories, Google Trends search indexes and YouTube upload discovery in separate denominators. It contains no inferred political profiles of channel audiences and no claimed experimental event effects.
