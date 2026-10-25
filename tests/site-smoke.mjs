@@ -63,7 +63,7 @@ try{
        a.href.startsWith('https://')&&a.target==='_blank'&&a.rel.includes('noopener')&&a.rel.includes('noreferrer')&&a.textContent.startsWith('Source:'))),
       'Gallery source anchors require HTTPS, source indicators and new-tab isolation');
     assert.equal(await allClaims.locator('small').count(),currentDossier.claims.length,'Claim date and confidence labels are missing');
-    const galleryNav=page.locator('#dossier-view .dossier-links a');
+    const galleryNav=page.locator('#dossier-view .dossier-shell > .dossier-links > a');
     assert.equal(await galleryNav.count(),3,'Gallery navigation must include official, dossier JSON and task JSON');
     assert((await galleryNav.allTextContents()).some(x=>x.includes('Dossier JSON')),'Missing public dossier JSON link');
     assert((await galleryNav.allTextContents()).some(x=>x.includes('Task JSON')),'Missing public task JSON link');
