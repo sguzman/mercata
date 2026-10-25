@@ -3221,6 +3221,17 @@
       "evidence_class": "official_caption_track_list_authorization_and_access",
       "license": "Official API reference linked, no third-party caption tracks copied",
       "notes": "captions.list requires approved authorization, costs 50 quota units per request, returns track metadata without transcript content."
+    },
+    {
+      "id": "yt-public-comment-thread-api-2026",
+      "url": "https://developers.google.com/youtube/data/reference/rest/v3/commentThreads/list",
+      "publisher": "Google for Developers",
+      "title": "YouTube Data API commentThreads.list: video and channel public comment threads, moderation, replies and pagination",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_public_video_comment_api_scope",
+      "license": "Official API reference linked, independently authored technical summary, no commenters or message data collected",
+      "notes": "Video/channel commentThreads not all Creator Posts, up to 100 per page, may lack replies, pages/removed posts not full population."
     }
   ],
   "claims": [
@@ -7003,6 +7014,27 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "No authorization, caption track enumeration, downloads, or user-level data were collected for the Mercata language protocol."
+    },
+    {
+      "id": "yt-public-posts-eligible-surfaces-2026",
+      "text": "YouTube public Posts can include text, images, GIFs, polls, quizzes and videos and may appear in channel Posts, Home, Subscriptions and eligible image-specific Shorts feeds. This does not guarantee that every subscriber or distinct viewer sees the Post.",
+      "source_ids": [
+        "posts-help",
+        "yt-create-post-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Posts are ineligible for supervised accounts and not publicly visible on made-for-kids channels; no public global Post impression or member population is available."
+    },
+    {
+      "id": "yt-commentthreads-not-all-community-posts-2026",
+      "text": "The documented YouTube Data API commentThreads.list endpoint enumerates comment threads associated with videos/channels, subject to pagination, 100-item page limits and possible missing replies, but does not establish a complete Creator Posts or Communities sampling API.",
+      "source_ids": [
+        "yt-public-comment-thread-api-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "No API calls or individual comments gathered. Cannot infer all submitted posts, community membership, suppressed comments, audience size or creator earnings."
     }
   ],
   "observations": [],

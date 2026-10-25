@@ -622,7 +622,7 @@
         "youtube/community-dynamics/compare-community-participation-across-languages"
       ],
       "phase": 3,
-      "progress_percent": 62
+      "progress_percent": 67
     },
     {
       "id": "audience-economics",
@@ -3041,7 +3041,7 @@
       "objective": "Define engagement metrics and a suitable creator cohort.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define engagement metrics and a suitable creator cohort.",
       "status": "in_progress",
-      "percent": 79,
+      "percent": 84,
       "evidence": [
         "ontology/youtube/retention-posts-memberships.json",
         "ontology/youtube/retention-posts-memberships.md",
@@ -3050,7 +3050,11 @@
         "tests/youtube.test.mjs",
         "tests/site-smoke.mjs",
         "ontology/youtube/video-surfaces-economics.json",
-        "ontology/youtube/video-surfaces-economics.md"
+        "ontology/youtube/video-surfaces-economics.md",
+        "ontology/youtube/public-community-post-protocol.json",
+        "ontology/youtube/public-community-post-protocol.md",
+        "site/public-community-post-audit.mjs",
+        "tests/public-community-post-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/retention-posts-memberships.json",
       "priority": "standard",
@@ -5696,15 +5700,21 @@
       "objective": "Study community posts and public interest clusters without gathering personal records.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and study community posts and public interest clusters without gathering personal records.",
       "status": "in_progress",
-      "percent": 30,
+      "percent": 68,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
         "ontology/youtube/content-formats.json",
         "ontology/youtube/content-formats.md",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/public-community-post-protocol.json",
+        "ontology/youtube/public-community-post-protocol.md",
+        "site/public-community-post-audit.mjs",
+        "tests/public-community-post-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/public-community-post-protocol.json",
       "priority": "standard",
       "phase": 3
     },
@@ -5716,7 +5726,7 @@
       "objective": "Separate comments, likes, live chat, sharing and returning visits.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and separate comments, likes, live chat, sharing and returning visits.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 72,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
@@ -5727,7 +5737,11 @@
         "ontology/youtube/creator-collaboration-fandom-2026.md",
         "site/app.js",
         "tests/youtube.test.mjs",
-        "tests/site-smoke.mjs"
+        "tests/site-smoke.mjs",
+        "ontology/youtube/public-community-post-protocol.json",
+        "ontology/youtube/public-community-post-protocol.md",
+        "site/public-community-post-audit.mjs",
+        "tests/public-community-post-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/creator-collaboration-fandom-2026.json",
       "priority": "standard",
@@ -5762,7 +5776,7 @@
       "objective": "Develop a transparent sampling protocol that excludes sensitive individual profiling.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and develop a transparent sampling protocol that excludes sensitive individual profiling.",
       "status": "in_progress",
-      "percent": 68,
+      "percent": 74,
       "evidence": [
         "ontology/youtube/comment-norms-evidence.json",
         "ontology/youtube/comment-norms-evidence.md",
@@ -5773,7 +5787,11 @@
         "ontology/youtube/live-chat-culture-observations-2025.json",
         "ontology/youtube/live-chat-culture-observations-2025.md",
         "site/live-chat-culture-audit.mjs",
-        "tests/live-chat-culture-audit.test.mjs"
+        "tests/live-chat-culture-audit.test.mjs",
+        "ontology/youtube/public-community-post-protocol.json",
+        "ontology/youtube/public-community-post-protocol.md",
+        "site/public-community-post-audit.mjs",
+        "tests/public-community-post-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/live-chat-culture-observations-2025.json",
       "priority": "standard",

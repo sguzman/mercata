@@ -8,6 +8,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 The [live fan-funding product matrix](live-monetization-units-2026.md), [source keyed definitions](live-monetization-units-2026.json) and [denominator calculator](../../site/live-monetization-denominators.mjs) distinguish Commerce Product Module's net 70% share from Virtual Items Rubies at USD 0.01 each, and document current eligible horizontal/vertical Gifts surfaces. No producer earnings or customer conversion outcomes are inferred.
 
+## Public creator Posts and comment-community observation
+
+The [public community Post research protocol](public-community-post-protocol.md), [machine selection and privacy contract](public-community-post-protocol.json), and [public event counter validator](../../site/public-community-post-audit.mjs) distinguish Posts from YouTube video comments, lack of public reach denominators and individual-person privacy. No comment bodies or people are collected.
+
 ## Language metadata versus actual geographic audiences
 
 The [2026 official API language crosswalk](language-audience-api-crosswalk-2026.md), [machine measurement specification](language-audience-api-crosswalk-2026.json) and [public video metadata count validator](../../site/language-audience-crosswalk.mjs) distinguish default audio, translated text, captions and owner-authorized viewer country. The selected video's language is not a person or a national language population; global language-speaker totals remain unknown.

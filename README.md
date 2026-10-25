@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [public community-Post sampling method](ontology/youtube/public-community-post-protocol.md) distinguishes eligible creator Posts, published video comments, and aggregate engagement counts without collecting commenter identities or inventing community membership sizes.
+
+
 The [language and audience API crosswalk](ontology/youtube/language-audience-api-crosswalk-2026.md) distinguishes video metadata language, original audio, subtitles, localizations and owner-only viewer geography, with a reproducible sample counter and no false global language population.
 
 

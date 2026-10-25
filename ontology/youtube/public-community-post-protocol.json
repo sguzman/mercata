@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "public_creator_post_and_video_comment_cohort_observability",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "posts-help",
+    "yt-create-post-2026",
+    "yt-public-comment-thread-api-2026"
+  ],
+  "public_post_types": [
+    "text",
+    "image",
+    "gif",
+    "poll",
+    "quiz",
+    "video"
+  ],
+  "discoverability": [
+    {
+      "surface": "channel_posts_tab",
+      "population": "viewer-accessible channel post feed",
+      "source_id": "posts-help"
+    },
+    {
+      "surface": "home_feed",
+      "population": "recommendation-selected viewers not necessarily subscribers",
+      "source_id": "posts-help"
+    },
+    {
+      "surface": "subscriptions_feed",
+      "population": "subscribed viewers who may or may not encounter the post",
+      "source_id": "posts-help"
+    },
+    {
+      "surface": "shorts_feed_images",
+      "population": "eligible image post discovery only; not all post types",
+      "source_id": "posts-help"
+    }
+  ],
+  "availability": [
+    "not_available_from_supervised_accounts",
+    "made_for_kids_channels_do_not_expose_public_Posts_tab_to_viewers"
+  ],
+  "data_api_boundary": {
+    "video_comment_thread_method": "commentThreads.list",
+    "pagination_required": true,
+    "max_per_page": 100,
+    "default_moderation": "published",
+    "reply_collection_is_complete": false,
+    "replies_require": "comments.list",
+    "video_comment_threads_are_creator_posts": false,
+    "creator_posts_list_api_documented_in_this_source": false,
+    "attempted_api_calls": 0
+  },
+  "required_research_cohort": [
+    "predeclared_channel_selection",
+    "content_theme",
+    "observation_period",
+    "explicit_post_type",
+    "public_visible_post_ids",
+    "sampling_snapshot_timestamp",
+    "record_missing_counters_as_null",
+    "document_discoverability_and_recommendation_bias"
+  ],
+  "allowed_public_counter_fields": [
+    "like_count",
+    "comment_count"
+  ],
+  "privacy_invariants": [
+    "Only aggregate counts of public post observations; no author names, comment bodies, user IDs, replies, handles or public commenter linkage are retained",
+    "Members-only posts and subscriber-restricted surfaces are excluded absent explicit owner-authorized aggregates",
+    "Do not infer audience political affiliation, religion, ethnicity, sex, protected traits, or personal interests from comments",
+    "Counter counts are post events and do not provide unique viewers, reach, attention duration, subscriber conversion or revenue"
+  ],
+  "limitations": [
+    "Video commentThreads API does not independently prove it can enumerate channel Posts or YouTube Communities",
+    "Channel Posts can surface to non-subscribers; publication count is not a count of members or reached viewers",
+    "Video comment threads may omit replies and moderated/deleted submissions, even when a page is retrieved",
+    "Public likes/comments must not be divided by channel subscribers to invent an exposure-normalized engagement rate",
+    "Selected topic communities and cross-posted videos overlap, so community audience totals are not disjoint"
+  ],
+  "observed_post_sample": [],
+  "representative_creator_community_population": null,
+  "verified_reached_unique_people": null,
+  "measured_post_impressions": null,
+  "observed_nonpublic_moderation": null,
+  "measured_creator_member_conversion": null
+}
