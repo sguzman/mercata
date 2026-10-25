@@ -1,5 +1,8 @@
 # YouTube ontology — audiences, content and earning
 
+The [public metadata privacy lint](publication-privacy-gate-2026.md), [conservative policy](publication-privacy-gate-2026.json), and [CI-enforced auditor](../../scripts/public-privacy-audit.mjs) reject recognizable credentials and private identifiers in published evidence/claim fields while preserving the separate manual rights/privacy review requirements.
+
+
 The [Pew U.S. adult YouTube-news trend audit](us-news-reported-change-2026.md), [dated published series](us-news-reported-change-2026.json), and [change validator](../../site/us-news-differences.mjs) preserve differences of published population survey point estimates without deriving unique viewers or statistically significant video-attention shifts.
 
 

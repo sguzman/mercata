@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "public_claim_source_record_privacy_lint",
+  "reviewed_at": "2026-10-25",
+  "scope": "Only published YouTube specimen evidence and claim metadata, not arbitrary site files, screenshots, connected accounts or hidden/embedded external material.",
+  "policy_source_ids": [
+    "analytics-limits",
+    "audience-analytics-help"
+  ],
+  "script": "scripts/public-privacy-audit.mjs",
+  "verified_in": "scripts/verify.mjs",
+  "unit": "individual_public_source_or_claim_record",
+  "source_record_allowlist": [
+    "id",
+    "url",
+    "publisher",
+    "title",
+    "published_at",
+    "retrieved_at",
+    "evidence_class",
+    "license",
+    "notes"
+  ],
+  "claim_record_allowlist": [
+    "id",
+    "text",
+    "source_ids",
+    "confidence",
+    "observed_at",
+    "limitations"
+  ],
+  "rejected_private_keys": [
+    "password",
+    "passphrase",
+    "private_key",
+    "api_key",
+    "access_token",
+    "refresh_token",
+    "session_token",
+    "cookie",
+    "email_address",
+    "personal_email",
+    "phone_number",
+    "ip_address",
+    "device_id",
+    "viewer_id",
+    "subscriber_id",
+    "customer_email",
+    "user_id",
+    "account_token"
+  ],
+  "rejected_text_patterns": [
+    "publicly_obvious_email_address",
+    "github_personal_access_token_signature",
+    "openai_style_secret_token_signature",
+    "google_api_key_signature",
+    "pem_private_key_header"
+  ],
+  "detection_behavior": "Fail the repository verification when forbidden keys, email patterns or recognizable secret formats appear in published YouTube source or claim fields. Report field/path identifiers only, not candidate secret content.",
+  "privacy_guards": [
+    "The scanning code must not fetch personal records, device locations, user histories or credentials.",
+    "Never emit candidate token or email contents in CI logs.",
+    "A legitimate public figure's name or a publisher URL is not automatically a private identifier.",
+    "A passed pattern check is not privacy approval, copyright clearance, or proof that prose contains no inadvertently identifying details.",
+    "Individual child users and inferred sensitive demographic labels are forbidden in research data; human review remains necessary to assess less recognizable leaks.",
+    "Do not collect any additional personal data for the sake of testing this guard."
+  ],
+  "actual_person_level_research_records_collected": false,
+  "manual_release_review_completed": false,
+  "manual_quote_and_context_inspection_completed": false,
+  "repository_wide_private_data_proven_absent": false,
+  "privacy_clearance_established": false,
+  "unmeasured": {
+    "unrecognized_identifying_material": null,
+    "personal_identifiability_in_prose": null,
+    "third_party_dataset_anonymity": null,
+    "private_info_in_unscanned_documents": null
+  }
+}

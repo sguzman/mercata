@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [public research metadata privacy guard](ontology/youtube/publication-privacy-gate-2026.md) now runs in repository verification, rejecting recognizeable secret signatures, email addresses, and disallowed individual-record keys in YouTube sources/claims without claiming complete privacy or legal clearance.
+
+
 The [U.S. adult YouTube-news self-report series](ontology/youtube/us-news-reported-change-2026.md) computes published annual point differences from 2020–2026 without claiming statistically verified audience decline, channel revenue trends or causal political effects.
 
 
