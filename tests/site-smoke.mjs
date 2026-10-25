@@ -100,6 +100,7 @@ try{
       ['.country-ad-reach',4,'Advertiser planning can be revised'],
       ['.us-news-demographic-crosswalk',8,'Biological sex, overlapping age-by-party'],
       ['.synthetic-media-rights',4,'no AI creator earnings'],
+      ['.agentio-sponsor-study',6,'not representative creator pay or verified incremental sales'],
       ['.shopping-funnel-evidence',4,'no verified public conversion rate'],
       ['.ytlive-attendance-study',4,'not unique viewers or earnings'],
       ['.live-chat-culture-study',4,'not verified creator earnings'],

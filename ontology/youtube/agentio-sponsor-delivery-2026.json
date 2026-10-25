@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "sponsored_creator_integration_long_tail_and_buyer_action_vendor_cohort",
+  "as_of": "2026-10-24",
+  "source_ids": [
+    "agentio-creator-playbook-2026",
+    "emarketer-agentio-methodology-2026"
+  ],
+  "shared_study_family": "agentio-creator-playbook-syndication",
+  "original_data_owner": "Agentio (paid YouTube sponsorship marketplace and attribution provider)",
+  "observation_period": {
+    "start": "2023-10",
+    "end": "2025-12",
+    "aggregate_sample_integrations_strictly_greater_than": 10000
+  },
+  "selection": {
+    "unit": "paid_sponsor_integrations_through_agentio",
+    "paid_embedded_brand_promotions_not_youtube_pre_roll_ads": true,
+    "creator_population_approx_geographic_shares_percent": {
+      "US": 92,
+      "CA": 5,
+      "UK": 2,
+      "AU_less_than": 1
+    },
+    "geographic_shares_sum_to_100_verified": false,
+    "global_coverage_representative": false,
+    "random_sample_of_all_youtube_creators": false,
+    "includes_unpaid_small_creators": false,
+    "advertiser_portfolios_select_and_repeat_winning_partnerships": true,
+    "advertiser_brand_case_studies_in_universe_independent_random_samples": false
+  },
+  "selected_aggregates": [
+    {
+      "id": "views_after_day_30",
+      "value": 38,
+      "unit": "percent_of_total_observed_integration_views",
+      "window": "age_days_greater_than_30",
+      "population": "Agentio paid sponsorship placements in selected sampled cohort",
+      "kind": "cumulative_observed_deliveries"
+    },
+    {
+      "id": "views_after_day_90",
+      "value": 27,
+      "unit": "percent_of_total_observed_integration_views",
+      "window": "age_days_greater_than_90",
+      "population": "Agentio paid sponsorship placements in selected sampled cohort",
+      "kind": "cumulative_observed_deliveries"
+    },
+    {
+      "id": "clicks_after_day_30",
+      "value": 30,
+      "unit": "approx_percent_of_observed_attributed_click_events",
+      "window": "age_days_greater_than_or_equal_to_30",
+      "population": "Agentio creator placement tracked clicks",
+      "kind": "cumulative_observed_clicks"
+    },
+    {
+      "id": "ctr_relative_eighth_placement",
+      "value": 1.8,
+      "unit": "multiple_of_selected_first_integration_median_ctr",
+      "window": "eighth_paid_integration_same_sponsor_creator_pair",
+      "population": "pairs selected to persist to eighth sponsored integration",
+      "kind": "repeat_placement_association"
+    },
+    {
+      "id": "conversion_rate_relative_sixth_placement",
+      "value": 1.9,
+      "unit": "multiple_of_selected_first_integration_conversion_rate",
+      "window": "sixth_paid_integration_same_sponsor_creator_pair",
+      "population": "pairs selected to persist to sixth sponsored integration",
+      "kind": "repeat_placement_association"
+    },
+    {
+      "id": "advertiser_cumulative_cpm_decline_one_year",
+      "value": 54,
+      "unit": "percent_decline_in_advertiser_cumulative_cpm",
+      "window": "one_year_continuous_brand_investment",
+      "population": "continuing selected Agentio advertiser programs",
+      "kind": "advertiser_media_spend_efficiency"
+    }
+  ],
+  "definitions": {
+    "total_integration_views": "Observed playback events over the provider's measured lifetime window for tracked sponsored video integrations",
+    "attributed_clicks": "Agentio-tracked sponsored offer click events, not unique customers",
+    "ctr": "click-through rate of tagged sponsorship link/action, denominator is qualifying impressions or views subject to Agentio method; absolute baseline not reported here",
+    "conversion_rate": "Advertiser-attributed conversion events per selected click or related measured denominator; absolute baseline and event definitions not sufficiently published to infer real revenue",
+    "cpm": "Effective advertiser cost per thousand measured views, not creator cash profit or platform-native RPM"
+  },
+  "excluded_inferences": [
+    "The 38% of views after 30 days and the ~30% of clicks after 30 days are different populations/units; dividing them does not yield CTR.",
+    "The 27% of views after 90 days is a subset of post-30-day views, not additive to 38%.",
+    "The eighth-placement 1.8x CTR and sixth-placement 1.9x CVR are relative cohort observations, not absolute CTR/CVR, verified incrementality or expected effects of a new creator.",
+    "Continuing sponsor relationships may be selected after earlier performance; correlation does not establish a causal benefit of repeating contracts.",
+    "A falling advertiser cumulative CPM after one year is not an increase in creator pay or a decline in creator expenses.",
+    "More than 10,000 paid selected placements are not all creator uploads, zero earners or the global YouTube advertising population.",
+    "The geographic breakdown describes the vendor's selected creators, not the distribution of YouTube creators or subscribers worldwide."
+  ],
+  "unmeasured": {
+    "global_creator_paid_sponsorship_rate": null,
+    "representative_small_creator_sponsorship_income": null,
+    "verified_incremental_sales_lift": null,
+    "absolute_median_ctr": null,
+    "absolute_median_cvr": null,
+    "creator_net_income": null,
+    "creator_contract_costs": null,
+    "zero_earning_creators": null
+  }
+}

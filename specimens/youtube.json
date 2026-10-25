@@ -3144,6 +3144,28 @@
       "evidence_class": "official_merchant_private_metrics_and_privacy_policy",
       "license": "Official documentation linked; only independently authored short metric definitions",
       "notes": "Owner Merchant Center analytics: gross/net sales, commissions, clicks, tagged-video views, tag impressions, orders including pending approvals and privacy-based suppression."
+    },
+    {
+      "id": "agentio-creator-playbook-2026",
+      "url": "https://www.agentio.com/blog/how-agentio-turns-youtube-sponsorships-into-a-scalable-media-channel",
+      "publisher": "Agentio",
+      "title": "How Agentio Turns YouTube Sponsorships Into a Scalable Media Channel",
+      "published_at": "2026-03-06",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "commercial_vendor_nonrandom_sponsor_integration_analysis",
+      "license": "External article linked, brief independently authored aggregate observations without original reports or client data copied",
+      "notes": "Vendor's own 10k+ selected paid integrations: views >30/>90 days, clicks >30 days, repeat advertiser CTR/CVR ratios, advertiser CPM. Not causal or representative individual creator net income."
+    },
+    {
+      "id": "emarketer-agentio-methodology-2026",
+      "url": "https://www.emarketer.com/content/sticking-with-same-youtube-creator-nearly-doubles-affiliate-link-ctr",
+      "publisher": "EMARKETER",
+      "title": "Sticking with the same YouTube creator nearly doubles affiliate link CTR",
+      "published_at": "2026-02-25",
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "secondary_methodology_of_shared_agentio_vendor_sample",
+      "license": "Brief distinct attribution of population geography and period; same underlying Agentio data, not independent statistical replication",
+      "notes": "Agentio Jan 2026 creator marketing playbook: >10k integrations Oct2023–Dec2025, sample creators ~92% US, 5% CA, 2% UK, <1% AU; not a new independent participant cohort."
     }
   ],
   "claims": [
@@ -6795,6 +6817,37 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "No merchant account or transaction data accessed; privacy thresholds hide small groups and prohibit re-identification, dataset joins and sensitive inference."
+    },
+    {
+      "id": "agentio-2026-late-sponsor-delivery",
+      "text": "Across more than 10,000 vendor-selected paid YouTube sponsor integrations, Agentio reports 38% of sponsored-video views after day 30, 27% after day 90, and roughly 30% of attributable clicks after day 30. View-share age windows overlap, and clicks are separate events, not buyers.",
+      "source_ids": [
+        "agentio-creator-playbook-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Vendor-selected paid client placements, dates and late windows vary; no universe of unpaid creators, absolute purchase rate or payee profit."
+    },
+    {
+      "id": "agentio-2026-repeat-sponsorship-cohort",
+      "text": "Agentio's sponsored integrations dataset reports repeat same-creator relationships with approximately 1.8x eighth-placement CTR and 1.9x sixth-placement conversion rate relative to earlier placements, and a reported 54% decline in continuing advertiser cumulative CPM after one year.",
+      "source_ids": [
+        "agentio-creator-playbook-2026",
+        "emarketer-agentio-methodology-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "medium",
+      "limitations": "Selected renewing relationships are non-random survivors; reported multiples lack absolute event baselines and verified randomized causal attribution; advertiser CPM is not creator wages or take-home profit."
+    },
+    {
+      "id": "agentio-2026-methodology-geographic-sample",
+      "text": "EMARKETER attributes Agentio's playbook evidence to more than 10,000 paid creator integrations from October 2023 through December 2025, with about 92% of sampled creators based in the U.S.; this is a vendor-specific sponsorship market rather than representative global YouTube creator income.",
+      "source_ids": [
+        "emarketer-agentio-methodology-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Geography shares are rounded and may not sum to exactly 100%; downstream revenue, zero earners and all-platform opportunities remain unknown."
     }
   ],
   "observations": [],

@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [paid sponsorship integration cohort](ontology/youtube/agentio-sponsor-delivery-2026.md) reports actual selected long-tail views and clicks, repeat-partnership CTR/CVR ratios and advertiser CPM changes, while rejecting causal creator-income extrapolation and double-counted time windows.
+
+
 The [YouTube Shopping conversion evidence crosswalk](ontology/youtube/shopping-funnel-evidence-2025.md) records transaction-ranked products, a dated Gen Z brand-discovery survey, and authorized merchant analytics metrics without inventing completed sales, creator payouts, or buyer conversion rates.
 
 
