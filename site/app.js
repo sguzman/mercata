@@ -4591,8 +4591,8 @@ async function showDossier(entry) {
     if(viewerHypotheses)outer.append(viewerHypotheses);
     const listing=renderOfferListingControls(offerListingStudy,record);
     if(listing)outer.append(listing);
-    const concentration=renderNicheConcentration(nicheConcentration,record);
-    if(concentration)outer.append(concentration);
+    const nicheVideoAttentionSection=renderNicheConcentration(nicheConcentration,record);
+    if(nicheVideoAttentionSection)outer.append(nicheVideoAttentionSection);
     const languageStudy=renderLanguageMarkets(languageMarketResearch,record);
     if(languageStudy)outer.append(languageStudy);
     const checkoutAudit=renderCheckoutRefundEvidence(checkoutRefundEvidence,record);
