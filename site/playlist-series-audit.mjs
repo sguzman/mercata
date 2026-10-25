@@ -15,3 +15,25 @@ export function buildSeriesStudyFrame(model,frame){
     !frame.start||!frame.end||frame.start>frame.end) return {ready:false};
  return {ready:true,requested_metrics:model.official_sample_query.metrics,observed_count:model.observations.length,unique_returners:null,purchasers:null};
 }
+
+export function auditSeriesProductVsRetention(model,registeredSourceIds){
+ const errors=[],study=model?.shows_and_shorts_series;
+ if(!study||study.modes?.length!==2||!study.source_ids?.every(id=>registeredSourceIds.has(id)))
+   return {valid:false,errors:['missing or unsourced show rules']};
+ const [n,s]=study.modes;
+ if(n.id!=='non_serial'||n.episode_order!=='newest_to_oldest'||n.initial_conversion_default!==true||
+    n.intended_to_watch_in_sequence!==false||
+    s.id!=='serial'||s.episode_order!=='oldest_to_newest'||
+    s.intended_to_watch_in_sequence!==true||s.playback_out_of_order_technically_blocked!==null)
+   errors.push('invented serial navigation restriction or episode order');
+ if(study.shorts_series?.maximum_duration_seconds!==180||
+    study.shorts_series?.exclusive_shorts_playlist_required!==true||
+    study.shorts_series?.allowed_orientations?.join(',')!=='portrait,square'||
+    study.shorts_series?.previous_next_episode_navigation!==true)
+   errors.push('Shorts show eligibility distorted');
+ if(Object.values(study.general_statistics||{}).some(x=>x!==null)||
+    Object.values(model.unmeasured||{}).some(x=>x!==null)||
+    model.authorized_api_calls_performed!==false)
+   errors.push('unmeasured series retention represented as observed');
+ return {valid:errors.length===0,errors};
+}

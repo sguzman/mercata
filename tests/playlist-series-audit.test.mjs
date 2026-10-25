@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {assessPlaylistMetricClaim,buildSeriesStudyFrame} from '../site/playlist-series-audit.mjs';
+import {assessPlaylistMetricClaim,buildSeriesStudyFrame,auditSeriesProductVsRetention} from '../site/playlist-series-audit.mjs';
 const read=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 test('Official playlist metrics preserve context, web-only measures and source IDs',async()=>{
  const [m,d]=await Promise.all([read('ontology/youtube/playlist-series-observability.json'),read('specimens/youtube.json')]);
@@ -36,4 +36,23 @@ test('Public site exposes playlist scope',async()=>{
  assert(source.includes('renderPlaylistSeriesStudy'));
  assert(source.includes('playlist-series-observability.json'));
  assert(source.includes('not unique returning viewers'));
+});
+
+test('2026 Shows serial and non-serial metadata does not measure retention',async()=>{
+ const [m,d]=await Promise.all([read('ontology/youtube/playlist-series-observability.json'),read('specimens/youtube.json')]);
+ assert.deepEqual(auditSeriesProductVsRetention(m,new Set(d.evidence.map(x=>x.id))),{valid:true,errors:[]});
+ const show=m.shows_and_shorts_series;
+ assert.deepEqual(show.modes.map(x=>x.episode_order),['newest_to_oldest','oldest_to_newest']);
+ assert.equal(show.shorts_series.maximum_duration_seconds,180);
+ assert.equal(show.modes[1].playback_out_of_order_technically_blocked,null);
+ assert.equal(show.general_statistics.serial_episode_completion_share,null);
+ assert.equal(m.unmeasured.shows_true_unique_return_viewer_rate,null);
+});
+test('Show metadata audit rejects invented population retention or conversion facts',async()=>{
+ const [m,d]=await Promise.all([read('ontology/youtube/playlist-series-observability.json'),read('specimens/youtube.json')]);
+ const ids=new Set(d.evidence.map(x=>x.id));
+ const a=structuredClone(m);a.shows_and_shorts_series.general_statistics.serial_episode_completion_share=0.72;
+ assert(auditSeriesProductVsRetention(a,ids).errors.includes('unmeasured series retention represented as observed'));
+ const b=structuredClone(m);b.shows_and_shorts_series.modes[1].playback_out_of_order_technically_blocked=true;
+ assert(auditSeriesProductVsRetention(b,ids).errors.includes('invented serial navigation restriction or episode order'));
 });

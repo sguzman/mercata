@@ -215,6 +215,11 @@ try{
     assert((await studyWithMe.textContent()).includes('393 title-selected prerecorded videos'));
     assert((await studyWithMe.textContent()).includes('164,611 analyzed public comments'));
     assert((await studyWithMe.textContent()).includes('causal learning and creator-profit effects were not measured'));
+    const shows=page.locator('.playlist-series-observability .show-serial-product-evidence');
+    assert.equal(await shows.count(),1,'Missing official Shows series mode research');
+    assert((await shows.textContent()).includes('serial shows list oldest first'));
+    assert((await shows.textContent()).includes('maximum 180 seconds'));
+    assert((await shows.textContent()).includes('No verified show completion'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));

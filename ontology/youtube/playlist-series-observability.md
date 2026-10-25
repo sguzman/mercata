@@ -27,3 +27,12 @@ For a valid follow-on series experiment, define playlist ID, series topic, publi
 No authorized channel observations, cohort completion rates or creator earnings have been recorded.
 
 Machine record: [playlist-series-observability.json](playlist-series-observability.json). Audit: [playlist-series-audit.mjs](../../site/playlist-series-audit.mjs). Tests: [playlist-series-audit.test.mjs](../../tests/playlist-series-audit.test.mjs).
+
+
+## Series packaging in YouTube Shows (product rules, not measured retention)
+
+[YouTube's current Help for Shows](https://support.google.com/youtube/answer/16590581?hl=en), reviewed October 25, 2026, distinguishes **non-serial** collections from **serial** series. Non-serial shows default to **newest-first** presentation and can be consumed out of order. Serial shows display episodes in **oldest-first** sequence and are intended for sequential viewing. Creators can convert existing playlists, assign seasons/episode numbers (the default conversion begins with Season 1), and adjust episode ordering. Eligibility for search, Recommended shows and Continue watching is described as possible, **not guaranteed impression or audience retention evidence**.
+
+For a Shorts series, the playlist must contain **only Shorts**, portrait or square, with a **maximum of 180 seconds** per episode. The platform offers a Watch Series entry point and previous/next sequential navigation. YouTube's [September 23, 2026 product announcement](https://blog.youtube/news-and-events/made-on-youtube-creators-shorts-series-tv-features/) documents the rolling introduction across web, mobile and TV. Feature access can vary; the repository has not tested any channel's eligibility.
+
+**Scientific measurement boundary:** Episode count, show creation, Watch Series placement, and sequential UI navigation are *product affordances*, not observations of people watching multiple episodes or returning after a day/week. The existing owner-only playlist report measures playlist-context video events and web-only playlist starts, which **cannot** be converted to a percentage of unique viewers finishing a season. No approved owner-channel longitudinal episode or retention cohort has been examined, and the effect of switching non-serial to serial on repeat visits, monetization or causal watch-time gain remains `null`.

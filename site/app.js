@@ -3049,6 +3049,15 @@ function renderPlaylistSeriesStudy(model,dossier){
   card.append(make('p','measure-limit',m.limitation));grid.append(card);
  }
  details.append(grid);
+ const show=model.shows_and_shorts_series;
+ if(show?.modes?.length===2){
+  const panel=make('div','show-serial-product-evidence');
+  panel.append(make('h5','','YouTube Shows: serial versus non-serial episode packaging'));
+  panel.append(make('p','measure-limit','Non-serial shows list newest episodes first; serial shows list oldest first and intend sequential viewing. Playlist-to-show conversion begins with Season 1. Episode order is product metadata, not measured viewing behavior.'));
+  panel.append(make('p','measure-limit','Shorts series require Shorts-only playlists of portrait or square episodes, maximum '+show.shorts_series.maximum_duration_seconds+' seconds each. Watch Series supports moving between episodes.'));
+  panel.append(make('p','measure-limit','No verified show completion, distinct returning viewers, causal retention uplift or series earnings have been measured.'));
+  panel.append(audienceSources(show.source_ids,dossier));details.append(panel);
+ }
  details.append(make('p','measure-limit','No playlist analytics have been accessed. Web-only playlist starts and video depth are not unique audience, full-series completion or commercial conversion rates.'));
  details.append(audienceSources(model.source_ids,dossier));
  const link=make('a','inline-link','Read definitions and source scope ↗');

@@ -2,11 +2,12 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "official_owner_playlist_report_measurement",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "source_ids": [
     "api-metrics",
     "yt-channel-playlist-report-rules-2026",
-    "api-sample-queries"
+    "api-sample-queries",
+    "yt-create-shows-help-2026"
   ],
   "requires_channel_owner_authorization": true,
   "authorized_api_calls_performed": false,
@@ -94,6 +95,79 @@
     "returning_people": null,
     "final_episode_completers": null,
     "buyer_conversion": null,
-    "net_creator_profit": null
+    "net_creator_profit": null,
+    "shows_true_unique_return_viewer_rate": null,
+    "shorts_episode_n_to_nplus1_completion": null,
+    "serial_vs_nonserial_causal_watch_time_lift": null
+  },
+  "shows_and_shorts_series": {
+    "source_ids": [
+      "yt-create-shows-help-2026",
+      "yt-shorts-series-tv-posts-2026"
+    ],
+    "official_policy_reviewed_at": "2026-10-25",
+    "product_type": "YouTube Shows and Shorts series",
+    "modes": [
+      {
+        "id": "non_serial",
+        "episode_order": "newest_to_oldest",
+        "manual_sequence_required": false,
+        "initial_conversion_default": true,
+        "verified_series_completion_rate": null,
+        "intended_to_watch_in_sequence": false,
+        "order_can_be_edited_by_creator": true
+      },
+      {
+        "id": "serial",
+        "episode_order": "oldest_to_newest",
+        "manual_sequence_required": false,
+        "initial_conversion_default": false,
+        "verified_series_completion_rate": null,
+        "playback_out_of_order_technically_blocked": null,
+        "intended_to_watch_in_sequence": true,
+        "order_can_be_edited_by_creator": true
+      }
+    ],
+    "conversion_existing_playlist_supported": true,
+    "show_season_required": true,
+    "can_edit_episode_and_season_numbers": true,
+    "initial_season": "Season 1",
+    "respects_manually_customized_playlist_order": true,
+    "page_surfaces": [
+      "search_eligible",
+      "recommended_shows_eligible",
+      "continue_watching_eligible",
+      "shows_tab",
+      "playlist_shelf"
+    ],
+    "shorts_series": {
+      "exclusive_shorts_playlist_required": true,
+      "allowed_orientations": [
+        "portrait",
+        "square"
+      ],
+      "maximum_duration_seconds": 180,
+      "supports_custom_thumbnails": true,
+      "watch_series_entry_surface": "Shorts feed",
+      "previous_next_episode_navigation": true,
+      "launched_announcement_at": "2026-09-23",
+      "availability_by_creator_country": null
+    },
+    "general_statistics": {
+      "total_series_count": null,
+      "eligible_approved_shows": null,
+      "unique_viewers": null,
+      "view_events_per_episode": null,
+      "viewer_repeat_return_rate": null,
+      "serial_episode_completion_share": null,
+      "incremental_revenue": null
+    },
+    "inference_boundaries": [
+      "An eligible placement in Continue watching is not a measured return visitor or retention uplift.",
+      "Creator-set episode numbering is metadata, not proof any one viewer played an episode or completed a season.",
+      "The UI serial/nonserial choice does not experimentally compare watch time, reach or monetization outcomes.",
+      "Web-only owner Analytics playlistStarts cannot establish cross-device navigation through Shorts series.",
+      "YouTube's September 2026 microdrama view counts are platform-selected genre events, not measurements of repeat-person series completion."
+    ]
   }
 }
