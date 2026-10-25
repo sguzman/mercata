@@ -3067,6 +3067,17 @@
       "evidence_class": "official_commissioned_us_gdp_impact_2024",
       "license": "Official release linked, quantitative source facts paraphrased",
       "notes": "Oxford estimate for 2024: more than USD 55B U.S. GDP contribution and about 490K full-time-equivalent jobs supported. Not verified creator payments or a matched methodology/counterfactual with 2025."
+    },
+    {
+      "id": "yt-native-title-thumbnail-ab-tests-2026",
+      "url": "https://support.google.com/youtube/answer/16391400?hl=en",
+      "publisher": "YouTube Help",
+      "title": "A/B test titles and thumbnails",
+      "published_at": null,
+      "retrieved_at": "2026-10-24",
+      "evidence_class": "official_current_creator_experiment_feature",
+      "license": "Official feature documentation linked and independently paraphrased",
+      "notes": "Desktop advanced-feature gated, up to 3 concurrent title/thumbnail variants; winner by watch-time share; includes Shorts, Premiere, kids and privacy exclusion rules."
     }
   ],
   "claims": [
@@ -6595,6 +6606,26 @@
       "observed_at": "2026-10-24",
       "confidence": "high",
       "limitations": "Different published years and modeling methods must not be assumed strictly comparable. Economic GDP value added and modeled supported FTE are not corporate revenues, YouTube payments or creator income."
+    },
+    {
+      "id": "yt-native-packaging-concurrent-ab",
+      "text": "Eligible desktop YouTube Studio creators can test up to three title, thumbnail or combined variants concurrently; results are judged by watch-time share, not click-through rate, and an inconclusive test is not evidence of performance uplift.",
+      "source_ids": [
+        "yt-native-title-thumbnail-ab-tests-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "No per-channel testing outcomes or creator revenue are supplied by the public Help page."
+    },
+    {
+      "id": "yt-native-packaging-eligibility-exclusions",
+      "text": "YouTube's native A/B tool excludes Shorts, active Premieres, scheduled live events, videos made for kids, mature or private videos; eligible archived livestreams and converted concluded Premieres may qualify.",
+      "source_ids": [
+        "yt-native-title-thumbnail-ab-tests-2026"
+      ],
+      "observed_at": "2026-10-24",
+      "confidence": "high",
+      "limitations": "Requires advanced features and desktop owner access, which were not accessed for this study."
     }
   ],
   "observations": [],

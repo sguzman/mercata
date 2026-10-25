@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [native title and thumbnail A/B test study](ontology/youtube/native-packaging-ab-tests.md) documents YouTube's concurrent watch-time experiment, supported variants, restricted surfaces and outcome uncertainty without pretending that a channel experiment or verified buyer conversion was run.
+
+
 The [global creator, artist and media payout study](ontology/youtube/platform-creator-payout-scale.md) records YouTube's first-party four-year payout headlines and overlapping music-industry payments, separating corporate transfers to media/rights holders from individual creator earnings and profits.
 
 

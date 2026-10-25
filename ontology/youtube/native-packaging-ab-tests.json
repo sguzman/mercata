@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "native_concurrent_title_thumbnail_ab_tests",
+  "as_of": "2026-10-24",
+  "source_ids": [
+    "yt-native-title-thumbnail-ab-tests-2026"
+  ],
+  "surface": "authenticated_creator_youtube_studio_desktop",
+  "advanced_features_required": true,
+  "maximum_variants": 3,
+  "minimum_variants": 2,
+  "test_modes": [
+    "title_only",
+    "thumbnail_only",
+    "title_and_thumbnail"
+  ],
+  "outcome_metric": "watch_time_share",
+  "outcome_is_clickthrough_rate": false,
+  "allocation": "concurrent_native_split",
+  "platform_held_out_control_possible": true,
+  "expected_resolution_max_days": 14,
+  "measured_experiment_results": [],
+  "ineligible": [
+    {
+      "id": "shorts",
+      "reason": "Shorts and transitioned Shorts are not eligible for native testing"
+    },
+    {
+      "id": "scheduled_live",
+      "reason": "Scheduled live video is not testable until an eligible archive is available"
+    },
+    {
+      "id": "premiere_in_progress",
+      "reason": "A Premiere must end and become an eligible long-form video"
+    },
+    {
+      "id": "made_for_kids",
+      "reason": "Made-for-kids videos cannot use this experiment"
+    },
+    {
+      "id": "mature_or_age_restricted",
+      "reason": "Mature and age-restricted videos are excluded"
+    },
+    {
+      "id": "private",
+      "reason": "Private videos are excluded"
+    },
+    {
+      "id": "advanced_features_unavailable",
+      "reason": "Creator must have advanced feature access"
+    },
+    {
+      "id": "mobile_studio",
+      "reason": "Native test setup is desktop only"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "winner",
+      "meaning": "One variant clearly outperformed others on watch-time share at YouTube's native significance decision; not proof of a revenue increase",
+      "chosen": "winning_variant"
+    },
+    {
+      "id": "performed_same",
+      "meaning": "No clear advantage despite observed differences; creator can choose a variant",
+      "chosen": "creator_choice"
+    },
+    {
+      "id": "inconclusive",
+      "meaning": "No strong statistical difference; first uploaded option remains default absent a manual change",
+      "chosen": "first_variant_default"
+    }
+  ],
+  "confounders": [
+    "insufficient_impressions",
+    "statistical_variation",
+    "different_early_and_late_viewer_composition",
+    "manual_title_or_thumbnail_change_stops_running_test",
+    "simultaneous_title_and_thumbnail_change_cannot_isolate_component_effect"
+  ],
+  "no_source_for": [
+    "public_cross_channel_test_results",
+    "click_conversion_probabilities",
+    "incremental_revenue",
+    "purchase_conversions",
+    "causal_revenue_uplift",
+    "outside_platform_audience_migration"
+  ],
+  "unmeasured": {
+    "test_outcome_counts": null,
+    "viewers_exposed": null,
+    "viewers_buying": null,
+    "absolute_watch_time_lift": null,
+    "creator_profit_effect": null
+  }
+}
