@@ -8,7 +8,8 @@
   "sources": [
     "ofcom-children-parents-media-2026",
     "barb-uk-screen-share-2025",
-    "nielsen-us-children-june-tv-2025"
+    "nielsen-us-children-june-tv-2025",
+    "nielsen-us-august-2025-school-return-tv"
   ],
   "yearly_context": [
     {
@@ -143,7 +144,9 @@
     "Child location, gender, interests, profiles, watch histories and credentials must not be collected for this research.",
     "UK measures cannot be projected onto all countries without appropriate independent frames.",
     "The U.S. Nielsen May-to-June 2025 changes are TV impressions for ages 6–17 across all sources or all streaming; neither is the change in YouTube child viewers or viewing minutes.",
-    "Month-on-month TV increases at the beginning of summer are not causal estimates of school breaks, nor UK seasonality or made-for-kids video demand."
+    "Month-on-month TV increases at the beginning of summer are not causal estimates of school breaks, nor UK seasonality or made-for-kids video demand.",
+    "Nielsen's August 2025 declines are for TV-screen viewing among ages 6–17, not YouTube-only viewing, uniquely identified children, content genres or creator earnings.",
+    "Nielsen's five-week viewing interval does not isolate back-to-school causality, and a May–June impressions change cannot be compounded with July–August viewing-time change."
   ],
   "adjacent_seasonal_context": {
     "id": "us_child_tv_may_june_2025",
@@ -173,5 +176,61 @@
     "causal_school_break_effect_percent": null,
     "sample_n": null,
     "comparability_to_uk_annual_youtube_minutes": "incompatible_platform_geography_period_and_metric"
+  },
+  "adjacent_school_return_context": {
+    "id": "us_2025_ages_6_17_august_school_return",
+    "source_id": "nielsen-us-august-2025-school-return-tv",
+    "study_publisher": "Nielsen",
+    "geography": "United States",
+    "age_range": "6–17",
+    "target_population": "Nielsen-measured television-screen viewing among school-aged children and teens",
+    "status": "observed_television_viewing_not_youtube_specific",
+    "platform_specific_youtube": false,
+    "child_directed_only": false,
+    "absolute_unique_children": null,
+    "annual_seasonal_effect": null,
+    "causal_school_return_effect": null,
+    "measurement_interval": "2025-07-28_to_2025-08-31",
+    "august_broadcast_weeks": 5,
+    "comparisons": [
+      {
+        "id": "aug_vs_july_all_tv",
+        "period": "2025-08_vs_2025-07",
+        "age": "6–17",
+        "metric": "television_viewing_time",
+        "scope": "all_tv_sources",
+        "unit": "relative_percent_change",
+        "value": -9
+      },
+      {
+        "id": "aug_vs_july_streaming",
+        "period": "2025-08_vs_2025-07",
+        "age": "6–17",
+        "metric": "television_streaming_usage",
+        "scope": "all_streaming_sources",
+        "unit": "relative_percent_change",
+        "value": -8
+      },
+      {
+        "id": "aug_first_vs_last_week_all_tv",
+        "period": "2025-07-28_to_08-03_vs_2025-08-25_to_08-31",
+        "age": "6–17",
+        "metric": "television_viewing_time",
+        "scope": "all_tv_sources",
+        "unit": "relative_percent_change",
+        "value": -21
+      },
+      {
+        "id": "aug_first_vs_last_week_streaming",
+        "period": "2025-07-28_to_08-03_vs_2025-08-25_to_08-31",
+        "age": "6–17",
+        "metric": "television_streaming_usage",
+        "scope": "all_streaming_sources",
+        "unit": "relative_percent_change",
+        "value": -22
+      }
+    ],
+    "methodological_boundary": "Same measurement system and broad age cohort as Nielsen June article, but the May–June report concerns TV impressions, whereas August concerns viewing time and streaming usage in a different window; percentages must not be chained to construct YouTube seasonal change.",
+    "sample_n": null
   }
 }

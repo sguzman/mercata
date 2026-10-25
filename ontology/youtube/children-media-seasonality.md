@@ -29,6 +29,19 @@ This is a **measured month-on-month change in television impressions**, not uniq
 
 The machine record stores this as an **adjacent comparator**, with YouTube-specific summer lift, sample size and causal effect remaining `null`.
 
+## Adjacent school-return evidence: U.S. children's television
+
+Nielsen's [September 16, 2025 August Gauge report](https://www.nielsen.com/news-center/2025/football-and-back-to-school-dynamics-spark-first-gains-since-april-for-traditional-tv/) measured U.S. **ages 6–17** on television screens:
+
+| Comparison | All TV sources | All streaming TV |
+| --- | ---: | ---: |
+| August relative to July 2025 | -9% TV viewing time | -8% streaming usage |
+| Last week relative to first week of the five-week August interval | -21% TV viewing time | -22% streaming usage |
+
+The August broadcast measurement interval was July 28–August 31, 2025; the within-interval comparison uses July 28–August 3 and August 25–31. The report provides a **dated child TV viewing contrast**, not a YouTube-only viewing series, a unique-person census, or a causal estimate of school return. The full streaming category spans platforms other than YouTube, and other calendar and programming factors are not held constant.
+
+The June increases above are measured in **television impressions**, whereas the August changes are measured using TV viewing and streaming usage. They cannot be chained into a cumulative seasonal change, even though they cover the same broad U.S. age group. Both reports come from Nielsen's measurement system, not independent sample replications. Neither measures Made for Kids genres, child-specific YouTube revenue or YouTube seasonal growth. The [structured record](children-media-seasonality.json) leaves YouTube-specific effect, child sample size and causal school-calendar lift as `null`.
+
 ## What still needs measurement
 
 Seasonality requires comparable **dated age-specific viewing series**, using a consistent territory, device coverage, child age range, content category and sampling method. Plausible hypotheses include school-term versus holiday weeks, Christmas and New Year, summer breaks, Halloween-related categories, and after-school clock hours. The appropriate school calendar must match the country; the same holiday names do not have universal dates or usage effects.
@@ -39,4 +52,4 @@ The inspected sources still do not provide a validated cross-month school-break 
 
 Any empirical follow-up should use legitimately obtained **aggregate statistics**, never child accounts, profile identifiers, watch histories, location traces or individual demographic inference. Data must be comparable across age groups, devices, format rules and geography; missing age-by-week data remain unknown, not zero. Avoid inferring a child-focused earnings forecast, advertising reach or personal viewing preferences from these annual averages.
 
-All five seasonal questions in the [machine record](children-media-seasonality.json) retain `null` effects and open measurement gates. The observed annual viewing figures are bounded regulator results, not a completed child-viewing seasonal study. See [child format gates](child-age-and-format-gates.md) and [UK screen data](screen-viewing-uk-2025.md) for related restrictions.
+All five YouTube-specific seasonal questions in the [machine record](children-media-seasonality.json) retain `null` effects and open measurement gates. The observed annual viewing figures are bounded regulator results, not a completed child-viewing seasonal study. See [child format gates](child-age-and-format-gates.md) and [UK screen data](screen-viewing-uk-2025.md) for related restrictions.

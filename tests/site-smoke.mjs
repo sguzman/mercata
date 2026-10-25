@@ -363,6 +363,10 @@ try{
     assert((await seasonality.textContent()).includes('all-source TV impressions +27%'));
     assert((await seasonality.textContent()).includes('streaming impressions +25%'));
     assert((await seasonality.textContent()).includes('not a YouTube-specific seasonal rate'));
+    assert((await seasonality.textContent()).includes('all TV viewing -9%'));
+    assert((await seasonality.textContent()).includes('combined streaming TV -8%'));
+    assert((await seasonality.textContent()).includes('First-to-last week: TV -21%; streaming -22%'));
+    assert((await seasonality.textContent()).includes('Not a measured YouTube-specific or causal school-return effect.'));
     const genderEvidence=page.locator('.gender-community-evidence');
     assert.equal(await genderEvidence.locator('.gender-community-card').count(),2,'Missing aggregate gender data limits');
     await genderEvidence.locator('summary').click();

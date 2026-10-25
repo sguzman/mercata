@@ -1426,6 +1426,15 @@ function renderChildrenSeasonality(data,dossier){
    details.append(audienceSources([adjacent.source_id],dossier));
   }
  }
+ const school=data.adjacent_school_return_context;
+ if(school?.platform_specific_youtube===false && school.comparisons?.length===4){
+  const ch=Object.fromEntries(school.comparisons.map(x=>[x.id,x.value]));
+  if(Object.values(ch).every(Number.isFinite)){
+   details.append(make('p','children-school-return-comparator measure-limit',
+    'U.S. TV school-return context (ages '+school.age_range+', July–August 2025): all TV viewing '+ch.aug_vs_july_all_tv+'%; combined streaming TV '+ch.aug_vs_july_streaming+'%. First-to-last week: TV '+ch.aug_first_vs_last_week_all_tv+'%; streaming '+ch.aug_first_vs_last_week_streaming+'%. Not a measured YouTube-specific or causal school-return effect.'));
+   details.append(audienceSources([school.source_id],dossier));
+  }
+ }
  details.append(make('p','measure-limit','Measured seasonal effects: unknown. School-break, winter holiday, summer, Halloween and after-school contrasts require comparable dated data. Age and device boundaries must remain consistent; no child-level histories are collected.'));
  details.append(audienceSources(data.sources,dossier));
  const link=make('a','inline-link','Annual source values and missing seasonal evidence ↗');
