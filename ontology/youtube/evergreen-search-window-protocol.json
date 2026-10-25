@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "search_driven_tutorial_long_tail_study_design",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "yt-studio-trends-demand-2026",
+    "yt-reach-source-types-2026",
+    "yt-channel-playlist-report-rules-2026",
+    "analytics-limits"
+  ],
+  "official_features": [
+    {
+      "id": "owner_video_reach",
+      "surface": "YouTube Studio Reach tab",
+      "access": "authorized_channel_or_video_owner",
+      "breakdowns": [
+        "youtube_search",
+        "browse_features",
+        "suggested_videos",
+        "external_sources",
+        "shorts",
+        "notifications",
+        "playlists"
+      ],
+      "metrics": [
+        "views",
+        "watch_time",
+        "impressions_where_reported"
+      ],
+      "not_creator_profit": true,
+      "source_ids": [
+        "yt-reach-source-types-2026"
+      ]
+    },
+    {
+      "id": "trends_tab",
+      "surface": "YouTube Studio Trends",
+      "access": "authorized_eligible_studio_user",
+      "observed_period_days": 28,
+      "search_volume_absolute": null,
+      "audience_interest_is_ordinal": true,
+      "audience_interest_min_weekly_watched_views_for_display": 1000,
+      "user_saved_searches_affect_results": true,
+      "availability_varies_by_country_language_device": true,
+      "source_ids": [
+        "yt-studio-trends-demand-2026"
+      ]
+    },
+    {
+      "id": "traffic_source_analytics_api",
+      "surface": "channel_owner_traffic_source_report",
+      "access": "owner_authorization_required",
+      "dimensions": [
+        "insightTrafficSourceType",
+        "day"
+      ],
+      "metrics": [
+        "views",
+        "estimatedMinutesWatched"
+      ],
+      "query_complexity_video_count_times_days_max": 50000,
+      "excludes_unobserved_external_purchase_events": true,
+      "source_ids": [
+        "yt-channel-playlist-report-rules-2026"
+      ]
+    }
+  ],
+  "content_candidate_types": [
+    {
+      "id": "stepwise_tutorial",
+      "definition": "Video answering a specific repeatable how-to task using reproducible steps",
+      "evergreen_verified": false
+    },
+    {
+      "id": "reference_explainer",
+      "definition": "Explanation of a stable concept that can receive repeat searches",
+      "evergreen_verified": false
+    },
+    {
+      "id": "versioned_walkthrough",
+      "definition": "Instruction dependent on named software/hardware version; demand and accuracy may decay after updates",
+      "evergreen_verified": false
+    },
+    {
+      "id": "event_recap",
+      "definition": "Time-bounded news/event explanation rather than a presumed evergreen control",
+      "evergreen_verified": false
+    }
+  ],
+  "disjoint_video_age_windows_days": [
+    {
+      "id": "initial",
+      "start_inclusive": 0,
+      "end_inclusive": 30
+    },
+    {
+      "id": "middle",
+      "start_inclusive": 31,
+      "end_inclusive": 180
+    },
+    {
+      "id": "later",
+      "start_inclusive": 181,
+      "end_inclusive": 365
+    }
+  ],
+  "protocol": {
+    "study_unit": "one_video_by_source_and_disjoint_age_window",
+    "needed": [
+      "owner_channel_authorization",
+      "published_at",
+      "video_id",
+      "topic_cohort",
+      "language",
+      "country_where_applicable",
+      "format",
+      "same_observation_cutoff",
+      "traffic_source_views",
+      "estimated_minutes_watched"
+    ],
+    "suggested_metrics": [
+      "search_share_of_observed_views",
+      "views_per_published_video_by_age_window",
+      "weekly_view_distribution",
+      "search_vs_browse_source_composition"
+    ],
+    "counts_from_owner_not_youtube_public_search_volume": true,
+    "no_absolute_topic_search_volume_without_independent_measurement": true,
+    "no_live_test_executed": true,
+    "comparison_scope": "match topic, geography, language, format, publication period and video age before inferring persistence",
+    "privacy_controls": "do not collect searcher accounts or suppressed one-off search terms"
+  },
+  "invalid_inferences": [
+    "Studio 28-day trend rankings are not absolute numbers of searches, buyers or future audiences.",
+    "More views from YouTube Search does not prove the video is evergreen unless repeated windows across meaningful time are observed.",
+    "Older videos have had longer to accumulate lifetime views than recently uploaded videos; raw lifetime totals are not valid like-age comparisons.",
+    "Owner-only traffic-source metrics cannot be inferred for an arbitrary public competitor channel or from its publicly visible viewCount.",
+    "In-platform search referrals, suggested videos, browsing, external links and Shorts-feed traffic must not be pooled into an assumed search demand statistic.",
+    "The 50,000 API video-days request budget concerns query support, not the number of views, videos worldwide, or sampling confidence.",
+    "Low or absent Trends content gaps may reflect eligibility, user saves, supported device, geography or suppression; unknown cannot be treated as zero searches.",
+    "Search attention is not verified advertising revenue, completed purchases, creator hourly profits or guaranteed tutorial demand."
+  ],
+  "observed_cohorts": [],
+  "unmeasured": {
+    "real_video_age_source_distribution": null,
+    "absolute_monthly_searches": null,
+    "creator_lifetime_ad_earnings_from_tutorials": null,
+    "unique_returning_viewers": null,
+    "causal_tutorial_format_impact": null,
+    "forecast_opportunity_probability": null
+  }
+}

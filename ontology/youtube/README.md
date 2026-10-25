@@ -4,6 +4,10 @@ The independent [machine model](model.json) defines **184 concepts** and **175 r
 
 **Source snapshot: 2026-10-23.** Contemporary policy assertions refer to the verified official links in [YouTube's dossier](../../specimens/youtube.json). These documents distinguish official facts from research definitions, models and unknown economic estimates.
 
+## Repeat-search tutorials and long-tail discovery
+
+The [YouTube Search longitudinal cohort protocol](evergreen-search-window-protocol.md), [data contract](evergreen-search-window-protocol.json) and [age-window verifier](../../site/evergreen-search-window-audit.mjs) define owner-authorized Search/Browse/Suggested traffic by disjoint video-age intervals; Studio Trends' 28-day interest signals are not absolute keyword volumes, causal creator profits or forecasts.
+
 ## Viewer-country advertiser CPM (not creator RPM)
 
 The [original AIR 2025 advertiser CPM study](air-2025-viewer-cpm-countries.md), [machine price sample](air-2025-viewer-cpm-countries.json) and [unit comparator](../../site/air-country-cpm-audit.mjs) report selected ad-impression prices from 3,000+ vendor channels by viewer geography. Missing countries remain unknown. CPM cannot be treated as creator take-home pay or residence-country income.

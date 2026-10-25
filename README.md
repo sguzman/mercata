@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [evergreen tutorials and repeat-search protocol](ontology/youtube/evergreen-search-window-protocol.md) separates initial, middle and later age-matched owner video Search traffic from recent Studio Trends interest, without asserting observed passive income or absolute search volume.
+
+
 The [original AIR 2025 viewer-country advertiser CPM sample](ontology/youtube/air-2025-viewer-cpm-countries.md) adds prices from more than 3,000 selected channels, correctly separated from creator revenue per view, residence income and purchasing power.
 
 

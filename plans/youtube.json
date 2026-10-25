@@ -204,7 +204,7 @@
         "youtube/discovery/model-discovery-by-language"
       ],
       "phase": 3,
-      "progress_percent": 74
+      "progress_percent": 76
     },
     {
       "id": "competition",
@@ -566,7 +566,7 @@
         "youtube/content-formats/measure-creation-cost-by-format"
       ],
       "phase": 2,
-      "progress_percent": 71
+      "progress_percent": 73
     },
     {
       "id": "social-discovery",
@@ -681,7 +681,7 @@
         "youtube/audience-trends/create-explicit-uncertainty-ranges-for-niche-forecasts"
       ],
       "phase": 4,
-      "progress_percent": 65
+      "progress_percent": 67
     },
     {
       "id": "audience-safeguards",
@@ -1867,7 +1867,7 @@
       "objective": "Design a query sampling framework including language, geography and date.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and design a query sampling framework including language, geography and date.",
       "status": "in_progress",
-      "percent": 59,
+      "percent": 77,
       "evidence": [
         "ontology/youtube/discovery.md",
         "ontology/youtube/search-demand-proxy-crosswalk.json",
@@ -1876,7 +1876,11 @@
         "tests/search-demand-proxy-audit.test.mjs",
         "site/app.js",
         "tests/site-smoke.mjs",
-        "specimens/youtube.json"
+        "specimens/youtube.json",
+        "ontology/youtube/evergreen-search-window-protocol.json",
+        "ontology/youtube/evergreen-search-window-protocol.md",
+        "site/evergreen-search-window-audit.mjs",
+        "tests/evergreen-search-window-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/search-demand-proxy-crosswalk.json",
       "priority": "standard",
@@ -1971,7 +1975,7 @@
       "objective": "Define fixed observation windows for video growth comparisons.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define fixed observation windows for video growth comparisons.",
       "status": "in_progress",
-      "percent": 76,
+      "percent": 82,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
@@ -1992,7 +1996,11 @@
         "site/agentio-sponsor-audit.mjs",
         "tests/agentio-sponsor-audit.test.mjs",
         "site/app.js",
-        "ontology/youtube/source-families.json"
+        "ontology/youtube/source-families.json",
+        "ontology/youtube/evergreen-search-window-protocol.json",
+        "ontology/youtube/evergreen-search-window-protocol.md",
+        "site/evergreen-search-window-audit.mjs",
+        "tests/evergreen-search-window-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/first-upload-vlog-study-2026.json",
       "priority": "standard",
@@ -5335,7 +5343,7 @@
       "objective": "Define evergreen search and revisit measurements.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define evergreen search and revisit measurements.",
       "status": "in_progress",
-      "percent": 57,
+      "percent": 72,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
@@ -5356,7 +5364,11 @@
         "ontology/youtube/educational-video-format-cohorts-2026.json",
         "ontology/youtube/educational-video-format-cohorts-2026.md",
         "site/educational-video-evidence.mjs",
-        "tests/educational-video-evidence.test.mjs"
+        "tests/educational-video-evidence.test.mjs",
+        "ontology/youtube/evergreen-search-window-protocol.json",
+        "ontology/youtube/evergreen-search-window-protocol.md",
+        "site/evergreen-search-window-audit.mjs",
+        "tests/evergreen-search-window-audit.test.mjs"
       ],
       "artifact": "ontology/youtube/playlist-series-observability.json",
       "priority": "standard",
@@ -6374,7 +6386,7 @@
       "objective": "Define weekly, monthly and annual sampling windows.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and define weekly, monthly and annual sampling windows.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 77,
       "evidence": [
         "ontology/youtube/competition-observations.json",
         "ontology/youtube/competition-observations.md",
@@ -6390,7 +6402,12 @@
         "ontology/youtube/video-attention-culture-2026.md",
         "tests/site-smoke.mjs",
         "ontology/youtube/nfl-view-seasonality-2026.json",
-        "ontology/youtube/nfl-view-seasonality-2026.md"
+        "ontology/youtube/nfl-view-seasonality-2026.md",
+        "ontology/youtube/evergreen-search-window-protocol.json",
+        "ontology/youtube/evergreen-search-window-protocol.md",
+        "site/evergreen-search-window-audit.mjs",
+        "tests/evergreen-search-window-audit.test.mjs",
+        "site/app.js"
       ],
       "artifact": "ontology/youtube/nfl-view-seasonality-2026.json",
       "priority": "standard",
@@ -6605,7 +6622,7 @@
       "objective": "No output should imply an observed future or guaranteed opportunity.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and no output should imply an observed future or guaranteed opportunity.",
       "status": "in_progress",
-      "percent": 38,
+      "percent": 47,
       "evidence": [
         "ontology/youtube/creator-growth.json",
         "ontology/youtube/creator-growth.md",
@@ -6615,9 +6632,15 @@
         "ontology/youtube/competition-observations.json",
         "ontology/youtube/competition-observations.md",
         "ontology/youtube/community-audience-studies.json",
-        "ontology/youtube/community-audience-studies.md"
+        "ontology/youtube/community-audience-studies.md",
+        "ontology/youtube/evergreen-search-window-protocol.json",
+        "ontology/youtube/evergreen-search-window-protocol.md",
+        "site/evergreen-search-window-audit.mjs",
+        "tests/evergreen-search-window-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/evergreen-search-window-protocol.json",
       "priority": "standard",
       "phase": 4
     },
