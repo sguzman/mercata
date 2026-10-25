@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "watch_page_ad_revenue_accounting_denominator_protocol",
+  "as_of": "2026-10-25",
+  "scope": "eligible_long_form_watch_page_advertising_not_shorts_pool_or_creator_take_home",
+  "source_ids": [
+    "revenue-shares",
+    "api-metrics",
+    "yt-midroll-2026",
+    "adsense-payment-cycle"
+  ],
+  "format": "symbolic_worksheet_no_accounts_accessed",
+  "platform_share_of_eligible_net_watch_page_ads": 0.55,
+  "known_contractual_rule": {
+    "denominator": "eligible_net_ad_revenues_watch_page_module",
+    "applies_only_after": "watch_page_module_accepted_and_eligible_public_watch_page_ads",
+    "not_equal_to": "gross_advertising_revenue_or_advertiser_CPM",
+    "actual_eligible_net_basis": null
+  },
+  "authorized_reporting_metrics": [
+    {
+      "id": "grossRevenue",
+      "unit": "USD_gross_advertising_revenue",
+      "economics": "gross_google_sold_or_doubleclick_partner_sold",
+      "known_value": null,
+      "source_id": "api-metrics",
+      "limitation": "Subject to month-end adjustments and excludes partner-served ads; not the contractual eligible-net share base."
+    },
+    {
+      "id": "estimatedAdRevenue",
+      "unit": "estimated_creator_net_google_sold_ads",
+      "economics": "creator_reported_estimated_ads",
+      "known_value": null,
+      "source_id": "api-metrics",
+      "limitation": "Reported creator net after applicable ownership/revenue-share adjustments, Google-sold only, not gross ads or actual bank funds."
+    },
+    {
+      "id": "estimatedRevenue",
+      "unit": "estimated_creator_total_net_platform_revenue",
+      "economics": "creator_reported_net_total",
+      "known_value": null,
+      "source_id": "api-metrics",
+      "limitation": "Includes non-ad revenue, may contain estimatedAdRevenue and Premium components; do not add those again."
+    },
+    {
+      "id": "estimatedRedPartnerRevenue",
+      "unit": "estimated_creator_premium_revenue",
+      "economics": "creator_reported_net_premium",
+      "known_value": null,
+      "source_id": "api-metrics",
+      "limitation": "Estimated Premium allocation, not gross subscription receipts; may be included within estimatedRevenue."
+    },
+    {
+      "id": "adImpressions",
+      "unit": "verified_ad_impressions",
+      "economics": "event_ad_delivery",
+      "known_value": null,
+      "source_id": "api-metrics",
+      "limitation": "A single monetized video playback can have multiple ad impressions."
+    },
+    {
+      "id": "monetizedPlaybacks",
+      "unit": "playbacks_with_at_least_one_ad",
+      "economics": "event_monetized_playback",
+      "known_value": null,
+      "source_id": "api-metrics",
+      "limitation": "Can include a viewer who saw a preroll ad but exited before the actual video began; API reports expected +/-2% error."
+    },
+    {
+      "id": "cpm",
+      "unit": "gross_USD_per_1000_ad_impressions",
+      "economics": "advertiser_ad_impression_yield",
+      "known_value": null,
+      "source_id": "api-metrics",
+      "limitation": "Advertiser gross, not creator RPM or watch-page eligible net."
+    },
+    {
+      "id": "playbackBasedCpm",
+      "unit": "gross_USD_per_1000_monetized_playbacks",
+      "economics": "advertiser_playback_yield",
+      "known_value": null,
+      "source_id": "api-metrics",
+      "limitation": "Monetized-playback denominator differs from ad impression denominator and raw public views."
+    }
+  ],
+  "midroll_eligibility": {
+    "minimum_video_duration_seconds": 480,
+    "slot_means_served_ad": false,
+    "slot_types": [
+      "manual",
+      "automatic",
+      "combined"
+    ],
+    "actual_served_ad_count": null,
+    "limitations": "A time slot on an eligible monetized 8-minute-or-longer video is only an opportunity; the system determines if an ad serves."
+  },
+  "hypothetical_worksheet": {
+    "inputs": [
+      "currency",
+      "observation_period",
+      "watch_page_module_accepted",
+      "eligible_public_video",
+      "eligible_net_ad_revenues"
+    ],
+    "gross_ad_revenue_input_is_not_accepted_as_eligible_net": true,
+    "creator_contract_share_formula": "eligible_net_ad_revenues * 0.55",
+    "creator_platform_reported_net_from_gross_alone": null,
+    "separate_required_for_actual_cash": [
+      "posted_finalized_balance",
+      "payment_hold",
+      "payment_threshold",
+      "withholding",
+      "bank_receipt"
+    ],
+    "unmeasured": [
+      "eligible_net_ad_revenues",
+      "gross_to_eligible_net_reconciliation",
+      "owned_channel_actual_ad_revenue",
+      "creator_costs",
+      "finalized_balance",
+      "taxes",
+      "net_creator_profit"
+    ]
+  },
+  "observed_creator_reports": [],
+  "observed_ad_campaigns": [],
+  "typical_creator_revenue": null,
+  "actual_creator_payout": null,
+  "interpretation_gates": [
+    "Never multiply advertiser grossRevenue by 55% to infer creator payout: eligible net revenues are a different undisclosed denominator.",
+    "Never infer estimatedAdRevenue from grossRevenue, monetizedPlaybacks, cpm, playbackBasedCpm or raw public views without authorized, compatible accounting inputs.",
+    "Do not add estimatedRevenue to estimatedAdRevenue or estimatedRedPartnerRevenue; those are potential subcomponents of the total.",
+    "Ad impressions count ads; monetized playbacks count video-playback events with at least one ad; raw public views are a third denominator.",
+    "An ad slot on an eight-minute eligible long-form video is an opportunity, not a guaranteed impression, payment or minimum creator wage.",
+    "Even known creator estimated net ad revenue is not bank-settled net take-home or after-expense profit."
+  ]
+}

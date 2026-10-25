@@ -57,6 +57,9 @@ The [YouTube ontology](ontology/youtube/README.md) contains an independent gloss
 
 ## YouTube: evidence-backed investigation
 
+The [watch-page ads gross-to-net accounting worksheet](ontology/youtube/watch-page-ad-accounting.md) verifies the contractual 55% share of **eligible net**, rather than gross advertiser revenue, and guards against double-counting owner analytics, CPM and non-guaranteed mid-roll slots.
+
+
 The [podcast publication and rights routes](ontology/youtube/podcast-publication-routes-2026.md) separate direct video episode upload from country-eligible RSS static-image conversion, YouTube Music podcast background playback, promotional Shorts and rights/brand disclosures.
 
 

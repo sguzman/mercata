@@ -7859,6 +7859,28 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "'Most' is not all creators, tracks, territories or devices; no platform share of audio-only users or creator earnings observed."
+    },
+    {
+      "id": "yt-longform-watch-net-share-2026",
+      "text": "YouTube's Watch Page Monetization Module provides a 55% share of eligible net watch-page advertising revenue; the Analytics API's grossRevenue is an advertiser-side gross estimate and cannot be multiplied by 55% to infer creator earnings without the undisclosed eligible net accounting base.",
+      "source_ids": [
+        "revenue-shares",
+        "api-metrics"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Requires module acceptance, rights and ad eligibility. No channel-authorized gross-to-net reconciliation, actual payout or creator cost ledger was obtained."
+    },
+    {
+      "id": "yt-longform-midroll-not-guaranteed-2026",
+      "text": "YouTube permits mid-roll ad slots on eligible monetized long-form videos at least eight minutes long, but manual or automated opportunities do not guarantee a served ad impression, income or incremental profit.",
+      "source_ids": [
+        "yt-midroll-2026",
+        "api-metrics"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Slot placement and serving decisions vary; no impression logs, ad fill, viewer responses or earnings experiments were accessed."
     }
   ],
   "observations": [],

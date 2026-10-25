@@ -137,6 +137,7 @@ try{
       ['.us-news-demographic-crosswalk',8,'Biological sex, overlapping age-by-party'],
       ['.synthetic-media-rights',4,'no AI creator earnings'],
       ['.agentio-engaged-view-study',6,'not a universal engaged-to-public conversion factor'],
+      ['.watch-page-accounting',8,'not 55% of advertiser grossRevenue'],
       ['.live-monetization-units',4,'Rubies do not take a further 70% Commerce cut'],
       ['.meme-trending-study',5,'not individual viewers or measured creator earnings'],
       ['.educational-video-studies',3,'not a universal best video length or typical creator earnings'],

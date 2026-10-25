@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-23",
-  "progress_percent": 75,
+  "progress_percent": 76,
   "permission_required_before_execution": false,
   "scope": "Evidence-based research into YouTube's economics, platform use, population, creator earnings, audience demographics, subcultures, competition, content formats and practical monetization strategies.",
   "baseline": {
@@ -151,7 +151,7 @@
         "youtube/economics/measure-the-cost-of-testing-a-new-niche"
       ],
       "phase": 1,
-      "progress_percent": 82
+      "progress_percent": 83
     },
     {
       "id": "market",
@@ -1261,7 +1261,7 @@
       "objective": "Build a sourced gross-to-creator net worksheet with all terms left unknown.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and build a sourced gross-to-creator net worksheet with all terms left unknown.",
       "status": "in_progress",
-      "percent": 66,
+      "percent": 89,
       "evidence": [
         "ontology/youtube/analytics-query-guide.json",
         "ontology/youtube/analytics-query-guide.md",
@@ -1271,9 +1271,14 @@
         "tests/youtube.test.mjs",
         "tests/site-smoke.mjs",
         "ontology/youtube/air-studio-benchmarks-2026.json",
-        "ontology/youtube/air-studio-benchmarks-2026.md"
+        "ontology/youtube/air-studio-benchmarks-2026.md",
+        "ontology/youtube/watch-page-ad-accounting.json",
+        "ontology/youtube/watch-page-ad-accounting.md",
+        "site/watch-page-ad-accounting.mjs",
+        "tests/watch-page-ad-accounting.test.mjs",
+        "site/app.js"
       ],
-      "artifact": "ontology/youtube/air-studio-benchmarks-2026.json",
+      "artifact": "ontology/youtube/watch-page-ad-accounting.json",
       "priority": "standard",
       "phase": 1
     },
@@ -6306,14 +6311,21 @@
       "objective": "Require credible samples and explain why CPM differs from creator RPM.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and require credible samples and explain why CPM differs from creator RPM.",
       "status": "in_progress",
-      "percent": 73,
+      "percent": 78,
       "evidence": [
         "ontology/youtube/small-channel-income.json",
         "ontology/youtube/rpm-niche-quartile-crosswalk-2026.json",
         "ontology/youtube/rpm-niche-quartile-crosswalk-2026.md",
-        "tests/rpm-niche-quartile-crosswalk.test.mjs"
+        "tests/rpm-niche-quartile-crosswalk.test.mjs",
+        "ontology/youtube/watch-page-ad-accounting.json",
+        "ontology/youtube/watch-page-ad-accounting.md",
+        "site/watch-page-ad-accounting.mjs",
+        "tests/watch-page-ad-accounting.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs",
+        "specimens/youtube.json"
       ],
-      "artifact": "ontology/youtube/rpm-niche-quartile-crosswalk-2026.json",
+      "artifact": "ontology/youtube/watch-page-ad-accounting.json",
       "priority": "standard",
       "phase": 3
     },
@@ -6586,7 +6598,7 @@
       "objective": "Show sensitivity to viewers, geography, playback, eligibility and advertiser demand.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and show sensitivity to viewers, geography, playback, eligibility and advertiser demand.",
       "status": "in_progress",
-      "percent": 77,
+      "percent": 80,
       "evidence": [
         "ontology/youtube/opportunity-framework.json",
         "ontology/youtube/opportunity-framework.md",
@@ -6605,9 +6617,13 @@
         "ontology/youtube/adobe-ai-production-survey-2026.json",
         "ontology/youtube/adobe-ai-production-survey-2026.md",
         "site/adobe-ai-production-audit.mjs",
-        "tests/adobe-ai-production-audit.test.mjs"
+        "tests/adobe-ai-production-audit.test.mjs",
+        "ontology/youtube/watch-page-ad-accounting.json",
+        "ontology/youtube/watch-page-ad-accounting.md",
+        "site/watch-page-ad-accounting.mjs",
+        "tests/watch-page-ad-accounting.test.mjs"
       ],
-      "artifact": "ontology/youtube/break-even-scenario.json",
+      "artifact": "ontology/youtube/watch-page-ad-accounting.json",
       "priority": "standard",
       "phase": 3
     },
