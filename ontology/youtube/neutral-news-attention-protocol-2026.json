@@ -2,11 +2,12 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "neutral_public_news_survey_and_event_attention_measurement_protocol",
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "source_ids": [
     "pew-youtube-news-2026",
     "google-trends-relative-index-2026",
-    "api-search"
+    "api-search",
+    "reuters-dnr-2026-news-video-platform-intent"
   ],
   "required_scope": "public_descriptive_aggregate_observations_only",
   "private_user_records_collected": false,
@@ -166,7 +167,8 @@
     "Do not rank political groups or recommend demographic-targeted persuasion or political advertising tactics.",
     "Pew source estimates are 2026 U.S. adult self-reports; yearly survey percentages are not global news viewers or video impressions.",
     "Google Trends 0–100 index cannot be converted to absolute searches or to YouTube searches.",
-    "YouTube search.list is discovery metadata, not exhaustive platform uploads, audience size, unique viewers or causal impact."
+    "YouTube search.list is discovery metadata, not exhaustive platform uploads, audience size, unique viewers or causal impact.",
+    "Reuters's 48-market weekly YouTube news survey and Pew's U.S. adult regular news survey are different definitions and denominators, even where both show 34%; do not pool or rank political audiences."
   ],
   "unmeasured": {
     "public_video_event_time_series": null,
@@ -177,5 +179,72 @@
     "absolute_searches": null,
     "political_community_sizes": null,
     "advertising_revenue_effect": null
+  },
+  "reuters_video_news_survey": {
+    "source_id": "reuters-dnr-2026-news-video-platform-intent",
+    "same_study_family_existing_source_id": "reuters-dnr-2026",
+    "published_at": "2026-06-16",
+    "report_name": "Reuters Institute Digital News Report 2026",
+    "eligible_market_count": 48,
+    "sample_frame": "online news survey respondents in 48 selected markets; not a probability sample of the entire world",
+    "respondents_total_n": null,
+    "per_question_n": null,
+    "age_bounds_identical_all_markets": null,
+    "weekly_youtube_news_use_all_market_pct": 34,
+    "metric_label": "percent_of_online_survey_respondents_who_reported_using_youtube_for_news_in_past_week",
+    "country_coverage_complete_world": false,
+    "regional_weekly_youtube_news_video_use": [
+      {
+        "region": "Africa",
+        "percent": 54,
+        "denominator": "survey_respondents_in_sampled_african_markets",
+        "metric": "weekly_youtube_news_video_use"
+      },
+      {
+        "region": "Asia",
+        "percent": 47,
+        "denominator": "survey_respondents_in_sampled_asian_markets",
+        "metric": "weekly_youtube_news_video_use"
+      },
+      {
+        "region": "Europe",
+        "percent": 24,
+        "denominator": "survey_respondents_in_sampled_european_markets",
+        "metric": "weekly_youtube_news_video_use"
+      }
+    ],
+    "youtube_news_consumers_intent": {
+      "population": "surveyed_respondents_who_consume_news_on_youtube",
+      "mostly_intentional_pct": 55,
+      "mostly_incidental_pct": 40,
+      "remainder_not_assigned": null
+    },
+    "valid_news_content_labels": [
+      "reported_news",
+      "election_procedure_explainer",
+      "policy_analysis",
+      "editorial_opinion",
+      "satire_commentary",
+      "uncertain_or_mixed"
+    ],
+    "reliable_mainstream_vs_independent_creator_share": null,
+    "confirmed_political_news_only_share": null,
+    "political_affiliation_of_youtube_users": null,
+    "per_creator_political_audience_profile": null,
+    "causal_effect_of_content_on_beliefs": null,
+    "typical_channel_income": null,
+    "unique_weekly_news_people": null,
+    "direct_comparison_to_pew_us_regular_news_rate": false,
+    "overlaps_with_reuters_main_report": true,
+    "same_respondent_pool_independent_replication": false,
+    "caveats": [
+      "Reuters figures come from sampled online respondents across 48 markets, not a global platform person count.",
+      "Weekly 34% YouTube-for-news in cross-market Reuters reporting is not Pew's separately sampled 34% of U.S. adults reporting regular YouTube news use.",
+      "Regional news-video survey questions and exposure mechanisms are not a measurement of political commentary exclusively or verified public video views.",
+      "Intentional versus incidental responses are conditional on YouTube news consumers, not all adults or watchers of specific channels.",
+      "A newsroom clip, independent creator and commentary can overlap and cannot be apportioned from public aggregate figures to known total audiences.",
+      "Different Reuters report chapters reuse a common 2026 report family and do not constitute independent surveys.",
+      "No audience ideology, partisan identity, influence, voter behavior or advertising return of a channel was measured."
+    ]
   }
 }

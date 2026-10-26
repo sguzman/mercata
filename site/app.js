@@ -3351,6 +3351,20 @@ function renderNeutralNewsAttention(model,dossier){
  for(const [label,value,note] of entries){const card=make('article','ownership-card');
   card.append(make('h5','',label));card.append(make('strong','',value));card.append(make('p','measure-limit',note));grid.append(card);}
  details.append(grid);
+ const survey=model.reuters_video_news_survey;
+ if(survey?.eligible_market_count===48){
+  const panel=make('div','reuters-news-video-frame');
+  panel.append(make('h5','','Separate Reuters multi-market weekly news video survey'));
+  panel.append(make('p','measure-limit',survey.weekly_youtube_news_use_all_market_pct+
+    '% of selected 48-market Reuters respondents reported YouTube for news in the previous week, NOT the same population as the Pew 34% U.S. adult regular-news rate.'));
+  panel.append(make('p','measure-limit','Regional selected-market weekly YouTube news video: '+
+    survey.regional_weekly_youtube_news_video_use.map(x=>x.region+' '+x.percent+'%').join(' · ')+'. These are survey prevalences, not deduplicated viewers.'));
+  panel.append(make('p','measure-limit',survey.youtube_news_consumers_intent.mostly_intentional_pct+
+    '% of surveyed YouTube news consumers mainly seek news intentionally; '+survey.youtube_news_consumers_intent.mostly_incidental_pct+
+    '% mainly encounter it incidentally. Neither labels the political beliefs of individual viewers nor apportions audiences between journalism and commentary.'));
+  panel.append(audienceSources([survey.source_id,survey.same_study_family_existing_source_id],dossier));
+  details.append(panel);
+ }
  details.append(make('p','measure-limit','Content categories classify public videos, not the sensitive beliefs or identities of their viewers. No audience political profiles are collected.'));
  details.append(audienceSources(model.source_ids,dossier));
  const link=make('a','inline-link','Read survey, event-study and political neutrality measurement limits ↗');

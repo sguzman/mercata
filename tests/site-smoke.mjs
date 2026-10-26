@@ -148,6 +148,7 @@ try{
       ['.topic-evidence-coverage',4,'4 of 33 categories have at least two types of selected measurement'],
       ['.virtual-worship-boundary',4,'not specifically YouTube religious audiences'],
       ['.neutral-news-attention',5,'not any channel audience political affiliation'],
+      ['.neutral-news-attention',5,'NOT the same population as the Pew 34% U.S. adult regular-news rate'],
       ['.us-news-demographic-crosswalk',8,'Biological sex, overlapping age-by-party'],
       ['.synthetic-media-rights',4,'no AI creator earnings'],
       ['.agentio-engaged-view-study',6,'not a universal engaged-to-public conversion factor'],

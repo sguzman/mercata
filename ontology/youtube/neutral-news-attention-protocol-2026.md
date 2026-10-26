@@ -22,3 +22,14 @@ Google Trends indexes a sample of **Google searches**, normalized to **0–100 w
 
 No real event-window video panel has been collected or inspected. No matched within-channel reach, unique audience, political persuasion effect, monetization, or statistical confidence interval is available. The [machine frame](neutral-news-attention-protocol-2026.json), [measurement validator](../../site/neutral-news-attention-audit.mjs) and [regression tests](../../tests/neutral-news-attention-audit.test.mjs) explicitly preserve this unknown state.
 
+
+
+## Independent multi-market weekly video news use (Reuters Institute, June 2026)
+
+The [Reuters Institute Digital News Report's video chapter](https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2026/broadcast-streaming-platforms-changing-landscape-news-video), published **June 16, 2026**, analyzes surveyed **online news consumers and other respondents across 48 selected markets**. Its 2026 Digital News Report summary records **34% using YouTube for news in the previous week** among its multi-market respondent base. This is **not** the same population, question or frequency as Pew's separate 2026 **34% of U.S. adults regularly getting news on YouTube** above. The matching rounded figures are coincidental and must never be merged.
+
+In the regional breakdown of *weekly YouTube news-video use*, Reuters reports **54%** of respondents in its sampled African markets, **47%** in its sampled Asian markets and **24%** in its sampled European markets. These results are region-conditioned online **survey prevalences**, not percentages of all residents of each continent, platform-deduplicated people or numbers of political channels. The public chapter does not supply item-specific regional effective N or global geographic coverage.
+
+The authors also report that **55% of YouTube news consumers** say they mainly **intentionally seek news** on the platform, versus **40%** reporting mostly incidental exposure. This denominator is YouTube **news consumers** within the relevant Reuters survey, not all adults or creators. Its categories cannot be translated into how many users watch political commentary versus public-service reporting, or how many subscribe to particular ideological channels.
+
+**Classification boundary:** Political reporting, procedure explainers, policy discussion, editorial opinion and satire are distinct *published content* types, not proxies for the private political beliefs of their viewers. The Reuters chapter expressly says available totals cannot disentangle traditional publisher traffic from other creator sources. No individual profiles, viewer party affiliation, persuasion effects, unique YouTube weekly news people or creator earnings were obtained. The [structured model](neutral-news-attention-protocol-2026.json) and audit record these unknowns.

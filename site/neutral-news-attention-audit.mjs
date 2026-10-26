@@ -26,3 +26,29 @@ export function assessGoogleTrendsClaim(model,claim){
   observed_results:null,absolute_searches:null};
  return {allowed:false,reason:'not_youtube_search_volume_or_voters'};
 }
+
+export function auditReutersVideoNewsSurvey(model,registered){
+ const errors=[],r=model?.reuters_video_news_survey;
+ if(!r||r.eligible_market_count!==48||r.published_at!=='2026-06-16'||
+    !registered.has(r.source_id)||!registered.has(r.same_study_family_existing_source_id))
+    return {valid:false,errors:['missing registered 48-market survey frame']};
+ if(r.weekly_youtube_news_use_all_market_pct!==34||
+    r.regional_weekly_youtube_news_video_use?.map(x=>x.percent).join(',')!=='54,47,24'||
+    r.regional_weekly_youtube_news_video_use?.map(x=>x.region).join(',')!=='Africa,Asia,Europe')
+    errors.push('survey population or regional rates corrupted');
+ if(r.youtube_news_consumers_intent?.mostly_intentional_pct!==55||
+    r.youtube_news_consumers_intent?.mostly_incidental_pct!==40||
+    r.youtube_news_consumers_intent?.remainder_not_assigned!==null||
+    !r.youtube_news_consumers_intent?.population?.includes('news_on_youtube'))
+    errors.push('intent categories misrepresented as all adults');
+ if(r.respondents_total_n!==null||r.per_question_n!==null||r.country_coverage_complete_world!==false||
+    r.direct_comparison_to_pew_us_regular_news_rate!==false||
+    r.same_respondent_pool_independent_replication!==false||
+    r.overlaps_with_reuters_main_report!==true)
+    errors.push('invented matched global person sample or independent replication');
+ for(const k of ['reliable_mainstream_vs_independent_creator_share','confirmed_political_news_only_share',
+   'political_affiliation_of_youtube_users','per_creator_political_audience_profile','causal_effect_of_content_on_beliefs','typical_channel_income','unique_weekly_news_people'])
+   if(r[k]!==null)errors.push('unmeasured audience politics or economics invented');
+ if(model?.private_user_records_collected!==false)errors.push('individual political profile prohibited');
+ return {valid:errors.length===0,errors};
+}

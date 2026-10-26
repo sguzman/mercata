@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {validateNewsEventFrame,assessNewsSurveyClaim,assessGoogleTrendsClaim} from '../site/neutral-news-attention-audit.mjs';
+import {validateNewsEventFrame,assessNewsSurveyClaim,assessGoogleTrendsClaim,auditReutersVideoNewsSurvey} from '../site/neutral-news-attention-audit.mjs';
 const load=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 test('Neutral news study grounds 2026 adult survey and registered official source IDs',async()=>{
  const [m,s]=await Promise.all([load('ontology/youtube/neutral-news-attention-protocol-2026.json'),load('specimens/youtube.json')]);
@@ -39,4 +39,23 @@ test('Public dossier renders neutral news protocol with no actual user profiling
  assert(app.includes('renderNeutralNewsAttention'));
  assert(app.includes('neutral-news-attention-protocol-2026.json'));
  assert(app.includes('not any channel audience political affiliation'));
+});
+
+test('Reuters multi-market news video populations cannot be mixed with Pew US adult rates',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/neutral-news-attention-protocol-2026.json'),load('specimens/youtube.json')]);
+ const ids=new Set(d.evidence.map(x=>x.id)),r=m.reuters_video_news_survey;
+ assert.deepEqual(auditReutersVideoNewsSurvey(m,ids),{valid:true,errors:[]});
+ assert.equal(r.eligible_market_count,48);
+ assert.equal(r.weekly_youtube_news_use_all_market_pct,34);
+ assert.equal(m.polls.overall_2026_pct_us_adults,34);
+ assert.equal(r.direct_comparison_to_pew_us_regular_news_rate,false);
+ assert.deepEqual(r.regional_weekly_youtube_news_video_use.map(x=>x.percent),[54,47,24]);
+ assert.equal(r.youtube_news_consumers_intent.mostly_intentional_pct,55);
+ assert.equal(r.youtube_news_consumers_intent.mostly_incidental_pct,40);
+ assert.equal(r.unique_weekly_news_people,null);
+ assert.equal(r.per_creator_political_audience_profile,null);
+ const fake=structuredClone(m);fake.reuters_video_news_survey.reliable_mainstream_vs_independent_creator_share=0.31;
+ assert(auditReutersVideoNewsSurvey(fake,ids).errors.includes('unmeasured audience politics or economics invented'));
+ const f2=structuredClone(m);f2.reuters_video_news_survey.direct_comparison_to_pew_us_regular_news_rate=true;
+ assert(auditReutersVideoNewsSurvey(f2,ids).errors.includes('invented matched global person sample or independent replication'));
 });
