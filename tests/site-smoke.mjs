@@ -789,6 +789,11 @@ try{
     assert((await relativeBreakouts.textContent()).includes('threshold is inside the 4–10-minute vendor bin'));
     assert((await relativeBreakouts.textContent()).includes('does not prove ads were served or creator profit'));
     assert((await relativeBreakouts.textContent()).includes('No denominators for all indexed under-10K channels'));
+    assert.equal(await relativeBreakouts.locator('.breakout-tail-point').count(),7,'Missing seven cumulative threshold rates');
+    assert((await relativeBreakouts.textContent()).includes('99×+ · 0.7%'));
+    assert((await relativeBreakouts.textContent()).includes('Nested video percentages, not disjoint channels'));
+    assert((await relativeBreakouts.textContent()).includes('2,305 faceless channels showed unverified monetization signals'));
+    assert((await relativeBreakouts.textContent()).includes('no complete new-entrant denominator'));
     const newcomer=page.locator('.newcomer-income');
     assert.equal(await newcomer.locator('.newcomer-gate').count(),5,'Missing newcomer income methodology gates');
     await newcomer.locator('summary').click();

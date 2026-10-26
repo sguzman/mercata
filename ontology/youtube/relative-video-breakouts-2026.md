@@ -39,6 +39,28 @@ The provider's **selected category breakout rates** (within its own indexed vide
 
 The report also lists **channels below 10,000 subscribers** with at least one internally defined 5× video: 115 in Luxury & Billionaire Lifestyle, 99 in Health & Wellness, 98 in Space & Science, and 32 in Geography & Maps. These are **numerators in selected commercial niches**. No full denominator for all indexed under-10K channels in each niche is supplied; no percentage likelihood of getting a breakout by niche can be calculated. **Below 10K subscribers is not equivalent to newly founded**. A separately reported set of 520 purportedly faceless channels younger than one year with a 5× video likewise has no denominator of all under-one-year faceless entrants, and the provider's faceless category is inferred, not officially verified.
 
+## Cumulative breakout tail, not seven separate channel populations
+
+The same [TubeMind October 2026 indexed-video report](https://tubemind.io/report) provides a more complete **cumulative exceedance distribution** for videos with a comparable *own-channel, same-format recent-median* view multiple:
+
+| Minimum view multiple | Share of 555,158 scored videos |
+| ---: | ---: |
+| 2× | 23.7% |
+| 3× | 16.2% |
+| 5× | 10.1% |
+| 10× | 5.4% |
+| 20× | 3.0% |
+| 50× | 1.3% |
+| 99× | 0.7% |
+
+A video that clears **99× also clears 50×, 20×, 10×, 5×, 3× and 2×**. These percentages **must not be summed** or used as disjoint groups. The underlying percentages are rounded, and multiple videos can belong to one channel. Therefore the series describes *video objects in a selected provider index*, **not the chance a given new creator earns money**, nor the number of independent successful channels, unique viewers or measured net profits.
+
+## Presenter classification is descriptive, not a verified payout difference
+
+The vendor classified **2,862 of 6,663 indexed channels** as faceless (reported approximately 43%); it estimates median subscribers of **30,350 for faceless channels** versus **103,000 on-camera**, and median video views of **16,423** versus **29,267**, respectively. These are non-matched descriptive channel groups with varying maturity and topics; the vendor infers presenter classification from channel and format metadata rather than owner verification.
+
+TubeMind reports **2,305 faceless channels** with commercial *monetization signals* (described as approximately 81% of that selected group), and **520 faceless channels younger than one year** with at least one relative 5× video. It supplies neither a verified YPP acceptance or revenue ledger nor the number of *all faceless channels younger than one year*. The 520 **cannot** support a first-year success rate. No paid income, production workload or nonparticipant outcome distribution has been observed.
+
 ## Why this does not choose a winning niche or reveal creator income
 
 The website's proprietary "Enter now" opportunity rankings combine vendor demand and saturation scores and small-channel case counts. They are vendor product recommendations, **not empirical probability estimates**; Mercata does not adopt or rank by them. A 5× hit could still be a small absolute number of views, carry no monetized ad impressions, fail advertiser suitability, consume many hours or lose money after production. The sample does not measure newcomer zero earners, net revenue, payment eligibility, or year-by-year channel survival.

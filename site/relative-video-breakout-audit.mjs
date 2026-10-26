@@ -26,6 +26,25 @@ export function auditRelativeVideoBreakouts(m,known){
   errors.push('Official eight-minute ad gate conflated with vendor duration bucket');
  if(!m?.small_channel_5x_cases_selected?.every(x=>x.total_indexed_niche_channels_under_10000===null))
   errors.push('Unsupported per-niche all-small-channel denominators');
+ const tail=m?.breakout_tail;
+ if(tail?.comparable_video_objects!==555158||tail?.cumulative_not_disjoint!==true||
+    tail?.thresholds?.map(x=>x.multiple_at_least).join(',')!=='2,3,5,10,20,50,99'||
+    tail?.thresholds?.map(x=>x.reported_percent).join(',')!=='23.7,16.2,10.1,5.4,3,1.3,0.7')
+  errors.push('Cumulative breakout tail rates or population do not match provider');
+ if(!tail?.thresholds?.every((x,i,a)=>i===0||a[i-1].reported_percent>=x.reported_percent)||
+    tail?.per_channel_probability_of_any_breakout!==null||tail?.typical_lifetime_income_of_breakout_channels!==null)
+  errors.push('Cumulative video tail misread as disjoint channel success or income');
+ const presenter=m?.presenter_cohorts;
+ if(presenter?.faceless_classified_channel_count!==2862||
+    presenter?.faceless_channels_with_vendor_monetization_signals!==2305||
+    presenter?.faceless_5x_channels_under_1_year!==520||
+    presenter?.eligible_all_faceless_under_1_year!==null)
+  errors.push('Vendor presenter cohort or unknown newcomer denominator corrupted');
+ if(presenter?.signal_is_verified_actual_ypp_acceptance!==false||
+    presenter?.signal_is_verified_paid_revenue!==false||
+    presenter?.faceless_5x_channels_under_1_year_success_probability!==null||
+    presenter?.observed_paid_faceless_newcomer_income!==null)
+  errors.push('Monetization signal falsely promoted to verified income or new-entrant success');
  if(m?.proprietary_niche_opportunity_scores_as_empirical_success_probability_allowed!==false||
    m?.category_ranks_as_earnings_ranks_allowed!==false)errors.push('Ranking or score falsely authorized as a population outcome');
  if(Object.values(m?.unknowns||{}).some(x=>x!==null)||m?.amount_of_money_for_5x!==null)errors.push('Unsupported payout or population estimate');

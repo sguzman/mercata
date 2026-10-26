@@ -54,3 +54,22 @@ test('Six publisher duration bins remain noncausal and lack sample denominators 
  falseCausal.length_bins.may_infer_40min_duration_causes_breakout=true;
  assert(auditRelativeVideoBreakouts(falseCausal,new Set(d.evidence.map(x=>x.id))).errors.some(x=>x.includes('unsupported')));
 });
+
+test('The published seven cumulative breakout tails do not become independent channel populations',async()=>{
+ const [m,d]=await Promise.all([read('ontology/youtube/relative-video-breakouts-2026.json'),read('specimens/youtube.json')]);
+ assert.deepEqual(m.breakout_tail.thresholds.map(x=>x.reported_percent),[23.7,16.2,10.1,5.4,3,1.3,0.7]);
+ assert.equal(m.breakout_tail.cumulative_not_disjoint,true);
+ assert.equal(m.breakout_tail.per_channel_probability_of_any_breakout,null);
+ assert.equal(m.presenter_cohorts.faceless_classified_channel_count,2862);
+ assert.equal(m.presenter_cohorts.faceless_channels_with_vendor_monetization_signals,2305);
+ assert.equal(m.presenter_cohorts.faceless_5x_channels_under_1_year,520);
+ assert.equal(m.presenter_cohorts.eligible_all_faceless_under_1_year,null);
+ assert.equal(m.presenter_cohorts.signal_is_verified_paid_revenue,false);
+ assert.deepEqual(auditRelativeVideoBreakouts(m,new Set(d.evidence.map(x=>x.id))),{valid:true,errors:[]});
+ const changed=structuredClone(m);
+ changed.breakout_tail.thresholds[0].reported_percent=10;
+ assert(auditRelativeVideoBreakouts(changed,new Set(d.evidence.map(x=>x.id))).errors.some(x=>x.includes('Cumulative')));
+ changed.breakout_tail.thresholds[0].reported_percent=23.7;
+ changed.presenter_cohorts.signal_is_verified_paid_revenue=true;
+ assert(auditRelativeVideoBreakouts(changed,new Set(d.evidence.map(x=>x.id))).errors.some(x=>x.includes('Monetization signal')));
+});

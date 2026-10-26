@@ -198,5 +198,78 @@
       "The independently official eight-minute mid-roll slot *eligibility* gate falls inside the vendor's 4-to-10-minute bucket, whose 9.3% breakout proportion says nothing about mid-roll ad serving.",
       "The vendor's under-one-minute bin is not automatically comparable to a long-form-only analysis because the report does not document its Shorts cutoff or per-bin video classification."
     ]
+  },
+  "breakout_tail": {
+    "source_id": "tubemind-2026-video-outlier-index",
+    "denominator": "555158_scored_indexed_video_objects_not_distinct_channels",
+    "comparable_video_objects": 555158,
+    "cumulative_not_disjoint": true,
+    "percentages_rounded_to_tenths": true,
+    "thresholds": [
+      {
+        "multiple_at_least": 2,
+        "reported_percent": 23.7
+      },
+      {
+        "multiple_at_least": 3,
+        "reported_percent": 16.2
+      },
+      {
+        "multiple_at_least": 5,
+        "reported_percent": 10.1
+      },
+      {
+        "multiple_at_least": 10,
+        "reported_percent": 5.4
+      },
+      {
+        "multiple_at_least": 20,
+        "reported_percent": 3
+      },
+      {
+        "multiple_at_least": 50,
+        "reported_percent": 1.3
+      },
+      {
+        "multiple_at_least": 99,
+        "reported_percent": 0.7
+      }
+    ],
+    "per_channel_probability_of_any_breakout": null,
+    "typical_lifetime_income_of_breakout_channels": null,
+    "duration_until_qualifying": null,
+    "sample_weighted_population_coverage": null,
+    "scope": "Video counts in vendor sample with own channel's recent same-format view-median available; a channel can contribute multiple videos to all thresholds"
+  },
+  "presenter_cohorts": {
+    "source_id": "tubemind-2026-video-outlier-index",
+    "owner_verified_presenter_identity": false,
+    "faceless_label_inferred_from": "vendor title-description-and-video-presentation_signals",
+    "total_vendor_indexed_channels": 6663,
+    "faceless_classified_channel_count": 2862,
+    "faceless_reported_channel_share_percent": 43,
+    "faceless_median_subscribers": 30350,
+    "on_camera_median_subscribers": 103000,
+    "faceless_median_views_per_video": 16423,
+    "on_camera_median_views_per_video": 29267,
+    "faceless_channels_with_vendor_monetization_signals": 2305,
+    "reported_faceless_signals_percent": 81,
+    "signal_is_verified_actual_ypp_acceptance": false,
+    "signal_is_verified_paid_revenue": false,
+    "signal_is_positive_profit": false,
+    "faceless_5x_channels_under_1_year": 520,
+    "eligible_all_faceless_under_1_year": null,
+    "on_camera_channels_under_1_year": null,
+    "faceless_5x_channels_under_1_year_success_probability": null,
+    "observed_paid_faceless_newcomer_income": null,
+    "same_channel_maturity_distribution_controlled": false,
+    "labor_cost_difference_measured": false,
+    "cautions": [
+      "Faceless classification is vendor-inferred, not a YouTube account attribute.",
+      "The 43% sample share is among indexed channels, not an estimate of YouTube-wide accounts.",
+      "Commercial monetization indicators are not independently verified YPP approval, settlement or creator net profit.",
+      "The 520 recently created channels with an outlier have no published all-eligible-channel denominator; cannot express a newcomer success probability.",
+      "Medians among selected faceless/on-camera channels are not causal advantages and do not control for age, niche or country."
+    ]
   }
 }

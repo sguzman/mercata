@@ -2451,6 +2451,32 @@ function renderRelativeVideoBreakouts(model,dossier){
   details.append(duration);
  }
  details.append(make('p','measure-limit',model.unscored_videos.toLocaleString('en-US')+' of '+model.total_indexed_videos.toLocaleString('en-US')+' index videos have no comparable multiplier: do NOT count missing as failures.'));
+ const tail=model.breakout_tail;
+ if(tail?.thresholds?.length){
+  const box=make('div','breakout-tail');
+  box.append(make('h5','','Cumulative own-channel breakout view multiples'));
+  const items=make('ul','breakout-tail-list');
+  for(const x of tail.thresholds){
+   const item=make('li','breakout-tail-point',x.multiple_at_least+'×+ · '+x.reported_percent.toFixed(1)+'% of scored videos');
+   items.append(item);
+  }
+  box.append(items);
+  box.append(make('p','measure-limit','Nested video percentages, not disjoint channels or a success probability. Higher thresholds include videos from lower thresholds, not additional creators.'));
+  details.append(box);
+ }
+ const presenters=model.presenter_cohorts;
+ if(presenters){
+  const p=make('div','breakout-presenter-cohort');
+  p.append(make('h5','','Vendor-inferred faceless versus on-camera accounts'));
+  p.append(make('p','measure-context',presenters.faceless_classified_channel_count.toLocaleString('en-US')+' of '+
+    presenters.total_vendor_indexed_channels.toLocaleString('en-US')+' channels classified faceless; median subscribers '+
+    presenters.faceless_median_subscribers.toLocaleString('en-US')+' faceless versus '+
+    presenters.on_camera_median_subscribers.toLocaleString('en-US')+' on-camera.'));
+  p.append(make('p','measure-limit',presenters.faceless_channels_with_vendor_monetization_signals.toLocaleString('en-US')+
+    ' faceless channels showed unverified monetization signals, NOT settled revenue; '+
+    presenters.faceless_5x_channels_under_1_year+' under-one-year faceless channels had a 5× relative-view hit but no complete new-entrant denominator.'));
+  details.append(p);
+ }
  const niche=make('div','breakout-small-channel-cases');
  niche.append(make('h5','','Under-10K-subscriber case counts (not newly created channels)'));
  const summary=model.small_channel_5x_cases_selected.filter(x=>x.channels_under_10000_subscribers_with_at_least_one_5x_video!==null).map(x=>
