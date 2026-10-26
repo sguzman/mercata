@@ -5153,6 +5153,28 @@ function renderVideoAttentionCulture(data,dossier){
     grid.append(card);
   }
   details.append(grid);
+  const trend=data.format_trend_vendor_case;
+  if(trend?.reported){
+    const sample=make('div','video-attention-trend');
+    sample.append(make('h4','','Shorts versus long-form · selected Metricool February 2025–2026 accounts'));
+    sample.append(make('p','measure-context',trend.recorded_video_count.toLocaleString('en-US')+' videos from '+trend.recorded_account_count.toLocaleString('en-US')+' connected accounts. Per-post figures, not a global platform census.'));
+    const list=make('ul','video-attention-trend-metrics');
+    for(const [label,value] of [
+      ['Long-form view change','+'+trend.reported.longform_views_change_percent+'%'],
+      ['Shorts public-view change','+'+trend.reported.shorts_public_views_change_percent+'%'],
+      ['Long-form average viewing duration',trend.reported.longform_average_duration_2025_minutes+' → '+trend.reported.longform_average_duration_2026_minutes+' min'],
+      ['Shorts average viewing duration',trend.reported.shorts_average_duration_change_percent_approx+'%'],
+      ['Shorts feed share of sample organic views','More than '+trend.reported.shorts_feed_share_of_sample_organic_view_events_percent_more_than+'%']
+    ]){
+      const row=make('li','video-attention-trend-metric');
+      row.append(make('strong','',value));row.append(make('span','',label));list.append(row);
+    }
+    sample.append(list);
+    sample.append(make('p','measure-limit','Critical: +127% Shorts public views crosses the March 31, 2025 play/replay counting change. NOT a comparable increase in actual viewer attention, engaged views, qualified YPP views or creator profit.'));
+    sample.append(make('p','measure-limit','The later August 24, 2026 all-format change occurred after these two February sample months. The 61% Shorts-feed figure describes the selected vendor organic views, not worldwide audience or watch hours.'));
+    sample.append(audienceSources(trend.source_ids,dossier));
+    details.append(sample);
+  }
   details.append(make('p','measure-limit','The Omdia video genres and production categories may overlap; they must not be added to 100%. The 496-person and 939-person NRG respondent frames are age-dependent, not global YouTube audience populations.'));
   details.append(make('p','measure-limit','Distinct niche viewers, creator income, per-niche profit, active creators and cross-category audience intersections remain unknown.'));
   const link=make('a','inline-link','Read the dated studies, denominators and methodological exclusions ↗');

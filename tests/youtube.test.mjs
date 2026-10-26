@@ -1787,3 +1787,32 @@ test('Selected 2025 original animation series views remain events, not anime aud
  assert(d.evidence.some(x=>x.id==='youtube-brazil-2026-alien-stage-video-views'&&x.url===row.source_url));
  assert(d.claims.some(x=>x.id==='alien-stage-330m-youtube-2025-title-scope'));
 });
+
+test('Shorts and long-form trend distinguishes two historical metric revisions and sample units',async()=>{
+ const [a,d,h,b]=await Promise.all([
+  load('ontology/youtube/video-attention-culture-2026.json'),
+  load('specimens/youtube.json'),
+  load('ontology/youtube/measurement-history.json'),
+  load('ontology/youtube/view-definition-break.json')
+ ]);
+ const t=a.format_trend_vendor_case,sources=new Set(d.evidence.map(x=>x.id));
+ assert(t.source_ids.every(id=>sources.has(id)));
+ assert.deepEqual(t.comparison_months,['2025-02','2026-02']);
+ assert.equal(t.recorded_video_count,799718);
+ assert.equal(t.recorded_account_count,71177);
+ assert.equal(t.reported.shorts_public_views_change_percent,127);
+ assert.equal(t.reported.longform_views_change_percent,76);
+ assert.equal(t.reported.shorts_feed_share_of_sample_organic_view_events_percent_more_than,61);
+ assert.equal(t.historical_changes[0].effective_date,'2025-03-31');
+ assert.equal(t.historical_changes[0].in_observation_interval,true);
+ assert.equal(t.historical_changes[1].effective_date,'2026-08-24');
+ assert.equal(t.historical_changes[1].in_observation_interval,false);
+ assert.equal(t.raw_shorts_change_is_same_definition_attention_growth,false);
+ assert.equal(t.reported_longform_growth_establishes_global_population_trend,false);
+ assert.equal(t.sample_shorts_organic_feed_share_establishes_global_share,false);
+ assert.equal(t.per_creator_annual_profit,null);
+ assert.equal(t.eligible_shorts_views_growth,null);
+ assert.equal(b.prior_shorts_revision.effective_date,'2025-03-31');
+ assert(h.events.some(x=>x.id==='shorts-view-playback-start-2025'&&x.source_ids.includes('yt-shorts-march-2025-view-definition')));
+ assert.equal(a.source_families.length,2,'Independent Omdia/NRG studies remain separate');
+});

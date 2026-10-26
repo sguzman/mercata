@@ -726,6 +726,11 @@ try{
     assert((await attention.textContent()).includes('~29 billion'));
     assert((await attention.textContent()).includes('Distinct niche viewers'));
     assert((await attention.textContent()).includes('must not be added to 100%'));
+    assert.equal(await attention.locator('.video-attention-trend').count(),1,'Missing distinct selected format cohort');
+    assert.equal(await attention.locator('.video-attention-trend-metric').count(),5,'Missing five separately labeled format trend measures');
+    assert((await attention.textContent()).includes('+127% Shorts public views crosses the March 31, 2025'));
+    assert((await attention.textContent()).includes('after these two February sample months'));
+    assert((await attention.textContent()).includes('not worldwide audience or watch hours'));
     const historyLinking=page.locator('.historical-linking');
     assert.equal(await historyLinking.locator('.historical-link-card').count(),2,'Missing historical linking observations');
     await historyLinking.locator('summary').click();

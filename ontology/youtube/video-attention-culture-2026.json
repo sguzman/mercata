@@ -214,5 +214,67 @@
     "video_category_joints": null,
     "view_time_by_creator_income": null,
     "survey_probability_sampling_design": null
+  },
+  "format_trend_vendor_case": {
+    "id": "metricool-feb2025-feb2026-format-trend",
+    "source_ids": [
+      "metricool-youtube-2026-sample",
+      "yt-shorts-march-2025-view-definition",
+      "view-change-official-blog-2026"
+    ],
+    "primary_vendor_article": "https://metricool.com/youtube-trends/",
+    "published_at": "2026-07-29",
+    "comparison_months": [
+      "2025-02",
+      "2026-02"
+    ],
+    "recorded_video_count": 799718,
+    "recorded_account_count": 71177,
+    "selection_frame": "commercial_analytics_provider_connected_accounts_not_platform_census",
+    "observation_unit": "mean_per_post_unless_noted",
+    "same_accounts_remain_in_both_years_verified": false,
+    "all_youtube_account_sampling_probability": null,
+    "reported": {
+      "longform_views_change_percent": 76,
+      "shorts_public_views_change_percent": 127,
+      "longform_average_duration_2025_minutes": 3.98,
+      "longform_average_duration_2026_minutes": 2.51,
+      "longform_average_duration_change_percent_approx": -37,
+      "shorts_average_duration_change_percent_approx": -67,
+      "shorts_feed_share_of_sample_organic_view_events_percent_more_than": 61
+    },
+    "historical_changes": [
+      {
+        "effective_date": "2025-03-31",
+        "scope": "Shorts public views",
+        "in_observation_interval": true,
+        "source_id": "yt-shorts-march-2025-view-definition",
+        "before": "qualified_play_watching",
+        "after": "play_and_replay_start",
+        "historically_comparable_without_bridge": false
+      },
+      {
+        "effective_date": "2026-08-24",
+        "scope": "all-format public views",
+        "in_observation_interval": false,
+        "source_id": "view-change-official-blog-2026",
+        "before": "format_specific_public_view_definition",
+        "after": "first_frame_playback_start",
+        "historically_comparable_without_bridge": false
+      }
+    ],
+    "raw_shorts_change_is_same_definition_attention_growth": false,
+    "reported_longform_growth_establishes_global_population_trend": false,
+    "sample_shorts_organic_feed_share_establishes_global_share": false,
+    "per_creator_annual_profit": null,
+    "cause_of_changes_established": null,
+    "eligible_shorts_views_growth": null,
+    "limitations": [
+      "March 31 2025 view-count rule changed Shorts start-based public views, crossing the February 2025 and February 2026 endpoints; do not infer equivalent real attention increase.",
+      "August 24 2026 all-format change occurred after both February comparison points; do not misattribute this vendor study's view changes to that later rule.",
+      "Selected connected accounts are neither a probability sample of all YouTube accounts nor a fixed account panel verified for both months.",
+      "Per-post view events, average viewing duration, feed-derived organic view event share and creator profit have incompatible denominators.",
+      "There is no standard conversion between raw prechange views and postchange Shorts engaged views in this source, and no evidence that higher reported view counts caused creator cash earnings."
+    ]
   }
 }
