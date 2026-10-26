@@ -2089,7 +2089,7 @@ function renderGamingPeriods(data,dossier){
  const section=make('section','gaming-period-study');
  const details=make('details','ownership-details');
  details.append(make('summary','','Live gaming watched hours: distinct from people and creators'));
- details.append(make('p','measure-limit','Q4 2025 to Q2 2026. Commercial livestream tracking, not a population census.'));
+ details.append(make('p','measure-limit','Q4 2025 to Q2 2026 Stream Hatchet series, plus a separately tracked Streams Charts Q3 2026 observation. Neither source is a viewer-population census.'));
  const grid=make('div','ownership-grid');
  for(const x of data.gaming){
   const card=make('article','ownership-card');
@@ -2104,6 +2104,16 @@ function renderGamingPeriods(data,dossier){
  c.append(make('strong','',live.watch_hours_billion.toFixed(2)+' billion hours watched'));
  c.append(make('p','measure-limit','Separate category, not automatically combinable with gaming'));
  c.append(audienceSources([live.source_id],dossier));grid.append(c);
+ const q3=data.independent_vendor_q3;
+ if(q3){
+  const card=make('article','ownership-card gaming-independent-q3');
+  card.append(make('h5','','2026 Q3 · Streams Charts (separate vendor)'));
+  card.append(make('strong','',q3.gaming_watch_hours_billion_approx.toFixed(2)+' billion gaming hours watched'));
+  card.append(make('p','measure-limit','14.5% share of vendor-tracked YouTube Live hours (11.3% in its Q2 series), not unique gaming viewers or creator payouts.'));
+  card.append(make('p','measure-limit','Different vendor methodology: do NOT use Stream Hatchet Q2 1.79B to infer matched Q3 growth.'));
+  card.append(audienceSources([q3.source_id],dossier));
+  grid.append(card);
+ }
  details.append(grid);
  details.append(make('p','measure-limit','Gaming hours fell 19.3% Q2 versus Q1 as reported; distinct viewers, pay and external migration remain unknown.'));
  const link=make('a','inline-link','Read gaming evidence, scope and source notes ↗');

@@ -199,7 +199,7 @@ try{
       ['.patreon-shock-study',4,'creator labor and profit are unknown'],
       ['.reaction-compilation-rights',7,'No case-specific fair-use finding'],
       ['.crossplatform-posting',4,'no viewer migration measured'],
-      ['.gaming-period-study',4,'external migration remain unknown'],
+      ['.gaming-period-study',5,'external migration remain unknown'],
       ['.search-demand-proxies',4,'No absolute monthly searches'],
       ['.production-cost-audit',5,'No representative equipment costs'],
       ['.exclusive-rights-audit',5,'No actual creator contract'],
@@ -214,6 +214,11 @@ try{
       assert((await section.textContent()).includes(phrase),'Missing uncertainty boundary in '+selector);
     }
 
+    const independentGaming=page.locator('.gaming-period-study .gaming-independent-q3');
+    assert.equal(await independentGaming.count(),1,'Missing separate Q3 Streams Charts vendor series');
+    assert((await independentGaming.textContent()).includes('1.98 billion gaming hours watched'));
+    assert((await independentGaming.textContent()).includes('14.5% share'));
+    assert((await independentGaming.textContent()).includes('Different vendor methodology'));
     const chatCulture=page.locator('.live-chat-culture-study .live-chat-language-study');
     assert.equal(await chatCulture.count(),1,'Missing selected Japanese-language VTuber interaction cohort');
     assert((await chatCulture.textContent()).includes('64,279 messages across 10 chosen livestreams'));

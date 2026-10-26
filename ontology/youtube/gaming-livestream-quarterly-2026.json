@@ -2,12 +2,13 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "gaming_livestream_quarterly_measurement",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "bounded_same_source_family_quarterly_aggregate_not_unique_people",
   "source_ids": [
     "streamlabs-hatchet-q1-2026",
     "streamlabs-hatchet-q2-2026",
-    "hatchet-youtube-gaming-2025-live-hours"
+    "hatchet-youtube-gaming-2025-live-hours",
+    "streams-charts-q3-2026-livestreaming-landscape"
   ],
   "provider_family": "Stream Hatchet including Streamlabs distribution",
   "independent_samples": 1,
@@ -66,5 +67,38 @@
     "gaming_creator_net_income": null,
     "causal_other_platform_shift": null,
     "coverage_adjusted_total": null
-  }
+  },
+  "separately_reported_vendor_families": 2,
+  "independent_vendor_q3": {
+    "source_id": "streams-charts-q3-2026-livestreaming-landscape",
+    "publisher": "Streams Charts",
+    "report_date": "2026-10-13",
+    "period": "2026-Q3",
+    "provider_family": "Streams Charts (independent of Stream Hatchet)",
+    "cohort": "commercial_platform_tracked_livestream_broadcast_activity",
+    "gaming_watch_hours_billion_approx": 1.98,
+    "all_youtube_live_watch_hours_billion_approx": 13.62,
+    "all_tracked_platforms_watch_hours_billion": 31.698,
+    "gaming_share_youtube_live_hours_q2_percent_same_vendor": 11.3,
+    "gaming_share_youtube_live_hours_q3_percent_same_vendor": 14.5,
+    "gaming_share_all_tracked_livestream_hours_q3_percent": 6.2,
+    "youtube_live_share_all_tracked_platforms_q3_percent": 43,
+    "youtube_live_share_all_tracked_platforms_q2_percent_same_vendor": 49.5,
+    "geography": "Provider global viewership classification with incomplete published collection methodology",
+    "same_reported_vendor_methods_q2_q3_assumed_without_raw_series": false,
+    "cross_vendor_stream_hatchet_q2_absolute_comparison_allowed": false,
+    "shared_entity_level_stream_identifiers_verified": false,
+    "combined_sources_independent_global_viewer_census": false,
+    "unique_viewers": null,
+    "monetized_channels": null,
+    "creator_net_income": null,
+    "causal_esports_growth": null,
+    "limitations": [
+      "The Q3 1.98B watched-hour observation and Q2 1.79B Stream Hatchet observation belong to distinct commercial collection systems, not one validated matched panel.",
+      "The 11.3% to 14.5% comparison is Streams Charts' *within-vendor YouTube Gaming share of YouTube livestream hours*, not a gaming share of all YouTube platform watch time.",
+      "All-platform 31.698B watched hours covers Streams Charts tracked livestreaming platforms, which are not the same provider universe as Stream Hatchet's Q2 all-platform sample.",
+      "Livestream watch hours count time, not unique viewers; category classification, channel coverage, monetization and costs are not audited."
+    ]
+  },
+  "cross_vendor_combined_quarterly_growth_percent": null
 }
