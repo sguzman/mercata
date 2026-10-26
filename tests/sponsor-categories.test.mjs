@@ -2,13 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const read=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
-test('Three sponsorship datasets retain incompatible category, time and payment units',async()=>{
+test('Four distinct sponsorship datasets retain incompatible category, time and payment units',async()=>{
  const [data,dossier]=await Promise.all([
    read('ontology/youtube/sponsor-category-evidence.json'),read('specimens/youtube.json')
  ]);
  const ids=new Set(dossier.evidence.map(x=>x.id));
  assert.equal(data.kind,'bounded_sponsored_content_activity_by_category');
- assert.equal(data.datasets.length,3);
+ assert.equal(data.datasets.length,4);
  assert(data.datasets.every(x=>x.source_ids.every(id=>ids.has(id))));
  const thought=data.datasets.find(x=>x.id==='thoughtleaders-oct-2026');
  assert.equal(thought.categories.length,11);
@@ -34,6 +34,16 @@ test('Three sponsorship datasets retain incompatible category, time and payment 
  assert.equal(upfluence.reported_applications_total,17288);
  assert.equal(upfluence.reported_brand_campaigns,2605);
  assert.equal(upfluence.missing.youtube_application_count,null);
+ const fees=data.datasets.find(x=>x.id==='kolect-selected-allplatform-creator-niche-fees-2026');
+ assert.equal(fees.type,'agreed_creator_fee_by_creator_primary_niche_in_vendor_campaigns');
+ assert.equal(fees.contract_cash_settlement_verified,false);
+ assert.equal(fees.niche_specific_denominators,null);
+ assert.equal(fees.confirmed_youtube_only_niche_fee,null);
+ assert.equal(fees.period_comparable_with_thoughtleaders,false);
+ assert.deepEqual(fees.selected_niches.map(x=>x.median_agreed_creator_fee_usd),[800,775,560,500,450,400]);
+ assert(fees.selected_niches.every(x=>x.median_fee_per_1000_creator_average_views_usd>0));
+ assert(fees.selected_niches.every(x=>!thought.categories.some(y=>y.id===x.id && y.sponsored_videos===x.median_agreed_creator_fee_usd)));
+ assert(Object.values(fees.missing).every(x=>x===null));
  assert(Object.values(data.unmeasured).every(x=>x===null));
  assert(data.cross_dataset_rules.some(x=>x.includes('Do not add detections')));
  assert(data.cross_dataset_rules.some(x=>x.includes('contracts')));

@@ -1768,7 +1768,21 @@ function renderSponsorCategoryResearch(data,dossier){
  if(radar)details.append(make('p','measure-limit','Independent SponsorRadar index: '+radar.detected_placements_all_categories.toLocaleString()+' placements during Feb 2025–Jan 2026. Counts and categories use a different methodology and must not be added.'));
  const other=data.datasets.find(x=>x.id==='upfluence-q1-2026');
  if(other)details.append(make('p','measure-limit','Adjacent Upfluence sample: '+other.reported_applications_total.toLocaleString()+' campaign applications across creator platforms in Q1 2026, not YouTube paid sponsorships.'));
- details.append(make('p','measure-limit','Typical sponsor fees, Shorts sponsorship density, newcomer zero-earner share, and sponsor net profit: unknown.'));
+ const nicheFees=data.datasets.find(x=>x.id==='kolect-selected-allplatform-creator-niche-fees-2026');
+ if(nicheFees?.selected_niches?.length){
+  details.append(make('h4','','Separate accepted creator fees by niche (all platforms, not YouTube-only)'));
+  details.append(make('p','measure-limit','Kolect vendor-managed cross-platform agreed collaborations. Creator primary content niche, not sponsor industry. Agreed fee is not proof of settlement, a percentage of sponsored channels or annual creator profit. No YouTube-only niche counts are published.'));
+  const feeGrid=make('div','sponsor-categories-grid kolect-niche-fees-grid');
+  for(const entry of nicheFees.selected_niches){
+   const card=make('article','sponsor-category-card sponsor-niche-fee-card');
+   card.append(make('h5','',entry.id.replaceAll('_',' ')));
+   card.append(make('strong','sponsor-category-density','USD '+entry.median_agreed_creator_fee_usd.toLocaleString('en-US')));
+   card.append(make('p','measure-limit','Median agreed fee per selected collaboration; USD '+entry.median_fee_per_1000_creator_average_views_usd.toFixed(2)+' per 1,000 creator-average views (not realized ad CPM)'));
+   feeGrid.append(card);
+  }
+  details.append(feeGrid);
+ }
+ details.append(make('p','measure-limit','Typical YouTube-only niche sponsor fees, Shorts sponsorship density, newcomer zero-earner share, and sponsor net profit: unknown.'));
  details.append(audienceSources([...new Set(data.datasets.flatMap(x=>x.source_ids))],dossier));
  const link=make('a','inline-link','See the source periods, categories and selection biases ↗');
  link.href='./ontology/youtube/sponsor-category-evidence.md';link.rel='noopener noreferrer';link.target='_blank';

@@ -593,6 +593,10 @@ try{
     await sponsorStudy.locator('summary').click();
     assert((await sponsorStudy.textContent()).includes('176,686 detections (6.1%)'));
     assert((await sponsorStudy.textContent()).includes('newcomer zero-earner share'));
+    assert.equal(await sponsorStudy.locator('.sponsor-niche-fee-card').count(),6,'Missing distinct cross-platform accepted-fee niche examples');
+    assert((await sponsorStudy.locator('.sponsor-niche-fee-card').first().textContent()).includes('USD 800'));
+    assert((await sponsorStudy.textContent()).includes('No YouTube-only niche counts are published'));
+    assert((await sponsorStudy.textContent()).includes('not realized ad CPM'));
     const brand=page.locator('.brand-disclosure');
     assert.equal(await brand.locator('.brand-disclosure-card').count(),3,'Missing independent platform/legal layers');
     assert.equal(await brand.locator('.brand-disclosure-surface').count(),4,'Missing video/live/affiliate disclosure scopes');
