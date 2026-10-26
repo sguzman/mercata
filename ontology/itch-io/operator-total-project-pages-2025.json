@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "operator_public_2025_platform_product_count_lower_bound",
+  "evidence_date": "2025-07-24",
+  "review_date": "2026-10-26",
+  "source_ids": [
+    "itch-nsfw-announcement"
+  ],
+  "operator_reported": {
+    "project_pages_lower_bound_exclusive": 2000000,
+    "unit": "all_user_generated_product_pages",
+    "source": "public_official_operator_policy_announcement",
+    "catalog_scope": "games_assets_tools_books_music_comics_and_other_products",
+    "measured_exact_count": null,
+    "unique_publisher_accounts": null,
+    "individual_developers": null,
+    "paid_game_orders": null,
+    "aggregate_gmv_usd": null
+  },
+  "separate_catalog_frames": [
+    {
+      "source_id": "itch-browse-all",
+      "retrieved_at": "2026-10-26",
+      "count": 1780861,
+      "scope": "public_games_filter_results_all_prices"
+    },
+    {
+      "source_id": "itch-browse-paid",
+      "retrieved_at": "2026-10-26",
+      "count": 49588,
+      "scope": "public_games_paid_filter_results"
+    },
+    {
+      "source_id": "itch-browse-paid-2d",
+      "retrieved_at": "2026-10-26",
+      "count": 12691,
+      "scope": "public_games_paid_and_2d_filter_results"
+    }
+  ],
+  "ratios_valid_between_2025_all_pages_and_2026_games": false,
+  "year_over_year_growth_estimate": null,
+  "all_game_share_of_pages": null,
+  "share_of_publishers_making_sales": null,
+  "paid_customer_population": null,
+  "method_warnings": [
+    "All-category page count is a strict reported lower bound, not a measured exact total.",
+    "The 2025 announcement and 2026 browse counters are not temporally aligned.",
+    "Publisher accounts can upload multiple pages and games; one page is not one seller.",
+    "The all-category bound includes non-game products.",
+    "A paid listing may sell zero units; 'Top Sellers' filter is not documented audited sales.",
+    "The 2025 statement about relative Steam volume is qualitative, not a matched GMV statistic."
+  ]
+}

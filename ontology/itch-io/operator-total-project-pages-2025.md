@@ -1,0 +1,7 @@
+# itch.io: operator-reported product scale versus public game listings
+
+The operator's [July 24, 2025 announcement](https://itch.io/updates/update-on-nsfw-content) described itch.io as an open platform with **over two million user-generated product pages**. This is a **strict lower bound** for *all kinds of projects*, not an exact number of videogames, active publishers, sold titles or paying people. The company also stated its transaction volume was relatively small compared with Steam, without releasing a comparable total or date-aligned currency estimate.
+
+Separate public game-directory counters from October 26, 2026 returned **1,780,861 all-price game listings**, **49,588 paid-filter game listings**, and **12,691 paid/2D-tagged game listings**. Unlike the historical over-two-million statement, these are game-filter-specific counts, with dynamic indexing. Because the unit *and year* differ, it is **invalid to divide 2026 game-directory results by the 2025 operator all-category count and claim a game share or growth rate**.
+
+None of these counters establishes unique game publishers, paid orders, refund-adjusted revenue or successful developer earnings. The [machine denominator comparison](operator-total-project-pages-2025.json) leaves each unavailable metric null. Source totals from actual publisher transactions remain necessary before deriving a paid-market success probability.

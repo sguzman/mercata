@@ -133,3 +133,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io low-sales game reports (2026-10-26):** actual zero-unit early launch case and one-unit indie case alongside a mixed-donation visual novel, keeping returns and total-game gross distinct from itch-specific sales. 73% → 74% (Δ +1 pp, exact 73.64%). [Source cases](../ontology/itch-io/low-sales-launch-cases-2021-2025.md).
+
+
+**itch.io platform-wide historical scope (2026-10-26):** operator-stated over 2 million all-product pages in July 2025 strictly separated from October 2026 filtered game browse counters; no implied growth or earning success. Score 74% → 74% (Δ 0 pp; raw 73.90%). [Scope study](../ontology/itch-io/operator-total-project-pages-2025.md).
