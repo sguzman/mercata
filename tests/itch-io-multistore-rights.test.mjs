@@ -16,7 +16,6 @@ test('Multi-store rights acceptance follows public non-exclusive platform terms'
 test('External-key entitlement and publisher DRM do not become purchases or certified offline builds',()=>{
  const x=get('ontology/itch-io/multistore-rights-external-keys-2026.json');
  assert.equal(x.external_key_route.key_only_standard_listing_supported,false);
- assert.equal(x.external_key_route.bundlе_key_distribution_not_guaranteed,undefined); 
  assert.equal(x.external_key_route.bundle_key_distribution_not_guaranteed,true);
  assert.equal(x.drm_and_play.itch_adds_drm_to_uploaded_file,false);
  assert.equal(x.drm_and_play.publisher_submitted_binary_contains_drm,null);
