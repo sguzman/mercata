@@ -178,3 +178,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io paid puzzle-game longitudinal receipts (2026-10-26):** Blobun 143 early direct purchases versus 271 one-year direct purchases, distinct from 1,984 early bundle claims, full downloads and combined Steam/itch proceeds; ERROR143 optional-price 100k copies not verified paid units. 80% → 80% (Δ +0 pp, raw 79.93%). [Study](../ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md).
+
+
+**itch.io indexing change and timed share waiver (2026-10-26):** operator's Oct 19 evidence: 215,000 older project pages freed from eligibility blocks, >2m indexed multi-category pages, >10k spam/malware account enforcements; separate 24-hour Creator Day 0% platform share without canceling processing fees. 80% → 80% (Δ +0 pp; unrounded 80.43%). [Evidence](../ontology/itch-io/indexing-reform-creator-day-2026.md).

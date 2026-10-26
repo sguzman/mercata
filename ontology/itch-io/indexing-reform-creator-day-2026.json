@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "dated_discovery_indexing_reform_and_revenue_share_event",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-indexing-reform-oct-2026",
+    "itch-creator-day-official-2025",
+    "itch-payments"
+  ],
+  "indexing_event": {
+    "announcement_date": "2026-10-19",
+    "source_ids": [
+      "itch-indexing-reform-oct-2026"
+    ],
+    "reclassified_previously_blocked_pages_approx": 215000,
+    "old_block_status": "not_eligible_for_indexing",
+    "new_condition": "review_eligibility_unblocked",
+    "all_reclassified_pages_currently_confirmed_indexed": null,
+    "operator_reported_indexed_pages_lower_bound_exclusive": 2000000,
+    "population_unit": "all_indexed_project_pages_not_games_only",
+    "active_paid_publishers_observed": null,
+    "week_suspended_or_banned_malware_spam_accounts_lower_bound_exclusive": 10000,
+    "reported_review_false_positives": true,
+    "manual_review_threshold_relaxed": true,
+    "ongoing_tuning_acknowledged": true,
+    "quantified_indexing_delay_before_days": null,
+    "quantified_indexing_delay_after_days": null,
+    "new_paid_game_releases_from_reform": null,
+    "publish_and_eligible_indexing_charge_usd": 0
+  },
+  "creator_day": {
+    "source_announcement_date": "2025-11-29",
+    "fee_waiver_length_hours": 24,
+    "automatically_applied": true,
+    "marketplace_scope": "all_eligible_purchases_in_event_window",
+    "ordinary_user_selected_platform_share_restored": true,
+    "confirmed_future_event_date": null,
+    "sales_increase_caused_by_event": null,
+    "processor_fees_still_apply": true,
+    "taxes_still_apply": true,
+    "hypothetical_same_order": {
+      "buyer_total_usd": 10,
+      "ordinary_share_rate": 0.1,
+      "platform_share_waived_rate": 0,
+      "sample_processor_rate": 0.029,
+      "sample_processor_fixed_usd": 0.3,
+      "before_other_costs_ordinary_usd": 8.41,
+      "before_other_costs_waiver_usd": 9.41,
+      "per_transaction_conditional_gain_usd": 1,
+      "realized_sales_volume": null
+    }
+  },
+  "category_warnings": [
+    "Over two million refers to indexed pages from multiple categories, not 2 million positive-priced games.",
+    "Unblocking 215,000 pages is a classification change, not a count of new products or new sellers.",
+    "A banned account is not a unique person, and spam account volumes do not measure legitimate publisher growth.",
+    "The 2025 Creator Day documentation describes a past and recurring feature, not an announced October 2026 event.",
+    "One example transaction saving cannot reveal additional purchases, profit or total Creator Day seller receipts."
+  ],
+  "unknown": {
+    "market_paying_buyers": null,
+    "typical_seller_income": null,
+    "net_effect_indexing_on_purchase_conversion": null,
+    "actual_new_paid_game_count_due_to_change": null
+  }
+}
