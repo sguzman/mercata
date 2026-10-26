@@ -4652,6 +4652,23 @@ function renderTechnologySubcultures(data,dossier){
   figures.append(card);
  }
  details.append(figures);
+ const dev=data.developer_survey_2026;
+ if(dev?.observations?.length===3){
+   const panel=make('div','technology-developer-survey');
+   panel.append(make('h5','','2026 developer survey: three different question populations'));
+   const list=make('div','technology-developer-survey-grid');
+   for(const item of dev.observations){
+     const row=make('article','technology-developer-survey-row');
+     row.append(make('strong','',item.reported_percent+'%'));
+     row.append(make('p','',item.answer_count.toLocaleString('en-US')+' of '+item.respondents_n.toLocaleString('en-US')+' item respondents: '+item.answer));
+     list.append(row);
+   }
+   panel.append(list);
+   panel.append(make('p','measure-limit','Self-selected respondents, non-identical optional question groups. Generic learning videos and video creator influence are not YouTube-exclusive; no software learner census, course completion, creator earnings or unique video viewers measured.'));
+   panel.append(make('p','measure-limit','Source: Stack Exchange Inc. 2026 Developer Survey community data, ODbL 1.0 attribution; no respondent records copied.'));
+   panel.append(audienceSources([dev.source_id],dossier));
+   details.append(panel);
+ }
  details.append(make('p','measure-limit','The two metrics have different countries, dates and inclusion rules. Neither is a software tutorial market-size estimate, and they cannot be divided into a niche audience share.'));
  const link=make('a','inline-link','Read segmented subcultures and original observation limitations ↗');
  link.href='./ontology/youtube/technology-subcultures-2026.md';link.target='_blank';link.rel='noopener noreferrer';

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "software_and_technology_content_subculture_scope",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "bounded_educational_examples_and_two_incompatible_view_metrics",
   "target_questions": [
     "Which technology/software video purposes can be meaningfully distinguished?",
@@ -222,6 +222,65 @@
     "mean_beginner_creator_income": null,
     "median_beginner_creator_profit": null,
     "creator_production_hours": null,
-    "cross_topic_shared_audience": null
+    "cross_topic_shared_audience": null,
+    "developer_youtube_learning_video_share": null,
+    "developer_youtube_creator_net_income": null
+  },
+  "developer_survey_2026": {
+    "source_id": "stackoverflow-2026-developer-community-learning",
+    "publisher": "Stack Exchange Inc. / Stack Overflow Developer Survey",
+    "survey_year": 2026,
+    "method": "self_selected_developer_survey_optional_multi_response_items",
+    "sample_country_scope": "worldwide_optional_respondents_not_representative",
+    "sampling_probability_known": false,
+    "representative_global_developer_audience": false,
+    "observations": [
+      {
+        "id": "video_learning_code",
+        "question": "How did you learn to code in the past year?",
+        "answer": "Videos (not associated with specific online course or certification)",
+        "respondents_n": 14530,
+        "answer_count": 5975,
+        "reported_percent": 41.1,
+        "multiple_response": true,
+        "youtube_only": false
+      },
+      {
+        "id": "youtube_creator_skill_influence",
+        "question": "Which sources most influence which technical, AI or professional skills you decide to learn next? Select up to 3.",
+        "answer": "YouTube or video creators",
+        "respondents_n": 15260,
+        "answer_count": 3931,
+        "reported_percent": 25.8,
+        "multiple_response": true,
+        "youtube_only": false
+      },
+      {
+        "id": "youtube_tech_community_use",
+        "question": "Which community platforms have you used substantially or consistently for technology-related purposes in the past year?",
+        "answer": "YouTube",
+        "respondents_n": 10741,
+        "answer_count": 6272,
+        "reported_percent": 58.4,
+        "multiple_response": true,
+        "youtube_only": true
+      }
+    ],
+    "independent_person_samples_across_questions": null,
+    "questions_addable": false,
+    "verified_youtube_learning_video_share": null,
+    "developer_unique_youtube_people": null,
+    "causal_video_learning_effect": null,
+    "creator_video_income_median": null,
+    "failed_creators_included": null,
+    "copyright": "Stack Exchange Inc. (2026), Stack Overflow Developer Survey 2026 Community Data, ODbL 1.0, https://opendatacommons.org/licenses/odbl/1-0/",
+    "rights_to_repushed_survey_data": false,
+    "constraints": [
+      "Self-selected developer survey respondents are not a representative YouTube audience census.",
+      "Generic video-learning may be video from any platform, not YouTube alone.",
+      "YouTube or video creators is a combined answer option, not verified YouTube-only influence.",
+      "Each question has a separate optional respondent count; answers are overlapping multi-select and cannot be summed.",
+      "Technical community use does not count watch time, course completion, purchase conversions, active channel creators or revenue."
+    ]
   }
 }

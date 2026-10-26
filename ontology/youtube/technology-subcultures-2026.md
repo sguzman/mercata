@@ -30,3 +30,19 @@ The two numbers cannot legitimately be divided into a software-content market sh
 A genuine technology-creator market study would predefine mutually auditable topic inclusion rules, sample all eligible newcomers rather than only successful channels, measure platform observation and potential overlap across subtopics, and obtain source-based gross receipts, cash production costs, time and zero-earner outcomes. It would also separate advertising, sales and sponsor compensation, and compare country-language combinations rather than assuming U.S. software-learning viewers represent the globe.
 
 The machine study leaves programming view totals, unique learners, channel populations, earning distributions and profitability **unknown**. Editorially featured creators are neither a random sample nor evidence that a newcomer can earn a similar amount.
+
+## Distinct developer-survey evidence: video learning, creators and YouTube technical community (2026)
+
+The [Stack Overflow Developer Survey 2026 community data](https://survey.stackoverflow.co/2026/community/data) reports three **separately answered** questions from a self-selected respondent population:
+
+| Optional question's specified response | Respondents selecting answer / question n | Reported rate |
+| --- | ---: | ---: |
+| Learned to code through videos not tied to online courses | 5,975 / 14,530 | 41.1% |
+| YouTube **or** video creators influenced what technical skills to learn next | 3,931 / 15,260 | 25.8% |
+| Used YouTube as a technology-related community platform | 6,272 / 10,741 | 58.4% |
+
+**These are not three YouTube video-viewing rates.** The 41.1% item is generic to learning videos on any platform. The 25.8% response combines YouTube with video creators more generally and allowed up to three choices. The 58.4% figure reports *technology-related community platform use*, not actual YouTube tutorial watch hours. Survey participants and item-level denominators differ, and multiple-response answers overlap; neither percentages nor counts can be summed. The respondent sample is self-selected and is not a random census of software developers or YouTube viewers.
+
+The source does not measure programming-video unique viewers, successful learning, new creator earnings, teaching-channel competition or a verified percentage of broad YouTube how-to views attributable to software. The two platform view-event observations above remain different study populations from this survey.
+
+**Attribution and rights:** Stack Exchange Inc. (2026), Stack Overflow Developer Survey 2026, [Community Data](https://survey.stackoverflow.co/2026/community/data), [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/). This work contains only short original-language explanations of selected source-reported numbers; it does not reproduce raw respondent records, the survey dataset or proprietary figures.

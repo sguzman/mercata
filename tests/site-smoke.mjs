@@ -395,7 +395,7 @@ try{
     assert((await reach.textContent()).includes('Do not sum percentages or device minutes'));
     assert((await reach.textContent()).includes('global monthly distinct viewers: unknown'));
     const frames=page.locator('.survey-frame-crosswalk');
-    assert.equal(await frames.locator('.survey-frame-card').count(),7,'Missing Pew news, U.S. platform use, fan surveys and creator frame distinctions');
+    assert.equal(await frames.locator('.survey-frame-card').count(),8,'Missing the eight independent source-frame distinctions');
     await frames.locator('summary').click();
     assert((await frames.textContent()).includes('including zero-earning YouTube entrants remain unknown'));
     assert((await frames.textContent()).includes('5,511 respondents'));
@@ -576,6 +576,14 @@ try{
     assert((await technology.textContent()).includes('More than 250,000,000'));
     assert((await technology.textContent()).includes('More than 5,500,000,000'));
     assert((await technology.textContent()).includes('cannot be divided'));
+    const developerPanel=technology.locator('.technology-developer-survey');
+    assert.equal(await developerPanel.count(),1,'Missing separate developer learning survey');
+    assert.equal(await developerPanel.locator('.technology-developer-survey-row').count(),3);
+    assert((await developerPanel.textContent()).includes('41.1%'));
+    assert((await developerPanel.textContent()).includes('25.8%'));
+    assert((await developerPanel.textContent()).includes('58.4%'));
+    assert((await developerPanel.textContent()).includes('not YouTube-exclusive'));
+    assert((await developerPanel.textContent()).includes('no respondent records copied'));
     const commentNorms=page.locator('.comment-norms-evidence');
     assert.equal(await commentNorms.locator('.comment-norms-card').count(),2,'Missing distinct peer-reviewed comment samples');
     await commentNorms.locator('summary').click();

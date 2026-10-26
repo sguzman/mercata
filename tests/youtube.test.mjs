@@ -1234,6 +1234,19 @@ test('Technology and software subculture scope cannot turn general how-to or des
  assert(model.observed_public_metrics.every(x=>sources.has(x.source_id)&&x.software_tutorial_share===null&&x.creator_revenue===null));
  assert.equal(model.comparability.can_calculate_software_percent,false);
  assert.equal(model.comparability.can_add_metrics,false);
+ const developer=model.developer_survey_2026;
+ assert(sources.has(developer.source_id));
+ assert.equal(developer.sampling_probability_known,false);
+ assert.equal(developer.representative_global_developer_audience,false);
+ assert.deepEqual(developer.observations.map(x=>x.respondents_n),[14530,15260,10741]);
+ assert.deepEqual(developer.observations.map(x=>x.answer_count),[5975,3931,6272]);
+ assert.deepEqual(developer.observations.map(x=>x.reported_percent),[41.1,25.8,58.4]);
+ assert.deepEqual(developer.observations.map(x=>x.youtube_only),[false,false,true]);
+ assert.equal(developer.questions_addable,false);
+ assert.equal(developer.verified_youtube_learning_video_share,null);
+ assert.equal(developer.creator_video_income_median,null);
+ assert.equal(developer.independent_person_samples_across_questions,null);
+ assert(dossier.claims.some(x=>x.id==='stackoverflow-2026-developer-video-learning-and-community'&&x.source_ids.includes(developer.source_id)));
  assert(Object.values(model.unknowns).every(x=>x===null));
 });
 
