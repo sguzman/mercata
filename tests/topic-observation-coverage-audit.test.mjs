@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {summarizeTopicCoverage,compareTopicObservations,validateCategoryChange} from '../site/topic-observation-coverage-audit.mjs';
+import {summarizeTopicCoverage,compareTopicObservations,validateCategoryChange,auditTopicMetricCoverage} from '../site/topic-observation-coverage-audit.mjs';
 const load=async x=>JSON.parse(await readFile(new URL('../'+x,import.meta.url),'utf8'));
 test('Every topic and each source-selected observation is mapped without audience imputation',async()=>{
  const [m,t,o]=await Promise.all([load('ontology/youtube/topic-observation-coverage-2026.json'),load('ontology/youtube/taxonomy.json'),load('ontology/youtube/topic-observations.json')]);
@@ -28,4 +28,28 @@ test('Category drift requires explicit versions and never reclassifies old rows 
  assert.equal(validateCategoryChange(m,x).retroactively_reclassified,false);
  assert.equal(validateCategoryChange(m,{...x,reason:''}).allowed,false);
  assert.equal(validateCategoryChange(m,{...x,old_topic:'not_real'}).allowed,false);
+});
+
+test('Metric-family audit exposes selected source coverage without claiming complete genre audiences',async()=>{
+ const [m,o]=await Promise.all([load('ontology/youtube/topic-observation-coverage-2026.json'),load('ontology/youtube/topic-observations.json')]);
+ assert.deepEqual(auditTopicMetricCoverage(m,o),{valid:true,errors:[]});
+ const a=m.metric_family_coverage_audit;
+ assert.equal(a.topics_with_two_or_more_metric_families,3);
+ assert.equal(a.topics_with_two_or_more_distinct_source_documents,6);
+ assert.deepEqual(a.selected_multi_metric_topic_ids,['crafts','sports-general','football-soccer']);
+ assert.equal(a.observations_by_metric_family.video_views,23);
+ assert.equal(Object.values(a.observations_by_metric_family).reduce((s,x)=>s+x,0),36);
+ assert.equal(a.topics_with_both_full_topic_unique_viewers_and_creators,0);
+ assert.equal(a.topics_with_verified_disjoint_independent_sample_frames,0);
+ assert(a.topic_metric_coverage.every(x=>x.verified_full_topic_unique_viewers===null&&
+   x.verified_full_topic_active_creators===null&&x.independent_sampling_frames_verified===false));
+});
+test('Metric audit rejects invented audience populations and reclassified metric counts',async()=>{
+ const [m,o]=await Promise.all([load('ontology/youtube/topic-observation-coverage-2026.json'),load('ontology/youtube/topic-observations.json')]);
+ const x=structuredClone(m);x.metric_family_coverage_audit.topic_metric_coverage[0].verified_full_topic_unique_viewers=25000;
+ assert(auditTopicMetricCoverage(x,o).errors.includes('invented full-topic audience or source independence'));
+ const y=structuredClone(m);y.metric_family_coverage_audit.observations_by_metric_family.video_views=55;
+ assert(auditTopicMetricCoverage(y,o).errors.includes('metric family counts not reconciled'));
+ const z=structuredClone(m);z.metric_family_coverage_audit.verification_gate.can_rank_total_topic_audience=true;
+ assert(auditTopicMetricCoverage(z,o).errors.includes('unverified population inference'));
 });

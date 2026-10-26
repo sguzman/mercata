@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "platform": "youtube",
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "kind": "selected_topic_observation_coverage_not_a_census",
   "source_files": [
     "ontology/youtube/taxonomy.json",
@@ -662,5 +662,495 @@
     "A single source URL may report multiple dependent observations",
     "Observation windows and sampled populations must be identical before descriptive comparisons",
     "Category version changes require effective dates and historical original identifiers"
-  ]
+  ],
+  "metric_family_coverage_audit": {
+    "status": "source_selected_metric_family_coverage_not_independent_population_sampling",
+    "observation_unit": "individual_selected_topic_observation",
+    "distinct_metric_families": [
+      "video_views",
+      "watch_hours",
+      "within_fan_sample_percent",
+      "event_unique_viewers",
+      "event_tv_unique_viewers",
+      "average_minute_audience",
+      "single_video_lifetime_views",
+      "video_uploads"
+    ],
+    "observations_by_metric_family": {
+      "video_views": 23,
+      "watch_hours": 3,
+      "within_fan_sample_percent": 4,
+      "event_unique_viewers": 1,
+      "event_tv_unique_viewers": 1,
+      "average_minute_audience": 1,
+      "single_video_lifetime_views": 1,
+      "video_uploads": 2
+    },
+    "topics_with_two_or_more_metric_families": 3,
+    "topics_with_two_or_more_distinct_source_documents": 6,
+    "topics_with_both_full_topic_unique_viewers_and_creators": 0,
+    "topics_with_verified_disjoint_independent_sample_frames": 0,
+    "topic_metric_coverage": [
+      {
+        "topic_id": "beauty",
+        "observation_count": 1,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "video_views"
+        ],
+        "source_document_count": 1,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "fashion",
+        "observation_count": 2,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "video_views"
+        ],
+        "source_document_count": 2,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "feminine-lifestyle",
+        "observation_count": 1,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "video_uploads"
+        ],
+        "source_document_count": 1,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "girls-youth-culture",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "child-animation",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "general-animation",
+        "observation_count": 4,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "within_fan_sample_percent"
+        ],
+        "source_document_count": 2,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "anime",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "memes",
+        "observation_count": 1,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "video_views"
+        ],
+        "source_document_count": 1,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "comedy",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "political-news",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "political-commentary",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "gaming",
+        "observation_count": 4,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "video_views"
+        ],
+        "source_document_count": 4,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "esports",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "software",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "tech-reviews",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "science",
+        "observation_count": 1,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "video_views"
+        ],
+        "source_document_count": 1,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "history",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "video-essays",
+        "observation_count": 1,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "video_views"
+        ],
+        "source_document_count": 1,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "finance",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "music",
+        "observation_count": 1,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "video_views"
+        ],
+        "source_document_count": 1,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "podcasts",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "cooking",
+        "observation_count": 2,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "video_views"
+        ],
+        "source_document_count": 2,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "crafts",
+        "observation_count": 5,
+        "distinct_metric_family_count": 2,
+        "metric_families": [
+          "video_views",
+          "video_uploads"
+        ],
+        "source_document_count": 5,
+        "with_multiple_metric_families": true,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "fitness",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "livestream",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "shorts-remix",
+        "observation_count": 0,
+        "distinct_metric_family_count": 0,
+        "metric_families": [],
+        "source_document_count": 0,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "news-and-journalism",
+        "observation_count": 2,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "watch_hours"
+        ],
+        "source_document_count": 1,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "virtual-creators",
+        "observation_count": 2,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "video_views"
+        ],
+        "source_document_count": 1,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "desk-setups",
+        "observation_count": 1,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "video_views"
+        ],
+        "source_document_count": 1,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "sports-general",
+        "observation_count": 2,
+        "distinct_metric_family_count": 2,
+        "metric_families": [
+          "watch_hours",
+          "video_views"
+        ],
+        "source_document_count": 2,
+        "with_multiple_metric_families": true,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "football-soccer",
+        "observation_count": 4,
+        "distinct_metric_family_count": 4,
+        "metric_families": [
+          "event_unique_viewers",
+          "event_tv_unique_viewers",
+          "video_views",
+          "average_minute_audience"
+        ],
+        "source_document_count": 1,
+        "with_multiple_metric_families": true,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "children-music",
+        "observation_count": 1,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "single_video_lifetime_views"
+        ],
+        "source_document_count": 1,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      },
+      {
+        "topic_id": "learning-how-to",
+        "observation_count": 1,
+        "distinct_metric_family_count": 1,
+        "metric_families": [
+          "video_views"
+        ],
+        "source_document_count": 1,
+        "with_multiple_metric_families": false,
+        "verified_full_topic_unique_viewers": null,
+        "verified_full_topic_active_creators": null,
+        "has_joint_person_and_creator_population": false,
+        "independent_sampling_frames_verified": false
+      }
+    ],
+    "selected_multi_metric_topic_ids": [
+      "crafts",
+      "sports-general",
+      "football-soccer"
+    ],
+    "interpretation": "Metric families are distinct measurement types, not independent studies, comparable denominators or valid whole-topic audience totals.",
+    "verification_gate": {
+      "can_rank_total_topic_audience": false,
+      "can_rank_population_entrant_success": false,
+      "can_sum_distinct_topics_as_unique_people": false,
+      "can_sum_event_tv_unique_viewers_with_all_screen_unique_viewers": false,
+      "can_generalize_topical_title_queries_to_whole_genre": false
+    },
+    "absent_full_topic_dimensions": [
+      "deduplicated_distinct_viewers",
+      "active_creator_population",
+      "upload_catalog_population",
+      "view_event_denominators",
+      "total_topic_watch_hours",
+      "revenue_distribution"
+    ],
+    "independent_document_warning": "Different publisher URLs or query definitions are not evidence that channel/viewer units were independently sampled or disjoint.",
+    "update_protocol": "Recompute from taxonomy topics plus linked source observations; do not convert missingness to zeros or add nonidentical metric types."
+  }
 }

@@ -485,6 +485,17 @@ function renderTopicEvidenceCoverage(taxonomy,observations){
   card.append(make('p','measure-limit',limitation));grid.append(card);
  }
  details.append(grid);
+ const byTopic=new Map();
+ for(const obs of recorded){
+  if(!known.has(obs.topic_id))continue;
+  if(!byTopic.has(obs.topic_id))byTopic.set(obs.topic_id,new Set());
+  byTopic.get(obs.topic_id).add(obs.metric);
+ }
+ const multi=[...byTopic].filter(([,types])=>types.size>=2);
+ details.append(make('p','measure-limit',multi.length+' of '+taxonomy.topics.length+
+   ' categories have at least two types of selected measurement ('+
+   multi.map(([id])=>id.replaceAll('_',' ')).join(', ')+'). Distinct metric types are not independent sampled audiences.'));
+ details.append(make('p','measure-limit','No selected category has a verified complete, deduplicated unique-viewer AND active-creator population in the topic register. Zero complete samples does not mean zero people, channels or demand.'));
  details.append(make('p','measure-limit','Lifetime video views, watch hours, single-event audiences, uploads and selected fan percentages cannot be added into audience totals. Historical taxonomy splits need explicit versioning.'));
  const link=make('a','inline-link','Read all topic measurements and source boundaries ↗');
  link.href='./ontology/youtube/topic-observation-coverage-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
