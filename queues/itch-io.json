@@ -373,7 +373,7 @@
           "title": "Model a transparent net-sale example",
           "acceptance": "Calculate gross less documented fees with assumptions.",
           "weight": 1,
-          "progress": 85,
+          "progress": 94,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -385,7 +385,11 @@
             "site/itch-break-even.mjs",
             "tests/itch-break-even.test.mjs",
             "ontology/itch-io/bundle-sale-jam-2026.json",
-            "ontology/itch-io/bundle-sale-jam-2026.md"
+            "ontology/itch-io/bundle-sale-jam-2026.md",
+            "ontology/itch-io/game-bonus-entitlements-2026.json",
+            "ontology/itch-io/game-bonus-entitlements-2026.md",
+            "site/itch-game-bonus-entitlement.mjs",
+            "tests/itch-io-game-bonus.test.mjs"
           ]
         },
         {
@@ -1190,7 +1194,11 @@
             "tests/itch-io-publisher-legal.test.mjs",
             "ontology/itch-io/resale-transfer-2026.md",
             "ontology/itch-io/resale-transfer-2026.json",
-            "tests/itch-io-resale.test.mjs"
+            "tests/itch-io-resale.test.mjs",
+            "ontology/itch-io/game-bonus-entitlements-2026.json",
+            "ontology/itch-io/game-bonus-entitlements-2026.md",
+            "site/itch-game-bonus-entitlement.mjs",
+            "tests/itch-io-game-bonus.test.mjs"
           ]
         },
         {
@@ -1295,7 +1303,11 @@
             "tests/itch-io-publisher-legal.test.mjs",
             "ontology/itch-io/resale-transfer-2026.md",
             "ontology/itch-io/resale-transfer-2026.json",
-            "tests/itch-io-resale.test.mjs"
+            "tests/itch-io-resale.test.mjs",
+            "ontology/itch-io/game-bonus-entitlements-2026.json",
+            "ontology/itch-io/game-bonus-entitlements-2026.md",
+            "site/itch-game-bonus-entitlement.mjs",
+            "tests/itch-io-game-bonus.test.mjs"
           ]
         }
       ]
@@ -1331,7 +1343,7 @@
           "title": "Trace sale or contract flow",
           "acceptance": "Describe transaction steps and who collects payment.",
           "weight": 1,
-          "progress": 98,
+          "progress": 99,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -1354,7 +1366,11 @@
             "tests/itch-io-resale.test.mjs",
             "ontology/itch-io/api-purchase-privacy-2026.json",
             "ontology/itch-io/api-purchase-privacy-2026.md",
-            "tests/itch-io-api-purchase-privacy.test.mjs"
+            "tests/itch-io-api-purchase-privacy.test.mjs",
+            "ontology/itch-io/game-bonus-entitlements-2026.json",
+            "ontology/itch-io/game-bonus-entitlements-2026.md",
+            "site/itch-game-bonus-entitlement.mjs",
+            "tests/itch-io-game-bonus.test.mjs"
           ]
         },
         {
@@ -1363,7 +1379,7 @@
           "title": "Study refunds and disputes",
           "acceptance": "Identify who bears losses and processing charges.",
           "weight": 1,
-          "progress": 76,
+          "progress": 86,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -1376,7 +1392,11 @@
             "tests/itch-cohort-protocol.test.mjs",
             "ontology/itch-io/publisher-rights-refunds-2026.json",
             "ontology/itch-io/publisher-rights-refunds-2026.md",
-            "tests/itch-io-publisher-legal.test.mjs"
+            "tests/itch-io-publisher-legal.test.mjs",
+            "ontology/itch-io/game-bonus-entitlements-2026.json",
+            "ontology/itch-io/game-bonus-entitlements-2026.md",
+            "site/itch-game-bonus-entitlement.mjs",
+            "tests/itch-io-game-bonus.test.mjs"
           ]
         },
         {
@@ -1403,7 +1423,7 @@
           "title": "Study repeat and recurring purchases",
           "acceptance": "Define retention, subscriptions, renewal and churn measurements.",
           "weight": 1,
-          "progress": 86,
+          "progress": 90,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/bundle-sale-jam-2026.json",
@@ -1424,7 +1444,11 @@
             "tests/itch-io-year-of-springs.test.mjs",
             "ontology/itch-io/year-of-springs-long-tail-2021-2026.json",
             "ontology/itch-io/year-of-springs-long-tail-2021-2026.md",
-            "tests/itch-io-year-of-springs-long-tail.test.mjs"
+            "tests/itch-io-year-of-springs-long-tail.test.mjs",
+            "ontology/itch-io/game-bonus-entitlements-2026.json",
+            "ontology/itch-io/game-bonus-entitlements-2026.md",
+            "site/itch-game-bonus-entitlement.mjs",
+            "tests/itch-io-game-bonus.test.mjs"
           ]
         },
         {
@@ -1631,7 +1655,11 @@
             "tests/itch-io-crumbling-launch.test.mjs",
             "ontology/itch-io/low-sales-launch-cases-2021-2025.json",
             "ontology/itch-io/low-sales-launch-cases-2021-2025.md",
-            "tests/itch-io-low-sales-launch.test.mjs"
+            "tests/itch-io-low-sales-launch.test.mjs",
+            "ontology/itch-io/game-bonus-entitlements-2026.json",
+            "ontology/itch-io/game-bonus-entitlements-2026.md",
+            "site/itch-game-bonus-entitlement.mjs",
+            "tests/itch-io-game-bonus.test.mjs"
           ]
         }
       ]
@@ -2136,7 +2164,7 @@
           "title": "Refund, discounts and regional pricing",
           "acceptance": "Collect dated public evidence and document implications for refund, discounts and regional pricing.",
           "weight": 1,
-          "progress": 71,
+          "progress": 83,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -2147,7 +2175,11 @@
             "ontology/itch-io/bundle-sale-jam-2026.md",
             "ontology/itch-io/discovery-quality-2026.json",
             "ontology/itch-io/discovery-quality-2026.md",
-            "tests/itch-io-discovery-quality.test.mjs"
+            "tests/itch-io-discovery-quality.test.mjs",
+            "ontology/itch-io/game-bonus-entitlements-2026.json",
+            "ontology/itch-io/game-bonus-entitlements-2026.md",
+            "site/itch-game-bonus-entitlement.mjs",
+            "tests/itch-io-game-bonus.test.mjs"
           ]
         },
         {
@@ -2176,7 +2208,7 @@
           "title": "Store rights and distribution exclusivity",
           "acceptance": "Collect dated public evidence and document implications for store rights and distribution exclusivity.",
           "weight": 1,
-          "progress": 67,
+          "progress": 73,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/distribution-build-2026.json",
@@ -2189,7 +2221,11 @@
             "tests/itch-io-open-source-engineering.test.mjs",
             "ontology/itch-io/release-cost-labor-cases-2026.json",
             "ontology/itch-io/release-cost-labor-cases-2026.md",
-            "tests/itch-io-release-cost-labor.test.mjs"
+            "tests/itch-io-release-cost-labor.test.mjs",
+            "ontology/itch-io/game-bonus-entitlements-2026.json",
+            "ontology/itch-io/game-bonus-entitlements-2026.md",
+            "site/itch-game-bonus-entitlement.mjs",
+            "tests/itch-io-game-bonus.test.mjs"
           ]
         }
       ]

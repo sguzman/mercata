@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "game_bonus_entitlement_and_creator_reward_tiers",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-official-exclusive-rewards",
+    "itch-pricing",
+    "itch-buying-flow",
+    "itch-download-keys",
+    "itch-sale-detail"
+  ],
+  "offer_mechanisms": [
+    {
+      "id": "project_minimum_price",
+      "payment_required": true,
+      "entitlement": "whole_project",
+      "price_change_revokes_past_project_ownership": false
+    },
+    {
+      "id": "individual_supplement",
+      "payment_required": true,
+      "entitlement": "specific_file",
+      "possible_supplement_types": [
+        "soundtrack",
+        "level_pack",
+        "bonus_build"
+      ],
+      "access_rule": "payment_cents_greater_than_or_equal_to_current_individually_priced_file_threshold",
+      "raising_minimum_may_revoke_access": true
+    },
+    {
+      "id": "limited_quantity_reward",
+      "payment_required": "optionally",
+      "entitlement": "special_reward_slot_or_project_access",
+      "seller_sets_quantity": true,
+      "seller_sets_minimum_price": true,
+      "may_collect_buyer_shipping_address": true,
+      "seller_responsible_for_fulfillment": true
+    },
+    {
+      "id": "free_early_reward",
+      "payment_required": false,
+      "entitlement": "free_project_claim_by_eligible_account",
+      "is_settled_paid_game_order": false
+    },
+    {
+      "id": "early_access_project",
+      "payment_required": true,
+      "entitlement": "current_build_and_future_updates",
+      "completed_final_game_delivered": false
+    },
+    {
+      "id": "preorder_placeholder",
+      "payment_required": true,
+      "entitlement": "future_delivery_promise",
+      "completed_final_game_delivered": false
+    }
+  ],
+  "seller_risk": {
+    "reprice_individual_file_may_revoke_old_access": true,
+    "existing_base_project_owner_preserved_when_base_price_changes": true,
+    "unfulfilled_reward_may_trigger_buyer_refund": true,
+    "physical_merchandise_shipping_seller_responsibility": true,
+    "separate_shipping_fee_mechanism_documented": false,
+    "sold_rewards_can_be_archived_not_erased": true
+  },
+  "measurement_units": [
+    "base_game_paid_order",
+    "optional_extra_tip",
+    "bonus_file_entitlement",
+    "paid_reward_redemption",
+    "no_payment_reward_claim",
+    "individually_priced_file_selection",
+    "physical_perk_fulfillment",
+    "refund"
+  ],
+  "sample_hypothetical_offer": {
+    "currency": "USD",
+    "game_project_minimum_usd": 5,
+    "optional_soundtrack_file_minimum_total_payment_usd": 8,
+    "optional_early_reward_quantity": 10,
+    "fulfilled_reward_count": null,
+    "paid_base_game_orders": null,
+    "bonus_attach_rate": null
+  },
+  "unmeasured": {
+    "soundtrack_attach_rate": null,
+    "incremental_revenue_per_game_sale": null,
+    "reward_inventory_sold_out_rate": null,
+    "unfulfilled_reward_refund_rate": null,
+    "physical_perk_shipping_cost": null,
+    "creator_profit_impact": null,
+    "bundle_bonus_conversion_uplift": null
+  },
+  "limitations": [
+    "A file access entitlement is not necessarily a separate paid order.",
+    "Soundtrack thresholds apply to amount paid for the project, not an incremental standalone checkout without context.",
+    "Buyer can pay extra without selecting any perk, and perks may be given free.",
+    "No verified real account, bonus tier, music license, game build, buyer or economic outcome was observed.",
+    "Physical reward obligations introduce fulfillment cash and labor costs not included in storefront fee examples.",
+    "No representative game seller income or bonus attach rate can be deduced from official feature documentation."
+  ]
+}

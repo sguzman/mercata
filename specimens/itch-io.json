@@ -944,6 +944,17 @@
       "evidence_class": "independent_public_sitemap_game_metadata_study",
       "license": "Short numerical and categorical analysis attributed to the public author and linked; no images or raw listings copied.",
       "notes": "Covers digital games inferred released roughly 2025 from sitemap order; game-level N omitted, possible missed titles, genre labels nonexclusive and self-assigned. Ratings are not paid orders or income."
+    },
+    {
+      "id": "itch-official-exclusive-rewards",
+      "url": "https://itch.io/docs/creators/exclusive-content",
+      "title": "Exclusive content & Rewards",
+      "publisher": "itch.io Official Creator Documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Public official source linked, independently summarized; no source text copied.",
+      "notes": "Mechanics of rewards, physical merchandise, early-bird and bounded invitations, not proof any tier sells or has positive margin."
     }
   ],
   "claims": [
@@ -3619,6 +3630,109 @@
       "observed_at": "2026-10-26",
       "confidence": "medium",
       "limitations": "The paid listing filter itself cannot verify the complete commercial paid-game unit on itch.io."
+    },
+    {
+      "id": "bonus-file-thresholds",
+      "text": "An itch.io game seller can attach individually priced bonus files, such as a soundtrack unlocked above a game’s minimum positive purchase price.",
+      "source_ids": [
+        "itch-pricing",
+        "itch-buying-flow"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Supports conditional access, but no recorded buyer selection, additional revenue or profit."
+    },
+    {
+      "id": "bonus-file-project-ownership",
+      "text": "The platform distinguishes project-level ownership from a buyer's access to individually priced bonus files, whose access depends on meeting that file's current minimum threshold.",
+      "source_ids": [
+        "itch-pricing",
+        "itch-download-keys"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "A threshold edit could revoke some previously available bonus access; project minimum changes preserve original product ownership."
+    },
+    {
+      "id": "bonus-file-repricing-danger",
+      "text": "Raising a bonus file’s minimum price after a payment may remove an earlier buyer’s access to that individually priced file.",
+      "source_ids": [
+        "itch-pricing"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Platform-documented entitlement behavior, not the observed incidence of disputed file access or refunds."
+    },
+    {
+      "id": "bonus-files-on-free-project",
+      "text": "Individually priced levels or soundtracks can coexist with an otherwise free game page as an optional priced product tier.",
+      "source_ids": [
+        "itch-pricing"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Availability does not turn free browser plays into mandatory paid-game orders."
+    },
+    {
+      "id": "reward-quantity-limits",
+      "text": "itch.io's Exclusive content & Rewards feature allows seller-defined price thresholds and inventory limits for special perks and early-bird offers.",
+      "source_ids": [
+        "itch-official-exclusive-rewards"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Tier slots are not the same as units sold; a preconfigured reward is not an observed purchase."
+    },
+    {
+      "id": "reward-grant-free-keys",
+      "text": "A free limited reward can grant a game download entitlement to an eligible account, and a seller can require reward selection before downloads or purchases.",
+      "source_ids": [
+        "itch-official-exclusive-rewards"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "A free claim or entitlement does not prove an actual settled paid order."
+    },
+    {
+      "id": "reward-fulfillment-liability",
+      "text": "Creators, not itch.io, are responsible for fulfilling rewards; the platform states it will issue refunds at buyer request when agreed rewards cannot be delivered.",
+      "source_ids": [
+        "itch-official-exclusive-rewards"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Terms and merchant costs vary, and no seller refund or failure rate was measured."
+    },
+    {
+      "id": "reward-shipping-liability",
+      "text": "Itch.io's reward system can be used for physical merchandise, but the seller handles fulfillment and shipping; built-in added shipping charges are not supported in the documented flow.",
+      "source_ids": [
+        "itch-official-exclusive-rewards"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "The price must budget fulfillment if offered; no typical shipping cost or margin can be inferred."
+    },
+    {
+      "id": "reward-owner-archive",
+      "text": "Purchased rewards must remain tracked for fulfillment and can be archived from new sales, rather than deleted as though no obligation exists.",
+      "source_ids": [
+        "itch-official-exclusive-rewards"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No account-specific return, fulfillment, delivery success or legal rights case was observed."
+    },
+    {
+      "id": "reward-preorder-separate",
+      "text": "Paid projects can also offer early access or preorders under specific file/release conditions; future fulfillment is not the same thing as a completed delivered game sale.",
+      "source_ids": [
+        "itch-pricing",
+        "itch-official-exclusive-rewards"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No preorder fulfillment, after-cost margin or release outcome is observed."
     }
   ],
   "observations": [

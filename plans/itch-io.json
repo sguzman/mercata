@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 77,
+  "progress_percent": 78,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -148,7 +148,7 @@
         "itch-io/economics/build-break-even-model"
       ],
       "phase": 1,
-      "progress_percent": 83
+      "progress_percent": 84
     },
     {
       "id": "market",
@@ -328,7 +328,7 @@
         "itch-io/sales/separate-buyer-interest-from-purchase"
       ],
       "phase": 3,
-      "progress_percent": 81
+      "progress_percent": 83
     },
     {
       "id": "risk",
@@ -356,7 +356,7 @@
         "itch-io/risk/set-downside-limits"
       ],
       "phase": 3,
-      "progress_percent": 74
+      "progress_percent": 75
     },
     {
       "id": "strategy",
@@ -447,7 +447,7 @@
         "itch-io/special-games/plan-release-maintenance-workload"
       ],
       "phase": 2,
-      "progress_percent": 67
+      "progress_percent": 69
     }
   ],
   "deliverables": [
@@ -968,7 +968,7 @@
       "objective": "Investigate distinguish minimum charge from voluntary customer overpayments.",
       "acceptance": "Provide dated source-linked evidence to distinguish minimum charge from voluntary customer overpayments; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 90,
+      "percent": 94,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -976,7 +976,11 @@
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/founder-purchases-2014.json",
         "ontology/itch-io/founder-purchases-2014.md",
-        "tests/itch-io-founder-purchases.test.mjs"
+        "tests/itch-io-founder-purchases.test.mjs",
+        "ontology/itch-io/game-bonus-entitlements-2026.json",
+        "ontology/itch-io/game-bonus-entitlements-2026.md",
+        "site/itch-game-bonus-entitlement.mjs",
+        "tests/itch-io-game-bonus.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -990,12 +994,16 @@
       "objective": "Investigate separate free acquisition counts from cash-generating gifts.",
       "acceptance": "Provide dated source-linked evidence to separate free acquisition counts from cash-generating gifts; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 80,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/game-bonus-entitlements-2026.json",
+        "ontology/itch-io/game-bonus-entitlements-2026.md",
+        "site/itch-game-bonus-entitlement.mjs",
+        "tests/itch-io-game-bonus.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1033,7 +1041,7 @@
       "objective": "Investigate trace reversals, chargebacks and fees through settlement.",
       "acceptance": "Provide dated source-linked evidence to trace reversals, chargebacks and fees through settlement; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 77,
+      "percent": 84,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1041,7 +1049,11 @@
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/publisher-rights-refunds-2026.json",
         "ontology/itch-io/publisher-rights-refunds-2026.md",
-        "tests/itch-io-publisher-legal.test.mjs"
+        "tests/itch-io-publisher-legal.test.mjs",
+        "ontology/itch-io/game-bonus-entitlements-2026.json",
+        "ontology/itch-io/game-bonus-entitlements-2026.md",
+        "site/itch-game-bonus-entitlement.mjs",
+        "tests/itch-io-game-bonus.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2827,7 +2839,7 @@
       "objective": "Investigate distinguish downloads, licenses and access following delisting.",
       "acceptance": "Provide dated source-linked evidence to distinguish downloads, licenses and access following delisting; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 96,
+      "percent": 98,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -2842,7 +2854,11 @@
         "tests/itch-io-publisher-legal.test.mjs",
         "ontology/itch-io/resale-transfer-2026.md",
         "ontology/itch-io/resale-transfer-2026.json",
-        "tests/itch-io-resale.test.mjs"
+        "tests/itch-io-resale.test.mjs",
+        "ontology/itch-io/game-bonus-entitlements-2026.json",
+        "ontology/itch-io/game-bonus-entitlements-2026.md",
+        "site/itch-game-bonus-entitlement.mjs",
+        "tests/itch-io-game-bonus.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2969,7 +2985,7 @@
       "objective": "Investigate analyze paid versus zero payment distribution where available.",
       "acceptance": "Provide dated source-linked evidence to analyze paid versus zero payment distribution where available; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 84,
+      "percent": 91,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -2980,7 +2996,11 @@
         "tests/itch-io-creative-pwyw.test.mjs",
         "ontology/itch-io/founder-purchases-2014.json",
         "ontology/itch-io/founder-purchases-2014.md",
-        "tests/itch-io-founder-purchases.test.mjs"
+        "tests/itch-io-founder-purchases.test.mjs",
+        "ontology/itch-io/game-bonus-entitlements-2026.json",
+        "ontology/itch-io/game-bonus-entitlements-2026.md",
+        "site/itch-game-bonus-entitlement.mjs",
+        "tests/itch-io-game-bonus.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2994,7 +3014,7 @@
       "objective": "Investigate compare orders, retained units and net receipts.",
       "acceptance": "Provide dated source-linked evidence to compare orders, retained units and net receipts; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 77,
+      "percent": 85,
       "evidence": [
         "ontology/itch-io/transaction-cohort-protocol-2026.json",
         "ontology/itch-io/transaction-cohort-protocol-2026.md",
@@ -3009,7 +3029,11 @@
         "tests/itch-io-low-sales-launch.test.mjs",
         "ontology/itch-io/year-of-springs-2026.json",
         "ontology/itch-io/year-of-springs-2026.md",
-        "tests/itch-io-year-of-springs.test.mjs"
+        "tests/itch-io-year-of-springs.test.mjs",
+        "ontology/itch-io/game-bonus-entitlements-2026.json",
+        "ontology/itch-io/game-bonus-entitlements-2026.md",
+        "site/itch-game-bonus-entitlement.mjs",
+        "tests/itch-io-game-bonus.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3044,7 +3068,7 @@
       "objective": "Investigate distinguish standalone and allocated bundle purchases.",
       "acceptance": "Provide dated source-linked evidence to distinguish standalone and allocated bundle purchases; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 92,
+      "percent": 96,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -3060,7 +3084,11 @@
         "tests/itch-io-store-history.test.mjs",
         "ontology/itch-io/api-purchase-privacy-2026.json",
         "ontology/itch-io/api-purchase-privacy-2026.md",
-        "tests/itch-io-api-purchase-privacy.test.mjs"
+        "tests/itch-io-api-purchase-privacy.test.mjs",
+        "ontology/itch-io/game-bonus-entitlements-2026.json",
+        "ontology/itch-io/game-bonus-entitlements-2026.md",
+        "site/itch-game-bonus-entitlement.mjs",
+        "tests/itch-io-game-bonus.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3272,12 +3300,16 @@
       "objective": "Investigate specify fraud, customer dispute and reversal costs.",
       "acceptance": "Provide dated source-linked evidence to specify fraud, customer dispute and reversal costs; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 53,
+      "percent": 65,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/game-bonus-entitlements-2026.json",
+        "ontology/itch-io/game-bonus-entitlements-2026.md",
+        "site/itch-game-bonus-entitlement.mjs",
+        "tests/itch-io-game-bonus.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3450,7 +3482,7 @@
       "objective": "Investigate predefine purchase and profit endpoints without launching a test.",
       "acceptance": "Provide dated source-linked evidence to predefine purchase and profit endpoints without launching a test; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 91,
+      "percent": 92,
       "evidence": [
         "ontology/itch-io/commercial-strategy-protocol-2026.json",
         "ontology/itch-io/commercial-strategy-protocol-2026.md",
@@ -3461,7 +3493,11 @@
         "tests/itch-io-creative-pwyw.test.mjs",
         "ontology/itch-io/market-entry-decision-guide-2026.json",
         "ontology/itch-io/market-entry-decision-guide-2026.md",
-        "tests/itch-io-market-entry-decision.test.mjs"
+        "tests/itch-io-market-entry-decision.test.mjs",
+        "ontology/itch-io/game-bonus-entitlements-2026.json",
+        "ontology/itch-io/game-bonus-entitlements-2026.md",
+        "site/itch-game-bonus-entitlement.mjs",
+        "tests/itch-io-game-bonus.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -4255,12 +4291,16 @@
       "objective": "Investigate distinguish game sales, optional add-ons and rights.",
       "acceptance": "Provide dated source-linked evidence to distinguish game sales, optional add-ons and rights; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 87,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/game-bonus-entitlements-2026.json",
+        "ontology/itch-io/game-bonus-entitlements-2026.md",
+        "site/itch-game-bonus-entitlement.mjs",
+        "tests/itch-io-game-bonus.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -4358,7 +4398,7 @@
       "objective": "Investigate track bug reports, compatibility regressions and support hours.",
       "acceptance": "Provide dated source-linked evidence to track bug reports, compatibility regressions and support hours; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 82,
+      "percent": 86,
       "evidence": [
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
@@ -4377,7 +4417,11 @@
         "tests/itch-io-crumbling-launch.test.mjs",
         "ontology/itch-io/low-sales-launch-cases-2021-2025.json",
         "ontology/itch-io/low-sales-launch-cases-2021-2025.md",
-        "tests/itch-io-low-sales-launch.test.mjs"
+        "tests/itch-io-low-sales-launch.test.mjs",
+        "ontology/itch-io/game-bonus-entitlements-2026.json",
+        "ontology/itch-io/game-bonus-entitlements-2026.md",
+        "site/itch-game-bonus-entitlement.mjs",
+        "tests/itch-io-game-bonus.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

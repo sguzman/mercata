@@ -157,3 +157,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io genres, public ratings and paid/free page types (2026-10-26):** independent sitemap-derived 2025 digital-game analysis found 81% of sample games without ratings, zero genre medians, story-focused relative attention, and a corrected paid/free genre comparison. No ratings-to-sales inference. 77% → 77% (Δ +0 pp; exact 77.47%). [Study](../ontology/itch-io/genre-rating-attention-2025.md).
+
+
+**itch.io digital bonus and exclusive reward economics (2026-10-26):** official individual soundtrack/bonus file price gates, project ownership vs file access after repricing, limited perk inventory and seller refund/shipping responsibilities with hypothetical checked arithmetic. No real bonus earnings inferred. 77% → 78% (Δ +1 pp, exact 78.04%). [Tier study](../ontology/itch-io/game-bonus-entitlements-2026.md).
