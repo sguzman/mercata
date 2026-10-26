@@ -394,6 +394,10 @@ try{
     await reach.locator('summary').click();
     assert((await reach.textContent()).includes('Do not sum percentages or device minutes'));
     assert((await reach.textContent()).includes('global monthly distinct viewers: unknown'));
+    const expertQuality=page.locator('.video-quality-research .quality-expert-rubric');
+    assert.equal(await expertQuality.count(),1,'Missing bounded expert-rated statistics tutorial review');
+    assert((await expertQuality.textContent()).includes('87 of 114 selected English statistics search results'));
+    assert((await expertQuality.textContent()).includes('Search-result selection and expert judgments are not measured learning'));
     const frames=page.locator('.survey-frame-crosswalk');
     assert.equal(await frames.locator('.survey-frame-card').count(),8,'Missing the eight independent source-frame distinctions');
     await frames.locator('summary').click();

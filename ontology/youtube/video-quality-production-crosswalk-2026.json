@@ -3,14 +3,15 @@
   "platform": "youtube",
   "kind": "video_quality_proxies_and_production_effort_crosswalk",
   "as_of": "2026-10-25",
-  "method": "Crosswalk separately published self-logged production hours, owner-only educational watch-time reports and public engagement counts. Quality is a measurement question, not a ranked index; cohort means/medians are not combined across sources.",
-  "population": "One selected photography creator's published videos, two single-channel education video datasets and one selected high-view mathematics video set; no representative creator sample",
+  "method": "Crosswalk separately published self-logged production hours, owner-only educational watch-time reports and public engagement counts. Quality is a measurement question, not a ranked index; cohort means/medians are not combined across sources. Separately incorporate a published manual GQS/modified DISCERN expert review of relevance-ranked statistics videos; compare only within its own search-selected denominator.",
+  "population": "One selected photography creator's completed work diary, three educational-video engagement/retention studies, and one relevance-selected expert-rated statistics-video study; none is representative of creator profits or platform learning.",
   "source_ids": [
     "zenagainst-photography-time-diary-2025",
     "stem-spanish-youtube-124-videos-2026",
     "indonesian-instruction-test-youtube-139-videos-2025",
     "turkish-math-youtube-126-videos-2025",
-    "music-content-id"
+    "music-content-id",
+    "j-korean-med-sci-statistics-video-quality-2026"
   ],
   "dimensions": [
     {
@@ -80,6 +81,28 @@
         "zenagainst-photography-time-diary-2025"
       ],
       "observable_in_bounded_sample": false,
+      "universal_quality_cutoff": null
+    },
+    {
+      "id": "independent_expert_content_rating",
+      "meaning": "Video content clarity, completeness and reliability rated by subject experts using the Global Quality Scale and modified DISCERN, not direct learner examination or observed attention",
+      "measurement_access": "manual_expert_content_review",
+      "unit": "selected_video_gqs_quality_category",
+      "source_ids": [
+        "j-korean-med-sci-statistics-video-quality-2026"
+      ],
+      "observable_in_bounded_sample": true,
+      "universal_quality_cutoff": null
+    },
+    {
+      "id": "educational_presentation_format",
+      "meaning": "Descriptive visible production style across selected statistics videos: slides, narration, animation and software demonstration; format alone does not establish audience satisfaction or quality",
+      "measurement_access": "manual_public_video_format_coding",
+      "unit": "count_of_selected_videos_by_presentation_method",
+      "source_ids": [
+        "j-korean-med-sci-statistics-video-quality-2026"
+      ],
+      "observable_in_bounded_sample": true,
       "universal_quality_cutoff": null
     }
   ],
@@ -158,6 +181,60 @@
       "within_study_signal": "The selected high-view math videos showed no significant reported link of duration with these public engagement metrics.",
       "representative_of_youtube_creators": false,
       "profit_observed": false
+    },
+    {
+      "id": "english_statistics_search_expert_ratings",
+      "sampled_creator_count": null,
+      "sampled_video_count": 114,
+      "observation_kind": "fixed_2025_11_17_relevance_ranked_public_search_expert_GQS_and_modified_DISCERN",
+      "source_id": "j-korean-med-sci-statistics-video-quality-2026",
+      "search_snapshot": "2025-11-17",
+      "search_terms_count": 4,
+      "per_query_top_urls": 50,
+      "search_results_initial_urls": 200,
+      "duplicate_urls_excluded": 41,
+      "other_language_excluded": 22,
+      "off_topic_excluded": 23,
+      "sampled_videos_source_population": "English statistics-related search results selected from top 50 relevance-sorted results for each of four queries",
+      "expert_rating_definition": "Global Quality Scale 1–5 (high 4–5; intermediate 3; low 1–2) and modified DISCERN reliability tool",
+      "expert_rating_process": "two_independent_raters_plus_adjudicator",
+      "high_quality_videos": 87,
+      "intermediate_quality_videos": 15,
+      "low_quality_videos": 12,
+      "reported_high_quality_percent": 76.3,
+      "presentation_formats": [
+        {
+          "id": "slides",
+          "selected_videos": 45
+        },
+        {
+          "id": "narrative",
+          "selected_videos": 24
+        },
+        {
+          "id": "animated",
+          "selected_videos": 29
+        },
+        {
+          "id": "software_demonstration",
+          "selected_videos": 16
+        }
+      ],
+      "reported_hour_mean": null,
+      "reported_hour_median": null,
+      "creator_labor_hours": null,
+      "viewer_learning_improvement": null,
+      "unique_viewer_count": null,
+      "measured_educational_outcome": null,
+      "within_study_signal": "Expert content-quality classifications describe 87 of 114 selected English search-result videos as high quality (76.3%), not the prevalence of accurate tutorials across YouTube. Study also coded 45 slides, 24 narrated, 29 animated and 16 software demonstration formats.",
+      "representative_of_youtube_creators": false,
+      "profit_observed": false,
+      "cautions": [
+        "Search ranking and English language selection are biased toward visible, eligible videos; the first 200 URLs are not an unrestricted upload population.",
+        "Expert content review is not evidence of tested learner outcomes or financial return.",
+        "The other four production/workload and engagement samples are independent measurement questions but not confirmed deduplicated content.",
+        "Viewer comments, watch minutes, expert quality and producer labor hours cannot be pooled into one universal ranking."
+      ]
     }
   ],
   "matching_requirements": [
@@ -168,14 +245,16 @@
     "Separate completed projects and abandoned drafts including non-published labor",
     "Record authorized media rights, editing accessibility, production cash cost and creator labor without double-counting",
     "Use independent learner outcome or defined satisfaction survey before claiming measured instructional quality",
-    "Never pool unaligned cross-study samples to infer typical YouTube creator hours or quality"
+    "Never pool unaligned cross-study samples to infer typical YouTube creator hours or quality",
+    "If educational content quality is the outcome, use a documented blinded expert rubric and a fixed genre/language/search-result population, and separate it from production hours, views and actual learning."
   ],
   "prohibited_conclusions": [
     "The four samples' video counts are a single pooled estimate of YouTube quality",
     "9.74 hours is typical production time or an optimal quality threshold",
     "Higher likes, watch time or video length proves better instruction or profitability",
     "Selected channel engagement is representative of new channel success probabilities",
-    "A rights claim is evidence of poor quality or of a measured loss of net profit"
+    "A rights claim is evidence of poor quality or of a measured loss of net profit",
+    "87 of 114 high-rated selected statistics search-result videos means 76.3% of all YouTube tutorials are high quality or lucrative."
   ],
   "unknowns": {
     "typical_creator_quality_score": null,
@@ -183,6 +262,8 @@
     "median_video_production_hours_across_youtube": null,
     "representative_learning_gain": null,
     "creator_net_profit": null,
-    "unpublished_abandoned_labor_hours": null
+    "unpublished_abandoned_labor_hours": null,
+    "representative_statistics_tutorial_quality_share": null,
+    "expert_rating_to_creator_profit_causal_effect": null
   }
 }

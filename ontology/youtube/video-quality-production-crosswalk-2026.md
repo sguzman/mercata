@@ -22,3 +22,18 @@ The STEM and Indonesian samples have creator-access analytics; the Turkish study
 A future *observed* comparison must define its task-specific format, production stages, audio and caption accessibility, license/rightsholder checks, channel age, content language and topic, new versus established channel, and matched observation dates. Record production hours and cash outlays for **both completed and abandoned** projects. Keep direct learner assessments separate from traffic metrics, and expenses separate from earned or cleared payouts.
 
 YouTube's [Content ID guidance](https://support.google.com/youtube/answer/2797370?hl=en) makes media clearance an independently important production constraint; it does not measure production quality or audience value. Profit, universal ideal video length, a cross-sample quality index and causal improvements are **unknown**.
+
+
+## Independent expert content quality: 114 statistics videos (2026)
+
+Oralbek and colleagues' [2026 study in *Journal of Korean Medical Science*](https://pmc.ncbi.nlm.nih.gov/articles/PMC13659105/) searched four statistics-related phrases on **November 17, 2025**, retaining the top 50 relevance-ranked YouTube results per phrase (200 initial URLs). After excluding **41 duplicates**, **22 non-English videos** and **23 unrelated videos**, it assessed **114 eligible English-language statistics videos**. Subject-expert reviewers used a five-point **Global Quality Scale (GQS)** and modified **DISCERN** tool, with independent assessments and adjudication. These ratings assess **content quality and reliability under a specific rubric**, not verified student learning or actual producer profit.
+
+| Expert-rated category | Count in the selected 114 |
+| --- | ---: |
+| High (GQS 4–5) | 87 (**76.3%**) |
+| Intermediate (GQS 3) | 15 |
+| Low (GQS 1–2) | 12 |
+
+The same 114 videos included **45 slides-based**, **24 primarily narrated**, **29 animated**, and **16 software demonstration** videos. Presentation style is a descriptively coded format variable, not a prescribed production investment or proof animation is superior. The publication reports selected engagement differences between rated groups, but it does not randomize video quality or estimate effects on YouTube search placement, measured instruction, salaries or earnings. A "views per day" rate based on cumulative views divided by days since publication is not a daily audience time series.
+
+This **fifth sample** is search-result-selected and uses independent expert judgments. The previous four video production/retention/public-counter samples have different sampling units and outcomes. In particular, the 114-video GQS rating is **not** a denominator for the photography creator's logged labor hours, nor can the studies be added into a representative platform-wide quality or profitability share. No pupil identities, producer income records, original video thumbnails, or raw ratings are republished here. The machine record retains measured and unmeasured outcome distinctions, including `null` for typical teaching quality, completion, wages and earnings.

@@ -3790,7 +3790,7 @@ function renderVideoQualityResearch(data,dossier){
  if(!data?.bounded_observations?.length)return null;
  const section=make('section','video-quality-research'),details=make('details','ownership-details');
  details.append(make('summary','','Observable video differentiation versus actual production labor'));
- details.append(make('p','measure-limit','A single creator labor diary and three distinct educational-video study cohorts. Views, retention, self-logged hours, rights and teaching effectiveness are not interchangeable quality or income scores.'));
+ details.append(make('p','measure-limit','One creator labor diary, three selected educational-video engagement studies, and one selected expert content-quality study. Views, retention, self-logged hours, rights and teaching effectiveness are not interchangeable quality or income scores.'));
  const grid=make('div','ownership-grid');
  for(const row of data.bounded_observations){
   const card=make('article','ownership-card');
@@ -3799,6 +3799,19 @@ function renderVideoQualityResearch(data,dossier){
   card.append(audienceSources([row.source_id],dossier));grid.append(card);
  }
  details.append(grid);
+ const rated=data.bounded_observations.find(x=>x.id==='english_statistics_search_expert_ratings');
+ if(rated){
+  const box=make('div','quality-expert-rubric');
+  box.append(make('h5','','Statistics tutorials: independent expert content ratings'));
+  box.append(make('p','measure-limit',rated.high_quality_videos+' of '+rated.sampled_video_count+
+   ' selected English statistics search results ('+rated.reported_high_quality_percent+
+   '%) rated high quality by GQS/modified DISCERN experts; initial URLs '+rated.search_results_initial_urls+
+   ', duplicates '+rated.duplicate_urls_excluded+', other language '+rated.other_language_excluded+
+   ', unrelated '+rated.off_topic_excluded+'.'));
+  box.append(make('p','measure-limit','Presentation counts: '+rated.presentation_formats.map(x=>x.id.replaceAll('_',' ')+
+   ' '+x.selected_videos).join(' · ')+'. Search-result selection and expert judgments are not measured learning, representative quality, production hours or creator profit.'));
+  box.append(audienceSources([rated.source_id],dossier));details.append(box);
+ }
  const link=make('a','inline-link','Read quality measurement boundaries and sample limitations ↗');
  link.href='./ontology/youtube/video-quality-production-crosswalk-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
  section.append(details);return section;
