@@ -1,6 +1,6 @@
 # itch.io commercial-game research — evidence synthesis and open gaps
 
-**Snapshot: October 26, 2026.** The specimen has 127 source records and 370 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
+**Snapshot: October 26, 2026.** The specimen has 129 source records and 374 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
 
 The market has **no mandatory fee to list a game**, but publication, indexing and acquiring purchasers are separate. Payments can use configurable platform share and processor charges, and the illustrative $10 buyer payment becomes $8.41 **before** refund, tax, labor or other obligations. The public 1.78 million all-game directory, 49,588 paid-game directory and 12,691 paid-2D filter are counts of **listings**, not distinct active paid publishers or buyers.
 
@@ -13,6 +13,8 @@ The accessibility QA planning task has a complete evidence-backed matrix for con
 The source-bounded creative-comparison design and matching exposure-to-click planning tasks are complete, without conducting an experiment or inferring sales uplift. [Creative comparison design](creative-comparison-audit-2026.md).
 
 The listing/file/channel/build identity distinction is now a completed source-backed fixed task, with a tested offline cardinality model that never converts revisions, demos or keys into sales. [Project unit audit](project-file-build-identity-2026.md).
+
+Two further 2025 first-person disclosures describe a zero-copy game at a roughly two-month observation window and a separate five-copy game at $1; free downloads of earlier titles and follower counts cannot form paid conversion denominators. [Dated cases](zero-five-paid-game-snapshots-2025.md).
 
 ## Missing evidence required for the goal
 

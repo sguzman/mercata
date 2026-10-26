@@ -14,6 +14,8 @@ In [What's Left Behind, February 2021](https://brian-hoovler.itch.io/wlb/devlog/
 
 A [late-2025 visual-novel release postmortem](https://arcanaxix.itch.io/amadeus-ep1-waltz/devlog/1128359/thank-you-launch-week-postmortem-2026-plans) reported **more than $100 cumulative itch.io receipts**, combining earlier free-prototype donations with sales/tips from a new commercial episode. The creator also reported **40+ Steam copies**, separately. No exact positive-price itch sale count, release-week itch gross in isolation, development hours or creator net profit can be extracted.
 
+See also [two 2025 low-sale individual game snapshots](zero-five-paid-game-snapshots-2025.md), which preserve source dates and distinguish other-title free downloads from paid units.
+
 ## Why this matters
 
 These cases counterbalance the previously recorded 1,776-unit Mixolumia success and small Hive earnings. Together they demonstrate that publishers can have sharply different individual outcomes. However, voluntary postmortems are *selected by willingness to write a post*, and exposure windows, genres and charging models differ. **No platform-wide zero-earner fraction, positive-price newcomer survival rate, median earnings or causal advantage of Steam over itch.io can be inferred.**
