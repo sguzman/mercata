@@ -34,6 +34,8 @@ The [first-month developer cash observations](first-month-small-game-cashflow-20
 
 The [neighboring game store entry analysis](neighbor-game-store-entry-frames-2026.md) records the distinctive onboarding models of itch.io, Steam, Epic, GOG and a conceptual self-hosted route; it does not infer commercial income from admission fees.
 
+The [source-verified release availability plan](platform-game-availability-contingencies-2026.md) now distinguishes page deindexing, draft, restricted, disabled new purchases, selected geo limits and platform outage, without claiming that a real owner backup or customer access check has been conducted.
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*

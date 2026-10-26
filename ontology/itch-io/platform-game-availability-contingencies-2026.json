@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "first_party_game_content_and_entitlement_availability_contingency_plan",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-access-control",
+    "itch-download-keys",
+    "itch-uk-content-geo-access-2025",
+    "itch-terms"
+  ],
+  "events": [
+    {
+      "id": "unlisted_or_deindexed",
+      "public_page_may_still_be_available": true,
+      "automatic_search_and_browse_visibility": false,
+      "existing_purchases_guaranteed_access": null,
+      "research_note": "Unlisted page visibility is not a seller account suspension or loss of buyer files."
+    },
+    {
+      "id": "disable_new_downloads_and_purchases",
+      "public_page_may_still_be_available": true,
+      "new_purchases_allowed": false,
+      "prior_owner_file_access_documented": true,
+      "research_note": "Public page option preserves existing owner file access while stopping new sales."
+    },
+    {
+      "id": "public_to_draft",
+      "project_page_access_disrupted_for_existing_buyers": true,
+      "research_note": "Official access-control guide warns previously public page is no longer visitable in draft."
+    },
+    {
+      "id": "restricted_page",
+      "access_requires_approved_key_or_password": true,
+      "external_discovery_included": false,
+      "research_note": "Key revocation and restricted-mode changes must be tested before migration."
+    },
+    {
+      "id": "uk_nsfc_geo_2025",
+      "geo_category_restriction_originally_documented": true,
+      "prior_buyer_library_access_operator_reported_in_2025": true,
+      "permanent_guarantee": false,
+      "research_note": "Time-bound 2025 official assurance for affected UK purchasers, not a universal future guarantee."
+    },
+    {
+      "id": "platform_outage_or_shutdown",
+      "reliable_future_retrieval_confirmed": false,
+      "offline_download_backup_recommended_by_operator": true,
+      "research_note": "A player's DRM-free local copies and the publisher's archival release files are different independently protected resources."
+    }
+  ],
+  "publisher_continuity_controls": [
+    {
+      "id": "own_source_and_artifact_backup",
+      "owner_only_game_source_and_licensed_assets": true,
+      "versioned_build_archives": true,
+      "digest_inventory_required": true,
+      "backup_restoration_test_required": true,
+      "actual_backup_file_verified": null
+    },
+    {
+      "id": "build_download_continuity",
+      "recorded_versions_and_supported_os": true,
+      "platform_release_channel_mapping": true,
+      "documented_original_license_rights": true,
+      "alternate_site_distribution_allowed_for_actual_assets": null,
+      "real_build_compatibility_passed": null
+    },
+    {
+      "id": "buyer_entitlement_continuity",
+      "paid_and_free_key_meanings_separated": true,
+      "existing_owner_files_not_deletion_promise": true,
+      "no_private_buyer_pii_export": true,
+      "actual_merchant_access_confirmed": null
+    },
+    {
+      "id": "platform_policy_response",
+      "classify_deindex_vs_unlisted_vs_draft_vs_geo_vs_delist": true,
+      "appeal_channel_review_when_documented": true,
+      "licensed_assets_for_alt_store_must_be_independently_cleared": true,
+      "successful_appeal_or_preserved_buyers_guaranteed": false
+    },
+    {
+      "id": "communication",
+      "publisher_notification_text_no_promised_external_entitlement_without_proof": true,
+      "readme_and_install_fallback_guidance_if_authorized": true,
+      "notification_delivery_rate": null
+    }
+  ],
+  "external_deployment_without_game_or_permission": false,
+  "actual_publisher_builds_backed_up": 0,
+  "actual_owner_restoration_trials": 0,
+  "actual_customer_access_checkouts": 0,
+  "buyer_data_obtained": false,
+  "service_uptime_prediction": null,
+  "platform_shutdown_probability": null,
+  "paid_sales_or_income_impact": null,
+  "limitations": [
+    "The operator's 2025 UK content announcement explicitly limits its reassurance for previous purchases to that policy state at the time.",
+    "Restricting or drafting a formerly public page is different from removing a title from browse rankings.",
+    "A creator can archive self-owned binaries but may not assume permission to redistribute every third-party file elsewhere.",
+    "The owner must verify each concrete backup, hash, restore, access scenario and any buyer notification before calling an actual game's continuity plan operational.",
+    "No private API access or buyer exports are needed for the research plan."
+  ]
+}
