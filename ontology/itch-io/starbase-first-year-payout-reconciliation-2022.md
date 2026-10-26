@@ -1,0 +1,11 @@
+# Starbase Simulator: first-year downloads, donations and one payout
+
+**October 26, 2026 source review.** [October 1, 2022 first-year developer report](https://itch.io/t/2392872/2022-september-first-year-report) · [structured record](starbase-first-year-payout-reconciliation-2022.json).
+
+One game creator, writing about the **first public year** after October 1, 2021, disclosed **6,542 page-view events**, **1,425 download events**, **13 payment events** and **$95.35 gross revenue**. The game was described as kept **free to download**, supported by voluntary payments. These figures therefore cannot enter a first-positive-minimum-price game cohort as purchases of a mandatory paid copy. A download event is not necessarily a new person; one payer can pay multiple times and one visitor can return.
+
+The same post separately gives an account-payout example: **$83.35 gross**, **$8.30 itch.io share** and **$8.42 processor deductions**, with a **reported $66.40 final PayPal payout**, completed in **12 days**. The simple subtraction **$83.35 − $8.30 − $8.42 = $66.63**, **23 cents greater than the reported payout**. The public account does **not** provide a fourth fee or a complete transaction ledger explaining the difference; neither value should be silently corrected. This one payout's **$83.35** is not interchangeable with the first-year cumulative **$95.35**.
+
+After the payout the developer described allocating **$35** to a collaborator and separately intending a smaller charitable amount. These are discretionary or project arrangements, **not processor commissions or an itch.io payout schedule**. The source supplies neither a timesheet nor a complete valuation of the year's game development and upkeep. It is impossible to derive final operating profit, effective hourly earnings or a typical developer income estimate.
+
+This case is useful as a direct example of **yearly cumulative activity versus a narrower payout window**, and why reported fees should be arithmetically audited rather than rounded into invented deductions. It is a self-reported free-download project, not representative evidence of paid game demand, buyers or profitability. No buyer or seller account records were accessed.

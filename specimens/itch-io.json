@@ -1659,6 +1659,17 @@
       "evidence_class": "first_party_analytics_feature_announcement",
       "license": "Short source-linked feature facts with independently authored measurement analysis.",
       "notes": "Historical referral-view domain/time dashboard addition; not evidence of 2026 accessibility for all seller accounts or actual buyer conversions."
+    },
+    {
+      "id": "starbase-simulator-first-year-and-2022-payout",
+      "url": "https://itch.io/t/2392872/2022-september-first-year-report",
+      "title": "2022 September + First Year Report",
+      "publisher": "ashtorak (Starbase Simulator developer)",
+      "published_at": "2022-10-01",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_voluntary_free_game_annual_and_payout_self_report",
+      "license": "Short attributed public numerical financial facts and independent reconciliation commentary.",
+      "notes": "A 2021-2022 free-download game: 6542 views, 1425 downloads, 13 payments, $95.35 year gross, and separate $83.35 gross payout with $0.23 fee reconciliation discrepancy; not positive-price sale cohort."
     }
   ],
   "claims": [
@@ -5840,6 +5851,36 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "No seller-owned game transaction or visitor data accessed; absent referrer is not verified direct visits."
+    },
+    {
+      "id": "starbase-2022-first-year-donation-events",
+      "text": "A Starbase Simulator developer reported 6,542 page views, 1,425 downloads, 13 payments and USD 95.35 gross over the title's first public year ending October 2022.",
+      "source_ids": [
+        "starbase-simulator-first-year-and-2022-payout"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Free-download donations from a single creator; counts do not describe independent persons or mandatory paid-game orders."
+    },
+    {
+      "id": "starbase-2022-one-payout-12-days",
+      "text": "In October 2022 the same creator reported one USD 83.35 gross payout, USD 8.30 itch share, USD 8.42 processor charges, USD 66.40 reported settlement and a 12-day completion time.",
+      "source_ids": [
+        "starbase-simulator-first-year-and-2022-payout"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Account-specific unaudited past payout, not a current typical payout, platformwide average or full-year net amount."
+    },
+    {
+      "id": "starbase-2022-fee-arithmetic-discrepancy",
+      "text": "The reported payout lines leave an unexplained USD 0.23 discrepancy: 83.35 minus 8.30 minus 8.42 equals USD 66.63, while the developer reported receiving USD 66.40.",
+      "source_ids": [
+        "starbase-simulator-first-year-and-2022-payout"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "The discrepancy may have an unreported accounting cause; Mercata has no evidence to assign it to a fee, tax or exchange rate."
     }
   ],
   "observations": [

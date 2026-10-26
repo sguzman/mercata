@@ -12,6 +12,8 @@ These reports are **not interchangeable datasets**. The Hive's sold copies and r
 
 A [2025 shooter first-month disclosure and a 2026 first-game donation payout statement](first-month-small-game-cashflow-2025-2026.md) add two bounded routes without treating voluntary donations as positive-price game orders.
 
+The [Starbase Simulator first-year free-game report](starbase-first-year-payout-reconciliation-2022.md) additionally documents voluntary payments and a narrower self-reported payout with unbalanced fee arithmetic. It is not an eligible positive-price game seller cohort.
+
 To infer *typical newcomer game earnings* we would need a defined cohort of all first-time eligible paid game publishers, a fixed observation period, a denominator including never-paid titles, actual transaction records and consistent handling of fees, refunds and costs. These case studies have none of that. Consequently the [machine register](developer-income-cases-2026.json) explicitly holds population median, mean, zero-earner share and causal discovery effects as `null` rather than projecting them.
 
 No publisher accounts, nonpublic information or sales experiments were accessed. The only source material is the voluntarily published text linked above; the numerical figures are reproduced in abbreviated attributed form for verification.
