@@ -2781,7 +2781,18 @@ function renderVideoEssayCohort(model,dossier){
   const card=make('article','ownership-card');card.append(make('h5','',name));
   card.append(make('strong','',value));card.append(make('p','measure-limit',limit));grid.append(card);
  }
- details.append(grid);details.append(audienceSources(model.source_ids,dossier));
+ details.append(grid);
+ const second=model.frame_3;
+ if(second?.voters===72&&second?.ecosystem_segments?.length===3){
+  const box=make('div','bfi-2025-essay-communities');
+  box.append(make('h5','','2025 BFI poll: academia, exhibitions and YouTube creators'));
+  box.append(make('p','measure-limit',second.voters+' invited expert voters mentioned '+second.mentioned_video_essays+
+   ' works. By curatorial community: '+second.ecosystem_segments.map(x=>
+   x.id.replaceAll('_',' ')+': '+x.voters+' voters and '+x.mentioned_works+' works').join(' · ')+'.'));
+  box.append(make('p','measure-limit','Works are curated cross-media nominations, some not available online. More nominees than in the 2024 poll does not establish a growth rate in YouTube essays, views, creators, income or watch time.'));
+  box.append(audienceSources([second.source_id],dossier));details.append(box);
+ }
+ details.append(audienceSources(model.source_ids,dossier));
  const link=make('a','inline-link','Read format, sample and attention measurement restrictions ↗');
  link.href='./ontology/youtube/video-essay-sample-observations-2024.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
  section.append(details);return section;

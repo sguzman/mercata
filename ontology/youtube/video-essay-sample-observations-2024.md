@@ -27,3 +27,19 @@ Pre-register a finite publication window, a discovery method that does not selec
 The BFI poll does **not** report a typical essayist's time cost, paid fan conversion, YouTube CPM or income distribution. More than 70% including external supporter links is not proof the links earned money. Similarly 200 million view events cannot be divided by 70 nominated videos to invent mean per-video reach.
 
 [Source-framed machine record](video-essay-sample-observations-2024.json) · [Comparison audit](../../site/video-essay-evidence-audit.mjs) · [Regression tests](../../tests/video-essay-evidence-audit.test.mjs).
+
+## An independent subsequent *curated* year: BFI 2025 poll
+
+The [British Film Institute's December 17, 2025 *Sight and Sound* poll](https://www.bfi.org.uk/sight-and-sound/polls/best-video-essays-2025) records **72 invited voters** and **255 video essays mentioned** in the ninth annual edition. It groups participation into three **editorially defined ecosystems**, each with its own discovery and prestige conventions:
+
+| 2025 BFI invited community | Voters | Works mentioned within community |
+| --- | ---: | ---: |
+| Academic and film/media criticism | 34 | 94 |
+| Festivals, galleries and museums | 17 | 65 |
+| Social media and YouTube-oriented contributors | 21 | 96 |
+
+The 255 mentioned works are **poll selections**, not a YouTube video census, genre subscriber base, unique viewing audience or channel publication frequency. Some works are exhibited at festivals or galleries and are not released on open websites; cross-community work identity deduplication is not established here. The art-film category is also not identical to a YouTube documentary or review genre.
+
+**No 2024→2025 platform-growth conclusion follows.** The [2024 BFI poll](https://www.bfi.org.uk/sight-and-sound/polls/best-video-essays-2024) cited 47 voters, 256 nominations, and 183 distinct works, while the 2025 poll uses 72 voters and 255 works mentioned. Different voter counts, changed rosters, nomination methods and exhibition/online availability prevent treating the change in nominated works as a growth rate in video-essay uploads, active creators or audience demand.
+
+The YouTube company's >200 million *2024 related view events* remain another measurement family entirely. These curatorial reports cannot establish 2025 YouTube watch minutes, nominated essay revenues, media labor requirements, typical video lengths or creator income. The added machine-readable 2025 poll frame preserves those missing values as `null`.

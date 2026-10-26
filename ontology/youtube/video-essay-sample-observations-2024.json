@@ -2,10 +2,11 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "video_essay_platform_interest_vs_curated_criticism_cohort",
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "source_ids": [
     "yt-video-essays-2025",
-    "bfi-2024-video-essay-poll"
+    "bfi-2024-video-essay-poll",
+    "bfi-2025-video-essay-poll"
   ],
   "frame_1": {
     "id": "platform_related_view_events",
@@ -100,6 +101,56 @@
     "typical_video_essay_upload_cadence": null,
     "unique_viewers": null,
     "viewer_retention": null,
-    "paid_conversion": null
+    "paid_conversion": null,
+    "industry_video_essay_supply_change_2024_2025": null,
+    "poll_to_poll_individual_essayist_growth": null
+  },
+  "frame_3": {
+    "id": "bfi_2025_curated_cross_ecosystem_poll",
+    "source_id": "bfi-2025-video-essay-poll",
+    "published_at": "2025-12-17",
+    "outlet": "British Film Institute, Sight and Sound",
+    "population": "Expert invited voters from film scholarship, gallery/festival curation, social media and YouTube; not a platform-wide sample",
+    "voters": 72,
+    "mentioned_video_essays": 255,
+    "unit": "poll_mentioned_video_essay_works_not_uploads_or_view_events",
+    "selection": "invited_expert_favorites_with_varying_online_access_and_curatorial_criteria",
+    "ecosystem_segments": [
+      {
+        "id": "academic_and_criticism",
+        "voters": 34,
+        "mentioned_works": 94
+      },
+      {
+        "id": "festival_museum_gallery",
+        "voters": 17,
+        "mentioned_works": 65
+      },
+      {
+        "id": "social_media_and_youtube",
+        "voters": 21,
+        "mentioned_works": 96
+      }
+    ],
+    "ecosystem_work_identity_deduplication_verified": false,
+    "voter_overlap_between_2024_and_2025": null,
+    "selected_youtube_published_work_count": null,
+    "youtube_median_runtime_minutes": null,
+    "youtube_sample_mean_runtime_minutes": null,
+    "nominated_work_paid_income": null,
+    "survey_or_platform_sampling_probabilities": null,
+    "actual_youtube_creator_count": null,
+    "total_distinct_platform_video_essay_uploads": null,
+    "actual_year_over_year_supply_change": null,
+    "viewer_average_watch_minutes": null,
+    "repeat_viewers": null,
+    "limits": [
+      "255 is the BFI poll's reported count of works mentioned in 2025, not 255 representative YouTube videos or verified unique online uploads.",
+      "Academic, exhibition and YouTube social communities use different selection, availability and discovery norms; do not equate their nominations with platform audience shares.",
+      "The 2024 BFI invited poll and 2025 poll differ in voter roster and curation; 183 versus 255 cannot measure growth in YouTube video-essay supply.",
+      "The work may appear on YouTube, Vimeo, in museums, cinema or remain inaccessible online; exhibition is not an online view event.",
+      "No production budgets, usual video runtimes for 2025 YouTube nominees, pay conversion, mean income or global watch-time measures were disclosed in this summary."
+    ],
+    "youtube_2025_view_events": null
   }
 }

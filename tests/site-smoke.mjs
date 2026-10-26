@@ -273,6 +273,11 @@ try{
     assert((await packaging.textContent()).includes('460 alternating packaging patterns'));
     assert((await packaging.textContent()).includes('75,998 first-week edited videos'));
     assert((await packaging.textContent()).includes('NOT a verified Studio winner'));
+    const bfi2025=page.locator('.video-essay-cohort .bfi-2025-essay-communities');
+    assert.equal(await bfi2025.count(),1,'Missing 2025 BFI curated video essay comparison');
+    assert((await bfi2025.textContent()).includes('72 invited expert voters'));
+    assert((await bfi2025.textContent()).includes('255 works'));
+    assert((await bfi2025.textContent()).includes('does not establish a growth rate'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));
