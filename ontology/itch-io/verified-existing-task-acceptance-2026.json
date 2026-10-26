@@ -54,6 +54,42 @@
       "why": "The fixed ledger enforces required cited evidence paths, progress/status consistency and explicit unknown market measures; private API transaction records and public metadata remain separate evidence classes.",
       "unresolved": "Accepting research design and source classification does not count missing paid buyer transactions as collected.",
       "accepted_as": "specific_existing_task_method_and_documented_historical_observation_not_market_income"
+    },
+    {
+      "task_id": "itch-io/income/distinguish-gross-and-net-earnings",
+      "source_ids": [
+        "itch-payments",
+        "starbase-simulator-first-year-and-2022-payout"
+      ],
+      "supporting_document": "ontology/itch-io/starbase-first-year-payout-reconciliation-2022.md",
+      "regression_test": "tests/itch-starbase-payout-reconciliation.test.mjs",
+      "why": "An actual developer-disclosed settlement and fee waterfall is arithmetically reconciled as far as the evidence permits; an unexplained 23-cent mismatch is retained alongside platform/refund/processor rules.",
+      "unresolved": "Publisher's complete ledger, final tax, labor cost and profit cannot be inferred from an individual gross payout.",
+      "accepted_as": "specific_existing_task_method_and_documented_historical_observation_not_market_income"
+    },
+    {
+      "task_id": "itch-io/income/study-first-launch-cohorts",
+      "source_ids": [
+        "itch-buying",
+        "itch-serverside-api-reference"
+      ],
+      "supporting_document": "ontology/itch-io/transaction-cohort-protocol-2026.md",
+      "regression_test": "tests/itch-cohort-protocol.test.mjs",
+      "why": "An operational eligibility rule defines first mandatory-positive-price commercial titles and requires aligned 30-, 90- and 365-day seller cohorts, including zero-paid and delisted titles.",
+      "unresolved": "No probability sample of the defined real first-time paid-game cohorts, or their mean/median return, was acquired.",
+      "accepted_as": "specific_existing_task_method_and_documented_historical_observation_not_market_income"
+    },
+    {
+      "task_id": "itch-io/sales/measure-refunds-adjusted-purchases",
+      "source_ids": [
+        "itch-terms",
+        "itch-payments"
+      ],
+      "supporting_document": "ontology/itch-io/refund-chargeback-unit-cost-2026.md",
+      "regression_test": "tests/itch-refund-cost-audit.test.mjs",
+      "why": "A test-verified accounting contract distinguishes captured paid orders, nonoverlapping refunded orders, fully reversed disputes, retained units, processor/platform costs and final cash under explicit hypothetical inputs.",
+      "unresolved": "The 2026 live rate of refunds, merchant chargeback costs, retained orders and representative net proceeds remains unknown.",
+      "accepted_as": "specific_existing_task_method_and_documented_historical_observation_not_market_income"
     }
   ],
   "unresolved_platform_population": {

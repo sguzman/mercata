@@ -1,10 +1,10 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
-test('Four evidence-backed task acceptances add no tasks, sources or market-income assertions',()=>{
+test('Seven evidence-backed task acceptances add no tasks, sources or market-income assertions',()=>{
  const x=read('ontology/itch-io/verified-existing-task-acceptance-2026.json'),p=read('plans/itch-io.json'),d=read('specimens/itch-io.json');
  const ids=new Set(d.evidence.map(s=>s.id));
  assert.equal(x.added_tasks,0);assert.equal(x.new_sources,0);assert.equal(x.new_paid_market_observations,0);
- assert.equal(x.decisions.length,4);assert.equal(new Set(x.decisions.map(t=>t.task_id)).size,4);
+ assert.equal(x.decisions.length,7);assert.equal(new Set(x.decisions.map(t=>t.task_id)).size,7);
  for(const z of x.decisions){
   const t=p.detail_tasks.find(t=>t.id===z.task_id);
   assert(t,z.task_id);assert.equal(t.percent,100);assert.equal(t.status,'complete');

@@ -50,7 +50,7 @@ The [first-party direct/collected checkout-to-bank currency crosswalk](checkout-
 
 The [international compliance matrix](jurisdiction-buyer-tax-entitlement-risk-2026.md) now separates content-based buyer access, seller payment onboarding, VAT/withholding, previous-purchase rights and disputes, with no countrywide approval or sales income invented.
 
-Four existing narrowly defined research tasks (market chronology, bounded development-profit accounting, dated policy changes and evidence acceptance rules) have met their source-backed acceptance conditions; they do not resolve the representative income or buyer-population gaps. [Acceptance audit](verified-existing-task-acceptance-2026.md).
+Seven existing narrowly defined research tasks (market chronology, bounded development-profit accounting, dated policy changes, evidence acceptance rules, gross/net accounting, first-release cohorts and refund-adjusted orders) have met their source-backed acceptance conditions; they do not resolve the representative income or buyer-population gaps. [Acceptance audit](verified-existing-task-acceptance-2026.md).
 
 The [historically documented referral measurement guide](referral-source-channel-denominators-2026.md) closes the fixed source-channel classification task, while recording purchase referrers, referral-view events and unattributed traffic as separate units and keeping paid conversion unmeasured.
 
