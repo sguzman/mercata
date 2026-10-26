@@ -4574,6 +4574,77 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "An unknown or zero dedicated-server cost depends on a specified game networking architecture; not a platform-level earning estimate."
+    },
+    {
+      "id": "direct-stripe-four-documented-country-examples",
+      "text": "The itch.io payments guide names United States, Canada, Ireland and United Kingdom as country settings for its direct Stripe payment integration, with specified selectable currencies.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "A published integration list, not a worldwide merchant eligibility census; individual approval and updates must be checked directly."
+    },
+    {
+      "id": "stripe-global-not-itch-country-approval",
+      "text": "Stripe's general operating-country list may include a country that does not appear in itch.io's direct-Stripe integration examples; generic Stripe support alone cannot prove the itch.io seller setup works there.",
+      "source_ids": [
+        "itch-payments",
+        "stripe-global"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Absence from one documentation table does not itself prove unsupported or establish a rejection decision for a particular account."
+    },
+    {
+      "id": "direct-paypal-currencies-not-countries",
+      "text": "itch.io lists USD, CAD, GBP, EUR, JPY and AUD as PayPal direct-checkout currency options without listing corresponding verified eligible seller countries.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "The available checkout currency is not the seller's settlement currency or proof that their regional PayPal account is eligible."
+    },
+    {
+      "id": "collected-usd-not-local-payout",
+      "text": "In its collected-payments model, itch.io prices/checks out transactions in USD, with payouts through approved channels including PayPal/Payoneer.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No final local-currency bank receipt, currency-conversion charge or approved seller account has been observed."
+    },
+    {
+      "id": "collected-tax-identity-three-dollar-adjustment",
+      "text": "The itch.io payouts documentation lists a flat $3 tax-identity verification adjustment applied once to collected publisher accounts.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "This is a one-time account/payout adjustment, not a compulsory upfront listing fee or repeated charge on every purchase."
+    },
+    {
+      "id": "seller-payout-frequency-fees",
+      "text": "The guide warns that payout processors can deduct transfer fees and recommends approximately monthly payout requests rather than frequent small withdrawals.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No universal PayPal/Payoneer transfer charge or country-specific net payout is established."
+    },
+    {
+      "id": "withholding-is-individualized",
+      "text": "Itch.io says collected payouts for relevant foreign entities can involve default 30% withholding without proper tax identification, potentially reduced with eligible treaty documentation.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Not legal advice; no individual's treaty entitlement, validated rate, classification or actual personal tax amount can be inferred."
     }
   ],
   "observations": [

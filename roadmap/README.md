@@ -187,3 +187,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io multiplayer server cost boundary (2026-10-26):** official operator/moderator confirmation that hosted game files/browser clients do not include server-side game execution. Different architecture scenarios preserve unknown costs. 81% → 81% (Δ +0 pp, raw 81.09%). [Source review](../ontology/itch-io/multiplayer-hosting-boundary-2026.md).
+
+
+**itch.io payout country examples and first-payout deductions (2026-10-26):** official direct Stripe country/currency rows, distinct from generic Stripe operations; documented once-per-account $3 collected payout tax-identity adjustment and unresolved FX/tax. 81% → 82% (Δ +1 pp; raw 81.56%). [Study](../ontology/itch-io/merchant-country-first-payout-2026.md).

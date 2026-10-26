@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "public_merchant_direct_payment_country_examples_and_first_payout_costs",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-payments",
+    "stripe-global",
+    "paypal-mx-receiving"
+  ],
+  "direct_stripe_documented_countries": [
+    {
+      "country": "United States",
+      "documented_checkout_currencies": [
+        "USD"
+      ]
+    },
+    {
+      "country": "Canada",
+      "documented_checkout_currencies": [
+        "CAD",
+        "USD"
+      ]
+    },
+    {
+      "country": "Ireland",
+      "documented_checkout_currencies": [
+        "EUR",
+        "GBP",
+        "USD"
+      ]
+    },
+    {
+      "country": "United Kingdom",
+      "documented_checkout_currencies": [
+        "EUR",
+        "GBP",
+        "USD"
+      ]
+    }
+  ],
+  "list_claims_global_coverage": false,
+  "unlisted_country_case": {
+    "country": "Mexico",
+    "generally_available_from_stripe_global_source": true,
+    "listed_in_itch_direct_stripe_country_examples": false,
+    "individual_itch_direct_stripe_eligibility_approved": null,
+    "actual_account_test_performed": false,
+    "limitation": "Do not claim that an absent table row means permanently unsupported, nor that generic processor country availability guarantees itch.io account integration."
+  },
+  "direct_paypal": {
+    "documented_checkout_currencies": [
+      "USD",
+      "CAD",
+      "GBP",
+      "EUR",
+      "JPY",
+      "AUD"
+    ],
+    "eligible_seller_country_census": null,
+    "account_specific_tender_acceptance_verified": null
+  },
+  "collected": {
+    "checkout_currency": "USD",
+    "payout_providers_documented": [
+      "PayPal",
+      "Payoneer"
+    ],
+    "publisher_is_merchant_of_record": false,
+    "upfront_listing_fee_usd": 0,
+    "initial_tax_identity_account_adjustment_usd": 3,
+    "adjustment_applied_once": true,
+    "payout_method_transfer_fee_usd": null,
+    "bank_fx_spread_percent": null,
+    "tax_interview_required": true,
+    "actual_tax_withholding_percent": null,
+    "first_payment_seller_approved": null,
+    "requires_validated_tax_information_before_payout": true,
+    "one_order_total_cash_payout_usd": null
+  },
+  "revenue_unit_rules": [
+    "Customer USD gross, per-transaction processor deductions, marketplace share, collected payout account adjustments and eventual bank currency conversion are distinct.",
+    "A one-time $3 collected-payout tax identity adjustment is not part of the 2.9% + $0.30 *per-transaction* example.",
+    "The documented country/currency table is not exhaustive proof of eligibility across every jurisdiction.",
+    "No user account was opened, personal tax information requested or payout attempted."
+  ],
+  "missing": {
+    "verified_active_sellers_by_country": null,
+    "individual_final_net_receipts": null,
+    "actual_tax_treaty_benefit": null,
+    "local_payout_currency": null,
+    "first_sale_settlement_days": null
+  }
+}
