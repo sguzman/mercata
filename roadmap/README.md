@@ -196,3 +196,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io game financial cases (2026-10-26):** Fish'n Feathers 127 paid units/369 downloads/$401 gross and first-paid Escape from Life Inc ~$740 multistore receipts/$300–$400 soundtrack cost, with all unsupported conversion/profit claims excluded. **82% → 82%**, Δ **+0 pp**; exact mean **82.31%**. [Research](../ontology/itch-io/small-paid-release-finance-2022.md).
+
+
+**itch.io game-jam activity (2026-10-26):** first-party cumulative games-for-jams count (613,796) and 2026 Gamedev.js 10,642 ratings, with 482 submitted/483 rated discrepancy; zero attribution to game purchases. **82% → 83%** (Δ +1 pp), raw mean **82.53%**. [Evidence](../ontology/itch-io/jam-participation-counts-2026.md).

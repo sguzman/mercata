@@ -1307,6 +1307,28 @@
       "evidence_class": "voluntary_developer_first_party_game_postmortem",
       "license": "Short attributed public game statistics and independently written methodological notes.",
       "notes": "Single game self-disclosure; neither statistically selected nor independently audited. Individual costs, business taxes and author time differ."
+    },
+    {
+      "id": "itch-jam-cumulative-directory-2026",
+      "url": "https://itch.io/jams",
+      "title": "Game Jams on itch.io: cumulative games",
+      "published_at": null,
+      "publisher": "itch.io official jam pages",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_jam_aggregate",
+      "license": "Short public numerical summaries and source URL only.",
+      "notes": "Jam game creation and rating totals, not purchases, buyers, unique publisher accounts or income."
+    },
+    {
+      "id": "itch-gamedevjs-results-2026",
+      "url": "https://itch.io/jam/gamedevjs-2026/results",
+      "title": "Gamedev.js Jam 2026 results",
+      "published_at": null,
+      "publisher": "itch.io official jam pages",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_jam_aggregate",
+      "license": "Short public numerical summaries and source URL only.",
+      "notes": "Jam game creation and rating totals, not purchases, buyers, unique publisher accounts or income."
     }
   ],
   "claims": [
@@ -4864,6 +4886,47 @@
       "confidence": "medium",
       "observed_at": "2026-10-26",
       "limitations": "Single retrospective and uneven distribution, not a causal estimate of launch timing or referral performance."
+    },
+    {
+      "id": "itch-jam-total-produced-2026",
+      "text": "In the October 2026 live public jam directory, itch.io states 613,796 games have been created for hosted jams.",
+      "source_ids": [
+        "itch-jam-cumulative-directory-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Platform cumulative game-production statement, not a unique seller count, paid-game sales or denominator for all game listings."
+    },
+    {
+      "id": "itch-gamedevjs-2026-rated",
+      "text": "The official Gamedev.js Jam 2026 results page reports 10,642 ratings and a median of 17 ratings per game in its rating interval.",
+      "source_ids": [
+        "itch-gamedevjs-results-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Community ratings are not purchases or independent persons; one event is not a buyer."
+    },
+    {
+      "id": "itch-gamedevjs-2026-entry-mismatch",
+      "text": "The Gamedev.js Jam 2026 results state 482 entries were submitted but 483 entries were rated.",
+      "source_ids": [
+        "itch-gamedevjs-results-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Unexplained mismatch in the first-party source is preserved without correcting or reconstructing a count."
+    },
+    {
+      "id": "itch-jams-unverified-sales",
+      "text": "Neither the cumulative jam-games counter nor the Gamedev.js jam rating results disclose subsequent commercial paid-game units or income.",
+      "source_ids": [
+        "itch-jam-cumulative-directory-2026",
+        "itch-gamedevjs-results-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Absence of public transaction evidence is not proof that jam games earned no money."
     }
   ],
   "observations": [
