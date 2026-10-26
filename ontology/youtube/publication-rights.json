@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "public_research_publication_rights_review",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "scope": "Repository-linked YouTube research source metadata and explicit third-party media reuse manifests. Neither a public URL nor a citation grants media copying permission.",
   "source_id": "cc-attribution-practices",
   "publication_modes": [
@@ -59,7 +59,8 @@
     "Check CC TASL elements only for CC-licensed works; do not label commercial Help pages or news photos as CC-licensed without evidence.",
     "Verify research aggregate source terms separately from visual and raw dataset rights; a short attributed statistic is not proof that the underlying dataset can be redistributed.",
     "Review quote lengths, copyright context, attribution, translation, charts and publisher license updates manually.",
-    "Require rights-specific reviewer signoff before publishing any new third-party asset; never import private materials or personal financial records."
+    "Require rights-specific reviewer signoff before publishing any new third-party asset; never import private materials or personal financial records.",
+    "After each meaningful new source batch, refresh the metadata and media inventory counts without promoting source notes to license grants; retain unanswered quote and data export rights as unknown."
   ],
   "open_questions": {
     "published_asset_census_complete": false,
@@ -83,8 +84,8 @@
     }
   ],
   "automated_media_file_inventory": {
-    "observed_repo_tree_entries": 235,
-    "observed_at": "2026-10-24",
+    "observed_repo_tree_entries": 723,
+    "observed_at": "2026-10-25",
     "tracked_media_extensions": [
       "svg",
       "png",
@@ -114,6 +115,33 @@
       "site/app.js"
     ],
     "external_media_detected_in_inspected_markup": false,
-    "confidence": "File-extension and simple URL patterns only; cannot validate visual authorship, dynamic script sourcing, quotes, licensed datasets or cross-origin runtime content"
+    "confidence": "Current GitHub tree enumerates 709 blobs in 723 tree entries, with two SVG media paths. Static markup checks and source metadata checks do not prove legal authorship, complete site runtime behavior, quote context or dataset redistribution rights.",
+    "observed_repo_file_blobs": 709,
+    "inspected_asset_markup": {
+      "paths": [
+        "assets/favicon.svg",
+        "assets/swatch.svg"
+      ],
+      "inspectable_svg_nodes": [
+        "svg",
+        "rect",
+        "text"
+      ],
+      "embedded_remote_images_found": false,
+      "packaged_external_fonts_found": false,
+      "outside_assets_authorship_certified": false,
+      "method": "Read both checked-in SVG markup; inspect local index HTML, site styles, and app JS for media embedding patterns. No external image, font, or audiovisual asset appeared in this inspectable static subset."
+    }
+  },
+  "source_metadata_snapshot": {
+    "observed_at": "2026-10-25",
+    "registered_public_source_records": 371,
+    "registered_public_claim_records": 465,
+    "sources_with_https_url_publisher_title_retrieval_date_and_reuse_note": 371,
+    "claims_with_nonempty_limitations_and_registered_source_ids": 465,
+    "source_link_or_reuse_note_is_legal_permission": false,
+    "source_texts_or_third_party_datasets_fully_licensed_for_republication": null,
+    "full_source_text_and_figure_rights_review_completed": false,
+    "snapshot_not_a_legal_clearance": true
   }
 }

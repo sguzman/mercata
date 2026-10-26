@@ -1,6 +1,6 @@
 # Publication rights and third-party material audit
 
-**Review baseline: October 24, 2026.** [Machine register](publication-rights.json) · [static audit](../../scripts/publication-rights.mjs) · [tests](../../tests/publication-rights.test.mjs). This is a practical **metadata and rights-gating procedure**, not a legal opinion or certification that every repository file is copyright-cleared.
+**Inventory refreshed: October 25, 2026; manual rights clearance still pending.** [Machine register](publication-rights.json) · [static audit](../../scripts/publication-rights.mjs) · [tests](../../tests/publication-rights.test.mjs). This is a practical **metadata and rights-gating procedure**, not a legal opinion or certification that every repository file is copyright-cleared.
 
 ## Two different acts
 
@@ -11,6 +11,10 @@ When a CC-licensed work is actually reused, [Creative Commons](https://creativec
 ## Verified file-path inventory
 
 A repository-tree inspection found two checked-in media files: `assets/favicon.svg` and `assets/swatch.svg`. Both contain simple SVG text and rectangle shapes, without an embedded photograph, external image or font file. The inspected site HTML and CSS had no remote media imports.
+
+On the October 25 GitHub `main` tree, Mercata had **723 tree entries (709 files)**; only **two media-extension paths** were found, the same SVG assets. The inspection reopened their actual text: both use local SVG rectangle/text primitives and built-in font-family references, with no image embedding, downloaded font file or remote media URL in the SVG bodies. The entry page links only its local script, stylesheet and icon. Static stylesheet inspection found no remote media import, and the application script's inspected URL references are research/source links rather than embedded third-party media. This is a **static code and path check**, not a copyright-authorship finding or exhaustive dynamic browser network audit.
+
+At the same snapshot, the research dossier held **371 public source records** and **465 attributed public claims**. Every indexed source had an HTTPS URL, publisher, title, retrieval date and non-empty reuse note; each public claim had a non-empty limitation statement and registered source IDs. These are **provenance metadata fields, not proof of permission to copy source text, illustrations, images, datasets, or videos**. The independent quotation-by-quotation and dataset transformation/export reviews remain incomplete.
 
 The [media-path audit](../../scripts/publication-asset-scan.mjs) now runs during repository verification and rejects new unregistered images, audiovisual files, fonts or PDFs, as well as direct remote media embeds in HTML and CSS. [Tests](../../tests/publication-asset-scan.test.mjs) check the current inventory and reject synthetic unregistered assets.
 

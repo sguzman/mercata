@@ -14,6 +14,17 @@ test('Actual YouTube sources and claims have attributable review metadata; no bl
  assert.equal(result.release_cleared,false);
  assert.equal(result.requires_manual_review,true);
  assert.equal(policy.manual_repository_review.completed,false);
+ assert.equal(policy.automated_media_file_inventory.observed_repo_tree_entries,723);
+ assert.equal(policy.automated_media_file_inventory.observed_repo_file_blobs,709);
+ assert.deepEqual(policy.automated_media_file_inventory.observed_local_files,['assets/favicon.svg','assets/swatch.svg']);
+ assert.equal(policy.automated_media_file_inventory.inspected_asset_markup.packaged_external_fonts_found,false);
+ assert.equal(policy.automated_media_file_inventory.inspected_asset_markup.outside_assets_authorship_certified,false);
+ assert.equal(policy.source_metadata_snapshot.registered_public_source_records,371);
+ assert.equal(policy.source_metadata_snapshot.registered_public_claim_records,465);
+ assert.equal(policy.source_metadata_snapshot.sources_with_https_url_publisher_title_retrieval_date_and_reuse_note,371);
+ assert.equal(policy.source_metadata_snapshot.source_link_or_reuse_note_is_legal_permission,false);
+ assert.equal(policy.source_metadata_snapshot.full_source_text_and_figure_rights_review_completed,false);
+ assert.equal(policy.open_questions.repository_rights_clearance,null);
 });
 const sources=[{id:'research',url:'https://example.org/research',title:'Research',publisher:'Publisher',
  license:'Linked short paraphrase, not a permission statement',retrieved_at:'2026-10-24'}];
