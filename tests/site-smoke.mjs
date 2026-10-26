@@ -750,6 +750,13 @@ try{
     assert((await lifecycle.textContent()).includes('30 days after publishing'));
     assert((await lifecycle.textContent()).includes('365 days after publishing'));
     assert.equal(await lifecycle.locator('.lifecycle-horizon-unknown').count(),3,'Unsupported earnings shown as measured');
+    const formatEconomics=page.locator('.format-economics-comparison');
+    assert.equal(await formatEconomics.count(),1,'Missing cross-format unit economics boundary panel');
+    await formatEconomics.locator('summary').click();
+    assert.equal(await formatEconomics.locator('.format-economics-mode').count(),2,'Missing separately eligible watch-page and Shorts mechanisms');
+    assert((await formatEconomics.textContent()).includes('55% of eligible net watch-page ads'));
+    assert((await formatEconomics.textContent()).includes('45% of country-allocated eligible creator pool'));
+    assert((await formatEconomics.textContent()).includes('unallocated overhead and taxes'));
     const otherIncome=page.locator('.cross-platform-income');
     assert.equal(await otherIncome.locator('.cross-platform-income-card').count(),3,'Missing selected cross-platform income studies');
     await otherIncome.locator('summary').first().click();

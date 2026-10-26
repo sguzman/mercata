@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "conditional_long_form_versus_shorts_creator_ad_economics",
+  "as_of": "2026-10-25",
+  "status": "official_contractual_mechanisms_and_explicit_hypothetical_accounting_only",
+  "source_ids": [
+    "revenue-shares",
+    "shorts-policy",
+    "yt-midroll-2026",
+    "api-metrics"
+  ],
+  "linked_evidence": [
+    "ontology/youtube/watch-page-ad-accounting.json",
+    "ontology/youtube/shorts-pool-economics.json",
+    "ontology/youtube/video-surfaces-economics.json"
+  ],
+  "comparison_scope": "same_reporting_month_same_currency_two_separately_eligible_production_cohorts_with_explicit_paid_costs_and_labor",
+  "modes": [
+    {
+      "id": "watch_page",
+      "surface": "eligible_watch_page_long_form",
+      "module": "Watch Page Monetization Module",
+      "revenue_basis": "eligible_net_watch_page_ad_revenues",
+      "contract_share": 0.55,
+      "unit": "currency_per_contractually_eligible_net_revenue_base",
+      "public_video_views_valid_basis": false,
+      "advertiser_cpm_valid_basis": false,
+      "midroll": {
+        "minimum_duration_seconds": 480,
+        "manual_slots_possible": true,
+        "automatic_slots_possible": true,
+        "slots_guarantee_serve": false,
+        "impressions_per_slot": null
+      },
+      "earnings_observed": null,
+      "median_paid_cost": null,
+      "median_work_hours": null,
+      "net_profit": null
+    },
+    {
+      "id": "shorts",
+      "surface": "shorts_feed",
+      "module": "Shorts Monetization Module",
+      "revenue_basis": "creator_share_of_country_pool_allocated_by_eligible_engaged_views",
+      "contract_share": 0.45,
+      "unit": "currency_per_creator_allocated_country_creator_pool",
+      "public_video_views_valid_basis": false,
+      "advertiser_cpm_valid_basis": false,
+      "music_pool_funding_and_creator_share_are_distinct": true,
+      "earnings_observed": null,
+      "median_paid_cost": null,
+      "median_work_hours": null,
+      "net_profit": null
+    }
+  ],
+  "explicit_scenario_input_fields": [
+    "month",
+    "currency",
+    "country",
+    "common_cash_overhead_unallocated",
+    "long_form.watch_page_module_accepted",
+    "long_form.eligible_public_video",
+    "long_form.eligible_net_ad_revenues",
+    "long_form.video_duration_seconds",
+    "long_form.ad_slot_mode",
+    "long_form.production_cash_paid",
+    "long_form.distribution_cash_paid",
+    "long_form.production_hours",
+    "long_form.distribution_hours",
+    "shorts.shorts_module_accepted_before_activity",
+    "shorts.content_eligible",
+    "shorts.period_is_authorized_country_eligible_engaged_views",
+    "shorts.country_creator_pool",
+    "shorts.creator_eligible_engaged_views",
+    "shorts.total_eligible_engaged_views",
+    "shorts.production_cash_paid",
+    "shorts.distribution_cash_paid",
+    "shorts.production_hours",
+    "shorts.distribution_hours"
+  ],
+  "output_units": {
+    "creator_conditional_contract_share": "currency_hypothetical_not_observed",
+    "conditional_contribution_after_paid_direct_costs": "currency_hypothetical_not_profit",
+    "conditional_contribution_per_work_hour": "currency_per_recorded_work_hour_hypothetical_not_wage",
+    "actual_income": null,
+    "actual_profit": null,
+    "actual_bank_cash": null,
+    "causal_effect_of_format_choice": null,
+    "public_views_to_engaged_views_conversion": null
+  },
+  "audit_guards": [
+    "Never apply 55% to advertiser grossRevenue, CPM, watch-page public view counts or estimatedAdRevenue that is already creator-net.",
+    "Never apply 45% to Shorts public views, gross Shorts ad spend or the country pool before creator eligible engaged-view allocation.",
+    "A video shorter than 480 seconds cannot offer long-form mid-rolls; an eligible slot still does not prove an ad was served.",
+    "Long-form videos can be monetized without a mid-roll; the minimum mid-roll length is not a minimum long-form monetization length.",
+    "Account period and currency must match before comparing scenarios; Shorts country-specific denominator must be owner-supplied for that country.",
+    "A 2026 model must not silently apply 2027 qualified rolling Shorts requirements or targeted-direct Shorts ads.",
+    "Do not infer actual net profit: unallocated overhead, taxes, accounting adjustments, cash settlement and unpaid labor remain unknown.",
+    "Neither hypothetical mode supplies ad auctions, a representative creator outcome, or a causal expected value from choosing one format.",
+    "If work hours are zero, the per-hour diagnostic is unknown rather than infinite or a creator wage."
+  ],
+  "observed_creator_accounts": 0,
+  "observed_creator_earnings": null,
+  "observed_production_hours": null
+}
