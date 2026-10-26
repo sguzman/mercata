@@ -248,3 +248,8 @@ The [machine-readable plan](itch-io.json) tracks the 244 original and detailed t
 ## Income-case research (2026-10-26)
 
 Three public developer disclosures were entered in a [bounded case register](../ontology/itch-io/developer-income-cases-2026.md). They cannot establish the average or median developer's earnings. The current 244-task score is 26%; commercial tests and private account work have not occurred.
+
+
+## Modeled game viability (2026-10-26)
+
+[Break-even math](../ontology/itch-io/break-even-scenarios-2026.md) covers per-order proceeds, cash costs, labor valuation, and explicit pre-tax income thresholds, with no inference about buyer demand. Task mean: 29%.

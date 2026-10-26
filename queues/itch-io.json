@@ -271,13 +271,17 @@
           "title": "Model a transparent net-sale example",
           "acceptance": "Calculate gross less documented fees with assumptions.",
           "weight": 1,
-          "progress": 75,
+          "progress": 81,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
             "ontology/itch-io/commercial-rules-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-economics.test.mjs"
+            "tests/itch-io-economics.test.mjs",
+            "ontology/itch-io/break-even-scenarios-2026.md",
+            "ontology/itch-io/break-even-scenarios-2026.json",
+            "site/itch-break-even.mjs",
+            "tests/itch-break-even.test.mjs"
           ]
         },
         {
@@ -611,13 +615,17 @@
           "title": "Estimate effort-adjusted earnings",
           "acceptance": "Count production, marketing, administration and support time.",
           "weight": 1,
-          "progress": 20,
+          "progress": 38,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/developer-income-cases-2026.json",
             "ontology/itch-io/developer-income-cases-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-income-cases.test.mjs"
+            "tests/itch-io-income-cases.test.mjs",
+            "ontology/itch-io/break-even-scenarios-2026.md",
+            "ontology/itch-io/break-even-scenarios-2026.json",
+            "site/itch-break-even.mjs",
+            "tests/itch-break-even.test.mjs"
           ]
         },
         {
@@ -626,13 +634,17 @@
           "title": "Separate sales, payout and net profit",
           "acceptance": "Define each economic quantity and all known expenses.",
           "weight": 1,
-          "progress": 38,
+          "progress": 51,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/developer-income-cases-2026.json",
             "ontology/itch-io/developer-income-cases-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-income-cases.test.mjs"
+            "tests/itch-io-income-cases.test.mjs",
+            "ontology/itch-io/break-even-scenarios-2026.md",
+            "ontology/itch-io/break-even-scenarios-2026.json",
+            "site/itch-break-even.mjs",
+            "tests/itch-break-even.test.mjs"
           ]
         }
       ]
@@ -911,9 +923,14 @@
           "title": "Enumerate viable earning pathways",
           "acceptance": "Connect offering, audience, promotion, payment and fulfillment.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 28,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/break-even-scenarios-2026.md",
+            "ontology/itch-io/break-even-scenarios-2026.json",
+            "site/itch-break-even.mjs",
+            "tests/itch-break-even.test.mjs"
+          ]
         },
         {
           "id": "strategy/comparison",
@@ -931,9 +948,14 @@
           "title": "Model bounded revenue scenarios",
           "acceptance": "State assumptions; never invent likelihoods or expected earnings.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 70,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/break-even-scenarios-2026.md",
+            "ontology/itch-io/break-even-scenarios-2026.json",
+            "site/itch-break-even.mjs",
+            "tests/itch-break-even.test.mjs"
+          ]
         },
         {
           "id": "strategy/break-even",
@@ -941,9 +963,14 @@
           "title": "Calculate break-even conditions",
           "acceptance": "Include fixed costs, time, variable fees and refunds.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 77,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/break-even-scenarios-2026.md",
+            "ontology/itch-io/break-even-scenarios-2026.json",
+            "site/itch-break-even.mjs",
+            "tests/itch-break-even.test.mjs"
+          ]
         },
         {
           "id": "strategy/offer-test",
@@ -1019,7 +1046,7 @@
           "title": "Audit unknowns and comparability",
           "acceptance": "Inspect denominators, missing data and misleading comparisons.",
           "weight": 1,
-          "progress": 57,
+          "progress": 62,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/catalog-snapshot-2026.md",
@@ -1028,7 +1055,11 @@
             "tests/itch-io-catalog.test.mjs",
             "ontology/itch-io/developer-income-cases-2026.json",
             "ontology/itch-io/developer-income-cases-2026.md",
-            "tests/itch-io-income-cases.test.mjs"
+            "tests/itch-io-income-cases.test.mjs",
+            "ontology/itch-io/break-even-scenarios-2026.md",
+            "ontology/itch-io/break-even-scenarios-2026.json",
+            "site/itch-break-even.mjs",
+            "tests/itch-break-even.test.mjs"
           ]
         },
         {

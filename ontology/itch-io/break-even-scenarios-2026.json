@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "hypothetical_pretax_break_even_worksheet",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-payments"
+  ],
+  "source_guarantees_specific_fee_rates": false,
+  "default_example_revenue_share_rate": 0.1,
+  "default_example_processor_percentage": 0.029,
+  "default_example_processor_fixed_usd": 0.3,
+  "input_scenarios": [
+    {
+      "priceUsd": 2,
+      "itchShareRate": 0.1,
+      "processorPercentRate": 0.029,
+      "processorFixedUsd": 0.3,
+      "cashDevelopmentCostsUsd": 100,
+      "valuedLaborHours": 20,
+      "valuedLaborHourlyUsd": 20,
+      "additionalFixedCashCostsUsd": 0,
+      "targetPretaxSurplusUsd": 500
+    },
+    {
+      "priceUsd": 5,
+      "itchShareRate": 0.1,
+      "processorPercentRate": 0.029,
+      "processorFixedUsd": 0.3,
+      "cashDevelopmentCostsUsd": 100,
+      "valuedLaborHours": 20,
+      "valuedLaborHourlyUsd": 20,
+      "additionalFixedCashCostsUsd": 0,
+      "targetPretaxSurplusUsd": 500
+    },
+    {
+      "priceUsd": 10,
+      "itchShareRate": 0.1,
+      "processorPercentRate": 0.029,
+      "processorFixedUsd": 0.3,
+      "cashDevelopmentCostsUsd": 100,
+      "valuedLaborHours": 20,
+      "valuedLaborHourlyUsd": 20,
+      "additionalFixedCashCostsUsd": 0,
+      "targetPretaxSurplusUsd": 500
+    },
+    {
+      "priceUsd": 20,
+      "itchShareRate": 0.1,
+      "processorPercentRate": 0.029,
+      "processorFixedUsd": 0.3,
+      "cashDevelopmentCostsUsd": 100,
+      "valuedLaborHours": 20,
+      "valuedLaborHourlyUsd": 20,
+      "additionalFixedCashCostsUsd": 0,
+      "targetPretaxSurplusUsd": 500
+    }
+  ],
+  "assumptions": [
+    "Every price and fee is a hypothetical USD amount chosen for comparison.",
+    "Cash development expense USD 100 and valued effort 20 hours at USD 20/hour are examples, not observed developer averages.",
+    "Break-even requires successfully settled positive-price orders, excluding refunds; actual refund costs cannot be inferred.",
+    "No platform demand, traffic, paid conversion, sales probability, taxes, payout FX or gross merchandise value is estimated."
+  ],
+  "results_require_runtime_evaluation": true,
+  "unobserved": {
+    "typical_paid_order_count": null,
+    "median_price_realized": null,
+    "mean_game_profit": null,
+    "platform_wide_conversion": null
+  },
+  "research_progress_requires_source_evidence": true
+}

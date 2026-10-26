@@ -31,3 +31,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io developer income case register (2026-10-26):** three voluntary public developer disclosures entered with explicit sampling, product-scope and revenue-route distinctions. No representative earning distribution inferred. Score moved **23% → 26%** (Δ **+3 pp**). [Cases and limitations](../ontology/itch-io/developer-income-cases-2026.md).
+
+
+**itch.io modeled release economics (2026-10-26):** explicit fee/cash/labor price sensitivity and break-even calculations with tests. Mathematical scenarios, not sales predictions. Task mean **26% → 29%**, Δ **+3 pp**. [Methodology and caveats](../ontology/itch-io/break-even-scenarios-2026.md).
