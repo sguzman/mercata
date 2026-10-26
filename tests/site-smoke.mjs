@@ -414,6 +414,12 @@ try{
     assert.equal(await demographics.locator('.us-demographic-row').count(),10,'Missing conditional usage figures');
     assert((await demographics.textContent()).includes('IN THAT GROUP'));
     assert((await demographics.textContent()).includes('subgroup sample sizes and uncertainty'));
+    const parentIncome=demographics.locator('.parent-child-income-study');
+    assert.equal(await parentIncome.count(),1,'Missing separate parent-child income study');
+    assert.equal(await parentIncome.locator('.parent-income-band').count(),3);
+    assert((await parentIncome.textContent()).includes('55% of parents report child watches YouTube daily'));
+    assert((await parentIncome.textContent()).includes('40% of parents report child watches YouTube daily'));
+    assert((await parentIncome.textContent()).includes('2023 USD adjusted for regional cost of living'));
     const people=page.locator('.viewer-person-metrics');
     assert.equal(await people.locator('.viewer-person-card').count(),8,'Missing public/owner viewer measurement types');
     await people.locator('summary').click();

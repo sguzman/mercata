@@ -703,6 +703,25 @@ test('Pew 2026 U.S. demographic ever-use rates never become YouTube audience com
  assert.equal(model.survey.subgroup_moe_pp,null);
  assert.deepEqual(model.strata.map(s=>s.id),['household_income','education','residence']);
  assert.deepEqual(model.strata.map(s=>s.categories.map(x=>x.percent)),[[77,84,86,90],[77,87,90],[87,86,78]]);
+ const parents=model.parent_reported_child_youtube_income_2025;
+ assert.equal(parents.source_id,'pew-parents-child-youtube-2025');
+ assert(dossier.evidence.some(s=>s.id===parents.source_id));
+ assert.equal(parents.survey_parent_respondents_n,3054);
+ assert.equal(parents.family_income_reference_year_usd,2023);
+ assert.equal(parents.household_size_normalization,3);
+ assert.equal(parents.geographic_cost_of_living_adjustment,true);
+ assert.deepEqual(parents.adjusted_income_grouping.map(x=>x.parent_reported_daily_percent),[55,51,40]);
+ assert.deepEqual(parents.adjusted_income_grouping.map(x=>x.id),['lower','middle','upper']);
+ assert.equal(parents.adjusted_income_grouping[0].max_usd_exclusive,49400);
+ assert.equal(parents.adjusted_income_grouping[1].max_usd_inclusive,148200);
+ assert.equal(parents.adjusted_income_grouping[2].min_usd_exclusive,148200);
+ assert(parents.adjusted_income_grouping.every(x=>x.subgroup_n===null&&x.subgroup_moe_pp===null));
+ assert.equal(parents.compatible_with_2026_adult_income_strata,false);
+ assert.equal(parents.exact_joint_age_by_income_youtube_table,null);
+ assert.equal(parents.children_youtube_kids_only,null);
+ assert.equal(parents.creator_income_by_parent_tier,null);
+ assert(dossier.claims.some(x=>x.id==='pew-2025-parents-income-tiers-child-daily-youtube-use'&&
+  x.source_ids.includes(parents.source_id)));
  assert(model.strata.every(g=>g.categories.every(x=>x.subgroup_n===null&&x.subgroup_moe_pp===null)));
  assert.equal(model.measurement.is_youtube_audience_composition,false);
  assert.equal(model.measurement.is_monthly_active_use,false);

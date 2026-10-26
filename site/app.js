@@ -1369,6 +1369,24 @@ function renderUsDemographicUse(data,dossier){
   }
   details.append(grid);
   details.append(make('p','measure-limit','Pew survey: 5,511 U.S. adults, January–June 2026. The overall sampling margin of error is ±1.8 percentage points; subgroup sample sizes and uncertainty are not established here.'));
+  const child=data.parent_reported_child_youtube_income_2025;
+  if(child?.adjusted_income_grouping?.length===3){
+    const block=make('div','parent-child-income-study');
+    block.append(make('h5','','Separate 2025 parent survey: child daily YouTube use by adjusted family income'));
+    block.append(make('p','measure-limit','Pew surveyed '+child.survey_parent_respondents_n.toLocaleString('en-US')+
+      ' U.S. parents. These are selected-child daily-use reports, not the 2026 adult ever-use statistics above.'));
+    const bands=make('div','parent-income-bands');
+    for(const band of child.adjusted_income_grouping){
+      const part=make('div','parent-income-band');
+      part.append(make('strong','',band.id+' income'));
+      part.append(make('span','',band.parent_reported_daily_percent+'% of parents report child watches YouTube daily'));
+      bands.append(part);
+    }
+    block.append(bands);
+    block.append(make('p','measure-limit','Pew tiers use 2023 USD adjusted for regional cost of living and a 3-person household: below $49,400, $49,400–148,200, above $148,200. Child-age-by-income subgroups, verified unique people and creator earnings unknown.'));
+    block.append(audienceSources([child.source_id],dossier));
+    details.append(block);
+  }
   details.append(audienceSources([data.source_id],dossier));
   const link=make('a','inline-link','Source, subgroup denominators and survey-method limitations ↗');
   link.href='./ontology/youtube/us-demographic-use-2026.md';link.target='_blank';link.rel='noopener noreferrer';

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "us_2026_education_income_community_usage",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-25",
   "source_id": "pew-us-adults-2026",
   "publication_date": "2026-10-19",
   "status": "observed_survey_rates_not_audience_composition",
@@ -131,7 +131,8 @@
     "Ever-use self-report is not monthly unique viewers, watch time, creator activity, children or global platform use.",
     "Pew's 2026 mixed collection modes require separate compatibility review before constructing historical causal trends.",
     "Education, income and residence are descriptive associations, not causal effects.",
-    "The survey does not yield joint income-by-community or income-by-education intersections."
+    "The survey does not yield joint income-by-community or income-by-education intersections.",
+    "Pew 2025 parents reporting child daily viewing uses adjusted 2023-dollar family income tiers; unlike Pew 2026 adult ever-use nominal household income brackets."
   ],
   "unmeasured": {
     "youtube_viewer_income_composition": null,
@@ -141,6 +142,68 @@
     "subgroup_margins_of_error": null,
     "joint_income_community_estimates": null,
     "creator_income_by_stratum": null,
-    "causal_effects": null
+    "causal_effects": null,
+    "parent_reported_child_income_tier_unique_daily_viewers": null,
+    "child_daily_use_income_by_age_joint_table": null
+  },
+  "parent_reported_child_youtube_income_2025": {
+    "source_id": "pew-parents-child-youtube-2025",
+    "study_publisher": "Pew Research Center",
+    "publication_date": "2025-10-08",
+    "collection_start": "2025-05-13",
+    "collection_end": "2025-05-26",
+    "survey_parent_respondents_n": 3054,
+    "population": "U.S. parents or guardians with child age 12 or younger, each asked about one randomly selected eligible child",
+    "survey_outcome": "parent_reported_selected_child_daily_youtube_video_watching",
+    "response_unit": "percent_of_parents_in_named_adjusted_income_tier_not_share_of_youtube_viewers",
+    "family_income_reference_year_usd": 2023,
+    "household_size_normalization": 3,
+    "geographic_cost_of_living_adjustment": true,
+    "method": "Income band midpoint adjusted by BEA Regional Price Parities and household size; relative to ATP median adjusted family income",
+    "adjusted_income_grouping": [
+      {
+        "id": "lower",
+        "min_usd_inclusive": null,
+        "max_usd_exclusive": 49400,
+        "parent_reported_daily_percent": 55,
+        "subgroup_n": null,
+        "subgroup_moe_pp": null
+      },
+      {
+        "id": "middle",
+        "min_usd_inclusive": 49400,
+        "max_usd_inclusive": 148200,
+        "parent_reported_daily_percent": 51,
+        "subgroup_n": null,
+        "subgroup_moe_pp": null
+      },
+      {
+        "id": "upper",
+        "min_usd_exclusive": 148200,
+        "max_usd_inclusive": null,
+        "parent_reported_daily_percent": 40,
+        "subgroup_n": null,
+        "subgroup_moe_pp": null
+      }
+    ],
+    "full_sample_moe_pp": 2.2,
+    "full_sample_response_rate_aapor_rr3_percent": 60,
+    "subgroup_sample_sizes_reported": false,
+    "parents_versus_children_counted_as_unique_people": false,
+    "observed_view_minutes": null,
+    "children_youtube_kids_only": null,
+    "creator_income_by_parent_tier": null,
+    "original_public_data_received": false,
+    "compatible_with_2026_adult_income_strata": false,
+    "adult_2026_outcome": "ever_used_youtube",
+    "parent_2025_outcome": "selected_child_reported_daily",
+    "exact_joint_age_by_income_youtube_table": null,
+    "inferential_limits": [
+      "Pew 2025 child daily viewing reports concern parent observations about one selected child age <=12, not direct sampled child respondents or child watch logs.",
+      "Income bands are adjusted 2023 dollar amounts standardized to a three-person family, not raw nominal $30k / $70k / $100k household-income categories in the separate 2026 U.S. adult survey.",
+      "Subgroup sample sizes, margins, parent-by-child-age joint cells and causal economic effects are not supplied by the public summary; do not borrow the whole parent sample n or its overall error as cell-level precision.",
+      "Among-income-group prevalence is not the income composition of viewers; percentages cannot be added to 100% or converted into active audience counts.",
+      "No historical creator revenue, customer purchase outcomes, child identities, sensitive individual profiles or sample microdata have been accessed."
+    ]
   }
 }
