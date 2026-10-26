@@ -145,3 +145,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io server-side buyer/API scope audit (2026-10-26):** credentialed per-buyer purchases, downloadable entitlements, bundled owner grants and fulfillment PII separated from seller income statistics; no live API used. 75% → 76% (Δ +1 pp; raw 75.62%). [Details](../ontology/itch-io/api-purchase-privacy-2026.md).
+
+
+**itch.io first-game development costs and cash versus labor (2026-10-26):** Two new independently attributed developer postmortems separate Rose Seed Replica's first-week 13 itch sales from 130 all-store units and ~€26k living/operating outlays, and AraCore's ~£190 early all-store sales, ~£185 listed cash expenses and ~1,500 unvalued hours. No representative income inference. 76% → 76% (Δ +0 pp; exact 76.01%). [Documented cases](../ontology/itch-io/release-cost-labor-cases-2026.md).

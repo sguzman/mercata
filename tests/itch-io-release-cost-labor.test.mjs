@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Early indie launch records distinguish itch.io game units from all-store sales and cost basis',()=>{
+ const m=read('ontology/itch-io/release-cost-labor-cases-2026.json'),d=read('specimens/itch-io.json');
+ const refs=new Set(d.evidence.map(e=>e.id));
+ assert(m.source_ids.every(id=>refs.has(id)));
+ assert.equal(m.cases.length,2);
+ const r=m.cases.find(x=>x.id==='rose_seed_replica'),a=m.cases.find(x=>x.id==='aracore_astromining_ventures');
+ assert.equal(r.store_specific.itch_io_first_week_paid_units,13);
+ assert.equal(r.all_store_launch.all_store_first_week_units_reported,130);
+ assert.equal(r.store_specific.itch_io_first_week_creator_profit_eur,null);
+ assert.equal(r.cost_reporting.all_outlays_are_project_cash_expenses,false);
+ assert.equal(a.store_specific.itch_io_paid_units,null);
+ assert.equal(a.all_store_launch.author_accounting_profit_gbp_approx,5);
+ assert.equal(a.cost_reporting.development_hours_approx,1500);
+ assert.equal(a.cost_reporting.creator_labor_costs_in_accounting_profit,false);
+ assert.equal(m.comparability.currencies_equal,false);
+ assert(Object.values(m.population_outcomes).every(v=>v===null));
+});

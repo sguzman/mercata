@@ -900,6 +900,28 @@
       "evidence_class": "official_api_documentation",
       "license": "Public API interface summarized; no sample buyer emails, identifying fields or secret examples copied.",
       "notes": "Public documentation read only. No token, API request, purchase, game account, or user lookup was attempted."
+    },
+    {
+      "id": "rose-seed-replica-launch-cost-postmortem",
+      "url": "https://lezliz.itch.io/rose-seed-replica/devlog/179880/rose-seed-replica-postmortem-mistakes-were-made",
+      "title": "Rose Seed Replica postmortem — mistakes were made",
+      "publisher": "LezLiz, the game's publisher",
+      "published_at": "2020-09",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_indie_game_launch_cost_postmortem",
+      "license": "Short independently authored numerical extracts and direct public source URL, without reproducing original text.",
+      "notes": "Voluntary and nonrepresentative game postmortem; mixed-store sales must not be attributed entirely to itch.io. Personal living expenses are not automatically development project cash expenditures."
+    },
+    {
+      "id": "aracore-game-first-five-days-postmortem",
+      "url": "https://elcrabogrande.itch.io/aracore-astromining-ventures/devlog/1133828/aracore-astromining-ventures-a-personal-success-a-commercial-failure",
+      "title": "AraCore Astromining Ventures: a personal success, a commercial failure",
+      "publisher": "El Crabo Grande, the game's publisher",
+      "published_at": "2025-12",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_indie_game_launch_cost_postmortem",
+      "license": "Short independently authored numerical extracts and direct public source URL, without reproducing original text.",
+      "notes": "Voluntary and nonrepresentative game postmortem; mixed-store sales must not be attributed entirely to itch.io. Personal living expenses are not automatically development project cash expenditures."
     }
   ],
   "claims": [
@@ -3372,6 +3394,87 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "Absence of a public aggregate is not a claim that no legitimate seller-side export or authorized data route exists."
+    },
+    {
+      "id": "rose-first-week-itch",
+      "text": "Rose Seed Replica's developer disclosed 13 itch.io copies and €27 in itch.io tips during launch week.",
+      "source_ids": [
+        "rose-seed-replica-launch-cost-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Launch-week snapshot of one game, not a lifetime income or representative first-commercial-title outcome."
+    },
+    {
+      "id": "rose-all-store-separate",
+      "text": "The developer reported about 130 launch-week copies across storefronts, approximately €1,000 in sales receipts, and three refunds overall.",
+      "source_ids": [
+        "rose-seed-replica-launch-cost-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "These are all-store figures, not itch.io-specific orders or net proceeds; some amounts are approximate."
+    },
+    {
+      "id": "rose-multiyear-outlays",
+      "text": "The Rose Seed Replica postmortem estimates more than €26,000 of living and game-operation outlays over around three years, with a two-year allocation scenario of €17,000 and a further grant-adjusted scenario of €8,700.",
+      "source_ids": [
+        "rose-seed-replica-launch-cost-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Living costs, operating costs, grant funding and speculative allocations are not interchangeable with audited production cash costs or labor hours."
+    },
+    {
+      "id": "rose-grant-and-labor",
+      "text": "The Rose Seed Replica publisher reports a €8,600 grant and side-job income funding development and emphasizes that launch receipts did not recover the publisher's livelihood and operating costs.",
+      "source_ids": [
+        "rose-seed-replica-launch-cost-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Grant funding and non-game wage income are not itch.io game sales or game-derived net profit."
+    },
+    {
+      "id": "aracore-costed-release",
+      "text": "An AraCore Astromining Ventures developer postmortem reports approximately £190 first-five-day sales, £185 in enumerated company, platform, sound and graphics cash costs, and around £5 accounting surplus.",
+      "source_ids": [
+        "aracore-game-first-five-days-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Approximate multi-store release figures; not an itch.io-specific receipt and not full economic profit."
+    },
+    {
+      "id": "aracore-creator-hours",
+      "text": "The AraCore developer reported around 1,500 development hours, omitted from the approximately £5 cash surplus accounting.",
+      "source_ids": [
+        "aracore-game-first-five-days-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Self-reported hours and simple expense categories; value of labor, taxes, transaction costs and total later revenues are not established."
+    },
+    {
+      "id": "aracore-genre-confounding",
+      "text": "AraCore's developer attributes weak launch demand in part to niche 2D sci-fi positioning, building a custom engine, extensive asset production, mismatched marketing expectations and insufficient playtesting.",
+      "source_ids": [
+        "aracore-game-first-five-days-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Author interpretation of a single game, not causal proof that engines, genres or marketing tactics determine profitability."
+    },
+    {
+      "id": "postmortem-income-heterogeneity",
+      "text": "These two game accounts demonstrate that a near-zero launch cash surplus and a sizable multi-year unrecovered development budget are economically different cases; neither provides an eligible-market denominator.",
+      "source_ids": [
+        "rose-seed-replica-launch-cost-postmortem",
+        "aracore-game-first-five-days-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Do not pool GBP with EUR, durations, free/donation games, or matched/mismatched game store outcomes."
     }
   ],
   "observations": [

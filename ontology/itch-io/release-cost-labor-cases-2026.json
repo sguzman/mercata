@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "developer_disclosed_release_cost_and_labor_cases",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "rose-seed-replica-launch-cost-postmortem",
+    "aracore-game-first-five-days-postmortem"
+  ],
+  "cases": [
+    {
+      "id": "rose_seed_replica",
+      "title": "Rose Seed Replica",
+      "game_type": "2D point and click narrative adventure",
+      "source_ids": [
+        "rose-seed-replica-launch-cost-postmortem"
+      ],
+      "report_period": "first_launch_week_with_historical_development_outlays",
+      "report_year": 2020,
+      "store_specific": {
+        "itch_io_first_week_paid_units": 13,
+        "itch_io_first_week_tips_eur": 27,
+        "itch_io_first_week_total_receipts_eur": null,
+        "itch_io_first_week_creator_profit_eur": null
+      },
+      "all_store_launch": {
+        "all_store_first_week_units_reported": 130,
+        "all_store_first_week_refunds_reported": 3,
+        "all_store_first_week_sales_receipts_eur_approx": 1000,
+        "number_of_stores_exact": null
+      },
+      "cost_reporting": {
+        "currency": "EUR",
+        "author_estimated_total_living_and_operating_outlays_eur_greater_than": 26000,
+        "all_outlays_are_project_cash_expenses": false,
+        "author_two_year_conservative_cost_allocation_eur": 17000,
+        "author_two_year_grant_adjusted_cost_allocation_eur": 8700,
+        "project_labor_hours": null,
+        "startup_grant_eur": 8600,
+        "non_game_sidejob_earnings_included_as_game_sales": false
+      },
+      "author_scenarios_not_actuals": {
+        "example_sale_proceeds_eur": 1200,
+        "example_conservative_shortfall_eur": -15800,
+        "example_grant_adjusted_shortfall_eur": -7500,
+        "scenario_values_not_audited": true
+      },
+      "genre_market_population_representative": false
+    },
+    {
+      "id": "aracore_astromining_ventures",
+      "title": "AraCore Astromining Ventures",
+      "game_type": "2D sci-fi exploration and story-focused game",
+      "source_ids": [
+        "aracore-game-first-five-days-postmortem"
+      ],
+      "report_period": "first_five_days_and_development_to_launch",
+      "report_year": 2025,
+      "store_specific": {
+        "itch_io_paid_units": null,
+        "itch_io_receipts_gbp": null,
+        "itch_io_profit_gbp": null
+      },
+      "all_store_launch": {
+        "all_store_first_five_days_sales_gbp_approx": 190,
+        "author_accounting_profit_gbp_approx": 5
+      },
+      "cost_reporting": {
+        "currency": "GBP",
+        "incorporation_fee_gbp": 50,
+        "steam_registration_fee_gbp_approx": 80,
+        "music_gbp_approx": 15,
+        "sound_effects_gbp_approx": 20,
+        "graphics_gbp_approx": 20,
+        "total_listed_cash_costs_gbp_approx": 185,
+        "development_hours_approx": 1500,
+        "creator_labor_costs_in_accounting_profit": false,
+        "taxes_and_platform_fees_fully_reconciled": null
+      },
+      "economic_interpretation": {
+        "cash_accounting_profit_not_full_economic_profit": true,
+        "implicit_development_hourly_income_gbp_if_simple_5_divided_1500": 0.0033333333333333335,
+        "actual_marginal_hourly_pay_received": null,
+        "author_marketing_failure_attributions_not_causal": true
+      },
+      "genre_market_population_representative": false
+    }
+  ],
+  "comparability": {
+    "report_windows_equal": false,
+    "currencies_equal": false,
+    "positive_price_itch_sale_counts_known_for_both": false,
+    "development_labor_known_for_both": false,
+    "merchant_net_proceeds_audited_for_both": false,
+    "project_expenses_vs_living_costs_equivalent": false
+  },
+  "population_outcomes": {
+    "first_launch_mean_net_profit": null,
+    "first_launch_median_net_profit": null,
+    "itch_only_units_for_aracore": null,
+    "typical_cost_per_development_hour": null,
+    "first_game_profitability_probability": null
+  },
+  "limitations": [
+    "Developers independently volunteered their own historical accounts, without representative selection or external audit.",
+    "Rose's all-store totals cannot be assigned wholly to itch.io; its EUR costs include living expenses and grant-sensitive alternative allocations.",
+    "AraCore's GBP reported proceeds are multi-store and its £5 accounting result excludes approximately 1,500 hours of labor.",
+    "A five-day sales observation and first-week game sales are not comparable to a lifetime first-release cohort.",
+    "Gross buyer spend, after-fee seller receipts, grant funds, living costs and economic profit are distinct.",
+    "No individual seller account, private reports, or buyer information were accessed."
+  ]
+}

@@ -293,3 +293,8 @@ Seven falsifiable offer, demo, game jam, promotion and store comparisons are spe
 ## Discoverability policy and creator community
 
 [Official policy crosswalk](../ontology/itch-io/discovery-quality-2026.md) now covers accurate tags/platform support, generative AI disclosure, limited playtests, real followers vs buyers and sale/jam promotion restrictions. The mechanisms do not measure conversion or profit. Current study score: 55%.
+
+
+## First-game commercial release expense cases
+
+The [Rose Seed Replica and AraCore postmortem audit](../ontology/itch-io/release-cost-labor-cases-2026.md) separates itch-only game units, all-store receipts, grant/living-cost allocation, direct cash expenses, and unpaid developer hours. These are nonrepresentative voluntary reports and never a measure of median seller earnings. Task score: 76%.

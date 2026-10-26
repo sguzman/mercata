@@ -781,7 +781,7 @@
           "title": "Assess differentiating features",
           "acceptance": "Identify observable features without equating ratings with quality.",
           "weight": 1,
-          "progress": 76,
+          "progress": 77,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/traffic-benchmark-2025.json",
@@ -796,7 +796,10 @@
             "tests/itch-io-open-source-engineering.test.mjs",
             "ontology/itch-io/paid-2d-popular-prices-2026.json",
             "ontology/itch-io/paid-2d-popular-prices-2026.md",
-            "tests/itch-io-price-sample.test.mjs"
+            "tests/itch-io-price-sample.test.mjs",
+            "ontology/itch-io/release-cost-labor-cases-2026.json",
+            "ontology/itch-io/release-cost-labor-cases-2026.md",
+            "tests/itch-io-release-cost-labor.test.mjs"
           ]
         },
         {
@@ -975,7 +978,10 @@
             "tests/itch-io-income-histogram.test.mjs",
             "ontology/itch-io/low-sales-launch-cases-2021-2025.json",
             "ontology/itch-io/low-sales-launch-cases-2021-2025.md",
-            "tests/itch-io-low-sales-launch.test.mjs"
+            "tests/itch-io-low-sales-launch.test.mjs",
+            "ontology/itch-io/release-cost-labor-cases-2026.json",
+            "ontology/itch-io/release-cost-labor-cases-2026.md",
+            "tests/itch-io-release-cost-labor.test.mjs"
           ]
         },
         {
@@ -1056,7 +1062,10 @@
             "tests/itch-io-crumbling-launch.test.mjs",
             "ontology/itch-io/api-purchase-privacy-2026.json",
             "ontology/itch-io/api-purchase-privacy-2026.md",
-            "tests/itch-io-api-purchase-privacy.test.mjs"
+            "tests/itch-io-api-purchase-privacy.test.mjs",
+            "ontology/itch-io/release-cost-labor-cases-2026.json",
+            "ontology/itch-io/release-cost-labor-cases-2026.md",
+            "tests/itch-io-release-cost-labor.test.mjs"
           ]
         },
         {
@@ -1065,7 +1074,7 @@
           "title": "Estimate effort-adjusted earnings",
           "acceptance": "Count production, marketing, administration and support time.",
           "weight": 1,
-          "progress": 72,
+          "progress": 76,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/developer-income-cases-2026.json",
@@ -1084,7 +1093,10 @@
             "tests/itch-io-low-sales-launch.test.mjs",
             "ontology/itch-io/year-of-springs-2026.json",
             "ontology/itch-io/year-of-springs-2026.md",
-            "tests/itch-io-year-of-springs.test.mjs"
+            "tests/itch-io-year-of-springs.test.mjs",
+            "ontology/itch-io/release-cost-labor-cases-2026.json",
+            "ontology/itch-io/release-cost-labor-cases-2026.md",
+            "tests/itch-io-release-cost-labor.test.mjs"
           ]
         },
         {
@@ -1125,7 +1137,10 @@
             "ontology/itch-io/collected-payout-costs-2026.json",
             "ontology/itch-io/collected-payout-costs-2026.md",
             "site/itch-collected-payout-check.mjs",
-            "tests/itch-collected-payout-check.test.mjs"
+            "tests/itch-collected-payout-check.test.mjs",
+            "ontology/itch-io/release-cost-labor-cases-2026.json",
+            "ontology/itch-io/release-cost-labor-cases-2026.md",
+            "tests/itch-io-release-cost-labor.test.mjs"
           ]
         }
       ]
@@ -1655,7 +1670,7 @@
           "title": "Model bounded revenue scenarios",
           "acceptance": "State assumptions; never invent likelihoods or expected earnings.",
           "weight": 1,
-          "progress": 83,
+          "progress": 84,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/break-even-scenarios-2026.md",
@@ -1668,7 +1683,10 @@
             "ontology/itch-io/crumbling-world-launch-2020.json",
             "ontology/itch-io/crumbling-world-launch-2020.md",
             "specimens/itch-io.json",
-            "tests/itch-io-crumbling-launch.test.mjs"
+            "tests/itch-io-crumbling-launch.test.mjs",
+            "ontology/itch-io/release-cost-labor-cases-2026.json",
+            "ontology/itch-io/release-cost-labor-cases-2026.md",
+            "tests/itch-io-release-cost-labor.test.mjs"
           ]
         },
         {
@@ -1687,7 +1705,11 @@
             "ontology/itch-io/collected-payout-costs-2026.json",
             "ontology/itch-io/collected-payout-costs-2026.md",
             "site/itch-collected-payout-check.mjs",
-            "tests/itch-collected-payout-check.test.mjs"
+            "tests/itch-collected-payout-check.test.mjs",
+            "ontology/itch-io/release-cost-labor-cases-2026.json",
+            "ontology/itch-io/release-cost-labor-cases-2026.md",
+            "specimens/itch-io.json",
+            "tests/itch-io-release-cost-labor.test.mjs"
           ]
         },
         {
@@ -1802,7 +1824,7 @@
           "acceptance": "Use independent sources or document why cross-check unavailable.",
           "weight": 1,
           "progress": 100,
-          "status": "complete",
+          "status": "in_progress",
           "evidence": [
             "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
             "ontology/itch-io/web-developer-survey-crosswalk-2026.md",
@@ -1837,7 +1859,10 @@
             "tests/itch-io-semrush-traffic.test.mjs",
             "ontology/itch-io/feed-volume-featured-2026.md",
             "ontology/itch-io/feed-volume-featured-2026.json",
-            "tests/itch-io-featured-feed.test.mjs"
+            "tests/itch-io-featured-feed.test.mjs",
+            "ontology/itch-io/release-cost-labor-cases-2026.json",
+            "ontology/itch-io/release-cost-labor-cases-2026.md",
+            "tests/itch-io-release-cost-labor.test.mjs"
           ]
         },
         {
@@ -2086,7 +2111,7 @@
           "title": "Store rights and distribution exclusivity",
           "acceptance": "Collect dated public evidence and document implications for store rights and distribution exclusivity.",
           "weight": 1,
-          "progress": 55,
+          "progress": 67,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/distribution-build-2026.json",
@@ -2096,7 +2121,10 @@
             "specimens/itch-io.json",
             "ontology/itch-io/open-source-engineering-2026.json",
             "ontology/itch-io/open-source-engineering-2026.md",
-            "tests/itch-io-open-source-engineering.test.mjs"
+            "tests/itch-io-open-source-engineering.test.mjs",
+            "ontology/itch-io/release-cost-labor-cases-2026.json",
+            "ontology/itch-io/release-cost-labor-cases-2026.md",
+            "tests/itch-io-release-cost-labor.test.mjs"
           ]
         }
       ]
