@@ -428,7 +428,7 @@ try{
     assert((await promote.textContent()).includes('generated directly by ad campaigns do not meet YPP'));
     assert((await promote.textContent()).includes('net creator profit remain unknown'));
     const posting=page.locator('.post-membership-retention');
-    assert.equal(await posting.locator('.post-membership-surface').count(),3,'Missing distinct Posts / Communities / members-only distinctions');
+    assert.equal(await posting.locator('.post-membership-surfaces > .post-membership-surface').count(),3,'Missing distinct Posts / Communities / members-only distinctions');
     assert.equal(await posting.locator('.post-membership-metric').count(),7,'Missing membership event and stock denominators');
     await posting.locator('summary').click();
     assert((await posting.textContent()).includes('not a distinct buyer'));
