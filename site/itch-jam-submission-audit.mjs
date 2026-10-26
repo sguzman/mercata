@@ -31,7 +31,7 @@ export function assessItchJamSubmission(jam,entry){
  if(jam.ai_rule==='disclosed'&&entry.ai_use_disclosed!==true)failures.push('AI disclosure missing');
  if(jam.ai_rule==='no_ai'&&entry.ai_use_disclosed_no_ai!==true)failures.push('No-AI statement missing');
  const provided=new Set(entry.platforms);
- if(jam.required_platforms.includes('browser')&&entry.playable_html5!==true)
+ if(jam.required_platforms.includes('browser')&&(jam.platform_rule==='all'||!jam.required_platforms.some(x=>x!=='browser'&&entry.platforms.includes(x)))&&entry.playable_html5!==true)
   failures.push('A browser platform needs a playable HTML5 game');
  if(jam.required_platforms.length) {
   const matched=jam.required_platforms.filter(x=>provided.has(x));
