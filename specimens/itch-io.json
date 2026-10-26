@@ -262,6 +262,39 @@
       "evidence_class": "official",
       "license": "Official documentation linked, independently summarized.",
       "notes": "Feature and contract documentation, not observed revenue or profits."
+    },
+    {
+      "id": "itch-access-control",
+      "url": "https://itch.io/docs/creators/access-control",
+      "title": "Controlling who can access your project",
+      "publisher": "itch.io Creator Documentation",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Reference-only external source; original descriptions paraphrased.",
+      "notes": "Policy/interface documentation. No publisher account or purchase data accessed."
+    },
+    {
+      "id": "itch-download-keys",
+      "url": "https://itch.io/docs/creators/download-keys",
+      "title": "Download keys",
+      "publisher": "itch.io Creator Documentation",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Reference-only external source; original descriptions paraphrased.",
+      "notes": "Policy/interface documentation. No publisher account or purchase data accessed."
+    },
+    {
+      "id": "itch-design",
+      "url": "https://itch.io/docs/creators/design",
+      "title": "Designing your page",
+      "publisher": "itch.io Creator Documentation",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Reference-only external source; original descriptions paraphrased.",
+      "notes": "Policy/interface documentation. No publisher account or purchase data accessed."
     }
   ],
   "claims": [
@@ -754,6 +787,129 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Jam engagement is not a sale or observed conversion."
+    },
+    {
+      "id": "html5-donation-only",
+      "text": "The HTML5 embedded-game listing type can accept donations but does not natively require payment to play; a downloadable listing is a distinct way to sell access.",
+      "source_ids": [
+        "itch-html5"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Does not show which model earns more money or whether a user will donate."
+    },
+    {
+      "id": "html5-entry",
+      "text": "A browser-playable ZIP needs an index.html entry point at its root and relative paths for supporting assets; a self-contained HTML file is an alternative upload.",
+      "source_ids": [
+        "itch-html5"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Static packaging instructions, not verification that a given game runs correctly."
+    },
+    {
+      "id": "html5-file-limits",
+      "text": "Published HTML5 ZIP limits include at most 1,000 extracted files, at most 500MB extracted, at most 200MB per file and at most 240 characters in a file path.",
+      "source_ids": [
+        "itch-html5"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Documented default upload limits can change or be adjusted on request."
+    },
+    {
+      "id": "html5-embed-mobile",
+      "text": "Browser games can embed in-page or launch fullscreen; mobile pages use fullscreen launch, and Mobile Friendly should be enabled only after real mobile testing.",
+      "source_ids": [
+        "itch-html5"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Not evidence of mobile platform reach, performance or buyer behavior."
+    },
+    {
+      "id": "release-page-images",
+      "text": "The first-page guide recommends a 315:250 cover ratio and three to five screenshots for storefront presentation.",
+      "source_ids": [
+        "itch-started",
+        "itch-design"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Editorial guidance, not a causal estimate of clickthrough or conversion."
+    },
+    {
+      "id": "build-demo-separation",
+      "text": "A downloadable game listing may include a separately marked free demo alongside a paid full build and optional higher-tier files.",
+      "source_ids": [
+        "itch-started",
+        "itch-pricing"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Demo downloads are not paid units and do not establish a free-to-paid conversion rate."
+    },
+    {
+      "id": "access-draft-restricted-public",
+      "text": "Game pages have Draft, Restricted and Public visibility modes, distinct from download-key access to individual files.",
+      "source_ids": [
+        "itch-access-control"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "A public URL can be unindexed, and visibility does not determine paid entitlement."
+    },
+    {
+      "id": "access-future-release",
+      "text": "A future release date can prohibit purchases and downloads until the release date, while a public page can separately disable new downloads or purchases.",
+      "source_ids": [
+        "itch-access-control"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "These are configured restrictions, not verified market performance or launch-day sale volumes."
+    },
+    {
+      "id": "download-key-ownership",
+      "text": "Free downloads do not create ownership keys, while paid purchases or manually generated keys can grant persistent product-file access.",
+      "source_ids": [
+        "itch-download-keys"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "File access is not game IP ownership, a distinct paid unit, or an identified human purchaser."
+    },
+    {
+      "id": "external-key-availability",
+      "text": "The platform permits external keys as a supplement but discourages pages composed principally of off-site redemption links, potentially affecting indexing.",
+      "source_ids": [
+        "itch-download-keys",
+        "itch-quality"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "A key distributed with a sale does not prove an external-store purchase."
+    },
+    {
+      "id": "owner-updates",
+      "text": "Owner-uploaded file changes generally appear on buyer download pages, while individually priced file thresholds may restrict access.",
+      "source_ids": [
+        "itch-download-keys"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Does not establish how often customers update or whether updates induce new purchases."
+    },
+    {
+      "id": "seller-buyer-communication",
+      "text": "The operator allows buyer emails after at least one sale and at most once daily, with unsubscribe mechanisms.",
+      "source_ids": [
+        "itch-interact"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Communication capability is not evidence of repeated orders, open rates or personal email portability."
     }
   ],
   "observations": [

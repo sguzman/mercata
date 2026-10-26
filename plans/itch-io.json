@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 33,
+  "progress_percent": 35,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -113,7 +113,7 @@
         "itch-io/access/create-zero-cash-entry-scenario"
       ],
       "phase": 1,
-      "progress_percent": 46
+      "progress_percent": 47
     },
     {
       "id": "economics",
@@ -208,7 +208,7 @@
         "itch-io/discovery/build-impression-to-sale-funnel"
       ],
       "phase": 2,
-      "progress_percent": 40
+      "progress_percent": 43
     },
     {
       "id": "competition",
@@ -299,7 +299,7 @@
         "itch-io/rights/check-resale-and-transfer-conditions"
       ],
       "phase": 3,
-      "progress_percent": 32
+      "progress_percent": 37
     },
     {
       "id": "sales",
@@ -328,7 +328,7 @@
         "itch-io/sales/separate-buyer-interest-from-purchase"
       ],
       "phase": 3,
-      "progress_percent": 45
+      "progress_percent": 51
     },
     {
       "id": "risk",
@@ -447,7 +447,7 @@
         "itch-io/special-games/plan-release-maintenance-workload"
       ],
       "phase": 2,
-      "progress_percent": 28
+      "progress_percent": 41
     }
   ],
   "deliverables": [
@@ -729,12 +729,16 @@
       "objective": "Investigate verify review, discoverability and listing eligibility.",
       "acceptance": "Provide dated source-linked evidence to verify review, discoverability and listing eligibility; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 90,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1405,12 +1409,16 @@
       "objective": "Investigate design measured exposure-to-click comparisons.",
       "acceptance": "Provide dated source-linked evidence to design measured exposure-to-click comparisons; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 54,
+      "percent": 68,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1540,9 +1548,15 @@
       "emoji": "🧭",
       "objective": "Investigate specify aligned denominator, attribution and conversion windows.",
       "acceptance": "Provide dated source-linked evidence to specify aligned denominator, attribution and conversion windows; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 35,
+      "evidence": [
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 2
@@ -2020,9 +2034,15 @@
       "emoji": "⚖️",
       "objective": "Investigate investigate permission and any exclusivity constraints.",
       "acceptance": "Provide dated source-linked evidence to investigate permission and any exclusivity constraints; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 35,
+      "evidence": [
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 3
@@ -2122,12 +2142,16 @@
       "objective": "Investigate distinguish downloads, licenses and access following delisting.",
       "acceptance": "Provide dated source-linked evidence to distinguish downloads, licenses and access following delisting; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 73,
+      "percent": 86,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2201,9 +2225,15 @@
       "emoji": "🛒",
       "objective": "Investigate measure playable launches, page visits and paid orders.",
       "acceptance": "Provide dated source-linked evidence to measure playable launches, page visits and paid orders; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 45,
+      "evidence": [
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 3
@@ -2291,12 +2321,16 @@
       "objective": "Investigate compare description, screenshot, trailer, tags and accessibility.",
       "acceptance": "Provide dated source-linked evidence to compare description, screenshot, trailer, tags and accessibility; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 46,
+      "percent": 76,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2328,12 +2362,16 @@
       "objective": "Investigate check release updates, devlogs, notifications and external follow-up.",
       "acceptance": "Provide dated source-linked evidence to check release updates, devlogs, notifications and external follow-up; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 82,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2910,12 +2948,16 @@
       "objective": "Investigate check HTML5, desktop archives, executable packages and delivery types.",
       "acceptance": "Provide dated source-linked evidence to check HTML5, desktop archives, executable packages and delivery types; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 87,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2929,12 +2971,16 @@
       "objective": "Investigate check canvas/audio, load size, storage, controller and keyboard interactions.",
       "acceptance": "Provide dated source-linked evidence to check canvas/audio, load size, storage, controller and keyboard interactions; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 44,
+      "percent": 75,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2976,12 +3022,16 @@
       "objective": "Investigate track versions, entitlement and save compatibility.",
       "acceptance": "Provide dated source-linked evidence to track versions, entitlement and save compatibility; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 83,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2994,9 +3044,15 @@
       "emoji": "🎮",
       "objective": "Investigate study release updates, version histories and rollback ability.",
       "acceptance": "Provide dated source-linked evidence to study release updates, version histories and rollback ability; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 65,
+      "evidence": [
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -3109,9 +3165,15 @@
       "emoji": "🎮",
       "objective": "Investigate measure support and QA costs by device.",
       "acceptance": "Provide dated source-linked evidence to measure support and QA costs by device; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 43,
+      "evidence": [
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -3156,9 +3218,15 @@
       "emoji": "🎮",
       "objective": "Investigate track bug reports, compatibility regressions and support hours.",
       "acceptance": "Provide dated source-linked evidence to track bug reports, compatibility regressions and support hours; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 40,
+      "evidence": [
+        "ontology/itch-io/release-format-access-2026.md",
+        "ontology/itch-io/release-format-access-2026.json",
+        "site/itch-html5-audit.mjs",
+        "tests/itch-html5-audit.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2

@@ -40,3 +40,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io offers and co-op bundles (2026-10-26):** Registered official single-seller promotion, cooperative bundle weighting/payout requirements, deferred key claims, and game-jam rating boundaries. No sales or uplift inferred. **31% → 33%**, Δ **+2 pp**. [Research report](../ontology/itch-io/bundle-sale-jam-2026.md).
+
+
+**itch.io game release/access study (2026-10-26):** official HTML5 donations-versus-paid-download distinction, validated upload constraints, entitlement/access and launch presentation guides; 33% → 35% (Δ +2 pp). [Detailed study](../ontology/itch-io/release-format-access-2026.md). Actual game sales and conversion remain unknown.

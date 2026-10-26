@@ -258,3 +258,8 @@ Three public developer disclosures were entered in a [bounded case register](../
 ## Payment-provider and listing-policy exposure
 
 [The dated policy-risk audit](../ontology/itch-io/policy-risk-2025-2026.md) keeps historical 2025 incidents separate from verified current rules and rejects unsupported guesses about seller losses or 2026 paid-content indexing. Current study score: 31%.
+
+
+## Browser play versus paid downloads
+
+The [official-source release-format study](../ontology/itch-io/release-format-access-2026.md) distinguishes embedded HTML5 donations from premium downloadable selling and documents the game build/entitlement constraints. Score 35%; no real game was published or QA-tested.

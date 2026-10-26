@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "commercial_game_format_and_access_boundary",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-html5",
+    "itch-started",
+    "itch-access-control",
+    "itch-download-keys",
+    "itch-design",
+    "itch-interact",
+    "itch-pricing"
+  ],
+  "formats": [
+    {
+      "id": "html5_embedded",
+      "play_in_browser": true,
+      "buy_to_play_native": false,
+      "monetization": "voluntary_donations",
+      "upload": [
+        "single_html",
+        "zip_root_index_html"
+      ],
+      "source_ids": [
+        "itch-html5"
+      ],
+      "observed_conversion": null
+    },
+    {
+      "id": "paid_downloadable",
+      "play_in_browser": false,
+      "buy_to_play_native": true,
+      "free_demo_possible": true,
+      "source_ids": [
+        "itch-started",
+        "itch-pricing"
+      ],
+      "observed_conversion": null
+    }
+  ],
+  "html5_zip_defaults": {
+    "root_entry": "index.html",
+    "maximum_file_count": 1000,
+    "maximum_total_extracted_bytes": 500000000,
+    "maximum_individual_file_bytes": 200000000,
+    "maximum_path_characters": 240,
+    "file_paths_case_sensitive": true,
+    "assets_relative_paths_required": true,
+    "source_ids": [
+      "itch-html5"
+    ],
+    "limits_can_be_reviewed_on_request": true
+  },
+  "visibility_modes": [
+    "draft",
+    "restricted",
+    "public"
+  ],
+  "buyer_event_units": [
+    "page_view",
+    "browser_game_launch",
+    "free_demo_download",
+    "voluntary_donation",
+    "paid_download_purchase",
+    "download_key_claim"
+  ],
+  "buyer_access": {
+    "free_download_creates_ownership_key": false,
+    "payment_creates_download_key": true,
+    "individually_priced_files_have_separate_thresholds": true
+  },
+  "publishing_quality": {
+    "cover_aspect_ratio_width": 315,
+    "cover_aspect_ratio_height": 250,
+    "requested_screenshot_range": [
+      3,
+      5
+    ],
+    "recommended_not_mandatory": true
+  },
+  "unmeasured": {
+    "html5_donation_conversion": null,
+    "paid_download_conversion": null,
+    "mobile_play_completion": null,
+    "typical_game_sale_price": null,
+    "accessibility_pass_rate": null,
+    "refund_adjusted_revenue": null
+  },
+  "limitations": [
+    "Static upload constraints do not replace executable release QA.",
+    "Suggested images and tags do not imply a causal discovery or profit improvement.",
+    "One buyer may have multiple download and play events.",
+    "No commercial experiment, account access, purchase or release was performed."
+  ]
+}
