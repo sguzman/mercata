@@ -1461,6 +1461,17 @@
       "evidence_class": "developer_public_comment_first_party",
       "license": "Brief quantitative first-person metrics and linked URL only.",
       "notes": "Around 2% initial listing CTR and 0.4% late front-page CTR, unequal windows and impression mix; not a controlled A/B test."
+    },
+    {
+      "id": "first-game-mispriced-tiers-zero-sales-2026",
+      "url": "https://itch.io/blog/1659443/wow-i-am-sorry",
+      "title": "Wow, I am sorry!",
+      "publisher": "27K Interactive (public game creator)",
+      "published_at": "2026-09-10",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_first_party_developer_pricing_incident",
+      "license": "Short dated price/sale facts with attributed link and independently authored analytical notes.",
+      "notes": "One creator's first-game zero sale snapshot and self-described donation/paid-tier misconfiguration, with no audited checkout history or causal evidence."
     }
   ],
   "claims": [
@@ -5311,6 +5322,36 @@
       "confidence": "medium",
       "observed_at": "2026-10-26",
       "limitations": "Self-reported nonrandom sequential traffic with changed exposure mix; no customer conversion or sales effect."
+    },
+    {
+      "id": "first-game-sep2026-zero-after-pricing-error",
+      "text": "In a September 10, 2026 self-disclosure, a first-time itch.io game publisher reported zero game sales and a pricing configuration mistake that made their offering more expensive than intended.",
+      "source_ids": [
+        "first-game-mispriced-tiers-zero-sales-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "One voluntary dated zero-sale observation. No proof the mispricing caused zero sales, no purchase-attempt count or following-month sales."
+    },
+    {
+      "id": "first-game-intended-price-max-2026",
+      "text": "The same developer said a multiplayer offering should not cost more than USD 9.99 and described offering a 50% discount during the correction.",
+      "source_ids": [
+        "first-game-mispriced-tiers-zero-sales-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Intended price rather than independently verified charged price; no observed buyer conversion."
+    },
+    {
+      "id": "itch-pricing-modes-distinct-from-bonus-access",
+      "text": "Official itch.io pricing guidance distinguishes optional donations, positive paid minima, disabled payments and independently priced supplemental files with conditional access thresholds.",
+      "source_ids": [
+        "itch-pricing"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Not proof of the exact configuration error, checkout amounts or individual merchant results in the reported case."
     }
   ],
   "observations": [

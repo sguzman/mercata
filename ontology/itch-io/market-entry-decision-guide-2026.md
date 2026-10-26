@@ -22,6 +22,8 @@ The official [payment guide](https://itch.io/docs/creators/payments) illustrates
 
 The developer-publicized [Mixolumia puzzle-game postmortem](commercial-postmortems-2026.md) reported 1,776 actual itch.io paid units; by contrast, [Rose Seed Replica and AraCore release accounts](release-cost-labor-cases-2026.md) show that poor first-week revenue or apparent small cash profit can coexist with large development and living costs or roughly 1,500 uncompensated hours. These selected reports must not be averaged into a market mean. Use the [explicit break-even model](break-even-scenarios-2026.md) with actual prices, cash spending and valued labor to determine a needed order count; then treat the probability of obtaining that order count as **unknown** until measured.
 
+[A dated first-game pricing case](first-game-pricing-misconfiguration-2026.md) shows why sellers must inspect the buyer-facing project minimum, optional donation and individual-file thresholds instead of assuming checkout options behave as independent tiers.
+
 ## What a first release would have to verify
 
 First, verify seller and payout eligibility, account and tax compliance, and who is merchant of record. Separately verify rights in the game's assets and whether the actual executable works on every claimed platform; [release-format rules](release-format-access-2026.md) and [distribution constraints](distribution-build-2026.md) describe necessary checks, not proof that a specific game passed them. Then build a truthful page with relevant genre labels, screenshots, and a realistic plan for attention outside the store.

@@ -1,6 +1,6 @@
 # itch.io commercial-game research — evidence synthesis and open gaps
 
-**Snapshot: October 26, 2026.** The specimen has 131 source records and 377 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
+**Snapshot: October 26, 2026.** The specimen has 132 source records and 380 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
 
 The market has **no mandatory fee to list a game**, but publication, indexing and acquiring purchasers are separate. Payments can use configurable platform share and processor charges, and the illustrative $10 buyer payment becomes $8.41 **before** refund, tax, labor or other obligations. The public 1.78 million all-game directory, 49,588 paid-game directory and 12,691 paid-2D filter are counts of **listings**, not distinct active paid publishers or buyers.
 
@@ -21,6 +21,8 @@ Twelve source-linked genre-classified case studies have now been cross-checked f
 Refund and dispute sensitivity is separately modeled using explicit per-order reversals and merchant fee inputs; no market chargeback incidence is assumed. [Refund/chargeback cost audit](refund-chargeback-unit-cost-2026.md).
 
 An April 2026 publisher case records sustained featured discovery of a free game alpha and roughly 2,500 Steam wishlist additions, but no paid itch sales or attributable buyer conversion. [Free-alpha discovery limits](free-alpha-frontpage-tail-2026.md).
+
+A September 2026 first-game creator reported zero sales alongside a self-described optional-donation/paid-tier price configuration mistake, with no evidence the error caused the outcome. [First-game price incident](first-game-pricing-misconfiguration-2026.md).
 
 ## Missing evidence required for the goal
 
