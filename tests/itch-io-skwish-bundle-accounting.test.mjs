@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const json=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Skwish source separates first game standalone, bundle and unknowable profit',()=>{
+ const x=json('ontology/itch-io/skwish-direct-versus-bundle-2023.json');
+ const d=json('specimens/itch-io.json');
+ assert(x.source_ids.every(id=>d.evidence.some(e=>e.id===id)));
+ assert.equal(x.direct_game.paid_copies_reported,591);
+ assert.equal(x.bundle.bundle_units_reported,852);
+ assert.equal(x.direct_game.approx_gross_receipts_usd,2300);
+ assert.equal(x.bundle.approx_developer_allocated_receipts_usd,2000);
+ assert.equal(x.demo_download_counter,188);
+ assert.equal(x.creator_doubted_demo_download_counter,true);
+ assert.equal(x.demo_to_paid_customer_conversion,null);
+ assert.equal(x.owner_hourly_profit_usd,null);
+ assert.equal(x.owner_net_proceeds_usd,null);
+ assert.equal(x.genre_paid_game_mean_profit,null);
+ assert.equal(x.representative_first_game_cohort,false);
+});
