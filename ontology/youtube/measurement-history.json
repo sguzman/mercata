@@ -5,6 +5,23 @@
   "purpose": "Time-aware measurement definitions and breaks for comparison across sources",
   "events": [
     {
+      "id": "shorts-view-playback-start-2025",
+      "effective_date": "2025-03-31",
+      "metric": "Shorts public views",
+      "scope": "Shorts starts and replays, replacing watch-threshold rule",
+      "change": "Shorts public views count each playback start or replay with no minimum watch-time requirement; prior qualifying view counting becomes engaged views.",
+      "comparability": "February 2025 and February 2026 Shorts public view numbers have different counting rules, so no raw-growth proxy for unchanged attention without same-definition normalization.",
+      "source_urls": [
+        "https://support.google.com/youtube/answer/10059070?hl=en"
+      ],
+      "source_ids": [
+        "yt-shorts-march-2025-view-definition"
+      ],
+      "status": "living_official_published_definition",
+      "income_effect_estimate": null,
+      "raw_view_growth_adjustment": null
+    },
+    {
       "id": "video-count-playback-start-2026",
       "effective_date": "2026-08-24",
       "metric": "videos.statistics.viewCount",
