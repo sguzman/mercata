@@ -5028,7 +5028,7 @@ function renderMultilingualDistribution(data,dossier) {
     list.append(li);
   }
   examples.append(list);details.append(examples);
-  details.append(make('p','measure-limit','The over-25% result refers to selected creators' multi-language-audio watch time. The December 2025 six-million-plus average describes daily auto-dubbed watchers meeting a 10-minute threshold, not additional unique viewers or earnings. Typical dubbing costs, causal traffic lift and profits remain unknown.'));
+  details.append(make('p','measure-limit','The over-25% result refers to multi-language-audio watch time among selected creators. The December 2025 six-million-plus average describes daily auto-dubbed watchers meeting a 10-minute threshold, not additional unique viewers or earnings. Typical dubbing costs, causal traffic lift and profits remain unknown.'));
   const link=make('a','inline-link','Review language-pair definitions and study limitations ↗');
   link.href='./ontology/youtube/multilingual-distribution.md';link.rel='noopener noreferrer';link.target='_blank';
   details.append(link);
