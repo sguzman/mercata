@@ -1,6 +1,6 @@
 # itch.io commercial-game research — evidence synthesis and open gaps
 
-**Snapshot: October 26, 2026.** The specimen has 132 source records and 380 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
+**Snapshot: October 26, 2026.** The specimen has 139 source records and 391 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
 
 The market has **no mandatory fee to list a game**, but publication, indexing and acquiring purchasers are separate. Payments can use configurable platform share and processor charges, and the illustrative $10 buyer payment becomes $8.41 **before** refund, tax, labor or other obligations. The public 1.78 million all-game directory, 49,588 paid-game directory and 12,691 paid-2D filter are counts of **listings**, not distinct active paid publishers or buyers.
 
@@ -29,6 +29,8 @@ The [documented buyer checkout route/region crosswalk](buyer-checkout-route-elig
 The fixed multi-store legal/contract boundary task is now source-verified: itch.io licenses publisher content non-exclusively and lets developers opt into external-key distribution under separate restrictions, without certifying the publisher's outside licenses or actual offline operation. [Rights and DRM distinction](multistore-rights-external-keys-2026.md).
 
 The [game source/asset licensing crosswalk](game-code-art-commercial-licenses-2026.md) distinguishes MIT/Apache/GPL software distribution from Creative Commons media permissions and itch.io's separate publisher license, with no game-specific compliance or profit falsely asserted.
+
+The [first-month developer cash observations](first-month-small-game-cashflow-2025-2026.md) add a 2025 $10 reported shooter outcome with no defined gross/net basis and a 2026 first-game donation with a reconciled $49.99 gross-to-$29.87 payout-to-$14.87 remainder sequence. The latter is not a mandatory-price game sale, and neither establishes owner profit after labor or representative income.
 
 ## Missing evidence required for the goal
 
