@@ -100,3 +100,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io volunteered game analytics (2026-10-26):** overlapping 145- and 690-title September creator-contributed receipts samples, clear selection bias and arithmetic median/45%-zero ambiguity. Excluded from market-wide estimates. Score 64% → 66% (Δ +2 pp; mean 65.78%). [Evidence](../ontology/itch-io/community-analytics-sample-2026.md).
+
+
+**itch.io modeled whole-site reach (2026-10-26):** Sep 2026 Semrush estimated 162.37 million domain visits across all product categories, plus bounded geographic and desktop-referrer measures; never counted as paid buyers, GMV, or game purchases. **66% → 67%** (Δ +1 pp; mean 66.57%). [Source crosswalk](../ontology/itch-io/semrush-domain-traffic-2026.md).

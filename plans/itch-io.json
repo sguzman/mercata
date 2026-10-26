@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 66,
+  "progress_percent": 67,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -178,7 +178,7 @@
         "itch-io/market/estimate-paid-addressable-demand"
       ],
       "phase": 2,
-      "progress_percent": 37
+      "progress_percent": 46
     },
     {
       "id": "discovery",
@@ -208,7 +208,7 @@
         "itch-io/discovery/build-impression-to-sale-funnel"
       ],
       "phase": 2,
-      "progress_percent": 77
+      "progress_percent": 78
     },
     {
       "id": "competition",
@@ -575,12 +575,15 @@
       "objective": "Investigate define comparable global, country and language units.",
       "acceptance": "Provide dated source-linked evidence to define comparable global, country and language units; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 73,
+      "percent": 79,
       "evidence": [
         "ontology/itch-io/first-game-entry-scenario-2026.json",
         "ontology/itch-io/first-game-entry-scenario-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-entry-scenario.test.mjs"
+        "tests/itch-io-entry-scenario.test.mjs",
+        "ontology/itch-io/semrush-domain-traffic-2026.json",
+        "ontology/itch-io/semrush-domain-traffic-2026.md",
+        "tests/itch-io-semrush-traffic.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1265,12 +1268,15 @@
       "objective": "Investigate seek actual settled units rather than catalog traffic proxies.",
       "acceptance": "Provide dated source-linked evidence to seek actual settled units rather than catalog traffic proxies; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 18,
+      "percent": 30,
       "evidence": [
         "ontology/itch-io/community-analytics-sample-2026.json",
         "ontology/itch-io/community-analytics-sample-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-community-analytics.test.mjs"
+        "tests/itch-io-community-analytics.test.mjs",
+        "ontology/itch-io/semrush-domain-traffic-2026.json",
+        "ontology/itch-io/semrush-domain-traffic-2026.md",
+        "tests/itch-io-semrush-traffic.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1284,7 +1290,7 @@
       "objective": "Investigate separate visits, unique people, page views and sessions.",
       "acceptance": "Provide dated source-linked evidence to separate visits, unique people, page views and sessions; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 84,
+      "percent": 91,
       "evidence": [
         "ontology/itch-io/traffic-benchmark-2025.json",
         "ontology/itch-io/traffic-benchmark-2025.md",
@@ -1292,7 +1298,10 @@
         "tests/itch-io-traffic-benchmark.test.mjs",
         "ontology/itch-io/store-feature-history-2026.json",
         "ontology/itch-io/store-feature-history-2026.md",
-        "tests/itch-io-store-history.test.mjs"
+        "tests/itch-io-store-history.test.mjs",
+        "ontology/itch-io/semrush-domain-traffic-2026.json",
+        "ontology/itch-io/semrush-domain-traffic-2026.md",
+        "tests/itch-io-semrush-traffic.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1305,9 +1314,14 @@
       "emoji": "🌐",
       "objective": "Investigate seek bounded country-level publisher and buyer populations.",
       "acceptance": "Provide dated source-linked evidence to seek bounded country-level publisher and buyer populations; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 55,
+      "evidence": [
+        "ontology/itch-io/semrush-domain-traffic-2026.json",
+        "ontology/itch-io/semrush-domain-traffic-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-semrush-traffic.test.mjs"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 2
@@ -1320,12 +1334,15 @@
       "objective": "Investigate construct comparable historical counts and note indexing changes.",
       "acceptance": "Provide dated source-linked evidence to construct comparable historical counts and note indexing changes; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 30,
+      "percent": 46,
       "evidence": [
         "ontology/itch-io/store-feature-history-2026.json",
         "ontology/itch-io/store-feature-history-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-store-history.test.mjs"
+        "tests/itch-io-store-history.test.mjs",
+        "ontology/itch-io/semrush-domain-traffic-2026.json",
+        "ontology/itch-io/semrush-domain-traffic-2026.md",
+        "tests/itch-io-semrush-traffic.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1440,9 +1457,14 @@
       "emoji": "🌐",
       "objective": "Investigate specify a credible buyer population rather than free players.",
       "acceptance": "Provide dated source-linked evidence to specify a credible buyer population rather than free players; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 28,
+      "evidence": [
+        "ontology/itch-io/semrush-domain-traffic-2026.json",
+        "ontology/itch-io/semrush-domain-traffic-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-semrush-traffic.test.mjs"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 2
@@ -1646,7 +1668,7 @@
       "objective": "Investigate separate search engines, social posts, influencers and direct traffic.",
       "acceptance": "Provide dated source-linked evidence to separate search engines, social posts, influencers and direct traffic; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 83,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1657,7 +1679,10 @@
         "tests/itch-io-traffic-benchmark.test.mjs",
         "ontology/itch-io/creative-free-games-pwyw-2019.json",
         "ontology/itch-io/creative-free-games-pwyw-2019.md",
-        "tests/itch-io-creative-pwyw.test.mjs"
+        "tests/itch-io-creative-pwyw.test.mjs",
+        "ontology/itch-io/semrush-domain-traffic-2026.json",
+        "ontology/itch-io/semrush-domain-traffic-2026.md",
+        "tests/itch-io-semrush-traffic.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3403,7 +3428,7 @@
       "objective": "Investigate require units, period, geography, eligibility and sampling method.",
       "acceptance": "Provide dated source-linked evidence to require units, period, geography, eligibility and sampling method; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 94,
+      "percent": 97,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -3424,7 +3449,10 @@
         "tests/itch-io-notjam-series.test.mjs",
         "ontology/itch-io/paid-genre-tag-frames-2026.json",
         "ontology/itch-io/paid-genre-tag-frames-2026.md",
-        "tests/itch-io-genre-frames.test.mjs"
+        "tests/itch-io-genre-frames.test.mjs",
+        "ontology/itch-io/semrush-domain-traffic-2026.json",
+        "ontology/itch-io/semrush-domain-traffic-2026.md",
+        "tests/itch-io-semrush-traffic.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

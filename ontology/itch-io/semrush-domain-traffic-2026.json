@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "modeled_domain_traffic_not_game_purchases",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "semrush-itch-site-traffic-september-2026"
+  ],
+  "provider": "Semrush",
+  "provider_last_updated": "2026-10-11",
+  "date_basis": "calendar_month",
+  "site_traffic_estimates": {
+    "units": "modeled_domain_visits_all_devices_all_site_categories",
+    "months": [
+      {
+        "month": "2026-07",
+        "estimated_visits": 161310000
+      },
+      {
+        "month": "2026-08",
+        "estimated_visits": 174430000
+      },
+      {
+        "month": "2026-09",
+        "estimated_visits": 162370000
+      }
+    ],
+    "september_average_pages_per_visit": 5.75,
+    "september_average_session_duration_seconds": 539,
+    "september_bounce_rate_fraction": 0.4258
+  },
+  "september_geography_estimates": {
+    "country_units": "modeled_domain_visits_by_country_not_buyers",
+    "country_rows": [
+      {
+        "country": "United States",
+        "share_percent": 26.9,
+        "estimated_visits": 43680000
+      },
+      {
+        "country": "Brazil",
+        "share_percent": 6.32,
+        "estimated_visits": 10260000
+      },
+      {
+        "country": "Bangladesh",
+        "share_percent": 4.21,
+        "estimated_visits": 6830000
+      },
+      {
+        "country": "Germany",
+        "share_percent": 3.12,
+        "estimated_visits": 5070000
+      },
+      {
+        "country": "Russian Federation",
+        "share_percent": 3.1,
+        "estimated_visits": 5040000
+      }
+    ],
+    "countries_are_exhaustive": false,
+    "country_payment_eligibility_inferred": false
+  },
+  "traffic_acquisition_estimates": {
+    "desktop_direct_share_percent": 47.09,
+    "desktop_google_com_share_percent": 31.97,
+    "separate_from_all_device_country_share": true
+  },
+  "unsupported": {
+    "unique_human_visitors": null,
+    "unique_paying_buyers": null,
+    "paid_game_buyer_sessions": null,
+    "games_purchased": null,
+    "paid_game_gmv_usd": null,
+    "active_paid_developers": null,
+    "average_paid_game_revenue": null,
+    "per_game_purchase_conversion": null
+  },
+  "limitations": [
+    "Third-party modeled visit counts may differ from first-party analytics and are not census transactions.",
+    "Page visits are sessions, not unique people; sessions can repeat or be automated.",
+    "itch.io offers free games, game jams, digital assets, tools and other content; whole-site visits do not isolate paid games.",
+    "Visits can be from countries where seller payment systems vary; estimated country visits cannot establish seller or buyer eligibility.",
+    "Desktop acquisition shares cannot be applied to all-device total without a matched device denominator.",
+    "Month-to-month modeled traffic movements are not causal indicators of game buying or market profitability.",
+    "Do not multiply estimated visits by creator anecdotes to invent gross merchandise value."
+  ]
+}
