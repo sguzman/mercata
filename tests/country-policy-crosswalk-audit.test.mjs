@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {inspectCountryAccess,inferCountryVideoRights,auditRegionalAvailabilityMechanisms} from '../site/country-policy-crosswalk-audit.mjs';
+import {inspectCountryAccess,inferCountryVideoRights,auditRegionalAvailabilityMechanisms,auditRegionalAccessEvent} from '../site/country-policy-crosswalk-audit.mjs';
 const read=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 test('Regional program and payment method lists have independent official source IDs',async()=>{
  const [m,d,c]=await Promise.all([read('ontology/youtube/country-policy-and-payout-crosswalk-2026.json'),read('specimens/youtube.json'),read('ontology/youtube/country-eligibility-payments.json')]);
@@ -63,4 +63,24 @@ test('Country availability audit rejects inferred claims, royalties or local-law
  assert(auditRegionalAvailabilityMechanisms(b,sources).errors.includes('invented claimant earnings or music policy'));
  const c=structuredClone(m);c.region_specific_video_availability.ypp_country_listing_implies_viewer_video_availability=true;
  assert(auditRegionalAvailabilityMechanisms(c,sources).errors.includes('unsupported country payout or legal inference'));
+});
+
+test('March 2022 Russia new YPP signup notice remains distinct from account income and video access',async()=>{
+ const [m,d]=await Promise.all([read('ontology/youtube/country-policy-and-payout-crosswalk-2026.json'),read('specimens/youtube.json')]);
+ const ids=new Set(d.evidence.map(x=>x.id));
+ assert.deepEqual(auditRegionalAccessEvent(m,ids),{valid:true,errors:[]});
+ const e=m.dated_program_access_events[0];
+ assert.equal(e.announcement_date,'2022-03-10');
+ assert.equal(e.help_page_checked_at,'2026-10-25');
+ assert.equal(e.existing_creator_payment_status,null);
+ assert.equal(e.video_viewability_in_country,null);
+ assert(d.claims.some(c=>c.id==='youtube-russia-2022-ypp-signup-pause-still-listed-2026'&&c.source_ids.includes(e.source_id)));
+});
+test('Russia YPP audit rejects unsupported existing channel losses and rights blockade',async()=>{
+ const [m,d]=await Promise.all([read('ontology/youtube/country-policy-and-payout-crosswalk-2026.json'),read('specimens/youtube.json')]);
+ const sources=new Set(d.evidence.map(x=>x.id));
+ const a=structuredClone(m);a.dated_program_access_events[0].creator_income_lost=1000;
+ assert(auditRegionalAccessEvent(a,sources).errors.includes('invented incumbent losses or video access restrictions'));
+ const b=structuredClone(m);b.dated_program_access_events[0].video_viewability_in_country=false;
+ assert(auditRegionalAccessEvent(b,sources).errors.includes('invented incumbent losses or video access restrictions'));
 });

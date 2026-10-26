@@ -2757,6 +2757,14 @@ function renderCountryPolicyCrosswalk(model,dossier){
   box.append(make('p','measure-limit','No country-specific affected-video counts, actual rights records, settled payout losses or legal case determinations are observed.'));
   box.append(audienceSources(rights.source_ids,dossier));details.append(box);
  }
+ const notices=model.dated_program_access_events||[];
+ if(notices.length===1&&notices[0].country_code==='RU'){
+  const e=notices[0],notice=make('div','country-ypp-dated-restriction');
+  notice.append(make('h5','','Russia: dated new YPP signup limitation'));
+  notice.append(make('p','measure-limit','YouTube Help, '+e.announcement_date+', reviewed '+e.help_page_checked_at+': new YPP sign-ups by creators located in Russia cannot be completed under the published notice.'));
+  notice.append(make('p','measure-limit','No determination about existing Russian creators’ accounts, actual payment losses, local laws or individual video availability.'));
+  notice.append(audienceSources([e.source_id],dossier));details.append(notice);
+ }
  details.append(audienceSources(model.source_ids,dossier));
  const link=make('a','inline-link','Read geographic access and missing-personal-account limits ↗');
  link.href='./ontology/youtube/country-policy-and-payout-crosswalk-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);

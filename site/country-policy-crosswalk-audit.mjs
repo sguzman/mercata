@@ -44,3 +44,23 @@ export function auditRegionalAvailabilityMechanisms(model,sourceIds){
  if(Object.values(model.unmeasured||{}).some(x=>x!==null))errors.push('fabricated region-specific payouts');
  return {valid:errors.length===0,errors};
 }
+
+export function auditRegionalAccessEvent(model,known){
+ const errors=[],events=model?.dated_program_access_events||[];
+ if(events.length!==1)return {valid:false,errors:['missing dated territorial onboarding case']};
+ const e=events[0];
+ if(e.id!=='russia_new_ypp_signup_2022_notice'||e.country_code!=='RU'||
+    e.announcement_date!=='2022-03-10'||e.help_page_checked_at!=='2026-10-25'||
+    e.source_id!=='ypp-country'||!known.has(e.source_id)||
+    e.applies_to!=='new_ypp_signups_for_creators_located_in_russia')
+    errors.push('policy date, source or geographic scope incorrect');
+ if(e.existing_channel_program_approval!==null||e.existing_creator_payment_status!==null||
+    e.creator_income_lost!==null||e.video_viewability_in_country!==null||
+    e.rightsholder_content_id_territory_policy!==null||
+    e.reporting_currency_or_account_status!==null||
+    e.legal_interpretation_of_sanctions!==null||e.applicability_to_all_countries!==false)
+    errors.push('invented incumbent losses or video access restrictions');
+ if(model?.observations?.length!==3||model.observations.some(x=>!['MX','US','GB'].includes(x.country_code)))
+    errors.push('signup notice contaminated MX/US/GB country sample');
+ return {valid:errors.length===0,errors};
+}

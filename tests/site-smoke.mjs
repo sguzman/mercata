@@ -248,6 +248,11 @@ try{
     assert((await regionRights.textContent()).includes('Video owner licensing territory'));
     assert((await regionRights.textContent()).includes('local-law compliance'));
     assert((await regionRights.textContent()).includes('No country-specific affected-video counts'));
+    const datedCountry=page.locator('.country-policy-crosswalk .country-ypp-dated-restriction');
+    assert.equal(await datedCountry.count(),1,'Missing dated Russian onboarding notice');
+    assert((await datedCountry.textContent()).includes('2022-03-10'));
+    assert((await datedCountry.textContent()).includes('new YPP sign-ups'));
+    assert((await datedCountry.textContent()).includes('No determination about existing Russian creators'));
     const packaging=page.locator('.native-packaging-ab .external-packaging-rotations');
     assert.equal(await packaging.count(),1,'Missing externally selected thumbnail rotation evidence');
     assert((await packaging.textContent()).includes('460 alternating packaging patterns'));

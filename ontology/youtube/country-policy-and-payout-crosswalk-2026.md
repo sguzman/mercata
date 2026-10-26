@@ -35,3 +35,10 @@ Official YouTube documentation distinguishes **video-owner licensing choices**, 
 These rules apply to **viewer-country/video-specific rights**, whereas YPP country listings refer to **creator enrollment**, and account-currency payment thresholds refer to **account settlement**. The country row for Mexico, the United States or the United Kingdom cannot tell whether any specific music, film excerpt or video is available in that place. For the three documented reference countries the actual blocked-video counts, rights claims, viewer geography, local legal cases and settled royalty amounts are all **unobserved**. No privacy-sensitive data, bank accounts, creator credentials, or uploaded copyrighted media were used.
 
 The [machine record](country-policy-and-payout-crosswalk-2026.json) enumerates mechanisms and explicit missing values. It does not label a copyright claim as a strike or offer methods for bypassing a geographic restriction.
+
+## Dated example: Russia new YPP signup notice (2022, still published 2026)
+
+The official [YouTube Partner Program availability list](https://support.google.com/youtube/answer/7101720?hl=en), reviewed **October 25, 2026**, continues to display a **March 10, 2022** notice. It states that suspension of Google advertising systems and new Russian AdSense account creation means creators **located in Russia cannot complete new YPP sign-ups**. This is a dated published product enrollment restriction, not evidence that every existing Russian creator's monetization ended on that date or that all YouTube content is inaccessible within the country.
+
+Mercata records the policy's **country code RU**, the original notice date, the review date, the affected onboarding action, and the named official source. **Existing channel monetization, actual creator payouts, individual account circumstances, local-law conclusions, and whether a particular video is blocked in Russia remain unknown**. The country-level onboarding notice does not alter the separate MX/US/GB payment-method table, and is not a claimant Content ID restriction.
+
