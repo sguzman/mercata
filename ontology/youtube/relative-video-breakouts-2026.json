@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "commercial_selected_channel_relative_breakout_cohort_2026",
+  "as_of": "2026-10-25",
+  "source_ids": [
+    "tubemind-2026-video-outlier-index"
+  ],
+  "snapshot_date": "2026-10-22",
+  "published_at": "2026-10-23",
+  "total_indexed_videos": 558739,
+  "total_indexed_channels": 6663,
+  "languages_covered": 26,
+  "countries_covered": 86,
+  "video_published_earliest_year": 2006,
+  "video_published_latest_year": 2026,
+  "sample_frame": "vendor-selected active channels indexed via YouTube Data API, not probability-sampled global channel population",
+  "outlier_metric": "video_public_views_divided_by_median_views_of_recent_same_format_uploads_from_same_channel",
+  "index_comparable_videos": 555158,
+  "unscored_videos": 3581,
+  "threshold_multiple": 5,
+  "all_scored_5x_percent": 10.1,
+  "all_scored_99x_percent": 0.7,
+  "format_groups": [
+    {
+      "format": "long_form",
+      "video_count": 282345,
+      "five_x_or_more_percent": 9.7,
+      "median_public_views": 12266,
+      "creator_income": null
+    },
+    {
+      "format": "shorts",
+      "video_count": 272813,
+      "five_x_or_more_percent": 10.6,
+      "median_public_views": 8460,
+      "creator_income": null
+    }
+  ],
+  "categories_selected": [
+    {
+      "name": "Film & Animation",
+      "five_x_or_more_percent": 14.6,
+      "n_within_category": null
+    },
+    {
+      "name": "Music",
+      "five_x_or_more_percent": 13.9,
+      "n_within_category": null
+    },
+    {
+      "name": "Howto & Style",
+      "five_x_or_more_percent": 10.6,
+      "n_within_category": null
+    },
+    {
+      "name": "Education",
+      "five_x_or_more_percent": 9.2,
+      "n_within_category": null
+    },
+    {
+      "name": "Gaming",
+      "five_x_or_more_percent": 6,
+      "n_within_category": null
+    }
+  ],
+  "small_channel_5x_cases_selected": [
+    {
+      "niche": "Luxury & Billionaire Lifestyle",
+      "channels_under_10000_subscribers_with_at_least_one_5x_video": 115,
+      "total_indexed_niche_channels_under_10000": null
+    },
+    {
+      "niche": "Health & Wellness",
+      "channels_under_10000_subscribers_with_at_least_one_5x_video": 99,
+      "total_indexed_niche_channels_under_10000": null
+    },
+    {
+      "niche": "Space & Science",
+      "channels_under_10000_subscribers_with_at_least_one_5x_video": 98,
+      "total_indexed_niche_channels_under_10000": null
+    },
+    {
+      "niche": "Gaming",
+      "channels_under_10000_subscribers_with_at_least_one_5x_video": null,
+      "total_indexed_niche_channels_under_10000": null
+    },
+    {
+      "niche": "Geography & Maps",
+      "channels_under_10000_subscribers_with_at_least_one_5x_video": 32,
+      "total_indexed_niche_channels_under_10000": null
+    }
+  ],
+  "independent_channel_age_results": {
+    "faceless_under_one_year_with_5x_video": 520,
+    "all_faceless_channels_under_one_year": null,
+    "faceless_classification": "vendor inferred from titles descriptions and presentation; not authoritative YouTube category",
+    "estimated_faceless_channels": 2862,
+    "no_face_required_for_newcomer_success": false,
+    "observed_net_creator_income": null
+  },
+  "category_ranks_as_earnings_ranks_allowed": false,
+  "proprietary_niche_opportunity_scores_as_empirical_success_probability_allowed": false,
+  "amount_of_money_for_5x": null,
+  "guaranteed_new_channel_success_rate": null,
+  "valid_comparisons": [
+    "Long-form and Shorts 5x percentages use same provider-relative channel-and-format definition, but cannot be treated as causal format effects or universal YouTube video probabilities.",
+    "The 555,158 scored-videos denominator is distinct from 558,739 indexed video objects; 3,581 missing comparison values must not be silently treated as failed breakouts.",
+    "A 5x breakout is views relative to the same channel's historical same-format median, not 5x other channels or high absolute audience and not 5x monetary income.",
+    "A channel below 10,000 subscribers is not necessarily a recently created channel; newness by age and size must not be conflated.",
+    "Niche-specific numerators of small channels with any 5x video lack total sampled small-channel niche denominators, so success percentages by niche cannot be derived.",
+    "Vendor-enter-now labels, ranks, and score values are commercial proprietary selections, not validated opportunity probabilities.",
+    "Monetization signals or estimated faceless identity do not prove accepted YPP applications, net profit or available creator payroll.",
+    "Current public view counts and long-lived video histories need temporal metric-definition harmonization before longitudinal causal analysis."
+  ],
+  "unknowns": {
+    "sampling_probability": null,
+    "all_channel_index_completeness": null,
+    "video_public_views_at_common_age": null,
+    "channel_country_niche_representativeness": null,
+    "entrant_year_by_niche_distribution": null,
+    "all_small_channels_per_niche": null,
+    "creator_net_profit": null,
+    "creator_zero_earnings_share": null,
+    "causal_effect_of_upload_duration_or_format": null
+  }
+}

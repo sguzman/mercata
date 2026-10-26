@@ -774,6 +774,14 @@ try{
     assert((await otherIncome.textContent()).includes('Typical YouTube income: unknown'));
     assert((await otherIncome.textContent()).includes('5,095 respondents'),'Missing bounded CreatorIQ 2026 survey');
 
+    const relativeBreakouts=page.locator('.relative-video-breakouts');
+    assert.equal(await relativeBreakouts.count(),1,'Missing selected vendor video breakouts');
+    await relativeBreakouts.locator('summary').click();
+    assert.equal(await relativeBreakouts.locator('.breakout-format-card').count(),2,'Missing two distinct format cohorts');
+    assert((await relativeBreakouts.textContent()).includes('9.7% at 5×+ own-channel median'));
+    assert((await relativeBreakouts.textContent()).includes('10.6% at 5×+ own-channel median'));
+    assert((await relativeBreakouts.textContent()).includes('3,581 of 558,739 index videos'));
+    assert((await relativeBreakouts.textContent()).includes('No denominators for all indexed under-10K channels'));
     const newcomer=page.locator('.newcomer-income');
     assert.equal(await newcomer.locator('.newcomer-gate').count(),5,'Missing newcomer income methodology gates');
     await newcomer.locator('summary').click();
