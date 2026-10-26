@@ -127,3 +127,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io commercial 2D discovery filters (2026-10-26):** 10 non-synchronized public Top Sellers query frames covering genre, device, HTML5, Spanish (LatAm), date and featured; explicit exclusions of paid-order and commercial success interpretation. 72% → 73% (Δ +1 pp; exact 72.70%). [Research](../ontology/itch-io/top-seller-filter-frames-2026.md).
+
+
+**itch.io limited visible-price statistics (2026-10-26):** 15 ranked 2D paid browse titles yield descriptive sample medians $5.99 with all shown prices and $10 conditional on positive shown prices; no representative market median or actual receipts claimed. Score 73% → 73% (Δ 0 pp; exact 72.93%). [Sample boundaries](../ontology/itch-io/paid-2d-popular-prices-2026.md).

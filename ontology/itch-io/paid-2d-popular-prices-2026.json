@@ -189,5 +189,32 @@
   "representative_paid_game_mean_price_usd": null,
   "sales_weighted_price_usd": null,
   "profit_by_genre_usd": null,
-  "first_timer_earnings_usd": null
+  "first_timer_earnings_usd": null,
+  "sample_descriptive_stats": {
+    "method": "sorted_median_and_exhaustive_display_price_bands",
+    "unit": "visible_usd_listing_prices_in_first_15_popular_results",
+    "sample_n": 15,
+    "positive_price_n": 13,
+    "zero_price_n": 2,
+    "median_all_sample_usd": 5.99,
+    "median_positive_sample_usd": 10,
+    "minimum_positive_usd": 0.74,
+    "maximum_visible_usd": 25,
+    "price_band_counts": {
+      "temporarily_zero_discounted": 2,
+      "positive_below_5": 4,
+      "from_5_below_10": 2,
+      "at_least_10": 7
+    },
+    "sale_badged_count": 4,
+    "representative_market_price_estimate": null,
+    "paid_order_weighted_mean_usd": null,
+    "realized_price_by_buyer": null,
+    "warnings": [
+      "Selection by Popular introduces visibility and maturity bias.",
+      "Positive-price conditional sample is not a probability sample of premium games.",
+      "100%-discounted items remain in paid filter and do not prove free lifetime price.",
+      "List prices are not transaction-weighted realized prices or seller income."
+    ]
+  }
 }

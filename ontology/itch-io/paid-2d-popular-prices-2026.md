@@ -13,3 +13,10 @@ The public page's **Popular** sorting exposes sale-badge prices, but does not sh
 - The page provides no seller labor, refunds, retention or profit information. Estimates remain unknown.
 
 No purchase or account access occurred. The complete source URLs, filtered counts and dated listings are preserved for repeatable comparison, but this alone does not complete the task of measuring the market-wide paid-game price distribution.
+
+
+## Exact descriptive math for these fifteen visible results only
+
+Sorting the original **15 observed USD listing prices** produces a **sample median of $5.99**, including two temporarily **$0 displayed** listings with 100%-off sale badges. Removing just those two produces **13 positive displayed prices**, with a sample median of **$10.00**. The displayed positive-price range is $0.74–$25.00. Four listings were below $5 but above $0, two were $5–$9.99, and seven displayed $10 or more.
+
+These are **medians of a biased 15-title visible Popular sample, not medians of all paid games**; there is no random sampling, sale-volume weighting, paid-order evidence, refund record or creator-net income. The conditional $10 median says nothing about what typical games earn, even among the 12,691 paid 2D browse results. The exhaustive price-band counts are stored in the existing [machine study](paid-2d-popular-prices-2026.json) so they can be rederived without guessing from summary prose.

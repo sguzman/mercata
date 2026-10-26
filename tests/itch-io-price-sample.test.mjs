@@ -17,3 +17,21 @@ test('Popular 2D pilot reports discounted zero tags and no merchant outcomes',()
  assert(p.entries.every(e=>e.product_units_sold===null&&e.developer_profit===null));
  for(const k of ['representative_price_median_usd','representative_paid_game_mean_price_usd','sales_weighted_price_usd','profit_by_genre_usd','first_timer_earnings_usd'])assert.equal(p[k],null);
 });
+
+test('Visible Popular sample medians are descriptive and exclude zero-price discounts only conditionally',()=>{
+ const p=read('ontology/itch-io/paid-2d-popular-prices-2026.json');
+ const a=p.sample_descriptive_stats;
+ const listed=p.entries.map(e=>e.displayed_price_usd).sort((x,y)=>x-y);
+ const positive=listed.filter(x=>x>0);
+ assert.equal(a.sample_n,15);
+ assert.equal(a.positive_price_n,13);
+ assert.equal(a.median_all_sample_usd,listed[7]);
+ assert.equal(a.median_all_sample_usd,5.99);
+ assert.equal(a.median_positive_sample_usd,positive[6]);
+ assert.equal(a.median_positive_sample_usd,10);
+ assert.equal(a.zero_price_n,2);
+ assert.equal(Object.values(a.price_band_counts).reduce((n,v)=>n+v,0),a.sample_n);
+ assert.equal(a.representative_market_price_estimate,null);
+ assert.equal(a.paid_order_weighted_mean_usd,null);
+ assert.equal(a.realized_price_by_buyer,null);
+});
