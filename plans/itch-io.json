@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 44,
+  "progress_percent": 45,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -237,7 +237,7 @@
         "itch-io/competition/create-cross-platform-benchmarks"
       ],
       "phase": 2,
-      "progress_percent": 25
+      "progress_percent": 32
     },
     {
       "id": "income",
@@ -272,7 +272,7 @@
         "itch-io/income/register-unavailable-income-fields"
       ],
       "phase": 3,
-      "progress_percent": 43
+      "progress_percent": 45
     },
     {
       "id": "rights",
@@ -299,7 +299,7 @@
         "itch-io/rights/check-resale-and-transfer-conditions"
       ],
       "phase": 3,
-      "progress_percent": 37
+      "progress_percent": 38
     },
     {
       "id": "sales",
@@ -389,7 +389,7 @@
         "itch-io/strategy/define-retrospective-reporting"
       ],
       "phase": 4,
-      "progress_percent": 19
+      "progress_percent": 25
     },
     {
       "id": "review",
@@ -415,7 +415,7 @@
         "itch-io/review/prepare-evidence-gap-summary"
       ],
       "phase": 1,
-      "progress_percent": 42
+      "progress_percent": 47
     },
     {
       "id": "special-games",
@@ -1718,9 +1718,14 @@
       "emoji": "🏁",
       "objective": "Investigate control for earlier portfolios and outside audiences.",
       "acceptance": "Provide dated source-linked evidence to control for earlier portfolios and outside audiences; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 27,
+      "evidence": [
+        "ontology/itch-io/commercial-postmortems-2026.json",
+        "ontology/itch-io/commercial-postmortems-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-commercial-postmortems.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -1834,9 +1839,14 @@
       "emoji": "🏁",
       "objective": "Investigate compare identical product-type, price and release cohort units.",
       "acceptance": "Provide dated source-linked evidence to compare identical product-type, price and release cohort units; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 54,
+      "evidence": [
+        "ontology/itch-io/commercial-postmortems-2026.json",
+        "ontology/itch-io/commercial-postmortems-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-commercial-postmortems.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -1962,7 +1972,7 @@
       "objective": "Investigate account for multi-title publishers and revenue allocation.",
       "acceptance": "Provide dated source-linked evidence to account for multi-title publishers and revenue allocation; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 73,
+      "percent": 78,
       "evidence": [
         "ontology/itch-io/developer-income-cases-2026.json",
         "ontology/itch-io/developer-income-cases-2026.md",
@@ -1970,7 +1980,10 @@
         "tests/itch-io-income-cases.test.mjs",
         "ontology/itch-io/notjam-game-category-series-2023-2025.json",
         "ontology/itch-io/notjam-game-category-series-2023-2025.md",
-        "tests/itch-io-notjam-series.test.mjs"
+        "tests/itch-io-notjam-series.test.mjs",
+        "ontology/itch-io/commercial-postmortems-2026.json",
+        "ontology/itch-io/commercial-postmortems-2026.md",
+        "tests/itch-io-commercial-postmortems.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1984,7 +1997,7 @@
       "objective": "Investigate include refunds, processor share, marketplace share and settlement.",
       "acceptance": "Provide dated source-linked evidence to include refunds, processor share, marketplace share and settlement; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 67,
+      "percent": 79,
       "evidence": [
         "ontology/itch-io/developer-income-cases-2026.json",
         "ontology/itch-io/developer-income-cases-2026.md",
@@ -1992,7 +2005,10 @@
         "tests/itch-io-income-cases.test.mjs",
         "ontology/itch-io/payment-country-corridors-2026.json",
         "ontology/itch-io/payment-country-corridors-2026.md",
-        "tests/itch-io-payment-corridors.test.mjs"
+        "tests/itch-io-payment-corridors.test.mjs",
+        "ontology/itch-io/commercial-postmortems-2026.json",
+        "ontology/itch-io/commercial-postmortems-2026.md",
+        "tests/itch-io-commercial-postmortems.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2006,12 +2022,16 @@
       "objective": "Investigate subtract cash costs and treat labor assumptions explicitly.",
       "acceptance": "Provide dated source-linked evidence to subtract cash costs and treat labor assumptions explicitly; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 56,
+      "percent": 68,
       "evidence": [
         "ontology/itch-io/break-even-scenarios-2026.md",
         "ontology/itch-io/break-even-scenarios-2026.json",
         "site/itch-break-even.mjs",
-        "tests/itch-break-even.test.mjs"
+        "tests/itch-break-even.test.mjs",
+        "ontology/itch-io/commercial-postmortems-2026.json",
+        "ontology/itch-io/commercial-postmortems-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-commercial-postmortems.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2044,7 +2064,7 @@
       "objective": "Investigate label voluntary disclosures nonrepresentative.",
       "acceptance": "Provide dated source-linked evidence to label voluntary disclosures nonrepresentative; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 86,
+      "percent": 91,
       "evidence": [
         "ontology/itch-io/developer-income-cases-2026.json",
         "ontology/itch-io/developer-income-cases-2026.md",
@@ -2055,7 +2075,10 @@
         "tests/itch-web-survey-crosswalk.test.mjs",
         "ontology/itch-io/notjam-game-category-series-2023-2025.json",
         "ontology/itch-io/notjam-game-category-series-2023-2025.md",
-        "tests/itch-io-notjam-series.test.mjs"
+        "tests/itch-io-notjam-series.test.mjs",
+        "ontology/itch-io/commercial-postmortems-2026.json",
+        "ontology/itch-io/commercial-postmortems-2026.md",
+        "tests/itch-io-commercial-postmortems.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2850,13 +2873,16 @@
       "objective": "Investigate require matched demand, supply and labor evidence.",
       "acceptance": "Provide dated source-linked evidence to require matched demand, supply and labor evidence; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 22,
+      "percent": 34,
       "evidence": [
         "ontology/itch-io/paid-2d-popular-prices-2026.json",
         "ontology/itch-io/paid-2d-popular-prices-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
         "specimens/itch-io.json",
-        "tests/itch-io-price-sample.test.mjs"
+        "tests/itch-io-price-sample.test.mjs",
+        "ontology/itch-io/commercial-postmortems-2026.json",
+        "ontology/itch-io/commercial-postmortems-2026.md",
+        "tests/itch-io-commercial-postmortems.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2930,9 +2956,14 @@
       "emoji": "🧪",
       "objective": "Investigate separate distribution costs and potential incremental buyers.",
       "acceptance": "Provide dated source-linked evidence to separate distribution costs and potential incremental buyers; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 63,
+      "evidence": [
+        "ontology/itch-io/commercial-postmortems-2026.json",
+        "ontology/itch-io/commercial-postmortems-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-commercial-postmortems.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 4
@@ -3083,9 +3114,14 @@
       "emoji": "🔬",
       "objective": "Investigate validate matching prices, cohorts, currency and release windows.",
       "acceptance": "Provide dated source-linked evidence to validate matching prices, cohorts, currency and release windows; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 59,
+      "evidence": [
+        "ontology/itch-io/commercial-postmortems-2026.json",
+        "ontology/itch-io/commercial-postmortems-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-commercial-postmortems.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 1

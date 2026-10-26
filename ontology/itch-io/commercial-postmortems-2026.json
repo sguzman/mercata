@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "commercial_developer_postmortem_comparison",
+  "as_of": "2026-10-26",
+  "sources": [
+    "mixolumia-postmortem",
+    "trouble-twice-postmortem"
+  ],
+  "cases": [
+    {
+      "id": "mixolumia",
+      "game": "Mixolumia",
+      "game_type": "puzzle_game",
+      "itch_launch": "2020-08-08",
+      "steam_launch": "2020-11-30",
+      "reported_at": "2021-06-22",
+      "itch_units": 1776,
+      "itch_gross_usd": 17906,
+      "itch_after_transaction_receipts_usd": 14980,
+      "steam_units": 713,
+      "steam_gross_usd": 6202,
+      "steam_after_transaction_receipts_usd": 3680,
+      "final_developer_profit_usd": null,
+      "dev_hours": null,
+      "comparable_launch_exposure": false,
+      "source_ids": [
+        "mixolumia-postmortem"
+      ]
+    },
+    {
+      "id": "trouble_comes_twice",
+      "game": "Trouble Comes Twice",
+      "game_type": "visual_novel",
+      "reported_combined_revenue_eur_approx": 85000,
+      "includes": [
+        "Kickstarter",
+        "Patreon",
+        "presales",
+        "game_sales"
+      ],
+      "itch_specific_revenue_eur": null,
+      "personal_income_eur": null,
+      "final_developer_profit_eur": null,
+      "source_ids": [
+        "trouble-twice-postmortem"
+      ]
+    }
+  ],
+  "population_sampling_frame": null,
+  "representative": false,
+  "representative_median_itch_earnings": null,
+  "representative_zero_seller_share": null,
+  "genre_success_rate": null,
+  "limits": [
+    "Voluntary successful examples are not population outcomes.",
+    "Transaction receipts are not final profit after game-development costs.",
+    "The Steam version launched later and has a different settlement window.",
+    "Trouble Comes Twice combined income cannot be assigned to itch.io.",
+    "USD and EUR cannot be pooled; no genre representative rates."
+  ]
+}

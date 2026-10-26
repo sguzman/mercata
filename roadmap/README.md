@@ -61,3 +61,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io longitudinal developer disclosure (2026-10-26):** three annual cumulative game-category snapshots from one creator (2023–2025) reconciled as a single nonrepresentative account, with free/donation scope and non-game product revenue excluded. Score **43% → 44%**, Δ +1 pp. [Study](../ontology/itch-io/notjam-game-category-series-2023-2025.md).
+
+
+**itch.io commercial postmortems (2026-10-26):** real Mixolumia paid-unit and after-transaction game receipts compared with mixed-channel visual-novel funding that cannot be assigned to itch.io. **44% → 45%**, Δ +1 pp. [Source audit](../ontology/itch-io/commercial-postmortems-2026.md).
