@@ -11,8 +11,8 @@ test('All itch.io source records have honest date precision and authored reuse n
  assert.equal(result.source_count,x.sources_in_fixed_dossier);
  assert.equal(result.claim_count,x.claims_in_fixed_dossier);
  const counts={
-  full:d.evidence.filter(e=>/^\\d{4}-\\d{2}-\\d{2}$/.test(e.published_at)).length,
-  month:d.evidence.filter(e=>/^\\d{4}-\\d{2}$/.test(e.published_at)).length,
+  full:d.evidence.filter(e=>/^\d{4}-\d{2}-\d{2}$/.test(e.published_at)).length,
+  month:d.evidence.filter(e=>/^\d{4}-\d{2}$/.test(e.published_at)).length,
   unknown:d.evidence.filter(e=>e.published_at==null).length
  };
  assert.equal(counts.full,x.record_field_coverage.known_exact_publication_day);
