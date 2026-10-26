@@ -2,11 +2,12 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "crossplatform_creatoriq_direct_campaign_payment_concentration",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "vendor_paid_campaign_creator_cohort_not_youtube_specific_or_zero_earner_population",
   "source_ids": [
     "creatoriq-direct-payments-2025",
-    "creatoriq-state-creators-2026"
+    "creatoriq-state-creators-2026",
+    "kolect-2026-youtube-agreed-collaboration-tier-fees"
   ],
   "datasets": [
     {
@@ -100,5 +101,88 @@
     "representative_paid_campaign_rate": null,
     "creator_expenses": null,
     "causal_change_in_payment_inequality": null
+  },
+  "youtube_agreed_fee_tiers": {
+    "source_id": "kolect-2026-youtube-agreed-collaboration-tier-fees",
+    "publisher": "Kolect",
+    "publication_date": "2026-10-17",
+    "updated_date": "2026-10-21",
+    "campaign_creation_start": "2025-08-19",
+    "campaign_creation_end": "2026-10-15",
+    "whole_vendor_sample": "more_than_120000_collaborations_across_platforms",
+    "whole_vendor_creators": "more_than_120000_creators",
+    "whole_vendor_brands": "more_than_150_brands",
+    "exact_youtube_tier_denominators": null,
+    "platform": "YouTube",
+    "observational_unit": "one_creator_brand_agreed_collaboration_not_yearly_person_income",
+    "agreement_definition": "creator_accepted_firm_rate_and_deliverable_package",
+    "brand_approved_closed_percent_of_all_platform_agreed": 32,
+    "creator_fee_settled_or_paid_verified": false,
+    "sample_selection": "Kolect managed commercial campaigns, mainly US and Europe, concentrated in consumer technology, home, DIY and lifestyle",
+    "local_currencies_converted_to": "USD",
+    "fx_reference_date": "2026-10-15",
+    "percentage_contracts_usd_all_platforms": 85.4,
+    "follower_tier_date": "2026-09_to_2026-10_current_creator_followers",
+    "tiers": [
+      {
+        "id": "nano",
+        "followers_min_inclusive": 0,
+        "followers_max_exclusive": 10000,
+        "median_agreed_creator_fee_usd": 300,
+        "p25_fee_usd": 150,
+        "p75_fee_usd": 500
+      },
+      {
+        "id": "micro",
+        "followers_min_inclusive": 10000,
+        "followers_max_exclusive": 100000,
+        "median_agreed_creator_fee_usd": 500,
+        "p25_fee_usd": 300,
+        "p75_fee_usd": 800
+      },
+      {
+        "id": "mid",
+        "followers_min_inclusive": 100000,
+        "followers_max_exclusive": 500000,
+        "median_agreed_creator_fee_usd": 800,
+        "p25_fee_usd": 488,
+        "p75_fee_usd": 1430
+      },
+      {
+        "id": "macro",
+        "followers_min_inclusive": 500000,
+        "followers_max_exclusive": 1000000,
+        "median_agreed_creator_fee_usd": 1100,
+        "p25_fee_usd": 633,
+        "p75_fee_usd": 1994
+      },
+      {
+        "id": "mega",
+        "followers_min_inclusive": 1000000,
+        "followers_max_exclusive": null,
+        "median_agreed_creator_fee_usd": 1800,
+        "p25_fee_usd": 1175,
+        "p75_fee_usd": 4000
+      }
+    ],
+    "selected_youtube_all_tier_median_agreed_creator_fee_usd": 600,
+    "category_specific_n": null,
+    "only_completed_creator_invoices_included": false,
+    "all_new_youtube_creators_sampled": false,
+    "creator_zero_fee_share": null,
+    "annual_creator_income_by_follower_tier": null,
+    "monthly_youtube_ads_per_creator": null,
+    "individual_net_profit": null,
+    "within_niche_paid_rate": null,
+    "causal_effect_of_more_followers": null,
+    "source_method_note": "All-tier figure and conditional tier quartiles apply to selected accepted rates; 32% closed statistic is across all platform collaborations and not an estimate of YouTube payment failure.",
+    "inference_limits": [
+      "Accepted/contracted creator-side fee is not an audited paid invoice or annual creator income.",
+      "Per-follower-tier n for YouTube is not disclosed; total 120k+ agreements span all platforms and cannot be reused as any YouTube subgroup denominator.",
+      "Creators appearing in brand-managed campaigns exclude never-selected and zero-income YouTubers; no chance of securing any contract follows.",
+      "Follower snapshots may not match negotiation-time follower counts; currency conversion is a published constant-date reference.",
+      "Different fee and cohort definitions prevent pooling with CreatorIQ 14.4k paid recipients or Forbes elite cross-platform gross estimates.",
+      "Medians and quartiles describe separate selected agreements, not money per view, complete revenue, profit, or causal returns from acquiring followers."
+    ]
   }
 }

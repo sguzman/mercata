@@ -21,3 +21,26 @@ test('Cumulative top 10 and top 1 shares refer only to commercial payee records'
  assert.deepEqual(m.datasets[1].periods.map(x=>x.top_1_share_percent),[15,18,21]);
  assert.equal(m.datasets[1].same_population_cohort_verified,false);
 });
+
+test('Kolect agreed fees use five disjoint current follower bands and within-tier quartiles',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/brand-campaign-payment-concentration-2026.json'),load('specimens/youtube.json')]);
+ const x=m.youtube_agreed_fee_tiers,ids=new Set(d.evidence.map(s=>s.id));
+ assert(ids.has(x.source_id)&&m.source_ids.includes(x.source_id));
+ assert.equal(x.platform,'YouTube');
+ assert.equal(x.exact_youtube_tier_denominators,null);
+ assert.equal(x.creator_fee_settled_or_paid_verified,false);
+ assert.equal(x.brand_approved_closed_percent_of_all_platform_agreed,32);
+ assert.equal(x.selected_youtube_all_tier_median_agreed_creator_fee_usd,600);
+ assert.deepEqual(x.tiers.map(t=>t.median_agreed_creator_fee_usd),[300,500,800,1100,1800]);
+ assert.deepEqual(x.tiers.map(t=>t.p25_fee_usd),[150,300,488,633,1175]);
+ assert.deepEqual(x.tiers.map(t=>t.p75_fee_usd),[500,800,1430,1994,4000]);
+ assert(x.tiers.every((t,i)=>t.p25_fee_usd<=t.median_agreed_creator_fee_usd && t.median_agreed_creator_fee_usd<=t.p75_fee_usd &&
+  (i===0?t.followers_min_inclusive===0:t.followers_min_inclusive===x.tiers[i-1].followers_max_exclusive)));
+ assert.equal(x.tiers.at(-1).followers_max_exclusive,null);
+ assert.equal(x.annual_creator_income_by_follower_tier,null);
+ assert.equal(x.individual_net_profit,null);
+ assert.equal(x.all_new_youtube_creators_sampled,false);
+ assert.equal(x.within_niche_paid_rate,null);
+ assert.equal(x.causal_effect_of_more_followers,null);
+ assert(d.claims.some(c=>c.id==='kolect-youtube-2026-selected-contract-fee-by-followers'&&c.source_ids.includes(x.source_id)));
+});

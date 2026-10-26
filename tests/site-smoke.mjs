@@ -299,6 +299,13 @@ try{
     assert((await exceptional.textContent()).includes('1,020 million gross across platforms'));
     assert((await exceptional.textContent()).includes('Not audited YouTube payouts'));
     assert((await exceptional.textContent()).includes('prevent same-person earnings growth inference'));
+    const selectedFees=page.locator('.kolect-youtube-fees');
+    assert.equal(await selectedFees.count(),1,'Missing selected YouTube collaboration fees study');
+    await selectedFees.locator('summary').click();
+    assert.equal(await selectedFees.locator('.ownership-card').count(),5,'Missing five disjoint follower tiers');
+    assert((await selectedFees.textContent()).includes('USD 1,800 median agreed fee'));
+    assert((await selectedFees.textContent()).includes('not yearly YouTube income'));
+    assert((await selectedFees.textContent()).includes('No probability of getting a deal'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));
