@@ -34,11 +34,11 @@ test('Metric-family audit exposes selected source coverage without claiming comp
  const [m,o]=await Promise.all([load('ontology/youtube/topic-observation-coverage-2026.json'),load('ontology/youtube/topic-observations.json')]);
  assert.deepEqual(auditTopicMetricCoverage(m,o),{valid:true,errors:[]});
  const a=m.metric_family_coverage_audit;
- assert.equal(a.topics_with_two_or_more_metric_families,3);
+ assert.equal(a.topics_with_two_or_more_metric_families,4);
  assert.equal(a.topics_with_two_or_more_distinct_source_documents,6);
- assert.deepEqual(a.selected_multi_metric_topic_ids,['crafts','sports-general','football-soccer']);
- assert.equal(a.observations_by_metric_family.video_views,23);
- assert.equal(Object.values(a.observations_by_metric_family).reduce((s,x)=>s+x,0),36);
+ assert.deepEqual(a.selected_multi_metric_topic_ids,['general-animation','crafts','sports-general','football-soccer']);
+ assert.equal(a.observations_by_metric_family.video_views,24);
+ assert.equal(Object.values(a.observations_by_metric_family).reduce((s,x)=>s+x,0),37);
  assert.equal(a.topics_with_both_full_topic_unique_viewers_and_creators,0);
  assert.equal(a.topics_with_verified_disjoint_independent_sample_frames,0);
  assert(a.topic_metric_coverage.every(x=>x.verified_full_topic_unique_viewers===null&&

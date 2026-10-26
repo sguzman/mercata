@@ -8,7 +8,7 @@
     "ontology/youtube/topic-observations.json"
   ],
   "total_topics": 33,
-  "total_observations": 36,
+  "total_observations": 37,
   "topics_with_selected_observations": 18,
   "topics_without_selected_observations": 15,
   "topics": [
@@ -135,9 +135,18 @@
           "geography": "Mexico",
           "population": "Online animation fans aged 14–49, n=733, who agree they watch animation series in other languages",
           "source_url": "https://blog.youtube/intl/es-419/culture-and-trends/como-los-animadores-independientes-redefinen-el-entretenimiento/"
+        },
+        {
+          "id": "alien-stage-related-views-2025",
+          "metric": "video_views",
+          "unit": "views",
+          "period": "2025-01-01 to 2025-09-15",
+          "geography": "Global",
+          "population": "YouTube views of publisher-defined videos related to the South Korean original animated series Alien Stage; report is a franchise-specific selection, not all independent animation",
+          "source_url": "https://blog.youtube/intl/pt-br/culture-and-trends/a-nova-onda-da-animacao-como-criadores-independentes-estao-redefinindo-o-entretenimento-global/"
         }
       ],
-      "source_count": 2,
+      "source_count": 3,
       "unique_people": null,
       "topic_total_views": null,
       "active_creator_count": null
@@ -677,7 +686,7 @@
       "video_uploads"
     ],
     "observations_by_metric_family": {
-      "video_views": 23,
+      "video_views": 24,
       "watch_hours": 3,
       "within_fan_sample_percent": 4,
       "event_unique_viewers": 1,
@@ -686,7 +695,7 @@
       "single_video_lifetime_views": 1,
       "video_uploads": 2
     },
-    "topics_with_two_or_more_metric_families": 3,
+    "topics_with_two_or_more_metric_families": 4,
     "topics_with_two_or_more_distinct_source_documents": 6,
     "topics_with_both_full_topic_unique_viewers_and_creators": 0,
     "topics_with_verified_disjoint_independent_sample_frames": 0,
@@ -759,13 +768,14 @@
       },
       {
         "topic_id": "general-animation",
-        "observation_count": 4,
-        "distinct_metric_family_count": 1,
+        "observation_count": 5,
+        "distinct_metric_family_count": 2,
         "metric_families": [
-          "within_fan_sample_percent"
+          "within_fan_sample_percent",
+          "video_views"
         ],
-        "source_document_count": 2,
-        "with_multiple_metric_families": false,
+        "source_document_count": 3,
+        "with_multiple_metric_families": true,
         "verified_full_topic_unique_viewers": null,
         "verified_full_topic_active_creators": null,
         "has_joint_person_and_creator_population": false,
@@ -1130,6 +1140,7 @@
       }
     ],
     "selected_multi_metric_topic_ids": [
+      "general-animation",
       "crafts",
       "sports-general",
       "football-soccer"

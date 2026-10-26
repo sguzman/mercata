@@ -259,14 +259,14 @@ test('Gender-associated research preserves reporting privacy and missing denomin
  assert(Object.values(m.unknowns).every(v=>v===null));
 });
 
-test("33 topic categories and 36 bounded observations retain separate children and learning scopes",async()=>{
+test("33 topic categories and 37 bounded observations retain separate children and learning scopes",async()=>{
   const [topic,activity,opportunity]=await Promise.all([
     load('ontology/youtube/taxonomy.json'),
     load('ontology/youtube/topic-observations.json'),
     load('ontology/youtube/opportunity-framework.json')
   ]);
   assert.equal(topic.topics.length,33);
-  assert.equal(activity.observations.length,36);
+  assert.equal(activity.observations.length,37);
   assert.equal(opportunity.topic_assessments.length,33);
   const childMusic=topic.topics.find(x=>x.id==='children-music');
   assert(childMusic);
@@ -1022,7 +1022,7 @@ test('Selected video topic upload totals and broad learning views keep different
   const [observed,dossier]=await Promise.all([
     load('ontology/youtube/topic-observations.json'),load('specimens/youtube.json')
   ]);
-  assert.equal(observed.observations.length,36);
+  assert.equal(observed.observations.length,37);
   const get=id=>observed.observations.find(x=>x.id===id);
   const a=get('morning-routine-title-uploads-h1-2026');
   const b=get('us-learning-howto-views-jun2025');
@@ -1773,4 +1773,17 @@ test('Cross-platform anime reports do not estimate YouTube unique adults or anim
  assert(d.claims.some(c=>c.id==='nielsen-us-anime-2025-streaming-minutes-not-youtube'&&c.source_ids.includes(b.source_id)));
  assert.equal(m.anime_view_geography_2023.unit,'share_of_video_view_events');
  assert(Object.values(m.unmeasured).every(v=>v===null));
+});
+
+test('Selected 2025 original animation series views remain events, not anime audiences or child profiles',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/topic-observations.json'),load('specimens/youtube.json')]);
+ const row=m.observations.find(x=>x.id==='alien-stage-related-views-2025');
+ assert(row);assert.equal(row.topic_id,'general-animation');
+ assert.equal(row.metric,'video_views');assert.equal(row.value,330000000);
+ assert.equal(row.comparison,'>');
+ assert.equal(row.period,'2025-01-01 to 2025-09-15');
+ assert.equal(row.metric_definition_revision,'before_2026_08_24');
+ assert(row.population.includes('not all independent animation'));
+ assert(d.evidence.some(x=>x.id==='youtube-brazil-2026-alien-stage-video-views'&&x.url===row.source_url));
+ assert(d.claims.some(x=>x.id==='alien-stage-330m-youtube-2025-title-scope'));
 });

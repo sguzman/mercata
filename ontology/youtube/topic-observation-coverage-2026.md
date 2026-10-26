@@ -1,6 +1,6 @@
 # YouTube topical atlas: measurement coverage is not audience size
 
-**Reviewed 2026-10-25.** This audit reconciles the [33-category research taxonomy](taxonomy.json) with the [36 existing topic-specific observations](topic-observations.json). **18** topics have at least one source-selected observation; **15** have none. Missing observations indicate unknown audience size, *not* zero viewers or creators.
+**Reviewed 2026-10-26.** This audit reconciles the [33-category research taxonomy](taxonomy.json) with the [37 existing topic-specific observations](topic-observations.json). **18** topics have at least one source-selected observation; **15** have none. Missing observations indicate unknown audience size, *not* zero viewers or creators.
 
 The [machine crosswalk](topic-observation-coverage-2026.json) preserves the observation ID, metric, unit, period, geography, population and original linked source per topic. Source counts are document counts, not independent participant samples. Categories are nonexclusive; a person, channel, video or survey respondent may belong to several.
 
@@ -15,11 +15,11 @@ No account-level observations were collected. The [audit](../../site/topic-obser
 
 ## Explicit metric-family audit (October 26, 2026)
 
-The existing **33 topics and 36 selected observations** supply **eight nominal metric types**. These are not eight independent population studies: 23 rows are video-view event counts; other rows count watch hours, uploads, survey responses, one video’s lifetime views, and several event-specific viewing indicators. Multiple metric types do **not** imply that one selected sample provides a complete audience census.
+The existing **33 topics and 37 selected observations** supply **eight nominal metric types**. These are not eight independent population studies: 23 rows are video-view event counts; other rows count watch hours, uploads, survey responses, one video’s lifetime views, and several event-specific viewing indicators. Multiple metric types do **not** imply that one selected sample provides a complete audience census.
 
 | Published observation metric | Selected observations |
 | --- | ---: |
-| Video-view events (`video_views`) | 23 |
+| Video-view events (`video_views`) | 24 |
 | Watch hours | 3 |
 | Within-selected-fan-survey percentages | 4 |
 | Event-specific unique viewers | 1 |
@@ -27,11 +27,11 @@ The existing **33 topics and 36 selected observations** supply **eight nominal m
 | Event average-minute audience | 1 |
 | Single video lifetime views | 1 |
 | Uploaded video events | 2 |
-| **Total** | **36** |
+| **Total** | **37** |
 
-**Only 3 of 33 categories contain at least two distinct metric types** within the currently admitted observations: crafts (views and uploads), sports-general (views and watch hours), and football-soccer (four metrics from one selected sports-event source). None has a matched, deduplicated **whole-category audience plus whole-category active-creator population**. The four metrics for the single football-event source are not four independent studies or four nonoverlapping audiences. Distinct source document counts similarly do not prove independently drawn channel/person sampling frames.
+**Only 4 of 33 categories contain at least two distinct metric types** within the currently admitted observations: general-animation (selected video views and fan-survey percentages), crafts (views and uploads), sports-general (views and watch hours), and football-soccer (four metrics from one selected sports-event source). None has a matched, deduplicated **whole-category audience plus whole-category active-creator population**. The four metrics for the single football-event source are not four independent studies or four nonoverlapping audiences. Distinct source document counts similarly do not prove independently drawn channel/person sampling frames.
 
-The machine record now enumerates each category's actual metric-family coverage and explicitly leaves full-category people/creator counts unknown. It is **not** a claim that other public evidence is absent globally; only that the 36 currently registered topic-specific observations do not satisfy the research task's representative multi-dimensional population requirement.
+The machine record now enumerates each category's actual metric-family coverage and explicitly leaves full-category people/creator counts unknown. It is **not** a claim that other public evidence is absent globally; only that the 37 currently registered topic-specific observations do not satisfy the research task's representative multi-dimensional population requirement.
 
 ### Requirements before an audience-size ranking
 
