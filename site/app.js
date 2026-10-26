@@ -3856,6 +3856,16 @@ function renderDemographicCrossTabs(data,dossier){
   card.append(audienceSources([x.source_id],dossier));grid.append(card);
  }
  details.append(grid);
+ const child=data.bounded_country_child_age_observations;
+ if(child?.frames?.length===3&&child?.cells?.length===5){
+  const panel=make('div','child-age-country-frames');
+  panel.append(make('h5','','Separate child age observations in Australia, the UK and the US'));
+  panel.append(make('p','measure-limit','Selected 2025 rates with incompatible age and study bases: '+
+   child.cells.map(c=>c.country+' '+c.ages+' '+c.percent+'%').join(' · ')+'.'));
+  panel.append(make('p','measure-limit','Australian sample has 1,129 children and US Pew has 3,054 parents overall; neither is an age subgroup sample size. UK measures service use, US uses parent reports of ever viewing. No common international rank, unique child count or causal country difference measured.'));
+  panel.append(audienceSources(child.frames.map(f=>f.source_id),dossier));
+  details.append(panel);
+ }
  const link=make('a','inline-link','Read cross-tab and nonresponse acceptance gates ↗');
  link.href='./ontology/youtube/demographic-cross-tab-availability-2026.md';
  link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;

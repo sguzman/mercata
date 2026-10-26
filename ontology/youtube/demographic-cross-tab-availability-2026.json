@@ -2,13 +2,16 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "demographic_cross_tabulation_nonresponse_and_availability_audit",
-  "reviewed_at": "2026-10-25",
+  "reviewed_at": "2026-10-26",
   "method": "Compare the 2026 Pew NPORS one-dimensional ever-use subgroup estimates and separate ATP news rows; register each missing joint-frequency table, subgroup count, mode, sampling restriction and access condition. No synthetic cross-tabs or individual sensitive-trait inference.",
   "population": "Pew 2026 NPORS U.S. adults 18+ (n=5,511; web/mail/phone) and separately 2026 ATP U.S. adults (n=5,166; news question); not all YouTube users, children or creators",
   "source_ids": [
     "pew-us-adults-2026",
     "pew-youtube-news-2026",
-    "analytics-audience"
+    "analytics-audience",
+    "roymorgan-young-australians-youtube-2025",
+    "ofcom-uk-online-2025",
+    "pew-parents-child-youtube-2025"
   ],
   "npors": {
     "fieldwork_start": "2026-01-30",
@@ -308,6 +311,121 @@
     "age_by_party_news_use": null,
     "source_matched_income_by_news_use": null,
     "cell_nonresponse_counts": null,
-    "subgroup_standard_errors": null
+    "subgroup_standard_errors": null,
+    "comparable_age_country_use_rank": null
+  },
+  "bounded_country_child_age_observations": {
+    "id": "three_country_nonmatched_child_age_youtube_2025",
+    "method": "Retain source-published conditional age-specific YouTube service-use estimates from three countries as separate populations, not a matched survey panel.",
+    "observation_year": 2025,
+    "country_count": 3,
+    "observation_count": 5,
+    "frames": [
+      {
+        "id": "australia_roy_morgan",
+        "source_id": "roymorgan-young-australians-youtube-2025",
+        "country": "Australia",
+        "published_at": "2026-02-17",
+        "fieldwork": "2025-04_to_2025-12",
+        "survey_sample_n": 1129,
+        "respondent_unit": "children_ages_6_to_13_in_nationwide_yas_sample",
+        "study_question": "watched_youtube_during_survey_2025",
+        "item_subgroup_n": null,
+        "subgroup_moe_pp": null,
+        "method": "provider_reported_young_australian_survey"
+      },
+      {
+        "id": "uk_ofcom_online",
+        "source_id": "ofcom-uk-online-2025",
+        "country": "United Kingdom",
+        "published_at": "2025",
+        "fieldwork": "2025",
+        "survey_sample_n": null,
+        "respondent_unit": "children_ages_8_to_14_in_ofcom_measured_population",
+        "study_question": "used_youtube",
+        "item_subgroup_n": null,
+        "subgroup_moe_pp": null,
+        "method": "ofcom_online_nation_service_use_statistic"
+      },
+      {
+        "id": "usa_pew_parent",
+        "source_id": "pew-parents-child-youtube-2025",
+        "country": "United States",
+        "published_at": "2025-10-08",
+        "fieldwork": "2025-05-13_to_2025-05-26",
+        "survey_sample_n": 3054,
+        "respondent_unit": "parent_report_about_one_selected_child_age_12_or_younger",
+        "study_question": "child_ever_watched_youtube",
+        "item_subgroup_n": null,
+        "subgroup_moe_pp": null,
+        "method": "weighted_parent_panel_self_report"
+      }
+    ],
+    "cells": [
+      {
+        "id": "aus_6_13",
+        "frame_id": "australia_roy_morgan",
+        "country": "Australia",
+        "ages": "6–13",
+        "percent": 89,
+        "unit": "percent_of_named_age_group_who_watched_youtube",
+        "item_n": null
+      },
+      {
+        "id": "aus_6_7",
+        "frame_id": "australia_roy_morgan",
+        "country": "Australia",
+        "ages": "6–7",
+        "percent": 84,
+        "unit": "percent_of_named_age_group_who_watched_youtube",
+        "item_n": null
+      },
+      {
+        "id": "aus_8_13",
+        "frame_id": "australia_roy_morgan",
+        "country": "Australia",
+        "ages": "8–13",
+        "percent": 91,
+        "unit": "percent_of_named_age_group_who_watched_youtube",
+        "item_n": null
+      },
+      {
+        "id": "uk_8_14",
+        "frame_id": "uk_ofcom_online",
+        "country": "United Kingdom",
+        "ages": "8–14",
+        "percent": 96,
+        "unit": "percent_of_named_age_group_who_used_youtube",
+        "item_n": null
+      },
+      {
+        "id": "us_2_4",
+        "frame_id": "usa_pew_parent",
+        "country": "United States",
+        "ages": "2–4",
+        "percent": 84,
+        "unit": "percent_of_parents_reporting_selected_child_ever_watched_youtube",
+        "item_n": null
+      }
+    ],
+    "sources_independent_research_organizations": 3,
+    "directly_comparable_question": false,
+    "age_bands_matched": false,
+    "direct_international_rank_valid": false,
+    "sample_design_same": false,
+    "global_children_platform_use_rate": null,
+    "country_and_age_adjusted_effect": null,
+    "statistical_significance_of_country_differences": null,
+    "verified_unique_children_watching": null,
+    "device_level_tracking_across_three_countries": null,
+    "child_survey_respondents_usa": null,
+    "subgroup_standard_errors": null,
+    "constraints": [
+      "Australia's 89% total 6–13 estimate shares respondents with its 6–7 and 8–13 subgroups; it is not a third independent Australian sample.",
+      "UK 8–14 is an Ofcom service-use measure, U.S. 2–4 is a parent report of ever watched, and Australia reports 2025 viewing; percentage subtraction between countries is not valid.",
+      "Roy Morgan's overall child respondent count 1,129, and Pew's parent n=3,054, must never be reused as an age subgroup n or its confidence interval.",
+      "The UK total and Australian and U.S. subgroup estimates are not proof of actual unique children, YouTube Kids-only use, verified age or watched child-directed content.",
+      "No legal or ethical basis to infer characteristics of individual minors, or cross-country age-adjusted rankings, from these aggregate cells."
+    ]
   }
 }

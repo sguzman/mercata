@@ -283,6 +283,12 @@ try{
     assert((await strikes.textContent()).includes('after 90 days requires Copyright School'));
     assert((await strikes.textContent()).includes('Three active strikes in 90 days'));
     assert((await strikes.textContent()).includes('a legal process, not a Content ID dispute'));
+    const childCountry=page.locator('.demographic-cross-tabs .child-age-country-frames');
+    assert.equal(await childCountry.count(),1,'Missing bounded country-age observations');
+    assert((await childCountry.textContent()).includes('Australia 6–7 84%'));
+    assert((await childCountry.textContent()).includes('United Kingdom 8–14 96%'));
+    assert((await childCountry.textContent()).includes('United States 2–4 84%'));
+    assert((await childCountry.textContent()).includes('No common international rank'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));

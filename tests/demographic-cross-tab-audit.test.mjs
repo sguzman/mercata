@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';
-import {auditDemographicCrossTabs,auditNporsYearlyDemographics} from '../site/demographic-cross-tab-audit.mjs';
+import {auditDemographicCrossTabs,auditNporsYearlyDemographics,auditAgeCountryChildFrames} from '../site/demographic-cross-tab-audit.mjs';
 const load=async p=>JSON.parse(await fs.readFile(new URL('../'+p,import.meta.url),'utf8'));
 const paths=['ontology/youtube/demographic-cross-tab-availability-2026.json','ontology/youtube/us-demographic-use-2026.json','ontology/youtube/us-news-demographic-crosswalk.json','ontology/youtube/demographic-identity-uncertainty.json','specimens/youtube.json'];
 test('Pew 2026 adult survey marginal group rates remain separate from joint people counts',async()=>{
@@ -33,4 +33,26 @@ test('NPORS two-survey audit refuses false significance, wrong subgroup rates an
  assert(auditNporsYearlyDemographics(wrongDelta,c,sources).errors.includes('stratum values or point changes not reconciled'));
  const wrongSignificance=structuredClone(m);wrongSignificance.cross_survey_2025_2026.comparability.statistical_significance_test_completed=true;
  assert(auditNporsYearlyDemographics(wrongSignificance,c,sources).errors.includes('invented statistical significance or longitudinal panel'));
+});
+
+test('Australian, UK and US child age usage is preserved as three incompatible 2025 frames',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/demographic-cross-tab-availability-2026.json'),load('specimens/youtube.json')]);
+ const rows=m.bounded_country_child_age_observations;
+ assert.deepEqual(auditAgeCountryChildFrames(m,new Set(d.evidence.map(s=>s.id))),{valid:true,errors:[]});
+ assert.deepEqual(rows.cells.map(c=>c.percent),[89,84,91,96,84]);
+ assert.deepEqual(rows.frames.map(f=>f.survey_sample_n),[1129,null,3054]);
+ assert.equal(rows.direct_international_rank_valid,false);
+ assert.equal(rows.statistical_significance_of_country_differences,null);
+ assert.equal(rows.child_survey_respondents_usa,null);
+ assert.equal(m.unavailable_joint_tables.find(x=>x.id==='age_by_country').intersection_prevalence_percent,null);
+});
+test('Country-age validator rejects fake subgroup n, sample pooling or international league tables',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/demographic-cross-tab-availability-2026.json'),load('specimens/youtube.json')]);
+ const known=new Set(d.evidence.map(s=>s.id));
+ const a=structuredClone(m);a.bounded_country_child_age_observations.cells[0].item_n=1129;
+ assert(auditAgeCountryChildFrames(a,known).errors.includes('age-country source-specific observations corrupted'));
+ const b=structuredClone(m);b.bounded_country_child_age_observations.direct_international_rank_valid=true;
+ assert(auditAgeCountryChildFrames(b,known).errors.includes('unjustified international child age comparisons'));
+ const c=structuredClone(m);c.bounded_country_child_age_observations.frames[0].source_id='unregistered';
+ assert(auditAgeCountryChildFrames(c,known).errors.includes('missing source or invented age subgroup precision'));
 });

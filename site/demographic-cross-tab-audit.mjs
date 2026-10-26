@@ -50,3 +50,31 @@ export function auditNporsYearlyDemographics(model,frameRegister,sources){
  if(Object.values(model?.unmeasured||{}).some(v=>v!==null))errors.push('unmeasured demographic outcomes invented');
  return {valid:errors.length===0,errors};
 }
+
+export function auditAgeCountryChildFrames(model,registeredSources){
+ const errors=[],x=model?.bounded_country_child_age_observations;
+ if(x?.id!=='three_country_nonmatched_child_age_youtube_2025'||
+    x?.country_count!==3||x?.observation_count!==5||
+    x?.frames?.length!==3||x?.cells?.length!==5)
+   return {valid:false,errors:['missing bounded country-age observations']};
+ if(x.frames.some(f=>!registeredSources.has(f.source_id)||
+    !model.source_ids.includes(f.source_id)||f.item_subgroup_n!==null||f.subgroup_moe_pp!==null))
+   errors.push('missing source or invented age subgroup precision');
+ if(x.frames.map(f=>f.survey_sample_n).join(',')!=='1129,,3054')errors.push('source-wide sample mismatched');
+ if(x.cells.map(c=>c.id).join(',')!=='aus_6_13,aus_6_7,aus_8_13,uk_8_14,us_2_4'||
+    x.cells.map(c=>c.percent).join(',')!=='89,84,91,96,84'||
+    x.cells.some(c=>c.item_n!==null||!x.frames.some(f=>f.id===c.frame_id&&f.country===c.country)))
+   errors.push('age-country source-specific observations corrupted');
+ if(x.directly_comparable_question!==false||x.age_bands_matched!==false||
+    x.direct_international_rank_valid!==false||x.sample_design_same!==false||
+    x.global_children_platform_use_rate!==null||
+    x.country_and_age_adjusted_effect!==null||
+    x.statistical_significance_of_country_differences!==null||
+    x.verified_unique_children_watching!==null||
+    x.device_level_tracking_across_three_countries!==null||
+    x.child_survey_respondents_usa!==null||
+    x.subgroup_standard_errors!==null||
+    model.unmeasured.comparable_age_country_use_rank!==null)
+   errors.push('unjustified international child age comparisons');
+ return {valid:errors.length===0,errors};
+}

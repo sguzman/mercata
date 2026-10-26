@@ -29,3 +29,22 @@
 Pew notes that respondents who did not answer are omitted from the published rates. Mercata has **no per-cell nonresponse counts**, no sub-group design-based margins of error, and no joint sample counts. For the published Asian group, the survey's estimate is restricted to **English-speaking Asian adults**. The U.S.-adult samples contain no children. Studio owner analytics provide some aggregated demographics under access controls but do not create a universal cross-channel person-level table.
 
 A legitimate age × country or income × residence estimate needs published compatible **joint survey tabulation**, appropriate cell denominators and weights, selection/mode documentation, confidence intervals or uncertainty, and a legal/ethical release basis. It cannot be constructed by multiplying the visible one-dimensional percentages. These missing values remain `null`; none is a claim of zero YouTube use by excluded groups.
+
+## Age by country: genuine observations in incompatible 2025 frames
+
+One country's child YouTube rate cannot fill another's missing survey cross-tab. Three independently published sources report **some actual within-country child age groups**, but their populations and use definitions differ:
+
+| Source and country | Reported age group | Reported use | What was measured |
+| --- | --- | ---: | --- |
+| [Roy Morgan, Australia](https://www.roymorgan.com/findings/10131-yas-youtube-for-young-australians-survey-december-2025) | 6–13 | 89% | YouTube watched by age-group members in the 2025 Young Australian Survey |
+| Same Australian survey | 6–7 | 84% | Within this younger age group; not an independent sample |
+| Same Australian survey | 8–13 | 91% | Within older survey children; no group-specific error published here |
+| [Ofcom Online Nation, U.K.](https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025) | 8–14 | 96% | U.K. service-use estimate; not a parent-survey response |
+| [Pew, U.S.](https://www.pewresearch.org/2025/10/08/how-parents-describe-their-kids-tech-use/) | 2–4 | 84% | Parents reporting one selected young child had **ever watched** YouTube |
+
+The Roy Morgan estimate derives from **1,129 Australian children ages 6–13** surveyed **April–December 2025** and published February 17, 2026. Its 6–7 and 8–13 rows form **subsets of the same Australian study**. Pew's **3,054 sampled U.S. parents** were interviewed May 13–26, 2025. Neither overall sample count represents the unreported **age-specific subgroup n**, and Ofcom's figure uses a different measurement design and age range.
+
+Consequently the differences among 84%, 89%, 91% and 96% **must not** be interpreted as statistically significant country differences, a global international rank, or a test that a particular child has a YouTube account. They also do not measure animation-specific viewing, net creator income, YouTube Kids-only usage, or commercial conversion. Age-matched cross-country samples with identical instruments, uncertainties, and inclusion rules remain missing, and no individual minor records have been retrieved.
+
+The U.S. 2026 **adult** NPORS age marginals above remain a fourth, incompatible frame. This bounded cross-country child comparison does **not** repair the missing adult age × country table or permit multiplying independent published age and country percentages. The machine record keeps common international rankings and all causal/geographic adjustments `null`.
+
