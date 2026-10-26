@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "game_versioned_maintenance_support_work_measurement_plan",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "butler-push",
+    "butler-linux",
+    "itch-html5",
+    "itch-quality",
+    "itch-app-quickstart",
+    "itch-no-hacks-solo-140hours-2025"
+  ],
+  "target_population": "individual_released_game_builds_per_advertised_platform",
+  "owner_game_provided": false,
+  "real_bug_reports_collected": 0,
+  "real_support_hours_logged": 0,
+  "real_builds_exercised": 0,
+  "work_record_required_fields": [
+    "event_id",
+    "project_version",
+    "platform",
+    "category",
+    "minutes",
+    "issue_id",
+    "source_of_report",
+    "reported_at_utc",
+    "resolution_status"
+  ],
+  "categories": [
+    "bug_reproduce",
+    "bug_fix",
+    "compatibility_regression",
+    "save_data_migration",
+    "security_dependency_update",
+    "platform_packaging",
+    "accessibility_regression",
+    "buyer_support",
+    "release_upload_qa"
+  ],
+  "platforms": [
+    "linux",
+    "windows",
+    "macos",
+    "html5_desktop",
+    "html5_mobile"
+  ],
+  "field_rules": {
+    "raw_work_minutes_integer_nonnegative": true,
+    "bug_time_must_include_reproduction_and_verification": true,
+    "one_issue_multiple_platform_builds_allowed": true,
+    "issue_records_can_have_multiple_hours_entries": true,
+    "customer_names_or_emails_not_required": true,
+    "browser_event_count_not_a_human_count": true,
+    "advertised_platform_only": true,
+    "released_build_sha_or_version_required": true,
+    "avoid_double_counting_same_session_across_categories": true
+  },
+  "support_budget_contract": {
+    "base_game_production_cost_separate": true,
+    "platform_specific_hours_required": true,
+    "shared_cross_platform_hours_separate": true,
+    "subscription_hosting_currency_and_month_required": true,
+    "actual_hourly_labor_cost_rate": null,
+    "hours_per_game_after_launch": null,
+    "average_support_cost_per_paid_buyer": null,
+    "gross_revenue_without_deductions_does_not_pay_labor_by_definition": true
+  },
+  "measurement_examples_synthetic_only": {
+    "Linux_bug_fix_minutes": 45,
+    "Html5_compatibility_test_minutes": 30,
+    "buyer_support_minutes": 15,
+    "example_total_minutes": 90,
+    "not_observed_creator_support": true
+  },
+  "unknown": {
+    "typical_game_postlaunch_patch_hours": null,
+    "mean_platform_maintenance_cost_usd": null,
+    "support_demand_per_paid_game_order": null,
+    "paid_game_earnings_lift_from_fixes": null,
+    "first_time_indie_developer_hourly_proceeds": null
+  },
+  "limitations": [
+    "Butler may distribute patches incrementally but the source gives no representative cost or time reduction for the publisher.",
+    "Game page view events do not identify customers, and reported bug counts do not necessarily equal independent users.",
+    "The OS/platform matrix is a testing plan; it does not prove a specific game functions on any platform.",
+    "Support minutes must be logged by a developer or authorized QA tool for a concrete build, rather than inferred from a release announcement.",
+    "The test fixture contains invented example event names and time durations for validator regression tests only, not claimed marketplace averages."
+  ]
+}

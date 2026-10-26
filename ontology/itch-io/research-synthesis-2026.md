@@ -42,6 +42,8 @@ The [source-based co-op bundle participation and allocation review](coop-bundle-
 
 The [account, person, page, team and paid seller ontology](creator-population-account-person-game-2026.md) fixes the definitions required for a valid publisher cohort while explicitly leaving the active-paid-seller count and unique-human estimate unavailable.
 
+The [release bug/compatibility/customer-support workload plan](game-patch-support-workload-2026.md) specifies versioned work logging and nonduplicated support hours without fabricating a typical rate or actually testing a game.
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*

@@ -1,0 +1,11 @@
+# Released-game maintenance, regressions and support work
+
+**Reviewed October 26, 2026.** [Machine work-log contract](game-patch-support-workload-2026.json) · [pure audit](../../site/itch-game-support-worklog.mjs). No real game, ticket queue or publisher account was supplied or accessed.
+
+The [butler update guide](https://itch.io/docs/butler/pushing.html) describes separate named release channels and incremental game-build patching. A successful upload is not evidence that a Linux executable, Windows build or browser game works after a patch. [Linux publishing guidance](https://itch.io/docs/itch/integrating/platforms/linux.html) warns of shared-library and GLIBC runtime compatibility. [HTML5 guidance](https://itch.io/docs/creators/html5) similarly requires correct package entry points and real mobile testing before advertising mobile support. Published QA targets must match the actual supported platforms.
+
+For a real game, retain the identity of every build, operating-system target and issue. A maintenance event records its bug class, original report source, reproducible issue reference, work minutes, status and tested build. Time spent diagnosing one bug, coding a fix, packaging multiple channels, migrating saves and answering customers should be **counted in separate, nonduplicated intervals**. Accessibility problems and dependency security repairs belong to the same ongoing-cost budget even if no new sale is directly attributable. Identifiable customer records are not needed for public aggregated research.
+
+This is the exact distinction needed for the fixed task to **plan a workload log for bugs, compatibility regressions and customer-support hours**. It also specifies which data a publisher must collect to estimate a cost. The [offline validator](../../site/itch-game-support-worklog.mjs) rejects missing version identifiers, noninteger work minutes, unsupported platform labels and duplicate event IDs. It returns a **descriptive number of hours logged in the supplied file**, not a predicted hourly workload or game profit.
+
+All included example minutes are synthetic QA fixtures. No ticket count, platform-specific expense, developer wage or support rate for a representative commercial game has been measured. Generalizable labor costs, customer support frequency and the influence of updates on orders remain unknown.
