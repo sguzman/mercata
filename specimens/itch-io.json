@@ -1186,6 +1186,39 @@
       "evidence_class": "first_party_historical_geographic_policy",
       "license": "Source linked and independently summarized, no personally identifiable buyer data.",
       "notes": "Official July 2025 content-category geographic restriction, not a current 2026 country-wide game purchase ban. Present-day exact classification details and seller impact unverified."
+    },
+    {
+      "id": "itch-game-server-policy-2021",
+      "url": "https://itch.io/t/1307413/does-itchio-host-cloud-servers",
+      "title": "Does itch.io host cloud servers?",
+      "published_at": "2021-04-07",
+      "publisher": "itch.io support forum, official operator answer",
+      "notes": "Operator answered that itch.io cannot run custom server-side uploaded code and developers supply custom game-server infrastructure.",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_operator_or_moderator_developer_support",
+      "license": "Original support answer linked and independently summarized."
+    },
+    {
+      "id": "itch-hotseat-server-answer-2025",
+      "url": "https://itch.io/t/4760481/can-this-site-handle-basically-hot-seat-multiplayer",
+      "title": "Can this site handle basically hot-seat multiplayer?",
+      "published_at": "2025-04-12",
+      "publisher": "itch.io support forum, moderator answer",
+      "notes": "Moderator distinguishes hosted project/browser artifacts from runtime game servers even for small games.",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_operator_or_moderator_developer_support",
+      "license": "Original support answer linked and independently summarized."
+    },
+    {
+      "id": "itch-external-network-host-2022",
+      "url": "https://itch.io/t/2090071/is-it-okay-to-use-an-external-server",
+      "title": "Is it okay to use an external server?",
+      "published_at": "2022-05-04",
+      "publisher": "itch.io support forum, moderator answer",
+      "notes": "Moderator said hosted static client can communicate with external infrastructure subject to secure networking; no specific game runtime verified.",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_operator_or_moderator_developer_support",
+      "license": "Original support answer linked and independently summarized."
     }
   ],
   "claims": [
@@ -4488,6 +4521,59 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "Unknown policy impact must not be represented as zero or multiplied by unverified UK audience totals."
+    },
+    {
+      "id": "itch-no-dedicated-runtime-server",
+      "text": "In a 2021 official support response, itch.io said developers cannot deploy custom server-side game code to its hosting; multiplayer games needing dedicated services must provide them independently.",
+      "source_ids": [
+        "itch-game-server-policy-2021"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Documented operator policy, not a measured cost or verification of any specific 2026 live game architecture."
+    },
+    {
+      "id": "itch-peer-host-does-not-infer-cloud",
+      "text": "A 2025 itch.io moderator reaffirmed that the marketplace does not provide runtime game servers, even for simple remotely shared turn-based games.",
+      "source_ids": [
+        "itch-hotseat-server-answer-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "External player-hosted, peer-to-peer or third-party networking may be viable separately but has not been tested or priced here."
+    },
+    {
+      "id": "itch-external-servers-allowed",
+      "text": "In a 2022 support answer, an itch.io moderator said an HTML client hosted on itch.io may connect to the developer's separately hosted external server, with secure network configuration required.",
+      "source_ids": [
+        "itch-external-network-host-2022"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Availability depends on CORS, browser security, TLS, protocol and runtime; no end-to-end test on an actual released game."
+    },
+    {
+      "id": "itch-listing-zero-does-not-cover-multiplayer",
+      "text": "The absence of an upfront game listing fee does not include the cost of game server hardware, third-party hosting, relays, updates or incident response for online multiplayer.",
+      "source_ids": [
+        "itch-faq",
+        "itch-game-server-policy-2021",
+        "itch-hotseat-server-answer-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "This cost category is conditional: fully offline and local-only games need not incur a dedicated online server hosting bill."
+    },
+    {
+      "id": "itch-online-server-costs-unmeasured",
+      "text": "The platform's hosting and support rules supply no representative median monthly cost, uptime, latency, anti-abuse expense or online-multiplayer game profitability.",
+      "source_ids": [
+        "itch-game-server-policy-2021",
+        "itch-external-network-host-2022"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "An unknown or zero dedicated-server cost depends on a specified game networking architecture; not a platform-level earning estimate."
     }
   ],
   "observations": [

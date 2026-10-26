@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "game_file_hosting_vs_live_multiplayer_cost_boundary",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-game-server-policy-2021",
+    "itch-hotseat-server-answer-2025",
+    "itch-external-network-host-2022",
+    "itch-faq",
+    "itch-html5"
+  ],
+  "platform_services": {
+    "project_page_hosted": true,
+    "downloadable_game_files_hosted": true,
+    "browser_static_assets_hosted": true,
+    "custom_dedicated_game_server_execution_supplied_by_itch": false,
+    "custom_game_server_billing_included_in_listing": false,
+    "existing_publisher_account_used": false
+  },
+  "networking_scenarios": [
+    {
+      "id": "offline_solo_2d",
+      "gameplay_runtime_host": "buyer_device",
+      "required_custom_public_multiplayer_server": false,
+      "incremental_multiplayer_server_monthly_cost_usd": 0,
+      "scope_condition": "Fully offline game with no network services; excludes optional telemetry, leaderboards, update endpoints or online accounts."
+    },
+    {
+      "id": "local_network_multiplayer",
+      "gameplay_runtime_host": "players_own_devices",
+      "required_custom_public_multiplayer_server": false,
+      "incremental_multiplayer_server_monthly_cost_usd": null,
+      "scope_condition": "LAN/local model avoids assuming centralized gameplay host, but client support, matchmaking, network compatibility and relay needs are not measured."
+    },
+    {
+      "id": "online_dedicated_backend",
+      "gameplay_runtime_host": "developer_or_third_party",
+      "required_custom_public_multiplayer_server": true,
+      "incremental_multiplayer_server_monthly_cost_usd": null,
+      "concurrent_player_capacity": null,
+      "scope_condition": "Separate servers/hosting, monitoring, authentication, security and operational maintenance are not supplied by itch.io."
+    },
+    {
+      "id": "html5_external_backend",
+      "gameplay_runtime_host": "developer_or_third_party",
+      "required_custom_public_multiplayer_server": "depends_on_design",
+      "incremental_multiplayer_server_monthly_cost_usd": null,
+      "tls_and_browser_compatibility_verified": null,
+      "scope_condition": "A browser-hosted client connecting to external HTTPS services is a documented pattern, not an executable QA result."
+    }
+  ],
+  "buyer_unit_constraints": [
+    "Browser game launches and multiplayer sessions are not purchasers.",
+    "Game binary hosted on itch.io is not proof that a separate server is online.",
+    "A game's platform purchase entitlement may persist after third-party online infrastructure stops operating."
+  ],
+  "unobserved": {
+    "median_multiplayer_hosting_expense_usd": null,
+    "typical_backend_developer_hours": null,
+    "game_profit_after_multiplayer_cost": null,
+    "multiplayer_buyer_conversion": null,
+    "uptime_or_maintenance_cost": null
+  },
+  "limits": [
+    "Published operator/moderator support replies from 2021–2025 may evolve; current account eligibility and backend provider pricing are not verified.",
+    "Game networking architecture determines whether a server is required; do not impose a fixed server bill on offline games.",
+    "No actual game binary, server process, player account or network endpoint has been tested.",
+    "An external host might offer a free tier or the author may self-host, but neither entails guaranteed operating cost of zero or reliability."
+  ]
+}

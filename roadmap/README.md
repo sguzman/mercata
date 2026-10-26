@@ -184,3 +184,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io buyer versus seller geography (2026-10-26):** traced July 2025 category-specific UK content page restriction, published appeal path and pre-existing buyer download continuity; neither a universal UK game ban nor current paid buyer losses inferred. 80% → 81% (Δ +1 pp, raw 80.86%). [Study](../ontology/itch-io/buyer-seller-geographic-policy-2026.md).
+
+
+**itch.io multiplayer server cost boundary (2026-10-26):** official operator/moderator confirmation that hosted game files/browser clients do not include server-side game execution. Different architecture scenarios preserve unknown costs. 81% → 81% (Δ +0 pp, raw 81.09%). [Source review](../ontology/itch-io/multiplayer-hosting-boundary-2026.md).
