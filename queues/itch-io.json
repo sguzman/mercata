@@ -774,7 +774,7 @@
           "title": "Define earning-population denominator",
           "acceptance": "Separate all users, active sellers and paid sellers.",
           "weight": 1,
-          "progress": 70,
+          "progress": 79,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/developer-income-cases-2026.json",
@@ -790,7 +790,11 @@
             "tests/itch-cohort-protocol.test.mjs",
             "ontology/itch-io/community-analytics-sample-2026.json",
             "ontology/itch-io/community-analytics-sample-2026.md",
-            "tests/itch-io-community-analytics.test.mjs"
+            "tests/itch-io-community-analytics.test.mjs",
+            "site/itch-income-histogram.mjs",
+            "ontology/itch-io/income-histogram-protocol-2026.json",
+            "ontology/itch-io/income-histogram-protocol-2026.md",
+            "tests/itch-io-income-histogram.test.mjs"
           ]
         },
         {
@@ -799,13 +803,17 @@
           "title": "Find representative mean earnings",
           "acceptance": "Include amount, currency, period, sample and bias or mark unknown.",
           "weight": 1,
-          "progress": 25,
+          "progress": 33,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/community-analytics-sample-2026.json",
             "ontology/itch-io/community-analytics-sample-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-community-analytics.test.mjs"
+            "tests/itch-io-community-analytics.test.mjs",
+            "site/itch-income-histogram.mjs",
+            "ontology/itch-io/income-histogram-protocol-2026.json",
+            "ontology/itch-io/income-histogram-protocol-2026.md",
+            "tests/itch-io-income-histogram.test.mjs"
           ]
         },
         {
@@ -814,13 +822,17 @@
           "title": "Find representative median earnings",
           "acceptance": "Include zero earners and method or mark unknown.",
           "weight": 1,
-          "progress": 32,
+          "progress": 43,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/community-analytics-sample-2026.json",
             "ontology/itch-io/community-analytics-sample-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-community-analytics.test.mjs"
+            "tests/itch-io-community-analytics.test.mjs",
+            "site/itch-income-histogram.mjs",
+            "ontology/itch-io/income-histogram-protocol-2026.json",
+            "ontology/itch-io/income-histogram-protocol-2026.md",
+            "tests/itch-io-income-histogram.test.mjs"
           ]
         },
         {
@@ -829,13 +841,17 @@
           "title": "Document earnings percentiles",
           "acceptance": "Seek p10, p25, p75, p90 and top-tail evidence.",
           "weight": 1,
-          "progress": 47,
+          "progress": 58,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/community-analytics-sample-2026.json",
             "ontology/itch-io/community-analytics-sample-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-community-analytics.test.mjs"
+            "tests/itch-io-community-analytics.test.mjs",
+            "site/itch-income-histogram.mjs",
+            "ontology/itch-io/income-histogram-protocol-2026.json",
+            "ontology/itch-io/income-histogram-protocol-2026.md",
+            "tests/itch-io-income-histogram.test.mjs"
           ]
         },
         {
@@ -844,7 +860,7 @@
           "title": "Study share earning zero",
           "acceptance": "State who is counted and why the measure may be biased.",
           "weight": 1,
-          "progress": 65,
+          "progress": 75,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
@@ -857,7 +873,11 @@
             "tests/itch-cohort-protocol.test.mjs",
             "ontology/itch-io/community-analytics-sample-2026.json",
             "ontology/itch-io/community-analytics-sample-2026.md",
-            "tests/itch-io-community-analytics.test.mjs"
+            "tests/itch-io-community-analytics.test.mjs",
+            "site/itch-income-histogram.mjs",
+            "ontology/itch-io/income-histogram-protocol-2026.json",
+            "ontology/itch-io/income-histogram-protocol-2026.md",
+            "tests/itch-io-income-histogram.test.mjs"
           ]
         },
         {
@@ -1595,7 +1615,7 @@
           "title": "Audit unknowns and comparability",
           "acceptance": "Inspect denominators, missing data and misleading comparisons.",
           "weight": 1,
-          "progress": 97,
+          "progress": 98,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/catalog-snapshot-2026.md",
@@ -1627,7 +1647,11 @@
             "tests/itch-io-synthesis.test.mjs",
             "ontology/itch-io/community-analytics-sample-2026.json",
             "ontology/itch-io/community-analytics-sample-2026.md",
-            "tests/itch-io-community-analytics.test.mjs"
+            "tests/itch-io-community-analytics.test.mjs",
+            "site/itch-income-histogram.mjs",
+            "ontology/itch-io/income-histogram-protocol-2026.json",
+            "ontology/itch-io/income-histogram-protocol-2026.md",
+            "tests/itch-io-income-histogram.test.mjs"
           ]
         },
         {
@@ -1636,7 +1660,7 @@
           "title": "Review all public artifacts",
           "acceptance": "Verify rights, privacy, neutral tone and data suitability.",
           "weight": 1,
-          "progress": 89,
+          "progress": 95,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/transaction-cohort-protocol-2026.json",
@@ -1658,7 +1682,11 @@
             "tests/itch-io-discovery-quality.test.mjs",
             "ontology/itch-io/research-synthesis-2026.json",
             "ontology/itch-io/research-synthesis-2026.md",
-            "tests/itch-io-synthesis.test.mjs"
+            "tests/itch-io-synthesis.test.mjs",
+            "site/itch-income-histogram.mjs",
+            "ontology/itch-io/income-histogram-protocol-2026.json",
+            "ontology/itch-io/income-histogram-protocol-2026.md",
+            "tests/itch-io-income-histogram.test.mjs"
           ]
         },
         {

@@ -1,0 +1,13 @@
+# itch.io — privacy-preserving seller income distributions
+
+**Protocol only, not observed income.** The existing [first-release sampling model](transaction-cohort-protocol-2026.md) defines an eligible publisher as a seller whose **first positive-minimum-price commercial game** was released within a known calendar cohort, including those who earned zero or later withdrew/delisted a game. The new [grouped measurement protocol](income-histogram-protocol-2026.json) and [pure validator](../../site/itch-income-histogram.mjs) extend this without handling any raw buyer identity, seller names or payment records.
+
+## Why a revenue histogram matters
+
+A meaningful zero-income fraction and median need the **entire eligible cohort**, including unpopular unsold games, not a voluntary list of creators who made interesting sales. Released public games are not all selling games. A donated free game does not belong to a positive-price seller cohort. Each cohort must follow the same seller/account definition, release window (30, 90 or 365 days) and proceeds accounting basis, including refunds.
+
+The validator accepts an owner-approved already aggregated set of **nonoverlapping cents intervals**, with at least **five publishers in every populated public bin**. It requires that each count adds up to the explicitly covered sample, that all money brackets are contiguous, and that no buyer/publisher identity fields or account tokens are present. An exact-zero interval of [0,1) cents can express how many in the *covered* cohort received nothing, but only if zero earners and removed/archived participants were not excluded.
+
+A median from grouped brackets is only an **interval**; it is not a precise dollar figure. A mean cannot be recovered from count-only bins without within-bin value information, so the tool explicitly returns null. Even complete aggregation among volunteers never authorizes the **marketwide** mean, median or success probability: inclusion probabilities or representative population coverage must first be demonstrated.
+
+The executable test values (ten synthetic developers, five in a zero bin and five in a positive bin) exist to verify validation and privacy behavior, **not to report ten observed commercial sellers**. No real data, seller permission, or sales experiment has been collected in this increment.

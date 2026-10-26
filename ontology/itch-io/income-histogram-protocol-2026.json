@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "privacy_preserving_grouped_seller_income_measurement_protocol",
+  "created_at": "2026-10-26",
+  "input_eligibility": {
+    "publisher_definition": "first_positive_price_game_publisher",
+    "followup_days": [
+      30,
+      90,
+      365
+    ],
+    "money_unit": "settled_net_proceeds_cents",
+    "data_owner_authorization_required": true,
+    "redistribution_permission_required": true,
+    "identity_data_forbidden": true,
+    "minimum_positive_publisher_count_per_bin": 5,
+    "cohort_must_include_zero_paid_sales": true,
+    "cohort_must_include_delisted_game_publisher": true
+  },
+  "quantiles": {
+    "method": "descriptive_rank_interval_from_ordered_nonoverlapping_money_bins",
+    "sample_median_is_exact": false,
+    "mean_from_histogram_without_value_sums": false,
+    "platform_population_inference": false,
+    "zero_proceeds_requires_one_cent_0_to_1_interval": true
+  },
+  "example_bins_for_synthetic_tests_only": [
+    {
+      "lower_cents": 0,
+      "upper_exclusive_cents": 1,
+      "count": 5
+    },
+    {
+      "lower_cents": 1,
+      "upper_exclusive_cents": 10001,
+      "count": 5
+    }
+  ],
+  "privacy": {
+    "buyer_data_acquired": false,
+    "seller_identity_acquired": false,
+    "source_account_tokens_acquired": false,
+    "public_small_positive_cells_permitted": false
+  },
+  "real_observations": {
+    "authorized_real_cohorts": 0,
+    "median_itch_paid_seller_net_proceeds_cents": null,
+    "mean_itch_paid_seller_net_proceeds_cents": null,
+    "share_of_itch_paid_sellers_zero_earning": null,
+    "mean_developer_profit_cents": null
+  },
+  "limits": [
+    "The sample histogram is not an itch.io platform income census; positive selection and sampling bias remain unless a validated complete frame exists.",
+    "Bin bounds cannot recover the exact sample median or mean; an open upper bin prevents a finite upper median bound.",
+    "Even a nonidentifying complete volunteered subset is not a probability sample of all paid game publishers.",
+    "Zero paid-game sales and zero payout after refunds/fees are not necessarily identical; this protocol measures the latter.",
+    "Synthetic test inputs are not empirical game sales or income evidence.",
+    "No account, human, payment, game launch or outside store action is authorized by the protocol."
+  ]
+}
