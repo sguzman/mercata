@@ -28,3 +28,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io catalog observation (2026-10-26):** preserved three exact public game-directory filter result counters with source URLs and population limits. No sales or buyer counts were inferred. Task-weighted progress: **21% → 23%**, Δ **+2 pp**; [evidence snapshot](../ontology/itch-io/catalog-snapshot-2026.md).
+
+
+**itch.io developer income case register (2026-10-26):** three voluntary public developer disclosures entered with explicit sampling, product-scope and revenue-route distinctions. No representative earning distribution inferred. Score moved **23% → 26%** (Δ **+3 pp**). [Cases and limitations](../ontology/itch-io/developer-income-cases-2026.md).

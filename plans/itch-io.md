@@ -243,3 +243,8 @@ Prepare falsifiable and bounded release strategies; do not conduct experiments w
 ## Boundaries and evidence rules
 
 The [machine-readable plan](itch-io.json) tracks the 244 original and detailed tasks with stable IDs, priorities, acceptance criteria, and zero progress. The [original baseline queues](../queues/itch-io.json) remain intact. The [human ontology](../ontology/itch-io/README.md) and [machine vocabulary](../ontology/itch-io/vocabulary.json) define terminology without asserting market outcomes. Research has begun through official published sources and a bounded catalog snapshot; purchases, commercial game publication and experiments have **not** been performed. Read [official platform rules](../ontology/itch-io/commercial-rules-2026.md) and [dated game catalog observations](../ontology/itch-io/catalog-snapshot-2026.md). Require public dated evidence, matched units and populations; undisclosed earnings are unknown rather than zero.
+
+
+## Income-case research (2026-10-26)
+
+Three public developer disclosures were entered in a [bounded case register](../ontology/itch-io/developer-income-cases-2026.md). They cannot establish the average or median developer's earnings. The current 244-task score is 26%; commercial tests and private account work have not occurred.

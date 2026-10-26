@@ -174,6 +174,39 @@
       "evidence_class": "official",
       "license": "Public catalog result counts and URLs only; no listings or personal information reproduced.",
       "notes": "Time-variable browse counter, not a audited marketplace census. Filtered catalog can be indexed asynchronously or exclude restricted pages."
+    },
+    {
+      "id": "itch-case-hive",
+      "url": "https://skydome.itch.io/thehive/devlog/1142956/itchio-sales-reality-check-and-why-it-doesnt-mean-your-game-is-bad",
+      "title": "The Hive: itch.io sales reality check",
+      "publisher": "Individual itch.io game developers",
+      "published_at": "2025-12-14",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "anecdotal",
+      "license": "Developer-published figures summarized with attribution and links; no screenshots or private analytics collected.",
+      "notes": "Voluntary unaudited self-disclosure. Nonrandom example, not a population study."
+    },
+    {
+      "id": "itch-case-notjam",
+      "url": "https://itch.io/blog/1284030/2025-in-review",
+      "title": "Not Jam: 2025 in review",
+      "publisher": "Individual itch.io game developers",
+      "published_at": "2025-12-31",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "anecdotal",
+      "license": "Developer-published figures summarized with attribution and links; no screenshots or private analytics collected.",
+      "notes": "Voluntary unaudited self-disclosure. Nonrandom example, not a population study."
+    },
+    {
+      "id": "itch-case-exodrifter",
+      "url": "https://exodrifter.itch.io/gender-dysphoria/devlog/300006/pay-what-you-want-sales-and-analytics",
+      "title": "Pay-what-you-want sales and analytics",
+      "publisher": "Individual itch.io game developers",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "anecdotal",
+      "license": "Developer-published figures summarized with attribution and links; no screenshots or private analytics collected.",
+      "notes": "Voluntary unaudited self-disclosure. Nonrandom example, not a population study."
     }
   ],
   "claims": [
@@ -514,6 +547,36 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "Tag-based classification overlaps with other genres; not a verified commercial 2D audience."
+    },
+    {
+      "id": "case-hive-revenue",
+      "text": "In a December 2025 voluntary devlog, one developer reported 17,000 itch.io page views, 414 sales, and USD 706.73 in total itch.io revenue for a game.",
+      "source_ids": [
+        "itch-case-hive"
+      ],
+      "limitations": "Self-reported single-title figures; sample selected by publisher, revenue accounting and observation window not independently audited.",
+      "confidence": "medium",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "case-notjam-games",
+      "text": "A December 2025 developer retrospective reported lifetime 52,217 game page views, 4,763 game downloads, 19,548 game browser plays and USD 24 game-category revenue.",
+      "source_ids": [
+        "itch-case-notjam"
+      ],
+      "limitations": "Game-category subset of a multiproduct publishing account; voluntary self-report, not individual product or population income data.",
+      "confidence": "medium",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "case-exodrifter-routes",
+      "text": "A developer reported two distinct pay-what-you-want page payments of USD 25 and USD 2 before fees, alongside roughly USD 760 in separate cooperative bundle proceeds for the game.",
+      "source_ids": [
+        "itch-case-exodrifter"
+      ],
+      "limitations": "A narrative 2020–2021 case with heterogeneous transaction routes, no profit audit, and no inference to current typical paid-game outcomes.",
+      "confidence": "medium",
+      "observed_at": "2026-10-26"
     }
   ],
   "observations": [

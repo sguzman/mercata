@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Voluntary game-income cases retain incompatible denominators and never become a platform median',()=>{
+ const a=read('ontology/itch-io/developer-income-cases-2026.json');
+ const d=read('specimens/itch-io.json');
+ assert.equal(a.studies.length,3);
+ assert.equal(new Set(a.studies.map(s=>s.publisher)).size,3);
+ assert(a.studies.every(s=>s.source_ids.every(id=>d.evidence.some(e=>e.id===id))));
+ assert(a.studies.every(s=>s.net_profit_usd===null));
+ assert.equal(a.representative_income_median,null);
+ assert.equal(a.representative_income_mean,null);
+ assert.equal(a.representative_zero_earner_count,null);
+ assert.equal(a.target_population_sample_size,null);
+ assert.equal(a.publisher_selection_probability,null);
+ assert.equal(a.causal_discovery_effect,null);
+ assert(a.studies.find(s=>s.id==='not_jam_games').paid_sales===null);
+ assert.equal(a.studies.find(s=>s.id==='the_hive').reported_revenue_usd,706.73);
+ assert.equal(a.studies.find(s=>s.id==='exodrifter').bundle_income_usd,760);
+});
