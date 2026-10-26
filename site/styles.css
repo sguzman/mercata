@@ -163,8 +163,12 @@ h1 em {font-style:italic;color:var(--accent)}
 .queue-task-list {padding-left:23px;margin:15px 0 0}
 .queue-task-list li {padding:5px 0;font-size:12px}
 .queue-task-list p {color:var(--muted);margin:3px 0}
-@media(max-width:700px){.dossier-shell{padding:19px}.dossier-head h3{font-size:29px}.dossier-stats,.dossier-evidence,.dossier-queues{grid-template-columns:repeat(2,1fr)}.dossier-evidence,.dossier-queues{gap:10px}}
-@media(max-width:480px){.dossier-stats{grid-template-columns:repeat(2,1fr)}.dossier-evidence,.dossier-queues{grid-template-columns:1fr}}
+@media(max-width:700px){.dossier-shell{padding:19px}.dossier-head h3{font-size:29px}.dossier-stats,.dossier-evidence,.dossier-queues{grid-template-columns:repeat(2,minmax(0,1fr))}.dossier-evidence,.dossier-queues{gap:10px}}
+@media(max-width:480px){.dossier-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.dossier-evidence,.dossier-queues{grid-template-columns:minmax(0,1fr)}}
+/* Allow research grid tracks to shrink around intentionally scrollable tables at phone widths. */
+.dossier-evidence,.dossier-section,.dossier-queues,.research-item{min-width:0}
+.dossier-section,.research-item{overflow-wrap:anywhere}
+.income-table-wrap{max-width:100%;min-width:0}
 
 /* Per-specimen social audience atlas */
 .audience-atlas {border-top:1px solid var(--line);margin-top:35px;padding-top:30px}
