@@ -42,7 +42,8 @@ test('Four distinct sponsorship datasets retain incompatible category, time and 
  assert.equal(fees.period_comparable_with_thoughtleaders,false);
  assert.deepEqual(fees.selected_niches.map(x=>x.median_agreed_creator_fee_usd),[800,775,560,500,450,400]);
  assert(fees.selected_niches.every(x=>x.median_fee_per_1000_creator_average_views_usd>0));
- assert(fees.selected_niches.every(x=>!thought.categories.some(y=>y.id===x.id && y.sponsored_videos===x.median_agreed_creator_fee_usd)));
+ assert.notEqual(fees.unit,thought.unit,'Accepted fees are not detected long-form upload counts');
+ assert(fees.platform_scope.startsWith('crossplatform_'));
  assert(Object.values(fees.missing).every(x=>x===null));
  assert(Object.values(data.unmeasured).every(x=>x===null));
  assert(data.cross_dataset_rules.some(x=>x.includes('Do not add detections')));

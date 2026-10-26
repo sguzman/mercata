@@ -589,7 +589,7 @@ try{
     assert((await cadenceStudy.textContent()).includes('Middle half: 2–8 uploads/month'));
     assert((await cadenceStudy.textContent()).includes('does not establish causation'));
     const sponsorStudy=page.locator('.sponsor-categories');
-    assert.equal(await sponsorStudy.locator('.sponsor-category-card').count(),11,'Missing sourced long-form sponsorship categories');
+    assert.equal(await sponsorStudy.locator('.sponsor-category-card:not(.sponsor-niche-fee-card)').count(),11,'Missing sourced long-form sponsorship categories');
     await sponsorStudy.locator('summary').click();
     assert((await sponsorStudy.textContent()).includes('176,686 detections (6.1%)'));
     assert((await sponsorStudy.textContent()).includes('newcomer zero-earner share'));
