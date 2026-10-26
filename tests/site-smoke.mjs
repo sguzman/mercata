@@ -449,6 +449,11 @@ try{
     assert((await people.textContent()).includes('rolling 28-day'));
     assert((await people.textContent()).includes('up to 90 days'));
     assert((await people.textContent()).includes('worldwide person census'));
+    const demographicLimits=people.locator('.demographic-reporting-limits');
+    assert.equal(await demographicLimits.count(),1,'Missing Analytics privacy-suppression scope');
+    assert((await demographicLimits.textContent()).includes('threshold is unpublished'));
+    assert((await demographicLimits.textContent()).includes('Private or unlisted videos'));
+    assert((await demographicLimits.textContent()).includes('not proof of zero viewers'));
     const seasonality=page.locator('.children-seasonality');
     assert.equal(await seasonality.locator('.children-seasonality-card').count(),3,'Missing bounded child viewing yearly observations');
     await seasonality.locator('summary').click();

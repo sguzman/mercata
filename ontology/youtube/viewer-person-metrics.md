@@ -41,3 +41,14 @@ The [Studio unique-viewer guidance](https://support.google.com/youtube/answer/75
 A hypothetical report of 80% logged-in viewing **does not** establish that 20% of unique global YouTube viewers are unregistered, that 20% of one channel's fans are unsubscribed, or that 20% of the audience comprises new people. That inference would require a specifically authorized, properly defined deduplicated and representative population frame, not the reported metric.
 
 The updated [machine observability contract](viewer-person-metrics.json) and [regression validator](../../site/viewer-login-audit.mjs) record these non-equivalences. **No actual owner API row, unregistered viewer count, platform registration population or conversion outcome was observed.**
+
+
+## Owner demographics and hidden reporting rows (reviewed October 25, 2026)
+
+YouTube's official [limited Analytics data guide](https://support.google.com/youtube/answer/9101241?hl=en) explains that creator reports can **omit small age, gender, geography, search-term and external-URL cells**, and that a report's displayed category rows may **not sum to its overall total**. The precise threshold is deliberately unpublished and can change; it is not acceptable to insert a guessed minimum sample size or count missing rows as zero actual people.
+
+For **private or unlisted videos**, age and gender breakdowns are unavailable regardless of traffic. Other audience metrics may be limited when an audience watches Made for Kids material or when there is insufficient relevant data. The help guide distinguishes geography revenue measures (which do not use the same geography reporting threshold) from geography viewer rows; an accessible payout does not reveal the identity of the viewers or an unrestricted age distribution.
+
+Google's [YouTube Analytics API dimensions reference](https://developers.google.com/youtube/analytics/dimensions) defines ageGroup buckets (from 13–17 through 65+) and gender categories (female, male, user-specified) for **logged-in users associated with an owner-authorized report**. These values are **report dimensions**, not a population-level sex/gender census, age identification of individual viewers, or a confirmed exclusion of younger people from all YouTube viewing. The public channel API does not expose each creator's audience breakdown as a complete public record.
+
+An **omitted report cell**, a **survey respondent's nonresponse**, a **logged-out viewer** and a **non-viewing person** are four distinct missingness categories. No actual creator account was accessed and neither a platform-wide suppression rate nor a survey response adjustment was observed; these remain explicitly unknown. This section documents the data gate, not a technique to bypass suppression or profile minors.

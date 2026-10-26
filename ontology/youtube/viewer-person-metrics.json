@@ -180,7 +180,10 @@
     "independent_channel_owners": null,
     "duplicate_channels_per_owner": null,
     "cross_channel_person_overlap": null,
-    "unique_topic_audiences": null
+    "unique_topic_audiences": null,
+    "demographic_suppression_row_threshold": null,
+    "platformwide_demographic_missingness_rate": null,
+    "channel_specific_demographic_nonresponse": null
   },
   "login_state_observability": {
     "as_of": "2026-10-25",
@@ -261,5 +264,109 @@
     "creator_channel_signed_out_unique_people": null,
     "all_global_viewer_login_fraction": null,
     "logged_out_conversion_to_customer": null
+  },
+  "owner_demographic_suppression": {
+    "review_date": "2026-10-25",
+    "source_ids": [
+      "yt-owner-analytics-limited-data-2026",
+      "yt-analytics-demographic-dimensions-2026"
+    ],
+    "source_population": "authorized_owner_channel_or_video_reports_not_public_platform_user_census",
+    "observed_youtube_creator_accounts_count": 0,
+    "private_owner_accounts_accessed": false,
+    "public_channel_api_demographic_data_available": false,
+    "precise_public_suppression_threshold": null,
+    "actual_sample_n": null,
+    "suppressed_row_count": null,
+    "omitted_unique_people_count": null,
+    "survey_nonresponse_rate": null,
+    "suppression_conditions": [
+      {
+        "id": "low_observation_volume",
+        "source_id": "yt-owner-analytics-limited-data-2026",
+        "applies_to": [
+          "age",
+          "gender",
+          "geography"
+        ],
+        "reported_behavior": "No full breakdown when traffic or eligible denominator too small",
+        "threshold_n": null
+      },
+      {
+        "id": "filtered_small_dimension",
+        "source_id": "yt-owner-analytics-limited-data-2026",
+        "applies_to": [
+          "gender",
+          "geography",
+          "search_terms",
+          "external_urls"
+        ],
+        "reported_behavior": "Some category rows absent even when total contains associated activity",
+        "threshold_n": null
+      },
+      {
+        "id": "private_or_unlisted_video_demographics",
+        "source_id": "yt-owner-analytics-limited-data-2026",
+        "applies_to": [
+          "age",
+          "gender"
+        ],
+        "reported_behavior": "Demographics not displayed for private or unlisted video regardless of traffic",
+        "threshold_n": null
+      },
+      {
+        "id": "made_for_kids_audience",
+        "source_id": "yt-owner-analytics-limited-data-2026",
+        "applies_to": [
+          "audience_reports"
+        ],
+        "reported_behavior": "Some audience figures may be limited for child-directed viewing",
+        "threshold_n": null
+      }
+    ],
+    "dimension_definitions": [
+      {
+        "id": "ageGroup",
+        "source_id": "yt-analytics-demographic-dimensions-2026",
+        "scope": "logged_in_users_associated_with_authorized_report",
+        "api_values": [
+          "age13-17",
+          "age18-24",
+          "age25-34",
+          "age35-44",
+          "age45-54",
+          "age55-64",
+          "age65-"
+        ],
+        "verified_full_viewer_age_distribution": false
+      },
+      {
+        "id": "gender",
+        "source_id": "yt-analytics-demographic-dimensions-2026",
+        "scope": "logged_in_users_associated_with_authorized_report",
+        "api_values": [
+          "female",
+          "male",
+          "user_specified"
+        ],
+        "verified_full_viewer_gender_distribution": false
+      }
+    ],
+    "data_availability_caveats": [
+      "The aggregate total may include view events omitted from displayed geographical or demographic rows.",
+      "YouTube's exact privacy and small-cell thresholds are unpublished and may change without notice.",
+      "A blank, dash or zero in a limited report cannot be interpreted as zero true viewers for a subgroup.",
+      "Owner-only demographic dimensions describe logged-in accounts associated with the specific report, not a census of all viewers or everyone in a country.",
+      "YouTube reports geography revenue separately without the same geography threshold, but that does not provide demographic counts or individual identities.",
+      "No ages, gender, locations or viewing behaviors were assigned to actual people in this research."
+    ],
+    "geography_revenue_same_privacy_threshold_applies": false,
+    "exact_suppression_rule_inferable": false,
+    "unknown_row_assumed_zero": false,
+    "extrapolation_to_global_platform_population_allowed": false,
+    "user_or_minor_profiles_collected": false,
+    "suppression_rate_platformwide": null,
+    "observed_age_gender_join_counts": null,
+    "validated_person_nonresponse_correction": null
   }
 }

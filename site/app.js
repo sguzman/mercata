@@ -1460,6 +1460,15 @@ function renderViewerPersonMetrics(data,dossier){
  details.append(make('p','measure-limit','Monthly audience = rolling 28-day channel estimate. Unique viewers = owner-scoped modeled people for selected periods up to 90 days. Neither is a published worldwide person census.'))
  if(data.login_state_observability){details.append(make('p','measure-limit','The API viewerPercentage refers to login status while watching, not a distinct count of signed-out people, unique world users, or customer accounts. No owner report was obtained.'));}
 ;
+ const supp=data.owner_demographic_suppression;
+ if(supp?.suppression_conditions?.length===4){
+  const box=make('div','demographic-reporting-limits');
+  box.append(make('h5','','Owner Analytics: withheld demographic and geography cells'));
+  box.append(make('p','measure-limit','YouTube can suppress low-count age, gender, geography or traffic-source rows. Displayed rows may not sum to reported totals, and the threshold is unpublished.'));
+  box.append(make('p','measure-limit','Private or unlisted videos do not show age/gender breakdowns. Logged-in age and gender API dimensions are owner-scoped, not a worldwide census.'));
+  box.append(make('p','measure-limit','An omitted or dashed subgroup row is not proof of zero viewers. No creator accounts, children, suppression rates, survey nonresponses or identifiable demographic records were sampled.'));
+  box.append(audienceSources(supp.source_ids,dossier));details.append(box);
+ }
  details.append(make('p','measure-limit','Global unique people, nonregistered usage share, independent channel owners and cross-channel unique viewer overlap: unknown.'));
  const link=make('a','inline-link','Read source-backed units, access rules and remaining census gaps ↗');
  link.href='./ontology/youtube/viewer-person-metrics.md';link.target='_blank';link.rel='noopener noreferrer';

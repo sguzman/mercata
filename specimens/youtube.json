@@ -4145,6 +4145,28 @@
       "evidence_class": "commercial_selected_creator_video_packaging_snapshot_rotation_detector",
       "license": "Limited independent paraphrase of published aggregates and source link; no scraped video/channel list or graphics copied",
       "notes": "Vendor AI-authored article describing 828,766 tracked selected video objects from 128,002 creator channels, Apr–Sep 2026, first week only. Rotation detection 460, 442 externally settled; does not verify actual Studio tests, true winners, CTR or watch time."
+    },
+    {
+      "id": "yt-owner-analytics-limited-data-2026",
+      "url": "https://support.google.com/youtube/answer/9101241?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Understand limited data in YouTube Analytics",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_current_youtube_studio_analytics_privacy_threshold_policy",
+      "license": "Brief independently authored summary with public source link; no private Creator Studio data copied",
+      "notes": "Official limited-data rules: low-traffic/filtered age, gender, country, search and URL rows; unknown undisclosed thresholds; private/unlisted demographics unavailable, Made for Kids audience limitations; geography revenue not subject to same country threshold. Not a YouTube person population observation."
+    },
+    {
+      "id": "yt-analytics-demographic-dimensions-2026",
+      "url": "https://developers.google.com/youtube/analytics/dimensions",
+      "publisher": "Google for Developers",
+      "title": "YouTube Analytics API dimensions",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_authenticated_analytics_api_dimension_documentation",
+      "license": "Independently summarized dimension identifiers and definitions; no raw account Analytics retrieved",
+      "notes": "AgeGroup and gender core dimensions describe logged-in users associated with scoped authorized reports. Age groups 13–17 through 65+; gender female, male, user_specified. Neither comprises an unrestricted platform-wide demographic census."
     }
   ],
   "claims": [
@@ -9113,6 +9135,17 @@
       "confidence": "low",
       "observed_at": "2026-10-25",
       "limitations": "Vendor-selected observed public video packaging states, not independently verified native YouTube Studio A/B tests, impressions, CTR, watch-time-share winners, revenue, causal uplift or representative channel adoption; 7-day tracking; AI-authored commercial report."
+    },
+    {
+      "id": "youtube-analytics-2026-private-demographic-suppression-bounds",
+      "text": "YouTube's official Analytics Help states that demographic or geography rows may be limited below undisclosed thresholds, that private/unlisted videos lack demographic reports, and that owner-report ageGroup and gender API dimensions concern logged-in users associated with scoped reports.",
+      "source_ids": [
+        "yt-owner-analytics-limited-data-2026",
+        "yt-analytics-demographic-dimensions-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Policy/data-schema definitions, not observed privacy-suppression rates, identified individual viewers, threshold counts, creator-specific row omissions or a full-platform demographic estimate."
     }
   ],
   "observations": [],
