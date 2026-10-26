@@ -705,7 +705,7 @@ try{
     assert.equal(await page.locator('.community-survey-year').count(),7,'Missing U.S. YouTube news trend');
     assert.equal(await page.locator('.community-profile-card').count(),12,'Missing U.S. news audience composition');
     const comparators=page.locator('.video-comparators');
-    assert.equal(await comparators.locator('.video-comparator').count(),3,'Missing scoped video-product comparisons');
+    assert.equal(await comparators.locator('.video-comparator:not(.comparison-money-card)').count(),3,'Missing scoped video-product comparisons');
     await comparators.locator('summary').click();
     assert((await comparators.textContent()).includes('not been added as Mercata specimens'));
     assert((await comparators.textContent()).includes('general profitability: unknown'));
