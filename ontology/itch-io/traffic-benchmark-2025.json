@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "bounded_self_selected_itch_traffic_survey_2025",
+  "source_ids": [
+    "htmag-itch-traffic-2025"
+  ],
+  "published_at": "2025-05-12",
+  "retrieved_at": "2026-10-26",
+  "self_selected_developer_respondents": 169,
+  "game_level_n": null,
+  "downloadable_games_n": null,
+  "browser_games_n": null,
+  "commercial_paid_games_n": null,
+  "first_time_sellers_n": null,
+  "measures": [
+    {
+      "id": "primary_lifetime_views",
+      "source_section": "Views",
+      "unit": "lifetime_page_view_events",
+      "mean": 54483,
+      "median": 1582,
+      "p30": 397.5,
+      "p70": 12150
+    },
+    {
+      "id": "downloadable_lifetime_downloads",
+      "source_section": "Downloads",
+      "unit": "lifetime_file_download_events",
+      "mean": 6017,
+      "median": 113,
+      "p30": 32.6,
+      "p70": 966.4
+    },
+    {
+      "id": "mixed_lifetime_views",
+      "source_section": "All stats table",
+      "unit": "lifetime_page_view_events",
+      "mean": 54482,
+      "median": 1582,
+      "p30": 418,
+      "p70": 13380
+    },
+    {
+      "id": "mixed_browser_plays",
+      "source_section": "All stats table",
+      "unit": "lifetime_browser_play_events",
+      "mean": 24428,
+      "median": 590,
+      "p30": 113,
+      "p70": 4982,
+      "displayed_ratio_at_median_percent": 37
+    },
+    {
+      "id": "mixed_downloads",
+      "source_section": "All stats table",
+      "unit": "lifetime_download_events",
+      "mean_as_printed": 58976,
+      "median": 110,
+      "p30": 26,
+      "p70": 809,
+      "displayed_ratio_at_median_percent": 6.9,
+      "mean_conflicts_with_independent_download_section": true
+    }
+  ],
+  "conflicting_publication_figures": [
+    {
+      "field": "lifetime_views_p30",
+      "first": 397.5,
+      "second": 418,
+      "first_section": "Views",
+      "second_section": "All stats table"
+    },
+    {
+      "field": "lifetime_views_p70",
+      "first": 12150,
+      "second": 13380,
+      "first_section": "Views",
+      "second_section": "All stats table"
+    },
+    {
+      "field": "lifetime_download_mean",
+      "first": 6017,
+      "second": 58976,
+      "first_section": "Downloads",
+      "second_section": "All stats table"
+    }
+  ],
+  "inference_limits": [
+    "Volunteer developer submissions have unknown inclusion probabilities; not representative of all itch.io paid games.",
+    "Lifetime observations differ in release age and genre, and browser versus downloadable games are not matched randomized treatments.",
+    "Table's inconsistent summary values are preserved rather than silently harmonized.",
+    "Page views, browser plays and downloads count events, not unique purchasers.",
+    "No seller transaction, receipts, platform median price or developer net profit observed.",
+    "Publisher's editorial claim that developers cannot earn money on itch.io is not established by the survey's traffic data."
+  ],
+  "cannot_infer": {
+    "platform_median_views": null,
+    "platform_median_game_sales": null,
+    "typical_developer_profit": null,
+    "median_first_time_game_income": null,
+    "unique_buyer_conversion": null,
+    "causal_browser_play_lift": null,
+    "probability_of_success": null
+  }
+}

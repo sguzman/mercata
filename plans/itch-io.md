@@ -273,3 +273,8 @@ The [official-source release-format study](../ontology/itch-io/release-format-ac
 ## Authorized sales-cohort data requirements (2026-10-26)
 
 [The purchase and first-release cohort protocol](../ontology/itch-io/transaction-cohort-protocol-2026.md) distinguishes unique sellers, actual paid orders, refunds, purchaser events and account-key access. It provides synthetic-tested aggregate-only measurement without collecting any private accounts. It does not invent sales or median profits. Progress: 42%.
+
+
+## Independent sampled traffic benchmark (2026-10-26)
+
+The [2025 itch.io traffic survey audit](../ontology/itch-io/traffic-benchmark-2025.md) adds nonrepresentative but directly relevant visibility statistics from 169 volunteers, with incompatible download figures retained as an explicit evidence-quality issue. Game sales and median profit remain unobserved. Score 43%.

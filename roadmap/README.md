@@ -55,3 +55,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io purchase/cohort research (2026-10-26):** official checkout, account-access and RSS source review plus synthetic-tested aggregate-only seller-cohort and paid-order event counting protocol. Zero actual seller cohorts accessed; representative medians remain null. **39% → 42%**, Δ **+3 pp**. [Protocol](../ontology/itch-io/transaction-cohort-protocol-2026.md).
+
+
+**itch.io independent traffic evidence (2026-10-26):** 169 volunteer-developer submissions from a 2025 study, separate view/play/download event units, and publicly documented internal summary discrepancies. No seller-income or causal conversion inference. **42% → 43%**, Δ +1 pp. [Evidence audit](../ontology/itch-io/traffic-benchmark-2025.md).

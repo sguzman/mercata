@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 42,
+  "progress_percent": 43,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -178,7 +178,7 @@
         "itch-io/market/estimate-paid-addressable-demand"
       ],
       "phase": 2,
-      "progress_percent": 19
+      "progress_percent": 25
     },
     {
       "id": "discovery",
@@ -208,7 +208,7 @@
         "itch-io/discovery/build-impression-to-sale-funnel"
       ],
       "phase": 2,
-      "progress_percent": 52
+      "progress_percent": 57
     },
     {
       "id": "competition",
@@ -237,7 +237,7 @@
         "itch-io/competition/create-cross-platform-benchmarks"
       ],
       "phase": 2,
-      "progress_percent": 18
+      "progress_percent": 25
     },
     {
       "id": "income",
@@ -415,7 +415,7 @@
         "itch-io/review/prepare-evidence-gap-summary"
       ],
       "phase": 1,
-      "progress_percent": 37
+      "progress_percent": 41
     },
     {
       "id": "special-games",
@@ -1218,9 +1218,14 @@
       "emoji": "🌐",
       "objective": "Investigate separate visits, unique people, page views and sessions.",
       "acceptance": "Provide dated source-linked evidence to separate visits, unique people, page views and sessions; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 60,
+      "evidence": [
+        "ontology/itch-io/traffic-benchmark-2025.json",
+        "ontology/itch-io/traffic-benchmark-2025.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-traffic-benchmark.test.mjs"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 2
@@ -1305,12 +1310,15 @@
       "objective": "Investigate document separate platform and file-type denominators.",
       "acceptance": "Provide dated source-linked evidence to document separate platform and file-type denominators; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 30,
+      "percent": 43,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
         "specimens/itch-io.json",
-        "tests/itch-io-catalog.test.mjs"
+        "tests/itch-io-catalog.test.mjs",
+        "ontology/itch-io/traffic-benchmark-2025.json",
+        "ontology/itch-io/traffic-benchmark-2025.md",
+        "tests/itch-io-traffic-benchmark.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1385,12 +1393,15 @@
       "objective": "Investigate measure listing recency and time visible in discovery feeds.",
       "acceptance": "Provide dated source-linked evidence to measure listing recency and time visible in discovery feeds; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 70,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/traffic-benchmark-2025.json",
+        "ontology/itch-io/traffic-benchmark-2025.md",
+        "tests/itch-io-traffic-benchmark.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1516,12 +1527,15 @@
       "objective": "Investigate separate search engines, social posts, influencers and direct traffic.",
       "acceptance": "Provide dated source-linked evidence to separate search engines, social posts, influencers and direct traffic; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 52,
+      "percent": 67,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/traffic-benchmark-2025.json",
+        "ontology/itch-io/traffic-benchmark-2025.md",
+        "tests/itch-io-traffic-benchmark.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1535,13 +1549,16 @@
       "objective": "Investigate define demo and browser-player journeys to checkout.",
       "acceptance": "Provide dated source-linked evidence to define demo and browser-player journeys to checkout; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 76,
+      "percent": 84,
       "evidence": [
         "ontology/itch-io/transaction-cohort-protocol-2026.json",
         "ontology/itch-io/transaction-cohort-protocol-2026.md",
         "site/itch-cohort-protocol.mjs",
         "tests/itch-cohort-protocol.test.mjs",
-        "specimens/itch-io.json"
+        "specimens/itch-io.json",
+        "ontology/itch-io/traffic-benchmark-2025.json",
+        "ontology/itch-io/traffic-benchmark-2025.md",
+        "tests/itch-io-traffic-benchmark.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1554,9 +1571,14 @@
       "emoji": "🧭",
       "objective": "Investigate compare identical release-age cohorts over time.",
       "acceptance": "Provide dated source-linked evidence to compare identical release-age cohorts over time; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 38,
+      "evidence": [
+        "ontology/itch-io/traffic-benchmark-2025.json",
+        "ontology/itch-io/traffic-benchmark-2025.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-traffic-benchmark.test.mjs"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 2
@@ -1592,7 +1614,7 @@
       "objective": "Investigate specify aligned denominator, attribution and conversion windows.",
       "acceptance": "Provide dated source-linked evidence to specify aligned denominator, attribution and conversion windows; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 72,
+      "percent": 79,
       "evidence": [
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
@@ -1602,7 +1624,10 @@
         "ontology/itch-io/transaction-cohort-protocol-2026.json",
         "ontology/itch-io/transaction-cohort-protocol-2026.md",
         "site/itch-cohort-protocol.mjs",
-        "tests/itch-cohort-protocol.test.mjs"
+        "tests/itch-cohort-protocol.test.mjs",
+        "ontology/itch-io/traffic-benchmark-2025.json",
+        "ontology/itch-io/traffic-benchmark-2025.md",
+        "tests/itch-io-traffic-benchmark.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1749,9 +1774,14 @@
       "emoji": "🏁",
       "objective": "Investigate sample browsing placement without treating it as revenue.",
       "acceptance": "Provide dated source-linked evidence to sample browsing placement without treating it as revenue; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 31,
+      "evidence": [
+        "ontology/itch-io/traffic-benchmark-2025.json",
+        "ontology/itch-io/traffic-benchmark-2025.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-traffic-benchmark.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -1785,9 +1815,14 @@
       "emoji": "🏁",
       "objective": "Investigate set matched observation windows and audience controls.",
       "acceptance": "Provide dated source-linked evidence to set matched observation windows and audience controls; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 30,
+      "evidence": [
+        "ontology/itch-io/traffic-benchmark-2025.json",
+        "ontology/itch-io/traffic-benchmark-2025.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-traffic-benchmark.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -2975,7 +3010,7 @@
       "objective": "Investigate require units, period, geography, eligibility and sampling method.",
       "acceptance": "Provide dated source-linked evidence to require units, period, geography, eligibility and sampling method; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 76,
+      "percent": 82,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -2987,7 +3022,10 @@
         "ontology/itch-io/transaction-cohort-protocol-2026.json",
         "ontology/itch-io/transaction-cohort-protocol-2026.md",
         "site/itch-cohort-protocol.mjs",
-        "tests/itch-cohort-protocol.test.mjs"
+        "tests/itch-cohort-protocol.test.mjs",
+        "ontology/itch-io/traffic-benchmark-2025.json",
+        "ontology/itch-io/traffic-benchmark-2025.md",
+        "tests/itch-io-traffic-benchmark.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3036,9 +3074,14 @@
       "emoji": "🔬",
       "objective": "Investigate record retrieval dates, citation conditions and dataset licenses.",
       "acceptance": "Provide dated source-linked evidence to record retrieval dates, citation conditions and dataset licenses; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 40,
+      "evidence": [
+        "ontology/itch-io/traffic-benchmark-2025.json",
+        "ontology/itch-io/traffic-benchmark-2025.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-traffic-benchmark.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 1

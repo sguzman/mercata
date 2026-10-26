@@ -383,6 +383,17 @@
       "evidence_class": "official",
       "license": "External link only; own authored summaries.",
       "notes": "Creator and API documentation; no private account, key, OAuth token, sales or user analytics accessed."
+    },
+    {
+      "id": "htmag-itch-traffic-2025",
+      "url": "https://howtomarketagame.com/2025/05/12/benchmark-itch-io-traffic/",
+      "publisher": "How To Market A Game",
+      "title": "Benchmark: Itch.io traffic",
+      "published_at": "2025-05-12",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "independent_nonrandom_survey",
+      "license": "External source linked, short original-number extracts and independent description only.",
+      "notes": "Author reports 169 volunteer developer submissions with lifetime page view, download and browser play stats; multiple internally inconsistent summary figures and no representative sampling frame."
     }
   ],
   "claims": [
@@ -1194,6 +1205,56 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Public project feeds measure releases/visibility and cannot establish seller median profit or purchaser cohorts."
+    },
+    {
+      "id": "traffic-survey-scope",
+      "text": "A 2025 How To Market A Game survey reports 169 itch.io developers voluntarily submitted project traffic statistics.",
+      "source_ids": [
+        "htmag-itch-traffic-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Nonrandom submissions; number of distinct games in every chart and percentage of commercial paid games unknown."
+    },
+    {
+      "id": "traffic-survey-median",
+      "text": "The author reports median 1,582 lifetime page views among participating itch.io games and a heavily skewed mean near 54,483.",
+      "source_ids": [
+        "htmag-itch-traffic-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Nonrepresentative project cohort with varying game ages; view events are not unique visitors or buyers."
+    },
+    {
+      "id": "traffic-survey-browser-downloads",
+      "text": "The same article prints median 590 browser plays and 110 downloads in a mixed-format comparison table.",
+      "source_ids": [
+        "htmag-itch-traffic-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "May be format-mixed, differing sample denominators; events not buyers. Does not establish causal browser uplift."
+    },
+    {
+      "id": "traffic-survey-inconsistency",
+      "text": "The article's download mean is 6,017 in its Download section and 58,976 in its combined All stats table; its view percentiles also differ by section.",
+      "source_ids": [
+        "htmag-itch-traffic-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "The published discrepancy is preserved without assuming which figure is a transcription or sample error."
+    },
+    {
+      "id": "traffic-survey-earnings-limits",
+      "text": "The 2025 itch.io traffic benchmark reports views, browser plays and downloads, not a representative distribution of settled game revenue or developer profit.",
+      "source_ids": [
+        "htmag-itch-traffic-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Interpretive claims about universal lack of itch.io earnings cannot be established from these traffic figures."
     }
   ],
   "observations": [
