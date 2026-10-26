@@ -334,6 +334,11 @@ try{
     assert((await selectedFees.textContent()).includes('25 paid deliverables lacked follower tiers'),'Missing tier-denominator caveat');
     assert((await selectedFees.textContent()).includes('An agreed Kolect collaboration is not a verified payment'),'Missing payment-stage caveat');
     assert.equal(await selectedFees.locator('.sponsor-worksheet-link').count(),1,'Missing public sponsor contract cash worksheet');
+    const shoppingAssistant=page.locator('.shopping-funnel-evidence .shopping-product-review-assistant');
+    assert.equal(await shoppingAssistant.count(),1,'Missing announced product-review discovery surface');
+    assert((await shoppingAssistant.textContent()).includes('September 2026'));
+    assert((await shoppingAssistant.textContent()).includes('not verified store clicks, orders'));
+    assert((await shoppingAssistant.textContent()).includes('completed rollout'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));

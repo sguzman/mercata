@@ -3336,6 +3336,14 @@ function renderShoppingFunnelEvidence(model,dossier){
   panel.append(make('p','measure-limit','Different study populations and fieldwork years cannot be pooled. No matched YouTube purchase conversions, creator profits, or causal shopping lift are observed.'));
   panel.append(audienceSources([k.source_id,m.source_id],dossier));details.append(panel);
  }
+ const ask=model.product_review_assistant_announcement;
+ if(ask){
+  const p=make('div','shopping-product-review-assistant');
+  p.append(make('h5','','September 2026 · announced product-review comparison assistant'));
+  p.append(make('p','measure-context','Ask YouTube may organize product-review video recommendations and answer contextual shopping questions while viewers watch.'));
+  p.append(make('p','measure-limit','An announcement about discovery, not verified store clicks, orders, paid affiliate commissions, creator profit or completed rollout.'));
+  p.append(audienceSources([ask.source_id],dossier));details.append(p);
+ }
  details.append(audienceSources(model.source_ids,dossier));
  details.append(make('p','measure-limit','Merchant Center data can suppress low-volume metrics and prohibits re-identifying people or linking sensitive profiles.'));
  const link=make('a','inline-link','Read shopping research units and attribution restrictions ↗');

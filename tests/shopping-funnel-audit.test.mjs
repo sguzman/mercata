@@ -59,3 +59,17 @@ test('Survey awareness and shopper categories cannot be promoted to measured You
  const c=structuredClone(m);c.intent_reference_frames[0].per_question_n=2160;
  assert(auditShoppingIntentFrames(c,s).errors.includes('misrepresented Kantar denominator or scope'));
 });
+
+test('2026 product-review assistant remains announcement only and cannot become a verified merchant order',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/shopping-funnel-evidence-2025.json'),load('specimens/youtube.json')]);
+ const u=m.product_review_assistant_announcement,ids=new Set(d.evidence.map(x=>x.id));
+ assert(ids.has(u.source_id));
+ assert.equal(u.announced_on,'2026-09-23');
+ assert.equal(u.launch_completion_date,null);
+ assert.equal(u.attributable_paid_orders,null);
+ assert.equal(u.actual_creator_affiliate_commissions,null);
+ assert.equal(u.can_compute_new_video_to_purchase_conversion,false);
+ assert.deepEqual(auditShoppingIntentFrames(m,ids),{valid:true,errors:[]});
+ m.product_review_assistant_announcement.attributable_paid_orders=50;
+ assert(auditShoppingIntentFrames(m,ids).errors.includes('Invented Ask YouTube purchases, revenue or rollout'));
+});

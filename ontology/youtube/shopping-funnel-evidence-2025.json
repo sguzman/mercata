@@ -2,12 +2,13 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "shopping_transaction_selection_vs_discovery_survey_and_merchant_outcomes",
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "source_ids": [
     "yt-shopping-2025-transactions-and-survey",
     "google-merchant-affiliate-analytics-2026",
     "google-kantar-future-video-us-2025",
-    "google-material-video-shopping-journeys-us-2023"
+    "google-material-video-shopping-journeys-us-2023",
+    "yt-custom-feeds-announced-2026-09"
   ],
   "frames": [
     {
@@ -139,7 +140,9 @@
     "creator_hourly_affiliate_profit": null,
     "youtube_preference_to_verified_purchase_rate": null,
     "journey_specific_youtube_order_rate": null,
-    "kantar_item_level_weighted_n": null
+    "kantar_item_level_weighted_n": null,
+    "ask_youtube_product_compare_conversion_rate": null,
+    "ask_youtube_creator_incremental_profit": null
   },
   "intent_reference_frames": [
     {
@@ -264,5 +267,35 @@
       "causal_effect_of_video": null,
       "proven_unique_youtube_conversions": null
     }
-  ]
+  ],
+  "product_review_assistant_announcement": {
+    "source_id": "yt-custom-feeds-announced-2026-09",
+    "announced_on": "2026-09-23",
+    "publisher": "YouTube Viewer Products",
+    "product_feature": "Ask YouTube product comparison and contextual watch-page questions",
+    "status": "public_feature_announcement_not_observed_creator_transaction_or_account_rollout",
+    "describes": [
+      "Product-review searches may show organized recommendations including comparisons of product attributes and categories.",
+      "A viewer who opens a recommended video may ask follow-up questions about products while watching.",
+      "The surfaced video and product comparison are discovery and research touchpoints, not verified outbound clicks or purchases."
+    ],
+    "potential_visitor_intent_class": "deliberate_product_comparison_and_research",
+    "historical_snapshot_not_2025_transaction_period": true,
+    "launch_completion_date": null,
+    "active_user_population": null,
+    "feature_exposure_events": null,
+    "attributable_watch_page_views": null,
+    "attributable_merchant_clicks": null,
+    "attributable_paid_orders": null,
+    "actual_creator_affiliate_commissions": null,
+    "source_discloses_ranking_rules": false,
+    "can_compute_new_video_to_purchase_conversion": false,
+    "same_as_google_merchant_center_order_reporting": false,
+    "limits": [
+      "The September 2026 announcement describes an emerging viewer feature, not an independently measured global rollout or official Merchant Center sales census.",
+      "Product comparison recommendations are not verified merchant click events, orders, credit-card settlements or incremental sales.",
+      "The 2026 product feature cannot be merged numerically with a 2025 ranked SKU/video sample or 2023/2025 consumer-attitude surveys.",
+      "Creator affiliate eligibility, commissions, return adjustments, cost and net profit remain unknown for this feature."
+    ]
+  }
 }

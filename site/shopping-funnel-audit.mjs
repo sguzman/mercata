@@ -45,6 +45,18 @@ export function auditShoppingIntentFrames(model,sourceIds){
     m.raw_purchase_event_data_obtained!==false||
     m.youtube_attributable_orders!==null||m.causal_effect_of_video!==null||
     m.proven_unique_youtube_conversions!==null)errors.push('invented shopper journey outcomes');
+ const assistant=model?.product_review_assistant_announcement;
+ if(!assistant||!sourceIds.has(assistant.source_id)||assistant.announced_on!=='2026-09-23'||
+    assistant.status!=='public_feature_announcement_not_observed_creator_transaction_or_account_rollout'||
+    assistant.can_compute_new_video_to_purchase_conversion!==false||
+    assistant.same_as_google_merchant_center_order_reporting!==false)
+  errors.push('Ask YouTube product review discovery mislabeled');
+ if(assistant?.attributable_paid_orders!==null||
+    assistant?.actual_creator_affiliate_commissions!==null||
+    assistant?.active_user_population!==null||
+    assistant?.attributable_merchant_clicks!==null||
+    assistant?.launch_completion_date!==null)
+  errors.push('Invented Ask YouTube purchases, revenue or rollout');
  if(Object.values(model?.unmeasured||{}).some(x=>x!==null))errors.push('invented missing shopping outcome');
  return {valid:errors.length===0,errors};
 }

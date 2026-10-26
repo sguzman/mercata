@@ -1,6 +1,6 @@
 # Shopping behavior: transactions, discovery and merchant funnel units
 
-**Reviewed:** 2026-10-24. Primary sources: [YouTube's 2025 Shopping Trends disclosure](https://blog.youtube/culture-and-trends/tr25-youtube-shopping-report/) and [Google Merchant Center's YouTube affiliate analytics definitions](https://support.google.com/merchants/answer/14947975?hl=en).
+**Reviewed:** 2026-10-26. Primary sources: [YouTube's 2025 Shopping Trends disclosure](https://blog.youtube/culture-and-trends/tr25-youtube-shopping-report/) and [Google Merchant Center's YouTube affiliate analytics definitions](https://support.google.com/merchants/answer/14947975?hl=en).
 
 ## Real observations that must not be pooled
 
@@ -23,6 +23,14 @@ Google Merchant Center's private YouTube affiliate dashboard offers:
 | Orders | Order events, including pending and approved, not verified final settled orders or distinct customers |
 
 Traffic can be classified as organic affiliate or paid advertising. Low-volume views/clicks may be hidden or aggregated for privacy. These are **merchant-authorized**, not public whole-platform statistics. Google prohibits attempts to re-identify viewers, combining these data with outside person-level data, and reverse-inference of sensitive health, political or religious traits.
+
+## Announced Ask YouTube product comparisons are a research step, not a sale
+
+[YouTube's September 23, 2026 Viewer Products announcement](https://blog.youtube/news-and-events/made-on-youtube-viewer-custom-feeds-shopping-tools/) describes emerging Ask YouTube shopping-research features. On product-review searches, users may see organized video recommendations, including comparison tables of product attributes/categories; after opening a video, viewers may ask contextual follow-up questions while watching.
+
+This adds a potential *product investigation and video discovery* stage to the original buyer-intent funnel. It **does not establish** actual customer counts, tagged-product impressions, outbound store clicks, settled orders, incremental creator commissions or realized creator net profit. The public announcement is prospective and does not provide a completed geographic rollout, treatment/control groups, channel-level adoption, purchase-attribution chain, or merchant ledger.
+
+Because the feature was announced in **September 2026**, it cannot be pooled with the **2025 YouTube Shopping ranked transaction selections**, the **April 2025 Gen Z discovery survey**, the **early 2025 Kantar attitudes**, or the **2023 Material shopper types** as if they were one synchronized experiment.
 
 ## Buyer intent versus casual viewing
 
