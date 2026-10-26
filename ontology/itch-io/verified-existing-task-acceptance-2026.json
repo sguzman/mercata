@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "fixed_task_acceptance_existing_evidence_only",
+  "reviewed_at": "2026-10-26",
+  "added_tasks": 0,
+  "new_sources": 0,
+  "new_paid_market_observations": 0,
+  "decisions": [
+    {
+      "task_id": "itch-io/identity/create-market-chronology",
+      "source_ids": [
+        "itch-2015-year-review-new-games",
+        "itch-2017-year-review-projects"
+      ],
+      "supporting_document": "ontology/itch-io/historical-game-supply-2015-2026.md",
+      "regression_test": "tests/itch-io-historical-supply.test.mjs",
+      "why": "Distinct dated first-party 2015/2017 creator and publication event counts, 2019 catalog announcement, and October 2026 filter snapshot retain their year and distinct event/stock units.",
+      "unresolved": "A comparable longitudinal paid-publisher sales census has not been established.",
+      "accepted_as": "specific_existing_task_method_and_documented_historical_observation_not_market_income"
+    },
+    {
+      "task_id": "itch-io/income/study-development-profit",
+      "source_ids": [
+        "aracore-game-first-five-days-postmortem",
+        "rose-seed-replica-launch-cost-postmortem"
+      ],
+      "supporting_document": "ontology/itch-io/release-cost-labor-cases-2026.md",
+      "regression_test": "tests/itch-io-release-cost-labor.test.mjs",
+      "why": "Two attributed game developer reports separate first-period cash receipts, operational/living costs, refunds and approximate labor; arithmetic examples are marked illustrations rather than audited net income.",
+      "unresolved": "Platformwide owner labor-adjusted profit distribution and each game's final audited profit are unavailable.",
+      "accepted_as": "specific_existing_task_method_and_documented_historical_observation_not_market_income"
+    },
+    {
+      "task_id": "itch-io/risk/study-policy-changes",
+      "source_ids": [
+        "itch-nsfw-announcement",
+        "itch-reindex-announcement"
+      ],
+      "supporting_document": "ontology/itch-io/policy-risk-2025-2026.md",
+      "regression_test": "tests/itch-io-policy.test.mjs",
+      "why": "Dated July 2025 indexing and payment-processor events are recorded as distinct, scoped platform actions; official rules do not become estimated affected seller populations or lost sales.",
+      "unresolved": "The chance of an ordinary product being deindexed or denied payment and contemporary affected populations remain unmeasured.",
+      "accepted_as": "specific_existing_task_method_and_documented_historical_observation_not_market_income"
+    },
+    {
+      "task_id": "itch-io/review/define-research-acceptance",
+      "source_ids": [
+        "itch-serverside-api-reference",
+        "itch-2017-year-review-projects"
+      ],
+      "supporting_document": "ontology/itch-io/market-entry-decision-guide-2026.md",
+      "regression_test": "tests/itch-io-market-entry-decision.test.mjs",
+      "why": "The fixed ledger enforces required cited evidence paths, progress/status consistency and explicit unknown market measures; private API transaction records and public metadata remain separate evidence classes.",
+      "unresolved": "Accepting research design and source classification does not count missing paid buyer transactions as collected.",
+      "accepted_as": "specific_existing_task_method_and_documented_historical_observation_not_market_income"
+    }
+  ],
+  "unresolved_platform_population": {
+    "first_game_mean_profit_usd": null,
+    "first_game_median_profit_usd": null,
+    "paid_2d_buyer_population": null,
+    "active_paid_seller_count": null,
+    "genre_specific_profitability": null,
+    "zero_sale_share": null
+  },
+  "rule": "Do not conflate accepted operational and evidence-classification tasks with representative empirical income estimates."
+}

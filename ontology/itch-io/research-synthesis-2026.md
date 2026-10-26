@@ -50,6 +50,8 @@ The [first-party direct/collected checkout-to-bank currency crosswalk](checkout-
 
 The [international compliance matrix](jurisdiction-buyer-tax-entitlement-risk-2026.md) now separates content-based buyer access, seller payment onboarding, VAT/withholding, previous-purchase rights and disputes, with no countrywide approval or sales income invented.
 
+Four existing narrowly defined research tasks (market chronology, bounded development-profit accounting, dated policy changes and evidence acceptance rules) have met their source-backed acceptance conditions; they do not resolve the representative income or buyer-population gaps. [Acceptance audit](verified-existing-task-acceptance-2026.md).
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*
