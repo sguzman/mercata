@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "posts_viewer_retention_and_membership_measurement",
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "status": "official_owner_analytics_definitions_and_protocol_only_no_cohort_outcomes",
   "source_ids": [
     "yt-posts-analytics-2026",
@@ -361,6 +361,49 @@
       "The journal abstract's qualitative statistical ordering does not publish eligible universe, regressions, confidence intervals or a generalizable revenue distribution.",
       "Selected Korean beauty channel revenue is not a verified creator take-home payout, profit after production, or a country-generalized median.",
       "No person-level viewer or member analytics were accessed, and no payment or member identifiers were collected."
+    ]
+  },
+  "viewer_funnel_comparability": {
+    "source_ids": [
+      "analytics-audience",
+      "yt-regular-viewers-2026"
+    ],
+    "access": "authorized_owner_analytics_only",
+    "monthly_audience_window_days": 28,
+    "monthly_audience_window": "rolling_backwards_from_most_recent_selected_day",
+    "unit": "estimated_channel_viewers_not_video_view_events",
+    "viewer_categories": [
+      {
+        "id": "new",
+        "prior_monthly_frequency": null,
+        "note": "Includes first viewers, history-cleared or private browsing, and those absent for over one year"
+      },
+      {
+        "id": "casual",
+        "min_months_watched_last_year": 1,
+        "max_months_watched_last_year": 5
+      },
+      {
+        "id": "regular",
+        "min_months_watched_last_year": 7,
+        "max_months_watched_last_year": 12
+      }
+    ],
+    "returning_viewers": "Owner estimated previously seen viewers in the chosen reporting period",
+    "segment_counts_are_transition_records": false,
+    "snapshot_to_snapshot_counts_identify_same_people": false,
+    "rolling_28_day_windows_can_overlap": true,
+    "subscription_and_public_views_are_not_monthly_audience": true,
+    "causal_post_effect": null,
+    "newcomer_to_regular_person_conversion": null,
+    "creator_profit": null,
+    "observed_authorized_channels": 0,
+    "observed_snapshots": [],
+    "restrictions": [
+      "Snapshot segment shares require same owner, same rolling 28-day audience denominator, and complete observed nonzero data.",
+      "Public subscriber counts, views, and post impressions cannot substitute for estimated unique viewer counts.",
+      "Compare two dated snapshots as separate aggregate totals only, not a cohort transition or retention rate.",
+      "Do not assert person-level identities, Post-driven conversion, incremental monetization or revenue from an aggregate report."
     ]
   }
 }
