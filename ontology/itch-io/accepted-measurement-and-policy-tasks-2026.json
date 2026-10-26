@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "existing_fixed_research_task_evidence_acceptance",
+  "reviewed_at": "2026-10-26",
+  "task_count": 10,
+  "added_tasks": 0,
+  "added_specimens": 0,
+  "real_market_sales_measured": 0,
+  "representative_seller_population_inferred": false,
+  "decisions": [
+    {
+      "task_id": "itch-io/sales/separate-buyer-interest-from-purchase",
+      "supporting_document": "ontology/itch-io/api-purchase-privacy-2026.md",
+      "regression_test": "tests/itch-io-api-purchase-privacy.test.mjs",
+      "source_ids": [
+        "itch-buying-flow",
+        "itch-serverside-api-reference"
+      ],
+      "reason": "A public view, collection or download-key check is not a completed paid order or verified unique buyer.",
+      "scope": "verified_measurement_definition_or_platform_policy_not_observed_market_result",
+      "completed": 100
+    },
+    {
+      "task_id": "itch-io/economics/check-payout-delays-and-thresholds",
+      "supporting_document": "ontology/itch-io/collected-payout-costs-2026.md",
+      "regression_test": "tests/itch-collected-payout-check.test.mjs",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "reason": "The policy conditions distinguish the seven-day hold, five-dollar available minimum and separate staff review, without promising bank arrival.",
+      "scope": "verified_measurement_definition_or_platform_policy_not_observed_market_result",
+      "completed": 100
+    },
+    {
+      "task_id": "itch-io/rights/review-buyer-entitlement",
+      "supporting_document": "ontology/itch-io/resale-transfer-2026.md",
+      "regression_test": "tests/itch-io-resale.test.mjs",
+      "source_ids": [
+        "itch-terms",
+        "itch-download-keys"
+      ],
+      "reason": "Account, title copyright, paid transaction, download key, gift and post-delisting access are separately represented.",
+      "scope": "verified_measurement_definition_or_platform_policy_not_observed_market_result",
+      "completed": 100
+    },
+    {
+      "task_id": "itch-io/sales/study-bundles-and-cross-sell",
+      "supporting_document": "ontology/itch-io/skwish-direct-versus-bundle-2023.md",
+      "regression_test": "tests/itch-io-skwish-bundle-accounting.test.mjs",
+      "source_ids": [
+        "skwish-playdate-six-month-sales-2023"
+      ],
+      "reason": "The game developer explicitly separated direct paid copies from bundle allocations; no overlap or standalone bundle sale is manufactured.",
+      "scope": "verified_measurement_definition_or_platform_policy_not_observed_market_result",
+      "completed": 100
+    },
+    {
+      "task_id": "itch-io/income/compare-monthly-and-lifetime-sales",
+      "supporting_document": "ontology/itch-io/notjam-game-category-series-2023-2025.md",
+      "regression_test": "tests/itch-io-notjam-series.test.mjs",
+      "source_ids": [
+        "notjam-2023",
+        "notjam-2024",
+        "itch-case-notjam"
+      ],
+      "reason": "Three cumulative annual snapshots from one publisher are kept as changing lifetime stocks, not independent calendar-year revenue flows.",
+      "scope": "verified_measurement_definition_or_platform_policy_not_observed_market_result",
+      "completed": 100
+    },
+    {
+      "task_id": "itch-io/income/separate-game-and-developer-revenue",
+      "supporting_document": "ontology/itch-io/developer-income-cases-2026.md",
+      "regression_test": "tests/itch-io-income-cases.test.mjs",
+      "source_ids": [
+        "itch-case-notjam",
+        "itch-case-exodrifter"
+      ],
+      "reason": "Game-category earnings, other product lines, cooperative bundles and outside work fees remain distinct from a publisher's total take-home.",
+      "scope": "verified_measurement_definition_or_platform_policy_not_observed_market_result",
+      "completed": 100
+    },
+    {
+      "task_id": "itch-io/review/define-publication-privacy-rules",
+      "supporting_document": "ontology/itch-io/api-purchase-privacy-2026.md",
+      "regression_test": "tests/itch-io-api-purchase-privacy.test.mjs",
+      "source_ids": [
+        "itch-serverside-api-reference",
+        "itch-terms"
+      ],
+      "reason": "Credentialed buyer records and shipping details are excluded from public releases; only authorized, nonidentifying aggregate research is permissible.",
+      "scope": "verified_measurement_definition_or_platform_policy_not_observed_market_result",
+      "completed": 100
+    },
+    {
+      "task_id": "itch-io/review/prepare-evidence-gap-summary",
+      "supporting_document": "ontology/itch-io/research-synthesis-2026.md",
+      "regression_test": "tests/itch-io-synthesis.test.mjs",
+      "source_ids": [
+        "gamedevjs-web-survey-2025",
+        "itch-case-notjam"
+      ],
+      "reason": "The published synthesis explicitly retains unknown market mean, median, zero-sale frequency, active paid publishers and causal effects.",
+      "scope": "verified_measurement_definition_or_platform_policy_not_observed_market_result",
+      "completed": 100
+    },
+    {
+      "task_id": "itch-io/economics/verify-platform-revenue-share",
+      "supporting_document": "ontology/itch-io/commercial-rules-2026.md",
+      "regression_test": "tests/itch-io-economics.test.mjs",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "reason": "Documented 0–100 percent configurable share, ten-percent illustrative case and separate processor/settlement liabilities are accounted for.",
+      "scope": "verified_measurement_definition_or_platform_policy_not_observed_market_result",
+      "completed": 100
+    },
+    {
+      "task_id": "itch-io/market/measure-genre-supply",
+      "supporting_document": "ontology/itch-io/genre-rating-attention-2025.md",
+      "regression_test": "tests/itch-io-genre-rating-attention.test.mjs",
+      "source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "reason": "The study's non-exclusive genre tags, overlapping filters and incomplete publication-date frames forbid additive genre market-size estimates.",
+      "scope": "verified_measurement_definition_or_platform_policy_not_observed_market_result",
+      "completed": 100
+    }
+  ]
+}
