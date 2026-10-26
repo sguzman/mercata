@@ -787,7 +787,7 @@
           "title": "Audit selection and survivorship biases",
           "acceptance": "Describe recruitment, response bias and missing populations.",
           "weight": 1,
-          "progress": 91,
+          "progress": 94,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/developer-income-cases-2026.json",
@@ -812,7 +812,10 @@
             "tests/itch-io-commercial-postmortems.test.mjs",
             "ontology/itch-io/creative-free-games-pwyw-2019.json",
             "ontology/itch-io/creative-free-games-pwyw-2019.md",
-            "tests/itch-io-creative-pwyw.test.mjs"
+            "tests/itch-io-creative-pwyw.test.mjs",
+            "ontology/itch-io/research-synthesis-2026.json",
+            "ontology/itch-io/research-synthesis-2026.md",
+            "tests/itch-io-synthesis.test.mjs"
           ]
         },
         {
@@ -1405,9 +1408,13 @@
           "title": "Write evidence-bounded recommendation",
           "acceptance": "State who may benefit, uncertainties, risks and next test.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 42,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/research-synthesis-2026.json",
+            "ontology/itch-io/research-synthesis-2026.md",
+            "tests/itch-io-synthesis.test.mjs"
+          ]
         }
       ]
     },
@@ -1423,7 +1430,7 @@
           "title": "Finish public source register",
           "acceptance": "Every factual claim links to dated attributed public evidence.",
           "weight": 1,
-          "progress": 61,
+          "progress": 83,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/policy-risk-2025-2026.json",
@@ -1435,7 +1442,10 @@
             "tests/itch-web-survey-crosswalk.test.mjs",
             "ontology/itch-io/store-feature-history-2026.json",
             "ontology/itch-io/store-feature-history-2026.md",
-            "tests/itch-io-store-history.test.mjs"
+            "tests/itch-io-store-history.test.mjs",
+            "ontology/itch-io/research-synthesis-2026.json",
+            "ontology/itch-io/research-synthesis-2026.md",
+            "tests/itch-io-synthesis.test.mjs"
           ]
         },
         {
@@ -1444,7 +1454,7 @@
           "title": "Cross-check critical claims",
           "acceptance": "Use independent sources or document why cross-check unavailable.",
           "weight": 1,
-          "progress": 91,
+          "progress": 92,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
@@ -1465,7 +1475,10 @@
             "tests/itch-io-creative-pwyw.test.mjs",
             "ontology/itch-io/paid-genre-tag-frames-2026.json",
             "ontology/itch-io/paid-genre-tag-frames-2026.md",
-            "tests/itch-io-genre-frames.test.mjs"
+            "tests/itch-io-genre-frames.test.mjs",
+            "ontology/itch-io/research-synthesis-2026.json",
+            "ontology/itch-io/research-synthesis-2026.md",
+            "tests/itch-io-synthesis.test.mjs"
           ]
         },
         {
@@ -1474,7 +1487,7 @@
           "title": "Audit unknowns and comparability",
           "acceptance": "Inspect denominators, missing data and misleading comparisons.",
           "weight": 1,
-          "progress": 89,
+          "progress": 94,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/catalog-snapshot-2026.md",
@@ -1500,7 +1513,10 @@
             "tests/itch-cohort-protocol.test.mjs",
             "ontology/itch-io/traffic-benchmark-2025.json",
             "ontology/itch-io/traffic-benchmark-2025.md",
-            "tests/itch-io-traffic-benchmark.test.mjs"
+            "tests/itch-io-traffic-benchmark.test.mjs",
+            "ontology/itch-io/research-synthesis-2026.json",
+            "ontology/itch-io/research-synthesis-2026.md",
+            "tests/itch-io-synthesis.test.mjs"
           ]
         },
         {
@@ -1509,7 +1525,7 @@
           "title": "Review all public artifacts",
           "acceptance": "Verify rights, privacy, neutral tone and data suitability.",
           "weight": 1,
-          "progress": 86,
+          "progress": 89,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/transaction-cohort-protocol-2026.json",
@@ -1528,7 +1544,10 @@
             "tests/itch-io-account-indexing.test.mjs",
             "ontology/itch-io/discovery-quality-2026.json",
             "ontology/itch-io/discovery-quality-2026.md",
-            "tests/itch-io-discovery-quality.test.mjs"
+            "tests/itch-io-discovery-quality.test.mjs",
+            "ontology/itch-io/research-synthesis-2026.json",
+            "ontology/itch-io/research-synthesis-2026.md",
+            "tests/itch-io-synthesis.test.mjs"
           ]
         },
         {
@@ -1537,9 +1556,13 @@
           "title": "Write the readable marketplace dossier",
           "acceptance": "Summarize fees, outcomes, barriers and uncertainty in plain English.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 76,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/research-synthesis-2026.json",
+            "ontology/itch-io/research-synthesis-2026.md",
+            "tests/itch-io-synthesis.test.mjs"
+          ]
         },
         {
           "id": "review/gallery",
@@ -1557,13 +1580,16 @@
           "title": "Set a maintenance schedule",
           "acceptance": "Select review dates based on fee, policy and payout volatility.",
           "weight": 1,
-          "progress": 47,
+          "progress": 62,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/store-feature-history-2026.json",
             "ontology/itch-io/store-feature-history-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-store-history.test.mjs"
+            "tests/itch-io-store-history.test.mjs",
+            "ontology/itch-io/research-synthesis-2026.json",
+            "ontology/itch-io/research-synthesis-2026.md",
+            "tests/itch-io-synthesis.test.mjs"
           ]
         }
       ]

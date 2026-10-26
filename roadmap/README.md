@@ -88,3 +88,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io paid niche inventory (2026-10-26):** three non-synchronized public genre/tag filter counters (Puzzle, Horror, Cozy), explicitly nonadditive and not earnings. Score 59% → 59% (Δ +0 pp, raw task mean 59.37%). [Evidence](../ontology/itch-io/paid-genre-tag-frames-2026.md).
+
+
+**itch.io interim research synthesis (2026-10-26):** six source-linked known findings, seven unresolved empirical requirements and original pending tasks preserved. 59% → 61% (Δ +2 pp). [Source-aware synthesis](../ontology/itch-io/research-synthesis-2026.md).

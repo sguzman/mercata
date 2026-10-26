@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "interim_commercial_evidence_gap_register",
+  "reviewed_at": "2026-10-26",
+  "fixed_research_tasks": 244,
+  "source_records": 54,
+  "claims": 148,
+  "public_catalog_observations": 4,
+  "findings": [
+    {
+      "id": "publication_indexing",
+      "claim_ids": [
+        "free-publication",
+        "indexed-baseline",
+        "new-seller-review",
+        "recent-list-not-strategy"
+      ],
+      "conclusion": "Publishing a page is not the same as indexed buyer acquisition."
+    },
+    {
+      "id": "fees_and_costs",
+      "claim_ids": [
+        "default-revenue-share",
+        "processor-example",
+        "collected-wait"
+      ],
+      "conclusion": "After-fee seller proceeds are distinct from net developer profit."
+    },
+    {
+      "id": "catalog_supply",
+      "claim_ids": [
+        "catalog-total",
+        "catalog-paid",
+        "catalog-2d",
+        "catalog-paid-2d"
+      ],
+      "conclusion": "Browse filter results measure available listings rather than commercial paid-unit demand."
+    },
+    {
+      "id": "reported_creators",
+      "claim_ids": [
+        "case-hive-revenue",
+        "mixolumia-paid-sales",
+        "pwyw-receipts",
+        "case-notjam-2025-24"
+      ],
+      "conclusion": "Selected creator outcomes cover different price models and cannot be combined into a representative distribution."
+    },
+    {
+      "id": "format",
+      "claim_ids": [
+        "html5-donation-only",
+        "build-demo-separation",
+        "jam-rating-warning"
+      ],
+      "conclusion": "HTML5 browser plays, game-jam participation, demos, and positive-price downloadable sales require separate units."
+    },
+    {
+      "id": "market_risk",
+      "claim_ids": [
+        "payment-processor-shock",
+        "tos-unclaimed-12month",
+        "butler-update-mechanism",
+        "tos-thirdparty-assets"
+      ],
+      "conclusion": "Payments, licensing, indexing and release maintenance create business risk independent of the listing fee."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "representative_paid_game_median_income",
+      "required_evidence": "First paid release publisher cohort including zero earners and delisted games",
+      "measured_value": null
+    },
+    {
+      "id": "zero_sale_rate",
+      "required_evidence": "All eligible paid-game launches observed at matching 30/90/365-day horizon",
+      "measured_value": null
+    },
+    {
+      "id": "paid_game_2d_buyers",
+      "required_evidence": "Unique paying buyers with anonymized, approved matched unit counts",
+      "measured_value": null
+    },
+    {
+      "id": "game_development_profit",
+      "required_evidence": "All development labor, taxes, sales refunds, fees and cash costs",
+      "measured_value": null
+    },
+    {
+      "id": "organic_vs_external_acquisition",
+      "required_evidence": "Actual purchase records by matched exposure/acquisition route",
+      "measured_value": null
+    },
+    {
+      "id": "genre_profitability",
+      "required_evidence": "Genre-specific selected publisher cohorts with compatible cost methods",
+      "measured_value": null
+    },
+    {
+      "id": "platform_gmv",
+      "required_evidence": "Public audited aggregate seller receipts or validated first-party release",
+      "measured_value": null
+    }
+  ],
+  "pending_task_ids_at_creation": [
+    "market/buyers",
+    "market/volume",
+    "income/average",
+    "income/median",
+    "income/tails",
+    "strategy/decision",
+    "review/narrative",
+    "review/gallery",
+    "itch-io/identity/choose-geographic-scope",
+    "itch-io/identity/define-neighboring-stores",
+    "itch-io/access/distinguish-team-administration",
+    "itch-io/access/create-zero-cash-entry-scenario",
+    "itch-io/market/count-new-commercial-releases",
+    "itch-io/market/estimate-paid-purchase-demand",
+    "itch-io/market/investigate-geographic-reach",
+    "itch-io/market/seek-published-market-transaction-totals",
+    "itch-io/market/estimate-paid-addressable-demand",
+    "itch-io/competition/separate-solo-and-team-publishers",
+    "itch-io/competition/measure-release-frequency",
+    "itch-io/competition/study-best-seller-concentration",
+    "itch-io/income/estimate-median-seller-income",
+    "itch-io/income/estimate-mean-seller-income",
+    "itch-io/income/measure-income-concentration",
+    "itch-io/income/compare-genre-earnings",
+    "itch-io/rights/check-resale-and-transfer-conditions",
+    "itch-io/risk/study-sales-volatility",
+    "itch-io/special-games/define-small-game-scope",
+    "itch-io/special-games/assess-multiplayer-hosting"
+  ],
+  "representative_income_dataset_available": false,
+  "publisher_account_operation_count": 0,
+  "buyer_personal_data_collected": 0,
+  "executed_commercial_experiments": 0,
+  "acceptance": [
+    "Cohort frame must include zero-sale and inactive titles.",
+    "A free download or page view cannot represent a paid buyer.",
+    "Store gross, settled seller proceeds and developer profit are distinct.",
+    "Reports by a single creator over multiple years are not independent publishers.",
+    "Missing seller sales must remain unknown rather than zero.",
+    "Vendor publication windows, sample biases, and conflicting figures remain explicit.",
+    "Private buyer records may not be published.",
+    "No causal marketing estimate without comparable exposure and actual purchases."
+  ]
+}
