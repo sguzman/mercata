@@ -1670,6 +1670,17 @@
       "evidence_class": "first_party_voluntary_free_game_annual_and_payout_self_report",
       "license": "Short attributed public numerical financial facts and independent reconciliation commentary.",
       "notes": "A 2021-2022 free-download game: 6542 views, 1425 downloads, 13 payments, $95.35 year gross, and separate $83.35 gross payout with $0.23 fee reconciliation discrepancy; not positive-price sale cohort."
+    },
+    {
+      "id": "itch-sep-2026-jam-submission-requirements",
+      "url": "https://itch.io/t/6943956/jam-submission-requirements-and-fields-update",
+      "title": "Jam submission requirements and fields update",
+      "publisher": "itch.io platform administrator",
+      "published_at": "2026-09-14",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_platform_release_note",
+      "license": "Attributed short description of public eligibility rules and independently authored testing protocol.",
+      "notes": "Dated publisher update describing submission-time requirements, not retrospective transaction or jam-to-paid outcomes."
     }
   ],
   "claims": [
@@ -5881,6 +5892,47 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "The discrepancy may have an unreported accounting cause; Mercata has no evidence to assign it to a fee, tax or exchange rate."
+    },
+    {
+      "id": "itch-jam-2026-host-gates",
+      "text": "In September 2026 itch.io added configurable jam host requirements for AI disclosure, pricing, platform builds, creation/upload timing and whether a project had already entered a different jam.",
+      "source_ids": [
+        "itch-sep-2026-jam-submission-requirements"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Individual events can select different subsets; availability of a gate is not proof it is enabled in a particular jam."
+    },
+    {
+      "id": "itch-jam-2026-free-file-distinct",
+      "text": "The September 2026 jam submission rule distinguishes having at least one free downloadable file from requiring an entirely free game project, so a downloadable demo of a paid game may satisfy the narrower gate.",
+      "source_ids": [
+        "itch-sep-2026-jam-submission-requirements"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Jam-specific choices determine eligibility; an accepted free demo is not a paid order."
+    },
+    {
+      "id": "itch-jam-2026-not-retroactive",
+      "text": "The revised host requirements are checked at the time a project is submitted and later host setting changes do not retroactively invalidate earlier submissions.",
+      "source_ids": [
+        "itch-sep-2026-jam-submission-requirements"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Entry-specific rights, ratings and actual successful submission were not checked."
+    },
+    {
+      "id": "itch-jam-owner-rights-policy",
+      "text": "itch.io jam quality guidelines oppose exploitative jams that require entrants or winners to forfeit creator ownership, but individual projects may remain subject to asset and event-specific restrictions.",
+      "source_ids": [
+        "itch-quality",
+        "itch-jams"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No specific game license chain or particular jam event rules examined."
     }
   ],
   "observations": [
