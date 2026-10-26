@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {auditDiscoveryMetric,classifyNewChannel,auditFirstWeekVideoSample} from '../site/small-channel-discovery-audit.mjs';
+import {auditDiscoveryMetric,classifyNewChannel,auditFirstWeekVideoSample,auditFirstTenUploadCohorts} from '../site/small-channel-discovery-audit.mjs';
 const load=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 test('Nonrandom vidIQ channel index frames cannot become Reach impressions',async()=>{
  const [m,d]=await Promise.all([load('ontology/youtube/small-channel-discoverability-protocol.json'),load('specimens/youtube.json')]);
@@ -58,4 +58,26 @@ test('A view-distribution audit rejects faked newcomer and owner impression info
  const c=structuredClone(m);
  c.first_week_video_distribution.rank_bands_exact_video_headcounts=true;
  assert(auditFirstWeekVideoSample(c,sources).errors.includes('rank bands overclaimed'));
+});
+
+test('First-ten created-channel cohorts reconcile overlapping Shorts and long-form membership',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/small-channel-discoverability-protocol.json'),load('specimens/youtube.json')]);
+ const ids=new Set(d.evidence.map(x=>x.id)),f=m.first_ten_upload_cohorts;
+ assert.deepEqual(auditFirstTenUploadCohorts(m,ids),{valid:true,errors:[]});
+ assert.equal(f.cohorts[0].qualified_channels+f.cohorts[1].qualified_channels-f.qualified_both_cohorts_channels,448413);
+ assert.equal(f.cohorts[1].median_30_day_views_by_same_format_upload_position.first,180);
+ assert.equal(f.cohorts[1].fraction_channels_best_video_at_least_1000_views_percent,57.8);
+ assert.equal(f.cohorts[1].fraction_eligible_individual_videos_at_least_1000_views_percent,30.2);
+ assert.equal(f.selected_cohorts_exclude_inactive_early_entrants,true);
+ assert.equal(f.all_new_channels_1000_view_probability,null);
+});
+test('First-ten study audit rejects double-counting and universal newcomer inference',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/small-channel-discoverability-protocol.json'),load('specimens/youtube.json')]);
+ const ids=new Set(d.evidence.map(x=>x.id));
+ const a=structuredClone(m);a.first_ten_upload_cohorts.qualified_both_cohorts_channels=0;
+ assert(auditFirstTenUploadCohorts(a,ids).errors.includes('overlapping same-format creator cohorts incorrectly combined'));
+ const b=structuredClone(m);b.first_ten_upload_cohorts.all_new_channels_1000_view_probability=0.578;
+ assert(auditFirstTenUploadCohorts(b,ids).errors.includes('selection, causality or monetization unsupported'));
+ const c=structuredClone(m);c.first_ten_upload_cohorts.cohorts[1].fraction_eligible_individual_videos_at_least_1000_views_percent=57.8;
+ assert(auditFirstTenUploadCohorts(c,ids).errors.includes('channel best-of-ten mistaken for a per-video outcome'));
 });

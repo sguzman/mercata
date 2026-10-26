@@ -53,3 +53,44 @@ export function auditFirstWeekVideoSample(model,registeredSources){
    errors.push('newcomer discoverability fabricated');
  return {valid:errors.length===0,errors};
 }
+
+export function auditFirstTenUploadCohorts(model,registeredSourceIds){
+ const errors=[],x=model?.first_ten_upload_cohorts;
+ if(!x||!registeredSourceIds.has(x.source_id)||x.selected_distinct_channels!==448413||
+   x.channel_creation_window?.start!=='2025-01-01'||x.channel_creation_window?.end!=='2025-06-30'||
+   x.eligible_format_uploads_min!==10||x.initial_publication_window_days!==90||
+   x.first_ten_upload_view_measurement_days_after_publication!==30)
+    errors.push('early upload cohort source or observation frame misrepresented');
+ const rows=x?.cohorts||[],s=rows.find(r=>r.format==='shorts'),l=rows.find(r=>r.format==='long_form');
+ if(rows.length!==2||s?.qualified_channels!==367243||l?.qualified_channels!==137355||
+   x.qualified_both_cohorts_channels!==56185||
+   s.qualified_channels+l.qualified_channels-x.qualified_both_cohorts_channels!==x.selected_distinct_channels||
+   x.cohort_sizes_disjoint!==false)
+    errors.push('overlapping same-format creator cohorts incorrectly combined');
+ if(!s||!l||s.median_30_day_views_by_same_format_upload_position?.first!==1362||
+   s.median_30_day_views_by_same_format_upload_position?.fifth!==1275||
+   s.median_30_day_views_by_same_format_upload_position?.tenth!==1344||
+   s.median_30_day_views_by_same_format_upload_position?.best_of_first_ten!==8832||
+   l.median_30_day_views_by_same_format_upload_position?.first!==180||
+   l.median_30_day_views_by_same_format_upload_position?.fifth!==211||
+   l.median_30_day_views_by_same_format_upload_position?.tenth!==272||
+   l.median_30_day_views_by_same_format_upload_position?.best_of_first_ten!==1948)
+    errors.push('wrong early video format medians');
+ if(!s||!l||s.fraction_channels_best_video_at_least_1000_views_percent!==86.5||
+   l.fraction_channels_best_video_at_least_1000_views_percent!==57.8||
+   s.fraction_eligible_individual_videos_at_least_1000_views_percent!==56.6||
+   l.fraction_eligible_individual_videos_at_least_1000_views_percent!==30.2||
+   x.best_of_ten_thresholds_are_typical_video_results!==false)
+    errors.push('channel best-of-ten mistaken for a per-video outcome');
+ if(x?.selected_cohorts_exclude_inactive_early_entrants!==true||
+   x?.representative_of_all_new_channel_entrants!==false||
+   x?.randomized_upload_format_or_volume!==false||
+   x?.causal_impact_of_tenth_upload!==null||
+   x?.all_new_channels_1000_view_probability!==null||
+   x?.cross_source_channel_overlap_with_first_week_38m!==null||
+   x?.actual_creator_monetization_status!==null||x?.creator_paid_income!==null||
+   model?.unmeasured?.all_new_channels_first_10_success_rate!==null||
+   model?.unmeasured?.formats_causal_discoverability_gain!==null)
+    errors.push('selection, causality or monetization unsupported');
+ return {valid:errors.length===0,errors};
+}

@@ -10,7 +10,8 @@
     "vidiq-1000-subscribers-2026",
     "api-metrics",
     "vidiq-sept2026-first-week-longform-view-distribution",
-    "tariq-2026-first-upload-vloggers"
+    "tariq-2026-first-upload-vloggers",
+    "vidiq-july2026-first-ten-upload-cohorts"
   ],
   "external_channel_observations": [
     {
@@ -136,7 +137,10 @@
     "Neither source proves a causal effect of posting more video objects or a probability of new-creator success.",
     "The 38,229,639-video vidIQ first-week distribution is not stratified by channel age or size; its median 234 views is not an estimated median for new creators.",
     "The separate 107-channel preprint measures lifetime channel views with variable follow-up, not first-week video views, so the two under-1k percentages cannot be subtracted or pooled.",
-    "For eligible thumbnail impressions YouTube requires at least 50% on-screen visibility for more than one second, and excludes external links, YouTube Kids and some other surfaces; public video plays cannot supply that denominator."
+    "For eligible thumbnail impressions YouTube requires at least 50% on-screen visibility for more than one second, and excludes external links, YouTube Kids and some other surfaces; public video plays cannot supply that denominator.",
+    "July 2026 first-ten-upload vendor cohorts exclude channels that posted fewer than ten videos within 90 days; rates cannot represent all new YouTube creators.",
+    "First-ten Shorts and long-form cohorts overlap by 56,185 channels; report their source-defined 448,413-channel union, not an uncorrected sum.",
+    "The 86.5%/57.8% values are best-of-ten channel thresholds; 56.6%/30.2% are individual-video thresholds, not rival estimates of one probability."
   ],
   "observed_authorized_channel_rows": [],
   "unmeasured": {
@@ -147,7 +151,9 @@
     "viewer_to_customer_conversion": null,
     "creator_ad_profit": null,
     "first_week_small_creator_view_distribution": null,
-    "new_channel_ctr_percent": null
+    "new_channel_ctr_percent": null,
+    "all_new_channels_first_10_success_rate": null,
+    "formats_causal_discoverability_gain": null
   },
   "first_week_video_distribution": {
     "source_id": "vidiq-sept2026-first-week-longform-view-distribution",
@@ -242,5 +248,73 @@
     "representative_new_creator_success_rate": null,
     "channel_overlap_observed": null,
     "interpretation": "107 keyword-search-selected channels observed at variable follow-up, lifetime channel view counts; not first-week indexed video view percentages"
+  },
+  "first_ten_upload_cohorts": {
+    "source_id": "vidiq-july2026-first-ten-upload-cohorts",
+    "publisher": "vidIQ Research",
+    "published_at": "2026-07-28",
+    "updated_at": "2026-07-30",
+    "channel_creation_window": {
+      "start": "2025-01-01",
+      "end": "2025-06-30"
+    },
+    "eligible_format_uploads_min": 10,
+    "initial_publication_window_days": 90,
+    "first_ten_upload_view_measurement_days_after_publication": 30,
+    "eligibility": "Channels created within six months and observed publishing at least ten public uploads of the same format in first 90 days",
+    "selected_distinct_channels": 448413,
+    "cohorts": [
+      {
+        "format": "shorts",
+        "qualified_channels": 367243,
+        "livestreams_excluded": null,
+        "median_30_day_views_by_same_format_upload_position": {
+          "first": 1362,
+          "fifth": 1275,
+          "tenth": 1344,
+          "best_of_first_ten": 8832
+        },
+        "fraction_channels_best_video_at_least_1000_views_percent": 86.5,
+        "fraction_channels_best_video_at_least_10000_views_percent": 48,
+        "fraction_eligible_individual_videos_at_least_1000_views_percent": 56.6,
+        "fraction_eligible_individual_videos_at_least_10000_views_percent": 20.9
+      },
+      {
+        "format": "long_form",
+        "qualified_channels": 137355,
+        "livestreams_excluded": true,
+        "median_30_day_views_by_same_format_upload_position": {
+          "first": 180,
+          "fifth": 211,
+          "tenth": 272,
+          "best_of_first_ten": 1948
+        },
+        "fraction_channels_best_video_at_least_1000_views_percent": 57.8,
+        "fraction_channels_best_video_at_least_10000_views_percent": 30.8,
+        "fraction_eligible_individual_videos_at_least_1000_views_percent": 30.2,
+        "fraction_eligible_individual_videos_at_least_10000_views_percent": 10
+      }
+    ],
+    "qualified_both_cohorts_channels": 56185,
+    "cohort_sizes_disjoint": false,
+    "best_of_ten_thresholds_are_typical_video_results": false,
+    "selected_cohorts_exclude_inactive_early_entrants": true,
+    "public_video_view_events_not_thumbnail_impressions": true,
+    "raw_video_or_creator_identifiers_stored": false,
+    "representative_of_all_new_channel_entrants": false,
+    "randomized_upload_format_or_volume": false,
+    "causal_impact_of_tenth_upload": null,
+    "all_new_channels_1000_view_probability": null,
+    "cross_source_channel_overlap_with_first_week_38m": null,
+    "actual_creator_monetization_status": null,
+    "creator_paid_income": null,
+    "caveats": [
+      "Survival selection: channels with fewer than ten public same-format uploads in first 90 days are excluded, including those who quit or deleted content.",
+      "Shorts and long-form cohorts overlap by 56,185 channels; adding the two n values double-counts these channels.",
+      "Best-of-ten metrics describe at least one successful video among ten attempts; per-video results and medians refer to different denominators.",
+      "The formats were chosen, not randomized; neither the difference across formats nor first/fifth/tenth position difference is a causal posting prescription.",
+      "Public 30-day video views differ from the other vendor report's seven-day view counts, from thumbnail impressions, unique people and actual creator earnings.",
+      "The two vidIQ studies may contain overlapping creator accounts or videos and cannot be treated as statistically independent replications."
+    ]
   }
 }

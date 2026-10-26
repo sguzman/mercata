@@ -29,3 +29,17 @@ The existing [September 2026 first-upload vlog preprint](first-upload-vlog-study
 
 [YouTube's current impression definitions](https://support.google.com/youtube/answer/9314486?hl=en) count eligible thumbnail displays where **at least 50% is on screen for more than one second**, on specified platform surfaces. External sites and embeds, the YouTube Kids app, YouTube Music and several other placements do not count as eligible thumbnail impressions. Accordingly **public seven-day views cannot recover owner-only impression counts or CTR**. The newcomer-first-week view distribution, small-creator impression rate, unique people and profit remain `null`.
 
+
+
+## New-channel first-ten attempts: selected upload-survivors (July 2026)
+
+[vidIQ's July 28, 2026 first-ten video study](https://vidiq.com/research/youtube-first-10-videos-study/), updated July 30, selects public channels **created January–June 2025** that posted **at least ten observed videos of the same format in their first 90 days**. It reports **367,243 Shorts-qualified channels**, **137,355 long-form-qualified channels**, and **56,185 channels appearing in both cohorts**. The actual union is **448,413 distinct qualifying channels**, not 504,598. The long-form group excludes livestreams.
+
+Within these selected upload-persistent groups, the approximate *median 30-day views per video* at first/fifth/tenth same-format upload were **1,362 / 1,275 / 1,344 for Shorts** and **180 / 211 / 272 for long-form**. The *median of each channel's best among the first ten* was **8,832 Shorts views** or **1,948 long-form views**, a different statistic that deliberately selects the biggest result from each channel.
+
+For each channel's **best of ten**, **86.5%** of eligible Shorts cohorts and **57.8%** of long-form cohorts reached **at least 1,000 views** on one video within 30 days; at **10,000**, the respective fractions were **48.0%** and **30.8%**. In contrast, across individual eligible videos, **56.6%** of Shorts and **30.2%** of long-form videos crossed 1,000, and **20.9%** versus **10.0%** crossed 10,000. The two denominators are not interchangeable.
+
+The cohort explicitly **excludes creators who stopped before publishing ten same-format public videos** within their first 90 days, and unindexed, deleted and private uploads are absent. So even these creation-date-stratified results are not the chance of a brand-new channel succeeding. The source does not randomize format or upload schedule. Comparing a first upload to the tenth does **not** prove additional uploads caused growth; channels, subject selection and accumulated experience all vary.
+
+This selected **30-day video-level/channel-best** study is independent *in methodology* from the previously cited **seven-day, all-size, 38.2m-video** indexed distribution and the keyword-selected 107-channel preprint, but their account/sample **overlap is unknown**. None supplies legitimate owner Reach thumbnail-impression or CTR values, unique-person audience counts, monetization approval, labor hours or net profit.
+

@@ -238,6 +238,12 @@ try{
     assert((await returningPanel.textContent()).includes('50 South Korean beauty channels'));
     assert((await returningPanel.textContent()).includes('Likes were not statistically significant'));
     assert((await returningPanel.textContent()).includes('do not measure a new-to-returning person transition'));
+    const firstTen=page.locator('.small-channel-discovery .first-ten-created-channels');
+    assert.equal(await firstTen.count(),1,'Missing selected first-ten upload cohort');
+    assert((await firstTen.textContent()).includes('448,413 channels created'));
+    assert((await firstTen.textContent()).includes('56,185 qualify for BOTH'));
+    assert((await firstTen.textContent()).includes('Per individual video: 56.6% Shorts, 30.2% long-form'));
+    assert((await firstTen.textContent()).includes('Excluded: all channels stopping before ten'));
     const firstWeek=page.locator('.small-channel-discovery .first-week-video-distribution');
     assert.equal(await firstWeek.count(),1,'Missing bounded video-level distribution');
     assert((await firstWeek.textContent()).includes('38,229,639 indexed long-form-classified videos'));

@@ -2742,6 +2742,22 @@ function renderSmallChannelDiscovery(model,dossier){
   panel.append(audienceSources([view.source_id,cold.source_id],dossier));
   details.append(panel);
  }
+ const early=model.first_ten_upload_cohorts;
+ if(early?.selected_distinct_channels===448413&&early.cohorts?.length===2){
+  const panel=make('div','first-ten-created-channels');
+  panel.append(make('h5','','Selected first-ten video attempts: new-channel upload survivors'));
+  panel.append(make('p','measure-limit',
+   early.selected_distinct_channels.toLocaleString('en-US')+' channels created January–June 2025, selected only after at least 10 same-format public uploads in 90 days. '+
+   early.qualified_both_cohorts_channels.toLocaleString('en-US')+' qualify for BOTH format groups.'));
+  const lf=early.cohorts.find(x=>x.format==='long_form'),short=early.cohorts.find(x=>x.format==='shorts');
+  panel.append(make('p','measure-limit','Best of first ten reaches 1,000 views in 30 days: Shorts '+
+   short.fraction_channels_best_video_at_least_1000_views_percent+'% of eligible channels, long-form '+
+   lf.fraction_channels_best_video_at_least_1000_views_percent+
+   '%. Per individual video: '+short.fraction_eligible_individual_videos_at_least_1000_views_percent+
+   '% Shorts, '+lf.fraction_eligible_individual_videos_at_least_1000_views_percent+'% long-form.'));
+  panel.append(make('p','measure-limit','Excluded: all channels stopping before ten same-format uploads; figures are NOT population-level new-creator odds, causal volume effects, thumbnail CTR, YPP approval or net earnings.'));
+  panel.append(audienceSources([early.source_id],dossier));details.append(panel);
+ }
  details.append(audienceSources(model.source_ids,dossier));
  const link=make('a','inline-link','Read sampling and impression-denominator requirements ↗');
  link.href='./ontology/youtube/small-channel-discoverability-protocol.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
