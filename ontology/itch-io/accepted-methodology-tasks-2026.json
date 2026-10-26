@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "completion_evidence_acceptance_audit_of_fixed_method_tasks",
+  "as_of": "2026-10-26",
+  "added_tasks": 0,
+  "measurements_of_new_paid_sales": 0,
+  "decisions": [
+    {
+      "task_id": "itch-io/access/define-publish-versus-index-distinction",
+      "source_ids": [
+        "itch-indexed"
+      ],
+      "supporting_document": "ontology/itch-io/account-launch-indexing-2026.md",
+      "regression_test": "tests/itch-io-account-indexing.test.mjs",
+      "acceptance_reason": "Official first-time seller review, public URL and Search & Browse eligibility separated; reported indexing statistics not interpreted as game sales.",
+      "scope": "source_verified_methodology_or_platform_rule_not_population_sales",
+      "status": "complete",
+      "percent": 100
+    },
+    {
+      "task_id": "itch-io/economics/map-pay-what-you-want-pricing",
+      "source_ids": [
+        "itch-pricing"
+      ],
+      "supporting_document": "ontology/itch-io/first-game-pricing-misconfiguration-2026.md",
+      "regression_test": "tests/itch-first-game-pricing-misconfiguration.test.mjs",
+      "acceptance_reason": "Documented free donation, paid project minimum, no payments and individually priced files remain separate ownership/price mechanisms.",
+      "scope": "source_verified_methodology_or_platform_rule_not_population_sales",
+      "status": "complete",
+      "percent": 100
+    },
+    {
+      "task_id": "itch-io/discovery/verify-indexing-lifecycle",
+      "source_ids": [
+        "itch-indexing-reform-oct-2026"
+      ],
+      "supporting_document": "ontology/itch-io/indexing-reform-creator-day-2026.md",
+      "regression_test": "tests/itch-io-indexing-reform.test.mjs",
+      "acceptance_reason": "Recent first-party indexing reform, direct-link versus listing eligibility and date-bound count units distinguish current platform practice from buyer conversion.",
+      "scope": "source_verified_methodology_or_platform_rule_not_population_sales",
+      "status": "complete",
+      "percent": 100
+    },
+    {
+      "task_id": "itch-io/income/collect-public-earnings-case-studies",
+      "source_ids": [
+        "itch-case-hive"
+      ],
+      "supporting_document": "ontology/itch-io/game-sales-feature-cases-2025-2026.md",
+      "regression_test": "tests/itch-io-game-sales-feature-cases.test.mjs",
+      "acceptance_reason": "Publicly volunteered outcomes registered, attributed and identified as nonrepresentative with no cross-publisher average extrapolated.",
+      "scope": "source_verified_methodology_or_platform_rule_not_population_sales",
+      "status": "complete",
+      "percent": 100
+    },
+    {
+      "task_id": "itch-io/income/register-unavailable-income-fields",
+      "source_ids": [
+        "itch-stat-exchange-690-2026"
+      ],
+      "supporting_document": "ontology/itch-io/community-analytics-sample-2026.md",
+      "regression_test": "tests/itch-io-community-analytics.test.mjs",
+      "acceptance_reason": "Unavailable representative zero-income, median, mean and profit fields explicitly remain null; selected community sample reported contradictions preserved.",
+      "scope": "source_verified_methodology_or_platform_rule_not_population_sales",
+      "status": "complete",
+      "percent": 100
+    },
+    {
+      "task_id": "itch-io/sales/distinguish-demo-downloads-from-sales",
+      "source_ids": [
+        "itch-fish-feathers-launch-2022"
+      ],
+      "supporting_document": "ontology/itch-io/small-paid-release-finance-2022.md",
+      "regression_test": "tests/itch-io-small-paid-finance.test.mjs",
+      "acceptance_reason": "Publisher-reported sample distinguishes download events, gift copies and paid purchases, with no unobserved conversions inferred.",
+      "scope": "source_verified_methodology_or_platform_rule_not_population_sales",
+      "status": "complete",
+      "percent": 100
+    },
+    {
+      "task_id": "itch-io/review/create-denominator-rules",
+      "source_ids": [
+        "canella-open-source-itch-games-2026"
+      ],
+      "supporting_document": "ontology/itch-io/open-source-engineering-2026.md",
+      "regression_test": "tests/itch-io-open-source-engineering.test.mjs",
+      "acceptance_reason": "Games, GitHub project records, genre tags, ratings and sales are disjoint or overlapping study units; population and sampling restrictions documented.",
+      "scope": "source_verified_methodology_or_platform_rule_not_population_sales",
+      "status": "complete",
+      "percent": 100
+    },
+    {
+      "task_id": "itch-io/review/create-unknown-data-policy",
+      "source_ids": [
+        "itch-stat-exchange-690-2026"
+      ],
+      "supporting_document": "ontology/itch-io/research-synthesis-2026.md",
+      "regression_test": "tests/itch-io-synthesis.test.mjs",
+      "acceptance_reason": "Missing platform income is explicitly represented as unknown, not zero, with source dates and incompatible sample-frame limitations.",
+      "scope": "source_verified_methodology_or_platform_rule_not_population_sales",
+      "status": "complete",
+      "percent": 100
+    }
+  ],
+  "research_target_remaining_unmet": [
+    "population_representative_seller_mean",
+    "population_representative_seller_median",
+    "platform_wide_zero_sales_fraction",
+    "active_paid_seller_census",
+    "paid_2d_buyer_population",
+    "genre_income_effect"
+  ],
+  "no_missing_empirical_data_inferred": true
+}
