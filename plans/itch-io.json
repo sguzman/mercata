@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 39,
+  "progress_percent": 42,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -208,7 +208,7 @@
         "itch-io/discovery/build-impression-to-sale-funnel"
       ],
       "phase": 2,
-      "progress_percent": 43
+      "progress_percent": 52
     },
     {
       "id": "competition",
@@ -272,7 +272,7 @@
         "itch-io/income/register-unavailable-income-fields"
       ],
       "phase": 3,
-      "progress_percent": 34
+      "progress_percent": 41
     },
     {
       "id": "rights",
@@ -328,7 +328,7 @@
         "itch-io/sales/separate-buyer-interest-from-purchase"
       ],
       "phase": 3,
-      "progress_percent": 51
+      "progress_percent": 61
     },
     {
       "id": "risk",
@@ -415,7 +415,7 @@
         "itch-io/review/prepare-evidence-gap-summary"
       ],
       "phase": 1,
-      "progress_percent": 25
+      "progress_percent": 37
     },
     {
       "id": "special-games",
@@ -1534,9 +1534,15 @@
       "emoji": "🧭",
       "objective": "Investigate define demo and browser-player journeys to checkout.",
       "acceptance": "Provide dated source-linked evidence to define demo and browser-player journeys to checkout; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 76,
+      "evidence": [
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 2
@@ -1563,12 +1569,16 @@
       "objective": "Investigate identify which traffic metrics require consented seller records.",
       "acceptance": "Provide dated source-linked evidence to identify which traffic metrics require consented seller records; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 42,
+      "percent": 74,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1582,13 +1592,17 @@
       "objective": "Investigate specify aligned denominator, attribution and conversion windows.",
       "acceptance": "Provide dated source-linked evidence to specify aligned denominator, attribution and conversion windows; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 35,
+      "percent": 72,
       "evidence": [
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
         "site/itch-html5-audit.mjs",
         "tests/itch-html5-audit.test.mjs",
-        "specimens/itch-io.json"
+        "specimens/itch-io.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1800,7 +1814,7 @@
       "objective": "Investigate specify paid-game publishers including zero-sale projects.",
       "acceptance": "Provide dated source-linked evidence to specify paid-game publishers including zero-sale projects; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 61,
+      "percent": 81,
       "evidence": [
         "ontology/itch-io/developer-income-cases-2026.json",
         "ontology/itch-io/developer-income-cases-2026.md",
@@ -1808,7 +1822,11 @@
         "tests/itch-io-income-cases.test.mjs",
         "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
         "ontology/itch-io/web-developer-survey-crosswalk-2026.md",
-        "tests/itch-web-survey-crosswalk.test.mjs"
+        "tests/itch-web-survey-crosswalk.test.mjs",
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1822,12 +1840,16 @@
       "objective": "Investigate require denominator and non-seller inclusion rules.",
       "acceptance": "Provide dated source-linked evidence to require denominator and non-seller inclusion rules; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 38,
+      "percent": 50,
       "evidence": [
         "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
         "ontology/itch-io/web-developer-survey-crosswalk-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-web-survey-crosswalk.test.mjs"
+        "tests/itch-web-survey-crosswalk.test.mjs",
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2021,9 +2043,15 @@
       "emoji": "📊",
       "objective": "Investigate specify 30, 90 and 365 day earning windows.",
       "acceptance": "Provide dated source-linked evidence to specify 30, 90 and 365 day earning windows; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 62,
+      "evidence": [
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 3
@@ -2035,9 +2063,15 @@
       "emoji": "📊",
       "objective": "Investigate use censored cohorts for missing and never-paid projects.",
       "acceptance": "Provide dated source-linked evidence to use censored cohorts for missing and never-paid projects; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 36,
+      "evidence": [
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 3
@@ -2262,9 +2296,15 @@
       "emoji": "🛒",
       "objective": "Investigate require consistent first-party denominators.",
       "acceptance": "Provide dated source-linked evidence to require consistent first-party denominators; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 63,
+      "evidence": [
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 3
@@ -2296,13 +2336,17 @@
       "objective": "Investigate measure playable launches, page visits and paid orders.",
       "acceptance": "Provide dated source-linked evidence to measure playable launches, page visits and paid orders; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 59,
       "evidence": [
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
         "site/itch-html5-audit.mjs",
         "tests/itch-html5-audit.test.mjs",
-        "specimens/itch-io.json"
+        "specimens/itch-io.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2334,9 +2378,15 @@
       "emoji": "🛒",
       "objective": "Investigate compare orders, retained units and net receipts.",
       "acceptance": "Provide dated source-linked evidence to compare orders, retained units and net receipts; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 53,
+      "evidence": [
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 3
@@ -2469,7 +2519,7 @@
       "objective": "Investigate verify collection and wish mechanisms before using them as demand proxies.",
       "acceptance": "Provide dated source-linked evidence to verify collection and wish mechanisms before using them as demand proxies; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 74,
+      "percent": 84,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -2479,7 +2529,11 @@
         "ontology/itch-io/developer-income-cases-2026.md",
         "tests/itch-io-income-cases.test.mjs",
         "ontology/itch-io/bundle-sale-jam-2026.json",
-        "ontology/itch-io/bundle-sale-jam-2026.md"
+        "ontology/itch-io/bundle-sale-jam-2026.md",
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2921,7 +2975,7 @@
       "objective": "Investigate require units, period, geography, eligibility and sampling method.",
       "acceptance": "Provide dated source-linked evidence to require units, period, geography, eligibility and sampling method; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 66,
+      "percent": 76,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -2929,7 +2983,11 @@
         "tests/itch-io-catalog.test.mjs",
         "ontology/itch-io/developer-income-cases-2026.json",
         "ontology/itch-io/developer-income-cases-2026.md",
-        "tests/itch-io-income-cases.test.mjs"
+        "tests/itch-io-income-cases.test.mjs",
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2992,9 +3050,15 @@
       "emoji": "🔬",
       "objective": "Investigate require dated evidence before awarding task progress.",
       "acceptance": "Provide dated source-linked evidence to require dated evidence before awarding task progress; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 46,
+      "evidence": [
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 1
@@ -3006,9 +3070,15 @@
       "emoji": "🔬",
       "objective": "Investigate exclude identifiable buyer or confidential seller records.",
       "acceptance": "Provide dated source-linked evidence to exclude identifiable buyer or confidential seller records; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 62,
+      "evidence": [
+        "ontology/itch-io/transaction-cohort-protocol-2026.json",
+        "ontology/itch-io/transaction-cohort-protocol-2026.md",
+        "site/itch-cohort-protocol.mjs",
+        "tests/itch-cohort-protocol.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 1

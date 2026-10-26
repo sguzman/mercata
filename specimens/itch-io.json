@@ -361,6 +361,28 @@
       "evidence_class": "official",
       "license": "Short independently summarized operating-country/currency guidance; link original.",
       "notes": "External processor availability does not guarantee eligibility under itch.io account integration or a specific merchant contract."
+    },
+    {
+      "id": "itch-buying-flow",
+      "url": "https://itch.io/docs/creators/how-buying-works",
+      "title": "How buying works",
+      "publisher": "itch.io official documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "External link only; own authored summaries.",
+      "notes": "Creator and API documentation; no private account, key, OAuth token, sales or user analytics accessed."
+    },
+    {
+      "id": "itch-api-overview",
+      "url": "https://itch.io/docs/api/overview",
+      "title": "itch.io API overview",
+      "publisher": "itch.io official documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "External link only; own authored summaries.",
+      "notes": "Creator and API documentation; no private account, key, OAuth token, sales or user analytics accessed."
     }
   ],
   "claims": [
@@ -1100,6 +1122,78 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "External provider support is not an eligibility confirmation and no real seller account onboarding was attempted."
+    },
+    {
+      "id": "checkout-entry-routes",
+      "text": "itch.io's seller guide identifies product pages, embedded purchase widgets and a JavaScript buy popup as separate ways to initiate the same purchase flow.",
+      "source_ids": [
+        "itch-buying-flow"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Documented entry paths, not observed traffic shares or completed sales."
+    },
+    {
+      "id": "checkout-amount-choice",
+      "text": "The purchase dialog allows buyer payments above an item minimum and supports individually priced files, optional tips and gift purchases.",
+      "source_ids": [
+        "itch-buying-flow"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "A displayed price is not the settled amount in each transaction; selected bonuses and promotions differ."
+    },
+    {
+      "id": "checkout-success-entitlement",
+      "text": "Successful payment creates a download-key URL with file access, email receipt and an optional later connection to a buyer account.",
+      "source_ids": [
+        "itch-buying-flow",
+        "itch-download-keys"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Download key creation is not evidence of a separate game purchase in bundle claims or owner-issued keys."
+    },
+    {
+      "id": "checkout-guest-buyers",
+      "text": "An itch.io account is not required for a buyer to purchase a game, and purchases are associated with an email address.",
+      "source_ids": [
+        "itch-buying-flow"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Logged-in accounts are not a census of unique buyers; no personally identifying purchaser data was collected."
+    },
+    {
+      "id": "checkout-repeat-downloads",
+      "text": "Buyers can revisit a key URL to redownload updated files and can claim optional external keys; these actions are distinct from new paid orders.",
+      "source_ids": [
+        "itch-buying-flow",
+        "itch-download-keys"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Repeat file access is not a repeat purchase or evidence of retention revenue."
+    },
+    {
+      "id": "api-user-authorization",
+      "text": "The server-side itch.io API requires an account API key and OAuth requests need user authorization for delegated access.",
+      "source_ids": [
+        "itch-api-overview"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Not evidence that aggregate developer sales are available without account consent, and no token was accessed."
+    },
+    {
+      "id": "api-browse-rss",
+      "text": "itch.io documents public RSS feeds for browse results, new releases, featured releases and sales, but these feeds do not provide merchant transaction histories.",
+      "source_ids": [
+        "itch-api-overview"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Public project feeds measure releases/visibility and cannot establish seller median profit or purchaser cohorts."
     }
   ],
   "observations": [

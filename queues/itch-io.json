@@ -461,7 +461,7 @@
           "title": "Specify the acquisition funnel",
           "acceptance": "Define impressions, click-through, visits, leads, conversion and purchase.",
           "weight": 1,
-          "progress": 45,
+          "progress": 69,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -471,7 +471,11 @@
             "ontology/itch-io/release-format-access-2026.md",
             "ontology/itch-io/release-format-access-2026.json",
             "site/itch-html5-audit.mjs",
-            "tests/itch-html5-audit.test.mjs"
+            "tests/itch-html5-audit.test.mjs",
+            "ontology/itch-io/transaction-cohort-protocol-2026.json",
+            "ontology/itch-io/transaction-cohort-protocol-2026.md",
+            "site/itch-cohort-protocol.mjs",
+            "tests/itch-cohort-protocol.test.mjs"
           ]
         },
         {
@@ -601,7 +605,7 @@
           "title": "Define earning-population denominator",
           "acceptance": "Separate all users, active sellers and paid sellers.",
           "weight": 1,
-          "progress": 42,
+          "progress": 62,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/developer-income-cases-2026.json",
@@ -610,7 +614,11 @@
             "tests/itch-io-income-cases.test.mjs",
             "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
             "ontology/itch-io/web-developer-survey-crosswalk-2026.md",
-            "tests/itch-web-survey-crosswalk.test.mjs"
+            "tests/itch-web-survey-crosswalk.test.mjs",
+            "ontology/itch-io/transaction-cohort-protocol-2026.json",
+            "ontology/itch-io/transaction-cohort-protocol-2026.md",
+            "site/itch-cohort-protocol.mjs",
+            "tests/itch-cohort-protocol.test.mjs"
           ]
         },
         {
@@ -649,13 +657,17 @@
           "title": "Study share earning zero",
           "acceptance": "State who is counted and why the measure may be biased.",
           "weight": 1,
-          "progress": 32,
+          "progress": 45,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
             "ontology/itch-io/web-developer-survey-crosswalk-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-web-survey-crosswalk.test.mjs"
+            "tests/itch-web-survey-crosswalk.test.mjs",
+            "ontology/itch-io/transaction-cohort-protocol-2026.json",
+            "ontology/itch-io/transaction-cohort-protocol-2026.md",
+            "site/itch-cohort-protocol.mjs",
+            "tests/itch-cohort-protocol.test.mjs"
           ]
         },
         {
@@ -664,7 +676,7 @@
           "title": "Audit selection and survivorship biases",
           "acceptance": "Describe recruitment, response bias and missing populations.",
           "weight": 1,
-          "progress": 78,
+          "progress": 83,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/developer-income-cases-2026.json",
@@ -673,7 +685,11 @@
             "tests/itch-io-income-cases.test.mjs",
             "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
             "ontology/itch-io/web-developer-survey-crosswalk-2026.md",
-            "tests/itch-web-survey-crosswalk.test.mjs"
+            "tests/itch-web-survey-crosswalk.test.mjs",
+            "ontology/itch-io/transaction-cohort-protocol-2026.json",
+            "ontology/itch-io/transaction-cohort-protocol-2026.md",
+            "site/itch-cohort-protocol.mjs",
+            "tests/itch-cohort-protocol.test.mjs"
           ]
         },
         {
@@ -843,7 +859,7 @@
           "title": "Trace sale or contract flow",
           "acceptance": "Describe transaction steps and who collects payment.",
           "weight": 1,
-          "progress": 72,
+          "progress": 88,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -853,7 +869,11 @@
             "ontology/itch-io/release-format-access-2026.md",
             "ontology/itch-io/release-format-access-2026.json",
             "site/itch-html5-audit.mjs",
-            "tests/itch-html5-audit.test.mjs"
+            "tests/itch-html5-audit.test.mjs",
+            "ontology/itch-io/transaction-cohort-protocol-2026.json",
+            "ontology/itch-io/transaction-cohort-protocol-2026.md",
+            "site/itch-cohort-protocol.mjs",
+            "tests/itch-cohort-protocol.test.mjs"
           ]
         },
         {
@@ -862,13 +882,17 @@
           "title": "Study refunds and disputes",
           "acceptance": "Identify who bears losses and processing charges.",
           "weight": 1,
-          "progress": 45,
+          "progress": 59,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
             "ontology/itch-io/commercial-rules-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-economics.test.mjs"
+            "tests/itch-io-economics.test.mjs",
+            "ontology/itch-io/transaction-cohort-protocol-2026.json",
+            "ontology/itch-io/transaction-cohort-protocol-2026.md",
+            "site/itch-cohort-protocol.mjs",
+            "tests/itch-cohort-protocol.test.mjs"
           ]
         },
         {
@@ -910,7 +934,7 @@
           "title": "List seller analytics",
           "acceptance": "Identify reported conversion and traffic metrics, access and gaps.",
           "weight": 1,
-          "progress": 78,
+          "progress": 85,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -921,7 +945,11 @@
             "ontology/itch-io/developer-income-cases-2026.md",
             "tests/itch-io-income-cases.test.mjs",
             "ontology/itch-io/bundle-sale-jam-2026.json",
-            "ontology/itch-io/bundle-sale-jam-2026.md"
+            "ontology/itch-io/bundle-sale-jam-2026.md",
+            "ontology/itch-io/transaction-cohort-protocol-2026.json",
+            "ontology/itch-io/transaction-cohort-protocol-2026.md",
+            "site/itch-cohort-protocol.mjs",
+            "tests/itch-cohort-protocol.test.mjs"
           ]
         }
       ]
@@ -1185,7 +1213,7 @@
           "title": "Audit unknowns and comparability",
           "acceptance": "Inspect denominators, missing data and misleading comparisons.",
           "weight": 1,
-          "progress": 81,
+          "progress": 86,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/catalog-snapshot-2026.md",
@@ -1204,7 +1232,11 @@
             "tests/itch-web-survey-crosswalk.test.mjs",
             "ontology/itch-io/payment-country-corridors-2026.json",
             "ontology/itch-io/payment-country-corridors-2026.md",
-            "tests/itch-io-payment-corridors.test.mjs"
+            "tests/itch-io-payment-corridors.test.mjs",
+            "ontology/itch-io/transaction-cohort-protocol-2026.json",
+            "ontology/itch-io/transaction-cohort-protocol-2026.md",
+            "site/itch-cohort-protocol.mjs",
+            "tests/itch-cohort-protocol.test.mjs"
           ]
         },
         {
@@ -1213,9 +1245,15 @@
           "title": "Review all public artifacts",
           "acceptance": "Verify rights, privacy, neutral tone and data suitability.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 58,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/transaction-cohort-protocol-2026.json",
+            "ontology/itch-io/transaction-cohort-protocol-2026.md",
+            "site/itch-cohort-protocol.mjs",
+            "tests/itch-cohort-protocol.test.mjs",
+            "specimens/itch-io.json"
+          ]
         },
         {
           "id": "review/narrative",

@@ -52,3 +52,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io payout/country audit (2026-10-26):** global itch.io collected/direct rules cross-checked against Stripe and PayPal Mexico, with processor support distinguished from itch integration and seller eligibility. Task mean **37% → 39%**, Δ +2 pp. [Country/payment crosswalk](../ontology/itch-io/payment-country-corridors-2026.md).
+
+
+**itch.io purchase/cohort research (2026-10-26):** official checkout, account-access and RSS source review plus synthetic-tested aggregate-only seller-cohort and paid-order event counting protocol. Zero actual seller cohorts accessed; representative medians remain null. **39% → 42%**, Δ **+3 pp**. [Protocol](../ontology/itch-io/transaction-cohort-protocol-2026.md).
