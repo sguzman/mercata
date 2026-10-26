@@ -382,6 +382,14 @@ try{
     assert((await musicFormats.textContent()).includes('Drum-cover title videos (Jan–Jun 2026)'));
     assert((await musicFormats.textContent()).includes('More than 500 million views'));
     assert((await musicFormats.textContent()).includes('NOT a year-on-year music trend'));
+    const platformComparator=page.locator('.video-comparators');
+    assert.equal(await platformComparator.count(),1,'Missing original video comparison set');
+    await platformComparator.locator('summary').click();
+    assert.equal(await platformComparator.locator('.comparison-money-card').count(),3,'Missing three distinct official money bases');
+    assert((await platformComparator.textContent()).includes('60% or 70% of eligible NET subscriptions'));
+    assert((await platformComparator.textContent()).includes('100,000 recent views'));
+    assert((await platformComparator.textContent()).includes('SVOD $1 per subscriber/month'));
+    assert((await platformComparator.textContent()).includes('NONINTERCHANGEABLE bases'));
     const music=page.locator('.music-rights');
     assert.equal(await music.locator('.music-rights-card').count(),5,'Missing audio licensing routes');
     await music.locator('summary').click();

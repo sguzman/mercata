@@ -5053,6 +5053,26 @@ function renderPlatformComparisonSet(data,dossier){
     grid.append(card);
   }
   details.append(grid);
+  const terms=data.official_conditional_money_bases;
+  if(terms?.routes?.length===3){
+    details.append(make('h4','','Selected first-party conditional revenue terms (not expected creator pay)'));
+    const bands=make('div','video-comparators-grid');
+    for(const row of terms.routes){
+      const card=make('article','video-comparator comparison-money-card');
+      card.append(make('h5','',row.id.replaceAll('_',' ')));
+      const description=row.id==='twitch_plus'
+        ?'60% or 70% of eligible NET subscriptions, after 100 or 300 Plus Points for 3 months'
+        :row.id==='tiktok_rewards'
+          ?'10,000 followers, 100,000 recent views and ≥1,000 eligible For You views on original 60s+ video'
+          :'Standard SVOD $1 per subscriber/month + 2.5% + $0.30 merchant; TVOD 10% + $0.50 per sale';
+      card.append(make('p','measure-context',description));
+      card.append(make('p','measure-limit',row.notes));
+      card.append(audienceSources(row.source_ids,dossier));
+      bands.append(card);
+    }
+    details.append(bands);
+    details.append(make('p','measure-limit','Net subscription receipts, qualified video views and paying sales are NONINTERCHANGEABLE bases. No measured net income, zero-earner distribution or causal platform advantage.'));
+  }
   details.append(make('p','measure-limit','Creator income, zero-earner share, typical work hours and general profitability: unknown for these comparison cohorts.'));
   const link=make('a','inline-link','Source-specific comparison criteria and exclusions ↗');
   link.href='./ontology/youtube/comparison-set.md';link.rel='noopener noreferrer';link.target='_blank';

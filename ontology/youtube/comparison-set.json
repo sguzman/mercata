@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "video_platform_comparison_scope",
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "status": "research_comparison_candidates_not_new_marketplace_specimens",
   "target_platform": "youtube",
   "inclusion_rule": "Include distinct video publishing/distribution services with an officially documented route for an independent creator to reach an audience or accept payment; retain non-equivalence of formats and denominators.",
@@ -51,7 +51,8 @@
       "id": "twitch",
       "name": "Twitch",
       "source_ids": [
-        "compare-twitch-streamer-benefits-2026"
+        "compare-twitch-streamer-benefits-2026",
+        "twitch-plus-subscription-net-shares-2026"
       ],
       "primary_surface": "live_streaming_and_community",
       "comparable_youtube_surface": "YouTube live streaming, memberships and fan support",
@@ -81,7 +82,8 @@
       "id": "vimeo_ott",
       "name": "Vimeo OTT",
       "source_ids": [
-        "compare-vimeo-ott-payments-2026"
+        "compare-vimeo-ott-payments-2026",
+        "vimeo-ott-pricing-2026"
       ],
       "primary_surface": "creator_controlled_paid_video_distribution",
       "comparable_youtube_surface": "YouTube external products, subscriptions and off-platform offers, not ad-supported public play counts",
@@ -113,7 +115,7 @@
       "id": "economics_and_fees",
       "fulfilled": false,
       "evidence": [],
-      "limitation": "No source-aligned receipts, fees, working-time and cost distributions obtained"
+      "limitation": "Selected official conditional fee schedules are documented, but no source-aligned actual creator receipts, production costs, working hours, zero-income cases or profit distributions."
     },
     {
       "id": "representative_newcomer_outcomes",
@@ -129,5 +131,102 @@
     "changed_intake_queues": false
   },
   "findings_scope": "Official product-design taxonomy only; not evidence of relative creator income, success likelihood or net profit.",
-  "portability_evidence_reference": "ontology/youtube/cross-platform-portability-2026.json"
+  "portability_evidence_reference": "ontology/youtube/cross-platform-portability-2026.json",
+  "official_conditional_money_bases": {
+    "observed_at": "2026-10-26",
+    "kind": "first_party_conditional_contract_and_eligibility_terms_not_representative_creator_earnings",
+    "routes": [
+      {
+        "id": "twitch_plus",
+        "candidate_id": "twitch",
+        "source_ids": [
+          "twitch-plus-subscription-net-shares-2026"
+        ],
+        "money_unit": "qualified_net_subscriptions_not_views",
+        "gate": "eligible_affiliate_or_partner_with_monetized_streamer_agreement",
+        "qualification_months_in_a_row": 3,
+        "qualifications": [
+          {
+            "minimum_plus_points_per_month": 100,
+            "share_of_eligible_net_subscription_receipts": 0.6
+          },
+          {
+            "minimum_plus_points_per_month": 300,
+            "share_of_eligible_net_subscription_receipts": 0.7
+          }
+        ],
+        "periodic_tier_points": [
+          {
+            "tier": 1,
+            "points": 1
+          },
+          {
+            "tier": 2,
+            "points": 2
+          },
+          {
+            "tier": 3,
+            "points": 6
+          }
+        ],
+        "gifted_subscriptions_count_for_plus_points": false,
+        "prime_subscriptions_count_for_plus_points": false,
+        "gift_subscriptions_eligible_for_enhanced_net_share_after_qualification": true,
+        "observed_streamer_qualified_net_subscription_receipts": null,
+        "observed_actual_creator_profit": null,
+        "notes": "The 60/40 and 70/30 are qualified creator share of NET subscriptions, not gross public tips, advertisers, video views or YPP participation."
+      },
+      {
+        "id": "tiktok_rewards",
+        "candidate_id": "tiktok",
+        "source_ids": [
+          "compare-tiktok-creator-rewards-2026"
+        ],
+        "money_unit": "qualified_for_you_feed_video_view_events_not_youtube_public_shorts_starts",
+        "account_min_age_years": 18,
+        "account_min_age_korea_years": 19,
+        "minimum_followers": 10000,
+        "minimum_30day_video_views": 100000,
+        "video_min_duration_seconds": 60,
+        "video_min_qualified_for_you_views_before_reward": 1000,
+        "minimum_qualifying_view_duration_seconds_exclusive": 5,
+        "duplicate_views_from_same_account_count_once": true,
+        "eligibility_subject_to_creator_residence_and_account_review": true,
+        "qualified_view_to_creator_payout_rate": null,
+        "observed_creator_net_profit": null,
+        "notes": "Requires personal account, qualifying country, original content, acceptance; fake/paid/promoted/<5s view events excluded from qualified reward base."
+      },
+      {
+        "id": "vimeo_ott_basic",
+        "candidate_id": "vimeo_ott",
+        "source_ids": [
+          "vimeo-ott-pricing-2026"
+        ],
+        "money_unit": "USD_paid_customer_subscription_or_purchase_transaction_not_free_video_views",
+        "svod_fixed_fee_usd_per_subscriber_month": 1,
+        "svod_merchant_rate_fraction": 0.025,
+        "svod_merchant_fixed_fee_usd_per_transaction": 0.3,
+        "tvod_percentage_fee_fraction": 0.1,
+        "tvod_fixed_fee_usd_per_transaction": 0.5,
+        "upfront_basic_subscription_plan_fee_usd": 0,
+        "additional_upload_and_optional_fulfillment_fees_possible": true,
+        "enterprise_deal_terms_may_differ": true,
+        "currency_fx_and_app_store_channels_may_differ": true,
+        "hypothetical_observed_sale_amounts": null,
+        "net_creator_profit": null,
+        "notes": "SVOD fees and TVOD fees are alternative sale product classes, not a cumulative charge for one transaction. Upload hours, fulfillment, refunds, marketing, taxes and working hours excluded from headline schedule."
+      }
+    ],
+    "cross_unit_rules": [
+      "The Twitch 60%/70% qualified net subscription shares are not directly comparable to YouTube's 55% eligible net watch-page ads, 45% allocated Shorts pool or fan-funding platform shares.",
+      "A TikTok reward-eligible For You view that meets a minimum watch duration is not YouTube Shorts engaged views, public play-starts, ad impressions or a sponsor contract.",
+      "A Vimeo OTT paying subscriber or item purchase is not a watch-page public view or Shorts video creation; no viewer-to-buyer conversion rate is supplied.",
+      "Vimeo OTT SVOD and TVOD rates should be applied only to their matching sale classes and currencies; enterprise and optional service charges require separately verified contract facts.",
+      "Published fees and gates describe conditional contract mechanics. They cannot establish average or median creator revenue, costs, net profit, payout conversion, zero-earner share or a preferred platform."
+    ],
+    "comparisons_of_creator_profit_supported": false,
+    "representative_newcomer_census_available": false,
+    "matched_hourly_creator_earnings_by_service": null,
+    "valid_unpaid_creator_zero_outcomes_by_service": null
+  }
 }

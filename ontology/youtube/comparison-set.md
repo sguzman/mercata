@@ -1,6 +1,6 @@
 # YouTube comparison-set boundaries: video competitors are not interchangeable
 
-**Observed:** October 23, 2026. **Scope:** YouTube's research plan only. This document does **not** admit Twitch, TikTok or Vimeo as Mercata specimens, create separate research queues, or claim earnings rankings. [Machine comparison scope](comparison-set.json).
+**Reviewed:** October 26, 2026. **Scope:** YouTube's research plan only. This document does **not** admit Twitch, TikTok or Vimeo as Mercata specimens, create separate research queues, or claim earnings rankings. [Machine comparison scope](comparison-set.json).
 
 ## Why these three candidates
 
@@ -17,6 +17,24 @@ Twitch's official help distinguishes **all streamers**, **streamers with monetiz
 TikTok's Creator Rewards Help includes country availability, personal-account requirements, minimum audience thresholds and video quality/length and qualified-view definitions. It is an eligibility description, not an unconditional creator revenue per view or a representative success probability.
 
 Vimeo OTT's official payment guide describes payouts for paid content sales on a monthly cycle. This is a storefront/service comparison, not a direct organic video-discovery comparison. Sales conversion, refunds, plan costs, buyer support and customer acquisition all require independent verification.
+
+## Official conditional terms: three different denominators
+
+As of October 26, 2026, the primary services' Help pages support the following **conditional rules**, not a normalized platform earnings comparison.
+
+| Service | Documented requirement or charge | Underlying money/event unit |
+| --- | --- | --- |
+| [Twitch Plus Program](https://help.twitch.tv/s/article/affiliates-plus?language=en_US) | Eligible Affiliate/Partner: **60% of qualified net subscription revenue** after 100 Plus Points for three consecutive months; **70%** after 300 points for three consecutive months | *Net eligible subscription receipts*, not video views or advertiser gross |
+| [TikTok Creator Rewards](https://support.tiktok.com/es/business-and-creator/creator-rewards-program/creator-rewards-program) | Eligible personal account normally 18+ (19 in South Korea), at least **10,000 followers**, **100,000 video views in the previous 30 days**, original videos at least **60 seconds**, and at least **1,000 qualified For You views** per rewarding video | Qualified For You views, counting account views only once and excluding watch durations of **five seconds or less** |
+| [Vimeo OTT pricing](https://help.vimeo.com/hc/en-us/articles/12425768622481-Vimeo-OTT-pricing-breakdown) | Standard SVOD: **$1 per subscriber per month + 2.5% + $0.30 merchant processing**; TVOD sale or rental: **10% + $0.50 per transaction** | Paid customer subscription or sale, not impressions or Shorts attention |
+
+Twitch Plus Points arise from recurring paid subscriptions (Tier 1 = 1, Tier 2 = 2, Tier 3 = 6 points); **gift and Prime subscriptions do not generate initial Plus qualification points**. Eligible gift subscriptions may nonetheless receive an improved *revenue share after qualification*; Prime subscriptions are distinct. Qualification, payment processing and creator residence are not identical. The net subscription base must not be confused with YouTube's different eligible-net Watch Page or Shorts pool denominators.
+
+TikTok's limits are product and account **eligibility rules**, not expected rewards per 1,000 YouTube views. Its qualified For You views are not Shorts public starts. Country availability, account standing and original-content requirements still need individual verification.
+
+Vimeo OTT has separate **subscription and transactional** business models; the two standard fee formulas should not be added as though they were fees on one sale. The publicly advertised Basic plan lists no upfront monthly service subscription charge, but upload hour purchases, optional fulfillment, currency conversion, tax, refunds and some Enterprise arrangements can alter the seller's actual economics. Prices in other currencies and transactions through third-party app stores may differ.
+
+**What remains unknown:** Newcomer paid conversion, net payments received, median creator revenue, abandoned projects, distribution of creators earning zero, production hours/costs and taxes. These rate schedules cannot establish relative creator income, successful channel odds or profit.
 
 ## Required normalized comparison dimensions
 
