@@ -567,7 +567,7 @@ test('Historical gaming launch metrics do not become YouTube platform growth or 
  ]);
  const ids=new Set(dossier.evidence.map(x=>x.id));
  assert.equal(study.kind,'game_release_event_viewing_study');
- assert.equal(study.events.length,2);
+ assert.equal(study.events.length,3);
  assert(study.events.every(e=>e.source_ids.every(id=>ids.has(id))&&e.unique_people===null&&e.creator_income===null));
  const release=study.events.find(x=>x.event_type==='full_game_release');
  assert.equal(release.country_scope,'JP');
