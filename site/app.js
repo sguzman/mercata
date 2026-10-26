@@ -2634,10 +2634,27 @@ function renderAgreedCollaborationFees(model,dossier){
  details.append(make('p','measure-limit','Across selected YouTube agreements: USD '+s.selected_youtube_all_tier_median_agreed_creator_fee_usd+
   ' median accepted fee. Total 120K+ Kolect agreements span all platforms; only 32% of all-platform agreed collaborations became brand-approved closed. No probability of getting a deal is observed.'));
  const paid=model.independent_paid_deliverable_tiers;
- if(paid?.follower_tier_deliverables===1502){
-  details.append(make('p','measure-limit','Separate OpenSponsorship 2026 cohort: '+
-   paid.total_pricing_deliverables.toLocaleString('en-US')+' selected completed paid deliverables across multiple platforms ('+
-   paid.follower_tier_deliverables.toLocaleString('en-US')+' with known follower tier), not a YouTube-only sample. Its median fees and follower cutoffs must NOT be pooled with Kolect accepted YouTube deals.'));
+ if(paid?.tiers?.length){
+  details.append(make('h4','','Independent paid-deliverable sample: OpenSponsorship (multiple platforms)'));
+  details.append(make('p','measure-limit','A separate July 2026 study of '+
+   paid.total_pricing_deliverables.toLocaleString('en-US')+' selected completed paid deliverables across multiple platforms, including '+
+   paid.follower_tier_deliverables.toLocaleString('en-US')+' with recorded follower tiers. These are not YouTube-only deals. Inclusion required a cash fee of at least USD '+
+   paid.minimum_fee_usd_inclusive+' and more than '+paid.minimum_tracked_views_exclusive+
+   ' tracked views; never-booked, unpaid, and product-only cases are absent.'));
+  const paidGrid=make('div','ownership-grid paid-deliverable-grid');
+  for(const t of paid.tiers){
+   const card=make('article','ownership-card paid-deliverable-card');
+   const range=t.follower_max_exclusive===null
+    ?t.follower_min_inclusive.toLocaleString('en-US')+'+'
+    :t.follower_min_inclusive.toLocaleString('en-US')+'–'+(t.follower_max_exclusive-1).toLocaleString('en-US');
+   card.append(make('h5','',t.id+' (followers '+range+')'));
+   card.append(make('strong','','USD '+t.median_cash_usd_per_deliverable.toLocaleString('en-US')+' median completed-paid deliverable'));
+   card.append(make('p','measure-limit','n = '+t.record_n.toLocaleString('en-US')+' deliverables, not unique creators'));
+   paidGrid.append(card);
+  }
+  details.append(paidGrid);
+  details.append(make('p','measure-limit',paid.missing_creator_follower_count_deliverables+
+   ' paid deliverables lacked follower tiers. Sample is selected, across platforms and multiple content types; there is no published YouTube-only fee median or probability of securing sponsorship. An agreed Kolect collaboration is not a verified payment. Different follower cutoffs, selection and payment stages mean these studies must NOT be pooled or interpreted as annual creator profit.'));
   details.append(audienceSources([paid.source_id],dossier));
  }
  details.append(audienceSources([s.source_id],dossier));
