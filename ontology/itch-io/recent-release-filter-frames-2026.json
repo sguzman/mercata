@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "recent_browse_filter_comparability_audit",
+  "retrieved_at": "2026-10-26",
+  "source_ids": [
+    "itch-recent-paid7-2026",
+    "itch-recent-paid30-2026",
+    "itch-recent-newpopular30-2026",
+    "itch-recent-topsellers-released30-2026",
+    "itch-recent-toprated-released30-2026",
+    "itch-recent-all-released30-2026"
+  ],
+  "observations": [
+    {
+      "source_id": "itch-recent-paid7-2026",
+      "url": "https://itch.io/games/last-7-days/store",
+      "result_count": 1057,
+      "unit": "filtered_public_game_listing_results",
+      "rolling_days": 7,
+      "price_filter": "paid",
+      "release_filter": "unspecified",
+      "sort": "popular",
+      "crawl_age": "~2d",
+      "exact_crawl_time": null,
+      "confirmed_paid_orders": null,
+      "first_time_commercial_publishers": null
+    },
+    {
+      "source_id": "itch-recent-paid30-2026",
+      "url": "https://itch.io/games/last-30-days/store",
+      "result_count": 3752,
+      "unit": "filtered_public_game_listing_results",
+      "rolling_days": 30,
+      "price_filter": "paid",
+      "release_filter": "unspecified",
+      "sort": "popular",
+      "crawl_age": "~2d",
+      "exact_crawl_time": null,
+      "confirmed_paid_orders": null,
+      "first_time_commercial_publishers": null
+    },
+    {
+      "source_id": "itch-recent-newpopular30-2026",
+      "url": "https://itch.io/games/new-and-popular/last-30-days/store",
+      "result_count": 3799,
+      "unit": "filtered_public_game_listing_results",
+      "rolling_days": 30,
+      "price_filter": "paid",
+      "release_filter": "unspecified",
+      "sort": "new_and_popular",
+      "crawl_age": "~2d",
+      "exact_crawl_time": null,
+      "confirmed_paid_orders": null,
+      "first_time_commercial_publishers": null
+    },
+    {
+      "source_id": "itch-recent-topsellers-released30-2026",
+      "url": "https://itch.io/games/top-sellers/last-30-days/released/store",
+      "result_count": 447,
+      "unit": "filtered_public_game_listing_results",
+      "rolling_days": 30,
+      "price_filter": "paid",
+      "release_filter": "released",
+      "sort": "top_sellers",
+      "crawl_age": "~2d",
+      "exact_crawl_time": null,
+      "confirmed_paid_orders": null,
+      "first_time_commercial_publishers": null
+    },
+    {
+      "source_id": "itch-recent-toprated-released30-2026",
+      "url": "https://itch.io/games/top-rated/last-30-days/released/store",
+      "result_count": 202,
+      "unit": "filtered_public_game_listing_results",
+      "rolling_days": 30,
+      "price_filter": "paid",
+      "release_filter": "released",
+      "sort": "top_rated",
+      "crawl_age": "~7d",
+      "exact_crawl_time": null,
+      "confirmed_paid_orders": null,
+      "first_time_commercial_publishers": null
+    },
+    {
+      "source_id": "itch-recent-all-released30-2026",
+      "url": "https://itch.io/games/last-30-days/released",
+      "result_count": 16776,
+      "unit": "filtered_public_game_listing_results",
+      "rolling_days": 30,
+      "price_filter": "all",
+      "release_filter": "released",
+      "sort": "popular",
+      "crawl_age": "~3weeks",
+      "exact_crawl_time": null,
+      "confirmed_paid_orders": null,
+      "first_time_commercial_publishers": null
+    }
+  ],
+  "sort_comparison": {
+    "popular_paid_30_days": 3752,
+    "new_and_popular_paid_30_days": 3799,
+    "difference": 47,
+    "explanation_verified": null,
+    "same_underlying_cohort_verified": false
+  },
+  "limitations": [
+    "Each public result is a listing in a rolling, mutable browse view; no transaction counts or seller identities were observed.",
+    "Cached source dates differ, so counts are not a synchronized census.",
+    "Sort mode can affect candidate inclusion; 447 Top sellers entries are not necessarily 447 new games with at least one sale.",
+    "Paid filter can include free-at-the-moment discounts, demos, existing products and preexisting seller accounts.",
+    "Released-status filter and no release-status filter represent different sets.",
+    "Ratings are not completed game purchases, and no ratings do not prove zero revenue.",
+    "Overlapping seven- and thirty-day windows cannot be added as separate releases.",
+    "None of these counts prove launch date of a developer's first paid game or buyer conversion."
+  ],
+  "not_observed": {
+    "first_game_positive_price_publisher_launches": null,
+    "first_30_day_paid_orders": null,
+    "first_30_day_zero_sale_fraction": null,
+    "successful_paid_game_fraction": null,
+    "median_recent_game_receipts": null,
+    "buyer_conversion": null,
+    "unique_active_sellers": null
+  },
+  "repeat_protocol": [
+    "Pin identical URL/filter/sort, retrieval date and exact source crawl timestamp if available.",
+    "Do not divide ranking counts by general Paid results to estimate actual sell-through.",
+    "Separate existing game updates from newly eligible commercial titles with separately verified metadata.",
+    "For revenue, use independently authorized aggregate checkout cohorts including zero earners."
+  ]
+}

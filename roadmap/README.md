@@ -190,3 +190,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io payout country examples and first-payout deductions (2026-10-26):** official direct Stripe country/currency rows, distinct from generic Stripe operations; documented once-per-account $3 collected payout tax-identity adjustment and unresolved FX/tax. 81% → 82% (Δ +1 pp; raw 81.56%). [Study](../ontology/itch-io/merchant-country-first-payout-2026.md).
+
+
+**itch.io recent-game browse filters (2026-10-26):** six rolling/sort/release/price source counts, with different cache ages, demonstrate why Top sellers listing counts are not sell-through or first-time commercial releases. Task score **82% → 82%** (Δ **+0 pp**, raw 81.97%). [Audit](../ontology/itch-io/recent-release-filter-frames-2026.md).

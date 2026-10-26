@@ -1219,6 +1219,72 @@
       "retrieved_at": "2026-10-26",
       "evidence_class": "first_party_operator_or_moderator_developer_support",
       "license": "Original support answer linked and independently summarized."
+    },
+    {
+      "id": "itch-recent-paid7-2026",
+      "url": "https://itch.io/games/last-7-days/store",
+      "title": "Recent itch.io paid unspecified popular 7-day filter (1057 results)",
+      "publisher": "itch.io public game directory",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "public_dynamic_filtered_catalog",
+      "license": "Brief public filter counters and URLs only.",
+      "notes": "Cached public page approximately ~2d old at reading, exact crawl timestamp unavailable. Rolling listing count, neither verified first commercial launches nor completed transactions."
+    },
+    {
+      "id": "itch-recent-paid30-2026",
+      "url": "https://itch.io/games/last-30-days/store",
+      "title": "Recent itch.io paid unspecified popular 30-day filter (3752 results)",
+      "publisher": "itch.io public game directory",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "public_dynamic_filtered_catalog",
+      "license": "Brief public filter counters and URLs only.",
+      "notes": "Cached public page approximately ~2d old at reading, exact crawl timestamp unavailable. Rolling listing count, neither verified first commercial launches nor completed transactions."
+    },
+    {
+      "id": "itch-recent-newpopular30-2026",
+      "url": "https://itch.io/games/new-and-popular/last-30-days/store",
+      "title": "Recent itch.io paid unspecified new_and_popular 30-day filter (3799 results)",
+      "publisher": "itch.io public game directory",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "public_dynamic_filtered_catalog",
+      "license": "Brief public filter counters and URLs only.",
+      "notes": "Cached public page approximately ~2d old at reading, exact crawl timestamp unavailable. Rolling listing count, neither verified first commercial launches nor completed transactions."
+    },
+    {
+      "id": "itch-recent-topsellers-released30-2026",
+      "url": "https://itch.io/games/top-sellers/last-30-days/released/store",
+      "title": "Recent itch.io paid released top_sellers 30-day filter (447 results)",
+      "publisher": "itch.io public game directory",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "public_dynamic_filtered_catalog",
+      "license": "Brief public filter counters and URLs only.",
+      "notes": "Cached public page approximately ~2d old at reading, exact crawl timestamp unavailable. Rolling listing count, neither verified first commercial launches nor completed transactions."
+    },
+    {
+      "id": "itch-recent-toprated-released30-2026",
+      "url": "https://itch.io/games/top-rated/last-30-days/released/store",
+      "title": "Recent itch.io paid released top_rated 30-day filter (202 results)",
+      "publisher": "itch.io public game directory",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "public_dynamic_filtered_catalog",
+      "license": "Brief public filter counters and URLs only.",
+      "notes": "Cached public page approximately ~7d old at reading, exact crawl timestamp unavailable. Rolling listing count, neither verified first commercial launches nor completed transactions."
+    },
+    {
+      "id": "itch-recent-all-released30-2026",
+      "url": "https://itch.io/games/last-30-days/released",
+      "title": "Recent itch.io all released popular 30-day filter (16776 results)",
+      "publisher": "itch.io public game directory",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "public_dynamic_filtered_catalog",
+      "license": "Brief public filter counters and URLs only.",
+      "notes": "Cached public page approximately ~3weeks old at reading, exact crawl timestamp unavailable. Rolling listing count, neither verified first commercial launches nor completed transactions."
     }
   ],
   "claims": [
@@ -4645,6 +4711,67 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Not legal advice; no individual's treaty entitlement, validated rate, classification or actual personal tax amount can be inferred."
+    },
+    {
+      "id": "itch-recent-paid-filter-7",
+      "text": "A public 7-day Paid browse page displayed 1,057 filtered game listing results.",
+      "source_ids": [
+        "itch-recent-paid7-2026"
+      ],
+      "limitations": "Cached ~2 days earlier; not actual paid orders or first-time publisher launches.",
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "itch-recent-paid-filter-30",
+      "text": "A public 30-day Paid Popular browse page displayed 3,752 filtered game listing results.",
+      "source_ids": [
+        "itch-recent-paid30-2026"
+      ],
+      "limitations": "Rolling filtered pages are not an audited count of new games with paid transactions.",
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "itch-recent-sort-count-diff",
+      "text": "The 30-day Paid New & Popular browse returned 3,799 results, 47 more than the Paid Popular frame's 3,752.",
+      "source_ids": [
+        "itch-recent-paid30-2026",
+        "itch-recent-newpopular30-2026"
+      ],
+      "limitations": "Different indexed/sort candidate frames; cause unknown; not growth or additional paid customers.",
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "itch-recent-top-seller-rank-count",
+      "text": "The 30-day Released/Paid Top sellers result frame listed 447 results; this is not evidence that 447 titles made a paid sale.",
+      "source_ids": [
+        "itch-recent-topsellers-released30-2026"
+      ],
+      "limitations": "A sorting frame is not an independently verified transaction-positive cohort.",
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "itch-recent-top-rated-rank-count",
+      "text": "The 30-day Released/Paid Top rated view displayed 202 results, without identifying paid order outcomes.",
+      "source_ids": [
+        "itch-recent-toprated-released30-2026"
+      ],
+      "limitations": "Different sort/filter/crawl dates; rating-based results cannot measure paid conversion.",
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "itch-recent-all-released-count",
+      "text": "The all-price Released-status 30-day view displayed 16,776 filtered listings in an older cached source.",
+      "source_ids": [
+        "itch-recent-all-released30-2026"
+      ],
+      "limitations": "Three-week-old crawl, all price states; not an estimate of first-time commercial game launches.",
+      "confidence": "high",
+      "observed_at": "2026-10-26"
     }
   ],
   "observations": [
