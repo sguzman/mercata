@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "desktop_game_distribution_and_patch_constraints",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "butler-overview",
+    "butler-push",
+    "butler-linux",
+    "butler-gui-2026"
+  ],
+  "butler": {
+    "push_target": "account/project:channel",
+    "supports_folder_or_zip": true,
+    "same_channel_updates_existing_slot": true,
+    "incremental_patches": true,
+    "server_optimizes_patches_after_upload": true,
+    "uncompressed_build_size_limit_bytes": 30000000000,
+    "version_label_optional": true,
+    "initial_full_upload_required": true,
+    "authenticated_account_required": true,
+    "gui_upload_since": "2026-05-18"
+  },
+  "linux": {
+    "prefer_portable_archive_over_deb_rpm": true,
+    "bundle_game_required_shared_objects": true,
+    "avoid_bundled_glibc_and_graphics_drivers": true,
+    "check_dynamic_dependencies": true,
+    "target_older_glibc_or_suitable_static_musl": true,
+    "test_on_actual_older_linux_distribution": true
+  },
+  "release_scenarios": [
+    {
+      "id": "linux_desktop",
+      "channel": "linux-universal",
+      "actual_build_pass": null,
+      "linux_libraries_audited": null,
+      "controller_pass": null
+    },
+    {
+      "id": "windows_desktop",
+      "channel": "windows-release",
+      "actual_build_pass": null,
+      "windows_smoke_test": null
+    },
+    {
+      "id": "browser_html5",
+      "channel": "html5",
+      "actual_build_pass": null,
+      "mobile_inputs_pass": null
+    }
+  ],
+  "unmeasured": {
+    "typical_packaging_hours": null,
+    "median_patch_bandwidth": null,
+    "actual_player_compatibility": null,
+    "incremental_cost_savings_usd": null,
+    "paid_sales_effect": null
+  },
+  "safeguards": [
+    "A descriptive platform feature is not an observed successful release or developer cost measure.",
+    "Static manifest validation cannot execute or attest to builds.",
+    "No seller account login, upload, build or remote code execution was performed."
+  ]
+}

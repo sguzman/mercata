@@ -64,3 +64,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io commercial postmortems (2026-10-26):** real Mixolumia paid-unit and after-transaction game receipts compared with mixed-channel visual-novel funding that cannot be assigned to itch.io. **44% → 45%**, Δ +1 pp. [Source audit](../ontology/itch-io/commercial-postmortems-2026.md).
+
+
+**itch.io distribution/Linus release review (2026-10-26):** sourced butler channels, incremental patch limits and portable Linux runtime constraints; no real binary or account operation. Score **45% → 47%**, Δ +2 pp. [Platform guide](../ontology/itch-io/distribution-build-2026.md).

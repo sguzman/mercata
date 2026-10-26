@@ -438,6 +438,50 @@
       "evidence_class": "anecdotal_developer_postmortem",
       "license": "Brief numerical attribution and source URL, no copied prose.",
       "notes": "Voluntary unverified publisher disclosure, not representative."
+    },
+    {
+      "id": "butler-overview",
+      "url": "https://itch.io/docs/butler/",
+      "title": "The butler manual",
+      "publisher": "itch.io official developer documentation",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Short original summary and URL; no source text reproduced.",
+      "notes": "Describes platform infrastructure, not our build QA or observed maintenance labor."
+    },
+    {
+      "id": "butler-push",
+      "url": "https://itch.io/docs/butler/pushing.html",
+      "title": "Pushing builds with butler",
+      "publisher": "itch.io official developer documentation",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Short original summary and URL; no source text reproduced.",
+      "notes": "Describes platform infrastructure, not our build QA or observed maintenance labor."
+    },
+    {
+      "id": "butler-linux",
+      "url": "https://itch.io/docs/itch/integrating/platforms/linux.html",
+      "title": "Distributing Linux builds",
+      "publisher": "itch.io official developer documentation",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Short original summary and URL; no source text reproduced.",
+      "notes": "Describes platform infrastructure, not our build QA or observed maintenance labor."
+    },
+    {
+      "id": "butler-gui-2026",
+      "url": "https://itch.io/updates/pushing-builds-with-butler-is-now-in-the-itch-app",
+      "title": "Pushing builds with butler is now in the itch app",
+      "publisher": "itch.io official developer documentation",
+      "retrieved_at": "2026-10-26",
+      "published_at": "2026-05-18",
+      "evidence_class": "official",
+      "license": "Short original summary and URL; no source text reproduced.",
+      "notes": "Describes platform infrastructure, not our build QA or observed maintenance labor."
     }
   ],
   "claims": [
@@ -1382,6 +1426,88 @@
       "limitations": "Multi-channel amount, not itch.io-only earnings, and not the founders' personal net income.",
       "observed_at": "2026-10-26",
       "confidence": "medium"
+    },
+    {
+      "id": "butler-update-mechanism",
+      "text": "itch.io's butler tool pushes a folder or ZIP to a named release channel and uses difference-based patch uploads when updating an existing channel.",
+      "source_ids": [
+        "butler-push",
+        "butler-overview"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Descriptive platform functionality, no specific game bandwidth savings proved."
+    },
+    {
+      "id": "butler-first-build",
+      "text": "On the first butler push all required assets must be transferred, while later changes can use incremental patches and optimized background processing.",
+      "source_ids": [
+        "butler-push"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Percentage savings examples vary by actual changed files and compression."
+    },
+    {
+      "id": "butler-30gb-limit",
+      "text": "The butler pushing guide states that the backend rejects builds above 30 GB uncompressed.",
+      "source_ids": [
+        "butler-push"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Documented limit not tested against any new game; future revisions possible."
+    },
+    {
+      "id": "butler-release-channels",
+      "text": "Butler supports named channels such as Linux and Windows releases and optional publisher version labels, with channel updates visible before fully optimized patches finish.",
+      "source_ids": [
+        "butler-push"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No account authorization or actual upload was attempted."
+    },
+    {
+      "id": "linux-distribution-caveats",
+      "text": "itch.io's Linux publishing guide recommends portable archives, bundling needed runtime dependencies without bundling graphics drivers or glibc, and testing GLIBC compatibility.",
+      "source_ids": [
+        "butler-linux"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Engine exports vary and documentation does not validate any specific executable."
+    },
+    {
+      "id": "linux-static-compatibility",
+      "text": "The itch Linux guide describes compiling against older GLIBC or fully static musl as compatibility approaches, subject to game/library suitability.",
+      "source_ids": [
+        "butler-linux"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Approach is not proof a particular Rust or C++ game runs on every target distro."
+    },
+    {
+      "id": "butler-app-gui",
+      "text": "An itch.io May 2026 announcement added a graphical butler build-upload workflow inside the itch app, with change preview and channels.",
+      "source_ids": [
+        "butler-gui-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "The feature requires app versions/settings and seller authentication; this research did not open the app."
+    },
+    {
+      "id": "distribution-labor-separate",
+      "text": "Multi-platform packaging and QA, incremental uploads, version management and player update support are real release processes separate from the storefront's price-share fees.",
+      "source_ids": [
+        "butler-push",
+        "butler-linux"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No average person-hours, bug cost or typical publisher expense is quantified."
     }
   ],
   "observations": [

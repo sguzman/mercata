@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 45,
+  "progress_percent": 47,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -148,7 +148,7 @@
         "itch-io/economics/build-break-even-model"
       ],
       "phase": 1,
-      "progress_percent": 71
+      "progress_percent": 72
     },
     {
       "id": "market",
@@ -356,7 +356,7 @@
         "itch-io/risk/set-downside-limits"
       ],
       "phase": 3,
-      "progress_percent": 47
+      "progress_percent": 52
     },
     {
       "id": "strategy",
@@ -447,7 +447,7 @@
         "itch-io/special-games/plan-release-maintenance-workload"
       ],
       "phase": 2,
-      "progress_percent": 41
+      "progress_percent": 53
     }
   ],
   "deliverables": [
@@ -1096,12 +1096,17 @@
       "objective": "Investigate account for tools, licensed art, QA, marketing, infrastructure and support.",
       "acceptance": "Provide dated source-linked evidence to account for tools, licensed art, QA, marketing, infrastructure and support; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 47,
+      "percent": 55,
       "evidence": [
         "ontology/itch-io/break-even-scenarios-2026.md",
         "ontology/itch-io/break-even-scenarios-2026.json",
         "site/itch-break-even.mjs",
-        "tests/itch-break-even.test.mjs"
+        "tests/itch-break-even.test.mjs",
+        "ontology/itch-io/distribution-build-2026.json",
+        "ontology/itch-io/distribution-build-2026.md",
+        "site/itch-distribution-audit.mjs",
+        "tests/itch-distribution-audit.test.mjs",
+        "specimens/itch-io.json"
       ],
       "artifact": null,
       "priority": "high",
@@ -2778,9 +2783,15 @@
       "emoji": "🛡️",
       "objective": "Investigate account for libraries, SDKs and hosting costs.",
       "acceptance": "Provide dated source-linked evidence to account for libraries, SDKs and hosting costs; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 55,
+      "evidence": [
+        "ontology/itch-io/distribution-build-2026.json",
+        "ontology/itch-io/distribution-build-2026.md",
+        "site/itch-distribution-audit.mjs",
+        "tests/itch-distribution-audit.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 3
@@ -3207,7 +3218,7 @@
       "objective": "Investigate check HTML5, desktop archives, executable packages and delivery types.",
       "acceptance": "Provide dated source-linked evidence to check HTML5, desktop archives, executable packages and delivery types; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 87,
+      "percent": 90,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -3216,7 +3227,11 @@
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
         "site/itch-html5-audit.mjs",
-        "tests/itch-html5-audit.test.mjs"
+        "tests/itch-html5-audit.test.mjs",
+        "ontology/itch-io/distribution-build-2026.json",
+        "ontology/itch-io/distribution-build-2026.md",
+        "site/itch-distribution-audit.mjs",
+        "tests/itch-distribution-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3252,9 +3267,15 @@
       "emoji": "🎮",
       "objective": "Investigate cover runtime dependencies, executable permissions and available architectures.",
       "acceptance": "Provide dated source-linked evidence to cover runtime dependencies, executable permissions and available architectures; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 70,
+      "evidence": [
+        "ontology/itch-io/distribution-build-2026.json",
+        "ontology/itch-io/distribution-build-2026.md",
+        "site/itch-distribution-audit.mjs",
+        "tests/itch-distribution-audit.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -3266,9 +3287,15 @@
       "emoji": "🎮",
       "objective": "Investigate define packaging, signatures and platform-specific checks.",
       "acceptance": "Provide dated source-linked evidence to define packaging, signatures and platform-specific checks; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 38,
+      "evidence": [
+        "ontology/itch-io/distribution-build-2026.json",
+        "ontology/itch-io/distribution-build-2026.md",
+        "site/itch-distribution-audit.mjs",
+        "tests/itch-distribution-audit.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -3304,13 +3331,17 @@
       "objective": "Investigate study release updates, version histories and rollback ability.",
       "acceptance": "Provide dated source-linked evidence to study release updates, version histories and rollback ability; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 84,
       "evidence": [
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
         "site/itch-html5-audit.mjs",
         "tests/itch-html5-audit.test.mjs",
-        "specimens/itch-io.json"
+        "specimens/itch-io.json",
+        "ontology/itch-io/distribution-build-2026.json",
+        "ontology/itch-io/distribution-build-2026.md",
+        "site/itch-distribution-audit.mjs",
+        "tests/itch-distribution-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3410,9 +3441,15 @@
       "emoji": "🎮",
       "objective": "Investigate capture royalties, licenses, exports and conversion work.",
       "acceptance": "Provide dated source-linked evidence to capture royalties, licenses, exports and conversion work; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 26,
+      "evidence": [
+        "ontology/itch-io/distribution-build-2026.json",
+        "ontology/itch-io/distribution-build-2026.md",
+        "site/itch-distribution-audit.mjs",
+        "tests/itch-distribution-audit.test.mjs",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -3478,13 +3515,17 @@
       "objective": "Investigate track bug reports, compatibility regressions and support hours.",
       "acceptance": "Provide dated source-linked evidence to track bug reports, compatibility regressions and support hours; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 40,
+      "percent": 63,
       "evidence": [
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
         "site/itch-html5-audit.mjs",
         "tests/itch-html5-audit.test.mjs",
-        "specimens/itch-io.json"
+        "specimens/itch-io.json",
+        "ontology/itch-io/distribution-build-2026.json",
+        "ontology/itch-io/distribution-build-2026.md",
+        "site/itch-distribution-audit.mjs",
+        "tests/itch-distribution-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

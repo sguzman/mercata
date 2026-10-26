@@ -1,0 +1,11 @@
+# itch.io — commercial game distribution overhead and Linux compatibility
+
+Reviewed October 26, 2026. Machine constraints: [distribution-build-2026.json](distribution-build-2026.json).
+
+The official [butler manual](https://itch.io/docs/butler/) documents channel-based game uploads. A publisher pushes a directory or ZIP into a named channel (for example Linux, Windows, previews or soundtracks). When a channel is updated, [butler's push guide](https://itch.io/docs/butler/pushing.html) describes incremental block-based uploads and later optimized patches. This lowers *possible* repeated bandwidth, but the exact savings depend on changed files; no typical developer dollar or time savings were measured. The manual states a **30 GB uncompressed-build backend cap**. Optional user version labels do not affect actual upload order. The [May 18, 2026 announcement](https://itch.io/updates/pushing-builds-with-butler-is-now-in-the-itch-app) also documents build publishing through the app GUI.
+
+For Linux, the [itch.io distribution guide](https://itch.io/docs/itch/integrating/platforms/linux.html) recommends portable game archives, identifying missing shared libraries, bundling legitimate dependencies, and avoiding packaging glibc or GPU drivers as game libraries. Builds may fail on older distributions because of GLIBC requirements; building against older GLIBC or using a compatible statically linked musl executable are approaches, not universal guarantees. **A successful build on one developer machine is not representative Linux QA.**
+
+The [static release manifest check](../../site/itch-distribution-audit.mjs) validates unique channels and reported uncompressed build-size bounds in a hypothetical release plan; it does not upload, test an executable, check a game engine, or measure any sales. Release efforts to budget include platform packaging, missing libraries, graphics/input checks, save compatibility, patch distribution, version labels, and customer support hours.
+
+The direct revenue implications are limited but practical: no upfront itch.io listing fee does **not** mean commercial distribution, QA and upkeep require zero time. No such operating costs or labor have been measured for a representative first-time seller, so profit forecasts cannot assume them away.
