@@ -1132,14 +1132,6 @@ test('Beauty/fashion title-query observations never mix uploads, views and seaso
  assert(model.source_observations.filter(x=>x.predicate_kind?.includes('platform_related_topic')).length===2);
  assert.equal(model.series_protocol.query_id_requires_frozen_definition,true);
  assert.equal(model.acceptance_gates.filter(x=>x.fulfilled).length,1);
- const terms=model.official_conditional_money_bases;
- assert.equal(terms.routes.length,3);
- assert(terms.routes.every(x=>x.source_ids.every(id=>sourceIds.has(id))));
- assert.deepEqual(terms.routes.find(x=>x.id==='twitch_plus').qualifications.map(x=>x.share_of_eligible_net_subscription_receipts),[0.6,0.7]);
- assert.equal(terms.routes.find(x=>x.id==='tiktok_rewards').video_min_qualified_for_you_views_before_reward,1000);
- assert.equal(terms.routes.find(x=>x.id==='vimeo_ott_basic').svod_fixed_fee_usd_per_subscriber_month,1);
- assert.equal(terms.comparisons_of_creator_profit_supported,false);
- assert.equal(terms.matched_hourly_creator_earnings_by_service,null);
  assert(Object.values(model.unmeasured).every(x=>x===null));
 });
 
@@ -1192,6 +1184,14 @@ test('Adjacent video comparison is scope-only and does not admit marketplace spe
  assert(model.candidates.every(x=>x.source_ids.every(id=>sourceIds.has(id))));
  assert(model.candidates.every(x=>x.current_creator_income_median===null &&
    x.zero_earner_rate===null && x.typical_labor_hours===null));
+ assert.equal(model.official_conditional_money_bases.routes.length,3);
+ const terms=model.official_conditional_money_bases;
+ assert(terms.routes.every(x=>x.source_ids.every(id=>sourceIds.has(id))));
+ assert.deepEqual(terms.routes.find(x=>x.id==='twitch_plus').qualifications.map(x=>x.share_of_eligible_net_subscription_receipts),[0.6,0.7]);
+ assert.equal(terms.routes.find(x=>x.id==='tiktok_rewards').video_min_qualified_for_you_views_before_reward,1000);
+ assert.equal(terms.routes.find(x=>x.id==='vimeo_ott_basic').svod_fixed_fee_usd_per_subscriber_month,1);
+ assert.equal(terms.comparisons_of_creator_profit_supported,false);
+ assert.equal(terms.matched_hourly_creator_earnings_by_service,null);
  assert.equal(gallery.specimens.length,26);
  assert(model.excluded_from_conclusions.includes('sampled_creator_income_rankings'));
 });
