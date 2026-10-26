@@ -52,7 +52,7 @@ Licensed under the repository's [LICENSE](LICENSE).
 ## Prepared research inventories
 
 - [YouTube study plan](plans/youtube.md) ([machine-readable tasks](plans/youtube.json)): 164 existing tasks and 235 additional YouTube-specific research questions, **399 tasks in all**, across 22 workstreams and four phases. Inventory creation is complete; initial source-backed research has begun. No marketplace account actions, paid experiments or commercial publishing have been performed.
-- [itch.io study plan](plans/itch-io.md) ([machine-readable tasks](plans/itch-io.json)): 84 existing tasks and 160 additional itch.io-specific questions, **244 tasks total** across 13 workstreams and four phases. Official-source and bounded market research is underway; evidence-scored progress is now 86%.
+- [itch.io study plan](plans/itch-io.md) ([machine-readable tasks](plans/itch-io.json)): 84 existing tasks and 160 additional itch.io-specific questions, **244 tasks total** across 13 workstreams and four phases. Official-source and bounded market research is underway; evidence-scored progress is now 87%.
 
 The [YouTube ontology](ontology/youtube/README.md) contains an independent glossary, category taxonomy, official policy snapshots and measurement dictionary. Its public dossier now includes dated, linked primary-source claims; typical total creator earnings and most community populations are still unknown.
 
