@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "regional_youtube_reach_and_screen_viewing",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-25",
   "status": "bounded_country_and_multimarket_observations",
   "sources": [
     {
@@ -28,6 +28,14 @@
       "study_area": "48 surveyed markets",
       "measurement_family": "Digital News Report online news audience survey",
       "coverage": "Online respondents and market averages, not a population-weighted worldwide census"
+    },
+    {
+      "id": "digital-i-20-markets-2026",
+      "source_id": "digital-i-youtube-era-2025-in-review-2026",
+      "publication_date": "2026-06-03",
+      "study_area": "20 measured international markets",
+      "measurement_family": "Digital i commercial account-level video consumption",
+      "coverage": "Measured platform accounts, precise country sampling, account population weights, account sharing and raw respondent count not publicly disclosed in release"
     }
   ],
   "observations": [
@@ -212,6 +220,80 @@
     "uk_creator_supply": null,
     "uk_channel_creator_income_distribution": null,
     "youtube_uk_news_unique_viewers": null,
-    "mexico_platform_unique_adult_users_2026": null
+    "mexico_platform_unique_adult_users_2026": null,
+    "global_mean_per_unique_person_all_devices": null,
+    "verified_2025_typical_person_median_minutes": null,
+    "verified_fraction_heavy_viewers": null
+  },
+  "multi_market_daily_account_view_time": {
+    "source_id": "digital-i-youtube-era-2025-in-review-2026",
+    "report_name": "The YouTube Era: 2025 in Review",
+    "publisher": "Digital i",
+    "reported_on": "2026-06-03",
+    "measured_market_count": 20,
+    "measurement_years": [
+      2024,
+      2025
+    ],
+    "population": "YouTube accounts in vendor measurement across 20 markets, not independently deduplicated people",
+    "account_unit": "measured_youtube_account",
+    "device_coverage_detail": null,
+    "raw_sampled_account_n": null,
+    "per_country_weights": null,
+    "representative_global_population": false,
+    "observations": [
+      {
+        "id": "avg_account_2024",
+        "year": 2024,
+        "metric": "estimated_average_daily_youtube_time",
+        "minutes_per_account_per_day": 87.2,
+        "unique_people": null
+      },
+      {
+        "id": "avg_account_2025",
+        "year": 2025,
+        "metric": "estimated_average_daily_youtube_time",
+        "minutes_per_account_per_day": 99.1,
+        "unique_people": null
+      }
+    ],
+    "category_comparators": [
+      {
+        "id": "gen_z_2025",
+        "year": 2025,
+        "segment": "Gen Z accounts in provider frame",
+        "minutes_per_account_per_day": 111,
+        "subgroup_sample_n": null
+      },
+      {
+        "id": "south_korea_2025",
+        "year": 2025,
+        "segment": "South Korea in provider market frame",
+        "minutes_per_account_per_day": 161.5,
+        "subgroup_sample_n": null
+      }
+    ],
+    "heavy_viewer_threshold_minutes_per_day": null,
+    "median_minutes_per_account_per_day": null,
+    "upper_decile_minutes_per_account_per_day": null,
+    "mean_is_not_typical_individual": true,
+    "verified_distinct_humans_per_account": null,
+    "verified_distinct_accounts_per_human": null,
+    "creator_income_from_watching": null,
+    "comparability": {
+      "same_vendor_2024_2025_descriptor": true,
+      "comparable_to_uk_ofcom_2025_51_minutes": false,
+      "comparable_to_uk_ofcom_2025_in_home_41_minutes": false,
+      "comparable_to_youtube_platform_daily_active_persons": false,
+      "comparable_to_uk_media_nations_tv_minutes": false,
+      "reason": "Digital i commercial across-market account denominator differs from Ofcom UK online adult non-TV and in-home person measures; also device coverage, account/person identity and aggregation differ."
+    },
+    "interpretation_limits": [
+      "The 99.1 minute value is a vendor-reported mean per account per day across its 20-market measurement, not worldwide minutes per unique natural person.",
+      "A mean per account does not identify a median typical viewer, heavy-viewer tail or the fraction of people watching daily.",
+      "The 20 market geography is selected, not a population-weighted worldwide YouTube average.",
+      "An account can represent multiple people or devices and an individual can have more than one account; no cross-account person deduplication published.",
+      "Ofcom online UK adult 51 minutes excludes TV sets; its separate Barb UK in-home 41-minute measure includes TV and excludes out-of-home. Do not add or average with Digital i data."
+    ]
   }
 }

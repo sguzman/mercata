@@ -1315,7 +1315,17 @@ function renderCountryReachDevices(data,dossier) {
     trends.append(row);
   }
   details.append(trends);
-  details.append(make('p','measure-limit','UK unique creator counts, market-level niche populations and global monthly distinct viewers: unknown. These studies do not measure typical creator earnings.'));
+  const account=data.multi_market_daily_account_view_time;
+ if(account?.observations?.length===2&&account.account_unit==='measured_youtube_account'){
+  const box=make('div','country-reach-account-viewtime');
+  box.append(make('h5','','2024–2025 daily minutes per measured account, not per person'));
+  const values=account.observations.map(x=>x.year+': '+x.minutes_per_account_per_day+' minutes/day');
+  box.append(make('strong','',values.join(' → ')));
+  box.append(make('p','measure-limit','Digital i commercial sample across '+account.measured_market_count+' markets. Means are per measured account, not unique humans, daily active people or an independently weighted global census.'));
+  box.append(make('p','measure-limit','Not comparable with Ofcom’s UK 51 minutes excluding television or its distinct 41 minutes for in-home devices. Median typical viewers, heavy-viewer tail and owner income are unmeasured.'));
+  box.append(audienceSources([account.source_id],dossier));details.append(box);
+ }
+ details.append(make('p','measure-limit','UK unique creator counts, market-level niche populations and global monthly distinct viewers: unknown. These studies do not measure typical creator earnings.'));
   const link=make('a','inline-link','Source tables and strict device-denominator notes ↗');
   link.href='./ontology/youtube/country-reach-devices.md';link.rel='noopener noreferrer';link.target='_blank';
   details.append(link);section.append(details);return section;

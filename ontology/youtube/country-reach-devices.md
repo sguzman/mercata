@@ -33,3 +33,15 @@ Country, market, age-group and content-category quantities cannot be added as if
 ## What remains unknown
 
 These studies do **not** supply a country-by-country population of unique YouTube creators, representative UK YouTuber salaries, the number of UK people watching a selected niche, or a 2026 worldwide monthly active-user census. Those values remain `null` in the machine model. Video viewing on television can increase without guaranteeing that new channels can acquire the same attention or earn a given revenue.
+
+
+## How much does a person watch? Keep account and person units separate
+
+[Digital i's June 3, 2026 release](https://digital-i.com/news-articles/press-release-youtube-overtakes-netflix-for-average-daily-viewing-time-while-netflix-channel-achieves-widest-reach-of-2025) reports an average **87.2 minutes per day per measured YouTube account in 2024** and **99.1 minutes in 2025**, from its commercial measurement across **20 international markets**. It also reports **111 minutes per day for Gen Z accounts** and **161.5 minutes per day in South Korea** in its 2025 market/age breakdowns. Its release does not provide the underlying count of sampled accounts, cross-country weights, person/account deduplication factors or a full distribution of viewing time.
+
+These are **account-level means** in a selected multi-country vendor frame, not unique individuals around the world. Accounts are not people: multiple people can share an account and one person can use several accounts or view while signed out. The 99.1-minute mean cannot establish the *median typical viewer*, top-decile heavy viewer, exact share of people watching daily, or a global average per person. No verified video-per-person watch-time census was available.
+
+**Do not average or sum with the UK figures above.** Ofcom's 2025 Online Nation **51-minute** measure covers tracked UK online adult activity **excluding television-set viewing**. Ofcom's distinct Barb **41-minute** 2025 figure measures **in-home connected-device viewing including TV**, with out-of-home and cellular viewing outside that frame. Digital i's international account sample, Ofcom's tracked online adults and Barb's in-home person estimates are **three incompatible measurement populations** with different devices and denominators. Differences in their reported means do not imply growth, contradictory results, or country-wise viewer rankings.
+
+[Machine record](country-reach-devices.json) stores both annual Digital i account means and unknown heavy-viewer distribution, global median, and unique-human average explicitly as `null`. The task remains partially complete because the required representative *per-person* distribution is unavailable.
+

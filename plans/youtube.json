@@ -456,7 +456,7 @@
         "youtube/audience-scale/create-a-multi-year-audience-source-comparison"
       ],
       "phase": 2,
-      "progress_percent": 78
+      "progress_percent": 79
     },
     {
       "id": "audience-demography",
@@ -4743,15 +4743,19 @@
       "objective": "Specify units and distinguish heavy viewers from average users.",
       "acceptance": "Deliver the named research artifact with source URLs, observation dates, method, relevant population, limitations, and specify units and distinguish heavy viewers from average users.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 82,
       "evidence": [
         "ontology/youtube/country-reach-devices.json",
         "ontology/youtube/country-reach-devices.md",
         "specimens/youtube.json",
         "tests/youtube.test.mjs",
-        "scripts/verify.mjs"
+        "scripts/verify.mjs",
+        "site/per-account-view-time-audit.mjs",
+        "tests/per-account-view-time-audit.test.mjs",
+        "site/app.js",
+        "tests/site-smoke.mjs"
       ],
-      "artifact": null,
+      "artifact": "ontology/youtube/country-reach-devices.json",
       "priority": "high",
       "phase": 2
     },

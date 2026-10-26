@@ -448,6 +448,12 @@ try{
     assert((await waves.textContent()).includes('High school or less: 78% (2025), 77% (2026)'));
     assert((await waves.textContent()).includes('not active use'));
     assert((await waves.textContent()).includes('no change is established as statistically significant'));
+    const viewTime=page.locator('.country-reach .country-reach-account-viewtime');
+    assert.equal(await viewTime.count(),1,'Missing bounded account-level view time evidence');
+    assert((await viewTime.textContent()).includes('2024: 87.2 minutes/day'));
+    assert((await viewTime.textContent()).includes('2025: 99.1 minutes/day'));
+    assert((await viewTime.textContent()).includes('not unique humans'));
+    assert((await viewTime.textContent()).includes('Not comparable with Ofcom'));
     const people=page.locator('.viewer-person-metrics');
     assert.equal(await people.locator('.viewer-person-card').count(),8,'Missing public/owner viewer measurement types');
     await people.locator('summary').click();
