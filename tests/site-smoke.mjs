@@ -368,6 +368,14 @@ try{
     await adsHistory.locator('.advertiser-policy-details > summary').click();
     assert((await adsHistory.textContent()).includes('2026-10'));
     assert((await adsHistory.textContent()).includes('review error rate and appeal success'));
+    const musicFormats=page.locator('.music-creator-format-activity');
+    assert.equal(await musicFormats.count(),1,'Missing distinct music education and performance observations');
+    await musicFormats.locator('summary').click();
+    assert.equal(await musicFormats.locator('.music-format-activity-card').count(),2,'Missing two independent format windows');
+    assert((await musicFormats.textContent()).includes('Vocal coaching related videos (2024)'));
+    assert((await musicFormats.textContent()).includes('Drum-cover title videos (Jan–Jun 2026)'));
+    assert((await musicFormats.textContent()).includes('More than 500 million views'));
+    assert((await musicFormats.textContent()).includes('NOT a year-on-year music trend'));
     const music=page.locator('.music-rights');
     assert.equal(await music.locator('.music-rights-card').count(),5,'Missing audio licensing routes');
     await music.locator('summary').click();

@@ -2,12 +2,14 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "music_views_charts_and_creator_rights_boundary",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-26",
   "status": "official_chart_definitions_and_industry_watch_share_no_measured_music_creator_net_returns",
   "source_ids": [
     "yt-music-charts-metric-rules-2026",
     "omdia-video-supply-2026",
-    "music-content-id"
+    "music-content-id",
+    "yt-drum-cover-views-h1-2026",
+    "yt-vocal-teachers-views-2024"
   ],
   "industry_watch_time": {
     "source_id": "omdia-video-supply-2026",
@@ -188,5 +190,56 @@
     "eligible_monetized_music_channels": null,
     "music_fan_conversion": null,
     "creator_cost_per_music_format": null
+  },
+  "selected_music_format_activity": {
+    "kind": "distinct_music_related_platform_reported_video_view_lower_bounds_not_unique_people_or_payouts",
+    "reported_source_events": [
+      {
+        "id": "voice_teacher_related_full_year_2024",
+        "source_id": "yt-vocal-teachers-views-2024",
+        "geography": "Global",
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "predicate": "videos_related_to_voice_teachers",
+        "predicate_type": "undisclosed_platform_topic_classifier",
+        "unit": "public_video_view_events",
+        "strict_lower_bound_exclusive": 500000000,
+        "unique_music_educators": null,
+        "paid_instruction_sessions": null,
+        "creator_profit": null
+      },
+      {
+        "id": "drum_cover_title_h1_2026",
+        "source_id": "yt-drum-cover-views-h1-2026",
+        "geography": "Global",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "predicate": "drum cover present in video title",
+        "predicate_type": "explicit_title_keyword",
+        "unit": "public_video_view_events",
+        "strict_lower_bound_exclusive": 500000000,
+        "unique_drummers": null,
+        "monetized_cover_videos": null,
+        "creator_profit": null
+      }
+    ],
+    "inferences_allowed": [
+      "Each source reports a lower bound on historical video views of a bounded music-related category.",
+      "Voice-teacher topics can involve music instruction and vocal technique while drum-title topics can include performances, covers, education and gear.",
+      "Some music categories can coexist with independent artists, cover creators and professional teachers, without identifying uploader earnings."
+    ],
+    "inferences_prohibited": [
+      "The two lower bounds cannot be divided to estimate comparative relative demand or relative 2024-to-2026 growth because source windows and predicates differ.",
+      "Two reported counts exceeding 500 million do not imply exact equality, a ratio of 1 or a bounded ratio.",
+      "Music chart song views, Shorts creations and video title-query views use different units and attribution; cannot be summed.",
+      "The same video may appear under performance, lessons and other content types; no deduplicated union can be computed.",
+      "The views do not disclose source-country audience, unique people, number of creators, Content ID payout decisions, lesson purchases or creator net revenue.",
+      "Music owner royalty eligibility and uploader revenue cannot be inferred from video view counts and may be governed by separate rights holders."
+    ],
+    "same_definition_growth_rate": null,
+    "song_to_creator_payout_rate": null,
+    "deduplicated_viewer_union": null,
+    "creator_median_net_earnings": null,
+    "common_video_count_denominator": null
   }
 }
