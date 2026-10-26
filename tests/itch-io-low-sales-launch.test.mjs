@@ -1,0 +1,23 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const get=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Low sales cases respect zero at a defined date and channel-specific accounting',()=>{
+ const x=get('ontology/itch-io/low-sales-launch-cases-2021-2025.json');
+ const d=get('specimens/itch-io.json');
+ assert(x.source_ids.every(s=>d.evidence.some(e=>e.id===s)));
+ const w=x.cases.find(c=>c.id==='whats_left_behind');
+ assert.equal(w.itch_paid_units,0);
+ assert.equal(w.steam_units_gross_reported,64);
+ assert.equal(w.steam_refunded_units,17);
+ assert.equal(w.itch_discovery_index_review_delay_hours_approx,8);
+ const dream=x.cases.find(c=>c.id==='dream_warrior');
+ assert.equal(dream.itch_paid_units,1);
+ assert.equal(dream.gross_revenue_usd_cross_store_reported,486);
+ assert.equal(dream.itch_specific_gross_usd,null);
+ const visual=x.cases.find(c=>c.id==='amadeus_episode1_waltz');
+ assert.equal(visual.itch_paid_units,null);
+ assert.equal(visual.event_is_pure_launch_week_itch_revenue,false);
+ assert(Object.values(x.cannot_infer).every(x=>x===null));
+ assert.equal(x.sampling.probability_selection,false);
+});

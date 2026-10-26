@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "selected_zero_low_sales_first_game_developer_cases",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-dream-warrior-postmortem",
+    "itch-whats-left-behind-postmortem",
+    "itch-amadeus-launchweek-2025"
+  ],
+  "cases": [
+    {
+      "id": "dream_warrior",
+      "genre": "retro_rpg_roguelite",
+      "source_ids": [
+        "itch-dream-warrior-postmortem"
+      ],
+      "observation_period": "roughly_early_2025_retrospective_after_august_2024_steam_launch",
+      "itch_paid_units": 1,
+      "steam_units_reported": 107,
+      "gross_revenue_usd_cross_store_reported": 486,
+      "reported_returns_cross_store": 6,
+      "reported_expenses_usd_approx": 140,
+      "reported_production_cash_budget_usd": 0,
+      "developer_reported_bank_profit_usd_approx": 120,
+      "developer_labor_hours": null,
+      "itch_specific_gross_usd": null,
+      "itch_specific_net_receipts_usd": null,
+      "steam_specific_gross_usd": null,
+      "first_game_status": "developed_from_earlier_jam_game_not_firm_first_commercial_release_census",
+      "steam_launch": "2024-08",
+      "genre_paid_win_effect": null
+    },
+    {
+      "id": "whats_left_behind",
+      "genre": "3d_postapocalyptic_city_builder",
+      "source_ids": [
+        "itch-whats-left-behind-postmortem"
+      ],
+      "observation_period": "as_of_2021_02_01_about_two_weeks_after_release",
+      "itch_paid_units": 0,
+      "steam_units_gross_reported": 64,
+      "steam_refunded_units": 17,
+      "steam_net_sold_units_reported": 47,
+      "steam_revenue_usd_reported": 632,
+      "steam_revenue_basis": "author_estimated_before_steam_platform_cut",
+      "reported_total_development_months": 9,
+      "itch_discovery_index_review_delay_hours_approx": 8,
+      "post_launch_patches_reported": 7,
+      "steam_specific_net_profit_usd": null,
+      "itch_specific_profit_usd": null,
+      "game_development_labor_hours": null,
+      "creator_costs_total_usd": null
+    },
+    {
+      "id": "amadeus_episode1_waltz",
+      "genre": "2d_visual_novel",
+      "source_ids": [
+        "itch-amadeus-launchweek-2025"
+      ],
+      "observation_period": "2025_launch_week_commentary_including_prelaunch_donations",
+      "itch_cumulative_gross_receipts_usd_lower_bound_exclusive": 100,
+      "itch_paid_units": null,
+      "receipt_scope": "prototype_donations_plus_episode1_sales_and_tips",
+      "steam_units_lower_bound_exclusive": 40,
+      "itch_specific_profit_usd": null,
+      "steam_specific_profit_usd": null,
+      "developer_labor_hours": null,
+      "event_is_pure_launch_week_itch_revenue": false,
+      "publisher_personal_income": null
+    }
+  ],
+  "sampling": {
+    "independent_publishers_count": 3,
+    "probability_selection": false,
+    "missing_unsold_titles": true,
+    "all_titles_random_draw": false,
+    "includes_mixed_free_and_paid_income_in_one_case": true,
+    "first_commercial_launch_cohort_consistent": false,
+    "publishing_periods_aligned": false
+  },
+  "cannot_infer": {
+    "paid_game_zero_sale_rate": null,
+    "first_game_median_revenue": null,
+    "first_game_mean_revenue": null,
+    "genre_income_effect": null,
+    "steam_itch_sales_ratio_for_typical_game": null,
+    "typical_launch_indexing_delay_hours": null,
+    "mean_lifetime_game_proceeds": null
+  },
+  "constraints": [
+    "Dream Warrior's $486 gross and reported roughly $120 bank profit refer to total game business, not $486 or $120 earned specifically on itch.io.",
+    "One itch.io unit and 107 Steam units occurred with non-matched marketplace audience and promotion; store effect not identified.",
+    "What's Left Behind has zero itch.io orders as of a specific short period, not proven zero lifetime sales. Its 64 Steam units and 17 refunds are Steam-specific.",
+    "An approximately eight-hour indexing delay is one developer's 2021 report, not the 2026 typical queue waiting time.",
+    "Amadeus $100+ includes free prototype donations made before commercial Episode 1 launch and cannot become first-week positive-price game sales.",
+    "None of the three has complete comparable labor hours, after-cost profit or a representative sampling frame.",
+    "Three voluntary selected publishers cannot establish the share of all new games with no paid sales."
+  ]
+}

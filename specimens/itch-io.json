@@ -845,6 +845,39 @@
       "evidence_class": "indexed_public_filtered_directory",
       "license": "Brief public directory result counter and original source URL; no player or seller data.",
       "notes": "Crawled public result indexed two_weeks before research date; direct page refresh may be blocked. Top Sellers is a browse selection, not audited purchases. Do not add results across overlapping axes."
+    },
+    {
+      "id": "itch-dream-warrior-postmortem",
+      "url": "https://high-tower-games.itch.io/dream-warrior/devlog/860725/dream-warrior-postmortem",
+      "title": "Dream Warrior Postmortem",
+      "published_at": null,
+      "publisher": "Game's independent developer, public itch.io devlog",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_game_developer_financial_postmortem",
+      "license": "Public short numbers attributed and source links; no original article text reproduced.",
+      "notes": "Creator self-reported historical game/project outcomes, unverified by merchant transaction records. Not a randomly selected representative commercial release cohort."
+    },
+    {
+      "id": "itch-whats-left-behind-postmortem",
+      "url": "https://brian-hoovler.itch.io/wlb/devlog/218277/whats-left-behind-a-postmortem",
+      "title": "What's Left Behind postmortem",
+      "published_at": "2021-02-01",
+      "publisher": "Game's independent developer, public itch.io devlog",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_game_developer_financial_postmortem",
+      "license": "Public short numbers attributed and source links; no original article text reproduced.",
+      "notes": "Creator self-reported historical game/project outcomes, unverified by merchant transaction records. Not a randomly selected representative commercial release cohort."
+    },
+    {
+      "id": "itch-amadeus-launchweek-2025",
+      "url": "https://arcanaxix.itch.io/amadeus-ep1-waltz/devlog/1128359/thank-you-launch-week-postmortem-2026-plans",
+      "title": "Amadeus launch week postmortem",
+      "published_at": null,
+      "publisher": "Game's independent developer, public itch.io devlog",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_game_developer_financial_postmortem",
+      "license": "Public short numbers attributed and source links; no original article text reproduced.",
+      "notes": "Creator self-reported historical game/project outcomes, unverified by merchant transaction records. Not a randomly selected representative commercial release cohort."
     }
   ],
   "claims": [
@@ -3005,6 +3038,78 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "The year filter definition and index completeness are not a census of 2022 commercial game releases."
+    },
+    {
+      "id": "dream-warrior-itch-one",
+      "text": "A Dream Warrior developer postmortem reported just one itch.io unit sold versus 107 Steam units, with USD 486 gross across the project.",
+      "source_ids": [
+        "itch-dream-warrior-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Gross amount is across sale channels and is not an itch.io-specific revenue figure; no causal Steam advantage inferred."
+    },
+    {
+      "id": "dream-warrior-cost",
+      "text": "The Dream Warrior creator reported a nominal USD 0 production cash budget but about USD 140 in business expenses and about USD 120 bank-profit before valuing labor.",
+      "source_ids": [
+        "itch-dream-warrior-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Single developer's approximate accounting, no actual hours and no full income-tax reconciliation."
+    },
+    {
+      "id": "whats-left-zero-sales",
+      "text": "The What's Left Behind creator reported zero itch.io sales as of February 1, 2021, while Steam had 64 sold units and 17 refunds.",
+      "source_ids": [
+        "itch-whats-left-behind-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Approximately two weeks after release; not an all-time zero-sales observation or a first-game population rate."
+    },
+    {
+      "id": "whats-left-itch-index-delay",
+      "text": "The What's Left Behind postmortem described the itch.io paid-game indexing review delaying discovery visibility by about eight hours after launch.",
+      "source_ids": [
+        "itch-whats-left-behind-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Individual historical review delay does not establish a typical 2026 first-seller indexing time or exact causation of low sales."
+    },
+    {
+      "id": "whats-left-patches-cost",
+      "text": "The same creator reported nine months' development and seven rapid post-launch patches as sources of work after a release with real paid sales elsewhere.",
+      "source_ids": [
+        "itch-whats-left-behind-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "No comparable hours or cash-cost ledger; 3D city-builder differs from small 2D titles."
+    },
+    {
+      "id": "amadeus-early-mixed-money",
+      "text": "A visual-novel developer reported more than USD 100 total itch.io receipts from a mix of prelaunch prototype donations and launch-week Episode 1 sales/tips.",
+      "source_ids": [
+        "itch-amadeus-launchweek-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Cumulative mixed payment routes, no isolated unit sales, net developer profit or purely launch-week revenue."
+    },
+    {
+      "id": "indie-selected-low-cases-not-median",
+      "text": "These three voluntary postmortems document one zero-unit itch game, one one-unit itch game, and a mixed-revenue 2D title without a total itch sales count.",
+      "source_ids": [
+        "itch-dream-warrior-postmortem",
+        "itch-whats-left-behind-postmortem",
+        "itch-amadeus-launchweek-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "They do not define the total population of eligible publishers and cannot be combined to estimate zero-sale probability or median income."
     }
   ],
   "observations": [

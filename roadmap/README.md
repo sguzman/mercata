@@ -130,3 +130,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io limited visible-price statistics (2026-10-26):** 15 ranked 2D paid browse titles yield descriptive sample medians $5.99 with all shown prices and $10 conditional on positive shown prices; no representative market median or actual receipts claimed. Score 73% → 73% (Δ 0 pp; exact 72.93%). [Sample boundaries](../ontology/itch-io/paid-2d-popular-prices-2026.md).
+
+
+**itch.io low-sales game reports (2026-10-26):** actual zero-unit early launch case and one-unit indie case alongside a mixed-donation visual novel, keeping returns and total-game gross distinct from itch-specific sales. 73% → 74% (Δ +1 pp, exact 73.64%). [Source cases](../ontology/itch-io/low-sales-launch-cases-2021-2025.md).
