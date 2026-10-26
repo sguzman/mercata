@@ -10,6 +10,8 @@ For music, sprites, textures, images and other media, software licenses on the g
 
 The [itch.io terms](https://itch.io/docs/legal/terms) require publishers to have distribution rights to uploaded work and grant itch.io a non-exclusive service license; they neither replace the underlying licenses of included assets nor give automatic clearance from other storefront conditions.
 
+[Additional font and third-party asset inventory protocol](game-component-rights-register-2026.md): OFL 1.1 font bundling requires copyright/license notices and respects any Reserved Font Names on modified versions.
+
 ## A safe inventory for a commercial build
 
 Before an actual release, identify each meaningful component's source, version, author/copyright holder, license identifier, permitted type of redistribution, credit/NOTICE files, source-code delivery conditions, and any separately granted commercial rights. Group game code, linked libraries, executable dependencies, font files, graphics, sounds, third-party IP and game metadata explicitly rather than treating “open-source game” as one license.

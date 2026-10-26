@@ -1626,6 +1626,17 @@
       "evidence_class": "first_party_jam_schedule",
       "license": "Short official event dates and entry count only.",
       "notes": "April13–26 2026 HTML5 jam, overview 482 entries, separate entries listing 483; not paid games or buyers."
+    },
+    {
+      "id": "license-osi-ofl-1-1",
+      "url": "https://opensource.org/license/OFL-1.1",
+      "title": "SIL Open Font License 1.1 full legal text",
+      "publisher": "Open Source Initiative (OFL approved license text)",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "primary_software_and_font_license_text",
+      "license": "License requirements briefly paraphrased with source attribution.",
+      "notes": "Allows commercial software/game bundling with notice preservation, forbids standalone font resale, reserved font names conditionally restrict modified font naming. Not licensing evidence for a specific game."
     }
   ],
   "claims": [
@@ -5755,6 +5766,26 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Game-key claims are not identical to bundle purchases, new paid customer count, independent positive-price game units or player activity."
+    },
+    {
+      "id": "ofl-commercial-game-font-bundling",
+      "text": "The SIL Open Font License 1.1 permits licensed font files to be bundled with commercially sold software including games, provided copies preserve the required copyright and license statements.",
+      "source_ids": [
+        "license-osi-ofl-1-1"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Only applies to fonts actually covered by OFL; does not authorize unrelated copyrighted assets or certify a specific release."
+    },
+    {
+      "id": "ofl-modified-font-reserved-name",
+      "text": "Under OFL 1.1, a modified font cannot use a reserved font name without the copyright holder’s explicit permission; the licensed font cannot be sold by itself.",
+      "source_ids": [
+        "license-osi-ofl-1-1"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Reserved name designation is font-specific and must be verified from its copyright notice; font use in unrelated artworks has different conditions."
     }
   ],
   "observations": [

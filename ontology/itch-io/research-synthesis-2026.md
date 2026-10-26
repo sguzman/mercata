@@ -1,6 +1,6 @@
 # itch.io commercial-game research — evidence synthesis and open gaps
 
-**Snapshot: October 26, 2026.** The specimen has 146 source records and 404 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
+**Snapshot: October 26, 2026.** The specimen has 147 source records and 406 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
 
 The market has **no mandatory fee to list a game**, but publication, indexing and acquiring purchasers are separate. Payments can use configurable platform share and processor charges, and the illustrative $10 buyer payment becomes $8.41 **before** refund, tax, labor or other obligations. The public 1.78 million all-game directory, 49,588 paid-game directory and 12,691 paid-2D filter are counts of **listings**, not distinct active paid publishers or buyers.
 
@@ -43,6 +43,8 @@ The [source-based co-op bundle participation and allocation review](coop-bundle-
 The [account, person, page, team and paid seller ontology](creator-population-account-person-game-2026.md) fixes the definitions required for a valid publisher cohort while explicitly leaving the active-paid-seller count and unique-human estimate unavailable.
 
 The [release bug/compatibility/customer-support workload plan](game-patch-support-workload-2026.md) specifies versioned work logging and nonduplicated support hours without fabricating a typical rate or actually testing a game.
+
+The [third-party game asset license tracking contract](game-component-rights-register-2026.md) covers code, middleware, fonts, music, sprites and narrative IP, including OFL commercial game bundling requirements. No real game rights inventory has been cleared.
 
 ## Missing evidence required for the goal
 

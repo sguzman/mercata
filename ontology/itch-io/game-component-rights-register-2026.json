@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "per_game_release_component_rights_inventory_plan",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "license-osi-ofl-1-1",
+    "license-osi-mit",
+    "license-apache-2",
+    "license-gnu-gpl-faq",
+    "license-cc-by-4",
+    "license-cc-by-nc-4",
+    "itch-terms",
+    "itch-quality"
+  ],
+  "tracked_classes": [
+    "code_library",
+    "engine_or_middleware",
+    "font",
+    "sprite_or_artwork",
+    "music_or_sound",
+    "narrative_or_trademark"
+  ],
+  "minimum_release_manifest_fields": [
+    "component_id",
+    "asset_kind",
+    "origin_url",
+    "creator_or_copyright_holder",
+    "license_id",
+    "version_or_asset_identity",
+    "distributed_in_release",
+    "notice_file_or_embedded_license",
+    "modification_state",
+    "commercial_distribution_grant_verified",
+    "remediation_status"
+  ],
+  "license_classes": [
+    {
+      "id": "OFL-1.1",
+      "category": "font",
+      "permits_commercial_game_bundling": true,
+      "retain_copyright_and_license": true,
+      "prohibit_selling_font_alone": true,
+      "modified_with_reserved_font_name_needs_permission": true,
+      "applies_to_unrelated_game_code": false,
+      "source_ids": [
+        "license-osi-ofl-1-1"
+      ]
+    },
+    {
+      "id": "MIT",
+      "category": "code",
+      "permits_commercial_distribution": true,
+      "retain_copyright_and_permission_notice": true,
+      "source_ids": [
+        "license-osi-mit"
+      ]
+    },
+    {
+      "id": "Apache-2.0",
+      "category": "code",
+      "permits_commercial_distribution": true,
+      "preserve_license_and_notices": true,
+      "source_ids": [
+        "license-apache-2"
+      ]
+    },
+    {
+      "id": "GPL-3.0",
+      "category": "code",
+      "permits_commercial_distribution": true,
+      "binary_distribution_source_obligations": true,
+      "license_compatibility_review_required": true,
+      "source_ids": [
+        "license-gnu-gpl-faq"
+      ]
+    },
+    {
+      "id": "CC-BY-4.0",
+      "category": "art_or_music",
+      "permits_commercial_distribution": true,
+      "requires_credit_and_license_link": true,
+      "source_ids": [
+        "license-cc-by-4"
+      ]
+    },
+    {
+      "id": "CC-BY-NC-4.0",
+      "category": "art_or_music",
+      "permits_commercial_distribution_without_exception": false,
+      "source_ids": [
+        "license-cc-by-nc-4"
+      ]
+    }
+  ],
+  "provenance_rules": [
+    "The project and bundled files must have independently supported licenses, not merely the engine license.",
+    "A license is version- and component-specific; provenance must not be inferred from a store tag or parent repository readme.",
+    "Music and sound licenses may differ from code and sprites created by the same publisher.",
+    "Check font copyright, OFL version, embedded text notice and Reserved Font Name after actual modification.",
+    "Document whether each file is redistributed in the game build rather than merely used during production.",
+    "A novel commercial-use contract or copyright transfer needs its actual grant reviewed, not an invented permission.",
+    "Changes to release assets trigger a re-review before the next upload and must not be silently accepted.",
+    "A license tracking record is not legal clearance for unknown derivative work, trademark or jurisdictional requirements."
+  ],
+  "all_components_actual_inventory_complete": false,
+  "actual_game_submitted": false,
+  "license_conflicts_resolved_count": null,
+  "average_license_review_hours": null,
+  "platformwide_cost_of_license_compliance": null,
+  "creator_income_effect": null,
+  "synthetic_test_fixtures_only": true
+}
