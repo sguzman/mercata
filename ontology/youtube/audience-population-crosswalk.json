@@ -11,7 +11,11 @@
     "pew-us-daily-youtube-2025",
     "datareportal-2026-mx",
     "datareportal-2026-us",
-    "datareportal-2026-br"
+    "datareportal-2026-br",
+    "datareportal-2026-india",
+    "datareportal-2026-indonesia",
+    "datareportal-2026-japan",
+    "datareportal-2026-philippines"
   ],
   "observations": [
     {
@@ -134,7 +138,8 @@
     "An online survey denominator of internet users 16+ excludes offline residents, younger people and some markets; ever-use is not past-month use.",
     "Pew's 48% at least daily and 33% several times daily concern the same 2025 surveyed adult base; the latter is contained in the former.",
     "Survey country and ad-planner figures have different data sources, periods, geographic coverage and measurement units: do not sum them into world MAU.",
-    "Co-viewing, logged-out use, multiple Google accounts, channel/account duplication and anonymized user models require explicit reconciliation."
+    "Co-viewing, logged-out use, multiple Google accounts, channel/account duplication and anonymized user models require explicit reconciliation.",
+    "The October 2025 seven-country ad-reach ordering is only within the seven explicitly selected markets, not a global monthly/daily active-user or person-ranking."
   ],
   "no_valid_cross_platform_intersection_or_world_total": true,
   "unmeasured": {
@@ -145,7 +150,8 @@
     "platformwide_account_deduplication_rate": null,
     "world_ad_reach_deduplicated": null,
     "new_user_cohort_count": null,
-    "active_unique_creator_count": null
+    "active_unique_creator_count": null,
+    "global_country_order_by_active_mau": null
   },
   "reported_independent_population_measure": null,
   "us_adult_ever_use_history": {
@@ -255,5 +261,96 @@
     "global_dau": null,
     "significant_growth_verified": null,
     "deduplicated_youtube_people": null
+  },
+  "ad_reach_country_comparison": {
+    "id": "selected_7_country_late_2025_ad_planner_reach",
+    "metric": "potential_google_youtube_advertising_reach",
+    "period": "2025-10",
+    "publication_series": "Digital 2026 country reports, published late 2025",
+    "vendor": "Kepios / DataReportal summarizing Google ad planning tools",
+    "sampling_frame": "Seven explicitly named national planner estimates; not a worldwide-complete active user panel",
+    "unit": "million_potential_ad_reachable_audience_estimates",
+    "rank_scope": "within_these_seven_country_estimates_only_not_global_rank",
+    "rank_basis": "descending_ad_planner_reach_not_mau",
+    "provider_reported_monthly_active_users": false,
+    "provider_reported_daily_active_users": false,
+    "independent_probability_person_census": false,
+    "selected_country_count": 7,
+    "source_count": 7,
+    "countries": [
+      {
+        "within_panel_rank": 1,
+        "iso2": "IN",
+        "country": "India",
+        "ad_reach_million": 500,
+        "source_id": "datareportal-2026-india"
+      },
+      {
+        "within_panel_rank": 2,
+        "iso2": "US",
+        "country": "United States",
+        "ad_reach_million": 254,
+        "source_id": "datareportal-2026-us"
+      },
+      {
+        "within_panel_rank": 3,
+        "iso2": "ID",
+        "country": "Indonesia",
+        "ad_reach_million": 151,
+        "source_id": "datareportal-2026-indonesia"
+      },
+      {
+        "within_panel_rank": 4,
+        "iso2": "BR",
+        "country": "Brazil",
+        "ad_reach_million": 150,
+        "source_id": "datareportal-2026-br"
+      },
+      {
+        "within_panel_rank": 5,
+        "iso2": "MX",
+        "country": "Mexico",
+        "ad_reach_million": 85,
+        "source_id": "datareportal-2026-mx"
+      },
+      {
+        "within_panel_rank": 6,
+        "iso2": "JP",
+        "country": "Japan",
+        "ad_reach_million": 78.5,
+        "source_id": "datareportal-2026-japan"
+      },
+      {
+        "within_panel_rank": 7,
+        "iso2": "PH",
+        "country": "Philippines",
+        "ad_reach_million": 59.6,
+        "source_id": "datareportal-2026-philippines"
+      }
+    ],
+    "validity_gates": {
+      "comparable_publisher_series": true,
+      "comparable_observation_month": true,
+      "same_reported_unit": true,
+      "actual_monthly_active_use_rank": false,
+      "full_world_coverage": false,
+      "independent_active_person_deduplication": false,
+      "cross_country_account_overlap_measured": false
+    },
+    "unmeasured": {
+      "comparable_country_mau_population": null,
+      "comparable_country_dau_population": null,
+      "world_rank_of_each_country_by_actual_active_users": null,
+      "country_unique_people_overlapping": null,
+      "country_logged_out_viewers": null,
+      "true_monthly_active_user_rank": null
+    },
+    "warnings": [
+      "Rank numbers are local positions among seven named countries, not positions in a global exhaustive ranking.",
+      "The data reflect potential ad delivery estimates in October 2025, regardless of the Digital 2026 report title.",
+      "Advertising audience estimates are not equal to monthly or daily active logged-in people, not a census of viewers, and not verified unique human users.",
+      "The two underlying Mercata research artifacts summarize overlapping DataReportal country reports, not two independent replications.",
+      "No country video engagement, creator earnings, opportunity size or causal usage change can be inferred from the panel."
+    ]
   }
 }

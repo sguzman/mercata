@@ -3236,6 +3236,23 @@ function renderAudiencePopulationCrosswalk(data,dossier){
   card.append(audienceSources(x.source_ids,dossier));grid.append(card);
  }
  details.append(grid);
+ const reach=data.ad_reach_country_comparison;
+ if(reach?.countries?.length===7&&reach.rank_scope==='within_these_seven_country_estimates_only_not_global_rank'){
+   const group=make('div','country-selected-reach-panel');
+   group.append(make('h5','','October 2025 YouTube potential ad reach: seven selected countries'));
+   group.append(make('p','measure-limit','Ranks are only within the seven countries below, NOT a global ranking or measured MAU/DAU. One Google ad-planner report family.'));
+   const rows=make('div','country-selected-reach-grid');
+   for(const country of reach.countries){
+     const item=make('div','country-selected-reach-item');
+     item.append(make('strong','',country.within_panel_rank+'. '+country.country));
+     item.append(make('span','',country.ad_reach_million+' million estimated ad-reachable'));
+     item.append(audienceSources([country.source_id],dossier));
+     rows.append(item);
+   }
+   group.append(rows);
+   group.append(make('p','measure-limit','Monthly active unique people by country and a true worldwide usage ranking remain unknown.'));
+   details.append(group);
+ }
  details.append(make('p','measure-limit','The deduplicated worldwide MAU and DAU remain unknown, as does cross-account deduplication.'))
  if(data.us_adult_ever_use_history?.year_values?.length){details.append(make('p','measure-limit','Pew U.S.-adult ever-use series 2018–2026: seven survey observations, with 2020/2022 missing and collection modes changing. Both 2025 and 2026 report 84%; these are not global MAU/DAU.'));}
 ;

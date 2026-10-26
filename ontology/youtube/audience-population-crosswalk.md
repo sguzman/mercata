@@ -43,3 +43,22 @@ The [2026 Pew social media historical fact sheet](https://www.pewresearch.org/in
 | 2026-06-18 | 84% | web / mail / phone |
 
 No YouTube observation is published here for **2020** or **2022**. Pew's surveys used telephone through 2021, web/mail in 2023, and web/mail/phone from 2024 onward. The source's 2026 overall margin of error is ±1.8 percentage points, not a margin for older years or changes. Both **2025 and 2026 = 84%** are point estimates from different samples; they are not zero subscriber turnover, constant population size or measured platform active users. The machine register and [audit](../../site/us-ever-use-history-audit.mjs) enforce these limits.
+
+## Seven-country matched advertising-reach comparison (October 2025)
+
+The three-country ad-planner measurements above and four separately published [country advertiser-reach reports](country-ad-reach-comparisons.md) can be compared **as October 2025 estimates from the same DataReportal Digital 2026 reporting family**. This provides a reproducible **ranking *within the seven explicitly selected countries***, not an exhaustive global country ranking and not verified active-user counts.
+
+| Position *within these seven* | Country | Potential YouTube ad reach, millions |
+| ---: | --- | ---: |
+| 1 | [India](https://datareportal.com/reports/digital-2026-india) | 500 |
+| 2 | [United States](https://datareportal.com/reports/digital-2026-united-states-of-america) | 254 |
+| 3 | [Indonesia](https://datareportal.com/reports/digital-2026-indonesia) | 151 |
+| 4 | [Brazil](https://datareportal.com/reports/digital-2026-brazil) | 150 |
+| 5 | [Mexico](https://datareportal.com/reports/digital-2026-mexico) | 85 |
+| 6 | [Japan](https://datareportal.com/reports/digital-2026-japan) | 78.5 |
+| 7 | [Philippines](https://datareportal.com/reports/digital-2026-philippines) | 59.6 |
+
+These are **potential advertisers' reachable identities**, reported in millions; Google’s publisher warns they may differ materially from actual monthly active users. It is not justified to label this ordering *country rank by monthly active people*, nor to say a country in this table outranks every omitted country. No sum of these reach estimates is claimed as a unique-person global total. Sources share one Google ad-tool measurement family and are **not seven independent surveys**. Same-period snapshots allow limited descriptive *ad-planning comparisons* only. Reported differences may also be influenced by inventory eligibility, advertising targeting definitions, estimated or modelled identity counts, and later planner revisions.
+
+Comparable **country-by-country true monthly and daily person counts**, and a validated global ranking of countries by active usage, remain **unavailable**; the machine record retains them as `null`.
+

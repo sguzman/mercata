@@ -229,6 +229,12 @@ try{
     assert((await returningPanel.textContent()).includes('50 South Korean beauty channels'));
     assert((await returningPanel.textContent()).includes('Likes were not statistically significant'));
     assert((await returningPanel.textContent()).includes('do not measure a new-to-returning person transition'));
+    const reachPanel=page.locator('.audience-population-crosswalk .country-selected-reach-panel');
+    assert.equal(await reachPanel.count(),1,'Missing source-linked seven-country comparison');
+    assert.equal(await reachPanel.locator('.country-selected-reach-item').count(),7,'Country panel must have seven matched estimates');
+    assert((await reachPanel.textContent()).includes('1. India'));
+    assert((await reachPanel.textContent()).includes('500 million estimated ad-reachable'));
+    assert((await reachPanel.textContent()).includes('NOT a global ranking or measured MAU/DAU'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));

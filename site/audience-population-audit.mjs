@@ -14,6 +14,33 @@ export function auditAudiencePopulation(data,sources){
  const byId=new Map((data?.observations||[]).map(x=>[x.id,x]));
  if(byId.get('pew_us_daily_2025')?.value!==48||byId.get('pew_us_daily_multiple_2025')?.value!==33)errors.push('wrong Pew survey figures');
  if(byId.get('gwi_global_2026')?.population===byId.get('gwi_excl_cn_ru_2026')?.population)errors.push('collapsed different GWI denominators');
+ const panel=data?.ad_reach_country_comparison;
+ if(!panel||panel.id!=='selected_7_country_late_2025_ad_planner_reach'||
+    panel.selected_country_count!==7||panel.source_count!==7||panel.period!=='2025-10'||
+    panel.rank_scope!=='within_these_seven_country_estimates_only_not_global_rank'||
+    panel.rank_basis!=='descending_ad_planner_reach_not_mau'||
+    panel.provider_reported_monthly_active_users!==false||panel.provider_reported_daily_active_users!==false||
+    panel.independent_probability_person_census!==false)
+    errors.push('mislabelled country reach panel as active users');
+ const panelRows=panel?.countries||[];
+ if(panelRows.length!==7||new Set(panelRows.map(x=>x.iso2)).size!==7||
+    panelRows.some((x,i)=>!sources.has(x.source_id)||x.within_panel_rank!==i+1||
+    !Number.isFinite(x.ad_reach_million)||x.ad_reach_million<=0||
+    (i>0&&x.ad_reach_million>=panelRows[i-1].ad_reach_million)))
+    errors.push('invalid selected country ranking or source');
+ if(panelRows.map(x=>x.ad_reach_million).join(',')!=='500,254,151,150,85,78.5,59.6'||
+    panelRows.map(x=>x.iso2).join(',')!=='IN,US,ID,BR,MX,JP,PH')
+    errors.push('published ad reach comparison changed');
+ for(const [code,scope] of [['US','United States'],['BR','Brazil'],['MX','Mexico']]){
+    const x=panelRows.find(row=>row.iso2===code);
+    if(!x||!data.observations.some(row=>row.scope===scope&&row.kind==='ad_estimate'&&
+      row.value===x.ad_reach_million&&row.source_ids.includes(x.source_id)))
+      errors.push('country comparison conflicts with existing population observation');
+ }
+ if(!panel?.validity_gates||
+    Object.entries(panel.validity_gates).some(([id,value])=>(['comparable_publisher_series','comparable_observation_month','same_reported_unit'].includes(id))?value!==true:value!==false)||
+    Object.values(panel.unmeasured||{}).some(x=>x!==null))
+    errors.push('invented country active-user rank');
  if(!data?.unmeasured||Object.values(data.unmeasured).some(x=>x!==null))errors.push('invented platform population');
  if(data?.reported_independent_population_measure!==null||data?.no_valid_cross_platform_intersection_or_world_total!==true)errors.push('fabricated comparable world census');
  return {valid:errors.length===0,errors};
