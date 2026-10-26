@@ -1,0 +1,11 @@
+# Free alpha front-page traffic over time — a selected 2026 case
+
+**Reviewed October 26, 2026.** [Machine record](free-alpha-frontpage-tail-2026.json).
+
+In an [April 20, 2026 first-person publisher case study](https://blog.luden.io/how-we-stayed-on-the-front-page-of-itch-io-for-over-a-month-8e0d0cf1cc17), developer Luden.io described publishing a **free SuperWEIRD alpha** on **January 29, 2026** as a way to test discovery and attract interest ahead of a Steam launch. The creators reported entry into New & Popular shortly after release and eventually a staff front-page feature lasting roughly a month. The authors said the feature generated sustained visits for weeks, rather than only a one-day spike. They reported roughly **2,500 additional Steam wishlists** and a similar number of closed playtest applications after the alpha launch and associated promotion.
+
+**These are not sales or verified distinct paying people.** The article does not supply an inspectable same-window customer-purchase funnel or a baseline of first-release publisher profit. Reported traffic also overlapped external specialist-site placement, team/social community announcements, changes to tags and assets, and deliberate requests for friends to find and click the game listing. Therefore neither the placement algorithm nor the effect of a single marketing action can be identified causally.
+
+In a [public coauthor follow-up](https://www.reddit.com/r/itchio/comments/1sqtrcc/postmortem_with_all_the_numbers_from_launching/), the developer described CTR of approximately **2% early** and **0.4% later** as broad front-page impressions accumulated. These are **two unequal observational windows**, not evidence that particular cover art worsened or that a 1.6-point CTR difference reduced sales. The coauthor specifically did not report a meaningful response to changing banners.
+
+The source illustrates **a possible long discovery tail conditional on editorial featuring** and an unpaid game providing audience feedback. It cannot estimate average evergreen paid-game visits or the chance of getting featured, the unique itch-to-Steam conversion rate, paid-unit demand, genre income, or production profit. Those population outcomes remain unknown.
