@@ -2,9 +2,10 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "native_concurrent_title_thumbnail_ab_tests",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "source_ids": [
-    "yt-native-title-thumbnail-ab-tests-2026"
+    "yt-native-title-thumbnail-ab-tests-2026",
+    "tubeai-2026-external-thumbnail-rotation-detection"
   ],
   "surface": "authenticated_creator_youtube_studio_desktop",
   "advanced_features_required": true,
@@ -92,6 +93,83 @@
     "viewers_exposed": null,
     "viewers_buying": null,
     "absolute_watch_time_lift": null,
-    "creator_profit_effect": null
+    "creator_profit_effect": null,
+    "platformwide_native_ab_test_adoption_rate": null,
+    "external_rotations_actual_win_rate": null
+  },
+  "external_rotation_observation": {
+    "source_id": "tubeai-2026-external-thumbnail-rotation-detection",
+    "publisher": "TubeAI",
+    "publication_date": "2026-09-28",
+    "study_period_first_upload": "2026-04-10",
+    "study_period_last_upload": "2026-09-28",
+    "query_date": "2026-09-28",
+    "population": "Videos on vendor-served selected creator channels with title/thumbnail snapshots tracked in the first seven days after upload",
+    "observed_video_objects": 828766,
+    "served_creator_channels": 128002,
+    "observed_week_one_edited_video_objects": 75998,
+    "detected_rotation_video_objects": 460,
+    "detected_rotation_channels": 382,
+    "unit": "public_video_title_thumbnail_rotation_patterns_not_verified_native_studio_experiment_runs",
+    "detection_algorithm": "At least two packaging combinations, at least two returns to previously dropped combinations, no more than three observed titles or thumbnails; patterns identified from external sampled public states.",
+    "edited_video_conditional_detection_rate_pct": null,
+    "mode_counts": {
+      "thumbnail_only": 430,
+      "title_only": 11,
+      "combined": 19
+    },
+    "combination_counts": {
+      "two": 424,
+      "three": 29,
+      "four_to_five": 7
+    },
+    "settled_detection_rule": "one observed version remains for >=24 hours before seven-day tracking ends",
+    "settled_rotations": 442,
+    "unsettled_rotations": 18,
+    "settled_final_original_version": 201,
+    "settled_final_changed_version": 241,
+    "settled_original_share_reported_pct": 45.5,
+    "median_observed_rotation_hours": 20.5,
+    "median_first_observed_switch_after_upload_hours": 32,
+    "settled_within_24_hours": 291,
+    "size_band_detections": [
+      {
+        "subscriber_band": "under_10k",
+        "share_of_vendor_tracked_channels_with_detected_rotation_pct": 0.075
+      },
+      {
+        "subscriber_band": "10k_to_100k",
+        "share_of_vendor_tracked_channels_with_detected_rotation_pct": 0.278
+      },
+      {
+        "subscriber_band": "100k_to_1m",
+        "share_of_vendor_tracked_channels_with_detected_rotation_pct": 0.464
+      },
+      {
+        "subscriber_band": "1m_plus",
+        "share_of_vendor_tracked_channels_with_detected_rotation_pct": 0.767
+      }
+    ],
+    "status": "vendor_algorithm_detection_not_owner_verified_test_analytics",
+    "actual_native_test_confirmations": null,
+    "actual_youtube_studio_winner_labels": null,
+    "absolute_watch_time_lift": null,
+    "ctr_change": null,
+    "incremental_revenue": null,
+    "purchase_conversion": null,
+    "causal_effect_of_running_test": null,
+    "representative_all_channels": false,
+    "independent_replication": false,
+    "original_screenshot_or_thumbnail_copies_collected": false,
+    "source_authorship": "Vendor article identifies writer as its AI strategist; no independent raw-level validation or owner Analytics confirmation.",
+    "limitations": [
+      "Public switching can be caused by manual edits, localized thumbnails, cache/personalization, or missed snapshots; detected rotation cannot definitively prove a native test.",
+      "Vendor-tested population is selected approved/served creator channels, not a probability sample of all YouTube videos or creators.",
+      "The detected 460 of 75,998 edited videos is not a share of all platform videos using YouTube's official testing tool; first-week window misses later runs.",
+      "A final displayed variant is not necessarily the platform-declared statistically significant winner, since creators can manually stop, edit and choose.",
+      "Twenty-and-a-half hours is the vendor-observed rotation interval, not a YouTube Studio guaranteed time to significance.",
+      "Different subscriber bands may differ in access, testing propensity, channel activity and vendor observability; no random test assignment or causal sales result.",
+      "No tested thumbnail images, creator identity or private owner data were copied into Mercata."
+    ]
   }
 }

@@ -3181,6 +3181,20 @@ function renderNativePackagingAB(model,dossier) {
   card.append(audienceSources(model.source_ids,dossier));grid.append(card);
  }
  details.append(grid);
+ const external=model.external_rotation_observation;
+ if(external?.detected_rotation_video_objects===460&&external.actual_youtube_studio_winner_labels===null){
+  const panel=make('div','external-packaging-rotations');
+  panel.append(make('h5','','Commercial external snapshot observations (not native test outcomes)'));
+  panel.append(make('p','measure-limit',external.detected_rotation_video_objects.toLocaleString('en-US')+
+   ' alternating packaging patterns among '+external.observed_week_one_edited_video_objects.toLocaleString('en-US')+
+   ' first-week edited videos in '+external.observed_video_objects.toLocaleString('en-US')+
+   ' tracked videos; vendor-selected creators only.'));
+  panel.append(make('p','measure-limit',external.settled_rotations+' externally settled patterns: '+
+   external.settled_final_original_version+' ended showing the original version, '+
+   external.settled_final_changed_version+' ended showing a later version. The final visible version is NOT a verified Studio winner.'));
+  panel.append(make('p','measure-limit','No measured CTR, native statistical verdict, causal watch-time or revenue effect. Seven-day tracking misses later tests.'));
+  panel.append(audienceSources([external.source_id],dossier));details.append(panel);
+ }
  details.append(make('p','measure-limit','Shorts, scheduled live streams, active Premieres, made-for-kids, mature and private videos cannot run these tests; no actual creator test or buyer conversion is measured.'));
  const link=make('a','inline-link','Read eligibility, concurrent allocation and inference boundaries ↗');
  link.href='./ontology/youtube/native-packaging-ab-tests.md';link.target='_blank';link.rel='noopener noreferrer';

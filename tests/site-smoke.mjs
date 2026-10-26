@@ -248,6 +248,11 @@ try{
     assert((await regionRights.textContent()).includes('Video owner licensing territory'));
     assert((await regionRights.textContent()).includes('local-law compliance'));
     assert((await regionRights.textContent()).includes('No country-specific affected-video counts'));
+    const packaging=page.locator('.native-packaging-ab .external-packaging-rotations');
+    assert.equal(await packaging.count(),1,'Missing externally selected thumbnail rotation evidence');
+    assert((await packaging.textContent()).includes('460 alternating packaging patterns'));
+    assert((await packaging.textContent()).includes('75,998 first-week edited videos'));
+    assert((await packaging.textContent()).includes('NOT a verified Studio winner'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));
