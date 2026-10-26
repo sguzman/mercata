@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 72,
+  "progress_percent": 73,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -113,7 +113,7 @@
         "itch-io/access/create-zero-cash-entry-scenario"
       ],
       "phase": 1,
-      "progress_percent": 71
+      "progress_percent": 72
     },
     {
       "id": "economics",
@@ -178,7 +178,7 @@
         "itch-io/market/estimate-paid-addressable-demand"
       ],
       "phase": 2,
-      "progress_percent": 57
+      "progress_percent": 62
     },
     {
       "id": "discovery",
@@ -208,7 +208,7 @@
         "itch-io/discovery/build-impression-to-sale-funnel"
       ],
       "phase": 2,
-      "progress_percent": 81
+      "progress_percent": 82
     },
     {
       "id": "competition",
@@ -237,7 +237,7 @@
         "itch-io/competition/create-cross-platform-benchmarks"
       ],
       "phase": 2,
-      "progress_percent": 64
+      "progress_percent": 68
     },
     {
       "id": "income",
@@ -389,7 +389,7 @@
         "itch-io/strategy/define-retrospective-reporting"
       ],
       "phase": 4,
-      "progress_percent": 68
+      "progress_percent": 70
     },
     {
       "id": "review",
@@ -739,12 +739,15 @@
       "objective": "Investigate check regional purchase and payment-method availability.",
       "acceptance": "Provide dated source-linked evidence to check regional purchase and payment-method availability; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 36,
+      "percent": 43,
       "evidence": [
         "ontology/itch-io/payment-country-corridors-2026.json",
         "ontology/itch-io/payment-country-corridors-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-payment-corridors.test.mjs"
+        "tests/itch-io-payment-corridors.test.mjs",
+        "ontology/itch-io/top-seller-filter-frames-2026.md",
+        "ontology/itch-io/top-seller-filter-frames-2026.json",
+        "tests/itch-io-top-seller-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1385,7 +1388,7 @@
       "objective": "Investigate define exclusive and overlapping genres for comparable inventory counts.",
       "acceptance": "Provide dated source-linked evidence to define exclusive and overlapping genres for comparable inventory counts; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 84,
+      "percent": 92,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -1396,7 +1399,10 @@
         "tests/itch-io-price-sample.test.mjs",
         "ontology/itch-io/paid-genre-tag-frames-2026.json",
         "ontology/itch-io/paid-genre-tag-frames-2026.md",
-        "tests/itch-io-genre-frames.test.mjs"
+        "tests/itch-io-genre-frames.test.mjs",
+        "ontology/itch-io/top-seller-filter-frames-2026.md",
+        "ontology/itch-io/top-seller-filter-frames-2026.json",
+        "tests/itch-io-top-seller-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1410,7 +1416,7 @@
       "objective": "Investigate specify 2D tagged games, paid games and playable formats.",
       "acceptance": "Provide dated source-linked evidence to specify 2D tagged games, paid games and playable formats; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 83,
+      "percent": 89,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -1418,7 +1424,10 @@
         "tests/itch-io-catalog.test.mjs",
         "ontology/itch-io/paid-2d-popular-prices-2026.json",
         "ontology/itch-io/paid-2d-popular-prices-2026.md",
-        "tests/itch-io-price-sample.test.mjs"
+        "tests/itch-io-price-sample.test.mjs",
+        "ontology/itch-io/top-seller-filter-frames-2026.md",
+        "ontology/itch-io/top-seller-filter-frames-2026.json",
+        "tests/itch-io-top-seller-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1432,7 +1441,7 @@
       "objective": "Investigate document separate platform and file-type denominators.",
       "acceptance": "Provide dated source-linked evidence to document separate platform and file-type denominators; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 43,
+      "percent": 76,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -1440,7 +1449,10 @@
         "tests/itch-io-catalog.test.mjs",
         "ontology/itch-io/traffic-benchmark-2025.json",
         "ontology/itch-io/traffic-benchmark-2025.md",
-        "tests/itch-io-traffic-benchmark.test.mjs"
+        "tests/itch-io-traffic-benchmark.test.mjs",
+        "ontology/itch-io/top-seller-filter-frames-2026.md",
+        "ontology/itch-io/top-seller-filter-frames-2026.json",
+        "tests/itch-io-top-seller-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1454,12 +1466,15 @@
       "objective": "Investigate select comparable jam, sale and holiday periods.",
       "acceptance": "Provide dated source-linked evidence to select comparable jam, sale and holiday periods; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 28,
+      "percent": 55,
       "evidence": [
         "ontology/itch-io/store-feature-history-2026.json",
         "ontology/itch-io/store-feature-history-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-store-history.test.mjs"
+        "tests/itch-io-store-history.test.mjs",
+        "ontology/itch-io/top-seller-filter-frames-2026.md",
+        "ontology/itch-io/top-seller-filter-frames-2026.json",
+        "tests/itch-io-top-seller-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1536,7 +1551,7 @@
       "objective": "Investigate measure listing recency and time visible in discovery feeds.",
       "acceptance": "Provide dated source-linked evidence to measure listing recency and time visible in discovery feeds; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 88,
+      "percent": 92,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1550,7 +1565,10 @@
         "tests/itch-io-account-indexing.test.mjs",
         "ontology/itch-io/feed-volume-featured-2026.md",
         "ontology/itch-io/feed-volume-featured-2026.json",
-        "tests/itch-io-featured-feed.test.mjs"
+        "tests/itch-io-featured-feed.test.mjs",
+        "ontology/itch-io/top-seller-filter-frames-2026.md",
+        "ontology/itch-io/top-seller-filter-frames-2026.json",
+        "tests/itch-io-top-seller-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1882,7 +1900,7 @@
       "objective": "Investigate compare 2D, RPG, puzzle, narrative and other tagged supply.",
       "acceptance": "Provide dated source-linked evidence to compare 2D, RPG, puzzle, narrative and other tagged supply; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 82,
+      "percent": 90,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -1896,7 +1914,10 @@
         "tests/itch-io-genre-frames.test.mjs",
         "ontology/itch-io/open-source-engineering-2026.json",
         "ontology/itch-io/open-source-engineering-2026.md",
-        "tests/itch-io-open-source-engineering.test.mjs"
+        "tests/itch-io-open-source-engineering.test.mjs",
+        "ontology/itch-io/top-seller-filter-frames-2026.md",
+        "ontology/itch-io/top-seller-filter-frames-2026.json",
+        "tests/itch-io-top-seller-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1970,12 +1991,15 @@
       "objective": "Investigate require revenue rather than ratings or plays to claim dominance.",
       "acceptance": "Provide dated source-linked evidence to require revenue rather than ratings or plays to claim dominance; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 20,
+      "percent": 42,
       "evidence": [
         "ontology/itch-io/feed-volume-featured-2026.md",
         "ontology/itch-io/feed-volume-featured-2026.json",
         "specimens/itch-io.json",
-        "tests/itch-io-featured-feed.test.mjs"
+        "tests/itch-io-featured-feed.test.mjs",
+        "ontology/itch-io/top-seller-filter-frames-2026.md",
+        "ontology/itch-io/top-seller-filter-frames-2026.json",
+        "tests/itch-io-top-seller-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2011,7 +2035,7 @@
       "objective": "Investigate sample browsing placement without treating it as revenue.",
       "acceptance": "Provide dated source-linked evidence to sample browsing placement without treating it as revenue; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 73,
+      "percent": 81,
       "evidence": [
         "ontology/itch-io/traffic-benchmark-2025.json",
         "ontology/itch-io/traffic-benchmark-2025.md",
@@ -2019,7 +2043,10 @@
         "tests/itch-io-traffic-benchmark.test.mjs",
         "ontology/itch-io/feed-volume-featured-2026.md",
         "ontology/itch-io/feed-volume-featured-2026.json",
-        "tests/itch-io-featured-feed.test.mjs"
+        "tests/itch-io-featured-feed.test.mjs",
+        "ontology/itch-io/top-seller-filter-frames-2026.md",
+        "ontology/itch-io/top-seller-filter-frames-2026.json",
+        "tests/itch-io-top-seller-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2058,7 +2085,7 @@
       "objective": "Investigate set matched observation windows and audience controls.",
       "acceptance": "Provide dated source-linked evidence to set matched observation windows and audience controls; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 67,
+      "percent": 74,
       "evidence": [
         "ontology/itch-io/traffic-benchmark-2025.json",
         "ontology/itch-io/traffic-benchmark-2025.md",
@@ -2066,7 +2093,10 @@
         "tests/itch-io-traffic-benchmark.test.mjs",
         "ontology/itch-io/feed-volume-featured-2026.md",
         "ontology/itch-io/feed-volume-featured-2026.json",
-        "tests/itch-io-featured-feed.test.mjs"
+        "tests/itch-io-featured-feed.test.mjs",
+        "ontology/itch-io/top-seller-filter-frames-2026.md",
+        "ontology/itch-io/top-seller-filter-frames-2026.json",
+        "tests/itch-io-top-seller-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3442,11 +3472,15 @@
       "objective": "Investigate define target language, translation hours and conversion measurement.",
       "acceptance": "Provide dated source-linked evidence to define target language, translation hours and conversion measurement; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 32,
+      "percent": 69,
       "evidence": [
         "ontology/itch-io/commercial-strategy-protocol-2026.json",
         "ontology/itch-io/commercial-strategy-protocol-2026.md",
-        "tests/itch-io-strategy-protocol.test.mjs"
+        "tests/itch-io-strategy-protocol.test.mjs",
+        "ontology/itch-io/top-seller-filter-frames-2026.md",
+        "ontology/itch-io/top-seller-filter-frames-2026.json",
+        "specimens/itch-io.json",
+        "tests/itch-io-top-seller-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

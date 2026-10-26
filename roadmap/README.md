@@ -124,3 +124,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io actual feed release and feature sample (2026-10-26):** independent Jan–Jun 2026 tracker counted 118,017 game listings over 152 days (~776/day), 2,477 ever featured, and 57/6,121 feature appearances in one January week. Not a paid-game commercial cohort. **70% → 72%** (Δ 2 pp). [Cohort study](../ontology/itch-io/feed-volume-featured-2026.md).
+
+
+**itch.io commercial 2D discovery filters (2026-10-26):** 10 non-synchronized public Top Sellers query frames covering genre, device, HTML5, Spanish (LatAm), date and featured; explicit exclusions of paid-order and commercial success interpretation. 72% → 73% (Δ +1 pp; exact 72.70%). [Research](../ontology/itch-io/top-seller-filter-frames-2026.md).
