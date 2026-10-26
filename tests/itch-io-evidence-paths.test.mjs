@@ -32,6 +32,10 @@ test('All 244 itch.io task evidence paths exist and 100% requires accepted compl
  const mean=Math.round(tasks.reduce((n,t)=>n+t.score,0)/tasks.length);
  assert.equal(plan.progress_percent,mean);
  assert(file('plans/itch-io.md').includes('Research is now **'+mean+'%**'));
+ assert(file('README.md').includes('progress is now '+mean+'%'));
+ assert(file('ontology/itch-io/README.md').includes('Research is underway: '+mean+'%'));
+ assert(file('ontology/itch-io/README.md').includes('- '+mean+'% task-weighted research scoring'));
+
  assert(file('ontology/itch-io/README.md').includes(mean+'% is the rounded mean'));
  assert(file('ontology/itch-io/README.md').includes('- '+mean+'% task-weighted research scoring'));
 });

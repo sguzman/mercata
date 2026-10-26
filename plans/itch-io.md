@@ -2,7 +2,7 @@
 
 **Research underway; 2026-10-26 source-backed checkpoint.** The existing `itch-io` specimen is already admitted and is **researching**.
 
-**244 research tasks:** 84 original marketplace and game-domain tasks, plus 160 itch.io-specific questions across 13 workstreams and four phases. Research is now **74%** across the fixed 244-task inventory; the original inventory was 0%. No seller account operations or market experiments have been performed.
+**244 research tasks:** 84 original marketplace and game-domain tasks, plus 160 itch.io-specific questions across 13 workstreams and four phases. Research is now **76%** across the fixed 244-task inventory; the original inventory was 0%. No seller account operations or market experiments have been performed.
 
 ## Phases
 
@@ -242,12 +242,12 @@ Prepare falsifiable and bounded release strategies; do not conduct experiments w
 
 ## Boundaries and evidence rules
 
-The [machine-readable plan](itch-io.json) tracks the 244 original and detailed tasks with stable IDs, priorities, acceptance criteria, and zero progress. The [original baseline queues](../queues/itch-io.json) remain intact. The [human ontology](../ontology/itch-io/README.md) and [machine vocabulary](../ontology/itch-io/vocabulary.json) define terminology without asserting market outcomes. Research has begun through official published sources and a bounded catalog snapshot; purchases, commercial game publication and experiments have **not** been performed. Read [official platform rules](../ontology/itch-io/commercial-rules-2026.md) and [dated game catalog observations](../ontology/itch-io/catalog-snapshot-2026.md). Require public dated evidence, matched units and populations; undisclosed earnings are unknown rather than zero.
+The [machine-readable plan](itch-io.json) tracks the 244 original and detailed tasks with stable IDs, priorities, acceptance criteria, and evidence-based partial progress. The [original baseline queues](../queues/itch-io.json) remain intact. The [human ontology](../ontology/itch-io/README.md) and [machine vocabulary](../ontology/itch-io/vocabulary.json) define terminology without asserting market outcomes. Research has begun through official published sources and a bounded catalog snapshot; purchases, commercial game publication and experiments have **not** been performed. Read [official platform rules](../ontology/itch-io/commercial-rules-2026.md) and [dated game catalog observations](../ontology/itch-io/catalog-snapshot-2026.md). Require public dated evidence, matched units and populations; undisclosed earnings are unknown rather than zero.
 
 
 ## Income-case research (2026-10-26)
 
-Three public developer disclosures were entered in a [bounded case register](../ontology/itch-io/developer-income-cases-2026.md). They cannot establish the average or median developer's earnings. The current 244-task score is 26%; commercial tests and private account work have not occurred.
+Three public developer disclosures were entered in a [bounded case register](../ontology/itch-io/developer-income-cases-2026.md). They cannot establish the average or median developer's earnings. At that original 2026-10-26 income-case checkpoint the 244-task score was 26%; commercial tests and private account work have not occurred.
 
 
 ## Modeled game viability (2026-10-26)
