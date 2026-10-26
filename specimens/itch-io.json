@@ -955,6 +955,61 @@
       "evidence_class": "official",
       "license": "Public official source linked, independently summarized; no source text copied.",
       "notes": "Mechanics of rewards, physical merchandise, early-bird and bounded invitations, not proof any tier sells or has positive margin."
+    },
+    {
+      "id": "itch-app-quickstart",
+      "url": "https://itch.io/docs/itch/integrating/quickstart.html",
+      "title": "Game developer quick start",
+      "publisher": "itch.io official app integration documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Public source linked and independently summarized.",
+      "notes": "Prescriptive game publishing guidance, not an observed executable test or paying buyer outcome."
+    },
+    {
+      "id": "itch-app-windows-platform",
+      "url": "https://itch.io/docs/itch/integrating/platforms/windows.html",
+      "title": "Distributing Windows builds",
+      "publisher": "itch.io official app integration documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Public source linked and independently summarized.",
+      "notes": "Prescriptive game publishing guidance, not an observed executable test or paying buyer outcome."
+    },
+    {
+      "id": "itch-app-macos-platform",
+      "url": "https://itch.io/docs/itch/integrating/platforms/macos.html",
+      "title": "Distributing macOS builds",
+      "publisher": "itch.io official app integration documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Public source linked and independently summarized.",
+      "notes": "Prescriptive game publishing guidance, not an observed executable test or paying buyer outcome."
+    },
+    {
+      "id": "itch-app-manifest-actions",
+      "url": "https://itch.io/docs/itch/integrating/manifest-actions.html",
+      "title": "App manifest actions",
+      "publisher": "itch.io official app integration documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Public source linked and independently summarized.",
+      "notes": "Prescriptive game publishing guidance, not an observed executable test or paying buyer outcome."
+    },
+    {
+      "id": "itch-app-prereq",
+      "url": "https://itch.io/docs/itch/integrating/prereqs/",
+      "title": "Prerequisites",
+      "publisher": "itch.io official app integration documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Public source linked and independently summarized.",
+      "notes": "Prescriptive game publishing guidance, not an observed executable test or paying buyer outcome."
     }
   ],
   "claims": [
@@ -3733,6 +3788,77 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "No preorder fulfillment, after-cost margin or release outcome is observed."
+    },
+    {
+      "id": "qa-windows-portable",
+      "text": "itch.io recommends distributing Windows games in portable executable folders rather than relying on self-contained setup installers.",
+      "source_ids": [
+        "itch-app-windows-platform"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Documented publishing mechanism; no actual game was built, installed, tested, sold or measured."
+    },
+    {
+      "id": "qa-windows-runtime",
+      "text": "Windows packages depending on DirectX, .NET, XNA or Visual C++ runtimes can declare prerequisites with an itch app manifest.",
+      "source_ids": [
+        "itch-app-windows-platform",
+        "itch-app-prereq"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Documented publishing mechanism; no actual game was built, installed, tested, sold or measured."
+    },
+    {
+      "id": "qa-macos-bundle",
+      "text": "itch.io's macOS integration guide requires a properly formed app bundle and warns of problems when permissions and bundle metadata are missing.",
+      "source_ids": [
+        "itch-app-macos-platform"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Documented publishing mechanism; no actual game was built, installed, tested, sold or measured."
+    },
+    {
+      "id": "qa-macos-security",
+      "text": "The macOS guide cautions that security restrictions can affect launching direct-download game binaries outside the itch application.",
+      "source_ids": [
+        "itch-app-macos-platform"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Documented publishing mechanism; no actual game was built, installed, tested, sold or measured."
+    },
+    {
+      "id": "qa-portable-butler",
+      "text": "The itch app quick start recommends butler build channels to preserve game executables and support incremental patch uploads.",
+      "source_ids": [
+        "itch-app-quickstart"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Documented publishing mechanism; no actual game was built, installed, tested, sold or measured."
+    },
+    {
+      "id": "qa-manifest-platform",
+      "text": "An itch game launcher manifest can select platform-specific launch actions, executable paths and runtime arguments.",
+      "source_ids": [
+        "itch-app-manifest-actions"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Documented publishing mechanism; no actual game was built, installed, tested, sold or measured."
+    },
+    {
+      "id": "qa-mobile-manual",
+      "text": "An HTML5 game should be marked mobile-friendly only after browser compatibility and controls have been tested on mobile.",
+      "source_ids": [
+        "itch-html5"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Documented publishing mechanism; no actual game was built, installed, tested, sold or measured."
     }
   ],
   "observations": [

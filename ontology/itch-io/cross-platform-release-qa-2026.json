@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "cross_platform_release_testing_requirements",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-app-quickstart",
+    "itch-app-windows-platform",
+    "itch-app-macos-platform",
+    "itch-app-manifest-actions",
+    "itch-app-prereq",
+    "itch-html5",
+    "butler-linux"
+  ],
+  "platform_targets": [
+    {
+      "os": "linux",
+      "package": "portable executable with compatible shared libraries",
+      "tests": [
+        "launch",
+        "permissions",
+        "inputs",
+        "save",
+        "quit",
+        "update"
+      ],
+      "measured_pass": null
+    },
+    {
+      "os": "windows",
+      "package": "portable exe folder with prerequisites where needed",
+      "tests": [
+        "launch",
+        "prerequisites",
+        "inputs",
+        "save",
+        "quit"
+      ],
+      "measured_pass": null
+    },
+    {
+      "os": "macos",
+      "package": "proper app bundle with Info.plist and executable permissions",
+      "tests": [
+        "bundle",
+        "security_prompt",
+        "inputs",
+        "save",
+        "quit"
+      ],
+      "measured_pass": null
+    },
+    {
+      "os": "html5_desktop",
+      "package": "root index.html or standalone HTML",
+      "tests": [
+        "render",
+        "keyboard_mouse",
+        "audio",
+        "save_reload"
+      ],
+      "measured_pass": null
+    },
+    {
+      "os": "html5_mobile",
+      "package": "mobile-tested browser game",
+      "tests": [
+        "touch",
+        "fullscreen",
+        "viewport",
+        "audio",
+        "save_reload"
+      ],
+      "measured_pass": null
+    }
+  ],
+  "actual_builds_tested": 0,
+  "actual_browser_or_mobile_sessions": 0,
+  "limitations": [
+    "Test only advertised platforms; a Linux-only game need not produce unrelated macOS builds.",
+    "File manifest validation alone is not evidence of working game controls or save persistence.",
+    "Static research does not imply a real build, real download, merchant publication or completed QA."
+  ],
+  "unmeasured": {
+    "average_hours_per_platform": null,
+    "typical_game_compatibility_failures": null,
+    "mobile_play_completion": null,
+    "qa_generated_paid_orders": null,
+    "macos_refund_rate": null
+  }
+}

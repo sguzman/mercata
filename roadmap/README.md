@@ -160,3 +160,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io digital bonus and exclusive reward economics (2026-10-26):** official individual soundtrack/bonus file price gates, project ownership vs file access after repricing, limited perk inventory and seller refund/shipping responsibilities with hypothetical checked arithmetic. No real bonus earnings inferred. 77% → 78% (Δ +1 pp, exact 78.04%). [Tier study](../ontology/itch-io/game-bonus-entitlements-2026.md).
+
+
+**itch.io platform QA research (2026-10-26):** official Windows/macOS/Linux app packaging and HTML5 desktop/mobile publishing test requirements, without claiming builds were executed. 78% → 79% (Δ +1 pp, exact 78.66%). [QA crosswalk](../ontology/itch-io/cross-platform-release-qa-2026.md).
