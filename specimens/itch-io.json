@@ -5713,6 +5713,48 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Missing longitudinal first-party paid game order data, comparable prices and production costs."
+    },
+    {
+      "id": "coop-bundle-required-participant-approval",
+      "text": "Official co-op bundle rules require all participants to approve participation before publishing and lock the project list, prices, shares and dates once any participant approves.",
+      "source_ids": [
+        "itch-coop-bundles"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Not permission to distribute another creator's code, assets or game outside the particular approved bundle."
+    },
+    {
+      "id": "coop-bundle-weights-not-actual-proceeds",
+      "text": "Co-op bundle proceeds are divided by each recipient's weight as a share of total weight, with price tiers potentially modifying eligible title allocations.",
+      "source_ids": [
+        "itch-coop-bundles"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "This rule does not disclose observed sales, after-fee receipts, taxes or the specific price-tier distribution in a real bundle."
+    },
+    {
+      "id": "coop-bundle-payout-eligibility-gate",
+      "text": "Co-op bundle revenue recipients must be eligible for itch.io collected payouts; direct merchants may have to complete additional payout onboarding.",
+      "source_ids": [
+        "itch-coop-bundles",
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No real publisher account, approval, jurisdiction or final settlement is confirmed."
+    },
+    {
+      "id": "coop-bundle-deferred-keys-entitled-projects",
+      "text": "For bundles containing more than 15 projects, itch.io defers individual game keys until the buyer claims a title; the unclaimed entitlement still exists.",
+      "source_ids": [
+        "itch-coop-bundles",
+        "itch-download-keys"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Game-key claims are not identical to bundle purchases, new paid customer count, independent positive-price game units or player activity."
     }
   ],
   "observations": [

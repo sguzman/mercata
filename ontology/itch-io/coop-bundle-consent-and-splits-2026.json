@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "cooperative_bundle_participation_split_entitlement_and_payout_research",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-coop-bundles",
+    "itch-download-keys",
+    "itch-payments"
+  ],
+  "known_policy": {
+    "multiple_account_bundle_requires_host": true,
+    "all_participants_must_approve_before_publication": true,
+    "locked_fields_after_first_approval": [
+      "projects",
+      "purchase_price",
+      "participants_and_cuts",
+      "start_and_end_dates"
+    ],
+    "resetting_locked_fields_before_first_publication_requires_fresh_approvals": true,
+    "split_basis": "relative_weight_to_sum_of_eligible_tier_weights",
+    "collected_payout_eligibility_required_for_split_participants": true,
+    "direct_to_you_recipients_can_need_collected_payout_onboarding": true,
+    "large_bundles_defer_keys_if_project_count_greater_than": 15,
+    "true_bundle_purchase_is_one_checkout_not_one_checkout_per_included_game": true,
+    "deferred_claim_key_count_equal_all_entitled_project_count": false,
+    "pruning_requires_host_enabled_preapproval": true,
+    "pruning_pending_game_share_max_percent": 15,
+    "external_store_key_delivery_guaranteed_for_charity_or_bulk_bundles": false,
+    "price_tiers_can_change_split_by_eligible_titles": true
+  },
+  "hypothetical_weight_math_only": {
+    "participating_accounts": 2,
+    "weights": [
+      2,
+      1
+    ],
+    "gross_receipts_example_cents": 3000,
+    "pre_deduction_allocations_example_cents": [
+      2000,
+      1000
+    ],
+    "all_participants_approved": true,
+    "not_actual_seller_receipts": true
+  },
+  "unknown": {
+    "platformwide_coop_bundle_purchase_count": null,
+    "actual_bundle_merchant_fees": null,
+    "individual_title_settled_proceeds": null,
+    "active_paid_publishers_from_bundle": null,
+    "unique_bundle_buyers": null,
+    "typical_artist_payout": null,
+    "causal_bundle_sales_lift": null
+  },
+  "compliance_gates": [
+    "confirm every revenue recipient eligible for payout before final approvals",
+    "verify title list, pricing/tier, dates and weight allocation with all participants",
+    "do not change locked terms without resetting approvals, when allowed",
+    "check cash fees and sale-specific share after the gross weighted example",
+    "keep external redemption and deferred claim counts out of positive-price standalone game orders",
+    "do not collect or publish buyer-identifiable purchase rows or other recipient account records"
+  ],
+  "actual_bundle_created": false,
+  "actual_owner_accounts_used": false,
+  "actual_buyer_data_accessed": false
+}
