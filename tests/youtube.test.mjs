@@ -106,6 +106,14 @@ test('Multilingual YouTube product rules distinguish language, country and selec
   const snapshot=model.official_selected_observations.find(x=>x.id==='auto-dubbing-language-total-may-2026');
   assert.equal(snapshot.value,27);
   assert.equal(snapshot.source_period,'2026-05-15');
+  const daily=model.official_selected_observations.find(x=>x.id==='autodubbed-daily-10min-watchers-dec2025');
+  assert.equal(daily.value,6000000);
+  assert.equal(daily.comparator,'greater_than');
+  assert.equal(daily.source_period,'2025-12');
+  assert.equal(daily.unit,'reported_daily_viewers_above_10min');
+  assert(daily.source_ids.every(id=>sources.has(id)));
+  assert.equal(daily.december_unique_viewers,null);
+  assert.equal(daily.estimated_additional_revenue,null);
   assert(model.automatic_dubbing_example_pairs.every(x=>x.source_ids.every(id=>sources.has(id))));
   assert.equal(model.measurement_design.median_income_lift,null);
 });

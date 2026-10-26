@@ -519,9 +519,10 @@ try{
     const language=page.locator('.multilingual-distribution');
     assert.equal(await language.locator('.multilingual-product-card').count(),6,'Missing multilingual feature catalog');
     assert.equal(await language.locator('.multilingual-choice-card').count(),6,'Missing localized media decision matrix');
-    assert.equal(await language.locator('.multilingual-observation').count(),2,'Missing selected product observations');
+    assert.equal(await language.locator('.multilingual-observation').count(),3,'Missing selected product observations');
     await language.locator('summary').first().click();
-    assert((await language.textContent()).includes('not additional traffic or causal income lift'));
+    assert((await language.textContent()).includes('Over 6,000,000 daily viewers'));
+    assert((await language.textContent()).includes('not additional unique viewers or earnings'));
     await language.locator('.multilingual-language-examples > summary').click();
     assert.equal(await language.locator('.multilingual-language-list li').count(),8,'Missing documented language examples');
     assert.equal(await page.locator('.scale-observation').count(),4,'Missing global scale observations');

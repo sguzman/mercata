@@ -4982,7 +4982,10 @@ function renderMultilingualDistribution(data,dossier) {
   const observations=make('div','multilingual-observations');
   for(const entry of data.official_selected_observations){
     const card=make('article','multilingual-observation');
-    card.append(make('strong','',entry.comparator==='greater_than'?'Over '+entry.value+'%':entry.value));
+    const display=entry.unit==='reported_daily_viewers_above_10min'
+      ?'Over '+entry.value.toLocaleString('en-US')+' daily viewers'
+      :entry.comparator==='greater_than'?'Over '+entry.value+'%':entry.value;
+    card.append(make('strong','',display));
     card.append(make('p','',entry.metric.replaceAll('_',' ')));
     card.append(make('small','',entry.source_period.replaceAll('_',' ')+' · '+entry.population));
     card.append(make('p','measure-limit',entry.limits));
@@ -5022,7 +5025,7 @@ function renderMultilingualDistribution(data,dossier) {
     list.append(li);
   }
   examples.append(list);details.append(examples);
-  details.append(make('p','measure-limit','The over-25% finding is a share of watch time for selected multilingual-audio creators, not additional traffic or causal income lift. Typical dubbing hours, prices and newcomer outcomes remain unknown.'));
+  details.append(make('p','measure-limit','The over-25% result refers to selected creators' multi-language-audio watch time. The December 2025 six-million-plus average describes daily auto-dubbed watchers meeting a 10-minute threshold, not additional unique viewers or earnings. Typical dubbing costs, causal traffic lift and profits remain unknown.'));
   const link=make('a','inline-link','Review language-pair definitions and study limitations ↗');
   link.href='./ontology/youtube/multilingual-distribution.md';link.rel='noopener noreferrer';link.target='_blank';
   details.append(link);

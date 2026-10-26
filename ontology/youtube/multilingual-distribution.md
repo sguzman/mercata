@@ -1,6 +1,6 @@
 # YouTube multilingual distribution: audio, metadata, captions and language
 
-**Official-source snapshot: October 25, 2026.** [Machine-readable vocabulary and product rules](multilingual-distribution.json). YouTube offers several distinct ways to localize content. None of them establishes that a creator will increase watch time or income by a particular percentage.
+**Official-source snapshot: October 26, 2026.** [Machine-readable vocabulary and product rules](multilingual-distribution.json). YouTube offers several distinct ways to localize content. None of them establishes that a creator will increase watch time or income by a particular percentage.
 
 ## Six mechanisms are not the same feature
 
@@ -26,6 +26,12 @@ YouTube's [May 2026 product explanation](https://blog.youtube/creator-and-artist
 On September 10, 2025, [YouTube announced broader multi-language audio availability](https://blog.youtube/news-and-events/multi-language-audio/). It reported that **over 25% of watch time** for creators already uploading multi-language audio tracks came from views in the video's non-primary language (as of July 2025).
 
 This is a *fraction of watched minutes in a selected participant group*. It does **not** mean dubbing caused 25% additional views, brought in 25% additional people or earned 25% more money. The sample selection mechanism, typical additional production cost, channel starting audience and incremental ROI were not publicly established. Anecdotal creator successes are not representative estimates.
+
+## December 2025 auto-dubbed viewing: a bounded daily measure
+
+In a [February 4, 2026 first-party update](https://blog.youtube/news-and-events/youtube-auto-dubbing-expressive-speech/), YouTube stated that in **December 2025**, an average of **more than six million daily viewers** watched at least **ten minutes** of automatically dubbed content. The metric is a platform-reported *daily audience above an engagement threshold*, not the number of viewers who subscribed because of dubbing or people who would otherwise not have watched. Daily counts cannot be added across December to obtain monthly unique people.
+
+This metric has a different unit and population from the **over-25% of watch time** among selected manual multi-language-audio creators in 2025, and from the **27 supported languages** announced in 2026. None measures incremental creator earnings or a causal gain against undubbed videos. The publisher does not expose a matched non-dubbed control, viewer age/country distribution, individual channel records, unique monthly audience count or monetized playback value. The machine record retains these as unknown.
 
 ## How to compare languages correctly
 
