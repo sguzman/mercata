@@ -1,0 +1,11 @@
+# Crumbling World — one first commercial video game launch with limited itch.io receipts
+
+In the developer's [2020 postmortem](https://danimarti.itch.io/crumbling-world/devlog/160435/crumbling-world-post-mortem-the-story-of-a-failure), a first commercial action game expanded from a game-jam-winning prototype had disappointing results. Approximately one month after launch, the author reported **7 itch.io copies yielding $102.83**, **132 Steam copies yielding $1,242**, **2 Apple Store copies yielding $29.99**, and **0 Game Jolt copies**. Combined, the author reported **141 copies and $1,380.82**.
+
+The creator also reported around **$10,000 spent on a marketing agency**, plus unquantified development, voice, art and personal labor. That agency expense applied to the **multi-store launch as a whole**, not specifically the seven itch.io buyers. Therefore its cost must not be divided by those buyers to claim itch.io-only acquisition cost. The report does not provide a standardized gross-versus-net definition for every store or a final audited personal profit calculation.
+
+The developer described roughly three years of learning and production while maintaining other paid work, followed by insufficient QA, launch-day crashes, refund requests and **nine patches** in the first month. The postmortem attributes weak commercial results to a mix of insufficient audience, deadline pressure and product reliability. These are retrospective subjective causal assessments, not controlled estimates. A prize-winning game jam did **not** guarantee paid market success.
+
+This deliberately selected downside case balances more successful self-disclosures such as Mixolumia. It does **not** establish the percentage of first commercial games that lose money, the typical ROI of buying marketing services or the average paid developer hourly wage. Those remain unknown until representative seller cohorts include zero earners, costs and later sales windows.
+
+[Machine evidence and unresolved metrics](crumbling-world-launch-2020.json).

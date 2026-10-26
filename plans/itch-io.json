@@ -237,7 +237,7 @@
         "itch-io/competition/create-cross-platform-benchmarks"
       ],
       "phase": 2,
-      "progress_percent": 52
+      "progress_percent": 53
     },
     {
       "id": "income",
@@ -272,7 +272,7 @@
         "itch-io/income/register-unavailable-income-fields"
       ],
       "phase": 3,
-      "progress_percent": 65
+      "progress_percent": 67
     },
     {
       "id": "rights",
@@ -356,7 +356,7 @@
         "itch-io/risk/set-downside-limits"
       ],
       "phase": 3,
-      "progress_percent": 66
+      "progress_percent": 70
     },
     {
       "id": "strategy",
@@ -389,7 +389,7 @@
         "itch-io/strategy/define-retrospective-reporting"
       ],
       "phase": 4,
-      "progress_percent": 66
+      "progress_percent": 68
     },
     {
       "id": "review",
@@ -2341,7 +2341,10 @@
         "tests/itch-io-creative-pwyw.test.mjs",
         "ontology/itch-io/community-analytics-sample-2026.json",
         "ontology/itch-io/community-analytics-sample-2026.md",
-        "tests/itch-io-community-analytics.test.mjs"
+        "tests/itch-io-community-analytics.test.mjs",
+        "ontology/itch-io/crumbling-world-launch-2020.json",
+        "ontology/itch-io/crumbling-world-launch-2020.md",
+        "tests/itch-io-crumbling-launch.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2355,12 +2358,15 @@
       "objective": "Investigate plan survivorship-bias assessment for low-sale and discontinued releases.",
       "acceptance": "Provide dated source-linked evidence to plan survivorship-bias assessment for low-sale and discontinued releases; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 31,
+      "percent": 72,
       "evidence": [
         "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
         "ontology/itch-io/web-developer-survey-crosswalk-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-web-survey-crosswalk.test.mjs"
+        "tests/itch-web-survey-crosswalk.test.mjs",
+        "ontology/itch-io/crumbling-world-launch-2020.json",
+        "ontology/itch-io/crumbling-world-launch-2020.md",
+        "tests/itch-io-crumbling-launch.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2384,7 +2390,10 @@
         "site/itch-income-histogram.mjs",
         "ontology/itch-io/income-histogram-protocol-2026.json",
         "ontology/itch-io/income-histogram-protocol-2026.md",
-        "tests/itch-io-income-histogram.test.mjs"
+        "tests/itch-io-income-histogram.test.mjs",
+        "ontology/itch-io/crumbling-world-launch-2020.json",
+        "ontology/itch-io/crumbling-world-launch-2020.md",
+        "tests/itch-io-crumbling-launch.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3077,9 +3086,14 @@
       "emoji": "🛡️",
       "objective": "Investigate separate seasonality, outliers and ordinary fluctuations.",
       "acceptance": "Provide dated source-linked evidence to separate seasonality, outliers and ordinary fluctuations; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 29,
+      "evidence": [
+        "ontology/itch-io/crumbling-world-launch-2020.json",
+        "ontology/itch-io/crumbling-world-launch-2020.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-crumbling-launch.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 3
@@ -3156,12 +3170,15 @@
       "objective": "Investigate define explicit cash, legal and time boundaries for future pilots.",
       "acceptance": "Provide dated source-linked evidence to define explicit cash, legal and time boundaries for future pilots; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 51,
+      "percent": 65,
       "evidence": [
         "ontology/itch-io/policy-risk-2025-2026.json",
         "ontology/itch-io/policy-risk-2025-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-policy.test.mjs"
+        "tests/itch-io-policy.test.mjs",
+        "ontology/itch-io/crumbling-world-launch-2020.json",
+        "ontology/itch-io/crumbling-world-launch-2020.md",
+        "tests/itch-io-crumbling-launch.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3175,7 +3192,7 @@
       "objective": "Investigate define hypothetical minimum viable game and measurable outcomes.",
       "acceptance": "Provide dated source-linked evidence to define hypothetical minimum viable game and measurable outcomes; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 66,
+      "percent": 80,
       "evidence": [
         "ontology/itch-io/break-even-scenarios-2026.md",
         "ontology/itch-io/break-even-scenarios-2026.json",
@@ -3184,7 +3201,10 @@
         "ontology/itch-io/first-game-entry-scenario-2026.json",
         "ontology/itch-io/first-game-entry-scenario-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-entry-scenario.test.mjs"
+        "tests/itch-io-entry-scenario.test.mjs",
+        "ontology/itch-io/crumbling-world-launch-2020.json",
+        "ontology/itch-io/crumbling-world-launch-2020.md",
+        "tests/itch-io-crumbling-launch.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3367,7 +3387,7 @@
       "objective": "Investigate separate distribution costs and potential incremental buyers.",
       "acceptance": "Provide dated source-linked evidence to separate distribution costs and potential incremental buyers; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 74,
+      "percent": 85,
       "evidence": [
         "ontology/itch-io/commercial-postmortems-2026.json",
         "ontology/itch-io/commercial-postmortems-2026.md",
@@ -3375,7 +3395,10 @@
         "tests/itch-io-commercial-postmortems.test.mjs",
         "ontology/itch-io/commercial-strategy-protocol-2026.json",
         "ontology/itch-io/commercial-strategy-protocol-2026.md",
-        "tests/itch-io-strategy-protocol.test.mjs"
+        "tests/itch-io-strategy-protocol.test.mjs",
+        "ontology/itch-io/crumbling-world-launch-2020.json",
+        "ontology/itch-io/crumbling-world-launch-2020.md",
+        "tests/itch-io-crumbling-launch.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3426,7 +3449,7 @@
       "objective": "Investigate precommit to time, cash and evidence thresholds.",
       "acceptance": "Provide dated source-linked evidence to precommit to time, cash and evidence thresholds; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 64,
+      "percent": 77,
       "evidence": [
         "ontology/itch-io/break-even-scenarios-2026.md",
         "ontology/itch-io/break-even-scenarios-2026.json",
@@ -3435,7 +3458,10 @@
         "ontology/itch-io/first-game-entry-scenario-2026.json",
         "ontology/itch-io/first-game-entry-scenario-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-entry-scenario.test.mjs"
+        "tests/itch-io-entry-scenario.test.mjs",
+        "ontology/itch-io/crumbling-world-launch-2020.json",
+        "ontology/itch-io/crumbling-world-launch-2020.md",
+        "tests/itch-io-crumbling-launch.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -4022,7 +4048,7 @@
       "objective": "Investigate track bug reports, compatibility regressions and support hours.",
       "acceptance": "Provide dated source-linked evidence to track bug reports, compatibility regressions and support hours; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 76,
+      "percent": 82,
       "evidence": [
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
@@ -4035,7 +4061,10 @@
         "tests/itch-distribution-audit.test.mjs",
         "ontology/itch-io/open-source-engineering-2026.json",
         "ontology/itch-io/open-source-engineering-2026.md",
-        "tests/itch-io-open-source-engineering.test.mjs"
+        "tests/itch-io-open-source-engineering.test.mjs",
+        "ontology/itch-io/crumbling-world-launch-2020.json",
+        "ontology/itch-io/crumbling-world-launch-2020.md",
+        "tests/itch-io-crumbling-launch.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

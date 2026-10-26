@@ -118,3 +118,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io resale and purchase entitlements (2026-10-26):** Terms clarify nontransferable accounts, nonexclusive user access, gift checkout, and separate unresolved secondary game license sale. 69% → 70% (Δ +1 pp; exact 69.56%). [Rights report](../ontology/itch-io/resale-transfer-2026.md).
+
+
+**itch.io first-game downside case (2026-10-26):** 2020 Crumbling World first-month 7 itch sales/$102.83 alongside cross-store results, $10k campaign expenditure and 9 fixes, with source-specific sales/profit limits. 70% → 70% (Δ +0 pp). [Case](../ontology/itch-io/crumbling-world-launch-2020.md).
