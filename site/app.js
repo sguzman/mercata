@@ -934,120 +934,25 @@ function renderOpportunityFramework(model, taxonomy, activity) {
     draw();
     picker.append(report);details.append(picker);
   }
-  const caseStudy=model.sample_niche_scorecard;
-  if(caseStudy?.observations?.length===4){
+  const sample=model.sample_niche_scorecard;
+  if(sample?.observations?.length===4){
     const panel=make('div','sample-niche-scorecard');
-    panel.append(make('h5','','Four selected niches: visible RPM inputs, no ranked winner'));
-    panel.append(make('p','measure-limit','The AIR client sample measures native RPM quartiles for already-monetized channels. Audience reach, active creator supply, production labor and cash costs, and policy/rights remain unmeasured for a matched cohort.'));
-    const rows=make('div','sample-niche-scorecard-grid');
-    for(const x of caseStudy.observations){
-      const item=make('article','sample-niche-scorecard-row');
-      item.append(make('h5','',x.label));
-      item.append(make('p','', 'Selected RPM median 
-  for(const criterion of model.criteria){
-    const card=make('article','opportunity-method-item');
-    card.append(make('h5','',criterion.label));
-    card.append(make('p','',criterion.definition));
-    card.append(make('small','', 'Research status: '+criterion.confidence));
-    grid.append(card);
-  }
-  details.append(grid);
-  if(model.opportunity_risk_matrix?.axes?.length){
-    const matrix=make('details','opportunity-risk-matrix');
-    matrix.append(make('summary','','Evidence-backed opportunity and risk restrictions · '+model.opportunity_risk_matrix.axes.length+' axes'));
-    matrix.append(make('p','measure-limit','No probability of profit or financial loss was inferred. Published rules are not an account-level eligibility decision; measured creator outcomes remain unknown.'));
-    const list=make('div','opportunity-method-grid');
-    for(const axis of model.opportunity_risk_matrix.axes){
-      const card=make('article','opportunity-method-item');
-      card.append(make('h5','',axis.label));
-      card.append(make('p','',axis.observable_gate));
-      card.append(make('p','measure-limit','Class: '+axis.classification.replaceAll('_',' ')+' · '+axis.invalid_shortcut));
-      list.append(card);
+    panel.append(make('h5','','Selected niche RPM input comparison; no overall ranking'));
+    panel.append(make('p','measure-limit','AIR selected monetized-channel RPM figures are only one of six required economic inputs. No representative audience, creator supply, production hours, cash costs or rights eligibility are observed.'));
+    const entries=make('div','sample-niche-scorecard-grid');
+    for(const item of sample.observations){
+      const card=make('article','sample-niche-scorecard-row');
+      card.append(make('h5','',item.label));
+      card.append(make('p','','Sample native RPM median USD '+item.median_rpm_usd.toFixed(2)+'; 25th to 75th percentile USD '+item.p25_rpm_usd.toFixed(2)+' to '+item.p75_rpm_usd.toFixed(2)+' per 1,000 views.'));
+      card.append(make('p','measure-limit','One of six required axes observed; five missing. Typical creator profit: unknown. Opportunity rank: unavailable.'));
+      entries.append(card);
     }
-    matrix.append(list);
-    const doc=make('a','inline-link','Read sourced risk-classification boundaries ↗');
-    doc.href='./ontology/youtube/opportunity-risk-matrix.md';doc.target='_blank';doc.rel='noopener noreferrer';
-    matrix.append(doc);details.append(matrix);
-  }
-  const link=make('a','inline-link','Read the full comparison method ↗');
-  link.href='./ontology/youtube/opportunity-framework.md';link.target='_blank';link.rel='noopener noreferrer';
-  details.append(link);
-  container.append(details);
-  return container;
-}
-+x.median_rpm_usd.toFixed(2)+' per 1,000 views; middle half 
-  for(const criterion of model.criteria){
-    const card=make('article','opportunity-method-item');
-    card.append(make('h5','',criterion.label));
-    card.append(make('p','',criterion.definition));
-    card.append(make('small','', 'Research status: '+criterion.confidence));
-    grid.append(card);
-  }
-  details.append(grid);
-  if(model.opportunity_risk_matrix?.axes?.length){
-    const matrix=make('details','opportunity-risk-matrix');
-    matrix.append(make('summary','','Evidence-backed opportunity and risk restrictions · '+model.opportunity_risk_matrix.axes.length+' axes'));
-    matrix.append(make('p','measure-limit','No probability of profit or financial loss was inferred. Published rules are not an account-level eligibility decision; measured creator outcomes remain unknown.'));
-    const list=make('div','opportunity-method-grid');
-    for(const axis of model.opportunity_risk_matrix.axes){
-      const card=make('article','opportunity-method-item');
-      card.append(make('h5','',axis.label));
-      card.append(make('p','',axis.observable_gate));
-      card.append(make('p','measure-limit','Class: '+axis.classification.replaceAll('_',' ')+' · '+axis.invalid_shortcut));
-      list.append(card);
-    }
-    matrix.append(list);
-    const doc=make('a','inline-link','Read sourced risk-classification boundaries ↗');
-    doc.href='./ontology/youtube/opportunity-risk-matrix.md';doc.target='_blank';doc.rel='noopener noreferrer';
-    matrix.append(doc);details.append(matrix);
-  }
-  const link=make('a','inline-link','Read the full comparison method ↗');
-  link.href='./ontology/youtube/opportunity-framework.md';link.target='_blank';link.rel='noopener noreferrer';
-  details.append(link);
-  container.append(details);
-  return container;
-}
-+x.p25_rpm_usd.toFixed(2)+'–
-  for(const criterion of model.criteria){
-    const card=make('article','opportunity-method-item');
-    card.append(make('h5','',criterion.label));
-    card.append(make('p','',criterion.definition));
-    card.append(make('small','', 'Research status: '+criterion.confidence));
-    grid.append(card);
-  }
-  details.append(grid);
-  if(model.opportunity_risk_matrix?.axes?.length){
-    const matrix=make('details','opportunity-risk-matrix');
-    matrix.append(make('summary','','Evidence-backed opportunity and risk restrictions · '+model.opportunity_risk_matrix.axes.length+' axes'));
-    matrix.append(make('p','measure-limit','No probability of profit or financial loss was inferred. Published rules are not an account-level eligibility decision; measured creator outcomes remain unknown.'));
-    const list=make('div','opportunity-method-grid');
-    for(const axis of model.opportunity_risk_matrix.axes){
-      const card=make('article','opportunity-method-item');
-      card.append(make('h5','',axis.label));
-      card.append(make('p','',axis.observable_gate));
-      card.append(make('p','measure-limit','Class: '+axis.classification.replaceAll('_',' ')+' · '+axis.invalid_shortcut));
-      list.append(card);
-    }
-    matrix.append(list);
-    const doc=make('a','inline-link','Read sourced risk-classification boundaries ↗');
-    doc.href='./ontology/youtube/opportunity-risk-matrix.md';doc.target='_blank';doc.rel='noopener noreferrer';
-    matrix.append(doc);details.append(matrix);
-  }
-  const link=make('a','inline-link','Read the full comparison method ↗');
-  link.href='./ontology/youtube/opportunity-framework.md';link.target='_blank';link.rel='noopener noreferrer';
-  details.append(link);
-  container.append(details);
-  return container;
-}
-+x.p75_rpm_usd.toFixed(2)));
-      item.append(make('p','measure-limit','Only 1 of 6 required axes observed; '+x.missing_axes.length+' axes missing. Creator net profit: unknown; overall opportunity rank: unavailable.'));
-      rows.append(item);
-    }
-    panel.append(rows);
-    panel.append(make('p','measure-limit','Business & Finance is small-n in the original vendor study. The four categories are not a representative all-creator cohort, and child-directed suitability must be assessed by actual content, not by category name.'));
-    const link=make('a','inline-link','Read measured quartiles and the five missing axes ↗');
-    link.href='./ontology/youtube/rpm-niche-quartile-crosswalk-2026.md';link.rel='noopener noreferrer';link.target='_blank';
-    panel.append(link);details.append(panel);
+    panel.append(entries);
+    panel.append(make('p','measure-limit','Business and Finance uses a small sample. No matched new-creator profitability or universal genre success probabilities were observed.'));
+    const link=make('a','inline-link','Inspect quartiles and missing inputs');
+    link.href='./ontology/youtube/rpm-niche-quartile-crosswalk-2026.md';
+    link.target='_blank';link.rel='noopener noreferrer';panel.append(link);
+    details.append(panel);
   }
   const grid=make('div','opportunity-method-grid');
   for(const criterion of model.criteria){

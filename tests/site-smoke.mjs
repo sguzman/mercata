@@ -532,10 +532,10 @@ try{
     const scores=page.locator('.opportunity-framework .sample-niche-scorecard');
     assert.equal(await scores.count(),1,'Missing visible comparison of bounded niche inputs');
     assert.equal(await scores.locator('.sample-niche-scorecard-row').count(),4);
-    assert((await scores.textContent()).includes('Selected RPM median $10.22 per 1,000 views'));
-    assert((await scores.textContent()).includes('Only 1 of 6 required axes observed'));
-    assert((await scores.textContent()).includes('overall opportunity rank: unavailable'));
-    assert((await scores.textContent()).includes('Creator net profit: unknown'));
+    assert((await scores.textContent()).includes('Sample native RPM median USD 10.22'));
+    assert((await scores.textContent()).includes('One of six required axes observed; five missing'));
+    assert((await scores.textContent()).includes('Opportunity rank: unavailable'));
+    assert((await scores.textContent()).includes('Typical creator profit: unknown'));
 
     const tool=page.locator('.scenario-tool');
     await tool.locator('summary').click();
