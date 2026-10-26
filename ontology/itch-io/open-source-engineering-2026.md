@@ -14,6 +14,8 @@ GitHub engine-file inspection found **120 Godot** and **84 Unity** projects, whi
 
 After manual review of **111 candidate testing repositories**, the authors confirmed **36 of 491 (7.33%)** had automated tests. Their observational models found projects with tests tended to have more commits after some controls, but **test presence did not show a significant correlation with user ratings** (reported rating p = 0.545). Neither comparison observes transactions or profit. Do not interpret tests as a proven route to paid game sales, nor conflate user ratings with actual purchasers.
 
+[The 2025 and 2026 studies share upstream metadata; their final sample counts are not independent game populations.](open-source-reproducibility-lineage-2025-2026.md)
+
 ## What this adds and what it cannot answer
 
 This is strong supporting evidence for a narrow technical landscape: tools and engines, development activity, multi-label genres, code visibility and testing constraints facing some small or hobby game teams. It directly complements Mercata's Linux/desktop QA and reproducible build work. It does **not** establish **typical itch.io game income**, whether an individual 2D project is commercially viable, the fraction of games selling zero units, the true median seller profit, or which engine maximizes game sales.

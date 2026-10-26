@@ -1373,6 +1373,28 @@
       "evidence_class": "voluntary_developer_first_party_game_postmortem",
       "license": "Attributed short published counts with independently written scope and methodological warnings.",
       "notes": "Niche platform first paid puzzle release with earlier developer experience; standalone game and community bundle routes separated; no audited seller profit."
+    },
+    {
+      "id": "dipio-2025-itch-open-source-reproducibility",
+      "url": "https://ieeexplore.ieee.org/document/11114187/",
+      "title": "On the Need for Reproducibility Guidelines for Open-Source Games: A itch.io Case Study",
+      "publisher": "Di Sipio et al., IEEE Conference on Games 2025",
+      "published_at": "2025-08-19",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "peer_reviewed_conference_abstract",
+      "license": "Attributed research numerical summaries and metadata only.",
+      "notes": "765 raw open-source game candidates, 613 retained; no commercial sale or seller income data."
+    },
+    {
+      "id": "dipio-2025-zenodo-dataset",
+      "url": "https://zenodo.org/records/15545055",
+      "title": "Reproducibility research data and source materials, 2025",
+      "publisher": "2025 study authors via Zenodo",
+      "published_at": "2025-05-29",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "research_dataset_metadata",
+      "license": "Metadata referenced by link; no dataset archives copied.",
+      "notes": "Research reproduction listing, not audited marketplace purchase transactions."
     }
   ],
   "claims": [
@@ -5091,6 +5113,37 @@
       "observed_at": "2026-10-26",
       "confidence": "medium",
       "limitations": "No verified matched purchase funnel, net profit, labor hours, seller population median or comparative genre return."
+    },
+    {
+      "id": "dipio-2025-reproducibility-sample",
+      "text": "A 2025 IEEE CoG reproducibility study reported 765 collected itch.io open-source game candidates, 613 retained after manual assessment, and ten reproducibility guidelines.",
+      "source_ids": [
+        "dipio-2025-itch-open-source-reproducibility"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Engineering-biased, non-random selection; no paid seller or earnings measurement."
+    },
+    {
+      "id": "dipio-2025-zenodo-files",
+      "text": "The original study's May 2025 Zenodo release describes manual labeling, game metadata and replication scripts as supporting research materials.",
+      "source_ids": [
+        "dipio-2025-zenodo-dataset"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "No full game-source archive downloaded or independently reproduced by Mercata."
+    },
+    {
+      "id": "dipio-canella-overlapping-origins",
+      "text": "The 2026 Canella and colleagues' 491-game repository corpus explicitly starts from game metadata derived from the earlier Di Sipio research, so the two filtered sample sizes cannot be added as independent seller counts.",
+      "source_ids": [
+        "dipio-2025-itch-open-source-reproducibility",
+        "canella-open-source-itch-games-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Exact final game identity overlap is not verified; no paid-seller population denominator or financial outcome."
     }
   ],
   "observations": [

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "linked_studies_common_initial_dataset",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "dipio-2025-itch-open-source-reproducibility",
+    "dipio-2025-zenodo-dataset",
+    "canella-open-source-itch-games-2026"
+  ],
+  "study_2025": {
+    "doi": "10.1109/CoG64752.2025.11114187",
+    "candidate_projects": 765,
+    "manually_retained_projects": 613,
+    "reproducibility_guidelines": 10,
+    "analyzed_paid_purchases": false,
+    "dataset_record": "https://zenodo.org/records/15545055",
+    "underlying_source_files_downloaded_by_mercata": false
+  },
+  "study_2026": {
+    "doi": "10.1145/3786171.3788385",
+    "initial_prior_corpus": 10548,
+    "pre_manual_review": 500,
+    "excluded_by_manual_review": 9,
+    "analyzed_projects": 491,
+    "analyzed_paid_purchases": false
+  },
+  "relation": {
+    "shared_upstream_game_metadata": true,
+    "independent_samples": false,
+    "known_game_identity_intersection": null,
+    "counts_additive": false,
+    "genre_income_effect": null,
+    "active_paid_seller_estimate": null,
+    "market_zero_sale_fraction": null,
+    "development_profit_estimate": null
+  },
+  "limitations": [
+    "The 2026 paper explicitly credits the previous Di Sipio et al. data as its initial itch.io dataset.",
+    "Each paper's selection stages have their own denominators and cannot be combined into a single sequential funnel.",
+    "A Github project being source-visible says nothing about mandatory paid game price, paid orders, seller active status or labor profit.",
+    "No large game-source archives were downloaded, no user records were accessed and independent study replication was not attempted."
+  ]
+}
