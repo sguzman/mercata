@@ -82,3 +82,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io marketplace economic timeline (2026-10-26):** five primary-source 2013–2026 launches, historical 2018 impression/CTR definition and July 2026 seasonal Sale Explorer with >30,000 discounted mixed-category projects (not purchases). 55% → 58% (Δ +3 pp). [Dated study](../ontology/itch-io/store-feature-history-2026.md).
+
+
+**itch.io multi-work free/PWYW earnings (2026-10-26):** independent 2019 artist's 34-title $7,276.70 voluntary gross and 1,072-vs-1,073 payment report inconsistency, never generalized to first premium games. 58% → 59% (Δ +1 pp). [Case](../ontology/itch-io/creative-free-games-pwyw-2019.md).
