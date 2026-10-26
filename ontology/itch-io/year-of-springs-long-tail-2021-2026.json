@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "matched_launch_week_and_five_year_game_payment_events",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "year-of-springs-week-one-2021",
+    "year-of-springs-five-years-2026"
+  ],
+  "game": "A YEAR OF SPRINGS",
+  "release_date": "2021-05-14",
+  "snapshots": [
+    {
+      "date": "2021-05-21",
+      "followup": "one_week",
+      "itch_payment_events": 324,
+      "itch_download_events": 458,
+      "source_ids": [
+        "year-of-springs-week-one-2021"
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "followup": "five_years",
+      "itch_payment_events": 1789,
+      "itch_download_events": 5929,
+      "source_ids": [
+        "year-of-springs-five-years-2026"
+      ]
+    }
+  ],
+  "post_week_through_year_five_payment_events": 1465,
+  "first_week_fraction_of_five_year_payment_events": 0.181107,
+  "after_week_fraction_of_five_year_payment_events": 0.818893,
+  "cumulative_payment_events_comparable": true,
+  "downloads_are_paid_units": false,
+  "game_publisher_had_prior_titles": true,
+  "new_platforms_and_translations_added": true,
+  "unobserved": {
+    "annual_game_itch_paid_units": null,
+    "lifetime_itch_net_receipts_usd": null,
+    "first_week_profit": null,
+    "organic_search_paid_orders": null,
+    "unique_paying_buyers": null,
+    "median_indie_first_game_long_tail": null
+  },
+  "limitations": [
+    "Two snapshots from one selectively reporting established creator, not an income distribution.",
+    "The five-year figure is cumulative, not a number of payments made during 2026.",
+    "No observations allocate the other 1,465 transactions by year or acquisition source.",
+    "New translations and non-itch releases alter conditions; no causal benefit from later stores is identified.",
+    "Download records include access keys and cannot be interpreted as purchases.",
+    "No actual seller profit, working hours, or total platform income is available."
+  ]
+}

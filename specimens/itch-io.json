@@ -922,6 +922,17 @@
       "evidence_class": "voluntary_indie_game_launch_cost_postmortem",
       "license": "Short independently authored numerical extracts and direct public source URL, without reproducing original text.",
       "notes": "Voluntary and nonrepresentative game postmortem; mixed-store sales must not be attributed entirely to itch.io. Personal living expenses are not automatically development project cash expenditures."
+    },
+    {
+      "id": "year-of-springs-week-one-2021",
+      "url": "https://npckc.itch.io/a-year-of-springs/devlog/255726/week-1-numbers-for-a-year-of-springs-how-i-did-didnt-do-promotion-for-the-game",
+      "title": "Week 1 numbers for A YEAR OF SPRINGS",
+      "publisher": "npckc, game developer",
+      "published_at": "2021-05-21",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "dated_developer_first_week_game_statistics",
+      "license": "Small numerical excerpts with attribution to public URL.",
+      "notes": "Same project as existing 2026 five-year record. Voluntary creator disclosure; established game audience; not a random paid game cohort."
     }
   ],
   "claims": [
@@ -3475,6 +3486,58 @@
       "confidence": "medium",
       "observed_at": "2026-10-26",
       "limitations": "Do not pool GBP with EUR, durations, free/donation games, or matched/mismatched game store outcomes."
+    },
+    {
+      "id": "longtail-springs-weekone",
+      "text": "A YEAR OF SPRINGS' creator reported 324 itch.io payments and 458 downloads during its first week.",
+      "source_ids": [
+        "year-of-springs-week-one-2021"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "First-week paid transaction events, not unique purchasers; downloads include free keys."
+    },
+    {
+      "id": "longtail-springs-fiveyears",
+      "text": "The 2026 follow-up reported 1,789 cumulative itch.io payments and 5,929 download events after five years.",
+      "source_ids": [
+        "year-of-springs-five-years-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Cumulative counts, not annual net proceeds or a representative launch."
+    },
+    {
+      "id": "longtail-springs-rest",
+      "text": "Across the two snapshots, 1,465 additional itch.io payment events were reported after the initial release week, or about 81.9% of the five-year cumulative payment count.",
+      "source_ids": [
+        "year-of-springs-week-one-2021",
+        "year-of-springs-five-years-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Within-one-title retrospective share, not a sales curve for new games; intermediate timing unknown."
+    },
+    {
+      "id": "longtail-springs-updates",
+      "text": "The creator expanded language support and released the title through additional platforms during the five-year observation interval.",
+      "source_ids": [
+        "year-of-springs-five-years-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Marketing and release context changed; no causal organic discovery or store-specific attribution of continued payments."
+    },
+    {
+      "id": "longtail-springs-buyer-unknown",
+      "text": "Payment-event counts and optional community access do not identify unique buyers, net profit or the probability an unrelated new game keeps selling.",
+      "source_ids": [
+        "year-of-springs-week-one-2021",
+        "year-of-springs-five-years-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Measurement boundaries, not a numerical population estimate."
     }
   ],
   "observations": [
