@@ -79,3 +79,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io discovery-quality and community controls (2026-10-26):** official metadata/tag/language/AI disclosure, jam promotion, discount integrity, followers, ratings and limited playtest rules registered. No real sales uplift attributed. **53% → 55%**, Δ +2 pp. [Evidence](../ontology/itch-io/discovery-quality-2026.md).
+
+
+**itch.io marketplace economic timeline (2026-10-26):** five primary-source 2013–2026 launches, historical 2018 impression/CTR definition and July 2026 seasonal Sale Explorer with >30,000 discounted mixed-category projects (not purchases). 55% → 58% (Δ +3 pp). [Dated study](../ontology/itch-io/store-feature-history-2026.md).
