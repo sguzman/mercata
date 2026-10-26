@@ -19,6 +19,7 @@ Read `CONSTITUTION.md` before editing this public repository.
 - Keep ontology machine and human versions aligned; use the specimen schema. Maintain truthful empty state.
 - Every research assertion has public source references and dates. Keep unknowns unknown. Track income distributions, zero earners, costs, time, discovery, regulations, ownership and viable experiments without invented conclusions.
 - Tasks need acceptance conditions, weights, evidence, and numeric progress. Do not award 100% for unverified work.
+- When itch.io task scores change, run `node scripts/sync-itch-io-status.mjs` to align current summary percentages in the plan, ontology, README and gallery; preserve historic checkpoint percentages.
 - Each specimen's hexadecimal color must remain unique and correspond to stored OKLCH coordinates. Never silently recolor existing specimens.
 
 ## Website and verification
