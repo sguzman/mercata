@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "historical_four_detected_audio_language_video_cohorts",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "mcgrady-zheng-zuckerman-four-language-youtube-2025"
+  ],
+  "paper_published_at": "2025-08-13",
+  "observation_unit": "public_video_objects_with_high_confidence_dominant_audio_language",
+  "source_sampling": {
+    "candidate_video_count": 246381,
+    "batches": 10,
+    "retrieval_2023_count": 194619,
+    "retrieval_2024_count": 51762,
+    "retrieval_window": "2023-09 to 2024-03",
+    "method": "random prefix candidate sampling; Whisper audio inference calibrated against human coding",
+    "language_confidence_cutoffs": {
+      "en": 0.8,
+      "es": 0.6,
+      "hi": 0.6,
+      "ru": 0.8
+    },
+    "hand_coded_language_test_per_language": 90,
+    "exact_calibrated_sample_n_by_language": null,
+    "same_probability_of_inclusion_after_audio_filter": null,
+    "author_or_viewer_person_survey": false
+  },
+  "language_cohorts": [
+    {
+      "language": "en",
+      "name": "English",
+      "median_views_per_video": 38,
+      "median_duration_seconds": 119,
+      "median_likes_per_video": 1,
+      "theil_video_view_index": 4.85,
+      "sample_uploaded_in_2023_percent": 26.25,
+      "zero_comment_video_percent_greater_than": 70,
+      "active_language_viewers_2026": null,
+      "unique_commenters": null,
+      "creator_net_income": null
+    },
+    {
+      "language": "es",
+      "name": "Spanish",
+      "median_views_per_video": 39,
+      "median_duration_seconds": 148,
+      "median_likes_per_video": 1,
+      "theil_video_view_index": 4.78,
+      "sample_uploaded_in_2023_percent": 25.74,
+      "zero_comment_video_percent_greater_than": 70,
+      "active_language_viewers_2026": null,
+      "unique_commenters": null,
+      "creator_net_income": null
+    },
+    {
+      "language": "hi",
+      "name": "Hindi",
+      "median_views_per_video": 37,
+      "median_duration_seconds": 29,
+      "median_likes_per_video": 2,
+      "theil_video_view_index": 6.04,
+      "sample_uploaded_in_2023_percent": 50.92,
+      "zero_comment_video_percent_greater_than": 70,
+      "active_language_viewers_2026": null,
+      "unique_commenters": null,
+      "creator_net_income": null
+    },
+    {
+      "language": "ru",
+      "name": "Russian",
+      "median_views_per_video": 34,
+      "median_duration_seconds": 98,
+      "median_likes_per_video": 1,
+      "theil_video_view_index": 4.88,
+      "sample_uploaded_in_2023_percent": 30.71,
+      "zero_comment_video_percent_greater_than": 70,
+      "active_language_viewers_2026": null,
+      "unique_commenters": null,
+      "creator_net_income": null
+    }
+  ],
+  "extra_hindi_study_values": {
+    "shorts_sample_percent": 58.31,
+    "above_twenty_minute_sample_percent": 2.51,
+    "top_one_tenth_percent_video_share_of_sample_views_percent": 78.6
+  },
+  "observed_comment_fact": "More than 70% of videos in all four cohorts had no comments; the language of the comments was not identified",
+  "scope_limits": [
+    "Study units are video objects, not unique commenters, viewers, native speakers or creator owners.",
+    "Automatic audio-language inference has unknown error for some code-switching, music, silence and dialects; confidence cutoffs differ by language.",
+    "Reported upload-year proportions concern the 2024-retrieved high-confidence historical corpus; they are not annual upload growth rates for the entire platform.",
+    "Theil indexes describe concentration of public video-view events, not income inequality.",
+    "Video's dominant language does not identify viewers' country, language, age or ethnicity.",
+    "Published comment counts do not reveal the commenters' languages or number of unique commenters.",
+    "The sample predates the 2026 YouTube public view-definition revision; current video and person populations are unknown.",
+    "No causal effects of video length, language or Shorts product policy and no creator income values are observed."
+  ],
+  "unmeasured": {
+    "all_youtube_videos_by_language_2026": null,
+    "unique_viewers_by_language": null,
+    "unique_commenting_people_by_language": null,
+    "language_community_member_counts": null,
+    "creator_income_by_language": null,
+    "language_audience_country_crosswalk": null,
+    "representative_language_specific_engagement_rates": null,
+    "causal_format_advantage": null
+  }
+}

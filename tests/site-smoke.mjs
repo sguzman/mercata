@@ -481,6 +481,15 @@ try{
     assert((await surfaces.textContent()).includes('8 minutes (480 seconds)'));
     assert((await surfaces.textContent()).includes('not a served ad'));
     assert((await surfaces.textContent()).includes('Shorts over one minute'));
+    const peerLanguage=page.locator('.four-language-video-cohorts');
+    assert.equal(await peerLanguage.count(),1,'Missing independent language-video research');
+    await peerLanguage.locator('summary').click();
+    assert.equal(await peerLanguage.locator('.four-language-video-card').count(),4,'Missing four source-scoped detected languages');
+    assert((await peerLanguage.textContent()).includes('246,381 candidate public video objects'));
+    assert((await peerLanguage.textContent()).includes('148 s median video duration'));
+    assert((await peerLanguage.textContent()).includes('29 s median video duration'));
+    assert((await peerLanguage.textContent()).includes('More than 70% of sample videos'));
+    assert((await peerLanguage.textContent()).includes('unique people were not measured'));
     const language=page.locator('.multilingual-distribution');
     assert.equal(await language.locator('.multilingual-product-card').count(),6,'Missing multilingual feature catalog');
     assert.equal(await language.locator('.multilingual-choice-card').count(),6,'Missing localized media decision matrix');
