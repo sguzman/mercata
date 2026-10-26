@@ -1,6 +1,8 @@
 # itch.io project-page creative comparisons — pre-execution research gate
 
-**As of October 26, 2026.** [Machine contract](creative-comparison-audit-2026.json) · [Pure offline gate](../../site/itch-creative-comparison.mjs). This is an **experiment design**, not a running itch.io integration, consented study, A/B tool supplied by itch.io, or verified effect.
+**As of October 26, 2026.** [Machine contract](creative-comparison-audit-2026.json) · [Pure offline gate](../../site/itch-creative-comparison.mjs). **The two fixed tasks to design title/cover/screenshot/copy comparisons and exposure-to-click measurements now meet their source-backed planning acceptance conditions (100% each).** This does not complete the distinct tasks of actually gathering owner analytics, establishing causal purchase lift, or measuring commercial returns.
+
+This is an **experiment design**, not a running itch.io integration, consented study, A/B tool supplied by itch.io, or verified effect.
 
 Official documentation identifies the [project title, short description and cover image](https://itch.io/docs/creators/getting-started) as listing assets, recommends 3–5 screenshots, and treats misrepresentative images or false tags as [quality violations](https://itch.io/docs/creators/quality-guidelines). Changing one authentic variable at a time allows a narrowly interpreted comparison. The publisher also says duplicate/recreated pages used to regain Most Recent visibility are against its guidelines, and deleting/recreating can break buyers' libraries.
 

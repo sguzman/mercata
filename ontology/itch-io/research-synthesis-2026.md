@@ -10,6 +10,8 @@ A 2025 engineering study and the 2026 open-source game corpus use related underl
 
 The accessibility QA planning task has a complete evidence-backed matrix for controls, captions, visibility and supported input, with no actual product certification or paid-demand evidence. [Release accessibility checklist](accessibility-release-qa-matrix-2026.md).
 
+The source-bounded creative-comparison design and matching exposure-to-click planning tasks are complete, without conducting an experiment or inferring sales uplift. [Creative comparison design](creative-comparison-audit-2026.md).
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*
