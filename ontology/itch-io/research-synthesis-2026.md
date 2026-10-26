@@ -12,6 +12,8 @@ The accessibility QA planning task has a complete evidence-backed matrix for con
 
 The source-bounded creative-comparison design and matching exposure-to-click planning tasks are complete, without conducting an experiment or inferring sales uplift. [Creative comparison design](creative-comparison-audit-2026.md).
 
+The listing/file/channel/build identity distinction is now a completed source-backed fixed task, with a tested offline cardinality model that never converts revisions, demos or keys into sales. [Project unit audit](project-file-build-identity-2026.md).
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*

@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "seller_product_and_build_cardinality_model",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-started",
+    "itch-html5",
+    "butler-push",
+    "itch-download-keys",
+    "itch-quality"
+  ],
+  "entities": [
+    {
+      "id": "publisher_account",
+      "key": "account_id",
+      "relation": "can own one or more project_pages",
+      "not_equivalent_to": [
+        "developer_person",
+        "active_paid_seller"
+      ]
+    },
+    {
+      "id": "project_page",
+      "key": "page_id",
+      "relation": "one project page can expose multiple files, upload channels and builds",
+      "not_equivalent_to": [
+        "independent_commercial_game",
+        "payment",
+        "unique_developer"
+      ]
+    },
+    {
+      "id": "file_upload",
+      "key": "page_id + file_id",
+      "relation": "an uploaded demo/full game/asset/bonus/browser archive; can have versions via butler",
+      "not_equivalent_to": [
+        "standalone_game",
+        "purchase"
+      ]
+    },
+    {
+      "id": "channel",
+      "key": "page_id + channel_id",
+      "relation": "one named release channel may have many historical build revisions",
+      "not_equivalent_to": [
+        "distinct_listing",
+        "distinct_game",
+        "paid_unit"
+      ]
+    },
+    {
+      "id": "build",
+      "key": "page_id + channel_id + build_id",
+      "relation": "one release revision in a channel",
+      "not_equivalent_to": [
+        "unique_game",
+        "customer"
+      ]
+    },
+    {
+      "id": "download_key",
+      "key": "unknown_private_key",
+      "relation": "grants access after some purchases or manual issuance",
+      "not_equivalent_to": [
+        "one_unique_buyer",
+        "one_settled_paid_order"
+      ]
+    },
+    {
+      "id": "paid_order",
+      "key": "private_transaction_id",
+      "relation": "owner-only payment event with fees/refunds and explicit game allocation",
+      "not_equivalent_to": [
+        "download",
+        "browser_play",
+        "file_upload"
+      ]
+    }
+  ],
+  "sample_public_page_count": null,
+  "sample_paid_game_listing_count": null,
+  "active_paid_publishers": null,
+  "verified_paid_orders": null,
+  "unique_buyers": null,
+  "classifications": [
+    "digital_game",
+    "demo",
+    "game_asset",
+    "bundle",
+    "bonus_content",
+    "html5_browser_play",
+    "downloadable_build"
+  ],
+  "valid_count_population_examples": [
+    "page_count",
+    "uploaded_file_count",
+    "release_channel_count",
+    "build_revision_count"
+  ],
+  "prohibited_inferences": [
+    "paid_sales_from_build_count",
+    "unique_users_from_download_keys",
+    "seller_count_from_project_count",
+    "paid_2d_sales_from_tags",
+    "native_paid_browser_orders_from_browser_plays"
+  ],
+  "observation_status": "conceptual_ontology_only_no_live_catalog"
+}
