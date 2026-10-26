@@ -834,8 +834,8 @@ try{
     const otherIncome=page.locator('.cross-platform-income');
     assert.equal(await otherIncome.locator('.cross-platform-income-card').count(),4,'Missing selected cross-platform income studies');
     await otherIncome.locator('summary').first().click();
-    assert((await otherIncome.textContent()).includes('not representative YouTube creator earnings'));
-    assert((await otherIncome.textContent()).includes('same underlying respondents'));
+    assert((await otherIncome.textContent()).includes('not representative YouTube earnings'));
+    assert((await otherIncome.textContent()).includes('same respondents'));
     assert((await otherIncome.textContent()).includes('Typical YouTube income: unknown'));
     assert((await otherIncome.textContent()).includes('5,095 respondents'),'Missing bounded CreatorIQ 2026 survey');
 
