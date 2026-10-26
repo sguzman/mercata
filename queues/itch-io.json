@@ -324,7 +324,7 @@
           "title": "Separate payment processing charges",
           "acceptance": "Check transaction, currency conversion, refund and chargeback costs.",
           "weight": 1,
-          "progress": 88,
+          "progress": 90,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -334,7 +334,11 @@
             "ontology/itch-io/collected-payout-costs-2026.json",
             "ontology/itch-io/collected-payout-costs-2026.md",
             "site/itch-collected-payout-check.mjs",
-            "tests/itch-collected-payout-check.test.mjs"
+            "tests/itch-collected-payout-check.test.mjs",
+            "ontology/itch-io/refund-chargeback-unit-cost-2026.json",
+            "ontology/itch-io/refund-chargeback-unit-cost-2026.md",
+            "site/itch-refund-cost-audit.mjs",
+            "tests/itch-refund-cost-audit.test.mjs"
           ]
         },
         {
@@ -1559,7 +1563,7 @@
           "title": "Study refunds and disputes",
           "acceptance": "Identify who bears losses and processing charges.",
           "weight": 1,
-          "progress": 86,
+          "progress": 92,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -1579,7 +1583,11 @@
             "tests/itch-io-game-bonus.test.mjs",
             "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
             "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
-            "tests/itch-io-blobun-prices.test.mjs"
+            "tests/itch-io-blobun-prices.test.mjs",
+            "ontology/itch-io/refund-chargeback-unit-cost-2026.json",
+            "ontology/itch-io/refund-chargeback-unit-cost-2026.md",
+            "site/itch-refund-cost-audit.mjs",
+            "tests/itch-refund-cost-audit.test.mjs"
           ]
         },
         {

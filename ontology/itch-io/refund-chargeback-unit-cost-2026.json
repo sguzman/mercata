@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "explicit_payment_reversal_cost_scenarios",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-payments",
+    "itch-terms"
+  ],
+  "verified_market_chargeback_rate": null,
+  "verified_market_refund_rate": null,
+  "processor_fee_loss_average": null,
+  "typical_provider_dispute_fee": null,
+  "assumptions_rule": "Every refund/dispute and all fee treatment must be explicitly supplied for the hypothetical route, not inferred from market average.",
+  "examples": [
+    {
+      "id": "illustrative_10_orders_2_refunds_1_dispute",
+      "capturedOrders": 10,
+      "fullyRefundedOrders": 2,
+      "chargebackOrders": 1,
+      "priceCents": 1000,
+      "platformShareCentsPerRetainedOrder": 100,
+      "processingFeeCentsPerCapturedOrder": 59,
+      "processingRefundCreditCentsPerFullyRefundedOrder": 0,
+      "processingChargebackCreditCentsPerDisputedOrder": 0,
+      "platformFeesKeptOnReversalsCents": 0,
+      "chargebackFeeCentsPerDispute": 1500,
+      "cashDevelopmentCostCents": 0,
+      "valuedLaborCostCents": 0,
+      "merchantPayoutAndFxFeesCents": 0
+    }
+  ],
+  "consented_seller_account_access": false,
+  "independent_market_observation": false,
+  "limits": [
+    "Chargeback count and refund count are nonoverlapping in the synthetic accounting convention; each loses full original gross payment.",
+    "Card/network/processor dispute charges and refunded processing-fee handling vary; input amounts are assumptions, not official global itch.io rates.",
+    "Collected versus direct merchant-of-record liabilities and local tax/FX differ and must be configured for actual merchant circumstances.",
+    "Transactions, keys, downloads, followers and play events are not interchangeable.",
+    "The example does not estimate probability, population median profit, tax due, or what buyers will pay."
+  ]
+}

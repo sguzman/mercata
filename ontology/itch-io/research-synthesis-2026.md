@@ -18,6 +18,8 @@ Two further 2025 first-person disclosures describe a zero-copy game at a roughly
 
 Twelve source-linked genre-classified case studies have now been cross-checked for price, period, payment channel and labor-adjusted profit. **None** supplies a representative comparable genre-profit outcome. [Genre income comparability audit](genre-profit-commensurability-2026.md).
 
+Refund and dispute sensitivity is separately modeled using explicit per-order reversals and merchant fee inputs; no market chargeback incidence is assumed. [Refund/chargeback cost audit](refund-chargeback-unit-cost-2026.md).
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*

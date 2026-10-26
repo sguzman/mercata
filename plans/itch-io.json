@@ -328,7 +328,7 @@
         "itch-io/sales/separate-buyer-interest-from-purchase"
       ],
       "phase": 3,
-      "progress_percent": 87
+      "progress_percent": 88
     },
     {
       "id": "risk",
@@ -356,7 +356,7 @@
         "itch-io/risk/set-downside-limits"
       ],
       "phase": 3,
-      "progress_percent": 82
+      "progress_percent": 83
     },
     {
       "id": "strategy",
@@ -1085,7 +1085,7 @@
       "objective": "Investigate trace reversals, chargebacks and fees through settlement.",
       "acceptance": "Provide dated source-linked evidence to trace reversals, chargebacks and fees through settlement; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 84,
+      "percent": 90,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1097,7 +1097,11 @@
         "ontology/itch-io/game-bonus-entitlements-2026.json",
         "ontology/itch-io/game-bonus-entitlements-2026.md",
         "site/itch-game-bonus-entitlement.mjs",
-        "tests/itch-io-game-bonus.test.mjs"
+        "tests/itch-io-game-bonus.test.mjs",
+        "ontology/itch-io/refund-chargeback-unit-cost-2026.json",
+        "ontology/itch-io/refund-chargeback-unit-cost-2026.md",
+        "site/itch-refund-cost-audit.mjs",
+        "tests/itch-refund-cost-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1319,12 +1323,16 @@
       "objective": "Investigate relate price, retained per-sale cash, fixed costs and paid units.",
       "acceptance": "Provide dated source-linked evidence to relate price, retained per-sale cash, fixed costs and paid units; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 83,
+      "percent": 85,
       "evidence": [
         "ontology/itch-io/break-even-scenarios-2026.md",
         "ontology/itch-io/break-even-scenarios-2026.json",
         "site/itch-break-even.mjs",
-        "tests/itch-break-even.test.mjs"
+        "tests/itch-break-even.test.mjs",
+        "ontology/itch-io/refund-chargeback-unit-cost-2026.json",
+        "ontology/itch-io/refund-chargeback-unit-cost-2026.md",
+        "site/itch-refund-cost-audit.mjs",
+        "tests/itch-refund-cost-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3316,7 +3324,7 @@
       "objective": "Investigate compare orders, retained units and net receipts.",
       "acceptance": "Provide dated source-linked evidence to compare orders, retained units and net receipts; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 86,
+      "percent": 95,
       "evidence": [
         "ontology/itch-io/transaction-cohort-protocol-2026.json",
         "ontology/itch-io/transaction-cohort-protocol-2026.md",
@@ -3341,7 +3349,11 @@
         "tests/itch-io-blobun-prices.test.mjs",
         "ontology/itch-io/historical-costed-game-outcomes-2015-2021.json",
         "ontology/itch-io/historical-costed-game-outcomes-2015-2021.md",
-        "tests/itch-io-historical-costed-games.test.mjs"
+        "tests/itch-io-historical-costed-games.test.mjs",
+        "ontology/itch-io/refund-chargeback-unit-cost-2026.json",
+        "ontology/itch-io/refund-chargeback-unit-cost-2026.md",
+        "site/itch-refund-cost-audit.mjs",
+        "tests/itch-refund-cost-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3652,7 +3664,7 @@
       "objective": "Investigate specify fraud, customer dispute and reversal costs.",
       "acceptance": "Provide dated source-linked evidence to specify fraud, customer dispute and reversal costs; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 83,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -3661,7 +3673,11 @@
         "ontology/itch-io/game-bonus-entitlements-2026.json",
         "ontology/itch-io/game-bonus-entitlements-2026.md",
         "site/itch-game-bonus-entitlement.mjs",
-        "tests/itch-io-game-bonus.test.mjs"
+        "tests/itch-io-game-bonus.test.mjs",
+        "ontology/itch-io/refund-chargeback-unit-cost-2026.json",
+        "ontology/itch-io/refund-chargeback-unit-cost-2026.md",
+        "site/itch-refund-cost-audit.mjs",
+        "tests/itch-refund-cost-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3804,7 +3820,7 @@
       "objective": "Investigate define explicit cash, legal and time boundaries for future pilots.",
       "acceptance": "Provide dated source-linked evidence to define explicit cash, legal and time boundaries for future pilots; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 68,
+      "percent": 72,
       "evidence": [
         "ontology/itch-io/policy-risk-2025-2026.json",
         "ontology/itch-io/policy-risk-2025-2026.md",
@@ -3815,7 +3831,11 @@
         "tests/itch-io-crumbling-launch.test.mjs",
         "ontology/itch-io/historical-costed-game-outcomes-2015-2021.json",
         "ontology/itch-io/historical-costed-game-outcomes-2015-2021.md",
-        "tests/itch-io-historical-costed-games.test.mjs"
+        "tests/itch-io-historical-costed-games.test.mjs",
+        "ontology/itch-io/refund-chargeback-unit-cost-2026.json",
+        "ontology/itch-io/refund-chargeback-unit-cost-2026.md",
+        "site/itch-refund-cost-audit.mjs",
+        "tests/itch-refund-cost-audit.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
