@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "buyer_region_access_vs_seller_payout_country_example",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-uk-content-geo-access-2025",
+    "itch-payments"
+  ],
+  "policies": [
+    {
+      "region": "United Kingdom",
+      "source_date": "2025-07-27",
+      "affected_category": "adult_or_nsfw_classified_project_pages",
+      "restriction_scope": "page_access_from_restricted_region",
+      "every_game_blocked": false,
+      "all_game_buyers_blocked": false,
+      "classification_inputs": [
+        "sensitive_content_setting",
+        "publisher_tags",
+        "staff_override"
+      ],
+      "dashboard_geo_restrictions_tab_documented": true,
+      "publisher_appeal_route_documented": true,
+      "historical_existing_buyer_download_entitlement_preserved": true,
+      "independently_confirmed_2026_status": null,
+      "number_of_affected_commercial_titles": null,
+      "actual_purchases_prevented": null,
+      "actual_refunds_caused": null,
+      "source_ids": [
+        "itch-uk-content-geo-access-2025"
+      ]
+    },
+    {
+      "region": "seller_country_unspecified",
+      "source_date": "2026-10-26",
+      "affected_category": "merchant_onboarding_and_payment_method",
+      "restriction_scope": "seller_payment_processor_eligibility_not_buyer_page_visibility",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "approved_countries_complete_census": null
+    }
+  ],
+  "measurement_boundaries": [
+    "A buyer-region content restriction is not seller residency disqualification.",
+    "A retained prior purchase download entitlement is not equivalent to new UK purchases being allowed.",
+    "One source's 2025 announcement does not prove unchanged country rules in 2026.",
+    "Geo tagging may have false positives or overrides; case-specific enforcement is not measured.",
+    "Neither the number of affected titles nor sales losses is known, and there are no private buyer records."
+  ],
+  "unresolved": {
+    "global_country_by_country_paying_buyers": null,
+    "seller_country_approval_counts": null,
+    "uk_restricted_game_revenue_loss": null,
+    "uk_affected_paid_game_population": null,
+    "typical_geo_appeal_success_rate": null
+  }
+}

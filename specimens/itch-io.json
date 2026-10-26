@@ -1175,6 +1175,17 @@
       "retrieved_at": "2026-10-26",
       "evidence_class": "official_first_party_platform_announcement",
       "license": "Brief numerically grounded summary with source citation; no extensive quoted text."
+    },
+    {
+      "id": "itch-uk-content-geo-access-2025",
+      "url": "https://itch.io/t/5133739/our-update-on-the-uk-online-safety-act",
+      "title": "Our update on the UK Online Safety Act",
+      "publisher": "itch.io administrator official developer update",
+      "published_at": "2025-07-27",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_historical_geographic_policy",
+      "license": "Source linked and independently summarized, no personally identifiable buyer data.",
+      "notes": "Official July 2025 content-category geographic restriction, not a current 2026 country-wide game purchase ban. Present-day exact classification details and seller impact unverified."
     }
   ],
   "claims": [
@@ -4416,6 +4427,67 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "Arithmetic under sample fees, not actual processor terms, tax-adjusted payout, profit, or prediction of additional buyers."
+    },
+    {
+      "id": "uk-2025-category-content-block",
+      "text": "On July 27, 2025, itch.io's operator announced UK access restrictions on project pages classified as adult/NSFW under the UK's Online Safety Act.",
+      "source_ids": [
+        "itch-uk-content-geo-access-2025"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Category-specific platform decision as of 2025, not a ban on all games or all UK game buyers, and exact 2026 status not independently rechecked."
+    },
+    {
+      "id": "uk-2025-classification-mechanism",
+      "text": "The July 2025 operator statement described automatic UK restrictions using sensitive-content settings and certain adult-content tags, subject to staff override.",
+      "source_ids": [
+        "itch-uk-content-geo-access-2025"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "No verified per-game restriction flag or affected-game population, and publisher's classification scheme may change."
+    },
+    {
+      "id": "uk-2025-appeal",
+      "text": "The operator described an account dashboard Geo Restrictions section with a path to appeal an incorrect UK restriction to staff.",
+      "source_ids": [
+        "itch-uk-content-geo-access-2025"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Published workflow, not verified actual appeal success rate, adjudication time or outcome for any particular project."
+    },
+    {
+      "id": "uk-2025-buyer-entitlement",
+      "text": "Under the announced UK restriction, existing paid customers retained library/file-download access even when the project's public page was unavailable there.",
+      "source_ids": [
+        "itch-uk-content-geo-access-2025"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Historical operator policy, not a guaranteed right under every subsequent restriction, platform failure or legal change."
+    },
+    {
+      "id": "buyer-access-geography-not-payout",
+      "text": "The UK adult-page block governs buyer-region access; it is analytically different from which seller countries itch.io or its payment processors will approve.",
+      "source_ids": [
+        "itch-uk-content-geo-access-2025",
+        "itch-payments"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "One example jurisdiction cannot establish the worldwide buyer population or country-by-country seller eligibility."
+    },
+    {
+      "id": "uk-2025-reach-not-income",
+      "text": "The 2025 UK adult-content policy provides no count of affected eligible paid games, missed purchases, refund losses or commercial revenue.",
+      "source_ids": [
+        "itch-uk-content-geo-access-2025"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Unknown policy impact must not be represented as zero or multiplied by unverified UK audience totals."
     }
   ],
   "observations": [

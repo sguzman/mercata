@@ -181,3 +181,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io indexing change and timed share waiver (2026-10-26):** operator's Oct 19 evidence: 215,000 older project pages freed from eligibility blocks, >2m indexed multi-category pages, >10k spam/malware account enforcements; separate 24-hour Creator Day 0% platform share without canceling processing fees. 80% → 80% (Δ +0 pp; unrounded 80.43%). [Evidence](../ontology/itch-io/indexing-reform-creator-day-2026.md).
+
+
+**itch.io buyer versus seller geography (2026-10-26):** traced July 2025 category-specific UK content page restriction, published appeal path and pre-existing buyer download continuity; neither a universal UK game ban nor current paid buyer losses inferred. 80% → 81% (Δ +1 pp, raw 80.86%). [Study](../ontology/itch-io/buyer-seller-geographic-policy-2026.md).
