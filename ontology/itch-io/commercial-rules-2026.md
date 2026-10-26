@@ -32,3 +32,8 @@ The [creator FAQ](https://itch.io/docs/creators/faq) and [first-page guide](http
 - Causal effects of tags, release timing, embedded browser gameplay, game jams and discounts.
 
 These remain **unknown**, not zero. The next work should seek comparable transaction evidence and population frames; descriptive platform policy does not solve these outcome questions.
+
+
+## Tax identity verification account adjustment
+
+The official [payments guide](https://itch.io/docs/creators/payments) lists a **one-time $3 tax-identity validation adjustment** to a seller account using collected payouts. This is separate from the $0 upfront publishing/listing price, percentage share, per-transaction payment processing, payout transfer fees, tax withholdings and the real cost of game development. Its existence does not imply that a developer has to spend $3 just to publish a free game. The guide separately recommends selling a paid product for at least roughly **$2** as pricing advice because the fixed payment processing charge is proportionally large on tiny orders.

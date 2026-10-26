@@ -10,7 +10,7 @@ As-of date: 2026-10-26. This investigation compares two publicly published Gamed
 | Reported share USD $100,000+/year | 2.8% | 2.3% |
 | itch.io or similar publishing (combined category) | not recorded here | 67.4% of 439 responses |
 
-Sources: [Gamedev.js 2024 survey](https://gamedevjs.com/survey/2024/) and [Gamedev.js 2025 survey](https://gamedevjs.com/survey/2025/). The reports distinguish each *annual game-development income* question from platform-publishing questions and from unrelated wage income. The total submission count is **not assumed to be the per-question income response count**.
+Sources: [Gamedev.js 2024 survey](https://gamedevjs.com/survey/2024/) and [Gamedev.js 2025 survey](https://gamedevjs.com/survey/2025/). The reports distinguish each *annual game-development income* question from platform-publishing questions and from unrelated wage income. The [full January 2026 report, page 40](https://gamedevjs.com/dl/gamedevjs-survey-2025-report.pdf) states **435 answers** to the annual game-development income question, compared with **445 total survey submissions**. The survey ran December 8–19, 2025, and the report appeared January 27, 2026. The 2024 question-specific denominator remains unverified here.
 
 ## Why these figures cannot be used as itch.io success rates
 

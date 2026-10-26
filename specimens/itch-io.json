@@ -323,11 +323,11 @@
       "url": "https://gamedevjs.com/survey/2025/",
       "title": "State of Web Game Development in 2025",
       "publisher": "Gamedev.js Survey",
-      "published_at": "2025-12-24",
+      "published_at": "2026-01-27",
       "retrieved_at": "2026-10-26",
       "evidence_class": "independent_survey",
       "license": "Short summarized statistics and link to original developer community survey.",
-      "notes": "Self-selected web-game-developer community respondents, not an itch.io publisher census. Income questions do not isolate itch.io revenues, and exact question-level denominator not shown in text."
+      "notes": "The December 2025 survey report was published January 27, 2026; the full report specifies 435 respondents to the 2025 all-source game-development income question. No itch.io-only seller earnings."
     },
     {
       "id": "stripe-global",
@@ -680,6 +680,17 @@
       "evidence_class": "third_party_modeled_site_traffic_estimate",
       "license": "Brief attributed numerical model estimates linked to original service.",
       "notes": "Semrush modeled visits to itch.io web domain; sitewide all-product browsing, not unique consumers or first-party transactional gaming data."
+    },
+    {
+      "id": "gamedevjs-web-survey-2025-report-pdf",
+      "url": "https://gamedevjs.com/dl/gamedevjs-survey-2025-report.pdf",
+      "publisher": "Gamedev.js Community",
+      "title": "Gamedev.js Survey 2025 Report, published January 2026",
+      "published_at": "2026-01-27",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "independent_survey_official_report",
+      "license": "Short attributed figures and a source link; original charts not reproduced.",
+      "notes": "December 8–19 2025 fieldwork, January 27 2026 release, 445 total submissions and 435 responses to annual game-development income question on page 40. Not itch.io-specific income."
     }
   ],
   "claims": [
@@ -1330,11 +1341,12 @@
       "id": "web-survey-2025-earning",
       "text": "The 2025 Gamedev.js report describes 63% of responding web-game developers as earning no money from game development, and 15.4% under USD 1,000 annually.",
       "source_ids": [
-        "gamedevjs-web-survey-2025"
+        "gamedevjs-web-survey-2025",
+        "gamedevjs-web-survey-2025-report-pdf"
       ],
       "confidence": "medium",
       "observed_at": "2026-10-26",
-      "limitations": "Game-development income from all routes; earnings-question denominator not explicit in text, not representative of paid itch.io games."
+      "limitations": "Based on 435 voluntary respondents to annual game-development income from any source, not a census or representative sample of paid itch.io publishers."
     },
     {
       "id": "web-survey-2024-earning",
@@ -2466,6 +2478,36 @@
       "observed_at": "2026-10-26",
       "confidence": "medium",
       "limitations": "Analytical boundary drawn from vendor data scope and official mixed-product platform descriptions."
+    },
+    {
+      "id": "web-survey-2025-n435",
+      "text": "The Gamedev.js Survey 2025 was fielded December 8–19, 2025 and released January 27, 2026; its annual game-development income question received 435 answers out of 445 total survey submissions.",
+      "source_ids": [
+        "gamedevjs-web-survey-2025-report-pdf"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "435 respondents to all-channel income, not itch.io-specific mandatory game transactions."
+    },
+    {
+      "id": "tax-identity-validation-usd3",
+      "text": "itch.io's collected-payment payout adjustments include a one-time USD $3 tax identity verification fee charged to the publisher account.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "A documented account charge, distinct from a universal upfront listing fee, transaction fee, income-tax liability or repeated per-order deduction."
+    },
+    {
+      "id": "processor-minimum-price-guide",
+      "text": "The platform recommends a minimum price around USD $2 to reduce the relative impact of payment providers' fixed per-transaction charges.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Platform guidance, not a required minimum, price sensitivity experiment, or evidence buyers will pay this price."
     }
   ],
   "observations": [

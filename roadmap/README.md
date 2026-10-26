@@ -106,3 +106,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io income histogram protocol (2026-10-26):** aggregate-only, owner-permitted first-paid-title cohort with bounded quantile intervals, five-publisher cell privacy gate, no fabricated seller mean/median or actual datasets. Score **67% → 67%** (Δ +0 pp; raw 67.14%). [Protocol](../ontology/itch-io/income-histogram-protocol-2026.md).
+
+
+**itch.io payout identity charge and survey correction (2026-10-26):** first-party payout adjustment includes one-time $3 identity verification, separate from $0 listing and actual payment costs; Gamedev.js 2025 income n=435, published January 27 2026. **67% → 67%** (Δ +0 pp; exact 67.34%). [Payment rules](../ontology/itch-io/commercial-rules-2026.md).
