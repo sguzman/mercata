@@ -786,6 +786,13 @@ try{
     assert((await otherIncome.textContent()).includes('Typical YouTube income: unknown'));
     assert((await otherIncome.textContent()).includes('5,095 respondents'),'Missing bounded CreatorIQ 2026 survey');
 
+    const foodHomeCrafts=page.locator('.food-home-crafts');
+    assert.equal(await foodHomeCrafts.count(),1,'Missing separate food/restaurant/equipment/crafts taxonomy');
+    await foodHomeCrafts.locator('summary').click();
+    assert.equal(await foodHomeCrafts.locator('.food-home-crafts-card').count(),5);
+    assert((await foodHomeCrafts.textContent()).includes('500,000,000 global views'));
+    assert((await foodHomeCrafts.textContent()).includes('No source provides separate restaurant-review or equipment-review channel populations'));
+    assert((await foodHomeCrafts.textContent()).includes('cannot be summed'));
     const relativeBreakouts=page.locator('.relative-video-breakouts');
     assert.equal(await relativeBreakouts.count(),1,'Missing selected vendor video breakouts');
     await relativeBreakouts.locator('summary').click();
