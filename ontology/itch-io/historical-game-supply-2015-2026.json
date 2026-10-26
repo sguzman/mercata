@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "official_historical_creation_publication_and_cumulative_browse_denominator_crosswalk",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-2015-year-review-new-games",
+    "itch-2017-year-review-projects",
+    "itch-2019-cumulative-games-milestone",
+    "itch-browse-all",
+    "itch-browse-paid",
+    "itch-browse-paid-2d"
+  ],
+  "observations": [
+    {
+      "id": "year2015_game_created",
+      "event_period": "2015 full year",
+      "publication_date": "2016-01-08",
+      "source_id": "itch-2015-year-review-new-games",
+      "value": 23708,
+      "unit": "game_creations_within_year",
+      "includes_free": true,
+      "includes_paid": true,
+      "active_commercial_games": null,
+      "distinct_creators": null,
+      "actual_sales": null
+    },
+    {
+      "id": "year2015_file_downloads",
+      "event_period": "2015 full year",
+      "publication_date": "2016-01-08",
+      "source_id": "itch-2015-year-review-new-games",
+      "value": 5581159,
+      "unit": "file_download_events_all_projects",
+      "actually_paid_orders": null,
+      "unique_downloaders": null,
+      "game_only_verified": false
+    },
+    {
+      "id": "year2015_game_project_views",
+      "event_period": "2015 full year",
+      "publication_date": "2016-01-08",
+      "source_id": "itch-2015-year-review-new-games",
+      "value": 27061715,
+      "unit": "game_and_project_page_view_events",
+      "actually_paid_orders": null,
+      "unique_viewers": null
+    },
+    {
+      "id": "year2017_project_pages_created",
+      "event_period": "2017 full year",
+      "publication_date": "2018-01-04",
+      "source_id": "itch-2017-year-review-projects",
+      "value": 100864,
+      "unit": "all_category_project_pages_created_in_year",
+      "game_only_verified": false,
+      "published": null,
+      "commercial_only_verified": false
+    },
+    {
+      "id": "year2017_project_pages_published",
+      "event_period": "2017 full year",
+      "publication_date": "2018-01-04",
+      "source_id": "itch-2017-year-review-projects",
+      "value": 68526,
+      "unit": "all_category_project_pages_published_in_year",
+      "game_only_verified": false,
+      "commercial_only_verified": false,
+      "actual_paid_sales": null
+    },
+    {
+      "id": "year2017_jam_submissions",
+      "event_period": "2017 full year",
+      "publication_date": "2018-01-04",
+      "source_id": "itch-2017-year-review-projects",
+      "value": 13361,
+      "unit": "game_jam_submission_events",
+      "paid_game_sales": null
+    },
+    {
+      "id": "year2019_games_total",
+      "event_period": "cumulative through November 7 2019",
+      "publication_date": "2019-11-07",
+      "source_id": "itch-2019-cumulative-games-milestone",
+      "value": 200000,
+      "precision": "milestone",
+      "unit": "all_price_game_catalog_listing_milestone",
+      "completed_new_releases_in_2019": null,
+      "game_paid_status_split": null
+    },
+    {
+      "id": "oct2026_browse_games",
+      "event_period": "October 26 2026 live browse snapshot",
+      "publication_date": null,
+      "source_id": "itch-browse-all",
+      "value": 1780861,
+      "unit": "public_game_filter_search_results",
+      "all_games_including_unindexed": null,
+      "actually_sold": null,
+      "comparability_with_2019_milestone_verified": false
+    }
+  ],
+  "derived": {
+    "year2017_created_to_published_pages_ratio": 0.6794,
+    "ratio_unit": "same_year_project_page_events_not_paid_games",
+    "year2019_to_oct2026_raw_count_ratio": 8.9,
+    "ratio_is_valid_growth_rate": false,
+    "reason": "2019 operator milestone and 2026 dynamic search results may have different eligibility and count definitions."
+  },
+  "comparison_rules": [
+    "2015 game creations are annual flow events; not the total game catalog at year end.",
+    "2017 project pages include non-game projects, unpublished pages and game jam materials; published pages are not paid releases.",
+    "2019 200,000 is a cumulative all-price game milestone, not games sold to buyers.",
+    "October 2026 game browse result count is a dynamic eligible listing search frame, not all historical games uploaded.",
+    "Neither annual project page creation nor later public catalog totals identify active sellers or paid game customers.",
+    "Downloads and jam submissions are not paid checkouts, and game page views are not unique human purchasers.",
+    "Raw different-scope counts may be displayed together only with explicit units and no comparable annual growth rate."
+  ],
+  "unobserved": {
+    "paid_games_published_2015": null,
+    "paid_games_published_2017": null,
+    "paid_games_published_2019": null,
+    "paid_games_published_2026": null,
+    "unique_game_sellers_by_year": null,
+    "first_time_commercial_sellers_by_year": null,
+    "paid_game_gmv_by_year": null,
+    "average_seller_revenue": null
+  }
+}

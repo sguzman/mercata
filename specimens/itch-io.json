@@ -1054,6 +1054,39 @@
       "evidence_class": "third_party_modeled_site_traffic_estimate",
       "license": "Public model summary figures restated with attribution; no proprietary dataset copied.",
       "notes": "First-party Similarweb site estimates, explicitly not itch.io first-party sessions or unique paying buyers. September estimates are model-dependent and differ from Semrush."
+    },
+    {
+      "id": "itch-2015-year-review-new-games",
+      "url": "https://itch.io/updates/itchio-year-in-review-2015",
+      "title": "itch.io Year in Review 2015",
+      "publisher": "itch.io",
+      "published_at": "2016-01-08",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "dated_first_party_platform_supply_report",
+      "license": "Public counts paraphrased with dated link; no source bulk text copied.",
+      "notes": "Historical game creation and project page creation/publishing counts have different denominators and periods. Not equivalent to actively sold paid games or unique developers."
+    },
+    {
+      "id": "itch-2017-year-review-projects",
+      "url": "https://itch.io/blog/19998/itchio-year-in-review-2017",
+      "title": "itch.io year in review 2017",
+      "publisher": "itch.io",
+      "published_at": "2018-01-04",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "dated_first_party_platform_supply_report",
+      "license": "Public counts paraphrased with dated link; no source bulk text copied.",
+      "notes": "Historical game creation and project page creation/publishing counts have different denominators and periods. Not equivalent to actively sold paid games or unique developers."
+    },
+    {
+      "id": "itch-2019-cumulative-games-milestone",
+      "url": "https://itch.io/blog/108659/there-are-200000-games-on-itchio-heres-how-to-find-your-new-favorite",
+      "title": "There are 200,000 games on itch.io",
+      "publisher": "itch.io",
+      "published_at": "2019-11-07",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "dated_first_party_platform_supply_report",
+      "license": "Public counts paraphrased with dated link; no source bulk text copied.",
+      "notes": "Historical game creation and project page creation/publishing counts have different denominators and periods. Not equivalent to actively sold paid games or unique developers."
     }
   ],
   "claims": [
@@ -4010,6 +4043,47 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "Website visits lack both a paid-game offer denominator and observed transactions; cannot impute demand by multiplying a guessed checkout rate."
+    },
+    {
+      "id": "platform-2015-game-created",
+      "text": "itch.io's official review reported 23,708 games created during 2015, plus 5,581,159 files downloaded and 27,061,715 game/project-page views that year.",
+      "source_ids": [
+        "itch-2015-year-review-new-games"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Annual creation/download/view events; not cumulative game inventory, unique paying customers or number of games sold."
+    },
+    {
+      "id": "platform-2017-published-projects",
+      "text": "The 2017 official review reported 100,864 project pages created that year, 68,526 of those published, and 13,361 games submitted to jams.",
+      "source_ids": [
+        "itch-2017-year-review-projects"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Project pages cover games and non-games; published pages do not imply commercial paid releases, independent sellers or game purchases."
+    },
+    {
+      "id": "platform-2019-games-total",
+      "text": "On November 7, 2019, itch.io announced that its cumulative game catalog had passed 200,000 games.",
+      "source_ids": [
+        "itch-2019-cumulative-games-milestone"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Cumulative all-price titles, not 200,000 newly released in 2019 or games with actual commercial sales."
+    },
+    {
+      "id": "platform-2019-v-2026-incompatible",
+      "text": "The operator's 2019 all-games milestone and a 2026 live game-browse result count are differently collected measures, so their ratio cannot establish exact annual publication growth or seller income.",
+      "source_ids": [
+        "itch-2019-cumulative-games-milestone",
+        "itch-browse-all"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Publication and browse indexing scopes may differ; a measurement protocol would be needed to compare all eligible games consistently over time."
     }
   ],
   "observations": [
