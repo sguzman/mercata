@@ -3221,6 +3221,66 @@
       "confidence": "medium",
       "observed_at": "2026-10-26",
       "limitations": "Distinct title and payment model; not an additional premium-game income outcome."
+    },
+    {
+      "id": "collected-tax-interview-verification-fee",
+      "text": "The official collected-payout adjustment schedule lists a one-time USD $3 tax-identity verification debit after a tax interview.",
+      "limitations": "This adjustment is a collected-account charge, not a recurring 3-dollar tax or mandatory direct-mode listing fee.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "collected-minimum-not-net-cash",
+      "text": "The official minimum USD $5 available balance is a request eligibility condition; final payout can be lower after separate adjustments and transfer fees.",
+      "limitations": "Threshold does not promise an individual will receive at least $5 in the bank.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "payout-cash-wait-compound",
+      "text": "A new qualifying collected sale has a seven-day transaction hold, followed by at least seven days of review after a submitted payout request.",
+      "limitations": "Earliest possible combined review horizon is not guaranteed delivery; first-time sellers may wait longer.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "collected-payout-frequency-tradeoff",
+      "text": "Official guidance recommends collecting payouts around monthly to reduce recurring transfer fees, while warning against letting balances age beyond a year.",
+      "limitations": "No measured optimum payout frequency exists without actual processor transfer fees, cash needs and seller circumstances.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "transaction-fee-small-price-risk",
+      "text": "The official payment guide recommends a roughly USD $2 price floor because fixed processing fees take a disproportionately high share of cheaper transactions.",
+      "limitations": "A recommendation, not enforced minimum, realized market price or evidence buyers prefer higher-priced games.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "purchase-refund-adjustments-distinct",
+      "text": "A post-payout refund can produce a later balance adjustment and high dispute rates can lead to chargeback fees on collected seller accounts.",
+      "limitations": "Not a measured rate of chargeback fees or predictable profit adjustment per game.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
     }
   ],
   "observations": [

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "collected_payout_obligations_and_non_guaranteed_cashing",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-payments",
+    "itch-terms"
+  ],
+  "collected": {
+    "transaction_hold_days": 7,
+    "review_minimum_days_after_request": 7,
+    "review_typical_days_low": 10,
+    "review_typical_days_high": 14,
+    "minimum_available_balance_usd": 5,
+    "max_outstanding_payout_requests": 3,
+    "tax_interview_necessary": true,
+    "tax_identity_verification_once_usd": 3,
+    "refunded_transactions_can_reduce_balance": true,
+    "transfer_fees_additional": true,
+    "first_time_review_may_take_longer": true,
+    "recommended_payout_frequency": "roughly_monthly",
+    "maintenance_risk_on_aging_over_12months": true
+  },
+  "direct": {
+    "seller_is_merchant_of_record": true,
+    "separate_processor_tax_setup": true,
+    "itch_collected_holding_window_applicable": false,
+    "collected_tax_identity_verification_charge_applies": false
+  },
+  "earliest_possible_request_to_completion_days_after_first_eligible_sale": 14,
+  "is_promised_delivery_date": false,
+  "typical_review_not_a_service_level_agreement": true,
+  "unknown": {
+    "processor_transfer_fee_usd": null,
+    "refund_adjustments_usd": null,
+    "chargeback_adjustments_usd": null,
+    "seller_actual_payout_date": null,
+    "any_individual_eligibility": null,
+    "effective_creator_profits": null
+  },
+  "scope": [
+    "Published platform rules, not a real individual seller account.",
+    "The $3 fee applies once in the collected-payout tax identity verification pathway, not to every game order.",
+    "The $5 condition covers request eligibility; total bank proceeds remain unknown with omitted fees.",
+    "7+7 days is the earliest successive condition in the ordinary described process, not a guaranteed payment date.",
+    "Review and bank settlement can take longer; additional account compliance and fraud screening may intervene.",
+    "The 2018+ and 2026 source dates differ: consult source URLs for policy changes."
+  ]
+}

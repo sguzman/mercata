@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 74,
+  "progress_percent": 75,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -148,7 +148,7 @@
         "itch-io/economics/build-break-even-model"
       ],
       "phase": 1,
-      "progress_percent": 80
+      "progress_percent": 83
     },
     {
       "id": "market",
@@ -356,7 +356,7 @@
         "itch-io/risk/set-downside-limits"
       ],
       "phase": 3,
-      "progress_percent": 72
+      "progress_percent": 73
     },
     {
       "id": "strategy",
@@ -934,14 +934,18 @@
       "objective": "Investigate calculate hypothetical net receipts at multiple tiny price points.",
       "acceptance": "Provide dated source-linked evidence to calculate hypothetical net receipts at multiple tiny price points; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 82,
+      "percent": 91,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
-        "tests/itch-io-payment-survey-correction.test.mjs"
+        "tests/itch-io-payment-survey-correction.test.mjs",
+        "ontology/itch-io/collected-payout-costs-2026.json",
+        "ontology/itch-io/collected-payout-costs-2026.md",
+        "site/itch-collected-payout-check.mjs",
+        "tests/itch-collected-payout-check.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1042,7 +1046,7 @@
       "objective": "Investigate define orders, tax, share, processor fee, reserve and accessible cash.",
       "acceptance": "Provide dated source-linked evidence to define orders, tax, share, processor fee, reserve and accessible cash; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 84,
+      "percent": 93,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1050,7 +1054,11 @@
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/publisher-rights-refunds-2026.json",
         "ontology/itch-io/publisher-rights-refunds-2026.md",
-        "tests/itch-io-publisher-legal.test.mjs"
+        "tests/itch-io-publisher-legal.test.mjs",
+        "ontology/itch-io/collected-payout-costs-2026.json",
+        "ontology/itch-io/collected-payout-costs-2026.md",
+        "site/itch-collected-payout-check.mjs",
+        "tests/itch-collected-payout-check.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1086,7 +1094,7 @@
       "objective": "Investigate define settlement periods, holds and withdrawal minimums.",
       "acceptance": "Provide dated source-linked evidence to define settlement periods, holds and withdrawal minimums; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 94,
+      "percent": 98,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1096,7 +1104,11 @@
         "ontology/itch-io/payment-country-corridors-2026.md",
         "tests/itch-io-payment-corridors.test.mjs",
         "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
-        "tests/itch-io-payment-survey-correction.test.mjs"
+        "tests/itch-io-payment-survey-correction.test.mjs",
+        "ontology/itch-io/collected-payout-costs-2026.json",
+        "ontology/itch-io/collected-payout-costs-2026.md",
+        "site/itch-collected-payout-check.mjs",
+        "tests/itch-collected-payout-check.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1129,7 +1141,7 @@
       "objective": "Investigate identify who converts currency and when.",
       "acceptance": "Provide dated source-linked evidence to identify who converts currency and when; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 74,
+      "percent": 79,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1137,7 +1149,11 @@
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/payment-country-corridors-2026.json",
         "ontology/itch-io/payment-country-corridors-2026.md",
-        "tests/itch-io-payment-corridors.test.mjs"
+        "tests/itch-io-payment-corridors.test.mjs",
+        "ontology/itch-io/collected-payout-costs-2026.json",
+        "ontology/itch-io/collected-payout-costs-2026.md",
+        "site/itch-collected-payout-check.mjs",
+        "tests/itch-collected-payout-check.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1169,7 +1185,7 @@
       "objective": "Investigate account for tools, licensed art, QA, marketing, infrastructure and support.",
       "acceptance": "Provide dated source-linked evidence to account for tools, licensed art, QA, marketing, infrastructure and support; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 65,
       "evidence": [
         "ontology/itch-io/break-even-scenarios-2026.md",
         "ontology/itch-io/break-even-scenarios-2026.json",
@@ -1179,7 +1195,11 @@
         "ontology/itch-io/distribution-build-2026.md",
         "site/itch-distribution-audit.mjs",
         "tests/itch-distribution-audit.test.mjs",
-        "specimens/itch-io.json"
+        "specimens/itch-io.json",
+        "ontology/itch-io/collected-payout-costs-2026.json",
+        "ontology/itch-io/collected-payout-costs-2026.md",
+        "site/itch-collected-payout-check.mjs",
+        "tests/itch-collected-payout-check.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2335,7 +2355,7 @@
       "objective": "Investigate include refunds, processor share, marketplace share and settlement.",
       "acceptance": "Provide dated source-linked evidence to include refunds, processor share, marketplace share and settlement; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 79,
+      "percent": 87,
       "evidence": [
         "ontology/itch-io/developer-income-cases-2026.json",
         "ontology/itch-io/developer-income-cases-2026.md",
@@ -2346,7 +2366,11 @@
         "tests/itch-io-payment-corridors.test.mjs",
         "ontology/itch-io/commercial-postmortems-2026.json",
         "ontology/itch-io/commercial-postmortems-2026.md",
-        "tests/itch-io-commercial-postmortems.test.mjs"
+        "tests/itch-io-commercial-postmortems.test.mjs",
+        "ontology/itch-io/collected-payout-costs-2026.json",
+        "ontology/itch-io/collected-payout-costs-2026.md",
+        "site/itch-collected-payout-check.mjs",
+        "tests/itch-collected-payout-check.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3558,12 +3582,16 @@
       "objective": "Investigate relate net profit targets to units and labor.",
       "acceptance": "Provide dated source-linked evidence to relate net profit targets to units and labor; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 69,
+      "percent": 77,
       "evidence": [
         "ontology/itch-io/break-even-scenarios-2026.md",
         "ontology/itch-io/break-even-scenarios-2026.json",
         "site/itch-break-even.mjs",
-        "tests/itch-break-even.test.mjs"
+        "tests/itch-break-even.test.mjs",
+        "ontology/itch-io/collected-payout-costs-2026.json",
+        "ontology/itch-io/collected-payout-costs-2026.md",
+        "site/itch-collected-payout-check.mjs",
+        "tests/itch-collected-payout-check.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

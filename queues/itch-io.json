@@ -233,7 +233,7 @@
           "title": "List setup and publication costs",
           "acceptance": "Record mandatory, optional and recurring charges.",
           "weight": 1,
-          "progress": 87,
+          "progress": 88,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -248,7 +248,11 @@
             "ontology/itch-io/first-game-entry-scenario-2026.md",
             "tests/itch-io-entry-scenario.test.mjs",
             "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
-            "tests/itch-io-payment-survey-correction.test.mjs"
+            "tests/itch-io-payment-survey-correction.test.mjs",
+            "ontology/itch-io/collected-payout-costs-2026.json",
+            "ontology/itch-io/collected-payout-costs-2026.md",
+            "site/itch-collected-payout-check.mjs",
+            "tests/itch-collected-payout-check.test.mjs"
           ]
         },
         {
@@ -277,13 +281,17 @@
           "title": "Separate payment processing charges",
           "acceptance": "Check transaction, currency conversion, refund and chargeback costs.",
           "weight": 1,
-          "progress": 78,
+          "progress": 88,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
             "ontology/itch-io/commercial-rules-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-economics.test.mjs"
+            "tests/itch-io-economics.test.mjs",
+            "ontology/itch-io/collected-payout-costs-2026.json",
+            "ontology/itch-io/collected-payout-costs-2026.md",
+            "site/itch-collected-payout-check.mjs",
+            "tests/itch-collected-payout-check.test.mjs"
           ]
         },
         {
@@ -292,7 +300,7 @@
           "title": "Check payout rails and countries",
           "acceptance": "Document payment methods and geographic availability.",
           "weight": 1,
-          "progress": 80,
+          "progress": 90,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -301,7 +309,11 @@
             "tests/itch-io-economics.test.mjs",
             "ontology/itch-io/payment-country-corridors-2026.json",
             "ontology/itch-io/payment-country-corridors-2026.md",
-            "tests/itch-io-payment-corridors.test.mjs"
+            "tests/itch-io-payment-corridors.test.mjs",
+            "ontology/itch-io/collected-payout-costs-2026.json",
+            "ontology/itch-io/collected-payout-costs-2026.md",
+            "site/itch-collected-payout-check.mjs",
+            "tests/itch-collected-payout-check.test.mjs"
           ]
         },
         {
@@ -310,7 +322,7 @@
           "title": "Record withdrawal minimums and delays",
           "acceptance": "State payout minimum, frequency, holds and reserve policies.",
           "weight": 1,
-          "progress": 93,
+          "progress": 95,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -324,7 +336,11 @@
             "ontology/itch-io/publisher-rights-refunds-2026.md",
             "tests/itch-io-publisher-legal.test.mjs",
             "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
-            "tests/itch-io-payment-survey-correction.test.mjs"
+            "tests/itch-io-payment-survey-correction.test.mjs",
+            "ontology/itch-io/collected-payout-costs-2026.json",
+            "ontology/itch-io/collected-payout-costs-2026.md",
+            "site/itch-collected-payout-check.mjs",
+            "tests/itch-collected-payout-check.test.mjs"
           ]
         },
         {
@@ -1062,7 +1078,7 @@
           "title": "Separate sales, payout and net profit",
           "acceptance": "Define each economic quantity and all known expenses.",
           "weight": 1,
-          "progress": 86,
+          "progress": 90,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/developer-income-cases-2026.json",
@@ -1090,7 +1106,11 @@
             "tests/itch-io-low-sales-launch.test.mjs",
             "ontology/itch-io/year-of-springs-2026.json",
             "ontology/itch-io/year-of-springs-2026.md",
-            "tests/itch-io-year-of-springs.test.mjs"
+            "tests/itch-io-year-of-springs.test.mjs",
+            "ontology/itch-io/collected-payout-costs-2026.json",
+            "ontology/itch-io/collected-payout-costs-2026.md",
+            "site/itch-collected-payout-check.mjs",
+            "tests/itch-collected-payout-check.test.mjs"
           ]
         }
       ]
@@ -1421,7 +1441,7 @@
           "title": "Document common fraud and payment risks",
           "acceptance": "Distinguish official warnings and independently observed incidents.",
           "weight": 1,
-          "progress": 60,
+          "progress": 69,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -1433,7 +1453,11 @@
             "tests/itch-io-account-indexing.test.mjs",
             "ontology/itch-io/crumbling-world-launch-2020.json",
             "ontology/itch-io/crumbling-world-launch-2020.md",
-            "tests/itch-io-crumbling-launch.test.mjs"
+            "tests/itch-io-crumbling-launch.test.mjs",
+            "ontology/itch-io/collected-payout-costs-2026.json",
+            "ontology/itch-io/collected-payout-costs-2026.md",
+            "site/itch-collected-payout-check.mjs",
+            "tests/itch-collected-payout-check.test.mjs"
           ]
         },
         {
@@ -1500,7 +1524,7 @@
           "title": "Check country-specific compliance",
           "acceptance": "State sources and jurisdiction without invented legal advice.",
           "weight": 1,
-          "progress": 58,
+          "progress": 62,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/payment-country-corridors-2026.json",
@@ -1509,7 +1533,11 @@
             "tests/itch-io-payment-corridors.test.mjs",
             "ontology/itch-io/year-of-springs-2026.json",
             "ontology/itch-io/year-of-springs-2026.md",
-            "tests/itch-io-year-of-springs.test.mjs"
+            "tests/itch-io-year-of-springs.test.mjs",
+            "ontology/itch-io/collected-payout-costs-2026.json",
+            "ontology/itch-io/collected-payout-costs-2026.md",
+            "site/itch-collected-payout-check.mjs",
+            "tests/itch-collected-payout-check.test.mjs"
           ]
         },
         {
@@ -1625,13 +1653,17 @@
           "title": "Calculate break-even conditions",
           "acceptance": "Include fixed costs, time, variable fees and refunds.",
           "weight": 1,
-          "progress": 77,
+          "progress": 85,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/break-even-scenarios-2026.md",
             "ontology/itch-io/break-even-scenarios-2026.json",
             "site/itch-break-even.mjs",
-            "tests/itch-break-even.test.mjs"
+            "tests/itch-break-even.test.mjs",
+            "ontology/itch-io/collected-payout-costs-2026.json",
+            "ontology/itch-io/collected-payout-costs-2026.md",
+            "site/itch-collected-payout-check.mjs",
+            "tests/itch-collected-payout-check.test.mjs"
           ]
         },
         {

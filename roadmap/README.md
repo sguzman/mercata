@@ -139,3 +139,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io five-year paid visual novel (2026-10-26):** cumulative developer-reported 1,789 itch payments and 5,929 downloads compared with later Steam/console/mobile outcomes, preserving distinct units and profit unknowns. **74% → 74%**, Δ 0 pp (unrounded 74.45%). [Case](../ontology/itch-io/year-of-springs-2026.md).
+
+
+**itch.io real cash-out constraints (2026-10-26):** source-verified one-time $3 collected payout tax-identity verification, $5 available minimum, 7+7 day conditional process, refund and transfer deductions, and low-price fixed fee warning. **74% → 75%**, Δ 1 pp, unrounded 74.87%. [Account cash-out rules](../ontology/itch-io/collected-payout-costs-2026.md).
