@@ -40,6 +40,8 @@ The [official dated 2025–2026 sale, Creator Day and game-jam windows](seasonal
 
 The [source-based co-op bundle participation and allocation review](coop-bundle-consent-and-splits-2026.md) records approval locks, relative weighted cuts, payout eligibility and deferred entitlement keys; example weights are synthetic and actual per-game receipts remain unobserved.
 
+The [account, person, page, team and paid seller ontology](creator-population-account-person-game-2026.md) fixes the definitions required for a valid publisher cohort while explicitly leaving the active-paid-seller count and unique-human estimate unavailable.
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*

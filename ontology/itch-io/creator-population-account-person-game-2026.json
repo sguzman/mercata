@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "distinct_publisher_account_creator_person_team_and_paid_seller_measurement_units",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-faq",
+    "itch-started",
+    "itch-payments",
+    "itch-serverside-api-reference",
+    "itch-coop-bundles"
+  ],
+  "units": [
+    {
+      "id": "registered_account",
+      "key": "private_platform_account_id",
+      "minimum_activity": "account_exists",
+      "observable_from_public_game_pages": false,
+      "known_global_count": null
+    },
+    {
+      "id": "public_game_page",
+      "key": "public_project_id",
+      "minimum_activity": "game_page_currently_visible",
+      "observable_from_public_game_pages": true,
+      "known_global_count": null
+    },
+    {
+      "id": "publishing_account",
+      "key": "private_owner_account_id",
+      "minimum_activity": "account_owns_one_or_more_project_pages",
+      "observable_from_public_game_pages": "incompletely",
+      "known_global_count": null
+    },
+    {
+      "id": "commercial_offering_page",
+      "key": "project_id+observed_price_configuration_and_date",
+      "minimum_activity": "positive_minimum_game_price_offered",
+      "observable_from_public_game_pages": "snapshot_only",
+      "known_global_count": null
+    },
+    {
+      "id": "active_publisher",
+      "key": "owner_account_id+observed_window",
+      "minimum_activity": "eligible_new_or_updated_game_listing_within_defined_period",
+      "observable_from_public_game_pages": "incompletely",
+      "known_global_count": null
+    },
+    {
+      "id": "actual_paid_seller",
+      "key": "owner_or_payout_entity_id+time_window",
+      "minimum_activity": "one_or_more_completed_nonrefunded_positive_price_game_orders_in_period",
+      "observable_from_public_game_pages": false,
+      "known_global_count": null
+    },
+    {
+      "id": "creator_person",
+      "key": "human_identity_under_appropriate_authorization",
+      "minimum_activity": "a_natural_person_performing_game_development",
+      "observable_from_public_game_pages": false,
+      "known_global_count": null
+    },
+    {
+      "id": "publisher_team",
+      "key": "explicit_contributor_or_partner_roster",
+      "minimum_activity": "multiple_people_contribute_to_one_or_more_games",
+      "observable_from_public_game_pages": "not_consistently",
+      "known_global_count": null
+    },
+    {
+      "id": "bundle_payment_recipient",
+      "key": "payout_eligible_account_and_bundle_agreement_id",
+      "minimum_activity": "participant_entitled_to_some_bundle_allocation",
+      "observable_from_public_game_pages": false,
+      "known_global_count": null
+    }
+  ],
+  "valid_non_equivalences": [
+    "one_publisher_account_can_list_multiple_games",
+    "one_project_page_can_contain_multiple_platform_builds",
+    "one_game_can_have_multiple_team_contributors",
+    "one_human_may_own_multiple_accounts_without_public_deduplication",
+    "an_account_may_have_free_projects_only",
+    "an_indexed_paid_listing_can_have_zero_settled_purchases",
+    "a_download_key_may_be_manually_issued_without_payment",
+    "bundle_recipients_are_not_game_purchases_or_unique_people"
+  ],
+  "target_commercial_cohort": {
+    "eligible_unit": "unique_payout_entity_or_distinct_seller_account_with_first_mandatory_positive_price_game",
+    "entry_date": "verified_first_paid_game_publication_time",
+    "windows_days": [
+      30,
+      90,
+      365
+    ],
+    "include_zero_orders": true,
+    "include_delisted_titles": true,
+    "require_account_deduplication": true,
+    "require_nonrefund_paid_transaction_records": true,
+    "require_taxes_fees_and_labor_for_profit": true,
+    "population_size": null,
+    "participant_sampling_probability": null,
+    "median_proceeds": null,
+    "mean_proceeds": null,
+    "zero_sale_fraction": null
+  },
+  "public_listing_to_unique_merchant_conversion": null,
+  "repeat_creator_fraction": null,
+  "independent_human_count": null,
+  "prohibited_inference": [
+    "all_game_listings_are_active_paid_publishers",
+    "open_source_github_contributor_is_paid_publisher",
+    "one_game_jam_entry_is_one_unique_seller",
+    "rating_event_is_a_paid_order",
+    "unique_catalog_pages_are_unique_payout_entities"
+  ],
+  "research_state": "population_ontology_defined_but_no_verified_census_or_authorized_transactions"
+}
