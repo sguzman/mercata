@@ -482,6 +482,17 @@
       "evidence_class": "official",
       "license": "Short original summary and URL; no source text reproduced.",
       "notes": "Describes platform infrastructure, not our build QA or observed maintenance labor."
+    },
+    {
+      "id": "itch-totp-account",
+      "url": "https://itch.io/docs/advanced/two-factor-authentication",
+      "title": "Secure your itch.io account with 2FA",
+      "publisher": "itch.io official documentation",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Document linked; no secrets or personally identifying account details retrieved.",
+      "notes": "Account security feature, not a security audit or evidence an individual publisher enabled 2FA."
     }
   ],
   "claims": [
@@ -1630,6 +1641,57 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "No frequency of deindexing or causal effect on paid game outcomes observed."
+    },
+    {
+      "id": "totp-supported",
+      "text": "itch.io supports optional time-based one-time password (TOTP) second-factor authentication configured through the account's security settings.",
+      "source_ids": [
+        "itch-totp-account"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "An available feature, not observed adoption, security success probability or enabled status."
+    },
+    {
+      "id": "totp-recovery",
+      "text": "The site documents generated account recovery codes for loss of the authentication device and says SMS-based two-factor login is not offered.",
+      "source_ids": [
+        "itch-totp-account"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No recovery code was generated or viewed; do not store publisher security tokens or keys."
+    },
+    {
+      "id": "first-seller-indexing",
+      "text": "The official indexing guide says newly published first-time paid sellers may be held for moderator review before their public game appears in Search and Browse.",
+      "source_ids": [
+        "itch-indexed"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Published direct-link functionality and seller earnings ability are distinct from guaranteed search index placement."
+    },
+    {
+      "id": "index-no-republish",
+      "text": "The official discovery guide states the original game publication date is not reset by updates or later indexing and discourages recreating pages to bypass restrictions.",
+      "source_ids": [
+        "itch-indexed",
+        "itch-quality"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Not a measured effect on unit sales or causal launch timing uplift."
+    },
+    {
+      "id": "discovery-search-v-tag",
+      "text": "The guide distinguishes direct-title text search, optimized for known-name lookup, from tag-driven browse discovery for topics and genres.",
+      "source_ids": [
+        "itch-indexed"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "The document describes product policy but provides no public query volumes or paid conversion rates."
     }
   ],
   "observations": [

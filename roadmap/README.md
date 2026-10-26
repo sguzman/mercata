@@ -73,3 +73,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io publisher rights/refund/privacy audit (2026-10-26):** sourced nonexclusive publisher license, content-ownership limits, customer refunds, conditional maintenance of >12-month-unclaimed collected revenues, and buyer-identifying information prohibitions. Score 50% → 52% (Δ +2 pp). [Legal and economic boundaries](../ontology/itch-io/publisher-rights-refunds-2026.md).
+
+
+**itch.io first-seller index/security (2026-10-26):** official discovery indexing gates, permanent publish dates, distinct tag/search methods, and TOTP account recovery documentation. 52% → 53% (Δ +1 pp). No account accessed. [Evidence](../ontology/itch-io/account-launch-indexing-2026.md).

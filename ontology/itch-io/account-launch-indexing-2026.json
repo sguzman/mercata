@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "seller_account_security_and_first_launch_visibility",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-totp-account",
+    "itch-indexed",
+    "itch-quality"
+  ],
+  "seller_account": {
+    "totp_supported": true,
+    "recovery_codes_documented": true,
+    "sms_two_factor_supported": false,
+    "observed_accounts": null,
+    "observed_2fa_adoption_rate": null,
+    "observed_account_takeover_rate": null,
+    "private_security_data_collected": 0
+  },
+  "release_states": [
+    {
+      "id": "public_unindexed_first_paid_seller",
+      "direct_url_accessible": true,
+      "search_and_browse_eligible_without_review": false,
+      "source_ids": [
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "public_indexed",
+      "direct_url_accessible": true,
+      "search_and_browse_eligible_without_review": true,
+      "source_ids": [
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "page_removed_from_discovery",
+      "direct_url_accessible": "may_remain_accessible",
+      "search_and_browse_eligible_without_review": false,
+      "source_ids": [
+        "itch-quality",
+        "itch-indexed"
+      ]
+    }
+  ],
+  "indexing_constraints": {
+    "cover_image_required": true,
+    "publish_visibility_required": "public",
+    "content_must_be_playable_downloadable_or_purchasable": true,
+    "first_time_paid_seller_manual_review_possible": true,
+    "publish_date_reset_on_reupload": false,
+    "tag_based_browse_and_direct_name_search_distinct": true
+  },
+  "measurement": {
+    "first_release_count": 0,
+    "actual_days_to_index": null,
+    "first_game_index_approval_rate": null,
+    "median_organic_search_impressions": null,
+    "paid_units_attributable_to_search": null,
+    "account_recovery_success_rate": null
+  },
+  "limits": [
+    "A project live by direct URL is not necessarily discoverable through Search/Browse.",
+    "No first-seller account, listing, ranking or search impressions were observed.",
+    "TOTP is a recommended availability feature; actual protection of any seller account is unknown.",
+    "Do not publish or collect OTP recovery codes or account access credentials."
+  ]
+}
