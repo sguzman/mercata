@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 61,
+  "progress_percent": 63,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -85,7 +85,7 @@
         "itch-io/identity/specify-evidence-permissions"
       ],
       "phase": 1,
-      "progress_percent": 55
+      "progress_percent": 70
     },
     {
       "id": "access",
@@ -113,7 +113,7 @@
         "itch-io/access/create-zero-cash-entry-scenario"
       ],
       "phase": 1,
-      "progress_percent": 58
+      "progress_percent": 71
     },
     {
       "id": "economics",
@@ -148,7 +148,7 @@
         "itch-io/economics/build-break-even-model"
       ],
       "phase": 1,
-      "progress_percent": 77
+      "progress_percent": 78
     },
     {
       "id": "market",
@@ -237,7 +237,7 @@
         "itch-io/competition/create-cross-platform-benchmarks"
       ],
       "phase": 2,
-      "progress_percent": 42
+      "progress_percent": 46
     },
     {
       "id": "income",
@@ -389,7 +389,7 @@
         "itch-io/strategy/define-retrospective-reporting"
       ],
       "phase": 4,
-      "progress_percent": 62
+      "progress_percent": 66
     },
     {
       "id": "review",
@@ -447,7 +447,7 @@
         "itch-io/special-games/plan-release-maintenance-workload"
       ],
       "phase": 2,
-      "progress_percent": 55
+      "progress_percent": 61
     }
   ],
   "deliverables": [
@@ -496,12 +496,15 @@
       "objective": "Investigate specify accounts, independent people, teams, projects and active paid sellers.",
       "acceptance": "Provide dated source-linked evidence to specify accounts, independent people, teams, projects and active paid sellers; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 69,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/first-game-entry-scenario-2026.json",
+        "ontology/itch-io/first-game-entry-scenario-2026.md",
+        "tests/itch-io-entry-scenario.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -571,9 +574,14 @@
       "emoji": "🪪",
       "objective": "Investigate define comparable global, country and language units.",
       "acceptance": "Provide dated source-linked evidence to define comparable global, country and language units; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 73,
+      "evidence": [
+        "ontology/itch-io/first-game-entry-scenario-2026.json",
+        "ontology/itch-io/first-game-entry-scenario-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-entry-scenario.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 1
@@ -604,9 +612,14 @@
       "emoji": "🪪",
       "objective": "Investigate select comparable game marketplaces and direct-sale alternatives.",
       "acceptance": "Provide dated source-linked evidence to select comparable game marketplaces and direct-sale alternatives; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 73,
+      "evidence": [
+        "ontology/itch-io/first-game-entry-scenario-2026.json",
+        "ontology/itch-io/first-game-entry-scenario-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-entry-scenario.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 1
@@ -738,9 +751,14 @@
       "emoji": "🚪",
       "objective": "Investigate check account permissions, joint publishing and transfer policies.",
       "acceptance": "Provide dated source-linked evidence to check account permissions, joint publishing and transfer policies; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 77,
+      "evidence": [
+        "ontology/itch-io/first-game-entry-scenario-2026.json",
+        "ontology/itch-io/first-game-entry-scenario-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-entry-scenario.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 1
@@ -804,12 +822,15 @@
       "objective": "Investigate define time, skills, assets and cash needed before first release.",
       "acceptance": "Provide dated source-linked evidence to define time, skills, assets and cash needed before first release; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 70,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/first-game-entry-scenario-2026.json",
+        "ontology/itch-io/first-game-entry-scenario-2026.md",
+        "tests/itch-io-entry-scenario.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -841,9 +862,14 @@
       "emoji": "🚪",
       "objective": "Investigate specify a feasible publishing workflow without assuming development labor is free.",
       "acceptance": "Provide dated source-linked evidence to specify a feasible publishing workflow without assuming development labor is free; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 83,
+      "evidence": [
+        "ontology/itch-io/first-game-entry-scenario-2026.json",
+        "ontology/itch-io/first-game-entry-scenario-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-entry-scenario.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 1
@@ -1801,9 +1827,14 @@
       "emoji": "🏁",
       "objective": "Investigate define staffing categories only where disclosed.",
       "acceptance": "Provide dated source-linked evidence to define staffing categories only where disclosed; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 64,
+      "evidence": [
+        "ontology/itch-io/first-game-entry-scenario-2026.json",
+        "ontology/itch-io/first-game-entry-scenario-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-entry-scenario.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -2997,12 +3028,16 @@
       "objective": "Investigate define hypothetical minimum viable game and measurable outcomes.",
       "acceptance": "Provide dated source-linked evidence to define hypothetical minimum viable game and measurable outcomes; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 40,
+      "percent": 66,
       "evidence": [
         "ontology/itch-io/break-even-scenarios-2026.md",
         "ontology/itch-io/break-even-scenarios-2026.json",
         "site/itch-break-even.mjs",
-        "tests/itch-break-even.test.mjs"
+        "tests/itch-break-even.test.mjs",
+        "ontology/itch-io/first-game-entry-scenario-2026.json",
+        "ontology/itch-io/first-game-entry-scenario-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-entry-scenario.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3244,12 +3279,16 @@
       "objective": "Investigate precommit to time, cash and evidence thresholds.",
       "acceptance": "Provide dated source-linked evidence to precommit to time, cash and evidence thresholds; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 35,
+      "percent": 64,
       "evidence": [
         "ontology/itch-io/break-even-scenarios-2026.md",
         "ontology/itch-io/break-even-scenarios-2026.json",
         "site/itch-break-even.mjs",
-        "tests/itch-break-even.test.mjs"
+        "tests/itch-break-even.test.mjs",
+        "ontology/itch-io/first-game-entry-scenario-2026.json",
+        "ontology/itch-io/first-game-entry-scenario-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-entry-scenario.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3639,9 +3678,14 @@
       "emoji": "🎮",
       "objective": "Investigate measure playtime and feature count without assuming purchase value.",
       "acceptance": "Provide dated source-linked evidence to measure playtime and feature count without assuming purchase value; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 76,
+      "evidence": [
+        "ontology/itch-io/first-game-entry-scenario-2026.json",
+        "ontology/itch-io/first-game-entry-scenario-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-entry-scenario.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -3752,9 +3796,14 @@
       "emoji": "🎮",
       "objective": "Investigate include bandwidth, uptime, moderation and maintenance.",
       "acceptance": "Provide dated source-linked evidence to include bandwidth, uptime, moderation and maintenance; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 36,
+      "evidence": [
+        "ontology/itch-io/first-game-entry-scenario-2026.json",
+        "ontology/itch-io/first-game-entry-scenario-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-entry-scenario.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2

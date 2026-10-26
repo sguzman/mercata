@@ -91,3 +91,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io interim research synthesis (2026-10-26):** six source-linked known findings, seven unresolved empirical requirements and original pending tasks preserved. 59% → 61% (Δ +2 pp). [Source-aware synthesis](../ontology/itch-io/research-synthesis-2026.md).
+
+
+**itch.io first commercial game entry (2026-10-26):** sourced team and account roles, candidate cross-store comparators, global buyer-versus-seller geography, bounded zero-upfront-cash small 2D game scenario preserving unknown labor and sales. 61% → 63% (Δ +2 pp). [Entry protocol](../ontology/itch-io/first-game-entry-scenario-2026.md).

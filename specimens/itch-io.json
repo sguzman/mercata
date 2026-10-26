@@ -614,6 +614,28 @@
       "evidence_class": "public_filtered_catalog",
       "license": "Small public browse count, cited link.",
       "notes": "Non-synchronized recent crawls from approximately the prior week; active sellers, paid units and platform income unobserved."
+    },
+    {
+      "id": "itch-about-2026",
+      "url": "https://itch.io/docs/general/about",
+      "title": "About itch.io",
+      "publisher": "itch.io",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Public source linked; own structured summary.",
+      "notes": "Existing public features or historical operator explanation, not current specific seller-account permission approval."
+    },
+    {
+      "id": "itch-team-admin-2018",
+      "url": "https://itch.io/t/351041/team-projects",
+      "title": "Team projects (operator response, 2018)",
+      "publisher": "itch.io support forum",
+      "published_at": "2018-12-05",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "historical_operator_support",
+      "license": "Public source linked; own structured summary.",
+      "notes": "Existing public features or historical operator explanation, not current specific seller-account permission approval."
     }
   ],
   "claims": [
@@ -2123,6 +2145,71 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "Recently indexed non-synchronized listing count, not observed game sales, unique creators or paid buyers."
+    },
+    {
+      "id": "team-contributors-jams",
+      "text": "itch.io jam guidance permits a project to have multiple collaborators and describes separately configurable jam host, judge and moderator privileges.",
+      "source_ids": [
+        "itch-jams"
+      ],
+      "limitations": "Contributors and a single seller account cannot be assumed to be independent earning developers.",
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "team-project-admin-historical",
+      "text": "In a 2018 support response the itch.io administrator described allowing page admins to display a shared game on their profiles and manually creating an account for teams.",
+      "source_ids": [
+        "itch-team-admin-2018"
+      ],
+      "limitations": "Historical operator guidance; current project administration and earnings privileges are not reverified from a live account.",
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "team-coop-payments-different",
+      "text": "Cooperative bundle revenue shares are allocated to participating owner accounts, not automatically to every individual collaborator on a single game's project.",
+      "source_ids": [
+        "itch-coop-bundles",
+        "itch-team-admin-2018"
+      ],
+      "limitations": "Cannot infer legal contributor compensation or joint IP ownership from public page administration.",
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "zero-upfront-no-zero-effort",
+      "text": "itch.io describes publishing and hosting projects without a compulsory upfront listing fee, while separate payment processing applies to transactions.",
+      "source_ids": [
+        "itch-about-2026",
+        "itch-faq",
+        "itch-payments"
+      ],
+      "limitations": "No cash listing fee does not imply no asset, testing, tax, refund, labor or game development costs.",
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "global-seller-buyer-split",
+      "text": "itch.io broadly accepts games online, but seller payment eligibility, settlement currencies and buyers' access should be studied in independent geographic frames.",
+      "source_ids": [
+        "itch-about-2026",
+        "itch-payments"
+      ],
+      "limitations": "A worldwide accessible page is not proof of worldwide compatible payout and legal eligibility.",
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "small-prototype-not-profit-guarantee",
+      "text": "itch.io supports playable browser projects and downloadable paid games as distinct release types; a minimal 2D demo's scope alone cannot establish buyer demand.",
+      "source_ids": [
+        "itch-html5",
+        "itch-pricing"
+      ],
+      "limitations": "Game length, mechanics and production budget used in scenarios are hypothetical and have no sales measurements.",
+      "confidence": "high",
+      "observed_at": "2026-10-26"
     }
   ],
   "observations": [

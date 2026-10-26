@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "first_commercial_game_entry_research_scenario",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-about-2026",
+    "itch-faq",
+    "itch-payments",
+    "itch-jams",
+    "itch-team-admin-2018",
+    "itch-coop-bundles",
+    "itch-html5",
+    "itch-pricing",
+    "butler-linux",
+    "itch-limited-releases"
+  ],
+  "roles": [
+    {
+      "id": "account_owner",
+      "unit": "publishing_account",
+      "rights_scope": "owner controls game page and payment configuration",
+      "individual_earnings_inferred": false
+    },
+    {
+      "id": "contributor",
+      "unit": "participant_person_or_account",
+      "rights_scope": "can receive editing or jam contribution access with relevant permissions",
+      "automatically_revenue_split": false
+    },
+    {
+      "id": "cooperative_bundle_participant",
+      "unit": "participating_project_owner",
+      "rights_scope": "approved share of bundle allocation if payout eligible",
+      "automatically_personal_salary": false
+    }
+  ],
+  "historical_team_help_checked_date": "2018-12-05",
+  "current_team_role_revision_verified": null,
+  "geographies": {
+    "buyer_population_scope": "global_if_authorized_data_exists",
+    "seller_country_scope": "country_specific_payout_eligibility",
+    "illustrative_jurisdiction": "Mexico",
+    "country_earnings_observed": null
+  },
+  "comparison_targets": [
+    {
+      "name": "Steam",
+      "purpose": "matched paid game release opportunity and transaction accounting",
+      "verified_product_monetization_comparison": false
+    },
+    {
+      "name": "Game Jolt",
+      "purpose": "alternative indie community distribution",
+      "verified_product_monetization_comparison": false
+    },
+    {
+      "name": "direct_owned_distribution",
+      "purpose": "control audience contact, fulfillment costs and dependency",
+      "verified_product_monetization_comparison": false
+    }
+  ],
+  "hypothetical_pilot": {
+    "genre": "2D_small_singleplayer_experience",
+    "playtime_minutes_low": 5,
+    "playtime_minutes_high": 30,
+    "mechanic_count_low": 1,
+    "mechanic_count_high": 2,
+    "new_game_development_cash_spend_usd": 0,
+    "assumes_preexisting_computer": true,
+    "assumes_free_engine_or_owned_tools": true,
+    "assumes_licensed_selfmade_or_publicly_usable_assets": true,
+    "platform_listing_fee_usd": 0,
+    "creator_labor_hours": null,
+    "creator_labor_value_usd": null,
+    "paid_transaction_fees": null,
+    "local_tax_obligations": null,
+    "qa_outcome": null,
+    "actual_sales": null,
+    "profit": null,
+    "distribution_route_choices": [
+      "html5_donation_only",
+      "premium_downloadable_with_optional_free_demo"
+    ],
+    "pre_release_checks": [
+      "cover_screenshots_and_truthful_tags",
+      "game_file_and_lib_compatibility",
+      "controller_keyboard_accessibility",
+      "tax_identity_eligibility_for_paid_payouts",
+      "license_rights",
+      "version_updates_and_support"
+    ],
+    "early_stop_conditions": {
+      "max_external_cash_usd": 0,
+      "max_labor_hours": null,
+      "owner_approved": false
+    }
+  },
+  "other_cost_types": [
+    "creator_labor",
+    "licensed_assets",
+    "testing_maintenance",
+    "customer_support",
+    "refunds",
+    "processor_transaction_fees",
+    "tax_and_currency_conversion",
+    "multiplayer_hosting_if_applicable"
+  ],
+  "unobserved": {
+    "solo_vs_team_paid_seller_population": null,
+    "typical_small_game_production_hours": null,
+    "small_game_purchase_probability": null,
+    "typical_profit": null,
+    "country_buyer_count": null
+  },
+  "limits": [
+    "Scenario costs are hypothetical constraints, not measurements of a new actual product.",
+    "No content, application, game code, executable, storefront account or payment process was operated.",
+    "Marketplace specimen comparisons are research frames, not admission of other specimens.",
+    "Historical operator support response is not proof of current permissions.",
+    "Publishers, pages, team members and individual income recipients have distinct denominators."
+  ]
+}
