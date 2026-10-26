@@ -1472,6 +1472,61 @@
       "evidence_class": "voluntary_first_party_developer_pricing_incident",
       "license": "Short dated price/sale facts with attributed link and independently authored analytical notes.",
       "notes": "One creator's first-game zero sale snapshot and self-described donation/paid-tier misconfiguration, with no audited checkout history or causal evidence."
+    },
+    {
+      "id": "license-osi-mit",
+      "url": "https://opensource.org/license/mit",
+      "title": "The MIT License",
+      "publisher": "Open Source Initiative",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "primary_license_text",
+      "license": "Public license text or summary linked; independently paraphrased rules only.",
+      "notes": "Normative license document for component-level distribution conditions, not individual developer income or blanket authorization to publish any game."
+    },
+    {
+      "id": "license-apache-2",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "title": "Apache License Version 2.0",
+      "publisher": "Apache Software Foundation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "primary_license_text",
+      "license": "Public license text or summary linked; independently paraphrased rules only.",
+      "notes": "Normative license document for component-level distribution conditions, not individual developer income or blanket authorization to publish any game."
+    },
+    {
+      "id": "license-gnu-gpl-faq",
+      "url": "https://www.gnu.org/licenses/gpl-faq.html",
+      "title": "GNU GPL frequently asked questions on sale and source availability",
+      "publisher": "Free Software Foundation / GNU Project",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "primary_license_guidance",
+      "license": "Public license text or summary linked; independently paraphrased rules only.",
+      "notes": "Normative license document for component-level distribution conditions, not individual developer income or blanket authorization to publish any game."
+    },
+    {
+      "id": "license-cc-by-4",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0",
+      "publisher": "Creative Commons",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "license_plain_language_summary",
+      "license": "Public license text or summary linked; independently paraphrased rules only.",
+      "notes": "Normative license document for component-level distribution conditions, not individual developer income or blanket authorization to publish any game."
+    },
+    {
+      "id": "license-cc-by-nc-4",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "title": "Creative Commons Attribution-NonCommercial 4.0",
+      "publisher": "Creative Commons",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "license_plain_language_summary",
+      "license": "Public license text or summary linked; independently paraphrased rules only.",
+      "notes": "Normative license document for component-level distribution conditions, not individual developer income or blanket authorization to publish any game."
     }
   ],
   "claims": [
@@ -5352,6 +5407,56 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Not proof of the exact configuration error, checkout amounts or individual merchant results in the reported case."
+    },
+    {
+      "id": "game-code-mit-commercial",
+      "text": "The OSI's MIT license permits commercial distribution and sale of licensed software copies with preservation of its copyright and permission notices.",
+      "source_ids": [
+        "license-osi-mit"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Only covers code or work actually licensed MIT, not unrelated game assets, third-party trademarks or complete contractual clearance."
+    },
+    {
+      "id": "game-code-apache-notice",
+      "text": "Apache License 2.0 permits distribution of source or object forms, subject to license preservation, notices of modifications and applicable NOTICE attribution.",
+      "source_ids": [
+        "license-apache-2"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Actual derivative-work scope, additional license compatibility and trademark rights require independent inspection."
+    },
+    {
+      "id": "game-code-gpl-fees-not-free-rights",
+      "text": "The GNU GPL permits charging for program-copy distribution but does not let distributors remove recipients' redistribution freedoms, and binary distribution has corresponding-source obligations.",
+      "source_ids": [
+        "license-gnu-gpl-faq"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Version and actual distribution method can change compliance details; no game reviewed."
+    },
+    {
+      "id": "game-media-cc-by-commercial",
+      "text": "CC BY 4.0 permits commercial reuse of covered media under attribution, license reference and appropriate changes-notice conditions.",
+      "source_ids": [
+        "license-cc-by-4"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "The asset must actually be licensed CC BY; other rights such as publicity, privacy and trademarks may remain."
+    },
+    {
+      "id": "game-media-cc-by-nc-not-paid",
+      "text": "CC BY-NC 4.0 ordinarily excludes reuse primarily directed at commercial advantage unless separately authorized; its free availability is not permission for commercial game distribution.",
+      "source_ids": [
+        "license-cc-by-nc-4"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "A separate licensed permission, applicable exceptions and exact uses must be reviewed on their own terms."
     }
   ],
   "observations": [

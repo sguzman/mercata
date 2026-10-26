@@ -28,6 +28,8 @@ The [documented buyer checkout route/region crosswalk](buyer-checkout-route-elig
 
 The fixed multi-store legal/contract boundary task is now source-verified: itch.io licenses publisher content non-exclusively and lets developers opt into external-key distribution under separate restrictions, without certifying the publisher's outside licenses or actual offline operation. [Rights and DRM distinction](multistore-rights-external-keys-2026.md).
 
+The [game source/asset licensing crosswalk](game-code-art-commercial-licenses-2026.md) distinguishes MIT/Apache/GPL software distribution from Creative Commons media permissions and itch.io's separate publisher license, with no game-specific compliance or profit falsely asserted.
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*
