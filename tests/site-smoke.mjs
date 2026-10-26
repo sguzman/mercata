@@ -529,6 +529,13 @@ try{
     await niche.locator('select').selectOption('beauty');
     assert((await niche.locator('.niche-explorer-report').textContent()).includes('Beauty'));
     assert((await niche.locator('.niche-explorer-report').textContent()).includes('Typical creator profit: unknown'));
+    const scores=page.locator('.opportunity-framework .sample-niche-scorecard');
+    assert.equal(await scores.count(),1,'Missing visible comparison of bounded niche inputs');
+    assert.equal(await scores.locator('.sample-niche-scorecard-row').count(),4);
+    assert((await scores.textContent()).includes('Selected RPM median $10.22 per 1,000 views'));
+    assert((await scores.textContent()).includes('Only 1 of 6 required axes observed'));
+    assert((await scores.textContent()).includes('overall opportunity rank: unavailable'));
+    assert((await scores.textContent()).includes('Creator net profit: unknown'));
 
     const tool=page.locator('.scenario-tool');
     await tool.locator('summary').click();

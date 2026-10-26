@@ -55,3 +55,11 @@ A proposed content experiment must specify an audience problem, topic, format, c
 ## How scoring works
 
 No hidden weighted total. Each evidence dimension stores its observation, population and confidence, plus missing inputs. All scores and weights begin `null`. A ranking or recommendation cannot be produced until its inputs are defensible and uncertainties visible. Cross-category comparisons should acknowledge that many opportunities cannot be ranked from public data alone.
+
+## A concrete six-axis scorecard with visible missing inputs
+
+Four AIR-selected monetized-channel niches have reported **native RPM quartiles** (Education & Science, Gaming, Kids & Teens, Business & Finance). This is only the **monetization-RPM axis** of an economically useful scorecard. The [source-based RPM comparison](rpm-niche-quartile-crosswalk-2026.md) shows the exact median and 25th–75th percentile values and the selected sample of **300 channels and 3,595 channel-months**.
+
+The public website exposes each of the four cases alongside the **five unmeasured required axes**: unique audience reach, active creator supply, production labor, production cash costs, and rights/policy eligibility. Median net creator income, the fraction of failed entrants, niche-specific source sample sizes and creator profit remain unmeasured as well.
+
+**No score, weight, winner, probability of success, ranked list, or assumed earning potential is provided.** A high rate on a monetized-client selection cannot establish that a newcomer would reach monetization or profit after creator time and costs. Education and Gaming quartile intervals overlap, and the vendor warns that its Business & Finance subset is small. This visibly incomplete scorecard is inspectable and testable; it is not a disguised arbitrary leaderboard.

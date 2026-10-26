@@ -952,7 +952,7 @@
     "owner_authorized_publication": false
   },
   "rules": [
-    "All 29 topic assessments begin unranked and numerically unknown.",
+    "All 33 topic assessments remain unranked and numerically unknown without matched population and income evidence.",
     "Original YouTube topic activity observations are context, not a verified census of unique viewers.",
     "Do not use ethnic or political individual profiles for content targeting.",
     "No candidate topic receives a recommendation solely because a commercial sample showed high median RPM.",
@@ -1136,5 +1136,91 @@
       "use_advertiser_gross_revenue_as_creator_net",
       "infer_real_client_account_status"
     ]
+  },
+  "sample_niche_scorecard": {
+    "id": "source_bounded_rpm_case_studies_for_opportunity_axes",
+    "original_artifact": "ontology/youtube/rpm-niche-quartile-crosswalk-2026.json",
+    "source_ids": [
+      "air-studio-rpm-300-2026"
+    ],
+    "required_axes": [
+      "audience_reach",
+      "creator_supply",
+      "production_labor",
+      "production_cash_cost",
+      "monetization_native_rpm",
+      "policy_rights"
+    ],
+    "observations": [
+      {
+        "niche_id": "education_science",
+        "label": "Education & Science",
+        "median_rpm_usd": 10.22,
+        "p25_rpm_usd": 2.31,
+        "p75_rpm_usd": 19.5,
+        "missing_axes": [
+          "audience_reach",
+          "creator_supply",
+          "production_labor",
+          "production_cash_cost",
+          "policy_rights"
+        ],
+        "score": null,
+        "rankable": false
+      },
+      {
+        "niche_id": "gaming",
+        "label": "Gaming",
+        "median_rpm_usd": 2.05,
+        "p25_rpm_usd": 0.7,
+        "p75_rpm_usd": 3.62,
+        "missing_axes": [
+          "audience_reach",
+          "creator_supply",
+          "production_labor",
+          "production_cash_cost",
+          "policy_rights"
+        ],
+        "score": null,
+        "rankable": false
+      },
+      {
+        "niche_id": "kids_teens",
+        "label": "Kids & Teens",
+        "median_rpm_usd": 0.33,
+        "p25_rpm_usd": 0.16,
+        "p75_rpm_usd": 0.88,
+        "missing_axes": [
+          "audience_reach",
+          "creator_supply",
+          "production_labor",
+          "production_cash_cost",
+          "policy_rights"
+        ],
+        "score": null,
+        "rankable": false
+      },
+      {
+        "niche_id": "business_finance",
+        "label": "Business & Finance",
+        "median_rpm_usd": 2.01,
+        "p25_rpm_usd": 0.73,
+        "p75_rpm_usd": 5.17,
+        "missing_axes": [
+          "audience_reach",
+          "creator_supply",
+          "production_labor",
+          "production_cash_cost",
+          "policy_rights"
+        ],
+        "score": null,
+        "rankable": false
+      }
+    ],
+    "score": null,
+    "ranked_order": null,
+    "independent_earner_population": false,
+    "all_measures_unit_compatible": false,
+    "warning": "Visible selected monetized niche RPM benchmarks supply only one of six required scorecard axes. Do not rank opportunity, expected success or net profit."
   }
 }

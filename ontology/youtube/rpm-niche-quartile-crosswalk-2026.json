@@ -80,5 +80,178 @@
     "creator_hours_by_niche": null,
     "per_genre_net_profit": null,
     "niche_specific_zero_earner_share": null
+  },
+  "transparent_scorecard": {
+    "id": "four_niche_selected_monetized_rpm_input_matrix",
+    "scope": "Four reported AIR monetized-channel categories with all other necessary scorecard axes explicitly missing",
+    "required_axes": [
+      "audience_reach",
+      "creator_supply",
+      "production_labor",
+      "production_cash_cost",
+      "monetization_native_rpm",
+      "policy_rights"
+    ],
+    "sample_source_id": "air-studio-rpm-300-2026",
+    "population": "300 selected AIR-affiliated monetized channels and 3595 channel-months, May 2025 to May 2026; niche-specific counts unreported",
+    "scope_same_as_all_youtube_creators": false,
+    "source_published_native_rpm_after_platform_share": true,
+    "observed_axes_count": 1,
+    "required_axes_count": 6,
+    "can_compute_overall_score": false,
+    "score_weights": null,
+    "any_niche_rank": null,
+    "expected_newcomer_profitability": null,
+    "row_count": 4,
+    "rows": [
+      {
+        "niche_id": "education_science",
+        "label": "Education & Science",
+        "observed": {
+          "monetization_native_rpm": {
+            "median_usd_per_1000_views": 10.22,
+            "p25_usd_per_1000_views": 2.31,
+            "p75_usd_per_1000_views": 19.5,
+            "source_id": "air-studio-rpm-300-2026",
+            "population": "selected_monetized_air_client_channel_months",
+            "small_n_warning": false
+          }
+        },
+        "unmeasured": {
+          "audience_reach_unique_people": null,
+          "creator_supply_active_channels": null,
+          "creator_median_production_hours": null,
+          "creator_median_cash_cost_usd": null,
+          "policy_rights_eligibility_by_actual_content": null,
+          "creator_median_net_profit_usd": null,
+          "creator_zero_earner_fraction": null
+        },
+        "observed_axes": [
+          "monetization_native_rpm"
+        ],
+        "missing_axes": [
+          "audience_reach",
+          "creator_supply",
+          "production_labor",
+          "production_cash_cost",
+          "policy_rights"
+        ],
+        "rankable": false,
+        "score": null
+      },
+      {
+        "niche_id": "gaming",
+        "label": "Gaming",
+        "observed": {
+          "monetization_native_rpm": {
+            "median_usd_per_1000_views": 2.05,
+            "p25_usd_per_1000_views": 0.7,
+            "p75_usd_per_1000_views": 3.62,
+            "source_id": "air-studio-rpm-300-2026",
+            "population": "selected_monetized_air_client_channel_months",
+            "small_n_warning": false
+          }
+        },
+        "unmeasured": {
+          "audience_reach_unique_people": null,
+          "creator_supply_active_channels": null,
+          "creator_median_production_hours": null,
+          "creator_median_cash_cost_usd": null,
+          "policy_rights_eligibility_by_actual_content": null,
+          "creator_median_net_profit_usd": null,
+          "creator_zero_earner_fraction": null
+        },
+        "observed_axes": [
+          "monetization_native_rpm"
+        ],
+        "missing_axes": [
+          "audience_reach",
+          "creator_supply",
+          "production_labor",
+          "production_cash_cost",
+          "policy_rights"
+        ],
+        "rankable": false,
+        "score": null
+      },
+      {
+        "niche_id": "kids_teens",
+        "label": "Kids & Teens",
+        "observed": {
+          "monetization_native_rpm": {
+            "median_usd_per_1000_views": 0.33,
+            "p25_usd_per_1000_views": 0.16,
+            "p75_usd_per_1000_views": 0.88,
+            "source_id": "air-studio-rpm-300-2026",
+            "population": "selected_monetized_air_client_channel_months",
+            "small_n_warning": false
+          }
+        },
+        "unmeasured": {
+          "audience_reach_unique_people": null,
+          "creator_supply_active_channels": null,
+          "creator_median_production_hours": null,
+          "creator_median_cash_cost_usd": null,
+          "policy_rights_eligibility_by_actual_content": null,
+          "creator_median_net_profit_usd": null,
+          "creator_zero_earner_fraction": null
+        },
+        "observed_axes": [
+          "monetization_native_rpm"
+        ],
+        "missing_axes": [
+          "audience_reach",
+          "creator_supply",
+          "production_labor",
+          "production_cash_cost",
+          "policy_rights"
+        ],
+        "rankable": false,
+        "score": null
+      },
+      {
+        "niche_id": "business_finance",
+        "label": "Business & Finance",
+        "observed": {
+          "monetization_native_rpm": {
+            "median_usd_per_1000_views": 2.01,
+            "p25_usd_per_1000_views": 0.73,
+            "p75_usd_per_1000_views": 5.17,
+            "source_id": "air-studio-rpm-300-2026",
+            "population": "selected_monetized_air_client_channel_months",
+            "small_n_warning": true
+          }
+        },
+        "unmeasured": {
+          "audience_reach_unique_people": null,
+          "creator_supply_active_channels": null,
+          "creator_median_production_hours": null,
+          "creator_median_cash_cost_usd": null,
+          "policy_rights_eligibility_by_actual_content": null,
+          "creator_median_net_profit_usd": null,
+          "creator_zero_earner_fraction": null
+        },
+        "observed_axes": [
+          "monetization_native_rpm"
+        ],
+        "missing_axes": [
+          "audience_reach",
+          "creator_supply",
+          "production_labor",
+          "production_cash_cost",
+          "policy_rights"
+        ],
+        "rankable": false,
+        "score": null
+      }
+    ],
+    "score_gates": [
+      "No ranking unless audience reach, creator supply, representative labor, cash costs, format and policy eligibility are all measured on a comparable niche and country cohort.",
+      "A native YouTube RPM median among selected monetized channels cannot be transformed to typical creator wages or profit.",
+      "Niche-specific sample sizes and all failed/non-monetized entrants are missing; do not form false probability of success.",
+      "Quarters of the selected RPM distribution overlap, so even an ordinal revenue guarantee is unsupported.",
+      "Do not combine unmatched topic view events, subscriber tiers or paid creator datasets as if they had one independently sampled denominator.",
+      "Do not classify all kids-and-teens content as Made for Kids without source-supported content intent."
+    ]
   }
 }
