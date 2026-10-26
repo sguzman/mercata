@@ -8,7 +8,9 @@
     "yt-recs-surfaces-2026",
     "yt-video-discovery-help-2026",
     "yt-shorts-discovery-help-2026",
-    "yt-shorts-original-content-recommendations-2026-10"
+    "yt-shorts-original-content-recommendations-2026-10",
+    "yt-custom-feeds-announced-2026-09",
+    "yt-custom-feeds-availability-help-2026"
   ],
   "method": "Classify distinct official discovery surfaces and their audience-conditioned ranking signals. No owner analytics or private viewing histories collected.",
   "surfaces": [
@@ -67,6 +69,18 @@
       "claim": "Shorts Subscriptions shows recent followed-channel uploads, not guaranteed notices or active people.",
       "ranking_weight": null,
       "observed_creator_reach": null
+    },
+    {
+      "id": "custom_feeds",
+      "label": "Viewer-authored Custom Feeds (U.S. English)",
+      "context": "viewer_prompt_topic_and_private_watch_history",
+      "source_ids": [
+        "yt-custom-feeds-announced-2026-09",
+        "yt-custom-feeds-availability-help-2026"
+      ],
+      "claim": "Eligible U.S. English-language signed-in viewers can generate account-private personalized feeds from topic prompts; these are not a universally available new channel traffic channel.",
+      "ranking_weight": null,
+      "observed_creator_reach": null
     }
   ],
   "separate_conditions": [
@@ -94,6 +108,11 @@
       "id": "no_inherent_shorts_longform_penalty",
       "source_id": "yt-shorts-discovery-help-2026",
       "quantified_lift": null
+    },
+    {
+      "id": "us_english_custom_feeds_account_and_history_gate",
+      "source_id": "yt-custom-feeds-availability-help-2026",
+      "quantified_lift": null
     }
   ],
   "unsupported_claims": [
@@ -102,7 +121,8 @@
     "Guaranteed impressions for every subscriber",
     "A Shorts video harms long-form reach merely by existing",
     "More published video views proves higher net creator profit",
-    "October 2026 originality update proves measured reductions in specific creators' Shorts impressions or settles copyright permissions"
+    "October 2026 originality update proves measured reductions in specific creators' Shorts impressions or settles copyright permissions",
+    "Custom Feeds is universally accessible in every language and country or guarantees traffic to new creators"
   ],
   "unmeasured": {
     "home_ranking_weights": null,
@@ -111,7 +131,9 @@
     "search_ranking_weights": null,
     "first_year_new_channel_reach": null,
     "organic_creator_profit_lift": null,
-    "universal_optimal_post_cadence": null
+    "universal_optimal_post_cadence": null,
+    "custom_feed_creator_referral_gain": null,
+    "custom_feed_global_adoption": null
   },
   "originality_recommendation_update": {
     "id": "shorts-originality-prioritization-2026-10-01",
@@ -139,5 +161,33 @@
     "creator_income_effect": null,
     "representative_creator_sample": null,
     "inference_boundary": "A publisher announcement about recommended direction of Shorts distribution does not establish a quantified ranking weight, blanket ban, all creator impact or earnings shift."
+  },
+  "custom_feed_availability": {
+    "announcement_source_id": "yt-custom-feeds-announced-2026-09",
+    "announcement_date": "2026-09-23",
+    "help_source_id": "yt-custom-feeds-availability-help-2026",
+    "help_retrieved_at": "2026-10-26",
+    "documented_eligible_country": "US",
+    "documented_device_language": "en",
+    "signed_in_required": true,
+    "watch_history_on_required": true,
+    "search_history_on_required": true,
+    "customizable_topic_prompt": true,
+    "feeds_private_to_account": true,
+    "inactive_expiration_days": 30,
+    "watched_video_from_custom_feed_may_affect_home": true,
+    "all_countries_available": false,
+    "distribution_to_english_speakers_outside_us_established": false,
+    "actual_participating_viewer_count": null,
+    "measured_creator_referral_lift": null,
+    "actual_custom_feed_search_impressions": null,
+    "guaranteed_creator_placement": false,
+    "documentation_status": "living_current_help_and_prior_prospective_announcement_not_verified_all_account_rollout",
+    "limits": [
+      "September announcement promised initial US access, while living official Help lists the current US-English and history requirements; do not conflate announcement with instant all-device rollout.",
+      "Personalized topic prompts are not an aggregated creator demand census or a durable public subscription feed.",
+      "Only eligible viewers can use the feature; availability for other languages or countries and creator referral uplift is unknown.",
+      "Watched videos may inform Home history, but public documents disclose neither ranking weights nor actual creator impressions."
+    ]
   }
 }

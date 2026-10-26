@@ -16,6 +16,12 @@ An [official TeamYouTube staff announcement](https://support.google.com/youtube/
 
 This October 2026 discovery announcement is separate from YouTube's July 2025 **YPP inauthentic-content eligibility clarification**, the August 2026 **public view-count definition revision**, and advertiser-suitability rules. The [dated crosswalk](policy-measurement-change-crosswalk.md) preserves those policy boundaries.
 
+## September 2026: prompt-created Custom Feeds, but only for eligible U.S.-English viewers
+
+[YouTube's September 23, 2026 feature announcement](https://blog.youtube/news-and-events/made-on-youtube-viewer-custom-feeds-shopping-tools/) introduced topic- or mood-prompted Custom Feeds for the Home surface and described forthcoming U.S. availability across viewer devices. The subsequently retrieved [official Help documentation](https://support.google.com/youtube/answer/18323430?hl=en) says they are currently **available in English in the United States**, require a **signed-in account**, enabled **watch and search history**, and an **English YouTube device language**. Custom feeds are private, expire after **30 days without use**, and viewing content through them may inform the viewer's standard Home recommendations.
+
+The September announcement was **prospective**, while the undated Help page is a **current product-availability statement** as retrieved October 26. Neither reports a worldwide rollout, paid placements, qualified creator traffic, first-year reach, ranking weights, unique audiences, per-language engagement, or creator earnings. There is no basis to project that Spanish-language or non-U.S. viewers can access the same prompt interface under the documented eligibility rules. This is an **audience discovery surface and language-access restriction**, not a new payout route or proof of available demand in an unmeasured niche.
+
 ## Unmeasured outcomes
 
 Fixed ranking weights, algorithm version dates, channel-entrant impression distribution, relative importance of any one signal, verified creator economic effects and a single universal posting schedule remain unknown. These documents do not justify ranking hacks, invented growth forecasts or adding public view events into deduplicated users.

@@ -188,7 +188,7 @@ try{
       ['.vtuber-superchat-cohort',7,'not zero total earnings'],
       ['.playlist-series-observability',9,'not unique returning viewers'],
       ['.native-packaging-ab',3,'not click-through rate'],
-      ['.recommendation-evidence',5,'No minimum Shorts posting cadence'],
+      ['.recommendation-evidence',6,'No minimum Shorts posting cadence'],
       ['.creator-payout-scale',3,'not individual earnings'],
       ['.alphabet-ad-revenue',8,'not creator payouts'],
       ['.oxford-creator-study',12,'EU27 includes France and Germany'],
@@ -219,6 +219,11 @@ try{
     assert((await independentGaming.textContent()).includes('1.98 billion gaming hours watched'));
     assert((await independentGaming.textContent()).includes('14.5% share'));
     assert((await independentGaming.textContent()).includes('Different vendor methodology'));
+    const customFeed=page.locator('.recommendation-evidence .recommendation-custom-feeds');
+    assert.equal(await customFeed.count(),1,'Missing September 2026 Custom Feeds restrictions');
+    assert((await customFeed.textContent()).includes('U.S. / English / history enabled'));
+    assert((await customFeed.textContent()).includes('30 days'));
+    assert((await customFeed.textContent()).includes('No verified Custom Feeds adoption'));
     const shortsOriginality=page.locator('.recommendation-evidence .recommendation-originality-update');
     assert.equal(await shortsOriginality.count(),1,'Missing dated October 2026 official Shorts recommendation announcement');
     assert((await shortsOriginality.textContent()).includes('October 1, 2026'));

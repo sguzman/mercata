@@ -3520,6 +3520,15 @@ function renderRecommendationEvidence(data,dossier){
   card.append(audienceSources(x.source_ids,dossier));grid.append(card);
  }
  details.append(grid);
+ const custom=data.custom_feed_availability;
+ if(custom){
+  const section=make('div','recommendation-custom-feeds');
+  section.append(make('h5','','Custom Feeds · U.S. / English / history enabled'));
+  section.append(make('p','measure-context','Current official Help: viewer-created private topic feeds require signing in, U.S. availability, English device language, and enabled watch and search history; unused feeds expire after 30 days.'));
+  section.append(make('p','measure-limit','No verified Custom Feeds adoption, non-U.S. rollout, channel impressions, creator referral lift or profit estimates.'));
+  section.append(audienceSources([custom.announcement_source_id,custom.help_source_id],dossier));
+  details.append(section);
+ }
  const originality=data.originality_recommendation_update;
  if(originality){
   const notice=make('div','recommendation-originality-update');
