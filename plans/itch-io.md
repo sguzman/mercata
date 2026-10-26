@@ -278,3 +278,8 @@ The [official-source release-format study](../ontology/itch-io/release-format-ac
 ## Independent sampled traffic benchmark (2026-10-26)
 
 The [2025 itch.io traffic survey audit](../ontology/itch-io/traffic-benchmark-2025.md) adds nonrepresentative but directly relevant visibility statistics from 169 volunteers, with incompatible download figures retained as an explicit evidence-quality issue. Game sales and median profit remain unobserved. Score 43%.
+
+
+## Unexecuted commercial strategy comparisons
+
+Seven falsifiable offer, demo, game jam, promotion and store comparisons are specified in the [strategy protocol](../ontology/itch-io/commercial-strategy-protocol-2026.md). All observations remain null, no money has been spent and no games were published. Progress 50%.

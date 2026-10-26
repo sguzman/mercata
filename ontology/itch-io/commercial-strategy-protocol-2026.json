@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "unexecuted_game_selling_strategy_comparisons",
+  "created_at": "2026-10-26",
+  "source_ids": [
+    "itch-pricing",
+    "itch-html5",
+    "itch-payments",
+    "itch-buying-flow",
+    "itch-indexed",
+    "itch-jams",
+    "itch-sale-detail",
+    "htmag-itch-traffic-2025",
+    "mixolumia-postmortem"
+  ],
+  "experiments": [
+    {
+      "id": "premium_downloadable",
+      "hypothesis": "A paid downloadable 2D game can generate settled positive-price orders at sufficient contribution to repay valued development labor.",
+      "offer": "minimum_price_paid_download",
+      "source_ids": [
+        "itch-pricing",
+        "itch-buying-flow",
+        "itch-payments"
+      ],
+      "primary_measure": "retained_cents_after_fees_refunds_and_declared_fixed_costs",
+      "counterfactual": "comparable_demand_and_buyer_exposure_other_offer",
+      "unknowns": [
+        "buyers",
+        "traffic",
+        "units",
+        "hours"
+      ],
+      "status": "not_started",
+      "owner_authorized_seller_data_collected": false,
+      "cash_spent_usd": null,
+      "marketing_labor_hours": null,
+      "game_development_hours": null,
+      "exposed_unique_people": null,
+      "settled_orders": null,
+      "net_profit_usd": null,
+      "result": null,
+      "causal_effect": null
+    },
+    {
+      "id": "donation_html5",
+      "hypothesis": "Free embedded HTML5 play with optional donations may attract play events while generating different per-view money than premium downloads.",
+      "offer": "html5_browser_donations",
+      "source_ids": [
+        "itch-html5",
+        "itch-pricing"
+      ],
+      "primary_measure": "actual_donations_and_proceeds_per_aligned_page_view_event",
+      "counterfactual": "separately_tested_paid_download_offer",
+      "unknowns": [
+        "donation_rate",
+        "donations",
+        "unique_visitors",
+        "effort"
+      ],
+      "status": "not_started",
+      "owner_authorized_seller_data_collected": false,
+      "cash_spent_usd": null,
+      "marketing_labor_hours": null,
+      "game_development_hours": null,
+      "exposed_unique_people": null,
+      "settled_orders": null,
+      "net_profit_usd": null,
+      "result": null,
+      "causal_effect": null
+    },
+    {
+      "id": "demo_to_paid",
+      "hypothesis": "A separate free demo may affect sales of a paid downloadable version, but play counts alone cannot measure this.",
+      "offer": "demo_plus_premium_download",
+      "source_ids": [
+        "itch-pricing",
+        "itch-buying-flow",
+        "itch-indexed"
+      ],
+      "primary_measure": "settled_paid_orders_per_aligned_exposure_and_profit",
+      "counterfactual": "comparable_no_demo_launch",
+      "unknowns": [
+        "demo_to_buyer_conversion",
+        "selection_effects",
+        "units"
+      ],
+      "status": "not_started",
+      "owner_authorized_seller_data_collected": false,
+      "cash_spent_usd": null,
+      "marketing_labor_hours": null,
+      "game_development_hours": null,
+      "exposed_unique_people": null,
+      "settled_orders": null,
+      "net_profit_usd": null,
+      "result": null,
+      "causal_effect": null
+    },
+    {
+      "id": "pay_what_you_want",
+      "hypothesis": "Allowing tips above a positive minimum can affect the realized per-order price but may change the number of orders.",
+      "offer": "paid_minimum_with_optional_extra",
+      "source_ids": [
+        "itch-pricing",
+        "itch-payments"
+      ],
+      "primary_measure": "net_proceeds_per_paid_order_and_after_fixed_costs",
+      "counterfactual": "fixed_product_price_comparable",
+      "unknowns": [
+        "tip_rate",
+        "transaction_mix",
+        "orders"
+      ],
+      "status": "not_started",
+      "owner_authorized_seller_data_collected": false,
+      "cash_spent_usd": null,
+      "marketing_labor_hours": null,
+      "game_development_hours": null,
+      "exposed_unique_people": null,
+      "settled_orders": null,
+      "net_profit_usd": null,
+      "result": null,
+      "causal_effect": null
+    },
+    {
+      "id": "discount_promotion",
+      "hypothesis": "A limited-time sale may change retained per-order proceeds and sold units; impact on total profit is not automatic.",
+      "offer": "sale_or_coupon",
+      "source_ids": [
+        "itch-sale-detail",
+        "itch-payments"
+      ],
+      "primary_measure": "incremental_refund_adjusted_proceeds_less_marketing_cost",
+      "counterfactual": "matched_no_discount_window",
+      "unknowns": [
+        "causal_uplift",
+        "return_customers",
+        "purchase_timing"
+      ],
+      "status": "not_started",
+      "owner_authorized_seller_data_collected": false,
+      "cash_spent_usd": null,
+      "marketing_labor_hours": null,
+      "game_development_hours": null,
+      "exposed_unique_people": null,
+      "settled_orders": null,
+      "net_profit_usd": null,
+      "result": null,
+      "causal_effect": null
+    },
+    {
+      "id": "jam_to_release",
+      "hypothesis": "A game-jam release may produce attention signals that correlate with later demand but do not alone demonstrate willingness to pay.",
+      "offer": "jam_submission_then_commercial_test",
+      "source_ids": [
+        "itch-jams",
+        "htmag-itch-traffic-2025"
+      ],
+      "primary_measure": "actual_paid_orders_in_subsequent_launch_cohort",
+      "counterfactual": "matched_non_jam_games_with_equal_exposure",
+      "unknowns": [
+        "jam_to_customer_transition",
+        "audience_overlap",
+        "conversion"
+      ],
+      "status": "not_started",
+      "owner_authorized_seller_data_collected": false,
+      "cash_spent_usd": null,
+      "marketing_labor_hours": null,
+      "game_development_hours": null,
+      "exposed_unique_people": null,
+      "settled_orders": null,
+      "net_profit_usd": null,
+      "result": null,
+      "causal_effect": null
+    },
+    {
+      "id": "itch_and_other_store",
+      "hypothesis": "An itch.io release and an external storefront may have different sales or cost bases for the same game.",
+      "offer": "matched_cross_store_publishing",
+      "source_ids": [
+        "mixolumia-postmortem",
+        "itch-payments"
+      ],
+      "primary_measure": "retained_proceeds_by_store_and_window_after_store_specific_costs",
+      "counterfactual": "matched_time_and_marketing_windows",
+      "unknowns": [
+        "per_store_actual_sales",
+        "release_time_confounding",
+        "additional_qa_hours"
+      ],
+      "status": "not_started",
+      "owner_authorized_seller_data_collected": false,
+      "cash_spent_usd": null,
+      "marketing_labor_hours": null,
+      "game_development_hours": null,
+      "exposed_unique_people": null,
+      "settled_orders": null,
+      "net_profit_usd": null,
+      "result": null,
+      "causal_effect": null
+    }
+  ],
+  "common_measurement_contract": {
+    "cohort_days": [
+      30,
+      90,
+      365
+    ],
+    "event_units": [
+      "page_view_events",
+      "browser_play_events",
+      "free_download_events",
+      "paid_order_events",
+      "refunded_order_events",
+      "net_cash_proceeds",
+      "development_hours"
+    ],
+    "minimum_source_requirements": [
+      "source_ids",
+      "date",
+      "currency",
+      "denominator",
+      "same_game_and_period",
+      "price_model",
+      "seller_permitted_aggregation",
+      "excluded_costs"
+    ],
+    "stop_conditions": {
+      "max_cash_usd": null,
+      "max_research_hours": null,
+      "max_game_production_hours": null,
+      "approved_by_owner": false
+    },
+    "no_private_buyer_data": true
+  },
+  "evidence_limits": [
+    "These are pre-registered hypotheses and research protocol ideas, not completed experiments.",
+    "Paid orders and developer profits remain unmeasured.",
+    "Traffic case studies cannot establish causal changes or customer conversion.",
+    "No accounts, publishing, money transfers, developer code, games, or paid marketing were operated.",
+    "User must separately authorize any real financial expense or commercial action."
+  ],
+  "current_experiment_count": 0,
+  "real_seller_results": null,
+  "experimental_causal_measures": null
+}

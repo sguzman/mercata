@@ -67,3 +67,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io distribution/Linus release review (2026-10-26):** sourced butler channels, incremental patch limits and portable Linux runtime constraints; no real binary or account operation. Score **45% → 47%**, Δ +2 pp. [Platform guide](../ontology/itch-io/distribution-build-2026.md).
+
+
+**itch.io commercial test design (2026-10-26):** seven preregistered, entirely unexecuted game offer/acquisition/revenue comparisons with explicit null outcomes, confounders and budget authorization gates. 47% → 50% (Δ +3 pp). [Source-based protocol](../ontology/itch-io/commercial-strategy-protocol-2026.md).
