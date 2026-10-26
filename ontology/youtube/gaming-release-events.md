@@ -1,18 +1,29 @@
 # Video-game releases versus YouTube platform growth
 
-**Research snapshot: October 24, 2026.** [Structured dated event record](gaming-release-events.json). Observations here are historical primary-party YouTube aggregate **views**, not a time series of unique viewers, an inferred causal launch spike, or a measure of game-related creator income.
+**Research snapshot: October 25, 2026.** [Structured dated event record](gaming-release-events.json). Observations here are historical primary-party YouTube aggregate **views**, not a time series of unique viewers, an inferred causal launch spike, or a measure of game-related creator income.
 
-## Two different event types, populations and windows
+## Three separately scoped gaming observations
 
 | Event | Geography and period | Reported observed lower bound | What the count actually means |
 | --- | --- | --- | --- |
 | Splatoon 2 full game release, July 21, 2017 | Japan, first seven days (July 21–28) | **Over 50 million views** | Views on videos related to the game in Japan during that release window |
 | GTA VI *Trailer 1* premiere, December 4, 2023 | Global, first 24 hours (December 4–5) | **Over 93 million views** | Views of a single official pre-release trailer, not game launch |
 | GTA VI related videos over the same announcement window | Global, December 4–5, 2023 | **Over 250 million views** | All reported related-video views, with the trailer already belonging to this broader category |
+| Zelda: Tears of the Kingdom launch, May 12–14, 2023 | Vendor YouTube index, geography not disclosed | **About 8,900 / 7,500 / 6,200 daily uploads** | Three days of new video objects, **not views** |
 
 Sources: [YouTube's 2024 official gaming quiz](https://blog.youtube/culture-and-trends/gaming-quiz/) and [YouTube Gaming's December 5, 2023 trailer reporting](https://blog.youtube/culture-and-trends/grand-theft-auto-breaks-record/).
 
-The three lower bounds are **not additive**. A single GTA VI trailer is part of the wider GTA VI-related video population. The Splatoon count is a **different country, game, event type, aggregation and observation length**. None of these is the number of unique viewers, games sold, channels created or first-time users of YouTube.
+The three previously reported view lower bounds are **not additive**; newly observed daily upload objects use a separate unit. A single GTA VI trailer is part of the wider GTA VI-related video population. The Splatoon count is a **different country, game, event type, aggregation and observation length**. None of these is the number of unique viewers, games sold, channels created or first-time users of YouTube.
+
+## Vendor Zelda view series before game release
+
+[Tubular Labs, May 19, 2023](https://tubularlabs.com/?p=22631), reports **40.9 million Zelda-related YouTube views in August 2022**, **62.2 million in September 2022**, **88 million in January 2023**, and **146 million in February 2023**. The first two months surrounded a September trailer, and the latter two surrounded a February preview. The sampled *Zelda franchise* video set, coverage and geographic definition are not completely published; these are **not** new-game-only views or unique people.
+
+**Source discrepancy:** The vendor reports a **153% increase** from 40.9M to 62.2M. Those rounded endpoints imply an increase of **(62.2−40.9)/40.9 = approximately 52.1%**; 62.2M is **152.1% of the August level**. This is an apparent confusion between percent of baseline and percent increase. Both the publisher claim and the arithmetic discrepancy remain recorded rather than silently choosing a growth estimate.
+
+The same vendor says about **8,900 videos** were uploaded on the **May 12 release date**, about **7,500 on May 13**, and **6,200 on May 14**. These are separate new *video upload* counts, not the view counts in the monthly prelaunch series. Neither sample has a verified platform-wide comparator, creator payment ledger or causal counterfactual.
+
+YouTube's separate [2024 gaming quiz](https://blog.youtube/culture-and-trends/gaming-quiz/) describes 2.6 billion Zelda-related views in the first 60 days after release, but cites a wider January–November 2023 data window. Mercata does not treat that as an exact audited 60-day observation.
 
 ## Why release windows cannot establish causal growth
 

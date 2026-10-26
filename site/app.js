@@ -5023,14 +5023,14 @@ function renderGamingReleaseEvents(data,dossier){
  const section=make('section','gaming-release-events');
  const details=make('details','gaming-release-details');
  details.append(make('summary','','Game-release spikes: dated view events, not platform-wide growth'));
- details.append(make('p','measure-limit','Two different historic events: Splatoon 2 at its 2017 game launch in Japan and a GTA VI trailer premiere in 2023 worldwide. Video views are events, not distinct people or attributable creator earnings.'));
+ details.append(make('p','measure-limit','Three bounded observations: Splatoon 2 launch views, a GTA VI trailer, and Zelda release-weekend uploads. Video views, new uploads, distinct people and creator income are separate units.'));
  const grid=make('div','gaming-release-grid');
  for(const event of data.events){
    const card=make('article','gaming-release-card');
    card.append(make('h5','',event.game+' · '+event.event_type.replaceAll('_',' ')));
    card.append(make('p','measure-context',event.country_scope+' · '+event.window_start+' to '+event.window_end));
    for(const x of event.measures){
-     const row=make('p','gaming-release-measure',(x.comparison==='>'?'Over ':'')+x.value.toLocaleString()+' '+x.unit.replaceAll('_',' '));
+     const row=make('p','gaming-release-measure',(x.comparison==='>'?'Over ':x.comparison==='approximately'?'About ':'')+x.value.toLocaleString()+' '+x.unit.replaceAll('_',' '));
      card.append(row);
      card.append(make('p','measure-limit',x.scope));
    }
@@ -5039,6 +5039,22 @@ function renderGamingReleaseEvents(data,dossier){
    grid.append(card);
  }
  details.append(grid);
+ const prelaunch=data.prelaunch_view_series;
+ if(prelaunch?.months?.length){
+  const block=make('div','gaming-release-prelaunch');
+  block.append(make('h5','','Zelda · vendor-indexed prelaunch monthly views'));
+  const list=make('ul','gaming-prelaunch-months');
+  for(const x of prelaunch.months){
+   const item=make('li','gaming-prelaunch-month');
+   item.append(make('strong','',x.month+' · '+x.views_million+'M views'));
+   list.append(item);
+  }
+  block.append(list);
+  block.append(make('p','measure-limit','Source reports +153% growth from 40.9M to 62.2M, but the displayed values imply about +52.1% increase: the source arithmetic is inconsistent.'));
+  block.append(make('p','measure-limit','Monthly franchise video views are not the May launch daily upload counts, people, profit, or causal lift.'));
+  block.append(audienceSources([prelaunch.source_id],dossier));
+  details.append(block);
+ }
  details.append(make('p','measure-limit','A single trailer belongs to the wider related-video count. Counts for different events, geographies or windows cannot be summed or treated as comparable release-day growth.'));
  details.append(make('p','measure-limit','Matched pre-release and post-release baselines, causal lift, viewer populations, new channel incomes and effects of the 2026 view-definition change: unknown.'));
  const link=make('a','inline-link','Read source dates and reproducible release-window comparison rules ↗');

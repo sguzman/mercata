@@ -1819,3 +1819,19 @@ test('Shorts and long-form trend distinguishes two historical metric revisions a
  assert(h.events.some(x=>x.id==='shorts-view-playback-start-2025'&&x.source_ids.includes('yt-shorts-march-2025-view-definition')));
  assert.equal(a.source_families.length,2,'Independent Omdia/NRG studies remain separate');
 });
+
+test('Zelda release series retains separate view/upload units and catches source arithmetic mismatch',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/gaming-release-events.json'),load('specimens/youtube.json')]);
+ assert.equal(m.events.length,3);
+ assert(m.source_ids.every(id=>d.evidence.some(x=>x.id===id)));
+ assert.deepEqual(m.prelaunch_view_series.months.map(x=>x.views_million),[40.9,62.2,88,146]);
+ assert.equal(m.prelaunch_view_series.source_claimed_percent_increase_aug_sep,153);
+ assert.equal(m.prelaunch_view_series.source_percentage_arithmetically_consistent,false);
+ assert(Math.abs((62.2/40.9-1)*100-52.1)<0.1);
+ const z=m.events.at(-1);
+ assert.equal(z.event_type,'full_game_release');
+ assert.deepEqual(z.measures.map(x=>x.value),[8900,7500,6200]);
+ assert(z.measures.every(x=>x.unit==='new_video_uploads'&&x.comparison==='approximately'));
+ assert.equal(z.comparable_platform_baseline,null);assert.equal(z.creator_income,null);
+ assert(d.claims.some(x=>x.id==='tubular-zelda-prelaunch-views-2023-release-uploads'));
+});

@@ -2,11 +2,12 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "game_release_event_viewing_study",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "historical_event_observations_no_causal_release_lift_estimate",
   "source_ids": [
     "yt-gaming-quiz-2024",
-    "yt-gta6-trailer-2023"
+    "yt-gta6-trailer-2023",
+    "tubular-zelda-prelaunch-release-2023"
   ],
   "events": [
     {
@@ -75,6 +76,53 @@
       "channels": null,
       "creator_income": null,
       "limitations": "A pre-release trailer event, not the game's later launch. >93M and >250M are lower bounds on overlapping units; cannot sum, subtract lower bounds, or infer incremental platform growth."
+    },
+    {
+      "id": "zelda-totk-may-2023-game-release-uploads",
+      "game": "The Legend of Zelda: Tears of the Kingdom",
+      "event_type": "full_game_release",
+      "event_date": "2023-05-12",
+      "window_start": "2023-05-12",
+      "window_end": "2023-05-15",
+      "reported_window": "may_12_through_14_daily_uploads",
+      "country_scope": "Not specified in Tubular public article",
+      "publisher": "Tubular Labs",
+      "source_ids": [
+        "tubular-zelda-prelaunch-release-2023"
+      ],
+      "measures": [
+        {
+          "id": "friday_uploads",
+          "date": "2023-05-12",
+          "value": 8900,
+          "comparison": "approximately",
+          "unit": "new_video_uploads",
+          "scope": "Approximate Friday game-related uploaded video objects"
+        },
+        {
+          "id": "saturday_uploads",
+          "date": "2023-05-13",
+          "value": 7500,
+          "comparison": "approximately",
+          "unit": "new_video_uploads",
+          "scope": "Approximate Saturday game-related uploaded video objects"
+        },
+        {
+          "id": "sunday_uploads",
+          "date": "2023-05-14",
+          "value": 6200,
+          "comparison": "approximately",
+          "unit": "new_video_uploads",
+          "scope": "Approximate Sunday game-related uploaded video objects"
+        }
+      ],
+      "before_window_same_metric": null,
+      "after_window_same_metric": null,
+      "comparable_platform_baseline": null,
+      "unique_people": null,
+      "channels": null,
+      "creator_income": null,
+      "limitations": "Selected proprietary vendor coverage, without same-unit matched previous-week or counterfactual totals. These are uploads, not views or earnings."
     }
   ],
   "research_protocol": {
@@ -124,7 +172,9 @@
       "Views of a single trailer overlap all related video views.",
       "An observed release-window total without a matched baseline cannot establish a causal launch uplift.",
       "Japanese seven-day video views cannot be compared as if commensurate with global one-day trailer views.",
-      "2017/2023 events cannot directly predict 2026 platform growth or creator revenue."
+      "2017/2023 events cannot directly predict 2026 platform growth or creator revenue.",
+      "Zelda monthly video views and game launch daily uploads are different events/units and cannot be summed as total audience.",
+      "Source-claimed percent growth must be checked against displayed numeric endpoints; 153% increase is inconsistent with 40.9M to 62.2M."
     ]
   },
   "unmeasured": {
@@ -136,5 +186,39 @@
     "registered_channel_population": null,
     "viewers_overlap_across_games": null
   },
-  "view_metric_epoch": "Both event periods predate the August 24, 2026 first-frame public-view revision. Current event studies must record revision boundaries."
+  "view_metric_epoch": "Both event periods predate the August 24, 2026 first-frame public-view revision. Current event studies must record revision boundaries.",
+  "prelaunch_view_series": {
+    "id": "tubular_zelda_monthly_related_video_views",
+    "source_id": "tubular-zelda-prelaunch-release-2023",
+    "published_at": "2023-05-19",
+    "geography": "Not separately established in original vendor article",
+    "population": "Vendor-indexed Zelda franchise-related YouTube videos",
+    "unit": "video_view_events",
+    "sampling_frame_verified": false,
+    "months": [
+      {
+        "month": "2022-08",
+        "views_million": 40.9
+      },
+      {
+        "month": "2022-09",
+        "views_million": 62.2
+      },
+      {
+        "month": "2023-01",
+        "views_million": 88
+      },
+      {
+        "month": "2023-02",
+        "views_million": 146
+      }
+    ],
+    "source_claimed_percent_increase_aug_sep": 153,
+    "computed_percent_increase_aug_sep": 52.1,
+    "september_level_percent_of_august": 152.1,
+    "source_percentage_arithmetically_consistent": false,
+    "unique_viewers": null,
+    "creator_profit": null,
+    "trailer_caused_change": null
+  }
 }
