@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "seller_page_creative_comparison_pre_execution_audit",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-analytics-2018",
+    "itch-quality",
+    "itch-indexed",
+    "itch-started"
+  ],
+  "authorized_live_experiment": false,
+  "audited_measurements_are_synthetic": true,
+  "mutable_feature_classes": [
+    "listing_title",
+    "cover_image",
+    "screenshots",
+    "description_copy"
+  ],
+  "immutable_during_comparison": [
+    "game_build",
+    "price_minimum",
+    "download_entitlements",
+    "platform_tags",
+    "release_status",
+    "page_url",
+    "storefront_eligibility"
+  ],
+  "outcome_definitions": {
+    "impression": "one surface display of listing title and thumbnail, not a unique human",
+    "click": "an attributable visit from the counted impression on the same store surface and reporting window; click events are not purchases",
+    "purchase": "a verified completed paid transaction with order timestamp, independently measured; not provided by platform impression aggregates",
+    "rates": {
+      "ctr": "click_events / impressions on a comparable impression frame",
+      "checkout": "completed_paid_orders / eligible_checkout_opportunities only when these are measured and reconciled",
+      "profit": "actual settled receipts minus costs, never infer from ctr"
+    }
+  },
+  "historical_source_scope": {
+    "year": 2018,
+    "impression_and_ctr_retain_last_week_as_described_then": true,
+    "current_2026_metric_retention_independently_confirmed": false,
+    "other_analytics_may_offer_longer_dates": true
+  },
+  "prerequisites": {
+    "baseline_id": "project_id_and_owner_only_analytics",
+    "same_start_and_end": true,
+    "same_browse_surface": true,
+    "same_device_population": true,
+    "impressions_from_compatible_date_range": true,
+    "one_primary_creative_variable_changed": true,
+    "preserve_metadata_truthfulness": true,
+    "no_new_page_to_reset_recent_feed": true,
+    "controlled_allocation_required_for_causal_estimate": true,
+    "concurrent_uncontrolled_platform_changes_absent_or_flagged": true
+  },
+  "no_purchases_or_account_access": true,
+  "population_representative_publisher_income": null,
+  "platform_acquisition_conversion": null,
+  "causal_lift_without_randomization": null,
+  "trial_status": "design_only_no_execution",
+  "known_risks": [
+    "sequential release ages differ",
+    "feed placement and external referrals vary",
+    "owner impressions may include repeat display events",
+    "historical seven-day impression collection might differ in the current interface",
+    "unmeasured subscriber traffic can shift visits",
+    "a clicked thumbnail does not demonstrate payment"
+  ]
+}

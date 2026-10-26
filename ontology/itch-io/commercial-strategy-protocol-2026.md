@@ -16,6 +16,8 @@
 
 Sources include [pricing](https://itch.io/docs/creators/pricing), [HTML5 limitations](https://itch.io/docs/creators/html5), [payments](https://itch.io/docs/creators/payments), [sale mechanisms](https://itch.io/docs/creators/sales), and [a known differently timed cross-store case](https://mixolumia.com/postmortem/). The last is an example of a confounded comparison, not a general result.
 
+The [project-page creative comparison gate](creative-comparison-audit-2026.md) tests prospective title, cover, screenshot and copy comparisons against surface/window consistency and forbids claims about paid customers from impression CTR alone. All example numbers are synthetic.
+
 ## Experiment integrity
 
 Record each game's eligible audience and release age before comparing. Track **actual paid orders, refunds, final seller receipts, and development/marketing labor**; do not treat view counts, page visits, demo downloads or jam votes as customer sales. A page may be unindexed during launch even though accessible by direct URL. Randomized exposure may be unavailable in marketplace ranking; in that case mark estimates *observational* and report confounding instead of pretending causal inference.
