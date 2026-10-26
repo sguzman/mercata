@@ -737,10 +737,12 @@ try{
     assert((await developerPanel.textContent()).includes('not YouTube-exclusive'));
     assert((await developerPanel.textContent()).includes('no respondent records copied'));
     const commentNorms=page.locator('.comment-norms-evidence');
-    assert.equal(await commentNorms.locator('.comment-norms-card').count(),2,'Missing distinct peer-reviewed comment samples');
+    assert.equal(await commentNorms.locator('.comment-norms-card').count(),3,'Missing distinct peer-reviewed comment samples');
     await commentNorms.locator('summary').click();
     assert((await commentNorms.textContent()).includes('just over 2%'));
     assert((await commentNorms.textContent()).includes('129 selected videos'));
+    assert((await commentNorms.textContent()).includes('164,611 comments across 393 selected videos'));
+    assert((await commentNorms.textContent()).includes('not verified learner outcomes or paid subscribers'));
     assert((await commentNorms.textContent()).includes('Association is not causation'));
     assert((await commentNorms.textContent()).includes('No individual comments or profiles are collected'));
     const collab=page.locator('.creator-collaboration-evidence');

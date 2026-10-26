@@ -1,6 +1,6 @@
-# Comment norms and participation: two bounded YouTube research cases
+# Comment norms and participation: three bounded YouTube research cases
 
-**Reviewed October 24, 2026.** [Machine findings and source restrictions](comment-norms-evidence.json). These are peer-reviewed **descriptions of selected communities**, not a study of every YouTube comment or a profiler of individual commenters.
+**Reviewed October 26, 2026.** [Machine findings and source restrictions](comment-norms-evidence.json). These are peer-reviewed **descriptions of selected communities**, not a study of every YouTube comment or a profiler of individual commenters.
 
 ## Case A: English-language political channels, published 2025
 
@@ -16,7 +16,15 @@ The researchers categorized presenter types and video framing, then used a mix o
 
 These are **observational associations**, not proof that inducing replies makes commenters kinder, or an endorsement of any particular persuasive message. The small topic-specific sample and automated classification conditions must accompany every citation.
 
-## Why the studies must not be pooled
+## Case C: prerecorded Study With Me videos, published February 2026
+
+The existing [Liu, Deng and Zhou study evidence](creator-collaboration-fandom-2026.md) examines **393 prerecorded YouTube videos** selected through a September 2024 title query for *study with me*, together with **164,611 public comment events**. The sampled videos had more than **400 million historical video views**, but views are not people, students or completed study sessions.
+
+The authors combined comment topic modeling with automated sentiment classification. Their three broad topics concerned **video design and ambience**, **self-reported self-regulation**, and **social interaction and support**; they characterized **roughly half** of the selected visible comment messages as positive, without an independently validated exact positivity share. Mercata does **not** assign a numerical positive percentage or infer an individual user's emotion, academic progress or satisfaction from a machine-coded message.
+
+This is a deliberately selected educational content/community sample, not the population of all YouTube students. Replies, silent viewers, moderators, repeated commenters, topic/language inclusion, older videos and users who leave no public comments are not reconciled to unique individuals. No student outcomes, creator revenue, causality or normal viewer participation rate was measured.
+
+## Why the three studies must not be pooled
 
 | Dimension | Anglophone political channels | Selected climate-change videos |
 | --- | --- | --- |
@@ -26,7 +34,7 @@ These are **observational associations**, not proof that inducing replies makes 
 | Reported numeric anchor | ~50% of comments from just over 2% of commenters | 129 selected videos; no pooled attitude percentage reproduced |
 | Inference not supported | General political opinions or all YouTube commenters | General YouTube climate attitudes or causal effects of replies |
 
-Visible comments are also selected by moderation, content removals, creator policies, language, platform rankings and the propensity to speak. A large comment corpus is not a random sample of viewers. A repeated commenter can shape visible conversation but cannot be equated with multiple distinct people.
+The Study With Me case differs again: its denominator is title-selected prerecorded education videos and their visible comments, not the political authorship concentration or the climate response-thread attitude measure. A numerical all-topic sentiment average cannot be constructed. Visible comments are also selected by moderation, content removals, creator policies, language, platform rankings and the propensity to speak. A large comment corpus is not a random sample of viewers. A repeated commenter can shape visible conversation but cannot be equated with multiple distinct people.
 
 ## Privacy and neutral descriptive work
 

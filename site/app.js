@@ -5181,7 +5181,7 @@ function renderCommentNormsEvidence(data,dossier){
   const section=make('section','comment-norms-evidence');
   const details=make('details','comment-norms-details');
   details.append(make('summary','','Comment behavior in selected YouTube communities · bounded studies'));
-  details.append(make('p','measure-limit','Comment counts are not unique viewers or representative public opinion. Two peer-reviewed studies examine different English-language samples, populations and coding methods.'));
+  details.append(make('p','measure-limit','Comment counts are not unique viewers or representative public opinion. Three independent published case studies use different video and comment selection frames, topics, and text coding; none is a general audience census.'));
   const grid=make('div','comment-norms-grid');
   for(const study of data.studies){
     const card=make('article','comment-norms-card');
@@ -5189,6 +5189,10 @@ function renderCommentNormsEvidence(data,dossier){
       card.append(make('h5','','English-language political channels · 2025 paper'));
       card.append(make('strong','','About half of comments from just over 2% of commenters'));
       card.append(make('p','measure-limit','Higher coded toxicity among prolific commenters in the journal manuscript; Cardiff bibliographic abstract reverses this comparison. Selected sample only, not a political-belief or whole-platform rate.'));
+    }else if(study.id==='study_with_me_comments_2026'){
+      card.append(make('h5','','Study With Me prerecorded learning videos · 2026 paper'));
+      card.append(make('strong','',study.n_comments.toLocaleString('en-US')+' comments across '+study.n_videos+' selected videos'));
+      card.append(make('p','measure-limit','Three coded topics: video ambience, self-regulation self-reports, and social interaction. About half were machine-coded positive, not verified learner outcomes or paid subscribers.'));
     }else{
       card.append(make('h5','','Selected climate-change videos · 2026 paper'));
       card.append(make('strong','',study.n_videos+' selected videos'));
@@ -5199,7 +5203,7 @@ function renderCommentNormsEvidence(data,dossier){
     grid.append(card);
   }
   details.append(grid);
-  details.append(make('p','measure-limit','Commenter identities, political affiliations, population toxicity rates, causal reply effects and moderation labor hours: unknown. No individual comments or profiles are collected.'));
+  details.append(make('p','measure-limit','Commenter identities, population toxicity or positivity rates, measured education gains, causal reply effects, creator profits and moderation labor hours: unknown. No individual comments or profiles are collected.'));
   const corrected=make('a','inline-link','Read manuscript versus abstract discrepancy ↗');
   corrected.href='./ontology/youtube/comment-source-reconciliation-2026.md';corrected.target='_blank';corrected.rel='noopener noreferrer';details.append(corrected);
   const link=make('a','inline-link','Read original study frames, methods and limitations ↗');

@@ -2,11 +2,12 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "bounded_comment_norms_and_participation_studies",
-  "as_of": "2026-10-24",
-  "status": "two_peer_reviewed_nonrepresentative_community_cases",
+  "as_of": "2026-10-26",
+  "status": "three_independent_source_family_observational_comment_cases_not_viewer_population",
   "source_ids": [
     "munger-political-youtube-comments-2025",
-    "aharonson-climate-youtube-comments-2026"
+    "aharonson-climate-youtube-comments-2026",
+    "liu-deng-zhou-2026-study-with-me-comments"
   ],
   "studies": [
     {
@@ -104,6 +105,51 @@
         "Automated classifiers and manual codes estimate attitudes from comments, not identities, actual beliefs or causal effects.",
         "Videos are source-query based from 2021, not a fresh randomized sample of 2026 topics."
       ]
+    },
+    {
+      "id": "study_with_me_comments_2026",
+      "source_id": "liu-deng-zhou-2026-study-with-me-comments",
+      "published": "2026-02",
+      "dataset_observation_period": "September 2024 public title search",
+      "country": null,
+      "language_scope": "Study does not supply population-wide language distribution or independent commenter home countries",
+      "selection": "393 pre-recorded public videos with 'study with me' title-search inclusion as of September 2024 and 164,611 analyzed public comments; title-based, not all education videos",
+      "n_channels": null,
+      "n_videos": 393,
+      "n_comments": 164611,
+      "n_unique_commenters": null,
+      "methods": "selected public-video title-search retrieval; topic modeling and automated sentiment labels on visible comment events",
+      "observed_video_views_lower_bound_exclusive": 400000000,
+      "visible_comment_event_unit_not_viewers": true,
+      "observations": [
+        {
+          "id": "co_study_comment_subjects",
+          "measure": "three_selected_text_topics",
+          "topics": [
+            "video_ambience_and_design",
+            "self_regulation_self_reports",
+            "social_interaction_and_support"
+          ],
+          "denominator": "selected title-filtered visible comment events",
+          "topic_shares_percent": null
+        },
+        {
+          "id": "approximate_positive_language",
+          "measure": "machine_coded_positive_sentiment_comment_events",
+          "approximate_comment_fraction": "about_half",
+          "exact_positive_percent": null,
+          "person_level_emotional_state": null,
+          "learning_improvement": null
+        }
+      ],
+      "limits": [
+        "Selected prerecorded Study With Me video titles are not representative of all education videos, study sessions, students or live streams.",
+        "Visible comment messages are event counts and may include repeated users; 164,611 does not measure unique commenters or students.",
+        "More than 400 million published video-view events from sample videos are not the number of learning viewers, study outcomes or paying community members.",
+        "Topic and sentiment categories come from automated text classification, not verified psychological wellbeing or academic progress.",
+        "No randomized video design intervention, comment moderation cost, causal social reinforcement, creator earnings or comment-language population was observed.",
+        "No real usernames, text bodies, channel identifiers or private audience records are imported into Mercata."
+      ]
     }
   ],
   "shared_analysis_axes": [
@@ -125,7 +171,9 @@
     "Do not sum sample counts across studies or treat study-selected toxicity scores as interchangeable measures.",
     "Do not claim that replies cause more constructive conversations from correlations alone.",
     "Do not generalize anglophone politics or selected English-language climate videos to all YouTube communities or countries.",
-    "Do not imply that visible public comments represent all viewers or the community's true opinion distribution."
+    "Do not imply that visible public comments represent all viewers or the community's true opinion distribution.",
+    "No cross-topic claim that sentiment positivity in Study With Me equals a viewer-level wellbeing, learning or retention effect.",
+    "Do not pool political-channel commenter activity, climate reply sentiment and Study With Me selected visible comment topics as the same population or rate."
   ],
   "unknowns": {
     "platform_wide_commenter_population": null,

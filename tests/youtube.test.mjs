@@ -909,7 +909,7 @@ test('Selected political and climate comment studies retain distinct populations
  ]);
  const sources=new Set(dossier.evidence.map(x=>x.id));
  assert.equal(model.kind,'bounded_comment_norms_and_participation_studies');
- assert.deepEqual(model.studies.map(x=>x.id),['political_anglophone_2025','selected_climate_2026']);
+ assert.deepEqual(model.studies.map(x=>x.id),['political_anglophone_2025','selected_climate_2026','study_with_me_comments_2026']);
  assert(model.source_ids.every(id=>sources.has(id)));
  assert(model.studies.every(x=>sources.has(x.source_id)));
  const politics=model.studies[0];
@@ -923,6 +923,13 @@ test('Selected political and climate comment studies retain distinct populations
  assert.equal(climate.dataset_observation_period,'March 2021 query-based candidate retrieval');
  assert(climate.observations.every(x=>x.absolute_rate===null));
  assert.equal(climate.observations[1].causal_effect,null);
+ const study=model.studies[2];
+ assert.equal(study.n_videos,393);
+ assert.equal(study.n_comments,164611);
+ assert.equal(study.n_unique_commenters,null);
+ assert.equal(study.observations[1].exact_positive_percent,null);
+ assert.equal(study.observations[1].learning_improvement,null);
+ assert.equal(study.visible_comment_event_unit_not_viewers,true);
  assert(model.prohibit.some(x=>x.includes('targeted political persuasion')));
  assert(model.prohibit.some(x=>x.includes('usernames')||x.includes('comment strings')));
  assert(Object.values(model.unknowns).every(x=>x===null));
