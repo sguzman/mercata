@@ -5211,7 +5211,7 @@ function renderCompetitionSample(data,dossier) {
   const section=make('section','competition-sample');
   const details=make('details','competition-sample-details');
   details.append(make('summary','','Creator competition: one commercial analytics sample'));
-  details.append(make('p','measure-limit','Metricool analyzed '+data.source.sampled_videos.toLocaleString()+' videos from '+data.source.sampled_accounts.toLocaleString()+' accounts. The recruitment frame and exact date windows are not fully disclosed; these figures are not universal creator success rates.'));
+  details.append(make('p','measure-limit','Metricool analyzed '+data.source.sampled_videos.toLocaleString()+' videos from '+data.source.sampled_accounts.toLocaleString()+' accounts. February 2025 and February 2026 compare per-post video outcomes; the subscriber-tier tracking interval and selection frame remain unverified. These are not universal creator success rates.'));
   const groups=make('div','competition-grid');
   for(const item of data.cohort_tier_transitions){
     const cell=make('article','competition-tier');

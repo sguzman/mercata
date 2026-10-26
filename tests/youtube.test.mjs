@@ -1667,6 +1667,9 @@ test('Commercial competition sample does not invent new-channel success probabil
   assert.equal(sample.source.sampled_accounts,71177);
   assert.equal(sample.source.sampled_videos,799718);
   assert.equal(sample.source.representative_of_all_youtube_creators,false);
+  assert.deepEqual(sample.source.video_performance_comparison_months,['2025-02','2026-02']);
+  assert.equal(sample.source.subscriber_tier_transition_exact_months_verified,null);
+  assert.equal(sample.source.public_shorts_comparison_crosses_2025_view_rule_break,true);
   assert(sample.cohort_tier_transitions.some(x=>x.tier==='small' && x.share_moved_up_percent===16.01));
   assert(sample.traffic_source_share_of_sampled_organic_views.some(x=>x.id==='shorts_feed' && x.percent===61));
   assert(sample.traffic_source_share_of_sampled_organic_views.every(x=>x.denominator==='sampled organic view events'));
