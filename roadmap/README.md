@@ -163,3 +163,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io platform QA research (2026-10-26):** official Windows/macOS/Linux app packaging and HTML5 desktop/mobile publishing test requirements, without claiming builds were executed. 78% → 79% (Δ +1 pp, exact 78.66%). [QA crosswalk](../ontology/itch-io/cross-platform-release-qa-2026.md).
+
+
+**itch.io small game labor and game-jam examples (2026-10-26):** creator reports of two-week free nine-minute HTML5 project, 140 solo jam hours, and 51 team project-phase hours with all payment outcomes unobserved; team hours are not person-hours. 79% → 79% (Δ +0 pp; exact 79.04%). [Cases](../ontology/itch-io/small-game-production-effort-2025-2026.md).
