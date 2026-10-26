@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {validateSearchStudyFrame,bucketVideoAge,inferEvergreenFromTrends} from '../site/evergreen-search-window-audit.mjs';
+import {validateSearchStudyFrame,bucketVideoAge,inferEvergreenFromTrends,auditInstructionalVideoSurveyContext} from '../site/evergreen-search-window-audit.mjs';
 const load=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 test('Evergreen research is an authorized source-tagged video cohort, not observed creator profit',async()=>{
  const [m,d]=await Promise.all([load('ontology/youtube/evergreen-search-window-protocol.json'),load('specimens/youtube.json')]);
@@ -39,4 +39,24 @@ test('Site renders evergreen search method and unknown owner observations',async
  assert(src.includes('renderEvergreenSearchWindows'));
  assert(src.includes('evergreen-search-window-protocol.json'));
  assert(src.includes('not absolute keyword search volume or creator earnings'));
+});
+
+test('Kantar instructional preferences are an attitudinal sample, not repeated owner search traffic',async()=>{
+ const [m,d,s]=await Promise.all([load('ontology/youtube/evergreen-search-window-protocol.json'),load('specimens/youtube.json'),load('ontology/youtube/shopping-funnel-evidence-2025.json')]);
+ assert.deepEqual(auditInstructionalVideoSurveyContext(m,new Set(d.evidence.map(x=>x.id)),s),{valid:true,errors:[]});
+ assert.equal(m.instructional_video_survey_context.full_sample_n,2160);
+ assert.deepEqual(m.instructional_video_survey_context.observations.map(x=>x.value_percent),[69,70,63,91]);
+ assert.equal(m.instructional_video_survey_context.question_specific_sample_n,null);
+ assert.equal(m.instructional_video_survey_context.actual_evergreen_search_queries,null);
+ assert.equal(m.instructional_video_survey_context.income_from_tutorials,null);
+});
+test('The survey cannot supply missing keyword volumes or actual returning people',async()=>{
+ const [m,d,s]=await Promise.all([load('ontology/youtube/evergreen-search-window-protocol.json'),load('specimens/youtube.json'),load('ontology/youtube/shopping-funnel-evidence-2025.json')]);
+ const ids=new Set(d.evidence.map(x=>x.id));
+ const a=structuredClone(m);a.instructional_video_survey_context.verified_repeat_search_users=123;
+ assert(auditInstructionalVideoSurveyContext(a,ids,s).errors.includes('invented tutorial repeat search or earnings outcome'));
+ const b=structuredClone(m);b.instructional_video_survey_context.observations[0].value_percent=95;
+ assert.equal(auditInstructionalVideoSurveyContext(b,ids,s).valid,false);
+ const c=structuredClone(m);c.instructional_video_survey_context.question_specific_sample_n=2160;
+ assert(auditInstructionalVideoSurveyContext(c,ids,s).errors.includes('survey population or question-level precision distorted'));
 });

@@ -35,3 +35,13 @@ The research should predeclare: eligible owner cohort, topic selection rules, di
 No owner channel reports, independent absolute keyword search volume, viewer conversions or verified creator profit were accessed. Test fixtures are designed only to validate window and API query compatibility.
 
 [Measurement matrix](evergreen-search-window-protocol.json) · [Audit](../../site/evergreen-search-window-audit.mjs) · [Tests](../../tests/evergreen-search-window-audit.test.mjs).
+
+
+## Separate 2025 instructional-video preference evidence (not repeat search)
+
+[Google's August 2025 report of a Kantar survey](https://business.google.com/us/think/search-and-video/video-first-content-marketing-strategy/) describes **2,160 selected U.S. weekly video viewers ages 18–64**, surveyed January 28–February 10, 2025. It reports that **69%** preferred video for learning a new skill, **70%** for learning to build something, and **63%** for cooking instruction, compared with text or audio alternatives. **91%** agreed that YouTube offers the best instructional content. The first three are **general video preferences**; the fourth is a subjective YouTube rating. They must not be combined into an absolute share of YouTube searches or a probability of channel success.
+
+The sponsor-published survey's per-question sample counts and uncertainty are not supplied in the cited overview. A separate Google article reports a **1,001-person YouTube-viewer subset**, but that does not license assigning n=1,001 or n=2,160 to every question.
+
+These results motivate study categories like how-to tutorials, building/craft instruction, cooking instruction and reference explainers, but do **not measure** long-tail keyword search volume, 31–180-day returns, 181–365-day returns, repeat individual viewers, paid conversions or creator income. A video that respondents say would be useful is not a video with recorded owner-Analytics search referrals. The three disjoint observation windows and permissioned owner Analytics remain necessary to test whether a specific tutorial has persistent search-driven demand.
+

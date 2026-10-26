@@ -289,6 +289,11 @@ try{
     assert((await childCountry.textContent()).includes('United Kingdom 8–14 96%'));
     assert((await childCountry.textContent()).includes('United States 2–4 84%'));
     assert((await childCountry.textContent()).includes('No common international rank'));
+    const learningSurvey=page.locator('.evergreen-search-study .instructional-video-survey');
+    assert.equal(await learningSurvey.count(),1,'Missing source-bounded instructional demand survey');
+    assert((await learningSurvey.textContent()).includes('2,160 U.S. weekly video viewer survey respondents'));
+    assert((await learningSurvey.textContent()).includes('learning a skill 69%'));
+    assert((await learningSurvey.textContent()).includes('do not measure actual search visits'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));

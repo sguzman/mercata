@@ -2,12 +2,13 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "search_driven_tutorial_long_tail_study_design",
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "source_ids": [
     "yt-studio-trends-demand-2026",
     "yt-reach-source-types-2026",
     "yt-channel-playlist-report-rules-2026",
-    "analytics-limits"
+    "analytics-limits",
+    "google-kantar-future-video-us-2025"
   ],
   "official_features": [
     {
@@ -148,6 +149,58 @@
     "creator_lifetime_ad_earnings_from_tutorials": null,
     "unique_returning_viewers": null,
     "causal_tutorial_format_impact": null,
-    "forecast_opportunity_probability": null
+    "forecast_opportunity_probability": null,
+    "instructional_video_search_to_repeat_watching": null
+  },
+  "instructional_video_survey_context": {
+    "id": "google_kantar_us_2025_instructional_preferences",
+    "source_id": "google-kantar-future-video-us-2025",
+    "publisher": "Google / Kantar",
+    "publication_year": 2025,
+    "study_dates": "2025-01-28_to_2025-02-10",
+    "population": "U.S. weekly video viewers ages 18–64",
+    "full_sample_n": 2160,
+    "question_specific_sample_n": null,
+    "overall_youtube_viewer_subset_n_separately_reported": 1001,
+    "methodology": "sponsor_published_survey_of_stated_video_preferences_and_opinions",
+    "observations": [
+      {
+        "id": "learn_new_skill_video_preferred",
+        "value_percent": 69,
+        "predicate": "prefers_video_versus_text_or_audio_for_learning_new_skill",
+        "is_youtube_only": false
+      },
+      {
+        "id": "learn_to_build_video_preferred",
+        "value_percent": 70,
+        "predicate": "prefers_video_versus_text_or_audio_for_building_something",
+        "is_youtube_only": false
+      },
+      {
+        "id": "learn_to_cook_video_preferred",
+        "value_percent": 63,
+        "predicate": "prefers_video_versus_text_or_audio_for_cooking",
+        "is_youtube_only": false
+      },
+      {
+        "id": "youtube_best_instructional_agreement",
+        "value_percent": 91,
+        "predicate": "agrees_youtube_has_best_instructional_content",
+        "is_youtube_only": true
+      }
+    ],
+    "actual_evergreen_search_queries": null,
+    "verified_repeat_search_users": null,
+    "recurring_tutorial_watch_minutes": null,
+    "income_from_tutorials": null,
+    "causal_effect_of_video_instruction": null,
+    "inferred_search_volume": null,
+    "claim_limitations": [
+      "Survey self-reported video preference is not observed YouTube search traffic, demand by keyword, or verified repeat viewing.",
+      "The full n=2160 is not the published per-question base, and n=1001 referenced YouTube-viewer subset cannot be applied automatically to each quoted result.",
+      "Stated preference for learning, building or cooking does not independently establish a YouTube-only content category or creator earning opportunity.",
+      "Sponsor-presented U.S. weekly adult video viewers do not constitute a worldwide or all-age cohort.",
+      "Combine with authorized age-window YouTube Analytics observations only after explicit compatible units, sampling and response controls are established."
+    ]
   }
 }

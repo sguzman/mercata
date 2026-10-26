@@ -2642,7 +2642,19 @@ function renderEvergreenSearchWindows(model,dossier){
   const card=make('article','ownership-card');
   card.append(make('h5','',name));card.append(make('strong','',value));card.append(make('p','measure-limit',limit));grid.append(card);
  }
- details.append(grid);details.append(audienceSources(model.source_ids,dossier));
+ details.append(grid);
+ const study=model.instructional_video_survey_context;
+ if(study?.observations?.length===4){
+  const panel=make('div','instructional-video-survey');
+  panel.append(make('h5','','Instructional learning demand: reported preferences, not returning searches'));
+  panel.append(make('p','measure-limit',study.full_sample_n.toLocaleString('en-US')+
+   ' U.S. weekly video viewer survey respondents in 2025. Preferred video for learning a skill '+study.observations[0].value_percent+
+   '%, building '+study.observations[1].value_percent+'%, and cooking '+study.observations[2].value_percent+
+   '%. '+study.observations[3].value_percent+'% agreed YouTube has the best instructional content.'));
+  panel.append(make('p','measure-limit','The first three items concern video generally, not specifically YouTube. These self-reports do not measure actual search visits, long-tail retention, distinct repeat viewers, or creator income.'));
+  panel.append(audienceSources([study.source_id],dossier));details.append(panel);
+ }
+ details.append(audienceSources(model.source_ids,dossier));
  const link=make('a','inline-link','Read cohort design and attribution constraints ↗');
  link.href='./ontology/youtube/evergreen-search-window-protocol.md';link.target='_blank';link.rel='noopener noreferrer';
  details.append(link);section.append(details);return section;
