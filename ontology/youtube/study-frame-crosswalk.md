@@ -1,9 +1,10 @@
 # Survey and analytics-frame crosswalk — no pooled YouTube population estimate
 
-**Audited October 24, 2026.** [Machine-readable frame audit](study-frame-crosswalk.json). Seven source frames used in Mercata's research have different people, time windows, measurement units and recruitment.
+**Audited October 24, 2026.** [Machine-readable frame audit](study-frame-crosswalk.json). Eight source frames used in Mercata's research have different people, time windows, measurement units and recruitment.
 
 | Study | Declared selection frame and period | Sample size / unit | Outcome actually observed |
 | --- | --- | --- | --- |
+| [Pew 2025 U.S. adults](https://www.pewresearch.org/internet/2025/11/20/americans-social-media-use-2025/) | U.S. adults 18+, NPORS web/mail/phone, February–June 2025 | **5,022** adult respondents | **Self-reported ever use of YouTube**; not the separate 5,123-person ATP daily-use sample |
 | [Pew 2026 U.S. adults](https://www.pewresearch.org/internet/fact-sheet/social-media/) | U.S. adults 18+, NPORS web/mail/phone, January–June 2026 | 5,511 survey respondents | **Self-reported ever use of YouTube** |
 | [YouTube/NRG U.S. online respondents 14–29](https://blog.youtube/culture-and-trends/youtube-culture-trends-modern-mainstream-research/) | April 2026, ages 14–29 including minors | 496 survey respondents | Self-reported niche/fandom viewing and recognition |
 | YouTube/NRG U.S. online respondents 14–44 | April 2026, different age window and question set | 939 survey respondents | Attitudes about interest exploration |
@@ -35,3 +36,7 @@ Where each published survey's **question-specific respondent count is missing**,
 Before combining surveys or building trends, demand the same unit (person, channel, view or dollar), the same question, jurisdiction, time window and eligibility, compatible sampling/weighting and a documented uncertainty/attrition model. When an overlap is not measured, maintain separate estimates or defensible bounds as described in the [audience overlap protocol](audience-overlap.md).
 
 The [creator income study protocol](newcomer-income-cohort.md) still requires a first-entry cohort including zero earners. This audit is a validity safeguard, not a measured creator population or revenue distribution.
+
+## The two NPORS waves versus daily-use panels
+
+Pew's 2025 and 2026 NPORS studies both collected general U.S.-adult **ever-used-YouTube** responses using web, mail and telephone and report labeled income, education and residence categories. They were **independent respondent samples** of 5,022 and 5,511 adults, not repeated observations of the same people. The [paired descriptive comparison](us-demographic-use-2026.md) records source dates and small rounded point-estimate differences; it does not establish survey-adjusted significance, causal shifts, or unique active users. In contrast, the November 2025 published report's **5,123-person ATP daily-visit survey** is a **different questionnaire, timeframe and panel**. It cannot replace the 2025 NPORS denominator for education/income/residence YouTube ever-use tables.

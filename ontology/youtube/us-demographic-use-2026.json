@@ -132,7 +132,8 @@
     "Pew's 2026 mixed collection modes require separate compatibility review before constructing historical causal trends.",
     "Education, income and residence are descriptive associations, not causal effects.",
     "The survey does not yield joint income-by-community or income-by-education intersections.",
-    "Pew 2025 parents reporting child daily viewing uses adjusted 2023-dollar family income tiers; unlike Pew 2026 adult ever-use nominal household income brackets."
+    "Pew 2025 parents reporting child daily viewing uses adjusted 2023-dollar family income tiers; unlike Pew 2026 adult ever-use nominal household income brackets.",
+    "The 2025-versus-2026 education, income and residence contrasts are rounded descriptive point-estimate differences from two separately recruited NPORS samples, not verified significance tests or a person-level usage panel."
   ],
   "unmeasured": {
     "youtube_viewer_income_composition": null,
@@ -144,7 +145,10 @@
     "creator_income_by_stratum": null,
     "causal_effects": null,
     "parent_reported_child_income_tier_unique_daily_viewers": null,
-    "child_daily_use_income_by_age_joint_table": null
+    "child_daily_use_income_by_age_joint_table": null,
+    "significance_of_2025_2026_education_change": null,
+    "significance_of_2025_2026_residence_change": null,
+    "significance_of_2025_2026_income_change": null
   },
   "parent_reported_child_youtube_income_2025": {
     "source_id": "pew-parents-child-youtube-2025",
@@ -204,6 +208,153 @@
       "Subgroup sample sizes, margins, parent-by-child-age joint cells and causal economic effects are not supplied by the public summary; do not borrow the whole parent sample n or its overall error as cell-level precision.",
       "Among-income-group prevalence is not the income composition of viewers; percentages cannot be added to 100% or converted into active audience counts.",
       "No historical creator revenue, customer purchase outcomes, child identities, sensitive individual profiles or sample microdata have been accessed."
+    ]
+  },
+  "cross_survey_2025_2026": {
+    "id": "pew_two_independent_us_adult_npors_ever_use_surveys",
+    "question": "ever use YouTube",
+    "sources": [
+      "pew-us-daily-youtube-2025",
+      "pew-us-adults-2026"
+    ],
+    "fieldwork": [
+      {
+        "id": "pew_npors_2025",
+        "source_id": "pew-us-daily-youtube-2025",
+        "published_at": "2025-11-20",
+        "collection_start": "2025-02-05",
+        "collection_end": "2025-06-18",
+        "sample_n": 5022,
+        "modes": [
+          "web",
+          "mail",
+          "phone"
+        ],
+        "study": "National Public Opinion Reference Survey",
+        "country": "United States",
+        "population": "U.S. adults age 18+",
+        "outcome": "self_reported_ever_used_youtube",
+        "stratum_specific_n": null,
+        "stratum_specific_moe_pp": null
+      },
+      {
+        "id": "pew_npors_2026",
+        "source_id": "pew-us-adults-2026",
+        "published_at": "2026-10-19",
+        "collection_start": "2026-01-30",
+        "collection_end": "2026-06-18",
+        "sample_n": 5511,
+        "modes": [
+          "web",
+          "mail",
+          "phone"
+        ],
+        "study": "National Public Opinion Reference Survey",
+        "country": "United States",
+        "population": "U.S. adults age 18+",
+        "outcome": "self_reported_ever_used_youtube",
+        "stratum_specific_n": null,
+        "stratum_specific_moe_pp": null
+      }
+    ],
+    "strata": [
+      {
+        "id": "education",
+        "category_ids": [
+          "high_school_or_less",
+          "some_college",
+          "college_graduate"
+        ],
+        "percent_2025": [
+          78,
+          87,
+          89
+        ],
+        "percent_2026": [
+          77,
+          87,
+          90
+        ],
+        "point_delta_pp": [
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "id": "residence",
+        "category_ids": [
+          "urban",
+          "suburban",
+          "rural"
+        ],
+        "percent_2025": [
+          85,
+          87,
+          79
+        ],
+        "percent_2026": [
+          87,
+          86,
+          78
+        ],
+        "point_delta_pp": [
+          2,
+          -1,
+          -1
+        ]
+      },
+      {
+        "id": "household_income",
+        "category_ids": [
+          "under_30000",
+          "30000_69999",
+          "70000_99999",
+          "100000_plus"
+        ],
+        "percent_2025": [
+          77,
+          84,
+          87,
+          89
+        ],
+        "percent_2026": [
+          77,
+          84,
+          86,
+          90
+        ],
+        "point_delta_pp": [
+          0,
+          0,
+          -1,
+          1
+        ]
+      }
+    ],
+    "comparison_unit": "descriptive_percentage_point_difference_in_weighted_point_estimates",
+    "comparability": {
+      "both_same_institute": true,
+      "same_adult_country_scope": true,
+      "same_reported_ever_use_question": true,
+      "both_multimode_npors": true,
+      "respondents_same_people": false,
+      "statistical_significance_test_completed": false,
+      "subgroup_weighted_sample_size_known": false,
+      "subgroup_uncertainty_known": false,
+      "can_estimate_platform_mau": false,
+      "can_estimate_youtube_viewer_demographic_composition": false,
+      "can_identify_causal_demographic_change": false,
+      "panel_design": false,
+      "worldwide_extrapolation_supported": false
+    },
+    "limitations": [
+      "Different independently recruited 2025 and 2026 adult samples; percentages are not an individual longitudinal panel.",
+      "Point differences of -1 to +2 percentage points are descriptive and untested for statistical significance. Do not borrow the 2026 full-sample ±1.8 point error for subgroup changes.",
+      "The 2025 NPORS ever-use group includes 5,022 adult respondents, not the separate 2025 ATP daily-frequency sample of 5,123 respondents cited in the same published report.",
+      "The measured variable is ever-used YouTube among each named adult demographic category; not monthly active users, unique people using YouTube, users belonging to the category, or creator income.",
+      "Comparable names do not establish unchanged weighting, frame composition or category interpretation at a level sufficient for causal inference.",
+      "Income categories are nominal USD household income in U.S. adults; they are not the adjusted 2023-dollar parent/child income tiers of Pew's May 2025 child survey."
     ]
   }
 }

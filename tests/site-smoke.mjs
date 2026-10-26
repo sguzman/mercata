@@ -420,6 +420,15 @@ try{
     assert((await parentIncome.textContent()).includes('55% of parents report child watches YouTube daily'));
     assert((await parentIncome.textContent()).includes('40% of parents report child watches YouTube daily'));
     assert((await parentIncome.textContent()).includes('2023 USD adjusted for regional cost of living'));
+    const waves=demographics.locator('.demographic-npors-two-wave');
+    assert.equal(await waves.count(),1,'Missing separate adult survey comparisons');
+    assert.equal(await waves.locator('.demographic-npors-stratum').count(),3);
+    assert.equal(await waves.locator('.demographic-npors-row').count(),10);
+    assert((await waves.textContent()).includes('5,022 U.S. adults in the 2025 survey'));
+    assert((await waves.textContent()).includes('5,511 in 2026'));
+    assert((await waves.textContent()).includes('High school or less: 78% (2025), 77% (2026)'));
+    assert((await waves.textContent()).includes('not active use'));
+    assert((await waves.textContent()).includes('no change is established as statistically significant'));
     const people=page.locator('.viewer-person-metrics');
     assert.equal(await people.locator('.viewer-person-card').count(),8,'Missing public/owner viewer measurement types');
     await people.locator('summary').click();

@@ -59,3 +59,32 @@ No income/education/residence **composition of actual YouTube users**, absolute 
 The **2025 parent survey measures reported child daily watching**; the **2026 adult survey above measures adult lifetime ever-use**. Their populations, income groups, age ranges, time periods and methods differ. It is incorrect to subtract or pool the 55/51/40 percentages with the adult 77/84/86/90 values, or to infer an income distribution of unique YouTube viewers.
 
 The **3,054 and ±2.2-point survey-wide margin** cannot be assigned to individual income cells: the public account does not report those subgroup sample sizes or margins. Exact age-by-income YouTube viewing, watch-time volume, YouTube Kids versus main platform, causal household-income effects, creator profit and unique child-user counts remain `null`.
+
+## Education, residential community and income: two separate NPORS waves (2025–2026)
+
+Pew’s [November 20, 2025 survey report](https://www.pewresearch.org/internet/2025/11/20/americans-social-media-use-2025/) and [October 19, 2026 fact sheet](https://www.pewresearch.org/internet/fact-sheet/social-media/) describe **two separately recruited U.S.-adult National Public Opinion Reference Survey samples**. The 2025 NPORS surveyed **5,022 adults (February 5–June 18, 2025)**, while the 2026 NPORS surveyed **5,511 adults (January 30–June 18, 2026)**. Both report *ever-used-YouTube* survey percentages in the same named education, income and residential-community categories. They use web, mail and phone modes. The 2025 report also contains a **different**, 5,123-adult American Trends Panel survey of daily visits; those respondents and daily measures are **not used here**.
+
+All three tables give **percent of U.S. adults within each named subgroup reporting ever use**, rather than demographic share among YouTube viewers. The “change” column is only the arithmetic difference of two rounded survey point estimates, in percentage points.
+
+| Educational attainment | 2025 | 2026 | Point difference |
+| --- | ---: | ---: | ---: |
+| High school or less | 78% | 77% | -1 pp |
+| Some college | 87% | 87% | 0 pp |
+| College graduate | 89% | 90% | +1 pp |
+
+| Residential community | 2025 | 2026 | Point difference |
+| --- | ---: | ---: | ---: |
+| Urban | 85% | 87% | +2 pp |
+| Suburban | 87% | 86% | -1 pp |
+| Rural | 79% | 78% | -1 pp |
+
+| Annual household income, nominal USD | 2025 | 2026 | Point difference |
+| --- | ---: | ---: | ---: |
+| Under $30,000 | 77% | 77% | 0 pp |
+| $30,000–69,999 | 84% | 84% | 0 pp |
+| $70,000–99,999 | 87% | 86% | -1 pp |
+| $100,000 or more | 89% | 90% | +1 pp |
+
+**Interpretation boundary:** Pew’s overall survey sample size and whole-sample margin of error do *not* supply the unreported subgroup sample sizes, subgroup uncertainty or a sampling-covariance estimate for the differences. These small point changes are **not evidence of statistically significant trends**, nor of changes for individual people, geographic reasons for viewing, access to creator income, or which groups make up YouTube’s audience. The 2025 and 2026 samples are **not a panel of the same respondents**. Keep the separate **2025 parent-reported child daily-use income frame** above out of this adult ever-use comparison: its income bands are adjusted for family size and location in 2023 dollars and the outcome differs.
+
+The [machine comparison](us-demographic-use-2026.json) records source IDs, time windows, cohort definitions and all unmeasured confidence and causal quantities as explicit `null`.

@@ -656,13 +656,16 @@ test('Independent survey population frames are explicitly nonpoolable',async()=>
  ]);
  const sources=new Set(dossier.evidence.map(x=>x.id));
  assert.equal(cross.kind,'noncomparable_public_study_frames');
- assert.deepEqual(cross.frames.map(x=>x.sample_total_n),[5511,496,939,5095,300,5166,null]);
+ assert.deepEqual(cross.frames.map(x=>x.sample_total_n),[5022,5511,496,939,5095,300,5166,null]);
  assert(cross.frames.every(x=>x.source_ids.every(id=>sources.has(id))));
  assert(cross.frames.every(x=>x.per_item_n===null && x.representative_global_users===false));
  assert.equal(cross.frames.filter(x=>x.may_include_minors===true).length,2);
  assert.equal(cross.frames.find(x=>x.id==='air_2026_monetized_studio').observed_channel_months,3595);
  assert.equal(cross.frames.find(x=>x.id==='air_2026_monetized_studio').includes_zero_earning_creators,false);
  assert.equal(cross.blocked_cross_source_operations.length,6);
+ assert.equal(cross.frames[0].id,'pew_2025_us_adults_npors');
+ assert.equal(cross.frames[0].quantity,'reported_ever_use_of_youtube');
+ assert(cross.frames[0].source_ids.includes('pew-us-daily-youtube-2025'));
  assert.equal(cross.frames.find(x=>x.id==='pew_2026_news_atp').quantity,'regular_youtube_news_consumption_within_us_adults_or_youtube_users');
  assert.equal(cross.frames.find(x=>x.id==='pew_2025_news_composition').sample_total_n,null);
  assert(cross.blocked_cross_source_operations.some(x=>x.id==='pew_npors_vs_atp_2026'));

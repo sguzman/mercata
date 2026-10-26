@@ -1387,6 +1387,33 @@ function renderUsDemographicUse(data,dossier){
     block.append(audienceSources([child.source_id],dossier));
     details.append(block);
   }
+  const waves=data.cross_survey_2025_2026;
+  if(waves?.strata?.length===3&&waves?.fieldwork?.length===2){
+    const panel=make('div','demographic-npors-two-wave');
+    panel.append(make('h5','','Two independent Pew adult NPORS surveys: 2025 versus 2026'));
+    panel.append(make('p','measure-limit',
+      waves.fieldwork[0].sample_n.toLocaleString('en-US')+' U.S. adults in the 2025 survey and '+
+      waves.fieldwork[1].sample_n.toLocaleString('en-US')+
+      ' in 2026. Each response is ever-used YouTube within the named adult subgroup, not active use.'));
+    for(const group of waves.strata){
+      const original=data.strata.find(x=>x.id===group.id);
+      const card=make('div','demographic-npors-stratum');
+      card.append(make('h5','',original?.title||group.id));
+      const rows=make('ul','demographic-npors-rows');
+      for(let i=0;i<group.category_ids.length;i++){
+        const item=make('li','demographic-npors-row');
+        const label=original?.categories?.[i]?.label||group.category_ids[i];
+        const d=group.point_delta_pp[i], sign=d>0?'+':'';
+        item.append(make('span','',label+': '+group.percent_2025[i]+'% (2025), '+
+          group.percent_2026[i]+'% (2026)'));
+        item.append(make('strong','',sign+d+' pp'));
+        rows.append(item);
+      }
+      card.append(rows);panel.append(card);
+    }
+    panel.append(make('p','measure-limit','Descriptive percentage-point differences only: respondents are different people, subgroup sample sizes and uncertainty are unavailable, and no change is established as statistically significant. The separate 2025 daily-use panel is excluded.'));
+    panel.append(audienceSources(waves.sources,dossier));details.append(panel);
+  }
   details.append(audienceSources([data.source_id],dossier));
   const link=make('a','inline-link','Source, subgroup denominators and survey-method limitations ↗');
   link.href='./ontology/youtube/us-demographic-use-2026.md';link.target='_blank';link.rel='noopener noreferrer';

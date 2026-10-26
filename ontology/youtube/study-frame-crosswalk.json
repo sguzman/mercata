@@ -2,10 +2,33 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "noncomparable_public_study_frames",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "source_frame_audit_not_pooled_population_measurement",
   "scope": "Public aggregate research sources with different target populations, study unit, sampling methods and creator outcome selection.",
   "frames": [
+    {
+      "id": "pew_2025_us_adults_npors",
+      "source_ids": [
+        "pew-us-daily-youtube-2025"
+      ],
+      "owner": "Pew Research Center",
+      "date": "2025-02-05_to_2025-06-18",
+      "geography": "United States",
+      "unit": "individual_adult_survey_respondent",
+      "sample_total_n": 5022,
+      "eligibility": "U.S. adults 18+, general-population National Public Opinion Reference Survey with web, mail and telephone collection",
+      "selection": "Pew NPORS address-based probability design and weighting, exact education and residence subgroup counts not supplied in reviewed tables",
+      "quantity": "reported_ever_use_of_youtube",
+      "is_youtube_user_only": false,
+      "is_creator_only": false,
+      "includes_nonusers": true,
+      "includes_zero_earning_creators": null,
+      "per_item_n": null,
+      "age_min": 18,
+      "age_max": null,
+      "may_include_minors": false,
+      "representative_global_users": false
+    },
     {
       "id": "pew_2026_us_adults",
       "source_ids": [
@@ -235,7 +258,9 @@
     "Aggregates covering ages under 18 do not authorize tracing or profiling individual minors.",
     "Selected monetized YouTube channel-months exclude zero earners and cannot estimate first-time creator income.",
     "Three 2026 survey samples and AIR client data are not independent measurements of one population outcome.",
-    "AI, paid creator marketing, public platform views, or advertiser reach do not provide survey-based unique-person identities."
+    "AI, paid creator marketing, public platform views, or advertiser reach do not provide survey-based unique-person identities.",
+    "The 2025 Pew NPORS general adult ever-use sample (5,022) is separate from the 2025 Pew ATP daily-frequency sample (5,123), although both appear in a single published report.",
+    "The 2025 and 2026 NPORS education and residence point estimates are comparable as named-question descriptive adult-survey responses, but separate people and unknown subgroup errors do not support a statistically significant trend finding."
   ],
   "unmeasured": {
     "common_us_youtube_user_frame": null,
