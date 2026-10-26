@@ -259,6 +259,10 @@ try{
     assert.equal(await cadenceCase.count(),1,'Missing bounded beauty cohort research');
     assert((await cadenceCase.textContent()).includes('47 selected South Korean beauty channels'));
     assert((await cadenceCase.textContent()).includes('Abstract-level evidence only'));
+    const audienceSnapshot=page.locator('.post-membership-retention .viewer-snapshot-boundary');
+    assert.equal(await audienceSnapshot.count(),1,'Missing owner-only viewer segmentation panel');
+    assert.equal(await audienceSnapshot.locator('.viewer-snapshot-segment').count(),3,'Missing new/casual/regular segments');
+    assert((await audienceSnapshot.textContent()).includes('Two aggregate snapshots cannot show which new viewers became regular'));
     const returningPanel=page.locator('.post-membership-retention .return-viewer-beauty-panel');
     assert.equal(await returningPanel.count(),1,'Missing selected returning-viewer revenue evidence');
     assert((await returningPanel.textContent()).includes('50 South Korean beauty channels'));

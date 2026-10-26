@@ -24,6 +24,16 @@ A channel's [rolling monthly audience](https://support.google.com/youtube/answer
 
 A credible post-retention study must specify a channel, post exposure/release date, content type, baseline upload cadence, matched outcome windows and confounders, and use independently authorized owner analytics. Matched non-post periods or creator channels could help assess descriptive associations. **Without recipient-to-returning-viewer linkage and controls, do not call any difference causal.**
 
+## A new-viewer-to-regular-viewer funnel is not visible from two audience snapshots
+
+[YouTube Audience Help](https://support.google.com/youtube/answer/9314416?hl=en) defines **monthly audience** as an owner-visible estimate of unique channel viewers in a **rolling 28-day window**, measured back from the selected date range's most recent day. Its [loyalty segment guidance](https://support.google.com/youtube/answer/10246996?hl=en) divides that audience into **new**, **casual** (watching in one to five months of the past year), and **regular** (watching in more than six months of the past year). Private browsing, deleted watch history, and an absence greater than a year can result in a previously known viewer being classified as new.
+
+**Same-snapshot ratios** such as reported regular viewers divided by reported rolling monthly audience are conditional descriptive estimates, *not a conversion rate*. A public video view is an event, not a unique viewer. Subscriber totals, Post impressions, membership transactions, and YouTube video public view counts are incompatible denominators. Privacy suppression and estimation mean missing segment counts must stay unknown.
+
+A second 28-day snapshot can overlap the first, and aggregate counts cannot show that a particular viewer advanced from new to casual to regular. Subtracting regular counts measures a reported **difference in level**, not a number of converted people. The new [aggregate snapshot validator](../../site/viewer-snapshot-crosswalk.mjs) with [regression tests](../../tests/viewer-snapshot-crosswalk.test.mjs) checks owner authorization, source type, exact date and window, and nonnegative reporting values. It never produces individual transitions or claimed Post-caused earnings, and no creator data has been provided for this study.
+
+The [machine record](retention-posts-memberships.json) retains this distinction explicitly; owner-authorization, recurrence and paid cohort measurements remain open research gaps.
+
 ## Paid members, renewals and payments use still other clocks
 
 The [official Memberships Analytics guide](https://support.google.com/youtube/answer/7491256?hl=en) distinguishes:

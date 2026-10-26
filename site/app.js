@@ -4628,6 +4628,25 @@ function renderPostAndMembershipRetention(data,dossier) {
   box.append(make('p','measure-limit','Observational results do not measure a new-to-returning person transition, causal effect of Creator Posts, or representative net creator profit. Relationship to the separate 47-channel Korean study is not deduplicated.'));
   box.append(audienceSources([paper.source_id],dossier));details.append(box);
  }
+ const cross=data.viewer_funnel_comparability;
+ if(cross){
+  const block=make('div','viewer-snapshot-boundary');
+  block.append(make('h5','','New, casual and regular viewers: one 28-day snapshot'));
+  const segments=make('div','post-membership-surfaces');
+  for(const category of cross.viewer_categories){
+   const card=make('article','post-membership-surface viewer-snapshot-segment');
+   card.append(make('h5','',category.id+' viewers'));
+   if(category.id==='new')card.append(make('p','measure-limit',category.note));
+   else card.append(make('p','measure-limit',
+    'Watched this channel in '+category.min_months_watched_last_year+'–'+category.max_months_watched_last_year+' months of the last year.'));
+   segments.append(card);
+  }
+  block.append(segments);
+  block.append(make('p','measure-limit','Owner-only rolling 28-day estimated audience. Public video views and subscribers are not the denominator. Two aggregate snapshots cannot show which new viewers became regular.'));
+  block.append(make('p','measure-limit','No measured person transition, Posts attribution or creator profit; missing owner data remains unknown.'));
+  block.append(audienceSources(cross.source_ids,dossier));
+  details.append(block);
+ }
  details.append(make('p','measure-limit','Regular viewers watched at least monthly for more than six months of the past year. A membership transaction may be a new sign-up or a renewal, not a distinct buyer.'));
  details.append(make('p','measure-limit','Average posting effect, unique membership buyers, renewal rate and net member profit: unknown.'));
  const link=make('a','inline-link','Read official measurement definitions, study design and caveats ↗');
