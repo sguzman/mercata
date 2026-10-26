@@ -7,7 +7,7 @@ export function auditItchSourceRegister(specimen){
   if(ids.has(e.id))issues.push('Duplicate source identifier');
   ids.add(e.id);
   if(typeof e.retrieved_at==='string'&&!/^\d{4}-\d{2}-\d{2}$/.test(e.retrieved_at))issues.push('Bad retrieval date');
-  if(e.published_at!==null&&e.published_at!==undefined&&(typeof e.published_at!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(e.published_at)))issues.push('Bad publication date');
+  if(e.published_at!==null&&e.published_at!==undefined&&(typeof e.published_at!=='string'||!/^\d{4}-\d{2}(?:-\d{2})?$/.test(e.published_at)))issues.push('Bad publication date');
   if(typeof e.url==='string'&&!/^https:\/\//.test(e.url))issues.push('Non-HTTPS source URL');
  }
  for(const c of specimen.claims){
