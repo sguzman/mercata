@@ -30,3 +30,9 @@ Do **not** convert children's animation, anime, gaming/esports, fashion/beauty o
 The original **33 topic IDs and 36 published source observations** remain the audit's historical baseline. On October 26, 2026, Mercata appended a separately attributed **37th selected observation** about *Alien Stage* video-view events under the existing `general-animation` topic. This was **not** a taxonomy split, merger, historical correction or reassignment of an original metric.
 
 The [machine protocol](taxonomy-drift-protocol-2026.json) now records this addition in `post_baseline_source_observations`, with its own date, taxonomy version, source URL, original population, unit and topic. The [regression audit](../../site/taxonomy-drift-audit.mjs) requires every added observation to be declared and rejects changes to the four historical baseline examples. No new viewer population or creator census was inferred.
+
+## Historical baseline field integrity (October 26, 2026)
+
+The 36 original observations are preserved from public [commit `31b81057`](https://github.com/sguzman/mercata/commit/31b81057431d58af837d38f8a4f12a43fe2f6efc). The machine guard records their original ID, topic, source, reporting period, population, value, comparison operator, unit, geographic scope, view-metric epoch, source type, status and limitations. Every future verification compares **all 36** protected rows field-for-field with the current observations, rather than only counting rows or checking four selected examples.
+
+A new observation (including the independently registered Alien Stage event metric) remains permissible when separately admitted under the post-baseline source register. The guard now fails if any original row is deleted, duplicated, silently recoded or changed without a formal version transition. It does **not** claim to independently reproduce publisher view counters or estimate unique viewers.

@@ -19,6 +19,26 @@ export function auditTopicTaxonomyDrift(model,taxonomy,observations){
  }
  if(appended.some(x=>(model?.candidate_overlap_examples||[]).some(z=>z.observation_id===x.id)))
    errors.push('Historical baseline cannot be registered as new');
+ const keys=model?.baseline_observation_fields,records=model?.baseline_observation_rows;
+ const expectedKeys=["id","topic_id","metric","value","comparison","unit","geography","period","population","source_url","source_type","metric_definition_revision","status","limitations"];
+ if(model?.baseline_original_public_commit_sha!=='31b81057431d58af837d38f8a4f12a43fe2f6efc'||
+    !Array.isArray(keys)||keys.join(',')!==expectedKeys.join(',')||
+    !Array.isArray(records)||records.length!==model?.selected_observations_at_baseline||
+    (observations?.observations||[]).length!==values.size)
+    errors.push('Original baseline register invalid or duplicate IDs');
+ else{
+  const seen=new Set();
+  for(const row of records){
+   if(!Array.isArray(row)||row.length!==keys.length||!row[0]||seen.has(row[0])){
+    errors.push('Duplicate or malformed baseline observation');continue;
+   }
+   seen.add(row[0]);
+   const current=values.get(row[0]);
+   const currentFields=current?keys.map(field=>Object.hasOwn(current,field)?current[field]:null):null;
+   if(!current||JSON.stringify(currentFields)!==JSON.stringify(row))
+    errors.push('Historical observation changed or removed');
+  }
+ }
  for(const x of model?.candidate_overlap_examples||[]){
   const original=values.get(x.observation_id);
   if(!original||original.topic_id!==x.original_topic_id||original.source_url!==x.original_source_url||original.metric!==x.original_metric||original.value!==x.original_value||original.period!==x.original_period||original.population!==x.original_population||original.comparison!==x.original_comparison||original.unit!==x.original_unit)errors.push('Historic source/metric moved');

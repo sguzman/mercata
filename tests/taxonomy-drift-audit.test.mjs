@@ -26,3 +26,21 @@ test('New records require explicit after-baseline source frame and cannot silent
  const reclass=structuredClone(m);reclass.post_baseline_source_observations[0].original_topic_id='child-animation';
  assert(auditTopicTaxonomyDrift(reclass,t,o).errors.includes('Undocumented or reclassified post-baseline observation'));
 });
+
+test('All 36 original topic observations stay immutable when a 37th is appended',async()=>{
+ const [m,t,o]=await Promise.all(['ontology/youtube/taxonomy-drift-protocol-2026.json','ontology/youtube/taxonomy.json','ontology/youtube/topic-observations.json'].map(load));
+ assert.equal(m.baseline_observation_rows.length,36);
+ assert.equal(o.observations.length,37);
+ assert.equal(m.baseline_original_public_commit_sha,'31b81057431d58af837d38f8a4f12a43fe2f6efc');
+ assert.deepEqual(auditTopicTaxonomyDrift(m,t,o),{valid:true,errors:[]});
+ const chosen=m.baseline_observation_rows.find(row=>!m.candidate_overlap_examples.some(x=>x.observation_id===row[0]));
+ assert(chosen,'Expected an original observation not in the four illustrative cases');
+ const mutated=structuredClone(o);
+ mutated.observations.find(x=>x.id===chosen[0]).value+=1;
+ assert(auditTopicTaxonomyDrift(m,t,mutated).errors.includes('Historical observation changed or removed'));
+ const omitted=structuredClone(o);
+ omitted.observations=omitted.observations.filter(x=>x.id!==chosen[0]);
+ assert(auditTopicTaxonomyDrift(m,t,omitted).errors.includes('Historical observation changed or removed'));
+ const duplicate=structuredClone(o);duplicate.observations.push(structuredClone(o.observations[0]));
+ assert(auditTopicTaxonomyDrift(m,t,duplicate).errors.includes('Original baseline register invalid or duplicate IDs'));
+});
