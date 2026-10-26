@@ -58,7 +58,7 @@ A [2022 first-year game report and separate payout](starbase-first-year-payout-r
 
 The [source hierarchy, public-rating bias and missing-publisher review](source-evidence-and-survivorship-boundaries-2026.md) closes three existing methodological tasks, checks source-record provenance and preserves unresolved licensing and representative seller-income limitations.
 
-## Missing evidence required for the goal
+The [150-source attribution and reuse-note audit](source-reuse-record-completeness-2026.md) verifies published/retrieved date precision and written reuse notes without claiming third-party copyright clearance; the existing source-record task is accepted on that narrow basis.\n\n## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*
 - **zero sale rate:** All eligible paid-game launches observed at matching 30/90/365-day horizon; *currently unavailable*
