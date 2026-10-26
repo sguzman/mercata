@@ -24,3 +24,9 @@ The existing taxonomy has **33 named topics** and selected source observations f
 Maintain versioned topic IDs, the original source definition, source timing and geography. A rename may preserve historical values only when the predicate truly stays the same. A split requires defensible per-item classification (or a matched joint aggregate), and a merge needs measured deduplication. A cross-listed video can belong to two labels, but its views cannot be counted twice in an undeduplicated platform total.
 
 Do **not** convert children's animation, anime, gaming/esports, fashion/beauty or political-content examples into observed new audiences here. The four examples are methodological tests for **unmeasured overlap**, not actual video-level reclassification or participant profiling. No existing taxonomy rows, observation values, or audience numbers were changed.
+
+## Preserving the original 36 with one newly admitted observation
+
+The original **33 topic IDs and 36 published source observations** remain the audit's historical baseline. On October 26, 2026, Mercata appended a separately attributed **37th selected observation** about *Alien Stage* video-view events under the existing `general-animation` topic. This was **not** a taxonomy split, merger, historical correction or reassignment of an original metric.
+
+The [machine protocol](taxonomy-drift-protocol-2026.json) now records this addition in `post_baseline_source_observations`, with its own date, taxonomy version, source URL, original population, unit and topic. The [regression audit](../../site/taxonomy-drift-audit.mjs) requires every added observation to be declared and rejects changes to the four historical baseline examples. No new viewer population or creator census was inferred.
