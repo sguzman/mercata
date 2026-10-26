@@ -14,6 +14,25 @@ The vendor calls a video a **5× breakout** if its views are at least five times
 
 These format counts reconcile exactly to 555,158, while the headline index contains 558,739 videos: **3,581 objects lack a published comparable multiplier**. Do not classify the missing objects as unsuccessful or quietly insert them into the denominator. Shorts and long-form have different viewing definitions across publication eras; even this internal vendor 0.9-percentage-point comparison is **descriptive, not causal** or proof one format produces more paying audience.
 
+## Six vendor-reported duration bins: association, not optimal duration
+
+The same [October 23 TubeMind report](https://tubemind.io/report) provides a **5× own-channel-same-format median breakout rate by video duration**:
+
+| Publisher's duration bracket | Selected-index 5×+ rate |
+| --- | ---: |
+| Under 1 minute | 10.5% |
+| 1–4 minutes | 8.7% |
+| 4–10 minutes | 9.3% |
+| 10–20 minutes | 8.8% |
+| 20–40 minutes | 9.3% |
+| 40 minutes and longer | 11.4% |
+
+The **40-minute-plus group is highest in this selected study**, but the article does **not** disclose the count of videos in each bracket, publication-age matching, confidence intervals, format membership of the *under-one-minute* category, monetization, or time and cash costs. Its discussion calls these 'long-form' duration bins while presenting a group shorter than a minute; this ambiguity remains unresolved.
+
+These percentages do **not** establish that uploading longer videos *causes* breakout or net-income growth. Long documentaries, music, instructional projects and passive/background formats may have different audience age, production spending, genre and channel characteristics. No observed labor hours, equipment cost or representative creator net earnings by bin are available.
+
+**Keep the eight-minute mid-roll boundary separate.** YouTube's [official ad guidance](https://support.google.com/youtube/answer/6175006?hl=en) permits *eligible* videos of at least eight minutes to offer optional mid-roll slots. That threshold lies **inside TubeMind's 4–10-minute bin** (9.3%), which cannot separate 479-second from 480-second outcomes or verify a single served ad. It is improper to use an outlier views percentage to predict mid-roll delivery, ad revenue, production efficiency or creator wages.
+
 ## Genre and small-channel evidence, without invented probabilities
 
 The provider's **selected category breakout rates** (within its own indexed videos) include Film & Animation 14.6%, Music 13.9%, Howto & Style 10.6%, Education 9.2%, and Gaming 6.0%. Category-specific video sample sizes and selection weights are not published in the summary. The rates do not represent new-creator success, production-adjusted returns or the whole YouTube category.

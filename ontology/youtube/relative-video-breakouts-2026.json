@@ -123,5 +123,80 @@
     "creator_net_profit": null,
     "creator_zero_earnings_share": null,
     "causal_effect_of_upload_duration_or_format": null
+  },
+  "length_bins": {
+    "source_id": "tubemind-2026-video-outlier-index",
+    "publisher_section": "Longer videos break out more often",
+    "binning_note": "Publisher labels the discussion 'long-form', but includes videos under one minute; classification of under-one-minute objects as Shorts or ordinary uploads is not published.",
+    "measure": "proportion_of_vendor_scored_videos_at_or_above_five_times_own_channel_recent_same_format_median",
+    "individual_length_bin_video_denominators": null,
+    "same_age_comparison_controlled": false,
+    "production_hours_by_length": null,
+    "production_cost_by_length": null,
+    "ad_impressions_by_length": null,
+    "matched_niche_channel_age_language_controls": false,
+    "bins": [
+      {
+        "id": "under_1_min",
+        "minimum_seconds_inclusive": 0,
+        "maximum_seconds_exclusive": 60,
+        "reported_5x_percent": 10.5,
+        "publisher_label": "Under 1 min",
+        "n": null
+      },
+      {
+        "id": "1_to_4_min",
+        "minimum_seconds_inclusive": 60,
+        "maximum_seconds_exclusive": 240,
+        "reported_5x_percent": 8.7,
+        "publisher_label": "1–4 min",
+        "n": null
+      },
+      {
+        "id": "4_to_10_min",
+        "minimum_seconds_inclusive": 240,
+        "maximum_seconds_exclusive": 600,
+        "reported_5x_percent": 9.3,
+        "publisher_label": "4–10 min",
+        "n": null
+      },
+      {
+        "id": "10_to_20_min",
+        "minimum_seconds_inclusive": 600,
+        "maximum_seconds_exclusive": 1200,
+        "reported_5x_percent": 8.8,
+        "publisher_label": "10–20 min",
+        "n": null
+      },
+      {
+        "id": "20_to_40_min",
+        "minimum_seconds_inclusive": 1200,
+        "maximum_seconds_exclusive": 2400,
+        "reported_5x_percent": 9.3,
+        "publisher_label": "20–40 min",
+        "n": null
+      },
+      {
+        "id": "40_plus_min",
+        "minimum_seconds_inclusive": 2400,
+        "maximum_seconds_exclusive": null,
+        "reported_5x_percent": 11.4,
+        "publisher_label": "40 min+",
+        "n": null
+      }
+    ],
+    "observed_greatest_rate_bin": "40_plus_min",
+    "may_infer_40min_duration_causes_breakout": false,
+    "may_infer_40min_creator_profit_advantage": false,
+    "may_infer_8min_midroll_ads_from_breakout": false,
+    "midroll_threshold_seconds_independently_from_official_youtube_help": 480,
+    "eight_minute_threshold_inside_publisher_4_to_10_min_bin": true,
+    "notes": [
+      "Proportions are vendor-indexed video events above own channel's same-format median, not a population probability and not sustained creator revenue.",
+      "The 40-minute bin may mix channel maturity, topic, languages, retention and production costs; no controlled comparison.",
+      "No published n per bin, uncertainty intervals, same-video-age adjustment, per-bin monetization, labor or ad inventory.",
+      "The independently official eight-minute mid-roll slot *eligibility* gate falls inside the vendor's 4-to-10-minute bucket, whose 9.3% breakout proportion says nothing about mid-roll ad serving.",
+      "The vendor's under-one-minute bin is not automatically comparable to a long-form-only analysis because the report does not document its Shorts cutoff or per-bin video classification."
+    ]
   }
 }

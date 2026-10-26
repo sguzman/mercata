@@ -34,3 +34,23 @@ test('Audit refuses invented denominator, unsourced payout and fabricated opport
  const z=structuredClone(m);z.proprietary_niche_opportunity_scores_as_empirical_success_probability_allowed=true;
  assert(auditRelativeVideoBreakouts(z,known).errors.some(x=>x.includes('Ranking')));
 });
+
+test('Six publisher duration bins remain noncausal and lack sample denominators or monetization',async()=>{
+ const [m,d]=await Promise.all([read('ontology/youtube/relative-video-breakouts-2026.json'),read('specimens/youtube.json')]);
+ const v=m.length_bins;
+ assert(d.evidence.some(x=>x.id===v.source_id));
+ assert.deepEqual(v.bins.map(x=>x.reported_5x_percent),[10.5,8.7,9.3,8.8,9.3,11.4]);
+ assert(v.bins.every(x=>x.n===null));
+ assert.equal(v.observed_greatest_rate_bin,'40_plus_min');
+ assert.equal(v.midroll_threshold_seconds_independently_from_official_youtube_help,480);
+ assert.equal(v.bins[2].minimum_seconds_inclusive<480&&v.bins[2].maximum_seconds_exclusive>480,true);
+ assert.equal(v.may_infer_40min_duration_causes_breakout,false);
+ assert.equal(v.may_infer_40min_creator_profit_advantage,false);
+ assert.deepEqual(auditRelativeVideoBreakouts(m,new Set(d.evidence.map(x=>x.id))),{valid:true,errors:[]});
+ const changed=structuredClone(m);
+ changed.length_bins.bins[5].n=200;
+ assert(auditRelativeVideoBreakouts(changed,new Set(d.evidence.map(x=>x.id))).errors.some(x=>x.includes('fabricated denominators')));
+ const falseCausal=structuredClone(m);
+ falseCausal.length_bins.may_infer_40min_duration_causes_breakout=true;
+ assert(auditRelativeVideoBreakouts(falseCausal,new Set(d.evidence.map(x=>x.id))).errors.some(x=>x.includes('unsupported')));
+});

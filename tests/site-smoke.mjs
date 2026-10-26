@@ -784,6 +784,10 @@ try{
     assert((await relativeBreakouts.textContent()).includes('9.7% at 5×+ own-channel median'));
     assert((await relativeBreakouts.textContent()).includes('10.6% at 5×+ own-channel median'));
     assert((await relativeBreakouts.textContent()).includes('3,581 of 558,739 index videos'));
+    assert.equal(await relativeBreakouts.locator('.breakout-duration-card').count(),6,'Six noncausal video-length groups required');
+    assert((await relativeBreakouts.textContent()).includes('40 min+ has the highest descriptive rate (11.4%)'));
+    assert((await relativeBreakouts.textContent()).includes('threshold is inside the 4–10-minute vendor bin'));
+    assert((await relativeBreakouts.textContent()).includes('does not prove ads were served or creator profit'));
     assert((await relativeBreakouts.textContent()).includes('No denominators for all indexed under-10K channels'));
     const newcomer=page.locator('.newcomer-income');
     assert.equal(await newcomer.locator('.newcomer-gate').count(),5,'Missing newcomer income methodology gates');

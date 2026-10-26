@@ -2433,6 +2433,23 @@ function renderRelativeVideoBreakouts(model,dossier){
   grid.append(card);
  }
  details.append(grid);
+ const lengths=model.length_bins;
+ if(lengths?.bins?.length){
+  const duration=make('div','breakout-duration-comparison');
+  duration.append(make('h5','','Video duration · six source-reported 5× rates'));
+  const lengthGrid=make('div','ownership-grid');
+  for(const x of lengths.bins){
+   const card=make('article','ownership-card breakout-duration-card');
+   card.append(make('h5','',x.publisher_label));
+   card.append(make('strong','',x.reported_5x_percent.toFixed(1)+'% at 5×+'));
+   card.append(make('p','measure-limit','Vendor relative views; sample n and paid revenue unavailable'));
+   lengthGrid.append(card);
+  }
+  duration.append(lengthGrid);
+  duration.append(make('p','measure-limit','40 min+ has the highest descriptive rate (11.4%) in this selected index, NOT evidence that length causes growth. Under-1-minute format assignment is undocumented.'));
+  duration.append(make('p','measure-limit','YouTube’s separate eight-minute mid-roll eligibility threshold is inside the 4–10-minute vendor bin; this breakout rate does not prove ads were served or creator profit.'));
+  details.append(duration);
+ }
  details.append(make('p','measure-limit',model.unscored_videos.toLocaleString('en-US')+' of '+model.total_indexed_videos.toLocaleString('en-US')+' index videos have no comparable multiplier: do NOT count missing as failures.'));
  const niche=make('div','breakout-small-channel-cases');
  niche.append(make('h5','','Under-10K-subscriber case counts (not newly created channels)'));
