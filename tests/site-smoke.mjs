@@ -347,6 +347,12 @@ try{
     const animeFrame=page.locator('.animation-format-cycles');
     await animeFrame.locator('summary').click();
     assert((await animeFrame.textContent()).includes('outside Japan. View events are not unique viewers'));
+    const animeAdjacent=animeFrame.locator('.anime-cross-platform-context');
+    assert.equal(await animeAdjacent.count(),1);
+    assert((await animeAdjacent.textContent()).includes('United States 22%'));
+    assert((await animeAdjacent.textContent()).includes('Japan 55%'));
+    assert((await animeAdjacent.textContent()).includes('>45 billion US anime streaming minutes'));
+    assert((await animeAdjacent.textContent()).includes('not YouTube or adults alone'));
     await animeFrame.locator('summary').click();
     const declining=page.locator('.declining-topic-audit');
     assert.equal(await declining.locator('.declining-topic-card').count(),4,'Missing candidate decline inference audit');

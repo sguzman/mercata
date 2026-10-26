@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "animation_meme_format_cycle_evidence",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-26",
   "status": "dated_editorial_and_select_fan_survey_observations_not_a_longitudinal_growth_study",
   "taxonomy_ids": [
     "general-animation",
@@ -244,7 +244,9 @@
     "Survey fieldwork was April 2025; U.S. and Mexico publications occurred in 2026. Do not shift survey measurement year to publication year.",
     "Company-selected examples are useful discovery signals, not exhaustive trend censuses or causal studies.",
     "Do not assign age/gender identities to individual creators or viewers. Sensitive demographic inference is prohibited.",
-    "Novelty, repetition and annual cycles require multiple identically defined dated observations before claims of rise/fall or seasonality."
+    "Novelty, repetition and annual cycles require multiple identically defined dated observations before claims of rise/fall or seasonality.",
+    "GEM all-platform anime viewing among surveyed ages 13–65 cannot be relabeled adult-only or YouTube-only anime audiences.",
+    "Nielsen 2025 U.S. streaming minutes and GEM 2025 anime consumer survey use different populations and units and cannot be pooled with 2023 YouTube anime-video events."
   ],
   "anime_view_geography_2023": {
     "source_id": "yt-anime-views-geography-2024",
@@ -287,5 +289,94 @@
       "description": "Separate intended-audience classification with YouTube child-directed feature restrictions",
       "age_rating_inferable": false
     }
-  ]
+  ],
+  "anime_market_adjacent_frames": {
+    "scope": "adjacent_cross_platform_anime_not_youtube_unique_people_or_age_18_plus",
+    "survey": {
+      "source_id": "gem-2026-global-anime-consumer-survey",
+      "published_at": "2026-05-11",
+      "fieldwork": "2025-09_to_2025-10",
+      "sample_approx_total_n": 15000,
+      "number_of_markets": 15,
+      "approx_n_per_market": 1000,
+      "eligible_age_min": 13,
+      "eligible_age_max": 65,
+      "sampling": "online_consumer_survey",
+      "continuous_core_markets": 9,
+      "rates_2025": [
+        {
+          "country": "United States",
+          "percent": 22
+        },
+        {
+          "country": "Japan",
+          "percent": 55
+        },
+        {
+          "country": "China",
+          "percent": 42
+        },
+        {
+          "country": "India",
+          "percent": 41
+        }
+      ],
+      "us_rate_2020_percent": 10,
+      "per_question_sample_n": null,
+      "measured_only_youtube": false,
+      "adult_only_sample": false,
+      "full_paid_report_examined": false,
+      "source_frames_independently_verified": false,
+      "question_wording_full": null,
+      "confidence_intervals": null,
+      "youtube_anime_share": null,
+      "unique_anime_people": null,
+      "adult_only_rate": null,
+      "creator_earnings": null,
+      "notes": "GEM/Interpret public summary of a paid 47-page report; percentages from ages 13–65, all viewing services, not a YouTube-only or adult-only survey. Different sample years, not the same fixed people."
+    },
+    "streaming": {
+      "source_id": "nielsen-2026-us-anime-streaming-2025",
+      "published_at": "2026-04",
+      "year": 2025,
+      "country": "United States",
+      "reported_lower_bound_streaming_minutes": 45000000000,
+      "comparison": ">",
+      "unit": "anime_streaming_minutes",
+      "youtube_specific_minutes": null,
+      "unique_people": null,
+      "adult_only_persons": null,
+      "creator_income": null,
+      "platform_coverage_exact": null,
+      "verified_sampling_method": null,
+      "notes": "Nielsen's commercial narrative describes U.S. anime streaming during 2025, not YouTube watch time or unique YouTube viewers. Cited source does not disaggregate YouTube."
+    },
+    "definitions": [
+      {
+        "id": "anime_related_youtube_videos",
+        "unit": "video_topic_and_fan_edit_events",
+        "not_automatically_adult_only": true,
+        "not_automatically_made_for_kids": true
+      },
+      {
+        "id": "licensed_anime_video_streaming",
+        "unit": "streamed_program_minutes",
+        "not_automatically_adult_only": true,
+        "not_automatically_made_for_kids": true
+      },
+      {
+        "id": "indie_youtube_animation",
+        "unit": "original_independent_animation",
+        "not_automatically_adult_only": true,
+        "not_automatically_made_for_kids": true
+      }
+    ],
+    "inferential_gates": {
+      "may_pool_with_2023_youtube_anime_views": false,
+      "may_infer_youtube_global_mau": false,
+      "may_infer_youtube_creator_income": false,
+      "may_infer_age_18_plus_only": false,
+      "may_combine_duration_and_survey_prevalence": false
+    }
+  }
 }

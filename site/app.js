@@ -4933,6 +4933,19 @@ function renderAnimationFormatCycles(data,dossier){
     details.append(make('p','measure-limit','Anime geography: >'+evidence.percent_lower_bound_exclusive+'% of 2023 global anime-related video views occurred outside Japan. View events are not unique viewers or an adult-audience percentage.'));
     details.append(audienceSources([evidence.source_id],dossier));
   }
+  const market=data.anime_market_adjacent_frames;
+  if(market?.survey?.source_id&&market.streaming?.source_id){
+    const panel=make('div','anime-cross-platform-context');
+    panel.append(make('h5','','Anime outside YouTube: sampled consumers and streaming minutes'));
+    panel.append(make('p','measure-limit','GEM 2025 online survey, ages '+market.survey.eligible_age_min+'–'+market.survey.eligible_age_max+
+      ' across '+market.survey.number_of_markets+' selected markets: '+
+      market.survey.rates_2025.map(x=>x.country+' '+x.percent+'%').join(' · ')+
+      '. Anime use on any service, not YouTube or adults alone.'));
+    panel.append(make('p','measure-limit','Nielsen reports >45 billion US anime streaming minutes in 2025; no YouTube-only viewing or distinct viewer population identified.'));
+    panel.append(make('p','measure-limit','These market survey percentages, streaming durations and 2023 YouTube anime-related view events have incompatible population, age, year and metric units; no creator earnings or adult-only YouTube anime audience estimated.'));
+    panel.append(audienceSources([market.survey.source_id,market.streaming.source_id],dossier));
+    details.append(panel);
+  }
   const timeline=make('div','animation-format-timeline');
   for(const item of data.timeline){
     const card=make('article','animation-format-event');

@@ -1753,3 +1753,24 @@ test('YouTube monetization appeal windows differ between video review, first rej
  assert(d.claims.some(x=>x.id==='ypp-2026-distinct-video-vs-channel-appeal-paths'&&
   x.source_ids.includes('yt-monetization-icons-human-review-2026')));
 });
+
+test('Cross-platform anime reports do not estimate YouTube unique adults or animation creator earnings',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/animation-format-cycles.json'),load('specimens/youtube.json')]);
+ const x=m.anime_market_adjacent_frames,a=x.survey,b=x.streaming,known=new Set(d.evidence.map(x=>x.id));
+ assert(known.has(a.source_id));assert(known.has(b.source_id));
+ assert.equal(a.sample_approx_total_n,15000);assert.equal(a.number_of_markets,15);
+ assert.equal(a.eligible_age_min,13);assert.equal(a.eligible_age_max,65);
+ assert.deepEqual(a.rates_2025.map(z=>z.percent),[22,55,42,41]);
+ assert.equal(a.us_rate_2020_percent,10);
+ assert.equal(a.measured_only_youtube,false);assert.equal(a.adult_only_sample,false);
+ assert.equal(a.youtube_anime_share,null);assert.equal(a.unique_anime_people,null);
+ assert.equal(a.per_question_sample_n,null);assert.equal(a.full_paid_report_examined,false);
+ assert.equal(b.reported_lower_bound_streaming_minutes,45000000000);
+ assert.equal(b.comparison,'>');assert.equal(b.unit,'anime_streaming_minutes');
+ assert.equal(b.youtube_specific_minutes,null);assert.equal(b.unique_people,null);
+ assert(Object.values(x.inferential_gates).every(v=>v===false));
+ assert(d.claims.some(c=>c.id==='gem-2025-15market-anime-viewing-not-youtube'&&c.source_ids.includes(a.source_id)));
+ assert(d.claims.some(c=>c.id==='nielsen-us-anime-2025-streaming-minutes-not-youtube'&&c.source_ids.includes(b.source_id)));
+ assert.equal(m.anime_view_geography_2023.unit,'share_of_video_view_events');
+ assert(Object.values(m.unmeasured).every(v=>v===null));
+});
