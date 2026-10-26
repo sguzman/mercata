@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "first_party_commercial_rules_and_measurement_boundaries",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-payments",
+    "itch-pricing",
+    "itch-started",
+    "itch-indexed",
+    "itch-faq",
+    "itch-html5",
+    "itch-sale",
+    "itch-jams",
+    "itch-interact",
+    "itch-quality",
+    "itch-buying"
+  ],
+  "payment_modes": [
+    {
+      "id": "direct",
+      "merchant_of_record": "seller_payment_provider_account",
+      "buyer_transaction_collection": "configured_paypal_or_stripe",
+      "payout_request_required": false,
+      "checkout_currency": "seller_selected_processor_compatible",
+      "eu_vat_remitter": "seller",
+      "chargeback_liability": "seller",
+      "supports_multi_seller_coop_bundle": false,
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "collected",
+      "merchant_of_record": "itch_io",
+      "buyer_transaction_collection": "itch_io",
+      "payout_request_required": true,
+      "checkout_currency": "USD",
+      "eu_vat_remitter": "itch_io",
+      "chargeback_liability": "itch_io",
+      "supports_multi_seller_coop_bundle": true,
+      "source_ids": [
+        "itch-payments"
+      ]
+    }
+  ],
+  "official_example": {
+    "currency": "USD",
+    "buyer_paid": 10,
+    "platform_share_rate": 0.1,
+    "payment_processor_fixed": 0.3,
+    "payment_processor_rate": 0.029,
+    "platform_share_amount": 1,
+    "processor_fee_amount": 0.59,
+    "proceeds_before_other_costs": 8.41,
+    "source_ids": [
+      "itch-payments"
+    ],
+    "is_current_processor_guarantee": false,
+    "is_creator_profit": false
+  },
+  "collected_payout_conditions": {
+    "minimum_available_usd": 5,
+    "transaction_wait_days": 7,
+    "payout_review_minimum_days": 7,
+    "typical_review_days_low": 10,
+    "typical_review_days_high": 14,
+    "max_in_progress_payouts": 3,
+    "review_needed": true,
+    "tax_interview_required": true,
+    "extended_wait_possible": true,
+    "source_ids": [
+      "itch-payments"
+    ],
+    "universal_first_payment_date": null
+  },
+  "store_status_states": [
+    "private",
+    "public_not_yet_indexed",
+    "public_indexed",
+    "public_deindexed_or_restricted"
+  ],
+  "event_units": [
+    "project_listing",
+    "browser_play",
+    "download_event",
+    "paid_transaction",
+    "refunded_transaction",
+    "paid_product_unit",
+    "seller_account",
+    "developer_person",
+    "net_seller_proceeds"
+  ],
+  "unresolved": {
+    "annual_gmv_usd": null,
+    "monthly_paying_buyers": null,
+    "active_paid_sellers": null,
+    "median_game_sales": null,
+    "median_developer_net_profit": null,
+    "zero_earner_share": null,
+    "first_release_purchase_probability": null,
+    "causal_tagging_sales_lift": null,
+    "causal_game_jam_sales_lift": null
+  },
+  "limitations": [
+    "No seller accounts or private analytics were accessed.",
+    "Platform defaults and illustrative processing fees are not guaranteed for each individual order.",
+    "Available payout cash is not gross revenue and is not developer profit.",
+    "No sales probability or representative creator income statistic follows from creator documentation."
+  ]
+}

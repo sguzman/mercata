@@ -32,3 +32,8 @@ This vocabulary defines *measurement concepts* for future game-market economics 
 - Use unknown rather than zero for unavailable demand, income or conversion statistics.
 
 Research has not begun. There are zero registered measurements, claims, sources or completed task results. Subsequent work must specify comparable time periods, population denominators, jurisdiction, currency, source provenance, methods and limitations.
+
+
+## First research increment
+
+The [commercial rules crosswalk](commercial-rules-2026.md) and [machine evidence](commercial-rules-2026.json) describe source-backed payment routes, pricing, publication versus indexing and game delivery. These observations do not estimate the median developer's income, sales probabilities or population of paying buyers.

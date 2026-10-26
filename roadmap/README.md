@@ -22,3 +22,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io planning checkpoint (2026-10-26):** the existing 84 tasks remain untouched; 160 additional game-selling questions were prepared across 13 workstreams in four phases. [Detailed research plan](../plans/itch-io.md): **0% research completed**. No market facts were collected; YouTube progress remains unchanged.
+
+
+**itch.io source-backed research checkpoint (2026-10-26):** 11 official source records, 30 bounded claims, payout/offer/discovery ontology and tested payment calculation; 31 baseline tasks and 53 detailed tasks advanced. Current mean of all 244 tasks: **21%** (21 pp from the 0% inventory). Market-wide sales and income distributions remain unknown; [research report](../ontology/itch-io/commercial-rules-2026.md).

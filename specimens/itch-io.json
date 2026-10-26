@@ -4,8 +4,13 @@
   "name": "itch.io",
   "official_url": "https://itch.io/",
   "domain": "games",
-  "roles": [],
-  "status": "queued",
+  "roles": [
+    "marketplace",
+    "publishing_outlet",
+    "audience_channel",
+    "payment_processor"
+  ],
+  "status": "researching",
   "created_at": "2026-10-23",
   "color": {
     "hex": "#94DC4B",
@@ -15,10 +20,443 @@
       "h": 132
     }
   },
-  "evidence": [],
-  "claims": [],
+  "evidence": [
+    {
+      "id": "itch-payments",
+      "url": "https://itch.io/docs/creators/payments",
+      "publisher": "itch.io Creator Documentation",
+      "title": "Accepting Payments and Getting Paid",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official site externally linked; only independently authored summaries stored.",
+      "notes": "Current creator help documentation at retrieval; platform policies may change. No seller analytics or transaction data accessed."
+    },
+    {
+      "id": "itch-pricing",
+      "url": "https://itch.io/docs/creators/pricing",
+      "publisher": "itch.io Creator Documentation",
+      "title": "Pricing",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official site externally linked; only independently authored summaries stored.",
+      "notes": "Current creator help documentation at retrieval; platform policies may change. No seller analytics or transaction data accessed."
+    },
+    {
+      "id": "itch-started",
+      "url": "https://itch.io/docs/creators/getting-started",
+      "publisher": "itch.io Creator Documentation",
+      "title": "Your first itch.io page",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official site externally linked; only independently authored summaries stored.",
+      "notes": "Current creator help documentation at retrieval; platform policies may change. No seller analytics or transaction data accessed."
+    },
+    {
+      "id": "itch-indexed",
+      "url": "https://itch.io/docs/creators/getting-indexed",
+      "publisher": "itch.io Creator Documentation",
+      "title": "Getting indexed on Search & Browse",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official site externally linked; only independently authored summaries stored.",
+      "notes": "Current creator help documentation at retrieval; platform policies may change. No seller analytics or transaction data accessed."
+    },
+    {
+      "id": "itch-faq",
+      "url": "https://itch.io/docs/creators/faq",
+      "publisher": "itch.io Creator Documentation",
+      "title": "Creator FAQ",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official site externally linked; only independently authored summaries stored.",
+      "notes": "Current creator help documentation at retrieval; platform policies may change. No seller analytics or transaction data accessed."
+    },
+    {
+      "id": "itch-html5",
+      "url": "https://itch.io/docs/creators/html5",
+      "publisher": "itch.io Creator Documentation",
+      "title": "Uploading HTML5 games",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official site externally linked; only independently authored summaries stored.",
+      "notes": "Current creator help documentation at retrieval; platform policies may change. No seller analytics or transaction data accessed."
+    },
+    {
+      "id": "itch-sale",
+      "url": "https://itch.io/docs/creators/sales",
+      "publisher": "itch.io Creator Documentation",
+      "title": "Hosting a sale or bundle",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official site externally linked; only independently authored summaries stored.",
+      "notes": "Current creator help documentation at retrieval; platform policies may change. No seller analytics or transaction data accessed."
+    },
+    {
+      "id": "itch-jams",
+      "url": "https://itch.io/docs/creators/game-jams",
+      "publisher": "itch.io Creator Documentation",
+      "title": "Hosting a game jam",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official site externally linked; only independently authored summaries stored.",
+      "notes": "Current creator help documentation at retrieval; platform policies may change. No seller analytics or transaction data accessed."
+    },
+    {
+      "id": "itch-interact",
+      "url": "https://itch.io/docs/creators/interact",
+      "publisher": "itch.io Creator Documentation",
+      "title": "Interacting with your fans",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official site externally linked; only independently authored summaries stored.",
+      "notes": "Current creator help documentation at retrieval; platform policies may change. No seller analytics or transaction data accessed."
+    },
+    {
+      "id": "itch-quality",
+      "url": "https://itch.io/docs/creators/quality-guidelines",
+      "publisher": "itch.io Creator Documentation",
+      "title": "Content creator quality guidelines",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official site externally linked; only independently authored summaries stored.",
+      "notes": "Current creator help documentation at retrieval; platform policies may change. No seller analytics or transaction data accessed."
+    },
+    {
+      "id": "itch-buying",
+      "url": "https://itch.io/docs/creators/how-buying-works",
+      "publisher": "itch.io Creator Documentation",
+      "title": "How buying works",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official site externally linked; only independently authored summaries stored.",
+      "notes": "Current creator help documentation at retrieval; platform policies may change. No seller analytics or transaction data accessed."
+    }
+  ],
+  "claims": [
+    {
+      "id": "role-marketplace",
+      "text": "itch.io provides game-page hosting, downloads, checkout/distribution and creator-side usage information.",
+      "source_ids": [
+        "itch-faq",
+        "itch-started"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "This describes platform roles, not revenue, reach or sales volume."
+    },
+    {
+      "id": "listing-private-default",
+      "text": "A newly created project is private by default and can be made public through its visibility settings.",
+      "source_ids": [
+        "itch-started"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Publishing is separate from search/browse indexing and buyer acquisition."
+    },
+    {
+      "id": "free-publication",
+      "text": "Creator documentation says project-page creation, hosting and uploads do not require an upfront listing fee.",
+      "source_ids": [
+        "itch-faq"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No platform listing charge does not mean zero development, payment or tax costs."
+    },
+    {
+      "id": "seller-modes",
+      "text": "Sellers can use direct-to-seller payment collection or collected-by-itch.io payouts; the two routes differ in merchant-of-record status and tax/chargeback handling.",
+      "source_ids": [
+        "itch-payments",
+        "itch-faq"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Jurisdiction and processor configuration can affect a specific account."
+    },
+    {
+      "id": "default-revenue-share",
+      "text": "The platform-share slider supports 0–100% with a documented default illustration of 10%.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "The 10% share is a default/example, not a fixed compulsory rate and not a measured seller average."
+    },
+    {
+      "id": "processor-example",
+      "text": "Official USD example models a $10 buyer payment less $1 platform share and $0.59 processor cost, producing $8.41 before other deductions.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Illustrative 2.9% + $0.30 fees are not a guaranteed processor schedule and are not net profit."
+    },
+    {
+      "id": "gross-dashboard",
+      "text": "itch.io describes its dashboard gross revenue as total amount buyers paid before deductions.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Dashboard gross is neither available payout nor seller profit."
+    },
+    {
+      "id": "payment-gateway",
+      "text": "The platform documents PayPal and Stripe for payment processing and does not itself store buyer payment card information.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Available methods, fees and account eligibility may vary by locale and route."
+    },
+    {
+      "id": "direct-merchant",
+      "text": "Direct-payment sellers connect payment providers and are merchant of record; their provider receives individual transactions.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Availability depends on seller provider onboarding and payment-country rules."
+    },
+    {
+      "id": "collected-merchant",
+      "text": "With collected payments itch.io is merchant of record, handles payout requests and documented EU VAT collection/remittance.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Does not resolve individual seller income taxes, non-EU taxes, or other legal obligations."
+    },
+    {
+      "id": "collected-wait",
+      "text": "Collected payouts require an eligible balance of at least $5, tax interview, configured payout method and a seven-day transaction hold.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "These are conditions, not a guaranteed payment date; adjustments and review can delay funds."
+    },
+    {
+      "id": "payout-review",
+      "text": "Staff review collected payout requests, requiring at least seven days after request and commonly 10–14 days; first-time or flagged sellers may wait longer.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Does not establish a universally applicable first-payment completion date."
+    },
+    {
+      "id": "payout-limit",
+      "text": "Collected sellers are limited to three outstanding payout requests, with further fees possible on transfer and long-unclaimed balances.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Exact final payout fees and individual jurisdiction outcomes are unspecified."
+    },
+    {
+      "id": "collected-currency",
+      "text": "Collected payment mode is denominated in USD; direct mode permits configured currencies conditional on processor settings.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "This is not a claim that any particular non-US account is approved or receives local-currency settlement."
+    },
+    {
+      "id": "price-minimum",
+      "text": "Paid project minimums permit higher voluntary buyer payments; free/donation projects may be downloaded without paying.",
+      "source_ids": [
+        "itch-pricing"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "The 2015 historical aggregate extra-payment statistic on the documentation page is not used as a current platform estimate."
+    },
+    {
+      "id": "free-not-owner",
+      "text": "The pricing documentation distinguishes free downloads without payment from ownership entitlements granted after payment.",
+      "source_ids": [
+        "itch-pricing"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Ownership is a platform file-access concept; it does not prove legal IP ownership."
+    },
+    {
+      "id": "tier-access",
+      "text": "Individually priced files can require additional paid thresholds, and their entitlement differs from basic project-level ownership.",
+      "source_ids": [
+        "itch-pricing"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Individual file minimum changes may affect continued buyer access to that file."
+    },
+    {
+      "id": "discount-bundles",
+      "text": "The storefront supports timed sales, bundles and paid-file levels, with cooperative multi-seller bundles conditioned on payment mode.",
+      "source_ids": [
+        "itch-pricing",
+        "itch-sale",
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Support for a sales mechanism is not evidence that any promotion increases profit."
+    },
+    {
+      "id": "indexed-baseline",
+      "text": "To qualify for indexing, a public project normally needs a cover image plus an available paid, downloadable or browser-playable product.",
+      "source_ids": [
+        "itch-indexed"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Meeting baseline rules does not guarantee ranking, discoverability or purchases."
+    },
+    {
+      "id": "new-seller-review",
+      "text": "First-time paid sellers can have a published page available by direct URL while search/browse indexing awaits review.",
+      "source_ids": [
+        "itch-indexed"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "The guide generally describes review in business days; it is not an SLA for any given seller."
+    },
+    {
+      "id": "search-tag-separation",
+      "text": "itch.io states that direct title search and topical tag-based browsing are distinct discovery mechanisms.",
+      "source_ids": [
+        "itch-indexed"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No public formula, impressions or paid conversion observations established."
+    },
+    {
+      "id": "recent-list-not-strategy",
+      "text": "itch.io specifically cautions that recent-release listings alone are ineffective as a game discovery strategy.",
+      "source_ids": [
+        "itch-indexed"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Editorial guidance, not a measured causal estimate or market-wide acquisition cost."
+    },
+    {
+      "id": "devlog-followers",
+      "text": "Official guidance describes project followers, devlogs, updates and email notifications as promotion/retention mechanisms.",
+      "source_ids": [
+        "itch-indexed",
+        "itch-started",
+        "itch-interact"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Mechanism availability is not measured retained buyer count or incremental sales."
+    },
+    {
+      "id": "seller-analytics",
+      "text": "The seller dashboard provides overview and deeper counts for page views, downloads and purchases.",
+      "source_ids": [
+        "itch-started",
+        "itch-faq"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Owner-only metrics cannot be treated as public seller distributions."
+    },
+    {
+      "id": "html5-package",
+      "text": "HTML5 games can run inside an embedded frame from a single HTML file or zip containing an index.html entry point.",
+      "source_ids": [
+        "itch-html5"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Technical ability does not imply any browser player purchases the game."
+    },
+    {
+      "id": "jam-submission",
+      "text": "Jam submissions are itch.io project pages with distinct jam submission records and optional ratings; they are not paid transactions.",
+      "source_ids": [
+        "itch-jams"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No representative jam-to-paid purchase conversion follows from these mechanics."
+    },
+    {
+      "id": "game-ip",
+      "text": "The creator FAQ says publishers retain ownership of content and itch.io receives only the rights needed to host and show it.",
+      "source_ids": [
+        "itch-faq"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Third-party game assets, work-for-hire terms and IP disputes require independent review."
+    },
+    {
+      "id": "uploads-drm",
+      "text": "The creator FAQ describes distribution of uploaded files without adding itch.io DRM.",
+      "source_ids": [
+        "itch-faq"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "A seller's own DRM or external access requirements are not ruled out by this statement."
+    },
+    {
+      "id": "limited-seller-email",
+      "text": "Buyer emails are available through project interaction controls after a first sale with an at-most-daily send limit.",
+      "source_ids": [
+        "itch-interact"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Does not document repeat-purchase rates or transferable mailing-list rights."
+    },
+    {
+      "id": "quality-deindex",
+      "text": "The platform can deindex low-quality or policy-violating projects without necessarily making their direct URLs unreachable.",
+      "source_ids": [
+        "itch-quality",
+        "itch-indexed"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Documentation is not an estimate of the frequency of deindexing or commercial losses."
+    }
+  ],
   "observations": [],
   "opportunities": [],
   "risks": [],
-  "experiments": []
+  "experiments": [],
+  "updated_at": "2026-10-26",
+  "summary": "Game-selling research active. Official rules for publication, indexing, payments, pricing, seller analytics, file delivery and game jams are documented. Typical developer sales, zero-earner fraction, median profit and causal discovery effects remain unknown."
 }
