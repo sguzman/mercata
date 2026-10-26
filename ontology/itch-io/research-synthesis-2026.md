@@ -56,6 +56,8 @@ The [historically documented referral measurement guide](referral-source-channel
 
 A [2022 first-year game report and separate payout](starbase-first-year-payout-reconciliation-2022.md) now distinguish free-game donation events from mandatory paid units and preserve a 23-cent unreconciled payout arithmetic difference without inventing a fee.
 
+The [source hierarchy, public-rating bias and missing-publisher review](source-evidence-and-survivorship-boundaries-2026.md) closes three existing methodological tasks, checks source-record provenance and preserves unresolved licensing and representative seller-income limitations.
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "source_credibility_units_and_survivorship_research_gate",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-pricing",
+    "gamedevjs-web-survey-2025",
+    "indiegameinsights-itch-2025-genre-rating-study",
+    "canella-open-source-itch-games-2026",
+    "itch-manston-cancelled-2026",
+    "risk-riches-solo-zero-sales-2025"
+  ],
+  "reviewed_source_records": 150,
+  "source_hierarchy": [
+    {
+      "category": "operator_rule",
+      "example_source_ids": [
+        "itch-pricing"
+      ],
+      "can_support": "payment_model_and_rule_description_as_of_source_date",
+      "cannot_support": "2026_marketwide_seller_profit"
+    },
+    {
+      "category": "voluntary_survey",
+      "example_source_ids": [
+        "gamedevjs-web-survey-2025"
+      ],
+      "can_support": "respondent_preference_or_self_report_on_survey_specific_frame",
+      "cannot_support": "unique_itch_paying_population_without_design_based_inference"
+    },
+    {
+      "category": "independent_public_metadata_study",
+      "example_source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "can_support": "observed_ratings_and_public_listed_tags_with_known_selection",
+      "cannot_support": "verified_paid_orders_or_zero_sale_fraction"
+    },
+    {
+      "category": "academic_source_linked_game_sample",
+      "example_source_ids": [
+        "canella-open-source-itch-games-2026"
+      ],
+      "can_support": "tested_repository_technical_characteristics_of_selected_open_source_projects",
+      "cannot_support": "representative_commercial_game_revenue"
+    },
+    {
+      "category": "voluntary_developer_transaction_report",
+      "example_source_ids": [
+        "itch-manston-cancelled-2026",
+        "risk-riches-solo-zero-sales-2025"
+      ],
+      "can_support": "dated_game_specific_claimed_units_or_receipts",
+      "cannot_support": "publisher_population_income_distribution"
+    }
+  ],
+  "rating_bias": {
+    "selection": "reviews_and_ratings_are_optional_selected_user_response_events",
+    "reported_2025_game_study_zero_rating_page_share": 0.81,
+    "source_ids": [
+      "indiegameinsights-itch-2025-genre-rating-study"
+    ],
+    "another_open_source_sample_rated_none_count": 289,
+    "another_open_source_sample_size": 491,
+    "source_ids_technical": [
+      "canella-open-source-itch-games-2026"
+    ],
+    "two_samples_additive": false,
+    "shared_sampling_probability_known": false,
+    "zero_rating_implies_zero_sales": false,
+    "ranked_traffic_implies_profit": false
+  },
+  "survivorship": {
+    "historical_developer_cases_include_reported_abandonment": true,
+    "individual_zero_copy_cases_not_lifetime_zero": true,
+    "missing_delisted_games_count": null,
+    "first_positive_price_launch_frame_excludes_delisted_games": false,
+    "publisher_selection_probability": null,
+    "payments_for_missing_games": null,
+    "zero_sale_fraction": null,
+    "documented_cancellation_source_id": "itch-manston-cancelled-2026",
+    "documented_zero_snapshot_source_id": "risk-riches-solo-zero-sales-2025"
+  },
+  "rights_metadata": {
+    "records_with_source_license_note": 150,
+    "records_with_retrieval_date": 150,
+    "actual_bulk_redistribution_rights_all_verified": false,
+    "known_dataset_license_versions_cleared_for_redistribution": null
+  },
+  "unknown": {
+    "mean_seller_profit": null,
+    "median_seller_profit": null,
+    "paid_2d_buyer_population": null,
+    "genre_sales_profit_gap": null,
+    "percent_ever_zero_sales": null
+  },
+  "scope": "three existing narrowly defined classification/sample bias/planning tasks may be accepted; publication rights clearance and representative economic measurement remain distinct unfinished work"
+}
