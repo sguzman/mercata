@@ -14,6 +14,8 @@ test('itch.io gallery and ontology publication reflect actual active research',(
  assert(o.includes('Research is underway'));
  assert(!o.includes('Research has not begun'));
  assert(o.includes('research-synthesis-2026.md'));
+ assert(o.includes('community-analytics-sample-2026.md'));
+ assert(fs.existsSync(new URL('../ontology/itch-io/community-analytics-sample-2026.md',import.meta.url)));
  assert(app.includes('Commercial evidence and unresolved data'));
  assert(app.includes('Evidence-backed task progress'));
 });

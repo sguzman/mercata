@@ -31,7 +31,7 @@ This vocabulary defines *measurement concepts* for future game-market economics 
 - A representative zero-earner statistic requires a defined cohort and observation window.
 - Use unknown rather than zero for unavailable demand, income or conversion statistics.
 
-Research is underway: 68% is the rounded mean of **244 fixed task-level evidence scores**, not a share of verified platform transactions. The dossier includes official policy sources, dated catalog counts, voluntarily disclosed developer outcomes, and explicit unknowns for representative median developer income, zero-sale share and long-term profitability. See [research synthesis](research-synthesis-2026.md), [sample limitations](community-analytics-2026.md), and [machine evidence](../../specimens/itch-io.json). Research must continue to specify comparable time windows, population denominators, jurisdiction, currency, provenance and limitations.
+Research is underway: 68% is the rounded mean of **244 fixed task-level evidence scores**, not a share of verified platform transactions. The dossier includes official policy sources, dated catalog counts, voluntarily disclosed developer outcomes, and explicit unknowns for representative median developer income, zero-sale share and long-term profitability. See [research synthesis](research-synthesis-2026.md), [sample limitations](community-analytics-sample-2026.md), and [machine evidence](../../specimens/itch-io.json). Research must continue to specify comparable time windows, population denominators, jurisdiction, currency, provenance and limitations.
 
 
 ## First research increment
