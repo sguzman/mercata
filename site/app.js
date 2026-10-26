@@ -3997,6 +3997,15 @@ function renderPostAndMembershipRetention(data,dossier) {
    details.append(make('p','measure-limit','YouTube reported more than '+(postsScale.reported_value/1000000)+' million users engaging with Posts on an average day in September 2026. Independent user deduplication and channel-specific return effects are unknown.'));
    details.append(audienceSources([postsScale.source_id],dossier));
  }
+ const paper=data.beauty_channel_viewer_watchtime_study;
+ if(paper?.channel_sample_n===50){
+  const box=make('div','return-viewer-beauty-panel');
+  box.append(make('h5','','Selected channel revenue association: new and returning watch time'));
+  box.append(make('p','measure-limit','2025 fixed-effects panel of '+paper.channel_sample_n+
+   ' South Korean beauty channels: returning-viewer watch time was the strongest positive revenue predictor among the studied engagement metrics; new-viewer and subscriber watch time also predicted revenue. Likes were not statistically significant.'));
+  box.append(make('p','measure-limit','Observational results do not measure a new-to-returning person transition, causal effect of Creator Posts, or representative net creator profit. Relationship to the separate 47-channel Korean study is not deduplicated.'));
+  box.append(audienceSources([paper.source_id],dossier));details.append(box);
+ }
  details.append(make('p','measure-limit','Regular viewers watched at least monthly for more than six months of the past year. A membership transaction may be a new sign-up or a renewal, not a distinct buyer.'));
  details.append(make('p','measure-limit','Average posting effect, unique membership buyers, renewal rate and net member profit: unknown.'));
  const link=make('a','inline-link','Read official measurement definitions, study design and caveats ↗');

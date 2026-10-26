@@ -1647,3 +1647,22 @@ test('Study With Me participation uses selected public comment events, never uni
  assert.equal(study.youth_profiles_or_comment_bodies_collected,false);
  assert(d.claims.some(c=>c.id==='study-with-me-2026-title-selected-video-comments'&&c.source_ids.includes(study.source_id)));
 });
+
+test('Korean 50-channel engagement panel reports associations, not new-to-returning people or causal revenue',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/retention-posts-memberships.json'),load('specimens/youtube.json')]);
+ const obs=m.beauty_channel_viewer_watchtime_study,sourceIds=new Set(d.evidence.map(x=>x.id));
+ assert(sourceIds.has(obs.source_id));assert(m.source_ids.includes(obs.source_id));
+ assert.equal(obs.channel_sample_n,50);
+ assert.equal(obs.method,'observational_fixed_effects_panel_regression');
+ assert.deepEqual(obs.explanatory_metrics.map(x=>x.id),['new_viewer_watch_time','returning_viewer_watch_time','subscriber_watch_time','likes']);
+ assert.equal(obs.explanatory_metrics[1].reported_relationship,'strongest_positive_association_in_examined_metrics');
+ assert.equal(obs.explanatory_metrics[3].reported_relationship,'no_statistically_significant_association_reported');
+ assert(obs.explanatory_metrics.every(x=>x.numeric_coefficient===null));
+ assert.equal(obs.viewer_status_transition_rate,null);
+ assert.equal(obs.actual_new_to_returning_cohort_count,null);
+ assert.equal(obs.causal_incremental_revenue_effect,null);
+ assert.equal(obs.typical_youtube_creator_monthly_revenue,null);
+ assert.equal(obs.creator_profit_after_costs,null);
+ assert.equal(obs.study_overlap_with_korean_beauty_47_2026,null);
+ assert.equal(obs.private_records_obtained,false);
+});

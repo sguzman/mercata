@@ -224,6 +224,11 @@ try{
     assert.equal(await cadenceCase.count(),1,'Missing bounded beauty cohort research');
     assert((await cadenceCase.textContent()).includes('47 selected South Korean beauty channels'));
     assert((await cadenceCase.textContent()).includes('Abstract-level evidence only'));
+    const returningPanel=page.locator('.post-membership-retention .return-viewer-beauty-panel');
+    assert.equal(await returningPanel.count(),1,'Missing selected returning-viewer revenue evidence');
+    assert((await returningPanel.textContent()).includes('50 South Korean beauty channels'));
+    assert((await returningPanel.textContent()).includes('Likes were not statistically significant'));
+    assert((await returningPanel.textContent()).includes('do not measure a new-to-returning person transition'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));

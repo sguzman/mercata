@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "posts_viewer_retention_and_membership_measurement",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-25",
   "status": "official_owner_analytics_definitions_and_protocol_only_no_cohort_outcomes",
   "source_ids": [
     "yt-posts-analytics-2026",
@@ -12,7 +12,8 @@
     "yt-create-post-2026",
     "posts-help",
     "analytics-audience",
-    "yt-shorts-series-tv-posts-2026"
+    "yt-shorts-series-tv-posts-2026",
+    "korean-beauty-engagement-2025"
   ],
   "channel_surfaces": [
     {
@@ -308,5 +309,58 @@
       "post_to_returning_viewer_effect": null,
       "limitations": "May not be interpreted as average likes per Post, unique persons in country, monthly active users, or creator revenue."
     }
-  ]
+  ],
+  "beauty_channel_viewer_watchtime_study": {
+    "source_id": "korean-beauty-engagement-2025",
+    "publication_year_month": "2025-11",
+    "journal": "Computers in Human Behavior",
+    "article_number": "108741",
+    "method": "observational_fixed_effects_panel_regression",
+    "channel_sample_n": 50,
+    "geography": "South Korea",
+    "content_category": "beauty",
+    "population": "selected_owner_analytics_access_youtube_beauty_channels",
+    "outcome": "reported_monthly_channel_revenue_not_profit",
+    "explanatory_metrics": [
+      {
+        "id": "new_viewer_watch_time",
+        "reported_relationship": "positive",
+        "comparison": "weaker_than_returning_viewer_watch_time",
+        "numeric_coefficient": null
+      },
+      {
+        "id": "returning_viewer_watch_time",
+        "reported_relationship": "strongest_positive_association_in_examined_metrics",
+        "numeric_coefficient": null
+      },
+      {
+        "id": "subscriber_watch_time",
+        "reported_relationship": "positive",
+        "comparison": "weaker_than_returning_viewer_watch_time",
+        "numeric_coefficient": null
+      },
+      {
+        "id": "likes",
+        "reported_relationship": "no_statistically_significant_association_reported",
+        "numeric_coefficient": null
+      }
+    ],
+    "viewer_status_transition_rate": null,
+    "actual_new_to_returning_cohort_count": null,
+    "randomized_promotion_or_post_assignment": false,
+    "causal_incremental_revenue_effect": null,
+    "typical_youtube_creator_monthly_revenue": null,
+    "creator_profit_after_costs": null,
+    "metric_time_period_months_observed": null,
+    "private_records_obtained": false,
+    "reported_exact_regression_coefficients": false,
+    "study_overlap_with_korean_beauty_47_2026": null,
+    "substantive_boundaries": [
+      "An association between returning-viewer watch time and channel revenue in an owner Analytics sample is not evidence that a given new viewer returned or that Posts caused a return.",
+      "The 2025 50-channel study and 2026 47-channel beauty study have overlapping authors, but shared channels or datasets have not been verified; treat independence and joint sample n as unknown.",
+      "The journal abstract's qualitative statistical ordering does not publish eligible universe, regressions, confidence intervals or a generalizable revenue distribution.",
+      "Selected Korean beauty channel revenue is not a verified creator take-home payout, profit after production, or a country-generalized median.",
+      "No person-level viewer or member analytics were accessed, and no payment or member identifiers were collected."
+    ]
+  }
 }
