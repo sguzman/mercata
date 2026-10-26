@@ -136,3 +136,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io platform-wide historical scope (2026-10-26):** operator-stated over 2 million all-product pages in July 2025 strictly separated from October 2026 filtered game browse counters; no implied growth or earning success. Score 74% → 74% (Δ 0 pp; raw 73.90%). [Scope study](../ontology/itch-io/operator-total-project-pages-2025.md).
+
+
+**itch.io five-year paid visual novel (2026-10-26):** cumulative developer-reported 1,789 itch payments and 5,929 downloads compared with later Steam/console/mobile outcomes, preserving distinct units and profit unknowns. **74% → 74%**, Δ 0 pp (unrounded 74.45%). [Case](../ontology/itch-io/year-of-springs-2026.md).
