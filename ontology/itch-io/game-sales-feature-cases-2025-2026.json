@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "creator_game_launch_and_discovery_longitudinal_cases",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "no-signal-launch-2025",
+    "hive-payment-update-may-2026",
+    "hive-feature-july-2026",
+    "itch-case-hive"
+  ],
+  "cases": [
+    {
+      "id": "no_signal",
+      "game": "no signal",
+      "publisher": "exodrifter and collaborators",
+      "study_window": "first_week_of_launch_july_2025",
+      "reported_itcho_game_plus_ost_units": 3,
+      "reported_itcho_game_plus_ost_gross_usd": 75,
+      "estimated_itcho_game_plus_ost_after_transaction_usd": 63.61,
+      "estimated_itch_receipts_settled": false,
+      "steam_game_only_units": 239,
+      "steam_game_only_gross_usd": 2808,
+      "steam_game_only_estimated_after_transaction_usd": 1965.6,
+      "sku_identical_across_stores": false,
+      "first_week_steam_soundtrack_units": 38,
+      "collaborator_art_payment_amount_usd": null,
+      "developer_labor_cost_usd": null,
+      "developer_net_profit_usd": null,
+      "outreach_people_reported": 63,
+      "outreach_to_itch_paid_order_causal_effect": null,
+      "source_ids": [
+        "no-signal-launch-2025"
+      ]
+    },
+    {
+      "id": "the_hive",
+      "game": "The Hive",
+      "publisher": "Skydome Entertainment",
+      "source_ids": [
+        "itch-case-hive",
+        "hive-payment-update-may-2026",
+        "hive-feature-july-2026"
+      ],
+      "dec_2025": {
+        "date": "2025-12-14",
+        "sales_label_count": 414,
+        "revenue_label_usd": 706.73,
+        "views_approx": 17000
+      },
+      "may_2026": {
+        "date": "2026-05-24",
+        "payment_event_count": 141,
+        "gross_usd": 819.44,
+        "page_view_events_approx": 24800,
+        "download_events": 510,
+        "followers": 213
+      },
+      "counts_comparable_as_cumulative_paid_orders": false,
+      "metric_reconciliation_available": false,
+      "july_2026_feature": {
+        "date": "2026-07-16",
+        "normal_daily_views_low": 50,
+        "normal_daily_views_high": 150,
+        "during_feature_views_cumulative_approx": 7000,
+        "feature_window_duration_days": null,
+        "paid_orders_in_feature_window": null,
+        "paid_order_uplift": null,
+        "concurrent_external_social_video_views_approx": 32000,
+        "causal_discovery_effect": null
+      },
+      "developer_profit_usd": null
+    }
+  ],
+  "sampling": {
+    "independent_games_count": 2,
+    "independent_publishers_count": 2,
+    "convenience_volunteer_cases": true,
+    "platform_population_denominator": null,
+    "first_commercial_game_seller_cohort": false
+  },
+  "unknown": {
+    "representative_itch_seller_average": null,
+    "representative_median_profit": null,
+    "genre_profit_estimate": null,
+    "typical_early_purchases": null,
+    "feature_effect_on_paid_order_rate": null,
+    "storefront_causal_sales_difference": null
+  },
+  "rules": [
+    "After-transaction estimates before settlement are not realized payouts or labor-adjusted profit.",
+    "One store may sell a base game while another sells game+soundtrack; avoid false item-level comparisons.",
+    "A later payment count and earlier 'sales' number are not a verified cumulative series.",
+    "Daily baseline views cannot be divided into a cumulative featured-period view count without time alignment.",
+    "Publisher marketing and front-page exposure can be contemporaneous and confounded.",
+    "The 'no signal' publisher also appears in a previously registered donation-game case; do not double-count the person as independent."
+  ]
+}

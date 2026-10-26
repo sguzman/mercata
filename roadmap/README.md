@@ -172,3 +172,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io historical source denominator crosswalk (2026-10-26):** operator-reported 2015 game creations, 2017 created/published page flows, 2019 cumulative 200,000 game milestone compared with 2026 dynamic browse results. No synthetic seller or revenue growth. 79% → 80% (Δ +1 pp; mean 79.50%). [Historical supply](../ontology/itch-io/historical-game-supply-2015-2026.md).
+
+
+**itch.io disclosed launch units and traffic (2026-10-26):** no signal first-week 3 game+OST itch units/$75 gross (estimated receipt, not profit); The Hive cumulative 2025 'sales' vs 2026 'payments' not reconciled; front-page daily-versus-cumulative views incomparable. 80% → 80% (Δ +0 pp, unrounded 79.77%). [Study](../ontology/itch-io/game-sales-feature-cases-2025-2026.md).

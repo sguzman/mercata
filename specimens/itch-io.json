@@ -1087,6 +1087,39 @@
       "evidence_class": "dated_first_party_platform_supply_report",
       "license": "Public counts paraphrased with dated link; no source bulk text copied.",
       "notes": "Historical game creation and project page creation/publishing counts have different denominators and periods. Not equivalent to actively sold paid games or unique developers."
+    },
+    {
+      "id": "no-signal-launch-2025",
+      "url": "https://exodrifter.itch.io/no-signal/devlog/1021575/one-week-after-no-signal",
+      "title": "one week after no signal",
+      "publisher": "exodrifter, public creator devlog",
+      "published_at": "2025-07-31",
+      "notes": "One developer's first-week estimates, store-specific SKU bundles and costs; not settled payout or complete accounting of labor.",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_public_developer_disclosure",
+      "license": "Author-reported numerical summaries with attribution and external link; no private stats or source text reproduced."
+    },
+    {
+      "id": "hive-payment-update-may-2026",
+      "url": "https://itch.io/devlog/1532607/we-are-now-richer-than-jeff-bezos-on-itchio.amp",
+      "title": "We Are Now Richer Than Jeff Bezos On itch.io",
+      "publisher": "Skydome Entertainment (The Hive)",
+      "published_at": "2026-05-24",
+      "notes": "Follow-up disclosure for the same game as the earlier Dec 2025 source; payments and sales terminology differs and raw reconciliation unavailable.",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_public_developer_disclosure",
+      "license": "Author-reported numerical summaries with attribution and external link; no private stats or source text reproduced."
+    },
+    {
+      "id": "hive-feature-july-2026",
+      "url": "https://skydome.itch.io/thehive/devlog/1588098/we-got-featured-on-the-itchio-front-page-here-is-what-other-developers-can-expect",
+      "title": "We got featured on the itch.io front page",
+      "publisher": "Skydome Entertainment (The Hive)",
+      "published_at": "2026-07-16",
+      "notes": "Unfinished contemporaneous feature report, baseline daily traffic vs cumulative featured traffic. Paid conversion not reported and outside TikTok activity confounds attribution.",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_public_developer_disclosure",
+      "license": "Author-reported numerical summaries with attribution and external link; no private stats or source text reproduced."
     }
   ],
   "claims": [
@@ -4084,6 +4117,87 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "Publication and browse indexing scopes may differ; a measurement protocol would be needed to compare all eligible games consistently over time."
+    },
+    {
+      "id": "no-signal-itch-first-week",
+      "text": "In July 2025, the no signal developer reported three itch.io game-plus-soundtrack bundle units, $75 gross and $63.61 estimated after-transaction receipts during the launch week.",
+      "source_ids": [
+        "no-signal-launch-2025"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Bundled game/soundtrack units; after-fee value was forecast rather than settled bank payout, and developer labor and taxes were incompletely accounted for."
+    },
+    {
+      "id": "no-signal-steam-comparison",
+      "text": "The same launch-week report listed 239 Steam base-game units at $2,808 gross, plus separately sold soundtrack and other-title units.",
+      "source_ids": [
+        "no-signal-launch-2025"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Product SKU, buyer audience, pricing and promotion differ between stores; not a controlled causal estimate of Steam versus itch demand."
+    },
+    {
+      "id": "no-signal-profit-warning",
+      "text": "The no signal author stated launch-week cross-store receipts roughly covered a collaborator's artwork compensation but did not cover the author's living expenses for even one week spent making the game.",
+      "source_ids": [
+        "no-signal-launch-2025"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Qualitative cost ceiling, not a comprehensive cash/labor P&L or measured hourly income."
+    },
+    {
+      "id": "no-signal-outreach-confounding",
+      "text": "The no signal developer reported 63 prerelease outreach contacts and an influencer/press response effort but provided no randomized link between specific contacts and sales.",
+      "source_ids": [
+        "no-signal-launch-2025"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Nonrandom outreach and existing network; the table also lists groups on a different counting basis, so no attributable conversion rate."
+    },
+    {
+      "id": "hive-may-2026-paid-events",
+      "text": "A May 24, 2026 The Hive devlog reported $819.44 gross, 141 payments, about 24,800 page views and 510 download events on itch.io.",
+      "source_ids": [
+        "hive-payment-update-may-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Single game, voluntary publisher tally; unique buyers, refunds, transaction definition and developer profit unspecified."
+    },
+    {
+      "id": "hive-count-definition-conflict",
+      "text": "The Hive's December 2025 disclosure reported 414 sales, while the May 2026 update reported 141 payments; these cannot be combined into a cumulative paid-unit series without reconciling their meanings.",
+      "source_ids": [
+        "itch-case-hive",
+        "hive-payment-update-may-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Different metric labels and possible cohorts; a later smaller count is not proof of negative sales."
+    },
+    {
+      "id": "hive-frontpage-traffic",
+      "text": "A July 2026 report said The Hive normally had 50–150 visits per day, versus about 7,000 cumulative page visits so far during a front-page feature.",
+      "source_ids": [
+        "hive-feature-july-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Baseline daily rate versus cumulative feature count have unequal time bases; do not calculate a growth multiplier or purchases from them."
+    },
+    {
+      "id": "hive-frontpage-confounded",
+      "text": "The Hive developer noted simultaneous TikTok exposure of roughly 32,000 views and did not yet provide a completed post-feature sales or conversion report.",
+      "source_ids": [
+        "hive-feature-july-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Featured placement and outside coverage overlap; sales effect is unobserved, not zero."
     }
   ],
   "observations": [
