@@ -28,6 +28,8 @@ First, verify seller and payout eligibility, account and tax compliance, and who
 
 After launch, track the **same time period and same game** for page exposures, visits, free downloads, paid orders, refunds, seller receipts and actual work hours. If a demo or discount is used, preserve an appropriate comparison rather than claiming the mechanism caused new purchases. A first-time seller should measure 30, 90 and 365 days, **including games that sell nothing**, to estimate outcomes. See the [privacy-preserving cohort protocol](transaction-cohort-protocol-2026.md).
 
+The [genre-profitability crosswalk](genre-profit-commensurability-2026.md) explicitly tests twelve dated cases and finds no matched, population-representative labor-valued outcomes for ranking game genres; it does not treat ratings or standalone sales counts as profit.
+
 ## What the current research can and cannot recommend
 
 Three formats are feasible under different product goals. If revenue must be required rather than voluntary, a **positively priced downloadable entitlement** matches that requirement better than an open HTML5 browser page. If the main goal is immediate accessibility and play, **free HTML5 with optional donation** is compatible. A **separate demo and paid build** is technically possible when additional QA/maintenance cost is acceptable. None can be called the most profitable without comparable paid game cohorts.

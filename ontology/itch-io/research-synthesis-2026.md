@@ -16,6 +16,8 @@ The listing/file/channel/build identity distinction is now a completed source-ba
 
 Two further 2025 first-person disclosures describe a zero-copy game at a roughly two-month observation window and a separate five-copy game at $1; free downloads of earlier titles and follower counts cannot form paid conversion denominators. [Dated cases](zero-five-paid-game-snapshots-2025.md).
 
+Twelve source-linked genre-classified case studies have now been cross-checked for price, period, payment channel and labor-adjusted profit. **None** supplies a representative comparable genre-profit outcome. [Genre income comparability audit](genre-profit-commensurability-2026.md).
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*
