@@ -1,6 +1,6 @@
 // Pure, offline audit for two seller-owned impression snapshots; no data collection or account access.
 function intCount(n){return Number.isSafeInteger(n)&&n>=0;}
-function isoDay(x){return typeof x==='string'&&/^\\d{4}-\\d{2}-\\d{2}$/.test(x)&&!Number.isNaN(Date.parse(x+'T00:00:00Z'));}
+function isoDay(x){return typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&!Number.isNaN(Date.parse(x+'T00:00:00Z'));}
 function rate(n,d){return d===0?null:n/d;}
 export function auditItchCreativeComparison(input){
  const issues=[];
