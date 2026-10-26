@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 75,
+  "progress_percent": 76,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -85,7 +85,7 @@
         "itch-io/identity/specify-evidence-permissions"
       ],
       "phase": 1,
-      "progress_percent": 71
+      "progress_percent": 77
     },
     {
       "id": "access",
@@ -178,7 +178,7 @@
         "itch-io/market/estimate-paid-addressable-demand"
       ],
       "phase": 2,
-      "progress_percent": 66
+      "progress_percent": 67
     },
     {
       "id": "discovery",
@@ -328,7 +328,7 @@
         "itch-io/sales/separate-buyer-interest-from-purchase"
       ],
       "phase": 3,
-      "progress_percent": 76
+      "progress_percent": 79
     },
     {
       "id": "risk",
@@ -415,7 +415,7 @@
         "itch-io/review/prepare-evidence-gap-summary"
       ],
       "phase": 1,
-      "progress_percent": 89
+      "progress_percent": 90
     },
     {
       "id": "special-games",
@@ -518,12 +518,15 @@
       "objective": "Investigate distinguish games, demos, game assets, bundles and non-game products.",
       "acceptance": "Provide dated source-linked evidence to distinguish games, demos, game assets, bundles and non-game products; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 58,
+      "percent": 78,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/api-purchase-privacy-2026.json",
+        "ontology/itch-io/api-purchase-privacy-2026.md",
+        "tests/itch-io-api-purchase-privacy.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -556,12 +559,15 @@
       "objective": "Investigate separate visitors, downloaders, players, purchasers and repeat customers.",
       "acceptance": "Provide dated source-linked evidence to separate visitors, downloaders, players, purchasers and repeat customers; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 40,
+      "percent": 73,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/api-purchase-privacy-2026.json",
+        "ontology/itch-io/api-purchase-privacy-2026.md",
+        "tests/itch-io-api-purchase-privacy.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -638,12 +644,15 @@
       "objective": "Investigate separate public data from seller-only or consent-required analytics.",
       "acceptance": "Provide dated source-linked evidence to separate public data from seller-only or consent-required analytics; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 68,
+      "percent": 91,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/api-purchase-privacy-2026.json",
+        "ontology/itch-io/api-purchase-privacy-2026.md",
+        "tests/itch-io-api-purchase-privacy.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1317,7 +1326,7 @@
       "objective": "Investigate seek actual settled units rather than catalog traffic proxies.",
       "acceptance": "Provide dated source-linked evidence to seek actual settled units rather than catalog traffic proxies; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 38,
+      "percent": 43,
       "evidence": [
         "ontology/itch-io/community-analytics-sample-2026.json",
         "ontology/itch-io/community-analytics-sample-2026.md",
@@ -1328,7 +1337,10 @@
         "tests/itch-io-semrush-traffic.test.mjs",
         "ontology/itch-io/founder-purchases-2014.json",
         "ontology/itch-io/founder-purchases-2014.md",
-        "tests/itch-io-founder-purchases.test.mjs"
+        "tests/itch-io-founder-purchases.test.mjs",
+        "ontology/itch-io/api-purchase-privacy-2026.json",
+        "ontology/itch-io/api-purchase-privacy-2026.md",
+        "tests/itch-io-api-purchase-privacy.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2167,7 +2179,7 @@
       "objective": "Investigate specify paid-game publishers including zero-sale projects.",
       "acceptance": "Provide dated source-linked evidence to specify paid-game publishers including zero-sale projects; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 89,
+      "percent": 91,
       "evidence": [
         "ontology/itch-io/developer-income-cases-2026.json",
         "ontology/itch-io/developer-income-cases-2026.md",
@@ -2183,7 +2195,10 @@
         "site/itch-income-histogram.mjs",
         "ontology/itch-io/income-histogram-protocol-2026.json",
         "ontology/itch-io/income-histogram-protocol-2026.md",
-        "tests/itch-io-income-histogram.test.mjs"
+        "tests/itch-io-income-histogram.test.mjs",
+        "ontology/itch-io/api-purchase-privacy-2026.json",
+        "ontology/itch-io/api-purchase-privacy-2026.md",
+        "tests/itch-io-api-purchase-privacy.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2822,7 +2837,7 @@
       "objective": "Investigate require consistent first-party denominators.",
       "acceptance": "Provide dated source-linked evidence to require consistent first-party denominators; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 76,
+      "percent": 83,
       "evidence": [
         "ontology/itch-io/transaction-cohort-protocol-2026.json",
         "ontology/itch-io/transaction-cohort-protocol-2026.md",
@@ -2831,7 +2846,10 @@
         "specimens/itch-io.json",
         "ontology/itch-io/store-feature-history-2026.json",
         "ontology/itch-io/store-feature-history-2026.md",
-        "tests/itch-io-store-history.test.mjs"
+        "tests/itch-io-store-history.test.mjs",
+        "ontology/itch-io/api-purchase-privacy-2026.json",
+        "ontology/itch-io/api-purchase-privacy-2026.md",
+        "tests/itch-io-api-purchase-privacy.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2845,12 +2863,15 @@
       "objective": "Investigate count free testers separately from paying customers.",
       "acceptance": "Provide dated source-linked evidence to count free testers separately from paying customers; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 74,
+      "percent": 89,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/api-purchase-privacy-2026.json",
+        "ontology/itch-io/api-purchase-privacy-2026.md",
+        "tests/itch-io-api-purchase-privacy.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2966,7 +2987,7 @@
       "objective": "Investigate distinguish standalone and allocated bundle purchases.",
       "acceptance": "Provide dated source-linked evidence to distinguish standalone and allocated bundle purchases; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 87,
+      "percent": 92,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -2979,7 +3000,10 @@
         "ontology/itch-io/bundle-sale-jam-2026.md",
         "ontology/itch-io/store-feature-history-2026.json",
         "ontology/itch-io/store-feature-history-2026.md",
-        "tests/itch-io-store-history.test.mjs"
+        "tests/itch-io-store-history.test.mjs",
+        "ontology/itch-io/api-purchase-privacy-2026.json",
+        "ontology/itch-io/api-purchase-privacy-2026.md",
+        "tests/itch-io-api-purchase-privacy.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3082,7 +3106,7 @@
       "objective": "Investigate verify collection and wish mechanisms before using them as demand proxies.",
       "acceptance": "Provide dated source-linked evidence to verify collection and wish mechanisms before using them as demand proxies; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 84,
+      "percent": 95,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -3096,7 +3120,10 @@
         "ontology/itch-io/transaction-cohort-protocol-2026.json",
         "ontology/itch-io/transaction-cohort-protocol-2026.md",
         "site/itch-cohort-protocol.mjs",
-        "tests/itch-cohort-protocol.test.mjs"
+        "tests/itch-cohort-protocol.test.mjs",
+        "ontology/itch-io/api-purchase-privacy-2026.json",
+        "ontology/itch-io/api-purchase-privacy-2026.md",
+        "tests/itch-io-api-purchase-privacy.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3794,7 +3821,7 @@
       "objective": "Investigate require dated evidence before awarding task progress.",
       "acceptance": "Provide dated source-linked evidence to require dated evidence before awarding task progress; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 87,
+      "percent": 92,
       "evidence": [
         "ontology/itch-io/transaction-cohort-protocol-2026.json",
         "ontology/itch-io/transaction-cohort-protocol-2026.md",
@@ -3815,7 +3842,10 @@
         "gallery/README.md",
         "ontology/itch-io/README.md",
         "site/app.js",
-        "tests/itch-io-gallery-integrity.test.mjs"
+        "tests/itch-io-gallery-integrity.test.mjs",
+        "ontology/itch-io/api-purchase-privacy-2026.json",
+        "ontology/itch-io/api-purchase-privacy-2026.md",
+        "tests/itch-io-api-purchase-privacy.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3829,7 +3859,7 @@
       "objective": "Investigate exclude identifiable buyer or confidential seller records.",
       "acceptance": "Provide dated source-linked evidence to exclude identifiable buyer or confidential seller records; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 93,
+      "percent": 97,
       "evidence": [
         "ontology/itch-io/transaction-cohort-protocol-2026.json",
         "ontology/itch-io/transaction-cohort-protocol-2026.md",
@@ -3845,7 +3875,10 @@
         "site/itch-income-histogram.mjs",
         "ontology/itch-io/income-histogram-protocol-2026.json",
         "ontology/itch-io/income-histogram-protocol-2026.md",
-        "tests/itch-io-income-histogram.test.mjs"
+        "tests/itch-io-income-histogram.test.mjs",
+        "ontology/itch-io/api-purchase-privacy-2026.json",
+        "ontology/itch-io/api-purchase-privacy-2026.md",
+        "tests/itch-io-api-purchase-privacy.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "purchase_entitlement_api_scope_and_public_data_boundary",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-serverside-api-reference"
+  ],
+  "documented_api_requires_authentication": true,
+  "public_aggregate_sales_endpoint_verified": false,
+  "documented_operations": [
+    {
+      "id": "purchases",
+      "required_scope": "game:view:purchases",
+      "parameters": [
+        "email_or_user_id",
+        "game_id"
+      ],
+      "completed_purchases_only": true,
+      "can_include_buyer_email": true,
+      "can_include_gross_transaction_price": true,
+      "can_prove_aggregated_income": false
+    },
+    {
+      "id": "download_keys",
+      "required_scope": "game:view:purchases",
+      "parameters": [
+        "download_key_or_email_or_user_id",
+        "game_id"
+      ],
+      "key_can_exist_without_paid_purchase": true,
+      "can_be_bundle_claim": true,
+      "can_prove_aggregated_income": false
+    },
+    {
+      "id": "ownership",
+      "required_scope": "game:view:ownership",
+      "oauth_authorized_owner_only": true,
+      "boolean_ownership_may_include_unclaimed_bundle": true,
+      "can_prove_aggregated_income": false
+    },
+    {
+      "id": "claimed_rewards",
+      "required_scope": "game:view:rewards",
+      "may_include_shipping_address": true,
+      "can_prove_aggregated_income": false
+    }
+  ],
+  "purchase_type_enum": [
+    "game",
+    "bundle",
+    "sub_product"
+  ],
+  "web_donations_have_donation_flag": true,
+  "forbidden_public_fields": [
+    "email",
+    "user_id",
+    "owner",
+    "download_key",
+    "key",
+    "purchase_id",
+    "transaction_id",
+    "shipping_address",
+    "ip_address",
+    "country_code"
+  ],
+  "research_acceptable_inputs": "seller-authorized_privacy_reviewed_aggregated_statistics_only",
+  "actual_api_requests": 0,
+  "actual_tokens_accessed": 0,
+  "actual_buyer_records_read": 0,
+  "unknown": {
+    "representative_paid_buyer_population": null,
+    "total_platform_gmv": null,
+    "median_seller_proceeds": null,
+    "anonymous_seller_census": null,
+    "nonkey_donation_fraction": null,
+    "claim_to_purchase_conversion": null
+  },
+  "limitations": [
+    "Targeted buyer lookups cannot supply a complete population sample.",
+    "Buyer entitlements from gifted keys and bundles cannot be counted as standalone full-price game sales.",
+    "API response examples demonstrate schema, not real present-day purchase outcomes.",
+    "No public individual buyer transaction record or credential should enter Mercata.",
+    "Some seller-authorized private exports might exist outside these documented endpoints; not tested."
+  ]
+}

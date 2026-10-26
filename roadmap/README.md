@@ -142,3 +142,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io real cash-out constraints (2026-10-26):** source-verified one-time $3 collected payout tax-identity verification, $5 available minimum, 7+7 day conditional process, refund and transfer deductions, and low-price fixed fee warning. **74% → 75%**, Δ 1 pp, unrounded 74.87%. [Account cash-out rules](../ontology/itch-io/collected-payout-costs-2026.md).
+
+
+**itch.io server-side buyer/API scope audit (2026-10-26):** credentialed per-buyer purchases, downloadable entitlements, bundled owner grants and fulfillment PII separated from seller income statistics; no live API used. 75% → 76% (Δ +1 pp; raw 75.62%). [Details](../ontology/itch-io/api-purchase-privacy-2026.md).

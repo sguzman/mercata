@@ -889,6 +889,17 @@
       "evidence_class": "first_person_developer_retrospective",
       "license": "Source linked; short attributed amounts and independent summaries only.",
       "notes": "2026 author retrospective republishes 2021 week-one and later notes. Publicly indexed source inspected. No private game buyer records accessed. Nonrandom one-game outcome."
+    },
+    {
+      "id": "itch-serverside-api-reference",
+      "url": "https://itch.io/docs/api/serverside",
+      "publisher": "itch.io",
+      "title": "Server-side API Reference",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_api_documentation",
+      "license": "Public API interface summarized; no sample buyer emails, identifying fields or secret examples copied.",
+      "notes": "Public documentation read only. No token, API request, purchase, game account, or user lookup was attempted."
     }
   ],
   "claims": [
@@ -3281,6 +3292,86 @@
       ],
       "confidence": "high",
       "observed_at": "2026-10-26"
+    },
+    {
+      "id": "api-key-not-public",
+      "text": "The official itch.io server-side API requires bearer credentials for all listed endpoints and authorization/scope governs account access.",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Public documentation describes private API access; cannot treat these calls as a public sales census."
+    },
+    {
+      "id": "api-purchase-targeted",
+      "text": "The game purchases endpoint checks completed purchases of a particular game for a supplied email or user identifier, not an unauthenticated all-store sales total.",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Email addresses and buyer IDs must not be collected by this public research project."
+    },
+    {
+      "id": "api-key-valid-no-purchase",
+      "text": "The download-key lookup can verify an existing buyer key or eligible entitlement and is separate from the purchases endpoint.",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "A valid key can be free, gifted or claimed; it is not always a standalone paid sale."
+    },
+    {
+      "id": "api-web-donation-flag",
+      "text": "The purchase endpoint's response schema flags donations and distinguishes game, bundle and sub-product purchases.",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Schema examples are not audited transaction totals; donation type does not infer profit."
+    },
+    {
+      "id": "api-bundle-game-id-array",
+      "text": "For bundle purchases the documented purchase game_id can be an array of included game IDs, not an independent full-price sale per project.",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Counting one bundle response as several independently priced sales inflates revenue."
+    },
+    {
+      "id": "api-oauth-ownership",
+      "text": "A separate game ownership endpoint is limited to authorized OAuth tokens and may recognize a bundle owner before a download key is claimed.",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Ownership boolean confirms entitlement, not a paid amount, purchase date or unique market customer."
+    },
+    {
+      "id": "api-raw-pii-risk",
+      "text": "Documented purchase and claimed reward responses can contain buyer emails, transaction identifiers and shipping-address fields.",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Never persist or publish raw buyer APIs, ownership keys, shipping addresses, or small identifying aggregates."
+    },
+    {
+      "id": "api-not-bulk-income",
+      "text": "The documented targeted buyer-purchase API methods alone do not expose a public representative publisher income or zero-earner dataset.",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Absence of a public aggregate is not a claim that no legitimate seller-side export or authorized data route exists."
     }
   ],
   "observations": [
