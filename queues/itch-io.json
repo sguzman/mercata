@@ -1703,12 +1703,17 @@
           "title": "Write the readable marketplace dossier",
           "acceptance": "Summarize fees, outcomes, barriers and uncertainty in plain English.",
           "weight": 1,
-          "progress": 76,
+          "progress": 84,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/research-synthesis-2026.json",
             "ontology/itch-io/research-synthesis-2026.md",
-            "tests/itch-io-synthesis.test.mjs"
+            "tests/itch-io-synthesis.test.mjs",
+            "gallery/index.json",
+            "gallery/README.md",
+            "ontology/itch-io/README.md",
+            "site/app.js",
+            "tests/itch-io-gallery-integrity.test.mjs"
           ]
         },
         {
@@ -1717,9 +1722,15 @@
           "title": "Validate index, dossier and queue references",
           "acceptance": "Ensure schema and gallery render checks pass.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 85,
+          "status": "in_progress",
+          "evidence": [
+            "gallery/index.json",
+            "gallery/README.md",
+            "ontology/itch-io/README.md",
+            "site/app.js",
+            "tests/itch-io-gallery-integrity.test.mjs"
+          ]
         },
         {
           "id": "review/refresh",
@@ -1727,7 +1738,7 @@
           "title": "Set a maintenance schedule",
           "acceptance": "Select review dates based on fee, policy and payout volatility.",
           "weight": 1,
-          "progress": 62,
+          "progress": 78,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/store-feature-history-2026.json",
@@ -1736,7 +1747,12 @@
             "tests/itch-io-store-history.test.mjs",
             "ontology/itch-io/research-synthesis-2026.json",
             "ontology/itch-io/research-synthesis-2026.md",
-            "tests/itch-io-synthesis.test.mjs"
+            "tests/itch-io-synthesis.test.mjs",
+            "gallery/index.json",
+            "gallery/README.md",
+            "ontology/itch-io/README.md",
+            "site/app.js",
+            "tests/itch-io-gallery-integrity.test.mjs"
           ]
         }
       ]

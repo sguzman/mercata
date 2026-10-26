@@ -1,6 +1,6 @@
 # itch.io study ontology
 
-This vocabulary defines *measurement concepts* for future game-market economics research, not factual findings. See [machine vocabulary](vocabulary.json), [unresearched plan](../../plans/itch-io.md), and [original empty dossier](../../specimens/itch-io.json).
+This vocabulary defines *measurement concepts* for future game-market economics research, not factual findings. See [machine vocabulary](vocabulary.json), [active 244-task research plan](../../plans/itch-io.md), and [source-linked research dossier](../../specimens/itch-io.json).
 
 ## Concepts
 
@@ -31,9 +31,20 @@ This vocabulary defines *measurement concepts* for future game-market economics 
 - A representative zero-earner statistic requires a defined cohort and observation window.
 - Use unknown rather than zero for unavailable demand, income or conversion statistics.
 
-Research has not begun. There are zero registered measurements, claims, sources or completed task results. Subsequent work must specify comparable time periods, population denominators, jurisdiction, currency, source provenance, methods and limitations.
+Research is underway: 68% is the rounded mean of **244 fixed task-level evidence scores**, not a share of verified platform transactions. The dossier includes official policy sources, dated catalog counts, voluntarily disclosed developer outcomes, and explicit unknowns for representative median developer income, zero-sale share and long-term profitability. See [research synthesis](research-synthesis-2026.md), [sample limitations](community-analytics-2026.md), and [machine evidence](../../specimens/itch-io.json). Research must continue to specify comparable time windows, population denominators, jurisdiction, currency, provenance and limitations.
 
 
 ## First research increment
 
 The [commercial rules crosswalk](commercial-rules-2026.md) and [machine evidence](commercial-rules-2026.json) describe source-backed payment routes, pricing, publication versus indexing and game delivery. These observations do not estimate the median developer's income, sales probabilities or population of paying buyers.
+
+
+## Research status (2026-10-26)
+
+- 68% task-weighted research scoring across 244 existing tasks; no additional specimens admitted
+- [Interim commercial synthesis and open empirical gaps](research-synthesis-2026.md)
+- [Earning accounts, costs, and payout rules](commercial-rules-2026.md)
+- [Public game listing supply and paid 2D subset](catalog-snapshot-2026.md)
+- [Buyer measurement without privacy leakage](transaction-cohort-protocol-2026.md)
+
+The actual platform-wide buyer count, payment total, median game revenue and representative creator profit remain **unknown**.

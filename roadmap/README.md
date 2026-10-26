@@ -109,3 +109,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io payout identity charge and survey correction (2026-10-26):** first-party payout adjustment includes one-time $3 identity verification, separate from $0 listing and actual payment costs; Gamedev.js 2025 income n=435, published January 27 2026. **67% → 67%** (Δ +0 pp; exact 67.34%). [Payment rules](../ontology/itch-io/commercial-rules-2026.md).
+
+
+**itch.io study gallery and ontology correction (2026-10-26):** obsolete unresearched claims removed, machine gallery status synchronized, site study plan now links economic synthesis and labels task percentages as evidence scores. 67% → 68% (Δ +1 pp, exact 67.80%). [Active ontology](../ontology/itch-io/README.md).

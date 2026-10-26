@@ -1,0 +1,19 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
+const load=p=>JSON.parse(read(p));
+test('itch.io gallery and ontology publication reflect actual active research',()=>{
+ const g=load('gallery/index.json').specimens.find(x=>x.id==='itch-io');
+ const p=load('plans/itch-io.json');
+ const o=read('ontology/itch-io/README.md');
+ const app=read('site/app.js');
+ assert.equal(g.status,'researching');
+ assert.equal(g.planning_state,p.status);
+ assert.equal(p.total_tracked_tasks,244);
+ assert(o.includes('Research is underway'));
+ assert(!o.includes('Research has not begun'));
+ assert(o.includes('research-synthesis-2026.md'));
+ assert(app.includes('Commercial evidence and unresolved data'));
+ assert(app.includes('Evidence-backed task progress'));
+});

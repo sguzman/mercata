@@ -290,7 +290,7 @@ function renderStudyPlan(plan) {
   const shell=make('section','study-inventory');
   shell.id='research-plan';
   add(shell,make('p','eyebrow','SPECIMEN RESEARCH PLAN'),
-    make('h4','audience-atlas-title','Planned investigation'),
+    make('h4','audience-atlas-title',plan.status==='researching'?'Research underway':'Planned investigation'),
     make('p','audience-atlas-description',
       plan.status==='researching'?'Research underway. These task percentages reflect partial source-backed work; missing population and income statistics remain unresolved.':'Inventory ready; evidence gathering has not started. Expand a phase and its workstreams to inspect the questions and completion criteria.'));
   const summary=make('div','study-inventory-counts');
@@ -299,7 +299,7 @@ function renderStudyPlan(plan) {
     blockHeading('Total tasks',plan.total_tracked_tasks),
     blockHeading('Research progress',plan.progress_percent+'%'));
   shell.append(summary);
-  shell.append(progress(plan.progress_percent,'Research completed'));
+  shell.append(progress(plan.progress_percent,'Evidence-backed task progress'));
   const links=make('div','dossier-links');
   const json=make('a','inline-link','Complete machine plan ↗');
   json.href='./plans/'+plan.specimen_id+'.json';
@@ -308,6 +308,13 @@ function renderStudyPlan(plan) {
   readable.rel='noopener noreferrer';
   readable.target='_blank';
   add(links,json,readable);
+  if(plan.specimen_id==='itch-io' && plan.status==='researching'){
+    const findings=make('a','inline-link','Commercial evidence and unresolved data ↗');
+    findings.href='https://github.com/sguzman/mercata/blob/main/ontology/itch-io/research-synthesis-2026.md';
+    findings.rel='noopener noreferrer';
+    findings.target='_blank';
+    links.append(findings);
+  }
   shell.append(links);
   for(const phase of plan.phases){
     const phasePanel=make('details','study-phase');

@@ -12,7 +12,7 @@ test('itch.io inventory identity and research progress remain consistent',()=>{
  assert.equal(gallery.specimens.length,26);
  assert.equal(gallery.specimens.filter(x=>x.id==='itch-io').length,1);
  assert.equal(row.plan,'plans/itch-io.json');
- assert.equal(row.status,dossier.status);assert.equal(row.planning_state,'inventory_ready');
+ assert.equal(row.status,dossier.status);assert.equal(row.planning_state,plan.status);
  assert(['queued','researching','review','published'].includes(dossier.status));assert.equal(dossier.color.hex,'#94DC4B');
  for(const prop of ['evidence','claims','observations','opportunities','risks','experiments'])assert(Array.isArray(dossier[prop]));
  assert.equal(base.queues.length,13);
