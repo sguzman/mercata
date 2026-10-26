@@ -25,3 +25,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io source-backed research checkpoint (2026-10-26):** 11 official source records, 30 bounded claims, payout/offer/discovery ontology and tested payment calculation; 31 baseline tasks and 53 detailed tasks advanced. Current mean of all 244 tasks: **21%** (21 pp from the 0% inventory). Market-wide sales and income distributions remain unknown; [research report](../ontology/itch-io/commercial-rules-2026.md).
+
+
+**itch.io catalog observation (2026-10-26):** preserved three exact public game-directory filter result counters with source URLs and population limits. No sales or buyer counts were inferred. Task-weighted progress: **21% → 23%**, Δ **+2 pp**; [evidence snapshot](../ontology/itch-io/catalog-snapshot-2026.md).

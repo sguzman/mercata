@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "public_catalog_browse_snapshot",
+  "retrieved_at": "2026-10-26",
+  "scope": "Public game-directory result counters visible without seller access",
+  "observations": [
+    {
+      "id": "games_all",
+      "source_id": "itch-browse-all",
+      "filter": "all_games",
+      "url": "https://itch.io/games",
+      "value": 1780861,
+      "unit": "catalog_search_results",
+      "period": "2026-10-26",
+      "applies_to": "game listings returned by default games browse",
+      "money_earned": null,
+      "unique_creators": null,
+      "paid_sales": null
+    },
+    {
+      "id": "games_paid",
+      "source_id": "itch-browse-paid",
+      "filter": "paid_games",
+      "url": "https://itch.io/games/store",
+      "value": 49588,
+      "unit": "catalog_search_results",
+      "period": "2026-10-26",
+      "applies_to": "game listings returned by positive-price browse filter",
+      "money_earned": null,
+      "unique_creators": null,
+      "paid_sales": null
+    },
+    {
+      "id": "games_tag2d",
+      "source_id": "itch-browse-2d",
+      "filter": "tag_2d_all_prices",
+      "url": "https://itch.io/games/tag-2d",
+      "value": 428856,
+      "unit": "catalog_search_results",
+      "period": "2026-10-26",
+      "applies_to": "game listings returned under self-assigned 2D tag",
+      "money_earned": null,
+      "unique_creators": null,
+      "paid_sales": null
+    }
+  ],
+  "derived": {
+    "paid_filter_to_all_results_ratio": 0.0278,
+    "paid_filter_to_all_results_percent": 2.78,
+    "classification": "share_of_public_filter_results_not_sales_market_share",
+    "numerator": "games_paid",
+    "denominator": "games_all",
+    "not_a_buyer_or_creator_share": true
+  },
+  "unsupported": {
+    "unique_developers": null,
+    "paying_buyers": null,
+    "games_sold": null,
+    "revenue": null,
+    "profit": null,
+    "paid_2d_count": null,
+    "converting_2d_games": null
+  },
+  "limitations": [
+    "Live catalog filter counts may change or be rounded and are not an audited census.",
+    "Paid count reflects paid listings, not products with demonstrated sales.",
+    "2D tag and price filters overlap; 2D counts cannot be added to all-games totals.",
+    "Search/browse indexing, private pages, restrictions and non-game products have separate scopes.",
+    "No representative first-time seller outcomes, per-game income or successful-price distributions are observed."
+  ]
+}

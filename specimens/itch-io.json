@@ -141,6 +141,39 @@
       "evidence_class": "official",
       "license": "Official site externally linked; only independently authored summaries stored.",
       "notes": "Current creator help documentation at retrieval; platform policies may change. No seller analytics or transaction data accessed."
+    },
+    {
+      "id": "itch-browse-all",
+      "url": "https://itch.io/games",
+      "publisher": "itch.io Browse",
+      "title": "Top games — all price filters",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Public catalog result counts and URLs only; no listings or personal information reproduced.",
+      "notes": "Time-variable browse counter, not a audited marketplace census. Filtered catalog can be indexed asynchronously or exclude restricted pages."
+    },
+    {
+      "id": "itch-browse-paid",
+      "url": "https://itch.io/games/store",
+      "publisher": "itch.io Browse",
+      "title": "Top paid games — paid filter",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Public catalog result counts and URLs only; no listings or personal information reproduced.",
+      "notes": "Time-variable browse counter, not a audited marketplace census. Filtered catalog can be indexed asynchronously or exclude restricted pages."
+    },
+    {
+      "id": "itch-browse-2d",
+      "url": "https://itch.io/games/tag-2d",
+      "publisher": "itch.io Browse",
+      "title": "Top games tagged 2D",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Public catalog result counts and URLs only; no listings or personal information reproduced.",
+      "notes": "Time-variable browse counter, not a audited marketplace census. Filtered catalog can be indexed asynchronously or exclude restricted pages."
     }
   ],
   "claims": [
@@ -451,9 +484,76 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Documentation is not an estimate of the frequency of deindexing or commercial losses."
+    },
+    {
+      "id": "catalog-total",
+      "text": "On October 26, 2026, the default itch.io Games browse showed 1,780,861 results.",
+      "source_ids": [
+        "itch-browse-all"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Dynamic browse results include free and paid game listings; not an active seller or buyer count."
+    },
+    {
+      "id": "catalog-paid",
+      "text": "On October 26, 2026, the itch.io paid Games filter showed 49,588 results.",
+      "source_ids": [
+        "itch-browse-paid"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Paid-listing availability does not prove a game has made any paid sales."
+    },
+    {
+      "id": "catalog-2d",
+      "text": "On October 26, 2026, itch.io Games tagged 2D showed 428,856 results.",
+      "source_ids": [
+        "itch-browse-2d"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Tag-based classification overlaps with other genres; not a verified commercial 2D audience."
     }
   ],
-  "observations": [],
+  "observations": [
+    {
+      "id": "games_all",
+      "metric": "browse_results",
+      "value": 1780861,
+      "unit": "catalog_search_results",
+      "observed_at": "2026-10-26",
+      "source_ids": [
+        "itch-browse-all"
+      ],
+      "population": "game listings returned by default games browse",
+      "limitations": "Live catalog filter counts may change or be rounded and are not an audited census. Paid count reflects paid listings, not products with demonstrated sales. 2D tag and price filters overlap; 2D counts cannot be added to all-games totals. Search/browse indexing, private pages, restrictions and non-game products have separate scopes. No representative first-time seller outcomes, per-game income or successful-price distributions are observed."
+    },
+    {
+      "id": "games_paid",
+      "metric": "browse_results",
+      "value": 49588,
+      "unit": "catalog_search_results",
+      "observed_at": "2026-10-26",
+      "source_ids": [
+        "itch-browse-paid"
+      ],
+      "population": "game listings returned by positive-price browse filter",
+      "limitations": "Live catalog filter counts may change or be rounded and are not an audited census. Paid count reflects paid listings, not products with demonstrated sales. 2D tag and price filters overlap; 2D counts cannot be added to all-games totals. Search/browse indexing, private pages, restrictions and non-game products have separate scopes. No representative first-time seller outcomes, per-game income or successful-price distributions are observed."
+    },
+    {
+      "id": "games_tag2d",
+      "metric": "browse_results",
+      "value": 428856,
+      "unit": "catalog_search_results",
+      "observed_at": "2026-10-26",
+      "source_ids": [
+        "itch-browse-2d"
+      ],
+      "population": "game listings returned under self-assigned 2D tag",
+      "limitations": "Live catalog filter counts may change or be rounded and are not an audited census. Paid count reflects paid listings, not products with demonstrated sales. 2D tag and price filters overlap; 2D counts cannot be added to all-games totals. Search/browse indexing, private pages, restrictions and non-game products have separate scopes. No representative first-time seller outcomes, per-game income or successful-price distributions are observed."
+    }
+  ],
   "opportunities": [],
   "risks": [],
   "experiments": [],
