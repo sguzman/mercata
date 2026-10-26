@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "game_listing_quality_community_and_release_controls",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-quality",
+    "itch-interact",
+    "itch-indexed",
+    "itch-limited-releases",
+    "itch-account-followers"
+  ],
+  "groups": [
+    {
+      "id": "metadata_and_language",
+      "evidence": [
+        "platform_accurate_binaries",
+        "languages_truthful",
+        "tag_synonyms_avoid"
+      ],
+      "search_visibility_lift": null
+    },
+    {
+      "id": "artificial_intelligence_disclosure",
+      "evidence": [
+        "ai_disclosure_separate_from_game_ai",
+        "ai_asset_disclosure_enforced",
+        "spam_mass_ai_uploads"
+      ],
+      "universal_ai_game_prohibition": false,
+      "observed_enforcement_count": null
+    },
+    {
+      "id": "sales",
+      "evidence": [
+        "sale_discount_integrity"
+      ],
+      "observed_discount_profit_lift": null
+    },
+    {
+      "id": "jam_rules",
+      "evidence": [
+        "no_synthetic_jam_marketing"
+      ],
+      "mean_jam_traffic": null
+    },
+    {
+      "id": "followers_and_reputation",
+      "evidence": [
+        "followers_notifications",
+        "ratings_press_separate"
+      ],
+      "incremental_paying_buyers": null
+    },
+    {
+      "id": "limited_playtests",
+      "evidence": [
+        "limited_release_modes",
+        "patch_testing_in_release",
+        "early_access_risk_not_measured"
+      ],
+      "observed_first_day_profit_effect": null
+    },
+    {
+      "id": "cover_and_accessibility",
+      "evidence": [
+        "design_guidelines_accessibility"
+      ],
+      "measured_conversion_rate": null
+    }
+  ],
+  "crosswalk": {
+    "browser_play_events_are_purchases": false,
+    "followers_are_buyers": false,
+    "ratings_are_orders": false,
+    "jam_submissions_are_purchases": false,
+    "correct_metadata_guarantees_indexing": false,
+    "authored_license_verification_done": false
+  },
+  "unknown": {
+    "median_tags_per_selling_2d_game": null,
+    "genre_tag_conversion_rate": null,
+    "share_of_games_deindexed_for_ai_policy": null,
+    "jam_entry_paid_conversion": null,
+    "follower_to_buyer_rate": null,
+    "limited_preview_causal_sales_effect": null,
+    "typical_discount_net_profit_effect": null,
+    "average_press_review_revenue": null
+  },
+  "limitations": [
+    "Official recommendations and eligibility rules are not economic outcome estimates.",
+    "Game-asset-page AI enforcement should not be conflated with a blanket ban on AI-assisted games.",
+    "Platform labels should reflect actual binaries, translations and stated AI use.",
+    "Release, jam and marketing practices remain only documented platform features; no tests or accounts were operated."
+  ]
+}

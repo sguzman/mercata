@@ -76,3 +76,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io first-seller index/security (2026-10-26):** official discovery indexing gates, permanent publish dates, distinct tag/search methods, and TOTP account recovery documentation. 52% → 53% (Δ +1 pp). No account accessed. [Evidence](../ontology/itch-io/account-launch-indexing-2026.md).
+
+
+**itch.io discovery-quality and community controls (2026-10-26):** official metadata/tag/language/AI disclosure, jam promotion, discount integrity, followers, ratings and limited playtest rules registered. No real sales uplift attributed. **53% → 55%**, Δ +2 pp. [Evidence](../ontology/itch-io/discovery-quality-2026.md).

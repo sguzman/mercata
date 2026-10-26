@@ -441,7 +441,7 @@
           "title": "Document platform search and recommendation",
           "acceptance": "Cite discoverability surfaces, ranking documentation and limits.",
           "weight": 1,
-          "progress": 83,
+          "progress": 88,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -453,7 +453,10 @@
             "tests/itch-io-catalog.test.mjs",
             "ontology/itch-io/account-launch-indexing-2026.json",
             "ontology/itch-io/account-launch-indexing-2026.md",
-            "tests/itch-io-account-indexing.test.mjs"
+            "tests/itch-io-account-indexing.test.mjs",
+            "ontology/itch-io/discovery-quality-2026.json",
+            "ontology/itch-io/discovery-quality-2026.md",
+            "tests/itch-io-discovery-quality.test.mjs"
           ]
         },
         {
@@ -462,9 +465,14 @@
           "title": "Research evidence of query demand",
           "acceptance": "Record public demand signals and their sample limitations.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 66,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/discovery-quality-2026.json",
+            "ontology/itch-io/discovery-quality-2026.md",
+            "specimens/itch-io.json",
+            "tests/itch-io-discovery-quality.test.mjs"
+          ]
         },
         {
           "id": "discovery/external",
@@ -526,7 +534,7 @@
           "title": "Track changes to distribution rules",
           "acceptance": "Date and source important ranking or policy updates.",
           "weight": 1,
-          "progress": 67,
+          "progress": 78,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -535,7 +543,10 @@
             "tests/itch-io-economics.test.mjs",
             "ontology/itch-io/account-launch-indexing-2026.json",
             "ontology/itch-io/account-launch-indexing-2026.md",
-            "tests/itch-io-account-indexing.test.mjs"
+            "tests/itch-io-account-indexing.test.mjs",
+            "ontology/itch-io/discovery-quality-2026.json",
+            "ontology/itch-io/discovery-quality-2026.md",
+            "tests/itch-io-discovery-quality.test.mjs"
           ]
         }
       ]
@@ -586,13 +597,16 @@
           "title": "Assess differentiating features",
           "acceptance": "Identify observable features without equating ratings with quality.",
           "weight": 1,
-          "progress": 27,
+          "progress": 47,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/traffic-benchmark-2025.json",
             "ontology/itch-io/traffic-benchmark-2025.md",
             "specimens/itch-io.json",
-            "tests/itch-io-traffic-benchmark.test.mjs"
+            "tests/itch-io-traffic-benchmark.test.mjs",
+            "ontology/itch-io/discovery-quality-2026.json",
+            "ontology/itch-io/discovery-quality-2026.md",
+            "tests/itch-io-discovery-quality.test.mjs"
           ]
         },
         {
@@ -995,13 +1009,16 @@
           "title": "Document buyer feedback mechanisms",
           "acceptance": "Describe ratings, reviews, moderation and reputation transfer.",
           "weight": 1,
-          "progress": 42,
+          "progress": 74,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
             "ontology/itch-io/commercial-rules-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-economics.test.mjs"
+            "tests/itch-io-economics.test.mjs",
+            "ontology/itch-io/discovery-quality-2026.json",
+            "ontology/itch-io/discovery-quality-2026.md",
+            "tests/itch-io-discovery-quality.test.mjs"
           ]
         },
         {
@@ -1010,7 +1027,7 @@
           "title": "Study repeat and recurring purchases",
           "acceptance": "Define retention, subscriptions, renewal and churn measurements.",
           "weight": 1,
-          "progress": 58,
+          "progress": 72,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/bundle-sale-jam-2026.json",
@@ -1019,7 +1036,10 @@
             "ontology/itch-io/release-format-access-2026.md",
             "ontology/itch-io/release-format-access-2026.json",
             "site/itch-html5-audit.mjs",
-            "tests/itch-html5-audit.test.mjs"
+            "tests/itch-html5-audit.test.mjs",
+            "ontology/itch-io/discovery-quality-2026.json",
+            "ontology/itch-io/discovery-quality-2026.md",
+            "tests/itch-io-discovery-quality.test.mjs"
           ]
         },
         {
@@ -1066,7 +1086,7 @@
           "title": "Study suspension and termination",
           "acceptance": "Record policy grounds and appeals.",
           "weight": 1,
-          "progress": 78,
+          "progress": 83,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/policy-risk-2025-2026.json",
@@ -1078,7 +1098,10 @@
             "tests/itch-io-publisher-legal.test.mjs",
             "ontology/itch-io/account-launch-indexing-2026.json",
             "ontology/itch-io/account-launch-indexing-2026.md",
-            "tests/itch-io-account-indexing.test.mjs"
+            "tests/itch-io-account-indexing.test.mjs",
+            "ontology/itch-io/discovery-quality-2026.json",
+            "ontology/itch-io/discovery-quality-2026.md",
+            "tests/itch-io-discovery-quality.test.mjs"
           ]
         },
         {
@@ -1105,7 +1128,7 @@
           "title": "Track economically meaningful policy revisions",
           "acceptance": "Record version and effective date of rule changes.",
           "weight": 1,
-          "progress": 77,
+          "progress": 85,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -1114,7 +1137,10 @@
             "tests/itch-io-economics.test.mjs",
             "ontology/itch-io/policy-risk-2025-2026.json",
             "ontology/itch-io/policy-risk-2025-2026.md",
-            "tests/itch-io-policy.test.mjs"
+            "tests/itch-io-policy.test.mjs",
+            "ontology/itch-io/discovery-quality-2026.json",
+            "ontology/itch-io/discovery-quality-2026.md",
+            "tests/itch-io-discovery-quality.test.mjs"
           ]
         },
         {
@@ -1408,7 +1434,7 @@
           "title": "Review all public artifacts",
           "acceptance": "Verify rights, privacy, neutral tone and data suitability.",
           "weight": 1,
-          "progress": 84,
+          "progress": 86,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/transaction-cohort-protocol-2026.json",
@@ -1424,7 +1450,10 @@
             "tests/itch-io-publisher-legal.test.mjs",
             "ontology/itch-io/account-launch-indexing-2026.json",
             "ontology/itch-io/account-launch-indexing-2026.md",
-            "tests/itch-io-account-indexing.test.mjs"
+            "tests/itch-io-account-indexing.test.mjs",
+            "ontology/itch-io/discovery-quality-2026.json",
+            "ontology/itch-io/discovery-quality-2026.md",
+            "tests/itch-io-discovery-quality.test.mjs"
           ]
         },
         {
@@ -1513,7 +1542,7 @@
           "title": "Refund, discounts and regional pricing",
           "acceptance": "Collect dated public evidence and document implications for refund, discounts and regional pricing.",
           "weight": 1,
-          "progress": 62,
+          "progress": 71,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -1521,7 +1550,10 @@
             "specimens/itch-io.json",
             "tests/itch-io-economics.test.mjs",
             "ontology/itch-io/bundle-sale-jam-2026.json",
-            "ontology/itch-io/bundle-sale-jam-2026.md"
+            "ontology/itch-io/bundle-sale-jam-2026.md",
+            "ontology/itch-io/discovery-quality-2026.json",
+            "ontology/itch-io/discovery-quality-2026.md",
+            "tests/itch-io-discovery-quality.test.mjs"
           ]
         },
         {

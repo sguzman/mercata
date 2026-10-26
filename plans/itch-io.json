@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 53,
+  "progress_percent": 55,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -208,7 +208,7 @@
         "itch-io/discovery/build-impression-to-sale-funnel"
       ],
       "phase": 2,
-      "progress_percent": 61
+      "progress_percent": 71
     },
     {
       "id": "competition",
@@ -237,7 +237,7 @@
         "itch-io/competition/create-cross-platform-benchmarks"
       ],
       "phase": 2,
-      "progress_percent": 32
+      "progress_percent": 36
     },
     {
       "id": "income",
@@ -299,7 +299,7 @@
         "itch-io/rights/check-resale-and-transfer-conditions"
       ],
       "phase": 3,
-      "progress_percent": 65
+      "progress_percent": 66
     },
     {
       "id": "sales",
@@ -328,7 +328,7 @@
         "itch-io/sales/separate-buyer-interest-from-purchase"
       ],
       "phase": 3,
-      "progress_percent": 65
+      "progress_percent": 70
     },
     {
       "id": "risk",
@@ -356,7 +356,7 @@
         "itch-io/risk/set-downside-limits"
       ],
       "phase": 3,
-      "progress_percent": 64
+      "progress_percent": 66
     },
     {
       "id": "strategy",
@@ -447,7 +447,7 @@
         "itch-io/special-games/plan-release-maintenance-workload"
       ],
       "phase": 2,
-      "progress_percent": 53
+      "progress_percent": 55
     }
   ],
   "deliverables": [
@@ -771,7 +771,7 @@
       "objective": "Investigate identify marketplace and payment intermediary restrictions by effective date.",
       "acceptance": "Provide dated source-linked evidence to identify marketplace and payment intermediary restrictions by effective date; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 76,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -779,7 +779,10 @@
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/policy-risk-2025-2026.json",
         "ontology/itch-io/policy-risk-2025-2026.md",
-        "tests/itch-io-policy.test.mjs"
+        "tests/itch-io-policy.test.mjs",
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "tests/itch-io-discovery-quality.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1460,7 +1463,7 @@
       "objective": "Investigate identify format, genre, device and theme filters.",
       "acceptance": "Provide dated source-linked evidence to identify format, genre, device and theme filters; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 91,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1468,7 +1471,10 @@
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/account-launch-indexing-2026.json",
         "ontology/itch-io/account-launch-indexing-2026.md",
-        "tests/itch-io-account-indexing.test.mjs"
+        "tests/itch-io-account-indexing.test.mjs",
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "tests/itch-io-discovery-quality.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1482,7 +1488,7 @@
       "objective": "Investigate design measured exposure-to-click comparisons.",
       "acceptance": "Provide dated source-linked evidence to design measured exposure-to-click comparisons; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 68,
+      "percent": 82,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1491,7 +1497,10 @@
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
         "site/itch-html5-audit.mjs",
-        "tests/itch-html5-audit.test.mjs"
+        "tests/itch-html5-audit.test.mjs",
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "tests/itch-io-discovery-quality.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1504,9 +1513,14 @@
       "emoji": "🧭",
       "objective": "Investigate document publicly described editorial and ranking mechanisms.",
       "acceptance": "Provide dated source-linked evidence to document publicly described editorial and ranking mechanisms; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 41,
+      "evidence": [
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-discovery-quality.test.mjs"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 2
@@ -1519,14 +1533,17 @@
       "objective": "Investigate separate submission, ranking, voting and audience referrals.",
       "acceptance": "Provide dated source-linked evidence to separate submission, ranking, voting and audience referrals; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 57,
+      "percent": 72,
       "evidence": [
         "ontology/itch-io/bundle-sale-jam-2026.json",
         "ontology/itch-io/bundle-sale-jam-2026.md",
         "specimens/itch-io.json",
         "ontology/itch-io/account-launch-indexing-2026.json",
         "ontology/itch-io/account-launch-indexing-2026.md",
-        "tests/itch-io-account-indexing.test.mjs"
+        "tests/itch-io-account-indexing.test.mjs",
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "tests/itch-io-discovery-quality.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1540,12 +1557,15 @@
       "objective": "Investigate test whether updates lead to measured new product visitors.",
       "acceptance": "Provide dated source-linked evidence to test whether updates lead to measured new product visitors; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 58,
+      "percent": 86,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "tests/itch-io-discovery-quality.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1797,9 +1817,14 @@
       "emoji": "🏁",
       "objective": "Investigate define sample bias and ratings visibility.",
       "acceptance": "Provide dated source-linked evidence to define sample bias and ratings visibility; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 67,
+      "evidence": [
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-discovery-quality.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -2323,7 +2348,7 @@
       "objective": "Investigate research age-related categories, tagging and regional blocks.",
       "acceptance": "Provide dated source-linked evidence to research age-related categories, tagging and regional blocks; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 79,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -2331,7 +2356,10 @@
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/policy-risk-2025-2026.json",
         "ontology/itch-io/policy-risk-2025-2026.md",
-        "tests/itch-io-policy.test.mjs"
+        "tests/itch-io-policy.test.mjs",
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "tests/itch-io-discovery-quality.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2576,7 +2604,7 @@
       "objective": "Investigate compare description, screenshot, trailer, tags and accessibility.",
       "acceptance": "Provide dated source-linked evidence to compare description, screenshot, trailer, tags and accessibility; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 76,
+      "percent": 86,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -2585,7 +2613,10 @@
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
         "site/itch-html5-audit.mjs",
-        "tests/itch-html5-audit.test.mjs"
+        "tests/itch-html5-audit.test.mjs",
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "tests/itch-io-discovery-quality.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2599,11 +2630,14 @@
       "objective": "Investigate use consented seller records rather than guessed loyalty.",
       "acceptance": "Provide dated source-linked evidence to use consented seller records rather than guessed loyalty; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 25,
+      "percent": 65,
       "evidence": [
         "ontology/itch-io/bundle-sale-jam-2026.json",
         "ontology/itch-io/bundle-sale-jam-2026.md",
-        "specimens/itch-io.json"
+        "specimens/itch-io.json",
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "tests/itch-io-discovery-quality.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2687,7 +2721,7 @@
       "objective": "Investigate track dated commercial and content rules and reversals.",
       "acceptance": "Provide dated source-linked evidence to track dated commercial and content rules and reversals; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 82,
+      "percent": 91,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -2695,7 +2729,10 @@
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/policy-risk-2025-2026.json",
         "ontology/itch-io/policy-risk-2025-2026.md",
-        "tests/itch-io-policy.test.mjs"
+        "tests/itch-io-policy.test.mjs",
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "tests/itch-io-discovery-quality.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2987,11 +3024,15 @@
       "objective": "Investigate specify source attribution and release timing controls.",
       "acceptance": "Provide dated source-linked evidence to specify source attribution and release timing controls; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 64,
+      "percent": 70,
       "evidence": [
         "ontology/itch-io/commercial-strategy-protocol-2026.json",
         "ontology/itch-io/commercial-strategy-protocol-2026.md",
-        "tests/itch-io-strategy-protocol.test.mjs"
+        "tests/itch-io-strategy-protocol.test.mjs",
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-discovery-quality.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3023,11 +3064,15 @@
       "objective": "Investigate include support, testing, fixes and updates.",
       "acceptance": "Provide dated source-linked evidence to include support, testing, fixes and updates; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 57,
+      "percent": 63,
       "evidence": [
         "ontology/itch-io/commercial-strategy-protocol-2026.json",
         "ontology/itch-io/commercial-strategy-protocol-2026.md",
-        "tests/itch-io-strategy-protocol.test.mjs"
+        "tests/itch-io-strategy-protocol.test.mjs",
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-discovery-quality.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3466,9 +3511,14 @@
       "emoji": "🎮",
       "objective": "Investigate cover remapping, captions, contrast and input requirements.",
       "acceptance": "Provide dated source-linked evidence to cover remapping, captions, contrast and input requirements; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 47,
+      "evidence": [
+        "ontology/itch-io/discovery-quality-2026.json",
+        "ontology/itch-io/discovery-quality-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-discovery-quality.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2

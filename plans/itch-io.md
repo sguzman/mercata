@@ -288,3 +288,8 @@ Seven falsifiable offer, demo, game jam, promotion and store comparisons are spe
 ## Publisher contract, refunds and privacy
 
 [The official-policy audit](../ontology/itch-io/publisher-rights-refunds-2026.md) distinguishes publisher ownership, itch.io nonexclusive license, actual buyer refunds, conditional unclaimed collected funds maintenance and prohibition on sharing buyer data. No private records or legal case involved. Score 52%.
+
+
+## Discoverability policy and creator community
+
+[Official policy crosswalk](../ontology/itch-io/discovery-quality-2026.md) now covers accurate tags/platform support, generative AI disclosure, limited playtests, real followers vs buyers and sale/jam promotion restrictions. The mechanisms do not measure conversion or profit. Current study score: 55%.

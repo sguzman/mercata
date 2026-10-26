@@ -493,6 +493,28 @@
       "evidence_class": "official",
       "license": "Document linked; no secrets or personally identifying account details retrieved.",
       "notes": "Account security feature, not a security audit or evidence an individual publisher enabled 2FA."
+    },
+    {
+      "id": "itch-limited-releases",
+      "url": "https://itch.io/docs/creators/limited-releases",
+      "title": "Limited Playtests & Releases",
+      "publisher": "itch.io official guidance",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official documentation linked, summarized without extended copying.",
+      "notes": "Describes features and publisher policies, not experimentally demonstrated sales uplift or typical developer earnings."
+    },
+    {
+      "id": "itch-account-followers",
+      "url": "https://itch.io/docs/accounts/followers",
+      "title": "Followers",
+      "publisher": "itch.io official guidance",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official documentation linked, summarized without extended copying.",
+      "notes": "Describes features and publisher policies, not experimentally demonstrated sales uplift or typical developer earnings."
     }
   ],
   "claims": [
@@ -1692,6 +1714,146 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "The document describes product policy but provides no public query volumes or paid conversion rates."
+    },
+    {
+      "id": "ai_disclosure_separate_from_game_ai",
+      "text": "itch.io distinguishes generative-AI-assisted creation from traditional procedural algorithms, NPC logic and dynamic difficulty; AI-generated materials should use the project AI Disclosure setting.",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Terms and enforcement may evolve; no game, tool or training-data compliance audit was performed."
+    },
+    {
+      "id": "ai_asset_disclosure_enforced",
+      "text": "The quality guidance states that generative-AI disclosure is strictly enforced for game asset pages, with delisting possible for failures.",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "This asset-category enforcement does not establish a platform-wide ban on all AI-assisted games."
+    },
+    {
+      "id": "spam_mass_ai_uploads",
+      "text": "The guidelines warn against mass-generated near-identical game pages or works dominated by minimally curated generated content.",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "No measured prevalence of delisted AI games or revenue effects."
+    },
+    {
+      "id": "platform_accurate_binaries",
+      "text": "Platform tags should represent directly running, actually tested builds, not merely emulator support or the operating system capable of opening an archive.",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "A tag is not a compatibility certification; no binaries were tested."
+    },
+    {
+      "id": "languages_truthful",
+      "text": "Games should select only languages they actually contain; no-text projects should use the appropriate accessibility classification rather than claiming all languages.",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "This is a metadata requirement, not evidence localization increases purchases."
+    },
+    {
+      "id": "tag_synonyms_avoid",
+      "text": "The guide prefers appropriate recommended tags and avoiding duplicate synonyms and self-promotional irrelevant classifications.",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "No tagged-query traffic volumes, ranking formula or causal conversion data available."
+    },
+    {
+      "id": "no_synthetic_jam_marketing",
+      "text": "Entering unrelated game jams, creating a game jam solely to promote a product, or using jams to seize participants' IP are discouraged and may lead to platform restrictions.",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "This does not determine commercial returns from genuine jam participation."
+    },
+    {
+      "id": "sale_discount_integrity",
+      "text": "Publisher guidance discourages permanent/fake markdowns, inflated base prices followed by discounts and very frequent sales; evergreen multi-game bundle discounts are distinguished.",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "No observed demand elasticity, annual seller sale frequency or discount lift established."
+    },
+    {
+      "id": "followers_notifications",
+      "text": "Followers can receive notices about new publisher projects, devlogs and sales of projects they do not already own.",
+      "source_ids": [
+        "itch-account-followers"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Follower count is not an active buyer count; delivery/open rates, purchase conversion and incremental sales unmeasured."
+    },
+    {
+      "id": "ratings_press_separate",
+      "text": "Publisher-side Interact tools show ratings and press links, while comments and discussion boards offer user participation and moderation.",
+      "source_ids": [
+        "itch-interact"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Public review/press presence is not a proxy for paid orders or profit."
+    },
+    {
+      "id": "limited_release_modes",
+      "text": "Limited playtests can use restricted access, password or invite-only settings and limited download keys without placing an unfinished release in public storefront discovery.",
+      "source_ids": [
+        "itch-limited-releases"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Tool availability is not evidence that playtests improve long-run sales."
+    },
+    {
+      "id": "patch_testing_in_release",
+      "text": "The limited-release guide describes wharf/butler binary patching for pre-release testers and automatic updates in the itch app.",
+      "source_ids": [
+        "itch-limited-releases"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "No game was uploaded; bandwidth, testing labor and retention effects not quantified."
+    },
+    {
+      "id": "early_access_risk_not_measured",
+      "text": "itch.io's limited-release guide warns that publicly launching unfinished early-access projects may create reputation risk and spend the initial release's attention peak.",
+      "source_ids": [
+        "itch-limited-releases"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Qualitative guidance, not a measured causal early-access sales penalty."
+    },
+    {
+      "id": "design_guidelines_accessibility",
+      "text": "The quality guide recommends representative screenshots and covers and avoiding seizure-triggering animations or deceptive images.",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Not measured effect on revenue, accessibility or page conversion."
     }
   ],
   "observations": [
