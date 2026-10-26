@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "same_creator_game_category_cumulative_series",
+  "source_ids": [
+    "notjam-2023",
+    "notjam-2024",
+    "itch-case-notjam"
+  ],
+  "as_of": "2026-10-26",
+  "creator": "Not Jam",
+  "data_scope": "lifetime_game_category_totals_for_one_voluntarily_reporting_multi_product_creator_account",
+  "time_points": [
+    {
+      "year": 2023,
+      "game_page_views_lifetime": 15345,
+      "game_download_events_lifetime": 3639,
+      "game_browser_plays_lifetime": 3432,
+      "reported_game_category_revenue_usd_lifetime": 0,
+      "source_ids": [
+        "notjam-2023"
+      ],
+      "all_products_revenue_usd_lifetime": 647
+    },
+    {
+      "year": 2024,
+      "game_page_views_lifetime": 21174,
+      "game_download_events_lifetime": 3992,
+      "game_browser_plays_lifetime": 5871,
+      "reported_game_category_revenue_usd_lifetime": 0,
+      "source_ids": [
+        "notjam-2024"
+      ],
+      "all_products_revenue_usd_lifetime": 1799.22
+    },
+    {
+      "year": 2025,
+      "game_page_views_lifetime": 52217,
+      "game_download_events_lifetime": 4763,
+      "game_browser_plays_lifetime": 19548,
+      "reported_game_category_revenue_usd_lifetime": 24,
+      "source_ids": [
+        "itch-case-notjam"
+      ],
+      "all_products_revenue_usd_lifetime": 2263.88
+    }
+  ],
+  "cumulative_differences": [
+    {
+      "from_year": 2023,
+      "to_year": 2024,
+      "reported_game_views_cumulative_difference": 5829,
+      "reported_game_downloads_cumulative_difference": 353,
+      "reported_game_browser_plays_cumulative_difference": 2439,
+      "reported_game_revenue_cumulative_difference_usd": 0
+    },
+    {
+      "from_year": 2024,
+      "to_year": 2025,
+      "reported_game_views_cumulative_difference": 31043,
+      "reported_game_downloads_cumulative_difference": 771,
+      "reported_game_browser_plays_cumulative_difference": 13677,
+      "reported_game_revenue_cumulative_difference_usd": 24
+    }
+  ],
+  "not_paid_first_release_cohort": true,
+  "game_category_only": true,
+  "reported_2023_all_projects_free_or_donation": true,
+  "subsequent_paid_game_model_verification": null,
+  "net_game_profit_usd": null,
+  "unique_paid_buyers": null,
+  "individual_game_unit_sales": null,
+  "platform_representative": false,
+  "limits": [
+    "Every time point is cumulative lifetime for the then-current set of game products; game inventory may change.",
+    "Year-to-year differences in cumulative snapshots are arithmetic differences, not necessarily attributed completed calendar-year cohorts.",
+    "Reported browser plays, downloads and page views are event counts, not buyers.",
+    "Game revenue and total creator income differ because the account also publishes fonts, music and assets.",
+    "The 2023 publisher specifically described their projects as free or donation-funded. Treat this as a poor proxy for a mandatory paid-game cohort.",
+    "One developer across three dates is still one developer, not three independent samples.",
+    "Cannot infer causal effects from increased attention or platform-wide median seller income."
+  ],
+  "unavailable": {
+    "mean_itch_game_revenue": null,
+    "median_paid_game_revenue": null,
+    "first_release_median_profit": null,
+    "buyer_conversion_probability": null,
+    "causal_release_effect": null
+  }
+}

@@ -58,3 +58,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io independent traffic evidence (2026-10-26):** 169 volunteer-developer submissions from a 2025 study, separate view/play/download event units, and publicly documented internal summary discrepancies. No seller-income or causal conversion inference. **42% → 43%**, Δ +1 pp. [Evidence audit](../ontology/itch-io/traffic-benchmark-2025.md).
+
+
+**itch.io longitudinal developer disclosure (2026-10-26):** three annual cumulative game-category snapshots from one creator (2023–2025) reconciled as a single nonrepresentative account, with free/donation scope and non-game product revenue excluded. Score **43% → 44%**, Δ +1 pp. [Study](../ontology/itch-io/notjam-game-category-series-2023-2025.md).
