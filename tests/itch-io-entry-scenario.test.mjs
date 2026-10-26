@@ -11,6 +11,8 @@ test('Zero cash means no upfront spend, not zero labor or proof of sales',()=>{
  assert.equal(s.hypothetical_pilot.creator_labor_hours,null);
  assert.equal(s.hypothetical_pilot.actual_sales,null);
  assert.equal(s.hypothetical_pilot.early_stop_conditions.owner_approved,false);
- assert(s.roles.every(x=>x.automatically_revenue_split===false||x.automatically_personal_salary===false));
+ assert.equal(s.roles.find(x=>x.id==='account_owner').individual_earnings_inferred,false);
+ assert.equal(s.roles.find(x=>x.id==='contributor').automatically_revenue_split,false);
+ assert.equal(s.roles.find(x=>x.id==='cooperative_bundle_participant').automatically_personal_salary,false);
  assert(Object.values(s.unobserved).every(x=>x===null));
 });
