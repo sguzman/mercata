@@ -4068,6 +4068,28 @@
       "evidence_class": "first_party_current_product_documentation_shows_series_episode_organization",
       "license": "Short independent summary of public help rules and link; no help-center screenshots or images copied",
       "notes": "Current rolling YouTube Help policy describes playlist-to-show conversion, default non-serial ordering, serial oldest-first, season and episode numbering, and Shorts-only playlist restrictions (portrait/square, <=180 seconds). Feature eligibility and uptake unknown."
+    },
+    {
+      "id": "pew-parents-child-youtube-2025",
+      "url": "https://www.pewresearch.org/2025/10/08/how-parents-describe-their-kids-tech-use/",
+      "publisher": "Pew Research Center",
+      "title": "How parents describe their kids' tech use",
+      "published_at": "2025-10-08",
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "independent_us_random_address_recruited_parent_panel_child_video_self_report",
+      "license": "Linked and independently paraphrased limited aggregate survey results; no reproduced figure or underlying microdata",
+      "notes": "Pew survey May 13–26 2025, 3,054 parent/guardian respondents of children <=12, random selected eligible child if more than one. Parent-reported YouTube use under 2: 62% ever, 35% daily; age 2–4: 84% ever, 51% daily. Conditional co-viewing 95% and 93%. Whole-sample ±2.2 points not subgroup margin. Methodology https://www.pewresearch.org/internet/2025/10/08/parents-kids-screens-methodology/."
+    },
+    {
+      "id": "yt-kids-content-settings-2026",
+      "url": "https://support.google.com/youtube/answer/10938174?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Content policies for YouTube Kids",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "first_party_current_youtube_kids_content_level_eligibility_policy",
+      "license": "Summarized public policy definitions and linked source; no images, UI captures or full policy text copied",
+      "notes": "YouTube Kids Preschool ages <=4, Younger 5–8, Older 9–12. Automated and human systems assist, but not every item manually checked. Product settings are not uploader Made for Kids designations or statistics of age-specific audiences."
     }
   ],
   "claims": [
@@ -8925,6 +8947,26 @@
       "observed_at": "2026-10-25",
       "confidence": "high",
       "limitations": "Help snapshot, not verified rollout coverage for every owner, cross-device return behavior, playlist conversion, actual episode completion, or incremental creator earnings. No owner Analytics query performed."
+    },
+    {
+      "id": "pew-2025-us-preschool-youtube-parent-reports",
+      "text": "Pew's May 2025 panel of 3,054 U.S. parents reports YouTube ever-use for 84% of selected children ages 2–4 and daily use for 51%, based on parent reports; 93% of eligible parents with a YouTube-viewing child age 2–4 say they ever watch together.",
+      "source_ids": [
+        "pew-parents-child-youtube-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-25",
+      "limitations": "Parent survey, not children or creator content census; age-specific subgroup n and uncertainty not published in this summary. Does not separate main YouTube versus YouTube Kids, genre, made-for-kids flags, watch minutes, unique app accounts or spending."
+    },
+    {
+      "id": "youtube-kids-2026-three-age-content-levels",
+      "text": "YouTube Kids Help defines Preschool content for ages four and under, Younger for five to eight and Older for nine to twelve, and states not every recommended item has been individually reviewed.",
+      "source_ids": [
+        "yt-kids-content-settings-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-25",
+      "limitations": "First-party product rule, not measured product setting adoption, universal eligibility, child age verification, active user numbers, creator Made for Kids status or creator revenue."
     }
   ],
   "observations": [],

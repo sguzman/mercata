@@ -2,14 +2,16 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "child_audience_eligibility_and_format_distinctions",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "official_content_policy_and_separately_bounded_age_surveys_no_minor_profile",
   "sources": [
     "kids-policy",
     "kids-interpretation",
     "yt-age-restricted-content-2026",
     "ofcom-uk-online-2025",
-    "barb-uk-screen-share-2025"
+    "barb-uk-screen-share-2025",
+    "pew-parents-child-youtube-2025",
+    "yt-kids-content-settings-2026"
   ],
   "classification_cases": [
     {
@@ -151,7 +153,9 @@
     "child_directed_earnings_median": null,
     "mixed_audience_channel_prevalence": null,
     "age_gate_viewer_effect": null,
-    "gender_associated_children_interests": null
+    "gender_associated_children_interests": null,
+    "preschool_unique_youtube_viewers": null,
+    "made_for_kids_preschool_animation_share": null
   },
   "privacy_gates": [
     "No individual or device-level child profiles, raw histories, inferred age/gender/identity, pictures or comments may be collected for this study.",
@@ -160,5 +164,127 @@
     "Distinct format targeting and video classifier rules must be evaluated from intent and public policy, not assumed from title, animated style or presumed viewer demographics.",
     "Do not publish guidance for circumventing minor protections or personalized-ad restrictions.",
     "No sponsorship, RPM, creator profitability or number of children inferred from a platform feature restriction."
-  ]
+  ],
+  "preschool_youtube_evidence": {
+    "population_frame": {
+      "source_id": "pew-parents-child-youtube-2025",
+      "organization": "Pew Research Center",
+      "country": "United States",
+      "collection_start": "2025-05-13",
+      "collection_end": "2025-05-26",
+      "published_at": "2025-10-08",
+      "parent_respondents_n": 3054,
+      "eligible_parent_definition": "Parent/guardian with child age 12 or younger",
+      "sampling": "Pew ATP and SSRS Opinion Panel nationally address-recruited parent panel; online or live telephone interviews, weighted parent sample",
+      "survey_aapor_rr3_percent": 60,
+      "reported_full_sample_moe_pp": 2.2,
+      "subgroup_n": null,
+      "subgroup_moe_pp": null,
+      "sample_child_choice": "One randomly selected child aged 12 or younger per eligible responding parent",
+      "unit": "parent_report_of_selected_child_not_child_interview_or_device_usage_logs",
+      "youtube_kids_app_vs_main_platform_split": null
+    },
+    "parent_reported_child_youtube_use": [
+      {
+        "age": "under_2",
+        "ever_viewed_percent": 62,
+        "daily_viewed_percent": 35,
+        "viewing_together_conditional_percent": 95,
+        "conditional_co_viewing_frame": "parents_of_children_in_age_group_who_ever_viewed_youtube",
+        "separate_group_n": null
+      },
+      {
+        "age": "2_to_4",
+        "ever_viewed_percent": 84,
+        "daily_viewed_percent": 51,
+        "viewing_together_conditional_percent": 93,
+        "conditional_co_viewing_frame": "parents_of_children_in_age_group_who_ever_viewed_youtube",
+        "separate_group_n": null
+      }
+    ],
+    "product_configuration": {
+      "source_id": "yt-kids-content-settings-2026",
+      "product": "YouTube Kids content-level settings, not creator Made for Kids audience tag",
+      "settings": [
+        {
+          "id": "preschool",
+          "age_min": 0,
+          "age_max_inclusive": 4,
+          "examples": [
+            "creativity",
+            "playfulness",
+            "learning",
+            "exploration"
+          ]
+        },
+        {
+          "id": "younger",
+          "age_min": 5,
+          "age_max_inclusive": 8,
+          "examples": [
+            "songs",
+            "cartoons",
+            "crafts"
+          ]
+        },
+        {
+          "id": "older",
+          "age_min": 9,
+          "age_max_inclusive": 12,
+          "examples": [
+            "music",
+            "gaming",
+            "science"
+          ]
+        }
+      ],
+      "all_catalog_items_individually_approved": false,
+      "automated_and_human_review_used": true,
+      "settings_prove_creator_video_is_made_for_kids": false,
+      "evidence_of_youtube_kids_setting_user_share": null,
+      "video_population_in_each_setting": null
+    },
+    "content_subcultures": [
+      {
+        "id": "preschool_nursery_rhymes_and_songs",
+        "description": "Age-oriented songs and nursery rhymes, a possible child-directed signal under YouTube's multi-factor criteria",
+        "observed_video_population": null,
+        "observed_watchtime": null
+      },
+      {
+        "id": "preschool_learning_and_readalongs",
+        "description": "Early education, read-alongs, counting and exploratory play, to classify by intended audience and actual material",
+        "observed_video_population": null,
+        "observed_watchtime": null
+      },
+      {
+        "id": "preschool_cartoon_narrative",
+        "description": "Animated stories with deliberate age-appropriate preschool audience; animation style alone insufficient",
+        "observed_video_population": null,
+        "observed_watchtime": null
+      },
+      {
+        "id": "mixed_or_general_animation",
+        "description": "Animation for families or broad audiences may not be child directed, depending on content and intent",
+        "observed_video_population": null,
+        "observed_watchtime": null
+      }
+    ],
+    "explicit_non_equivalences": [
+      "Parent says the child watches YouTube is not evidence the child watched the YouTube Kids app or a video designated Made for Kids.",
+      "YouTube Kids Preschool recommendation setting is a product content-level option, not itself an uploader's Made for Kids audience declaration.",
+      "A cartoon is not inherently preschool content or child-directed under YouTube's multi-factor intent policy.",
+      "Pew 2025 U.S. parent reports cannot be compared directly with Ofcom or Barb UK child platform/device minutes, different ages and measures.",
+      "Survey respondent n and full-sample sampling error cannot be applied to children aged two to four without published subgroup denominators."
+    ],
+    "unmeasured": {
+      "verified_preschool_youtube_unique_viewers": null,
+      "preschool_youtube_kids_app_share": null,
+      "made_for_kids_animation_video_count": null,
+      "preschool_animation_watch_hours": null,
+      "preschool_category_creator_net_earnings": null,
+      "child_commercial_conversion": null,
+      "verified_parent_report_accuracy": null
+    }
+  }
 }

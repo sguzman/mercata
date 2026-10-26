@@ -336,6 +336,14 @@ try{
     assert((await child.textContent()).includes('safe for a whole family'));
     assert((await child.textContent()).includes('No individual minors are profiled'));
     assert((await child.textContent()).includes('96%'));
+    assert.equal(await child.locator('.child-format-observation').count(),2,'Missing published separate UK measures');
+    const preschool=child.locator('.preschool-survey-policy');
+    assert.equal(await preschool.count(),1,'Missing protected preschool parent survey');
+    assert((await preschool.textContent()).includes('3,054 parents'));
+    assert((await preschool.textContent()).includes('84% reportedly ever watched YouTube'));
+    assert((await preschool.textContent()).includes('51% daily'));
+    assert((await preschool.textContent()).includes('93% of YouTube-watching children'));
+    assert((await preschool.textContent()).includes('NOT identical to a creator Made for Kids designation'));
     const screenStudy=page.locator('.screen-viewing-study');
     assert.equal(await screenStudy.locator('.screen-viewing-card').count(),2,'Missing UK device share subgroups');
     await screenStudy.locator('summary').click();

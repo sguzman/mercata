@@ -4112,9 +4112,28 @@ function renderChildAgeFormatStudy(data,dossier){
    card.append(make('strong','',item.value+'%'));
    card.append(make('p','',item.ages+' · '+item.measure.replaceAll('_',' ')));
    card.append(make('p','measure-limit',item.limitations));
-   grid.append(card);
+   measures.append(card);
  }
+ details.append(measures);
  details.append(make('p','measure-limit','Ofcom ages 8–14 platform use and Barb ages 4–15 television viewing share have different denominators. No individual minors are profiled; global child audiences and income changes remain unknown.'));
+ const preschool=data.preschool_youtube_evidence;
+ if(preschool?.population_frame?.parent_respondents_n===3054&&preschool?.product_configuration?.settings?.length===3){
+  const block=make('div','preschool-survey-policy');
+  block.append(make('h5','','Preschool YouTube: parent survey versus app content-level policy'));
+  const toddler=preschool.parent_reported_child_youtube_use.find(x=>x.age==='2_to_4');
+  block.append(make('p','measure-limit','Pew US parent survey, May 2025 ('+
+   preschool.population_frame.parent_respondents_n.toLocaleString('en-US')+
+   ' parents): among children aged 2–4, '+toddler.ever_viewed_percent+
+   '% reportedly ever watched YouTube, '+toddler.daily_viewed_percent+
+   '% daily, and '+toddler.viewing_together_conditional_percent+
+   '% of YouTube-watching children had parents who ever co-viewed. Parent report, not device-observed unique people.'));
+  block.append(make('p','measure-limit','YouTube Kids settings: '+
+   preschool.product_configuration.settings.map(x=>x.id+' age ≤'+x.age_max_inclusive).join(' · ')+
+   '. A preschool app setting is NOT identical to a creator Made for Kids designation.'));
+  block.append(make('p','measure-limit','No child video watch histories, preschool animation reach, subgroup margin of error, or child-directed creator revenue were observed.'));
+  block.append(audienceSources([preschool.population_frame.source_id,preschool.product_configuration.source_id],dossier));
+  details.append(block);
+ }
  const link=make('a','inline-link','Read content classification, privacy restrictions and aggregate UK survey frames ↗');
  link.href='./ontology/youtube/child-age-and-format-gates.md';link.target='_blank';link.rel='noopener noreferrer';
  details.append(link);section.append(details);return section;
