@@ -2,13 +2,15 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "small_channel_discovery_reproducible_sample_design",
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "source_ids": [
     "impressions-count-help",
     "yt-reach-source-types-2026",
     "vidiq-subscriber-benchmarks-2026",
     "vidiq-1000-subscribers-2026",
-    "api-metrics"
+    "api-metrics",
+    "vidiq-sept2026-first-week-longform-view-distribution",
+    "tariq-2026-first-upload-vloggers"
   ],
   "external_channel_observations": [
     {
@@ -131,7 +133,10 @@
     "Zero-subscriber, deleted and non-indexed channels may be missing from vendor indexes and must not be treated as successful zero-income participants.",
     "Impressions vary by counted product surface, language, content format, title/thumbnail and age; fixed windows and consistent eligible exposures are mandatory.",
     "Authorized channel reporting may contain private account data; aggregate privacy-preserving results rather than uploading individual analytics or private creator credentials.",
-    "Neither source proves a causal effect of posting more video objects or a probability of new-creator success."
+    "Neither source proves a causal effect of posting more video objects or a probability of new-creator success.",
+    "The 38,229,639-video vidIQ first-week distribution is not stratified by channel age or size; its median 234 views is not an estimated median for new creators.",
+    "The separate 107-channel preprint measures lifetime channel views with variable follow-up, not first-week video views, so the two under-1k percentages cannot be subtracted or pooled.",
+    "For eligible thumbnail impressions YouTube requires at least 50% on-screen visibility for more than one second, and excludes external links, YouTube Kids and some other surfaces; public video plays cannot supply that denominator."
   ],
   "observed_authorized_channel_rows": [],
   "unmeasured": {
@@ -140,6 +145,102 @@
     "representative_newcomer_growth": null,
     "zero_impression_rate": null,
     "viewer_to_customer_conversion": null,
-    "creator_ad_profit": null
+    "creator_ad_profit": null,
+    "first_week_small_creator_view_distribution": null,
+    "new_channel_ctr_percent": null
+  },
+  "first_week_video_distribution": {
+    "source_id": "vidiq-sept2026-first-week-longform-view-distribution",
+    "publisher": "vidIQ Research",
+    "reported_publication_date": "2026-09-16",
+    "study_version": "2026-09-16",
+    "source_publication_window_start": "2026-08-15",
+    "source_publication_window_end_exclusive": "2026-09-06",
+    "study_analysis_date": "2026-09-14",
+    "measurement_window_days": 7,
+    "observed_video_objects": 38229639,
+    "observed_first_week_views": 261962388719,
+    "classification": "indexed_longform_video_objects_not_creator_cohort",
+    "eligible": "Long-form-classified indexed videos with observed day-seven view data and updated metadata in publication window",
+    "shorts_excluded": true,
+    "livestreams_separately_excluded": false,
+    "counts_unique_channels": null,
+    "unique_viewers": null,
+    "creator_subscriber_size_distribution": null,
+    "eligible_first_time_creators": null,
+    "observed_owner_thumbnail_impressions": null,
+    "observed_ctr": null,
+    "seven_day_median_views": 234,
+    "first_week_view_percentiles": [
+      {
+        "p": 50,
+        "views": 234
+      },
+      {
+        "p": 90,
+        "views": 8154
+      },
+      {
+        "p": 99,
+        "views": 109778
+      },
+      {
+        "p": 99.9,
+        "views": 663099
+      }
+    ],
+    "below_100_first_week_views_percent": 37.7,
+    "below_1000_first_week_views_percent": 70.1,
+    "at_least_10000_first_week_views_percent": 8.5,
+    "approximate_rank_band_view_shares": [
+      {
+        "band": "top_approximately_1_percent",
+        "percent_of_cohort_first_week_views": 54.1,
+        "rank_threshold": "at_or_above_p99"
+      },
+      {
+        "band": "next_approximately_9_percent",
+        "percent_of_cohort_first_week_views": 34.6,
+        "rank_threshold": "p90_to_under_p99"
+      },
+      {
+        "band": "next_approximately_40_percent",
+        "percent_of_cohort_first_week_views": 10.8,
+        "rank_threshold": "p50_to_under_p90"
+      },
+      {
+        "band": "bottom_approximately_50_percent",
+        "percent_of_cohort_first_week_views": 0.5,
+        "rank_threshold": "under_p50"
+      }
+    ],
+    "rank_bands_exact_video_headcounts": false,
+    "distinct_broad_channel_subscriber_cohorts": false,
+    "raw_individual_videos_downloaded": false,
+    "reported_nonrandom_indexing": true,
+    "all_youtube_uploads_in_window": false,
+    "causal_algorithmic_concentration": null,
+    "creator_net_revenue": null,
+    "study_limits": [
+      "Video-level indexed sample is not conditioned on channel size and cannot estimate small/new channel first-week performance.",
+      "Eligible videos require day-seven observed data; deleted, unindexed, unavailable and other missed videos may be absent.",
+      "Long-form classification excludes Shorts but does not separately filter livestreams, so results are not strictly long-form on-demand only.",
+      "View shares use approximate percentile bands and tied thresholds, not exact fractions of upload-object counts.",
+      "First-week public video view events are not thumbnail impressions, unique viewers, engaged views, creator payouts or causal recommendation effects."
+    ]
+  },
+  "first_upload_preprint_comparison": {
+    "source_id": "tariq-2026-first-upload-vloggers",
+    "source_class": "unreviewed_author_preprint_selected_cold_start_daily_life_vloggers",
+    "selected_first_upload_channels": 107,
+    "first_upload_period": "2025-11_through_2026-08",
+    "metric": "fraction_selected_channels_with_less_than_1000_lifetime_public_views",
+    "reported_percent": 51.4,
+    "first_week_view_distribution_compatible": false,
+    "same_observation_unit": false,
+    "same_followup_interval": false,
+    "representative_new_creator_success_rate": null,
+    "channel_overlap_observed": null,
+    "interpretation": "107 keyword-search-selected channels observed at variable follow-up, lifetime channel view counts; not first-week indexed video view percentages"
   }
 }

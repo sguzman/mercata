@@ -238,6 +238,13 @@ try{
     assert((await returningPanel.textContent()).includes('50 South Korean beauty channels'));
     assert((await returningPanel.textContent()).includes('Likes were not statistically significant'));
     assert((await returningPanel.textContent()).includes('do not measure a new-to-returning person transition'));
+    const firstWeek=page.locator('.small-channel-discovery .first-week-video-distribution');
+    assert.equal(await firstWeek.count(),1,'Missing bounded video-level distribution');
+    assert((await firstWeek.textContent()).includes('38,229,639 indexed long-form-classified videos'));
+    assert((await firstWeek.textContent()).includes('70.1% received fewer than 1,000'));
+    assert((await firstWeek.textContent()).includes('107 search-selected channels'));
+    assert((await firstWeek.textContent()).includes('not seven-day video views'));
+    assert((await firstWeek.textContent()).includes('No stratified newcomer distribution'));
     const reachPanel=page.locator('.audience-population-crosswalk .country-selected-reach-panel');
     assert.equal(await reachPanel.count(),1,'Missing source-linked seven-country comparison');
     assert.equal(await reachPanel.locator('.country-selected-reach-item').count(),7,'Country panel must have seven matched estimates');

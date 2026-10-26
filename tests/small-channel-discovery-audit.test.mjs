@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {auditDiscoveryMetric,classifyNewChannel} from '../site/small-channel-discovery-audit.mjs';
+import {auditDiscoveryMetric,classifyNewChannel,auditFirstWeekVideoSample} from '../site/small-channel-discovery-audit.mjs';
 const load=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 test('Nonrandom vidIQ channel index frames cannot become Reach impressions',async()=>{
  const [m,d]=await Promise.all([load('ontology/youtube/small-channel-discoverability-protocol.json'),load('specimens/youtube.json')]);
@@ -32,4 +32,30 @@ test('Site separates owner-authorized reach from public vendor subscriber cohort
  assert(app.includes('renderSmallChannelDiscovery'));
  assert(app.includes('small-channel-discoverability-protocol.json'));
  assert(app.includes('not owner-only thumbnail impressions'));
+});
+
+test('Indexed seven-day videos and sampled first-upload vlog channels are explicitly incompatible',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/small-channel-discoverability-protocol.json'),load('specimens/youtube.json')]);
+ const sources=new Set(d.evidence.map(x=>x.id));
+ assert.deepEqual(auditFirstWeekVideoSample(m,sources),{valid:true,errors:[]});
+ assert.equal(m.first_week_video_distribution.observed_video_objects,38229639);
+ assert.equal(m.first_week_video_distribution.seven_day_median_views,234);
+ assert.equal(m.first_week_video_distribution.below_1000_first_week_views_percent,70.1);
+ assert.equal(m.first_week_video_distribution.creator_subscriber_size_distribution,null);
+ assert.equal(m.first_upload_preprint_comparison.selected_first_upload_channels,107);
+ assert.equal(m.first_upload_preprint_comparison.first_week_view_distribution_compatible,false);
+ assert.equal(m.unmeasured.first_week_small_creator_view_distribution,null);
+});
+test('A view-distribution audit rejects faked newcomer and owner impression information',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/small-channel-discoverability-protocol.json'),load('specimens/youtube.json')]);
+ const sources=new Set(d.evidence.map(x=>x.id));
+ const a=structuredClone(m);
+ a.first_week_video_distribution.observed_owner_thumbnail_impressions=14000;
+ assert(auditFirstWeekVideoSample(a,sources).errors.includes('video views misrepresented as channel or revenue evidence'));
+ const b=structuredClone(m);
+ b.first_upload_preprint_comparison.same_observation_unit=true;
+ assert(auditFirstWeekVideoSample(b,sources).errors.includes('first-upload channel cohort falsely pooled'));
+ const c=structuredClone(m);
+ c.first_week_video_distribution.rank_bands_exact_video_headcounts=true;
+ assert(auditFirstWeekVideoSample(c,sources).errors.includes('rank bands overclaimed'));
 });

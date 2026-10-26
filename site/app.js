@@ -2722,7 +2722,27 @@ function renderSmallChannelDiscovery(model,dossier){
   const card=make('article','ownership-card');card.append(make('h5','',name));
   card.append(make('strong','',value));card.append(make('p','measure-limit',limit));grid.append(card);
  }
- details.append(grid);details.append(audienceSources(model.source_ids,dossier));
+ details.append(grid);
+ const view=model.first_week_video_distribution;
+ if(view?.observed_video_objects===38229639&&view?.classification==='indexed_longform_video_objects_not_creator_cohort'){
+  const panel=make('div','first-week-video-distribution');
+  panel.append(make('h5','','First-week video viewing is concentrated, not a small-channel success estimate'));
+  panel.append(make('p','measure-limit',view.observed_video_objects.toLocaleString('en-US')+
+    ' indexed long-form-classified videos with day-seven data in August–September 2026. Median seven-day views: '+
+    view.seven_day_median_views.toLocaleString('en-US')+'; '+
+    view.below_1000_first_week_views_percent+'% received fewer than 1,000.'));
+  panel.append(make('p','measure-limit','Top approximate 1% of selected videos: '+
+    view.approximate_rank_band_view_shares[0].percent_of_cohort_first_week_views+
+    '% of first-week view events. Rank bands have ties and do not represent exact video shares.'));
+  const cold=model.first_upload_preprint_comparison;
+  panel.append(make('p','measure-limit','Separate, incompatible first-upload vlog preprint: '+
+    cold.selected_first_upload_channels+' search-selected channels; '+
+    cold.reported_percent+'% had fewer than 1,000 LIFETIME channel views, not seven-day video views.'));
+  panel.append(make('p','measure-limit','No stratified newcomer distribution, thumbnail impressions, CTR, causal recommendation effects, unique viewers or creator profit were measured.'));
+  panel.append(audienceSources([view.source_id,cold.source_id],dossier));
+  details.append(panel);
+ }
+ details.append(audienceSources(model.source_ids,dossier));
  const link=make('a','inline-link','Read sampling and impression-denominator requirements ↗');
  link.href='./ontology/youtube/small-channel-discoverability-protocol.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
  section.append(details);return section;
