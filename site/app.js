@@ -5137,7 +5137,7 @@ function renderBeautyFashionQuerySeries(data,dossier){
   const section=make('section','beauty-fashion-query-series');
   const details=make('details','beauty-fashion-query-details');
   details.append(make('summary','','Beauty, fashion and routine title-query evidence · units and seasons'));
-  details.append(make('p','measure-limit','Five global platform-reported title searches use different date ranges, predicates and units. Their values cannot be combined into a popularity ranking or year-over-year growth line.'));
+  details.append(make('p','measure-limit','Seven global first-party title-filtered or topic-related video observations have different date ranges, predicates and units. They cannot be combined into a popularity ranking or year-over-year trend.'));
   const grid=make('div','beauty-fashion-query-grid');
   for(const item of data.source_observations){
     const card=make('article','beauty-fashion-query-card');

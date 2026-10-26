@@ -718,10 +718,13 @@ try{
     assert((await nfl.textContent()).includes('not 30% seasonal growth'));
     assert((await nfl.textContent()).includes('must not be interpolated'));
     const styleQueries=page.locator('.beauty-fashion-query-series');
-    assert.equal(await styleQueries.locator('.beauty-fashion-query-card').count(),5,'Missing source-scoped beauty/fashion title observations');
+    assert.equal(await styleQueries.locator('.beauty-fashion-query-card').count(),7,'Missing source-scoped beauty/fashion title observations');
     await styleQueries.locator('summary').click();
     assert((await styleQueries.textContent()).includes('uploads, not views'));
     assert((await styleQueries.textContent()).includes('Year-over-year trend, unique people'));
+    assert((await styleQueries.textContent()).includes('nail art beauty craft'));
+    assert((await styleQueries.textContent()).includes('jewelry making fashion craft'));
+    assert((await styleQueries.textContent()).includes('topic-related video observations'));
     const animation=page.locator('.animation-format-cycles');
     assert.equal(await animation.locator('.animation-format-event').count(),4,'Missing dated animation editorial evidence');
     assert.equal(await animation.locator('.animation-format-survey').count(),7,'Missing distinct U.S./Mexico fan-survey items');

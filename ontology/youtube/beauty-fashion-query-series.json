@@ -2,14 +2,33 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "beauty_fashion_title_query_series_review",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "disjoint_source_windows_and_query_units_not_a_valid_annual_trend",
   "categories": [
     "beauty",
     "fashion",
-    "feminine-lifestyle"
+    "feminine-lifestyle",
+    "beauty-crafts-adjacent"
   ],
   "source_observations": [
+    {
+      "id": "nail_art_related_2022",
+      "source_id": "yt-nail-art-2022-views",
+      "observed_topic_record_id": null,
+      "published_at": "2023-05-05",
+      "period_start": "2022-01-01",
+      "period_end": "2022-12-31",
+      "period_end_qualification": "calendar year 2022, publisher-defined related-to-video collection",
+      "geography": "Global",
+      "title_rule": "publisher-classified related-to-nail-art videos; no fixed public title keyword predicate disclosed",
+      "predicate_kind": "platform_related_topic",
+      "unit": "video_views",
+      "comparison": "greater_than",
+      "value": 5000000000,
+      "theme": "nail_art_beauty_craft",
+      "candidate_cycle": "beauty_tutorial_and_craft_topic",
+      "seasonal_effect_measured": false
+    },
     {
       "id": "grwm_title_2023",
       "source_id": "yt-grwm-history-2023",
@@ -94,6 +113,24 @@
       "theme": "adjacent_morning_routine",
       "candidate_cycle": "everyday_routine",
       "seasonal_effect_measured": false
+    },
+    {
+      "id": "handmade_jewelry_diy_title_2025",
+      "source_id": "craft-jewelry-2026",
+      "observed_topic_record_id": null,
+      "published_at": "2026-01-28",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "period_end_qualification": "calendar year 2025 with publisher-classified related videos",
+      "geography": "Global",
+      "title_rule": "videos related to handmade jewelry with DIY in title; platform topic classifier not disclosed",
+      "predicate_kind": "platform_related_topic_and_title_keyword",
+      "unit": "video_views",
+      "comparison": "greater_than",
+      "value": 250000000,
+      "theme": "jewelry_making_fashion_craft",
+      "candidate_cycle": "skill_tutorial_and_accessory_craft_topic",
+      "seasonal_effect_measured": false
     }
   ],
   "series_protocol": {
@@ -107,7 +144,8 @@
     "seasonality_policy": "Multiple comparable annual cycles and date-aligned reference genres are required to identify seasonality beyond a calendar-themed title.",
     "novelty_policy": "A source's editorial trend mention is an observation of curation, not a quantitative adoption estimate.",
     "sampling_limits": "Publisher aggregate title rule and related-content algorithm may not be reproducible through public search or public API; do not invent a census.",
-    "overlap_policy": "Some videos may qualify for several title queries; sums of topic counts are not distinct events or people."
+    "overlap_policy": "Nail art can belong to beauty, crafts and tutorials; handmade jewelry can belong to fashion, home DIY, crafts and art. Topic sums are not deduplicated video events, people, or population trends.",
+    "category_predicate_policy": "Publisher-related-to topical categories with undocumented recall must not be treated as exact fixed title searches, and cannot be compared as if the same video population."
   },
   "hypotheses": [
     {
@@ -160,7 +198,7 @@
     {
       "id": "dated_source_queries_and_units",
       "fulfilled": true,
-      "reason": "Five dated first-party title-scoped observations with explicit periods, units and uncertainty."
+      "reason": "Seven dated first-party bounded observations include title filters and broader publisher-related-video categories, with explicit periods, units and incomparable predicates."
     },
     {
       "id": "replicable_monthly_same_query",
