@@ -148,7 +148,7 @@ for (const entry of index.specimens) {
     const multilingual=load('ontology/youtube/multilingual-distribution.json');
     ensure(multilingual.facets.length===8 &&
       multilingual.product_surfaces.length===6 &&
-      multilingual.official_selected_observations.length===2 &&
+      multilingual.official_selected_observations.length===3 &&
       multilingual.automatic_dubbing_example_pairs.length===8,
       'Incomplete multilingual distribution research ontology');
     ensure(new Set(multilingual.facets.map(x=>x.id)).size===8 &&
@@ -163,6 +163,10 @@ for (const entry of index.specimens) {
       'Translation pair without an official source');
     const multilingualWatch=multilingual.official_selected_observations.find(x=>x.id==='mla-watch-time-non-primary-language-2025');
     const autoSnapshot=multilingual.official_selected_observations.find(x=>x.id==='auto-dubbing-language-total-may-2026');
+    const dailyDub=multilingual.official_selected_observations.find(x=>x.id==='autodubbed-daily-10min-watchers-dec2025');
+    ensure(dailyDub?.value===6000000 && dailyDub?.comparator==='greater_than' &&
+      dailyDub?.source_period==='2025-12' && dailyDub?.estimated_additional_revenue===null,
+      'Missing bounded December 2025 auto-dubbed daily viewing threshold');
     ensure(multilingualWatch?.value===25 && multilingualWatch.comparator==='greater_than' &&
       multilingualWatch.denominator_n===null &&
       multilingualWatch.representative_of_all_youtube_creators===false &&
