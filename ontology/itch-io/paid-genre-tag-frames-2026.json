@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "overlapping_paid_game_niche_catalog_filters",
+  "retrieved_at": "2026-10-26",
+  "sources": [
+    "itch-genre-puzzle-paid",
+    "itch-genre-horror-paid",
+    "itch-genre-cozy-paid"
+  ],
+  "observations": [
+    {
+      "id": "itch-genre-puzzle-paid",
+      "url": "https://itch.io/games/genre-puzzle/store",
+      "title": "Paid Puzzle genre",
+      "count": 7456,
+      "classification_type": "genre",
+      "unit": "paid_filter_listing_count",
+      "simultaneous_measurement": false,
+      "purchases": null,
+      "profit": null
+    },
+    {
+      "id": "itch-genre-horror-paid",
+      "url": "https://itch.io/games/store/tag-horror",
+      "title": "Paid Horror tag",
+      "count": 5117,
+      "classification_type": "theme_tag",
+      "unit": "paid_filter_listing_count",
+      "simultaneous_measurement": false,
+      "purchases": null,
+      "profit": null
+    },
+    {
+      "id": "itch-genre-cozy-paid",
+      "url": "https://itch.io/games/store/tag-cozy",
+      "title": "Paid Cozy tag",
+      "count": 857,
+      "classification_type": "mood_tag",
+      "unit": "paid_filter_listing_count",
+      "simultaneous_measurement": false,
+      "purchases": null,
+      "profit": null
+    }
+  ],
+  "limitations": [
+    "Puzzle is a genre category; Horror is a theme tag; Cozy is a mood tag.",
+    "One game can occupy several categories and counts must not be summed.",
+    "Pages had distinct crawl recencies, so a synchronized comparative ratio is not warranted.",
+    "Paid-listed titles can be discounted temporarily to $0.",
+    "Listing counts are not buyer demand, commercial units sold or publisher profit."
+  ],
+  "unknown": {
+    "paid_2d_puzzle_intersection": null,
+    "paid_2d_cozy_intersection": null,
+    "paid_2d_horror_intersection": null,
+    "commercial_genre_success_probabilities": null,
+    "genre_specific_revenue": null
+  }
+}

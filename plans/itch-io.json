@@ -178,7 +178,7 @@
         "itch-io/market/estimate-paid-addressable-demand"
       ],
       "phase": 2,
-      "progress_percent": 32
+      "progress_percent": 34
     },
     {
       "id": "discovery",
@@ -237,7 +237,7 @@
         "itch-io/competition/create-cross-platform-benchmarks"
       ],
       "phase": 2,
-      "progress_percent": 36
+      "progress_percent": 42
     },
     {
       "id": "income",
@@ -389,7 +389,7 @@
         "itch-io/strategy/define-retrospective-reporting"
       ],
       "phase": 4,
-      "progress_percent": 59
+      "progress_percent": 60
     },
     {
       "id": "review",
@@ -415,7 +415,7 @@
         "itch-io/review/prepare-evidence-gap-summary"
       ],
       "phase": 1,
-      "progress_percent": 61
+      "progress_percent": 62
     },
     {
       "id": "special-games",
@@ -1305,7 +1305,7 @@
       "objective": "Investigate define exclusive and overlapping genres for comparable inventory counts.",
       "acceptance": "Provide dated source-linked evidence to define exclusive and overlapping genres for comparable inventory counts; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 56,
+      "percent": 84,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -1313,7 +1313,10 @@
         "tests/itch-io-catalog.test.mjs",
         "ontology/itch-io/paid-2d-popular-prices-2026.json",
         "ontology/itch-io/paid-2d-popular-prices-2026.md",
-        "tests/itch-io-price-sample.test.mjs"
+        "tests/itch-io-price-sample.test.mjs",
+        "ontology/itch-io/paid-genre-tag-frames-2026.json",
+        "ontology/itch-io/paid-genre-tag-frames-2026.md",
+        "tests/itch-io-genre-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1729,7 +1732,7 @@
       "objective": "Investigate exclude non-commercial uploads from matched paid-game comparisons.",
       "acceptance": "Provide dated source-linked evidence to exclude non-commercial uploads from matched paid-game comparisons; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 73,
+      "percent": 83,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -1737,7 +1740,10 @@
         "tests/itch-io-catalog.test.mjs",
         "ontology/itch-io/paid-2d-popular-prices-2026.json",
         "ontology/itch-io/paid-2d-popular-prices-2026.md",
-        "tests/itch-io-price-sample.test.mjs"
+        "tests/itch-io-price-sample.test.mjs",
+        "ontology/itch-io/paid-genre-tag-frames-2026.json",
+        "ontology/itch-io/paid-genre-tag-frames-2026.md",
+        "tests/itch-io-genre-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1771,7 +1777,7 @@
       "objective": "Investigate compare 2D, RPG, puzzle, narrative and other tagged supply.",
       "acceptance": "Provide dated source-linked evidence to compare 2D, RPG, puzzle, narrative and other tagged supply; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 44,
+      "percent": 79,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -1779,7 +1785,10 @@
         "tests/itch-io-catalog.test.mjs",
         "ontology/itch-io/paid-2d-popular-prices-2026.json",
         "ontology/itch-io/paid-2d-popular-prices-2026.md",
-        "tests/itch-io-price-sample.test.mjs"
+        "tests/itch-io-price-sample.test.mjs",
+        "ontology/itch-io/paid-genre-tag-frames-2026.json",
+        "ontology/itch-io/paid-genre-tag-frames-2026.md",
+        "tests/itch-io-genre-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1892,7 +1901,7 @@
       "objective": "Investigate treat free discovery as adjacent but not identical demand.",
       "acceptance": "Provide dated source-linked evidence to treat free discovery as adjacent but not identical demand; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 66,
+      "percent": 73,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -1900,7 +1909,10 @@
         "tests/itch-io-catalog.test.mjs",
         "ontology/itch-io/paid-2d-popular-prices-2026.json",
         "ontology/itch-io/paid-2d-popular-prices-2026.md",
-        "tests/itch-io-price-sample.test.mjs"
+        "tests/itch-io-price-sample.test.mjs",
+        "ontology/itch-io/paid-genre-tag-frames-2026.json",
+        "ontology/itch-io/paid-genre-tag-frames-2026.md",
+        "tests/itch-io-genre-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3063,7 +3075,7 @@
       "objective": "Investigate require matched demand, supply and labor evidence.",
       "acceptance": "Provide dated source-linked evidence to require matched demand, supply and labor evidence; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 34,
+      "percent": 64,
       "evidence": [
         "ontology/itch-io/paid-2d-popular-prices-2026.json",
         "ontology/itch-io/paid-2d-popular-prices-2026.md",
@@ -3072,7 +3084,10 @@
         "tests/itch-io-price-sample.test.mjs",
         "ontology/itch-io/commercial-postmortems-2026.json",
         "ontology/itch-io/commercial-postmortems-2026.md",
-        "tests/itch-io-commercial-postmortems.test.mjs"
+        "tests/itch-io-commercial-postmortems.test.mjs",
+        "ontology/itch-io/paid-genre-tag-frames-2026.json",
+        "ontology/itch-io/paid-genre-tag-frames-2026.md",
+        "tests/itch-io-genre-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3285,7 +3300,7 @@
       "objective": "Investigate require units, period, geography, eligibility and sampling method.",
       "acceptance": "Provide dated source-linked evidence to require units, period, geography, eligibility and sampling method; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 86,
+      "percent": 94,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -3303,7 +3318,10 @@
         "tests/itch-io-traffic-benchmark.test.mjs",
         "ontology/itch-io/notjam-game-category-series-2023-2025.json",
         "ontology/itch-io/notjam-game-category-series-2023-2025.md",
-        "tests/itch-io-notjam-series.test.mjs"
+        "tests/itch-io-notjam-series.test.mjs",
+        "ontology/itch-io/paid-genre-tag-frames-2026.json",
+        "ontology/itch-io/paid-genre-tag-frames-2026.md",
+        "tests/itch-io-genre-frames.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

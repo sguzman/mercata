@@ -85,3 +85,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io multi-work free/PWYW earnings (2026-10-26):** independent 2019 artist's 34-title $7,276.70 voluntary gross and 1,072-vs-1,073 payment report inconsistency, never generalized to first premium games. 58% → 59% (Δ +1 pp). [Case](../ontology/itch-io/creative-free-games-pwyw-2019.md).
+
+
+**itch.io paid niche inventory (2026-10-26):** three non-synchronized public genre/tag filter counters (Puzzle, Horror, Cozy), explicitly nonadditive and not earnings. Score 59% → 59% (Δ +0 pp, raw task mean 59.37%). [Evidence](../ontology/itch-io/paid-genre-tag-frames-2026.md).
