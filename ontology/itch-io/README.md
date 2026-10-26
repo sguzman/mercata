@@ -48,3 +48,8 @@ The [commercial rules crosswalk](commercial-rules-2026.md) and [machine evidence
 - [Buyer measurement without privacy leakage](transaction-cohort-protocol-2026.md)
 
 The actual platform-wide buyer count, payment total, median game revenue and representative creator profit remain **unknown**.
+
+
+## Selling-games decision guide
+
+[How to select a game selling model and measure its financial viability](market-entry-decision-guide-2026.md) brings together the existing verified research on paid downloads, free browser donations, paid full game with free demo, developer labor and buyer acquisition. It does not predict game sales or authorize launching a product.

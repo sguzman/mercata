@@ -151,3 +151,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io five-year post-release payments (2026-10-26):** A YEAR OF SPRINGS had 324 first-week itch payment events in 2021 versus 1,789 cumulative payments by May 2026; 1,465 later payment events with unknown timing and acquisition channels. 76% → 77% (Δ +1 pp; exact 76.51%). [Case](../ontology/itch-io/year-of-springs-long-tail-2021-2026.md).
+
+
+**itch.io market-entry decision synthesis (2026-10-26):** Published conditional comparison of premium downloads, free HTML5 donations, and free demos with paid full downloads; includes verified fee accounting, launch readiness, working-time cost and privacy-safe measurement gates. No simulated sales or merchant activity. 77% → 77% (Δ +0 pp; exact 77.14%). [Practical study](../ontology/itch-io/market-entry-decision-guide-2026.md).

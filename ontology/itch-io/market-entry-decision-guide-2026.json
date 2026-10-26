@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "bounded_market_entry_commercial_decision_guide",
+  "as_of": "2026-10-26",
+  "stage": "research_only_not_commercial_authorization",
+  "source_ids": [
+    "itch-pricing",
+    "itch-html5",
+    "itch-payments",
+    "itch-indexed",
+    "itch-buying-flow",
+    "itch-sale-detail",
+    "itch-jams",
+    "itch-quality",
+    "itch-started",
+    "itch-case-hive",
+    "mixolumia-postmortem",
+    "rose-seed-replica-launch-cost-postmortem",
+    "aracore-game-first-five-days-postmortem",
+    "year-of-springs-week-one-2021",
+    "year-of-springs-five-years-2026",
+    "itch-stat-exchange-690-2026"
+  ],
+  "launch_options": [
+    {
+      "id": "paid_download",
+      "name": "Positive-price downloadable game",
+      "seller_objective": "Require a genuine payment for a downloadable game build",
+      "platform_mechanic_source_ids": [
+        "itch-pricing",
+        "itch-buying-flow",
+        "itch-payments"
+      ],
+      "publisher_controls": [
+        "positive_minimum_price",
+        "free_demo_optional",
+        "target_platform_files",
+        "seller_payment_route"
+      ],
+      "buyer_event_to_count": "settled_positive_price_purchase",
+      "commerce_ready_without_paid_seller_configuration": false,
+      "observed_typical_paid_orders": null,
+      "observed_typical_profit": null,
+      "strength": "A sale requires positive payment and gives an attributable order record.",
+      "drawback": "A public game page is not necessarily indexed; the seller has to earn the buyer's attention and absorb transaction, production and support costs."
+    },
+    {
+      "id": "browser_donation",
+      "name": "Free HTML5 browser play with optional donation",
+      "seller_objective": "Maximize accessible play while allowing voluntary financial support",
+      "platform_mechanic_source_ids": [
+        "itch-html5",
+        "itch-pricing"
+      ],
+      "publisher_controls": [
+        "browser_compatible_build",
+        "free_play",
+        "donation_option",
+        "supporter_updates"
+      ],
+      "buyer_event_to_count": "optional_positive_payment_not_browser_play",
+      "commerce_ready_without_paid_seller_configuration": false,
+      "observed_typical_donations": null,
+      "observed_typical_profit": null,
+      "strength": "Accessible in browser without a mandatory price gate; compatible with jams or free discovery.",
+      "drawback": "Plays are not sales, and HTML5 embedded gameplay cannot be assumed to yield mandatory paid access."
+    },
+    {
+      "id": "demo_and_paid",
+      "name": "Free demo plus separately paid full downloadable game",
+      "seller_objective": "Let buyers sample a build before deciding whether to purchase the full game",
+      "platform_mechanic_source_ids": [
+        "itch-pricing",
+        "itch-started",
+        "itch-buying-flow"
+      ],
+      "publisher_controls": [
+        "free_demo",
+        "positive_price_full_game",
+        "clear_full_game_entitlement",
+        "versioned_builds"
+      ],
+      "buyer_event_to_count": "settled_positive_price_full_game_purchase",
+      "commerce_ready_without_paid_seller_configuration": false,
+      "observed_demo_to_buyer_conversion": null,
+      "observed_typical_profit": null,
+      "strength": "Separates product evaluation from paid ownership.",
+      "drawback": "Costs more in packaging, support and evaluation; demo usage does not prove willingness to pay."
+    }
+  ],
+  "existing_seller_evidence_families": [
+    {
+      "id": "official_terms_and_functionality",
+      "source_ids": [
+        "itch-payments",
+        "itch-pricing",
+        "itch-html5",
+        "itch-indexed"
+      ],
+      "can_establish": "mechanics_eligibility_and_fee_examples",
+      "cannot_establish": "seller_median_units_or_profit"
+    },
+    {
+      "id": "creator_paid_order_examples",
+      "source_ids": [
+        "mixolumia-postmortem",
+        "itch-case-hive",
+        "rose-seed-replica-launch-cost-postmortem"
+      ],
+      "can_establish": "single_game_paid_order_and_revenue_examples",
+      "cannot_establish": "average_new_game_outcome"
+    },
+    {
+      "id": "economic_and_labor_cost_examples",
+      "source_ids": [
+        "rose-seed-replica-launch-cost-postmortem",
+        "aracore-game-first-five-days-postmortem"
+      ],
+      "can_establish": "why_cash_proceeds_and_work_effort_differ",
+      "cannot_establish": "representative_profitable_hours"
+    },
+    {
+      "id": "voluntary_broader_sample",
+      "source_ids": [
+        "itch-stat-exchange-690-2026"
+      ],
+      "can_establish": "selected_game_dashboard_descriptions",
+      "cannot_establish": "marketwide_first_paid_title_success_rate"
+    },
+    {
+      "id": "single_game_long_tail",
+      "source_ids": [
+        "year-of-springs-week-one-2021",
+        "year-of-springs-five-years-2026"
+      ],
+      "can_establish": "one_title_ended_up_with_payments_after_launch_week",
+      "cannot_establish": "expected_five_year_revenue_per_new_developer"
+    }
+  ],
+  "decision_tree": [
+    {
+      "if": "The game must require payment before full downloadable access",
+      "then": "paid_download_or_demo_and_paid"
+    },
+    {
+      "if": "The game is designed only for free browser play with optional financial support",
+      "then": "browser_donation"
+    },
+    {
+      "if": "A demo can be maintained separately without consuming more resources than approved",
+      "then": "demo_and_paid_can_be_tested"
+    },
+    {
+      "if": "No positive-price merchant eligibility is verified",
+      "then": "no_real_paid_launch_or_projected_payout"
+    },
+    {
+      "if": "Release has not been tested on the advertised platforms",
+      "then": "no_claim_of_ready_release"
+    },
+    {
+      "if": "No eligible buyer-count or representative paid game conversion data",
+      "then": "preserve_market_success_probability_as_unknown"
+    }
+  ],
+  "readiness_gates": [
+    {
+      "id": "seller_eligibility",
+      "requires": "Documented payment route accepted by provider for seller country and valid identity/tax onboarding",
+      "verified_for_a_real_seller": false
+    },
+    {
+      "id": "game_build",
+      "requires": "Executable/playable tested on target desktop/mobile platform, input, save behavior and patch path",
+      "verified_for_a_real_game": false
+    },
+    {
+      "id": "rights",
+      "requires": "Licenses for game code, art, assets, music and collaboration agreements",
+      "verified_for_a_real_game": false
+    },
+    {
+      "id": "discovery",
+      "requires": "Published game indexed where eligible, honest tags and a documented launch/referral campaign",
+      "actual_search_traffic": null
+    },
+    {
+      "id": "economics",
+      "requires": "Explicit intended list price, true payment deductions, fixed cash costs, valued labor and necessary paid-order break-even",
+      "actual_game_sales": null
+    },
+    {
+      "id": "feedback",
+      "requires": "Consented aggregate counts for aligned impressions, plays, refunds, settled purchases and repeat paid orders",
+      "experiment_run": false
+    }
+  ],
+  "business_math": {
+    "example_official_buyer_payment_usd": 10,
+    "illustrative_revenue_share_rate": 0.1,
+    "illustrative_processor_rate": 0.029,
+    "illustrative_processor_fixed_usd": 0.3,
+    "illustrative_per_order_before_other_costs_usd": 8.41,
+    "example_is_actual_creator_profit": false,
+    "source_ids": [
+      "itch-payments"
+    ]
+  },
+  "actual_outcomes": {
+    "representative_median_paid_orders": null,
+    "representative_zero_sale_fraction": null,
+    "representative_profit": null,
+    "expected_earnings_per_development_hour": null,
+    "paid_2d_buyer_count": null,
+    "causal_strategy_effect": null,
+    "merchant_account_authorized": false,
+    "consumer_transaction_performed": false
+  },
+  "recommendation_strength": "conditional_framework_only",
+  "limitations": [
+    "Practical launch routes follow operator-documented mechanics; no route is shown to be the highest-profit option.",
+    "Do not treat retrospective top-seller ranks, public impressions or games-with-ratings as a paid-success probability.",
+    "No actual game was built, tested or listed and no seller identity or financial information was accessed.",
+    "No purchase, account change, financial expense, marketing experiment, or additional specimen intake is authorized.",
+    "Development cash expenditure and labor opportunity cost remain separate and both must be reported."
+  ]
+}
