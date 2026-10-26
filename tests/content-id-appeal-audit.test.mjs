@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {evaluateContentIDRoute,classifyClaimConsequence} from '../site/content-id-appeal-audit.mjs';
+import {evaluateContentIDRoute,classifyClaimConsequence,auditCopyrightStrikeAccumulation} from '../site/content-id-appeal-audit.mjs';
 const load=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 test('Appeal, dispute and scheduled removal have separate documented response windows',async()=>{
  const [m,d]=await Promise.all([load('ontology/youtube/content-id-appeal-routes-2026.json'),load('specimens/youtube.json')]);
@@ -33,4 +33,30 @@ test('Website shows appeals and held revenue boundaries',async()=>{
  assert(a.includes('renderContentIDAppealRoutes'));
  assert(a.includes('content-id-appeal-routes-2026.json'));
  assert(a.includes('not creator payout or automatic copyright strikes'));
+});
+
+test('Actual copyright strikes accumulate differently from Content ID matches',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/content-id-appeal-routes-2026.json'),load('specimens/youtube.json')]);
+ const ids=new Set(d.evidence.map(x=>x.id)),p=m.copyright_strike_accumulation;
+ assert.deepEqual(auditCopyrightStrikeAccumulation(m,ids),{valid:true,errors:[]});
+ assert.equal(p.source_id,'music-copyright-strikes');
+ assert.deepEqual(p.strikes.map(x=>x.active_strikes),[1,2,3]);
+ assert.deepEqual(p.strikes.map(x=>x.expiry_after_days_if_condition_met),[90,90,null]);
+ assert.equal(p.termination_threshold_active_strikes,3);
+ assert.equal(p.strike_expiry_requires_copyright_school,true);
+ assert.equal(p.scheduled_removal_days_to_avoid_strike,7);
+ assert.equal(p.ordinary_video_deletion_removes_strike,false);
+ assert.equal(p.content_id_claim_typically_is_copyright_strike,false);
+ assert.equal(p.counter_notification_success_rate,null);
+ assert.equal(p.creator_lost_revenue_distribution,null);
+});
+test('Strike audit rejects automatic claim-to-strike promotion and imaginary legal outcome rates',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/content-id-appeal-routes-2026.json'),load('specimens/youtube.json')]);
+ const ids=new Set(d.evidence.map(x=>x.id));
+ const a=structuredClone(m);a.copyright_strike_accumulation.content_id_claim_typically_is_copyright_strike=true;
+ assert(auditCopyrightStrikeAccumulation(a,ids).errors.includes('copyright procedural boundaries invalid'));
+ const b=structuredClone(m);b.copyright_strike_accumulation.strikes[2].termination_status='automatic_termination';
+ assert(auditCopyrightStrikeAccumulation(b,ids).errors.includes('copyright strike consequences distorted'));
+ const c=structuredClone(m);c.copyright_strike_accumulation.probability_three_strikes=.05;
+ assert(auditCopyrightStrikeAccumulation(c,ids).errors.includes('invented copyright economic or legal outcome'));
 });

@@ -278,6 +278,11 @@ try{
     assert((await bfi2025.textContent()).includes('72 invited expert voters'));
     assert((await bfi2025.textContent()).includes('255 works'));
     assert((await bfi2025.textContent()).includes('does not establish a growth rate'));
+    const strikes=page.locator('.content-id-appeals .copyright-strike-accumulation');
+    assert.equal(await strikes.count(),1,'Missing actual strike accumulation rules');
+    assert((await strikes.textContent()).includes('after 90 days requires Copyright School'));
+    assert((await strikes.textContent()).includes('Three active strikes in 90 days'));
+    assert((await strikes.textContent()).includes('a legal process, not a Content ID dispute'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));

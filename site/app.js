@@ -2856,7 +2856,17 @@ function renderContentIDAppealRoutes(model,dossier){
   const card=make('article','ownership-card');card.append(make('h5','',label));
   card.append(make('strong','',value));card.append(make('p','measure-limit',limit));grid.append(card);
  }
- details.append(grid);details.append(audienceSources(model.source_ids,dossier));
+ details.append(grid);
+ const strike=model.copyright_strike_accumulation;
+ if(strike?.termination_threshold_active_strikes===3){
+  const panel=make('div','copyright-strike-accumulation');
+  panel.append(make('h5','','Copyright strikes: channel risk, distinct from Content ID'));
+  panel.append(make('p','measure-limit','One or two actual copyright strikes remove affected videos; expiry after 90 days requires Copyright School and fewer than three active strikes. Three active strikes in 90 days put a channel and associated channels at risk of termination.'));
+  panel.append(make('p','measure-limit','A seven-day scheduled removal window can prevent a strike, but ordinary deletion after takedown does not remove it. A copyright counter notification is a legal process, not a Content ID dispute.'));
+  panel.append(make('p','measure-limit','Observed strike frequency, successful legal challenges, creator lost revenue and termination probabilities are unknown.'));
+  panel.append(audienceSources([strike.source_id],dossier));details.append(panel);
+ }
+ details.append(audienceSources(model.source_ids,dossier));
  const link=make('a','inline-link','Read claim dispute, appeal and removal sources ↗');
  link.href='./ontology/youtube/content-id-appeal-routes-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);
  section.append(details);return section;

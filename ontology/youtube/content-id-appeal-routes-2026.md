@@ -16,3 +16,19 @@ These response windows are not predicted processing times for each creator, crea
 No specific appeal case, legal fee, earned dollar, eligible exception or financial loss was measured. The analysis uses *published procedure only*.
 
 [Machine route matrix](content-id-appeal-routes-2026.json) · [Rule validator](../../site/content-id-appeal-audit.mjs) · [Regression tests](../../tests/content-id-appeal-audit.test.mjs).
+
+## Copyright strike accumulation is a different enforcement ladder
+
+[YouTube's copyright strike explanation](https://support.google.com/youtube/answer/2814000?hl=en), reviewed October 26, 2026, distinguishes a **Content ID claim** from a strike issued after a reviewed copyright **removal request** that appears legally valid. Ordinary Content ID matching does not by itself generate a copyright strike, and a formal legal counter-notification is not the same procedure as an initial Content ID dispute.
+
+| Active copyright strikes | Stated platform outcome |
+| ---: | --- |
+| 1 | Affected content removed; Copyright School completion permits strike expiry after **90 days** |
+| 2 | Same removal and conditional expiry rules; continuing channel exposure |
+| 3 within 90 days | Channel and associated channels **subject to termination**; not guaranteed reactivation or a payout |
+
+Strikes can expire after 90 days **if Copyright School is completed and the channel has fewer than three active strikes**. Other resolutions include securing a retraction of the removal request or using a valid legal counter-notification. The last is a potentially consequential legal filing, not an assertion that a disputed upload is necessarily lawful. Deleting a video after a completed removal **does not** clear an existing strike.
+
+The limited **seven-day scheduled removal** pathway can allow an uploader to delete the affected video *before the legal removal takes effect*, avoiding the associated strike; this option does not apply to all takedowns. YouTube also identifies **7-day** livestreaming restrictions after a first livestream strike and **14-day** restrictions after a further one. A video can have multiple claims but only **one copyright strike at a time**.
+
+These operational rules give no platform-wide strike incidence, probability of channel termination, expected time out of YPP, appeal success fraction or earnings loss. The [machine record](content-id-appeal-routes-2026.json) therefore keeps those fields unknown and does not conflate strikes with YouTube Partner Program application/suspension appeals.

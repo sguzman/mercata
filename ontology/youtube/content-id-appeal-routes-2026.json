@@ -2,12 +2,13 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "content_id_claim_dispute_appeal_and_copyright_removal_separation",
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "source_ids": [
     "music-content-id",
     "music-claim-disputes",
     "yt-content-id-initial-dispute-2026",
-    "yt-content-id-appeal-responses-2026"
+    "yt-content-id-appeal-responses-2026",
+    "music-copyright-strikes"
   ],
   "stages": [
     {
@@ -114,6 +115,71 @@
     "creator_bank_receipt": null,
     "legal_fees": null,
     "claimant_challenge_frequency": null,
-    "final_creator_net_profit": null
+    "final_creator_net_profit": null,
+    "platform_channel_three_strike_rate": null,
+    "actual_copyright_strike_term_removed_creator_revenue": null
+  },
+  "copyright_strike_accumulation": {
+    "source_id": "music-copyright-strikes",
+    "reviewed_at": "2026-10-26",
+    "population": "channels receiving validated copyright removal requests, not the count of Content ID claimants",
+    "unit": "active_copyright_strikes_on_creator_channel",
+    "validation_rule": "legal_removal_request_reviewed_and_appears_valid",
+    "strikes": [
+      {
+        "active_strikes": 1,
+        "content_removed": true,
+        "termination_status": "not_automatic",
+        "school_condition": "copyright_school_completed",
+        "expiry_after_days_if_condition_met": 90,
+        "linked_channels_subject_to_termination": false
+      },
+      {
+        "active_strikes": 2,
+        "content_removed": true,
+        "termination_status": "not_automatic",
+        "school_condition": "copyright_school_completed",
+        "expiry_after_days_if_condition_met": 90,
+        "linked_channels_subject_to_termination": false
+      },
+      {
+        "active_strikes": 3,
+        "content_removed": true,
+        "termination_status": "subject_to_termination",
+        "school_condition": "three_strikes_in_90_days_high_risk",
+        "expiry_after_days_if_condition_met": null,
+        "linked_channels_subject_to_termination": true
+      }
+    ],
+    "termination_threshold_active_strikes": 3,
+    "accumulation_period_days": 90,
+    "strike_expiry_requires_copyright_school": true,
+    "expiration_in_days_if_fewer_than_three_and_school_completed": 90,
+    "alternate_resolution": [
+      "removal_request_retraction",
+      "valid_legal_counter_notification"
+    ],
+    "ordinary_video_deletion_removes_strike": false,
+    "scheduled_removal_days_to_avoid_strike": 7,
+    "scheduled_removal_deletion_can_prevent_strike": true,
+    "content_id_claim_typically_is_copyright_strike": false,
+    "legal_counter_notification_is_content_id_dispute": false,
+    "single_video_max_simultaneous_copyright_strikes": 1,
+    "live_stream_restriction_days_first_strike": 7,
+    "live_stream_restriction_days_second_strike": 14,
+    "measured_strikes_across_all_channels": null,
+    "probability_three_strikes": null,
+    "creator_lost_revenue_distribution": null,
+    "counter_notification_success_rate": null,
+    "linked_channel_termination_probability": null,
+    "limits": [
+      "Three actual copyright strikes within 90 days make a channel subject to termination; it is a risk threshold, not guaranteed automatic shutdown at a measured time.",
+      "A simple Content ID claim or reinstated claim is not itself a copyright strike. Strike requires a reviewed, apparently valid legal removal request.",
+      "Expiry after 90 days depends on completion of Copyright School and fewer than three strikes; no universal 90-day automatic clearing if conditions fail.",
+      "Deleting content after an ordinary completed takedown does not resolve the strike; the limited seven-day scheduled-removal opportunity can prevent a strike.",
+      "A formal counter notification is a legal process. Platform documentation does not establish the copyright validity of an individual case.",
+      "Linked-account and live-stream consequences are conditional product rules, not sampled outcomes or probabilities.",
+      "None of the cited rules gives a frequency of strikes, average successful appeals or actual creator cash lost."
+    ]
   }
 }
