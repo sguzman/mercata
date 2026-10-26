@@ -1549,6 +1549,39 @@
       "evidence_class": "voluntary_first_party_itemized_creator_payout_report",
       "license": "Publisher-posted numerical accounts summarized with attribution and independent analysis.",
       "notes": "One donation and itemized withheld/processor/platform/new-account tax-document adjustments and later charitable use. Not a paid-game cohort sale."
+    },
+    {
+      "id": "steam-direct-appfee-official-2026",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/appfee",
+      "title": "Steam Direct Fee",
+      "publisher": "Valve Steamworks",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_store_publishing_policy",
+      "license": "Short source-linked policy summary; no original prose copied.",
+      "notes": "$100 new app credit and $1000 adjusted gross recoup threshold; no income statistics."
+    },
+    {
+      "id": "epic-store-submission-fee-official-2026",
+      "url": "https://dev.epicgames.com/docs/epic-games-store/publishing-tools/organization-management/manage-org",
+      "title": "Manage Your Organization: Product Submission Fee",
+      "publisher": "Epic Games Store",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_store_publishing_policy",
+      "license": "Brief attributed policy amounts only.",
+      "notes": "$100 per product submission fee plus local tax where applicable; not a profit measure."
+    },
+    {
+      "id": "gog-developer-quickstart-official-2026",
+      "url": "https://docs.gog.com/quick-start/",
+      "title": "Getting Started",
+      "publisher": "GOG Developer Docs",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_store_publishing_policy",
+      "license": "Public onboarding requirements paraphrased briefly.",
+      "notes": "Game review precedes portal access for unsigned publishers; entry fee not established."
     }
   ],
   "claims": [
@@ -5539,6 +5572,49 @@
       "confidence": "medium",
       "observed_at": "2026-10-26",
       "limitations": "Do not apply its account-specific withholding percentage universally or declare the $14.87 remainder to be labor-adjusted profit."
+    },
+    {
+      "id": "steam-app-credit-recoup-2026",
+      "text": "Valve documents a $100 Steam Direct fee per new application, nonrefundable but recoupable once the application meets $1,000 adjusted gross revenue.",
+      "source_ids": [
+        "steam-direct-appfee-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "A paid app credit is not store income, an average commercial outcome, or proof of release."
+    },
+    {
+      "id": "epic-submission-product-fee-2026",
+      "text": "Epic Games Store organization guidance requires a $100 submission fee per product, excluding local tax where relevant.",
+      "source_ids": [
+        "epic-store-submission-fee-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Submission does not prove publication, transaction income or individual account eligibility."
+    },
+    {
+      "id": "gog-publisher-admission-by-review",
+      "text": "GOG's official getting-started guide asks publishers without an existing GOG agreement to submit their game for review before receiving developer portal access.",
+      "source_ids": [
+        "gog-developer-quickstart-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Curated review selection cannot be equated with the population of open itch.io game listings."
+    },
+    {
+      "id": "itch-neighbor-store-sampling-contrast",
+      "text": "itch.io open seller uploads, Steam per-app enrollment, Epic product submission and GOG developer review represent distinct entry frames for game publishers.",
+      "source_ids": [
+        "itch-faq",
+        "steam-direct-appfee-official-2026",
+        "epic-store-submission-fee-official-2026",
+        "gog-developer-quickstart-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Entry policies alone yield no unique buyer counts, average seller profits or causal rankings among stores."
     }
   ],
   "observations": [

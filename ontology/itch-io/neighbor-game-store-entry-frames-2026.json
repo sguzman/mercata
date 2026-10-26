@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "neighboring_paid_pc_game_distribution_channels",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-faq",
+    "itch-payments",
+    "steam-direct-appfee-official-2026",
+    "epic-store-submission-fee-official-2026",
+    "gog-developer-quickstart-official-2026"
+  ],
+  "comparators": [
+    {
+      "id": "itch",
+      "unit": "publisher_game_page",
+      "upfront_usd": 0,
+      "fee_recoup_threshold": null,
+      "merchant_revenue_share_range_percent": [
+        0,
+        100
+      ],
+      "admission": "open_page_upload_subject_to_policy",
+      "source_ids": [
+        "itch-faq",
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "steam",
+      "unit": "new_app",
+      "upfront_usd": 100,
+      "fee_recoup_threshold_adjusted_gross_usd": 1000,
+      "fee_is_refundable": false,
+      "admission": "steamworks_onboarding_and_app_credit",
+      "source_ids": [
+        "steam-direct-appfee-official-2026"
+      ]
+    },
+    {
+      "id": "epic",
+      "unit": "new_product",
+      "upfront_usd": 100,
+      "fee_recoup_threshold_adjusted_gross_usd": null,
+      "fee_is_refundable": null,
+      "admission": "product_submission_and_questionnaire",
+      "source_ids": [
+        "epic-store-submission-fee-official-2026"
+      ]
+    },
+    {
+      "id": "gog",
+      "unit": "reviewed_game",
+      "upfront_usd": null,
+      "fee_recoup_threshold_adjusted_gross_usd": null,
+      "admission": "game_review_before_developer_portal_access_for_unsigned_publishers",
+      "source_ids": [
+        "gog-developer-quickstart-official-2026"
+      ]
+    },
+    {
+      "id": "creator_owned_direct_site",
+      "unit": "owned_web_game_download",
+      "upfront_usd": null,
+      "hosting_cost_usd": null,
+      "processor_fees_usd": null,
+      "consumer_discovery_automatically_included": false,
+      "admission": "self_host_and_obtain_checkout_compliance",
+      "source_ids": []
+    }
+  ],
+  "comparison_protocol": {
+    "target": "identical_first_commercial_pc_game_release_cohorts",
+    "match_paid_game_version": true,
+    "match_price_and_discounts": true,
+    "match_release_age": true,
+    "measure_by_store_settled_paid_orders": true,
+    "subtract_fees_refunds_and_qa_labor": true,
+    "separately_track_marketing_and_exposure": true,
+    "do_not_sum_bundle_key_claims_as_paid_orders": true,
+    "observed_buyer_population": null,
+    "mean_creator_income_by_store": null,
+    "causal_store_sales_advantage": null,
+    "store_census_of_sellers": null
+  },
+  "limitations": [
+    "Steam's per-app fee and recoup threshold are not sales income forecasts.",
+    "GOG requires editorial review for previously unsigned publishers, causing cohort selection effects.",
+    "Epic and Steam onboarding fees differ from revenue commissions, which are not estimated in this comparison.",
+    "Developer-owned direct website is a conceptual channel, not an observed publisher population.",
+    "No seller approvals, store transactions, game build distributions or private marketing data have been accessed."
+  ]
+}
