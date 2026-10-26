@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "multilingual_content_distribution_ontology",
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "status": "official_product_rules_and_selected_observation_not_economic_outcome",
   "scope": "Language, caption, dubbed audio and translated metadata/thumbnail distribution. Language is not a person's location, race, ethnicity or inferred identity.",
   "facets": [
@@ -200,6 +200,26 @@
       "causal_lift": null,
       "estimated_additional_revenue": null,
       "limits": "A dated feature snapshot, not a guarantee every language pair or video is supported, nor the number of languages on each current channel."
+    },
+    {
+      "id": "autodubbed-daily-10min-watchers-dec2025",
+      "source_ids": [
+        "yt-auto-dubbing-dec2025-daily-viewers"
+      ],
+      "source_period": "2025-12",
+      "published_at": "2026-02-04",
+      "population": "YouTube's platform-reported daily viewers watching at least ten minutes of automatically dubbed content in December 2025",
+      "method": "Publisher global product-usage observation, unreported deduplication details and no exposed account-level observations",
+      "metric": "Average daily viewers crossing 10-minute auto-dubbed-content threshold",
+      "unit": "reported_daily_viewers_above_10min",
+      "comparator": "greater_than",
+      "value": 6000000,
+      "denominator_n": null,
+      "december_unique_viewers": null,
+      "representative_of_all_youtube_creators": false,
+      "causal_lift": null,
+      "estimated_additional_revenue": null,
+      "limits": "A daily count threshold in one month, not six million new subscribers, creators, added monthly unique people, validated 28-day audience, paid viewers, or income caused by auto dubbing. Do not sum daily viewers over 31 days."
     }
   ],
   "automatic_dubbing_example_pairs": [
