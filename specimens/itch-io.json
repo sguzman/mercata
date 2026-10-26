@@ -691,6 +691,17 @@
       "evidence_class": "independent_survey_official_report",
       "license": "Short attributed figures and a source link; original charts not reproduced.",
       "notes": "December 8–19 2025 fieldwork, January 27 2026 release, 445 total submissions and 435 responses to annual game-development income question on page 40. Not itch.io-specific income."
+    },
+    {
+      "id": "itch-founder-store-purchases-2014",
+      "url": "https://itch.io/blog/1/running-an-indie-game-store",
+      "title": "Running an indie game store",
+      "publisher": "itch.io founder and operator",
+      "published_at": "2014-09-16",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "historical_first_party_transaction_summary",
+      "license": "Source-linked short numerical aggregate observations only.",
+      "notes": "2014 store, may count voluntary payments on free games. Not modern paid seller cohort. More than $100k historically paid out through August 2014; no raw files read."
     }
   ],
   "claims": [
@@ -2508,6 +2519,76 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Platform guidance, not a required minimum, price sensitivity experiment, or evidence buyers will pay this price."
+    },
+    {
+      "id": "founder-2014-payout",
+      "text": "itch.io's founder reported over USD 100,000 had been paid to developers since the 2013 launch through August 2014.",
+      "limitations": "Historical cumulative lower bound, not 2026 GMV, annual payout or developer income distribution.",
+      "source_ids": [
+        "itch-founder-store-purchases-2014"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "founder-2014-users",
+      "text": "The founder reported 13% of registered accounts had uploaded a public game and 7% had linked a payment provider.",
+      "limitations": "Registered accounts included buyers and jam participants; not an eligible paid-game publisher census.",
+      "source_ids": [
+        "itch-founder-store-purchases-2014"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "founder-2014-activation",
+      "text": "Among public-game publishers with connected payment providers, about 30% had received at least one purchase, including payments for free games.",
+      "limitations": "Not the probability a 2026 first positive-price game sells, not a median, and not a living-wage rate.",
+      "source_ids": [
+        "itch-founder-store-purchases-2014"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "founder-2014-external",
+      "text": "Roughly 84% of all purchase events in the founder's 2014 report were generated through off-site referrals rather than itch.io internal browsing.",
+      "limitations": "Historical purchase-route share, not modern website visits or causal marketing conversion.",
+      "source_ids": [
+        "itch-founder-store-purchases-2014"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "founder-2014-promotion",
+      "text": "In the historical 2014 data roughly 11% of purchases occurred while a game was marked on sale.",
+      "limitations": "Not causal evidence of discount-driven extra purchases or net income.",
+      "source_ids": [
+        "itch-founder-store-purchases-2014"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "founder-2014-prices",
+      "text": "The founder described a $2 historical median list price, median $2 extra among voluntary overpayers of paid games, and median $3 amount paid by paying supporters of free-minimum games.",
+      "limitations": "Separate conditional groups, not current paid game price or realized typical revenue.",
+      "source_ids": [
+        "itch-founder-store-purchases-2014"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "founder-2014-embed",
+      "text": "The founder reported about 73% of external purchases used game pages and 27% embedded widgets, with a different denominator from all visits.",
+      "limitations": "Not user-level conversion, unique buyers or modern web checkout shares.",
+      "source_ids": [
+        "itch-founder-store-purchases-2014"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26"
     }
   ],
   "observations": [

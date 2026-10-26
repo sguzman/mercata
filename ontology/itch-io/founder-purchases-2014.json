@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "first_party_historical_purchase_and_publisher_analytics",
+  "observed_period": "2013_launch_through_aug_sept_2014",
+  "published_at": "2014-09-16",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-founder-store-purchases-2014"
+  ],
+  "payouts": {
+    "cumulative_since_launch_lower_bound_usd_exclusive": 100000,
+    "actual_complete_gmv": null,
+    "modern_annual_payouts": null
+  },
+  "accounts": {
+    "share_all_registered_with_public_game": 0.13,
+    "share_all_registered_with_linked_provider": 0.07,
+    "share_public_game_publishers_with_linked_provider_approx": 0.5,
+    "share_linked_public_game_publishers_with_any_purchase_approx": 0.3,
+    "positive_price_only": false,
+    "active_publisher_market_share": null
+  },
+  "transactions": {
+    "external_referrer_fraction_2014": 0.84,
+    "external_game_page_fraction": 0.73,
+    "external_embed_widget_fraction": 0.27,
+    "external_promotional_site_fraction": 0.44,
+    "share_purchases_during_sale": 0.11,
+    "median_listed_game_price_usd_2014": 2,
+    "median_conditional_extra_paid_usd": 2,
+    "median_conditional_payment_to_free_game_usd": 3
+  },
+  "not_observed": {
+    "first_paid_release_zero_sale_rate_2026": null,
+    "publisher_median_net_profit_2026": null,
+    "current_external_sales_origin_fraction": null,
+    "annual_paid_game_gmv_2026": null
+  },
+  "limits": [
+    "Contains payments for zero-minimum/free games.",
+    "Registered accounts include nonpublishers.",
+    "30% purchase activation is conditional on publishing public game and linking provider, not a chance for a new paid game to sell.",
+    "84% external is historical share of purchases, not visits or causal effect.",
+    "11% on-sale share does not establish a discount benefit.",
+    "Median list price and conditional tip prices are three different populations.",
+    "2014 marketplace discovery and payment rules differ from 2026."
+  ]
+}

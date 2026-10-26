@@ -369,13 +369,16 @@
           "title": "Build a dated fee and payout history",
           "acceptance": "Compare sourced changes without overwriting previous rules.",
           "weight": 1,
-          "progress": 82,
+          "progress": 95,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/store-feature-history-2026.json",
             "ontology/itch-io/store-feature-history-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-store-history.test.mjs"
+            "tests/itch-io-store-history.test.mjs",
+            "ontology/itch-io/founder-purchases-2014.json",
+            "ontology/itch-io/founder-purchases-2014.md",
+            "tests/itch-io-founder-purchases.test.mjs"
           ]
         }
       ]
@@ -392,7 +395,7 @@
           "title": "Estimate reachable buyer populations",
           "acceptance": "Define geography, date and measurement method.",
           "weight": 1,
-          "progress": 32,
+          "progress": 46,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/community-analytics-sample-2026.json",
@@ -401,7 +404,10 @@
             "tests/itch-io-community-analytics.test.mjs",
             "ontology/itch-io/semrush-domain-traffic-2026.json",
             "ontology/itch-io/semrush-domain-traffic-2026.md",
-            "tests/itch-io-semrush-traffic.test.mjs"
+            "tests/itch-io-semrush-traffic.test.mjs",
+            "ontology/itch-io/founder-purchases-2014.json",
+            "ontology/itch-io/founder-purchases-2014.md",
+            "tests/itch-io-founder-purchases.test.mjs"
           ]
         },
         {
@@ -425,13 +431,16 @@
           "title": "Measure transaction or revenue scale",
           "acceptance": "Distinguish GMV, platform sales, revenue and payouts.",
           "weight": 1,
-          "progress": 18,
+          "progress": 50,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/semrush-domain-traffic-2026.json",
             "ontology/itch-io/semrush-domain-traffic-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-semrush-traffic.test.mjs"
+            "tests/itch-io-semrush-traffic.test.mjs",
+            "ontology/itch-io/founder-purchases-2014.json",
+            "ontology/itch-io/founder-purchases-2014.md",
+            "tests/itch-io-founder-purchases.test.mjs"
           ]
         },
         {
@@ -464,7 +473,7 @@
           "title": "Establish comparable growth series",
           "acceptance": "Compare consistently defined observations over time.",
           "weight": 1,
-          "progress": 52,
+          "progress": 66,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/notjam-game-category-series-2023-2025.json",
@@ -476,7 +485,10 @@
             "tests/itch-io-store-history.test.mjs",
             "ontology/itch-io/semrush-domain-traffic-2026.json",
             "ontology/itch-io/semrush-domain-traffic-2026.md",
-            "tests/itch-io-semrush-traffic.test.mjs"
+            "tests/itch-io-semrush-traffic.test.mjs",
+            "ontology/itch-io/founder-purchases-2014.json",
+            "ontology/itch-io/founder-purchases-2014.md",
+            "tests/itch-io-founder-purchases.test.mjs"
           ]
         },
         {
@@ -556,7 +568,7 @@
           "title": "Map external acquisition channels",
           "acceptance": "Compare search, social, referral, newsletters and paid traffic.",
           "weight": 1,
-          "progress": 82,
+          "progress": 94,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -571,7 +583,10 @@
             "tests/itch-io-creative-pwyw.test.mjs",
             "ontology/itch-io/semrush-domain-traffic-2026.json",
             "ontology/itch-io/semrush-domain-traffic-2026.md",
-            "tests/itch-io-semrush-traffic.test.mjs"
+            "tests/itch-io-semrush-traffic.test.mjs",
+            "ontology/itch-io/founder-purchases-2014.json",
+            "ontology/itch-io/founder-purchases-2014.md",
+            "tests/itch-io-founder-purchases.test.mjs"
           ]
         },
         {
@@ -677,14 +692,17 @@
           "title": "Measure comparable price distributions",
           "acceptance": "Report sampled price ranges, currency and denominator.",
           "weight": 1,
-          "progress": 36,
+          "progress": 60,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/paid-2d-popular-prices-2026.json",
             "ontology/itch-io/paid-2d-popular-prices-2026.md",
             "ontology/itch-io/catalog-snapshot-2026.json",
             "specimens/itch-io.json",
-            "tests/itch-io-price-sample.test.mjs"
+            "tests/itch-io-price-sample.test.mjs",
+            "ontology/itch-io/founder-purchases-2014.json",
+            "ontology/itch-io/founder-purchases-2014.md",
+            "tests/itch-io-founder-purchases.test.mjs"
           ]
         },
         {
@@ -780,7 +798,7 @@
           "title": "Define earning-population denominator",
           "acceptance": "Separate all users, active sellers and paid sellers.",
           "weight": 1,
-          "progress": 79,
+          "progress": 85,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/developer-income-cases-2026.json",
@@ -800,7 +818,10 @@
             "site/itch-income-histogram.mjs",
             "ontology/itch-io/income-histogram-protocol-2026.json",
             "ontology/itch-io/income-histogram-protocol-2026.md",
-            "tests/itch-io-income-histogram.test.mjs"
+            "tests/itch-io-income-histogram.test.mjs",
+            "ontology/itch-io/founder-purchases-2014.json",
+            "ontology/itch-io/founder-purchases-2014.md",
+            "tests/itch-io-founder-purchases.test.mjs"
           ]
         },
         {
@@ -866,7 +887,7 @@
           "title": "Study share earning zero",
           "acceptance": "State who is counted and why the measure may be biased.",
           "weight": 1,
-          "progress": 75,
+          "progress": 83,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
@@ -883,7 +904,10 @@
             "site/itch-income-histogram.mjs",
             "ontology/itch-io/income-histogram-protocol-2026.json",
             "ontology/itch-io/income-histogram-protocol-2026.md",
-            "tests/itch-io-income-histogram.test.mjs"
+            "tests/itch-io-income-histogram.test.mjs",
+            "ontology/itch-io/founder-purchases-2014.json",
+            "ontology/itch-io/founder-purchases-2014.md",
+            "tests/itch-io-founder-purchases.test.mjs"
           ]
         },
         {
@@ -1134,7 +1158,7 @@
           "title": "Trace sale or contract flow",
           "acceptance": "Describe transaction steps and who collects payment.",
           "weight": 1,
-          "progress": 88,
+          "progress": 95,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -1148,7 +1172,10 @@
             "ontology/itch-io/transaction-cohort-protocol-2026.json",
             "ontology/itch-io/transaction-cohort-protocol-2026.md",
             "site/itch-cohort-protocol.mjs",
-            "tests/itch-cohort-protocol.test.mjs"
+            "tests/itch-cohort-protocol.test.mjs",
+            "ontology/itch-io/founder-purchases-2014.json",
+            "ontology/itch-io/founder-purchases-2014.md",
+            "tests/itch-io-founder-purchases.test.mjs"
           ]
         },
         {

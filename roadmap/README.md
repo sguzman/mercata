@@ -112,3 +112,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io study gallery and ontology correction (2026-10-26):** obsolete unresearched claims removed, machine gallery status synchronized, site study plan now links economic synthesis and labels task percentages as evidence scores. 67% → 68% (Δ +1 pp, exact 67.80%). [Active ontology](../ontology/itch-io/README.md).
+
+
+**itch.io historical first-party payments (2026-10-26):** 2014 founder purchase-origin and conditional seller-onboarding data, preserving support payments for free games and lack of present-day significance. Task mean 68% → 69% (Δ +1 pp, raw 68.93%). [Report](../ontology/itch-io/founder-purchases-2014.md).
