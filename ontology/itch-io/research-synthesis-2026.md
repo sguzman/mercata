@@ -1,6 +1,6 @@
 # itch.io commercial-game research — evidence synthesis and open gaps
 
-**Snapshot: October 26, 2026.** The specimen has 147 source records and 406 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
+**Snapshot: October 26, 2026.** The specimen has 149 source records and 409 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
 
 The market has **no mandatory fee to list a game**, but publication, indexing and acquiring purchasers are separate. Payments can use configurable platform share and processor charges, and the illustrative $10 buyer payment becomes $8.41 **before** refund, tax, labor or other obligations. The public 1.78 million all-game directory, 49,588 paid-game directory and 12,691 paid-2D filter are counts of **listings**, not distinct active paid publishers or buyers.
 
@@ -51,6 +51,8 @@ The [first-party direct/collected checkout-to-bank currency crosswalk](checkout-
 The [international compliance matrix](jurisdiction-buyer-tax-entitlement-risk-2026.md) now separates content-based buyer access, seller payment onboarding, VAT/withholding, previous-purchase rights and disputes, with no countrywide approval or sales income invented.
 
 Four existing narrowly defined research tasks (market chronology, bounded development-profit accounting, dated policy changes and evidence acceptance rules) have met their source-backed acceptance conditions; they do not resolve the representative income or buyer-population gaps. [Acceptance audit](verified-existing-task-acceptance-2026.md).
+
+The [historically documented referral measurement guide](referral-source-channel-denominators-2026.md) closes the fixed source-channel classification task, while recording purchase referrers, referral-view events and unattributed traffic as separate units and keeping paid conversion unmeasured.
 
 ## Missing evidence required for the goal
 

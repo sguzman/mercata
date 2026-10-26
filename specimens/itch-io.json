@@ -1637,6 +1637,28 @@
       "evidence_class": "primary_software_and_font_license_text",
       "license": "License requirements briefly paraphrased with source attribution.",
       "notes": "Allows commercial software/game bundling with notice preservation, forbids standalone font resale, reserved font names conditionally restrict modified font naming. Not licensing evidence for a specific game."
+    },
+    {
+      "id": "itch-2014-purchase-referrer-update",
+      "url": "https://itch.io/updates/view-where-purchases-come-from",
+      "title": "View where purchases come from",
+      "publisher": "itch.io official product update",
+      "published_at": "2014-07-31",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_analytics_feature_announcement",
+      "license": "Source-linked short feature facts with independently authored measurement analysis.",
+      "notes": "Purchase overview historical referrer and buy-location columns, not an accessible public marketwide transaction set."
+    },
+    {
+      "id": "itch-2019-referral-domain-analytics-update",
+      "url": "https://itch.io/blog/105823/return-of-the-itchio-changelog-markdown-sub-prducts-jam-updates-more",
+      "title": "Return of itch.io changelog — project referral analytics",
+      "publisher": "itch.io official product changelog",
+      "published_at": "2019-10-23",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_analytics_feature_announcement",
+      "license": "Short source-linked feature facts with independently authored measurement analysis.",
+      "notes": "Historical referral-view domain/time dashboard addition; not evidence of 2026 accessibility for all seller accounts or actual buyer conversions."
     }
   ],
   "claims": [
@@ -5786,6 +5808,38 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Reserved name designation is font-specific and must be verified from its copyright notice; font use in unrelated artworks has different conditions."
+    },
+    {
+      "id": "itch-referrer-purchase-location-2014",
+      "text": "A July 2014 itch.io analytics update added separate seller purchase buy-location and referrer fields distinguishing site-internal browsing and external sources.",
+      "source_ids": [
+        "itch-2014-purchase-referrer-update"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Historical interface announcement, not a verified 2026 universal account capability or market-wide buyer sample."
+    },
+    {
+      "id": "itch-referral-view-domain-2019",
+      "text": "An October 2019 first-party changelog introduced owner-side referral views grouped by domain with a time graph.",
+      "source_ids": [
+        "itch-2019-referral-domain-analytics-update"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Aggregated page/view events are not paid orders or distinct buyers, and unchanged 2026 interface behavior was not checked."
+    },
+    {
+      "id": "itch-referral-paid-analytics-need-aligned-cohorts",
+      "text": "The operator's referral-view grouping, purchase referrer and buy-location fields measure different event types that cannot establish a verified paid conversion rate from unmatched public aggregates.",
+      "source_ids": [
+        "itch-2014-purchase-referrer-update",
+        "itch-2019-referral-domain-analytics-update",
+        "itch-analytics-2018"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No seller-owned game transaction or visitor data accessed; absent referrer is not verified direct visits."
     }
   ],
   "observations": [

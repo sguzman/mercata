@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "seller_attribution_channel_classification_and_measurement_boundaries",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-2014-purchase-referrer-update",
+    "itch-2019-referral-domain-analytics-update",
+    "itch-analytics-2018",
+    "luden-superweird-alpha-feature-2026"
+  ],
+  "historical_platform_reporting": [
+    {
+      "source_id": "itch-2014-purchase-referrer-update",
+      "date": "2014-07-31",
+      "description": "Purchase overview added separate buy_location and referrer dimensions for internal and external links",
+      "buy_location_units": [
+        "game_page",
+        "embedded_widget",
+        "popup_api"
+      ],
+      "purchase_referrer_is_not_unique_buyer": true,
+      "currently_available_to_all_accounts_verified": null
+    },
+    {
+      "source_id": "itch-2019-referral-domain-analytics-update",
+      "date": "2019-10-23",
+      "description": "Owner project analytics added referral views aggregated by domain over time",
+      "referral_views_are_transactions": false,
+      "currently_available_identically_in_2026_verified": null
+    }
+  ],
+  "classification_categories": [
+    {
+      "id": "internal_search",
+      "source": "on_site_search",
+      "exclusive": false
+    },
+    {
+      "id": "internal_browse_or_recommendation",
+      "source": "platform_discovery",
+      "exclusive": false
+    },
+    {
+      "id": "external_search",
+      "source": "search_engine_referral",
+      "exclusive": false
+    },
+    {
+      "id": "external_social_or_forum",
+      "source": "social_page_or_forum_post",
+      "exclusive": false
+    },
+    {
+      "id": "external_press_or_influencer",
+      "source": "publisher_blog_review_or_creator_coverage",
+      "exclusive": false
+    },
+    {
+      "id": "verified_direct",
+      "source": "independent_opt_in_verified_direct_visit_label_only",
+      "exclusive": false
+    },
+    {
+      "id": "unattributed",
+      "source": "missing_stripped_or_ambiguous_referrer",
+      "exclusive": false
+    }
+  ],
+  "conditions": {
+    "rows_require_explicit_attribution_method": true,
+    "inputs_aggregate_only": true,
+    "valid_count_measurement_types": [
+      "project_referral_view_event",
+      "purchase_referrer_event"
+    ],
+    "cross_unit_division_allowed": false,
+    "claim_of_causal_marketing_lift_allowed": false,
+    "influence_of_own_comments_or_social_posts_unmeasured": true,
+    "missing_referrer_does_not_prove_direct": true,
+    "domain_only_does_not_prove_press_or_influencer": true
+  },
+  "real_research": {
+    "seller_permission_obtained": false,
+    "actual_2026_dashboard_observed": false,
+    "real_channel_views": null,
+    "real_channel_purchases": null,
+    "unique_paying_buyers": null,
+    "channel_specific_purchase_rate": null,
+    "paid_2d_buyer_population": null,
+    "causal_channel_effect": null
+  },
+  "limitations": [
+    "2014 and 2019 feature announcements are historical product descriptions, not a current verified API or a buyer census.",
+    "A purchase referrer and the owner referral-view graph are different observation units and must not be divided into a person-level probability.",
+    "Referrer stripping, apps, redirects and cookies can make an unattributed visit appear direct.",
+    "External news articles, influencer mentions and social-network profiles cannot be perfectly inferred from domain alone.",
+    "One publisher's free-alpha spotlight cannot generalize to the average paid game."
+  ]
+}
