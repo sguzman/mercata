@@ -21,3 +21,24 @@ test('Published sensitivity brackets do not become actual payouts',async()=>{
  assert.equal(m.earnings_value_model.actual_cash_costs,null);
  assert.equal(m.earnings_value_model.verified_ypp_entry,null);
 });
+
+test('Exceptional gross estimates remain cross-platform editorial selections, not new-channel payouts',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/first-upload-vlog-study-2026.json'),load('specimens/youtube.json')]);
+ const x=m.exceptional_gross_earnings_cases,known=new Set(d.evidence.map(s=>s.id));
+ assert(x.source_ids.length===2&&x.source_ids.every(id=>known.has(id)));
+ assert.equal(x.latest.roster_n,50);
+ assert.equal(x.latest.reported_aggregate_estimated_gross_usd_millions,1020);
+ assert.deepEqual(x.latest.cases.map(c=>c.rank),[1,2,4]);
+ assert.deepEqual(x.latest.cases.map(c=>c.estimated_gross_usd_millions),[300,65,38]);
+ assert(x.latest.cases.every(c=>c.youtube_payout_usd===null&&c.net_profit_usd===null));
+ assert.equal(x.previous.reported_aggregate_estimated_gross_usd_millions,853);
+ assert.equal(x.previous.same_person_cohort_verified,false);
+ assert.equal(x.all_creators_sampled,false);
+ assert.equal(x.actual_new_creator_success_probability,null);
+ assert.equal(x.can_pool_with_107_new_vlog_channels,false);
+ assert.equal(x.year_over_year_same_creator_income_growth,null);
+ assert.equal(x.net_creator_profit,null);
+ assert.equal(x.documented_youtube_only_earnings,null);
+ assert.equal(x.original_source_raw_earnings_data_independently_audited,false);
+ assert(d.claims.some(c=>c.id==='forbes-2026-selected-crossplatform-exceptional-gross-estimates'&&c.source_ids.includes(x.latest.source_id)));
+});

@@ -294,6 +294,11 @@ try{
     assert((await learningSurvey.textContent()).includes('2,160 U.S. weekly video viewer survey respondents'));
     assert((await learningSurvey.textContent()).includes('learning a skill 69%'));
     assert((await learningSurvey.textContent()).includes('do not measure actual search visits'));
+    const exceptional=page.locator('.first-upload-vlog .exceptional-earnings-panel');
+    assert.equal(await exceptional.count(),1,'Missing high-income exception boundary');
+    assert((await exceptional.textContent()).includes('1,020 million gross across platforms'));
+    assert((await exceptional.textContent()).includes('Not audited YouTube payouts'));
+    assert((await exceptional.textContent()).includes('prevent same-person earnings growth inference'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));

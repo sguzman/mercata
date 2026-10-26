@@ -2229,6 +2229,20 @@ function renderFirstUploadVlogStudy(data,dossier){
   grid.append(card);
  }
  details.append(grid);
+ const elite=data.exceptional_gross_earnings_cases;
+ if(elite?.latest?.cases?.length===3){
+  const panel=make('div','exceptional-earnings-panel');
+  panel.append(make('h5','','Exceptional creator businesses separate from newcomer earnings'));
+  panel.append(make('p','measure-limit','Forbes estimates '+elite.latest.roster_n+' selected prominent creators earned USD '+
+    elite.latest.reported_aggregate_estimated_gross_usd_millions.toLocaleString('en-US')+
+    ' million gross across platforms in March 2025–March 2026. Not YouTube-only income.'));
+  panel.append(make('p','measure-limit',elite.latest.cases.map(x=>x.creator+': USD '+x.estimated_gross_usd_millions+'m estimated gross').join(' · ')+
+    '. Not audited YouTube payouts, creator profit or typical new-channel outcomes.'));
+  panel.append(make('p','measure-limit','The separate 2025 Forbes top-50 list estimated USD '+elite.previous.reported_aggregate_estimated_gross_usd_millions+
+    'm. Different rosters and time periods prevent same-person earnings growth inference.'));
+  panel.append(audienceSources(elite.source_ids,dossier));
+  details.append(panel);
+ }
  details.append(make('p','measure-limit','All-creator zero-earner fraction, real channel profit and any causal benefit of additional uploads remain unmeasured.'));
  const link=make('a','inline-link','Read the study and its modeled-income limitations ↗');
  link.href='./ontology/youtube/first-upload-vlog-study-2026.md';link.target='_blank';link.rel='noopener noreferrer';

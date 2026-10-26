@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "first_upload_vlog_attention_and_modeled_economics",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "source_id": "tariq-2026-first-upload-vloggers",
   "publication_stage": "unreviewed_preprint",
   "status": "public_views_observed_payouts_and_work_hours_unobserved",
@@ -82,5 +82,76 @@
     "net_creator_profit": null,
     "verified_creator_hours": null,
     "all_creator_population_distribution": null
+  },
+  "exceptional_gross_earnings_cases": {
+    "id": "forbes_two_crossplatform_elite_lists",
+    "source_ids": [
+      "forbes-top-creators-2026-gross",
+      "forbes-top-creators-2025-gross"
+    ],
+    "source_type": "editorial_selected_rankings_estimated_crossplatform_gross_earnings",
+    "retrieval_date": "2026-10-25",
+    "latest": {
+      "source_id": "forbes-top-creators-2026-gross",
+      "publication_date": "2026-06-23",
+      "updated_date": "2026-08-06",
+      "period": "2025-03_to_2026-03",
+      "roster_n": 50,
+      "reported_aggregate_estimated_gross_usd_millions": 1020,
+      "counts_company_equity": false,
+      "reported_youtube_only_payouts": false,
+      "actual_creator_net_profit": null,
+      "cases": [
+        {
+          "creator": "MrBeast",
+          "rank": 1,
+          "estimated_gross_usd_millions": 300,
+          "description": "video_and_consumer_product_business",
+          "youtube_payout_usd": null,
+          "net_profit_usd": null
+        },
+        {
+          "creator": "Dhar Mann",
+          "rank": 2,
+          "estimated_gross_usd_millions": 65,
+          "description": "scripted_video_and_media_studio",
+          "youtube_payout_usd": null,
+          "net_profit_usd": null
+        },
+        {
+          "creator": "Markiplier",
+          "rank": 4,
+          "estimated_gross_usd_millions": 38,
+          "description": "gaming_video_podcasts_and_film",
+          "youtube_payout_usd": null,
+          "net_profit_usd": null
+        }
+      ]
+    },
+    "previous": {
+      "source_id": "forbes-top-creators-2025-gross",
+      "publication_date": "2025-06-16",
+      "period": "2024-04_to_2025-04",
+      "roster_n": 50,
+      "reported_aggregate_estimated_gross_usd_millions": 853,
+      "same_person_cohort_verified": false,
+      "same_period": false
+    },
+    "all_creators_sampled": false,
+    "all_creator_population_n": null,
+    "median_youtube_creator_income": null,
+    "actual_new_creator_success_probability": null,
+    "can_pool_with_107_new_vlog_channels": false,
+    "net_creator_profit": null,
+    "documented_youtube_only_earnings": null,
+    "year_over_year_same_creator_income_growth": null,
+    "original_source_raw_earnings_data_independently_audited": false,
+    "limitations": [
+      "Forbes selects already prominent creators and does not sample ordinary, failed, newly launched or zero-income channels.",
+      "Earnings are editorial estimates of gross amounts across social and other businesses, not verified YouTube payout or after-expense personal profit.",
+      "2025 and 2026 top 50 lists may differ in roster and observation period; totals do not provide fixed-person earnings growth.",
+      "Cross-platform followers are not deduplicated people, and creator rank is not newcomer success probability.",
+      "The 107-channel vlog cohort reports keyword-selected public views and modeled advertising value, not cash payouts comparable to Forbes gross income."
+    ]
   }
 }
