@@ -314,6 +314,7 @@ try{
     assert((await selectedFees.textContent()).includes('multiple platforms'),'Paid cohort was mislabeled as YouTube-only');
     assert((await selectedFees.textContent()).includes('25 paid deliverables lacked follower tiers'),'Missing tier-denominator caveat');
     assert((await selectedFees.textContent()).includes('An agreed Kolect collaboration is not a verified payment'),'Missing payment-stage caveat');
+    assert.equal(await selectedFees.locator('.sponsor-worksheet-link').count(),1,'Missing public sponsor contract cash worksheet');
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));

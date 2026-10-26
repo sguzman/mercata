@@ -2660,7 +2660,12 @@ function renderAgreedCollaborationFees(model,dossier){
  details.append(audienceSources([s.source_id],dossier));
  const link=make('a','inline-link','Read fee cohort sampling and the missing income denominators ↗');
  link.href='./ontology/youtube/brand-campaign-payment-concentration-2026.md';link.target='_blank';link.rel='noopener noreferrer';
- details.append(link);section.append(details);return section;
+ details.append(link);
+ const worksheetLink=make('a','inline-link sponsor-worksheet-link','Sponsor contract-to-cash worksheet: paid costs, outstanding invoices and tax boundaries ↗');
+ worksheetLink.href='./ontology/youtube/sponsor-contract-cash-worksheet.md';
+ worksheetLink.target='_blank';worksheetLink.rel='noopener noreferrer';
+ details.append(worksheetLink);
+ section.append(details);return section;
 }
 
 function renderAIRRevenueConcentration(model,dossier){

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "platform": "youtube",
+  "kind": "single_sponsorship_contract_cash_accounting_protocol",
+  "as_of": "2026-10-25",
+  "status": "operational_worksheet_without_real_creator_contract_data",
+  "source_ids": [
+    "kolect-2026-youtube-agreed-collaboration-tier-fees",
+    "opensponsorship-2026-paid-deliverable-fee-by-tier"
+  ],
+  "engine": "site/sponsor-contract-cash-worksheet.mjs",
+  "form_fields": {
+    "currency": "ISO 4217 account currency for all input amounts",
+    "agreed_gross_fee": "Contracted creator fee, not yet equivalent to an invoice or cash",
+    "invoiced_gross_fee": "Gross invoice issued within the original agreed fee",
+    "cash_received": "Funds actually cleared for this contract, after source deductions",
+    "tax_withheld_at_source": "Documented payer withholding on this invoiced amount, not cash paid again",
+    "agent_fee_deducted_before_receipt": "Documented fee withheld upstream, not included in paid expenses",
+    "other_deductions_before_receipt": "Other separately evidenced deductions before deposit",
+    "negotiation_cash_paid": "Paid direct negotiation cost, excluding wages and fees withheld upstream",
+    "production_cash_paid": "Paid recording/editing/production cost",
+    "fulfillment_cash_paid": "Paid deliverable fulfillment, revisions and shipping",
+    "admin_cash_paid": "Paid administration and collection costs",
+    "tax_paid_directly": "Only independently paid tax cash outlays, never the same source withholding",
+    "negotiation_hours": "Hours spent negotiating, including unsuccessful work attributed to the contract",
+    "production_hours": "Hours spent producing",
+    "fulfillment_hours": "Hours spent delivering/revising",
+    "admin_hours": "Hours spent invoicing and collecting"
+  },
+  "constraints": [
+    "All numeric inputs must be explicit nonnegative finite numbers; omission is not zero.",
+    "All cash amounts must share the same documented currency; exchange rates are out of scope.",
+    "Each monetary amount is rounded to cents and validated, without floating-point cumulative leakage.",
+    "For an unamended agreement, invoiced gross cannot exceed agreed gross.",
+    "Cash received plus source deductions cannot exceed invoiced gross.",
+    "Payer withholding and fees are not deducted twice as separately paid cash costs.",
+    "Outstanding invoiced balance is unpaid value, not recognized profit.",
+    "Contract cash movement excludes valuation of labor and unpaid obligations, so cannot be labeled net profit.",
+    "Inputs must come from a specific contract and payment records; vendor fee medians must never be prefilled as typical creator earnings."
+  ],
+  "output_unknowns": {
+    "accounting_profit": null,
+    "ultimate_tax_liability": null,
+    "expected_future_contract_probability": null,
+    "representative_creator_net_income": null
+  },
+  "real_contract_observations": 0
+}
