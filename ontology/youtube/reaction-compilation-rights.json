@@ -2,13 +2,14 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "reaction_compilation_originality_copyright_distinction",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-26",
   "status": "official_channel_level_examples_with_unassessed_individual_rights",
   "evidence_method": "Classify explicitly described YouTube channel-monetization examples by creative contribution and cross-check separate copyright/fair-use/Content ID rules. Cases are generic hypotheticals, not sampled uploads.",
   "source_ids": [
     "channel-policy",
     "yt-us-fair-use-guidance-2026",
-    "music-content-id"
+    "music-content-id",
+    "yt-shorts-original-content-recommendations-2026-10"
   ],
   "axes": [
     {
@@ -37,6 +38,13 @@
       "authority": "claimant_policy_and_dispute_workflow",
       "scope": "matched_audio_video_and_territory",
       "source_id": "music-content-id",
+      "decision_requires_individual_review": true
+    },
+    {
+      "id": "shorts_recommendation_originality",
+      "authority": "youtube_shorts_feed_discovery_system",
+      "scope": "distribution_of_shorts_from_channels_primarily_reuploading_content_without_meaningful_new_value",
+      "source_id": "yt-shorts-original-content-recommendations-2026-10",
       "decision_requires_individual_review": true
     }
   ],
@@ -139,7 +147,8 @@
     "copyright_claim_rate": null,
     "monetization_acceptance_rate": null,
     "net_cash_profit": null,
-    "creator_production_hours": null
+    "creator_production_hours": null,
+    "shorts_originality_distribution_earnings_effect": null
   },
   "unmeasured": {
     "approved_reaction_channel_fraction": null,
@@ -147,6 +156,29 @@
     "typical_commentary_transformative_quality": null,
     "genre_specific_ypp_failure_rate": null,
     "public_reaction_video_earnings": null,
-    "licensed_material_costs": null
+    "licensed_material_costs": null,
+    "actual_shorts_feed_originality_penalty_frequency": null
+  },
+  "shorts_recommendation_originality": {
+    "id": "yt-shorts-2026-10-originality-announcement",
+    "source_id": "yt-shorts-original-content-recommendations-2026-10",
+    "announced_at": "2026-10-01",
+    "type": "first_party_announced_shorts_feed_recommendation_direction_not_a_copyright_or_ypp_ruling",
+    "described_risk": "primarily aggregating others' Shorts or reposting without meaningful original perspective may reduce Shorts-feed recommendation distribution",
+    "described_original_contributions": [
+      "commentary",
+      "creative_edits",
+      "new_storytelling",
+      "distinct_perspective"
+    ],
+    "blanket_no_clips_allowed": false,
+    "proof_of_licensed_clip_recommendation_approval": false,
+    "proof_of_YPP_approval": false,
+    "proof_of_copyright_fair_use": false,
+    "actual_rollout_percentage": null,
+    "affected_channels": null,
+    "observed_loss_of_recommendation_impressions": null,
+    "measured_incremental_creator_income": null,
+    "publication_scope": "official_community_announcement_not_a_public_experiment_or_individual_case_adjudication"
   }
 }

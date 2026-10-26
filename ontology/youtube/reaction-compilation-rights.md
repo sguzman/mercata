@@ -1,12 +1,12 @@
 # Reaction videos and compilations: originality is not the same as copyright
 
-**Rules reviewed October 24, 2026.** [Machine evidence matrix](reaction-compilation-rights.json) and [boundary tests](../../tests/reaction-compilation-rights.test.mjs).
+**Rules reviewed October 26, 2026.** [Machine evidence matrix](reaction-compilation-rights.json) and [boundary tests](../../tests/reaction-compilation-rights.test.mjs).
 
 [YouTube's current monetization policies](https://support.google.com/youtube/answer/1311392?hl=en) explicitly permit sufficiently substantive critical commentary, explained sports replays, rewritten dialogue and genuinely transformed video edits under the *reused-content* examples. The same page identifies minimal-variation reposts, nonverbal reactions without commentary, collections of unrelated artists' songs (even with permission), and short compilations copied from other services as examples that do **not** meet its originality rule.
 
 Those examples establish **policy illustrations**, not acceptance of a specific video or channel. YouTube reviews the channel as a whole, including representative content and metadata. The July 15, 2025 renaming of *repetitious* content to *inauthentic* did not change the separate reused-content standard.
 
-## Four independent gates
+## Five independent gates
 
 | Gate | Main question | Why it remains separate |
 | --- | --- | --- |
@@ -14,8 +14,15 @@ Those examples establish **policy illustrations**, not acceptance of a specific 
 | YPP repetitive/inauthentic content | Is the work interchangeable, templated, or mass-produced? | A video with no third-party clips could still fail this test |
 | Copyright ownership, license, or exception | Is the source work lawfully reusable in this country and use? | [U.S. fair use](https://support.google.com/youtube/answer/9783148?hl=en) weighs four factors case by case; it is not established by credits, disclaimers or a few seconds of footage |
 | Content ID and claims | Has a match been asserted and what does the rights holder choose? | [Content ID](https://support.google.com/youtube/answer/2797370?hl=en) can block, monetize or track by territory, independent of YPP reused-content policy |
+| Shorts-feed recommendation originality | Does YouTube's announced feed system treat a channel as mainly reposting others' clips without meaningful original additions? | [October 1, 2026 official Shorts announcement](https://support.google.com/youtube/thread/470890423/prioritizing-original-content-on-shorts?hl=en) describes **distribution priority**, not copyright permission, YPP enrollment, ad approval, or guaranteed reach |
 
 No general mathematical rule converts the number of commentary seconds, clip length or editing transitions into a legal or monetization approval. Meaningful added analysis does not guarantee immunity from a claim; similarly, a licensed audio or film asset does not make a low-originality compilation eligible for YPP. Content ID cannot itself resolve a U.S. fair-use question.
+
+## October 2026 Shorts originality: a fifth, independent discovery gate
+
+On **October 1, 2026**, TeamYouTube publicly described a change intended to *favor original Shorts* and *reduce Shorts-feed distribution* for accounts primarily reuploading other creators' videos without substantial new commentary, storytelling or meaningful creative edits. The announcement **does not say all clips are banned** and does not disclose a completed rollout percentage, ranking weights, number of affected channels, measurable impression loss, or change to creator payouts.
+
+Unlike the YPP originality examples above, this is a **feed-discovery statement**. The presence of a license or legally protected fair use does not establish that a given reaction will be promoted; conversely, reduced reach would not determine copyright liability or automatically mean a channel was denied YPP. The five mechanisms must be tested independently.
 
 ## Research evidence remaining
 

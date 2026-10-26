@@ -17,3 +17,19 @@ test('Claims of automatic legal clearance and quantified profit are rejected',as
  const e=auditReactionRights(m,new Set(d.evidence.map(x=>x.id))).errors;
  assert(e.includes('false rights assurance'));assert(e.includes('invented economic observation'));assert(e.includes('false 2025 rule change'));
 });
+
+test('2026 Shorts reupload recommendation gate remains independent of YPP, copyright and paid outcomes',async()=>{
+ const [m,d]=await Promise.all([read('ontology/youtube/reaction-compilation-rights.json'),read('specimens/youtube.json')]);
+ const u=m.shorts_recommendation_originality;
+ assert.equal(m.axes.length,5);
+ assert(d.evidence.some(x=>x.id===u.source_id));
+ assert.equal(u.announced_at,'2026-10-01');
+ assert.equal(u.blanket_no_clips_allowed,false);
+ assert.equal(u.proof_of_YPP_approval,false);
+ assert.equal(u.proof_of_copyright_fair_use,false);
+ assert.equal(u.observed_loss_of_recommendation_impressions,null);
+ assert.equal(u.measured_incremental_creator_income,null);
+ assert.deepEqual(auditReactionRights(m,new Set(d.evidence.map(x=>x.id))),{valid:true,errors:[]});
+ m.shorts_recommendation_originality.proof_of_YPP_approval=true;
+ assert(auditReactionRights(m,new Set(d.evidence.map(x=>x.id))).errors.includes('false Short discovery or copyright entitlement'));
+});

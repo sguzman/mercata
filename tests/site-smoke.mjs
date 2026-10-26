@@ -224,6 +224,10 @@ try{
     assert((await shortsOriginality.textContent()).includes('October 1, 2026'));
     assert((await shortsOriginality.textContent()).includes('not a blanket ban on clips'));
     assert((await shortsOriginality.textContent()).includes('measured distribution loss'));
+    const reactionDiscovery=page.locator('.reaction-compilation-rights .shorts-reaction-discovery-gate');
+    assert.equal(await reactionDiscovery.count(),1,'Missing fifth independent 2026 Shorts originality discovery gate');
+    assert((await reactionDiscovery.textContent()).includes('NOT an automatic copyright ruling'));
+    assert((await reactionDiscovery.textContent()).includes('quantified earnings loss'));
     const chatCulture=page.locator('.live-chat-culture-study .live-chat-language-study');
     assert.equal(await chatCulture.count(),1,'Missing selected Japanese-language VTuber interaction cohort');
     assert((await chatCulture.textContent()).includes('64,279 messages across 10 chosen livestreams'));

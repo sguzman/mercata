@@ -2180,6 +2180,15 @@ function renderReactionCompilationRights(data,dossier){
   card.append(audienceSources(c.source_ids,dossier));grid.append(card);
  }
  details.append(grid);
+ const newShorts=data.shorts_recommendation_originality;
+ if(newShorts){
+  const p=make('div','shorts-reaction-discovery-gate');
+  p.append(make('h5','','October 1, 2026 · announced Shorts originality distribution change'));
+  p.append(make('p','measure-context','Shorts-feed recommendations may deprioritize accounts primarily reuploading other creators’ clips without substantial original commentary, editing or storytelling.'));
+  p.append(make('p','measure-limit','A separate recommendation gate: NOT an automatic copyright ruling, YPP channel denial, blanket clip ban or quantified earnings loss.'));
+  p.append(audienceSources([newShorts.source_id],dossier));
+  details.append(p);
+ }
  details.append(make('p','measure-limit','No case-specific fair-use finding, Copyright claim outcome, YPP admission, creator revenue or net profit has been measured.'));
  const link=make('a','inline-link','Read reuse, originality, and Content ID distinctions ↗');
  link.href='./ontology/youtube/reaction-compilation-rights.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;
