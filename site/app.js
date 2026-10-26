@@ -3511,6 +3511,15 @@ function renderRecommendationEvidence(data,dossier){
   card.append(audienceSources(x.source_ids,dossier));grid.append(card);
  }
  details.append(grid);
+ const originality=data.originality_recommendation_update;
+ if(originality){
+  const notice=make('div','recommendation-originality-update');
+  notice.append(make('h5','','October 1, 2026 · announced Shorts originality ranking priority'));
+  notice.append(make('p','measure-context','YouTube states it is prioritizing original Shorts and reducing feed distribution for channels primarily reuploading other creators’ videos without significant original additions.'));
+  notice.append(make('p','measure-limit','A dated platform announcement, not a blanket ban on clips or verified rollout, ranking coefficient, measured distribution loss, YPP decision, copyright permission or income effect.'));
+  notice.append(audienceSources([originality.source_id],dossier));
+  details.append(notice);
+ }
  details.append(make('p','measure-limit','No minimum Shorts posting cadence is required. Exact signal weights, newcomer impressions and net creator income effects are unknown.'));
  const link=make('a','inline-link','Read official recommendation sources ↗');
  link.href='./ontology/youtube/recommendation-surface-evidence.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;

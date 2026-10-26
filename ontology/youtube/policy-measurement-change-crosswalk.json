@@ -2,8 +2,8 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "dated_policy_and_metric_change_crosswalk",
-  "as_of": "2026-10-24",
-  "status": "sourced_announcements_not_verified_algorithm_rank_changes",
+  "as_of": "2026-10-26",
+  "status": "sourced_policy_and_recommendation_announcements_not_verified_algorithm_rank_weights",
   "events": [
     {
       "date": "2024-10-15",
@@ -99,6 +99,15 @@
       "source_ids": [
         "yt-ads-policy-updates-2026"
       ]
+    },
+    {
+      "date": "2026-10-01",
+      "precision": "day",
+      "id": "shorts-originality-prioritization-2026-10-01",
+      "kind": "shorts_recommendation_originality_prioritization_announcement",
+      "source_ids": [
+        "yt-shorts-original-content-recommendations-2026-10"
+      ]
     }
   ],
   "links_to_existing_ledgers": [
@@ -110,7 +119,8 @@
     "Separate Shorts format recognition from ranking preferences",
     "YPP originality guidance is not the same as per-video ad suitability",
     "Playback-start view definition revision is not observed unique-user or revenue growth",
-    "No ranking weight or measured creator earnings lift inferred from policy publishing"
+    "No ranking weight or measured creator earnings lift inferred from policy publishing",
+    "October 1 2026 original Shorts recommendation prioritization is an official announced ranking direction, not a disclosed coefficient, completed rollout or observed channel revenue effect."
   ],
   "real_ranking_weight_change_observed": false,
   "actual_creator_policy_revenue_effect": null,

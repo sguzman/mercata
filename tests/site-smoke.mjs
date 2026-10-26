@@ -219,6 +219,11 @@ try{
     assert((await independentGaming.textContent()).includes('1.98 billion gaming hours watched'));
     assert((await independentGaming.textContent()).includes('14.5% share'));
     assert((await independentGaming.textContent()).includes('Different vendor methodology'));
+    const shortsOriginality=page.locator('.recommendation-evidence .recommendation-originality-update');
+    assert.equal(await shortsOriginality.count(),1,'Missing dated October 2026 official Shorts recommendation announcement');
+    assert((await shortsOriginality.textContent()).includes('October 1, 2026'));
+    assert((await shortsOriginality.textContent()).includes('not a blanket ban on clips'));
+    assert((await shortsOriginality.textContent()).includes('measured distribution loss'));
     const chatCulture=page.locator('.live-chat-culture-study .live-chat-language-study');
     assert.equal(await chatCulture.count(),1,'Missing selected Japanese-language VTuber interaction cohort');
     assert((await chatCulture.textContent()).includes('64,279 messages across 10 chosen livestreams'));

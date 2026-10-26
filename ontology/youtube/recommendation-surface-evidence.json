@@ -2,12 +2,13 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "recommendation_surface_evidence",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-26",
   "status": "official_mechanisms_no_disclosed_weights",
   "source_ids": [
     "yt-recs-surfaces-2026",
     "yt-video-discovery-help-2026",
-    "yt-shorts-discovery-help-2026"
+    "yt-shorts-discovery-help-2026",
+    "yt-shorts-original-content-recommendations-2026-10"
   ],
   "method": "Classify distinct official discovery surfaces and their audience-conditioned ranking signals. No owner analytics or private viewing histories collected.",
   "surfaces": [
@@ -38,7 +39,8 @@
       "label": "Shorts feed",
       "context": "short_form_viewer_behavior",
       "source_ids": [
-        "yt-shorts-discovery-help-2026"
+        "yt-shorts-discovery-help-2026",
+        "yt-shorts-original-content-recommendations-2026-10"
       ],
       "claim": "Shorts discovery responds to performance and viewer personalization; view counts do not prove long-form conversions.",
       "ranking_weight": null,
@@ -99,7 +101,8 @@
     "A fixed ranking factor coefficient",
     "Guaranteed impressions for every subscriber",
     "A Shorts video harms long-form reach merely by existing",
-    "More published video views proves higher net creator profit"
+    "More published video views proves higher net creator profit",
+    "October 2026 originality update proves measured reductions in specific creators' Shorts impressions or settles copyright permissions"
   ],
   "unmeasured": {
     "home_ranking_weights": null,
@@ -109,5 +112,32 @@
     "first_year_new_channel_reach": null,
     "organic_creator_profit_lift": null,
     "universal_optimal_post_cadence": null
+  },
+  "originality_recommendation_update": {
+    "id": "shorts-originality-prioritization-2026-10-01",
+    "source_id": "yt-shorts-original-content-recommendations-2026-10",
+    "announcement_date": "2026-10-01",
+    "announcement_scope": "shorts_feed_recommendation_distribution_priority",
+    "announcement_status": "first_party_policy_statement_not_confirmed_channel_level_rollout",
+    "reported_direction": "increase_priority_for_original_shorts_and_reduce_distribution_for_channels_primarily_reuploading_others_without_meaningful_original_value",
+    "target_condition": "primarily_aggregating_or_reuploading_other_creators_videos_without_significant_transformative_addition",
+    "described_original_additions": [
+      "original_commentary",
+      "unique_editing",
+      "storytelling",
+      "individual_creative_perspective"
+    ],
+    "blanket_ban_on_using_other_creators_clips": false,
+    "same_as_YPP_inauthentic_content_policy": false,
+    "same_as_copyright_permission": false,
+    "same_as_advertiser_suitability": false,
+    "known_deployment_completion_date": null,
+    "ranking_weight_change": null,
+    "affected_channel_count": null,
+    "actual_loss_of_shorts_reach": null,
+    "causal_reach_treatment_effect": null,
+    "creator_income_effect": null,
+    "representative_creator_sample": null,
+    "inference_boundary": "A publisher announcement about recommended direction of Shorts distribution does not establish a quantified ranking weight, blanket ban, all creator impact or earnings shift."
   }
 }
