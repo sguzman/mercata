@@ -47,6 +47,31 @@ export function auditChannelCohorts(model,sources){
     c.causal_effect_of_channel_age!==null||
     c.all_niche_newcomer_denominators!==null)errors.push('incompatible vendor frames conflated');
  }
+ const old=model?.historical_2019_modeled_ad_income;
+ if(!old||old.source_id!=='rieder-elite-linking-2019-2023'||!sources.has(old.source_id)||
+    old.original_channel_sample_observation_year!==2019||
+    old.article_published_at!=='2023-06-29'||
+    old.model_type!=='view_share_apportioned_aggregate_youtube_ad_revenue_to_subscriber_bins'||
+    old.original_google_ad_revenue_usd_2019!==15000000000||
+    old.author_assumed_creator_ad_payout_usd_2019!==8250000000||
+    old.payout_estimated_not_observed!==true)errors.push('historical ad-income method or source missing');
+ const rows=old?.tiers||[];
+ if(rows.length!==6||rows.reduce((s,t)=>s+t.sampled_channels,0)!==36142711||
+    old?.sampled_channels_total_observed_sum!==36142711)errors.push('historical modeled size cohort counts invalid');
+ const bounds=[[0,1000],[1000,10000],[10000,100000],[100000,1000000],[1000000,10000000],[10000000,null]];
+ const counts=[31727531,3491938,769472,138284,14969,517];
+ const payouts=[null,295,2058,16346,165892,1707446];
+ const revenueShares=[0,12.5,19.2,27.4,30.1,10.7],viewShares=[8.6,11.4,17.6,25,27.5,9.8];
+ if(rows.length===6&&rows.some((r,i)=>r.min_subscribers!==bounds[i][0]||
+    r.max_subscribers_exclusive!==bounds[i][1]||
+    r.sampled_channels!==counts[i]||r.modeled_mean_annual_ad_income_usd!==payouts[i]||
+    r.assigned_creator_payout_share_percent!==revenueShares[i]||
+    r.reported_view_share_percent!==viewShares[i]||
+    r.native_ypp_actual_payouts_observed!==false))errors.push('historical publisher modeled bins misquoted or observed income invented');
+ const gate=old?.comparability;
+ if(!gate||Object.entries(gate).some(([k,v])=>v!==((k.endsWith('_observed')||k.endsWith('_verified')||k==='median_earnings_observed'||k==='zero_earner_fraction_verified'||k==='variance_within_subscriber_bins')?null:false))||
+    old?.reported_view_share_sum_percent!==99.9||old?.reported_payout_share_sum_percent!==99.9)
+    errors.push('incompatible historical means treated as current earnings');
  if(model?.independent_probability_samples!==0||model?.possible_cross_dataset_overlap!==true)errors.push('independence overclaimed');
  if(!model?.unmeasured||Object.values(model.unmeasured).some(x=>x!==null))errors.push('unmeasured results invented');
  if(model?.readiness_gates?.some(x=>x.passed!==false))errors.push('unsupported empirical acceptance gate');

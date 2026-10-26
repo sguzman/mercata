@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "vendor_indexed_channel_sizes_and_360_day_endpoint_cohort",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "status": "published_observational_vendor_counts_not_creator_census_or_causal_growth",
   "datasets": [
     {
@@ -226,7 +226,8 @@
     "Vendor index coverage change is real platform decline",
     "24.7% of already-successful indexed AI channels are newer does not imply a 24.7% success chance for a new AI creator",
     "The 42.32% Roblox 360-day endpoint figure does not represent all new Roblox channel success or new-vs-mature causal advantage",
-    "Two vendor indexes cannot be pooled to obtain platform-wide newcomer success, income or niche rankings"
+    "Two vendor indexes cannot be pooled to obtain platform-wide newcomer success, income or niche rankings",
+    "The academic 2019 modeled mean ad-income per subscriber tier is not verified creator pay, present-day channel earnings or net profit."
   ],
   "unmeasured": {
     "all_youtube_channels": null,
@@ -365,5 +366,103 @@
       "all_niche_newcomer_denominators": null,
       "source_family_note": "Two distinct commercial vendor datasets; no deduplicated joint frame or representative platform sampling; selected-success composition cannot be compared with selected newer-only 360-day endpoints as a common probability."
     }
+  },
+  "historical_2019_modeled_ad_income": {
+    "source_id": "rieder-elite-linking-2019-2023",
+    "article_published_at": "2023-06-29",
+    "original_channel_sample_observation_year": 2019,
+    "original_sample_description": "2019 channel snapshot exceeding 36 million channels, drawn from prior Rieder et al. analysis; not the separate 153,000 elite-channel link dataset",
+    "model_type": "view_share_apportioned_aggregate_youtube_ad_revenue_to_subscriber_bins",
+    "original_google_ad_revenue_usd_2019": 15000000000,
+    "author_assumed_creator_ad_payout_usd_2019": 8250000000,
+    "payout_estimated_not_observed": true,
+    "sampled_channels_total_observed_sum": 36142711,
+    "reported_view_share_sum_percent": 99.9,
+    "reported_payout_share_sum_percent": 99.9,
+    "currency": "USD",
+    "estimated_income_metric": "modeled_mean_annual_channel_ad_income_usd",
+    "bounds": "minimum inclusive, maximum exclusive; final band unbounded",
+    "tiers": [
+      {
+        "id": "under_1k",
+        "min_subscribers": 0,
+        "max_subscribers_exclusive": 1000,
+        "sampled_channels": 31727531,
+        "reported_view_share_percent": 8.6,
+        "assigned_creator_payout_share_percent": 0,
+        "modeled_mean_annual_ad_income_usd": null,
+        "native_ypp_actual_payouts_observed": false
+      },
+      {
+        "id": "1k_to_10k",
+        "min_subscribers": 1000,
+        "max_subscribers_exclusive": 10000,
+        "sampled_channels": 3491938,
+        "reported_view_share_percent": 11.4,
+        "assigned_creator_payout_share_percent": 12.5,
+        "modeled_mean_annual_ad_income_usd": 295,
+        "native_ypp_actual_payouts_observed": false
+      },
+      {
+        "id": "10k_to_100k",
+        "min_subscribers": 10000,
+        "max_subscribers_exclusive": 100000,
+        "sampled_channels": 769472,
+        "reported_view_share_percent": 17.6,
+        "assigned_creator_payout_share_percent": 19.2,
+        "modeled_mean_annual_ad_income_usd": 2058,
+        "native_ypp_actual_payouts_observed": false
+      },
+      {
+        "id": "100k_to_1m",
+        "min_subscribers": 100000,
+        "max_subscribers_exclusive": 1000000,
+        "sampled_channels": 138284,
+        "reported_view_share_percent": 25,
+        "assigned_creator_payout_share_percent": 27.4,
+        "modeled_mean_annual_ad_income_usd": 16346,
+        "native_ypp_actual_payouts_observed": false
+      },
+      {
+        "id": "1m_to_10m",
+        "min_subscribers": 1000000,
+        "max_subscribers_exclusive": 10000000,
+        "sampled_channels": 14969,
+        "reported_view_share_percent": 27.5,
+        "assigned_creator_payout_share_percent": 30.1,
+        "modeled_mean_annual_ad_income_usd": 165892,
+        "native_ypp_actual_payouts_observed": false
+      },
+      {
+        "id": "10m_plus",
+        "min_subscribers": 10000000,
+        "max_subscribers_exclusive": null,
+        "sampled_channels": 517,
+        "reported_view_share_percent": 9.8,
+        "assigned_creator_payout_share_percent": 10.7,
+        "modeled_mean_annual_ad_income_usd": 1707446,
+        "native_ypp_actual_payouts_observed": false
+      }
+    ],
+    "comparability": {
+      "compare_directly_to_2026_vidiq_channel_index": false,
+      "compare_directly_to_2026_air_rpm_channels": false,
+      "compare_directly_to_creatoriq_cross_platform_sponsor_payments": false,
+      "representative_of_current_active_new_creators": false,
+      "same_fixed_channel_panel_as_2023_link_study": false,
+      "median_earnings_observed": null,
+      "zero_earner_fraction_verified": null,
+      "actual_creator_profit_observed": null,
+      "exact_view_to_ad_payout_relation_verified": null,
+      "variance_within_subscriber_bins": null
+    },
+    "limitations": [
+      "Author-assigned 2019 total YouTube creator ad allocation and video viewing shares are modeling assumptions, not published real channel payment records.",
+      "2019 subscriber bins describe channel objects, not deduplicated creator people or independently audited program eligibility; no true median or zero-earner prevalence.",
+      "The under-1000 band has a blank publisher modeled mean and 0% assigned ad-revenue share; this does not establish zero earnings from sponsorships, past periods, current policy, or other products.",
+      "Estimates are nominal USD annual model means at 2019, not inflation-adjusted or net of production costs, taxes, refunds, labor or management fees.",
+      "2019 model includes all channel tiers from a prior 36-million-channel sample; the article's separate 153,000 elite channels and 137 million video descriptions are not a second sample of earnings.",
+      "2026 vidIQ channel counts and AIR RPM sample have different sampling frames, payout instruments and years; do not subtract, splice or time-trend them with 2019 modeled means."
+    ]
   }
 }

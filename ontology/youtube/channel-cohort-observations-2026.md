@@ -58,3 +58,21 @@ In contrast, [vidIQ's September 2026 360-day niche cohort](https://vidiq.com/res
 
 **Do not pool these datasets.** TubeAI's composition is conditional on already reaching 10k subscribers and staying active; vidIQ's endpoint counts are conditional on vendor-indexed, initially small, eligible newer gaming channels. Even the gaming labels and age-selection definitions differ. The studies cannot determine a universal least-crowded niche, creator earnings, causal upload frequency, creator-exit rate, all-newcomer survival curve, or probability that a person launching a new channel will succeed. Those remain `null` in the machine record.
 
+
+## Historical illustrative ad-income model by **disjoint subscriber tier** (2019)
+
+[Rieder, Borra, Coromina and Matamoros-Fernández (2023)](https://journals.sagepub.com/doi/full/10.1177/20563051231180628) summarize a prior **2019 sample exceeding 36 million YouTube channels** and allocate a modeled **USD 8.25 billion annual creator advertising payout** from Google's USD 15 billion reported YouTube advertising revenue across subscriber-size groups using **view share as a proxy**. The resulting tier values are **assumed annual *means***, not actual payments, measured income medians, after-cost profit or forecasts for current creators.
+
+| 2019 subscriber interval | Historical sampled channels | Authors' modeled mean annual ads income per channel (USD) |
+| --- | ---: | ---: |
+| Below 1,000 | 31,727,531 | **Not estimated** (modeled YPP share assigned 0%) |
+| 1,000 to below 10,000 | 3,491,938 | $295 |
+| 10,000 to below 100,000 | 769,472 | $2,058 |
+| 100,000 to below 1 million | 138,284 | $16,346 |
+| 1 million to below 10 million | 14,969 | $165,892 |
+| 10 million or more | 517 | $1,707,446 |
+
+The categories are **nonoverlapping** subscriber-count bins. The source's displayed view shares and modeled payout shares sum to **99.9% each** because of publisher rounding; do not silently normalize. The unreported modeled income in the first tier remains `null` rather than an observed $0. The 2019 subscriber-conditioned assumptions should **not** be read as evidence that every channel under 1,000 subscribers has no income, nor that 2019 conditions hold under later YPP policies.
+
+Critically, the article also examines a **separate approximately 153,000-channel elite cohort** for linking and off-platform monetization. That elite-channel link sample is **not** the same as the larger historical channel-size model. This table cannot be joined with the **2026 vidIQ indexed channel snapshots**, AIR monetized-channel **RPM** studies, or CreatorIQ's paid **brand campaigns** into a time trend, net-pay calculation or representative typical income by size. Subscribers alone do not determine watch volume, ad placement, geography, expenses, eligibility or business ownership. The machine record stores explicit incompatibility and `null` for unverified 2019 payouts and present-day income.
+

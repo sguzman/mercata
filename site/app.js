@@ -2260,6 +2260,24 @@ function renderChannelCohorts(model,dossier){
   group.append(audienceSources([tube.source_id,vi.source_id],dossier));
   details.append(group);
  }
+ const historic=model.historical_2019_modeled_ad_income;
+ if(historic?.tiers?.length===6){
+  const panel=make('div','historical-tier-income-panel');
+  panel.append(make('h5','','Historical 2019 modeled ad income — not actual creator payouts'));
+  panel.append(make('p','measure-limit','A 2023 academic paper apportioned an assumed USD 8.25 billion 2019 YouTube advertising payout to subscriber tiers by view share. These are modeled annual mean USD amounts, not observed earnings or current medians.'));
+  const byTier=make('div','historical-tier-income-grid');
+  for(const item of historic.tiers){
+   const row=make('div','historical-tier-income-row');
+   row.append(make('strong','',item.id.replaceAll('_',' ')));
+   row.append(make('span','',item.modeled_mean_annual_ad_income_usd===null?
+    'Not estimated':'USD '+item.modeled_mean_annual_ad_income_usd.toLocaleString('en-US')+' / modeled channel-year mean'));
+   byTier.append(row);
+  }
+  panel.append(byTier);
+  panel.append(make('p','measure-limit','Publisher estimates derive from a distinct 36-million-channel 2019 sample, not the 153,000-channel linking cohort, 2026 vendor index or AIR monetized RPM. No observed medians, modern newcomer revenue, zero-earner share or net profit.'));
+  panel.append(audienceSources([historic.source_id],dossier));
+  details.append(panel);
+ }
  details.append(make('p','measure-limit','Separate July distribution: '+m.included_channels.toLocaleString('en-US')+' indexed channels with at least one subscriber. The group comparisons do not prove uploading causes growth or that creators earn money.'));
  const link=make('a','inline-link','Read cohort sampling, percentages and non-causal limitations ↗');
  link.href='./ontology/youtube/channel-cohort-observations-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);section.append(details);return section;

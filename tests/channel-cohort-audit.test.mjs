@@ -52,3 +52,22 @@ test('Niche maturity audit rejects fabricated newcomer odds or misreported condi
  c.niche_maturity_contrasts.cross_dataset.probability_an_newcomer_reaches_10k=0.25;
  assert(auditChannelCohorts(c,known).errors.includes('incompatible vendor frames conflated'));
 });
+
+test('2019 size-tier model keeps historical estimated annual means separate from current paid-channel cohorts',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/channel-cohort-observations-2026.json'),load('specimens/youtube.json')]);
+ const old=m.historical_2019_modeled_ad_income,src=new Set(d.evidence.map(x=>x.id));
+ assert.deepEqual(auditChannelCohorts(m,src),{valid:true,errors:[]});
+ assert.equal(old.original_channel_sample_observation_year,2019);
+ assert.equal(old.sampled_channels_total_observed_sum,36142711);
+ assert.deepEqual(old.tiers.map(t=>t.modeled_mean_annual_ad_income_usd),[null,295,2058,16346,165892,1707446]);
+ assert.deepEqual(old.tiers.map(t=>t.sampled_channels),[31727531,3491938,769472,138284,14969,517]);
+ assert.equal(old.tiers[0].assigned_creator_payout_share_percent,0);
+ assert.equal(old.tiers[0].modeled_mean_annual_ad_income_usd,null);
+ assert(old.tiers.every(t=>t.native_ypp_actual_payouts_observed===false));
+ assert.equal(old.comparability.median_earnings_observed,null);
+ assert.equal(old.comparability.compare_directly_to_2026_vidiq_channel_index,false);
+ const a=structuredClone(m);a.historical_2019_modeled_ad_income.tiers[1].modeled_mean_annual_ad_income_usd=29500;
+ assert(auditChannelCohorts(a,src).errors.includes('historical publisher modeled bins misquoted or observed income invented'));
+ const b=structuredClone(m);b.historical_2019_modeled_ad_income.comparability.compare_directly_to_2026_air_rpm_channels=true;
+ assert(auditChannelCohorts(b,src).errors.includes('incompatible historical means treated as current earnings'));
+});

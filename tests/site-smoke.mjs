@@ -254,6 +254,13 @@ try{
     assert((await nicheMaturity.textContent()).includes('Gaming: 13.7%'));
     assert((await nicheMaturity.textContent()).includes('roblox: 42.32%'));
     assert((await nicheMaturity.textContent()).includes('Not a matched mature cohort'));
+    const historicalIncome=page.locator('.channel-cohort-evidence .historical-tier-income-panel');
+    assert.equal(await historicalIncome.count(),1,'Missing bounded 2019 modeled income data');
+    assert.equal(await historicalIncome.locator('.historical-tier-income-row').count(),6);
+    assert((await historicalIncome.textContent()).includes('USD 295 / modeled channel-year mean'));
+    assert((await historicalIncome.textContent()).includes('USD 1,707,446 / modeled channel-year mean'));
+    assert((await historicalIncome.textContent()).includes('not actual creator payouts'));
+    assert((await historicalIncome.textContent()).includes('No observed medians'));
     await ownership.locator('.ownership-details > summary').click();
     assert((await ownership.textContent()).includes('seven-day role tenure'));
     assert((await ownership.textContent()).includes('permanently delete the target channel'));
