@@ -121,3 +121,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io first-game downside case (2026-10-26):** 2020 Crumbling World first-month 7 itch sales/$102.83 alongside cross-store results, $10k campaign expenditure and 9 fixes, with source-specific sales/profit limits. 70% → 70% (Δ +0 pp). [Case](../ontology/itch-io/crumbling-world-launch-2020.md).
+
+
+**itch.io actual feed release and feature sample (2026-10-26):** independent Jan–Jun 2026 tracker counted 118,017 game listings over 152 days (~776/day), 2,477 ever featured, and 57/6,121 feature appearances in one January week. Not a paid-game commercial cohort. **70% → 72%** (Δ 2 pp). [Cohort study](../ontology/itch-io/feed-volume-featured-2026.md).

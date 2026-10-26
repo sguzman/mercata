@@ -724,6 +724,17 @@
       "evidence_class": "first_game_self_disclosed_commercial_launch_failure",
       "license": "Brief attributed financial and launch numbers, link to original postmortem.",
       "notes": "Voluntary case about one first commercial action game across multiple stores, with around one month of early results. $10k marketing spent across full launch, not itch-specific. Itch reported yields not independently verified as net."
+    },
+    {
+      "id": "pelipulssi-feed-study-2026",
+      "url": "https://pelipulssi.com/article/superweird-itch-io-featured-feed-112-days",
+      "title": "SuperWEIRD spent 112 days in itch.io's featured feed. We measured it from the outside.",
+      "publisher": "Pelipulssi independent game feed monitor",
+      "published_at": "2026-06-12",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "independent_longitudinal_public_feed_monitor",
+      "license": "Attributed aggregate counts and independent short analysis, without individual game crawl database.",
+      "notes": "152-day public game feed study with 118,017 titles; all game categories and price models, not necessarily unique paid first releases. Featured and ratings are not paid sales. Dates and first-seen procedures differ from real game release dates."
     }
   ],
   "claims": [
@@ -2732,6 +2743,76 @@
       "confidence": "medium",
       "observed_at": "2026-10-26",
       "limitations": "No validated development hour ledger or evidence that particular suggested scope causally improves revenue."
+    },
+    {
+      "id": "feed-game-volume-776",
+      "text": "An independent feed observer recorded 118,017 itch.io games over 152 days through June 2026, describing an average of about 776 first-seen games per day.",
+      "source_ids": [
+        "pelipulssi-feed-study-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Includes all price models, possible relistings and metadata differences, not verified new first-time positive-price releases."
+    },
+    {
+      "id": "feed-featured-2point1",
+      "text": "The same observer reported 2,477 of 118,017 tracked games had appeared at least once in the featured feed (approximately 2.1%).",
+      "source_ids": [
+        "pelipulssi-feed-study-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Featured-feed observations, not a probability of paid sales, commercial seller success or verified random launch cohort."
+    },
+    {
+      "id": "feed-jan-week-unrated",
+      "text": "For 6,121 games first seen in one late-January 2026 week, 4,897 (about 80%) had no recorded rating by June.",
+      "source_ids": [
+        "pelipulssi-feed-study-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "No rating is not zero paid units or zero money; the first-seen cohort may include products with differing release and update histories."
+    },
+    {
+      "id": "feed-jan-week-featured",
+      "text": "The feed monitor reported that 57 of 6,121 first-seen late-January games eventually appeared in featured results (under 1% of that cohort).",
+      "source_ids": [
+        "pelipulssi-feed-study-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Not a paid launch success rate and not a unique buyer measure; featured feed is curated and observational."
+    },
+    {
+      "id": "feed-superweird-featured-streak",
+      "text": "SuperWEIRD: Idle Automation appeared in the observed featured feed on 112 consecutive days, with 652 sightings from February 20 to June 11, 2026.",
+      "source_ids": [
+        "pelipulssi-feed-study-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Exceptional selected project with a developed external audience; not an average title or guaranteed reach."
+    },
+    {
+      "id": "feed-updates-reappear",
+      "text": "The researcher observed that a SuperWEIRD game update was followed by a new appearance in chronological release results, showing why first-sighting and publish timestamps must be distinguished.",
+      "source_ids": [
+        "pelipulssi-feed-study-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "A within-game observation, not proof updates reliably restore every publisher to new release listings."
+    },
+    {
+      "id": "feed-rating-v-sales",
+      "text": "The monitor's game-feed counts, ratings, comments and feature placements measure public attention signals but do not expose eligible merchant purchases or profits.",
+      "source_ids": [
+        "pelipulssi-feed-study-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Cannot estimate paid-game median seller earnings or fee-adjusted cash flow from visibility statistics."
     }
   ],
   "observations": [
