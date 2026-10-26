@@ -8,6 +8,8 @@ The publisher retains ownership of submitted content, but the platform receives 
 
 The published agreement distinguishes a user (age over 13) from a publisher (over 18, or with legally sufficient consent and capacity). This is general policy, not approval of a real seller.
 
+The [multi-store and external-key scope crosswalk](multistore-rights-external-keys-2026.md) separately documents the non-exclusive itch.io license, external-key stock/availability and the absence of itch-added DRM; game-specific third-party rights and compatibility are not presumed.
+
 ## Refunds are separate from payment disputes
 
 The Terms permit buyers to seek refunds when the purchased product cannot run, is inaccessible, or misrepresents its offering. External keys sometimes require the publisher to confirm that the entitlement was cancelled. Therefore gross sales and even captured payment amounts are not necessarily finally retained revenue. No refund share or average order-loss rate can be inferred from the policy.
