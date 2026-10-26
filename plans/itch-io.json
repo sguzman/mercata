@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 85,
+  "progress_percent": 86,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -178,7 +178,7 @@
         "itch-io/market/estimate-paid-addressable-demand"
       ],
       "phase": 2,
-      "progress_percent": 77
+      "progress_percent": 79
     },
     {
       "id": "discovery",
@@ -1694,8 +1694,8 @@
       "emoji": "🌐",
       "objective": "Investigate select comparable jam, sale and holiday periods.",
       "acceptance": "Provide dated source-linked evidence to select comparable jam, sale and holiday periods; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "in_progress",
-      "percent": 68,
+      "status": "complete",
+      "percent": 100,
       "evidence": [
         "ontology/itch-io/store-feature-history-2026.json",
         "ontology/itch-io/store-feature-history-2026.md",
@@ -1709,7 +1709,10 @@
         "tests/itch-io-historical-supply.test.mjs",
         "ontology/itch-io/recent-release-filter-frames-2026.md",
         "ontology/itch-io/recent-release-filter-frames-2026.json",
-        "tests/itch-io-recent-release-frames.test.mjs"
+        "tests/itch-io-recent-release-frames.test.mjs",
+        "ontology/itch-io/seasonal-jam-sale-cohort-windows-2025-2026.json",
+        "ontology/itch-io/seasonal-jam-sale-cohort-windows-2025-2026.md",
+        "tests/itch-io-seasonal-cohort-windows.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3488,7 +3491,7 @@
       "objective": "Investigate control for timing, audience mix and baseline demand.",
       "acceptance": "Provide dated source-linked evidence to control for timing, audience mix and baseline demand; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 83,
       "evidence": [
         "ontology/itch-io/bundle-sale-jam-2026.json",
         "ontology/itch-io/bundle-sale-jam-2026.md",
@@ -3501,7 +3504,10 @@
         "tests/itch-io-small-paid-finance.test.mjs",
         "ontology/itch-io/historical-costed-game-outcomes-2015-2021.json",
         "ontology/itch-io/historical-costed-game-outcomes-2015-2021.md",
-        "tests/itch-io-historical-costed-games.test.mjs"
+        "tests/itch-io-historical-costed-games.test.mjs",
+        "ontology/itch-io/seasonal-jam-sale-cohort-windows-2025-2026.json",
+        "ontology/itch-io/seasonal-jam-sale-cohort-windows-2025-2026.md",
+        "tests/itch-io-seasonal-cohort-windows.test.mjs"
       ],
       "artifact": null,
       "priority": "high",

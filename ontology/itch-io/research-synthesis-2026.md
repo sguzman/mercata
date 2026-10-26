@@ -1,6 +1,6 @@
 # itch.io commercial-game research — evidence synthesis and open gaps
 
-**Snapshot: October 26, 2026.** The specimen has 142 source records and 395 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
+**Snapshot: October 26, 2026.** The specimen has 146 source records and 400 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
 
 The market has **no mandatory fee to list a game**, but publication, indexing and acquiring purchasers are separate. Payments can use configurable platform share and processor charges, and the illustrative $10 buyer payment becomes $8.41 **before** refund, tax, labor or other obligations. The public 1.78 million all-game directory, 49,588 paid-game directory and 12,691 paid-2D filter are counts of **listings**, not distinct active paid publishers or buyers.
 
@@ -35,6 +35,8 @@ The [first-month developer cash observations](first-month-small-game-cashflow-20
 The [neighboring game store entry analysis](neighbor-game-store-entry-frames-2026.md) records the distinctive onboarding models of itch.io, Steam, Epic, GOG and a conceptual self-hosted route; it does not infer commercial income from admission fees.
 
 The [source-verified release availability plan](platform-game-availability-contingencies-2026.md) now distinguishes page deindexing, draft, restricted, disabled new purchases, selected geo limits and platform outage, without claiming that a real owner backup or customer access check has been conducted.
+
+The [official dated 2025–2026 sale, Creator Day and game-jam windows](seasonal-jam-sale-cohort-windows-2025-2026.md) define acceptable seasonal comparisons while keeping actual positive-price commercial game orders and sales effects unknown.
 
 ## Missing evidence required for the goal
 

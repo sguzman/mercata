@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "source_dated_game_jam_sale_and_holiday_cohort_windows",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-halloween-2025-official-schedule",
+    "itch-creator-day-black-friday-2025-official",
+    "itch-summer-sale-2026-official-schedule",
+    "itch-gamedevjs-jam-2026-schedule"
+  ],
+  "windows": [
+    {
+      "id": "halloween_2025",
+      "kind": "platform_holiday_sale",
+      "source_ids": [
+        "itch-halloween-2025-official-schedule"
+      ],
+      "local_start_date": "2025-10-28",
+      "local_end_date": "2025-11-04",
+      "end_time_with_zone": "2025-11-04T11:00:00-08:00",
+      "sitewide_projects_reported_lower_bound_exclusive": 13000,
+      "games_reported_lower_bound_exclusive": 2300,
+      "game_paid_orders": null,
+      "unit": "registered_sale_pages_not_purchases"
+    },
+    {
+      "id": "creator_day_2025",
+      "kind": "platform_fee_waiver",
+      "source_ids": [
+        "itch-creator-day-black-friday-2025-official"
+      ],
+      "start_utc": "2025-11-28T08:00:00Z",
+      "end_utc": "2025-11-29T08:00:00Z",
+      "fee_waived": "itch_io_platform_share",
+      "processor_fees_waived": false,
+      "tax_withholding_waived": false,
+      "participant_paid_orders": null,
+      "unit": "24_hour_platform_policy_window"
+    },
+    {
+      "id": "black_friday_2025",
+      "kind": "platform_sale",
+      "source_ids": [
+        "itch-creator-day-black-friday-2025-official"
+      ],
+      "start_date": "2025-11-28",
+      "end_date": "2025-12-03",
+      "end_timezone_verified": null,
+      "registered_sale_projects_prior_to_launch": 15000,
+      "completed_game_purchases": null,
+      "unit": "sale_participation_and_discounts_not_customer_count"
+    },
+    {
+      "id": "gamedevjs_jam_2026",
+      "kind": "community_html5_game_jam",
+      "source_ids": [
+        "itch-gamedevjs-jam-2026-schedule"
+      ],
+      "start_date": "2026-04-13",
+      "end_date": "2026-04-26",
+      "site_displayed_start_clock": "15:00",
+      "site_displayed_end_clock": "15:00",
+      "clock_timezone_verified": null,
+      "host_reported_entries": 482,
+      "official_submissions_listing_entries_later": 483,
+      "submission_and_results_count_agree": false,
+      "paid_game_unit_sales": null,
+      "unit": "jam_submitted_projects_not_paid_purchases"
+    },
+    {
+      "id": "summer_sale_2026",
+      "kind": "platform_summer_sale",
+      "source_ids": [
+        "itch-summer-sale-2026-official-schedule"
+      ],
+      "start_date": "2026-06-25",
+      "end_date": "2026-07-06",
+      "end_time_verified": null,
+      "sitewide_sale_projects_reported_lower_bound_exclusive": 30000,
+      "game_sale_pages_reported_lower_bound_exclusive": 4500,
+      "game_sales_receipts": null,
+      "unit": "enrolled_sale_pages_not_completed_game_orders"
+    }
+  ],
+  "comparability_rules": {
+    "same_calendar_year_required_for_seasonality_without_adjustment": true,
+    "same_paid_game_eligibility_required": true,
+    "same_release_age_required": true,
+    "same_game_price_minimum_and_discount_status_required": true,
+    "comparable_pre_during_post_windows_required": true,
+    "creator_day_must_not_be_treated_as_ordinary_discount": true,
+    "jam_submissions_not_equal_paid_launches": true,
+    "align_timezone_before_daily_comparison": true,
+    "transactions_refunds_taxes_and_paid_receipts_required_for_earnings": true,
+    "project_page_ids_required_for_overlap_deduplication": true
+  },
+  "sample_frame": "official_platform_event_start_and_end_summaries_with_differently_defined_submitted_or_promoted_projects",
+  "observed_platform_paid_seasonality_effect": null,
+  "observed_platform_new_paid_release_rate_by_season": null,
+  "observed_jam_to_paid_2d_conversion": null,
+  "observed_creator_day_sales_lift": null,
+  "observed_holiday_customer_population": null,
+  "unresolved": [
+    "2025 Halloween and 2026 summer counts describe different years, products and event definitions.",
+    "A Creator Day change in retained marketplace fee does not measure causal change in the number of people who pay.",
+    "A jam entry or rating is not a positive-price commercial game release.",
+    "Gamedev.js's 482 overview and 483 entries listing are source-level mismatches, not automatically corrected.",
+    "Sales page enrollments and sales transactions have different units, potentially including non-game products.",
+    "No owner dashboard or transaction database available for matched 30/90/365-day paid-game outcome cohorts."
+  ]
+}

@@ -1582,6 +1582,50 @@
       "evidence_class": "first_party_store_publishing_policy",
       "license": "Public onboarding requirements paraphrased briefly.",
       "notes": "Game review precedes portal access for unsigned publishers; entry fee not established."
+    },
+    {
+      "id": "itch-halloween-2025-official-schedule",
+      "url": "https://itch.io/blog/1096153/the-itchio-halloween-sale-2025-is-live",
+      "title": "The itch.io Halloween Sale 2025 is live!",
+      "publisher": "itch.io",
+      "published_at": "2025-10-28",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_marketplace_event_announcement",
+      "license": "Dates and high-level participation counts only; original commentary.",
+      "notes": "Sale window October 28-November 4, 2025; >13000 project pages incl >2300 games; not transaction numbers."
+    },
+    {
+      "id": "itch-creator-day-black-friday-2025-official",
+      "url": "https://itch.io/blog/1124058/creator-day-black-friday-sales-this-friday",
+      "title": "Creator Day & Black Friday Sales this Friday!",
+      "publisher": "itch.io",
+      "published_at": "2025-11-26",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_marketplace_fee_promotion_announcement",
+      "license": "Short event and policy figures with original framing.",
+      "notes": "Nov 28 2025 at 08:00 UTC, 24h platform-share waiver, overlapping sale through Dec 3, 15k projects preregistered."
+    },
+    {
+      "id": "itch-summer-sale-2026-official-schedule",
+      "url": "https://itch.io/blog/1564191/the-itchio-summer-sale-2026-is-live",
+      "title": "The itch.io Summer Sale 2026 is live!",
+      "publisher": "itch.io",
+      "published_at": "2026-06-25",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_marketplace_event_announcement",
+      "license": "Dates and rounded participation counts only, with attribution.",
+      "notes": "June25–July6 summer sale and new Sale Explorer; >30000 sale pages incl >4500 games; not sales count."
+    },
+    {
+      "id": "itch-gamedevjs-jam-2026-schedule",
+      "url": "https://itch.io/jam/gamedevjs-2026",
+      "title": "Gamedev.js Jam 2026 schedule",
+      "publisher": "Community jam organizers via itch.io",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_jam_schedule",
+      "license": "Short official event dates and entry count only.",
+      "notes": "April13–26 2026 HTML5 jam, overview 482 entries, separate entries listing 483; not paid games or buyers."
     }
   ],
   "claims": [
@@ -5615,6 +5659,60 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Entry policies alone yield no unique buyer counts, average seller profits or causal rankings among stores."
+    },
+    {
+      "id": "halloween-2025-sale-frame",
+      "text": "itch.io's October 28, 2025 Halloween Sale announcement said its sale ran through November 4 and included over 13,000 projects, more than 2,300 of them games.",
+      "source_ids": [
+        "itch-halloween-2025-official-schedule"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Promotion enrollments and listings, not sales volumes or buyers."
+    },
+    {
+      "id": "creator-day-2025-24h-fee-window",
+      "text": "The official November 2025 Creator Day announcement specified a 24-hour platform-share waiver beginning 08:00 UTC November 28; the Black Friday promotion continued through December 3.",
+      "source_ids": [
+        "itch-creator-day-black-friday-2025-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Fee schedule and sale overlap do not measure customer order lift, discounts or net profits; fee waiver not equivalent to removing tax/processing charges."
+    },
+    {
+      "id": "summer-2026-sale-and-explorer",
+      "text": "The official summer 2026 event started June 25 and ran through July 6, with over 30,000 project pages including more than 4,500 games advertised on sale and a new Sale Explorer.",
+      "source_ids": [
+        "itch-summer-sale-2026-official-schedule"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Promoted game-page count is not paid orders, purchaser count or representative 2D game revenue."
+    },
+    {
+      "id": "gamedevjs-2026-jam-days",
+      "text": "Gamedev.js Jam 2026 ran April 13–26, 2026, for browser-playable HTML5 submissions, reporting 482 entries on the overview and 483 on another official entries listing.",
+      "source_ids": [
+        "itch-gamedevjs-jam-2026-schedule",
+        "itch-gamedevjs-results-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Internal site count mismatch preserved, not reconciled; jam entries and rating events are not commercial game buyers."
+    },
+    {
+      "id": "site-promos-jam-seasonality-unidentified",
+      "text": "Published Halloween, Creator Day, summer-sale and jam schedules do not reveal a matched paid-game release cohort or the causal effect of event participation on game income.",
+      "source_ids": [
+        "itch-halloween-2025-official-schedule",
+        "itch-creator-day-black-friday-2025-official",
+        "itch-summer-sale-2026-official-schedule",
+        "itch-gamedevjs-jam-2026-schedule"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Missing longitudinal first-party paid game order data, comparable prices and production costs."
     }
   ],
   "observations": [
