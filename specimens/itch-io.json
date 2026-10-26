@@ -647,6 +647,28 @@
       "evidence_class": "academic_software_engineering_qualified_sample",
       "license": "Brief numerical research summaries with source and DOI. No underlying repository personal details reproduced.",
       "notes": "491 specifically selected public itch.io and GitHub open-source games from a prior 10,548-project frame; not all itch.io games, not representative paid sellers or first commercial launches. Dataset at Zenodo 17451086; underlying bytes were not accessed."
+    },
+    {
+      "id": "itch-stat-exchange-145-2026",
+      "url": "https://www.reddit.com/r/itchio/comments/1whs8h1/i_built_a_free_tool_to_see_how_your_itchio_stats/",
+      "title": "Top Itch Stat Exchange: 145 games",
+      "published_at": "2026-09-16",
+      "publisher": "Public community project author (itch.io developer)",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_self_selected_game_analytics_aggregate",
+      "license": "Short attributed aggregate statistics from public discussion; no screenshots or individual private submissions included.",
+      "notes": "The later 690 record grows out of the earlier 145 record: NOT two independent samples. Mixes product types, optional/free and paid; no inclusion probabilities or source-level verification; author's caveat about positive selection acknowledged."
+    },
+    {
+      "id": "itch-stat-exchange-690-2026",
+      "url": "https://www.reddit.com/r/itchio/comments/1wqtpql/690_itchio_games_the_median_game_gets_750_views/",
+      "title": "690 itch.io games: community analytics",
+      "published_at": "2026-09-26",
+      "publisher": "Public community project author (itch.io developer)",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_self_selected_game_analytics_aggregate",
+      "license": "Short attributed aggregate statistics from public discussion; no screenshots or individual private submissions included.",
+      "notes": "The later 690 record grows out of the earlier 145 record: NOT two independent samples. Mixes product types, optional/free and paid; no inclusion probabilities or source-level verification; author's caveat about positive selection acknowledged."
     }
   ],
   "claims": [
@@ -2301,6 +2323,94 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "The source does not contain representative positive-price checkout transactions or costs."
+    },
+    {
+      "id": "community-benchmark-690-scope",
+      "text": "On September 26, 2026 a community analyst described voluntarily collected analytics of 690 itch.io games, expanding the author's earlier 145-game sample.",
+      "source_ids": [
+        "itch-stat-exchange-145-2026",
+        "itch-stat-exchange-690-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Nonrandom overlapping snapshots; no representative eligible paid publisher frame."
+    },
+    {
+      "id": "community-benchmark-median-sample",
+      "text": "The later 690-record sample was reported to have median 750 lifetime page views, 88 downloads, and a $0 revenue label.",
+      "source_ids": [
+        "itch-stat-exchange-145-2026",
+        "itch-stat-exchange-690-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Median is a published descriptor of voluntary mixed game observations, not representative median of positive-price games."
+    },
+    {
+      "id": "community-benchmark-no-revenue",
+      "text": "The author reported 45% of contributed game records earning no revenue, while also reporting a median $0 amount.",
+      "source_ids": [
+        "itch-stat-exchange-145-2026",
+        "itch-stat-exchange-690-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Arithmetic or measurement ambiguity with median requires rounding/definition clarification; not population-wide zero sales."
+    },
+    {
+      "id": "community-benchmark-upper-tails",
+      "text": "For the 690 voluntarily disclosed game records, the author reported about one in seven above $100 reported game revenue and seven entries above $1,000.",
+      "source_ids": [
+        "itch-stat-exchange-145-2026",
+        "itch-stat-exchange-690-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Self-reported, unverified figures may include gifts and bundle allocations, not profit; later comments updated counts."
+    },
+    {
+      "id": "community-benchmark-view-concentration",
+      "text": "The author estimated the top tenth of the 690 submitted games received around 93% of sample page views.",
+      "source_ids": [
+        "itch-stat-exchange-145-2026",
+        "itch-stat-exchange-690-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Creator-reported sample concentration, not whole-market buyer, purchase or payout concentration."
+    },
+    {
+      "id": "community-benchmark-web-events",
+      "text": "In the self-selected 690-record sample, the author reported 47 browser plays per 100 view events versus 16 downloads per 100 view events.",
+      "source_ids": [
+        "itch-stat-exchange-145-2026",
+        "itch-stat-exchange-690-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Different offer types and submission cohorts, not causal paid game conversion or unique people."
+    },
+    {
+      "id": "community-benchmark-overlap",
+      "text": "The analyst's September 16 initial 145-game median figures and September 26 690-game figures describe growing overlapping snapshots, not two independent developer samples.",
+      "source_ids": [
+        "itch-stat-exchange-145-2026",
+        "itch-stat-exchange-690-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Cannot compare their percentiles as a time trend, changed composition changes summary."
+    },
+    {
+      "id": "community-benchmark-sample-framing",
+      "text": "The benchmark collector openly acknowledged self-selection and that publisher-shared game stats may overrepresent games with unusually high traffic.",
+      "source_ids": [
+        "itch-stat-exchange-145-2026",
+        "itch-stat-exchange-690-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "It does not follow that a randomly sampled paid game would perform at or below the reported median."
     }
   ],
   "observations": [

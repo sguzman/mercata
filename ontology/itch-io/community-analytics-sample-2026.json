@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "independent_community_itch_game_analytics_snapshot_comparison",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-stat-exchange-145-2026",
+    "itch-stat-exchange-690-2026"
+  ],
+  "same_collector_and_overlapping_sample": true,
+  "anonymous_aggregate_only": true,
+  "snapshots": [
+    {
+      "id": "september_16_2026",
+      "posted_at": "2026-09-16",
+      "projects_sampled": 145,
+      "median_page_view_events": 2100,
+      "median_download_events": 136,
+      "median_reported_revenue_usd": 4,
+      "reported_top_quartile_views": 12600,
+      "reported_top_quartile_downloads": 1668,
+      "reported_top_quartile_revenue_usd": 28,
+      "reported_bottom_quartile_views": 514,
+      "reported_bottom_quartile_downloads": 67,
+      "reported_bottom_quartile_revenue_usd": 0,
+      "source_ids": [
+        "itch-stat-exchange-145-2026"
+      ]
+    },
+    {
+      "id": "september_26_2026",
+      "posted_at": "2026-09-26",
+      "projects_sampled": 690,
+      "median_page_view_events": 750,
+      "median_download_events": 88,
+      "median_reported_revenue_usd": 0,
+      "reported_zero_revenue_fraction": 0.45,
+      "reported_games_above_100_usd_fraction_approx": 0.14285714285714285,
+      "reported_games_above_1000_usd_count": 7,
+      "reported_top_10_percent_share_of_views": 0.93,
+      "reported_bottom_50_percent_share_of_views_below": 0.01,
+      "reported_paid_receipts_per_1000_view_events_usd_interval": [
+        3,
+        5
+      ],
+      "reported_typical_positive_payment_usd_approx": 3.5,
+      "reported_web_plays_per_100_view_events": 47,
+      "reported_downloads_per_100_view_events": 16,
+      "source_ids": [
+        "itch-stat-exchange-690-2026"
+      ]
+    }
+  ],
+  "collection_protocol": {
+    "gatherer_recruits_voluntary_publicly_shared_itch_dashboard_numbers": true,
+    "upload_optional": true,
+    "screenshot_numbers_processed_client_side_reported": true,
+    "individual_game_titles_not_retained_reported": true,
+    "raw_data_publicly_audited": false,
+    "independent_selection_frame": false,
+    "creator_revenue_types_separated": false,
+    "zero_sales_eligibility_known": false
+  },
+  "sample_interpretation": {
+    "median_zero_usd_and_reported_45_percent_zero_revenue_require_clarification": true,
+    "possible_rounding_or_incompatible_quantity_definitions": true,
+    "explanation_verified": null,
+    "cumulative_cohorts_independent": false,
+    "payment_amount_usd_not_net_profit": true,
+    "views_represent_events_not_unique_buyers": true,
+    "game_distributions_mix_release_ages": true
+  },
+  "reported_later_comment": {
+    "sample_size": 702,
+    "over_1000_usd_entries": 11,
+    "mixed_bundles_included": true,
+    "update_is_not_independently_sampled": true,
+    "source_ids": [
+      "itch-stat-exchange-690-2026"
+    ]
+  },
+  "not_observed": {
+    "itch_market_zero_earner_fraction": null,
+    "first_premium_game_median_revenue": null,
+    "first_premium_game_zero_unit_sale_fraction": null,
+    "developer_profit_median": null,
+    "platform_paid_2d_buyer_conversion": null,
+    "valid_causal_browser_upload_lift": null,
+    "probability_random_new_game_earns_positive_income": null
+  },
+  "limits": [
+    "690 titles are volunteered or publicly visible analytics records, not a probability sample of all paid game launches.",
+    "The later dataset expands and overlaps the first 145; never pool or count as 835 independent games.",
+    "The public source does not provide independently verified raw rows or the complete revenue/age definition.",
+    "The reported 45% exactly-zero share and $0 median require explanation; do not force a weighted distribution from them.",
+    "Game revenue may include donations, bundles, and free/premium titles with different denominator, without explicit partition.",
+    "Observed 47 browser plays per 100 views and 16 downloads per 100 views are event ratios, not causal conversion or paid buyer shares.",
+    "Publisher acknowledges positive disclosure selection; post has commenters with different outcomes, not a validation sample.",
+    "No game names or private transaction records were captured or reproduced."
+  ]
+}

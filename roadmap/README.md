@@ -97,3 +97,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io open-source game engineering research (2026-10-26):** a 491-title academic GitHub/itch.io corpus, multi-label genres, engine signatures, absent ratings and test prevalence added with explicit noncommercial sampling limits. **63% → 64%**, Δ 1 pp, raw mean 64.43%. [Evidence](../ontology/itch-io/open-source-engineering-2026.md).
+
+
+**itch.io volunteered game analytics (2026-10-26):** overlapping 145- and 690-title September creator-contributed receipts samples, clear selection bias and arithmetic median/45%-zero ambiguity. Excluded from market-wide estimates. Score 64% → 66% (Δ +2 pp; mean 65.78%). [Evidence](../ontology/itch-io/community-analytics-sample-2026.md).
