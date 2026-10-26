@@ -1340,6 +1340,28 @@
       "evidence_class": "voluntary_developer_first_party_game_retrospective",
       "license": "Short public financial numbers with attributed link and independently authored analytical summary.",
       "notes": "Individual six-year cumulative developer account; no platform-level sampling, consented buyer records or income audit. Free downloads do not establish paid customers."
+    },
+    {
+      "id": "lemma-developer-postmortem-2015",
+      "url": "https://gamedev.net/blogs/832/entry-2261203-the-poor-mans-postmortem-lemma/",
+      "title": "The Poor Man's Postmortem - Lemma",
+      "publisher": "Lemma game developer (GameDev.net author)",
+      "published_at": "2015-06-25",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_developer_first_party_game_postmortem",
+      "license": "Short public financial counts, source URL and independently authored summary.",
+      "notes": "2015 legacy cross-platform game disclosure with combined development cash and foregone work; not a contemporary or random paid publisher cohort."
+    },
+    {
+      "id": "srrt-developer-postmortem-2021",
+      "url": "https://yossarianiii.itch.io/srrt/devlog/123207/postmortem-sex-robot-road-trip",
+      "title": "Postmortem: Sex Robot Road Trip",
+      "publisher": "Yoss III (game developer)",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_developer_first_party_game_postmortem",
+      "license": "Short public earnings and sales counts with attribution and independently authored analysis.",
+      "notes": "Retrospective about a 2017 release, displayed approximately five years before 2026. Author's 'gross profits' accounting ambiguous and not after full labor."
     }
   ],
   "claims": [
@@ -4968,6 +4990,66 @@
       "confidence": "medium",
       "observed_at": "2026-10-26",
       "limitations": "Cost statement is not independently audited and offers no complete cost breakdown; one cancelled project is not a population failure rate."
+    },
+    {
+      "id": "lemma-historical-itch-units-gross",
+      "text": "In June 2015 the Lemma developer reported 46 itch.io sales generating USD 701 gross before its then 5% share, alongside 1,896 itch.io demo downloads.",
+      "source_ids": [
+        "lemma-developer-postmortem-2015"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Single unaudited 2015 release. Demo download events cannot be converted to unique buyers or a consistent purchase funnel."
+    },
+    {
+      "id": "lemma-cross-store-2015-contrast",
+      "text": "The same postmortem separately reported 3,171 Steam sales worth USD 43,554 gross before the then 30% Steam share and 277 Steam demo conversions; these are Steam-specific figures.",
+      "source_ids": [
+        "lemma-developer-postmortem-2015"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Not contemporaneous 2026 sales, matched platform exposure, causal market effect or itch demo-to-sale conversion."
+    },
+    {
+      "id": "lemma-gamewide-development-budget",
+      "text": "The Lemma postmortem reported a USD 30,000 entire-game budget and estimated USD 80,000 sunk opportunity cost across about three part-time and 1.5 full-time development years.",
+      "source_ids": [
+        "lemma-developer-postmortem-2015"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Budget applies across sales outlets, cannot be deducted as solely an itch.io cost, and is not a complete hourly cost or net profit series."
+    },
+    {
+      "id": "srrt-zero-launch-and-sale-spike",
+      "text": "A 2017 visual novel developer later reported zero launch-day sales and a sales increase from about 20 to about 40 after a press mention about a year after launch.",
+      "source_ids": [
+        "srrt-developer-postmortem-2021"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Author-estimated approximate counts, no matched page exposure, no sales data sequence and no causal attribution of press or discounts."
+    },
+    {
+      "id": "srrt-ambiguous-profit-labels",
+      "text": "In a multi-year visual-novel retrospective the developer described USD 222 as 'gross profits' and subtracted USD 20 music and USD 100 unused Steam license to report USD 102 remainder.",
+      "source_ids": [
+        "srrt-developer-postmortem-2021"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Ambiguous revenue label; unused Steam license is not itch settlement cost and author did not include all labor, fees or taxes."
+    },
+    {
+      "id": "srrt-giveaway-downloads-no-sales",
+      "text": "The same publisher reported a 100%-off giveaway that raised download rank but produced only roughly USD 2 in tips.",
+      "source_ids": [
+        "srrt-developer-postmortem-2021"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "No precise discount cohort or underlying platform-wide sales count; giveaway downloads are not paid copies."
     }
   ],
   "observations": [

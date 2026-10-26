@@ -1,0 +1,25 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const get=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Historical postmortems isolate multi-store budgets and selected sales observations',()=>{
+ const x=get('ontology/itch-io/historical-costed-game-outcomes-2015-2021.json');
+ const d=get('specimens/itch-io.json');
+ const ids=new Set(d.evidence.map(e=>e.id));
+ assert(x.reports.every(r=>r.source_ids.every(id=>ids.has(id))));
+ const l=x.reports.find(r=>r.id==='lemma_2015');
+ assert.equal(l.storefronts.itch_io.reported_paid_sales,46);
+ assert.equal(l.storefronts.itch_io.reported_demo_downloads,1896);
+ assert.equal(l.storefronts.itch_io.matched_demo_to_purchase_count,null);
+ assert.equal(l.storefronts.steam.reported_demo_conversions,277);
+ assert.equal(l.across_all_stores.reported_budget_usd,30000);
+ assert.equal(l.known_itch_store_receipts_after_all_costs_usd,null);
+ const v=x.reports.find(r=>r.id==='sex_robot_road_trip_2021');
+ assert.equal(v.publisher_reported_launch_day_sales,0);
+ assert.equal(v.developer_phrase_gross_profits_usd,222);
+ assert.equal(v.receipt_basis_consistently_defined,false);
+ assert.equal(v.developer_described_remainder_usd,102);
+ assert.equal(v.total_net_profit_after_labor_usd,null);
+ assert.equal(x.sampling.current_2026_seller_mean_or_median,null);
+ assert.equal(x.sampling.genre_profitability_estimable,false);
+});
