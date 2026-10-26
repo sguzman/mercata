@@ -24,6 +24,8 @@ An April 2026 publisher case records sustained featured discovery of a free game
 
 A September 2026 first-game creator reported zero sales alongside a self-described optional-donation/paid-tier price configuration mistake, with no evidence the error caused the outcome. [First-game price incident](first-game-pricing-misconfiguration-2026.md).
 
+The [documented buyer checkout route/region crosswalk](buyer-checkout-route-eligibility-2026.md) separates merchant processor configuration from actual accepted payment instruments and leaves unverifiable buyer-country access and actual buyer counts unknown.
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*

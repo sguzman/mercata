@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "buyer_payment_route_and_country_uncertainty_crosswalk",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-payments",
+    "itch-buying",
+    "itch-buying-flow"
+  ],
+  "scope": "checkout_method_configuration_and_buyer_region_eligibility_not_population_size",
+  "buyer_checkout_methods_documented": [
+    {
+      "id": "paypal",
+      "customer_instruments": [
+        "PayPal balance",
+        "supported cards",
+        "eligible linked bank funding"
+      ],
+      "buyer_redirect": "PayPal",
+      "country_coverage_verified": null
+    },
+    {
+      "id": "stripe",
+      "customer_instruments": [
+        "supported credit card",
+        "supported debit card"
+      ],
+      "buyer_redirect": "payment entry through Stripe",
+      "country_coverage_verified": null
+    }
+  ],
+  "payment_modes": [
+    {
+      "id": "direct_to_you",
+      "merchant_of_record": "individual_seller",
+      "method_activation": "seller_explicit_connection_per_provider",
+      "buyer_region_limitation": "processor_account_country_settings_and_provider_support",
+      "currency_rule": "seller_sets_offered_currency",
+      "tax_and_chargeback_responsibility": "seller"
+    },
+    {
+      "id": "collected_by_itch",
+      "merchant_of_record": "itch.io",
+      "method_activation": "operator_supported_methods",
+      "buyer_region_limitation": "operator_reports_receiving_all_supported_payments; transaction_specific_rules_and_rejections_still_apply",
+      "currency_rule": "USD transaction, operator handles conversion",
+      "tax_and_chargeback_responsibility": "operator_per_current_payment_guide"
+    }
+  ],
+  "checkout_entry_routes": [
+    "project_page",
+    "embeddable_widget",
+    "javascript_popup"
+  ],
+  "unverified_country_examples": [
+    {
+      "buyer_country": "Mexico",
+      "checkout_via_direct_paypal": null,
+      "checkout_via_direct_stripe": null,
+      "checkout_via_collected_paypal": null,
+      "checkout_via_collected_stripe": null,
+      "verified_paid_buyers": null
+    },
+    {
+      "buyer_country": "United States",
+      "checkout_via_direct_paypal": null,
+      "checkout_via_direct_stripe": null,
+      "checkout_via_collected_paypal": null,
+      "checkout_via_collected_stripe": null,
+      "verified_paid_buyers": null
+    },
+    {
+      "buyer_country": "United Kingdom",
+      "checkout_via_direct_paypal": null,
+      "checkout_via_direct_stripe": null,
+      "checkout_via_collected_paypal": null,
+      "checkout_via_collected_stripe": null,
+      "verified_paid_buyers": null
+    }
+  ],
+  "buyer_account_required": false,
+  "buyer_email_receipt_expected_after_success": true,
+  "browser_plays_are_purchases": false,
+  "downloads_are_unique_buyers": false,
+  "conditional_checkout_eligibility_model": true,
+  "actual_checkout_attempts_tested": 0,
+  "actual_successful_payments_observed": 0,
+  "platform_unique_paying_buyers": null,
+  "paid_2d_games_addressable_buyer_population": null,
+  "geographic_sales_share": null,
+  "unresolved_requirements": [
+    "Exact buyer-country, card issuer and currency/provider acceptance requires authorized current checkout or processor evidence.",
+    "Support for an instrument is not an assertion of universal eligibility; card declines and fraud blocks are separate outcomes.",
+    "Direct mode without a connected provider cannot offer that provider's payment route.",
+    "Collected operator's policy of accepting all supported payments does not eliminate regional legal, content, sanctions or issuer restrictions.",
+    "One buyer may make multiple transactions, use several emails, or re-download without paying again."
+  ]
+}

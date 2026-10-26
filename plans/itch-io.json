@@ -113,7 +113,7 @@
         "itch-io/access/create-zero-cash-entry-scenario"
       ],
       "phase": 1,
-      "progress_percent": 80
+      "progress_percent": 81
     },
     {
       "id": "economics",
@@ -178,7 +178,7 @@
         "itch-io/market/estimate-paid-addressable-demand"
       ],
       "phase": 2,
-      "progress_percent": 76
+      "progress_percent": 77
     },
     {
       "id": "discovery",
@@ -570,7 +570,7 @@
       "objective": "Investigate separate visitors, downloaders, players, purchasers and repeat customers.",
       "acceptance": "Provide dated source-linked evidence to separate visitors, downloaders, players, purchasers and repeat customers; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 76,
+      "percent": 78,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -581,7 +581,11 @@
         "tests/itch-io-api-purchase-privacy.test.mjs",
         "ontology/itch-io/six-year-low-return-cancellation-2026.json",
         "ontology/itch-io/six-year-low-return-cancellation-2026.md",
-        "tests/itch-io-six-year-cancellation.test.mjs"
+        "tests/itch-io-six-year-cancellation.test.mjs",
+        "ontology/itch-io/buyer-checkout-route-eligibility-2026.json",
+        "ontology/itch-io/buyer-checkout-route-eligibility-2026.md",
+        "site/itch-buyer-checkout-eligibility.mjs",
+        "tests/itch-buyer-checkout-eligibility.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -774,7 +778,7 @@
       "objective": "Investigate check regional purchase and payment-method availability.",
       "acceptance": "Provide dated source-linked evidence to check regional purchase and payment-method availability; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 56,
+      "percent": 73,
       "evidence": [
         "ontology/itch-io/payment-country-corridors-2026.json",
         "ontology/itch-io/payment-country-corridors-2026.md",
@@ -788,7 +792,11 @@
         "tests/itch-io-buyer-geo-policy.test.mjs",
         "ontology/itch-io/merchant-country-first-payout-2026.json",
         "ontology/itch-io/merchant-country-first-payout-2026.md",
-        "tests/itch-io-country-payout-cost.test.mjs"
+        "tests/itch-io-country-payout-cost.test.mjs",
+        "ontology/itch-io/buyer-checkout-route-eligibility-2026.json",
+        "ontology/itch-io/buyer-checkout-route-eligibility-2026.md",
+        "site/itch-buyer-checkout-eligibility.mjs",
+        "tests/itch-buyer-checkout-eligibility.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -903,12 +911,16 @@
       "objective": "Investigate identify pricing, tender and settlement currencies and FX exposure.",
       "acceptance": "Provide dated source-linked evidence to identify pricing, tender and settlement currencies and FX exposure; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 75,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/buyer-checkout-route-eligibility-2026.json",
+        "ontology/itch-io/buyer-checkout-route-eligibility-2026.md",
+        "site/itch-buyer-checkout-eligibility.mjs",
+        "tests/itch-buyer-checkout-eligibility.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1708,7 +1720,7 @@
       "objective": "Investigate specify a credible buyer population rather than free players.",
       "acceptance": "Provide dated source-linked evidence to specify a credible buyer population rather than free players; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 48,
+      "percent": 50,
       "evidence": [
         "ontology/itch-io/semrush-domain-traffic-2026.json",
         "ontology/itch-io/semrush-domain-traffic-2026.md",
@@ -1722,7 +1734,11 @@
         "tests/itch-io-whole-site-traffic.test.mjs",
         "ontology/itch-io/zero-five-paid-game-snapshots-2025.json",
         "ontology/itch-io/zero-five-paid-game-snapshots-2025.md",
-        "tests/itch-zero-five-sales.test.mjs"
+        "tests/itch-zero-five-sales.test.mjs",
+        "ontology/itch-io/buyer-checkout-route-eligibility-2026.json",
+        "ontology/itch-io/buyer-checkout-route-eligibility-2026.md",
+        "site/itch-buyer-checkout-eligibility.mjs",
+        "tests/itch-buyer-checkout-eligibility.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
