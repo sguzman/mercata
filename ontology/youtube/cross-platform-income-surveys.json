@@ -2,10 +2,10 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "cross_platform_creator_income_survey_evidence",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-26",
   "status": "adjacent_cross_platform_samples_not_youtube_income_distribution",
   "purpose": "Preserve nonrepresentative mixed-platform creator income reports with exact source families, denominator limitations and zero-earner uncertainty.",
-  "independent_dataset_families": 3,
+  "independent_dataset_families": 4,
   "studies": [
     {
       "id": "neoreach-2025",
@@ -221,6 +221,79 @@
         "The published ±1.4 percentage-point margin of error must not be presented as verified probability-based confidence for all creators.",
         "Creator earnings span multiple platforms, revenue streams and maturity levels; they are not native YouTube payouts or newcomer profit.",
         "The source's 67% and 62% figures refer to survey respondents, not to all YouTube creators or all people who attempted to publish."
+      ],
+      "inference_to_youtube_median": "prohibited"
+    },
+    {
+      "id": "factworks-2023",
+      "title": "The Creator Revolution: 2023 Factworks 20-country creator survey",
+      "lead_organization": "Factworks (Meta-commissioned); report by Creative Class Group",
+      "survey_year": 2023,
+      "source_ids": [
+        "factworks-creator-revolution-2023"
+      ],
+      "source_family_id": "factworks-meta-creativeclass-2023",
+      "independence_note": "One independently fielded Factworks study under a Meta commission, published by Creative Class Group in December 2024. Original 20-country and US results are overlapping respondent populations; large-US group supplements phase 2 and is not an independent survey family.",
+      "sampled_population": "Original-content publishers with >=1000 followers on at least one social platform, sampled through internet-user surveys in 20 countries; excludes many beginning and abandoned creator attempts",
+      "survey_respondents_exact": 9582,
+      "survey_respondents_lower_bound_exclusive": null,
+      "us_phase2_respondents": 1804,
+      "additional_large_us_phase3_respondents": 207,
+      "platform_scope": "Mixed-platform creator activity and revenues; not YouTube-only nor all people who attempted to start creating",
+      "youtube_subgroup_n": null,
+      "non_earning_entrants_covered": false,
+      "data_collection_mode": "2023 multistage commissioned internet-user questionnaire plus separate US large-creator supplementation; creator respondent demographics weighted within countries and countries equally combined",
+      "representative_of_youtube": false,
+      "representative_of_all_creators": false,
+      "verification_of_earnings": "Respondent self-report of annual content-creator revenue, no bank verification, no consistent cost or tax reconciliation",
+      "geographic_denominator": "20 named countries, global percentages computed by report weighting; US subset separately reported",
+      "observation_period": "2023 fieldwork measuring reported creator revenues annually; exact income recall dates and item denominators not supplied",
+      "monetary_currency": "USD",
+      "earning_definition": "Creator activity revenue across social media platforms before demonstrated production costs, taxes and net-profit reconciliation",
+      "measurements": [
+        {
+          "id": "factworks_global_zero",
+          "metric": "global_eligible_creator_respondents_with_zero_reported_creator_revenue",
+          "value": 37,
+          "unit": "reported_percent",
+          "scope": "20_country_eligible_creator_sample",
+          "denominator_n": null,
+          "approximate": false
+        },
+        {
+          "id": "factworks_us_zero",
+          "metric": "us_eligible_creator_respondents_with_zero_reported_creator_revenue",
+          "value": 41,
+          "unit": "reported_percent",
+          "scope": "us_subset_of_20_country_sample",
+          "denominator_n": null,
+          "approximate": false
+        },
+        {
+          "id": "factworks_large_us_zero",
+          "metric": "large_us_respondents_with_zero_creator_revenue",
+          "value": 12,
+          "unit": "reported_percent",
+          "scope": "large_us_at_least_100000_followers_with_extra_sample",
+          "denominator_n": null,
+          "approximate": false
+        }
+      ],
+      "missing": [
+        "youtube_only_zero_earner_share",
+        "true_new_entrant_denominator",
+        "respondent_item_denominators",
+        "production_costs",
+        "net_creator_profit",
+        "nonresponse_by_income",
+        "channels_with_under_1000_social_followers"
+      ],
+      "limitations": [
+        "The study's creator definition requires >=1000 followers on some platform; zero-revenue responses do not include true zero-follower entrants or all attempted new YouTube channels.",
+        "Twenty countries and US/large-US categories have different, overlapping cohorts; their percentages cannot be pooled or treated as a within-channel transition.",
+        "Meta commissioned the study; independently gathered self-reported revenues may be affected by selection, disclosure, recall and sponsorship context.",
+        "The additional 207 large US creator observations were merged with appropriate subsets of the original US respondents; 12% is not an independent worldwide creator cohort.",
+        "Revenue is not after-expense profit, nor YouTube ad payouts; individual response item denominators and bank-level reconciliation are not available."
       ],
       "inference_to_youtube_median": "prohibited"
     }
