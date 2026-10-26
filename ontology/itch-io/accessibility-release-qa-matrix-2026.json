@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "accessibility_release_review_plan_no_game_test",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-indexed",
+    "itch-quality",
+    "game-accessibility-guidelines-basic",
+    "microsoft-game-accessibility-guidance-2026"
+  ],
+  "review_scope": "small_2d_game_browser_or_downloadable",
+  "actual_game_provided": false,
+  "tests_completed": 0,
+  "required_check_count": 14,
+  "applicability": "Choose actual supported device/platform controls and exclude legitimately inapplicable mechanics with explanation; a plan is not a certification.",
+  "checks": [
+    {
+      "id": "control_remapping",
+      "domain": "motor",
+      "mechanism": "Keyboard/controller mapping options; verify full playable path with one alternate layout",
+      "requires": [
+        "keyboard",
+        "gamepad"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "single_input_navigation",
+      "domain": "motor",
+      "mechanism": "Menus, settings, pause and gameplay navigable via declared supported input method",
+      "requires": [
+        "keyboard",
+        "gamepad",
+        "touch"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "touch_target_size",
+      "domain": "motor",
+      "mechanism": "Touch targets separated and large enough for intended device; test controls without accidental activation",
+      "requires": [
+        "touch"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "hold_timing_adjustment",
+      "domain": "motor",
+      "mechanism": "Alternatives to prolonged hold/timed input and adjustable sensitivity where applicable",
+      "requires": [
+        "keyboard",
+        "gamepad",
+        "touch"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "speech_subtitles",
+      "domain": "hearing",
+      "mechanism": "All important speech and cutscene/dialogue carry readable subtitles",
+      "requires": [
+        "all"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "non_speech_captions",
+      "domain": "hearing",
+      "mechanism": "Essential audio-only signals have readable visual equivalent/caption",
+      "requires": [
+        "all"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "sound_controls",
+      "domain": "hearing",
+      "mechanism": "Soundtrack, dialog and effects can be balanced or muted separately where present",
+      "requires": [
+        "all"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "text_legibility",
+      "domain": "vision",
+      "mechanism": "UI, dialogue and error text can be read at every supported resolution with scalable font/layout",
+      "requires": [
+        "all"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "ui_contrast",
+      "domain": "vision",
+      "mechanism": "Text and critical UI readable against all game backgrounds including bright effects",
+      "requires": [
+        "all"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "color_independence",
+      "domain": "vision",
+      "mechanism": "Never communicate gameplay-critical state only through fixed color",
+      "requires": [
+        "all"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "motion_flicker",
+      "domain": "sensory",
+      "mechanism": "Evaluate rapid flashing, motion and camera behavior; supply safer options when relevant",
+      "requires": [
+        "all"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "cognitive_pacing",
+      "domain": "cognitive",
+      "mechanism": "Important prompts have reading time, accessible replay and understandable instructions",
+      "requires": [
+        "all"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "settings_persistence",
+      "domain": "general",
+      "mechanism": "Accessibility preferences remain saved across restart/reload on a tested supported platform",
+      "requires": [
+        "all"
+      ],
+      "actual_test_run": null
+    },
+    {
+      "id": "storefront_truthfulness",
+      "domain": "listing",
+      "mechanism": "Claim accessibility options only if available and tested; align store tags and downloadable/browser builds",
+      "requires": [
+        "all"
+      ],
+      "actual_test_run": null
+    }
+  ],
+  "estimated_personnel_hours": null,
+  "assisted_test_participants": null,
+  "accessible_player_population": null,
+  "game_sale_lift_from_accessibility": null,
+  "accessibility_certification_passed": null,
+  "data_collection_policy": "No collection of medical/disability characteristics of individual players; use voluntary non-sensitive feedback with consent when available.",
+  "release_decision": "not_evaluated_no_actual_build",
+  "rule": "A source-backed plan may be complete, but actual per-build compliance, QA costs and commercial impact remain unknown until authorized testing."
+}

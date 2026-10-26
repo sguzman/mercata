@@ -1395,6 +1395,28 @@
       "evidence_class": "research_dataset_metadata",
       "license": "Metadata referenced by link; no dataset archives copied.",
       "notes": "Research reproduction listing, not audited marketplace purchase transactions."
+    },
+    {
+      "id": "game-accessibility-guidelines-basic",
+      "url": "https://gameaccessibilityguidelines.com/basic/",
+      "title": "Game Accessibility Guidelines — Basic",
+      "publisher": "Game Accessibility Guidelines community collaboration",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "independent_industry_accessibility_design_guidelines",
+      "license": "High-level requirements independently restated and linked; no protected examples copied.",
+      "notes": "Recommendations, not certification or proof of buyer preferences, sales or installed game features."
+    },
+    {
+      "id": "microsoft-game-accessibility-guidance-2026",
+      "url": "https://learn.microsoft.com/en-us/windows/uwp/gaming/accessibility-for-games",
+      "title": "Making games accessible",
+      "publisher": "Microsoft Learn",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "platform_vendors_accessibility_developer_guidance",
+      "license": "Independently authored checklist derived from linked public general guidance.",
+      "notes": "Developer guidance for accessible games. It does not certify an itch.io product or determine legal compliance or commercial demand."
     }
   ],
   "claims": [
@@ -5144,6 +5166,37 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "Exact final game identity overlap is not verified; no paid-seller population denominator or financial outcome."
+    },
+    {
+      "id": "accessibility-checklist-game-features",
+      "text": "Game Accessibility Guidelines basic recommendations include configurable controls, readable subtitles, non-color-only information, legible interfaces and alternative audio feedback.",
+      "source_ids": [
+        "game-accessibility-guidelines-basic"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "These are recommended product checks, not automatically delivered platform features or observed game QA results."
+    },
+    {
+      "id": "accessibility-guidance-ui-input-dialogue",
+      "text": "Microsoft's developer guidance organizes accessibility work around controls, in-game dialogue, menus, visual UI, HUD and alternative feedback.",
+      "source_ids": [
+        "microsoft-game-accessibility-guidance-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Public guidance only; no itch.io sales outcomes, gamer census or product compliance audit measured."
+    },
+    {
+      "id": "itch-accessibility-tag-must-match",
+      "text": "The itch.io creator documentation supports declaring accessibility features among project metadata, but irrelevant classification or misleading imagery risks indexing eligibility.",
+      "source_ids": [
+        "itch-indexed",
+        "itch-quality"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No game was inspected or classified, and presence of feature labels is not proof of successful user accessibility or conversion."
     }
   ],
   "observations": [
