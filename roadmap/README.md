@@ -154,3 +154,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io market-entry decision synthesis (2026-10-26):** Published conditional comparison of premium downloads, free HTML5 donations, and free demos with paid full downloads; includes verified fee accounting, launch readiness, working-time cost and privacy-safe measurement gates. No simulated sales or merchant activity. 77% → 77% (Δ +0 pp; exact 77.14%). [Practical study](../ontology/itch-io/market-entry-decision-guide-2026.md).
+
+
+**itch.io genres, public ratings and paid/free page types (2026-10-26):** independent sitemap-derived 2025 digital-game analysis found 81% of sample games without ratings, zero genre medians, story-focused relative attention, and a corrected paid/free genre comparison. No ratings-to-sales inference. 77% → 77% (Δ +0 pp; exact 77.47%). [Study](../ontology/itch-io/genre-rating-attention-2025.md).

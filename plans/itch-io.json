@@ -237,7 +237,7 @@
         "itch-io/competition/create-cross-platform-benchmarks"
       ],
       "phase": 2,
-      "progress_percent": 76
+      "progress_percent": 79
     },
     {
       "id": "income",
@@ -389,7 +389,7 @@
         "itch-io/strategy/define-retrospective-reporting"
       ],
       "phase": 4,
-      "progress_percent": 79
+      "progress_percent": 80
     },
     {
       "id": "review",
@@ -1426,7 +1426,7 @@
       "objective": "Investigate define exclusive and overlapping genres for comparable inventory counts.",
       "acceptance": "Provide dated source-linked evidence to define exclusive and overlapping genres for comparable inventory counts; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 92,
+      "percent": 94,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -1440,7 +1440,10 @@
         "tests/itch-io-genre-frames.test.mjs",
         "ontology/itch-io/top-seller-filter-frames-2026.md",
         "ontology/itch-io/top-seller-filter-frames-2026.json",
-        "tests/itch-io-top-seller-frames.test.mjs"
+        "tests/itch-io-top-seller-frames.test.mjs",
+        "ontology/itch-io/genre-rating-attention-2025.json",
+        "ontology/itch-io/genre-rating-attention-2025.md",
+        "tests/itch-io-genre-rating-attention.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1947,7 +1950,7 @@
       "objective": "Investigate compare 2D, RPG, puzzle, narrative and other tagged supply.",
       "acceptance": "Provide dated source-linked evidence to compare 2D, RPG, puzzle, narrative and other tagged supply; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 90,
+      "percent": 94,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -1964,7 +1967,10 @@
         "tests/itch-io-open-source-engineering.test.mjs",
         "ontology/itch-io/top-seller-filter-frames-2026.md",
         "ontology/itch-io/top-seller-filter-frames-2026.json",
-        "tests/itch-io-top-seller-frames.test.mjs"
+        "tests/itch-io-top-seller-frames.test.mjs",
+        "ontology/itch-io/genre-rating-attention-2025.json",
+        "ontology/itch-io/genre-rating-attention-2025.md",
+        "tests/itch-io-genre-rating-attention.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2044,7 +2050,7 @@
       "objective": "Investigate require revenue rather than ratings or plays to claim dominance.",
       "acceptance": "Provide dated source-linked evidence to require revenue rather than ratings or plays to claim dominance; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 42,
+      "percent": 51,
       "evidence": [
         "ontology/itch-io/feed-volume-featured-2026.md",
         "ontology/itch-io/feed-volume-featured-2026.json",
@@ -2052,7 +2058,10 @@
         "tests/itch-io-featured-feed.test.mjs",
         "ontology/itch-io/top-seller-filter-frames-2026.md",
         "ontology/itch-io/top-seller-filter-frames-2026.json",
-        "tests/itch-io-top-seller-frames.test.mjs"
+        "tests/itch-io-top-seller-frames.test.mjs",
+        "ontology/itch-io/genre-rating-attention-2025.json",
+        "ontology/itch-io/genre-rating-attention-2025.md",
+        "tests/itch-io-genre-rating-attention.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2066,7 +2075,7 @@
       "objective": "Investigate define sample bias and ratings visibility.",
       "acceptance": "Provide dated source-linked evidence to define sample bias and ratings visibility; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 84,
+      "percent": 95,
       "evidence": [
         "ontology/itch-io/discovery-quality-2026.json",
         "ontology/itch-io/discovery-quality-2026.md",
@@ -2074,7 +2083,10 @@
         "tests/itch-io-discovery-quality.test.mjs",
         "ontology/itch-io/open-source-engineering-2026.json",
         "ontology/itch-io/open-source-engineering-2026.md",
-        "tests/itch-io-open-source-engineering.test.mjs"
+        "tests/itch-io-open-source-engineering.test.mjs",
+        "ontology/itch-io/genre-rating-attention-2025.json",
+        "ontology/itch-io/genre-rating-attention-2025.md",
+        "tests/itch-io-genre-rating-attention.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2113,7 +2125,7 @@
       "objective": "Investigate treat free discovery as adjacent but not identical demand.",
       "acceptance": "Provide dated source-linked evidence to treat free discovery as adjacent but not identical demand; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 73,
+      "percent": 90,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -2124,7 +2136,10 @@
         "tests/itch-io-price-sample.test.mjs",
         "ontology/itch-io/paid-genre-tag-frames-2026.json",
         "ontology/itch-io/paid-genre-tag-frames-2026.md",
-        "tests/itch-io-genre-frames.test.mjs"
+        "tests/itch-io-genre-frames.test.mjs",
+        "ontology/itch-io/genre-rating-attention-2025.json",
+        "ontology/itch-io/genre-rating-attention-2025.md",
+        "tests/itch-io-genre-rating-attention.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2608,12 +2623,15 @@
       "objective": "Investigate require comparable populations and development-cost data.",
       "acceptance": "Provide dated source-linked evidence to require comparable populations and development-cost data; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 24,
+      "percent": 31,
       "evidence": [
         "ontology/itch-io/open-source-engineering-2026.json",
         "ontology/itch-io/open-source-engineering-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-open-source-engineering.test.mjs"
+        "tests/itch-io-open-source-engineering.test.mjs",
+        "ontology/itch-io/genre-rating-attention-2025.json",
+        "ontology/itch-io/genre-rating-attention-2025.md",
+        "tests/itch-io-genre-rating-attention.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3504,7 +3522,7 @@
       "objective": "Investigate require matched demand, supply and labor evidence.",
       "acceptance": "Provide dated source-linked evidence to require matched demand, supply and labor evidence; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 64,
+      "percent": 79,
       "evidence": [
         "ontology/itch-io/paid-2d-popular-prices-2026.json",
         "ontology/itch-io/paid-2d-popular-prices-2026.md",
@@ -3516,7 +3534,10 @@
         "tests/itch-io-commercial-postmortems.test.mjs",
         "ontology/itch-io/paid-genre-tag-frames-2026.json",
         "ontology/itch-io/paid-genre-tag-frames-2026.md",
-        "tests/itch-io-genre-frames.test.mjs"
+        "tests/itch-io-genre-frames.test.mjs",
+        "ontology/itch-io/genre-rating-attention-2025.json",
+        "ontology/itch-io/genre-rating-attention-2025.md",
+        "tests/itch-io-genre-rating-attention.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3764,7 +3785,7 @@
       "objective": "Investigate separate first-party rules, surveys, observed transactions and anecdotes.",
       "acceptance": "Provide dated source-linked evidence to separate first-party rules, surveys, observed transactions and anecdotes; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 90,
+      "percent": 93,
       "evidence": [
         "ontology/itch-io/web-developer-survey-crosswalk-2026.json",
         "ontology/itch-io/web-developer-survey-crosswalk-2026.md",
@@ -3777,7 +3798,10 @@
         "ontology/itch-io/research-synthesis-2026.md",
         "tests/itch-io-synthesis.test.mjs",
         "ontology/itch-io/commercial-rules-2026.json",
-        "tests/itch-io-payment-survey-correction.test.mjs"
+        "tests/itch-io-payment-survey-correction.test.mjs",
+        "ontology/itch-io/genre-rating-attention-2025.json",
+        "ontology/itch-io/genre-rating-attention-2025.md",
+        "tests/itch-io-genre-rating-attention.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

@@ -933,6 +933,17 @@
       "evidence_class": "dated_developer_first_week_game_statistics",
       "license": "Small numerical excerpts with attribution to public URL.",
       "notes": "Same project as existing 2026 five-year record. Voluntary creator disclosure; established game audience; not a random paid game cohort."
+    },
+    {
+      "id": "indiegameinsights-itch-2025-genre-rating-study",
+      "url": "https://indiegameinsights.dev/blog/itch_2025",
+      "title": "What genres were popular on Itch in 2025?",
+      "publisher": "Indie Game Insights, independent analysis",
+      "published_at": "2026-02-11",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "independent_public_sitemap_game_metadata_study",
+      "license": "Short numerical and categorical analysis attributed to the public author and linked; no images or raw listings copied.",
+      "notes": "Covers digital games inferred released roughly 2025 from sitemap order; game-level N omitted, possible missed titles, genre labels nonexclusive and self-assigned. Ratings are not paid orders or income."
     }
   ],
   "claims": [
@@ -3538,6 +3549,76 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Measurement boundaries, not a numerical population estimate."
+    },
+    {
+      "id": "2025-ratings-zero-81pct",
+      "text": "An independent February 2026 analysis of digital itch.io game pages assigned to approximately 2025 reported that 81% had no public user ratings.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Ratings are engagement data, not downloads, paid units, zero-sale rates or zero developer income."
+    },
+    {
+      "id": "2025-rating-genre-pattern",
+      "text": "The analysis found Visual Novel and Interactive Fiction games had higher mean rating counts relative to most other genres in its sample, while Action and Platformer titles had weaker relative rating counts.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Nonrandom sitemap-derived coverage; mean rating count is skewed and cannot establish median demand or genre profits."
+    },
+    {
+      "id": "2025-ratings-zero-per-genre",
+      "text": "The author reported that the median number of ratings within each listed game genre was zero in the analyzed 2025 release set.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Zero ratings is not zero purchases; multi-label genre groups overlap."
+    },
+    {
+      "id": "2025-paid-vs-free-genre",
+      "text": "Among approximately 2025 digital game listings, the analysis found Visual Novel was relatively common among paid titles and Platformer and Rhythm relatively common among free titles.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Paid-page prevalence is not share of revenues, customers, or successful paid games."
+    },
+    {
+      "id": "2025-racing-genre-correction",
+      "text": "The source corrected an earlier genre comparison that incorrectly included tabletop projects, after which Racing rather than Role Playing had the largest paid-listing share in the author's comparison.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Correction is for paid versus free directory membership among included digital games, not genre profitability or buyer interest."
+    },
+    {
+      "id": "2025-game-genre-self-tagged",
+      "text": "The source notes itch.io games can carry zero or multiple self-assigned genre labels and that sitemap ordering was used to approximate release dates.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "No exact complete sampling frame, de-duplicated eligible paid publisher count, or customer cohort is established."
+    },
+    {
+      "id": "2025-top-paid-demo-proxy",
+      "text": "The article notes that its highest-rated paid-listing example was only a demo on itch.io, with the full product sold on Steam.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "The paid listing filter itself cannot verify the complete commercial paid-game unit on itch.io."
     }
   ],
   "observations": [
