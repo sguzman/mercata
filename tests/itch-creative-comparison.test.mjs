@@ -8,7 +8,7 @@ const design={changed_feature:'cover_image',did_recreate_listing:false,truthful_
 test('only descriptive matched CTR; no fabricated paid customers',()=>{
  const x=auditItchCreativeComparison({a:row,b:{...row,attributed_click_events:12},design});
  assert.equal(x.comparable_descriptive,true);assert.equal(x.causal_attribution_eligible,false);
- assert.equal(x.click_through.b_minus_a,0.02);
+ assert(Math.abs(x.click_through.b_minus_a-0.02)<1e-12);
  assert.equal(x.paid_orders,null);assert.equal(x.net_profit,null);
  assert.equal(x.unique_paying_buyers,null);assert.equal(x.seller_population_income_effect,null);
 });
