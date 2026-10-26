@@ -43,6 +43,19 @@
       "money_earned": null,
       "unique_creators": null,
       "paid_sales": null
+    },
+    {
+      "id": "games_paid_2d",
+      "source_id": "itch-browse-paid-2d",
+      "filter": "paid_games_tag_2d",
+      "url": "https://itch.io/games/store/tag-2d",
+      "value": 12691,
+      "unit": "catalog_search_results",
+      "period": "2026-10-26",
+      "applies_to": "2D-tagged game listings returned in Paid-filter browse",
+      "money_earned": null,
+      "unique_creators": null,
+      "paid_sales": null
     }
   ],
   "derived": {
@@ -51,7 +64,11 @@
     "classification": "share_of_public_filter_results_not_sales_market_share",
     "numerator": "games_paid",
     "denominator": "games_all",
-    "not_a_buyer_or_creator_share": true
+    "not_a_buyer_or_creator_share": true,
+    "paid_2d_to_all_2d_filter_ratio": 0.029593,
+    "paid_2d_to_all_2d_filter_percent": 2.96,
+    "paid_2d_to_all_paid_filter_percent": 25.59,
+    "paid_2d_denominator_note": "Tag intersections on public browse, not paid sales or player behavior."
   },
   "unsupported": {
     "unique_developers": null,
@@ -59,8 +76,8 @@
     "games_sold": null,
     "revenue": null,
     "profit": null,
-    "paid_2d_count": null,
-    "converting_2d_games": null
+    "converting_2d_games": null,
+    "paid_2d_eligible_buyers": null
   },
   "limitations": [
     "Live catalog filter counts may change or be rounded and are not an audited census.",

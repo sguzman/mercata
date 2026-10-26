@@ -347,13 +347,16 @@
           "title": "Identify meaningful product segments",
           "acceptance": "Use a reproducible category taxonomy.",
           "weight": 1,
-          "progress": 45,
+          "progress": 58,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/catalog-snapshot-2026.md",
             "ontology/itch-io/catalog-snapshot-2026.json",
             "specimens/itch-io.json",
-            "tests/itch-io-catalog.test.mjs"
+            "tests/itch-io-catalog.test.mjs",
+            "ontology/itch-io/paid-2d-popular-prices-2026.json",
+            "ontology/itch-io/paid-2d-popular-prices-2026.md",
+            "tests/itch-io-price-sample.test.mjs"
           ]
         },
         {
@@ -485,13 +488,16 @@
           "title": "Define comparable competitor sample",
           "acceptance": "Record sampling query, category, time and selection method.",
           "weight": 1,
-          "progress": 40,
+          "progress": 58,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/catalog-snapshot-2026.md",
             "ontology/itch-io/catalog-snapshot-2026.json",
             "specimens/itch-io.json",
-            "tests/itch-io-catalog.test.mjs"
+            "tests/itch-io-catalog.test.mjs",
+            "ontology/itch-io/paid-2d-popular-prices-2026.json",
+            "ontology/itch-io/paid-2d-popular-prices-2026.md",
+            "tests/itch-io-price-sample.test.mjs"
           ]
         },
         {
@@ -500,9 +506,15 @@
           "title": "Measure comparable price distributions",
           "acceptance": "Report sampled price ranges, currency and denominator.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 36,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/paid-2d-popular-prices-2026.json",
+            "ontology/itch-io/paid-2d-popular-prices-2026.md",
+            "ontology/itch-io/catalog-snapshot-2026.json",
+            "specimens/itch-io.json",
+            "tests/itch-io-price-sample.test.mjs"
+          ]
         },
         {
           "id": "competition/quality",
@@ -540,9 +552,15 @@
           "title": "Identify testable market gaps",
           "acceptance": "Write falsifiable needs and niche hypotheses.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 18,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/paid-2d-popular-prices-2026.json",
+            "ontology/itch-io/paid-2d-popular-prices-2026.md",
+            "ontology/itch-io/catalog-snapshot-2026.json",
+            "specimens/itch-io.json",
+            "tests/itch-io-price-sample.test.mjs"
+          ]
         }
       ]
     },

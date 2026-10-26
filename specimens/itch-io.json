@@ -295,6 +295,17 @@
       "evidence_class": "official",
       "license": "Reference-only external source; original descriptions paraphrased.",
       "notes": "Policy/interface documentation. No publisher account or purchase data accessed."
+    },
+    {
+      "id": "itch-browse-paid-2d",
+      "url": "https://itch.io/games/store/tag-2d",
+      "publisher": "itch.io Browse",
+      "title": "Top paid games tagged 2D",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Only brief public listing metadata summarized and attributed.",
+      "notes": "Dynamic Popular-sort public page and paid 2D catalog counter. Paid tag permits promotional current prices of zero; no sales, traffic, seller income or buyer data."
     }
   ],
   "claims": [
@@ -910,6 +921,26 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "Communication capability is not evidence of repeated orders, open rates or personal email portability."
+    },
+    {
+      "id": "catalog-paid-2d",
+      "text": "On 2026-10-26, the itch.io paid games catalog under the 2D tag returned 12,691 browse results.",
+      "source_ids": [
+        "itch-browse-paid-2d"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Count of live filtered listings; not a verified distinct-developer population or game-sales census."
+    },
+    {
+      "id": "catalog-paid-discounts",
+      "text": "The visible Popular paid-2D listing included discounted titles temporarily displayed at $0 during a 100% promotion.",
+      "source_ids": [
+        "itch-browse-paid-2d"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "A display-listing observation; does not imply these projects have zero lifetime earnings or that a buyer paid zero across all available tiers."
     }
   ],
   "observations": [
@@ -948,6 +979,18 @@
       ],
       "population": "game listings returned under self-assigned 2D tag",
       "limitations": "Live catalog filter counts may change or be rounded and are not an audited census. Paid count reflects paid listings, not products with demonstrated sales. 2D tag and price filters overlap; 2D counts cannot be added to all-games totals. Search/browse indexing, private pages, restrictions and non-game products have separate scopes. No representative first-time seller outcomes, per-game income or successful-price distributions are observed."
+    },
+    {
+      "id": "games_paid_2d",
+      "metric": "browse_results",
+      "value": 12691,
+      "unit": "catalog_search_results",
+      "observed_at": "2026-10-26",
+      "source_ids": [
+        "itch-browse-paid-2d"
+      ],
+      "population": "2D-tagged game listings returned in Paid-filter browse",
+      "limitations": "Paid-filter 2D tag intersection is not unique commercial titles sold, publisher count, paid customer count or industry revenue; live dynamic count."
     }
   ],
   "opportunities": [],

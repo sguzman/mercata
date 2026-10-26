@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 35,
+  "progress_percent": 36,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -178,7 +178,7 @@
         "itch-io/market/estimate-paid-addressable-demand"
       ],
       "phase": 2,
-      "progress_percent": 14
+      "progress_percent": 16
     },
     {
       "id": "discovery",
@@ -237,7 +237,7 @@
         "itch-io/competition/create-cross-platform-benchmarks"
       ],
       "phase": 2,
-      "progress_percent": 10
+      "progress_percent": 18
     },
     {
       "id": "income",
@@ -389,7 +389,7 @@
         "itch-io/strategy/define-retrospective-reporting"
       ],
       "phase": 4,
-      "progress_percent": 18
+      "progress_percent": 19
     },
     {
       "id": "review",
@@ -1234,12 +1234,15 @@
       "objective": "Investigate define exclusive and overlapping genres for comparable inventory counts.",
       "acceptance": "Provide dated source-linked evidence to define exclusive and overlapping genres for comparable inventory counts; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 42,
+      "percent": 56,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
         "specimens/itch-io.json",
-        "tests/itch-io-catalog.test.mjs"
+        "tests/itch-io-catalog.test.mjs",
+        "ontology/itch-io/paid-2d-popular-prices-2026.json",
+        "ontology/itch-io/paid-2d-popular-prices-2026.md",
+        "tests/itch-io-price-sample.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1253,12 +1256,15 @@
       "objective": "Investigate specify 2D tagged games, paid games and playable formats.",
       "acceptance": "Provide dated source-linked evidence to specify 2D tagged games, paid games and playable formats; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 83,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
         "specimens/itch-io.json",
-        "tests/itch-io-catalog.test.mjs"
+        "tests/itch-io-catalog.test.mjs",
+        "ontology/itch-io/paid-2d-popular-prices-2026.json",
+        "ontology/itch-io/paid-2d-popular-prices-2026.md",
+        "tests/itch-io-price-sample.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1569,12 +1575,15 @@
       "objective": "Investigate exclude non-commercial uploads from matched paid-game comparisons.",
       "acceptance": "Provide dated source-linked evidence to exclude non-commercial uploads from matched paid-game comparisons; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 63,
+      "percent": 73,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
         "specimens/itch-io.json",
-        "tests/itch-io-catalog.test.mjs"
+        "tests/itch-io-catalog.test.mjs",
+        "ontology/itch-io/paid-2d-popular-prices-2026.json",
+        "ontology/itch-io/paid-2d-popular-prices-2026.md",
+        "tests/itch-io-price-sample.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1587,9 +1596,15 @@
       "emoji": "🏁",
       "objective": "Investigate use dated normalized currency and sale-price handling.",
       "acceptance": "Provide dated source-linked evidence to use dated normalized currency and sale-price handling; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 37,
+      "evidence": [
+        "ontology/itch-io/paid-2d-popular-prices-2026.json",
+        "ontology/itch-io/paid-2d-popular-prices-2026.md",
+        "ontology/itch-io/catalog-snapshot-2026.json",
+        "specimens/itch-io.json",
+        "tests/itch-io-price-sample.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 2
@@ -1602,12 +1617,15 @@
       "objective": "Investigate compare 2D, RPG, puzzle, narrative and other tagged supply.",
       "acceptance": "Provide dated source-linked evidence to compare 2D, RPG, puzzle, narrative and other tagged supply; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 30,
+      "percent": 44,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
         "specimens/itch-io.json",
-        "tests/itch-io-catalog.test.mjs"
+        "tests/itch-io-catalog.test.mjs",
+        "ontology/itch-io/paid-2d-popular-prices-2026.json",
+        "ontology/itch-io/paid-2d-popular-prices-2026.md",
+        "tests/itch-io-price-sample.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1705,12 +1723,15 @@
       "objective": "Investigate treat free discovery as adjacent but not identical demand.",
       "acceptance": "Provide dated source-linked evidence to treat free discovery as adjacent but not identical demand; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 66,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
         "specimens/itch-io.json",
-        "tests/itch-io-catalog.test.mjs"
+        "tests/itch-io-catalog.test.mjs",
+        "ontology/itch-io/paid-2d-popular-prices-2026.json",
+        "ontology/itch-io/paid-2d-popular-prices-2026.md",
+        "tests/itch-io-price-sample.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2667,9 +2688,15 @@
       "emoji": "🧪",
       "objective": "Investigate require matched demand, supply and labor evidence.",
       "acceptance": "Provide dated source-linked evidence to require matched demand, supply and labor evidence; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 22,
+      "evidence": [
+        "ontology/itch-io/paid-2d-popular-prices-2026.json",
+        "ontology/itch-io/paid-2d-popular-prices-2026.md",
+        "ontology/itch-io/catalog-snapshot-2026.json",
+        "specimens/itch-io.json",
+        "tests/itch-io-price-sample.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 4

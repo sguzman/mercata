@@ -13,3 +13,8 @@ The paid browse filter count is approximately **2.78%** of the default game brow
 Counters can change with uploads, edits, indexing and restriction rules. No listing crawl or private account access occurred. Future trend analysis must repeat identical URLs and same filter definitions at documented dates rather than treating one snapshot as growth.
 
 Machine data: [catalog-snapshot-2026.json](catalog-snapshot-2026.json). Further context: [platform rules and earnings limits](commercial-rules-2026.md).
+
+
+## Additional intersected filter
+
+The [paid 2D game list](https://itch.io/games/store/tag-2d) showed **12,691** public browse results on 2026-10-26. That is approximately 2.96% of the separately counted all-price 2D browse results. This is a filter proportion, not a count of games with actual paid sales. The [Popular price pilot](paid-2d-popular-prices-2026.md) separately records its nonrepresentative first fifteen visible listings, including temporary zero-price promotions.

@@ -43,3 +43,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io game release/access study (2026-10-26):** official HTML5 donations-versus-paid-download distinction, validated upload constraints, entitlement/access and launch presentation guides; 33% → 35% (Δ +2 pp). [Detailed study](../ontology/itch-io/release-format-access-2026.md). Actual game sales and conversion remain unknown.
+
+
+**itch.io paid 2D supply/price pilot (2026-10-26):** recorded paid 2D intersection (12,691 listings) and first 15 visible Popular-rank price labels; clearly nonrepresentative, zero-priced promotions present. 35% → 36% (Δ +1 pp). [Method and bounded results](../ontology/itch-io/paid-2d-popular-prices-2026.md).
