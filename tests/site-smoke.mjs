@@ -400,7 +400,7 @@ try{
     assert((await frames.textContent()).includes('including zero-earning YouTube entrants remain unknown'));
     assert((await frames.textContent()).includes('5,511 respondents'));
     assert((await frames.textContent()).includes('Sample size: unknown'),'Null survey counts must render without suppressing dossier');
-    assert((await frames.textContent()).includes('7 documented source frames'));
+    assert((await frames.textContent()).includes('8 documented source frames'));
 
     const identity=page.locator('.identity-research');
     assert.equal(await identity.locator('.identity-research-card').count(),4,'Missing explicitly scoped race/ethnicity study');
