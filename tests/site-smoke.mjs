@@ -832,7 +832,7 @@ try{
     assert((await formatEconomics.textContent()).includes('45% of country-allocated eligible creator pool'));
     assert((await formatEconomics.textContent()).includes('unallocated overhead and taxes'));
     const otherIncome=page.locator('.cross-platform-income');
-    assert.equal(await otherIncome.locator('.cross-platform-income-card').count(),3,'Missing selected cross-platform income studies');
+    assert.equal(await otherIncome.locator('.cross-platform-income-card').count(),4,'Missing selected cross-platform income studies');
     await otherIncome.locator('summary').first().click();
     assert((await otherIncome.textContent()).includes('not representative YouTube creator earnings'));
     assert((await otherIncome.textContent()).includes('same underlying respondents'));

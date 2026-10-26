@@ -1358,14 +1358,22 @@ test('Mixed-platform creator income surveys remain separate and do not supply Yo
     load('ontology/youtube/cross-platform-income-surveys.json'),load('specimens/youtube.json')
   ]);
   const sources=new Set(dossier.evidence.map(s=>s.id));
-  assert.equal(report.studies.length,3);
-  assert.equal(report.independent_dataset_families,3);
-  assert.equal(new Set(report.studies.map(s=>s.source_family_id)).size,3);
+  assert.equal(report.studies.length,4);
+  assert.equal(report.independent_dataset_families,4);
+  assert.equal(new Set(report.studies.map(s=>s.source_family_id)).size,4);
   assert(report.studies.every(s=>s.representative_of_youtube===false &&
     s.representative_of_all_creators===false &&
     s.youtube_subgroup_n===null &&
     s.inference_to_youtube_median==='prohibited' &&
     s.source_ids.every(id=>sources.has(id))));
+  const fact=report.studies.find(s=>s.id==='factworks-2023');
+  assert.equal(fact.survey_respondents_exact,9582);
+  assert.equal(fact.us_phase2_respondents,1804);
+  assert.equal(fact.additional_large_us_phase3_respondents,207);
+  assert.equal(fact.non_earning_entrants_covered,false);
+  assert.equal(fact.youtube_subgroup_n,null);
+  assert.deepEqual(fact.measurements.map(x=>x.value),[37,41,12]);
+  assert(fact.measurements.every(x=>x.denominator_n===null));
   const neoreach=report.studies.find(s=>s.id==='neoreach-2025');
   assert.equal(neoreach.survey_respondents_exact,null);
   assert.equal(neoreach.survey_respondents_lower_bound_exclusive,3000);

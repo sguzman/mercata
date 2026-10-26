@@ -698,7 +698,7 @@ function renderCrossPlatformIncomeSurveys(data,dossier) {
   const section=make('section','cross-platform-income');
   const details=make('details','cross-platform-income-details');
   details.append(make('summary','','Other creator-income surveys · '+data.independent_dataset_families+' independent samples'));
-  details.append(make('p','measure-limit','These are mixed-platform, self-reported creator surveys, not representative YouTube creator earnings. NeoReach and its partner publication report the same underlying respondents; do not count them twice.'));
+  details.append(make('p','measure-limit','These are mixed-platform self-reported creator surveys, not representative YouTube earnings. Factworks requires at least 1,000 followers on some social platform, excluding many attempted entrants. NeoReach and its partner publication report the same respondents; do not double-count.'));
   const grid=make('div','cross-platform-income-grid');
   for(const study of data.studies){
     const card=make('article','cross-platform-income-card');
@@ -723,6 +723,9 @@ function renderCrossPlatformIncomeSurveys(data,dossier) {
       if(point.id==='income_1000_5000_count')description='Respondents in the USD 1,000–5,000 annual bracket';
       if(point.id==='creatoriq_under_10000_year')description='CreatorIQ respondents under USD 10,000 annual creator income';
       if(point.id==='creatoriq_income_not_primary')description='CreatorIQ respondents not relying on creator income as primary';
+      if(point.id==='factworks_global_zero')description='Zero creator revenue · 20-country eligible creator respondents';
+      if(point.id==='factworks_us_zero')description='Zero creator revenue · overlapping U.S. subset';
+      if(point.id==='factworks_large_us_zero')description='Zero creator revenue · separate large U.S. supplemented group';
       item.append(make('span','',description||point.metric.replaceAll('_',' ')));
       measures.append(item);
     }

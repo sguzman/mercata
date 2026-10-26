@@ -1,8 +1,8 @@
 # Cross-platform creator-income surveys: comparison boundaries
 
-**Review date: 2026-10-23.** [Structured evidence](cross-platform-income-surveys.json).
+**Review date: 2026-10-26.** [Structured evidence](cross-platform-income-surveys.json).
 
-Three separate respondent datasets from 2025–2026 report income and working conditions among creators across different platforms. They help test what Mercata knows about the broader creator economy, but **none is a representative YouTube entrant income sample**, and none can establish a typical new channel's earnings, costs, or profit.
+Four separate respondent datasets from 2025–2026 report income and working conditions among creators across different platforms. They help test what Mercata knows about the broader creator economy, but **none is a representative YouTube entrant income sample**, and none can establish a typical new channel's earnings, costs, or profit.
 
 ## NeoReach, 2025 creator-earnings report
 
@@ -26,17 +26,34 @@ The survey is across creator platforms and mixes native platform payouts, commer
 
 The publisher reports a **±1.4 percentage-point margin of error**. Without a verified probability-based sampling and weighting design, Mercata does not independently treat that as a valid population confidence interval, particularly not for YouTube creators. The original research page and its news release describe the **same 2026 dataset**, not two studies.
 
+## Factworks' Meta-commissioned 2023 survey: zero revenue even after 1,000 followers
+
+Richard Florida and Creative Class Group's [December 2024 report](https://creativeclass.com/reports/The-Creator-Revolution.pdf) publishes Factworks questionnaires commissioned by Meta in **20 countries in 2023**. The study's *eligible creator* must share original social-media content and have **at least 1,000 followers on at least one platform**. Phase 2 surveyed **9,582 such respondents**, including **1,804 in the United States**; an additional **207 large U.S. creators** (100,000+ followers) were recruited in Phase 3 and combined with relevant original observations. Country samples were demographically weighted and represented equally in the reported global approach, not weighted by each country's total number of YouTube accounts.
+
+**Source figure 24 (PDF page 27)** gives these reported fractions with **zero annual creator revenue**:
+
+| Factworks respondent population | Reported zero-revenue share | Important boundary |
+| --- | ---: | --- |
+| Eligible creators across the 20 surveyed countries | **37%** | Mixed social platforms; 1,000-follower minimum on one platform |
+| U.S. eligible creator respondents | **41%** | Subset of the wider original survey, not an additional independent dataset |
+| Large U.S. creator respondents | **12%** | 100,000+ followers, enriched with separately recruited U.S. observations |
+
+The same report describes **56%** of eligible global creators earning below **USD 1,000** and **78%** below **USD 10,000**, but these are revenue tiers, not after-cost wages or net profit. The three zero rates are **not additive**, not a causal progression from one tier to another, and not universal probabilities. The report does not publish the revenue question's exact effective response n after weighting, verified tax/cost adjustments, a YouTube-only participant frame, or income among creators who failed to reach 1,000 followers.
+
+This materially strengthens evidence that zero earnings persist **among surveyed established-enough cross-platform publishers**. It does **not** answer the zero-earner fraction of all aspiring or new YouTube channel creators: the original sampling rule excludes those below the 1,000-follower threshold, including many likely non-earners and discontinued attempts. No YouTube newcomer zero-income rate has been fabricated.
+
 ## Do not pool the findings
 
 | Evidence population | Measured or described | Not established |
 | --- | --- | --- |
+| Factworks 2023 eligible creators (9,582 phase 2 respondents, 20 countries) | Zero reported creator revenue in three overlapping/augmented survey cohorts | New YouTube attempts under 1,000 social followers or YouTube-only zero revenue |
 | NeoReach mixed-platform respondents (over 3,000) | Self-reported share below an annual USD 15,000 threshold | Worldwide YouTube-only distribution, true zero-earner share, creator net profit |
 | Creator Spotlight newsletter respondents (427) | Selected yearly income brackets and number of six-figure earners | Representative new YouTube creator expectation or rate of monetization |
 | CreatorIQ / Influencers.club respondents (5,095 across 100 reported regions) | Respondents' reported annual creator-income threshold and primary-income status | Native YouTube creator payouts, nonmonetized new entrants, probability-based world earnings or net profit |
 | [AIR Media-Tech already-monetized channels](small-channel-income.md) (297) | First six monetized months for a selected channel group | Income of failed/nonmonetizing new channels |
 | [Patreon-affiliated YouTube creators](creator-income-evidence.md) (23,435 monthly observations) | Selected monthly **Patreon** income in three historical March periods | Native YouTube advertising or a creator's total income |
 
-The three survey groups represent distinct respondent recruitment efforts, but the sources' publication pages and their accompanying press items are not additional independent respondent groups. Neither the years nor the earnings constructs are interchangeable. Broad commercial surveys may include sponsorship and outside businesses. Patreon observations omit those who do not use Patreon; AIR starts **after** a channel is monetized. A sampled six-figure count does not establish a population success probability.
+The four survey groups represent distinct respondent recruitment efforts, but the sources' publication pages and their accompanying press items are not additional independent respondent groups. Neither the years nor the earnings constructs are interchangeable. Broad commercial surveys may include sponsorship and outside businesses. Patreon observations omit those who do not use Patreon; AIR starts **after** a channel is monetized. A sampled six-figure count does not establish a population success probability.
 
 ## Research still required
 
