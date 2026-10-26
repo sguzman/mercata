@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "international_sale_tax_buyer_rights_and_payout_risk_dimensions",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-payments",
+    "itch-terms",
+    "itch-uk-content-geo-access-2025",
+    "itch-download-keys",
+    "itch-access-control"
+  ],
+  "axes": [
+    {
+      "dimension": "buyer_jurisdiction_visibility",
+      "unit": "one_project_page_and_one_buyer_region_and_date",
+      "known_example": {
+        "region": "United Kingdom",
+        "policy_at": "2025-07-27",
+        "content_scope": "adult_or_NSFW_classification",
+        "all_buyers_restricted": false,
+        "unknown_2026_policy_state": null
+      },
+      "merchant_country_not_derived": true,
+      "source_ids": [
+        "itch-uk-content-geo-access-2025"
+      ]
+    },
+    {
+      "dimension": "seller_residency_payment_connectivity",
+      "unit": "one_publisher_and_processor_account_country_and_mode",
+      "direct_provider_eligibility_account_specific": true,
+      "collected_payout_requires_tax_interview": true,
+      "payout_approval_probability": null,
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "dimension": "buyer_vat",
+      "unit": "one_taxable_purchase_and_buyer_tax_location",
+      "collected_route_merchant_responsibility": "itch_io_operator",
+      "direct_route_merchant_responsibility": "individual_seller",
+      "country_specific_vat_rates_not_estimated": true,
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "dimension": "seller_withholding",
+      "unit": "one_payout_account_with_tax_documentation_and_treaty_eligibility",
+      "documented_default_without_valid_tax_id_percent": 30,
+      "universal_effective_foreign_withholding_rate": null,
+      "final_personal_tax_liability": null,
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "dimension": "after_sale_entitlement",
+      "unit": "one_confirmed_purchaser_entitlement_and_game_access_state",
+      "purchase_and_key_differ": true,
+      "previous_buyer_download_access_documented_for_uk_2025_policy": true,
+      "permanent_future_download_access_guarantee": false,
+      "source_ids": [
+        "itch-uk-content-geo-access-2025",
+        "itch-download-keys",
+        "itch-terms",
+        "itch-access-control"
+      ]
+    },
+    {
+      "dimension": "refund_and_dispute",
+      "unit": "one_finalized_sale_and_dispute_case",
+      "collected_operator_handles_chargeback": true,
+      "direct_merchant_bears_chargeback": true,
+      "actual_refund_share_by_country": null,
+      "source_ids": [
+        "itch-payments",
+        "itch-terms"
+      ]
+    }
+  ],
+  "example_country_rows": [
+    {
+      "place": "United Kingdom",
+      "role": "visitor",
+      "restriction": "2025 specific NSFW-tag page visibility",
+      "all_paid_games_banned": false,
+      "verified_sales_loss": null
+    },
+    {
+      "place": "United Kingdom",
+      "role": "merchant",
+      "restriction": "country specific direct Stripe options in official policy",
+      "all_persons_approved": null,
+      "verified_sales_loss": null
+    },
+    {
+      "place": "Mexico",
+      "role": "merchant",
+      "restriction": "not in published direct Stripe country table",
+      "collected_payout_approval_automatically_guaranteed": false,
+      "legal_eligibility_confirmed": null,
+      "verified_sales_loss": null
+    },
+    {
+      "place": "European Union member state",
+      "role": "buyer",
+      "restriction": "country and purchase specific VAT treatment",
+      "any_one_universal_vat_rate": null,
+      "verified_sales_loss": null
+    }
+  ],
+  "commercial_population_coverage": 0,
+  "individual_publisher_records_reviewed": 0,
+  "not_inferred": {
+    "foreign_market_size": null,
+    "unique_compliant_sellers": null,
+    "actual_tax_rate_for_publisher": null,
+    "georestriction_income_loss": null,
+    "per_country_refund_probability": null,
+    "buyer_country_revenue_distribution": null
+  },
+  "limitations": [
+    "UK July 2025 category-specific policy may differ in October 2026 and is not a permanent guarantee for existing owners.",
+    "US tax withholding source language does not substitute for competent local tax advice, identity verification, or applicable treaty results.",
+    "Merchant country, buyer billing/tax location, publisher nationality and game-content classification are independent dimensions.",
+    "Existing buyer claims or purchased keys are not new paid orders and cannot be turned into a market population.",
+    "No restricted projects, seller identities, checkout attempts, private data, tax returns, appeals or sales were reviewed."
+  ]
+}

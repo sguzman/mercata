@@ -14,6 +14,8 @@ For research, keep four populations separate: (1) anyone in a country who can vi
 
 The [payment guide](https://itch.io/docs/creators/payments) establishes merchant-of-record and checkout differences between direct and collected payment routes. It does not solve the full country matrix of payout approvals. Without authorized seller observations and comparable game-level sales data, neither a UK revenue-loss amount nor a countrywide paid buyer denominator is defensible.
 
+[Jurisdiction-specific consumer/merchant/tax/entitlement risk matrix](jurisdiction-buyer-tax-entitlement-risk-2026.md) independently distinguishes a publisher-account risk from a buyer visibility restriction.
+
 ## Limits
 
 The **exact October 2026 UK classification state is not independently confirmed here**; the policy source was published in July 2025 and may have been revised. No account was accessed, restricted project examined, buyer profiled or eligibility inferred. Counts of affected paid developers, denied UK buyers and realized lost profits remain explicitly unknown.

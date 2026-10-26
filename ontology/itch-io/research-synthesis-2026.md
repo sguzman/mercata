@@ -48,6 +48,8 @@ The [third-party game asset license tracking contract](game-component-rights-reg
 
 The [first-party direct/collected checkout-to-bank currency crosswalk](checkout-settlement-currency-conditions-2026.md) now completes the currency rule research without guessing provider country approval or final exchange-adjusted bank proceeds.
 
+The [international compliance matrix](jurisdiction-buyer-tax-entitlement-risk-2026.md) now separates content-based buyer access, seller payment onboarding, VAT/withholding, previous-purchase rights and disputes, with no countrywide approval or sales income invented.
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*
