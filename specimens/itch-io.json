@@ -1043,6 +1043,17 @@
       "evidence_class": "nonrepresentative_voluntary_game_production_report",
       "license": "Attribution and minimal quantitative extracts; no original narrative copied.",
       "notes": "Reported free/jam game work or elapsed duration, NOT paid commercial game sales, wages, game profit or representative developer hours."
+    },
+    {
+      "id": "similarweb-itch-domain-traffic-sep-2026",
+      "url": "https://www.similarweb.com/website/itch.io/",
+      "title": "itch.io Traffic Analytics, Ranking & Audience, September 2026",
+      "publisher": "Similarweb",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "third_party_modeled_site_traffic_estimate",
+      "license": "Public model summary figures restated with attribution; no proprietary dataset copied.",
+      "notes": "First-party Similarweb site estimates, explicitly not itch.io first-party sessions or unique paying buyers. September estimates are model-dependent and differ from Semrush."
     }
   ],
   "claims": [
@@ -3954,6 +3965,51 @@
       "observed_at": "2026-10-26",
       "confidence": "medium",
       "limitations": "Do not project paid game success probabilities or cash return on labor from these creator anecdotes."
+    },
+    {
+      "id": "site-traffic-compare-sep-2026",
+      "text": "For September 2026, Similarweb estimated approximately 60.6 million visits to itch.io while Semrush estimated approximately 162.37 million visits to the same whole-site domain.",
+      "source_ids": [
+        "similarweb-itch-domain-traffic-sep-2026",
+        "semrush-itch-site-traffic-september-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Unreconciled third-party models of website sessions, not unique humans, paid game viewers, verified paying customers or seller revenue."
+    },
+    {
+      "id": "site-traffic-model-spread",
+      "text": "The Semrush September 2026 estimate is approximately 2.68 times the Similarweb whole-domain estimate.",
+      "source_ids": [
+        "similarweb-itch-domain-traffic-sep-2026",
+        "semrush-itch-site-traffic-september-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Arithmetic ratio of vendor models; not a confidence interval, true market growth rate, annualized traffic, or paid-game customer range."
+    },
+    {
+      "id": "site-traffic-country-difference",
+      "text": "Similarweb modeled 32.51% of itch.io visits from the United States, versus Semrush's 26.9% modeled U.S. share for September 2026.",
+      "source_ids": [
+        "similarweb-itch-domain-traffic-sep-2026",
+        "semrush-itch-site-traffic-september-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Model-dependent sitewide visit geography, not paying buyers, developer locations, customer census or country-by-country game revenue."
+    },
+    {
+      "id": "sitewide-demand-not-observable",
+      "text": "Neither of the two whole-site traffic estimators measures the number of paying customers of premium itch.io games, paid-2D conversion, or first-time seller earnings.",
+      "source_ids": [
+        "similarweb-itch-domain-traffic-sep-2026",
+        "semrush-itch-site-traffic-september-2026",
+        "itch-faq"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Website visits lack both a paid-game offer denominator and observed transactions; cannot impute demand by multiplying a guessed checkout rate."
     }
   ],
   "observations": [

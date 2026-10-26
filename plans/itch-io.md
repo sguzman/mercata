@@ -298,3 +298,8 @@ Seven falsifiable offer, demo, game jam, promotion and store comparisons are spe
 ## First-game commercial release expense cases
 
 The [Rose Seed Replica and AraCore postmortem audit](../ontology/itch-io/release-cost-labor-cases-2026.md) separates itch-only game units, all-store receipts, grant/living-cost allocation, direct cash expenses, and unpaid developer hours. These are nonrepresentative voluntary reports and never a measure of median seller earnings. Task score: 76%.
+
+
+## Independent website-visit model disagreement
+
+[The comparison](../ontology/itch-io/whole-site-traffic-model-comparison-2026.md) documents roughly 2.68× differing modeled September 2026 sitewide session estimates, neither of which measures paying game customers or eligible sellers. Progress: 79%; paid buyer reach remains unresolved.

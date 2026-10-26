@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "sitewide_independent_traffic_model_comparison",
+  "observation_month": "2026-09",
+  "retrieved_at": "2026-10-26",
+  "source_ids": [
+    "semrush-itch-site-traffic-september-2026",
+    "similarweb-itch-domain-traffic-sep-2026"
+  ],
+  "models": [
+    {
+      "id": "semrush",
+      "source_id": "semrush-itch-site-traffic-september-2026",
+      "estimated_visits": 162370000,
+      "displayed_rounded": "162.37M",
+      "geo_scope": "global",
+      "device_scope": "all_devices",
+      "population": "all_itch_io_web_sessions_including_games_and_nongame_categories",
+      "modeled_not_metered": true,
+      "paid_game_session_count": null,
+      "unique_paying_people": null,
+      "paying_customers": null,
+      "commercial_conversion_rate": null,
+      "top_country_visit_share": {
+        "US": 0.269,
+        "BR": 0.0632,
+        "BD": 0.0421
+      },
+      "desktop_direct_share": 0.4709,
+      "desktop_google_referral_share": 0.3197
+    },
+    {
+      "id": "similarweb",
+      "source_id": "similarweb-itch-domain-traffic-sep-2026",
+      "estimated_visits": 60600000,
+      "displayed_rounded": "60.6M",
+      "geo_scope": "global",
+      "device_scope": "all_traffic",
+      "population": "all_itch_io_web_sessions_including_games_and_nongame_categories",
+      "modeled_not_metered": true,
+      "paid_game_session_count": null,
+      "unique_paying_people": null,
+      "paying_customers": null,
+      "commercial_conversion_rate": null,
+      "top_country_visit_share": {
+        "US": 0.3251,
+        "RU": 0.0537,
+        "DE": 0.0483
+      },
+      "desktop_direct_share": 0.4114,
+      "desktop_google_referral_share": null
+    }
+  ],
+  "cross_model": {
+    "visit_estimate_ratio_semrush_to_similarweb": 2.68,
+    "visit_estimate_difference": 101770000,
+    "convergent_estimand": "website_visits",
+    "same_provider": false,
+    "models_are_independent_claims_not_exact_independent_data": false,
+    "methodological_comparability_verified": false,
+    "difference_measures_real_change_in_actual_site_visitors": false,
+    "buyer_estimate_from_visits_permitted": false
+  },
+  "geography": {
+    "geographic_visit_shares_are_paying_customer_shares": false,
+    "US_share_estimates_differ_due_to_models": true,
+    "regional_payout_eligibility_independent_of_site_visit_origin": true
+  },
+  "data_need": "Only first-party transaction or legitimate representative owner-authorized seller aggregates with a valid eligible buyer and product denominator could identify paid game demand.",
+  "limitations": [
+    "Both are modeled all-domain web visits, not metered first-party checkout events or unique people.",
+    "Source pages expose different model definitions, panels, extrapolation and country measures; exact apples-to-apples accuracy is unverified.",
+    "Uncertainty intervals are not published in the accessible summaries, so the spread is not a statistically calibrated interval.",
+    "One website visit can include free browser play, tools, assets, a returning player, browsing, a publisher dashboard, or a paid checkout.",
+    "Desktop traffic referral shares cannot be applied to all-device traffic or converted to buyer acquisition channels.",
+    "Country traffic distribution is not a buyer location or seller payout distribution.",
+    "No zero-sales or developer-income outcomes arise from visit estimates."
+  ],
+  "unobserved": {
+    "actual_itch_site_sessions": null,
+    "actual_unique_human_visitors": null,
+    "paid_game_page_visits": null,
+    "paying_game_buyers": null,
+    "eligible_commercial_game_conversions": null,
+    "paid_game_gmv_usd": null,
+    "median_paid_seller_income_usd": null
+  }
+}

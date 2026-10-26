@@ -166,3 +166,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io small game labor and game-jam examples (2026-10-26):** creator reports of two-week free nine-minute HTML5 project, 140 solo jam hours, and 51 team project-phase hours with all payment outcomes unobserved; team hours are not person-hours. 79% → 79% (Δ +0 pp; exact 79.04%). [Cases](../ontology/itch-io/small-game-production-effort-2025-2026.md).
+
+
+**itch.io all-domain traffic model comparison (2026-10-26):** September 2026 Similarweb ~60.6M versus Semrush 162.37M modeled visits, country share differences and explicit refusal to impute paying customers or game revenue. 79% → 79% (Δ 0 pp; unrounded 79.25%). [Methods](../ontology/itch-io/whole-site-traffic-model-comparison-2026.md).
