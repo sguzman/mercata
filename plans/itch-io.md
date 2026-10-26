@@ -263,3 +263,8 @@ Three public developer disclosures were entered in a [bounded case register](../
 ## Browser play versus paid downloads
 
 The [official-source release-format study](../ontology/itch-io/release-format-access-2026.md) distinguishes embedded HTML5 donations from premium downloadable selling and documents the game build/entitlement constraints. Score 35%; no real game was published or QA-tested.
+
+
+## Contextual developer-income surveys
+
+[The survey crosswalk](../ontology/itch-io/web-developer-survey-crosswalk-2026.md) documents community respondents and zero-income rates, but prohibits their use as itch.io-specific seller-income distributions. Current task mean 37%; platform-specific median sales remains unmeasured.

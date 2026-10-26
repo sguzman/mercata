@@ -306,6 +306,28 @@
       "evidence_class": "official",
       "license": "Only brief public listing metadata summarized and attributed.",
       "notes": "Dynamic Popular-sort public page and paid 2D catalog counter. Paid tag permits promotional current prices of zero; no sales, traffic, seller income or buyer data."
+    },
+    {
+      "id": "gamedevjs-web-survey-2024",
+      "url": "https://gamedevjs.com/survey/2024/",
+      "title": "State of Web Game Development in 2024",
+      "publisher": "Gamedev.js Survey",
+      "published_at": "2025-01-29",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "independent_survey",
+      "license": "Short summarized statistics and link to original developer community survey.",
+      "notes": "Self-selected web-game-developer community respondents, not an itch.io publisher census. Income questions do not isolate itch.io revenues, and exact question-level denominator not shown in text."
+    },
+    {
+      "id": "gamedevjs-web-survey-2025",
+      "url": "https://gamedevjs.com/survey/2025/",
+      "title": "State of Web Game Development in 2025",
+      "publisher": "Gamedev.js Survey",
+      "published_at": "2025-12-24",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "independent_survey",
+      "license": "Short summarized statistics and link to original developer community survey.",
+      "notes": "Self-selected web-game-developer community respondents, not an itch.io publisher census. Income questions do not isolate itch.io revenues, and exact question-level denominator not shown in text."
     }
   ],
   "claims": [
@@ -941,6 +963,47 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "A display-listing observation; does not imply these projects have zero lifetime earnings or that a buyer paid zero across all available tiers."
+    },
+    {
+      "id": "web-survey-2025-scope",
+      "text": "A 2025 Gamedev.js community survey received 445 submissions, and 67.4% of the 439 publishing-question respondents selected itch.io or similar sites.",
+      "source_ids": [
+        "gamedevjs-web-survey-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Self-selected web game developer respondents; combined platform category, not an itch.io market-share or exclusive creator estimate."
+    },
+    {
+      "id": "web-survey-2025-earning",
+      "text": "The 2025 Gamedev.js report describes 63% of responding web-game developers as earning no money from game development, and 15.4% under USD 1,000 annually.",
+      "source_ids": [
+        "gamedevjs-web-survey-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Game-development income from all routes; earnings-question denominator not explicit in text, not representative of paid itch.io games."
+    },
+    {
+      "id": "web-survey-2024-earning",
+      "text": "The 2024 Gamedev.js report describes 58.2% of its web-game-development respondents as earning no game-development income, with 17.7% under USD 1,000 annually.",
+      "source_ids": [
+        "gamedevjs-web-survey-2024"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Self-selected 2024 web developer survey; not a representative census of game sellers or itch.io platform earnings."
+    },
+    {
+      "id": "web-survey-comparison",
+      "text": "The reported zero-income shares of the 2024 and 2025 Gamedev.js survey samples differ by 4.8 percentage points.",
+      "source_ids": [
+        "gamedevjs-web-survey-2024",
+        "gamedevjs-web-survey-2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Difference between two differently sampled voluntary surveys, not verified increase in population-wide zero earners or itch.io sales failure."
     }
   ],
   "observations": [

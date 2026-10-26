@@ -46,3 +46,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io paid 2D supply/price pilot (2026-10-26):** recorded paid 2D intersection (12,691 listings) and first 15 visible Popular-rank price labels; clearly nonrepresentative, zero-priced promotions present. 35% → 36% (Δ +1 pp). [Method and bounded results](../ontology/itch-io/paid-2d-popular-prices-2026.md).
+
+
+**itch.io earnings evidence crosswalk (2026-10-26):** independent 2024/2025 Gamedev.js self-selected web developer surveys registered; game-development income kept separate from itch.io-specific seller earnings. **36% → 37%** (Δ +1 pp). [Survey constraints](../ontology/itch-io/web-developer-survey-crosswalk-2026.md).

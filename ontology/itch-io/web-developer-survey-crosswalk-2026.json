@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "web_game_developer_survey_crosswalk",
+  "as_of": "2026-10-26",
+  "independent_dataset_families": 2,
+  "years": [
+    {
+      "id": "gamedevjs_2024",
+      "survey_submissions": 620,
+      "fielding": "2024-12-04 to 2024-12-20",
+      "release": "2025-01-29",
+      "zero_game_development_income_percent": 58.2,
+      "under_1000_game_development_income_percent": 17.7,
+      "game_development_income_100k_plus_percent": 2.8,
+      "itch_and_similar_publishing_percent": null,
+      "publishing_question_n": null,
+      "income_question_n": null,
+      "source_ids": [
+        "gamedevjs-web-survey-2024"
+      ]
+    },
+    {
+      "id": "gamedevjs_2025",
+      "survey_submissions": 445,
+      "fielding": "2025-12-09 to 2025-12-19",
+      "release": "2025-12-24",
+      "zero_game_development_income_percent": 63,
+      "under_1000_game_development_income_percent": 15.4,
+      "game_development_income_100k_plus_percent": 2.3,
+      "itch_and_similar_publishing_percent": 67.4,
+      "publishing_question_n": 439,
+      "income_question_n": null,
+      "source_ids": [
+        "gamedevjs-web-survey-2025"
+      ]
+    }
+  ],
+  "unit": "self_reported_annual_game_development_income_from_any_source",
+  "revenue_channel_separable": false,
+  "population_scope": "self_selected_web_game_developer_survey_respondents",
+  "itch_io_only_earnings_observed": false,
+  "survey_question_n_available_for_income": false,
+  "source_ids": [
+    "gamedevjs-web-survey-2024",
+    "gamedevjs-web-survey-2025"
+  ],
+  "descriptive_between_samples_zero_income_percentage_point_difference": 4.8,
+  "between_samples_change_interpretable_as_population_trend": false,
+  "respondent_overlap_known": false,
+  "unobserved": {
+    "itch_io_only_zero_income_fraction": null,
+    "itch_io_first_commercial_release_median_income": null,
+    "itch_io_paid_game_mean_income": null,
+    "itch_io_game_profit_distribution": null,
+    "itch_io_zero_sale_rate": null,
+    "itch_io_paid_purchases_per_publisher": null
+  },
+  "safeguards": [
+    "Do not use 63% as the zero-earner fraction of itch.io paid-game developers.",
+    "Survey total-submission sample sizes are not automatically earnings-question denominators.",
+    "Itch.io and similar publishing is a grouped survey response, not a count of itch.io-only respondents.",
+    "The 2024 and 2025 samples are self-selected and may differ; a 4.8-point sample difference is not a longitudinal estimate.",
+    "Annual earnings concern game development from any channel, potentially wages or contracts rather than storefront sales.",
+    "No cross-platform percentage can be multiplied by catalog listings to estimate zero-sale games."
+  ]
+}
