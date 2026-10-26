@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "paid_game_crossstore_bundle_and_download_longitudinal_disclosures",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "blobun-launch-report-2025",
+    "blobun-year-report-2026",
+    "error143-copies-2026"
+  ],
+  "blobun": {
+    "publisher_deduplicated": 1,
+    "game_type": "puzzle",
+    "commercial_game": true,
+    "as_of_march_25_2025": {
+      "direct_itch_purchases": 143,
+      "itch_bundle_claims_approx": 1984,
+      "itch_full_download_events": 2059,
+      "itch_demo_download_events": 470,
+      "itch_gross_usd": 1635,
+      "includes_prelaunch_early_access": true,
+      "source_ids": [
+        "blobun-launch-report-2025"
+      ]
+    },
+    "as_of_march_11_2026": {
+      "direct_itch_units": 271,
+      "steam_direct_units": 1420,
+      "reported_direct_crossstore_units_total": 1691,
+      "includes_itch_bundle_entitlements_in_direct_counts": false,
+      "includes_itch_to_steam_key_redemptions_in_steam_sales": false,
+      "combined_store_and_bundle_proceeds_after_specified_deductions_usd_approx": 11700,
+      "itch_only_after_deduction_receipts_usd": null,
+      "full_development_profit_usd": null,
+      "first_release_list_price_usd": 14.99,
+      "later_list_price_usd": 9.99,
+      "source_ids": [
+        "blobun-year-report-2026"
+      ]
+    },
+    "arithmetical_difference_in_described_direct_itch_units": 128,
+    "difference_interpretable_only_if_unit_definitions_match": true,
+    "sampled_production_hours": null,
+    "total_development_cost_usd": null,
+    "independent_statistical_publishers_in_snapshots": 1,
+    "warnings": [
+      "The March 2025 data already includes early-access money, not strictly a launch-only window.",
+      "Multiple itch.io download events and 1,984 charity bundle entitlements do not imply equal direct paid purchases.",
+      "A purchased itch.io game redeemed via a Steam key is not an additional purchaser.",
+      "March 2026 $11,700 is approximate and pools both stores and selected bundle allocations.",
+      "The same game's two dates are repeated measurements, not two independent games.",
+      "Reported price changes coincide with time, feature updates, marketing and sales; no causal price elasticity."
+    ]
+  },
+  "error143": {
+    "publisher_reported_headline_copy_count": 100000,
+    "source_date": "2026-08-11",
+    "page_offer": "name_your_own_price_no_mandatory_minimum",
+    "distinct_paid_orders_observed": null,
+    "zero_price_downloads_included_verified": null,
+    "developer_income_observed_usd": null,
+    "mean_payment_per_copy_usd": null,
+    "source_ids": [
+      "error143-copies-2026"
+    ],
+    "warning": "The publisher's copies-sold label cannot be counted as 100,000 settled positive-price transactions without corroborating payment records."
+  },
+  "market_estimates": {
+    "median_itcho_game_profit": null,
+    "typical_early_launch_paid_units": null,
+    "one_year_paid_copy_success_probability": null,
+    "paid_2d_market_concentration": null,
+    "paid_download_to_purchase_conversion": null
+  },
+  "excluded": [
+    "No account logins, receipts, payout histories or identifying buyer data.",
+    "No third-party bundle purchaser identities or charity records.",
+    "No inference from voluntary sample to entire marketplace."
+  ]
+}

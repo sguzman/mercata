@@ -328,7 +328,7 @@
         "itch-io/sales/separate-buyer-interest-from-purchase"
       ],
       "phase": 3,
-      "progress_percent": 83
+      "progress_percent": 84
     },
     {
       "id": "risk",
@@ -1985,13 +1985,16 @@
       "objective": "Investigate use dated normalized currency and sale-price handling.",
       "acceptance": "Provide dated source-linked evidence to use dated normalized currency and sale-price handling; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 69,
+      "percent": 76,
       "evidence": [
         "ontology/itch-io/paid-2d-popular-prices-2026.json",
         "ontology/itch-io/paid-2d-popular-prices-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
         "specimens/itch-io.json",
-        "tests/itch-io-price-sample.test.mjs"
+        "tests/itch-io-price-sample.test.mjs",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
+        "tests/itch-io-blobun-prices.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2373,7 +2376,7 @@
       "objective": "Investigate define percentiles and top-earner shares with sample coverage.",
       "acceptance": "Provide dated source-linked evidence to define percentiles and top-earner shares with sample coverage; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 54,
+      "percent": 60,
       "evidence": [
         "ontology/itch-io/community-analytics-sample-2026.json",
         "ontology/itch-io/community-analytics-sample-2026.md",
@@ -2382,7 +2385,10 @@
         "site/itch-income-histogram.mjs",
         "ontology/itch-io/income-histogram-protocol-2026.json",
         "ontology/itch-io/income-histogram-protocol-2026.md",
-        "tests/itch-io-income-histogram.test.mjs"
+        "tests/itch-io-income-histogram.test.mjs",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
+        "tests/itch-io-blobun-prices.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2422,7 +2428,10 @@
         "tests/itch-io-year-of-springs-long-tail.test.mjs",
         "ontology/itch-io/game-sales-feature-cases-2025-2026.json",
         "ontology/itch-io/game-sales-feature-cases-2025-2026.md",
-        "tests/itch-io-game-sales-feature-cases.test.mjs"
+        "tests/itch-io-game-sales-feature-cases.test.mjs",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
+        "tests/itch-io-blobun-prices.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2436,7 +2445,7 @@
       "objective": "Investigate account for multi-title publishers and revenue allocation.",
       "acceptance": "Provide dated source-linked evidence to account for multi-title publishers and revenue allocation; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 90,
+      "percent": 96,
       "evidence": [
         "ontology/itch-io/developer-income-cases-2026.json",
         "ontology/itch-io/developer-income-cases-2026.md",
@@ -2453,7 +2462,10 @@
         "tests/itch-io-creative-pwyw.test.mjs",
         "ontology/itch-io/release-cost-labor-cases-2026.json",
         "ontology/itch-io/release-cost-labor-cases-2026.md",
-        "tests/itch-io-release-cost-labor.test.mjs"
+        "tests/itch-io-release-cost-labor.test.mjs",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
+        "tests/itch-io-blobun-prices.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2520,7 +2532,10 @@
         "tests/itch-io-release-cost-labor.test.mjs",
         "ontology/itch-io/game-sales-feature-cases-2025-2026.json",
         "ontology/itch-io/game-sales-feature-cases-2025-2026.md",
-        "tests/itch-io-game-sales-feature-cases.test.mjs"
+        "tests/itch-io-game-sales-feature-cases.test.mjs",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
+        "tests/itch-io-blobun-prices.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2598,7 +2613,10 @@
         "tests/itch-io-year-of-springs-long-tail.test.mjs",
         "ontology/itch-io/game-sales-feature-cases-2025-2026.json",
         "ontology/itch-io/game-sales-feature-cases-2025-2026.md",
-        "tests/itch-io-game-sales-feature-cases.test.mjs"
+        "tests/itch-io-game-sales-feature-cases.test.mjs",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
+        "tests/itch-io-blobun-prices.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3100,7 +3118,10 @@
         "ontology/itch-io/game-bonus-entitlements-2026.json",
         "ontology/itch-io/game-bonus-entitlements-2026.md",
         "site/itch-game-bonus-entitlement.mjs",
-        "tests/itch-io-game-bonus.test.mjs"
+        "tests/itch-io-game-bonus.test.mjs",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
+        "tests/itch-io-blobun-prices.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3155,7 +3176,10 @@
         "ontology/itch-io/game-bonus-entitlements-2026.json",
         "ontology/itch-io/game-bonus-entitlements-2026.md",
         "site/itch-game-bonus-entitlement.mjs",
-        "tests/itch-io-game-bonus.test.mjs"
+        "tests/itch-io-game-bonus.test.mjs",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
+        "tests/itch-io-blobun-prices.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3242,7 +3266,7 @@
       "objective": "Investigate set 7, 30, 90 and 365 day sales windows.",
       "acceptance": "Provide dated source-linked evidence to set 7, 30, 90 and 365 day sales windows; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 59,
+      "percent": 72,
       "evidence": [
         "ontology/itch-io/notjam-game-category-series-2023-2025.json",
         "ontology/itch-io/notjam-game-category-series-2023-2025.md",
@@ -3250,7 +3274,10 @@
         "tests/itch-io-notjam-series.test.mjs",
         "ontology/itch-io/year-of-springs-long-tail-2021-2026.json",
         "ontology/itch-io/year-of-springs-long-tail-2021-2026.md",
-        "tests/itch-io-year-of-springs-long-tail.test.mjs"
+        "tests/itch-io-year-of-springs-long-tail.test.mjs",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
+        "tests/itch-io-blobun-prices.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3264,7 +3291,7 @@
       "objective": "Investigate verify collection and wish mechanisms before using them as demand proxies.",
       "acceptance": "Provide dated source-linked evidence to verify collection and wish mechanisms before using them as demand proxies; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 95,
+      "percent": 98,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -3281,7 +3308,10 @@
         "tests/itch-cohort-protocol.test.mjs",
         "ontology/itch-io/api-purchase-privacy-2026.json",
         "ontology/itch-io/api-purchase-privacy-2026.md",
-        "tests/itch-io-api-purchase-privacy.test.mjs"
+        "tests/itch-io-api-purchase-privacy.test.mjs",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
+        "tests/itch-io-blobun-prices.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -3777,7 +3807,10 @@
         "tests/itch-io-year-of-springs.test.mjs",
         "ontology/itch-io/game-sales-feature-cases-2025-2026.json",
         "ontology/itch-io/game-sales-feature-cases-2025-2026.md",
-        "tests/itch-io-game-sales-feature-cases.test.mjs"
+        "tests/itch-io-game-sales-feature-cases.test.mjs",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
+        "tests/itch-io-blobun-prices.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3933,7 +3966,7 @@
       "objective": "Investigate require units, period, geography, eligibility and sampling method.",
       "acceptance": "Provide dated source-linked evidence to require units, period, geography, eligibility and sampling method; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 97,
+      "percent": 99,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -3957,7 +3990,10 @@
         "tests/itch-io-genre-frames.test.mjs",
         "ontology/itch-io/semrush-domain-traffic-2026.json",
         "ontology/itch-io/semrush-domain-traffic-2026.md",
-        "tests/itch-io-semrush-traffic.test.mjs"
+        "tests/itch-io-semrush-traffic.test.mjs",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.json",
+        "ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md",
+        "tests/itch-io-blobun-prices.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

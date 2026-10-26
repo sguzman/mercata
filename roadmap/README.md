@@ -175,3 +175,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io disclosed launch units and traffic (2026-10-26):** no signal first-week 3 game+OST itch units/$75 gross (estimated receipt, not profit); The Hive cumulative 2025 'sales' vs 2026 'payments' not reconciled; front-page daily-versus-cumulative views incomparable. 80% → 80% (Δ +0 pp, unrounded 79.77%). [Study](../ontology/itch-io/game-sales-feature-cases-2025-2026.md).
+
+
+**itch.io paid puzzle-game longitudinal receipts (2026-10-26):** Blobun 143 early direct purchases versus 271 one-year direct purchases, distinct from 1,984 early bundle claims, full downloads and combined Steam/itch proceeds; ERROR143 optional-price 100k copies not verified paid units. 80% → 80% (Δ +0 pp, raw 79.93%). [Study](../ontology/itch-io/blobun-and-pwyw-copy-counts-2025-2026.md).

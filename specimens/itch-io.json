@@ -1120,6 +1120,39 @@
       "retrieved_at": "2026-10-26",
       "evidence_class": "voluntary_public_developer_disclosure",
       "license": "Author-reported numerical summaries with attribution and external link; no private stats or source text reproduced."
+    },
+    {
+      "id": "blobun-launch-report-2025",
+      "url": "https://cyansorcery.itch.io/blobun/devlog/912359/how-blobun-did",
+      "title": "How Blobun Did",
+      "publisher": "Blobun developer public postmortem",
+      "published_at": null,
+      "notes": "Figures as of 2025-03-25; early-access and Steam launch histories, bundled entitlements separate from direct paid game purchases.",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_publisher_commercial_disclosure",
+      "license": "Brief attributable numerical data and independently written summary; original source linked."
+    },
+    {
+      "id": "blobun-year-report-2026",
+      "url": "https://itch.io/devlog/1455287/one-year-of-blobun.amp",
+      "title": "One Year Of Blobun",
+      "publisher": "Blobun developer public postmortem",
+      "published_at": "2026-03-11",
+      "notes": "Same developer and game as March 2025 snapshot; cross-store receipts include bundles but lack platform-specific allocated net amount.",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_publisher_commercial_disclosure",
+      "license": "Brief attributable numerical data and independently written summary; original source linked."
+    },
+    {
+      "id": "error143-copies-2026",
+      "url": "https://itch.io/devlog/1624789/error143-recently-hit-100000-copies-sold.amp",
+      "title": "ERROR143 recently hit 100,000 copies sold!",
+      "publisher": "ERROR143 developer public announcement",
+      "published_at": "2026-08-11",
+      "notes": "Developer calls count copies sold, but page says Name your own price and provides no positive-paid-order count or receipt totals; source label not treated as paid unit transaction census.",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_publisher_commercial_disclosure",
+      "license": "Brief attributable numerical data and independently written summary; original source linked."
     }
   ],
   "claims": [
@@ -4198,6 +4231,88 @@
       "observed_at": "2026-10-26",
       "confidence": "medium",
       "limitations": "Featured placement and outside coverage overlap; sales effect is unobserved, not zero."
+    },
+    {
+      "id": "blobun-early-paid-versus-bundle",
+      "text": "As of March 25, 2025, Blobun's publisher distinguished 143 outright itch.io purchases from about 1,984 added-to-library copies through a charity bundle.",
+      "source_ids": [
+        "blobun-launch-report-2025"
+      ],
+      "limitations": "Bundle library additions are not one new full-price direct game sale each; no per-unit bundle allocation reported.",
+      "confidence": "medium",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "blobun-early-gross",
+      "text": "In its March 2025 postmortem, Blobun reported $1,635 gross itch.io purchases accumulated across early access and launch.",
+      "source_ids": [
+        "blobun-launch-report-2025"
+      ],
+      "limitations": "Cumulative sales include earlier early-access transactions; gross is not final cash or profit and cannot be divided over the launch week.",
+      "confidence": "medium",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "blobun-early-downloads",
+      "text": "The same March 2025 disclosure recorded 2,059 itch.io full-game file downloads and 470 demo downloads, despite only 143 directly purchased units.",
+      "source_ids": [
+        "blobun-launch-report-2025"
+      ],
+      "limitations": "Downloads include bundle recipients and repeat downloads; are not distinct buyers or paid orders.",
+      "confidence": "medium",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "blobun-one-year-paid-units",
+      "text": "At the March 11, 2026 one-year retrospective, the publisher reported 271 direct itch.io copies and 1,420 Steam copies, excluding itch.io bundle redemptions and duplicate Steam key claims.",
+      "source_ids": [
+        "blobun-year-report-2026"
+      ],
+      "limitations": "One publisher's voluntary game data; no validated market-wide mean, genre success rate or customer count.",
+      "confidence": "medium",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "blobun-multistore-net",
+      "text": "The March 2026 Blobun postmortem estimated just over $11,700 combined across Steam and itch.io after specified fees and taxes, including some profitable bundles.",
+      "source_ids": [
+        "blobun-year-report-2026"
+      ],
+      "limitations": "Cross-store combined proceeds, not itch.io-only proceeds and not an audited profit after all labor and costs.",
+      "confidence": "medium",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "blobun-price-changes",
+      "text": "Blobun's publisher described $14.99 at launch, a later $9.99 listing, and selling many copies during promotions.",
+      "source_ids": [
+        "blobun-year-report-2026",
+        "blobun-launch-report-2025"
+      ],
+      "limitations": "Publisher observation, not a controlled price-elasticity or causal promotion lift estimate.",
+      "confidence": "medium",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "blobun-longitudinal-conditional",
+      "text": "The two Blobun disclosures report 143 then 271 itch.io outright/standalone sales at different dates, but the category must remain separate from bundle claims.",
+      "source_ids": [
+        "blobun-launch-report-2025",
+        "blobun-year-report-2026"
+      ],
+      "limitations": "A difference of 128 is only comparable if both voluntary reports used the same direct-purchase definition; no transaction ledger was independently examined.",
+      "confidence": "medium",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "error143-unverified-copy-label",
+      "text": "An August 2026 developer announced 100,000 copies sold for ERROR143, whose listing used Name your own price, without disclosing positive-payment units or earnings.",
+      "source_ids": [
+        "error143-copies-2026"
+      ],
+      "limitations": "Headline copy count is not independently verified as settled paid orders; optional free downloads may be included, but the mixture is unknown.",
+      "confidence": "medium",
+      "observed_at": "2026-10-26"
     }
   ],
   "observations": [
