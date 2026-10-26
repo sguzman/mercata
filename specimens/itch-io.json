@@ -702,6 +702,17 @@
       "evidence_class": "historical_first_party_transaction_summary",
       "license": "Source-linked short numerical aggregate observations only.",
       "notes": "2014 store, may count voluntary payments on free games. Not modern paid seller cohort. More than $100k historically paid out through August 2014; no raw files read."
+    },
+    {
+      "id": "itch-purchase-access-help",
+      "url": "https://itch.io/docs/buying/already-bought",
+      "title": "How to access your purchase",
+      "publisher": "itch.io",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Externally linked, concise independently authored summary.",
+      "notes": "Buyer entitlement and access guidance, not a definitive country-specific digital resale legal opinion."
     }
   ],
   "claims": [
@@ -2588,6 +2599,67 @@
         "itch-founder-store-purchases-2014"
       ],
       "confidence": "high",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "account-transfer-prohibition",
+      "text": "The public itch.io Terms prohibit selling, assigning or transferring a user account, with termination an available consequence.",
+      "source_ids": [
+        "itch-terms"
+      ],
+      "confidence": "high",
+      "limitations": "An account restriction does not itself establish whether all individual digital game entitlements may legally be resold.",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "buyer-perpetual-content-license",
+      "text": "The Terms provide purchasers a non-exclusive perpetual content-access license through supported functionality, which survives a publisher's removal of that content.",
+      "source_ids": [
+        "itch-terms"
+      ],
+      "confidence": "high",
+      "limitations": "This is not transfer of developer copyright nor a guarantee of unsupported technical access or an individual game's license.",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "purchase-gifting",
+      "text": "The documented purchase flow supports gifting a game directly at checkout.",
+      "source_ids": [
+        "itch-buying-flow"
+      ],
+      "confidence": "high",
+      "limitations": "Checkout gifting does not imply resale of an already purchased and installed game.",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "keys-not-transfer-market",
+      "text": "The unique download key URL should not be shared and free downloads do not generate purchased ownership entitlements.",
+      "source_ids": [
+        "itch-download-keys"
+      ],
+      "confidence": "high",
+      "limitations": "Download key possession/issuance differs from individual purchasers and the number of paid orders.",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "purchase-re-download",
+      "text": "A buyer may redownload and receive updated files through the existing purchase page without creating a new paid game order.",
+      "source_ids": [
+        "itch-purchase-access-help"
+      ],
+      "confidence": "high",
+      "limitations": "Re-download events cannot proxy commercial sales or market size.",
+      "observed_at": "2026-10-26"
+    },
+    {
+      "id": "game-resale-right-not-established",
+      "text": "The general itch.io site terms and buyer help reviewed here do not establish a blanket secondary-market game license transfer mechanism.",
+      "source_ids": [
+        "itch-terms",
+        "itch-download-keys"
+      ],
+      "confidence": "high",
+      "limitations": "Actual resale rights may depend on product EULA, relevant legal jurisdiction, and facts not contained in the sources.",
       "observed_at": "2026-10-26"
     }
   ],

@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 69,
+  "progress_percent": 70,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -299,7 +299,7 @@
         "itch-io/rights/check-resale-and-transfer-conditions"
       ],
       "phase": 3,
-      "progress_percent": 68
+      "progress_percent": 78
     },
     {
       "id": "sales",
@@ -2619,7 +2619,7 @@
       "objective": "Investigate distinguish downloads, licenses and access following delisting.",
       "acceptance": "Provide dated source-linked evidence to distinguish downloads, licenses and access following delisting; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 89,
+      "percent": 96,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -2631,7 +2631,10 @@
         "tests/itch-html5-audit.test.mjs",
         "ontology/itch-io/publisher-rights-refunds-2026.json",
         "ontology/itch-io/publisher-rights-refunds-2026.md",
-        "tests/itch-io-publisher-legal.test.mjs"
+        "tests/itch-io-publisher-legal.test.mjs",
+        "ontology/itch-io/resale-transfer-2026.md",
+        "ontology/itch-io/resale-transfer-2026.json",
+        "tests/itch-io-resale.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2663,9 +2666,14 @@
       "emoji": "⚖️",
       "objective": "Investigate investigate whether licenses, product pages or accounts transfer.",
       "acceptance": "Provide dated source-linked evidence to investigate whether licenses, product pages or accounts transfer; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 82,
+      "evidence": [
+        "ontology/itch-io/resale-transfer-2026.md",
+        "ontology/itch-io/resale-transfer-2026.json",
+        "specimens/itch-io.json",
+        "tests/itch-io-resale.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 3
