@@ -197,7 +197,8 @@ for (const entry of index.specimens) {
 
     const analytics=load('ontology/youtube/analytics-query-guide.json');
     const countryReach=load('ontology/youtube/country-reach-devices.json');
-    ensure(countryReach.sources.length===3 &&
+    ensure(countryReach.sources.length===4 &&
+      countryReach.sources.some(x=>x.id==='digital-i-20-markets-2026' && x.source_id==='digital-i-youtube-era-2025-in-review-2026') &&
       countryReach.observations.length===10 &&
       countryReach.valid_series.length===3,
       'Incomplete UK viewing and multi-market source register');
@@ -220,6 +221,20 @@ for (const entry of index.specimens) {
     ensure(Object.values(countryReach.unknowns).every(x=>x===null) &&
       countryReach.excluded_comparisons.length>=6,
       'Inferred global creator or audience population from incomparable data');
+
+    const accountTime=countryReach.multi_market_daily_account_view_time;
+    ensure(accountTime?.source_id==='digital-i-youtube-era-2025-in-review-2026' &&
+      accountTime.account_unit==='measured_youtube_account' &&
+      accountTime.measured_market_count===20 &&
+      accountTime.observations.length===2 &&
+      accountTime.observations[0].minutes_per_account_per_day===87.2 &&
+      accountTime.observations[1].minutes_per_account_per_day===99.1 &&
+      accountTime.representative_global_population===false &&
+      accountTime.median_minutes_per_account_per_day===null &&
+      accountTime.raw_sampled_account_n===null &&
+      accountTime.comparability.comparable_to_uk_ofcom_2025_51_minutes===false &&
+      accountTime.comparability.comparable_to_uk_ofcom_2025_in_home_41_minutes===false,
+      'Account view-time estimates conflated with global or UK person measures');
 
     const platformScale=load('ontology/youtube/platform-scale.json');
     ensure(platformScale.observations.length===4,'Missing globally scoped scale observations');
