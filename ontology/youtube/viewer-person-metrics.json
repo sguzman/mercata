@@ -268,8 +268,8 @@
   "owner_demographic_suppression": {
     "review_date": "2026-10-25",
     "source_ids": [
-      "yt-owner-analytics-limited-data-2026",
-      "yt-analytics-demographic-dimensions-2026"
+      "analytics-limits",
+      "api-dimensions"
     ],
     "source_population": "authorized_owner_channel_or_video_reports_not_public_platform_user_census",
     "observed_youtube_creator_accounts_count": 0,
@@ -283,7 +283,7 @@
     "suppression_conditions": [
       {
         "id": "low_observation_volume",
-        "source_id": "yt-owner-analytics-limited-data-2026",
+        "source_id": "analytics-limits",
         "applies_to": [
           "age",
           "gender",
@@ -294,7 +294,7 @@
       },
       {
         "id": "filtered_small_dimension",
-        "source_id": "yt-owner-analytics-limited-data-2026",
+        "source_id": "analytics-limits",
         "applies_to": [
           "gender",
           "geography",
@@ -306,7 +306,7 @@
       },
       {
         "id": "private_or_unlisted_video_demographics",
-        "source_id": "yt-owner-analytics-limited-data-2026",
+        "source_id": "analytics-limits",
         "applies_to": [
           "age",
           "gender"
@@ -316,7 +316,7 @@
       },
       {
         "id": "made_for_kids_audience",
-        "source_id": "yt-owner-analytics-limited-data-2026",
+        "source_id": "analytics-limits",
         "applies_to": [
           "audience_reports"
         ],
@@ -327,7 +327,7 @@
     "dimension_definitions": [
       {
         "id": "ageGroup",
-        "source_id": "yt-analytics-demographic-dimensions-2026",
+        "source_id": "api-dimensions",
         "scope": "logged_in_users_associated_with_authorized_report",
         "api_values": [
           "age13-17",
@@ -342,7 +342,7 @@
       },
       {
         "id": "gender",
-        "source_id": "yt-analytics-demographic-dimensions-2026",
+        "source_id": "api-dimensions",
         "scope": "logged_in_users_associated_with_authorized_report",
         "api_values": [
           "female",
