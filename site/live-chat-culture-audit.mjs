@@ -37,3 +37,20 @@ export function auditLiveChatInteraction(model,sources){
     p?.paid_response_effect!==null||p?.channel_income!==null)errors.push('privacy or inference boundary violated');
  return {valid:errors.length===0,errors};
 }
+
+export function auditLiveChatEmotionDynamics(model,knownSourceIds){
+ const errors=[],p=model?.paper,e=p?.emotion_excitation_coefficients;
+ if(!e||!knownSourceIds.has(e.source_id))errors.push('Peer-reviewed source or emotion model missing');
+ if(p?.final_model_chat_messages!==92412||p?.final_model_videos!==397||
+    p?.initial_filtered_chat_messages!==673551||p?.initial_filtered_videos!==1957)
+  errors.push('Nested sampling units changed');
+ if(e?.joy!==0.77||e?.anger!==0.26||e?.disgust!==0.26||e?.sadness!==0.21)
+  errors.push('Model coefficients altered');
+ if(e?.causal_emotion_transmission_proven!==false||e?.verified_individual_feelings!==null||
+    e?.viewer_survey_corroboration!==null||e?.directly_observed_bot_exclusion!==false||
+    e?.creator_revenue_correlation!==null)
+  errors.push('Unsupported psychological or income interpretation');
+ if(e?.exact_decay_time_seconds!==null||e?.negative_emotion_decay_relative_to_positivity!=='nearly_twice_as_long_as_reported')
+  errors.push('Invented numerical persistence window');
+ return {valid:errors.length===0,errors};
+}

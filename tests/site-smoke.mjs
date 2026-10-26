@@ -233,6 +233,12 @@ try{
     assert.equal(await reactionDiscovery.count(),1,'Missing fifth independent 2026 Shorts originality discovery gate');
     assert((await reactionDiscovery.textContent()).includes('NOT an automatic copyright ruling'));
     assert((await reactionDiscovery.textContent()).includes('quantified earnings loss'));
+    const liveEmotion=page.locator('.live-chat-emotion-dynamics');
+    assert.equal(await liveEmotion.count(),1,'Missing bounded peer-reviewed temporal model parameters');
+    assert.equal(await liveEmotion.locator('.live-chat-emotion-value').count(),4,'Missing four published fitted coefficients');
+    assert((await liveEmotion.textContent()).includes('Joy: 0.77'));
+    assert((await liveEmotion.textContent()).includes('Anger: 0.26'));
+    assert((await liveEmotion.textContent()).includes('NOT experimentally verified emotional contagion'));
     const chatCulture=page.locator('.live-chat-culture-study .live-chat-language-study');
     assert.equal(await chatCulture.count(),1,'Missing selected Japanese-language VTuber interaction cohort');
     assert((await chatCulture.textContent()).includes('64,279 messages across 10 chosen livestreams'));

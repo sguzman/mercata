@@ -23,7 +23,7 @@
     "individual_user_archives_collected": false
   },
   "kind": "live_chat_behavior_selected_model_and_visibility_modes",
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "source_ids": [
     "nature-youtube-live-emotion-2025",
     "yt-live-chat-displays-2026",
@@ -60,7 +60,36 @@
     "observed_causal_peer_effect_proven": false,
     "model_dependency": "Hawkes self-exciting process; observational with untested counterfactuals",
     "distinct_viewers": null,
-    "revenue": null
+    "revenue": null,
+    "emotion_excitation_coefficients": {
+      "source_id": "nature-youtube-live-emotion-2025",
+      "model_type": "six_emotion_multivariate_hawkes_self_excitation",
+      "interpretation": "modeled_mean_number_of_additional_same_emotion_chat_messages_solely_under_fitted_model_not_randomized_human_behavior",
+      "joy": 0.77,
+      "anger": 0.26,
+      "disgust": 0.26,
+      "sadness": 0.21,
+      "fear": null,
+      "surprise": null,
+      "joy_vs_anger_disgust_approx_ratio": 3,
+      "negative_emotion_decay_relative_to_positivity": "nearly_twice_as_long_as_reported",
+      "exact_decay_time_seconds": null,
+      "cross_emotion_observation": "negative_emotion_language_sometimes_preceded_positive_chat_language_in_selected_model",
+      "causal_emotion_transmission_proven": false,
+      "verified_individual_feelings": null,
+      "viewer_survey_corroboration": null,
+      "directly_observed_bot_exclusion": false,
+      "experimental_design": false,
+      "creator_revenue_correlation": null,
+      "boundaries": [
+        "Self-excitation coefficients are parameters of an observational Hawkes model, not randomized causal effects or per-person emotional change.",
+        "The final 92412 coded text messages across 397 videos result from exclusions applied after the initial 673551 message / 1957-video cohort; do not add these frames.",
+        "Text-only six-category machine emotion labeling omits visuals, prosody, irony, mixed emotions beyond the six labels, and any validation of individual psychological states.",
+        "No distinction between human and automated chat accounts was verified.",
+        "Negativity lasting nearly twice as long refers to modeled emotion-expression decay, not a timed measure of lasting individual emotional harm.",
+        "Model result says nothing about revenue, moderation staffing returns, audience country, unique commenters or language-specific platform populations."
+      ]
+    }
   },
   "prohibited_inferences": [
     "Initial 673,551 messages across 1,957 videos and model sample 92,412 messages across 397 videos are successive selected frames, not disjoint studies or population totals.",

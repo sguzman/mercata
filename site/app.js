@@ -3422,6 +3422,20 @@ function renderLiveChatCultureStudy(model,dossier){
   card.append(make('p','measure-limit',limitation));grid.append(card);
  }
  details.append(grid);
+ const dynamics=p.emotion_excitation_coefficients;
+ if(dynamics){
+  const panel=make('div','live-chat-emotion-dynamics');
+  panel.append(make('h5','','Model-based chat-language propagation (not individual emotion)'));
+  const values=make('ul','live-chat-emotion-list');
+  for(const [label,value] of [['Joy',dynamics.joy],['Anger',dynamics.anger],['Disgust',dynamics.disgust],['Sadness',dynamics.sadness]]){
+   const row=make('li','live-chat-emotion-value',label+': '+value.toFixed(2)+' modeled additional same-label messages');
+   values.append(row);
+  }
+  panel.append(values);
+  panel.append(make('p','measure-limit','Negative expressions persisted nearly twice as long in the model. These are fitted text-label associations, NOT experimentally verified emotional contagion, individual distress, moderation ROI, or creator income. Bots were not separated from people.'));
+  panel.append(audienceSources([dynamics.source_id],dossier));
+  details.append(panel);
+ }
  const live=model.interaction_paper;
  if(live?.observations?.length===10 && live.excluded_paid_superchats){
   const panel=make('div','live-chat-language-study');

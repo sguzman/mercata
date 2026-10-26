@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {getLiveChatObservation,assessLiveChatClaim,auditLiveChatInteraction} from '../site/live-chat-culture-audit.mjs';
+import {getLiveChatObservation,assessLiveChatClaim,auditLiveChatInteraction,auditLiveChatEmotionDynamics} from '../site/live-chat-culture-audit.mjs';
 const load=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 test('Two historical study frames are nested messages, not people or incomes',async()=>{
  const [m,d]=await Promise.all([load('ontology/youtube/live-chat-culture-observations-2025.json'),load('specimens/youtube.json')]);
@@ -59,4 +59,17 @@ test('VTuber live-chat audit rejects invented aggregate response odds, identifie
  assert(auditLiveChatInteraction(b,known).errors.includes('per-stream messages inconsistent'));
  const c=structuredClone(m);c.interaction_paper.excluded_paid_superchats=false;
  assert(auditLiveChatInteraction(c,known).errors.includes('privacy or inference boundary violated'));
+});
+
+test('Published Hawkes emotion-label parameters retain selection, causality and bot caveats',async()=>{
+ const [m,d]=await Promise.all([load('ontology/youtube/live-chat-culture-observations-2025.json'),load('specimens/youtube.json')]);
+ const known=new Set(d.evidence.map(x=>x.id));
+ assert.deepEqual(auditLiveChatEmotionDynamics(m,known),{valid:true,errors:[]});
+ assert.equal(m.paper.emotion_excitation_coefficients.joy,0.77);
+ assert.equal(m.paper.emotion_excitation_coefficients.anger,0.26);
+ assert.equal(m.paper.emotion_excitation_coefficients.exact_decay_time_seconds,null);
+ const x=structuredClone(m);x.paper.emotion_excitation_coefficients.creator_revenue_correlation=1;
+ assert(auditLiveChatEmotionDynamics(x,known).errors.some(e=>e.includes('Unsupported')));
+ const y=structuredClone(m);y.paper.emotion_excitation_coefficients.causal_emotion_transmission_proven=true;
+ assert(auditLiveChatEmotionDynamics(y,known).errors.some(e=>e.includes('Unsupported')));
 });
