@@ -23,3 +23,8 @@ For platforms with substantial public social, entertainment or creator-community
 Unlike ordinary domain specialists, this is a **cross-domain profile**: a video platform, community fiction publisher, or social portfolio site may qualify. The profile is assigned explicitly to admitted platforms; future video admissions receive it by default, and other domains require `--profile social_audience`.
 
 See [audience ontology](../ontology/README.md). Public sources, surveys and platform analytics have different access and denominator limits. Community size figures must distinguish viewers from content impressions or channel counts; all missing measurements remain unknown.
+
+
+## Existing itch.io specimen: dedicated plan
+
+The already-admitted itch.io game specimen preserves its 84 original tasks and adds 160 platform-specific research questions. The [itch.io plan](../plans/itch-io.md) is an unresearched inventory at 0%, not evidence of any game sales or income. No new marketplace was admitted.

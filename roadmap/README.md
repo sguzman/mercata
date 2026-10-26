@@ -19,3 +19,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 **Social audience research:** a distinct conditional profile adds nine queues (80 questions) for 11 existing social or creator-community marketplaces. Ontology and queue retrofit are complete and browser/integration checks now run automatically. YouTube's research is underway, with separate progress tracked across 399 tasks; the other ten social-audience specimens remain queued.
 
 **Current specimen:** [YouTube's research plan](../plans/youtube.md) and its [machine progress](../plans/youtube.json) cover audience measurements, platform economics, earnings distributions, competition, discovery, content restrictions and monetization scenarios. Other marketplace studies are still pending, not silently rolled into the YouTube percentage.
+
+
+**itch.io planning checkpoint (2026-10-26):** the existing 84 tasks remain untouched; 160 additional game-selling questions were prepared across 13 workstreams in four phases. [Detailed research plan](../plans/itch-io.md): **0% research completed**. No market facts were collected; YouTube progress remains unchanged.

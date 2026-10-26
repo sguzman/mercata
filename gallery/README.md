@@ -1,11 +1,11 @@
 # Marketplace gallery
 
-The [Mercata website](../index.html) reads this [machine-readable index](index.json). All 26 specimens are admitted. **YouTube is actively being researched**, with dated official policies, independent aggregate audience statistics, bounded creator-income studies, and source-linked activity reports. The other 25 remain queued. None has a verified, representative total creator-income distribution.
+The [Mercata website](../index.html) reads this [machine-readable index](index.json). All 26 specimens are admitted. **YouTube is actively being researched**, with dated official policies, independent aggregate audience statistics, bounded creator-income studies, and source-linked activity reports. itch.io now has a detailed inventory but remains unresearched; the other 24 remain queued. None has a verified, representative total creator-income distribution.
 
 | Marketplace | Domain | Study | Work queue |
 |---|---|---|---|
 | [Steam](../specimens/steam.json) | games | Economic | [Tasks](../queues/steam.json) |
-| [itch.io](../specimens/itch-io.json) | games | Economic | [Tasks](../queues/itch-io.json) |
+| [itch.io](../specimens/itch-io.json) | games | Inventory ready; research not started | [Detailed plan](../plans/itch-io.md) |
 | [Epic Games Store](../specimens/epic-games-store.json) | games | Economic | [Tasks](../queues/epic-games-store.json) |
 | [Royal Road](../specimens/royal-road.json) | literature | Economic + social audience | [Tasks](../queues/royal-road.json) |
 | [Ream](../specimens/ream.json) | literature | Economic | [Tasks](../queues/ream.json) |

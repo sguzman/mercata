@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "status": "definitions_only",
+  "created_at": "2026-10-26",
+  "concepts": [
+    {
+      "id": "game_listing",
+      "definition": "Public game page is not necessarily a paid commercial title",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "publisher_account",
+      "definition": "An account may represent a team or person; not automatically an individual developer",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "commercial_game",
+      "definition": "A game offered for positive payment under clearly defined conditions",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "free_game",
+      "definition": "A game without mandatory payment, possibly receiving voluntary donations",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "game_build",
+      "definition": "Specific downloadable or browser-playable release artifact",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "browser_play",
+      "definition": "Play event, not necessarily a unique player or a purchase",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "download",
+      "definition": "File acquisition, not necessarily a customer or paid unit",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "paid_unit",
+      "definition": "Unit associated with an actual payment, subject to refund and bundle definitions",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "seller",
+      "definition": "Eligible seller entity; not necessarily the same as individual game developer",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "buyer",
+      "definition": "Paying entity in defined period, requiring validated counting method",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "gross_revenue",
+      "definition": "Payment before explicitly defined deductions",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "net_proceeds",
+      "definition": "Settled seller amount after disclosed marketplace and processing deductions",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "net_profit",
+      "definition": "Seller proceeds minus applicable operating costs, with labor treatment declared",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "effective_hourly_income",
+      "definition": "Defined economic income divided by relevant labor hours",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "zero_earner",
+      "definition": "Eligible publisher cohort member with zero proceeds over an observed window",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "bundle_allocation",
+      "definition": "Explicit fraction of bundle proceeds attributed to an individual item",
+      "observations": [],
+      "source_ids": []
+    },
+    {
+      "id": "conversion_rate",
+      "definition": "Defined paid outcome count over compatible exposure count",
+      "observations": [],
+      "source_ids": []
+    }
+  ],
+  "comparability_rules": [
+    "Do not equate listings with distinct developers.",
+    "Do not equate free downloads or browser plays with purchases.",
+    "Separate paid units from bundle allocations and voluntary tips.",
+    "Distinguish gross revenue, settled proceeds, operating profit and hourly income.",
+    "A representative zero-earner statistic requires a defined cohort and observation window.",
+    "Use unknown rather than zero for unavailable demand, income or conversion statistics."
+  ],
+  "research_started_at": null
+}
