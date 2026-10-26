@@ -94,3 +94,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io first commercial game entry (2026-10-26):** sourced team and account roles, candidate cross-store comparators, global buyer-versus-seller geography, bounded zero-upfront-cash small 2D game scenario preserving unknown labor and sales. 61% → 63% (Δ +2 pp). [Entry protocol](../ontology/itch-io/first-game-entry-scenario-2026.md).
+
+
+**itch.io open-source game engineering research (2026-10-26):** a 491-title academic GitHub/itch.io corpus, multi-label genres, engine signatures, absent ratings and test prevalence added with explicit noncommercial sampling limits. **63% → 64%**, Δ 1 pp, raw mean 64.43%. [Evidence](../ontology/itch-io/open-source-engineering-2026.md).

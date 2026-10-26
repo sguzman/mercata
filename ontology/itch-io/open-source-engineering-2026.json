@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "academic_open_source_game_repository_corpus",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "canella-open-source-itch-games-2026"
+  ],
+  "authors": [
+    "Henrique Mandelli Canella",
+    "Yohan Duarte",
+    "Cristiano Politowski",
+    "Vinicius Durelli",
+    "Andre Takeshi Endo"
+  ],
+  "doi": "10.1145/3786171.3788385",
+  "original_sample_projects": 10548,
+  "validated_repositories_pre_manual_filter": 500,
+  "manual_excluded_non_games_or_bad_source": 9,
+  "analyzed_projects": 491,
+  "population": "hand-curated open-source games listed on itch.io with accessible matched GitHub code repositories, not a commercial seller cohort",
+  "genre_counts_multi_label": {
+    "puzzle": 103,
+    "action": 97,
+    "platformer": 69,
+    "adventure": 44,
+    "shooter": 38,
+    "simulation": 38,
+    "uncategorized": 56
+  },
+  "ratings": {
+    "missing_count": 289,
+    "missing_percent_reported": 58.9,
+    "missing_means_unsold": false,
+    "missing_means_zero_revenue": false,
+    "ratings_observed_not_purchase_count": true
+  },
+  "engineering": {
+    "repositories_with_5_or_fewer_commits": 79,
+    "mean_recent_6_month_commits": 5.04,
+    "repository_star_mean": 74.35,
+    "mean_contributor_count": 4.22,
+    "identified_engine_projects": 260,
+    "unidentified_engine_projects": 231,
+    "identified_godot_by_file": 120,
+    "identified_unity_by_file": 84,
+    "itch_tag_godot": 89,
+    "itch_tag_unity": 79,
+    "automated_test_file_candidates": 111,
+    "manually_confirmed_automated_tests": 36,
+    "confirmed_test_adoption_percent_reported": 7.33,
+    "automated_test_better_commit_activity_association_adjusted_rate_ratio": 3.339,
+    "automated_test_commit_activity_association_p_less_than": 0.001,
+    "automated_test_higher_player_rating_coefficient": -0.0916,
+    "automated_test_rating_p_value": 0.545,
+    "causal_testing_effect_identified": false
+  },
+  "measure_qualifiers": [
+    "Genre tagging permits multiple classifications per game; counts are not exclusive shares of total itch.io games.",
+    "Missing ratings cannot serve as a paid-zero-earnings outcome or unique buyer count.",
+    "Repo age and commits do not identify labor hours or development expenses.",
+    "Godot/Unity engine-detection results describe this curated sample, not all sold games.",
+    "Statistically associated project activity with test presence is not proof tests cause activity, ratings, income or sales.",
+    "No net receipts or publisher identity-income sample was gathered."
+  ],
+  "unknown": {
+    "itch_platform_open_source_publisher_census": null,
+    "paid_game_count_in_sample": null,
+    "zero_paid_sales_count": null,
+    "market_median_income": null,
+    "median_developer_profit": null,
+    "paid_2d_conversion": null,
+    "average_game_development_hours": null,
+    "game_sales_effect_of_tests": null
+  }
+}

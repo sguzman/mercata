@@ -636,6 +636,17 @@
       "evidence_class": "historical_operator_support",
       "license": "Public source linked; own structured summary.",
       "notes": "Existing public features or historical operator explanation, not current specific seller-account permission approval."
+    },
+    {
+      "id": "canella-open-source-itch-games-2026",
+      "url": "https://arxiv.org/abs/2610.03953",
+      "title": "Characterizing Open-Source Video Games from a Software Engineering Perspective",
+      "publisher": "Canella, Duarte, Politowski, Durelli and Endo; Games and Software Engineering 2026",
+      "published_at": "2026-10-02",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "academic_software_engineering_qualified_sample",
+      "license": "Brief numerical research summaries with source and DOI. No underlying repository personal details reproduced.",
+      "notes": "491 specifically selected public itch.io and GitHub open-source games from a prior 10,548-project frame; not all itch.io games, not representative paid sellers or first commercial launches. Dataset at Zenodo 17451086; underlying bytes were not accessed."
     }
   ],
   "claims": [
@@ -2210,6 +2221,86 @@
       "limitations": "Game length, mechanics and production budget used in scenarios are hypothetical and have no sales measurements.",
       "confidence": "high",
       "observed_at": "2026-10-26"
+    },
+    {
+      "id": "academic-corpus-scope",
+      "text": "An October 2026 game software-engineering paper analyzed 491 selected itch.io games matched to accessible public GitHub source repositories after screening a prior 10,548-project dataset.",
+      "source_ids": [
+        "canella-open-source-itch-games-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Sample selection excludes most commercial, closed-source and unmatched projects; not a random paid publisher census."
+    },
+    {
+      "id": "academic-genres-491",
+      "text": "The curated 491-game source sample had 103 Puzzle, 97 Action and 69 Platformer labels, with genres potentially overlapping.",
+      "source_ids": [
+        "canella-open-source-itch-games-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Counts apply only to the open-source sample, not market-wide genre supply or commercial demand."
+    },
+    {
+      "id": "academic-ratings-missing",
+      "text": "289 of the paper's 491 GitHub-matched itch.io games had no player ratings (58.9% of its corpus).",
+      "source_ids": [
+        "canella-open-source-itch-games-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "No rating is not evidence of zero downloads, zero purchasers, or zero creator income."
+    },
+    {
+      "id": "academic-engines",
+      "text": "Repository signature detection identified Godot in 120 and Unity in 84 of 491 sampled open-source games; engines were undetected in 231.",
+      "source_ids": [
+        "canella-open-source-itch-games-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Source-code signature estimates and incomplete tags cannot become all-itch.io game engine market shares."
+    },
+    {
+      "id": "academic-test-adoption",
+      "text": "The authors manually verified automated test suites in 36 of 491 open-source itch.io game repositories after 111 candidates were initially flagged.",
+      "source_ids": [
+        "canella-open-source-itch-games-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "7.33% sample rate not platform-wide testing prevalence and not an indicator of commercial success."
+    },
+    {
+      "id": "academic-testing-association",
+      "text": "In the curated open-source corpus, test files were associated with higher repository commit activity, but were not significantly associated with game ratings after statistical controls.",
+      "source_ids": [
+        "canella-open-source-itch-games-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Observational adjusted association is not a causal benefit for player ratings, production time, sales or developer profit."
+    },
+    {
+      "id": "academic-github-stars-not-sales",
+      "text": "The 491 selected game repositories averaged 74.35 GitHub stars and 4.22 contributors, with large right-skew.",
+      "source_ids": [
+        "canella-open-source-itch-games-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "GitHub stars, contributors and repository commits are not paid customers, game units sold, salaries or hours worked."
+    },
+    {
+      "id": "academic-source-comparability",
+      "text": "The 2026 engineering paper's development variables cannot answer the share of paid games making money or estimate the median income from selling games on itch.io.",
+      "source_ids": [
+        "canella-open-source-itch-games-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "The source does not contain representative positive-price checkout transactions or costs."
     }
   ],
   "observations": [

@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 63,
+  "progress_percent": 64,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -178,7 +178,7 @@
         "itch-io/market/estimate-paid-addressable-demand"
       ],
       "phase": 2,
-      "progress_percent": 34
+      "progress_percent": 35
     },
     {
       "id": "discovery",
@@ -237,7 +237,7 @@
         "itch-io/competition/create-cross-platform-benchmarks"
       ],
       "phase": 2,
-      "progress_percent": 46
+      "progress_percent": 50
     },
     {
       "id": "income",
@@ -272,7 +272,7 @@
         "itch-io/income/register-unavailable-income-fields"
       ],
       "phase": 3,
-      "progress_percent": 47
+      "progress_percent": 48
     },
     {
       "id": "rights",
@@ -299,7 +299,7 @@
         "itch-io/rights/check-resale-and-transfer-conditions"
       ],
       "phase": 3,
-      "progress_percent": 66
+      "progress_percent": 68
     },
     {
       "id": "sales",
@@ -447,7 +447,7 @@
         "itch-io/special-games/plan-release-maintenance-workload"
       ],
       "phase": 2,
-      "progress_percent": 61
+      "progress_percent": 65
     }
   ],
   "deliverables": [
@@ -1210,12 +1210,15 @@
       "objective": "Investigate count all projects, games, paid games and free games separately.",
       "acceptance": "Provide dated source-linked evidence to count all projects, games, paid games and free games separately; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 90,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
         "specimens/itch-io.json",
-        "tests/itch-io-catalog.test.mjs"
+        "tests/itch-io-catalog.test.mjs",
+        "ontology/itch-io/open-source-engineering-2026.json",
+        "ontology/itch-io/open-source-engineering-2026.md",
+        "tests/itch-io-open-source-engineering.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1803,7 +1806,7 @@
       "objective": "Investigate compare 2D, RPG, puzzle, narrative and other tagged supply.",
       "acceptance": "Provide dated source-linked evidence to compare 2D, RPG, puzzle, narrative and other tagged supply; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 79,
+      "percent": 82,
       "evidence": [
         "ontology/itch-io/catalog-snapshot-2026.md",
         "ontology/itch-io/catalog-snapshot-2026.json",
@@ -1814,7 +1817,10 @@
         "tests/itch-io-price-sample.test.mjs",
         "ontology/itch-io/paid-genre-tag-frames-2026.json",
         "ontology/itch-io/paid-genre-tag-frames-2026.md",
-        "tests/itch-io-genre-frames.test.mjs"
+        "tests/itch-io-genre-frames.test.mjs",
+        "ontology/itch-io/open-source-engineering-2026.json",
+        "ontology/itch-io/open-source-engineering-2026.md",
+        "tests/itch-io-open-source-engineering.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1828,12 +1834,15 @@
       "objective": "Investigate define staffing categories only where disclosed.",
       "acceptance": "Provide dated source-linked evidence to define staffing categories only where disclosed; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 64,
+      "percent": 73,
       "evidence": [
         "ontology/itch-io/first-game-entry-scenario-2026.json",
         "ontology/itch-io/first-game-entry-scenario-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-entry-scenario.test.mjs"
+        "tests/itch-io-entry-scenario.test.mjs",
+        "ontology/itch-io/open-source-engineering-2026.json",
+        "ontology/itch-io/open-source-engineering-2026.md",
+        "tests/itch-io-open-source-engineering.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -1894,12 +1903,15 @@
       "objective": "Investigate define sample bias and ratings visibility.",
       "acceptance": "Provide dated source-linked evidence to define sample bias and ratings visibility; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 67,
+      "percent": 84,
       "evidence": [
         "ontology/itch-io/discovery-quality-2026.json",
         "ontology/itch-io/discovery-quality-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-discovery-quality.test.mjs"
+        "tests/itch-io-discovery-quality.test.mjs",
+        "ontology/itch-io/open-source-engineering-2026.json",
+        "ontology/itch-io/open-source-engineering-2026.md",
+        "tests/itch-io-open-source-engineering.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2295,9 +2307,14 @@
       "emoji": "📊",
       "objective": "Investigate require comparable populations and development-cost data.",
       "acceptance": "Provide dated source-linked evidence to require comparable populations and development-cost data; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 24,
+      "evidence": [
+        "ontology/itch-io/open-source-engineering-2026.json",
+        "ontology/itch-io/open-source-engineering-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-open-source-engineering.test.mjs"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 3
@@ -2401,12 +2418,15 @@
       "objective": "Investigate distinguish source code license, executable distribution and branding.",
       "acceptance": "Provide dated source-linked evidence to distinguish source code license, executable distribution and branding; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 35,
+      "percent": 68,
       "evidence": [
         "ontology/itch-io/publisher-rights-refunds-2026.json",
         "ontology/itch-io/publisher-rights-refunds-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-publisher-legal.test.mjs"
+        "tests/itch-io-publisher-legal.test.mjs",
+        "ontology/itch-io/open-source-engineering-2026.json",
+        "ontology/itch-io/open-source-engineering-2026.md",
+        "tests/itch-io-open-source-engineering.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3427,7 +3447,7 @@
       "objective": "Investigate record retrieval dates, citation conditions and dataset licenses.",
       "acceptance": "Provide dated source-linked evidence to record retrieval dates, citation conditions and dataset licenses; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 76,
       "evidence": [
         "ontology/itch-io/traffic-benchmark-2025.json",
         "ontology/itch-io/traffic-benchmark-2025.md",
@@ -3435,7 +3455,10 @@
         "tests/itch-io-traffic-benchmark.test.mjs",
         "ontology/itch-io/publisher-rights-refunds-2026.json",
         "ontology/itch-io/publisher-rights-refunds-2026.md",
-        "tests/itch-io-publisher-legal.test.mjs"
+        "tests/itch-io-publisher-legal.test.mjs",
+        "ontology/itch-io/open-source-engineering-2026.json",
+        "ontology/itch-io/open-source-engineering-2026.md",
+        "tests/itch-io-open-source-engineering.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3660,12 +3683,15 @@
       "objective": "Investigate cover remapping, captions, contrast and input requirements.",
       "acceptance": "Provide dated source-linked evidence to cover remapping, captions, contrast and input requirements; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 47,
+      "percent": 50,
       "evidence": [
         "ontology/itch-io/discovery-quality-2026.json",
         "ontology/itch-io/discovery-quality-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-discovery-quality.test.mjs"
+        "tests/itch-io-discovery-quality.test.mjs",
+        "ontology/itch-io/open-source-engineering-2026.json",
+        "ontology/itch-io/open-source-engineering-2026.md",
+        "tests/itch-io-open-source-engineering.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3757,13 +3783,16 @@
       "objective": "Investigate capture royalties, licenses, exports and conversion work.",
       "acceptance": "Provide dated source-linked evidence to capture royalties, licenses, exports and conversion work; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 26,
+      "percent": 51,
       "evidence": [
         "ontology/itch-io/distribution-build-2026.json",
         "ontology/itch-io/distribution-build-2026.md",
         "site/itch-distribution-audit.mjs",
         "tests/itch-distribution-audit.test.mjs",
-        "specimens/itch-io.json"
+        "specimens/itch-io.json",
+        "ontology/itch-io/open-source-engineering-2026.json",
+        "ontology/itch-io/open-source-engineering-2026.md",
+        "tests/itch-io-open-source-engineering.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3835,7 +3864,7 @@
       "objective": "Investigate track bug reports, compatibility regressions and support hours.",
       "acceptance": "Provide dated source-linked evidence to track bug reports, compatibility regressions and support hours; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 63,
+      "percent": 76,
       "evidence": [
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
@@ -3845,7 +3874,10 @@
         "ontology/itch-io/distribution-build-2026.json",
         "ontology/itch-io/distribution-build-2026.md",
         "site/itch-distribution-audit.mjs",
-        "tests/itch-distribution-audit.test.mjs"
+        "tests/itch-distribution-audit.test.mjs",
+        "ontology/itch-io/open-source-engineering-2026.json",
+        "ontology/itch-io/open-source-engineering-2026.md",
+        "tests/itch-io-open-source-engineering.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
