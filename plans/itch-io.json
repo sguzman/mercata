@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 37,
+  "progress_percent": 39,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -113,7 +113,7 @@
         "itch-io/access/create-zero-cash-entry-scenario"
       ],
       "phase": 1,
-      "progress_percent": 47
+      "progress_percent": 56
     },
     {
       "id": "economics",
@@ -148,7 +148,7 @@
         "itch-io/economics/build-break-even-model"
       ],
       "phase": 1,
-      "progress_percent": 68
+      "progress_percent": 71
     },
     {
       "id": "market",
@@ -272,7 +272,7 @@
         "itch-io/income/register-unavailable-income-fields"
       ],
       "phase": 3,
-      "progress_percent": 33
+      "progress_percent": 34
     },
     {
       "id": "rights",
@@ -356,7 +356,7 @@
         "itch-io/risk/set-downside-limits"
       ],
       "phase": 3,
-      "progress_percent": 44
+      "progress_percent": 47
     },
     {
       "id": "strategy",
@@ -415,7 +415,7 @@
         "itch-io/review/prepare-evidence-gap-summary"
       ],
       "phase": 1,
-      "progress_percent": 24
+      "progress_percent": 25
     },
     {
       "id": "special-games",
@@ -649,12 +649,15 @@
       "objective": "Investigate research age, residency, identity and tax prerequisites.",
       "acceptance": "Provide dated source-linked evidence to research age, residency, identity and tax prerequisites; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 72,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/payment-country-corridors-2026.json",
+        "ontology/itch-io/payment-country-corridors-2026.md",
+        "tests/itch-io-payment-corridors.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -686,9 +689,14 @@
       "emoji": "🚪",
       "objective": "Investigate define a country-by-country eligibility and payout matrix.",
       "acceptance": "Provide dated source-linked evidence to define a country-by-country eligibility and payout matrix; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 46,
+      "evidence": [
+        "ontology/itch-io/payment-country-corridors-2026.json",
+        "ontology/itch-io/payment-country-corridors-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-payment-corridors.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 1
@@ -700,9 +708,14 @@
       "emoji": "🚪",
       "objective": "Investigate check regional purchase and payment-method availability.",
       "acceptance": "Provide dated source-linked evidence to check regional purchase and payment-method availability; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 36,
+      "evidence": [
+        "ontology/itch-io/payment-country-corridors-2026.json",
+        "ontology/itch-io/payment-country-corridors-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-payment-corridors.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 1
@@ -980,12 +993,15 @@
       "objective": "Investigate separate marketplace collection duties from seller liabilities.",
       "acceptance": "Provide dated source-linked evidence to separate marketplace collection duties from seller liabilities; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 63,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/payment-country-corridors-2026.json",
+        "ontology/itch-io/payment-country-corridors-2026.md",
+        "tests/itch-io-payment-corridors.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -999,12 +1015,15 @@
       "objective": "Investigate define settlement periods, holds and withdrawal minimums.",
       "acceptance": "Provide dated source-linked evidence to define settlement periods, holds and withdrawal minimums; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 91,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/payment-country-corridors-2026.json",
+        "ontology/itch-io/payment-country-corridors-2026.md",
+        "tests/itch-io-payment-corridors.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1037,12 +1056,15 @@
       "objective": "Investigate identify who converts currency and when.",
       "acceptance": "Provide dated source-linked evidence to identify who converts currency and when; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 74,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/payment-country-corridors-2026.json",
+        "ontology/itch-io/payment-country-corridors-2026.md",
+        "tests/itch-io-payment-corridors.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1899,12 +1921,15 @@
       "objective": "Investigate include refunds, processor share, marketplace share and settlement.",
       "acceptance": "Provide dated source-linked evidence to include refunds, processor share, marketplace share and settlement; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 67,
       "evidence": [
         "ontology/itch-io/developer-income-cases-2026.json",
         "ontology/itch-io/developer-income-cases-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-income-cases.test.mjs"
+        "tests/itch-io-income-cases.test.mjs",
+        "ontology/itch-io/payment-country-corridors-2026.json",
+        "ontology/itch-io/payment-country-corridors-2026.md",
+        "tests/itch-io-payment-corridors.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2600,12 +2625,15 @@
       "objective": "Investigate distinguish sales restrictions, tax rules and buyer rights.",
       "acceptance": "Provide dated source-linked evidence to distinguish sales restrictions, tax rules and buyer rights; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 42,
+      "percent": 56,
       "evidence": [
         "ontology/itch-io/policy-risk-2025-2026.json",
         "ontology/itch-io/policy-risk-2025-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-policy.test.mjs"
+        "tests/itch-io-policy.test.mjs",
+        "ontology/itch-io/payment-country-corridors-2026.json",
+        "ontology/itch-io/payment-country-corridors-2026.md",
+        "tests/itch-io-payment-corridors.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

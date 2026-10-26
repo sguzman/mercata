@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "payment_route_country_and_currency_crosswalk",
+  "as_of": "2026-10-26",
+  "routes": [
+    {
+      "id": "collected",
+      "platform": "itch.io",
+      "merchant_of_record": "itch_io",
+      "checkout_currency": "USD",
+      "seller_payout_currency": "USD",
+      "seller_payout_providers": [
+        "PayPal",
+        "Payoneer"
+      ],
+      "funds_release_wait_days": 7,
+      "min_request_usd": 5,
+      "review_days_minimum": 7,
+      "review_days_typical": [
+        10,
+        14
+      ],
+      "tax_interview_required": true,
+      "personally_confirmed_eligible": null,
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "direct_stripe",
+      "platform": "itch.io+Stripe",
+      "merchant_of_record": "seller",
+      "checkout_currency": "depends_on_itch_and_provider_configuration",
+      "configured_direct_stripe_mx_supported": null,
+      "generic_stripe_mx_country_supported": true,
+      "domestic_mx_card_charges_require_mxn": true,
+      "personally_confirmed_eligible": null,
+      "source_ids": [
+        "itch-payments",
+        "stripe-global",
+        "stripe-mx-methods"
+      ]
+    },
+    {
+      "id": "direct_paypal",
+      "platform": "itch.io+PayPal",
+      "merchant_of_record": "seller",
+      "checkout_currency": "provider_compatible_selected_currency",
+      "mx_paypal_clabe_automatic_transfer_documented": true,
+      "mx_cross_currency_conversion_fee_applies": true,
+      "personally_confirmed_eligible": null,
+      "source_ids": [
+        "itch-payments",
+        "paypal-mx-receiving"
+      ]
+    }
+  ],
+  "jurisdiction_example": "Mexico contrasted with global/default platform rules, not a personal financial profile",
+  "tax_rules": {
+    "collected_identity_interview_required": true,
+    "platform_documentation_default_no_valid_tax_id_withholding_percent": 30,
+    "individual_withholding_percent": null,
+    "individual_treaty_eligibility": null,
+    "mexican_income_tax_liability": null,
+    "mexican_reporting_requirement": null,
+    "source_ids": [
+      "itch-payments"
+    ]
+  },
+  "unknown": {
+    "mexico_itch_direct_stripe_supported": null,
+    "mexico_itch_collected_payout_account_approved": null,
+    "example_mexico_net_fx_cost": null,
+    "exact_paypal_mx_exchange_rate": null,
+    "example_seller_total_tax": null
+  },
+  "boundaries": [
+    "Generic processor-country presence is not proof of itch.io payment-mode enablement.",
+    "The payer/merchant and checkout currency are distinct from the currency ultimately transferred to a local bank.",
+    "Withholding policy does not tell us an individual seller's correct tax rate or credits.",
+    "No seller account, payout, identity interview, currency exchange or transaction was attempted.",
+    "Do not estimate profitability by subtracting a presumed blanket 30 percent tax from all game sales."
+  ]
+}

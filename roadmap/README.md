@@ -49,3 +49,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io earnings evidence crosswalk (2026-10-26):** independent 2024/2025 Gamedev.js self-selected web developer surveys registered; game-development income kept separate from itch.io-specific seller earnings. **36% → 37%** (Δ +1 pp). [Survey constraints](../ontology/itch-io/web-developer-survey-crosswalk-2026.md).
+
+
+**itch.io payout/country audit (2026-10-26):** global itch.io collected/direct rules cross-checked against Stripe and PayPal Mexico, with processor support distinguished from itch integration and seller eligibility. Task mean **37% → 39%**, Δ +2 pp. [Country/payment crosswalk](../ontology/itch-io/payment-country-corridors-2026.md).

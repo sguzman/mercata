@@ -328,6 +328,39 @@
       "evidence_class": "independent_survey",
       "license": "Short summarized statistics and link to original developer community survey.",
       "notes": "Self-selected web-game-developer community respondents, not an itch.io publisher census. Income questions do not isolate itch.io revenues, and exact question-level denominator not shown in text."
+    },
+    {
+      "id": "stripe-global",
+      "url": "https://stripe.com/global",
+      "title": "Stripe global availability",
+      "publisher": "Stripe",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Short independently summarized operating-country/currency guidance; link original.",
+      "notes": "External processor availability does not guarantee eligibility under itch.io account integration or a specific merchant contract."
+    },
+    {
+      "id": "paypal-mx-receiving",
+      "url": "https://www.paypal.com/mx/cshelp/article/how-do-i-receive-money-through-paypal-help667?locale.x=en_MX",
+      "title": "How do I receive money through PayPal?",
+      "publisher": "PayPal Mexico",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Short independently summarized operating-country/currency guidance; link original.",
+      "notes": "External processor availability does not guarantee eligibility under itch.io account integration or a specific merchant contract."
+    },
+    {
+      "id": "stripe-mx-methods",
+      "url": "https://support.stripe.com/questions/supported-payment-methods-in-mexico?locale=en-GB",
+      "title": "Supported payment methods in Mexico",
+      "publisher": "Stripe Support",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official",
+      "license": "Short independently summarized operating-country/currency guidance; link original.",
+      "notes": "External processor availability does not guarantee eligibility under itch.io account integration or a specific merchant contract."
     }
   ],
   "claims": [
@@ -1004,6 +1037,69 @@
       "confidence": "medium",
       "observed_at": "2026-10-26",
       "limitations": "Difference between two differently sampled voluntary surveys, not verified increase in population-wide zero earners or itch.io sales failure."
+    },
+    {
+      "id": "payout-usd-currency",
+      "text": "For collected payments itch.io lists USD checkout and payout settlement, while direct collection uses a seller-selected provider-compatible currency.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Account-specific processor fees, conversion and final recipient currency still vary."
+    },
+    {
+      "id": "payout-mx-stripe-distinction",
+      "text": "Stripe lists Mexico as a generally supported Stripe operating country, but itch.io's own direct Stripe country/currency examples omit Mexico.",
+      "source_ids": [
+        "itch-payments",
+        "stripe-global"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Cannot infer that itch.io direct Stripe integration works for a specific Mexico-based seller; generic Stripe support is not an itch.io integration guarantee."
+    },
+    {
+      "id": "payout-mx-paypal-fx",
+      "text": "PayPal Mexico says funds received can be automatically transferred to a linked CLABE bank account with MXN conversion when applicable and foreign-exchange fees.",
+      "source_ids": [
+        "paypal-mx-receiving"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Individual payout eligibility, currency settlement, bank compatibility and actual exchange rates are not known."
+    },
+    {
+      "id": "payout-mx-stripe-domestic",
+      "text": "Stripe Mexico's official support page says domestic charges from Mexican cards must be in MXN.",
+      "source_ids": [
+        "stripe-mx-methods"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Processor country rule does not determine itch.io's own seller currency settings or a given seller's account status."
+    },
+    {
+      "id": "payout-tax-validation",
+      "text": "itch.io requires collected sellers to complete an identity/tax interview, validate information before payment, and describes a default 30% withholding when adequate tax identification is absent.",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "This is platform documentation, not tax advice or proof of a final withholding rate for any individual seller, jurisdiction, income classification or treaty claim."
+    },
+    {
+      "id": "payout-mx-current-unknown",
+      "text": "itch.io publicly documents PayPal/Payoneer collected payouts and separate direct processor accounts; the official documentation alone does not establish whether any particular Mexican seller can complete an approved payout.",
+      "source_ids": [
+        "itch-payments",
+        "paypal-mx-receiving",
+        "stripe-global"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "External provider support is not an eligibility confirmation and no real seller account onboarding was attempted."
     }
   ],
   "observations": [
