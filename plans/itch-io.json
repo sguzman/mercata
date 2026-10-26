@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 31,
+  "progress_percent": 33,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -148,7 +148,7 @@
         "itch-io/economics/build-break-even-model"
       ],
       "phase": 1,
-      "progress_percent": 64
+      "progress_percent": 68
     },
     {
       "id": "market",
@@ -208,7 +208,7 @@
         "itch-io/discovery/build-impression-to-sale-funnel"
       ],
       "phase": 2,
-      "progress_percent": 37
+      "progress_percent": 40
     },
     {
       "id": "competition",
@@ -299,7 +299,7 @@
         "itch-io/rights/check-resale-and-transfer-conditions"
       ],
       "phase": 3,
-      "progress_percent": 26
+      "progress_percent": 32
     },
     {
       "id": "sales",
@@ -328,7 +328,7 @@
         "itch-io/sales/separate-buyer-interest-from-purchase"
       ],
       "phase": 3,
-      "progress_percent": 36
+      "progress_percent": 45
     },
     {
       "id": "risk",
@@ -447,7 +447,7 @@
         "itch-io/special-games/plan-release-maintenance-workload"
       ],
       "phase": 2,
-      "progress_percent": 27
+      "progress_percent": 28
     }
   ],
   "deliverables": [
@@ -917,12 +917,14 @@
       "objective": "Investigate check coupons, sales, promotions and bundle price policies.",
       "acceptance": "Provide dated source-linked evidence to check coupons, sales, promotions and bundle price policies; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 75,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/bundle-sale-jam-2026.json",
+        "ontology/itch-io/bundle-sale-jam-2026.md"
       ],
       "artifact": null,
       "priority": "high",
@@ -1049,9 +1051,13 @@
       "emoji": "💳",
       "objective": "Investigate define contribution to seller receipts by title and participating seller.",
       "acceptance": "Provide dated source-linked evidence to define contribution to seller receipts by title and participating seller; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 72,
+      "evidence": [
+        "ontology/itch-io/bundle-sale-jam-2026.json",
+        "ontology/itch-io/bundle-sale-jam-2026.md",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 1
@@ -1431,9 +1437,13 @@
       "emoji": "🧭",
       "objective": "Investigate separate submission, ranking, voting and audience referrals.",
       "acceptance": "Provide dated source-linked evidence to separate submission, ranking, voting and audience referrals; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 50,
+      "evidence": [
+        "ontology/itch-io/bundle-sale-jam-2026.json",
+        "ontology/itch-io/bundle-sale-jam-2026.md",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 2
@@ -2024,9 +2034,13 @@
       "emoji": "⚖️",
       "objective": "Investigate review participation and allocation agreements before comparisons.",
       "acceptance": "Provide dated source-linked evidence to review participation and allocation agreements before comparisons; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 70,
+      "evidence": [
+        "ontology/itch-io/bundle-sale-jam-2026.json",
+        "ontology/itch-io/bundle-sale-jam-2026.md",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 3
@@ -2234,9 +2248,13 @@
       "emoji": "🛒",
       "objective": "Investigate control for timing, audience mix and baseline demand.",
       "acceptance": "Provide dated source-linked evidence to control for timing, audience mix and baseline demand; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 31,
+      "evidence": [
+        "ontology/itch-io/bundle-sale-jam-2026.json",
+        "ontology/itch-io/bundle-sale-jam-2026.md",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 3
@@ -2249,7 +2267,7 @@
       "objective": "Investigate distinguish standalone and allocated bundle purchases.",
       "acceptance": "Provide dated source-linked evidence to distinguish standalone and allocated bundle purchases; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 57,
+      "percent": 83,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -2257,7 +2275,9 @@
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/developer-income-cases-2026.json",
         "ontology/itch-io/developer-income-cases-2026.md",
-        "tests/itch-io-income-cases.test.mjs"
+        "tests/itch-io-income-cases.test.mjs",
+        "ontology/itch-io/bundle-sale-jam-2026.json",
+        "ontology/itch-io/bundle-sale-jam-2026.md"
       ],
       "artifact": null,
       "priority": "high",
@@ -2289,9 +2309,13 @@
       "emoji": "🛒",
       "objective": "Investigate use consented seller records rather than guessed loyalty.",
       "acceptance": "Provide dated source-linked evidence to use consented seller records rather than guessed loyalty; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 25,
+      "evidence": [
+        "ontology/itch-io/bundle-sale-jam-2026.json",
+        "ontology/itch-io/bundle-sale-jam-2026.md",
+        "specimens/itch-io.json"
+      ],
       "artifact": null,
       "priority": "high",
       "phase": 3
@@ -2337,7 +2361,7 @@
       "objective": "Investigate verify collection and wish mechanisms before using them as demand proxies.",
       "acceptance": "Provide dated source-linked evidence to verify collection and wish mechanisms before using them as demand proxies; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 57,
+      "percent": 74,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -2345,7 +2369,9 @@
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/developer-income-cases-2026.json",
         "ontology/itch-io/developer-income-cases-2026.md",
-        "tests/itch-io-income-cases.test.mjs"
+        "tests/itch-io-income-cases.test.mjs",
+        "ontology/itch-io/bundle-sale-jam-2026.json",
+        "ontology/itch-io/bundle-sale-jam-2026.md"
       ],
       "artifact": null,
       "priority": "high",
@@ -3030,12 +3056,14 @@
       "objective": "Investigate separate jam plays, ratings, traffic and commercial sales.",
       "acceptance": "Provide dated source-linked evidence to separate jam plays, ratings, traffic and commercial sales; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 30,
+      "percent": 44,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/bundle-sale-jam-2026.json",
+        "ontology/itch-io/bundle-sale-jam-2026.md"
       ],
       "artifact": null,
       "priority": "normal",

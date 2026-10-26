@@ -37,3 +37,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io payment/content-policy continuity (2026-10-26):** official dated 2025 deindexing/reindexing decisions and present-day separate discovery, enforcement and payment obligations registered with null economic impact figures. **29% → 31%**, Δ **+2 pp**. [Risk audit](../ontology/itch-io/policy-risk-2025-2026.md).
+
+
+**itch.io offers and co-op bundles (2026-10-26):** Registered official single-seller promotion, cooperative bundle weighting/payout requirements, deferred key claims, and game-jam rating boundaries. No sales or uplift inferred. **31% → 33%**, Δ **+2 pp**. [Research report](../ontology/itch-io/bundle-sale-jam-2026.md).

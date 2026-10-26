@@ -274,7 +274,7 @@
           "title": "Model a transparent net-sale example",
           "acceptance": "Calculate gross less documented fees with assumptions.",
           "weight": 1,
-          "progress": 81,
+          "progress": 85,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -284,7 +284,9 @@
             "ontology/itch-io/break-even-scenarios-2026.md",
             "ontology/itch-io/break-even-scenarios-2026.json",
             "site/itch-break-even.mjs",
-            "tests/itch-break-even.test.mjs"
+            "tests/itch-break-even.test.mjs",
+            "ontology/itch-io/bundle-sale-jam-2026.json",
+            "ontology/itch-io/bundle-sale-jam-2026.md"
           ]
         },
         {
@@ -679,9 +681,13 @@
           "title": "Check exclusivity and restrictions",
           "acceptance": "State duration, geography and affected rights.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 35,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/bundle-sale-jam-2026.json",
+            "ontology/itch-io/bundle-sale-jam-2026.md",
+            "specimens/itch-io.json"
+          ]
         },
         {
           "id": "rights/moderation",
@@ -810,9 +816,13 @@
           "title": "Study repeat and recurring purchases",
           "acceptance": "Define retention, subscriptions, renewal and churn measurements.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 42,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/bundle-sale-jam-2026.json",
+            "ontology/itch-io/bundle-sale-jam-2026.md",
+            "specimens/itch-io.json"
+          ]
         },
         {
           "id": "sales/analytics",
@@ -820,7 +830,7 @@
           "title": "List seller analytics",
           "acceptance": "Identify reported conversion and traffic metrics, access and gaps.",
           "weight": 1,
-          "progress": 66,
+          "progress": 78,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -829,7 +839,9 @@
             "tests/itch-io-economics.test.mjs",
             "ontology/itch-io/developer-income-cases-2026.json",
             "ontology/itch-io/developer-income-cases-2026.md",
-            "tests/itch-io-income-cases.test.mjs"
+            "tests/itch-io-income-cases.test.mjs",
+            "ontology/itch-io/bundle-sale-jam-2026.json",
+            "ontology/itch-io/bundle-sale-jam-2026.md"
           ]
         }
       ]
@@ -1180,13 +1192,15 @@
           "title": "Refund, discounts and regional pricing",
           "acceptance": "Collect dated public evidence and document implications for refund, discounts and regional pricing.",
           "weight": 1,
-          "progress": 55,
+          "progress": 62,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
             "ontology/itch-io/commercial-rules-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-economics.test.mjs"
+            "tests/itch-io-economics.test.mjs",
+            "ontology/itch-io/bundle-sale-jam-2026.json",
+            "ontology/itch-io/bundle-sale-jam-2026.md"
           ]
         },
         {

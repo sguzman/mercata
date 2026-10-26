@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "offer_and_bundle_accounting_boundaries",
+  "as_of": "2026-10-26",
+  "source_ids": [
+    "itch-coop-bundles",
+    "itch-sale-detail",
+    "itch-jams"
+  ],
+  "sale_models": [
+    {
+      "id": "single_seller_promotion",
+      "seller_scope": "one_account",
+      "bundle_multi_account": false,
+      "analytics_visibility": "sale_host_only",
+      "source_ids": [
+        "itch-sale-detail"
+      ]
+    },
+    {
+      "id": "multi_seller_coop_bundle",
+      "seller_scope": "multiple_accounts",
+      "participant_approval_required": true,
+      "share_basis": "relative_approved_participant_weights",
+      "requires_itch_payout_eligibility": true,
+      "source_ids": [
+        "itch-coop-bundles"
+      ]
+    },
+    {
+      "id": "game_jam",
+      "seller_scope": "game_submission",
+      "submission_is_paid_order": false,
+      "rank_is_paid_order": false,
+      "source_ids": [
+        "itch-jams"
+      ]
+    }
+  ],
+  "deferred_download_key_threshold_projects_exclusive": 15,
+  "measures": [
+    "bundle_purchase",
+    "included_game_entitlement",
+    "individual_download_key_claim",
+    "allocable_participant_proceeds",
+    "jam_submission",
+    "jam_rating"
+  ],
+  "rules": [
+    "One multi-game order is not an independent standalone full-price purchase for every included game.",
+    "Relative share weights allocate a specified distributable pool; do not allocate full gross sale to each participant.",
+    "Deferred key claims cannot proxy bundle sales, since every included game is owned at purchase.",
+    "Ratings, rankings and jam submissions cannot proxy paid orders.",
+    "No payment amount, revenue uplift or purchase conversion inferred from promotion features."
+  ],
+  "unobserved": {
+    "typical_bundle_earnings": null,
+    "bundle_purchase_volume": null,
+    "cooperative_bundle_profit": null,
+    "conversion_effect": null,
+    "game_jam_sales_lift": null
+  }
+}

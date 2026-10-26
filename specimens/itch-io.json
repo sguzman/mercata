@@ -240,6 +240,28 @@
       "evidence_class": "official",
       "license": "Source referenced by public URL; independently summarized policy information.",
       "notes": "Time-bound public platform announcement or terms. No individual game exposure, account or commercial outcome inferred."
+    },
+    {
+      "id": "itch-coop-bundles",
+      "url": "https://itch.io/docs/creators/bundles",
+      "title": "Hosting a co-op bundle",
+      "publisher": "itch.io Creator Documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official documentation linked, independently summarized.",
+      "notes": "Feature and contract documentation, not observed revenue or profits."
+    },
+    {
+      "id": "itch-sale-detail",
+      "url": "https://itch.io/docs/creators/sales",
+      "title": "Hosting a sale or bundle",
+      "publisher": "itch.io Creator Documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Official documentation linked, independently summarized.",
+      "notes": "Feature and contract documentation, not observed revenue or profits."
     }
   ],
   "claims": [
@@ -652,6 +674,86 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Conditional policy enforcement, not a documented rate of refund or seller closure."
+    },
+    {
+      "id": "sale-single-publisher",
+      "text": "Single-seller promotions may include discounts and multiple items sold for one optional bundle price.",
+      "source_ids": [
+        "itch-sale-detail"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Offer availability does not prove higher demand or profit."
+    },
+    {
+      "id": "sale-gated-offers",
+      "text": "An itch.io promotion can use coupon-code access or require an existing item ownership entitlement.",
+      "source_ids": [
+        "itch-sale-detail"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Does not establish returning-buyer counts or retention effects."
+    },
+    {
+      "id": "sale-analytics",
+      "text": "A promotion owner can access purchase and earnings analytics for that sale.",
+      "source_ids": [
+        "itch-sale-detail"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Seller-private analytics cannot stand in for representative public sales."
+    },
+    {
+      "id": "coop-revenue-weights",
+      "text": "Cooperative game bundles allocate eligible proceeds to participants using relative weights, not full order revenue to every game.",
+      "source_ids": [
+        "itch-coop-bundles"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Must not double-count one aggregate bundle checkout as several standalone sales."
+    },
+    {
+      "id": "coop-approval",
+      "text": "Cooperative bundles require participant approval before publishing the specified terms and revenue distribution.",
+      "source_ids": [
+        "itch-coop-bundles"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Documented workflow, not evidence that any particular bundle sold units."
+    },
+    {
+      "id": "coop-payout-rails",
+      "text": "Receiving cooperative bundle proceeds requires itch.io payout eligibility even for a seller otherwise set up for direct payments.",
+      "source_ids": [
+        "itch-coop-bundles"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Eligibility is account- and country-dependent; no individual approval inferred."
+    },
+    {
+      "id": "bundle-entitlement-key",
+      "text": "With more than 15 bundled projects, download keys are generated on individual claims, while bundle purchase grants ownership of all included projects.",
+      "source_ids": [
+        "itch-coop-bundles"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Distinct counts: bundle purchases, game entitlements and claimed download keys."
+    },
+    {
+      "id": "jam-rating-warning",
+      "text": "Game jams can have ranked voting and ratings, which the operator cautions can favor popular creators or manipulation.",
+      "source_ids": [
+        "itch-jams"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Jam engagement is not a sale or observed conversion."
     }
   ],
   "observations": [
