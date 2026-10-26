@@ -102,6 +102,14 @@ try{
 
     assert.equal(await page.locator('.earning-gate-details').count(),16,'Missing product-specific eligibility checklists');
     assert.equal(await page.locator('.application-stage').count(),9,'Missing application stages');
+    const appealPanel=page.locator('.application-lifecycle .ypp-review-appeal-panel');
+    assert.equal(await appealPanel.count(),1,'Missing video versus YPP enforcement routes');
+    assert.equal(await appealPanel.locator('.ypp-appeal-route').count(),5,'Missing five distinct appeal states');
+    assert((await appealPanel.textContent()).includes('Pre-suspension 7 days'));
+    assert((await appealPanel.textContent()).includes('Post-suspension 21 days'));
+    assert((await appealPanel.textContent()).includes('First ordinary rejection may allow a new application after 30 days'));
+    assert((await appealPanel.textContent()).includes('failed formal appeals can involve 90 days'));
+    assert((await appealPanel.textContent()).includes('yellow ad icon is not YPP expulsion'));
     const effort=page.locator('.production-effort');
     assert.equal(await effort.locator('.production-effort-card').count(),6,'Missing educational/entertainment production workflows');
     await effort.locator('summary').click();

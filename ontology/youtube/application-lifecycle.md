@@ -33,3 +33,21 @@ YouTube says a decision typically takes about **one month** once the application
 A creator must account for potentially substantial labor before eligibility, review delay, product activation, time spent attracting advertisers or buyers, reporting adjustments, and payment thresholds and bank settlement. There is no reliable generic time-to-first-payment number in the available sources. The [payment calendar](payment-gates.md) covers the later monthly settlement cycle once an account is earning.
 
 Mercata records the direct joining fee as **unknown** rather than casually declaring it zero without an explicit verified fee schedule. Out-of-pocket equipment costs and production labor remain separate. The [machine model](application-lifecycle.json) preserves uncertain stages without assigning a fake average.
+
+## Separate YPP suspension, rejection and single-video advertiser review (October 2026)
+
+YouTube has **different status scopes and appeal pathways**. The existing application steps above only summarize initial review; they should not be read as a universal appeal schedule.
+
+| Initial event | Affected scope | Official route / window |
+| --- | --- | --- |
+| [Yellow-icon limited ads on a video](https://support.google.com/youtube/answer/9208564?hl=en) | Individual video's advertiser suitability | Eligible owners can request human review. Initial automated checks may take up to 24 hours; **that is not a guaranteed human appeal deadline**. No automatic YPP removal. |
+| [First rejected YPP application](https://support.google.com/youtube/answer/9235730?hl=en) | Channel application, not existing approved payouts | Can appeal within **21 days**. Without using an appeal, first rejected applicants may apply again after **30 days**. |
+| Repeat rejected YPP application | Channel application | Can appeal within **21 days**; normal reapplication wait **90 days**. |
+| [Scheduled YPP suspension](https://support.google.com/youtube/answer/9564590?hl=en) | Channel's prospective YPP eligibility | Pre-suspension appeal within **7 days** pauses suspension during review. A rejected *pre-suspension* appeal generally cannot be followed by a second appeal to that suspension. |
+| YPP suspension without earlier pre-suspension appeal | Existing channel monetization modules | Appeal within **21 days after suspension**, receive decision within **14 days** of appeal; successful appeal ordinarily leads to reentry within **30 days**. Otherwise reapply **90 days after suspension**. |
+
+**Important non-equivalence:** the 30-day first-application ordinary reapplication window and the YPP appeal Help's **90-day wait after an unsuccessful formal appeal** describe **different procedural branches**. They should not be merged into a single default deadline. Studio's notice is the relevant case-specific source. A YPP suspension may affect ads, Premium and channel memberships; a single video’s yellow icon does **not** by itself remove its owner from YPP.
+
+The official [video-appeal guidance](https://support.google.com/youtube/answer/9564590?hl=en) permits an **unlisted, new appeal video shorter than five minutes** when eligible, showing the channel URL early and how channel content is created. No appeal video or private channel record is archived by Mercata. Copyright strikes, Content ID disputes, 18+ restrictions, and identity/payment verification are independently defined processes, **not** interchangeable with these YPP deadlines.
+
+These are stated platform procedures, not historical average adjudication times, guaranteed reinstatement, representative error rates, typical income lost, or creator-specific advice. The machine crosswalk leaves all such outcome variables `null`.

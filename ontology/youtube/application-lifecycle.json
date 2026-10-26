@@ -2,7 +2,7 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "earnings_access_lifecycle",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-25",
   "status": "official_guidance_not_personal_application_tracking",
   "steps": [
     {
@@ -113,6 +113,146 @@
     "A reapplication cooldown is not a recommended way to build a business.",
     "Do not buy advertising views for the purpose of defeating eligibility thresholds.",
     "No bank account, tax ID, channel credentials or personal appeal information belongs in this public dossier.",
-    "The information is general, not an evaluation of any creator's eligibility."
-  ]
+    "The information is general, not an evaluation of any creator's eligibility.",
+    "Treat YPP pre-suspension appeal, ordinary application rejection, and yellow-icon advertiser suitability checks as different routes with separate deadlines.",
+    "Do not use the standard first-rejection 30-day reapplication rule to override the 90-day waiting rule given after an unsuccessful formal YPP appeal."
+  ],
+  "monetization_enforcement_crosswalk": {
+    "reviewed_at": "2026-10-25",
+    "source_ids": [
+      "yt-ypp-rejection-appeal-guidance-2026",
+      "yt-ypp-denial-faq-2026",
+      "yt-monetization-icons-human-review-2026",
+      "yt-ads-guidelines-2026"
+    ],
+    "scope": "public_youtube_studio_monetization_status_and_appeal_rules_not_specific_creator_account",
+    "pathways": [
+      {
+        "id": "individual_video_ad_suitability",
+        "scope": "video",
+        "trigger": "video_automated_ad_suitability_or_limited_ads_yellow_icon",
+        "affected_products": [
+          "advertising_demand_for_specific_video"
+        ],
+        "appeal_route": "eligible_creator_may_request_human_review",
+        "pre_review_initial_processing_max_hours_possible": 24,
+        "human_review_deadline_days": null,
+        "appeal_window_days": null,
+        "automatic_ypp_membership_loss": false,
+        "guaranteed_restored_advertising": false,
+        "source_ids": [
+          "yt-monetization-icons-human-review-2026",
+          "yt-ads-guidelines-2026"
+        ]
+      },
+      {
+        "id": "first_ypp_application_rejection",
+        "scope": "channel",
+        "trigger": "first_application_rejected_by_policy_review",
+        "affected_products": [
+          "YPP_application_unapproved"
+        ],
+        "appeal_route": "appeal_through_YouTube_Studio_if_available",
+        "appeal_window_days": 21,
+        "earliest_standard_reapply_after_rejection_days": 30,
+        "failed_appeal_may_require_wait_days_from_rejection": 90,
+        "automatic_ypp_membership_loss": null,
+        "guaranteed_restored_advertising": false,
+        "note": "30-day first rejection reapplication applies to the ordinary first-time rejection path; failed appeals are separately addressed by YPP appeal guidance and may require a 90-day wait.",
+        "source_ids": [
+          "yt-ypp-denial-faq-2026",
+          "yt-ypp-rejection-appeal-guidance-2026"
+        ]
+      },
+      {
+        "id": "repeated_ypp_application_rejection",
+        "scope": "channel",
+        "trigger": "later_or_repeat_YPP_application_rejection",
+        "affected_products": [
+          "YPP_application_unapproved"
+        ],
+        "appeal_route": "appeal_within_published_window",
+        "appeal_window_days": 21,
+        "earliest_standard_reapply_after_rejection_days": 90,
+        "automatic_ypp_membership_loss": null,
+        "guaranteed_restored_advertising": false,
+        "source_ids": [
+          "yt-ypp-denial-faq-2026"
+        ]
+      },
+      {
+        "id": "scheduled_ypp_suspension",
+        "scope": "channel",
+        "trigger": "YouTube_warns_of_scheduled_YPP_suspension",
+        "affected_products": [
+          "potential_YPP_earning_modules"
+        ],
+        "appeal_route": "pre_suspension_appeal_pauses_suspension_pending_review",
+        "pre_suspension_appeal_window_days": 7,
+        "decision_communication_within_days": 14,
+        "appeal_again_after_failed_pre_suspension_appeal": false,
+        "first_post_suspension_appeal_alternative_only_if_no_preappeal": true,
+        "automatic_ypp_membership_loss": null,
+        "guaranteed_restored_advertising": false,
+        "source_ids": [
+          "yt-ypp-rejection-appeal-guidance-2026"
+        ]
+      },
+      {
+        "id": "already_suspended_ypp_without_preappeal",
+        "scope": "channel",
+        "trigger": "YPP_suspended_with_no_pre_suspension_appeal",
+        "affected_products": [
+          "watch_page_ads",
+          "YouTube_Premium_revenue",
+          "paid_channel_membership_modules",
+          "other_YPP_monetization_features"
+        ],
+        "appeal_route": "post_suspension_appeal_if_preappeal_not_used",
+        "post_suspension_appeal_window_days": 21,
+        "decision_communication_within_days": 14,
+        "successful_appeal_reentry_within_days": 30,
+        "reapply_after_suspension_days": 90,
+        "automatic_ypp_membership_loss": true,
+        "guaranteed_restored_advertising": false,
+        "source_ids": [
+          "yt-ypp-rejection-appeal-guidance-2026"
+        ]
+      }
+    ],
+    "video_appeal_requirements": {
+      "source_id": "yt-ypp-rejection-appeal-guidance-2026",
+      "only_when_eligible": true,
+      "less_than_minutes": 5,
+      "unlisted": true,
+      "new_upload_on_appealed_channel": true,
+      "channel_url_in_first_seconds": 30,
+      "process_evidence_required": true,
+      "no_private_appeal_uploaded_to_public_repository": true
+    },
+    "distinct_not_ypp_appeals": [
+      "copyright_content_id_dispute",
+      "community_guidelines_strike_appeal",
+      "legal_takedown",
+      "age_restriction_or_made_for_kids_appeal",
+      "payment_address_or_identity_verification_hold"
+    ],
+    "unmeasured": {
+      "video_human_review_success_rate": null,
+      "video_human_review_time_distribution": null,
+      "ypp_channel_appeal_approval_rate": null,
+      "average_creator_revenue_loss_due_to_suspension": null,
+      "account_status_of_any_creator": null,
+      "actual_completed_appeals": null
+    },
+    "policy_boundaries": [
+      "A yellow video ad icon does not prove removal from YPP; monetization eligibility is checked at different scopes.",
+      "An ordinary first-application 30-day reapplication rule must not erase the 90-day cooldown described for failed YPP appeals.",
+      "A rejected pre-suspension appeal has different later appeal eligibility from suspension without a pre-suspension appeal.",
+      "YouTube's 14-day appeal decision target and 30-day successful reentry target do not measure average outcomes or guarantee approval.",
+      "Initial 24-hour video suitability checks do not establish a universal time limit for a requested human review.",
+      "Copyright, age restrictions and Community Guidelines enforcement have independent appeal processes.",
+      "No appeal video, channel credentials, personal account ID, subscriber list or payment documents are stored here."
+    ]
+  }
 }

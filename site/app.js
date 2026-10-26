@@ -3946,6 +3946,27 @@ function renderApplicationLifecycle(model) {
     list.append(item);
   }
   details.append(list);
+  const appeal=model.monetization_enforcement_crosswalk;
+  if(appeal?.pathways?.length===5){
+    const panel=make('div','ypp-review-appeal-panel');
+    panel.append(make('h5','','Video-level ad review and channel-level YPP appeals are different'));
+    const groups=make('div','ypp-appeal-routes');
+    for(const item of appeal.pathways){
+      const box=make('div','ypp-appeal-route');
+      box.append(make('strong','',item.id.replaceAll('_',' ')));
+      box.append(make('p','measure-limit','Scope: '+item.scope+
+       (item.appeal_window_days?' · Appeal '+item.appeal_window_days+' days':'')+
+       (item.pre_suspension_appeal_window_days?' · Pre-suspension '+item.pre_suspension_appeal_window_days+' days':'')+
+       (item.post_suspension_appeal_window_days?' · Post-suspension '+item.post_suspension_appeal_window_days+' days':'')+
+       (item.earliest_standard_reapply_after_rejection_days?' · Standard reapply '+item.earliest_standard_reapply_after_rejection_days+' days':'')+
+       (item.reapply_after_suspension_days?' · Reapply after suspension '+item.reapply_after_suspension_days+' days':'')));
+      groups.append(box);
+    }
+    panel.append(groups);
+    panel.append(make('p','measure-limit','First ordinary rejection may allow a new application after 30 days, but failed formal appeals can involve 90 days. A yellow ad icon is not YPP expulsion; a 24-hour initial video check is not a human appeal deadline.'));
+    panel.append(make('p','measure-limit','Official guidance, not a guaranteed result or account-specific deadline. Studio notices govern eligibility; no creator information or appeal videos collected.'));
+    details.append(panel);
+  }
   const link=make('a','inline-link','Read the full application and payment lifecycle ↗');
   link.href='./ontology/youtube/application-lifecycle.md';link.target='_blank';link.rel='noopener noreferrer';
   details.append(link);

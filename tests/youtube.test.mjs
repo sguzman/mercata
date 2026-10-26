@@ -1689,3 +1689,32 @@ test('Korean 50-channel engagement panel reports associations, not new-to-return
  assert.equal(obs.study_overlap_with_korean_beauty_47_2026,null);
  assert.equal(obs.private_records_obtained,false);
 });
+
+test('YouTube monetization appeal windows differ between video review, first rejection and YPP suspension',async()=>{
+ const [l,d]=await Promise.all([load('ontology/youtube/application-lifecycle.json'),load('specimens/youtube.json')]);
+ const c=l.monetization_enforcement_crosswalk,ids=new Set(d.evidence.map(x=>x.id));
+ assert(c.source_ids.every(id=>ids.has(id)));
+ assert.deepEqual(c.pathways.map(x=>x.id),[
+  'individual_video_ad_suitability','first_ypp_application_rejection','repeated_ypp_application_rejection',
+  'scheduled_ypp_suspension','already_suspended_ypp_without_preappeal']);
+ assert(c.pathways.every(x=>x.source_ids.every(id=>ids.has(id))&&x.guaranteed_restored_advertising===false));
+ const [video,first,repeat,scheduled,suspended]=c.pathways;
+ assert.equal(video.scope,'video');assert.equal(video.automatic_ypp_membership_loss,false);
+ assert.equal(video.pre_review_initial_processing_max_hours_possible,24);
+ assert.equal(video.human_review_deadline_days,null);
+ assert.equal(first.scope,'channel');assert.equal(first.appeal_window_days,21);
+ assert.equal(first.earliest_standard_reapply_after_rejection_days,30);
+ assert.equal(first.failed_appeal_may_require_wait_days_from_rejection,90);
+ assert.equal(repeat.earliest_standard_reapply_after_rejection_days,90);
+ assert.equal(scheduled.pre_suspension_appeal_window_days,7);
+ assert.equal(scheduled.appeal_again_after_failed_pre_suspension_appeal,false);
+ assert.equal(suspended.post_suspension_appeal_window_days,21);
+ assert.equal(suspended.decision_communication_within_days,14);
+ assert.equal(suspended.successful_appeal_reentry_within_days,30);
+ assert.equal(suspended.reapply_after_suspension_days,90);
+ assert.equal(c.video_appeal_requirements.less_than_minutes,5);
+ assert.equal(c.video_appeal_requirements.unlisted,true);
+ assert(Object.values(c.unmeasured).every(x=>x===null));
+ assert(d.claims.some(x=>x.id==='ypp-2026-distinct-video-vs-channel-appeal-paths'&&
+  x.source_ids.includes('yt-monetization-icons-human-review-2026')));
+});
