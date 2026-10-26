@@ -1575,6 +1575,26 @@ function renderGenderCommunityEvidence(data,dossier){
   grid.append(card);
  }
  details.append(grid);
+ const child=data.independent_child_genre_survey;
+ if(child?.genre_preference_percentages?.length){
+  const block=make('div','gender-child-genre-panel');
+  block.append(make('h5','','Australian child YouTube-watchers: selected survey genre choices'));
+  block.append(make('p','measure-limit','2025 Roy Morgan Australia, overall N='+child.survey_total_respondents_n.toLocaleString('en-US')+
+   ' ages '+child.age_range+'. Percentages are within reported boy/girl groups who watch YouTube, NOT the genders of genre viewers; subgroup n and uncertainty are unpublished.'));
+  const table=make('div','gender-child-genre-grid');
+  for(const genre of child.genre_preference_percentages){
+   const card=make('article','gender-child-genre-card');
+   card.append(make('h5','',genre.genre));
+   card.append(make('strong','',genre.boys_percent+'% boys group · '+genre.girls_percent+'% girls group'));
+   table.append(card);
+  }
+  block.append(table);
+  block.append(make('p','measure-limit','Overlapping genre choices; no exact beauty-and-gaming joint people, no individual child profiling, no creator gender composition, and no generalization to adult or global audiences.'));
+  block.append(audienceSources([child.source_id],dossier));
+  details.append(block);
+ }
+ const uk=data.other_cross_platform_child_genre_direction;
+ if(uk)details.append(make('p','measure-limit','UK Ofcom child genre patterns cover any video app/site, NOT YouTube-only: no common YouTube gender denominator for pooling with Australian children.'));
  details.append(make('p','measure-limit','One 2024–2025 vendor-selected U.S. female 25–34 Gaming panel reported 5% Beauty/Gaming overlap, but the matched-person denominator and population weighting are unavailable. No gender stereotype or national audience union is supported.'));
  details.append(audienceSources(data.sources,dossier));
  const link=make('a','inline-link','Source definitions, missing data and privacy safeguards ↗');

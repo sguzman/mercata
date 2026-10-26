@@ -600,6 +600,11 @@ try{
     await genderEvidence.locator('summary').click();
     assert((await genderEvidence.textContent()).includes('unknown, never zero'));
     assert((await genderEvidence.textContent()).includes('No gender stereotype'));
+    assert.equal(await genderEvidence.locator('.gender-child-genre-card').count(),4,'Missing independent Australian child-video genre survey');
+    assert((await genderEvidence.textContent()).includes('67% boys group · 39% girls group'));
+    assert((await genderEvidence.textContent()).includes('5% boys group · 31% girls group'));
+    assert((await genderEvidence.textContent()).includes('no individual child profiling'));
+    assert((await genderEvidence.textContent()).includes('NOT YouTube-only'));
     const beautyGaming=page.locator('.beauty-gaming-panel');
     assert.equal(await beautyGaming.locator('.beauty-gaming-card').count(),4,'Missing bounded beauty-gaming panel findings');
     await beautyGaming.locator('summary').click();

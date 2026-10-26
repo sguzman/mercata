@@ -2,14 +2,16 @@
   "schema_version": 1,
   "platform": "youtube",
   "kind": "gender_descriptive_community_evidence",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-26",
   "status": "selected_vendor_panel_and_owner_gender_metrics_not_general_population",
   "sources": [
     "analytics-limits",
     "api-dimensions",
-    "tubular-gaming-beauty-overlap-2025"
+    "tubular-gaming-beauty-overlap-2025",
+    "roymorgan-young-australians-youtube-2025",
+    "ofcom-children-parents-media-2026"
   ],
-  "research_population": "Aggregate gender-labeled owner reports and one vendor-selected U.S. 25–34 female gaming-viewer panel; not individuals or all creators",
+  "research_population": "Aggregate gender-labeled owner reports and one vendor-selected U.S. 25–34 female gaming-viewer panel; not individuals or all creators; separate 2025 Australian YouTube-watching child survey age 6–13 and UK cross-app child genre directional survey; neither is a creator population",
   "measurement_surfaces": [
     {
       "id": "owner_gender_dimension",
@@ -103,6 +105,79 @@
     "An unavailable analytics cell is unknown, not zero.",
     "Vendor 5% overlap is not a known denominator or deduplicated union; do not multiply by panel n.",
     "Content formats and communities can overlap; no gender stereotype is an empirical population model.",
-    "Do not store person-level demographics, identifiers, OAuth tokens or private watch histories."
-  ]
+    "Do not store person-level demographics, identifiers, OAuth tokens or private watch histories.",
+    "No Australian child genre-by-gender survey percentage identifies personal traits or overlaps, creator composition or an intersection between gaming and fashion viewers.",
+    "UK Ofcom cross-video-app directional gender findings and Australian YouTube-conditioned child genre shares are distinct frames; do not pool."
+  ],
+  "independent_child_genre_survey": {
+    "source_id": "roymorgan-young-australians-youtube-2025",
+    "source_publication": "2026-02-17",
+    "fieldwork": "2025-04_to_2025-12",
+    "geography": "Australia",
+    "age_range": "6–13",
+    "survey_total_respondents_n": 1129,
+    "population": "children_in_respondent_gender_group_reported_watching_youtube",
+    "child_youtube_watcher_n": null,
+    "boys_subgroup_n": null,
+    "girls_subgroup_n": null,
+    "per_cell_margin_error_pp": null,
+    "reported_gender_categories": [
+      "boys",
+      "girls"
+    ],
+    "genre_preference_percentages": [
+      {
+        "genre": "gaming",
+        "boys_percent": 67,
+        "girls_percent": 39
+      },
+      {
+        "genre": "fashion",
+        "boys_percent": 5,
+        "girls_percent": 31
+      },
+      {
+        "genre": "music",
+        "boys_percent": 27,
+        "girls_percent": 41
+      },
+      {
+        "genre": "animation",
+        "boys_percent": 38,
+        "girls_percent": 36
+      }
+    ],
+    "multiple_genres_per_child_possible": true,
+    "reports_creator_gender_composition": false,
+    "reports_unique_people_cross_genre_overlap": false,
+    "reports_country_national_adult_population": false,
+    "infer_child_identity_from_public_profile_permitted": false,
+    "limitations": [
+      "Within-group conditional percentages of Australian surveyed YouTube-watching children, not the fraction of each genre audience composed of boys or girls.",
+      "The source survey's overall N=1129 is not each gender's YouTube-watching respondent cell or the reported genre cell denominator.",
+      "The same participant may enjoy several genres; without joint response tables there is no specific gaming-and-fashion intersection numerator.",
+      "The survey's reported boy/girl categories do not establish biological sex, personal gender identity or a basis for assigning traits to any child.",
+      "Age 6–13 and Australian country scope exclude generalization to U.S. adult vendor panel, global platform users, creators or 2026 monetization.",
+      "No private or individual child audience profiles, video views, comment identifiers or respondent records are collected."
+    ]
+  },
+  "other_cross_platform_child_genre_direction": {
+    "source_id": "ofcom-children-parents-media-2026",
+    "country": "United Kingdom",
+    "survey_period": "2025–2026",
+    "platform_scope": "any_video_app_or_site_not_youtube_specific",
+    "boys_more_likely": [
+      "sports_videos",
+      "gameplay_videos"
+    ],
+    "girls_more_likely": [
+      "music_videos",
+      "how_to_instructions",
+      "asmr",
+      "self_improvement"
+    ],
+    "youtube_specific_gender_genre_rates": null,
+    "exact_subgroup_denominators": null,
+    "cannot_be_pooled_with_australia_youtube_survey": true
+  }
 }

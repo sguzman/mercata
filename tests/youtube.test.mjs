@@ -255,6 +255,16 @@ test('Gender-associated research preserves reporting privacy and missing denomin
  assert.equal(m.measurement_surfaces[1].missing_means_zero,false);
  assert.equal(m.bounded_vendor_study.overlap_numerator,null);
  assert.equal(m.bounded_vendor_study.overlap_denominator,null);
+ const child=m.independent_child_genre_survey;
+ assert.equal(child.survey_total_respondents_n,1129);
+ assert.deepEqual(child.genre_preference_percentages.map(x=>[x.genre,x.boys_percent,x.girls_percent]),[
+  ['gaming',67,39],['fashion',5,31],['music',27,41],['animation',38,36]]);
+ assert.equal(child.child_youtube_watcher_n,null);
+ assert.equal(child.reports_unique_people_cross_genre_overlap,false);
+ assert.equal(child.reports_creator_gender_composition,false);
+ assert.equal(child.infer_child_identity_from_public_profile_permitted,false);
+ assert.equal(m.other_cross_platform_child_genre_direction.youtube_specific_gender_genre_rates,null);
+ assert(m.sources.every(id=>ids.has(id)));
  assert(m.comparison_gates.every(g=>g.passed===false));
  assert(Object.values(m.unknowns).every(v=>v===null));
 });
