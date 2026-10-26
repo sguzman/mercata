@@ -7,7 +7,8 @@
   "source_ids": [
     "creatoriq-direct-payments-2025",
     "creatoriq-state-creators-2026",
-    "kolect-2026-youtube-agreed-collaboration-tier-fees"
+    "kolect-2026-youtube-agreed-collaboration-tier-fees",
+    "opensponsorship-2026-paid-deliverable-fee-by-tier"
   ],
   "datasets": [
     {
@@ -91,7 +92,8 @@
     "Mean dollars per campaign and median dollars per creator use different units; never portray their difference as earnings skew.",
     "Direct payee records and the CreatorIQ/Influencers.club voluntary survey are distinct research programs, neither representative of all YouTube publishers.",
     "Comparing 2023, 2024 and 2025 payee shares is a trend among potentially changing commercial vendor cohorts, not a fixed-person panel.",
-    "Source does not publish the exact subscriber-count by income joint distribution for all YouTube creators, and neither ad revenue nor creator expenses are included."
+    "Source does not publish the exact subscriber-count by income joint distribution for all YouTube creators, and neither ad revenue nor creator expenses are included.",
+    "OpenSponsorship selected completed paid deliverables and Kolect selected accepted collaborations have different platforms, follower-tier boundaries, outcome stages and units: never combine raw observations or medians into one YouTube income distribution."
   ],
   "unmeasured": {
     "native_youtube_creator_sponsor_share": null,
@@ -183,6 +185,81 @@
       "Follower snapshots may not match negotiation-time follower counts; currency conversion is a published constant-date reference.",
       "Different fee and cohort definitions prevent pooling with CreatorIQ 14.4k paid recipients or Forbes elite cross-platform gross estimates.",
       "Medians and quartiles describe separate selected agreements, not money per view, complete revenue, profit, or causal returns from acquiring followers."
+    ]
+  },
+  "independent_paid_deliverable_tiers": {
+    "source_id": "opensponsorship-2026-paid-deliverable-fee-by-tier",
+    "publisher": "OpenSponsorship",
+    "published_at": "2026-07-15",
+    "record_range_start": "2025-01-01",
+    "record_range_end": "2026-06-30",
+    "source_data_pulled": "2026-07",
+    "platform_population": "Multiple platforms in OpenSponsorship's selected managed creator/athlete campaigns, no YouTube-only filter",
+    "study_unit": "one_marked_complete_paid_creator_deliverable_with_fee_and_tracked_views",
+    "minimum_fee_usd_inclusive": 50,
+    "minimum_tracked_views_exclusive": 100,
+    "total_pricing_deliverables": 1527,
+    "follower_tier_deliverables": 1502,
+    "missing_creator_follower_count_deliverables": 25,
+    "filtered_for_completed_paid": true,
+    "includes_product_only": false,
+    "brand_paid_fee_usd": true,
+    "amount_earned_annually_per_creator": null,
+    "tiers": [
+      {
+        "id": "nano",
+        "follower_min_inclusive": 0,
+        "follower_max_exclusive": 10000,
+        "record_n": 146,
+        "median_cash_usd_per_deliverable": 134
+      },
+      {
+        "id": "micro",
+        "follower_min_inclusive": 10000,
+        "follower_max_exclusive": 50000,
+        "record_n": 349,
+        "median_cash_usd_per_deliverable": 150
+      },
+      {
+        "id": "mid",
+        "follower_min_inclusive": 50000,
+        "follower_max_exclusive": 250000,
+        "record_n": 513,
+        "median_cash_usd_per_deliverable": 417
+      },
+      {
+        "id": "macro",
+        "follower_min_inclusive": 250000,
+        "follower_max_exclusive": 1000000,
+        "record_n": 441,
+        "median_cash_usd_per_deliverable": 517
+      },
+      {
+        "id": "mega",
+        "follower_min_inclusive": 1000000,
+        "follower_max_exclusive": null,
+        "record_n": 53,
+        "median_cash_usd_per_deliverable": 2727
+      }
+    ],
+    "niche_skew": "sports_wellness_food_lifestyle",
+    "sample_selection_probability": null,
+    "all_platform_median_fee": null,
+    "platform_specific_youtube_median": null,
+    "creator_unique_person_n": null,
+    "completed_deliverables_per_creator": null,
+    "percentage_all_youtube_creators_with_any_paid_contract": null,
+    "viewer_conversion": null,
+    "after_expense_creator_net_income": null,
+    "direct_comparison_to_kolect_tiers_compatible": false,
+    "directly_poolable_with_kolect_paid_or_accepted_records": false,
+    "methodology_limits": [
+      "Tier intervals differ from Kolect, so matching tier names do not imply matched follower definitions.",
+      "This vendor's 1,502 paid deliverables with follower counts are across creator platforms, not a YouTube-only selection.",
+      "Selection requires completed, paid deal records, at least 50 USD fee and greater than 100 tracked views; never sponsored, failed and free product-only creator attempts are absent.",
+      "The creator's follower tier is classified by current count, not necessarily at negotiation or publication.",
+      "One creator can complete multiple deliverables; record_n counts deliverables, not unique creators or per-creator annual incomes.",
+      "The 53-record mega group is narrow; comparisons between groups are observational and confounded by format, niche, geography and campaign scope."
     ]
   }
 }

@@ -2633,6 +2633,13 @@ function renderAgreedCollaborationFees(model,dossier){
  details.append(grid);
  details.append(make('p','measure-limit','Across selected YouTube agreements: USD '+s.selected_youtube_all_tier_median_agreed_creator_fee_usd+
   ' median accepted fee. Total 120K+ Kolect agreements span all platforms; only 32% of all-platform agreed collaborations became brand-approved closed. No probability of getting a deal is observed.'));
+ const paid=model.independent_paid_deliverable_tiers;
+ if(paid?.follower_tier_deliverables===1502){
+  details.append(make('p','measure-limit','Separate OpenSponsorship 2026 cohort: '+
+   paid.total_pricing_deliverables.toLocaleString('en-US')+' selected completed paid deliverables across multiple platforms ('+
+   paid.follower_tier_deliverables.toLocaleString('en-US')+' with known follower tier), not a YouTube-only sample. Its median fees and follower cutoffs must NOT be pooled with Kolect accepted YouTube deals.'));
+  details.append(audienceSources([paid.source_id],dossier));
+ }
  details.append(audienceSources([s.source_id],dossier));
  const link=make('a','inline-link','Read fee cohort sampling and the missing income denominators ↗');
  link.href='./ontology/youtube/brand-campaign-payment-concentration-2026.md';link.target='_blank';link.rel='noopener noreferrer';

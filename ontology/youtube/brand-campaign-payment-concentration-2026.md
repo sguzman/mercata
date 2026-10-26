@@ -38,3 +38,20 @@ Mercata already registers CreatorIQ's distinct **2026 State of Creators** survey
 The separately reported all-tier median for selected YouTube agreements is **$600**, **not** the median annual pay for YouTubers. Kolect uses creator follower snapshots from September–October 2026 and USD fees converted at October 15 reference FX rates. The report says only 32% of **all-platform** accepted collaborations reached its stricter **brand-approved closed** state; that is not a verified YouTube payment settlement ratio.
 
 **Missingness and limits:** Its managed campaigns skew toward U.S./European consumer tech, home, DIY and lifestyle projects. No actual YouTube revenue per creator-year, fee frequency, share of never-selected small accounts, production costs, creator take-home profit or YouTube tier-specific numerator is published. The five bands are disjoint only as *follower size tiers*; they do not partition all potential creators into sponsored and unsponsored outcomes. Fees are accepted agreements, **not necessarily paid invoices**. This vendor cohort cannot be combined with CreatorIQ's direct payment recipients, voluntary annual-income survey or the separate Forbes elite ranking to form a typical channel income distribution.
+
+## Independent paid-deliverable comparison: OpenSponsorship (July 2026)
+
+[OpenSponsorship's July 15, 2026 original agency study](https://opensponsorship.com/blog/nano-micro-mega-influencer-pricing-data) reviews **1,527 selected completed and paid creator deliverables** booked January 2025–June 2026, of which **1,502 have current follower counts**. Records had to carry at least **$50 cash** and **more than 100 tracked views**; gifted-product-only transactions and unsuccessful or never-booked creators are not in the population. The agency's clients skew toward sports, wellness, food and lifestyle, and its data cover **multiple platforms rather than YouTube alone**.
+
+| Current follower tier in this vendor sample | Completed paid deliverables (not creators) | Median cash paid per deliverable |
+| --- | ---: | ---: |
+| Below 10k | 146 | $134 |
+| 10k–49,999 | 349 | $150 |
+| 50k–249,999 | 513 | $417 |
+| 250k–999,999 | 441 | $517 |
+| 1m or more | 53 | $2,727 |
+| **Total with tier** | **1,502** | **Not a pooled-median statistic** |
+
+The source reports 25 records missing follower tiers out of the 1,527 complete pricing set. It estimates **per-deliverable payments**, not per-person annual earnings or net profit. The 53-deliverable mega sample is relatively small, and one creator may appear multiple times.
+
+**Never pool it with the Kolect table:** Kolect is *YouTube-specific* for its follower-tier **accepted/agreed** fee estimates but does not report YouTube tier n, and its mid/macro cutoffs are **100k and 500k**. OpenSponsorship is *multiplatform* and **completed-paid**, with cutoffs **50k and 250k**. Their periods, campaign buyers, geography, economics and participation selection differ. A numerical contrast between their reported tier medians does **not** establish platform price gaps, annual income, a sponsorship success rate or a causal payoff from more followers. Both missing all-creator denominators and typical YouTube after-cost profits remain `null`.
