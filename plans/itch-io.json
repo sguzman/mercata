@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 29,
+  "progress_percent": 31,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -113,7 +113,7 @@
         "itch-io/access/create-zero-cash-entry-scenario"
       ],
       "phase": 1,
-      "progress_percent": 45
+      "progress_percent": 46
     },
     {
       "id": "economics",
@@ -299,7 +299,7 @@
         "itch-io/rights/check-resale-and-transfer-conditions"
       ],
       "phase": 3,
-      "progress_percent": 18
+      "progress_percent": 26
     },
     {
       "id": "sales",
@@ -356,7 +356,7 @@
         "itch-io/risk/set-downside-limits"
       ],
       "phase": 3,
-      "progress_percent": 17
+      "progress_percent": 44
     },
     {
       "id": "strategy",
@@ -415,7 +415,7 @@
         "itch-io/review/prepare-evidence-gap-summary"
       ],
       "phase": 1,
-      "progress_percent": 13
+      "progress_percent": 14
     },
     {
       "id": "special-games",
@@ -748,12 +748,15 @@
       "objective": "Investigate identify marketplace and payment intermediary restrictions by effective date.",
       "acceptance": "Provide dated source-linked evidence to identify marketplace and payment intermediary restrictions by effective date; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 47,
+      "percent": 65,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/policy-risk-2025-2026.json",
+        "ontology/itch-io/policy-risk-2025-2026.md",
+        "tests/itch-io-policy.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2064,12 +2067,15 @@
       "objective": "Investigate research age-related categories, tagging and regional blocks.",
       "acceptance": "Provide dated source-linked evidence to research age-related categories, tagging and regional blocks; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 38,
+      "percent": 65,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/policy-risk-2025-2026.json",
+        "ontology/itch-io/policy-risk-2025-2026.md",
+        "tests/itch-io-policy.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2082,9 +2088,14 @@
       "emoji": "⚖️",
       "objective": "Investigate define affected listing and payout routes.",
       "acceptance": "Provide dated source-linked evidence to define affected listing and payout routes; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 45,
+      "evidence": [
+        "ontology/itch-io/policy-risk-2025-2026.json",
+        "ontology/itch-io/policy-risk-2025-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-policy.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 3
@@ -2348,12 +2359,15 @@
       "objective": "Investigate track dated commercial and content rules and reversals.",
       "acceptance": "Provide dated source-linked evidence to track dated commercial and content rules and reversals; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 36,
+      "percent": 82,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/policy-risk-2025-2026.json",
+        "ontology/itch-io/policy-risk-2025-2026.md",
+        "tests/itch-io-policy.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2367,12 +2381,15 @@
       "objective": "Investigate measure exposure to processors and payouts being suspended.",
       "acceptance": "Provide dated source-linked evidence to measure exposure to processors and payouts being suspended; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 82,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/policy-risk-2025-2026.json",
+        "ontology/itch-io/policy-risk-2025-2026.md",
+        "tests/itch-io-policy.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2386,12 +2403,15 @@
       "objective": "Investigate document appeal windows, held funds and seller interruption.",
       "acceptance": "Provide dated source-linked evidence to document appeal windows, held funds and seller interruption; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 68,
+      "percent": 77,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/policy-risk-2025-2026.json",
+        "ontology/itch-io/policy-risk-2025-2026.md",
+        "tests/itch-io-policy.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2451,9 +2471,14 @@
       "emoji": "🛡️",
       "objective": "Investigate define downloadable backups, delisting and customer access risks.",
       "acceptance": "Provide dated source-linked evidence to define downloadable backups, delisting and customer access risks; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 58,
+      "evidence": [
+        "ontology/itch-io/policy-risk-2025-2026.json",
+        "ontology/itch-io/policy-risk-2025-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-policy.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 3
@@ -2465,9 +2490,14 @@
       "emoji": "🛡️",
       "objective": "Investigate distinguish sales restrictions, tax rules and buyer rights.",
       "acceptance": "Provide dated source-linked evidence to distinguish sales restrictions, tax rules and buyer rights; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 42,
+      "evidence": [
+        "ontology/itch-io/policy-risk-2025-2026.json",
+        "ontology/itch-io/policy-risk-2025-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-policy.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 3
@@ -2493,9 +2523,14 @@
       "emoji": "🛡️",
       "objective": "Investigate define explicit cash, legal and time boundaries for future pilots.",
       "acceptance": "Provide dated source-linked evidence to define explicit cash, legal and time boundaries for future pilots; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 51,
+      "evidence": [
+        "ontology/itch-io/policy-risk-2025-2026.json",
+        "ontology/itch-io/policy-risk-2025-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-policy.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 3

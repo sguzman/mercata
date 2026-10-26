@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "policy_payment_continuity_risk",
+  "as_of": "2026-10-26",
+  "events": [
+    {
+      "id": "adult_content_deindex_2025_07_24",
+      "date": "2025-07-24",
+      "kind": "published_platform_announcement",
+      "affected": "adult_nsfw_browse_search",
+      "event": "itch.io announced removal of adult NSFW material from discovery indexing during payment-provider scrutiny.",
+      "source_ids": [
+        "itch-nsfw-announcement"
+      ],
+      "measured_number_of_affected_sellers": null,
+      "measured_lost_revenue": null,
+      "applies_to_every_game": false
+    },
+    {
+      "id": "limited_reindex_2025_07_31",
+      "date": "2025-07-31",
+      "kind": "published_platform_update",
+      "affected": "adult_nsfw_free_no_payments",
+      "event": "itch.io announced reindexing of adult NSFW content with No Payments selected, with paid content reintroduced more cautiously.",
+      "source_ids": [
+        "itch-reindex-announcement"
+      ],
+      "measured_number_of_affected_sellers": null,
+      "measured_lost_revenue": null,
+      "applies_to_every_game": false
+    }
+  ],
+  "source_ids": [
+    "itch-nsfw-announcement",
+    "itch-reindex-announcement",
+    "itch-terms",
+    "itch-faq",
+    "itch-quality",
+    "itch-indexed",
+    "itch-payments"
+  ],
+  "governance_layers": [
+    {
+      "id": "marketplace_discovery",
+      "effect": "A published page may become deindexed while still accessible by URL.",
+      "source_ids": [
+        "itch-indexed",
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "payment_service",
+      "effect": "Permitted merchant activity depends on payment-provider acceptable-use and selected payout model.",
+      "source_ids": [
+        "itch-payments",
+        "itch-faq",
+        "itch-nsfw-announcement"
+      ]
+    },
+    {
+      "id": "content_rules",
+      "effect": "The operator documents content classification requirements, restrictions and potential suspension or disabled payouts.",
+      "source_ids": [
+        "itch-faq",
+        "itch-quality",
+        "itch-terms"
+      ]
+    },
+    {
+      "id": "buyer_entitlements",
+      "effect": "Paid access removal can trigger enforcement, refunds and payout issues.",
+      "source_ids": [
+        "itch-quality"
+      ]
+    }
+  ],
+  "current_commercial_adult_reindex_status": null,
+  "current_all_genres_payment_support": null,
+  "percent_market_affected": null,
+  "creator_income_effect": null,
+  "typical_payout_loss": null,
+  "source_ids_supporting_current_reindex": null,
+  "limitations": [
+    "A historical adult-content announcement is not evidence that all games were deindexed.",
+    "July 2025 announcements do not establish the exact paid adult-content indexing situation on October 26, 2026.",
+    "No number of affected commercial sellers, lost sales or present-day account suspensions is reported by these sources.",
+    "Keep policy adherence and downstream payment eligibility distinct from sales probability."
+  ]
+}

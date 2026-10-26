@@ -207,6 +207,39 @@
       "evidence_class": "anecdotal",
       "license": "Developer-published figures summarized with attribution and links; no screenshots or private analytics collected.",
       "notes": "Voluntary unaudited self-disclosure. Nonrandom example, not a population study."
+    },
+    {
+      "id": "itch-nsfw-announcement",
+      "url": "https://itch.io/updates/update-on-nsfw-content",
+      "title": "Update on NSFW content",
+      "publisher": "itch.io",
+      "published_at": "2025-07-24",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Source referenced by public URL; independently summarized policy information.",
+      "notes": "Time-bound public platform announcement or terms. No individual game exposure, account or commercial outcome inferred."
+    },
+    {
+      "id": "itch-reindex-announcement",
+      "url": "https://itch.io/post/13540035/view-in-topic",
+      "title": "Reindexing adult NSFW content",
+      "publisher": "itch.io",
+      "published_at": "2025-07-31",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Source referenced by public URL; independently summarized policy information.",
+      "notes": "Time-bound public platform announcement or terms. No individual game exposure, account or commercial outcome inferred."
+    },
+    {
+      "id": "itch-terms",
+      "url": "https://itch.io/docs/legal/terms",
+      "title": "Terms of Service",
+      "publisher": "itch.io",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official",
+      "license": "Source referenced by public URL; independently summarized policy information.",
+      "notes": "Time-bound public platform announcement or terms. No individual game exposure, account or commercial outcome inferred."
     }
   ],
   "claims": [
@@ -577,6 +610,48 @@
       "limitations": "A narrative 2020–2021 case with heterogeneous transaction routes, no profit audit, and no inference to current typical paid-game outcomes.",
       "confidence": "medium",
       "observed_at": "2026-10-26"
+    },
+    {
+      "id": "payment-processor-shock",
+      "text": "In July 2025, itch.io publicly attributed a broad adult-content discovery deindexing action to scrutiny from payment processors.",
+      "source_ids": [
+        "itch-nsfw-announcement"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Historical event for adult-content browse/search; no claim about all genres or lost sales."
+    },
+    {
+      "id": "reindex-conditions",
+      "text": "On July 31, 2025, itch.io announced reindexing free adult NSFW pages configured with No Payments, while indicating paid categories would return cautiously.",
+      "source_ids": [
+        "itch-reindex-announcement"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Historical update, not independently verified current availability or payout eligibility in October 2026."
+    },
+    {
+      "id": "account-enforcement",
+      "text": "Current published creator rules warn that certain misclassified or prohibited content can cause search deindexing, suspension or disabled merchant payments.",
+      "source_ids": [
+        "itch-faq",
+        "itch-quality",
+        "itch-terms"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Actual enforcement frequency, seller loss and account-specific appeal rights remain unmeasured."
+    },
+    {
+      "id": "paid-entitlement-risk",
+      "text": "itch.io's quality guidance warns that stripping buyers of paid-content access without continued access can lead to suspension, refunds and payout cancellation.",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Conditional policy enforcement, not a documented rate of refund or seller closure."
     }
   ],
   "observations": [

@@ -34,3 +34,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io modeled release economics (2026-10-26):** explicit fee/cash/labor price sensitivity and break-even calculations with tests. Mathematical scenarios, not sales predictions. Task mean **26% → 29%**, Δ **+3 pp**. [Methodology and caveats](../ontology/itch-io/break-even-scenarios-2026.md).
+
+
+**itch.io payment/content-policy continuity (2026-10-26):** official dated 2025 deindexing/reindexing decisions and present-day separate discovery, enforcement and payment obligations registered with null economic impact figures. **29% → 31%**, Δ **+2 pp**. [Risk audit](../ontology/itch-io/policy-risk-2025-2026.md).

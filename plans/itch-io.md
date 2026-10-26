@@ -253,3 +253,8 @@ Three public developer disclosures were entered in a [bounded case register](../
 ## Modeled game viability (2026-10-26)
 
 [Break-even math](../ontology/itch-io/break-even-scenarios-2026.md) covers per-order proceeds, cash costs, labor valuation, and explicit pre-tax income thresholds, with no inference about buyer demand. Task mean: 29%.
+
+
+## Payment-provider and listing-policy exposure
+
+[The dated policy-risk audit](../ontology/itch-io/policy-risk-2025-2026.md) keeps historical 2025 incidents separate from verified current rules and rejects unsupported guesses about seller losses or 2026 paid-content indexing. Current study score: 31%.
