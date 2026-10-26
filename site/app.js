@@ -2739,6 +2739,15 @@ function renderCountryPolicyCrosswalk(model,dossier){
  }
  details.append(grid);
  details.append(make('p','measure-limit','Currency thresholds must be selected by the real account reporting currency, not the creator residence. Content ID territory restrictions cannot be inferred from country lists.'));
+ const rights=model.region_specific_video_availability;
+ if(rights?.mechanisms?.length===3){
+  const box=make('div','region-content-availability');
+  box.append(make('h5','','Why a video can be unavailable by country'));
+  box.append(make('p','measure-limit','Video owner licensing territory · YouTube local-law compliance · claimant Content ID policy. These are three separate content mechanisms, not country YPP approvals.'));
+  box.append(make('p','measure-limit','Claimed music may be monetized, blocked worldwide or blocked in selected regions. Monetization does not establish an uploader revenue share or universal availability.'));
+  box.append(make('p','measure-limit','No country-specific affected-video counts, actual rights records, settled payout losses or legal case determinations are observed.'));
+  box.append(audienceSources(rights.source_ids,dossier));details.append(box);
+ }
  details.append(audienceSources(model.source_ids,dossier));
  const link=make('a','inline-link','Read geographic access and missing-personal-account limits ↗');
  link.href='./ontology/youtube/country-policy-and-payout-crosswalk-2026.md';link.target='_blank';link.rel='noopener noreferrer';details.append(link);

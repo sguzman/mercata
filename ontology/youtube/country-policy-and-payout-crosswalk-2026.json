@@ -10,7 +10,9 @@
     "adsense-methods",
     "adsense-thresholds",
     "music-content-id",
-    "child-features"
+    "child-features",
+    "yt-region-video-availability-2026",
+    "yt-claimed-music-territory-2026"
   ],
   "observations": [
     {
@@ -154,7 +156,8 @@
     "Documented content rights may block one video in one territory and monetize the same video in another, but no per-video territory rights policy has been observed here.",
     "Made-for-kids classification changes product features; a general legal statement is not an exact country-specific advertising RPM loss.",
     "Country-level policy differences cannot be converted into creator earnings, payment success, audience size, legal compliance advice or revenue rate.",
-    "The three-country reference is illustrative, not an exhaustive country list or approval determination."
+    "The three-country reference is illustrative, not an exhaustive country list or approval determination.",
+    "A country's YPP listing does not determine whether a particular upload is visible there; uploader licensing limitations, local law and claimant policies are separate from creator enrollment."
   ],
   "real_account_data_accessed": false,
   "unmeasured": {
@@ -164,6 +167,79 @@
     "specific_tax_rate": null,
     "settlement_fx_fee": null,
     "median_creator_income": null,
-    "actual_payout": null
+    "actual_payout": null,
+    "territory_specific_owner_video_availability_rate": null,
+    "territory_specific_content_id_creator_loss": null
+  },
+  "region_specific_video_availability": {
+    "policy_review_date": "2026-10-25",
+    "source_ids": [
+      "music-content-id",
+      "yt-region-video-availability-2026",
+      "yt-claimed-music-territory-2026"
+    ],
+    "geography_basis": "Viewer country/region, separately from creator payment address and uploader's AdSense currency",
+    "mechanisms": [
+      {
+        "id": "video_owner_licensing_region",
+        "authority": "video_owner",
+        "scope": "video_availability_by_viewer_country",
+        "source_id": "yt-region-video-availability-2026",
+        "availability_effect": "May limit where the owner makes a video accessible",
+        "observed_territory_codes": null,
+        "affected_video_count": null,
+        "incremental_creator_revenue_effect": null
+      },
+      {
+        "id": "platform_local_law",
+        "authority": "youtube_platform",
+        "scope": "local_legal_compliance_video_availability",
+        "source_id": "yt-region-video-availability-2026",
+        "availability_effect": "YouTube may block particular content under local law",
+        "observed_territory_codes": null,
+        "affected_video_count": null,
+        "incremental_creator_revenue_effect": null
+      },
+      {
+        "id": "content_id_claimant",
+        "authority": "copyright_claimant",
+        "scope": "video_rights_claim_and_viewer_territory",
+        "source_id": "music-content-id",
+        "availability_effect": "One claimed upload can be blocked, tracked or monetized differently by territory",
+        "observed_territory_codes": null,
+        "affected_video_count": null,
+        "incremental_creator_revenue_effect": null
+      }
+    ],
+    "music_claim_policy_outcomes": [
+      {
+        "id": "monetize",
+        "source_id": "yt-claimed-music-territory-2026",
+        "effect": "Copyright claimant may run ads and may choose to share some revenue; availability on all devices or territories is not guaranteed",
+        "uploader_revenue_share_percent": null
+      },
+      {
+        "id": "block_worldwide",
+        "source_id": "yt-claimed-music-territory-2026",
+        "effect": "Claimed music can make a video muted or unavailable globally",
+        "uploader_revenue_share_percent": null
+      },
+      {
+        "id": "block_some_territories",
+        "source_id": "yt-claimed-music-territory-2026",
+        "effect": "Claimed music can make the video unavailable to viewers in restricted countries or regions",
+        "uploader_revenue_share_percent": null
+      }
+    ],
+    "permissions_caution": "Platform availability and Content ID adjudication are not a license to reuse music or other media.",
+    "ypp_country_listing_implies_viewer_video_availability": false,
+    "ypp_country_listing_implies_claimant_rights_clearance": false,
+    "ypp_country_listing_implies_advertising_approval": false,
+    "all_three_reference_countries_have_verified_claimed_video_records": false,
+    "per_video_audience_geo_mix": null,
+    "per_video_rightsholder_claims": null,
+    "country_specific_affected_view_count": null,
+    "actual_settled_payout_by_territory": null,
+    "country_specific_legal_advice_provided": false
   }
 }

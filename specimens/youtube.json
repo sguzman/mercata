@@ -4112,6 +4112,28 @@
       "evidence_class": "self_selected_optional_question_developer_survey_aggregate_counts",
       "license": "ODbL 1.0, with Stack Exchange Inc. (2026) attribution; a small independently explained subset of public item counts, not respondent-level data",
       "notes": "2026 community page; learning-video response 5,975 of 14,530 (41.1%), YouTube/video creator skill influence 3,931 of 15,260 (25.8%), YouTube technical-community use 6,272 of 10,741 (58.4%). Three separate optional questions, not YouTube viewers or a probability sample."
+    },
+    {
+      "id": "yt-region-video-availability-2026",
+      "url": "https://support.google.com/youtube/answer/92571?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Video isn't available in my country/region",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_current_youtube_viewer_territory_video_availability_policy",
+      "license": "Linked first-party policy page, independently summarized short descriptions; no images or Help article copied",
+      "notes": "Official distinction between video owner regional licensing restrictions and platform blocking to comply with local laws. Does not enumerate countries, creators, affected videos, or economic loss."
+    },
+    {
+      "id": "yt-claimed-music-territory-2026",
+      "url": "https://support.google.com/youtube/answer/6364458?hl=en",
+      "publisher": "YouTube Help",
+      "title": "Restrictions on claimed music",
+      "published_at": null,
+      "retrieved_at": "2026-10-25",
+      "evidence_class": "official_current_copyright_holder_music_restrictions_policy",
+      "license": "Short factual paraphrases with source link, not reproduced music, article or proprietary data",
+      "notes": "Copyright claimant can monetize sometimes share revenue, block worldwide, or block in certain territories; claimant policies may change. No rights clearance, actual video claim, or specific revenue split estimated."
     }
   ],
   "claims": [
@@ -9058,6 +9080,18 @@
       "confidence": "medium",
       "observed_at": "2026-10-25",
       "limitations": "Self-selected separate optional question respondents; the first video response includes non-YouTube media, the influence response is YouTube OR video creators, and platform use is self-reported rather than measured viewers, revenue or tutorial completion."
+    },
+    {
+      "id": "youtube-country-unavailability-rights-law-and-claims-2026",
+      "text": "YouTube documents distinct regional video availability mechanisms: upload owners may choose licensing territories, YouTube may block content in response to local law, and music rightsholders can monetize or block claimed videos globally or in selected territories.",
+      "source_ids": [
+        "music-content-id",
+        "yt-region-video-availability-2026",
+        "yt-claimed-music-territory-2026"
+      ],
+      "observed_at": "2026-10-25",
+      "confidence": "high",
+      "limitations": "Official rules describe possible mechanisms only; no verified per-video country restrictions, claim outcomes, settled revenue losses, or specific local-law applications. YPP listing is unrelated to individual video availability."
     }
   ],
   "observations": [],

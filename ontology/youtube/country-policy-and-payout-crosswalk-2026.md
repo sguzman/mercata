@@ -25,3 +25,13 @@ YouTube [Content ID](https://support.google.com/youtube/answer/2797370?hl=en) ca
 No real person's payments, bank details, taxes, private analytics or rights claims have been accessed or included.
 
 [Machine comparison](country-policy-and-payout-crosswalk-2026.json) · [Invariant validator](../../site/country-policy-crosswalk-audit.mjs) · [Regression tests](../../tests/country-policy-crosswalk-audit.test.mjs).
+
+## Territory-specific video unavailability: three independent mechanisms
+
+Official YouTube documentation distinguishes **video-owner licensing choices**, **platform restrictions under local laws**, and **copyright claimant rules**. In [Video isn't available in my country/region](https://support.google.com/youtube/answer/92571?hl=en), YouTube identifies uploader licensing restrictions and legal compliance blocks as two different reasons a viewer cannot access a video in a particular country. Neither implies that the video's creator or viewer lives in an ineligible YPP country.
+
+[Content ID](https://support.google.com/youtube/answer/2797370?hl=en) can result in claimed material being **blocked, monetized or tracked** differently across regions. The narrower [claimed-music help page](https://support.google.com/youtube/answer/6364458?hl=en) specifies that the copyright holder may monetize claimed music (sometimes allowing a share to the uploader), **block worldwide**, or **block in specified countries/regions**. A video may also be muted; music policies may later change. Monetize is not proof of any particular creator's share or unconditional availability.
+
+These rules apply to **viewer-country/video-specific rights**, whereas YPP country listings refer to **creator enrollment**, and account-currency payment thresholds refer to **account settlement**. The country row for Mexico, the United States or the United Kingdom cannot tell whether any specific music, film excerpt or video is available in that place. For the three documented reference countries the actual blocked-video counts, rights claims, viewer geography, local legal cases and settled royalty amounts are all **unobserved**. No privacy-sensitive data, bank accounts, creator credentials, or uploaded copyrighted media were used.
+
+The [machine record](country-policy-and-payout-crosswalk-2026.json) enumerates mechanisms and explicit missing values. It does not label a copyright claim as a strike or offer methods for bypassing a geographic restriction.

@@ -243,6 +243,11 @@ try{
     assert((await reachPanel.textContent()).includes('1. India'));
     assert((await reachPanel.textContent()).includes('500 million estimated ad-reachable'));
     assert((await reachPanel.textContent()).includes('NOT a global ranking or measured MAU/DAU'));
+    const regionRights=page.locator('.country-policy-crosswalk .region-content-availability');
+    assert.equal(await regionRights.count(),1,'Missing country video rights policy distinctions');
+    assert((await regionRights.textContent()).includes('Video owner licensing territory'));
+    assert((await regionRights.textContent()).includes('local-law compliance'));
+    assert((await regionRights.textContent()).includes('No country-specific affected-video counts'));
     const shoppingIntent=page.locator('.shopping-funnel-evidence .shopping-intent-surveys');
     assert.equal(await shoppingIntent.count(),1,'Missing bounded shopping-intent survey panel');
     assert((await shoppingIntent.textContent()).includes('2,160 selected US weekly video viewers'));
