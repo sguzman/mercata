@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "two_indie_game_release_financial_cases",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-fish-feathers-launch-2022",
+    "itch-escape-life-inc-postmortem"
+  ],
+  "records": [
+    {
+      "id": "fish_and_feathers_playdate",
+      "game_type": "premium_downloadable_playdate_handheld",
+      "source_ids": [
+        "itch-fish-feathers-launch-2022"
+      ],
+      "reported_at": "2022-07-16",
+      "reported_paid_game_sales": 127,
+      "reported_download_events": 369,
+      "reported_gross_usd": 401,
+      "reported_sale_unit_price_during_discount_usd": 3,
+      "reported_list_price_after_launch_discount_usd": 5,
+      "planned_launch_discount_percent": 40,
+      "reported_processor_fee_stripe_per_three_dollar_payment_usd": 0.39,
+      "reported_processor_fee_paypal_per_three_dollar_payment_usd": 0.59,
+      "platform_default_share_usd_per_three_dollar_payment": 0.3,
+      "developer_reported_daily_sales_around_end": "1_to_2_at_best",
+      "free_gift_copies_roughly": 24,
+      "download_sources_included_charity_cooperative_bundles": true,
+      "gross_is_not_final_seller_proceeds": true,
+      "developer_development_hours": null,
+      "game_labor_adjusted_profit_usd": null,
+      "paid_buyers_from_downloads_identifiable": false,
+      "promotion_causal_effect": null
+    },
+    {
+      "id": "escape_from_life_inc",
+      "game_type": "first_paid_PC_puzzle_platformer",
+      "source_ids": [
+        "itch-escape-life-inc-postmortem"
+      ],
+      "reported_at": null,
+      "steam_receipts_after_reported_store_cut_usd": 651,
+      "combined_steam_itch_receipts_approximately_usd": 740,
+      "exact_itch_only_receipts_usd": null,
+      "music_cash_cost_usd_low": 300,
+      "music_cash_cost_usd_high": 400,
+      "developer_reported_build_period_years_approx": 1.5,
+      "author_reported_sales_heaviest_in_first_two_days": true,
+      "reddit_press_effect_causally_established": false,
+      "final_developer_net_profit_usd": null,
+      "game_development_hours": null,
+      "actual_paid_itch_units": null
+    }
+  ],
+  "comparability_limits": [
+    "Different games, years, hardware ecosystems, publishing histories, price models and observation windows.",
+    "The Playdate 369 downloads are not 369 paid orders because gifts and charity bundle claims generated downloads.",
+    "The 127 Playdate orders and $401 gross do not provide processor mix, refund ledger, taxes, hours, expenses or final profit.",
+    "The developer's $3 sale and processor-specific fee examples are historical account observations, not 2026 global processor rates.",
+    "Escape from Life Inc author reports approximately $740 combined store proceeds and $651 Steam proceeds, but does not publish a complete auditable itch-only transaction table; no exact itch-only revenue is asserted.",
+    "The $300–$400 soundtrack cost is a declared cash component, not a complete game development budget; hours over ~1.5 years remain unquantified.",
+    "External Reddit and press success is reported as the developer's experience, not causally tested market advice.",
+    "Neither a one-game Playdate disclosure nor a first-paid PC game proves population average or median income."
+  ],
+  "population_stats_not_observed": {
+    "mean_first_itch_game_profit": null,
+    "median_paid_itch_game_profit": null,
+    "first_release_zero_sales_share": null,
+    "game_first_month_return_on_labor": null,
+    "average_release_to_sale_conversion": null,
+    "discounts_increase_profit_probability": null
+  }
+}

@@ -1285,6 +1285,28 @@
       "evidence_class": "public_dynamic_filtered_catalog",
       "license": "Brief public filter counters and URLs only.",
       "notes": "Cached public page approximately ~3weeks old at reading, exact crawl timestamp unavailable. Rolling listing count, neither verified first commercial launches nor completed transactions."
+    },
+    {
+      "id": "itch-fish-feathers-launch-2022",
+      "url": "https://itch.io/devlog/404938/launch-sale-1-week-left-post-launch-stats.amp",
+      "title": "Fish'n Feathers for Playdate – post-launch stats",
+      "published_at": "2022-07-16",
+      "publisher": "Vogelscript (developer)",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_developer_first_party_game_postmortem",
+      "license": "Short attributed public game statistics and independently written methodological notes.",
+      "notes": "Single game self-disclosure; neither statistically selected nor independently audited. Individual costs, business taxes and author time differ."
+    },
+    {
+      "id": "itch-escape-life-inc-postmortem",
+      "url": "https://powerburger.itch.io/life-inc/devlog/180595/escape-from-life-inc-postmortem",
+      "title": "Escape from Life Inc – postmortem",
+      "published_at": null,
+      "publisher": "PowerBurger (developer)",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_developer_first_party_game_postmortem",
+      "license": "Short attributed public game statistics and independently written methodological notes.",
+      "notes": "Single game self-disclosure; neither statistically selected nor independently audited. Individual costs, business taxes and author time differ."
     }
   ],
   "claims": [
@@ -4772,6 +4794,76 @@
       "limitations": "Three-week-old crawl, all price states; not an estimate of first-time commercial game launches.",
       "confidence": "high",
       "observed_at": "2026-10-26"
+    },
+    {
+      "id": "fish-feathers-paid-vs-download",
+      "text": "A July 2022 Playdate game developer reported 127 paid copies, 369 download events and $401 gross, with downloads inflated by free gifts and co-op bundle claims.",
+      "source_ids": [
+        "itch-fish-feathers-launch-2022"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "One voluntary creator post; downloads cannot be treated as additional standalone orders or customers."
+    },
+    {
+      "id": "fish-feathers-small-fee-case",
+      "text": "The Fish'n Feathers developer reported processor fees of $0.39 via Stripe versus $0.59 via PayPal on a $3 payment, separately from the configurable default itch.io share.",
+      "source_ids": [
+        "itch-fish-feathers-launch-2022"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Historical developer-specific 2022 example, not a current universal price schedule."
+    },
+    {
+      "id": "fish-feathers-promotion-uncertain",
+      "text": "The Fish'n Feathers page described a 40% first-month discount ($3 versus planned $5 later) but did not estimate the causal effect of that launch promotion on sales.",
+      "source_ids": [
+        "itch-fish-feathers-launch-2022"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "No matched comparison with no discount; gross revenue and paid orders alone do not establish incremental profit."
+    },
+    {
+      "id": "fish-feathers-source-traffic",
+      "text": "The creator attributed much of Fish'n Feathers later referral activity to itch.io's own rankings and bundle download links, after earlier outside referrals.",
+      "source_ids": [
+        "itch-fish-feathers-launch-2022"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Qualitative owner-dashboard attribution, not independently audited acquisition or paid conversion by source."
+    },
+    {
+      "id": "escape-first-paid-costs",
+      "text": "A first-paid-game postmortem for Escape from Life Inc reported about $651 of Steam proceeds plus itch income bringing total store receipts to approximately $740.",
+      "source_ids": [
+        "itch-escape-life-inc-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "The source does not independently show precise itch-only sales, all platform deductions or labor-adjusted profit."
+    },
+    {
+      "id": "escape-music-cost",
+      "text": "The Escape from Life Inc developer described $300–$400 spent on the soundtrack and roughly 1.5 years building the game.",
+      "source_ids": [
+        "itch-escape-life-inc-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Soundtrack amount is one disclosed cash input, not complete labor or opportunity costs; final profit remains unmeasured."
+    },
+    {
+      "id": "escape-launch-spike",
+      "text": "The Escape from Life Inc developer observed most sales soon after launch and described external Reddit/press outreach.",
+      "source_ids": [
+        "itch-escape-life-inc-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Single retrospective and uneven distribution, not a causal estimate of launch timing or referral performance."
     }
   ],
   "observations": [

@@ -193,3 +193,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io recent-game browse filters (2026-10-26):** six rolling/sort/release/price source counts, with different cache ages, demonstrate why Top sellers listing counts are not sell-through or first-time commercial releases. Task score **82% → 82%** (Δ **+0 pp**, raw 81.97%). [Audit](../ontology/itch-io/recent-release-filter-frames-2026.md).
+
+
+**itch.io game financial cases (2026-10-26):** Fish'n Feathers 127 paid units/369 downloads/$401 gross and first-paid Escape from Life Inc ~$740 multistore receipts/$300–$400 soundtrack cost, with all unsupported conversion/profit claims excluded. **82% → 82%**, Δ **+0 pp**; exact mean **82.31%**. [Research](../ontology/itch-io/small-paid-release-finance-2022.md).
