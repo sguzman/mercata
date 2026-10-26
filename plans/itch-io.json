@@ -113,7 +113,7 @@
         "itch-io/access/create-zero-cash-entry-scenario"
       ],
       "phase": 1,
-      "progress_percent": 81
+      "progress_percent": 83
     },
     {
       "id": "economics",
@@ -762,7 +762,7 @@
       "objective": "Investigate define a country-by-country eligibility and payout matrix.",
       "acceptance": "Provide dated source-linked evidence to define a country-by-country eligibility and payout matrix; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 71,
+      "percent": 76,
       "evidence": [
         "ontology/itch-io/payment-country-corridors-2026.json",
         "ontology/itch-io/payment-country-corridors-2026.md",
@@ -770,7 +770,10 @@
         "tests/itch-io-payment-corridors.test.mjs",
         "ontology/itch-io/merchant-country-first-payout-2026.json",
         "ontology/itch-io/merchant-country-first-payout-2026.md",
-        "tests/itch-io-country-payout-cost.test.mjs"
+        "tests/itch-io-country-payout-cost.test.mjs",
+        "ontology/itch-io/checkout-settlement-currency-conditions-2026.json",
+        "ontology/itch-io/checkout-settlement-currency-conditions-2026.md",
+        "tests/itch-checkout-settlement-currency.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -916,8 +919,8 @@
       "emoji": "🚪",
       "objective": "Investigate identify pricing, tender and settlement currencies and FX exposure.",
       "acceptance": "Provide dated source-linked evidence to identify pricing, tender and settlement currencies and FX exposure; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "in_progress",
-      "percent": 75,
+      "status": "complete",
+      "percent": 100,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -926,7 +929,10 @@
         "ontology/itch-io/buyer-checkout-route-eligibility-2026.json",
         "ontology/itch-io/buyer-checkout-route-eligibility-2026.md",
         "site/itch-buyer-checkout-eligibility.mjs",
-        "tests/itch-buyer-checkout-eligibility.test.mjs"
+        "tests/itch-buyer-checkout-eligibility.test.mjs",
+        "ontology/itch-io/checkout-settlement-currency-conditions-2026.json",
+        "ontology/itch-io/checkout-settlement-currency-conditions-2026.md",
+        "tests/itch-checkout-settlement-currency.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

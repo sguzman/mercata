@@ -46,6 +46,8 @@ The [release bug/compatibility/customer-support workload plan](game-patch-suppor
 
 The [third-party game asset license tracking contract](game-component-rights-register-2026.md) covers code, middleware, fonts, music, sprites and narrative IP, including OFL commercial game bundling requirements. No real game rights inventory has been cleared.
 
+The [first-party direct/collected checkout-to-bank currency crosswalk](checkout-settlement-currency-conditions-2026.md) now completes the currency rule research without guessing provider country approval or final exchange-adjusted bank proceeds.
+
 ## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*

@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "buyer_checkout_merchant_funding_and_bank_settlement_currency_boundary",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-payments",
+    "stripe-global",
+    "paypal-mx-receiving",
+    "stripe-mx-methods"
+  ],
+  "collected_by_itch_io": {
+    "displayed_sale_currency": "USD",
+    "payment_transaction_currency": "USD",
+    "operator_transfers_to_seller_in": "USD",
+    "buyer_payment_provider_currency_conversion_possible": true,
+    "settlement_to_local_bank_currency_guaranteed": null,
+    "fx_total_cost_usd": null,
+    "foreign_seller_final_tax_treatment": null
+  },
+  "direct_stripe_published_account_pairs": [
+    {
+      "country": "United States",
+      "currencies": [
+        "USD"
+      ]
+    },
+    {
+      "country": "Canada",
+      "currencies": [
+        "CAD",
+        "USD"
+      ]
+    },
+    {
+      "country": "Ireland",
+      "currencies": [
+        "EUR",
+        "GBP",
+        "USD"
+      ]
+    },
+    {
+      "country": "United Kingdom",
+      "currencies": [
+        "EUR",
+        "GBP",
+        "USD"
+      ]
+    }
+  ],
+  "direct_stripe_other_country_integrations_approved": null,
+  "direct_paypal_configurable_currencies": [
+    "USD",
+    "CAD",
+    "GBP",
+    "EUR",
+    "JPY",
+    "AUD"
+  ],
+  "direct_paypal_requires_account_acceptance_of_selected_currency": true,
+  "direct_paypal_local_seller_country_approval": null,
+  "processor_operates_in_mexico_but_platform_direct_stripe_mexico_integration_documented": false,
+  "paypal_mexico_local_bank_transfer_can_convert_usd_to_mxn": true,
+  "publisher_example": {
+    "seller_bank_country": "Mexico",
+    "game_price_usd": 10,
+    "mode": "collected_by_itch_io",
+    "buyer_pays_usd": 10,
+    "after_platform_processor_before_local_bank_usd": null,
+    "actual_bank_pesos": null,
+    "actual_fx_spread": null,
+    "tax_amount": null,
+    "actual_seller_approval": null
+  },
+  "safe_cohort_rules": [
+    "Checkout displayed money is not post-processor receipt",
+    "The bank settlement currency is not necessarily the listing currency",
+    "An independent processor supporting a country does not prove itch.io direct integration in that country",
+    "FX spreads, withdrawal fees and tax cannot be inferred from the $10 illustrative payment example",
+    "A country-currency configuration is not proof a buyer from that country successfully purchased a game"
+  ],
+  "platform_paid_game_buyer_currency_distribution": null,
+  "publisher_income_aggregate_after_currency_conversion": null,
+  "operator_verified_seller_census_by_country": null
+}
