@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-26",
-  "progress_percent": 50,
+  "progress_percent": 52,
   "permission_required_before_execution": false,
   "scope": "Independent game-selling economics on itch.io: supply, real paid demand, fees, net earnings, discoverability, distributions, first-game release, and operational risks.",
   "baseline": {
@@ -148,7 +148,7 @@
         "itch-io/economics/build-break-even-model"
       ],
       "phase": 1,
-      "progress_percent": 72
+      "progress_percent": 74
     },
     {
       "id": "market",
@@ -299,7 +299,7 @@
         "itch-io/rights/check-resale-and-transfer-conditions"
       ],
       "phase": 3,
-      "progress_percent": 38
+      "progress_percent": 65
     },
     {
       "id": "sales",
@@ -328,7 +328,7 @@
         "itch-io/sales/separate-buyer-interest-from-purchase"
       ],
       "phase": 3,
-      "progress_percent": 63
+      "progress_percent": 65
     },
     {
       "id": "risk",
@@ -356,7 +356,7 @@
         "itch-io/risk/set-downside-limits"
       ],
       "phase": 3,
-      "progress_percent": 52
+      "progress_percent": 59
     },
     {
       "id": "strategy",
@@ -415,7 +415,7 @@
         "itch-io/review/prepare-evidence-gap-summary"
       ],
       "phase": 1,
-      "progress_percent": 49
+      "progress_percent": 52
     },
     {
       "id": "special-games",
@@ -955,12 +955,15 @@
       "objective": "Investigate trace reversals, chargebacks and fees through settlement.",
       "acceptance": "Provide dated source-linked evidence to trace reversals, chargebacks and fees through settlement; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 77,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "tests/itch-io-publisher-legal.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -974,12 +977,15 @@
       "objective": "Investigate define orders, tax, share, processor fee, reserve and accessible cash.",
       "acceptance": "Provide dated source-linked evidence to define orders, tax, share, processor fee, reserve and accessible cash; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 78,
+      "percent": 84,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "tests/itch-io-publisher-legal.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2195,12 +2201,15 @@
       "objective": "Investigate examine ownership and distribution grants for paid games.",
       "acceptance": "Provide dated source-linked evidence to examine ownership and distribution grants for paid games; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 88,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "tests/itch-io-publisher-legal.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2214,13 +2223,16 @@
       "objective": "Investigate investigate permission and any exclusivity constraints.",
       "acceptance": "Provide dated source-linked evidence to investigate permission and any exclusivity constraints; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 35,
+      "percent": 66,
       "evidence": [
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
         "site/itch-html5-audit.mjs",
         "tests/itch-html5-audit.test.mjs",
-        "specimens/itch-io.json"
+        "specimens/itch-io.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "tests/itch-io-publisher-legal.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2251,9 +2263,14 @@
       "emoji": "⚖️",
       "objective": "Investigate distinguish source code license, executable distribution and branding.",
       "acceptance": "Provide dated source-linked evidence to distinguish source code license, executable distribution and branding; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 35,
+      "evidence": [
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-publisher-legal.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 3
@@ -2265,9 +2282,14 @@
       "emoji": "⚖️",
       "objective": "Investigate check music, fonts, sprites, code libraries and middleware rights.",
       "acceptance": "Provide dated source-linked evidence to check music, fonts, sprites, code libraries and middleware rights; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 68,
+      "evidence": [
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-publisher-legal.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 3
@@ -2302,12 +2324,15 @@
       "objective": "Investigate define affected listing and payout routes.",
       "acceptance": "Provide dated source-linked evidence to define affected listing and payout routes; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 78,
       "evidence": [
         "ontology/itch-io/policy-risk-2025-2026.json",
         "ontology/itch-io/policy-risk-2025-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-policy.test.mjs"
+        "tests/itch-io-policy.test.mjs",
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "tests/itch-io-publisher-legal.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2321,7 +2346,7 @@
       "objective": "Investigate distinguish downloads, licenses and access following delisting.",
       "acceptance": "Provide dated source-linked evidence to distinguish downloads, licenses and access following delisting; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 86,
+      "percent": 89,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -2330,7 +2355,10 @@
         "ontology/itch-io/release-format-access-2026.md",
         "ontology/itch-io/release-format-access-2026.json",
         "site/itch-html5-audit.mjs",
-        "tests/itch-html5-audit.test.mjs"
+        "tests/itch-html5-audit.test.mjs",
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "tests/itch-io-publisher-legal.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2343,9 +2371,14 @@
       "emoji": "⚖️",
       "objective": "Investigate limit buyer and analytics data collection to approved aggregate evidence.",
       "acceptance": "Provide dated source-linked evidence to limit buyer and analytics data collection to approved aggregate evidence; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "pending",
-      "percent": 0,
-      "evidence": [],
+      "status": "in_progress",
+      "percent": 82,
+      "evidence": [
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "specimens/itch-io.json",
+        "tests/itch-io-publisher-legal.test.mjs"
+      ],
       "artifact": null,
       "priority": "normal",
       "phase": 3
@@ -2457,13 +2490,16 @@
       "objective": "Investigate compare orders, retained units and net receipts.",
       "acceptance": "Provide dated source-linked evidence to compare orders, retained units and net receipts; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 53,
+      "percent": 67,
       "evidence": [
         "ontology/itch-io/transaction-cohort-protocol-2026.json",
         "ontology/itch-io/transaction-cohort-protocol-2026.md",
         "site/itch-cohort-protocol.mjs",
         "tests/itch-cohort-protocol.test.mjs",
-        "specimens/itch-io.json"
+        "specimens/itch-io.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "tests/itch-io-publisher-legal.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -2674,7 +2710,7 @@
       "objective": "Investigate document appeal windows, held funds and seller interruption.",
       "acceptance": "Provide dated source-linked evidence to document appeal windows, held funds and seller interruption; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 77,
+      "percent": 83,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -2682,7 +2718,10 @@
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/policy-risk-2025-2026.json",
         "ontology/itch-io/policy-risk-2025-2026.md",
-        "tests/itch-io-policy.test.mjs"
+        "tests/itch-io-policy.test.mjs",
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "tests/itch-io-publisher-legal.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -2743,12 +2782,15 @@
       "objective": "Investigate define downloadable backups, delisting and customer access risks.",
       "acceptance": "Provide dated source-linked evidence to define downloadable backups, delisting and customer access risks; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 58,
+      "percent": 71,
       "evidence": [
         "ontology/itch-io/policy-risk-2025-2026.json",
         "ontology/itch-io/policy-risk-2025-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-policy.test.mjs"
+        "tests/itch-io-policy.test.mjs",
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "tests/itch-io-publisher-legal.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3180,12 +3222,15 @@
       "objective": "Investigate record retrieval dates, citation conditions and dataset licenses.",
       "acceptance": "Provide dated source-linked evidence to record retrieval dates, citation conditions and dataset licenses; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 40,
+      "percent": 70,
       "evidence": [
         "ontology/itch-io/traffic-benchmark-2025.json",
         "ontology/itch-io/traffic-benchmark-2025.md",
         "specimens/itch-io.json",
-        "tests/itch-io-traffic-benchmark.test.mjs"
+        "tests/itch-io-traffic-benchmark.test.mjs",
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "tests/itch-io-publisher-legal.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3222,13 +3267,16 @@
       "objective": "Investigate exclude identifiable buyer or confidential seller records.",
       "acceptance": "Provide dated source-linked evidence to exclude identifiable buyer or confidential seller records; declare applicable population, unit, period, sample frame, limitations, and missing data.",
       "status": "in_progress",
-      "percent": 62,
+      "percent": 79,
       "evidence": [
         "ontology/itch-io/transaction-cohort-protocol-2026.json",
         "ontology/itch-io/transaction-cohort-protocol-2026.md",
         "site/itch-cohort-protocol.mjs",
         "tests/itch-cohort-protocol.test.mjs",
-        "specimens/itch-io.json"
+        "specimens/itch-io.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.json",
+        "ontology/itch-io/publisher-rights-refunds-2026.md",
+        "tests/itch-io-publisher-legal.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",

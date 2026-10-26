@@ -283,3 +283,8 @@ The [2025 itch.io traffic survey audit](../ontology/itch-io/traffic-benchmark-20
 ## Unexecuted commercial strategy comparisons
 
 Seven falsifiable offer, demo, game jam, promotion and store comparisons are specified in the [strategy protocol](../ontology/itch-io/commercial-strategy-protocol-2026.md). All observations remain null, no money has been spent and no games were published. Progress 50%.
+
+
+## Publisher contract, refunds and privacy
+
+[The official-policy audit](../ontology/itch-io/publisher-rights-refunds-2026.md) distinguishes publisher ownership, itch.io nonexclusive license, actual buyer refunds, conditional unclaimed collected funds maintenance and prohibition on sharing buyer data. No private records or legal case involved. Score 52%.

@@ -266,7 +266,7 @@
           "title": "Record withdrawal minimums and delays",
           "acceptance": "State payout minimum, frequency, holds and reserve policies.",
           "weight": 1,
-          "progress": 85,
+          "progress": 90,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -275,7 +275,10 @@
             "tests/itch-io-economics.test.mjs",
             "ontology/itch-io/payment-country-corridors-2026.json",
             "ontology/itch-io/payment-country-corridors-2026.md",
-            "tests/itch-io-payment-corridors.test.mjs"
+            "tests/itch-io-payment-corridors.test.mjs",
+            "ontology/itch-io/publisher-rights-refunds-2026.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.md",
+            "tests/itch-io-publisher-legal.test.mjs"
           ]
         },
         {
@@ -797,13 +800,16 @@
           "title": "Check intellectual property terms",
           "acceptance": "Document license grants, owner rights and source dates.",
           "weight": 1,
-          "progress": 62,
+          "progress": 84,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
             "ontology/itch-io/commercial-rules-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-economics.test.mjs"
+            "tests/itch-io-economics.test.mjs",
+            "ontology/itch-io/publisher-rights-refunds-2026.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.md",
+            "tests/itch-io-publisher-legal.test.mjs"
           ]
         },
         {
@@ -812,12 +818,15 @@
           "title": "Check exclusivity and restrictions",
           "acceptance": "State duration, geography and affected rights.",
           "weight": 1,
-          "progress": 35,
+          "progress": 71,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/bundle-sale-jam-2026.json",
             "ontology/itch-io/bundle-sale-jam-2026.md",
-            "specimens/itch-io.json"
+            "specimens/itch-io.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.md",
+            "tests/itch-io-publisher-legal.test.mjs"
           ]
         },
         {
@@ -826,7 +835,7 @@
           "title": "Document product acceptance and bans",
           "acceptance": "Identify current content/product rules with evidence.",
           "weight": 1,
-          "progress": 63,
+          "progress": 77,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -835,7 +844,10 @@
             "tests/itch-io-economics.test.mjs",
             "ontology/itch-io/policy-risk-2025-2026.json",
             "ontology/itch-io/policy-risk-2025-2026.md",
-            "tests/itch-io-policy.test.mjs"
+            "tests/itch-io-policy.test.mjs",
+            "ontology/itch-io/publisher-rights-refunds-2026.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.md",
+            "tests/itch-io-publisher-legal.test.mjs"
           ]
         },
         {
@@ -844,7 +856,7 @@
           "title": "Study portability of content and audience",
           "acceptance": "Record exports, email access, ratings and account limits.",
           "weight": 1,
-          "progress": 44,
+          "progress": 62,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/release-format-access-2026.md",
@@ -854,7 +866,10 @@
             "specimens/itch-io.json",
             "ontology/itch-io/commercial-postmortems-2026.json",
             "ontology/itch-io/commercial-postmortems-2026.md",
-            "tests/itch-io-commercial-postmortems.test.mjs"
+            "tests/itch-io-commercial-postmortems.test.mjs",
+            "ontology/itch-io/publisher-rights-refunds-2026.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.md",
+            "tests/itch-io-publisher-legal.test.mjs"
           ]
         },
         {
@@ -863,13 +878,16 @@
           "title": "Review dispute, appeal and takedown paths",
           "acceptance": "Document official procedures and timing.",
           "weight": 1,
-          "progress": 38,
+          "progress": 72,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/policy-risk-2025-2026.json",
             "ontology/itch-io/policy-risk-2025-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-policy.test.mjs"
+            "tests/itch-io-policy.test.mjs",
+            "ontology/itch-io/publisher-rights-refunds-2026.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.md",
+            "tests/itch-io-publisher-legal.test.mjs"
           ]
         },
         {
@@ -878,9 +896,14 @@
           "title": "Check rights to reuse research inputs",
           "acceptance": "Verify copyright, API and database licensing constraints.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 35,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/publisher-rights-refunds-2026.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.md",
+            "specimens/itch-io.json",
+            "tests/itch-io-publisher-legal.test.mjs"
+          ]
         }
       ]
     },
@@ -938,7 +961,7 @@
           "title": "Study refunds and disputes",
           "acceptance": "Identify who bears losses and processing charges.",
           "weight": 1,
-          "progress": 59,
+          "progress": 76,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
@@ -948,7 +971,10 @@
             "ontology/itch-io/transaction-cohort-protocol-2026.json",
             "ontology/itch-io/transaction-cohort-protocol-2026.md",
             "site/itch-cohort-protocol.mjs",
-            "tests/itch-cohort-protocol.test.mjs"
+            "tests/itch-cohort-protocol.test.mjs",
+            "ontology/itch-io/publisher-rights-refunds-2026.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.md",
+            "tests/itch-io-publisher-legal.test.mjs"
           ]
         },
         {
@@ -1028,13 +1054,16 @@
           "title": "Study suspension and termination",
           "acceptance": "Record policy grounds and appeals.",
           "weight": 1,
-          "progress": 65,
+          "progress": 76,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/policy-risk-2025-2026.json",
             "ontology/itch-io/policy-risk-2025-2026.md",
             "specimens/itch-io.json",
-            "tests/itch-io-policy.test.mjs"
+            "tests/itch-io-policy.test.mjs",
+            "ontology/itch-io/publisher-rights-refunds-2026.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.md",
+            "tests/itch-io-publisher-legal.test.mjs"
           ]
         },
         {
@@ -1095,9 +1124,14 @@
           "title": "Study privacy and data-access requirements",
           "acceptance": "Record official limits and risks to creator data.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 79,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/itch-io/publisher-rights-refunds-2026.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.md",
+            "specimens/itch-io.json",
+            "tests/itch-io-publisher-legal.test.mjs"
+          ]
         },
         {
           "id": "risk/geo",
@@ -1120,7 +1154,7 @@
           "title": "Model continuity and exit options",
           "acceptance": "Document data export, payouts at closure and alternatives.",
           "weight": 1,
-          "progress": 62,
+          "progress": 71,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/policy-risk-2025-2026.json",
@@ -1130,7 +1164,10 @@
             "ontology/itch-io/distribution-build-2026.json",
             "ontology/itch-io/distribution-build-2026.md",
             "site/itch-distribution-audit.mjs",
-            "tests/itch-distribution-audit.test.mjs"
+            "tests/itch-distribution-audit.test.mjs",
+            "ontology/itch-io/publisher-rights-refunds-2026.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.md",
+            "tests/itch-io-publisher-legal.test.mjs"
           ]
         }
       ]
@@ -1353,7 +1390,7 @@
           "title": "Review all public artifacts",
           "acceptance": "Verify rights, privacy, neutral tone and data suitability.",
           "weight": 1,
-          "progress": 72,
+          "progress": 81,
           "status": "in_progress",
           "evidence": [
             "ontology/itch-io/transaction-cohort-protocol-2026.json",
@@ -1363,7 +1400,10 @@
             "specimens/itch-io.json",
             "ontology/itch-io/commercial-strategy-protocol-2026.json",
             "ontology/itch-io/commercial-strategy-protocol-2026.md",
-            "tests/itch-io-strategy-protocol.test.mjs"
+            "tests/itch-io-strategy-protocol.test.mjs",
+            "ontology/itch-io/publisher-rights-refunds-2026.json",
+            "ontology/itch-io/publisher-rights-refunds-2026.md",
+            "tests/itch-io-publisher-legal.test.mjs"
           ]
         },
         {
