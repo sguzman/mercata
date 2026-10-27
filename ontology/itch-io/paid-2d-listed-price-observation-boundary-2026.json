@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "bounded_nonrepresentative_popular_sorted_paid_2D_game_price_snapshot_analysis",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-browse-paid-2d"
+  ],
+  "origin_record": "ontology/itch-io/paid-2d-popular-prices-2026.json",
+  "sampling": {
+    "browse_filter": "/games/store/tag-2d",
+    "sort": "popular",
+    "period": "public page snapshot 2026-10-26",
+    "visible_first_n": 15,
+    "filtered_result_count": 12691,
+    "method": "first_fifteen_visible_in_popular_order",
+    "selection_probability_known": false,
+    "random_sample": false,
+    "may_include_historically_published_titles": true
+  },
+  "prices": {
+    "currency": "USD_displayed",
+    "items_count": 15,
+    "minimum_displayed_usd": 0,
+    "maximum_displayed_usd": 25,
+    "median_of_all_fifteen_displayed_usd": 5.99,
+    "plain_badge_count": 11,
+    "sale_badge_count": 2,
+    "full_discount_badge_count": 2,
+    "non_100pct_discount_items": 13,
+    "median_non_full_discount_displayed_usd": 10,
+    "plain_badge_items": 11,
+    "median_plain_badge_usd": 10,
+    "free_at_snapshot_under_paid_filter_items": 2,
+    "prices_are_realized_paid_order_amounts": false,
+    "paid_filter_guarantees_nonzero_current_checkout": false
+  },
+  "eligible_competitor_rules": [
+    {
+      "id": "direct_paid_2d_candidate",
+      "criterion": "public_paid_filter_and_2D_tag_on_observation_date",
+      "population_count_at_snapshot": 12691,
+      "positive_price_purchase_verified": false
+    },
+    {
+      "id": "current_100pct_discount_candidate",
+      "criterion": "paid_filter_with_100_percent_discount_to_zero_displayed_today",
+      "count_in_visible_sample": 2,
+      "should_not_enter_positive_price_actual_checkout_count": true
+    },
+    {
+      "id": "plain_2d_ranked_title",
+      "criterion": "visible_plain_price_badge_at_observed_snapshot",
+      "count_in_visible_sample": 11,
+      "ever_received_a_paid_order": null
+    },
+    {
+      "id": "on_sale_ranked_title",
+      "criterion": "temporary_sale_price_badge_and_nonzero_displayed_price",
+      "count_in_visible_sample": 2,
+      "undiscounted_listing_price_not_known_from_snapshot": true
+    }
+  ],
+  "commercial_unit_contract": {
+    "title_listing_not_publisher_person": true,
+    "rank_not_sales_count": true,
+    "review_count_not_paid_units": true,
+    "temporary_displayed_price_not_realized_receipt": true,
+    "no_valid_platform_price_median": true,
+    "no_valid_genre_profit_median": true
+  },
+  "limitations": [
+    "Popular ranking is visibility-selected, not a random independent sample of newly published paid 2D games.",
+    "The total 12,691 filter counter covers a mutable paid/2D intersection, not verified active merchants.",
+    "Two listings temporarily displayed $0 after 100% discount; they cannot be counted as currently positive-price transactions.",
+    "A screenshot displayed price has no processor, donation, tip, bundle, refund, VAT, discounted transaction or final currency conversion data.",
+    "Price means or medians of these fifteen rows do not estimate the platform-wide game price distribution.",
+    "Neither buyer count, paid unit volume, founder seller income nor title profitability can be inferred."
+  ],
+  "unmeasured": {
+    "actual_seller_paid_units": null,
+    "actual_price_per_order": null,
+    "platformwide_median_paid_game_price": null,
+    "median_game_developer_income": null,
+    "first_time_seller_price": null,
+    "discount_sales_uplift": null,
+    "representative_paid_2d_demand": null
+  }
+}
