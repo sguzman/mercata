@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "hypothetical_first_paid_game_offer_decision_and_reporting_contract",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-pricing",
+    "itch-html5",
+    "itch-payments",
+    "itch-indexed",
+    "itch-buying-flow",
+    "itch-quality",
+    "itch-started",
+    "mixolumia-postmortem",
+    "rose-seed-replica-launch-cost-postmortem",
+    "aracore-game-first-five-days-postmortem"
+  ],
+  "population": "potential first-time positively priced game publishers, not a probability sample",
+  "unit": "merchant project and retained settled paid order",
+  "period": "source policy October 26 2026; future eligible 30/90/365 day release windows",
+  "observed_market_sales": false,
+  "actual_seller_account_opened": false,
+  "offers": [
+    {
+      "id": "html5_free_donation",
+      "receipt_event": "positive_donation",
+      "not_a_sale": [
+        "browser_play",
+        "page_view"
+      ],
+      "source_ids": [
+        "itch-html5",
+        "itch-pricing"
+      ]
+    },
+    {
+      "id": "premium_download",
+      "receipt_event": "retained_positive_price_order",
+      "not_a_sale": [
+        "gifted_key",
+        "free_file_download"
+      ],
+      "source_ids": [
+        "itch-pricing",
+        "itch-buying-flow"
+      ]
+    },
+    {
+      "id": "demo_plus_premium",
+      "receipt_event": "retained_paid_full_game_order",
+      "not_a_sale": [
+        "demo_download",
+        "browser_play"
+      ],
+      "source_ids": [
+        "itch-started",
+        "itch-pricing"
+      ]
+    }
+  ],
+  "comparison_requirements": [
+    "identical_game_scope_or_declared_differences",
+    "aligned_currencies_and_price_terms",
+    "matched_exposure_and_observation_period",
+    "distinguish_sales_from_free_downloads",
+    "publisher_country_and_payment_route",
+    "fixed_cash_and_per_order_fees",
+    "valued_engineering_art_qa_marketing_and_support_hours",
+    "actual_refunds_and_disputes",
+    "distribution_rights_and_account_continuity"
+  ],
+  "hypothetical_game": {
+    "format": "2d_small_singleplayer",
+    "mechanics_low": 1,
+    "mechanics_high": 2,
+    "play_minutes_low": 5,
+    "play_minutes_high": 30,
+    "example_10_usd_gross_after_platform_and_processor_before_other_costs": 8.41,
+    "example_itch_share_rate": 0.1,
+    "example_processor_rate": 0.029,
+    "example_fixed_processor_usd": 0.3,
+    "fees_are_current_seller_guarantee": false,
+    "source_ids": [
+      "itch-payments",
+      "itch-pricing"
+    ],
+    "production_budget_usd": null,
+    "work_hours": null,
+    "seller_merchant_approved": null,
+    "actual_paid_orders": null,
+    "refund_rate": null,
+    "real_net_profit": null,
+    "profit_probability": null
+  },
+  "go_no_go": [
+    {
+      "id": "legal_rights",
+      "pass": null,
+      "block": "no_rights_no_release"
+    },
+    {
+      "id": "game_quality_QA",
+      "pass": null,
+      "block": "no_tested_build_no_readiness_claim"
+    },
+    {
+      "id": "seller_country_tax",
+      "pass": null,
+      "block": "no_verified_payout_no_paid_release"
+    },
+    {
+      "id": "cash_and_labor",
+      "pass": null,
+      "block": "no_ledger_no_profit_claim"
+    },
+    {
+      "id": "qualified_buyers",
+      "pass": null,
+      "block": "no_representative_demand_no_sales_probability"
+    },
+    {
+      "id": "authorization",
+      "pass": false,
+      "block": "no_owner_authorization_no_commercial_execution"
+    }
+  ],
+  "research_only_trials": [
+    {
+      "id": "browser_donation_vs_premium",
+      "hypothesis": "receipt_per_comparable_exposure_differs",
+      "causal_effect": null,
+      "measure": "refund_adjusted_cash_and_valued_labor_after_same_horizon"
+    },
+    {
+      "id": "demo_vs_no_demo",
+      "hypothesis": "demo_changes_paid_order_volume_and_qa_cost",
+      "causal_effect": null,
+      "measure": "retained_full_game_orders_and_extra_demo_work"
+    },
+    {
+      "id": "itch_vs_cross_store",
+      "hypothesis": "additional_store_may_add_demand_and_support_costs",
+      "causal_effect": null,
+      "measure": "store_specific_net_after_distribution_and_work"
+    }
+  ],
+  "stop_conditions": {
+    "owner_approved": false,
+    "max_outside_cash_usd": null,
+    "max_creator_work_hours": null,
+    "min_sample_size": null,
+    "min_detectable_effect": null,
+    "no_auto_spending": true
+  },
+  "retrospective": {
+    "days": [
+      30,
+      90,
+      365
+    ],
+    "include_zero_sale_games": true,
+    "include_delisted_games_when_in_cohort": true,
+    "fields": [
+      "release_date",
+      "game_version",
+      "country_and_payout_method",
+      "cash_and_labor_costs",
+      "views",
+      "browser_plays",
+      "demo_downloads",
+      "paid_orders",
+      "refunds",
+      "gross_buyer_spend",
+      "platform_processor_fees",
+      "payouts",
+      "support_hours",
+      "net_income",
+      "known_unknowns"
+    ],
+    "real_window_records_count": 0
+  },
+  "unobserved": {
+    "representative_paid_buyer_population": null,
+    "first_game_median_profit": null,
+    "mean_developer_earnings": null,
+    "zero_sale_probability": null,
+    "typical_repay_labor_time": null,
+    "causal_demo_effect": null,
+    "expected_new_title_orders": null
+  },
+  "limitations": [
+    "Operator mechanics permit offers but do not determine income.",
+    "A break-even required order count does not predict orders.",
+    "One disclosed game outcome cannot represent first-time publisher earnings.",
+    "Selected cross-store retrospectives may mix product and currency bases.",
+    "No authorized seller experiment, expense or purchase was carried out."
+  ]
+}
