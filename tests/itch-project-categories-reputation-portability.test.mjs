@@ -21,7 +21,9 @@ test('Product categories, content gates, feedback and portability follow officia
  const dt=p.detail_tasks.find(x=>x.id==='itch-io/identity/define-product-populations');
  assert.equal(dt.percent,100);assert.equal(dt.status,'complete');
  const dg=p.detail_tasks.find(x=>x.id==='itch-io/rights/study-game-content-restrictions');
- assert.equal(dg.percent,91);assert.equal(dg.status,'in_progress');
+ assert.equal(dg.percent,100);assert.equal(dg.status,'complete');
+ assert(dg.evidence.includes('ontology/itch-io/content-monetization-regional-policy-gates-2026.json'));
+ assert(dg.evidence.includes('tests/itch-content-monetization-regional-policy-gates.test.mjs'));
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
  assert.equal(p.progress_percent,Math.round((q.queues.flatMap(x=>x.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
 });
