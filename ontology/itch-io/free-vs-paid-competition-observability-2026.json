@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "adjacent_free_and_paid_game_discovery_supply_vs_purchase_outcome_crosswalk",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-pricing",
+    "itch-html5",
+    "itch-indexed",
+    "itch-browse-all",
+    "itch-browse-paid",
+    "luden-superweird-alpha-feature-2026"
+  ],
+  "population": "Public itch.io project access and price configurations for games; not a representative buyer cohort",
+  "unit": "Game page, browser play, free download, positive minimum-price checkout, tip, or discount entitlement; never interchangeable",
+  "period": "Official creator policy checked 2026-10-27, existing October 2026 catalog snapshots, selected free alpha published 2026",
+  "offers": [
+    {
+      "id": "mandatory_positive_price_game",
+      "minimum_price_status": "positive",
+      "offer_kind": "full_game_purchase",
+      "free_activity_establishes_sale": false,
+      "required_paid_outcome": "settled_positive_price_order",
+      "source_ids": [
+        "itch-pricing"
+      ]
+    },
+    {
+      "id": "zero_minimum_pay_what_you_want",
+      "minimum_price_status": "zero",
+      "offer_kind": "free_download_or_optional_donation",
+      "free_activity_establishes_sale": false,
+      "required_paid_outcome": "positive_voluntary_payment_record_not_required_purchase",
+      "source_ids": [
+        "itch-pricing"
+      ]
+    },
+    {
+      "id": "free_browser_play",
+      "minimum_price_status": "zero_or_playable_demo",
+      "offer_kind": "HTML5 embedded play",
+      "free_activity_establishes_sale": false,
+      "required_paid_outcome": "separately_recorded_genuine_paid_full_game_order",
+      "source_ids": [
+        "itch-html5",
+        "itch-pricing"
+      ]
+    },
+    {
+      "id": "free_demo_and_priced_full_game",
+      "minimum_price_status": "mixed",
+      "offer_kind": "distinct_demo_and_full_game_access",
+      "free_activity_establishes_sale": false,
+      "required_paid_outcome": "retained_full_game_paid_entitlement",
+      "source_ids": [
+        "itch-pricing",
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "100_percent_temporary_discount",
+      "minimum_price_status": "underlying_positive_current_zero",
+      "offer_kind": "temporary_zero_price_access_to_previously_priced_offer",
+      "free_activity_establishes_sale": false,
+      "required_paid_outcome": "positive_payment_separate_from_zero_discount",
+      "source_ids": [
+        "itch-pricing"
+      ]
+    },
+    {
+      "id": "selected_free_alpha_spotlight",
+      "minimum_price_status": "free_alpha",
+      "offer_kind": "external_attention_and_front_page_free_preview",
+      "free_activity_establishes_sale": false,
+      "required_paid_outcome": "unobserved_in_example",
+      "source_ids": [
+        "luden-superweird-alpha-feature-2026"
+      ]
+    }
+  ],
+  "catalog_snapshot_caveat": {
+    "public_all_game_browse_results_2026_10_26": 1780861,
+    "paid_filter_results_2026_10_26": 49588,
+    "derive_number_of_free_games_by_subtraction": false,
+    "paid_listing_fraction_is_buyer_fraction": false,
+    "genre_and_price_cohorts_overlap": true,
+    "source_ids": [
+      "itch-browse-all",
+      "itch-browse-paid"
+    ]
+  },
+  "comparison_requirements": [
+    "distinguish_free_vs_mandatory_positive_price_cohort",
+    "same_build_genre_and_language_or_declare_differences",
+    "first_publication_not_last_patch_age",
+    "paid_and_free_store_visibility_in_same_period",
+    "exposure_referrer_and_publisher_followers",
+    "positive_price_order_vs_optional_tip_vs_demo_view",
+    "actual_refund_adjusted_seller_proceeds",
+    "engine_art_qa_and_support_labor"
+  ],
+  "observed": {
+    "actual_paid_transactions": null,
+    "free_player_to_buyer_conversion": null,
+    "causal_free_game_competitive_displacement": null,
+    "median_paid_game_sales": null,
+    "free_demo_publisher_profit": null
+  },
+  "limitations": [
+    "A free game can draw attention and competing time without representing addressable positive-price demand.",
+    "Mixed pay-what-you-want projects are not inherently paid-unit games when downloaded for zero.",
+    "An individual ranked free alpha case is a selected outcome, not comparative market performance.",
+    "No purchase receipt or merchant dashboard data used; catalog counts cannot estimate substitution elasticity or sales."
+  ]
+}

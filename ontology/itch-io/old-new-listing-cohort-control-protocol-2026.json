@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "original_release_age_vs_prior_catalog_rank_matched_comparison_protocol",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-indexed",
+    "itch-analytics-2018",
+    "itch-recent-paid7-2026",
+    "itch-recent-paid30-2026",
+    "itch-recent-all-released30-2026",
+    "itch-account-followers",
+    "itch-pricing"
+  ],
+  "population": "Hypothetical eligible publicly indexed paid games with original publication timestamps; no actual sampled pair observed",
+  "unit": "One unique paid project ID with dated release age and same-window exposure and settled paid-order measures",
+  "period": "Public browse snapshots 2026-10; 2018 impressions feature history; current indexing policy checked Oct 27 2026",
+  "release_age_days_categories": [
+    {
+      "id": "new_0_7",
+      "min": 0,
+      "max": 7
+    },
+    {
+      "id": "new_8_30",
+      "min": 8,
+      "max": 30
+    },
+    {
+      "id": "middle_31_90",
+      "min": 31,
+      "max": 90
+    },
+    {
+      "id": "legacy_over_90",
+      "min": 91,
+      "max": null
+    }
+  ],
+  "required_release_fields": [
+    "original_project_publish_date",
+    "first_game_availability_date",
+    "first_paid_offer_date",
+    "last_game_build_update_date",
+    "first_discovery_index_observation_date",
+    "last_sale_start_end",
+    "snapshot_retrieval_timestamp_and_timezone"
+  ],
+  "matched_eligibility": [
+    "same_price_filter_and_positive_minimum",
+    "same_genre_and_product_full_game_vs_DLC",
+    "same_target_platform_input_and_language",
+    "matched_discount_and_purchase_access",
+    "same_length_calendar_visit_window",
+    "similar_external_referral_campaign_intensity",
+    "prior_creator_following_and_portfolio",
+    "same_indexing_and_moderation_access",
+    "publisher_or_account_age_recorded",
+    "preserve_unindexed_and_withdrawn_censoring_if_observable"
+  ],
+  "measurement_units": [
+    "project_exposure_impressions",
+    "project_page_visit_events",
+    "search_browse_listing_placement",
+    "retained_positive_payment_game_orders",
+    "refunded_orders",
+    "seller_cash_proceeds_after_fees",
+    "marketing_and_support_hours"
+  ],
+  "identification": {
+    "project_publish_date_reset_on_build_update": false,
+    "older_project_ranking_causal_effect_verified": false,
+    "matched_2026_impression_window_available": false,
+    "difference_in_payments_between_new_and_old_cohorts": null,
+    "matching_game_release_age_and_observation_window_distinct": true,
+    "selection_risk": "Legacy listings are survivors and may have larger established audiences; never attribute difference solely to age.",
+    "external_market_promotion_risk": "Editorial placement, prior fans, coupon campaigns and outside social audiences may confound new-versus-old comparisons.",
+    "source_ids": [
+      "itch-indexed",
+      "itch-analytics-2018",
+      "itch-account-followers"
+    ]
+  },
+  "historical_filters": {
+    "seven_day_recent_count": 1057,
+    "thirty_day_recent_paid_count": 3752,
+    "thirty_day_all_released_count": 16776,
+    "filters_measured_same_instant": false,
+    "all_results_are_verified_first_time_paid_releases": false,
+    "source_ids": [
+      "itch-recent-paid7-2026",
+      "itch-recent-paid30-2026",
+      "itch-recent-all-released30-2026"
+    ]
+  },
+  "study_state": {
+    "actual_pairs_measured": 0,
+    "observed_2026_paid_order_rate_by_age": null,
+    "observed_adult_customer_count": null,
+    "causal_legacy_page_advantage": null
+  },
+  "limits": [
+    "Rolling listing result counts cannot identify independent new commercial publishers or completed paid orders.",
+    "Project update recency does not reset original launch date and should not be treated as a new project.",
+    "Even perfectly matched price and genre do not control creator reputation without prior follower and promotion data.",
+    "2018 impression window history does not prove the current seller-dashboard API or delivery mode.",
+    "If matching is not feasible, report descriptive noncausal cohort differences with unknown buyer outcomes."
+  ]
+}
