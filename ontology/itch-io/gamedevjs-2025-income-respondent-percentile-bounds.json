@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "voluntary_web_game_developer_income_survey_nonrepresentative_bracket_percentiles",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "gamedevjs-web-survey-2025",
+    "gamedevjs-web-survey-2025-report-pdf"
+  ],
+  "population": "voluntary respondents to 2025 Gamedev.js web game developer community income question, not itch.io paid seller population",
+  "unit": "one self-report respondent's estimated all-source annual game-development income",
+  "period": "2025 self-reported yearly estimate; survey December 2025; public HTML and PDF versions differ in publication date",
+  "sample_frame": "voluntary publicly solicited Gamedev.js Survey 2025 with 445 submissions; Question 33 answered by 435",
+  "total_submissions": 445,
+  "income_question_responses": 435,
+  "respondent_count_missing_income_answer": 10,
+  "publication_dates": {
+    "html_report_claim": "2025-12-24",
+    "pdf_report_claim": "2026-01-27",
+    "versions_not_silently_reconciled": true
+  },
+  "bins": [
+    {
+      "id": "zero",
+      "description": "No income from game development",
+      "lower_usd": 0,
+      "upper_usd": 0,
+      "percent": 63,
+      "cumulative_rounded_percent": 63
+    },
+    {
+      "id": "under_1000",
+      "description": "Positive income below USD 1000",
+      "lower_usd": 0,
+      "upper_usd": 1000,
+      "upper_exclusive": true,
+      "percent": 15.4,
+      "cumulative_rounded_percent": 78.4
+    },
+    {
+      "id": "1000_to_5000",
+      "description": "USD 1k–5k",
+      "lower_usd": 1000,
+      "upper_usd": 5000,
+      "percent": 5.3,
+      "cumulative_rounded_percent": 83.7
+    },
+    {
+      "id": "6000_to_10000",
+      "description": "USD 6k–10k",
+      "lower_usd": 6000,
+      "upper_usd": 10000,
+      "percent": 2.3,
+      "cumulative_rounded_percent": 86
+    },
+    {
+      "id": "11000_to_20000",
+      "description": "USD 11k–20k",
+      "lower_usd": 11000,
+      "upper_usd": 20000,
+      "percent": 2.3,
+      "cumulative_rounded_percent": 88.3
+    },
+    {
+      "id": "21000_to_50000",
+      "description": "USD 21k–50k",
+      "lower_usd": 21000,
+      "upper_usd": 50000,
+      "percent": 4.1,
+      "cumulative_rounded_percent": 92.4
+    },
+    {
+      "id": "51000_to_100000",
+      "description": "USD 51k–100k",
+      "lower_usd": 51000,
+      "upper_usd": 100000,
+      "percent": 5.3,
+      "cumulative_rounded_percent": 97.7
+    },
+    {
+      "id": "100000_and_above",
+      "description": "USD 100k+",
+      "lower_usd": 100000,
+      "upper_usd": null,
+      "percent": 2.3,
+      "cumulative_rounded_percent": 100
+    }
+  ],
+  "proportions_displayed_rounded": true,
+  "raw_respondent_rows_obtained": false,
+  "bounded_quantiles": [
+    {
+      "quantile": 0.1,
+      "respondent_income_bracket": "0",
+      "exact_respondent_value_usd": 0
+    },
+    {
+      "quantile": 0.25,
+      "respondent_income_bracket": "0",
+      "exact_respondent_value_usd": 0
+    },
+    {
+      "quantile": 0.5,
+      "respondent_income_bracket": "0",
+      "exact_respondent_value_usd": 0
+    },
+    {
+      "quantile": 0.75,
+      "respondent_income_bracket": "positive_income_below_1000",
+      "exact_respondent_value_usd": null
+    },
+    {
+      "quantile": 0.9,
+      "respondent_income_bracket": "21000_to_50000",
+      "exact_respondent_value_usd": null
+    },
+    {
+      "quantile": 0.95,
+      "respondent_income_bracket": "51000_to_100000",
+      "exact_respondent_value_usd": null
+    }
+  ],
+  "survey_zero_income_percent": 63,
+  "survey_under_1000_cumulative_percent": 78.4,
+  "survey_100000_plus_percent": 2.3,
+  "cannot_use_for": {
+    "itch_paid_seller_zero_earnings_rate": true,
+    "representative_itch_income_quantiles": true,
+    "itch_only_gross_or_net_profit": true,
+    "seller_income_gini_or_top_share": true,
+    "actual_paid_orders": true,
+    "game_genre_specific_median": true,
+    "different_question_joint_respondent_cross_tab": true
+  },
+  "independent_publishing_question": {
+    "question_number": 28,
+    "respondents": 439,
+    "itch_or_similar_selected_percent": 67.4,
+    "published_nothing_selected_percent": 10.5,
+    "intersection_with_income_question_verified": null
+  },
+  "caveats": [
+    "Question 33 income includes any game development source and may include salary, advertisements, client work or other game-related earnings, not exclusively itch.io game sales.",
+    "The voluntary survey has no known probability of inclusion for the full web game community or the eligible paid game seller cohort.",
+    "Question 28 selects itch.io or similar websites, not necessarily verified itch.io accounts, and no raw cross-tab with Q33 is available.",
+    "Percentages are rounded, and bins have inconsistent boundary labels; report bracket membership not interpolated exact percentiles.",
+    "63% respondents with zero overall gamedev income is not the platform's fraction of positive-price projects with zero completed game purchases.",
+    "The HTML report and PDF report disagree on publication date; survey collection month and primary respondent counts are consistent.",
+    "Survey excludes nonrespondents and does not disclose all game sales, labor expense, taxes or the self-selection mechanism."
+  ],
+  "unobserved": {
+    "itch_paid_seller_population_denominator": null,
+    "verified_itch_zero_sales_fraction": null,
+    "itch_seller_mean_income": null,
+    "itch_seller_median_income": null,
+    "itch_profit_percentile_90": null,
+    "itch_paid_game_gmv": null
+  }
+}
