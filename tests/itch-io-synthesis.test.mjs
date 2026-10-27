@@ -21,3 +21,14 @@ test('Interim income synthesis retains open zero-earner and buyer data gaps',()=
  assert.equal(s.buyer_personal_data_collected,0);
  assert(s.pending_task_ids_at_creation.length>0);
 });
+
+test('Live synthesis progress is computed from unchanged 244-task inventory rather than a stale historical checkpoint',()=>{
+ const s=get('ontology/itch-io/research-synthesis-2026.json'),p=get('plans/itch-io.json'),q=get('queues/itch-io.json');
+ const base=q.queues.flatMap(w=>w.tasks),detail=p.detail_tasks;
+ assert.equal(base.length,84);assert.equal(detail.length,160);
+ const mean=(base.reduce((v,t)=>v+t.progress,0)+detail.reduce((v,t)=>v+t.percent,0))/244;
+ assert.equal(s.latest_evidence_summary.task_mean_exact_percent,Number(mean.toFixed(6)));
+ assert.equal(s.latest_evidence_summary.task_mean_rounded_percent,Math.round(mean));
+ const md=fs.readFileSync(new URL('../ontology/itch-io/research-synthesis-2026.md',import.meta.url),'utf8');
+ assert(md.includes(mean.toFixed(2)+'% exact, '+Math.round(mean)+'% rounded'));
+});
