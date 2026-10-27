@@ -3,7 +3,7 @@ const DEVICES=new Set(['desktop','laptop','phone','tablet','handheld']);
 const INPUTS=new Set(['keyboard_mouse','gamepad','touchscreen']);
 const KINDS=new Set(['initial_qa','compatibility_qa','accessibility_qa','support_reproduction','patch_retest']);
 const OUTCOMES=new Set(['pass','fail','blocked']);
-const validDate=x=>typeof x==='string'&&/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$/.test(x)&&!Number.isNaN(Date.parse(x));
+const validDate=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(x)&&!Number.isNaN(Date.parse(x));
 export function auditInputDeviceWorklog(records,{usdPerHour=null}={}){
  if(!Array.isArray(records))throw new TypeError('Input effort records array required');
  if(usdPerHour!==null&&!(typeof usdPerHour==='number'&&Number.isFinite(usdPerHour)&&usdPerHour>=0&&usdPerHour<=100000))throw new TypeError('Invalid optional declared hourly labor rate');
