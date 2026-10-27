@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "no_expenditure_until_authorized_research_pilot_go_no_go_gates",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-terms",
+    "itch-quality",
+    "itch-payments",
+    "itch-pricing",
+    "itch-indexed",
+    "itch-buying-flow",
+    "itch-html5",
+    "itch-totp-account"
+  ],
+  "population": "Potential owner-authorized first-time paid-game pilot; not real itch.io publishers or buyers",
+  "unit": "One approved bounded pilot and its actual logged cash/hour/evidence state",
+  "period": "Official creator policy observed October 27 2026; prospective work until explicit owner approval",
+  "sample_frame": "Official platform legal, pricing, payment, quality, indexing, buyer, HTML5 and account-authentication documentation",
+  "preauthorization": {
+    "max_external_cash_usd": 0,
+    "max_commercial_experiment_minutes": 0,
+    "live_paid_merchant_setup_allowed": false,
+    "private_buyer_data_collection_allowed": false,
+    "game_publication_allowed": false,
+    "any_positive_expense_requires_explicit_owner_approval": true
+  },
+  "hard_prelaunch_checks": [
+    "game_and_media_commercial_distribution_rights_verified",
+    "game_build_and_store_page_accurately_described",
+    "actual_device_accessibility_and_QA_verified",
+    "payment_route_and_seller_eligibility_verified",
+    "tax_and_required_account_settings_reviewed",
+    "permission_to_use_any_trial_aggregates_verified",
+    "security_and_credential_hygiene_verified"
+  ],
+  "required_explicit_approved_caps": [
+    "max_external_cash_usd",
+    "max_creator_minutes",
+    "max_pilot_calendar_days",
+    "min_eligible_page_view_events_for_evaluation",
+    "min_refund_adjusted_paid_order_events_for_any_success_claim"
+  ],
+  "once_owner_approved_conditions": [
+    "no_expenditure_above_cap",
+    "no_work_past_time_or_calendar_cap",
+    "stop_on_rights_payment_or_data_permission_failure",
+    "do_not_reclassify_free_demo_plays_as_sales",
+    "do_not_claim_income_or_profit_from_click_counts",
+    "incomplete_or_low_sample_is_inconclusive_not_market_failure"
+  ],
+  "gate_event_classes": [
+    "cash_cap_exceeded",
+    "labor_cap_exceeded",
+    "calendar_cap_exceeded",
+    "rights_or_regulatory_blocker",
+    "missing_required_release_check",
+    "missing_independently_verified_seller_approval",
+    "insufficient_post_launch_order_denominator",
+    "unverified_attribution_or_missing_refund_adjustment",
+    "contribution_not_necessarily_positive"
+  ],
+  "observed": {
+    "owner_approved_execution": false,
+    "real_pilot_run": false,
+    "paid_seller_account_used": false,
+    "actual_creator_hours": null,
+    "actual_spending_usd": null,
+    "actual_paid_orders": null,
+    "causal_paid_order_lift": null
+  },
+  "evidence_thresholds": {
+    "min_eligible_page_view_events": null,
+    "min_refund_adjusted_paid_order_events": null,
+    "experiment_horizon_days": null,
+    "minimum_detectable_effect": null,
+    "owner_approved_budget_usd": null,
+    "owner_approved_labor_hours": null
+  },
+  "limitations": [
+    "Default zero authorized spending is a constraint on this proposed research workflow, not itch.io's fee schedule or proof a commercial game costs no money.",
+    "A finite owner-selected budget and evidence threshold must be supplied before any commercial experiment.",
+    "Platform terms and payment eligibility may change; this is source-linked planning, not legal or tax clearance.",
+    "Synthetic or self-declared records are not independently authenticated transactions or representative seller returns.",
+    "No browser play or download constitutes a positive paid-order event."
+  ]
+}
