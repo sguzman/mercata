@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "official_content_discovery_payment_and_copyright_challenge_routes",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-terms",
+    "itch-indexed",
+    "itch-quality",
+    "itch-faq",
+    "itch-payments",
+    "itch-uk-content-geo-access-2025",
+    "itch-nsfw-announcement",
+    "itch-reindex-announcement"
+  ],
+  "population": "public platform-operator rules for game publishers and their affected pages or merchant balances",
+  "unit": "distinct operational restriction and documented review remedy, not a measured appeal outcome",
+  "source_period": "terms last noted April 15 2023; UK geo change July 2025; present creator documentation reviewed Oct 26 2026",
+  "restrictions": [
+    {
+      "id": "published_but_first_paid_game_unindexed",
+      "event": "published_project_pending_moderator_discovery_review",
+      "cause": "first_paid_seller_review_or_anti_spam_flag",
+      "visibility": "direct_url_and_profile_still_function",
+      "checkout": "depends_on_seller_configuration_not_deindexing_alone",
+      "remedy": "review_project_publishing_requirements_and_contact_official_support_if_unindexed_after_wait",
+      "stated_wait": "few_business_days_common_for_first_seller_and_at_least_one_day_before_escalation",
+      "automatic_appeal_success": null,
+      "source_ids": [
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "quality_deindexed",
+      "event": "game_removed_from_search_browse",
+      "cause": "misleading_metadata_content_spam_or_quality_violation",
+      "visibility": "direct_url_may_remain_available",
+      "checkout": "not_necessarily_disabled",
+      "remedy": "fix_content_and_use_operator_support_channel",
+      "stated_wait": null,
+      "automatic_appeal_success": null,
+      "source_ids": [
+        "itch-quality",
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "UK_geo_restriction_2025",
+      "event": "certain_adult_classified_games_inaccessible_from_UK",
+      "cause": "UK_OSA_response_as_of_July_2025",
+      "visibility": "specific_buyer_region_restriction",
+      "checkout": "restricted_UK_new_access_not_all_worldwide_seller_payments",
+      "remedy": "appeal_using_project_Geo_Restrictions_tab_for_possible_staff_override",
+      "stated_wait": null,
+      "automatic_appeal_success": null,
+      "source_ids": [
+        "itch-uk-content-geo-access-2025"
+      ]
+    },
+    {
+      "id": "DMCA_claim_and_takedown",
+      "event": "alleged_copyright_infringement_removal_or_disablement",
+      "cause": "submitted_formal_rights_claim",
+      "visibility": "target_content_removed_or_disabled",
+      "checkout": "sale_interrupted_for_affected_content",
+      "remedy": "formal_counter_notice_if_eligible_and_genuinely_disputing_infringement",
+      "stated_wait": "terms_allow_possible_replacement_in_10_to_14_business_days_after_counter_notice_unless_lawsuit_or_other_action;_discretionary",
+      "automatic_appeal_success": null,
+      "source_ids": [
+        "itch-terms"
+      ]
+    },
+    {
+      "id": "seller_payment_or_account_policy_enforcement",
+      "event": "payment_disabled_held_funds_or_account_termination",
+      "cause": "acceptable_use_payment_network_content_or_operator_terms",
+      "visibility": "page_indexing_or_account_access_may_be_affected_but_not_identical_to_transaction_status",
+      "checkout": "payment_provider_or_itch_payout_mode_could_be_blocked",
+      "remedy": "contact_support_where_available_but_some_severe_violations_state_no_second_chance",
+      "stated_wait": null,
+      "automatic_appeal_success": null,
+      "source_ids": [
+        "itch-terms",
+        "itch-faq",
+        "itch-nsfw-announcement"
+      ]
+    },
+    {
+      "id": "seller_collected_payout_hold",
+      "event": "earned_available_balance_not_yet_paid",
+      "cause": "tax_eligibility_transaction_hold_or_staff_review",
+      "visibility": "game_page_may_remain_available",
+      "checkout": "buyer_orders_possible_where_seller_mode_eligible",
+      "remedy": "complete_tax_validation_request_payout_and_follow_documented_review",
+      "stated_wait": "transaction_7_days_plus_payout_review_at_least_7_days_from_request_not_guaranteed_bank_arrival",
+      "automatic_appeal_success": null,
+      "source_ids": [
+        "itch-payments"
+      ]
+    }
+  ],
+  "dmca_terms": {
+    "counter_notice_sender_must_sign": true,
+    "identifies_removed_content_and_original_location": true,
+    "good_faith_mistake_or_misidentification_statement": true,
+    "name_address_phone_email_and_federal_court_consent_required": true,
+    "support_recipient_not_a_blanket_private_legal_advice_channel": true,
+    "potential_replacement_business_days_low": 10,
+    "potential_replacement_business_days_high": 14,
+    "replacement_guaranteed": false,
+    "claimant_court_action_can_prevent_replacement": true,
+    "source_ids": [
+      "itch-terms"
+    ]
+  },
+  "timing_boundaries": {
+    "first_seller_indexing_review_typical": "few_business_days_not_guaranteed",
+    "do_not_contact_for_newly_missing_index_before_days": 1,
+    "DMCA_counter_notice_potential_replacement_business_days": [
+      10,
+      14
+    ],
+    "UK_geo_appeal_response_guarantee": null,
+    "merchant_account_ban_appeal_duration": null,
+    "seller_payout_bank_delivery_guaranteed": null
+  },
+  "financial_exposure": {
+    "platform_change_could_end_discovery": true,
+    "payment_rail_loss_could_block_new_orders": true,
+    "previous_purchases_not_universally_erased_by_deindexing": true,
+    "existing_buyer_rights_depend_on_condition_and_source_date": true,
+    "real_affected_merchant_count": null,
+    "real_refunded_revenue": null,
+    "real_held_cash": null,
+    "real_appeal_success_rate": null
+  },
+  "safety_and_evidence": [
+    "Differentiate support request for unindexed public page, geo appeal, copyright counter notice, account enforcement and routine payout review.",
+    "Do not claim there is an appeals guarantee, universal timeframe or payout entitlement when the operator expressly reserves discretion.",
+    "An actual DMCA counter notice carries legal statements and personal information; this research does not submit one or draft an individualized legal challenge.",
+    "2025 UK-specific geography statements cannot be generalized to all countries or treated as unchanged current enforcement.",
+    "Do not imply that discovery deindexing means the seller has lost all paid transaction access, or that seller payouts continue during violations.",
+    "No affected game, actual complaint, payout balance, appeal response, buyer record or legal case was examined."
+  ],
+  "unmeasured": {
+    "publisher_deindexing_probability": null,
+    "merchant_fund_freeze_probability": null,
+    "appeal_success_rate": null,
+    "average_review_duration_days": null,
+    "total_revenue_at_risk": null,
+    "regional_loss_usd": null
+  }
+}
