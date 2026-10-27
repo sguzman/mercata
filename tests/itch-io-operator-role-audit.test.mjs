@@ -7,6 +7,8 @@ test('Itch operator and merchant roles remain distinct with official attribution
  const sources=new Set(s.evidence.map(e=>e.id));
  assert.equal(x.operator.name,'Itch Corp.');
  assert.equal(x.founding.year,2013);
+ const buying=s.evidence.find(e=>e.id==='itch-buying');assert.equal(buying.url,'https://itch.io/docs/creators/how-buying-works');
+ const document=fs.readFileSync(new URL('../ontology/itch-io/operator-legal-identity-and-roles-2026.md',import.meta.url),'utf8');assert(document.includes(buying.url));
  assert(x.source_ids.every(id=>sources.has(id)));
  for(const part of x.functional_roles)assert(part.source_ids.length&&part.source_ids.every(id=>sources.has(id)));
  assert.deepEqual(new Set(x.functional_roles.map(x=>x.function)),new Set(['publication','hosting','discovery','purchase','delivery','contracting']));

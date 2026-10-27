@@ -9,8 +9,8 @@ The [Terms of Service](https://itch.io/docs/legal/terms) name **Itch Corp.** as 
 | Publication | Publishers create a listing, upload their game and assert their distribution rights; itch.io supplies the project-page service. | [Getting started](https://itch.io/docs/creators/getting-started), [terms](https://itch.io/docs/legal/terms) |
 | Hosting | itch.io hosts publisher-supplied pages and files under a contractual content license, not an assignment of all game ownership. | [Terms](https://itch.io/docs/legal/terms) |
 | Discovery | Search & Browse visibility is subject to separate eligibility and review; publishing a page does not ensure indexing. | [Getting indexed](https://itch.io/docs/creators/getting-indexed) |
-| Purchase | The buyer's transaction uses third-party payment gateways, including PayPal or Stripe, with availability contingent on the seller's selected mode and provider configuration. | [Payments](https://itch.io/docs/creators/payments), [buying guide](https://itch.io/docs/buying/how-buying-works) |
-| Delivery | The platform provides purchase entitlements and file-access/download keys for publisher-supplied builds. | [Download keys](https://itch.io/docs/creators/download-keys), [buying guide](https://itch.io/docs/buying/how-buying-works) |
+| Purchase | The buyer's transaction uses third-party payment gateways, including PayPal or Stripe, with availability contingent on the seller's selected mode and provider configuration. | [Payments](https://itch.io/docs/creators/payments), [buying guide](https://itch.io/docs/creators/how-buying-works) |
+| Delivery | The platform provides purchase entitlements and file-access/download keys for publisher-supplied builds. | [Download keys](https://itch.io/docs/creators/download-keys), [buying guide](https://itch.io/docs/creators/how-buying-works) |
 | Contracting | Itch Corp. sets user and publisher terms; publishers represent that their uploaded content is adequately licensed for distribution. | [Terms](https://itch.io/docs/legal/terms) |
 
 ## Merchant of record is a conditional transaction role
