@@ -23,7 +23,7 @@ test('Portfolio arithmetic retains explicit work, costs and zero-order scenario 
  }
  const main=q.queues.flatMap(x=>x.tasks).find(x=>x.id==='strategy/break-even');
  assert.equal(main.progress,100);assert.equal(main.status,'complete');
- assert.equal(p.detail_tasks.find(x=>x.id==='itch-io/strategy/plan-localization-pilot').percent,92);
+ assert.equal(p.detail_tasks.find(x=>x.id==='itch-io/strategy/plan-localization-pilot').percent,100);
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
  assert.equal(p.progress_percent,Math.round((q.queues.flatMap(x=>x.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
 });
