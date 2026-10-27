@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "first_publication_visibility_follow_collection_and_launch_calendar_policy_matrix",
+  "reviewed_at": "2026-10-27",
+  "population": "Public itch.io project launches and creator discovery documentation; not observed paying buyers or wishlist events",
+  "unit": "Documented publication/indexing event or audience-notification condition; not paid unit, unique human, or purchase conversion",
+  "period": "2026-10-27 public policy observation; project/sale publisher events are hypothetical",
+  "sample_frame": "Official itch.io search-indexing, quality, followers and sale documentation",
+  "source_ids": [
+    "itch-indexed",
+    "itch-quality",
+    "itch-account-followers",
+    "itch-sale"
+  ],
+  "release_event_distinctions": [
+    {
+      "id": "draft",
+      "public_page_accessible": false,
+      "search_browse_indexed": false,
+      "most_recent_listing_eligible": false,
+      "notes": "Unpublished draft is not a launch observation."
+    },
+    {
+      "id": "public_unindexed",
+      "public_page_accessible": true,
+      "search_browse_indexed": false,
+      "most_recent_listing_eligible": "not_guaranteed",
+      "notes": "Direct and profile links can work before new paid-seller review; the site may review indexing."
+    },
+    {
+      "id": "public_indexed",
+      "public_page_accessible": true,
+      "search_browse_indexed": true,
+      "most_recent_listing_eligible": "subject_to_original_publish_time",
+      "notes": "Eligible search/browse presence does not measure impression count or paid demand."
+    }
+  ],
+  "indexing_requirements": [
+    "public_visibility",
+    "eligible_public_access_settings",
+    "cover_image",
+    "purchasable_downloadable_or_browser_playable_content",
+    "accurate_classification_and_nonabusive_metadata"
+  ],
+  "first_time_paid_seller_review_possible": true,
+  "creator_controls": [
+    {
+      "id": "account_follow",
+      "effect": "Feed updates, potential new-game notification email, sale notice for eligible nonowners, subject to account notification preferences",
+      "not_equivalent_to": "unique_paying_buyer",
+      "source_ids": [
+        "itch-account-followers"
+      ]
+    },
+    {
+      "id": "game_collection",
+      "effect": "User-curated page listing and possible visibility signals described by the operator",
+      "not_equivalent_to": "verified_native_wishlist_preorder",
+      "source_ids": [
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "devlog",
+      "effect": "Separate indexed update and distribution through feeds/email digests",
+      "not_equivalent_to": "project_publish_date_reset",
+      "source_ids": [
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "sale_period",
+      "effect": "Configured start/end window and badges on participating project",
+      "not_equivalent_to": "observed_incremental_orders",
+      "source_ids": [
+        "itch-sale"
+      ]
+    }
+  ],
+  "project_publish_date": {
+    "set_on_initial_publication": true,
+    "reset_on_update": false,
+    "reset_on_late_indexing": false,
+    "recreate_page_to_obtain_recency_discouraged": true,
+    "source_ids": [
+      "itch-indexed",
+      "itch-quality"
+    ]
+  },
+  "calendar": {
+    "record_local_timezone": true,
+    "record_absolute_start_and_end": true,
+    "record_first_publication_and_indexing_separately": true,
+    "record_discount_start_end_separately": true,
+    "measure_first_7_30_90_days_only_for_fully_documented_comparable_cohorts": true,
+    "actual_first_paid_launch_period_measured": false,
+    "source_ids": [
+      "itch-sale",
+      "itch-indexed"
+    ]
+  },
+  "observable_measurement_contract": [
+    {
+      "metric": "project_published",
+      "unit": "project_id_timestamp",
+      "data_origin": "publisher_authorized_dashboard_or_public_page"
+    },
+    {
+      "metric": "project_search_indexed",
+      "unit": "indexed_status_with_check_timestamp",
+      "data_origin": "individually checked search/browse placement"
+    },
+    {
+      "metric": "account_followers_at_launch",
+      "unit": "follower_accounts_not_people_or_paid_buyers",
+      "data_origin": "publisher_authorized_account_aggregate"
+    },
+    {
+      "metric": "collection_additions",
+      "unit": "collection_events_not_distinct_paid_buyers",
+      "data_origin": "authoritative_public_or_owner_authorized_count"
+    },
+    {
+      "metric": "notification_reach",
+      "unit": "delivered_notified_accounts",
+      "data_origin": "platform_owner_aggregate_if_available"
+    },
+    {
+      "metric": "page_visits",
+      "unit": "attributed_page_visit_events",
+      "data_origin": "publisher_authorized_first_party_dashboard"
+    },
+    {
+      "metric": "settled_paid_orders",
+      "unit": "positive_price_settled_transactions_net_of_refunds",
+      "data_origin": "consented_private_owner_aggregate"
+    }
+  ],
+  "native_wishlist_feature_equivalent_fully_verified": null,
+  "notifications_delivered_rate": null,
+  "first_time_paid_seller_indexing_delay_days": null,
+  "observed_launch_window_organic_paid_orders": null,
+  "funnel_conversion_rate": null,
+  "observed_publish_events": 0,
+  "observed_merchant_account_operations": 0,
+  "measurement_limitations": [
+    "A collection is not proof of a native platform wishlist or a reliable preorder-intent count; the operator documents collection and follow pathways.",
+    "Follower notification eligibility and platform messaging do not imply receipt, email open, new visitor, or purchase.",
+    "Publication date is fixed; indexing delay means a project's first browse appearance can occur after initial publication.",
+    "Sale badges and page promotion are not randomized uplift experiments.",
+    "Most Recent appearance or rank is not guaranteed and cannot be treated as durable launch visibility.",
+    "Observed first-month order denominators and same-title cohort comparisons require owner consent and purchase logs; no such data were acquired."
+  ]
+}

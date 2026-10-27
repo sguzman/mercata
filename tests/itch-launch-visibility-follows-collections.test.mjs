@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('First publication, indexing, follower interest, collections and positive-payment orders remain separate',()=>{
+ const a=read('ontology/itch-io/launch-visibility-follows-collections-2026.json'),s=read('specimens/itch-io.json'),q=read('queues/itch-io.json'),p=read('plans/itch-io.json');
+ const sources=new Set(s.evidence.map(x=>x.id));assert(a.source_ids.every(id=>sources.has(id)));
+ assert.equal(a.release_event_distinctions.length,3);
+ assert.equal(a.project_publish_date.reset_on_update,false);
+ assert.equal(a.project_publish_date.reset_on_late_indexing,false);
+ assert.equal(a.native_wishlist_feature_equivalent_fully_verified,null);
+ assert.equal(a.first_time_paid_seller_indexing_delay_days,null);
+ assert.equal(a.observed_launch_window_organic_paid_orders,null);
+ assert.equal(a.observed_merchant_account_operations,0);
+ assert.equal(a.creator_controls.find(x=>x.id==='game_collection').not_equivalent_to,'verified_native_wishlist_preorder');
+ const task=q.queues.flatMap(x=>x.tasks).find(t=>t.id==='special-games/special-2');
+ assert(task);assert.equal(task.progress,100);assert.equal(task.status,'complete');
+ for(const f of ['ontology/itch-io/launch-visibility-follows-collections-2026.json','ontology/itch-io/launch-visibility-follows-collections-2026.md','tests/itch-launch-visibility-follows-collections.test.mjs'])assert(task.evidence.includes(f));
+ const values=q.queues.flatMap(x=>x.tasks).map(x=>x.progress).concat(p.detail_tasks.map(x=>x.percent));
+ assert.equal(values.length,244);assert.equal(p.progress_percent,Math.round(values.reduce((a,b)=>a+b,0)/244));
+});
