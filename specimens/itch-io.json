@@ -1681,6 +1681,17 @@
       "evidence_class": "first_party_platform_release_note",
       "license": "Attributed short description of public eligibility rules and independently authored testing protocol.",
       "notes": "Dated publisher update describing submission-time requirements, not retrospective transaction or jam-to-paid outcomes."
+    },
+    {
+      "id": "itch-official-2015-optional-payment-aggregate",
+      "url": "https://itch.io/blog/2/running-an-indie-game-store-2015",
+      "title": "Running an Indie Game Store 2015",
+      "publisher": "itch.io platform operator",
+      "published_at": "2015-06-20",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_historic_aggregated_marketplace_payments",
+      "license": "Short attributed numeric measures with independently written analysis; original charts and raw transactions not reproduced.",
+      "notes": "Historic platformwide purchase/payment reports; product categories mixed and sample transaction counts not disclosed."
     }
   ],
   "claims": [
@@ -5933,6 +5944,36 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "No specific game license chain or particular jam event rules examined."
+    },
+    {
+      "id": "itch2015-extra-tips-on-paid-purchases",
+      "text": "The 2015 itch.io operator report described approximately 30% of purchases of positive-minimum-price content receiving optional extra payment beyond the minimum.",
+      "source_ids": [
+        "itch-official-2015-optional-payment-aggregate"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Not the share of free downloads turning into purchases, and not 2026 game-only data."
+    },
+    {
+      "id": "itch2015-positive-payment-amounts",
+      "text": "The same historical report stated a $3.67 mean extra amount above positive minimums and a $3.68 mean positive donation on zero-minimum content.",
+      "source_ids": [
+        "itch-official-2015-optional-payment-aggregate"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Both are conditional positive-payment averages with different event frames, not net income per download or the zero-payer share."
+    },
+    {
+      "id": "itch2015-checkout-origin-and-payouts",
+      "text": "In the 2015 operator report around 80% of purchases were attributed to external referrers, roughly 83% were initiated on project pages, and cumulative creator payouts were about $393,000.",
+      "source_ids": [
+        "itch-official-2015-optional-payment-aggregate"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Overlapping attribution axes and historic whole-store totals; no per-creator typical earnings or platform 2026 buyer estimates."
     }
   ],
   "observations": [

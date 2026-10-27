@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "legacy_operator_aggregated_positive_payment_data",
+  "report_date": "2015-06-20",
+  "review_date": "2026-10-26",
+  "source_ids": [
+    "itch-official-2015-optional-payment-aggregate"
+  ],
+  "paid_minimum_purchase_events": {
+    "extra_payment_share_approx": 0.3,
+    "extra_payment_mean_conditional_usd": 3.67,
+    "zero_dollar_paid_orders": false,
+    "sample_order_count": null
+  },
+  "zero_minimum_content": {
+    "donation_mean_conditional_positive_usd": 3.68,
+    "common_positive_donation_interval_usd": [
+      1,
+      5
+    ],
+    "zero_dollar_downloads_count": null,
+    "proportion_all_downloaders_who_donate": null
+  },
+  "checkout_attribution": {
+    "externally_referred_purchase_fraction_approx": 0.8,
+    "project_page_checkout_fraction_approx": 0.83,
+    "dimensions_overlap": true
+  },
+  "historic_payouts": {
+    "cumulative_paid_usd_approx": 393000,
+    "record_monthly_paid_usd": 51489,
+    "per_seller_mean": null,
+    "per_seller_median": null,
+    "zero_seller_share": null
+  },
+  "study_limits": {
+    "products_mixed_not_paid_pc_games_only": true,
+    "platform_in_2015_not_2026": true,
+    "raw_counts_unpublished": true,
+    "population_new_paid_publishers": null,
+    "contemporary_2026_buyer_rates": null,
+    "comments": [
+      "Optional extra among already completed paid orders is not a zero-price free download conversion rate.",
+      "Positive donations average $3.68 conditional on donating; nonpaying downloads are excluded.",
+      "Transaction referrer versus project-page purchase location are overlapping axes, not mutually exclusive cohorts.",
+      "Operator-wide total payouts do not divide into earnings without distinct sellers, eligible cohort and product cost distribution."
+    ]
+  }
+}
