@@ -1,8 +1,8 @@
 # itch.io commercial-game research — evidence synthesis and open gaps
 
-**Evidence updated October 27, 2026.** The live itch.io dossier has **184 attributed sources and 462 bounded claims**, across **244 fixed research tasks**. The machine register retains its original interim extraction counts (54 sources/148 claims), which are **historical creation metadata rather than current totals**. [Machine evidence synthesis](research-synthesis-2026.json) · [live dossier](../../specimens/itch-io.json).
+**Evidence updated October 27, 2026.** The live itch.io dossier has **187 attributed sources and 466 bounded claims**, across **244 fixed research tasks**. The machine register retains its original interim extraction counts (54 sources/148 claims), which are **historical creation metadata rather than current totals**. [Machine evidence synthesis](research-synthesis-2026.json) · [live dossier](../../specimens/itch-io.json).
 
-**Current economic conclusion:** itch.io permits cost-free game publication but not cost-free production; paid transactions incur seller-configured platform share, processing charges and route-specific tax/settlement rules. Catalog listing counts, genre ranks, ratings and downloads are **not** actual paid orders. Representative active paid sellers, paying game buyers, median or mean after-cost creator income, zero-sale incidence and causal discovery lift remain **unobserved**. Our task scoring is **94.13% exact, 94% rounded**, but it is not a percentage of those market outcomes measured.
+**Current economic conclusion:** itch.io permits cost-free game publication but not cost-free production; paid transactions incur seller-configured platform share, processing charges and route-specific tax/settlement rules. Catalog listing counts, genre ranks, ratings and downloads are **not** actual paid orders. Representative active paid sellers, paying game buyers, median or mean after-cost creator income, zero-sale incidence and causal discovery lift remain **unobserved**. Our task scoring is **94.18% exact, 94% rounded**, but it is not a percentage of those market outcomes measured.
 
 **New source-bounded work after the original synthesis:**
 - [October 2026 indexing changes](discovery-indexing-and-buyer-contact-2026.md): the operator reported ~215,000 newly unblocked *existing* project pages, not 215,000 paid game sales or developers.
@@ -13,6 +13,8 @@
 - [Voluntary donation accounting](voluntary-donation-versus-game-sales-2026.md): one $49.99 gift becomes $29.87 due after declared deductions; a separate $15 charity contribution is not a merchant fee or a paid game purchase.
 - [Evidence and gallery integrity](ledger-references-and-gallery-2026.md): every public task evidence link, source ID and fixed inventory count is checked by a permanent regression.
 - [Review plan](policy-payment-research-review-calendar-2026.md): dated *proposed* follow-ups for volatile official rules; no scheduled background monitoring.
+
+- [Historical merchant liquidity](historical-payout-delay-tail-2025-2026.md): selected 2025 payout delays, including an archived official thread that later resolved, are distinguishable from ordinary published review timing; no 2026 prevalence is estimated.
 
 **Earlier research chronology follows.** These previously captured records have their own date, population and conditions and should not be combined into a new income survey.
 

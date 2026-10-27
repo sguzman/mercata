@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "historical_payment_liquidity_lag_not_market_failure_rate",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-payments",
+    "itch-june2025-100day-forum-resolved",
+    "rascal-itch-payout-delays-sep2025",
+    "gamedeveloper-payout-delays-sep2025"
+  ],
+  "population": "selected publishers who publicly reported payout concerns in 2025 versus general published first-party payout review guidance",
+  "unit": "one self-reported completed or still pending payout request, not game sale, buyer or market seller",
+  "timeframe": "June and September 2025 incidents compared to public guide as reviewed October 2026",
+  "sources_roles": [
+    {
+      "id": "itch-payments",
+      "kind": "current_first_party_standard_review_guidance",
+      "independent_sample": false
+    },
+    {
+      "id": "itch-june2025-100day-forum-resolved",
+      "kind": "public_june_archived_complaint_and_pinned_admin_outcome",
+      "independent_sample": false
+    },
+    {
+      "id": "rascal-itch-payout-delays-sep2025",
+      "kind": "selected_direct_journalist_developer_interviews_and_secondary_social_reports",
+      "independent_sample": false
+    },
+    {
+      "id": "gamedeveloper-payout-delays-sep2025",
+      "kind": "secondary_trade_report_following_rascal",
+      "independent_sample": false
+    }
+  ],
+  "documented_guidance": {
+    "transaction_wait_days": 7,
+    "review_minimum_days_after_request": 7,
+    "typical_review_days_low": 10,
+    "typical_review_days_high": 14,
+    "guaranteed_bank_arrival_days": null,
+    "source_ids": [
+      "itch-payments"
+    ]
+  },
+  "reported_selected_cases": [
+    {
+      "id": "june_forum_over100days",
+      "date": "2025-06-09",
+      "phase": "reported_still_waiting_at_public_complaint",
+      "self_reported_elapsed_days_lower_bound_exclusive": 100,
+      "source_ids": [
+        "itch-june2025-100day-forum-resolved"
+      ],
+      "all_thread_cases_admin_reported_resolved": true,
+      "admin_resolution_date": "2025-06-18",
+      "exact_receipt_day": null,
+      "bank_receipt_verified": false
+    },
+    {
+      "id": "completed25days_sep",
+      "date": "2025-09-24",
+      "phase": "completed_reported_payout",
+      "self_reported_elapsed_days": 25,
+      "source_ids": [
+        "rascal-itch-payout-delays-sep2025"
+      ],
+      "independently_ledger_verified": false
+    },
+    {
+      "id": "completed96days_may",
+      "date": "2025-05",
+      "phase": "completed_reported_payout_retold_september",
+      "self_reported_elapsed_days": 96,
+      "source_ids": [
+        "rascal-itch-payout-delays-sep2025"
+      ],
+      "independently_ledger_verified": false
+    }
+  ],
+  "mode_contrast": [
+    {
+      "id": "collected",
+      "receiver": "platform_collects_and_staff_reviews_then_payout_provider",
+      "platform_payment_review_exposure": true,
+      "merchant_of_record": "itch_io",
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "direct",
+      "receiver": "seller_configured_processor_directly",
+      "platform_payment_review_exposure": false,
+      "merchant_of_record": "seller",
+      "other_processor_reserve_and_account_risk_remains": true,
+      "source_ids": [
+        "itch-payments"
+      ]
+    }
+  ],
+  "sensitivity": {
+    "hypothetical_buffer_days": [
+      14,
+      30,
+      100
+    ],
+    "scenario_labels": [
+      "short_not_guaranteed",
+      "one_month_stress",
+      "extreme_historical_complaint"
+    ],
+    "actual_seller_cash_shortfall": null,
+    "actual_average_delay_days": null,
+    "platform_2026_current_backlog": null,
+    "probability_of_over100days": null
+  },
+  "boundaries": [
+    "Publishing a typical review period does not promise bank cash on that date; sale-aging and staff review are separate.",
+    "The 2025 forum administrator's resolved notice applies only to reported participants in that thread.",
+    "Rascal selected cases of payment delays have unknown inclusion probability; do not calculate a population mean or quantile.",
+    "One publisher's reported 25 days and another 96 days cannot establish marketwide payouts, median, or guaranteed completion periods.",
+    "Game Developer follow-up reporting is not an independent sample of the Rascal-interviewed payouts.",
+    "Direct provider routing avoids the collected-mode itch staff review but may have provider fees, freezes, tax and refund disputes.",
+    "A historical cash settlement delay is a liquidity risk distinct from low paid game sales, bad ratings or the loss of owned game files.",
+    "No private bank statements, live payout requests, tax identity forms, merchant access or buyer records were examined."
+  ],
+  "current_quantitative_unknowns": {
+    "eligible_active_paid_sellers": null,
+    "payout_requests_in_2026": null,
+    "mean_review_duration_2026": null,
+    "median_review_duration_2026": null,
+    "current_2026_long_delay_fraction": null,
+    "dollar_amount_delayed": null,
+    "personal_financial_loss_rate": null
+  }
+}

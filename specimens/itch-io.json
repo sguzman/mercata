@@ -2044,6 +2044,39 @@
       "evidence_class": "third_party_dynamic_itch_catalog_sample_counter",
       "license": "Only independent source attribution and transient public aggregate counters summarized; no game records, creator profiles, images or site content republished.",
       "notes": "Live independent index reported 400,641 indexed games, 65,273 creators and 215,920 tags at observation. No underlying inclusion criteria, complete-source denominators, historic coverage, merchant status or actual sales provided. Dynamic counters can change."
+    },
+    {
+      "id": "itch-june2025-100day-forum-resolved",
+      "url": "https://itch.io/t/4968173/100-days-and-still-no-payout-does-anyone-else-has-the-same-issue-lets-discuss-it-here",
+      "title": "+100 days and still no payout — archived June 2025 support thread",
+      "publisher": "itch.io community support with pinned platform administrator resolution",
+      "published_at": "2025-06-09",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "selected_creator_complaints_with_first_party_resolution",
+      "license": "Linked public first-party forum statements independently summarized; user posts and personal content not republished.",
+      "notes": "Selected participants reported delayed payouts; June 18 platform admin pinned that all users in that thread were paid. This is not all marketplace recipients, and not proof that every 2025 delay was resolved."
+    },
+    {
+      "id": "rascal-itch-payout-delays-sep2025",
+      "url": "https://www.rascal.news/game-designers-are-experiencing-persistent-payout-issues-from-itch-io/",
+      "title": "Game designers are experiencing persistent payout issues from itch.io",
+      "publisher": "Khee Hoon Chan / Rascal independent games journalism",
+      "published_at": "2025-09-24",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "journalist_interviews_and_dated_developer_payout_accounts",
+      "license": "Attributed short factual amounts/timing summarized; copyrighted article body and images not republished.",
+      "notes": "September 2025 article interviews developers including a 25-day completed payout and separately describes 96-day completed payout in May from social report; selected complaints not an eligible payout request census."
+    },
+    {
+      "id": "gamedeveloper-payout-delays-sep2025",
+      "url": "https://www.gamedeveloper.com/business/developers-report-delayed-payouts-from-itch-io",
+      "title": "Developers report delayed payouts from itch.io",
+      "publisher": "Bryant Francis / GameDeveloper.com",
+      "published_at": "2025-09-25",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "trade_press_historical_payout_reporting",
+      "license": "Linked reporting attribution and brief independent research summary; no full article reproduction.",
+      "notes": "Follow-up reporting on September 2025 payout complaints and third-party source ancestry; not an independent statistical sample from Rascal."
     }
   ],
   "claims": [
@@ -6783,6 +6816,49 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Independent game tracking index versus official mixed-category project eligibility. No complete overlap or project identity join observed."
+    },
+    {
+      "id": "itch-june2025-100days-forum-resolution",
+      "text": "In a June 2025 itch.io support thread titled as a payout delay exceeding 100 days, multiple participants discussed unreceived collected payouts; by June 18 an administrator said every participant in that thread had been paid.",
+      "source_ids": [
+        "itch-june2025-100day-forum-resolved"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Support thread's claim and admin resolution, not audited bank dates. This applies to posters in that archived June 2025 thread only, not all platform sellers or other later complaints."
+    },
+    {
+      "id": "itch-payout-2025-selected-delays-beyond-typical",
+      "text": "A September 24, 2025 independent news investigation interviewed a creator who reported a completed payout 25 days after requesting it and reported another creator who said they had been paid after 96 days in May.",
+      "source_ids": [
+        "rascal-itch-payout-delays-sep2025"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Selected self-reports from different developers, cohorts and months; exact transaction aging and payout arrival evidence unverified, no distributional statistic supported."
+    },
+    {
+      "id": "itch-payout-2025-observations-versus-policy",
+      "text": "The platform's ordinary payout guide describes minimum 7-day staff review with typical 10–14-day reviews, while 2025 selected reports describe longer waits, demonstrating policy review guidance is not an unconditional cash delivery guarantee.",
+      "source_ids": [
+        "itch-payments",
+        "rascal-itch-payout-delays-sep2025",
+        "itch-june2025-100day-forum-resolved"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "No current October 2026 delay rate or per-seller risk is quantified; ordinary transaction hold precedes the review window and may extend."
+    },
+    {
+      "id": "itch-payout-2025-reporting-source-ancestry",
+      "text": "A September 25, 2025 Game Developer report describes continuing collected-payout delays but substantially references Rascal and creator reports; these articles are not two independent samples of merchant payouts.",
+      "source_ids": [
+        "gamedeveloper-payout-delays-sep2025",
+        "rascal-itch-payout-delays-sep2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Trade-news synthesis supports historical reporting, not independent sample expansion or current payment failure prevalence."
     }
   ],
   "observations": [
