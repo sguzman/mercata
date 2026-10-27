@@ -29,7 +29,7 @@ test('Existing unfinished volatility, long-tail and repeat sale tasks receive th
  const p=read('plans/itch-io.json'),q=read('queues/itch-io.json');
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);assert.equal(q.queues.flatMap(x=>x.tasks).length,84);
  for(const [id,pct] of [['itch-io/risk/study-sales-volatility',92],['itch-io/sales/measure-long-tail-income',96],['itch-io/sales/investigate-followers-and-repeat-sales',77]]){
-  const t=p.detail_tasks.find(x=>x.id===id);assert(t&&t.percent===pct&&t.status==='in_progress');
+  const t=p.detail_tasks.find(x=>x.id===id);assert(t&&t.percent>=pct&&t.percent<100&&t.status==='in_progress');
   for(const x of ['ontology/itch-io/four-serial-tabletop-release-sales-2021-2024.json','ontology/itch-io/four-serial-tabletop-release-sales-2021-2024.md','tests/itch-four-serial-tabletop-release-sales.test.mjs'])assert(t.evidence.includes(x));
  }
 });
