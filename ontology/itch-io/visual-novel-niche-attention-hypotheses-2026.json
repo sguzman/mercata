@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "2025_visual_novel_theme_ratings_and_falsifiable_paid_game_niche_hypotheses",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "indiegameinsights-itch-2025-visual-novel-themes",
+    "indiegameinsights-itch-2025-genre-rating-study",
+    "itch-genre-puzzle-paid",
+    "itch-genre-horror-paid",
+    "itch-genre-cozy-paid",
+    "itch-quality"
+  ],
+  "frame": {
+    "year_approx": 2025,
+    "analyzed_digital_VN_pages": 10427,
+    "unique_tags": 3195,
+    "public_sitemap_based": true,
+    "complete_release_cohort_verified": false,
+    "unique_sellers_deduplicated": false,
+    "real_paid_games_verified": false,
+    "actual_buyer_transactions_in_study": false,
+    "authors_theme_extraction": "tags_with_at_least_10_VNs_filtered_manually_and_PMI_cooccurrence_clustered",
+    "source_ids": [
+      "indiegameinsights-itch-2025-visual-novel-themes"
+    ]
+  },
+  "reported_thematic_clusters": [
+    {
+      "id": "otome_dark_romance",
+      "pages": 510,
+      "pages_with_at_least_50_public_ratings": 92,
+      "high_rated_with_yandere_tag": 48,
+      "attention_sample_rate_rounded": 0.18,
+      "source_ids": [
+        "indiegameinsights-itch-2025-visual-novel-themes"
+      ]
+    },
+    {
+      "id": "yuri_queer",
+      "pages": 1379,
+      "pages_with_at_least_50_public_ratings": null,
+      "source_ids": [
+        "indiegameinsights-itch-2025-visual-novel-themes"
+      ]
+    },
+    {
+      "id": "yaoi_bara",
+      "pages": 499,
+      "pages_with_at_least_50_public_ratings": null,
+      "source_ids": [
+        "indiegameinsights-itch-2025-visual-novel-themes"
+      ]
+    },
+    {
+      "id": "drama_mental_health",
+      "pages": 477,
+      "pages_with_at_least_50_public_ratings": null,
+      "source_ids": [
+        "indiegameinsights-itch-2025-visual-novel-themes"
+      ]
+    },
+    {
+      "id": "mystery_noir",
+      "pages": 726,
+      "pages_with_at_least_50_public_ratings": null,
+      "source_ids": [
+        "indiegameinsights-itch-2025-visual-novel-themes"
+      ]
+    },
+    {
+      "id": "spooky_supernatural",
+      "pages": 290,
+      "pages_with_at_least_50_public_ratings": null,
+      "source_ids": [
+        "indiegameinsights-itch-2025-visual-novel-themes"
+      ]
+    }
+  ],
+  "attention_reference": {
+    "broader_study_zero_rating_share_reported": 0.81,
+    "top_three_VN_theme_clusters_zero_rating_rate_reported_approx_range": [
+      0.15,
+      0.2
+    ],
+    "VN_attention_sample_counts_not_merchant_sales": true,
+    "source_ids": [
+      "indiegameinsights-itch-2025-visual-novel-themes",
+      "indiegameinsights-itch-2025-genre-rating-study"
+    ]
+  },
+  "other_dated_paid_supply_filters": [
+    {
+      "id": "puzzle_genre",
+      "count": 7456,
+      "source_ids": [
+        "itch-genre-puzzle-paid"
+      ],
+      "metric": "non_exclusive_public_paid_filter_listings"
+    },
+    {
+      "id": "horror_theme",
+      "count": 5117,
+      "source_ids": [
+        "itch-genre-horror-paid"
+      ],
+      "metric": "non_exclusive_public_paid_filter_listings"
+    },
+    {
+      "id": "cozy_mood",
+      "count": 857,
+      "source_ids": [
+        "itch-genre-cozy-paid"
+      ],
+      "metric": "non_exclusive_public_paid_filter_listings"
+    }
+  ],
+  "niche_candidates": [
+    {
+      "id": "small_narrative_mystery_VN",
+      "falsifiable_need": "A compact text-forward investigation game with a coherent mystery and complete story could attract comparable interest with explicitly bounded authoring hours.",
+      "public_attention_signal": "Mystery & Noir category 726 titles within 2025 VN sitemap study",
+      "required_commercial_test": "Seller-authorized settled premium orders per matched eligible page visit and labor valued per title, controlling for prior fanbase and release age.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-visual-novel-themes"
+      ]
+    },
+    {
+      "id": "dark_romance_VN",
+      "falsifiable_need": "Audience attention to dark romance traits might translate to voluntary paid readership for newly published small VNs under the same availability and age policy.",
+      "public_attention_signal": "92 of 510 Otome & Dark Romance VNs had 50+ ratings; 48 of those tagged Yandere.",
+      "required_commercial_test": "Matched first-time publisher cohort by release age, comparable price/language, zero-order inclusion, developer hours and retained positive-price orders.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-visual-novel-themes"
+      ]
+    },
+    {
+      "id": "2d_puzzle_downloadable",
+      "falsifiable_need": "A short offline puzzle with accessible controls and clear completion state could differentiate on usability, not on inferred demand from puzzle tags.",
+      "public_attention_signal": "7,456 Puzzle-genre paid-filter listings; 2025 high-rated Dragonsweeper in independent study, but no paid order data.",
+      "required_commercial_test": "Same-priced matched puzzle cohorts, owner-authorized paid orders, refund/cost ledger and age distribution.",
+      "source_ids": [
+        "itch-genre-puzzle-paid",
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ]
+    }
+  ],
+  "sampling_contract": {
+    "population": "first eligible newly priced indie game projects stratified by genre, product length, owner portfolio and team size",
+    "unit": "project_and_first_30_90_365_day_refund_adjusted_positive_price_orders",
+    "windows_days": [
+      30,
+      90,
+      365
+    ],
+    "include_zero_rating": true,
+    "include_zero_sale": true,
+    "include_delisted_if_frame_can_observe": true,
+    "require_private_seller_authorization": true,
+    "match_earlier_owner_followers": true,
+    "match_dev_hours_and_asset_license_cash": true,
+    "allow_outcomes_unknown": true,
+    "causal_theme_assignment_performed": false
+  },
+  "non_inferences": [
+    "A 50+ rating threshold is not a transaction count, paying buyer number or marketwide hit rate.",
+    "Public ranking, genre tags and ratings do not reveal price actually paid, platform payout or labor-valued profit.",
+    "Overlapping manually clustered tags cannot be summed into mutually exclusive market shares.",
+    "Visual novel self-selection, existing fanbases, adult classification and outside publicity confound observed rating differences.",
+    "Observed VN content tags are not evidence that a niche game can be developed for zero cost or sold legally in all countries.",
+    "Later studies with different source frames cannot be added or compared without time and indexing controls."
+  ],
+  "unknown": {
+    "VN_genre_representative_net_income": null,
+    "zero_sale_rate_in_dark_romance_VNs": null,
+    "real_paying_buyers_by_theme": null,
+    "theme_causal_sales_effect": null,
+    "paid_orders_per_public_rating": null,
+    "first_time_narrative_game_profit": null,
+    "paid_puzzle_game_demand": null
+  },
+  "experiment_authorized": false
+}

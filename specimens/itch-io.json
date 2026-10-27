@@ -2022,6 +2022,17 @@
       "evidence_class": "official_cached_file_type_filter",
       "license": "Original source linked, only attributed count and original sampling notes retained.",
       "notes": "Downloadable Type all prices: 907,896 results, page crawled about four days prior to review."
+    },
+    {
+      "id": "indiegameinsights-itch-2025-visual-novel-themes",
+      "url": "https://www.indiegameinsights.dev/blog/itch_visual_novels_2025",
+      "title": "Which visual novel themes were popular on Itch in 2025?",
+      "publisher": "Indie Game Insights (independent game-metadata analysis)",
+      "published_at": "2026-04-06",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "independent_sitemap_and_tag_clustering_2025_visual_novels",
+      "license": "Public article linked; only short numeric research observations and independently authored methodological interpretation; no plots, text sections or underlying dataset copied.",
+      "notes": "Author-selected approximate-2025 itch sitemap frame with 10,427 VN pages, 3,195 unique tags and manually identified/cooccurrence-clustered theme categories. Ratings/metadata measured, not purchases or sales."
     }
   ],
   "claims": [
@@ -6699,6 +6710,37 @@
       "observed_at": "2026-10-26",
       "confidence": "medium",
       "limitations": "These are filter-result counters, not enumerated stable game pages, unique publishers, buyers, transactions or same-moment supply comparisons."
+    },
+    {
+      "id": "itch-2025-visual-novel-themed-frame",
+      "text": "An independent April 2026 article analyzes 10,427 itch.io visual-novel game pages assigned to approximately 2025 and observes 3,195 distinct tags in its sitemap-derived selection.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-visual-novel-themes"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Author's approximate release-year assignment, missing pages, multi-label genres and manually filtered theme tags; not a complete or probability-sampled paid-game seller population."
+    },
+    {
+      "id": "itch-2025-visual-novel-dark-romance-rating-tail",
+      "text": "The author's thematic clustering included 510 Otome & Dark Romance visual novels, of which 92 reached at least 50 public ratings; 48 of those higher-rated titles carried a Yandere tag.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-visual-novel-themes"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Attention outcome is public rating counts, not a paid-order ledger, causal theme effect, unique buyers, revenue or net profitability; tag clusters and manual classifications overlap."
+    },
+    {
+      "id": "itch-2025-visual-novel-theme-zero-rating-contrast",
+      "text": "The article describes roughly 15–20% zero-rating incidence among its three leading visual-novel theme categories versus 81% among its broader 2025 itch game study, with distinct selection composition.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-visual-novel-themes",
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Percentages refer to selected sitemap-based pages and nonidentical genre compositions; cannot be interpreted as zero-sales shares or evidence of a buyer conversion advantage."
     }
   ],
   "observations": [
