@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "commercial_game_earning_population_identification_and_negative_evidence_result",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-payments",
+    "itch-serverside-api-reference",
+    "itch-browse-paid-2d",
+    "itch-case-notjam",
+    "gamedevjs-web-survey-2025",
+    "gamedevjs-web-survey-2025-report-pdf",
+    "indiegameinsights-itch-2025-genre-rating-study",
+    "semrush-itch-site-traffic-september-2026"
+  ],
+  "market": "itch.io positively-priced independent games",
+  "status": "representative_seller_income_not_identified_from_available_public_records",
+  "target_population": {
+    "unit": "deduplicated publisher payout entity, not a game, contributor, buyer or user account",
+    "eligibility": "has at least one publicly available or valid historically released positive minimum-price game within the specified observation frame",
+    "inclusions": [
+      "eligible_new_paid_game_pages_with_zero_settled_orders",
+      "published_titles_that_become_delisted_if_recoverable",
+      "multiple_game_titles_per_one_publisher_counted_once",
+      "self_published_and_team_entities_distinguished_if_records_permit"
+    ],
+    "exclusions": [
+      "free_only_publisher_accounts_not_offering_a_qualifying_positive_minimum_game",
+      "single_free_web_play_or_download",
+      "owner_of_gift_key_only_without_actual_paid_order"
+    ],
+    "first_release_window_days": [
+      30,
+      90,
+      365
+    ],
+    "income_types": [
+      "buyer_gross_value_before_refunds",
+      "retained_paid_game_gross_after_refunds",
+      "publisher_proceeds_after_marketplace_and_processor_fees",
+      "bank_settled_net_after_transfer_and_FX",
+      "economic_profit_after_cash_costs_and_explicitly_valued_creator_labor"
+    ],
+    "publisher_paid_order_currency_conversion_requires_actual_records": true,
+    "sample_frame_available": false,
+    "number_of_eligible_publisher_entities": null,
+    "number_of_eligible_zero_sale_entities": null
+  },
+  "estimation_contract": {
+    "mean_formula": "sum(publisher_eligible_refund_adjusted_receipts_usd)/N_eligible_publishers_within_fixed_window",
+    "median_rule": "sort_one_publisher_measure_per_eligible_entity_including_zero_receipt_publishers; use central value(s) under predeclared even_N convention",
+    "zero_sale_fraction": "eligible_publishers_with_zero_retained_paid_game_orders_in_window / all_eligible_publishers_in_window",
+    "quantile_rule": "disclose p10 p25 p50 p75 p90 rank_method and right_censoring; do not interpolate from selected successful developers",
+    "concentration_rule": "compute top_1_5_10_pct_shares_only_with_complete_or_valid_weighted_eligible_publisher_sample",
+    "games_to_publishers": "deduplicate account and corporate payout entities with valid authorization before aggregation",
+    "study_year": "2026",
+    "required_source_fields": [
+      "eligible_publisher_frame_and_creation_date",
+      "all_qualifying_first_game_release_dates",
+      "refund_adjusted_positive_price_orders",
+      "payout_account_entity_identity_privately_deduplicated",
+      "money_amount_and_currency_per_paid_order",
+      "merchant_mode_and_platform_processor_fee",
+      "full_valid_cohort_followup",
+      "cash_and_hours_for_labor_adjusted_income"
+    ]
+  },
+  "evidence_classes": [
+    {
+      "id": "operator_fee_docs",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "supports": "transaction_cost_and_merchant_rules",
+      "has_complete_seller_population": false,
+      "has_publisher_income_data": false
+    },
+    {
+      "id": "authenticated_purchase_API",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "supports": "private_game_specific_purchase_lookup_for_authorized_parties",
+      "has_complete_seller_population": false,
+      "has_publisher_income_data": false
+    },
+    {
+      "id": "public_paid_listings",
+      "source_ids": [
+        "itch-browse-paid-2d"
+      ],
+      "supports": "dated_indexed_filtered_game_pages_including_discounts",
+      "has_complete_seller_population": false,
+      "has_publisher_income_data": false
+    },
+    {
+      "id": "publisher_self_reports",
+      "source_ids": [
+        "itch-case-notjam"
+      ],
+      "supports": "one_volunteer_creator_project_category_gross_figures",
+      "has_complete_seller_population": false,
+      "has_publisher_income_data": true,
+      "random_sample": false
+    },
+    {
+      "id": "voluntary_developer_income_survey",
+      "source_ids": [
+        "gamedevjs-web-survey-2025",
+        "gamedevjs-web-survey-2025-report-pdf"
+      ],
+      "supports": "435_nonprobability_respondents_report_total_gamedev_income_with_63_pct_zero",
+      "has_complete_seller_population": false,
+      "has_publisher_income_data": true,
+      "itch_only_revenue_question": false
+    },
+    {
+      "id": "genre_ratings_public_study",
+      "source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "supports": "selected_public_game_page_ratings_and_genre_labels",
+      "has_complete_seller_population": false,
+      "has_publisher_income_data": false
+    },
+    {
+      "id": "all_site_session_estimates",
+      "source_ids": [
+        "semrush-itch-site-traffic-september-2026"
+      ],
+      "supports": "third_party_all_domain_sessions",
+      "has_complete_seller_population": false,
+      "has_publisher_income_data": false
+    }
+  ],
+  "identification_argument": [
+    "Existing records constrain a handful of reported game or creator cash figures and several nontransaction indicators.",
+    "Unobserved eligible publishers can legitimately have zero positive-price orders or a large number of them; both possibilities produce the same reported public data.",
+    "Without the eligible publisher denominator and an observed or probability-weighted receipt for all relevant entities, the total and sorted distribution are not identified.",
+    "The survey's 63% zero overall gamedev income cannot be multiplied by public paid-game catalog counts because the respondents are not the defined itch.io seller population.",
+    "Zero public ratings and zero sales are different unobserved statuses, so replacing missing receipts with zeros would bias the median.",
+    "Sample-based rates from creator posts can be affected by selection on success and publication willingness; no inclusion weights are available.",
+    "No imputation from website visits, browser plays or developer genre self-tags identifies seller revenue."
+  ],
+  "results": {
+    "representative_mean_annual_gross_revenue_usd": null,
+    "representative_mean_first_30d_game_income_usd": null,
+    "representative_median_first_30d_game_income_usd": null,
+    "representative_median_first_365d_game_income_usd": null,
+    "zero_sale_fraction_30d": null,
+    "zero_sale_fraction_365d": null,
+    "representative_median_profit_after_labor_usd": null,
+    "mean_by_genre_usd": null,
+    "seller_earnings_top_10pct_share": null,
+    "confidence_interval_representative_mean": null
+  },
+  "scope_limitations": [
+    "Review covers the dated sources in Mercata and the official policy consulted through October 27, 2026; absence of usable evidence here does not assert that no private dataset exists.",
+    "An unknown statistic is not a measured zero, and an incomplete sample does not make its biased mean representative.",
+    "First-game earnings, all-time balances, seller salaries, donation proceeds, game gross and platform GMV are incompatible unless strictly reconciled.",
+    "Private identities, tax IDs, buyer details and payout records are neither necessary to publish nor authorized for scraping in this research.",
+    "Task acceptance is completeness of evidence search and explicit unknown result, not an assertion of a discovered numerical mean or median."
+  ]
+}
