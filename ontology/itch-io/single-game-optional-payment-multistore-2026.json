@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "individual_creator_pwyw_payment_and_followon_storefront_case",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "alienmelon-game-payment-feb2026",
+    "alienmelon-game-production-feb2026",
+    "alienmelon-multistore-mar2026"
+  ],
+  "game": "she danced in the wind like a holographic dream before the world died",
+  "publisher": "alienmelon",
+  "already_published_other_games": true,
+  "genre": "interactive_fiction_game_poem",
+  "business_model": "name_your_own_price_download",
+  "dates": [
+    {
+      "date": "2026-02-14",
+      "event": "itch_reported_receipts",
+      "amount_usd": 155,
+      "amount_basis": "creator_says_game_made_in_sales_not_settled_payout",
+      "paid_orders": null,
+      "mandatory_paid_units": null,
+      "unique_buyers": null,
+      "net_after_fees_usd": null
+    },
+    {
+      "date": "2026-02-15",
+      "event": "development_postmortem",
+      "development_calendar_years_greater_than": 1,
+      "labor_hours": null,
+      "labor_costs_usd": null,
+      "receipt_note": "same_game_followup_over_100_usd_not_a_second_independent_sale_case"
+    },
+    {
+      "date": "2026-03-16",
+      "event": "creator_announces_steam_and_epic_listings",
+      "creator_attributes_expansion_funding_to_itch_receipts": true,
+      "verified_external_revenue_usd": null,
+      "verified_steam_fee_receipt": null,
+      "verified_epic_fee_receipt": null
+    }
+  ],
+  "route": {
+    "offer": "optional_payment_downloadable_game",
+    "audience": "single_game_players_and_readers_actual_buyer_count_unknown",
+    "promotion": "public_project_page_and_creator_updates_no_attribution_test",
+    "payment": "creator_reported_USD_155_from_itch_unknown_price_mix",
+    "fulfillment": "itch_download_followed_by_steam_and_epic_listing_announcement"
+  },
+  "counting_rules": [
+    "A name-your-own-price game payment is not a mandatory minimum-price sale without source confirmation.",
+    "The later greater-than-100-dollar mention concerns the same publisher and game and cannot be summed with 155 dollars.",
+    "More than a calendar year of development is not a person-hour estimate.",
+    "Subsequent Steam and Epic listings are not proof of comparable paid orders or profit."
+  ],
+  "unknown": {
+    "number_of_payment_events": null,
+    "mandatory_positive_price_game_orders": null,
+    "unique_paid_buyers": null,
+    "merchant_net_payout_usd": null,
+    "publisher_profit_after_labor_usd": null,
+    "steam_game_sales": null,
+    "epic_game_sales": null,
+    "storefront_expansion_causal_income_effect": null
+  }
+}

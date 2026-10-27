@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Single-game optional payments and later stores do not create independent paid-sale or profit counts',()=>{
+ const r=read('ontology/itch-io/single-game-optional-payment-multistore-2026.json'),s=read('specimens/itch-io.json'),q=read('queues/itch-io.json'),p=read('plans/itch-io.json');
+ assert(r.source_ids.every(id=>s.evidence.some(e=>e.id===id)));
+ assert.equal(r.dates[0].amount_usd,155);
+ assert.equal(r.dates[0].mandatory_paid_units,null);
+ assert.equal(r.dates[1].labor_hours,null);
+ assert.equal(r.dates[2].verified_external_revenue_usd,null);
+ assert(Object.values(r.unknown).every(x=>x===null));
+ assert.equal(r.already_published_other_games,true);
+ const t=q.queues.flatMap(x=>x.tasks).find(t=>t.id==='strategy/paths');
+ assert.equal(t.progress,100);assert.equal(t.status,'complete');
+ for(const path of ['ontology/itch-io/single-game-optional-payment-multistore-2026.json','ontology/itch-io/single-game-optional-payment-multistore-2026.md','tests/itch-single-game-multistore-2026.test.mjs','specimens/itch-io.json'])assert(t.evidence.includes(path));
+ const dt=p.detail_tasks.find(t=>t.id==='itch-io/strategy/compare-itch-only-and-multi-store-publishing');
+ assert.equal(dt.percent,95);assert.equal(dt.status,'in_progress');
+ assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
+});
