@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "hypothetical_discount_unit_contribution_compensation",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-sale-detail",
+    "itch-pricing",
+    "itch-payments",
+    "itch-creator-day-official-2025"
+  ],
+  "calculator_path": "site/itch-discount-order-threshold.mjs",
+  "population": "single hypothetical paid downloadable game and its seller; no actual paid sales or buyers",
+  "unit": "one retained positive-price order",
+  "currency": "USD",
+  "sample_inputs": {
+    "listPriceUsd": 10,
+    "discountPercent": 20,
+    "itchShareRate": 0.1,
+    "processorPercentRate": 0.029,
+    "processorFixedUsd": 0.3,
+    "baselineRetainedPaidOrders": 100,
+    "promotionIncrementalCostUsd": 0
+  },
+  "expected": {
+    "regular_contribution_per_order_usd": 8.41,
+    "discounted_price_usd": 8,
+    "discounted_contribution_per_order_usd": 6.67,
+    "paid_orders_needed_after_discount": 127,
+    "additional_paid_orders_needed": 27
+  },
+  "events": [
+    {
+      "id": "seller_discount",
+      "meaning": "seller_sale_changes_buyer_price_not_necessarily_operator_share",
+      "source_ids": [
+        "itch-sale-detail",
+        "itch-pricing"
+      ]
+    },
+    {
+      "id": "seller_coupon",
+      "meaning": "limited_promotion_or_code_changes_checkout_price_by_configured_rule",
+      "source_ids": [
+        "itch-sale-detail"
+      ]
+    },
+    {
+      "id": "100_percent_free_discount",
+      "meaning": "temporarily_zero_current_buyer_price_not_a_paid_order",
+      "source_ids": [
+        "itch-sale-detail"
+      ]
+    },
+    {
+      "id": "creator_day_fee_waiver",
+      "meaning": "operator_share_waiver_not_the_same_as_buyer_price_discount",
+      "source_ids": [
+        "itch-creator-day-official-2025",
+        "itch-payments"
+      ]
+    }
+  ],
+  "limits": [
+    "All counts and rates are explicitly hypothetical; the fixed processing fee is only an operator illustration.",
+    "Price reduction alone cannot establish demand, incremental customers, conversion or actual net profit.",
+    "Comparisons require identical full-game entitlement, currency, refund definition, time window and attributable campaign costs.",
+    "Free checkout after a 100 percent promotion is not a paid card order and must not receive a fictitious card fee.",
+    "Creator Day marketplace share reduction is not a standard coupon or sale.",
+    "No real game, checkout, marketing experiment, merchant or buyer records were accessed."
+  ],
+  "unknown": {
+    "real_discount_order_uplift": null,
+    "actual_marketing_costs": null,
+    "actual_price_elasticity": null,
+    "observed_retained_orders": null,
+    "real_merchant_fees": null,
+    "genre_specific_causal_discount_effect": null
+  }
+}

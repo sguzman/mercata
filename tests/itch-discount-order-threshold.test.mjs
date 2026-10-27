@@ -1,0 +1,30 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {compareGameDiscount} from '../site/itch-discount-order-threshold.mjs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Discount compensation is conditional orders, never observed conversion',()=>{
+ const d=read('ontology/itch-io/game-sale-discount-compensation-2026.json'),s=read('specimens/itch-io.json'),
+  q=read('queues/itch-io.json'),p=read('plans/itch-io.json');
+ const sources=new Set(s.evidence.map(e=>e.id));assert(d.source_ids.every(id=>sources.has(id)));
+ const x=compareGameDiscount(d.sample_inputs);
+ assert.equal(x.fullPriceContributionPerOrderUsd,8.41);
+ assert.equal(x.discountedPriceUsd,8);
+ assert.equal(x.discountedContributionPerOrderUsd,6.67);
+ assert.equal(x.discountedRetainedOrdersNeededToMatchBaselineContribution,127);
+ assert.equal(x.additionalRetainedOrdersBeyondBaselineNeeded,27);
+ assert.equal(x.actualDiscountConversionEffect,null);
+ assert.equal(x.realSalesObserved,null);
+ const free=compareGameDiscount({...d.sample_inputs,discountPercent:100});
+ assert.equal(free.discountProducesFreeCheckout,true);
+ assert.equal(free.discountedContributionPerOrderUsd,null);
+ assert.equal(free.discountedRetainedOrdersNeededToMatchBaselineContribution,null);
+ assert.throws(()=>compareGameDiscount({...d.sample_inputs,discountPercent:105}),TypeError);
+ assert.throws(()=>compareGameDiscount({...d.sample_inputs,baselineRetainedPaidOrders:-1}),TypeError);
+ assert(Object.values(d.unknown).every(v=>v===null));
+ const completed=p.detail_tasks.find(t=>t.id==='itch-io/economics/investigate-discount-mechanics');
+ assert.equal(completed.percent,100);assert.equal(completed.status,'complete');
+ for(const f of ['site/itch-discount-order-threshold.mjs','ontology/itch-io/game-sale-discount-compensation-2026.json','ontology/itch-io/game-sale-discount-compensation-2026.md','tests/itch-discount-order-threshold.test.mjs'])assert(completed.evidence.includes(f));
+ assert.equal(p.detail_tasks.find(t=>t.id==='itch-io/sales/study-discount-conversion').percent,94);
+ assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
+});
