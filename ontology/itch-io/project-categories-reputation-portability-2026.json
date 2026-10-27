@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "official_product_classes_content_eligibility_and_reputation_portability",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-faq",
+    "itch-started",
+    "itch-quality",
+    "itch-interact",
+    "itch-terms",
+    "itch-access-control",
+    "itch-download-keys",
+    "itch-design",
+    "itch-pricing",
+    "itch-coop-bundles",
+    "itch-uk-content-geo-access-2025",
+    "itch-nsfw-announcement"
+  ],
+  "population": "official platform project categories and seller/buyer interactions; no product sample or private accounts",
+  "unit": "documented project category, content gate, page attribute, entitlement or community facility, not a sale",
+  "period": "platform policies accessible October 26, 2026 and explicit July 2025 jurisdictional-policy history",
+  "sample_frame": "published official creator FAQ, page creation, quality, access-control, interaction, purchase, terms and bundle documentation",
+  "project_classes": [
+    {
+      "id": "video_games",
+      "uploadable": true,
+      "game_population_candidate": true,
+      "source_ids": [
+        "itch-started",
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "tabletop_or_physical_games",
+      "uploadable": true,
+      "game_population_candidate": "separate_tabletop_market_not_ordinary_downloadable_video_game",
+      "source_ids": [
+        "itch-started",
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "comics_and_books",
+      "uploadable": true,
+      "game_population_candidate": false,
+      "source_ids": [
+        "itch-started",
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "soundtracks",
+      "uploadable": true,
+      "game_population_candidate": false,
+      "source_ids": [
+        "itch-started",
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "tools_and_game_assets",
+      "uploadable": true,
+      "game_population_candidate": false,
+      "source_ids": [
+        "itch-started",
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "other_custom_noun",
+      "uploadable": "subject_to_platform_terms_and_case_review",
+      "game_population_candidate": false,
+      "source_ids": [
+        "itch-faq"
+      ]
+    }
+  ],
+  "commercial_units": [
+    {
+      "id": "paid_game_page",
+      "unit": "project_page",
+      "mandatory_payment": "positive_minimum_price_when_chosen",
+      "not_equivalent_to": "distinct_developer_person_or_sold_unit",
+      "source_ids": [
+        "itch-pricing",
+        "itch-started"
+      ]
+    },
+    {
+      "id": "free_downloadable_demo",
+      "unit": "project_file",
+      "mandatory_payment": false,
+      "not_equivalent_to": "paid_game_sale",
+      "source_ids": [
+        "itch-started"
+      ]
+    },
+    {
+      "id": "html5_browser_play",
+      "unit": "play_event",
+      "mandatory_payment": false,
+      "not_equivalent_to": "unique_buyer_or_sale",
+      "source_ids": [
+        "itch-started"
+      ]
+    },
+    {
+      "id": "bundle",
+      "unit": "bundle_purchase",
+      "mandatory_payment": "depends_on_bundle_terms",
+      "not_equivalent_to": "one_standalone_purchase_per_entitled_game",
+      "source_ids": [
+        "itch-coop-bundles"
+      ]
+    },
+    {
+      "id": "paid_bonus_file",
+      "unit": "individual_file_entitlement",
+      "mandatory_payment": "additional_price_threshold_if_configured",
+      "not_equivalent_to": "new_distinct_game_listing",
+      "source_ids": [
+        "itch-pricing"
+      ]
+    }
+  ],
+  "content_gates": [
+    {
+      "id": "permissible_genre_not_blanket_approval",
+      "rule": "wide_project_category_support_does_not_override_terms_or_payment_network_rules",
+      "source_ids": [
+        "itch-faq",
+        "itch-terms"
+      ],
+      "seller_approval_guaranteed": false
+    },
+    {
+      "id": "adult_tagging",
+      "rule": "adult_material_must_be_labeled_and_may_be_excluded_from_default_browse",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "seller_approval_guaranteed": false
+    },
+    {
+      "id": "forbidden_sexual_exploitation_or_real_person_media",
+      "rule": "operator_faq_and_processor_policies_exclude_specified_material_or_monetization",
+      "source_ids": [
+        "itch-faq"
+      ],
+      "seller_approval_guaranteed": false
+    },
+    {
+      "id": "misleading_tags_impersonation_or_fake_attention",
+      "rule": "quality_guidelines_may_trigger_deindexing_or_account_restriction",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "seller_approval_guaranteed": false
+    },
+    {
+      "id": "real_money_gambling_or_disguised_contests",
+      "rule": "quality_guidelines_restrict_paid_contest_or_gambling_like_products",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "seller_approval_guaranteed": false
+    },
+    {
+      "id": "restricted_uk_access_2025",
+      "rule": "dated_regional_legal_compliance_change_not_general_global_precedent",
+      "source_ids": [
+        "itch-uk-content-geo-access-2025"
+      ],
+      "seller_approval_guaranteed": false
+    },
+    {
+      "id": "payment_policy_2025",
+      "rule": "operator_reported_deindexing_and_payment_processor_related_restrictions_in_2025",
+      "source_ids": [
+        "itch-nsfw-announcement"
+      ],
+      "seller_approval_guaranteed": false
+    }
+  ],
+  "reputation_and_moderation": [
+    {
+      "id": "ratings_and_reviews",
+      "operator_tool": "creator_can_view_and_sort_buyer_or_player_submitted_ratings",
+      "publisher_control": "owner_can_disable_ratings_or_reviews_per_historical_platform_announcement_but_2026_switch_reverification_not_completed",
+      "scope": "project_page",
+      "source_ids": [
+        "itch-interact",
+        "itch-quality"
+      ],
+      "never_assume_paid_purchase": true
+    },
+    {
+      "id": "comments",
+      "operator_tool": "owner_may_enable_threaded_comments_with_voting",
+      "publisher_control": "owner_configures_comment_options",
+      "scope": "project_page",
+      "source_ids": [
+        "itch-interact"
+      ],
+      "never_assume_paid_purchase": true
+    },
+    {
+      "id": "community_board",
+      "operator_tool": "owner_may_choose_board_and_elect_moderators",
+      "publisher_control": "community_board_mods_and_rules",
+      "scope": "project_page",
+      "source_ids": [
+        "itch-interact"
+      ],
+      "never_assume_paid_purchase": true
+    },
+    {
+      "id": "page_discovery_moderation",
+      "operator_tool": "operator_may_deindex_misleading_or_spammy_public_page",
+      "publisher_control": "owner_may_use_support_channel_but_cannot_guarantee_indexing",
+      "scope": "search_browse_visibility",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "never_assume_paid_purchase": true
+    },
+    {
+      "id": "rating_portability",
+      "operator_tool": "quality_guide_says_ratings_and_reviews_not_transferred_between_new_project_pages",
+      "publisher_control": "do_not_recreate_pages_to_boost_discovery",
+      "scope": "within_platform_page_to_page",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "never_assume_paid_purchase": true
+    }
+  ],
+  "portability": [
+    {
+      "id": "upload_assets",
+      "can_owner_retrieve": "owner_uploaded_game_builds_should_be_archived_locally_not_assumed_recoverable_forever",
+      "cross_store_transfer": "conditional_on_rights_of_all_components",
+      "source_ids": [
+        "itch-faq",
+        "itch-terms"
+      ],
+      "actual_export_tested": false
+    },
+    {
+      "id": "drm_free_artifacts",
+      "can_owner_retrieve": "users_download_files_unchanged_from_uploaded_build",
+      "cross_store_transfer": "redistribution_allowed_only_if_owner_has_rights",
+      "source_ids": [
+        "itch-faq",
+        "itch-terms"
+      ],
+      "actual_export_tested": false
+    },
+    {
+      "id": "existing_paid_entitlements",
+      "can_owner_retrieve": "entitlements_refer_to_same_project_page_and_stored_purchase_or_key",
+      "cross_store_transfer": "no_automatic_account_entitlement_migration_to_other_store_established",
+      "source_ids": [
+        "itch-started",
+        "itch-download-keys",
+        "itch-access-control"
+      ],
+      "actual_export_tested": false
+    },
+    {
+      "id": "reviews_and_collections",
+      "can_owner_retrieve": "native_page_records_not_portable_to_new_project_page",
+      "cross_store_transfer": "no_ratings_review_migration_mechanism_documented",
+      "source_ids": [
+        "itch-quality"
+      ],
+      "actual_export_tested": false
+    },
+    {
+      "id": "buyer_emails",
+      "can_owner_retrieve": "creator_can_message_existing_buyers_via_itch_interact_subject_to_one_email_daily_and_opt_out",
+      "cross_store_transfer": "no_authorization_to_bulk_export_personal_emails_or_market_to_external_service_inferred",
+      "source_ids": [
+        "itch-interact",
+        "itch-faq"
+      ],
+      "actual_export_tested": false
+    },
+    {
+      "id": "account_team_or_store_page_transfer",
+      "can_owner_retrieve": "account_owner_remains_responsible_for_rights_and_valid_payouts",
+      "cross_store_transfer": "no_general_transferability_guarantee_verified",
+      "source_ids": [
+        "itch-terms"
+      ],
+      "actual_export_tested": false
+    }
+  ],
+  "migration_hazards": [
+    "Fresh project page loses prior page ratings, reviews, buyer ownership and collections links; recreating to game ranking is discouraged.",
+    "Switching to an independently controlled site may preserve independently owned game binaries and IP rights but not native itch.io purchaser entitlements.",
+    "Official buyer messages are not blanket permission to export personal addresses into external marketing systems.",
+    "Cross-store publishing does not transfer store-native reviews or historic game ranking.",
+    "Platform discovery deindexing differs from loss of the project page or termination of seller account."
+  ],
+  "unknown": {
+    "real_reviews_per_paid_sale": null,
+    "moderation_action_probability": null,
+    "verified_bulk_email_export_permission": null,
+    "actual_team_account_transfer_success": null,
+    "first_party_game_sales_by_category": null,
+    "cross_store_customer_migration_rate": null,
+    "post_deindex_sales_effect": null
+  },
+  "limitations": [
+    "Cites official service-policy classes as of review, not a census of uploaded content or a guarantee an individual project can monetize.",
+    "The 2025 UK restrictions were dated regulatory responses and do not imply every country has the same rule.",
+    "Publisher boards and comments are distinct from operator-level content bans, deindexing and processor restrictions.",
+    "No specific seller login, transfer attempt, buyer dataset, rating records or purchase ledger was accessed.",
+    "There is no evidence that a review is a verified paying customer, or that ratings are portable to another storefront."
+  ]
+}
