@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "proposed_review_trigger_and_cadence_for_time_sensitive_official_platform_source_claims",
+  "created_at": "2026-10-27",
+  "source_ids": [
+    "itch-payments",
+    "itch-indexing-reform-oct-2026",
+    "itch-quality",
+    "itch-terms",
+    "itch-nsfw-announcement",
+    "itch-reindex-announcement",
+    "itch-july-2026-changelog"
+  ],
+  "scope": "Mercata itch.io published research maintenance plan only; no automation or publisher account monitoring has been scheduled",
+  "observed_source_review_date": "2026-10-26",
+  "review_calendar": [
+    {
+      "id": "indexing_rapid_followup",
+      "proposed_review_date": "2026-11-03",
+      "reason": "October 19 2026 classifier experiment, false positive review policy and newly unblocked pages",
+      "priority": "rapid",
+      "source_ids": [
+        "itch-indexing-reform-oct-2026",
+        "itch-quality"
+      ],
+      "event_trigger": "operator_public_announcement_on_indexing_or_manual_review_rules",
+      "rechecked": false,
+      "outcomes_observed": null
+    },
+    {
+      "id": "payment_processor_monthly",
+      "proposed_review_date": "2026-11-26",
+      "reason": "Merchant country connectivity, dispute handling, first-payout tax forms and bank FX can change",
+      "priority": "monthly",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "event_trigger": "official_price_fee_tax_country_or_payout_method_change",
+      "rechecked": false,
+      "outcomes_observed": null
+    },
+    {
+      "id": "content_policy_monthly",
+      "proposed_review_date": "2026-11-26",
+      "reason": "Terms, adult-tag policy, and payment-intermediary content restrictions can change independently",
+      "priority": "monthly",
+      "source_ids": [
+        "itch-terms",
+        "itch-quality",
+        "itch-nsfw-announcement",
+        "itch-reindex-announcement"
+      ],
+      "event_trigger": "official_georestriction_deindexing_takedown_or_merchant_content_policy_update",
+      "rechecked": false,
+      "outcomes_observed": null
+    },
+    {
+      "id": "catalog_comparability_quarterly",
+      "proposed_review_date": "2027-01-26",
+      "reason": "Indexed page counts and game browsing counters use mutable crawling frame, require consistent same-filter measurements",
+      "priority": "quarterly",
+      "source_ids": [
+        "itch-indexing-reform-oct-2026",
+        "itch-july-2026-changelog"
+      ],
+      "event_trigger": "major_catalog_metadata_filter_or_algorithm_redefinition",
+      "rechecked": false,
+      "outcomes_observed": null
+    },
+    {
+      "id": "historical_feature_audit_quarterly",
+      "proposed_review_date": "2027-01-26",
+      "reason": "Version-specific historical features should not be silently overwritten by new policies",
+      "priority": "quarterly",
+      "source_ids": [
+        "itch-july-2026-changelog",
+        "itch-terms"
+      ],
+      "event_trigger": "new_official_feature_or_terms_version",
+      "rechecked": false,
+      "outcomes_observed": null
+    }
+  ],
+  "review_contract": [
+    "Prioritize officially dated announcements and current policy over cached index pages and unsourced forum restatements.",
+    "At each check record retrieval date, visible source version/date, operator quote summarized briefly, changed fields and impacted game-population dimensions.",
+    "If an old rule changes, preserve the historical effective period and add a new observation rather than rewrite a prior source date.",
+    "Do not label a proposed review date as a scheduled reminder, completed search, or evidence that the platform will change.",
+    "Reconcile public change to existing 244 task IDs and source-linked acceptance artifacts only; no new unrelated tasks.",
+    "On payment mode change, rerun fee/payout calculation tests and verify cost denominators before revising amounts.",
+    "On indexing change, distinguish newly eligible old pages, new game projects, actual paid merchants and settled purchases.",
+    "On third-party metrics change, keep cached source age and sample completeness visible rather than treating new counters as synchronized market shares."
+  ],
+  "mechanism": {
+    "scheduled_automation_created": false,
+    "monitoring_active": false,
+    "alerts_configured": false,
+    "requires_explicit_future_retrieval": true,
+    "no_owner_credentials_needed": true
+  },
+  "unknown": {
+    "future_platform_payment_rates": null,
+    "future_source_review_outcome": null,
+    "active_seller_income_statistics": null,
+    "future_indexing_approval_time": null
+  }
+}
