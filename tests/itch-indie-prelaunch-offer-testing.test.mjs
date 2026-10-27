@@ -17,7 +17,7 @@ test('Offer experiment is complete as a bounded specification, not as executed p
  for(const k of ['observed_impressions','observed_visits','observed_orders','observed_refunds','observed_variant_costs','observed_conversion','observed_profit','observed_causal_effect'])assert.equal(r.planned_test[k],null);
  const tasks=q.queues.flatMap(x=>x.tasks);
  const done=tasks.find(t=>t.id==='strategy/offer-test');assert.equal(done.progress,100);assert.equal(done.status,'complete');
- const pending=tasks.find(t=>t.id==='strategy/acquisition-test');assert.equal(pending.progress,78);assert.equal(pending.status,'in_progress');
+ const pending=tasks.find(t=>t.id==='strategy/acquisition-test');assert.equal(pending.progress,80);assert.equal(pending.status,'in_progress');
  for(const t of [done,pending])for(const path of ['ontology/itch-io/indie-prelaunch-offer-testing-2026.json','ontology/itch-io/indie-prelaunch-offer-testing-2026.md','tests/itch-indie-prelaunch-offer-testing.test.mjs','specimens/itch-io.json'])assert(t.evidence.includes(path));
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
 });
