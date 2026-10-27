@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "selected_public_new_feed_and_featured_sighting_duration",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "pelipulssi-feed-study-2026",
+    "itch-indexed",
+    "itch-recent-paid7-2026",
+    "itch-recent-paid30-2026"
+  ],
+  "population": "First-seen public all-price games plus one creator free alpha in a selected feed monitor",
+  "unit": "One ranked public feed sighting or sampled day, not a paid order",
+  "period": "Jan 29–Jun 11 2026; monitor report published Jun 12 2026",
+  "sample_frame": "Independent Pelipulssi sampled feed tracker of 118017 first-seen game pages over 152 days",
+  "positions": [
+    {
+      "surface": "new_feed",
+      "when": "2026-01-29",
+      "rank": 28,
+      "days_since_first_sighting_approx": 0
+    },
+    {
+      "surface": "new_feed",
+      "when": "2026-02-06",
+      "rank": 7193,
+      "days_since_first_sighting_approx": 8
+    },
+    {
+      "surface": "new_feed_after_build_update",
+      "when": "2026-02-12",
+      "rank": 20,
+      "days_since_first_sighting_approx": 14
+    },
+    {
+      "surface": "featured_catalog",
+      "when": "2026-02-20",
+      "rank": 24,
+      "days_since_first_sighting_approx": 22
+    }
+  ],
+  "featured": {
+    "observed_start": "2026-02-20",
+    "last_sampled_sighting": "2026-06-11",
+    "days_with_sightings": 112,
+    "sampled_rank_sightings": 652,
+    "first_five_week_average_rank_range": [
+      29,
+      73
+    ],
+    "later_rank_range_approx": [
+      400,
+      1400
+    ],
+    "last_sample_is_actual_removal": false
+  },
+  "public_feed": {
+    "all_game_first_seen_count": 118017,
+    "survey_days": 152,
+    "reported_average_new_game_sightings_per_day_approx": 776,
+    "first_seen_is_new_paid_seller_census": false
+  },
+  "rolling_paid_filters_prior": {
+    "last_7_days_results": 1057,
+    "last_30_days_results": 3752,
+    "common_crawl_timestamp": false,
+    "verified_paid_orders": null
+  },
+  "policy": {
+    "original_publication_date_reset_by_update": false,
+    "indexing_may_lag_publication": true,
+    "ranking_update_does_not_imply_new_game_identity": true
+  },
+  "unknown": {
+    "paid_game_average_hours_visible": null,
+    "typical_first_paid_release_rank": null,
+    "actual_unique_buyer_exposure": null,
+    "causal_paid_order_uplift": null
+  },
+  "limitations": [
+    "New and featured are different surface kinds; rank 400 in featured is deep and not necessarily first-page visible.",
+    "Sighting intervals are sparse; 112 days is sampled membership, not verified continuous homepage prominence.",
+    "One selected free alpha is not a paid-game representative sample.",
+    "The first-seen monitoring frame includes free and paid game types, not unique paying sellers.",
+    "Updated content can resurface without resetting initial publication."
+  ]
+}

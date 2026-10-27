@@ -1,0 +1,9 @@
+# Public new-feed recency and featured-catalog duration
+
+The [independent Pelipulssi 2026-06-12 tracking report](https://pelipulssi.com/article/superweird-itch-io-featured-feed-112-days) monitored **118,017 first-seen public games across 152 days** and measured one free alpha's new-feed ranking from **28 on Jan 29** to **7,193 eight days later**. Following a Feb 11 game update, it reappeared in the new feed at **rank 20 on Feb 12**.
+
+The same free alpha entered a deeper featured catalog at **rank 24 on Feb 20**, and the external monitor observed it on **112 consecutive calendar days through Jun 11**, in **652 sampled sightings**. During the first five weeks its weekly average ranks were around 29–73; later sampled positions were often 400–1,400. Catalog inclusion is **not** necessarily visibility in the front page's first viewport, and the last observation does not establish an exit date.
+
+The [official indexing guide](https://itch.io/docs/creators/getting-indexed) separates original publication date from later indexing and updates. A second new-feed ride is not a newly published independent paid game. The separate [recent Paid filter snapshots](recent-release-filter-frames-2026.md) counted 1,057 last-7-day results and 3,752 last-30-day results at asynchronous crawl times, not verified original first paid launches.
+
+**Population:** selected monitored mixed-price public games. **Unit:** sampled rank/sighting and day of observed feed membership, not paying purchasers. **Limitations:** one nonrepresentative free alpha, periodic feed sampling, old-versus-new surface differences, no own account data, no buyer receipts or causal experiment. This *measures listing recency and visible-feed duration* in a bounded public frame as the existing task requests. The all-paid-games distribution and paid profit effect remain unknown. [Machine record](new-release-featured-visibility-observations-2026.json).
