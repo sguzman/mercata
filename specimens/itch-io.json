@@ -2385,6 +2385,28 @@
       "evidence_class": "first_person_itch_calendar_year_mixed_format_payment_breakdown_and_approximate_after_platform_proceeds",
       "license": "Brief attributed public financial values independently transcribed and reconciled; no full article excerpts, images, consumer information or order-level ledgers reproduced.",
       "notes": "2024 itch account report says $8,026.85 gross and 358 payment events and approximately $6,662.29 after site share and payouts. APOCALYPSE FRAME $3,965 physical/94 payments and $1,243.30 digital-and-tips/53; Valiant Horizon $440 physical/14 and $706 digital-and-tips/33. Total also contains other itch products. Multi-channel production expense and profit figures are not attributable solely to itch digital games."
+    },
+    {
+      "id": "aguier-direct-checkout-inactive-2026-07",
+      "url": "https://itch.io/t/6635856/sale-ends-in-20-hours-203-views-0-sales-thank-you",
+      "title": "Sale ends in 20 hours — 203 views, 0 sales, thank you",
+      "publisher": "aguier, first-person public itch.io developer forum post",
+      "published_at": "2026-07-17",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "voluntary_creator_checkout_configuration_and_view_sales_snapshot",
+      "license": "Dated public numeric self-report and payment-route status independently described with source link; no full post, screenshots, assets or buyer data reproduced.",
+      "notes": "July 17 self-report: seven-day label, 203 page views, one download, zero sales. Individual game Stripe unconnected, separately priced PayPal bundle available. Related posts have inconsistent elapsed-days/view counters; do not form a reconciled longitudinal series or infer unique people."
+    },
+    {
+      "id": "nobody-leaves-impressions-first-two-days-2026-10",
+      "url": "https://itch.io/t/7220162/nobody-leaves-700-impressions-under-1-click-0-sales-what-makes-you-skip-it",
+      "title": "Nobody Leaves: 700 impressions, under 1% click, 0 sales",
+      "publisher": "pallavi_sahoo, public first-game developer forum post",
+      "published_at": "2026-10-25",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "voluntary_creator_first_launch_impressions_clicked_fraction_and_zero_sale_claim",
+      "license": "Only narrow first-person posted numerical facts and timestamp independently paraphrased with link; no comments, images, screenshots or customer data copied.",
+      "notes": "October 25 report describes first game launched approximately two days earlier by two-person team; ~700 listing impressions, <1% clicked, no sales reported, free seven-room browser sample, promoted price $1.99 vs $3.99 reference. Purchase processor configuration, true click count, measured page-view/plays and returned buyers not provided."
     }
   ],
   "claims": [
@@ -7504,6 +7526,50 @@
       "confidence": "high",
       "observed_at": "2026-10-27",
       "limitations": "Official sample API schema rather than actual merchant records; counts are not separated by dated purchase window, free-game donations, bundles, chargebacks, role of owner versus editor, or publisher bank payout. No API credentials, endpoints or private data used."
+    },
+    {
+      "id": "unconfigured-single-game-processor-zero-sales-not-demand-estimate",
+      "text": "A July 17, 2026 browser-game seller reported 203 page views and zero sales during a short launch period but also disclosed that individual-game Stripe checkout was unconnected; a separately offered PayPal bundle remained configured, so zero reported sales do not identify willingness to pay for an eligible route.",
+      "source_ids": [
+        "aguier-direct-checkout-inactive-2026-07",
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Voluntary seller self-report, not authenticated transactions or a consistent 7-day cohort. Page views are events, no verified checkout attempts, competing payment paths differ, and related public duration/view claims are not reconciled."
+    },
+    {
+      "id": "zero-merchant-transactions-unobserved-must-remain-unknown",
+      "text": "A research-only checkout configuration evaluator without any live checkout observations cannot assert zero successful merchant transactions solely because a given provider is disabled, eligibility unknown, or prerequisites appear configured.",
+      "source_ids": [
+        "itch-payments",
+        "aguier-direct-checkout-inactive-2026-07"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "This is a methodological constraint on inference from seller setup, not evidence of a positive payment count or quantified conversion on either seller's actual account."
+    },
+    {
+      "id": "early-first-game-impression-zero-sale-case-not-conversion",
+      "text": "An October 25, 2026 first-game team reported approximately 700 browse impressions, fewer than 1% clicked and zero sales after roughly two days; impressions and an imprecise clicked share do not measure unique page visitors, actual browser-play sessions, eligible checkout attempts, or paid-buyer conversion.",
+      "source_ids": [
+        "nobody-leaves-impressions-first-two-days-2026-10"
+      ],
+      "confidence": "moderate",
+      "observed_at": "2026-10-27",
+      "limitations": "Self-selected seller requesting feedback; no independent dashboard, page-view totals, exact impression or click counts, buyer identities, payment setup, settled orders, or random-sample merchant frame."
+    },
+    {
+      "id": "2026-two-zero-sale-reports-different-funnel-breakpoints",
+      "text": "Two short 2026 seller zero-sales disclosures identify different known constraints—an unconfigured individual-game processor versus low reported impression-to-click engagement with unknown checkout readiness—so neither can be pooled into a paid-game zero-sale rate or used to assign a causal failure to pricing or demand.",
+      "source_ids": [
+        "aguier-direct-checkout-inactive-2026-07",
+        "nobody-leaves-impressions-first-two-days-2026-10",
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Different games, prices, platform types, available bundle channels, dates, time windows and metric definitions; publication and survivorship bias, unverifiable seller statements and unknown purchase follow-up."
     }
   ],
   "observations": [

@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "selected_public_2026_zero_sales_disclosures_with_noncomparable_checkout_and_discovery_gates",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "aguier-direct-checkout-inactive-2026-07",
+    "nobody-leaves-impressions-first-two-days-2026-10",
+    "itch-payments"
+  ],
+  "population": {
+    "seller_accounts": 2,
+    "selected_voluntary_self_disclosures": true,
+    "probability_sample": false,
+    "game_types_align": false,
+    "cohort_dates_align": false,
+    "eligible_payment_routes_match": false,
+    "real_transaction_data_authenticated": false
+  },
+  "cases": [
+    {
+      "id": "browser_games_checkout_unconfigured_july",
+      "source_id": "aguier-direct-checkout-inactive-2026-07",
+      "post_date": "2026-07-17",
+      "period_label_from_author": "7_days_live",
+      "period_boundaries_verified": false,
+      "reported_page_view_events": 203,
+      "reported_download_events": 1,
+      "reported_sale_events": 0,
+      "unique_page_viewers": null,
+      "verified_refund_adjusted_positive_price_orders": null,
+      "individual_game_payment_route": {
+        "provider": "stripe",
+        "seller_connected": false,
+        "checkout_for_that_method_possible": false
+      },
+      "bundle_payment_route": {
+        "provider": "paypal",
+        "reported_available": true,
+        "bundle_sale_minimum_usd": 14.25
+      },
+      "identical_offer_across_routes": false,
+      "can_attribute_zero_sales_to_disinterest": false
+    },
+    {
+      "id": "two_person_first_game_impression_case_october",
+      "source_id": "nobody-leaves-impressions-first-two-days-2026-10",
+      "post_date": "2026-10-25",
+      "first_game_according_to_publisher": true,
+      "launch_approx_days_before_post": 2,
+      "reported_browse_impressions_approx": 700,
+      "reported_click_through_fraction_upper_exclusive": 0.01,
+      "exact_click_events": null,
+      "exact_page_view_events": null,
+      "free_browser_demo_rooms": 7,
+      "reported_sale_events": 0,
+      "offered_introductory_price_usd": 1.99,
+      "reference_price_usd": 3.99,
+      "verified_positive_price_checkout_route_configured": null,
+      "verified_refund_adjusted_positive_price_orders": null,
+      "actual_browser_plays": null,
+      "unique_buyers": null,
+      "can_attribute_zero_sales_to_price": false
+    }
+  ],
+  "metric_classification": [
+    {
+      "event": "browse_impression",
+      "unit": "ranked_result_exposure_event",
+      "implies_click": false,
+      "implies_page_view": false,
+      "implies_sale": false
+    },
+    {
+      "event": "project_page_view",
+      "unit": "page_view_event",
+      "implies_click": "not_always",
+      "implies_unique_human": false,
+      "implies_sale": false
+    },
+    {
+      "event": "free_browser_demo",
+      "unit": "play_event_if_measured",
+      "implies_paid_order": false
+    },
+    {
+      "event": "checkout_route",
+      "unit": "seller_provider_specific_eligibility",
+      "implies_sale": false
+    },
+    {
+      "event": "retained_paid_order",
+      "unit": "completed_positive_price_order_after_refunds",
+      "requires_real_merchant_records": true
+    }
+  ],
+  "measurement_outcomes": {
+    "sample_market_zero_sale_rate": null,
+    "unique_buyers": null,
+    "checkout_attempt_count_for_both_cases": null,
+    "matched_eligible_page_view_to_purchase_conversion": null,
+    "causal_conversion_effect_of_payment_setup": null,
+    "median_first_game_income": null,
+    "representative_browser_paid_conversion": null,
+    "reconciliation_between_creators_related_posts": null
+  },
+  "note": "The reported 0 sales in each selected case is a statement made by a developer, not a verified value for every eligible seller or proof no buyers attempted payment.",
+  "limitations": [
+    "The July publisher's zero transactions occur alongside explicitly disabled individual-game Stripe, but a separate PayPal bundle is offered; account-wide route availability is not binary.",
+    "The July posts include different relative elapsed-period wording and counts and cannot be stitched into one exact progression.",
+    "The October developer reported impression exposure rather than a measured game-page or browser-play denominator; the click-through share is bounded but neither click count nor checkout eligibility is verified.",
+    "Both disclosures are single self-selected observations. Their zero sales cannot estimate the fraction of all first-game publishers failing or typical paid game conversion.",
+    "No private buyer records, seller credentials, processor transactions or checkout experiments were retrieved.",
+    "Creator explanations about artwork, price, mechanics or player trust are hypotheses unless a matched test establishes otherwise."
+  ]
+}

@@ -6,7 +6,9 @@
   "source_ids": [
     "itch-payments",
     "itch-buying",
-    "itch-buying-flow"
+    "itch-buying-flow",
+    "aguier-direct-checkout-inactive-2026-07",
+    "nobody-leaves-impressions-first-two-days-2026-10"
   ],
   "scope": "checkout_method_configuration_and_buyer_region_eligibility_not_population_size",
   "buyer_checkout_methods_documented": [
@@ -94,6 +96,22 @@
     "Support for an instrument is not an assertion of universal eligibility; card declines and fraud blocks are separate outcomes.",
     "Direct mode without a connected provider cannot offer that provider's payment route.",
     "Collected operator's policy of accepting all supported payments does not eliminate regional legal, content, sanctions or issuer restrictions.",
-    "One buyer may make multiple transactions, use several emails, or re-download without paying again."
-  ]
+    "One buyer may make multiple transactions, use several emails, or re-download without paying again.",
+    "A nonconnected single-game processor and a separately connected bundle route can coexist; do not infer that every price option was accessible or that all visitors declined to pay."
+  ],
+  "observation_vs_inference_policy": {
+    "source_ids": [
+      "aguier-direct-checkout-inactive-2026-07",
+      "nobody-leaves-impressions-first-two-days-2026-10",
+      "itch-payments"
+    ],
+    "case_record": "ontology/itch-io/short-launch-zero-sales-checkout-versus-discovery-2026.json",
+    "evaluator_reports_successful_payment_events_without_observed_merchant_data": false,
+    "evaluator_unknown_merchant_transaction_total": null,
+    "developer_self_reported_zero_sales_not_market_rate": true,
+    "individual_provider_disabled_does_not_preclude_different_provider_bundle_checkout": true,
+    "absence_of_a_configured_payment_path_is_not_a_measured_number_of_nonbuying_customers": true,
+    "browse_impressions_are_not_buyer_eligible_checkouts": true,
+    "reported_zero_sales_do_not_identify_market_zero_sale_fraction": true
+  }
 }
