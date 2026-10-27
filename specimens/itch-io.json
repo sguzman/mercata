@@ -2275,6 +2275,28 @@
       "evidence_class": "third_party_selected_creator_shared_time_series_qualitative_assessment",
       "license": "Only public textual dates and independently summarized aggregate patterns referenced with link; underlying screenshots, developer dashboards, individual event logs and game assets are not copied.",
       "notes": "Article last updated 2026-09-27; analyzes selected voluntary creator itch download/view graphs for Checkmage!, Psycutlery and ColorCoordination. Reports mixed temporal patterns with devlog posts, unquantified most per-event series and a roughly 1.39/day selected free-game download trajectory. YouTube trailer spikes and exposure history are confounders; zero verified paid-game orders."
+    },
+    {
+      "id": "aster-pebble-first-game-2026-postmortem",
+      "url": "https://wandering-door-games.itch.io/aster-pebble-and-the-case-of-bad-bureaucracy/devlog/1645107/lookin-back-on-aster-pebble",
+      "title": "Lookin' Back On - Aster Pebble",
+      "publisher": "Wandering Door Games, independent two-person game development team",
+      "published_at": "2026-09-01",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_game_creator_self_reported_development_effort_and_crossstore_limited_sales",
+      "license": "Public self-reported numerical ranges summarized in original wording with a source link; no graphics, game files or private merchant records reproduced.",
+      "notes": "Publisher's first released game launched July 24, 2026 after work begun Oct 6, 2025. Roughly ten months of full-time development (not measured hours), fewer than 50 sold across Steam plus itch about one month after launch. Exact store breakdown, sale-price/cash/retained order basis, buyer duplicates and team-person hours unavailable."
+    },
+    {
+      "id": "aster-pebble-paid-page-2026",
+      "url": "https://wandering-door-games.itch.io/aster-pebble-and-the-case-of-bad-bureaucracy",
+      "title": "Aster Pebble and the Case of Bad Bureaucracy: paid product listing",
+      "publisher": "Wandering Door Games, itch.io seller",
+      "published_at": null,
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "live_public_2d_game_page_minimum_price_release_metadata",
+      "license": "Metadata and offer independently described and linked; no assets, purchase keys, third-party screenshots or source code copied.",
+      "notes": "The current itch page offers full Windows/Linux downloads for a positive $6.99 USD minimum and a separately free demo; says two-person husband-and-wife studio, Godot/pixel art, controller and touchscreen support. Current price is not independently verified as launch/introductory or realized transaction price."
     }
   ],
   "claims": [
@@ -7246,6 +7268,28 @@
       "confidence": "moderate",
       "observed_at": "2026-10-27",
       "limitations": "Self-selected curator sample, game owners shared selected aggregate charts rather than machine-readable event logs, no randomized holdout or synchronized exposure controls, Steam wishlist spikes attributed to concurrent YouTube trailers, two games free, unique visitors and paid buyers unavailable."
+    },
+    {
+      "id": "aster-pebble-first-game-under-50-crossstore-2026",
+      "text": "In a September 1 2026 retrospective of its first game, the two-person team behind Aster Pebble reported roughly ten months of development and fewer than 50 combined Steam and itch.io copies approximately a month after the July 24 launch, without disclosing how many came from itch.",
+      "source_ids": [
+        "aster-pebble-first-game-2026-postmortem",
+        "aster-pebble-paid-page-2026"
+      ],
+      "confidence": "moderate",
+      "observed_at": "2026-10-27",
+      "limitations": "One voluntary first-game release and publisher team; author stated full-time development but no person-hour log, external audience history, distribution of cross-store orders, refunded/redeemed key duplicates or complete labor cost; not a matched first-time/experienced creator benchmark."
+    },
+    {
+      "id": "aster-pebble-store-price-not-transaction-2026",
+      "text": "The Aster Pebble itch.io page offered a $6.99 positive-price full Windows/Linux game and separate free demo at review, but the retrospective says its initial sale ended and provides no verified per-store realized sale prices or settled income.",
+      "source_ids": [
+        "aster-pebble-first-game-2026-postmortem",
+        "aster-pebble-paid-page-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Page offer is review-time and must not be applied retroactively to fewer than 50 combined Steam/itch copies; no per-copy pricing, refund, tax, processor fee or bank transfer ledger."
     }
   ],
   "observations": [

@@ -1,0 +1,30 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Two-person first-game retrospective preserves mixed store upper bound and unknown labor',()=>{
+ const a=read('ontology/itch-io/first-game-aster-pebble-labor-and-crossstore-censoring-2026.json'),d=read('specimens/itch-io.json');
+ assert(a.source_ids.every(id=>d.evidence.some(s=>s.id===id)));
+ assert.equal(a.project.team_members_reported,2);
+ assert.equal(a.project.first_released_game_reported,true);
+ assert.equal(a.project.development_start_date,'2025-10-06');
+ assert.equal(a.project.commercial_release_date,'2026-07-24');
+ assert.equal(a.project.retrospective_post_date,'2026-09-01');
+ assert.equal(a.project.person_hours_from_timelog,null);
+ assert.equal(a.sales.combined_copies_sold_upper_bound_exclusive,50);
+ assert.deepEqual(a.sales.stores,['itch.io','Steam']);
+ assert.equal(a.sales.itch_io_copies_sold,null);
+ assert.equal(a.sales.steam_copies_sold,null);
+ assert.equal(a.sales.positive_price_download_game_offer_on_itch_usd_at_research_review,6.99);
+ assert.equal(a.method.current_listed_price_must_not_be_multiplied_by_combined_upper_bound,true);
+ assert.equal(a.method.one_first_game_seller_not_controlled_comparison_to_established_creator,true);
+ assert(Object.values(a.unknown).every(v=>v===null));
+});
+test('Existing first-time versus established creator research advances without closing population gaps',()=>{
+ const p=read('plans/itch-io.json'),q=read('queues/itch-io.json');
+ assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
+ assert.equal(q.queues.flatMap(w=>w.tasks).length,84);
+ const t=p.detail_tasks.find(t=>t.id==='itch-io/competition/model-first-time-versus-established-creators');
+ assert(t.percent>=88&&t.percent<100);assert.equal(t.status,'in_progress');
+ for(const name of ['ontology/itch-io/first-game-aster-pebble-labor-and-crossstore-censoring-2026.json','ontology/itch-io/first-game-aster-pebble-labor-and-crossstore-censoring-2026.md','tests/itch-first-game-aster-pebble.test.mjs'])assert(t.evidence.includes(name));
+ const m=p.detail_tasks.find(t=>t.id==='itch-io/income/estimate-mean-seller-income');
+ assert.equal(m.status,'in_progress');
+});
