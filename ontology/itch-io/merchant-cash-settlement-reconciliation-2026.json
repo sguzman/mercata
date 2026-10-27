@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "unexecuted_retained_order_reversal_withholding_and_collected_payout_review_waterfall",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-payments",
+    "itch-terms"
+  ],
+  "calculator_path": "site/itch-cash-settlement-reconciliation.mjs",
+  "population": "single hypothetical eligible game merchant, no actual seller records",
+  "currency": "USD cents",
+  "unit": "captured transactions and distinct full refunds/disputes then one eligible seller balance",
+  "routes": [
+    {
+      "id": "direct_to_you",
+      "merchant_of_record": "seller",
+      "payout_review_engine": "external_connected_paypal_or_stripe",
+      "operator_collected_payout_review_applicable": false,
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "collected_by_itch",
+      "merchant_of_record": "itch.io",
+      "payout_review_engine": "operator_approval_plus_payout_provider",
+      "operator_collected_payout_review_applicable": true,
+      "source_ids": [
+        "itch-payments",
+        "itch-terms"
+      ]
+    }
+  ],
+  "example_inputs": {
+    "paymentMode": "collected_by_itch",
+    "transactions": {
+      "capturedOrders": 10,
+      "fullyRefundedOrders": 2,
+      "chargebackOrders": 1,
+      "priceCents": 1000,
+      "platformShareCentsPerRetainedOrder": 100,
+      "processingFeeCentsPerCapturedOrder": 59,
+      "processingRefundCreditCentsPerFullyRefundedOrder": 0,
+      "processingChargebackCreditCentsPerDisputedOrder": 0,
+      "platformFeesKeptOnReversalsCents": 0,
+      "chargebackFeeCentsPerDispute": 1500,
+      "cashDevelopmentCostCents": 0,
+      "valuedLaborCostCents": 0,
+      "merchantPayoutAndFxFeesCents": 0
+    },
+    "withheldTaxCents": 100,
+    "reserveHeldCents": 500,
+    "review": {
+      "saleAgeDays": 7,
+      "taxInterviewCompleted": true,
+      "payoutMethodSelected": true,
+      "outstandingRequests": 0
+    }
+  },
+  "illustrative_results": {
+    "retained_orders": 7,
+    "retained_gross_cents": 7000,
+    "processor_fees_cents": 590,
+    "platform_fees_cents": 700,
+    "chargeback_fees_cents": 1500,
+    "balance_after_all_listed_transaction_and_payout_cost_cents": 4210,
+    "balance_after_hypothetical_withheld_tax_and_reserve_cents": 3610,
+    "collected_payout_request_conditionally_eligible": true,
+    "actual_bank_transfer_cents": null
+  },
+  "double_count_guards": [
+    "Refunded or charged-back orders are removed from retained gross once, and must not also be subtracted as a duplicate full-price fee.",
+    "Processing cost for all captured orders is deducted once, less explicitly credited amounts.",
+    "Actual platform reversal-retention fees are separately supplied if applicable; no automatic assumption they are retained.",
+    "Merchant payout and FX charges belong in the refund reconciler's merchantPayoutAndFxFeesCents, not another payment step.",
+    "Taxes withheld are separated from personal final tax liability; no universal withholding rate is applied.",
+    "Operator payout request eligibility is not operator approval, actual bank settlement, or guaranteed arrival date.",
+    "Zero/negative balance cannot meet the positive $5 collected payout minimum."
+  ],
+  "limitations": [
+    "The $15 chargeback fee in the fixture is an explicit hypothetical assumption, not an observed provider fee.",
+    "The $1 withholding and $5 hold are synthetic, not actual reserves, account disputes, or tax law.",
+    "A single order-price case has no mixed product-price distribution, currency conversion or partial refunds.",
+    "Collected by itch.io merchants can face account adjustments even when the platform handles a payment dispute; this is not an empirical incident rate.",
+    "Real processor rules, individual seller tax forms, reserves, and eligibility differ by jurisdiction.",
+    "No credentials, payment provider accounts, merchant dashboard, real buyers, purchase orders or bank transfers were accessed."
+  ],
+  "unknown": {
+    "real_merchant_chargeback_rate": null,
+    "real_merchant_refund_rate": null,
+    "actual_transfer_fee_cents": null,
+    "representative_merchant_bank_cash": null,
+    "final_publisher_income_tax": null,
+    "default_regional_reserve_rate": null
+  }
+}

@@ -148,7 +148,7 @@
         "itch-io/economics/build-break-even-model"
       ],
       "phase": 1,
-      "progress_percent": 96
+      "progress_percent": 97
     },
     {
       "id": "market",
@@ -1162,8 +1162,8 @@
       "emoji": "💳",
       "objective": "Investigate trace reversals, chargebacks and fees through settlement.",
       "acceptance": "Provide dated source-linked evidence to trace reversals, chargebacks and fees through settlement; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "in_progress",
-      "percent": 90,
+      "status": "complete",
+      "percent": 100,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1179,7 +1179,11 @@
         "ontology/itch-io/refund-chargeback-unit-cost-2026.json",
         "ontology/itch-io/refund-chargeback-unit-cost-2026.md",
         "site/itch-refund-cost-audit.mjs",
-        "tests/itch-refund-cost-audit.test.mjs"
+        "tests/itch-refund-cost-audit.test.mjs",
+        "site/itch-cash-settlement-reconciliation.mjs",
+        "ontology/itch-io/merchant-cash-settlement-reconciliation-2026.json",
+        "ontology/itch-io/merchant-cash-settlement-reconciliation-2026.md",
+        "tests/itch-cash-settlement-reconciliation.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1192,8 +1196,8 @@
       "emoji": "💳",
       "objective": "Investigate define orders, tax, share, processor fee, reserve and accessible cash.",
       "acceptance": "Provide dated source-linked evidence to define orders, tax, share, processor fee, reserve and accessible cash; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "in_progress",
-      "percent": 93,
+      "status": "complete",
+      "percent": 100,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1208,7 +1212,11 @@
         "tests/itch-collected-payout-check.test.mjs",
         "ontology/itch-io/merchant-country-first-payout-2026.json",
         "ontology/itch-io/merchant-country-first-payout-2026.md",
-        "tests/itch-io-country-payout-cost.test.mjs"
+        "tests/itch-io-country-payout-cost.test.mjs",
+        "site/itch-cash-settlement-reconciliation.mjs",
+        "ontology/itch-io/merchant-cash-settlement-reconciliation-2026.json",
+        "ontology/itch-io/merchant-cash-settlement-reconciliation-2026.md",
+        "tests/itch-cash-settlement-reconciliation.test.mjs"
       ],
       "artifact": null,
       "priority": "high",

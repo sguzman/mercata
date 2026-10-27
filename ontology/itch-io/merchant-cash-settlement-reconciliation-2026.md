@@ -1,0 +1,11 @@
+# Gross transactions to available cash: refunds, reserves and payout approval
+
+Reviewed **October 26, 2026**. [Machine assumptions](merchant-cash-settlement-reconciliation-2026.json) · [tested settlement function](../../site/itch-cash-settlement-reconciliation.mjs). This connects Mercata's already tested [full-refund/chargeback analysis](../../site/itch-refund-cost-audit.mjs) with its [collected payout eligibility check](../../site/itch-collected-payout-check.mjs). The published [operator payment guide](https://itch.io/docs/creators/payments) distinguishes Direct to you and Collected by itch.io routes.
+
+The inputs are intentionally **synthetic**: ten captured $10 purchases, two full refunds, one chargeback, a hypothetical $1 platform share and $0.59 processing charge per applicable order, plus a hypothetical $15 dispute fee. Seven orders remain: $70 retained gross, minus $5.90 processing, $7 platform share and $15 dispute costs, giving **$42.10** cash before withholding and reserve.
+
+An illustrative **$1 withheld amount** and **$5 held reserve** leave **$36.10 unreserved**. This can meet the *scenario's* minimum $5 balance check when all explicitly supplied tax interview, payout method, holding period and request-count checks pass. Passing a request check is **not proof of a real payout, bank transfer, transfer processing date or profit**. The example's dispute fee, withheld amount, reserve, refunds and order count are constructed inputs, not typical seller outcomes or provider rate quotes.
+
+The underlying reconciler already deducts any supplied payout/FX fees, which must **not** be subtracted again. There is no calculation of actual final tax liability, regional account approval, chargeback incidence, effective FX spreads or market earnings. The combined function also refuses inconsistent event counts or reserving more than available positive funds; negative cash remains an explicit outstanding debt rather than a payout.
+
+**Research acceptance:** it defines an auditable accounting waterfall from retained orders through processing, platform and dispute deductions to *conditionally available* cash. No paid merchant account, private buyer data, cash transfer or commercial test was operated.
