@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "source_bounded_paid_downloadable_vs_html5_demo_release_experiment_protocol",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-html5",
+    "itch-started",
+    "itch-pricing",
+    "itch-payments",
+    "itch-first-browser-two-weeks-2026",
+    "itch-no-hacks-solo-140hours-2025",
+    "itch-spring-cleaning-team-phase-hours-2026",
+    "itch-buying-flow",
+    "itch-indexed"
+  ],
+  "population": "Future owner-authorized publisher of one eligible mandatory-paid downloadable indie game with or without free HTML5 demo; no real publisher supplied",
+  "unit": "One matching referral/event cohort and one owner-logged developer work session",
+  "period": "Official policies checked October 27 2026; hypothetical prospective 30,90,365-day followups",
+  "sample_frame": "Official first-party HTML5/pricing/publication rules plus selected 2025-26 developer work reports",
+  "implementation": {
+    "premium_release": "Downloadable project with positive minimum price and paid game upload",
+    "native_html5": "Embeddable public browser play takes voluntary donations, not a native paywall",
+    "free_demo_same_page": "Official guide supports a free downloadable demo file on a paid project",
+    "html5_browser_demo": "Separate public HTML Game with free play and link to premium project; placement/checkout attribution unverified",
+    "automatic_cross_project_purchase_link": false,
+    "source_ids": [
+      "itch-html5",
+      "itch-started",
+      "itch-pricing"
+    ]
+  },
+  "variants": [
+    {
+      "id": "A",
+      "offer": "paid_downloadable_game_without_browser_demo"
+    },
+    {
+      "id": "B",
+      "offer": "same_priced_downloadable_game_with_linked_free_html5_browser_demo"
+    }
+  ],
+  "effort_examples": [
+    {
+      "source_id": "itch-first-browser-two-weeks-2026",
+      "reported_calendar_weeks": 2,
+      "approx_play_minutes": 9,
+      "person_hours": null,
+      "actual_paid_orders": null
+    },
+    {
+      "source_id": "itch-no-hacks-solo-140hours-2025",
+      "reported_solo_person_hours_approx": 140,
+      "is_HTML5_demo_cost_benchmark": false,
+      "actual_paid_orders": null
+    },
+    {
+      "source_id": "itch-spring-cleaning-team-phase-hours-2026",
+      "reported_total_phase_hours": 51,
+      "total_team_person_hours": null,
+      "actual_paid_orders": null
+    }
+  ],
+  "effort_measurement": {
+    "record_separately": [
+      "demo_design_engineering_minutes",
+      "asset_editing_minutes",
+      "HTML5_export_minutes",
+      "keyboard_touch_gamepad_QA_minutes",
+      "full_game_packaging_minutes",
+      "browser_compatibility_minutes",
+      "store_copy_minutes",
+      "marketing_minutes",
+      "post_launch_patch_support_minutes"
+    ],
+    "unique_session_nonoverlap_required": true,
+    "person_hours_formula": "sum(accepted_worklog_session_minutes)/60",
+    "calendar_duration_is_not_person_hours": true,
+    "actual_demo_build_hours": null,
+    "typical_publisher_build_hours": null,
+    "actual_cash_spend": null,
+    "owner_approved_max_hours": null,
+    "owner_approved_max_cash": null
+  },
+  "funnel": {
+    "use_existing_validator": "site/itch-matched-funnel-audit.mjs",
+    "cross_project_common_attribution_unverified": true,
+    "need_explicit_seller_permission": true,
+    "observed_event_types": [
+      "impression",
+      "page_view",
+      "browser_play",
+      "checkout_start",
+      "completed_positive_price_order",
+      "refund",
+      "settled_proceeds"
+    ],
+    "demo_play_is_order": false,
+    "actual_paid_order_is_refund_adjusted": true,
+    "constant_game_price_build_source_population_required": true,
+    "followup_days": [
+      30,
+      90,
+      365
+    ],
+    "sequential_comparison_is_causal": false,
+    "controlled_random_assignment_implemented": false,
+    "actual_paid_order_lift": null,
+    "real_conversion": null
+  },
+  "state": {
+    "authorization_received": false,
+    "merchant_account_opened": false,
+    "game_provided": false,
+    "HTML5_build_tested": false,
+    "paid_orders_observed": 0,
+    "net_profit_observed": null
+  },
+  "limitations": [
+    "A separately linked HTML game has no assured native cross-project user/order join.",
+    "Historical volunteer developer work examples are different products and formats, not a population-mean labor estimate.",
+    "Calendar weeks are not elapsed person-hours; team phases are not summed contributor hours.",
+    "Randomized allocation or genuine validated experimental design required for causal benefit.",
+    "No price, buyer or potential ROI has been invented."
+  ]
+}
