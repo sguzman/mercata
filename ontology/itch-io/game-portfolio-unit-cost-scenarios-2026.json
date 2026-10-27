@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "hypothetical_multi_title_cost_and_retained_paid_order_break_even_model",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-payments",
+    "itch-pricing",
+    "itch-html5",
+    "itch-started",
+    "rose-seed-replica-launch-cost-postmortem",
+    "aracore-game-first-five-days-postmortem"
+  ],
+  "calculator_path": "site/itch-portfolio-economics.mjs",
+  "calculator_based_on": "site/itch-break-even.mjs",
+  "model_is_population_estimate": false,
+  "unit": "title_and_retained_settled_positive_price_order",
+  "currency": "USD_only_for_illustration",
+  "example_inputs": {
+    "sharedCashCostsUsd": 0,
+    "sharedWorkHours": 5,
+    "hourlyLaborRateUsd": 20,
+    "targetPretaxSurplusUsd": 500,
+    "games": [
+      {
+        "id": "mini_1",
+        "priceUsd": 5,
+        "itchShareRate": 0.1,
+        "processorPercentRate": 0.029,
+        "processorFixedUsd": 0.3,
+        "retainedPaidOrders": 0,
+        "developmentHours": 20,
+        "qaHours": 5,
+        "marketingHours": 5,
+        "localizationHours": 4,
+        "postLaunchSupportHours": 6,
+        "assetCashUsd": 0,
+        "marketingCashUsd": 0,
+        "supportCashUsd": 0,
+        "reversalFeeCashUsd": 0
+      },
+      {
+        "id": "mini_2",
+        "priceUsd": 10,
+        "itchShareRate": 0.1,
+        "processorPercentRate": 0.029,
+        "processorFixedUsd": 0.3,
+        "retainedPaidOrders": 0,
+        "developmentHours": 35,
+        "qaHours": 8,
+        "marketingHours": 8,
+        "localizationHours": 0,
+        "postLaunchSupportHours": 10,
+        "assetCashUsd": 0,
+        "marketingCashUsd": 0,
+        "supportCashUsd": 0,
+        "reversalFeeCashUsd": 0
+      }
+    ]
+  },
+  "sample_is_hypothetical": true,
+  "example_development_hours_not_observed_market_benchmarks": true,
+  "example_price_and_processor_fees_illustrative": true,
+  "work_blocks": [
+    "engine_and_game_development",
+    "testing_and_QA",
+    "marketing_or_referrals",
+    "localization",
+    "postlaunch_bugfixes_and_support"
+  ],
+  "comparison_rules": [
+    "Separate hours and cash by title and across shared portfolio work.",
+    "Exclude refunded orders from retained paid orders; separately provide nonrefundable dispute adjustment fees.",
+    "A game at zero retained orders still incurs documented work and cash costs.",
+    "Per-title marginal required orders assumes only that title receives all incremental retained orders, not expected purchases.",
+    "Cross-store revenue and different payment processor bases must not be added without separate accounting.",
+    "Translation effort is an explicit scenario input, not an assumed words-per-hour productivity rate.",
+    "Unknown tax, FX and settlement deductions mean arithmetic pre-tax surplus is not actual take-home pay.",
+    "Portfolio title release cadence must record actual or proposed dated release windows rather than automatically assuming monthly launches."
+  ],
+  "hypothetical_schedule": [
+    {
+      "game_id": "mini_1",
+      "release_month_label": "month_1",
+      "actual_release_date": null,
+      "actual_game_published": false
+    },
+    {
+      "game_id": "mini_2",
+      "release_month_label": "month_2",
+      "actual_release_date": null,
+      "actual_game_published": false
+    }
+  ],
+  "missing": {
+    "paid_game_market_buyers": null,
+    "first_title_paying_conversion": null,
+    "actual_dev_hours": null,
+    "actual_postlaunch_hours": null,
+    "actual_translation_words": null,
+    "real_localization_productivity": null,
+    "real_portfolio_paid_orders": null,
+    "observed_monthly_net_profit": null,
+    "causal_additional_game_effect": null
+  },
+  "no_live_publishing_spend_or_transaction": true
+}
