@@ -23,7 +23,10 @@ test('Gamedev.js self-selected response brackets cannot become an itch.io seller
  const bounded=p.detail_tasks.find(t=>t.id==='itch-io/income/seek-zero-earner-fraction');
  assert.equal(bounded.percent,100);assert.equal(bounded.status,'complete');
  const existing=q.queues.flatMap(z=>z.tasks).find(z=>z.id==='income/median');
- assert(existing.progress<100); // The itch-specific median is not observed.
+ const identification=get('ontology/itch-io/paid-seller-mean-median-identification-2026.json');
+ assert.equal(identification.results.representative_median_first_365d_game_income_usd,null);
+ assert.equal(identification.results.representative_median_first_30d_game_income_usd,null);
+ assert.equal(existing.progress,100);assert.equal(existing.status,'complete'); // Search complete, statistic still unknown.
  assert.equal(p.total_tracked_tasks,244);
  assert.equal(p.progress_percent,Math.round((q.queues.flatMap(z=>z.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
 });
