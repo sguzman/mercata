@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "eligible_first_paid_game_order_right_censoring_and_survival_analysis_protocol",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-payments",
+    "itch-started",
+    "itch-buying-flow",
+    "itch-api-overview"
+  ],
+  "calculator_path": "site/itch-first-paid-sale-survival.mjs",
+  "population": "eligible first positive minimum-price game release projects, including projects with no paid order and projects later delisted",
+  "sampling_frame": "owner-authorized complete launch cohort with timestamped first retained positive-price game order or a final observable time, not success-only disclosures",
+  "unit": "one eligible released game project; publisher accounts and human developers require separate deduplication",
+  "time_origin": "first publicly qualifying positive-minimum-price release",
+  "time_unit": "whole_elapsed_days_at_UTC_date_boundaries",
+  "observation_windows_days": [
+    30,
+    90,
+    365
+  ],
+  "definitions": [
+    {
+      "id": "first_paid_sale_event",
+      "evidence": "first completed settled positive minimum-price game order with refunds accounted for",
+      "source_ids": [
+        "itch-buying-flow",
+        "itch-payments"
+      ],
+      "unit": "project_first_event"
+    },
+    {
+      "id": "right_censor_date",
+      "evidence": "end_of_authorized_followup_without_a_verified_paid_order_or_last_observable_release_date",
+      "source_ids": [
+        "itch-api-overview",
+        "itch-started"
+      ],
+      "unit": "project_last_observed_day"
+    },
+    {
+      "id": "same_day_event_and_censor",
+      "evidence": "event_is_in_risk_set_before_same_day_censor",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "unit": "analysis_rule_not_platform_policy"
+    },
+    {
+      "id": "cohort_zero_sale",
+      "evidence": "no_paid_orders_through_complete_same_horizon_not_an_unknown_early_dropout",
+      "source_ids": [
+        "itch-buying-flow"
+      ],
+      "unit": "time_limited_observation"
+    }
+  ],
+  "synthetic_example": [
+    {
+      "id": "fixture_a",
+      "observedDays": 30,
+      "firstRetainedPaidOrderDay": 5
+    },
+    {
+      "id": "fixture_b",
+      "observedDays": 30,
+      "firstRetainedPaidOrderDay": 10
+    },
+    {
+      "id": "fixture_c",
+      "observedDays": 10,
+      "firstRetainedPaidOrderDay": null
+    },
+    {
+      "id": "fixture_d",
+      "observedDays": 20,
+      "firstRetainedPaidOrderDay": null
+    }
+  ],
+  "synthetic_expectation": {
+    "risk_at_first_sale_day_5": 4,
+    "survival_after_first_sale_day_5": 0.75,
+    "risk_at_second_sale_day_10": 3,
+    "survival_after_second_sale_day_10": 0.5,
+    "censors_day_10": 1,
+    "censors_day_20": 1,
+    "sample_median_event_day": 10,
+    "day_10_fully_observed_zero_event_fraction": 0.5,
+    "day_30_unknown_due_to_early_censoring": 2,
+    "day_30_fully_observed_zero_event_fraction": null
+  },
+  "censoring_conditions": [
+    "Maintain release date, observation date and refund-aware first positive-price paid order event as different fields.",
+    "An event at day 10 and censoring at day 10 are processed with that event in the risk set.",
+    "Delisting after a documented paid order does not erase the observed first sale; delisting without a sale can end observation if further orders are unavailable.",
+    "A title with no paid order through its complete 30-day horizon has zero observed orders to day 30; it is not classified as zero lifetime earnings.",
+    "Partial 365-day data from a recent launch must not be labeled completed 365-day no-sale.",
+    "Kaplan-Meier assumes censoring is independent of event prospects; endogenous delisting can violate it and requires a bias warning.",
+    "Zero paid game orders and zero *net payout* are distinct when a processor holds or refunds money.",
+    "Project survival statistics cannot automatically be treated as seller-person survival without account/portfolio deduplication."
+  ],
+  "disclosure": {
+    "owner_authorization_required": true,
+    "no_account_credentials_or_buyer_ids": true,
+    "small_cohort_privacy_minimum_requires_review": true,
+    "raw_buyer_events_collected": false,
+    "real_project_count": 0
+  },
+  "unknown": {
+    "actual_itch_first_sale_median_day": null,
+    "platform_first_game_zero_sale_rate_30d": null,
+    "platform_first_game_zero_sale_rate_90d": null,
+    "platform_first_game_zero_sale_rate_365d": null,
+    "representative_paid_seller_income": null,
+    "causal_early_launch_effect": null
+  },
+  "limits": [
+    "Synthetic survival quantities test arithmetic only and are not observations of games, buyers or sellers.",
+    "Even a real convenience sample is not a representative platform launch cohort without a defensible sampling frame.",
+    "A censored title is unknown after its last observable date rather than a definitive permanently unsuccessful product.",
+    "Data coverage, follow-up length, delisting bias, refund reversals, currency and payout status must be documented.",
+    "No first-sale transactions, private account data, genuine seller cohorts or income records were acquired."
+  ]
+}

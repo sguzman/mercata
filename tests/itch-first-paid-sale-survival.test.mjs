@@ -1,0 +1,35 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {analyzeFirstPaidSaleCohort} from '../site/itch-first-paid-sale-survival.mjs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Synthetic first sale events preserve risk sets and never turn censored projects into zero lifetime sales',()=>{
+ const record=read('ontology/itch-io/first-paid-sale-censoring-2026.json'),s=read('specimens/itch-io.json'),p=read('plans/itch-io.json');
+ const ids=new Set(s.evidence.map(e=>e.id));assert(record.source_ids.every(id=>ids.has(id)));
+ const x=analyzeFirstPaidSaleCohort({projects:record.synthetic_example,horizonsDays:[5,10,30]});
+ assert.equal(x.eligibleProjectCount,4);assert.equal(x.observedFirstPaidOrderCount,2);
+ assert.deepEqual(x.riskTable.map(r=>[r.day,r.atRisk,r.firstPaidOrders,r.rightCensored]),[[5,4,1,0],[10,3,1,1],[20,1,0,1]]);
+ assert.equal(x.riskTable[0].survivalWithoutFirstOrder,0.75);
+ assert.equal(x.riskTable[1].survivalWithoutFirstOrder,0.5);
+ assert.equal(x.conditionalSampleMedianEventDay,10);
+ assert.equal(x.horizons[0].unadjustedZeroOrderFractionIfFullyObserved,0.75);
+ assert.equal(x.horizons[1].unadjustedZeroOrderFractionIfFullyObserved,0.5);
+ assert.equal(x.horizons[2].unknownStatusDueToCensoring,2);
+ assert.equal(x.horizons[2].unadjustedZeroOrderFractionIfFullyObserved,null);
+ assert.equal(x.actualMarketWideZeroSaleFraction,null);assert.equal(record.disclosure.real_project_count,0);
+ assert(Object.values(record.unknown).every(v=>v===null));
+ const done=p.detail_tasks.find(t=>t.id==='itch-io/income/measure-time-to-first-sale');
+ assert.equal(done.percent,100);assert.equal(done.status,'complete');
+ for(const f of ['ontology/itch-io/first-paid-sale-censoring-2026.json','ontology/itch-io/first-paid-sale-censoring-2026.md','site/itch-first-paid-sale-survival.mjs','tests/itch-first-paid-sale-survival.test.mjs'])assert(done.evidence.includes(f));
+ assert.equal(p.detail_tasks.find(t=>t.id==='itch-io/income/seek-zero-earner-fraction').percent,90);
+ assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
+});
+test('Invalid or incomplete time-to-sale cohorts are rejected, no median manufactured without paid events',()=>{
+ assert.throws(()=>analyzeFirstPaidSaleCohort({projects:[]}),TypeError);
+ assert.throws(()=>analyzeFirstPaidSaleCohort({projects:[{id:'x',observedDays:2,firstRetainedPaidOrderDay:3}]}),TypeError);
+ assert.throws(()=>analyzeFirstPaidSaleCohort({projects:[{id:'x',observedDays:4,firstRetainedPaidOrderDay:null},{id:'x',observedDays:2,firstRetainedPaidOrderDay:null}]}),TypeError);
+ const x=analyzeFirstPaidSaleCohort({projects:[{id:'x',observedDays:30,firstRetainedPaidOrderDay:null}]});
+ assert.equal(x.conditionalSampleMedianEventDay,null);
+ assert.equal(x.horizons[0].unadjustedZeroOrderFractionIfFullyObserved,1);
+ assert.equal(x.horizons[1].unadjustedZeroOrderFractionIfFullyObserved,null);
+});
