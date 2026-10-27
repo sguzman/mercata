@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "documented_merchant_payment_operational_security_and_debt_reversal_risks",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-totp-account",
+    "itch-payments",
+    "itch-faq",
+    "itch-terms",
+    "itch-access-control",
+    "itch-download-keys",
+    "itch-serverside-api-reference",
+    "itch-quality"
+  ],
+  "population": "Documented current itch.io publisher payment modes and protective account settings, not observed transaction sample",
+  "unit": "Merchant mode, policy-defined loss event, account control or continuity procedure",
+  "period": "Public first-party documentation reviewed October 26 2026; policy can change",
+  "sample_frame": "Official publisher FAQ, payment guide, 2FA guide, terms, download access and account policy",
+  "merchant_modes": [
+    {
+      "id": "direct_to_you",
+      "seller_is_merchant_of_record": true,
+      "operator_is_merchant_of_record": false,
+      "payment_provider_account_control": "seller_connected_stripe_or_paypal",
+      "disputes_and_chargebacks": "seller_responsible_under_processor_terms",
+      "operational_dependency": "seller_account_plus_individual_gateway_status",
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "collected_by_itch",
+      "seller_is_merchant_of_record": false,
+      "operator_is_merchant_of_record": true,
+      "payment_provider_account_control": "platform_collects_and_may_pay_out_seller_balance",
+      "disputes_and_chargebacks": "platform_handled_but_seller_balances_can_receive_chargeback_adjustments_on_high_dispute_activity",
+      "operational_dependency": "platform_payout_account_tax_interview_staff_approval_and_payout_provider",
+      "source_ids": [
+        "itch-payments"
+      ]
+    }
+  ],
+  "financial_events": [
+    {
+      "id": "gross_paid_order",
+      "cash_effect": "revenue_before_share_fees_tax_and_refunds",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "known_population_count": null
+    },
+    {
+      "id": "processor_fee",
+      "cash_effect": "variable_percent_plus_fixed_charge_per_actual_payment",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "known_population_count": null
+    },
+    {
+      "id": "refund_before_payout",
+      "cash_effect": "subtract_from_pending_payable_revenue",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "known_population_count": null
+    },
+    {
+      "id": "refund_after_payout",
+      "cash_effect": "next_collected_payout_account_adjustment_possible",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "known_population_count": null
+    },
+    {
+      "id": "buyer_chargeback_dispute",
+      "cash_effect": "collected_seller_may_be_charged_fee_when_high_dispute_activity_observed",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "known_population_count": null
+    },
+    {
+      "id": "seller_payout_fee",
+      "cash_effect": "provider_transfer_fee_depends_on_payment_route_and_frequencies",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "known_population_count": null
+    },
+    {
+      "id": "tax_identity_one_time_adjustment",
+      "cash_effect": "USD_3_collected_payout_account_adjustment",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "known_population_count": null
+    },
+    {
+      "id": "held_or_unclaimed_balance",
+      "cash_effect": "funds_inaccessible_until_validation_or_review_and_potential_old_earnings_maintenance_charge",
+      "source_ids": [
+        "itch-payments",
+        "itch-terms"
+      ],
+      "known_population_count": null
+    }
+  ],
+  "collected_mode_guards": {
+    "available_balance_min_usd": 5,
+    "transaction_hold_days": 7,
+    "staff_review_min_days_after_request": 7,
+    "staff_review_typical_days_range": [
+      10,
+      14
+    ],
+    "possible_extended_transaction_hold_days": 30,
+    "limit_simultaneous_payouts": 3,
+    "needs_validated_tax_identity": true,
+    "possible_chargeback_account_adjustment": true,
+    "net_cash_or_fraud_probability_observed": false,
+    "source_ids": [
+      "itch-payments"
+    ]
+  },
+  "security": {
+    "totp_available": true,
+    "totp_code_digits": 6,
+    "totp_code_rotation_seconds": 30,
+    "recovery_codes_documented": true,
+    "recovery_codes_digits": 8,
+    "sms_2fa_offered": false,
+    "storing_or_publishing_seed_or_recovery_codes_for_research": false,
+    "account_security_rehearsal_completed": false,
+    "actual_breach_or_takeover_rate": null,
+    "controls": [
+      {
+        "id": "enable_totp",
+        "expectation": "seller_uses_own_secret_authenticator_and_enables_security_setting_without_publishing_keys",
+        "tested": null,
+        "source_ids": [
+          "itch-totp-account"
+        ]
+      },
+      {
+        "id": "recover_securely",
+        "expectation": "backup_codes_kept_in_private_owner_access_controlled_storage",
+        "tested": null,
+        "source_ids": [
+          "itch-totp-account"
+        ]
+      },
+      {
+        "id": "correct_device_time",
+        "expectation": "time_based_codes_require_synchronized_clock",
+        "tested": null,
+        "source_ids": [
+          "itch-totp-account"
+        ]
+      },
+      {
+        "id": "seller_finance_access_review",
+        "expectation": "regularly_verify_seller_settings_payment_providers_and_game_page_editors",
+        "tested": null,
+        "source_ids": [
+          "itch-faq",
+          "itch-terms"
+        ]
+      },
+      {
+        "id": "avoid_personal_buyer_export",
+        "expectation": "buyer_identifiers_may_only_be_used_for_permitted_bookkeeping_and_transaction_contact",
+        "tested": null,
+        "source_ids": [
+          "itch-faq"
+        ]
+      }
+    ]
+  },
+  "privacy_rules": {
+    "publisher_may_publish_buyer_emails": false,
+    "publisher_may_publish_buyer_IP_addresses": false,
+    "publisher_may_export_private_customer_data_to_third_party_marketing_without_consent": false,
+    "transaction_specific_seller_customer_contact_documented": true,
+    "mailing_list_opt_in_required": true,
+    "prohibited_public_fields": [
+      "buyer_email",
+      "name",
+      "IP_address",
+      "country_code",
+      "transaction_id",
+      "download_key"
+    ],
+    "source_ids": [
+      "itch-faq",
+      "itch-serverside-api-reference"
+    ]
+  },
+  "resilience_scenarios": [
+    {
+      "id": "marketplace_deindexed",
+      "store_discovery": "gone_or_reduced",
+      "seller_game_page": "might_still_be_available_by_direct_link",
+      "cash_impact": "unknown_not_automatically_zero_revenue",
+      "mitigation": "archive_builds_and_independently_licensed_marketing_assets",
+      "source_ids": [
+        "itch-quality",
+        "itch-access-control"
+      ]
+    },
+    {
+      "id": "merchant_provider_disabled",
+      "store_discovery": "possibly_unaffected",
+      "seller_game_page": "can_remain_online_but_new_payments_may_fail",
+      "cash_impact": "pending_cash_or_new_orders_can_be_disrupted",
+      "mitigation": "preserve_rights_and_compare_approved_routes_without_creating_unapproved_accounts",
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "account_or_payout_review",
+      "store_discovery": "may_vary_by_review_type",
+      "seller_game_page": "may_remain_public",
+      "cash_impact": "available_cash_postponed_or_disallowed_under_policy",
+      "mitigation": "maintain_proper_tax_documents_and_project_licenses",
+      "source_ids": [
+        "itch-payments",
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "platform_service_unavailable",
+      "store_discovery": "unavailable",
+      "seller_game_page": "unavailable",
+      "cash_impact": "new_orders_unavailable_during_outage",
+      "mitigation": "separate_backup_of_owned_source_and_release_artifacts_and_owned_communication_channels_where_permitted",
+      "source_ids": [
+        "itch-terms",
+        "itch-access-control",
+        "itch-download-keys"
+      ]
+    }
+  ],
+  "downside_register": {
+    "example_upfront_cash_budget_usd": 0,
+    "example_limit_means_preference_not_user_authorized_spend": true,
+    "real_project_budget_approved": false,
+    "real_development_hour_cap_approved": false,
+    "current_observed_fraud_rate": null,
+    "seller_balance_at_risk_usd": null,
+    "first_party_payout_net_usd": null,
+    "processor_specific_dispute_fee_usd": null,
+    "marketwide_chargeback_loss_usd": null,
+    "causal_security_control_impact": null,
+    "experiment_live": false
+  },
+  "interpretation": [
+    "Platform's merchant-of-record function does not rule out contractual seller debit adjustments; mode and event must be recorded separately.",
+    "Never count available marketplace gross revenue as withdrawable cash, personal profit, or bank settlement.",
+    "Security account-control features are available; no breach probability or effectiveness estimate was obtained.",
+    "Published payment disputes and recovery methods are first-party policy evidence, not independently counted real-world incidents.",
+    "Customer purchase data must remain private, not shared with third-party services for research or marketing without valid separate permission.",
+    "A publisher can diversify owned game archives but cannot assume that itch.io purchase rights, reviews or customers transfer to another marketplace.",
+    "No real person or seller account was accessed, seller balances were not examined, and no financial spending was authorized."
+  ]
+}
