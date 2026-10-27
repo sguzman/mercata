@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "single_creator_historical_free_optional_payment_yearly_count_reconciliation",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "candybox-pwyw-2019"
+  ],
+  "source_publication_date": "2019-08-06",
+  "population": "one voluntarily reporting free or pay-what-you-want interactive game creator with 34 released works",
+  "unit": "creator-described year-label gross payments and payment event counts",
+  "years": [
+    {
+      "year_label": 2015,
+      "reported_payment_events": 10,
+      "reported_rounded_gross_usd": 34,
+      "complete_twelve_month_period_verified": false
+    },
+    {
+      "year_label": 2016,
+      "reported_payment_events": 139,
+      "reported_rounded_gross_usd": 139,
+      "complete_twelve_month_period_verified": false
+    },
+    {
+      "year_label": 2017,
+      "reported_payment_events": 356,
+      "reported_rounded_gross_usd": 2306,
+      "complete_twelve_month_period_verified": false
+    },
+    {
+      "year_label": 2018,
+      "reported_payment_events": 361,
+      "reported_rounded_gross_usd": 3016,
+      "complete_twelve_month_period_verified": false
+    },
+    {
+      "year_label": 2019,
+      "reported_payment_events": 301,
+      "reported_rounded_gross_usd": 1782,
+      "complete_twelve_month_period_verified": false
+    }
+  ],
+  "partial_time_coverage": {
+    "first_positive_payment_date": "2015-08-19",
+    "last_year_cutoff_no_later_than": "2019-08-06",
+    "first_and_last_years_not_full_twelve_months": true,
+    "middle_three_date_edges_undocumented": true
+  },
+  "reconciliation": {
+    "sum_year_labeled_payment_events": 1167,
+    "reported_lifetime_count_in_first_section": 1072,
+    "reported_lifetime_count_in_later_section": 1073,
+    "annual_sum_minus_first_report": 95,
+    "annual_sum_minus_later_report": 94,
+    "year_rounded_gross_total_usd": 7277,
+    "reported_lifetime_precise_gross_usd": 7276.7,
+    "rounded_sum_minus_precise_usd": 0.3,
+    "year_event_totals_reconciled": false,
+    "exact_reason_for_count_discrepancy": null
+  },
+  "comparability": {
+    "free_optional_payments_not_mandatory_paid_units": true,
+    "year_labels_not_known_equal_windows": true,
+    "creator_portfolio_changes_over_time": true,
+    "not_a_random_platform_sample": true,
+    "causal_publicity_or_seasonality_measured": false,
+    "creator_year_rows_are_independent_publisher_entities": false
+  },
+  "unknown": {
+    "verified_transaction_census": null,
+    "actual_2019_full_year_receipts": null,
+    "unique_buyers": null,
+    "after_fee_or_after_tax_annual_profit": null,
+    "representative_paid_2d_game_annual_sales_variance": null,
+    "marketwide_seasonal_purchase_lift": null
+  },
+  "limitations": [
+    "One self-selected creator offering games for free with optional payments is not a paid-game population sample.",
+    "The 2015 and 2019 period edges are partial, and 2016 through 2018 exact accounting windows are not independently defined.",
+    "Published year-labeled payment-event sum of 1,167 exceeds both 1,072 and 1,073 cumulative counts; there is no transaction ledger to reconcile the mismatch.",
+    "Yearly currency amounts are reported as whole USD, so their $7,277 sum and precise $7,276.70 lifetime gross can differ by ordinary rounding.",
+    "Neither optional tips nor gross cash establish buyer conversion, full cost profit, causal marketing effects or 2026 market-wide seller income."
+  ]
+}
