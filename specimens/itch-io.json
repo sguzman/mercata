@@ -1978,6 +1978,50 @@
       "evidence_class": "official_cached_catalog_counter",
       "license": "Linked public category count and independently authored description only.",
       "notes": "25,265 results; source indexed approximately a month before review."
+    },
+    {
+      "id": "itch-html5-paid-type-2026",
+      "url": "https://itch.io/games/html5/store",
+      "publisher": "itch.io public game browse",
+      "title": "Top paid HTML5 games",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official_cached_file_type_filter",
+      "license": "Only public counter, query and independently authored note recorded; no screenshots or game data republished.",
+      "notes": "Paid+HTML5 Type filter: 7,589 listings, source crawled within day of October 26 2026; separate from Web platform compatibility filter."
+    },
+    {
+      "id": "itch-downloadable-paid-type-2026",
+      "url": "https://itch.io/games/downloadable/store",
+      "publisher": "itch.io public game browse",
+      "title": "Top paid Downloadable games",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official_cached_file_type_filter",
+      "license": "Public filter-count metadata linked and summarized, with no original page body reproduced.",
+      "notes": "Paid+Downloadable Type filter: 34,058 results on indexed page crawled approximately two months before review; not a synchronized count."
+    },
+    {
+      "id": "itch-html5-all-type-2026",
+      "url": "https://itch.io/games/html5",
+      "publisher": "itch.io public game browse",
+      "title": "Top HTML5 games",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official_cached_file_type_filter",
+      "license": "Original source linked, independently noted count only.",
+      "notes": "HTML5 Type, all prices: 841,331 results, page crawled within a day of the review; not necessarily equivalent to browser platform filter."
+    },
+    {
+      "id": "itch-downloadable-all-type-2026",
+      "url": "https://itch.io/games/downloadable",
+      "publisher": "itch.io public game browse",
+      "title": "Top Downloadable games",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official_cached_file_type_filter",
+      "license": "Original source linked, only attributed count and original sampling notes retained.",
+      "notes": "Downloadable Type all prices: 907,896 results, page crawled about four days prior to review."
     }
   ],
   "claims": [
@@ -6633,6 +6677,28 @@
       "observed_at": "2026-10-26",
       "confidence": "medium",
       "limitations": "Dynamic counts are at different crawls; project tags, discounts and multi-platform labels are overlapping supply indicators, not transaction records."
+    },
+    {
+      "id": "itch-2026-paid-html5-versus-downloadable-file-filters",
+      "text": "Public itch.io Type-filter pages showed 7,589 paid HTML5 game listings and 34,058 paid Downloadable game listings in separately cached October 2026 research; the observations were not synchronized and a project may satisfy both.",
+      "source_ids": [
+        "itch-html5-paid-type-2026",
+        "itch-downloadable-paid-type-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "HTML5 count had near-current crawl, Downloadable about two months old. Type categories overlap and do not establish exclusive file types, actual positive-payment orders or seller income."
+    },
+    {
+      "id": "itch-2026-all-price-html5-downloadable-type-snapshots",
+      "text": "Separately crawled all-price Type-filter pages showed 841,331 HTML5 game results and 907,896 Downloadable results; overlap and crawl differences prevent summing them into unique catalog counts.",
+      "source_ids": [
+        "itch-html5-all-type-2026",
+        "itch-downloadable-all-type-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "These are filter-result counters, not enumerated stable game pages, unique publishers, buyers, transactions or same-moment supply comparisons."
     }
   ],
   "observations": [

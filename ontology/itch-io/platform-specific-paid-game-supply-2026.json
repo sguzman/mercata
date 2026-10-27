@@ -8,7 +8,11 @@
     "itch-paid-linux-browse-2026",
     "itch-paid-windows-browse-2026",
     "itch-browse-2d",
-    "itch-browse-paid-2d"
+    "itch-browse-paid-2d",
+    "itch-html5-paid-type-2026",
+    "itch-downloadable-paid-type-2026",
+    "itch-html5-all-type-2026",
+    "itch-downloadable-all-type-2026"
   ],
   "population": "public filtered game project listings under Paid and a selected platform or 2D tag",
   "unit": "filter result listing, not unique person or transaction",
@@ -63,7 +67,11 @@
     "platform_tag_equivalent_to_file_type": false,
     "same_timestamp_all_frames": false,
     "synchronized_market_share_calculable": false,
-    "two_dimensional_tag_is_not_exclusive_genre": true
+    "two_dimensional_tag_is_not_exclusive_genre": true,
+    "HTML5_type_counts_verified": true,
+    "downloadable_type_counts_verified": true,
+    "file_types_mutually_exclusive": false,
+    "paid_HTML5_and_Downloadable_counts_synchronized": false
   },
   "unknown": {
     "unique_paid_games_after_project_deduplication": null,
@@ -78,9 +86,47 @@
   },
   "limits": [
     "The public filters count candidate listings, not unique paid sellers or sold units.",
-    "HTML5 and downloadable can coexist on one project page; distinct file-type counts could not be retrieved.",
+    "HTML5 and Downloadable Type-filter counts are observed separately but overlap, so neither HTML5-only nor Downloadable-only counts are established.",
     "Source crawl recencies differ; percentages and summed platform totals would be invalid.",
     "Paid browse includes temporarily discounted listings and does not guarantee current positive buyer price.",
     "No merchant or private game transaction data were accessed."
+  ],
+  "file_type_observations": [
+    {
+      "id": "paid_html5_type",
+      "count": 7589,
+      "filter": "/games/html5/store",
+      "cached_age": "within_1_day",
+      "source_ids": [
+        "itch-html5-paid-type-2026"
+      ]
+    },
+    {
+      "id": "paid_downloadable_type",
+      "count": 34058,
+      "filter": "/games/downloadable/store",
+      "cached_age": "approximately_2_months",
+      "source_ids": [
+        "itch-downloadable-paid-type-2026"
+      ]
+    },
+    {
+      "id": "all_price_html5_type",
+      "count": 841331,
+      "filter": "/games/html5",
+      "cached_age": "within_1_day",
+      "source_ids": [
+        "itch-html5-all-type-2026"
+      ]
+    },
+    {
+      "id": "all_price_downloadable_type",
+      "count": 907896,
+      "filter": "/games/downloadable",
+      "cached_age": "approximately_4_days",
+      "source_ids": [
+        "itch-downloadable-all-type-2026"
+      ]
+    }
   ]
 }
