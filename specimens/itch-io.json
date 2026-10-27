@@ -2418,6 +2418,50 @@
       "evidence_class": "creator_first_person_four_tabletop_annual_release_paid_copy_and_gbp_gross_record",
       "license": "Only independently authored short numerical summaries, dates and source link; no full article, chart, visual assets, files, or identifiable payment records reproduced.",
       "notes": "January 6, 2025 13:43 UTC dated by author's devlog index. Covers same creator's four 2021–2024 PDF/epub tabletop adventure serials with first-day, live-period and older lifetime copies in GBP. Nested Creator Day sales in 2024's 30 additional soft-launch copies. Also describes a 50%-off coupon linked to over 700 crowdfunding backers and three reported code uses; not a validated repeat-buyer rate."
+    },
+    {
+      "id": "itch-operator-2013-game-purchases-monthly-csv",
+      "url": "https://itch.io/updates/csv-export-for-purchases",
+      "title": "CSV export for purchases",
+      "publisher": "leafo, itch.io first-party operator update",
+      "published_at": "2013-12-13",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_historic_game_purchase_monthly_csv_export_documentation",
+      "license": "Independently written brief factual description and source link; no CSV contents, screenshots, user data, or long excerpts.",
+      "notes": "December 13, 2013 first-party announcement of purchases CSV export in monthly batches on game summary analytics. Historical capability, not proof of the same CSV schema or permissions in 2026."
+    },
+    {
+      "id": "itch-operator-2015-accountwide-purchases-csv",
+      "url": "https://itch.io/updates/new-aggregated-purchases-page-for-sellers",
+      "title": "New aggregated purchases page for sellers",
+      "publisher": "leafo, itch.io first-party operator update",
+      "published_at": "2015-02-01",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_seller_accountwide_purchase_csv_export_and_daily_graph",
+      "license": "Only original concise numerical-free factual paraphrases and attributed source link; no buyer rows or site images.",
+      "notes": "2015 first-party description of account-wide purchase CSV spanning owned games, sales and bundles, with daily purchases graph. Scope is seller account, not complete eligible publisher population."
+    },
+    {
+      "id": "itch-operator-2020-undocumented-daily-analytics",
+      "url": "https://itch.io/t/653777/number-of-downloads-in-a-time-range",
+      "title": "Number of downloads in a time range? Operator reply on analytics JSON",
+      "publisher": "leafo, itch.io forum administrator reply to 2020 creator question",
+      "published_at": null,
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "operator_historic_undocumented_daily_owner_graph_json_not_public_api",
+      "license": "Attribution and original short summary only; no complete reply, source data, account IDs, raw HTTP request or buyer records copied.",
+      "notes": "Thread created 2020-01-14. Admin describes daily chart JSON accessible from the creator's analytics views, explicitly undocumented/unreliable as permanent URL or format; admin response edited with no independently verified precise last revision date."
+    },
+    {
+      "id": "itch-2026-delegated-admin-export-repair",
+      "url": "https://github.com/itchio/itch.io/issues/1868",
+      "title": "Cannot export payments as an Admin (issue #1868)",
+      "publisher": "itchio/itch.io public issue, reporter and itch.io administrator leafo",
+      "published_at": "2026-02-12",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "dated_2026_owner_versus_delegated_admin_export_issue_with_operator_reported_fix",
+      "license": "Independently authored issue metadata interpretation and links; no copied screenshots, identifying CSV data or full user comment reproduction.",
+      "notes": "Report created Feb 12, 2026: project admin could view payments but not CSV while owner could. Later operator reply says should now be possible. Issue closed as completed July 16, 2026; do not portray bug as unresolved or universally verify administrator access."
     }
   ],
   "claims": [
@@ -7631,6 +7675,60 @@
       "confidence": "moderate",
       "observed_at": "2026-10-27",
       "limitations": "Neither the reserve-adjusted amount nor a minimum-wage comparison gives bank-settled, refund-adjusted, labor-costed seller profit."
+    },
+    {
+      "id": "itch-owner-monthly-purchase-exports-firstparty",
+      "text": "An official December 2013 itch.io operator announcement described monthly purchase CSV exports from an owner's game analytics, which could support transaction-period research with consent but is not itself purchase data.",
+      "source_ids": [
+        "itch-operator-2013-game-purchases-monthly-csv"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Dated feature announcement, not a current owner export or independently verified refund/currency/price CSV schema."
+    },
+    {
+      "id": "itch-owner-account-purchase-export-firstparty",
+      "text": "A February 2015 first-party update documented an account-wide purchase listing, daily chart and CSV export across a seller's game pages, sales and bundles, potentially enabling observed purchase timing once transaction types are separated.",
+      "source_ids": [
+        "itch-operator-2015-accountwide-purchases-csv"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Account-visible payment history is not a complete population of first-time positive-price publishers and includes mixed product types and non-sales claims."
+    },
+    {
+      "id": "itch-daily-analytics-json-historical-undocumented",
+      "text": "An itch.io administrator described obtaining daily statistical series through owner analytics JSON in a 2020 forum exchange but explicitly said the URL and format are undocumented and not assured to persist.",
+      "source_ids": [
+        "itch-operator-2020-undocumented-daily-analytics"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Exact admin reply revision date not independently verified; undocumented data view is not a permanent programmatic contract or a public buyer-data API."
+    },
+    {
+      "id": "itch-admin-purchase-csv-export-fix-2026",
+      "text": "An itch.io issue filed February 12, 2026 reported delegated product admins could inspect payments but not export monthly CSVs; a platform administrator subsequently said export should work, and the issue was marked completed July 16, 2026.",
+      "source_ids": [
+        "itch-2026-delegated-admin-export-repair"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Fix is reported by operator and acknowledged in issue but not independently verified against every current account role. The original issue alone is not evidence of a present unresolved prohibition."
+    },
+    {
+      "id": "itch-owner-csv-window-research-not-representative",
+      "text": "Owner-authorized purchase exports could support an independently audited game's 7/30/90/365-day sale windows only after locally separating mandatory paid-game orders, bundles, tips and physical rewards, aligning sale dates and later refunds and documenting zero-sale eligibility; no representative publisher income follows from selected exports.",
+      "source_ids": [
+        "itch-operator-2013-game-purchases-monthly-csv",
+        "itch-operator-2015-accountwide-purchases-csv",
+        "itch-operator-2020-undocumented-daily-analytics",
+        "itch-2026-delegated-admin-export-repair",
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "This is a protocol from historical operator capabilities, not a received or sampled 2026 merchant ledger. Refund-adjusted seller net cash and population inclusion remain unverified."
     }
   ],
   "observations": [

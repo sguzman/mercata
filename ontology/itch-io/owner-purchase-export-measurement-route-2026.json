@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "owner_permissioned_transaction_export_and_cumulative_fixed_horizon_research_path",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-operator-2013-game-purchases-monthly-csv",
+    "itch-operator-2015-accountwide-purchases-csv",
+    "itch-operator-2020-undocumented-daily-analytics",
+    "itch-2026-delegated-admin-export-repair",
+    "itch-payments"
+  ],
+  "historical_operator_evidence": [
+    {
+      "date": "2013-12-13",
+      "source_id": "itch-operator-2013-game-purchases-monthly-csv",
+      "type": "owner_game_monthly_purchase_csv",
+      "currently_exported_and_examined": false
+    },
+    {
+      "date": "2015-02-01",
+      "source_id": "itch-operator-2015-accountwide-purchases-csv",
+      "type": "owner_accountwide_purchase_csv_and_daily_purchases_graph",
+      "includes_bundles": true,
+      "current_schema_verified": false
+    },
+    {
+      "thread_started": "2020-01-14",
+      "source_id": "itch-operator-2020-undocumented-daily-analytics",
+      "type": "creator_daily_analytics_json",
+      "undocumented_endpoint": true,
+      "stable_2026_contract_verified": false
+    }
+  ],
+  "admin_export_report": {
+    "source_id": "itch-2026-delegated-admin-export-repair",
+    "issue_created": "2026-02-12",
+    "reported_problem": "owner_can_export_delegated_admin_cannot",
+    "operator_reported_now_possible": true,
+    "fix_reported_by_operator": true,
+    "issue_closed": "2026-07-16",
+    "universally_verified_for_all_roles": false
+  },
+  "proposed_local_cohort": {
+    "periods_cumulative_days": [
+      7,
+      30,
+      90,
+      365
+    ],
+    "unit": "completed_mandatory_positive_price_game_order_events_by_original_sale_date_refund_adjusted_as_of_one_snapshot",
+    "amount_unit": "one_explicit_currency_in_integer_minor_units",
+    "requires_approved_owner_aggregate": true,
+    "exclude_bundles_donations_free_keys_and_physical": true,
+    "verify_first_paid_release_date": true,
+    "verify_refunds_and_fee_basis": true,
+    "zero_sellers_require_explicit_eligible_release_frame": true,
+    "output_is_unrepresentative_one_offer_sample": true,
+    "raw_buyer_records_permitted_for_repo": false
+  },
+  "live_merchant_exports_observed": 0,
+  "privacy": {
+    "buyer_records_processed": 0,
+    "authenticated_logins_executed": 0,
+    "API_requests_executed": 0,
+    "owner_authorizations_obtained": 0,
+    "private_csv_files_stored": 0
+  },
+  "marketwide_unknown": {
+    "mean_seller_net_proceeds": null,
+    "median_seller_net_proceeds": null,
+    "zero_order_fraction": null,
+    "first_game_365_day_profit": null,
+    "real_7_day_retained_game_orders": null,
+    "real_365_day_retained_game_orders": null,
+    "unique_paid_game_buyers": null
+  },
+  "limits": [
+    "2013 and 2015 announcements show past exporter availability, not verified present CSV column identity or field meanings.",
+    "The 2020 daily JSON path is explicitly undocumented, is not a current supported API, and has not been accessed.",
+    "The February 2026 delegated-admin export bug was closed in July with an operator-reported fix; do not treat a February screenshot as proof the issue persists.",
+    "Game and account exports can contain private buyer identifiers and mixed products, and should be transformed privately by their authorized owner before any permissible aggregate publication.",
+    "The windows overlap: 7-day paid orders are inside 30-day paid orders. Do not add horizon totals.",
+    "Missing 90-day or 365-day observations are unknown, not measured zero. Only verified completed windows may contain literal zero.",
+    "Full refunds are linked to purchase cohort at one consistent as-of date; changes in chargeback state after freeze require a new snapshot.",
+    "A self-selected sample of authorized sellers cannot identify all eligible publisher entities, missing zero sellers, mean, median or marketwide demand."
+  ]
+}
