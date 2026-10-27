@@ -2,7 +2,7 @@
 
 Reviewed October 27, 2026. [Structured source metadata](source-reuse-record-completeness-2026.json).
 
-All **204** source records include an attributed public URL, retrieval date, evidence class and independently authored reuse/rights note. The claims register contains **482** bounded statements.
+All **204** source records include an attributed public URL, retrieval date, evidence class and independently authored reuse/rights note. The claims register contains **483** bounded statements.
 
 | Publication date precision | Sources |
 |---|---:|

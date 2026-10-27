@@ -14,3 +14,16 @@ test('First-game failure case never assigns total agency costs to itch sales or 
  assert.equal(x.refund_units,null);
  assert.equal(x.cross_store_total_units_reported,141);
 });
+
+test('Published store amounts remain source-accurate even when the combined figure differs by six dollars',()=>{
+ const x=get('ontology/itch-io/crumbling-world-launch-2020.json');
+ const units=x.venues.reduce((s,v)=>s+v.paid_units,0);
+ const sum=Number(x.venues.reduce((s,v)=>s+v.amount_reported_usd,0).toFixed(2));
+ assert.equal(units,141);assert.equal(x.venue_units_arithmetic_sum,units);
+ assert.equal(x.venue_units_reconcile_with_reported_total,true);
+ assert.equal(sum,1374.82);assert.equal(x.venue_amounts_arithmetic_sum_usd,sum);
+ assert.equal(x.cross_store_total_amount_reported_usd,1380.82);
+ assert.equal(x.reported_total_less_sum_of_venue_amounts_usd,6);
+ assert.equal(x.venue_amounts_reconcile_with_reported_total,false);
+ assert.equal(x.unresolved_reason_for_six_dollar_gap,null);
+});

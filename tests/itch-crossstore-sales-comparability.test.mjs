@@ -58,3 +58,32 @@ test('Cross-store readiness requires whole order counts, whole release age and i
   assert.equal(result.causalStoreEffect,null);
  }
 });
+
+test('Two previously registered source-derived game comparisons preserve mismatches and noncausal release timing',()=>{
+ const d=read('ontology/itch-io/crossstore-sales-comparability-2026.json'),s=read('specimens/itch-io.json'),p=read('plans/itch-io.json');
+ const cases=d.recorded_cases;
+ assert.equal(cases.length,6);
+ for(const c of cases)assert(c.source_ids.every(id=>s.evidence.some(e=>e.id===id)));
+ const m=cases.find(c=>c.id==='mixolumia'),c=cases.find(c=>c.id==='crumbling_world');
+ assert.equal(m.days_from_itch_launch_until_steam_launch,114);
+ assert.equal(m.self_reported.itch_io.paid_units+m.self_reported.steam.paid_units,2489);
+ assert.equal(m.self_reported.itch_io.gross_usd+m.self_reported.steam.gross_usd,24108);
+ assert.equal(m.self_reported.itch_io.bank_cash_received_usd+m.self_reported.steam.bank_cash_received_usd,18660);
+ assert.equal(m.arithmetic.combined_figures_reconcile,true);
+ assert.equal(m.matched_release_age,false);
+ assert.equal(m.observed_incremental_sales_caused_by_steam,null);
+ assert.equal(m.total_game_profit_usd,null);
+ assert.equal(c.summed_disclosed_venue_paid_units,141);
+ assert.equal(c.source_reported_combined_paid_units,141);
+ assert.equal(c.summed_disclosed_venue_amounts_usd,1374.82);
+ assert.equal(c.source_reported_total_receipts_usd,1380.82);
+ assert.equal(c.source_total_minus_disclosed_store_amounts_usd,6);
+ assert.equal(c.monetary_total_reconciles,false);
+ assert.equal(c.gap_explanation_verified,null);
+ assert.equal(c.refund_adjusted_itch_proceeds_usd,null);
+ assert.equal(c.marketing_spend_allocated_by_store_usd,null);
+ const t=p.detail_tasks.find(t=>t.id==='itch-io/competition/create-cross-platform-benchmarks');
+ assert(t.percent>=97&&t.percent<=100);
+ assert.equal(t.status,t.percent===100?'complete':'in_progress');
+ assert.equal(p.total_tracked_tasks,244);
+});

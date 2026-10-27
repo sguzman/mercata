@@ -8,7 +8,9 @@
     "rose-seed-replica-launch-cost-postmortem",
     "aracore-game-first-five-days-postmortem",
     "alienmelon-multistore-mar2026",
-    "itch-payments"
+    "itch-payments",
+    "mixolumia-postmortem",
+    "crumbling-world-first-commercial-game-2020"
   ],
   "validator_path": "site/itch-crossstore-comparability.mjs",
   "population": "independent games distributed on itch.io alone or through multiple storefronts; no representative comparable price-and-sales cohort",
@@ -60,6 +62,97 @@
       "creator_reported_itch_funded_release": true,
       "third_party_store_sales": null,
       "incremental_orders_causally_established": false
+    },
+    {
+      "id": "mixolumia",
+      "source_ids": [
+        "mixolumia-postmortem"
+      ],
+      "game": "Mixolumia",
+      "publisher_post_date": "2021-06-22",
+      "same_game_across_stores": true,
+      "store_launch_dates": {
+        "itch_io": "2020-08-08",
+        "steam": "2020-11-30"
+      },
+      "days_from_itch_launch_until_steam_launch": 114,
+      "self_reported": {
+        "itch_io": {
+          "paid_units": 1776,
+          "gross_usd": 17906,
+          "bank_cash_received_usd": 14980
+        },
+        "steam": {
+          "paid_units": 713,
+          "gross_usd": 6202,
+          "bank_cash_received_usd": 3680
+        }
+      },
+      "arithmetic": {
+        "units_sum": 2489,
+        "gross_usd_sum": 24108,
+        "bank_cash_received_usd_sum": 18660,
+        "reported_combined_units": 2489,
+        "reported_combined_gross_usd": 24108,
+        "reported_combined_bank_cash_usd": 18660,
+        "combined_figures_reconcile": true
+      },
+      "source_cash_timing": "author_notes_bank_cash_lags_sales_processing",
+      "matched_release_age": false,
+      "one_product_edition_at_each_venue_verified": false,
+      "matching_full_price_and_regional_tax_basis": false,
+      "observed_incremental_sales_caused_by_steam": null,
+      "settled_at_same_sales_cutoff": false,
+      "developer_labor_and_qa_cost_usd": null,
+      "total_game_profit_usd": null,
+      "explanatory_limit": "Itch launched 114 days before Steam, earned coverage and updated game builds; gross, cash receipt and cohort comparisons cannot establish storefront causal effects."
+    },
+    {
+      "id": "crumbling_world",
+      "source_ids": [
+        "crumbling-world-first-commercial-game-2020"
+      ],
+      "game": "Crumbling World",
+      "launch_steam": "2020-05-21",
+      "other_store_launch": "soon_after_steam_without_exact_day",
+      "observation_window": "roughly_first_month_after_steam_launch",
+      "source_reported_store_rows": [
+        {
+          "store": "itch.io",
+          "paid_units": 7,
+          "amount_labelled_yielding_usd": 102.83
+        },
+        {
+          "store": "Steam",
+          "paid_units": 132,
+          "amount_labelled_yielding_usd": 1242
+        },
+        {
+          "store": "Apple Store",
+          "paid_units": 2,
+          "amount_labelled_yielding_usd": 29.99
+        },
+        {
+          "store": "Game Jolt",
+          "paid_units": 0,
+          "amount_labelled_yielding_usd": 0
+        }
+      ],
+      "source_reported_combined_paid_units": 141,
+      "summed_disclosed_venue_paid_units": 141,
+      "paid_unit_total_reconciles": true,
+      "source_reported_total_receipts_usd": 1380.82,
+      "summed_disclosed_venue_amounts_usd": 1374.82,
+      "source_total_minus_disclosed_store_amounts_usd": 6,
+      "monetary_total_reconciles": false,
+      "gap_explanation_verified": null,
+      "same_exact_release_age_per_store": false,
+      "unified_store_accounting_basis_verified": false,
+      "marketing_agency_cost_all_venues_approx_usd": 10000,
+      "marketing_spend_allocated_by_store_usd": null,
+      "refund_adjusted_itch_proceeds_usd": null,
+      "merchant_profit_usd": null,
+      "explanatory_limit": "Seven itch copies and 132 Steam copies are source-reported, but store release dates, customer exposure and transaction labels differ. Reported overall US dollar total is $6 higher than listed parts."
     }
   ],
   "comparison_contract": {
@@ -87,7 +180,9 @@
       "Earlier/later storefront launches differ in calendar promotions, age and existing earned attention.",
       "Refund-adjusted income requires merchant owner-authorized transaction and transfer records per store.",
       "Do not treat cross-store exposure as a fixed audience or assume another storefront adds only new buyers.",
-      "Unreported outside platform share, technical porting, localization and support hours remain unknown and cannot be set to zero."
+      "Unreported outside platform share, technical porting, localization and support hours remain unknown and cannot be set to zero.",
+      "Check the arithmetic sum of listed storefront monetary amounts independently against a publisher's declared grand total; preserve discrepancies as unresolved until a ledger explains them.",
+      "Reported deposits or bank cash may lag same-post gross unit totals and must not be compared as if settled over the identical earning window."
     ],
     "validator_guards": {
       "strict_same_utc_second_precision_and_real_calendar_date": true,
