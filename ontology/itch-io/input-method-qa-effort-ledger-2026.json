@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "input_device_specific_game_QA_and_support_effort_collection_method",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-html5",
+    "itch-quality",
+    "game-accessibility-guidelines-basic",
+    "microsoft-game-accessibility-guidance-2026",
+    "itch-indexed"
+  ],
+  "population": "Future owner-authorized game build/input test or issue-support session, not active 2026 sellers",
+  "unit": "One work session with one primary device and input method; multiple tested inputs require distinct timed sessions, not duplicated time",
+  "tested_game_available": false,
+  "actual_device_tests_run": 0,
+  "actual_qa_worklog_sessions_observed": 0,
+  "devices": [
+    "desktop",
+    "laptop",
+    "phone",
+    "tablet",
+    "handheld"
+  ],
+  "inputs": [
+    "keyboard_mouse",
+    "gamepad",
+    "touchscreen"
+  ],
+  "activities": [
+    "initial_qa",
+    "compatibility_qa",
+    "accessibility_qa",
+    "support_reproduction",
+    "patch_retest"
+  ],
+  "required_fields": [
+    "session_id",
+    "build_version",
+    "issue_code",
+    "device",
+    "input",
+    "kind",
+    "outcome",
+    "minutes",
+    "recorded_at_utc"
+  ],
+  "coverage_rules": [
+    "Only claim support for input methods explicitly tested on advertised target devices.",
+    "Use a unique session_id to avoid charging one time block twice to touch and controller paths.",
+    "Track blocked/unavailable hardware as a failed measurement prerequisite, not a test pass.",
+    "Include navigation, focus/reconnect, game settings persistence, text legibility and save/quit/restart checks when applicable.",
+    "Keep actual recorded minutes separate from illustrative fixtures and future voluntary rates.",
+    "Report session hours separately from external hardware, transport and data-plan cash costs.",
+    "Do not infer buyer identity from QA devices or exposed gameplay sessions."
+  ],
+  "release_device_matrix": [
+    {
+      "device": "desktop",
+      "input": "keyboard_mouse",
+      "tests": [
+        "menus_and_text",
+        "focus_resume",
+        "shortcut_access",
+        "save_reload"
+      ],
+      "actual_pass": null
+    },
+    {
+      "device": "desktop",
+      "input": "gamepad",
+      "tests": [
+        "dpad_or_stick_navigation",
+        "hotplug_reconnect",
+        "remapping",
+        "controller_only_pause_and_exit"
+      ],
+      "actual_pass": null
+    },
+    {
+      "device": "phone",
+      "input": "touchscreen",
+      "tests": [
+        "touch_targets",
+        "rotate_resize",
+        "virtual_keyboard_focus",
+        "full_screen_touch",
+        "saved_state"
+      ],
+      "actual_pass": null
+    },
+    {
+      "device": "tablet",
+      "input": "touchscreen",
+      "tests": [
+        "touch_targets",
+        "screen_resize",
+        "orientation",
+        "saved_state"
+      ],
+      "actual_pass": null
+    },
+    {
+      "device": "handheld",
+      "input": "gamepad",
+      "tests": [
+        "gamepad_mapping",
+        "UI_scaling",
+        "sleep_resume",
+        "quit"
+      ],
+      "actual_pass": null
+    }
+  ],
+  "existing_source_overlap": [
+    "ontology/itch-io/cross-platform-release-qa-2026.json",
+    "ontology/itch-io/accessibility-release-qa-matrix-2026.json",
+    "ontology/itch-io/game-patch-support-workload-2026.json"
+  ],
+  "state": {
+    "tooling": "site/itch-input-device-worklog.mjs",
+    "synthetic_fixture_available": true,
+    "real_game_or_hw_available": false,
+    "representative_median_device_hours": null,
+    "real_device_support_cost_usd": null,
+    "incremental_gamepad_labor_cost_usd": null,
+    "incremental_touch_labor_cost_usd": null
+  },
+  "acceptance_boundary": "Method and testable worklog ready; existing task stays open until real device-specific QA or support costs are logged for an eligible game release."
+}
