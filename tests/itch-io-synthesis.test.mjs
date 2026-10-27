@@ -10,6 +10,11 @@ test('Interim income synthesis retains open zero-earner and buyer data gaps',()=
  assert(s.source_records<=d.evidence.length,'Historical snapshot cannot exceed latest source count');
  assert(s.claims<=d.claims.length,'Historical snapshot cannot exceed latest claim count');
  assert.equal(s.fixed_research_tasks,244);
+ assert.equal(s.latest_evidence_summary.source_records,d.evidence.length);
+ assert.equal(s.latest_evidence_summary.claims,d.claims.length);
+ assert.equal(s.latest_evidence_summary.tasks_original_fixed_count,244);
+ assert.equal(s.latest_evidence_summary.representative_seller_median_established,false);
+ assert.equal(s.latest_evidence_summary.actual_paid_buyer_population_established,false);
  assert(s.unresolved.every(x=>x.measured_value===null));
  assert.equal(s.representative_income_dataset_available,false);
  assert.equal(s.executed_commercial_experiments,0);
