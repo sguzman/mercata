@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "project_administrator_permission_and_ownership_transfer_policy_audit",
+  "reviewed_at": "2026-10-27",
+  "population": "Public itch.io project-account administration and ownership-change processes, not observed teams or actual publisher accounts",
+  "unit": "Feature or source-stated policy condition; no individual seller, legal person, transaction, or paid order observed",
+  "period": "2014 administrator launch, 2026 moderated ownership-transfer support statement, checked October 27 2026",
+  "sample_frame": "Official game-admin feature announcement, moderated itch.io support case, creator bundle documentation and platform terms",
+  "source_ids": [
+    "itch-game-admins-2014",
+    "itch-project-ownership-support-2026",
+    "itch-terms",
+    "itch-coop-bundles"
+  ],
+  "role_matrix": [
+    {
+      "role": "project_owner_account",
+      "can_publish_under_current_account": "documented",
+      "can_assign_game_admin": "documented",
+      "can_self_service_transfer_owner": false,
+      "automatically_shared_revenue": false,
+      "legal_ip_coownership_inferred": false,
+      "source_ids": [
+        "itch-game-admins-2014",
+        "itch-project-ownership-support-2026",
+        "itch-terms"
+      ]
+    },
+    {
+      "role": "invited_game_admin",
+      "invitation_requires_acceptance": true,
+      "can_edit_project_metadata_and_appearance": true,
+      "can_view_unpublished_project_and_analytics": true,
+      "legal_ip_coownership_inferred": false,
+      "automatically_shared_revenue": false,
+      "granular_permission_controls_verified": null,
+      "source_ids": [
+        "itch-game-admins-2014"
+      ]
+    },
+    {
+      "role": "cooperative_bundle_participant",
+      "requires_separate_participation_agreement": true,
+      "game_page_admin_rights_automatically_granted": false,
+      "personal_revenue_split_inferred": false,
+      "source_ids": [
+        "itch-coop-bundles"
+      ]
+    }
+  ],
+  "ownership_change": {
+    "ordinary_user_self_service_method_verified": false,
+    "platform_support_intervention_reported": true,
+    "guaranteed_approval": null,
+    "service_level_days": null,
+    "automated_url_migration": null,
+    "preserved_licenses_and_buyer_entitlements_verified": null,
+    "legal_copyright_assignment_inferred": false,
+    "source_ids": [
+      "itch-project-ownership-support-2026"
+    ]
+  },
+  "practical_release_controls": [
+    "Choose and document owner account and the rights holder before publishing.",
+    "Approve only necessary collaborators and retain a record of delegated access.",
+    "Keep payment recipient, cost sharing and IP ownership agreements separate from edit access.",
+    "Contact official support for account-owner migration; do not promise timing or success.",
+    "Do not delete and recreate a paid game page as a substitute for ownership transfer or expect previous entitlements to move automatically."
+  ],
+  "unobserved": {
+    "actual_team_accounts": null,
+    "team_revenue_splits": null,
+    "game_admin_permission_UI_2026": null,
+    "ownership_transfer_success_probability": null,
+    "ownership_transfer_wait_days": null
+  },
+  "limits": [
+    "The 2014 administration announcement is historical; the full 2026 authorization matrix was not inspected in a live account.",
+    "Moderator advice from a 2026 individual case is narrower than a comprehensive transfer policy.",
+    "No account login, project mutation, purchase, payment, personal data or legal ownership transfer occurred."
+  ]
+}

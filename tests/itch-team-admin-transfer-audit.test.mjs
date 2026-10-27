@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Team admins are not automatically owners or recipients of sale proceeds',()=>{
+ const a=read('ontology/itch-io/team-administration-and-transfer-2026.json'),s=read('specimens/itch-io.json'),p=read('plans/itch-io.json');
+ const sources=new Set(s.evidence.map(x=>x.id));
+ assert(a.source_ids.every(id=>sources.has(id)));
+ assert.equal(a.ownership_change.platform_support_intervention_reported,true);
+ assert.equal(a.ownership_change.guaranteed_approval,null);
+ assert.equal(a.ownership_change.service_level_days,null);
+ const admin=a.role_matrix.find(x=>x.role==='invited_game_admin');
+ assert.equal(admin.invitation_requires_acceptance,true);
+ assert.equal(admin.automatically_shared_revenue,false);
+ assert.equal(admin.legal_ip_coownership_inferred,false);
+ assert.equal(admin.granular_permission_controls_verified,null);
+ assert(Object.values(a.unobserved).every(x=>x===null));
+ const t=p.detail_tasks.find(x=>x.id==='itch-io/access/distinguish-team-administration');
+ assert.equal(t.percent,100);assert.equal(t.status,'complete');
+ for(const f of ['ontology/itch-io/team-administration-and-transfer-2026.json','ontology/itch-io/team-administration-and-transfer-2026.md','tests/itch-team-admin-transfer-audit.test.mjs'])assert(t.evidence.includes(f));
+ assert(s.claims.some(x=>x.id==='itch-game-transfer-requires-platform-support-2026'));
+});

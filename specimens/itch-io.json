@@ -2077,6 +2077,39 @@
       "evidence_class": "trade_press_historical_payout_reporting",
       "license": "Linked reporting attribution and brief independent research summary; no full article reproduction.",
       "notes": "Follow-up reporting on September 2025 payout complaints and third-party source ancestry; not an independent statistical sample from Rascal."
+    },
+    {
+      "id": "itch-game-admins-2014",
+      "url": "https://itch.io/updates/let-collaborators-edit-your-game-pages-with-the-new-game-admins-feature",
+      "title": "Let collaborators edit your game pages with the new game admins feature",
+      "publisher": "itch.io official product update",
+      "published_at": "2014-02-18",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_historical_feature_announcement",
+      "license": "Public official page linked; independently authored summary only, no original text or images republished.",
+      "notes": "Documents adding separately approved project administrators and their broad editing and analytics powers at announcement; not proof of legal joint ownership or a current granular-permissions capability."
+    },
+    {
+      "id": "itch-project-ownership-support-2026",
+      "url": "https://itch.io/t/5906538/cannot-switch-games-ownership",
+      "title": "Cannot Switch Game's Ownership — moderated support discussion",
+      "publisher": "itch.io community support moderator and users",
+      "published_at": "2026-02-09",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_moderator_statement_on_support_only_ownership_transfer",
+      "license": "Public moderator statement linked and factually paraphrased; no personal support identifiers, comments, or account data republished.",
+      "notes": "A 2026 support moderator states only support can change game ownership and that the operation is delicate. This does not prove a guaranteed service, response time, formal eligibility, legal IP assignment or automated self-service transfer."
+    },
+    {
+      "id": "itch-killbook-external-server-2026",
+      "url": "https://waseemk1204.itch.io/killbook",
+      "title": "KillBook — creator-described browser client and externally hosted multiplayer server",
+      "publisher": "Independent itch.io game publisher, first-party project page",
+      "published_at": "2026-10-11",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "single_publisher_architecture_self_description_not_independent_cost_audit",
+      "license": "Public project page linked; operational architecture independently summarized, no assets, copy or player data republished.",
+      "notes": "Publisher describes an HTML5 browser game using external commercial server infrastructure; specific vendor rates, costs, uptime, moderation, purchase counts and technical behavior were not verified."
     }
   ],
   "claims": [
@@ -6859,6 +6892,40 @@
       "confidence": "high",
       "observed_at": "2026-10-27",
       "limitations": "Trade-news synthesis supports historical reporting, not independent sample expansion or current payment failure prevalence."
+    },
+    {
+      "id": "itch-game-admins-edit-no-automatic-joint-ownership",
+      "text": "itch.io's game-administrator feature permits another approved account to edit a project and see analytics, but this permission alone does not establish shared account ownership, intellectual property assignment or automatic division of game-sale proceeds.",
+      "source_ids": [
+        "itch-game-admins-2014",
+        "itch-terms",
+        "itch-coop-bundles"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Official 2014 feature announcement and current terms describe roles, not the full 2026 admin-permissions UI; granular permissions and automatic proceeds splits were not empirically tested."
+    },
+    {
+      "id": "itch-game-transfer-requires-platform-support-2026",
+      "text": "In a 2026 moderated itch.io support discussion, a moderator said that changing the project owner requires platform support and is a delicate operation rather than a guaranteed creator-side administrative action.",
+      "source_ids": [
+        "itch-project-ownership-support-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Moderator guidance on one support thread, not a contractual SLA or verification of completed transfers; earlier discussions conflict on removing administrators, so no self-service procedure is asserted."
+    },
+    {
+      "id": "itch-web-files-not-game-server-operations",
+      "text": "Official browser-game documentation covers static project files and embedded browser clients; a dated publisher project independently describes running networked game sessions on external servers, distinguishing game distribution from backend hosting and operations.",
+      "source_ids": [
+        "itch-html5",
+        "itch-game-server-policy-2021",
+        "itch-killbook-external-server-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "One self-described game's architecture cannot establish typical server costs, concurrency, availability, moderation burden or genre revenue."
     }
   ],
   "observations": [
@@ -6914,6 +6981,6 @@
   "opportunities": [],
   "risks": [],
   "experiments": [],
-  "updated_at": "2026-10-26",
+  "updated_at": "2026-10-27",
   "summary": "Game-selling research active. Official rules for publication, indexing, payments, pricing, seller analytics, file delivery and game jams are documented. Typical developer sales, zero-earner fraction, median profit and causal discovery effects remain unknown."
 }

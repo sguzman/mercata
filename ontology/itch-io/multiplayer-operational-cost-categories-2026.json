@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "conditional_live_multiplayer_operating_obligation_and_cost_measurement_matrix",
+  "reviewed_at": "2026-10-27",
+  "population": "Hypothetical independently operated multiplayer release published on itch.io, including optional HTML5 clients",
+  "unit": "Operational responsibility, monthly cost input or QA acceptance check; not a market-average expense",
+  "period": "Creator HTML5 documentation, 2021–2025 moderated forum boundary evidence and one October 2026 creator-described external-backend example",
+  "sample_frame": "Official itch.io static hosting documentation, moderated public hosting answers, and a single publicly posted game architecture",
+  "source_ids": [
+    "itch-html5",
+    "itch-game-server-policy-2021",
+    "itch-hotseat-server-answer-2025",
+    "itch-external-network-host-2022",
+    "itch-killbook-external-server-2026"
+  ],
+  "release_modes": [
+    {
+      "mode": "offline_single_player",
+      "custom_match_server_required": false,
+      "incremental_dedicated_multiplayer_hosting_cost_usd": 0,
+      "qualification": "Only a fully offline release; does not imply zero cost for unrelated analytics, downloads, development or support."
+    },
+    {
+      "mode": "local_hotseat_or_LAN",
+      "custom_match_server_required": false,
+      "incremental_dedicated_multiplayer_hosting_cost_usd": null,
+      "qualification": "May avoid dedicated public server charges but still requires compatible local networking, client QA and support."
+    },
+    {
+      "mode": "online_external_backend",
+      "custom_match_server_required": "architecture_dependent",
+      "incremental_dedicated_multiplayer_hosting_cost_usd": null,
+      "qualification": "Remote server, relay or third-party service may be required; publisher handles service reliability and contractual costs."
+    }
+  ],
+  "operational_cost_register": [
+    {
+      "id": "compute_and_capacity",
+      "units": [
+        "instance_hours",
+        "peak_concurrent_sessions",
+        "server_CPU_RAM"
+      ],
+      "monthly_cash_usd": null,
+      "qa_gate": "Verify load under declared peak concurrency; record scaling and idle behavior."
+    },
+    {
+      "id": "network_bandwidth",
+      "units": [
+        "egress_GB",
+        "ingress_GB",
+        "network_requests"
+      ],
+      "monthly_cash_usd": null,
+      "qa_gate": "Measure per-session transfer, account for spikes and provider bandwidth allowances."
+    },
+    {
+      "id": "availability_and_incident_response",
+      "units": [
+        "uptime_fraction",
+        "outage_minutes",
+        "incident_hours"
+      ],
+      "monthly_cash_usd": null,
+      "qa_gate": "Define monitored availability, on-call ownership, failure recovery and downtime communications."
+    },
+    {
+      "id": "moderation_and_abuse",
+      "units": [
+        "reports_count",
+        "review_hours",
+        "data_retention_days"
+      ],
+      "monthly_cash_usd": null,
+      "qa_gate": "Identify reporting/blocking mechanisms, moderation ownership and privacy-sensitive retention; avoid collecting individual player records for this research."
+    },
+    {
+      "id": "maintenance_and_security",
+      "units": [
+        "patch_hours",
+        "deployment_hours",
+        "backup_restore_tests"
+      ],
+      "monthly_cash_usd": null,
+      "qa_gate": "Test dependency updates, incident patches, credential rotation and backup restore."
+    },
+    {
+      "id": "third_party_service_risk",
+      "units": [
+        "plan_subscription_usd",
+        "rate_limit_incidents",
+        "provider_deprecation_events"
+      ],
+      "monthly_cash_usd": null,
+      "qa_gate": "Document service contracts, traffic caps and exit plan before shipping."
+    }
+  ],
+  "mandatory_measurements_before_claiming_profitability": [
+    "actual_paid_orders",
+    "gross_receipts",
+    "processor_and_marketplace_deductions",
+    "hosting_invoices",
+    "relevant_labor_hours",
+    "period_start_end",
+    "refunds_and_chargebacks"
+  ],
+  "observed": {
+    "actual_deployed_server": false,
+    "actual_game_or_player_tested": false,
+    "actual_backend_invoice_usd": null,
+    "monthly_maintenance_hours": null,
+    "monitored_uptime_percent": null,
+    "paying_multiplayer_buyer_count": null,
+    "genre_median_hosting_expense_usd": null
+  },
+  "limits": [
+    "Static file hosting is not the same as itch.io providing a dedicated runtime for developer network sessions.",
+    "The publisher-described October 2026 external backend is an architecture example, not an inspected codebase, host invoice or uptime measurement.",
+    "Cost categories are evidence-backed planning requirements; no typical amount, zero-cost guarantee or paid-buyer count is imputed.",
+    "Pseudonymous player accounts and sessions must never be used to imply unique paying customers."
+  ]
+}
