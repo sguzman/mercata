@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "repository_integrity_and_task_source_provenance_audit",
+  "checked_at": "2026-10-27",
+  "scope": "one checked out Mercata repository with 244 registered itch.io task records, one user-visible gallery record and its existing evidence",
+  "unit": "task, relative evidence path, claim-to-source reference, or gallery link",
+  "observed_precommit_snapshot": {
+    "task_count": 244,
+    "base_task_count": 84,
+    "detailed_task_count": 160,
+    "source_records": 183,
+    "claims": 459,
+    "task_evidence_references": 4396,
+    "checked_github_blob_paths": 1141,
+    "missing_evidence_paths": 0,
+    "duplicate_evidence_paths_within_task": 0,
+    "unknown_claim_source_ids": 0,
+    "duplicate_source_ids": 0,
+    "duplicate_claim_ids": 0
+  },
+  "checks": [
+    {
+      "id": "task_scope",
+      "method": "exact baseline and detailed task count, fixed IDs and progress/acceptance flags",
+      "passed": true
+    },
+    {
+      "id": "evidence_paths",
+      "method": "read every task evidence link and require a tracked local file without path traversal",
+      "passed": true
+    },
+    {
+      "id": "source_claim_provenance",
+      "method": "require every claim source reference to be a registered HTTPS source with retrieval date, author and reuse note",
+      "passed": true
+    },
+    {
+      "id": "gallery_reference",
+      "method": "require one itch.io gallery card, source dossier and task plan/queue paths",
+      "passed": true
+    },
+    {
+      "id": "score_consistency",
+      "method": "recompute whole-ledger mean and each workstream score; complete status exactly matches 100",
+      "passed": true
+    }
+  ],
+  "permanence": {
+    "CI_test_file": "tests/itch-ledger-references-and-gallery.test.mjs",
+    "rerun_on_every_repository_test": true,
+    "live_browser_QA_handled_by_existing_workflow": true
+  },
+  "qualifications": [
+    "This verifies internal reference integrity, not the content, availability or current accuracy of every outside URL.",
+    "A source with a reuse note is not automatically licensed for image or dataset republication.",
+    "An existing test suite passing is evidence of machine consistency, not of representative seller incomes.",
+    "New files added by this audit increase the total tracked files and task links; precommit snapshot is historical.",
+    "An actual market statistic remains unsupported unless the underlying sampling frame and transaction data exist."
+  ],
+  "unavailable": {
+    "merchant_net_profit_distribution": null,
+    "marketwide_actual_paid_game_units": null,
+    "genre_specific_sales": null,
+    "operator_private_account_security_verified": null
+  }
+}
