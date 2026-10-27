@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "conditional_multi_publisher_bundle_allocation_and_role_contract",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-coop-bundles",
+    "itch-team-admin-2018",
+    "itch-payments",
+    "itch-jams"
+  ],
+  "calculator_path": "site/itch-coop-bundle-allocation.mjs",
+  "population": "cooperative itch.io bundle project owners eligible for collected platform payouts, not all collaborative team members",
+  "unit": "one bundle distributable pool and one approved participating project-owning publisher",
+  "payment_mode": "collected_by_itch",
+  "role_distinctions": [
+    {
+      "id": "solo_publisher",
+      "observed_headcount_required": true,
+      "known_staff_count": null,
+      "not_equivalent_to": "one_game_title"
+    },
+    {
+      "id": "team_contributor",
+      "observed_headcount_required": true,
+      "known_staff_count": null,
+      "not_equivalent_to": "registered_payee_without_project"
+    },
+    {
+      "id": "project_account_owner",
+      "observed_headcount_required": false,
+      "known_staff_count": null,
+      "not_equivalent_to": "all_employees_contributors"
+    },
+    {
+      "id": "bundle_host",
+      "observed_headcount_required": false,
+      "known_staff_count": null,
+      "not_equivalent_to": "sole_merchant_recipient"
+    },
+    {
+      "id": "bundle_participant",
+      "observed_headcount_required": false,
+      "known_staff_count": null,
+      "not_equivalent_to": "coowner_of_every_bundled_game"
+    }
+  ],
+  "bundle_rules": {
+    "one_host_organizes": true,
+    "participant_project_owner_approval_required": true,
+    "all_participants_approve_before_publish": true,
+    "relative_positive_weights": true,
+    "participating_seller_must_be_eligible_for_collected_payout": true,
+    "host_can_reset_approval_before_first_publication": true,
+    "first_participant_approval_locks_project_price_cut_and_dates": true,
+    "prepublication_pruning_changes_allocation_if_selected": true,
+    "direct_payment_splits_supported": false,
+    "all_entitled_games_are_paid_as_one_bundle_purchase_not_individual_orders": true,
+    "deferred_key_claims_over_15_projects_not_additional_sales": true,
+    "source_ids": [
+      "itch-coop-bundles",
+      "itch-payments"
+    ]
+  },
+  "hypothetical_inputs": {
+    "distributableUsd": 100.01,
+    "paymentMode": "collected_by_itch",
+    "participants": [
+      {
+        "id": "seller_a",
+        "weight": 1,
+        "payoutEligible": true
+      },
+      {
+        "id": "seller_b",
+        "weight": 1,
+        "payoutEligible": true
+      },
+      {
+        "id": "seller_c",
+        "weight": 1,
+        "payoutEligible": true
+      }
+    ]
+  },
+  "example_expected_allocations_usd": [
+    33.34,
+    33.34,
+    33.33
+  ],
+  "example_sum_usd": 100.01,
+  "account_transfer_rules": {
+    "bundle_participation_is_not_sale_of_publisher_account": true,
+    "jam_contributor_is_not_auto_recipient": true,
+    "current_all_admin_permission_scopes_verified": false,
+    "historical_team_account_source_year": 2018,
+    "account_transfer_or_equity_conveyance_permitted_without_review": null
+  },
+  "scope_limits": [
+    "Only determine allocation of already-distributable funds; real gross bundle buyer spending and actual gateway fees are unknown.",
+    "Weighted splits depend on approved exact participants, tier and relative weights; no title-level sales are inferred.",
+    "Claiming download keys from a bundle is not an additional sale.",
+    "Historical team-project documentation is not evidence that each account permission or transfer facility still works in 2026.",
+    "Multi-person production credits cannot establish full-time headcount, legal equity or personal income shares.",
+    "No real bundle, user account, seller tax identity, split offer or payment was accessed."
+  ],
+  "unknown": {
+    "actually_paid_publishers": null,
+    "real_bundle_revenue": null,
+    "actual_transfer_currency": null,
+    "actual_net_payout": null,
+    "solo_vs_team_population": null,
+    "account_transfer_permission": null
+  }
+}

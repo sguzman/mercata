@@ -1,0 +1,28 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {allocateCoopBundlePool} from '../site/itch-coop-bundle-allocation.mjs';
+const load=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Hypothetical co-op pool splits preserve cents and reject direct-pay accounts',()=>{
+ const d=load('ontology/itch-io/coop-bundle-weights-team-rights-2026.json'),s=load('specimens/itch-io.json'),q=load('queues/itch-io.json'),p=load('plans/itch-io.json');
+ const refs=new Set(s.evidence.map(x=>x.id));assert(d.source_ids.every(id=>refs.has(id)));
+ const z=allocateCoopBundlePool(d.hypothetical_inputs);
+ assert.deepEqual(z.shares.map(x=>x.allocationUsd),[33.34,33.34,33.33]);
+ assert.equal(z.totalAllocatedUsd,100.01);
+ assert.equal(z.actualBundleOrders,null);
+ assert.equal(z.actualGrossBuyerSpend,null);
+ assert.throws(()=>allocateCoopBundlePool({...d.hypothetical_inputs,paymentMode:'direct_to_you'}),TypeError);
+ assert.throws(()=>allocateCoopBundlePool({...d.hypothetical_inputs,participants:[d.hypothetical_inputs.participants[0]]}),TypeError);
+ assert.throws(()=>allocateCoopBundlePool({...d.hypothetical_inputs,participants:[d.hypothetical_inputs.participants[0],d.hypothetical_inputs.participants[0]]}),TypeError);
+ assert.throws(()=>allocateCoopBundlePool({...d.hypothetical_inputs,participants:[{id:'a',weight:1,payoutEligible:false},{id:'b',weight:1,payoutEligible:true}]}),TypeError);
+ assert.equal(d.bundle_rules.direct_payment_splits_supported,false);
+ assert.equal(d.account_transfer_rules.current_all_admin_permission_scopes_verified,false);
+ assert(Object.values(d.unknown).every(x=>x===null));
+ const task=p.detail_tasks.find(x=>x.id==='itch-io/economics/calculate-bundle-allocations');
+ assert.equal(task.percent,100);assert.equal(task.status,'complete');
+ for(const f of ['ontology/itch-io/coop-bundle-weights-team-rights-2026.json','ontology/itch-io/coop-bundle-weights-team-rights-2026.md','site/itch-coop-bundle-allocation.mjs','tests/itch-coop-bundle-allocation.test.mjs'])assert(task.evidence.includes(f));
+ assert.equal(p.detail_tasks.find(x=>x.id==='itch-io/access/distinguish-team-administration').percent,91);
+ assert.equal(p.detail_tasks.find(x=>x.id==='itch-io/competition/separate-solo-and-team-publishers').percent,88);
+ assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
+ assert.equal(p.progress_percent,Math.round((q.queues.flatMap(x=>x.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
+});
