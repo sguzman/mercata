@@ -2,18 +2,18 @@
 
 **Reviewed October 26, 2026.** [Structured record](source-reuse-record-completeness-2026.json) · [source register checker](../../site/itch-source-register-audit.mjs).
 
-This is a check of whether Mercata's **152 existing itch.io source records** contain the bibliographic and reuse-warning metadata needed to review publication decisions. It does **not** grant legal rights to redistribute anybody else's source archive, paper, image or confidential records.
+This is a check of whether Mercata's **153 existing itch.io source records** contain the bibliographic and reuse-warning metadata needed to review publication decisions. It does **not** grant legal rights to redistribute anybody else's source archive, paper, image or confidential records.
 
 ## Dated and source-linked capture
 
-All 152 source records contain a public URL, an attributed publisher/author, a retrieval date, an evidence class, and a nonempty `license` field. That last field is an **individually authored licensing/reuse note**, not necessarily an upstream SPDX license identifier or contractual grant. Publication dates have three honest precision levels:
+All 153 source records contain a public URL, an attributed publisher/author, a retrieval date, an evidence class, and a nonempty `license` field. That last field is an **individually authored licensing/reuse note**, not necessarily an upstream SPDX license identifier or contractual grant. Publication dates have three honest precision levels:
 
 | Recorded publication-date precision | Source records |
 |---|---:|
-| Full YYYY-MM-DD | 65 |
+| Full YYYY-MM-DD | 66 |
 | Month only YYYY-MM | 3 |
 | Not independently recorded | 84 |
-| **Total** | **152** |
+| **Total** | **153** |
 
 A missing public source date is **unknown**, not proof that a page was published on the retrieval day. Month-only dates must not be presented as exact-day events.
 

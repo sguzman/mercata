@@ -18,6 +18,6 @@ A [2026 cancellation report](six-year-low-return-cancellation-2026.md) and a [20
 
 ## Publication rights are a separate outstanding check
 
-At this review there were **152 registered sources** with a retrieval date and attribution/reuse-note string. This is **record completeness**, not a legal conclusion that all third-party source materials or datasets can be redistributed in bulk. Even a linked licensed paper or excerpt has potentially separate rights for its figures, underlying datasets and documents. The static validator checks basic register integrity and never grants reuse rights or infers earnings.
+At this review there were **153 registered sources** with a retrieval date and attribution/reuse-note string. This is **record completeness**, not a legal conclusion that all third-party source materials or datasets can be redistributed in bulk. Even a linked licensed paper or excerpt has potentially separate rights for its figures, underlying datasets and documents. The static validator checks basic register integrity and never grants reuse rights or infers earnings.
 
 This evidence meets the existing *source hierarchy*, *review visibility bias* and *survivorship-plan* task acceptance criteria. A [new source reuse metadata audit](source-reuse-record-completeness-2026.md) confirms that bibliographic citation and reuse-warning **recording** is complete. It still does not establish legal permission to bulk republish original works or resolve unsampled active-seller, buyer-population and income tasks.
