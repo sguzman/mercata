@@ -22,8 +22,14 @@ test('Buyer/publisher identity, geography and periods are defined but no actual 
    const x=p.detail_tasks.find(t=>t.id===id);assert.equal(x.percent,100,id);assert.equal(x.status,'complete',id);
    for(const f of ['ontology/itch-io/publisher-buyer-denominator-geography-2026.json','ontology/itch-io/publisher-buyer-denominator-geography-2026.md','tests/itch-publisher-buyer-denominator-geography.test.mjs'])assert(x.evidence.includes(f));
  }
- assert.equal(q.queues.flatMap(g=>g.tasks).find(t=>t.id==='market/sellers').progress,42);
- assert.equal(p.detail_tasks.find(t=>t.id==='itch-io/market/estimate-active-sellers').percent,44);
+ const seller=q.queues.flatMap(g=>g.tasks).find(t=>t.id==='market/sellers');
+ const active=p.detail_tasks.find(t=>t.id==='itch-io/market/estimate-active-sellers');
+ assert(seller.progress>=58,'Previously sourced public-count research must remain credited');
+ assert(active.percent>=60,'Previously sourced merchant-denominator research must remain credited');
+ for(const t of [seller,active])assert(t.evidence.includes('ontology/itch-io/independent-catalog-creator-frame-2026.json'));
+ const sample=get('ontology/itch-io/independent-catalog-creator-frame-2026.json');
+ assert.equal(sample.cross_source_distinction.direct_ratio_has_common_denominator,false);
+ assert.equal(sample.unknown.unique_active_paid_game_sellers,null);
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
  assert.equal(p.progress_percent,Math.round((q.queues.flatMap(g=>g.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
 });
