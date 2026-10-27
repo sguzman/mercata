@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "official_game_market_seller_buyer_population_denominator_and_country_contract",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-faq",
+    "itch-started",
+    "itch-buying-flow",
+    "itch-buying",
+    "itch-payments",
+    "itch-download-keys",
+    "itch-serverside-api-reference",
+    "itch-uk-content-geo-access-2025",
+    "itch-account-followers",
+    "itch-pricing",
+    "itch-coop-bundles"
+  ],
+  "target_market": "itch.io independent video game publishing, distinguishing free-only and positive-payment configurations",
+  "target_population": "eligible paid-game publisher accounts and consenting paid-order buyers, with separate free visitors and non-game customers",
+  "scope_unit": "game_project_publisher_account_seller_entity_buyer_entity_or_event_as_named",
+  "period": "public official operator policy examined 2026-10-26; proposed mutually aligned release windows 30 90 365 days; July 2025 UK country exception historically dated",
+  "sampling_frame": "Published creator and buying documents plus any future owner-authorized complete paid order frame including unsuccessful releases and nonrepeat customers",
+  "seller_segments": [
+    {
+      "id": "registered_account",
+      "supply_role": "may_create_game_pages",
+      "payment_role": "none_automatic",
+      "distinct_person_proven": false,
+      "positive_price_game_required": false,
+      "source_ids": [
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "free_only_publisher",
+      "supply_role": "uploads_free_download_or_browser_game",
+      "payment_role": "optional_tips_only_if_configured",
+      "distinct_person_proven": false,
+      "positive_price_game_required": false,
+      "source_ids": [
+        "itch-started",
+        "itch-pricing"
+      ]
+    },
+    {
+      "id": "listed_positive_minimum_game_publisher",
+      "supply_role": "offers_downloadable_positive_minimum_game",
+      "payment_role": "eligible_to_collect_if_payment_onboarded_not_yet_an_actual_paid_seller",
+      "distinct_person_proven": false,
+      "positive_price_game_required": true,
+      "source_ids": [
+        "itch-started",
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "actual_paid_game_seller",
+      "supply_role": "seller_entity_in_reconciled_positive_price_game_cohort",
+      "payment_role": "one_or_more_retained_paid_game_orders_in_window",
+      "distinct_person_proven": false,
+      "positive_price_game_required": true,
+      "source_ids": [
+        "itch-payments",
+        "itch-buying-flow"
+      ]
+    },
+    {
+      "id": "publisher_team_contributor",
+      "supply_role": "work_on_game_owned_by_account",
+      "payment_role": "no_automatic_share_without_distinct_arrangement",
+      "distinct_person_proven": null,
+      "positive_price_game_required": false,
+      "source_ids": [
+        "itch-coop-bundles",
+        "itch-faq"
+      ]
+    }
+  ],
+  "merchant_modes": [
+    {
+      "id": "direct_to_you",
+      "merchant_of_record": "seller",
+      "processor": "configured_paypal_or_stripe",
+      "buyer_payment": "positive_payment_to_seller_processor",
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "collected_by_itch",
+      "merchant_of_record": "itch_io",
+      "processor": "platform_supported_payment_rails",
+      "buyer_payment": "positive_payment_to_platform_followed_by_seller_payout_eligibility",
+      "source_ids": [
+        "itch-payments"
+      ]
+    }
+  ],
+  "buyer_segments": [
+    {
+      "id": "anonymous_or_authenticated_page_visitor",
+      "event_unit": "page_view_event",
+      "is_paid_customer": false,
+      "unique_person_supported": false,
+      "buyer_account_required": null,
+      "source_ids": [
+        "itch-started"
+      ]
+    },
+    {
+      "id": "html5_game_player",
+      "event_unit": "browser_play_event",
+      "is_paid_customer": false,
+      "unique_person_supported": false,
+      "buyer_account_required": false,
+      "source_ids": [
+        "itch-started"
+      ]
+    },
+    {
+      "id": "free_demo_downloader",
+      "event_unit": "free_file_download_event",
+      "is_paid_customer": false,
+      "unique_person_supported": false,
+      "buyer_account_required": false,
+      "source_ids": [
+        "itch-started",
+        "itch-pricing"
+      ]
+    },
+    {
+      "id": "game_download_key_recipient",
+      "event_unit": "granted_entitlement_or_claim",
+      "is_paid_customer": null,
+      "unique_person_supported": false,
+      "buyer_account_required": null,
+      "source_ids": [
+        "itch-download-keys"
+      ]
+    },
+    {
+      "id": "checkout_attempt",
+      "event_unit": "initiated_checkout",
+      "is_paid_customer": null,
+      "unique_person_supported": false,
+      "buyer_account_required": false,
+      "source_ids": [
+        "itch-buying-flow"
+      ]
+    },
+    {
+      "id": "paid_game_purchaser",
+      "event_unit": "retained_settled_positive_price_game_order",
+      "is_paid_customer": true,
+      "unique_person_supported": false,
+      "buyer_account_required": false,
+      "source_ids": [
+        "itch-buying-flow",
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "repeat_paid_game_purchaser",
+      "event_unit": "second_distinct_retained_paid_game_order_for_an_authorized_deduplicated_buyer",
+      "is_paid_customer": true,
+      "unique_person_supported": "requires_private_consent_and_deduplication",
+      "buyer_account_required": false,
+      "source_ids": [
+        "itch-serverside-api-reference",
+        "itch-buying-flow"
+      ]
+    },
+    {
+      "id": "follower_or_rater",
+      "event_unit": "attention_or_reputation_event",
+      "is_paid_customer": false,
+      "unique_person_supported": false,
+      "buyer_account_required": null,
+      "source_ids": [
+        "itch-account-followers"
+      ]
+    }
+  ],
+  "geo_frames": [
+    {
+      "id": "all_accessible_regions",
+      "buyer_country": "not_automatically_unrestricted_globally",
+      "seller_country": "not_inferred",
+      "languages": "any_documented_translation_tag",
+      "population_coverage_verified": false,
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "buyer_country",
+      "buyer_country": "transaction_specific_buying_region_if_lawful_to_collect",
+      "seller_country": "not_equivalent_to_buyer_region",
+      "languages": "separate_interface_and_product_language",
+      "population_coverage_verified": false,
+      "source_ids": [
+        "itch-payments",
+        "itch-buying-flow"
+      ]
+    },
+    {
+      "id": "seller_payout_country",
+      "buyer_country": "buyers_may_be_in_other_locations",
+      "seller_country": "legal_processor_registration_and_merchant_eligibility",
+      "languages": "not_proof_of_buyer_language",
+      "population_coverage_verified": false,
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "united_kingdom_2025_geo_restriction",
+      "buyer_country": "historically_restricted_NSFW_categories",
+      "seller_country": "not_automatically_blocked",
+      "languages": "not_the_causal_policy_dimension",
+      "population_coverage_verified": false,
+      "source_ids": [
+        "itch-uk-content-geo-access-2025"
+      ]
+    },
+    {
+      "id": "mexico_example",
+      "buyer_country": "actual_transaction_eligibility_unknown",
+      "seller_country": "provider_integration_must_be_independently_approved",
+      "languages": "Spanish_content_not_equivalent_to_Mexican_buyer_or_seller",
+      "population_coverage_verified": false,
+      "source_ids": [
+        "itch-payments"
+      ]
+    }
+  ],
+  "period_contract": {
+    "site_document_review_date": "2026-10-26",
+    "first_paid_game_release_cohort_windows_days": [
+      30,
+      90,
+      365
+    ],
+    "preferred_comparison_period": "game_release_window_first_positive_price_publication_date",
+    "include_zero_paid_titles": true,
+    "include_delisted_if_frame_can_observe": true,
+    "distinguish_publisher_launch_date_from_purchase_settlement_date": true,
+    "monthly_market_buyers_count": null,
+    "annually_active_sellers_count": null
+  },
+  "required_measurement_inputs": [
+    "public searchable eligible game project list with a documented date, exact category filter, price and explicit missing or delisted coverage",
+    "authorized seller account owner id for deduplicating project listings, provided only within appropriately protected private analytics",
+    "authorized positive price, settled paid-order amounts, refunds and fee basis with fixed release windows",
+    "privacy-preserving buyer deduplication performed only by consenting merchants with sufficient anti-reidentification aggregation",
+    "matched buyer-country, merchant payout country and product-language fields only where lawfully and reliably observed",
+    "include zero paid orders, non-repeat buyers, never-indexed and delisted eligible titles rather than sampling only successful creators"
+  ],
+  "unavailable": {
+    "current_unique_paying_buyers": null,
+    "currently_active_paid_sellers": null,
+    "first_paid_game_seller_census": null,
+    "median_game_purchase_per_buyer": null,
+    "repeat_paid_game_buyer_count": null,
+    "country_level_checkout_success_rate": null,
+    "mexico_paid_game_buyers": null,
+    "uk_restriction_sales_loss": null,
+    "language_specific_paid_customer_total": null,
+    "representative_zero_paid_seller_fraction": null
+  },
+  "privacy": {
+    "no_real_seller_account_access": true,
+    "no_buyer_identifiers_stored": true,
+    "no_private_checkout_performed": true,
+    "public_transaction_records_accessed": 0,
+    "publish_only_nonidentifiable_aggregates": true
+  },
+  "limits": [
+    "A project page, publishing account, contributing person and actual receiving merchant are different denominators.",
+    "An unregistered buyer can pay, so verified website accounts are not a complete buyer population.",
+    "Visitors, followers, downloads, browser plays, free keys, multiple orders and repeat humans are different measures.",
+    "The reported 2025 UK category access change is date-scoped and not proof of all country policies in October 2026.",
+    "Product localization language is not the country of purchase, payout or personal identity.",
+    "The contract defines units and future methods; it establishes no observed 2026 marketwide consumer or seller counts."
+  ]
+}
