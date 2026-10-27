@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "first_publication_game_and_positive_price_eligibility_cohort_method",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-indexed",
+    "itch-api-overview",
+    "itch-pricing",
+    "itch-recent-paid7-2026",
+    "itch-recent-paid30-2026",
+    "pelipulssi-feed-study-2026"
+  ],
+  "population": "Future fixed-window publicly indexed eligible game release observations with original publication and first price histories; no complete 2026 input sample",
+  "unit": "One original game project ID with first public release date, initial offer and its current observation status, not a build, developer or paid order",
+  "period": "Official API/feed/indexing docs checked October 27 2026; intended fixed UTC cohort window declared by researcher",
+  "sample_frame": "Official new-games RSS/newness API feature descriptions and unsynchronized paid 7/30-day public browse filter snapshots; no original release/price history export",
+  "classification_method": {
+    "new_positive_price_game": "First public game project release inside the fixed window, documentary proof that it had a mandatory positive minimum price at initial public launch",
+    "new_free_game": "First public game project release inside window with verified zero minimum",
+    "old_game_updated": "New observation/build/update of a project initially published before this window",
+    "existing_free_converted_to_paid": "Positive minimum introduced on an older public game, not a new project",
+    "unverified": "Missing first-public timestamp or initial price/rights evidence, not counted as confirmed first-time commercial release",
+    "duplicate": "Repeat sightings of same project ID do not increment project count",
+    "imported_non_game": "Game assets, jams, DLC, bundles, devlogs and tools are excluded from independent new game page count"
+  },
+  "required_fields": [
+    "project_id",
+    "is_game",
+    "first_public_utc",
+    "initial_positive_price_verified",
+    "observation_kind",
+    "observation_utc",
+    "source_evidence_verified"
+  ],
+  "code_module": "site/itch-commercial-release-cohorts.mjs",
+  "valid_input_policies": [
+    "All dates must be UTC and lie inside ordered declared comparison windows.",
+    "One project ID per fixed-window cohort snapshot.",
+    "History proof must distinguish new publication from later content edits and paid-price conversions.",
+    "No interpolation from a rolling last-7-day page result to 7 daily first-time paid game launches.",
+    "No game catalog feed first sighting automatically becomes a unique paid game/seller count."
+  ],
+  "existing_public_counts": {
+    "prior_last_7_days_paid_browse_count": 1057,
+    "prior_last_30_days_paid_browse_count": 3752,
+    "selected_feed_first_seen_all_game_pages_152_days": 118017,
+    "these_are_synchronized_snapshots": false,
+    "these_are_verified_first_time_paid_game_publications": false
+  },
+  "actual_observations": {
+    "authenticated_project_histories_collected": 0,
+    "actual_verified_first_commercial_game_releases": null,
+    "unique_active_paid_sellers": null,
+    "derived_release_rate_per_day": null,
+    "actual_commercial_release_growth_rate": null
+  },
+  "limitations": [
+    "RSS gives current items but not full historical original-price and first-publication proof.",
+    "The public browse Paid filter includes paid DLC, time-varying offers and updated builds; an older project may appear as recently updated.",
+    "External periodic first-sighting feeds include free games and unindexed or repeatedly appearing pages; do not call them paid launches.",
+    "A validated algorithm applied to zero authorized underlying observations is a research method, not a measured result."
+  ]
+}
