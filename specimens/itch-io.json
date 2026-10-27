@@ -2033,6 +2033,17 @@
       "evidence_class": "independent_sitemap_and_tag_clustering_2025_visual_novels",
       "license": "Public article linked; only short numeric research observations and independently authored methodological interpretation; no plots, text sections or underlying dataset copied.",
       "notes": "Author-selected approximate-2025 itch sitemap frame with 10,427 VN pages, 3,195 unique tags and manually identified/cooccurrence-clustered theme categories. Ratings/metadata measured, not purchases or sales."
+    },
+    {
+      "id": "itchdb-independent-index-oct2026",
+      "url": "https://itchdb.com/",
+      "title": "ItchDB: independent itch.io ratings, rank and reach index",
+      "publisher": "ItchDB, independent site",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "third_party_dynamic_itch_catalog_sample_counter",
+      "license": "Only independent source attribution and transient public aggregate counters summarized; no game records, creator profiles, images or site content republished.",
+      "notes": "Live independent index reported 400,641 indexed games, 65,273 creators and 215,920 tags at observation. No underlying inclusion criteria, complete-source denominators, historic coverage, merchant status or actual sales provided. Dynamic counters can change."
     }
   ],
   "claims": [
@@ -6741,6 +6752,37 @@
       "observed_at": "2026-10-26",
       "confidence": "medium",
       "limitations": "Percentages refer to selected sitemap-based pages and nonidentical genre compositions; cannot be interpreted as zero-sales shares or evidence of a buyer conversion advantage."
+    },
+    {
+      "id": "itchdb-2026-covered-games-creators-snapshot",
+      "text": "At the October 2026 observation, the independent ItchDB front page reported 400,641 indexed games and 65,273 creator profiles within its own tracked catalog.",
+      "source_ids": [
+        "itchdb-independent-index-oct2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Self-reported dynamic third-party index with unspecified ingestion coverage; counted creator profiles are not verified unique humans, active game publishers, merchants or recipients of paid game orders."
+    },
+    {
+      "id": "itchdb-2026-public-tag-index-snapshot",
+      "text": "ItchDB also reported 215,920 ranked tags and organized trending games by public rating acceleration and rankings, not seller cash receipts.",
+      "source_ids": [
+        "itchdb-independent-index-oct2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Tag counts and popularity rankings are platform attention metadata; neither count nor growth rates are verified positive-price sales or income."
+    },
+    {
+      "id": "itchdb-and-official-platform-count-mismatched-populations",
+      "text": "The independent 400,641-game ItchDB count cannot be divided by itch.io's over-two-million indexed project-page total to estimate commercial seller coverage because the units, inclusion criteria and timestamps differ.",
+      "source_ids": [
+        "itchdb-independent-index-oct2026",
+        "itch-indexing-reform-oct-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Independent game tracking index versus official mixed-category project eligibility. No complete overlap or project identity join observed."
     }
   ],
   "observations": [

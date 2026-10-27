@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "third_party_dynamic_catalog_count_and_active_seller_identification_boundary",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itchdb-independent-index-oct2026",
+    "itch-indexing-reform-oct-2026",
+    "itch-indexed",
+    "itch-payments"
+  ],
+  "observation": {
+    "source": "ItchDB independent index homepage",
+    "source_time_exact": null,
+    "retrieved_calendar_date": "2026-10-26",
+    "indexed_games_reported": 400641,
+    "creator_profiles_reported": 65273,
+    "tags_ranked_reported": 215920,
+    "counts_are_transient": true,
+    "methodology_or_public_coverage_disclosed": false,
+    "raw_game_frame_downloaded": false,
+    "private_creator_records_read": false
+  },
+  "cross_source_distinction": {
+    "official_project_indexed_pages_lower_bound_exclusive": 2000000,
+    "official_index_event_date": "2026-10-19",
+    "official_page_population": "all_kinds_of_eligible_projects_including_games_tools_assets_books_and_other_works",
+    "independent_index_population": "ItchDB tracked game-like project entries with unknown curation and update scope",
+    "direct_ratio_has_common_denominator": false,
+    "difference_can_be_interpreted_as_paid_game_or_active_seller_population": false,
+    "distinct_seller_entity_deduplication_done": false
+  },
+  "possible_visible_signals": [
+    {
+      "id": "game_listing",
+      "unit": "one_project_entry",
+      "proof_paid_seller": false,
+      "source_ids": [
+        "itchdb-independent-index-oct2026"
+      ]
+    },
+    {
+      "id": "creator_profile",
+      "unit": "one_index_creator_profile",
+      "proof_paid_seller": false,
+      "source_ids": [
+        "itchdb-independent-index-oct2026"
+      ]
+    },
+    {
+      "id": "public_followers",
+      "unit": "account_followers",
+      "proof_paid_seller": false,
+      "source_ids": [
+        "itchdb-independent-index-oct2026"
+      ]
+    },
+    {
+      "id": "rating_total",
+      "unit": "public_game_ratings",
+      "proof_paid_seller": false,
+      "source_ids": [
+        "itchdb-independent-index-oct2026"
+      ]
+    },
+    {
+      "id": "weekly_rating_velocity",
+      "unit": "ratings_delta_over_rolling_window",
+      "proof_paid_seller": false,
+      "source_ids": [
+        "itchdb-independent-index-oct2026"
+      ]
+    },
+    {
+      "id": "tag_index_count",
+      "unit": "tag_vocabulary_or_ranked_tag",
+      "proof_paid_seller": false,
+      "source_ids": [
+        "itchdb-independent-index-oct2026"
+      ]
+    }
+  ],
+  "missing_merchant_evidence": [
+    "complete_withheld_and_deindexed_eligibility_frame",
+    "authoritative_positive_price_game_catalog_at_fixed_date",
+    "which_creator_accounts_satisfy_merchant_identity_and_tax_onboarding",
+    "same_horizon_settled_positive_price_orders_for_each_account_including_zeros",
+    "refund_and_chargeback_adjusted_buyer_payments",
+    "deduplication_across_projects_teams_and_accounts",
+    "real_payout_balance_and_creator_country_with_permission"
+  ],
+  "privacy": {
+    "no_unconsented_private_seller_data": true,
+    "no_private_paid_order_or_customer_data": true,
+    "no_cross_site_identity_join": true
+  },
+  "unknown": {
+    "unique_active_paid_game_sellers": null,
+    "market_active_vs_dormant_accounts": null,
+    "representative_new_merchant_counts": null,
+    "independent_index_paid_publisher_fraction": null,
+    "real_paid_game_buyers": null,
+    "paid_sales_volume": null,
+    "mean_creator_profit": null,
+    "median_creator_profit": null
+  },
+  "limitations": [
+    "Third-party public coverage is neither a random probability sample nor guaranteed complete.",
+    "The creator counter may include accounts with free-only games and accounts that are not payment enabled.",
+    "Games per creator cannot be interpreted as repeat paying developer frequency without stable identity and time windows.",
+    "Rating velocity is an attention signal, not merchant sales or revenue.",
+    "Official catalog indexing policy changed dramatically in October 2026, complicating same-population comparisons across dates.",
+    "Without coverage validation and source ID linkage, do not subtract or divide official page totals and third-party indexed games.",
+    "All captured numbers are a time-bound third-party self-report and can change after retrieval."
+  ]
+}
