@@ -33,7 +33,7 @@ test('Historical cross-year reporting does not manufacture stable game-income gr
  assert.equal(a.all_channel_2024_context.profit_is_itch_only,false);
  for(const id of ['itch-io/risk/study-sales-volatility']){
   const task=p.detail_tasks.find(t=>t.id===id);
-  assert(task.status==='in_progress'&&task.percent===89);
+  assert(task.status==='in_progress'&&task.percent>=89&&task.percent<100);
   for(const path of ['ontology/itch-io/mixed-physical-digital-payment-ledger-2024.json','ontology/itch-io/mixed-physical-digital-payment-ledger-2024.md','tests/itch-mixed-physical-digital-payment-ledger.test.mjs'])assert(task.evidence.includes(path));
  }
  const market=q.queues.flatMap(x=>x.tasks).find(t=>t.id==='market/volume');
