@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "separate_pay_what_you_want_topups_free_donations_and_repeat_purchase_units",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-official-2015-optional-payment-aggregate",
+    "itch-pricing",
+    "itch-html5",
+    "genetic-axolotls-first-month-2026",
+    "itch-payments",
+    "spiral-atlas-2020-pwyw-payments"
+  ],
+  "population": "2015 operator-wide payment events across multiple product types, and an individually self-reported free game donation snapshot; not representative paid game buyers in 2026",
+  "unit": "one qualifying positive payment event for conditional payment means; one distinct free download for conversion denominator if that denominator were known",
+  "period": {
+    "operator_report": "2015-06-20",
+    "individual_free_game": "2026-01 first month, described 2026-02-23",
+    "current_policy_review": "2026-10-27"
+  },
+  "pricing_modes": [
+    {
+      "id": "zero_minimum_donate",
+      "minimum_usd": 0,
+      "free_access_without_payment": true,
+      "positive_payment_optional": true,
+      "ownership_if_positive_payment": true,
+      "free_download_implies_ownership": false,
+      "source_ids": [
+        "itch-pricing"
+      ]
+    },
+    {
+      "id": "positive_minimum_paid",
+      "minimum_usd": "publisher_configured_positive_amount",
+      "free_access_without_payment": false,
+      "positive_payment_required": true,
+      "ownership_if_positive_payment": true,
+      "additional_tip_permitted": true,
+      "source_ids": [
+        "itch-pricing"
+      ]
+    },
+    {
+      "id": "embedded_html5",
+      "minimum_usd": 0,
+      "free_play_available": true,
+      "positive_payment_mode": "donation_only",
+      "can_infer_sales_from_browser_plays": false,
+      "source_ids": [
+        "itch-html5"
+      ]
+    }
+  ],
+  "historic_paid_minimum_overpayments": {
+    "source_ids": [
+      "itch-official-2015-optional-payment-aggregate"
+    ],
+    "share_of_already_paid_purchases_with_extra_payment_approx": 0.3,
+    "conditional_extra_amount_mean_usd": 3.67,
+    "paid_purchase_event_denominator_count": null,
+    "positive_payment_not_equivalent_to_free_download": true,
+    "period_is_2026": false
+  },
+  "historic_zero_minimum_positive_donations": {
+    "source_ids": [
+      "itch-official-2015-optional-payment-aggregate"
+    ],
+    "mean_usd_conditional_on_positive_donation": 3.68,
+    "common_positive_payment_interval_usd": [
+      1,
+      5
+    ],
+    "all_zero_minimum_download_event_count": null,
+    "all_zero_minimum_downloaders_who_paid_count": null,
+    "free_download_to_donor_rate": null
+  },
+  "one_free_game_creator_account": {
+    "source_ids": [
+      "genetic-axolotls-first-month-2026"
+    ],
+    "price_minimum_usd": 0,
+    "creator_reported_positive_donation_events": 1,
+    "gross_donation_usd": 49.99,
+    "reported_page_view_events_greater_than": 100,
+    "free_downloads_count": null,
+    "unique_visitors": null,
+    "buyer_conversion_rate": null,
+    "actual_owner_labor_hours": null,
+    "mandatory_price_orders": null,
+    "real_labor_adjusted_profit": null
+  },
+  "conditional_estimates_not_licensed": [
+    "multiplying_2015_30_percent_top_up_rate_by_free_2026_visits",
+    "multiplying_donations_average_by_all_free_downloaders",
+    "treating_2026_single_large_donation_as_ordinary_market_average",
+    "adding_zero_minimum_donation_to_premium_game_order_count",
+    "using_optional_topups_to_reconstruct_zero_payment_user_population"
+  ],
+  "cross_record_repurchase_boundary": {
+    "reference": "ontology/itch-io/repeat-buyer-and-membership-measurement-2026.json",
+    "repeat_customer_means_later_distinct_retained_positive_price_order": true,
+    "same_checkout_extra_tip_not_repeat_order": true,
+    "external_patreon_renewal_not_itch_paid_game_order": true,
+    "gifted_entitlement_not_sale": true,
+    "repeat_buyer_rate_observed": null,
+    "external_membership_churn_rate_observed": null
+  },
+  "unknown": {
+    "free_game_donation_conversion_rate_2015": null,
+    "free_game_donation_conversion_rate_2026": null,
+    "typical_2026_free_game_donation_usd": null,
+    "typical_2026_paid_game_tip_fraction": null,
+    "current_paid_game_buyer_rate": null,
+    "premium_game_median_receipts": null
+  },
+  "limitations": [
+    "All 2015 store receipts span product categories, and no actual purchase count or free zero-dollar download denominator is reported.",
+    "Conditional donation averages exclude users who downloaded free material without paying.",
+    "Founder reports about extra amounts among positive-minimum purchases are not a percentage of game players who paid.",
+    "A 2026 voluntary creator case has only one large gift and an event-based page-view lower bound, not an eligible buyer population.",
+    "Recurring sales and paid customer return require separately retained orders across a defensible cohort, not tips within a checkout.",
+    "No buyer identities, actual 2026 platform purchase data, or genuine merchant experiments were accessed."
+  ]
+}

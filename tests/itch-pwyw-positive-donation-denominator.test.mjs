@@ -1,0 +1,25 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Historical optional topups and positive free donations retain their conditional denominators',()=>{
+ const r=read('ontology/itch-io/pwyw-positive-donation-denominator-audit-2026.json'),q=read('queues/itch-io.json'),p=read('plans/itch-io.json'),s=read('specimens/itch-io.json');
+ const sources=new Set(s.evidence.map(x=>x.id));assert(r.source_ids.every(id=>sources.has(id)));
+ assert.equal(r.historic_paid_minimum_overpayments.share_of_already_paid_purchases_with_extra_payment_approx,0.30);
+ assert.equal(r.historic_paid_minimum_overpayments.conditional_extra_amount_mean_usd,3.67);
+ assert.equal(r.historic_zero_minimum_positive_donations.mean_usd_conditional_on_positive_donation,3.68);
+ assert.equal(r.historic_zero_minimum_positive_donations.free_download_to_donor_rate,null);
+ assert.equal(r.one_free_game_creator_account.gross_donation_usd,49.99);
+ assert.equal(r.one_free_game_creator_account.buyer_conversion_rate,null);
+ assert.equal(r.cross_record_repurchase_boundary.same_checkout_extra_tip_not_repeat_order,true);
+ assert(Object.values(r.unknown).every(x=>x===null));
+ const t=p.detail_tasks.find(x=>x.id==='itch-io/sales/model-pay-what-you-want-amounts');
+ assert.equal(t.percent,100);assert.equal(t.status,'complete');
+ for(const f of ['ontology/itch-io/pwyw-positive-donation-denominator-audit-2026.json','ontology/itch-io/pwyw-positive-donation-denominator-audit-2026.md','tests/itch-pwyw-positive-donation-denominator.test.mjs'])assert(t.evidence.includes(f));
+ const retention=q.queues.flatMap(g=>g.tasks).find(x=>x.id==='sales/retention');
+ assert.equal(retention.progress,100);assert.equal(retention.status,'complete');
+ assert(retention.evidence.includes(r.cross_record_repurchase_boundary.reference));
+ assert(retention.evidence.includes('tests/itch-pwyw-positive-donation-denominator.test.mjs'));
+ assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
+ assert.equal(p.progress_percent,Math.round((q.queues.flatMap(g=>g.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
+});
