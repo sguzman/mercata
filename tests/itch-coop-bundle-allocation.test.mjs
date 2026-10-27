@@ -21,7 +21,7 @@ test('Hypothetical co-op pool splits preserve cents and reject direct-pay accoun
  const task=p.detail_tasks.find(x=>x.id==='itch-io/economics/calculate-bundle-allocations');
  assert.equal(task.percent,100);assert.equal(task.status,'complete');
  for(const f of ['ontology/itch-io/coop-bundle-weights-team-rights-2026.json','ontology/itch-io/coop-bundle-weights-team-rights-2026.md','site/itch-coop-bundle-allocation.mjs','tests/itch-coop-bundle-allocation.test.mjs'])assert(task.evidence.includes(f));
- assert.equal(p.detail_tasks.find(x=>x.id==='itch-io/access/distinguish-team-administration').percent,91);
+ assert.equal(p.detail_tasks.find(x=>x.id==='itch-io/access/distinguish-team-administration').percent,100);
  assert.equal(p.detail_tasks.find(x=>x.id==='itch-io/competition/separate-solo-and-team-publishers').percent,100);
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
  assert.equal(p.progress_percent,Math.round((q.queues.flatMap(x=>x.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
@@ -39,5 +39,5 @@ test('Staffing classes require attributable source evidence rather than inferred
  const t=p.detail_tasks.find(z=>z.id==='itch-io/competition/separate-solo-and-team-publishers');
  assert.equal(t.percent,100);assert.equal(t.status,'complete');
  for(const f of ['ontology/itch-io/coop-bundle-weights-team-rights-2026.json','ontology/itch-io/coop-bundle-weights-team-rights-2026.md','tests/itch-coop-bundle-allocation.test.mjs'])assert(t.evidence.includes(f));
- assert.equal(p.detail_tasks.find(z=>z.id==='itch-io/access/distinguish-team-administration').percent,91);
+ assert.equal(p.detail_tasks.find(z=>z.id==='itch-io/access/distinguish-team-administration').percent,100);
 });

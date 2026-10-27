@@ -4,7 +4,8 @@ const get=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8')
 test('Research register retains all current source notes and claims without inventing legal authorization',()=>{
  const d=get('specimens/itch-io.json'),a=auditItchSourceRegister(d);
  assert.equal(a.valid,true,JSON.stringify(a.issues.slice(0,5)));
- assert.equal(a.source_count,187);assert.equal(a.claim_count,466);
+ assert.equal(a.source_count,d.evidence.length);assert.equal(a.claim_count,d.claims.length);
+ assert(a.source_count>=190);assert(a.claim_count>=469);
  assert.equal(a.actual_redistribution_legal_clearance,null);
  assert.equal(a.marketwide_paid_seller_count,null);
 });
