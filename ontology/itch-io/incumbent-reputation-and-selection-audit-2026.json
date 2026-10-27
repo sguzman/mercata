@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "public_reputation_follow_ranking_and_incumbency_evidence_audit",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-indexed",
+    "itch-account-followers",
+    "indiegameinsights-itch-2025-genre-rating-study",
+    "hive-payment-update-may-2026",
+    "hive-feature-july-2026",
+    "luden-superweird-alpha-feature-2026"
+  ],
+  "population": "Public creator-facing discovery signals, a nonrepresentative 2025 game sample, and two selected 2026 publisher reports",
+  "unit": "Project-page rating, account follow event, listing appearance or selected published outcome; not a paid buyer",
+  "period": "2025 research retrospective and 2026 selected publisher observations",
+  "observed_cases": [
+    {
+      "id": "independent_2025_rating_sample",
+      "source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "reported_page_fraction_without_ratings": 0.81,
+      "reported_median_rating_count_by_genre": 0,
+      "purchase_zero_fraction": null,
+      "representative_merchant_census": false
+    },
+    {
+      "id": "the_hive_may_2026",
+      "source_ids": [
+        "hive-payment-update-may-2026",
+        "hive-feature-july-2026"
+      ],
+      "reported_follower_accounts": 213,
+      "reported_page_view_events_approx": 24800,
+      "reported_download_events": 510,
+      "publisher_reported_payment_events": 141,
+      "comparably_attributable_paid_buyers": null,
+      "July_feature_paid_sales_lift": null,
+      "independent_exposure_randomization": false
+    },
+    {
+      "id": "superweird_free_alpha_2026",
+      "source_ids": [
+        "luden-superweird-alpha-feature-2026"
+      ],
+      "reported_frontpage_placement": true,
+      "reported_free_alpha": true,
+      "paid_itch_game_orders": null,
+      "causal_gain_from_placement": null,
+      "existing_external_audience_confounds": true
+    }
+  ],
+  "signal_layers": [
+    {
+      "signal": "public_rating_count_and_rank",
+      "source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study"
+      ],
+      "can_index_reputation": "imperfect_engagement_proxy",
+      "valid_sale_evidence": false
+    },
+    {
+      "signal": "account_follower_count",
+      "source_ids": [
+        "itch-account-followers"
+      ],
+      "can_index_reputation": "account_interest_proxy",
+      "valid_sale_evidence": false
+    },
+    {
+      "signal": "browse_or_featured_placement",
+      "source_ids": [
+        "itch-indexed",
+        "hive-feature-july-2026"
+      ],
+      "can_index_reputation": "selected_visibility_not_random",
+      "valid_sale_evidence": false
+    },
+    {
+      "signal": "project_age_and_previous_portfolio",
+      "source_ids": [
+        "itch-indexed"
+      ],
+      "can_index_reputation": "potential_legacy_and_release_age_confounds",
+      "valid_sale_evidence": false
+    }
+  ],
+  "matched_comparison_requirements": [
+    "fixed_release_age_at_observation",
+    "same_paid_game_type_and_price",
+    "identical_platform_builds_and_language",
+    "same_country_and_referrer_mix",
+    "initial_versus_existing_follower_counts",
+    "historical_game_portfolio_prior_to_launch",
+    "promotion_editorial_placement_measured",
+    "actual_retained_paid_orders_after_refunds",
+    "spend_and_creator_hours",
+    "sample_unfeatured_and_removed_games"
+  ],
+  "unidentified": {
+    "average_incumbent_revenue_advantage": null,
+    "causal_review_to_purchase_effect": null,
+    "causal_follower_to_purchase_effect": null,
+    "representative_new_seller_earnings_gap": null,
+    "percentage_of_first_games_featured": null
+  },
+  "cautions": [
+    "2025 unreviewed ratings are not evidence of zero sales, downloads or profit.",
+    "A selected 2026 publisher's payment event label is not automatically a deduplicated purchaser census.",
+    "Featured placement and outside audiences are selected and concurrent, not randomized.",
+    "Older project pages may have changed builds, genres and metadata without resetting initial publish dates.",
+    "This is evidence of possible reputation and attention mechanisms, not of an observed incumbency payoff."
+  ]
+}

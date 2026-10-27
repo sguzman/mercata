@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "same_period_paid_game_seasonality_identifiability_review",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-halloween-2025-official-schedule",
+    "itch-creator-day-black-friday-2025-official",
+    "itch-summer-sale-2026-official-schedule",
+    "itch-gamedevjs-jam-2026-schedule",
+    "itch-payments"
+  ],
+  "population": "Public 2025–2026 itch.io official promotions and a game-jam calendar",
+  "unit": "Event attendance or promoted listing, not paid-order count",
+  "period": "October 2025 through July 2026, dated windows",
+  "existing_windows_source": "ontology/itch-io/seasonal-jam-sale-cohort-windows-2025-2026.json",
+  "events": [
+    {
+      "id": "halloween_2025",
+      "source_ids": [
+        "itch-halloween-2025-official-schedule"
+      ],
+      "period": "2025-10-28/2025-11-04",
+      "event_type": "platform_promotion",
+      "count_unit": "promoted_game_or_project_page",
+      "paid_orders": null
+    },
+    {
+      "id": "creator_day_2025",
+      "source_ids": [
+        "itch-creator-day-black-friday-2025-official"
+      ],
+      "period": "2025-11-28T08:00Z/2025-11-29T08:00Z",
+      "event_type": "seller_fee_waiver",
+      "count_unit": "policy_hours",
+      "paid_orders": null
+    },
+    {
+      "id": "black_friday_2025",
+      "source_ids": [
+        "itch-creator-day-black-friday-2025-official"
+      ],
+      "period": "2025-11-28/2025-12-03",
+      "event_type": "platform_promotion_overlaps_creator_day",
+      "count_unit": "promoted_project_page",
+      "paid_orders": null
+    },
+    {
+      "id": "gamedevjs_jam_2026",
+      "source_ids": [
+        "itch-gamedevjs-jam-2026-schedule"
+      ],
+      "period": "2026-04-13/2026-04-26",
+      "event_type": "jam_submissions",
+      "count_unit": "submitted_jam_entry_not_released_paid_game",
+      "paid_orders": null
+    },
+    {
+      "id": "summer_sale_2026",
+      "source_ids": [
+        "itch-summer-sale-2026-official-schedule"
+      ],
+      "period": "2026-06-25/2026-07-06",
+      "event_type": "platform_promotion",
+      "count_unit": "promoted_game_or_project_page",
+      "paid_orders": null
+    }
+  ],
+  "matched_cohort_criteria": [
+    "same_price_model_and_minimum",
+    "same_game_or_predeclared_comparable_paid_game_cohort",
+    "identical_source_of_traffic_definitions",
+    "equal_length_pre_during_post_windows",
+    "same_release_age_and_platform_versions",
+    "refund_adjusted_settled_positive_price_orders",
+    "constant_timezone_for_transactions",
+    "creator_day_fee_waiver_as_distinct_treatment",
+    "deduplicate_overlapping_sale_and_jam_memberships",
+    "report_uncertainty_and_missing_market_censoring"
+  ],
+  "comparisons": [
+    {
+      "id": "halloween2025_vs_summer2026",
+      "comparable_as_seasonal_paid_game_sales": false,
+      "reason": "Different calendar years, promotion mechanics and unknown paid-order denominators."
+    },
+    {
+      "id": "creator_day2025_vs_black_friday2025",
+      "comparable_as_independent_events": false,
+      "reason": "Overlapping windows; 24-hour platform fee waiver is not a separate audience."
+    },
+    {
+      "id": "jam2026_vs_summer2026",
+      "comparable_as_paid_sales": false,
+      "reason": "Jam submissions vs promotion pages have different populations; neither measures retained game orders."
+    }
+  ],
+  "conclusion": {
+    "seasonal_pattern": "unknown",
+    "observed_paid_seller_seasonality_lift": null,
+    "observed_paid_order_demand_by_month": null,
+    "matched_paid_game_release_cohort": null,
+    "seasonal_revenue_difference": null,
+    "causal_promotion_effect": null,
+    "seller_account_data_accessed": false
+  },
+  "limits": [
+    "Existing event schedules are verified separately, but no like-for-like paid-game sales observations were established.",
+    "A change in fee retention affects cash per order and cannot alone demonstrate more customers.",
+    "Different source page counts and observed announcement windows cannot be normalized into a 2025–2026 time series.",
+    "Per-event game-page participation is not a commercial publisher, paying human or completed purchase census."
+  ]
+}

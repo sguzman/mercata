@@ -1,0 +1,9 @@
+# Seasonal paid-game demand: explicit unknown after dated event comparison
+
+**Reviewed October 27, 2026.** The existing [source-linked schedule](seasonal-jam-sale-cohort-windows-2025-2026.md) contains the [2025 Halloween sale](https://itch.io/blog/1096153/the-itchio-halloween-sale-2025-is-live), [Creator Day and Black Friday](https://itch.io/blog/1124058/creator-day-black-friday-sales-this-friday), [April 2026 Gamedev.js jam](https://itch.io/jam/gamedevjs-2026), and the [2026 Summer Sale](https://itch.io/blog/1564191/the-itchio-summer-sale-2026-is-live). These records have **different populations, periods and economic mechanisms**.
+
+No reviewed pair yields a like-for-like paid-game demand series: Halloween 2025 and summer 2026 differ in year and offer composition; Black Friday overlaps Creator Day, whose fee-waiver policy affects the *seller share* rather than necessarily increasing orders; a jam-submission count is not a commercial purchase. Some dates are incomplete down to local timezone and should never be silently shifted into comparable daily bins.
+
+The correct **seasonal demand pattern is unknown**, rather than zero or a claimed holiday uplift. To estimate one in a future authorized study, observe the same cohort of genuinely paid games over precommitted equivalent release-age and pre/during/post windows. Normalize timestamps, payment model, discount, referral source and refunds, and deduplicate overlapping event memberships. Compare retained paid orders and proceeds; do not divide announcement participation counts.
+
+The baseline task expressly accepts comparison of like periods **or marking the pattern unknown**. This audit completes that evidence classification, not a claim that a seasonal effect was measured. [Machine review](seasonality-evidence-acceptance-oct2026.json).
