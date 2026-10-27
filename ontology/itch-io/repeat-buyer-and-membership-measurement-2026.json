@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "unexecuted_repeat_purchase_and_external_membership_measurement_protocol",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-account-followers",
+    "itch-july-2026-changelog",
+    "itch-buying-flow",
+    "itch-download-keys",
+    "itch-payments",
+    "itch-serverside-api-reference"
+  ],
+  "population": "Consented cohorts of eligible buyers of the same seller's positively priced games; optional separate cohorts of external Patreon members",
+  "sampling_frame": "An authorized seller's complete eligible retained order history, including one-order and non-returning customers; external membership data needs a separately authorized cohort",
+  "analysis_unit": "consented deduplicated buyer entity inside a protected seller-side environment; publish aggregate cells only",
+  "currency": "original_transaction_currency_with_explicit_conversion_if_required",
+  "time_basis": "UTC_order_settlement_date_with_fixed_horizon_and_censoring_status",
+  "horizons_days": [
+    30,
+    90,
+    365
+  ],
+  "definitions": [
+    {
+      "id": "first_paid_order",
+      "population": "eligible_first_time_paid_game_customers",
+      "numerator": "one_or_more_retained_positive_price_game_orders_in_first_cohort_window",
+      "denominator": "all_eligible_deduplicated_paying_customers_in_cohort",
+      "required_private_linkage": "seller_authorized_buyer_linkage",
+      "sale_not_key_claim": true
+    },
+    {
+      "id": "repeat_paid_customer",
+      "population": "first_paid_order_cohort_with_full_followup",
+      "numerator": "members_who_settled_at_least_one_later_eligible_positive_price_order_by_end_of_horizon",
+      "denominator": "all_first_paid_order_customers_eligible_for_full_horizon",
+      "required_private_linkage": "seller_authorized_buyer_linkage",
+      "sale_not_key_claim": true
+    },
+    {
+      "id": "repeat_paid_orders",
+      "population": "same_authorized_publisher_game_portfolio",
+      "numerator": "retained_eligible_positive_price_orders_after_each_buyers_first_paid_order",
+      "denominator": "all_eligible_retained_positive_price_game_orders_during_aligned_window",
+      "required_private_linkage": "seller_authorized_buyer_linkage",
+      "sale_not_key_claim": true
+    },
+    {
+      "id": "first_to_second_purchase_time",
+      "population": "first_paid_order_cohort",
+      "numerator": "days_between_first_and_second_eligible_retained_paid_order_for_returners",
+      "denominator": "censored_at_horizon_for_nonreturners",
+      "required_private_linkage": "seller_authorized_buyer_linkage",
+      "sale_not_key_claim": true
+    },
+    {
+      "id": "external_patreon_renewal_rate",
+      "population": "separately_consenting_external_patreon_paying_members",
+      "numerator": "paid_membership_renewals_within_contractually_defined_period",
+      "denominator": "members_due_for_renewal_in_same_period",
+      "required_private_linkage": "external_platform_aggregate_with_permission",
+      "sale_not_key_claim": true
+    },
+    {
+      "id": "external_patreon_churn_rate",
+      "population": "eligible_external_patreon_paying_members",
+      "numerator": "members_with_paid_access_ended_and_not_renewed_by_end_of_grace_period",
+      "denominator": "paid_members_at_risk_of_renewal_at_period_start",
+      "required_private_linkage": "external_platform_aggregate_with_permission",
+      "sale_not_key_claim": true
+    }
+  ],
+  "routes": [
+    {
+      "id": "native_itch_positive_price_game",
+      "money_flow": "native_game_paid_orders",
+      "paid_order_possible": true,
+      "renewal_automatic": false,
+      "contribution_to_game_repeat_purchase": "after_second_retained_order_only",
+      "source_ids": [
+        "itch-payments",
+        "itch-buying-flow"
+      ]
+    },
+    {
+      "id": "itch_free_browser_or_download",
+      "money_flow": "none_without_optional_donation",
+      "paid_order_possible": false,
+      "renewal_automatic": false,
+      "contribution_to_game_repeat_purchase": "never_count_free_events",
+      "source_ids": [
+        "itch-buying-flow"
+      ]
+    },
+    {
+      "id": "itch_game_download_key_or_bundle_claim",
+      "money_flow": "entitlement_not_necessarily_a_new_sale",
+      "paid_order_possible": false,
+      "renewal_automatic": false,
+      "contribution_to_game_repeat_purchase": "cannot_count_key_issuance_as_second_paid_order",
+      "source_ids": [
+        "itch-download-keys",
+        "itch-serverside-api-reference"
+      ]
+    },
+    {
+      "id": "itch_followers",
+      "money_flow": "attention_or_notifications_not_receipts",
+      "paid_order_possible": false,
+      "renewal_automatic": false,
+      "contribution_to_game_repeat_purchase": "never_count_follower_count_as_buyers",
+      "source_ids": [
+        "itch-account-followers"
+      ]
+    },
+    {
+      "id": "patreon_tier_access_via_itch",
+      "money_flow": "external_patreon_membership_not_native_game_purchase",
+      "paid_order_possible": false,
+      "renewal_automatic": false,
+      "contribution_to_game_repeat_purchase": "membership_key_claim_not_game_sale",
+      "source_ids": [
+        "itch-july-2026-changelog",
+        "itch-download-keys"
+      ]
+    }
+  ],
+  "cohort_rules": [
+    "Define the publisher portfolio and whether multiple game titles are eligible; exclude non-game assets unless separate report.",
+    "Fix initial paid settlement date, retain partial/fully refunded distinctions, and treat reversals before counting a retained order.",
+    "At 30/90/365 days report full follow-up, right-censored and lost-account records separately, never classify an unobservable later purchase as confirmed never-return.",
+    "Distinct retained orders are not distinct buyers; deduplicate only with authorization in private seller-side environment, then release disclosure-safe aggregates.",
+    "Exclude gifted keys, bundle claims, free downloads and merely activated Patreon entitlements from second paid orders.",
+    "Do not use marketing source or follower conversion without aligned campaign cohorts and a defensible comparison.",
+    "Measure external Patreon renewal/churn using that platform's own data and term lengths; never infer this from itch.io key issuance or revocation.",
+    "For churn, define cancellation effective at paid-period end and grace period, not the date a cancellation action was requested.",
+    "Segment first-time vs multi-title past customers with pre-cohort purchases when permitted; if historic coverage incomplete declare left-censoring.",
+    "Report attribution, customer privacy, commercial paid order eligibility, period, refund basis, fees, country and selection bias."
+  ],
+  "privacy": {
+    "raw_buyer_identifiers_published": false,
+    "raw_buyer_identifiers_collected_for_this_study": false,
+    "owner_authorized_summary_required": true,
+    "private_environment_deduplication_not_performed": true,
+    "cross_platform_person_level_joining_performed": false,
+    "publish_only_aggregate_counts_with_small_cell_suppression": true
+  },
+  "experiment_limits": {
+    "launched": false,
+    "seller_account_accessed": false,
+    "paid_campaign_run": false,
+    "marketing_cash_spent": null,
+    "labor_hours_observed": null,
+    "causal_repurchase_effect": null
+  },
+  "unknown": {
+    "initial_paid_buyer_cohort": null,
+    "eligible_return_customer_count": null,
+    "repeat_paid_orders": null,
+    "repeat_customer_rate": null,
+    "paid_game_customer_churn_rate": null,
+    "patreon_membership_renewal_rate": null,
+    "patreon_membership_churn_rate": null,
+    "refund_adjusted_net_repeat_proceeds": null
+  },
+  "limitations": [
+    "Published site follower totals and creator updates do not reveal buyer identity, first purchase, repeat buyer count, or paid demand.",
+    "External Patreon tier eligibility provides access keys at claim time, but such entitlements do not measure native itch.io paid orders or membership renewal.",
+    "An eligible customer at 30 days is not automatically in the 365-day cohort; include right-censoring in long windows.",
+    "Game key claims, copies owned and billing renewals are three distinct event classes.",
+    "Absent consented merchant transaction and external membership aggregates, all actual repeat demand and churn estimates stay unknown."
+  ]
+}
