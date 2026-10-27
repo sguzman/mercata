@@ -2242,6 +2242,28 @@
       "evidence_class": "public_developer_deployment_maintenance_self_report",
       "license": "Brief developer-supplied operational numbers summarized independently with a public citation; no source text, screenshots, or private work logs republished.",
       "notes": "One developer estimated a few hours per manual multiversion release and roughly two minutes for the Godot export stage after scripting deployment; no controlled same-workflow before/after timing, total automated upload duration, labor cost, game revenue or representative population. Steam deployment described as prospective, not verified in 2022."
+    },
+    {
+      "id": "nobody-leaves-oct2026-first-game-zero-orders",
+      "url": "https://itch.io/t/7220162/nobody-leaves-700-impressions-under-1-click-0-sales-what-makes-you-skip-it",
+      "title": "Nobody Leaves: 700 impressions, under 1% click, 0 sales. What makes you skip it?",
+      "publisher": "pallavi_sahoo, self-reporting Nobody Leaves developer in itch.io feedback forum",
+      "published_at": "2026-10-25",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "self_reported_early_positive_price_game_orders_and_rank_impression_events",
+      "license": "Independently paraphrased short public numerical facts and source link; no forum replies, images or customer information republished.",
+      "notes": "Author reports team of two, first game, approximate 700 itch listing impressions over an unspecified 'this week' window, under 1% clicks and no purchases by October 25. No export, verified transaction ledger, unique-impression users, precisely matched clocks, or later status. Author describes launched two days earlier, while game page lists publication October 24; retain inconsistency."
+    },
+    {
+      "id": "nobody-leaves-oct2026-positive-price-game-page",
+      "url": "https://pallavi-sahoo.itch.io/nobody-leaves",
+      "title": "Nobody Leaves paid 2D game page and playable browser preview",
+      "publisher": "pallavi_sahoo, itch.io listed game publisher",
+      "published_at": "2026-10-24",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "creator_controlled_positive_minimum_price_2d_game_listing",
+      "license": "Public page metadata and price independently described with outbound link; no artwork, game executable or page text reproduced.",
+      "notes": "Public listing identifies a 2D pixel-art puzzle/horror game, Oct 24 14:00 UTC publication, seven browser demo rooms, full downloadable game for Linux/Windows/macOS/Android, promotional minimum $1.99 vs regular $3.99. Does not provide audited sale counts or historical checkout configuration."
     }
   ],
   "claims": [
@@ -7171,6 +7193,28 @@
       "confidence": "moderate",
       "observed_at": "2026-10-27",
       "limitations": "One voluntary qualitative estimate, two-minute measurement applies to export only rather than entire deployment; no precise prior hours, multiple samples, actual developer wage, or controlled comparison. Steam sale channel was prospective."
+    },
+    {
+      "id": "nobody-leaves-2026-first-paid-2d-early-zero-sales",
+      "text": "In an October 25 2026 first-game launch forum post, a two-person pixel-art horror publisher reported no sales, about 700 itch.io listing impressions, and under 1% listing clicks, while the linked game page carried a $1.99 introductory minimum price for full downloads.",
+      "source_ids": [
+        "nobody-leaves-oct2026-first-game-zero-orders",
+        "nobody-leaves-oct2026-positive-price-game-page"
+      ],
+      "confidence": "moderate",
+      "observed_at": "2026-10-27",
+      "limitations": "Single seller self-report within an early and incompletely matched time window; reported zero orders was not verified with merchant or bank records. Impression events, clicks, demo plays, page visitors and positive-price orders must not be pooled."
+    },
+    {
+      "id": "nobody-leaves-2026-publication-window-conflict",
+      "text": "The public Nobody Leaves listing displays first publication October 24, 2026 at 14:00 UTC, whereas the author referred to launching 'two days ago' in an October 25 at 13:14 UTC post; the reported observation windows are not independently synchronized.",
+      "source_ids": [
+        "nobody-leaves-oct2026-first-game-zero-orders",
+        "nobody-leaves-oct2026-positive-price-game-page"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Public listing's timestamp and forum-post clock are externally visible but may represent different release activities; the exact start and end of the roughly 700 listing impressions were not disclosed."
     }
   ],
   "observations": [
