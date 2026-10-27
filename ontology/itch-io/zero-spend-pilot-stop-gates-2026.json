@@ -47,7 +47,10 @@
     "stop_on_rights_payment_or_data_permission_failure",
     "do_not_reclassify_free_demo_plays_as_sales",
     "do_not_claim_income_or_profit_from_click_counts",
-    "incomplete_or_low_sample_is_inconclusive_not_market_failure"
+    "incomplete_or_low_sample_is_inconclusive_not_market_failure",
+    "Evidence thresholds, positive work-minute cap and calendar-day cap must be strictly greater than zero; zero is not an evaluable sample.",
+    "A zero-dollar approved cash cap permits only no-spend work, while a positive cash cap blocks new work when reached.",
+    "Exact exhaustion of a labor-minute or calendar-day limit stops further trial execution, even before it is exceeded."
   ],
   "gate_event_classes": [
     "cash_cap_exceeded",

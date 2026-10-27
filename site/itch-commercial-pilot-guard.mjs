@@ -11,7 +11,7 @@ export function evaluateItchPilotGate(input = {}) {
  if (!approved) return {decision:'blocked_unapproved',canExecute:false,issues:['No owner authorization: external cash and commercial execution remain capped at zero'],maxUnapprovedExternalCashUsd:0,maxUnapprovedCommercialMinutes:0,successClaimPermitted:false,observedMarketIncome:null};
  if (!truth(caps) || !truth(actual) || !truth(checks)) return {decision:'blocked_incomplete',canExecute:false,issues:['Explicit caps, observations and legal/technical checks required'],successClaimPermitted:false,observedMarketIncome:null};
  for(const field of ['externalCashUsd','creatorMinutes','calendarDays','minPageViewEvents','minRetainedOrderEvents']) {
-   if (!natural(caps[field]) && !(field === 'externalCashUsd' && finite(caps[field]))) issues.push('Missing or invalid owner-approved cap: '+field);
+   if (!(field === 'externalCashUsd' ? finite(caps[field]) : natural(caps[field]) && caps[field] > 0)) issues.push('Missing or invalid owner-approved cap: '+field);
  }
  for(const field of ['externalCashUsd','creatorMinutes','elapsedDays','eligiblePageViewEvents','paidOrders','refundedOrders']) {
    if (!natural(actual[field]) && !(field === 'externalCashUsd' && finite(actual[field]))) issues.push('Missing or invalid logged observation: '+field);
@@ -19,9 +19,9 @@ export function evaluateItchPilotGate(input = {}) {
  for (const field of required) if (checks[field] !== true) issues.push('Missing legal or technical preflight: '+field);
  if (issues.length) return {decision:'blocked_incomplete',canExecute:false,issues,successClaimPermitted:false,observedMarketIncome:null};
  const breaches=[];
- if (actual.externalCashUsd > caps.externalCashUsd) breaches.push('Cash cap reached or exceeded');
- if (actual.creatorMinutes > caps.creatorMinutes) breaches.push('Labor minutes cap exceeded');
- if (actual.elapsedDays > caps.calendarDays) breaches.push('Elapsed calendar cap exceeded');
+ if (actual.externalCashUsd > caps.externalCashUsd || (caps.externalCashUsd > 0 && actual.externalCashUsd >= caps.externalCashUsd)) breaches.push('Positive cash cap reached or zero-cash cap breached');
+ if (actual.creatorMinutes >= caps.creatorMinutes) breaches.push('Labor minutes cap reached');
+ if (actual.elapsedDays >= caps.calendarDays) breaches.push('Elapsed calendar cap reached');
  if (actual.refundedOrders > actual.paidOrders) breaches.push('Refunds exceed observed paid orders');
  if (breaches.length) return {decision:'stop',canExecute:false,issues:breaches,successClaimPermitted:false,observedMarketIncome:null};
  const retained=actual.paidOrders-actual.refundedOrders;

@@ -38,3 +38,27 @@ test('Source-gated policy may close risk documentation but not assert owner-appr
  assert(g.percent<100);assert.equal(g.status,'in_progress');
  for(const t of [r,g])for(const f of ['ontology/itch-io/zero-spend-pilot-stop-gates-2026.json','ontology/itch-io/zero-spend-pilot-stop-gates-2026.md','site/itch-commercial-pilot-guard.mjs','tests/itch-commercial-pilot-guard.test.mjs'])assert(t.evidence.includes(f));
 });
+
+test('A fully consumed positive cash, labor or calendar cap stops before further execution',()=>{
+ const cases=[
+  {...actual,externalCashUsd:caps.externalCashUsd},
+  {...actual,creatorMinutes:caps.creatorMinutes},
+  {...actual,elapsedDays:caps.calendarDays}
+ ];
+ for(const used of cases){
+  const result=evaluateItchPilotGate({ownerApproval:true,caps,actual:used,checks});
+  assert.equal(result.decision,'stop');assert.equal(result.canExecute,false);
+ }
+});
+test('Explicit zero-cash pilot may do authorized no-spend work but cannot spend a cent',()=>{
+ const zeroCashCaps={...caps,externalCashUsd:0};
+ assert.equal(evaluateItchPilotGate({ownerApproval:true,caps:zeroCashCaps,actual:{...actual,externalCashUsd:0},checks}).canExecute,true);
+ assert.equal(evaluateItchPilotGate({ownerApproval:true,caps:zeroCashCaps,actual:{...actual,externalCashUsd:0.01},checks}).decision,'stop');
+});
+test('Zero evidence thresholds, zero labor allocation or zero calendar days cannot authorize execution',()=>{
+ for(const field of ['creatorMinutes','calendarDays','minPageViewEvents','minRetainedOrderEvents']){
+  const result=evaluateItchPilotGate({ownerApproval:true,caps:{...caps,[field]:0},actual,checks});
+  assert.equal(result.decision,'blocked_incomplete',field);
+  assert.equal(result.canExecute,false,field);
+ }
+});
