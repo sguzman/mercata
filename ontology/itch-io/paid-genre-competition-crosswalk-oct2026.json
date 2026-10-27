@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "paid_game_genre_and_2d_nonexclusive_browse_supply_crosswalk",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-browse-paid-2d",
+    "itch-genre-puzzle-paid",
+    "itch-genre-rpg-paid-oct2026",
+    "itch-genre-visual-novel-paid-oct2026",
+    "indiegameinsights-itch-2025-genre-rating-study"
+  ],
+  "population": "Public Paid-filter indexed game directory listings; not distinct people, sellers or paid orders",
+  "unit": "Display result count per self-described genre or tag",
+  "observations": [
+    {
+      "id": "2d",
+      "type": "tag",
+      "source_id": "itch-browse-paid-2d",
+      "url": "https://itch.io/games/store/tag-2d",
+      "value": 12691,
+      "observation_context": "Existing repository October 26 snapshot",
+      "paid_orders": null
+    },
+    {
+      "id": "rpg",
+      "type": "genre",
+      "source_id": "itch-genre-rpg-paid-oct2026",
+      "url": "https://itch.io/games/genre-rpg/store",
+      "value": 4196,
+      "observation_context": "October 27 retrieval of approximately week-cached page",
+      "paid_orders": null
+    },
+    {
+      "id": "puzzle",
+      "type": "genre",
+      "source_id": "itch-genre-puzzle-paid",
+      "url": "https://itch.io/games/genre-puzzle/store",
+      "value": 7485,
+      "earlier_2026_10_26_count": 7456,
+      "observation_context": "October 27 retrieval of approximately week-cached page; incompatible with earlier capture as growth measure",
+      "paid_orders": null
+    },
+    {
+      "id": "visual_novel",
+      "type": "genre",
+      "source_id": "itch-genre-visual-novel-paid-oct2026",
+      "url": "https://itch.io/games/genre-visual-novel/store",
+      "value": 2458,
+      "observation_context": "October 27 retrieval of approximately five-day-cached page",
+      "paid_orders": null
+    }
+  ],
+  "comparability": {
+    "all_paid_filter": true,
+    "genre_and_tag_same_axis": false,
+    "same_capture_clock": false,
+    "mutually_exclusive": false,
+    "may_include_discounts_to_zero": true,
+    "may_include_paid_DLC": true,
+    "counts_are_verified_sales": false,
+    "overlap_adjusted_unique_offers": null,
+    "genre_income_ranking": null
+  },
+  "required_rival_controls": [
+    "independent_paid_full_game_versus_DLC",
+    "gameplay_and_platform",
+    "market_language",
+    "release_date_vs_updated_build",
+    "listed_price_and_discount_window",
+    "existing_follower_audience",
+    "actual_settled_orders",
+    "production_and_support_costs"
+  ],
+  "limits": [
+    "Directory result counts may reflect cached content, distinct collection dates and indexing rules.",
+    "The earlier puzzle value 7,456 and later seen 7,485 are preserved separately; no synchronized change estimate is possible.",
+    "One project may match multiple genres and tags; do not add the four rows.",
+    "A positive-price listing is not verified to have any sales.",
+    "The independent 2025 rating-attention study cannot convert ratings or genre shares into buyer demand or seller profit."
+  ],
+  "unknown": {
+    "genre_purchasers": null,
+    "genre_median_creator_income": null,
+    "genre_profit": null,
+    "unique_publishers_by_genre": null,
+    "zero_sale_fraction": null,
+    "matched_conversion": null
+  }
+}
