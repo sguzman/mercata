@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "six_dimension_official_game_page_quality_comparison",
+  "reviewed_at": "2026-10-27",
+  "population": "Creator documentation, not player trial outcomes",
+  "unit": "Page/media/classification quality dimension",
+  "period": "Official docs checked 2026-10-27",
+  "sample_frame": "Official start, page design, quality and indexing guidelines plus accessibility standards",
+  "source_ids": [
+    "itch-started",
+    "itch-quality",
+    "itch-design",
+    "itch-indexed",
+    "game-accessibility-guidelines-basic"
+  ],
+  "dimensions": [
+    {
+      "id": "cover",
+      "standard": "Cover required for indexing; 315:250 aspect recommendation",
+      "source_ids": [
+        "itch-started",
+        "itch-indexed"
+      ],
+      "real_checkout_uplift": null
+    },
+    {
+      "id": "screenshots",
+      "standard": "3–5 suggested; truthful game visuals; exception for text-only projects",
+      "source_ids": [
+        "itch-started",
+        "itch-quality"
+      ],
+      "real_checkout_uplift": null
+    },
+    {
+      "id": "trailer",
+      "standard": "Optional page media video support, not a universal mandate",
+      "source_ids": [
+        "itch-design"
+      ],
+      "real_checkout_uplift": null
+    },
+    {
+      "id": "description",
+      "standard": "Relevant game mechanics, supported controls, status, specs, credits and contact information",
+      "source_ids": [
+        "itch-design"
+      ],
+      "real_checkout_uplift": null
+    },
+    {
+      "id": "tags",
+      "standard": "Up to ten truthful tags; only tested platforms and genuine translations",
+      "source_ids": [
+        "itch-started",
+        "itch-quality"
+      ],
+      "real_checkout_uplift": null
+    },
+    {
+      "id": "accessibility",
+      "standard": "Accurate input and accessibility metadata with appropriate real game tests",
+      "source_ids": [
+        "itch-indexed",
+        "game-accessibility-guidelines-basic"
+      ],
+      "real_checkout_uplift": null
+    }
+  ],
+  "measurement_controls": [
+    "same_game_and_build",
+    "same_price_and_discount",
+    "identical_audience_and_window",
+    "one_primary_creative_change",
+    "independent_owner_verified_sales",
+    "separate_ctr_from_paid_orders"
+  ],
+  "existing_offline_validator": "site/itch-creative-comparison.mjs",
+  "unknown": {
+    "actual_sales_lift": null,
+    "real_accessibility_certification": null,
+    "game_page_variants_executed": null,
+    "profit_effect": null
+  },
+  "limits": [
+    "Good page design is not a paid-order uplift experiment.",
+    "Screenshots and video are not universally mandatory.",
+    "No seller dashboards, private buyers or actual game execution observed."
+  ]
+}

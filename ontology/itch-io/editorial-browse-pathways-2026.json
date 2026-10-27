@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "documented_editorial_and_algorithmic_discovery_mechanisms",
+  "reviewed_at": "2026-10-27",
+  "population": "Public itch.io creator pages and selected game feed, not a paid buyer/seller census",
+  "unit": "Documented opportunity or surface exposure, not a sale",
+  "period": "Official docs checked 2026-10-27; public 2018 analytics description and 2026 feed sample",
+  "sample_frame": "Official creator guidance and existing independent feed tracking",
+  "source_ids": [
+    "itch-indexed",
+    "itch-quality",
+    "itch-design",
+    "itch-analytics-2018",
+    "itch-account-followers",
+    "pelipulssi-feed-study-2026"
+  ],
+  "mechanisms": [
+    {
+      "id": "initial_recent",
+      "evidence": "Initial publication date and eligibility; re-upload does not reset publish date",
+      "sources": [
+        "itch-indexed",
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "search_title",
+      "evidence": "Direct-title search prioritized; description/body terms are not unrestricted topic-search inputs",
+      "sources": [
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "browse_categories",
+      "evidence": "Truthful genre, accessibility, language, platform and tags control eligible browse subsets",
+      "sources": [
+        "itch-indexed",
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "engagement_and_following",
+      "evidence": "Legitimate user interaction, collections, follows and devlogs may influence exposure, without published weights",
+      "sources": [
+        "itch-indexed",
+        "itch-account-followers"
+      ]
+    },
+    {
+      "id": "staff_feature",
+      "evidence": "Page design guide describes qualitative editorial preference for custom, thoughtful page themes",
+      "sources": [
+        "itch-design"
+      ]
+    },
+    {
+      "id": "separate_analytics",
+      "evidence": "Historical impression and CTR reports capture exposure and clicks, not orders",
+      "sources": [
+        "itch-analytics-2018"
+      ]
+    }
+  ],
+  "independent_feed_sample": {
+    "source_id": "pelipulssi-feed-study-2026",
+    "first_seen_games": 118017,
+    "ever_featured_games": 2477,
+    "random_sample": false,
+    "representative_paid_sellers": false
+  },
+  "unknown": {
+    "ranking_weights": null,
+    "staff_selection_likelihood": null,
+    "paid_order_lift": null,
+    "current_analytics_window": null,
+    "editorial_feature_profit": null
+  },
+  "limits": [
+    "No paid-order attribution or randomized feature allocation observed.",
+    "Feed sample is not an all paid-seller population.",
+    "Official browse ranking and staff-selection weights not publicly specified."
+  ]
+}
