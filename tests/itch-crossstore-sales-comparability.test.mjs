@@ -100,6 +100,7 @@ test('Zero-minimum donations and positive-price orders with no gross cash cannot
   [{...a,priceAmount:0,paidOrders:0,grossReceipts:0},'positive minimum price required'],
   [{...a,priceAmount:0,paidOrders:1,grossReceipts:10},'positive minimum price required'],
   [{...a,paidOrders:1,grossReceipts:0},'positive paid orders require positive gross receipts'],
+  [{...a,paidOrders:0,grossReceipts:10},'gross paid-game receipts require recorded paid orders'],
  ]){
   const result=pair(fixture);
   assert.equal(result.comparisonReady,false,reason);

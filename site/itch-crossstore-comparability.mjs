@@ -27,6 +27,9 @@ export function assessCrossStoreComparability(a,b){
   // A completed positive-price order cannot contribute zero gross in its own matched ledger.
   if(validCount(rec.paidOrders)&&rec.paidOrders>0&&validNumber(rec.grossReceipts)&&rec.grossReceipts===0)
    issues.push('positive paid orders require positive gross receipts'+where);
+  // Gross receipts for paid-game orders require corresponding counted orders.
+  if(validCount(rec.paidOrders)&&rec.paidOrders===0&&validNumber(rec.grossReceipts)&&rec.grossReceipts>0)
+   issues.push('gross paid-game receipts require recorded paid orders'+where);
   if(!str(rec.priceCurrency)||!/^[A-Z]{3}$/.test(rec.priceCurrency))issues.push('invalid priceCurrency'+where);
   if(!utc(rec.priceWindowStartUTC)||!utc(rec.priceWindowEndUTC)||
      (utc(rec.priceWindowStartUTC)&&utc(rec.priceWindowEndUTC)&&Date.parse(rec.priceWindowStartUTC)>=Date.parse(rec.priceWindowEndUTC)))

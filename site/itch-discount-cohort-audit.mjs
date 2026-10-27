@@ -13,6 +13,7 @@ export function auditItchDiscountCohorts({baseline,fullPrice,discount,checks}={}
  }
  if(fullPrice.start!==discount.start||fullPrice.end!==discount.end)issues.push('Campaign comparison clock differs');
  if(baseline.end>=fullPrice.start)issues.push('Pre-campaign baseline is not prior');
+ if(baseline.discount_percent!==0)issues.push('Pre-campaign baseline must be full price');
  if(fullPrice.discount_percent!==0||discount.discount_percent===0||discount.discount_percent===100)issues.push('Need 0%-price control and positive-price discounted treatment');
  if(!checks||checks.verified_source_attribution!==true||checks.same_refund_definition!==true||checks.same_audience_mix!==true||checks.seller_authorized_aggregates!==true)issues.push('Missing attribution or permission controls');
  const valid=issues.length===0;

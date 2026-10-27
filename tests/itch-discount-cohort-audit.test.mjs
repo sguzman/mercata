@@ -14,6 +14,9 @@ test('Discount cohort rejects free checkout, audience mismatch and late baseline
  assert.equal(auditItchDiscountCohorts({baseline,fullPrice:a,discount:{...b,audience_frame:'other'},checks}).valid,false);
  assert.equal(auditItchDiscountCohorts({baseline:{...baseline,end:'2026-10-05'},fullPrice:a,discount:b,checks}).valid,false);
  assert.equal(auditItchDiscountCohorts({baseline,fullPrice:a,discount:b,checks:{...checks,seller_authorized_aggregates:false}}).valid,false);
+ const reducedBaseline=auditItchDiscountCohorts({baseline:{...baseline,discount_percent:20},fullPrice:a,discount:b,checks});
+ assert.equal(reducedBaseline.valid,false,'A discounted baseline is not full-price demand');
+ assert(reducedBaseline.issues.includes('Pre-campaign baseline must be full price'));
 });
 test('Discount controls accepted as documentation, without real seller outcomes',()=>{
  const x=get('ontology/itch-io/discount-cohort-bounded-comparison-2026.json'),s=get('specimens/itch-io.json'),p=get('plans/itch-io.json');
