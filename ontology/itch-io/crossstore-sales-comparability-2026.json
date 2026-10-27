@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "source_bounded_multipublisher_stores_case_rejection_and_aligned_future_comparison",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-case-hive",
+    "rose-seed-replica-launch-cost-postmortem",
+    "aracore-game-first-five-days-postmortem",
+    "alienmelon-multistore-mar2026",
+    "itch-payments"
+  ],
+  "validator_path": "site/itch-crossstore-comparability.mjs",
+  "population": "independent games distributed on itch.io alone or through multiple storefronts; no representative comparable price-and-sales cohort",
+  "unit": "one game and store over equal product-version, release age, price and accounting windows",
+  "recorded_cases": [
+    {
+      "id": "the_hive",
+      "source_ids": [
+        "itch-case-hive"
+      ],
+      "itch_self_reported_paid_sales": 414,
+      "itch_self_reported_revenue_usd": 706.73,
+      "external_steam_copies_claimed": 113000,
+      "external_steam_copies_audited": false,
+      "same_time_window_verified": false,
+      "same_price_and_edition_verified": false,
+      "incremental_revenue_due_to_crossstore": null
+    },
+    {
+      "id": "rose_seed_replica",
+      "source_ids": [
+        "rose-seed-replica-launch-cost-postmortem"
+      ],
+      "one_week_all_store_units": 130,
+      "one_week_itch_paid_units": 13,
+      "all_store_gross_receipts_eur_approx": 1000,
+      "itch_only_net_receipts_eur": null,
+      "development_hours": null,
+      "all_store_cost_allocation_without_grant_eur_approx": 17000,
+      "same_currency_but_reconciled_store_fee_basis": false
+    },
+    {
+      "id": "aracore",
+      "source_ids": [
+        "aracore-game-first-five-days-postmortem"
+      ],
+      "five_day_all_store_revenue_gbp_approx": 190,
+      "itch_only_sale_count": null,
+      "itch_only_net_receipts_gbp": null,
+      "development_hours_approx": 1500,
+      "store_by_store_cash_profit": null
+    },
+    {
+      "id": "alienmelon_pwyw",
+      "source_ids": [
+        "alienmelon-multistore-mar2026"
+      ],
+      "reported_followup_steam_epic_publication": true,
+      "creator_reported_itch_funded_release": true,
+      "third_party_store_sales": null,
+      "incremental_orders_causally_established": false
+    }
+  ],
+  "comparison_contract": {
+    "required_store_observations": [
+      "same_exact_game_and_build_edition",
+      "same_paid_product_type_and_price_currency",
+      "same_undiscounted_price_or_normalized_actual_revenue_with_explicit_discount",
+      "matched_price_and_release_age_window",
+      "same_merchant_payout_basis_gross_before_tax_or_after_refunds",
+      "aligned_owner_marketing_exposure",
+      "store_specific_gross_orders_refunds_fees_and_actual_cash",
+      "store_specific_porting_qa_and_player_support_hours",
+      "explicit_right_censoring"
+    ],
+    "event_windows_days": [
+      7,
+      30,
+      90,
+      365
+    ],
+    "structural_cautions": [
+      "Store-specific buyer populations and discovery algorithms are inherently different; aligned product outcomes do not prove causal superiority.",
+      "An all-store cumulative total minus one store's sales is not another store's verified net payout if units and fee classes differ.",
+      "Presale wishlists, downloads, key activations and browser plays are not retained paid game orders.",
+      "Earlier/later storefront launches differ in calendar promotions, age and existing earned attention.",
+      "Refund-adjusted income requires merchant owner-authorized transaction and transfer records per store.",
+      "Do not treat cross-store exposure as a fixed audience or assume another storefront adds only new buyers.",
+      "Unreported outside platform share, technical porting, localization and support hours remain unknown and cannot be set to zero."
+    ]
+  },
+  "data_policy": {
+    "accounts_accessed": false,
+    "real_paid_order_rows_collected": false,
+    "private_buyer_identifiers_retained": false,
+    "synthetic_validator_examples_only": true,
+    "actual_store_experiment_performed": false
+  },
+  "unmeasured": {
+    "real_incremental_paid_buyers": null,
+    "incremental_game_sales_attributable_to_second_store": null,
+    "genre_crossstore_median_net_profit": null,
+    "store_specific_customer_overlap": null,
+    "store_specific_full_labor_costs": null,
+    "first_year_retained_paid_orders": null
+  }
+}
