@@ -1692,6 +1692,17 @@
       "evidence_class": "first_party_historic_aggregated_marketplace_payments",
       "license": "Short attributed numeric measures with independently written analysis; original charts and raw transactions not reproduced.",
       "notes": "Historic platformwide purchase/payment reports; product categories mixed and sample transaction counts not disclosed."
+    },
+    {
+      "id": "spiral-atlas-2024-portfolio-payments",
+      "url": "https://spiralatlas.github.io/how-much-i-get-paid-for-my-games-and-game-dev-tools-on-itchio/",
+      "title": "How much I get paid for my games and game dev tools on itchio",
+      "publisher": "Spiral Atlas Games (public creator report)",
+      "published_at": "2024-11-09",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_first_party_mixed_portfolio_financial_disclosure",
+      "license": "Brief public numerical figures with clear attribution and independently authored methodological critique.",
+      "notes": "Heterogeneous lifetime game/tool/media counts, mostly PWYW and separate bundles. Published Perpixeled ratio is internally inconsistent; unique buyers unknown."
     }
   ],
   "claims": [
@@ -5974,6 +5985,46 @@
       "confidence": "medium",
       "observed_at": "2026-10-26",
       "limitations": "Overlapping attribution axes and historic whole-store totals; no per-creator typical earnings or platform 2026 buyer estimates."
+    },
+    {
+      "id": "spiral-atlas-2024-game-downloads-payments",
+      "text": "One 2024 developer cumulative disclosure reports Northanger Abbey at 3779 downloads, 36 payments and USD 339, SOON at 614 downloads, 13 payments and USD 86, and Perpixeled at 181 downloads, six payments and USD 32.",
+      "source_ids": [
+        "spiral-atlas-2024-portfolio-payments"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Voluntary self-report across projects with different release ages, no independently validated unique buyers or retained profit."
+    },
+    {
+      "id": "spiral-atlas-2024-published-ratio-inconsistency",
+      "text": "The Perpixeled row publishes six payments and 181 downloads alongside a 0.3% ratio, whereas the event ratio computes to about 3.31%.",
+      "source_ids": [
+        "spiral-atlas-2024-portfolio-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Arithmetic of event counts is not a matched unique-person conversion rate and the original author warned of potential mistakes."
+    },
+    {
+      "id": "spiral-atlas-2024-paid-assets-multiple-download-events",
+      "text": "The developer describes a paid-only background extension with two paid owner accounts but eight download events.",
+      "source_ids": [
+        "spiral-atlas-2024-portfolio-payments"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Asset purchases rather than mandatory paid game sales; does not reveal buyer identity or platform-wide downloader behavior."
+    },
+    {
+      "id": "spiral-atlas-2024-bundle-distribution-allocations",
+      "text": "The developer reports three independently described bundle allocations of USD 324.25, USD 56.66 and USD 55.15, distinct from item-level pay-what-you-want payments.",
+      "source_ids": [
+        "spiral-atlas-2024-portfolio-payments"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Bundle checkout counts do not identify distinct title-level transactions or profit after costs."
     }
   ],
   "observations": [

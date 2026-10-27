@@ -1,6 +1,6 @@
 # itch.io commercial-game research — evidence synthesis and open gaps
 
-**Snapshot: October 26, 2026.** The specimen has 152 source records and 419 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
+**Snapshot: October 26, 2026.** The specimen has 153 source records and 423 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
 
 The market has **no mandatory fee to list a game**, but publication, indexing and acquiring purchasers are separate. Payments can use configurable platform share and processor charges, and the illustrative $10 buyer payment becomes $8.41 **before** refund, tax, labor or other obligations. The public 1.78 million all-game directory, 49,588 paid-game directory and 12,691 paid-2D filter are counts of **listings**, not distinct active paid publishers or buyers.
 
@@ -58,7 +58,9 @@ A [2022 first-year game report and separate payout](starbase-first-year-payout-r
 
 The [source hierarchy, public-rating bias and missing-publisher review](source-evidence-and-survivorship-boundaries-2026.md) closes three existing methodological tasks, checks source-record provenance and preserves unresolved licensing and representative seller-income limitations.
 
-The [150-source attribution and reuse-note audit](source-reuse-record-completeness-2026.md) verifies published/retrieved date precision and written reuse notes without claiming third-party copyright clearance; the existing source-record task is accepted on that narrow basis.\n\nThe September 2026 first-party jam-host requirements have been recorded in the [jam submission and rights audit](jam-submission-commercial-rights-2026.md), covering deadlines, pricing, required builds, AI disclosure, prior submissions and default creator ownership while keeping any specific post-jam paid-sale right unknown.\n\nThe [first-party historical 2015 payment comparison](pwyw-platform-history-2015.md) distinguishes optional positive tips from no-payment free downloads, without exporting 2015 checkout behavior to the 2026 game-market population.\n\n## Missing evidence required for the goal
+The [150-source attribution and reuse-note audit](source-reuse-record-completeness-2026.md) verifies published/retrieved date precision and written reuse notes without claiming third-party copyright clearance; the existing source-record task is accepted on that narrow basis.\n\nThe September 2026 first-party jam-host requirements have been recorded in the [jam submission and rights audit](jam-submission-commercial-rights-2026.md), covering deadlines, pricing, required builds, AI disclosure, prior submissions and default creator ownership while keeping any specific post-jam paid-sale right unknown.\n\nThe [first-party historical 2015 payment comparison](pwyw-platform-history-2015.md) distinguishes optional positive tips from no-payment free downloads, without exporting 2015 checkout behavior to the 2026 game-market population.\n\nThe [November 2024 mixed-portfolio disclosure](spiral-atlas-portfolio-payments-2024.md) distinguishes cumulative game/demo/tool downloads, payment events and separate bundle allocations and flags an internally inconsistent source ratio. It cannot identify unique buyers or typical paid-game income.
+
+## Missing evidence required for the goal
 
 - **representative paid game median income:** First paid release publisher cohort including zero earners and delisted games; *currently unavailable*
 - **zero sale rate:** All eligible paid-game launches observed at matching 30/90/365-day horizon; *currently unavailable*
