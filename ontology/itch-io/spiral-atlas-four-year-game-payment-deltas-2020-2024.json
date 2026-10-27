@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "same_three_games_two_publisher_cumulative_snapshots",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "spiral-atlas-2020-pwyw-payments",
+    "spiral-atlas-2024-portfolio-payments"
+  ],
+  "snapshots": [
+    {
+      "date": "2020-10-24",
+      "source_ids": [
+        "spiral-atlas-2020-pwyw-payments"
+      ]
+    },
+    {
+      "date": "2024-11-09",
+      "source_ids": [
+        "spiral-atlas-2024-portfolio-payments"
+      ]
+    }
+  ],
+  "num_distinct_publishers": 1,
+  "num_overlap_titles": 3,
+  "title_comparisons": [
+    {
+      "name": "Northanger Abbey: The Game",
+      "units2020": [
+        1848,
+        12,
+        138
+      ],
+      "units2024": [
+        3779,
+        36,
+        339
+      ],
+      "reported_payment_download_percent_2020": 0.6,
+      "reported_payment_download_percent_2024": 0.9,
+      "download_events_change": 1931,
+      "payment_events_change": 24,
+      "reported_revenue_usd_change": 201,
+      "arithmetic_event_ratio_percent_2020": 0.6493506493506493,
+      "arithmetic_event_ratio_percent_2024": 0.9526329716856311,
+      "source_reported_percent_2020_inconsistent": false,
+      "source_reported_percent_2024_inconsistent": false
+    },
+    {
+      "name": "SOON",
+      "units2020": [
+        452,
+        12,
+        81
+      ],
+      "units2024": [
+        614,
+        13,
+        86
+      ],
+      "reported_payment_download_percent_2020": 3,
+      "reported_payment_download_percent_2024": 2,
+      "download_events_change": 162,
+      "payment_events_change": 1,
+      "reported_revenue_usd_change": 5,
+      "arithmetic_event_ratio_percent_2020": 2.6548672566371683,
+      "arithmetic_event_ratio_percent_2024": 2.1172638436482085,
+      "source_reported_percent_2020_inconsistent": false,
+      "source_reported_percent_2024_inconsistent": false
+    },
+    {
+      "name": "Perpixeled",
+      "units2020": [
+        122,
+        6,
+        32
+      ],
+      "units2024": [
+        181,
+        6,
+        32
+      ],
+      "reported_payment_download_percent_2020": 0.5,
+      "reported_payment_download_percent_2024": 0.3,
+      "download_events_change": 59,
+      "payment_events_change": 0,
+      "reported_revenue_usd_change": 0,
+      "arithmetic_event_ratio_percent_2020": 4.918032786885246,
+      "arithmetic_event_ratio_percent_2024": 3.314917127071823,
+      "source_reported_percent_2020_inconsistent": true,
+      "source_reported_percent_2024_inconsistent": true
+    }
+  ],
+  "noncomparable": {
+    "net_profit_after_full_costs": null,
+    "unique_paying_people": null,
+    "paid_only_first_game_cohort": null,
+    "sales_by_calendar_year": null,
+    "genre_wide_income_trend": null,
+    "mandatory_paid_game_market_conversion": null,
+    "comparable_seller_population": null
+  },
+  "known_qualifications": [
+    "These are cumulative snapshots of the same three projects on one creator account, never six independent games or two sampled sellers.",
+    "Observed changes occur between October 2020 and November 2024, not in a single calendar year or uniformly over all four years.",
+    "Game builds, release age and promotions may change; time-specific platform payouts and taxes are not measured.",
+    "Northanger Abbey adds 24 payment events and $201 cumulative reported receipts; SOON adds one payment and $5; Perpixeled adds zero payment events despite 59 further download events.",
+    "The original 2020 Perpixeled ratio labels 6/122 as 0.5%, although the arithmetic event ratio is approximately 4.92%. The 2024 follow-up labels 6/181 as 0.3%, although the arithmetic event ratio is approximately 3.31%.",
+    "No event-to-person linkage can be recovered; payment/download ratios are event ratios, not conversion probabilities for unique buyers."
+  ]
+}

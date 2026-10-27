@@ -1703,6 +1703,17 @@
       "evidence_class": "voluntary_first_party_mixed_portfolio_financial_disclosure",
       "license": "Brief public numerical figures with clear attribution and independently authored methodological critique.",
       "notes": "Heterogeneous lifetime game/tool/media counts, mostly PWYW and separate bundles. Published Perpixeled ratio is internally inconsistent; unique buyers unknown."
+    },
+    {
+      "id": "spiral-atlas-2020-pwyw-payments",
+      "url": "https://spiralatlas.github.io/downloads-versus-payments-on-my-pay-what-you-want-projects/",
+      "title": "Downloads versus payments on my Pay What You Want projects",
+      "publisher": "Spiral Atlas Games (first-party public developer report)",
+      "published_at": "2020-10-24",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "voluntary_first_party_longitudinal_portfolio_financial_snapshot",
+      "license": "Selected public project-level counts attributed with original analysis; no source passages reproduced.",
+      "notes": "Overlaps with November 2024 source under same publisher and titles; never count as second independent seller. 2020 Perpixeled percent incompatible with payment/download count."
     }
   ],
   "claims": [
@@ -6025,6 +6036,38 @@
       "confidence": "medium",
       "observed_at": "2026-10-26",
       "limitations": "Bundle checkout counts do not identify distinct title-level transactions or profit after costs."
+    },
+    {
+      "id": "spiral-atlas-2020-2024-northanger-cumulative-deltas",
+      "text": "The same developer's cumulative Northanger Abbey game records increased from 12 payments and $138 in October 2020 to 36 payments and $339 in November 2024, with 1,931 additional download events.",
+      "source_ids": [
+        "spiral-atlas-2020-pwyw-payments",
+        "spiral-atlas-2024-portfolio-payments"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Self-reported cumulative snapshots, not a calendar-year revenue series, net profit or representative seller cohort."
+    },
+    {
+      "id": "spiral-atlas-2020-2024-game-payment-heterogeneity",
+      "text": "The developer's 2020-2024 SOON counts increased from 12 to 13 payments and $81 to $86, while Perpixeled remained at six payments and $32 despite 59 additional download events.",
+      "source_ids": [
+        "spiral-atlas-2020-pwyw-payments",
+        "spiral-atlas-2024-portfolio-payments"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Same developer, different individual games with unlike age and exposure, no unique-person matching or causal explanation."
+    },
+    {
+      "id": "spiral-atlas-2020-reported-perpixeled-ratio-error",
+      "text": "The developer's October 2020 table labeled six payments out of 122 Perpixeled downloads as 0.5%, whereas event arithmetic is about 4.92%.",
+      "source_ids": [
+        "spiral-atlas-2020-pwyw-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Event arithmetic is not verified unique-person purchase conversion, and source author cautioned that counts were small."
     }
   ],
   "observations": [

@@ -19,3 +19,5 @@ The writer noted potential errors in their ratios. For **Perpixeled**, 6 divided
 The creator explicitly reported **two owner accounts and eight download events** on the paid-only background pack, demonstrating repeated download events rather than eight separate buyers. They also listed three separate bundle allocations of **$324.25**, **$56.66**, and **$55.15**. Those correspond to bundle programs, not independent full-price sales of a specific title.
 
 The products have different ages, business models, audiences and purposes. Bundle allocations and voluntary tips do not establish mandatory-price game units. No owner profit after labor, complete fee/tax series, unique customers, genre-average income, median seller income or platform-wide zero-sale fraction can be recovered. This is one voluntarily published creator case, **not** a representative market survey.
+
+See the [same-creator October 2020 to November 2024 paired game observations](spiral-atlas-four-year-game-payment-deltas-2020-2024.md) for source-verified cumulative changes; these are not independent game-release cohorts.
