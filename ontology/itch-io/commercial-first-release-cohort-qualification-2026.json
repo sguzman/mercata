@@ -35,7 +35,9 @@
   ],
   "code_module": "site/itch-commercial-release-cohorts.mjs",
   "valid_input_policies": [
-    "All dates must be UTC and lie inside ordered declared comparison windows.",
+    "Both first-publication and observation dates must be real calendar UTC timestamps within the predeclared comparison window; original publication must not follow observation.",
+    "A verified first-publication timestamp may precede its later observation timestamp; exact timestamp equality is not required.",
+    "Updates, conversions, resightings and non-game exclusions require verified source evidence before classification.",
     "One project ID per fixed-window cohort snapshot.",
     "History proof must distinguish new publication from later content edits and paid-price conversions.",
     "No interpolation from a rolling last-7-day page result to 7 daily first-time paid game launches.",

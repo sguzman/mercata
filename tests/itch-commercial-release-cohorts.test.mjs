@@ -26,3 +26,27 @@ test('Cohort protocol advances fixed tasks without claiming measured release pop
   for(const f of ['ontology/itch-io/commercial-first-release-cohort-qualification-2026.json','ontology/itch-io/commercial-first-release-cohort-qualification-2026.md','site/itch-commercial-release-cohorts.mjs','tests/itch-commercial-release-cohorts.test.mjs'])assert(t.evidence.includes(f));
  }
 });
+
+test('A release discovered days later in the same fixed cohort is still a first release',()=>{
+ const later={...row('later','2026-10-05T12:00:00Z','first_public'),first_public_utc:'2026-10-02T08:00:00Z'};
+ const res=classifyItchCommercialReleaseCohort([later],win);
+ assert.equal(res.valid,true);assert.equal(res.classification_counts.new_paid,1);
+ assert.equal(res.global_first_time_paid_game_launch_rate,null);
+});
+test('First publications outside the window or after observation cannot count',()=>{
+ const observation='2026-10-05T12:00:00Z';
+ for(const first of ['2026-09-30T23:59:59Z','2026-10-06T12:00:00Z']){
+  const r={...row('a',observation,'first_public'),first_public_utc:first};
+  const result=classifyItchCommercialReleaseCohort([r],win);
+  assert.equal(result.classification_counts.new_paid,0);
+  assert.equal(result.classification_counts.unverified,1);
+ }
+});
+test('Unverified updates and malformed UTC calendar dates never become counted launches',()=>{
+ const unverifiedUpdate={...row('update','2026-10-05T12:00:00Z','update'),source_evidence_verified:false};
+ const res=classifyItchCommercialReleaseCohort([unverifiedUpdate],win);
+ assert.equal(res.classification_counts.updates,0);
+ assert.equal(res.classification_counts.unverified,1);
+ assert.equal(classifyItchCommercialReleaseCohort([row('bad','2026-02-30T00:00:00Z','first_public')],win).valid,false);
+ assert.throws(()=>classifyItchCommercialReleaseCohort([],{startUtc:'2026-02-30T00:00:00Z',endUtc:win.endUtc}),TypeError);
+});
