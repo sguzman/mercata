@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "independent_2026_public_game_feed_feature_selection_incidence_and_rank_persistence",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "pelipulssi-feed-study-2026",
+    "itch-indexed",
+    "itch-analytics-2018"
+  ],
+  "population": "Public games first seen in a third-party sampled feed over 152 days; includes free and paid titles",
+  "unit": "Unique monitored public project identifier ever featured, sampled feature-rank sighting and dated day; never a paid order",
+  "period": "Early January through June 11 2026; published June 12 2026",
+  "sample_frame": "118,017 first-seen public games in Pelipulssi independent periodic feed snapshots",
+  "sample": {
+    "first_seen_games": 118017,
+    "ever_featured_games": 2477,
+    "reported_ever_featured_share_percent": 2.1,
+    "featured_feed_new_entries_since_february": 296,
+    "new_entries_present_at_least_112_days": 8,
+    "entry_followup_period_equal_for_all": false,
+    "all_games_in_sample_have_positive_minimum_price": false,
+    "paid_seller_population_sample": false
+  },
+  "selected_game": {
+    "title": "SuperWEIRD: Idle Automation [Alpha]",
+    "price_model": "free_alpha",
+    "sampled_featured_days": 112,
+    "featured_sightings": 652,
+    "first_recorded_featured_rank": 24,
+    "early_week_average_rank_range": [
+      29,
+      73
+    ],
+    "later_rank_range_approx": [
+      400,
+      1400
+    ],
+    "every_featured_slot_is_top_onscreen": false
+  },
+  "interpretations": [
+    "Observed ever-featured incidence is conditional on the selected monitor frame, not an all-store editorial acceptance rate.",
+    "A selected game's 652 sightings are not a fraction of all game listing impressions; global slot occupancy counts are not known.",
+    "The feature catalog extends below the first viewport; presence in a long catalog is not proof of homepage top-row exposure.",
+    "A game entering in February has more follow-up days than later entries, so the 8 of 296 statistic must not be treated as a representative survival probability.",
+    "Editorial selection and existing audiences confound any observational rank-to-sales comparison."
+  ],
+  "unknown": {
+    "paid_market_feature_acceptance_rate": null,
+    "all_featured_slots_observed": null,
+    "actual_homepage_top_row_time_distribution": null,
+    "publisher_revenue_share_of_featured_games": null,
+    "causal_paid_order_effect": null,
+    "unique_paying_buyers": null
+  },
+  "limitations": [
+    "Page and feed observations are periodic; continuous slot visibility is not directly measured.",
+    "The monitor includes free alpha releases, varied genres, incumbent creators and unverified coverage.",
+    "Rank is not a verified impression to a human and neither rank nor rating proves a paid unit.",
+    "No merchant API, purchase records or personal account data was used."
+  ]
+}
