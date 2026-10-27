@@ -1714,6 +1714,17 @@
       "evidence_class": "voluntary_first_party_longitudinal_portfolio_financial_snapshot",
       "license": "Selected public project-level counts attributed with original analysis; no source passages reproduced.",
       "notes": "Overlaps with November 2024 source under same publisher and titles; never count as second independent seller. 2020 Perpixeled percent incompatible with payment/download count."
+    },
+    {
+      "id": "hive-time-finances-2020",
+      "url": "https://cheesetalks.net/hive-time-finances.php",
+      "title": "Hive Time finances and pay-what-you-want pricing",
+      "publisher": "Cheeseness (Hive Time developer)",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_voluntary_costed_game_financial_postmortem",
+      "license": "Attributed short numerical summaries and independently written accounting and sampling limitations; no original figures or charts reproduced.",
+      "notes": "Covers 2019-12 to 2020-09. Distinguishes AUD costed economic in-kind labor from adjusted cash outlays; USD payment mean, repeated download events, and 815k bundle owners not sold copies."
     }
   ],
   "claims": [
@@ -6068,6 +6079,46 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Event arithmetic is not verified unique-person purchase conversion, and source author cautioned that counts were small."
+    },
+    {
+      "id": "hivetime-2020-cash-vs-economic-cost",
+      "text": "The Hive Time developer's 2020 finances show AUD 25,131.37 of initially costed work and expenditure, of which AUD 20,956.85 was valued in-kind, leaving AUD 4,174.52 adjusted cash costs.",
+      "source_ids": [
+        "hive-time-finances-2020"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Voluntary developer accounting, excludes some overhead and unpaid QA, and cannot be compared with USD receipts without currency conversion."
+    },
+    {
+      "id": "hivetime-2020-update-costs",
+      "text": "For a subsequent update the Hive Time developer calculated AUD 3,910.42 total valued work/expenditure but only AUD 49.58 adjusted direct cash costs after AUD 3,860.84 in-kind deductions.",
+      "source_ids": [
+        "hive-time-finances-2020"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Estimated noncash labor and in-kind values are not settled creator expenses and omitted overhead prevents exact owner profit."
+    },
+    {
+      "id": "hivetime-2020-paid-download-bundle-units",
+      "text": "Hive Time reached 500 standalone paid sale events in July 2020; a later account reported over 40,000 download events and roughly 815,000 separate charity bundle entitlements that were not counted as standalone sales.",
+      "source_ids": [
+        "hive-time-finances-2020"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Download events include updates, bundle owners are not purchases of this game, unique players and 2026 contemporary demand remain unknown."
+    },
+    {
+      "id": "hivetime-2020-hypothetical-download-conversion",
+      "text": "The developer reported a roughly 1.36% ratio of paid events to download events and illustrated a doubled 2.72% ratio by assuming half the downloads represented repeat events; the hypothetical adjustment was not verified.",
+      "source_ids": [
+        "hive-time-finances-2020"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-26",
+      "limitations": "Neither event ratio estimates a true unique-downloader-to-buyer conversion probability or typical paid game sales conversion."
     }
   ],
   "observations": [
