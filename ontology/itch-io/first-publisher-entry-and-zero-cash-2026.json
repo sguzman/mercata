@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "first_game_account_to_free_listing_and_conditional_paid_entry_workflow",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-started",
+    "itch-terms",
+    "itch-faq",
+    "itch-indexed",
+    "itch-payments",
+    "itch-access-control",
+    "itch-pricing",
+    "itch-html5",
+    "itch-quality",
+    "itch-totp-account"
+  ],
+  "population": "first-time itch.io game page publisher, free and commercial checkout modes distinct",
+  "unit": "documented onboarding step or proposed labor-cost record, not observed completed seller signup",
+  "period": "official rules viewed October 26, 2026, no individual seller enrollment performed",
+  "sample_frame": "official service terms, creator getting-started, payments, quality and indexing help",
+  "eligibility": {
+    "account_signup_platform_fee_usd": 0,
+    "free_game_upload_platform_fee_usd": 0,
+    "publisher_age_minimum_if_no_authorized_parental_guardian_consent_years": 18,
+    "under18_publisher_possible_with_legal_consent": true,
+    "minor_personal_seller_approval_verified": null,
+    "requires_rights_to_upload_and_distribute": true,
+    "site_wide_audience_or_follower_minimum_to_create_free_page_documented": false,
+    "paid_mode_country_approval_for_unknown_seller": null,
+    "regional_personal_tax_treatment_verified": null,
+    "source_ids": [
+      "itch-terms",
+      "itch-faq",
+      "itch-started"
+    ]
+  },
+  "free_game_steps": [
+    {
+      "id": 1,
+      "stage": "create_free_account",
+      "required_output": "publisher account with accepted terms",
+      "skills": [
+        "basic_account_security"
+      ],
+      "cash_platform_fee_usd": 0,
+      "source_ids": [
+        "itch-started",
+        "itch-terms"
+      ]
+    },
+    {
+      "id": 2,
+      "stage": "make_build_and_check_rights",
+      "required_output": "playable file or HTML5 build with legally distributable code/art/audio",
+      "skills": [
+        "game_authoring",
+        "file_packaging",
+        "asset_licensing"
+      ],
+      "cash_platform_fee_usd": 0,
+      "source_ids": [
+        "itch-started",
+        "itch-html5",
+        "itch-terms"
+      ]
+    },
+    {
+      "id": 3,
+      "stage": "create_project_page",
+      "required_output": "title, description, accurate category, cover image and supporting screenshots",
+      "skills": [
+        "copywriting",
+        "image_preparation",
+        "metadata"
+      ],
+      "cash_platform_fee_usd": 0,
+      "source_ids": [
+        "itch-started",
+        "itch-quality"
+      ]
+    },
+    {
+      "id": 4,
+      "stage": "set_price_and_visibility",
+      "required_output": "zero mandatory minimum price and correct draft/restricted/public page mode",
+      "skills": [
+        "storefront_configuration"
+      ],
+      "cash_platform_fee_usd": 0,
+      "source_ids": [
+        "itch-pricing",
+        "itch-access-control"
+      ]
+    },
+    {
+      "id": 5,
+      "stage": "verify_file_and_link_access",
+      "required_output": "tested download or play from intended device, with rights and input QA",
+      "skills": [
+        "game_release_QA"
+      ],
+      "cash_platform_fee_usd": 0,
+      "source_ids": [
+        "itch-started",
+        "itch-quality"
+      ]
+    },
+    {
+      "id": 6,
+      "stage": "publish_then_separately_check_indexing",
+      "required_output": "public page and independently evaluated search/browse eligibility",
+      "skills": [
+        "release_ops"
+      ],
+      "cash_platform_fee_usd": 0,
+      "source_ids": [
+        "itch-indexed",
+        "itch-started"
+      ]
+    }
+  ],
+  "commercial_gate_by_mode": [
+    {
+      "id": "direct_to_you",
+      "merchant_of_record": "seller",
+      "setup": "connect each payment processor separately",
+      "identity_and_tax": "satisfy provider-specific identity/business and tax requirements",
+      "geographic_scope": "processor_country_and_currency_settings_conditional",
+      "cash_upfront_fee_usd": null,
+      "seller_bears_chargebacks": true,
+      "after_sale_fees_expected": true,
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "collected_by_itch",
+      "merchant_of_record": "itch_io",
+      "setup": "accept seller terms and complete required tax identity interview",
+      "identity_and_tax": "itch tax interview before payment collection and validation before approved payout",
+      "geographic_scope": "payout_provider_support_local_tax_and_regional_rules_conditional",
+      "cash_upfront_fee_usd": 0,
+      "seller_bears_chargebacks": false,
+      "after_sale_fees_expected": true,
+      "source_ids": [
+        "itch-payments"
+      ]
+    }
+  ],
+  "collected_payout": {
+    "one_time_tax_identity_account_adjustment_usd": 3,
+    "not_separate_upfront_listing_fee": true,
+    "available_balance_minimum_usd": 5,
+    "initial_transaction_wait_days": 7,
+    "staff_review_minimum_days_after_request": 7,
+    "seller_bank_arrival_guaranteed_days": null,
+    "seller_country_or_identification_approved": null,
+    "source_ids": [
+      "itch-payments"
+    ]
+  },
+  "indexing": {
+    "public_page_is_search_indexed_automatically": false,
+    "cover_and_downloadable_or_playable_purchasable_content_required": true,
+    "first_paid_project_may_be_queued_for_manual_review": true,
+    "subscriber_or_follower_minimum_stated_in_official_indexing_rules": false,
+    "actual_moderator_approval": null,
+    "source_ids": [
+      "itch-indexed",
+      "itch-quality"
+    ]
+  },
+  "hypothetical_zero_new_cash_scenario": {
+    "budget_policy": "no new up-front cash spending; no paid release authorization",
+    "preexisting_computer_and_internet": true,
+    "preowned_or_zero_new_cash_legally_licensed_creation_tools": true,
+    "creator_created_or_commercially_permitted_no_charge_assets": true,
+    "game_format": "small singleplayer free_download_or_HTML5_game",
+    "existing_game_build_ready": false,
+    "game_labour_hours_actual": null,
+    "game_labour_value_usd": null,
+    "test_labour_hours_actual": null,
+    "asset_license_compliance_hours_actual": null,
+    "editing_cover_page_hours_actual": null,
+    "indexing_wait_days_actual": null,
+    "cash_listing_charge_usd": 0,
+    "project_completion_time_days_actual": null,
+    "real_game_published": false,
+    "actual_paying_buyers": null,
+    "actual_profit_usd": null
+  },
+  "minimum_effort_register": [
+    {
+      "id": "game_engineering",
+      "measure": "person_hours",
+      "actual": null
+    },
+    {
+      "id": "art_audio_licensing_and_production",
+      "measure": "person_hours_plus_licensing_cash",
+      "actual": null
+    },
+    {
+      "id": "multi_device_QA_and_accessibility",
+      "measure": "person_hours",
+      "actual": null
+    },
+    {
+      "id": "release_metadata_and_marketing",
+      "measure": "person_hours",
+      "actual": null
+    },
+    {
+      "id": "seller_onboarding_and_tax_if_paid",
+      "measure": "person_hours_and_provider_cash_charge",
+      "actual": null
+    },
+    {
+      "id": "postlaunch_support_and_updates",
+      "measure": "person_hours",
+      "actual": null
+    }
+  ],
+  "boundaries": [
+    "A free game page has no mandatory platform listing fee, but this does not mean it had no resource or labor cost.",
+    "Published direct-URL access and Search/Browse indexing are distinct stages and review times can vary.",
+    "Publisher age and legal-consent rules are set by platform terms; actual identity and country provider approval remain unverified.",
+    "Collected payouts incur possible tax identity adjustments, processing deductions, holds, withholding and withdrawal costs, even if no upfront cash is demanded.",
+    "Provider-specific direct checkout eligibility depends on the actual seller's jurisdiction and configuration; no blanket country approval can be inferred from global processor marketing.",
+    "An unsigned or untested build cannot be treated as a real game successfully released.",
+    "No game or store account was operated and no actual first-release labor or first-sale probability was measured."
+  ],
+  "missing_market_data": {
+    "first_release_median_work_hours": null,
+    "first_account_signup_completion_time": null,
+    "first_seller_geographic_eligibility_rate": null,
+    "first_game_independent_approval_time": null,
+    "probability_of_first_paid_sale": null,
+    "real_publisher_cash_costs": null
+  }
+}
