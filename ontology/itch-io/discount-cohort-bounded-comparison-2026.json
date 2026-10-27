@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "seller_authorized_comparable_discount_vs_full_price_event_protocol",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-sale-detail",
+    "itch-pricing",
+    "itch-payments",
+    "itch-analytics-2018",
+    "itch-creator-day-official-2025"
+  ],
+  "population": "Prospective same-priced game seller with comparable full-price and discounted eligible event cohorts; no real seller data",
+  "unit": "Aligned eligible page-view event, paid positive-price order event or refund event; not unique people",
+  "period": "Official sale/payment features current at Oct 27 2026; future predeclared baseline and campaign windows",
+  "sample_frame": "Official creator sale, pricing, payment guidance, 2018 analytics history and 2025 fee-waiver announcement",
+  "design_gates": [
+    "same_game_and_release_build",
+    "same_undiscounted_base_price",
+    "same_positive_price_product_entitlement",
+    "same_currency",
+    "same_referral_and_device_population",
+    "same_calendar_window_for_treatment_and_control",
+    "explicit_earlier_full_price_baseline_window",
+    "same_order_refund_attribution_method",
+    "separate_marketing_labor_and_spend",
+    "seller_authorized_aggregates_only"
+  ],
+  "treatments": [
+    {
+      "id": "control",
+      "discount_percent": 0,
+      "positive_order_possible": true
+    },
+    {
+      "id": "discount",
+      "discount_percent_range": [
+        1,
+        99
+      ],
+      "positive_order_possible": true
+    },
+    {
+      "id": "fully_free",
+      "discount_percent": 100,
+      "positive_order_possible": false
+    },
+    {
+      "id": "platform_fee_waiver",
+      "buyer_price_discount_implied": false,
+      "positive_order_possible": true
+    }
+  ],
+  "existing_unit_cost_sensitivity": "ontology/itch-io/game-sale-discount-compensation-2026.json",
+  "audit_module": "site/itch-discount-cohort-audit.mjs",
+  "observed": {
+    "real_campaigns": 0,
+    "verified_paid_order_effect": null,
+    "actual_marketing_spend": null,
+    "causal_discount_profit_uplift": null,
+    "marketwide_price_elasticity": null
+  },
+  "limits": [
+    "Same calendar times and audience labels do not establish actual randomization or identical individual buyers.",
+    "100% discount acquisitions are not retained positive-price orders.",
+    "Operator-fee waiver changes seller contribution, not necessarily buyer price.",
+    "Historical 2018 exposure reporting is not verified identical in the 2026 dashboard.",
+    "A synthetic audit cannot independently verify seller source records, refunds or causal results."
+  ]
+}

@@ -25,6 +25,6 @@ test('Discount compensation is conditional orders, never observed conversion',()
  const completed=p.detail_tasks.find(t=>t.id==='itch-io/economics/investigate-discount-mechanics');
  assert.equal(completed.percent,100);assert.equal(completed.status,'complete');
  for(const f of ['site/itch-discount-order-threshold.mjs','ontology/itch-io/game-sale-discount-compensation-2026.json','ontology/itch-io/game-sale-discount-compensation-2026.md','tests/itch-discount-order-threshold.test.mjs'])assert(completed.evidence.includes(f));
- assert.equal(p.detail_tasks.find(t=>t.id==='itch-io/sales/study-discount-conversion').percent,94);
+ assert.equal(p.detail_tasks.find(t=>t.id==='itch-io/sales/study-discount-conversion').percent,100);
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
 });
