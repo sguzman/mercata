@@ -18,6 +18,14 @@ The platform says the seller bears responsibility for promised reward fulfillmen
 
 Paid early-access downloads can receive future updates, and preorders may grant entitlement before real deliverable files are made available. A paid checkout at that stage is **not the same as having fulfilled all obligations** of a released game. In any future study, separate buyer-paid transactions from the file or reward delivery process, refund exposure, seller labor and customer support.
 
+## Music and bonus-asset commercial rights
+
+The game upload license and the right to sell a **separate soundtrack download** are not interchangeable. The game publisher needs independently adequate permission for the music composition, recording, cover art, third-party samples, and any other redistributed asset, including whether a collaborator granted separate-download rights. The operator's [terms](https://itch.io/docs/legal/terms) do not themselves grant rights to someone else's music.
+
+Under the [Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/), properly attributed material may be redistributed commercially subject to its conditions. By contrast, [CC Attribution–NonCommercial 4.0](https://creativecommons.org/licenses/by-nc/4.0/) does **not** alone authorize the commercial soundtrack option; separate authorization may be needed. Do not infer a license from an upload tag or the game engine's license. The [component rights inventory](game-component-rights-register-2026.md) holds the evidence fields required before an actual commercial release.
+
+Any attach rate, tip conversion, realized number of soundtrack buyers, incremental payout, asset-production hours and soundtrack profit remain unknown. The **$5 game / $8 soundtrack threshold** in this study is only hypothetical arithmetic, not a tested offer.
+
 ## What would establish profitability?
 
 A representative eligible cohort with actual counts of paid base game orders, soundtrack and bonus tier selections, tips, seller fulfillment and returns, payment deductions, and labor/asset production costs. None of these are established by documentation or a sample price. The [economic break-even worksheet](break-even-scenarios-2026.md) can handle explicit seller cash/labor assumptions but does not forecast demand.

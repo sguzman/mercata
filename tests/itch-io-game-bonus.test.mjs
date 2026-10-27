@@ -33,3 +33,18 @@ test('Documented seller obligations retain unknown net receipts',()=>{
  assert(d.offer_mechanisms.find(x=>x.id==='individual_supplement').raising_minimum_may_revoke_access);
  assert(Object.values(d.unmeasured).every(x=>x===null));
 });
+
+test('Commercial soundtrack release requires asset rights distinct from bonus access',()=>{
+ const d=get('ontology/itch-io/game-bonus-entitlements-2026.json'),s=get('specimens/itch-io.json'),p=get('plans/itch-io.json');
+ const r=d.extra_content_rights_and_economic_units;
+ assert(r.source_ids.every(id=>s.evidence.some(x=>x.id===id)));
+ assert.equal(r.base_game_and_bonus_separate_license_inventory_required,true);
+ assert.equal(r.third_party_CC_BY_4_commercial_distribution_permitted_with_attribution,true);
+ assert.equal(r.third_party_CC_BY_NC_4_commercial_release_permitted_by_license_alone,false);
+ assert.equal(r.actual_soundtrack_rights_audited,false);
+ assert.equal(r.soundtrack_bonus_attach_rate,null);
+ assert.equal(r.incremental_positive_price_orders,null);
+ const task=p.detail_tasks.find(x=>x.id==='itch-io/special-games/study-soundtrack-and-extras');
+ assert.equal(task.percent,100);assert.equal(task.status,'complete');
+ for(const f of ['ontology/itch-io/game-bonus-entitlements-2026.json','ontology/itch-io/game-bonus-entitlements-2026.md','tests/itch-io-game-bonus.test.mjs','ontology/itch-io/game-component-rights-register-2026.json'])assert(task.evidence.includes(f));
+});
