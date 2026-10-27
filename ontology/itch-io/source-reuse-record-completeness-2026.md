@@ -6,9 +6,9 @@ All **212** source records include an attributed public URL, retrieval date, evi
 
 | Publication date precision | Sources |
 |---|---:|
-| Known YYYY-MM-DD | 98 |
+| Known YYYY-MM-DD | 99 |
 | Known month only | 3 |
-| Unverified | 111 |
+| Unverified | 110 |
 | **Total** | **212** |
 
 These metadata demonstrate attributable referencing, **not** general legal authority to republish third-party articles, images, files or datasets. Dynamic catalog indices do not establish paid orders, seller identities, profit or buyer conversion. No account or private buyer data were acquired.
