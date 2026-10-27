@@ -19,6 +19,6 @@ test('Free-game donation deductions reconcile without creating mandatory paid ga
  assert.throws(()=>reconcileVoluntaryGameDonation({...d.model_inputs,donationGrossCents:49.99}),TypeError);
  const done=p.detail_tasks.find(x=>x.id==='itch-io/economics/model-free-plus-donation-flow');assert.equal(done.percent,100);assert.equal(done.status,'complete');
  for(const f of ['ontology/itch-io/voluntary-donation-versus-game-sales-2026.json','ontology/itch-io/voluntary-donation-versus-game-sales-2026.md','site/itch-donation-cash-waterfall.mjs','tests/itch-donation-cash-waterfall.test.mjs'])assert(done.evidence.includes(f));
- const partial=p.detail_tasks.find(x=>x.id==='itch-io/sales/map-store-page-visits-to-purchases');assert.equal(partial.percent,88);
+ const partial=p.detail_tasks.find(x=>x.id==='itch-io/sales/map-store-page-visits-to-purchases');assert.equal(partial.percent,100);
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
 });
