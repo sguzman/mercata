@@ -1,6 +1,6 @@
 // Records real or explicitly hypothetical effort; never predicts unmeasured setup duration.
 export const commonStages=Object.freeze(['account_security','rights_and_build','QA_and_package','store_page','price_and_access','publish_and_check']);
-const extraStages=Object.freeze({free:[],direct:['connect_provider','direct_checkout_checks'],collected:['tax_interview','payout_configuration']});
+export const extraStages=Object.freeze({free:[],direct:['connect_provider','direct_checkout_checks'],collected:['tax_interview','payout_configuration']});
 const money=n=>Math.round((n+Number.EPSILON)*100);
 export function assessFirstPublisherEffort({mode,records=[],hourlyValueUsd=null,readiness={}}={}){
  if(!Object.hasOwn(extraStages,mode)||!Array.isArray(records))throw new TypeError('Mode or records invalid');
