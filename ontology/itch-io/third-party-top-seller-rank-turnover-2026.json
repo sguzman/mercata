@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "independent_rolling_top_seller_position_turnover_not_sales_concentration",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "git-itch-top-seller-ranking-observation-2026",
+    "git-itch-top-seller-archive-2026-10-23",
+    "git-itch-observation-methodology-2026"
+  ],
+  "scope": {
+    "unit": "game_page_ranked_position_at_chart_observation_not_paid_order_or_seller_revenue",
+    "sample": "third_party_repeated_public_itch_io_top_seller_browse_reads",
+    "eligible_population": "all_games_in_tracker_top_sellers_sort_including_free_demos_and_other_games",
+    "currency": null,
+    "market_representative": false,
+    "source_crawl_incomplete_may_bias_rank_visibility": true
+  },
+  "observations": [
+    {
+      "captured_snapshot": "2026-10-23T12:00:00Z",
+      "chart": "itch_top_sellers_all",
+      "distinct_games_ever_in_top100_over_about_30d": 367,
+      "number_of_chart_walks": 182,
+      "seven_day_top100_turnover_fraction": 0.39,
+      "seven_day_comparison_date": "2026-10-16",
+      "ranked_games_in_full_display": null,
+      "paid_units": null,
+      "unique_sellers": null,
+      "read_moment": "monitor_generated_summary_retrieved_on_2026_10_27"
+    },
+    {
+      "captured_snapshot": "2026-10-23T18:00:00Z",
+      "chart": "itch_top_sellers_all",
+      "top100_positions_archived": 100,
+      "ranked_games_in_full_display": 7197,
+      "distinct_games_ever_in_top100_over_about_30d": null,
+      "number_of_chart_walks": null,
+      "seven_day_top100_turnover_fraction": null,
+      "paid_units": null,
+      "unique_sellers": null,
+      "read_moment": "static_dated_archive"
+    }
+  ],
+  "methodology": {
+    "public_itch_position_directly_observed": true,
+    "independent_velocity_formula_not_the_same_as_itch_top_sellers_sort": true,
+    "ranking_period_is_crawl_period_not_transaction_window": true,
+    "watchlist_nonrandom": true,
+    "history_cannot_precede_first_crawl": true,
+    "ranked_page_count_is_not_unique_paid_game_publishers": true,
+    "turnover_does_not_measure_paid_game_sales": true
+  },
+  "missing_economic_outputs": {
+    "actual_top100_gmv_usd": null,
+    "paid_orders_by_rank": null,
+    "top_one_percent_seller_revenue_share": null,
+    "top_ten_percent_seller_revenue_share": null,
+    "zero_earning_paid_game_share": null,
+    "rank_to_revenue_mapping": null,
+    "number_of_distinct_paying_buyers": null
+  },
+  "limitations": [
+    "The monitor reports itch.io's ordering rather than audited commercial sales. The original ranking formula and account-level transaction definitions were not independently verified.",
+    "Top Sellers includes free games, demos, playtests and other priced/zero-price pages; ranking is not limited to a fixed positive-price game cohort.",
+    "367 distinct top-100 appearances are repeated observations of ranked project pages, not 367 independently selling publishers.",
+    "39% seven-day position turnover is not a share of revenue moving to new games and not a calibrated chance that a newly released game enters the top 100.",
+    "The 12:00 UTC dynamic reading and 18:00 UTC dated archive are different observations and may have different ranked inventory counts.",
+    "Site snapshots begin when its monitor started; missed reads and changing criteria cannot be backfilled.",
+    "No paid-sale or publisher-revenue data exists in the cited monitor's public-ranking measurements; monetary concentration remains unknown."
+  ]
+}
