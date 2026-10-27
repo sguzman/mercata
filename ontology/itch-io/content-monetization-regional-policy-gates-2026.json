@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "creator_content_payment_discovery_and_jurisdictional_rule_categories",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-faq",
+    "itch-terms",
+    "itch-quality",
+    "itch-indexed",
+    "itch-payments",
+    "itch-uk-content-geo-access-2025",
+    "itch-nsfw-announcement"
+  ],
+  "population": "public itch.io game publishers and affected projects, subject to currently published terms and dated 2025 incident statements",
+  "unit": "documented content class, marketplace control or dated regulatory change, not observed moderation action",
+  "rules": [
+    {
+      "id": "lawful_fictional_content",
+      "impact": "hosting_normally_possible_if_current_site_terms_and_processor_accept",
+      "operator_monetization_guarantee": false,
+      "source_ids": [
+        "itch-faq",
+        "itch-terms"
+      ]
+    },
+    {
+      "id": "real_person_sexual_material",
+      "impact": "operator_faq_prohibits_human_sexual_photographic_or_video_content",
+      "operator_monetization_guarantee": false,
+      "source_ids": [
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "photoreal_ai_real_person_likeness",
+      "impact": "operator_faq_prohibits_AI_generated_photographic_real_person_sexual_lookalikes",
+      "operator_monetization_guarantee": false,
+      "source_ids": [
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "minor_sexual_exploitation",
+      "impact": "strict_no_hosting_and_account_enforcement",
+      "operator_monetization_guarantee": false,
+      "source_ids": [
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "glorified_sexual_violence",
+      "impact": "operator_faq_prohibits",
+      "operator_monetization_guarantee": false,
+      "source_ids": [
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "rights_violation",
+      "impact": "copyright_or_distribution_ownership_risk_independent_of_content_category",
+      "operator_monetization_guarantee": false,
+      "source_ids": [
+        "itch-terms"
+      ]
+    },
+    {
+      "id": "payment_processor_restriction",
+      "impact": "content_may_be_unmonetizable_despite_general_platform_hosting_status",
+      "operator_monetization_guarantee": false,
+      "source_ids": [
+        "itch-faq",
+        "itch-payments"
+      ]
+    },
+    {
+      "id": "misleading_metadata_and_unnatural_attention",
+      "impact": "quality_rules_may_deindex_or_remove_page",
+      "operator_monetization_guarantee": false,
+      "source_ids": [
+        "itch-quality",
+        "itch-indexed"
+      ]
+    }
+  ],
+  "enforcement_channels": [
+    {
+      "id": "operator_hosting",
+      "possible_action": "content_removed_or_account_suspended",
+      "source_ids": [
+        "itch-faq",
+        "itch-terms"
+      ],
+      "same_as_marketplace_indexing": false
+    },
+    {
+      "id": "search_browse_index",
+      "possible_action": "project_deindexed_but_direct_link_may_remain",
+      "source_ids": [
+        "itch-quality",
+        "itch-indexed"
+      ],
+      "same_as_marketplace_indexing": true
+    },
+    {
+      "id": "payment_mode",
+      "possible_action": "checkout_or_payout_restricted_by_processor_or_tax_eligibility",
+      "source_ids": [
+        "itch-payments",
+        "itch-faq"
+      ],
+      "same_as_marketplace_indexing": false
+    },
+    {
+      "id": "buyer_country",
+      "possible_action": "site_geo_restriction_in_discrete_legal_case",
+      "source_ids": [
+        "itch-uk-content-geo-access-2025"
+      ],
+      "same_as_marketplace_indexing": false
+    }
+  ],
+  "historical_case": {
+    "country": "United Kingdom",
+    "operator_notice_date": "2025-07-27",
+    "focus": "UK_Online_Safety_Act_content_access",
+    "current_october_2026_enforcement_status_independently_verified": null,
+    "some_existing_purchased_entitlements_historically_retained": true,
+    "appeal_route": "project_Geo_Restrictions_control_with_staff_review",
+    "guaranteed_review_success": false,
+    "source_ids": [
+      "itch-uk-content-geo-access-2025"
+    ]
+  },
+  "severity": {
+    "some_named_faq_exploitation_violations_permanent_account_suspension_no_appeal": true,
+    "does_not_imply_every_moderation_event_irreversible": true,
+    "withheld_balance_possible_for_severe_violations": true,
+    "refund_or_lost_earnings_probability_measured": null
+  },
+  "unknown": {
+    "frequency_of_actions": null,
+    "affected_commercial_games": null,
+    "real_paid_seller_account_hold_rate": null,
+    "buyer_country_sales_loss": null,
+    "processor_risk_by_genre": null,
+    "current_UK_geo_acceptance_for_any_sampled_game": null
+  },
+  "measurement_limits": [
+    "Legality in one buyer jurisdiction does not establish acceptable-use approval under every payment processor or the platform.",
+    "Adult metadata rules, removal, Search/Browse deindexing, checkout blocking and buyer geographic restrictions are distinct operational events.",
+    "Permanent no-appeal language in the FAQ applies to named grave rule violations, not every indexing review or takedown.",
+    "The July 2025 UK restriction documents an intervention, not the measured 2026 number of unavailable game pages or lost purchases.",
+    "No creator account, personal information, actual moderation case or earning records were accessed."
+  ]
+}
