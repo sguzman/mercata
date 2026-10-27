@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "selected_single_publisher_itch_2024_mixed_physical_and_digital_payment_reconciliation",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "binary-star-games-2023-mixed-itch-account-receipts",
+    "binary-star-games-2024-physical-digital-itch-receipts"
+  ],
+  "population": {
+    "publisher_accounts": 1,
+    "product_domain": "tabletop_role_playing_games_and_supplements",
+    "reporting_calendar_year": 2024,
+    "reporting_window": "2024-01-01_to_2024-12-31",
+    "currency": "USD",
+    "sample_frame": "voluntary_first_person_publisher_newsletter",
+    "random_sample": false,
+    "verified_complete_platform_market": false,
+    "representative_positive_price_digital_game_sample": false
+  },
+  "itch_account_report_2024": {
+    "gross_usd": 8026.85,
+    "payment_events": 358,
+    "after_platform_share_and_payout_deductions_usd_approx": 6662.29,
+    "after_fee_value_is_bank_settled_cash_verified": false,
+    "year_total_includes_physical_items": true,
+    "game_only_mandatory_price_digital_gross_usd": null,
+    "after_labor_profit_usd": null
+  },
+  "per_title_report_2024": [
+    {
+      "title": "APOCALYPSE FRAME",
+      "physical_gross_usd": 3965,
+      "physical_payment_events": 94,
+      "digital_and_tips_gross_usd": 1243.3,
+      "digital_and_tips_payment_events": 53,
+      "title_total_gross_usd": 5208.3,
+      "title_total_payment_events": 147
+    },
+    {
+      "title": "Valiant Horizon",
+      "physical_gross_usd": 440,
+      "physical_payment_events": 14,
+      "digital_and_tips_gross_usd": 706,
+      "digital_and_tips_payment_events": 33,
+      "title_total_gross_usd": 1146,
+      "title_total_payment_events": 47
+    }
+  ],
+  "arithmetic_reconciliation": {
+    "selected_title_physical_gross_usd": 4405,
+    "selected_title_physical_payment_events": 108,
+    "selected_title_digital_and_tips_gross_usd": 1949.3,
+    "selected_title_digital_and_tips_payment_events": 86,
+    "selected_two_title_gross_usd": 6354.3,
+    "selected_two_title_payment_events": 194,
+    "other_unclassified_itch_gross_usd": 1672.55,
+    "other_unclassified_itch_payment_events": 164,
+    "disclosed_physical_share_of_full_reported_itch_gross_percent_approx": 54.88,
+    "disclosed_physical_share_of_full_reported_itch_payment_events_percent_approx": 30.17,
+    "physical_share_is_lower_bound_if_other_itch_items_may_be_physical": true,
+    "digital_and_tips_are_verified_mandatory_paid_game_orders": false,
+    "after_platform_proceeds_do_not_include_valued_creator_labor": true
+  },
+  "cross_year": {
+    "year_2023": {
+      "source_id": "binary-star-games-2023-mixed-itch-account-receipts",
+      "reported_gross_before_platform_share_usd": 12556.99,
+      "includes_creator_allocated_collaboration_amount_usd": 4605.5,
+      "bundle_revenue_usd": 825.74,
+      "physical_format_reporting_comparable_to_2024": false
+    },
+    "year_2024": {
+      "source_id": "binary-star-games-2024-physical-digital-itch-receipts",
+      "reported_itch_gross_usd": 8026.85,
+      "year_started_selling_reported_physical_editions": true
+    },
+    "same_product_inventory_and_allocation_bases_verified": false,
+    "matching_2023_2024_sales_mix_income_growth_usd": null,
+    "matching_2023_2024_digital_only_growth_percent": null,
+    "seasonal_monthly_revenue_volatility": null
+  },
+  "all_channel_2024_context": {
+    "author_reported_total_business_profit_usd_approx": 4210.94,
+    "profit_is_itch_only": false,
+    "creator_labor_hours": null,
+    "physical_print_cost_assignment_to_specific_orders": null,
+    "payout_fee_rates_per_transaction": null,
+    "bank_receipt_date": null
+  },
+  "unknown": {
+    "marketwide_paid_seller_count": null,
+    "marketwide_paid_game_gmv_usd": null,
+    "median_digital_game_merchant_income_usd": null,
+    "mean_digital_game_merchant_income_usd": null,
+    "unique_digital_game_buyers": null,
+    "refund_adjusted_positive_price_digital_game_orders": null,
+    "digital_game_only_net_profit_usd": null,
+    "matched_year_on_year_positive_price_game_revenue_growth": null,
+    "paid_order_by_genre_usd": null
+  },
+  "limitations": [
+    "Self-published creator financial figures may reflect platform dashboard presentation and author adjustments, not raw merchant or bank records.",
+    "One nonrandom publisher selling physical tabletop RPG editions and various digital works cannot measure all-game or 2D-game seller earnings.",
+    "The two named titles separate physical orders from digital-and-tips; the latter combines purchases with voluntary payments, not necessarily unique eligible paid-game orders.",
+    "Additional unclassified account sales prevent asserting that identified physical orders exhaust every physical order.",
+    "Roughly $6,662.29 is author-estimated post-platform-and-payout proceeds, not after-printing, postage, all taxes, marketing and labor profit.",
+    "The calendar-2023 and calendar-2024 published totals contain different collaborations and format/channel combinations and cannot yield controlled digital-game volatility.",
+    "Publisher business-profit figure spans non-itch channels and costs; do not assign it to the itch-only gross or to one format.",
+    "Missing refunds, cash timing, account ownership allocation and human labor make exact seller economic profit unknown."
+  ]
+}
