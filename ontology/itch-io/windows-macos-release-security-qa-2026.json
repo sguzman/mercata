@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "source_verified_desktop_build_packaging_and_security_QA_requirements",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "microsoft-smartscreen-official-may2026",
+    "apple-macos-notarization-guide-2026",
+    "itch-app-windows-platform",
+    "itch-app-macos-platform",
+    "itch-app-manifest-actions",
+    "butler-overview",
+    "butler-push",
+    "itch-started",
+    "itch-html5"
+  ],
+  "scope": "planned independent-game desktop and browser distribution, no actual build or game submission",
+  "targets": [
+    {
+      "id": "windows_downloadable",
+      "formats": [
+        "zip_with_exe_and_game_assets",
+        "portable_exe_folder",
+        "installer_when_relevant"
+      ],
+      "store_source_ids": [
+        "itch-app-windows-platform",
+        "butler-overview"
+      ],
+      "os_source_ids": [
+        "microsoft-smartscreen-official-may2026"
+      ],
+      "checks": [
+        "exe_architecture_matches_advertised_platform",
+        "required_runtime_dependencies_present",
+        "initial_start_and_quit_on_real_target_Windows_version",
+        "keyboard_controller_audio_video_save_readwrite",
+        "offline_launch_if_claimed",
+        "signing_identity_or_explicit_unsigned_download_handling",
+        "SmartScreen_and_Smart_App_Control_warning_behavior_observed_not_assumed",
+        "versioned_patch_and_rollback_test"
+      ],
+      "publisher_code_signature_mandatory_to_upload": false,
+      "zero_windows_warning_guaranteed": false,
+      "observed_success": null
+    },
+    {
+      "id": "macos_downloadable",
+      "formats": [
+        "app_bundle_with_Info_plist",
+        "zip_with_app_bundle",
+        "dmg_or_installer_when_used"
+      ],
+      "store_source_ids": [
+        "itch-app-macos-platform",
+        "butler-overview"
+      ],
+      "os_source_ids": [
+        "apple-macos-notarization-guide-2026"
+      ],
+      "checks": [
+        "app_bundle_contents_Info_plist_and_executable_permission",
+        "supported_CPU_architecture_and_minimum_OS",
+        "tested_launch_under_Gatekeeper_on_target_macOS",
+        "Developer_ID_signing_and_hardened_runtime_if_distributing_under_signed_notarized_route",
+        "notarytool_submission_and_ticket_stapling_if_applicable",
+        "screen_audio_keyboard_controller_save_reload",
+        "game_path_and_resource_loading_inside_bundle",
+        "versioned_patch_and_restart"
+      ],
+      "notarization_is_game_quality_certification": false,
+      "Apple_Developer_ID_credentials_accessed": false,
+      "observed_success": null
+    },
+    {
+      "id": "linux_downloadable",
+      "formats": [
+        "tar_zip_portable_binary_with_dependencies"
+      ],
+      "store_source_ids": [
+        "butler-overview"
+      ],
+      "os_source_ids": [],
+      "checks": [
+        "executable_permissions",
+        "runtime_dynamic_library_compatibility",
+        "tested_target_distribution",
+        "save_location",
+        "windowing_graphics_audio_input",
+        "install_update_and_rollback"
+      ],
+      "observed_success": null
+    },
+    {
+      "id": "html5_browser",
+      "formats": [
+        "root_index_html",
+        "single_html",
+        "valid_archive"
+      ],
+      "store_source_ids": [
+        "itch-html5"
+      ],
+      "os_source_ids": [],
+      "checks": [
+        "root_index_html_and_referenced_asset_paths",
+        "desktop_and_mobile_input_if_advertised",
+        "audio_unlock_and_save_reload",
+        "page_load_and_fullscreen"
+      ],
+      "observed_success": null
+    }
+  ],
+  "security_reputation": {
+    "windows": {
+      "publisher_signature_reputation_can_accumulate": true,
+      "hash_reputation_can_accumulate": true,
+      "EV_certificate_auto_bypass": false,
+      "unsigned_version_builds_independent_file_hash_reputation": true,
+      "warning_rate_known": null,
+      "source_ids": [
+        "microsoft-smartscreen-official-may2026"
+      ]
+    },
+    "macos": {
+      "Developer_ID_signing_for_standard_external_notarized_route": true,
+      "hardened_runtime_for_notarization": true,
+      "notarytool_used_instead_of_obsolete_altool": true,
+      "notary_ticket_may_be_stapled": true,
+      "Gatekeeper_on_launch_must_be_tested": true,
+      "Apple_app_review_equivalent": false,
+      "source_ids": [
+        "apple-macos-notarization-guide-2026"
+      ]
+    }
+  },
+  "distribution": {
+    "itch_supports_versioned_channels": true,
+    "butler_game_update_possible": true,
+    "uploading_archive_is_not_test_of_game_executable": true,
+    "source_ids": [
+      "butler-overview",
+      "butler-push",
+      "itch-started"
+    ]
+  },
+  "resource_gate": {
+    "target_platform_qa_person_hours": null,
+    "code_signing_or_dev_program_cost_usd": null,
+    "macos_notary_account_eligibility_verified": null,
+    "windows_SmartScreen_no_warning_established": false,
+    "buyer_compatibility_incident_rate": null,
+    "sale_conversion_after_signature": null,
+    "user_has_not_been_asked_to_buy_or_test_hardware": true
+  },
+  "limitations": [
+    "Only check OS formats actually advertised; a Linux-only project need not claim untested Windows/macOS compatibility.",
+    "Microsoft documentation distinguishes a code signature from immediate SmartScreen positive reputation; an EV certificate is not a guaranteed bypass.",
+    "Apple notarization is security scanning and signed-code validation, not product QA or proof that a game works on all intended devices.",
+    "Project channel metadata and archive syntax are not evidence of successful unpack, save-file persistence, game input, rollback or security-prompt experience.",
+    "Publisher-specific certificates, notarization accounts, third-party asset licenses and cross-platform QA labor are unobserved and not assigned hypothetical market prices.",
+    "No game build was compiled, signed, notarized, downloaded by a user or launched for this research."
+  ]
+}

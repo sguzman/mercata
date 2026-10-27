@@ -1901,6 +1901,28 @@
       "evidence_class": "official_engine_royalty_terms",
       "license": "Official legal terms referenced only, not republished; no individualized legal advice.",
       "notes": "Royalty Addendum has lifetime, quarter and non-royalty exclusions; exact current agreement and eligible product gross govern, not per-itch net payout."
+    },
+    {
+      "id": "microsoft-smartscreen-official-may2026",
+      "url": "https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation",
+      "title": "SmartScreen reputation for Windows app developers",
+      "publisher": "Microsoft Learn",
+      "published_at": "2026-05-06",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_operating_system_distribution_security_guidance",
+      "license": "Official technical source linked; independently written summary and feature facts only.",
+      "notes": "SmartScreen publisher and hash reputation, signed or unsigned downloaded executables; EV signing no longer guarantees bypass; actual end-user warnings depend on security settings and history."
+    },
+    {
+      "id": "apple-macos-notarization-guide-2026",
+      "url": "https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution",
+      "title": "Notarizing macOS software before distribution",
+      "publisher": "Apple Developer Documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_operating_system_security_distribution_guidance",
+      "license": "Official reference linked and paraphrased, no copied sample programs or screenshots.",
+      "notes": "Developer ID, hardened runtime, secure timestamp, notarytool and Gatekeeper requirements for externally distributed macOS apps; no Mac build, signed binary or notarization attempted."
     }
   ],
   "claims": [
@@ -6475,6 +6497,40 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "Actual agreement, qualified product gross, deductions and launch-program eligibility must be checked; royalty base is not equivalent to one store's seller-net payout."
+    },
+    {
+      "id": "windows-smartscreen-signature-not-guarantee-2026",
+      "text": "Microsoft's May 2026 documentation explains that Windows SmartScreen evaluates downloaded executables using file-hash and signed publisher reputation; signed first releases can still show warnings, and EV certificates no longer bypass them automatically.",
+      "source_ids": [
+        "microsoft-smartscreen-official-may2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Does not establish a universal warning rate or that all Windows versions and enterprise policies allow the same launch flow."
+    },
+    {
+      "id": "apple-gatekeeper-notarization-2026",
+      "text": "Apple documents Developer ID signing, hardened runtime and notarization for externally distributed modern macOS apps; signing or notarization is distinct from an actual working game launch.",
+      "source_ids": [
+        "apple-macos-notarization-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Applicable to eligible app bundles and macOS versions; no user hardware, signing identity, Xcode or notary service was accessed."
+    },
+    {
+      "id": "itch-zip-upload-is-not-windows-macos-qa-2026",
+      "text": "itch.io supports versioned downloadable desktop game uploads, but this distribution capability does not certify executable signatures, Gatekeeper or SmartScreen behavior, or gameplay correctness across desktop operating systems.",
+      "source_ids": [
+        "butler-overview",
+        "itch-app-windows-platform",
+        "itch-app-macos-platform",
+        "microsoft-smartscreen-official-may2026",
+        "apple-macos-notarization-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Engineering-policy crosswalk; no actual Windows/macOS game build was submitted or tested."
     }
   ],
   "observations": [
