@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "public_first_game_publisher_setup_steps_and_unobserved_effort_input_model",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-started",
+    "itch-terms",
+    "itch-faq",
+    "itch-quality",
+    "itch-pricing",
+    "itch-payments",
+    "itch-indexed",
+    "itch-html5",
+    "itch-totp-account",
+    "stripe-global",
+    "paypal-mx-receiving"
+  ],
+  "population": "prospective new publisher of a free or positively priced game on itch.io",
+  "unit": "one account and game-release attempt with a dated labor/cash record per applicable step",
+  "observation_period": "official documentation checked October 27, 2026; no individual onboarding measured",
+  "sample_frame": "official creator registration, game upload, quality, indexing, payment and provider pages",
+  "applicable_stages": {
+    "free": [
+      "account_security",
+      "rights_and_build",
+      "QA_and_package",
+      "store_page",
+      "price_and_access",
+      "publish_and_check"
+    ],
+    "direct": [
+      "account_security",
+      "rights_and_build",
+      "QA_and_package",
+      "store_page",
+      "price_and_access",
+      "publish_and_check",
+      "connect_provider",
+      "direct_checkout_checks"
+    ],
+    "collected": [
+      "account_security",
+      "rights_and_build",
+      "QA_and_package",
+      "store_page",
+      "price_and_access",
+      "publish_and_check",
+      "tax_interview",
+      "payout_configuration"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "account_security",
+      "source_ids": [
+        "itch-started",
+        "itch-totp-account"
+      ],
+      "required_materials": [
+        "account_credentials",
+        "authenticator_or_backup_recovery"
+      ],
+      "skills": [
+        "account_security",
+        "login"
+      ],
+      "observed_labor_minutes": null,
+      "observed_external_cash_usd": null
+    },
+    {
+      "id": "rights_and_build",
+      "source_ids": [
+        "itch-terms",
+        "itch-started"
+      ],
+      "required_materials": [
+        "game_binary_or_html",
+        "copyright_permissions"
+      ],
+      "skills": [
+        "game_authoring",
+        "asset_licensing"
+      ],
+      "observed_labor_minutes": null,
+      "observed_external_cash_usd": null
+    },
+    {
+      "id": "QA_and_package",
+      "source_ids": [
+        "itch-started",
+        "itch-html5"
+      ],
+      "required_materials": [
+        "target_device_tests",
+        "packaged_build"
+      ],
+      "skills": [
+        "release_QA",
+        "compatibility"
+      ],
+      "observed_labor_minutes": null,
+      "observed_external_cash_usd": null
+    },
+    {
+      "id": "store_page",
+      "source_ids": [
+        "itch-started",
+        "itch-quality"
+      ],
+      "required_materials": [
+        "title",
+        "cover",
+        "accurate_description"
+      ],
+      "skills": [
+        "copywriting",
+        "metadata"
+      ],
+      "observed_labor_minutes": null,
+      "observed_external_cash_usd": null
+    },
+    {
+      "id": "price_and_access",
+      "source_ids": [
+        "itch-pricing",
+        "itch-started"
+      ],
+      "required_materials": [
+        "pricing_mode",
+        "files_and_access_settings"
+      ],
+      "skills": [
+        "pricing",
+        "entitlements"
+      ],
+      "observed_labor_minutes": null,
+      "observed_external_cash_usd": null
+    },
+    {
+      "id": "publish_and_check",
+      "source_ids": [
+        "itch-indexed",
+        "itch-started"
+      ],
+      "required_materials": [
+        "public_url",
+        "discoverability_status"
+      ],
+      "skills": [
+        "publishing",
+        "support"
+      ],
+      "observed_labor_minutes": null,
+      "observed_external_cash_usd": null
+    },
+    {
+      "id": "connect_provider",
+      "source_ids": [
+        "itch-payments",
+        "stripe-global"
+      ],
+      "required_materials": [
+        "eligible_gateway",
+        "provider_verification"
+      ],
+      "skills": [
+        "gateway_configuration",
+        "tax_account"
+      ],
+      "observed_labor_minutes": null,
+      "observed_external_cash_usd": null
+    },
+    {
+      "id": "direct_checkout_checks",
+      "source_ids": [
+        "itch-payments",
+        "paypal-mx-receiving"
+      ],
+      "required_materials": [
+        "direct_transaction_mode",
+        "provider_currency"
+      ],
+      "skills": [
+        "checkout_QA",
+        "merchant_obligations"
+      ],
+      "observed_labor_minutes": null,
+      "observed_external_cash_usd": null
+    },
+    {
+      "id": "tax_interview",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "required_materials": [
+        "tax_identity_forms"
+      ],
+      "skills": [
+        "tax_administration"
+      ],
+      "observed_labor_minutes": null,
+      "observed_external_cash_usd": null
+    },
+    {
+      "id": "payout_configuration",
+      "source_ids": [
+        "itch-payments"
+      ],
+      "required_materials": [
+        "PayPal_or_Payoneer_payout_eligibility"
+      ],
+      "skills": [
+        "payout_configuration",
+        "currency"
+      ],
+      "observed_labor_minutes": null,
+      "observed_external_cash_usd": null
+    }
+  ],
+  "mode_differences": {
+    "free": {
+      "merchant_of_record_for_sale": null,
+      "upfront_platform_listing_usd": 0,
+      "needs_paid_seller_approval": false
+    },
+    "direct": {
+      "merchant_of_record": "publisher",
+      "must_connect_payment_gateway": true,
+      "provider_country_approval_verified": null,
+      "publisher_responsible_for_VAT": true
+    },
+    "collected": {
+      "merchant_of_record": "itch.io",
+      "tax_interview_required": true,
+      "bank_or_provider_eligibility_verified": null,
+      "checkout_and_payout_currency": "USD",
+      "one_time_account_balance_adjustment_usd": 3,
+      "adjustment_not_upfront_listing_fee": true
+    }
+  },
+  "documented_direct_Stripe_country_examples": [
+    {
+      "country": "United States",
+      "currencies": [
+        "USD"
+      ]
+    },
+    {
+      "country": "Canada",
+      "currencies": [
+        "CAD",
+        "USD"
+      ]
+    },
+    {
+      "country": "Ireland",
+      "currencies": [
+        "EUR",
+        "GBP",
+        "USD"
+      ]
+    },
+    {
+      "country": "United Kingdom",
+      "currencies": [
+        "EUR",
+        "GBP",
+        "USD"
+      ]
+    }
+  ],
+  "unlisted_country_case": {
+    "country": "Mexico",
+    "itch_io_direct_Stripe_eligibility_verified": null,
+    "generic_processor_country_support_is_proof": false
+  },
+  "skills_language_boundary": "Publisher must supply assets, accessible release files, accurate project information, provider-compatible payment details and necessary communication; language difficulty, legal eligibility and account approval are individually unknown.",
+  "assumptions": {
+    "account_creation_listing_platform_fee_usd": 0,
+    "cash_cost_of_tools_assets_and_QA": null,
+    "developer_work_minutes": null,
+    "elapsed_calendar_days": null,
+    "real_commercial_seller_country_approval": null,
+    "real_tax_validation": null,
+    "real_checkout_success": null,
+    "real_first_sale": null,
+    "first_time_publisher_typical_setup_hours": null,
+    "first_time_publisher_typical_total_cost_usd": null
+  },
+  "limits": [
+    "Stage ledger accepts recorded or explicitly hypothetical inputs only; missing steps produce null totals rather than zero.",
+    "Cash fee to list a free project is distinct from per-transaction charges and the collected-mode account debit.",
+    "Public Stripe country examples do not certify all countries; generic processor availability is not verified itch integration.",
+    "A completed model input set does not prove the seller is legally approved or that a game ran correctly.",
+    "No records of a real seller, paid order, page launch, identity validation or support labor were accessed."
+  ],
+  "code_module": "site/itch-first-publisher-effort.mjs"
+}
