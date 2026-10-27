@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "source_rights_privacy_and_evidence_permission_completeness_review",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-faq",
+    "itch-terms",
+    "itch-serverside-api-reference",
+    "itch-privacy-march-2026",
+    "dipio-2025-zenodo-dataset"
+  ],
+  "population": "Mercata's cited public material and potential seller-authorized itch.io analytics; no actual private purchaser files",
+  "unit": "a source record, data field, API operation, permission gate, or reuse contract",
+  "dossier_review": {
+    "source_records": 187,
+    "bounded_claim_records": 466,
+    "all_sources_have_retrieval_date": true,
+    "all_sources_have_reuse_note": true,
+    "all_claim_source_ids_grounded": true,
+    "private_buyer_records_collected": 0,
+    "public_game_purchaser_identity_table_built": false,
+    "third_party_datasets_downloaded_for_bulk_republication": false
+  },
+  "classes": [
+    {
+      "id": "official_rules",
+      "source_ids": [
+        "itch-terms",
+        "itch-faq",
+        "itch-privacy-march-2026"
+      ],
+      "can_use": "attribute_and_independently_summarize_public_operational_policies_with_dated_review",
+      "must_not_assume": "bulk_reuse_or_license_of_full_text_images_or_html",
+      "private_consent_required": false,
+      "full_archive_redistribution_clearance": null
+    },
+    {
+      "id": "public_creators_self_disclosed_figures",
+      "source_ids": [
+        "itch-faq"
+      ],
+      "can_use": "cite_creator_opt_in_public_aggregates_with_sample_bias_and_period",
+      "must_not_assume": "representative_seller_earnings_or_rights_to_republish_author_game_images",
+      "private_consent_required": false,
+      "full_archive_redistribution_clearance": null
+    },
+    {
+      "id": "linked_zenodo_dataset_metadata",
+      "source_ids": [
+        "dipio-2025-zenodo-dataset"
+      ],
+      "can_use": "bibliographic_record_and_archive_link_metadata",
+      "must_not_assume": "all_files_in_archive_share_a_permissive_license_or_can_be_bulk_copied",
+      "private_consent_required": false,
+      "full_archive_redistribution_clearance": null
+    },
+    {
+      "id": "publisher_account_analytics",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "can_use": "authorized_aggregate_nonidentifying_metrics_after_security_review",
+      "must_not_assume": "permission_for_cross_seller_identity_joins_or_person_level_export",
+      "private_consent_required": true,
+      "full_archive_redistribution_clearance": false
+    },
+    {
+      "id": "buyer_purchase_entitlement_API",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "can_use": "only_validated_owner_permitted_lookup_for_actual_game_operations_and_private_use",
+      "must_not_assume": "public_marketwide_purchase_counts_or_permission_to_republish_buyer_data",
+      "private_consent_required": true,
+      "full_archive_redistribution_clearance": false
+    }
+  ],
+  "protected_fields": [
+    "buyer_email",
+    "user_id",
+    "purchase_id",
+    "transaction_id",
+    "download_key",
+    "IP_address",
+    "address",
+    "country_code",
+    "TOTP_secret",
+    "API_access_token"
+  ],
+  "documented_API_scopes": [
+    "game:view:purchases",
+    "game:view:ownership",
+    "game:view:rewards"
+  ],
+  "privacy_controls": [
+    "never_publish_raw_buyer_ids_or_purchase_lookup_responses",
+    "publisher_authorized_access_must_match_actual_resource_scope",
+    "deduplicate_purchasers_only_with_authorization_in_private_seller_environment",
+    "use_aggregates_after_small_cell_and_reidentification_review",
+    "apply_official_creator_communication_opt_in_and_transaction_contact_limits",
+    "do_not_transfer_person_level_purchase_data_to_external_marketing_tools_without_permission"
+  ],
+  "rights_controls": [
+    "verify_upstream_licenses_for_each_copied_external_image_quote_or_dataset_file",
+    "retain_source_url_author_and_exact_observation_date",
+    "do_not_treat_a_source-register_license_note_as_actual_upstream_license",
+    "verify_publisher_has_rights_to_game_assets_before_commercial_publication",
+    "do_not_use_software_API_documentation_as_authorization_for_bulk_scraping_or_third_party_reuse"
+  ],
+  "research_acceptance": {
+    "source_record_provenance_complete": true,
+    "public_policy_and_private_buyer_boundaries_complete": true,
+    "no_private_account_or_purchaser_data_exposed": true,
+    "all_external_copyright_and_database_reuse_cleared": false,
+    "seller_private_aggregate_data_collected": false,
+    "full_dataset_archive_license_review_finished": false
+  },
+  "still_unknown": {
+    "actual_merchant_consent": null,
+    "archive_file_by_file_reuse_permission": null,
+    "individual_transaction_data_rights": null,
+    "all_jurisdictional_privacy_compliance": null,
+    "merchant_private_sales_complete_population": null
+  },
+  "notes": [
+    "A source's nonblank license field in Mercata is an independent reuse/attribution caveat, not a grant by its publisher.",
+    "Public source figures can be paraphrased under ordinary attribution practices, but this does not establish a broad permission to republish exact source text, images or exports.",
+    "Authenticated API schemas describe potential restricted functions and are not a license to collect or expose data.",
+    "No actual merchant dashboard, OAuth token, game project customer list, buyer download key or private dataset archive was accessed.",
+    "The review/privacy and evidence-permission tasks can close at the documentation and internal-publication boundary; broad copyright clearance remains incomplete."
+  ]
+}

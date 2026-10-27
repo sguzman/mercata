@@ -85,7 +85,7 @@
         "itch-io/identity/specify-evidence-permissions"
       ],
       "phase": 1,
-      "progress_percent": 99
+      "progress_percent": 100
     },
     {
       "id": "access",
@@ -299,7 +299,7 @@
         "itch-io/rights/check-resale-and-transfer-conditions"
       ],
       "phase": 3,
-      "progress_percent": 98
+      "progress_percent": 99
     },
     {
       "id": "sales",
@@ -688,8 +688,8 @@
       "emoji": "🪪",
       "objective": "Investigate separate public data from seller-only or consent-required analytics.",
       "acceptance": "Provide dated source-linked evidence to separate public data from seller-only or consent-required analytics; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "in_progress",
-      "percent": 91,
+      "status": "complete",
+      "percent": 100,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -697,7 +697,10 @@
         "tests/itch-io-economics.test.mjs",
         "ontology/itch-io/api-purchase-privacy-2026.json",
         "ontology/itch-io/api-purchase-privacy-2026.md",
-        "tests/itch-io-api-purchase-privacy.test.mjs"
+        "tests/itch-io-api-purchase-privacy.test.mjs",
+        "ontology/itch-io/public-source-and-private-purchase-reuse-gates-2026.json",
+        "ontology/itch-io/public-source-and-private-purchase-reuse-gates-2026.md",
+        "tests/itch-public-source-and-purchase-reuse-gates.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
@@ -3581,13 +3584,16 @@
       "emoji": "⚖️",
       "objective": "Investigate limit buyer and analytics data collection to approved aggregate evidence.",
       "acceptance": "Provide dated source-linked evidence to limit buyer and analytics data collection to approved aggregate evidence; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "in_progress",
-      "percent": 82,
+      "status": "complete",
+      "percent": 100,
       "evidence": [
         "ontology/itch-io/publisher-rights-refunds-2026.json",
         "ontology/itch-io/publisher-rights-refunds-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-publisher-legal.test.mjs"
+        "tests/itch-io-publisher-legal.test.mjs",
+        "ontology/itch-io/public-source-and-private-purchase-reuse-gates-2026.json",
+        "ontology/itch-io/public-source-and-private-purchase-reuse-gates-2026.md",
+        "tests/itch-public-source-and-purchase-reuse-gates.test.mjs"
       ],
       "artifact": null,
       "priority": "normal",
