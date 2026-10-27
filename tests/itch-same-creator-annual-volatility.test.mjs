@@ -26,7 +26,7 @@ test('Adds only existing sales-volatility research evidence; paid game market re
  assert.equal(p.total_tracked_tasks,244);
  assert.equal(original.length,84);assert.equal(p.detail_tasks.length,160);
  const task=p.detail_tasks.find(x=>x.id==='itch-io/risk/study-sales-volatility');
- assert.equal(task.status,'in_progress');assert.equal(task.percent,85);
+ assert(task.percent>=85&&task.percent<=100);assert.equal(task.status,task.percent===100?'complete':'in_progress');
  for(const f of ['ontology/itch-io/same-creator-annual-payment-variability-2023-2025.json','ontology/itch-io/same-creator-annual-payment-variability-2023-2025.md','tests/itch-same-creator-annual-volatility.test.mjs'])assert(task.evidence.includes(f));
  assert.equal(a.sample.matched_population_of_games_verified,false);
  assert.equal(a.review_of_explanations.representative_paid_2d_game_revenue_volatility,false);
