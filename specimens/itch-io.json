@@ -1725,6 +1725,39 @@
       "evidence_class": "first_party_voluntary_costed_game_financial_postmortem",
       "license": "Attributed short numerical summaries and independently written accounting and sampling limitations; no original figures or charts reproduced.",
       "notes": "Covers 2019-12 to 2020-09. Distinguishes AUD costed economic in-kind labor from adjusted cash outlays; USD payment mean, repeated download events, and 815k bundle owners not sold copies."
+    },
+    {
+      "id": "generalistprogrammer-2026-unverified-income-tiers",
+      "url": "https://generalistprogrammer.com/tutorials/how-to-make-money-on-itchio-indie-game-guide",
+      "title": "How to Make Money on Itch.io: Indie Game Revenue Guide (2026)",
+      "publisher": "Generalist Programmer",
+      "published_at": "2026-03-06",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "third_party_editorial_unsubstantiated_market_tiers",
+      "license": "Short attributed discussion of source-chain and documented claims, not a data license or wholesale text reuse.",
+      "notes": "Editorial game-income tier estimates lack dataset/sampling method and include a collected-payout threshold assertion contradicted by official policy. Source is evidence of editorial claim only."
+    },
+    {
+      "id": "cinevva-2026-repeats-unverified-income-tiers",
+      "url": "https://app.cinevva.com/guides/web-game-monetization",
+      "title": "Web Game Monetization: What the Data Actually Says (2026)",
+      "publisher": "Cinevva",
+      "published_at": "2026-07-17",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "third_party_editorial_repeating_unsampled_itch_income_claim",
+      "license": "Brief attributed citation-chain identification, no republication of source text.",
+      "notes": "Cites Generalist Programmer for the asserted income distribution rather than providing an independent platform sample."
+    },
+    {
+      "id": "playfox-2026-repeats-unverified-income-tiers",
+      "url": "https://playfox.org/news/indie-dev-revenue/",
+      "title": "How Web Game Developers Actually Get Paid in 2026",
+      "publisher": "PlayFox Editorial Department",
+      "published_at": "2026-08-28",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "third_party_editorial_repeating_unsampled_itch_income_claim",
+      "license": "Brief source-chain summary and attributed factual caveat only.",
+      "notes": "Cites Cinevva as intermediary for itch monthly income bands; no independent creator/payments sampling method disclosed."
     }
   ],
   "claims": [
@@ -6119,6 +6152,40 @@
       "confidence": "medium",
       "observed_at": "2026-10-26",
       "limitations": "Neither event ratio estimates a true unique-downloader-to-buyer conversion probability or typical paid game sales conversion."
+    },
+    {
+      "id": "itch-unsampled-revenue-editorial-chain",
+      "text": "A March 2026 editorial guide claimed that around 80% of paid itch.io games earned $0–$50 monthly without publishing an identifiable eligible sample or revenue method; later Cinevva and PlayFox guides repeated the figure without independent market evidence.",
+      "source_ids": [
+        "generalistprogrammer-2026-unverified-income-tiers",
+        "cinevva-2026-repeats-unverified-income-tiers",
+        "playfox-2026-repeats-unverified-income-tiers"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "This supports source-lineage criticism, not the truth or falsity of the unverified market percentage."
+    },
+    {
+      "id": "itch-editorial-payout-minimum-conflict",
+      "text": "The Generalist Programmer guide described no payout minimum, conflicting with itch.io's first-party collected-payout requirement of at least USD 5 available.",
+      "source_ids": [
+        "generalistprogrammer-2026-unverified-income-tiers",
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Mode-specific collected payout threshold; do not extrapolate to all direct PayPal/Stripe transfers."
+    },
+    {
+      "id": "epic-editorial-publishing-fee-conflict",
+      "text": "The same editorial market comparison listed Epic publication as free, while Epic's developer documentation requires a USD 100 per-product submission fee.",
+      "source_ids": [
+        "generalistprogrammer-2026-unverified-income-tiers",
+        "epic-store-submission-fee-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-26",
+      "limitations": "Fee may be subject to jurisdictional tax or waiver details; applies to documented product-submission onboarding."
     }
   ],
   "observations": [

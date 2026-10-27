@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "citation_chain_audit_for_unsampled_claimed_itch_game_revenue_distribution",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "generalistprogrammer-2026-unverified-income-tiers",
+    "cinevva-2026-repeats-unverified-income-tiers",
+    "playfox-2026-repeats-unverified-income-tiers",
+    "itch-payments",
+    "epic-store-submission-fee-official-2026"
+  ],
+  "chain": [
+    {
+      "source_id": "generalistprogrammer-2026-unverified-income-tiers",
+      "published_at": "2026-03-06",
+      "updated_at": "2026-06-17",
+      "claim": {
+        "monthly_bucket_bounds_usd": [
+          0,
+          50,
+          500,
+          2000,
+          10000
+        ],
+        "market_share_percent_approx": [
+          80,
+          15,
+          4,
+          0.8,
+          0.2
+        ]
+      },
+      "inspectable_itch_seller_data_or_methodology": false,
+      "clear_revenue_definition": false,
+      "paid_game_cohort_eligibility_defined": false,
+      "zero_earners_in_sampling_frame_verified": false,
+      "sample_size": null,
+      "confidence_of_revenue_buckets": "unsubstantiated"
+    },
+    {
+      "source_id": "cinevva-2026-repeats-unverified-income-tiers",
+      "published_at": "2026-07-17",
+      "updated_at": "2026-09-06",
+      "cites_source_id": "generalistprogrammer-2026-unverified-income-tiers",
+      "separate_market_revenue_sample_disclosed": false
+    },
+    {
+      "source_id": "playfox-2026-repeats-unverified-income-tiers",
+      "published_at": "2026-08-28",
+      "cites_source_id": "cinevva-2026-repeats-unverified-income-tiers",
+      "separate_market_revenue_sample_disclosed": false
+    }
+  ],
+  "counterchecks": [
+    {
+      "id": "collected_seller_payout_minimum",
+      "primary_source_id": "itch-payments",
+      "official_minimum_available_usd": 5,
+      "editorial_claim_minimum_usd": 0,
+      "same_mode": "collected_by_itch_payout",
+      "conflicting": true
+    },
+    {
+      "id": "epic_product_submission_fee",
+      "primary_source_id": "epic-store-submission-fee-official-2026",
+      "official_submission_fee_usd": 100,
+      "editorial_claim_fee_usd": 0,
+      "conflicting": true
+    }
+  ],
+  "original_sources_are_independent_market_samples": false,
+  "independent_samples_observed": 0,
+  "marketwide_percent_in_monthly_income_tiers": null,
+  "typical_itcho_creator_monthly_revenue_usd": null,
+  "first_commercial_premium_game_monthly_income_distribution": null,
+  "marketwide_paid_new_game_zero_sale_fraction": null,
+  "platform_average_seller_income": null,
+  "platform_median_seller_income": null,
+  "limitations": [
+    "The first editorial percentage table has no inspectable population denominator, game selection frame, transaction data, date-specific cohort, income definition or estimation algorithm.",
+    "Downstream sites point back to this editorial figure; citation repetition is not independent corroboration.",
+    "The editorial guide also conflicts with explicit primary payment and distribution policies, reducing confidence in factual accuracy.",
+    "The observed percentages are quoted as editorial claims for rejection/qualification only and must never populate empirical market metrics.",
+    "No inference that the true percentage is zero or has any other fixed value can be drawn from these source-quality failures."
+  ]
+}
