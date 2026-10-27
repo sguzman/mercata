@@ -18,6 +18,6 @@ test('Content eligibility, marketplace visibility, payment acceptance and buyer 
   const x=p.detail_tasks.find(x=>x.id===id);assert.equal(x.percent,100,id);assert.equal(x.status,'complete',id);
   assert(x.evidence.includes('ontology/itch-io/content-monetization-regional-policy-gates-2026.json'));
  }
- assert.equal(q.queues.flatMap(x=>x.tasks).find(x=>x.id==='access/country').progress,90);
+ assert.equal(q.queues.flatMap(x=>x.tasks).find(x=>x.id==='access/country').progress,100);
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
 });

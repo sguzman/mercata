@@ -43,7 +43,7 @@ test('Official policy frame closes documentation tasks without claiming global p
   assert.equal(task.percent,100,id);assert.equal(task.status,'complete',id);
   for(const file of ['ontology/itch-io/first-publisher-effort-and-eligibility-2026.json','ontology/itch-io/first-publisher-effort-and-eligibility-2026.md','site/itch-first-publisher-effort.mjs','tests/itch-first-publisher-effort.test.mjs'])assert(task.evidence.includes(file));
  }
- assert.equal(p.detail_tasks.find(t=>t.id==='itch-io/access/map-seller-countries').percent,76);
+ assert.equal(p.detail_tasks.find(t=>t.id==='itch-io/access/map-seller-countries').percent,100);
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
  assert.equal(p.progress_percent,Math.round((q.queues.flatMap(x=>x.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
 });
