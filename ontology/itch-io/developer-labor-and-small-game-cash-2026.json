@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "labor_valued_economic_sensitivity_selected_indie_game_cases",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "aracore-game-first-five-days-postmortem",
+    "rose-seed-replica-launch-cost-postmortem",
+    "basement-raid-first-month-2025",
+    "alienmelon-game-production-feb2026",
+    "itch-payments"
+  ],
+  "calculator_path": "site/itch-case-labor-analysis.mjs",
+  "target": "Dated selected small-game developer first-release/near-release financial disclosures, not all itch.io publishers",
+  "unit": "One self-disclosed game and its author's hours and accounting category, no implied platform population",
+  "cases": [
+    {
+      "id": "aracore_astromining_ventures",
+      "source_ids": [
+        "aracore-game-first-five-days-postmortem"
+      ],
+      "currency": "GBP",
+      "income_scope": "multi_store_first_five_days",
+      "reported_receipts_approx": 190,
+      "reported_costs_approx": 185,
+      "author_cash_accounting_surplus_approx": 5,
+      "reported_development_hours_approx": 1500,
+      "known_hours_for_other_work": null,
+      "merchant_itch_receipts": null,
+      "returns_refunds_fx_tax_reconciled": null,
+      "economic_profit": null,
+      "market_sample_probability": null
+    },
+    {
+      "id": "rose_seed_replica",
+      "source_ids": [
+        "rose-seed-replica-launch-cost-postmortem"
+      ],
+      "currency": "EUR",
+      "income_scope": "multi_store_first_week_and_historical_living_business_cost_allocation",
+      "reported_first_week_units_all_stores": 130,
+      "reported_first_week_itch_units": 13,
+      "reported_itch_tips": 27,
+      "all_store_sales_receipts_approx": 1000,
+      "author_two_year_conservative_cost_allocation_approx": 17000,
+      "grant_adjusted_cost_allocation_approx": 8700,
+      "total_actual_development_hours": null,
+      "net_itch_profit": null,
+      "economic_profit": null,
+      "market_sample_probability": null
+    },
+    {
+      "id": "basement_raid",
+      "source_ids": [
+        "basement-raid-first-month-2025"
+      ],
+      "currency": "USD",
+      "income_scope": "voluntarily_reported_first_30_days_for_first_commercial_game",
+      "self_described_made_approx": 10,
+      "precise_gross_vs_net_unknown": true,
+      "reported_initial_weekly_development_hours_approx": 12,
+      "reported_later_weekly_range": [
+        4,
+        6
+      ],
+      "total_project_hours": null,
+      "net_business_profit": null,
+      "market_sample_probability": null
+    },
+    {
+      "id": "alienmelon_optional_payment_game",
+      "source_ids": [
+        "alienmelon-game-production-feb2026"
+      ],
+      "currency": "USD",
+      "income_scope": "first_party_game_postmortem",
+      "calendar_development_span_years_greater_than": 1,
+      "actual_person_hours": null,
+      "year_is_not_8760_work_hours": true,
+      "game_cash_costs": null,
+      "net_profit": null,
+      "market_sample_probability": null
+    }
+  ],
+  "hypothetical_aracore_sensitivity": {
+    "currency": "GBP",
+    "reportedCashSurplus": 5,
+    "knownDevelopmentHours": 1500,
+    "otherUnloggedHours": null,
+    "illustrativeHourlyRates": [
+      0,
+      1,
+      10,
+      20
+    ],
+    "interpretation": "Cash surplus divided by disclosed work hours is a conditional accounting ratio, not what a developer was paid each hour. Costing known labor ignores other unlogged work.",
+    "sample_cash_per_known_dev_hour_gbp": 0.0033333333333333335,
+    "illustrative_balance_after_1500_hours_at_10_gbp_per_hour": -14995,
+    "full_economic_profit": null,
+    "actual_hourly_compensation": null
+  },
+  "work_register": [
+    {
+      "id": "core_game_development",
+      "measure": "logged_hours_by_session",
+      "observable_in_aracore_approximately": true
+    },
+    {
+      "id": "game_art_sound_and_rights",
+      "measure": "actual_hours_and_licensed_cash",
+      "observable_in_aracore_approximately": false
+    },
+    {
+      "id": "OS_build_packaging_and_QA",
+      "measure": "hours_by_tested_platform_and_version",
+      "observable_in_aracore_approximately": false
+    },
+    {
+      "id": "discovery_page_copy_and_promotion",
+      "measure": "creator_hours_and_ad_spend",
+      "observable_in_aracore_approximately": false
+    },
+    {
+      "id": "seller_identity_tax_and_admin",
+      "measure": "hours_and_account_provider_fees",
+      "observable_in_aracore_approximately": false
+    },
+    {
+      "id": "localization_and_accessibility",
+      "measure": "hours_and_translation_rights",
+      "observable_in_aracore_approximately": false
+    },
+    {
+      "id": "postlaunch_updates_and_player_support",
+      "measure": "hours_after_release_and_expected_future_maintenance",
+      "observable_in_aracore_approximately": false
+    }
+  ],
+  "rules": [
+    "Case authors chose to disclose their results; no random sample, reporting obligation or consistent cohort exists.",
+    "Do not mix £, €, and USD to produce any median or average.",
+    "Distinguish project-wide multi-store proceeds from itch-only orders and from tax-adjusted bank money.",
+    "Development calendar span is not person-hours; incomplete weekly effort descriptions cannot be extrapolated to a project-wide labor total.",
+    "Author cash accounting may exclude labor, refunds or taxes; subtracting a hypothetical labor rate is an explicit what-if, not audited project profit.",
+    "Other missing labor hours must remain null, not imputed to zero.",
+    "Use exact first-five-day/first-week/first-month windows, avoiding pooling as comparable lifetime earnings.",
+    "A hypothetical one-to-two-mechanic 5-to-30-minute proposal does not satisfy the remaining task to measure playtime and feature count in a real game."
+  ],
+  "unobserved": {
+    "first_game_median_labor_hours": null,
+    "platformwide_hourly_developer_pay": null,
+    "representative_game_net_profit": null,
+    "genre_hourly_income": null,
+    "full_cost_per_small_game": null
+  },
+  "small_game_actual_measurement": {
+    "sample_plan_only": true,
+    "example_game_mechanics_low": 1,
+    "example_game_mechanics_high": 2,
+    "example_playtime_minutes_low": 5,
+    "example_playtime_minutes_high": 30,
+    "actual_tested_game_count": 0,
+    "measured_player_completion_times": null,
+    "actual_feature_count": null,
+    "source": "previously scoped hypothetical game; not completed or observed"
+  }
+}
