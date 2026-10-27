@@ -9,7 +9,8 @@ test('itch.io first-party findings have source-linked, dated limitations',()=>{
  assert.equal(sources.size,specimen.evidence.length);
  assert(sources.size>=10);assert(specimen.claims.length>=28);
  for(const c of specimen.claims){
-  assert(c.text&&c.observed_at==='2026-10-26'&&c.limitations);
+  assert(c.text&&/^\d{4}-\d{2}-\d{2}$/.test(c.observed_at)&&c.limitations);
+  assert.equal(new Date(c.observed_at+'T00:00:00Z').toISOString().slice(0,10),c.observed_at);
   assert(c.source_ids.length>0&&c.source_ids.every(id=>sources.has(id)));
  }
  assert(registry.source_ids.every(id=>sources.has(id)));

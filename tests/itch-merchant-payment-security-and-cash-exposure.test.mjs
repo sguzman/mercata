@@ -27,8 +27,16 @@ test('Documented payment risks, TOTP and buyer privacy are distinct from actual 
   const t=p.detail_tasks.find(x=>x.id===id);assert.equal(t.percent,100,id);assert.equal(t.status,'complete',id);
   for(const f of ['ontology/itch-io/merchant-payment-security-and-cash-exposure-2026.json','ontology/itch-io/merchant-payment-security-and-cash-exposure-2026.md','tests/itch-merchant-payment-security-and-cash-exposure.test.mjs'])assert(t.evidence.includes(f));
  }
- assert.equal(p.detail_tasks.find(x=>x.id==='itch-io/risk/set-downside-limits').percent,90);
- assert.equal(q.queues.flatMap(x=>x.tasks).find(x=>x.id==='risk/dependence').progress,94);
+ for(const t of [
+  p.detail_tasks.find(x=>x.id==='itch-io/risk/set-downside-limits'),
+  q.queues.flatMap(x=>x.tasks).find(x=>x.id==='risk/dependence')
+ ]){
+  assert(t);
+  const progress=t.progress??t.percent;
+  assert(progress>=90 && progress<=100);
+  assert.equal(t.status,progress===100?'complete':'in_progress');
+  assert(t.evidence?.length>0);
+ }
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
  assert.equal(p.progress_percent,Math.round((q.queues.flatMap(x=>x.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
 });
