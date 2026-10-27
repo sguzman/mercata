@@ -12,4 +12,10 @@ test('Recent rolling itch.io listings cannot become a confirmed seller success r
  assert.equal(x.sort_comparison.difference,47);
  assert.equal(x.sort_comparison.same_underlying_cohort_verified,false);
  assert(Object.values(x.not_observed).every(v=>v===null));
+ const official=x.operator_sort_semantics;
+ assert(s.evidence.some(z=>z.id===official.source_id));
+ assert.equal(official.most_recent_can_include_refreshed_existing_page,true);
+ assert.equal(official.new_and_popular_emphasizes_new_and_updated_projects,true);
+ assert.equal(official.qualifies_as_first_paid_commercial_release_only_from_rank,false);
+ assert.equal(official.validated_first_paid_release_count,null);
 });

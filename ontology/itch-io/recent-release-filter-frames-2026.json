@@ -9,7 +9,8 @@
     "itch-recent-newpopular30-2026",
     "itch-recent-topsellers-released30-2026",
     "itch-recent-toprated-released30-2026",
-    "itch-recent-all-released30-2026"
+    "itch-recent-all-released30-2026",
+    "itch-founder-public-sort-semantics-2020-thread-2026-review"
   ],
   "observations": [
     {
@@ -128,5 +129,23 @@
     "Do not divide ranking counts by general Paid results to estimate actual sell-through.",
     "Separate existing game updates from newly eligible commercial titles with separately verified metadata.",
     "For revenue, use independently authorized aggregate checkout cohorts including zero earners."
-  ]
+  ],
+  "operator_sort_semantics": {
+    "source_id": "itch-founder-public-sort-semantics-2020-thread-2026-review",
+    "observed_at": "2026-10-27",
+    "forum_thread_created": "2020-03-24",
+    "exact_admin_reply_revision_date": null,
+    "most_recent_includes_initial_publication": true,
+    "most_recent_can_include_refreshed_existing_page": true,
+    "new_and_popular_emphasizes_new_and_updated_projects": true,
+    "qualifies_as_first_paid_commercial_release_only_from_rank": false,
+    "validated_first_paid_release_count": null,
+    "separate_verification_required": [
+      "original_first_publication_utc",
+      "first_mandatory_positive_game_price_utc",
+      "distinct_project_id",
+      "stable_publisher_payout_entity",
+      "original_page_vs_refreshed_existing_page"
+    ]
+  }
 }

@@ -24,3 +24,7 @@
 **3. Localization language ≠ regional demand.** 174 pages marked Latin American Spanish are **content availability**, not a count of Mexican purchasers, commercial Spanish-language demand or uplift from translation. Likewise, the 30-day and 2022 browse shortcuts are not verified first-game commercial release cohorts.
 
 All query intersections are overlapping: games can be classified as Puzzle and Adventure, support Windows and HTML5, and be featured. These counts cannot be summed. Paid buyer geography, active seller identities, real sales and labor-adjusted profit remain unknown.
+
+### Operator explanation of the actual sort key
+
+The [itch.io administrator's public answer in a March 2020 thread](https://itch.io/t/719515/how-does-itchio-sort-games-by-these-criteria-popular-newpopular-top-rated-top-sellers-most-recent), visible at the October 27, 2026 review, says **Top Sellers orders by payment-event count, including payments made to free games**, and combines older and newer activity. Therefore even a direct observation of a ranking is **not an ordering of game dollar receipts, positive-minimum game copies, or paid seller profits**. A donation to a free game may influence the rank. The operator did not disclose the weights or any revenue/count export. The administrator's response has been edited several times; the exact version in effect during each 2026 browse snapshot is unverified. This strengthens the denominator warning without establishing revenue concentration.

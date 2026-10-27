@@ -14,4 +14,12 @@ test('Top Sellers browse counts cannot become sold-unit or localization success 
  assert(x.filter_counts.every(x=>x.verified_paid_unit_sales===null&&x.verified_unique_paying_buyers===null&&x.is_entire_commercial_seller_population===false));
  assert(Object.values(x.unobserved).every(x=>x===null));
  assert.equal(x.separate_prior_filter_frame.not_matched_with_top_sellers_frame,true);
+ const official=x.operator_sort_semantics;
+ assert(dossier.evidence.some(s=>s.id===official.source_id));
+ assert.equal(official.includes_donations_to_free_games,true);
+ assert.equal(official.monetary_revenue_rank_available,false);
+ assert.equal(official.top_seller_ranking_is_positive_price_paid_game_cohort,false);
+ assert.equal(official.disclosed_rank_formula,null);
+ assert.equal(official.positive_price_paid_orders,null);
+ assert.equal(official.refund_adjusted_revenue_usd,null);
 });

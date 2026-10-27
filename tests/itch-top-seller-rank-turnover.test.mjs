@@ -19,6 +19,6 @@ test('Only existing ranked visibility / bestseller concentration research advanc
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
  assert.equal(q.queues.flatMap(x=>x.tasks).length,84);
  const t=p.detail_tasks.find(x=>x.id==='itch-io/competition/study-best-seller-concentration');
- assert.equal(t.status,'in_progress');assert.equal(t.percent,69);
+ assert.equal(t.status,'in_progress');assert.equal(t.percent,73);
  for(const path of ['ontology/itch-io/third-party-top-seller-rank-turnover-2026.json','ontology/itch-io/third-party-top-seller-rank-turnover-2026.md','tests/itch-top-seller-rank-turnover.test.mjs'])assert(t.evidence.includes(path));
 });

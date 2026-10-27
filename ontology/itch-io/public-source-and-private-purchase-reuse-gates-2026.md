@@ -1,6 +1,6 @@
 # Public evidence versus private purchases: rights and privacy gate
 
-**Reviewed October 27, 2026.** [Machine audit](public-source-and-private-purchase-reuse-gates-2026.json). Mercata has **212 registered sources and 491 bounded claims**. Each registered source records a URL, retrieval date and independently authored reuse/citation *note*. That note is **not** an upstream license grant.
+**Reviewed October 27, 2026.** [Machine audit](public-source-and-private-purchase-reuse-gates-2026.json). Mercata has **213 registered sources and 493 bounded claims**. Each registered source records a URL, retrieval date and independently authored reuse/citation *note*. That note is **not** an upstream license grant.
 
 The [itch.io Terms](https://itch.io/docs/legal/terms), [Creator FAQ](https://itch.io/docs/creators/faq), and [privacy policy](https://itch.io/docs/legal/privacy-policy) are public rules that may be *linked and independently summarized*. Their public availability does not by itself clear reproduction of full documents, photographs, game assets, screenshots or datasets.
 
