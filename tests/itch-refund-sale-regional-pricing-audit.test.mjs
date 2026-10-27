@@ -1,0 +1,24 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Dated refund, discount, entitlement and currency rules do not stand for regional buyer prices or paid units',()=>{
+ const a=read('ontology/itch-io/refund-sale-regional-currency-policy-2026.json'),s=read('specimens/itch-io.json'),q=read('queues/itch-io.json'),p=read('plans/itch-io.json');
+ const sourceIds=new Set(s.evidence.map(x=>x.id));assert(a.source_ids.every(x=>sourceIds.has(x)));
+ assert.equal(a.refund.guaranteed_no_questions_days,null);
+ assert.equal(a.refund.monetary_refund_rate,null);
+ assert.equal(a.sales.discount_100_percent_can_make_item_temporarily_free,true);
+ assert.equal(a.sales.inventory_or_entitlement_realized_as_paid_units,false);
+ assert.equal(a.geography_and_currency.collected_payment_mode_acceptance_currency,'USD');
+ assert.equal(a.geography_and_currency.auto_country_specific_base_price_tiers_verified,null);
+ assert.equal(a.geography_and_currency.location_based_vat_is_not_discretionary_regional_base_price,true);
+ assert.equal(a.pricing_and_ownership.existing_paid_owner_retains_project_after_base_price_change,true);
+ assert.equal(a.pricing_and_ownership.individually_priced_file_upgrade_can_change_access,true);
+ assert.equal(a.observations.checkout_tests_executed,0);
+ assert.equal(a.observations.discount_effect_on_conversion,null);
+ const t=q.queues.flatMap(x=>x.tasks).find(x=>x.id==='special-games/special-3');
+ assert.equal(t.progress,100);assert.equal(t.status,'complete');
+ for(const f of ['ontology/itch-io/refund-sale-regional-currency-policy-2026.json','ontology/itch-io/refund-sale-regional-currency-policy-2026.md','tests/itch-refund-sale-regional-pricing-audit.test.mjs'])assert(t.evidence.includes(f));
+ const scores=q.queues.flatMap(x=>x.tasks).map(t=>t.progress).concat(p.detail_tasks.map(t=>t.percent));
+ assert.equal(scores.length,244);assert.equal(p.progress_percent,Math.round(scores.reduce((a,b)=>a+b,0)/244));
+});

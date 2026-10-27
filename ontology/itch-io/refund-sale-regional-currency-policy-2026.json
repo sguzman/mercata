@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "game_refund_promotion_currency_and_regional_price_evidence_matrix",
+  "reviewed_at": "2026-10-27",
+  "population": "Public itch.io paid-game seller configuration and buyer-entitlement policies; not all transactions, countries or merchants",
+  "unit": "Source-defined sale rule, refund condition or payment-currency mode, not an actual paid order",
+  "period": "Official Terms last noted April 2023; creator help documents available 2026-10-27",
+  "sample_frame": "First-party creator sale, pricing, payments, quality guidance and platform terms",
+  "source_ids": [
+    "itch-sale",
+    "itch-pricing",
+    "itch-payments",
+    "itch-quality",
+    "itch-terms"
+  ],
+  "refund": {
+    "request_channel": "platform_support",
+    "contractual_conditions": [
+      "purchased_content_cannot_run",
+      "other_issue_prevents_access",
+      "content_not_as_advertised"
+    ],
+    "technical_remediation": "publisher_first",
+    "older_payment_method_refunds_may_require_publisher": true,
+    "external_key_cancellation_may_require_publisher_confirmation": true,
+    "guaranteed_refund_every_purchase": false,
+    "guaranteed_no_questions_days": null,
+    "source_ids": [
+      "itch-terms",
+      "itch-payments"
+    ],
+    "monetary_refund_rate": null,
+    "chargeback_frequency": null
+  },
+  "sales": {
+    "single_account_bundle_only": true,
+    "cooperative_cross_account_bundle_separate": true,
+    "seller_can_set_start_and_end_dates": true,
+    "seller_can_apply_percent_discount_to_base_and_individual_and_reward_tiers": true,
+    "allowed_rate_min_percent": 0,
+    "allowed_rate_max_percent": 100,
+    "discount_100_percent_can_make_item_temporarily_free": true,
+    "discount_0_percent_can_support_bundle_price": true,
+    "sale_page_and_item_badges_available": true,
+    "conditions_available": [
+      "coupon_code",
+      "prior_product_ownership"
+    ],
+    "coupon_redeem_limit_supported": true,
+    "inventory_or_entitlement_realized_as_paid_units": false,
+    "causal_sales_lift_from_badges": null,
+    "source_ids": [
+      "itch-sale"
+    ]
+  },
+  "pricing_and_ownership": {
+    "minimum_price_pay_what_you_want_model": true,
+    "existing_paid_owner_retains_project_after_base_price_change": true,
+    "individually_priced_file_upgrade_can_change_access": true,
+    "free_download_by_default_creates_no_purchase_ownership": true,
+    "source_ids": [
+      "itch-pricing"
+    ]
+  },
+  "geography_and_currency": {
+    "collected_payment_mode_acceptance_currency": "USD",
+    "direct_payment_mode_seller_configured_currency": true,
+    "provider_supported_currencies_from_current_documentation": {
+      "paypal": [
+        "USD",
+        "CAD",
+        "GBP",
+        "EUR",
+        "JPY",
+        "AUD"
+      ],
+      "stripe_country_currency_examples": [
+        {
+          "country": "United States",
+          "currencies": [
+            "USD"
+          ]
+        },
+        {
+          "country": "Canada",
+          "currencies": [
+            "CAD",
+            "USD"
+          ]
+        },
+        {
+          "country": "Ireland",
+          "currencies": [
+            "EUR",
+            "GBP",
+            "USD"
+          ]
+        },
+        {
+          "country": "United Kingdom",
+          "currencies": [
+            "EUR",
+            "GBP",
+            "USD"
+          ]
+        }
+      ]
+    },
+    "eu_vat_buyer_location_adjustment_documented": true,
+    "location_based_vat_is_not_discretionary_regional_base_price": true,
+    "auto_country_specific_base_price_tiers_verified": null,
+    "all_buyers_eligible_for_all_payment_routes": false,
+    "payment_provider_account_country_and_currency_must_be_checked": true,
+    "actual_regional_checkout_prices_observed": null,
+    "observed_foreign_exchange_spread": null,
+    "source_ids": [
+      "itch-payments"
+    ]
+  },
+  "discount_integrity": {
+    "permanent_sale_disallowed_by_guidelines": true,
+    "false_base_price_inflation_prohibited": true,
+    "excessively_frequent_sales_discouraged": true,
+    "indefinite_multi_product_bundle_discount_exception_documented": true,
+    "source_ids": [
+      "itch-quality"
+    ]
+  },
+  "research_implications": [
+    "For a price experiment, keep same game, time window, viewer source, pre-discount base price, browser/download entitlement and refund state aligned; do not treat badge visibility as causal revenue uplift.",
+    "Separately tag full-price orders, discounted positive payments, 100%-discount free acquisitions, pay-what-you-want tips, bundle shares and refunded payments.",
+    "Preserve both buyer gross payments and final settled seller proceeds with processor, tax, withholding and FX deductions separately.",
+    "Do not equate direct-selling currency selection or buyer-location VAT handling with verified per-country discretionary base-price automation.",
+    "An ownership record from a previous base-priced purchase does not necessarily grant later access to more expensive individually priced assets.",
+    "Seller-country and processor eligibility, actual refund ratios and geographic paid-order cohorts need independent consented transaction evidence."
+  ],
+  "observations": {
+    "seller_accounts_used": 0,
+    "checkout_tests_executed": 0,
+    "refund_requests_observed": 0,
+    "real_paid_game_orders_collected": 0,
+    "regional_prices_measured": 0,
+    "discount_effect_on_conversion": null,
+    "published_2026_platform_refund_rate": null
+  },
+  "limitations": [
+    "Official policy and creator help are evidence for rules, not actual seller outcomes.",
+    "Provider currency examples are verbatim scope-limited platform guidance at retrieval, not guaranteed every country corridor or the world's current FX settlement terms.",
+    "Terms refer to geographically applicable purchase prices, but the reviewed official creator documentation does not establish a platform-wide automated differential base-price selector; that feature remains unknown.",
+    "No real account, payments, private buyer identity, purchases, refunds or merchant eligibility were tested."
+  ]
+}
