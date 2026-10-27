@@ -1,18 +1,12 @@
-# Research source reuse and attribution record audit
+# Source register completeness audit
 
-**Reviewed October 26, 2026.** [Structured record](source-reuse-record-completeness-2026.json) · [source register checker](../../site/itch-source-register-audit.mjs).
+Reviewed October 26, 2026. All **178** source records have attributed URLs, retrieval dates and reuse notes; **454** bounded claims are registered.
 
-All **175** source records contain a public URL, attributed publisher, retrieval date, evidence class, and nonempty license/reuse *note*. These notes record provenance, **not** blanket legal permission to reuse original works.
-
-| Recorded publication date precision | Source records |
+| Publication date precision | Sources |
 |---|---:|
-| Full YYYY-MM-DD | 79 |
-| Month only YYYY-MM | 3 |
-| Publication day/month unknown | 93 |
-| **Total** | **175** |
+| Exact day | 79 |
+| Month only | 3 |
+| Unverified | 96 |
+| **Total** | **178** |
 
-The source register contains **452** bounded claims. Unknown publication dates stay unknown rather than being assigned the retrieval date. [itch.io terms](https://itch.io/docs/legal/terms), [creator FAQ](https://itch.io/docs/creators/faq), and the [Di Sipio 2025 Zenodo dataset](https://zenodo.org/records/15545055) are *linked and summarized*, not republished. Dataset-level metadata does not establish that each archive component permits redistribution.
-
-This check tests unique IDs, source links, date syntax, evidence classes and nonempty reuse notes. It does not validate all copyrights or endorse wholesale image, text, research-archive or user-data reproduction. Specific permissions and attribution conditions must be inspected before redistributing third-party files.
-
-Review completeness does not establish platform sales, unique paying buyers, representative income, game genre profitability, or the percentage of zero-sale creators. No private seller or buyer records were accessed.
+A citation and authored reuse note do **not** confer permission to redistribute third-party assets, PDFs or source archives. Public links are independently summarized. Historical or dynamically cached browse counts are evidence of visible filter listings only, not sales, buyers, earnings or redistribution rights.

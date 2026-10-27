@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "non_synchronized_paid_games_by_platform_catalog_filter",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-paid-browser-browse-2026",
+    "itch-paid-linux-browse-2026",
+    "itch-paid-windows-browse-2026",
+    "itch-browse-2d",
+    "itch-browse-paid-2d"
+  ],
+  "population": "public filtered game project listings under Paid and a selected platform or 2D tag",
+  "unit": "filter result listing, not unique person or transaction",
+  "observations": [
+    {
+      "id": "web_paid",
+      "count": 7456,
+      "cached_age": "approximately_5_days",
+      "source_ids": [
+        "itch-paid-browser-browse-2026"
+      ]
+    },
+    {
+      "id": "linux_paid",
+      "count": 7350,
+      "cached_age": "approximately_2_weeks",
+      "source_ids": [
+        "itch-paid-linux-browse-2026"
+      ]
+    },
+    {
+      "id": "windows_paid",
+      "count": 25265,
+      "cached_age": "approximately_1_month",
+      "source_ids": [
+        "itch-paid-windows-browse-2026"
+      ]
+    },
+    {
+      "id": "all_price_2D_tag",
+      "count": 426103,
+      "cached_age": "approximately_1_week",
+      "source_ids": [
+        "itch-browse-2d"
+      ]
+    },
+    {
+      "id": "paid_2D_tag",
+      "count": 12691,
+      "cached_age": "different_earlier_snapshot",
+      "source_ids": [
+        "itch-browse-paid-2d"
+      ]
+    }
+  ],
+  "overlap_and_definition": {
+    "one_game_can_list_web_linux_windows": true,
+    "platform_counts_not_additive": true,
+    "paid_filter_can_include_100pct_discounts": true,
+    "HTML5_only_count_verified": false,
+    "downloadable_only_count_verified": false,
+    "platform_tag_equivalent_to_file_type": false,
+    "same_timestamp_all_frames": false,
+    "synchronized_market_share_calculable": false,
+    "two_dimensional_tag_is_not_exclusive_genre": true
+  },
+  "unknown": {
+    "unique_paid_games_after_project_deduplication": null,
+    "actual_seller_count": null,
+    "browser_only_projects": null,
+    "downloadable_only_projects": null,
+    "paid_game_purchases": null,
+    "game_GMV": null,
+    "platform_net_revenue": null,
+    "publisher_net_receipts": null,
+    "paying_buyer_count": null
+  },
+  "limits": [
+    "The public filters count candidate listings, not unique paid sellers or sold units.",
+    "HTML5 and downloadable can coexist on one project page; distinct file-type counts could not be retrieved.",
+    "Source crawl recencies differ; percentages and summed platform totals would be invalid.",
+    "Paid browse includes temporarily discounted listings and does not guarantee current positive buyer price.",
+    "No merchant or private game transaction data were accessed."
+  ]
+}

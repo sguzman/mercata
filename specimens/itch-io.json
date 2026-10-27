@@ -1945,6 +1945,39 @@
       "evidence_class": "first_party_cached_ranked_jam_results_page",
       "license": "Public dynamic ranking and aggregate rating metadata linked; rankings, artwork and submissions not republished.",
       "notes": "Search-cached page displays 486 submitted entries, 483 rated entries and 10642 rating events; it is inconsistent with 482 on current overview and 495 organizer post."
+    },
+    {
+      "id": "itch-paid-browser-browse-2026",
+      "url": "https://itch.io/games/platform-web/store",
+      "publisher": "itch.io public browse",
+      "title": "Top paid games for Web",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official_cached_catalog_counter",
+      "license": "Linked public category count and independently authored description only.",
+      "notes": "7,456 results; search source indexed approximately five days before review."
+    },
+    {
+      "id": "itch-paid-linux-browse-2026",
+      "url": "https://itch.io/games/platform-linux/store",
+      "publisher": "itch.io public browse",
+      "title": "Top paid games for Linux",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official_cached_catalog_counter",
+      "license": "Linked public category count and independently authored description only.",
+      "notes": "7,350 results; source indexed approximately two weeks before review."
+    },
+    {
+      "id": "itch-paid-windows-browse-2026",
+      "url": "https://itch.io/games/platform-windows/store",
+      "publisher": "itch.io public browse",
+      "title": "Top paid games for Windows",
+      "retrieved_at": "2026-10-26",
+      "published_at": null,
+      "evidence_class": "official_cached_catalog_counter",
+      "license": "Linked public category count and independently authored description only.",
+      "notes": "25,265 results; source indexed approximately a month before review."
     }
   ],
   "claims": [
@@ -6577,6 +6610,29 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "Ratings can originate from eligible voters or participants, and different criteria can be rated per entry. Paid checkout, buyer count and post-jam conversion not observed."
+    },
+    {
+      "id": "itch-paid-platform-browse-overlap-2026",
+      "text": "Separately indexed itch.io paid-game platform filters displayed 7,456 browser-compatible listings, 7,350 Linux listings and 25,265 Windows listings, with different crawl recencies; overlapping platform support prevents summing these into unique games.",
+      "source_ids": [
+        "itch-paid-browser-browse-2026",
+        "itch-paid-linux-browse-2026",
+        "itch-paid-windows-browse-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Public browse listing results are not unique publishers, paid buyers, downloads, income or synchronized counts."
+    },
+    {
+      "id": "itch-2d-all-vs-paid-differing-snapshots-2026",
+      "text": "An indexed all-price 2D tag directory displayed 426,103 listings, while an earlier Paid+2D filter recorded 12,691 listings; their observations cannot establish a single synchronized paid fraction or purchasing population.",
+      "source_ids": [
+        "itch-browse-2d",
+        "itch-browse-paid-2d"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "medium",
+      "limitations": "Dynamic counts are at different crawls; project tags, discounts and multi-platform labels are overlapping supply indicators, not transaction records."
     }
   ],
   "observations": [
