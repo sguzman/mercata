@@ -6,6 +6,7 @@ test('Content eligibility, marketplace visibility, payment acceptance and buyer 
  const sources=new Set(s.evidence.map(x=>x.id));assert(d.source_ids.every(id=>sources.has(id)));
  for(const x of [...d.rules,...d.enforcement_channels])assert(x.source_ids.every(id=>sources.has(id)));
  assert.equal(d.enforcement_channels.length,4);
+ assert.equal(d.rules.find(x=>x.id==='photoreal_ai_real_person_likeness').impact,'operator_faq_prohibits_AI_imagery_designed_to_resemble_photographic_real_people');
  assert.equal(d.historical_case.operator_notice_date,'2025-07-27');
  assert.equal(d.historical_case.current_october_2026_enforcement_status_independently_verified,null);
  assert.equal(d.severity.does_not_imply_every_moderation_event_irreversible,true);
