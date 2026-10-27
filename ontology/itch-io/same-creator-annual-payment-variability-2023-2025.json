@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "annual_gross_payments_variability_one_multi_category_creator",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "notjam-2023",
+    "notjam-2024",
+    "itch-case-notjam"
+  ],
+  "sample": {
+    "creators": 1,
+    "creator_name": "Not Jam",
+    "voluntary_public_self_disclosure": true,
+    "years": [
+      2023,
+      2024,
+      2025
+    ],
+    "coverage": "one_multi_category_itch_creator_account_not_paid_game_seller_panel",
+    "currency": "USD",
+    "gross_or_net": "self_reported_gross_payments",
+    "annual_units": "calendar_year_self_reported_gross_all_category_payments_and_all_category_page_view_events",
+    "source_publication_dates": [
+      "2023-12-31",
+      "2024-12-31",
+      "2025-12-31"
+    ],
+    "matched_population_of_games_verified": false,
+    "homogeneous_title_prices_verified": false
+  },
+  "annual_reports": [
+    {
+      "year": 2023,
+      "source_id": "notjam-2023",
+      "annual_gross_all_categories_usd": 641,
+      "annual_page_view_events_all_categories": 25500
+    },
+    {
+      "year": 2024,
+      "source_id": "notjam-2024",
+      "annual_gross_all_categories_usd": 1152.22,
+      "annual_page_view_events_all_categories": 53681
+    },
+    {
+      "year": 2025,
+      "source_id": "itch-case-notjam",
+      "annual_gross_all_categories_usd": 464.66,
+      "annual_page_view_events_all_categories": 71659
+    }
+  ],
+  "annual_changes": [
+    {
+      "from_year": 2023,
+      "to_year": 2024,
+      "gross_change_usd": 511.22,
+      "gross_change_percent": 79.75,
+      "page_view_events_change": 28181,
+      "page_view_events_change_percent": 110.51,
+      "same_creator_and_categories_but_not_fixed_project_inventory": true,
+      "causal_traffic_effect_on_sales": null
+    },
+    {
+      "from_year": 2024,
+      "to_year": 2025,
+      "gross_change_usd": -687.56,
+      "gross_change_percent": -59.67,
+      "page_view_events_change": 17978,
+      "page_view_events_change_percent": 33.49,
+      "same_creator_and_categories_but_not_fixed_project_inventory": true,
+      "causal_traffic_effect_on_sales": null
+    }
+  ],
+  "multi_category_revenue_context": {
+    "reported_end_2023_lifetime_game_category_usd": 0,
+    "reported_end_2024_lifetime_game_category_usd": 0,
+    "reported_end_2025_lifetime_game_category_usd": 24,
+    "lifetime_game_figures_are_annual_gross_payments": false,
+    "font_sales_and_other_product_revenue_included_in_annual_all_category_gross": true,
+    "source_id_for_game_category_snapshots": "notjam-2023",
+    "existing_game_category_series": "ontology/itch-io/notjam-game-category-series-2023-2025.json"
+  },
+  "review_of_explanations": {
+    "creator_reported_2024_font_pack_virality": true,
+    "creator_suspected_2025_fewer_font_releases_as_factor": true,
+    "creator_reported_2025_single_game_outlier_in_page_plays": true,
+    "causal_explanation_identified": false,
+    "ordinary_noise_separated_from_release_mix": false,
+    "seasonality_within_year_measured": false,
+    "representative_paid_2d_game_revenue_volatility": false
+  },
+  "unknown": {
+    "gross_annual_payments_game_only_usd": null,
+    "game_payment_events_annual": null,
+    "mandatory_price_game_paid_orders_annual": null,
+    "per_game_monthly_sales_series": null,
+    "page_view_to_purchase_conversion": null,
+    "refunds_and_tax_adjusted_proceeds": null,
+    "seller_labor_hours": null,
+    "platformwide_seller_cash_volatility": null,
+    "genre_specific_volatility": null,
+    "seasonal_sales_effect": null
+  },
+  "limitations": [
+    "All annual gross payments are for one self-selected creator selling games, fonts, music and other products; not for an eligible paid-game-only seller cohort.",
+    "The 2023-2025 comparisons are same-account annual aggregates but not a fixed product mix: releases, content, traffic sources and pricing can change.",
+    "Annual page views are nonunique events and cannot be used as buyer denominators or a causal exposure instrument.",
+    "The game-category amounts in existing dossiers are cumulative lifetime snapshots, not a game-only annual net payout ledger.",
+    "The creator describes a game attention outlier in 2025 and fewer font releases; neither anecdote identifies a causal effect on paid orders.",
+    "Three annual observations cannot identify intrayear seasonality, ordinary fluctuations or the market-wide income volatility of paid 2D games.",
+    "No owner credentials or private buyer records were collected; the same creator's three dates remain one sampled account."
+  ]
+}
