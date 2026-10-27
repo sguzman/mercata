@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Engine, asset and export obligations are separated from actual game profit',()=>{
+ const a=read('ontology/itch-io/engine-asset-and-export-cost-crosswalk-2026.json'),s=read('specimens/itch-io.json'),q=read('queues/itch-io.json'),p=read('plans/itch-io.json');
+ const ids=new Set(s.evidence.map(x=>x.id));
+ assert(a.source_ids.every(id=>ids.has(id)));
+ assert.equal(a.engines.length,3);
+ const g=a.engines.find(e=>e.id==='godot');assert.equal(g.engine_royalty_rate,0);assert.equal(g.third_party_asset_rights_separate,true);
+ const u=a.engines.find(e=>e.id==='unity');assert.equal(u.personal_rolling_finance_limit_usd,200000);assert.equal(u.pro_annual_prepaid_per_seat_usd,2310);assert.equal(u.runtime_fee_applies,false);
+ const e=a.engines.find(e=>e.id==='unreal');assert.equal(e.standard_rate,0.05);assert.equal(e.lifetime_gross_excluded_per_product_usd,1000000);
+ assert(a.expense_classes.some(c=>c.id==='platform_exports'));
+ assert(a.expense_classes.some(c=>c.id==='developer_labor'));
+ assert(Object.values(a.unknown).every(v=>v===null));
+ const base=q.queues.flatMap(x=>x.tasks).find(x=>x.id==='economics/entry');assert.equal(base.progress,100);assert.equal(base.status,'complete');
+ const detail=p.detail_tasks.find(x=>x.id==='itch-io/special-games/model-engine-and-asset-expenses');assert.equal(detail.percent,100);assert.equal(detail.status,'complete');
+ for(const t of [base,detail])for(const file of ['ontology/itch-io/engine-asset-and-export-cost-crosswalk-2026.json','ontology/itch-io/engine-asset-and-export-cost-crosswalk-2026.md','tests/itch-engine-cost-crosswalk-2026.test.mjs','specimens/itch-io.json'])assert(t.evidence.includes(file));
+ assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
+});

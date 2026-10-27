@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "commercial_game_engine_asset_royalty_and_export_cost_model",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "godot-license-stable-2026",
+    "godot-export-stable-2026",
+    "unity-plans-personal-2026",
+    "unity-plans-2026-prices",
+    "unreal-game-release-royalties-2026",
+    "unreal-eula-2026",
+    "itch-payments",
+    "itch-terms",
+    "license-cc-by-4",
+    "license-cc-by-nc-4"
+  ],
+  "population": "hypothetical_independent_game_project_using_one_engine_not_actual_itch_merchants",
+  "engines": [
+    {
+      "id": "godot",
+      "engine_license": "MIT",
+      "commercial_release_permitted": true,
+      "engine_subscription_usd": 0,
+      "engine_royalty_rate": 0,
+      "license_notices_required": true,
+      "third_party_asset_rights_separate": true,
+      "platform_export_templates_required": true,
+      "source_ids": [
+        "godot-license-stable-2026",
+        "godot-export-stable-2026"
+      ]
+    },
+    {
+      "id": "unity",
+      "engine_license": "proprietary_plan_tier",
+      "personal_fee_if_eligible_usd": 0,
+      "personal_rolling_finance_limit_usd": 200000,
+      "pro_annual_prepaid_per_seat_usd": 2310,
+      "pro_monthly_per_seat_usd": 210,
+      "runtime_fee_applies": false,
+      "plan_eligibility_must_be_verified": true,
+      "commercial_asset_rights_separate": true,
+      "source_ids": [
+        "unity-plans-personal-2026",
+        "unity-plans-2026-prices"
+      ]
+    },
+    {
+      "id": "unreal",
+      "engine_license": "epic_standard_EULA_conditional_royalty",
+      "standard_rate": 0.05,
+      "lifetime_gross_excluded_per_product_usd": 1000000,
+      "launch_everywhere_qualified_rate": 0.035,
+      "release_notification_required_if_revenue_generating": true,
+      "other_royalty_exclusions_apply": true,
+      "licensing_not_reducible_to_itch_payout_percentage": true,
+      "source_ids": [
+        "unreal-game-release-royalties-2026",
+        "unreal-eula-2026"
+      ]
+    }
+  ],
+  "expense_classes": [
+    {
+      "id": "engine_license",
+      "basis": "plan_or_royalty_based_on_engine_terms",
+      "time_framing": "seat_term_or_lifetime_product_revenue",
+      "mandatory_for_each_game": false
+    },
+    {
+      "id": "third_party_assets",
+      "basis": "license_grant_and_cash_fee_per_version_for_music_art_fonts_and_code",
+      "time_framing": "purchase_or_renewal_as_license_terms",
+      "mandatory_for_each_game": false
+    },
+    {
+      "id": "platform_exports",
+      "basis": "target_OS_version_export_templates_toolchain_and_testing",
+      "time_framing": "per_build_and_per_supported_platform",
+      "mandatory_for_each_game": true
+    },
+    {
+      "id": "QA_and_support",
+      "basis": "human_work_hours_including_bugfixes_and_store_submissions",
+      "time_framing": "prelaunch_and_postlaunch",
+      "mandatory_for_each_game": true
+    },
+    {
+      "id": "seller_marketplace",
+      "basis": "actual_platform_share_and_payment_processor_deductions",
+      "time_framing": "each_paid_transaction",
+      "mandatory_for_each_game": false
+    },
+    {
+      "id": "distribution_and_local_tax",
+      "basis": "certification_signing_local_tax_and_payout_conversion_only_when_applicable",
+      "time_framing": "jurisdiction_and_store_dependent",
+      "mandatory_for_each_game": false
+    },
+    {
+      "id": "developer_labor",
+      "basis": "actual_engineering_art_marketing_and_compliance_hours",
+      "time_framing": "whole_project",
+      "mandatory_for_each_game": true
+    }
+  ],
+  "model_rule": "economic_profit=actual_retained_publisher_proceeds - engine_subscription_or_royalty_cost - licensed_asset_cost - external_support_or_marketing_cost - valued_developer_labor - other_documented_product_costs",
+  "example_only": {
+    "gross_product_revenue_usd": 10000,
+    "unreal_standard_royalty_before_other_deductions_usd": 0,
+    "unity_personal_fee_usd_if_eligible": 0,
+    "godot_engine_royalty_usd": 0,
+    "real_seller_profit_usd": null
+  },
+  "checks": [
+    "Select exactly one contract/version at time of build; do not mix Godot MIT, Unity subscription and Unreal gross revenue terms.",
+    "Storefront share and payment processor charges are in addition to any separate engine/license terms.",
+    "Unreal royalty base is potentially worldwide cross-store product gross, not itch-only net developer earnings.",
+    "Unity plan qualification requires all finances specified in the applicable terms, not only one itch game receipt.",
+    "Commercial-use asset permissions and notices cannot be inferred from engine commercial-use permission.",
+    "Free engine binaries still require export, platform QA, support and legally adequate notices.",
+    "Use observed cash and hours before describing game net profit; no universal typical game-development budget is available."
+  ],
+  "unknown": {
+    "chosen_engine_for_real_game": null,
+    "commercial_component_manifest_verified": null,
+    "real_project_export_qa_hours": null,
+    "real_project_assets_cost_usd": null,
+    "real_game_labor_hours": null,
+    "real_game_economic_profit_usd": null,
+    "typical_paid_game_engine_costs": null,
+    "engine_choice_causes_higher_seller_income": null
+  }
+}

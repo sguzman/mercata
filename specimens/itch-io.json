@@ -1835,6 +1835,72 @@
       "evidence_class": "academic_exploratory_interview_study",
       "license": "Public bibliographic link and independently written methodological summary only; full paper or figures not copied.",
       "notes": "Ten indie company interviewees, mainly in European countries, reflect exploratory early game-testing practices, not a probability sample of itch.io sellers, buyers or earnings."
+    },
+    {
+      "id": "godot-license-stable-2026",
+      "url": "https://docs.godotengine.org/en/stable/about/complying_with_licenses.html",
+      "title": "Godot Engine: Complying with licenses",
+      "publisher": "Godot Engine official documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_engine_licensing_documentation",
+      "license": "Official page linked; original concise factual research summaries only.",
+      "notes": "MIT engine commercial distribution permitted with notices; third-party assets and dependencies remain independently licensed. Stable documentation at retrieval."
+    },
+    {
+      "id": "godot-export-stable-2026",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html",
+      "title": "Godot Engine: Exporting projects",
+      "publisher": "Godot Engine official documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_engine_export_documentation",
+      "license": "Official documentation externally linked; no text, images or templates republished.",
+      "notes": "Exporter templates/presets, platform packages and extra work required; no actual release was exported for Mercata."
+    },
+    {
+      "id": "unity-plans-personal-2026",
+      "url": "https://unity.com/products/unity-personal",
+      "title": "Unity Personal",
+      "publisher": "Unity Technologies",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_engine_commercial_plan",
+      "license": "Official plan conditions linked; independently written summary of fiscal thresholds only.",
+      "notes": "Free commercial Personal subject to revenue/funding eligibility and closed-platform restrictions; exact period and eligibility rules must be reverified before use."
+    },
+    {
+      "id": "unity-plans-2026-prices",
+      "url": "https://unity.com/products/pricing-updates",
+      "title": "Changes to Unity subscription plans and pricing",
+      "publisher": "Unity Technologies",
+      "published_at": "2025-11-10",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_engine_pricing_update",
+      "license": "Public plan amounts and limits quoted briefly with attribution; no copyrighted page reproduced.",
+      "notes": "2026 prices USD $2,310 annual per Pro seat prepaid or $210 monthly; site warns of regional taxes and adjustment. Runtime fee cancellation noted in same official update."
+    },
+    {
+      "id": "unreal-game-release-royalties-2026",
+      "url": "https://www.unrealengine.com/release",
+      "title": "Unreal Engine commercial game release",
+      "publisher": "Epic Games",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_engine_royalty_guidance",
+      "license": "Operator source linked; independently authored high-level economics summary.",
+      "notes": "Standard 5% product-wide gross revenue royalty after first USD 1M exclusion, product release form and reports; conditional 3.5% Launch Everywhere program subject to actual qualification."
+    },
+    {
+      "id": "unreal-eula-2026",
+      "url": "https://www.unrealengine.com/eula/unreal",
+      "title": "Unreal Engine End User License Agreement",
+      "publisher": "Epic Games",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_engine_royalty_terms",
+      "license": "Official legal terms referenced only, not republished; no individualized legal advice.",
+      "notes": "Royalty Addendum has lifetime, quarter and non-royalty exclusions; exact current agreement and eligible product gross govern, not per-itch net payout."
     }
   ],
   "claims": [
@@ -6357,6 +6423,58 @@
       "observed_at": "2026-10-26",
       "confidence": "high",
       "limitations": "Selected qualitative interview study rather than itch.io game sales research; reported participant examples do not establish conversion, buyer counts or profits."
+    },
+    {
+      "id": "godot-commercial-mit-release-obligations-2026",
+      "text": "Godot's stable documentation identifies the engine as MIT-licensed, permits commercial games and requires license attribution, while warning that bundled assets and third-party dependencies have separate permissions.",
+      "source_ids": [
+        "godot-license-stable-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "No game-specific asset manifest or compliance review has been completed; 'free engine' is not 'free game production'."
+    },
+    {
+      "id": "godot-export-preparation-costs-2026",
+      "text": "Godot's official export procedure requires platform presets and appropriate export templates, so a nominally royalty-free engine does not remove porting, packaging and QA effort.",
+      "source_ids": [
+        "godot-export-stable-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "No development labor time, tested target executable or pricing for required SDKs was observed."
+    },
+    {
+      "id": "unity-2026-plan-threshold-and-prices",
+      "text": "Unity's 2026 game-engine plan allows Personal commercial development under its USD 200,000 annual revenue/funding eligibility rules and lists Pro at USD 2,310 per seat annually prepaid or USD 210 monthly.",
+      "source_ids": [
+        "unity-plans-personal-2026",
+        "unity-plans-2026-prices"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Eligibility depends on individual/business total finances and platform restrictions; displayed US prices do not establish taxes or local checkout cost."
+    },
+    {
+      "id": "unity-runtime-fee-canceled-2026",
+      "text": "Unity's public licensing updates state that its proposed per-install Runtime Fee was canceled rather than charged to shipped games.",
+      "source_ids": [
+        "unity-plans-2026-prices"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Engine subscriptions, third-party services and licensed assets remain possible costs and can change with policy versions."
+    },
+    {
+      "id": "unreal-royalty-lifetime-product-gross-2026",
+      "text": "Epic's official Unreal commercial-game rules list a standard 5% royalty on qualifying worldwide game revenue above the first USD 1 million lifetime gross per product, along with conditional release/reporting requirements and a 3.5% Launch Everywhere program rate.",
+      "source_ids": [
+        "unreal-game-release-royalties-2026",
+        "unreal-eula-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Actual agreement, qualified product gross, deductions and launch-program eligibility must be checked; royalty base is not equivalent to one store's seller-net payout."
     }
   ],
   "observations": [

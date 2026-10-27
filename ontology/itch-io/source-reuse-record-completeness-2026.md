@@ -1,12 +1,12 @@
-| **Total** | **165** || Not independently recorded | 86 || Month only YYYY-MM | 3 || Full YYYY-MM-DD | 76 |# Research source reuse and attribution record audit
+| **Total** | **171** || Not independently recorded | 91 || Month only YYYY-MM | 3 || Full YYYY-MM-DD | 77 |# Research source reuse and attribution record audit
 
 **Reviewed October 26, 2026.** [Structured record](source-reuse-record-completeness-2026.json) · [source register checker](../../site/itch-source-register-audit.mjs).
 
-This is a check of whether Mercata's **165 existing itch.io source records** contain the bibliographic and reuse-warning metadata needed to review publication decisions. It does **not** grant legal rights to redistribute anybody else's source archive, paper, image or confidential records.
+This is a check of whether Mercata's **171 existing itch.io source records** contain the bibliographic and reuse-warning metadata needed to review publication decisions. It does **not** grant legal rights to redistribute anybody else's source archive, paper, image or confidential records.
 
 ## Dated and source-linked capture
 
-All 165 source records contain a public URL, an attributed publisher/author, a retrieval date, an evidence class, and a nonempty `license` field. That last field is an **individually authored licensing/reuse note**, not necessarily an upstream SPDX license identifier or contractual grant. Publication dates have three honest precision levels:
+All 171 source records contain a public URL, an attributed publisher/author, a retrieval date, an evidence class, and a nonempty `license` field. That last field is an **individually authored licensing/reuse note**, not necessarily an upstream SPDX license identifier or contractual grant. Publication dates have three honest precision levels:
 
 | Recorded publication-date precision | Source records |
 |---|---:|
