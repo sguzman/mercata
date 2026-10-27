@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "research_only_game_offer_and_buyer_acquisition_experiment_design",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "bjarnason-indie-experimentation-oct2026",
+    "itch-pricing",
+    "itch-html5",
+    "itch-indexed",
+    "itch-payments",
+    "itch-buying-flow"
+  ],
+  "external_method_study": {
+    "study_date": "2026-10-05",
+    "design": "exploratory_qualitative_interviews",
+    "interviewed_companies": 10,
+    "companies_under_five_staff": 7,
+    "interviewee_locations": {
+      "sweden": 6,
+      "netherlands": 2,
+      "switzerland": 1,
+      "ukraine": 1
+    },
+    "population_representative": false,
+    "itch_revenue_data_collected": false
+  },
+  "study_five_dimensions": [
+    "experiment_goal",
+    "experiment_object",
+    "recruitment_sample",
+    "testing_design",
+    "feedback_execution"
+  ],
+  "planned_test": {
+    "id": "same_game_premium_with_demo_vs_premium_without_demo",
+    "status": "protocol_only_not_authorized_or_executed",
+    "eligible_population": "consented audience for one matching eligible positively priced title, excluding staff and known repeat exposures unless predeclared",
+    "offer_variants": [
+      {
+        "id": "A",
+        "description": "full_game_positive_minimum_price_only",
+        "supported_by": [
+          "itch-pricing"
+        ]
+      },
+      {
+        "id": "B",
+        "description": "same_positive_minimum_price_full_game_plus_a_free_demo",
+        "supported_by": [
+          "itch-pricing",
+          "itch-started"
+        ]
+      }
+    ],
+    "assignments": "Randomized assignment only if controlled technical and privacy/legal mechanism exists; otherwise a sequential public launch is descriptive and cannot establish causal lift.",
+    "source_of_exposure": "declared referral origin and time window, with separate platform browsing and outside traffic",
+    "same_game_same_currency_same_paid_product": true,
+    "horizon_days": [
+      30,
+      90,
+      365
+    ],
+    "measured_event_units": [
+      "impression_event",
+      "page_visit_event",
+      "free_demo_download_event",
+      "browser_play_event",
+      "completed_positive_price_order",
+      "refunded_order",
+      "settled_merchant_cash"
+    ],
+    "cost_fields": [
+      {
+        "field": "variant_design_and_build_hours",
+        "currency": "hours",
+        "valuation": "explicit_hourly_rate_or_unpriced"
+      },
+      {
+        "field": "publisher_marketing_hours",
+        "currency": "hours",
+        "valuation": "explicit_hourly_rate_or_unpriced"
+      },
+      {
+        "field": "qa_and_update_hours",
+        "currency": "hours",
+        "valuation": "explicit_hourly_rate_or_unpriced"
+      },
+      {
+        "field": "paid_advertising_cost",
+        "currency": "USD_or_documented_currency",
+        "valuation": "cash"
+      },
+      {
+        "field": "creative_assets_and_localization",
+        "currency": "USD_or_documented_currency",
+        "valuation": "cash"
+      },
+      {
+        "field": "processor_platform_refund_dispute_cost",
+        "currency": "USD_or_documented_currency",
+        "valuation": "cash"
+      }
+    ],
+    "primary_metric": "difference_between_variants_in_refund_adjusted_net_seller_contribution_after_variant_specific_variable_costs_per_aligned_eligible_page_visit",
+    "secondary_metric": "full_game_retained_positive_price_orders_per_aligned_page_visit_event",
+    "predeclared_success_threshold": "Evidence of greater than zero net incremental contribution after marketing and priced labor, with predeclared uncertainty/coverage rule; otherwise inconclusive, not profitable.",
+    "sample_size_threshold": "must_be_predeclared_using_minimum_detectable_difference_and_real_expected_orders; unknown_without_baseline",
+    "stop_on_cash_spend_above_owner_cap": true,
+    "owner_approved_cash_cap_usd": null,
+    "owner_approved_labor_hours_cap": null,
+    "privacy": "Never store or publish buyer identity; use seller-authorized disclosure-safe aggregates",
+    "observed_impressions": null,
+    "observed_visits": null,
+    "observed_orders": null,
+    "observed_refunds": null,
+    "observed_variant_costs": null,
+    "observed_conversion": null,
+    "observed_profit": null,
+    "observed_causal_effect": null,
+    "actually_ran": false
+  },
+  "sampling_warnings": [
+    "Industry interviewees may describe a practice but are not representative paying game customers.",
+    "Playtest satisfaction and user comprehension are different from willingness to pay.",
+    "Page views, browser plays, downloads, checkout starts and retained orders are distinct units.",
+    "Using a creator's fan base or selected friends inflates expected general-market willingness and positive feedback.",
+    "Staggered release before/after comparisons are confounded by discovery, seasonality, promotions and price changes.",
+    "Trial pricing, minimum charges and refund basis must be documented before any causal or profit claims."
+  ],
+  "observed_paid_itch_orders": null,
+  "merchant_approved_test": false,
+  "paid_marketing_expense_incurred": false,
+  "comparative_outcome_available": false
+}

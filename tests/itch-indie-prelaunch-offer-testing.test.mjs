@@ -1,0 +1,23 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Offer experiment is complete as a bounded specification, not as executed paid-demand research',()=>{
+ const r=read('ontology/itch-io/indie-prelaunch-offer-testing-2026.json'),s=read('specimens/itch-io.json'),q=read('queues/itch-io.json'),p=read('plans/itch-io.json');
+ assert(r.source_ids.every(id=>s.evidence.some(z=>z.id===id)));
+ assert.equal(r.external_method_study.interviewed_companies,10);
+ assert.equal(r.external_method_study.itch_revenue_data_collected,false);
+ assert.equal(r.study_five_dimensions.length,5);
+ assert.deepEqual(r.planned_test.offer_variants.map(x=>x.id),['A','B']);
+ assert.equal(r.planned_test.same_game_same_currency_same_paid_product,true);
+ assert.equal(r.planned_test.cost_fields.length,6);
+ assert(r.planned_test.predeclared_success_threshold.includes('greater than zero'));
+ assert.equal(r.planned_test.owner_approved_cash_cap_usd,null);
+ assert.equal(r.planned_test.actually_ran,false);
+ for(const k of ['observed_impressions','observed_visits','observed_orders','observed_refunds','observed_variant_costs','observed_conversion','observed_profit','observed_causal_effect'])assert.equal(r.planned_test[k],null);
+ const tasks=q.queues.flatMap(x=>x.tasks);
+ const done=tasks.find(t=>t.id==='strategy/offer-test');assert.equal(done.progress,100);assert.equal(done.status,'complete');
+ const pending=tasks.find(t=>t.id==='strategy/acquisition-test');assert.equal(pending.progress,78);assert.equal(pending.status,'in_progress');
+ for(const t of [done,pending])for(const path of ['ontology/itch-io/indie-prelaunch-offer-testing-2026.json','ontology/itch-io/indie-prelaunch-offer-testing-2026.md','tests/itch-indie-prelaunch-offer-testing.test.mjs','specimens/itch-io.json'])assert(t.evidence.includes(path));
+ assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
+});
