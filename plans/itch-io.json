@@ -148,7 +148,7 @@
         "itch-io/economics/build-break-even-model"
       ],
       "phase": 1,
-      "progress_percent": 91
+      "progress_percent": 94
     },
     {
       "id": "market",
@@ -1206,8 +1206,8 @@
       "emoji": "💳",
       "objective": "Investigate separate marketplace collection duties from seller liabilities.",
       "acceptance": "Provide dated source-linked evidence to separate marketplace collection duties from seller liabilities; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "in_progress",
-      "percent": 78,
+      "status": "complete",
+      "percent": 100,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1218,7 +1218,10 @@
         "tests/itch-io-payment-corridors.test.mjs",
         "ontology/itch-io/merchant-country-first-payout-2026.json",
         "ontology/itch-io/merchant-country-first-payout-2026.md",
-        "tests/itch-io-country-payout-cost.test.mjs"
+        "tests/itch-io-country-payout-cost.test.mjs",
+        "ontology/itch-io/merchant-tax-fx-cash-waterfall-2026.json",
+        "ontology/itch-io/merchant-tax-fx-cash-waterfall-2026.md",
+        "tests/itch-merchant-tax-fx-waterfall.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1265,13 +1268,16 @@
       "emoji": "💳",
       "objective": "Investigate avoid double counting processor and marketplace deductions.",
       "acceptance": "Provide dated source-linked evidence to avoid double counting processor and marketplace deductions; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "in_progress",
-      "percent": 85,
+      "status": "complete",
+      "percent": 100,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
         "specimens/itch-io.json",
-        "tests/itch-io-economics.test.mjs"
+        "tests/itch-io-economics.test.mjs",
+        "ontology/itch-io/merchant-tax-fx-cash-waterfall-2026.json",
+        "ontology/itch-io/merchant-tax-fx-cash-waterfall-2026.md",
+        "tests/itch-merchant-tax-fx-waterfall.test.mjs"
       ],
       "artifact": null,
       "priority": "high",
@@ -1284,8 +1290,8 @@
       "emoji": "💳",
       "objective": "Investigate identify who converts currency and when.",
       "acceptance": "Provide dated source-linked evidence to identify who converts currency and when; declare applicable population, unit, period, sample frame, limitations, and missing data.",
-      "status": "in_progress",
-      "percent": 82,
+      "status": "complete",
+      "percent": 100,
       "evidence": [
         "ontology/itch-io/commercial-rules-2026.json",
         "ontology/itch-io/commercial-rules-2026.md",
@@ -1300,7 +1306,10 @@
         "tests/itch-collected-payout-check.test.mjs",
         "ontology/itch-io/merchant-country-first-payout-2026.json",
         "ontology/itch-io/merchant-country-first-payout-2026.md",
-        "tests/itch-io-country-payout-cost.test.mjs"
+        "tests/itch-io-country-payout-cost.test.mjs",
+        "ontology/itch-io/merchant-tax-fx-cash-waterfall-2026.json",
+        "ontology/itch-io/merchant-tax-fx-cash-waterfall-2026.md",
+        "tests/itch-merchant-tax-fx-waterfall.test.mjs"
       ],
       "artifact": null,
       "priority": "high",

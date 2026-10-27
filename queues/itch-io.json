@@ -363,8 +363,8 @@
           "title": "Separate payment processing charges",
           "acceptance": "Check transaction, currency conversion, refund and chargeback costs.",
           "weight": 1,
-          "progress": 90,
-          "status": "in_progress",
+          "progress": 100,
+          "status": "complete",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
             "ontology/itch-io/commercial-rules-2026.md",
@@ -377,7 +377,10 @@
             "ontology/itch-io/refund-chargeback-unit-cost-2026.json",
             "ontology/itch-io/refund-chargeback-unit-cost-2026.md",
             "site/itch-refund-cost-audit.mjs",
-            "tests/itch-refund-cost-audit.test.mjs"
+            "tests/itch-refund-cost-audit.test.mjs",
+            "ontology/itch-io/merchant-tax-fx-cash-waterfall-2026.json",
+            "ontology/itch-io/merchant-tax-fx-cash-waterfall-2026.md",
+            "tests/itch-merchant-tax-fx-waterfall.test.mjs"
           ]
         },
         {
@@ -386,8 +389,8 @@
           "title": "Check payout rails and countries",
           "acceptance": "Document payment methods and geographic availability.",
           "weight": 1,
-          "progress": 92,
-          "status": "in_progress",
+          "progress": 100,
+          "status": "complete",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
             "ontology/itch-io/commercial-rules-2026.md",
@@ -405,7 +408,10 @@
             "tests/itch-io-country-payout-cost.test.mjs",
             "ontology/itch-io/starbase-first-year-payout-reconciliation-2022.json",
             "ontology/itch-io/starbase-first-year-payout-reconciliation-2022.md",
-            "tests/itch-starbase-payout-reconciliation.test.mjs"
+            "tests/itch-starbase-payout-reconciliation.test.mjs",
+            "ontology/itch-io/merchant-tax-fx-cash-waterfall-2026.json",
+            "ontology/itch-io/merchant-tax-fx-cash-waterfall-2026.md",
+            "tests/itch-merchant-tax-fx-waterfall.test.mjs"
           ]
         },
         {
@@ -441,8 +447,8 @@
           "title": "Identify published tax obligations",
           "acceptance": "Document required forms, withholding and merchant-of-record terms.",
           "weight": 1,
-          "progress": 88,
-          "status": "in_progress",
+          "progress": 100,
+          "status": "complete",
           "evidence": [
             "ontology/itch-io/commercial-rules-2026.json",
             "ontology/itch-io/commercial-rules-2026.md",
@@ -456,7 +462,10 @@
             "tests/itch-io-country-payout-cost.test.mjs",
             "ontology/itch-io/first-month-small-game-cashflow-2025-2026.json",
             "ontology/itch-io/first-month-small-game-cashflow-2025-2026.md",
-            "tests/itch-first-month-small-game-cashflow.test.mjs"
+            "tests/itch-first-month-small-game-cashflow.test.mjs",
+            "ontology/itch-io/merchant-tax-fx-cash-waterfall-2026.json",
+            "ontology/itch-io/merchant-tax-fx-cash-waterfall-2026.md",
+            "tests/itch-merchant-tax-fx-waterfall.test.mjs"
           ]
         },
         {

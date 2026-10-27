@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "operator_documented_merchant_mode_vat_withholding_fx_and_transfer_cash_waterfall",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-payments",
+    "itch-terms",
+    "stripe-global",
+    "stripe-mx-methods",
+    "paypal-mx-receiving"
+  ],
+  "population": "eligible marketplace publisher transactions under direct or collected payment modes, not observed individual accounts",
+  "unit": "one eligible order, resulting merchant balance and one eventual bank transfer",
+  "jurisdiction": "operator public rules, example country MX for externally integrated payout uncertainty",
+  "observation_period": "public provider and operator pages reviewed 2026-10-26",
+  "same_transaction_steps": [
+    {
+      "id": "buyer_charge",
+      "basis": "gross_item_price_plus_applicable_customer_sales_VAT",
+      "known_mode_policy": true,
+      "actual_amount": null
+    },
+    {
+      "id": "refund",
+      "basis": "reverse_buyer_payment_and_related_sale_debits_per_applicable_route",
+      "known_mode_policy": true,
+      "actual_amount": null
+    },
+    {
+      "id": "marketplace_share",
+      "basis": "creator_configured_percentage_of_gross_revenue_not_refunded",
+      "known_mode_policy": true,
+      "actual_amount": null
+    },
+    {
+      "id": "processor",
+      "basis": "payment_provider_percent_plus_fixed_and_route_specific_fees",
+      "known_mode_policy": true,
+      "actual_amount": null
+    },
+    {
+      "id": "taxable_sales_VAT",
+      "basis": "buyer_location_and_merch_of_record_responsibility_separate_from_publisher_income_tax",
+      "known_mode_policy": true,
+      "actual_amount": null
+    },
+    {
+      "id": "seller_account_adjustments",
+      "basis": "one_time_tax_identity_or_later_dispute_and_refund_adjustment_if_applicable",
+      "known_mode_policy": true,
+      "actual_amount": null
+    },
+    {
+      "id": "withholding",
+      "basis": "documented_foreign_publisher_Payouts_tax_identity_and_possible_treaty_rates",
+      "known_mode_policy": true,
+      "actual_amount": null
+    },
+    {
+      "id": "withdrawal_and_bank_FX",
+      "basis": "payout_processor_transfer_charge_and_bank_conversion_rate_when_applicable",
+      "known_mode_policy": true,
+      "actual_amount": null
+    }
+  ],
+  "direct": {
+    "merchant_of_record": "publisher",
+    "provider_accounts": [
+      "PayPal",
+      "Stripe"
+    ],
+    "account_setup": "connect_each_gateway",
+    "checkout_currency": "seller_selected_processor_compatible_currency",
+    "VAT_remitter": "publisher",
+    "optional_operator_assisted_VAT_collection": true,
+    "tax_reporting": "connected_gateway_country_specific_tax_forms",
+    "foreign_default_itch_Payouts_withholding_applied": false,
+    "chargeback_liability": "publisher",
+    "bank_timing": "gateway_specific_not_operator_payout_request",
+    "merchant_denomination": "publisher_or_publisher_company",
+    "paypal_published_currencies": [
+      "USD",
+      "CAD",
+      "GBP",
+      "EUR",
+      "JPY",
+      "AUD"
+    ],
+    "stripe_published_country_currency_examples": [
+      {
+        "country": "United States",
+        "currencies": [
+          "USD"
+        ]
+      },
+      {
+        "country": "Canada",
+        "currencies": [
+          "CAD",
+          "USD"
+        ]
+      },
+      {
+        "country": "Ireland",
+        "currencies": [
+          "EUR",
+          "GBP",
+          "USD"
+        ]
+      },
+      {
+        "country": "United Kingdom",
+        "currencies": [
+          "EUR",
+          "GBP",
+          "USD"
+        ]
+      }
+    ],
+    "not_listed_mexico_stripe_direct_is_verified_unsupported": false,
+    "actual_mexico_direct_connectivity": null,
+    "actual_provider_FX_spread": null,
+    "actual_transfer_fee": null,
+    "source_ids": [
+      "itch-payments",
+      "stripe-global",
+      "stripe-mx-methods",
+      "paypal-mx-receiving"
+    ]
+  },
+  "collected": {
+    "merchant_of_record": "itch.io",
+    "checkout_currency": "USD",
+    "payout_currency": "USD",
+    "payout_providers": [
+      "PayPal",
+      "Payoneer"
+    ],
+    "VAT_remitter": "itch.io",
+    "account_tax_interview_required": true,
+    "valid_tax_identity_before_payout": true,
+    "one_time_tax_identity_account_adjustment_usd": 3,
+    "minimum_available_usd": 5,
+    "transaction_wait_days": 7,
+    "review_min_days_after_request": 7,
+    "typical_review_days_range": [
+      10,
+      14
+    ],
+    "max_requests_in_progress": 3,
+    "issuer_of_tax_forms": "itch.io",
+    "foreign_seller_default_withholding_percent_without_valid_tax_ID": 30,
+    "actual_foreign_seller_withholding_rate": null,
+    "individual_treaty_rate": null,
+    "individual_legal_tax_duty": null,
+    "seller_bank_local_currency_guaranteed": false,
+    "bank_FX_spread": null,
+    "transfer_fee": null,
+    "exact_days_until_money_in_bank": null,
+    "source_ids": [
+      "itch-payments",
+      "itch-terms"
+    ]
+  },
+  "example_only": {
+    "buyer_product_price_usd": 10,
+    "configured_itch_share_percent": 10,
+    "illustrative_processing_rate_percent": 2.9,
+    "illustrative_processor_fixed_usd": 0.3,
+    "buyer_amount_including_applicable_VAT": null,
+    "before_other_deductions_usd": 8.41,
+    "available_cash_after_withholding_and_merchant_FX": null,
+    "actual_international_bank_amount": null,
+    "observed_transaction": false,
+    "limitations": [
+      "operator_arithmetic_example_not_proceeds_guarantee",
+      "withholding_VAT_refunds_payout_fee_and_conversion_need_real_individual_inputs"
+    ]
+  },
+  "geographic_cases": [
+    {
+      "country": "United States",
+      "role": "published_eligible_direct_Stripe_currency_example",
+      "checkout_currencies": [
+        "USD"
+      ],
+      "approved_real_account": null
+    },
+    {
+      "country": "Canada",
+      "role": "published_eligible_direct_Stripe_currency_example",
+      "checkout_currencies": [
+        "CAD",
+        "USD"
+      ],
+      "approved_real_account": null
+    },
+    {
+      "country": "Ireland",
+      "role": "published_eligible_direct_Stripe_currency_example",
+      "checkout_currencies": [
+        "EUR",
+        "GBP",
+        "USD"
+      ],
+      "approved_real_account": null
+    },
+    {
+      "country": "United Kingdom",
+      "role": "published_eligible_direct_Stripe_currency_example",
+      "checkout_currencies": [
+        "EUR",
+        "GBP",
+        "USD"
+      ],
+      "approved_real_account": null
+    },
+    {
+      "country": "Mexico",
+      "role": "processor_generic_support_not_evidence_of_itch_direct_Stripe_country_integration",
+      "checkout_currencies": null,
+      "approved_real_account": null
+    }
+  ],
+  "boundaries": [
+    "Direct provider availability varies by registered account; these Stripe rows are published examples and not a current global eligibility census.",
+    "Direct and collected have different merchant-of-record and VAT responsibilities, not two fees to apply to one sale.",
+    "Collected accepts USD and pays out USD; local-bank FX cost, if any, is a distinct subsequent conversion.",
+    "The 30% figure is a documented foreign publisher default with tax ID/treaty conditions, not a tax to subtract from every seller's income.",
+    "EU buyer VAT handling is a consumption-tax remittance responsibility, not identical to seller income tax.",
+    "The illustrative $8.41 for a $10 sale does not include individual income taxes, withheld amounts, refund rates, payout provider charges or conversion.",
+    "No real seller tax identity, country eligibility, transfer, buyer sale or net income was verified."
+  ],
+  "unknown": {
+    "publisher_effective_FX_rate": null,
+    "publisher_income_tax_percent": null,
+    "real_seller_VAT_liability": null,
+    "real_chargeback_fees": null,
+    "foreign_treaty_eligibility": null,
+    "real_bank_transfer_amount": null,
+    "population_eligible_by_country": null
+  }
+}
