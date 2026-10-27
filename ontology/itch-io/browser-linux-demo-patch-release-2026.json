@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "public_policy_game_release_compatibility_entitlements_and_versioning_crosswalk",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-html5",
+    "itch-started",
+    "itch-pricing",
+    "itch-download-keys",
+    "itch-access-control",
+    "butler-linux",
+    "butler-push",
+    "butler-overview",
+    "itch-app-quickstart",
+    "itch-app-manifest-actions",
+    "itch-quality"
+  ],
+  "population": "Hypothetical itch.io publisher offering either playable HTML5 or downloadable Linux game, optional free demo and distinct positive-price full-game entitlement",
+  "unit": "Required QA check or documented store feature, not a measured game or paid sale",
+  "period": "Creator, app, and butler documentation available October 26 2026",
+  "sample_frame": "Official HTML5, Linux integration, butler push, project pricing and download-key documentation",
+  "html5": {
+    "format": [
+      "single_self_contained_html",
+      "ZIP_with_root_index_html"
+    ],
+    "single_html_cannot_read_separately_uploaded_files": true,
+    "zip_requires_root_index_html": true,
+    "max_extracted_file_count": 1000,
+    "max_extracted_bytes": 500000000,
+    "max_single_file_bytes": 200000000,
+    "max_path_length_chars": 240,
+    "relative_asset_paths": true,
+    "case_sensitive_assets": true,
+    "cross_origin_external_resources_require_https": true,
+    "browser_embed_default_click_to_play": true,
+    "mobile_friendly_claim_requires_verified_mobile_operation": true,
+    "mobile_launch_forced_fullscreen": true,
+    "donation_only_in_native_HTML5_embed": true,
+    "checks": [
+      {
+        "id": "load",
+        "question": "Do index.html and all relative resources load in the deployed CDN case-sensitive paths?",
+        "observation": null
+      },
+      {
+        "id": "viewport",
+        "question": "Do canvas and UI adapt to advertised desktop and mobile viewport sizes?",
+        "observation": null
+      },
+      {
+        "id": "audio",
+        "question": "Does audio unlock correctly after the browser user gesture?",
+        "observation": null
+      },
+      {
+        "id": "keyboard",
+        "question": "Do keyboard/gamepad controls work and recover focus across fullscreen and tab switching?",
+        "observation": null
+      },
+      {
+        "id": "touch",
+        "question": "If Mobile Friendly is checked, do touch targets, orientation and gestures support full play?",
+        "observation": null
+      },
+      {
+        "id": "save",
+        "question": "Do browser state and saves survive reload, update and expected storage limits?",
+        "observation": null
+      },
+      {
+        "id": "load_time",
+        "question": "Does the shipped content load within the declared budget on supported connections and devices?",
+        "observation": null
+      },
+      {
+        "id": "privacy",
+        "question": "Does the build avoid publishing unnecessary player identifiers or requesting unrelated access?",
+        "observation": null
+      }
+    ],
+    "source_ids": [
+      "itch-html5"
+    ],
+    "actually_uploaded": false,
+    "actual_mobile_play_verified": null,
+    "observed_browser_conversion": null
+  },
+  "linux": {
+    "distribution_preference": "portable_archive_not_distro_specific_deb_rpm",
+    "layout_example": "root_launcher_plus_bin_assets_and_optional_lib_directory",
+    "verify_executable_permission": true,
+    "audit_missing_shared_libs": true,
+    "linker_tools_documented": [
+      "ldd",
+      "objdump"
+    ],
+    "avoid_bundling": [
+      "glibc",
+      "most_libstdc++",
+      "GPU_driver_libGL"
+    ],
+    "avoid_glibc_too_recent": true,
+    "older_runtime_or_static_musl_option": true,
+    "tests": [
+      {
+        "id": "start",
+        "question": "Does executable launch cleanly on an older supported distribution with correct architecture?",
+        "passed": null
+      },
+      {
+        "id": "permissions",
+        "question": "Does unpacking preserve executable permissions and expected relative paths?",
+        "passed": null
+      },
+      {
+        "id": "deps",
+        "question": "Do required shared libraries resolve without bundling drivers or unsuitable runtime libraries?",
+        "passed": null
+      },
+      {
+        "id": "input",
+        "question": "Do advertised keyboard/controller bindings work without privileged device access?",
+        "passed": null
+      },
+      {
+        "id": "save",
+        "question": "Are saves stored in a writable appropriate user location and survive update?",
+        "passed": null
+      },
+      {
+        "id": "offline",
+        "question": "Does the downloaded game work offline if the listing advertises offline support?",
+        "passed": null
+      },
+      {
+        "id": "update",
+        "question": "Do clean installation, patch and unchanged user saves work together?",
+        "passed": null
+      }
+    ],
+    "source_ids": [
+      "butler-linux",
+      "itch-app-quickstart"
+    ],
+    "tested_distributions": [],
+    "actual_game_tested": false
+  },
+  "demo_paid_entitlements": {
+    "project_is_not_the_same_as_each_individual_file": true,
+    "free_demo_may_be_hosted_on_same_project_page": true,
+    "free_demo_checkbox_does_not_make_full_game_free": true,
+    "positive_minimum_price_full_download_requires_qualifying_purchase_or_explicit_key": true,
+    "paid_download_key_covers_currently_eligible_files_subject_to_separate_file_price_unlock": true,
+    "key_may_be_manually_given_without_money": true,
+    "HTML5_embed_play_does_not_by_itself_indicate_a_paid_order": true,
+    "validation_checks": [
+      {
+        "id": "demo_access",
+        "question": "Can an unpurchased user get only the declared free demo and no priced full build?",
+        "result": null
+      },
+      {
+        "id": "paid_full_access",
+        "question": "Can an authorized paid tester access paid full files including correct OS channel?",
+        "result": null
+      },
+      {
+        "id": "key_price",
+        "question": "Does individually-priced soundtrack or bonus material require a sufficient associated key price?",
+        "result": null
+      },
+      {
+        "id": "saves",
+        "question": "Does separate demo and full game preserve compatible saves only where explicitly promised?",
+        "result": null
+      },
+      {
+        "id": "versions",
+        "question": "Are demo, beta and production versions unmistakably labeled?",
+        "result": null
+      }
+    ],
+    "source_ids": [
+      "itch-started",
+      "itch-pricing",
+      "itch-download-keys",
+      "itch-access-control"
+    ],
+    "actual_purchase_tested": false
+  },
+  "patching": {
+    "butler_target_format": "publisher/project:channel",
+    "supported_input": [
+      "folder",
+      "zip"
+    ],
+    "same_channel_push_replaces_channel_build": true,
+    "first_push_transmits_initial_build": true,
+    "subsequent_push_can_transfer_binary_differences": true,
+    "itch_app_update_receives_patches": true,
+    "backend_optimizes_default_patch_asynchronously": true,
+    "channel_tags_can_be_adjusted": true,
+    "browser_replacement_same_filename_preserves_download_statistics": "documented_for_manual_web_upload",
+    "manual_web_upload_of_new_name_and_deletion_loses_old_stats": "documented_for_manual_web_upload",
+    "app_refresh_on_start_and_every_30_minutes_documented": true,
+    "rollback_automatic_guarantee": false,
+    "previous_build_archive_required_for_operator_controlled_recovery": true,
+    "release_evidence_required": [
+      "preserved_original_build_artifact_and_hash",
+      "version_and_channel_id_with_timestamp",
+      "full_install_manifest_and_linked_files",
+      "new_changed_deleted_file_diff",
+      "patch_check_or_clean_reinstall_on_target_platform",
+      "old_user_saves_after_upgrade",
+      "documented_rollback_rehearsal_and_verification"
+    ],
+    "source_ids": [
+      "butler-push",
+      "butler-overview"
+    ],
+    "actual_channel_pushed": false,
+    "patch_benchmark_measured": false,
+    "saved_player_recovery_proven": false
+  },
+  "economics": {
+    "developer_hours_to_pack_html5": null,
+    "developer_hours_to_debug_linux": null,
+    "creator_hours_to_maintain_demo_and_full_build": null,
+    "observed_upload_bytes": null,
+    "observed_patch_bytes": null,
+    "conversion_browser_play_to_paid_order": null,
+    "refunds_from_failed_download": null,
+    "net_game_profit": null
+  },
+  "limits": [
+    "Source-backed packaging requirements are not evidence that any particular game runs correctly.",
+    "Linux executable dependencies, archives and mobile browser input require observed on-device tests, not only manifest inspection.",
+    "A free demo, page view, HTML5 play or manually issued key is not a positive-price paid order.",
+    "itch.io update mechanisms do not guarantee that every incompatible patch can be automatically rolled back or that user saves are preserved.",
+    "The HTML5 view and a separate positively-priced downloadable build have different entitlement and payment models.",
+    "Actual QA duration, bandwidth saved, compatibility failure rates and incremental paid sales remain unobserved."
+  ]
+}

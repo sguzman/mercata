@@ -2,7 +2,7 @@
 
 **Research underway; 2026-10-26 source-backed checkpoint.** The existing `itch-io` specimen is already admitted and is **researching**.
 
-**244 research tasks:** 84 original marketplace and game-domain tasks, plus 160 itch.io-specific questions across 13 workstreams and four phases. Research is now **89%** across the fixed 244-task inventory; the original inventory was 0%. No seller account operations or market experiments have been performed.
+**244 research tasks:** 84 original marketplace and game-domain tasks, plus 160 itch.io-specific questions across 13 workstreams and four phases. Research is now **90%** across the fixed 244-task inventory; the original inventory was 0%. No seller account operations or market experiments have been performed.
 
 ## Phases
 
