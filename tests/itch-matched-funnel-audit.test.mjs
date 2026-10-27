@@ -39,3 +39,20 @@ test('Task closes only dated methodology and retains missing empirical buyer dat
  for(const f of ['ontology/itch-io/matched-impression-order-funnel-audit-2026.json','ontology/itch-io/matched-impression-order-funnel-audit-2026.md','site/itch-matched-funnel-audit.mjs','tests/itch-matched-funnel-audit.test.mjs'])assert(t.evidence.includes(f));
  assert.equal(p.total_tracked_tasks,244);
 });
+
+test('Matched funnel rejects impossible ISO calendar dates even if all five rows share them',()=>{
+ const good=sample();
+ assert.equal(auditMatchedItchFunnel(good).valid,true);
+ for(const bad of ['2026-02-30T00:00:00Z','2026-02-29T00:00:00Z','2026-13-01T00:00:00Z','2026-10-01T24:00:00Z']){
+  const example=sample();
+  for(const row of example.rows)row.window_start_utc=bad;
+  const result=auditMatchedItchFunnel(example);
+  assert.equal(result.valid,false,bad);
+  assert(result.issues.some(x=>x.includes('valid aligned UTC window')),bad);
+  assert.equal(result.aligned_event_totals,null);
+  assert.equal(result.customer_conversion_probability,null);
+ }
+ const leap=sample();
+ leap.rows.forEach(row=>row.window_start_utc='2024-02-29T00:00:00Z');
+ assert.equal(auditMatchedItchFunnel(leap).valid,true,'real leap day should be accepted');
+});

@@ -23,3 +23,17 @@ test('Discount controls accepted as documentation, without real seller outcomes'
  assert.equal(task.percent,100);assert.equal(task.status,'complete');
  for(const f of ['ontology/itch-io/discount-cohort-bounded-comparison-2026.json','ontology/itch-io/discount-cohort-bounded-comparison-2026.md','site/itch-discount-cohort-audit.mjs','tests/itch-discount-cohort-audit.test.mjs'])assert(task.evidence.includes(f));
 });
+
+test('Discount cohorts reject impossible calendar days instead of silently rolling them forward',()=>{
+ const weirdCampaign={...a,start:'2026-02-30',end:'2026-03-07'};
+ const weirdDiscount={...b,start:'2026-02-30',end:'2026-03-07'};
+ const olderBaseline={...baseline,start:'2026-02-20',end:'2026-02-28'};
+ const r=auditItchDiscountCohorts({baseline:olderBaseline,fullPrice:weirdCampaign,discount:weirdDiscount,checks});
+ assert.equal(r.valid,false);assert.equal(r.causal_discount_effect,null);
+ for(const date of ['2026-02-29','2026-04-31','2026-13-01']){
+  const result=auditItchDiscountCohorts({baseline:{...baseline,start:date},fullPrice:a,discount:b,checks});
+  assert.equal(result.valid,false,date);
+ }
+ const leapBaseline={...baseline,start:'2024-02-29',end:'2024-03-01'};
+ assert.equal(auditItchDiscountCohorts({baseline:leapBaseline,fullPrice:a,discount:b,checks}).valid,true);
+});

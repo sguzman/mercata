@@ -9,7 +9,8 @@ const EVENT_UNITS=Object.freeze({
 });
 const CHANNELS=new Set(['internal_search','internal_browse','external_search','external_social','external_press','permissioned_email','paid_campaign','verified_direct','unattributed']);
 const isCount=n=>Number.isSafeInteger(n)&&n>=0;
-const utc=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(x)&&Number.isFinite(Date.parse(x));
+// Reject impossible calendar dates; Date.parse alone rolls February 30 into March.
+const utc=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(x)&&Number.isFinite(Date.parse(x))&&new Date(Date.parse(x)).toISOString()===x.replace('Z','.000Z');
 const nonempty=x=>typeof x==='string'&&x.trim().length>0;
 export function auditMatchedItchFunnel(report){
  if(!report||typeof report!=='object'||!Array.isArray(report.rows))throw new TypeError('Require one aggregate funnel report and event rows');

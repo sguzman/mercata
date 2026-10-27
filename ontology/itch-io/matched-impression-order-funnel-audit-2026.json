@@ -25,7 +25,8 @@
     "identical_explicit_UTC_window",
     "same_owner_verified_common_cohort_method",
     "declared_attribution_lag_days",
-    "refund_adjusted_actual_positive_price_order_count"
+    "refund_adjusted_actual_positive_price_order_count",
+    "real_calendar_UTC_start_and_end_not_normalized_by_date_parser"
   ],
   "required_event_units": [
     {
@@ -56,7 +57,8 @@
     "The derived ratio is a rate of events, not a probability that an individual visitor purchased.",
     "Free plays, optional donations, discount-to-zero keys, gifts and bundle claims do not count as retained positive-price orders.",
     "No client event identifier, IP, email, purchase key, cookie or token is used.",
-    "Different product builds, currencies, source categories, offer changes or reporting windows invalidate a pooled funnel."
+    "Different product builds, currencies, source categories, offer changes or reporting windows invalidate a pooled funnel.",
+    "The offline validator rejects impossible year-month-day combinations, including February 30; matching invalid timestamp strings is not a real observation cohort."
   ],
   "module": "site/itch-matched-funnel-audit.mjs",
   "actual_owner_analytics_observed": false,

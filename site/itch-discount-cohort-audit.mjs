@@ -1,7 +1,8 @@
 // Offline matched event-rate comparisons; never equate events with distinct buying people.
 const count=x=>Number.isSafeInteger(x)&&x>=0;
 const money=x=>typeof x==='number'&&Number.isFinite(x)&&x>0;
-const day=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&!Number.isNaN(Date.parse(x+'T00:00:00Z'));
+// Verify that the ISO date exists instead of accepting silently normalized days.
+const day=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&Number.isFinite(Date.parse(x+'T00:00:00Z'))&&new Date(Date.parse(x+'T00:00:00Z')).toISOString().slice(0,10)===x;
 const str=x=>typeof x==='string'&&x.trim().length>0;
 const ok=r=>r&&str(r.project_id)&&str(r.offer_id)&&str(r.build_id)&&str(r.currency)&&str(r.audience_frame)&&money(r.base_price_usd)&&day(r.start)&&day(r.end)&&r.start<=r.end&&count(r.page_view_events)&&count(r.paid_orders)&&count(r.refunds)&&r.refunds<=r.paid_orders&&count(r.discount_percent)&&r.discount_percent<=100;
 export function auditItchDiscountCohorts({baseline,fullPrice,discount,checks}={}){

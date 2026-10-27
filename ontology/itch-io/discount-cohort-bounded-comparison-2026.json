@@ -24,7 +24,8 @@
     "explicit_earlier_full_price_baseline_window",
     "same_order_refund_attribution_method",
     "separate_marketing_labor_and_spend",
-    "seller_authorized_aggregates_only"
+    "seller_authorized_aggregates_only",
+    "actual_valid_calendar_days_not_just_parseable_date_strings"
   ],
   "treatments": [
     {
@@ -65,6 +66,7 @@
     "100% discount acquisitions are not retained positive-price orders.",
     "Operator-fee waiver changes seller contribution, not necessarily buyer price.",
     "Historical 2018 exposure reporting is not verified identical in the 2026 dashboard.",
-    "A synthetic audit cannot independently verify seller source records, refunds or causal results."
+    "A synthetic audit cannot independently verify seller source records, refunds or causal results.",
+    "The offline audit validates real Gregorian dates including leap years; an invalid date cannot be rescued by JavaScript timestamp normalization."
   ]
 }
