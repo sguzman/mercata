@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "source_bounded_es419_first_paid_game_localization_pilot_plan",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-quality",
+    "itch-indexed",
+    "itch-top-paid-latam-spanish-2d-2026",
+    "itch-pricing",
+    "itch-payments",
+    "itch-html5"
+  ],
+  "population": "Prospective approved positively priced indie game with existing English source and new Spanish-Latin-America translation, not a real buyer cohort",
+  "unit": "One unique translation task-hour log or one aligned event count per locale cohort, never a paid person inferred from page views",
+  "period": "2026-10-27 public official guidance; future 7, 30, 90 day measurement horizons contingent on authorized release",
+  "sample_frame": "Official platform language metadata quality, payment, pricing and indexing docs, selected recent es-419 tagged 2D Paid browse filter",
+  "target_language": "Spanish Latin America",
+  "target_locale": "es-419",
+  "source_locale": "en",
+  "target_selection_basis": "Existing discoverable es-419 product category and practical pilot scope, not demonstrated buyer demand",
+  "prior_public_filter": {
+    "source_id": "itch-top-paid-latam-spanish-2d-2026",
+    "observed_listings": 174,
+    "eligible_buyers": null,
+    "paid_orders": null,
+    "representative_localized_game_revenue": null
+  },
+  "translation_worklog_contract": {
+    "required": [
+      "session_id",
+      "date_utc",
+      "build_version",
+      "source_string_id_or_batch",
+      "category",
+      "source_word_count",
+      "minutes",
+      "QA_result"
+    ],
+    "unique_session_and_nonoverlap_required": true,
+    "categories": [
+      "source_text_inventory",
+      "game_ui",
+      "narrative_dialogue",
+      "product_page_copy",
+      "subtitles",
+      "proofreading",
+      "font_text_overflow",
+      "platform_input_regression"
+    ],
+    "total_hours_formula": "sum(validated_nonoverlapping_session_minutes)/60",
+    "hourly_labor_rate_usd": null,
+    "cash_expenses_usd": null,
+    "actual_measured_minutes": null,
+    "actual_word_count": null,
+    "translations_completed": false
+  },
+  "publishing_gate": {
+    "actual_game_translation_required_before_es419_language_tag": true,
+    "store_page_translation_alone_not_in_game_language_proof": true,
+    "permission_to_modify_game_required": true,
+    "owner_approved_launch": false
+  },
+  "experimental_control": {
+    "same_game_build_and_price": true,
+    "positive_price_game_orders_only": true,
+    "identical_release_age_window": true,
+    "same_source_country_channel_recorded": true,
+    "referral_and_device_mix_recorded": true,
+    "locale_as_exposed_not_from_ip_guess": true,
+    "browser_plays_distinct_from_orders": true,
+    "refunds_subtracted_from_orders": true,
+    "proceeds_after_fees_reported_separately": true,
+    "person_deduplication_requires_authorization": true,
+    "predeclared_days": [
+      7,
+      30,
+      90
+    ],
+    "assigned_test_variants": [
+      "en",
+      "es-419"
+    ],
+    "randomized_assignment_present": false,
+    "causal_conversion_claim_allowed": false
+  },
+  "acceptance": {
+    "plan_scope_complete": true,
+    "commercial_experiment_executed": false,
+    "publisher_account_accessed": false,
+    "buyer_records_collected": 0,
+    "locale_paid_orders": null,
+    "real_publisher_translation_hours": null,
+    "causal_paid_conversion_lift": null,
+    "translation_roi": null
+  },
+  "limitations": [
+    "The 174 public listings are a cached filtered browse result, not verified paid game purchases or an estimate of Spanish-language demand.",
+    "Translation effort must be timed by actual future work sessions; no generic words-per-hour or flat translator budget was fabricated.",
+    "Language tags must only be enabled after actual translated content is available, as required by official quality guidance.",
+    "Different locale audiences and referral mixes invalidate naive causal paid-order comparisons.",
+    "No creator account, purchase, translation, game build or cost is observed."
+  ]
+}
