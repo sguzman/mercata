@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "small_singleplayer_2d_game_scope_mechanics_and_playtime_measurement_specification",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-first-browser-two-weeks-2026",
+    "itch-no-hacks-solo-140hours-2025",
+    "itch-spring-cleaning-team-phase-hours-2026",
+    "itch-html5",
+    "itch-pricing",
+    "itch-started"
+  ],
+  "population": "Hypothetical one-off 2D short game intended for itch.io publication, with one real selected free-browser developer report; not a representative paid-game group",
+  "unit": "One independently enumerated core interaction mechanic and one same-build completed playthrough session",
+  "period": "Selected 2025-26 creator reports; prospective 5-30 minute same-build QA scope only",
+  "scope": {
+    "game_kind": "2d_singleplayer_short_experience",
+    "planned_distinct_core_mechanics_min": 1,
+    "planned_distinct_core_mechanics_max": 2,
+    "planned_complete_play_minutes_min": 5,
+    "planned_complete_play_minutes_max": 30,
+    "planned_end_conditions": 1,
+    "monetization_open_options": [
+      "free_HTML5_with_optional_tip",
+      "priced_downloadable_game_with_separate_demo"
+    ],
+    "any_project_sale_guaranteed": false,
+    "game_source_built": false,
+    "has_actual_QA_plays": false
+  },
+  "mechanic_definition": "A player action loop with unique state-changing input, feedback and consequence; menu navigation, accessibility settings, common saving and bug fixes are not separate core mechanics by default",
+  "required_measurement": {
+    "builds_must_match": true,
+    "tester_completions_must_be_declared": true,
+    "each_run_has_unique_session_id": true,
+    "record_device_and_controls": true,
+    "log_failed_abandoned_and_partial_tests_separately": true,
+    "completed_run_fields": [
+      "session_id",
+      "build_id",
+      "play_duration_minutes",
+      "device",
+      "input",
+      "completed",
+      "source_verified"
+    ],
+    "report_min_median_max_completed_play_duration": true,
+    "require_minimum_three_completed_runs_for_descriptive_run_range": true,
+    "actual_representative_player_population": null
+  },
+  "source_anchored_selected_examples": [
+    {
+      "id": "come_closer",
+      "reported_player_game_minutes_approx": 9,
+      "reported_calendar_weeks_to_build_approx": 2,
+      "actual_person_hours": null,
+      "paid_orders": null
+    },
+    {
+      "id": "no_hacks",
+      "reported_solo_work_hours_approx": 140,
+      "reported_finished_playtime_minutes": null,
+      "paid_orders": null
+    },
+    {
+      "id": "spring_cleaning",
+      "reported_team_phase_hours_sum": 51,
+      "verified_total_contributor_person_hours": null,
+      "paid_orders": null
+    }
+  ],
+  "unknown": {
+    "actual_fully_played_game_sessions": null,
+    "measured_completed_run_median_minutes": null,
+    "actual_mechanic_count_in_existing_selected_creator_games": null,
+    "representative_small_paid_game_cost": null,
+    "actual_positive_price_orders": null,
+    "net_profit": null
+  },
+  "limitations": [
+    "The planned 5–30-minute game duration and one-to-two mechanics are an explicit proposed design scope, not a measured marketplace demand peak.",
+    "The nine-minute public browser game is one selected author's disclosed playtime, not representative duration.",
+    "The 140-hour different jam game and 51 team phase hours are not estimates of this proposed game's production hours.",
+    "No playable game or true player-completion sessions have been supplied.",
+    "Price or tips require actual positive-payment outcomes; gameplay minutes and feature counts are not commercial value."
+  ]
+}

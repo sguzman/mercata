@@ -1,0 +1,11 @@
+# Short 2D game scope: count mechanics and measure completed playtime
+
+**Research scope dated October 27, 2026.** Define one hypothetical **2D singleplayer game, one or two actual core gameplay mechanics, one complete finish condition, and a target 5–30-minute completed run**. This is a bounded test design, not evidence that buyers prefer a particular length or that such games make money.
+
+A *mechanic* is a player-activated state-changing loop with a distinct interaction and consequence. A menu, keyboard remapping, subtitles, save/reload or packaging work still costs development/QA time but should not automatically inflate the count of core gameplay mechanics. Those features must nevertheless be accounted for in accessibility and release readiness.
+
+The [selected creator small-game examples](small-game-production-effort-2025-2026.md) provide only a *rough nine-minute published free browser game* built over two calendar weeks, a different jam-game report of approximately 140 solo hours, and a team account listing 51 workstream-phase hours without complete person-hour attribution. The latter two do not report comparable final playtime or product mechanic counts. The 9-minute result is **not representative of all itch.io game releases**.
+
+For an authorized game build, inventory core mechanics by stable identifiers and run at least three same-build completed playthroughs, logging unique session IDs, actual completed durations, tested device and controls. The [pure evaluation module](../../site/itch-small-game-scope-audit.mjs) reports a descriptive min/median/max only for valid completed observations; aborted sessions remain separate, and a synthetic passing test is not evidence a game exists.
+
+The [HTML5](https://itch.io/docs/creators/html5) and [pricing](https://itch.io/docs/creators/pricing) documents govern publication and optional payment choices but do not assign purchase value to playtime. **Actual game build, tester observations, first-time paid buyers, working hours, and seller profit are still absent.** The prepublication task to *define measurable short-game scope* is accepted; actual game-production or selling work was not authorized. [Machine rubric](short-2d-game-scope-and-playtime-measurement-2026.json).
