@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "operator_2014_historical_platform_payout_and_game_page_counts",
+  "source_ids": [
+    "itch-founder-store-purchases-2014",
+    "itch-founder-december-2014-interview-payouts"
+  ],
+  "reviewed_at": "2026-10-26",
+  "observations": [
+    {
+      "as_of": "2014-09-16",
+      "reported_since_launch_developer_payout_usd_greater_than": 100000,
+      "reported_paid_out_amount_exact": null,
+      "source_ids": [
+        "itch-founder-store-purchases-2014"
+      ]
+    },
+    {
+      "as_of": "2014-12-01",
+      "reported_approx_payout_usd": 170000,
+      "reported_published_active_game_pages": 6666,
+      "reported_mixed_currency_normalization": "founder counted different currencies at nominal parity",
+      "source_ids": [
+        "itch-founder-december-2014-interview-payouts"
+      ]
+    }
+  ],
+  "matched_same_currency_precisely": false,
+  "known_all_game_publisher_count": null,
+  "positive_minimum_price_games_count": null,
+  "zero_sales_eligible_publishers": null,
+  "developer_payouts_are_marketplace_gmv": false,
+  "game_pages_are_seller_accounts": false,
+  "inferences_not_supported": {
+    "change_in_payouts_usd_exact": null,
+    "average_revenue_per_game_page": null,
+    "average_revenue_per_paid_game": null,
+    "average_earnings_per_publisher": null,
+    "median_income_per_publisher": null,
+    "current_2026_revenue": null,
+    "current_2026_active_sellers": null
+  },
+  "limitations": [
+    "September observation was strictly more than USD 100,000 not an exact opening amount, and December value is approximate; cannot subtract to produce a precise change.",
+    "The December tally treats distinct supported currencies at nominal parity, rather than applying a dated exchange-rate normalization.",
+    "6666 active published game pages are not unique eligible positive-price publishers and may include free browser games.",
+    "Paid-out funds differ from completed gross purchases, processor fees, refunds, charity bundles and seller net profit.",
+    "The observations concern a marketplace still in its first two years in 2014, not a comparable present-day seller income distribution."
+  ]
+}

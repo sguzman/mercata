@@ -1,6 +1,6 @@
 # itch.io commercial-game research — evidence synthesis and open gaps
 
-**Snapshot: October 26, 2026.** The specimen has 158 source records and 433 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
+**Snapshot: October 26, 2026.** The specimen has 159 source records and 435 bounded claims. This is a research synthesis, **not a representative seller-income survey**. [Machine register](research-synthesis-2026.json).
 
 The market has **no mandatory fee to list a game**, but publication, indexing and acquiring purchasers are separate. Payments can use configurable platform share and processor charges, and the illustrative $10 buyer payment becomes $8.41 **before** refund, tax, labor or other obligations. The public 1.78 million all-game directory, 49,588 paid-game directory and 12,691 paid-2D filter are counts of **listings**, not distinct active paid publishers or buyers.
 
@@ -65,6 +65,8 @@ The [2020–2024 same-creator matched game snapshots](spiral-atlas-four-year-gam
 The [Hive Time 2020 costed developer case](hive-time-2020-paid-downloads-and-costs.md) distinguishes AUD cash expenditures from imputed unpaid labor, independent paid transactions from 40,018 download events and unrelated charity-bundle entitlements. It cannot establish a representative paid-game conversion rate or income distribution.
 
 An [external income-tier citation-chain audit](unverified-income-statistics-chain-2026.md) found no inspectable sample behind repeated assertions that most paid itch.io games earn under $50 monthly; editorial policy errors and circular citations prevent adopting those percentages as an income distribution.
+
+The [December 2014 founder payout and active-page crosscheck](first-party-2014-payout-historical-crosscheck.md) supplies a dated historical operator total but no matched 2026 paid-seller denominator or meaningful per-publisher income.
 
 ## Missing evidence required for the goal
 

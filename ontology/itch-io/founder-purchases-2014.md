@@ -7,3 +7,5 @@ Of purchase events at that early point, **84% originated off-site** and roughly 
 About **11% of purchase events** occurred while a title was on sale. The historical **$2 median listed game price**, **$2 extra median among buyers already paying above minimum**, and **$3 median amount among paying supporters of free games** have different denominators and cannot be pooled to project current pricing or a new game's likely revenue.
 
 [Machine data](founder-purchases-2014.json) deliberately leaves modern marketplace GMV, game sales distributions, newcomer zero-earner fraction and developer net profit as unknown. It is a valuable early operator-admin source of actual purchase patterns, but not a 2026 market survey.
+
+[December 1, 2014 founder interview crosscheck](first-party-2014-payout-historical-crosscheck.md): approximate $170,000 payouts and 6,666 active pages, with no defensible per-seller average.
