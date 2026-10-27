@@ -24,7 +24,7 @@ test('Developer cash surplus minus hypothetical known labor does not become actu
   for(const f of ['ontology/itch-io/developer-labor-and-small-game-cash-2026.json','ontology/itch-io/developer-labor-and-small-game-cash-2026.md','site/itch-case-labor-analysis.mjs','tests/itch-developer-labor-cash.test.mjs'])assert(t.evidence.includes(f));
  }
  const scope=p.detail_tasks.find(x=>x.id==='itch-io/special-games/define-small-game-scope');
- assert.equal(scope.percent,94);assert.equal(scope.status,'in_progress');
+ assert.equal(scope.percent,100);assert.equal(scope.status,'complete');
  assert.equal(d.small_game_actual_measurement.measured_player_completion_times,null);
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
  assert.equal(p.progress_percent,Math.round((q.queues.flatMap(x=>x.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
