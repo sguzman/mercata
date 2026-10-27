@@ -2132,6 +2132,28 @@
       "evidence_class": "official_dynamic_paid_genre_filter_counter",
       "license": "Count and public filter linked; no HTML, images, profiles or third-party game content republished.",
       "notes": "Viewed 2026-10-27: 2458 paid-filter listing results; web-indexed page approximately five days old at retrieval. Dynamic indexed directory, not a verified contemporaneous seller, sale, buyer or profitability census."
+    },
+    {
+      "id": "stripe-mexico-account-verification-2026",
+      "url": "https://support.stripe.com/questions/required-information-to-open-your-stripe-account-in-mexico",
+      "title": "Required information to open a Stripe account in Mexico",
+      "publisher": "Stripe Support",
+      "published_at": null,
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "official_payment_processor_jurisdictional_account_setup",
+      "license": "Original first-party help linked; factual credential categories summarized without personal values.",
+      "notes": "Describes required Mexico Stripe entity/RFC and CLABE bank account setup; does not prove connecting Mexico-based merchants through itch.io direct payment integration."
+    },
+    {
+      "id": "stripe-mexico-domestic-card-currency-2026",
+      "url": "https://support.stripe.com/questions/supported-payment-methods-in-mexico?locale=en-GB",
+      "title": "Supported payment methods in Mexico",
+      "publisher": "Stripe Support",
+      "published_at": null,
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "official_payment_processor_domestic_checkout_constraint",
+      "license": "Link and independently authored summary only; no protected payment identifiers or account details copied.",
+      "notes": "Stripe documents domestic Mexican-card charge restriction to MXN and MXN-only domestic bank transfer. Applies to eligible Stripe Mexico processing and is not a live checkout test on itch.io."
     }
   ],
   "claims": [
@@ -6968,6 +6990,27 @@
       "confidence": "high",
       "observed_at": "2026-10-27",
       "limitations": "web-indexed page approximately five days old at retrieval. Genre counts overlap; pages may include DLC and sales discounts, while actual orders and creator income are unknown."
+    },
+    {
+      "id": "stripe-mexico-rfc-and-clabe-requirements-2026",
+      "text": "Stripe's Mexico account-setup support page describes business identity and RFC fields alongside a Mexico-based MXN bank account identified by CLABE; this does not verify Mexico direct Stripe integration on itch.io.",
+      "source_ids": [
+        "stripe-mexico-account-verification-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Processor-specific information may change by legal entity type; no merchant onboarding or account was used."
+    },
+    {
+      "id": "stripe-mexico-mxn-domestic-constraints-2026",
+      "text": "Stripe describes Mexico merchant domestic Mexican-card charges and bank transfers as restricted to MXN; this is a constraint on standalone Stripe Mexico processing, not proof of a supported itch.io direct-currency option for Mexican merchants.",
+      "source_ids": [
+        "stripe-mexico-domestic-card-currency-2026",
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "No real checkout, cross-border card, currency conversion or account-specific routing was tested."
     }
   ],
   "observations": [

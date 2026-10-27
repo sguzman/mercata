@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "five_country_official_payment_processor_and_merchant_eligibility_example_matrix",
+  "reviewed_at": "2026-10-27",
+  "population": "Potential positively-priced itch.io seller accounts situated in four directly documented Stripe example countries and Mexico; not all world merchant jurisdictions",
+  "unit": "Country/merchant-route documentation row, not seller headcount or observed checkout",
+  "period": "Creator payments and Stripe help reviewed 2026-10-27; policies may change",
+  "sample_frame": "Official itch.io payment-mode/country-currency list, Stripe global list and Mexico merchant support documents; no live seller login or payment attempt",
+  "source_ids": [
+    "itch-payments",
+    "stripe-global",
+    "paypal-mx-receiving",
+    "stripe-mexico-account-verification-2026",
+    "stripe-mexico-domestic-card-currency-2026"
+  ],
+  "merchant_modes": {
+    "collected_by_itch": {
+      "merchant_of_record": "itch.io",
+      "listed_buyer_currency": "USD",
+      "payout_options": [
+        "PayPal",
+        "Payoneer"
+      ],
+      "tax_interview_required": true,
+      "tax_validation_required_before_payment": true,
+      "min_available_balance_usd": 5,
+      "transaction_wait_days_standard": 7,
+      "payout_staff_review_min_days": 7,
+      "payout_review_typical_days": [
+        10,
+        14
+      ],
+      "payouts_in_progress_max": 3,
+      "first_time_review_can_exceed_normal": true,
+      "each_seller_country_approval_guaranteed": false,
+      "account_specific_tax_withholding_rate": null,
+      "currency_transfer_cost_usd": null,
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    "direct_stripe": {
+      "merchant_of_record": "publisher",
+      "country_currency_pairs_are_documented_examples_not_global_eligibility_census": true,
+      "buyer_region_restrictions_account_config_dependent": true,
+      "publisher_responsible_for_VAT": true,
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    "direct_paypal": {
+      "merchant_of_record": "publisher",
+      "published_checkout_currencies": [
+        "USD",
+        "CAD",
+        "GBP",
+        "EUR",
+        "JPY",
+        "AUD"
+      ],
+      "merchant_country_eligibility_census": null,
+      "may_require_business_account_by_region": true,
+      "account_acceptance_verified": null,
+      "source_ids": [
+        "itch-payments"
+      ]
+    }
+  },
+  "jurisdictions": [
+    {
+      "country": "United States",
+      "direct_stripe_itch_documented": true,
+      "direct_stripe_listed_currencies": [
+        "USD"
+      ],
+      "stripe_country_available_general": true,
+      "guaranteed_individual_merchant_approval": false,
+      "collected_payout_possible_subject_to_checks": "not_account_tested",
+      "buyer_currency_collected": "USD",
+      "known_tax_withholding_per_seller": null,
+      "local_bank_net_settlement": null,
+      "source_ids": [
+        "itch-payments",
+        "stripe-global"
+      ]
+    },
+    {
+      "country": "Canada",
+      "direct_stripe_itch_documented": true,
+      "direct_stripe_listed_currencies": [
+        "CAD",
+        "USD"
+      ],
+      "stripe_country_available_general": true,
+      "guaranteed_individual_merchant_approval": false,
+      "collected_payout_possible_subject_to_checks": "not_account_tested",
+      "buyer_currency_collected": "USD",
+      "known_tax_withholding_per_seller": null,
+      "local_bank_net_settlement": null,
+      "source_ids": [
+        "itch-payments",
+        "stripe-global"
+      ]
+    },
+    {
+      "country": "Ireland",
+      "direct_stripe_itch_documented": true,
+      "direct_stripe_listed_currencies": [
+        "EUR",
+        "GBP",
+        "USD"
+      ],
+      "stripe_country_available_general": true,
+      "guaranteed_individual_merchant_approval": false,
+      "collected_payout_possible_subject_to_checks": "not_account_tested",
+      "buyer_currency_collected": "USD",
+      "known_tax_withholding_per_seller": null,
+      "local_bank_net_settlement": null,
+      "source_ids": [
+        "itch-payments",
+        "stripe-global"
+      ]
+    },
+    {
+      "country": "United Kingdom",
+      "direct_stripe_itch_documented": true,
+      "direct_stripe_listed_currencies": [
+        "EUR",
+        "GBP",
+        "USD"
+      ],
+      "stripe_country_available_general": true,
+      "guaranteed_individual_merchant_approval": false,
+      "collected_payout_possible_subject_to_checks": "not_account_tested",
+      "buyer_currency_collected": "USD",
+      "known_tax_withholding_per_seller": null,
+      "local_bank_net_settlement": null,
+      "source_ids": [
+        "itch-payments",
+        "stripe-global"
+      ]
+    },
+    {
+      "country": "Mexico",
+      "direct_stripe_itch_documented": false,
+      "direct_stripe_listed_currencies": [],
+      "stripe_country_available_general": true,
+      "guaranteed_individual_merchant_approval": false,
+      "collected_payout_possible_subject_to_checks": "not_account_tested",
+      "buyer_currency_collected": "USD",
+      "known_tax_withholding_per_seller": null,
+      "local_bank_net_settlement": null,
+      "mexico_stripe_business_identity_requires_RFC": true,
+      "mexico_stripe_bank_requirement": "Mexico_based_MXN_account_with_CLABE",
+      "mexico_stripe_domestic_card_charge_currency": "MXN",
+      "mexico_itcho_direct_stripe_integration_eligibility": null,
+      "source_ids": [
+        "itch-payments",
+        "stripe-global",
+        "stripe-mexico-account-verification-2026",
+        "stripe-mexico-domestic-card-currency-2026"
+      ]
+    }
+  ],
+  "jurisdictional_comparison": {
+    "direct_merchant_fiscal_reporting_vs_collected_merchant_reporting_separate": true,
+    "processor_general_support_does_not_guarantee_itch_direct_acceptance": true,
+    "country_examples_not_eligible_seller_population": true,
+    "buyer_residence_not_equal_merchant_residence": true,
+    "currency_for_checkout_not_equal_local_payout_currency": true,
+    "real_payout_testing_performed": false
+  },
+  "unknown": {
+    "total_global_supported_seller_jurisdictions": null,
+    "real_seller_country_counts": null,
+    "mexico_itch_direct_stripe_account_linking": null,
+    "mexico_collected_payout_account_approval": null,
+    "actual_paypal_merchant_country_approval": null,
+    "country_net_payout_percentages": null
+  },
+  "limitations": [
+    "Itch.io's public direct Stripe country list has four rows, and it is not treated as a definitive statement that other countries are never supported.",
+    "Stripe independently supports Mexico, but generic country support does not establish the itch.io direct integration.",
+    "Collected payouts require tax identity, available balance, method configuration and risk review; a payment provider being listed is not an approval guarantee.",
+    "No personal bank/CLABE/RFC, tax rates, user seller account, buyer records or transaction receipts were accessed."
+  ]
+}
