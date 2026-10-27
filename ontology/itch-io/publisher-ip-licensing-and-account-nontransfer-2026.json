@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "publisher_ip_game_access_external_key_and_account_nontransferability_crosswalk",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-terms",
+    "itch-faq",
+    "itch-quality",
+    "itch-download-keys",
+    "itch-started",
+    "itch-pricing",
+    "itch-buying-flow"
+  ],
+  "population": "itch.io published game content, normal end-user accounts and purchased-game entitlements; not individually reviewed projects",
+  "unit": "separate publisher asset rights, site hosting license, user account, project entitlement or third-party store key",
+  "period": "public platform policies reviewed October 27 2026; service terms show historical 2023 update date",
+  "publisher_rights": {
+    "publisher_retains_uploaded_content_ownership": true,
+    "site_receives_nonexclusive_license": true,
+    "site_license_worldwide": true,
+    "site_license_royalty_free": true,
+    "site_license_transferable": true,
+    "site_license_sublicensable": true,
+    "site_license_purpose": "operate_host_reproduce_display_distribute_promote_content_in_connection_with_service",
+    "site_license_termination": "within_commercially_reasonable_time_after_publisher_removal_subject_to_applicable_terms",
+    "multi_store_publication_prohibited_by_itch_site_exclusivity": false,
+    "third_party_game_assets_automatically_cross_store_cleared": false,
+    "project_specific_exclusive_asset_agreement_reviewed": false,
+    "source_ids": [
+      "itch-terms",
+      "itch-faq"
+    ]
+  },
+  "transferability": [
+    {
+      "id": "site_account",
+      "unit": "user_or_publisher_login",
+      "platform_rule": "cannot_transfer_sell_or_assign_to_third_party",
+      "automatic_transfer_allowed": false,
+      "source_ids": [
+        "itch-terms"
+      ]
+    },
+    {
+      "id": "game_project_page",
+      "unit": "one_site_page_and_native_user_entitlement",
+      "platform_rule": "no_automatic_migration_of_purchases_or_reviews_to_fresh_project_page",
+      "automatic_transfer_allowed": false,
+      "source_ids": [
+        "itch-started",
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "game_copyright",
+      "unit": "publisher_owned_intellectual_property",
+      "platform_rule": "remains_with_publisher",
+      "automatic_transfer_allowed": null,
+      "source_ids": [
+        "itch-terms",
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "licensed_buyer_copy",
+      "unit": "valid_buyer_access_according_to_project_entitlements",
+      "platform_rule": "users_have_perpetual_nonexclusive_site_functionality_limited_access_license",
+      "automatic_transfer_allowed": null,
+      "source_ids": [
+        "itch-terms",
+        "itch-pricing"
+      ]
+    },
+    {
+      "id": "new_checkout_gift",
+      "unit": "new_sale_purchased_for_another_person",
+      "platform_rule": "gift_during_original_checkout_different_from_resale",
+      "automatic_transfer_allowed": true,
+      "source_ids": [
+        "itch-buying-flow"
+      ]
+    },
+    {
+      "id": "redeemable_download_key",
+      "unit": "entitlement_grant",
+      "platform_rule": "may_be_manual_gift_or_external_access_not_paid_order_proof",
+      "automatic_transfer_allowed": null,
+      "source_ids": [
+        "itch-download-keys"
+      ]
+    }
+  ],
+  "distribution_routes": [
+    {
+      "id": "native_game_files",
+      "supported": true,
+      "platform_preference": "primary_files_uploaded_directly_to_itch",
+      "source_ids": [
+        "itch-quality",
+        "itch-faq"
+      ]
+    },
+    {
+      "id": "external_store_keys",
+      "supported": true,
+      "platform_preference": "optional_bonus_entitlement_not_only_item_for_normal_listing",
+      "source_ids": [
+        "itch-download-keys",
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "external_key_only_page",
+      "supported_by_default": false,
+      "platform_preference": "possible_policy_exception_requires_case_specific_review",
+      "source_ids": [
+        "itch-download-keys",
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "DRM_free_download",
+      "platform_adds_DRM": false,
+      "binary_itself_DRM_free_verified": null,
+      "source_ids": [
+        "itch-faq"
+      ]
+    }
+  ],
+  "geography_and_time": {
+    "operator_license_geography": "worldwide_for_service_scope",
+    "third_party_asset_geography": "license_specific_unknown",
+    "buyer_rights_duration": "perpetual_nonexclusive_for_valid_access_under_terms",
+    "user_account_transfer_after_sale": "prohibited",
+    "game_asset_external_exclusivity_duration": null,
+    "specific_platform_exclusivity_contract_reviewed": false
+  },
+  "boundaries": [
+    "Site's right to distribute the publisher's uploaded content is nonexclusive, but third-party music, artwork, middleware, contractor code and external storefront agreements can impose separate restrictions.",
+    "Nonexclusive rights granted to users under site functionality do not establish a general right to copy and commercially resell a purchased game.",
+    "The account transfer prohibition differs from a license resale dispute or an authorized original checkout gift.",
+    "Game removal does not necessarily cancel acquired user licenses; actual future file access can depend on platform state and contract.",
+    "External Steam/other keys are not independent new paid orders if given to fulfill an earlier itch.io purchase.",
+    "A DRM-free platform download policy does not certify a publisher-supplied binary as DRM-free or offline-compatible.",
+    "World-wide site hosting license is not permission for every country, product classification or external marketplace.",
+    "Purchaser entitlements and page rankings cannot be assumed to migrate when an owner changes to a new game listing."
+  ],
+  "unresolved": {
+    "actual_thirdparty_asset_license_grants": null,
+    "actual_buyer_secondary_resale_permission": null,
+    "actual_game_specific_IP_assignment_contract": null,
+    "actual_license_exclusivity_term_years": null,
+    "actual_license_exclusivity_territories": null,
+    "actual_store_entitlement_migration_success": null,
+    "revenue_from_secondary_market": null
+  },
+  "compliance_state": {
+    "public_terms_inspected": true,
+    "creator_help_inspected": true,
+    "seller_account_accessed": false,
+    "game_asset_license_audit_complete": false,
+    "actual_sale_attempted": false,
+    "legal_conclusion_for_individual_game": false
+  }
+}
