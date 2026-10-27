@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "three_selected_qualitative_creator_shared_devlog_traffic_patterns_no_causal_lift",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "muse-hunter-selected-devlog-games-2026"
+  ],
+  "article_published_at": "2026-05-17",
+  "article_last_updated_at": "2026-09-27",
+  "research_population": "three_curator_selected_itch_games_with_creators_sharing_aggregate_graphs_not_paid_seller_panel",
+  "sample": {
+    "games": 3,
+    "independently_selected_randomly": false,
+    "developer_dashboard_exports_authenticated": false,
+    "charts_embedded_in_report": true,
+    "underlying_data_rows_available": false,
+    "matched_game_price_and_release_cohorts": false
+  },
+  "cases": [
+    {
+      "game": "Checkmage!",
+      "devlog_timing": "roughly_weekly_from_2025-07-21",
+      "itch_project_download_pattern": "some_downloads_close_to_majority_of_posts_plus_persistent_traffic",
+      "quantitative_download_events_attributed_to_each_devlog": null,
+      "steam_wishlist_large_spikes_reported": true,
+      "concurrent_youtube_trailer_exposure_reported": true,
+      "incremental_paid_orders": null
+    },
+    {
+      "game": "Psycutlery",
+      "reported_devlog_dates": [
+        "2024-01-05",
+        "2024-02-09",
+        "2025-06-19",
+        "2025-07-06",
+        "2025-08-08"
+      ],
+      "game_price_model": "free",
+      "second_post_author_interpreted_as_prolonging_traffic_roughly_weeks": 3,
+      "measured_counterfactual_with_post_absent": null,
+      "three_later_posts_obvious_itch_lift_reported": false,
+      "source_itch_chart_max_history_years": 1,
+      "incremental_paid_orders": null
+    },
+    {
+      "game": "ColorCoordination",
+      "game_release_date": "2024-12-26",
+      "reported_devlog_dates": [
+        "2024-12-28",
+        "2025-01-06"
+      ],
+      "game_price_model": "free",
+      "author_estimated_ongoing_downloads_per_day_approx": 1.39,
+      "steady_interest_reported_without_new_devlogs": true,
+      "april_2025_non_devlog_spike_reported": true,
+      "causal_source_of_april_spike": null,
+      "incremental_paid_orders": null
+    }
+  ],
+  "measurement_boundaries": {
+    "devlog_readership_not_unique_game_page_visitors": true,
+    "downloads_not_completed_premium_orders": true,
+    "same_age_untreated_game_control_missing": true,
+    "exogenous_youtube_and_indexing_uncontrolled": true,
+    "selected_free_games_cannot_identify_premium_2d_sale_effect": true,
+    "zero_or_small_post_event_graph_changes_do_not_prove_no_effect": true,
+    "marketing_effect_not_identified": true
+  },
+  "unknown": {
+    "distinct_new_game_visitors_due_to_devlogs": null,
+    "new_paying_customers_due_to_devlogs": null,
+    "matched_7_day_paid_order_lift": null,
+    "platformwide_devlog_discovery_effect": null,
+    "attributed_revenue_increase_usd": null,
+    "creator_incremental_marketing_labor_hours": null
+  },
+  "limitations": [
+    "Article author chose three projects and relied on developers who shared aggregate traffic plots; no paid-game cohort frame or unpublished analytics exports were provided.",
+    "Checkmage!'s sustained traffic cannot be causally separated from its regular work, publicity, audience maturation, and externally viral YouTube trailers.",
+    "Psycutlery and Color Coordination were offered free, meaning visits and downloads cannot be interpreted as paid-game purchase outcomes.",
+    "The three-week duration is the blog author's untested interpretation of one historic curve, not a randomized no-devlog counterfactual.",
+    "Some graphs could only display one year of itch history, and no raw data tables permit a matched product-visitor difference estimate.",
+    "The 1.39 downloads/day figure is an author-estimated selected free-game descriptive rate; it is neither new buyers nor a market mean."
+  ]
+}
