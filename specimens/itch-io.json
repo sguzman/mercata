@@ -1923,6 +1923,28 @@
       "evidence_class": "official_operating_system_security_distribution_guidance",
       "license": "Official reference linked and paraphrased, no copied sample programs or screenshots.",
       "notes": "Developer ID, hardened runtime, secure timestamp, notarytool and Gatekeeper requirements for externally distributed macOS apps; no Mac build, signed binary or notarization attempted."
+    },
+    {
+      "id": "gamedevjs-2026-winners-organizer",
+      "url": "https://gamedevjs.com/competitions/gamedev-js-jam-2026-winners-announced/",
+      "publisher": "Gamedev.js competition organizers",
+      "title": "Gamedev.js Jam 2026 winners announced",
+      "published_at": "2026-05-10",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_jam_organizer_postmortem",
+      "license": "Linked factual event metadata summarized independently; no game images, article text or results lists reproduced.",
+      "notes": "Organizer calls 495 entries submitted and 2782 developers joined, alongside 10642 ratings. This does not match dynamic current jam overview, cached results page or unique paying buyer counts."
+    },
+    {
+      "id": "itch-gamedevjs-2026-innovation-results-snapshot",
+      "url": "https://itch.io/jam/gamedevjs-2026/results/innovation",
+      "publisher": "itch.io jam hosted by End3r / Enclave Games",
+      "title": "Gamedev.js Jam 2026 innovation rankings page",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "first_party_cached_ranked_jam_results_page",
+      "license": "Public dynamic ranking and aggregate rating metadata linked; rankings, artwork and submissions not republished.",
+      "notes": "Search-cached page displays 486 submitted entries, 483 rated entries and 10642 rating events; it is inconsistent with 482 on current overview and 495 organizer post."
     }
   ],
   "claims": [
@@ -6531,6 +6553,30 @@
       "confidence": "high",
       "observed_at": "2026-10-26",
       "limitations": "Engineering-policy crosswalk; no actual Windows/macOS game build was submitted or tested."
+    },
+    {
+      "id": "gamedevjs-2026-public-submission-count-conflict",
+      "text": "For the April 2026 Gamedev.js Jam, the current itch.io jam overview reports 482 entries, a public result-page snapshot reports 486 submissions and 483 rated entries, while the organizer's May 10 retrospective reports 495 submitted entries; the pages do not establish one synchronized submission denominator.",
+      "source_ids": [
+        "itch-gamedevjs-jam-2026-schedule",
+        "itch-gamedevjs-2026-innovation-results-snapshot",
+        "gamedevjs-2026-winners-organizer"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Dynamic pages and article use different capture dates or definitions; discrepancies are preserved rather than selecting a true figure. Organizer's 2782 participants are joined developer accounts, not distinct buyers."
+    },
+    {
+      "id": "gamedevjs-2026-ratings-not-orders",
+      "text": "The Gamedev.js 2026 results and organizer independently report 10642 jam rating events, which are contest participation signals and cannot establish 10642 paying game buyers or units sold.",
+      "source_ids": [
+        "itch-gamedevjs-2026-innovation-results-snapshot",
+        "gamedevjs-2026-winners-organizer",
+        "itch-jams"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Ratings can originate from eligible voters or participants, and different criteria can be rated per entry. Paid checkout, buyer count and post-jam conversion not observed."
     }
   ],
   "observations": [

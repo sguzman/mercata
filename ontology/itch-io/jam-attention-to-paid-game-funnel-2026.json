@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "game_jam_submission_rating_discovery_and_postjam_paid_order_denominator_crosswalk",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-jams",
+    "itch-jam-cumulative-directory-2026",
+    "itch-gamedevjs-jam-2026-schedule",
+    "itch-gamedevjs-results-2026",
+    "itch-gamedevjs-2026-innovation-results-snapshot",
+    "gamedevjs-2026-winners-organizer",
+    "itch-payments",
+    "itch-buying-flow",
+    "itch-indexed"
+  ],
+  "population": "Gamedev.js Jam 2026 participation and published jam-system feature rules, not a game-purchaser census",
+  "unit": "separately described jam joined participant, submitted game, rated game, rating event, page visit, browser play, checkout or paid game order",
+  "period": {
+    "jam_submission_start_utc": "2026-04-13T15:00:00Z",
+    "jam_submission_end_utc": "2026-04-26T15:00:00Z",
+    "jam_rating_end_utc": "2026-05-09T15:00:00Z",
+    "organizer_post_date": "2026-05-10",
+    "current_itch_overview_reviewed": "2026-10-26"
+  },
+  "observations": [
+    {
+      "id": "itch_current_overview",
+      "source_ids": [
+        "itch-gamedevjs-jam-2026-schedule"
+      ],
+      "reported_entries": 482,
+      "reported_rating_events": null,
+      "reported_rated_entries": null,
+      "kind": "current_project_count_no_purchases"
+    },
+    {
+      "id": "itch_ranked_results_snapshot",
+      "source_ids": [
+        "itch-gamedevjs-2026-innovation-results-snapshot"
+      ],
+      "reported_entries": 486,
+      "reported_rating_events": 10642,
+      "reported_rated_entries": 483,
+      "kind": "dynamic_ranked_page_cache"
+    },
+    {
+      "id": "organizer_post_may_10",
+      "source_ids": [
+        "gamedevjs-2026-winners-organizer"
+      ],
+      "reported_entries": 495,
+      "reported_joined_developers": 2782,
+      "reported_rating_events": 10642,
+      "kind": "first_party_organizer_recap"
+    }
+  ],
+  "conflicting_submissions_counts": [
+    482,
+    486,
+    495
+  ],
+  "single_reconciled_submission_count": null,
+  "participant_to_project_identity_linkage": null,
+  "rated_entry_count_in_cached_results": 483,
+  "rating_events": 10642,
+  "mechanisms": [
+    {
+      "id": "jam_submission",
+      "unit": "submitted_project_entry",
+      "potential_visibility": "jam_entries_directory",
+      "established_paid_purchase": false,
+      "source_ids": [
+        "itch-jams"
+      ]
+    },
+    {
+      "id": "jam_ranking",
+      "unit": "submitted_project_ranking_based_on_configured_scoring",
+      "potential_visibility": "jam_results_and_rankings",
+      "established_paid_purchase": false,
+      "source_ids": [
+        "itch-jams"
+      ]
+    },
+    {
+      "id": "voter_rating",
+      "unit": "rating_event_with_jam_configured_voter_eligibility",
+      "potential_visibility": "rank_placement_under_rating_distribution",
+      "established_paid_purchase": false,
+      "source_ids": [
+        "itch-jams"
+      ]
+    },
+    {
+      "id": "creator_project_page",
+      "unit": "project_page",
+      "potential_visibility": "external_shared_link_and_possible_independent_search_indexing",
+      "established_paid_purchase": false,
+      "source_ids": [
+        "itch-jams",
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "browser_play_or_demo",
+      "unit": "gameplay_or_free_access_event",
+      "potential_visibility": "trial_engagement",
+      "established_paid_purchase": false,
+      "source_ids": [
+        "itch-jams"
+      ]
+    },
+    {
+      "id": "checkout_initiation",
+      "unit": "checkout_event",
+      "potential_visibility": "attempted_monetization",
+      "established_paid_purchase": false,
+      "source_ids": [
+        "itch-buying-flow"
+      ]
+    },
+    {
+      "id": "settled_paid_game_order",
+      "unit": "positive_price_order_after_refund_adjustment",
+      "potential_visibility": "reconciled_paid_transaction",
+      "established_paid_purchase": true,
+      "source_ids": [
+        "itch-payments",
+        "itch-buying-flow"
+      ]
+    }
+  ],
+  "future_authorized_funnel": [
+    {
+      "id": "jam_project_sample_frame",
+      "measure": "distinct eligible submitted game project IDs across a pinned jam entry snapshot",
+      "denominator": "all eligible submissions including unranked and withdrawn when observable",
+      "actual_count": null
+    },
+    {
+      "id": "visibility_exposure",
+      "measure": "unique eligible impressions if authorized aggregate analytics exist",
+      "denominator": "eligible matching project submissions",
+      "actual_count": null
+    },
+    {
+      "id": "engaged_visits",
+      "measure": "matched project page visits in fixed observation period",
+      "denominator": "attributed project page impressions",
+      "actual_count": null
+    },
+    {
+      "id": "free_game_activity",
+      "measure": "browser plays and free demo downloads",
+      "denominator": "relevant matched page visits",
+      "actual_count": null
+    },
+    {
+      "id": "paid_checkout",
+      "measure": "checkout-start attempts",
+      "denominator": "matched eligible paid-product page visits",
+      "actual_count": null
+    },
+    {
+      "id": "retained_order",
+      "measure": "settled positive minimum-price game purchase, after refunds",
+      "denominator": "eligible corresponding checkout attempts",
+      "actual_count": null
+    },
+    {
+      "id": "postjam_cash_contribution",
+      "measure": "seller proceeds net of marketplace and payment fees, refund and attributable work",
+      "denominator": "fixed game cohort and time window",
+      "actual_count": null
+    }
+  ],
+  "comparability": {
+    "cohort_window_days": [
+      30,
+      90,
+      365
+    ],
+    "restrict_to_same_game_version_and_price_model": true,
+    "require_pre_post_jam_or_matched_nonjam_traffic": true,
+    "do_not_treat_jam_vote_as_buyer": true,
+    "do_not_add_overlapping_cumulative_jam_projects": true,
+    "jam_project_count_conflict_unresolved": true,
+    "cannot_calculate_true_entry_rating_coverage_from_mixed_snapshots": true,
+    "right_censoring_required_for_later_paid_outcomes": true,
+    "exposure_or_sales_counterfactual_observed": false
+  },
+  "unknown": {
+    "jam_to_paid_conversion": null,
+    "paid_game_sellthrough_fraction": null,
+    "unique_paying_buyers": null,
+    "marketwide_first_game_earnings": null,
+    "jam_causes_more_paid_orders": null,
+    "postjam_median_net_income": null
+  },
+  "limitations": [
+    "The 482, 486 and 495 entry reports are separately captured or differently described, not verified snapshots of one synchronized denominator.",
+    "The shared 10642 rating total is not independent sales corroboration.",
+    "Joiner/developer counts and entries are not unique merchants, people who purchased, or revenue recipients.",
+    "Jam ranking algorithms and host voting permissions can influence exposures; ratings are not necessarily independent potential consumers.",
+    "Matching to later actual game sales requires authorized merchant-side checkout data, matching project IDs and refund-aware cohort accounting.",
+    "No live jam submission, paid order, account access, buyer tracking, marketing activity or income experiment was performed."
+  ]
+}
