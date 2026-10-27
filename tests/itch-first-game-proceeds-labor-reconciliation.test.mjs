@@ -1,0 +1,27 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {analyzeReportedCashAndLabor} from '../site/itch-case-labor-analysis.mjs';
+const load=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Per-project cash, net proceeds and all unobserved creator labor are separate',()=>{
+ const r=load('ontology/itch-io/first-game-proceeds-labor-reconciliation-2026.json'),s=load('specimens/itch-io.json'),q=load('queues/itch-io.json'),p=load('plans/itch-io.json');
+ const allSources=new Set(s.evidence.map(x=>x.id));assert(r.source_ids.every(id=>allSources.has(id)));
+ assert.equal(r.quantity_chain.length,8);
+ assert.equal(r.work_hours_registry.length,7);assert(r.work_hours_registry.every(x=>x.actual_hours===null));
+ const ar=r.selected_cases.find(x=>x.case==='aracore_astromining_ventures');
+ assert.equal(ar.cash_surplus_per_known_hour_gbp,5/1500);
+ assert.equal(ar.illustrative_valued_1500_hours_at_10_gbp_per_hour_balance_gbp,-14995);
+ const prior=load('ontology/itch-io/developer-labor-and-small-game-cash-2026.json');
+ const v=analyzeReportedCashAndLabor(prior.hypothetical_aracore_sensitivity);
+ assert.equal(v.cashSurplusPerKnownDevHour,ar.cash_surplus_per_known_hour_gbp);
+ assert(v.illustrativeRows.every(x=>x.fullyCostedProfit===null));
+ assert.equal(r.incompatible_cases_must_not_be_averaged,true);
+ assert(Object.values(r.unobserved).every(x=>x===null));
+ const base=q.queues.flatMap(x=>x.tasks).find(x=>x.id==='income/profit');
+ assert.equal(base.progress,100);assert.equal(base.status,'complete');
+ const detail=p.detail_tasks.find(x=>x.id==='itch-io/income/measure-hourly-profit');
+ assert.equal(detail.percent,100);assert.equal(detail.status,'complete');
+ for(const task of [base,detail])for(const f of ['ontology/itch-io/first-game-proceeds-labor-reconciliation-2026.json','ontology/itch-io/first-game-proceeds-labor-reconciliation-2026.md','tests/itch-first-game-proceeds-labor-reconciliation.test.mjs'])assert(task.evidence.includes(f));
+ assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
+ assert.equal(p.progress_percent,Math.round((q.queues.flatMap(x=>x.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
+});

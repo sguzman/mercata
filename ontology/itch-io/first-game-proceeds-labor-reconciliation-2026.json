@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "gross_to_cash_to_labor_adjusted_developer_return_definitional_acceptance",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "aracore-game-first-five-days-postmortem",
+    "rose-seed-replica-launch-cost-postmortem",
+    "basement-raid-first-month-2025",
+    "itch-payments"
+  ],
+  "population": "selected self-reporting independent game releases, not representative itch.io seller businesses",
+  "unit": "one project, merchant or author self-disclosure, fixed period and currency",
+  "period": "cases cover first 5 days, first week, and first 30 days at different dates; definitions reviewed October 2026",
+  "reference_records": [
+    "ontology/itch-io/developer-labor-and-small-game-cash-2026.json",
+    "ontology/itch-io/first-month-small-game-cashflow-2025-2026.json"
+  ],
+  "quantity_chain": [
+    {
+      "id": "buyer_gross",
+      "unit": "currency_per_store_period",
+      "definition": "sum of actual charges to buyers for eligible game orders, prior to refunds and fee adjustments",
+      "observed_sample": null
+    },
+    {
+      "id": "retained_gross",
+      "unit": "currency_per_store_period",
+      "definition": "completed buyer charges net of reversals and refunds on the same eligible transactions",
+      "observed_sample": null
+    },
+    {
+      "id": "post_fee_merchant_proceeds",
+      "unit": "currency_per_store_period",
+      "definition": "retained gross less operator share, processor charges and applicable merchant debits, never presume same as payout",
+      "observed_sample": null
+    },
+    {
+      "id": "payout_cash_received",
+      "unit": "bank_currency_per_settled_transfer",
+      "definition": "after payout provider charges, applicable withholding or FX; exclude not-yet-withdrawn balances",
+      "observed_sample": null
+    },
+    {
+      "id": "accounting_cash_surplus",
+      "unit": "currency_per_project_period",
+      "definition": "received eligible cash less documented project cash spending, with any future liabilities and unpriced labor still disclosed",
+      "observed_sample": null
+    },
+    {
+      "id": "economic_profit_valued_work",
+      "unit": "currency_per_project_period",
+      "definition": "cash economic contribution minus valued labor and non-cash items appropriately costed, taxes and cost allocation disclosed",
+      "observed_sample": null
+    },
+    {
+      "id": "cash_per_logged_dev_hour",
+      "unit": "currency_per_hour_conditioned_on_known_development_hours",
+      "definition": "cash surplus divided by known game development hours; not an actual contracted wage",
+      "observed_sample": null
+    },
+    {
+      "id": "fully_costed_return_per_all_hours",
+      "unit": "currency_per_hour_for_complete_project_log",
+      "definition": "fully costed economic return with production, QA, marketing, administration, update and support hours all measured",
+      "observed_sample": null
+    }
+  ],
+  "work_hours_registry": [
+    {
+      "id": "game_design_implementation",
+      "observed_in_aracore_partially": true,
+      "actual_hours": null
+    },
+    {
+      "id": "source_and_asset_rights",
+      "observed_in_aracore_partially": false,
+      "actual_hours": null
+    },
+    {
+      "id": "build_export_and_QA",
+      "observed_in_aracore_partially": false,
+      "actual_hours": null
+    },
+    {
+      "id": "product_page_marketing_and_community",
+      "observed_in_aracore_partially": false,
+      "actual_hours": null
+    },
+    {
+      "id": "tax_account_administration",
+      "observed_in_aracore_partially": false,
+      "actual_hours": null
+    },
+    {
+      "id": "translation_accessibility",
+      "observed_in_aracore_partially": false,
+      "actual_hours": null
+    },
+    {
+      "id": "postlaunch_patch_support",
+      "observed_in_aracore_partially": false,
+      "actual_hours": null
+    }
+  ],
+  "selected_cases": [
+    {
+      "case": "aracore_astromining_ventures",
+      "source_ids": [
+        "aracore-game-first-five-days-postmortem"
+      ],
+      "currency": "GBP",
+      "period": "first_five_days_all_store",
+      "reported_approx_gross_or_receipts": 190,
+      "reported_approx_costs": 185,
+      "author_described_cash_surplus": 5,
+      "known_development_hours_approx": 1500,
+      "cash_surplus_per_known_hour_gbp": 0.0033333333333333335,
+      "illustrative_valued_1500_hours_at_10_gbp_per_hour_balance_gbp": -14995,
+      "other_unknown_work_hours": null,
+      "actual_profit_after_labor": null,
+      "actual_itch_only_cash": null
+    },
+    {
+      "case": "rose_seed_replica",
+      "source_ids": [
+        "rose-seed-replica-launch-cost-postmortem"
+      ],
+      "currency": "EUR",
+      "period": "first_week_all_stores_with_historic_cost_context",
+      "all_store_receipts_approx": 1000,
+      "historical_two_year_cost_allocation_approx": 17000,
+      "grants_change_cost_allocation": true,
+      "actual_itch_receipts": null,
+      "actual_total_work_hours": null,
+      "actual_itch_specific_profit": null
+    },
+    {
+      "case": "basement_raid",
+      "source_ids": [
+        "basement-raid-first-month-2025"
+      ],
+      "currency": "USD",
+      "period": "first_month_one_game",
+      "creator_reported_unqualified_earnings_usd": 10,
+      "weekly_work_descriptions_not_full_time_log": true,
+      "actual_itch_order_count": null,
+      "actual_bank_net": null,
+      "actual_total_work_hours": null,
+      "actual_economic_profit": null
+    }
+  ],
+  "incompatible_cases_must_not_be_averaged": true,
+  "currency_translation_rate_established": false,
+  "nominal_periods_aligned": false,
+  "required_data_before_actual_hourly_profit": [
+    "matched_identically_dated_all_game_receipts_and_refunds",
+    "processor_marketplace_dispute_withholding_payout_and_FX_reconciled",
+    "itemized_documented_direct_and_ongoing_cash_costs",
+    "owner_work_hours_for_design_engineering_assets_marketing_release_QA_updates_community_support_admin",
+    "agreed_hourly_labor_valuation_and_same_currency",
+    "one_same_store_vs_all_store_revenue_basis",
+    "liability_treatment_tax_depreciation_and_future_maintenance_period_declared"
+  ],
+  "unobserved": {
+    "all_store_final_full_cost_profit": null,
+    "itch_merchant_specific_hourly_profit": null,
+    "project_actual_hourly_wage": null,
+    "typical_itch_seller_profit": null,
+    "first_game_income_expectation": null,
+    "platformwide_median_hourly_return": null
+  },
+  "limitations": [
+    "Cash-surplus divided by one known activity's work hours is arithmetic, not a verified wage or profit per every hour the person worked.",
+    "A disclosed accounting surplus may exclude compensation, taxes, asset licenses, refunds and substantial support periods.",
+    "GBP, EUR and USD cannot be averaged without an actual defined FX date and standard normalization.",
+    "Unobserved work hours must be null, not automatically zero or a full-time estimate from calendar dates.",
+    "The examples are volunteered game-specific reports with different windows and store mixes, not a representative payout dataset.",
+    "Any test demonstrating hypothetical labor cost demonstrates sensitivity and cannot establish market-wide expected developer compensation."
+  ]
+}
