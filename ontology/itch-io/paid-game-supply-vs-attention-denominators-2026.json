@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "cross_sectional_listing_source_and_attention_unit_reconciliation",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-paid-browser-browse-2026",
+    "itch-paid-linux-browse-2026",
+    "itch-paid-windows-browse-2026",
+    "itch-browse-2d",
+    "itch-browse-paid-2d",
+    "itch-html5-paid-type-2026",
+    "itch-downloadable-paid-type-2026",
+    "itch-html5-all-type-2026",
+    "itch-downloadable-all-type-2026",
+    "semrush-itch-site-traffic-september-2026",
+    "similarweb-itch-domain-traffic-sep-2026",
+    "itch-2014-purchase-referrer-update",
+    "itch-2019-referral-domain-analytics-update",
+    "itch-analytics-2018",
+    "luden-superweird-alpha-feature-2026"
+  ],
+  "source_records": [
+    "ontology/itch-io/platform-specific-paid-game-supply-2026.json",
+    "ontology/itch-io/paid-2d-listed-price-observation-boundary-2026.json",
+    "ontology/itch-io/whole-site-traffic-model-comparison-2026.json",
+    "ontology/itch-io/referral-source-channel-denominators-2026.json"
+  ],
+  "population": "public filtered itch.io game pages, search/browse impressions, and modeled domain sessions; never a census of actual paid orders",
+  "unit": "one dated filtered listing or one model-estimated site visit; neither is a distinct merchant or paying human",
+  "period": {
+    "listing_filters": "multiple asynchronous 2026 snapshots retrieved 2026-10-26",
+    "site_sessions": "2026-09",
+    "channel_feature_evidence": "2014-07-31 and 2019-10-23 historical reports",
+    "reconciliation_date": "2026-10-27"
+  },
+  "observed_filter_snapshots": [
+    {
+      "id": "all_2d_tag_pages",
+      "count": 426103,
+      "kind": "candidate_game_listing",
+      "filter": "/games/tag-2d",
+      "source_ids": [
+        "itch-browse-2d"
+      ]
+    },
+    {
+      "id": "paid_2d_tag_pages",
+      "count": 12691,
+      "kind": "candidate_paid_filtered_game_listing",
+      "filter": "/games/store/tag-2d",
+      "source_ids": [
+        "itch-browse-paid-2d"
+      ]
+    },
+    {
+      "id": "paid_html5_type",
+      "count": 7589,
+      "kind": "candidate_paid_filtered_html5_game_listing",
+      "filter": "/games/html5/store",
+      "source_ids": [
+        "itch-html5-paid-type-2026"
+      ]
+    },
+    {
+      "id": "paid_downloadable_type",
+      "count": 34058,
+      "kind": "candidate_paid_filtered_downloadable_game_listing",
+      "filter": "/games/downloadable/store",
+      "source_ids": [
+        "itch-downloadable-paid-type-2026"
+      ]
+    },
+    {
+      "id": "paid_browser_platform",
+      "count": 7456,
+      "kind": "candidate_paid_browser_platform_listing",
+      "source_ids": [
+        "itch-paid-browser-browse-2026"
+      ]
+    },
+    {
+      "id": "paid_linux_platform",
+      "count": 7350,
+      "kind": "candidate_paid_linux_platform_listing",
+      "source_ids": [
+        "itch-paid-linux-browse-2026"
+      ]
+    },
+    {
+      "id": "paid_windows_platform",
+      "count": 25265,
+      "kind": "candidate_paid_windows_platform_listing",
+      "source_ids": [
+        "itch-paid-windows-browse-2026"
+      ]
+    }
+  ],
+  "relative_counts_may_be_summed_to_unique_games": false,
+  "file_type_observations_are_mutually_exclusive": false,
+  "cross_snapshot_share_estimation_valid": false,
+  "selected_rank_sample": {
+    "url_filter": "/games/store/tag-2d",
+    "ranking": "popular",
+    "rows": 15,
+    "displayed_price_median_usd": 5.99,
+    "fully_discounted_zero_price_entries": 2,
+    "random_sample": false,
+    "currently_positive_price_orders_verified": null
+  },
+  "domain_visit_models": [
+    {
+      "id": "semrush",
+      "estimated_all_site_visits": 162370000,
+      "month": "2026-09",
+      "distinct_paying_game_buyers": null,
+      "source_ids": [
+        "semrush-itch-site-traffic-september-2026"
+      ]
+    },
+    {
+      "id": "similarweb",
+      "estimated_all_site_visits": 60600000,
+      "month": "2026-09",
+      "distinct_paying_game_buyers": null,
+      "source_ids": [
+        "similarweb-itch-domain-traffic-sep-2026"
+      ]
+    }
+  ],
+  "model_estimates_have_agreed_true_count": false,
+  "measure_contract": [
+    {
+      "stage": "public_listing",
+      "required_unit": "unique_project_id_at_pinned_snapshot",
+      "public_observable": true,
+      "observed_count": "filtered_listings_only",
+      "may_establish_paid_game_demand": false
+    },
+    {
+      "stage": "publisher",
+      "required_unit": "deduplicated_payout_eligible_seller_entity",
+      "public_observable": false,
+      "observed_count": null,
+      "may_establish_paid_game_demand": false
+    },
+    {
+      "stage": "title_appearance",
+      "required_unit": "actual_recommendation_impression_to_eligible_viewer",
+      "public_observable": false,
+      "observed_count": null,
+      "may_establish_paid_game_demand": false
+    },
+    {
+      "stage": "site_visit",
+      "required_unit": "site_session_vs_identified_human_explicitly_disambiguated",
+      "public_observable": "third_party_modeled_only",
+      "observed_count": null,
+      "may_establish_paid_game_demand": false
+    },
+    {
+      "stage": "game_page_view",
+      "required_unit": "matching_project_view_event_from_permissioned_analytics",
+      "public_observable": false,
+      "observed_count": null,
+      "may_establish_paid_game_demand": false
+    },
+    {
+      "stage": "free_play_or_download",
+      "required_unit": "unpaid_event_tagged_by_game_version",
+      "public_observable": false,
+      "observed_count": null,
+      "may_establish_paid_game_demand": false
+    },
+    {
+      "stage": "settled_paid_order",
+      "required_unit": "retained_positive_price_sale_net_of_refunds",
+      "public_observable": false,
+      "observed_count": null,
+      "may_establish_paid_game_demand": true
+    },
+    {
+      "stage": "unique_paying_game_customer",
+      "required_unit": "owner_authorized_privately_deduplicated_buyer_cohort",
+      "public_observable": false,
+      "observed_count": null,
+      "may_establish_paid_game_demand": true
+    }
+  ],
+  "historical_referral_events": {
+    "sources": [
+      "itch-2014-purchase-referrer-update",
+      "itch-2019-referral-domain-analytics-update"
+    ],
+    "current_2026_merchant_analytics_verified": false,
+    "seller_permission_obtained": false,
+    "domain_referral_views_not_automatically_purchase_referrers": true,
+    "no_referrer_not_direct_visitor": true
+  },
+  "comparison_requirements": [
+    "same_exact_capture_time",
+    "same_project_type_and_payment_filter",
+    "deduplicated_project_ids_across_platforms",
+    "separate_zero_price_sales_promotions_from_revenue",
+    "comparable release ages and visibility types",
+    "seller consent for private paid order denominators",
+    "no unobserved country allocation",
+    "never infer buyer counts from modeled all-site traffic"
+  ],
+  "limitations": [
+    "The published counts are non-synchronized and mutually overlapping views of one catalog; their sums are invalid.",
+    "The Paid filter can contain temporarily 100%-discounted prices, so it is not proof of a completed positive-price order.",
+    "Semrush and Similarweb model all-domain visits with different assumptions and report substantially differing September 2026 values.",
+    "An impression, site session, page view, browser play, download, order and unique paying human are distinct units.",
+    "The 2014/2019 source announcements do not prove the same current 2026 analytics access or enable a complete public merchant census."
+  ],
+  "unknown": {
+    "unique_active_paid_2d_sellers": null,
+    "unique_paid_html5_vs_downloadable_intersection": null,
+    "synchronized_platform_share": null,
+    "actual_unique_site_visitors": null,
+    "paid_game_page_visits": null,
+    "unique_buyers": null,
+    "game_GMV": null,
+    "genre_income_median": null,
+    "actual_paid_2d_orders": null
+  }
+}
