@@ -15,6 +15,10 @@ test('Single-game optional payments and later stores do not create independent p
  assert.equal(t.progress,100);assert.equal(t.status,'complete');
  for(const path of ['ontology/itch-io/single-game-optional-payment-multistore-2026.json','ontology/itch-io/single-game-optional-payment-multistore-2026.md','tests/itch-single-game-multistore-2026.test.mjs','specimens/itch-io.json'])assert(t.evidence.includes(path));
  const dt=p.detail_tasks.find(t=>t.id==='itch-io/strategy/compare-itch-only-and-multi-store-publishing');
- assert.equal(dt.percent,95);assert.equal(dt.status,'in_progress');
+ assert.equal(dt.percent,100);assert.equal(dt.status,'complete');
+ const crossStore=read('ontology/itch-io/crossstore-sales-comparability-2026.json');
+ assert.equal(crossStore.data_policy.actual_store_experiment_performed,false);
+ assert.equal(crossStore.unmeasured.real_incremental_paid_buyers,null);
+ assert(dt.evidence.includes('ontology/itch-io/crossstore-sales-comparability-2026.json'));
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
 });
