@@ -19,7 +19,9 @@ test('Popular paid 2D prices use the ranked-sample denominator and separate sale
   for(const f of ['ontology/itch-io/paid-2d-listed-price-observation-boundary-2026.json','ontology/itch-io/paid-2d-listed-price-observation-boundary-2026.md','tests/itch-paid-2d-price-observation-boundary.test.mjs'])assert(t.evidence.includes(f));
  }
  const z=p.detail_tasks.find(t=>t.id==='itch-io/competition/record-price-distributions');assert.equal(z.percent,100);assert.equal(z.status,'complete');
- assert.equal(p.detail_tasks.find(t=>t.id==='itch-io/competition/define-paid-competitor-set').percent,95);
+ const comparator=p.detail_tasks.find(t=>t.id==='itch-io/competition/define-paid-competitor-set');
+ assert.equal(comparator.percent,100);assert.equal(comparator.status,'complete');
+ assert(comparator.evidence.includes('ontology/itch-io/paid-game-supply-vs-attention-denominators-2026.json'));
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
  assert.equal(p.progress_percent,Math.round((q.queues.flatMap(x=>x.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
 });

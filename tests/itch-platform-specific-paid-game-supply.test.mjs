@@ -18,7 +18,8 @@ test('Paid platform filters remain nonadditive and do not imply buyers',()=>{
  assert.equal(b.progress,100);assert.equal(b.status,'complete');
  const x=p.detail_tasks.find(x=>x.id==='itch-io/market/study-browser-versus-downloadable-supply');
  const y=p.detail_tasks.find(x=>x.id==='itch-io/market/measure-2d-game-supply');
- assert.equal(x.percent,100);assert.equal(x.status,'complete');assert.equal(y.percent,96);
+ assert.equal(x.percent,100);assert.equal(x.status,'complete');assert.equal(y.percent,100);assert.equal(y.status,'complete');
+ assert(y.evidence.includes('ontology/itch-io/paid-game-supply-vs-attention-denominators-2026.json'));
  for(const t of [b,x,y])assert(t.evidence.includes('ontology/itch-io/platform-specific-paid-game-supply-2026.json'));
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
 });
