@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "official_2026_indexing_change_metadata_discovery_and_buyer_contact_measurement_contract",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "itch-indexed",
+    "itch-quality",
+    "itch-interact",
+    "itch-account-followers",
+    "itch-indexing-reform-oct-2026",
+    "itch-design",
+    "itch-started"
+  ],
+  "population": "public itch.io listed pages, indexed projects, eligible buyers and followers; not all unique creators or paid games",
+  "period": "October 19–26 2026 public operator documents; reference windows for future authorized game comparison",
+  "unit": "project page, eligibility state, discovery impression, page visit, follower event, buyer contact or paid order as explicitly marked",
+  "first_party_event": {
+    "date": "2026-10-19",
+    "reported_unblocked_projects_approx": 215000,
+    "reported_total_indexed_projects_lower_bound_exclusive": 2000000,
+    "reported_malware_spam_account_enforcement_lower_bound_exclusive": 10000,
+    "release_window": "approximately prior 7 days",
+    "review_policy": "less_strict_heuristic_flags_and_bugfixes",
+    "source_ids": [
+      "itch-indexing-reform-oct-2026"
+    ],
+    "new_game_uploads_measured": null,
+    "incremental_sales": null,
+    "legitimate_sellers_approved": null,
+    "exact_total_games": null
+  },
+  "publication_and_discovery_states": [
+    {
+      "id": "draft_or_restricted",
+      "search_browse_eligible": false,
+      "most_recent_release_slot_triggered": false,
+      "source_ids": [
+        "itch-indexed",
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "public_by_url_unindexed",
+      "search_browse_eligible": false,
+      "direct_access": true,
+      "source_ids": [
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "public_indexed",
+      "search_browse_eligible": true,
+      "index_position_promised": false,
+      "source_ids": [
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "public_deindexed",
+      "search_browse_eligible": false,
+      "direct_access_may_remain": true,
+      "source_ids": [
+        "itch-quality"
+      ]
+    }
+  ],
+  "listing_mechanics": [
+    {
+      "id": "first_public_release_date",
+      "rule": "most_recent_first_release_slot_only_once",
+      "consequence": "recreating_page_to_restore_position_is_prohibited_and_disrupts_buyer_entitlements",
+      "source_ids": [
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "cover_image",
+      "rule": "required_for_search_browse_eligibility_and_visual_presentation",
+      "consequence": "missing_cover_can_block_indexing",
+      "source_ids": [
+        "itch-indexed",
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "content_files",
+      "rule": "downloadable_playable_or_purchasable_content_required_for_game_page_indexing",
+      "consequence": "placeholder_pages_not_indexed",
+      "source_ids": [
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "accurate_genre_device_language",
+      "rule": "metadata_and_tags_should_match_content_and_actually_tested_device",
+      "consequence": "inaccurate_tag_overreach_can_trigger_deindexing",
+      "source_ids": [
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "suggested_tags",
+      "rule": "prefer_relevant_existing_tags_avoid_synonyms_and_self_name_tags",
+      "consequence": "tag_volume_not_measured_buyer_search_demand",
+      "source_ids": [
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "device_support",
+      "rule": "claim_platform_only_where_executable_was_tested_to_run",
+      "consequence": "unverified_compatibility_risks_listing_quality",
+      "source_ids": [
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "release_update",
+      "rule": "devlogs_can_be_distributed_in_digest_feeds_without_resetting_Most_Recent",
+      "consequence": "publication_visibility_and_follower_delivery_separate",
+      "source_ids": [
+        "itch-indexed",
+        "itch-account-followers"
+      ]
+    }
+  ],
+  "distribution_paths": [
+    {
+      "id": "search_and_filtered_browse",
+      "event": "eligible_project_listing_visibility",
+      "eligible_only_after_indexing": true,
+      "paid_order_guaranteed": false,
+      "source_ids": [
+        "itch-indexed"
+      ]
+    },
+    {
+      "id": "most_recent",
+      "event": "one_time_new_public_release_listing",
+      "eligible_only_after_indexing": true,
+      "paid_order_guaranteed": false,
+      "source_ids": [
+        "itch-quality"
+      ]
+    },
+    {
+      "id": "followers_feed",
+      "event": "followers_may_see_new_games_and_devlogs",
+      "eligible_only_after_indexing": false,
+      "paid_order_guaranteed": false,
+      "source_ids": [
+        "itch-account-followers"
+      ]
+    },
+    {
+      "id": "followers_new_game_email",
+      "event": "new_game_release_notification_subject_to_follower_settings",
+      "eligible_only_after_indexing": false,
+      "paid_order_guaranteed": false,
+      "source_ids": [
+        "itch-account-followers"
+      ]
+    },
+    {
+      "id": "buyer_direct_email",
+      "event": "post_first_sale_Interact_message_to_eligible_buyers",
+      "eligible_only_after_indexing": false,
+      "paid_order_guaranteed": false,
+      "source_ids": [
+        "itch-interact"
+      ]
+    },
+    {
+      "id": "direct_project_url",
+      "event": "link_reach_even_when_unindexed",
+      "eligible_only_after_indexing": false,
+      "paid_order_guaranteed": false,
+      "source_ids": [
+        "itch-indexed"
+      ]
+    }
+  ],
+  "buyer_contact": {
+    "buyer_email_available_only_after_first_sale": true,
+    "buyer_email_max_per_day": 1,
+    "unsubscribe_required": true,
+    "buyer_purchase_URL_can_be_included": true,
+    "follower_new_game_notifications_respect_settings": true,
+    "devlog_posts_can_reach_followers_feed": true,
+    "any_follower_implies_buyer": false,
+    "source_ids": [
+      "itch-interact",
+      "itch-account-followers"
+    ]
+  },
+  "methodological_controls": {
+    "indexing_policy_change_date": "2026-10-19",
+    "pre_post_treated_as_comparable_organic_listing_cohorts": false,
+    "separately_report_release_age_days": true,
+    "pinned_listing_filter_and_sort": true,
+    "track_tag_classifications_and_language": true,
+    "track_is_indexed_status_when_available": true,
+    "match_30_90_365_day_post_release_cohorts": true,
+    "deduplicate_game_pages_without_creating_hidden_merchant_identity_data": true,
+    "seller_authorized_aggregate_visit_data_required": true,
+    "seller_authorized_refund_adjusted_positive_price_order_data_required": true,
+    "separate_followers_from_buyer_contact_recipients": true,
+    "causal_sales_lift_claimed": false
+  },
+  "candidate_metrics": [
+    {
+      "id": "search_visibility",
+      "numerator": "eligible_observed_listing_impressions_or_positions",
+      "denominator": "eligible_pinned_indexed_search_results",
+      "observed": null
+    },
+    {
+      "id": "direct_page_visits",
+      "numerator": "authorized_page_visit_events",
+      "denominator": "aligned_referred_or_organic_exposures",
+      "observed": null
+    },
+    {
+      "id": "follower_reach",
+      "numerator": "authorized_notifications_or_digest_exposures",
+      "denominator": "declared_eligible_followers_or_messages",
+      "observed": null
+    },
+    {
+      "id": "buyer_email_reach",
+      "numerator": "authorized_buyer_message_delivery_events",
+      "denominator": "consenting_prior_buyers_reachable_in_approved_tool",
+      "observed": null
+    },
+    {
+      "id": "paid_orders",
+      "numerator": "retained_positive_price_orders",
+      "denominator": "same_window_eligible_paid_product_visits",
+      "observed": null
+    },
+    {
+      "id": "long_tail",
+      "numerator": "same_game_paid_orders_in_fixed_later_release_age_window",
+      "denominator": "same_game_and_price_model_during_aligned_exposure",
+      "observed": null
+    }
+  ],
+  "unknown": {
+    "monthly_search_queries_by_game_genre": null,
+    "organic_visibility_lift_from_2026_reform": null,
+    "devlog_traffic_increment": null,
+    "follower_to_paying_buyer_conversion": null,
+    "buyer_email_incremental_repeat_orders": null,
+    "evergreen_game_paid_orders": null,
+    "causal_tag_effect": null
+  },
+  "limitations": [
+    "Page eligibility is not indexing, indexing is not a high rank, visibility is not a checkout.",
+    "Unblocked 215k pages were formerly restricted catalog items, not 215k brand-new games or buyers.",
+    "Over 2 million indexed pages includes games and non-games; it is neither 2 million paid games nor sellers.",
+    "October 2026 review heuristic changes make historical before/after discovery cohorts non-comparable without controls.",
+    "Official follower and buyer-contact features are possibilities, not measured deliveries or sales.",
+    "Most Recent position cannot be refreshed by content edits; recreating a similar page to game exposure is prohibited.",
+    "No publisher dashboards, real search impression logs, audience emails, private customer histories or sales records were accessed."
+  ]
+}
