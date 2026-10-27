@@ -2,7 +2,7 @@
 
 **Research underway; 2026-10-26 source-backed checkpoint.** The existing `itch-io` specimen is already admitted and is **researching**.
 
-**244 research tasks:** 84 original marketplace and game-domain tasks, plus 160 itch.io-specific questions across 13 workstreams and four phases. Research is now **97%** across the fixed 244-task inventory; the original inventory was 0%. No seller account operations or market experiments have been performed. The [three-year same-creator payment variability study](../ontology/itch-io/same-creator-annual-payment-variability-2023-2025.md) advances an existing risk question without establishing paid-game sales or seasonal income.
+**244 research tasks:** 84 original marketplace and game-domain tasks, plus 160 itch.io-specific questions across 13 workstreams and four phases. Research is now **97%** across the fixed 244-task inventory; the original inventory was 0%. No seller account operations or market experiments have been performed. An [observed single-game follower-feed referral case](../ontology/itch-io/follower-feed-review-referrals-one-game-2026.md) is now documented without treating review-generated views as a measured devlog effect or paid game purchases. The [three-year same-creator payment variability study](../ontology/itch-io/same-creator-annual-payment-variability-2023-2025.md) advances an existing risk question without establishing paid-game sales or seasonal income.
 
 ## Phases
 
