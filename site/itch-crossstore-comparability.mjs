@@ -22,6 +22,11 @@ export function assessCrossStoreComparability(a,b){
    if(!validNumber(rec[key]))issues.push('invalid '+key+where);
   for(const key of ['paidOrders','releaseAgeDays'])
    if(!validCount(rec[key]))issues.push('invalid '+key+where);
+  // Zero-price downloads/donations must never enter the paid-game cohort.
+  if(validNumber(rec.priceAmount)&&rec.priceAmount===0)issues.push('positive minimum price required'+where);
+  // A completed positive-price order cannot contribute zero gross in its own matched ledger.
+  if(validCount(rec.paidOrders)&&rec.paidOrders>0&&validNumber(rec.grossReceipts)&&rec.grossReceipts===0)
+   issues.push('positive paid orders require positive gross receipts'+where);
   if(!str(rec.priceCurrency)||!/^[A-Z]{3}$/.test(rec.priceCurrency))issues.push('invalid priceCurrency'+where);
   if(!utc(rec.priceWindowStartUTC)||!utc(rec.priceWindowEndUTC)||
      (utc(rec.priceWindowStartUTC)&&utc(rec.priceWindowEndUTC)&&Date.parse(rec.priceWindowStartUTC)>=Date.parse(rec.priceWindowEndUTC)))

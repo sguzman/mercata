@@ -10,7 +10,8 @@
     "alienmelon-multistore-mar2026",
     "itch-payments",
     "mixolumia-postmortem",
-    "crumbling-world-first-commercial-game-2020"
+    "crumbling-world-first-commercial-game-2020",
+    "itch-pricing"
   ],
   "validator_path": "site/itch-crossstore-comparability.mjs",
   "population": "independent games distributed on itch.io alone or through multiple storefronts; no representative comparable price-and-sales cohort",
@@ -192,7 +193,9 @@
       "all_required_text_fields_nonblank": true,
       "three_letter_uppercase_iso_style_currency_code": true,
       "numeric_costs_and_receipts_finite_nonnegative": true,
-      "matched_record_schema_alone_is_not_verified_transaction_authentication": true
+      "matched_record_schema_alone_is_not_verified_transaction_authentication": true,
+      "positive_minimum_price_required_for_premium_game": true,
+      "positive_gross_if_completed_positive_price_orders_present": true
     }
   },
   "data_policy": {

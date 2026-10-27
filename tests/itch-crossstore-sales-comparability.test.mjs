@@ -87,3 +87,26 @@ test('Two previously registered source-derived game comparisons preserve mismatc
  assert.equal(t.status,t.percent===100?'complete':'in_progress');
  assert.equal(p.total_tracked_tasks,244);
 });
+
+test('Zero-minimum donations and positive-price orders with no gross cash cannot enter paid-game benchmarks',()=>{
+ const a={gameId:'fixture',edition:'v1',store:'itch',productType:'premium',priceCurrency:'USD',
+  priceAmount:10,discountStatus:'none',priceWindowStartUTC:'2026-01-01T00:00:00Z',priceWindowEndUTC:'2026-01-31T00:00:00Z',
+  releaseAgeDays:30,marketingCohort:'matched',grossReceipts:20,platformFee:2,processorFee:1,
+  refunds:0,distributionLaborHours:1,qaLaborHours:1,supportLaborHours:1,paidOrders:2,
+  merchantPayoutBasis:'gross-before-tax'};
+ const pair=x=>assessCrossStoreComparability(x,{...x,store:'other-store'});
+ assert.equal(pair(a).comparisonReady,true);
+ for(const [fixture,reason] of [
+  [{...a,priceAmount:0,paidOrders:0,grossReceipts:0},'positive minimum price required'],
+  [{...a,priceAmount:0,paidOrders:1,grossReceipts:10},'positive minimum price required'],
+  [{...a,paidOrders:1,grossReceipts:0},'positive paid orders require positive gross receipts'],
+ ]){
+  const result=pair(fixture);
+  assert.equal(result.comparisonReady,false,reason);
+  assert(result.issues.some(i=>i.includes(reason)),reason);
+  assert.equal(result.observedIncrementalRevenue,null);
+  assert.equal(result.representativePaidGameIncome,null);
+ }
+ assert.equal(pair({...a,priceAmount:0.01,paidOrders:0,grossReceipts:0}).comparisonReady,true);
+ assert.equal(pair({...a,priceAmount:10,paidOrders:0,grossReceipts:0}).comparisonReady,true);
+});
