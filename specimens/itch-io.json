@@ -1769,6 +1769,28 @@
       "evidence_class": "first_party_operator_statements_in_public_interview",
       "license": "Short cited aggregate numbers with independently written population and currency limitations; interview text not reproduced.",
       "notes": "Historic operator report of around 170k paid to developers, 6666 published active pages, nominal currency parity; not per-title GMV, not 2026 seller earnings."
+    },
+    {
+      "id": "itch-privacy-march-2026",
+      "url": "https://itch.io/docs/legal/privacy-policy",
+      "publisher": "Itch Corp. (itch.io)",
+      "title": "itch.io Privacy Policy",
+      "published_at": "2026-03-26",
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_current_policy",
+      "license": "Source linked; independently authored factual summaries only.",
+      "notes": "Privacy policy's last-modified date and self-identification of Itch Corp. corroborate the operator in the service terms; this is not corporate registration verification."
+    },
+    {
+      "id": "itch-general-faq-operator-2026",
+      "url": "https://itch.io/docs/general/faq",
+      "publisher": "itch.io General FAQ",
+      "title": "Frequently Asked Questions — Who runs itch.io?",
+      "published_at": null,
+      "retrieved_at": "2026-10-26",
+      "evidence_class": "official_platform_faq",
+      "license": "Source linked; independently authored factual summaries only.",
+      "notes": "Self-described 2013 founding by Leaf Corcoran is historical; individual founder is distinct from legal corporate operator."
     }
   ],
   "claims": [
@@ -6217,6 +6239,39 @@
       "confidence": "medium",
       "observed_at": "2026-10-26",
       "limitations": "Published active pages include free games and are neither paid-game listings alone nor unique active revenue-earning publishers."
+    },
+    {
+      "id": "itch-legal-operator-2026",
+      "text": "The itch.io Terms of Service identify Itch Corp. as the entity owning and operating the platform; the privacy policy last modified March 26, 2026 independently self-identifies the same company.",
+      "source_ids": [
+        "itch-terms",
+        "itch-privacy-march-2026"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Primary-source service identity, not a corporate-register search, beneficial-ownership audit or guarantee of unchanged terms."
+    },
+    {
+      "id": "itch-founder-distinct-operator-2026",
+      "text": "The platform's FAQ identifies Leaf Corcoran as the person who founded itch.io in 2013; its service agreement identifies Itch Corp. as the current contractual platform operator.",
+      "source_ids": [
+        "itch-general-faq-operator-2026",
+        "itch-terms"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "The founding account is first-party history, not a current staffing, equity or beneficial-ownership register."
+    },
+    {
+      "id": "itch-merchant-mode-not-operator-identity",
+      "text": "The legal identity of itch.io's operator is separate from the merchant of record: under direct-to-you checkout the seller is merchant of record, whereas under collected itch.io payouts the platform is merchant of record; payments use third-party gateways.",
+      "source_ids": [
+        "itch-terms",
+        "itch-payments"
+      ],
+      "observed_at": "2026-10-26",
+      "confidence": "high",
+      "limitations": "Seller-selected payment configuration and geographic processor eligibility vary; no specific seller checkout or payout was examined."
     }
   ],
   "observations": [

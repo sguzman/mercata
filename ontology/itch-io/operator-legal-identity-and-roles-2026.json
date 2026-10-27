@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "legal_operator_and_function_role_crosswalk",
+  "reviewed_at": "2026-10-26",
+  "population": "Public itch.io service functionality and published contractual modes; not all observed transactions or individual merchants",
+  "unit": "Documented service function or payment configuration, not a seller, purchase or paid game",
+  "period": "Official public terms and creator documentation accessible 2026-10-26; 2026-03-26 policy revision; founder year 2013",
+  "sample_frame": "Official itch.io terms, privacy policy, general FAQ, creator getting-started, indexing, purchase, payments and download-key documentation",
+  "source_ids": [
+    "itch-terms",
+    "itch-privacy-march-2026",
+    "itch-general-faq-operator-2026",
+    "itch-started",
+    "itch-indexed",
+    "itch-buying",
+    "itch-payments",
+    "itch-download-keys"
+  ],
+  "operator": {
+    "name": "Itch Corp.",
+    "roles": [
+      "owns_and_operates_service",
+      "party_to_user_and_publisher_service_terms"
+    ],
+    "source_ids": [
+      "itch-terms",
+      "itch-privacy-march-2026"
+    ],
+    "independently_verified_corporate_registration": null
+  },
+  "founding": {
+    "founder": "Leaf Corcoran",
+    "year": 2013,
+    "source_ids": [
+      "itch-general-faq-operator-2026"
+    ],
+    "current_personal_control_or_equity": null
+  },
+  "functional_roles": [
+    {
+      "function": "publication",
+      "responsible": "publisher provides/uploads a project and its assets; itch.io provides publication interface",
+      "source_ids": [
+        "itch-started",
+        "itch-terms"
+      ],
+      "metric_available_from_public_policy": false
+    },
+    {
+      "function": "hosting",
+      "responsible": "itch.io hosts the project page and uploaded files under the publisher's content license",
+      "source_ids": [
+        "itch-started",
+        "itch-terms"
+      ],
+      "metric_available_from_public_policy": false
+    },
+    {
+      "function": "discovery",
+      "responsible": "itch.io sets independent Search & Browse indexing and visibility eligibility",
+      "source_ids": [
+        "itch-indexed"
+      ],
+      "metric_available_from_public_policy": false
+    },
+    {
+      "function": "purchase",
+      "responsible": "buyers pay through externally integrated PayPal or Stripe gateways under their payment route",
+      "source_ids": [
+        "itch-payments",
+        "itch-buying"
+      ],
+      "metric_available_from_public_policy": false
+    },
+    {
+      "function": "delivery",
+      "responsible": "itch.io supplies post-purchase entitlement/download access to publisher-provided game builds",
+      "source_ids": [
+        "itch-buying",
+        "itch-download-keys"
+      ],
+      "metric_available_from_public_policy": false
+    },
+    {
+      "function": "contracting",
+      "responsible": "Itch Corp. publishes service terms for users and publishers; each publisher warrants distribution rights in submitted content",
+      "source_ids": [
+        "itch-terms"
+      ],
+      "metric_available_from_public_policy": false
+    }
+  ],
+  "merchant_of_record_by_mode": [
+    {
+      "mode": "direct_to_you",
+      "merchant_of_record": "seller",
+      "payment_receipt": "seller's connected processor account",
+      "tax_handling": "seller is responsible for VAT collection/remittance subject to documented optional collection settings",
+      "chargeback_liability": "seller",
+      "source_ids": [
+        "itch-payments"
+      ]
+    },
+    {
+      "mode": "collected_by_itch_io_payouts",
+      "merchant_of_record": "itch.io",
+      "payment_receipt": "platform collects then seller requests payout",
+      "tax_handling": "platform handles applicable transaction VAT collection/remittance per documented mode",
+      "chargeback_liability": "itch.io",
+      "source_ids": [
+        "itch-payments"
+      ]
+    }
+  ],
+  "boundaries": {
+    "owner_vs_merchant": "Legal platform operator is constant across documented modes; merchant of record changes by seller payout configuration.",
+    "founder_vs_operator": "Founder biography is not proof of present legal control or seller contracting identity.",
+    "rights_vs_payout": "Hosting and promotion license does not transfer all publisher intellectual property ownership.",
+    "live_checkout_verified": false,
+    "actual_seller_payment_route_known": false,
+    "operator_financial_statement_observed": false,
+    "actual_purchaser_population": null,
+    "platform_revenue": null,
+    "active_paid_sellers": null
+  },
+  "limitations": [
+    "Official policies describe allowed operation, not evidence that any particular seller or buyer can transact in a specific jurisdiction.",
+    "Official public documents do not establish corporate registry standing or current beneficial ownership.",
+    "No merchant account, buyer transaction, game downloads, earnings records or geographic eligibility tests were accessed.",
+    "The March 2026 privacy revision does not mean every referenced creator rule was newly revised in March 2026."
+  ]
+}
