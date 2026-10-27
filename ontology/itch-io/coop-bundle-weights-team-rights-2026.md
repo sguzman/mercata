@@ -10,6 +10,12 @@ A hypothetical **$100.01 distributable pool** divided among three equal positive
 
 The supplied pool is already assumed to be distributable after externally determined taxes, refunds, platform and payment processing deductions. Never allocate the *entire gross buyer payment* to each member. One bundle purchase may entitle the buyer to multiple projects, and claiming individual keys later is not a new game sale.
 
+## Source-backed staffing categories for a comparable game sample
+
+The **staffing task** uses three distinct units: game project, publisher/payee account and named contributing person. **Solo disclosed** means an attributable project record or author statement verifies one creator. **Team disclosed** means a source establishes a multi-person development team; a title merely naming several credits does not establish employee count or revenue shares. Unspecified roles, occasional collaborators, payment-recipient companies and jam/bundle participants remain **staffing unknown** rather than being assigned fabricated headcounts.
+
+A single publisher may release many games, and one game may have many contributors, so estimates must avoid multiplying teams by their projects or dividing a paid bundle among individual developers. A 2018 team-administration article is historical evidence about account facilities, not proof of currently available permissions or automatic financial rights in 2026. The [structured staffing rules](coop-bundle-weights-team-rights-2026.json) intentionally leave actual solo/team market populations and income differences null. Any outcome comparison needs a bounded release cohort, source-confirmed staffing, matched prices, actual paid orders, refunds and labor.
+
 ## Separate team and publishing identities
 
 A solo developer, several credited contributors, a publishing account owner, and a co-op bundle recipient are **different roles**. The [historical team-project discussion from 2018](https://itch.io/t/351041/team-projects) is not verified as the complete 2026 account-admin permission system. Neither a jam submission nor team membership automatically entitles each contributor to a percentage of project profits or transfer of the publishing account.

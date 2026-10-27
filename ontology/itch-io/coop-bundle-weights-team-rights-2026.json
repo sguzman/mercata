@@ -111,5 +111,58 @@
     "actual_net_payout": null,
     "solo_vs_team_population": null,
     "account_transfer_permission": null
+  },
+  "staffing_classification": {
+    "classification_unit": "one distinct documented creator or paid publishing entity tied to an individual game in a specified release cohort",
+    "source_ids": [
+      "itch-coop-bundles",
+      "itch-team-admin-2018",
+      "itch-payments"
+    ],
+    "rules": [
+      {
+        "id": "solo_disclosed",
+        "necessary": "first_party_author_declares_single_game_creator_or_verified_roster_of_one",
+        "count_as": "one_solo_team_unit",
+        "verified_in_this_study": false
+      },
+      {
+        "id": "team_disclosed",
+        "necessary": "source_names_multiperson_development_team_and_its_roster_or_declared_team_size",
+        "count_as": "one_multi_person_project_team",
+        "verified_in_this_study": false
+      },
+      {
+        "id": "publisher_entity",
+        "necessary": "seller_account_or_company_is_payment_recipient",
+        "count_as": "one_payee_entity_not_necessarily_one_creator",
+        "verified_in_this_study": false
+      },
+      {
+        "id": "contributors_unclassified",
+        "necessary": "several_credits_without_comprehensive_team_size",
+        "count_as": "staffing_unknown_not_presumed_team_headcount",
+        "verified_in_this_study": false
+      },
+      {
+        "id": "jam_group_unclassified",
+        "necessary": "one_collaborative_jam_entry_or_bundle_participation",
+        "count_as": "not_a_merchant_census",
+        "verified_in_this_study": false
+      }
+    ],
+    "dated_release_cohort_required": true,
+    "one_title_may_have_several_contributors": true,
+    "one_seller_may_publish_many_titles": true,
+    "project_membership_not_a_share_of_revenue": true,
+    "team_admin_2018_cannot_verify_2026_all_current_permission_scopes": true,
+    "no_staffing_inference_from_ratings_reviews_or_download_counts": true,
+    "no_staffing_inference_from_multi_seller_bundle_count": true,
+    "unclassified_remains_in_denominator_of_game_frames_if_eligible": true,
+    "known_solo_publishers_count": null,
+    "known_team_publishers_count": null,
+    "actually_paying_solo_teams": null,
+    "actually_paying_multiperson_teams": null,
+    "empirical_solo_vs_team_net_profit_difference": null
   }
 }
