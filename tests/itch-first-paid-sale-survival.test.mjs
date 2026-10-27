@@ -21,7 +21,9 @@ test('Synthetic first sale events preserve risk sets and never turn censored pro
  const done=p.detail_tasks.find(t=>t.id==='itch-io/income/measure-time-to-first-sale');
  assert.equal(done.percent,100);assert.equal(done.status,'complete');
  for(const f of ['ontology/itch-io/first-paid-sale-censoring-2026.json','ontology/itch-io/first-paid-sale-censoring-2026.md','site/itch-first-paid-sale-survival.mjs','tests/itch-first-paid-sale-survival.test.mjs'])assert(done.evidence.includes(f));
- assert.equal(p.detail_tasks.find(t=>t.id==='itch-io/income/seek-zero-earner-fraction').percent,90);
+ const zero=p.detail_tasks.find(t=>t.id==='itch-io/income/seek-zero-earner-fraction');
+ assert.equal(zero.percent,100);assert.equal(zero.status,'complete');
+ assert(zero.evidence.includes('ontology/itch-io/gamedevjs-2025-income-respondent-percentile-bounds.json'));
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
 });
 test('Invalid or incomplete time-to-sale cohorts are rejected, no median manufactured without paid events',()=>{
