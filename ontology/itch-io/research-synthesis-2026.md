@@ -2,7 +2,7 @@
 
 **Evidence updated October 27, 2026.** The live itch.io dossier has **187 attributed sources and 466 bounded claims**, across **244 fixed research tasks**. The machine register retains its original interim extraction counts (54 sources/148 claims), which are **historical creation metadata rather than current totals**. [Machine evidence synthesis](research-synthesis-2026.json) · [live dossier](../../specimens/itch-io.json).
 
-**Current economic conclusion:** itch.io permits cost-free game publication but not cost-free production; paid transactions incur seller-configured platform share, processing charges and route-specific tax/settlement rules. Catalog listing counts, genre ranks, ratings and downloads are **not** actual paid orders. Representative active paid sellers, paying game buyers, median or mean after-cost creator income, zero-sale incidence and causal discovery lift remain **unobserved**. Our task scoring is **94.18% exact, 94% rounded**, but it is not a percentage of those market outcomes measured.
+**Current economic conclusion:** itch.io permits cost-free game publication but not cost-free production; paid transactions incur seller-configured platform share, processing charges and route-specific tax/settlement rules. Catalog listing counts, genre ranks, ratings and downloads are **not** actual paid orders. Representative active paid sellers, paying game buyers, median or mean after-cost creator income, zero-sale incidence and causal discovery lift remain **unobserved**. Our task scoring is **94.25% exact, 94% rounded**, but it is not a percentage of those market outcomes measured.
 
 **New source-bounded work after the original synthesis:**
 - [October 2026 indexing changes](discovery-indexing-and-buyer-contact-2026.md): the operator reported ~215,000 newly unblocked *existing* project pages, not 215,000 paid game sales or developers.
@@ -15,6 +15,8 @@
 - [Review plan](policy-payment-research-review-calendar-2026.md): dated *proposed* follow-ups for volatile official rules; no scheduled background monitoring.
 
 - [Historical merchant liquidity](historical-payout-delay-tail-2025-2026.md): selected 2025 payout delays, including an archived official thread that later resolved, are distinguishable from ordinary published review timing; no 2026 prevalence is estimated.
+
+- [Core event, selection and license acceptance](core-economic-event-access-and-rights-audit-2026.md): operational buying, traffic, Search & Browse and media rights are source-defined without inventing actual seller incomes or cleared game assets.
 
 **Earlier research chronology follows.** These previously captured records have their own date, population and conditions and should not be combined into a new income survey.
 

@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "existing_fixed_task_closeout_for_source_bound_purchases_discovery_attendance_bias_and_licenses",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-buying-flow",
+    "itch-payments",
+    "itch-interact",
+    "itch-indexed",
+    "itch-quality",
+    "itch-indexing-reform-oct-2026",
+    "itch-terms",
+    "license-osi-mit",
+    "license-apache-2",
+    "license-gnu-gpl-faq",
+    "license-cc-by-4",
+    "license-cc-by-nc-4",
+    "license-osi-ofl-1-1",
+    "itch-privacy-march-2026",
+    "indiegameinsights-itch-2025-genre-rating-study"
+  ],
+  "population": "Official itch.io publisher operating features and selected publicly posted developer records, not representative game sales",
+  "unit": "purchase event, analytics metric, public-discovery listing, source record, or intellectual property permission as explicitly labeled",
+  "period": "First-party current rules reviewed October 2026, independent catalog cases released during 2025 and analyzed 2026",
+  "audited_existing_tasks": [
+    {
+      "id": "income/bias",
+      "acceptance": "Describe recruitment, response bias and missing populations.",
+      "source_ids": [
+        "indiegameinsights-itch-2025-genre-rating-study",
+        "itch-payments"
+      ],
+      "evidence": "Public developer case stories are voluntary/self-selected; genre metadata research is a convenience or uncertain-coverage catalog frame; merchant outcome denominators, nonresponders, inactive paid sellers and zero-sale projects are missing.",
+      "completed_empirical_population_inference": false
+    },
+    {
+      "id": "sales/checkout",
+      "acceptance": "Describe transaction steps and who collects payment.",
+      "source_ids": [
+        "itch-buying-flow",
+        "itch-payments"
+      ],
+      "evidence": "Buyer page/game minimum, required payment under premium offer, payment provider and platform versus seller merchant-of-record; refunds and payout review differ by mode.",
+      "completed_empirical_population_inference": false
+    },
+    {
+      "id": "sales/analytics",
+      "acceptance": "Identify reported conversion and traffic metrics, access and gaps.",
+      "source_ids": [
+        "itch-started",
+        "itch-interact",
+        "itch-payments"
+      ],
+      "evidence": "Page-view, plays, downloads, checkouts, receipts, order events and seller analytics have different access rights and units; paid conversion needs owner-authorized matched event cohorts.",
+      "completed_empirical_population_inference": false
+    },
+    {
+      "id": "discovery/search",
+      "acceptance": "Cite discoverability surfaces, ranking documentation and limits.",
+      "source_ids": [
+        "itch-indexed",
+        "itch-quality",
+        "itch-indexing-reform-oct-2026"
+      ],
+      "evidence": "Public URL, Search & Browse eligibility, ranking, one-time Most Recent opportunity and indexing review are distinct mechanisms with no guaranteed exposure or sale.",
+      "completed_empirical_population_inference": false
+    },
+    {
+      "id": "discovery/changes",
+      "acceptance": "Date and source important ranking or policy updates.",
+      "source_ids": [
+        "itch-indexing-reform-oct-2026",
+        "itch-quality",
+        "itch-indexed"
+      ],
+      "evidence": "October 19, 2026 indexing eligibility reform affected previously unindexed pages; historic catalog counters and ranking conditions must retain original effective date.",
+      "completed_empirical_population_inference": false
+    },
+    {
+      "id": "rights/ip",
+      "acceptance": "Document license grants, owner rights and source dates.",
+      "source_ids": [
+        "itch-terms",
+        "license-osi-mit",
+        "license-apache-2",
+        "license-gnu-gpl-faq",
+        "license-cc-by-4",
+        "license-cc-by-nc-4",
+        "license-osi-ofl-1-1"
+      ],
+      "evidence": "Uploader warrants redistribution rights, platform receives defined hosting/publicity license, but source code, media, fonts and third-party assets each have independent original conditions; no automatic cross-store media clearance.",
+      "completed_empirical_population_inference": false
+    }
+  ],
+  "rights_matrix": [
+    {
+      "id": "platform_publish_license",
+      "source_ids": [
+        "itch-terms"
+      ],
+      "rights_status": "publisher_warrants_third_party_rights_while_operator_gets_contractual_service_licenses",
+      "commercial_approval_of_specific_game": null
+    },
+    {
+      "id": "MIT_software",
+      "source_ids": [
+        "license-osi-mit"
+      ],
+      "rights_status": "permissive_copyright_permission_with_license_notice",
+      "commercial_approval_of_specific_game": null
+    },
+    {
+      "id": "Apache2_code",
+      "source_ids": [
+        "license-apache-2"
+      ],
+      "rights_status": "software_notice_attribution_patent_terms_applied_as_relevant",
+      "commercial_approval_of_specific_game": null
+    },
+    {
+      "id": "GPL_code",
+      "source_ids": [
+        "license-gnu-gpl-faq"
+      ],
+      "rights_status": "distribution_reciprocity_applies_to_covered_code_under_exact_license",
+      "commercial_approval_of_specific_game": null
+    },
+    {
+      "id": "CC_BY_media",
+      "source_ids": [
+        "license-cc-by-4"
+      ],
+      "rights_status": "attribution_and_other_license_conditions_must_be_met",
+      "commercial_approval_of_specific_game": null
+    },
+    {
+      "id": "CC_BY_NC_media",
+      "source_ids": [
+        "license-cc-by-nc-4"
+      ],
+      "rights_status": "noncommercial_restriction_can_bar_sale_use_without_separate_rights",
+      "commercial_approval_of_specific_game": null
+    },
+    {
+      "id": "OFL_fonts",
+      "source_ids": [
+        "license-osi-ofl-1-1"
+      ],
+      "rights_status": "bundling_and_reserved_font_name_conditions_differ_from_ordinary_artwork_rights",
+      "commercial_approval_of_specific_game": null
+    }
+  ],
+  "exclusion_and_access": [
+    "Distinct seller page, paid transaction, buyer and game file units must never be conflated.",
+    "First-party public policy language is not a current approved seller account or government licensing determination.",
+    "Purchase counts and view counts are event totals, not deduplicated humans.",
+    "Indexing reform unblocked old projects and should not be counted as newly profitable commercial titles.",
+    "Historical source text can be linked and summarized, not automatically republished or sold.",
+    "Source-derived uncertainty does not mean actual market success or failure is zero."
+  ],
+  "unknown": {
+    "representative_creator_mean_profit": null,
+    "representative_creator_median_profit": null,
+    "paid_game_conversion_probability": null,
+    "licensed_game_asset_manifest_verified": null,
+    "search_to_order_causal_effect": null
+  },
+  "transactions_or_authorized_customer_records_read": 0,
+  "actual_publisher_licensing_audit_completed": false,
+  "real_world_experiment_performed": false
+}
