@@ -23,3 +23,38 @@ test('Crossstore inputs require matching product, currency, age, price and trans
  for(const t of [done,other])for(const x of ['ontology/itch-io/crossstore-sales-comparability-2026.json','ontology/itch-io/crossstore-sales-comparability-2026.md','site/itch-crossstore-comparability.mjs','tests/itch-crossstore-sales-comparability.test.mjs'])assert(t.evidence.includes(x));
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
 });
+
+test('Cross-store readiness rejects malformed or impossible windows even when two records match each other',()=>{
+ const original={gameId:'fixture',edition:'v1',store:'itch',productType:'premium',priceCurrency:'USD',priceAmount:10,
+  discountStatus:'none',priceWindowStartUTC:'2026-01-01T00:00:00Z',priceWindowEndUTC:'2026-01-31T00:00:00Z',
+  releaseAgeDays:30,marketingCohort:'matched',grossReceipts:20,platformFee:2,processorFee:1,refunds:0,
+  distributionLaborHours:1,qaLaborHours:1,supportLaborHours:1,paidOrders:2,merchantPayoutBasis:'gross-before-tax'};
+ const pair=v=>assessCrossStoreComparability(v,{...v,store:'other-store'});
+ assert.equal(pair(original).comparisonReady,true);
+ for(const [start,end] of [
+  ['2026-02-30T00:00:00Z','2026-03-31T00:00:00Z'],
+  ['2026-01-01T00:00:00Z','2025-12-31T00:00:00Z'],
+  ['2026-01-01T00:00:00Z','2026-01-01T00:00:00Z'],
+  ['2026-13-01T00:00:00Z','2026-14-01T00:00:00Z'],
+  ['2026-01-01','2026-01-31'],
+  ['2026-01-01T24:00:00Z','2026-01-31T00:00:00Z']
+ ]) {
+  const result=pair({...original,priceWindowStartUTC:start,priceWindowEndUTC:end});
+  assert.equal(result.comparisonReady,false,start+'..'+end);
+  assert(result.issues.some(x=>x.includes('invalid UTC price window')),start);
+  assert.equal(result.observedIncrementalRevenue,null);
+ }
+});
+test('Cross-store readiness requires whole order counts, whole release age and identifiable accounting fields',()=>{
+ const a={gameId:'fixture',edition:'v1',store:'itch',productType:'premium',priceCurrency:'USD',priceAmount:10,
+  discountStatus:'none',priceWindowStartUTC:'2026-01-01T00:00:00Z',priceWindowEndUTC:'2026-01-31T00:00:00Z',
+  releaseAgeDays:30,marketingCohort:'matched',grossReceipts:20,platformFee:2,processorFee:1,refunds:0,
+  distributionLaborHours:1,qaLaborHours:1,supportLaborHours:1,paidOrders:2,merchantPayoutBasis:'gross-before-tax'};
+ for(const patch of [{paidOrders:2.5},{releaseAgeDays:1.5},{priceCurrency:'usd'},
+  {priceCurrency:'U'},{marketingCohort:'   '},{merchantPayoutBasis:'  '},{store:'   '},
+  {paidOrders:NaN},{platformFee:Infinity}]){
+  const result=assessCrossStoreComparability({...a,...patch},{...a,...patch,store:'other-store'});
+  assert.equal(result.comparisonReady,false,JSON.stringify(patch));
+  assert.equal(result.causalStoreEffect,null);
+ }
+});
