@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "one_observed_free_game_donation_cash_cascade_with_unknown_paid_game_demand",
+  "reviewed_at": "2026-10-26",
+  "source_ids": [
+    "genetic-axolotls-first-month-2026",
+    "itch-pricing",
+    "itch-payments",
+    "itch-html5"
+  ],
+  "original_case_source": "genetic-axolotls-first-month-2026",
+  "population": "one first-month creator self-disclosure about a free game with one optional donation, not all first-game sellers",
+  "unit": "one voluntary positive-money donation and aggregated page-view events, not standalone premium-game units",
+  "period": "2026-01 first month described in a 2026-02-23 post",
+  "self_reported_case": {
+    "game": "Genetic Collections - Axolotls",
+    "game_genre": "2D simulation",
+    "minimum_required_game_price_usd": 0,
+    "site_view_events_lower_bound_exclusive": 100,
+    "donation_event_count": 1,
+    "donationGrossCents": 4999,
+    "processorFeeCents": 175,
+    "platformShareCents": 499,
+    "oneTimeTaxIdentityAdjustmentCents": 300,
+    "withholdingCents": 1038,
+    "recordedSellerAmountDueCents": 2987,
+    "subsequentCharitableSpendingCents": 1500,
+    "creatorDescribedAfterCharityCents": 1487,
+    "refund_count": null,
+    "mandatory_price_game_orders": null,
+    "buyer_population_unique": null,
+    "actual_human_donor_count": null,
+    "total_download_events": null,
+    "development_hours": null,
+    "real_profit": null
+  },
+  "model_inputs": {
+    "donationGrossCents": 4999,
+    "processorFeeCents": 175,
+    "platformShareCents": 499,
+    "oneTimeTaxIdentityAdjustmentCents": 300,
+    "withholdingCents": 1038,
+    "subsequentCharitableSpendingCents": 1500,
+    "freeDownloadEvents": null,
+    "viewEvents": null
+  },
+  "ledger_steps": [
+    {
+      "stage": "optional_gift_receipt",
+      "cash_delta_cents": 4999,
+      "part_of_platform_checkout": true
+    },
+    {
+      "stage": "payment_processor",
+      "cash_delta_cents": -175,
+      "part_of_platform_checkout": true
+    },
+    {
+      "stage": "itch_platform_share",
+      "cash_delta_cents": -499,
+      "part_of_platform_checkout": true
+    },
+    {
+      "stage": "tax_identity_validation_once",
+      "cash_delta_cents": -300,
+      "part_of_platform_checkout": true
+    },
+    {
+      "stage": "account_withholding",
+      "cash_delta_cents": -1038,
+      "part_of_platform_checkout": true
+    },
+    {
+      "stage": "reported_due_after_payout_deductions",
+      "cash_delta_cents": 2987,
+      "part_of_platform_checkout": false
+    },
+    {
+      "stage": "later_voluntary_charity_outlay",
+      "cash_delta_cents": -1500,
+      "part_of_platform_checkout": false
+    },
+    {
+      "stage": "after_charity_remaining_money",
+      "cash_delta_cents": 1487,
+      "part_of_platform_checkout": false
+    }
+  ],
+  "accounting_boundaries": {
+    "free_visits_are_sales": false,
+    "free_downloads_are_sales": false,
+    "one_donation_equals_one_paid_game_order": false,
+    "one_time_adjustment_repeats_every_sale": false,
+    "withholding_is_final_personal_tax_liability": false,
+    "later_charitable_outlay_is_marketplace_processing_fee": false,
+    "view_lower_bound_can_determine_unique_conversion": false,
+    "anonymized_current_paying_humans_known": false
+  },
+  "limitations": [
+    "Author self-disclosed one optional payment; no complete private sales report, payout status or tax returns were audited.",
+    "More than 100 page views are events, not unique people or impressions to an eligible paid-game offer.",
+    "One donation of $49.99 is neither one $49.99 full-game copy nor proof anyone would buy a mandatory-price release.",
+    "The one-time $3 charge is not a fee per buyer payment.",
+    "Withheld cash need not equal the author's final tax obligation.",
+    "The subsequent $15 charity contribution is a separate voluntary cash use, not platform commission or labor cost.",
+    "Missing game creation, testing and promotion effort prevents any profit or living-wage conclusion."
+  ],
+  "unobserved": {
+    "positive_price_paid_games_in_cohort": null,
+    "representative_donation_rate": null,
+    "platform_zero_earnings_share": null,
+    "first_game_order_probability": null,
+    "unique_paying_buyers": null,
+    "development_costs": null,
+    "tax_final_obligation": null
+  }
+}
