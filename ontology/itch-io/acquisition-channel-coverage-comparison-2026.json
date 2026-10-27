@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "public_first_party_referrer_search_social_newsletter_and_paid_channel_comparability",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-2014-purchase-referrer-update",
+    "itch-2019-referral-domain-analytics-update",
+    "itch-account-followers",
+    "itch-indexed",
+    "itch-sale",
+    "htmag-itch-traffic-2025"
+  ],
+  "population": "Potential itch.io first-game launch traffic and 2014/2019 owner analytics capabilities; not an observed 2026 sales sample",
+  "unit": "Acquisition channel mechanism and measurement contract; channel volumes/costs and orders remain unknown",
+  "period": "Historically documented 2014/2019 referrer features, 2025 self-selected page-view survey, creator guidance checked 2026-10-27",
+  "channels": [
+    {
+      "id": "platform_search",
+      "surface": "On-site indexed Search & Browse",
+      "promotion_cost_model": "organic_platform_discovery",
+      "source_ids": [
+        "itch-indexed"
+      ],
+      "attribution_evidence": "Owner impressions/clicks where available or public search listing observation",
+      "measurement_limit": "Rank/exposure alone does not show visitors or sales",
+      "revenue_effect": null
+    },
+    {
+      "id": "external_search",
+      "surface": "Offsite search-engine results and crawl",
+      "promotion_cost_model": "organic_search_with_optional_undocumented_paid_search",
+      "source_ids": [
+        "itch-2014-purchase-referrer-update",
+        "itch-2019-referral-domain-analytics-update"
+      ],
+      "attribution_evidence": "Verified referred-domain view events where browser passes a referrer",
+      "measurement_limit": "Referrer stripping and search result personalization; no native paid-vs-organic search split proved",
+      "revenue_effect": null
+    },
+    {
+      "id": "social_and_forums",
+      "surface": "Offsite social posts, forum communities and creators",
+      "promotion_cost_model": "organic_posts_or_outside_sponsorship_expenses",
+      "source_ids": [
+        "itch-2014-purchase-referrer-update",
+        "itch-2019-referral-domain-analytics-update"
+      ],
+      "attribution_evidence": "Attributed external referral URL/domain with known campaign when present",
+      "measurement_limit": "Same social domain can contain organic posts, paid ads and influencer mentions",
+      "revenue_effect": null
+    },
+    {
+      "id": "email_newsletters",
+      "surface": "Opted-in itch.io follower email/feed and external permissioned newsletters",
+      "promotion_cost_model": "platform_follow_notifications_or_external_campaign_resources",
+      "source_ids": [
+        "itch-account-followers",
+        "itch-indexed"
+      ],
+      "attribution_evidence": "Documented follower notifications; delivery/open/click and external newsletter sources require independent authorized records",
+      "measurement_limit": "Follower count is not delivered email, unique visitor or paid buyer",
+      "revenue_effect": null
+    },
+    {
+      "id": "press_and_influencers",
+      "surface": "External coverage and reviews",
+      "promotion_cost_model": "earned_media_or_paid_sponsorship",
+      "source_ids": [
+        "itch-2014-purchase-referrer-update",
+        "itch-2019-referral-domain-analytics-update"
+      ],
+      "attribution_evidence": "Attributed coverage URL if independently identified; generic domain alone cannot prove a specific influencer campaign",
+      "measurement_limit": "No controlled causal effect, attributed game profit or buyer identity",
+      "revenue_effect": null
+    },
+    {
+      "id": "paid_acquisition",
+      "surface": "Off-platform search/social advertisements or sponsored referrals",
+      "promotion_cost_model": "explicit_campaign_cash_and_time_cost",
+      "source_ids": [
+        "itch-2014-purchase-referrer-update",
+        "itch-2019-referral-domain-analytics-update"
+      ],
+      "attribution_evidence": "Owner-collected campaign spend plus stable campaign-tagged visits/orders only if authorization and end-to-end tracking exist",
+      "measurement_limit": "No native itch.io paid-placement product, click-through receipts or ad profitability is verified here",
+      "revenue_effect": null
+    }
+  ],
+  "comparability_fields": [
+    "source_and_medium",
+    "traffic_campaign_identifier_if_authorized",
+    "same_game_id",
+    "public_or_indexed_state",
+    "same_country_currency_and_offer",
+    "attribution_rule",
+    "publisher_time_cost_hours",
+    "out_of_pocket_spend_currency",
+    "aligned_calendar_days",
+    "page_view_events",
+    "completed_positive_price_orders",
+    "refunds",
+    "settled_proceeds"
+  ],
+  "funnel_safety": {
+    "identical_view_and_order_cohorts_required": true,
+    "holdout_or_random_assignment_for_causal_claims": true,
+    "no_person_identifier_required_for_published_result": true,
+    "unattributed_not_assumed_direct": true,
+    "ad_cost_without_attributed_sales_is_not_known_roi": true,
+    "paid_and_organic_same_domain_cannot_be_split_without_campaign_evidence": true,
+    "newsletter_subscriptions_are_not_buyers": true,
+    "channel_ranking_from_selected_survey_forbidden": true
+  },
+  "historical_feature_dates": {
+    "purchase_referrer_announcement": "2014-07-31",
+    "referral_domain_graph_announcement": "2019-10-23"
+  },
+  "comparison_scope": "documented mechanisms, identifiable source categories, attribution evidence quality, and required money/time/denominator fields, not performance ranking",
+  "survey_2025": {
+    "respondents": 169,
+    "volunteer_not_probability_sample": true,
+    "paid_game_channel_ROAS_representative": null,
+    "source_ids": [
+      "htmag-itch-traffic-2025"
+    ]
+  },
+  "unobserved": {
+    "channel_views": null,
+    "paid_orders_by_channel": null,
+    "acquisition_cost_usd_per_paying_customer": null,
+    "newsletter_click_to_purchase_conversion": null,
+    "incremental_sales_from_social_posts": null,
+    "merchant_account_access": null
+  },
+  "limitations": [
+    "Available 2014 and 2019 analytics capabilities are historical and might not exactly match the current 2026 account UI.",
+    "Payment-referrer, click, impression, browser-play and unique buyer are distinct units.",
+    "External paid advertising may be purchased from third parties, but no particular ad platform's integration or performance is established.",
+    "Self-selected 2025 traffic survey respondents do not identify representative paid-seller channel yields."
+  ]
+}

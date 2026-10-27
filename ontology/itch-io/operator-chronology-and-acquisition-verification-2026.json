@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "dated_platform_economic_structural_change_and_operator_status_audit",
+  "reviewed_at": "2026-10-27",
+  "population": "Public itch.io operator and marketplace policy records, not publishers, sales or shareholder register",
+  "unit": "dated official publication or independently attributable operator statement",
+  "source_ids": [
+    "itch-welcome-2013",
+    "itch-collected-2015",
+    "itch-open-share-2015",
+    "itch-analytics-2018",
+    "itch-july-2026-changelog",
+    "itch-terms",
+    "itch-privacy-march-2026",
+    "itch-general-faq-operator-2026"
+  ],
+  "period": "2013-03 through 2026-10",
+  "sample_frame": "Official operator launch/changelog and public legal/policy documents",
+  "dated_events": [
+    {
+      "date": "2013-03-13",
+      "kind": "marketplace_launch_description",
+      "summary": "Initial customizable game/project publication and optional minimum game prices",
+      "source_ids": [
+        "itch-welcome-2013"
+      ],
+      "buyer_population": null
+    },
+    {
+      "date": "2015-01-19",
+      "kind": "merchant_payment_mode_change",
+      "summary": "First-party collected payout/VAT handling option announced; separate from direct payments",
+      "source_ids": [
+        "itch-collected-2015"
+      ],
+      "total_platform_gmv": null
+    },
+    {
+      "date": "2015-03-04",
+      "kind": "seller_platform_share_announcement",
+      "summary": "Seller-configurable 0–100% open revenue sharing announced with future activation",
+      "effective_date": "2015-03-23",
+      "source_ids": [
+        "itch-open-share-2015"
+      ],
+      "historical_merchant_income_distribution": null
+    },
+    {
+      "date": "2018-02-21",
+      "kind": "publisher_discovery_analytics_feature",
+      "summary": "Owner project exposure reports distinguish thumbnail impressions and clickthrough from paid game orders",
+      "source_ids": [
+        "itch-analytics-2018"
+      ],
+      "observed_impressions": null
+    },
+    {
+      "date": "2026-03-26",
+      "kind": "legal_operator_privacy_revision",
+      "summary": "Itch Corp. named in 2026 privacy policy with modification date; not a corporate share ledger",
+      "source_ids": [
+        "itch-privacy-march-2026"
+      ],
+      "equity_transfer_verified": null
+    },
+    {
+      "date": "2026-07-02",
+      "kind": "creator_sale_discovery_and_bundle_tools",
+      "summary": "Official changelog covers sale explorer and co-op bundle publishing/payout interfaces, alongside external Patreon membership integration",
+      "source_ids": [
+        "itch-july-2026-changelog"
+      ],
+      "observed_seller_revenue": null
+    }
+  ],
+  "operator_crosscheck": {
+    "founder": "Leaf Corcoran",
+    "founding_year": 2013,
+    "contractual_operator": "Itch Corp.",
+    "founder_is_legal_operator_entity": false,
+    "company_registration_independently_verified": null,
+    "source_ids": [
+      "itch-general-faq-operator-2026",
+      "itch-terms",
+      "itch-privacy-march-2026"
+    ]
+  },
+  "acquisition_audit": {
+    "search_scope": "Public first-party founder FAQ, contractual operator, and dated policy/update record for potential changes of control; no comprehensive corporate filing search",
+    "verified_acquisition_events": [],
+    "none_ever_occurred_verified": null,
+    "current_beneficial_ownership_verified": null,
+    "acquisition_purchaser_verified": null,
+    "no_claim_of_publicly_proven_no_acquisition": true,
+    "source_ids": [
+      "itch-terms",
+      "itch-privacy-march-2026",
+      "itch-general-faq-operator-2026"
+    ]
+  },
+  "interpretation_rules": [
+    "Feature launch dates and later effective dates are separate.",
+    "An operator identity named in legal terms is not audited equity or beneficial ownership.",
+    "A historical mention of a payment service is not proof that it is available in 2026.",
+    "A changelog describing sale features is not platform GMV, developer profits, unique buyers or paid transactions.",
+    "No confirmed acquisition event in the consulted official record is an evidence gap, not proof of no acquisition."
+  ],
+  "unresolved": {
+    "platform_acquisition_ownership_census": null,
+    "marketwide_paid_seller_population": null,
+    "marketwide_gmv_history": null,
+    "owner_equity_changes": null,
+    "causal_earnings_change_from_features": null
+  }
+}
