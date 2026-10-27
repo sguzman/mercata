@@ -114,5 +114,17 @@
     "rating_event_is_a_paid_order",
     "unique_catalog_pages_are_unique_payout_entities"
   ],
-  "research_state": "population_ontology_defined_but_no_verified_census_or_authorized_transactions"
+  "research_state": "population_ontology_defined_but_no_verified_census_or_authorized_transactions",
+  "owner_scoped_possible_observation_route": {
+    "source_id": "itch-serverside-api-reference",
+    "access": "authenticated_scope_profile_games",
+    "endpoint": "https://api.itch.io/profile/games",
+    "publisher_owned_games_separable_from_edit_access_by_response_alone": false,
+    "supplies_account_project_count_for_authorized_portfolio_only": true,
+    "supplies_verified_all_active_paid_seller_census": false,
+    "supplies_settled_order_timelines": false,
+    "supplies_deduplicated_creator_people_or_payout_entities": false,
+    "owner_consent_for_private_access_obtained": false,
+    "authenticated_requests_made": 0
+  }
 }

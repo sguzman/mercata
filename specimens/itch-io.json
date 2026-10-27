@@ -7494,6 +7494,16 @@
       "confidence": "moderate",
       "observed_at": "2026-10-27",
       "limitations": "The author's expense and revenue labels mix business channels and timing. The overall published bottom line is a self-report, not a store-specific costed ledger or independently verified accounting statement."
+    },
+    {
+      "id": "itch-authorized-profile-games-portfolio-snapshot-not-cohort-ledger",
+      "text": "The official scoped itch.io profile:games endpoint returns an authorized account's uploaded or editable game records including published date, current minimum price, purchases_count and currency-specific earnings amounts; those owner-scoped summary fields do not by themselves identify complete refund-adjusted first-price-game cohorts, unique payout entities, or representative seller income.",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Official sample API schema rather than actual merchant records; counts are not separated by dated purchase window, free-game donations, bundles, chargebacks, role of owner versus editor, or publisher bank payout. No API credentials, endpoints or private data used."
     }
   ],
   "observations": [

@@ -23,3 +23,16 @@ test('Unknown marketwide publisher mean/median explicitly depend on a zero-inclu
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
  assert.equal(p.progress_percent,Math.round((q.queues.flatMap(z=>z.tasks).reduce((a,t)=>a+t.progress,0)+p.detail_tasks.reduce((a,t)=>a+t.percent,0))/244));
 });
+
+test('Official owner portfolio summaries cannot identify representative seller receipts',()=>{
+ const r=get('ontology/itch-io/paid-seller-mean-median-identification-2026.json');
+ const creator=get('ontology/itch-io/creator-population-account-person-game-2026.json');
+ const example=r.evidence_classes.find(x=>x.id==='authorized_owner_profile_games_summary');
+ assert(example&&example.example_only_not_a_real_seller_observation);
+ assert.equal(example.has_complete_seller_population,false);
+ assert.equal(example.returns_complete_refund_adjusted_periodized_seller_proceeds,false);
+ assert.equal(example.owner_vs_editor_payout_identity_resolved,false);
+ assert.equal(creator.owner_scoped_possible_observation_route.authenticated_requests_made,0);
+ assert.equal(creator.owner_scoped_possible_observation_route.supplies_verified_all_active_paid_seller_census,false);
+ assert(Object.values(r.results).every(x=>x===null));
+});

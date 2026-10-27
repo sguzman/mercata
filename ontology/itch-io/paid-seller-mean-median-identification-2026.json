@@ -131,6 +131,20 @@
       "supports": "third_party_all_domain_sessions",
       "has_complete_seller_population": false,
       "has_publisher_income_data": false
+    },
+    {
+      "id": "authorized_owner_profile_games_summary",
+      "source_ids": [
+        "itch-serverside-api-reference"
+      ],
+      "supports": "documented_authenticated_owner_or_editor_game_summary_with_current_min_price_and_purchase_earning_fields",
+      "has_complete_seller_population": false,
+      "has_publisher_income_data": false,
+      "example_only_not_a_real_seller_observation": true,
+      "returns_eligible_positive_price_game_cohort": false,
+      "returns_complete_refund_adjusted_periodized_seller_proceeds": false,
+      "zero_order_and_delisted_coverage_assured": false,
+      "owner_vs_editor_payout_identity_resolved": false
     }
   ],
   "identification_argument": [
@@ -140,7 +154,8 @@
     "The survey's 63% zero overall gamedev income cannot be multiplied by public paid-game catalog counts because the respondents are not the defined itch.io seller population.",
     "Zero public ratings and zero sales are different unobserved statuses, so replacing missing receipts with zeros would bias the median.",
     "Sample-based rates from creator posts can be affected by selection on success and publication willingness; no inclusion weights are available.",
-    "No imputation from website visits, browser plays or developer genre self-tags identifies seller revenue."
+    "No imputation from website visits, browser plays or developer genre self-tags identifies seller revenue.",
+    "The profile:games endpoint lists an authorized user's uploaded or editable games and example lifetime summary fields. It does not produce a time-matched, refunded-order and payout-entity population frame; editor access does not prove owner proceeds."
   ],
   "results": {
     "representative_mean_annual_gross_revenue_usd": null,
@@ -159,6 +174,7 @@
     "An unknown statistic is not a measured zero, and an incomplete sample does not make its biased mean representative.",
     "First-game earnings, all-time balances, seller salaries, donation proceeds, game gross and platform GMV are incompatible unless strictly reconciled.",
     "Private identities, tax IDs, buyer details and payout records are neither necessary to publish nor authorized for scraping in this research.",
-    "Task acceptance is completeness of evidence search and explicit unknown result, not an assertion of a discovered numerical mean or median."
+    "Task acceptance is completeness of evidence search and explicit unknown result, not an assertion of a discovered numerical mean or median.",
+    "The newly confirmed owner-profile endpoint is documented but not called; its public JSON example must not be treated as a live 2026 merchant transaction observation."
   ]
 }

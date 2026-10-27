@@ -44,6 +44,30 @@
       "required_scope": "game:view:rewards",
       "may_include_shipping_address": true,
       "can_prove_aggregated_income": false
+    },
+    {
+      "id": "owner_profile_games",
+      "required_scope": "profile:games",
+      "endpoint": "https://api.itch.io/profile/games",
+      "fetches_uploaded_or_editable_games": true,
+      "example_fields": [
+        "id",
+        "classification",
+        "published",
+        "published_at",
+        "min_price",
+        "purchases_count",
+        "earnings.currency",
+        "earnings.amount"
+      ],
+      "authenticated_account_scope_only": true,
+      "can_include_nonowned_editable_games": true,
+      "purchase_count_is_refund_adjusted_paid_game_orders": false,
+      "earnings_amount_is_merchant_bank_cash": false,
+      "current_min_price_proves_original_published_price": false,
+      "historical_30_90_365_day_sale_cohorts_available": false,
+      "eligible_first_paid_game_publisher_population_defined": false,
+      "can_prove_aggregated_income": false
     }
   ],
   "purchase_type_enum": [
@@ -62,7 +86,10 @@
     "transaction_id",
     "shipping_address",
     "ip_address",
-    "country_code"
+    "country_code",
+    "API_key",
+    "bearer_token",
+    "owner_profile_raw_game_id"
   ],
   "research_acceptable_inputs": "seller-authorized_privacy_reviewed_aggregated_statistics_only",
   "actual_api_requests": 0,
@@ -82,5 +109,30 @@
     "API response examples demonstrate schema, not real present-day purchase outcomes.",
     "No public individual buyer transaction record or credential should enter Mercata.",
     "Some seller-authorized private exports might exist outside these documented endpoints; not tested."
-  ]
+  ],
+  "owner_portfolio_data_scope": {
+    "source_id": "itch-serverside-api-reference",
+    "reviewed_at": "2026-10-27",
+    "operation": "profile:games",
+    "current_api_url": "https://api.itch.io/profile/games",
+    "documentation_is_an_example_not_live_merchant_observations": true,
+    "game_classification_field_in_example": "game",
+    "sample_min_price_unit": "minor_currency_units_in_documented_examples",
+    "sample_purchases_count_value": 4,
+    "sample_earnings_example": {
+      "currency": "USD",
+      "amount_minor_units": 5047
+    },
+    "sample_purchases_and_earnings_are_real_mercata_observations": false,
+    "authorized_scope": "one_creator_account_including_its_editable_games",
+    "can_synthesize_authorized_owner_portfolio_snapshots": true,
+    "cannot_distinguish_paid_only_orders_from_account_summary": true,
+    "cannot_reconstruct_first_paid_game_sale_window": true,
+    "cannot_identify_global_paid_seller_population": true,
+    "cannot_prove_gross_equals_cash_payout_or_profit": true,
+    "credentialless_public_access": false,
+    "account_keys_requested": false,
+    "api_calls_executed": 0,
+    "owner_authorized_consent_obtained": false
+  }
 }
