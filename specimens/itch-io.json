@@ -2297,6 +2297,61 @@
       "evidence_class": "live_public_2d_game_page_minimum_price_release_metadata",
       "license": "Metadata and offer independently described and linked; no assets, purchase keys, third-party screenshots or source code copied.",
       "notes": "The current itch page offers full Windows/Linux downloads for a positive $6.99 USD minimum and a separately free demo; says two-person husband-and-wife studio, Godot/pixel art, controller and touchscreen support. Current price is not independently verified as launch/introductory or realized transaction price."
+    },
+    {
+      "id": "dead-trust-2025-release",
+      "url": "https://hexnut-studios.itch.io/dead-trust/devlog/1128066/dead-trust-out-now",
+      "title": "Dead Trust original release announcement",
+      "publisher": "Hexnut Studios, creator-controlled public itch.io page",
+      "published_at": "2025-11-29",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "publisher_dated_launch_announcement",
+      "license": "Independently authored brief numerical metadata and source link only; no game files, images, buyer data or long excerpts redistributed.",
+      "notes": "Author's dated November 29 release post. Timestamp verified from devlog index; game file upload preceding the post is not merchant time zero."
+    },
+    {
+      "id": "dead-trust-2025-sale",
+      "url": "https://hexnut-studios.itch.io/dead-trust/devlog/1134564/-dead-trust-is-now-on-sale-50",
+      "title": "Dead Trust 50 percent sale notice",
+      "publisher": "Hexnut Studios, creator-controlled public itch.io page",
+      "published_at": "2025-12-05",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "publisher_dated_sale_announcement",
+      "license": "Independently authored brief numerical metadata and source link only; no game files, images, buyer data or long excerpts redistributed.",
+      "notes": "Developer publicly announced a 50% discount on December 5; no historic paid-order discount ledger."
+    },
+    {
+      "id": "dead-trust-2025-first-week-milestone",
+      "url": "https://hexnut-studios.itch.io/dead-trust/devlog/1142149/thank-you-for-150-copies-sold",
+      "title": "Thank You for 150+ Copies Sold!",
+      "publisher": "Hexnut Studios, creator-controlled public itch.io page",
+      "published_at": "2025-12-13",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "creator_self_reported_early_copy_threshold",
+      "license": "Independently authored brief numerical metadata and source link only; no game files, images, buyer data or long excerpts redistributed.",
+      "notes": "Creator calls this a second game and says 150+ copies in the first week, posting two weeks after launch announcement. No paid transaction export."
+    },
+    {
+      "id": "dead-trust-2026-cumulative-milestone",
+      "url": "https://itch.io/devlog/1307279/thank-you-for-300-copies-sold",
+      "title": "Thank You for 300+ Copies Sold!",
+      "publisher": "Hexnut Studios, creator-controlled public itch.io page",
+      "published_at": "2026-01-04",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "creator_self_reported_later_copy_threshold",
+      "license": "Independently authored brief numerical metadata and source link only; no game files, images, buyer data or long excerpts redistributed.",
+      "notes": "Creator announces 300+ total copies by January 4; exact count, period and storefront-specific scope not disclosed."
+    },
+    {
+      "id": "dead-trust-2026-paid-page",
+      "url": "https://hexnut-studios.itch.io/dead-trust",
+      "title": "Dead Trust positive-price storefront listing",
+      "publisher": "Hexnut Studios, creator-controlled public itch.io page",
+      "published_at": null,
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "public_live_positive_price_game_page",
+      "license": "Independently authored brief numerical metadata and source link only; no game files, images, buyer data or long excerpts redistributed.",
+      "notes": "October 27 review: USD 2 reference minimum, USD 1 sale minimum, USD 4.99 premium music tier. Present-day offer is not historic realized price."
     }
   ],
   "claims": [
@@ -7290,6 +7345,61 @@
       "confidence": "high",
       "observed_at": "2026-10-27",
       "limitations": "Page offer is review-time and must not be applied retroactively to fewer than 50 combined Steam/itch copies; no per-copy pricing, refund, tax, processor fee or bank transfer ledger."
+    },
+    {
+      "id": "dead-trust-second-game-and-launch-2025",
+      "text": "Hexnut Studios released Dead Trust publicly on November 29 2025 and described it as its second game in a subsequent sales-milestone post.",
+      "source_ids": [
+        "dead-trust-2025-release",
+        "dead-trust-2025-first-week-milestone"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Release announcement not an independently verified first charge; developer's second title is not a measured commercial experience or audience baseline."
+    },
+    {
+      "id": "dead-trust-150-threshold-not-full-week-ledger-2025",
+      "text": "A December 13 2025 developer note reported 150+ copies sold during the game's first week, but the release announcement precedes that note by fourteen days and exact cohort times are unavailable.",
+      "source_ids": [
+        "dead-trust-2025-release",
+        "dead-trust-2025-first-week-milestone"
+      ],
+      "confidence": "moderate",
+      "observed_at": "2026-10-27",
+      "limitations": "Voluntary threshold, without exact order count, end of first-week date, refund status, store-specific split or reconciled payments."
+    },
+    {
+      "id": "dead-trust-300-threshold-jan2026",
+      "text": "On January 4 2026 the publisher announced a 300+ cumulative copy sales milestone for Dead Trust; exact positive-price itch-only retained orders and seller revenue were not reported.",
+      "source_ids": [
+        "dead-trust-2026-cumulative-milestone",
+        "dead-trust-2026-paid-page"
+      ],
+      "confidence": "moderate",
+      "observed_at": "2026-10-27",
+      "limitations": "The report does not explicitly restrict all copies to itch.io or provide a merchant ledger, so it cannot be treated as audited store revenue."
+    },
+    {
+      "id": "dead-trust-offer-change-not-revenue-2025-2026",
+      "text": "A December 5 2025 developer post announced a half-price sale, while the October 2026 live game page listed USD 2 crossed out to USD 1; this does not establish each historic transaction's paid price.",
+      "source_ids": [
+        "dead-trust-2025-sale",
+        "dead-trust-2026-paid-page"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Current listing is dynamic and does not disclose historical price windows, regional discounts, refunds or processor settlement."
+    },
+    {
+      "id": "dead-trust-thresholds-not-net-unit-increment",
+      "text": "Comparing the 150+ and 300+ threshold announcements does not yield a verified 150 additional copies between the reports because neither disclosure bounds the first count from above.",
+      "source_ids": [
+        "dead-trust-2025-first-week-milestone",
+        "dead-trust-2026-cumulative-milestone"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Threshold values are not exact paid-order counts; the data cannot measure 7-, 30-, 90- or 365-day income."
     }
   ],
   "observations": [

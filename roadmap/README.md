@@ -199,3 +199,5 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **itch.io game-jam activity (2026-10-26):** first-party cumulative games-for-jams count (613,796) and 2026 Gamedev.js 10,642 ratings, with 482 submitted/483 rated discrepancy; zero attribution to game purchases. **82% → 83%** (Δ +1 pp), raw mean **82.53%**. [Evidence](../ontology/itch-io/jam-participation-counts-2026.md).
+
+**itch.io selected paid-game milestone trajectory (2026-10-27):** one second-game horror publisher reported 150+ first-week and 300+ later copies, without exact incremental paid units, verified itch-specific revenue, or comparable cash-flow horizons. Task mean 97.17% → 97.18%, Δ +0.01 pp. [Bounded case](../ontology/itch-io/dead-trust-paid-release-milestones-2025-2026.md).
