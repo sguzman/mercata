@@ -2,7 +2,7 @@
 
 **Reviewed October 28, 2026.** [Indiepocalypse Issue #76 application and terms](https://itch.io/jam/indiepocalypse-issue-76-paying-anthology); [historical contributor account](https://exodrifter.itch.io/gender-dysphoria/devlog/300006/pay-what-you-want-sales-and-analytics). [Machine-readable study](anthology-game-creator-payment-terms-2026.json).
 
-**Population and period.** One public anthology intake ran February 6–March 5, 2026. Its issue page displayed **41 entries** at review, while the publisher described a collection of **ten developers**. Applications could also be made outside the website. Entries do not equal unique people or accepted contributors, and **10 / 41 is not an observed acceptance rate**.
+**Population and period.** One public anthology intake ran February 6–March 5, 2026. Its issue page simultaneously displayed **41 entries in the header** and **40 submissions in the list** at review, while the publisher described a collection of **ten developers**. The differing page counters are retained without assuming why they disagree. Applications could also be made outside the website. Entries do not equal unique people or accepted contributors, and **Neither 10 / 41 nor 10 / 40 is an observed acceptance rate**.
 
 **Advertised terms.** Selected contributors were offered **USD 20 up front**, plus **5% of sales before break-even, rising to 8% afterward**. Previously completed games qualified; the publisher claimed neither exclusive distribution nor ownership of the games. The exact royalty base, sale outcomes, actual paid royalties and signed agreements are unavailable. Terms are a conditional offer, not observed income.
 

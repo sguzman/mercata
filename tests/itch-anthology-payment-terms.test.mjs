@@ -7,6 +7,8 @@ test('Curated anthology offer is not counted as realized 2026 seller revenue',()
  assert(r.source_ids.every(id=>d.evidence.some(s=>s.id===id)));
  assert(r.claim_ids.every(id=>d.claims.some(c=>c.id===id)));
  assert.equal(r.observed_offer.visible_entries_at_review,41);
+ assert.equal(r.observed_offer.visible_submission_list_count_at_review,40);
+ assert.equal(r.boundaries.visible_page_counters_agree,false);
  assert.equal(r.observed_offer.described_contributor_slots,10);
  assert.equal(r.advertised_compensation.upfront_usd_if_selected,20);
  assert.equal(r.advertised_compensation.share_percent_before_break_even,5);
