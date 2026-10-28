@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "two_historical_first_party_game_sales_disclosures_with_unmatched_cross_store_observation_windows",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "mantis-eye-2018-first-commercial-game-itch-steam-counts",
+    "donislaw-2021-yerba-mate-crossstore-one-itch-order"
+  ],
+  "cases": [
+    {
+      "id": "realm_of_the_ghost_king",
+      "reported_first_commercial_game": true,
+      "source_ids": [
+        "mantis-eye-2018-first-commercial-game-itch-steam-counts"
+      ],
+      "observation": "Author's July 7 postmortem about January 16–July 5, 2018 Steam sales; itch cumulative figure was current at writing",
+      "itch_paid_units_cumulative_as_of_post": 12,
+      "itch_january_plus_february_paid_units": 9,
+      "itch_late_june_sale_paid_units": 2,
+      "itch_other_period_paid_units_not_individually_dated": 1,
+      "itch_june_sale_discount_percent": 25,
+      "steam_units_jan16_through_jul5_2018": 121,
+      "steam_monthly_units": {
+        "january": 72,
+        "february": 17,
+        "march": 9,
+        "april": 4,
+        "may": 2,
+        "june": 14,
+        "july_through_5th": 3
+      },
+      "same_game_on_both_stores": true,
+      "matched_release_age_promotion_and_exposure": false,
+      "author_reported_development_years_approx": 4,
+      "itch_gross_usd": null,
+      "itch_net_usd": null,
+      "steam_gross_usd": null,
+      "steam_net_usd": null,
+      "developer_labor_hours": null,
+      "price_history_complete": false,
+      "refund_status_verified": false
+    },
+    {
+      "id": "yerba_mate_tycoon",
+      "source_ids": [
+        "donislaw-2021-yerba-mate-crossstore-one-itch-order"
+      ],
+      "observation": "Developer's 2021 retrospective after first Steam early-access month (June 15–July 15), recalling an earlier itch launch and its first month",
+      "itch_first_month_paid_units": 0,
+      "itch_paid_units_as_of_post": 1,
+      "itch_gross_usd_approx_as_of_post": 3.99,
+      "steam_first_month_paid_units": 410,
+      "steam_after_steam_share_and_vat_usd_before_local_income_tax": 632,
+      "itch_release_and_steam_first_month_aligned": false,
+      "game_jolt_first_month_paid_units_reported": 0,
+      "game_jolt_sale_count_as_of_post": null,
+      "itch_net_usd": null,
+      "paid_customer_count_unique": null,
+      "game_profit_usd": null,
+      "developer_labor_hours": null
+    }
+  ],
+  "inclusion": {
+    "voluntary_creator_disclosures": true,
+    "independent_publishers": 2,
+    "paid_video_games_not_asset_packs": true,
+    "both_stores_same_game_per_case": true,
+    "representative_selection": false,
+    "official_transaction_exports_obtained": false,
+    "merchant_accounts_accessed": 0
+  },
+  "unknown": {
+    "marketwide_paid_orders": null,
+    "mean_itch_seller_income": null,
+    "median_itch_seller_income": null,
+    "zero_sale_publisher_share": null,
+    "causal_store_sales_difference": null,
+    "typical_post_launch_sales_volatility": null,
+    "long_tail_365_day_paid_units": null,
+    "settled_net_game_profit": null
+  },
+  "interpretation": [
+    "The first creator reports 9 of 12 itch purchases in January plus February and 2 during the late-June 25%-off sale, leaving one purchase without a separately dated month. The 9/12 split is not a first-30-day result.",
+    "The seven Steam monthly buckets sum to 121, but January and July are partial months and the Steam unit figure does not identify gross, net, refunds or comparable itch price exposure.",
+    "The 2018 12:121 store-order count is only for this game at this approximate checkpoint; it is not a ratio for the market or the causal effect of using another store.",
+    "The second creator's zero itch first-month copies and one later paid copy use different cumulative observation horizons; 410 copies and $632 are Steam-only and cannot be assigned to itch.io.",
+    "The developer's stated Steam $632 follows VAT and the Steam fee but precedes country-specific tax, and is not after-cost profit.",
+    "Neither voluntary retrospective is a randomized census of first-time publishers, and neither validates a platform-wide zero-sale rate or creator earnings distribution."
+  ]
+}

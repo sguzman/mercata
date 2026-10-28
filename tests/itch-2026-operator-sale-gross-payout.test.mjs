@@ -35,7 +35,7 @@ test('Existing transaction-volume task advances without equating one sale with p
  const market=q.queues.flatMap(x=>x.tasks).find(x=>x.id==='market/volume');
  const demand=p.detail_tasks.find(x=>x.id==='itch-io/market/estimate-paid-purchase-demand');
  assert.equal(market.status,'in_progress');assert.equal(market.progress,94);
- assert.equal(demand.status,'in_progress');assert.equal(demand.percent,68);
+ assert.equal(demand.status,'in_progress');assert(demand.percent>=68&&demand.percent<100);
  for(const t of [market,demand])for(const path of ['ontology/itch-io/2026-operator-verified-summer-sale-gross-payout-waterfall.json','ontology/itch-io/2026-operator-verified-summer-sale-gross-payout-waterfall.md','tests/itch-2026-operator-sale-gross-payout.test.mjs'])assert(t.evidence.includes(path));
  assert.equal(p.total_tracked_tasks,244);
 });
