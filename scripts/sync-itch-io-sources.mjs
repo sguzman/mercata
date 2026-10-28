@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {publicSourceDocumentKey} from '../site/itch-source-register-audit.mjs';
 
 export const auditFiles = Object.freeze([
  'ontology/itch-io/research-synthesis-2026.json',
@@ -33,7 +34,7 @@ export function itchSourceStats(dossier) {
   .map(([url,source_ids])=>({url,source_ids:source_ids.slice().sort()}))
   .sort((a,b)=>a.url.localeCompare(b.url,'en'));
  const repeatedUrlClaimIds=[];
- const byId=new Map(dossier.evidence.map(e=>[e.id,e.url]));
+ const byId=new Map(dossier.evidence.map(e=>[e.id,publicSourceDocumentKey(e.url)]));
  for(const claim of dossier.claims) {
   if(!Array.isArray(claim.source_ids))throw new TypeError('Claim source_ids must be an array');
   const keys=claim.source_ids.map(id=>byId.get(id));
@@ -136,9 +137,9 @@ export function alignItchSourceAudit(filename,source,stats) {
     '|---|---|',
     rows||'| None | — |',
     '',
-    'Claims citing a single URL through more than one registry ID: **'+claimsRepeatingOneUrl.length+'**. The source-register audit rejects such a claim as unsupported multi-source corroboration.',
+    'Claims citing one document through more than one registry ID: **'+claimsRepeatingOneUrl.length+'**. The claim-level audit also detects URL fragments, hostname case, and default HTTPS-port aliases as the same fetched document.',
     '',
-    'This audit does not treat different URLs as necessarily independent works: redirects, mirrors, republications and syndication may produce multiple URLs for the same underlying document.',
+    'Exact distinct URL-string counts are retained for comparability. Query strings and paths remain significant; redirects, mirrors, republications and syndication may still yield different URLs for one underlying work.',
     '',
     'No existing evidence ID or claim source reference was removed. See [machine record](source-url-identity-audit-2026.json).',
     ''

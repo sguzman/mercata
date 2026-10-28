@@ -15,8 +15,8 @@ Two evidence IDs for one URL may document different claims or dates, but the und
 | [Public document](https://skydome.itch.io/thehive/devlog/1588098/we-got-featured-on-the-itchio-front-page-here-is-what-other-developers-can-expect) | `hive-feature-july-2026`, `the-hive-2026-july-creator-feature-visits` |
 | [Public document](https://support.stripe.com/questions/supported-payment-methods-in-mexico?locale=en-GB) | `stripe-mexico-domestic-card-currency-2026`, `stripe-mx-methods` |
 
-Claims citing a single URL through more than one registry ID: **0**. The source-register audit rejects such a claim as unsupported multi-source corroboration.
+Claims citing one document through more than one registry ID: **0**. The claim-level audit also detects URL fragments, hostname case, and default HTTPS-port aliases as the same fetched document.
 
-This audit does not treat different URLs as necessarily independent works: redirects, mirrors, republications and syndication may produce multiple URLs for the same underlying document.
+Exact distinct URL-string counts are retained for comparability. Query strings and paths remain significant; redirects, mirrors, republications and syndication may still yield different URLs for one underlying work.
 
 No existing evidence ID or claim source reference was removed. See [machine record](source-url-identity-audit-2026.json).

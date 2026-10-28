@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {itchSourceStats,alignItchSourceAudit} from '../scripts/sync-itch-io-sources.mjs';
-import {auditItchSourceRegister} from '../site/itch-source-register-audit.mjs';
+import {auditItchSourceRegister,publicSourceDocumentKey} from '../site/itch-source-register-audit.mjs';
 
 const get=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
 const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
@@ -50,6 +50,27 @@ test('A claim cannot masquerade two evidence IDs for one URL as independent corr
  assert(report.issues.includes('Claim cites one public URL through multiple evidence IDs'));
  const stats=itchSourceStats({...d,claims:[...d.claims,bad]});
  assert(stats.claimsRepeatingOneUrl.includes(bad.id));
+});
+
+test('Equivalent HTTPS URL spellings cannot be counted as two corroborating documents',()=>{
+ const d=dossier(),base=d.evidence[0],host=new URL(base.url).hostname;
+ const variants=[base.url+'#source-note',base.url.replace(host,host.toUpperCase()),base.url.replace(host,host+':443')];
+ assert.equal(new Set(variants).size,3);
+ for(const variant of variants){
+  assert.equal(publicSourceDocumentKey(variant),publicSourceDocumentKey(base.url));
+  const extra={...base,id:'synthetic-url-spelling-alias',url:variant};
+  const claim={...d.claims[0],id:'synthetic-multi-alias-claim',observed_at:'2026-10-28',source_ids:[base.id,extra.id]};
+  const modified={...d,evidence:[...d.evidence,extra],claims:[claim]};
+  const result=auditItchSourceRegister(modified);
+  assert.equal(result.valid,false,variant);
+  assert(result.issues.includes('Claim cites one public URL through multiple evidence IDs'));
+  assert(itchSourceStats(modified).claimsRepeatingOneUrl.includes(claim.id));
+ }
+ assert.notEqual(publicSourceDocumentKey('https://example.org/observations?batch=1'),
+  publicSourceDocumentKey('https://example.org/observations?batch=2'));
+ assert.throws(()=>publicSourceDocumentKey('https://user:secret@example.org/path'),TypeError);
+ assert.throws(()=>publicSourceDocumentKey('https://'),TypeError);
+ assert.throws(()=>publicSourceDocumentKey('http://example.org'),TypeError);
 });
 
 test('Alias audit fails closed on invalid metadata or missing human generated marker',()=>{
