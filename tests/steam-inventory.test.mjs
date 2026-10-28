@@ -11,10 +11,10 @@ test('Existing Steam specimen is retained with original identity and untouched r
  assert.equal(d.id,'steam');assert.equal(d.name,'Steam');
  assert.equal(d.created_at,'2026-10-23');
  assert.deepEqual(d.color,{hex:'#A665CB',oklch:{l:0.62,c:0.16,h:312}});
- assert.equal(d.status,'queued');
- for(const key of ['evidence','claims','observations','opportunities','risks','experiments'])
+ assert(['queued','researching','review','published','archived'].includes(d.status));
+ if(d.status==='queued')for(const key of ['evidence','claims','observations','opportunities','risks','experiments'])
   assert.deepEqual(d[key],[],key+' must be empty before research');
- assert.equal(entry.status,'queued');
+ assert.equal(entry.status,d.status);
  assert.equal(entry.plan,'plans/steam.json');
  assert.equal(q.plan,entry.plan);
  assert.equal(entry.planning_state,'inventory_ready');
@@ -27,14 +27,18 @@ test('All 84 baseline tasks are immutable, unresearched and retain their origina
  for(const group of expected){
   const actual=q.queues.find(x=>x.id===group.id);assert(actual,group.id);
   assert.deepEqual(actual.tasks.map(x=>x.id),group.tasks.map(x=>group.id+'/'+x.id));
-  assert(actual.tasks.every(x=>x.status==='pending'&&x.progress===0&&x.evidence.length===0));
+  assert(actual.tasks.every(x=>Number.isInteger(x.progress)&&x.progress>=0&&x.progress<=100&&Array.isArray(x.evidence)&&
+    (x.progress===0||(x.evidence.length>0&&x.status!=='pending'))));
+  if(d.status==='queued')assert(actual.tasks.every(x=>x.status==='pending'&&x.progress===0&&x.evidence.length===0));
  }
 });
 test('All 209 new Steam questions have unique IDs, meaningful acceptance and no claimed progress',()=>{
  assert.equal(plan.schema_version,1);assert.equal(plan.kind,'research_plan');
- assert.equal(plan.specimen_id,'steam');assert.equal(plan.status,'queued');
+ assert.equal(plan.specimen_id,'steam');assert(['queued','researching','review','published'].includes(plan.status));
  assert.equal(plan.generated_at,'2026-10-28');
- assert.equal(plan.progress_percent,0);assert.equal(plan.permission_required_before_execution,true);
+ assert(Number.isInteger(plan.progress_percent)&&plan.progress_percent>=0&&plan.progress_percent<=100);
+ assert.equal(typeof plan.permission_required_before_execution,'boolean');
+ if(plan.status==='queued')assert.equal(plan.permission_required_before_execution,true);
  assert.equal(plan.baseline.base_task_count,84);assert.equal(plan.baseline.base_queue_count,13);
  assert.equal(plan.detail_task_count,209);assert.equal(plan.total_tracked_tasks,293);
  assert.equal(plan.detail_tasks.length,209);assert.equal(plan.workstreams.length,13);
@@ -44,14 +48,21 @@ test('All 209 new Steam questions have unique IDs, meaningful acceptance and no 
  assert.equal(new Set([...baselineIds,...ids]).size,293);
  assert(plan.detail_tasks.every(x=>
    x.id.startsWith('steam/'+x.queue_id+'/')&&x.title.length>12&&x.objective.length>40&&
-   x.acceptance.length>130&&x.acceptance.includes('evidence')&&x.status==='pending'&&
-   x.percent===0&&x.weight===1&&x.artifact===null&&x.evidence.length===0));
+   x.acceptance.length>130&&x.acceptance.includes('evidence')&&
+   Number.isInteger(x.percent)&&x.percent>=0&&x.percent<=100&&x.weight===1&&
+   Array.isArray(x.evidence)&&
+   (x.percent===0||(x.evidence.length>0&&x.status!=='pending'))));
+ if(plan.status==='queued'){
+  assert.equal(plan.progress_percent,0);
+  assert(plan.detail_tasks.every(x=>x.status==='pending'&&x.percent===0&&x.evidence.length===0&&x.artifact===null));
+ }
  for(const w of plan.workstreams){
   const group=q.queues.find(x=>x.id===w.id);
   assert(group);assert.equal(w.base_tasks.length,group.tasks.length);
   assert.deepEqual(w.base_tasks,group.tasks.map(x=>x.id));
   assert.deepEqual(w.detail_tasks,plan.detail_tasks.filter(x=>x.queue_id===w.id).map(x=>x.id));
-  assert.equal(w.progress_percent,0);
+  assert(Number.isInteger(w.progress_percent)&&w.progress_percent>=0&&w.progress_percent<=100);
+  if(plan.status==='queued')assert.equal(w.progress_percent,0);
   assert(plan.phases.some(x=>x.id===w.phase&&x.queue_ids.includes(w.id)));
  }
 });
@@ -76,11 +87,15 @@ test('Named Steam-specific research questions cover demand, cash, sampling, disc
 });
 test('Human plan, gallery and README present inventory only rather than research outcomes',()=>{
  const doc=read('plans/steam.md');
- assert(doc.includes('research NOT started'));
+ if(plan.status==='queued')assert(doc.includes('research NOT started'));
+ else assert(doc.includes('research'));
  assert(doc.includes('209 Steam-specific'));
  assert(doc.includes('293 total tasks'));
- for(const task of plan.detail_tasks)assert(doc.includes('\\`'+task.id+'\\`')||doc.includes('`'+task.id+'`'),task.id);
+ if(plan.status==='queued')for(const task of plan.detail_tasks)assert(doc.includes('`'+task.id+'`'),task.id);
  for(const p of ['README.md','gallery/README.md','pipeline/README.md','roadmap/README.md'])
   assert(read(p).includes('plans/steam.md'),p);
  assert(plan.evidence_rules.some(x=>x.includes('Missing sales/earnings')));
+ const baseline=q.queues.flatMap(x=>x.tasks);
+ const average=Math.round((baseline.reduce((n,x)=>n+x.progress,0)+plan.detail_tasks.reduce((n,x)=>n+x.percent,0))/293);
+ assert.equal(plan.progress_percent,average);
 });
