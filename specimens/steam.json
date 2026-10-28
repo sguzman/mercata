@@ -1082,6 +1082,39 @@
       "evidence_class": "official_public_store_presentation_review_and_asset_rules",
       "license": "Source link, metadata and original short factual summary only; no copyrighted images, screenshots or copied policy passage.",
       "notes": "The rules govern store presentation and review gates; no Steam store page, marketing artwork, client or customer experiments were tested."
+    },
+    {
+      "id": "steam-valve-2025-year-review-march2026",
+      "url": "https://steamcommunity.com/groups/steamworks/announcements/detail/528746884222682053",
+      "title": "Steam Year In Review 2025",
+      "publisher": "Valve Corporation",
+      "published_at": "2026-03-06",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_annual_platform_aggregate",
+      "license": "Public source metadata and concise independently authored aggregate fact summary; no slides, screenshots, or substantial source text redistributed.",
+      "notes": "Platform aggregates, not verified complete per-app transaction ledgers; do not equate game annual sales, new-launch cohorts, legal publisher bank payouts or profits."
+    },
+    {
+      "id": "steam-gdc-2026-journalist-thresholds",
+      "url": "https://www.gamedeveloper.com/business/valve-says-5-836-titles-earned-over-100-000-on-steam-in-2025",
+      "title": "Valve says 5,863 titles earned over $100,000 on Steam in 2025",
+      "publisher": "Game Developer / Chris Kerr",
+      "published_at": "2026-03-11",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "journalist_report_of_valve_gdc_presentation",
+      "license": "Public source metadata and concise independently authored aggregate fact summary; no slides, screenshots, or substantial source text redistributed.",
+      "notes": "Platform aggregates, not verified complete per-app transaction ledgers; do not equate game annual sales, new-launch cohorts, legal publisher bank payouts or profits."
+    },
+    {
+      "id": "steam-gdc-2026-analyst-500k-games",
+      "url": "https://newsletter.gamediscover.co/p/what-steams-2026-biz-update-tells",
+      "title": "What Steam's 2026 biz update tells us about the ecosystem",
+      "publisher": "GameDiscoverCo / Simon Carless",
+      "published_at": "2026-03",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "secondary_interpretation_valve_gdc_slide",
+      "license": "Public source metadata and concise independently authored aggregate fact summary; no slides, screenshots, or substantial source text redistributed.",
+      "notes": "Platform aggregates, not verified complete per-app transaction ledgers; do not equate game annual sales, new-launch cohorts, legal publisher bank payouts or profits."
     }
   ],
   "claims": [
@@ -5980,6 +6013,171 @@
       "observed_at": "2026-10-28",
       "confidence": "high",
       "limitations": "No live artwork variant, randomized visitor group or merchant sales data were observed."
+    },
+    {
+      "id": "valve-2025-nonvalve-share-76",
+      "text": "Valve reports a 76% revenue share paid out across all non-Valve Steam games in 2025.",
+      "source_ids": [
+        "steam-valve-2025-year-review-march2026"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "A platform aggregate weighted by revenue is not the rate for a typical new game or a signed individual contract.",
+      "confidence": "high"
+    },
+    {
+      "id": "valve-2025-share-excludes-retail-keys",
+      "text": "Valve excludes income earned selling Steam keys through stores outside Steam from that 76% share.",
+      "source_ids": [
+        "steam-valve-2025-year-review-march2026"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "Externally sold activation keys and their retailer fees are not captured by the aggregate share.",
+      "confidence": "high"
+    },
+    {
+      "id": "valve-2025-higher-share-tiers",
+      "text": "Valve refers to its 2018 marginal higher-revenue share tiers of 75% and 80% when discussing the aggregate.",
+      "source_ids": [
+        "steam-valve-2025-year-review-march2026",
+        "steam-2018-tier-announcement"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "Historic marginal tiers do not verify every current signed publishing agreement or net royalty split.",
+      "confidence": "high"
+    },
+    {
+      "id": "valve-2025-share-not-gross-total",
+      "text": "The reported 76% share does not reveal total platform 2025 gross transaction dollars or after-cost developer profits.",
+      "source_ids": [
+        "steam-valve-2025-year-review-march2026"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "No official absolute net revenue or bank transfer total accompanies the percentage.",
+      "confidence": "high"
+    },
+    {
+      "id": "valve-2025-content-delivery-100eb",
+      "text": "Valve says 2025 Steam customer downloads and updates totalled about 100 exabytes, versus 80 exabytes in 2024.",
+      "source_ids": [
+        "steam-valve-2025-year-review-march2026"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "These are platform-wide delivery bytes, not a game publisher's hosting bill, sales or paid-install count.",
+      "confidence": "high"
+    },
+    {
+      "id": "valve-march2026-concurrent-42m",
+      "text": "Valve's March 2026 review describes Steam reaching 42 million peak concurrent client users.",
+      "source_ids": [
+        "steam-valve-2025-year-review-march2026"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "Peak simultaneous logged-in clients are not annual unique buying users or simultaneous game players.",
+      "confidence": "high"
+    },
+    {
+      "id": "valve-2025-daily-deals-revenue-up274",
+      "text": "Valve reports program-wide Daily Deal revenue grew 274% after its expansion, while median revenue per Deal fell about 8%.",
+      "source_ids": [
+        "steam-valve-2025-year-review-march2026"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "Broader program size and changing deal selection prevent a causal per-game marketing interpretation.",
+      "confidence": "high"
+    },
+    {
+      "id": "valve-gdc-2025-100k-all-age-games",
+      "text": "Game Developer reports Valve's GDC 2026 figure of 5,863 games exceeding $100,000 in Steam revenue during calendar 2025.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "Includes games released before 2025; annual gross is not first-release performance or net developer take-home.",
+      "confidence": "medium"
+    },
+    {
+      "id": "valve-gdc-2025-500k-all-age-games",
+      "text": "GameDiscoverCo reports Valve's GDC 2026 figure of 2,395 games exceeding $500,000 in Steam gross during calendar 2025.",
+      "source_ids": [
+        "steam-gdc-2026-analyst-500k-games"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "Secondary interpretation of first-party slides, not an independent audited partner ledger; includes older games.",
+      "confidence": "medium"
+    },
+    {
+      "id": "valve-gdc-2020-100k-about3000",
+      "text": "Game Developer reports Valve showed roughly 3,000 games exceeding $100,000 in annual revenue during 2020.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "The 2020 and 2025 inventories differ in age, availability and store mix; counts are not hit-rate probabilities.",
+      "confidence": "medium"
+    },
+    {
+      "id": "valve-gdc-daily-deal-2025-1500",
+      "text": "Valve's GDC presentation, as reported by Game Developer, said roughly 1,500 titles were featured in 2025 Daily Deals, 69% first-time features.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "Promoted games are selected, include older catalog titles and cannot describe an average launch.",
+      "confidence": "medium"
+    },
+    {
+      "id": "valve-gdc-daily-deal-buyer-8p2m",
+      "text": "Game Developer reports Valve said 8.2 million customers purchased a Daily Deal in calendar 2025, up about 125% from 2024.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "A defined purchasing subset is not the population of all unique Steam buyers and has no known demographic breakdown.",
+      "confidence": "medium"
+    },
+    {
+      "id": "valve-year-sales-api-protected",
+      "text": "Valve describes adding programmatic sales reports for units, key activations and wishlists through its private partner APIs.",
+      "source_ids": [
+        "steam-valve-2025-year-review-march2026",
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "The public announcement does not make protected publisher data available or verify financial results of typical developers.",
+      "confidence": "high"
+    },
+    {
+      "id": "valve-annual-denominators-not-same",
+      "text": "Calendar-year revenue thresholds for games of any release age cannot be divided by the count of games first released in that year.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds",
+        "steam-gdc-2026-jan-cohort-primary"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "Denominators differ in first-release eligibility, observation period, and model versus first-party provenance.",
+      "confidence": "medium"
+    },
+    {
+      "id": "valve-daily-buyers-not-all-buyers",
+      "text": "Reported Daily Deal purchasing customers are a subset of Steam's annual purchasing customer population, not the full total.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "The source does not report all paying Steam customers, inactive users, or platform buyer demographics.",
+      "confidence": "medium"
+    },
+    {
+      "id": "valve-annual-profit-still-unobserved",
+      "text": "Valve's all-game revenue thresholds and revenue-share aggregate cannot provide a representative legal publisher or developer net-income distribution.",
+      "source_ids": [
+        "steam-valve-2025-year-review-march2026",
+        "steam-gdc-2026-journalist-thresholds",
+        "steam-gdc-2026-analyst-500k-games"
+      ],
+      "observed_at": "2026-10-28",
+      "limitations": "Actual payouts, developer labor, corporate revenue splits, tax, costs and complete zero-selling samples remain unknown.",
+      "confidence": "high"
     }
   ],
   "observations": [],
@@ -5987,5 +6185,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research now includes official capsule/artwork override restrictions and store-page feature truthfulness, without interpreting compliant assets as causal sales. First-game paid publisher profits remain unmeasured."
+  "summary": "Steam research adds Valve's 2025 76% non-Valve aggregate revenue share, all-release-age annual game earnings thresholds reported from GDC 2026, and bounded Daily Deal purchasers; no first-release success rate or typical developer take-home is inferred."
 }

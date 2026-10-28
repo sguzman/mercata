@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 79,
+  "progress_percent": 80,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -156,7 +156,7 @@
         "steam/economics/model-multi-currency-settlement-uncertainty"
       ],
       "phase": 1,
-      "progress_percent": 79
+      "progress_percent": 83
     },
     {
       "id": "market",
@@ -190,7 +190,7 @@
         "steam/market/document-cohort-coverage-uncertainty"
       ],
       "phase": 2,
-      "progress_percent": 69
+      "progress_percent": 77
     },
     {
       "id": "discovery",
@@ -296,7 +296,7 @@
         "steam/income/build-evidence-quality-classification-for-earnings"
       ],
       "phase": 3,
-      "progress_percent": 75
+      "progress_percent": 77
     },
     {
       "id": "rights",
@@ -1085,13 +1085,16 @@
       "objective": "Research record platform share by revenue tier, tier threshold and contract scope with dates.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Record platform share by revenue tier, tier threshold and contract scope with dates. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/revenue-share-tiers-2018-2026.json",
-        "ontology/steam/revenue-share-tiers-2018-2026.md"
+        "ontology/steam/revenue-share-tiers-2018-2026.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/revenue-share-tiers-2018-2026.md",
+      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1103,7 +1106,7 @@
       "objective": "Research distinguish gross, adjusted revenue, refunds, chargebacks, taxes and tier eligibility.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Distinguish gross, adjusted revenue, refunds, chargebacks, taxes and tier eligibility. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/revenue-share-tiers-2018-2026.json",
@@ -1112,9 +1115,11 @@
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
       ],
-      "artifact": "ontology/steam/financial-validation-and-consent-2026.md",
+      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1603,11 +1608,15 @@
       "emoji": "🌐",
       "objective": "Research differentiate accounts, monthly active customers, transacting buyers and purchasers of indie games.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Differentiate accounts, monthly active customers, transacting buyers and purchasers of indie games. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 65,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
       "priority": "high",
       "phase": 2
     },
@@ -1619,16 +1628,18 @@
       "objective": "Research locate official or independent aggregate sales metrics and clearly define gaming versus other receipts.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Locate official or independent aggregate sales metrics and clearly define gaming versus other receipts. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 70,
       "weight": 1,
       "evidence": [
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
         "ontology/steam/january-2026-modeled-paid-release-distribution.json",
         "specimens/steam.json",
         "ontology/steam/model-validation-and-low-end-bounds-2026.md",
-        "ontology/steam/model-validation-and-low-end-bounds-2026.json"
+        "ontology/steam/model-validation-and-low-end-bounds-2026.json",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
       ],
-      "artifact": "ontology/steam/model-validation-and-low-end-bounds-2026.md",
+      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
       "priority": "high",
       "phase": 2
     },
@@ -1640,7 +1651,7 @@
       "objective": "Research compare stable yearly definitions and account for delisting, relaunch and coverage drift.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare stable yearly definitions and account for delisting, relaunch and coverage drift. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
@@ -1651,9 +1662,11 @@
         "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.md",
         "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.json",
         "ontology/steam/model-validation-and-low-end-bounds-2026.md",
-        "ontology/steam/model-validation-and-low-end-bounds-2026.json"
+        "ontology/steam/model-validation-and-low-end-bounds-2026.json",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
       ],
-      "artifact": "ontology/steam/model-validation-and-low-end-bounds-2026.md",
+      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
       "priority": "normal",
       "phase": 2
     },
@@ -1789,7 +1802,7 @@
       "objective": "Research distinguish store-wide transactions from revenue, activations, downloads and play sessions.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Distinguish store-wide transactions from revenue, activations, downloads and play sessions. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
@@ -1800,9 +1813,11 @@
         "ontology/steam/financial-validation-and-consent-2026.json",
         "specimens/steam.json",
         "ontology/steam/age-ratings-regional-market-access-2026.md",
-        "ontology/steam/age-ratings-regional-market-access-2026.json"
+        "ontology/steam/age-ratings-regional-market-access-2026.json",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
       ],
-      "artifact": "ontology/steam/age-ratings-regional-market-access-2026.md",
+      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2026,14 +2041,16 @@
       "objective": "Research compare themed events, sales, daily deals and featured slots by unit of exposure.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare themed events, sales, daily deals and featured slots by unit of exposure. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
       ],
-      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2728,14 +2745,16 @@
       "objective": "Research compare p10, p25, p50, p75, p90, p99 and top 1% from identical cohorts.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare p10, p25, p50, p75, p90, p99 and top 1% from identical cohorts. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
         "ontology/steam/january-2026-modeled-paid-release-distribution.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
       ],
-      "artifact": "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2747,14 +2766,16 @@
       "objective": "Research use explicit denominator and group units rather than rank charts alone.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Use explicit denominator and group units rather than rank charts alone. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
         "ontology/steam/january-2026-modeled-paid-release-distribution.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
       ],
-      "artifact": "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
       "priority": "high",
       "phase": 3
     },
@@ -2902,7 +2923,7 @@
       "objective": "Research define 7/30/90/365-day earnings and later post-launch long tails.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define 7/30/90/365-day earnings and later post-launch long tails. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
@@ -2911,9 +2932,11 @@
         "ontology/steam/january-2026-modeled-paid-release-distribution.json",
         "specimens/steam.json",
         "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
-        "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.json"
+        "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.json",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
       ],
-      "artifact": "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
+      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2946,7 +2969,7 @@
       "objective": "Research separate per-title performance from publisher aggregate cash and launch frequency.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate per-title performance from publisher aggregate cash and launch frequency. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.md",
@@ -2954,9 +2977,11 @@
         "specimens/steam.json",
         "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.md",
         "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.json",
-        "site/steam-ledger-coverage.mjs"
+        "site/steam-ledger-coverage.mjs",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
       ],
-      "artifact": "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.md",
+      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3742,8 +3767,8 @@
       "emoji": "🛡️",
       "objective": "Research assess failed launches and winner-take-most exposure without survivorship bias.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Assess failed launches and winner-take-most exposure without survivorship bias. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "in_progress",
-      "percent": 95,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
       "evidence": [
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
@@ -3753,9 +3778,11 @@
         "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.json",
         "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
         "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
-        "site/steam-hypothetical-break-even.mjs"
+        "site/steam-hypothetical-break-even.mjs",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
       ],
-      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
       "priority": "normal",
       "phase": 3
     },

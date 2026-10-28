@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "first_party_annual_aggregate_and_reported_gdc_thresholds_not_publisher_profits",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-valve-2025-year-review-march2026",
+    "steam-gdc-2026-journalist-thresholds",
+    "steam-gdc-2026-analyst-500k-games",
+    "steam-2018-tier-announcement",
+    "steam-financial-api-official",
+    "steam-gdc-2026-jan-cohort-primary"
+  ],
+  "claim_ids": [
+    "valve-2025-nonvalve-share-76",
+    "valve-2025-share-excludes-retail-keys",
+    "valve-2025-higher-share-tiers",
+    "valve-2025-share-not-gross-total",
+    "valve-2025-content-delivery-100eb",
+    "valve-march2026-concurrent-42m",
+    "valve-2025-daily-deals-revenue-up274",
+    "valve-gdc-2025-100k-all-age-games",
+    "valve-gdc-2025-500k-all-age-games",
+    "valve-gdc-2020-100k-about3000",
+    "valve-gdc-daily-deal-2025-1500",
+    "valve-gdc-daily-deal-buyer-8p2m",
+    "valve-year-sales-api-protected",
+    "valve-annual-denominators-not-same",
+    "valve-daily-buyers-not-all-buyers",
+    "valve-annual-profit-still-unobserved"
+  ],
+  "lineage": {
+    "annual_aggregate": "Valve Steam Year In Review published 2026-03-06",
+    "revenue_thresholds": "Valve GDC 2026 presentation described by secondary journalists and analysts",
+    "merchant_ledger_access": false,
+    "original_slides_republished": false
+  },
+  "calendar_2025": {
+    "nonvalve_revenue_weighted_share": 0.76,
+    "external_steam_key_retail_excluded": true,
+    "content_delivered_exabytes": 100,
+    "comparison_2024_exabytes": 80,
+    "steam_total_gross_usd": null,
+    "typical_publisher_effective_share": null,
+    "developer_profit": null
+  },
+  "valve_gdc": {
+    "annual_revenue_period": "2025",
+    "revenue_count_unit": "all_age_steam_games_not_only_2025_new_releases",
+    "games_above_100k_usd": 5863,
+    "games_above_500k_usd": 2395,
+    "approx_2020_games_above_100k": 3000,
+    "total_eligible_paid_releases_2025": null,
+    "first_release_success_probability": null,
+    "verified_partner_income": null
+  },
+  "daily_deals": {
+    "year": 2025,
+    "reported_featured_titles_approx": 1500,
+    "first_time_featured_share_approx": 0.69,
+    "reported_distinct_buyers": 8200000,
+    "buyers_all_steam_users": false,
+    "all_steam_unique_paid_buyers": null,
+    "reported_buyers_yoy_growth_pct": 125,
+    "reported_program_revenue_yoy_growth_pct": 274,
+    "reported_median_per_deal_revenue_yoy_change_pct": -8,
+    "causal_sales_uplift": null
+  },
+  "scale": {
+    "reported_peak_client_ccu_by_march_2026": 42000000,
+    "all_annual_unique_buyers": null,
+    "all_concurrent_ingame_players": null
+  },
+  "forbidden_inferences": [
+    "76_pct_as_median_indie_royalty",
+    "daily_deal_8p2m_as_total_steam_buyers",
+    "5863_all_age_revenue_games_divided_by_2025_new_release_count",
+    "42m_peak_clients_as_unique_purchasers",
+    "100exabytes_as_publisher_hosting_bill",
+    "100k_gross_per_game_as_developer_takehome"
+  ],
+  "private_data_accessed": false
+}

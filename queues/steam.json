@@ -226,14 +226,16 @@
           "title": "Find commissions and service fees",
           "acceptance": "State fee basis, rate, tiers and effective dates.",
           "weight": 1,
-          "progress": 70,
+          "progress": 85,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/revenue-share-tiers-2018-2026.json",
             "ontology/steam/revenue-share-tiers-2018-2026.md",
             "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
             "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
-            "specimens/steam.json"
+            "specimens/steam.json",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
           ]
         },
         {
@@ -323,11 +325,14 @@
           "title": "Build a dated fee and payout history",
           "acceptance": "Compare sourced changes without overwriting previous rules.",
           "weight": 1,
-          "progress": 55,
+          "progress": 80,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/revenue-share-tiers-2018-2026.json",
-            "ontology/steam/revenue-share-tiers-2018-2026.md"
+            "ontology/steam/revenue-share-tiers-2018-2026.md",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json",
+            "specimens/steam.json"
           ]
         }
       ]
@@ -344,9 +349,13 @@
           "title": "Estimate reachable buyer populations",
           "acceptance": "Define geography, date and measurement method.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 60,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json",
+            "specimens/steam.json"
+          ]
         },
         {
           "id": "market/sellers",
@@ -378,8 +387,8 @@
           "title": "Measure transaction or revenue scale",
           "acceptance": "Distinguish GMV, platform sales, revenue and payouts.",
           "weight": 1,
-          "progress": 90,
-          "status": "in_progress",
+          "progress": 100,
+          "status": "complete",
           "evidence": [
             "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
             "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
@@ -395,7 +404,9 @@
             "ontology/steam/model-validation-and-low-end-bounds-2026.md",
             "ontology/steam/model-validation-and-low-end-bounds-2026.json",
             "ontology/steam/paid-genre-supply-and-model-comparability-2026.md",
-            "ontology/steam/paid-genre-supply-and-model-comparability-2026.json"
+            "ontology/steam/paid-genre-supply-and-model-comparability-2026.json",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
           ]
         },
         {
@@ -442,12 +453,14 @@
           "title": "Assess market concentration",
           "acceptance": "Measure dependence on leading categories or sellers.",
           "weight": 1,
-          "progress": 65,
+          "progress": 80,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/january-2026-modeled-paid-release-distribution.md",
             "ontology/steam/january-2026-modeled-paid-release-distribution.json",
-            "specimens/steam.json"
+            "specimens/steam.json",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
           ]
         }
       ]
@@ -680,8 +693,8 @@
           "title": "Define earning-population denominator",
           "acceptance": "Separate all users, active sellers and paid sellers.",
           "weight": 1,
-          "progress": 95,
-          "status": "in_progress",
+          "progress": 100,
+          "status": "complete",
           "evidence": [
             "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
             "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
@@ -695,7 +708,9 @@
             "ontology/steam/january-2026-modeled-paid-release-distribution.md",
             "ontology/steam/january-2026-modeled-paid-release-distribution.json",
             "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.md",
-            "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.json"
+            "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.json",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
           ]
         },
         {
@@ -736,14 +751,16 @@
           "title": "Document earnings percentiles",
           "acceptance": "Seek p10, p25, p75, p90 and top-tail evidence.",
           "weight": 1,
-          "progress": 80,
+          "progress": 90,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
             "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
             "ontology/steam/january-2026-modeled-paid-release-distribution.md",
             "ontology/steam/january-2026-modeled-paid-release-distribution.json",
-            "specimens/steam.json"
+            "specimens/steam.json",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+            "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
           ]
         },
         {
