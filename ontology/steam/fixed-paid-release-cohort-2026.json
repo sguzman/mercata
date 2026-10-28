@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "original_paid_release_cohort_protocol_not_observed_dataset",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-applications-official",
+    "steam-packages-official",
+    "steam-release-dates-official",
+    "steam-retire-app-official",
+    "steam-public-app-list-api",
+    "steamspy-ownership-methods",
+    "steam-earlyaccess-policy-official",
+    "steam-visibility-official",
+    "steamdb-annual-release-snapshot-2026-10",
+    "steamlense-2025-paid-release-review-snapshot",
+    "steam-review-policy-2026",
+    "steam-financial-api-official"
+  ],
+  "claim_ids": [
+    "steam-appid-is-not-sale",
+    "steam-packages-multi-app-licenses",
+    "steam-release-date-editable",
+    "steam-earlyaccess-full-visibility-distinct",
+    "steam-retired-games-hidden-not-erased",
+    "steam-store-app-list-requires-key",
+    "steam-store-app-list-not-chronology",
+    "steam-current-release-counts-not-paid-cohort",
+    "steam-zero-review-release-inclusion",
+    "steam-first-paid-cohort-vs-converted-free",
+    "steam-publisher-identity-not-appid",
+    "steam-supply-frame-incomplete",
+    "steamspy-estimated-owners-not-purchases",
+    "steamspy-novice-selection-blind-spot",
+    "steam-release-frame-no-numerical-income"
+  ],
+  "population_definition": {
+    "geography": "Steam worldwide commercial storefront for a fixed paid-release population; regional availability retained as a field",
+    "primary_cohort": "initial_public_steam_release_of_base_game_was_paid",
+    "unit": "one base-game AppID",
+    "time_zero": "first publicly purchasable date, including paid Early Access",
+    "full_1_0_launch": "separate milestone, not a second entry",
+    "period_example": {
+      "start": "2025-01-01",
+      "end_exclusive": "2026-01-01"
+    },
+    "exclusions": [
+      "demo",
+      "playtest",
+      "dlc",
+      "soundtrack",
+      "software",
+      "video",
+      "initially_free_to_play_or_free_release"
+    ],
+    "separate_strata": [
+      "initially_free_then_paid",
+      "paid_then_free",
+      "key_only_no_initial_steam_checkout",
+      "retired_and_historically_paid",
+      "original_release_date_missing"
+    ],
+    "keep_even_if": [
+      "zero_reviews",
+      "no_estimated_owners",
+      "delisted_after_release",
+      "current_store_page_unavailable"
+    ],
+    "need_evidence_for": [
+      "original_paid_offer",
+      "first_public_launch_date",
+      "AppID and type",
+      "original paid Early Access status",
+      "retirement and regional availability"
+    ]
+  },
+  "public_catalog_provenance": {
+    "official_current_game_list_requires_api_key": true,
+    "includes_only_current_store_availability": "cannot guarantee historical coverage",
+    "modified_timestamp_is_original_release": false,
+    "archived_annual_trackers_have_unknown_row_level_overlap": true,
+    "observed_exact_cohort_count": null,
+    "observed_paid_original_release_count": null
+  },
+  "publisher_grouping": {
+    "appid_is_not_publisher": true,
+    "public_publisher_label_canonical_partner_id": false,
+    "legal_partner_account_verified": false,
+    "publisher_income_median": null,
+    "multi_game_relationships_and_app_transfers_unknown": true
+  },
+  "observation_sensitivity": {
+    "missing_fields_are_unknown_not_zero": true,
+    "review_count_does_not_imply_paid_units": true,
+    "retired_title_must_not_be_excluded_solely_for_missing_live_listing": true,
+    "zero_sales_share": null,
+    "mean_paid_game_gross": null,
+    "median_paid_game_gross": null,
+    "actual_seller_sample_size": 0
+  },
+  "protocol_stage": "design_only_no_live_catalog_rows_downloaded",
+  "next_checks": [
+    "historically complete paid Game AppID sampling frame",
+    "deduplicated publisher IDs from permissioned or licensed sources",
+    "archival initial-purchase/first-paid-time-zero validation",
+    "coverage checks including retired and blocked listings",
+    "nonresponse/survivorship sensitivity and reweighting",
+    "permissioned aggregated transactions from unsuccessful participants"
+  ]
+}

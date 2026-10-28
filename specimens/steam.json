@@ -279,6 +279,94 @@
       "evidence_class": "independent_heuristic_review_multiplier_method",
       "license": "Public link, metadata, and independently written factual paraphrase only; no source articles, raw reviews or proprietary estimated game-level rows copied.",
       "notes": "Shows 20/45/80 review multipliers, review/price timing and exclusions; no audited income distribution."
+    },
+    {
+      "id": "steam-applications-official",
+      "url": "https://partner.steamgames.com/doc/store/application?language=english",
+      "title": "Applications",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_app_types_appid_model",
+      "license": "Only source metadata, links, independent factual paraphrases and minimal numerical observations. No source text, user-level records, copyrighted charts or private API outputs reproduced.",
+      "notes": "Application is a product identity, not a paid transaction."
+    },
+    {
+      "id": "steam-packages-official",
+      "url": "https://partner.steamgames.com/doc/store/application/packages?language=english",
+      "title": "Packages",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_store_license_package_model",
+      "license": "Only source metadata, links, independent factual paraphrases and minimal numerical observations. No source text, user-level records, copyrighted charts or private API outputs reproduced.",
+      "notes": "Packages can contain one or more apps and depots; purchases/key activations grant licenses."
+    },
+    {
+      "id": "steam-release-dates-official",
+      "url": "https://partner.steamgames.com/doc/store/release_dates?language=english",
+      "title": "Release Dates",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_release_date_policy",
+      "license": "Only source metadata, links, independent factual paraphrases and minimal numerical observations. No source text, user-level records, copyrighted charts or private API outputs reproduced.",
+      "notes": "Steamworks planned date, storefront display and Early Access 1.0 dates are distinct events."
+    },
+    {
+      "id": "steam-retire-app-official",
+      "url": "https://partner.steamgames.com/doc/store/retire_app?l=english",
+      "title": "Removing a product from Steam",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_retirement_and_continued_ownership",
+      "license": "Only source metadata, links, independent factual paraphrases and minimal numerical observations. No source text, user-level records, copyrighted charts or private API outputs reproduced.",
+      "notes": "A retired title can disappear from lists even while old customers retain access."
+    },
+    {
+      "id": "steam-public-app-list-api",
+      "url": "https://partner.steamgames.com/doc/webapi/IStoreService?l=english",
+      "title": "IStoreService GetAppList",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_key_required_public_metadata_api",
+      "license": "Only source metadata, links, independent factual paraphrases and minimal numerical observations. No source text, user-level records, copyrighted charts or private API outputs reproduced.",
+      "notes": "Paged current-store game list; item last_modified reflects updates rather than historical first sale."
+    },
+    {
+      "id": "steam-financial-api-official",
+      "url": "https://partner.steamgames.com/doc/webapi/IPartnerFinancialsService?l=english",
+      "title": "IPartnerFinancialsService",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_protected_partner_sales_api",
+      "license": "Only source metadata, links, independent factual paraphrases and minimal numerical observations. No source text, user-level records, copyrighted charts or private API outputs reproduced.",
+      "notes": "Financial key has all partner-app scope; daily reports distinguish store packages, retail activations, microtransactions, returns and taxes."
+    },
+    {
+      "id": "steamspy-ownership-methods",
+      "url": "https://steamspy.com/about",
+      "title": "Steam Spy — How it works",
+      "publisher": "Steam Spy",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "self_described_sampling_limitations",
+      "license": "Only source metadata, links, independent factual paraphrases and minimal numerical observations. No source text, user-level records, copyrighted charts or private API outputs reproduced.",
+      "notes": "Profile-sampled ownership is not sales; weak for recently launched and small games."
+    },
+    {
+      "id": "steam-earlyaccess-policy-official",
+      "url": "https://partner.steamgames.com/doc/store/earlyaccess?language=english",
+      "title": "Early Access",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_earlyaccess_launch_policy",
+      "license": "Only source metadata, links, independent factual paraphrases and minimal numerical observations. No source text, user-level records, copyrighted charts or private API outputs reproduced.",
+      "notes": "Paid Early Access is already a commercial launch; full release can be another visibility event."
     }
   ],
   "claims": [
@@ -1119,6 +1207,317 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Need matched merchant reporting, refunds, VAT/withholding, publishing splits and production costs; no paid seller ledger accessed."
+    },
+    {
+      "id": "steam-appid-is-not-sale",
+      "text": "Valve's Steamworks application model assigns one AppID per application or product; AppIDs are identifiers, not a measure of paid checkout.",
+      "source_ids": [
+        "steam-applications-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Application categories include demos and other nonpaid/ancillary products; publishing may involve multiple AppIDs."
+    },
+    {
+      "id": "steam-packages-multi-app-licenses",
+      "text": "Valve defines a Steam package as a set of one or more apps or depots; a purchase or activation grants package content.",
+      "source_ids": [
+        "steam-packages-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A package can include multiple apps, and one app may occur in multiple packages; summing package purchases across apps double counts."
+    },
+    {
+      "id": "steam-release-date-editable",
+      "text": "Valve distinguishes a private specified Steamworks release date from configurable player-facing date display; dates can change before the release cutoff.",
+      "source_ids": [
+        "steam-release-dates-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A current public store date cannot prove initial first-paid-release date for historical Early Access or relisted games."
+    },
+    {
+      "id": "steam-earlyaccess-full-visibility-distinct",
+      "text": "Valve gives Early Access and later full 1.0 launches distinct store visibility treatment.",
+      "source_ids": [
+        "steam-visibility-official",
+        "steam-earlyaccess-policy-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Commercial cohort time zero should not automatically reset on a later version 1.0 launch."
+    },
+    {
+      "id": "steam-retired-games-hidden-not-erased",
+      "text": "Valve says retired games may be removed from active listings while remaining in owners' libraries and accessible through store pages.",
+      "source_ids": [
+        "steam-retire-app-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Missing from today's live storefront list does not imply the game never launched or sold any copies."
+    },
+    {
+      "id": "steam-store-app-list-requires-key",
+      "text": "The published IStoreService GetAppList method requires a Steam Web API key and returns a paginated current-store list with type filters.",
+      "source_ids": [
+        "steam-public-app-list-api"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A current list is not a freely downloadable historical population and can omit retired products."
+    },
+    {
+      "id": "steam-store-app-list-not-chronology",
+      "text": "GetAppList last_modified is a change-to-information-or-price time, not a published first commercial sale or release date.",
+      "source_ids": [
+        "steam-public-app-list-api"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Using last_modified for cohort entry would misclassify old games updated during the target period."
+    },
+    {
+      "id": "steam-current-release-counts-not-paid-cohort",
+      "text": "SteamDB annual releases and steamlense classified releases are mutable, method-dependent public tracker snapshots, not validated paid-at-first-release censuses.",
+      "source_ids": [
+        "steamdb-annual-release-snapshot-2026-10",
+        "steamlense-2025-paid-release-review-snapshot"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No row-level original price and retirement coverage audit; denominators cannot be interchanged."
+    },
+    {
+      "id": "steam-zero-review-release-inclusion",
+      "text": "A complete original-paid-release cohort must include zero-review titles if they meet the launch eligibility rules.",
+      "source_ids": [
+        "steam-review-policy-2026",
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Zero reviews do not prove zero sales, and a current storefront's lack of visibility must not eliminate a historically paid launch."
+    },
+    {
+      "id": "steam-first-paid-cohort-vs-converted-free",
+      "text": "For a reproducible baseline, Mercata defines primary cohort membership as a game offered for payment at its initial public Steam release, with initially free games converted later analyzed separately.",
+      "source_ids": [
+        "steam-earlyaccess-policy-official",
+        "steam-applications-official"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a Mercata design choice, not a Valve-defined official statistical population; original paid status needs archival evidence."
+    },
+    {
+      "id": "steam-publisher-identity-not-appid",
+      "text": "An AppID-level cohort is not a publisher-income cohort; publishers can distribute multiple games and games can have multi-party revenue agreements.",
+      "source_ids": [
+        "steam-applications-official",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The public publisher-name field is not verified canonical legal partner identity; cannot deduplicate commercial owners exactly."
+    },
+    {
+      "id": "steam-supply-frame-incomplete",
+      "text": "Neither the current catalog API nor cross-tracker totals establish completeness for historical paid releases including delisted games.",
+      "source_ids": [
+        "steam-public-app-list-api",
+        "steam-retire-app-official",
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Until an archived/partner-complete frame is verified, eligible game counts are lower-bound observations, not population totals."
+    },
+    {
+      "id": "steamspy-estimated-owners-not-purchases",
+      "text": "Steam Spy warns that its ownership estimates are inferred from sampled profiles and mix Steam orders with gifts, keys, promotions and temporary free-weekend ownership.",
+      "source_ids": [
+        "steamspy-ownership-methods"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Steam Spy's own description warns against small estimated counts and freshly released titles; ownership is not buyer count."
+    },
+    {
+      "id": "steamspy-novice-selection-blind-spot",
+      "text": "Steam Spy says recently launched titles and obscure low-popularity games may have unreliable or missing estimated owners.",
+      "source_ids": [
+        "steamspy-ownership-methods"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Excluding titles without a modeled owner estimate selectively removes precisely the low-earning tail."
+    },
+    {
+      "id": "steam-release-frame-no-numerical-income",
+      "text": "No publicly assembled 2025 all-original-paid-release cohort or verified exact zero-sales share was constructed in this checkpoint.",
+      "source_ids": [
+        "steam-public-app-list-api",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Cohort specification and synthetic validation are not an observed census, model fit or transaction audit."
+    },
+    {
+      "id": "steam-financial-web-api-full-partner-scope",
+      "text": "Steam's IPartnerFinancialsService requires a dedicated Financial API Group key granting access to all applications of a partner account.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a high-sensitivity capability; never request, store, log or publish a partner's API key."
+    },
+    {
+      "id": "steam-financial-sales-grants-can-cross-partners",
+      "text": "The finance API supports view-granted data and carries partner and view-grant identifiers.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Granted visibility cannot be assumed universal; releases with partner changes or co-publishing require careful permission and data attribution."
+    },
+    {
+      "id": "steam-financial-timezone-pt",
+      "text": "GetDetailedSales uses Pacific Time calendar dates rather than the user's local timezone or UTC.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Daily launch windows around DST and timezone boundaries require explicit alignment."
+    },
+    {
+      "id": "steam-financial-paged-daily",
+      "text": "GetDetailedSales returns daily financial rows in pages using per-date highwatermark_id and max_id continuation.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Stopping before the terminal repeated watermark can silently truncate the data."
+    },
+    {
+      "id": "steam-financial-corrected-days",
+      "text": "GetChangedDatesForPartner lists recalculated dates; Valve instructs partners to replace saved results for changed dates.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Append-only accumulation of changed-date results would double count returns or adjusted sales."
+    },
+    {
+      "id": "steam-financial-store-package-vs-retail",
+      "text": "In detailed financial rows, Package plus package_sale_type Steam denotes store checkout, whereas Package plus Retail denotes Steam key activation.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Retail activations may originate from externally sold or free-distributed keys and cannot be counted as Steam checkout."
+    },
+    {
+      "id": "steam-financial-microtransaction-separate",
+      "text": "The financial API distinguishes MicroTxn rows from Package rows, and carries a game-item identifier for microtransactions.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Microtransaction unit totals do not equal base-game licenses."
+    },
+    {
+      "id": "steam-financial-units-refunds-separated",
+      "text": "Official detailed records distinguish gross_units_sold, gross_units_returned and net_units_sold, plus USD sales, returns and net taxes.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Amounts are aggregated by many dimensions and are not individual buyer events; do not sum unlike categories."
+    },
+    {
+      "id": "steam-financial-net-sales-not-publisher-profit",
+      "text": "The API's net_sales_usd is sales minus returns and taxes, not a merchant bank payout or developer profit.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Platform share, publishing split, withholding, other fees and development labor remain distinct."
+    },
+    {
+      "id": "steam-financial-package-primary-app-is-tier-attribution",
+      "text": "For package rows, the primary_appid identifies additional revenue-share accrual attribution and may be unset (zero).",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Do not allocate every bundle/package revenue line to the primary_appid as if the field were a transaction recipient."
+    },
+    {
+      "id": "steam-financial-bonus-fields-not-base-rate",
+      "text": "The finance API has enumerated additional-revenue-share-tier fields of none, 5% or 10%; this does not establish an individual partner's overall fee agreement.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A marginal bonus indicator is not an audited net royalty or the publisher's signed agreement."
+    },
+    {
+      "id": "steam-financial-privacy-preserving-aggregation-possible",
+      "text": "Valve's documented API exposes already aggregated daily finance rows that can support consenting partner-owned summary exports without releasing credentials or line items.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is an architectural research proposal; no data was requested, received, processed or validated; publication still requires consent and disclosure review."
+    },
+    {
+      "id": "steam-activity-dates-do-not-prove-zero-apps",
+      "text": "The finance API's changed-date feed tracks dates with financial changes for a partner; it does not alone supply a census of all historically released apps without transactions.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Inferring zero sales requires independently verified app eligibility, rights to complete data, period completeness and reconciled ledger queries."
+    },
+    {
+      "id": "steam-key-activation-and-sale-separate",
+      "text": "Retail key activation counts, direct store checkout counts, and free game licenses are different economic units.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-packages-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A key can be sold off platform, distributed free or given to press, so activation amount is not an order or payer count."
+    },
+    {
+      "id": "steam-consented-disclosure-is-selected",
+      "text": "Voluntarily supplied partner finance data may validate estimates on those publishers but does not automatically represent the global Steam seller population.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steamspy-ownership-methods"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Study must track missing eligible publishers, nonresponse and uncertainty; no randomized representative sample was obtained."
     }
   ],
   "observations": [],
@@ -1126,5 +1525,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Public Steamworks policy, launch and payment research now includes selected release-cohort evidence and an audited 2026 review API/modeled sales methodology comparison. Representative paid-game and publisher earnings, zero-sales prevalence and real merchant payouts remain unknown."
+  "summary": "Steam research now includes a source-grounded original paid-release cohort specification, delisted and zero-review inclusion gates, and official partner financial API validation/consent requirements. No population-wide verified zero sales, real paid order counts or publisher profits have been measured."
 }

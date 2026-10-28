@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "permissioned_financial_validation_protocol_not_private_records",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-financial-api-official",
+    "steam-financial-reporting-doc",
+    "steam-packages-official",
+    "steamspy-ownership-methods"
+  ],
+  "claim_ids": [
+    "steam-financial-web-api-full-partner-scope",
+    "steam-financial-sales-grants-can-cross-partners",
+    "steam-financial-timezone-pt",
+    "steam-financial-paged-daily",
+    "steam-financial-corrected-days",
+    "steam-financial-store-package-vs-retail",
+    "steam-financial-microtransaction-separate",
+    "steam-financial-units-refunds-separated",
+    "steam-financial-net-sales-not-publisher-profit",
+    "steam-financial-package-primary-app-is-tier-attribution",
+    "steam-financial-bonus-fields-not-base-rate",
+    "steam-financial-privacy-preserving-aggregation-possible",
+    "steam-activity-dates-do-not-prove-zero-apps",
+    "steam-key-activation-and-sale-separate",
+    "steam-consented-disclosure-is-selected"
+  ],
+  "interface": {
+    "name": "IPartnerFinancialsService",
+    "authorization": "partner-controlled dedicated Financial API Group publisher key",
+    "key_scope": "all apps for authorized partner",
+    "key_never_collect_in_mercata": true,
+    "ip_whitelist_advised": true,
+    "daily_timezone": "America/Los_Angeles (Pacific Time; DST-aware)",
+    "change_feed": "GetChangedDatesForPartner",
+    "sales_feed": "GetDetailedSales",
+    "pages_must_complete": true,
+    "changed_date_replacements_not_appends": true
+  },
+  "financial_line_types": {
+    "steam_package": {
+      "line_item_type": "Package",
+      "package_sale_type": "Steam",
+      "unit": "steam_checkout_package_units"
+    },
+    "retail_key": {
+      "line_item_type": "Package",
+      "package_sale_type": "Retail",
+      "unit": "activated_keys_not_steam_paid_orders"
+    },
+    "microtransaction": {
+      "line_item_type": "MicroTxn",
+      "unit": "in_game_item_sales_not_base_game_licenses"
+    }
+  },
+  "available_aggregate_fields": [
+    "partnerid",
+    "date",
+    "line_item_type",
+    "packageid",
+    "bundleid",
+    "appid_microtransaction_only",
+    "package_sale_type",
+    "primary_appid_revenue_share_attribution_only",
+    "country_code",
+    "currency",
+    "gross_units_sold",
+    "gross_units_returned",
+    "net_units_sold",
+    "gross_sales_usd",
+    "gross_returns_usd",
+    "net_tax_usd",
+    "net_sales_usd",
+    "gross_units_activated",
+    "additional_revenue_share_tier"
+  ],
+  "no_unqualified_crosswalks": [
+    "packageid_to_single_base_game_appid",
+    "primary_appid_to_entire_package_sale",
+    "steam_key_activation_to_paid_store_order",
+    "net_sales_usd_to_partner_bank_receipt",
+    "owner_or_player_to_unique_paid_buyer"
+  ],
+  "validation_workflow": [
+    "independently identify all eligible games, including no sales, before consent outreach",
+    "secure opt-in with narrow purposes and explicit publication rights",
+    "consenting partner locally exports aggregate fixed-horizon bands, not key or personal data",
+    "reconcile daily adjustments, timezone, refunds, package types and permissions",
+    "report matched and unmatched eligible samples and refusal/nonresponse",
+    "publish only suitably coarse summaries with suppression for re-identification risk",
+    "delete/retain according to documented consent"
+  ],
+  "not_done": {
+    "private_key_access": false,
+    "private_data_export": false,
+    "actual_partner_ledger_verification": false,
+    "participant_recruitment": false,
+    "anonymous_independent_representative_frame": false,
+    "zero_paid_game_sales_estimated": false
+  },
+  "unknown": {
+    "validated_publisher_count": null,
+    "eligible_publisher_total": null,
+    "actual_mean_gross": null,
+    "actual_median_gross": null,
+    "exact_zero_sales_share": null,
+    "publisher_net_payout": null,
+    "developer_after_cost_profit": null
+  }
+}
