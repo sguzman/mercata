@@ -796,6 +796,39 @@
       "evidence_class": "official_current_community_announcement_visibility_and_event_policy",
       "license": "Source link and original short factual paraphrases only; no graphics or source excerpts republished.",
       "notes": "Announcement surfaces, category, localization, scheduled visibility, author profile and posting permission limits; no events posted."
+    },
+    {
+      "id": "steam-vgi-wishlist-method-2025",
+      "url": "https://vginsights.com/assets/reports/VGI_Wishlist_Report_July_2025.pdf",
+      "title": "The importance of wishlists in 2025",
+      "publisher": "VG Insights / Sensor Tower",
+      "published_at": "2025-07",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "model_owner_selectively_filtered_published_2025_report",
+      "license": "Link, limited factual numerical description and original analytical synthesis only. No figures, PDF pages or text republished.",
+      "notes": "Author's wishlist/sales correlation comes from 5,744 games and >20-review filter; cannot infer low-review commercial outcomes. Source reviewed including source-chart page."
+    },
+    {
+      "id": "steam-gamalytic-2025-oct-gamesradar",
+      "url": "https://www.gamesradar.com/games/over-5-000-games-released-on-steam-this-year-didnt-make-enough-money-to-recover-the-usd100-fee-to-put-a-game-on-valves-store-research-estimates/",
+      "title": "Over 5,000 Steam games released in 2025 missed the $100 submission-fee breakeven threshold, model estimates",
+      "publisher": "GamesRadar / Austin Wood",
+      "published_at": "2025-10",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "secondary_reporting_of_dated_gamalytic_snapshot",
+      "license": "Public URL and limited numerical observations with independent interpretation only; no copied article prose, photos or chart.",
+      "notes": "October 2025 partial-year 12,732 releases and 8,388 under $1k from Gamalytic; includes free titles and revised tracker data."
+    },
+    {
+      "id": "steam-gamalytic-2025-oct-gamingnews",
+      "url": "https://gaming.news/news/2025-10-23/gamalytic-reveals-over-60-perc-of-games-released-this-year-havent-recouped-steams-100-registration-fee/",
+      "title": "66% of 2025 Steam releases reportedly had not reached $1,000 in model revenue",
+      "publisher": "Gaming News / Cedric Pabriga",
+      "published_at": "2025-10-23",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "secondary_reporting_of_revised_gamalytic_snapshot",
+      "license": "Public URL and limited independently framed quantitative summary only; no article reproduction.",
+      "notes": "Contemporaneous 12,875 releases and 8,502 modeled below $1,000; shares the same Gamalytic estimator, not independent confirmation."
     }
   ],
   "claims": [
@@ -4026,6 +4059,222 @@
       "observed_at": "2026-10-28",
       "confidence": "high",
       "limitations": "No partner analytics, counterfactual campaign or observed games' sales were evaluated."
+    },
+    {
+      "id": "gamalytic-validation-excludes-under1k",
+      "text": "Gamalytic's May 2023 public validation states it excludes games selling under 1,000 copies from its approximately 120-game disclosed-sales validation panel.",
+      "source_ids": [
+        "steam-gamalytic-method-2023"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Good performance among stronger-selling disclosed games does not show accuracy on tiny games, or demonstrate an unbiased all-release sample."
+    },
+    {
+      "id": "gamalytic-validation-nozero-proof",
+      "text": "The cited Gamalytic accuracy and aggregate percentages do not certify actual zero-copy rates for Steam games with weak or absent public signals.",
+      "source_ids": [
+        "steam-gamalytic-method-2023",
+        "steam-gamalytic-definitions"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The validation explicitly excludes under-1000-copy games, and disclosed actuals are not randomly selected from all paid releases."
+    },
+    {
+      "id": "gamalytic-aggregate-can-hide-misses",
+      "text": "A model's accuracy for the sum of sales is not the same as accuracy at the median, zero fraction, or individual game level.",
+      "source_ids": [
+        "steam-gamalytic-method-2023"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Large hits can dominate a total; an aggregate ratio close to 1 may conceal arbitrarily large opposing individual errors."
+    },
+    {
+      "id": "gamalytic-owner-player-sold-distinct",
+      "text": "Gamalytic's official public glossary distinguishes Steam account owners, people who have played, and estimated Steam-store copies sold.",
+      "source_ids": [
+        "steam-gamalytic-definitions"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Owners may include gifts, free acquisition, bundle and key activations; customer identities and actual checkout are not provided."
+    },
+    {
+      "id": "gamalytic-first-release-date-distinct",
+      "text": "Gamalytic distinguishes first public Steam release from later version 1.0 graduation and, for games still in Early Access, uses that launch for its release-date field.",
+      "source_ids": [
+        "steam-gamalytic-definitions"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Game-level fields may change; verify earliest commercial paid release before assigning a paid launch cohort."
+    },
+    {
+      "id": "gamalytic-2025-oct-12732",
+      "text": "GamesRadar cited a Gamalytic snapshot with 12,732 launches since January 1, 2025, in an October 2025 partial-year period.",
+      "source_ids": [
+        "steam-gamalytic-2025-oct-gamesradar"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Not full calendar-year 2025 count, not audited as originally paid releases, and includes F2P."
+    },
+    {
+      "id": "gamalytic-2025-oct-8388-under1k",
+      "text": "That GamesRadar report cited 8,388 of 12,732 tracked 2025 launches with estimated gross under $1,000.",
+      "source_ids": [
+        "steam-gamalytic-2025-oct-gamesradar"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Provider-modeled gross and all product monetization types; not verified cash or independent full-year paid-release median."
+    },
+    {
+      "id": "gamalytic-2025-oct-under100copies47p4",
+      "text": "The same partial-year 2025 snapshot reported 47.4% of releases estimated below 100 sold copies.",
+      "source_ids": [
+        "steam-gamalytic-2025-oct-gamesradar"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Reported 0–99 modeled copies include games where low-signal accuracy is explicitly weak."
+    },
+    {
+      "id": "gamalytic-2025-oct-over100k8",
+      "text": "GamesRadar reported about 8% of that tracker-defined partial-year cohort exceeded $100,000 estimated gross.",
+      "source_ids": [
+        "steam-gamalytic-2025-oct-gamesradar"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Not verified developer net earnings and F2P monetization definitions can differ."
+    },
+    {
+      "id": "gamalytic-2025-oct-bottom30-37usd",
+      "text": "GamesRadar cited a selected chart reporting just $37 modeled average gross for the bottom 30% of those 2025 releases.",
+      "source_ids": [
+        "steam-gamalytic-2025-oct-gamesradar"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Source chart was not independently reproduced; mean modeled gross for low-signal tail is not a validated mean of real sales."
+    },
+    {
+      "id": "gamalytic-2025-revised-12875",
+      "text": "An October 23, 2025 Gaming News report listed 12,875 releases and 8,502 with estimated gross under $1,000.",
+      "source_ids": [
+        "steam-gamalytic-2025-oct-gamingnews"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "As-of publication timing and tracker revisions may differ from GamesRadar snapshot; not independent sampling."
+    },
+    {
+      "id": "gamalytic-2025-published-pairs-share",
+      "text": "The two reported October 2025 source count pairs correspond to approximately 65.9% and 66.0% of those provider snapshots below $1,000 modeled gross.",
+      "source_ids": [
+        "steam-gamalytic-2025-oct-gamesradar",
+        "steam-gamalytic-2025-oct-gamingnews"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Arithmetic shares are within each snapshot; do not merge numerator from one snapshot with the other's denominator."
+    },
+    {
+      "id": "gamalytic-2025-not-full-year",
+      "text": "Neither October 2025 Gamalytic snapshot is a final 2025 calendar-year or 2026 paid-game census.",
+      "source_ids": [
+        "steam-gamalytic-2025-oct-gamesradar",
+        "steam-gamalytic-2025-oct-gamingnews"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "New game launches and tracker updates occurred after the reporting dates."
+    },
+    {
+      "id": "gamalytic-2025-not-revenue-verified",
+      "text": "Gamalytic's October 2025 low-gross figures were derived from public-signal estimation; reporting does not demonstrate the true merchant payout of a particular developer.",
+      "source_ids": [
+        "steam-gamalytic-2025-oct-gamesradar",
+        "steam-gamalytic-definitions"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Missing key, bundle, microtransaction, discount and refund attribution in public third-party models."
+    },
+    {
+      "id": "vgi-wishlist-5744",
+      "text": "VG Insights' July 2025 public report shows a prelaunch wishlist-versus-first-month units model sample of 5,744 games.",
+      "source_ids": [
+        "steam-vgi-wishlist-method-2025"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Game inclusion filters require more than 20 reviews and do not represent all zero-review/zero-sales releases."
+    },
+    {
+      "id": "vgi-wishlist-correl70-selected",
+      "text": "For its selected sample, VG Insights reports an approximately 0.70 correlation between wishlists and modeled first-month paid units.",
+      "source_ids": [
+        "steam-vgi-wishlist-method-2025"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A pooled selected-sample correlation is not predictive calibration for small launches or experimental causal uplift."
+    },
+    {
+      "id": "vgi-wishlist-below100k-correl17",
+      "text": "VG Insights reports a much weaker approximately 0.17 correlation for games with fewer than 100,000 launch wishlists than the 0.71 correlation among high-wishlist games.",
+      "source_ids": [
+        "steam-vgi-wishlist-method-2025"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The 100k split and >20-review sampling selection restrict extrapolation and may be dataset-vintage-specific."
+    },
+    {
+      "id": "vgi-wishlist-sample-truncated",
+      "text": "The VG Insights wishlist report's release-date and >20 review filters exclude the weakest public-review signals from its performance analysis.",
+      "source_ids": [
+        "steam-vgi-wishlist-method-2025"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Wishlists, units and modeled paid sales have different observable/actual denominators; not a zero-seller survey."
+    },
+    {
+      "id": "jan26-missing19-copy-estimates",
+      "text": "The January 2026 1,230-game provider model's 1,211 available copy estimates leave 19 titles with missing copy estimates in Egmatic's secondary analysis.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Missing entries are not zeros; they remain in the source's release-month count."
+    },
+    {
+      "id": "jan26-modelzero-bounds-only",
+      "text": "Assuming 412 zero estimates among 1,211 entries with estimates and 19 missing, the count of model-zero labels among all 1,230 could range from 412 to 431, conditional on assigning missing estimates.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The [412/1230,431/1230] interval bounds hypothetical MODEL labels, not true paid-sales zeros or income."
+    },
+    {
+      "id": "model-vendor-agreement-no-independent-truth",
+      "text": "Gamalytic, GameDiscoverCo and VG Insights use public signals or proprietary modeling; agreements between resulting modeled series are not verification against independent full-population Steam ledgers.",
+      "source_ids": [
+        "steam-gamalytic-method-2023",
+        "steam-vgi-wishlist-method-2025",
+        "steam-gdc-2026-jan-cohort-primary"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Models may share input signals, selection effects and exposure; requires audit-matched merchant transactions across all sales strata."
     }
   ],
   "observations": [],
@@ -4033,5 +4282,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Mercata Steam research covers UTM funnel and Curator Connect/community announcement rules, distinguishing unpurchased complimentary licenses and potential exposure from actual paid game checkout. Representative publisher profits remain unmeasured."
+  "summary": "Steam research now adds dated Gamalytic partial-year 2025 low-sales models, excluded-low-sales model validation, VG Insights wishlist selection and mathematically bounded January 2026 model-zero proportions. No actual zero sales or publisher profit has been validated."
 }

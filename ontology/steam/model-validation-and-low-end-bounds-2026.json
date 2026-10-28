@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "partial_year_model_comparison_and_low_end_identification_bounds",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-vgi-wishlist-method-2025",
+    "steam-gamalytic-2025-oct-gamesradar",
+    "steam-gamalytic-2025-oct-gamingnews",
+    "steam-gamalytic-method-2023",
+    "steam-gamalytic-definitions",
+    "steam-egmatic-jan2026-analysis",
+    "steam-gdc-2026-jan-cohort-primary"
+  ],
+  "claim_ids": [
+    "gamalytic-validation-excludes-under1k",
+    "gamalytic-validation-nozero-proof",
+    "gamalytic-aggregate-can-hide-misses",
+    "gamalytic-owner-player-sold-distinct",
+    "gamalytic-first-release-date-distinct",
+    "gamalytic-2025-oct-12732",
+    "gamalytic-2025-oct-8388-under1k",
+    "gamalytic-2025-oct-under100copies47p4",
+    "gamalytic-2025-oct-over100k8",
+    "gamalytic-2025-oct-bottom30-37usd",
+    "gamalytic-2025-revised-12875",
+    "gamalytic-2025-published-pairs-share",
+    "gamalytic-2025-not-full-year",
+    "gamalytic-2025-not-revenue-verified",
+    "vgi-wishlist-5744",
+    "vgi-wishlist-correl70-selected",
+    "vgi-wishlist-below100k-correl17",
+    "vgi-wishlist-sample-truncated",
+    "jan26-missing19-copy-estimates",
+    "jan26-modelzero-bounds-only",
+    "model-vendor-agreement-no-independent-truth"
+  ],
+  "cohorts": [
+    {
+      "source": "Gamalytic via GamesRadar",
+      "snapshot_period": "October 2025",
+      "launch_window_start": "2025-01-01",
+      "launch_window_end_exclusive": null,
+      "reported_releases": 12732,
+      "reported_model_gross_below_1000": 8388,
+      "reported_fraction_below_100_copies": 0.474,
+      "reported_fraction_above_100k_gross": 0.08,
+      "known_paid_only": false,
+      "full_year": false,
+      "transaction_verified": false
+    },
+    {
+      "source": "Gamalytic via Gaming News",
+      "snapshot_period": "2025-10-23",
+      "launch_window_start": "2025-01-01",
+      "launch_window_end_exclusive": null,
+      "reported_releases": 12875,
+      "reported_model_gross_below_1000": 8502,
+      "known_paid_only": false,
+      "full_year": false,
+      "transaction_verified": false
+    },
+    {
+      "source": "GameDiscoverCo via Egmatic",
+      "snapshot_period": "through approximately 2026-09-15",
+      "launch_window_start": "2026-01-01",
+      "launch_window_end_exclusive": "2026-02-01",
+      "reported_releases": 1230,
+      "reported_model_copies_estimated": 1211,
+      "reported_model_zero_copies": 412,
+      "paid_release_provider_defined": true,
+      "transaction_verified": false
+    }
+  ],
+  "model_validation": {
+    "provider": "Gamalytic",
+    "published": "2023-05-13",
+    "disclosed_games_roughly": 120,
+    "excludes_below_actual_units": 1000,
+    "model_accuracy_claim_validated_on_all_releases": false,
+    "model_accuracy_claim_validated_on_true_zeroes": false
+  },
+  "wishlist_study": {
+    "provider": "VG Insights",
+    "published": "2025-07",
+    "filtered_more_than_20_reviews": true,
+    "reported_sample_size": 5744,
+    "correlation_all_selected": 0.7,
+    "correlation_below_100k_launch_wishlists": 0.17,
+    "correlation_above_100k_launch_wishlists": 0.71,
+    "sales_observed_from_publishers_for_all_items": false
+  },
+  "partial_identification": {
+    "total_january_releases": 1230,
+    "model_zero_with_estimates": 412,
+    "models_with_estimates": 1211,
+    "missing_estimates": 19,
+    "minimum_model_zero_fraction": 0.33495934959349594,
+    "maximum_model_zero_fraction": 0.35040650406504065,
+    "actual_zero_copy_fraction": null,
+    "actual_zero_revenue_fraction": null
+  },
+  "invalid_merges": [
+    "2025 partial-year all-monetization tracker vs 2026 January paid-release model",
+    "Gamalytic October snapshot 12,732 vs 12,875 as independent observations",
+    "Gamalytic accuracy excluding under-1,000 sales vs zero-sale truth",
+    "VG Insights only-over-20-review sample vs all-release forecast",
+    "model zero labels vs actual zero paid orders"
+  ],
+  "no_raw_rows_republished": true,
+  "no_merchant_data_accessed": true,
+  "no_model_accuracy_independently_calibrated": true
+}
