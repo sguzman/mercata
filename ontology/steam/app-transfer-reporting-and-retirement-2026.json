@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "steam_app_transfer_and_retirement_historic_reporting_boundaries",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-transfer-app-official-2026",
+    "steam-retire-app-official",
+    "steam-financial-api-official"
+  ],
+  "claim_ids": [
+    "transfer-both-actual-authority",
+    "transfer-approval-2-to-7-days",
+    "transfer-effective-date-for-payments",
+    "transfer-finance-split-at-effective-date",
+    "transfer-historic-wishlists-follow-app",
+    "transfer-utm-two-week-backfill",
+    "transfer-customer-entitlements-continuous",
+    "transfer-api-credentials-not-moved",
+    "transfer-bundles-not-moved",
+    "transfer-discount-cooldown-no-reset",
+    "retirement-key-retail-obligation",
+    "retirement-customer-library-remains",
+    "retirement-f2p-notice",
+    "retirement-extended-refund-discretion",
+    "transferred-game-data-missing-not-zero"
+  ],
+  "transfer": {
+    "requires_actual_authority_from_both_partners": true,
+    "requires_valve_approval": true,
+    "usual_review_days": [
+      2,
+      7
+    ],
+    "receiving_partner_prior_payment_reports_default": false,
+    "prior_finance_access_can_be_granted": true,
+    "wishlist_history_follows_appid": true,
+    "public_reviews_follows_appid": true,
+    "utm_lookback_days_default": 14,
+    "publisher_api_keys_move": false,
+    "bundle_management_moves": false,
+    "discount_cooldown_resets": false
+  },
+  "retirement": {
+    "removed_from_sale_listings": true,
+    "existing_customer_libraries_keep_title": true,
+    "external_key_sales_should_stop": true,
+    "f2p_requested_notice_days": 90,
+    "extended_refunds_possible": true,
+    "ongoing_multiplayer_service_guaranteed": false
+  },
+  "unknown": {
+    "actual_partner_revenue": null,
+    "paid_orders_before_transfer": null,
+    "real_royalties": null,
+    "legal_ip_owner": null,
+    "actual_shutdown_cost": null,
+    "actual_refund_rate": null
+  },
+  "no_account_access": true,
+  "no_key_access": true,
+  "no_sales_data": true
+}

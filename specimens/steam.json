@@ -642,6 +642,17 @@
       "evidence_class": "official_public_steamworks_current_documentation",
       "license": "Cites public official document link and short original numerical/interpretive summary only; no copyrighted paragraphs/images copied.",
       "notes": "General/mature/AI sections; player-consumed pre-generated content versus live-generated content with additional guardrails."
+    },
+    {
+      "id": "steam-transfer-app-official-2026",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/managing_apps/transfer?l=english",
+      "title": "Transferring Applications",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_public_transfer_guide",
+      "license": "Link and original succinct factual summary only; no source text, media or confidential data reproduced.",
+      "notes": "Approval, effective date, customer continuity and restricted historical finance/marketing reports. Does not establish legal IP transfer."
     }
   ],
   "claims": [
@@ -2929,6 +2940,157 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Copyright and contract status depend on asset provenance, relevant law and rights agreements; no project assets examined."
+    },
+    {
+      "id": "transfer-both-actual-authority",
+      "text": "Sending and receiving Steamworks partners both need Actual Authority users and Valve approval to transfer app management.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Platform management permission does not by itself establish copyright title or royalty entitlement."
+    },
+    {
+      "id": "transfer-approval-2-to-7-days",
+      "text": "Valve says transfer approval usually takes two to seven business days after both parties confirm.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Not a guaranteed completion time; legal and operational transition may be longer."
+    },
+    {
+      "id": "transfer-effective-date-for-payments",
+      "text": "The sender selects an effective date when payments begin flowing to the receiving Steamworks partner.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The selected effective date must be distinguished from store release date, company incorporation and contract signing."
+    },
+    {
+      "id": "transfer-finance-split-at-effective-date",
+      "text": "After an app transfer, financial reports by default expose only periods when each partner received payments.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Former-period reports can be shared by the prior partner; data inaccessible to the recipient is missing, not zero."
+    },
+    {
+      "id": "transfer-historic-wishlists-follow-app",
+      "text": "Historical wishlist reports and public reviews stay with the Steam AppID and can be available to the new manager.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This does not mean payment history or earlier marketing attribution is automatically available."
+    },
+    {
+      "id": "transfer-utm-two-week-backfill",
+      "text": "A transferred app's receiver by default accesses about two weeks of UTM reporting preceding the effective date, with older attribution held by the sender.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Cross-era acquisition attribution requires separately authorized sharing and alignment."
+    },
+    {
+      "id": "transfer-customer-entitlements-continuous",
+      "text": "Steam AppID transfers preserve existing customer's ownership, reviews, community content and store pages.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Private online servers or authentication services can still depend on different backends."
+    },
+    {
+      "id": "transfer-api-credentials-not-moved",
+      "text": "Publisher API keys are not transferred; new credentials and server configuration are needed under the receiving partner account.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No credential use, collection or live cutover performed."
+    },
+    {
+      "id": "transfer-bundles-not-moved",
+      "text": "Bundle management does not automatically accompany a transferred app.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Bundle royalties and permissions may need separate commercial coordination."
+    },
+    {
+      "id": "transfer-discount-cooldown-no-reset",
+      "text": "A Steam app transfer does not reset discount cooldowns.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The exact eligible discount period is determined by other date-specific rules."
+    },
+    {
+      "id": "retirement-key-retail-obligation",
+      "text": "Steam's retirement guide instructs developers to stop off-Steam key sales of games no longer sold on Steam and reconcile unsold keys.",
+      "source_ids": [
+        "steam-retire-app-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No actual unsold-key inventory, bans or retailer commercial settlement were inspected."
+    },
+    {
+      "id": "retirement-customer-library-remains",
+      "text": "Retired Steam games generally remain in prior buyer libraries and can still be downloaded and launched.",
+      "source_ids": [
+        "steam-retire-app-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Game servers, multiplayer access and long-term support are distinct obligations."
+    },
+    {
+      "id": "retirement-f2p-notice",
+      "text": "Valve requests at least 90 days of customer notice and an end to new in-game purchases before Free-to-Play title retirement.",
+      "source_ids": [
+        "steam-retire-app-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is not a universal paid-game termination notice period."
+    },
+    {
+      "id": "retirement-extended-refund-discretion",
+      "text": "Valve can offer extended refunds if a game is cancelled or important promised content is not delivered.",
+      "source_ids": [
+        "steam-retire-app-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No actual refund share, merchant liability or probability was measured."
+    },
+    {
+      "id": "transferred-game-data-missing-not-zero",
+      "text": "Lifetime publisher-earnings analyses must distinguish Steam AppID sale histories from what each successive partner is authorized to see.",
+      "source_ids": [
+        "steam-transfer-app-official-2026",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a research implication of reporting access; underlying real revenue still requires consenting partner ledgers."
     }
   ],
   "observations": [],
@@ -2936,5 +3098,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research includes public release and seller-outcome evidence, explicit break-even scenarios, external-key distribution and content/AI disclosure rules. First commercial publisher take-home income, rights in individual game assets and exact zero paid sales remain unknown."
+  "summary": "Steam research includes partner transfers that split historical sales reports by payment date; retired games may leave listings while retaining previous buyers' library access. Actual cash and developer profits remain unknown."
 }
