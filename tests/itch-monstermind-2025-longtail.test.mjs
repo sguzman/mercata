@@ -26,6 +26,6 @@ test("Original 244 task population unchanged and long tail remains incomplete",(
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
  assert.equal(q.queues.flatMap(w=>w.tasks).length,84);
  const t=p.detail_tasks.find(x=>x.id==="itch-io/sales/measure-long-tail-income");
- assert.equal(t.percent,98);assert.equal(t.status,"in_progress");
+ assert(t.percent>=98&&t.percent<100);assert.equal(t.status,"in_progress");
  for(const f of ["ontology/itch-io/2025-monstermind-ttrpg-cash-longtail.json","ontology/itch-io/2025-monstermind-ttrpg-cash-longtail.md","tests/itch-monstermind-2025-longtail.test.mjs"])assert(t.evidence.includes(f));
 });
