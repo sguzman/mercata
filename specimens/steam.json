@@ -4353,6 +4353,131 @@
       "observed_at": "2026-10-28",
       "confidence": "high",
       "limitations": "The 2017 announcement does not prove uninterrupted 30-day enforcement over every intervening year."
+    },
+    {
+      "id": "ledger-zero-requires-complete-period",
+      "text": "A zero paid-unit outcome can only be established from a complete reconciled financial period for a known eligible game, not absence from public reviews or a missing partner report.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-gdc-2026-jan-cohort-primary"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Conditional on authentic authorized full-period ledger evidence and independently validated eligibility, neither of which is present in this checkpoint."
+    },
+    {
+      "id": "ledger-transfer-partial-missing",
+      "text": "App transfers split reporting access at payee effective dates, so a current partner's no-row result may reflect missing pre-transfer history rather than zero past sales.",
+      "source_ids": [
+        "steam-transfer-app-official-2026",
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Merely controlling an AppID cannot establish historical net sales across all partners."
+    },
+    {
+      "id": "ledger-refunds-not-new-sales",
+      "text": "Valve's detailed sales API separates gross sold, returned, net units and tax-adjusted net sales, which cannot be treated as one interchangeable transaction unit.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Cross-package bundle and regional refunds still require matched category/date treatment."
+    },
+    {
+      "id": "ledger-scope-include-retired",
+      "text": "Original paid-game release cohorts must retain later retired AppIDs even when current storefront enumerations omit them.",
+      "source_ids": [
+        "steam-retire-app-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A currently inaccessible storefront page cannot establish historical launch price or actual units."
+    },
+    {
+      "id": "ledger-missing-zero-bound",
+      "text": "Given an independently complete eligible app frame, an observed-zero count over the full frame is a conditional lower bound on true zeros, and missing/partially observed rows can raise an upper bound.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-transfer-app-official-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "This is an inference rule assuming authentic known reported positive units; it does not establish an actual 2026 Steam zero-sales share."
+    },
+    {
+      "id": "ledger-partial-positive-nonzero",
+      "text": "An authenticated positive paid-unit amount for part of a period rules out a zero-unit outcome for that game's full nonnegative sale-count period, even if remaining reporting is missing.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Gross paid units, not net after refunds, are the intended 'ever sold' zero definition; complete/partial units must use consistent units."
+    },
+    {
+      "id": "ledger-gross-zero-vs-netzero",
+      "text": "Zero gross paid units differs from net zero after returns; a game can have positive sales and complete refunds, ending with zero net units.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Define and publish gross paid order units, refunded units and net receipts separately."
+    },
+    {
+      "id": "ledger-selection-unknown-no-global-median",
+      "text": "A volunteer or convenience sample of publisher ledger extracts does not identify a market-wide median or zero fraction without a valid frame and response model.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-gdc-2026-jan-cohort-primary"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Consent selection and nonresponse can be strongly associated with business outcomes."
+    },
+    {
+      "id": "ledger-publisher-profit-missing",
+      "text": "Even a fully verified app-level paid-unit report does not establish a developer's profit without revenue allocation, publisher contracts, taxes, development labor and other costs.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "No contract, work logs or cost statements were supplied or reviewed."
+    },
+    {
+      "id": "ledger-constrained-appid-frame",
+      "text": "A stable AppID cohort and per-game eligibility can support a game-level statistic but not a legally deduplicated publisher-company statistic without independently verified ownership and transfer links.",
+      "source_ids": [
+        "steam-transfer-app-official-2026",
+        "steam-retire-app-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "AppIDs may change commercial administrators, and legal entities can control multiple games."
+    },
+    {
+      "id": "ledger-consent-credential-protection",
+      "text": "A public research protocol must not solicit or publish partner Financial API keys; valid receipts must be consented, minimized and aggregation-approved.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Financial API Group keys may cover all of a publisher's games and are highly sensitive."
+    },
+    {
+      "id": "ledger-qa-protocol-not-empirical-study",
+      "text": "A deterministic synthetic fixture that checks ledger missingness and cohort eligibility can verify code behavior, but cannot establish the correctness of any actual publisher's financial data.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "This checkpoint has zero real participants, zero private reports, zero observed income and no paid transactions."
     }
   ],
   "observations": [],
@@ -4360,5 +4485,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research now verifies current official 30-day first-release wait in both Steam Direct and Onboarding (while preserving earlier 21-day discrepancy), plus limits on third-party sales models and actual zero revenue."
+  "summary": "Steam research includes real-data coverage requirements for full paid-game ledger cohorts, distinguishing true attested zeros from missing/partial reports across transfers. Programmatic tests use synthetic AppIDs only; no actual incomes or publisher profits observed."
 }

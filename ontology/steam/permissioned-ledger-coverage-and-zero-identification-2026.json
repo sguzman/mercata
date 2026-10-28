@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "consented_financial_coverage_validation_protocol_no_real_records",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-financial-api-official",
+    "steam-transfer-app-official-2026",
+    "steam-retire-app-official",
+    "steam-gdc-2026-jan-cohort-primary"
+  ],
+  "claim_ids": [
+    "ledger-zero-requires-complete-period",
+    "ledger-transfer-partial-missing",
+    "ledger-refunds-not-new-sales",
+    "ledger-scope-include-retired",
+    "ledger-missing-zero-bound",
+    "ledger-partial-positive-nonzero",
+    "ledger-gross-zero-vs-netzero",
+    "ledger-selection-unknown-no-global-median",
+    "ledger-publisher-profit-missing",
+    "ledger-constrained-appid-frame",
+    "ledger-consent-credential-protection",
+    "ledger-qa-protocol-not-empirical-study"
+  ],
+  "population_definition": {
+    "unit": "originally_paid_base_game_appid",
+    "current_listing_required": false,
+    "zero_outcome_unit": "gross_paid_game_checkout_units",
+    "net_zero_not_equal_no_sale": true,
+    "include_zero_reviews": true,
+    "include_retired": true,
+    "unverified_early_access_paid_eligibility_unresolved": true
+  },
+  "ledger_status_options": [
+    "complete_reconciled",
+    "partial",
+    "missing"
+  ],
+  "missingness_gates": {
+    "complete_requires_transfer_history_reconciled": true,
+    "complete_requires_authorized_ledger_attestation": true,
+    "missing_cannot_have_units": true,
+    "partial_zero_is_not_zero_full_period": true,
+    "partial_positive_rules_out_full_period_gross_zero": true,
+    "exclude_unknown_eligibility_from_identified_frame_but_flag_censoring": true
+  },
+  "publication_gates": {
+    "complete_historical_launch_frame_required": true,
+    "complete_paid_start_status_required": true,
+    "authorized_financial_data_required": true,
+    "publish_only_aggregate_with_appropriate_consent": true,
+    "publisher_identity_linkage_required_for_publisher_metric": true,
+    "representative_sample_nonresponse_adjustment_required": true,
+    "no_raw_financial_records_to_public_repo": true
+  },
+  "proposed_data_minimization": [
+    "source permission attestation",
+    "base AppID and anonymized cohort strata only",
+    "gross Steam checkout unit category without keys or retail activations",
+    "paid release date and period completeness",
+    "refund-adjusted net separately",
+    "transfer history reconciliation flag",
+    "no personal identifiers or partner API keys"
+  ],
+  "sample_state": {
+    "real_eligible_game_records": 0,
+    "real_participants": 0,
+    "real_authorized_ledger_reports": 0,
+    "actual_full_cohort_mean": null,
+    "actual_full_cohort_median": null,
+    "actual_zero_fraction": null,
+    "actual_publisher_profit": null
+  },
+  "test_fixtures_synthetic": true
+}

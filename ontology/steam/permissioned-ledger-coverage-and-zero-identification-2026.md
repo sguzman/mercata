@@ -1,0 +1,39 @@
+# Steam publisher-income data: a hard gate on zero sales, missingness and transfers
+
+**Reviewed October 28, 2026.** [Structured gate specification](permissioned-ledger-coverage-and-zero-identification-2026.json) and [synthetic coverage analyzer](../../site/steam-ledger-coverage.mjs). This is **not** a collected income dataset or merchant report.
+
+## The key distinction: a confirmed zero must be a real observation
+
+Steam provides [partner-only detailed sales records](https://partner.steamgames.com/doc/webapi/IPartnerFinancialsService?l=english) by category and reporting period. A game missing from a public sales tracker is not necessarily a zero-sale game. And [app transfers](https://partner.steamgames.com/doc/gettingstarted/managing_apps/transfer?l=english) can leave past-year reports inaccessible to a new manager unless historical permissions have been separately granted.
+
+The protocol accepts a game-level attestation in one of three states:
+
+| State | What can be inferred about **gross paid store units** |
+| --- | --- |
+| **Complete, reconciled** | Zero or positive units may be used as attested whole-period observations after coverage, permission and transfer-history checks |
+| **Partial** | Positive gross paid units imply *at least one sale* in the full period; partial **zero** leaves full-period zero status unknown |
+| **Missing** | No conclusion about full-period units or revenue |
+
+The unit is **gross paid Steam checkout game units**, not key activations, demo licenses, Steam account owners, or net units after returns. A game can sell paid units, refund them all and have **zero net units** despite **positive historical gross sales**. Steam's report explicitly distinguishes these units. Nor does this imply a developer's profit.
+
+The [pure analyzer](../../site/steam-ledger-coverage.mjs) tracks a user-supplied AppID frame, eligibility, distinct reporting states, unknown original-paid status, retirement flags and transfer coverage. For a **verified full eligible frame**, it can compute conditional lower/upper fractions of possibly zero-gross-unit games. If the frame itself is incomplete or any first-paid status is unresolved, even those conditional fractions are marked **unreportable for the population**. It never infers a business-income median or a causal result.
+
+## An intentionally invented fixture
+
+For five synthetic eligible paid AppIDs, assume:
+
+- one complete ledger reports zero gross paid units;
+- one complete ledger reports ten paid units;
+- one partial ledger reports zero observed units;
+- one ledger is missing;
+- one partial ledger shows three paid units.
+
+Assuming the five AppIDs form a genuinely complete eligible frame **and** the reported units are authenticated, the zero-gross-unit share would be bounded between **1/5 and 3/5**. These are **not Steam market estimates**—they are a fixture testing how uncertainty propagates. With incomplete frame coverage, no whole-population percentage is reportable.
+
+## Legal partner identities and after-cost earnings need a different layer
+
+Even a fully observed game-level distribution isn't a publisher-level distribution. Different legal companies can be responsible for the same AppID during different periods; a single publisher may have many games; [retired titles](https://partner.steamgames.com/doc/store/retire_app?l=english) must remain in historic paid-release cohorts. Calculating developer take-home also needs contractual shares, remittances, tax, marketing costs and development labor.
+
+Future research requires: a rights-cleared eligible AppID frame across delistings; authenticated, consented aggregated reports; explicit nonresponse and recruitment records including unsuccessful publishers; verified legal entity and transfers; versioned event periods and refunds; and suitable aggregation/privacy controls. A voluntary success-selected sample can validate individual estimates **within that sample**, but must not be called a marketwide random sample.
+
+**No private financial data, partner keys, legal contracts, or actual game records were accessed. The only operational inputs committed are synthetic test fixtures.**

@@ -1,6 +1,6 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 65% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 67% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
@@ -291,6 +291,10 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## Consent-based income cohort coverage gate
+
+The [permissioned-ledger completeness protocol](../ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.md) and tested [synthetic-only coverage analyzer](../site/steam-ledger-coverage.mjs) separate whole-period paid-unit zeros from missing/partial reporting and require explicit transfer/permission attestations. Incomplete eligible-population frames cannot yield publishable population income or zero-sale estimates. **Current score 67%** (exact 66.877%; Δ +2 pp from 65%). No actual partner ledger data collected.
+
 ## Steam first-release waiting period recheck
 
 The [dated official-source comparison](../ontology/steam/current-first-release-wait-recheck-2026.md) records that both current Valve onboarding/Steam Direct English pages now give **30 days** from app-fee payment, with an independently overlapping **14-day** public Coming Soon clock. The older 21-day captured text and unknown historical switch date are preserved; a [synthetic schedule-floor calculator](../site/steam-release-floor.mjs) refuses to promise actual partner eligibility. **Current score 65%** (exact 65.051%; Δ +1 pp from 64%).
@@ -399,4 +403,4 @@ The [wishlist and visibility report](../ontology/steam/discovery-wishlists-and-v
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 65%** rounded task-weighted progress across 293 tasks; previous 64%, Δ +1 pp (exact 65.051%). 41 fully verified and 210 partly researched; 75 sources and 341 claims. No private account access, paid release or merchant transactions.
+**Completion: 67%** rounded task-weighted progress across 293 tasks; previous 65%, Δ +2 pp (exact 66.877%). 44 fully complete and 214 partially advanced; 75 public sources and 353 bounded claims. No real confidential ledger receipts, keys or user records.
