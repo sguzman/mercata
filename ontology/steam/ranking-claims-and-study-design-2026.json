@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "unexecuted_falsifiable_visibility_design",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-visibility-official",
+    "steam-wishlist-official",
+    "steam-store-traffic-report-official-20261028"
+  ],
+  "claim_ids": [
+    "steam-visibility-purchase-play-signals",
+    "steam-visibility-store-traffic-not-direct",
+    "steam-visibility-conversion-not-direct",
+    "steam-visibility-wishlist-exceptions",
+    "steam-visibility-review-40-threshold",
+    "steam-visibility-traffic-measures-not-orders",
+    "steam-visibility-personalized-hypotheses"
+  ],
+  "official_mechanisms": {
+    "purchase_and_play_strong_signal": true,
+    "store_page_traffic_direct_factor": false,
+    "store_page_conversion_direct_factor": false,
+    "wishlist_generally_direct_factor": false,
+    "popular_upcoming_exception": true,
+    "review_score_decline_below_positive_ratio": 0.4
+  },
+  "prospective_design": {
+    "unit": "appid_surface_locale_day",
+    "needs_partner_permission": true,
+    "needs_eligible_exposure_comparators": true,
+    "control_factors": [
+      "release age",
+      "genre and tags",
+      "language",
+      "marketing",
+      "festival or discount",
+      "purchasing and play activity",
+      "personalization"
+    ],
+    "observe_impression_to_visit_separately": true,
+    "define_counterfactual_before_data": true
+  },
+  "unknown": {
+    "rank_weights": null,
+    "causal_store_visit_visibility_effect": null,
+    "causal_conversion_visibility_effect": null,
+    "real_impressions": null,
+    "paid_orders": null
+  },
+  "experiment_performed": false
+}

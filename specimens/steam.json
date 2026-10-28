@@ -1115,6 +1115,61 @@
       "evidence_class": "secondary_interpretation_valve_gdc_slide",
       "license": "Public source metadata and concise independently authored aggregate fact summary; no slides, screenshots, or substantial source text redistributed.",
       "notes": "Platform aggregates, not verified complete per-app transaction ledgers; do not equate game annual sales, new-launch cohorts, legal publisher bank payouts or profits."
+    },
+    {
+      "id": "steam-franchise-pages-repeat-2026",
+      "url": "https://partner.steamgames.com/doc/store/franchise_pages?language=english",
+      "title": "Franchise Pages",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_policy_and_capability_not_observed_sales",
+      "license": "Only source metadata, URLs, original factual paraphrases, and no copyrighted prose or private records.",
+      "notes": "Followers can be notified of new franchise titles; followers not verified buyers."
+    },
+    {
+      "id": "steam-bundles-repeat-2026",
+      "url": "https://partner.steamgames.com/doc/store/application/bundles?language=english",
+      "title": "Steam Bundles",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_policy_and_capability_not_observed_sales",
+      "license": "Only source metadata, URLs, original factual paraphrases, and no copyrighted prose or private records.",
+      "notes": "Complete the Set charges for not-yet-owned items and supports gifting; not a repeat buyer count."
+    },
+    {
+      "id": "steam-user-ownership-repeat-2026",
+      "url": "https://partner.steamgames.com/doc/features/auth",
+      "title": "User Authentication and Ownership",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_policy_and_capability_not_observed_sales",
+      "license": "Only source metadata, URLs, original factual paraphrases, and no copyrighted prose or private records.",
+      "notes": "App ownership authorization checks licenses, not verified actual payers; no identifiers used."
+    },
+    {
+      "id": "steam-creator-homepages-repeat-2026",
+      "url": "https://partner.steamgames.com/doc/store/creator_homepage?language=english",
+      "title": "Developer and Publisher Homepages",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_policy_and_capability_not_observed_sales",
+      "license": "Only source metadata, URLs, original factual paraphrases, and no copyrighted prose or private records.",
+      "notes": "Followers may receive launch notifications; publicly visible follower counts not sales."
+    },
+    {
+      "id": "steam-deck-verified-landing-2026",
+      "url": "https://partner.steamgames.com/doc/steamhardware/compat/verified?language=english",
+      "title": "Steam Deck Verified Landing Pages",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_policy_and_capability_not_observed_sales",
+      "license": "Only source metadata, URLs, original factual paraphrases, and no copyrighted prose or private records.",
+      "notes": "Verified games with all-ages trailer gain a page; causal sales effect remains unobserved."
     }
   ],
   "claims": [
@@ -6178,6 +6233,193 @@
       "observed_at": "2026-10-28",
       "limitations": "Actual payouts, developer labor, corporate revenue splits, tax, costs and complete zero-selling samples remain unknown.",
       "confidence": "high"
+    },
+    {
+      "id": "steam-visibility-purchase-play-signals",
+      "text": "Valve describes purchases and game-playing as strong interest signals for Steam visibility.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Qualitative explanation not an independently validated ranking weight."
+    },
+    {
+      "id": "steam-visibility-store-traffic-not-direct",
+      "text": "Valve says raw store-page traffic is not a direct algorithmic visibility factor.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Traffic can lead to sales and indirectly influence later visibility."
+    },
+    {
+      "id": "steam-visibility-conversion-not-direct",
+      "text": "Valve says the store-page visitor-to-purchase conversion rate is not a direct visibility factor.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Observed correlation between conversion and exposure would not disprove the narrower direct-factor claim."
+    },
+    {
+      "id": "steam-visibility-wishlist-exceptions",
+      "text": "Valve says wishlists generally are not ranking inputs apart from certain contexts such as Popular Upcoming, though email and personalized surfacing exist.",
+      "source_ids": [
+        "steam-visibility-official",
+        "steam-wishlist-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Wishlist counts are neither paid orders nor randomized exposure."
+    },
+    {
+      "id": "steam-visibility-review-40-threshold",
+      "text": "Valve describes algorithmic visibility as generally insensitive to review rating when positive fraction is at least 40%, but reduced below that.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Documented threshold cannot by itself yield a causal effect or be treated as unchanged across years."
+    },
+    {
+      "id": "steam-visibility-traffic-measures-not-orders",
+      "text": "Valve's traffic reports separate impressions and page visits from purchase and do not claim impressions equal attention.",
+      "source_ids": [
+        "steam-store-traffic-report-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No game-level paid checkout, user-level identity or causal inference."
+    },
+    {
+      "id": "steam-visibility-personalized-hypotheses",
+      "text": "Testing ranking descriptions requires controlling personalized surfaces, game age, tags, language, promotions and purchasing activity.",
+      "source_ids": [
+        "steam-visibility-official",
+        "steam-store-traffic-report-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Proposed prospective methodology, not an executed experiment."
+    },
+    {
+      "id": "steam-series-followers-not-past-buyers",
+      "text": "Franchise and creator followers can receive relevant release notifications, but following does not mean a previous completed purchase.",
+      "source_ids": [
+        "steam-franchise-pages-repeat-2026",
+        "steam-creator-homepages-repeat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Notification eligibility is not guaranteed reading or purchase."
+    },
+    {
+      "id": "steam-bundles-complete-only-unowned",
+      "text": "Complete the Set bundles charge buyers for items not already held by the recipient, including gifts.",
+      "source_ids": [
+        "steam-bundles-repeat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Previous license ownership can come from grants, keys, gifts or purchases."
+    },
+    {
+      "id": "steam-bundles-gifts-payer-recipient-distinct",
+      "text": "In a gifted bundle, the payer and receiving game library may be distinct accounts.",
+      "source_ids": [
+        "steam-bundles-repeat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "One gifted license is not paid purchase by the recipient."
+    },
+    {
+      "id": "steam-ownership-check-license-not-money",
+      "text": "Steam ownership verification can establish the presence of a valid license without establishing that the owner personally paid cash.",
+      "source_ids": [
+        "steam-user-ownership-repeat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No customer identifiers or ownership calls were accessed."
+    },
+    {
+      "id": "steam-series-appid-aggregate-not-repeat-payers",
+      "text": "Public AppID aggregates and partner daily financial categories do not directly link the same verified purchaser across separate games.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-franchise-pages-repeat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Would require specially authorized and privacy-preserving linked checkout data."
+    },
+    {
+      "id": "steam-series-repeat-rate-unknown",
+      "text": "No representative same-person repeat paid purchase rate follows from franchise follower, ownership or bundle statistics.",
+      "source_ids": [
+        "steam-bundles-repeat-2026",
+        "steam-user-ownership-repeat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No paid purchaser cohort was measured."
+    },
+    {
+      "id": "steam-deck-verified-landing-page",
+      "text": "Verified Steam Deck games gain an automated landing page if they have a store trailer marked safe for all ages.",
+      "source_ids": [
+        "steam-deck-verified-landing-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Does not establish page impressions, purchaser conversion, or overall sales uplift."
+    },
+    {
+      "id": "steam-deck-unknown-is-unreviewed",
+      "text": "Valve's Unknown Deck compatibility state means a game has not been evaluated, rather than being proved incompatible.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Not all non-Verified games are identical comparison units."
+    },
+    {
+      "id": "steam-deck-badge-not-sale-requirement",
+      "text": "Deck Verified status is not required to release and sell a game on Steam.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Badge does not prove a larger or smaller customer population."
+    },
+    {
+      "id": "steam-deck-competitive-comparison-needs-controls",
+      "text": "A Deck-badge paid-game comparison must align genre, launch time, price, language, promotion, demand history and availability.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026",
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Design-only control list, no causal estimate, and unmeasured badge acquisition cost."
+    },
+    {
+      "id": "steam-deck-revenue-effect-unobserved",
+      "text": "Hardware badges and a verified-only store page cannot independently identify how many purchasers used handheld hardware or profit from support.",
+      "source_ids": [
+        "steam-deck-verified-landing-2026",
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No badge history, buyer hardware mix, support labor or audited merchant sales collected."
     }
   ],
   "observations": [],
@@ -6185,5 +6427,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research adds Valve's 2025 76% non-Valve aggregate revenue share, all-release-age annual game earnings thresholds reported from GDC 2026, and bounded Daily Deal purchasers; no first-release success rate or typical developer take-home is inferred."
+  "summary": "Steam research adds falsifiable public visibility ranking hypotheses, privacy-safe series repeat-purchase definitions, and Steam Deck Verified comparative positioning without claiming actual paid buyers or causal platform revenue effects."
 }

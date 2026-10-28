@@ -1,10 +1,10 @@
 # Marketplace gallery
 
-The [Mercata website](../index.html) reads this [machine-readable index](index.json). All 26 specimens are admitted. **YouTube is actively being researched**, with dated official policies, independent aggregate audience statistics, bounded creator-income studies, and source-linked activity reports. itch.io has source-linked economic research underway and is 97% through its fixed 244-task study; Steam has **80% source-backed research progress across its 293-task plan**; the other 23 remain queued without dedicated economic research. None has a verified, representative total creator-income distribution.
+The [Mercata website](../index.html) reads this [machine-readable index](index.json). All 26 specimens are admitted. **YouTube is actively being researched**, with dated official policies, independent aggregate audience statistics, bounded creator-income studies, and source-linked activity reports. itch.io has source-linked economic research underway and is 97% through its fixed 244-task study; Steam has **81% source-backed research progress across its 293-task plan**; the other 23 remain queued without dedicated economic research. None has a verified, representative total creator-income distribution.
 
 | Marketplace | Domain | Study | Work queue |
 |---|---|---|---|
-| [Steam](../specimens/steam.json) | games | **Researching, 80%** | [293-task plan](../plans/steam.md) · [Machine inventory](../plans/steam.json) |
+| [Steam](../specimens/steam.json) | games | **Researching, 81%** | [293-task plan](../plans/steam.md) · [Machine inventory](../plans/steam.json) |
 | [itch.io](../specimens/itch-io.json) | games | Researching: 97% task-weighted evidence | [Detailed plan](../plans/itch-io.md) · [Findings](../ontology/itch-io/research-synthesis-2026.md) |
 | [Epic Games Store](../specimens/epic-games-store.json) | games | Economic | [Tasks](../queues/epic-games-store.json) |
 | [Royal Road](../specimens/royal-road.json) | literature | Economic + social audience | [Tasks](../queues/royal-road.json) |

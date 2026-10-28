@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 80,
+  "progress_percent": 81,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -225,7 +225,7 @@
         "steam/discovery/design-controlled-acquisition-measurements"
       ],
       "phase": 2,
-      "progress_percent": 83
+      "progress_percent": 86
     },
     {
       "id": "competition",
@@ -258,7 +258,7 @@
         "steam/competition/study-paid-marketing-acquisition-thresholds"
       ],
       "phase": 2,
-      "progress_percent": 61
+      "progress_percent": 66
     },
     {
       "id": "income",
@@ -296,7 +296,7 @@
         "steam/income/build-evidence-quality-classification-for-earnings"
       ],
       "phase": 3,
-      "progress_percent": 77
+      "progress_percent": 78
     },
     {
       "id": "rights",
@@ -360,7 +360,7 @@
         "steam/sales/design-after-launch-retention-metrics"
       ],
       "phase": 3,
-      "progress_percent": 79
+      "progress_percent": 84
     },
     {
       "id": "risk",
@@ -1919,11 +1919,19 @@
       "emoji": "🧭",
       "objective": "Research design falsifiable methods for ranking hypotheses, avoiding unsupported reverse-engineering claims.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Design falsifiable methods for ranking hypotheses, avoiding unsupported reverse-engineering claims. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 70,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "specimens/steam.json",
+        "ontology/steam/ranking-claims-and-study-design-2026.md",
+        "ontology/steam/ranking-claims-and-study-design-2026.json",
+        "ontology/steam/series-repeat-payers-2026.md",
+        "ontology/steam/series-repeat-payers-2026.json",
+        "ontology/steam/deck-verified-competitive-positioning-2026.md",
+        "ontology/steam/deck-verified-competitive-positioning-2026.json"
+      ],
+      "artifact": "ontology/steam/ranking-claims-and-study-design-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2228,8 +2236,8 @@
       "emoji": "🧭",
       "objective": "Research specify permissioned merchant attribution exports and causal limitations.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify permissioned merchant attribution exports and causal limitations. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "in_progress",
-      "percent": 95,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
@@ -2238,9 +2246,15 @@
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
         "specimens/steam.json",
         "ontology/steam/utm-traffic-attribution-and-paid-marketing-2026.md",
-        "ontology/steam/utm-traffic-attribution-and-paid-marketing-2026.json"
+        "ontology/steam/utm-traffic-attribution-and-paid-marketing-2026.json",
+        "ontology/steam/ranking-claims-and-study-design-2026.md",
+        "ontology/steam/ranking-claims-and-study-design-2026.json",
+        "ontology/steam/series-repeat-payers-2026.md",
+        "ontology/steam/series-repeat-payers-2026.json",
+        "ontology/steam/deck-verified-competitive-positioning-2026.md",
+        "ontology/steam/deck-verified-competitive-positioning-2026.json"
       ],
-      "artifact": "ontology/steam/utm-traffic-attribution-and-paid-marketing-2026.md",
+      "artifact": "ontology/steam/ranking-claims-and-study-design-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2252,7 +2266,7 @@
       "objective": "Research define comparable solo/small-team games by release date, price, genre, length and production effort.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define comparable solo/small-team games by release date, price, genre, length and production effort. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 90,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
@@ -2261,9 +2275,15 @@
         "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.json",
         "specimens/steam.json",
         "ontology/steam/paid-genre-supply-and-model-comparability-2026.md",
-        "ontology/steam/paid-genre-supply-and-model-comparability-2026.json"
+        "ontology/steam/paid-genre-supply-and-model-comparability-2026.json",
+        "ontology/steam/ranking-claims-and-study-design-2026.md",
+        "ontology/steam/ranking-claims-and-study-design-2026.json",
+        "ontology/steam/series-repeat-payers-2026.md",
+        "ontology/steam/series-repeat-payers-2026.json",
+        "ontology/steam/deck-verified-competitive-positioning-2026.md",
+        "ontology/steam/deck-verified-competitive-positioning-2026.json"
       ],
-      "artifact": "ontology/steam/paid-genre-supply-and-model-comparability-2026.md",
+      "artifact": "ontology/steam/deck-verified-competitive-positioning-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2464,14 +2484,20 @@
       "objective": "Research separate external publisher marketing and audience relationships from Steam algorithmic effect.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate external publisher marketing and audience relationships from Steam algorithmic effect. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.md",
         "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/ranking-claims-and-study-design-2026.md",
+        "ontology/steam/ranking-claims-and-study-design-2026.json",
+        "ontology/steam/series-repeat-payers-2026.md",
+        "ontology/steam/series-repeat-payers-2026.json",
+        "ontology/steam/deck-verified-competitive-positioning-2026.md",
+        "ontology/steam/deck-verified-competitive-positioning-2026.json"
       ],
-      "artifact": "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.md",
+      "artifact": "ontology/steam/deck-verified-competitive-positioning-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2482,11 +2508,19 @@
       "emoji": "🏁",
       "objective": "Research investigate Steam Deck visibility, verification, playability and compatibility cost.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Investigate Steam Deck visibility, verification, playability and compatibility cost. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 70,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "specimens/steam.json",
+        "ontology/steam/ranking-claims-and-study-design-2026.md",
+        "ontology/steam/ranking-claims-and-study-design-2026.json",
+        "ontology/steam/series-repeat-payers-2026.md",
+        "ontology/steam/series-repeat-payers-2026.json",
+        "ontology/steam/deck-verified-competitive-positioning-2026.md",
+        "ontology/steam/deck-verified-competitive-positioning-2026.json"
+      ],
+      "artifact": "ontology/steam/deck-verified-competitive-positioning-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2969,7 +3003,7 @@
       "objective": "Research separate per-title performance from publisher aggregate cash and launch frequency.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate per-title performance from publisher aggregate cash and launch frequency. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.md",
@@ -2979,9 +3013,15 @@
         "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.json",
         "site/steam-ledger-coverage.mjs",
         "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
-        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json"
+        "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json",
+        "ontology/steam/ranking-claims-and-study-design-2026.md",
+        "ontology/steam/ranking-claims-and-study-design-2026.json",
+        "ontology/steam/series-repeat-payers-2026.md",
+        "ontology/steam/series-repeat-payers-2026.json",
+        "ontology/steam/deck-verified-competitive-positioning-2026.md",
+        "ontology/steam/deck-verified-competitive-positioning-2026.json"
       ],
-      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+      "artifact": "ontology/steam/series-repeat-payers-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3565,14 +3605,20 @@
       "objective": "Research separate buyer paying a gift from recipient license activation.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate buyer paying a gift from recipient license activation. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
         "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/ranking-claims-and-study-design-2026.md",
+        "ontology/steam/ranking-claims-and-study-design-2026.json",
+        "ontology/steam/series-repeat-payers-2026.md",
+        "ontology/steam/series-repeat-payers-2026.json",
+        "ontology/steam/deck-verified-competitive-positioning-2026.md",
+        "ontology/steam/deck-verified-competitive-positioning-2026.json"
       ],
-      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+      "artifact": "ontology/steam/series-repeat-payers-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3583,11 +3629,19 @@
       "emoji": "🛒",
       "objective": "Research separate repeat buying by same verified account from separate game page visits.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate repeat buying by same verified account from separate game page visits. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 70,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "specimens/steam.json",
+        "ontology/steam/ranking-claims-and-study-design-2026.md",
+        "ontology/steam/ranking-claims-and-study-design-2026.json",
+        "ontology/steam/series-repeat-payers-2026.md",
+        "ontology/steam/series-repeat-payers-2026.json",
+        "ontology/steam/deck-verified-competitive-positioning-2026.md",
+        "ontology/steam/deck-verified-competitive-positioning-2026.json"
+      ],
+      "artifact": "ontology/steam/series-repeat-payers-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -4759,7 +4813,7 @@
       "objective": "Research test provenance, accessibility, link integrity, percentages, mobile layout and no private data.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Test provenance, accessibility, link integrity, percentages, mobile layout and no private data. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 90,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.md",
@@ -4767,9 +4821,15 @@
         "site/steam-ledger-coverage.mjs",
         "specimens/steam.json",
         "ontology/steam/executive-economic-evidence-and-decision-gates-2026.json",
-        "ontology/steam/executive-economic-evidence-and-decision-gates-2026.md"
+        "ontology/steam/executive-economic-evidence-and-decision-gates-2026.md",
+        "ontology/steam/ranking-claims-and-study-design-2026.md",
+        "ontology/steam/ranking-claims-and-study-design-2026.json",
+        "ontology/steam/series-repeat-payers-2026.md",
+        "ontology/steam/series-repeat-payers-2026.json",
+        "ontology/steam/deck-verified-competitive-positioning-2026.md",
+        "ontology/steam/deck-verified-competitive-positioning-2026.json"
       ],
-      "artifact": "ontology/steam/executive-economic-evidence-and-decision-gates-2026.md",
+      "artifact": "ontology/steam/ranking-claims-and-study-design-2026.md",
       "priority": "normal",
       "phase": 1
     },

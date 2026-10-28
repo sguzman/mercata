@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "unmeasured_same_person_cross_game_paid_purchasing",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-franchise-pages-repeat-2026",
+    "steam-bundles-repeat-2026",
+    "steam-user-ownership-repeat-2026",
+    "steam-creator-homepages-repeat-2026",
+    "steam-financial-api-official"
+  ],
+  "claim_ids": [
+    "steam-series-followers-not-past-buyers",
+    "steam-bundles-complete-only-unowned",
+    "steam-bundles-gifts-payer-recipient-distinct",
+    "steam-ownership-check-license-not-money",
+    "steam-series-appid-aggregate-not-repeat-payers",
+    "steam-series-repeat-rate-unknown"
+  ],
+  "event_types": [
+    "franchise_follow",
+    "wishlist",
+    "app_license",
+    "paid_checkout",
+    "retail_key_activation",
+    "gift_purchase",
+    "gift_recipient_license",
+    "complete_the_set_bundle"
+  ],
+  "definition": {
+    "denominator": "distinct eligible verified prior-game payers",
+    "numerator": "same verified payers separately paying for a later game during specified time window",
+    "cross_game_identity_must_be_lawfully_verified": true,
+    "public_ids_prohibited": true
+  },
+  "inference_limits": {
+    "follow_is_purchase": false,
+    "own_app_is_paid_order": false,
+    "bundle_contains_two_apps_means_two_paid_orders": false,
+    "gift_payer_same_as_owner": false,
+    "public_daily_finance_has_linked_buyers": false
+  },
+  "unknown": {
+    "repeat_paid_orders": null,
+    "eligible_prior_payers": null,
+    "same_person_repeat_fraction": null,
+    "incremental_developer_profit": null
+  },
+  "account_access": false
+}

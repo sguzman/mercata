@@ -1,8 +1,8 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 80% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 81% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
-[Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
+[Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
@@ -291,6 +291,10 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## Visibility, franchise repeat purchases and handheld positioning checkpoint
+
+The [Steam ranking claims and study design](../ontology/steam/ranking-claims-and-study-design-2026.md), [same-payer sequel identification protocol](../ontology/steam/series-repeat-payers-2026.md), and [Deck badge positioning design](../ontology/steam/deck-verified-competitive-positioning-2026.md) advance three previously unstarted tasks with attributable policy and explicit missing-data boundaries. A [tested synthetic guardrail](../site/steam-observability-guardrails.mjs) refuses to infer actual repeat customers or causal rank/Deck sales effects. **Current score 81%** (exact 81.195%, +1 pp after 80%), 293 tasks unchanged.
+
 ## Steam versus itch.io first-game channel checkpoint
 
 The [Steam versus itch.io channel comparison](../ontology/steam/steam-versus-itchio-first-game-channel-2026.md) separates Steam Direct and review clocks from free project hosting, creator-chosen shares, direct/platform payout routes and incompatible paid-unit denominators. A [synthetic fee comparison guard](../site/steam-channel-comparison.mjs) refuses to infer publisher profit from entry costs. **Score 73%** (exact 73.106%; Δ +1 pp from 72%). No actual seller sales or platform choice tested.
@@ -439,4 +443,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 80%** rounded task-weighted progress across 293 tasks; prior 79%, Δ +1 pp (exact 80.119%). 59 fully verified, 229 partly researched; 100 public sources, 490 bounded claims. No individual merchant payout or real developer profit observed.
+**Completion: 81%** rounded task-weighted progress across 293 tasks; previous 80%, +1 pp (exact 81.195%). 61 fully verified, 230 partially researched; 105 attributable public sources and 508 bounded claims. No verified same-payer series purchase, causal visibility coefficient or Deck ROI.

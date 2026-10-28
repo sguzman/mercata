@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "unmeasured_deck_badge_competitive_positioning",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-deck-verified-landing-2026",
+    "steam-deck-machine-compat-2026",
+    "steam-visibility-official"
+  ],
+  "claim_ids": [
+    "steam-deck-verified-landing-page",
+    "steam-deck-unknown-is-unreviewed",
+    "steam-deck-badge-not-sale-requirement",
+    "steam-deck-competitive-comparison-needs-controls",
+    "steam-deck-revenue-effect-unobserved"
+  ],
+  "badges": [
+    "Verified",
+    "Playable",
+    "Unsupported",
+    "Unknown"
+  ],
+  "verified_page_requires_trailer_safe_all_ages": true,
+  "unknown_is_test_failure": false,
+  "badge_required_for_sale": false,
+  "study_design": {
+    "unit": "original_paid_base_game_appid",
+    "horizon_days": 90,
+    "match_on": [
+      "launch month",
+      "genre and tags",
+      "base price and discounts",
+      "localizations",
+      "promotion",
+      "previous sales proxies",
+      "device input expectations"
+    ],
+    "assignment_randomized": false
+  },
+  "unknown": {
+    "hardware_specific_paid_buyer_count": null,
+    "verified_vs_unverified_actual_sales": null,
+    "causal_verified_uplift": null,
+    "qualification_development_hours": null
+  },
+  "actual_games_tested": 0
+}

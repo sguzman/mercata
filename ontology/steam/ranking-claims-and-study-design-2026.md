@@ -1,0 +1,9 @@
+# Visibility on Steam: observable ranking hypotheses
+
+**Reviewed October 28, 2026.** [Structured methodology](ranking-claims-and-study-design-2026.json). No private ranking data, customer events or real-world test was collected.
+
+[Valve's official visibility guide](https://partner.steamgames.com/doc/marketing/visibility) distinguishes New Release queues, organic placement, personalized recommendations and update visibility. It states that **purchases and playing** signal interest, while **raw store-page visits** and **visitor-to-purchase conversion** are not *direct* algorithmic ranking inputs. Wishlists generally aren't direct factors outside some upcoming-game contexts; wishlist subscribers can still receive launch and discount notifications. The guide describes reduced discovery prospects when game review positivity drops **below 40%**, without supplying a statistical coefficient.
+
+These statements are **Valve's descriptions**, not exact scoring weights or independently identified causal effects. Traffic may cause purchases and thereby change future visibility indirectly, while recommendations may generate more traffic and conversions. A correlation does not show which direction runs. [Store traffic reports](https://partner.steamgames.com/doc/marketing/traffic_reporting) count surface impressions and page loads, not unique buyers or sales.
+
+A falsifiable prospective study would specify AppID, day, recommendation surface, language, tags, eligible exposure, promotion/discount windows and a comparison group *before* inspecting outcomes. Only authorized, aggregated partner reports should be used. Personalized results and simultaneous game quality or marketing changes make screenshots, before/after comparisons and threshold anecdotes inadequate. **No ranking mechanism, 40%-review discontinuity, real purchases or uplift was measured.**
