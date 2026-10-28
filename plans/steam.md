@@ -1,10 +1,14 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 83% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 84% task-weighted.** Verified official-document findings advanced selected tasks; many remain partially researched, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
+
+## Steam evidence and progress integrity checkpoint
+
+The [public Steam task/source audit](../ontology/steam/public-evidence-integrity-2026.md) and its negative-path [regression tests](../tests/steam-evidence-integrity.test.mjs) now run inside the repository verification command. All 293 tasks have at least some scored research, but 229 remain partially researched and representative publisher income is still unknown. **Score 84%** (exact 83.549%, Δ +1 pp from 83%).
 
 ## Steam refund reporting and cohort measurement
 
@@ -455,4 +459,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 83%** rounded task-weighted progress across 293 tasks; previous 83%, Δ +0 pp (exact 83.259%). 64 complete and 229 partly researched tasks, 108 public sources and 552 bounded claims. No real seller paid order or returns data.
+**Completion: 84%** rounded task-weighted progress across 293 tasks; prior 83%, Δ +1 pp (exact 83.549%). 64 fully scored and 229 partly researched. 108 public sources, 552 bounded claims. Public-source integrity is now part of automated verification; actual publisher earnings remain unknown.

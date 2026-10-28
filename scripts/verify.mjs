@@ -7,6 +7,7 @@ import {auditLocalPublicationMedia} from './publication-asset-scan.mjs';
 import {auditPublicResearchPrivacy} from './public-privacy-audit.mjs';
 import {auditMissingDataDependencies} from './missing-data-audit.mjs';
 import {auditItchTaskEvidenceLinks} from './itch-task-evidence-link-audit.mjs';
+import {auditSteamEvidenceIntegrity} from './steam-evidence-integrity.mjs';
 const root = path.resolve(process.argv[2] || process.cwd());
 const load = name => JSON.parse(fs.readFileSync(path.join(root,name),'utf8'));
 const has = name => fs.existsSync(path.join(root,name));
@@ -705,6 +706,10 @@ for (const entry of index.specimens) {
     if(entry.id==='itch-io') {
       const evidenceLinks=auditItchTaskEvidenceLinks(plan,queue,root);
       ensure(evidenceLinks.valid,'itch.io task evidence paths invalid: '+evidenceLinks.errors.slice(0,5).join('; '));
+    }
+    if(entry.id==='steam') {
+      const evidenceAudit=auditSteamEvidenceIntegrity(plan,queue,dossier,root);
+      ensure(evidenceAudit.valid,'Steam source/evidence integrity: '+evidenceAudit.errors.slice(0,5).join('; '));
     }
     ensure(plan.workstreams.length===queue.queues.length,'Missing study workstreams');
     for(const work of plan.workstreams) {

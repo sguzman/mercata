@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 83,
+  "progress_percent": 84,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -462,7 +462,7 @@
         "steam/review/prepare-public-publication-qa-checklist"
       ],
       "phase": 1,
-      "progress_percent": 92
+      "progress_percent": 97
     },
     {
       "id": "special-games",
@@ -4770,7 +4770,7 @@
       "objective": "Research require acceptance evidence for nonzero task progress and guard against hollow completion.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Require acceptance evidence for nonzero task progress and guard against hollow completion. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.md",
@@ -4778,9 +4778,13 @@
         "site/steam-ledger-coverage.mjs",
         "specimens/steam.json",
         "ontology/steam/executive-economic-evidence-and-decision-gates-2026.json",
-        "ontology/steam/executive-economic-evidence-and-decision-gates-2026.md"
+        "ontology/steam/executive-economic-evidence-and-decision-gates-2026.md",
+        "ontology/steam/public-evidence-integrity-2026.md",
+        "scripts/steam-evidence-integrity.mjs",
+        "tests/steam-evidence-integrity.test.mjs",
+        "scripts/verify.mjs"
       ],
-      "artifact": "ontology/steam/executive-economic-evidence-and-decision-gates-2026.md",
+      "artifact": "ontology/steam/public-evidence-integrity-2026.md",
       "priority": "normal",
       "phase": 1
     },
