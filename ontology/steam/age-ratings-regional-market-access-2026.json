@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "regional_age_rating_sale_visibility_policy",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-germany-ratings-official-2026",
+    "steam-indonesia-ratings-official-2026",
+    "steam-content-survey-official-oct2026"
+  ],
+  "claim_ids": [
+    "germany-rating-nov2024",
+    "germany-usk-or-steam-survey",
+    "germany-preexisting-games-affected",
+    "germany-survey-completeness",
+    "indonesia-rating-required",
+    "indonesia-future-cutoff-unknown",
+    "indonesia-igrs-or-steam",
+    "indonesia-six-ratings",
+    "indonesia-existing-libraries-remain",
+    "regional-visibility-not-sales",
+    "regional-country-denominator-required"
+  ],
+  "germany": {
+    "effective_visibility_date_for_unrated": "2024-11-15",
+    "valid_rating_sources": [
+      "USK",
+      "Steam content survey self-rating"
+    ],
+    "unrated_titles_hidden": true,
+    "previously_published_titles_affected": true,
+    "app_specific_region_sales_loss": null
+  },
+  "indonesia": {
+    "regulators_require_rating": true,
+    "rating_sources": [
+      "IGRS (Komdigi)",
+      "Steam content survey"
+    ],
+    "rating_classes": [
+      "3+",
+      "7+",
+      "13+",
+      "15+",
+      "18+",
+      "Refused Classification"
+    ],
+    "future_unrated_visibility_cutoff": null,
+    "existing_license_access_continues": true,
+    "app_specific_region_sales_loss": null
+  },
+  "sampling_cautions": [
+    "Rating eligibility and storefront visibility are region- and date-specific",
+    "No listing does not prove no customer interest",
+    "Unrated product and zero-sale game are not synonymous",
+    "Existing ownership is distinct from ability to buy",
+    "Never infer loss of revenue from documents without audited sales"
+  ],
+  "no_partner_data": true,
+  "no_restricted_territory_inferred": true
+}

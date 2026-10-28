@@ -250,3 +250,5 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 **Steam transfer and retirement (2026-10-28):** [Historical partner report boundaries and customer continuation](../ontology/steam/app-transfer-reporting-and-retirement-2026.md) show that pre-transfer inaccessible financial periods cannot be counted as zero income. **53% → 55%**, Δ +2 pp (exact 55.051%). 58 sources, 236 claims; no actual seller finance data.
 
 **Steam hardware QA (2026-10-28):** [Device compatibility and runtime review](../ontology/steam/steamos-deck-compatibility-qa-2026.md) records Valve's published device thresholds, Linux/Proton and Cloud integration limits. **55% → 58%** (Δ +3 pp; exact 57.645%), 62 sources, 249 claims; no gameplay benchmarks or measured economic impact.
+
+**Steam regional ratings and eligibility (2026-10-28):** [Germany and Indonesia rating-specific availability](../ontology/steam/age-ratings-regional-market-access-2026.md) distinguishes documented country policy timing from actual regional paid demand. **58% → 59%**, Δ +1 pp (exact 58.959%), 64 sources and 260 claims.

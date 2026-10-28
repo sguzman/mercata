@@ -697,6 +697,28 @@
       "evidence_class": "official_current_steam_technical_guidance",
       "license": "Only public URL, source title and original brief factual paraphrase. No source media or text reproduced.",
       "notes": "Describes support requirements, not game-specific observed QA, performance or income."
+    },
+    {
+      "id": "steam-germany-ratings-official-2026",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/contentsurvey/germany?l=english",
+      "title": "Age Ratings Mandatory in Germany",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_country_specific_steam_store_visibility_policy",
+      "license": "Only source URL and independent numerical/context summary; not copying source text.",
+      "notes": "Country rating requirement and November 15 2024 effective visibility cutoff; no observed sales."
+    },
+    {
+      "id": "steam-indonesia-ratings-official-2026",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/contentsurvey/indonesia?l=english",
+      "title": "Age Ratings in Indonesia",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_country_specific_steam_store_visibility_policy",
+      "license": "Only link and independently written short factual summary.",
+      "notes": "Current Indonesia rating process and possible future visibility limits, without definite published cutoff."
     }
   ],
   "claims": [
@@ -3267,6 +3289,119 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "No verified effect sizes, labor distributions or developer profits were measured."
+    },
+    {
+      "id": "germany-rating-nov2024",
+      "text": "Valve states that Steam titles without a valid German age rating have not been shown to customers in Germany since November 15, 2024.",
+      "source_ids": [
+        "steam-germany-ratings-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Regional listing visibility is not a direct ledger of lost purchases or censorship in other countries."
+    },
+    {
+      "id": "germany-usk-or-steam-survey",
+      "text": "German ratings may be supplied by the USK or through Valve's content-survey based self-rating system.",
+      "source_ids": [
+        "steam-germany-ratings-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A submitted questionnaire does not guarantee a particular classification or unrestricted visibility."
+    },
+    {
+      "id": "germany-preexisting-games-affected",
+      "text": "Valve says the German display requirement also affects previously released games that lack a valid rating.",
+      "source_ids": [
+        "steam-germany-ratings-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Historical release counts should distinguish not-on-sale regional availability at each date."
+    },
+    {
+      "id": "germany-survey-completeness",
+      "text": "Valve's own German rating workflow requires a truthful and complete Steam content survey.",
+      "source_ids": [
+        "steam-germany-ratings-official-2026",
+        "steam-content-survey-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Ineligible content may still prevent visibility after the survey is filled."
+    },
+    {
+      "id": "indonesia-rating-required",
+      "text": "Valve reports that Indonesian regulators require game age ratings for storefront sale eligibility.",
+      "source_ids": [
+        "steam-indonesia-ratings-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The documentation says games may soon cease being shown without ratings but does not establish a definite future cutoff."
+    },
+    {
+      "id": "indonesia-future-cutoff-unknown",
+      "text": "The current public Indonesian age-rating guidance does not give a definite effective date for future hiding of unrated games.",
+      "source_ids": [
+        "steam-indonesia-ratings-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Do not falsely report the German 2024 cutoff as the Indonesian deadline."
+    },
+    {
+      "id": "indonesia-igrs-or-steam",
+      "text": "Indonesian age ratings may come from IGRS/Komdigi or Valve's content-survey rating workflow.",
+      "source_ids": [
+        "steam-indonesia-ratings-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Developer cannot substitute an unsupported third-party store IARC rating for an official IGRS review."
+    },
+    {
+      "id": "indonesia-six-ratings",
+      "text": "Valve lists IGRS classes 3+, 7+, 13+, 15+, 18+ and refused classification.",
+      "source_ids": [
+        "steam-indonesia-ratings-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Classification is not equal to target-game purchase demand, market size or buyer demographics."
+    },
+    {
+      "id": "indonesia-existing-libraries-remain",
+      "text": "Valve says existing customers in Indonesia retain access to owned games even when missing ratings limit storefront visibility.",
+      "source_ids": [
+        "steam-indonesia-ratings-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Existing library access does not establish that the game can acquire new buyers."
+    },
+    {
+      "id": "regional-visibility-not-sales",
+      "text": "No German or Indonesian country-specific purchase or developer revenue losses can be inferred from Valve's rating requirements alone.",
+      "source_ids": [
+        "steam-germany-ratings-official-2026",
+        "steam-indonesia-ratings-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Need eligible regional catalog cohorts, time-specific rating state, real reports and comparable sales data."
+    },
+    {
+      "id": "regional-country-denominator-required",
+      "text": "Comparative Steam regional revenue or launch cohorts must distinguish countries where the game was rated and available for purchase at the observation date.",
+      "source_ids": [
+        "steam-germany-ratings-official-2026",
+        "steam-indonesia-ratings-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Without product-specific historical availability a zero country-sale observation is ambiguous."
     }
   ],
   "observations": [],
@@ -3274,5 +3409,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research includes public hardware compatibility acceptance requirements alongside commercial and policy economics. No game benchmark, live partner report, sales uplift or developer profits observed."
+  "summary": "Steam research distinguishes regional age-rating availability, notably Germany's dated 2024 cutoff and Indonesia's unannounced future cutoff, from customer purchase demand. Game-level seller profits remain unknown."
 }
