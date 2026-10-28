@@ -63,5 +63,5 @@ test('No source references are deleted or rewritten by the identity audit',()=>{
  const d=dossier(),ids=new Set(d.evidence.map(e=>e.id)),aliases=get(machine);
  assert(aliases.alias_document_groups.every(g=>g.source_ids.every(id=>ids.has(id))));
  assert(d.claims.every(c=>c.source_ids.every(id=>ids.has(id))));
- assert.equal(aliases.source_ids.length,aliases.alias_group_count*2);
+ assert.equal(aliases.source_ids.length,aliases.alias_document_groups.reduce((n,g)=>n+g.source_ids.length,0));
 });
