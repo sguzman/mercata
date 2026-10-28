@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Steam refund reporting and cohort measurement
+
+The [developer period-refund rate study](../ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.md) distinguishes a same-period units-returned/units-purchased ratio from tracking refunded orders belonging to a fixed buyer cohort. A [tested synthetic validator](../site/steam-refund-period-units.mjs) handles delayed returns and zero denominators. **Score 83%** (exact 83.259%, Δ +0 pp from 83%), original 293 tasks. No refund reports, customers or actual proceeds accessed.
+
 ## Steam Families and paid-buyer denominators
 
 The [Family Sharing ownership and measurement study](../ontology/steam/family-sharing-players-versus-paid-licenses-2026.md) clarifies permanent paid licenses versus shared/borrowed player accounts, supporting a [synthetic denominator validator](../site/steam-family-license-units.mjs). **Current score 83%** (exact 82.765%; Δ +1 pp from 82%) across 293 original tasks. Actual unique buyer counts and net publisher outcomes remain unknown.
@@ -451,4 +455,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 83%** rounded task-weighted progress across 293 tasks; prior 82%, Δ +1 pp (exact 82.765%). 63 tasks complete and 230 partly researched; 107 public sources and 540 bounded claims. No authenticated sale/customer data or publisher net income.
+**Completion: 83%** rounded task-weighted progress across 293 tasks; previous 83%, Δ +0 pp (exact 83.259%). 64 complete and 229 partly researched tasks, 108 public sources and 552 bounded claims. No real seller paid order or returns data.

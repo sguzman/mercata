@@ -1192,6 +1192,17 @@
       "evidence_class": "official_family_licensing_and_concurrent_copy_policy",
       "license": "Public URL, title and concise original factual summaries only.",
       "notes": "Up to six members; ownership remains with purchaser; two simultaneous game players require two owned copies; restrictions."
+    },
+    {
+      "id": "steam-developer-refund-reporting-2026",
+      "url": "https://partner.steamgames.com/doc/finance/refunds",
+      "title": "Developer Refund Reporting",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_report_unit_and_refund_reason_definition",
+      "license": "Public source metadata and independently authored short interpretations; no customer refund messages, notes or partner reports reproduced.",
+      "notes": "Refund Data package link, recent week/month/lifetime choices; same-window return count over purchase count, shifted sale/return timing and private reason text."
     }
   ],
   "claims": [
@@ -6769,6 +6780,128 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "True distinct paid buyer population remains unknown."
+    },
+    {
+      "id": "refund-report-portal-package-link",
+      "text": "Valve's partner Sales & Activations Reports site provides a Refund Data page for each product package.",
+      "source_ids": [
+        "steam-developer-refund-reporting-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Requires authorized partner login; not publicly downloadable or a representative all-game refund census."
+    },
+    {
+      "id": "refund-report-period-windows",
+      "text": "Developers can view refund activity across week, month and lifetime report windows.",
+      "source_ids": [
+        "steam-developer-refund-reporting-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Aggregate reporting windows need not correspond to identical cohorts of buyers."
+    },
+    {
+      "id": "refund-report-rate-same-period",
+      "text": "Valve defines the displayed refund rate as units returned during a period divided by units purchased during that period.",
+      "source_ids": [
+        "steam-developer-refund-reporting-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Numerator can include purchases from an earlier period; therefore this is not a fixed-purchase-cohort refund rate."
+    },
+    {
+      "id": "refund-report-post-sale-spike",
+      "text": "Valve warns that weekly rates can be volatile after discounts because refunds for sale-period purchases may occur in later weeks when purchases have fallen.",
+      "source_ids": [
+        "steam-developer-refund-reporting-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A high reported post-promotion rate does not uniquely identify poorer game quality or a persistent lifetime failure."
+    },
+    {
+      "id": "refund-report-reasons-not-purchase-units",
+      "text": "The refund report groups players' selected reasons and may include optional written notes.",
+      "source_ids": [
+        "steam-developer-refund-reporting-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Reported reasons are volunteered by a selected subset of refunding customers; neither a random all-player survey nor shareable public personal data."
+    },
+    {
+      "id": "refund-report-game-variation",
+      "text": "Valve identifies launch timing, sale price, customer expectations and game history as factors associated with differing game refund rates.",
+      "source_ids": [
+        "steam-developer-refund-reporting-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This does not quantify independent causal impact of any one feature or genre."
+    },
+    {
+      "id": "refund-report-zero-denominator-undefined",
+      "text": "When no units are purchased in a reporting window, returns in that same window cannot yield a conventional finite refunded-per-purchased-period rate.",
+      "source_ids": [
+        "steam-developer-refund-reporting-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Mathematical guardrail derived from official rate definition; no actual game with this data pattern was observed."
+    },
+    {
+      "id": "refund-report-period-ratio-can-exceed-unity",
+      "text": "A period return count larger than same-period purchase count yields a ratio above 100%; this is mathematically possible when late returns relate to earlier purchase dates.",
+      "source_ids": [
+        "steam-developer-refund-reporting-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Illustrative accounting scenario, not a claim that any specific Steam game's portal showed greater than 100%."
+    },
+    {
+      "id": "refund-report-horizon-should-be-fixed",
+      "text": "To estimate a game cohort's realized refund propensity, investigators must follow a defined set of paid purchases through a specified post-purchase horizon.",
+      "source_ids": [
+        "steam-developer-refund-reporting-2026",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a Mercata measurement protocol, not a reported standard refund propensity from Valve."
+    },
+    {
+      "id": "refund-report-gross-vs-monthly-net",
+      "text": "Steam's near-real-time partner sales display excludes refunds, taxes and chargebacks, while monthly sales reporting adjusts revenue for deductions.",
+      "source_ids": [
+        "steam-financial-reporting-doc",
+        "steam-developer-refund-reporting-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Cannot infer developer take-home, merchant settlements or production profit from a refund-unit percentage."
+    },
+    {
+      "id": "refund-report-reason-text-private",
+      "text": "User-supplied written refund reasons in a protected partner report should not be copied into Mercata's public research dataset.",
+      "source_ids": [
+        "steam-developer-refund-reporting-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Potential personal or sensitive information and confidentiality; no individual notes collected."
+    },
+    {
+      "id": "refund-report-no-universal-actual-rate",
+      "text": "Valve's developer refund documentation supplies definitions and access procedures but no universally valid Steam indie refund average or median.",
+      "source_ids": [
+        "steam-developer-refund-reporting-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Publisher, title, timing and region variation unresolved without permissioned representative records."
     }
   ],
   "observations": [],
@@ -6776,5 +6909,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Mercata distinguishes Steam Families temporary borrowed game access and distinct players from permanent license ownership and actual paid Steam orders, without importing user-level records. Representative publisher income, true zero sales and player-to-sale multipliers remain unobserved."
+  "summary": "Steam research distinguishes period refunds from original paid purchase cohorts, adding developer refund reporting constraints and mathematical synthetic checks. Representative developer income and actual refunds remain unknown."
 }

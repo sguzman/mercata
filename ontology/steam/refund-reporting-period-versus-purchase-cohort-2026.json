@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "refund_period_vs_purchase_cohort_rate_non_equivalence",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-developer-refund-reporting-2026",
+    "steam-financial-api-official",
+    "steam-financial-reporting-doc"
+  ],
+  "claim_ids": [
+    "refund-report-portal-package-link",
+    "refund-report-period-windows",
+    "refund-report-rate-same-period",
+    "refund-report-post-sale-spike",
+    "refund-report-reasons-not-purchase-units",
+    "refund-report-game-variation",
+    "refund-report-zero-denominator-undefined",
+    "refund-report-period-ratio-can-exceed-unity",
+    "refund-report-horizon-should-be-fixed",
+    "refund-report-gross-vs-monthly-net",
+    "refund-report-reason-text-private",
+    "refund-report-no-universal-actual-rate"
+  ],
+  "access": {
+    "portal": "Steam Sales & Activations Reports",
+    "package_level_refund_data": true,
+    "requires_partner_access": true,
+    "views": [
+      "week",
+      "month",
+      "lifetime"
+    ],
+    "reason_categories": true,
+    "written_notes_possible": true,
+    "individual_notes_collected": false
+  },
+  "official_rate": {
+    "numerator": "units_returned_in_report_period",
+    "denominator": "units_purchased_in_report_period",
+    "same_purchase_cohort_not_guaranteed": true,
+    "report_zero_denominator_defined": false,
+    "week_after_discount_distortion_documented": true
+  },
+  "synthetic_example": {
+    "earlier_week_paid_purchases": 100,
+    "later_week_paid_purchases": 4,
+    "later_week_refunded_units_from_earlier_sales": 6,
+    "later_week_reported_period_ratio": 1.5,
+    "actual_purchase_cohort_refund_rate": null,
+    "source": "invented arithmetic, not real game data"
+  },
+  "finance": {
+    "near_realtime_sales_before_returns_taxes_and_chargebacks": true,
+    "monthly_reports_include_adjustments": true,
+    "period_return_ratio_equals_bank_payout": false
+  },
+  "unknown": {
+    "actual_refund_rate_for_any_game": null,
+    "representative_steam_refund_rate": null,
+    "unique_refunded_payers": null,
+    "cohort_maturity_horizon": null,
+    "actual_net_developer_income": null
+  },
+  "no_partner_access": true,
+  "no_player_text": true
+}
