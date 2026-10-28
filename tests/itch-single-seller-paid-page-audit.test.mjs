@@ -22,32 +22,40 @@ test('Snapshot event rates are descriptive, with no inferred paid-game conversio
  const x=get(p);
  for(const [i,expected] of [[0,2.57],[2,2.2]]){
   const comparators=x.snapshots[i].pages.filter(z=>z.sku!=='icons_vol2');
-  const a=auditOneSellerPaidPageEvents({productCategory:'game_development_assets',pages:comparators});
+  const a=auditOneSellerPaidPageEvents({productCategory:'game_development_assets',snapshot:{label:x.snapshots[i].label,window:x.snapshots[i].window,pages:comparators}});
   assert.equal(a.directPaymentEventsPer100PageViewEvents,expected);
-  assert.equal(a.independentPublishers,1);
+  assert.equal(a.publicNarrativeDescribesOneSeller,true);
+  assert.equal(a.independentlyVerifiedSellerCount,null);
+  assert.equal(a.canAddAnotherSnapshotAsNewSales,false);
+  assert.equal(a.reportedWindowScope,x.snapshots[i].window);
+  assert.equal(a.independentlyVerifiedWindowAlignment,false);
   assert.equal(a.independentBuyerConversionRate,null);
   assert.equal(a.statisticalSignificance,null);
   assert.equal(a.representativeGameSellerMedianIncome,null);
  }
- const zero=auditOneSellerPaidPageEvents({productCategory:'game_development_assets',pages:x.snapshots[1].pages});
+ const zero=auditOneSellerPaidPageEvents({productCategory:'game_development_assets',snapshot:{label:x.snapshots[1].label,window:x.snapshots[1].window,pages:x.snapshots[1].pages}});
  assert.equal(zero.items[0].bundleEntitlements,1);
  assert.equal(zero.items[0].directPaymentEvents,0);
  assert.equal(zero.directPaymentsReported,0);
  assert.equal(zero.items[0].uniquePayingBuyers,null);
 });
 test('Distinct snapshots are not combined and event audit rejects identifiers and bad aggregations',()=>{
- const good={productCategory:'game_development_assets',pages:[
+ const good={productCategory:'game_development_assets',snapshot:{label:'synthetic',window:'reported_same_first_month',pages:[
   {sku:'test_1',page_view_events:4,direct_project_payment_events:0,bundle_entitlements_reported:0}
- ]};
+ ]}};
  for(const bad of [
   {...good,productCategory:'paid_videogames'},
-  {...good,pages:[{...good.pages[0],buyer_email:'hidden'}]},
-  {...good,pages:[{...good.pages[0],page_view_events:1.2}]},
-  {...good,pages:[{...good.pages[0],direct_project_payment_events:-1}]},
-  {...good,pages:[good.pages[0],good.pages[0]]},
-  {...good,pages:[]}
+  {...good,snapshot:{...good.snapshot,pages:[{...good.snapshot.pages[0],buyer_email:'hidden'}]}},
+  {...good,snapshot:{...good.snapshot,pages:[{...good.snapshot.pages[0],page_view_events:1.2}]}},
+  {...good,snapshot:{...good.snapshot,pages:[{...good.snapshot.pages[0],direct_project_payment_events:-1}]}},
+  {...good,snapshot:{...good.snapshot,pages:[good.snapshot.pages[0],good.snapshot.pages[0]]}},
+  {...good,snapshot:{...good.snapshot,pages:[]}},
+  {...good,snapshot:[good.snapshot,good.snapshot]},
+  {...good,snapshot:{...good.snapshot,window:'undocumented'}},
+  {...good,buyer_email:'private'},
+  {...good,snapshot:{...good.snapshot,ledger_csv:'private'}}
  ])assert.throws(()=>auditOneSellerPaidPageEvents(bad),TypeError);
- const empty=auditOneSellerPaidPageEvents({...good,pages:[{...good.pages[0],page_view_events:0}]});
+ const empty=auditOneSellerPaidPageEvents({...good,snapshot:{...good.snapshot,pages:[{...good.snapshot.pages[0],page_view_events:0}]}});
  assert.equal(empty.directPaymentEventsPer100PageViewEvents,null);
  assert.equal(empty.items[0].directPaymentsPer100PageViewEvents,null);
 });
