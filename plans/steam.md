@@ -1,6 +1,6 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 67% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 68% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
@@ -291,6 +291,10 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## Steam executive economics and decision gates
+
+The [public executive synthesis](../ontology/steam/executive-economic-evidence-and-decision-gates-2026.md) now distinguishes official policy, supplier-modeled gross estimates, pure hypothetical budget arithmetic and actual missing merchant truth. It defines five gated decisions without making a real launch recommendation or inferring net publisher earnings. **Score 68%** (exact 68.038%; Δ +1 pp from 67%) across fixed 293 tasks.
+
 ## Consent-based income cohort coverage gate
 
 The [permissioned-ledger completeness protocol](../ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.md) and tested [synthetic-only coverage analyzer](../site/steam-ledger-coverage.mjs) separate whole-period paid-unit zeros from missing/partial reporting and require explicit transfer/permission attestations. Incomplete eligible-population frames cannot yield publishable population income or zero-sale estimates. **Current score 67%** (exact 66.877%; Δ +2 pp from 65%). No actual partner ledger data collected.
@@ -403,4 +407,4 @@ The [wishlist and visibility report](../ontology/steam/discovery-wishlists-and-v
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 67%** rounded task-weighted progress across 293 tasks; previous 65%, Δ +2 pp (exact 66.877%). 44 fully complete and 214 partially advanced; 75 public sources and 353 bounded claims. No real confidential ledger receipts, keys or user records.
+**Completion: 68%** rounded task-weighted progress across 293 tasks; previous 67%, Δ +1 pp (exact 68.038%). 47 fully complete and 212 partly researched; 75 sources and 363 bounded claims. Actual developer profit, genuine zero sellers and commercial experiments remain unknown/not executed.

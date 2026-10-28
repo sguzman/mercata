@@ -4478,6 +4478,112 @@
       "observed_at": "2026-10-28",
       "confidence": "high",
       "limitations": "This checkpoint has zero real participants, zero private reports, zero observed income and no paid transactions."
+    },
+    {
+      "id": "steam-synthesis-policy-is-not-profit",
+      "text": "Valve's public Steamworks documents establish requirements for publishing, customer rights and reporting but cannot reveal a publisher's realized income.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Contract-specific remittances and development costs must be obtained under explicit permission."
+    },
+    {
+      "id": "steam-synthesis-jan-model-median",
+      "text": "The published January 2026 provider-defined Steam release cohort has an approximately $1,000 modeled gross median and strongly concentrated high-end revenue.",
+      "source_ids": [
+        "steam-gdc-2026-jan-cohort-primary",
+        "steam-egmatic-jan2026-analysis"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A provider-modeled first-release month is not the actual Steam marketwide publisher income median."
+    },
+    {
+      "id": "steam-synthesis-jan-model-zeros-unconfirmed",
+      "text": "412 modeled zero-copy labels among 1,211 titles with estimates leave 19 model-missing games in a 1,230-title release cohort, and none of these confirms a real zero-sale fraction.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The 412–431 range concerns missing MODEL estimates only, not actual paid-order zeros."
+    },
+    {
+      "id": "steam-synthesis-2025-partial-not-paid-only",
+      "text": "The October 2025 Gamalytic model snapshot with 8,388 of 12,732 releases below $1,000 estimated gross includes free-to-play and other products and is not final-year originally-paid release evidence.",
+      "source_ids": [
+        "steam-gamalytic-2025-oct-gamesradar"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The tracker snapshot was not independently audited or reconciled to January 2026 paid releases."
+    },
+    {
+      "id": "steam-synthesis-low-end-model-unverified",
+      "text": "Gamalytic's sales model validation excluded reported games with fewer than 1,000 sales; it cannot certify zero-copy outcomes among newly released low-review titles.",
+      "source_ids": [
+        "steam-gamalytic-method-2023"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Excluded games may be exactly those relevant to an unsuccessful-first-game income study."
+    },
+    {
+      "id": "steam-synthesis-scenario-is-not-survival",
+      "text": "The synthetic Steam first-game break-even study requires about 1,000 modeled paid orders to cover its assumed cash costs and 5,410 to cover an assumed labor valuation, but those are not probability-of-survival estimates.",
+      "source_ids": [
+        "steam-price-rules-2026",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Every model input, including refund, price, publisher share, taxes, labor and development budgets, is hypothetical."
+    },
+    {
+      "id": "steam-synthesis-unknown-payout",
+      "text": "Actual median developer take-home, real paid-order zero share, publisher net receipts and representative costs remain unobserved in Mercata Steam research.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-gdc-2026-jan-cohort-primary"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Consent, complete sampling frames and transaction histories are required to convert unknowns into facts."
+    },
+    {
+      "id": "steam-synthesis-partner-history-not-single-game",
+      "text": "Historical AppID transfers can split payment reports between contracting partners, making current storefront labels insufficient to identify legal publishers or revenue over time.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No private ownership or royalty split contracts reviewed."
+    },
+    {
+      "id": "steam-synthesis-timing-current30",
+      "text": "Current public Steam onboarding/Steam Direct pages state 30 days from app fee and a distinct two-week public Coming Soon wait for initial releases.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-onboarding-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Periods may overlap; no account-specific release eligibility was inspected."
+    },
+    {
+      "id": "steam-synthesis-policy-experiments-not-run",
+      "text": "Curator offers, Steam UTM visits and wishlist counts are discovery indicators rather than randomized causal tests of paid sales.",
+      "source_ids": [
+        "steam-curators-official-oct2026",
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No partner analytics, experiment, campaign cost or real checkout observations were collected."
     }
   ],
   "observations": [],
@@ -4485,5 +4591,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research includes real-data coverage requirements for full paid-game ledger cohorts, distinguishing true attested zeros from missing/partial reports across transfers. Programmatic tests use synthetic AppIDs only; no actual incomes or publisher profits observed."
+  "summary": "Steam economic research includes an executive source-graded synthesis of January 2026 modeled income, October 2025 partial-year model outcomes and explicit first-game cash/labor decision gates, with actual publisher profit/zero-income unknown."
 }

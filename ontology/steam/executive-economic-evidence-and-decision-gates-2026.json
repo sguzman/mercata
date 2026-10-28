@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_executive_economic_synthesis_not_a_market_income_estimate",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steamdirect-public",
+    "steam-financial-api-official",
+    "steam-gdc-2026-jan-cohort-primary",
+    "steam-egmatic-jan2026-analysis",
+    "steam-gamalytic-2025-oct-gamesradar",
+    "steam-gamalytic-method-2023",
+    "steam-price-rules-2026",
+    "steam-transfer-app-official-2026",
+    "steam-onboarding-doc",
+    "steam-curators-official-oct2026",
+    "steam-utm-analytics-official-20261028"
+  ],
+  "claim_ids": [
+    "steam-synthesis-policy-is-not-profit",
+    "steam-synthesis-jan-model-median",
+    "steam-synthesis-jan-model-zeros-unconfirmed",
+    "steam-synthesis-2025-partial-not-paid-only",
+    "steam-synthesis-low-end-model-unverified",
+    "steam-synthesis-scenario-is-not-survival",
+    "steam-synthesis-unknown-payout",
+    "steam-synthesis-partner-history-not-single-game",
+    "steam-synthesis-timing-current30",
+    "steam-synthesis-policy-experiments-not-run"
+  ],
+  "evidence_layers": [
+    {
+      "level": "official_current_public_policy",
+      "measurements": [
+        "$100 app fee and $1,000 adjusted-gross threshold",
+        "30-day first-title waiting period and 14-day Coming Soon",
+        "reporting category and privacy boundaries"
+      ],
+      "does_not_measure": "publisher_after_cost_profit"
+    },
+    {
+      "level": "published_third_party_model",
+      "measurements": [
+        "Jan 2026 ~1,230 paid launches and ~$1,000 modeled median gross",
+        "Oct 2025 8,388 of 12,732 below $1,000 modeled gross"
+      ],
+      "does_not_measure": "actual_paid_game_checkout_or_partner_payout"
+    },
+    {
+      "level": "pure_hypothetical_arithmetic",
+      "measurements": [
+        "cash break-even 1,000 assumed gross units",
+        "labor-inclusive break-even 5,410 assumed gross units"
+      ],
+      "does_not_measure": "actual_game_budget_or_success_probability"
+    },
+    {
+      "level": "unobserved_private_ground_truth",
+      "measurements": [],
+      "does_not_measure": "not_available_to_public_research"
+    }
+  ],
+  "observations": {
+    "january2026_provider_model": {
+      "reported_games": 1230,
+      "modeled_median_gross_usd_approx": 1000,
+      "modeled_mean_gross_usd_approx": 108000,
+      "modeled_zero_copy_labels": 412,
+      "models_with_copies": 1211,
+      "missing_copy_estimates": 19,
+      "actual_merchant_sales": null
+    },
+    "october2025_partial_gamalytic": {
+      "games": 12732,
+      "estimated_below_1000_gross": 8388,
+      "full_year": false,
+      "all_premium_paid_games": false
+    },
+    "synthetic_first_game": {
+      "assumed_cash_break_even_orders": 1000,
+      "assumed_labor_inclusive_break_even_orders": 5410,
+      "observed_success_probability": null
+    }
+  },
+  "decisions": [
+    {
+      "gate": "eligibility",
+      "must_verify": [
+        "fee and identity setup",
+        "public store page and review checklist",
+        "current 30-day/14-day overlapping timing"
+      ],
+      "do_not_infer": "release date from document alone"
+    },
+    {
+      "gate": "cost",
+      "must_verify": [
+        "publisher-owned fixed cash spend",
+        "development labor opportunity cost",
+        "net receipts and price/refund assumptions"
+      ],
+      "do_not_infer": "labor is free"
+    },
+    {
+      "gate": "demand",
+      "must_verify": [
+        "real audience evidence for the chosen game and category",
+        "purchase-qualified events not reviews or wishlists",
+        "comparable age and paid-game sampling frame"
+      ],
+      "do_not_infer": "curator exposure is paid buyer"
+    },
+    {
+      "gate": "cash runway",
+      "must_verify": [
+        "chosen loss limit and available funds",
+        "support and update obligations",
+        "alternative outcomes under downside scenario"
+      ],
+      "do_not_infer": "high-end model mean is typical"
+    },
+    {
+      "gate": "empirical publication",
+      "must_verify": [
+        "complete original paid release frame and delistings",
+        "consenting merchant ledgers including low/zero sellers",
+        "observed country/time/currency/refund matching",
+        "deduplicated legal publisher identities when claiming publisher income"
+      ],
+      "do_not_infer": "unreported zero, developer profit or representative take-home"
+    }
+  ],
+  "unknown": {
+    "observed_median_steam_publisher_take_home": null,
+    "actual_zero_paid_order_fraction": null,
+    "representative_development_hours": null,
+    "actual_after_cost_indie_profit": null,
+    "marketwide_break_even_probability": null,
+    "causal_ad_conversion_uplift": null
+  },
+  "no_real_merchant_data": true,
+  "no_game_published": true,
+  "no_business_decision_executed": true
+}
