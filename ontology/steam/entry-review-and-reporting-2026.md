@@ -5,9 +5,13 @@
 
 The official [Steam Direct enrollment page](https://partner.steamgames.com/steamdirect), [onboarding guide](https://partner.steamgames.com/doc/gettingstarted/onboarding), and [fee document](https://partner.steamgames.com/doc/gettingstarted/appfee) describe signed distribution paperwork, identity, name-matched bank details, tax declarations and a **USD 100 per new-app fee**. The fee cannot be paid from Steam Wallet, is not refundable, but may be **recouped separately** after the app reaches **USD 1,000 adjusted gross revenue** on qualifying Steam sales/in-app purchases. This threshold is **not** break-even profit or a guaranteed return. Local consumption taxes and other costs are not comprehensively measured.
 
-## Contradictory official wait rule
+## Current-source correction: both official public pages now say 30 days
 
-Steam Direct's [public landing page](https://partner.steamgames.com/steamdirect) specifies **30 days** from fee payment to earliest release for initial titles. Its separate [onboarding document](https://partner.steamgames.com/doc/gettingstarted/onboarding) specifies **21 days**. Both sources were accessible on this review date, so Mercata records **two incompatible observations**. The conflict remains **unresolved** rather than choosing one or claiming an unverified policy-change date. A prudent hypothetical launch plan can reserve the longer period, but the operative requirement needs primary clarification. The separate [Coming Soon page guide](https://partner.steamgames.com/doc/store/coming_soon) requires public availability for at least 14 days; it is not safe to simply add both waiting intervals into one mandatory total.
+**Rechecked October 28, 2026:** [Steam Direct](https://partner.steamgames.com/steamdirect) and [Onboarding](https://partner.steamgames.com/doc/gettingstarted/onboarding) now both state a **30-day** first-release wait from fee payment. An earlier 21-day wording was genuinely observed, but its historical validity period is not established. For public planning use 30 days, plus a **separate overlapping** 14-day Coming Soon period and actual store/build approvals; do not promise an individual partner's final eligibility. See [recheck](current-first-release-wait-recheck-2026.md).
+
+## Historical discrepancy recorded in first checkpoint
+
+Steam Direct's [public landing page](https://partner.steamgames.com/steamdirect) specifies **30 days** from fee payment to earliest release for initial titles. Its separate [onboarding document](https://partner.steamgames.com/doc/gettingstarted/onboarding) specifies **21 days**. Both sources were accessible on this review date, so Mercata records **two incompatible observations**. The historical source-text conflict is preserved here as it was observed, but the **latest current public pages now agree on 30 days**. The private account gate and exact historical text-change date remain unverified. A prudent hypothetical launch plan can reserve the longer period, but the operative requirement needs primary clarification. The separate [Coming Soon page guide](https://partner.steamgames.com/doc/store/coming_soon) requires public availability for at least 14 days; it is not safe to simply add both waiting intervals into one mandatory total.
 
 ## Reviews and release control
 
@@ -21,7 +25,7 @@ The [tax FAQ](https://partner.steamgames.com/doc/finance/taxfaq) distinguishes V
 
 ## Remaining limits
 
-- Exact operative waiting period and revenue-share tier schedule not established.
+- Current public first-release wait is 30 days in both official English sources; partner-specific enforcement and exact historical 21-day wording period remain unknown. Revenue-share tier schedule remains incompletely verified.
 - Country-specific bank availability and exchange costs not yet studied comprehensively.
 - No authenticated merchant reports, real buyer identities, seller net cash receipts, release-cohort distribution or after-labor profit observations.
 - Zero-selling, delisted and low-revenue paid-game publishers remain unmeasured.

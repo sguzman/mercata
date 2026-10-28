@@ -75,7 +75,10 @@
     },
     "known_current_revenue_share_rate": null,
     "near_realtime_gross_before_adjustments": true,
-    "monthly_net_after_taxes_returns_chargebacks": true
+    "monthly_net_after_taxes_returns_chargebacks": true,
+    "waiting_period_current_public_recheck_days": 30,
+    "waiting_period_recheck_date": "2026-10-28",
+    "waiting_period_original_21day_observation_is_historical": true
   },
   "unknown": {
     "active_wait_period_days": null,
@@ -94,7 +97,7 @@
         "steamdirect-public",
         "steam-onboarding-doc"
       ],
-      "reason": "Both current public Valve pages give incompatible 30 and 21 day periods; no authenticated release-control check."
+      "reason": "Initial public capture found 30 days on Steam Direct versus 21 days on onboarding. Fresh October 28, 2026 readings show 30 on both official URLs; exact earlier wording/version date and private partner-specific enforcement remain unknown."
     },
     {
       "id": "income-data",

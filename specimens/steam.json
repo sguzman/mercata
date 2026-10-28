@@ -829,6 +829,17 @@
       "evidence_class": "secondary_reporting_of_revised_gamalytic_snapshot",
       "license": "Public URL and limited independently framed quantitative summary only; no article reproduction.",
       "notes": "Contemporaneous 12,875 releases and 8,502 modeled below $1,000; shares the same Gamalytic estimator, not independent confirmation."
+    },
+    {
+      "id": "steam-steamdirect-2017-news",
+      "url": "https://store.steampowered.com/news/posts/?enddate=1497372843&feed=steam_blog",
+      "title": "Steam Direct details and launch announcement",
+      "publisher": "Valve Corporation",
+      "published_at": "2017-06",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "historical_official_store_announcement",
+      "license": "Public link and independently authored factual paraphrase; no copied article text or artwork.",
+      "notes": "At Steam Direct introduction Valve described 30-day new-developer wait and separate Coming Soon period."
     }
   ],
   "claims": [
@@ -4275,6 +4286,73 @@
       "observed_at": "2026-10-28",
       "confidence": "high",
       "limitations": "Models may share input signals, selection effects and exposure; requires audit-matched merchant transactions across all sales strata."
+    },
+    {
+      "id": "steam-wait-current-docs-agree30",
+      "text": "On review October 28, 2026, both Valve's English Steam Direct page and English Onboarding guide explicitly describe a 30-day wait from fee payment before the initial titles may release.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-onboarding-doc"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Not a recorded partner-specific eligibility check; published pages can be edited and cached without visible revision timestamps."
+    },
+    {
+      "id": "steam-wait-previous21-historical",
+      "text": "An earlier capture of the Valve onboarding page documented a conflicting 21-day sentence; reinspection now returns 30 days on that same English documentation URL.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-onboarding-doc"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "No primary source establishes when or why the older wording was published or amended; do not invent a policy change date."
+    },
+    {
+      "id": "steam-wait-two-weeks-separate-overlap",
+      "text": "Valve also requires a publicly visible Coming Soon page for at least two weeks before initial game release.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-onboarding-doc",
+        "steam-coming-soon-doc"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The 14-day page period and 30-day post-fee period can run concurrently; do not unconditionally add them into a 44-day wait."
+    },
+    {
+      "id": "steam-wait-store-build-review-beforelaunch",
+      "text": "Steamworks requires required store and build reviews completed before the developer can release, separately from elapsed onboarding and Coming Soon time.",
+      "source_ids": [
+        "steam-release-process-doc",
+        "steam-review-process-doc"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Publicly described review durations are usual ranges, not automatic approvals or release guarantees."
+    },
+    {
+      "id": "steam-wait-calculate-lower-bound-not-sla",
+      "text": "For launch planning the earliest candidate date is no sooner than the maximum of fee payment plus 30 days, public Coming Soon page plus 14 days, and completed review approvals.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-coming-soon-doc",
+        "steam-release-process-doc"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Only a conservative minimum from visible published rules; holidays, manual account controls, unmet review or partner-specific limits may push release later."
+    },
+    {
+      "id": "steam-wait-primary-30-historical2017",
+      "text": "Valve's Steam Direct public launch announcement in 2017 also described a 30-day initial-game wait, showing a historically documented 30-day rule independent of current web pages.",
+      "source_ids": [
+        "steam-steamdirect-2017-news"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The 2017 announcement does not prove uninterrupted 30-day enforcement over every intervening year."
     }
   ],
   "observations": [],
@@ -4282,5 +4360,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research now adds dated Gamalytic partial-year 2025 low-sales models, excluded-low-sales model validation, VG Insights wishlist selection and mathematically bounded January 2026 model-zero proportions. No actual zero sales or publisher profit has been validated."
+  "summary": "Steam research now verifies current official 30-day first-release wait in both Steam Direct and Onboarding (while preserving earlier 21-day discrepancy), plus limits on third-party sales models and actual zero revenue."
 }

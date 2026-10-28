@@ -1,6 +1,6 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 64% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 65% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
@@ -291,6 +291,10 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## Steam first-release waiting period recheck
+
+The [dated official-source comparison](../ontology/steam/current-first-release-wait-recheck-2026.md) records that both current Valve onboarding/Steam Direct English pages now give **30 days** from app-fee payment, with an independently overlapping **14-day** public Coming Soon clock. The older 21-day captured text and unknown historical switch date are preserved; a [synthetic schedule-floor calculator](../site/steam-release-floor.mjs) refuses to promise actual partner eligibility. **Current score 65%** (exact 65.051%; Δ +1 pp from 64%).
+
 ## Steam model validation and zero-identification bounds checkpoint
 
 The [2025 partial-year model and January 2026 low-end evidence audit](../ontology/steam/model-validation-and-low-end-bounds-2026.md) records distinct GameDiscoverCo/Gamalytic samples, the exclusion of under-1,000-copy sellers from Gamalytic's disclosed-unit validation, VG Insights' review-truncated wishlist calibration, and a [tested synthetic-only bounds helper](../site/steam-model-bounds.mjs) for missing modeled estimates. **Current score 64%** (exact 64.317%; Δ +1 pp from 63%). Marketwide actual zero-paid order share remains unknown.
@@ -367,7 +371,7 @@ The [wishlist and visibility report](../ontology/steam/discovery-wishlists-and-v
 
 ## First evidence-based checkpoint
 
-[Reviewed public Steamworks material](../ontology/steam/entry-review-and-reporting-2026.md) documents onboarding, app fees and recoupment, approval, payment rails, and gross-to-net report semantics. The conflicting **21-day versus 30-day waiting periods** in two Valve documents remain explicitly unresolved. Six tasks are fully verified and 22 are partially researched. **The original checklist below remains the stable scope, not a live assertion that each item is incomplete; for current statuses consult [the machine plan](steam.json) and [baseline queue](../queues/steam.json).**
+[Reviewed public Steamworks material](../ontology/steam/entry-review-and-reporting-2026.md) documents onboarding, app fees and recoupment, approval, payment rails, and gross-to-net report semantics. **New recheck:** current English Valve pages both say **30 days**; the earlier captured **21-day** text is historic and the precise change date remains unverified. Six tasks are fully verified and 22 are partially researched. **The original checklist below remains the stable scope, not a live assertion that each item is incomplete; for current statuses consult [the machine plan](steam.json) and [baseline queue](../queues/steam.json).**
 
 ## Evidence and stopping rules
 
@@ -395,4 +399,4 @@ The [wishlist and visibility report](../ontology/steam/discovery-wishlists-and-v
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 64%** rounded task-weighted progress across 293 tasks; previous 63%, Δ +1 pp (exact 64.317%). 41 tasks fully complete and 208 partly advanced; 74 public sources and 335 bounded claims. No private sales data, hidden files, merchant reports or advertising experiments.
+**Completion: 65%** rounded task-weighted progress across 293 tasks; previous 64%, Δ +1 pp (exact 65.051%). 41 fully verified and 210 partly researched; 75 sources and 341 claims. No private account access, paid release or merchant transactions.

@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 64,
+  "progress_percent": 65,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -88,7 +88,7 @@
         "steam/identity/document-store-geography-and-languages"
       ],
       "phase": 1,
-      "progress_percent": 53
+      "progress_percent": 55
     },
     {
       "id": "access",
@@ -119,7 +119,7 @@
         "steam/access/plan-low-budget-legal-entity-scenarios"
       ],
       "phase": 1,
-      "progress_percent": 38
+      "progress_percent": 47
     },
     {
       "id": "economics",
@@ -462,7 +462,7 @@
         "steam/review/prepare-public-publication-qa-checklist"
       ],
       "phase": 1,
-      "progress_percent": 68
+      "progress_percent": 69
     },
     {
       "id": "special-games",
@@ -706,13 +706,17 @@
       "objective": "Research research dated changes in release, distribution, recommendation and payment regimes.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research dated changes in release, distribution, recommendation and payment regimes. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/revenue-share-tiers-2018-2026.json",
-        "ontology/steam/revenue-share-tiers-2018-2026.md"
+        "ontology/steam/revenue-share-tiers-2018-2026.md",
+        "ontology/steam/current-first-release-wait-recheck-2026.md",
+        "ontology/steam/current-first-release-wait-recheck-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/revenue-share-tiers-2018-2026.md",
+      "artifact": "ontology/steam/current-first-release-wait-recheck-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -724,14 +728,17 @@
       "objective": "Research distinguish official documents, public catalog observations, model estimates and permissioned Steamworks merchant records.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Distinguish official documents, public catalog observations, model estimates and permissioned Steamworks merchant records. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/review-data-and-sales-estimation-2026.md",
         "ontology/steam/review-data-and-sales-estimation-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/current-first-release-wait-recheck-2026.md",
+        "ontology/steam/current-first-release-wait-recheck-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md"
       ],
-      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
+      "artifact": "ontology/steam/current-first-release-wait-recheck-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -864,16 +871,18 @@
       "objective": "Research verify minimum elapsed time after onboarding, Coming Soon requirements and review lead time.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Verify minimum elapsed time after onboarding, Coming Soon requirements and review lead time. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
         "ontology/steam/entry-review-and-reporting-2026.md",
         "specimens/steam.json",
         "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
-        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json"
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "ontology/steam/current-first-release-wait-recheck-2026.md",
+        "ontology/steam/current-first-release-wait-recheck-2026.json"
       ],
-      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+      "artifact": "ontology/steam/current-first-release-wait-recheck-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -967,11 +976,16 @@
       "emoji": "🚪",
       "objective": "Research estimate reviewer, asset preparation, forms, build tooling and localization labor separately from cash.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Estimate reviewer, asset preparation, forms, build tooling and localization labor separately from cash. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 45,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/current-first-release-wait-recheck-2026.md",
+        "ontology/steam/current-first-release-wait-recheck-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/current-first-release-wait-recheck-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -4441,7 +4455,7 @@
       "objective": "Research reserve empty fields for median, mean, zero earners, costs, profitability and opportunity limits.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Reserve empty fields for median, mean, zero earners, costs, profitability and opportunity limits. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
@@ -4451,9 +4465,12 @@
         "ontology/steam/utm-traffic-attribution-and-paid-marketing-2026.json",
         "specimens/steam.json",
         "ontology/steam/model-validation-and-low-end-bounds-2026.md",
-        "ontology/steam/model-validation-and-low-end-bounds-2026.json"
+        "ontology/steam/model-validation-and-low-end-bounds-2026.json",
+        "ontology/steam/current-first-release-wait-recheck-2026.md",
+        "ontology/steam/current-first-release-wait-recheck-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md"
       ],
-      "artifact": "ontology/steam/model-validation-and-low-end-bounds-2026.md",
+      "artifact": "ontology/steam/current-first-release-wait-recheck-2026.md",
       "priority": "normal",
       "phase": 1
     },
