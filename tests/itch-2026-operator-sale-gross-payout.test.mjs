@@ -1,0 +1,41 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const get=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('A 2026 operator-confirmed seller sale is not all-platform GMV or a bank payout',()=>{
+ const o=get('ontology/itch-io/2026-operator-verified-summer-sale-gross-payout-waterfall.json'),s=get('specimens/itch-io.json');
+ assert(o.source_ids.every(id=>s.evidence.some(x=>x.id===id)));
+ assert.equal(o.platform_operator_reconciliation.admin_says_examined_seller_account,true);
+ assert.equal(o.platform_operator_reconciliation.reported_sale_purchases,113);
+ assert.equal(o.seller_published_dashboard.sale_gross_usd_displayed,620.79);
+ assert.equal(o.platform_operator_reconciliation.gross_usd_approx,620);
+ assert.equal(o.platform_operator_reconciliation.net_after_processor_and_marketplace_share_usd_approx,535);
+ assert.equal(o.platform_operator_reconciliation.withholding_rate_percent_for_this_account,30);
+ assert.equal(o.platform_operator_reconciliation.amount_after_withholding_payable_usd_approx,375);
+ assert.equal(o.arithmetic.approx_535_after_30_percent_withholding_usd,374.5);
+ assert.equal(o.arithmetic.exact_fee_or_tax_ledger_can_be_derived_from_rounded_report,false);
+ assert.equal(o.observed_population.proven_paid_digital_video_game_orders_only,false);
+ assert.equal(o.platform_operator_reconciliation.actual_bank_deposit_verified,false);
+ assert(Object.values(o.missing).every(x=>x===null));
+ assert.equal(o.privacy.buyer_records_accessed,0);
+ assert.equal(o.privacy.seller_private_spreadsheet_accessed,false);
+});
+test('Seven-day pending accounting is separate from sale gross and does not identify buyers',()=>{
+ const o=get('ontology/itch-io/2026-operator-verified-summer-sale-gross-payout-waterfall.json');
+ assert.equal(o.timing.sale_end_day,'2026-07-06');
+ assert.equal(o.timing.collected_payout_wait_days,7);
+ assert.equal(o.timing.pending_balance_equals_all_sale_gross,false);
+ assert.equal(o.timing.other_account_sales_can_affect_balances,true);
+ assert.equal(o.timing.request_approved_or_bank_paid_proven,false);
+ assert.equal(o.platform_operator_reconciliation.unique_paying_buyers,null);
+ assert.equal(o.platform_operator_reconciliation.paid_game_only_sale_count,null);
+});
+test('Existing transaction-volume task advances without equating one sale with platform-wide demand',()=>{
+ const p=get('plans/itch-io.json'),q=get('queues/itch-io.json');
+ const market=q.queues.flatMap(x=>x.tasks).find(x=>x.id==='market/volume');
+ const demand=p.detail_tasks.find(x=>x.id==='itch-io/market/estimate-paid-purchase-demand');
+ assert.equal(market.status,'in_progress');assert.equal(market.progress,94);
+ assert.equal(demand.status,'in_progress');assert.equal(demand.percent,68);
+ for(const t of [market,demand])for(const path of ['ontology/itch-io/2026-operator-verified-summer-sale-gross-payout-waterfall.json','ontology/itch-io/2026-operator-verified-summer-sale-gross-payout-waterfall.md','tests/itch-2026-operator-sale-gross-payout.test.mjs'])assert(t.evidence.includes(path));
+ assert.equal(p.total_tracked_tasks,244);
+});

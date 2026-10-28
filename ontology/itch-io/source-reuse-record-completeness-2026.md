@@ -2,14 +2,14 @@
 
 Reviewed October 27, 2026. [Structured source metadata](source-reuse-record-completeness-2026.json).
 
-All **225** source records include an attributed public URL, retrieval date, evidence class and independently authored reuse/rights note. The claims register contains **515** bounded statements.
+All **226** source records include an attributed public URL, retrieval date, evidence class and independently authored reuse/rights note. The claims register contains **519** bounded statements.
 
 | Publication date precision | Sources |
 |---|---:|
 | Known YYYY-MM-DD | 107 |
 | Known month only | 3 |
-| Unverified | 115 |
-| **Total** | **225** |
+| Unverified | 116 |
+| **Total** | **226** |
 
 These metadata demonstrate attributable referencing, **not** general legal authority to republish third-party articles, images, files or datasets. Dynamic catalog indices do not establish paid orders, seller identities, profit or buyer conversion. No account or private buyer data were acquired.
 

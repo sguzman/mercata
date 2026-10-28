@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "operator_confirmed_one_seller_2026_summer_sale_gross_net_withholding_and_balance_age",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "itch-operator-verified-july-2026-seller-gross-to-payout-waterfall",
+    "itch-payments"
+  ],
+  "currency": "USD",
+  "observed_population": {
+    "seller_accounts": 1,
+    "reporting_window": "one summer sale ending 2026-07-06",
+    "source_thread_created": "2026-07-09",
+    "operator_reply_day_exact": null,
+    "selected_support_request_not_random_sample": true,
+    "offer_composition": "individual_items_and_bundles",
+    "proven_paid_digital_video_game_orders_only": false,
+    "all_market_purchases_sampled": false
+  },
+  "seller_published_dashboard": {
+    "sale_gross_usd_displayed": 620.79,
+    "source_is_publisher_report": true
+  },
+  "platform_operator_reconciliation": {
+    "admin_says_examined_seller_account": true,
+    "reported_sale_purchases": 113,
+    "gross_usd_approx": 620,
+    "net_after_processor_and_marketplace_share_usd_approx": 535,
+    "withholding_rate_percent_for_this_account": 30,
+    "amount_after_withholding_payable_usd_approx": 375,
+    "numbers_are_approximate": true,
+    "actual_bank_deposit_verified": false,
+    "final_seller_business_profit_usd": null,
+    "gross_and_net_same_seller_sale_scope": true,
+    "zero_refunds_proven": false,
+    "unique_paying_buyers": null,
+    "paid_game_only_sale_count": null,
+    "actual_fee_breakdown_usd": null
+  },
+  "timing": {
+    "sale_end_day": "2026-07-06",
+    "collected_payout_wait_days": 7,
+    "pending_balance_for_last_seven_days": true,
+    "older_released_into_available_balance": true,
+    "pending_balance_equals_all_sale_gross": false,
+    "pending_and_available_are_net_fee_tax_scope": true,
+    "other_account_sales_can_affect_balances": true,
+    "request_approved_or_bank_paid_proven": false
+  },
+  "arithmetic": {
+    "approx_535_after_30_percent_withholding_usd": 374.5,
+    "rounded_operator_estimate_usd_approx": 375,
+    "exact_fee_or_tax_ledger_can_be_derived_from_rounded_report": false,
+    "distinct_buyer_count_known": false
+  },
+  "missing": {
+    "full_refund_adjusted_sale_line_items": null,
+    "transaction_level_bundle_allocation": null,
+    "exact_processor_platform_fees": null,
+    "bank_transfer_date": null,
+    "bank_receipt_usd": null,
+    "eligible_game_sales_demand_cohort": null,
+    "platformwide_transaction_volume": null,
+    "representative_seller_net_income": null,
+    "dev_labor_cost": null,
+    "merchant_final_tax_liability": null
+  },
+  "privacy": {
+    "buyer_records_accessed": 0,
+    "seller_private_spreadsheet_accessed": false,
+    "restricted_account_view_accessed": false,
+    "credentials_used": false
+  },
+  "limitations": [
+    "Operator commentary confirms the specific account and 113 sale purchase events; the USD 620 gross, USD 535 after fees and USD 375 payable amounts are rounded and not precise statement totals.",
+    "The USD 620.79 displayed by the seller is a sale widget figure, mixing bundle transactions and individually sold items; cannot attribute all 113 to paid downloadable video games.",
+    "The 30% withholding is account-specific and can change with the seller's tax identity and treaty circumstances; it is not platformwide withholding or final personal tax.",
+    "The seven-day waiting period governs eligibility for the available bucket, not a seller's final net bank deposit, settlement date or tax-adjusted profit.",
+    "The sale-end date is July 6, 2026 and the support topic opened July 9; exact timestamp of the operator's later explanation is not independently verified.",
+    "The public thread links an access-restricted spreadsheet about private purchases; it was not opened, copied, linked in public project artifacts or used for any claim.",
+    "One merchant support case does not estimate platform total orders, zero-sale shares, unique buyers, merchant income mean or median."
+  ]
+}

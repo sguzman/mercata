@@ -22,3 +22,4 @@ The published direct Stripe examples cover **United States (USD), Canada (CAD/US
 For non-US publishers using collected payouts, the [payment guide](https://itch.io/docs/creators/payments) documents a **30% default withholding rate** with tax-identity and treaty-related qualifications. It is *not* a blanket tax rate for everyone, nor the same as buyer VAT or the seller's eventual personal income tax. A local bank's FX spread, provider transfer fee, valid tax treaty treatment and seller's legal liabilities require individual verified inputs.
 
 **Measurement boundary:** No commercial account, processor transfer, country approval, purchaser record or bank settlement was examined. All actual merchant FX costs, net bank receipts, withholding rates, profit and number of eligible sellers remain unknown.
+NaN

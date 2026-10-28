@@ -2495,6 +2495,17 @@
       "evidence_class": "dataset_publication_and_reuse_rights_evidence",
       "license": "Cited, independently summarized public record only; no dataset contents reused.",
       "notes": "Earlier public record lists restricted files; later 2025 record lists downloadable files. Neither access state licenses embedded games."
+    },
+    {
+      "id": "itch-operator-verified-july-2026-seller-gross-to-payout-waterfall",
+      "url": "https://itch.io/t/6596992/pending-balance-not-updating",
+      "title": "Pending Balance not updating — July 2026 seller report and operator reconciliation",
+      "publisher": "RagnaPixel public seller report; leafo, itch.io site administrator, public account-specific reply",
+      "published_at": null,
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "platform_operator_verified_one_account_mixed_sale_purchase_gross_fee_tax_withholding_reconciliation",
+      "license": "Only independently paraphrased public numerical summaries and link; no personal information, full conversation, private spreadsheets or account screenshots reused.",
+      "notes": "Public support topic opened July 9, 2026. Date of operator reply/revisions not independently verified. Seller reported summer sale dashboard $620.79 gross; operator looked at the seller account and confirmed 113 purchases gross about $620, net after fees/revenue share about $535, account-specific 30% tax withholding, and payable about $375. Operator confirmed sale tracker combines individual item and bundle purchases. Sale ended July 6, 2026; pending balance holds purchases less than 7 days old and available balance shows matured receipts. Seller later links an access-restricted spreadsheet with personal client data; Mercata did not access it."
     }
   ],
   "claims": [
@@ -7795,6 +7806,49 @@
       "confidence": "high",
       "observed_at": "2026-10-27",
       "limitations": "Record metadata only; no archive downloads, per-game rights assessment or independent data-sales audit."
+    },
+    {
+      "id": "itch-2026-operator-verified-113-sales-mixed-items",
+      "text": "In a public 2026 support thread itch.io's administrator checked one publisher's summer sale and confirmed 113 purchases with around USD 620 gross (seller's displayed sale tracker USD 620.79), mixing bundles and individual items.",
+      "source_ids": [
+        "itch-operator-verified-july-2026-seller-gross-to-payout-waterfall"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "One selected seller and promotional window, not platform gross merchandise value, mandatory paid video-game purchases, distinct buyers or a transaction-level export."
+    },
+    {
+      "id": "itch-2026-seller-fees-reduce-gross-to-net",
+      "text": "The platform administrator reconciled approximately USD 620 of gross charges from that seller's 113 sale purchases to approximately USD 535 after payment processing and the configured platform revenue share.",
+      "source_ids": [
+        "itch-operator-verified-july-2026-seller-gross-to-payout-waterfall",
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Values are operator-rounded estimates, not exact fee lines, current bank deposits, game development costs or full refund audit; do not subtract approximations from the seller's cents-precise gross as exact fees."
+    },
+    {
+      "id": "itch-2026-seller-30-percent-withholding-not-universal",
+      "text": "The operator said this seller's tax interview resulted in 30% withholding, bringing an approximately USD 535 after-fee amount to approximately USD 375 payable; that rate depends on an individual's tax information and is not universal across itch.io merchants.",
+      "source_ids": [
+        "itch-operator-verified-july-2026-seller-gross-to-payout-waterfall",
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Account-specific withholding and rounded amounts; no bank-settled receipt, final income-tax liability, seller location or applicable tax treaty independently verified."
+    },
+    {
+      "id": "itch-2026-pending-available-is-an-aged-net-balance-not-gross",
+      "text": "For the sale ending July 6, 2026, itch.io's administrator explained that amounts older than the seven-day transaction waiting period move from pending to available; comparing only pending payout balance with a multi-day gross sale tracker can make receipts appear missing.",
+      "source_ids": [
+        "itch-operator-verified-july-2026-seller-gross-to-payout-waterfall",
+        "itch-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Pending and available include the publisher's other recent transactions and net deductions; neither is a sale-specific final settled payout or direct proof of payment method acceptance elsewhere."
     }
   ],
   "observations": [
