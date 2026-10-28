@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "historical_marginal_revenue_share_and_attribution",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-2018-tier-announcement",
+    "steam-2018-tiers-ars",
+    "steam-reporting-faq-doc",
+    "steam-tax-faq-doc"
+  ],
+  "claim_ids": [
+    "tiers-2018-70-75-80",
+    "tiers-2018-marginal-not-flat",
+    "tiers-2018-announcement-vs-eligibility",
+    "tiers-2018-content-inclusion",
+    "tiers-extra-share-eligible-appids",
+    "tiers-mixed-package-attribution-ambiguous",
+    "tiers-gross-revenue-not-profit",
+    "tiers-public-terms-not-individual-contract",
+    "tiers-2018-illustration-12m"
+  ],
+  "historical_schedule": {
+    "announcement_date": "2018-11-30",
+    "qualifying_sales_from": "2018-10-01",
+    "currency": "USD",
+    "basis": "eligible_adjusted_revenue",
+    "marginal": true,
+    "tiers": [
+      {
+        "lower": 0,
+        "upper": 10000000,
+        "publisher_fraction": 0.7,
+        "valve_fraction": 0.3
+      },
+      {
+        "lower": 10000000,
+        "upper": 50000000,
+        "publisher_fraction": 0.75,
+        "valve_fraction": 0.25
+      },
+      {
+        "lower": 50000000,
+        "upper": null,
+        "publisher_fraction": 0.8,
+        "valve_fraction": 0.2
+      }
+    ],
+    "included_categories": [
+      "game_packages",
+      "dlc",
+      "in_game_sales",
+      "community_marketplace_game_fees"
+    ]
+  },
+  "current_documentation": {
+    "supports_additional_share": "yes",
+    "game_and_application_appids": true,
+    "dlc_only_to_parent": true,
+    "multi_game_packages_need_possible_manual_mapping": true
+  },
+  "contract_assessment": {
+    "signed_current_agreement_available": false,
+    "all_publishers_identical_rates": null,
+    "historical_schedule_known": true,
+    "live_partner_payout_verified": false
+  },
+  "hypothetical_case": {
+    "eligible_adjusted_revenue_usd": 12000000,
+    "historical_publisher_share_before_other_adjustments_usd": 8500000,
+    "actual_sale": false
+  },
+  "unknown": {
+    "actual_gross_game_sales": null,
+    "actual_game_units": null,
+    "actual_publisher_share_usd": null,
+    "actual_bank_receipts_usd": null,
+    "developer_after_labor_profit_usd": null
+  },
+  "limits": [
+    "Original historical announcement does not constitute verification of all current 2026 partner agreements.",
+    "The tiers are marginal and apply to adjusted revenue, not new-unit counts or gross checkout before VAT/refunds.",
+    "Actual commission, publisher splitting, withholding, bank fees and developer profit cannot be calculated without permitted private records."
+  ]
+}

@@ -136,6 +136,28 @@
       "evidence_class": "official_current_steam_wishlist_guide",
       "license": "Source URL and independently authored short factual summary; no source text, private data or artwork reproduced.",
       "notes": "Current guidance; no private sales or activation reports accessed."
+    },
+    {
+      "id": "steam-2018-tier-announcement",
+      "url": "https://steamcommunity.com/groups/steamworks/announcements/detail/1697191267930157838",
+      "title": "New Revenue Share Tiers and other updates to the Steam Distribution Agreement",
+      "publisher": "Valve Corporation",
+      "published_at": "2018-11-30",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_historical_2018_policy_announcement",
+      "license": "Title, public URL and brief independently written numerical summary only, without reprinting announcement body.",
+      "notes": "Original Valve URL today returned nearly empty body via text viewer; historical split and thresholds cross-checked using contemporaneous reporting. Public announcement is not a publisher's signed present-day distribution agreement."
+    },
+    {
+      "id": "steam-2018-tiers-ars",
+      "url": "https://arstechnica.com/gaming/2018/12/steam-now-gives-its-biggest-developers-a-bigger-cut-of-the-revenue/",
+      "title": "Valve changes developer terms to try to retain top games",
+      "publisher": "Ars Technica",
+      "published_at": "2018-12-03",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "contemporaneous_independent_reporting_on_valve_tier_announcement",
+      "license": "Article URL, title and brief independently authored numerical interpretation only; text, image and byline content not redistributed.",
+      "notes": "Confirms 2018 marginal $10m and $50m thresholds; secondary corroboration of original public announcement."
     }
   ],
   "claims": [
@@ -531,6 +553,103 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "No calibrated sales prediction, representative outcome or actual conversion denominator."
+    },
+    {
+      "id": "tiers-2018-70-75-80",
+      "text": "Valve's late-2018 announced tier schedule offers publisher share of 70% on first USD 10 million, 75% on incremental revenue from USD 10 million to USD 50 million, and 80% above USD 50 million.",
+      "source_ids": [
+        "steam-2018-tier-announcement",
+        "steam-2018-tiers-ars"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Historical announced standard marginal terms; signed individual 2026 contracts, exceptions and exact eligible adjusted revenue have not been viewed."
+    },
+    {
+      "id": "tiers-2018-marginal-not-flat",
+      "text": "The higher publisher share after USD 10 million and USD 50 million is marginal rather than retroactively applying to preceding revenue.",
+      "source_ids": [
+        "steam-2018-tier-announcement",
+        "steam-2018-tiers-ars"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "This is revenue, not copies, and a hypothetical schedule does not establish any developer's reported take."
+    },
+    {
+      "id": "tiers-2018-announcement-vs-eligibility",
+      "text": "The late-November 2018 announced tier change described qualifying revenue beginning October 1, 2018 rather than counting all revenue before that date.",
+      "source_ids": [
+        "steam-2018-tier-announcement",
+        "steam-2018-tiers-ars"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "The 2018 policy effective/accrual date is not the current operative agreement for any publisher."
+    },
+    {
+      "id": "tiers-2018-content-inclusion",
+      "text": "The 2018 announcement described revenue from game packages, DLC, in-game sales and game-specific Community Market fees as included in tier calculations.",
+      "source_ids": [
+        "steam-2018-tier-announcement",
+        "steam-2018-tiers-ars"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Not all account revenue necessarily belongs to one AppID; mapping mixed packages or parent app DLC requires separate rules."
+    },
+    {
+      "id": "tiers-extra-share-eligible-appids",
+      "text": "Valve's current finance FAQ says Game and Application AppIDs can accrue additional revenue share and DLC-only packages generally credit their parent game.",
+      "source_ids": [
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "This does not disclose an individual publisher's contract, net settlement or any title's qualifying tier."
+    },
+    {
+      "id": "tiers-mixed-package-attribution-ambiguous",
+      "text": "Valve says a package containing multiple Game or Application AppIDs may require manual attribution for additional revenue-share accounting.",
+      "source_ids": [
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "An attribution rule is not a claim of actual transaction errors or missing publisher revenue."
+    },
+    {
+      "id": "tiers-gross-revenue-not-profit",
+      "text": "Steam's published share is applied after revenue adjustments such as taxes, refunds and chargebacks, not to each gross retail checkout amount nor to net profit after production expenses.",
+      "source_ids": [
+        "steam-tax-faq-doc",
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Actual tax, contractual share, holding deductions, bank fees, revenue splitting and labor costs remain unknown."
+    },
+    {
+      "id": "tiers-public-terms-not-individual-contract",
+      "text": "Historical public tiers and the current Steamworks FAQ do not authenticate the exact revenue-share terms for every specific partner and game as of October 2026.",
+      "source_ids": [
+        "steam-2018-tier-announcement",
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "No partner-only agreements or access were sought; source coverage cannot prove all exceptions absent."
+    },
+    {
+      "id": "tiers-2018-illustration-12m",
+      "text": "Under the 2018 standard marginal schedule a purely hypothetical $12 million of eligible adjusted revenue gives $8.5 million pre-withholding publisher share ($7 million plus $1.5 million).",
+      "source_ids": [
+        "steam-2018-tier-announcement",
+        "steam-2018-tiers-ars"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "A mathematical illustration only; excludes withholding, external publisher splits, production expenses and excludes retail gross that has not been adjusted."
     }
   ],
   "observations": [],
