@@ -455,6 +455,61 @@
       "evidence_class": "third_party_secondary_reanalysis_of_public_model_sheet",
       "notes": "Reports estimated gross thresholds, mean, and concentration for same January 2026 1,230-game population. Not a second independent sales panel.",
       "license": "Only link, metadata and independently authored short factual summaries or aggregate numeric excerpts; no source text, raw spreadsheet contents, images or proprietary model rows redistributed."
+    },
+    {
+      "id": "steam-nextfest-evergreen-2026",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest?l=english",
+      "title": "Steam Next Fest",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_policy_2026",
+      "license": "Only public link, metadata and brief independently authored interpretation; no source text or images redistributed.",
+      "notes": "Reviewed policy about prelaunch event mechanics; no game enrollment, partner credentials, actual traffic or sales."
+    },
+    {
+      "id": "steam-nextfest-october2026",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october?trk=article-ssr-frontend-pulse_little-text-block",
+      "title": "Steam Next Fest: October 2026",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_policy_2026",
+      "license": "Only public link, metadata and brief independently authored interpretation; no source text or images redistributed.",
+      "notes": "Reviewed policy about prelaunch event mechanics; no game enrollment, partner credentials, actual traffic or sales."
+    },
+    {
+      "id": "steam-demo-app-management-2026",
+      "url": "https://partner.steamgames.com/doc/store/application/demos?l=english",
+      "title": "Demos",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_policy_2026",
+      "license": "Only public link, metadata and brief independently authored interpretation; no source text or images redistributed.",
+      "notes": "Reviewed policy about prelaunch event mechanics; no game enrollment, partner credentials, actual traffic or sales."
+    },
+    {
+      "id": "steam-playtest-app-management-2026",
+      "url": "https://partner.steamgames.com/doc/features/playtest?l=english",
+      "title": "Steam Playtest",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_policy_2026",
+      "license": "Only public link, metadata and brief independently authored interpretation; no source text or images redistributed.",
+      "notes": "Reviewed policy about prelaunch event mechanics; no game enrollment, partner credentials, actual traffic or sales."
+    },
+    {
+      "id": "steam-tags-official-2026",
+      "url": "https://partner.steamgames.com/doc/store/tags?language=english",
+      "title": "Steam Tags",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_policy_2026",
+      "license": "Only public link, metadata and brief independently authored interpretation; no source text or images redistributed.",
+      "notes": "Reviewed policy about prelaunch event mechanics; no game enrollment, partner credentials, actual traffic or sales."
     }
   ],
   "claims": [
@@ -2046,6 +2101,168 @@
       "confidence": "medium",
       "observed_at": "2026-10-28",
       "limitations": "Unknown legal partner deduplication, prior portfolios, tax, publishing share, operating costs, platform choice, and nonresponse."
+    },
+    {
+      "id": "nextfest-one-participation",
+      "text": "Valve permits a qualifying game to participate in only one Steam Next Fest edition.",
+      "source_ids": [
+        "steam-nextfest-evergreen-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Reskins, prologues and other editions do not reset eligibility; no marketwide attendance or measured impact."
+    },
+    {
+      "id": "nextfest-unreleased-base-game",
+      "text": "Next Fest requires an unreleased base game with a public Steam store page and publicly playable demo when the event begins.",
+      "source_ids": [
+        "steam-nextfest-evergreen-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A prior paid Early Access release counts as released for festival eligibility."
+    },
+    {
+      "id": "nextfest-paid-early-access-ineligible",
+      "text": "Games planned for paid Early Access can join before release, but entering Early Access before or during their chosen Next Fest disqualifies them.",
+      "source_ids": [
+        "steam-nextfest-evergreen-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The rule is about event enrollment, not Steam publishing permission."
+    },
+    {
+      "id": "nextfest-prologue-not-new",
+      "text": "Valve excludes prologues, short previews and re-releases of already released games from Next Fest.",
+      "source_ids": [
+        "steam-nextfest-evergreen-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Does not mean those formats cannot publish outside the festival."
+    },
+    {
+      "id": "nextfest-playtest-eligible",
+      "text": "Prior Steam Playtest participation does not remove Next Fest eligibility, but Valve advises against simultaneously running the Playtest and public demo.",
+      "source_ids": [
+        "steam-nextfest-evergreen-2026",
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Splitting attention is a qualitative caution, not measured loss of orders."
+    },
+    {
+      "id": "nextfest-no-length-requirement",
+      "text": "Valve says Next Fest does not require a particular demo length, exclusivity or recency.",
+      "source_ids": [
+        "steam-nextfest-evergreen-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A playable public demo and other requirements still apply."
+    },
+    {
+      "id": "nextfest-oct-2026-dates",
+      "text": "The October 2026 festival ran October 19 through October 26 at 10:00 AM PDT.",
+      "source_ids": [
+        "steam-nextfest-october2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Edition-specific historical date; future dates may differ."
+    },
+    {
+      "id": "nextfest-oct-2026-review-deadline",
+      "text": "Valve set September 28, 2026 as the submission deadline for required demo review material for October's festival.",
+      "source_ids": [
+        "steam-nextfest-october2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Not a February 2027 deadline; passing review is not proof of game quality."
+    },
+    {
+      "id": "nextfest-press-preview-optional",
+      "text": "The October 2026 Next Fest offered an optional press preview from October 8 before the public event.",
+      "source_ids": [
+        "steam-nextfest-october2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "No evidence of the preview's causal acquisition effect was collected."
+    },
+    {
+      "id": "steam-demo-separate-appid",
+      "text": "A Steam demo is a separate AppID linked to its base game with its own configurations and release process.",
+      "source_ids": [
+        "steam-demo-app-management-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Demo downloads are free engagement and not base-game paid units."
+    },
+    {
+      "id": "steam-playtest-separate-appid",
+      "text": "Steam Playtest uses a separate free child AppID with gated or open signups that do not change base game wishlists or reviews.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Signups are not confirmed players or paid customers."
+    },
+    {
+      "id": "steam-playtest-free-access",
+      "text": "Valve forbids charging for Steam Playtest access or selling Playtest keys and forbids Playtest in-game monetization.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Actual revenue of a paid Early Access product must be measured separately."
+    },
+    {
+      "id": "steam-playtest-not-base-refund-hours",
+      "text": "Playtest playtime does not count toward the main game's refund playtime limit, and a Playtest-only user cannot review an unreleased base game.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Separate activity counters when evaluating purchase and retention funnels."
+    },
+    {
+      "id": "steam-demo-notify-cooldown",
+      "text": "Valve notes a two-week per-AppID wishlist notification cooldown that matters when timing demo announcements.",
+      "source_ids": [
+        "steam-demo-app-management-2026",
+        "steam-wishlist-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A notification is conditional and not an observed purchase."
+    },
+    {
+      "id": "steam-tags-browse-weight",
+      "text": "Steam's tag guidance says prioritized genre tags influence category browsing and similarity placement, with top-five tags especially consequential.",
+      "source_ids": [
+        "steam-tags-official-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Exposure relationships are not an experimental proof of increased sales."
+    },
+    {
+      "id": "steam-festival-not-earnings",
+      "text": "Next Fest provides player discovery and demo feedback but does not itself supply verified causal wishlist or purchase conversion rates.",
+      "source_ids": [
+        "steam-nextfest-evergreen-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "No participant cohort, control group, partner analytics or paid order data studied."
     }
   ],
   "observations": [],
@@ -2053,5 +2270,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research includes official market entry, finance and refund policy; a historical paid-release cohort methodology; and a bounded 1,230-game January 2026 modeled gross-sales distribution with explicit uncertainty, low-end zeros modeled rather than audited. Real publisher income, developer profit and exact-zero paid-order shares remain unknown."
+  "summary": "Steam research now documents a modeled January 2026 launch-cohort distribution and official Steam Next Fest/demo/Playtest prelaunch mechanics, alongside commercial rules and protected-data measurement boundaries. Publisher profits and exact-zero sales remain unknown."
 }

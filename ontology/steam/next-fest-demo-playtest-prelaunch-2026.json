@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_nextfest_demo_playtest_policy_and_experiment_design",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-nextfest-evergreen-2026",
+    "steam-nextfest-october2026",
+    "steam-demo-app-management-2026",
+    "steam-playtest-app-management-2026",
+    "steam-tags-official-2026",
+    "steam-wishlist-official"
+  ],
+  "claim_ids": [
+    "nextfest-one-participation",
+    "nextfest-unreleased-base-game",
+    "nextfest-paid-early-access-ineligible",
+    "nextfest-prologue-not-new",
+    "nextfest-playtest-eligible",
+    "nextfest-no-length-requirement",
+    "nextfest-oct-2026-dates",
+    "nextfest-oct-2026-review-deadline",
+    "nextfest-press-preview-optional",
+    "steam-demo-separate-appid",
+    "steam-playtest-separate-appid",
+    "steam-playtest-free-access",
+    "steam-playtest-not-base-refund-hours",
+    "steam-demo-notify-cooldown",
+    "steam-tags-browse-weight",
+    "steam-festival-not-earnings"
+  ],
+  "eligibility": {
+    "must_be_unreleased": true,
+    "must_have_public_base_store": true,
+    "must_have_public_demo": true,
+    "allowed_fest_participations_per_title": 1,
+    "previous_playtest_disqualifies": false,
+    "already_live_early_access_allowed": false,
+    "prologue_from_existing_title_allowed": false,
+    "demo_length_minimum": null
+  },
+  "october_2026": {
+    "began_date": "2026-10-19",
+    "ended_date": "2026-10-26",
+    "time_zone": "PDT",
+    "submission_deadline": "2026-09-28",
+    "press_preview_start": "2026-10-08"
+  },
+  "formats": {
+    "base_appid": "wishlists_and_future_paid_sales",
+    "demo_appid": "separate_free_product",
+    "playtest_appid": "separate_free_child_product",
+    "playtest_paid_access_allowed": false,
+    "playtest_base_review_eligible": false,
+    "playtest_base_refund_playtime_counts": false
+  },
+  "design_only": {
+    "observed_demo_installs": null,
+    "observed_playtest_signups": null,
+    "observed_base_game_wishlists": null,
+    "observed_paid_sales": null,
+    "causal_uplift": null,
+    "account_actions_taken": false,
+    "paid_experiments": false
+  },
+  "measurement_guardrails": [
+    "Never count a free demo install as a paid sale",
+    "Never count playtest signup as confirmed player or purchaser",
+    "An event visit or wishlist addition does not identify a sale",
+    "Control for release timing, tags, acquisition channels and event seasonality",
+    "No causal uplift asserted from a pre/post increase alone"
+  ]
+}

@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 36,
+  "progress_percent": 41,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -88,7 +88,7 @@
         "steam/identity/document-store-geography-and-languages"
       ],
       "phase": 1,
-      "progress_percent": 38
+      "progress_percent": 39
     },
     {
       "id": "access",
@@ -190,7 +190,7 @@
         "steam/market/document-cohort-coverage-uncertainty"
       ],
       "phase": 2,
-      "progress_percent": 43
+      "progress_percent": 45
     },
     {
       "id": "discovery",
@@ -225,7 +225,7 @@
         "steam/discovery/design-controlled-acquisition-measurements"
       ],
       "phase": 2,
-      "progress_percent": 39
+      "progress_percent": 54
     },
     {
       "id": "competition",
@@ -360,7 +360,7 @@
         "steam/sales/design-after-launch-retention-metrics"
       ],
       "phase": 3,
-      "progress_percent": 52
+      "progress_percent": 57
     },
     {
       "id": "risk",
@@ -431,7 +431,7 @@
         "steam/strategy/design-selection-aware-case-study-comparison"
       ],
       "phase": 4,
-      "progress_percent": 19
+      "progress_percent": 35
     },
     {
       "id": "review",
@@ -462,7 +462,7 @@
         "steam/review/prepare-public-publication-qa-checklist"
       ],
       "phase": 1,
-      "progress_percent": 57
+      "progress_percent": 58
     },
     {
       "id": "special-games",
@@ -496,7 +496,7 @@
         "steam/special-games/plan-live-game-maintenance-and-sunset"
       ],
       "phase": 2,
-      "progress_percent": 12
+      "progress_percent": 26
     }
   ],
   "deliverables": [
@@ -602,7 +602,7 @@
       "objective": "Research define game, demo, playtest, DLC, soundtrack, application, microtransaction and bundle units.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define game, demo, playtest, DLC, soundtrack, application, microtransaction and bundle units. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
@@ -611,9 +611,11 @@
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md"
       ],
-      "artifact": "ontology/steam/fixed-paid-release-cohort-2026.md",
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -625,16 +627,18 @@
       "objective": "Research map AppID, SubID, package, depot, build, branch and user license without equating them to purchases.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Map AppID, SubID, package, depot, build, branch and user license without equating them to purchases. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 90,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/fixed-paid-release-cohort-2026.md",
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md"
       ],
-      "artifact": "ontology/steam/fixed-paid-release-cohort-2026.md",
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1609,11 +1613,15 @@
       "emoji": "🌐",
       "objective": "Research define percent of comparable releases with demos, test builds and Coming Soon periods.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define percent of comparable releases with demos, test builds and Coming Soon periods. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 45,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -1805,13 +1813,16 @@
       "objective": "Research compare public page age, first wishlist availability and launch timing.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare public page age, first wishlist availability and launch timing. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 25,
+      "percent": 45,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -1822,11 +1833,15 @@
       "emoji": "🧭",
       "objective": "Research identify requirements, demo availability, festival scheduling and measured downstream interest.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Identify requirements, demo availability, festival scheduling and measured downstream interest. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -1837,11 +1852,15 @@
       "emoji": "🧭",
       "objective": "Research compare themed events, sales, daily deals and featured slots by unit of exposure.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare themed events, sales, daily deals and featured slots by unit of exposure. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 65,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -1886,13 +1905,16 @@
       "objective": "Research study tag completeness, tag ranking, query volume proxies and competition.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Study tag completeness, tag ranking, query volume proxies and competition. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -1991,13 +2013,16 @@
       "objective": "Research specify permissioned merchant attribution exports and causal limitations.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify permissioned merchant attribution exports and causal limitations. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 20,
+      "percent": 70,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2853,16 +2878,18 @@
       "objective": "Research separate exposure, click, wishlist, follow, prelaunch demo and launch order.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate exposure, click, wishlist, follow, prelaunch demo and launch order. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
         "ontology/steam/entry-review-and-reporting-2026.md",
         "specimens/steam.json",
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3050,13 +3077,16 @@
       "objective": "Research separate demo plays/downloads and actual game checkouts by tracked cohorts.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate demo plays/downloads and actual game checkouts by tracked cohorts. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 30,
+      "percent": 55,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3067,11 +3097,15 @@
       "emoji": "🛒",
       "objective": "Research map player activation, wishlist outcomes and paid orders with permissioned joins.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Map player activation, wishlist outcomes and paid orders with permissioned joins. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 55,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3486,11 +3520,15 @@
       "emoji": "🧪",
       "objective": "Research specify independent variable, permissioned metrics, time horizon, cost and stop condition.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify independent variable, permissioned metrics, time horizon, cost and stop condition. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 60,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -3501,11 +3539,15 @@
       "emoji": "🧪",
       "objective": "Research plan feasible festival/demonstration contrasts without implying causal identification.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Plan feasible festival/demonstration contrasts without implying causal identification. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 90,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -3550,11 +3592,15 @@
       "emoji": "🧪",
       "objective": "Research use comparable paid release cohorts and explicit audience definitions.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Use comparable paid release cohorts and explicit audience definitions. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 45,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -3616,11 +3662,15 @@
       "emoji": "🧪",
       "objective": "Research define source-linked exposure and purchase attribution with a controlled feasible budget.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define source-linked exposure and purchase attribution with a controlled feasible budget. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 60,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -3661,11 +3711,15 @@
       "emoji": "🧪",
       "objective": "Research specify minimum viable game, roadmap credibility, server readiness and update budget.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify minimum viable game, roadmap credibility, server readiness and update budget. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 60,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -3816,7 +3870,7 @@
       "objective": "Research track dated changes and archive URLs where permitted instead of silently substituting current rules.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Track dated changes and archive URLs where permitted instead of silently substituting current rules. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
@@ -3825,9 +3879,11 @@
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
         "ontology/steam/discovery-wishlists-and-visibility-2026.md",
         "ontology/steam/review-data-and-sales-estimation-2026.md",
-        "ontology/steam/review-data-and-sales-estimation-2026.json"
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md"
       ],
-      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -3838,8 +3894,8 @@
       "emoji": "🔬",
       "objective": "Research define unit, denominator, period, geography, price, tax, model status and uncertainty.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define unit, denominator, period, geography, price, tax, model status and uncertainty. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "in_progress",
-      "percent": 95,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
@@ -3852,9 +3908,11 @@
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
-        "ontology/steam/january-2026-modeled-paid-release-distribution.json"
+        "ontology/steam/january-2026-modeled-paid-release-distribution.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md"
       ],
-      "artifact": "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -4063,14 +4121,16 @@
       "objective": "Research research depots, branches, build review and staged publication for first game.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research depots, branches, build review and staged publication for first game. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
         "ontology/steam/entry-review-and-reporting-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md"
       ],
-      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -4172,13 +4232,16 @@
       "objective": "Research research demo AppIDs, visibility, store links and progression into commercial purchase.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research demo AppIDs, visibility, store links and progression into commercial purchase. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 20,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -4189,11 +4252,15 @@
       "emoji": "🎮",
       "objective": "Research define signup, access grants, capacity and how they differ from sales.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define signup, access grants, capacity and how they differ from sales. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -4227,11 +4294,15 @@
       "emoji": "🎮",
       "objective": "Research define eligibility, playtesting, demo readiness, scheduling and outreach workload.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define eligibility, playtesting, demo readiness, scheduling and outreach workload. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
       "priority": "normal",
       "phase": 2
     },
