@@ -2682,6 +2682,39 @@
       "evidence_class": "first_person_self_selected_unverified_creator_commentary_cross_store_low_paid_units",
       "license": "Brief factual creator-provided counts paraphrased and linked; individual comments and personal material are not copied or republished.",
       "notes": "Discussion began Oct 31 2025, commenter days unverified. One creator is independently known from No More Snow December 2025 report, said earlier 6 itch/422 GOG/~5k loosely named Steam and 20.7k free demo. Another unverified first commercial title had 2 itch/45 Steam. One creator counted once; no seller income or market population inference."
+    },
+    {
+      "id": "chico-2024-first-commercial-game-reported-store-units",
+      "url": "https://www.reddit.com/r/IndieDev/comments/1btb1md",
+      "publisher": "Daikon Games developer commenting on own first commercial title",
+      "title": "Indie game release numbers: creator's April 2024 cross-store sales response",
+      "published_at": "2024-04-01",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "creator_first_person_approx_single_paid_game_store_copy_counts",
+      "license": "Short independently paraphrased counts from a public creator comment with attribution; no thread content, user images or screenshot copied.",
+      "notes": "Creator self-reported ~800 Steam, ~60 itch, ~600 Switch since 2022 launch. Single named first commercial game; not cash income or verified zero-inclusive sample."
+    },
+    {
+      "id": "chico-developer-official-original-dx-switch-release-timeline",
+      "url": "https://www.daikon.games/press/chico/",
+      "publisher": "Daikon Games (first-party developer press kit)",
+      "title": "Chico and the Magic Orchards — official release dates and DX update",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "creator_official_game_release_history_and_free_content_update",
+      "license": "Public release-date facts paraphrased with attribution; no creative artwork or complete press-kit text reproduced.",
+      "notes": "Original Steam/itch launch Aug 8 2022; free DX update Jan 13 2023; Switch port Dec 29 2023. DX same existing paid game, not second commercial project."
+    },
+    {
+      "id": "chico-2024-march-itch-sale-price-example",
+      "url": "https://itch.io/s/119383/spring-sale-2024",
+      "publisher": "Daikon Games on itch.io (first-party sale page)",
+      "title": "Chico and the Magic Orchards DX — March 2024 30 percent sale",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_historical_itch_paid_listing_price_and_promotion",
+      "license": "Price, discount and end-time facts referenced and attributed; no seller images or original page republished.",
+      "notes": "Spring 2024 offer expired Mar 21 2024, listing $3.49 (30% off $4.99). Offer does not prove transaction receipts or uniform price across channels."
     }
   ],
   "claims": [
@@ -8440,6 +8473,59 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Downloads are events not unique customers, cutoffs differ, and purchase attribution or de-duplication across stores is missing."
+    },
+    {
+      "id": "chico-2024-single-first-commercial-game-60-itch-800-steam",
+      "text": "Daikon Games' developer reported approximately 60 itch.io copies and 800 Steam copies of its first commercial game as of an April 2024 discussion.",
+      "source_ids": [
+        "chico-2024-first-commercial-game-reported-store-units",
+        "chico-developer-official-original-dx-switch-release-timeline"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Approximate voluntary publisher report; underlying orders, refund status and net amounts not verified. Both venues have different merchandising and exposure."
+    },
+    {
+      "id": "chico-2024-600-switch-after-later-port-not-launch-match",
+      "text": "In the same April 2024 creator reply, about 600 Nintendo Switch copies were reported; the publisher's official timeline dates that port to December 29, 2023, after the August 2022 itch and Steam release.",
+      "source_ids": [
+        "chico-2024-first-commercial-game-reported-store-units",
+        "chico-developer-official-original-dx-switch-release-timeline"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Platform launch ages differ; no attribution to particular months, fees or after-cost proceeds; do not treat the Switch and itch totals as matched release cohorts."
+    },
+    {
+      "id": "chico-2023-free-dx-update-not-new-commercial-title",
+      "text": "The developer's release history specifies August 8, 2022 as original itch and Steam launch, and January 13, 2023 as a free DX update to the same product, not a second new commercial game.",
+      "source_ids": [
+        "chico-developer-official-original-dx-switch-release-timeline"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Single-title lifecycle cross-check, not an enumeration of platform-wide new releases or sellers."
+    },
+    {
+      "id": "chico-2024-itch-spring-promo-snapshot-not-game-income",
+      "text": "The creator's March 2024 itch sale page offered Chico and the Magic Orchards DX at $3.49, a 30% discount from $4.99, ending March 21, 2024.",
+      "source_ids": [
+        "chico-2024-march-itch-sale-price-example"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Promotion snapshot cannot be multiplied by cumulative approximate purchases to establish gross revenue; transaction dates, tips and refunds unknown."
+    },
+    {
+      "id": "chico-dx-and-switch-port-miscount-risk-commercial-releases",
+      "text": "Counting the free 2023 Chico DX upgrade or subsequent Switch port as additional new itch.io commercial games would overstate both releases and publishers, because they were derived versions of one existing 2022 itch game.",
+      "source_ids": [
+        "chico-developer-official-original-dx-switch-release-timeline",
+        "chico-2024-first-commercial-game-reported-store-units"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a product-identity example; distinct additional franchise titles, if any, require separate release and payment evidence."
     }
   ],
   "observations": [
