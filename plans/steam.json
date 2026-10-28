@@ -2,10 +2,10 @@
   "schema_version": 1,
   "specimen_id": "steam",
   "kind": "research_plan",
-  "status": "queued",
+  "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 0,
-  "permission_required_before_execution": true,
+  "progress_percent": 6,
+  "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
     "queue_file": "queues/steam.json",
@@ -88,7 +88,7 @@
         "steam/identity/document-store-geography-and-languages"
       ],
       "phase": 1,
-      "progress_percent": 0
+      "progress_percent": 2
     },
     {
       "id": "access",
@@ -119,7 +119,7 @@
         "steam/access/plan-low-budget-legal-entity-scenarios"
       ],
       "phase": 1,
-      "progress_percent": 0
+      "progress_percent": 38
     },
     {
       "id": "economics",
@@ -156,7 +156,7 @@
         "steam/economics/model-multi-currency-settlement-uncertainty"
       ],
       "phase": 1,
-      "progress_percent": 0
+      "progress_percent": 29
     },
     {
       "id": "market",
@@ -360,7 +360,7 @@
         "steam/sales/design-after-launch-retention-metrics"
       ],
       "phase": 3,
-      "progress_percent": 0
+      "progress_percent": 2
     },
     {
       "id": "risk",
@@ -462,7 +462,7 @@
         "steam/review/prepare-public-publication-qa-checklist"
       ],
       "phase": 1,
-      "progress_percent": 0
+      "progress_percent": 9
     },
     {
       "id": "special-games",
@@ -496,7 +496,7 @@
         "steam/special-games/plan-live-game-maintenance-and-sunset"
       ],
       "phase": 2,
-      "progress_percent": 0
+      "progress_percent": 6
     }
   ],
   "deliverables": [
@@ -531,11 +531,15 @@
       "emoji": "🪪",
       "objective": "Research differentiate the Steam store, Steamworks partner systems, runtime client, community and third-party key sellers.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Differentiate the Steam store, Steamworks partner systems, runtime client, community and third-party key sellers. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 35,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -711,11 +715,15 @@
       "emoji": "🚪",
       "objective": "Research research legal identity, banking, tax declarations and partner review prerequisites.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research legal identity, banking, tax declarations and partner review prerequisites. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -726,11 +734,15 @@
       "emoji": "🚪",
       "objective": "Research separate entry fee per eligible product, recoupment rules and nonrefundable costs.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate entry fee per eligible product, recoupment rules and nonrefundable costs. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -771,11 +783,15 @@
       "emoji": "🚪",
       "objective": "Research separate identity review, store page approval, build review and pre-release timing.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate identity review, store page approval, build review and pre-release timing. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -786,11 +802,15 @@
       "emoji": "🚪",
       "objective": "Research verify minimum elapsed time after onboarding, Coming Soon requirements and review lead time.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Verify minimum elapsed time after onboarding, Coming Soon requirements and review lead time. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 55,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -816,11 +836,15 @@
       "emoji": "🚪",
       "objective": "Research specify permissions, delegated roles, API keys and security safeguards without handling accounts.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify permissions, delegated roles, API keys and security safeguards without handling accounts. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 45,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -846,11 +870,15 @@
       "emoji": "🚪",
       "objective": "Research track required tax forms and country-specific withholding eligibility.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Track required tax forms and country-specific withholding eligibility. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 65,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -951,11 +979,15 @@
       "emoji": "💳",
       "objective": "Research determine when fees qualify for repayment and how repayment appears in partner accounting.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Determine when fees qualify for repayment and how repayment appears in partner accounting. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -981,11 +1013,15 @@
       "emoji": "💳",
       "objective": "Research identify merchant-of-record tax collection by geography versus seller income taxes.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Identify merchant-of-record tax collection by geography versus seller income taxes. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 75,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "high",
       "phase": 1
     },
@@ -996,11 +1032,15 @@
       "emoji": "💳",
       "objective": "Research classify forms, country residence, beneficial ownership and income withholding basis.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Classify forms, country residence, beneficial ownership and income withholding basis. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 70,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1011,11 +1051,15 @@
       "emoji": "💳",
       "objective": "Research check payment schedule, thresholds, holds, bank fees and returned transfers.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Check payment schedule, thresholds, holds, bank fees and returned transfers. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "high",
       "phase": 1
     },
@@ -1026,11 +1070,15 @@
       "emoji": "💳",
       "objective": "Research separate refund liability, negative adjustments, clawbacks and unit-return windows.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate refund liability, negative adjustments, clawbacks and unit-return windows. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 55,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "high",
       "phase": 1
     },
@@ -1071,11 +1119,15 @@
       "emoji": "💳",
       "objective": "Research specify illustrative price, region, tax, share and refunds; label all assumptions.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify illustrative price, region, tax, share and refunds; label all assumptions. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 40,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -2421,11 +2473,15 @@
       "emoji": "🛒",
       "objective": "Research separate exposure, click, wishlist, follow, prelaunch demo and launch order.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate exposure, click, wishlist, follow, prelaunch demo and launch order. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 40,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3201,11 +3257,15 @@
       "emoji": "🔬",
       "objective": "Research specify source identifiers, publication date precision, retrieval times and reuse permission notes.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify source identifiers, publication date precision, retrieval times and reuse permission notes. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 50,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -3216,11 +3276,15 @@
       "emoji": "🔬",
       "objective": "Research separate first-party rules, transactional exports, survey data, independently modeled figures and anecdotes.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate first-party rules, transactional exports, survey data, independently modeled figures and anecdotes. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 50,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -3231,11 +3295,15 @@
       "emoji": "🔬",
       "objective": "Research track dated changes and archive URLs where permitted instead of silently substituting current rules.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Track dated changes and archive URLs where permitted instead of silently substituting current rules. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 40,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -3396,11 +3464,15 @@
       "emoji": "🎮",
       "objective": "Research research depots, branches, build review and staged publication for first game.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research depots, branches, build review and staged publication for first game. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 60,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/entry-review-and-reporting-2026.json",
+        "ontology/steam/entry-review-and-reporting-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -3660,5 +3732,6 @@
       "phase": 2
     }
   ],
-  "progress_method": "Arithmetic average of the 293 existing and dedicated task percentages, all presently zero. Research completion requires cited acceptance evidence."
+  "progress_method": "Arithmetic average of the 293 existing and dedicated task percentages, all presently zero. Research completion requires cited acceptance evidence.",
+  "research_started_at": "2026-10-28"
 }

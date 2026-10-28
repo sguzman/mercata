@@ -5,7 +5,7 @@
   "official_url": "https://store.steampowered.com/",
   "domain": "games",
   "roles": [],
-  "status": "queued",
+  "status": "researching",
   "created_at": "2026-10-23",
   "color": {
     "hex": "#A665CB",
@@ -15,10 +15,356 @@
       "h": 312
     }
   },
-  "evidence": [],
-  "claims": [],
+  "evidence": [
+    {
+      "id": "steamdirect-public",
+      "url": "https://partner.steamgames.com/steamdirect",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Steam Direct public enrollment information",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_program_guide",
+      "license": "Public metadata, outbound URL and independently written brief factual summary only; no webpage text or media reproduced.",
+      "notes": "Public page accessible without partner login; current-document snapshot. No effective date or historical version asserted."
+    },
+    {
+      "id": "steam-onboarding-doc",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/onboarding",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Steamworks onboarding documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_partner_documentation",
+      "license": "Public metadata, outbound URL and independently written brief factual summary only; no webpage text or media reproduced.",
+      "notes": "Public page accessible without partner login; current-document snapshot. No effective date or historical version asserted."
+    },
+    {
+      "id": "steam-direct-fee-doc",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/appfee",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Steam Direct fee documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_partner_documentation",
+      "license": "Public metadata, outbound URL and independently written brief factual summary only; no webpage text or media reproduced.",
+      "notes": "Public page accessible without partner login; current-document snapshot. No effective date or historical version asserted."
+    },
+    {
+      "id": "steam-release-process-doc",
+      "url": "https://partner.steamgames.com/doc/store/releasing",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Steam product release process",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_partner_documentation",
+      "license": "Public metadata, outbound URL and independently written brief factual summary only; no webpage text or media reproduced.",
+      "notes": "Public page accessible without partner login; current-document snapshot. No effective date or historical version asserted."
+    },
+    {
+      "id": "steam-review-process-doc",
+      "url": "https://partner.steamgames.com/doc/store/Review_Process",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Steam store and game build review process",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_partner_documentation",
+      "license": "Public metadata, outbound URL and independently written brief factual summary only; no webpage text or media reproduced.",
+      "notes": "Public page accessible without partner login; current-document snapshot. No effective date or historical version asserted."
+    },
+    {
+      "id": "steam-coming-soon-doc",
+      "url": "https://partner.steamgames.com/doc/store/coming_soon",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Steam Coming Soon page guide",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_partner_documentation",
+      "license": "Public metadata, outbound URL and independently written brief factual summary only; no webpage text or media reproduced.",
+      "notes": "Public page accessible without partner login; current-document snapshot. No effective date or historical version asserted."
+    },
+    {
+      "id": "steam-financial-reporting-doc",
+      "url": "https://partner.steamgames.com/doc/finance/payments_salesreporting",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Steam financial reporting and payment rules",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_financial_documentation",
+      "license": "Public metadata, outbound URL and independently written brief factual summary only; no webpage text or media reproduced.",
+      "notes": "Public page accessible without partner login; current-document snapshot. No effective date or historical version asserted."
+    },
+    {
+      "id": "steam-reporting-faq-doc",
+      "url": "https://partner.steamgames.com/doc/finance/payments_salesreporting/faq",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Steam financial reporting and payments FAQ",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_financial_documentation",
+      "license": "Public metadata, outbound URL and independently written brief factual summary only; no webpage text or media reproduced.",
+      "notes": "Public page accessible without partner login; current-document snapshot. No effective date or historical version asserted."
+    },
+    {
+      "id": "steam-tax-faq-doc",
+      "url": "https://partner.steamgames.com/doc/finance/taxfaq",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Steam taxation and withholding FAQ",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_financial_documentation",
+      "license": "Public metadata, outbound URL and independently written brief factual summary only; no webpage text or media reproduced.",
+      "notes": "Public page accessible without partner login; current-document snapshot. No effective date or historical version asserted."
+    }
+  ],
+  "claims": [
+    {
+      "id": "onboarding-agreements",
+      "text": "Steamworks onboarding requires electronically signed legal agreements and identity, banking and tax documentation.",
+      "source_ids": [
+        "steam-onboarding-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Requirements can depend on individual versus company status and jurisdiction; no account or tax interview undertaken."
+    },
+    {
+      "id": "onboarding-bank-name-match",
+      "text": "The payment bank account holder must match the legal name used for Steamworks enrollment; individuals can register with appropriately matching accounts.",
+      "source_ids": [
+        "steam-onboarding-doc",
+        "steamdirect-public"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Does not establish a particular non-US bank's SWIFT capabilities or local banking eligibility."
+    },
+    {
+      "id": "onboarding-tax-identity-review",
+      "text": "Valve says submitted tax information is checked through a third party and may take up to 30 days, with additional documents sometimes requested.",
+      "source_ids": [
+        "steam-onboarding-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Processing time is not a guaranteed duration and is distinct from the mandatory pre-release wait."
+    },
+    {
+      "id": "appfee-usd-100-per-product",
+      "text": "Steamworks publicly specifies a USD 100 (or local equivalent) Steam Direct fee for each new app.",
+      "source_ids": [
+        "steam-direct-fee-doc",
+        "steamdirect-public"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Additional local VAT/GST and non-fee costs can apply; product-specific fees have exceptions or terms not assessed here."
+    },
+    {
+      "id": "appfee-not-refundable-recoupable",
+      "text": "The USD 100 Steam Direct fee is not refundable but can be recouped as a distinct monthly-report line once the individual product reaches USD 1,000 in adjusted gross revenue from applicable Steam sales and in-app purchases.",
+      "source_ids": [
+        "steam-direct-fee-doc",
+        "steamdirect-public"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Recoupment is not a buyer refund, not profit and not assured for a product below the threshold."
+    },
+    {
+      "id": "appfee-no-wallet-and-admin",
+      "text": "The Steam Direct credit cannot be purchased using Steam Wallet funds, and an existing partner must have admin permissions for the purchase.",
+      "source_ids": [
+        "steam-direct-fee-doc",
+        "steamdirect-public"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Local supported payment routes and payment-tax treatment require separately dated verification."
+    },
+    {
+      "id": "conflicting-wait-30-days",
+      "text": "The Steam Direct public enrollment page says the first titles require 30 days between payment of the app fee and release.",
+      "source_ids": [
+        "steamdirect-public"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The linked onboarding documentation contradicts it with a 21-day rule as of the same review day; do not assert this is the resolved current rule."
+    },
+    {
+      "id": "conflicting-wait-21-days",
+      "text": "The Steamworks onboarding documentation instead describes a 21-day wait after paying the app fee before that game can release.",
+      "source_ids": [
+        "steam-onboarding-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Conflicts with the Steam Direct public enrollment page saying 30 days; this may reflect differently updated documents, not independently established policy change."
+    },
+    {
+      "id": "wait-rule-requires-reconciliation",
+      "text": "Two official Valve onboarding sources viewed October 28, 2026 report incompatible 21-day and 30-day minimum pre-release waiting periods.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-onboarding-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Exact operative rule remains unresolved; allow time for the longer stated period when constructing a hypothetical schedule but verify with Steamworks before relying on it."
+    },
+    {
+      "id": "coming-soon-two-weeks",
+      "text": "Steam requires a publicly visible Coming Soon page for at least 14 days before a new product may be released.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-coming-soon-doc",
+        "steam-release-process-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A Coming Soon page does not prove sales, existing wishlists or a product's ability to pass build review."
+    },
+    {
+      "id": "store-before-build-review",
+      "text": "Steam's release workflow uses distinct store presence and game build checklists; the store page must be submitted for review before the build review.",
+      "source_ids": [
+        "steam-release-process-doc",
+        "steam-review-process-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Applies to the documented standard release path and does not establish that every updated build needs a fresh review."
+    },
+    {
+      "id": "review-3-to-5-business-days",
+      "text": "Valve says store-page and build reviews typically take 3–5 business days each and recommends allowing at least seven business days for review contingencies.",
+      "source_ids": [
+        "steam-review-process-doc",
+        "steam-release-process-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Typical review durations are neither promises nor a statement of all possible exceptions."
+    },
+    {
+      "id": "review-release-manual-control",
+      "text": "After approvals and the required Coming Soon period, a developer must actively release the app via Steamworks controls; approval does not schedule automatic public sale.",
+      "source_ids": [
+        "steam-release-process-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Not evidence of particular app launch date, customer arrival or revenue."
+    },
+    {
+      "id": "review-build-feature-qa",
+      "text": "The build review expects the app to launch on all supported operating systems and to implement features promised on the store page.",
+      "source_ids": [
+        "steam-review-process-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Describes minimum review criteria only, not a guarantee of game quality or all hardware compatibility."
+    },
+    {
+      "id": "review-app-release-permissions",
+      "text": "Publishing the Coming Soon page or releasing an app requires both publication-change and price/discount management permissions on the relevant AppID.",
+      "source_ids": [
+        "steam-release-process-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Does not determine partner-wide administrator roles or all financial-report access controls."
+    },
+    {
+      "id": "payout-minimum-usd-100",
+      "text": "Valve states that partner payment is issued when amounts owed for the prior sales month exceed the minimum USD 100 payment threshold.",
+      "source_ids": [
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Payments require verified account banking and tax setup; no individual payee eligibility is inferred."
+    },
+    {
+      "id": "payout-following-month",
+      "text": "Valve normally issues EFT payment toward the end of the month following the period in which the relevant sales took place.",
+      "source_ids": [
+        "steam-financial-reporting-doc",
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Not a guarantee of receipt date, daily liquidity, conversion spread or an individual bank's hold."
+    },
+    {
+      "id": "payout-us-ach-intl-swift",
+      "text": "Valve documents ACH payments to U.S. banks and USD SWIFT wires for banks outside the United States.",
+      "source_ids": [
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Receiving-bank fees, countries supported and exchange conversion are not established for any specific publisher."
+    },
+    {
+      "id": "merchant-report-not-identical",
+      "text": "Steam's near-real-time sales and activations portal reports gross revenue and units before deductions, while the monthly partner sales report includes adjustments and reflects the payment calculation.",
+      "source_ids": [
+        "steam-financial-reporting-doc",
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The public documentation is not an actual private merchant data export; gross count, net cash, and developed game profit must not be equated."
+    },
+    {
+      "id": "net-royalty-after-adjustments",
+      "text": "Valve defines revenue-share base as gross revenue less applicable adjustments, including taxes, refunds and chargebacks, followed by the contractual revenue share and any applicable withholding.",
+      "source_ids": [
+        "steam-reporting-faq-doc",
+        "steam-tax-faq-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Precise partner percentage and contractual terms are not public in the examined documents; operating expenses and seller income taxes are additional unknowns."
+    },
+    {
+      "id": "vat-inclusive-versus-sales-tax-added",
+      "text": "Valve describes VAT-inclusive storefront pricing in VAT-collecting jurisdictions, while U.S. and Canadian sales taxes, where charged, are additive at checkout.",
+      "source_ids": [
+        "steam-tax-faq-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Country rates and requirements may change; does not authorize substituting a generic sales tax rate in all regions."
+    },
+    {
+      "id": "royalty-withholding-us-source",
+      "text": "Valve's tax FAQ says royalty withholding on relevant U.S.-source sales may vary from 0% to 30% according to partner tax information and treaty circumstances.",
+      "source_ids": [
+        "steam-tax-faq-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Not a flat withholding on every global sale; the partner's country, submitted documents, treaty and actual tax outcome remain unknown."
+    },
+    {
+      "id": "financial-records-are-private",
+      "text": "Monthly financial sales reports are available only through authenticated Steamworks partner financial-report access, not the public storefront.",
+      "source_ids": [
+        "steam-financial-reporting-doc",
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No partner login, privileged reports, private orders or customer records were accessed in this study."
+    }
+  ],
   "observations": [],
   "opportunities": [],
   "risks": [],
-  "experiments": []
+  "experiments": [],
+  "updated_at": "2026-10-28",
+  "summary": "Research started with public Steamworks entry, review, tax and payout documentation; detailed game sales, representative developer earnings, and paid buyer counts remain unknown."
 }
