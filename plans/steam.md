@@ -1,6 +1,6 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 48% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 53% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
@@ -291,6 +291,10 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## Twelfth evidence-backed checkpoint
+
+The [Steam Keys and Content Survey study](../ontology/steam/keys-cross-store-and-ai-disclosure-2026.md) documents retail versus beta versus developer keys, first-launch key request timing, cross-store customer-offer rules, controlled key revocation, and player-facing pre-generated/live-generated AI disclosures. It separates an activated key from a paid Steam checkout and a disclosure from copyright ownership. **Score 53%** (exact 53.311%; Δ +5 points from 48%). No accounts or keys accessed and actual publisher rights/earnings remain unverified.
+
 ## Eleventh evidence-backed checkpoint
 
 The [synthetic first-game cash and labor break-even model](../ontology/steam/synthetic-first-game-break-even-scenarios-2026.md) supplies explicit assumptions for discounts/checkout price, refunds, sales taxes, contractual platform share, publisher recoup, fixed expenses, entry fee and imputed development hours. The [testable calculator](../site/steam-hypothetical-break-even.mjs) refuses to label scenario outputs as merchant income. **Score 48%** (exact 48.447%, Δ +3 pp from 45%) across the original 293 tasks. No representative first-game profitability or actual transaction records obtained.
@@ -363,4 +367,4 @@ The [wishlist and visibility report](../ontology/steam/discovery-wishlists-and-v
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 48%** rounded task-weighted progress across 293 tasks; previous round 45%, +3 pp (exact 48.447%). 23 fully verified, 178 partially advanced; 55 public sources and 205 bounded claims. Economic calculations are entirely synthetic and do not represent signed contracts or real publisher profits.
+**Completion: 53%** rounded task-weighted progress across 293 tasks; previous round 48%, Δ +5 pp (exact 53.311%). 28 fully verified and 194 partly researched; 57 public source references and 221 bounded claims. No actual contracts, game assets, keys or merchant records reviewed.

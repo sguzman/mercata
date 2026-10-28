@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 48,
+  "progress_percent": 53,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -325,7 +325,7 @@
         "steam/rights/document-dispute-enforcement-and-appeals"
       ],
       "phase": 3,
-      "progress_percent": 8
+      "progress_percent": 48
     },
     {
       "id": "sales",
@@ -360,7 +360,7 @@
         "steam/sales/design-after-launch-retention-metrics"
       ],
       "phase": 3,
-      "progress_percent": 59
+      "progress_percent": 66
     },
     {
       "id": "risk",
@@ -394,7 +394,7 @@
         "steam/risk/build-downside-scenarios-for-small-studios"
       ],
       "phase": 3,
-      "progress_percent": 26
+      "progress_percent": 40
     },
     {
       "id": "strategy",
@@ -431,7 +431,7 @@
         "steam/strategy/design-selection-aware-case-study-comparison"
       ],
       "phase": 4,
-      "progress_percent": 53
+      "progress_percent": 56
     },
     {
       "id": "review",
@@ -496,7 +496,7 @@
         "steam/special-games/plan-live-game-maintenance-and-sunset"
       ],
       "phase": 2,
-      "progress_percent": 28
+      "progress_percent": 32
     }
   ],
   "deliverables": [
@@ -858,14 +858,16 @@
       "objective": "Research verify minimum elapsed time after onboarding, Coming Soon requirements and review lead time.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Verify minimum elapsed time after onboarding, Coming Soon requirements and review lead time. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 60,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
         "ontology/steam/entry-review-and-reporting-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json"
       ],
-      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1188,17 +1190,19 @@
       "emoji": "💳",
       "objective": "Research compare price, commission, VAT and cash settlement without counting key activation as Valve sales.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare price, commission, VAT and cash settlement without counting key activation as Valve sales. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "in_progress",
-      "percent": 85,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
       "evidence": [
         "ontology/steam/fixed-paid-release-cohort-2026.md",
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json"
       ],
-      "artifact": "ontology/steam/financial-validation-and-consent-2026.md",
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -2771,11 +2775,15 @@
       "emoji": "⚖️",
       "objective": "Research review developer rights granted to Valve and whether platform holds publishing ownership.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Review developer rights granted to Valve and whether platform holds publishing ownership. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 30,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2786,11 +2794,15 @@
       "emoji": "⚖️",
       "objective": "Research identify restrictions on competing stores, pricing representations and external key pricing.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Identify restrictions on competing stores, pricing representations and external key pricing. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 60,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2802,16 +2814,18 @@
       "objective": "Research define delisting by owner, Valve removal, regional removal and customer access.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define delisting by owner, Valve removal, regional removal and customer access. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/fixed-paid-release-cohort-2026.md",
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json"
       ],
-      "artifact": "ontology/steam/fixed-paid-release-cohort-2026.md",
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2822,11 +2836,15 @@
       "emoji": "⚖️",
       "objective": "Research distinguish purchases, user licenses, transferable keys, resale restrictions and refunds.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Distinguish purchases, user licenses, transferable keys, resale restrictions and refunds. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 75,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2837,11 +2855,15 @@
       "emoji": "⚖️",
       "objective": "Research review permitted requests, key limitations, external resellers and fraud risks.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Review permitted requests, key limitations, external resellers and fraud risks. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2852,11 +2874,15 @@
       "emoji": "⚖️",
       "objective": "Research research content warranties, music, middleware licenses and third-party materials.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research content warranties, music, middleware licenses and third-party materials. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 65,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2867,11 +2893,15 @@
       "emoji": "⚖️",
       "objective": "Research track documented AI content disclosures, updates, restrictions and review responsibilities.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Track documented AI content disclosures, updates, restrictions and review responsibilities. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2928,16 +2958,18 @@
       "objective": "Research identify rights and restrictions for customer lists, reviews, purchase data and CRM export.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Identify rights and restrictions for customer lists, reviews, purchase data and CRM export. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 50,
       "weight": 1,
       "evidence": [
         "ontology/steam/fixed-paid-release-cohort-2026.md",
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json"
       ],
-      "artifact": "ontology/steam/fixed-paid-release-cohort-2026.md",
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2948,11 +2980,15 @@
       "emoji": "⚖️",
       "objective": "Research research content removals, claims, fraudulent keys and dispute escalation.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research content removals, claims, fraudulent keys and dispute escalation. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 35,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3007,17 +3043,19 @@
       "emoji": "🛒",
       "objective": "Research disambiguate base games, family-sharing access, free keys, bundles and packages.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Disambiguate base games, family-sharing access, free keys, bundles and packages. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "in_progress",
-      "percent": 90,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
       "evidence": [
         "ontology/steam/fixed-paid-release-cohort-2026.md",
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json"
       ],
-      "artifact": "ontology/steam/financial-validation-and-consent-2026.md",
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3244,11 +3282,15 @@
       "emoji": "🛒",
       "objective": "Research separate buyer paying a gift from recipient license activation.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate buyer paying a gift from recipient license activation. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 45,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3295,11 +3337,15 @@
       "emoji": "🛒",
       "objective": "Research separate noncommercial keys from verified sold copies and marketing sample costs.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate noncommercial keys from verified sold copies and marketing sample costs. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 90,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3326,16 +3372,18 @@
       "objective": "Research document publication denial, delisting and contractual dispute routes.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Document publication denial, delisting and contractual dispute routes. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 30,
+      "percent": 50,
       "weight": 1,
       "evidence": [
         "ontology/steam/fixed-paid-release-cohort-2026.md",
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json"
       ],
-      "artifact": "ontology/steam/fixed-paid-release-cohort-2026.md",
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3361,11 +3409,15 @@
       "emoji": "🛡️",
       "objective": "Research differentiate stolen keys, purchased third-party retail keys and counterfeit listing abuse.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Differentiate stolen keys, purchased third-party retail keys and counterfeit listing abuse. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 95,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3498,11 +3550,15 @@
       "emoji": "🛡️",
       "objective": "Research analyze rights clearance, music licenses, claims, takedowns and regional duties.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Analyze rights clearance, music licenses, claims, takedowns and regional duties. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 70,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3817,11 +3873,15 @@
       "emoji": "🧪",
       "objective": "Research separate key grants, coverage, community engagement and purchased licenses.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate key grants, coverage, community engagement and purchased licenses. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 65,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -3833,16 +3893,18 @@
       "objective": "Research specify minimum viable game, roadmap credibility, server readiness and update budget.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify minimum viable game, roadmap credibility, server readiness and update budget. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
         "specimens/steam.json",
         "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
-        "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.json"
+        "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.json",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json"
       ],
-      "artifact": "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -4008,8 +4070,8 @@
       "emoji": "🔬",
       "objective": "Research track dated changes and archive URLs where permitted instead of silently substituting current rules.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Track dated changes and archive URLs where permitted instead of silently substituting current rules. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "in_progress",
-      "percent": 95,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
@@ -4022,9 +4084,11 @@
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
         "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
-        "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.json"
+        "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.json",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json"
       ],
-      "artifact": "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -4496,11 +4560,15 @@
       "emoji": "🎮",
       "objective": "Research define mature-content questionnaires and jurisdictional age-rating requirements.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define mature-content questionnaires and jurisdictional age-rating requirements. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 95,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
       "priority": "normal",
       "phase": 2
     },

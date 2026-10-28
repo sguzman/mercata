@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "steam_keys_distribution_and_player_facing_content_disclosure_policy",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-keys-official-oct2026",
+    "steam-content-survey-official-oct2026",
+    "steam-financial-api-official"
+  ],
+  "claim_ids": [
+    "key-is-license-not-transaction",
+    "key-first-21days-after-appid",
+    "key-default-up-to5000",
+    "key-beta-usually-2500",
+    "key-devcomp-not-customers",
+    "key-comparable-offers",
+    "key-free-giveaway-restrictions",
+    "key-ban-rights-stolen-fraud",
+    "key-key-request-revocable",
+    "key-preorder-unlocks-on-steam-release",
+    "content-survey-prerelease-required",
+    "ai-disclosure-player-consumed-output",
+    "ai-pre-generated-vs-live",
+    "ai-live-additional-guardrails",
+    "ai-live-adult-restriction",
+    "ai-disclosure-does-not-confer-ip-ownership"
+  ],
+  "steam_keys": {
+    "first_studio_wait_days_from_appid_creation": 21,
+    "default_release_initial_threshold_keys": 5000,
+    "beta_pre_release_generally_limit_keys": 2500,
+    "beta_keys_may_be_sold": false,
+    "dev_comp_keys_may_be_sold": false,
+    "large_giveaways_restricted": true,
+    "small_giveaway_exception_under_keys": 100,
+    "cross_store_comparable_customer_offer": true,
+    "retail_activations_are_steam_store_paid_orders": false,
+    "requests_guaranteed": false,
+    "keys_for_free_to_play_by_default": false,
+    "legitimately_sold_keys_can_be_revoked_for_arbitrary_reason": false
+  },
+  "content_survey": {
+    "required_before_store_and_build_review": true,
+    "sections": [
+      "general",
+      "mature",
+      "generative_ai"
+    ],
+    "ai_focus": "player_consumed_content",
+    "pre_generated_disclosure": true,
+    "live_generated_disclosure": true,
+    "live_generated_guardrails_explanation": true,
+    "acceptance_guaranteed": false,
+    "live_generated_adult_only_sexual_content_accepted": false,
+    "confers_asset_copyright": false
+  },
+  "unknown": {
+    "actual_key_activations": null,
+    "authorized_external_key_sales": null,
+    "merchant_payouts": null,
+    "asset_license_chain": null,
+    "developer_legal_intellectual_property": null
+  },
+  "no_account_actions": true,
+  "no_personal_data": true,
+  "no_key_material_obtained": true
+}

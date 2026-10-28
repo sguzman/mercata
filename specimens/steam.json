@@ -620,6 +620,28 @@
       "evidence_class": "model_owner_public_monthly_leaderboard_or_selected_subcohort",
       "license": "Source links, metadata and short independently authored aggregate summaries only. No proprietary chart, individual row set or article text reproduced.",
       "notes": "Graduation sample of 91 games; inclusion requires >5,000 paid first-month copies or >$10,000 first-month free-game revenue, thereby excluding low sellers."
+    },
+    {
+      "id": "steam-keys-official-oct2026",
+      "url": "https://partner.steamgames.com/doc/features/keys?language=english",
+      "title": "Steam Keys",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_steamworks_current_documentation",
+      "license": "Cites public official document link and short original numerical/interpretive summary only; no copyrighted paragraphs/images copied.",
+      "notes": "First-game 21-day AppID wait, default/beta/devcomp types, requested key limits, parity and anti-fraud management rules."
+    },
+    {
+      "id": "steam-content-survey-official-oct2026",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/contentsurvey?language=english",
+      "title": "Content Survey",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_steamworks_current_documentation",
+      "license": "Cites public official document link and short original numerical/interpretive summary only; no copyrighted paragraphs/images copied.",
+      "notes": "General/mature/AI sections; player-consumed pre-generated content versus live-generated content with additional guardrails."
     }
   ],
   "claims": [
@@ -2746,6 +2768,167 @@
       "confidence": "medium",
       "observed_at": "2026-10-28",
       "limitations": "Scenario numbers are explicitly synthetic; not merchant settlements, observed game outcomes or population forecasts."
+    },
+    {
+      "id": "key-is-license-not-transaction",
+      "text": "Valve describes Steam Keys as single-use codes granting a license on activation; Steam Key activation is not necessarily a Steam checkout sale.",
+      "source_ids": [
+        "steam-keys-official-oct2026",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Keys can be sold off-platform, issued for press and testers, or granted without payment; no actual external store revenue measured."
+    },
+    {
+      "id": "key-first-21days-after-appid",
+      "text": "Valve's current keys guide states developers launching their first Steam game must wait three weeks after creating its AppID to request keys.",
+      "source_ids": [
+        "steam-keys-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a key request condition, not the separate disputed general Steam Direct release waiting period."
+    },
+    {
+      "id": "key-default-up-to5000",
+      "text": "Valve says up to 5,000 Default Release keys may be issued for a newly launching game to support retail and other stores, with further requests reviewed individually.",
+      "source_ids": [
+        "steam-keys-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Not a guaranteed unlimited entitlement or a count of actual paid orders."
+    },
+    {
+      "id": "key-beta-usually-2500",
+      "text": "Valve generally limits Release State Override beta keys to 2,500, and prohibits selling these pre-release keys.",
+      "source_ids": [
+        "steam-keys-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Actual approved quantity depends on review, and pre-release testing and paid game license populations must be separated."
+    },
+    {
+      "id": "key-devcomp-not-customers",
+      "text": "Dev Comp keys are intended for developers and must not be distributed to paying customers.",
+      "source_ids": [
+        "steam-keys-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Not equivalent to standard retail keys or an independently saleable entitlement."
+    },
+    {
+      "id": "key-comparable-offers",
+      "text": "Valve asks partners not to offer Steam customers worse deals than purchasers activating keys sold through other stores; cross-store discounts should receive comparable Steam offers within a reasonable period.",
+      "source_ids": [
+        "steam-keys-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Public guidance is not a complete signed individual distribution contract and does not establish automatic price equality on every date."
+    },
+    {
+      "id": "key-free-giveaway-restrictions",
+      "text": "Valve restricts large free key giveaways unless Steam customers are offered a comparable free deal, with very small promotions under 100 keys described as an exception.",
+      "source_ids": [
+        "steam-keys-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Publisher requests may receive different review outcomes; not a right to unlimited third-party promotions."
+    },
+    {
+      "id": "key-ban-rights-stolen-fraud",
+      "text": "Valve documents revocation of stolen, fraudulent or expired beta keys but instructs developers not to revoke legitimately sold customer keys.",
+      "source_ids": [
+        "steam-keys-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Does not independently resolve disputes with external retailers or all national consumer laws."
+    },
+    {
+      "id": "key-key-request-revocable",
+      "text": "Valve reserves discretion to deny excessive key requests, including when key requests are out of balance with sales or customer interest on Steam.",
+      "source_ids": [
+        "steam-keys-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No numerical automatic rejection rule can be inferred for an individual game."
+    },
+    {
+      "id": "key-preorder-unlocks-on-steam-release",
+      "text": "Valve states pre-purchases sold off Steam with a Steam key should unlock at the same time as the Steam release.",
+      "source_ids": [
+        "steam-keys-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Release State Override keys and testing keys have different access permissions and must not be misrepresented as normal preorders."
+    },
+    {
+      "id": "content-survey-prerelease-required",
+      "text": "Valve requires a Content Survey before reviewing a game's public store page and build, covering general, mature and generative-AI content.",
+      "source_ids": [
+        "steam-content-survey-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A completed survey does not guarantee approval or authorize unlawful/infringing content."
+    },
+    {
+      "id": "ai-disclosure-player-consumed-output",
+      "text": "Valve's AI section focuses on player-consumed content supplied in the game, including AI-assisted artwork, sound, narrative and localization, rather than generic back-office efficiency tools.",
+      "source_ids": [
+        "steam-content-survey-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The developer should describe any qualifying AI use honestly; exact project-specific obligations depend on content and review."
+    },
+    {
+      "id": "ai-pre-generated-vs-live",
+      "text": "Valve distinguishes pre-generated player-consumed content made during development from content generated live while a game is running.",
+      "source_ids": [
+        "steam-content-survey-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No assumption that all AI tooling use or all generated assets are safe, licensed or approved."
+    },
+    {
+      "id": "ai-live-additional-guardrails",
+      "text": "For live-generated AI output, Valve asks developers to explain safeguards against illegal generated content in the Content Survey.",
+      "source_ids": [
+        "steam-content-survey-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Submitting guardrails is not proof of their operational adequacy or a guarantee of store acceptance."
+    },
+    {
+      "id": "ai-live-adult-restriction",
+      "text": "Valve says it currently will not ship Adult Only Sexual Content generated by AI during gameplay.",
+      "source_ids": [
+        "steam-content-survey-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A dated Steam platform distribution policy, not a statement that all such material is prohibited by law."
+    },
+    {
+      "id": "ai-disclosure-does-not-confer-ip-ownership",
+      "text": "A Steam content disclosure cannot establish a publisher's copyright ownership or license chain for assets used in a game.",
+      "source_ids": [
+        "steam-content-survey-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Copyright and contract status depend on asset provenance, relevant law and rights agreements; no project assets examined."
     }
   ],
   "observations": [],
@@ -2753,5 +2936,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research includes source-backed public sales distributions, precise cohort comparability, and explicitly synthetic break-even scenarios separating cash and imputed development labor. Actual first-game developer profits, royalty terms and seller-zero shares remain unknown."
+  "summary": "Steam research includes public release and seller-outcome evidence, explicit break-even scenarios, external-key distribution and content/AI disclosure rules. First commercial publisher take-home income, rights in individual game assets and exact zero paid sales remain unknown."
 }
