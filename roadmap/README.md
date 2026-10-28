@@ -225,3 +225,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **Steam discovery and historical revenue share (2026-10-28):** [Official discovery/wishlist study](../ontology/steam/discovery-wishlists-and-visibility-2026.md) distinguishes purchased games from wishlist and traffic events; [historical revenue-share review](../ontology/steam/revenue-share-tiers-2018-2026.md) records marginal 2018 thresholds without asserting every 2026 contract or profit. Scores moved **6% → 13%** (Δ **+7 pp**, exact 13.31%) across unchanged 293 tasks. Source register has 13 public documents and 47 bounded claims; income and game-publisher zero-sales population remain unobserved.
+
+
+**Steam public supply and conditional long-tail evidence (2026-10-28):** [SteamDB and steamlense 2025 catalog counts plus GameDiscoverCo's selected 2023–25 success-cohort study](../ontology/steam/public-catalog-and-conditional-long-tail-2026.md). The 61% under-ten-review fraction is **not** an observed zero-sales share; the 5,000-game median multipliers exclude titles below 1,000 estimated first-month units. **13% → 17%**, Δ **+4 pp** (exact 17.014% of 293 stable tasks). Totals now **16 sources and 59 bounded claims**; true earnings medians, refunds, zero-sale publishers and profits still unknown.
