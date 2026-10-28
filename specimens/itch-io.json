@@ -2748,6 +2748,28 @@
       "publisher": "Skydome Entertainment (first-party game creator)",
       "evidence_class": "first_party_named_game_public_creator_metric_report",
       "license": "Only brief attributed public numerical figures and independent interpretation; no third-party image or article text reproduced."
+    },
+    {
+      "id": "weather-factory-2019-cultist-launch-itch-steam-postlaunch-split",
+      "url": "https://weatherfactory.biz/state-of-the-factory-year-1/",
+      "title": "State of the Factory: Year 1 — Cultist Simulator",
+      "publisher": "Weather Factory / Alexis Kennedy (first-party developer)",
+      "published_at": "2019-02-12",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_established_publisher_crossstore_report_with_prerelease_and_postrelease_itch_periods",
+      "license": "Only brief numerical factual observations and independently authored analysis; no artwork, financial statement images or article text reproduced.",
+      "notes": "Historical 2018 commercial launch. c.170 itch postlaunch units / $3.5k gross vs 93k Steam units / $1.46m gross; 1,070 earlier itch presales from Dec 2017-Feb 2018 vs 178 after launch in seven months. Preorders must not be merged into postlaunch store table; startup advance and costs do not equal seller net income."
+    },
+    {
+      "id": "mallock-2026-drop-zone-server-shutdown-operations",
+      "url": "https://itch.io/devlog/1456982/closing-the-doors-on-global-operations-drop-zone.amp",
+      "title": "Closing the Doors on Global Operations: Drop Zone",
+      "publisher": "Mallock / Mika Leiman (first-party browser multiplayer game creator)",
+      "published_at": "2026-03-13",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_2d_browser_multiplayer_server_shutdown_cost_demand_and_external_payment_report",
+      "license": "Brief attributed operational facts and independently written limitations only; no code, post text or art republished.",
+      "notes": "Developer said online servers closed March 13, 2026: hosting, bandwidth, maintenance costs outgrew support capacity, concurrent players near zero, external Stripe Gold Pack income inadequate. No exact cost, revenue, paid itch orders, or verified zero-income claim."
     }
   ],
   "claims": [
@@ -8611,6 +8633,76 @@
       "confidence": "medium",
       "observed_at": "2026-10-28",
       "limitations": "Cannot estimate platform-wide sales, conversion, seller median or creator profit."
+    },
+    {
+      "id": "cultist-2019-itch-170-postlaunch-versus-steam-93000",
+      "text": "Weather Factory's February 2019 retrospective reported about 170 post-launch itch units with approximately USD 3,500 gross, compared with roughly 93,000 Steam units and USD 1.46 million gross for Cultist Simulator.",
+      "source_ids": [
+        "weather-factory-2019-cultist-launch-itch-steam-postlaunch-split"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Round-number first-party store table, one exceptional established studio; different distribution and publisher terms, not representative game market shares."
+    },
+    {
+      "id": "cultist-2017-18-itch-exclusive-presales-not-postlaunch",
+      "text": "The same publisher reported 1,070 itch pre-purchases during December 2017–February 2018 exclusivity, separately from 178 itch purchases in seven months after the May 2018 full launch when Steam was available.",
+      "source_ids": [
+        "weather-factory-2019-cultist-launch-itch-steam-postlaunch-split"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Pre-release and post-release periods are unequal, price/promotion conditions differ, and 178 post-launch observations need not equal the rounded 170 cross-store table exactly."
+    },
+    {
+      "id": "cultist-2019-itch-cumulative-counts-not-sum-of-table",
+      "text": "The roughly 170-unit itch post-launch cross-store entry is not a lifetime total including the 1,070 pre-release purchases, so treating it as the game's entire itch lifetime volume would undercount earlier paid demand.",
+      "source_ids": [
+        "weather-factory-2019-cultist-launch-itch-steam-postlaunch-split"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "The source's periods, rounding and snapshots do not establish an exact reconciled cumulative order count or unique-buyer count."
+    },
+    {
+      "id": "cultist-2019-2018-outlier-and-gross-not-owner-income",
+      "text": "The first-party report calls Cultist Simulator a successful outlier and reports a USD 60,000 publishing advance, a USD 1.76 million approximate cross-store gross total, and significant publisher, platform, refund, labor and production deductions.",
+      "source_ids": [
+        "weather-factory-2019-cultist-launch-itch-steam-postlaunch-split"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Gross and publisher advance do not establish individual take-home profit or typical first-time developer income; source identifies 2018 costs but not a comparable after-tax hourly rate."
+    },
+    {
+      "id": "drop-zone-2026-server-shutdown-cost-demand",
+      "text": "The creator of the 2D browser multiplayer game Global Operations: Drop Zone reported shutting down its online servers on March 13, 2026 after rising hosting, bandwidth and maintenance expenses, with concurrent users near zero.",
+      "source_ids": [
+        "mallock-2026-drop-zone-server-shutdown-operations"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Self-report; no quantified actual monthly burn, player counts, transaction export, or comparison group."
+    },
+    {
+      "id": "drop-zone-2026-stripe-pack-income-inadequate",
+      "text": "The same developer said Stripe-based Gold Pack monetization never came close to operational costs before shutdown, and disabled matchmaking, leaderboards and Gold Pack purchases.",
+      "source_ids": [
+        "mallock-2026-drop-zone-server-shutdown-operations"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Stripe was an external purchase route, not verified itch checkout revenue; 'inadequate' is not zero and there is no exact gross or net amount."
+    },
+    {
+      "id": "drop-zone-2026-live-service-offline-not-zero-itch-sales",
+      "text": "The reported shutdown illustrates that even an itch-listed browser game may depend on independently funded servers and external payments whose viability cannot be established from the public itch game page.",
+      "source_ids": [
+        "mallock-2026-drop-zone-server-shutdown-operations"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "A single self-selected service failure is not a paid-game seller cohort, a verified zero-sale outcome, or a measured population-level shutdown risk."
     }
   ],
   "observations": [

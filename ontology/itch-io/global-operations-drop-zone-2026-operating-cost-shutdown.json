@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "named_2d_browser_multiplayer_shutdown_when_external_payments_below_server_costs",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "mallock-2026-drop-zone-server-shutdown-operations"
+  ],
+  "creator": "Mika Leiman (Mallock)",
+  "game": "Global Operations: Drop Zone",
+  "same_game_count": 1,
+  "release_form": "browser_html5_2d_multiplayer",
+  "report_date": "2026-03-13",
+  "outcome": {
+    "last_server_offline": "2026-03-13",
+    "multiplayer_offline_reported": true,
+    "matchmaking_disabled": true,
+    "leaderboards_unavailable": true,
+    "gold_pack_purchases_disabled": true,
+    "hosting_costs_reported_ongoing": true,
+    "bandwidth_and_maintenance_costs_reported_ongoing": true,
+    "concurrent_players_near_zero_reported": true,
+    "monetization_inadequate_for_operating_costs_reported": true,
+    "payment_provider_external_stripe": true,
+    "itch_checkout_paid_orders_verified": false,
+    "claimed_zero_revenue": false
+  },
+  "technology": {
+    "frontend_phaser_3": true,
+    "backend_asp_net_core_signalr": true,
+    "docker_deployment": true,
+    "ops_dependency_requiring_external_servers": true
+  },
+  "unknown": {
+    "monthly_server_cost": null,
+    "project_lifetime_revenue": null,
+    "paid_gold_pack_orders": null,
+    "platform_itch_gross_revenue": null,
+    "refund_adjusted_revenue": null,
+    "net_profit": null,
+    "production_hours": null,
+    "actual_monthly_active_players": null,
+    "pre_shutdown_30_day_paid_store_orders": null
+  },
+  "limits": [
+    "The author reported an ongoing cost/low-demand imbalance but did not supply a numeric budget or revenue ledger.",
+    "Gold Packs were mediated by Stripe rather than itch.io's own storefront checkout; no itch paid-game sale count follows.",
+    "Near-zero concurrent users do not establish an exact user count, an exactly zero paid population, or the conversion of earlier visitors.",
+    "This is a selected multiplayer online-service project, not a representative video-game publisher or a mandatory-paid title.",
+    "The server shutdown is a developer-report snapshot on March 13 2026, not a verified statement about current domain availability.",
+    "Developer mention of possible open sourcing is not evidence of an actual license or source release."
+  ]
+}
