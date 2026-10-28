@@ -6,6 +6,7 @@ import {auditPublicationRights} from './publication-rights.mjs';
 import {auditLocalPublicationMedia} from './publication-asset-scan.mjs';
 import {auditPublicResearchPrivacy} from './public-privacy-audit.mjs';
 import {auditMissingDataDependencies} from './missing-data-audit.mjs';
+import {auditItchTaskEvidenceLinks} from './itch-task-evidence-link-audit.mjs';
 const root = path.resolve(process.argv[2] || process.cwd());
 const load = name => JSON.parse(fs.readFileSync(path.join(root,name),'utf8'));
 const has = name => fs.existsSync(path.join(root,name));
@@ -700,6 +701,10 @@ for (const entry of index.specimens) {
       ensure(Number.isInteger(item.percent) && item.percent>=0 && item.percent<=100,'Invalid plan progress');
       ensure(item.percent<100 || (item.status==='complete' && item.evidence.length>0),
         'Unverified plan completion: '+item.id);
+    }
+    if(entry.id==='itch-io') {
+      const evidenceLinks=auditItchTaskEvidenceLinks(plan,queue,root);
+      ensure(evidenceLinks.valid,'itch.io task evidence paths invalid: '+evidenceLinks.errors.slice(0,5).join('; '));
     }
     ensure(plan.workstreams.length===queue.queues.length,'Missing study workstreams');
     for(const work of plan.workstreams) {
