@@ -68,7 +68,24 @@
     "cumulative_cohorts_independent": false,
     "payment_amount_usd_not_net_profit": true,
     "views_represent_events_not_unique_buyers": true,
-    "game_distributions_mix_release_ages": true
+    "game_distributions_mix_release_ages": true,
+    "zero_median_arithmetic_audit": {
+      "formula": "For a nonnegative exact revenue measure and conventional arithmetic median, at least floor(n/2)+1 zeros are required for a zero median. A percentage stated to the nearest whole point represents the interval p-0.5 to p+0.5 percent.",
+      "sample_size": 690,
+      "reported_zero_revenue_percent": 45,
+      "assumed_nearest_integer_percent": true,
+      "possible_exact_zero_record_counts_if_percentage_rounded": [
+        308,
+        313
+      ],
+      "minimum_zeros_if_true_exact_zero_median": 346,
+      "compatible_under_same_basis_exact_median_and_nonnegative_receipts": false,
+      "source_revenue_measure_matched_to_median": false,
+      "source_median_zero_unrounded_confirmed": false,
+      "actual_reported_data_error_confirmed": false,
+      "representative_market_median": null,
+      "actual_zero_publisher_fraction": null
+    }
   },
   "reported_later_comment": {
     "sample_size": 702,
