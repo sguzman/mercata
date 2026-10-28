@@ -15,7 +15,7 @@ Both are calculated per assumed gross paid checkout order, after **assumed refun
 
 ## Transparent synthetic example
 
-Assume an *invented* single game with a USD $10 average checkout price, 10% hypothetical refunds, 10% sales-tax component of retained checkout receipts, 30% illustrative platform share, and a further 50% publisher recoup/retention of post-platform proceeds. In this illustrative model, one gross paid order contributes **about $2.27** to developer receipts before fixed costs.
+Assume an *invented* single game with a **USD $8 average paid checkout price** (for example a $10 list price with a wholly hypothetical 20% discount), 10% hypothetical refunds, 10% sales-tax component of retained checkout receipts, 30% illustrative platform share, and a further 50% publisher recoup/retention of post-platform proceeds. In this illustrative model, one gross paid order contributes **about $2.27** to developer receipts before fixed costs.
 
 A hypothetical cash expense budget of $2,268 breaks even near **1,000 gross paid orders** under those assumptions. If 500 development hours are also valued at $20/hour, economic break-even rises to about **5,410 gross paid orders**. These numbers are **not Steam averages or recommendations** and depend strongly on every input. They deliberately exclude personal income taxes, financing costs, FX and any unique contractual waterfalls.
 
