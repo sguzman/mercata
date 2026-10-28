@@ -6,7 +6,7 @@
 
 Mercata researches the cost, demand, competition, access, discovery, fees, payouts, rights, earnings distributions and realistic earning strategies of online platforms. Its goal is clear economic understanding, not promotional income claims.
 
-**26 marketplaces are now admitted as research specimens.** Their dossiers include 3,064 baseline research tasks across 437 work queues. **YouTube research is underway**, with 235 additional platform-specific tasks (399 YouTube tasks total). **itch.io research is underway** across its existing 244-task inventory. Other marketplace dossiers remain queued. YouTube's sourced policy and audience findings do not establish a representative total creator-income distribution. Most content-community population sizes remain unknown; a separate U.S. news-consumption survey has a defined, bounded population.
+**26 marketplaces are now admitted as research specimens.** Their dossiers include 3,064 baseline research tasks across 437 work queues. **YouTube research is underway**, with 235 additional platform-specific tasks (399 YouTube tasks total). **itch.io research is underway** across its existing 244-task inventory. **Steam has a prepared 293-task research inventory (0% researched)**. Other marketplace dossiers remain queued. YouTube's sourced policy and audience findings do not establish a representative total creator-income distribution. Most content-community population sizes remain unknown; a separate U.S. news-consumption survey has a defined, bounded population.
 
 ## Contents
 
@@ -53,6 +53,7 @@ Licensed under the repository's [LICENSE](LICENSE).
 
 - [YouTube study plan](plans/youtube.md) ([machine-readable tasks](plans/youtube.json)): 164 existing tasks and 235 additional YouTube-specific research questions, **399 tasks in all**, across 22 workstreams and four phases. Inventory creation is complete; initial source-backed research has begun. No marketplace account actions, paid experiments or commercial publishing have been performed.
 - [itch.io study plan](plans/itch-io.md) ([machine-readable tasks](plans/itch-io.json)): 84 existing tasks and 160 additional itch.io-specific questions, **244 tasks total** across 13 workstreams and four phases. Official-source and bounded market research is underway; evidence-scored progress is now 97%.
+- [Steam study plan](plans/steam.md) ([machine-readable tasks](plans/steam.json)): preserves 84 original tasks and adds **209 research questions**, for **293 tasks total** across 13 workstreams and four phases. The Steam inventory is **0% researched**: no economic claims, market figures, account actions, scraped data or experiments have been added.
 
 The [YouTube ontology](ontology/youtube/README.md) contains an independent glossary, category taxonomy, official policy snapshots and measurement dictionary. Its public dossier now includes dated, linked primary-source claims; typical total creator earnings and most community populations are still unknown.
 

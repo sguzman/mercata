@@ -10,6 +10,8 @@ All milestones, phases and atomic tasks use meaningful emojis and percentage val
 
 **Intake:** 26 expressly approved marketplaces were admitted on 2026-10-23. Every specimen has a dossier, perceptual color and its appropriate core/specialist queues. Eleven social-audience specimens received 80 additional questions. YouTube also has 235 detailed questions beyond its 164 baseline tasks.
 
+**Steam research inventory (October 28, 2026):** the previously admitted Steam specimen keeps its original 84 unscored tasks, with 209 new dedicated questions. [Detailed plan](../plans/steam.md) and [machine inventory](../plans/steam.json): **293 tasks across 13 workstreams and four phases; 0% researched**. No Steam policy fact, market estimate, income observation or experiment was added. This is a planning artifact, not research completion.
+
 **Research:** study the admitted specimens through their core and relevant specialist queues. Measure the platform, actual participant earnings and realistic earning strategies. Preserve unknowns and limitations rather than claiming exhaustive knowledge where information cannot be found.
 
 Once a milestone is completed, routine progress reports need only show still-open work. The full evidence ledger remains here.

@@ -25,6 +25,10 @@ Unlike ordinary domain specialists, this is a **cross-domain profile**: a video 
 See [audience ontology](../ontology/README.md). Public sources, surveys and platform analytics have different access and denominator limits. Community size figures must distinguish viewers from content impressions or channel counts; all missing measurements remain unknown.
 
 
+## Existing Steam specimen: dedicated inventory
+
+Steam was already admitted on October 23, 2026. The [Steam inventory](../plans/steam.md) preserves all 84 core and game-specialist baseline tasks and adds **209 Steam-specific questions** (293 total) covering Steamworks onboarding, paid release cohorts including zero earners, wishlists, Next Fest, game sales estimates versus merchant data, pricing, refunds, developer profit, rights, marketing and release labor. All 293 tasks are **0% researched**, with no Steam source or economic claim recorded; no new specimen or account access was created.
+
 ## Existing itch.io specimen: dedicated plan
 
 The already-admitted itch.io game specimen preserves its 84 original tasks and adds 160 platform-specific research questions. The [itch.io plan](../plans/itch-io.md) is an unresearched inventory at 0%, not evidence of any game sales or income. No new marketplace was admitted.

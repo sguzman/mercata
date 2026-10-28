@@ -317,4 +317,4 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion:** 0/293 task-equivalent percentage points. Baseline queues, the 26-specimen gallery, Steam’s existing OKLCH color and all other specimens are unchanged in substance. No research, account operations, purchases, scraping, financial data processing or experiments were performed.
+**Completion:** 0% of all 293 tasks. Baseline queues, the 26-specimen gallery, Steam’s existing OKLCH color and all other specimens are unchanged in substance. No research, account operations, purchases, scraping, financial data processing or experiments were performed.
