@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 59,
+  "progress_percent": 60,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -156,7 +156,7 @@
         "steam/economics/model-multi-currency-settlement-uncertainty"
       ],
       "phase": 1,
-      "progress_percent": 77
+      "progress_percent": 78
     },
     {
       "id": "market",
@@ -190,7 +190,7 @@
         "steam/market/document-cohort-coverage-uncertainty"
       ],
       "phase": 2,
-      "progress_percent": 57
+      "progress_percent": 58
     },
     {
       "id": "discovery",
@@ -325,7 +325,7 @@
         "steam/rights/document-dispute-enforcement-and-appeals"
       ],
       "phase": 3,
-      "progress_percent": 66
+      "progress_percent": 73
     },
     {
       "id": "sales",
@@ -496,7 +496,7 @@
         "steam/special-games/plan-live-game-maintenance-and-sunset"
       ],
       "phase": 2,
-      "progress_percent": 59
+      "progress_percent": 67
     }
   ],
   "deliverables": [
@@ -1288,13 +1288,16 @@
       "objective": "Research separate base game licenses, DLC purchase events, bundles and microtransactions.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate base game licenses, DLC purchase events, bundles and microtransactions. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 65,
       "weight": 1,
       "evidence": [
         "ontology/steam/revenue-share-tiers-2018-2026.json",
-        "ontology/steam/revenue-share-tiers-2018-2026.md"
+        "ontology/steam/revenue-share-tiers-2018-2026.md",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/revenue-share-tiers-2018-2026.md",
+      "artifact": "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1669,14 +1672,16 @@
       "objective": "Research define percent of comparable releases with demos, test builds and Coming Soon periods.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define percent of comparable releases with demos, test builds and Coming Soon periods. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 50,
       "weight": 1,
       "evidence": [
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json"
       ],
-      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+      "artifact": "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2891,14 +2896,16 @@
       "objective": "Research research content warranties, music, middleware licenses and third-party materials.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research content warranties, music, middleware licenses and third-party materials. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
         "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json"
       ],
-      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+      "artifact": "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2928,11 +2935,15 @@
       "emoji": "⚖️",
       "objective": "Research separate user content licenses, moderation, monetization and infringement liability.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate user content licenses, moderation, monetization and infringement liability. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 90,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3555,16 +3566,18 @@
       "objective": "Research estimate patches, localization QA, customer disputes and maintenance labor.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Estimate patches, localization QA, customer disputes and maintenance labor. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/app-transfer-reporting-and-retirement-2026.md",
         "ontology/steam/app-transfer-reporting-and-retirement-2026.json",
         "specimens/steam.json",
         "ontology/steam/steamos-deck-compatibility-qa-2026.json",
-        "ontology/steam/steamos-deck-compatibility-qa-2026.md"
+        "ontology/steam/steamos-deck-compatibility-qa-2026.md",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json"
       ],
-      "artifact": "ontology/steam/steamos-deck-compatibility-qa-2026.md",
+      "artifact": "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3595,14 +3608,16 @@
       "objective": "Research analyze rights clearance, music licenses, claims, takedowns and regional duties.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Analyze rights clearance, music licenses, claims, takedowns and regional duties. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
         "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json"
       ],
-      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+      "artifact": "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -4503,11 +4518,15 @@
       "emoji": "🎮",
       "objective": "Research analyze creator tools, moderation, licensing and developer support costs.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Analyze creator tools, moderation, licensing and developer support costs. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 95,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -4711,14 +4730,16 @@
       "objective": "Research define ongoing patches, backend end-of-life and buyer access continuity.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define ongoing patches, backend end-of-life and buyer access continuity. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 70,
       "weight": 1,
       "evidence": [
         "ontology/steam/app-transfer-reporting-and-retirement-2026.md",
         "ontology/steam/app-transfer-reporting-and-retirement-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json"
       ],
-      "artifact": "ontology/steam/app-transfer-reporting-and-retirement-2026.md",
+      "artifact": "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
       "priority": "normal",
       "phase": 2
     }

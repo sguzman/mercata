@@ -719,6 +719,28 @@
       "evidence_class": "official_country_specific_steam_store_visibility_policy",
       "license": "Only link and independently written short factual summary.",
       "notes": "Current Indonesia rating process and possible future visibility limits, without definite published cutoff."
+    },
+    {
+      "id": "steam-workshop-modes-2026",
+      "url": "https://partner.steamgames.com/doc/features/workshop?l=english",
+      "title": "Steam Workshop",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_ugc_integration_models",
+      "license": "Source metadata, link and independently authored condensed facts only, no article text or images reproduced.",
+      "notes": "Defines ready-to-use and curated workflows, content update responsibility, and optional paid Workshop flows."
+    },
+    {
+      "id": "steam-workshop-implementation-2026",
+      "url": "https://partner.steamgames.com/doc/features/workshop/implementation?l=english",
+      "title": "Steam Workshop Implementation Guide",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_ugc_technical_integration",
+      "license": "Source link and concise independently written overview only; no API documentation or code copied.",
+      "notes": "UGC integration and implementation details, not actual developer costs or creator earnings."
     }
   ],
   "claims": [
@@ -3402,6 +3424,129 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Without product-specific historical availability a zero country-sale observation is ambiguous."
+    },
+    {
+      "id": "workshop-ready-mode",
+      "text": "Valve describes a Ready-to-Use Steam Workshop where player-submitted items can be automatically available for installation or use without game-developer curation.",
+      "source_ids": [
+        "steam-workshop-modes-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Requires appropriate upload tools and game client support; real-world moderation may still be necessary."
+    },
+    {
+      "id": "workshop-curated-mode",
+      "text": "Valve also offers a Curated Workshop where game developers decide which user-submitted items are included or sold.",
+      "source_ids": [
+        "steam-workshop-modes-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Curating items imposes review, adaptation and integration work; not proof of any conversion benefit."
+    },
+    {
+      "id": "workshop-isugc-api",
+      "text": "Workshop client upload, subscription and download workflows are implemented using Steam's ISteamUGC interfaces.",
+      "source_ids": [
+        "steam-workshop-modes-2026",
+        "steam-workshop-implementation-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "An API capability is not evidence of installed mods or unique users."
+    },
+    {
+      "id": "workshop-upload-validation",
+      "text": "Valve recommends upload validation, tooling and style guidance to constrain supported item formats and game-content behavior.",
+      "source_ids": [
+        "steam-workshop-modes-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Exact moderation obligations and legal content liabilities require game-specific terms and policies."
+    },
+    {
+      "id": "workshop-curated-ownership",
+      "text": "Sold curated items need item entitlement tracking, for example through Steam Inventory Service, and appropriate in-game sales flows.",
+      "source_ids": [
+        "steam-workshop-modes-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "An ownership service does not establish individual game publisher revenue or profit."
+    },
+    {
+      "id": "workshop-paid-transactions-multiple-parties",
+      "text": "Valve describes Steam handling payments and tax withholding for paid Workshop items, potentially paying item authors and game developers.",
+      "source_ids": [
+        "steam-workshop-modes-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The public guide is not a universal royalty contract and no specific author or developer payouts were obtained."
+    },
+    {
+      "id": "workshop-creator-agreements-exist",
+      "text": "Valve's Workshop workflow involves author submission agreements, including Steam Subscriber and Workshop agreements.",
+      "source_ids": [
+        "steam-workshop-modes-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The guide references agreements but does not verify all creator asset rights, third-party licenses or specific revenue splits."
+    },
+    {
+      "id": "workshop-subscribe-not-paid-order",
+      "text": "Free Workshop subscriptions and mod downloads are not completed purchases of base games or paid DLC.",
+      "source_ids": [
+        "steam-workshop-modes-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Workshop usage may contribute value but cannot be substituted for merchant checkout totals."
+    },
+    {
+      "id": "workshop-content-maintenance",
+      "text": "Ready-to-use authors can update uploaded items while game clients must correctly recognize and download subscribed content.",
+      "source_ids": [
+        "steam-workshop-modes-2026",
+        "steam-workshop-implementation-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Versioning, save compatibility, multiplayer map distribution and mod interoperability generate unmeasured support cost."
+    },
+    {
+      "id": "workshop-proprietary-licensing-unverified",
+      "text": "A game's general Workshop support does not establish publisher ownership of all user-generated content or ability to commercially redistribute every mod.",
+      "source_ids": [
+        "steam-workshop-modes-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Requires review of applicable Workshop agreements and author rights; not determined by integration capability."
+    },
+    {
+      "id": "workshop-economic-roi-unmeasured",
+      "text": "Valve's Workshop descriptions do not provide a representative revenue uplift, author payout distribution or development labor requirement.",
+      "source_ids": [
+        "steam-workshop-modes-2026",
+        "steam-workshop-implementation-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "These remain unknown without permissioned paid item reports and measured engineering/support time."
+    },
+    {
+      "id": "workshop-paid-items-not-game-copies",
+      "text": "Even if a paid Workshop mod is sold, that transaction must not be counted as a paid base-game copy.",
+      "source_ids": [
+        "steam-workshop-modes-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Distinct item, subscription, package and AppID denominators need separate accounting."
     }
   ],
   "observations": [],
@@ -3409,5 +3554,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research distinguishes regional age-rating availability, notably Germany's dated 2024 cutoff and Indonesia's unannounced future cutoff, from customer purchase demand. Game-level seller profits remain unknown."
+  "summary": "Steam studies now cover UGC Workshop modes and integration/rights constraints, distinguishing mod subscriptions and optional paid items from base-game sales. Verified merchant publisher earnings remain unknown."
 }

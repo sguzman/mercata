@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "steam_workshop_modes_ugc_sales_and_commercial_rights_boundaries",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-workshop-modes-2026",
+    "steam-workshop-implementation-2026"
+  ],
+  "claim_ids": [
+    "workshop-ready-mode",
+    "workshop-curated-mode",
+    "workshop-isugc-api",
+    "workshop-upload-validation",
+    "workshop-curated-ownership",
+    "workshop-paid-transactions-multiple-parties",
+    "workshop-creator-agreements-exist",
+    "workshop-subscribe-not-paid-order",
+    "workshop-content-maintenance",
+    "workshop-proprietary-licensing-unverified",
+    "workshop-economic-roi-unmeasured",
+    "workshop-paid-items-not-game-copies"
+  ],
+  "models": {
+    "ready_to_use": {
+      "direct_subscriptions": true,
+      "author_updates_possible": true,
+      "game_client_integration_needed": true
+    },
+    "curated": {
+      "developer_acceptance_required": true,
+      "paid_items_need_entitlements": true,
+      "mod_approval_overhead_possible": true
+    }
+  },
+  "monetization": {
+    "free_subscription_is_paid_order": false,
+    "paid_workshop_item_is_base_game_sale": false,
+    "author_and_developer_payment_handled_by_steam_in_relevant_paid_workflows": true,
+    "exact_royalty_percent": null,
+    "actual_author_earnings": null,
+    "actual_developer_net": null
+  },
+  "rights": {
+    "workshop_author_agreements_exist": true,
+    "all_user_items_owned_by_game_developer": false,
+    "all_ugc_reusable_without_individual_rights_check": false,
+    "content_validation_planning_required": true
+  },
+  "unknown": {
+    "observed_ugc_upload_count": null,
+    "observed_paid_mod_orders": null,
+    "real_engineering_hours": null,
+    "causal_base_game_sales_lift": null,
+    "actual_profit": null
+  },
+  "no_user_uploads_accessed": true,
+  "no_steamworks_integration_performed": true
+}
