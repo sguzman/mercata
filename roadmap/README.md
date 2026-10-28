@@ -276,3 +276,5 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 **Steam vs itch.io public launch channel comparison (2026-10-28):** [Official paid-game entry, payout and discovery tradeoffs](../ontology/steam/steam-versus-itchio-first-game-channel-2026.md), [synthetic fee-only validation guard](../site/steam-channel-comparison.mjs). **72% → 73%** (Δ +1 pp, exact 73.106%), 84 sources, 423 claims, original 293-task Steam scope unchanged.
 
 **Steam networking and patch delivery (2026-10-28):** [Lobbies/P2P/dedicated/SDR and SteamPipe evidence](../ontology/steam/multiplayer-network-and-steampipe-operations-2026.md) isolates service, bandwidth and temporary storage costs, all actuals unknown. **73% → 75%** (Δ +2 pp, exact 74.795%), fixed 293 tasks, 90 sources, 441 claims.
+
+**Steam legal counterparties and package sales (2026-10-28):** [Sole proprietors, management sharing, collaborative bundle payout, and free-license distinctions](../ontology/steam/legal-partners-bundle-payouts-and-free-licenses-2026.md). **75% → 77%** (Δ +2 pp, exact 77.440%), 94 sources, 459 claims, original 293 task IDs stable.

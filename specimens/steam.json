@@ -1005,6 +1005,50 @@
       "evidence_class": "official_public_technical_product_and_platform_documentation",
       "license": "Only factual paraphrases, metadata and URL; no copyrighted documentation, partner data, or screenshots reproduced.",
       "notes": "Public technical guidance; no live service, account, SteamPipe build, server workload or cost observed."
+    },
+    {
+      "id": "steam-onboarding-faq-current-2026",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/faq?language=english",
+      "title": "Onboarding FAQ",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_public_partner_and_sales_unit_rules",
+      "license": "Only links, source titles and independently authored factual summaries, no account data or copied documentation.",
+      "notes": "Merchant terms and reporting definitions; game-specific contracts and actual sales unavailable."
+    },
+    {
+      "id": "steam-app-management-sharing-2026",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/managing_apps/sharing",
+      "title": "Application Management Sharing",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_public_partner_and_sales_unit_rules",
+      "license": "Only links, source titles and independently authored factual summaries, no account data or copied documentation.",
+      "notes": "Merchant terms and reporting definitions; game-specific contracts and actual sales unavailable."
+    },
+    {
+      "id": "steam-collaborative-bundle-payout-2026",
+      "url": "https://partner.steamgames.com/doc/store/application/bundles/collaborative",
+      "title": "Creating Bundles Across Multiple Developers/Publishers",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_public_partner_and_sales_unit_rules",
+      "license": "Only links, source titles and independently authored factual summaries, no account data or copied documentation.",
+      "notes": "Merchant terms and reporting definitions; game-specific contracts and actual sales unavailable."
+    },
+    {
+      "id": "steam-free-to-play-guide-2026",
+      "url": "https://partner.steamgames.com/doc/store/freetoplay",
+      "title": "Free To Play Games",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_public_partner_and_sales_unit_rules",
+      "license": "Only links, source titles and independently authored factual summaries, no account data or copied documentation.",
+      "notes": "Merchant terms and reporting definitions; game-specific contracts and actual sales unavailable."
     }
   ],
   "claims": [
@@ -5559,6 +5603,192 @@
       "observed_at": "2026-10-28",
       "confidence": "high",
       "limitations": "Real SteamPipe manifest comparisons, client QA and expense records needed."
+    },
+    {
+      "id": "partner-onboarding-legal-rightsholder",
+      "text": "The Steam Distribution Agreement is signed by the legal owner or authorized publisher of the product, not necessarily its public display-name label.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026",
+        "steam-onboarding-doc"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The identities of actual contracting parties are not public."
+    },
+    {
+      "id": "partner-onboarding-individual-allowed",
+      "text": "Valve permits a sole proprietor to onboard under their legal personal name rather than having to first incorporate.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The personal name and jurisdiction-specific legal obligations are private."
+    },
+    {
+      "id": "partner-onboarding-bank-tax-match",
+      "text": "Steamworks requires legal name matching across onboarding and banking and valid banking/tax data before release.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026",
+        "steam-onboarding-doc"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "It does not validate or disclose a partner's actual tax rate or verified eligibility."
+    },
+    {
+      "id": "partner-onboarding-sanctions",
+      "text": "Valve states that partner eligibility is subject to US sanctions and trade controls affecting restricted people, entities and territories.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Restrictions change and cannot be reduced to a fixed worldwide list for future dates."
+    },
+    {
+      "id": "partner-onboarding-age-unknown",
+      "text": "The reviewed public FAQ does not establish a universal minimum legal contracting age for all Steamworks publisher entities.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Appropriate agreement text and jurisdiction-specific capacity must still be reviewed."
+    },
+    {
+      "id": "partner-onboarding-tax-review-lag",
+      "text": "Valve's FAQ gives a typical two-to-seven-business-day tax verification interval, whereas a broader onboarding page warns of potentially longer verification.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026",
+        "steam-onboarding-doc"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The separate descriptions cannot be converted into a guaranteed date."
+    },
+    {
+      "id": "partner-sharing-management-not-income",
+      "text": "Steam App Management Sharing grants another partner management access without changing who receives payments.",
+      "source_ids": [
+        "steam-app-management-sharing-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A contributor's technical access does not prove an ownership share or remuneration."
+    },
+    {
+      "id": "partner-sharing-financial-optin",
+      "text": "The sharing partner may separately grant financial report viewing, subject to receiving users holding View Financials rights.",
+      "source_ids": [
+        "steam-app-management-sharing-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A lack of ledger permission does not establish zero prior sales."
+    },
+    {
+      "id": "partner-sharing-pricing-payee",
+      "text": "Only the payment-entitled Steamworks partner can edit a shared game's package prices and discounts.",
+      "source_ids": [
+        "steam-app-management-sharing-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "App sharing is not a transfer of the contractual payee."
+    },
+    {
+      "id": "partner-sharing-revokable",
+      "text": "The main Steamworks partner can revoke a shared-app management grant.",
+      "source_ids": [
+        "steam-app-management-sharing-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A separate game transfer uses different approval and payment rules."
+    },
+    {
+      "id": "bundle-partner-paid-per-package",
+      "text": "Valve says collaborative bundles record sales of constituent packages and pay their corresponding partners directly.",
+      "source_ids": [
+        "steam-collaborative-bundle-payout-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Private developer-publisher splits outside Steam remain unknown."
+    },
+    {
+      "id": "bundle-owned-package-not-billed",
+      "text": "Purchasing a complete-the-set bundle does not sell or charge an already owned package again.",
+      "source_ids": [
+        "steam-collaborative-bundle-payout-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Unique checkout events, games advertised and paid package units differ."
+    },
+    {
+      "id": "bundle-multi-partner-approval",
+      "text": "Changes in shared bundle products or bundle discount require participant approval.",
+      "source_ids": [
+        "steam-collaborative-bundle-payout-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The owner may still control artwork and some marketing text."
+    },
+    {
+      "id": "bundle-automatic-royalty-split-limited",
+      "text": "Steam does not support custom payout splits of the collaborative bundle's package-level proceeds within its bundle tool.",
+      "source_ids": [
+        "steam-collaborative-bundle-payout-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Private third-party agreements may allocate the money afterwards."
+    },
+    {
+      "id": "free-base-license-not-sale",
+      "text": "A Free to Play Steam game grants a free base license rather than a paid base-game package order.",
+      "source_ids": [
+        "steam-free-to-play-guide-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Free installs cannot count as first-paid-base-game purchases."
+    },
+    {
+      "id": "free-game-dlc-microtransactions",
+      "text": "Both paid and free games can sell DLC and in-game purchases with the Steam Wallet.",
+      "source_ids": [
+        "steam-free-to-play-guide-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Buying DLC or in-game goods is a separate commercial event from buying the base title."
+    },
+    {
+      "id": "free-game-later-conversion",
+      "text": "Valve documents changing a previously paid game into Free to Play.",
+      "source_ids": [
+        "steam-free-to-play-guide-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "First paid launch and later conversion must have separate dated cohort labels."
+    },
+    {
+      "id": "partner-population-income-unknown",
+      "text": "None of these public partner/access documents provides a legal-entity-level Steam publisher income distribution or verified after-cost proceeds.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026",
+        "steam-app-management-sharing-2026",
+        "steam-collaborative-bundle-payout-2026",
+        "steam-free-to-play-guide-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Such evidence requires contracts, complete authorized financial reports and original paid-game cohorts."
     }
   ],
   "observations": [],
@@ -5566,5 +5796,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research additionally covers multiplayer transport and SteamPipe update delivery, distinguishing documented feature choices from real hosting, patching expense and developer earnings."
+  "summary": "Mercata Steam study separates legal merchant counterparties, shared app management, cross-publisher bundle package sales and F2P licenses; actual publisher net income remains unknown."
 }
