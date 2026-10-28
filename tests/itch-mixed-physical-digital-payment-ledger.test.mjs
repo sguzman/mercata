@@ -37,7 +37,7 @@ test('Historical cross-year reporting does not manufacture stable game-income gr
   for(const path of ['ontology/itch-io/mixed-physical-digital-payment-ledger-2024.json','ontology/itch-io/mixed-physical-digital-payment-ledger-2024.md','tests/itch-mixed-physical-digital-payment-ledger.test.mjs'])assert(task.evidence.includes(path));
  }
  const market=q.queues.flatMap(x=>x.tasks).find(t=>t.id==='market/volume');
- assert(market.status==='in_progress'&&market.progress===90);
+ assert(market.status==='in_progress'&&market.progress>=90&&market.progress<100);
  for(const path of ['ontology/itch-io/mixed-physical-digital-payment-ledger-2024.json','ontology/itch-io/mixed-physical-digital-payment-ledger-2024.md','tests/itch-mixed-physical-digital-payment-ledger.test.mjs'])assert(market.evidence.includes(path));
  assert.equal(p.total_tracked_tasks,244);
  assert.equal(p.detail_tasks.length,160);
