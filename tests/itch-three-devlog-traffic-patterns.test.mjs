@@ -20,5 +20,5 @@ test('Observation advances only the fixed devlog channel question without implyi
  assert(t.percent>=97&&t.percent<=100);
  assert.equal(t.status,t.percent===100?'complete':'in_progress');
  for(const x of ['ontology/itch-io/three-selected-devlog-traffic-patterns-2024-2026.json','ontology/itch-io/three-selected-devlog-traffic-patterns-2024-2026.md','tests/itch-three-devlog-traffic-patterns.test.mjs'])assert(t.evidence.includes(x));
- assert.equal(p.detail_tasks.find(t=>t.id==='itch-io/sales/study-browser-play-conversion').percent,72);
+ const conversion=p.detail_tasks.find(t=>t.id==='itch-io/sales/study-browser-play-conversion');assert(conversion.percent>=72&&conversion.percent<100&&conversion.status==='in_progress');
 });

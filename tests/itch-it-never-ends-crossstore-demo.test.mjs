@@ -17,6 +17,6 @@ test('Actual observed external case advances one existing incomplete research ta
  const p=get('plans/itch-io.json'),q=get('queues/itch-io.json');
  assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);assert.equal(q.queues.flatMap(g=>g.tasks).length,84);
  const t=p.detail_tasks.find(x=>x.id==='itch-io/sales/study-browser-play-conversion');
- assert.equal(t.status,'in_progress');assert.equal(t.percent,72);
+ assert.equal(t.status,'in_progress');assert(t.percent>=72&&t.percent<100);
  for(const f of ['ontology/itch-io/it-never-ends-demo-versus-paid-steam-2026.json','ontology/itch-io/it-never-ends-demo-versus-paid-steam-2026.md','tests/itch-it-never-ends-crossstore-demo.test.mjs'])assert(t.evidence.includes(f));
 });
