@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "same_seller_paid_asset_page_outcomes_not_game_income_distribution",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "pixelkiln-2026-same-creator-three-paid-asset-page-series",
+    "pixelkiln-2026-updated-paid-icons-listing"
+  ],
+  "claim_ids": [
+    "pixelkiln-2026-early-102views-no-direct-sales",
+    "pixelkiln-2026-peer-packs-7-249-2-101",
+    "pixelkiln-2026-bundle-entitlement-not-direct-sale",
+    "pixelkiln-2026-later-8-333-3-168-0-155",
+    "pixelkiln-2026-ledger-event-classes-separate",
+    "pixelkiln-2026-early-late-asset-scope-changed",
+    "pixelkiln-2026-views-per-payment-not-buyer-rate",
+    "pixelkiln-2026-no-asset-case-game-income-mean"
+  ],
+  "product_category": "paid_game_development_asset_pack_not_video_game",
+  "independent_publishers": 1,
+  "listed_products_in_comparison": 3,
+  "observational_self_report": true,
+  "snapshots": [
+    {
+      "label": "initial_september_2026",
+      "reported_at": "2026-09-06",
+      "window": "reported_same_first_month",
+      "pages": [
+        {
+          "sku": "icons_vol2",
+          "page_view_events": 102,
+          "direct_project_payment_events": 0,
+          "bundle_entitlements_reported": null
+        },
+        {
+          "sku": "ui_pack_vol1",
+          "page_view_events": 249,
+          "direct_project_payment_events": 7,
+          "bundle_entitlements_reported": null
+        },
+        {
+          "sku": "ui_forge",
+          "page_view_events": 101,
+          "direct_project_payment_events": 2,
+          "bundle_entitlements_reported": null
+        }
+      ],
+      "verified_project_ledger": false
+    },
+    {
+      "label": "intermediate_september_2026",
+      "reported_at": "2026-09-19",
+      "window": "seller_reported_cumulative_varying_release_ages",
+      "pages": [
+        {
+          "sku": "icons_vol2",
+          "page_view_events": 131,
+          "direct_project_payment_events": 0,
+          "bundle_entitlements_reported": 1
+        }
+      ],
+      "verified_project_ledger": false
+    },
+    {
+      "label": "later_september_2026",
+      "reported_at": null,
+      "window": "seller_reported_lifetime_sku_specific_age",
+      "pages": [
+        {
+          "sku": "icons_vol2",
+          "page_view_events": 155,
+          "direct_project_payment_events": 0,
+          "bundle_entitlements_reported": null
+        },
+        {
+          "sku": "ui_pack_vol1",
+          "page_view_events": 333,
+          "direct_project_payment_events": 8,
+          "bundle_entitlements_reported": null
+        },
+        {
+          "sku": "ui_forge",
+          "page_view_events": 168,
+          "direct_project_payment_events": 3,
+          "bundle_entitlements_reported": null
+        }
+      ],
+      "reported_account_total_payment_events": 13,
+      "author_says_bundle_separate_from_project_page_payments": true,
+      "verified_project_ledger": false
+    }
+  ],
+  "later_listing": {
+    "recorded_at": "2026-10-28",
+    "initial_icons_count": 381,
+    "current_icons_count": 454,
+    "regular_price_usd": 4.95,
+    "displayed_sale_price_usd": 3.71
+  },
+  "descriptive_event_ratios": {
+    "initial_comparator_direct_payments": 9,
+    "initial_comparator_page_view_events": 350,
+    "initial_comparator_payment_events_per_100_page_views": 2.57,
+    "later_comparator_direct_payments": 11,
+    "later_comparator_page_view_events": 501,
+    "later_comparator_payment_events_per_100_page_views": 2.2
+  },
+  "rejected_inferences": {
+    "marketwide_zero_earner_fraction": null,
+    "mean_paid_game_seller_income": null,
+    "median_paid_game_seller_income": null,
+    "independent_buyer_conversion": null,
+    "bundle_paid_direct_orders": null,
+    "causal_effect_of_price": null,
+    "causal_effect_of_free_demo": null,
+    "statistical_significance": null
+  },
+  "limitations": [
+    "One voluntary publisher, three related paid development-asset products, not independent sellers or paid videogames.",
+    "All payment figures, source classification and ledger description come from the creator's public thread; no transaction export examined.",
+    "Page-view totals are events, not independent people or fixed unique trials, and products have different ages and traffic.",
+    "The 13 ledger payments include a bundle category not allocated to a specific project's direct payment count.",
+    "A forum responder's iid binomial probability calculation assumes each page view is an identical independent purchase opportunity; this is unverified and cannot support an inferential claim.",
+    "Price, icon counts and bundled demo visibility changed over the period; no causal before/after or comparative price test is identified.",
+    "This comparison is not a contribution to representative paid-game buyer, sales, income, profit or zero-earning estimates."
+  ]
+}
