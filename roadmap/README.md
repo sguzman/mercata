@@ -278,3 +278,5 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 **Steam networking and patch delivery (2026-10-28):** [Lobbies/P2P/dedicated/SDR and SteamPipe evidence](../ontology/steam/multiplayer-network-and-steampipe-operations-2026.md) isolates service, bandwidth and temporary storage costs, all actuals unknown. **73% → 75%** (Δ +2 pp, exact 74.795%), fixed 293 tasks, 90 sources, 441 claims.
 
 **Steam legal counterparties and package sales (2026-10-28):** [Sole proprietors, management sharing, collaborative bundle payout, and free-license distinctions](../ontology/steam/legal-partners-bundle-payouts-and-free-licenses-2026.md). **75% → 77%** (Δ +2 pp, exact 77.440%), 94 sources, 459 claims, original 293 task IDs stable.
+
+**Steam capsule and launch review (2026-10-28):** [Official store artwork, override and truthful gameplay screenshot rules](../ontology/steam/capsule-store-page-compliance-and-review-2026.md), with temporary event override requirements and no real conversion observations. **77% → 79%** (Δ +2 pp, exact 78.976%), 97 sources and 474 claims, fixed 293 tasks.

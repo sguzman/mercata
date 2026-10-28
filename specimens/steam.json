@@ -1049,6 +1049,39 @@
       "evidence_class": "official_current_public_partner_and_sales_unit_rules",
       "license": "Only links, source titles and independently authored factual summaries, no account data or copied documentation.",
       "notes": "Merchant terms and reporting definitions; game-specific contracts and actual sales unavailable."
+    },
+    {
+      "id": "steam-store-capsule-rules-2026",
+      "url": "https://partner.steamgames.com/doc/store/assets/rules?l=english",
+      "title": "Graphical Asset Rules",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_store_presentation_review_and_asset_rules",
+      "license": "Source link, metadata and original short factual summary only; no copyrighted images, screenshots or copied policy passage.",
+      "notes": "The rules govern store presentation and review gates; no Steam store page, marketing artwork, client or customer experiments were tested."
+    },
+    {
+      "id": "steam-artwork-override-2026",
+      "url": "https://partner.steamgames.com/doc/store/assets/overrides?l=english",
+      "title": "Artwork Overrides",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_store_presentation_review_and_asset_rules",
+      "license": "Source link, metadata and original short factual summary only; no copyrighted images, screenshots or copied policy passage.",
+      "notes": "The rules govern store presentation and review gates; no Steam store page, marketing artwork, client or customer experiments were tested."
+    },
+    {
+      "id": "steam-store-review-process-2026",
+      "url": "https://partner.steamgames.com/doc/store/review_process?l=english",
+      "title": "Review Process",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_store_presentation_review_and_asset_rules",
+      "license": "Source link, metadata and original short factual summary only; no copyrighted images, screenshots or copied policy passage.",
+      "notes": "The rules govern store presentation and review gates; no Steam store page, marketing artwork, client or customer experiments were tested."
     }
   ],
   "claims": [
@@ -5789,6 +5822,164 @@
       "observed_at": "2026-10-28",
       "confidence": "high",
       "limitations": "Such evidence requires contracts, complete authorized financial reports and original paid-game cohorts."
+    },
+    {
+      "id": "capsule-default-only-title-art",
+      "text": "Valve's standard Steam store capsule imagery may contain game art, the game name and an official subtitle, but not unrelated marketing text.",
+      "source_ids": [
+        "steam-store-capsule-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The policy is about promotional graphics; actual image quality and purchasing impact remain untested."
+    },
+    {
+      "id": "capsule-no-review-scores",
+      "text": "Valve disallows review scores, accolades and award logos on permanent standard store capsules.",
+      "source_ids": [
+        "steam-store-capsule-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "These may have separate approved storefront fields; their exclusion here does not predict real conversion."
+    },
+    {
+      "id": "capsule-no-sale-text",
+      "text": "Standard Steam capsule artwork cannot advertise discounts or sale promotions within the default image.",
+      "source_ids": [
+        "steam-store-capsule-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The store may display separately rendered discounts that do not alter the capsule itself."
+    },
+    {
+      "id": "capsule-no-other-games",
+      "text": "Valve prohibits promoting another game or sequel in a product's standard capsule artwork.",
+      "source_ids": [
+        "steam-store-capsule-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "This applies to store graphic rules, not necessarily permitted cross-promotion event categories."
+    },
+    {
+      "id": "capsule-override-up-to-month",
+      "text": "Artwork Overrides enable temporary text for major content updates or seasonal events, with a maximum one-month duration.",
+      "source_ids": [
+        "steam-store-capsule-rules-2026",
+        "steam-artwork-override-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The rule does not permit arbitrary unrelated advertising or permanently promotional default capsule art."
+    },
+    {
+      "id": "capsule-override-localized",
+      "text": "Temporary artwork-override text must be localized into the languages the game supports.",
+      "source_ids": [
+        "steam-store-capsule-rules-2026",
+        "steam-artwork-override-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Language coverage is a publishing requirement, not evidence of measurable local sales impact."
+    },
+    {
+      "id": "capsule-logo-pg13",
+      "text": "Valve requires a readable product name or logo and PG-13-appropriate imagery in store and library capsules.",
+      "source_ids": [
+        "steam-store-capsule-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "This does not determine legal age classification of the actual game or every national storefront."
+    },
+    {
+      "id": "capsule-library-hero-no-text",
+      "text": "Valve's Steam Library hero artwork must contain artwork without words, while library logo has its own logotype-only rule.",
+      "source_ids": [
+        "steam-store-capsule-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Library, store, and override assets have distinct specifications and should not be confused."
+    },
+    {
+      "id": "capsule-noncompliance-event-visibility",
+      "text": "Valve warns that noncompliant graphical assets can restrict store visibility or eligibility for official events.",
+      "source_ids": [
+        "steam-store-capsule-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "This is a policy-enforcement possibility, not a measured probability or a quantified sales penalty."
+    },
+    {
+      "id": "store-review-screenshots-gameplay",
+      "text": "Steam's store-review rules require screenshots to depict actual gameplay, excluding concept-only art and promotional copy.",
+      "source_ids": [
+        "steam-store-review-process-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A screenshot may document gameplay quality only when it accurately reflects a real build."
+    },
+    {
+      "id": "store-review-feature-truthful",
+      "text": "Valve's store review requires that advertised features and screenshots match what is available at launch.",
+      "source_ids": [
+        "steam-store-review-process-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Future planned features require clearly distinguished messaging; no specific submitted product was assessed."
+    },
+    {
+      "id": "store-review-page-before-build",
+      "text": "The Steam release process reviews a game's store presence before its build review, with both checklists required for release.",
+      "source_ids": [
+        "steam-store-review-process-2026",
+        "steam-release-process-doc"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Checklist sequence and reviewer delays do not establish any project's ultimate approval."
+    },
+    {
+      "id": "store-coming-soon-two-weeks",
+      "text": "Valve requires new game Coming Soon pages to remain public for at least fourteen days before launch.",
+      "source_ids": [
+        "steam-coming-soon-doc",
+        "steam-store-review-process-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "This is a release gate, not evidence that a fixed lead time optimizes the wishlist total."
+    },
+    {
+      "id": "store-public-page-no-sales-proof",
+      "text": "Review-compliant store graphics and a completed Coming Soon page do not establish any actual visits, purchases or economic return.",
+      "source_ids": [
+        "steam-store-capsule-rules-2026",
+        "steam-store-review-process-2026",
+        "steam-coming-soon-doc"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Measuring a marketing effect requires comparable campaigns, qualified traffic and verified sales outcomes."
+    },
+    {
+      "id": "store-no-artwork-experiment",
+      "text": "The reviewed official documents contain no controlled estimate of the causal sales effect from replacing capsule artwork.",
+      "source_ids": [
+        "steam-store-capsule-rules-2026",
+        "steam-artwork-override-2026",
+        "steam-store-review-process-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "No live artwork variant, randomized visitor group or merchant sales data were observed."
     }
   ],
   "observations": [],
@@ -5796,5 +5987,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Mercata Steam study separates legal merchant counterparties, shared app management, cross-publisher bundle package sales and F2P licenses; actual publisher net income remains unknown."
+  "summary": "Steam research now includes official capsule/artwork override restrictions and store-page feature truthfulness, without interpreting compliant assets as causal sales. First-game paid publisher profits remain unmeasured."
 }

@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 77,
+  "progress_percent": 79,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -119,7 +119,7 @@
         "steam/access/plan-low-budget-legal-entity-scenarios"
       ],
       "phase": 1,
-      "progress_percent": 76
+      "progress_percent": 85
     },
     {
       "id": "economics",
@@ -225,7 +225,7 @@
         "steam/discovery/design-controlled-acquisition-measurements"
       ],
       "phase": 2,
-      "progress_percent": 75
+      "progress_percent": 83
     },
     {
       "id": "competition",
@@ -360,7 +360,7 @@
         "steam/sales/design-after-launch-retention-metrics"
       ],
       "phase": 3,
-      "progress_percent": 78
+      "progress_percent": 79
     },
     {
       "id": "risk",
@@ -394,7 +394,7 @@
         "steam/risk/build-downside-scenarios-for-small-studios"
       ],
       "phase": 3,
-      "progress_percent": 79
+      "progress_percent": 81
     },
     {
       "id": "strategy",
@@ -431,7 +431,7 @@
         "steam/strategy/design-selection-aware-case-study-comparison"
       ],
       "phase": 4,
-      "progress_percent": 84
+      "progress_percent": 85
     },
     {
       "id": "review",
@@ -1005,11 +1005,15 @@
       "emoji": "🚪",
       "objective": "Research identify prohibited content, ratings, disclosures, generative-AI policies and local restrictions.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Identify prohibited content, ratings, disclosures, generative-AI policies and local restrictions. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 80,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1021,15 +1025,17 @@
       "objective": "Research estimate reviewer, asset preparation, forms, build tooling and localization labor separately from cash.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Estimate reviewer, asset preparation, forms, build tooling and localization labor separately from cash. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 70,
       "weight": 1,
       "evidence": [
         "ontology/steam/current-first-release-wait-recheck-2026.md",
         "ontology/steam/current-first-release-wait-recheck-2026.json",
         "ontology/steam/entry-review-and-reporting-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.json"
       ],
-      "artifact": "ontology/steam/current-first-release-wait-recheck-2026.md",
+      "artifact": "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1040,11 +1046,15 @@
       "emoji": "🚪",
       "objective": "Research investigate rejected submissions, release suspensions and how to count unpublished paid games.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Investigate rejected submissions, release suspensions and how to count unpublished paid games. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 70,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1972,7 +1982,7 @@
       "objective": "Research compare public page age, first wishlist availability and launch timing.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare public page age, first wishlist availability and launch timing. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
@@ -1981,9 +1991,11 @@
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
         "specimens/steam.json",
         "ontology/steam/model-validation-and-low-end-bounds-2026.md",
-        "ontology/steam/model-validation-and-low-end-bounds-2026.json"
+        "ontology/steam/model-validation-and-low-end-bounds-2026.json",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.json"
       ],
-      "artifact": "ontology/steam/model-validation-and-low-end-bounds-2026.md",
+      "artifact": "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2075,16 +2087,18 @@
       "objective": "Research study tag completeness, tag ranking, query volume proxies and competition.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Study tag completeness, tag ranking, query volume proxies and competition. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 90,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
         "ontology/steam/discovery-wishlists-and-visibility-2026.md",
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.json"
       ],
-      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+      "artifact": "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2095,11 +2109,15 @@
       "emoji": "🧭",
       "objective": "Research define reproducible impression/click tests without assuming click changes produce sales.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define reproducible impression/click tests without assuming click changes produce sales. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 95,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -3619,7 +3637,7 @@
       "objective": "Research document publication denial, delisting and contractual dispute routes.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Document publication denial, delisting and contractual dispute routes. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/fixed-paid-release-cohort-2026.md",
@@ -3628,9 +3646,11 @@
         "ontology/steam/financial-validation-and-consent-2026.json",
         "specimens/steam.json",
         "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
-        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json"
+        "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.json"
       ],
-      "artifact": "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
+      "artifact": "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3905,16 +3925,18 @@
       "objective": "Research account for crowded release windows, changed festivals and exposure concentration.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Account for crowded release windows, changed festivals and exposure concentration. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
         "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.json",
         "specimens/steam.json",
         "ontology/steam/review-bombing-score-and-store-visibility-2026.md",
-        "ontology/steam/review-bombing-score-and-store-visibility-2026.json"
+        "ontology/steam/review-bombing-score-and-store-visibility-2026.json",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.json"
       ],
-      "artifact": "ontology/steam/review-bombing-score-and-store-visibility-2026.md",
+      "artifact": "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3996,16 +4018,18 @@
       "objective": "Research specify independent variable, permissioned metrics, time horizon, cost and stop condition.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify independent variable, permissioned metrics, time horizon, cost and stop condition. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
         "specimens/steam.json",
         "ontology/steam/utm-traffic-attribution-and-paid-marketing-2026.md",
-        "ontology/steam/utm-traffic-attribution-and-paid-marketing-2026.json"
+        "ontology/steam/utm-traffic-attribution-and-paid-marketing-2026.json",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.json"
       ],
-      "artifact": "ontology/steam/utm-traffic-attribution-and-paid-marketing-2026.md",
+      "artifact": "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -5031,16 +5055,18 @@
       "objective": "Research specify crash telemetry, saves, controller UX, accessibility, store localization and build rollback.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify crash telemetry, saves, controller UX, accessibility, store localization and build rollback. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/steamos-deck-compatibility-qa-2026.json",
         "ontology/steam/steamos-deck-compatibility-qa-2026.md",
         "specimens/steam.json",
         "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
-        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json"
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
+        "ontology/steam/capsule-store-page-compliance-and-review-2026.json"
       ],
-      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+      "artifact": "ontology/steam/capsule-store-page-compliance-and-review-2026.md",
       "priority": "normal",
       "phase": 2
     },

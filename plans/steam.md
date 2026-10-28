@@ -1,6 +1,6 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 77% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 79% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
@@ -397,6 +397,10 @@ The [wishlist and visibility report](../ontology/steam/discovery-wishlists-and-v
 
 [Reviewed public Steamworks material](../ontology/steam/entry-review-and-reporting-2026.md) documents onboarding, app fees and recoupment, approval, payment rails, and gross-to-net report semantics. **New recheck:** current English Valve pages both say **30 days**; the earlier captured **21-day** text is historic and the precise change date remains unverified. Six tasks are fully verified and 22 are partially researched. **The original checklist below remains the stable scope, not a live assertion that each item is incomplete; for current statuses consult [the machine plan](steam.json) and [baseline queue](../queues/steam.json).**
 
+## Steam store capsule and review compliance checkpoint
+
+The [capsule artwork, temporary overrides and store review audit](../ontology/steam/capsule-store-page-compliance-and-review-2026.md) defines compliant text, gameplay screenshot and prelaunch visibility boundaries while explicitly leaving actual sales and A/B lift unobserved. **Score 79%** (exact 78.976%; Δ +2 pp from 77%) across the fixed 293 tasks.
+
 ## Steam contracting partners and package payee checkpoint
 
 The [partner identity, sharing and collaborative bundle study](../ontology/steam/legal-partners-bundle-payouts-and-free-licenses-2026.md) separates actual contracting payees from public game credits, shared management permissions from payment rights, free licenses from paid units, and bundles from constituent package purchases. **Score 77%** (exact 77.440%, Δ +2 pp from 75%), fixed 293 tasks. No private agreements or merchant ledgers accessed.
@@ -431,4 +435,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 77%** rounded task-weighted progress across 293 tasks; prior 75%, Δ +2 pp (exact 77.440%). 56 fully verified, 227 partly researched, 94 sources and 459 claims. No real partner payments or personal finance data.
+**Completion: 79%** rounded task-weighted progress across 293 tasks; prior 77%, Δ +2 pp (exact 78.976%). 56 fully verified, 230 partly researched, 97 public sources, 474 claims. No live artwork or game submission tested.

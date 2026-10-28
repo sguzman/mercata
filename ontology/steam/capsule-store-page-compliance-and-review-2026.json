@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "store_graphics_compliance_and_release_review_policy",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-store-capsule-rules-2026",
+    "steam-artwork-override-2026",
+    "steam-store-review-process-2026",
+    "steam-coming-soon-doc",
+    "steam-release-process-doc"
+  ],
+  "claim_ids": [
+    "capsule-default-only-title-art",
+    "capsule-no-review-scores",
+    "capsule-no-sale-text",
+    "capsule-no-other-games",
+    "capsule-override-up-to-month",
+    "capsule-override-localized",
+    "capsule-logo-pg13",
+    "capsule-library-hero-no-text",
+    "capsule-noncompliance-event-visibility",
+    "store-review-screenshots-gameplay",
+    "store-review-feature-truthful",
+    "store-review-page-before-build",
+    "store-coming-soon-two-weeks",
+    "store-public-page-no-sales-proof",
+    "store-no-artwork-experiment"
+  ],
+  "store_capsule": {
+    "allowed_default_text": [
+      "game_name",
+      "official_subtitle"
+    ],
+    "default_reviews_or_awards_allowed": false,
+    "default_discount_copy_allowed": false,
+    "cross_game_marketing_allowed": false,
+    "must_be_readable": true,
+    "pg13_graphical_assets_required": true
+  },
+  "artwork_override": {
+    "temporary_only": true,
+    "max_duration_days_approx": 31,
+    "allowed_topics": [
+      "major_update",
+      "seasonal_event",
+      "dlc_or_new_content"
+    ],
+    "must_localize_to_supported_game_languages": true
+  },
+  "library": {
+    "hero_text_allowed": false,
+    "logo_must_be_game_logotype": true
+  },
+  "store_review": {
+    "screenshots_must_be_gameplay": true,
+    "planned_features_must_be_explicitly_labeled": true,
+    "store_checklist_before_build_review": true,
+    "coming_soon_public_min_days": 14,
+    "noncompliant_graphics_can_limit_store_visibility": true
+  },
+  "observed": {
+    "real_capsule_variations_experimented": 0,
+    "game_builds_submitted": 0,
+    "published_release_count": 0,
+    "actual_wishlist_change": null,
+    "paid_sales_causal_lift": null,
+    "actual_sales": null
+  },
+  "no_account_access": true
+}
