@@ -2803,6 +2803,28 @@
       "evidence_class": "primary_public_mandatory_paid_2d_video_game_listing_snapshot",
       "license": "Only public listed price, product category and feature metadata; no game assets reproduced.",
       "notes": "Current visible listing requires payment of at least USD 2 for Windows game, classified with 2D and multiplayer tags, one public rating; historical checkout settings at the June sales statement not independently audited. Current visible rating does not prove purchase."
+    },
+    {
+      "id": "edmango-moushley-2024-first-paid-game-postmortem",
+      "url": "https://edmango.itch.io/rc-moushley/devlog/727086/resident-cheesel-moushley-postmortem",
+      "title": "RESIDENT CHEESEL: MOUSHLEY POSTMORTEM",
+      "publisher": "Edmango (first-party paid game developer)",
+      "published_at": "2024-05-06",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_single_first_paid_game_postmortem_with_purchases_visits_referral_counts",
+      "license": "Only brief attributed numerical facts and original interpretation, no art or article replication.",
+      "notes": "One selected adult-niche visual novel, over 600 purchases and ~31.3k page-view events; over 28k itch referrals, creator had prior free games and an established niche audience. Undefined 2.62% Click Through Retention is not confirmed purchase conversion. No ledger or after-cost earnings."
+    },
+    {
+      "id": "edmango-moushley-2026-paid-game-listing",
+      "url": "https://edmango.itch.io/rc-moushley",
+      "title": "RESIDENT CHEESEL: MOUSHLEY positive-minimum paid downloadable game page",
+      "publisher": "Edmango (first-party paid game storefront)",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "public_paid_videogame_product_minimum_price_and_platform_index_snapshot",
+      "license": "Public factual listing metadata and dated devlog index only; no copyrighted artwork or game files.",
+      "notes": "Public page lists $3 minimum and Windows, macOS and Android versions; devlog index dates postmortem May 06 2024. Current 72 ratings are not historical 31 and are not paid order counts."
     }
   ],
   "claims": [
@@ -8816,6 +8838,89 @@
       "confidence": "medium",
       "observed_at": "2026-10-28",
       "limitations": "No sampling frame, mandatory-paid game cohort including delisted accounts, common time horizon, complete payouts or validated unique-buyer population."
+    },
+    {
+      "id": "moushley-2024-600-plus-paid-unit-self-report",
+      "text": "Edmango's May 2024 postmortem reported more than 600 purchases for one $3-minimum paid itch visual novel.",
+      "source_ids": [
+        "edmango-moushley-2024-first-paid-game-postmortem",
+        "edmango-moushley-2026-paid-game-listing"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Self-reported selected publisher, not audited paid order count, matched lifetime cohort or settlement after fees."
+    },
+    {
+      "id": "moushley-2024-view-referrer-counts",
+      "text": "The May 2024 creator postmortem described approximately 31,300 itch page views and 28,452 itch referrals, 1,059 Twitter referrals, 565 Google referrals and 122 Cohost referrals.",
+      "source_ids": [
+        "edmango-moushley-2024-first-paid-game-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "View events and referring events are not matched unique buyers; no source-specific purchase attribution or comparable timeframes confirmed."
+    },
+    {
+      "id": "moushley-2024-undefined-click-through-retention",
+      "text": "The developer reported 2.62% 'Click Through Retention' and an average 55.6 purchases per day after an initial spike but did not define the percentage's numerator or denominator or the averaging period.",
+      "source_ids": [
+        "edmango-moushley-2024-first-paid-game-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Neither the 2.62% label nor 55.6/day permits a verified page-to-paid conversion or monthly sales extrapolation."
+    },
+    {
+      "id": "moushley-2024-first-paid-game-not-first-release",
+      "text": "The author identified Moushley as a first game sold after an earlier free game, accompanied by prior itch followers, niche exposure and peer features.",
+      "source_ids": [
+        "edmango-moushley-2024-first-paid-game-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "A first paid title with preceding free-game audience must not be classed as the first release from a zero-audience developer."
+    },
+    {
+      "id": "moushley-2024-marketing-spend-not-total-cost",
+      "text": "The developer disclosed $10 in promotional spending, roughly three weeks and six days of concept, writing and coding work, and a $3 minimum game price.",
+      "source_ids": [
+        "edmango-moushley-2024-first-paid-game-postmortem",
+        "edmango-moushley-2026-paid-game-listing"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Marketing cash alone omits art, programming hours, fees, refunds, tax, testing and other cost; no realized profit calculated."
+    },
+    {
+      "id": "moushley-2024-top-seller-ranks-not-market-share",
+      "text": "The author reported an itch top-sellers ranking of third at peak and ninth later, without total paid competitor receipts.",
+      "source_ids": [
+        "edmango-moushley-2024-first-paid-game-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Ranks and rating counts do not establish absolute revenue concentration or seller population distribution."
+    },
+    {
+      "id": "moushley-2024-experimental-platform-qa",
+      "text": "The creator described Mac and Android versions as experimental, limited access to diverse test devices, and some Godot-related crashes and asset-instantiation freezes.",
+      "source_ids": [
+        "edmango-moushley-2024-first-paid-game-postmortem",
+        "edmango-moushley-2026-paid-game-listing"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "No quantified testing cost, reproducible defect frequency or game-wide failure rate; reports cannot be generalized to all Godot users."
+    },
+    {
+      "id": "moushley-2024-referral-volume-not-attributable-purchases",
+      "text": "A large majority of reported referral events were attributed to itch, yet no purchase-by-referrer export or independent marketing-exposure controls were published.",
+      "source_ids": [
+        "edmango-moushley-2024-first-paid-game-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Itch referrals may reflect existing followers and prior top seller rank; cannot causally isolate platform discovery or calculate paid conversion."
     }
   ],
   "observations": [

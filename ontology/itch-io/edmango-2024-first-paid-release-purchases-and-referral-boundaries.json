@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "one_selected_niche_first_paid_title_not_first_ever_release",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "edmango-moushley-2024-first-paid-game-postmortem",
+    "edmango-moushley-2026-paid-game-listing"
+  ],
+  "sample": {
+    "seller_count": 1,
+    "game_count": 1,
+    "first_paid_game": true,
+    "first_ever_game": false,
+    "prior_free_games": true,
+    "adult_niche_game": true,
+    "existing_audience_reported": true,
+    "representative_new_seller_sample": false
+  },
+  "paid_product": {
+    "minimum_price_usd": 3,
+    "category": "2d_point_and_click_visual_novel",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Android"
+    ],
+    "historical_paid_minimum_reported_usd": 3,
+    "commercial_sales_verified_with_merchant_export": false
+  },
+  "may_2024_creator_report": {
+    "purchases_more_than": 600,
+    "exact_orders": null,
+    "approx_page_view_events": 31300,
+    "referral_event_counts": {
+      "itch": 28452,
+      "twitter": 1059,
+      "google": 565,
+      "cohost": 122
+    },
+    "retention_phrase": "Click Through Retention",
+    "retention_percent_reported": 2.62,
+    "retention_denominator": null,
+    "after_spike_daily_purchase_mean_reported": 55.6,
+    "after_spike_daily_mean_days": null,
+    "marketing_usd_reported": 10,
+    "concept_writing_coding_weeks": 3,
+    "concept_writing_coding_additional_days": 6,
+    "labor_hours": null,
+    "store_gross_usd": null,
+    "net_revenue_usd": null,
+    "profit_usd": null,
+    "peak_top_seller_rank": 3,
+    "rank_at_postmortem": 9,
+    "ratings_at_postmortem": 31,
+    "ratings_at_2026_review": 72,
+    "claimed_acquisition_causal_effect": null
+  },
+  "device_qa": {
+    "experimental_macos": true,
+    "experimental_android": true,
+    "engine": "Godot",
+    "reported_platform_crashes": true,
+    "reported_asset_load_freezes": true,
+    "full_device_compatibility_coverage": false,
+    "verified_device_failure_fraction": null,
+    "measured_qa_labor_hours": null
+  },
+  "audit": {
+    "page_events_are_unique_buyers": false,
+    "referrer_events_are_attributable_paid_purchases": false,
+    "undefined_retention_is_purchase_conversion": false,
+    "rank_establishes_revenue_share": false,
+    "marketing_spend_equals_total_development_cost": false,
+    "ratings_establish_paid_order_count": false,
+    "first_paid_game_equals_first_game": false
+  },
+  "unknown": {
+    "seller_settled_payout_usd": null,
+    "complete_paid_order_count": null,
+    "refund_adjusted_orders": null,
+    "unique_paying_buyers": null,
+    "matched_referrer_paid_orders": null,
+    "observed_purchase_conversion": null,
+    "attributable_organic_discovery_sales": null,
+    "net_profit_after_labor": null,
+    "first_ever_creator_earnings_distribution": null,
+    "genre_median_revenue": null
+  },
+  "limitations": [
+    "Single successful self-selected adult-niche seller, not a sampled paid-title cohort.",
+    "First *paid* game follows earlier free work and an existing niche audience.",
+    "Purchases and view/referral event counts do not share verified buyer identity, paid eligibility or transaction date windows.",
+    "Undefined Click Through Retention is not a verified 2.62 percent purchase conversion; 55.6 purchases/day has an undefined timeframe.",
+    "A $10 promotional budget and three weeks plus six days of work omit fees, labor and device QA expenditure.",
+    "Top-seller ranks and ratings cannot reveal dollar revenue concentration or paid-unit ratios.",
+    "Reported Mac/Android compatibility failures lack a device denominator and total remediation cost."
+  ]
+}
