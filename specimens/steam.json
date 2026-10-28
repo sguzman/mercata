@@ -774,6 +774,28 @@
       "evidence_class": "official_public_marketing_and_game_advertising_policy",
       "license": "Only public source URL and independent paraphrase of facts.",
       "notes": "Permits ads outside Steam driving to game page; in-game mandatory rewarded ads and selling Steam promotion placement not supported."
+    },
+    {
+      "id": "steam-curators-official-oct2026",
+      "url": "https://partner.steamgames.com/doc/marketing/curators",
+      "title": "Curators and Curator Connect",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_curator_outreach_and_license_policy",
+      "license": "Public source URL, metadata and brief independently authored facts only; no user-level influencer lists, messages, images or text reproduced.",
+      "notes": "Rules for non-key complimentary review licenses, limits, permissions, active curator selection; no outreach performed."
+    },
+    {
+      "id": "steam-events-announcements-official-oct2026",
+      "url": "https://partner.steamgames.com/doc/marketing/event_tools",
+      "title": "Events and Announcements Tools",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_community_announcement_visibility_and_event_policy",
+      "license": "Source link and original short factual paraphrases only; no graphics or source excerpts republished.",
+      "notes": "Announcement surfaces, category, localization, scheduled visibility, author profile and posting permission limits; no events posted."
     }
   ],
   "claims": [
@@ -3803,6 +3825,207 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Need consented advertising spend, matched merchant net receipts, and a suitable controlled counterfactual."
+    },
+    {
+      "id": "curators-are-not-player-reviews",
+      "text": "Steam Curators publish positive, negative or informational recommendations to followers as an independent discovery feature.",
+      "source_ids": [
+        "steam-curators-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Curator recommendations are distinct from a paid game order or ordinary Steam buyer review count."
+    },
+    {
+      "id": "curator-connect-complimentary-license",
+      "text": "Curator Connect delivers complimentary reviewer licenses directly through Steam rather than distributing redeemable Steam keys.",
+      "source_ids": [
+        "steam-curators-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A gifted reviewer license is not paid Steam checkout and should not be included in purchase denominators."
+    },
+    {
+      "id": "curator-connect-needs-visible-page-build",
+      "text": "To send a pre-release Curator Connect game, Steam requires a publicly visible Coming Soon page and an uploaded playable build.",
+      "source_ids": [
+        "steam-curators-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Public marketing page alone is insufficient; no build was uploaded in this research."
+    },
+    {
+      "id": "curator-connect-permission-generate-keys",
+      "text": "Valve requires the Steamworks Generate CD Keys permission to administer Curator Connect.",
+      "source_ids": [
+        "steam-curators-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Permission name does not mean review copies are actual redeemable CD keys."
+    },
+    {
+      "id": "curator-connect-100-curators-limit",
+      "text": "Curator Connect allows offers to as many as 100 Curators with up to five copies per Curator.",
+      "source_ids": [
+        "steam-curators-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Maximum potential offers are not accepted grants, completed reviews, impressions or purchases."
+    },
+    {
+      "id": "curator-connect-nonrevoke-accepted",
+      "text": "A developer can expire unaccepted Curator Connect offers but cannot revoke a game already accepted by a Curator.",
+      "source_ids": [
+        "steam-curators-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Complimentary review-license lifecycle differs from retail-key revocation and should be tracked separately."
+    },
+    {
+      "id": "curator-connect-review-not-obligated",
+      "text": "Curators are not obliged to accept, play or review a game offered through Curator Connect.",
+      "source_ids": [
+        "steam-curators-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Sent offers and accepted licenses are not independently verified audience exposure or purchased units."
+    },
+    {
+      "id": "curator-connect-targeting-metadata",
+      "text": "Curator Connect filters available curators by game tags, language, operating system and declared audiences.",
+      "source_ids": [
+        "steam-curators-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Follower totals or matching tags are not guaranteed clickthrough, purchases or demographic identities."
+    },
+    {
+      "id": "curator-connect-active-filter",
+      "text": "Valve says Curator Connect excludes profiles that have not reviewed games or been active in the community within approximately six months.",
+      "source_ids": [
+        "steam-curators-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A missing Curator profile is not evidence that the Curator never existed or cannot independently cover the game."
+    },
+    {
+      "id": "events-need-authorized-publisher",
+      "text": "Steam Events announcements require partner/Community-hub posting rights and can show the public author profile.",
+      "source_ids": [
+        "steam-events-announcements-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "An editor must check posting permissions and profile privacy before publication; this study posted nothing."
+    },
+    {
+      "id": "events-surfaces-not-purchases",
+      "text": "Events and Announcements can appear on a game's store page, community hub, library and follower activity feed.",
+      "source_ids": [
+        "steam-events-announcements-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Publication or surface eligibility is not measured attention, unique visitors or checkout conversion."
+    },
+    {
+      "id": "events-followers-get-feed-not-guaranteed-read",
+      "text": "Valve says followers receive announcements in their activity feeds when associated with the product.",
+      "source_ids": [
+        "steam-events-announcements-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Feed eligibility is not proof of reading the event or any new paid purchase."
+    },
+    {
+      "id": "events-library-delay-review",
+      "text": "Valve warns that published events may appear in the Steam Library after a moderation delay of roughly an hour.",
+      "source_ids": [
+        "steam-events-announcements-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A posting timestamp is not always the first customer-visible timestamp; latency may vary."
+    },
+    {
+      "id": "events-support-localization",
+      "text": "Steam Events supports localized text and images and falls back to English for unavailable languages.",
+      "source_ids": [
+        "steam-events-announcements-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Locale coverage can influence exposure; it does not establish country-specific paid conversion."
+    },
+    {
+      "id": "events-categories-control-surfaces",
+      "text": "Valve says event type/category determines where events appear and can add meaningful start and end time semantics.",
+      "source_ids": [
+        "steam-events-announcements-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Miscategorized posts can distort reach; different categories are not directly comparable exposure populations."
+    },
+    {
+      "id": "events-start-time-not-retroactive",
+      "text": "Valve prevents publishing an event with a past start time and bars moving a start time after it has passed.",
+      "source_ids": [
+        "steam-events-announcements-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "An event's scheduled start, publication time and customer first-visible time are distinct dates."
+    },
+    {
+      "id": "events-crosspromotion-marked",
+      "text": "Valve requires promotional announcements focused on other products to use the appropriate Cross Promotion category.",
+      "source_ids": [
+        "steam-events-announcements-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Communications must remain relevant to the game whose community receives them."
+    },
+    {
+      "id": "events-workshop-rss-channels",
+      "text": "Events tagged Workshop may appear in the game's Workshop hub and Steam also provides RSS feeds for game announcements.",
+      "source_ids": [
+        "steam-events-announcements-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Publishing in more surfaces does not make impressions additive; the same follower may be reached repeatedly."
+    },
+    {
+      "id": "events-postlaunch-not-retention-proof",
+      "text": "Steam community announcements can communicate updates and events to owners, but documentation does not quantify repeat paid purchases, retained customers or profit.",
+      "source_ids": [
+        "steam-events-announcements-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A controlled retention/repurchase cohort with store/partner outcome records is needed."
+    },
+    {
+      "id": "curator-event-effect-noncausal",
+      "text": "Curator review offers, follower counts and event publications are descriptive marketing activity, not causal sale-lift estimates.",
+      "source_ids": [
+        "steam-curators-official-oct2026",
+        "steam-events-announcements-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "No partner analytics, counterfactual campaign or observed games' sales were evaluated."
     }
   ],
   "observations": [],
@@ -3810,5 +4033,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research now includes privacy-bounded UTM campaign measurement, historical traffic reporting cutoffs and synthetic event-to-visit denominators, without conflating tracked clicks, attribution and causal paid purchases. Actual publisher profits and typical seller earnings remain unknown."
+  "summary": "Mercata Steam research covers UTM funnel and Curator Connect/community announcement rules, distinguishing unpurchased complimentary licenses and potential exposure from actual paid game checkout. Representative publisher profits remain unmeasured."
 }

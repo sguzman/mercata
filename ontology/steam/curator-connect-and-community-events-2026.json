@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "curator_connect_complimentary_review_and_event_communication_rules",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-curators-official-oct2026",
+    "steam-events-announcements-official-oct2026"
+  ],
+  "claim_ids": [
+    "curators-are-not-player-reviews",
+    "curator-connect-complimentary-license",
+    "curator-connect-needs-visible-page-build",
+    "curator-connect-permission-generate-keys",
+    "curator-connect-100-curators-limit",
+    "curator-connect-nonrevoke-accepted",
+    "curator-connect-review-not-obligated",
+    "curator-connect-targeting-metadata",
+    "curator-connect-active-filter",
+    "events-need-authorized-publisher",
+    "events-surfaces-not-purchases",
+    "events-followers-get-feed-not-guaranteed-read",
+    "events-library-delay-review",
+    "events-support-localization",
+    "events-categories-control-surfaces",
+    "events-start-time-not-retroactive",
+    "events-crosspromotion-marked",
+    "events-workshop-rss-channels",
+    "events-postlaunch-not-retention-proof",
+    "curator-event-effect-noncausal"
+  ],
+  "curator_connect": {
+    "kind": "complimentary_review_license_not_retail_key",
+    "permission_required": "Generate CD Keys",
+    "public_store_page_required": true,
+    "playable_build_required": true,
+    "max_curators_offered": 100,
+    "max_copies_each_curator": 5,
+    "accepted_license_revocable": false,
+    "unaccepted_offer_expirable": true,
+    "accepted_curator_review_guaranteed": false,
+    "paid_units_per_granted_copy": 0,
+    "curator_activity_filter_months_approx": 6
+  },
+  "events": {
+    "requires_authorized_posting_account": true,
+    "author_profile_visible": true,
+    "surfaces": [
+      "store_page",
+      "community_hub",
+      "library_details",
+      "library_home",
+      "follower_activity_feed",
+      "workshop_hub_if_workshop_event",
+      "game_rss"
+    ],
+    "supports_localized_text_and_images": true,
+    "english_fallback": true,
+    "cross_promotion_categorization_required": true,
+    "start_date_in_past_allowed": false,
+    "moving_started_event_start_date_allowed": false,
+    "moderation_library_delay_approx_minutes": 60
+  },
+  "unknown": {
+    "total_curators_contacted_in_population": null,
+    "real_accepted_review_copy_rate": null,
+    "real_written_review_rate": null,
+    "real_qualified_reads": null,
+    "actual_incremental_orders": null,
+    "real_community_retention_effect": null,
+    "net_revenue": null,
+    "causal_impact": null
+  },
+  "no_curator_contact": true,
+  "no_event_posted": true,
+  "no_review_copy_sent": true,
+  "no_partner_data_accessed": true
+}
