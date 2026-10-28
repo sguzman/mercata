@@ -27,3 +27,27 @@ test('Existing source hierarchy, review visibility and survivorship planning tas
  assert.equal(x.survivorship.zero_sale_fraction,null);
  assert.equal(x.rights_metadata.actual_bulk_redistribution_rights_all_verified,false);
 });
+
+test('Calendar-valid source dates and claim chronology are required, preserving month precision',()=>{
+ const d=get('specimens/itch-io.json');
+ const first=d.evidence[0],claim=d.claims[0];
+ const oneSource=changes=>auditItchSourceRegister({...d,evidence:d.evidence.map((e,i)=>i===0?{...e,...changes}:e)});
+ for(const date of ['2026-02-30','2026-13-01','2026-00-01','2026-04-31']){
+  const out=oneSource({retrieved_at:date});
+  assert(out.issues.includes('Bad retrieval date'),date);
+ }
+ for(const pub of ['2026-02-30','2026-13','2026-00','2026-06-31']){
+  const out=oneSource({published_at:pub});
+  assert(out.issues.includes('Bad publication date'),pub);
+ }
+ const impossible=oneSource({published_at:'2026-11-01',retrieved_at:'2026-10-27'});
+ assert(impossible.issues.includes('Publication cannot occur after retrieval date'));
+ const month=oneSource({published_at:'2026-10',retrieved_at:'2026-10-27'});
+ assert(!month.issues.includes('Bad publication date'));
+ assert(!month.issues.includes('Publication cannot occur after retrieval date'));
+ const early=get('specimens/itch-io.json');
+ early.claims=[{...claim,observed_at:'2010-01-01'}];
+ const invalid=auditItchSourceRegister(early);
+ assert(invalid.issues.includes('Claim cannot predate cited source retrieval'));
+ assert(auditItchSourceRegister({...d,claims:[{...claim,observed_at:'2026-02-30'}]}).issues.includes('Bad claim observation date'));
+});

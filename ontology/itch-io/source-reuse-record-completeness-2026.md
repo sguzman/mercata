@@ -11,7 +11,7 @@ All **240** source records include an attributed public URL, retrieval date, evi
 | Unverified | 118 |
 | **Total** | **240** |
 
-These metadata demonstrate attributable referencing, **not** general legal authority to republish third-party articles, images, files or datasets. Dynamic catalog indices do not establish paid orders, seller identities, profit or buyer conversion. No account or private buyer data were acquired.
+These metadata demonstrate attributable referencing, **not** general legal authority to republish third-party articles, images, files or datasets. The source-register audit checks real Gregorian calendar dates, requires publication not to follow retrieval, preserves genuinely month-only publication dates without inventing a day, and rejects claims dated before retrieval of their cited source. Dynamic catalog indices do not establish paid orders, seller identities, profit or buyer conversion. No account or private buyer data were acquired.
 
 ## Deposited-file copyright audit
 
