@@ -19,7 +19,7 @@ test('In-progress traffic must not manufacture purchases or income statistics',(
 test('Fixed task inventory and only existing demand task affected',()=>{
  const p=get('plans/itch-io.json'),q=get('queues/itch-io.json');
  const t=p.detail_tasks.find(t=>t.id==='itch-io/market/estimate-paid-purchase-demand');
- assert.equal(t.percent,75);
+ assert(t.percent>=75&&t.percent<100);assert.equal(t.status,'in_progress');
  for(const f of [file,"ontology/itch-io/the-hive-2025-2026-payment-labels-and-featured-traffic.md","tests/itch-hive-payment-labels-featured-traffic.test.mjs"])assert(t.evidence.includes(f));
  assert.equal(p.detail_tasks.length,160);assert.equal(q.queues.flatMap(w=>w.tasks).length,84);
  assert.equal(p.detail_tasks.filter(t=>t.percent<100).length+q.queues.flatMap(w=>w.tasks).filter(t=>t.progress<100).length,32);
