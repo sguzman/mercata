@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "creator_announced_copies_sold_unmatched_to_entitlement_price_and_paid_orders",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "error143-2026-aug11-100k-sold-headline",
+    "error143-2026-oct-free-base-25usd-full-gate",
+    "dead-trust-2025-first-week-milestone",
+    "dead-trust-2026-cumulative-milestone",
+    "dead-trust-2026-paid-page"
+  ],
+  "claim_ids": [
+    "error143-2026-creator-100k-ambiguous-unit",
+    "error143-2026-free-base-paid-full-tier",
+    "error143-100k-not-equal-25-dollar-orders",
+    "error143-dead-trust-milestone-units-not-equivalent",
+    "error143-seller-success-milestone-no-zero-cohort"
+  ],
+  "independent_creator_announcements": 2,
+  "cases": [
+    {
+      "game": "dead_trust",
+      "existing_case_file": "ontology/itch-io/dead-trust-paid-release-milestones-2025-2026.json",
+      "public_2026_offer_type": "mandatory_positive_price",
+      "public_2026_sale_minimum_usd": 1,
+      "historical_price_basis_confirmed": false,
+      "milestones": [
+        {
+          "reported_at": "2025-12-13",
+          "unit_claim": "copies_sold_lower_bound",
+          "reported_minimum_copies": 150
+        },
+        {
+          "reported_at": "2026-01-04",
+          "unit_claim": "copies_sold_lower_bound",
+          "reported_minimum_copies": 300
+        }
+      ],
+      "reported_itch_only_merchant_orders": null,
+      "verified_incremental_orders_between_posts": null,
+      "net_usd": null
+    },
+    {
+      "game": "error143",
+      "public_2026_offer_type": "free_base_with_paid_full_game_tier",
+      "free_base_game_access": true,
+      "full_game_minimum_usd": 25,
+      "milestones": [
+        {
+          "reported_at": "2026-08-11",
+          "unit_claim": "ambiguous_copies_sold_headline",
+          "reported_minimum_copies": 100000
+        }
+      ],
+      "verified_full_game_paid_orders": null,
+      "verified_free_base_entitlements": null,
+      "verified_itch_only_merchant_orders": null,
+      "net_usd": null
+    }
+  ],
+  "invalid_derived_revenue_from_error143_100k_times_25_usd": 2500000,
+  "invalid_derived_revenue_is_observed": false,
+  "no_market_estimates": {
+    "income_mean_usd": null,
+    "income_median_usd": null,
+    "zero_earner_fraction": null,
+    "positive_price_game_buyer_count": null,
+    "game_profit_usd": null,
+    "causal_sale_effect": null
+  },
+  "limits": [
+    "Dead Trust milestones were already registered; no duplication or additional market evidence is claimed for them.",
+    "A lower bound at two dates does not support an exact difference when the earlier upper bound is unknown.",
+    "ERROR143's copy announcement does not identify purchases of the USD 25 tier, free base units, bundled copies, or sales in other channels.",
+    "Current download gates do not prove historic checkout rules for the date of the announcement.",
+    "One success story and one different genre case cannot establish seller-wide mean, median or zero-earnings prevalence.",
+    "No private account, buyer records, game assets, or merchant exports accessed."
+  ]
+}

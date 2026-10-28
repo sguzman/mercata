@@ -3023,6 +3023,28 @@
       "evidence_class": "mutable_public_paid_asset_listing",
       "license": "Public storefront price and product metadata independently summarized; assets and screenshots not republished.",
       "notes": "The listing now describes 454 icons, priced at USD 4.95 regular and USD 3.71 sale; September forum launch describes a 381-icon earlier package."
+    },
+    {
+      "id": "error143-2026-aug11-100k-sold-headline",
+      "url": "https://jennyvipham.itch.io/error143/devlog/1624789/error143-recently-hit-100000-copies-sold",
+      "title": "ERROR143 creator 100,000 copy milestone",
+      "publisher": "Jenny Vi Pham on itch.io",
+      "published_at": "2026-08-11",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "ambiguous_creator_copy_milestone",
+      "license": "Short independently authored source-linked observations only; no screenshots, game binary, buyer details or source prose republished.",
+      "notes": "Headline says 100,000 copies sold without paid-order denomination or single-store eligibility; no transaction export reported."
+    },
+    {
+      "id": "error143-2026-oct-free-base-25usd-full-gate",
+      "url": "https://jennyvipham.itch.io/error143?click_to_load=true",
+      "title": "ERROR143 public free base and USD 25 full-game offer",
+      "publisher": "Jenny Vi Pham on itch.io",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "mixed_free_and_paid_tier_game_page",
+      "license": "Short independently authored source-linked observations only; no screenshots, game binary, buyer details or source prose republished.",
+      "notes": "October 2026 public listing provides free base files and USD 25 full-game unlock, but does not measure how August milestone units were allocated."
     }
   ],
   "claims": [
@@ -9581,6 +9603,60 @@
       "confidence": "medium",
       "observed_at": "2026-10-28",
       "limitations": "Listing-level outcomes are clustered by one owner and are outside the target mandatory-priced video-game category."
+    },
+    {
+      "id": "error143-2026-creator-100k-ambiguous-unit",
+      "text": "The creator described ERROR143 as reaching 100,000 copies sold on August 11, 2026 but did not disclose an audited, channel-specific, positive-payment order tally.",
+      "source_ids": [
+        "error143-2026-aug11-100k-sold-headline"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Published copy milestone is not a payment export; full/base entitlement mix, other store releases, refunds and historical price unknown."
+    },
+    {
+      "id": "error143-2026-free-base-paid-full-tier",
+      "text": "The October 2026 ERROR143 itch.io listing allows a free or voluntary-payment base game while separately gating full-game downloadable files at USD 25 or more.",
+      "source_ids": [
+        "error143-2026-oct-free-base-25usd-full-gate"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Mutable October 2026 offer, not a complete historical record of price and entitlement rules on the milestone date."
+    },
+    {
+      "id": "error143-100k-not-equal-25-dollar-orders",
+      "text": "The ERROR143 100,000-copy announcement cannot be used as a count of USD 25 full-game paid transactions or multiplied by USD 25 into realized gross revenue.",
+      "source_ids": [
+        "error143-2026-aug11-100k-sold-headline",
+        "error143-2026-oct-free-base-25usd-full-gate"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Free base version and paid full-game unlock are different products; channel, order count, refund and purchase-price mix unobserved."
+    },
+    {
+      "id": "error143-dead-trust-milestone-units-not-equivalent",
+      "text": "Dead Trust's positive minimum price and ERROR143's free-base plus paid full-game tiers show why two creator copy milestones cannot automatically be pooled as paid-game sales.",
+      "source_ids": [
+        "dead-trust-2026-paid-page",
+        "dead-trust-2025-first-week-milestone",
+        "error143-2026-aug11-100k-sold-headline",
+        "error143-2026-oct-free-base-25usd-full-gate"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Dead Trust is a self-reported lower threshold with unclear historical store mix; ERROR143 mixes free and paid entitlement types."
+    },
+    {
+      "id": "error143-seller-success-milestone-no-zero-cohort",
+      "text": "The ERROR143 copy announcement contains no denominator of eligible low-selling or zero-selling creators, so it cannot estimate the share of itch.io developers receiving no paid-game revenue.",
+      "source_ids": [
+        "error143-2026-aug11-100k-sold-headline"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "One success-selected public milestone, not a representative publisher sample; zero outcomes, costs and seller profits unknown."
     }
   ],
   "observations": [
