@@ -2825,6 +2825,61 @@
       "evidence_class": "public_paid_videogame_product_minimum_price_and_platform_index_snapshot",
       "license": "Public factual listing metadata and dated devlog index only; no copyrighted artwork or game files.",
       "notes": "Public page lists $3 minimum and Windows, macOS and Android versions; devlog index dates postmortem May 06 2024. Current 72 ratings are not historical 31 and are not paid order counts."
+    },
+    {
+      "id": "yize-cheng-2026-march-jam-creator-handle-counts",
+      "url": "https://www.linkedin.com/posts/yize-cheng_every-month-thousands-of-games-are-built-activity-7444878799294398464-uXyZ",
+      "title": "March 2026 itch.io jam activity: submissions, distinct developer identifiers, repeat submitters",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "publisher": "Yize Cheng (independent public-data collector)",
+      "evidence_class": "third_party_exploratory_jam_listing_scrape_self_report",
+      "license": "Only brief attributed numerical facts and independently authored inference; no raw profiles or source post text redistributed.",
+      "notes": "Retrospective single March-2026ish 30-day scrape, with admitted one-to-two-day window error and prize pool parsing issues; 191 jams, 5,120 entries, 4,175 distinct developer identifiers, 499 repeat submitter identifiers. Sampling/completeness, handles and team identity not verified."
+    },
+    {
+      "id": "itch-gmtk-2026-jam-team-and-multiple-entry-rules",
+      "url": "https://itch.io/jam/gmtk-jam-2026",
+      "title": "GMTK Game Jam 2026 entry and contributor rules",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "publisher": "Game Maker's Toolkit (organizer, hosted by itch.io)",
+      "evidence_class": "primary_organizer_team_multiple_submission_policy",
+      "license": "Concise source-attributed rules only, no media or text reproduction.",
+      "notes": "Multiple games per person expressly allowed; one account may submit a game on behalf of a team, with optional contributor tagging. Rules do not define publisher sales or paid ownership."
+    },
+    {
+      "id": "itch-gmtk-2026-results-oct28-entry-count",
+      "url": "https://itch.io/jam/gmtk-jam-2026/results",
+      "title": "GMTK Game Jam 2026 live results: 10,527 entries at October 28 review",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "publisher": "itch.io (live first-party public jam results page)",
+      "evidence_class": "primary_dynamic_jam_entries_counter_snapshot",
+      "license": "Date-stamped numerical counters and link only, no user profiles or ranked-game contents extracted.",
+      "notes": "Results page October 28 displays 10,527 submitted entries and 223,337 ratings to 10,382 entries; historical snapshot differs from separately dated September 23 secondary 10,542 entries. No stable deletion/price/merchant frame implied."
+    },
+    {
+      "id": "itch-past-jams-oct28-gmtk-participation-snapshot",
+      "url": "https://itch.io/jams/past",
+      "title": "itch.io past jams directory: GMTK 2026 joined versus submissions",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "publisher": "itch.io (operator public game jam directory)",
+      "evidence_class": "primary_dynamic_jam_joined_and_submission_rounded_counters",
+      "license": "Only visible rounded numerical counts; no bulk copying of page or user data.",
+      "notes": "Past-jam listing on October 28 shows 37.4k joined and 10.5k submissions for GMTK Game Jam 2026, different unit/precision from exact result page."
+    },
+    {
+      "id": "recoded-2026-sept23-gmtk-results-comparison",
+      "url": "https://rec0ded88.com/statistics/game-jam-participation/",
+      "title": "Game Jam Participation Statistics 2026",
+      "published_at": "2026-09-23",
+      "retrieved_at": "2026-10-28",
+      "publisher": "Sheldon / rec0ded88 (third-party recap)",
+      "evidence_class": "dated_secondary_public_jam_results_counter_observation",
+      "license": "Numerical summary with original source reference; article prose and images not reused.",
+      "notes": "September 23 third-party retrospective says 10,542 GMTK 2026 entries and 223,337 ratings; current itch October 28 results display 10,527, so dates/snapshot semantics differ. Publication reflects independent secondary capture, not independently verified raw ledger."
     }
   ],
   "claims": [
@@ -8921,6 +8976,91 @@
       "confidence": "medium",
       "observed_at": "2026-10-28",
       "limitations": "Itch referrals may reflect existing followers and prior top seller rank; cannot causally isolate platform discovery or calculate paid conversion."
+    },
+    {
+      "id": "march-2026-4175-developers-among-5120-jam-submissions",
+      "text": "An independent March 2026 itch jam scrape reported 191 jams, 5,120 game submissions and 4,175 distinct developer identifiers, rather than treating one game as one creator.",
+      "source_ids": [
+        "yize-cheng-2026-march-jam-creator-handle-counts"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Self-reported exploratory scraper with 1–2 day collection-window uncertainty; developer identifiers are not verified unique humans, payout entities or all itch creators."
+    },
+    {
+      "id": "march-2026-499-repeat-jam-submitter-identifiers",
+      "text": "The same collector reported that 499 of 4,175 distinct developer identifiers submitted multiple entries in the observed March jam slice, or about 11.95% of that observed identifier set.",
+      "source_ids": [
+        "yize-cheng-2026-march-jam-creator-handle-counts"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Arithmetic is conditional on the author's unique-handle definition; not a population-wide repeat publisher share, paid seller fraction or independently reproducible sample."
+    },
+    {
+      "id": "gmtk-2026-multiple-entry-and-team-account-nonidentification",
+      "text": "GMTK 2026 rules explicitly permit multiple submissions per participant and allow a single account to submit on behalf of a team, while other team members may optionally be tagged as contributors.",
+      "source_ids": [
+        "itch-gmtk-2026-jam-team-and-multiple-entry-rules"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Account, game entry and natural person cannot be assumed one-to-one; contribution is not evidence of owning a paid storefront or receiving seller proceeds."
+    },
+    {
+      "id": "gmtk-2026-joined-versus-submitted-2026-oct-snapshot",
+      "text": "The itch.io past game jams directory displayed about 37,400 joined accounts and 10,500 submitted entries for GMTK 2026 in its October 28, 2026 snapshot.",
+      "source_ids": [
+        "itch-past-jams-oct28-gmtk-participation-snapshot"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Rounded counters, participation/join semantics and project submissions are different units; neither is a paid merchant population or commercial release count."
+    },
+    {
+      "id": "gmtk-2026-october-results-exact-entry-snapshot",
+      "text": "On October 28, 2026, the live first-party GMTK 2026 results page displayed 10,527 entries submitted July 22–26 and 223,337 ratings on 10,382 entries.",
+      "source_ids": [
+        "itch-gmtk-2026-results-oct28-entry-count"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Live results are mutable and counts may reflect withdrawal or visibility; a rating is not a purchase and a submission may be freely distributed."
+    },
+    {
+      "id": "gmtk-2026-september-secondary-versus-october-live-difference",
+      "text": "A dated September 23 third-party retrospective reported 10,542 GMTK 2026 submissions, 15 more than the live itch results page showed on October 28.",
+      "source_ids": [
+        "itch-gmtk-2026-results-oct28-entry-count",
+        "recoded-2026-sept23-gmtk-results-comparison"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "No matching frozen snapshots, hidden-item audit or event log establishes why counts differ; do not assert exactly 15 deleted games or a negative commercial release trend."
+    },
+    {
+      "id": "jam-active-creator-not-paid-active-merchant-denominator",
+      "text": "Neither joined accounts, jam entries nor observed distinct submitter identifiers identify active payout-enabled game sellers, repeat commercial publishers or zero-inclusive settled paid-order cohorts.",
+      "source_ids": [
+        "yize-cheng-2026-march-jam-creator-handle-counts",
+        "itch-gmtk-2026-jam-team-and-multiple-entry-rules",
+        "itch-gmtk-2026-results-oct28-entry-count",
+        "itch-past-jams-oct28-gmtk-participation-snapshot"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Jam participation can be free and team/identity mappings are incomplete; there is no consented payment export, owner deduplication or census."
+    },
+    {
+      "id": "jam-entry-multi-year-counts-not-commercial-growth",
+      "text": "Changes in the visible GMTK jam submission count between observations do not measure platform-wide commercial game releases or seller concentration.",
+      "source_ids": [
+        "itch-gmtk-2026-results-oct28-entry-count",
+        "recoded-2026-sept23-gmtk-results-comparison"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Counts are for one noncommercial game jam with changing snapshots and no positive-price or buyer evidence; inappropriate to extrapolate to whole itch catalog."
     }
   ],
   "observations": [

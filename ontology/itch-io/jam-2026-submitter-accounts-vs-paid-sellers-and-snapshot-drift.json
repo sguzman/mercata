@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "independent_jam_creator_identifier_activity_and_first_party_dynamic_count_counterexample",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "yize-cheng-2026-march-jam-creator-handle-counts",
+    "itch-gmtk-2026-jam-team-and-multiple-entry-rules",
+    "itch-gmtk-2026-results-oct28-entry-count",
+    "itch-past-jams-oct28-gmtk-participation-snapshot",
+    "recoded-2026-sept23-gmtk-results-comparison"
+  ],
+  "march_2026_independent_exploratory_scrape": {
+    "source_id": "yize-cheng-2026-march-jam-creator-handle-counts",
+    "reported_window": "approximately_March_2026_30_day_period",
+    "day_margin_of_error_reported": "one_or_two_days",
+    "covered_jams_reported": 191,
+    "entries_reported": 5120,
+    "distinct_developer_identifiers_reported": 4175,
+    "repeat_submitting_identifiers_reported": 499,
+    "maximum_single_identifier_submissions_reported": 26,
+    "creator_identifier_dedup_rules_publicly_audited": false,
+    "team_collaborator_deduplication_verified": false,
+    "paid_titles_count": null,
+    "paid_sellers_count": null,
+    "paid_order_count": null,
+    "publisher_census_complete": false
+  },
+  "gmtk_2026_public_snapshots": {
+    "jam_start_at": "2026-07-22T17:00:00",
+    "jam_end_at": "2026-07-26T18:00:00",
+    "organizer_rule_source_id": "itch-gmtk-2026-jam-team-and-multiple-entry-rules",
+    "people_may_submit_multiple_games": true,
+    "one_account_can_submit_for_team": true,
+    "other_team_contributor_tagging_optional": true,
+    "approx_joined_accounts_on_2026_10_28": 37400,
+    "rounded_submissions_on_directory": 10500,
+    "exact_entries_reported_2026_09_23_secondary": 10542,
+    "exact_entries_reported_2026_10_28_primary": 10527,
+    "reported_counter_difference": 15,
+    "ratings_events_reported_primary_oct28": 223337,
+    "rated_entry_count_reported_primary_oct28": 10382,
+    "count_change_cause_verified": null,
+    "positive_minimum_commercial_entries_verified": null,
+    "unique_payout_entities_verified": null
+  },
+  "non_equivalences": {
+    "game_entries_equal_distinct_creators": false,
+    "joined_jam_accounts_equal_submitters": false,
+    "contributor_names_equal_person_count": false,
+    "creator_identifier_equals_one_natural_person": false,
+    "active_jam_submissions_equal_paid_storefront_listings": false,
+    "ratings_equal_paid_orders": false,
+    "jam_counter_drift_equals_deleted_commercial_titles": false,
+    "secondary_and_primary_counters_share_exact_snapshot": false
+  },
+  "unknown": {
+    "platform_unique_active_game_publishers": null,
+    "platform_unique_active_paid_sellers": null,
+    "complete_eligible_positive_price_2d_games": null,
+    "paid_seller_activity_fraction": null,
+    "publisher_entity_deduplicated_jam_people": null,
+    "all_itch_unique_creator_people": null,
+    "all_itch_unique_payout_entities": null,
+    "platform_zero_paid_order_fraction": null,
+    "paid_order_per_jam_submitting_creator": null,
+    "causal_jam_to_commercial_sales_effect": null
+  },
+  "limitations": [
+    "March figures are an independent collector's initial scrape, not an operator audited full platform census; dates could shift one or two days.",
+    "A handle may represent a creator account or group identity and a team can contribute to the same entry.",
+    "The 499 repeat submitters refer only to identified March jam submitters and not to paid or active itch publishers overall.",
+    "One entry may have multiple tagged contributors; one person/account may create multiple game entries.",
+    "The directory rounds GMTK joined and submitted counters while the results page gives exact entries.",
+    "A September 23 secondary recap and October 28 live primary count differ by 15; no historical transaction or removal log explains it.",
+    "Jam entries are predominantly free prototypes; activity is neither seller setup nor sale.",
+    "No private profiles, follower graphs, transaction logs or author identity joins have been collected."
+  ]
+}
