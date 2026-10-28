@@ -2913,6 +2913,17 @@
       "evidence_class": "first_party_voluntary_game_asset_creator_commercial_report",
       "license": "Brief attributed public figures and independent analysis only; no original prose, creative assets, or transaction ledgers reproduced.",
       "notes": "Separate game-asset publisher reports over USD500 receipts, over 10,000 views, 157 followers, around two production months, and sale-period spikes. No exact paid orders or net profit."
+    },
+    {
+      "id": "bitiverse-2026-august-30day-free-browser-payment-events",
+      "url": "https://fortisq.itch.io/bitiverse/devlog/1622835/from-empty-roads-to-real-neighborhoods",
+      "title": "From Empty Roads to Real Neighborhoods",
+      "publisher": "Fortisq Studio (first-party browser game developer)",
+      "published_at": "2026-08-09",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_name_your_price_2d_html5_game_single_30day_analytics_self_report",
+      "license": "Only author-attributed public aggregates and independently authored analysis; no private buyer details or screenshots copied.",
+      "notes": "Creator's Aug 9 2026 Bitiverse 2D browser MMO single last-30-days report: 7033 page views, 1364 browser plays, 93 downloads, 26 collections, 7 ratings, 3 payments totaling USD57; game page name-your-own-price and guest browser access. Not mandatory-priced sale cohort; events may repeat; daily ongoing plays 30–50 not dated series. Exact source date verified via official devlog index."
     }
   ],
   "claims": [
@@ -9175,6 +9186,66 @@
       "confidence": "medium",
       "observed_at": "2026-10-28",
       "limitations": "Financial classification and conditional scenario, not verified total project cost or specific publisher net profit."
+    },
+    {
+      "id": "bitiverse-2026-one-30-day-funnel-counters",
+      "text": "The Bitiverse developer reported 7,033 page views, 1,364 browser play events, 93 downloads, 26 collections and seven ratings in a single recent 30-day itch.io reporting window.",
+      "source_ids": [
+        "bitiverse-2026-august-30day-free-browser-payment-events"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Self-reported event counts, not unique people or first-time visitors; no analytics export, bot removal or within-window event linking."
+    },
+    {
+      "id": "bitiverse-2026-three-payments-57usd",
+      "text": "The same 30-day Bitiverse developer report included three payment events totaling USD57.",
+      "source_ids": [
+        "bitiverse-2026-august-30day-free-browser-payment-events"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Name-your-own-price free browser game, not three mandatory-price paid copies, unique payers, net receipts or repeat sales."
+    },
+    {
+      "id": "bitiverse-2026-free-browser-access-not-paid-game",
+      "text": "The Bitiverse storefront allowed free name-your-own-price downloads and guest browser play without a required account.",
+      "source_ids": [
+        "bitiverse-2026-august-30day-free-browser-payment-events"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Free/PWYW monetization is not direct evidence of paying visitors purchasing a mandatory positive-price title."
+    },
+    {
+      "id": "bitiverse-2026-event-ratio-not-purchase-conversion",
+      "text": "The 1,364 browser play events to 7,033 page-view events ratio is about 19.39%, but is an event-count ratio and cannot be interpreted as unique-visitor activation or paid game conversion.",
+      "source_ids": [
+        "bitiverse-2026-august-30day-free-browser-payment-events"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "No event-level matching, distinct users, price-eligible sessions or fraud controls; 3 payments cannot be attributed to the same page-view denominator as unique buyers."
+    },
+    {
+      "id": "bitiverse-2026-ongoing-30-50-browser-plays-after-spikes",
+      "text": "The developer described roughly 30–50 ongoing browser play events on ordinary days after promotion spikes passed.",
+      "source_ids": [
+        "bitiverse-2026-august-30day-free-browser-payment-events"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Narrative rough range, no dated daily panel, consistent acquisition window, site traffic counterfactual or new buyer orders."
+    },
+    {
+      "id": "bitiverse-2026-no-causal-promotion-uplift",
+      "text": "The author linked arrival of players to sharing the game and stated that earlier traffic was quieter, but did not provide controlled referral-to-buyer attribution.",
+      "source_ids": [
+        "bitiverse-2026-august-30day-free-browser-payment-events"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Uncontrolled before/after narrative cannot isolate platform discovery, outside promotion, random variability or paid revenue impact."
     }
   ],
   "observations": [

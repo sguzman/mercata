@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "single_30day_free_browser_game_event_and_payment_analytics_not_paid_game_conversion",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "bitiverse-2026-august-30day-free-browser-payment-events"
+  ],
+  "sample": {
+    "creator_count": 1,
+    "title_count": 1,
+    "randomized": false,
+    "game": "Bitiverse",
+    "category": "free_name_your_price_2d_browser_multiplayer_game",
+    "published_report_at": "2026-08-09",
+    "window": "publisher_reported_recent_30_days",
+    "same_report_window": true,
+    "page_view_events": 7033,
+    "browser_play_events": 1364,
+    "download_events": 93,
+    "collection_events": 26,
+    "rating_events": 7,
+    "payment_events": 3,
+    "payment_total_usd": 57,
+    "account_required_for_browser_play": false,
+    "mandatory_positive_price": false,
+    "unique_page_visitors": null,
+    "unique_browser_players": null,
+    "unique_payment_payers": null,
+    "positive_price_game_sales": null,
+    "net_receipts_usd": null,
+    "game_profit_usd": null
+  },
+  "subsequent_activity_note": {
+    "ordinary_daily_browser_play_event_range_reported": [
+      30,
+      50
+    ],
+    "day_boundaries_exact": null,
+    "compared_to_matched_source_period": false,
+    "paid_orders_in_daily_range": null
+  },
+  "derived": {
+    "browser_plays_per_100_page_view_events": 19.39,
+    "different_event_kinds_may_not_be_unique_people": true,
+    "usable_as_unique_payer_conversion": false,
+    "usable_as_mandatory_paid_game_conversion": false,
+    "promotion_caused_payments": false,
+    "normalization_event_clock_matched_to_identity": false
+  },
+  "unknown": {
+    "paid_game_order_conversion": null,
+    "unique_paid_buyers": null,
+    "repeat_paid_orders": null,
+    "session_to_purchase_attribution": null,
+    "external_traffic_incrementality": null,
+    "discovery_organic_share": null,
+    "merchant_settled_profit": null,
+    "comparison_to_mandatory_paid_game": null
+  },
+  "limits": [
+    "One voluntary first-party game disclosure with a rolling 30-day period, not 30-day post-release survival cohort.",
+    "Browser plays and page views are events; repeated sessions and any non-human events are unquantified.",
+    "Payment events in a free/PWYW game may include donations and tips; none is proven a mandatory paid-title purchase.",
+    "Revenue is gross-like self-report, not after-fee payout, tax-adjusted income or net labor profit.",
+    "Views, downloads, collections and ratings have different event semantics and may overlap in people.",
+    "Reported 30–50 daily plays are not a fixed repeated cohort or a measured causal marketing lift."
+  ]
+}
