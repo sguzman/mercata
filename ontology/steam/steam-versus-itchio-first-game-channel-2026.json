@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_platform_launch_terms_comparison_not_actual_profit_comparison",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-itchio-payment-guide-2026",
+    "steam-itchio-creator-faq-2026",
+    "steam-itchio-started-2026",
+    "steam-direct-fee-doc",
+    "steamdirect-public",
+    "steam-onboarding-doc",
+    "steam-release-process-doc",
+    "steam-keys-official-oct2026",
+    "steam-financial-api-official",
+    "steam-visibility-official"
+  ],
+  "claim_ids": [
+    "channel-itch-free-upload",
+    "channel-steam-app-fee",
+    "channel-steam-review-clock",
+    "channel-itch-revenue-slider",
+    "channel-itch-two-payment-modes",
+    "channel-itch-pwyw-zero",
+    "channel-itch-browser-and-download",
+    "channel-itch-analytics-not-ledger",
+    "channel-steam-keys-parity-crossstore",
+    "channel-platform-fee-not-profit",
+    "channel-one-game-controlled-comparison-needed",
+    "channel-itch-data-not-steam-paid-sales",
+    "channel-itch-audience-not-proven",
+    "channel-multistore-net-and-rights-unknown"
+  ],
+  "channel_terms": {
+    "steam": {
+      "app_fee_usd": 100,
+      "first_game_wait_days_public": 30,
+      "coming_soon_days_public": 14,
+      "store_and_build_review_required": true,
+      "signed_publisher_share_known": false,
+      "payout_actual": null
+    },
+    "itchio": {
+      "listing_fee_usd": 0,
+      "open_platform_share_default_fraction": 0.1,
+      "creator_selected_share_range": [
+        0,
+        1
+      ],
+      "direct_payout_mode": true,
+      "platform_collected_payout_mode": true,
+      "browser_html5_supported": true,
+      "free_or_pwyw_supported": true,
+      "actual_seller_payout": null
+    }
+  },
+  "incompatible_denominators": [
+    "Steam app purchase",
+    "itch.io pay-what-you-want donation",
+    "itch.io download",
+    "Steam key activation offstore",
+    "Steam paid base game package",
+    "browser play session"
+  ],
+  "decision_axes": [
+    "legal publishing eligibility",
+    "initial fixed fees",
+    "cash timing",
+    "time-to-release",
+    "platform and payment-processing shares",
+    "regional taxes and refunds",
+    "discoverability and attributable buyer demand",
+    "developer support and build QA",
+    "cross-store rights and keys"
+  ],
+  "study_status": {
+    "paired_same_game_paid_order_sample": 0,
+    "real_fee_effect_on_profit": null,
+    "verified_causal_platform_sales_lift": null,
+    "publisher_after_cost_median": null,
+    "real_account_operations": false
+  }
+}

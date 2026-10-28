@@ -906,6 +906,39 @@
       "evidence_class": "official_public_product_commercial_configuration",
       "license": "Independently authored summary and public document metadata only; no source screenshots, audio, images or article text reproduced.",
       "notes": "Policy and product-unit distinctions; no merchant transaction records or actual attachment behavior accessed."
+    },
+    {
+      "id": "steam-itchio-payment-guide-2026",
+      "url": "https://itch.io/docs/creators/payments",
+      "title": "Accepting Payments and Getting Paid",
+      "publisher": "itch.io",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "marketplace_official_current_public_merchant_guidance",
+      "license": "Only source metadata and independently authored factual comparison; no source screenshots, copyrighted content or private receipts copied.",
+      "notes": "Comparison of documented public terms with Steam; no accounts created or empirical paired-revenue comparisons."
+    },
+    {
+      "id": "steam-itchio-creator-faq-2026",
+      "url": "https://itch.io/docs/creators/faq",
+      "title": "Creator FAQ",
+      "publisher": "itch.io",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "marketplace_official_current_public_merchant_guidance",
+      "license": "Only source metadata and independently authored factual comparison; no source screenshots, copyrighted content or private receipts copied.",
+      "notes": "Comparison of documented public terms with Steam; no accounts created or empirical paired-revenue comparisons."
+    },
+    {
+      "id": "steam-itchio-started-2026",
+      "url": "https://itch.io/docs/creators/getting-started",
+      "title": "Your first itch.io page",
+      "publisher": "itch.io",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "marketplace_official_current_public_merchant_guidance",
+      "license": "Only source metadata and independently authored factual comparison; no source screenshots, copyrighted content or private receipts copied.",
+      "notes": "Comparison of documented public terms with Steam; no accounts created or empirical paired-revenue comparisons."
     }
   ],
   "claims": [
@@ -5122,6 +5155,158 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Actual merchant ledger categories and signed rights/royalty terms are unavailable."
+    },
+    {
+      "id": "channel-itch-free-upload",
+      "text": "itch.io permits publishing a game project page and hosting content without charging a mandatory platform registration fee.",
+      "source_ids": [
+        "steam-itchio-creator-faq-2026",
+        "steam-itchio-started-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Free upload does not mean zero development, payment processing, tax or marketing cost."
+    },
+    {
+      "id": "channel-steam-app-fee",
+      "text": "Steam Direct collects a $100 USD application fee per new product, potentially recouped after $1,000 adjusted gross under documented criteria.",
+      "source_ids": [
+        "steam-direct-fee-doc"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "An application fee is neither a verified developer profit threshold nor the whole first-game cash burden."
+    },
+    {
+      "id": "channel-steam-review-clock",
+      "text": "Valve's current public docs require an initial 30-day post-fee wait, a distinct public 14-day Coming Soon page and approved store/build reviews.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-onboarding-doc",
+        "steam-release-process-doc"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Published minimums can overlap; individual authorization and review completion may delay the effective release."
+    },
+    {
+      "id": "channel-itch-revenue-slider",
+      "text": "itch.io says creators select a platform share on the Open Revenue Sharing slider, with zero-to-100-percent range and documented default 10%.",
+      "source_ids": [
+        "steam-itchio-payment-guide-2026",
+        "steam-itchio-creator-faq-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Processor charges, payout mode, VAT/withholding, refunds, and sellers' chosen settings vary; not automatically net earnings."
+    },
+    {
+      "id": "channel-itch-two-payment-modes",
+      "text": "itch.io offers direct-to-seller PayPal/Stripe payments and a collected-by-itch.io mode with later payout requests.",
+      "source_ids": [
+        "steam-itchio-payment-guide-2026",
+        "steam-itchio-creator-faq-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Cash timing, processor terms, taxes, refund disputes and seller eligibility differ by country and mode."
+    },
+    {
+      "id": "channel-itch-pwyw-zero",
+      "text": "itch.io supports projects with zero minimum payment and optional pay-what-you-want contributions.",
+      "source_ids": [
+        "steam-itchio-creator-faq-2026",
+        "steam-itchio-started-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Free downloads, page views, voluntary tips and mandatory-price purchases must not be pooled as paid game sales."
+    },
+    {
+      "id": "channel-itch-browser-and-download",
+      "text": "itch.io supports browser-playable HTML5 projects and downloadable game releases on user-designed project pages.",
+      "source_ids": [
+        "steam-itchio-started-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A browser-play session or download is not a completed paid order or unique paying person."
+    },
+    {
+      "id": "channel-itch-analytics-not-ledger",
+      "text": "itch.io creators may inspect project views, downloads and purchases through their dashboard.",
+      "source_ids": [
+        "steam-itchio-started-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "These figures cannot substitute for Steam partner financial reports; definitions and tax/processing differ."
+    },
+    {
+      "id": "channel-steam-keys-parity-crossstore",
+      "text": "Valve's Steam key rules permit authorized off-store distribution but expect comparable offers for Steam customers.",
+      "source_ids": [
+        "steam-keys-official-oct2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "An itch.io storefront sale involving a Steam key must be distinguished from a purchase of a downloadable itch.io file and from Steam checkout."
+    },
+    {
+      "id": "channel-platform-fee-not-profit",
+      "text": "A lower nominal platform share does not establish that a game earns more money through itch.io than Steam.",
+      "source_ids": [
+        "steam-direct-fee-doc",
+        "steam-itchio-payment-guide-2026",
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Different buyer demand, returns, regional prices, payment fees, marketing and development costs are unmeasured."
+    },
+    {
+      "id": "channel-one-game-controlled-comparison-needed",
+      "text": "To compare the same commercial game across channels, hold release version, price, marketing, paid status, timing and refund/tax definitions explicit while measuring actual net receipts and labor separately.",
+      "source_ids": [
+        "steam-itchio-payment-guide-2026",
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The relevant counterfactual is not identified by a two-row fee comparison; no experiment conducted."
+    },
+    {
+      "id": "channel-itch-data-not-steam-paid-sales",
+      "text": "An itch.io sale, download or donation is not a Steam Store paid checkout and should not enter Steam AppID income numerators.",
+      "source_ids": [
+        "steam-itchio-creator-faq-2026",
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Multi-platform merchant profits require distinct per-channel reports and consolidation rules."
+    },
+    {
+      "id": "channel-itch-audience-not-proven",
+      "text": "The public creator policies do not document a representative per-new-game conversion rate or guaranteed discoverability for either platform.",
+      "source_ids": [
+        "steam-itchio-started-2026",
+        "steam-visibility-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Do not infer that Steam's larger consumer base automatically means a higher solo-developer payout."
+    },
+    {
+      "id": "channel-multistore-net-and-rights-unknown",
+      "text": "Neither set of public guides identifies a particular publisher's contractual distribution exclusivity, profit split, or cross-store license rights.",
+      "source_ids": [
+        "steam-itchio-creator-faq-2026",
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Actual contractual agreements and applicable license terms must be checked before a specific game's dual distribution."
     }
   ],
   "observations": [],
@@ -5129,5 +5314,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam sources now distinguish DLC paid/free app units from independently purchasable music AppIDs, soundtrack revenue share attribution and invalid attach-rate denominators. Actual addon sales, take-home earnings and developer profits remain unknown."
+  "summary": "Steam research includes an official Steam versus itch.io first-game launch channel comparison covering entry fees, payment settlement and incomparable buyer denominators, without claiming fee advantage is actual income."
 }

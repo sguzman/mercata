@@ -1,6 +1,6 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 72% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 73% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
@@ -291,6 +291,10 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## Steam versus itch.io first-game channel checkpoint
+
+The [Steam versus itch.io channel comparison](../ontology/steam/steam-versus-itchio-first-game-channel-2026.md) separates Steam Direct and review clocks from free project hosting, creator-chosen shares, direct/platform payout routes and incompatible paid-unit denominators. A [synthetic fee comparison guard](../site/steam-channel-comparison.mjs) refuses to infer publisher profit from entry costs. **Score 73%** (exact 73.106%; Δ +1 pp from 72%). No actual seller sales or platform choice tested.
+
 ## Steam DLC and soundtrack accounting checkpoint
 
 The [DLC and soundtrack revenue unit study](../ontology/steam/dlc-and-soundtrack-revenue-units-2026.md) separates base-game orders, DLC entitlements, independently purchased music AppIDs and associated OST revenue-share treatment. [Synthetic event ratio tests](../site/steam-attach-metrics.mjs) refuse to call addon unit-count ratios customer attach probabilities. **Current score 72%** (exact 71.860%; Δ +1 percentage points from 71%). No actual attachment or profit measured.
@@ -419,4 +423,4 @@ The [wishlist and visibility report](../ontology/steam/discovery-wishlists-and-v
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 72%** rounded task-weighted progress across 293 tasks; previous 71%, change +1 pp (exact 71.860%). 53 fully verified and 215 partly researched; 81 public sources and 409 bounded claims. No actual add-on revenue or developer net income measured.
+**Completion: 73%** rounded task-weighted progress across 293 tasks; previous 72%, Δ +1 pp (exact 73.106%). 53 fully verified and 219 partly researched; 84 public sources and 423 bounded claims. No actual cross-market seller returns or product launches.
