@@ -1,6 +1,6 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 43% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 45% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
@@ -291,6 +291,10 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## Tenth evidence-backed checkpoint
+
+The [multi-month leaderboard and Early Access selection audit](../ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md) establishes that February/March/April/June 2026 public reports are *top-seller* lists, not complete paid-launch cohorts. It preserves GameDiscoverCo's 91 selected 2026 Early Access graduates and **21%** modeled first-30-day 1.0-outperformance rate only inside the >5,000-paid-first-month/>$10,000-free-revenue selection frame. A [coverage gate](../site/steam-monthly-coverage.mjs) rejects winner-only sources as income-distribution denominators. **Score 45%** (exact 45.427%, Δ +2 pp after 43%) across 293 tasks. No multi-month median publisher earnings inferred.
+
 ## Ninth evidence-backed checkpoint
 
 The [first-game studio, publisher-selection and breakout study](../ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.md) distinguishes mutable storefront studio-name records, review-based observational publisher outcomes, success-selected cross-platform 500k-unit launches and broad professional surveys. A [cohort-comparability validator](../site/steam-cohort-comparability.mjs) blocks invalid pooling. **Score 43%** (exact 43.259%, Δ +2 pp from 41%) across the original 293 tasks. True first-time developer net earnings remain unknown.
@@ -355,4 +359,4 @@ The [wishlist and visibility report](../ontology/steam/discovery-wishlists-and-v
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 43%** rounded task-weighted progress across 293 tasks; previous round 41%, change +2 percentage points (exact 43.259%). 20 fully verified, 164 partially researched; 50 public sources and 184 bounded claims. No commercial experiments, protected accounts, or publisher transaction data.
+**Completion: 45%** rounded task-weighted progress across 293 tasks; previous round 43%, change +2 pp (exact 45.427%). 22 fully verified and 169 partially investigated; 55 public sources and 197 bounded claims. No account operations or private income records.

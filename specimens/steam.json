@@ -565,6 +565,61 @@
       "evidence_class": "independent_public_research_with_population_and_method_limits",
       "license": "Public URL, dates and short independently authored numerical interpretation only; no raw source rows, images or passages reproduced.",
       "notes": "More than 2,300 professional respondents; non-random Steam seller sampling frame."
+    },
+    {
+      "id": "steam-gdc-month-feb2026-top",
+      "url": "https://newsletter.gamediscover.co/p/february-2026s-top-selling-new-steam",
+      "title": "February 2026's top-selling new Steam games",
+      "publisher": "GameDiscoverCo / Simon Carless",
+      "published_at": "2026-03-06",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "model_owner_public_monthly_leaderboard_or_selected_subcohort",
+      "license": "Source links, metadata and short independently authored aggregate summaries only. No proprietary chart, individual row set or article text reproduced.",
+      "notes": "Named monthly top sellers; not all February launches, no denominator for low sellers."
+    },
+    {
+      "id": "steam-gdc-month-mar2026-top",
+      "url": "https://newsletter.gamediscover.co/p/marchs-top-new-pcconsole-games-steams",
+      "title": "March's top new PC/console games",
+      "publisher": "GameDiscoverCo / Simon Carless",
+      "published_at": "2026-04-03",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "model_owner_public_monthly_leaderboard_or_selected_subcohort",
+      "license": "Source links, metadata and short independently authored aggregate summaries only. No proprietary chart, individual row set or article text reproduced.",
+      "notes": "Top-seller estimate includes explicit attention to off-Steam keys; no complete month release cohort."
+    },
+    {
+      "id": "steam-gdc-month-apr2026-top",
+      "url": "https://newsletter.gamediscover.co/p/april-2026s-top-new-pc-and-console",
+      "title": "April 2026's top new PC & console games",
+      "publisher": "GameDiscoverCo / Simon Carless",
+      "published_at": "2026-05",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "model_owner_public_monthly_leaderboard_or_selected_subcohort",
+      "license": "Source links, metadata and short independently authored aggregate summaries only. No proprietary chart, individual row set or article text reproduced.",
+      "notes": "Selected top-seller examples; not a distribution or counted universe."
+    },
+    {
+      "id": "steam-gdc-month-jun2026-top",
+      "url": "https://newsletter.gamediscover.co/p/june-2026s-top-new-pc-and-console",
+      "title": "June 2026's top new PC & console games",
+      "publisher": "GameDiscoverCo / Simon Carless",
+      "published_at": "2026-07-03",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "model_owner_public_monthly_leaderboard_or_selected_subcohort",
+      "license": "Source links, metadata and short independently authored aggregate summaries only. No proprietary chart, individual row set or article text reproduced.",
+      "notes": "Selected successes and release-period unit estimates, not a complete low-end distribution."
+    },
+    {
+      "id": "steam-gdc-earlyaccess-graduates-2026",
+      "url": "https://newsletter.gamediscover.co/p/what-happened-to-early-access-graduates",
+      "title": "What happened to Early Access graduates in 2026 so far?",
+      "publisher": "GameDiscoverCo / Simon Carless",
+      "published_at": "2026-05-19",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "model_owner_public_monthly_leaderboard_or_selected_subcohort",
+      "license": "Source links, metadata and short independently authored aggregate summaries only. No proprietary chart, individual row set or article text reproduced.",
+      "notes": "Graduation sample of 91 games; inclusion requires >5,000 paid first-month copies or >$10,000 first-month free-game revenue, thereby excluding low sellers."
     }
   ],
   "claims": [
@@ -2471,6 +2526,140 @@
       "confidence": "medium",
       "observed_at": "2026-10-28",
       "limitations": "Publishers actively select projects and funded titles differ in many unobserved dimensions."
+    },
+    {
+      "id": "monthly-feb2026-top-only",
+      "text": "GameDiscoverCo's February 2026 new-Steam-games report ranks selected leading launches, rather than listing every original paid release and its sales.",
+      "source_ids": [
+        "steam-gdc-month-feb2026-top"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "The lowest-selling and unlisted titles cannot be assigned zero or observed outcomes from this source."
+    },
+    {
+      "id": "monthly-mar2026-top-only",
+      "text": "GameDiscoverCo's March 2026 new release report similarly emphasizes high-performing games rather than a complete paid-release cohort.",
+      "source_ids": [
+        "steam-gdc-month-mar2026-top"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Monthly visible leaders do not determine median, mean, zero fraction or full population paid-game count."
+    },
+    {
+      "id": "monthly-apr2026-top-only",
+      "text": "The April 2026 GameDiscoverCo monthly release overview focuses on top games and does not provide full distribution including failed releases.",
+      "source_ids": [
+        "steam-gdc-month-apr2026-top"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Not a representative release-month income study."
+    },
+    {
+      "id": "monthly-jun2026-top-only",
+      "text": "The June 2026 GameDiscoverCo report ranks the strongest new Steam and console releases without reporting all unsuccessful games.",
+      "source_ids": [
+        "steam-gdc-month-jun2026-top"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Data exclude most launches by design, do not compare winner counts to total Steam supply."
+    },
+    {
+      "id": "monthly-march-offsteam-keys-estimate",
+      "text": "The March article states GameDiscoverCo had started incorporating a basic estimate for games played on Steam but sold via non-Steam keys.",
+      "source_ids": [
+        "steam-gdc-month-mar2026-top"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Methods evolving between reports can change modeled units; keys need separating from Steam store paid checkout."
+    },
+    {
+      "id": "monthly-best-month-comparison-invalid",
+      "text": "Differences between top selling games in January, February, March, April and June cannot identify changes in the typical game without complete equally aged release-month cohorts.",
+      "source_ids": [
+        "steam-gdc-month-feb2026-top",
+        "steam-gdc-month-mar2026-top",
+        "steam-gdc-month-apr2026-top",
+        "steam-gdc-month-jun2026-top"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Winner-only selection, late-month launches, model revision and observation age destroy like-for-like median comparisons."
+    },
+    {
+      "id": "earlyaccess91-selected-population",
+      "text": "GameDiscoverCo's May 2026 Early Access graduate study examined 91 tracked titles reaching version 1.0 in 2026, subject to a first-month activity threshold.",
+      "source_ids": [
+        "steam-gdc-earlyaccess-graduates-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Not all Early Access titles; reported as-of May 19, 2026, not the whole calendar year."
+    },
+    {
+      "id": "earlyaccess-paid-5000-free-10000-gate",
+      "text": "The graduate comparison limits eligible paid games to >5,000 modeled first-month Early Access copies or eligible free games to >$10,000 first-month revenue.",
+      "source_ids": [
+        "steam-gdc-earlyaccess-graduates-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Conditions on initial commercial traction, excluding low/zero-sellers and mixing paid/free monetization models."
+    },
+    {
+      "id": "earlyaccess-median15months",
+      "text": "Selected 2026 Early Access graduates spent a reported median of 1 year and 3 months in Early Access.",
+      "source_ids": [
+        "steam-gdc-earlyaccess-graduates-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Conditional on reaching 1.0 and passing initial revenue/paid-unit gate; not typical planned Early Access duration."
+    },
+    {
+      "id": "earlyaccess-21percent-10-better",
+      "text": "For the 91 selected 2026 graduates, GameDiscoverCo modeled 21% with higher first-30-day revenue at version 1.0 than at their initial Early Access launch.",
+      "source_ids": [
+        "steam-gdc-earlyaccess-graduates-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Comparing two 30-day revenue windows is not the share profitable at 1.0 or a general second-launch boost probability."
+    },
+    {
+      "id": "earlyaccess-2025-20percent-selected",
+      "text": "The same article reports a comparable 20% better-at-1.0 share for its selected 2025 graduates.",
+      "source_ids": [
+        "steam-gdc-earlyaccess-graduates-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "The 2025 comparison cohort size and exact eligibility rows were not reconstructed here."
+    },
+    {
+      "id": "earlyaccess-some-10-revenue-includes-dlc",
+      "text": "GameDiscoverCo notes that for at least one 2026 graduate, the version 1.0 revenue measure includes DLC launched alongside version 1.0.",
+      "source_ids": [
+        "steam-gdc-earlyaccess-graduates-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Comparing package-only revenue to post-launch combined base+new-DLC revenue can inflate apparent 1.0 gain."
+    },
+    {
+      "id": "earlyaccess-10-not-second-firstpaidlaunch",
+      "text": "Version 1.0 graduation is not the initial paid release for a title already sold in Early Access, and the selected-graduate study must not be inserted as a new-game paid-launch cohort.",
+      "source_ids": [
+        "steam-gdc-earlyaccess-graduates-2026",
+        "steam-earlyaccess-policy-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Differing commercial time zeros, survival to 1.0 and sample filters confound comparisons."
     }
   ],
   "observations": [],
@@ -2478,5 +2667,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research separates first-observed studio-name release histories, observational publisher-associated reviews and success-selected modeled cross-platform launch cohorts. First-game publisher legal entities, true earnings and zero paid sales remain unknown."
+  "summary": "Steam research now distinguishes a single January 2026 provider-defined full paid-release model from subsequent winner-only monthly leaderboards and a highly selected Early Access graduation sample. Multi-month Steam paid-game medians and publisher incomes remain unknown."
 }

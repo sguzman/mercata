@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "monthly_top_seller_coverage_and_selected_earlyaccess_graduates",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-gdc-month-feb2026-top",
+    "steam-gdc-month-mar2026-top",
+    "steam-gdc-month-apr2026-top",
+    "steam-gdc-month-jun2026-top",
+    "steam-gdc-earlyaccess-graduates-2026",
+    "steam-earlyaccess-policy-official"
+  ],
+  "claim_ids": [
+    "monthly-feb2026-top-only",
+    "monthly-mar2026-top-only",
+    "monthly-apr2026-top-only",
+    "monthly-jun2026-top-only",
+    "monthly-march-offsteam-keys-estimate",
+    "monthly-best-month-comparison-invalid",
+    "earlyaccess91-selected-population",
+    "earlyaccess-paid-5000-free-10000-gate",
+    "earlyaccess-median15months",
+    "earlyaccess-21percent-10-better",
+    "earlyaccess-2025-20percent-selected",
+    "earlyaccess-some-10-revenue-includes-dlc",
+    "earlyaccess-10-not-second-firstpaidlaunch"
+  ],
+  "monthly_source_coverage": [
+    {
+      "month": "2026-01",
+      "source": "steam-gdc-2026-jan-cohort-primary",
+      "source_frame": "provider_complete_paid_launch_month_model",
+      "all_reported_games": 1230,
+      "has_unsuccessful_and_missing_estimates": true,
+      "independent_paid_orders": false
+    },
+    {
+      "month": "2026-02",
+      "source": "steam-gdc-month-feb2026-top",
+      "source_frame": "selected_top_new_sellers_only",
+      "all_reported_games": null,
+      "has_unsuccessful_and_missing_estimates": false,
+      "independent_paid_orders": false
+    },
+    {
+      "month": "2026-03",
+      "source": "steam-gdc-month-mar2026-top",
+      "source_frame": "selected_top_new_sellers_only",
+      "all_reported_games": null,
+      "has_unsuccessful_and_missing_estimates": false,
+      "independent_paid_orders": false
+    },
+    {
+      "month": "2026-04",
+      "source": "steam-gdc-month-apr2026-top",
+      "source_frame": "selected_top_new_sellers_only",
+      "all_reported_games": null,
+      "has_unsuccessful_and_missing_estimates": false,
+      "independent_paid_orders": false
+    },
+    {
+      "month": "2026-06",
+      "source": "steam-gdc-month-jun2026-top",
+      "source_frame": "selected_top_new_sellers_only",
+      "all_reported_games": null,
+      "has_unsuccessful_and_missing_estimates": false,
+      "independent_paid_orders": false
+    }
+  ],
+  "source_comparison": {
+    "multi_month_paid_steam_median": null,
+    "unit_sales_outside_steam_keys_reported_in_march": true,
+    "identical_model_version_verified": false,
+    "identical_horizon_verified": false,
+    "eligible_full_frame_months_with_published_estimated_distribution": 1
+  },
+  "early_access_graduates": {
+    "report_date": "2026-05-19",
+    "calendar_year_partial": 2026,
+    "source": "steam-gdc-earlyaccess-graduates-2026",
+    "n_tracked": 91,
+    "paid_first_month_units_required_exclusive": 5000,
+    "free_first_month_revenue_usd_required_exclusive": 10000,
+    "median_months_in_early_access": 15,
+    "pct_with_better_first30day_revenue_at_v1_0": 21,
+    "prior_year_reported_pct": 20,
+    "selection_includes_zero_sellers": false,
+    "did_not_complete_1_0_excluded": true,
+    "base_game_and_dlc_mixed_in_some_v1_reports": true,
+    "causal_second_launch_uplift": null,
+    "typical_unfiltered_early_access_graduate": null
+  },
+  "unknown": {
+    "multi_month_game_median": null,
+    "industry_first_year_publisher_profit": null,
+    "early_access_failed_pre10_share": null,
+    "all_steam_graduates_2026": null
+  },
+  "no_exported_rows": true,
+  "no_authenticated_sales": true
+}
