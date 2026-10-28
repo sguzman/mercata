@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {auditItchTaskScores} from './itch-task-score-audit.mjs';
 
 export const statusFiles = ['README.md','ontology/itch-io/README.md','plans/itch-io.md','gallery/README.md'];
 function replaceExactlyOnce(source, pattern, next, label) {
@@ -30,9 +31,9 @@ export function alignItchText(filename,source,percent) {
  }
 }
 export function expectedItchStatus(root=process.cwd()) {
- const plan=JSON.parse(fs.readFileSync(path.join(root,'plans/itch-io.json'),'utf8'));
- if(plan.total_tracked_tasks!==244||!Number.isInteger(plan.progress_percent))throw new Error('Unexpected itch.io study plan');
- return plan.progress_percent;
+ const read=name=>JSON.parse(fs.readFileSync(path.join(root,name),'utf8'));
+ return auditItchTaskScores(read('plans/itch-io.json'),read('queues/itch-io.json'),
+  read('ontology/itch-io/research-synthesis-2026.json')).rounded_percent;
 }
 export function syncItchStatus(root=process.cwd()) {
  const percent=expectedItchStatus(root);
