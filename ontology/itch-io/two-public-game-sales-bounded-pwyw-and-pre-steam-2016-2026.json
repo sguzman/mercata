@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "historical_optional_payment_and_recent_2026_premium_game_observations",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "majo-majotori-2016-first-game-pwyw-cost-case",
+    "doppler-fishes-2026-5000-pre-steam-report",
+    "doppler-fishes-2026-steam-launch-announcement",
+    "doppler-fishes-2026-50000-steam-report"
+  ],
+  "sample": {
+    "publisher_count": 2,
+    "product_count": 2,
+    "independent_publisher_case_count": 2,
+    "inclusion_frame": "voluntary public first-party retrospectives and storefront patch announcements",
+    "probability_sample": false,
+    "paired_identical_price_model": false,
+    "matched_game_release_horizons": false,
+    "private_data_collected": false,
+    "transaction_exports_audited": false
+  },
+  "cases": [
+    {
+      "id": "majotori_2016",
+      "source_ids": [
+        "majo-majotori-2016-first-game-pwyw-cost-case"
+      ],
+      "publisher_reported_first_indie_game": true,
+      "original_release_date": "2016-02-01",
+      "case_report_published_date": "2016-08-01",
+      "game_type": "narrative_trivia",
+      "sale_model": "pay_what_you_want_zero_minimum",
+      "paid_minimum_usd": 0,
+      "reported_itch_download_events": 156,
+      "itch_voluntary_paid_download_events": 11,
+      "reported_lowest_positive_payment_usd": 3,
+      "reported_highest_positive_payment_usd": 15,
+      "reported_total_payments_gross_usd": 69.3,
+      "reported_amount_after_unspecified_cuts_and_taxes_usd": 60.6,
+      "developer_rough_revenue_conversion_eur": 55,
+      "music_commission_eur": 240,
+      "steam_greenlight_entry_eur": 90,
+      "sum_music_and_steam_listing_cost_eur": 330,
+      "unpaid_developer_and_helpers_labor_hours": null,
+      "game_publisher_net_income_after_labor_eur": null,
+      "verified_bank_receipt_usd": null,
+      "reported_platforms": [
+        "itch.io",
+        "GameJolt",
+        "Google Play"
+      ],
+      "other_stores_seller_cash_basis": "not separately documented",
+      "is_premium_game_positive_minimum": false,
+      "paid_checkout_conversion": null,
+      "non_itch_platform_cost_included": true,
+      "same_currency_profit_from_usd_receipts_and_eur_costs": null
+    },
+    {
+      "id": "dont_sleep_with_the_fishes_2026",
+      "source_ids": [
+        "doppler-fishes-2026-5000-pre-steam-report",
+        "doppler-fishes-2026-steam-launch-announcement",
+        "doppler-fishes-2026-50000-steam-report"
+      ],
+      "game_type": "paid_survival_horror_download",
+      "itch_positive_price_listing_usd_as_observed_oct2026": 1.99,
+      "source_publisher_june6_reported_cumulative_copies": 5000,
+      "source_reported_copies_store_exclusivity_audited": false,
+      "reported_prior_to_steam_launch": true,
+      "steam_launch_date": "2026-06-26",
+      "steam_cumulative_copies_reported_aug15": 50000,
+      "steam_report_date": "2026-08-15",
+      "itch_early_report_date": "2026-06-06",
+      "steam_later_copies_in_same_cohort_as_early_itch_copies": false,
+      "at_least_one_paid_game_channel_pre_steam": true,
+      "pre_steam_reported_units_verified_via_private_transaction_export": false,
+      "revenue_from_stated_5000_units_usd": null,
+      "revenue_from_stated_50000_steam_units_usd": null,
+      "net_platform_proceeds_usd": null,
+      "developer_labor_hours": null,
+      "refunds_count": null,
+      "subsequent_itch_units_after_steam_launch": null,
+      "unique_buyers_crossstore": null,
+      "store_causal_effect": null
+    }
+  ],
+  "known_incomparabilities": [
+    "2016 Majotori used a zero-minimum voluntary-price offer while the 2026 horror game has a positive minimum price listed; both are not comparable mandatory-payment populations.",
+    "The 2016 developer described $69.30 gross and $60.60 after various deductions, but €330 combined cash expenses cover music and a separate Steam Greenlight campaign, not itch-only selling costs.",
+    "The Majotori 156 downloads and 11 voluntarily paid downloads are download/payment events, not known deduplicated page visitors or matched checkout conversion.",
+    "The June 2026 5,000-copy count was reported by the developer before Steam release; no audited store-level export establishes precisely which sales channels are included.",
+    "The August 2026 50,000-copy count is explicitly Steam-specific; it must not be counted as itch paid units, added to the earlier June count as unique customers, or divided into a cross-store causal effect.",
+    "The current October 2026 $1.99 game listing does not verify the price charged on every June purchase, nor any gross or net receipts.",
+    "Neither selected outcome is a representative publisher sample, observed median, controlled distribution experiment, or measure of all eligible paid-game sellers."
+  ],
+  "unknown": {
+    "typical_itch_game_paid_unit_demand": null,
+    "premium_game_zero_sale_share": null,
+    "representative_game_seller_mean_net_income": null,
+    "representative_game_seller_median_net_income": null,
+    "market_total_paid_game_units": null,
+    "independent_first_game_income_probability": null,
+    "causal_steam_release_sales_effect": null,
+    "paired_365_day_itch_and_steam_sales": null
+  }
+}

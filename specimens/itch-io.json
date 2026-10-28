@@ -2528,6 +2528,50 @@
       "evidence_class": "voluntary_developer_first_party_itch_paid_game_unit_and_steam_first_month_postmortem",
       "license": "Only short attributed and independently written statistical summary; no private account details, images or article text reused.",
       "notes": "Article describes June 15–July 15 Steam early-access window in 2021 and earlier itch listing: 0 itch sales in its first month, 1 later itch copy about USD 3.99 gross, plus 410 Steam first-month copies and USD 632 after Steam cut/VAT (before local taxes). Exact publication day not confirmed."
+    },
+    {
+      "id": "majo-majotori-2016-first-game-pwyw-cost-case",
+      "url": "https://www.gamedeveloper.com/business/my-first-indie-game-failed-hard-here-s-the-data-",
+      "title": "My first indie game failed hard. Here's the data.",
+      "published_at": "2016-08-01",
+      "publisher": "Alva Majo (independent game developer writing on Game Developer)",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_developer_historical_voluntary_payment_and_cost_retrospective",
+      "license": "Attributed short numerical observations and independently written comparisons only; original article and screenshots not republished.",
+      "notes": "Historical first-game retrospective: zero-minimum PWYW itch offering; 11 voluntary purchases among 156 downloads; $69.30 gross, $60.60 after reported cuts/taxes; €240 music, €90 Steam Greenlight fee. Development labor not costed; historical economics should not be read as current policy."
+    },
+    {
+      "id": "doppler-fishes-2026-5000-pre-steam-report",
+      "url": "https://dopplerghost.itch.io/dont-sleep-with-the-fishes/devlog/1546268/version-112",
+      "title": "Don't Sleep With The Fishes: Version 1.1.2, 5,000-copy milestone",
+      "published_at": "2026-06-06",
+      "publisher": "DopplerGhost (game developer)",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_2026_premium_game_copy_milestone_pre_steam_launch",
+      "license": "Short attributed public numerical result and independent methodological analysis; no images, account data or screenshots republished.",
+      "notes": "Developer announced 5,000 game copies sold and an upcoming Steam port; the current itch product listing has positive minimum price, but original transaction export and June individual prices were not inspected."
+    },
+    {
+      "id": "doppler-fishes-2026-steam-launch-announcement",
+      "url": "https://dopplerghost.itch.io/dont-sleep-with-the-fishes/devlog/1564786/version-113-steam-launch-now",
+      "title": "Don't Sleep With The Fishes: June 26 Steam launch announcement",
+      "published_at": "2026-06-26",
+      "publisher": "DopplerGhost (game developer)",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_2026_cross_store_release_date_evidence",
+      "license": "Attributed public release date and independently written summary; no original content republished.",
+      "notes": "Documents first Steam storefront launch June 26, 2026, subsequent to June 6 author-reported 5,000 game-copy milestone."
+    },
+    {
+      "id": "doppler-fishes-2026-50000-steam-report",
+      "url": "https://dopplerghost.itch.io/dont-sleep-with-the-fishes/devlog/1621472/50000-copies-sold-small-game-fixes",
+      "title": "Don't Sleep With The Fishes: 50,000 copies sold on Steam",
+      "published_at": "2026-08-15",
+      "publisher": "DopplerGhost (game developer)",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_2026_steam_specific_units_milestone",
+      "license": "Short attributed public numerical result; no images, account data or article reproduced.",
+      "notes": "The developer explicitly says 50,000 units sold on Steam; this is not a verified itch buyer count, nor a matched release-window store comparison."
     }
   ],
   "claims": [
@@ -7911,6 +7955,60 @@
       "confidence": "medium",
       "observed_at": "2026-10-27",
       "limitations": "Different store launch horizons, country pricing and payment accounting; Steam amounts cannot be pooled with itch gross or treated as creator profit."
+    },
+    {
+      "id": "majotori-2016-voluntary-pwyw-payments-separated-from-downloads",
+      "text": "A 2016 first-game creator retrospective reported 156 itch.io download events and 11 positive voluntary payments for a zero-minimum-priced trivia game; these were not purchases required for access.",
+      "source_ids": [
+        "majo-majotori-2016-first-game-pwyw-cost-case"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Selected unaudited developer statement from 2016, not a measured premium-game checkout conversion or a publisher-wide purchase rate."
+    },
+    {
+      "id": "majotori-2016-mixed-currency-gross-proceeds-expense-boundary",
+      "text": "For Majotori, the developer disclosed $69.30 gross, $60.60 after stated cuts/taxes, and €330 cash expense covering music and a Steam Greenlight campaign, without pricing unpaid labor; a compatible after-cost itch-only net profit is not established.",
+      "source_ids": [
+        "majo-majotori-2016-first-game-pwyw-cost-case"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Currency conversion and timing unverified; €90 Steam listing expenditure not an itch-only selling cost, and after-fee tax description is not audited settlement."
+    },
+    {
+      "id": "fishes-2026-reported-five-thousand-copies-pre-steam",
+      "text": "The developer of a commercially priced survival-horror game reported 5,000 copies sold on June 6, 2026, twenty days before announcing the game's June 26 Steam launch.",
+      "source_ids": [
+        "doppler-fishes-2026-5000-pre-steam-report",
+        "doppler-fishes-2026-steam-launch-announcement"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Author-reported unit milestone without private ledger, audited store-of-purchase split, refund totals, historical purchase prices or an income amount."
+    },
+    {
+      "id": "fishes-2026-fifty-thousand-steam-copies-separate-later-store",
+      "text": "On August 15, 2026, the same developer specifically reported 50,000 Steam copies of that game, a distinct later store-specific count from the 5,000 pre-Steam milestone.",
+      "source_ids": [
+        "doppler-fishes-2026-5000-pre-steam-report",
+        "doppler-fishes-2026-steam-launch-announcement",
+        "doppler-fishes-2026-50000-steam-report"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Steam count does not measure itch-only demand, unique purchasers across platforms, incremental Steam effect, matched game age or publisher profit."
+    },
+    {
+      "id": "fishes-oct2026-current-positive-minimum-not-historic-average",
+      "text": "The public itch storefront currently lists Don't Sleep With The Fishes at a positive $1.99 minimum; this observable listing label does not verify June's sale prices, proceeds or taxes.",
+      "source_ids": [
+        "doppler-fishes-2026-5000-pre-steam-report",
+        "doppler-fishes-2026-50000-steam-report"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Current storefront label observed in October 2026; initial price history, discounting, payer tips and charged currencies were not reconstructed."
     }
   ],
   "observations": [
