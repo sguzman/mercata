@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {auditItchTaskScores} from './itch-task-score-audit.mjs';
+import {alignItchLiveEvidenceProgress} from './align-itch-io-research-progress.mjs';
 
 export const statusFiles = ['README.md','ontology/itch-io/README.md','plans/itch-io.md','gallery/README.md'];
 function replaceExactlyOnce(source, pattern, next, label) {
@@ -36,15 +37,29 @@ export function expectedItchStatus(root=process.cwd()) {
   read('ontology/itch-io/research-synthesis-2026.json')).rounded_percent;
 }
 export function syncItchStatus(root=process.cwd()) {
- const percent=expectedItchStatus(root);
+ const read=name=>fs.readFileSync(path.join(root,name),'utf8');
+ const originals={
+  'plans/itch-io.json':read('plans/itch-io.json'),
+  'ontology/itch-io/research-synthesis-2026.json':read('ontology/itch-io/research-synthesis-2026.json'),
+  'ontology/itch-io/research-synthesis-2026.md':read('ontology/itch-io/research-synthesis-2026.md')
+ };
+ const current=alignItchLiveEvidenceProgress(JSON.parse(originals['plans/itch-io.json']),
+  JSON.parse(read('queues/itch-io.json')),
+  JSON.parse(originals['ontology/itch-io/research-synthesis-2026.json']),
+  originals['ontology/itch-io/research-synthesis-2026.md']);
+ const proposed={
+  'plans/itch-io.json':JSON.stringify(current.plan,null,2)+'\n',
+  'ontology/itch-io/research-synthesis-2026.json':JSON.stringify(current.synthesis,null,2)+'\n',
+  'ontology/itch-io/research-synthesis-2026.md':current.markdown
+ };
+ // Fail closed for a malformed summary before writing any of the live score files.
+ for(const filename of statusFiles)proposed[filename]=alignItchText(filename,read(filename),current.rounded);
  const changes=[];
- for(const filename of statusFiles) {
-  const filepath=path.join(root,filename);
-  const before=fs.readFileSync(filepath,'utf8');
-  const after=alignItchText(filename,before,percent);
-  if(before!==after){fs.writeFileSync(filepath,after);changes.push(filename);}
+ for(const [filename,after] of Object.entries(proposed)){
+  const was=originals[filename]??read(filename);
+  if(was!==after){fs.writeFileSync(path.join(root,filename),after);changes.push(filename);}
  }
- return {percent,changes};
+ return {percent:current.rounded,changes};
 }
 if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
  const result=syncItchStatus(process.cwd());
