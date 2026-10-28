@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "selected_voluntary_free_game_and_demo_receipts_not_paid_game_conversion",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "black-vein-2026-first-two-dollar-free-horror",
+    "black-vein-2026-public-pwyw-storefront",
+    "plant-shop-2026-free-demo-optional-receipts",
+    "plant-shop-2026-pwyw-demo-storefront",
+    "itch-2026-first-dollar-question-voluntary-thread",
+    "pear-acre-2020-free-html5-historical-page"
+  ],
+  "claim_ids": [
+    "black-vein-free-pwyw-first-usd2-five-month-delay",
+    "black-vein-sept2025-release-free-access",
+    "black-vein-usd2-not-paid-title-copy",
+    "plant-shop-demo-usd38-optional",
+    "plant-shop-20k-downloads-both-stores",
+    "plant-shop-itch-demo-name-your-price",
+    "plant-shop-usd38-div-20k-not-itch-conversion",
+    "first-dollar-thread-original-zero-is-timebound",
+    "first-dollar-thread-one-mixed-2020-2022-500usd",
+    "first-dollar-linked-game-free-html5",
+    "first-dollar-volunteer-sample-not-typical-seller"
+  ],
+  "samples": [
+    {
+      "case_id": "black_vein",
+      "creator_count": 1,
+      "title_count": 1,
+      "access_mode": "free_pwyw",
+      "claimed_usd_received": 2,
+      "claimed_payment_events": null,
+      "game_release_at": "2025-09-07",
+      "claim_posted_at": "2026-02-25",
+      "reported_first_payment_months_after_release_approximately": 5,
+      "download_events": null,
+      "download_platforms": [
+        "itch.io"
+      ],
+      "receipt_platform": "itch.io",
+      "mandatory_price_game_orders": null,
+      "unique_paying_buyers": null,
+      "merchant_net_profit_usd": null
+    },
+    {
+      "case_id": "plant_shop_demo",
+      "creator_count": 1,
+      "title_count": 1,
+      "access_mode": "free_demo_pwyw",
+      "claimed_usd_received": 38,
+      "claimed_payment_events": null,
+      "identified_single_payment_usd": 10,
+      "claim_posted_at": "2026-05-12",
+      "download_events_approximately": 20000,
+      "download_platforms": [
+        "Steam",
+        "itch.io"
+      ],
+      "receipt_platform": "itch.io",
+      "periods_explicitly_matched": false,
+      "mandatory_price_game_orders": null,
+      "unique_paying_buyers": null,
+      "merchant_net_profit_usd": null
+    },
+    {
+      "case_id": "first_dollar_question",
+      "reporting_context": "self_selected_2026_creator_discussion",
+      "initial_creator_prior_duration_months_approximately": 18,
+      "initial_creator_usd_reported_at_post": 0,
+      "later_one_dollar_acknowledgment_not_verified_settlement": true,
+      "independent_commenter_historical_period": "summers_2020_to_2022",
+      "independent_commenter_historical_creator_account_usd_approximately": 500,
+      "game_allocation_verified": false,
+      "linked_game_browser_access": "free_html5",
+      "paid_game_orders": null,
+      "contemporaneous_income_distribution": null
+    }
+  ],
+  "derived": {
+    "black_vein_first_payment_a_mandatory_game_sale": false,
+    "plant_shop_cross_platform_downloads_useful_as_itch_paid_conversion_denominator": false,
+    "plant_shop_usd_per_crossplatform_download_not_a_purchase_rate": true,
+    "first_dollar_thread_zero_earners_as_current_population_estimate": false,
+    "first_dollar_thread_500usd_is_contemporary_2026_income": false
+  },
+  "unknown": {
+    "mandatory_paid_game_sales": null,
+    "unique_paying_itch_customers": null,
+    "net_creator_profit": null,
+    "matched_itch_demo_download_count": null,
+    "matched_itch_payment_event_count": null,
+    "mean_paid_seller_income": null,
+    "median_paid_seller_income": null,
+    "zero_earner_share": null
+  },
+  "limitations": [
+    "Three voluntary public posts or discussion threads, with storefront cross-checks, not a probability sample.",
+    "The same Reddit thread contains multiple replies, not independent sampling frames.",
+    "Both illustrated game offers are free or pay-what-you-want, not mandatory positive-price products.",
+    "Twenty thousand demo downloads mix Steam and itch.io, and the reported USD 38 is not tied to identifiable download events.",
+    "A creator-account lifetime total cannot be allocated to a single game without underlying purchase records.",
+    "No creator-controlled private analytics or sales exports were accessed."
+  ]
+}
