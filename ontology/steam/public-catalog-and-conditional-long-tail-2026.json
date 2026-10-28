@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_catalog_and_success_selected_launch_long_tail",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steamdb-annual-release-snapshot-2026-10",
+    "steamlense-2025-paid-release-review-snapshot",
+    "gamediscoverco-2026-july-long-tail-selected-games"
+  ],
+  "claim_ids": [
+    "steamdb-2025-21224-observed",
+    "steamdb-2025-drifting-counter",
+    "steamlense-2025-paid-and-free",
+    "steamlense-2025-low-review",
+    "steamlense-review-scope-missing",
+    "catalog-2025-trackers-not-interchangeable",
+    "gdc-5000-conditioned-success",
+    "gdc-month-1-to-year1-units",
+    "gdc-month-1-to-year1-gross",
+    "gdc-week1-to-year1-unit-and-gross",
+    "gdc-conditional-24month",
+    "gdc-zero-sale-median-not-identified"
+  ],
+  "tracker_snapshots": [
+    {
+      "tracker": "SteamDB",
+      "retrieved_at": "2026-10-28",
+      "target_release_year": 2025,
+      "game_count_in_opened_page": 21224,
+      "search_indexed_count_also_seen": 21228,
+      "paid_at_first_release": null,
+      "source_method": "independent_mutable_catalog"
+    },
+    {
+      "tracker": "steamlense",
+      "as_of": "2026-10-27",
+      "target_release_year": 2025,
+      "paid_status_game_count": 17651,
+      "free_status_game_count": 2985,
+      "total_game_count": 20636,
+      "share_below_ten_reviews": 0.61,
+      "confirmed_exact_zero_paid_sales": null,
+      "source_method": "independent_current_catalog_and_review_histogram"
+    }
+  ],
+  "cohort": {
+    "researcher": "GameDiscoverCo",
+    "source_published_at": "2026-07-21",
+    "release_start": "2023-07-01",
+    "release_end": "2025-07-31",
+    "reported_sample_size_approx": 5000,
+    "eligibility": "estimated_first_month_paid_unit_sales_greater_than_1000",
+    "estimates_not_merchant_receipts": true,
+    "median_cumulative_copies_relative_to_month1": {
+      "month1": 1,
+      "month6": 1.46,
+      "month12": 1.79,
+      "month24": 2.27
+    },
+    "median_cumulative_gross_revenue_relative_to_month1": {
+      "month1": 1,
+      "month12": 1.67,
+      "month24": null
+    },
+    "median_copies_relative_to_firstweek": {
+      "week1": 1,
+      "month1": 1.39,
+      "year1": 2.59,
+      "year2": 3.32
+    },
+    "median_gross_revenue_relative_to_firstweek": {
+      "week1": 1,
+      "month1": 1.42,
+      "year1": 2.46,
+      "year2": 2.99
+    },
+    "included_zero_first_month_sellers": false,
+    "populationwide_first_paid_game_median": null,
+    "populationwide_first_paid_game_zero_sales_fraction": null
+  },
+  "limits": [
+    "Two independent trackers do not have proven identical release populations; raw count difference does not identify omitted titles.",
+    "Current paid/free classification is not verified launch-time paid minimum.",
+    "Under 10 reviews never means zero paid sales.",
+    "All long-tail multipliers condition on modeled success above 1,000 first-month units; unknown sample underlying row-level methodology and bias.",
+    "No true payout, unique buyer, after-labor profit or seller-level distribution can be recovered from these aggregate summaries."
+  ]
+}

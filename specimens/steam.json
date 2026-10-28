@@ -158,6 +158,39 @@
       "evidence_class": "contemporaneous_independent_reporting_on_valve_tier_announcement",
       "license": "Article URL, title and brief independently authored numerical interpretation only; text, image and byline content not redistributed.",
       "notes": "Confirms 2018 marginal $10m and $50m thresholds; secondary corroboration of original public announcement."
+    },
+    {
+      "id": "steamdb-annual-release-snapshot-2026-10",
+      "url": "https://steamdb.info/stats/releases/",
+      "title": "SteamDB game releases by year",
+      "publisher": "SteamDB",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "independent_mutable_game_catalog_count",
+      "license": "Only short independent numeric description with source URL; no database export, underlying rows or visuals rehosted.",
+      "notes": "October 28 public rendered count of 2025 releases was 21,224; search indexing in same review returned 21,228, illustrating live recalculation. Third-party catalog, not Valve signed merchant records."
+    },
+    {
+      "id": "steamlense-2025-paid-release-review-snapshot",
+      "url": "https://steamlense.com/stats",
+      "title": "Steam release counts by paid and free status; review histogram",
+      "publisher": "steamlense",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "independent_game_catalog_and_review_count_with_methodology",
+      "license": "Only independent short numerical observations and hyperlink; no raw database, screenshots or copyrighted charts redistributed.",
+      "notes": "States figures recalculated October 27, 2026 from self-maintained dataset. Current free/paid assignment, historical access and delisting rules can change 2025 cohort coverage. 61% under ten reviews is not zero copies or zero revenue."
+    },
+    {
+      "id": "gamediscoverco-2026-july-long-tail-selected-games",
+      "url": "https://newsletter.gamediscover.co/p/what-long-tail-should-you-expect",
+      "title": "What 'long tail' should you expect for your PC game in 2026?",
+      "publisher": "GameDiscoverCo — Simon Carless",
+      "published_at": "2026-07-21",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "publisher_origin_modeled_sales_cohort_with_positive_sale_threshold",
+      "license": "Link, source identity and terse independent numerical interpretation only; article text, graphics and proprietary underlying sales estimates not copied.",
+      "notes": "Sample of around 5,000 games released July 2023 to July 2025, conditional on modeled first-month sales above 1,000 units. Model-estimated rather than audited seller transactions. Excludes early weak/zero-selling titles."
     }
   ],
   "claims": [
@@ -650,6 +683,128 @@
       "confidence": "medium",
       "observed_at": "2026-10-28",
       "limitations": "A mathematical illustration only; excludes withholding, external publisher splits, production expenses and excludes retail gross that has not been adjusted."
+    },
+    {
+      "id": "steamdb-2025-21224-observed",
+      "text": "On October 28, 2026 the live SteamDB release-summary page listed 21,224 games for release year 2025.",
+      "source_ids": [
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Tracker figure is mutable and not a census of distinct publishers, paid games, sold units or buyers."
+    },
+    {
+      "id": "steamdb-2025-drifting-counter",
+      "text": "A search result for the same SteamDB year count listed 21,228 while the opened current page displayed 21,224, showing sensitivity to crawl or refresh timing.",
+      "source_ids": [
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "No historical count revision ledger was captured; difference cannot be attributed to specific delistings."
+    },
+    {
+      "id": "steamlense-2025-paid-and-free",
+      "text": "Steamlense's October 27 recalculation listed 17,651 paid-status and 2,985 free-status 2025 game releases, totaling 20,636 in its own database.",
+      "source_ids": [
+        "steamlense-2025-paid-release-review-snapshot"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Current recorded price status may differ from launch minimum; missing titles or changed release dates preclude treating this as a universal originally paid cohort."
+    },
+    {
+      "id": "steamlense-2025-low-review",
+      "text": "In its 2025 release-year cohort, steamlense reported 61.0% of tracked games under ten reviews at its October 27 snapshot.",
+      "source_ids": [
+        "steamlense-2025-paid-release-review-snapshot"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Lack of ten reviews is not absence of sales, zero earnings, owner inactivity or lack of player engagement; percentage covers paid and free games."
+    },
+    {
+      "id": "steamlense-review-scope-missing",
+      "text": "Steamlense describes building its release counts from Steam API catalog information and review histories, with some desired datasets not collected.",
+      "source_ids": [
+        "steamlense-2025-paid-release-review-snapshot"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Method and coverage are supplied by the tracker and cannot independently validate every AppID or original price history."
+    },
+    {
+      "id": "catalog-2025-trackers-not-interchangeable",
+      "text": "SteamDB and steamlense report different 2025 release totals because their recorded and classified populations are not proven identical.",
+      "source_ids": [
+        "steamdb-annual-release-snapshot-2026-10",
+        "steamlense-2025-paid-release-review-snapshot"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "No row-level intersection or audit is available: subtracting counts cannot establish delisted games, omissions or paid seller numbers."
+    },
+    {
+      "id": "gdc-5000-conditioned-success",
+      "text": "GameDiscoverCo's July 2026 analysis selected around 5,000 games launched July 2023 through July 2025 with estimated first-month sales above 1,000 copies.",
+      "source_ids": [
+        "gamediscoverco-2026-july-long-tail-selected-games"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "The strict positive-sales eligibility rule excludes unsuccessful releases and cannot identify platform-wide game or publisher medians."
+    },
+    {
+      "id": "gdc-month-1-to-year1-units",
+      "text": "GameDiscoverCo reported a median multiplier of 1.79 for copies from end of month one to end of year one in its selected high-selling sample.",
+      "source_ids": [
+        "gamediscoverco-2026-july-long-tail-selected-games"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Conditional estimated cumulative multiplier, not exact audited incremental orders, comparable cash or a universal prediction."
+    },
+    {
+      "id": "gdc-month-1-to-year1-gross",
+      "text": "The same eligible sample's median gross revenue multiplier from month one to year one was about 1.67, below the copy multiplier.",
+      "source_ids": [
+        "gamediscoverco-2026-july-long-tail-selected-games"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Revenue and unit multipliers differ; medians do not identify actual discounts, taxes, returns or publisher net bank payments."
+    },
+    {
+      "id": "gdc-week1-to-year1-unit-and-gross",
+      "text": "In the selected sample GameDiscoverCo reported median first-week-to-year-one multipliers of 2.59x for copies and 2.46x for gross revenue.",
+      "source_ids": [
+        "gamediscoverco-2026-july-long-tail-selected-games"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Not a predictive certainty; excludes low-sales/zero titles, and sample does not supply audited checkout or rights-cleared row-level data."
+    },
+    {
+      "id": "gdc-conditional-24month",
+      "text": "The selected-game median month-one-to-24-month cumulative unit multiplier was 2.27x.",
+      "source_ids": [
+        "gamediscoverco-2026-july-long-tail-selected-games"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Observation horizon and sample eligibility differ from the first-week statistic; do not mix denominators for forecasts."
+    },
+    {
+      "id": "gdc-zero-sale-median-not-identified",
+      "text": "Neither the success-filtered GameDiscoverCo long-tail analysis nor public catalog review-count statistics determine the fraction of all paid Steam games or publishers with no sales.",
+      "source_ids": [
+        "gamediscoverco-2026-july-long-tail-selected-games",
+        "steamlense-2025-paid-release-review-snapshot"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Requires an eligible paid-release publisher frame including delisted zero-sale units and verifiable merchant sales or bounded estimates."
     }
   ],
   "observations": [],
