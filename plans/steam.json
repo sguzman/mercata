@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 81,
+  "progress_percent": 82,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -88,7 +88,7 @@
         "steam/identity/document-store-geography-and-languages"
       ],
       "phase": 1,
-      "progress_percent": 78
+      "progress_percent": 85
     },
     {
       "id": "access",
@@ -156,7 +156,7 @@
         "steam/economics/model-multi-currency-settlement-uncertainty"
       ],
       "phase": 1,
-      "progress_percent": 83
+      "progress_percent": 89
     },
     {
       "id": "market",
@@ -720,7 +720,7 @@
       "objective": "Research research dated changes in release, distribution, recommendation and payment regimes.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research dated changes in release, distribution, recommendation and payment regimes. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/revenue-share-tiers-2018-2026.json",
@@ -728,9 +728,12 @@
         "ontology/steam/current-first-release-wait-recheck-2026.md",
         "ontology/steam/current-first-release-wait-recheck-2026.json",
         "ontology/steam/entry-review-and-reporting-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
+        "ontology/steam/steam-direct-history-and-bank-remittance-2026.json",
+        "site/steam-remittance-bridge.mjs"
       ],
-      "artifact": "ontology/steam/current-first-release-wait-recheck-2026.md",
+      "artifact": "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1150,14 +1153,17 @@
       "objective": "Research separate buyer display, charged currency, reporting currency, settlement and bank conversion.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate buyer display, charged currency, reporting currency, settlement and bank conversion. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
+        "ontology/steam/steam-direct-history-and-bank-remittance-2026.json",
+        "site/steam-remittance-bridge.mjs"
       ],
-      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+      "artifact": "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1190,14 +1196,17 @@
       "objective": "Research classify forms, country residence, beneficial ownership and income withholding basis.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Classify forms, country residence, beneficial ownership and income withholding basis. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
         "ontology/steam/entry-review-and-reporting-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
+        "ontology/steam/steam-direct-history-and-bank-remittance-2026.json",
+        "site/steam-remittance-bridge.mjs"
       ],
-      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
+      "artifact": "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1227,8 +1236,8 @@
       "emoji": "💳",
       "objective": "Research separate refund liability, negative adjustments, clawbacks and unit-return windows.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate refund liability, negative adjustments, clawbacks and unit-return windows. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "in_progress",
-      "percent": 95,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
@@ -1239,9 +1248,12 @@
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
-        "ontology/steam/pricing-discounts-and-refund-economics-2026.md"
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
+        "ontology/steam/steam-direct-history-and-bank-remittance-2026.json",
+        "site/steam-remittance-bridge.mjs"
       ],
-      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+      "artifact": "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
       "priority": "high",
       "phase": 1
     },
@@ -1297,7 +1309,7 @@
       "objective": "Research specify illustrative price, region, tax, share and refunds; label all assumptions.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify illustrative price, region, tax, share and refunds; label all assumptions. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 90,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
@@ -1313,9 +1325,12 @@
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
         "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
         "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
-        "site/steam-hypothetical-break-even.mjs"
+        "site/steam-hypothetical-break-even.mjs",
+        "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
+        "ontology/steam/steam-direct-history-and-bank-remittance-2026.json",
+        "site/steam-remittance-bridge.mjs"
       ],
-      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+      "artifact": "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1456,7 +1471,7 @@
       "objective": "Research specify sensitivity to foreign exchange, refunds, payment dates and buyer geography.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify sensitivity to foreign exchange, refunds, payment dates and buyer geography. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
@@ -1464,9 +1479,12 @@
         "specimens/steam.json",
         "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
         "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
-        "site/steam-hypothetical-break-even.mjs"
+        "site/steam-hypothetical-break-even.mjs",
+        "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
+        "ontology/steam/steam-direct-history-and-bank-remittance-2026.json",
+        "site/steam-remittance-bridge.mjs"
       ],
-      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+      "artifact": "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
       "priority": "normal",
       "phase": 1
     },

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "historical_platform_structure_and_bank_remittance_economics",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-steamdirect-2017-news",
+    "steam-2018-tier-announcement",
+    "steam-reporting-faq-doc",
+    "steam-tax-faq-doc",
+    "steam-visibility-official"
+  ],
+  "claim_ids": [
+    "steam-greenlight-start-2012",
+    "steam-greenlight-closed-20170606",
+    "steam-direct-start-20170613",
+    "steam-direct-review-scope-2017",
+    "steam-history-tier-change-201810",
+    "steam-history-review-system-changes",
+    "steam-transfer-no-valve-wire-fee",
+    "steam-bank-intermediary-fees-external",
+    "steam-payout-usd-ach-or-swift",
+    "steam-payout-partner-single-bank",
+    "steam-payout-monthly-no-offcycle",
+    "steam-bank-100-minimum-hold",
+    "steam-report-returns-chargebacks-adjustments",
+    "steam-withholding-after-revenue-share",
+    "steam-processing-not-separate-card-fee",
+    "steam-processing-foreign-fx-unknown",
+    "steam-history-rate-and-policy-not-constant"
+  ],
+  "policy_timeline": [
+    {
+      "date": "2012-08-30",
+      "event": "Steam Greenlight begins",
+      "policy_unit": "public voting_submission"
+    },
+    {
+      "date": "2017-06-06",
+      "event": "Greenlight submissions and voting end",
+      "policy_unit": "legacy_submission_window_closes"
+    },
+    {
+      "date": "2017-06-13",
+      "event": "Steam Direct launches",
+      "policy_unit": "direct_paid_app_submission"
+    },
+    {
+      "date": "2018-10-01",
+      "event": "Revenue eligibility cutoff for 2018 announced marginal share tiers",
+      "policy_unit": "historical_revenue_share_tier_effective_window"
+    }
+  ],
+  "payment": {
+    "payout_currency": "USD",
+    "domestic_bank_method": "ACH",
+    "foreign_bank_method": "SWIFT_USD",
+    "monthly_payment_target_day": 30,
+    "first_month_paid": "month_after_sold",
+    "possible_minimum_withheld_usd": 100,
+    "voluntary_higher_hold_possible": true,
+    "off_cycle_returned_payment_supported": false,
+    "partner_paid_by_valve_wire_fee_usd": 0,
+    "bank_receiver_or_correspondent_fees_possible": true,
+    "bank_fee_amount": null,
+    "fx_spread": null,
+    "multiple_bank_destinations_per_partner": false
+  },
+  "cash_bridge": {
+    "steps": [
+      "customer_payment",
+      "applicable_consumption_taxes",
+      "returns",
+      "chargebacks",
+      "eligible_adjusted_net_revenue",
+      "contractual_partner_share",
+      "withholding_tax",
+      "partner_revenue_share_in_usd",
+      "third_party_bank_fees",
+      "currency_exchange",
+      "actual_bank_deposit"
+    ],
+    "not_assume_extra_checkout_card_fee": true,
+    "not_assume_same_signed_revenue_share_every_partner": true
+  },
+  "unknown": {
+    "per_transaction_processor_fee": null,
+    "actual_bank_wire_deduction": null,
+    "actual_fx_rate": null,
+    "actual_partner_withholding": null,
+    "real_publisher_profit": null
+  },
+  "accounts_accessed": false,
+  "real_bank_statements_used": false
+}

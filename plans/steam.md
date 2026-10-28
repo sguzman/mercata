@@ -1,6 +1,6 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 81% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 82% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
@@ -291,6 +291,10 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## Steam market-history and bank-remittance checkpoint
+
+The [Greenlight/Steam Direct chronology and payment-processing study](../ontology/steam/steam-direct-history-and-bank-remittance-2026.md) dates the 2012–2018 institutional transitions and separates Valve's platform share from bank SWIFT/ACH fees, third-party correspondent charges, withholding, tax, FX and refunded orders. [Synthetic remittance tests](../tests/steam-remittance-bridge.test.mjs) explicitly keep real bank deposits and developer profit unknown. **Score 82%** (exact 82.184%; Δ +1 pp from 81%). No bank or account records accessed.
+
 ## Visibility, franchise repeat purchases and handheld positioning checkpoint
 
 The [Steam ranking claims and study design](../ontology/steam/ranking-claims-and-study-design-2026.md), [same-payer sequel identification protocol](../ontology/steam/series-repeat-payers-2026.md), and [Deck badge positioning design](../ontology/steam/deck-verified-competitive-positioning-2026.md) advance three previously unstarted tasks with attributable policy and explicit missing-data boundaries. A [tested synthetic guardrail](../site/steam-observability-guardrails.mjs) refuses to infer actual repeat customers or causal rank/Deck sales effects. **Current score 81%** (exact 81.195%, +1 pp after 80%), 293 tasks unchanged.
@@ -443,4 +447,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 81%** rounded task-weighted progress across 293 tasks; previous 80%, +1 pp (exact 81.195%). 61 fully verified, 230 partially researched; 105 attributable public sources and 508 bounded claims. No verified same-payer series purchase, causal visibility coefficient or Deck ROI.
+**Completion: 82%** rounded task-weighted progress across 293 tasks; prior 81%, Δ +1 pp (exact 82.184%). 62 fully verified, 231 partially researched; 105 dated sources, 525 bounded claims. No merchant or bank payout data, and no real developer profit measured.
