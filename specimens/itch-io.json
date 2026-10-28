@@ -202,11 +202,11 @@
       "url": "https://exodrifter.itch.io/gender-dysphoria/devlog/300006/pay-what-you-want-sales-and-analytics",
       "title": "Pay-what-you-want sales and analytics",
       "publisher": "Individual itch.io game developers",
-      "published_at": null,
+      "published_at": "2021-10-02",
       "retrieved_at": "2026-10-26",
       "evidence_class": "anecdotal",
       "license": "Developer-published figures summarized with attribution and links; no screenshots or private analytics collected.",
-      "notes": "Voluntary unaudited self-disclosure. Nonrandom example, not a population study."
+      "notes": "October 2, 2021 dated original devlog index; voluntary unaudited single-creator pay-what-you-want game self-disclosure, not a sampled seller population."
     },
     {
       "id": "itch-nsfw-announcement",
@@ -1357,11 +1357,11 @@
       "url": "https://yossarianiii.itch.io/srrt/devlog/123207/postmortem-sex-robot-road-trip",
       "title": "Postmortem: Sex Robot Road Trip",
       "publisher": "Yoss III (game developer)",
-      "published_at": null,
+      "published_at": "2021-09-22",
       "retrieved_at": "2026-10-26",
       "evidence_class": "voluntary_developer_first_party_game_postmortem",
       "license": "Short public earnings and sales counts with attribution and independently authored analysis.",
-      "notes": "Retrospective about a 2017 release, displayed approximately five years before 2026. Author's 'gross profits' accounting ambiguous and not after full labor."
+      "notes": "September 22, 2021 dated original product devlog postmortem about a 2017 launch. The author's 'gross profits' phrase is not an after-fees-and-labor profit measure."
     },
     {
       "id": "skwish-playdate-six-month-sales-2023",
@@ -2770,6 +2770,39 @@
       "evidence_class": "first_party_2d_browser_multiplayer_server_shutdown_cost_demand_and_external_payment_report",
       "license": "Brief attributed operational facts and independently written limitations only; no code, post text or art republished.",
       "notes": "Developer said online servers closed March 13, 2026: hosting, bandwidth, maintenance costs outgrew support capacity, concurrent players near zero, external Stripe Gold Pack income inadequate. No exact cost, revenue, paid itch orders, or verified zero-income claim."
+    },
+    {
+      "id": "fumes-2026-june-one-year-zero-paid-sales",
+      "url": "https://itch.io/t/6533997/fumes-pvp-dogfighting",
+      "published_at": "2026-06-26",
+      "title": "FUMES: PvP dogfighting — a year at zero paid sales",
+      "publisher": "Space Cat Studio (first-party developer)",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_named_2d_mandatory_paid_game_approx_one_year_zero_sales_statement",
+      "license": "Short attributed public numeric outcome and independent interpretation; no post text or assets reproduced.",
+      "notes": "Developer reports approximately one year after release, zero sales at the June 26 2026 announcement, then a one-dollar promotional price. No merchant export, matched 365-day series, page impressions or later sales disclosed."
+    },
+    {
+      "id": "fumes-2026-june-anniversary-price-one-dollar",
+      "url": "https://spacecat-studios.itch.io/fumes/devlog/1564807/fumes-1-year-anniversary",
+      "published_at": "2026-06-24",
+      "title": "FUMES: 1 Year Anniversary",
+      "publisher": "Space Cat Studio (first-party developer)",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_named_paid_game_anniversary_and_promotion_date",
+      "license": "Short attributed public pricing and anniversary date; no promotional text or images reproduced.",
+      "notes": "June 24 2026 first-year anniversary promotes temporary one-dollar summer sale; source does not state whether any orders later occurred."
+    },
+    {
+      "id": "fumes-2026-october-positive-price-2d-store-page",
+      "url": "https://spacecat-studios.itch.io/fumes",
+      "published_at": null,
+      "title": "FUMES: PvP dogfighting — paid 2D Windows multiplayer store page",
+      "publisher": "Space Cat Studio (first-party developer and public storefront)",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "primary_public_mandatory_paid_2d_video_game_listing_snapshot",
+      "license": "Only public listed price, product category and feature metadata; no game assets reproduced.",
+      "notes": "Current visible listing requires payment of at least USD 2 for Windows game, classified with 2D and multiplayer tags, one public rating; historical checkout settings at the June sales statement not independently audited. Current visible rating does not prove purchase."
     }
   ],
   "claims": [
@@ -8703,6 +8736,86 @@
       "confidence": "medium",
       "observed_at": "2026-10-28",
       "limitations": "A single self-selected service failure is not a paid-game seller cohort, a verified zero-sale outcome, or a measured population-level shutdown risk."
+    },
+    {
+      "id": "fumes-one-year-zero-sales-2026",
+      "text": "Space Cat Studio reported in a June 26, 2026 itch forum post that its 2D multiplayer game FUMES had made zero sales over approximately a year since launch.",
+      "source_ids": [
+        "fumes-2026-june-one-year-zero-paid-sales",
+        "fumes-2026-june-anniversary-price-one-dollar"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Creator testimony is a voluntary one-game approximate-year checkpoint, not an audited 365-day full paid-order export or platform incidence of zero sales."
+    },
+    {
+      "id": "fumes-one-dollar-anniversary-vs-current-paid-price",
+      "text": "A June 24 2026 anniversary devlog advertised FUMES temporarily at USD 1; the observed storefront currently requires at least USD 2 to download the paid 2D Windows game.",
+      "source_ids": [
+        "fumes-2026-june-anniversary-price-one-dollar",
+        "fumes-2026-october-positive-price-2d-store-page"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Prices from different dates must not be assumed equal; no historical page checkout verification or response of purchases to the discount."
+    },
+    {
+      "id": "fumes-single-public-rating-not-proof-of-paid-sale",
+      "text": "The FUMES public page displays one rating, but a rating is not evidence of a paid order at the June 2026 zero-sales checkpoint; any later purchases are unknown.",
+      "source_ids": [
+        "fumes-2026-june-one-year-zero-paid-sales",
+        "fumes-2026-october-positive-price-2d-store-page"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Current storefront rating and historical creator sales statement have different timestamps and neither authenticates payer identity."
+    },
+    {
+      "id": "zero-sales-timing-comparison-no-common-censoring",
+      "text": "Distinct self-selected itch game case reports include zero sales after an approximately two-day first-game launch, zero after about seven days with a partially unconfigured checkout, zero after about two weeks on itch despite Steam sales, and zero after roughly one year for FUMES.",
+      "source_ids": [
+        "nobody-leaves-oct2026-first-game-zero-orders",
+        "aguier-direct-checkout-inactive-2026-07",
+        "itch-whats-left-behind-postmortem",
+        "fumes-2026-june-one-year-zero-paid-sales"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Different games, team sizes, price models, store availability and approximate time windows; not a cohort, common 7/30/90/365-day study or estimable zero-seller rate."
+    },
+    {
+      "id": "srrt-zero-launch-not-zero-lifetime",
+      "text": "Yoss III reported zero first-day sales of the 2017 paid visual novel Sex Robot Road Trip, followed by later paid orders and an increase from about 20 to about 40 total copies in one week after a media mention.",
+      "source_ids": [
+        "srrt-developer-postmortem-2021"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Approximate creator figures and nonexperimental attribution; later cumulative sales are not an exact matched post-launch 365-day cohort."
+    },
+    {
+      "id": "short-zero-checkout-gate-and-steam-counterexample",
+      "text": "A seven-day zero report explicitly described individual-game checkout friction, while a separate title's two-week postmortem reported zero itch sales alongside 47 Steam sales net of refunds.",
+      "source_ids": [
+        "aguier-direct-checkout-inactive-2026-07",
+        "itch-whats-left-behind-postmortem"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Neither report establishes an intrinsic consumer demand rate for an eligible buyer base: payment access and storefront exposure differ."
+    },
+    {
+      "id": "selected-zero-cases-cannot-estimate-platform-seller-distribution",
+      "text": "Combining selected self-reported zero-sale checkpoints and a case that later sold copies cannot yield itch's overall zero-sale fraction, median seller income, long-term survival distribution or 2D genre profitability.",
+      "source_ids": [
+        "fumes-2026-june-one-year-zero-paid-sales",
+        "nobody-leaves-oct2026-first-game-zero-orders",
+        "aguier-direct-checkout-inactive-2026-07",
+        "srrt-developer-postmortem-2021"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "No sampling frame, mandatory-paid game cohort including delisted accounts, common time horizon, complete payouts or validated unique-buyer population."
     }
   ],
   "observations": [

@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "selected_named_paid_game_zero_sales_observation_windows_not_zero_income_population",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "fumes-2026-june-one-year-zero-paid-sales",
+    "fumes-2026-june-anniversary-price-one-dollar",
+    "fumes-2026-october-positive-price-2d-store-page",
+    "nobody-leaves-oct2026-first-game-zero-orders",
+    "nobody-leaves-oct2026-positive-price-game-page",
+    "aguier-direct-checkout-inactive-2026-07",
+    "itch-whats-left-behind-postmortem",
+    "srrt-developer-postmortem-2021"
+  ],
+  "distinct_named_games": 5,
+  "first_party_selected_reports": true,
+  "all_titles_2d": false,
+  "all_titles_mandatory_paid_access": false,
+  "one_seller_cohort": false,
+  "all_365_day_exact_windows": false,
+  "representative_merchant_population": false,
+  "observations": [
+    {
+      "game": "FUMES: PvP dogfighting",
+      "creator": "Space Cat Studio",
+      "publication_of_zero_report": "2026-06-26",
+      "reported_sales": 0,
+      "observed_interval": "approximately_one_year_after_original_release",
+      "exact_days_since_release": null,
+      "genre": "2D multiplayer shooter",
+      "minimum_price_at_anniversary_usd": 1,
+      "minimum_price_at_2026_10_review_usd": 2,
+      "current_public_ratings": 1,
+      "later_orders_verified": null,
+      "known_checkout_blocker_at_zero_snapshot": null,
+      "source_ids": [
+        "fumes-2026-june-one-year-zero-paid-sales",
+        "fumes-2026-june-anniversary-price-one-dollar",
+        "fumes-2026-october-positive-price-2d-store-page"
+      ]
+    },
+    {
+      "game": "Nobody Leaves",
+      "creator": "pallavi_sahoo two-person team",
+      "publication_of_zero_report": "2026-10-25",
+      "reported_sales": 0,
+      "observed_interval": "approximately_two_days_since_first_game_release",
+      "exact_days_since_release": null,
+      "genre": "2D horror puzzle",
+      "reported_listing_impressions_approx": 700,
+      "reported_click_rate_under_percent": 1,
+      "after_report_orders_verified": null,
+      "source_ids": [
+        "nobody-leaves-oct2026-first-game-zero-orders",
+        "nobody-leaves-oct2026-positive-price-game-page"
+      ]
+    },
+    {
+      "game": "D-Line four-game bundle / related paid games",
+      "creator": "aguier",
+      "publication_of_zero_report": "2026-07-17",
+      "reported_sales": 0,
+      "observed_interval": "creator_label_seven_days_but_other_posts_inconsistent",
+      "exact_days_since_release": null,
+      "genre": "mixed small browser game portfolio",
+      "reported_page_view_events": 203,
+      "reported_download_events": 1,
+      "individual_game_stripe_checkout_connected": false,
+      "paypal_bundle_reported_purchase_route": true,
+      "after_report_orders_verified": null,
+      "source_ids": [
+        "aguier-direct-checkout-inactive-2026-07"
+      ]
+    },
+    {
+      "game": "What's Left Behind",
+      "creator": "Brian Hoovler",
+      "publication_of_zero_report": "2021-02-01",
+      "reported_itch_sales": 0,
+      "reported_steam_sales_net_refunds": 47,
+      "observed_interval": "just_over_two_weeks_post_launch",
+      "exact_days_since_release": null,
+      "genre": "3D city builder",
+      "later_itch_orders_verified": null,
+      "source_ids": [
+        "itch-whats-left-behind-postmortem"
+      ]
+    },
+    {
+      "game": "Sex Robot Road Trip",
+      "creator": "Yoss III",
+      "publication_of_zero_report": "2021-09-22",
+      "reported_itch_launch_day_sales": 0,
+      "reported_later_paid_copy_count_doubled_from_approx": 20,
+      "reported_later_paid_copy_count_to_approx": 40,
+      "observed_interval": "later_week_about_one_year_after_2017_release",
+      "exact_days_since_release": null,
+      "genre": "visual novel",
+      "reported_gross_usd_at_2021_postmortem": 222,
+      "reported_cash_expenses_selected_usd": 120,
+      "complete_after_fee_after_labor_profit": null,
+      "source_ids": [
+        "srrt-developer-postmortem-2021"
+      ]
+    }
+  ],
+  "unknown": {
+    "eligible_paid_itch_seller_population": null,
+    "common_7_day_postrelease_counts": null,
+    "common_30_day_postrelease_counts": null,
+    "common_90_day_postrelease_counts": null,
+    "common_365_day_postrelease_counts": null,
+    "matching_transaction_exports": null,
+    "verified_zero_earner_fraction": null,
+    "refund_adjusted_net_platformwide_earnings": null,
+    "unique_paying_buyer_denominators": null,
+    "exposure_matched_marketing_causal_effects": null
+  },
+  "interpretation": {
+    "zero_is_tied_to_a_title_route_and_report_date": true,
+    "one_year_fumes_statement_is_exact_365_day_merchant_ledger": false,
+    "undelivered_checkout_must_not_be_converted_to_negative_demand_evidence": true,
+    "one_public_rating_proves_a_paid_order": false,
+    "zero_on_itch_means_zero_on_all_stores": false,
+    "zero_on_release_day_proves_zero_lifetime": false,
+    "selected_zero_cases_can_be_averaged_to_infer_platform_rate": false
+  },
+  "limits": [
+    "The five different titles are selected reports with mismatched dates and retrospective horizons, not randomly sampled new seller releases.",
+    "One FUMES zero-sales statement is approximately a year, not independently audited daily sales over exactly 365 days.",
+    "FUMES's one currently visible rating cannot be attached to a verified paid game purchase, particularly at an earlier cutoff.",
+    "The D-Line zero report acknowledged nonworking individual paid checkout; zero on that route does not isolate product desirability.",
+    "What's Left Behind has a zero itch report and contemporaneous positive Steam sales; store-specific zero is not project-wide zero.",
+    "Sex Robot Road Trip's first-day zero was followed by paid orders; a censored launch-day outcome is not permanent failure.",
+    "Publisher gross figures, download counts and store rating counts cannot supply comparable net earnings or unique buyer denominators.",
+    "Paid-2D market-wide zero-sale rates, 7/30/90/365-day longitudinal risk, delisted game outcomes and seller medians stay unknown."
+  ]
+}
