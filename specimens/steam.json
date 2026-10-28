@@ -2660,6 +2660,92 @@
       "observed_at": "2026-10-28",
       "confidence": "medium",
       "limitations": "Differing commercial time zeros, survival to 1.0 and sample filters confound comparisons."
+    },
+    {
+      "id": "steam-budget-directfee-not-profit",
+      "text": "Valve's $100 Steam Direct application fee is separate from production labor and from the requirement to earn enough to cover all costs.",
+      "source_ids": [
+        "steam-direct-fee-doc"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Fee recoupment is separately triggered by adjusted gross revenue and is not guaranteed or identical to business profitability."
+    },
+    {
+      "id": "steam-budget-refund-tax-sequence",
+      "text": "A deterministic illustrative cash bridge must distinguish checkout gross, returns and sales taxes before treating remaining adjusted revenue as eligible for a platform share.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "The exact partner contract defines eligible adjusted revenue and rounding; the illustrative formula is not a reproduced signed agreement."
+    },
+    {
+      "id": "steam-budget-developer-share-separate",
+      "text": "A developer's share of a publisher's post-platform proceeds may be different from the publisher's Steam contractual share.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-2018-tier-announcement"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Signed publishing agreements, royalties and publisher recoupment waterfalls are not publicly known."
+    },
+    {
+      "id": "steam-budget-labor-imputed-vs-cash",
+      "text": "Economic break-even including imputed labor opportunity cost is distinct from cash-only break-even excluding already-unpaid development labor.",
+      "source_ids": [
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Labor rate and hours are model-user assumptions, not observed industry averages or official Steam accounting rules."
+    },
+    {
+      "id": "steam-budget-refund-eligibility-not-actual-rate",
+      "text": "Steam buyer refund eligibility rules do not supply a title's refund fraction and cannot be substituted for observed returns.",
+      "source_ids": [
+        "steam-refund-rules-2026",
+        "steam-financial-api-official"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "The scenario's refund fraction is explicitly hypothetical and is not a forecast."
+    },
+    {
+      "id": "steam-budget-contract-unknown",
+      "text": "The historical public 2018 marginal Steam split cannot be assumed to be each 2026 game's operative contract, so a scenario must explicitly supply its own assumed platform rate.",
+      "source_ids": [
+        "steam-2018-tier-announcement",
+        "steam-2018-tiers-ars"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Actual deal terms, extra share tiers and withholding may vary; a flat assumed rate may not reproduce marginal accounting."
+    },
+    {
+      "id": "steam-budget-price-and-discounts-vary",
+      "text": "Regional prices and discounts can change effective checkout value, so a single illustrative average price cannot establish a real game's total receipts.",
+      "source_ids": [
+        "steam-price-rules-2026",
+        "steam-discount-rules-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "No observed price/region mix, conversion rates or customer records were collected."
+    },
+    {
+      "id": "steam-budget-model-not-publisher-profit",
+      "text": "A scenario model with input labor, returns, tax, splits and cash cost cannot estimate representative publisher profit or a zero-earning share without real sales and cost distributions.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-gdc-2026-jan-cohort-primary"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Scenario numbers are explicitly synthetic; not merchant settlements, observed game outcomes or population forecasts."
     }
   ],
   "observations": [],
@@ -2667,5 +2753,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research now distinguishes a single January 2026 provider-defined full paid-release model from subsequent winner-only monthly leaderboards and a highly selected Early Access graduation sample. Multi-month Steam paid-game medians and publisher incomes remain unknown."
+  "summary": "Steam research includes source-backed public sales distributions, precise cohort comparability, and explicitly synthetic break-even scenarios separating cash and imputed development labor. Actual first-game developer profits, royalty terms and seller-zero shares remain unknown."
 }

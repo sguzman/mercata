@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "pure_hypothetical_cash_and_economic_break_even_model",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-direct-fee-doc",
+    "steam-financial-reporting-doc",
+    "steam-financial-api-official",
+    "steam-refund-rules-2026",
+    "steam-price-rules-2026",
+    "steam-discount-rules-2026",
+    "steam-2018-tier-announcement",
+    "steam-gdc-2026-jan-cohort-primary"
+  ],
+  "claim_ids": [
+    "steam-budget-directfee-not-profit",
+    "steam-budget-refund-tax-sequence",
+    "steam-budget-developer-share-separate",
+    "steam-budget-labor-imputed-vs-cash",
+    "steam-budget-refund-eligibility-not-actual-rate",
+    "steam-budget-contract-unknown",
+    "steam-budget-price-and-discounts-vary",
+    "steam-budget-model-not-publisher-profit"
+  ],
+  "model_path": "site/steam-hypothetical-break-even.mjs",
+  "inputs": {
+    "checkoutPriceCents": "assumed",
+    "grossPaidOrders": "assumed",
+    "refundRateBps": "assumed",
+    "salesTaxShareBps": "assumed",
+    "platformShareBps": "assumed",
+    "publisherRecoupShareBps": "assumed",
+    "fixedCashCents": "assumed",
+    "steamDirectFeeCents": "assumed",
+    "otherCashCents": "assumed",
+    "laborHours": "assumed",
+    "laborRateCents": "assumed"
+  },
+  "example": {
+    "checkoutPriceCents": 1000,
+    "grossPaidOrders": 1000,
+    "refundRateBps": 1000,
+    "salesTaxShareBps": 1000,
+    "platformShareBps": 3000,
+    "publisherRecoupShareBps": 5000,
+    "fixedCashCents": 216800,
+    "steamDirectFeeCents": 10000,
+    "otherCashCents": 0,
+    "laborHours": 500,
+    "laborRateCents": 2000,
+    "retained_value_per_gross_order_cents_unrounded": 226.8,
+    "cash_break_even_orders": 1000,
+    "economic_break_even_orders": 5410,
+    "verified_real_outcomes": false
+  },
+  "unknown": {
+    "actual_developer_payout": null,
+    "actual_developer_profit": null,
+    "actual_contractual_shares": null,
+    "actual_publisher_budget": null,
+    "actual_refund_rate": null,
+    "actual_paid_orders": null,
+    "real_world_success_probability": null
+  },
+  "no_account_operations": true,
+  "no_real_merchant_data": true
+}

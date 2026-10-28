@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 45,
+  "progress_percent": 48,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -156,7 +156,7 @@
         "steam/economics/model-multi-currency-settlement-uncertainty"
       ],
       "phase": 1,
-      "progress_percent": 67
+      "progress_percent": 77
     },
     {
       "id": "market",
@@ -296,7 +296,7 @@
         "steam/income/build-evidence-quality-classification-for-earnings"
       ],
       "phase": 3,
-      "progress_percent": 57
+      "progress_percent": 62
     },
     {
       "id": "rights",
@@ -394,7 +394,7 @@
         "steam/risk/build-downside-scenarios-for-small-studios"
       ],
       "phase": 3,
-      "progress_percent": 20
+      "progress_percent": 26
     },
     {
       "id": "strategy",
@@ -431,7 +431,7 @@
         "steam/strategy/design-selection-aware-case-study-comparison"
       ],
       "phase": 4,
-      "progress_percent": 41
+      "progress_percent": 53
     },
     {
       "id": "review",
@@ -462,7 +462,7 @@
         "steam/review/prepare-public-publication-qa-checklist"
       ],
       "phase": 1,
-      "progress_percent": 61
+      "progress_percent": 64
     },
     {
       "id": "special-games",
@@ -1210,7 +1210,7 @@
       "objective": "Research specify illustrative price, region, tax, share and refunds; label all assumptions.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify illustrative price, region, tax, share and refunds; label all assumptions. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
@@ -1223,9 +1223,12 @@
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
-        "ontology/steam/pricing-discounts-and-refund-economics-2026.md"
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
       ],
-      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1292,11 +1295,15 @@
       "emoji": "💳",
       "objective": "Research include Direct fees, software, licenses, hardware, outsourced assets and marketing.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Include Direct fees, software, licenses, hardware, outsourced assets and marketing. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 85,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
+      ],
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1307,11 +1314,15 @@
       "emoji": "💳",
       "objective": "Research account for coding, art, narrative, QA, localization, customer support and updates.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Account for coding, art, narrative, QA, localization, customer support and updates. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 85,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
+      ],
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1323,16 +1334,19 @@
       "objective": "Research model required paid net units for plausible costs and multiple refund/price assumptions.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Model required paid net units for plausible costs and multiple refund/price assumptions. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
         "specimens/steam.json",
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
-        "ontology/steam/january-2026-modeled-paid-release-distribution.json"
+        "ontology/steam/january-2026-modeled-paid-release-distribution.json",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
       ],
-      "artifact": "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "high",
       "phase": 1
     },
@@ -1344,14 +1358,17 @@
       "objective": "Research specify sensitivity to foreign exchange, refunds, payment dates and buyer geography.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify sensitivity to foreign exchange, refunds, payment dates and buyer geography. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 35,
+      "percent": 45,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
       ],
-      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -2446,11 +2463,15 @@
       "emoji": "📊",
       "objective": "Research trace discounts, returns, regional taxes, platform shares, partner splits and FX.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Trace discounts, returns, regional taxes, platform shares, partner splits and FX. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 20,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
+      ],
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -2461,11 +2482,15 @@
       "emoji": "📊",
       "objective": "Research combine retained proceeds with labor, outsourcing, overhead and support costs.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Combine retained proceeds with labor, outsourcing, overhead and support costs. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 45,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
+      ],
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -3390,16 +3415,19 @@
       "objective": "Research assess failed launches and winner-take-most exposure without survivorship bias.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Assess failed launches and winner-take-most exposure without survivorship bias. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 90,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
         "ontology/steam/january-2026-modeled-paid-release-distribution.json",
         "specimens/steam.json",
         "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.md",
-        "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.json"
+        "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.json",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
       ],
-      "artifact": "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.md",
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3501,7 +3529,7 @@
       "objective": "Research design budget shocks for low launch sales, refunds, delayed payments and support.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Design budget shocks for low launch sales, refunds, delayed payments and support. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
@@ -3512,9 +3540,12 @@
         "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.md",
         "ontology/steam/debut-studios-publisher-selection-and-breakouts-2026.json",
         "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
-        "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.json"
+        "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.json",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
       ],
-      "artifact": "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3565,11 +3596,15 @@
       "emoji": "🛡️",
       "objective": "Research model explicit sale, tax, fee, labor and cancellation assumptions without guarantees.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Model explicit sale, tax, fee, labor and cancellation assumptions without guarantees. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 85,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
+      ],
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3580,11 +3615,15 @@
       "emoji": "🧪",
       "objective": "Research choose measurable prototype, production envelope, QA checklist and completion gate.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Choose measurable prototype, production envelope, QA checklist and completion gate. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 60,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
+      ],
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -3652,11 +3691,15 @@
       "emoji": "🧪",
       "objective": "Research define scope, sales basis, labor cost and buyer expectations.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define scope, sales basis, labor cost and buyer expectations. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 45,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
+      ],
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -3717,16 +3760,19 @@
       "objective": "Research include Direct fee, launch costs, ongoing updates, taxes, withheld cash and refund lag.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Include Direct fee, launch costs, ongoing updates, taxes, withheld cash and refund lag. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 40,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
         "specimens/steam.json",
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
-        "ontology/steam/january-2026-modeled-paid-release-distribution.json"
+        "ontology/steam/january-2026-modeled-paid-release-distribution.json",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
       ],
-      "artifact": "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -3827,14 +3873,17 @@
       "objective": "Research include art, accessibility, testing, localization, developer time and competing launch dates.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Include art, accessibility, testing, localization, developer time and competing launch dates. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 35,
+      "percent": 70,
       "weight": 1,
       "evidence": [
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
         "ontology/steam/january-2026-modeled-paid-release-distribution.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
       ],
-      "artifact": "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -3846,16 +3895,19 @@
       "objective": "Research set time/cash limits, independent quality criteria and decision gates before spending.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Set time/cash limits, independent quality criteria and decision gates before spending. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
         "specimens/steam.json",
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
-        "ontology/steam/january-2026-modeled-paid-release-distribution.json"
+        "ontology/steam/january-2026-modeled-paid-release-distribution.json",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
       ],
-      "artifact": "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -4154,11 +4206,15 @@
       "emoji": "🔬",
       "objective": "Research reserve empty fields for median, mean, zero earners, costs, profitability and opportunity limits.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Reserve empty fields for median, mean, zero earners, costs, profitability and opportunity limits. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 45,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
+        "ontology/steam/synthetic-first-game-break-even-scenarios-2026.json",
+        "site/steam-hypothetical-break-even.mjs"
+      ],
+      "artifact": "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
       "priority": "normal",
       "phase": 1
     },
