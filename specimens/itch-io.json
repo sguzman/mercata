@@ -2880,6 +2880,39 @@
       "evidence_class": "dated_secondary_public_jam_results_counter_observation",
       "license": "Numerical summary with original source reference; article prose and images not reused.",
       "notes": "September 23 third-party retrospective says 10,542 GMTK 2026 entries and 223,337 ratings; current itch October 28 results display 10,527, so dates/snapshot semantics differ. Publication reflects independent secondary capture, not independently verified raw ledger."
+    },
+    {
+      "id": "akami-2026-july-asset-cash-and-labor",
+      "url": "https://itch.io/blog/1573030/what-would-actually-make-this-profitable-doing-the-math-out-loud.amp",
+      "title": "What Would Actually Make This Profitable? Doing the Math Out Loud",
+      "publisher": "Akami Assets",
+      "published_at": "2026-07-03",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_voluntary_game_asset_creator_commercial_report",
+      "license": "Brief attributed public figures and independent analysis only; no original prose, creative assets, or transaction ledgers reproduced.",
+      "notes": "One asset seller reports EUR12.99 May-June revenue, 3 payments across 13 asset projects, EUR75/month subscriptions, hypothetical 20–30 h for 60 icons, EUR4–8 sale amounts and EUR6 illustration."
+    },
+    {
+      "id": "akami-2026-june-eur1-asset-zero-sales",
+      "url": "https://itch.io/devlog/1551381/i-priced-this-pack-at-1-heres-whether-that-was-smart.amp",
+      "title": "I Priced This Pack at €1. Here's Whether That Was Smart",
+      "publisher": "Akami Assets",
+      "published_at": "2026-06-12",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_voluntary_game_asset_creator_commercial_report",
+      "license": "Brief attributed public figures and independent analysis only; no original prose, creative assets, or transaction ledgers reproduced.",
+      "notes": "Same creator and portfolio: one EUR1 game-art pack generated zero sales by June 12 with 4–6 hours reported production. Not independent second seller."
+    },
+    {
+      "id": "indie-vova-2026-first-asset-six-month-review",
+      "url": "https://itch.io/devlog/1331048/postmortem-6-months-after-releasing-my-first-pixel-art-asset-pack-on-itchio-50-anniversary-sale.amp",
+      "title": "Postmortem: 6 Months After Releasing My First Pixel Art Asset Pack",
+      "publisher": "Indie_Vova",
+      "published_at": "2026-01-26",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_voluntary_game_asset_creator_commercial_report",
+      "license": "Brief attributed public figures and independent analysis only; no original prose, creative assets, or transaction ledgers reproduced.",
+      "notes": "Separate game-asset publisher reports over USD500 receipts, over 10,000 views, 157 followers, around two production months, and sale-period spikes. No exact paid orders or net profit."
     }
   ],
   "claims": [
@@ -9061,6 +9094,87 @@
       "confidence": "medium",
       "observed_at": "2026-10-28",
       "limitations": "Counts are for one noncommercial game jam with changing snapshots and no positive-price or buyer evidence; inappropriate to extrapolate to whole itch catalog."
+    },
+    {
+      "id": "asset-akami-3-payments-13-pages",
+      "text": "Akami Assets reported three payments across 13 game-asset projects during approximately two months and EUR12.99 gross-like reported revenue from May through June 30, 2026.",
+      "source_ids": [
+        "akami-2026-july-asset-cash-and-labor"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "One publisher, not 13 independent sellers; actual settlement, fees and exact clocks not independently verified."
+    },
+    {
+      "id": "asset-akami-75eur-monthly-20-30-hours",
+      "text": "Akami Assets estimated about EUR75 per month in software subscriptions and 20–30 hours for a typical 60-icon asset pack.",
+      "source_ids": [
+        "akami-2026-july-asset-cash-and-labor"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Publisher-wide costs not directly allocated to a title; estimated hours not verified timecards."
+    },
+    {
+      "id": "asset-akami-optimistic-13-46-whole-payments",
+      "text": "At illustrative EUR6 gross per payment, EUR75/month cash costs need at least 13 whole orders; adding EUR200 hypothetical valued labor requires at least 46 whole orders before fees and refunds.",
+      "source_ids": [
+        "akami-2026-july-asset-cash-and-labor"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Arithmetic scenario, not empirically attained break-even or buyer forecast; writer's roughly 45 full-cost purchases rounds down from 45.833."
+    },
+    {
+      "id": "asset-akami-one-euro-pack-zero-report",
+      "text": "The same publisher reported zero sales for a EUR1 block/puzzle asset pack by June 12 after roughly 4–6 hours of labor.",
+      "source_ids": [
+        "akami-2026-june-eur1-asset-zero-sales"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "One dated item checkpoint, not lifetime zero or overall game seller rate."
+    },
+    {
+      "id": "asset-indie-vova-first-paid-pack-500-dollar-revenue",
+      "text": "A distinct pixel-art asset publisher disclosed over USD500 total revenue, 10,000-plus view events and 157 new followers approximately six months after their first paid pack.",
+      "source_ids": [
+        "indie-vova-2026-first-asset-six-month-review"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Self-selected asset seller, no exact sales count, cost-adjusted profit, unique visitor or after-fee receipts."
+    },
+    {
+      "id": "asset-indie-vova-discount-period-spikes",
+      "text": "The publisher reported sales spikes around 2025 Black Friday and winter discount promotions after a launch visibility decline.",
+      "source_ids": [
+        "indie-vova-2026-first-asset-six-month-review"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "No dated control or matched offer cohort; cannot infer causal lift due to discounts."
+    },
+    {
+      "id": "asset-publishers-not-paid-videogame-cohort",
+      "text": "These two independent creators sell game-art asset packs, not mandatory-price playable videogames; sales and attention cannot be used to estimate playable-game paid demand or seller income.",
+      "source_ids": [
+        "akami-2026-july-asset-cash-and-labor",
+        "indie-vova-2026-first-asset-six-month-review"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Heterogeneous currencies, product types, dates, and gross/net accounting; no representative seller frame."
+    },
+    {
+      "id": "asset-cash-opex-versus-valued-labor",
+      "text": "Recurring tool subscriptions, variable transaction fees and imputed creator time are distinct cost categories for any cash runway or economic break-even decision.",
+      "source_ids": [
+        "akami-2026-july-asset-cash-and-labor"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Financial classification and conditional scenario, not verified total project cost or specific publisher net profit."
     }
   ],
   "observations": [

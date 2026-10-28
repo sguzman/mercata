@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "asset_creator_cost_floor_and_discount_case_not_playable_game_sales",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "akami-2026-july-asset-cash-and-labor",
+    "akami-2026-june-eur1-asset-zero-sales",
+    "indie-vova-2026-first-asset-six-month-review"
+  ],
+  "population": {
+    "different_publishers": 2,
+    "source_reports": 3,
+    "random_sample": false,
+    "product_category": "game_art_assets_not_playable_video_games",
+    "game_paid_order_count": null
+  },
+  "akami": {
+    "eur_reported_revenue_may_to_june30": 12.99,
+    "payment_events_reported": 3,
+    "asset_project_pages": 13,
+    "reported_monthly_subscription_cost_eur": 75,
+    "illustrative_per_sale_gross_eur": 6,
+    "reported_sale_amount_range_eur": [
+      4,
+      8
+    ],
+    "illustrative_pack_labor_hours": [
+      20,
+      30
+    ],
+    "illustrative_valued_hour_eur": 10,
+    "one_euro_pack_sales_on_june12": 0,
+    "one_euro_pack_hours_estimate": [
+      4,
+      6
+    ],
+    "months_of_full_cost_confirmed": null,
+    "merchant_net_contribution_eur": null
+  },
+  "indie_vova": {
+    "reported_six_month_revenue_usd_lower_bound_exclusive": 500,
+    "reported_six_month_views_lower_bound_exclusive": 10000,
+    "reported_new_followers": 157,
+    "estimated_production_months": 2,
+    "promotion_sale_periods": [
+      "Black Friday 2025",
+      "Winter Sale 2025"
+    ],
+    "exact_paid_orders": null,
+    "net_profit_usd": null,
+    "causal_discount_lift": null
+  },
+  "derived_scenario": {
+    "gross_6eur_cash_75eur_whole_sale_floor": 13,
+    "gross_6eur_cash_75_plus_labor_200eur_whole_sale_floor": 46,
+    "is_fee_free_optimistic_lower_bound": true,
+    "is_sales_forecast": false,
+    "author_rounded_full_cost_purchases_about": 45
+  },
+  "boundaries": {
+    "same_author_june_july_not_independent_sellers": true,
+    "currency_comparable": false,
+    "matched_product_type": "game_assets",
+    "matched_followup_period": false,
+    "comparable_paid_video_game_sellers": false,
+    "paid_video_game_demand_inferred": false,
+    "discount_causes_sales_verified": false
+  },
+  "unknown": {
+    "paid_playable_game_buyers": null,
+    "retained_merchant_payout_eur": null,
+    "probability_seller_profitable": null,
+    "zero_inclusive_seller_population": null,
+    "asset_seller_median": null,
+    "actual_payment_fees": null,
+    "causal_discount_orders": null
+  },
+  "limitations": [
+    "Two selected asset publishers not representative paid videogame sellers.",
+    "Akami's 13 project pages are not independent people and the two articles describe one publisher.",
+    "EUR75 is a monthly publisher-wide subscription estimate, not a verified single-pack expense.",
+    "EUR6 is a hypothetical gross order amount, not an after-fees contribution. Integer lower bounds can increase with fees and refunds.",
+    "Valued time at EUR10/hour is hypothetical shadow cost, not a cash payment.",
+    "Indie_Vova's over USD500 has no matched exact orders, net profit or promotion counterfactual."
+  ]
+}
