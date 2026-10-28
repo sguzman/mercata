@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 70,
+  "progress_percent": 71,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -225,7 +225,7 @@
         "steam/discovery/design-controlled-acquisition-measurements"
       ],
       "phase": 2,
-      "progress_percent": 74
+      "progress_percent": 75
     },
     {
       "id": "competition",
@@ -360,7 +360,7 @@
         "steam/sales/design-after-launch-retention-metrics"
       ],
       "phase": 3,
-      "progress_percent": 71
+      "progress_percent": 72
     },
     {
       "id": "risk",
@@ -394,7 +394,7 @@
         "steam/risk/build-downside-scenarios-for-small-studios"
       ],
       "phase": 3,
-      "progress_percent": 69
+      "progress_percent": 74
     },
     {
       "id": "strategy",
@@ -2105,14 +2105,17 @@
       "emoji": "🧭",
       "objective": "Research distinguish review volume, positive share, tag category, ranking and confounding factors.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Distinguish review volume, positive share, tag category, ranking and confounding factors. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "in_progress",
-      "percent": 75,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/review-bombing-score-and-store-visibility-2026.md",
+        "ontology/steam/review-bombing-score-and-store-visibility-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/review-bombing-score-and-store-visibility-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2124,16 +2127,18 @@
       "objective": "Research compare traffic before and after launches, patches, events and major announcements.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare traffic before and after launches, patches, events and major announcements. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
         "ontology/steam/discovery-wishlists-and-visibility-2026.md",
         "ontology/steam/curator-connect-and-community-events-2026.md",
         "ontology/steam/curator-connect-and-community-events-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/review-bombing-score-and-store-visibility-2026.md",
+        "ontology/steam/review-bombing-score-and-store-visibility-2026.json"
       ],
-      "artifact": "ontology/steam/curator-connect-and-community-events-2026.md",
+      "artifact": "ontology/steam/review-bombing-score-and-store-visibility-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -3331,15 +3336,17 @@
       "emoji": "🛒",
       "objective": "Research map buyer-review author, key reviewer, refunded customer and unverified review counts.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Map buyer-review author, key reviewer, refunded customer and unverified review counts. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "in_progress",
-      "percent": 85,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
       "evidence": [
         "ontology/steam/review-data-and-sales-estimation-2026.md",
         "ontology/steam/review-data-and-sales-estimation-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/review-bombing-score-and-store-visibility-2026.md",
+        "ontology/steam/review-bombing-score-and-store-visibility-2026.json"
       ],
-      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
+      "artifact": "ontology/steam/review-bombing-score-and-store-visibility-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3612,11 +3619,15 @@
       "emoji": "🛡️",
       "objective": "Research separate user review outcomes, moderation, appeal and measurable sales impact.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate user review outcomes, moderation, appeal and measurable sales impact. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 90,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/review-bombing-score-and-store-visibility-2026.md",
+        "ontology/steam/review-bombing-score-and-store-visibility-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/review-bombing-score-and-store-visibility-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3827,14 +3838,16 @@
       "objective": "Research account for crowded release windows, changed festivals and exposure concentration.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Account for crowded release windows, changed festivals and exposure concentration. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
         "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/review-bombing-score-and-store-visibility-2026.md",
+        "ontology/steam/review-bombing-score-and-store-visibility-2026.json"
       ],
-      "artifact": "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
+      "artifact": "ontology/steam/review-bombing-score-and-store-visibility-2026.md",
       "priority": "normal",
       "phase": 3
     },

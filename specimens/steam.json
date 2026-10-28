@@ -873,6 +873,17 @@
       "evidence_class": "model_owner_2026_genre_method_version_and_limits",
       "license": "Source link and independently authored short factual explanation only.",
       "notes": "Model version 0.9, 26,291 indie paid launches aged 12-36 months, estimates from public reviews; source-site contents update."
+    },
+    {
+      "id": "steam-march2019-offtopic-reviewbomb-policy",
+      "url": "https://store.steampowered.com/news/posts/?enddate=1558453683&feed=steam_blog",
+      "title": "User Reviews Revisited",
+      "publisher": "Valve Corporation",
+      "published_at": "2019-03-15",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_historic_review_bomb_filter_announcement",
+      "license": "Public citation and independently written short policy summary only; no source text or media reproduced.",
+      "notes": "Explains Valve's anomalous review period investigation and off-topic period removal from Review Score, but reviews remain readable and users can opt out."
     }
   ],
   "claims": [
@@ -4784,6 +4795,167 @@
       "observed_at": "2026-10-28",
       "confidence": "medium",
       "limitations": "This is a protocol rather than observed comparative returns; never infer an earnings advantage solely from the highest gross median."
+    },
+    {
+      "id": "steam-review-40pct-discovery-threshold",
+      "text": "Valve's current visibility guide says ratings of Mixed or above (at least 40% positive) are not an algorithmic visibility ranking input, while below 40% games are less likely to be featured.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A stated platform preference is not a measured continuous effect, universal visibility guarantee or sales experiment."
+    },
+    {
+      "id": "steam-review-40-not-automatic-deletion",
+      "text": "A game falling below 40% positive reviews is less likely to be featured according to Valve, not banned from sale or automatically hidden.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Other visibility factors and personalized placements operate independently."
+    },
+    {
+      "id": "steam-review-score-direct-purchases",
+      "text": "Valve's review policy says Steam-purchased licenses count toward standard paid-game review scores, whereas reviews from key activations do not.",
+      "source_ids": [
+        "steam-review-policy-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Review scores depend on eligible reviewers and Valve's changing filters; purchase count is not review count."
+    },
+    {
+      "id": "steam-review-window-30days-and-lifetime",
+      "text": "Valve reports separate review score summaries for recent 30-day reviews and lifetime reviews.",
+      "source_ids": [
+        "steam-review-policy-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The same game's short-term and historical positive share can diverge; both are not independent customer populations."
+    },
+    {
+      "id": "steam-review-solicitation-restrictions",
+      "text": "Steam prohibits rewarding players for reviews and asking for game reviews inside the application; press preview keys follow a separate exception.",
+      "source_ids": [
+        "steam-review-policy-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Partner policy is not evidence of the frequency of manipulation or the causal effect of solicited reviews."
+    },
+    {
+      "id": "steam-review-offtopic-flag-still-counts",
+      "text": "An individual review marked Off-Topic by moderators can remain visible at lower prominence and still count toward Review Score.",
+      "source_ids": [
+        "steam-review-policy-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "This is distinct from Valve excluding all reviews from an identified off-topic review-bomb date period."
+    },
+    {
+      "id": "steam-review-2019-period-exclusion",
+      "text": "Valve's March 2019 policy identifies off-topic review-bomb periods after automated anomaly detection and human investigation, removing those periods from default Review Score calculation.",
+      "source_ids": [
+        "steam-march2019-offtopic-reviewbomb-policy"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Not every period of fast negative reviewing is classed off-topic; topic judgment and period selection are Valve decisions."
+    },
+    {
+      "id": "steam-review-2019-texts-retained",
+      "text": "Valve says individual reviews in an excluded off-topic review-bomb period remain publicly readable, even though the default aggregate Review Score omits the period.",
+      "source_ids": [
+        "steam-march2019-offtopic-reviewbomb-policy"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A filtered score denominator therefore differs from total review records and the visible text set."
+    },
+    {
+      "id": "steam-review-2019-user-optout",
+      "text": "Steam lets customers opt out of off-topic review-bomb filtering in store review-score preferences.",
+      "source_ids": [
+        "steam-march2019-offtopic-reviewbomb-policy"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Two customers may see different summary scores; public review scraped totals do not necessarily match default rating."
+    },
+    {
+      "id": "steam-review-api-offtopic-default",
+      "text": "Steam's IUserReviewsService GetAppReviews defaults filter_offtopic_activity to true; false includes reviews from off-topic review-bomb periods.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "API client settings must be recorded for reproducibility; keys and rate limits remain subject to service policies."
+    },
+    {
+      "id": "steam-review-api-language-default-english",
+      "text": "Valve's GetAppReviews language filter defaults to English, with 'all' explicitly required for multi-language reviews.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Single-language default results are not a complete worldwide review count or a neutral sample of language preferences."
+    },
+    {
+      "id": "steam-review-api-steam-origin-default",
+      "text": "GetAppReviews defaults purchase_type to Steam instead of reviews of users who obtained a game through non-Steam routes.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Review source is not a census of actual orders; alternate review denominators depend on explicit API parameters."
+    },
+    {
+      "id": "steam-review-api-firstpage-summary",
+      "text": "Valve specifies query_summary score totals only on the first page and only for review_type All.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Do not naively sum first-page totals across pagination or assume every API filter returns an aggregate score."
+    },
+    {
+      "id": "steam-review-volume-not-sales",
+      "text": "Review counts, flags and review-bomb-adjusted positive scores are not verified gross paid sales, publisher revenue or unique purchasers.",
+      "source_ids": [
+        "steam-review-policy-2026",
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Sample selection, key licensing, refund rights and differential review propensity break direct identification."
+    },
+    {
+      "id": "steam-visibility-buy-and-play-signals",
+      "text": "Valve's visibility guide identifies customer purchases and play as store discovery signals, while store traffic and store-page conversion rate alone are not algorithmic ranking inputs.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Qualitative algorithmic descriptions are not a formula that can predict incremental paid units for an individual game."
+    },
+    {
+      "id": "steam-visibility-wishlist-exception",
+      "text": "Valve says wishlists are generally not an algorithmic visibility input except surfaces such as Popular Upcoming, though they enable notifications on release or qualifying discounts.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Wishlist total may correlate with later sales; absence of direct ranking treatment is not evidence of no commercial value."
     }
   ],
   "observations": [],
@@ -4791,5 +4963,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam market research now distinguishes genre-tagged all-age revenue medians from provider-defined first-year indie paid game cohorts, with explicit incompatible assumptions. Original-paid publisher net income remains unobserved."
+  "summary": "Steam source-backed research includes review-bomb score period exclusions, 40% algorithmic visibility threshold and current review API filters, without asserting actual sales or developer earnings."
 }

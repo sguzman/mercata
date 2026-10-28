@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "review_score_offtopic_period_filter_and_algorithmic_visibility_boundary",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-march2019-offtopic-reviewbomb-policy",
+    "steam-visibility-official",
+    "steam-review-policy-2026",
+    "steam-review-api-2026",
+    "steam-financial-api-official"
+  ],
+  "claim_ids": [
+    "steam-review-40pct-discovery-threshold",
+    "steam-review-40-not-automatic-deletion",
+    "steam-review-score-direct-purchases",
+    "steam-review-window-30days-and-lifetime",
+    "steam-review-solicitation-restrictions",
+    "steam-review-offtopic-flag-still-counts",
+    "steam-review-2019-period-exclusion",
+    "steam-review-2019-texts-retained",
+    "steam-review-2019-user-optout",
+    "steam-review-api-offtopic-default",
+    "steam-review-api-language-default-english",
+    "steam-review-api-steam-origin-default",
+    "steam-review-api-firstpage-summary",
+    "steam-review-volume-not-sales",
+    "steam-visibility-buy-and-play-signals",
+    "steam-visibility-wishlist-exception"
+  ],
+  "current_public_discovery": {
+    "review_positive_share_threshold": 0.4,
+    "below_threshold_less_likely_featured": true,
+    "below_threshold_blocks_sale": false,
+    "purchases_and_play_indicated_as_signals": true,
+    "traffic_alone_is_direct_ranking_signal": false,
+    "conversion_rate_is_direct_ranking_signal": false,
+    "wishlists_usually_direct_ranking_signal": false,
+    "wishlist_popular_upcoming_exception": true
+  },
+  "reviews": {
+    "steam_purchase_origin_counts_for_paid_score": true,
+    "retail_key_review_counts_for_paid_score": false,
+    "recent_window_days": 30,
+    "lifetime_score_also_exists": true,
+    "individual_off_topic_flag_does_not_automatically_remove_score": true,
+    "offtopic_bomb_period_excluded_by_default": true,
+    "review_texts_in_excluded_period_remain_readable": true,
+    "user_can_optout_of_period_filter": true
+  },
+  "api": {
+    "method": "IUserReviewsService/GetAppReviews",
+    "default_languages": [
+      "english"
+    ],
+    "all_languages_must_be_requested": true,
+    "default_purchase_origin": "Steam",
+    "default_filter_offtopic_activity": true,
+    "first_page_only_summary": true,
+    "summary_requires_review_type_all": true
+  },
+  "no_causal_effect_observed": true,
+  "actual_review_bomb_cases_studied": 0,
+  "actual_incremental_sales": null,
+  "actual_developer_profit": null,
+  "no_review_api_requests": true,
+  "no_partner_credentials": true
+}
