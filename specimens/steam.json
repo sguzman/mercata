@@ -840,6 +840,39 @@
       "evidence_class": "historical_official_store_announcement",
       "license": "Public link and independently authored factual paraphrase; no copied article text or artwork.",
       "notes": "At Steam Direct introduction Valve described 30-day new-developer wait and separate Coming Soon period."
+    },
+    {
+      "id": "steam-immutable-genre-snapshot-2026",
+      "url": "https://www.immutable.com/insights/steam-genre-revenue-benchmarks",
+      "title": "What does the median game in your genre earn on Steam?",
+      "publisher": "Immutable",
+      "published_at": "2026-09-23",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "self_published_cross_age_genre_tag_model_with_20_middle_rank_samples",
+      "license": "Public URL, source metadata and limited independently written numerical observations only; no charts or article prose copied.",
+      "notes": "107 tag genres, medians read from roughly 20 middle-ranked titles, revenue estimated at current list price rather than history."
+    },
+    {
+      "id": "steam-gmd-puzzle-snapshot-2026",
+      "url": "https://gamemarketdata.com/genre/puzzle",
+      "title": "Puzzle games on Steam: odds, earnings and upcoming",
+      "publisher": "Game Market Data",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "provider_modeled_2026_oct05_fixed_first_year_genre_cohort",
+      "license": "Public URL, source description and short independently authored numeric interpretations only; no source layout, charts or dataset rows copied.",
+      "notes": "As of October 5, 2026, 5,256 indie paid Puzzle launches 12–36 months old, median modeled first-year gross $421; 185 over $100k."
+    },
+    {
+      "id": "steam-gmd-method-2026",
+      "url": "https://gamemarketdata.com/method",
+      "title": "Method and trust",
+      "publisher": "Game Market Data",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "model_owner_2026_genre_method_version_and_limits",
+      "license": "Source link and independently authored short factual explanation only.",
+      "notes": "Model version 0.9, 26,291 indie paid launches aged 12-36 months, estimates from public reviews; source-site contents update."
     }
   ],
   "claims": [
@@ -4584,6 +4617,173 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "No partner analytics, experiment, campaign cost or real checkout observations were collected."
+    },
+    {
+      "id": "genre-immutable-107-tags",
+      "text": "Immutable's September 2026 modeled Steam tag study covered 107 genre/subgenre tags, of which 20 were displayed.",
+      "source_ids": [
+        "steam-immutable-genre-snapshot-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Tags overlap; count of tagged games cannot be added as unique Steam games."
+    },
+    {
+      "id": "genre-immutable-median-20-rank",
+      "text": "Immutable says it estimates each tag's median by examining roughly twenty titles around that tag's middle rank.",
+      "source_ids": [
+        "steam-immutable-genre-snapshot-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Middle-rank sampling is not a full distribution audit, does not cover all launch years consistently and can be sensitive to ranking errors."
+    },
+    {
+      "id": "genre-immutable-2d-platformer1040",
+      "text": "Immutable lists 11,366 tagged 2D Platformer games with a modeled middle-rank gross of about $1,040 and roughly 209 copies.",
+      "source_ids": [
+        "steam-immutable-genre-snapshot-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Cross-age all-price model: not a first-year newly paid 2D game median or developer take-home."
+    },
+    {
+      "id": "genre-immutable-puzzle2390",
+      "text": "Immutable lists 26,452 Puzzle-tagged games with about $2,390 modeled median gross and about 477 modeled copies.",
+      "source_ids": [
+        "steam-immutable-genre-snapshot-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Figures depend on current price and unverified model; no historical discount/region/refund ledger."
+    },
+    {
+      "id": "genre-immutable-lifetime-not-fixed",
+      "text": "Immutable's revenue estimates use current regular Steam price rather than reconstructing historic prices, discounts, regional mix or refund frequency.",
+      "source_ids": [
+        "steam-immutable-genre-snapshot-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Cannot compare like-for-like with a fixed first-year realized-price model."
+    },
+    {
+      "id": "genre-immutable-81-under10k",
+      "text": "Immutable reports that 81 of its 107 tagged subgenre medians are below $10,000 estimated gross.",
+      "source_ids": [
+        "steam-immutable-genre-snapshot-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Not 81/107 games and not a share of developers, due to tag overlap and rankings."
+    },
+    {
+      "id": "genre-gmd-26291-paid-indie",
+      "text": "Game Market Data's October 2026 methodology covers 26,291 provider-defined indie paid launches 12 to 36 months old.",
+      "source_ids": [
+        "steam-gmd-method-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "No independent archived AppID or zero-sale checkout audit verifies inclusion and actual first-paid eligibility."
+    },
+    {
+      "id": "genre-gmd-puzzle-5256-421",
+      "text": "Game Market Data reports 5,256 Puzzle launches in its first-year eligible cohort with a $421 modeled median gross as of October 5, 2026.",
+      "source_ids": [
+        "steam-gmd-puzzle-snapshot-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Not the same age, paid-status or model as Immutable's 26,452 Puzzle-tagged all-age products."
+    },
+    {
+      "id": "genre-gmd-puzzle-185-hits",
+      "text": "Game Market Data reports 185 of its 5,256 Puzzle launches with modeled first-year revenue at or above $100,000.",
+      "source_ids": [
+        "steam-gmd-puzzle-snapshot-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "A model estimate of paid first-year gross, not verified number of profitable puzzle developers."
+    },
+    {
+      "id": "genre-gmd-all-552",
+      "text": "Game Market Data reports $552 as its modeled first-year median across the 26,291 eligible indie paid launches.",
+      "source_ids": [
+        "steam-gmd-puzzle-snapshot-2026",
+        "steam-gmd-method-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "This provider-specific vintage cannot be pooled with Immutable's cross-age tag medians or January 2026 eight-month estimates."
+    },
+    {
+      "id": "genre-gmd-price-stratification",
+      "text": "Game Market Data disaggregates genre threshold rates by original listed price tier, warning that price materially changes modeled hit rates.",
+      "source_ids": [
+        "steam-gmd-puzzle-snapshot-2026",
+        "steam-gmd-method-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Price correlations do not imply raising a game's price causes a higher success rate."
+    },
+    {
+      "id": "genre-gmd-review-model",
+      "text": "Game Market Data says its genre odds are modeled from review and public store data, not the game's actual partner financial ledger.",
+      "source_ids": [
+        "steam-gmd-method-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Model accuracy, true zero-sales tail and inclusion completeness remain unverified."
+    },
+    {
+      "id": "genre-puzzle-models-not-direct-trend",
+      "text": "The $2,390 Immutable Puzzle-tag median and $421 GMD first-year Puzzle launch median use different cohorts, price assumptions and horizons.",
+      "source_ids": [
+        "steam-immutable-genre-snapshot-2026",
+        "steam-gmd-puzzle-snapshot-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Their numerical difference is not evidence that Puzzle revenue rose or fell."
+    },
+    {
+      "id": "genre-tags-not-partition",
+      "text": "Overlapping Steam genre tags and tags applied to multiple games cannot form a mutually exclusive partition without per-AppID deduplication.",
+      "source_ids": [
+        "steam-immutable-genre-snapshot-2026",
+        "steam-gmd-method-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Without row-level matching, cross-tag summations double count titles."
+    },
+    {
+      "id": "genre-model-not-solo-return",
+      "text": "Neither genre model identifies the actual net pay of first-time solo developers, true development hours or contractual royalty arrangements.",
+      "source_ids": [
+        "steam-immutable-genre-snapshot-2026",
+        "steam-gmd-method-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "Genre median is not causal ROI of choosing a genre, nor an affordability recommendation."
+    },
+    {
+      "id": "genre-check-frame-before-ranking",
+      "text": "A defensible genre strategy comparison needs matched originally paid launch cohorts, same age and price treatment, eligible AppIDs incl. zero-review/delisted, and comparable production costs.",
+      "source_ids": [
+        "steam-immutable-genre-snapshot-2026",
+        "steam-gmd-puzzle-snapshot-2026",
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "medium",
+      "limitations": "This is a protocol rather than observed comparative returns; never infer an earnings advantage solely from the highest gross median."
     }
   ],
   "observations": [],
@@ -4591,5 +4791,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam economic research includes an executive source-graded synthesis of January 2026 modeled income, October 2025 partial-year model outcomes and explicit first-game cash/labor decision gates, with actual publisher profit/zero-income unknown."
+  "summary": "Steam market research now distinguishes genre-tagged all-age revenue medians from provider-defined first-year indie paid game cohorts, with explicit incompatible assumptions. Original-paid publisher net income remains unobserved."
 }

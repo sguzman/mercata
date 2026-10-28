@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "genre_paid_game_cohort_cross_model_noncomparability",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-immutable-genre-snapshot-2026",
+    "steam-gmd-puzzle-snapshot-2026",
+    "steam-gmd-method-2026",
+    "steam-financial-api-official"
+  ],
+  "claim_ids": [
+    "genre-immutable-107-tags",
+    "genre-immutable-median-20-rank",
+    "genre-immutable-2d-platformer1040",
+    "genre-immutable-puzzle2390",
+    "genre-immutable-lifetime-not-fixed",
+    "genre-immutable-81-under10k",
+    "genre-gmd-26291-paid-indie",
+    "genre-gmd-puzzle-5256-421",
+    "genre-gmd-puzzle-185-hits",
+    "genre-gmd-all-552",
+    "genre-gmd-price-stratification",
+    "genre-gmd-review-model",
+    "genre-puzzle-models-not-direct-trend",
+    "genre-tags-not-partition",
+    "genre-model-not-solo-return",
+    "genre-check-frame-before-ranking"
+  ],
+  "sources": [
+    {
+      "provider": "Immutable",
+      "snapshot": "2026-09-23",
+      "kind": "all_age_steam_tag_middle_rank_sample",
+      "tag_overlap": true,
+      "average_sample_titles_per_tag_approx": 20,
+      "method": "current_price_times_model_estimated_units",
+      "reported_tags": 107,
+      "observations": [
+        {
+          "tag": "2D Platformer",
+          "tagged_games": 11366,
+          "modeled_median_gross_usd": 1040,
+          "modeled_median_units": 209
+        },
+        {
+          "tag": "Puzzle",
+          "tagged_games": 26452,
+          "modeled_median_gross_usd": 2390,
+          "modeled_median_units": 477
+        }
+      ],
+      "real_steam_orders": false
+    },
+    {
+      "provider": "Game Market Data",
+      "snapshot": "2026-10-05",
+      "kind": "paid_indie_12to36mo_launch_cohort",
+      "observed_first_year_only": true,
+      "eligible_launches_across_genres": 26291,
+      "puzzle_launches": 5256,
+      "puzzle_modeled_first_year_median_gross_usd": 421,
+      "puzzle_modeled_over_100k": 185,
+      "all_launch_modeled_first_year_median_gross_usd": 552,
+      "method": "review_signal_modeled_first_year_gross",
+      "real_steam_orders": false
+    }
+  ],
+  "comparability_requirements": [
+    "identical eligible game population",
+    "same launch-era and age horizon",
+    "first-paid status and F2P separation",
+    "same tag definitions and deduplication policy",
+    "identical gross/discount/tax/refund accounting",
+    "sample inclusion including zero-review and retired",
+    "model revision and validation with low-end actual sales",
+    "production cost and team resources when claiming ROI"
+  ],
+  "invalid_operations": [
+    "sum tagged game counts as distinct titles",
+    "divide overlapping tag median by total market median and call causal uplift",
+    "apply cross-age list-price model to first-year fixed horizon",
+    "call any provider-modeled tag median a solo developer profit"
+  ],
+  "actual_genre_profit_median": null,
+  "causal_genre_choice_roi": null,
+  "licensed_per_game_rows_collected": false
+}
