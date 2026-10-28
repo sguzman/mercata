@@ -884,6 +884,28 @@
       "evidence_class": "official_historic_review_bomb_filter_announcement",
       "license": "Public citation and independently written short policy summary only; no source text or media reproduced.",
       "notes": "Explains Valve's anomalous review period investigation and off-topic period removal from Review Score, but reviews remain readable and users can opt out."
+    },
+    {
+      "id": "steam-dlc-app-guide-2026",
+      "url": "https://partner.steamgames.com/doc/store/application/dlc",
+      "title": "Downloadable Content (DLC)",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_product_commercial_configuration",
+      "license": "Independently authored summary and public document metadata only; no source screenshots, audio, images or article text reproduced.",
+      "notes": "Policy and product-unit distinctions; no merchant transaction records or actual attachment behavior accessed."
+    },
+    {
+      "id": "steam-soundtrack-app-guide-2026",
+      "url": "https://partner.steamgames.com/doc/store/application/soundtrackapp",
+      "title": "Game Soundtracks on Steam",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_product_commercial_configuration",
+      "license": "Independently authored summary and public document metadata only; no source screenshots, audio, images or article text reproduced.",
+      "notes": "Policy and product-unit distinctions; no merchant transaction records or actual attachment behavior accessed."
     }
   ],
   "claims": [
@@ -4956,6 +4978,150 @@
       "observed_at": "2026-10-28",
       "confidence": "high",
       "limitations": "Wishlist total may correlate with later sales; absence of direct ranking treatment is not evidence of no commercial value."
+    },
+    {
+      "id": "dlc-distinct-appid-and-forms",
+      "text": "Valve supports distinct DLC AppIDs for free or paid content tied to a Steam base game.",
+      "source_ids": [
+        "steam-dlc-app-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A DLC product is not a second paid base-game launch or a unique new game buyer."
+    },
+    {
+      "id": "dlc-requires-base-ownership",
+      "text": "Ordinary DLC purchasing requires ownership of the associated base game, unlike a standalone soundtrack.",
+      "source_ids": [
+        "steam-dlc-app-guide-2026",
+        "steam-soundtrack-app-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Bundles and packages can grant multiple entitlements with a single checkout."
+    },
+    {
+      "id": "dlc-ownership-locked-depot",
+      "text": "DLC can ship as files already included in base game and gated on ownership or through separate downloadable depots.",
+      "source_ids": [
+        "steam-dlc-app-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A downloaded file or installed app does not establish a DLC purchase event."
+    },
+    {
+      "id": "dlc-overlay-and-version",
+      "text": "Steam DLC purchases can be initiated in-game and content requires a current base-game version for installation.",
+      "source_ids": [
+        "steam-dlc-app-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Integration feature support alone does not determine attach rates, implementation cost or profit."
+    },
+    {
+      "id": "dlc-day1-perception",
+      "text": "Valve cautions that paid launch-day DLC can lead customers to think base game content was withheld.",
+      "source_ids": [
+        "steam-dlc-app-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is qualitative customer experience guidance, not measured lost revenue."
+    },
+    {
+      "id": "dlc-key-not-steam-sale",
+      "text": "Steam supports DLC package key activations in addition to DLC purchases through Steam checkout.",
+      "source_ids": [
+        "steam-dlc-app-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Key activation is a license, not evidence of purchase from Steam store."
+    },
+    {
+      "id": "soundtrack-special-appid",
+      "text": "Valve's modern game soundtrack product is a distinct music AppID rather than an ordinary DLC entitlement.",
+      "source_ids": [
+        "steam-soundtrack-app-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Music AppID does not represent an additional base-game customer or release."
+    },
+    {
+      "id": "soundtrack-independent-ownership",
+      "text": "Buyers can purchase modern standalone Steam soundtrack apps without owning their associated base game.",
+      "source_ids": [
+        "steam-soundtrack-app-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A music-to-game unit sale ratio is not a base owner soundtrack attachment rate."
+    },
+    {
+      "id": "soundtrack-mp3-and-lossless",
+      "text": "Steam soundtrack releases require MP3s and cover artwork/metadata, with optional high-quality files in extra depots.",
+      "source_ids": [
+        "steam-soundtrack-app-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Delivery specification does not prove audio rights or the actual cost of music production."
+    },
+    {
+      "id": "soundtrack-revenue-in-parent-tier",
+      "text": "Valve states associated soundtrack revenue contributes to the parent game's aggregate for revenue share purposes.",
+      "source_ids": [
+        "steam-soundtrack-app-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Accounting treatment is not a flat developer royalty or permission to count OST orders as game copies."
+    },
+    {
+      "id": "soundtrack-release-standalone-wait",
+      "text": "Standalone soundtracks require a two-week public Coming Soon page; associated soundtracks for a released game can go live after content/store review.",
+      "source_ids": [
+        "steam-soundtrack-app-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Timing rules are product-specific; review approval and partner account controls still apply."
+    },
+    {
+      "id": "dlc-attach-rate-missing",
+      "text": "DLC attach ratio requires a defined, deduplicated base-game owner cohort and DLC buying owners observed over the same period.",
+      "source_ids": [
+        "steam-dlc-app-guide-2026",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Gross package units do not identify distinct buyers without independently authorized deduplication."
+    },
+    {
+      "id": "soundtrack-music-sales-not-attach",
+      "text": "Dividing soundtrack units sold by base game units sold cannot identify the fraction of base-game customers who own the music.",
+      "source_ids": [
+        "steam-soundtrack-app-guide-2026",
+        "steam-packages-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Standalone soundtrack buyers and bundled entitlements can inflate the numerator."
+    },
+    {
+      "id": "dlc-profit-unknown",
+      "text": "These official product guides reveal no representative DLC attachment, OST sales, net publisher payout or development cost distribution.",
+      "source_ids": [
+        "steam-dlc-app-guide-2026",
+        "steam-soundtrack-app-guide-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Actual merchant ledger categories and signed rights/royalty terms are unavailable."
     }
   ],
   "observations": [],
@@ -4963,5 +5129,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam source-backed research includes review-bomb score period exclusions, 40% algorithmic visibility threshold and current review API filters, without asserting actual sales or developer earnings."
+  "summary": "Steam sources now distinguish DLC paid/free app units from independently purchasable music AppIDs, soundtrack revenue share attribution and invalid attach-rate denominators. Actual addon sales, take-home earnings and developer profits remain unknown."
 }

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "dlc_and_soundtrack_commercial_unit_protocol_not_observed_sales",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-dlc-app-guide-2026",
+    "steam-soundtrack-app-guide-2026",
+    "steam-financial-api-official",
+    "steam-packages-official"
+  ],
+  "claim_ids": [
+    "dlc-distinct-appid-and-forms",
+    "dlc-requires-base-ownership",
+    "dlc-ownership-locked-depot",
+    "dlc-overlay-and-version",
+    "dlc-day1-perception",
+    "dlc-key-not-steam-sale",
+    "soundtrack-special-appid",
+    "soundtrack-independent-ownership",
+    "soundtrack-mp3-and-lossless",
+    "soundtrack-revenue-in-parent-tier",
+    "soundtrack-release-standalone-wait",
+    "dlc-attach-rate-missing",
+    "soundtrack-music-sales-not-attach",
+    "dlc-profit-unknown"
+  ],
+  "units": {
+    "base_game": "paid_package_checkout_game_units",
+    "dlc": "additional_content_appid_and_entitlement",
+    "soundtrack": "music_appid_purchasable_without_parent_game",
+    "retail_key": "license_activation_not_steam_checkout"
+  },
+  "product_rules": {
+    "dlc_paid_or_free": true,
+    "dlc_requires_parent_game": true,
+    "soundtrack_can_buy_without_game": true,
+    "modern_soundtrack_is_music_appid": true,
+    "associated_soundtrack_revenue_counts_for_base_revenue_share": true,
+    "standalone_soundtrack_coming_soon_days": 14
+  },
+  "measurement": {
+    "unique_base_game_owners_required_for_dlc_attachment": true,
+    "distinct_dlc_buying_base_game_owners_required": true,
+    "soundtrack_purchase_implies_base_ownership": false,
+    "raw_unit_ratio_is_owner_conversion": false,
+    "actual_dlc_attach_fraction": null,
+    "actual_soundtrack_attach_fraction": null,
+    "real_publisher_proceeds": null,
+    "actual_development_profit": null
+  },
+  "no_partner_account_access": true,
+  "no_product_created": true,
+  "no_transactions_retrieved": true
+}
