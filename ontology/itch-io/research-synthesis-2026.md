@@ -1,6 +1,6 @@
 # itch.io commercial-game research — evidence synthesis and open gaps
 
-**Evidence updated October 28, 2026.** The live itch.io dossier has **264 attributed sources and 613 bounded claims**, across **244 fixed research tasks**. The machine register retains its original interim extraction counts (54 sources/148 claims), which are **historical creation metadata rather than current totals**. [Machine evidence synthesis](research-synthesis-2026.json) · [live dossier](../../specimens/itch-io.json).
+**Evidence updated October 28, 2026.** The live itch.io dossier has **265 attributed sources and 617 bounded claims**, across **244 fixed research tasks**. The machine register retains its original interim extraction counts (54 sources/148 claims), which are **historical creation metadata rather than current totals**. [Machine evidence synthesis](research-synthesis-2026.json) · [live dossier](../../specimens/itch-io.json).
 
 **Current economic conclusion:** itch.io permits cost-free game publication but not cost-free production; paid transactions incur seller-configured platform share, processing charges and route-specific tax/settlement rules. Catalog listing counts, genre ranks, ratings and downloads are **not** actual paid orders. Representative active paid sellers, paying game buyers, median or mean after-cost creator income, zero-sale incidence and causal discovery lift remain **unobserved**. Our task scoring is **97.43% exact, 97% rounded**, but it is not a percentage of those market outcomes measured.
 
