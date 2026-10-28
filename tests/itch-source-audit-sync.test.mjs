@@ -6,11 +6,13 @@ const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
 test('All current source audits are idempotently aligned to the canonical dossier',()=>{
  const stats=itchSourceStats(JSON.parse(read('specimens/itch-io.json')));
  assert.equal(stats.exactDay+stats.monthOnly+stats.unknownDate,stats.sourceCount);
+ assert.equal(stats.distinctUrlCount,new Set(JSON.parse(read('specimens/itch-io.json')).evidence.map(s=>s.url)).size);
+ assert.equal(stats.aliasExcessRecordCount,stats.sourceCount-stats.distinctUrlCount);
  for(const file of auditFiles)assert.equal(alignItchSourceAudit(file,read(file),stats),read(file),file+' has stale counters');
 });
 test('Adding one source and claim propagates only live audit counters, not historical extraction metadata',()=>{
  const before=itchSourceStats(JSON.parse(read('specimens/itch-io.json')));
- const changed={...before,sourceCount:before.sourceCount+1,claimCount:before.claimCount+1,exactDay:before.exactDay+1};
+ const changed={...before,sourceCount:before.sourceCount+1,claimCount:before.claimCount+1,exactDay:before.exactDay+1,distinctUrlCount:before.distinctUrlCount+1};
  const historical=JSON.parse(read('ontology/itch-io/research-synthesis-2026.json'));
  const after=JSON.parse(alignItchSourceAudit('ontology/itch-io/research-synthesis-2026.json',
   read('ontology/itch-io/research-synthesis-2026.json'),changed));

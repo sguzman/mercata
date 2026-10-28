@@ -23,11 +23,21 @@ export function auditItchSourceRegister(specimen){
  for(const c of specimen.claims){
   if(typeof c.id!=='string'||!c.id.trim()||claims.has(c.id))issues.push('Missing or repeated claim id');claims.add(c.id);
   if(!Array.isArray(c.source_ids)||!c.source_ids.length||c.source_ids.some(x=>!ids.has(x)))issues.push('Unregistered claim source');
+  if(Array.isArray(c.source_ids)){
+   const urls=c.source_ids.map(id=>sources.get(id)?.url).filter(Boolean);
+   if(new Set(urls).size!==urls.length)issues.push('Claim cites one public URL through multiple evidence IDs');
+  }
   if(!actualDay(c.observed_at))issues.push('Bad claim observation date');
   else if(Array.isArray(c.source_ids)&&c.source_ids.some(id=>sources.has(id)&&actualDay(sources.get(id).retrieved_at)&&sources.get(id).retrieved_at>c.observed_at))
    issues.push('Claim cannot predate cited source retrieval');
  }
+ const urlGroups=new Map();
+ for(const entry of specimen.evidence)if(typeof entry.url==='string')
+  urlGroups.set(entry.url,(urlGroups.get(entry.url)||0)+1);
+ const duplicateUrlGroups=[...urlGroups.values()].filter(n=>n>1).length;
  return {valid:issues.length===0,issues,source_count:specimen.evidence.length,claim_count:specimen.claims.length,
+  distinct_url_strings:urlGroups.size,duplicate_url_groups:duplicateUrlGroups,
+  extra_alias_source_records:specimen.evidence.length-urlGroups.size,
   actual_redistribution_legal_clearance:null,marketwide_paid_seller_count:null,marketwide_income_estimate:null,
   note:'An attributed source record is not evidence of legal bulk redistribution rights or representative creator earnings.'};
 }
