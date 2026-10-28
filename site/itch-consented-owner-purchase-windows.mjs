@@ -28,9 +28,21 @@ export function auditConsentedItchSalesWindows(input){
   if(missing||days>elapsed)throw new RangeError('Cannot claim a mature cumulative window after missing/immature earlier window');
   if(r.refunded_orders>r.captured_orders||r.refunded_gross_cents>r.captured_gross_cents)throw new RangeError('Impossible refunded quantities');
   if(previous&&rowFields.slice(1).some(k=>r[k]<previous[k]))throw new RangeError('Cumulative gross/order/refund series cannot decrease');
+  // Mandatory positive-price captured orders require a positive gross amount; a
+  // zero-order period cannot contain gross paid-game receipts.
+  if((r.captured_orders===0)!==(r.captured_gross_cents===0))
+   throw new RangeError('Captured paid-order counts and positive gross must agree');
+  const retainedOrders=r.captured_orders-r.refunded_orders;
+  const retainedGross=r.captured_gross_cents-r.refunded_gross_cents;
+  // Refunds for the same earlier sale must be attributed to *every* earlier
+  // cumulative release-age window under the one common as-of snapshot.
+  // A smaller retained later window means the export cohorts were misaligned.
+  if(previous&&(retainedOrders<previous.captured_orders-previous.refunded_orders||
+    retainedGross<previous.captured_gross_cents-previous.refunded_gross_cents))
+   throw new RangeError('Retained cumulative orders and gross cannot decrease at one as-of snapshot');
   previous=r;
-  return {days,known:true,retained_paid_orders:r.captured_orders-r.refunded_orders,
-   retained_gross_before_fees_cents:r.captured_gross_cents-r.refunded_gross_cents};
+  return {days,known:true,retained_paid_orders:retainedOrders,
+   retained_gross_before_fees_cents:retainedGross};
  });
  return {currency:input.currency,release_utc_day:input.release_utc_day,observation_utc_day:input.observation_utc_day,
   elapsed_days:elapsed,horizons:windows,raw_transaction_rows_processed:0,

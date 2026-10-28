@@ -44,3 +44,34 @@ test('Cited source data remains unknown without owner permission',()=>{
  assert.equal(d.live_merchant_exports_observed,0);
  assert(Object.values(d.marketwide_unknown).every(x=>x===null));
 });
+
+test('Cumulative refund-adjusted retained orders and receipts cannot shrink at one snapshot',()=>{
+ const a=example();
+ // Counts are individually cumulative, but later refunds exceed additional
+ // purchases: impossible when early cohort refunds use the same as-of date.
+ assert.throws(()=>auditConsentedItchSalesWindows({...a,cumulative:[
+  row(7,5,0,5000,0),row(30,5,2,5000,2000),null,null
+ ]}),/Retained cumulative orders and gross cannot decrease/);
+ // Retained order count does not fall, but unmatched later refund dollars do.
+ assert.throws(()=>auditConsentedItchSalesWindows({...a,cumulative:[
+  row(7,5,0,5000,0),row(30,10,5,10000,6000),null,null
+ ]}),/Retained cumulative orders and gross cannot decrease/);
+ // A consistent common-as-of snapshot, including refunds, is allowed.
+ const good=auditConsentedItchSalesWindows({...a,cumulative:[
+  row(7,5,2,5000,2000),row(30,10,2,11000,2000),null,null
+ ]});
+ assert.deepEqual(good.horizons.map(x=>x.retained_paid_orders),[3,8,null,null]);
+ assert.deepEqual(good.horizons.map(x=>x.retained_gross_before_fees_cents),[3000,9000,null,null]);
+});
+test('Positive-price cohort cannot claim payment gross without a completed order or vice versa',()=>{
+ const a=example();
+ for(const first of [row(7,1,0,0,0),row(7,0,0,100,0)]){
+  assert.throws(()=>auditConsentedItchSalesWindows({...a,cumulative:[first,null,null,null]}),
+   /Captured paid-order counts and positive gross must agree/);
+ }
+ const zero=auditConsentedItchSalesWindows({...a,cumulative:[
+  row(7,0,0,0,0),row(30,0,0,0,0),null,null
+ ]});
+ assert.equal(zero.horizons[1].retained_paid_orders,0);
+ assert.equal(zero.horizons[2].retained_paid_orders,null);
+});
