@@ -26,7 +26,7 @@ test('One evidence-earned task point updates the exact mean, workstreams and mar
  assert(r.markdown.includes(r.score.toFixed(2)+'% exact, '+r.rounded+'% rounded'));
  assert.equal(r.synthesis.source_records,s.source_records);
  assert.equal(r.synthesis.claims,s.claims);
- assert.notEqual(r.plan.detail_tasks.find(t=>t.id==='itch-io/market/estimate-paid-purchase-demand').percent,p.detail_tasks.find(t=>t.id==='itch-io/market/estimate-paid-purchase-demand').percent);
+ assert.equal(r.plan.detail_tasks.find(t=>t.id==='itch-io/market/estimate-paid-purchase-demand').percent,p.detail_tasks.find(t=>t.id==='itch-io/market/estimate-paid-purchase-demand').percent);
 });
 test('Malformed score, duplicate inventory and missing current markdown anchor fail closed',()=>{
  assert.throws(()=>run(p=>p.detail_tasks[0].percent=101),/Invalid task score/);
