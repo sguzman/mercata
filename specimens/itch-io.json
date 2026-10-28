@@ -2462,6 +2462,39 @@
       "evidence_class": "dated_2026_owner_versus_delegated_admin_export_issue_with_operator_reported_fix",
       "license": "Independently authored issue metadata interpretation and links; no copied screenshots, identifying CSV data or full user comment reproduction.",
       "notes": "Report created Feb 12, 2026: project admin could view payments but not CSV while owner could. Later operator reply says should now be possible. Issue closed as completed July 16, 2026; do not portray bug as unresolved or universally verify administrator access."
+    },
+    {
+      "id": "zenodo-official-reuse-policies",
+      "url": "https://about.zenodo.org/policies/",
+      "title": "Zenodo first-party general policies",
+      "publisher": "CERN / Zenodo public source",
+      "published_at": null,
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "dataset_publication_and_reuse_rights_evidence",
+      "license": "Cited, independently summarized public record only; no dataset contents reused.",
+      "notes": "Host documentation distinguishes public record metadata from deposited files. Publication date not independently confirmed."
+    },
+    {
+      "id": "zenodo-terms-v1-3-rights",
+      "url": "https://about.zenodo.org/terms/",
+      "title": "Zenodo Terms of Use v1.3",
+      "publisher": "CERN / Zenodo public source",
+      "published_at": null,
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "dataset_publication_and_reuse_rights_evidence",
+      "license": "Cited, independently summarized public record only; no dataset contents reused.",
+      "notes": "Host documentation distinguishes public record metadata from deposited files. Publication date not independently confirmed."
+    },
+    {
+      "id": "zenodo-dipio-original-restricted-version",
+      "url": "https://zenodo.org/records/14173085",
+      "title": "Earlier version of itch.io reproducibility study deposit",
+      "publisher": "CERN / Zenodo public source",
+      "published_at": null,
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "dataset_publication_and_reuse_rights_evidence",
+      "license": "Cited, independently summarized public record only; no dataset contents reused.",
+      "notes": "Earlier public record lists restricted files; later 2025 record lists downloadable files. Neither access state licenses embedded games."
     }
   ],
   "claims": [
@@ -7729,6 +7762,39 @@
       "confidence": "high",
       "observed_at": "2026-10-27",
       "limitations": "This is a protocol from historical operator capabilities, not a received or sampled 2026 merchant ledger. Refund-adjusted seller net cash and population inclusion remain unverified."
+    },
+    {
+      "id": "zenodo-metadata-cc0-files-separate",
+      "text": "Zenodo licenses record metadata for CC0 reuse subject to the email-address exception, while deposited files follow their own licenses.",
+      "source_ids": [
+        "zenodo-official-reuse-policies",
+        "zenodo-terms-v1-3-rights"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Metadata permission does not independently grant permission to redistribute selected game software or source files."
+    },
+    {
+      "id": "zenodo-no-transfer-of-file-IP",
+      "text": "Zenodo's current terms assign deposit rights responsibility to uploaders and do not transfer intellectual property rights when files are downloaded.",
+      "source_ids": [
+        "zenodo-terms-v1-3-rights"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "General service policy only; no per-file LICENSE statements inspected."
+    },
+    {
+      "id": "zenodo-itch-game-research-version-access-not-rights",
+      "text": "The prior version of the cited itch.io game reproducibility archive lists restricted files while the later v2 version lists downloadable files including selected_games.zip reported at 5.8 GB; access is not authorization to republish every included game.",
+      "source_ids": [
+        "dipio-2025-zenodo-dataset",
+        "zenodo-dipio-original-restricted-version",
+        "zenodo-official-reuse-policies"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Record metadata only; no archive downloads, per-game rights assessment or independent data-sales audit."
     }
   ],
   "observations": [

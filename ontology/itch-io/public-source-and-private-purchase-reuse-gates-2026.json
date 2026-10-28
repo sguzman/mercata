@@ -8,13 +8,16 @@
     "itch-terms",
     "itch-serverside-api-reference",
     "itch-privacy-march-2026",
-    "dipio-2025-zenodo-dataset"
+    "dipio-2025-zenodo-dataset",
+    "zenodo-official-reuse-policies",
+    "zenodo-terms-v1-3-rights",
+    "zenodo-dipio-original-restricted-version"
   ],
   "population": "Mercata's cited public material and potential seller-authorized itch.io analytics; no actual private purchaser files",
   "unit": "a source record, data field, API operation, permission gate, or reuse contract",
   "dossier_review": {
-    "source_records": 222,
-    "bounded_claim_records": 512,
+    "source_records": 225,
+    "bounded_claim_records": 515,
     "all_sources_have_retrieval_date": true,
     "all_sources_have_reuse_note": true,
     "all_claim_source_ids_grounded": true,
@@ -48,12 +51,18 @@
     {
       "id": "linked_zenodo_dataset_metadata",
       "source_ids": [
-        "dipio-2025-zenodo-dataset"
+        "dipio-2025-zenodo-dataset",
+        "zenodo-official-reuse-policies",
+        "zenodo-terms-v1-3-rights",
+        "zenodo-dipio-original-restricted-version"
       ],
       "can_use": "bibliographic_record_and_archive_link_metadata",
       "must_not_assume": "all_files_in_archive_share_a_permissive_license_or_can_be_bulk_copied",
       "private_consent_required": false,
-      "full_archive_redistribution_clearance": null
+      "full_archive_redistribution_clearance": null,
+      "metadata_cc0_excluding_email": true,
+      "file_licenses_checked": false,
+      "dataset_open_access_is_right_to_bulk_redistribute": false
     },
     {
       "id": "publisher_account_analytics",
@@ -106,7 +115,8 @@
     "retain_source_url_author_and_exact_observation_date",
     "do_not_treat_a_source-register_license_note_as_actual_upstream_license",
     "verify_publisher_has_rights_to_game_assets_before_commercial_publication",
-    "do_not_use_software_API_documentation_as_authorization_for_bulk_scraping_or_third_party_reuse"
+    "do_not_use_software_API_documentation_as_authorization_for_bulk_scraping_or_third_party_reuse",
+    "record_metadata_CC0_does_not_license_uploaded_game_files_or_embedded_assets"
   ],
   "research_acceptance": {
     "source_record_provenance_complete": true,

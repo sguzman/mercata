@@ -1,0 +1,33 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+test('Open Zenodo study metadata is not blanket permission to copy source games',()=>{
+ const a=read('ontology/itch-io/source-reuse-record-completeness-2026.json');
+ const s=read('specimens/itch-io.json');
+ assert(a.source_ids.every(x=>s.evidence.some(z=>z.id===x)));
+ const v=a.dataset_record_reuse_assessment.version_rights_review;
+ assert.equal(v.earlier_files_restricted,true);
+ assert.equal(v.later_files_listed_downloadable,true);
+ assert.equal(v.zenodo_metadata_cc0_except_email,true);
+ assert.equal(v.zenodo_file_reuse_requires_own_license,true);
+ assert.equal(v.zenodo_open_file_implies_right_to_redistribute_embedded_games,false);
+ assert.equal(v.archive_downloaded,false);
+ assert.equal(v.all_files_cleared_for_republication,null);
+ assert.equal(a.dataset_record_reuse_assessment.full_archive_license_review_complete,false);
+});
+test('Licensed metadata and unlicensed underlying content retain separate permission gates',()=>{
+ const d=read('ontology/itch-io/public-source-and-private-purchase-reuse-gates-2026.json');
+ const q=read('queues/itch-io.json'),p=read('plans/itch-io.json');
+ const c=d.classes.find(x=>x.id==='linked_zenodo_dataset_metadata');
+ assert.equal(c.metadata_cc0_excluding_email,true);
+ assert.equal(c.file_licenses_checked,false);
+ assert.equal(c.dataset_open_access_is_right_to_bulk_redistribute,false);
+ assert.equal(d.research_acceptance.all_external_copyright_and_database_reuse_cleared,false);
+ const t=q.queues.flatMap(x=>x.tasks).find(x=>x.id==='rights/reuse');
+ assert.equal(t.progress,94);
+ assert.equal(t.status,'in_progress');
+ assert(t.evidence.includes('tests/itch-zenodo-reuse-boundary.test.mjs'));
+ assert.equal(p.total_tracked_tasks,244);
+ assert.equal(p.progress_percent,97);
+});
