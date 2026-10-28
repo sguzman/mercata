@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "model_zero_missingness_bound_not_actual_no_sales_rate",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-egmatic-jan2026-analysis",
+    "steam-gdc-jan2026-public-sheet",
+    "steam-financial-api-official",
+    "steam-gdc-2026-jan-cohort-primary",
+    "steam-retire-app-official",
+    "steam-applications-official"
+  ],
+  "claim_ids": [
+    "modelzero-observed412of1211",
+    "modelzero-minimum-on-full1230",
+    "modelzero-maximum-on-full1230",
+    "modelzero-observed-denominator-distinct",
+    "modelzero-truezero-notbounded",
+    "modelzero-provider-not-independent-census",
+    "modelzero-not-publisher-zeros"
+  ],
+  "input": {
+    "cohort_listed_titles": 1230,
+    "models_with_estimates": 1211,
+    "modeled_zero_copy_entries": 412,
+    "missing_model_estimates": 19
+  },
+  "fractions": {
+    "within_estimated_subset": 0.34021469859620146,
+    "lower_if_none_missing_zero": 0.33495934959349594,
+    "upper_if_all_missing_zero": 0.35040650406504065
+  },
+  "assumptions": [
+    "Use the same 1230 provider-defined January 2026 listed game cohort",
+    "Keep original estimates unchanged",
+    "Assign the 19 unavailable estimates to either modeled zero or nonzero to form mathematical bounds",
+    "Do not assume missing model values or model-zero titles had zero real transactions"
+  ],
+  "unknown": {
+    "real_exact_zero_copy_rate": null,
+    "real_zero_earnings_publisher_rate": null,
+    "original_paid_cohort_population_exhaustiveness": null,
+    "actual_transactions": null
+  },
+  "raw_spreadsheet_downloaded": false
+}

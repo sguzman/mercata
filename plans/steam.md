@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## January 2026 modeled-zero missingness sensitivity
+
+The [modeled-zero missingness check](../ontology/steam/january-2026-modeled-zero-missingness-2026.md) explicitly bounds what 19 unavailable model estimates could change in a 1,230-game provider-defined cohort, while **not** converting model-zero labels to true zero-sales claims. [Synthetic arithmetic verification](../site/steam-modeled-zero-bounds.mjs) is included. **Score 84%** (exact 83.703%; Δ +0 pp from 84%), original 293 tasks.
+
 ## Steam evidence and progress integrity checkpoint
 
 The [public Steam task/source audit](../ontology/steam/public-evidence-integrity-2026.md) and its negative-path [regression tests](../tests/steam-evidence-integrity.test.mjs) now run inside the repository verification command. All 293 tasks have at least some scored research, but 229 remain partially researched and representative publisher income is still unknown. **Score 84%** (exact 83.549%, Δ +1 pp from 83%).
@@ -459,4 +463,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 84%** rounded task-weighted progress across 293 tasks; prior 83%, Δ +1 pp (exact 83.549%). 64 fully scored and 229 partly researched. 108 public sources, 552 bounded claims. Public-source integrity is now part of automated verification; actual publisher earnings remain unknown.
+**Completion: 84%** rounded task-weighted progress across 293 tasks; previous 84%, Δ +0 pp (exact 83.703%). 64 fully verified, 229 partly researched; 108 public sources and 559 bounded claims. Model-zero is not observed zero paid transactions.

@@ -6902,6 +6902,81 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Publisher, title, timing and region variation unresolved without permissioned representative records."
+    },
+    {
+      "id": "modelzero-observed412of1211",
+      "text": "Egmatic's reanalysis reports 412 GameDiscoverCo modeled-zero-copy entries among 1,211 January 2026 cohort games with copy estimates.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "These are model outputs rather than completed Valve transactions; 19 of 1,230 titles lack estimates in this subanalysis."
+    },
+    {
+      "id": "modelzero-minimum-on-full1230",
+      "text": "If none of the 19 unestimated entries were labeled zero, the modeled-zero share of all 1,230 listed games would be 412/1,230, approximately 33.50%.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis",
+        "steam-gdc-jan2026-public-sheet"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a conditional arithmetic lower bound on the provider's modeled-zero label, not on the true fraction of zero-sale games."
+    },
+    {
+      "id": "modelzero-maximum-on-full1230",
+      "text": "If all 19 unestimated entries were labeled zero, the modeled-zero share would be 431/1,230, approximately 35.04%.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis",
+        "steam-gdc-jan2026-public-sheet"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a conditional arithmetic upper bound if the provider's listed population is retained; missing values are not measured observations."
+    },
+    {
+      "id": "modelzero-observed-denominator-distinct",
+      "text": "The available-model-case percentage 412/1,211 is approximately 34.02%, whereas an all-listed-game percentage must use 1,230 as denominator.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The three percentages answer different questions, and no denominator permits identification of actual purchase zeroes."
+    },
+    {
+      "id": "modelzero-truezero-notbounded",
+      "text": "The 33.50–35.04% interval only bounds modeled-zero labels under missing-estimate assumptions; it does not bound real Steam zero-paid-order prevalence.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "All estimated-zero games might have real paid units and some nonzero model estimates could be wrong; true zero status requires complete authorized records."
+    },
+    {
+      "id": "modelzero-provider-not-independent-census",
+      "text": "The 1,230 entry cohort was defined by GameDiscoverCo and has not been checked against a historical complete registry of initially paid releases and delisted games.",
+      "source_ids": [
+        "steam-gdc-2026-jan-cohort-primary",
+        "steam-retire-app-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The entire underlying cohort frame may omit eligible games; no independence from original estimator is established."
+    },
+    {
+      "id": "modelzero-not-publisher-zeros",
+      "text": "Even a complete AppID-level zero-copy model would not give the fraction of publisher companies earning no revenue.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis",
+        "steam-applications-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "One publisher may release multiple titles, hold licensed portfolios and earn from other platforms; legal partner data absent."
     }
   ],
   "observations": [],
@@ -6909,5 +6984,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research distinguishes period refunds from original paid purchase cohorts, adding developer refund reporting constraints and mathematical synthetic checks. Representative developer income and actual refunds remain unknown."
+  "summary": "Steam public research includes model-zero missingness sensitivity over an existing January 2026 estimated release cohort; the actual exact-zero paid order fraction and publisher earnings remain unknown."
 }
