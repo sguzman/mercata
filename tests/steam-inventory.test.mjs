@@ -17,7 +17,7 @@ test('Existing Steam specimen is retained with original identity and untouched r
  assert.equal(entry.status,d.status);
  assert.equal(entry.plan,'plans/steam.json');
  assert.equal(q.plan,entry.plan);
- assert.equal(entry.planning_state,'inventory_ready');
+ assert.equal(entry.planning_state,d.status==='queued'?'inventory_ready':'researching');
 });
 test('All 84 baseline tasks are immutable, unresearched and retain their original queue structure',()=>{
  const core=json('pipeline/queues.json'),special=json('pipeline/domains.json').domains.find(x=>x.id==='games');
