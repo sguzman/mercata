@@ -47,7 +47,7 @@ test('Two pre-existing unfinished detail tasks receive bounded annual and paymen
  assert.equal(p.detail_tasks.length,160);
  for(const [id,pct] of [['itch-io/market/estimate-paid-purchase-demand',71],['itch-io/risk/study-sales-volatility',94]]){
   const t=p.detail_tasks.find(t=>t.id===id);assert(t);
-  assert.equal(t.percent,pct);assert.equal(t.status,'in_progress');
+  assert(t.percent>=pct&&t.percent<100);assert.equal(t.status,'in_progress');
   for(const f of [file,'ontology/itch-io/2024-2026-tabletop-receipts-and-listing-price-confounds.md','tests/itch-tabletop-2024-2026-price-confounds.test.mjs'])assert(t.evidence.includes(f));
  }
 });

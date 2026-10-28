@@ -2627,6 +2627,28 @@
       "evidence_class": "first_party_historical_industry_survey_conditional_merchant_revenue_share",
       "license": "Short independently paraphrased numbers from organizer press release, with attribution; neither PDF, chart nor respondent data republished.",
       "notes": "Nearly 4,000 general respondents; itch-seller subgroup: 52% under 10% and 28% 75–100% of own store-sales revenue through itch. Merchant subgroup n unknown; 2019 not 2026. Separate Steam-merchant conditional percentages. Not a census or 2026 GMV."
+    },
+    {
+      "id": "odds-ents-finance-2024",
+      "url": "https://itch.io/blog/851643/2024-finances",
+      "title": "2024 Finances",
+      "publisher": "Odds & Ents (first-party creator retrospective)",
+      "published_at": "2024-12-16",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "single_creator_multichannel_partial_year_cash_disclosure",
+      "license": "Short sourced numerical statements and original reconciliation only; no original images, full text or buyer data copied.",
+      "notes": "Partial period 2024-01-01 to Dec 14, mixed assets and freelance. Itch $378.99; stated total $5454.04, expenses $936.70, profit $4517.26 ($0.08 below arithmetic). One selected publisher, not income population."
+    },
+    {
+      "id": "odds-ents-finance-2025",
+      "url": "https://itch.io/blog/1137874/2025-finances",
+      "title": "2025 Finances",
+      "publisher": "Odds & Ents (first-party creator retrospective)",
+      "published_at": "2025-12-09",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "single_creator_multichannel_partial_year_cash_disclosure",
+      "license": "Short sourced numerical statements and original reconciliation only; no original images, full text or buyer data copied.",
+      "notes": "Partial period through Dec 8, itch mixed asset/zine receipts $820. Listed revenue categories $8810 vs $8850 stated total ($40 unresolved); all-business $6835 claimed profit not itch net income. Same publisher as 2024."
     }
   ],
   "claims": [
@@ -8180,6 +8202,57 @@
       "confidence": "high",
       "observed_at": "2026-10-27",
       "limitations": "2025 includes free and similar-platform publishing, 2019 measures historic selling merchants, and neither establishes a representative current paid-seller population."
+    },
+    {
+      "id": "odds-ents-2024-2025-paired-itch-cash-figures",
+      "text": "One creator reported itch-channel receipts labeled $378.99 in a 2024 partial-year finance review and $820 in a 2025 partial-year review, a $441.01 nominal difference for unequal time windows.",
+      "source_ids": [
+        "odds-ents-finance-2024",
+        "odds-ents-finance-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Changed asset/zine portfolio and differing year-end cutoffs; cannot infer growth in mandatory paid-game sales or market annual earnings."
+    },
+    {
+      "id": "odds-ents-2025-listed-cash-columns-under-total-40",
+      "text": "The creator's listed 2025 revenues $6480 freelance, $1338 art markets, $115 Etsy, $820 itch and $57 other online sum to $8810, which is $40 below the stated total $8850.",
+      "source_ids": [
+        "odds-ents-finance-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Accounting mismatch source unknown; do not create an unreported $40 income line or allege false reporting."
+    },
+    {
+      "id": "odds-ents-2024-eight-cent-reported-profit-difference",
+      "text": "The creator's 2024 $5454.04 stated revenue less $936.70 expenses equals $4517.34, while stated profit was $4517.26, an unexplained eight-cent difference.",
+      "source_ids": [
+        "odds-ents-finance-2024"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Source reports offsets for software subscriptions but does not reconcile the tiny difference; no records to adjudicate reported figure."
+    },
+    {
+      "id": "odds-ents-2025-all-business-profit-not-game-profit",
+      "text": "The creator's 2025 total $6835 profit after $2015 expenses describes a business including freelance design and art markets; neither the $820 itch channel label nor profit establishes after-cost income from itch game sales.",
+      "source_ids": [
+        "odds-ents-finance-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Product mix, royalties, tax treatment and labor allocation vary; no source-verified sale/order ledger or paid-game cohort."
+    },
+    {
+      "id": "odds-ents-2025-asset-packs-zines-update-not-games",
+      "text": "The same creator's 2025 itch work includes six new asset packs, two zines and one major asset update, not nine new mandatory-paid videogame launches.",
+      "source_ids": [
+        "odds-ents-finance-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Creator-level activity list cannot be mapped to catalog release counts, unique buyers or commercial video-game sale demand."
     }
   ],
   "observations": [

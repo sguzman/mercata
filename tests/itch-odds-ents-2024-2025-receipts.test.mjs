@@ -1,0 +1,32 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const get=x=>JSON.parse(fs.readFileSync(new URL('../'+x,import.meta.url),'utf8'));
+const file='ontology/itch-io/2024-2025-odds-ents-multichannel-receipts.json';
+test('Original two-period creator cash sums preserve source's discrepancies and different store product mix',()=>{
+ const x=get(file),d=get('specimens/itch-io.json'),[a,b]=x.years;
+ assert(x.source_ids.every(id=>d.evidence.some(e=>e.id===id)));
+ assert.equal(x.sample.publishers,1);assert.equal(x.sample.reported_windows_full_years,false);
+ assert.equal(a.window_end,'2024-12-14');assert.equal(b.window_end,'2025-12-08');
+ assert.equal(a.reported_dollars.itch,378.99);assert.equal(b.reported_dollars.itch,820);
+ const cent=n=>Math.round(n*100);
+ assert.equal(cent(Object.values(a.reported_dollars).reduce((s,v)=>s+v,0)),545404);
+ assert.equal(cent(Object.values(b.reported_dollars).reduce((s,v)=>s+v,0)),881000);
+ assert.equal(cent(b.listed_revenue_sum_dollars-b.stated_total_revenue_dollars),-4000);
+ assert.equal(cent(a.stated_total_profit_dollars-(a.stated_total_revenue_dollars-a.stated_total_expenses_dollars)),-8);
+ assert.equal(cent(b.stated_total_profit_dollars-(b.stated_total_revenue_dollars-b.stated_total_expenses_dollars)),0);
+ assert.equal(x.comparisons.nominal_itch_channel_label_difference_dollars,441.01);
+ assert.equal(x.comparisons.annualized_itch_income_growth_percent,null);
+ assert.equal(x.comparisons.independent_sellers_in_two_years,1);
+ assert.equal(b.itch_asset_packs_new,6);assert.equal(b.itch_zines_new,2);
+ assert.equal(b.itch_asset_updates_major,1);
+ assert(Object.values(x.unknown).every(v=>v===null));
+});
+test('One original volatility task advances and 244 task inventory stays fixed',()=>{
+ const p=get('plans/itch-io.json'),q=get('queues/itch-io.json');
+ assert.equal(p.total_tracked_tasks,244);assert.equal(p.detail_tasks.length,160);
+ assert.equal(q.queues.flatMap(w=>w.tasks).length,84);
+ const t=p.detail_tasks.find(t=>t.id==='itch-io/risk/study-sales-volatility');
+ assert.equal(t.percent,95);assert.equal(t.status,'in_progress');
+ for(const f of [file,'ontology/itch-io/2024-2025-odds-ents-multichannel-receipts.md','tests/itch-odds-ents-2024-2025-receipts.test.mjs'])assert(t.evidence.includes(f));
+});
