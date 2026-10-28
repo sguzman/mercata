@@ -2616,6 +2616,17 @@
       "evidence_class": "first_party_2026_first_game_zero_sales_misconfigured_listing_caveat",
       "license": "Brief source-attributed facts and new methodological analysis only; no creative work or screenshots reproduced.",
       "notes": "First game creator disclosed zero sales when correcting misconfigured donation tier/additive pricing; intended multiplayer price at most USD 9.99; store price and post-fix sales were not independently verified."
+    },
+    {
+      "id": "gdc-2019-pc-mac-store-sales-share-survey",
+      "url": "https://www.globenewswire.com/news-release/2019/01/24/1705090/0/en/Game-Developers-Conference-Releases-2019-State-of-the-Industry-Survey-Showing-Nearly-Half-of-Respondents-Supporting-Unionization.html",
+      "publisher": "Game Developers Conference (organizer)",
+      "title": "2019 State of the Industry Survey, storefront revenues by merchant",
+      "published_at": "2019-01-24",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_historical_industry_survey_conditional_merchant_revenue_share",
+      "license": "Short independently paraphrased numbers from organizer press release, with attribution; neither PDF, chart nor respondent data republished.",
+      "notes": "Nearly 4,000 general respondents; itch-seller subgroup: 52% under 10% and 28% 75–100% of own store-sales revenue through itch. Merchant subgroup n unknown; 2019 not 2026. Separate Steam-merchant conditional percentages. Not a census or 2026 GMV."
     }
   ],
   "claims": [
@@ -8128,6 +8139,47 @@
       "confidence": "high",
       "observed_at": "2026-10-27",
       "limitations": "Three nonrandom publishers, unequal pricing methods, tabletop-versus-digital product differences, reporting horizons, currencies and missing exposure denominators."
+    },
+    {
+      "id": "gdc-2019-itch-store-small-sales-share",
+      "text": "Among GDC's surveyed 2019 itch-selling game developers, 52% said itch.io made up less than 10% of their own game-sales revenue.",
+      "source_ids": [
+        "gdc-2019-pc-mac-store-sales-share-survey"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Industry-professional nonrandom survey, older than seven years; conditional merchant subgroup n unknown, not a measure of all store sales or merchant income."
+    },
+    {
+      "id": "gdc-2019-itch-store-large-sales-share",
+      "text": "Among GDC's surveyed 2019 itch-selling game developers, 28% reported itch.io contributed 75–100% of their own game-sales revenue.",
+      "source_ids": [
+        "gdc-2019-pc-mac-store-sales-share-survey"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Within-seller revenue dependence is not total USD receipts, seller profitability, or a full market population estimate."
+    },
+    {
+      "id": "gdc-2019-steam-store-merchant-conditional-distinct",
+      "text": "GDC reported about 47% of people answering its PC/Mac store question sold on Steam; among Steam-selling respondents, 54% derived 75–100% and 17% derived 50–74% of their sales revenue from Steam.",
+      "source_ids": [
+        "gdc-2019-pc-mac-store-sales-share-survey"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Storefront-question respondents and conditional Steam sellers are different denominators; neither matches the itch merchant subgroup."
+    },
+    {
+      "id": "gdc-2019-merchants-vs-gamedevjs-2025-publication-denominator",
+      "text": "GDC 2019's conditional share of a seller's store revenue cannot be trended against Gamedev.js 2025's 67.4% publication on itch.io or similar platforms; these are different questions and developer samples.",
+      "source_ids": [
+        "gdc-2019-pc-mac-store-sales-share-survey",
+        "gamedevjs-web-survey-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "2025 includes free and similar-platform publishing, 2019 measures historic selling merchants, and neither establishes a representative current paid-seller population."
     }
   ],
   "observations": [
