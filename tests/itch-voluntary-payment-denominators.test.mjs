@@ -24,15 +24,17 @@ test('Audit prevents cross-platform downloads and optional receipts from being c
  assert.equal(a.claimedUsd,38);
  assert.equal(a.invalidForPaidGameDemand,true);assert.equal(a.singleStoreDownloadScope,false);
  assert.equal(a.invalidForDownloadToPaymentConversion,true);assert.equal(a.purchaseConversion,null);
- assert.equal(a.verifiedMandatoryPricePaidOrders,null);assert.equal(a.netSellerProfit,null);
+ assert.equal(a.authorReportedMandatoryPricePaidOrders,null);assert.equal(a.netSellerProfit,null);
  const b=auditVoluntaryPaymentDenominators({accessMode:'free_pwyw',reportedUsd:2,downloadPlatforms:['itch.io'],paidOrderCount:1,matchedWindow:true});
- assert.equal(b.verifiedMandatoryPricePaidOrders,null);
+ assert.equal(b.authorReportedMandatoryPricePaidOrders,null);
  assert.equal(b.purchaseConversion,null);
 });
 
 test('Even mandatory-price orders cannot be converted from raw download events to unique customer conversion',()=>{
  const a=auditVoluntaryPaymentDenominators({accessMode:'mandatory_positive_price',reportedUsd:12,downloadEvents:30,downloadPlatforms:['itch.io'],paidOrderCount:2,matchedWindow:true});
- assert.equal(a.verifiedMandatoryPricePaidOrders,2);assert.equal(a.purchaseConversion,null);
+ assert.equal(a.authorReportedMandatoryPricePaidOrders,2);assert.equal(a.purchaseConversion,null);
+ assert.equal(a.invalidForDownloadToPaymentConversion,true);
+ assert.equal(a.absentLinkedUniqueCustomers,true);
  for(const invalid of [
  {accessMode:'free_pwyw',reportedUsd:-1,downloadPlatforms:['itch.io']},
  {accessMode:'unknown',reportedUsd:2,downloadPlatforms:['itch.io']},

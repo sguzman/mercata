@@ -16,14 +16,15 @@ export function auditVoluntaryPaymentDenominators({accessMode,reportedUsd,downlo
   claimedUsd:reportedUsd,downloadEventCount:downloadEvents,
   downloadPlatforms:Object.freeze([...downloadPlatforms]),receiptPlatform,accessMode,
   mandatoryPositivePrice:mandatory,
-  verifiedMandatoryPricePaidOrders:mandatory?paidOrderCount:null,
-  paidOrderDenominatorMissing:paidOrderCount===null,
+  authorReportedMandatoryPricePaidOrders:mandatory?paidOrderCount:null,
+  reportedPaidOrderCountMissing:paidOrderCount===null,
   singleStoreDownloadScope:samePlatform,
-  sameReportedPeriod:matchedWindow,
+  windowAlignmentReported:matchedWindow,
   uniquePayingCustomers:null,uniqueDownloaders:null,
   purchaseConversion:null,netSellerProfit:null,
   invalidForPaidGameDemand:!mandatory,
-  invalidForDownloadToPaymentConversion:!samePlatform||!matchedWindow||paidOrderCount===null,
-  note:'Downloads are not deduplicated buyers and optional payments are not mandatory game sales; no unique customer conversion is estimated.'
+  invalidForDownloadToPaymentConversion:true,
+  absentLinkedUniqueCustomers:true,
+  note:'Author-reported orders are not independently verified. Download events are not deduplicated buyers and optional payments are not mandatory game sales; no unique customer conversion is estimated.'
  });
 }
