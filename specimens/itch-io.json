@@ -2715,6 +2715,39 @@
       "evidence_class": "first_party_historical_itch_paid_listing_price_and_promotion",
       "license": "Price, discount and end-time facts referenced and attributed; no seller images or original page republished.",
       "notes": "Spring 2024 offer expired Mar 21 2024, listing $3.49 (30% off $4.99). Offer does not prove transaction receipts or uniform price across channels."
+    },
+    {
+      "id": "the-hive-2025-creator-sales",
+      "url": "https://skydome.itch.io/thehive/devlog/1142956/itchio-sales-reality-check-and-why-it-doesnt-mean-your-game-is-bad",
+      "published_at": "2025-12-14",
+      "title": "Itch.io sales reality check (and why it doesn't mean your game is bad)",
+      "notes": "The Hive: 17,000 views, 414 sales, USD 706.73 total revenue, approximately 113,000 Steam copies; no audited source export.",
+      "retrieved_at": "2026-10-28",
+      "publisher": "Skydome Entertainment (first-party game creator)",
+      "evidence_class": "first_party_named_game_public_creator_metric_report",
+      "license": "Only brief attributed public numerical figures and independent interpretation; no third-party image or article text reproduced."
+    },
+    {
+      "id": "the-hive-2026-may-creator-payments",
+      "url": "https://skydome.itch.io/thehive/devlog/1532607/we-are-now-richer-than-jeff-bezos-on-itchio",
+      "published_at": "2026-05-24",
+      "title": "We Are Now Richer Than Jeff Bezos (On itch.io)",
+      "notes": "Same The Hive creator: 24,800 views, 141 payments, 510 downloads and USD 819.44 gross revenue. Earlier sales label not reconciled.",
+      "retrieved_at": "2026-10-28",
+      "publisher": "Skydome Entertainment (first-party game creator)",
+      "evidence_class": "first_party_named_game_public_creator_metric_report",
+      "license": "Only brief attributed public numerical figures and independent interpretation; no third-party image or article text reproduced."
+    },
+    {
+      "id": "the-hive-2026-july-creator-feature-visits",
+      "url": "https://skydome.itch.io/thehive/devlog/1588098/we-got-featured-on-the-itchio-front-page-here-is-what-other-developers-can-expect",
+      "published_at": "2026-07-16",
+      "title": "We got featured on the Itchio front page. Here is what other developers can expect",
+      "notes": "Same creator: usual visits 50–150 daily; about 7,000 visits accumulated during active front-page feature. No finalized corresponding order total.",
+      "retrieved_at": "2026-10-28",
+      "publisher": "Skydome Entertainment (first-party game creator)",
+      "evidence_class": "first_party_named_game_public_creator_metric_report",
+      "license": "Only brief attributed public numerical figures and independent interpretation; no third-party image or article text reproduced."
     }
   ],
   "claims": [
@@ -8526,6 +8559,58 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "This is a product-identity example; distinct additional franchise titles, if any, require separate release and payment evidence."
+    },
+    {
+      "id": "hive-2025-sales-views-cash",
+      "text": "In December 2025 The Hive developer reported 17,000 itch.io page views, 414 sales and USD 706.73 total revenue.",
+      "source_ids": [
+        "the-hive-2025-creator-sales"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "No verified accounting window, merchant export or fee basis."
+    },
+    {
+      "id": "hive-2026-payments-gross",
+      "text": "In May 2026 the same developer reported 24,800 page views, 141 payments, 510 downloads and USD 819.44 gross revenue.",
+      "source_ids": [
+        "the-hive-2026-may-creator-payments"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Self-reported payment and view counters, not verified buyer-unique transactions."
+    },
+    {
+      "id": "hive-sales-and-payments-incompatible",
+      "text": "December's 414 'sales' and May's later 141 'payments' do not form a valid cumulative paid-order series absent reconciled event definitions.",
+      "source_ids": [
+        "the-hive-2025-creator-sales",
+        "the-hive-2026-may-creator-payments"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "No inference of negative sales, fabricated accounts or decreasing net revenue."
+    },
+    {
+      "id": "hive-active-feature-traffic",
+      "text": "In July 2026 the publisher reported usual 50–150 visits per day and approximately 7,000 visits during an itch.io front-page feature that had not yet ended.",
+      "source_ids": [
+        "the-hive-2026-july-creator-feature-visits"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Different periods, no matched paid orders, multiple potential awareness channels."
+    },
+    {
+      "id": "hive-selected-seller-not-market-rate",
+      "text": "The Hive publisher also self-reported about 113,000 Steam copies, but remains one selected creator with no costed, zero-sale-inclusive or period-matched itch seller population.",
+      "source_ids": [
+        "the-hive-2025-creator-sales",
+        "the-hive-2026-may-creator-payments"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Cannot estimate platform-wide sales, conversion, seller median or creator profit."
     }
   ],
   "observations": [

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "one_creator_multi_date_itch_sales_payments_traffic_accounting_boundaries",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "the-hive-2025-creator-sales",
+    "the-hive-2026-may-creator-payments",
+    "the-hive-2026-july-creator-feature-visits"
+  ],
+  "creator": "Skydome Entertainment",
+  "game": "The Hive",
+  "seller_count": 1,
+  "verified_account_export": false,
+  "december_2025": {
+    "date": "2025-12-14",
+    "page_views": 17000,
+    "reported_sales_label": 414,
+    "revenue_usd_label_total": 706.73,
+    "approx_steam_copies": 113000
+  },
+  "may_2026": {
+    "date": "2026-05-24",
+    "page_views_approx": 24800,
+    "reported_payments_label": 141,
+    "gross_revenue_usd": 819.44,
+    "downloads": 510
+  },
+  "july_2026": {
+    "date": "2026-07-16",
+    "usual_daily_visits_approx_lower": 50,
+    "usual_daily_visits_approx_upper": 150,
+    "visits_during_ongoing_feature_approx": 7000,
+    "feature_complete_at_report": false,
+    "paid_orders_during_feature": null,
+    "competing_publicity_possible": true
+  },
+  "accounting": {
+    "prior_sales_label_exceeds_later_payments_label": true,
+    "sales_and_payments_same_event_definition_verified": false,
+    "valid_cumulative_paid_order_series": false,
+    "valid_comparable_net_revenue_delta": false,
+    "feature_visits_valid_paid_order_conversion_denominator": false
+  },
+  "unknown": {
+    "actual_transaction_count": null,
+    "unique_buyers": null,
+    "net_after_fees": null,
+    "profit_after_costs": null,
+    "representative_seller_median": null,
+    "representative_zero_sale_rate": null,
+    "causal_feature_to_purchase_lift": null
+  },
+  "limits": [
+    "Three reports about one game count as one selected merchant, not three independent sellers.",
+    "The earlier 414 sales versus later 141 payments require reconciled event definitions before cumulative sales can be compared.",
+    "Total revenue and gross revenue labels do not establish equal fee bases.",
+    "July feature observations were incomplete and the before-versus-during exposure periods differ.",
+    "No representative zero-sale seller cohort, transaction export or causal feature-order attribution."
+  ]
+}
