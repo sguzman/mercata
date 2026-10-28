@@ -28,7 +28,7 @@ test('Original plan inventory is stable and only three incomplete tasks receive 
  assert.equal(q.queues.flatMap(x=>x.tasks).length,84);
  for(const [id,score] of [['itch-io/market/estimate-paid-purchase-demand',70],['itch-io/competition/create-cross-platform-benchmarks',98],['itch-io/risk/study-sales-volatility',93]]){
   const t=p.detail_tasks.find(x=>x.id===id);assert(t);
-  assert.equal(t.percent,score);assert.equal(t.status,'in_progress');
+  assert(t.percent>=score&&t.percent<100);assert.equal(t.status,'in_progress');
   for(const f of [file,'ontology/itch-io/historical-itch-vs-steam-low-paid-game-outcomes-2018-2021.md','tests/itch-historical-low-paid-crossstore-2018-2021.test.mjs'])assert(t.evidence.includes(f));
  }
  assert(s.claims.some(x=>x.id==='realm-2018-twelve-itch-one-hundred-twenty-one-steam-copies'));

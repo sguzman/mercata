@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "selected_2024_2026_tabletop_payment_event_annual_comparison_and_first_game_listing_price_censoring",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "copper-ttrpg-2024-platform-receipts",
+    "copper-ttrpg-2025-downloads-and-payments",
+    "plane-sailing-2025-itch-multichannel-profit",
+    "27k-2026-first-game-pricing-error-zero-sales"
+  ],
+  "frame": {
+    "publishers": 3,
+    "independent_publishers": 3,
+    "documented_public_posts": 4,
+    "source_selection": "self-published creator disclosures found during nonrandom search",
+    "probability_sample": false,
+    "platform_game_categories_mixed": true,
+    "currency_years_identical_for_copper": false,
+    "product_prices_identical": false,
+    "eligible_paid_game_account_frame_available": false,
+    "merchant_account_data_accessed": false,
+    "customer_level_data_accessed": false,
+    "receipt_exports_verified": false
+  },
+  "annual_cases": [
+    {
+      "case_id": "copper_2024",
+      "source_ids": [
+        "copper-ttrpg-2024-platform-receipts"
+      ],
+      "category": "tabletop_roleplaying_games_and_supplements",
+      "reporting_year": 2024,
+      "itch_download_events": 3022,
+      "positive_payment_count_itch": null,
+      "itch_receipts_reported_after_platform_share": 54.15,
+      "currency": "USD",
+      "receipt_basis": "after_platform_share_reported_not_after_all_costs",
+      "verified_full_creator_net_profit": null,
+      "paid_game_only_receipts": null,
+      "author_issued_game_count": 10,
+      "note": "2024 table states author made no profit on total TTRPG work, but the amount is a channel receipt, not a complete financial return."
+    },
+    {
+      "case_id": "copper_2025",
+      "source_ids": [
+        "copper-ttrpg-2025-downloads-and-payments"
+      ],
+      "category": "tabletop_roleplaying_games_and_supplements",
+      "reporting_year": 2025,
+      "itch_download_events": 5440,
+      "positive_payment_count_itch": 35,
+      "itch_receipts_reported_after_platform_share": 118.26,
+      "currency": "GBP",
+      "receipt_basis": "after_itch_cut_reported_not_necessarily_after_all_processor_taxes_or_production_costs",
+      "other_channels": {
+        "convention_physical_sold_copies": 17,
+        "convention_income_gbp": 63.13,
+        "drive_thru_reported_purchase_events_including_zero_price": 257,
+        "drive_thru_positive_payment_events": 22,
+        "drive_thru_income_gbp": 24.8
+      },
+      "reported_total_sales_income_gbp": 206.19,
+      "pwyw_and_charity_bundles_included": true,
+      "verified_full_creator_net_profit": null,
+      "paid_game_only_receipts": null,
+      "author_issued_game_count": 6
+    },
+    {
+      "case_id": "plane_sailing_2025",
+      "source_ids": [
+        "plane-sailing-2025-itch-multichannel-profit"
+      ],
+      "category": "tabletop_roleplaying_games_and_supplements_and_physical_products",
+      "reporting_year": 2025,
+      "itch_receipts_reported_gbp": 13,
+      "itch_receipts_after_processor_fees_verified": null,
+      "platform_payments_count": null,
+      "itch_download_events": null,
+      "all_non_kickstarter_sales_channel_income_gbp": 2073,
+      "all_business_reported_profit_gbp": -1055,
+      "reported_whole_business_loss_includes_physical_printing_and_travel": true,
+      "itch_specific_allocation_of_business_loss": null,
+      "observed_bundle_participation_for_year": false,
+      "published_itch_game_prices_all_known": false
+    }
+  ],
+  "launch_case": {
+    "case_id": "27k_first_game_2026",
+    "source_ids": [
+      "27k-2026-first-game-pricing-error-zero-sales"
+    ],
+    "published_at": "2026-09-10",
+    "category": "digital_video_game",
+    "reported_first_game": true,
+    "reported_sales_as_of_post": 0,
+    "creator_reported_listing_price_configuration_error": true,
+    "creator_reported_donation_prices_were_additive_not_tier_alternatives": true,
+    "intended_multiplayer_version_maximum_listed_price_usd": 9.99,
+    "sale_discount_offer_percent": 50,
+    "documented_pre_fix_price_charged_usd": null,
+    "post_fix_positive_price_paid_orders": null,
+    "audited_storefront_checkout_price": null,
+    "pre_fix_sale_population_verified_with_order_export": false,
+    "actual_page_views": null,
+    "real_checkout_attempts": null,
+    "causal_conclusion_mispricing_was_sole_cause_of_zero_sales": false
+  },
+  "calculations": {
+    "copper_2024_to_2025_download_event_change": 2418,
+    "cross_currency_copper_receipts_growth_percent": null,
+    "copper_2025_sum_reported_three_channels_gbp": 206.19,
+    "copper_2025_35_payments_divided_by_5440_downloads_is_paid_checkout_conversion": false,
+    "plane_sailing_negative_whole_business_profit_is_itch_loss": false,
+    "first_game_zero_sales_proves_marketwide_failure": false
+  },
+  "acceptance_boundaries": [
+    "The 2024 and 2025 Copper reports belong to one developer; two annual rows are not independent game-seller observations.",
+    "The 2024 $54.15 and 2025 £118.26 are in different currencies; a percent change in actual money receipts needs rate/date and consistent fee basis. No cross-currency earnings growth calculation is published.",
+    "The 2024 3,022 and 2025 5,440 download events are a within-publisher activity comparison, not paid order counts; 2025's 35 positive payment events cannot be divided by downloads to estimate unique-buyer conversion.",
+    "The 2025 Copper receipts pool tabletop games and supplements, optional tips and charity bundles. They are not game-specific compulsory checkout purchases or net after all labor and costs.",
+    "Plane Sailing reported £13 of itch income but a loss of £1,055 across its whole business, including physical publishing and sales channels: the latter cannot be attributed to its itch store.",
+    "A creator-reported zero sale figure during a mistaken price setup is an observation of that listing state, not evidence of an eligible buyer cohort with a functioning intended-price checkout.",
+    "The pricing error is self-described, not independently verified via a live checkout, and no transaction totals after correction were inspected.",
+    "Different TTRPG and digital-game offerings, owner tenure, release history and self-selected visibility prevent pooling these cases for platform median, mean, zero-sales fraction, or causal conversion."
+  ],
+  "unknown": {
+    "market_paid_order_total": null,
+    "representative_premium_game_zero_sales_fraction": null,
+    "platform_creator_income_median": null,
+    "platform_creator_income_mean": null,
+    "first_game_price_correction_incremental_sales_effect": null,
+    "matched_buyer_checkout_denominator": null,
+    "comparable_full_cost_creator_profit": null
+  }
+}

@@ -2572,6 +2572,50 @@
       "evidence_class": "first_party_2026_steam_specific_units_milestone",
       "license": "Short attributed public numerical result; no images, account data or article reproduced.",
       "notes": "The developer explicitly says 50,000 units sold on Steam; this is not a verified itch buyer count, nor a matched release-window store comparison."
+    },
+    {
+      "id": "copper-ttrpg-2024-platform-receipts",
+      "url": "https://thecoppercompendium.co.uk/2024-the-copper-compendium-roundup",
+      "publisher": "Daniel Copper, The Copper Compendium",
+      "title": "2024: The Copper Compendium Roundup",
+      "published_at": "2025-01-04",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_2024_tabletop_store_receipt_and_download_report",
+      "license": "Brief numerals with source attribution and original independent analysis; no article text, chart or image republished.",
+      "notes": "Annual 2024 itch proceeds $54.15 after platform cut, 3,022 downloads; multi-platform tabletop, not full creator net profit, not guaranteed paid title or unique buyers."
+    },
+    {
+      "id": "copper-ttrpg-2025-downloads-and-payments",
+      "url": "https://thecoppercompendium.co.uk/2025-the-copper-compendium-roundup",
+      "publisher": "Daniel Copper, The Copper Compendium",
+      "title": "2025: The Copper Compendium Roundup",
+      "published_at": "2026-03-30",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_2025_tabletop_marketplace_payment_and_download_report",
+      "license": "Attributed short statistical claims and methodological summary; no source article images, creative text or raw data redistribution.",
+      "notes": "Same developer as 2024; £118.26 after itch's share, 35 payments, 5,440 downloads over 2025, PWYW and charity bundles mixed; separately £63.13 conventions and £24.80 DriveThruRPG; currencies differ from 2024."
+    },
+    {
+      "id": "plane-sailing-2025-itch-multichannel-profit",
+      "url": "https://planesailinggames.com/post/2026-03-03-looking-back-at-2025/",
+      "publisher": "Alex White, Plane Sailing Games",
+      "title": "2025 In Review",
+      "published_at": "2026-03-03",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_2025_tabletop_cross_channel_receipts_and_whole_business_loss_report",
+      "license": "Brief independently expressed financial amounts with attribution; no source article, art or photos reproduced.",
+      "notes": "2025 itch channel £13; £2,073 total other sales channels excluding Kickstarter; after-cost business loss £1,055; full business costs cannot be allocated uniquely to itch."
+    },
+    {
+      "id": "27k-2026-first-game-pricing-error-zero-sales",
+      "url": "https://itch.io/blog/1659443/wow-i-am-sorry",
+      "publisher": "27K Interactive (developer)",
+      "title": "Wow, I am sorry!",
+      "published_at": "2026-09-10",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_2026_first_game_zero_sales_misconfigured_listing_caveat",
+      "license": "Brief source-attributed facts and new methodological analysis only; no creative work or screenshots reproduced.",
+      "notes": "First game creator disclosed zero sales when correcting misconfigured donation tier/additive pricing; intended multiplayer price at most USD 9.99; store price and post-fix sales were not independently verified."
     }
   ],
   "claims": [
@@ -8009,6 +8053,81 @@
       "confidence": "medium",
       "observed_at": "2026-10-27",
       "limitations": "Current storefront label observed in October 2026; initial price history, discounting, payer tips and charged currencies were not reconstructed."
+    },
+    {
+      "id": "copper-tabletop-download-events-3022-to-5440-not-sales",
+      "text": "One tabletop publisher reported 3,022 itch downloads in 2024 and 5,440 in 2025; the +2,418 download-event change is a within-publisher activity difference, not paid purchases or independent publishers.",
+      "source_ids": [
+        "copper-ttrpg-2024-platform-receipts",
+        "copper-ttrpg-2025-downloads-and-payments"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Creator-reported download events are not unique buyers; available offerings, bundles, distribution and reporting may have changed."
+    },
+    {
+      "id": "copper-2025-thirty-five-payments-and-receipts",
+      "text": "The same tabletop publisher reported 35 itch payments and £118.26 in receipts after itch's cut during 2025 alongside 5,440 downloads, including PWYW and charity-bundle offers.",
+      "source_ids": [
+        "copper-ttrpg-2025-downloads-and-payments"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "These are self-reported account-wide payment events, not mandatory paid game units, bank profit, unique customers or visitor-to-checkout conversion."
+    },
+    {
+      "id": "copper-2025-multichannel-cash-reconciliation",
+      "text": "In 2025 the publisher separately reported £63.13 from 17 convention copies and £24.80 from 22 paid DriveThruRPG purchases among 257 platform purchase-labeled events; with £118.26 itch receipts these reported channel amounts sum to £206.19.",
+      "source_ids": [
+        "copper-ttrpg-2025-downloads-and-payments"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Different channel fee, product mix and reporting units; £206.19 is not a fully expensed profit figure, and free DriveThruRPG purchases are not paid orders."
+    },
+    {
+      "id": "copper-2024-2025-receipts-currencies-not-matched",
+      "text": "The publisher's 2024 itch receipts were $54.15 after platform cut, whereas the 2025 itch receipts were £118.26 after itch's cut; without consistent currencies, fees and product frames a financial growth percentage is not supported.",
+      "source_ids": [
+        "copper-ttrpg-2024-platform-receipts",
+        "copper-ttrpg-2025-downloads-and-payments"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Currency/time conversion and fee bases were not independently reconciled; note is about measurement comparability, not seller profitability."
+    },
+    {
+      "id": "plane-sailing-tabletop-2025-itch-income-vs-business-loss",
+      "text": "An independent tabletop publisher reported £13 itch income in 2025 and £2,073 all-channel non-Kickstarter income, but a £1,055 loss from the whole physical-and-digital business; the loss cannot be assigned to itch alone.",
+      "source_ids": [
+        "plane-sailing-2025-itch-multichannel-profit"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Publisher-reported accounting categories, expense allocations and timing not audited; no itch transaction count or attributable itch-only profit given."
+    },
+    {
+      "id": "first-game-2026-zero-orders-with-price-configuration-error",
+      "text": "On September 10, 2026, a first-time digital game publisher disclosed zero sales while correcting a price listing in which donation amounts had been treated as tiers but were additive, reportedly inflating the advertised game price.",
+      "source_ids": [
+        "27k-2026-first-game-pricing-error-zero-sales"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Developer explanation, not tested buyer checkout or counterfactual; exact pre-fix displayed price and later order results unknown."
+    },
+    {
+      "id": "tabletop-2025-and-2026-listing-sample-selection-boundaries",
+      "text": "Selected 2024–2026 self-disclosures supply identifiable positive-payment events, separate whole-business losses, and a mispriced zero-sales report, but do not identify a representative paid-game seller income distribution or checkout conversion.",
+      "source_ids": [
+        "copper-ttrpg-2024-platform-receipts",
+        "copper-ttrpg-2025-downloads-and-payments",
+        "plane-sailing-2025-itch-multichannel-profit",
+        "27k-2026-first-game-pricing-error-zero-sales"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Three nonrandom publishers, unequal pricing methods, tabletop-versus-digital product differences, reporting horizons, currencies and missing exposure denominators."
     }
   ],
   "observations": [

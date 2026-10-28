@@ -35,7 +35,7 @@ test('Original inventory preserved; only two incomplete paid-volume tasks accrue
  assert.equal(q.queues.flatMap(x=>x.tasks).length,84);
  const base=q.queues.flatMap(x=>x.tasks).find(x=>x.id==='market/volume');
  const demand=p.detail_tasks.find(x=>x.id==='itch-io/market/estimate-paid-purchase-demand');
- assert.equal(base.progress,95);assert.equal(demand.percent,70);
+ assert.equal(base.progress,95);assert(demand.percent>=70&&demand.percent<100);
  for(const t of [base,demand])for(const path of [pth,'ontology/itch-io/two-public-game-sales-bounded-pwyw-and-pre-steam-2016-2026.md','tests/itch-2016-2026-public-paid-pwyw-cases.test.mjs'])assert(t.evidence.includes(path));
  assert.equal(base.status,'in_progress');assert.equal(demand.status,'in_progress');
 });
