@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_visibility_and_wishlist_mechanisms",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-visibility-official",
+    "steam-wishlist-official"
+  ],
+  "claim_ids": [
+    "steam-visibility-launch-surfaces",
+    "steam-visibility-early-access-different",
+    "steam-visibility-purchases-play",
+    "steam-visibility-languages-tags",
+    "steam-visibility-wishlists-mostly-not-ranking",
+    "steam-visibility-traffic-conversion-not-ranking",
+    "steam-visibility-score-threshold",
+    "steam-visibility-unpaid-ranking",
+    "steam-visibility-reporting",
+    "steam-wishlist-interest-not-sale",
+    "steam-wishlist-launch-and-demo-reminder",
+    "steam-wishlist-discount-trigger",
+    "steam-wishlist-email-cooldown",
+    "steam-wishlist-dashboard-private",
+    "steam-wishlist-no-universal-forecast"
+  ],
+  "visibility": {
+    "baseline_launch_surfaces": [
+      "New Releases",
+      "All New Releases"
+    ],
+    "early_access_and_full_release_are_distinct_visibility_events": true,
+    "ranking_strong_signal": "buying_and_playing",
+    "tags_relevant": true,
+    "languages_relevant": true,
+    "raw_page_traffic_direct_rank_factor": false,
+    "page_to_purchase_conversion_direct_rank_factor": false,
+    "wishlist_general_direct_rank_factor": false,
+    "exception": "Popular Upcoming",
+    "organic_paid_rank_purchase_available": false,
+    "review_positive_threshold_for_general_independence": 0.4
+  },
+  "wishlists": {
+    "min_for_visibility": 0,
+    "sale_forecast_ratio": null,
+    "discount_notification_min_percent": 20,
+    "discount_notification_min_hours_exclusive": 8,
+    "discount_requires_lowest_priced_package": true,
+    "typical_email_cooldown_days": 14,
+    "one_demo_message_up_to_days": 14,
+    "guaranteed_notice_to_every_user": false,
+    "partner_report_daily": true,
+    "partner_report_public": false
+  },
+  "unknown": {
+    "actual_wishlist_count": null,
+    "storefront_impressions": null,
+    "unique_visitors": null,
+    "actual_paid_orders": null,
+    "conversion_to_paid_buyers": null,
+    "causal_visibility_lift": null,
+    "marketwide_wishlist_sales_ratio": null
+  },
+  "guardrails": [
+    "Page views, impressions, wishlists, activation and purchases are distinct units.",
+    "The official algorithm description is qualitative; no code or coefficients examined.",
+    "No developer private analytics or buyer-level observations were acquired."
+  ]
+}

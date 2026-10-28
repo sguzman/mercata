@@ -114,6 +114,28 @@
       "evidence_class": "official_public_financial_documentation",
       "license": "Public metadata, outbound URL and independently written brief factual summary only; no webpage text or media reproduced.",
       "notes": "Public page accessible without partner login; current-document snapshot. No effective date or historical version asserted."
+    },
+    {
+      "id": "steam-visibility-official",
+      "url": "https://partner.steamgames.com/doc/marketing/visibility",
+      "title": "Visibility on Steam",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_steam_visibility_guide",
+      "license": "Source URL and independently authored short factual summary; no source text, private data or artwork reproduced.",
+      "notes": "Mutable official guide. No underlying ranking algorithm or observed game performance sampled."
+    },
+    {
+      "id": "steam-wishlist-official",
+      "url": "https://partner.steamgames.com/doc/marketing/wishlist",
+      "title": "Wishlists",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_steam_wishlist_guide",
+      "license": "Source URL and independently authored short factual summary; no source text, private data or artwork reproduced.",
+      "notes": "Current guidance; no private sales or activation reports accessed."
     }
   ],
   "claims": [
@@ -359,6 +381,156 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "No partner login, privileged reports, private orders or customer records were accessed in this study."
+    },
+    {
+      "id": "steam-visibility-launch-surfaces",
+      "text": "Valve says full releases appear in New Releases and All New Releases, with personalized and trending exposure conditional on demand.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No guaranteed impressions or sales and no independent full-launch cohort."
+    },
+    {
+      "id": "steam-visibility-early-access-different",
+      "text": "Valve documents separate Early Access launch and subsequent full release visibility events.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "One AppID must not be counted as two first commercially released games."
+    },
+    {
+      "id": "steam-visibility-purchases-play",
+      "text": "Purchases and gameplay are positive qualitative signals for Steam's store recommendations.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No numerical ranking weights, measured causal uplift or game-specific data."
+    },
+    {
+      "id": "steam-visibility-languages-tags",
+      "text": "Steam describes supported game languages and game tags as inputs to connecting games with appropriate audiences.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No uplift estimate or purchaser sample was observed."
+    },
+    {
+      "id": "steam-visibility-wishlists-mostly-not-ranking",
+      "text": "Wishlists generally are not direct general algorithmic ranking factors, with placements such as Popular Upcoming an exception.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Personalized wishlist reminders and limited exceptions remain distinct from universal rankings."
+    },
+    {
+      "id": "steam-visibility-traffic-conversion-not-ranking",
+      "text": "Valve says raw store-page traffic and page-to-purchase conversion percentages are not direct Steam store ranking factors.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "More traffic may indirectly produce sales that affect visibility; this does not establish zero marketing value."
+    },
+    {
+      "id": "steam-visibility-score-threshold",
+      "text": "Valve says Mixed or better review score (40% positive or more) generally does not affect ranking, while a lower score may reduce featuring.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Qualitative official guidance, not a validated deterministic threshold for all games."
+    },
+    {
+      "id": "steam-visibility-unpaid-ranking",
+      "text": "Valve says developers cannot purchase higher placement within Steam's organic recommendation system.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Off-platform paid advertising remains a separate channel."
+    },
+    {
+      "id": "steam-visibility-reporting",
+      "text": "Steamworks provides partner traffic analytics on impressions and visits by storefront placement.",
+      "source_ids": [
+        "steam-visibility-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Authenticated partner reports are not public marketwide exposure statistics and none were accessed."
+    },
+    {
+      "id": "steam-wishlist-interest-not-sale",
+      "text": "A publicly visible page permits customer wishlist additions before commercial release.",
+      "source_ids": [
+        "steam-wishlist-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Wishlist is intent and notifications, not a confirmed paid sale or unique buyer."
+    },
+    {
+      "id": "steam-wishlist-launch-and-demo-reminder",
+      "text": "Steam can notify eligible wishlisters at launch, Early Access transition, or once for a qualifying free demo within a 14-day demo window.",
+      "source_ids": [
+        "steam-wishlist-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Notifications, free demo access and transition events are not paid-game sales."
+    },
+    {
+      "id": "steam-wishlist-discount-trigger",
+      "text": "Discount notifications generally require at least 20% off, more than eight hours and inclusion of the lowest-priced package.",
+      "source_ids": [
+        "steam-wishlist-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No discount-caused sale count or commercial lift has been observed."
+    },
+    {
+      "id": "steam-wishlist-email-cooldown",
+      "text": "Valve describes a roughly two-week per-AppID email cooldown and limits by verified emails and customer preferences.",
+      "source_ids": [
+        "steam-wishlist-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Not every person with a wishlist is guaranteed a delivered email."
+    },
+    {
+      "id": "steam-wishlist-dashboard-private",
+      "text": "Steamworks partner reports track wishlist additions, purchases, removals and geography with next-day updates.",
+      "source_ids": [
+        "steam-wishlist-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This private data was not accessed; no actual paid-conversion share is observed."
+    },
+    {
+      "id": "steam-wishlist-no-universal-forecast",
+      "text": "Valve says there is no minimum wishlist number required to appear in Steam recommendations and no universal wishlist-to-sales forecasting formula.",
+      "source_ids": [
+        "steam-wishlist-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No calibrated sales prediction, representative outcome or actual conversion denominator."
     }
   ],
   "observations": [],
