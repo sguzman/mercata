@@ -741,6 +741,39 @@
       "evidence_class": "official_public_ugc_technical_integration",
       "license": "Source link and concise independently written overview only; no API documentation or code copied.",
       "notes": "UGC integration and implementation details, not actual developer costs or creator earnings."
+    },
+    {
+      "id": "steam-utm-analytics-official-20261028",
+      "url": "https://partner.steamgames.com/doc/marketing/utm_analytics",
+      "title": "UTM Analytics",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_utm_report_definitions_and_privacy_limitations",
+      "license": "Only URL, title and independent short factual paraphrases. No report rows, creative assets or documentation text copied.",
+      "notes": "Official metric population, 72h attribution, privacy, access, refresh and conversion exclusions. No authorized private analytics read."
+    },
+    {
+      "id": "steam-store-traffic-report-official-20261028",
+      "url": "https://partner.steamgames.com/doc/marketing/traffic_reporting",
+      "title": "Store and Platform Traffic Reporting",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_platform_traffic_metric_definitions_and_historical_start_dates",
+      "license": "Only URL, title and independently authored factual synopsis.",
+      "notes": "Page impressions not guaranteed human sight and visits not unique customers; metric collection starts differ."
+    },
+    {
+      "id": "steam-advertising-policy-official-20261028",
+      "url": "https://partner.steamgames.com/doc/marketing/advertising",
+      "title": "Advertising on Steam",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_marketing_and_game_advertising_policy",
+      "license": "Only public source URL and independent paraphrase of facts.",
+      "notes": "Permits ads outside Steam driving to game page; in-game mandatory rewarded ads and selling Steam promotion placement not supported."
     }
   ],
   "claims": [
@@ -3547,6 +3580,229 @@
       "observed_at": "2026-10-28",
       "confidence": "high",
       "limitations": "Distinct item, subscription, package and AppID denominators need separate accounting."
+    },
+    {
+      "id": "utm-total-vs-trusted-vs-tracked",
+      "text": "Steam's UTM dashboard reports Total Visits with parameters, Trusted Visits excluding likely bots/crawlers, and Tracked Visits from signed-in Steam users.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Visits are repeatable visits and different quality subsets, not mutually exclusive unique buyer populations."
+    },
+    {
+      "id": "utm-72h-attribution-window",
+      "text": "Steam assigns its UTM wishlist, purchase and activation conversion events to tracked users acting within 72 hours after clicking the UTM link.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a last-associated attribution rule and does not measure an experiment's causal impact or the lifetime acquisition effect."
+    },
+    {
+      "id": "utm-wishlist-distinct-purchase",
+      "text": "Steam UTM reports wishlisting and base-game purchases as separate types of conversion events.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Wishlist is interest, not money; a UTM attributed purchase is not a profit statement."
+    },
+    {
+      "id": "utm-activations-not-paid-sales",
+      "text": "Steam UTM Activations include free-to-play license acquisition or redemption of a retail Steam key rather than solely completed Steam checkout.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "External paid keys or free keys can activate the same game; activation cannot be treated as paid Steam-store unit."
+    },
+    {
+      "id": "utm-conversion-same-appid",
+      "text": "Steam counts UTM conversion for the AppID linked in the tagged URL, not another game in the publisher's catalog.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A single-game UTM report omits cross-sell, other apps and portfolio-level purchase effects."
+    },
+    {
+      "id": "utm-demos-dlc-limited",
+      "text": "Steam says base-game UTM link conversions exclude demo or DLC downloads that do not include the base game; a DLC package containing the base game may be counted.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Do not count demo interest, standalone DLC and base-game checkouts interchangeably."
+    },
+    {
+      "id": "utm-micros-and-playtests-excluded",
+      "text": "Steam currently excludes microtransaction conversions and Steam Playtest app conversions from UTM reporting.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Missing conversion events in these categories are outside the measurement instrument, not necessarily zero usage or payments."
+    },
+    {
+      "id": "utm-visits-hourly-conversions-fourdays",
+      "text": "Valve says UTM visit numbers refresh hourly and conversion figures become final four days after the recorded visit.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A fresh campaign may look weak before its conversion window is complete; later refunds can still change real financial results."
+    },
+    {
+      "id": "utm-refunds-after-fourdays-uncorrected",
+      "text": "Valve cautions that purchases later refunded at least four days after the UTM visit are not subtracted from its finalized conversion totals.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The UTM purchase count cannot replace refund-adjusted merchant paid sales, especially for affiliate payments."
+    },
+    {
+      "id": "utm-report-aggregate-no-steamids",
+      "text": "The UTM report exposes aggregate visits and conversion totals without Steam IDs, with small-parameter combinations suppressed.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Data are deliberately privacy bounded and unsuitable for per-customer tracking or identification."
+    },
+    {
+      "id": "utm-visitor-optouts-and-crossbrowser",
+      "text": "Steam cautions that browser cookie choices, social in-app browsers and cross-browser/client journeys cause missing campaign attribution.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Tracking undercount can vary by acquisition channel and device and is not a representative sample of all visitors."
+    },
+    {
+      "id": "utm-marketing-permission",
+      "text": "The UTM report requires the Steamworks permission View Marketing Traffic Data for the relevant game.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No report, permission or account was accessed; permissioned partner reports are not public source data."
+    },
+    {
+      "id": "utm-page-vs-sale-links",
+      "text": "Valve's UTM analytics supports app store pages and Steam sale pages, with at least one utm_source or utm_campaign tag.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Third-party links without tags or to unsupported page types do not belong to this UTM denominator."
+    },
+    {
+      "id": "utm-sale-page-apr2025-linkpass",
+      "text": "From April 22, 2025, Valve says UTM tags on supported Steam sale-page inbound links are passed through to games on that sale page.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Historic comparison before the policy's implementation is not directly equivalent without cutoff alignment."
+    },
+    {
+      "id": "utm-impressions-not-viewed",
+      "text": "Steam traffic-report impressions count appearances on screen, including game capsules or friends notifications, rather than confirmed human attention.",
+      "source_ids": [
+        "steam-store-traffic-report-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Displayed branding does not guarantee observation, unique viewers or intent to purchase."
+    },
+    {
+      "id": "utm-platform-visits-not-buyers",
+      "text": "Steam's standard store traffic reports describe visits as store-page loads, including possible repeat visits by the same customer.",
+      "source_ids": [
+        "steam-store-traffic-report-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Visits cannot directly estimate unique buyers, conversion probability per person or causal acquisition."
+    },
+    {
+      "id": "utm-traffic-collection-history",
+      "text": "Valve says basic platform traffic begins September 23, 2014, region and non-store traffic October 17, 2018, Direct Navigation April 17, 2019; cookie opt-out exclusions apply from March 23, 2021.",
+      "source_ids": [
+        "steam-store-traffic-report-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Longitudinal data lack a uniform collection and consent regime across all historical dates."
+    },
+    {
+      "id": "utm-offsteam-paid-ads-allowed",
+      "text": "Valve permits advertising outside Steam to direct customers to Steam product pages and recommends UTM tools for measurement.",
+      "source_ids": [
+        "steam-advertising-policy-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Permission to purchase off-platform ads is not evidence that ads are efficient or a verified ROI."
+    },
+    {
+      "id": "utm-steam-internal-ad-placement-not-sold",
+      "text": "Valve's advertising guidance says Steam does not sell paid advertising placement within the Steam store and prohibits charging developers for sale-page or bundle placement.",
+      "source_ids": [
+        "steam-advertising-policy-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Publisher merchandising and Valve-curated discovery surfaces are separate from external paid media."
+    },
+    {
+      "id": "utm-in-game-rewarded-ads-not-supported",
+      "text": "Valve does not support games whose business model requires watching or engaging with advertising to progress or receive rewards.",
+      "source_ids": [
+        "steam-advertising-policy-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Brand placement fitting gameplay is treated separately and may still require IP licenses."
+    },
+    {
+      "id": "utm-ratio-only-descriptive",
+      "text": "A quotient of UTM-attributed purchases over Tracked Visits is a descriptive event-to-visit ratio and not causal lift, net profit, or a verified unique-user conversion rate.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028",
+        "steam-store-traffic-report-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Repeated visits, cross-app missingness, the 72-hour window and refunds weaken extrapolation."
+    },
+    {
+      "id": "utm-no-paid-marketing-roi",
+      "text": "These public marketing documents contain no representative conversion, cost-per-acquisition or profit distribution for a new Steam publisher.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028",
+        "steam-store-traffic-report-official-20261028",
+        "steam-advertising-policy-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Need consented advertising spend, matched merchant net receipts, and a suitable controlled counterfactual."
     }
   ],
   "observations": [],
@@ -3554,5 +3810,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam studies now cover UGC Workshop modes and integration/rights constraints, distinguishing mod subscriptions and optional paid items from base-game sales. Verified merchant publisher earnings remain unknown."
+  "summary": "Steam research now includes privacy-bounded UTM campaign measurement, historical traffic reporting cutoffs and synthetic event-to-visit denominators, without conflating tracked clicks, attribution and causal paid purchases. Actual publisher profits and typical seller earnings remain unknown."
 }

@@ -1,6 +1,6 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 60% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 62% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
@@ -291,6 +291,10 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## Steam marketing attribution and UTM checkpoint
+
+The [official UTM and traffic reporting study](../ontology/steam/utm-traffic-attribution-and-paid-marketing-2026.md) separates impressions, visits, signed-in tracked visits, 72-hour wishlist, purchase and key-activation events, four-day reporting settlement and privacy gaps. A [synthetic-only denominator validator](../site/steam-utm-metrics.mjs) refuses to infer unique buyer conversions or paid-ad causal ROI. **Current score 62%** (exact 62.150%; Δ +2 pp from 60%). No campaign or account data was accessed.
+
 ## Workshop and user-generated content checkpoint
 
 The [Steam Workshop UGC research](../ontology/steam/workshop-ugc-monetization-and-rights-2026.md) distinguishes direct/curated mod workflows, subscriptions, possible paid-item proceeds, author agreements and actual base-game orders. **Score 60%** (exact 60.154%, Δ +1 pp from 59%), with no claim of earnings or ownership of third-party material.
@@ -383,4 +387,4 @@ The [wishlist and visibility report](../ontology/steam/discovery-wishlists-and-v
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 60%** rounded task-weighted progress across 293 tasks; previous 59%, Δ +1 pp (exact 60.154%). 32 fully verified and 213 partly researched; 66 sources and 272 claims. No customer data, real game release or actual income collected.
+**Completion: 62%** rounded task-weighted progress across 293 tasks; previous 60%, Δ +2 pp (exact 62.150%). 36 fully verified and 212 partially researched; 69 public sources and 294 bounded claims. No customer analytics, accounts, paid marketing or merchant earnings observed.

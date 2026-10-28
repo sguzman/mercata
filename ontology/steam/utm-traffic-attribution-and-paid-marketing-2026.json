@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "utm_campaign_traffic_and_noncausal_attribution_policy",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-utm-analytics-official-20261028",
+    "steam-store-traffic-report-official-20261028",
+    "steam-advertising-policy-official-20261028"
+  ],
+  "claim_ids": [
+    "utm-total-vs-trusted-vs-tracked",
+    "utm-72h-attribution-window",
+    "utm-wishlist-distinct-purchase",
+    "utm-activations-not-paid-sales",
+    "utm-conversion-same-appid",
+    "utm-demos-dlc-limited",
+    "utm-micros-and-playtests-excluded",
+    "utm-visits-hourly-conversions-fourdays",
+    "utm-refunds-after-fourdays-uncorrected",
+    "utm-report-aggregate-no-steamids",
+    "utm-visitor-optouts-and-crossbrowser",
+    "utm-marketing-permission",
+    "utm-page-vs-sale-links",
+    "utm-sale-page-apr2025-linkpass",
+    "utm-impressions-not-viewed",
+    "utm-platform-visits-not-buyers",
+    "utm-traffic-collection-history",
+    "utm-offsteam-paid-ads-allowed",
+    "utm-steam-internal-ad-placement-not-sold",
+    "utm-in-game-rewarded-ads-not-supported",
+    "utm-ratio-only-descriptive",
+    "utm-no-paid-marketing-roi"
+  ],
+  "visit_units": {
+    "total": "tagged_page_visits",
+    "trusted": "tagged_visits_excluding_bots_and_search_crawlers",
+    "tracked": "tagged_visits_from_signed_in_steam_users_excluding_abnormal",
+    "each_visit_is_unique_customer": false
+  },
+  "conversion_events": [
+    "wishlist",
+    "purchase",
+    "activation"
+  ],
+  "activation_always_steam_checkout": false,
+  "attribution_within_hours": 72,
+  "includes_base_page_demo_only_download": false,
+  "includes_base_page_nonbase_dlc": false,
+  "includes_in_game_microtransaction": false,
+  "includes_playtest_apps": false,
+  "only_same_linked_appid": true,
+  "report_lag": {
+    "visit_refresh": "hourly",
+    "conversion_finalization_days": 4,
+    "late_refunds_subtracted_from_final_utm": false
+  },
+  "privacy": {
+    "steam_ids_exposed": false,
+    "aggregate_only": true,
+    "low_volume_utm_combinations_suppressed": true,
+    "cookie_optout_misses_possible": true,
+    "cross_browser_and_in_app_missingness": true,
+    "permission_required": "View Marketing Traffic Data"
+  },
+  "collection_start": {
+    "store_traffic": "2014-09-23",
+    "region_and_non_store": "2018-10-17",
+    "direct_navigation": "2019-04-17",
+    "optout_exclusions": "2021-03-23",
+    "utm_sale_page_passthrough": "2025-04-22"
+  },
+  "ads": {
+    "offsite_ads_may_send_to_store": true,
+    "steam_store_paid_display_inventory": false,
+    "required_watch_ads_as_gameplay_business_model_supported": false,
+    "charging_developers_for_sale_page_placement_supported": false
+  },
+  "measurement": {
+    "actual_campaigns_tested": 0,
+    "real_total_visits": null,
+    "real_tracked_visits": null,
+    "actual_paid_orders": null,
+    "real_net_revenue": null,
+    "ad_spend": null,
+    "causal_sales_lift": null,
+    "return_on_ad_spend": null
+  },
+  "real_merchant_reports_read": false
+}
