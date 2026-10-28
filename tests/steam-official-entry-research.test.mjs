@@ -1,0 +1,91 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=(p)=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
+const load=(p)=>JSON.parse(read(p));
+const dossier=load('specimens/steam.json'),study=load('ontology/steam/entry-review-and-reporting-2026.json');
+const plan=load('plans/steam.json'),queue=load('queues/steam.json'),gallery=load('gallery/index.json');
+test('Only public official sources support the 23 independently bounded claims',()=>{
+ assert.equal(dossier.status,'researching');
+ assert.equal(dossier.evidence.length,9);assert.equal(dossier.claims.length,23);
+ assert.equal(study.source_ids.length,9);assert.equal(study.claim_ids.length,23);
+ assert.equal(new Set(dossier.evidence.map(x=>x.url)).size,9);
+ assert.equal(new Set(dossier.claims.map(x=>x.id)).size,23);
+ const ids=new Set(dossier.evidence.map(x=>x.id));
+ for(const s of dossier.evidence){
+   assert(s.url.startsWith('https://partner.steamgames.com/'));
+   assert.equal(s.retrieved_at,'2026-10-28');
+   assert.equal(s.published_at,null);
+   assert(s.publisher&&s.license&&s.notes);
+ }
+ for(const c of dossier.claims){
+   assert(c.source_ids.length>=1&&c.source_ids.every(x=>ids.has(x)));
+   assert.equal(c.observed_at,'2026-10-28');
+   assert(c.limitations.length>45);
+ }
+ assert(study.source_ids.every(x=>ids.has(x)));
+ assert(study.claim_ids.every(x=>dossier.claims.some(y=>y.id===x)));
+});
+test('Two incompatible official pre-release wait rules are not silently resolved',()=>{
+ const a=study.documented.waiting_period_minimum_days_conflict;
+ assert.equal(a.steam_direct_public_landing,30);
+ assert.equal(a.steamworks_onboarding_doc,21);
+ assert.equal(a.resolved_operational_rule,null);
+ assert.equal(study.documented.coming_soon_days,14);
+ assert(study.unresolved.some(x=>x.id==='conflicting-wait-days'&&x.sources.length===2));
+ const c=dossier.claims.find(x=>x.id==='wait-rule-requires-reconciliation');
+ assert.deepEqual(c.source_ids,['steamdirect-public','steam-onboarding-doc']);
+});
+test('Steam Direct fee, recoupment and payouts remain different economic concepts',()=>{
+ const x=study.documented;
+ assert.equal(x.steam_direct_fee_usd,100);
+ assert.equal(x.per_product_recoupment_adjusted_gross_usd,1000);
+ assert.equal(x.fee_refundable,false);
+ assert.equal(x.appfee_can_use_steam_wallet,false);
+ assert.equal(x.monthly_payment_threshold_usd,100);
+ assert.equal(x.payment_us_banks,'ACH');
+ assert.equal(x.payment_non_us_banks,'USD SWIFT');
+ assert.equal(x.near_realtime_gross_before_adjustments,true);
+ assert.equal(x.monthly_net_after_taxes_returns_chargebacks,true);
+ assert.equal(x.known_current_revenue_share_rate,null);
+ assert.equal(x.partner_financial_reports_public,false);
+ assert(Object.values(study.unknown).every(x=>x===null));
+});
+test('Task-scored progress follows the same 293-task denominator with evidence for every nonzero score',()=>{
+ assert.equal(plan.total_tracked_tasks,293);assert.equal(plan.detail_tasks.length,209);
+ const all=[...plan.detail_tasks.map(x=>({id:x.id,score:x.percent,status:x.status,evidence:x.evidence})),
+ ...queue.queues.flatMap(g=>g.tasks.map(x=>({id:x.id,score:x.progress,status:x.status,evidence:x.evidence})))];
+ assert.equal(all.length,293);assert.equal(new Set(all.map(x=>x.id)).size,293);
+ const progress=all.reduce((sum,x)=>sum+x.score,0)/293;
+ assert.equal(plan.progress_percent,Math.round(progress));
+ assert.equal(plan.progress_percent,6);
+ assert.equal(all.filter(x=>x.score===100).length,6);
+ assert.equal(all.filter(x=>x.score>0&&x.score<100).length,22);
+ for(const t of all){
+   assert(Number.isInteger(t.score)&&t.score>=0&&t.score<=100);
+   if(t.score>0){
+     assert(t.evidence.includes('ontology/steam/entry-review-and-reporting-2026.json'));
+     assert(t.evidence.includes('ontology/steam/entry-review-and-reporting-2026.md'));
+     assert(t.status==='complete'||t.status==='in_progress');
+     for(const file of t.evidence)assert(fs.existsSync(new URL('../'+file,import.meta.url)),file);
+   }else assert.equal(t.status,'pending');
+   if(t.score===100)assert.equal(t.status,'complete');
+ }
+ for(const w of plan.workstreams){
+   const scores=all.filter(x=>x.id.startsWith('steam/'+w.id+'/')||x.id.startsWith(w.id+'/'));
+   assert.equal(w.progress_percent,Math.round(scores.reduce((sum,x)=>sum+x.score,0)/scores.length));
+ }
+});
+test('Published text keeps monetary gaps explicit and reflects the verified Steam plan',()=>{
+ const doc=read('ontology/steam/entry-review-and-reporting-2026.md');
+ for(const phrase of ['21 days','30 days','USD 1,000','USD 100','monthly','unresolved'])
+   assert(doc.toLowerCase().includes(phrase.toLowerCase()),phrase);
+ const item=gallery.specimens.find(x=>x.id==='steam');
+ assert.equal(item.status,'researching');
+ assert.equal(item.planning_state,'researching');
+ assert.equal(item.color.hex,'#A665CB');
+ for(const file of ['README.md','gallery/README.md','plans/steam.md','roadmap/README.md','pipeline/README.md'])
+  assert(read(file).includes('6%'),file+' progress not synchronized');
+ assert.equal(study.no_merchant_data,true);
+ assert.equal(study.no_game_publication,true);
+});

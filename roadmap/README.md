@@ -20,7 +20,7 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 **Social audience research:** a distinct conditional profile adds nine queues (80 questions) for 11 existing social or creator-community marketplaces. Ontology and queue retrofit are complete and browser/integration checks now run automatically. YouTube's research is underway, with separate progress tracked across 399 tasks; the other ten social-audience specimens remain queued.
 
-**Current specimen:** [YouTube's research plan](../plans/youtube.md) and its [machine progress](../plans/youtube.json) cover audience measurements, platform economics, earnings distributions, competition, discovery, content restrictions and monetization scenarios. Other marketplace studies are still pending, not silently rolled into the YouTube percentage.
+**Current specimen:** [YouTube's research plan](../plans/youtube.md) and its [machine progress](../plans/youtube.json) cover audience measurements, platform economics, earnings distributions, competition, discovery, content restrictions and monetization scenarios. Other marketplace studies remain separately scoped; Steam has its own 293-task, source-backed research progress.
 
 
 **itch.io planning checkpoint (2026-10-26):** the existing 84 tasks remain untouched; 160 additional game-selling questions were prepared across 13 workstreams in four phases. [Detailed research plan](../plans/itch-io.md): **0% research completed**. No market facts were collected; YouTube progress remains unchanged.
@@ -219,3 +219,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 **Dataset rights review (2026-10-27):** compared the cited game-reproducibility archive's restricted older version and open 2025 version; verified Zenodo metadata CC0 is distinct from licenses governing source-code game archives. Existing rights/reuse task advanced 90→94, overall **97.30% → 97.31%** (+0.02 pp). File-by-file reuse remains unverified; no archive files copied. [Review](../ontology/itch-io/source-reuse-record-completeness-2026.md).
 
 **2026 operator-reconciled merchant sale (2026-10-27):** site administrator verified one seller's 113 mixed bundle/item purchases and approximate gross→after-fee→after-withholding balance steps, with seven-day pending timing. Existing market/volume 90→94 and paid-demand evidence readiness 67→68; **97.31% → 97.33%** (+0.02 pp). Does not establish paid-game-only demand, representative merchant earnings or bank settlement. [Bounded case](../ontology/itch-io/2026-operator-verified-summer-sale-gross-payout-waterfall.md).
+
+
+**Steam official-document research checkpoint (2026-10-28):** source-attributed rules for joining, Steam Direct app fees, separate store/build reviews, payment timing and adjusted receipts. Two official pages disagree on **21 versus 30 days** from fee payment to release, kept unresolved. Nine public sources; 23 bounded claims. **0% → 6%** on the original fixed 293 research tasks. [Findings and limits](../ontology/steam/entry-review-and-reporting-2026.md). No merchant account, buyer data, or representative seller earnings obtained.

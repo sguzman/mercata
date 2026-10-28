@@ -27,7 +27,7 @@ See [audience ontology](../ontology/README.md). Public sources, surveys and plat
 
 ## Existing Steam specimen: dedicated inventory
 
-Steam was already admitted on October 23, 2026. The [Steam inventory](../plans/steam.md) preserves all 84 core and game-specialist baseline tasks and adds **209 Steam-specific questions** (293 total) covering Steamworks onboarding, paid release cohorts including zero earners, wishlists, Next Fest, game sales estimates versus merchant data, pricing, refunds, developer profit, rights, marketing and release labor. All 293 tasks are **0% researched**, with no Steam source or economic claim recorded; no new specimen or account access was created.
+Steam was already admitted on October 23, 2026. The [Steam inventory](../plans/steam.md) preserves all 84 core and game-specialist baseline tasks and adds **209 Steam-specific questions** (293 total) covering Steamworks onboarding, paid release cohorts including zero earners, wishlists, Next Fest, game sales estimates versus merchant data, pricing, refunds, developer profit, rights, marketing and release labor. Steam research now has **6% task-weighted progress**, supported by [official-source entry, release and reporting findings](../ontology/steam/entry-review-and-reporting-2026.md). No new marketplace admission, seller account or commercial experiment occurred.
 
 ## Existing itch.io specimen: dedicated plan
 

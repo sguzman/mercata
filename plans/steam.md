@@ -1,10 +1,10 @@
 # Steam game publishing economics — research inventory
 
-**Inventory prepared 2026-10-28; research NOT started.** Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **All tasks remain at 0%, pending, and have no evidence.**
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 6% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
-This is not a market report. All numerical market and income findings, payment rates and policy details must be researched and verified later. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
+This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
 ## Four research phases
 
@@ -291,6 +291,10 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## First evidence-based checkpoint
+
+[Reviewed public Steamworks material](../ontology/steam/entry-review-and-reporting-2026.md) documents onboarding, app fees and recoupment, approval, payment rails, and gross-to-net report semantics. The conflicting **21-day versus 30-day waiting periods** in two Valve documents remain explicitly unresolved. Six tasks are fully verified and 22 are partially researched. **The original checklist below remains the stable scope, not a live assertion that each item is incomplete; for current statuses consult [the machine plan](steam.json) and [baseline queue](../queues/steam.json).**
+
 ## Evidence and stopping rules
 
 - This is a queued task inventory, not a Steam research finding.
@@ -317,4 +321,4 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion:** 0% of all 293 tasks. Baseline queues, the 26-specimen gallery, Steam’s existing OKLCH color and all other specimens are unchanged in substance. No research, account operations, purchases, scraping, financial data processing or experiments were performed.
+**Completion: 6%** rounded task-weighted progress across 293 tasks; baseline 0%, change +6 percentage points. Six tasks fully verified, 22 partially investigated; nine public source records and 23 bounded claims. Baseline queues, the 26-specimen gallery, Steam’s existing OKLCH color and all other specimens are unchanged in substance. No research, account operations, purchases, scraping, financial data processing or experiments were performed.
