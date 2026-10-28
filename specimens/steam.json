@@ -653,6 +653,50 @@
       "evidence_class": "official_current_public_transfer_guide",
       "license": "Link and original succinct factual summary only; no source text, media or confidential data reproduced.",
       "notes": "Approval, effective date, customer continuity and restricted historical finance/marketing reports. Does not establish legal IP transfer."
+    },
+    {
+      "id": "steam-deck-machine-compat-2026",
+      "url": "https://partner.steamgames.com/doc/steamhardware/compat?l=english",
+      "title": "Steam Deck and Steam Machine Compatibility Review",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_steam_technical_guidance",
+      "license": "Only public URL, source title and original brief factual paraphrase. No source media or text reproduced.",
+      "notes": "Describes support requirements, not game-specific observed QA, performance or income."
+    },
+    {
+      "id": "steam-steamos-linux-development-2026",
+      "url": "https://partner.steamgames.com/doc/store/application/platforms/linux?l=english",
+      "title": "Developing for SteamOS and Linux",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_steam_technical_guidance",
+      "license": "Only public URL, source title and original brief factual paraphrase. No source media or text reproduced.",
+      "notes": "Describes support requirements, not game-specific observed QA, performance or income."
+    },
+    {
+      "id": "steam-steamos-proton-2026",
+      "url": "https://partner.steamgames.com/doc/steamhardware/proton?l=english",
+      "title": "Steam Hardware and Proton",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_steam_technical_guidance",
+      "license": "Only public URL, source title and original brief factual paraphrase. No source media or text reproduced.",
+      "notes": "Describes support requirements, not game-specific observed QA, performance or income."
+    },
+    {
+      "id": "steam-cloud-cross-device-2026",
+      "url": "https://partner.steamgames.com/doc/features/cloud?l=english",
+      "title": "Steam Cloud",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_steam_technical_guidance",
+      "license": "Only public URL, source title and original brief factual paraphrase. No source media or text reproduced.",
+      "notes": "Describes support requirements, not game-specific observed QA, performance or income."
     }
   ],
   "claims": [
@@ -3091,6 +3135,138 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "This is a research implication of reporting access; underlying real revenue still requires consenting partner ledgers."
+    },
+    {
+      "id": "hardware-four-compat-categories",
+      "text": "Valve assigns Verified, Playable, Unsupported and Unknown hardware compatibility categories to games.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Unknown denotes absence of completed review, not failure; ratings are device-specific."
+    },
+    {
+      "id": "hardware-badges-not-distribution-block",
+      "text": "Hardware compatibility ratings affect customer-facing store/library presentation but do not block a game's standard Steam release.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Store submission has separate criteria; badge is not sales evidence."
+    },
+    {
+      "id": "hardware-verified-default-setup",
+      "text": "Valve distinguishes Verified games needing no user setup from Playable titles that may require manual configuration.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Not a measure of paid buyers, profit or quality on every hardware configuration."
+    },
+    {
+      "id": "hardware-30fps-800p-deck",
+      "text": "Deck Verified criteria require a playable default configuration at 30 fps at 800p.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No game-specific performance measured; a benchmark threshold is not observed performance."
+    },
+    {
+      "id": "hardware-30fps-1080p-machine",
+      "text": "Steam Machine's published default performance benchmark is 30 fps at 1080p.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Separate target hardware, not interchangeable with Deck."
+    },
+    {
+      "id": "hardware-deck-font-9px",
+      "text": "Valve's Deck text checklist uses a 9px minimum glyph height at 1280x800, with 12px recommended where feasible.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Readability still varies with locale, contrast and interface context."
+    },
+    {
+      "id": "hardware-controller-access",
+      "text": "Deck/Machine compatibility review evaluates controller navigation, glyphs, keyboard behavior and game launcher use.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A default mapping may be needed to avoid manual configuration."
+    },
+    {
+      "id": "hardware-proton-nonuniversal",
+      "text": "Proton allows some Windows games to run on SteamOS, but middleware or Windows API incompatibilities can prevent functionality.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026",
+        "steam-steamos-proton-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Requires game-specific testing rather than presumed compatibility."
+    },
+    {
+      "id": "hardware-native-linux-runtime",
+      "text": "Valve's native Linux guide requires suitable SDK/runtime compatibility and correct launch options.",
+      "source_ids": [
+        "steam-steamos-linux-development-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "An older published tool list must not be taken as a universal 2026 operating-system warranty."
+    },
+    {
+      "id": "hardware-native-then-proton-review",
+      "text": "Valve may review a native Linux build first, then try a Windows build on Proton when the native version has significant problems.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Partner-specific review behavior and outcomes remain unobserved."
+    },
+    {
+      "id": "hardware-anti-cheat-configuration",
+      "text": "Valve says Proton support for Easy Anti-Cheat and BattlEye depends on proper integration and developer configuration.",
+      "source_ids": [
+        "steam-steamos-proton-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No claim of automatic support for any particular game."
+    },
+    {
+      "id": "hardware-cloud-two-modes",
+      "text": "Steam Cloud can synchronize saved games via configured Auto-Cloud file paths or direct Remote Storage API integration.",
+      "source_ids": [
+        "steam-cloud-cross-device-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Cloud file conflicts, cross-platform path mismatches and QA burden require separate tests."
+    },
+    {
+      "id": "hardware-roi-unobserved",
+      "text": "The official Steam hardware documents specify technical requirements, not causal revenue gains or implementation labor for a representative game.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026",
+        "steam-cloud-cross-device-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No verified effect sizes, labor distributions or developer profits were measured."
     }
   ],
   "observations": [],
@@ -3098,5 +3274,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research includes partner transfers that split historical sales reports by payment date; retired games may leave listings while retaining previous buyers' library access. Actual cash and developer profits remain unknown."
+  "summary": "Steam research includes public hardware compatibility acceptance requirements alongside commercial and policy economics. No game benchmark, live partner report, sales uplift or developer profits observed."
 }

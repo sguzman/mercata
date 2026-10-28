@@ -248,3 +248,5 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 **Steam Keys and AI-content survey (2026-10-28):** [Off-platform key/consumer parity and content disclosure review](../ontology/steam/keys-cross-store-and-ai-disclosure-2026.md) maintains the distinction between key activations, store checkouts and asset copyright rights. **48% → 53%** (+5 pp, exact 53.311%) with 57 sources and 221 bounded claims; no private contractual or key records.
 
 **Steam transfer and retirement (2026-10-28):** [Historical partner report boundaries and customer continuation](../ontology/steam/app-transfer-reporting-and-retirement-2026.md) show that pre-transfer inaccessible financial periods cannot be counted as zero income. **53% → 55%**, Δ +2 pp (exact 55.051%). 58 sources, 236 claims; no actual seller finance data.
+
+**Steam hardware QA (2026-10-28):** [Device compatibility and runtime review](../ontology/steam/steamos-deck-compatibility-qa-2026.md) records Valve's published device thresholds, Linux/Proton and Cloud integration limits. **55% → 58%** (Δ +3 pp; exact 57.645%), 62 sources, 249 claims; no gameplay benchmarks or measured economic impact.

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "steamos_deck_machine_compatibility_qa_protocol",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-deck-machine-compat-2026",
+    "steam-steamos-linux-development-2026",
+    "steam-steamos-proton-2026",
+    "steam-cloud-cross-device-2026"
+  ],
+  "claim_ids": [
+    "hardware-four-compat-categories",
+    "hardware-badges-not-distribution-block",
+    "hardware-verified-default-setup",
+    "hardware-30fps-800p-deck",
+    "hardware-30fps-1080p-machine",
+    "hardware-deck-font-9px",
+    "hardware-controller-access",
+    "hardware-proton-nonuniversal",
+    "hardware-native-linux-runtime",
+    "hardware-native-then-proton-review",
+    "hardware-anti-cheat-configuration",
+    "hardware-cloud-two-modes",
+    "hardware-roi-unobserved"
+  ],
+  "ratings": [
+    "Verified",
+    "Playable",
+    "Unsupported",
+    "Unknown"
+  ],
+  "unknown_implies_failed_review": false,
+  "badge_required_for_sale": false,
+  "targets": {
+    "deck": {
+      "min_default_fps": 30,
+      "vertical_pixels": 800,
+      "min_char_px": 9,
+      "recommended_char_px": 12
+    },
+    "machine": {
+      "min_default_fps": 30,
+      "vertical_pixels": 1080
+    }
+  },
+  "proton": {
+    "windows_game_compatibility_conditional": true,
+    "anti_cheat_requires_configuration": true,
+    "per_game_success_observed": null
+  },
+  "linux": {
+    "sdk_runtime_match_required": true,
+    "native_build_optional": true
+  },
+  "cloud": {
+    "auto_cloud_supported": true,
+    "remote_storage_api_supported": true,
+    "save_conflicts_tested": false
+  },
+  "observed": {
+    "games_benchmarked": 0,
+    "measured_fps": null,
+    "developer_hours": null,
+    "actual_sales_uplift": null,
+    "actual_profit": null
+  },
+  "no_partner_access": true,
+  "no_build_uploaded": true
+}
