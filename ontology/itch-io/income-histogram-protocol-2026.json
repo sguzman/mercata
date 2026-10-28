@@ -23,7 +23,11 @@
     "sample_median_is_exact": false,
     "mean_from_histogram_without_value_sums": false,
     "platform_population_inference": false,
-    "zero_proceeds_requires_one_cent_0_to_1_interval": true
+    "zero_proceeds_requires_one_cent_0_to_1_interval": true,
+    "partial_coverage_zero_proceeds_bounds_supported_if_eligible_frame_known": true,
+    "partial_coverage_lower_formula": "known_exact_zero_publishers / eligible_publishers",
+    "partial_coverage_upper_formula": "(known_exact_zero_publishers + eligible_publishers - covered_publishers) / eligible_publishers",
+    "partial_coverage_is_platformwide_inference": false
   },
   "example_bins_for_synthetic_tests_only": [
     {
@@ -56,6 +60,8 @@
     "Even a nonidentifying complete volunteered subset is not a probability sample of all paid game publishers.",
     "Zero paid-game sales and zero payout after refunds/fees are not necessarily identical; this protocol measures the latter.",
     "Synthetic test inputs are not empirical game sales or income evidence.",
-    "No account, human, payment, game launch or outside store action is authorized by the protocol."
+    "No account, human, payment, game launch or outside store action is authorized by the protocol.",
+    "When eligible publisher counts are independently declared but some publishers are unobserved, only the worst-case zero-proceeds interval is identified: every missing eligible seller may be zero or nonzero.",
+    "The interval depends on the supplied eligibility frame, consistent proceeds period and explicit inclusion of zero-sale and delisted publishers; a self-selected group without a known eligible universe cannot be treated as an itch.io population denominator."
   ]
 }

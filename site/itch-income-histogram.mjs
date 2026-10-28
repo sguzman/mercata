@@ -52,7 +52,17 @@ export function describeProceedsHistogram(input){
  const upperMiddle=findRank(Math.floor(cumulative/2));
  const first=normalized[0];
  const exactZero=(first.lower_cents===0&&first.upper_exclusive_cents===1);
+ // Partial identification is valid only within an explicitly enumerated eligible
+ // cohort and when missing publishers could independently all be zero or nonzero.
+ // The reported inclusion of delisted and zero-sale publishers is a declaration,
+ // not independent verification of the owner-provided eligible frame.
+ const eligibleFrameClaimed=input.includes_zero_sale_publishers===true&&input.includes_delisted_publishers===true;
+ const eligibleZeroBound=exactZero&&eligibleFrameClaimed;
+ const unobserved=input.eligible_publishers-input.covered_publishers;
  return {sample_count:cumulative,sample_frame_complete:complete,
+  cohort_zero_proceeds_lower_bound:eligibleZeroBound?first.count/input.eligible_publishers:null,
+  cohort_zero_proceeds_upper_bound:eligibleZeroBound?(first.count+unobserved)/input.eligible_publishers:null,
+  eligible_cohort_complete_from_input_claims:eligibleZeroBound&&unobserved===0,
   sample_exact_zero_proceeds_fraction:complete&&exactZero?first.count/cumulative:null,
   sample_median_lower_bound_cents:complete?lowerMiddle.lower_cents:null,
   sample_median_upper_exclusive_cents:complete?upperMiddle.upper_exclusive_cents:null,
