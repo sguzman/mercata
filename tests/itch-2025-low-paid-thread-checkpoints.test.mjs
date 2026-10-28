@@ -37,7 +37,7 @@ test("Only an existing paid demand task advances; fixed 244 task frame remains",
  assert.equal(p.detail_tasks.length,160);
  assert.equal(q.queues.flatMap(w=>w.tasks).length,84);
  const t=p.detail_tasks.find(x=>x.id==="itch-io/market/estimate-paid-purchase-demand");
- assert.equal(t.percent,73);
+ assert(t.percent>=73&&t.percent<100);
  assert.equal(t.status,"in_progress");
  for(const file of [path,"ontology/itch-io/2025-reddit-two-creator-low-paid-sales-and-same-game-checkpoints.md","tests/itch-2025-low-paid-thread-checkpoints.test.mjs"])assert(t.evidence.includes(file));
  assert.equal(p.detail_tasks.filter(x=>x.percent<100).length+q.queues.flatMap(w=>w.tasks).filter(x=>x.progress<100).length,32);

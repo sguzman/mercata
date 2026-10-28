@@ -50,3 +50,26 @@ test('Unverified updates and malformed UTC calendar dates never become counted l
  assert.equal(classifyItchCommercialReleaseCohort([row('bad','2026-02-30T00:00:00Z','first_public')],win).valid,false);
  assert.throws(()=>classifyItchCommercialReleaseCohort([],{startUtc:'2026-02-30T00:00:00Z',endUtc:win.endUtc}),TypeError);
 });
+
+test('Observed Chico 2022 launch versus free 2023 DX upgrade retains one paid game identity',()=>{
+ const source=get('ontology/itch-io/chico-2022-2024-one-commercial-game-dx-update-crossstore-snapshots.json');
+ const {release_timeline:t,publisher_and_game:game}=source;
+ assert.equal(game.distinct_games_counted_by_original_and_dx,1);
+ assert.equal(game["2023_dx_is_separate_paid_game_launch"],false);
+ const time=d=>d+'T00:00:00Z';
+ const original={project_id:'same_chico_paid_game',observation_utc:time(t.first_itch_and_steam_commercial_release_day),
+  first_public_utc:time(t.first_itch_and_steam_commercial_release_day),
+  observation_kind:'first_public',is_game:true,initial_positive_price_verified:true,source_evidence_verified:true};
+ const first=classifyItchCommercialReleaseCohort([original],{
+  startUtc:'2022-08-01T00:00:00Z',endUtc:'2022-09-01T00:00:00Z'});
+ assert.equal(first.valid,true);
+ assert.equal(first.classification_counts.new_paid,1);
+ const dx={...original,observation_kind:'update',observation_utc:time(t.dx_free_existing_purchasers_upgrade_day)};
+ const next=classifyItchCommercialReleaseCohort([dx],{
+  startUtc:'2023-01-01T00:00:00Z',endUtc:'2023-02-01T00:00:00Z'});
+ assert.equal(next.valid,true);
+ assert.equal(next.classification_counts.updates,1);
+ assert.equal(next.classification_counts.new_paid,0);
+ assert.equal(next.observed_verified_first_paid_game_pages,0);
+ assert.equal(next.global_first_time_paid_game_launch_rate,null);
+});
