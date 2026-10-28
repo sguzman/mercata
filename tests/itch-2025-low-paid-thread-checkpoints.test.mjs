@@ -1,0 +1,44 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const read=p=>JSON.parse(fs.readFileSync(new URL("../"+p,import.meta.url),"utf8"));
+const path="ontology/itch-io/2025-reddit-two-creator-low-paid-sales-and-same-game-checkpoints.json";
+test("Same game in two source posts remains one publisher and preserves mismatched channel taxonomy",()=>{
+ const x=read(path),d=read("specimens/itch-io.json"),old=read("ontology/itch-io/no-more-snow-2025-one-game-crossstore-paid-and-free-demo.json");
+ assert(x.source_ids.every(id=>d.evidence.some(e=>e.id===id)));
+ assert.equal(x.selection.creators_in_this_thread_with_numeric_store_sales,2);
+ assert.equal(x.selection.unique_creators_after_joining_december_case,2);
+ assert.equal(x.cases[0].publisher_linkage,"same_creator_as_no_more_snow_december_2025_postmortem");
+ assert.equal(x.cases[0].itch_paid_copies_reported,6);
+ assert.equal(x.cases[0].gog_paid_copies_reported,422);
+ assert.equal(x.linked_later_report.itch_paid_copies_reported,8);
+ assert.equal(x.linked_later_report.gog_paid_copies_reported,446);
+ assert.equal(x.linked_later_report.same_game_itch_cumulative_copy_difference,2);
+ assert.equal(x.linked_later_report.same_game_gog_cumulative_copy_difference,24);
+ assert.equal(x.linked_later_report.exact_days_between_itch_snapshots,null);
+ assert.equal(x.linked_later_report.first_thread_steam_category_comparable_to_later_store_key_split,false);
+ assert.equal(old.prior_public_checkpoint.reported_itch_paid_copies,6);
+ assert.equal(old.prior_public_checkpoint.distinct_creator_duplicated_as_new_market_merchant,false);
+});
+test("Selected second game and free demo cannot manufacture buyer conversion, income or platform mean",()=>{
+ const x=read(path),c=x.cases[1],prior=x.cases[0];
+ assert.equal(c.itch_paid_copies_reported,2);
+ assert.equal(c.steam_paid_copies_reported,45);
+ assert.equal(c.game_title,null);
+ assert.equal(c.positive_itch_minimum_price_at_sale_verified,false);
+ assert.equal(c.itch_payout_after_fees,null);
+ assert.equal(prior.free_itch_demo_downloads_reported_approx,20700);
+ assert.equal(prior.paid_buyers_from_free_demo_verified,null);
+ assert(Object.values(x.missing_population_estimates).every(v=>v===null));
+});
+test("Only an existing paid demand task advances; fixed 244 task frame remains",()=>{
+ const p=read("plans/itch-io.json"),q=read("queues/itch-io.json");
+ assert.equal(p.total_tracked_tasks,244);
+ assert.equal(p.detail_tasks.length,160);
+ assert.equal(q.queues.flatMap(w=>w.tasks).length,84);
+ const t=p.detail_tasks.find(x=>x.id==="itch-io/market/estimate-paid-purchase-demand");
+ assert.equal(t.percent,73);
+ assert.equal(t.status,"in_progress");
+ for(const file of [path,"ontology/itch-io/2025-reddit-two-creator-low-paid-sales-and-same-game-checkpoints.md","tests/itch-2025-low-paid-thread-checkpoints.test.mjs"])assert(t.evidence.includes(file));
+ assert.equal(p.detail_tasks.filter(x=>x.percent<100).length+q.queues.flatMap(w=>w.tasks).filter(x=>x.progress<100).length,32);
+});

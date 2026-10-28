@@ -2671,6 +2671,17 @@
       "evidence_class": "first_party_self_selected_paid_videogame_three_year_multistore_transaction_and_demo_report",
       "license": "Brief publicly reported figures attributed with original analysis and source link; no post text, image or gameplay media republished.",
       "notes": "Same title No More Snow: 8 itch units and $32.30, 1,231 Steam storefront, 4,443 Steam keys sold via Fanatical, 446 GOG; reported ~$8043 before tax across all. Unmatched old free itch demo ~20k downloads at Steam launch, no attribution cohort, no audited creator net profit."
+    },
+    {
+      "id": "reddit-itch-2025-creator-replies-low-paid-sales-and-no-more-snow-checkpoint",
+      "url": "https://www.reddit.com/r/itchio/comments/1oks4ip/people_whove_priced_their_games_on_itch_how_often/",
+      "publisher": "Two self-reporting game developers in a public r/itchio discussion",
+      "title": "People who've priced their games on itch, how often do people buy it? — October 2025 creator replies",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_person_self_selected_unverified_creator_commentary_cross_store_low_paid_units",
+      "license": "Brief factual creator-provided counts paraphrased and linked; individual comments and personal material are not copied or republished.",
+      "notes": "Discussion began Oct 31 2025, commenter days unverified. One creator is independently known from No More Snow December 2025 report, said earlier 6 itch/422 GOG/~5k loosely named Steam and 20.7k free demo. Another unverified first commercial title had 2 itch/45 Steam. One creator counted once; no seller income or market population inference."
     }
   ],
   "claims": [
@@ -8375,6 +8386,60 @@
       "confidence": "medium",
       "observed_at": "2026-10-27",
       "limitations": "Seasonal holiday game, promotional and price history not matched to itch or GOG, self-selected timing and audience."
+    },
+    {
+      "id": "thread-2025-no-more-snow-earlier-six-itch-four-twenty-two-gog",
+      "text": "In an October 2025-thread reply, the same creator as the later No More Snow postmortem said the game had 6 itch.io purchases and 422 GOG copies at that earlier checkpoint.",
+      "source_ids": [
+        "reddit-itch-2025-creator-replies-low-paid-sales-and-no-more-snow-checkpoint",
+        "no-more-snow-2025-first-solo-game-crossstore-paid-orders"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Self-reported source comment with exact day unverified; not a second independent merchant or verified 30/90/365-day sales cohort."
+    },
+    {
+      "id": "thread-2025-no-more-snow-snapshot-increments-not-velocity",
+      "text": "The same game's later December 2025 retrospective stated 8 itch and 446 GOG copies, two and 24 higher than earlier selected creator-reported counts, without verified identical channel and sale-record conventions.",
+      "source_ids": [
+        "reddit-itch-2025-creator-replies-low-paid-sales-and-no-more-snow-checkpoint",
+        "no-more-snow-2025-first-solo-game-crossstore-paid-orders"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Exact earlier comment date, refund adjustment and underlying exports unknown; the arithmetic difference cannot be annualized or modeled as a typical long-tail sales rate."
+    },
+    {
+      "id": "thread-2025-steam-approx-five-thousand-vs-later-split-not-compatible",
+      "text": "The earlier creator comment loosely reported roughly 5,000 Steam copies, while the later source separated 1,231 Steam storefront copies from 4,443 Fanatical Steam-key copies; the two Steam-labeled totals cannot be compared as like-for-like sales.",
+      "source_ids": [
+        "reddit-itch-2025-creator-replies-low-paid-sales-and-no-more-snow-checkpoint",
+        "no-more-snow-2025-first-solo-game-crossstore-paid-orders"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Earlier sales channel taxonomy and cutoff not specified, and later third-party key sales are not sales through the Steam storefront."
+    },
+    {
+      "id": "thread-2025-first-commercial-game-two-itch-forty-five-steam",
+      "text": "A different self-reporting creator in the same 2025 public discussion described a first commercial game selling 2 copies via itch.io and 45 through Steam.",
+      "source_ids": [
+        "reddit-itch-2025-creator-replies-low-paid-sales-and-no-more-snow-checkpoint"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Game title, exact comment time, price at sale, storefront accounting basis, customer records and after-cost income not documented; not a representative new-game sample."
+    },
+    {
+      "id": "thread-2025-no-more-snow-free-downloads-not-paid-conversion",
+      "text": "An earlier creator reply described approximately 20,700 free itch demo downloads for No More Snow, which cannot be divided into the later 8 paid itch copies to establish observed unique-user conversion.",
+      "source_ids": [
+        "reddit-itch-2025-creator-replies-low-paid-sales-and-no-more-snow-checkpoint",
+        "no-more-snow-2025-first-solo-game-crossstore-paid-orders"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Downloads are events not unique customers, cutoffs differ, and purchase attribution or de-duplication across stores is missing."
     }
   ],
   "observations": [
@@ -8430,6 +8495,6 @@
   "opportunities": [],
   "risks": [],
   "experiments": [],
-  "updated_at": "2026-10-27",
+  "updated_at": "2026-10-28",
   "summary": "Game-selling research active. Official rules for publication, indexing, payments, pricing, seller analytics, file delivery and game jams are documented. Typical developer sales, zero-earner fraction, median profit and causal discovery effects remain unknown."
 }
