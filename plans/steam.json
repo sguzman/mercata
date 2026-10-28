@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 73,
+  "progress_percent": 75,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -258,7 +258,7 @@
         "steam/competition/study-paid-marketing-acquisition-thresholds"
       ],
       "phase": 2,
-      "progress_percent": 55
+      "progress_percent": 59
     },
     {
       "id": "income",
@@ -394,7 +394,7 @@
         "steam/risk/build-downside-scenarios-for-small-studios"
       ],
       "phase": 3,
-      "progress_percent": 74
+      "progress_percent": 79
     },
     {
       "id": "strategy",
@@ -496,7 +496,7 @@
         "steam/special-games/plan-live-game-maintenance-and-sunset"
       ],
       "phase": 2,
-      "progress_percent": 72
+      "progress_percent": 86
     }
   ],
   "deliverables": [
@@ -2465,11 +2465,15 @@
       "emoji": "🏁",
       "objective": "Research compare viable player counts, concurrency needs, hosting costs and price points.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare viable player counts, concurrency needs, hosting costs and price points. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 45,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -3725,14 +3729,16 @@
       "objective": "Research quantify SDK integration, engine upgrades, server services and API compatibility burdens.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Quantify SDK integration, engine upgrades, server services and API compatibility burdens. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/steamos-deck-compatibility-qa-2026.json",
         "ontology/steam/steamos-deck-compatibility-qa-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json"
       ],
-      "artifact": "ontology/steam/steamos-deck-compatibility-qa-2026.md",
+      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3744,7 +3750,7 @@
       "objective": "Research estimate patches, localization QA, customer disputes and maintenance labor.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Estimate patches, localization QA, customer disputes and maintenance labor. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/app-transfer-reporting-and-retirement-2026.md",
@@ -3755,9 +3761,11 @@
         "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
         "ontology/steam/workshop-ugc-monetization-and-rights-2026.json",
         "ontology/steam/curator-connect-and-community-events-2026.md",
-        "ontology/steam/curator-connect-and-community-events-2026.json"
+        "ontology/steam/curator-connect-and-community-events-2026.json",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json"
       ],
-      "artifact": "ontology/steam/curator-connect-and-community-events-2026.md",
+      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3769,14 +3777,16 @@
       "objective": "Research research online server costs, player continuity obligations and discontinued functionality.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research online server costs, player continuity obligations and discontinued functionality. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/app-transfer-reporting-and-retirement-2026.md",
         "ontology/steam/app-transfer-reporting-and-retirement-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json"
       ],
-      "artifact": "ontology/steam/app-transfer-reporting-and-retirement-2026.md",
+      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3879,7 +3889,7 @@
       "objective": "Research define exposure to one storefront's policy, discovery or fee changes.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define exposure to one storefront's policy, discovery or fee changes. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/fixed-paid-release-cohort-2026.md",
@@ -3888,9 +3898,11 @@
         "ontology/steam/financial-validation-and-consent-2026.json",
         "specimens/steam.json",
         "ontology/steam/app-transfer-reporting-and-retirement-2026.md",
-        "ontology/steam/app-transfer-reporting-and-retirement-2026.json"
+        "ontology/steam/app-transfer-reporting-and-retirement-2026.json",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json"
       ],
-      "artifact": "ontology/steam/app-transfer-reporting-and-retirement-2026.md",
+      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -4681,16 +4693,18 @@
       "objective": "Research research depots, branches, build review and staged publication for first game.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research depots, branches, build review and staged publication for first game. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
         "ontology/steam/entry-review-and-reporting-2026.md",
         "specimens/steam.json",
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
-        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md"
+        "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json"
       ],
-      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -4702,14 +4716,16 @@
       "objective": "Research compare Windows, macOS, Linux and Steam Deck support with verification requirements.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare Windows, macOS, Linux and Steam Deck support with verification requirements. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/steamos-deck-compatibility-qa-2026.json",
         "ontology/steam/steamos-deck-compatibility-qa-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json"
       ],
-      "artifact": "ontology/steam/steamos-deck-compatibility-qa-2026.md",
+      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -4777,11 +4793,15 @@
       "emoji": "🎮",
       "objective": "Research compare Steamworks networking, own servers, third-party hosts and ongoing expense.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare Steamworks networking, own servers, third-party hosts and ongoing expense. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 90,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -4914,11 +4934,15 @@
       "emoji": "🎮",
       "objective": "Research research depot compression, patches, required assets and bandwidth costs.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research depot compression, patches, required assets and bandwidth costs. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 90,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -4970,14 +4994,16 @@
       "objective": "Research specify crash telemetry, saves, controller UX, accessibility, store localization and build rollback.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify crash telemetry, saves, controller UX, accessibility, store localization and build rollback. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 60,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/steamos-deck-compatibility-qa-2026.json",
         "ontology/steam/steamos-deck-compatibility-qa-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json"
       ],
-      "artifact": "ontology/steam/steamos-deck-compatibility-qa-2026.md",
+      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -5008,16 +5034,18 @@
       "objective": "Research define ongoing patches, backend end-of-life and buyer access continuity.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define ongoing patches, backend end-of-life and buyer access continuity. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/app-transfer-reporting-and-retirement-2026.md",
         "ontology/steam/app-transfer-reporting-and-retirement-2026.json",
         "specimens/steam.json",
         "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
-        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json"
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+        "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json"
       ],
-      "artifact": "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
+      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
       "priority": "normal",
       "phase": 2
     }

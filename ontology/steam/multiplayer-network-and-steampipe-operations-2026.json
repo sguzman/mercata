@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "multiplayer_and_update_distribution_cost_boundary",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-multiplayer-architecture-2026",
+    "steam-multiplayer-lobby-service-2026",
+    "steam-multiplayer-dedicated-service-2026",
+    "steam-multiplayer-sdr-service-2026",
+    "steam-steampipe-uploads-2026",
+    "steam-steampipe-update-practices-2026"
+  ],
+  "claim_ids": [
+    "net-lobbies-not-transport",
+    "net-lobbies-250-max",
+    "net-lobby-async-geographic",
+    "net-p2p-small-party",
+    "net-dedicated-competitive",
+    "net-community-self-host",
+    "net-sdr-relay-protection",
+    "net-steam-voice-not-transport",
+    "net-no-verified-hosting-economics",
+    "pipe-one-mib-chunks",
+    "pipe-asset-shift-breaks-delta",
+    "pipe-pack-rebuild-local-write",
+    "pipe-branches-beta-rollbacks",
+    "pipe-linux-contentbuilder",
+    "pipe-depot-package-entitlement",
+    "pipe-updates-via-client",
+    "pipe-preload-eligibility-limited",
+    "pipe-no-actual-cost-measurement"
+  ],
+  "multiplayer": {
+    "lobbies": {
+      "max_members": 250,
+      "transports_gameplay": false,
+      "search_async": true
+    },
+    "peer_to_peer": {
+      "suitable_for_small_groups": true,
+      "dedicated_host_required": false
+    },
+    "dedicated": {
+      "publisher_or_community_host_possible": true,
+      "persistent_worlds_supported": true
+    },
+    "steam_datagram_relay": {
+      "supports_p2p_and_dedicated": true,
+      "ip_shielding_documented": true
+    },
+    "real_monthly_server_cost_usd": null,
+    "verified_sales_lift": null
+  },
+  "steampipe": {
+    "initial_chunk_size_approx_bytes": 1048576,
+    "unchanged_churn_reuse": true,
+    "pack_file_reordering_can_increase_download": true,
+    "whole_pack_rebuild_can_require_second_local_copy": true,
+    "beta_branches": true,
+    "linux_uploader_documented": true,
+    "required_new_depots_need_package_inclusion": true,
+    "real_download_bytes": null,
+    "real_temporary_disk_gb": null
+  },
+  "illustrative_not_real": {
+    "pack_file_gib": 25,
+    "tiny_logical_asset_change_bytes": 10,
+    "required_temporary_copy_illustration_gib": 25,
+    "actual_patch_download_gib": null,
+    "actual_developer_host_bill": null
+  },
+  "actions": {
+    "steamworks_access": false,
+    "servers_deployed": false,
+    "builds_uploaded": false,
+    "benchmark_run": false
+  },
+  "unknown": {
+    "actual_multiplayer_roi": null,
+    "actual_maintenance_hours": null,
+    "actual_game_patch_bytes": null,
+    "real_host_cost": null
+  }
+}

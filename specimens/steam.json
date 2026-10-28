@@ -939,6 +939,72 @@
       "evidence_class": "marketplace_official_current_public_merchant_guidance",
       "license": "Only source metadata and independently authored factual comparison; no source screenshots, copyrighted content or private receipts copied.",
       "notes": "Comparison of documented public terms with Steam; no accounts created or empirical paired-revenue comparisons."
+    },
+    {
+      "id": "steam-multiplayer-architecture-2026",
+      "url": "https://partner.steamgames.com/doc/features/multiplayer",
+      "title": "Multiplayer",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_technical_product_and_platform_documentation",
+      "license": "Only factual paraphrases, metadata and URL; no copyrighted documentation, partner data, or screenshots reproduced.",
+      "notes": "Public technical guidance; no live service, account, SteamPipe build, server workload or cost observed."
+    },
+    {
+      "id": "steam-multiplayer-lobby-service-2026",
+      "url": "https://partner.steamgames.com/doc/features/multiplayer/matchmaking?language=english",
+      "title": "Steam Matchmaking & Lobbies",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_technical_product_and_platform_documentation",
+      "license": "Only factual paraphrases, metadata and URL; no copyrighted documentation, partner data, or screenshots reproduced.",
+      "notes": "Public technical guidance; no live service, account, SteamPipe build, server workload or cost observed."
+    },
+    {
+      "id": "steam-multiplayer-dedicated-service-2026",
+      "url": "https://partner.steamgames.com/doc/features/multiplayer/game_servers",
+      "title": "Game Servers",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_technical_product_and_platform_documentation",
+      "license": "Only factual paraphrases, metadata and URL; no copyrighted documentation, partner data, or screenshots reproduced.",
+      "notes": "Public technical guidance; no live service, account, SteamPipe build, server workload or cost observed."
+    },
+    {
+      "id": "steam-multiplayer-sdr-service-2026",
+      "url": "https://partner.steamgames.com/doc/features/multiplayer/steamdatagramrelay?l=latam&language=english",
+      "title": "Steam Datagram Relay",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_technical_product_and_platform_documentation",
+      "license": "Only factual paraphrases, metadata and URL; no copyrighted documentation, partner data, or screenshots reproduced.",
+      "notes": "Public technical guidance; no live service, account, SteamPipe build, server workload or cost observed."
+    },
+    {
+      "id": "steam-steampipe-uploads-2026",
+      "url": "https://partner.steamgames.com/doc/sdk/uploading",
+      "title": "Uploading to Steam",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_technical_product_and_platform_documentation",
+      "license": "Only factual paraphrases, metadata and URL; no copyrighted documentation, partner data, or screenshots reproduced.",
+      "notes": "Public technical guidance; no live service, account, SteamPipe build, server workload or cost observed."
+    },
+    {
+      "id": "steam-steampipe-update-practices-2026",
+      "url": "https://partner.steamgames.com/doc/store/updates?pubDate=20250919",
+      "title": "Updating Your Game - Best Practices",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_technical_product_and_platform_documentation",
+      "license": "Only factual paraphrases, metadata and URL; no copyrighted documentation, partner data, or screenshots reproduced.",
+      "notes": "Public technical guidance; no live service, account, SteamPipe build, server workload or cost observed."
     }
   ],
   "claims": [
@@ -5307,6 +5373,192 @@
       "observed_at": "2026-10-28",
       "confidence": "high",
       "limitations": "Actual contractual agreements and applicable license terms must be checked before a specific game's dual distribution."
+    },
+    {
+      "id": "net-lobbies-not-transport",
+      "text": "Steam matchmaking lobby APIs handle player discovery and session metadata but do not transport gameplay packets.",
+      "source_ids": [
+        "steam-multiplayer-architecture-2026",
+        "steam-multiplayer-lobby-service-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The game must supply P2P or server transport; no live game measured."
+    },
+    {
+      "id": "net-lobbies-250-max",
+      "text": "Steam says a lobby can contain up to 250 members, though most games use 2–16.",
+      "source_ids": [
+        "steam-multiplayer-lobby-service-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Lobby capacity is not a sample of actual multiplayer demand."
+    },
+    {
+      "id": "net-lobby-async-geographic",
+      "text": "Steam lobby search is asynchronous with geographic filtering and constrained result counts.",
+      "source_ids": [
+        "steam-multiplayer-lobby-service-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "No observed latency or regional real users."
+    },
+    {
+      "id": "net-p2p-small-party",
+      "text": "Valve presents P2P networking combined with lobbies as an option for smaller cooperative groups.",
+      "source_ids": [
+        "steam-multiplayer-architecture-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Actual host migration, cheating, reliability and user experience must be tested."
+    },
+    {
+      "id": "net-dedicated-competitive",
+      "text": "Valve recommends dedicated game servers for highly competitive or persistent games.",
+      "source_ids": [
+        "steam-multiplayer-architecture-2026",
+        "steam-multiplayer-dedicated-service-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "No server deployment expenses, instance hours, or actual player concurrency observed."
+    },
+    {
+      "id": "net-community-self-host",
+      "text": "Steam's Game Server API supports publisher-run or community-run dedicated servers.",
+      "source_ids": [
+        "steam-multiplayer-dedicated-service-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Community hosting availability cannot be assumed as a replacement for all publisher obligations."
+    },
+    {
+      "id": "net-sdr-relay-protection",
+      "text": "Valve describes Steam Datagram Relay as an authenticated and encrypted relay, with IP-address shielding, for P2P and dedicated games.",
+      "source_ids": [
+        "steam-multiplayer-sdr-service-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Does not establish an uptime guarantee, tariff schedule or absence of DDoS risk."
+    },
+    {
+      "id": "net-steam-voice-not-transport",
+      "text": "Valve says Steam Voice functions still require P2P or game-server transport to send recorded voice audio.",
+      "source_ids": [
+        "steam-multiplayer-architecture-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Voice capture is not complete moderation, transcription, consent or abuse-control infrastructure."
+    },
+    {
+      "id": "net-no-verified-hosting-economics",
+      "text": "The official docs do not provide a representative new-publisher hosting cost, first-year profitability or paid sales uplift.",
+      "source_ids": [
+        "steam-multiplayer-architecture-2026",
+        "steam-multiplayer-dedicated-service-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Requires actual game workload, bills, QA hours and merchant outcome data."
+    },
+    {
+      "id": "pipe-one-mib-chunks",
+      "text": "Valve describes SteamPipe splitting content into chunks of approximately 1 MB and reusing identical chunks during updates.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Chunking is not a guarantee of resulting patch download bytes."
+    },
+    {
+      "id": "pipe-asset-shift-breaks-delta",
+      "text": "Asset reordering and whole-pack compression may greatly increase SteamPipe patch downloads despite small content edits.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "No observed old/new depot or pack patch statistics."
+    },
+    {
+      "id": "pipe-pack-rebuild-local-write",
+      "text": "SteamPipe can construct a replacement pack file beside an existing pack, yielding large local staging requirements even for tiny changes.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "25-GB pack file in documentation is illustrative, not measured for any Mercata sample."
+    },
+    {
+      "id": "pipe-branches-beta-rollbacks",
+      "text": "SteamPipe offers test branches, public/private betas and switching or rolling back live builds.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026",
+        "steam-steampipe-update-practices-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "No production deployment or branch permission tested."
+    },
+    {
+      "id": "pipe-linux-contentbuilder",
+      "text": "Valve documents Linux SteamPipe upload utilities in its SDK.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A supported tool does not establish deployment success on a real pipeline."
+    },
+    {
+      "id": "pipe-depot-package-entitlement",
+      "text": "Valve instructs developers to add new platform depots to the relevant customer license packages or they may not install.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026",
+        "steam-steampipe-update-practices-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Requires testing per package and platform; no broken game observed."
+    },
+    {
+      "id": "pipe-updates-via-client",
+      "text": "Valve recommends using Steam update distribution rather than requiring game-internal content downloads after game startup.",
+      "source_ids": [
+        "steam-steampipe-update-practices-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Update size and cadence still affect customers and ongoing support costs."
+    },
+    {
+      "id": "pipe-preload-eligibility-limited",
+      "text": "SteamPipe preloads are documented for presale-enabled products and selected free-to-play games.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Not an entitlement for every small premium release; no preload request made."
+    },
+    {
+      "id": "pipe-no-actual-cost-measurement",
+      "text": "Technical update guidance cannot determine a real game's patch traffic, local disk write, bandwidth bill, crash rate or customer attrition.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026",
+        "steam-steampipe-update-practices-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Real SteamPipe manifest comparisons, client QA and expense records needed."
     }
   ],
   "observations": [],
@@ -5314,5 +5566,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research includes an official Steam versus itch.io first-game launch channel comparison covering entry fees, payment settlement and incomparable buyer denominators, without claiming fee advantage is actual income."
+  "summary": "Steam research additionally covers multiplayer transport and SteamPipe update delivery, distinguishing documented feature choices from real hosting, patching expense and developer earnings."
 }
