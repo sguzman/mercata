@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "review_source_and_sales_estimator_comparability_audit",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-review-policy-2026",
+    "steam-review-api-2026",
+    "steam-review-api-change-oct2026",
+    "steam-boxleiter-birkett-2018",
+    "steam-boxleiter-carless-2020",
+    "steam-gamalytic-method-2023",
+    "steam-gamalytic-definitions",
+    "steam-steamlense-estimation-method"
+  ],
+  "claim_ids": [
+    "steam-reviews-score-purchases-only",
+    "steam-reviews-nonbuyers-can-review",
+    "steam-review-api-old-route-replaced",
+    "steam-review-api-oct22-announced",
+    "steam-review-api-anonymous-permitted",
+    "steam-review-api-defaults-narrow",
+    "steam-review-api-filter-caveats",
+    "steam-review-api-no-sales-ledger",
+    "steam-birkett-2018-median",
+    "steam-birkett-2018-spread",
+    "steam-birkett-no-revenue-from-review",
+    "steam-carless-2020-population",
+    "steam-carless-2020-era-specific",
+    "steam-carless-review-prompt-confound",
+    "steam-gamalytic-multisignal-method",
+    "steam-gamalytic-backtest-excludes-low-sellers",
+    "steam-gamalytic-backtest-accuracy-conditional",
+    "steam-gamalytic-owners-not-copies",
+    "steam-steamlense-multipliers-heuristics",
+    "steam-steamlense-revenue-limits",
+    "steam-zero-review-not-zero-sales",
+    "steam-game-sales-models-not-income"
+  ],
+  "current_review_api": {
+    "reference": "https://partner.steamgames.com/doc/webapi/IUserReviewsService",
+    "legacy_endpoint_status": "deprecated_replaced",
+    "legacy_shutdown_announced_date": "2026-10-22",
+    "legacy_shutdown_date_source": "secondary_announcement_summary_not_probed",
+    "new_endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+    "publisher_key_required_for_read": false,
+    "anonymous_rate_limit": "lower_shared_unspecified",
+    "default_language": "english",
+    "default_purchase_type": "steam",
+    "purchase_type_enum": {
+      "steam": 0,
+      "all": 1,
+      "non_steam": 2
+    },
+    "recent_filter_enum": 1,
+    "updated_filter_enum": 2,
+    "default_offtopic_excluded": true,
+    "public_paid_orders": null,
+    "live_api_tested": false
+  },
+  "historical_calibrations": [
+    {
+      "publisher": "Jake Birkett",
+      "published_at": "2018-05-04",
+      "scope": "self_reported_premium_indie_developers",
+      "sample_size_lower_bound": 50,
+      "median_sales_per_review": 77,
+      "mean_sales_per_review": 82,
+      "reported_approx_min": 30,
+      "reported_approx_max": 150,
+      "representative_2026_paid_launches": false
+    },
+    {
+      "publisher": "GameDiscoverCo",
+      "published_at": "2020-08-03",
+      "scope": "submitted_nonoutlier_game_sample",
+      "sample_size": 237,
+      "median_sales_per_review": 58,
+      "mean_sales_per_review": 63,
+      "launch_2020_median_sales_per_review": 38,
+      "approx_middle_80_percent_min": 25,
+      "approx_middle_80_percent_max": 100,
+      "representative_2026_paid_launches": false
+    }
+  ],
+  "public_estimator_methods": [
+    {
+      "operator": "Gamalytic",
+      "evidence_class": "self_reported_proprietary_model",
+      "signals": [
+        "reviews",
+        "top_seller_rank",
+        "concurrent_players",
+        "public_profiles",
+        "published_sales"
+      ],
+      "validation_published_at": "2023-05-13",
+      "validation_sample_approx": 120,
+      "validation_excluded_games_below_paid_units": 1000,
+      "validation_within_30_percent_fraction": 0.7692,
+      "validation_within_50_percent_fraction": 0.9915,
+      "valid_for_zero_sales_population": null
+    },
+    {
+      "operator": "steamlense",
+      "evidence_class": "review_to_sales_heuristic",
+      "unit_multiplier_low": 20,
+      "unit_multiplier_expected": 45,
+      "unit_multiplier_high": 80,
+      "model_uses_review_histograms_and_price_history": true,
+      "paid_earnings_verified": false
+    }
+  ],
+  "measurement_units": [
+    "app_id",
+    "storefront_review_all",
+    "purchase_origin_review",
+    "review_score",
+    "paid_steam_base_game_unit",
+    "steam_key_activation",
+    "free_ownership",
+    "modeled_gross_revenue",
+    "merchant_net_payout",
+    "developer_after_cost_profit"
+  ],
+  "required_cohort_controls": [
+    "paid_at_initial_public_release",
+    "early_access_first_paid_release_time_zero",
+    "fixed_evaluation_horizon",
+    "including_zero_review_paid_games",
+    "including_delisted_titles",
+    "publisher_identity_deduplication",
+    "language_and_purchase_filter_provenance",
+    "era_and_genre_strata",
+    "discounts_refunds_region_inference",
+    "sensitivity_intervals_not_single_points"
+  ],
+  "unknown": {
+    "complete_paid_release_sampling_frame": null,
+    "review_to_sale_ratio_for_zero_review_games": null,
+    "exact_zero_paid_order_fraction": null,
+    "independent_out_of_sample_validation_for_small_games": null,
+    "representative_publisher_mean_income": null,
+    "representative_publisher_median_income": null,
+    "actual_paid_orders": null,
+    "merchant_net_payout": null,
+    "developer_profit": null
+  },
+  "restrictions": {
+    "raw_review_text_collected": false,
+    "individual_user_ids_collected": false,
+    "underlying_paid_estimator_database_downloaded": false,
+    "merchant_login_used": false,
+    "paid_experiment_conducted": false
+  }
+}

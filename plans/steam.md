@@ -1,6 +1,6 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 17% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 20% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
@@ -291,6 +291,10 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## Fourth evidence-backed checkpoint
+
+The [Steam reviews and sales-estimator audit](../ontology/steam/review-data-and-sales-estimation-2026.md) documents October 2026 review API migration, purchase-origin and language filters, historical developer-disclosure review-to-sales calibrations, and the selective validation of Gamalytic and steamlense heuristics. It distinguishes model-owner accuracy statements from all-release accuracy. **Current score: 20% (exact 19.983%), up 3 rounded percentage points from 17%.** Merchant sales, true zero-sale fraction and publisher profits remain unmeasured.
+
 ## Third evidence-backed checkpoint
 
 The [independent 2025 release count and positive-sales-conditioned long-tail review](../ontology/steam/public-catalog-and-conditional-long-tail-2026.md) distinguishes incompatible catalog counting frames, under-ten-review games from zero sales, and GameDiscoverCo's high-selling selected releases from the whole marketplace. This advances supply and methodology tasks without claiming a representative seller-income distribution. **Current score: 17%, exact 17.014%; Δ +4 pp after the 13% discovery checkpoint.**
@@ -331,4 +335,4 @@ The [wishlist and visibility report](../ontology/steam/discovery-wishlists-and-v
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 17%** rounded task-weighted progress across 293 tasks; previous round 6%, cumulative change +11 percentage points this round. Eight tasks fully verified, 97 partially investigated; 16 public source records and 59 bounded claims. Baseline queues, the 26-specimen gallery, Steam’s existing OKLCH color and all other specimens are unchanged in substance. No account operations, purchases, authenticated financial data access or commercial experiments were performed.
+**Completion: 20%** rounded task-weighted progress across 293 tasks; previous round 17%, change +3 percentage points this round (exact 19.983%). 8 tasks fully verified and 101 partially investigated; 24 public source records and 81 bounded claims. The original 293-task scope, specimen color, other platforms and existing marketplace queues are preserved. No account operations, paid experiments, direct review ingestion or merchant data collection occurred.

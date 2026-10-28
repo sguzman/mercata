@@ -191,6 +191,94 @@
       "evidence_class": "publisher_origin_modeled_sales_cohort_with_positive_sale_threshold",
       "license": "Link, source identity and terse independent numerical interpretation only; article text, graphics and proprietary underlying sales estimates not copied.",
       "notes": "Sample of around 5,000 games released July 2023 to July 2025, conditional on modeled first-month sales above 1,000 units. Model-estimated rather than audited seller transactions. Excludes early weak/zero-selling titles."
+    },
+    {
+      "id": "steam-review-policy-2026",
+      "url": "https://partner.steamgames.com/doc/store/reviews",
+      "title": "User Reviews",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_review_policy",
+      "license": "Public link, metadata, and independently written factual paraphrase only; no source articles, raw reviews or proprietary estimated game-level rows copied.",
+      "notes": "Steam purchase-origin reviews are distinct from visible key/free reviews and review scores."
+    },
+    {
+      "id": "steam-review-api-2026",
+      "url": "https://partner.steamgames.com/doc/webapi/IUserReviewsService",
+      "title": "IUserReviewsService: GetAppReviews",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_review_api_documentation",
+      "license": "Public link, metadata, and independently written factual paraphrase only; no source articles, raw reviews or proprietary estimated game-level rows copied.",
+      "notes": "Supersedes deprecated store review endpoint; no-key anonymous read with restrictions; filter choices and pagination documented."
+    },
+    {
+      "id": "steam-review-api-change-oct2026",
+      "url": "https://gamedev.net/news/6178-changes-to-steam-user-reviews-api/",
+      "title": "Changes to Steam User Reviews API (Steamworks announcement summary)",
+      "publisher": "GameDev.net / Steamworks Development announcement summary",
+      "published_at": "2026-10-02",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "dated_secondary_public_change_notice",
+      "license": "Public link, metadata, and independently written factual paraphrase only; no source articles, raw reviews or proprietary estimated game-level rows copied.",
+      "notes": "Reports October 22, 2026 shutdown announcement; original Valve page not independently retrieved through this research route. Its assertion of mandatory keys conflicts with currently published Valve API documentation."
+    },
+    {
+      "id": "steam-boxleiter-birkett-2018",
+      "url": "https://www.gamedeveloper.com/business/using-steam-reviews-to-estimate-sales",
+      "title": "Using Steam reviews to estimate sales",
+      "publisher": "Jake Birkett / Game Developer",
+      "published_at": "2018-05-04",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "self_selected_developer_disclosure_calibration",
+      "license": "Public link, metadata, and independently written factual paraphrase only; no source articles, raw reviews or proprietary estimated game-level rows copied.",
+      "notes": "More than 50 premium indie game observations, outliers removed; cannot establish 2026 market-wide accuracy."
+    },
+    {
+      "id": "steam-boxleiter-carless-2020",
+      "url": "https://newsletter.gamediscover.co/p/how-that-game-sold-on-steam-using",
+      "title": "How that game sold on Steam, using the NB number",
+      "publisher": "Simon Carless / GameDiscoverCo",
+      "published_at": "2020-08-03",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "developer_submitted_sales_review_ratio_survey",
+      "license": "Public link, metadata, and independently written factual paraphrase only; no source articles, raw reviews or proprietary estimated game-level rows copied.",
+      "notes": "237 non-outlier submissions; sample and year-specific ratios cannot be projected to all 2026 titles."
+    },
+    {
+      "id": "steam-gamalytic-method-2023",
+      "url": "https://gamalytic.com/blog/how-to-accurately-estimate-steam-sales",
+      "title": "How to accurately estimate Steam game sales",
+      "publisher": "Gamalytic",
+      "published_at": "2023-05-13",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "model_owner_backtest_with_disclosed_sales_sample",
+      "license": "Public link, metadata, and independently written factual paraphrase only; no source articles, raw reviews or proprietary estimated game-level rows copied.",
+      "notes": "Self-reported backtest on approximately 120 titles, excludes titles under 1,000 sales; method combines several public signals."
+    },
+    {
+      "id": "steam-gamalytic-definitions",
+      "url": "https://gamalytic.com/about",
+      "title": "Gamalytic About: method and glossary",
+      "publisher": "Gamalytic",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "model_owner_methods_and_metric_definitions",
+      "license": "Public link, metadata, and independently written factual paraphrase only; no source articles, raw reviews or proprietary estimated game-level rows copied.",
+      "notes": "Clarifies owner versus player versus Steam copies sold; admits poorer small-game accuracy and limitations for bundles/free-to-play."
+    },
+    {
+      "id": "steam-steamlense-estimation-method",
+      "url": "https://steamlense.com/methodology",
+      "title": "How steamlense estimates revenue and ranks niches",
+      "publisher": "steamlense",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "independent_heuristic_review_multiplier_method",
+      "license": "Public link, metadata, and independently written factual paraphrase only; no source articles, raw reviews or proprietary estimated game-level rows copied.",
+      "notes": "Shows 20/45/80 review multipliers, review/price timing and exclusions; no audited income distribution."
     }
   ],
   "claims": [
@@ -805,6 +893,232 @@
       "confidence": "medium",
       "observed_at": "2026-10-28",
       "limitations": "Requires an eligible paid-release publisher frame including delisted zero-sale units and verifiable merchant sales or bounded estimates."
+    },
+    {
+      "id": "steam-reviews-score-purchases-only",
+      "text": "Valve says the store review score counts reviews from Steam purchasers, not key activators; reviewers from other acquisition routes may still appear.",
+      "source_ids": [
+        "steam-review-policy-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Scores are not a tally of purchased units and many buyers never review; free-to-play review rules differ."
+    },
+    {
+      "id": "steam-reviews-nonbuyers-can-review",
+      "text": "A user who has played via a key, free weekend or family sharing can leave a visible review without having purchased on Steam.",
+      "source_ids": [
+        "steam-review-policy-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The overall visible review list, purchase-origin score denominator, review API filters and sale ledger are distinct populations."
+    },
+    {
+      "id": "steam-review-api-old-route-replaced",
+      "text": "Valve's current documentation says IUserReviewsService GetAppReviews replaces the deprecated store-domain appreviews endpoint.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A documentation statement establishes migration direction but does not by itself verify every provider's legacy integration is broken."
+    },
+    {
+      "id": "steam-review-api-oct22-announced",
+      "text": "A dated public summary of Valve's October 2026 announcement says the former store-domain bulk review endpoint was scheduled for deactivation on October 22, 2026.",
+      "source_ids": [
+        "steam-review-api-change-oct2026",
+        "steam-review-api-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Change date comes from a secondary reproduction; no live old-endpoint test was undertaken."
+    },
+    {
+      "id": "steam-review-api-anonymous-permitted",
+      "text": "Valve's current GetAppReviews reference explicitly permits keyless calls, with a lower shared rate limit than app-associated authenticated calls.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This contradicts the secondary announcement summary implying a key is mandatory; public documentation is preferred, but operational availability was not tested."
+    },
+    {
+      "id": "steam-review-api-defaults-narrow",
+      "text": "The current GetAppReviews API defaults to English-language reviews and Steam-purchase-origin reviews rather than all languages and acquisition routes.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Queries must record the requested filters; otherwise counts from different callers are not necessarily comparable."
+    },
+    {
+      "id": "steam-review-api-filter-caveats",
+      "text": "GetAppReviews permits all-language and non-Steam-purchase filters, excludes off-topic activity by default, and has date, pagination and review-type controls.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No public records were pulled; filters change the denominator and may not reconstruct every storefront score."
+    },
+    {
+      "id": "steam-review-api-no-sales-ledger",
+      "text": "The public user review interface exposes reviews and summary counts, not a per-AppID count of completed paid orders or partner payouts.",
+      "source_ids": [
+        "steam-review-api-2026",
+        "steam-review-policy-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The absence of an order field in this reviewed interface does not establish that Valve has no authenticated finance reporting."
+    },
+    {
+      "id": "steam-birkett-2018-median",
+      "text": "Jake Birkett's May 2018 premium-indie developer-disclosure sample reported a median 77 sales per Steam review and an average 82.",
+      "source_ids": [
+        "steam-boxleiter-birkett-2018"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Self-selected, historical premium indie sample; just over 50 data points, not a 2026 representative all-game multiplier."
+    },
+    {
+      "id": "steam-birkett-2018-spread",
+      "text": "The same 2018 calibration described an approximately 30-to-150 sales-per-review range after excluding two outliers.",
+      "source_ids": [
+        "steam-boxleiter-birkett-2018"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Not a statistical prediction interval for a random Steam title or a guarantee for tiny games."
+    },
+    {
+      "id": "steam-birkett-no-revenue-from-review",
+      "text": "Birkett explicitly cautioned that estimated paid units alone cannot determine revenue without discounts and sale-price history.",
+      "source_ids": [
+        "steam-boxleiter-birkett-2018"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Key sales, returns, regional pricing, VAT, company split and development labor introduce additional uncertainty."
+    },
+    {
+      "id": "steam-carless-2020-population",
+      "text": "GameDiscoverCo's August 2020 developer-submitted, non-outlier sample comprised 237 titles with median 58 and mean 63 Steam sales per review.",
+      "source_ids": [
+        "steam-boxleiter-carless-2020"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Voluntary respondent and outlier exclusion; not all paid launches, zero sellers or inactive publishers."
+    },
+    {
+      "id": "steam-carless-2020-era-specific",
+      "text": "Within the same 2020 study, launch-year-2020 games had median 38 sales per review, rather than the 58 across the pooled historical submissions.",
+      "source_ids": [
+        "steam-boxleiter-carless-2020"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Small/cohort-specific samples and variable observation windows mean this does not calibrate 2026 games."
+    },
+    {
+      "id": "steam-carless-review-prompt-confound",
+      "text": "Carless identifies an October 2019 Steam review reminder change that affected review behavior and made historical ratios less comparable.",
+      "source_ids": [
+        "steam-boxleiter-carless-2020"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Survey identifies a potential time-varying mechanism, not a causal randomized estimate."
+    },
+    {
+      "id": "steam-gamalytic-multisignal-method",
+      "text": "Gamalytic documents combining review multiples, sales-rank signals, concurrent-player information and public-profile sampling to estimate Steam units.",
+      "source_ids": [
+        "steam-gamalytic-method-2023",
+        "steam-gamalytic-definitions"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Input availability, weights, game genres and proprietary changes may alter estimates; no model was run for this checkpoint."
+    },
+    {
+      "id": "steam-gamalytic-backtest-excludes-low-sellers",
+      "text": "Gamalytic's 2023 self-reported test uses about 120 games with publicly disclosed sales and expressly excludes games below 1,000 sales.",
+      "source_ids": [
+        "steam-gamalytic-method-2023"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Success selection and disclosure bias make the model's measured accuracy unsuitable as the error rate for the zero/low-sale Steam population."
+    },
+    {
+      "id": "steam-gamalytic-backtest-accuracy-conditional",
+      "text": "The 2023 Gamalytic aggregation reported 76.92% of its selected validation estimates within 30% relative error, and 99.15% within 50%.",
+      "source_ids": [
+        "steam-gamalytic-method-2023"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Self-reported in-sample/selected validation, not externally audited and not demonstrated for small, delisted or zero-sale games."
+    },
+    {
+      "id": "steam-gamalytic-owners-not-copies",
+      "text": "Gamalytic distinguishes game owners, players and estimated copies purchased directly on Steam; keys, bundles and free access affect ownership.",
+      "source_ids": [
+        "steam-gamalytic-definitions"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Definitions from a model operator do not establish exact public buyer counts."
+    },
+    {
+      "id": "steam-steamlense-multipliers-heuristics",
+      "text": "Steamlense publishes low, expected and high heuristic multiples of 20, 45 and 80 Steam sales per review.",
+      "source_ids": [
+        "steam-steamlense-estimation-method"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "These are selectable modeling assumptions, not market-wide calibrated probabilities or observed orders."
+    },
+    {
+      "id": "steam-steamlense-revenue-limits",
+      "text": "Steamlense describes pairing review timing with historical price observations while warning that discounts, regional prices, refunds, DLC and bundles remain incompletely modeled.",
+      "source_ids": [
+        "steam-steamlense-estimation-method"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Review timestamps lag sales and US historical prices do not provide global checkout or actual merchant proceeds."
+    },
+    {
+      "id": "steam-zero-review-not-zero-sales",
+      "text": "Zero public Steam reviews cannot establish zero game orders, zero developer revenue or no publisher activity.",
+      "source_ids": [
+        "steam-review-policy-2026",
+        "steam-boxleiter-carless-2020"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Review creation is voluntary and acquisition/review filters differ; no zero-sale count was measured."
+    },
+    {
+      "id": "steam-game-sales-models-not-income",
+      "text": "Even apparently plausible modeled Steam base-game gross figures do not measure actual bank receipts or developer after-cost profit.",
+      "source_ids": [
+        "steam-gamalytic-definitions",
+        "steam-steamlense-estimation-method",
+        "steam-boxleiter-carless-2020"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Need matched merchant reporting, refunds, VAT/withholding, publishing splits and production costs; no paid seller ledger accessed."
     }
   ],
   "observations": [],
@@ -812,5 +1126,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Research started with public Steamworks entry, review, tax and payout documentation; detailed game sales, representative developer earnings, and paid buyer counts remain unknown."
+  "summary": "Public Steamworks policy, launch and payment research now includes selected release-cohort evidence and an audited 2026 review API/modeled sales methodology comparison. Representative paid-game and publisher earnings, zero-sales prevalence and real merchant payouts remain unknown."
 }

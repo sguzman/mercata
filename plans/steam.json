@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 17,
+  "progress_percent": 20,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -88,7 +88,7 @@
         "steam/identity/document-store-geography-and-languages"
       ],
       "phase": 1,
-      "progress_percent": 10
+      "progress_percent": 17
     },
     {
       "id": "access",
@@ -190,7 +190,7 @@
         "steam/market/document-cohort-coverage-uncertainty"
       ],
       "phase": 2,
-      "progress_percent": 18
+      "progress_percent": 20
     },
     {
       "id": "discovery",
@@ -296,7 +296,7 @@
         "steam/income/build-evidence-quality-classification-for-earnings"
       ],
       "phase": 3,
-      "progress_percent": 13
+      "progress_percent": 21
     },
     {
       "id": "rights",
@@ -360,7 +360,7 @@
         "steam/sales/design-after-launch-retention-metrics"
       ],
       "phase": 3,
-      "progress_percent": 14
+      "progress_percent": 22
     },
     {
       "id": "risk",
@@ -462,7 +462,7 @@
         "steam/review/prepare-public-publication-qa-checklist"
       ],
       "phase": 1,
-      "progress_percent": 25
+      "progress_percent": 40
     },
     {
       "id": "special-games",
@@ -629,13 +629,16 @@
       "objective": "Research separate account, buyer, unit sold, gift purchaser, package activator, review author and concurrent player.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate account, buyer, unit sold, gift purchaser, package activator, review author and concurrent player. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 35,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -682,11 +685,15 @@
       "emoji": "🪪",
       "objective": "Research distinguish official documents, public catalog observations, model estimates and permissioned Steamworks merchant records.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Distinguish official documents, public catalog observations, model estimates and permissioned Steamworks merchant records. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 80,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1303,13 +1310,16 @@
       "objective": "Research construct a frame that does not condition on reviews, sales success or visibility.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Construct a frame that does not condition on reviews, sales success or visibility. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 20,
+      "percent": 25,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "high",
       "phase": 2
     },
@@ -1513,13 +1523,16 @@
       "objective": "Research assess survivorship bias when catalogs omit removed products, retired publishers and blocked regions.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Assess survivorship bias when catalogs omit removed products, retired publishers and blocked regions. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 25,
+      "percent": 35,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -1531,13 +1544,16 @@
       "objective": "Research quantify differences across official records, SteamDB, VG Insights and other available sources.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Quantify differences across official records, SteamDB, VG Insights and other available sources. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "high",
       "phase": 2
     },
@@ -2128,13 +2144,16 @@
       "objective": "Research include no-review, removed, unpopular, inactive and zero-sale titles at fixed horizons.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Include no-review, removed, unpopular, inactive and zero-sale titles at fixed horizons. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 25,
+      "percent": 55,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -2250,11 +2269,15 @@
       "emoji": "📊",
       "objective": "Research document model assumptions, historical accuracy and missing data without treating estimates as fact.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Document model assumptions, historical accuracy and missing data without treating estimates as fact. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 35,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2284,13 +2307,16 @@
       "objective": "Research test selection bias, keys, free copies, review incentives, price and region impacts.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Test selection bias, keys, free copies, review incentives, price and region impacts. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 30,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -2401,13 +2427,16 @@
       "objective": "Research rank audited receipts, permissioned aggregates, self-disclosure and modeled estimates; refuse unsupported market-wide inference.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Rank audited receipts, permissioned aggregates, self-disclosure and modeled estimates; refuse unsupported market-wide inference. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2650,13 +2679,16 @@
       "objective": "Research specify fixed launch day, timezone, refund adjustment and comparable listing age.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify fixed launch day, timezone, refund adjustment and comparable listing age. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 20,
+      "percent": 25,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -2668,13 +2700,16 @@
       "objective": "Research separate unique visitors, wishlisters, checkout starters, successful paid orders and players.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate unique visitors, wishlisters, checkout starters, successful paid orders and players. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 40,
+      "percent": 70,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2718,11 +2753,15 @@
       "emoji": "🛒",
       "objective": "Research map buyer-review author, key reviewer, refunded customer and unverified review counts.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Map buyer-review author, key reviewer, refunded customer and unverified review counts. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 85,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3403,14 +3442,16 @@
       "objective": "Research specify source identifiers, publication date precision, retrieval times and reuse permission notes.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify source identifiers, publication date precision, retrieval times and reuse permission notes. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 60,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
         "ontology/steam/entry-review-and-reporting-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json"
       ],
-      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -3441,16 +3482,18 @@
       "objective": "Research track dated changes and archive URLs where permitted instead of silently substituting current rules.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Track dated changes and archive URLs where permitted instead of silently substituting current rules. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
         "ontology/steam/entry-review-and-reporting-2026.md",
         "specimens/steam.json",
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -3462,13 +3505,16 @@
       "objective": "Research define unit, denominator, period, geography, price, tax, model status and uncertainty.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define unit, denominator, period, geography, price, tax, model status and uncertainty. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 30,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -3480,15 +3526,18 @@
       "objective": "Research record zero seller frame, true paid buyers, refunds, owner profit and unverified distribution statistics.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Record zero seller frame, true paid buyers, refunds, owner profit and unverified distribution statistics. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
         "ontology/steam/discovery-wishlists-and-visibility-2026.md",
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -3515,13 +3564,16 @@
       "objective": "Research identify model uncertainties and compare estimates to opted-in audited merchant samples when allowed.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Identify model uncertainties and compare estimates to opted-in audited merchant samples when allowed. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 40,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -3532,11 +3584,15 @@
       "emoji": "🔬",
       "objective": "Research determine public-link citation versus licensed data download and game asset reuse permission.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Determine public-link citation versus licensed data download and game asset reuse permission. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 35,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -3548,13 +3604,16 @@
       "objective": "Research reject mixed eras, price regimes, refunded orders, demos and key activations counted as Steam sales.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Reject mixed eras, price regimes, refunded orders, demos and key activations counted as Steam sales. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "high",
       "phase": 1
     },
@@ -3596,15 +3655,18 @@
       "objective": "Research list precise missing data, ethical access paths, candidate substitutes and stopping rules.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: List precise missing data, ethical access paths, candidate substitutes and stopping rules. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 65,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
         "ontology/steam/discovery-wishlists-and-visibility-2026.md",
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.md",
+        "ontology/steam/review-data-and-sales-estimation-2026.json",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+      "artifact": "ontology/steam/review-data-and-sales-estimation-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -3904,6 +3966,6 @@
       "phase": 2
     }
   ],
-  "progress_method": "Arithmetic average of the 293 existing and dedicated task percentages, all presently zero. Research completion requires cited acceptance evidence.",
+  "progress_method": "Arithmetic average of the stable 293 baseline and dedicated task percentage scores, equally weighted. Nonzero scores require source-linked acceptance evidence; verified full completion requires acceptance tests or documented evidence-gap closure.",
   "research_started_at": "2026-10-28"
 }
