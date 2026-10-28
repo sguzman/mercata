@@ -1,6 +1,6 @@
 # itch.io commercial-game research — evidence synthesis and open gaps
 
-**Evidence updated October 28, 2026.** The live itch.io dossier has **271 attributed sources and 628 bounded claims**, across **244 fixed research tasks**. The machine register retains its original interim extraction counts (54 sources/148 claims), which are **historical creation metadata rather than current totals**. [Machine evidence synthesis](research-synthesis-2026.json) · [live dossier](../../specimens/itch-io.json).
+**Evidence updated October 28, 2026.** The live itch.io dossier has **273 attributed sources and 636 bounded claims**, across **244 fixed research tasks**. The machine register retains its original interim extraction counts (54 sources/148 claims), which are **historical creation metadata rather than current totals**. [Machine evidence synthesis](research-synthesis-2026.json) · [live dossier](../../specimens/itch-io.json).
 
 **Current economic conclusion:** itch.io permits cost-free game publication but not cost-free production; paid transactions incur seller-configured platform share, processing charges and route-specific tax/settlement rules. Catalog listing counts, genre ranks, ratings and downloads are **not** actual paid orders. Representative active paid sellers, paying game buyers, median or mean after-cost creator income, zero-sale incidence and causal discovery lift remain **unobserved**. Our task scoring is **97.43% exact, 97% rounded**, but it is not a percentage of those market outcomes measured.
 
@@ -67,7 +67,7 @@ An April 2026 publisher case records sustained featured discovery of a free game
 
 A September 2026 first-game creator reported zero sales alongside a self-described optional-donation/paid-tier price configuration mistake, with no evidence the error caused the outcome. [First-game price incident](first-game-pricing-misconfiguration-2026.md).
 
-The [documented buyer checkout route/region crosswalk](buyer-checkout-route-eligibility-2026.md) separates merchant processor configuration from actual accepted payment instruments and leaves unverifiable buyer-country access and actual buyer counts unknown.
+A [single creator’s three paid game-asset listings](same-seller-paid-asset-zero-versus-positive-payments-2026.md) record two small positive project-payment counts and one zero, while a separate bundle conveyed an entitlement to the zero-direct-payment product. These are asset pages from one publisher with event rather than unique-buyer denominators, not a representative paid-game sales sample.\n\nThe [documented buyer checkout route/region crosswalk](buyer-checkout-route-eligibility-2026.md) separates merchant processor configuration from actual accepted payment instruments and leaves unverifiable buyer-country access and actual buyer counts unknown.
 
 The fixed multi-store legal/contract boundary task is now source-verified: itch.io licenses publisher content non-exclusively and lets developers opt into external-key distribution under separate restrictions, without certifying the publisher's outside licenses or actual offline operation. [Rights and DRM distinction](multistore-rights-external-keys-2026.md).
 
