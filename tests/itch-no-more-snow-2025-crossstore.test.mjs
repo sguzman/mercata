@@ -1,0 +1,41 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const r=p=>JSON.parse(fs.readFileSync(new URL("../"+p,import.meta.url),"utf8"));
+const file="ontology/itch-io/no-more-snow-2025-one-game-crossstore-paid-and-free-demo.json";
+test("One game across four distinct selling channels retains exact unit and money arithmetic",()=>{
+ const a=r(file),d=r("specimens/itch-io.json");
+ assert(a.source_ids.every(id=>d.evidence.some(x=>x.id===id)));
+ assert.equal(a.sample.independent_games,1);
+ assert.equal(a.sample.probability_sample,false);
+ assert.equal(a.store_records.length,4);
+ assert.deepEqual(a.store_records.map(x=>x.paid_copy_events),[1231,4443,446,8]);
+ assert.equal(a.store_records[3].reported_revenue_usd,32.30);
+ assert.equal(a.store_records.reduce((s,x)=>s+x.paid_copy_events,0),6128);
+ assert.equal(Math.round(a.store_records.reduce((s,x)=>s+x.reported_revenue_usd,0)*100),804330);
+ assert.equal(a.arithmetic.fanatical_keys_are_steam_storefront_sales,false);
+ assert.equal(a.arithmetic.percentage_share_represents_platformwide_market_share,false);
+ assert.equal(a.arithmetic.these_receipts_establish_game_profit,false);
+ assert.equal(a.sample.refund_adjustment_confirmed,false);
+ assert(Object.values(a.unknown).every(x=>x===null));
+});
+test("Demo downloads from a different window cannot become paid checkout conversion",()=>{
+ const a=r(file),b=a.creator_reported_demo;
+ assert.equal(b.itch_first_prototype_downloads_approx,2000);
+ assert.equal(b.itch_demo_downloads_by_steam_game_launch_approx,20000);
+ assert.equal(b.demo_is_free_download_not_paid_copy,true);
+ assert.equal(b.ratio_itch_paid_units_to_demo_download_events_is_conversion_rate,false);
+ assert.equal(b.verified_crossstore_buyer_attribution,false);
+ assert.equal(a.sample.exact_itch_and_steam_launch_dates_matched,false);
+ assert.equal(a.development_and_pricing.developer_net_profit_after_labor,null);
+});
+test("One source advances only a pre-existing paid-demand question; no task inventory expansion",()=>{
+ const p=r("plans/itch-io.json"),q=r("queues/itch-io.json");
+ assert.equal(p.total_tracked_tasks,244);
+ assert.equal(p.detail_tasks.length,160);
+ assert.equal(q.queues.flatMap(w=>w.tasks).length,84);
+ const t=p.detail_tasks.find(x=>x.id==="itch-io/market/estimate-paid-purchase-demand");
+ assert.equal(t.percent,72);assert.equal(t.status,"in_progress");
+ for(const f of [file,"ontology/itch-io/no-more-snow-2025-one-game-crossstore-paid-and-free-demo.md","tests/itch-no-more-snow-2025-crossstore.test.mjs"])assert(t.evidence.includes(f));
+ assert.equal(p.detail_tasks.find(x=>x.id==="itch-io/competition/create-cross-platform-benchmarks").percent,99);
+});

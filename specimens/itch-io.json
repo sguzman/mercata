@@ -2660,6 +2660,17 @@
       "evidence_class": "first_party_selected_tabletop_creator_2025_multichannel_income_and_old_title_sales",
       "license": "Attributed brief numeric factual observations and independently authored methodological analysis; no charts, full article or private records reproduced.",
       "notes": "One publisher reported roughly $2400 gross/$2200 cash after some fees and costs, itch 43.8% of mixed channels, and 2021/2023 titles still selling in 2025. Not 2026 typical paid videogame income."
+    },
+    {
+      "id": "no-more-snow-2025-first-solo-game-crossstore-paid-orders",
+      "url": "https://www.reddit.com/r/gamedev/comments/1prgrto/3_years_after_my_first_solo_game_launch_6k_copies/",
+      "publisher": "Deividas, Reddit account u/juodabarzdis (first-person developer retrospective)",
+      "title": "3 years after my first solo game launch: 6k copies sold, $8k in gross revenue, and a Christmas present every year",
+      "published_at": "2025-12-20",
+      "retrieved_at": "2026-10-27",
+      "evidence_class": "first_party_self_selected_paid_videogame_three_year_multistore_transaction_and_demo_report",
+      "license": "Brief publicly reported figures attributed with original analysis and source link; no post text, image or gameplay media republished.",
+      "notes": "Same title No More Snow: 8 itch units and $32.30, 1,231 Steam storefront, 4,443 Steam keys sold via Fanatical, 446 GOG; reported ~$8043 before tax across all. Unmatched old free itch demo ~20k downloads at Steam launch, no attribution cohort, no audited creator net profit."
     }
   ],
   "claims": [
@@ -8314,6 +8325,56 @@
       "confidence": "high",
       "observed_at": "2026-10-27",
       "limitations": "Different product format and price mechanism; no completed paid videogame order count."
+    },
+    {
+      "id": "no-more-snow-2025-eight-paid-itch-copies-cumulative",
+      "text": "A 2025 first-person developer retrospective for one videogame reported eight itch.io paid copies generating $32.30 over approximately three years, alongside 1,231 Steam-storefront copies and 446 GOG copies.",
+      "source_ids": [
+        "no-more-snow-2025-first-solo-game-crossstore-paid-orders"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Self-reported lifetime-ish units and cash, not audited transactions or representative price-class cohort; refund and net-fee basis unclear."
+    },
+    {
+      "id": "no-more-snow-2025-fanatical-steam-keys-not-steam-storefront-orders",
+      "text": "The same developer separately reported 4,443 Fanatical retail Steam-key copies producing $2,137, which are not 4,443 Steam storefront purchase events.",
+      "source_ids": [
+        "no-more-snow-2025-first-solo-game-crossstore-paid-orders"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Fanatical keys can activate on Steam; counting them as Steam storefront orders would double-label the distribution channel."
+    },
+    {
+      "id": "no-more-snow-2025-reported-revenue-unit-arithmetic-rounded",
+      "text": "Across four disclosed distribution channels, the game had 6,128 self-reported copy events and $8,043.30 in summed pre-tax revenue labels; the developer rounded the total to $8,043.",
+      "source_ids": [
+        "no-more-snow-2025-first-solo-game-crossstore-paid-orders"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-27",
+      "limitations": "Source self-report with nominal USD labels, no refunds, VAT, payouts or net labor-cost reconciliation. Arithmetic is within this selected same-game report only."
+    },
+    {
+      "id": "no-more-snow-itch-free-demo-discovery-not-paid-checkout-conversion",
+      "text": "The developer said an itch prototype drew about 2,000 free downloads and the demo later had about 20,000 itch downloads by Steam launch, but those downloaders are not linked to the later paid-store buyers.",
+      "source_ids": [
+        "no-more-snow-2025-first-solo-game-crossstore-paid-orders"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Free demo download events are not unique buyers, different observation periods, and no causal attribution to subsequent paid game purchases exists."
+    },
+    {
+      "id": "no-more-snow-seasonal-content-and-changing-steam-prices",
+      "text": "The developer described holiday-season sales concentration and later Steam price adjustments and discounts, preventing an unadjusted same-title cross-store sales ratio from establishing a general advantage.",
+      "source_ids": [
+        "no-more-snow-2025-first-solo-game-crossstore-paid-orders"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-27",
+      "limitations": "Seasonal holiday game, promotional and price history not matched to itch or GOG, self-selected timing and audience."
     }
   ],
   "observations": [

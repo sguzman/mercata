@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "specimen_id": "itch-io",
+  "kind": "one_first_solo_video_game_three_year_multistore_paid_order_and_itch_demo_self_report",
+  "reviewed_at": "2026-10-27",
+  "source_ids": [
+    "no-more-snow-2025-first-solo-game-crossstore-paid-orders"
+  ],
+  "sample": {
+    "independent_publishers": 1,
+    "independent_games": 1,
+    "probability_sample": false,
+    "reported_first_solo_commercial_title": true,
+    "source_post_date": "2025-12-20",
+    "observation_window": "roughly_three_years_since_commercial_launch_as_of_post",
+    "exact_itch_and_steam_launch_dates_matched": false,
+    "full_historical_price_series_verified": false,
+    "official_payment_exports_observed": false,
+    "transaction_currency": "USD_as_author_reported",
+    "refund_adjustment_confirmed": false
+  },
+  "game": "No More Snow",
+  "store_records": [
+    {
+      "venue": "Steam storefront",
+      "paid_copy_events": 1231,
+      "reported_revenue_usd": 4465,
+      "distribution": "Steam_direct_store"
+    },
+    {
+      "venue": "Fanatical",
+      "paid_copy_events": 4443,
+      "reported_revenue_usd": 2137,
+      "distribution": "Steam_keys_sold_by_third_party_retailer"
+    },
+    {
+      "venue": "GOG",
+      "paid_copy_events": 446,
+      "reported_revenue_usd": 1409,
+      "distribution": "GOG_direct_store"
+    },
+    {
+      "venue": "itch.io",
+      "paid_copy_events": 8,
+      "reported_revenue_usd": 32.3,
+      "distribution": "itch_paid_copies"
+    }
+  ],
+  "arithmetic": {
+    "sum_reported_store_paid_units": 6128,
+    "sum_reported_store_revenue_usd": 8043.3,
+    "rounded_source_total_revenue_usd": 8043,
+    "source_total_revenue_is_rounded_to_nearest_dollar": true,
+    "itch_share_of_listed_store_units_percent": 0.13054830287206268,
+    "itch_share_of_listed_store_revenue_percent": 0.4015764673703579,
+    "fanatical_keys_are_steam_storefront_sales": false,
+    "these_receipts_establish_game_profit": false,
+    "percentage_share_represents_platformwide_market_share": false
+  },
+  "creator_reported_demo": {
+    "itch_first_prototype_downloads_approx": 2000,
+    "itch_demo_downloads_by_steam_game_launch_approx": 20000,
+    "demo_is_free_download_not_paid_copy": true,
+    "steam_launch_wishlists_approx": 1700,
+    "developer_identified_itch_as_largest_early_launch_traffic_source": true,
+    "free_demo_downloaders_deduplicated_with_paid_game_buyers": false,
+    "itch_demo_downloads_as_of_post": null,
+    "ratio_itch_paid_units_to_demo_download_events_is_conversion_rate": false,
+    "verified_crossstore_buyer_attribution": false
+  },
+  "development_and_pricing": {
+    "solo_creator_reported_on_and_off_development_years_approx": 3,
+    "work_hours_audited": null,
+    "author_reported_steam_initial_price_usd": 7.99,
+    "author_reported_steam_revised_price_usd": 4.99,
+    "price_at_reporting_discounted_example_usd": 1.99,
+    "matched_crossstore_full_price_history": false,
+    "holiday_theme_reported_to_drive_seasonal_attention": true,
+    "marketing_cost_reconciliation_complete": false,
+    "developer_net_profit_after_labor": null
+  },
+  "unknown": {
+    "representative_itch_seller_median_income": null,
+    "market_paid_game_orders": null,
+    "paid_buyer_population": null,
+    "any_store_first_30_day_matched_units": null,
+    "causal_demo_to_steam_sales_lift": null,
+    "game_itch_payout_after_fees": null,
+    "unique_payors_across_stores": null,
+    "zero_sale_marketwide_fraction": null,
+    "matched_platform_conversion_rate": null
+  },
+  "cautions": [
+    "One self-selected first-party retrospective reports the same videogame across stores but not an independently verified full storefront transaction export.",
+    "Four channels include Fanatical as a third-party seller of Steam keys; those key sales must not be added to Steam storefront events under a misleading Steam venue label.",
+    "The listed cash amounts sum to $8,043.30, while the source writes $8,043 in whole dollars; this is ordinary rounding, not an unexplained contradiction.",
+    "The author calls revenue before taxes, but refund adjustments, platform fee deductions, payout currency and labor costs are not reconciled.",
+    "All-channel figures span approximately three years; the old free itch prototype and demo download checkpoint belongs to prelaunch discovery and is not an observed paid-funnel cohort.",
+    "Cross-store pricing and discounts changed over time, differing storefront promotions, releases, conversions and exposure prohibit a causal market-level advantage claim.",
+    "The source says roughly 20,000 itch demo downloads by Steam launch, not necessarily through the later three-year paid game tally date.",
+    "No denominator for all eligible first-game publishers, especially zero-sale publishers, is supplied."
+  ]
+}
