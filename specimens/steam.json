@@ -1170,6 +1170,28 @@
       "evidence_class": "official_public_policy_and_capability_not_observed_sales",
       "license": "Only source metadata, URLs, original factual paraphrases, and no copyrighted prose or private records.",
       "notes": "Verified games with all-ages trailer gain a page; causal sales effect remains unobserved."
+    },
+    {
+      "id": "steam-families-dev-2026",
+      "url": "https://partner.steamgames.com/doc/features/families?l=english&language=english",
+      "title": "Steam Families",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_family_sharing_and_ownership_api_policy",
+      "license": "Public URL, title and concise original paraphrases only; no account or individual data.",
+      "notes": "Temporary borrower entitlement and client/server ownership checks; no paid-order data."
+    },
+    {
+      "id": "steam-families-faq-2026",
+      "url": "https://help.steampowered.com/en/faqs/view/054C-3167-DD7F-49D4",
+      "title": "Steam Families User Guide & FAQ",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_family_licensing_and_concurrent_copy_policy",
+      "license": "Public URL, title and concise original factual summaries only.",
+      "notes": "Up to six members; ownership remains with purchaser; two simultaneous game players require two owned copies; restrictions."
     }
   ],
   "claims": [
@@ -6593,6 +6615,160 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "These are structural chronology bins, not proof of any causal earnings impact."
+    },
+    {
+      "id": "families-six-members",
+      "text": "Steam Families supports up to six accounts in a family group.",
+      "source_ids": [
+        "steam-families-dev-2026",
+        "steam-families-faq-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Group membership does not measure paid buyers or household-size distribution."
+    },
+    {
+      "id": "families-purchaser-keeps-license",
+      "text": "The original purchaser retains ownership while another family member may borrow eligible access.",
+      "source_ids": [
+        "steam-families-faq-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Borrower access does not create a new permanent purchased license."
+    },
+    {
+      "id": "families-concurrent-needs-extra-copy",
+      "text": "Two family members wanting to play the same title concurrently need two owned copies.",
+      "source_ids": [
+        "steam-families-faq-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A license can serve different members at different times, not simultaneous additional seats."
+    },
+    {
+      "id": "families-saves-achievements-separate",
+      "text": "Family borrowers may have separate saved games, achievements and Workshop activity.",
+      "source_ids": [
+        "steam-families-faq-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Multiple active profiles do not establish additional paid orders."
+    },
+    {
+      "id": "families-optout-restrictions",
+      "text": "Sharing eligibility can be disabled by publishers and blocked by third-party accounts, region, OS or private owner settings.",
+      "source_ids": [
+        "steam-families-faq-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A game or DLC may be nonshareable even when someone owns it."
+    },
+    {
+      "id": "families-f2p-restriction",
+      "text": "Steam's Family FAQ says Free to Play games and associated purchased DLC are excluded from sharing.",
+      "source_ids": [
+        "steam-families-faq-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Does not imply zero purchases of a title's separate paid offerings."
+    },
+    {
+      "id": "families-enabled-default",
+      "text": "Steamworks enables Family Sharing by default for games/DLC subject to limitations and publisher opt-outs.",
+      "source_ids": [
+        "steam-families-dev-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Do not assume all games have working sharing."
+    },
+    {
+      "id": "families-client-share-api",
+      "text": "Steamworks provides ISteamApps::BIsSubscribedFromFamilySharing for client-side borrowed status.",
+      "source_ids": [
+        "steam-families-dev-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Not an authenticated sales ledger or a robust standalone backend ownership proof."
+    },
+    {
+      "id": "families-owner-lookup-api",
+      "text": "Steamworks exposes ISteamApps::GetAppOwner for identifying original owner of a shared app.",
+      "source_ids": [
+        "steam-families-dev-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "SteamIDs must not be copied into public research."
+    },
+    {
+      "id": "families-backend-temporary-flag",
+      "text": "ISteamUser/CheckAppOwnership exposes permanent=false and ownersteamid when a different account holds the shared license.",
+      "source_ids": [
+        "steam-families-dev-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The result confirms borrowing and ownership, not purchase date, paid value or payer."
+    },
+    {
+      "id": "families-no-permanent-borrower-right",
+      "text": "Valve warns developers not to grant a permanent backend entitlement on the basis of a temporary family loan.",
+      "source_ids": [
+        "steam-families-dev-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Game-specific DLC consumables and custom ban systems can need separate logic."
+    },
+    {
+      "id": "families-adult-child-payer-owner",
+      "text": "Steam Families lets an adult pay for a child's cart while the child receives the purchased license.",
+      "source_ids": [
+        "steam-families-faq-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Payer and license owner are not always the same account."
+    },
+    {
+      "id": "families-player-buyer-count-mismatch",
+      "text": "One purchased license can generate play by several distinct Steam accounts at different times.",
+      "source_ids": [
+        "steam-families-dev-2026",
+        "steam-families-faq-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No marketwide players-per-sale multiplier is observed."
+    },
+    {
+      "id": "families-entitlement-not-refund-adjusted-sale",
+      "text": "Family entitlement APIs cannot determine net Steam checkout counts, purchase price or tax/refund adjustments.",
+      "source_ids": [
+        "steam-families-dev-2026",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Authorized merchant records and a consistent payment denominator are necessary."
+    },
+    {
+      "id": "families-unduplicated-market-buyer-unknown",
+      "text": "Family borrowers, purchasers, gift recipients, key activations and owners are overlapping categories, not additive unique paid customers.",
+      "source_ids": [
+        "steam-families-faq-2026",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "True distinct paid buyer population remains unknown."
     }
   ],
   "observations": [],
@@ -6600,5 +6776,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research now includes dated Greenlight-to-Direct platform changes and a bounded payer-to-bank remittance bridge that separates Valve revenue share, taxes, returns, bank fees and unknown FX. Neither reported gross nor synthetic receipts prove actual developer income."
+  "summary": "Mercata distinguishes Steam Families temporary borrowed game access and distinct players from permanent license ownership and actual paid Steam orders, without importing user-level records. Representative publisher income, true zero sales and player-to-sale multipliers remain unobserved."
 }

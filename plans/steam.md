@@ -1,10 +1,14 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 82% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 83% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
+
+## Steam Families and paid-buyer denominators
+
+The [Family Sharing ownership and measurement study](../ontology/steam/family-sharing-players-versus-paid-licenses-2026.md) clarifies permanent paid licenses versus shared/borrowed player accounts, supporting a [synthetic denominator validator](../site/steam-family-license-units.mjs). **Current score 83%** (exact 82.765%; Δ +1 pp from 82%) across 293 original tasks. Actual unique buyer counts and net publisher outcomes remain unknown.
 
 ## Four research phases
 
@@ -447,4 +451,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 82%** rounded task-weighted progress across 293 tasks; prior 81%, Δ +1 pp (exact 82.184%). 62 fully verified, 231 partially researched; 105 dated sources, 525 bounded claims. No merchant or bank payout data, and no real developer profit measured.
+**Completion: 83%** rounded task-weighted progress across 293 tasks; prior 82%, Δ +1 pp (exact 82.765%). 63 tasks complete and 230 partly researched; 107 public sources and 540 bounded claims. No authenticated sale/customer data or publisher net income.

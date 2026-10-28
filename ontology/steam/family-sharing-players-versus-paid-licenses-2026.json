@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "steam_families_ownership_and_paid_customer_denominator_boundary",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-families-dev-2026",
+    "steam-families-faq-2026",
+    "steam-financial-api-official"
+  ],
+  "claim_ids": [
+    "families-six-members",
+    "families-purchaser-keeps-license",
+    "families-concurrent-needs-extra-copy",
+    "families-saves-achievements-separate",
+    "families-optout-restrictions",
+    "families-f2p-restriction",
+    "families-enabled-default",
+    "families-client-share-api",
+    "families-owner-lookup-api",
+    "families-backend-temporary-flag",
+    "families-no-permanent-borrower-right",
+    "families-adult-child-payer-owner",
+    "families-player-buyer-count-mismatch",
+    "families-entitlement-not-refund-adjusted-sale",
+    "families-unduplicated-market-buyer-unknown"
+  ],
+  "units": [
+    "paid_checkout_event",
+    "permanent_account_license",
+    "family_borrower_lease",
+    "unique_game_player",
+    "payer_account",
+    "gift_recipient_account",
+    "retail_key_activation"
+  ],
+  "rules": {
+    "max_family_members": 6,
+    "default_sharing_on_subject_to_exceptions": true,
+    "publisher_can_opt_out": true,
+    "third_party_account_key_or_subscription_can_block": true,
+    "region_or_os_can_block": true,
+    "free_to_play_and_its_dlc_sharing_default": false,
+    "ownership_remains_with_purchaser": true,
+    "one_game_copy_two_simultaneous_family_players": false,
+    "borrowers_have_separate_achievements": true,
+    "adults_can_pay_child_carts": true
+  },
+  "api": {
+    "client_borrower_check": "ISteamApps::BIsSubscribedFromFamilySharing",
+    "client_owner_check": "ISteamApps::GetAppOwner",
+    "backend_ownership_check": "ISteamUser/CheckAppOwnership",
+    "shared_license_permanent": false,
+    "borrower_granted_permanent_backend_rights": false
+  },
+  "synthetic_example": {
+    "one_owned_copy": true,
+    "three_sequential_players": true,
+    "two_simultaneous_players_supported": false
+  },
+  "unobserved": {
+    "family_borrowers_total": null,
+    "unique_paid_buyers": null,
+    "net_paid_orders": null,
+    "paid_units_per_player": null,
+    "refund_adjusted_sales": null,
+    "developer_profit": null
+  },
+  "no_steamids_accessed": true,
+  "no_account_accessed": true
+}

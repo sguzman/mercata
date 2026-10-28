@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 82,
+  "progress_percent": 83,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -88,7 +88,7 @@
         "steam/identity/document-store-geography-and-languages"
       ],
       "phase": 1,
-      "progress_percent": 85
+      "progress_percent": 87
     },
     {
       "id": "access",
@@ -190,7 +190,7 @@
         "steam/market/document-cohort-coverage-uncertainty"
       ],
       "phase": 2,
-      "progress_percent": 77
+      "progress_percent": 78
     },
     {
       "id": "discovery",
@@ -360,7 +360,7 @@
         "steam/sales/design-after-launch-retention-metrics"
       ],
       "phase": 3,
-      "progress_percent": 84
+      "progress_percent": 86
     },
     {
       "id": "risk",
@@ -394,7 +394,7 @@
         "steam/risk/build-downside-scenarios-for-small-studios"
       ],
       "phase": 3,
-      "progress_percent": 81
+      "progress_percent": 82
     },
     {
       "id": "strategy",
@@ -431,7 +431,7 @@
         "steam/strategy/design-selection-aware-case-study-comparison"
       ],
       "phase": 4,
-      "progress_percent": 85
+      "progress_percent": 86
     },
     {
       "id": "review",
@@ -496,7 +496,7 @@
         "steam/special-games/plan-live-game-maintenance-and-sunset"
       ],
       "phase": 2,
-      "progress_percent": 86
+      "progress_percent": 87
     }
   ],
   "deliverables": [
@@ -672,7 +672,7 @@
       "objective": "Research separate account, buyer, unit sold, gift purchaser, package activator, review author and concurrent player.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate account, buyer, unit sold, gift purchaser, package activator, review author and concurrent player. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
@@ -683,9 +683,11 @@
         "ontology/steam/fixed-paid-release-cohort-2026.md",
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
-        "ontology/steam/financial-validation-and-consent-2026.json"
+        "ontology/steam/financial-validation-and-consent-2026.json",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.json"
       ],
-      "artifact": "ontology/steam/fixed-paid-release-cohort-2026.md",
+      "artifact": "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1627,14 +1629,16 @@
       "objective": "Research differentiate accounts, monthly active customers, transacting buyers and purchasers of indie games.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Differentiate accounts, monthly active customers, transacting buyers and purchasers of indie games. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
         "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.json"
       ],
-      "artifact": "ontology/steam/valve-2025-platform-and-gdc-2026-aggregate-bounds.md",
+      "artifact": "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
       "priority": "high",
       "phase": 2
     },
@@ -1740,14 +1744,16 @@
       "objective": "Research seek completed paid-unit or revenue observations for fixed release cohorts.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Seek completed paid-unit or revenue observations for fixed release cohorts. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 50,
       "weight": 1,
       "evidence": [
         "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
         "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.json"
       ],
-      "artifact": "ontology/steam/multi-month-leaderboards-and-early-access-selection-2026.md",
+      "artifact": "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -3143,16 +3149,18 @@
       "objective": "Research distinguish purchases, user licenses, transferable keys, resale restrictions and refunds.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Distinguish purchases, user licenses, transferable keys, resale restrictions and refunds. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
         "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
         "specimens/steam.json",
         "ontology/steam/curator-connect-and-community-events-2026.md",
-        "ontology/steam/curator-connect-and-community-events-2026.json"
+        "ontology/steam/curator-connect-and-community-events-2026.json",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.json"
       ],
-      "artifact": "ontology/steam/curator-connect-and-community-events-2026.md",
+      "artifact": "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3648,7 +3656,7 @@
       "objective": "Research separate repeat buying by same verified account from separate game page visits.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate repeat buying by same verified account from separate game page visits. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "specimens/steam.json",
@@ -3657,9 +3665,11 @@
         "ontology/steam/series-repeat-payers-2026.md",
         "ontology/steam/series-repeat-payers-2026.json",
         "ontology/steam/deck-verified-competitive-positioning-2026.md",
-        "ontology/steam/deck-verified-competitive-positioning-2026.json"
+        "ontology/steam/deck-verified-competitive-positioning-2026.json",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.json"
       ],
-      "artifact": "ontology/steam/series-repeat-payers-2026.md",
+      "artifact": "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3713,16 +3723,18 @@
       "objective": "Research differentiate concurrency, playtime, refunds, repeat buying and net proceeds.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Differentiate concurrency, playtime, refunds, repeat buying and net proceeds. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/utm-traffic-attribution-and-paid-marketing-2026.md",
         "ontology/steam/utm-traffic-attribution-and-paid-marketing-2026.json",
         "specimens/steam.json",
         "ontology/steam/curator-connect-and-community-events-2026.md",
-        "ontology/steam/curator-connect-and-community-events-2026.json"
+        "ontology/steam/curator-connect-and-community-events-2026.json",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.json"
       ],
-      "artifact": "ontology/steam/curator-connect-and-community-events-2026.md",
+      "artifact": "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -4941,14 +4953,16 @@
       "objective": "Research separate integration effort, maintenance and potential buyer value evidence.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate integration effort, maintenance and potential buyer value evidence. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 65,
       "weight": 1,
       "evidence": [
         "ontology/steam/steamos-deck-compatibility-qa-2026.json",
         "ontology/steam/steamos-deck-compatibility-qa-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
+        "ontology/steam/family-sharing-players-versus-paid-licenses-2026.json"
       ],
-      "artifact": "ontology/steam/steamos-deck-compatibility-qa-2026.md",
+      "artifact": "ontology/steam/family-sharing-players-versus-paid-licenses-2026.md",
       "priority": "normal",
       "phase": 2
     },
