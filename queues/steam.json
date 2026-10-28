@@ -183,11 +183,14 @@
           "title": "Find commissions and service fees",
           "acceptance": "State fee basis, rate, tiers and effective dates.",
           "weight": 1,
-          "progress": 45,
+          "progress": 70,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/revenue-share-tiers-2018-2026.json",
-            "ontology/steam/revenue-share-tiers-2018-2026.md"
+            "ontology/steam/revenue-share-tiers-2018-2026.md",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+            "specimens/steam.json"
           ]
         },
         {
@@ -238,12 +241,14 @@
           "title": "Identify published tax obligations",
           "acceptance": "Document required forms, withholding and merchant-of-record terms.",
           "weight": 1,
-          "progress": 65,
+          "progress": 85,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/entry-review-and-reporting-2026.json",
             "ontology/steam/entry-review-and-reporting-2026.md",
-            "specimens/steam.json"
+            "specimens/steam.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.md"
           ]
         },
         {
@@ -252,7 +257,7 @@
           "title": "Model a transparent net-sale example",
           "acceptance": "Calculate gross less documented fees with assumptions.",
           "weight": 1,
-          "progress": 85,
+          "progress": 95,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/revenue-share-tiers-2018-2026.json",
@@ -261,7 +266,9 @@
             "ontology/steam/fixed-paid-release-cohort-2026.json",
             "ontology/steam/financial-validation-and-consent-2026.md",
             "ontology/steam/financial-validation-and-consent-2026.json",
-            "specimens/steam.json"
+            "specimens/steam.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.md"
           ]
         },
         {
@@ -483,9 +490,13 @@
           "title": "Measure comparable price distributions",
           "acceptance": "Report sampled price ranges, currency and denominator.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 45,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+            "specimens/steam.json"
+          ]
         },
         {
           "id": "competition/quality",
@@ -760,14 +771,16 @@
           "title": "Study refunds and disputes",
           "acceptance": "Identify who bears losses and processing charges.",
           "weight": 1,
-          "progress": 45,
+          "progress": 95,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/fixed-paid-release-cohort-2026.md",
             "ontology/steam/fixed-paid-release-cohort-2026.json",
             "ontology/steam/financial-validation-and-consent-2026.md",
             "ontology/steam/financial-validation-and-consent-2026.json",
-            "specimens/steam.json"
+            "specimens/steam.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.md"
           ]
         },
         {
@@ -792,11 +805,14 @@
           "title": "Study repeat and recurring purchases",
           "acceptance": "Define retention, subscriptions, renewal and churn measurements.",
           "weight": 1,
-          "progress": 15,
+          "progress": 30,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-            "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+            "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+            "specimens/steam.json"
           ]
         },
         {
@@ -805,7 +821,7 @@
           "title": "List seller analytics",
           "acceptance": "Identify reported conversion and traffic metrics, access and gaps.",
           "weight": 1,
-          "progress": 90,
+          "progress": 95,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/discovery-wishlists-and-visibility-2026.json",
@@ -816,7 +832,9 @@
             "ontology/steam/fixed-paid-release-cohort-2026.md",
             "ontology/steam/fixed-paid-release-cohort-2026.json",
             "ontology/steam/financial-validation-and-consent-2026.md",
-            "ontology/steam/financial-validation-and-consent-2026.json"
+            "ontology/steam/financial-validation-and-consent-2026.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.md"
           ]
         }
       ]
@@ -899,9 +917,13 @@
           "title": "Model continuity and exit options",
           "acceptance": "Document data export, payouts at closure and alternatives.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 30,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+            "specimens/steam.json"
+          ]
         }
       ]
     },
@@ -937,9 +959,13 @@
           "title": "Model bounded revenue scenarios",
           "acceptance": "State assumptions; never invent likelihoods or expected earnings.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 40,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+            "specimens/steam.json"
+          ]
         },
         {
           "id": "strategy/break-even",
@@ -947,9 +973,13 @@
           "title": "Calculate break-even conditions",
           "acceptance": "Include fixed costs, time, variable fees and refunds.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 30,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+            "specimens/steam.json"
+          ]
         },
         {
           "id": "strategy/offer-test",
@@ -957,9 +987,13 @@
           "title": "Specify testable offer experiments",
           "acceptance": "Define variant, cost, audience and evaluation threshold.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 40,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+            "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+            "specimens/steam.json"
+          ]
         },
         {
           "id": "strategy/acquisition-test",

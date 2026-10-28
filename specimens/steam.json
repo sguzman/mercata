@@ -367,6 +367,50 @@
       "evidence_class": "official_earlyaccess_launch_policy",
       "license": "Only source metadata, links, independent factual paraphrases and minimal numerical observations. No source text, user-level records, copyrighted charts or private API outputs reproduced.",
       "notes": "Paid Early Access is already a commercial launch; full release can be another visibility event."
+    },
+    {
+      "id": "steam-discount-rules-2026",
+      "url": "https://partner.steamgames.com/doc/marketing/discounts?l=english",
+      "title": "Discounting",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_public_policy_read_on_2026_10_28",
+      "license": "Public source link and independently authored factual summary only; no page text/images, private finance records or copyrighted charts copied.",
+      "notes": "Launch/standard discounts, cooldowns and price constraints; do not impute 2026 rules to 2025 launch transactions."
+    },
+    {
+      "id": "steam-price-rules-2026",
+      "url": "https://partner.steamgames.com/doc/store/pricing?l=english",
+      "title": "Pricing",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_public_policy_read_on_2026_10_28",
+      "license": "Public source link and independently authored factual summary only; no page text/images, private finance records or copyrighted charts copied.",
+      "notes": "Localized packages, minimum-price thresholds and restrictions on price edits."
+    },
+    {
+      "id": "steam-refund-rules-2026",
+      "url": "https://store.steampowered.com/steam_refunds?l=english",
+      "title": "Steam Refunds",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_public_policy_read_on_2026_10_28",
+      "license": "Public source link and independently authored factual summary only; no page text/images, private finance records or copyrighted charts copied.",
+      "notes": "Consumer refund request conditions and category exceptions, not actual merchant refund rates."
+    },
+    {
+      "id": "steam-seasonal-sale-rules-2026",
+      "url": "https://partner.steamgames.com/doc/marketing/discounts/seasonalsales?l=english",
+      "title": "Seasonal Sales",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_public_policy_read_on_2026_10_28",
+      "license": "Public source link and independently authored factual summary only; no page text/images, private finance records or copyrighted charts copied.",
+      "notes": "Current seasonal event rules and exception scope; no game-specific participating sale observations."
     }
   ],
   "claims": [
@@ -1518,6 +1562,226 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Study must track missing eligible publishers, nonresponse and uncertainty; no randomized representative sample was obtained."
+    },
+    {
+      "id": "steam-refund-two-weeks-two-hours",
+      "text": "Steam's published standard refund offer for games and software generally covers purchases within fourteen days and with under two hours played.",
+      "source_ids": [
+        "steam-refund-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Policy describes customer eligibility, not the number or percentage of actual requests; discretion and statutory rights may extend beyond default conditions."
+    },
+    {
+      "id": "steam-refunds-beyond-standard-considered",
+      "text": "Valve says customers may ask for refunds outside standard limits and that certain jurisdictions provide additional legal rights.",
+      "source_ids": [
+        "steam-refund-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The policy does not specify all eligibility outcomes or any seller's net refund rate."
+    },
+    {
+      "id": "steam-refunds-dlc-distinct",
+      "text": "Steam's DLC refund policy applies a fourteen-day window and limits game play after purchasing the DLC, with consumable and third-party exceptions.",
+      "source_ids": [
+        "steam-refund-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "DLC refund counts are not base-game refunds or a direct measure of game popularity."
+    },
+    {
+      "id": "steam-refunds-microtxn-conditional",
+      "text": "Valve-developed games generally offer refundable eligible in-game items within forty-eight hours, while third-party studios may choose to enable comparable refunds.",
+      "source_ids": [
+        "steam-refund-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Consumed, transferred or modified items and developer policy affect eligibility; cannot infer uniform in-game purchase refund rates."
+    },
+    {
+      "id": "steam-refunds-earlyaccess-playtime-counts",
+      "text": "Steam explicitly counts Early Access and Advance Access playtime toward the two-hour refund playtime limit for titles bought before release.",
+      "source_ids": [
+        "steam-refund-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The pre-release fourteen-day clock has category-specific details; do not apply a simplistic release-date rule to all purchase types."
+    },
+    {
+      "id": "steam-standard-launch-discount-seven-fourteen",
+      "text": "Valve allows optional launch discounts for seven to fourteen days and caps them at forty percent.",
+      "source_ids": [
+        "steam-discount-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The optional launch discount must be configured before release; policy does not indicate whether an individual game actually used it."
+    },
+    {
+      "id": "steam-launch-discount-guidance-ten-fifteen",
+      "text": "Valve's public discount guide recommends launch discounts roughly ten to fifteen percent, as guidance rather than mandatory default.",
+      "source_ids": [
+        "steam-discount-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is not proof that ten or fifteen percent increases sales, profits or visibility for a specific genre."
+    },
+    {
+      "id": "steam-postlaunch-discount-bounds",
+      "text": "Steam's standard discounting rules generally permit ten to ninety-five percent for one to fourteen days, subject to a per-currency minimum sale price.",
+      "source_ids": [
+        "steam-discount-rules-2026",
+        "steam-price-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Specific campaign, bundle and regional rules may impose tighter constraints; not every game qualifies."
+    },
+    {
+      "id": "steam-30day-postlaunch-cooldown",
+      "text": "Valve normally prohibits new non-launch discounts within thirty days after Early Access or full release.",
+      "source_ids": [
+        "steam-discount-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Launch discount exceptions must be configured before release, and Early Access-to-1.0 circumstances have additional timing conditions."
+    },
+    {
+      "id": "steam-30day-postincrease-cooldown",
+      "text": "A base-price increase in any currency triggers a thirty-day discount cooldown; a base-price reduction does not.",
+      "source_ids": [
+        "steam-discount-rules-2026",
+        "steam-price-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This constrains tactical price adjustments; cannot reconstruct actual historical prices without dated price records."
+    },
+    {
+      "id": "steam-30day-between-campaigns",
+      "text": "Standard discounts require thirty days between the end of one discount and the start of the next.",
+      "source_ids": [
+        "steam-discount-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Steam-wide seasonal sales have a limited exemption from this discount-to-discount clock."
+    },
+    {
+      "id": "steam-seasonal-sale-exemption-narrow",
+      "text": "Seasonal sales are exempt from ordinary discount-to-discount cooldowns, but not from recent release or price increase cooldowns.",
+      "source_ids": [
+        "steam-seasonal-sale-rules-2026",
+        "steam-discount-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Participating in a seasonal event is not unconditional; individual games may be ineligible due to other restrictions."
+    },
+    {
+      "id": "steam-discount-stacking-bundles",
+      "text": "Valve states bundle discounts can stack on top of individual package discounts.",
+      "source_ids": [
+        "steam-discount-rules-2026",
+        "steam-packages-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A game's nominal list price is not necessarily the per-game realized revenue of a multi-app or bundled checkout."
+    },
+    {
+      "id": "steam-discount-wishlist-threshold",
+      "text": "Discounts of at least twenty percent can automatically trigger wishlist notifications.",
+      "source_ids": [
+        "steam-discount-rules-2026",
+        "steam-wishlist-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Notification eligibility is not guaranteed delivery and is not equivalent to a transaction or buyer."
+    },
+    {
+      "id": "steam-minimum-price-multi-currency",
+      "text": "Valve publishes a base-price floor equivalent to the 0.99 USD tier and a transaction-price floor roughly equivalent to 0.49 USD, with regional equivalents.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "USD equivalents are illustrations; locale-specific currencies and price thresholds must be checked at the valuation date."
+    },
+    {
+      "id": "steam-missing-regional-price-blocks-sale",
+      "text": "Valve says missing package pricing in a supported regional currency makes a product unavailable to purchasers who rely on that currency.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Regional catalog and checkout populations vary; absence of orders in one region cannot establish lack of customer demand."
+    },
+    {
+      "id": "steam-price-update-early-restriction",
+      "text": "Valve generally asks partners not to change base prices within thirty days of releasing a game, with support for major errors.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Historical special exceptions and actual game-specific price schedules have not been checked."
+    },
+    {
+      "id": "steam-v1-price-hike-vs-launch-discount",
+      "text": "Valve's pricing guide warns that a price rise near a version 1.0 release can prevent a concurrent launch discount due to the price-increase cooldown.",
+      "source_ids": [
+        "steam-price-rules-2026",
+        "steam-discount-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The exact clock depends on when prices are effective and prior campaign history; this is not a universal optimal-pricing recommendation."
+    },
+    {
+      "id": "steam-gross-price-times-owners-is-invalid",
+      "text": "Combining a game's current US list price with publicly estimated owners does not determine its gross paid Steam checkout revenue.",
+      "source_ids": [
+        "steam-price-rules-2026",
+        "steam-discount-rules-2026",
+        "steamspy-ownership-methods"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Discounts, regional currencies, gifts, keys, free access, bundles, time variation and refunds break this shortcut."
+    },
+    {
+      "id": "steam-realized-revenue-needs-adjustments",
+      "text": "Valve separates gross sales from returns and taxes in partner reporting; any after-share payout and development profit require additional verified costs and terms.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The sample revenue bridge in this study is an explicit hypothetical demonstration; no merchant ledger, taxes or paid orders were observed."
+    },
+    {
+      "id": "steam-2026-policy-not-2025-cohort-rule",
+      "text": "The reviewed October 2026 live price and discount rules cannot automatically establish the applicable discount regime on every date of a 2025 historical launch cohort.",
+      "source_ids": [
+        "steam-discount-rules-2026",
+        "steam-price-rules-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Historical effective-date snapshots or archived documentation are necessary for exact historical cohort policy reconstruction."
     }
   ],
   "observations": [],
@@ -1525,5 +1789,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research now includes a source-grounded original paid-release cohort specification, delisted and zero-review inclusion gates, and official partner financial API validation/consent requirements. No population-wide verified zero sales, real paid order counts or publisher profits have been measured."
+  "summary": "Steam research includes documented initial paid-release cohort rules and official protected financial validation, plus buyer refund eligibility, promotional price cooldowns and synthetic gross-to-net scenarios. No representative seller actuals, zero-sale share or developer profits established."
 }

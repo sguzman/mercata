@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "current_refund_discount_and_realized_sales_boundary",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-discount-rules-2026",
+    "steam-price-rules-2026",
+    "steam-refund-rules-2026",
+    "steam-seasonal-sale-rules-2026",
+    "steam-packages-official",
+    "steam-wishlist-official",
+    "steamspy-ownership-methods",
+    "steam-financial-api-official",
+    "steam-financial-reporting-doc"
+  ],
+  "claim_ids": [
+    "steam-refund-two-weeks-two-hours",
+    "steam-refunds-beyond-standard-considered",
+    "steam-refunds-dlc-distinct",
+    "steam-refunds-microtxn-conditional",
+    "steam-refunds-earlyaccess-playtime-counts",
+    "steam-standard-launch-discount-seven-fourteen",
+    "steam-launch-discount-guidance-ten-fifteen",
+    "steam-postlaunch-discount-bounds",
+    "steam-30day-postlaunch-cooldown",
+    "steam-30day-postincrease-cooldown",
+    "steam-30day-between-campaigns",
+    "steam-seasonal-sale-exemption-narrow",
+    "steam-discount-stacking-bundles",
+    "steam-discount-wishlist-threshold",
+    "steam-minimum-price-multi-currency",
+    "steam-missing-regional-price-blocks-sale",
+    "steam-price-update-early-restriction",
+    "steam-v1-price-hike-vs-launch-discount",
+    "steam-gross-price-times-owners-is-invalid",
+    "steam-realized-revenue-needs-adjustments",
+    "steam-2026-policy-not-2025-cohort-rule"
+  ],
+  "refunds": {
+    "standard_paid_game_days": 14,
+    "standard_play_hours_exclusive": 2,
+    "late_requests_possible": true,
+    "underlying_dlc_play_window_hours_exclusive": 2,
+    "dlc_purchase_window_days": 14,
+    "third_party_in_game_refunds_conditional": true,
+    "early_access_playtime_counts": true,
+    "actual_refund_rate": null
+  },
+  "discounts": {
+    "launch": {
+      "min_percent": 10,
+      "max_percent": 40,
+      "min_days": 7,
+      "max_days": 14,
+      "optional": true
+    },
+    "standard": {
+      "min_percent": 10,
+      "max_percent": 95,
+      "min_days": 1,
+      "max_days": 14
+    },
+    "cooldown_days": {
+      "post_release": 30,
+      "post_price_increase": 30,
+      "between_normal_discounts": 30
+    },
+    "seasonal_discount_to_discount_exempt": true,
+    "seasonal_release_cooldown_exempt": false,
+    "seasonal_price_increase_cooldown_exempt": false,
+    "wishlist_email_min_percent": 20,
+    "bundles_can_stack": true
+  },
+  "pricing": {
+    "minimum_base_price_usd_tier_equivalent": 0.99,
+    "minimum_checkout_usd_approx": 0.49,
+    "missing_region_price_blocks_purchase": true,
+    "locale_price_snapshot_needed": true,
+    "price_increase_and_v1_discount_can_conflict": true
+  },
+  "synthetic_cash_bridge": {
+    "label": "hypothetical arithmetic, not observed Steam earnings",
+    "assumed_gross_units_sold": 100,
+    "assumed_returned_units": 5,
+    "assumed_uniform_unit_price_usd": 10,
+    "assumed_net_tax_usd": 80,
+    "gross_sales_usd": 1000,
+    "gross_returns_usd": 50,
+    "net_sales_after_returns_and_tax_usd": 870,
+    "steam_contractual_share_usd": null,
+    "publisher_split_usd": null,
+    "bank_payout_usd": null,
+    "development_labor_usd": null,
+    "developer_profit_usd": null
+  },
+  "historical_limitations": [
+    "Current documents read on 2026-10-28 cannot be automatically projected back to 2025 cohorts.",
+    "No actual discount histories, return counts, region weights or price-realization distributions were collected.",
+    "Consumer eligibility periods are not observed refund frequencies.",
+    "No market-wide mean, median, seller profit, or first-game break-even probability observed."
+  ],
+  "account_data_accessed": false,
+  "actual_sales": null
+}

@@ -1,6 +1,6 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 27% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 32% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
@@ -291,6 +291,10 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## Sixth evidence-backed checkpoint
+
+The [current Steam discount, pricing and refund policy audit](../ontology/steam/pricing-discounts-and-refund-economics-2026.md) separates buyer refund eligibility from actually observed returns, documents launch and standard discount limits, seasonal cooldown exceptions and regional minimum prices, and tests a labeled synthetic gross-to-net cash bridge without declaring a developer profit. **Current score 32%**, exact 31.621%, Δ +5 pp from 27%. No transactions, game histories or authenticated reporting were collected.
+
 ## Fifth evidence-backed checkpoint
 
 The [first-paid-release cohort protocol](../ontology/steam/fixed-paid-release-cohort-2026.md) establishes a 2025 example frame with explicit inclusion of zero-review and retired titles and a [tested synthetic classifier](../site/steam-cohort-frame.mjs), **without claiming to possess the full historical catalog**. The [protected financial API study](../ontology/steam/financial-validation-and-consent-2026.md) distinguishes true Steam checkout package rows, retail key activations, in-game purchases and reconciled net-of-tax sales, while documenting consent and selection boundaries. **Current score 27%** (exact 27.457%; Δ +7 points from 20%), still 293 tasks. No partner API requests, Steam account access or actual transaction ingestion occurred.
@@ -339,4 +343,4 @@ The [wishlist and visibility report](../ontology/steam/discovery-wishlists-and-v
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 27%** rounded task-weighted progress across 293 tasks; previous round 20%, change +7 percentage points (exact 27.457%). 9 tasks fully verified and 120 partially researched. 32 attributable public sources, 111 bounded claims. Original task scope, catalog identity, palette and unrelated specimens preserved. No publisher credentials, protected sales data, real-world sale experiments, or live catalog scraping.
+**Completion: 32%** rounded task-weighted progress across 293 tasks; previous round 27%, change +5 percentage points (exact 31.621%). 10 fully verified, 138 partially researched; 36 sources, 132 bounded claims. No publisher credentials, sales transactions, sampled marketwide incomes or commercial experiments.

@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 27,
+  "progress_percent": 32,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -156,7 +156,7 @@
         "steam/economics/model-multi-currency-settlement-uncertainty"
       ],
       "phase": 1,
-      "progress_percent": 53
+      "progress_percent": 67
     },
     {
       "id": "market",
@@ -190,7 +190,7 @@
         "steam/market/document-cohort-coverage-uncertainty"
       ],
       "phase": 2,
-      "progress_percent": 32
+      "progress_percent": 35
     },
     {
       "id": "discovery",
@@ -258,7 +258,7 @@
         "steam/competition/study-paid-marketing-acquisition-thresholds"
       ],
       "phase": 2,
-      "progress_percent": 9
+      "progress_percent": 16
     },
     {
       "id": "income",
@@ -360,7 +360,7 @@
         "steam/sales/design-after-launch-retention-metrics"
       ],
       "phase": 3,
-      "progress_percent": 41
+      "progress_percent": 52
     },
     {
       "id": "risk",
@@ -394,7 +394,7 @@
         "steam/risk/build-downside-scenarios-for-small-studios"
       ],
       "phase": 3,
-      "progress_percent": 6
+      "progress_percent": 10
     },
     {
       "id": "strategy",
@@ -431,7 +431,7 @@
         "steam/strategy/design-selection-aware-case-study-comparison"
       ],
       "phase": 4,
-      "progress_percent": 0
+      "progress_percent": 11
     },
     {
       "id": "review",
@@ -1054,11 +1054,15 @@
       "emoji": "💳",
       "objective": "Research separate buyer display, charged currency, reporting currency, settlement and bank conversion.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate buyer display, charged currency, reporting currency, settlement and bank conversion. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 60,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1070,14 +1074,16 @@
       "objective": "Research identify merchant-of-record tax collection by geography versus seller income taxes.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Identify merchant-of-record tax collection by geography versus seller income taxes. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
         "ontology/steam/entry-review-and-reporting-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md"
       ],
-      "artifact": "ontology/steam/entry-review-and-reporting-2026.md",
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 1
     },
@@ -1127,7 +1133,7 @@
       "objective": "Research separate refund liability, negative adjustments, clawbacks and unit-return windows.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate refund liability, negative adjustments, clawbacks and unit-return windows. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
@@ -1136,9 +1142,11 @@
         "ontology/steam/fixed-paid-release-cohort-2026.md",
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
-        "ontology/steam/financial-validation-and-consent-2026.json"
+        "ontology/steam/financial-validation-and-consent-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md"
       ],
-      "artifact": "ontology/steam/financial-validation-and-consent-2026.md",
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 1
     },
@@ -1192,7 +1200,7 @@
       "objective": "Research specify illustrative price, region, tax, share and refunds; label all assumptions.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify illustrative price, region, tax, share and refunds; label all assumptions. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/entry-review-and-reporting-2026.json",
@@ -1203,9 +1211,11 @@
         "ontology/steam/fixed-paid-release-cohort-2026.md",
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
-        "ontology/steam/financial-validation-and-consent-2026.json"
+        "ontology/steam/financial-validation-and-consent-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md"
       ],
-      "artifact": "ontology/steam/financial-validation-and-consent-2026.md",
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1216,11 +1226,15 @@
       "emoji": "💳",
       "objective": "Research distinguish suggested tiers, actual historical prices, region mix and discounts.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Distinguish suggested tiers, actual historical prices, region mix and discounts. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 45,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 1
     },
@@ -1231,11 +1245,15 @@
       "emoji": "💳",
       "objective": "Research research launch discounts, cooldowns, seasonal events and price floors before modeling revenue.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Research launch discounts, cooldowns, seasonal events and price floors before modeling revenue. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 95,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 1
     },
@@ -1294,11 +1312,15 @@
       "emoji": "💳",
       "objective": "Research model required paid net units for plausible costs and multiple refund/price assumptions.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Model required paid net units for plausible costs and multiple refund/price assumptions. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 35,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 1
     },
@@ -1309,11 +1331,15 @@
       "emoji": "💳",
       "objective": "Research specify sensitivity to foreign exchange, refunds, payment dates and buyer geography.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify sensitivity to foreign exchange, refunds, payment dates and buyer geography. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 35,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1497,13 +1523,16 @@
       "objective": "Research count free, nominal paid, premium paid, DLC and changing discount levels separately.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Count free, nominal paid, premium paid, DLC and changing discount levels separately. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 40,
+      "percent": 70,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+        "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 2
     },
@@ -1529,11 +1558,15 @@
       "emoji": "🌐",
       "objective": "Research separate account location, selling restrictions, purchase region and publisher origin.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate account location, selling restrictions, purchase region and publisher origin. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 35,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -1989,11 +2022,15 @@
       "emoji": "🏁",
       "objective": "Research use full launch cohorts, contemporaneous region prices and discount-free list prices.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Use full launch cohorts, contemporaneous region prices and discount-free list prices. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 30,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 2
     },
@@ -2166,11 +2203,15 @@
       "emoji": "🏁",
       "objective": "Research document sale depth, pre-promotion reference prices and time since launch.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Document sale depth, pre-promotion reference prices and time since launch. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 65,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 2
     },
@@ -2810,7 +2851,7 @@
       "objective": "Research specify fixed launch day, timezone, refund adjustment and comparable listing age.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify fixed launch day, timezone, refund adjustment and comparable listing age. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 65,
       "weight": 1,
       "evidence": [
         "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
@@ -2821,9 +2862,11 @@
         "ontology/steam/fixed-paid-release-cohort-2026.md",
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
-        "ontology/steam/financial-validation-and-consent-2026.json"
+        "ontology/steam/financial-validation-and-consent-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md"
       ],
-      "artifact": "ontology/steam/financial-validation-and-consent-2026.md",
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -2860,13 +2903,16 @@
       "objective": "Research use consented publisher records with explicit cohort dates, conversions and deduplication.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Use consented publisher records with explicit cohort dates, conversions and deduplication. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 30,
+      "percent": 45,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -2877,11 +2923,15 @@
       "emoji": "🛒",
       "objective": "Research record policy eligibility and observed refund-adjusted units rather than headline sold copies.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Record policy eligibility and observed refund-adjusted units rather than headline sold copies. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -2983,16 +3033,18 @@
       "objective": "Research distinguish single-title revenue, package offer and external promotional keys.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Distinguish single-title revenue, package offer and external promotional keys. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/fixed-paid-release-cohort-2026.md",
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md"
       ],
-      "artifact": "ontology/steam/financial-validation-and-consent-2026.md",
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -3034,13 +3086,16 @@
       "objective": "Research assess delayed purchases, announcement alerts and counterfactual calendar effects.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Assess delayed purchases, announcement alerts and counterfactual calendar effects. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 20,
+      "percent": 65,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-        "ontology/steam/discovery-wishlists-and-visibility-2026.md"
+        "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
       ],
-      "artifact": "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3148,16 +3203,18 @@
       "objective": "Research create scenarios for return volume, fee treatment and net cash flow volatility.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Create scenarios for return volume, fee treatment and net cash flow volatility. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 35,
+      "percent": 65,
       "weight": 1,
       "evidence": [
         "ontology/steam/fixed-paid-release-cohort-2026.md",
         "ontology/steam/fixed-paid-release-cohort-2026.json",
         "ontology/steam/financial-validation-and-consent-2026.md",
         "ontology/steam/financial-validation-and-consent-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md"
       ],
-      "artifact": "ontology/steam/fixed-paid-release-cohort-2026.md",
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -3273,11 +3330,15 @@
       "emoji": "🛡️",
       "objective": "Research design budget shocks for low launch sales, refunds, delayed payments and support.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Design budget shocks for low launch sales, refunds, delayed payments and support. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 35,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3384,11 +3445,15 @@
       "emoji": "🧪",
       "objective": "Research model multi-price cash sensitivity and specify later permitted observation design.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Model multi-price cash sensitivity and specify later permitted observation design. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 70,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -3459,11 +3524,15 @@
       "emoji": "🧪",
       "objective": "Research include Direct fee, launch costs, ongoing updates, taxes, withheld cash and refund lag.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Include Direct fee, launch costs, ongoing updates, taxes, withheld cash and refund lag. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 25,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "normal",
       "phase": 4
     },
@@ -3534,11 +3603,15 @@
       "emoji": "🧪",
       "objective": "Research define timely updates, accessible communication and rights-compliant fulfillment.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define timely updates, accessible communication and rights-compliant fulfillment. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 45,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "high",
       "phase": 4
     },
@@ -3564,11 +3637,15 @@
       "emoji": "🧪",
       "objective": "Research set time/cash limits, independent quality criteria and decision gates before spending.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Set time/cash limits, independent quality criteria and decision gates before spending. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "pending",
-      "percent": 0,
+      "status": "in_progress",
+      "percent": 45,
       "weight": 1,
-      "evidence": [],
-      "artifact": null,
+      "evidence": [
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
+        "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+        "specimens/steam.json"
+      ],
+      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
       "priority": "normal",
       "phase": 4
     },
