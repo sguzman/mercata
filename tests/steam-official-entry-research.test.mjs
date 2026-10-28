@@ -30,11 +30,13 @@ test('The original nine partner documents and 23 claims remain independently att
  assert(study.source_ids.every(x=>ids.has(x)));
  assert(study.claim_ids.every(x=>dossier.claims.some(y=>y.id===x)));
 });
-test('Two incompatible official pre-release wait rules are not silently resolved',()=>{
+test('Earlier 21-day wording is preserved while current public sources agree on 30 days',()=>{
  const a=study.documented.waiting_period_minimum_days_conflict;
  assert.equal(a.steam_direct_public_landing,30);
  assert.equal(a.steamworks_onboarding_doc,21);
  assert.equal(a.resolved_operational_rule,null);
+ assert.equal(study.documented.waiting_period_current_public_recheck_days,30);
+ assert.equal(study.documented.waiting_period_original_21day_observation_is_historical,true);
  assert.equal(study.documented.coming_soon_days,14);
  assert(study.unresolved.some(x=>x.id==='conflicting-wait-days'&&x.sources.length===2));
  const c=dossier.claims.find(x=>x.id==='wait-rule-requires-reconciliation');
@@ -82,8 +84,9 @@ test('Task-scored progress follows the same 293-task denominator with evidence f
 });
 test('Published text keeps monetary gaps explicit and reflects the verified Steam plan',()=>{
  const doc=read('ontology/steam/entry-review-and-reporting-2026.md');
- for(const phrase of ['21 days','30 days','USD 1,000','USD 100','monthly','unresolved'])
+ for(const phrase of ['21 days','30 days','USD 1,000','USD 100','monthly','historical'])
    assert(doc.toLowerCase().includes(phrase.toLowerCase()),phrase);
+ assert(doc.includes('current public pages now agree on 30 days'));
  const item=gallery.specimens.find(x=>x.id==='steam');
  assert.equal(item.status,'researching');
  assert.equal(item.planning_state,'researching');
