@@ -222,3 +222,6 @@ The ledger is hierarchical: **milestones → phases → features → atomic task
 
 
 **Steam official-document research checkpoint (2026-10-28):** source-attributed rules for joining, Steam Direct app fees, separate store/build reviews, payment timing and adjusted receipts. Two official pages disagree on **21 versus 30 days** from fee payment to release, kept unresolved. Nine public sources; 23 bounded claims. **0% → 6%** on the original fixed 293 research tasks. [Findings and limits](../ontology/steam/entry-review-and-reporting-2026.md). No merchant account, buyer data, or representative seller earnings obtained.
+
+
+**Steam discovery and historical revenue share (2026-10-28):** [Official discovery/wishlist study](../ontology/steam/discovery-wishlists-and-visibility-2026.md) distinguishes purchased games from wishlist and traffic events; [historical revenue-share review](../ontology/steam/revenue-share-tiers-2018-2026.md) records marginal 2018 thresholds without asserting every 2026 contract or profit. Scores moved **6% → 13%** (Δ **+7 pp**, exact 13.31%) across unchanged 293 tasks. Source register has 13 public documents and 47 bounded claims; income and game-publisher zero-sales population remain unobserved.

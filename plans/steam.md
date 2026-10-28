@@ -1,6 +1,6 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 6% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 13% task-weighted.** Verified official-document findings advanced selected tasks; many remain unstarted, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Empty Steam dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
@@ -291,6 +291,12 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study platform-specific performance benchmarks** (`steam/special-games/study-platform-specific-performance-benchmarks`): Research: compare minimum hardware requirements and Deck performance QA planning. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan live-game maintenance and sunset** (`steam/special-games/plan-live-game-maintenance-and-sunset`): Research: define ongoing patches, backend end-of-life and buyer access continuity. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
+## Second evidence-backed checkpoint
+
+The [wishlist and visibility report](../ontology/steam/discovery-wishlists-and-visibility-2026.md) separates launch exposure, ranking signals, wishlists and true paid units. The [historical revenue-share review](../ontology/steam/revenue-share-tiers-2018-2026.md) documents the 2018 marginal tiers, with the current signed contract and publisher-specific cash explicitly unknown. [Synthetic tier arithmetic](../site/steam-historical-revenue-share.mjs) illustrates the published schedule but does not infer game profitability.
+
+**Progress this round: 6% → 13%, Δ +7 pp.** The fully-scored items are based on official qualitative descriptions, not real developer-income measurements. No real Steam buyer or seller sample was collected.
+
 ## First evidence-based checkpoint
 
 [Reviewed public Steamworks material](../ontology/steam/entry-review-and-reporting-2026.md) documents onboarding, app fees and recoupment, approval, payment rails, and gross-to-net report semantics. The conflicting **21-day versus 30-day waiting periods** in two Valve documents remain explicitly unresolved. Six tasks are fully verified and 22 are partially researched. **The original checklist below remains the stable scope, not a live assertion that each item is incomplete; for current statuses consult [the machine plan](steam.json) and [baseline queue](../queues/steam.json).**
@@ -321,4 +327,4 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 6%** rounded task-weighted progress across 293 tasks; baseline 0%, change +6 percentage points. Six tasks fully verified, 22 partially investigated; nine public source records and 23 bounded claims. Baseline queues, the 26-specimen gallery, Steam’s existing OKLCH color and all other specimens are unchanged in substance. No research, account operations, purchases, scraping, financial data processing or experiments were performed.
+**Completion: 13%** rounded task-weighted progress across 293 tasks; previous 6%, change +7 percentage points this round. Eight tasks fully verified, 67 partially investigated; 13 public source records and 47 bounded claims. Baseline queues, the 26-specimen gallery, Steam’s existing OKLCH color and all other specimens are unchanged in substance. No account operations, purchases, authenticated financial data access or commercial experiments were performed.
