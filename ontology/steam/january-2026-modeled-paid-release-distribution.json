@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "one_month_paid_game_public_model_distribution_not_audited_ledger",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-gdc-2026-jan-cohort-primary",
+    "steam-gdc-jan2026-public-sheet",
+    "steam-egmatic-jan2026-analysis",
+    "steam-grishakov-jan2026-analysis",
+    "steam-financial-api-official",
+    "steam-retire-app-official"
+  ],
+  "claim_ids": [
+    "jan2026-1230-provider-population",
+    "jan2026-observation-horizon",
+    "jan2026-public-sheet-columns",
+    "jan2026-gdc-16-million",
+    "jan2026-gdc-hypothetical-selfpub100k",
+    "jan2026-gdc-hypothetical-publisher500k",
+    "jan2026-619-over-1k",
+    "jan2026-248-over-10k",
+    "jan2026-88-over-100k",
+    "jan2026-reanalysis-median100copies",
+    "jan2026-reanalysis-mediangross1k",
+    "jan2026-reanalysis-meangross108k",
+    "jan2026-reanalysis-zero-estimate-412-of-1211",
+    "jan2026-reanalysis-low-units74p4",
+    "jan2026-top1percent-model72p8",
+    "jan2026-top16-model77percent",
+    "jan2026-bottomhalf-model-small",
+    "jan2026-provider-coverage-unverified",
+    "jan2026-same-model-two-analysts",
+    "jan2026-model-zero-not-exact-zero",
+    "jan2026-not-representative-publisher-income"
+  ],
+  "source_lineage": {
+    "original_analyst": "GameDiscoverCo",
+    "original_article_published_at": "2026-09-15",
+    "primary_model_sheet_url": "https://docs.google.com/spreadsheets/d/1x8cDd5yXC88zmEBXESxjf4n2AJbVASj1jKVJkerbEmE/edit",
+    "secondary_aggregate_reanalyses": [
+      "Egmatic 2026-10-15",
+      "Grishakov 2026-10-22"
+    ],
+    "independent_paid_order_truth": false,
+    "raw_rows_copied": false,
+    "independent_aggregate_recomputation": false
+  },
+  "population": {
+    "platform": "Steam",
+    "provider_defined_filter": "paid games released January 2026",
+    "first_date": "2026-01-01",
+    "last_date": "2026-01-31",
+    "reported_listed_game_count": 1230,
+    "first_paid_release_status_independently_verified": false,
+    "retirement_coverage_independently_verified": false,
+    "legal_publisher_deduplication_available": false,
+    "observation_window_end_approximately": "2026-09-15",
+    "equal_age_at_evaluation": false,
+    "all_indie_only": false
+  },
+  "revenue_thresholds": {
+    "measure": "modeled_lifetime_to_date_gross_usd",
+    "reference_denominator": 1230,
+    "thresholds": [
+      {
+        "at_least_usd": 1000,
+        "games": 619
+      },
+      {
+        "at_least_usd": 10000,
+        "games": 248
+      },
+      {
+        "at_least_usd": 100000,
+        "games": 88
+      },
+      {
+        "at_least_usd": 1000000,
+        "games": 16
+      }
+    ]
+  },
+  "approximate_statistics": {
+    "modeled_median_copies_ltd_approximately": 100,
+    "modeled_median_gross_usd_approximately": 1000,
+    "modeled_mean_gross_usd_reanalyses_approximately": [
+      108000,
+      110000
+    ],
+    "modeled_top_1pct_gross_share_reported": 0.728,
+    "modeled_top_16_gross_usd_approximately": 102000000,
+    "modeled_all_games_gross_usd_approximately": 133000000,
+    "modeled_top_16_gross_share_approximately": 0.77,
+    "modeled_bottom_half_gross_usd_approximately": 4000,
+    "modeled_under_1000_copies_share_reported": 0.744
+  },
+  "zero_estimation": {
+    "secondary_model_zero_copies": 412,
+    "secondary_copies_estimated_records": 1211,
+    "listed_release_total": 1230,
+    "missing_copies_estimate_count": 19,
+    "modeled_zero_fraction_of_with_estimates": 0.34021469859620146,
+    "observed_exact_zero_paid_steam_units_fraction": null,
+    "observed_zero_earning_publishers": null
+  },
+  "hypothetical_budget_scenarios": [
+    {
+      "self_funded_usd": 100000,
+      "modeled_games_meeting_assumed_break_even": 80,
+      "out_of": 1230,
+      "actual_costs_observed": false
+    },
+    {
+      "self_funded_usd": 500000,
+      "modeled_games_over_1m_gross": 16,
+      "out_of": 1230,
+      "actual_costs_observed": false
+    },
+    {
+      "publisher_funded_usd": 500000,
+      "estimated_games_fully_recouping_under_assumed_terms": 7,
+      "out_of": 1230,
+      "actual_contracts_observed": false
+    }
+  ],
+  "unknown": {
+    "actual_gross_steam_sales": null,
+    "actual_net_steam_sales": null,
+    "exact_zero_paid_order_share": null,
+    "publisher_level_gross_median": null,
+    "developer_after_cost_profit": null,
+    "representative_all_launch_months_median": null,
+    "original_paid_status_per_app_independently_verified": null
+  },
+  "method_warning": "Common underlying GameDiscoverCo model: independent downstream articles do not supply an independent transaction dataset; income, profit and true zero-earner rates remain unobserved."
+}

@@ -411,6 +411,50 @@
       "evidence_class": "official_current_public_policy_read_on_2026_10_28",
       "license": "Public source link and independently authored factual summary only; no page text/images, private finance records or copyrighted charts copied.",
       "notes": "Current seasonal event rules and exception scope; no game-specific participating sale observations."
+    },
+    {
+      "id": "steam-gdc-2026-jan-cohort-primary",
+      "url": "https://newsletter.gamediscover.co/p/is-the-game-biz-sustainable-for-the",
+      "title": "Is the game biz sustainable for the average indie dev?",
+      "publisher": "Simon Carless / GameDiscoverCo",
+      "published_at": "2026-09-15",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "source_originator_published_full_month_model_and_budget_scenarios",
+      "notes": "Originator published entire January 2026 cohort publicly and described hypothetical profit thresholds. Publisher-origin estimated model, not Valve verified sales.",
+      "license": "Only link, metadata and independently authored short factual summaries or aggregate numeric excerpts; no source text, raw spreadsheet contents, images or proprietary model rows redistributed."
+    },
+    {
+      "id": "steam-gdc-jan2026-public-sheet",
+      "url": "https://docs.google.com/spreadsheets/d/1x8cDd5yXC88zmEBXESxjf4n2AJbVASj1jKVJkerbEmE/edit",
+      "title": "GameDiscoverCo: Steam's LTD revenue & sales, games released in Jan. 2026",
+      "publisher": "GameDiscoverCo",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "model_owner_published_view_only_public_spreadsheet",
+      "notes": "Public sheet original linked from September 15 article; verified visible columns include AppIDs via links, name, base price, gross LTD, copies LTD, review score, release date, developers, publishers and tags. This checkpoint did not export raw rows, republish the dataset or independently recompute aggregates.",
+      "license": "Only link, metadata and independently authored short factual summaries or aggregate numeric excerpts; no source text, raw spreadsheet contents, images or proprietary model rows redistributed."
+    },
+    {
+      "id": "steam-egmatic-jan2026-analysis",
+      "url": "https://egmatic.com/blog/how-many-copies-does-the-median-indie-game-sell",
+      "title": "How Many Copies Does the Median Indie Game Sell?",
+      "publisher": "Vladislav Kovnerov / Egmatic",
+      "published_at": "2026-10-15",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "third_party_secondary_reanalysis_of_public_model_sheet",
+      "notes": "Reports 1,230 listed, medians and inequality; specifically 412 modeled zero copies of 1,211 with estimates, a different denominator. Method is secondary and no independent raw row recalculation undertaken.",
+      "license": "Only link, metadata and independently authored short factual summaries or aggregate numeric excerpts; no source text, raw spreadsheet contents, images or proprietary model rows redistributed."
+    },
+    {
+      "id": "steam-grishakov-jan2026-analysis",
+      "url": "https://grishakof.com/blog/en/guides/how-much-do-indie-games-make-on-steam/",
+      "title": "How Much Do Indie Games Make on Steam, and How Many Break Even",
+      "publisher": "Evgeny Grishakov",
+      "published_at": "2026-10-22",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "third_party_secondary_reanalysis_of_public_model_sheet",
+      "notes": "Reports estimated gross thresholds, mean, and concentration for same January 2026 1,230-game population. Not a second independent sales panel.",
+      "license": "Only link, metadata and independently authored short factual summaries or aggregate numeric excerpts; no source text, raw spreadsheet contents, images or proprietary model rows redistributed."
     }
   ],
   "claims": [
@@ -1782,6 +1826,226 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Historical effective-date snapshots or archived documentation are necessary for exact historical cohort policy reconstruction."
+    },
+    {
+      "id": "jan2026-1230-provider-population",
+      "text": "GameDiscoverCo publicly published a modeled paid Steam release cohort containing 1,230 games labeled as January 2026 launches.",
+      "source_ids": [
+        "steam-gdc-2026-jan-cohort-primary",
+        "steam-gdc-jan2026-public-sheet"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Dataset is provider-defined and not independently verified exhaustive for originally-paid titles, delisted games or later listing updates; AppIDs not independently enumerated."
+    },
+    {
+      "id": "jan2026-observation-horizon",
+      "text": "The GameDiscoverCo January 2026 launch cohort is observed through approximately mid-September 2026, roughly eight months after the January launch month.",
+      "source_ids": [
+        "steam-gdc-2026-jan-cohort-primary",
+        "steam-egmatic-jan2026-analysis"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Individual game ages differ by January launch day; this is not a fixed 12-month window."
+    },
+    {
+      "id": "jan2026-public-sheet-columns",
+      "text": "The public dataset visibly includes game name, Steam link, base price, modeled lifetime gross revenue, modeled sold units, release date, developer and publisher labels, and genre tags.",
+      "source_ids": [
+        "steam-gdc-jan2026-public-sheet"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A visible row structure does not prove complete audit of every eligible AppID, and listed publisher label is not a verified legal entity."
+    },
+    {
+      "id": "jan2026-gdc-16-million",
+      "text": "GameDiscoverCo reported that 16 of 1,230 January 2026 releases were modeled above $1 million gross lifetime-to-date.",
+      "source_ids": [
+        "steam-gdc-2026-jan-cohort-primary"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "The figures are modeled before merchant settlement, not audited paid orders or publisher profit."
+    },
+    {
+      "id": "jan2026-gdc-hypothetical-selfpub100k",
+      "text": "GameDiscoverCo's illustrative self-published $100,000 cost scenario concluded approximately 80 of the January releases (6.5%) might have broken even by the observed horizon.",
+      "source_ids": [
+        "steam-gdc-2026-jan-cohort-primary"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Assumed uniform funding/contract/refund/tax conditions are not observed per-game budgets; this is a scenario, not empirical profitability."
+    },
+    {
+      "id": "jan2026-gdc-hypothetical-publisher500k",
+      "text": "GameDiscoverCo estimated only around seven January titles (0.6%) would fully recoup a hypothetical $500,000 publisher investment under assumed conventional terms.",
+      "source_ids": [
+        "steam-gdc-2026-jan-cohort-primary"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Not observed publisher contract terms or actual production investment; model uncertainty and individual agreements unknown."
+    },
+    {
+      "id": "jan2026-619-over-1k",
+      "text": "One secondary spreadsheet reanalysis counted 619 of 1,230 releases at least $1,000 modeled gross revenue by mid-September 2026.",
+      "source_ids": [
+        "steam-grishakov-jan2026-analysis",
+        "steam-gdc-jan2026-public-sheet"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Secondary computation over modeled gross; missing/rounded estimates and provider revisions could shift counts."
+    },
+    {
+      "id": "jan2026-248-over-10k",
+      "text": "The same reanalysis counted 248 of 1,230 releases at least $10,000 modeled gross.",
+      "source_ids": [
+        "steam-grishakov-jan2026-analysis"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Gross is not net payout; not a representative cross-year or indie-only profit measure."
+    },
+    {
+      "id": "jan2026-88-over-100k",
+      "text": "The same reanalysis counted 88 of 1,230 releases at least $100,000 modeled gross.",
+      "source_ids": [
+        "steam-grishakov-jan2026-analysis"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Does not imply $100,000 development proceeds, net royalty or profit."
+    },
+    {
+      "id": "jan2026-reanalysis-median100copies",
+      "text": "Egmatic's secondary analysis estimated median lifetime-to-date units sold near 100 across the January 2026 model cohort.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Modeled not measured sales; approximate median, not first-game solo developer or publisher-specific median."
+    },
+    {
+      "id": "jan2026-reanalysis-mediangross1k",
+      "text": "Two public reanalyses reported the January 2026 model's median gross revenue as approximately $1,000.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis",
+        "steam-grishakov-jan2026-analysis"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Not independently estimated twice: both analysts read the same GameDiscoverCo input; not a Steam-wide or audited median."
+    },
+    {
+      "id": "jan2026-reanalysis-meangross108k",
+      "text": "Grishakov computed about $108,000 mean modeled gross across the January release cohort, whereas Egmatic said approximately $110,000.",
+      "source_ids": [
+        "steam-grishakov-jan2026-analysis",
+        "steam-egmatic-jan2026-analysis"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Approximate rounded secondary calculations from a common model, not contradictory independent datasets; mean is sensitive to a handful of hits."
+    },
+    {
+      "id": "jan2026-reanalysis-zero-estimate-412-of-1211",
+      "text": "Egmatic found 412 modeled zero-copy releases among 1,211 titles with copy estimates, rather than all 1,230 listed releases.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "19 listed titles lack estimates in this subanalysis; a model-zero is not a verified real-world zero-sale event."
+    },
+    {
+      "id": "jan2026-reanalysis-low-units74p4",
+      "text": "Egmatic reported 74.4% of the analyzed January release cohort under 1,000 modeled copies.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Secondary model-derived share is sensitive to observation cutoff, available estimates and unit rounding."
+    },
+    {
+      "id": "jan2026-top1percent-model72p8",
+      "text": "Egmatic calculated the top 1% of January paid-release entries accounted for 72.8% of the cohort's modeled gross revenue.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Revenue concentration is calculated on the single provider model, not audited platform settlement; top 1% cutoff depends on ranking method."
+    },
+    {
+      "id": "jan2026-top16-model77percent",
+      "text": "Grishakov calculated about $102 million of the approximately $133 million modeled cohort gross was concentrated in the 16 games above $1 million (approximately 77%).",
+      "source_ids": [
+        "steam-grishakov-jan2026-analysis"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Top 16 of 1,230 exceeds the strict top 1% count; do not conflate the 77% share with Egmatic's 72.8% top 1%."
+    },
+    {
+      "id": "jan2026-bottomhalf-model-small",
+      "text": "Grishakov reported approximately $4,000 in modeled combined gross among the bottom 615 releases.",
+      "source_ids": [
+        "steam-grishakov-jan2026-analysis"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Extreme low-end estimates may be rounded to zero or imprecise, so this cannot establish true merchant-level zero sales."
+    },
+    {
+      "id": "jan2026-provider-coverage-unverified",
+      "text": "The provider's claim to cover the complete January 2026 paid-release population has not been independently validated against a historical AppID registry including delisted titles.",
+      "source_ids": [
+        "steam-gdc-jan2026-public-sheet",
+        "steam-retire-app-official"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "No row-level licensed comparison to historical archived originals was undertaken; cohort scope remains provider-defined."
+    },
+    {
+      "id": "jan2026-same-model-two-analysts",
+      "text": "The Egmatic and Grishakov January 2026 summaries reuse the same GameDiscoverCo model and public spreadsheet, so agreement is not independent confirmation of Valve sales.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis",
+        "steam-grishakov-jan2026-analysis",
+        "steam-gdc-2026-jan-cohort-primary"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Cross-checking downstream arithmetic is useful but model bias remains shared."
+    },
+    {
+      "id": "jan2026-model-zero-not-exact-zero",
+      "text": "None of the GameDiscoverCo modeled-zero counts can certify the share of paid games or developers with exactly zero completed paid Steam purchases.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis",
+        "steam-financial-api-official"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Actual zeroes require eligible full paid-app sampling frames and authorized complete merchant ledgers."
+    },
+    {
+      "id": "jan2026-not-representative-publisher-income",
+      "text": "Game-level modeled gross for a single launch month cannot estimate the median or mean income of Steam publishing companies or solo developers.",
+      "source_ids": [
+        "steam-gdc-jan2026-public-sheet",
+        "steam-grishakov-jan2026-analysis"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Unknown legal partner deduplication, prior portfolios, tax, publishing share, operating costs, platform choice, and nonresponse."
     }
   ],
   "observations": [],
@@ -1789,5 +2053,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research includes documented initial paid-release cohort rules and official protected financial validation, plus buyer refund eligibility, promotional price cooldowns and synthetic gross-to-net scenarios. No representative seller actuals, zero-sale share or developer profits established."
+  "summary": "Steam research includes official market entry, finance and refund policy; a historical paid-release cohort methodology; and a bounded 1,230-game January 2026 modeled gross-sales distribution with explicit uncertainty, low-end zeros modeled rather than audited. Real publisher income, developer profit and exact-zero paid-order shares remain unknown."
 }

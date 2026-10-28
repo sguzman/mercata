@@ -308,26 +308,6 @@
           "title": "Estimate active versus total sellers",
           "acceptance": "Separate registered, listed, active and paid users.",
           "weight": 1,
-          "progress": 45,
-          "status": "in_progress",
-          "evidence": [
-            "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-            "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
-            "ontology/steam/review-data-and-sales-estimation-2026.md",
-            "ontology/steam/review-data-and-sales-estimation-2026.json",
-            "specimens/steam.json",
-            "ontology/steam/fixed-paid-release-cohort-2026.md",
-            "ontology/steam/fixed-paid-release-cohort-2026.json",
-            "ontology/steam/financial-validation-and-consent-2026.md",
-            "ontology/steam/financial-validation-and-consent-2026.json"
-          ]
-        },
-        {
-          "id": "market/volume",
-          "emoji": "🔎",
-          "title": "Measure transaction or revenue scale",
-          "acceptance": "Distinguish GMV, platform sales, revenue and payouts.",
-          "weight": 1,
           "progress": 55,
           "status": "in_progress",
           "evidence": [
@@ -339,7 +319,31 @@
             "ontology/steam/fixed-paid-release-cohort-2026.md",
             "ontology/steam/fixed-paid-release-cohort-2026.json",
             "ontology/steam/financial-validation-and-consent-2026.md",
-            "ontology/steam/financial-validation-and-consent-2026.json"
+            "ontology/steam/financial-validation-and-consent-2026.json",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json"
+          ]
+        },
+        {
+          "id": "market/volume",
+          "emoji": "🔎",
+          "title": "Measure transaction or revenue scale",
+          "acceptance": "Distinguish GMV, platform sales, revenue and payouts.",
+          "weight": 1,
+          "progress": 75,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
+            "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+            "ontology/steam/review-data-and-sales-estimation-2026.md",
+            "ontology/steam/review-data-and-sales-estimation-2026.json",
+            "specimens/steam.json",
+            "ontology/steam/fixed-paid-release-cohort-2026.md",
+            "ontology/steam/fixed-paid-release-cohort-2026.json",
+            "ontology/steam/financial-validation-and-consent-2026.md",
+            "ontology/steam/financial-validation-and-consent-2026.json",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json"
           ]
         },
         {
@@ -376,9 +380,13 @@
           "title": "Assess market concentration",
           "acceptance": "Measure dependence on leading categories or sellers.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 65,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json",
+            "specimens/steam.json"
+          ]
         }
       ]
     },
@@ -477,11 +485,14 @@
           "title": "Define comparable competitor sample",
           "acceptance": "Record sampling query, category, time and selection method.",
           "weight": 1,
-          "progress": 30,
+          "progress": 65,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-            "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+            "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json",
+            "specimens/steam.json"
           ]
         },
         {
@@ -504,11 +515,14 @@
           "title": "Assess differentiating features",
           "acceptance": "Identify observable features without equating ratings with quality.",
           "weight": 1,
-          "progress": 20,
+          "progress": 30,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-            "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+            "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json",
+            "specimens/steam.json"
           ]
         },
         {
@@ -555,7 +569,7 @@
           "title": "Define earning-population denominator",
           "acceptance": "Separate all users, active sellers and paid sellers.",
           "weight": 1,
-          "progress": 85,
+          "progress": 90,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
@@ -566,7 +580,9 @@
             "ontology/steam/fixed-paid-release-cohort-2026.md",
             "ontology/steam/fixed-paid-release-cohort-2026.json",
             "ontology/steam/financial-validation-and-consent-2026.md",
-            "ontology/steam/financial-validation-and-consent-2026.json"
+            "ontology/steam/financial-validation-and-consent-2026.json",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json"
           ]
         },
         {
@@ -575,9 +591,13 @@
           "title": "Find representative mean earnings",
           "acceptance": "Include amount, currency, period, sample and bias or mark unknown.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 60,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json",
+            "specimens/steam.json"
+          ]
         },
         {
           "id": "income/median",
@@ -585,9 +605,13 @@
           "title": "Find representative median earnings",
           "acceptance": "Include zero earners and method or mark unknown.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 60,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json",
+            "specimens/steam.json"
+          ]
         },
         {
           "id": "income/tails",
@@ -595,11 +619,14 @@
           "title": "Document earnings percentiles",
           "acceptance": "Seek p10, p25, p75, p90 and top-tail evidence.",
           "weight": 1,
-          "progress": 15,
+          "progress": 80,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-            "ontology/steam/public-catalog-and-conditional-long-tail-2026.md"
+            "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json",
+            "specimens/steam.json"
           ]
         },
         {
@@ -608,9 +635,13 @@
           "title": "Study share earning zero",
           "acceptance": "State who is counted and why the measure may be biased.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 35,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json",
+            "specimens/steam.json"
+          ]
         },
         {
           "id": "income/bias",
@@ -618,8 +649,8 @@
           "title": "Audit selection and survivorship biases",
           "acceptance": "Describe recruitment, response bias and missing populations.",
           "weight": 1,
-          "progress": 90,
-          "status": "in_progress",
+          "progress": 100,
+          "status": "complete",
           "evidence": [
             "ontology/steam/discovery-wishlists-and-visibility-2026.json",
             "ontology/steam/discovery-wishlists-and-visibility-2026.md",
@@ -631,7 +662,9 @@
             "ontology/steam/fixed-paid-release-cohort-2026.md",
             "ontology/steam/fixed-paid-release-cohort-2026.json",
             "ontology/steam/financial-validation-and-consent-2026.md",
-            "ontology/steam/financial-validation-and-consent-2026.json"
+            "ontology/steam/financial-validation-and-consent-2026.json",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json"
           ]
         },
         {
@@ -917,12 +950,14 @@
           "title": "Model continuity and exit options",
           "acceptance": "Document data export, payouts at closure and alternatives.",
           "weight": 1,
-          "progress": 30,
+          "progress": 40,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
             "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
-            "specimens/steam.json"
+            "specimens/steam.json",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json"
           ]
         }
       ]
@@ -959,12 +994,14 @@
           "title": "Model bounded revenue scenarios",
           "acceptance": "State assumptions; never invent likelihoods or expected earnings.",
           "weight": 1,
-          "progress": 40,
+          "progress": 60,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
             "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
-            "specimens/steam.json"
+            "specimens/steam.json",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json"
           ]
         },
         {
@@ -1021,9 +1058,13 @@
           "title": "Write evidence-bounded recommendation",
           "acceptance": "State who may benefit, uncertainties, risks and next test.",
           "weight": 1,
-          "progress": 0,
-          "status": "pending",
-          "evidence": []
+          "progress": 35,
+          "status": "in_progress",
+          "evidence": [
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json",
+            "specimens/steam.json"
+          ]
         }
       ]
     },
@@ -1039,7 +1080,7 @@
           "title": "Finish public source register",
           "acceptance": "Every factual claim links to dated attributed public evidence.",
           "weight": 1,
-          "progress": 85,
+          "progress": 95,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/entry-review-and-reporting-2026.json",
@@ -1050,7 +1091,9 @@
             "ontology/steam/fixed-paid-release-cohort-2026.md",
             "ontology/steam/fixed-paid-release-cohort-2026.json",
             "ontology/steam/financial-validation-and-consent-2026.md",
-            "ontology/steam/financial-validation-and-consent-2026.json"
+            "ontology/steam/financial-validation-and-consent-2026.json",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json"
           ]
         },
         {
@@ -1058,28 +1101,6 @@
           "emoji": "🔎",
           "title": "Cross-check critical claims",
           "acceptance": "Use independent sources or document why cross-check unavailable.",
-          "weight": 1,
-          "progress": 80,
-          "status": "in_progress",
-          "evidence": [
-            "ontology/steam/discovery-wishlists-and-visibility-2026.json",
-            "ontology/steam/discovery-wishlists-and-visibility-2026.md",
-            "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
-            "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
-            "ontology/steam/review-data-and-sales-estimation-2026.md",
-            "ontology/steam/review-data-and-sales-estimation-2026.json",
-            "specimens/steam.json",
-            "ontology/steam/fixed-paid-release-cohort-2026.md",
-            "ontology/steam/fixed-paid-release-cohort-2026.json",
-            "ontology/steam/financial-validation-and-consent-2026.md",
-            "ontology/steam/financial-validation-and-consent-2026.json"
-          ]
-        },
-        {
-          "id": "review/uncertainty",
-          "emoji": "🔎",
-          "title": "Audit unknowns and comparability",
-          "acceptance": "Inspect denominators, missing data and misleading comparisons.",
           "weight": 1,
           "progress": 90,
           "status": "in_progress",
@@ -1094,7 +1115,33 @@
             "ontology/steam/fixed-paid-release-cohort-2026.md",
             "ontology/steam/fixed-paid-release-cohort-2026.json",
             "ontology/steam/financial-validation-and-consent-2026.md",
-            "ontology/steam/financial-validation-and-consent-2026.json"
+            "ontology/steam/financial-validation-and-consent-2026.json",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json"
+          ]
+        },
+        {
+          "id": "review/uncertainty",
+          "emoji": "🔎",
+          "title": "Audit unknowns and comparability",
+          "acceptance": "Inspect denominators, missing data and misleading comparisons.",
+          "weight": 1,
+          "progress": 100,
+          "status": "complete",
+          "evidence": [
+            "ontology/steam/discovery-wishlists-and-visibility-2026.json",
+            "ontology/steam/discovery-wishlists-and-visibility-2026.md",
+            "ontology/steam/public-catalog-and-conditional-long-tail-2026.json",
+            "ontology/steam/public-catalog-and-conditional-long-tail-2026.md",
+            "ontology/steam/review-data-and-sales-estimation-2026.md",
+            "ontology/steam/review-data-and-sales-estimation-2026.json",
+            "specimens/steam.json",
+            "ontology/steam/fixed-paid-release-cohort-2026.md",
+            "ontology/steam/fixed-paid-release-cohort-2026.json",
+            "ontology/steam/financial-validation-and-consent-2026.md",
+            "ontology/steam/financial-validation-and-consent-2026.json",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.md",
+            "ontology/steam/january-2026-modeled-paid-release-distribution.json"
           ]
         },
         {
