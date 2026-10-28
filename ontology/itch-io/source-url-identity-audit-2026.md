@@ -1,7 +1,7 @@
 <!-- generated itch.io source URL identity audit -->
 # Public source URL identities and duplicate registry records
 
-**Reviewed October 28, 2026.** This dataset currently has **273 source records** but only **266 distinct URL strings**. The **7 repeated-URL groups** account for **7 additional registry records**, which do not provide independent corroboration.
+**Reviewed October 28, 2026.** This dataset currently has **275 source records** but only **268 distinct URL strings**. The **7 repeated-URL groups** account for **7 additional registry records**, which do not provide independent corroboration.
 
 Two evidence IDs for one URL may document different claims or dates, but the underlying URL is one public document. Counts of distinct URL strings are not a count of independent people, publishers, publications or research methods.
 
