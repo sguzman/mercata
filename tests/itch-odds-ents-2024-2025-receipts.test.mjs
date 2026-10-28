@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const get=x=>JSON.parse(fs.readFileSync(new URL('../'+x,import.meta.url),'utf8'));
 const file='ontology/itch-io/2024-2025-odds-ents-multichannel-receipts.json';
-test('Original two-period creator cash sums preserve source's discrepancies and different store product mix',()=>{
+test("Original two-period creator cash sums preserve source's discrepancies and different store product mix",()=>{
  const x=get(file),d=get('specimens/itch-io.json'),[a,b]=x.years;
  assert(x.source_ids.every(id=>d.evidence.some(e=>e.id===id)));
  assert.equal(x.sample.publishers,1);assert.equal(x.sample.reported_windows_full_years,false);
