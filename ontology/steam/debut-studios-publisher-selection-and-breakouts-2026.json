@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "first_observed_studio_and_breakout_cohort_comparability",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-playrecon-studios-2026",
+    "steam-playrecon-metrics-2026",
+    "steam-playrecon-coverage-2026",
+    "steam-sensortower-2026-breakouts",
+    "steam-gdc-2026-respondents"
+  ],
+  "claim_ids": [
+    "steam-studio-label-not-legal",
+    "steam-studio-77pct-one-title",
+    "steam-studio-65pct-2026-first",
+    "steam-studio-203day-repeat-gap",
+    "steam-studio-review-ordinal",
+    "steam-publisher-observational-reviews",
+    "steam-review-below10-not-zero-orders",
+    "steam-sensortower-500k-cross-platform",
+    "steam-sensortower-55to76",
+    "steam-sensortower-13to33-indie",
+    "steam-sensortower-new-series-not-new-studio",
+    "steam-gdc-survey-not-steam-seller-frame",
+    "steam-gdc-deck-dev-share",
+    "steam-comparing-different-populations-invalid",
+    "steam-observed-publisher-effect-not-causal"
+  ],
+  "studio_history": {
+    "tracker": "PlayRecon",
+    "snapshot_at": "2026-10-28",
+    "unit": "storefront_developer_name",
+    "verified_legal_publisher": false,
+    "approx_share_one_observed_game_pct": 77,
+    "approx_2026_release_share_from_first_observed_name_pct": 65,
+    "median_interrelease_days_given_second_release": 203,
+    "median_reviews_first": 13,
+    "median_reviews_second": 22,
+    "median_reviews_fifth": 36,
+    "publisher_backed_median_reviews_approx": 25,
+    "self_published_median_reviews_approx": 7,
+    "right_censoring_adjusted": false,
+    "sales_observed": false,
+    "causal_publisher_effect": null
+  },
+  "breakouts": {
+    "operator": "Sensor Tower",
+    "platforms": [
+      "Steam",
+      "PlayStation",
+      "Xbox"
+    ],
+    "minimum_modeled_paid_units_first30": 500000,
+    "cohorts": [
+      {
+        "from": "2024-09-01",
+        "through": "2025-08-31",
+        "total": 55,
+        "indie": 13
+      },
+      {
+        "from": "2025-09-01",
+        "through": "2026-08-31",
+        "total": 76,
+        "indie": 33
+      }
+    ],
+    "new_series_2026": 40,
+    "all_paid_steam_releases_denominator": null,
+    "actual_steam_sales": null,
+    "model_not_audited": true
+  },
+  "professional_survey": {
+    "source": "GDC 2026",
+    "respondents_more_than": 2300,
+    "unit": "survey_respondent",
+    "reported_developers_steam_deck_work_share": 0.28,
+    "representative_steam_sellers": false
+  },
+  "unknown": {
+    "legal_unique_debut_studios": null,
+    "median_first_paid_game_publisher_income": null,
+    "median_developer_profit": null,
+    "exact_zero_paid_order_fraction": null,
+    "causal_publisher_effect": null
+  },
+  "method_limits": [
+    "Store-name labels not unique companies",
+    "Right-censoring of first-time studio histories",
+    "Review counts not merchant paid orders",
+    "External publisher selection not randomized",
+    "Cross-platform success threshold excludes unsuccessful launches",
+    "Survey respondents are not legal publisher accounts"
+  ],
+  "no_private_data_collected": true,
+  "no_commercial_actions": true
+}

@@ -510,6 +510,61 @@
       "evidence_class": "official_public_policy_2026",
       "license": "Only public link, metadata and brief independently authored interpretation; no source text or images redistributed.",
       "notes": "Reviewed policy about prelaunch event mechanics; no game enrollment, partner credentials, actual traffic or sales."
+    },
+    {
+      "id": "steam-playrecon-studios-2026",
+      "url": "https://app.playrecon.com/trends",
+      "title": "Steam release trends — Studios",
+      "publisher": "PlayRecon",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "independent_public_research_with_population_and_method_limits",
+      "license": "Public URL, dates and short independently authored numerical interpretation only; no raw source rows, images or passages reproduced.",
+      "notes": "Mutable 2026-10-28 public snapshot; developer labels not legal entities. Approximate percentages used to avoid stale precise counts."
+    },
+    {
+      "id": "steam-playrecon-metrics-2026",
+      "url": "https://app.playrecon.com/help/metrics",
+      "title": "Metrics and definitions",
+      "publisher": "PlayRecon",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "independent_public_research_with_population_and_method_limits",
+      "license": "Public URL, dates and short independently authored numerical interpretation only; no raw source rows, images or passages reproduced.",
+      "notes": "Review counts are public visibility, not sales or owner income; missing chart history is not zero."
+    },
+    {
+      "id": "steam-playrecon-coverage-2026",
+      "url": "https://app.playrecon.com/help",
+      "title": "PlayRecon help and dataset coverage",
+      "publisher": "PlayRecon",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "independent_public_research_with_population_and_method_limits",
+      "license": "Public URL, dates and short independently authored numerical interpretation only; no raw source rows, images or passages reproduced.",
+      "notes": "Tracker includes over 300,000 store pages; not a confirmed historical original-paid-release census."
+    },
+    {
+      "id": "steam-sensortower-2026-breakouts",
+      "url": "https://develop.sensortower.com/blog/indie-and-new-ip-break-out-without-denting-aaa",
+      "title": "Indie and New IP Break Out, Without Denting AAA",
+      "publisher": "Sensor Tower / Karl Kontus",
+      "published_at": "2026-10",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "independent_public_research_with_population_and_method_limits",
+      "license": "Public URL, dates and short independently authored numerical interpretation only; no raw source rows, images or passages reproduced.",
+      "notes": "Modeled 500,000+ paid units/30-day across Steam, PlayStation, Xbox; conditional high-success sample."
+    },
+    {
+      "id": "steam-gdc-2026-respondents",
+      "url": "https://gdconf.com/article/gdc-2026-state-of-the-game-industry-reveals-impact-of-layoffs-generative-ai-and-more/",
+      "title": "GDC 2026 State of the Game Industry public findings",
+      "publisher": "GDC / Beth Elderkin",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "independent_public_research_with_population_and_method_limits",
+      "license": "Public URL, dates and short independently authored numerical interpretation only; no raw source rows, images or passages reproduced.",
+      "notes": "More than 2,300 professional respondents; non-random Steam seller sampling frame."
     }
   ],
   "claims": [
@@ -2263,6 +2318,159 @@
       "observed_at": "2026-10-28",
       "confidence": "high",
       "limitations": "No participant cohort, control group, partner analytics or paid order data studied."
+    },
+    {
+      "id": "steam-studio-label-not-legal",
+      "text": "PlayRecon groups studios by developer names shown on dated Steam store releases.",
+      "source_ids": [
+        "steam-playrecon-studios-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Display names do not uniquely identify contracting companies or account owners; name changes and merges may affect longitudinal counts."
+    },
+    {
+      "id": "steam-studio-77pct-one-title",
+      "text": "PlayRecon's October 2026 public snapshot reports approximately 77% of observed store-name studios have one recorded dated release.",
+      "source_ids": [
+        "steam-playrecon-studios-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Newer studios are right-censored and may ship more later; this is not a permanent shutdown or failure probability."
+    },
+    {
+      "id": "steam-studio-65pct-2026-first",
+      "text": "The tracker attributes approximately 65% of its 2026 releases to a studio's first observed dated title.",
+      "source_ids": [
+        "steam-playrecon-studios-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "These are not independently verified paid-first releases or first legal-business projects."
+    },
+    {
+      "id": "steam-studio-203day-repeat-gap",
+      "text": "PlayRecon reports 203 days as the median interval between releases for studios with repeat releases.",
+      "source_ids": [
+        "steam-playrecon-studios-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Conditional on actually making a second game and not a population-wide time-to-second-release estimate."
+    },
+    {
+      "id": "steam-studio-review-ordinal",
+      "text": "In PlayRecon's observed studio sequence, median review counts are approximately 13 for first releases, 22 for second releases, and 36 for fifth releases.",
+      "source_ids": [
+        "steam-playrecon-studios-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Different survivor and exposure groups; no longitudinal causal improvement or income measured."
+    },
+    {
+      "id": "steam-publisher-observational-reviews",
+      "text": "For recent games PlayRecon reports around 25 median reviews for games with an external publisher versus around 6–7 for self-published games.",
+      "source_ids": [
+        "steam-playrecon-studios-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Selection effects, marketing budgets, genre and release mix are uncontrolled; review counts do not measure net publisher returns."
+    },
+    {
+      "id": "steam-review-below10-not-zero-orders",
+      "text": "PlayRecon defines an under-ten-review title as low visible traction, and missing historical chart ranks as unobserved signals rather than zero.",
+      "source_ids": [
+        "steam-playrecon-metrics-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Neither low review counts nor missing ranking history establishes zero paid checkouts or true income."
+    },
+    {
+      "id": "steam-sensortower-500k-cross-platform",
+      "text": "Sensor Tower's breakout sample requires modeled sales of at least 500,000 paid copies in 30 days on Steam, Xbox, and PlayStation combined.",
+      "source_ids": [
+        "steam-sensortower-2026-breakouts"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Success-selected multi-platform units are not an all-Steam-release distribution or audited transactions."
+    },
+    {
+      "id": "steam-sensortower-55to76",
+      "text": "Sensor Tower counts 55 breakout releases for September 2024–August 2025 and 76 for September 2025–August 2026 under its 500k/30-day threshold.",
+      "source_ids": [
+        "steam-sensortower-2026-breakouts"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Missing total eligible Steam releases means this does not measure average newcomer success probability."
+    },
+    {
+      "id": "steam-sensortower-13to33-indie",
+      "text": "Indie-classified titles within Sensor Tower's breakout subset rose from 13 to 33 between those periods.",
+      "source_ids": [
+        "steam-sensortower-2026-breakouts"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Indie is model operator category, not first studio title, self-published, solo or profitable."
+    },
+    {
+      "id": "steam-sensortower-new-series-not-new-studio",
+      "text": "Sensor Tower notes 40 breakouts were first games in new series in the newer sample, which is distinct from first ever game by a developer.",
+      "source_ids": [
+        "steam-sensortower-2026-breakouts"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Series count cannot identify first-game firms or new legal publishers."
+    },
+    {
+      "id": "steam-gdc-survey-not-steam-seller-frame",
+      "text": "The GDC 2026 survey covers more than 2,300 professionals in multiple game-industry roles, rather than a Steam paid-publisher census.",
+      "source_ids": [
+        "steam-gdc-2026-respondents"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Industry survey does not measure typical Steam publisher sales or developer take-home pay."
+    },
+    {
+      "id": "steam-gdc-deck-dev-share",
+      "text": "GDC's public 2026 survey summary says 28% of surveyed developers were making or optimizing games for Steam Deck.",
+      "source_ids": [
+        "steam-gdc-2026-respondents"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Professional respondent share is not percent of sold Steam games or a causal support-to-revenue effect."
+    },
+    {
+      "id": "steam-comparing-different-populations-invalid",
+      "text": "Storefront studio display-name cohorts, success-selected multi-platform game launches, and professional survey respondents have irreconcilable denominators for Steam publisher income.",
+      "source_ids": [
+        "steam-playrecon-studios-2026",
+        "steam-sensortower-2026-breakouts",
+        "steam-gdc-2026-respondents"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "A multi-month Steam-only first-paid cohort and consented legal-partner earnings are still missing."
+    },
+    {
+      "id": "steam-observed-publisher-effect-not-causal",
+      "text": "Different review counts for publisher-backed and self-published Steam releases cannot establish the causal benefit of a publishing agreement.",
+      "source_ids": [
+        "steam-playrecon-studios-2026",
+        "steam-playrecon-metrics-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-28",
+      "limitations": "Publishers actively select projects and funded titles differ in many unobserved dimensions."
     }
   ],
   "observations": [],
@@ -2270,5 +2478,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research now documents a modeled January 2026 launch-cohort distribution and official Steam Next Fest/demo/Playtest prelaunch mechanics, alongside commercial rules and protected-data measurement boundaries. Publisher profits and exact-zero sales remain unknown."
+  "summary": "Steam research separates first-observed studio-name release histories, observational publisher-associated reviews and success-selected modeled cross-platform launch cohorts. First-game publisher legal entities, true earnings and zero paid sales remain unknown."
 }
