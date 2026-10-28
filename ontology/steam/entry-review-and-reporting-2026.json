@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "first_official_entry_and_payment_review",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steamdirect-public",
+    "steam-onboarding-doc",
+    "steam-direct-fee-doc",
+    "steam-release-process-doc",
+    "steam-review-process-doc",
+    "steam-coming-soon-doc",
+    "steam-financial-reporting-doc",
+    "steam-reporting-faq-doc",
+    "steam-tax-faq-doc"
+  ],
+  "claim_ids": [
+    "onboarding-agreements",
+    "onboarding-bank-name-match",
+    "onboarding-tax-identity-review",
+    "appfee-usd-100-per-product",
+    "appfee-not-refundable-recoupable",
+    "appfee-no-wallet-and-admin",
+    "conflicting-wait-30-days",
+    "conflicting-wait-21-days",
+    "wait-rule-requires-reconciliation",
+    "coming-soon-two-weeks",
+    "store-before-build-review",
+    "review-3-to-5-business-days",
+    "review-release-manual-control",
+    "review-build-feature-qa",
+    "review-app-release-permissions",
+    "payout-minimum-usd-100",
+    "payout-following-month",
+    "payout-us-ach-intl-swift",
+    "merchant-report-not-identical",
+    "net-royalty-after-adjustments",
+    "vat-inclusive-versus-sales-tax-added",
+    "royalty-withholding-us-source",
+    "financial-records-are-private"
+  ],
+  "scope": [
+    "onboarding_and_identity",
+    "app_fee_and_recoupment",
+    "waiting_period_discrepancy",
+    "store_and_build_review",
+    "payouts_tax_and_gross_net_reporting"
+  ],
+  "documented": {
+    "steam_direct_fee_usd": 100,
+    "per_product_recoupment_adjusted_gross_usd": 1000,
+    "fee_refundable": false,
+    "appfee_can_use_steam_wallet": false,
+    "waiting_period_minimum_days_conflict": {
+      "steam_direct_public_landing": 30,
+      "steamworks_onboarding_doc": 21,
+      "resolved_operational_rule": null
+    },
+    "coming_soon_days": 14,
+    "review_typical_business_days": {
+      "low": 3,
+      "high": 5
+    },
+    "review_buffer_business_days": 7,
+    "monthly_payment_threshold_usd": 100,
+    "payment_us_banks": "ACH",
+    "payment_non_us_banks": "USD SWIFT",
+    "payment_timing": "normally_end_of_following_month",
+    "partner_financial_reports_public": false,
+    "vat_is_included_in_covered_region_prices": true,
+    "us_canada_collected_sales_tax_added": true,
+    "royalty_us_source_withholding_range_percent": {
+      "min": 0,
+      "max": 30
+    },
+    "known_current_revenue_share_rate": null,
+    "near_realtime_gross_before_adjustments": true,
+    "monthly_net_after_taxes_returns_chargebacks": true
+  },
+  "unknown": {
+    "active_wait_period_days": null,
+    "actual_dev_gross_income_usd": null,
+    "actual_paid_game_orders": null,
+    "unique_game_buyers": null,
+    "actual_net_after_tax_partner_payout_usd": null,
+    "developer_after_cost_profit_usd": null,
+    "representative_steam_income_median_usd": null,
+    "zero_seller_fraction": null
+  },
+  "unresolved": [
+    {
+      "id": "conflicting-wait-days",
+      "sources": [
+        "steamdirect-public",
+        "steam-onboarding-doc"
+      ],
+      "reason": "Both current public Valve pages give incompatible 30 and 21 day periods; no authenticated release-control check."
+    },
+    {
+      "id": "income-data",
+      "sources": [
+        "steam-financial-reporting-doc"
+      ],
+      "reason": "Partner reports are private; no audited seller cohort includes zero earners and delisted publishers."
+    },
+    {
+      "id": "revenue-share-tier",
+      "sources": [
+        "steam-reporting-faq-doc"
+      ],
+      "reason": "Public reporting flow not a complete operative contract/tier schedule."
+    }
+  ],
+  "no_partner_login": true,
+  "no_merchant_data": true,
+  "no_game_publication": true,
+  "no_paid_experiment": true
+}
