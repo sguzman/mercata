@@ -28,7 +28,7 @@ test('Adding one source and claim propagates only live audit counters, not histo
  assert(md.includes('| **Total** | **'+changed.sourceCount+'** |'));
 });
 test('Incomplete dates and unsupported output paths fail closed',()=>{
- const broken={evidence:[{published_at:'yesterday'}],claims:[]};
+ const broken={evidence:[{id:'invalid-date-test-source',url:'https://example.com/public-test',published_at:'yesterday'}],claims:[]};
  assert.throws(()=>itchSourceStats(broken),/precision/);
  const stats=itchSourceStats(JSON.parse(read('specimens/itch-io.json')));
  assert.throws(()=>alignItchSourceAudit('unlisted.md','none',stats),/Unsupported/);
