@@ -14,21 +14,22 @@ test('The original nine partner documents and 23 claims remain independently att
  const ids=new Set(dossier.evidence.map(x=>x.id));
  for(const s of dossier.evidence){
    assert(s.url.startsWith('https://'));
-   assert.equal(s.retrieved_at,'2026-10-28');
+   assert(/^2026-10-(28|29)$/.test(s.retrieved_at),'Expected independently dated October 2026 evidence');
    assert(s.publisher&&s.license&&s.notes);
  }
  for(const id of study.source_ids){
    const s=dossier.evidence.find(x=>x.id===id);
    assert(s.url.startsWith('https://partner.steamgames.com/'));
    assert.equal(s.published_at,null);
+   assert.equal(s.retrieved_at,'2026-10-28');
  }
  for(const c of dossier.claims){
    assert(c.source_ids.length>=1&&c.source_ids.every(x=>ids.has(x)));
-   assert.equal(c.observed_at,'2026-10-28');
+   assert(/^2026-10-(28|29)$/.test(c.observed_at),'Expected independently dated October 2026 claim');
    assert(c.limitations.length>45);
  }
  assert(study.source_ids.every(x=>ids.has(x)));
- assert(study.claim_ids.every(x=>dossier.claims.some(y=>y.id===x)));
+ assert(study.claim_ids.every(x=>dossier.claims.some(y=>y.id===x&&y.observed_at==='2026-10-28')));
 });
 test('Earlier 21-day wording is preserved while current public sources agree on 30 days',()=>{
  const a=study.documented.waiting_period_minimum_days_conflict;
