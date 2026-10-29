@@ -1346,6 +1346,50 @@
       "evidence_class": "official_public_pc_online_multiplayer_and_submission_rules",
       "license": "Public title, URL and independently authored factual paraphrases only. No public document text, graphics, private contracts or source datasets copied.",
       "notes": "Requires crossplay across PC stores for online games; build submitted four weeks prelaunch."
+    },
+    {
+      "id": "steam-renpy-market-builds-oct2026",
+      "url": "https://www.renpy.org/doc/html/build.html",
+      "title": "Building Distributions",
+      "publisher": "Ren'Py project documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_upstream_docs_or_identified_third_party_integration_2026",
+      "license": "Only URL, source title and short independently authored technical paraphrase; no source code, downloads, media or copyrighted passages copied.",
+      "notes": "Publisher documentation states Windows/Linux market package and file packaging behavior."
+    },
+    {
+      "id": "steam-renpy-achievements-oct2026",
+      "url": "https://www.renpy.org/doc/html/achievement.html",
+      "title": "Achievements and Steamworks API",
+      "publisher": "Ren'Py project documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_upstream_docs_or_identified_third_party_integration_2026",
+      "license": "Only URL, source title and short independently authored technical paraphrase; no source code, downloads, media or copyrighted passages copied.",
+      "notes": "Steam support installation and optional Steam achievement/API access; publishing support subject to partner permissions."
+    },
+    {
+      "id": "steam-godot-export-oct2026",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html",
+      "title": "Exporting projects",
+      "publisher": "Godot project documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_upstream_docs_or_identified_third_party_integration_2026",
+      "license": "Only URL, source title and short independently authored technical paraphrase; no source code, downloads, media or copyrighted passages copied.",
+      "notes": "Export templates and platform presets, executable versus resource-only archives and command line export."
+    },
+    {
+      "id": "steam-godotsteam-gdextension-oct2026",
+      "url": "https://store.godotengine.org/asset/godotsteam/godotsteam-gdextension/",
+      "title": "GodotSteam GDExtension",
+      "publisher": "GodotSteam / Godot Asset Store",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_upstream_docs_or_identified_third_party_integration_2026",
+      "license": "Only URL, source title and short independently authored technical paraphrase; no source code, downloads, media or copyrighted passages copied.",
+      "notes": "Third-party MIT Steamworks binding, plugin incompatibilities and exported runtime caveats; not officially endorsed by Valve."
     }
   ],
   "claims": [
@@ -8043,6 +8087,209 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Comparing a platformwide revenue-weighted Steam average with a published Epic schedule is not a valid per-developer profitability comparison."
+    },
+    {
+      "id": "renpy-provides-market-pc-distributions",
+      "text": "Ren'Py's distribution builder includes a Windows, Mac and Linux for Markets output intended for distribution on software storefronts such as Steam.",
+      "source_ids": [
+        "steam-renpy-market-builds-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A generated market archive still requires a correct Steam AppID, game configuration, permissions and uploaded SteamPipe depot."
+    },
+    {
+      "id": "renpy-windows-linux-archive",
+      "text": "Ren'Py's default PC distribution can target both Windows x86_64 and Linux x86_64 in one archive.",
+      "source_ids": [
+        "steam-renpy-market-builds-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Packaging formats are not proof of working hardware support or platform-specific QA."
+    },
+    {
+      "id": "renpy-archive-permissions-preserved",
+      "text": "Ren'Py warns that unpacking and repacking its archives on Windows can damage Linux/macOS file permissions.",
+      "source_ids": [
+        "steam-renpy-market-builds-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A checked package still needs runtime testing in actual target environments."
+    },
+    {
+      "id": "renpy-optional-steam-libraries",
+      "text": "Ren'Py documents an optional Install Steam Support library step to enable Steam functionality for authorized partners.",
+      "source_ids": [
+        "steam-renpy-achievements-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The presence of integration libraries does not make a developer a verified Steamworks partner or grant app credentials."
+    },
+    {
+      "id": "renpy-steam-achievement-sync",
+      "text": "Ren'Py can synchronize achievements to Steam when its Steam integration is installed and available.",
+      "source_ids": [
+        "steam-renpy-achievements-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No actual achievements, live app configuration or build tested."
+    },
+    {
+      "id": "renpy-steamapi-runtime-check",
+      "text": "Ren'Py exposes a conditional Steamworks API binding and instructs developers to check whether Steam initialized before calling methods.",
+      "source_ids": [
+        "steam-renpy-achievements-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Not every platform or launch path guarantees initialization and full Steam SDK availability."
+    },
+    {
+      "id": "godot-export-needs-templates-presets",
+      "text": "Godot's exporter requires suitable installed export templates and a platform export preset to create playable release builds.",
+      "source_ids": [
+        "steam-godot-export-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A resource-only .pck or .zip is not a playable game executable."
+    },
+    {
+      "id": "godot-export-cli-build",
+      "text": "Godot documents command-line export-release capability for build automation using a configured export preset.",
+      "source_ids": [
+        "steam-godot-export-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "An automated export does not imply a Steam-published build, code-signing compliance or functional QA."
+    },
+    {
+      "id": "godotsteam-third-party-mit",
+      "text": "GodotSteam's asset-store listing describes an MIT-licensed, third-party GDExtension binding to Steamworks APIs on PC platforms.",
+      "source_ids": [
+        "steam-godotsteam-gdextension-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Its compatibility/version history and licensing must be checked separately from Godot's engine and Valve's SDK; it is not a native Godot guarantee."
+    },
+    {
+      "id": "godotsteam-extension-module-mutually-exclusive",
+      "text": "The GodotSteam maintainer warns not to combine its GDExtension plugin and native module variants.",
+      "source_ids": [
+        "steam-godotsteam-gdextension-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Using incompatible variants can break project startup; no specific build was run."
+    },
+    {
+      "id": "godotsteam-export-template-normal",
+      "text": "The GDExtension package requires normal Godot export templates rather than the separate GodotSteam custom module templates.",
+      "source_ids": [
+        "steam-godotsteam-gdextension-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Review the plugin's current version-specific notes before updating integrations."
+    },
+    {
+      "id": "godotsteam-overlay-editor-different",
+      "text": "GodotSteam warns that the Steam overlay may not function in the Godot editor even if it works in an exported game under the Steam client.",
+      "source_ids": [
+        "steam-godotsteam-gdextension-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Editor-only tests are insufficient evidence of a working shipping integration."
+    },
+    {
+      "id": "steampipe-about-megabyte-chunks",
+      "text": "Valve states SteamPipe chunks files into approximately one-megabyte blocks for encrypted/compressed differential distribution.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Chunk deduplication does not guarantee one asset changed means only one megabyte downloaded."
+    },
+    {
+      "id": "steampipe-packed-asset-shifts-amplify",
+      "text": "SteamPipe documentation warns that packed asset reordering and embedded absolute offsets can cause very large patch sizes after tiny asset changes.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Real patch amplification depends on an engine's actual pak/PCK/RPA output and must be measured, not inferred."
+    },
+    {
+      "id": "steampipe-avoid-unnecessary-pak-compression",
+      "text": "Valve advises against compressing or encrypting large packed files redundantly when SteamPipe's own transfer compression is available.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Certain games have exceptional packaging needs; source guidance is not a blanket prohibition."
+    },
+    {
+      "id": "steampipe-private-beta-and-default",
+      "text": "SteamPipe supports staging builds on private beta branches before selecting a default release build.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No test deployment or account actions have occurred."
+    },
+    {
+      "id": "steampipe-linux-upload-tools",
+      "text": "Valve supplies Linux steamcmd tooling for build uploads and a SteamPipe configuration workflow independent of the game engine.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Availability of an uploader does not prove a game can be built, signed, tested or distributed completely from Linux."
+    },
+    {
+      "id": "steampipe-package-depot-visibility",
+      "text": "Valve warns that Windows and Linux depots must be explicitly included in associated packages or alternate-platform customers may install no files.",
+      "source_ids": [
+        "steam-steampipe-uploads-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The existence of a platform depot alone does not prove the appropriate license grants it."
+    },
+    {
+      "id": "engine-genre-fit-is-design-not-population",
+      "text": "The technical affordances documented for Ren'Py visual novels and Godot general-purpose 2D cannot establish which Steam genre yields the best revenue per developer hour.",
+      "source_ids": [
+        "steam-renpy-market-builds-oct2026",
+        "steam-godot-export-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No genre-matched paid-game cohort with labor estimates, sales receipts or causal engine attribution exists in these materials."
+    },
+    {
+      "id": "engine-qa-estimates-unobserved",
+      "text": "No verified project-level development hours, QA hours, support costs, true units sold, publisher proceeds or net profit have been observed for a Ren'Py-versus-Godot Steam game comparison.",
+      "source_ids": [
+        "steam-renpy-market-builds-oct2026",
+        "steam-godot-export-oct2026",
+        "steam-steampipe-uploads-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Engine choice still requires game-specific prototypes, workflow tests and matched outcome evidence."
     }
   ],
   "observations": [],
@@ -8050,5 +8297,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research now includes an officially sourced comparison of Steam versus Epic PC publishing terms, annual title-level revenue tiers, optional exclusivity and multiplayer/achievement parity, without equating nominal shares or user bases to actual developer profit."
+  "summary": "Steam research includes documented engine export paths, optional partner-only Steamworks bindings, and SteamPipe build/patch QA gates. Real first-game profit, development hours and paid sales are still unobserved."
 }

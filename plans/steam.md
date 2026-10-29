@@ -1,10 +1,14 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 86% task-weighted.** Verified official-document findings advanced selected tasks; many remain partially researched, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 87% task-weighted.** Verified official-document findings advanced selected tasks; many remain partially researched, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
+
+## Engine integration, genre fit and SteamPipe QA checkpoint
+
+The [Ren'Py/Godot/SteamPipe engineering comparison](../ontology/steam/genre-engine-integration-and-steampipe-qa-2026.md) separates runnable operating-system builds, optional partner-authorized Steamworks bindings, distribution packages, update delivery and verified hardware testing. The [synthetic QA gate](../site/steam-engine-release-gates.mjs) treats missing tests as unverified rather than pass. **Current score 87%** (exact 87.014%; Δ +1 pp from 86%) across the unchanged 293 tasks. No shipped game or actual paid orders observed.
 
 ## Steam versus Epic storefront terms checkpoint
 
@@ -487,4 +491,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - **Designs documented, no live experiments:** Falsifiable low-risk launch and marketing experiments
 - **Implemented; maintain current:** Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 86%** rounded task-weighted progress across 293 tasks; previous 86%, Δ +0 pp (exact 86.468%). 65 fully verified, 228 partially researched; 121 sources, 649 bounded claims. No merchant receipts, storefront releases, partner terms or paid campaigns executed.
+**Completion: 87%** rounded task-weighted progress across 293 tasks; prior snapshot 86%, change +1 percentage points (exact 87.014%). 69 fully verified, 224 partly researched; 125 sources and 669 bounded claims. No real seller sales, labor logs, contracts or games published.

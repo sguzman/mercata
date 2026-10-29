@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "pc_engine_export_steamworks_integration_and_patch_delivery_comparison",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-renpy-market-builds-oct2026",
+    "steam-renpy-achievements-oct2026",
+    "steam-godot-export-oct2026",
+    "steam-godotsteam-gdextension-oct2026",
+    "steam-steampipe-uploads-2026"
+  ],
+  "claim_ids": [
+    "renpy-provides-market-pc-distributions",
+    "renpy-windows-linux-archive",
+    "renpy-archive-permissions-preserved",
+    "renpy-optional-steam-libraries",
+    "renpy-steam-achievement-sync",
+    "renpy-steamapi-runtime-check",
+    "godot-export-needs-templates-presets",
+    "godot-export-cli-build",
+    "godotsteam-third-party-mit",
+    "godotsteam-extension-module-mutually-exclusive",
+    "godotsteam-export-template-normal",
+    "godotsteam-overlay-editor-different",
+    "steampipe-about-megabyte-chunks",
+    "steampipe-packed-asset-shifts-amplify",
+    "steampipe-avoid-unnecessary-pak-compression",
+    "steampipe-private-beta-and-default",
+    "steampipe-linux-upload-tools",
+    "steampipe-package-depot-visibility",
+    "engine-genre-fit-is-design-not-population",
+    "engine-qa-estimates-unobserved"
+  ],
+  "engine_paths": {
+    "renpy": {
+      "context": "script_and_visual_novel_specialized",
+      "source": "official_upstream_docs",
+      "market_distribution": true,
+      "windows_x86_64_build": true,
+      "linux_x86_64_build": true,
+      "mac_distribution": true,
+      "steam_api_optional_partner_only": true,
+      "steam_achievements_supported_conditionally": true,
+      "engine_is_standalone_steam_uploader": false
+    },
+    "godot": {
+      "context": "general_purpose_2d_and_3d",
+      "source": "official_docs_plus_third_party_plugin",
+      "installed_export_templates_required": true,
+      "export_preset_required": true,
+      "export_release_cli": true,
+      "resource_only_pck_is_game_executable": false,
+      "steamworks_plugin": "third_party_GodotSteam_GDExtension",
+      "plugin_license": "MIT",
+      "mix_extension_and_module": false,
+      "editor_overlay_test_proves_exported_overlay": false
+    }
+  },
+  "steam_distribution": {
+    "requires_steamworks_partner_and_appid": true,
+    "steampipe_separate_from_engine_export": true,
+    "linux_uploader_documented": true,
+    "desktop_platform_launch_options_and_depot_package_membership_required": true,
+    "private_branch_testing_supported": true,
+    "approx_chunk_megabytes": 1,
+    "packed_offset_shifts_can_amplify_downloads": true,
+    "real_patch_bytes_measured": null
+  },
+  "genres": [
+    "visual_novel",
+    "2d_action",
+    "horror",
+    "simulation"
+  ],
+  "comparability": {
+    "engine_has_documented_build_path_is_viable_sales_evidence": false,
+    "game_genre_inferred_sales_rank": null,
+    "developer_hourly_profit_comparison": null,
+    "per_game_license_cost": null,
+    "net_revenue_by_engine": null
+  },
+  "unknown": {
+    "real_engineering_hours": null,
+    "real_qa_hours": null,
+    "game_specific_steamworks_acceptance": null,
+    "real_download_bytes": null,
+    "real_purchases": null,
+    "developer_profit": null
+  },
+  "no_game_build_created": true,
+  "no_steam_account_accessed": true
+}
