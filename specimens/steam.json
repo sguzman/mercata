@@ -1434,6 +1434,28 @@
       "evidence_class": "unverified_first_week_first_solo_game_creator_self_report",
       "license": "Original public post URL and independently authored short factual paraphrases only; do not reproduce screenshots or private merchant records.",
       "notes": "One week of paid game sales, gross receipts, refunds and development effort; labor is prelaunch, sales only first week; no bank records or full studio expenses verified."
+    },
+    {
+      "id": "steam-owl-loki-firstgame-postmortem-oct2025",
+      "url": "https://owlgame.dev/blog/lokiretro/",
+      "title": "Loki's Revenge Early Access Release Post Mortem",
+      "publisher": "OWL game developer blog",
+      "published_at": "2025-10-13",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_developer_blog_public_self_report_unverified_financial_label",
+      "license": "Source title, URL, and independently authored short factual paraphrases only; no source text, screenshots, videos, or third-party images copied.",
+      "notes": "June 23 2025 Early Access first commercial release; October 10 2025 snapshot gives 370 copies, 18 returns, a $619 value labeled Net Steam Revenue, plus approximate development hours. Label not authenticated bank proceeds or payroll."
+    },
+    {
+      "id": "steam-mixolumia-ownsite-postmortem-2021",
+      "url": "https://mixolumia.com/postmortem/",
+      "title": "Mixolumia Postmortem",
+      "publisher": "Mixolumia developer website",
+      "published_at": "2021-06-22",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_developer_blog_self_report_public_bank_receipt_assertion",
+      "license": "Source title, URL, and independently authored short factual paraphrases only; no source text, screenshots, videos, or third-party images copied.",
+      "notes": "June 22 2021 report with later update on Steam remittance: 713 Steam copies / $6,202 Steam gross, $3,680 described as post-deduction bank proceeds; 1,776 itch copies / $17,906 gross and $14,980 described as post-deduction bank proceeds. Steam release later than itch; updates may lag and are not a matched-window randomized comparison."
     }
   ],
   "claims": [
@@ -8729,6 +8751,100 @@
       "confidence": "bounded_self_report",
       "observed_at": "2026-10-28",
       "limitations": "No fixed-horizon complete ledger or unbiased release population; later sales and refunds were not observed."
+    },
+    {
+      "id": "steam-owl-early-access-snapshot",
+      "text": "An OWL developer's October 2025 first commercial Early Access retrospective reports 370 Steam copies sold and 18 returns as of October 10, 2025.",
+      "source_ids": [
+        "steam-owl-loki-firstgame-postmortem-oct2025"
+      ],
+      "confidence": "bounded_public_case",
+      "observed_at": "2026-10-28",
+      "limitations": "First-party self-report; no authenticated transactions, customer-level returns, or full lifetime sales."
+    },
+    {
+      "id": "steam-owl-net-revenue-label",
+      "text": "The OWL retrospective labels USD 619 as Net Steam Revenue for the title; this is not explicitly documented as an actual bank deposit after the publisher share, bank costs and other obligations.",
+      "source_ids": [
+        "steam-owl-loki-firstgame-postmortem-oct2025",
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "bounded_public_case",
+      "observed_at": "2026-10-28",
+      "limitations": "Steam's publisher payment calculations and a developer's unqualified dashboard label have different possible deductions; treating $619 as after-tax personal take-home or true profit is not justified."
+    },
+    {
+      "id": "steam-owl-parttime-labor",
+      "text": "The OWL developer estimates spending about 8–10 hours weekly for roughly a year and a half on the first Early Access version.",
+      "source_ids": [
+        "steam-owl-loki-firstgame-postmortem-oct2025"
+      ],
+      "confidence": "bounded_public_case",
+      "observed_at": "2026-10-28",
+      "limitations": "Recall-based informal work schedule, not verified hour-by-hour timekeeping; elapsed development and hours are not all game operating costs."
+    },
+    {
+      "id": "steam-mixolumia-steam-gross",
+      "text": "A first-party postmortem reports 713 Steam units and USD 6,202 Steam gross revenue around June 2021, after the game's November 2020 Steam launch.",
+      "source_ids": [
+        "steam-mixolumia-ownsite-postmortem-2021"
+      ],
+      "confidence": "bounded_public_case",
+      "observed_at": "2026-10-28",
+      "limitations": "Voluntary self-report and not authenticated against a current partner report; figure is a historical snapshot, not lifetime cohort earnings."
+    },
+    {
+      "id": "steam-mixolumia-steam-bank-net",
+      "text": "The Mixolumia author reports USD 3,680 Steam post-deduction receipts described as money in the bank, lagging the USD 6,202 Steam gross figure.",
+      "source_ids": [
+        "steam-mixolumia-ownsite-postmortem-2021",
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "bounded_public_case",
+      "observed_at": "2026-10-28",
+      "limitations": "Author-reported bank money, not independently examined bank statements; lagged reporting periods prohibit interpreting 3,680 / 6,202 as the exact same-cohort realized rate."
+    },
+    {
+      "id": "steam-mixolumia-crossstore-mismatched-release",
+      "text": "The Mixolumia postmortem reports 1,776 itch.io copies and USD 17,906 gross there, versus 713 Steam copies and USD 6,202 gross, after launching on itch.io before Steam.",
+      "source_ids": [
+        "steam-mixolumia-ownsite-postmortem-2021"
+      ],
+      "confidence": "bounded_public_case",
+      "observed_at": "2026-10-28",
+      "limitations": "Sales channels differ in launch date, visibility, geography, local tax treatment and promotional history; a single title cannot establish platform-wide causal earnings effects."
+    },
+    {
+      "id": "steam-mixolumia-crossstore-bank-and-lag",
+      "text": "The Mixolumia author also identifies USD 14,980 as post-deduction itch.io bank proceeds and USD 3,680 as Steam proceeds, while explicitly warning of financial settlement lag.",
+      "source_ids": [
+        "steam-mixolumia-ownsite-postmortem-2021"
+      ],
+      "confidence": "bounded_public_case",
+      "observed_at": "2026-10-28",
+      "limitations": "Self-disclosed values have update-specific temporal lag; they are neither harmonized accounting profit nor same-period conversion ratios."
+    },
+    {
+      "id": "steam-finance-real-time-vs-monthly-report",
+      "text": "Steamworks distinguishes near-real-time gross sales reports that exclude deductions from monthly reports incorporating deductions and amounts payable, with additional possible receiving-bank costs.",
+      "source_ids": [
+        "steam-financial-reporting-doc",
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "bounded_public_case",
+      "observed_at": "2026-10-28",
+      "limitations": "Partner-specific contracts and taxes require authenticated monthly statements; an unqualified third-party net figure does not establish actual remittance."
+    },
+    {
+      "id": "steam-firstparty-stories-not-representative-income",
+      "text": "Two first-party developer postmortems supply low and cross-store observed self-reported historical outcomes, not a representative Steam-wide game or publisher income distribution.",
+      "source_ids": [
+        "steam-owl-loki-firstgame-postmortem-oct2025",
+        "steam-mixolumia-ownsite-postmortem-2021"
+      ],
+      "confidence": "bounded_public_case",
+      "observed_at": "2026-10-28",
+      "limitations": "Publisher identities, unknown zero-sellers, release ages, signed shares and complete business costs are not sampled or harmonized."
     }
   ],
   "observations": [],

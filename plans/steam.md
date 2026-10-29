@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Developer-site Steam finance terminology and low-return cases
+
+The [developer-operated site case audit](../ontology/steam/developer-operated-site-revenue-cases-2026.md) adds two first-party postmortems and a receipt-label comparison: a first Early Access game with reported $619 Net Steam Revenue and a historic single-game cross-store comparison disclosing Steam gross and claimed bank receipts with different settlement windows. **88% current task-weighted completion** (exact 87.867%; Δ +0.085 pp from the previous checkpoint); **293 tasks unchanged**, no real authenticated ledger or representative income statistics.
+
 ## First-solo-game low-sales labor checkpoint
 
 The [same public income case register](../ontology/steam/public-developer-payout-and-portfolio-cases-2026.md) now also records a reported 28-copy, $130 first-week launch following 350–450 development hours. Its $90 asset outlay is subtracted only as an **illustrative upper gross-minus-assets remainder**; no actual payout, labor wage or zero-sales claim is inferred. **Steam research remains 88%** (exact 87.782%, Δ +0.085 pp this checkpoint); 293 original tasks unchanged.

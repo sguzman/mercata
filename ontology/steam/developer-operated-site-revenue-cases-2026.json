@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "first_party_public_developer_steam_cash_cases_with_scope_gates",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-owl-loki-firstgame-postmortem-oct2025",
+    "steam-mixolumia-ownsite-postmortem-2021",
+    "steam-financial-reporting-doc",
+    "steam-reporting-faq-doc"
+  ],
+  "claim_ids": [
+    "steam-owl-early-access-snapshot",
+    "steam-owl-net-revenue-label",
+    "steam-owl-parttime-labor",
+    "steam-mixolumia-steam-gross",
+    "steam-mixolumia-steam-bank-net",
+    "steam-mixolumia-crossstore-mismatched-release",
+    "steam-mixolumia-crossstore-bank-and-lag",
+    "steam-finance-real-time-vs-monthly-report",
+    "steam-firstparty-stories-not-representative-income"
+  ],
+  "cases": [
+    {
+      "id": "owl_loki_2025_first_ea",
+      "source_id": "steam-owl-loki-firstgame-postmortem-oct2025",
+      "case_unit": "single_early_access_game",
+      "released_at": "2025-06-23",
+      "observed_at": "2025-10-10",
+      "revenue_channel": "Steam",
+      "currency": "USD",
+      "reporting_class": "first_party_self_report_net_steam_revenue_unqualified",
+      "reported": {
+        "gross_units_sold": 370,
+        "units_returned": 18,
+        "net_steam_revenue_label_usd": 619,
+        "parttime_hours_per_week_low": 8,
+        "parttime_hours_per_week_high": 10,
+        "approx_development_months": 18
+      },
+      "assumptions": {
+        "number_of_workweeks_in_development": null,
+        "payment_after_revenue_share_verified": false,
+        "developer_contractual_split_verified": false,
+        "bank_deposit_verified": false,
+        "total_cash_expenses_verified": false,
+        "fully_costed_labor_verified": false
+      },
+      "verified_publisher_bank_receipts_usd": null,
+      "developer_after_cost_profit_usd": null,
+      "representative_of_all_firstgames": false
+    },
+    {
+      "id": "mixolumia_2021_crossstore",
+      "source_id": "steam-mixolumia-ownsite-postmortem-2021",
+      "case_unit": "one_game_two_stores_different_launch_dates",
+      "observed_at": "2021-06-22",
+      "steam_release": "2020-11-30",
+      "itch_release": "2020-08-08",
+      "currency": "USD",
+      "reporting_class": "first_party_self_report_gross_plus_lagged_bank_credits",
+      "reported": {
+        "steam_units": 713,
+        "steam_gross_usd": 6202,
+        "steam_bank_credit_claim_usd": 3680,
+        "itch_units": 1776,
+        "itch_gross_usd": 17906,
+        "itch_bank_credit_claim_usd": 14980,
+        "all_gross_usd": 24108,
+        "all_units": 2489,
+        "all_bank_credit_claim_usd": 18660
+      },
+      "limitations": [
+        "Steam and itch launches are not contemporaneous",
+        "Publication and bank data have different settlement lag",
+        "Amounts are published author claims rather than inspected bank exports",
+        "Game assets, labor, IP licensing and ongoing costs are not covered by net bank figures"
+      ],
+      "actual_bank_statement_inspected": false,
+      "steam_sales_bank_window_aligned": false,
+      "developer_after_cost_profit_usd": null,
+      "causal_steam_vs_itch_store_effect": null,
+      "representative_of_other_publishers": false
+    }
+  ],
+  "accounting_boundaries": {
+    "real_time_gross_report_is_monthly_cash": false,
+    "monthly_sales_report_holds_more_deductions": true,
+    "revenue_share_payment_is_not_after_labor_profit": true,
+    "unqualified_net_revenue_label_not_proven_bank_deposit": true,
+    "storefront_release_dates_must_match_for_comparison": true,
+    "do_not_pool_disclosures_as_population_sample": true,
+    "zero_sale_population_unobserved": true
+  },
+  "unknown": {
+    "first_game_true_net_payout_population_median_usd": null,
+    "first_game_after_labor_profit_population_median_usd": null,
+    "steam_paid_zero_sale_share": null,
+    "independently_audited_bank_remittances": null,
+    "firstgame_profit_per_hour": null
+  }
+}
