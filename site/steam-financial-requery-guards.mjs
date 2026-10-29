@@ -5,6 +5,7 @@ const iso=value=>{
 };
 const fixture=value=>typeof value==='string'&&/^fixture-[a-z0-9-]+$/.test(value);
 const natural=value=>Number.isSafeInteger(value)&&value>=0;
+const safeAdd=(a,b,label)=>{const sum=a+b;if(!Number.isSafeInteger(sum))throw new RangeError('Unsafe accumulated units: '+label);return sum;};
 const permitted=(obj,allowed)=>obj&&typeof obj==='object'&&!Array.isArray(obj)&&Object.keys(obj).every(k=>allowed.includes(k));
 const kinds=new Set(['steam_package','retail_key_activation','microtransaction']);
 const batchKeys=['fixture_batch_id','financial_date_pt','visibility_scope','pages'];
@@ -60,16 +61,19 @@ export function reconcileSyntheticSteamFinancialDays(batches){
   microtransaction_period_returns:0};
  for(const day of days)for(const row of day.rows){
   if(row.kind==='steam_package'){
-   totals.steam_package_gross_units_sold+=row.gross_units_sold;
-   totals.steam_package_period_returns+=row.gross_units_returned;
-  }else if(row.kind==='retail_key_activation')totals.retail_key_units_activated+=row.gross_units_activated;
+   totals.steam_package_gross_units_sold=safeAdd(totals.steam_package_gross_units_sold,row.gross_units_sold,'steam sales');
+   totals.steam_package_period_returns=safeAdd(totals.steam_package_period_returns,row.gross_units_returned,'steam returns');
+  }else if(row.kind==='retail_key_activation')
+   totals.retail_key_units_activated=safeAdd(totals.retail_key_units_activated,row.gross_units_activated,'retail keys');
   else{
-   totals.microtransaction_gross_units_sold+=row.gross_units_sold;
-   totals.microtransaction_period_returns+=row.gross_units_returned;
+   totals.microtransaction_gross_units_sold=safeAdd(totals.microtransaction_gross_units_sold,row.gross_units_sold,'microtransactions');
+   totals.microtransaction_period_returns=safeAdd(totals.microtransaction_period_returns,row.gross_units_returned,'microtransaction returns');
   }
  }
  // Different dates can include returns from earlier purchases; period net may be negative.
- totals.steam_package_period_net_units=totals.steam_package_gross_units_sold-totals.steam_package_period_returns;
+ const net=totals.steam_package_gross_units_sold-totals.steam_package_period_returns;
+ if(!Number.isSafeInteger(net))throw new RangeError('Unsafe accumulated units: period net');
+ totals.steam_package_period_net_units=net;
  return {kind:'synthetic_changed_date_full_replacement_not_merchant_report',financial_date_time_basis:'Pacific Time',
   visibility_scope:visibility,fully_paginated_dates:days.length,processed_changed_date_batches:batches.length,
   replaced_previous_daily_snapshots:revisions,days:days.map(day=>({financial_date_pt:day.financial_date_pt,

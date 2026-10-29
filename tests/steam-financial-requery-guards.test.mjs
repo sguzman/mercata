@@ -34,6 +34,21 @@ test('A missing or duplicate fixture row, key-as-sale, and private-looking field
  const e=fixture();e[0].fixture_batch_id='real-report';assert.throws(()=>reconcile(e),/synthetic/);
  const f=fixture();f[1].visibility_scope='includes_view_grants';assert.throws(()=>reconcile(f),/visibility/);
 });
+test('Safe individual unit counts must not overflow aggregate arithmetic',()=>{
+ const sales=fixture();
+ sales[2].pages[0].rows[0].gross_units_sold=Number.MAX_SAFE_INTEGER;
+ assert.throws(()=>reconcile(sales),/Unsafe accumulated units: steam sales/);
+ const refunds=fixture();
+ refunds[2].pages[0].rows[0].gross_units_returned=Number.MAX_SAFE_INTEGER;
+ assert.throws(()=>reconcile(refunds),/Unsafe accumulated units: steam returns/);
+ const keys=fixture();
+ const first=structuredClone(keys[0].pages[0].rows[1]);
+ first.fixture_row_id='fixture-final-key-big';first.gross_units_activated=Number.MAX_SAFE_INTEGER;
+ const extra=structuredClone(first);
+ extra.fixture_row_id='fixture-other-key';extra.gross_units_activated=1;
+ keys[2].pages[0].rows.push(first,extra);
+ assert.throws(()=>reconcile(keys),/Unsafe accumulated units: retail keys/);
+});
 test('Original 293 Steam tasks, public evidence and source/claim join remain intact',()=>{
  const sources=new Set(d.evidence.map(s=>s.id)),claims=new Map(d.claims.map(c=>[c.id,c]));
  assert.equal(doc.source_ids.length,3);assert.equal(doc.claim_ids.length,7);
