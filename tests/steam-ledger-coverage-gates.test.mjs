@@ -125,6 +125,18 @@ test('Missing ledgers, nonfixture IDs and hidden account fields cannot forge zer
  const c=fixed();c[0].partner_id='private';assert.throws(()=>auditSyntheticFixedHorizonZeroSales(c,window30),/permitted fields/);
  const d=fixed();d.push({...d[0]});assert.throws(()=>auditSyntheticFixedHorizonZeroSales(d,window30),/Unique synthetic/);
 });
+test('Fixed-horizon exclusions cannot carry orphaned financial attestations',()=>{
+ const out={fixture_game_id:'fixture-outside',eligibility:'eligible_paid_initially',first_paid_playable_date:'2025-12-01'};
+ const unresolved={fixture_game_id:'fixture-undated',eligibility:'unresolved'};
+ for(const base of [out,unresolved]){
+  for(const field of ['authorized_ledger_attested','transfer_history_reconciled',
+   'paid_checkout_attribution_attested']){
+   assert.throws(()=>auditSyntheticFixedHorizonZeroSales(
+    [{...base,[field]:true}],window30),/cannot supply paid game report/);
+  }
+ }
+ assert.equal(auditSyntheticFixedHorizonZeroSales([out],window30).counts.excluded,1);
+});
 test('Leap year 365 calendar-day horizon ends on February 28',()=>{
  const a=[{fixture_game_id:'fixture-leap',eligibility:'eligible_paid_initially',first_paid_playable_date:'2024-02-29',
  ledger_status:'complete_reconciled',observed_gross_paid_units:0,covered_from_day:'2024-02-29',
