@@ -1,8 +1,12 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 89% task-weighted.** Verified official-document findings advanced selected tasks; many remain partially researched, and no merchant transaction ledgers have been independently authenticated.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 90% task-weighted.** Verified official-document findings advanced selected tasks; many remain partially researched, and no merchant transaction ledgers have been independently authenticated.
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
+
+## Steam Deck and Steam Machine controller verification constraints
+
+The [separately rated hardware input QA audit](../ontology/steam/steam-deck-machine-input-qa-and-compatibility-gates-2026.md) documents controller-default completeness, dynamic glyphs, text input and distinct 30 FPS resolution floors, with a deterministic synthetic checklist. It is not a real game/device test or a prediction that a Verified badge increases sales. **Steam task-weighted research rounds to 90%** (exact **89.539%**, +0.102 pp this checkpoint); 293 original tasks unchanged.
 
 ## Store-country geography versus regional partner cash reporting
 

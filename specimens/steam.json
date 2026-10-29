@@ -1621,6 +1621,39 @@
       "evidence_class": "official_customer_store_country_policy",
       "license": "Short independently authored summary of public rules, no account data.",
       "notes": "Store country based on first purchase, may retain prices when travelling, can update through eligible purchase with local payment method, at most once per 3 months per public guidance."
+    },
+    {
+      "id": "steam-input-handbook-official-2026",
+      "url": "https://partner.steamgames.com/doc/features/steam_controller",
+      "title": "Steam Input",
+      "publisher": "Valve / Steamworks",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_controller_configuration_handbook",
+      "license": "Short independently written feature and QA summary only, no source material copied.",
+      "notes": "Steam Input supports both legacy controller mapping and optional action-based native integration. No application run."
+    },
+    {
+      "id": "steam-input-api-official-2026",
+      "url": "https://partner.steamgames.com/doc/api/isteaminput",
+      "title": "ISteamInput Interface",
+      "publisher": "Valve / Steamworks",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_controller_action_api",
+      "license": "API reference link and brief concept summary only; original technical documentation not reproduced.",
+      "notes": "Action sets, compatible controller types, and glyph lookup can be integrated by developers; API availability is not a tested app."
+    },
+    {
+      "id": "steam-input-concepts-official-2026",
+      "url": "https://partner.steamgames.com/doc/features/steam_controller/concepts",
+      "title": "Steam Input General Concepts",
+      "publisher": "Valve / Steamworks",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_native_vs_legacy_controller_mapping_explanation",
+      "license": "Public link and concise independent policy paraphrases, no copied diagrams or texts.",
+      "notes": "Legacy mode emulates underlying mouse/key inputs and may mismatch controller glyphs. Native mode routes abstract actions with input-type glyph lookup."
     }
   ],
   "claims": [
@@ -10190,6 +10223,110 @@
       "confidence": "official_reporting_semantics_without_private_outcomes",
       "observed_at": "2026-10-28",
       "limitations": "Lack of public merchant ledgers prevents country-specific typical payout, profit and zero-sales rates."
+    },
+    {
+      "id": "steam-input-deck-machine-rating-independent",
+      "text": "Valve documents separate compatibility results for Steam Deck and Steam Machine; a title's rating for one device does not imply the same rating for the other.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "official_technical_requirements_not_merchant_economics",
+      "observed_at": "2026-10-28",
+      "limitations": "These are platform certification categories, not observations of actual sales, verified FPS or device market share."
+    },
+    {
+      "id": "steam-input-default-controller-allcontent",
+      "text": "Valve's Verified compatibility input checklist requires default controller mappings to permit access to all game content without manual user reconfiguration.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "official_technical_requirements_not_merchant_economics",
+      "observed_at": "2026-10-28",
+      "limitations": "Review result depends on the actual shipped app and reviewer tests, neither available in this research."
+    },
+    {
+      "id": "steam-input-dynamic-glyphs",
+      "text": "The Verified requirements call for on-screen control glyphs that correspond to the active controller rather than stale keyboard or mismatched gamepad icons.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026",
+        "steam-input-api-official-2026"
+      ],
+      "confidence": "official_technical_requirements_not_merchant_economics",
+      "observed_at": "2026-10-28",
+      "limitations": "Correct mapping must be QA-tested on actual active input devices; documentation alone cannot certify it."
+    },
+    {
+      "id": "steam-input-controller-text-entry",
+      "text": "Valve's Verified checklist requires games that need text entry to show an appropriate on-screen keyboard or provide equivalent gamepad-only text input.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "official_technical_requirements_not_merchant_economics",
+      "observed_at": "2026-10-28",
+      "limitations": "Some games have no text fields; a game-specific review must establish whether this requirement applies."
+    },
+    {
+      "id": "steam-input-device-perf-floor",
+      "text": "Valve documents a default playable frame-rate target of 30 FPS at 800p for Steam Deck and 30 FPS at 1080p for Steam Machine.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026"
+      ],
+      "confidence": "official_technical_requirements_not_merchant_economics",
+      "observed_at": "2026-10-28",
+      "limitations": "A minimal documented floor is not a measured performance guarantee; actual frame pacing and graphics settings need hardware tests."
+    },
+    {
+      "id": "steam-input-native-vs-legacy",
+      "text": "Valve distinguishes native Steam Input action-based integration from legacy mode that emulates keyboard, mouse or gamepad events.",
+      "source_ids": [
+        "steam-input-handbook-official-2026",
+        "steam-input-concepts-official-2026"
+      ],
+      "confidence": "official_technical_requirements_not_merchant_economics",
+      "observed_at": "2026-10-28",
+      "limitations": "Steam Input API adoption is not a universal precondition for device compatibility but avoiding glyph mismatches is still necessary."
+    },
+    {
+      "id": "steam-input-native-actions-sets",
+      "text": "The ISteamInput interface lets a game activate named action sets for different control contexts and retrieve input semantics for recognized devices.",
+      "source_ids": [
+        "steam-input-api-official-2026"
+      ],
+      "confidence": "official_technical_requirements_not_merchant_economics",
+      "observed_at": "2026-10-28",
+      "limitations": "Actual app configuration, action manifest and runtime behavior have not been examined."
+    },
+    {
+      "id": "steam-input-legacy-glyph-risk",
+      "text": "Valve warns that legacy input emulation does not make games aware of the configurator, increasing the risk of mismatched on-screen controller glyphs.",
+      "source_ids": [
+        "steam-input-concepts-official-2026"
+      ],
+      "confidence": "official_technical_requirements_not_merchant_economics",
+      "observed_at": "2026-10-28",
+      "limitations": "The issue depends on game design; this statement does not imply every legacy-mode game fails certification."
+    },
+    {
+      "id": "steam-input-hardware-qa-not-certification",
+      "text": "A synthetic QA checklist that reproduces selected published controls cannot itself grant a Steam Deck or Steam Machine Verified badge.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026",
+        "steam-input-handbook-official-2026"
+      ],
+      "confidence": "official_technical_requirements_not_merchant_economics",
+      "observed_at": "2026-10-28",
+      "limitations": "Other review requirements exist and only Valve's full device assessment can produce the actual rating."
+    },
+    {
+      "id": "steam-input-compatibility-not-profit",
+      "text": "Steam Deck/Machine compatibility status and a list of supported controllers cannot establish extra completed game purchases, hardware-specific buyer counts or publisher after-cost profit.",
+      "source_ids": [
+        "steam-deck-machine-compat-2026",
+        "steam-input-handbook-official-2026"
+      ],
+      "confidence": "official_technical_requirements_not_merchant_economics",
+      "observed_at": "2026-10-28",
+      "limitations": "No matched sales, hardware user demographics, empirical conversion or labor costs in the public documentation."
     }
   ],
   "observations": [],

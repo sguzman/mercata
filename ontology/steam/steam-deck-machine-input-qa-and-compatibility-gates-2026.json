@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "steam_deck_machine_separate_compatibility_input_quality_gates_and_synthetic_qa",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-deck-machine-compat-2026",
+    "steam-input-handbook-official-2026",
+    "steam-input-api-official-2026",
+    "steam-input-concepts-official-2026"
+  ],
+  "claim_ids": [
+    "steam-input-deck-machine-rating-independent",
+    "steam-input-default-controller-allcontent",
+    "steam-input-dynamic-glyphs",
+    "steam-input-controller-text-entry",
+    "steam-input-device-perf-floor",
+    "steam-input-native-vs-legacy",
+    "steam-input-native-actions-sets",
+    "steam-input-legacy-glyph-risk",
+    "steam-input-hardware-qa-not-certification",
+    "steam-input-compatibility-not-profit"
+  ],
+  "hardware": {
+    "steam_deck": {
+      "compat_badge_independent": true,
+      "documented_default_min_fps": 30,
+      "documented_default_height_pixels": 800
+    },
+    "steam_machine": {
+      "compat_badge_independent": true,
+      "documented_default_min_fps": 30,
+      "documented_default_height_pixels": 1080
+    }
+  },
+  "input_checks": [
+    "default_config_all_content",
+    "correct_active_controller_glyphs",
+    "gamepad_text_input_when_needed",
+    "no_forced_manual_controller_enablement",
+    "no_hardware_incompatibility_warning",
+    "default_playable_frame_rate_and_resolution"
+  ],
+  "input_implementation": {
+    "native_action_api_optional": true,
+    "legacy_controller_mapping_supported": true,
+    "native_action_sets_available": true,
+    "legacy_mismatched_glyph_risk": true,
+    "auto_verified_if_steaminput_integrated": false
+  },
+  "synthetic_examples": [
+    {
+      "device": "deck",
+      "fps": 30,
+      "verticalPixels": 800,
+      "allControlsUsable": true,
+      "matchedGlyphs": true,
+      "controllerTextEntry": true,
+      "requiresManualConfig": false,
+      "noHardwareWarning": true,
+      "passes_selected_checks": true
+    },
+    {
+      "device": "machine",
+      "fps": 30,
+      "verticalPixels": 800,
+      "allControlsUsable": true,
+      "matchedGlyphs": true,
+      "controllerTextEntry": true,
+      "requiresManualConfig": false,
+      "noHardwareWarning": true,
+      "passes_selected_checks": false
+    }
+  ],
+  "unknown": {
+    "official_badge_of_any_studied_app": null,
+    "real_device_qa_hours": null,
+    "customer_hardware_adoption": null,
+    "incremental_paid_orders_from_badge": null,
+    "device_support_roi": null
+  },
+  "no_game_or_hardware_tested": true,
+  "no_steam_partner_account_access": true,
+  "model_path": "site/steam-controller-compat-qa.mjs",
+  "tests_path": "tests/steam-controller-compat-qa.test.mjs"
+}
