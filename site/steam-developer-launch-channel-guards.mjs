@@ -23,7 +23,8 @@ export function auditSyntheticSteamDeveloperChannelReport(x){
  return {kind:'one_developer_marketing_channel_report_not_paid_conversion_attribution',
   first_month_units_reported:x.first_month_units_reported,first_month_gross_usd_reported:x.first_month_gross_usd_reported,
   festival_impressions_approx:x.festival_impressions_approx,festival_visits_approx:x.festival_store_visits_approx,
-  event_visit_to_impression_arithmetic_ratio:x.festival_store_visits_approx/x.festival_impressions_approx,
+  event_visit_to_impression_arithmetic_ratio:x.festival_impressions_approx>0?
+   x.festival_store_visits_approx/x.festival_impressions_approx:null,
   author_contacted_creators:x.contacted_video_creators,author_activated_review_keys:x.creator_keys_activated,
   author_published_creator_videos:x.creator_videos,author_reported_bundle_percent:x.author_bundle_sales_share_percent_approx,
   creator_keys_are_paid_game_orders:false,creator_video_views_are_unique_customers:false,
@@ -31,5 +32,5 @@ export function auditSyntheticSteamDeveloperChannelReport(x){
   matched_wishlist_purchase_rate:null,exact_bundle_orders_first_month:null,
   causal_creator_paid_orders:null,verified_festival_purchase_rate:null,
   actual_bank_receipt_usd:null,developer_after_cost_profit:null,platform_representative_roi:null,
-  note:'Different stages and time bases. Exposure ratio is descriptive only; no unique views, stable bundle denominator, purchase join or counterfactual.';
+  note:'Different stages and time bases. Exposure ratio is descriptive only; no unique views, stable bundle denominator, purchase join or counterfactual.'};
 }

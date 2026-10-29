@@ -34,3 +34,10 @@ test('Seven linked claims and original 293-task inventory remain auditable',()=>
  const vals=[...p.detail_tasks.map(x=>x.percent),...q.queues.flatMap(g=>g.tasks.map(x=>x.progress))];
  assert.equal(vals.length,293);assert.equal(p.progress_percent,Math.round(vals.reduce((a,b)=>a+b,0)/293));
 });
+
+test('Zero festival impressions produce an unknown exposure ratio, not NaN or manufactured conversions',()=>{
+ const r=audit({...study.self_report,festival_impressions_approx:0,festival_store_visits_approx:0});
+ assert.equal(r.event_visit_to_impression_arithmetic_ratio,null);
+ assert.equal(r.verified_festival_purchase_rate,null);
+ assert.doesNotThrow(()=>JSON.stringify(r));
+});
