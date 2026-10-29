@@ -38,7 +38,11 @@
     "missing_gross_zero_assumed": false,
     "finite_missing_cap_inferred_from_observed_max": false,
     "complete_reconciled_ledger_required": true,
-    "missing_with_no_cap_leaves_upper_unbounded": true
+    "missing_with_no_cap_leaves_upper_unbounded": true,
+    "authenticated_partial_gross_lowers_missing_lower_bound": true,
+    "partial_floor_requires_in_horizon_and_game_attribution": true,
+    "cap_must_not_be_below_partial_floor": true,
+    "four_decimal_usd_to_cents_requires_conservative_bounds": true
   },
   "synthetic_examples": [
     {
@@ -83,6 +87,25 @@
         7000
       ],
       "lower_mean_cents": 1200,
+      "upper_mean_cents": 3600
+    },
+    {
+      "label": "two_incomplete_with_one_authenticated_partial_floor_and_finite_caps",
+      "N": 5,
+      "observed_cents": [
+        1000,
+        2000,
+        3000
+      ],
+      "missing_partial_lower_cents": [
+        400,
+        0
+      ],
+      "missing_caps_cents": [
+        5000,
+        7000
+      ],
+      "lower_mean_cents": 1280,
       "upper_mean_cents": 3600
     }
   ],
