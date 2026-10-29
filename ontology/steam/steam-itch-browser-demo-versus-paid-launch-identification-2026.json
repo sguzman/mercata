@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "self_reported_browser_demo_plays_vs_steam_paid_sales_without_cross_site_identity_join",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-itneverends-itch-browser-plays-vs-steam-orders-20261022"
+  ],
+  "claim_ids": [
+    "steam-itneverends-two-month-sales-gross-20261029",
+    "steam-itneverends-itch-demo-20k-browser-20261029",
+    "steam-itneverends-no-crosssite-conversion-20261029",
+    "steam-itneverends-wishlist-stock-vs-conversion-20261029",
+    "steam-itneverends-reviews-not-income-20261029",
+    "steam-itneverends-firststeam-not-debutproof-20261029"
+  ],
+  "case": {
+    "game": "I.T. Never Ends",
+    "post_date": "2026-10-22",
+    "source_url": "https://www.reddit.com/r/IndieDev/comments/1xcrt0m/two_months_after_launching_my_first_steam_game/",
+    "release_date_exact": null,
+    "author_described_since_launch": "about_two_months",
+    "first_steam_title_claim_not_verifiable_first_developed_game": true
+  },
+  "reported": {
+    "total_steam_copies": 3042,
+    "steam_gross_usd": 37917,
+    "first_day_copies_approx": 1000,
+    "launch_wishlist_stock_approx": 27000,
+    "later_outstanding_wishlist_stock_approx": 31000,
+    "author_reported_wishlist_conversion_pct_approx": 6,
+    "itch_browser_demo_plays_more_than": 20000,
+    "itch_demo_plays_are_verified_unique_players": false,
+    "itch_to_steam_user_link_available": false,
+    "authenticated_paid_sale_export": false,
+    "paid_bank_receipt_verified": false
+  },
+  "unknown": {
+    "exact_60day_paid_orders": null,
+    "unique_itch_demo_players": null,
+    "number_of_itch_demo_players_who_bought_on_steam": null,
+    "causal_incremental_purchases_due_to_free_demo": null,
+    "independently_validated_wishlist_cohort_conversion": null,
+    "actual_after_platform_share_usd": null,
+    "after_cost_profit_usd": null,
+    "first_developer_game_verified": null
+  },
+  "model_path": "site/steam-external-demo-conversion-guards.mjs",
+  "test_path": "tests/steam-external-demo-conversion-guards.test.mjs",
+  "private_data_used": false
+}

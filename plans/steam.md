@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## External free browser demo plays versus Steam purchases (October 29, 2026)
+
+The [new first-person cross-market case](../ontology/steam/steam-itch-browser-demo-versus-paid-launch-identification-2026.md) records more than 20,000 free browser demo play events and 3,042 Steam sales alongside wishlist snapshots, but supplies **no** authorized user-level join or causal effect on full-game purchases. One new public source and six bounded claims raise the existing demo-to-paid-sales task by two points, without changing the **293-task** inventory. Overall research **91.239%** (Δ **+0.007 pp**).
+
 ## One-month festival, creator, and bundle measurement stages (October 29, 2026)
 
 The [first-person developer marketing funnel](../ontology/steam/steam-firstmonth-festival-creator-bundle-window-2026.md) documents festival impressions and visits, creator invitations and free-key activations, creator videos and concurrent bundle offers, with a separate first-month gross/units observation. A single self-selected case supports **no** causal channel ROI, matched paid-buyer attribution or exact bundle first-month fraction. One new source and seven claims raise the existing traffic attribution task by two points. Current Steam task progress **91.232%** (Δ **+0.007 pp**) across the same **293 tasks**.

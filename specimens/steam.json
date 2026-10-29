@@ -1984,6 +1984,17 @@
       "evidence_class": "voluntary_first_person_indie_launch_festival_creator_bundle_channel_totals",
       "license": "Source URL and short independently written numerical facts only; do not republish thread content, screenshots or creator addresses.",
       "notes": "Two-person developer team disclosed 2,325 copies and USD 12,467 first-month gross; festival 158k impressions/1.7k visits, 170 creator contacts/20 activated keys/7 videos; bundle counts and share have nonaligned reporting windows."
+    },
+    {
+      "id": "steam-itneverends-itch-browser-plays-vs-steam-orders-20261022",
+      "url": "https://www.reddit.com/r/IndieDev/comments/1xcrt0m/two_months_after_launching_my_first_steam_game/",
+      "publisher": "Self-identified game developer — public r/IndieDev account",
+      "title": "Two months after launching my first Steam game: 3,000 copies sold, $38k gross",
+      "published_at": "2026-10-22",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "developer_public_steam_gross_and_external_demo_browser_play_self_report",
+      "license": "Public link, date and short independently paraphrased aggregate data only; no post content or participant identifiers republished.",
+      "notes": "Author describes a Steam IT simulator launch about two months earlier: 3,042 units, USD 37,917 gross, ~27k launch wishlistings, 31k later wishlistings, >20k itch.io free browser demo play events, no authenticated cross-site user conversion or net bank receipt."
     }
   ],
   "claims": [
@@ -13704,6 +13715,66 @@
       "observed_at": "2026-10-29",
       "confidence": "medium_developer_self_report",
       "limitations": "Voluntary single-game launch report combines overlapping, self-selected campaigns without a control group or complete attribution records."
+    },
+    {
+      "id": "steam-itneverends-two-month-sales-gross-20261029",
+      "text": "The developer reports 3,042 copies sold and USD 37,917 gross after roughly two months on Steam, including about 1,000 copies in the opening 24 hours.",
+      "source_ids": [
+        "steam-itneverends-itch-browser-plays-vs-steam-orders-20261022"
+      ],
+      "confidence": "medium_voluntary_self_report",
+      "observed_at": "2026-10-29",
+      "limitations": "Report is voluntary and approximate in its time basis, without an independently authenticated Steamworks ledger or received payout."
+    },
+    {
+      "id": "steam-itneverends-itch-demo-20k-browser-20261029",
+      "text": "The creator reports more than 20,000 total browser plays of the free demo on itch.io.",
+      "source_ids": [
+        "steam-itneverends-itch-browser-plays-vs-steam-orders-20261022"
+      ],
+      "confidence": "medium_voluntary_self_report",
+      "observed_at": "2026-10-29",
+      "limitations": "Play events need not be distinct users, unique game installations, Steam purchasers or a selected cohort of prospective buyers."
+    },
+    {
+      "id": "steam-itneverends-no-crosssite-conversion-20261029",
+      "text": "The creator characterizes cross-platform migration from itch.io browser demo plays into Steam wishlists or paid sales as weak, but supplies no linked user-level conversion counts.",
+      "source_ids": [
+        "steam-itneverends-itch-browser-plays-vs-steam-orders-20261022"
+      ],
+      "confidence": "medium_voluntary_self_report",
+      "observed_at": "2026-10-29",
+      "limitations": "Author interpretation without consented cross-site identity matching, comparable exposure and purchase windows or a controlled no-demo counterfactual."
+    },
+    {
+      "id": "steam-itneverends-wishlist-stock-vs-conversion-20261029",
+      "text": "The author mentions approximately 27,000 prelaunch Steam wishlistings, 31,000 outstanding by the later post and a displayed six-percent wishlist conversion value.",
+      "source_ids": [
+        "steam-itneverends-itch-browser-plays-vs-steam-orders-20261022"
+      ],
+      "confidence": "medium_voluntary_self_report",
+      "observed_at": "2026-10-29",
+      "limitations": "Wishlist stock is not an eligible original-wishlister purchase denominator; dividing reported sales by launch stock cannot independently verify the platform conversion metric."
+    },
+    {
+      "id": "steam-itneverends-reviews-not-income-20261029",
+      "text": "The author reports 74 reviews, 73 positive, and roughly 20 daily copies during a later post-launch period.",
+      "source_ids": [
+        "steam-itneverends-itch-browser-plays-vs-steam-orders-20261022"
+      ],
+      "confidence": "medium_voluntary_self_report",
+      "observed_at": "2026-10-29",
+      "limitations": "Review sentiment and current daily sales are not a measured full-horizon publisher payout or after-cost studio profit."
+    },
+    {
+      "id": "steam-itneverends-firststeam-not-debutproof-20261029",
+      "text": "The post describes a first Steam title yet the author separately mentions developing another previous game, so it should not be automatically classified as a developer's first produced game.",
+      "source_ids": [
+        "steam-itneverends-itch-browser-plays-vs-steam-orders-20261022"
+      ],
+      "confidence": "medium_voluntary_self_report",
+      "observed_at": "2026-10-29",
+      "limitations": "The prior game's platform, legal publisher, and detailed commercial history cannot be established from the public thread."
     }
   ],
   "observations": [],
