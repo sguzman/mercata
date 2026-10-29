@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_studio_labels_creator_homepages_and_time_bounded_payee_identity_audit",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-creator-homepages-repeat-2026",
+    "steam-franchise-pages-repeat-2026",
+    "steam-transfer-app-official-2026",
+    "steam-app-management-sharing-2026"
+  ],
+  "claim_ids": [
+    "steam-portfolio-many-labels-one-game",
+    "steam-portfolio-one-home-many-names",
+    "steam-portfolio-home-community-group",
+    "steam-portfolio-edit-marketing-not-payee",
+    "steam-portfolio-franchises-cross-company",
+    "steam-portfolio-page-followers-not-sales",
+    "steam-portfolio-transfer-appid-continues",
+    "steam-portfolio-transfer-creator-link-removed",
+    "steam-portfolio-transfer-financial-split",
+    "steam-portfolio-transfer-effective-payer",
+    "steam-portfolio-transfer-not-bundle-transfer",
+    "steam-portfolio-store-name-studio-cohort-bias",
+    "steam-portfolio-royalty-profit-unidentified"
+  ],
+  "documentary_rules": {
+    "multiple_developer_and_publisher_names_per_app": true,
+    "multiple_names_one_creator_homepage": true,
+    "franchise_can_span_companies": true,
+    "homepage_marketing_access_is_payment_right": false,
+    "appid_persists_through_transfer": true,
+    "transfer_removes_prior_homepage_links": true,
+    "default_financial_report_split_at_effective_date": true,
+    "historical_wishlist_persists": true,
+    "old_bundle_management_not_transferred": true,
+    "partner_api_keys_not_inherited": true
+  },
+  "synthetic_fixtures": [
+    {
+      "fixture_app_id": "fixture-app-a",
+      "developer_labels": [
+        "Orbit Studio",
+        "North Studio"
+      ],
+      "publisher_labels": [
+        "Orbital Publishing"
+      ],
+      "creator_homepage_ids": [
+        "fixture-home-collab"
+      ],
+      "franchise_page_ids": [
+        "fixture-franchise-cosmos"
+      ],
+      "payment_periods": [
+        {
+          "fixture_partner_id": "fixture-partner-a",
+          "start_date": "2025-01-01",
+          "end_exclusive": "2026-01-01"
+        },
+        {
+          "fixture_partner_id": "fixture-partner-b",
+          "start_date": "2026-01-01",
+          "end_exclusive": "2027-01-01"
+        }
+      ]
+    },
+    {
+      "fixture_app_id": "fixture-app-b",
+      "developer_labels": [
+        "Orbit Studio"
+      ],
+      "publisher_labels": [
+        "Orbital Publishing"
+      ],
+      "creator_homepage_ids": [
+        "fixture-home-collab"
+      ],
+      "franchise_page_ids": [
+        "fixture-franchise-cosmos"
+      ],
+      "payment_periods": [
+        {
+          "fixture_partner_id": "fixture-partner-b",
+          "start_date": "2025-01-01",
+          "end_exclusive": "2027-01-01"
+        }
+      ]
+    },
+    {
+      "fixture_app_id": "fixture-app-c",
+      "developer_labels": [
+        "South Studio"
+      ],
+      "publisher_labels": [
+        "South Publishing"
+      ],
+      "creator_homepage_ids": [
+        "fixture-home-other"
+      ],
+      "franchise_page_ids": [
+        "fixture-franchise-cosmos"
+      ],
+      "payment_periods": [
+        {
+          "fixture_partner_id": "fixture-partner-c",
+          "start_date": "2025-01-01",
+          "end_exclusive": "2027-01-01"
+        }
+      ]
+    }
+  ],
+  "synthetic_expected": {
+    "app_count": 3,
+    "unique_developer_labels": 3,
+    "unique_publisher_labels": 2,
+    "unique_creator_homepages": 2,
+    "unique_franchise_pages": 1,
+    "fixture_payment_partner_ids": 3,
+    "fixture_apps_with_transfer": 1
+  },
+  "unknown": {
+    "real_legal_company_count": null,
+    "real_paid_original_game_count": null,
+    "real_publisher_portfolio_size_distribution": null,
+    "actual_studio_first_game_share": null,
+    "real_current_entitlement_history": null,
+    "publisher_net_receipts": null,
+    "after_cost_profits": null
+  },
+  "no_real_game_ids_or_company_names_used": true,
+  "no_partner_financial_data_collected": true
+}

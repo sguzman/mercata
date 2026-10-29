@@ -12503,6 +12503,143 @@
       "observed_at": "2026-10-29",
       "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
       "limitations": "A representative publisher cohort, case disposition history, payment ledgers and contracts would be required before estimating any incidence or income effect."
+    },
+    {
+      "id": "steam-portfolio-many-labels-one-game",
+      "text": "The official Steam creator homepage FAQ allows a game to display multiple developer and publisher names with independently chosen homepage links.",
+      "source_ids": [
+        "steam-creator-homepages-repeat-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "The visible credit strings cannot be used as a count of legal partner payees, distinct individual developers or game teams."
+    },
+    {
+      "id": "steam-portfolio-one-home-many-names",
+      "text": "Steam allows several distinct developer or publisher names to link to one Creator Homepage, including multiple studios presented as a single brand.",
+      "source_ids": [
+        "steam-creator-homepages-repeat-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "A shared branding page can group multiple businesses or studios and does not establish their common legal ownership."
+    },
+    {
+      "id": "steam-portfolio-home-community-group",
+      "text": "A Steam Creator Homepage is tied to a community group and marketing permissions, and can expose a selected linked game catalog to followers.",
+      "source_ids": [
+        "steam-creator-homepages-repeat-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "Community-group membership or creator-home officers are not a census of beneficial owners, royalty recipients or employed game developers."
+    },
+    {
+      "id": "steam-portfolio-edit-marketing-not-payee",
+      "text": "Editing a game's developer or publisher homepage association requires relevant app marketing rights, not necessarily rights to receive its Steam royalties.",
+      "source_ids": [
+        "steam-creator-homepages-repeat-2026",
+        "steam-app-management-sharing-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "The published permission guides do not identify any specific application's contractual financial counterparty or private revenue sharing."
+    },
+    {
+      "id": "steam-portfolio-franchises-cross-company",
+      "text": "Valve permits shared franchise pages covering games from multiple Steamworks companies and describes cross-organization page participation.",
+      "source_ids": [
+        "steam-franchise-pages-repeat-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "A common fictional universe, franchise link or fan follow is not evidence that every linked game has one paying publisher or one company."
+    },
+    {
+      "id": "steam-portfolio-page-followers-not-sales",
+      "text": "Followers of a developer, publisher or franchise page may receive release notifications and storefront suggestions, but they are not paid checkout observations.",
+      "source_ids": [
+        "steam-creator-homepages-repeat-2026",
+        "steam-franchise-pages-repeat-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "Follower counts, notifications and personalized discovery do not authenticate completed paid units or incremental publisher income."
+    },
+    {
+      "id": "steam-portfolio-transfer-appid-continues",
+      "text": "On a Steamworks app transfer, store and community history, player licenses, reviews, wishlists and followers remain associated with the same AppID.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "Continued public catalog identity does not certify uninterrupted reporting access, copyright ownership or a single payee throughout the app's lifetime."
+    },
+    {
+      "id": "steam-portfolio-transfer-creator-link-removed",
+      "text": "Steam removes a transferred AppID from its prior Developer/Publisher Homepages when the transfer is initiated and permits relinking after completion.",
+      "source_ids": [
+        "steam-transfer-app-official-2026",
+        "steam-creator-homepages-repeat-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "A current homepage inventory can therefore omit historic publishing relationships and is not a complete release or transfer-history ledger."
+    },
+    {
+      "id": "steam-portfolio-transfer-financial-split",
+      "text": "Valve's transfer guide says by default each partner sees sales financial reports only for periods when it had payment rights, even though the AppID persists.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "Earlier records may be available through separately granted permissions; neither current report access nor a current public credit proves historical publisher income."
+    },
+    {
+      "id": "steam-portfolio-transfer-effective-payer",
+      "text": "The effective date of a completed app transfer sets when payment rights begin for the receiving Steamworks partner, with a seven-day default date in the workflow.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "Requested dates and Valve approval can change effective timing; no specific payout date or actual legal transfer agreement was examined."
+    },
+    {
+      "id": "steam-portfolio-transfer-not-bundle-transfer",
+      "text": "Existing Steam bundle management does not automatically move with a transferred AppID, so app ownership and bundle-management portfolios are separate.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "A bundle's presence on a current storefront does not establish the current payee for every historic component purchase or a unified legal business."
+    },
+    {
+      "id": "steam-portfolio-store-name-studio-cohort-bias",
+      "text": "Counting distinct public developer labels or Creator Homepages as independent Steam businesses can both split a single brand and merge unrelated legal payees.",
+      "source_ids": [
+        "steam-creator-homepages-repeat-2026",
+        "steam-franchise-pages-repeat-2026",
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "A complete paying-publisher cohort requires authenticated, rights-cleared entity IDs with time-bounded AppID entitlement and original-launch evidence."
+    },
+    {
+      "id": "steam-portfolio-royalty-profit-unidentified",
+      "text": "The public page and app-transfer rules cannot identify the actual number of net-earning legal publishers, first-time studio survival, individual royalties or after-cost profits.",
+      "source_ids": [
+        "steam-creator-homepages-repeat-2026",
+        "steam-transfer-app-official-2026",
+        "steam-app-management-sharing-2026"
+      ],
+      "confidence": "high_public_policy_not_empirical_legal_entity_census",
+      "observed_at": "2026-10-29",
+      "limitations": "No complete original paid-release population, historic entitlement ledger, individual contracts, private remittance history or full labor costs were obtained."
     }
   ],
   "observations": [],
@@ -12510,5 +12647,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Steam gift purchasing and copyright remedies are separated into empirically meaningful events: gift checkout is not recipient activation, and DMCA statutory counter-notice is not a guaranteed Steamworks game reinstatement appeal. Publisher profit and exact zero-paid-order incidence remain unverified."
+  "summary": "Steam research separates portfolio AppIDs, public multi-developer labels, Creator Homepages, franchise pages and transfer-effective-dated paying partners; public brand counts cannot identify legal publisher survival or after-cost income."
 }
