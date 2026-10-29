@@ -5,8 +5,36 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 export const FILES=['README.md','gallery/README.md','plans/steam.md','pipeline/README.md','roadmap/README.md'];
+// Keep task-derived rollups canonical without mutating original research task records.
+export function synchronizeSteamPlanWorkstreams(plan,queue){
+ if(!plan||!queue||!Array.isArray(plan.detail_tasks)||!Array.isArray(plan.workstreams)||!Array.isArray(queue.queues))
+  throw new TypeError('Steam plan and queue required');
+ const detail=plan.detail_tasks,base=queue.queues.flatMap(g=>g.tasks||[]);
+ if(detail.length!==209||base.length!==84)throw new RangeError('Steam requires original 293 tasks');
+ const scores=[...detail.map(t=>({id:t.id,value:t.percent})),...base.map(t=>({id:t.id,value:t.progress}))];
+ if(scores.some(x=>typeof x.id!=='string'||!Number.isInteger(x.value)||x.value<0||x.value>100))
+  throw new RangeError('Steam requires original 293 valid scores');
+ const index=new Map(scores.map(t=>[t.id,t.value]));
+ if(index.size!==293)throw new RangeError('Steam task identifiers must be unique');
+ const workstreams=plan.workstreams.map(w=>{
+  if(!Array.isArray(w.base_tasks)||!Array.isArray(w.detail_tasks))throw new TypeError('Workstream task arrays required');
+  const ids=[...w.base_tasks,...w.detail_tasks];
+  if(!ids.length||new Set(ids).size!==ids.length)throw new RangeError('Duplicated or missing workstream task');
+  const total=ids.reduce((sum,id)=>{
+   if(!index.has(id))throw new RangeError('Unknown Steam workstream task: '+id);
+   return sum+index.get(id);
+  },0);
+  return {...w,progress_percent:Math.round(total/ids.length)};
+ });
+ const rounded=Math.round(scores.reduce((sum,t)=>sum+t.value,0)/293);
+ return {...plan,progress_percent:rounded,workstreams};
+}
 export function metricsFromSteam(plan,queue,dossier){
  if(!plan||!queue||!dossier||!Array.isArray(plan.detail_tasks)||!Array.isArray(queue.queues)||!Array.isArray(dossier.evidence)||!Array.isArray(dossier.claims))throw new TypeError('Missing Steam data');
+ const expected=synchronizeSteamPlanWorkstreams(plan,queue);
+ for(let i=0;i<expected.workstreams.length;i++)
+  if(expected.workstreams[i].progress_percent!==plan.workstreams[i].progress_percent)
+   throw new RangeError('Workstream percent mismatch: '+expected.workstreams[i].id);
  const a=plan.detail_tasks.map(t=>t.percent),b=queue.queues.flatMap(g=>(g.tasks||[]).map(t=>t.progress)),scores=[...a,...b];
  if(a.length!==209||b.length!==84||scores.some(x=>!Number.isInteger(x)||x<0||x>100))throw new RangeError('Steam requires original 293 valid scores');
  const exact=scores.reduce((sum,n)=>sum+n,0)/293,rounded=Math.round(exact);
@@ -41,11 +69,20 @@ function main(){
  if(mode!=='--check'&&mode!=='--write')throw new TypeError('Expected --check or --write');
  const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
  const read=p=>fs.readFileSync(path.join(root,p),'utf8');
- const m=metricsFromSteam(JSON.parse(read('plans/steam.json')),JSON.parse(read('queues/steam.json')),JSON.parse(read('specimens/steam.json')));
+ const rawPlan=JSON.parse(read('plans/steam.json')),queue=JSON.parse(read('queues/steam.json'));
+ const canonical=synchronizeSteamPlanWorkstreams(rawPlan,queue);
+ const planStale=JSON.stringify(rawPlan)!==JSON.stringify(canonical);
+ const m=metricsFromSteam(canonical,queue,JSON.parse(read('specimens/steam.json')));
  const files=Object.fromEntries(FILES.map(f=>[f,read(f)]));
  const next=synchronizeSteamTexts(files,m),stale=FILES.filter(f=>files[f]!==next[f]);
- if(mode==='--check'&&stale.length){console.error('Out of sync: '+stale.join(', '));process.exitCode=1;}
- if(mode==='--write')for(const f of stale)fs.writeFileSync(path.join(root,f),next[f]);
- console.log('Steam '+m.exact.toFixed(3)+'% (rounded '+m.rounded+'%), '+m.sources+' sources, '+m.claims+' claims; '+stale.length+' status updates required');
+ if(mode==='--check'&&(planStale||stale.length)){
+  console.error('Out of sync: '+[...(planStale?['plans/steam.json']:[]),...stale].join(', '));
+  process.exitCode=1;
+ }
+ if(mode==='--write'){
+  if(planStale)fs.writeFileSync(path.join(root,'plans/steam.json'),JSON.stringify(canonical,null,2)+'\n');
+  for(const f of stale)fs.writeFileSync(path.join(root,f),next[f]);
+ }
+ console.log('Steam '+m.exact.toFixed(3)+'% (rounded '+m.rounded+'%), '+m.sources+' sources, '+m.claims+' claims; '+(stale.length+(planStale?1:0))+' status updates required');
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))main();
