@@ -37,18 +37,19 @@ test('Task-derived workstreams remain identical to stored public plan rollups',(
 });
 test('A stale workstream percent is rejected even when rounded overall score is unchanged',()=>{
  const p=json('plans/steam.json'),q=json('queues/steam.json'),d=json('specimens/steam.json');
+ const expectedRisk=p.workstreams.find(w=>w.id==='risk').progress_percent;
  p.workstreams.find(w=>w.id==='risk').progress_percent=0;
  assert.throws(()=>metricsFromSteam(p,q,d),/Workstream percent mismatch: risk/);
  const fixed=synchronizeSteamPlanWorkstreams(p,q);
- assert.equal(fixed.workstreams.find(w=>w.id==='risk').progress_percent,91);
- assert.equal(metricsFromSteam(fixed,q,d).rounded,91);
+ assert.equal(fixed.workstreams.find(w=>w.id==='risk').progress_percent,expectedRisk);
+ assert.equal(metricsFromSteam(fixed,q,d).rounded,fixed.progress_percent);
  assert.equal(p.workstreams.find(w=>w.id==='risk').progress_percent,0);
 });
 test('Canonical plan repairs stale overall score and rejects unknown task references',()=>{
  const p=json('plans/steam.json'),q=json('queues/steam.json');
  p.progress_percent=1;
  const repaired=synchronizeSteamPlanWorkstreams(p,q);
- assert.equal(repaired.progress_percent,91);
+ assert.equal(repaired.progress_percent,json('plans/steam.json').progress_percent);
  assert.equal(p.progress_percent,1);
  const broken=json('plans/steam.json');
  broken.workstreams[0].detail_tasks.push('nonexistent/research-task');
