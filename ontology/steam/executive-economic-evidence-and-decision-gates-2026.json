@@ -14,7 +14,12 @@
     "steam-transfer-app-official-2026",
     "steam-onboarding-doc",
     "steam-curators-official-oct2026",
-    "steam-utm-analytics-official-20261028"
+    "steam-utm-analytics-official-20261028",
+    "steam-owl-loki-firstgame-postmortem-oct2025",
+    "steam-mixolumia-ownsite-postmortem-2021",
+    "steam-onlywayisdown-firstgame-original-postmortem-2026",
+    "steam-water-tastes-wine-primary-postmortem-mar2018",
+    "steam-manski-partial-identification-missingdata-2005"
   ],
   "claim_ids": [
     "steam-synthesis-policy-is-not-profit",
@@ -26,7 +31,12 @@
     "steam-synthesis-unknown-payout",
     "steam-synthesis-partner-history-not-single-game",
     "steam-synthesis-timing-current30",
-    "steam-synthesis-policy-experiments-not-run"
+    "steam-synthesis-policy-experiments-not-run",
+    "steam-owl-net-revenue-label",
+    "steam-mixolumia-steam-bank-net",
+    "steam-onlyway-firstgame-cumulative-net",
+    "steam-water-tastes-zero-personal-proceeds",
+    "steam-profit-partial-nonresponse-bounds"
   ],
   "evidence_layers": [
     {
@@ -45,6 +55,17 @@
         "Oct 2025 8,388 of 12,732 below $1,000 modeled gross"
       ],
       "does_not_measure": "actual_paid_game_checkout_or_partner_payout"
+    },
+    {
+      "level": "voluntary_first_party_developer_cash_disclosures",
+      "measurements": [
+        "Loki's Revenge: 370 copies with a $619 Net Steam Revenue label",
+        "Mixolumia: $6,202 Steam gross and $3,680 claimed lagged Steam bank receipts",
+        "Only Way is Down: first-month reported 4,810 copies, $35,862 gross",
+        "Where the Water Tastes Like Wine (2018): positive sales but $0 developer proceeds at early snapshot"
+      ],
+      "does_not_measure": "representative_developer_takehome_or_audited_after_labor_profit",
+      "bias": "self_selected_public_postmortems_with_nonuniform_horizons_and_finance_labels"
     },
     {
       "level": "pure_hypothetical_arithmetic",
@@ -80,6 +101,30 @@
       "assumed_cash_break_even_orders": 1000,
       "assumed_labor_inclusive_break_even_orders": 5410,
       "observed_success_probability": null
+    },
+    "public_self_disclosure_examples": {
+      "evidence_class": "developer_first_party_self_report_not_authenticated",
+      "loki_firstgame_2025": {
+        "copies": 370,
+        "author_labeled_net_steam_revenue_usd": 619,
+        "actual_bank_deposit_usd": null
+      },
+      "mixolumia_steam_2021": {
+        "author_reported_steam_gross_usd": 6202,
+        "author_claimed_lagged_bank_receipts_usd": 3680,
+        "matched_time_window_verified": false
+      },
+      "onlyway_launch_2025": {
+        "author_reported_first_month_copies": 4810,
+        "author_reported_first_month_gross_usd": 35862,
+        "after_cost_profit_usd": null
+      },
+      "water_tastes_like_wine_2018": {
+        "positive_sales_reported": true,
+        "exact_sales_units": null,
+        "author_claimed_personal_proceeds_usd_at_early_snapshot": 0,
+        "subsequent_lifetime_unknown": true
+      }
     }
   },
   "decisions": [
@@ -136,7 +181,8 @@
     "representative_development_hours": null,
     "actual_after_cost_indie_profit": null,
     "marketwide_break_even_probability": null,
-    "causal_ad_conversion_uplift": null
+    "causal_ad_conversion_uplift": null,
+    "actual_eligible_publisher_profitability_rate": null
   },
   "no_real_merchant_data": true,
   "no_game_published": true,

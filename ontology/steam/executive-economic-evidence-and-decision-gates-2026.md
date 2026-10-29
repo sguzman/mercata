@@ -6,14 +6,17 @@
 
 Steam is a functioning, documented route for distributing paid games, but available public data **does not establish a reliable median first-time indie developer's net income or profit**. The best open full-release-month evidence we have is a third-party *modeled gross game revenue* distribution with a very large lower tail. Gross game revenue is not the developer's take-home pay, and game-level data is not company-level data.
 
+The [developer-site cash cases](developer-operated-site-revenue-cases-2026.md), [first-game launch audit](first-commercial-launch-paid-funnel-case-2026.md), [historical zero-proceeds cases](historical-zero-proceeds-versus-zero-sales-2026.md), and [publisher profit-sign study](publisher-profitability-partial-identification-2026.md) expand **bounded observations** but do not change the population-level conclusion. One published developer's reported net sales and another's claimed bank receipts are separate accounting concepts; a 2018 early zero personal payout did not mean zero sold games.
+
 The most important next independent evidence is not another list of successful releases: it is a **historically complete cohort with low/no-sales games, retired titles, authentic paid-order records, and cash/labor accounting**.
 
-## Four evidence layers
+## Five evidence layers
 
 | Evidence | What can be stated | What cannot |
 | --- | --- | --- |
 | **Official Steamworks** | $100 application fee; $1,000 adjusted-gross fee recoupment threshold; current published 30-day/14-day release prerequisites; financial report categories | Actual publisher contract, royalties or sales |
 | **GameDiscoverCo January 2026 model** | Provider-defined **1,230** paid release entries, roughly **$1,000 modeled gross median** and a strongly hit-concentrated distribution | Audited true sales, full-year medians or net developer profit |
+| **Developer-authored public case studies** | Reported first-game gross, self-described net labels, some claimed bank receipts, production outlay and launch-window orders | Authenticated publisher remittance, a complete zero-selling sample or representative after-cost income |
 | **Gamalytic partial October 2025 snapshot** | **8,388/12,732** tracked 2025 launches below **$1,000 modeled gross** | Final-year paid-only benchmark or directly comparable January 2026 cohort |
 | **Explicit hypothetical budget scenario** | At assumed inputs, **1,000 gross units** cover cash costs; **5,410 gross units** include 500 hours of labor at $20/hour | A real publisher's costs, break-even odds or recommended sales target |
 
@@ -37,6 +40,6 @@ The [synthetic first-game financial model](synthetic-first-game-break-even-scena
 
 ## Explicitly unresolved findings
 
-No representative after-cost developer earnings, exact-zero-sale share, legal partner take-home distribution, universal marketing return, baseline salary-equivalent hours, or reliable probability of break-even has been measured. No product, publisher account, customer data, ad experiment or authorized financial record was used.
+No representative after-cost developer earnings, exact-zero-sale share, legal partner take-home distribution, universal marketing return, baseline salary-equivalent hours, or reliable probability of break-even has been measured. Developer-authored public financial claims were reviewed, but **no independently authenticated publisher statement, private customer data, merchant API key, ad experiment or new game release** was used. Public self-reports are not audited financial data.
 
 **Research conclusion:** the official publishing steps are substantially documented; the decisive economic outcomes still require genuine eligible seller data. It is preferable to leave these unknown than to turn model estimates or hypothetical budgets into misleading claims of profitability.

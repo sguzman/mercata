@@ -16,8 +16,19 @@ test('The executive synthesis does not invent partner gross, profits or first-ga
  assert.equal(r.no_real_merchant_data,true);
  assert.equal(r.no_game_published,true);
 });
+test('Public first-party accounts do not become authenticated payouts or market medians',()=>{
+ const selected=r.evidence_layers.find(x=>x.level==='voluntary_first_party_developer_cash_disclosures');
+ assert(selected);assert.match(selected.does_not_measure,/representative/);
+ const examples=r.observations.public_self_disclosure_examples;
+ assert.equal(examples.loki_firstgame_2025.actual_bank_deposit_usd,null);
+ assert.equal(examples.mixolumia_steam_2021.matched_time_window_verified,false);
+ assert.equal(examples.onlyway_launch_2025.after_cost_profit_usd,null);
+ assert.equal(examples.water_tastes_like_wine_2018.positive_sales_reported,true);
+ assert.equal(examples.water_tastes_like_wine_2018.author_claimed_personal_proceeds_usd_at_early_snapshot,0);
+ assert(Object.values(r.unknown).every(v=>v===null));
+});
 test('Every claim has real sources and the fixed inventory remains exactly 293 tasks',()=>{
- assert.equal(r.claim_ids.length,10);
+ assert.equal(r.claim_ids.length,15);
  for(const id of r.source_ids)assert(sourceIds.has(id),id);
  for(const id of r.claim_ids){assert(claimIds.has(id),id);assert(claimIds.get(id).source_ids.every(x=>sourceIds.has(x)));}
  const scores=[...p.detail_tasks.map(t=>t.percent),...q.queues.flatMap(g=>g.tasks.map(t=>t.progress))];
