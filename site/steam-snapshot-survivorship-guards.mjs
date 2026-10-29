@@ -31,6 +31,9 @@ export function reconcileSyntheticSteamSnapshots(snapshots,window){
   } else if(snap.complete_pagination!==undefined||snap.frame_id!==undefined)throw new TypeError('Attestation is not a catalog census');
   const local=new Set();
   for(const r of snap.records){
+   if(snap.kind==='current_store_list'&&r&&
+    (r.initial_paid_status!==undefined||r.first_paid_playable_date!==undefined||r.release_mode!==undefined))
+    throw new TypeError('Current catalog metadata cannot independently attest first release');
    if(!only(r,snap.kind==='current_store_list'?catalogRecordKeys:attestationRecordKeys)||
     !fixture(r.fixture_id)||local.has(r.fixture_id))
     throw new TypeError('Unique synthetic game identifier and allowed fields required per snapshot');
