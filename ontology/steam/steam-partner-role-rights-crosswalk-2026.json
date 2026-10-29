@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_steam_partner_role_permission_and_payment_rights_crosswalk_not_signed_license",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-onboarding-doc",
+    "steam-app-management-sharing-2026",
+    "steam-transfer-app-official-2026",
+    "steam-reporting-faq-doc",
+    "steamworks-user-permissions-2026-10-29",
+    "steamworks-publisher-relations-2026-10-29"
+  ],
+  "claim_ids": [
+    "steam-role-access-edit-not-legal-payee-20261029",
+    "steam-role-app-share-does-not-transfer-payment-rights-20261029",
+    "steam-role-shared-financial-read-needs-two-gates-20261029",
+    "steam-role-shared-price-right-remains-payee-20261029",
+    "steam-role-app-transfer-rights-effective-date-20261029",
+    "steam-role-transfer-finance-vs-wishlist-historical-split-20261029",
+    "steam-role-actual-authority-differs-editor-permission-20261029",
+    "steam-role-storefront-credit-not-proven-copyright-or-bank-income-20261029"
+  ],
+  "sources_research_question": "Legal rightsholder, public credited developer, app manager, Steamworks payee, user permissions, and underlying IP owner are different units",
+  "observations": {
+    "public_documented_shared_management_without_payment_change": true,
+    "optional_finanical_read_invitation_and_individual_permission_separate": true,
+    "partner_with_payment_rights_controls_prices": true,
+    "completed_app_transfer_changes_payment_entitlement_at_effective_date": true,
+    "historical_app_financial_data_split_by_payee_period_default": true,
+    "historical_wishlists_retained_and_visible_to_recipient": true,
+    "visible_storefront_publisher_label_is_contracting_rightsholder_proof": false,
+    "actual_ip_assignment_or_licensing_grant_verified": false,
+    "signed_SDA_clause_text_examined": false,
+    "private_partner_records_accessed": false
+  },
+  "hypotheticals": [
+    {
+      "arrangement": "app_share",
+      "finance_invite_granted": false,
+      "user_view_financials": false
+    },
+    {
+      "arrangement": "app_share",
+      "finance_invite_granted": true,
+      "user_view_financials": true
+    },
+    {
+      "arrangement": "completed_app_transfer",
+      "user_view_financials": true,
+      "historic_financial_access_granted": false
+    },
+    {
+      "arrangement": "completed_app_transfer",
+      "user_view_financials": true,
+      "historic_financial_access_granted": true
+    },
+    {
+      "arrangement": "storefront_credit_only"
+    }
+  ],
+  "unknown": {
+    "game_underlying_copyright_owner": null,
+    "actual_contractual_IP_distribution_grant": null,
+    "whether_license_exclusive": null,
+    "developer_royalty_or_publishing_contract_split": null,
+    "actual_legal_partner_payee": null,
+    "real_user_permissions": null,
+    "private_partner_income": null
+  },
+  "public_docs_not_a_signed_SDA": true,
+  "tool": "site/steam-partner-role-rights-crosswalk.mjs",
+  "tests": "tests/steam-partner-role-rights-crosswalk.test.mjs"
+}

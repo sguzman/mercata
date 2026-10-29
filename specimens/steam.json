@@ -2028,6 +2028,28 @@
       "evidence_class": "self_reported_october2026_nextfest_demo_and_wishlist_aggregates",
       "license": "Only public link, aggregate values and independently written findings; no player identifiers or unpublished account reports.",
       "notes": "Reports 1280 demo players, 296 played-and-wishlisted, 1898 wishlist additions; daily wishlist series sums to 1987 across eight entries and author notes extra day; period mismatch unresolved."
+    },
+    {
+      "id": "steamworks-user-permissions-2026-10-29",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/managing_users?l=english",
+      "title": "Managing Your Steamworks Account",
+      "publisher": "Valve Corporation / Steamworks public documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_partner_and_user_permission_roles",
+      "license": "Public link and original brief summaries only, no protected account or contract text reproduced.",
+      "notes": "Documents Actual Authority, View Financials, View Financial Info, marketing, edit metadata, publishing and pricing permissions; user access is not a business payout or underlying IP assignment."
+    },
+    {
+      "id": "steamworks-publisher-relations-2026-10-29",
+      "url": "https://partner.steamgames.com/doc/resources/publishers?l=english",
+      "title": "Working with a publisher",
+      "publisher": "Valve Corporation / Steamworks public documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_multi_entity_publisher_collaboration_guidance",
+      "license": "Public metadata and independently written factual synthesis; no panel transcript, private publishing contract or client data.",
+      "notes": "Acknowledges publisher/developer collaboration and need to configure multiple entities' game-management access; does not disclose game-specific rights grants or royalties."
     }
   ],
   "claims": [
@@ -14045,6 +14067,93 @@
       "limitations": "Different months, missing population denominator, no linked paid orders and no exposure counterfactual.",
       "observed_at": "2026-10-29",
       "confidence": "high_survey_design_limit"
+    },
+    {
+      "id": "steam-role-access-edit-not-legal-payee-20261029",
+      "text": "Valve distinguishes technical, marketing, user-permission and legal-signatory authority in Steamworks; edit access alone does not establish who has payment rights or owns the underlying game IP.",
+      "source_ids": [
+        "steamworks-user-permissions-2026-10-29",
+        "steam-onboarding-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "No individual account permissions, contract or copyrighted game chain was examined.",
+      "confidence": "high_official_public_role_definitions"
+    },
+    {
+      "id": "steam-role-app-share-does-not-transfer-payment-rights-20261029",
+      "text": "Application Management Sharing lets separate Steamworks partner accounts manage the same AppID without changing the payment entitlement of the original primary payee.",
+      "source_ids": [
+        "steam-app-management-sharing-2026",
+        "steamworks-publisher-relations-2026-10-29"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The document defines a platform permission workflow, not a private developer-publisher royalty agreement.",
+      "confidence": "high_official_public"
+    },
+    {
+      "id": "steam-role-shared-financial-read-needs-two-gates-20261029",
+      "text": "An invited partner requires an optional application financial-sharing grant and its individual user must possess the Steamworks View Financials permission to access shared sales data.",
+      "source_ids": [
+        "steam-app-management-sharing-2026",
+        "steamworks-user-permissions-2026-10-29"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Actual permissions and access to any historical third-party finance periods are unknown.",
+      "confidence": "high_official_public"
+    },
+    {
+      "id": "steam-role-shared-price-right-remains-payee-20261029",
+      "text": "For a shared app, Steamworks package pricing and discount entry remain controlled by the partner that holds payment rights, rather than every partner with editing access.",
+      "source_ids": [
+        "steam-app-management-sharing-2026",
+        "steamworks-user-permissions-2026-10-29"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Individual pricing-tool use still requires appropriate user permissions and other Steam promotion rules.",
+      "confidence": "high_official_public"
+    },
+    {
+      "id": "steam-role-app-transfer-rights-effective-date-20261029",
+      "text": "A completed Steam application transfer changes the payment-rights partner at its effective date and moves management, while preserving the AppID and public customer-facing game record.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Platform transfer is not independently proof of assignment of underlying copyrighted assets or any private third-party debt.",
+      "confidence": "high_official_public"
+    },
+    {
+      "id": "steam-role-transfer-finance-vs-wishlist-historical-split-20261029",
+      "text": "After an app transfer the recipient gets the full historical wishlist report, but by default financial reports are visible only for periods in which the recipient had payment rights.",
+      "source_ids": [
+        "steam-transfer-app-official-2026",
+        "steam-app-management-sharing-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Historical finance viewing can be separately granted, and sales/reporting access should not be confused with who received old cash.",
+      "confidence": "high_official_public"
+    },
+    {
+      "id": "steam-role-actual-authority-differs-editor-permission-20261029",
+      "text": "Steamworks Actual Authority is a partner-level right to handle legal agreements and bank/tax information, distinct from application metadata, marketing, financial viewing, pricing and release permissions.",
+      "source_ids": [
+        "steamworks-user-permissions-2026-10-29"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Specific users and their legal powers outside Steamworks are not publicly observed.",
+      "confidence": "high_official_public"
+    },
+    {
+      "id": "steam-role-storefront-credit-not-proven-copyright-or-bank-income-20261029",
+      "text": "A public Steam store developer or publisher credit cannot by itself identify the current legal signatory, underlying IP owner, actual payout recipient or private developer royalty share.",
+      "source_ids": [
+        "steam-onboarding-doc",
+        "steamworks-publisher-relations-2026-10-29",
+        "steam-app-management-sharing-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Logical non-identification from separately documented public credit and account/contract roles, not a claim about a particular studio.",
+      "confidence": "high_independently_synthesized_boundaries"
     }
   ],
   "observations": [],
