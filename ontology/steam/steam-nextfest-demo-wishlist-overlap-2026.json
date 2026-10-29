@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "nextfest_demo_wishlist_overlap_nonrepresentative_2026",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-nextfest-june2026-overlap-survey-primary-oct29",
+    "steam-nextfest-oct26-2026-dev-aggregate-selfreport"
+  ],
+  "claim_ids": [
+    "steam-nextfest-june2026-demo-overlap-percentiles",
+    "steam-nextfest-june2026-overlap-not-causal-conversion",
+    "steam-nextfest-oct26-1280demo-296overlap",
+    "steam-nextfest-oct26-daily-wishlist-sum-discrepancy",
+    "steam-nextfest-two-cases-no-paid-sales-inference"
+  ],
+  "june_voluntary_survey": {
+    "festival": "2026-06",
+    "ratio": "played_and_wishlisted / demo_players",
+    "p30_percent": 15.9,
+    "median_percent": 19.3,
+    "p70_percent": 23.2,
+    "valid_question_n": null,
+    "random_or_complete_sample": false
+  },
+  "october_individual_public_case": {
+    "festival": "2026-10",
+    "reported_demo_players": 1280,
+    "reported_played_and_wishlisted": 296,
+    "reported_wishlist_additions": 1898,
+    "daily_demo_players": [
+      172,
+      129,
+      174,
+      200,
+      198,
+      231,
+      176
+    ],
+    "daily_wishlist_additions": [
+      134,
+      342,
+      282,
+      325,
+      237,
+      275,
+      213,
+      179
+    ],
+    "sum_demo_players": 1280,
+    "sum_daily_wishlist_additions": 1987,
+    "unreconciled_additions_delta": 89,
+    "descriptive_overlap_share": 0.23125,
+    "financial_reports_observed": false
+  },
+  "unknown": {
+    "chronological_play_to_wishlist_conversion": null,
+    "paid_game_purchase_conversion": null,
+    "representative_steam_demo_overlap": null,
+    "causal_nextfest_effect": null,
+    "developer_profit": null
+  },
+  "private_merchant_data_accessed": false,
+  "calculator": "site/steam-demo-wishlist-overlap-guards.mjs",
+  "tests": "tests/steam-demo-wishlist-overlap-guards.test.mjs"
+}

@@ -36,6 +36,10 @@ The [three-provider game release crosswalk](../ontology/steam/steam-2025-three-c
 
 The [official public rule-list comparison](../ontology/steam/steam-content-eligibility-page-drift-and-ai-disclosure-2026.md) documents 14 restrictions on the Steam Direct landing page against 15 in Steamworks onboarding, including an additional payment-network warning. It also records content-survey limits and the distinct requirements for live-generated AI, with synthetic review gates that do not presume approval or revenue. This adds five source-linked claims using three previously registered official sources and advances an existing content-eligibility task by two points. Current **91.212%** (Δ **+0.007 pp**), original 293 tasks unchanged.
 
+## October Next Fest demo player / wishlist overlap and mixed reporting periods
+
+The [public June survey and October 26 developer disclosure](../ontology/steam/steam-nextfest-demo-wishlist-overlap-2026.md) separate **Played & Wishlisted** joint membership from full-game purchases: the June voluntary survey reported a game-level 19.3% median overlap, and the October developer observed **296 of 1,280** players in the overlap. In the October disclosure, the eight daily wishlist-addition figures sum to **1,987** versus **1,898** reported overall, an unresolved 89-count difference possibly associated with an extra reporting day. These are neither a marketwide representative conversion rate nor a causal sales result. Two public sources and five bounded claims advance the unchanged 293-task inventory to **91.270%** exact progress.
+
 ## Author-reported first-game gross versus an ambiguous net label (October 29, 2026)
 
 The [two-week first-game self-report](../ontology/steam/steam-author-sim-firstgame-net-stage-2026.md) compares the author's USD 7,047 gross with USD 5,812 labeled net. A hypothetical same-base 30% platform deduction does not produce that net amount; neither number proves a bank deposit or earnings after labor. One additional public source and six bounded claims raise the unchanged **293-task** Steam score to **91.205%** (Δ **+0.003 pp**).

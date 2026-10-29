@@ -2006,6 +2006,28 @@
       "evidence_class": "official_top_sellers_spending_components_and_regional_chart_scope",
       "license": "Only short independently written factual summaries with original public documentation URL, not copied site content, tables or images.",
       "notes": "Valve describes trailing 24h player spending with greater weight for most recent 3h, across base games, DLC and microtransactions; coefficient undisclosed. Region and account filters change visible chart; no financial ledger accessed."
+    },
+    {
+      "id": "steam-nextfest-june2026-overlap-survey-primary-oct29",
+      "url": "https://howtomarketagame.com/2026/06/30/nobody-plays-demos-and-that-is-ok/",
+      "title": "Most people will play your demo and not wishlist it and that is ok",
+      "publisher": "How To Market A Game / Chris Zukowski",
+      "published_at": "2026-06-30",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "voluntary_june2026_nextfest_steam_demo_player_wishlist_overlap_survey",
+      "license": "Link, published aggregate percentiles and independent short paraphrases only; no raw survey data or copyrighted article text.",
+      "notes": "30th, 50th, 70th percentiles 15.9%, 19.3%, 23.2% among self-selected reporting games; exact usable player-overlap sample size not supplied."
+    },
+    {
+      "id": "steam-nextfest-oct26-2026-dev-aggregate-selfreport",
+      "url": "https://www.reddit.com/r/gamedev/comments/1xg7yic/i_went_into_steam_next_fest_with_8k_wishlists/",
+      "title": "I went into Steam Next Fest with 8k wishlists here's what happened",
+      "publisher": "Public developer-authored r/gamedev post",
+      "published_at": "2026-10-26",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "self_reported_october2026_nextfest_demo_and_wishlist_aggregates",
+      "license": "Only public link, aggregate values and independently written findings; no player identifiers or unpublished account reports.",
+      "notes": "Reports 1280 demo players, 296 played-and-wishlisted, 1898 wishlist additions; daily wishlist series sums to 1987 across eight entries and author notes extra day; period mismatch unresolved."
     }
   ],
   "claims": [
@@ -13972,6 +13994,57 @@
       ],
       "observed_at": "2026-10-29",
       "confidence": "high_official_top_sellers_method_summary"
+    },
+    {
+      "id": "steam-nextfest-june2026-demo-overlap-percentiles",
+      "text": "A voluntary June 2026 Steam Next Fest developer survey reports game-level demo-player Played & Wishlisted proportions of 15.9%, 19.3% and 23.2% at the 30th, median and 70th percentiles.",
+      "source_ids": [
+        "steam-nextfest-june2026-overlap-survey-primary-oct29"
+      ],
+      "limitations": "Exact respondents for the relevant question and original full population frame are not supplied; percentiles are not representative player-weighted paid conversion.",
+      "observed_at": "2026-10-29",
+      "confidence": "moderate_public_voluntary_developer_survey"
+    },
+    {
+      "id": "steam-nextfest-june2026-overlap-not-causal-conversion",
+      "text": "Played & Wishlisted divided by Total Players is a descriptive overlap share that does not independently prove chronological wishlist acquisition after demo play or eventual paid game orders.",
+      "source_ids": [
+        "steam-nextfest-june2026-overlap-survey-primary-oct29"
+      ],
+      "limitations": "The aggregate is a set intersection, not a counterfactual, timed event-level user join or full-game purchaser cohort.",
+      "observed_at": "2026-10-29",
+      "confidence": "high_measurement_definition"
+    },
+    {
+      "id": "steam-nextfest-oct26-1280demo-296overlap",
+      "text": "One October 2026 developer publicly reports 1280 demo players and 296 played-and-wishlisted users, a descriptive 23.125% joint-membership proportion of reported demo players.",
+      "source_ids": [
+        "steam-nextfest-oct26-2026-dev-aggregate-selfreport"
+      ],
+      "limitations": "Single self-selected game; partner report not independently authenticated; no Steam-wide probability or paid sale is identified.",
+      "observed_at": "2026-10-29",
+      "confidence": "moderate_public_first_person_report"
+    },
+    {
+      "id": "steam-nextfest-oct26-daily-wishlist-sum-discrepancy",
+      "text": "The developer's eight daily wishlist-addition figures sum to 1987, exceeding the independently stated festival aggregate of 1898 by 89; seven daily player figures correctly sum to the stated 1280.",
+      "source_ids": [
+        "steam-nextfest-oct26-2026-dev-aggregate-selfreport"
+      ],
+      "limitations": "An additional daily wishlist reporting date is acknowledged; report cutoff, snapshot dates and exact mismatch explanation remain unverified.",
+      "observed_at": "2026-10-29",
+      "confidence": "high_arithmetic_on_public_self_report"
+    },
+    {
+      "id": "steam-nextfest-two-cases-no-paid-sales-inference",
+      "text": "The June volunteer survey and October public developer case are separate selected observations and cannot identify Steam-wide demo-to-purchase conversion, incremental wishlist effect, publisher payouts or after-cost profits.",
+      "source_ids": [
+        "steam-nextfest-june2026-overlap-survey-primary-oct29",
+        "steam-nextfest-oct26-2026-dev-aggregate-selfreport"
+      ],
+      "limitations": "Different months, missing population denominator, no linked paid orders and no exposure counterfactual.",
+      "observed_at": "2026-10-29",
+      "confidence": "high_survey_design_limit"
     }
   ],
   "observations": [],
