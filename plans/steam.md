@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Steam paid-only revenue versus all-game copy medians by tag (October 29, 2026)
+
+The [Immutable modeled-tag median audit](../ontology/steam/steam-tag-median-denominator-2026.md) preserves an incompatible free-and-paid copy denominator versus paid-only modeled gross median, the provider's approximately twenty games per midrank sample, overlapping tags and its use of current list price rather than actual checkout. The 2D Platformer and Visual Novel tag medians are useful source-attributed estimates but **not actual genre profit, median paid game income or causal opportunity**. Score **91%** (exact **91.218%**, Δ **+0.031 pp**), fixed 293-task scope.
+
 ## Author-disclosed second-commercial-game first-week receipts (October 29, 2026)
 
 The [dated Heartbeast seven-day self-report](../ontology/steam/steam-author-first-week-cash-gap-2026.md) documents $1,749 first-week gross, 489 reported units, ten returned units, wishlist stocks and an approximately $900 **predicted, not received** bank amount. The case is not an authenticated merchant report or representative market sample; new synthetic tests prohibit its conversion to a population median or profit. Steam research now **91%** (exact **91.188%**, Δ **+0.027 pp**) across the fixed 293 tasks.

@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "unmatched_paid_revenue_and_all_games_copy_tag_median_snapshot",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-immutable-2026-tag-revenue-median-snapshot"
+  ],
+  "claim_ids": [
+    "steam-tag-immutable-107-tags-20261029",
+    "steam-tag-immutable-20-near-middle-20261029",
+    "steam-tag-immutable-copies-free-paid-median-20261029",
+    "steam-tag-immutable-gross-paid-only-median-20261029",
+    "steam-tag-immutable-price-present-not-checkout-20261029",
+    "steam-tag-immutable-2d-platformer-20261029",
+    "steam-tag-immutable-visual-novel-20261029",
+    "steam-tag-immutable-overlapping-tags-median-not-market-20261029",
+    "steam-tag-immutable-genre-profit-unidentified-20261029"
+  ],
+  "source": {
+    "title": "What does the median game in your genre earn on Steam?",
+    "publisher": "Immutable",
+    "published_at": "2026-09-23",
+    "source_data_date": "2026-09-10",
+    "dataset_source": "licensed_third_party_sales_estimation_model",
+    "sampled_tag_count": 108,
+    "successfully_reported_tag_count": 107,
+    "displayed_tag_count": 20,
+    "sampled_titles_around_middle_rank_per_tag_approximately": 20,
+    "reported_below_5000_tag_medians": 56,
+    "reported_below_10000_tag_medians": 81,
+    "reported_unweighted_median_of_tag_medians_usd": 4837,
+    "sample_method_merchant_ledger": false,
+    "uses_current_list_price_not_checkout_price": true,
+    "reported_paid_game_unit_population_mismatch": true
+  },
+  "tag_rows": [
+    {
+      "tag": "2D Platformer",
+      "tag_catalog_titles": 11366,
+      "reported_median_copies_all_paid_and_free": 209,
+      "reported_paid_only_median_revenue_proxy_usd": 1040,
+      "midrank_sample_approx_n": 20
+    },
+    {
+      "tag": "Visual Novel",
+      "tag_catalog_titles": 12646,
+      "reported_median_copies_all_paid_and_free": 1140,
+      "reported_paid_only_median_revenue_proxy_usd": 10300,
+      "midrank_sample_approx_n": 20
+    },
+    {
+      "tag": "Dating Sim",
+      "tag_catalog_titles": 5541,
+      "reported_median_copies_all_paid_and_free": 1780,
+      "reported_paid_only_median_revenue_proxy_usd": 14400,
+      "midrank_sample_approx_n": 20
+    },
+    {
+      "tag": "Puzzle",
+      "tag_catalog_titles": 26452,
+      "reported_median_copies_all_paid_and_free": 477,
+      "reported_paid_only_median_revenue_proxy_usd": 2390,
+      "midrank_sample_approx_n": 20
+    },
+    {
+      "tag": "Open World Survival Craft",
+      "tag_catalog_titles": 684,
+      "reported_median_copies_all_paid_and_free": 7290,
+      "reported_paid_only_median_revenue_proxy_usd": 102000,
+      "midrank_sample_approx_n": 20
+    }
+  ],
+  "unknown": {
+    "actual_steam_paid_game_median_revenue": null,
+    "actual_steam_developer_income_by_tag": null,
+    "real_paid_checkout_price_per_copy": null,
+    "zero_order_games_by_tag": null,
+    "legal_publisher_profit_by_genre": null,
+    "matched_full_tag_rosters": null
+  },
+  "model_path": "site/steam-tag-median-denominator-guards.mjs",
+  "tests_path": "tests/steam-tag-median-denominator-guards.test.mjs",
+  "no_vendor_dataset_rehosted": true,
+  "no_private_data": true
+}
