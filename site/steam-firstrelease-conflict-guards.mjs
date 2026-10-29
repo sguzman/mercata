@@ -23,7 +23,7 @@ export function auditSyntheticSteamFirstReleaseConflict({feePaidOn,comingSoonPub
   {source:'steam_direct_landing_oct29',stated_wait_days:30,candidate:iso(Math.max(base,fee+30*DAY))}
  ];
  return {kind:'hypothetical_calendar_candidate_not_release_permission',
-  fee_wait_source_conflict:true,earliest_candidates_by_public_text:candidates,
+  fee_wait_source_conflict:true,earliest_candidates_by_public_texts:candidates,
   earliest_across_public_texts:candidates[0].candidate,
   latest_across_public_texts:candidates[1].candidate,
   account_prerequisites_attested_for_fixture:bankAndTaxVerified&&releasePermissionsGranted,
