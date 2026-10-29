@@ -36,6 +36,19 @@ test('Missing records and incomplete transfer histories cannot claim confirmed z
  assert.throws(()=>auditLedgerCoverage([{...rows[0],transfer_history_reconciled:false}]),/Complete ledgers/);
  assert.throws(()=>auditLedgerCoverage([rows[0],rows[0]]),/duplicate/);
 });
+test('Out-of-scope games cannot silently hide paid-unit evidence or unknown fields',()=>{
+ const excluded={appid:201,eligibility:'ineligible_initially_free'};
+ const unresolved={appid:202,eligibility:'unresolved'};
+ assert.equal(auditLedgerCoverage([excluded],{frameComplete:true}).counts.ineligible,1);
+ assert.equal(auditLedgerCoverage([unresolved],{frameComplete:true}).counts.unresolved_eligibility,1);
+ for(const row of [excluded,unresolved]){
+  assert.throws(()=>auditLedgerCoverage([{...row,ledger_status:'complete_reconciled',gross_paid_units:42}]),/Excluded or unresolved/);
+  assert.throws(()=>auditLedgerCoverage([{...row,authorized_ledger_attested:true}]),/Excluded or unresolved/);
+ }
+ assert.throws(()=>auditLedgerCoverage([{...rows[0],private_partner_account:'not permitted'}]),/unpermitted/);
+ assert.throws(()=>auditLedgerCoverage([{...rows[0],retired:'no'}]),/retirement status/);
+ assert.equal(auditLedgerCoverage([unresolved,...rows],{frameComplete:true}).zero_gross_unit_share_upper_conditional,null);
+});
 test('Claims grounded and no genuine confidential financial records present',()=>{
  const s=new Set(d.evidence.map(x=>x.id)),c=new Map(d.claims.map(x=>[x.id,x]));
  assert.equal(r.source_ids.length,4);assert.equal(r.claim_ids.length,12);
