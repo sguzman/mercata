@@ -13012,6 +13012,62 @@
       "confidence": "medium",
       "observed_at": "2026-10-29",
       "limitations": "Matched review counts cannot identify refunds, regional taxes, royalty splits, production labor or bank deposits."
+    },
+    {
+      "id": "steam-truezero-provider-412-of-1211-is-model-only-20261029",
+      "text": "The January 2026 Steam release example reports 412 modeled zero-copy titles among 1,211 games with modeled estimates, not 412 authenticated game records with zero purchases.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis",
+        "steam-gdc-jan2026-public-sheet"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The modeled label has not been independently validated against a representative set of partner checkout histories."
+    },
+    {
+      "id": "steam-truezero-19-missing-not-all-omissions-20261029",
+      "text": "The 19 titles without copy estimates in the provider's 1,230-game roster are a different missingness category from historically paid releases absent from that roster.",
+      "source_ids": [
+        "steam-egmatic-jan2026-analysis",
+        "steam-retire-app-official"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "No bounded number of historically omitted eligible games was established from the source spreadsheet."
+    },
+    {
+      "id": "steam-truezero-false-positive-and-missed-zero-both-possible-20261029",
+      "text": "Mercata's sensitivity framework separately allows modeled zero-copy games with positive real orders and modeled positive games with zero real orders.",
+      "source_ids": [
+        "steam-gdc-jan2026-public-sheet",
+        "steam-financial-api-official"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "This is an identification-risk model, not a measured false-positive or false-negative rate for any estimator."
+    },
+    {
+      "id": "steam-truezero-uncalibrated-frame-cannot-bound-real-share-20261029",
+      "text": "Without independently justified caps on model misclassification and complete-frame omission, the exact fraction of games with zero paid orders is not identified by the January estimate table.",
+      "source_ids": [
+        "steam-gdc-jan2026-public-sheet",
+        "steam-retire-app-official",
+        "steam-financial-api-official"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "A public provider-defined roster is not an audited all-releases population, and sample-level modeled zero outputs do not identify real outcomes."
+    },
+    {
+      "id": "steam-truezero-conditional-extremes-not-confidence-interval-20261029",
+      "text": "Mathematical lower and upper shares using assumed caps on false zero labels, missed zeros, and omitted eligible games are sensitivity scenarios rather than observed Steam sales or statistical confidence intervals.",
+      "source_ids": [
+        "steam-gdc-jan2026-public-sheet",
+        "steam-financial-api-official"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The cap values are invented demonstration parameters, not calibrated from a validation sample or verified missing-frame census."
     }
   ],
   "observations": [],

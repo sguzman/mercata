@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "conditional_two_stage_model_and_frame_zero_sale_sensitivity_not_empirical",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-egmatic-jan2026-analysis",
+    "steam-gdc-jan2026-public-sheet",
+    "steam-financial-api-official",
+    "steam-retire-app-official"
+  ],
+  "claim_ids": [
+    "steam-truezero-provider-412-of-1211-is-model-only-20261029",
+    "steam-truezero-19-missing-not-all-omissions-20261029",
+    "steam-truezero-false-positive-and-missed-zero-both-possible-20261029",
+    "steam-truezero-uncalibrated-frame-cannot-bound-real-share-20261029",
+    "steam-truezero-conditional-extremes-not-confidence-interval-20261029"
+  ],
+  "public_provider_aggregates": {
+    "listed_paid_game_entries": 1230,
+    "estimated_rows": 1211,
+    "modeled_zero_rows": 412,
+    "unestimated_rows": 19,
+    "source_method": "secondary_recount_of_game_discoverco_estimates_not_authenticated_sales"
+  },
+  "scenarios": [
+    {
+      "label": "Purely illustrative generous uncertainty caps",
+      "assumed_false_zero_cap": 100,
+      "assumed_missed_zero_cap": 100,
+      "assumed_omitted_paid_games_cap": 400,
+      "conditional_lower_expression": "(412 - 100) / (1230 + 400)",
+      "conditional_upper_expression": "(412 + 100 + 19 + 400) / (1230 + 400)",
+      "interpretation": "Not empirically calibrated; no market claim."
+    },
+    {
+      "label": "Counterfactual perfect classifier and complete frame",
+      "assumed_false_zero_cap": 0,
+      "assumed_missed_zero_cap": 0,
+      "assumed_omitted_paid_games_cap": 0,
+      "interpretation": "Not justified by the public evidence; only reexpresses earlier modeled-label missingness."
+    }
+  ],
+  "unknown": {
+    "true_zero_paid_orders_fraction": null,
+    "actual_model_false_zero_rate": null,
+    "actual_model_missed_zero_rate": null,
+    "verified_historic_frame_omission_count": null,
+    "first_paid_legal_publisher_zero_income": null,
+    "merchant_transaction_count": null
+  },
+  "not_public_sales_estimation": true,
+  "real_game_rows_accessed": false
+}

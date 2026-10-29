@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Zero-sale rate identification: modeled labels, classification error and missing games
+
+The [two-stage selection-sensitivity audit](../ontology/steam/steam-two-stage-model-and-frame-zero-sensitivity-2026.md) keeps the 19 missing provider estimates separate from potentially omitted games and sales-model classification errors. Executable, explicitly hypothetical cap scenarios demonstrate that **no actual fraction of zero-paid-order games is identified** without authenticated ledger validation and known original-paid release coverage. **Current 91%** (exact **91.133%**, Δ **+0.031 percentage points**), unchanged 293-task inventory.
+
 ## Historical app-list survivorship and original-paid timing
 
 The [multi-snapshot survivorship audit](../ontology/steam/steam-historical-snapshot-survivorship-2026.md) adds a tested instrument for reconciling app presence across separately dated but aligned catalog snapshots, preserving vanished previously observed candidates without asserting they are necessarily retired. It separates current metadata from independently attested original paid-playable launches and flags contradictory historical attestations. All example IDs are invented; **no historic Steam cohort has been assembled**. Research score **91%** (exact **91.020%**, Δ **+0.048 percentage points**), with the original 293 tasks unchanged.
