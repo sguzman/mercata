@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## First commercial game launch and paid marketing attribution checkpoint
+
+The [developer-authored first-game launch funnel](../ontology/steam/first-commercial-launch-paid-funnel-case-2026.md) adds a source-specific day/week/month paid-gross series, return-unit conditional arithmetic and documented Reddit ad-click-to-wishlist counts. The research does **not** equate views or wishlist association with incremental orders, or reported net revenue with profit. **88%** (exact 88.140%, Δ +0.239 pp), 293 tasks preserved.
+
 ## Selected long-tail release cohort and incomplete follow-up audit
 
 The [modeled long-tail eligibility audit](../ontology/steam/selected-long-tail-eligibility-and-censoring-2026.md) checks GameDiscoverCo's over-1,000 first-month units selection and publication-date right-censoring at 12 and 24 months. An executable synthetic gate refuses to extrapolate successful-game ratios into debut publisher profit. **Current score 88%** (exact 87.901%; +0.034 pp). The original 293 tasks are retained.

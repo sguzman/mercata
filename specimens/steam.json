@@ -1456,6 +1456,17 @@
       "evidence_class": "first_party_developer_blog_self_report_public_bank_receipt_assertion",
       "license": "Source title, URL, and independently authored short factual paraphrases only; no source text, screenshots, videos, or third-party images copied.",
       "notes": "June 22 2021 report with later update on Steam remittance: 713 Steam copies / $6,202 Steam gross, $3,680 described as post-deduction bank proceeds; 1,776 itch copies / $17,906 gross and $14,980 described as post-deduction bank proceeds. Steam release later than itch; updates may lag and are not a matched-window randomized comparison."
+    },
+    {
+      "id": "steam-onlywayisdown-firstgame-original-postmortem-2026",
+      "url": "https://onlywayisdown.com/post-mortem/",
+      "title": "Only Way is Down — Post Mortem",
+      "publisher": "Only Way is Down / Jilted Generation Productions developer website",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_developer_self_report_single_title_store_sales_and_spend",
+      "license": "Link/title and independently authored short numerical paraphrases only; no published graphics, original paragraphs, proprietary datasets or media copied.",
+      "notes": "Undated first-person report describes roughly ten months after 2025-04-01 Steam launch; relative duration is not independently confirmed article publication date. Revenue, reviews, refund numbers, wishlists and ads are self-reported, not inspected Steamworks finance documents."
     }
   ],
   "claims": [
@@ -8896,6 +8907,126 @@
       "confidence": "bounded_selection_and_reporting",
       "observed_at": "2026-10-28",
       "limitations": "Different cohorts, data collection methods, sales eligibility and market composition preclude treating the numerical contrast as a causal historical fall for all releases."
+    },
+    {
+      "id": "steam-onlyway-firstgame-launch-and-window",
+      "text": "One developer reports a first commercial Steam release on April 1, 2025, and 1,248 copies/$8,232 gross on launch day, 3,091 copies/$19,851 gross through week one and 4,810 copies/$35,862 gross through month one.",
+      "source_ids": [
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "bounded_first_party_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Single selected title; gross sales and copy figures are self-reported and refund or tax treatment of each window is not independently authenticated."
+    },
+    {
+      "id": "steam-onlyway-firstgame-cumulative-net",
+      "text": "The developer reports USD 41,000 described as net revenue after an asserted 30% Steam cut roughly ten months after launch.",
+      "source_ids": [
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "bounded_first_party_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Author-defined net revenue label is not verified bank receipts or after-cost profit; exact snapshot date, agreement share and other deductions are unavailable."
+    },
+    {
+      "id": "steam-onlyway-refunds-and-units",
+      "text": "The report describes 8,656 sales excluding returns and 1,712 returned copies; assuming disjoint units, 1,712 divided by their sum is about 16.5%.",
+      "source_ids": [
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "bounded_first_party_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a reconstruction under the author's wording, not a cohort-adjusted refund probability; lifetime counts may not have the same temporal boundary as earlier launch windows."
+    },
+    {
+      "id": "steam-onlyway-wishlist-stock-and-review",
+      "text": "The developer reports 17,821 wishlists at launch, 33,044 by the retrospective, 113 reviews and a 61% positive review share.",
+      "source_ids": [
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "bounded_first_party_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Wishlists are a stock, not an independent count of intended paying buyers; reviews and sales are self-reported aggregate snapshots."
+    },
+    {
+      "id": "steam-onlyway-festival-claimed-wishlists",
+      "text": "The developer attributes around 4,100 wishlist additions to a June 2024 demo/Steam Next Fest period.",
+      "source_ids": [
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "bounded_first_party_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Unverified developer attribution, not a randomized estimate of incremental wishlist lift or future purchases."
+    },
+    {
+      "id": "steam-onlyway-reddit-ad-funnel",
+      "text": "The post reports roughly USD 700 Reddit ad spend, 12,000 ad clicks and 237 wishlists; the printed cost per wishlist is approximately USD 2.95.",
+      "source_ids": [
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "bounded_first_party_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Clicks and attributed wishlists may include repeat users, organic exposure and tracking errors; no holdout or incremental Steam purchase record."
+    },
+    {
+      "id": "steam-onlyway-keymailer-campaign",
+      "text": "The developer reports approximately USD 4,000 paid for a creator/outreach promotion campaign and roughly USD 5,000 advertising spend overall.",
+      "source_ids": [
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "bounded_first_party_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Promoted impressions, influencer requests, complimentary keys and content views are not paid game units or attributable incremental revenue."
+    },
+    {
+      "id": "steam-onlyway-creator-view-no-sales-attribution",
+      "text": "The developer describes many video views during the campaign but expressly says its unique impact on paid sales and wishlists is difficult to isolate from storefront and other marketing effects.",
+      "source_ids": [
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "bounded_first_party_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "No randomized controlled exposure, channel-specific paid purchase attribution or unique-person denominator."
+    },
+    {
+      "id": "steam-onlyway-wishlist-conversion-ambiguous",
+      "text": "The developer calls a 7.2% figure the current wishlist conversion rate and contrasts it with a claimed 15.3% Steam average.",
+      "source_ids": [
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "bounded_first_party_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "The numerator, eligible wishlist cohort, purchase window and source of the comparison average are not independently verified; neither value is a reliable typical first-game forecast."
+    },
+    {
+      "id": "steam-onlyway-regional-rank-not-market-share",
+      "text": "The developer says the top five countries by unit sales and by net revenue differ in order, attributing part of that difference to regional pricing.",
+      "source_ids": [
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "bounded_first_party_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Ranks are not quantity, market shares, per-country cash margin or buyer denominators; store pricing is not a verified causal explanation."
+    },
+    {
+      "id": "steam-onlyway-40k-not-profit",
+      "text": "Subtracting the author's USD 5,000 total advertising budget from the USD 41,000 figure labeled net revenue would still omit labor, support, outsourcing, taxes, transfers and other business costs.",
+      "source_ids": [
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "bounded_first_party_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "The arithmetic difference cannot be called actual profit, after-tax personal take-home or an observed return on ads."
+    },
+    {
+      "id": "steam-onlyway-selection-bias",
+      "text": "A first-game launch postmortem with substantial sales and creator exposure is a selected single-title observation, not a sample of all debut or zero-selling Steam games.",
+      "source_ids": [
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "bounded_first_party_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Selection into public postmortems and launch cohort noncoverage block representative median and expected first-game earning inference."
     }
   ],
   "observations": [],
