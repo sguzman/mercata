@@ -1423,6 +1423,17 @@
       "evidence_class": "unverified_voluntary_creator_portfolio_cash_account",
       "license": "Public original post URL and short independently authored factual paraphrases only; no images, raw records or full comments reproduced.",
       "notes": "Reported revenue from two released games, but Steam Direct expenses include four unreleased projects according to author's follow-up; projected future-game fee timing is not aligned to the revenue population. Approximate headline amounts do not reconcile exactly to cents."
+    },
+    {
+      "id": "steam-one-week-solo-28-copies-dec2025",
+      "url": "https://www.reddit.com/r/gamedev/comments/1pqxjxt/postmortem_first_solo_game_28_copies_sold_in/",
+      "title": "Postmortem: First solo game, 28 copies sold in first week",
+      "publisher": "r/gamedev, self-disclosed solo developer",
+      "published_at": "2025-12-19",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "unverified_first_week_first_solo_game_creator_self_report",
+      "license": "Original public post URL and independently authored short factual paraphrases only; do not reproduce screenshots or private merchant records.",
+      "notes": "One week of paid game sales, gross receipts, refunds and development effort; labor is prelaunch, sales only first week; no bank records or full studio expenses verified."
     }
   ],
   "claims": [
@@ -8678,6 +8689,46 @@
       "confidence": "bounded_self_report",
       "observed_at": "2026-10-28",
       "limitations": "Published cash narratives are not harmonized game-level after-cost estimates and are not matched to an unbiased population."
+    },
+    {
+      "id": "steam-low-firstweek-single-game-units",
+      "text": "A December 2025 first-solo-game post reports 28 copies sold, three refunds, and USD 130 gross revenue in the first seven days.",
+      "source_ids": [
+        "steam-one-week-solo-28-copies-dec2025"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "A one-week creator self-report without authenticated merchant statements, and gross units versus net paid license treatment not independently verified."
+    },
+    {
+      "id": "steam-low-firstweek-single-game-labor",
+      "text": "The same developer estimates approximately 350 to 450 development hours over 11 calendar months and about USD 90 in external art, sound and visual asset purchases.",
+      "source_ids": [
+        "steam-one-week-solo-28-copies-dec2025"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Hours and asset expenses are author approximations; other direct fees, support, taxes and opportunity costs not fully disclosed."
+    },
+    {
+      "id": "steam-low-firstweek-no-positive-profit-inference",
+      "text": "Subtracting the stated USD 90 asset outlay from USD 130 first-week gross leaves only USD 40 before refunds, platform deductions, taxes and every other missing expense.",
+      "source_ids": [
+        "steam-one-week-solo-28-copies-dec2025"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "An arithmetic upper-scenario remainder for this first week, not actually received money, tax profit, labor wage or lifetime income."
+    },
+    {
+      "id": "steam-low-firstweek-not-zero-or-lifetime",
+      "text": "The first-week 28-copy case documents low but positive reported unit sales; it does not identify a zero-sale studio or determine that game's lifetime commercial return.",
+      "source_ids": [
+        "steam-one-week-solo-28-copies-dec2025"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "No fixed-horizon complete ledger or unbiased release population; later sales and refunds were not observed."
     }
   ],
   "observations": [],

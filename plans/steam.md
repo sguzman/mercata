@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## First-solo-game low-sales labor checkpoint
+
+The [same public income case register](../ontology/steam/public-developer-payout-and-portfolio-cases-2026.md) now also records a reported 28-copy, $130 first-week launch following 350–450 development hours. Its $90 asset outlay is subtracted only as an **illustrative upper gross-minus-assets remainder**; no actual payout, labor wage or zero-sales claim is inferred. **Steam research remains 88%** (exact 87.782%, Δ +0.085 pp this checkpoint); 293 original tasks unchanged.
+
 ## Public postmortem payout and portfolio mismatch checkpoint
 
 The [public developer cash case audit](../ontology/steam/public-developer-payout-and-portfolio-cases-2026.md) records two self-selected real developer disclosures: a five-year two-game cumulative gross-to-personal waterfall, and two released games whose reported expense list includes application fees for four unreleased games. Rounding/basis mismatches, missing labor and unverified remittance are explicitly flagged. The 293-task scope is unchanged; **Steam research remains 88%** (exact 87.696%, Δ +0.137 pp). These cases are **not** representative Steam income or audited profit.

@@ -5,7 +5,8 @@
   "reviewed_at": "2026-10-28",
   "source_ids": [
     "steam-operator-two-games-waterfall-oct2026",
-    "steam-small-portfolio-cash-march2026"
+    "steam-small-portfolio-cash-march2026",
+    "steam-one-week-solo-28-copies-dec2025"
   ],
   "claim_ids": [
     "steam-operator-waterfall-cumulative-gross",
@@ -17,7 +18,11 @@
     "steam-small-portfolio-expense-scope-mismatch",
     "steam-small-portfolio-near-miss-arithmetic",
     "steam-disclosures-not-market-sample",
-    "steam-cash-income-not-hourly-profit"
+    "steam-cash-income-not-hourly-profit",
+    "steam-low-firstweek-single-game-units",
+    "steam-low-firstweek-single-game-labor",
+    "steam-low-firstweek-no-positive-profit-inference",
+    "steam-low-firstweek-not-zero-or-lifetime"
   ],
   "cases": [
     {
@@ -88,6 +93,38 @@
         "Unspecified observation and cost-alignment windows",
         "No hourly labor imputation",
         "Post-platform sales not equivalent to direct bank remittance"
+      ],
+      "real_authorized_steam_finance_export": false,
+      "after_unpaid_labor_economic_profit_usd": null,
+      "verified_publisher_bank_receipts_usd": null
+    },
+    {
+      "id": "first_solo_game_week_one_low_sales",
+      "source_id": "steam-one-week-solo-28-copies-dec2025",
+      "published_at": "2025-12-19",
+      "evidence_class": "self_report_unverified",
+      "cash_currency": "USD",
+      "time_scope": "launch_first_seven_days",
+      "income_unit": "one_first_solo_game",
+      "game_count_with_revenue": 1,
+      "reported": {
+        "first_week_copies_sold": 28,
+        "first_week_refunds_count": 3,
+        "first_week_gross_revenue_usd": 130,
+        "development_hours_low": 350,
+        "development_hours_high": 450,
+        "prelaunch_asset_cash_spend_usd": 90,
+        "estimated_months_development": 11
+      },
+      "printed_values_reconstructed": {
+        "first_week_gross_less_asset_spend_usd": 40
+      },
+      "limitations": [
+        "First week is not the lifetime sales cohort",
+        "Gross revenue does not equal paid-out receipts",
+        "Refund units may already be reflected in the reported gross definition; do not subtract them again without invoice evidence",
+        "Asset costs omit platform, cash-operating, unpaid labor, tax and maintenance costs",
+        "Prelaunch hours have a different temporal scope than week-one receipts"
       ],
       "real_authorized_steam_finance_export": false,
       "after_unpaid_labor_economic_profit_usd": null,

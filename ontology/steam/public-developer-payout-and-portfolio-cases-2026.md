@@ -14,9 +14,15 @@ A [March 9, 2026 part-time developer budget post](https://www.reddit.com/r/gamed
 
 More importantly, in a follow-up the author distinguishes **revenue from two already released games** from **$400 in Steam application fees for four unreleased games**. Those costs may matter for *portfolio cash flow*, but including them in the profit calculation for just the two revenue-generating games would mix project and time populations. Excluding them without a consistent accrual policy would also be arbitrary. No labor-hours ledger or opportunity cost was provided.
 
+## Low first-week revenue with hundreds of development hours
+
+A [December 19, 2025 first-game postmortem](https://www.reddit.com/r/gamedev/comments/1pqxjxt/postmortem_first_solo_game_28_copies_sold_in/) reports **28 copies sold**, **three refunds**, and **$130 gross during the first seven days** after launch. The developer estimates **350–450 hours** over about 11 months, plus around **$90** in purchased art and audio assets. Subtracting only those reported assets from the **first-week gross** leaves **$40 before any Steam share, payment and tax effects, other expenses or labor valuation**. This is a conditional arithmetic remainder, not a payout, profit, hourly wage or forecast.
+
+It also is not a zero-sales example: the source explicitly reports paid copies. One week of results cannot establish later sales or long-tail income. Comparing this single title to the two portfolio posts requires preserving their different dates, product counts, gross/net bases and cost accounting.
+
 ## What these accounts actually establish
 
-A publicly disclosed developer waterfall can illustrate **where a gross figure may cease to represent money retained by a person** and can expose the importance of refunds, tax treatment, contractual publishing terms and multi-game allocation. These individual tax and platform figures are **not generally applicable rates**. The two posts have different game counts, dates, cash categories, and denominators; they must not be pooled or averaged into a "typical indie" statistic.
+A publicly disclosed developer waterfall can illustrate **where a gross figure may cease to represent money retained by a person** and can expose the importance of refunds, tax treatment, contractual publishing terms and multi-game allocation. These individual tax and platform figures are **not generally applicable rates**. The three posts have different game counts, dates, cash categories, and denominators; they must not be pooled or averaged into a "typical indie" statistic.
 
 Selection into public postmortems is voluntary and likely related to which experiences developers choose to publicize. Neither the earnings of unsuccessful nonrespondents nor the exact number of no-sale games is observed. Therefore **Steam-wide actual publisher median, zero-sales proportion, after-cost developer profit and hourly return remain unknown**. A complete fixed eligible-game cohort with authorized and comparable financial and cost records is still required.
 

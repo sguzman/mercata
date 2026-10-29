@@ -23,8 +23,21 @@ test('Second case reconciles expense categories but flags reported summary near-
  assert.equal(b.application_fee_count_for_other_unreleased_games,4);
  assert.equal(b.after_unpaid_labor_economic_profit_usd,null);
 });
+test('Low one-week solo-game case has positive reported sales and no unsupported wage calculation',()=>{
+ const c=x.cases[2],r=c.reported;
+ assert.equal(c.source_id,'steam-one-week-solo-28-copies-dec2025');
+ assert.equal(c.game_count_with_revenue,1);
+ assert.equal(r.first_week_copies_sold,28);
+ assert.equal(r.first_week_refunds_count,3);
+ assert.equal(r.development_hours_low,350);
+ assert.equal(r.development_hours_high,450);
+ assert.equal(r.first_week_gross_revenue_usd-r.prelaunch_asset_cash_spend_usd,c.printed_values_reconstructed.first_week_gross_less_asset_spend_usd);
+ assert.equal(c.printed_values_reconstructed.first_week_gross_less_asset_spend_usd,40);
+ assert.equal(c.after_unpaid_labor_economic_profit_usd,null);
+ assert.equal(c.verified_publisher_bank_receipts_usd,null);
+});
 test('No self-selected report silently becomes an actual population average or bank receipt',()=>{
- assert.equal(x.cases.length,2);
+ assert.equal(x.cases.length,3);
  assert(x.cases.every(c=>c.evidence_class==='self_report_unverified'&&c.real_authorized_steam_finance_export===false&&c.verified_publisher_bank_receipts_usd===null));
  assert.equal(x.shared_boundaries.probability_sample,false);
  assert.equal(x.shared_boundaries.complete_paid_release_frame,false);
@@ -34,7 +47,7 @@ test('No self-selected report silently becomes an actual population average or b
 });
 test('All source and claim joins exist and fixed Steam task inventory is preserved',()=>{
  const sources=new Set(d.evidence.map(s=>s.id)),claims=new Map(d.claims.map(c=>[c.id,c]));
- assert.equal(x.source_ids.length,2);assert.equal(x.claim_ids.length,10);
+ assert.equal(x.source_ids.length,3);assert.equal(x.claim_ids.length,14);
  for(const id of x.source_ids)assert(sources.has(id),id);
  for(const id of x.claim_ids){assert(claims.has(id),id);assert(claims.get(id).source_ids.every(z=>sources.has(z)),id);}
  const tasks=[...p.detail_tasks.map(t=>t.percent),...q.queues.flatMap(g=>g.tasks.map(t=>t.progress))];
