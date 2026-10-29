@@ -106,7 +106,7 @@ test('Outward decimal rounding preserves partial gross floor below a finite cap'
  const floor=quantize('4.0001').lower_cents;
  const cap=quantize('49.9999').upper_cents;
  const r=bound({eligibleFrameSize:2,horizonDays:30,cohortFrameVerified:true,
- observed:[o('a',1000)],missing:[p('b',floor,cap,true)]});
+ observed:[o('a',1000)],missing:[partial('b',floor,cap,true)]});
  assert.equal(floor,400);assert.equal(cap,5000);
  assert.equal(r.lower_mean_gross_usd_cents,700);
  assert.equal(r.upper_mean_gross_usd_cents,3000);
