@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "curated_paid_game_review_time_regular_price_and_review_score_aggregate_observability",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-marketyourindie-review-playtime-price-20260815",
+    "steam-price-rules-2026"
+  ],
+  "claim_ids": [
+    "steam-value-reviewer-curated-6954",
+    "steam-value-reviewer-50review-minimum",
+    "steam-value-reviewer-sample-median2026",
+    "steam-value-reviewer-price-bands6954",
+    "steam-value-reviewer-hours-low-high",
+    "steam-value-reviewer-regular-price-hour-plateau",
+    "steam-value-reviewer-sentiment-steep-gradient",
+    "steam-value-reviewer-below70-gradient",
+    "steam-value-reviewer-withinprice-gap",
+    "steam-value-reviewer-nonrandom-long-short",
+    "steam-value-reviewer-genre-spread",
+    "steam-value-reviewer-cohorts-add-up",
+    "steam-value-reviewer-cohort-association-not-cause",
+    "steam-value-reviewer-no-genre-optimum",
+    "steam-value-reviewer-no-retailer-profit",
+    "steam-value-reviewer-no-fixed-hour-value"
+  ],
+  "source_frame": {
+    "source": "MarketYourIndie / Juan Pablo Russo",
+    "measured_at": "2026-08-15",
+    "playtime_sampled_between": [
+      "2026-08-07",
+      "2026-08-08"
+    ],
+    "game_count": 6954,
+    "min_public_reviews_per_game": 50,
+    "max_recent_reviews_used": 100,
+    "min_review_playtime_observations": 10,
+    "median_game_review_count": 2026,
+    "regular_list_price_not_paid_checkout": true,
+    "curated_nonrandom_reviewable_games": true,
+    "originally_paid_appid_frame_complete": false
+  },
+  "price_bands": [
+    {
+      "band": "under_5",
+      "game_count": 1012,
+      "median_reviewer_hours": 3.3,
+      "median_list_usd_per_reviewer_hour": 1.12
+    },
+    {
+      "band": "5_to_9_99",
+      "game_count": 1423,
+      "median_reviewer_hours": 5.7,
+      "median_list_usd_per_reviewer_hour": 1.52
+    },
+    {
+      "band": "10_to_14_99",
+      "game_count": 1230,
+      "median_reviewer_hours": 7.2,
+      "median_list_usd_per_reviewer_hour": 1.96
+    },
+    {
+      "band": "15_to_19_99",
+      "game_count": 1508,
+      "median_reviewer_hours": 10.3,
+      "median_list_usd_per_reviewer_hour": 1.9
+    },
+    {
+      "band": "20_to_29_99",
+      "game_count": 1054,
+      "median_reviewer_hours": 13.2,
+      "median_list_usd_per_reviewer_hour": 2.03
+    },
+    {
+      "band": "30_to_39_99",
+      "game_count": 393,
+      "median_reviewer_hours": 19.6,
+      "median_list_usd_per_reviewer_hour": 1.94
+    },
+    {
+      "band": "40_plus",
+      "game_count": 334,
+      "median_reviewer_hours": 26,
+      "median_list_usd_per_reviewer_hour": 2.06
+    }
+  ],
+  "review_cost_per_hour_bands": [
+    {
+      "band": "under_0_50",
+      "median_positive_review_pct": 89.5,
+      "share_of_games_under70positive_pct": 5
+    },
+    {
+      "band": "0_50_to_0_99",
+      "median_positive_review_pct": 88.9,
+      "share_of_games_under70positive_pct": 7
+    },
+    {
+      "band": "1_to_1_99",
+      "median_positive_review_pct": 87.4,
+      "share_of_games_under70positive_pct": 8
+    },
+    {
+      "band": "2_to_2_99",
+      "median_positive_review_pct": 86,
+      "share_of_games_under70positive_pct": 11
+    },
+    {
+      "band": "3_to_4_99",
+      "median_positive_review_pct": 84.7,
+      "share_of_games_under70positive_pct": 14
+    },
+    {
+      "band": "5_to_9_99",
+      "median_positive_review_pct": 82.1,
+      "share_of_games_under70positive_pct": 21
+    },
+    {
+      "band": "10_plus",
+      "median_positive_review_pct": 67.1,
+      "share_of_games_under70positive_pct": 55
+    }
+  ],
+  "within_price_playtime_quartiles": {
+    "sampled_quartile_groups_game_count": 3472,
+    "bands": [
+      {
+        "band": "under_10",
+        "shortest_quartile_median_positive_pct": 86.1,
+        "longest_quartile_median_positive_pct": 89
+      },
+      {
+        "band": "10_to_19_99",
+        "shortest_quartile_median_positive_pct": 84,
+        "longest_quartile_median_positive_pct": 89.3
+      },
+      {
+        "band": "20_to_29_99",
+        "shortest_quartile_median_positive_pct": 82.2,
+        "longest_quartile_median_positive_pct": 88.7
+      },
+      {
+        "band": "30_plus",
+        "shortest_quartile_median_positive_pct": 78,
+        "longest_quartile_median_positive_pct": 86.8
+      }
+    ]
+  },
+  "genre_bands": [
+    {
+      "name": "RPG",
+      "game_count": 701,
+      "median_list_usd_per_reviewer_hour": 1.2
+    },
+    {
+      "name": "Strategy",
+      "game_count": 588,
+      "median_list_usd_per_reviewer_hour": 1.38
+    },
+    {
+      "name": "Simulation",
+      "game_count": 959,
+      "median_list_usd_per_reviewer_hour": 1.57
+    },
+    {
+      "name": "Puzzle",
+      "game_count": 520,
+      "median_list_usd_per_reviewer_hour": 1.73
+    },
+    {
+      "name": "Adventure",
+      "game_count": 970,
+      "median_list_usd_per_reviewer_hour": 1.86
+    },
+    {
+      "name": "Action",
+      "game_count": 1567,
+      "median_list_usd_per_reviewer_hour": 1.9
+    },
+    {
+      "name": "Other",
+      "game_count": 752,
+      "median_list_usd_per_reviewer_hour": 1.98
+    },
+    {
+      "name": "Platformer",
+      "game_count": 418,
+      "median_list_usd_per_reviewer_hour": 2.08
+    },
+    {
+      "name": "Horror",
+      "game_count": 479,
+      "median_list_usd_per_reviewer_hour": 2.16
+    }
+  ],
+  "release_year_cohorts": [
+    {
+      "cohort": "before_2020",
+      "game_count": 2555
+    },
+    {
+      "cohort": "2020_to_2023",
+      "game_count": 2322
+    },
+    {
+      "cohort": "2024_or_later",
+      "game_count": 2077
+    }
+  ],
+  "interpretation": {
+    "source_currency": "USD_regular_list_price",
+    "source_duration": "hours_reported_at_review_time",
+    "source_review_metric": "share_of_positive_user_reviews",
+    "never_assume_median_price_over_median_hours_equals_median_per_game_ratio": true,
+    "causal_length_or_price_effect_established": false,
+    "reviewer_sample_representative_of_all_paid_buyers": false,
+    "retail_list_price_equals_actual_checkout": false,
+    "genre_inference_to_all_steam_games": false
+  },
+  "unknown": {
+    "actual_user_purchase_prices": null,
+    "actual_paid_orders": null,
+    "actual_full_session_game_length": null,
+    "actual_zero_paid_sales_fraction": null,
+    "actual_developer_net_cash": null,
+    "actual_developer_profit": null,
+    "causal_price_elasticity": null,
+    "causal_playtime_review_effect": null
+  },
+  "no_game_level_rows_copied": true,
+  "no_partner_ledger_or_account_access": true
+}

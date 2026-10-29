@@ -1786,6 +1786,17 @@
       "evidence_class": "first_party_current_undated_public_marketing_reach_claims",
       "license": "Link and independently authored factual summaries only; no original images, creative assets or source article copies.",
       "notes": "Landing says over 132 million monthly active users and approximately 1 trillion daily impressions; source does not show underlying measurement month, unique paying customer total or independently audited methodology."
+    },
+    {
+      "id": "steam-marketyourindie-review-playtime-price-20260815",
+      "url": "https://marketyourindie.com/research/playtime-and-price",
+      "title": "What an hour of an indie game costs, and what happens when it costs too much",
+      "publisher": "MarketYourIndie / Juan Pablo Russo",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "independent_curated_steam_price_and_review_playtime_aggregates",
+      "license": "Public aggregate figures and data are CC BY 4.0, credited to MarketYourIndie with canonical URL; no original charts or game-level records reproduced.",
+      "notes": "Measured 2026-08-15; review-playtime window 2026-08-07 to 2026-08-08. Selected 6954 paid Steam games with >=50 reviews and >=10 recent-review playtime values, up to 100 most recent reviews/game. Highly visible non-random games and non-random reviewers; not paid checkout or actual profit."
     }
   ],
   "claims": [
@@ -11628,6 +11639,167 @@
       "confidence": "first_party_public_marketing_aggregate_not_payer_estimate",
       "observed_at": "2026-10-29",
       "limitations": "Repeated and personalized impressions, undated reporting and missing user-level joins prevent a defensible per-person exposure or sales estimate."
+    },
+    {
+      "id": "steam-value-reviewer-curated-6954",
+      "text": "MarketYourIndie reports a curated August 15, 2026 analysis of 6,954 selected paid Steam games, not a random sample of the paid-release catalog.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "Games without substantial reviews and historical delisted titles can be absent; no complete originally-paid cohort denominator is established."
+    },
+    {
+      "id": "steam-value-reviewer-50review-minimum",
+      "text": "The study selects games with at least 50 reviews, requires ten recent-review playtime measurements per game, and samples up to the 100 most recent reviews.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "The selection observes people who wrote Steam reviews, not a representative population of all paid buyers or all game sessions."
+    },
+    {
+      "id": "steam-value-reviewer-sample-median2026",
+      "text": "The median included game has 2,026 reviews, indicating that the observed playtime-price relation is mainly drawn from games with established review visibility.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "This median is conditional on the curated source pool, not the typical release, first-time studio, or all Steam publishers."
+    },
+    {
+      "id": "steam-value-reviewer-price-bands6954",
+      "text": "Seven price-band game counts add to the reported 6,954-game sample, from 1,012 games under $5 to 334 games priced $40 or more.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "These regular-price categories are not unique buyer counts, volume-weighted purchase prices or proof of complete public AppID coverage."
+    },
+    {
+      "id": "steam-value-reviewer-hours-low-high",
+      "text": "The source reports 3.3 median reviewer-hours at review time for games with regular prices under $5 versus 26 hours for games listed at $40 and above.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "Reviewer-attached playtime at time of writing is not a game's completion length or lifetime playtime of all purchasers."
+    },
+    {
+      "id": "steam-value-reviewer-regular-price-hour-plateau",
+      "text": "For five regular-price bands starting at $10, source-reported median regular-price dollars per reviewer-hour lies between $1.90 and $2.06.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "A ratio computed from current regular price and reviewer playtime is not the historical regional discounted price actually paid."
+    },
+    {
+      "id": "steam-value-reviewer-sentiment-steep-gradient",
+      "text": "Across cost-per-hour categories, median positive review share declines from 89.5% in the under-$0.50 group to 67.1% at $10 or more per reviewer-hour.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "The result is an observational cross-section with self-selected reviewers and correlated causes; it is not a causal pricing or hours effect."
+    },
+    {
+      "id": "steam-value-reviewer-below70-gradient",
+      "text": "The share of games with fewer than 70% positive Steam reviews rises from 5% in the lowest to 55% in the highest displayed regular-price-per-reviewer-hour group.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "No verified paid orders, refund-adjusted cash, customer satisfaction panel or interventions are observed in these aggregated review categories."
+    },
+    {
+      "id": "steam-value-reviewer-withinprice-gap",
+      "text": "In within-price-band reviewer-playtime quartile comparisons, the difference between long- and short-playtime groups' median positive-review percentages ranges from 2.9 to 8.8 percentage points.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "Even comparison within price bands is confounded by genre, quality, marketing, gameplay differences, game age and reviewing propensity."
+    },
+    {
+      "id": "steam-value-reviewer-nonrandom-long-short",
+      "text": "The within-price comparison draws on 3,472 quartile-group observations and does not measure a counterfactual where the same game is made longer.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "These are selected price-band tails rather than randomized developer treatments or a matched full-market release sample."
+    },
+    {
+      "id": "steam-value-reviewer-genre-spread",
+      "text": "The source's one-genre-per-game groups range from RPG at $1.20 to Horror at $2.16 median regular-price dollars per reviewer-hour.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "Assigned genres are source-specific, current listed prices do not equal paid checkouts, and review-hour expectations need not represent willingness to pay."
+    },
+    {
+      "id": "steam-value-reviewer-cohorts-add-up",
+      "text": "The study's cohorts of 2,555 pre-2020, 2,322 2020–2023, and 2,077 games released in 2024 or later sum to 6,954.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "Release-year partitioning does not account for delistings, review-availability selection, Early Access first-paid dates, or buyer-price changes."
+    },
+    {
+      "id": "steam-value-reviewer-cohort-association-not-cause",
+      "text": "The source reports broadly similar cost-per-hour/review-sentiment gradients separately in three launch-era groups, but does not identify a causal mechanism.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "Cohort stratification is not a randomized treatment; self-selection, refund censoring and unobserved quality may still induce the association."
+    },
+    {
+      "id": "steam-value-reviewer-no-genre-optimum",
+      "text": "The reviewer's regular-price-per-hour rate and the source's genre medians cannot establish the profit-maximizing Steam list price or an optimal target length.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815",
+        "steam-price-rules-2026"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "No authenticated sales, matching refunds, customer spending, production effort, marketing costs or fixed-horizon merchant income were obtained."
+    },
+    {
+      "id": "steam-value-reviewer-no-retailer-profit",
+      "text": "An observed association between recent reviewer playtime and positive reviews does not estimate zero paid orders, median publisher net proceeds or after-cost profit.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "The study includes no actual item-level paid-order series, legal payee grouping, settlement history, withheld payments or attributable cost data."
+    },
+    {
+      "id": "steam-value-reviewer-no-fixed-hour-value",
+      "text": "A single dollars-per-reviewer-hour benchmark is not transferable across genres or playable formats and cannot substitute for controlled product value research.",
+      "source_ids": [
+        "steam-marketyourindie-review-playtime-price-20260815"
+      ],
+      "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "The source's curated survivor pool excludes low-review releases and cannot establish customer preference effects for unlaunched games."
     }
   ],
   "observations": [],
@@ -11635,5 +11807,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Steamworks advertises over 132 million monthly active users and one trillion daily impressions, but neither supplies unique paying customers, indie premium-game buyers or publisher receipts. Dated, matched buyer denominators remain missing."
+  "summary": "An independent selected 6,954-game Steam reviewer-playtime study finds listed price, reviewer hours and sentiment covary; review-selection bias and reverse causality prevent inference about game length value, buyer checkouts or developer income."
 }
