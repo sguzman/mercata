@@ -7513,6 +7513,70 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Developer implementation labor, buyer activity and net publisher receipts remain unknown."
+    },
+    {
+      "id": "steam-acquisition-utm-attribution-is-not-incrementality",
+      "text": "Steam's UTM purchases are credited within a 72-hour link-based window but do not establish how many purchases would have occurred without the paid campaign.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028",
+        "steam-advertising-policy-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Incrementality requires a credible control, randomized comparison or an explicit independently validated design; even attributed purchase events are not buyer-unique."
+    },
+    {
+      "id": "steam-acquisition-real-paid-order-margin-private",
+      "text": "Steam's partner financial API distinguishes paid package checkout, refunded units, taxes and retail-key activations; it does not publicly disclose a publisher's actual take-home margin per incremental customer.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Contractual shares, variable support costs, currency timing, returns and outside-store receipts need additional authorized records."
+    },
+    {
+      "id": "steam-acquisition-maximum-cac-algebra",
+      "text": "A hypothetical campaign can cover variable customer-acquisition cost only when its incremental net receipts exceed the incremental unit/service costs and fixed campaign costs.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-advertising-policy-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a deterministic arithmetic condition, not an empirical Steam acquisition-cost benchmark, recommendation or forecast."
+    },
+    {
+      "id": "steam-acquisition-offsite-ad-allowed",
+      "text": "Valve permits paid advertising outside Steam directing customers to a Steam product page and recommends UTM attribution for measuring traffic.",
+      "source_ids": [
+        "steam-advertising-policy-official-20261028",
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The policy does not provide actual cost-per-click, marginal sales, or long-run commercial impact."
+    },
+    {
+      "id": "steam-acquisition-late-refunds-distort-utm",
+      "text": "UTM conversion totals can be finalized before later customer refunds, so attributed purchases cannot substitute for actual settled net cash after returns.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Even reconciled paid orders are not proof of causal incrementality without suitable controls."
+    },
+    {
+      "id": "steam-acquisition-incremental-order-count-unknown",
+      "text": "Without a control group or credible counterfactual, an observed UTM-attributed purchase count cannot be treated as the number of incremental paid orders caused by advertising.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The causal quantity may differ from attributed counts; no random trial, creator study or measured uplift was performed."
     }
   ],
   "observations": [],
@@ -7520,5 +7584,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Mercata Steam research now documents DRM/authentication and save-file portability limits that influence buyer switching while retaining uncertainty about actual cross-store repurchases and publisher profits."
+  "summary": "Steam public research distinguishes attribution, causal incremental sales, after-tax publisher receipts and synthetic paid acquisition break-even. No seller-wide true CAC, actual developer profits or representative publisher income measured."
 }

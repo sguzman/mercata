@@ -1,10 +1,14 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 85% task-weighted.** Verified official-document findings advanced selected tasks; many remain partially researched, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 86% task-weighted.** Verified official-document findings advanced selected tasks; many remain partially researched, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
+
+## Paid marketing incrementality and CAC checkpoint
+
+The [paid acquisition and unit-margin analysis](../ontology/steam/paid-acquisition-incrementality-and-unit-margin-2026.md) separates UTM-attributed purchase events from causally incremental paid orders, and provides a [synthetic-only budget evaluator](../site/steam-acquisition-economics.mjs) with explicit unknown real CAC and publisher profit. **Progress 86%** (exact 85.597%, Δ +1 pp from 85%) across the unchanged 293 tasks. This research contains no paid advertising or private ledgers.
 
 ## Steam DRM, cloud saves and customer switching checkpoint
 
@@ -449,30 +453,26 @@ The [partner identity, sharing and collaborative bundle study](../ontology/steam
 
 The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplayer-network-and-steampipe-operations-2026.md) separate lobby discovery from game transport and verified server costs, and distinguish incremental download chunks from temporary disk-copy work. **Score 75%** (exact 74.795%, Δ +2 pp from 73%) across the original 293 tasks. No game build, benchmark or merchant report was accessed.
 
-## Evidence and stopping rules
+## Evidence and stopping rules — current state
 
-- This is a queued task inventory, not a Steam research finding.
-- The existing Steam dossier remains without sources, economic claims or observations.
-- Baseline 84 tasks are preserved verbatim, including their original IDs and zero progress.
-- All new tasks begin pending at 0% with empty evidence; creating the plan cannot advance research progress.
-- A source must be public and attributed, or an aggregate explicitly authorized for research and redistribution.
-- Official Steamworks merchant reports must not be fetched without specific authority; user or buyer records must not enter this public repository.
-- Public reviews, CCU, activity, wishlist estimates, keys and downloads are not independently verified paid game transactions.
-- Zero earners, delisted paid titles and comparable release windows must enter legitimate sampling frames before mean or median claims.
-- Missing sales/earnings/unique-buyer numbers remain unknown, not zero.
-- Research execution, financial account access, scraping, experiments and paid game publication require separate authorization.
+- The Steam platform has an active source-backed dossier with **112 sources and 613 bounded claims**, not an empty dossier.
+- The original inventory is preserved at **84 baseline plus 209 specialist tasks = 293 tasks**; current task scores reflect partial evidence and acceptance criteria rather than an assertion of verified commercial outcomes.
+- Public documentation can validate platform policies, product types and report semantics. It cannot independently supply zero-sale counts, merchant take-home or developer profits.
+- Model-based or voluntary/success-selected economic estimates remain labeled, dated and bounded; source access and publication terms must be honored.
+- Partner credentials, private sales ledgers, buyer identifiers, paid promotions and live publishing actions are excluded without appropriate separate authority.
+- All source data and arithmetic fixtures remain reproducible and explicitly labeled; missing outcomes remain **unknown, not zero**.
 
-## Proposed outputs — not yet produced
+## Research output targets and remaining evidence gaps
 
-- Official Steam distribution, partner eligibility and dated term crosswalk
-- Fixed paid-game release and publisher sampling frame including delisted and zero-sale titles
-- Wishlist, discovery, demo, festival and paid-buyer funnel dictionary
-- Price-, tax-, refund- and region-aware gross-to-settled-proceeds model
-- Versioned review-to-sales estimation uncertainty and independent model calibration audit
-- Cohort-matched gross/net income distribution with mean, median, tails, zero earners and costs when available
-- Small-team and solo-developer production/QA/launch labor and break-even scenarios
-- Rights, security, compliance, platform continuity and key-sale risks
-- Falsifiable low-risk launch and marketing experiments, designed but not executed
-- Source-provenance and missing-data register with public human and machine summaries
+- **Documented:** Official Steam distribution, partner eligibility and dated term crosswalk
+- **Protocol documented; full population unavailable:** Fixed paid-game release and publisher sampling frame including delisted and zero-sale titles
+- **Documented; unobserved sales conversions:** Wishlist, discovery, demo, festival and paid-buyer funnel dictionary
+- **Synthetic model documented; actual merchant values unavailable:** Price-, tax-, refund- and region-aware gross-to-settled-proceeds model
+- **Partial; independent low-sales ground truth unavailable:** Versioned review-to-sales estimation uncertainty and independent model calibration audit
+- **Blocked by permissioned complete representative data:** Cohort-matched gross/net income distribution with mean, median, tails, zero earners and costs when available
+- **Hypothetical scenarios documented; verified labor distributions unavailable:** Small-team and solo-developer production/QA/launch labor and break-even scenarios
+- **Documented from public policies:** Rights, security, compliance, platform continuity and key-sale risks
+- **Designs documented, no live experiments:** Falsifiable low-risk launch and marketing experiments
+- **Implemented; maintain current:** Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 85%** rounded task-weighted progress across 293 tasks; prior 85%, Δ +0 pp (exact 85.273%). 64 fully verified and 229 partially researched; 112 public sources and 607 bounded claims. No account logins, game testing or merchant finances.
+**Completion: 86%** rounded task-weighted progress across 293 tasks; previous 85%, Δ +1 pp (exact 85.597%). 64 fully verified, 229 partially researched; 112 public sources and 613 bounded claims. No accounts, advertising spend, buyer histories, merchant ledgers or executed campaigns.

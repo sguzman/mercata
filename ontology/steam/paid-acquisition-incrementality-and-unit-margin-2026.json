@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "paid_customer_acquisition_incrementality_cash_margin_design_only",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-utm-analytics-official-20261028",
+    "steam-advertising-policy-official-20261028",
+    "steam-financial-api-official",
+    "steam-refund-rules-2026"
+  ],
+  "claim_ids": [
+    "steam-acquisition-utm-attribution-is-not-incrementality",
+    "steam-acquisition-real-paid-order-margin-private",
+    "steam-acquisition-maximum-cac-algebra",
+    "steam-acquisition-offsite-ad-allowed",
+    "steam-acquisition-late-refunds-distort-utm",
+    "steam-acquisition-incremental-order-count-unknown"
+  ],
+  "definitions": {
+    "paid_incremental_order": "Verified paid Steam checkout that would not have occurred without campaign; counterfactual not directly observed",
+    "utm_attributed_purchase": "Steam UTM conversion event within 72 hours; association rather than causal uplift",
+    "utm_activation": "Free-to-play license or Steam key redemption; not necessarily a paid Steam store order",
+    "net_partner_receipt": "Assumed net cash accruing to the relevant publisher after refunds, tax, platform and partner contracts; must be attested before real use",
+    "variable_cost": "Per-order customer support, services and additional fulfillment",
+    "maximum_sustainable_cac": "Marginal receipt minus marginal variable cost and any reserve/fixed campaign allocation; not based on ad click counts"
+  },
+  "synthetic_only_example": {
+    "assumed_incremental_paid_orders": 10,
+    "assumed_net_partner_receipt_per_order_cents": 800,
+    "variable_support_per_order_cents": 150,
+    "other_variable_cost_per_order_cents": 50,
+    "ad_spend_cents": 3000,
+    "fixed_creative_cost_cents": 4000,
+    "required_profit_reserve_cents": 1000,
+    "expected_unit_contribution_cents": 600,
+    "expected_total_incremental_contribution_cents": 6000,
+    "expected_total_campaign_cost_cents": 7000,
+    "expected_campaign_surplus_cents": -1000,
+    "expected_max_ad_spend_with_reserve_cents": 1000,
+    "expected_minimum_incremental_orders_for_reserve": 14
+  },
+  "evidence_gates": [
+    "Eligible paid Steam AppIDs and package allocation",
+    "Merchant-verified refund-adjusted net receipts matched to campaign window",
+    "Publisher contracts, tax and settlement periods",
+    "Net variable service/support costs per paid order",
+    "Randomized or otherwise credible incremental-order design",
+    "Budget/cash loss cap established prospectively",
+    "Response/nonresponse and exposure tracking; UTM attribution not used as causal proof"
+  ],
+  "unknown": {
+    "true_paid_cac": null,
+    "causal_paid_order_uplift": null,
+    "typical_indie_campaign_conversion": null,
+    "real_campaign_profit": null,
+    "merchant_paid_orders": null,
+    "representative_first_game_return_on_ads": null
+  },
+  "no_spend": true,
+  "no_account_access": true,
+  "no_merchant_data": true,
+  "no_experiment": true
+}
