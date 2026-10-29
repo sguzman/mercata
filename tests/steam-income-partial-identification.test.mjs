@@ -8,7 +8,7 @@ test('Synthetic complete observed cohort gives a point identified lower median',
 });
 test('Missing outcomes yield ordered partial identification intervals, not imputations',()=>{
  const a=boundGrossPaidGameLowerMedian({eligibleFrameSize:5,observedGrossUsd:[10,20,30],frameComplete:true});
- assert.equal(a.lower_median_dollars_lower_bound,0);assert.equal(a.lower_median_dollars_upper_bound,30);assert.equal(a.exact_zero_sale_fraction,null);
+ assert.equal(a.lower_median_dollars_lower_bound,10);assert.equal(a.lower_median_dollars_upper_bound,30);assert.equal(a.exact_zero_sale_fraction,null);
  const b=boundGrossPaidGameLowerMedian({eligibleFrameSize:5,observedGrossUsd:[10,20,30,40],frameComplete:true});
  assert.equal(b.lower_median_dollars_lower_bound,20);assert.equal(b.lower_median_dollars_upper_bound,30);
 });

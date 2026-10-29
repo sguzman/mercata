@@ -21,7 +21,7 @@ These extreme assignments are **possible values used for proof**, not claims tha
 | Entirely invented population | Known, complete gross observations | Missing | Lower-median possibilities |
 | --- | --- | ---: | --- |
 | Five complete | $0, $10, $20, $50, $100 | 0 | $20 to $20 |
-| Five, only three observed | $10, $20, $30 | 2 | $0 to $30 |
+| Five, only three observed | $10, $20, $30 | 2 | $10 to $30 |
 | Five, four observed | $10, $20, $30, $40 | 1 | $20 to $30 |
 | Five, two observed | $10, $20 | 3 | $0 to **unbounded** |
 
