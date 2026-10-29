@@ -1929,6 +1929,17 @@
       "evidence_class": "public_developer_authored_first_person_sales_disclosure",
       "license": "Public URL, metadata and short independently authored factual summaries only.",
       "notes": "Released March 10; report posted April 6 and describes about the first two weeks, but exact sales cutoff not shown. Sales below 300 units, 14 refunds, about USD 1,500 before Steam share, rough wishlist counts."
+    },
+    {
+      "id": "steam-author-sim-firstgame-aug2026-reddit",
+      "url": "https://www.reddit.com/r/gamedev/comments/1vz3t5u/postmortem_of_a_solo_devs_first_game_7k_gross_in/",
+      "publisher": "Self-identified game developer — public r/gamedev post",
+      "title": "Postmortem of a solo dev's first game - $7K gross in 2 weeks",
+      "published_at": "2026-08-26",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "voluntary_first_person_steam_developer_launch_disclosure",
+      "license": "Only metadata, URL and concise independently authored numerical interpretations; no reproduced Reddit post body.",
+      "notes": "First solo game reported after Aug 12 release: 820 sold, 82 returned, USD 7,047 gross, USD 5,812 labeled net, 5,175 launch wishlists. Unauthenticated finances; share, payout and production costs not established."
     }
   ],
   "claims": [
@@ -13342,6 +13353,66 @@
       "confidence": "medium",
       "observed_at": "2026-10-29",
       "limitations": "Selection of public reporter, exact observation window and income cost coverage are unknown."
+    },
+    {
+      "id": "steam-authorsim-first-title-date-20261029",
+      "text": "A developer posting on August 26, 2026 identified Author Sim as a first solo Steam game released August 12, 2026.",
+      "source_ids": [
+        "steam-author-sim-firstgame-aug2026-reddit"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Publication is exactly 14 calendar days after the self-reported release date, without independently authenticated reporting timestamps."
+    },
+    {
+      "id": "steam-authorsim-selfreport-units-refunds-20261029",
+      "text": "The developer stated that 820 copies had been sold and 82 returned after the release.",
+      "source_ids": [
+        "steam-author-sim-firstgame-aug2026-reddit"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Figures are author self-report, not a Steamworks ledger export or independently sampled population."
+    },
+    {
+      "id": "steam-authorsim-gross-net-labels-20261029",
+      "text": "The developer supplied USD 7,047 as gross revenue and USD 5,812 as net revenue for the two-week account.",
+      "source_ids": [
+        "steam-author-sim-firstgame-aug2026-reddit"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The net label's deductions, platform-share stage, tax settlement and bank credit are not defined sufficiently to infer proceeds."
+    },
+    {
+      "id": "steam-authorsim-seventy-percent-ratio-mismatch-20261029",
+      "text": "The reported USD 5,812 net amount is greater than a hypothetical 70 percent of the reported USD 7,047 gross amount, so it is not the output of applying only a 30 percent deduction to that same gross total.",
+      "source_ids": [
+        "steam-author-sim-firstgame-aug2026-reddit"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "A simplified comparison is not a reconstruction of Valve's actual revenue share, refunds, VAT, chargebacks, currency conversion or publisher remittance."
+    },
+    {
+      "id": "steam-authorsim-launch-wishlists-not-purchases-20261029",
+      "text": "The author reported 5,175 launch wishlists and 7,069 later wishlists while discussing festival, trailer and store-calendar traffic.",
+      "source_ids": [
+        "steam-author-sim-firstgame-aug2026-reddit"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Wishlist stock changes and self-attributed channel contributions do not establish matched buyer conversions or causal campaign lift."
+    },
+    {
+      "id": "steam-authorsim-firstgame-not-market-profit-20261029",
+      "text": "A voluntarily reporting first game with no completed development-cost ledger cannot identify the typical Steam publisher's profit or median received income.",
+      "source_ids": [
+        "steam-author-sim-firstgame-aug2026-reddit"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The case is selected, unmatched to nonreporting games and lacks wages, opportunity costs and payment settlement proof."
     }
   ],
   "observations": [],

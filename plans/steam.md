@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Author-reported first-game gross versus an ambiguous net label (October 29, 2026)
+
+The [two-week first-game self-report](../ontology/steam/steam-author-sim-firstgame-net-stage-2026.md) compares the author's USD 7,047 gross with USD 5,812 labeled net. A hypothetical same-base 30% platform deduction does not produce that net amount; neither number proves a bank deposit or earnings after labor. One additional public source and six bounded claims raise the unchanged **293-task** Steam score to **91.205%** (Δ **+0.003 pp**).
+
 ## Developer early-launch report with unknown time cutoff (October 29, 2026)
 
 The [new public two-week author disclosure](../ontology/steam/steam-monstergirl-first-window-2026.md) documents approximate sales, refunds, pre-share revenue, and wishlist observations, but its publication was 27 days after launch and the report-end date is unknown. Fixed-window conversions remain unidentified. The **293-task** plan now scores **91.201%** (Δ **+0.003 pp**) with no new denominator or merchant claims.
