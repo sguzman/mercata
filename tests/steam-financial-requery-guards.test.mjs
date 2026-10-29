@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
-import {reconcileSyntheticSteamFinancialDays as reconcile} from '../site/steam-financial-requery-guards.mjs';
+import {reconcileSyntheticSteamFinancialDays as reconcile,auditSyntheticSteamChangedDatePolls as auditPolls} from '../site/steam-financial-requery-guards.mjs';
 const read=x=>JSON.parse(fs.readFileSync(new URL('../'+x,import.meta.url),'utf8'));
 const doc=read('ontology/steam/steam-financial-changed-date-requery-2026.json'),d=read('specimens/steam.json'),p=read('plans/steam.json'),q=read('queues/steam.json');
 const fixture=()=>structuredClone(doc.synthetic_batches);
@@ -42,4 +42,25 @@ test('Original 293 Steam tasks, public evidence and source/claim join remain int
  const scores=[...p.detail_tasks.map(t=>t.percent),...q.queues.flatMap(g=>g.tasks.map(t=>t.progress))];
  assert.equal(scores.length,293);assert.equal(p.progress_percent,Math.round(scores.reduce((a,b)=>a+b,0)/293));
  assert(Object.values(doc.unknown).every(x=>x===null));
+});
+
+test('Outer changed-date highwatermark is distinct from each daily pagination cursor',()=>{
+ const x=auditPolls(doc.synthetic_changed_date_polls);
+ assert.equal(x.number_of_polls,3);
+ assert.equal(x.unique_changed_dates,2);
+ assert.equal(x.total_changed_date_notifications,3);
+ assert.equal(x.repeated_date_notifications,1);
+ assert.equal(x.final_changed_date_highwatermark,120);
+ assert.equal(x.outer_changed_date_marker_interchangeable_with_per_day_page_cursor,false);
+ const counts=x.days_to_fully_requery.map(day=>[day,doc.synthetic_batches.filter(batch=>batch.financial_date_pt===day).length]);
+ assert.deepEqual(counts,[['2026-05-01',2],['2026-05-02',1]]);
+});
+test('Outer changed-date poll rejects stale markers and duplicates, while allowing empty unchanged polls',()=>{
+ const good=structuredClone(doc.synthetic_changed_date_polls);
+ const x=auditPolls(good);assert.equal(x.final_changed_date_highwatermark,120);
+ const stale=structuredClone(good);stale[1].input_highwatermark=0;assert.throws(()=>auditPolls(stale),/chain/);
+ const backwards=structuredClone(good);backwards[1].result_highwatermark=99;assert.throws(()=>auditPolls(backwards),/chain/);
+ const phantom=structuredClone(good);phantom[2].changed_dates_pt=['2026-05-03'];assert.throws(()=>auditPolls(phantom),/Unchanged/);
+ const dupe=structuredClone(good);dupe[1].changed_dates_pt.push('2026-05-01');assert.throws(()=>auditPolls(dupe),/Unique/);
+ const real=structuredClone(good);real[0].fixture_poll_id='actual-merchant';assert.throws(()=>auditPolls(real),/synthetic/);
 });

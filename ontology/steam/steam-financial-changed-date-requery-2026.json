@@ -130,5 +130,32 @@
     "exact_zero_sales_fraction": null,
     "historically_complete_appid_frame": null
   },
-  "no_financial_key_no_partner_account_no_real_records": true
+  "no_financial_key_no_partner_account_no_real_records": true,
+  "synthetic_changed_date_polls": [
+    {
+      "fixture_poll_id": "fixture-poll-first",
+      "input_highwatermark": 0,
+      "result_highwatermark": 100,
+      "changed_dates_pt": [
+        "2026-05-01"
+      ]
+    },
+    {
+      "fixture_poll_id": "fixture-poll-next",
+      "input_highwatermark": 100,
+      "result_highwatermark": 120,
+      "changed_dates_pt": [
+        "2026-05-01",
+        "2026-05-02"
+      ]
+    },
+    {
+      "fixture_poll_id": "fixture-poll-empty",
+      "input_highwatermark": 120,
+      "result_highwatermark": 120,
+      "changed_dates_pt": []
+    }
+  ],
+  "changed_date_poll_model": "auditSyntheticSteamChangedDatePolls",
+  "outer_changed_date_marker_is_daily_pagination_cursor": false
 }

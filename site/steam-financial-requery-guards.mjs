@@ -80,3 +80,35 @@ export function reconcileSyntheticSteamFinancialDays(batches){
   actual_paid_appid_units:null,actual_zero_sale_fraction:null,actual_developer_net_receipts:null,
   caveat:'Purely fabricated daily aggregates. A full page traversal for a date is not historical partner, AppID, cohort, or payout completeness. No data is independently verified.'};
 }
+
+export function auditSyntheticSteamChangedDatePolls(polls){
+ if(!Array.isArray(polls)||polls.length===0)throw new TypeError('Nonempty synthetic changed-date polls required');
+ const ids=new Set(),counts=new Map();let cursor=0;
+ for(const poll of polls){
+  if(!permitted(poll,['fixture_poll_id','input_highwatermark','result_highwatermark','changed_dates_pt'])||
+   !fixture(poll.fixture_poll_id)||ids.has(poll.fixture_poll_id))throw new TypeError('Unique synthetic changed-date poll ID required');
+  ids.add(poll.fixture_poll_id);
+  if(!natural(poll.input_highwatermark)||!natural(poll.result_highwatermark)||poll.input_highwatermark!==cursor||
+   poll.result_highwatermark<cursor)throw new RangeError('Broken changed-date highwatermark chain');
+  if(!Array.isArray(poll.changed_dates_pt))throw new TypeError('Changed-date list must be present');
+  const local=new Set();
+  for(const day of poll.changed_dates_pt){
+   if(!iso(day)||local.has(day))throw new TypeError('Unique valid Pacific-time changed date required per poll');
+   local.add(day);counts.set(day,(counts.get(day)||0)+1);
+  }
+  if(cursor===poll.result_highwatermark&&poll.changed_dates_pt.length>0)
+   throw new RangeError('Unchanged marker cannot accompany new changed-date events');
+  cursor=poll.result_highwatermark;
+ }
+ return {kind:'synthetic_changed_date_incremental_poll_audit',
+  number_of_polls:polls.length,unique_changed_dates:counts.size,
+  total_changed_date_notifications:[...counts.values()].reduce((a,b)=>a+b,0),
+  repeated_date_notifications:[...counts.values()].reduce((a,b)=>a+b-1,0),
+  final_changed_date_highwatermark:cursor,
+  days_to_fully_requery:[...counts.keys()].sort(),
+  repeat_notifications_require_full_date_replacement:true,
+  outer_changed_date_marker_interchangeable_with_per_day_page_cursor:false,
+  key_or_real_merchant_data_used:false,
+  actual_sales_change_distribution:null,
+  caveat:'Invented change markers and dates only. Complete per-date page retrieval and prior-period access are independently necessary.'};
+}

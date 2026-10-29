@@ -2,6 +2,12 @@
 
 **Reviewed October 29, 2026.** [Machine-readable synthetic case](steam-financial-changed-date-requery-2026.json) · [deterministic guard](../../site/steam-financial-requery-guards.mjs) · [tests](../../tests/steam-financial-requery-guards.test.mjs). No financial key, partner account or real sale was accessed.
 
+## Two independent highwatermarks
+
+The same official interface provides **an outer changed-date polling watermark** from `GetChangedDatesForPartner` and an **inner per-date page cursor** for `GetDetailedSales`. They are not interchangeable. Each returned changed date triggers a new detailed query beginning at a per-date cursor of zero even if that date appeared in an earlier poll. A returned unchanged outer marker with no changed dates is a valid no-update result; repeated dates in later polls signify a required full refresh rather than duplicate new sale events.
+
+The additional [synthetic polling audit](../../site/steam-financial-requery-guards.mjs) uses three invented polls and two changed days, with May 1 repeated in successive polls. It checks monotonic outer cursor chaining, no duplicate dates within a single poll, and the separate date-level refresh requirement. No financial credentials, event timing or sales distributions were observed.
+
 ## Date corrections are not new sales to append
 
 [Valve's IPartnerFinancialsService documentation](https://partner.steamgames.com/doc/webapi/IPartnerFinancialsService?l=english) defines `GetChangedDatesForPartner`, which reports a date again when its calculated sales data changes. Valve specifically instructs partners to **re-fetch the entire day and replace the prior stored results**. Later refunds, settlement changes and corrections may revise totals or remove previously returned rows. Appending the refreshed date instead would double-count old rows, overstate gross volume and misclassify real zero/nonzero results.
