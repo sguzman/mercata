@@ -34,6 +34,25 @@ test('A missing or duplicate fixture row, key-as-sale, and private-looking field
  const e=fixture();e[0].fixture_batch_id='real-report';assert.throws(()=>reconcile(e),/synthetic/);
  const f=fixture();f[1].visibility_scope='includes_view_grants';assert.throws(()=>reconcile(f),/visibility/);
 });
+test('Valve line-item and sale-type labels must agree with the economic category',()=>{
+ const rows=fixture();
+ assert.equal(rows[0].pages[0].rows[0].line_item_type,'Package');
+ assert.equal(rows[0].pages[0].rows[0].package_sale_type,'Steam');
+ assert.equal(rows[0].pages[0].rows[1].package_sale_type,'Retail');
+ assert.equal(rows[1].pages[0].rows[1].line_item_type,'MicroTxn');
+ assert.equal(reconcile(rows).totals.retail_key_units_activated,0);
+ const fakeMicro=fixture();fakeMicro[1].pages[0].rows[0].kind='microtransaction';
+ assert.throws(()=>reconcile(fakeMicro),/classification disagrees/);
+ const fakeRetail=fixture();fakeRetail[0].pages[0].rows[1].package_sale_type='Steam';
+ assert.throws(()=>reconcile(fakeRetail),/classification disagrees/);
+ const fakePackage=fixture();fakePackage[1].pages[0].rows[1].package_sale_type='Retail';
+ assert.throws(()=>reconcile(fakePackage),/classification disagrees/);
+ const oneField=fixture();delete oneField[0].pages[0].rows[0].package_sale_type;
+ assert.throws(()=>reconcile(oneField),/classification disagrees/);
+ const minimal=fixture();delete minimal[0].pages[0].rows[0].package_sale_type;
+ delete minimal[0].pages[0].rows[0].line_item_type;
+ assert.equal(reconcile(minimal).totals.steam_package_gross_units_sold,10);
+});
 test('Reported net units reconcile signed returns and refund-heavy days',()=>{
  const f=fixture();
  assert.equal(f[0].pages[0].rows[0].reported_net_units_sold,9);

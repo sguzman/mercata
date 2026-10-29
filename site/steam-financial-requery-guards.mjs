@@ -26,7 +26,7 @@ const permitted=(obj,allowed)=>obj&&typeof obj==='object'&&!Array.isArray(obj)&&
 const kinds=new Set(['steam_package','retail_key_activation','microtransaction']);
 const batchKeys=['fixture_batch_id','financial_date_pt','visibility_scope','pages'];
 const pageKeys=['requested_highwatermark_id','returned_max_id','rows'];
-const rowKeys=['fixture_row_id','kind','gross_units_sold','gross_units_returned','gross_units_activated','reported_net_units_sold'];
+const rowKeys=['fixture_row_id','kind','gross_units_sold','gross_units_returned','gross_units_activated','reported_net_units_sold','line_item_type','package_sale_type'];
 
 export function reconcileSyntheticSteamFinancialDays(batches){
  if(!Array.isArray(batches)||!batches.length)throw new TypeError('Nonempty synthetic daily reports required');
@@ -55,6 +55,12 @@ export function reconcileSyntheticSteamFinancialDays(batches){
     if(!permitted(row,rowKeys)||!fixture(row.fixture_row_id)||observed.has(row.fixture_row_id)||!kinds.has(row.kind))
      throw new TypeError('Duplicate, nonfixture or unsupported report row');
     observed.add(row.fixture_row_id);
+    if(row.line_item_type!==undefined||row.package_sale_type!==undefined){
+     const fromApi=row.line_item_type==='Package'&&row.package_sale_type==='Steam'?'steam_package':
+      row.line_item_type==='Package'&&row.package_sale_type==='Retail'?'retail_key_activation':
+      row.line_item_type==='MicroTxn'&&(row.package_sale_type===undefined||row.package_sale_type===null)?'microtransaction':null;
+     if(fromApi!==row.kind)throw new RangeError('Valve line item classification disagrees with synthetic economic category');
+    }
     if(!natural(row.gross_units_sold)||!signedReturns(row.gross_units_returned)||!natural(row.gross_units_activated))
      throw new TypeError('Sold and activated units must be nonnegative; returned units must be signed nonpositive safe integers');
     if(row.kind==='retail_key_activation'){

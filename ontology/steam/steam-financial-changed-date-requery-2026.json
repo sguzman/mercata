@@ -37,14 +37,18 @@
               "gross_units_sold": 10,
               "gross_units_returned": -1,
               "gross_units_activated": 0,
-              "reported_net_units_sold": 9
+              "reported_net_units_sold": 9,
+              "line_item_type": "Package",
+              "package_sale_type": "Steam"
             },
             {
               "fixture_row_id": "fixture-retail-a",
               "kind": "retail_key_activation",
               "gross_units_sold": 0,
               "gross_units_returned": 0,
-              "gross_units_activated": 7
+              "gross_units_activated": 7,
+              "line_item_type": "Package",
+              "package_sale_type": "Retail"
             }
           ]
         },
@@ -70,7 +74,9 @@
               "gross_units_sold": 2,
               "gross_units_returned": -4,
               "gross_units_activated": 0,
-              "reported_net_units_sold": -2
+              "reported_net_units_sold": -2,
+              "line_item_type": "Package",
+              "package_sale_type": "Steam"
             },
             {
               "fixture_row_id": "fixture-mtx-b",
@@ -78,7 +84,8 @@
               "gross_units_sold": 5,
               "gross_units_returned": 0,
               "gross_units_activated": 0,
-              "reported_net_units_sold": 5
+              "reported_net_units_sold": 5,
+              "line_item_type": "MicroTxn"
             }
           ]
         },
@@ -104,7 +111,9 @@
               "gross_units_sold": 8,
               "gross_units_returned": -3,
               "gross_units_activated": 0,
-              "reported_net_units_sold": 5
+              "reported_net_units_sold": 5,
+              "line_item_type": "Package",
+              "package_sale_type": "Steam"
             }
           ]
         },
@@ -219,5 +228,12 @@
     "may_be_negative_on_refund_heavy_date": true,
     "retail_keys": "net_checkout_units_not_applicable",
     "merchant_ledger_observed": false
+  },
+  "category_validation_contract": {
+    "steam_package": "Package+Steam",
+    "retail_key_activation": "Package+Retail",
+    "microtransaction": "MicroTxn+no_package_sale_type",
+    "contradictory_kind_rejected": true,
+    "real_api_rows_received": false
   }
 }
