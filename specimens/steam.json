@@ -1808,6 +1808,28 @@
       "evidence_class": "first_party_third_party_service_methodology_and_use_restrictions",
       "license": "Public link and independently written summary only; no scraping, bulk data, full-page reproduction or original figures copied.",
       "notes": "SteamDB public FAQ explains SteamKit app/package changes, store parsing, concurrent player snapshots, Advance Access entitlement gaps, 5/10-minute schedules, unauthorized crawling restrictions, price history and data accuracy caveats."
+    },
+    {
+      "id": "steam-gifting-help-purchase-redemption-20261029",
+      "url": "https://help.steampowered.com/en/faqs/view/2C02-3563-B72F-F117",
+      "title": "Steam Support: Steam Gifts",
+      "publisher": "Valve Corporation / Steam Support",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_gift_purchase_redemption_refund_policy",
+      "license": "Public source link and independently written policy facts only; no source illustrations, text extracts or private purchase data reproduced.",
+      "notes": "Documents gift checkout, up-to-12-month scheduling, 30-day acceptance, automatic refund, redeemed gift refund consent, ownership and multipack/bundle exceptions."
+    },
+    {
+      "id": "steam-gifting-region-support-20261029",
+      "url": "https://help.steampowered.com/en/faqs/view/58D3-B80D-2943-3CC6",
+      "title": "Steam Support: Region Restrictions on Steam",
+      "publisher": "Valve Corporation / Steam Support",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_game_gift_region_eligibility_policy",
+      "license": "Public source link and concise independently paraphrased facts only, no graphics or private account information.",
+      "notes": "Gift redemption country restrictions appear at purchase and are subject to change; cannot infer geographic recipient purchase counts."
     }
   ],
   "claims": [
@@ -12161,6 +12183,165 @@
       "observed_at": "2026-10-29",
       "confidence": "high_official_feature_rules_and_synthetic_bound_only",
       "limitations": "No full base-game purchase outcome panel, sufficient non-admitted follow-up, comparable consented identities or costs was collected."
+    },
+    {
+      "id": "steam-gift-new-purchase-not-transfer",
+      "text": "Steam gift checkout purchases a new copy for the friend; an already owned game license cannot simply be transferred as a gift.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "This consumer licensing rule does not disclose individual gifting frequencies or game-level order counts across Steam."
+    },
+    {
+      "id": "steam-gift-checkout-distinct-from-acceptance",
+      "text": "A Steam gift is paid for during the purchaser's checkout; redemption later adds the license to the recipient's library and should not be counted as another paid checkout.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029",
+        "steam-financial-reporting-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "The public policy does not expose merchant reporting event IDs, reconciliation timing, or actual number of paid sales in a cohort."
+    },
+    {
+      "id": "steam-gift-30day-acceptance-refund",
+      "text": "Steam gives a gift recipient 30 days after delivery to accept or decline; an unaccepted delivered gift is automatically cancelled and refunded after 30 days.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "The exact end-of-day cutoffs and refund posting times for an individual gift require private records and cannot be inferred from publication date."
+    },
+    {
+      "id": "steam-gift-declined-refund",
+      "text": "Declining an offered game gift causes an automatic refund to its purchaser, leaving the recipient without a new retained gift license.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "Actual refund dates and amounts are not publicly available; a gift purchase followed by reversal is not necessarily a retained game sale."
+    },
+    {
+      "id": "steam-gift-scheduled-up-to-year",
+      "text": "A Steam game gift can be scheduled for delivery up to twelve months from checkout, creating a separation between payment and recipient library acquisition.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "Public consumer guidance gives the planning limit, not per-game actual scheduled-delivery distributions or an attributable revenue-recognition date."
+    },
+    {
+      "id": "steam-gift-redeemed-refund-approval",
+      "text": "For a redeemed Steam game gift, the recipient must approve the gift refund before the original purchaser submits the successful refund request.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029",
+        "steam-refund-rules-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "Consent to a refund is not a refund approval guarantee; policy eligibility and refunds can depend on playtime and other circumstances."
+    },
+    {
+      "id": "steam-gift-standard-refund-window",
+      "text": "Steam's usual gift refund policy references a purchase within fourteen days and under two hours played by the gift recipient.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029",
+        "steam-refund-rules-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "Standard refund eligibility is not a measured actual refund probability, and Valve may review requests outside ordinary conditions."
+    },
+    {
+      "id": "steam-gift-refund-removes-license",
+      "text": "If a gift is reversed for fraud or payment dispute, Steam may revoke the recipient's library license, distinguishing license ownership from historical purchase events.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "A revoked license does not erase that an original paid attempt existed; chargeback and refunded revenue require authorized ledger records."
+    },
+    {
+      "id": "steam-gift-regional-cannot-infer-eligibility",
+      "text": "Gifts can have country-of-redemption restrictions shown during purchase, so the number of Steam account users in a country cannot establish eligible cross-region gift buyers.",
+      "source_ids": [
+        "steam-gifting-region-support-20261029",
+        "steam-gifting-help-purchase-redemption-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "Region rules and country sets can change; no recipient geography, buyer country, payment eligibility or account-specific redemption outcome was inspected."
+    },
+    {
+      "id": "steam-gift-bundles-not-multipack-equivalent",
+      "text": "Some personalized Complete Your Collection Steam Bundles cannot be gifted, while multipacks have separate extra-copy handling; bundle gift eligibility is not universal.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029",
+        "steam-bundles-repeat-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "The rule differs by package and purchase type, and there is no validated complete bundle eligibility census or observed unit mix."
+    },
+    {
+      "id": "steam-bundle-gift-multiple-appid-units",
+      "text": "Valve says a Steam Bundle purchase contributes sales units to each constituent product's package report, not one independent total-platform game sale for the entire bundle.",
+      "source_ids": [
+        "steam-bundles-repeat-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "Package-level rows and cross-app overlap require product identities and authoritative partner reports before estimating distinct checkouts or buyers."
+    },
+    {
+      "id": "steam-gift-card-not-game-checkout",
+      "text": "A gift card or wallet credit transfer is a funding mechanism rather than evidence that a particular paid game AppID was purchased or redeemed.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029",
+        "steam-financial-reporting-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "Without individual wallet spending records, gift-card value cannot be converted into game units, recipient playtime or publisher proceeds."
+    },
+    {
+      "id": "steam-gift-activation-not-unique-payer",
+      "text": "A recipient who activates a paid gift may never have paid for that game, while a gift purchaser may buy for multiple recipients; gift activations do not identify unique paying customers.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "The official support process does not provide linked unique purchaser and recipient identities for cohort research; avoid any implied conversion rates."
+    },
+    {
+      "id": "steam-gift-pending-not-net-retained",
+      "text": "An accepted gift, an unaccepted pending gift and an automatically refunded gift can all originate from a paid checkout but have different later states.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029",
+        "steam-financial-reporting-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "A current consumer gift status does not establish final merchant gross units, adjusted revenue, taxation, bank payment or publisher profit."
+    },
+    {
+      "id": "steam-gift-public-procedures-not-sales-fraction",
+      "text": "Steam gift and region guidance provides state-transition definitions but no representative dataset of gift purchase frequencies, refunded gift share, exact zero-paid AppIDs or developer net income.",
+      "source_ids": [
+        "steam-gifting-help-purchase-redemption-20261029",
+        "steam-gifting-region-support-20261029",
+        "steam-financial-reporting-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
+      "limitations": "No customer activity logs, merchant transaction IDs, authorized AppID ledgers, partner cost records or population sampling were obtained."
     }
   ],
   "observations": [],
@@ -12168,5 +12349,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Steam Playtest random grants apply to volunteer requesters only. Grant, activation, demo reviews and wishlist notifications cannot establish paid full-game orders; actual Playtest and demo purchase conversion remain unknown."
+  "summary": "Gifted Steam purchases are distinct from acceptance, regional redemption, license activation and refunds. No gift conversion rate, distinct unique payer population, exact zero-paid-order fraction or representative developer proceeds are verified."
 }

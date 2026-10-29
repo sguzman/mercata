@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "gift_purchase_event_redemption_state_versus_license_and_refund_distinctions",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-gifting-help-purchase-redemption-20261029",
+    "steam-gifting-region-support-20261029",
+    "steam-bundles-repeat-2026",
+    "steam-financial-reporting-doc",
+    "steam-refund-rules-2026"
+  ],
+  "claim_ids": [
+    "steam-gift-new-purchase-not-transfer",
+    "steam-gift-checkout-distinct-from-acceptance",
+    "steam-gift-30day-acceptance-refund",
+    "steam-gift-declined-refund",
+    "steam-gift-scheduled-up-to-year",
+    "steam-gift-redeemed-refund-approval",
+    "steam-gift-standard-refund-window",
+    "steam-gift-refund-removes-license",
+    "steam-gift-regional-cannot-infer-eligibility",
+    "steam-gift-bundles-not-multipack-equivalent",
+    "steam-bundle-gift-multiple-appid-units",
+    "steam-gift-card-not-game-checkout",
+    "steam-gift-activation-not-unique-payer",
+    "steam-gift-pending-not-net-retained",
+    "steam-gift-public-procedures-not-sales-fraction"
+  ],
+  "scope": {
+    "purchase_checkout_account": "original payer",
+    "gift_recipient_account": "license activation holder",
+    "gift_can_be_scheduled_up_to_months": 12,
+    "delivered_gift_acceptance_days": 30,
+    "unaccepted_after_30days": "cancelled_and_refunded",
+    "redeemed_gift_refund_requires_recipient_consent": true,
+    "standard_refund_window_days": 14,
+    "standard_refund_max_playtime_hours": 2,
+    "region_restrictions_apply_by_purchase": true,
+    "personalized_bundles_may_not_be_giftable": true,
+    "multipacks_have_extra_copy_exception": true
+  },
+  "hypothetical_lifecycle_states": [
+    "direct_paid_retained",
+    "direct_paid_refunded",
+    "gift_paid_pending",
+    "gift_paid_accepted",
+    "gift_paid_declined_refunded",
+    "gift_paid_expired_refunded",
+    "gift_paid_redeemed_refunded",
+    "external_key_activated",
+    "free_license_activated",
+    "wallet_gift_card_funded"
+  ],
+  "unit_rules": {
+    "gift_acceptance_is_separate_checkout": false,
+    "gift_card_is_game_checkout": false,
+    "key_activation_is_store_game_checkout": false,
+    "refunded_gifts_may_have_historical_gross_attempts": true,
+    "unredeemed_pending_gifts_are_final_retained_units": false,
+    "bundle_product_rows_may_exceed_distinct_basket_purchases": true
+  },
+  "unknown": {
+    "actual_gift_paid_checkout_count": null,
+    "actual_gift_acceptance_rate": null,
+    "actual_refund_rate": null,
+    "unique_paying_customers": null,
+    "actual_refund_adjusted_store_units": null,
+    "merchant_net_revenue_usd": null,
+    "developer_after_cost_profit": null
+  },
+  "no_actual_player_orders_or_user_identifiers": true
+}
