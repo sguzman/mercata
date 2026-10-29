@@ -88,7 +88,9 @@ export function auditSyntheticFixedHorizonZeroSales(rows,opts={}){
   if(date!==undefined&&date!==null&&!iso(date))throw new TypeError('Invalid original paid release date');
   if(r.retired!==undefined&&typeof r.retired!=='boolean')throw new TypeError('Invalid retirement status');
   const hasReport=r.ledger_status!==undefined||r.observed_gross_paid_units!==undefined||
-   r.covered_from_day!==undefined||r.covered_until_day_exclusive!==undefined;
+   r.covered_from_day!==undefined||r.covered_until_day_exclusive!==undefined||
+   r.authorized_ledger_attested!==undefined||r.transfer_history_reconciled!==undefined||
+   r.paid_checkout_attribution_attested!==undefined;
   if(r.eligibility!=='eligible_paid_initially'||!date){
    if(hasReport)throw new RangeError('Unresolved or initially free game cannot supply paid game report');
    const excluded=r.eligibility==='ineligible_initially_free';
