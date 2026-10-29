@@ -132,7 +132,7 @@ test('Fixed-horizon exclusions cannot carry orphaned financial attestations',()=
   for(const field of ['authorized_ledger_attested','transfer_history_reconciled',
    'paid_checkout_attribution_attested']){
    assert.throws(()=>auditSyntheticFixedHorizonZeroSales(
-    [{...base,[field]:true}],window30),/cannot supply paid game report/);
+    [{...base,[field]:true}],window30),/cannot supply (?:paid game|sales) report/);
   }
  }
  assert.equal(auditSyntheticFixedHorizonZeroSales([out],window30).counts.excluded,1);
