@@ -10847,6 +10847,108 @@
       "confidence": "high_public_procedure_not_outcome",
       "observed_at": "2026-10-29",
       "limitations": "No authenticated merchant cohort, bank statements, audited partner ledger population or individual case evidence was collected."
+    },
+    {
+      "id": "steam-public-launch-price-denominator",
+      "text": "The steamlense October 2026 market snapshot reports an all-years price frame of 111,356 games classified as paid for its displayed launch-price chart.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_catalog_snapshot_conditional_math",
+      "observed_at": "2026-10-29",
+      "limitations": "This is a provider-tracked catalog frame, not verified to include historical delistings or exactly originally paid premium AppIDs."
+    },
+    {
+      "id": "steam-public-zero-dollar-bin-not-free",
+      "text": "The site displays 11,504 games in its $0 whole-dollar launch-price bucket despite labeling the population paid; the bucket is a price range, not an authenticated count of free titles.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_catalog_snapshot_conditional_math",
+      "observed_at": "2026-10-29",
+      "limitations": "The rendered bucket label omits cents, and without row-level prices the remaining content and original-paid classification cannot be independently verified."
+    },
+    {
+      "id": "steam-public-099-exact-frequency",
+      "text": "The same steamlense market page lists 11,480 games at the exact $0.99 launch-price point, a count numerically compatible with the $0 integer-bucket total.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_catalog_snapshot_conditional_math",
+      "observed_at": "2026-10-29",
+      "limitations": "The inference assumes the exact-price and integer-bin displays use an identical snapshot, price definition and set of eligible games."
+    },
+    {
+      "id": "steam-public-099-zero-bin-lowerbound",
+      "text": "If the integer $0 bucket represents launch prices from $0.00 up to but not including $1.00 on the same frame, at least 11,480 of the 11,504 entries in that bucket are $0.99 titles (99.79%).",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_catalog_snapshot_conditional_math",
+      "observed_at": "2026-10-29",
+      "limitations": "This is a conditional mathematical lower bound on a labeled price bucket, not observed free-game population share or number of paid checkouts."
+    },
+    {
+      "id": "steam-public-price-point-499-frequency",
+      "text": "The same source lists $4.99 as its most frequent exact launch-price anchor, with 15,846 games in the price frame.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_catalog_snapshot_conditional_math",
+      "observed_at": "2026-10-29",
+      "limitations": "Catalog frequency does not establish a profit-optimal price or a revenue-weighted sales share, and games can be differently priced in local markets."
+    },
+    {
+      "id": "steam-public-2024-median-mean-usd",
+      "text": "The steamlense 2024 launch-price summary reports a $5.00 median and $9.80 mean for its tracked paid-game price population.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_catalog_snapshot_conditional_math",
+      "observed_at": "2026-10-29",
+      "limitations": "The table reports provider summaries rather than raw per-game observations, and does not audit historical checkout prices."
+    },
+    {
+      "id": "steam-public-2025-median-mean-usd",
+      "text": "The steamlense 2025 launch-price summary reports a $5.30 median and $9.10 mean for its tracked paid-game price population.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_catalog_snapshot_conditional_math",
+      "observed_at": "2026-10-29",
+      "limitations": "The mean and median represent listed product prices, not purchase-weighted amounts, publisher payouts or comparable project budgets."
+    },
+    {
+      "id": "steam-public-2026-median-mean-partial-usd",
+      "text": "The 2026 steamlense summary displays a $6.00 median and $8.60 mean in an incomplete year; it cannot establish a final annual price trend or demand response.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_catalog_snapshot_conditional_math",
+      "observed_at": "2026-10-29",
+      "limitations": "2026 is incomplete on October 29; catalog visibility, vintage, price treatment and product mix can change the observed comparison."
+    },
+    {
+      "id": "steam-public-price-is-not-regional-checkout",
+      "text": "A US-dollar launch-price histogram does not capture regional prices, discount timing, purchases, returns or taxes needed for actual Steam checkout realization.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026",
+        "steam-price-rules-2026"
+      ],
+      "confidence": "bounded_public_catalog_snapshot_conditional_math",
+      "observed_at": "2026-10-29",
+      "limitations": "The provider price frame and Valve's official pricing process do not supply authenticated game-order or bank settlement data."
+    },
+    {
+      "id": "steam-public-price-bins-not-genre-roi",
+      "text": "Neither a common $4.99 list price nor the reported paid-game price distribution determines buyer willingness-to-pay, price elasticity, first-game earnings or profitability.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026",
+        "steam-price-rules-2026"
+      ],
+      "confidence": "bounded_public_catalog_snapshot_conditional_math",
+      "observed_at": "2026-10-29",
+      "limitations": "A credible ROI comparison would require comparable game costs, fixed time horizons, region-level paid units and a causal price design."
     }
   ],
   "observations": [],
@@ -10854,5 +10956,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Steam research distinguishes ordinary unpaid merchant balances, voluntary payout thresholds, bank failures and possible Direct-fee fraud withholding from zero Steam game sales. No representative publisher income or actual hold incidence is verified."
+  "summary": "Steam research separates catalog launch-price bins from real paid checkout units: the provider's whole-dollar $0 bin largely consists of $0.99 paid titles. A common list price is not optimal price, seller revenue or profit."
 }

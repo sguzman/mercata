@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_paid_game_launch_price_bucket_audit_not_buyer_spending",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-steamlense-market-review-threshold-2026",
+    "steam-price-rules-2026",
+    "steam-steamlense-estimation-method"
+  ],
+  "claim_ids": [
+    "steam-public-launch-price-denominator",
+    "steam-public-zero-dollar-bin-not-free",
+    "steam-public-099-exact-frequency",
+    "steam-public-099-zero-bin-lowerbound",
+    "steam-public-price-point-499-frequency",
+    "steam-public-2024-median-mean-usd",
+    "steam-public-2025-median-mean-usd",
+    "steam-public-2026-median-mean-partial-usd",
+    "steam-public-price-is-not-regional-checkout",
+    "steam-public-price-bins-not-genre-roi"
+  ],
+  "public_price_frame": {
+    "provider": "steamlense",
+    "observation_date": "2026-10-29",
+    "games_labeled_paid": 111356,
+    "whole_dollar_zero_bin_count": 11504,
+    "exact_usd_0_99_count": 11480,
+    "exact_usd_4_99_count": 15846,
+    "whole_dollar_bin_width_usd": 1,
+    "zero_bin_semantics": "USD 0.00 through below USD 1.00 conditional on integer flooring",
+    "price_type": "reported_catalog_launch_price",
+    "is_paid_game_revenue": false,
+    "raw_appid_rows_audited": false
+  },
+  "annual_summary_usd": [
+    {
+      "release_year": 2024,
+      "median": 5,
+      "mean": 9.8,
+      "year_complete": true
+    },
+    {
+      "release_year": 2025,
+      "median": 5.3,
+      "mean": 9.1,
+      "year_complete": true
+    },
+    {
+      "release_year": 2026,
+      "median": 6,
+      "mean": 8.6,
+      "year_complete": false
+    }
+  ],
+  "scope_gates": {
+    "originally_paid_historical_frame_verified": false,
+    "delisted_games_verified_included": false,
+    "exact_price_bucket_same_frame_independently_audited": false,
+    "price_frequency_is_sales_weighted": false,
+    "retail_price_is_observed_checkout": false,
+    "price_anchor_is_optimal_price": false,
+    "provider_price_data_does_not_establish_profit": true
+  },
+  "unknown": {
+    "zero_paid_sales_fraction": null,
+    "number_of_free_to_play_titles_in_zero_price_bucket": null,
+    "regional_realized_sale_price_usd": null,
+    "price_elasticity": null,
+    "median_publisher_net_income_usd": null,
+    "profit_by_price_point_usd": null
+  },
+  "study_uses_only_public_displayed_aggregates": true,
+  "no_raw_catalog_or_transaction_rows_collected": true
+}
