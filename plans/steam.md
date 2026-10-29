@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Public postmortem payout and portfolio mismatch checkpoint
+
+The [public developer cash case audit](../ontology/steam/public-developer-payout-and-portfolio-cases-2026.md) records two self-selected real developer disclosures: a five-year two-game cumulative gross-to-personal waterfall, and two released games whose reported expense list includes application fees for four unreleased games. Rounding/basis mismatches, missing labor and unverified remittance are explicitly flagged. The 293-task scope is unchanged; **Steam research remains 88%** (exact 87.696%, Δ +0.137 pp). These cases are **not** representative Steam income or audited profit.
+
 ## Legal signatory and confidential distribution contract checkpoint
 
 The [Steamworks contracting-party and capacity audit](../ontology/steam/legal-signatory-onboarding-and-contract-scope-2026.md) confirms sole-proprietor onboarding and documented payee checks, while leaving minors' legal capacity and partner-specific agreement grants unresolved rather than invented. **Score 88%**, exact 87.560% (Δ +1 pp from 87%). No private documents or identity records accessed.

@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "voluntary_public_developer_cash_disclosures_not_population_estimates",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-operator-two-games-waterfall-oct2026",
+    "steam-small-portfolio-cash-march2026"
+  ],
+  "claim_ids": [
+    "steam-operator-waterfall-cumulative-gross",
+    "steam-operator-waterfall-cost-categories",
+    "steam-operator-waterfall-owner-share",
+    "steam-operator-waterfall-rounded-reconstruction",
+    "steam-small-portfolio-reported-proceeds",
+    "steam-small-portfolio-stated-expenses-tax",
+    "steam-small-portfolio-expense-scope-mismatch",
+    "steam-small-portfolio-near-miss-arithmetic",
+    "steam-disclosures-not-market-sample",
+    "steam-cash-income-not-hourly-profit"
+  ],
+  "cases": [
+    {
+      "id": "two_game_five_year_portfolio",
+      "source_id": "steam-operator-two-games-waterfall-oct2026",
+      "published_at": "2026-10-07",
+      "evidence_class": "self_report_unverified",
+      "cash_currency": "USD",
+      "time_scope": "approximately_five_years",
+      "income_unit": "two_games_one_studio",
+      "game_count_with_revenue": 2,
+      "recipient_count": 2,
+      "reported": {
+        "gross_steam_sales_usd": 560000,
+        "refunds_usd": 134000,
+        "steam_platform_share_usd": 127000,
+        "us_withholding_usd": 9700,
+        "third_party_publisher_share_usd": 115000,
+        "local_tax_usd": 26000,
+        "cofounder_personal_fraction": 0.5,
+        "one_person_claimed_take_home_usd": 73000
+      },
+      "printed_values_reconstructed": {
+        "before_founder_split_usd": 148300,
+        "one_founder_after_split_usd": 74150,
+        "delta_from_reported_take_home_usd": 1150
+      },
+      "limitations": [
+        "Approximate reported figures and potentially different bases",
+        "No full studio expense ledger, employment cost or validated partner contract",
+        "No separate AppID payouts",
+        "Developer may not own all contracts in the portfolio"
+      ],
+      "real_authorized_steam_finance_export": false,
+      "after_unpaid_labor_economic_profit_usd": null,
+      "verified_publisher_bank_receipts_usd": null
+    },
+    {
+      "id": "two_released_six_fee_scopes_portfolio",
+      "source_id": "steam-small-portfolio-cash-march2026",
+      "published_at": "2026-03-09",
+      "evidence_class": "self_report_unverified",
+      "cash_currency": "USD",
+      "time_scope": "developer_tax_prep_snapshot_period_unspecified",
+      "income_unit": "two_released_games",
+      "game_count_with_revenue": 2,
+      "application_fee_count_for_other_unreleased_games": 4,
+      "reported": {
+        "post_platform_sales_usd": 6101,
+        "application_fees_usd": 400,
+        "festival_fees_usd": 177,
+        "assets_usd": 992,
+        "commissions_usd": 2314.9,
+        "social_subscription_usd": 146,
+        "reddit_ads_usd": 534,
+        "hosting_usd": 48,
+        "stated_total_expenses_usd": 4611.9,
+        "stated_taxes_usd": 477,
+        "stated_final_profit_usd": 1012.59
+      },
+      "printed_values_reconstructed": {
+        "sum_itemized_expenses_usd": 4611.9,
+        "after_stated_costs_and_tax_usd": 1012.1,
+        "delta_from_stated_final_profit_usd": -0.49
+      },
+      "limitations": [
+        "Four unreleased-game application fees charged against two released games' sales",
+        "Unspecified observation and cost-alignment windows",
+        "No hourly labor imputation",
+        "Post-platform sales not equivalent to direct bank remittance"
+      ],
+      "real_authorized_steam_finance_export": false,
+      "after_unpaid_labor_economic_profit_usd": null,
+      "verified_publisher_bank_receipts_usd": null
+    }
+  ],
+  "shared_boundaries": {
+    "probability_sample": false,
+    "complete_paid_release_frame": false,
+    "game_level_net_proceeds_verified": false,
+    "representative_median_publisher_payout_usd": null,
+    "exact_zero_paid_sale_share": null,
+    "after_labor_profit_median_usd": null,
+    "deduplicate_game_and_studio_units": true,
+    "do_not_merge_with_modeled_sales": true,
+    "not_same_release_cohort": true
+  },
+  "reconciliation_policy": {
+    "arithmetic_on_rounded_self_reports_only": true,
+    "cannot_assume_identical_denominator_or_time_window": true,
+    "do_not_impute_unreported_items": true,
+    "no_raw_account_records": true
+  },
+  "no_private_records_collected": true
+}
