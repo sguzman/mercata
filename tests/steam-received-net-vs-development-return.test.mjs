@@ -5,7 +5,10 @@ test('2019 first-game cross-store financial totals reconcile without mixing chan
  const c=x.cases[0],r=c.reported,v=c.reconstruction;
  assert.equal(r.steam_units+r.gog_units,r.all_units);
  assert.equal(r.steam_gross_usd+r.gog_gross_usd,r.all_gross_usd);
- assert.equal(r.steam_author_received_net_usd+r.gog_author_received_net_usd,r.all_author_received_net_usd);
+ assert.equal(r.steam_author_received_net_usd+r.gog_author_received_net_usd,v.by_store_reported_net_sum_usd);
+ assert.equal(v.by_store_reported_net_sum_usd-r.all_author_received_net_usd,v.reported_net_headline_shortfall_usd);
+ assert.equal(v.reported_net_headline_shortfall_usd,20);
+ assert.match(v.net_headline_reconciliation_status,/unresolved/);
  assert.equal(r.steam_feb_net_usd+r.steam_mar_net_usd,v.feb_mar_net_subtotal_usd);
  assert.equal(r.steam_author_received_net_usd-v.feb_mar_net_subtotal_usd,v.feb_mar_net_rounding_difference_vs_reported_steam_net_usd);
  assert.equal(r.steam_feb_gross_usd+r.steam_mar_gross_usd+r.steam_apr_gross_usd,v.three_month_gross_subtotal_usd);
