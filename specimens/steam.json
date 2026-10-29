@@ -1533,6 +1533,28 @@
       "evidence_class": "official_mutable_2026_2027_sales_calendar",
       "license": "Event names and dates as facts, brief independently authored commentary only.",
       "notes": "Calendar is dynamic, source checked October 28, 2026; scheduled dates are not actual event attendance, Steam unit sales or a genre-specific release census."
+    },
+    {
+      "id": "steam-studio-ortica-three-game-revenue-sep2026",
+      "url": "https://studioortica.substack.com/p/one-year-and-a-half-of-studio-ortica",
+      "title": "One year and a half of Studio Ortica in numbers",
+      "publisher": "Studio Ortica developer author, Substack",
+      "published_at": "2026-09-30",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "first_party_self_report_three_title_studio_sales_and_author_defined_post_tax_fx_eur",
+      "license": "Source URL and limited independent numeric paraphrases, no copied graphics or passages.",
+      "notes": "Published 2026-09-30 but Loan Shark entry says as of 2026-10-26, indicating later unversioned article update. September 8 and September 28 title observations differ. EUR 'net' is author's reconstructed after assumed taxes and FX, not verified bank remittance or studio after-cost profit."
+    },
+    {
+      "id": "steam-roguecraft-firstyear-report-jul2026",
+      "url": "https://www.reddit.com/r/IndieDev/comments/1v9cnyx/one_year_after_releasing_our_first_steam_game/",
+      "title": "One year after releasing our first Steam game",
+      "publisher": "r/IndieDev first-party creator disclosure",
+      "published_at": "2026-07-28",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "voluntary_self_report_firstyear_steam_game_units_refunds_gross_and_labeled_net",
+      "license": "Original link and separately authored short factual paraphrases only.",
+      "notes": "First game RogueCraft, reported 1,674 copies and 220 refunds, $14,992 gross and $11,888 described net after refunds, chargebacks, taxes and VAT. Steam's platform share and payout reconciliation not explicitly attested in author's net definition."
     }
   ],
   "claims": [
@@ -9642,6 +9664,117 @@
       "confidence": "official_rule_or_bounded_study_design",
       "observed_at": "2026-10-28",
       "limitations": "A valid study requires comparable genre, quality, price, release-age and actually transacted buyer cohorts."
+    },
+    {
+      "id": "steam-ortica-firsttitle-gross-net-defined",
+      "text": "Studio Ortica reports approximately $299,807 USD Steam gross for Loan Shark and €70,507 EUR in author-defined post-refund, US withholding, platform share, FX and approximate Italian-tax net.",
+      "source_ids": [
+        "steam-studio-ortica-three-game-revenue-sep2026"
+      ],
+      "confidence": "bounded_creator_self_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "Self-reported nonuniform accounting bases, not signed partner payouts or observed full studio costs."
+    },
+    {
+      "id": "steam-ortica-secondtitle-gross-net",
+      "text": "The studio's second title Birds Watching reportedly had about $48,000 gross Steam revenue and €12,075 under the same publisher-defined post-tax/FX net method.",
+      "source_ids": [
+        "steam-studio-ortica-three-game-revenue-sep2026"
+      ],
+      "confidence": "bounded_creator_self_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "Historic per-game observation window ends around September 8, 2026, not the same release age as the first title."
+    },
+    {
+      "id": "steam-ortica-thirdtitle-gross-net",
+      "text": "The studio's third title The Old Flesh of Nuraga reportedly grossed about $7,150 and €2,100 author-defined net for a September 8, 2026 snapshot.",
+      "source_ids": [
+        "steam-studio-ortica-three-game-revenue-sep2026"
+      ],
+      "confidence": "bounded_creator_self_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "Its later September 28 count of 2,600 copies does not share the revenue snapshot and must not be combined with the earlier gross."
+    },
+    {
+      "id": "steam-ortica-title-level-portfolio-reconciliation",
+      "text": "Adding published individual approximate gross USD across Ortica's three titles gives $354,957, and their stated net EUR amounts give €84,682, versus headline approximations of $350k gross and €84k net.",
+      "source_ids": [
+        "steam-studio-ortica-three-game-revenue-sep2026"
+      ],
+      "confidence": "bounded_creator_self_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "Round-number gaps are not errors in actual records; do not add USD and EUR or infer after-labor profit."
+    },
+    {
+      "id": "steam-ortica-one-studio-three-games",
+      "text": "The Ortica author describes three separate game launches by one studio with sharply different reported income, and estimates development workloads of roughly 100, 140 and 140 working days, with multiple contributors.",
+      "source_ids": [
+        "steam-studio-ortica-three-game-revenue-sep2026"
+      ],
+      "confidence": "bounded_creator_self_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "One studio is not three independent legal publishers; days by varying team composition are not a verified total individual labor-hour denominator."
+    },
+    {
+      "id": "steam-ortica-source-postdated-update",
+      "text": "Although the Ortica article carries a September 30, 2026 publication date, it includes a Loan Shark count stated as of October 26, 2026.",
+      "source_ids": [
+        "steam-studio-ortica-three-game-revenue-sep2026"
+      ],
+      "confidence": "bounded_creator_self_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "In-page observation update is later than publication; exact edit time and financial settlement date are not independently verified."
+    },
+    {
+      "id": "steam-ortica-fest-wishlist-attribution-not-causal",
+      "text": "The Ortica author reports wishlist increases around a 2025 Fishing Fest, 2026 Next Fests and a storefront Personal Calendar feature.",
+      "source_ids": [
+        "steam-studio-ortica-three-game-revenue-sep2026"
+      ],
+      "confidence": "bounded_creator_self_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "Simultaneous viral videos, algorithm exposure and self-selection prevent treating pre/post wishlist movements as causal event uplift."
+    },
+    {
+      "id": "steam-roguecraft-firstyear-reported-ledger",
+      "text": "A July 2026 first-game creator post reports 1,674 copies, 220 refunds, $14,992 gross and $11,888 labeled net after refunds, chargebacks, taxes and VAT over roughly the first year.",
+      "source_ids": [
+        "steam-roguecraft-firstyear-report-jul2026"
+      ],
+      "confidence": "bounded_creator_self_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "The report is self-disclosed; its net definition does not clearly verify Steam's platform share, actual bank receipt or final profit."
+    },
+    {
+      "id": "steam-roguecraft-ccu-playtime-no-income",
+      "text": "The same first-game post reports 1,578 lifetime players, average playtime 6h15m and median 2h27m, distinct from the 1,674 reported copy count.",
+      "source_ids": [
+        "steam-roguecraft-firstyear-report-jul2026"
+      ],
+      "confidence": "bounded_creator_self_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "Playtime and players are not equivalent to current concurrency, a distinct unique paid-customer count, or a representative economic success metric."
+    },
+    {
+      "id": "steam-roguecraft-nextfest-demo-not-conversion",
+      "text": "The RogueCraft author mentions roughly 900 demo players during Next Fest and 1,166 prelaunch wishlists alongside later paid copies.",
+      "source_ids": [
+        "steam-roguecraft-firstyear-report-jul2026"
+      ],
+      "confidence": "bounded_creator_self_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "No lawful matched purchaser history or randomized counterfactual; the ratio of different aggregates is not verified conversion or sales uplift."
+    },
+    {
+      "id": "steam-portfolio-public-cases-not-population-median",
+      "text": "The two voluntary disclosures contain one three-title studio and one first game, neither of which supplies complete representative nonrespondent or zero-selling publisher outcomes.",
+      "source_ids": [
+        "steam-studio-ortica-three-game-revenue-sep2026",
+        "steam-roguecraft-firstyear-report-jul2026"
+      ],
+      "confidence": "bounded_creator_self_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "No authenticated merchant ledgers, complete first-game frame or matched expense histories to infer population income/profit."
     }
   ],
   "observations": [],

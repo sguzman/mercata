@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Representative seller earnings, audited full-release-cohort sales distributions and buyer populations remain unknown; selected historical developer disclosures are explicitly separated from those missing market-wide estimates. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Developer studio three-title cash definitions and first-year Steam comparison
+
+The [multi-title versus first-game disclosure audit](../ontology/steam/steam-three-title-studio-and-firstyear-gross-net-selfreports-2026.md) adds Studio Ortica's three distinct game outcomes under one studio, cross-currency monetary definitions, a post-publication update audit and RogueCraft's 12-month gross/refund/net reporting. No case is an authenticated representative publisher payout. **Current 89%** (exact 89.147%, Δ +0.085 pp); all 293 original tasks remain fixed.
+
 ## Announced seasonal sale timing and 30-day release eligibility
 
 The [Steam release calendar study](../ontology/steam/steam-sale-calendar-release-cooldown-eligibility-2026.md) records dated Winter 2026, Spring and Summer 2027 promotions, separate Next Fest events, and tested release/price-increase cooldown gates. This is schedule feasibility, not a measured causal launch effect. **89%** (exact 89.061%, Δ +0.154 pp); 293 tracked tasks unchanged.
