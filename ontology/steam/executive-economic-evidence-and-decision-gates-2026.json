@@ -19,7 +19,11 @@
     "steam-mixolumia-ownsite-postmortem-2021",
     "steam-onlywayisdown-firstgame-original-postmortem-2026",
     "steam-water-tastes-wine-primary-postmortem-mar2018",
-    "steam-manski-partial-identification-missingdata-2005"
+    "steam-manski-partial-identification-missingdata-2005",
+    "steam-studio-ortica-three-game-revenue-sep2026",
+    "steam-roguecraft-firstyear-report-jul2026",
+    "steam-rainswept-2019-payout-postmortem",
+    "steam-starcom-nexus-apr2020-finance-story"
   ],
   "claim_ids": [
     "steam-synthesis-policy-is-not-profit",
@@ -36,7 +40,14 @@
     "steam-mixolumia-steam-bank-net",
     "steam-onlyway-firstgame-cumulative-net",
     "steam-water-tastes-zero-personal-proceeds",
-    "steam-profit-partial-nonresponse-bounds"
+    "steam-profit-partial-nonresponse-bounds",
+    "steam-ortica-firsttitle-gross-net-defined",
+    "steam-ortica-source-postdated-update",
+    "steam-roguecraft-firstyear-reported-ledger",
+    "steam-rainswept-2019-store-revenue-pay",
+    "steam-rainswept-2019-monthly-net-lag",
+    "steam-starcom-2020-expense-and-return",
+    "steam-portfolio-public-cases-not-population-median"
   ],
   "evidence_layers": [
     {
@@ -62,7 +73,11 @@
         "Loki's Revenge: 370 copies with a $619 Net Steam Revenue label",
         "Mixolumia: $6,202 Steam gross and $3,680 claimed lagged Steam bank receipts",
         "Only Way is Down: first-month reported 4,810 copies, $35,862 gross",
-        "Where the Water Tastes Like Wine (2018): positive sales but $0 developer proceeds at early snapshot"
+        "Where the Water Tastes Like Wine (2018): positive sales but $0 developer proceeds at early snapshot",
+        "Studio Ortica: three titles in one legal studio, approximately $355k gross USD versus €84.7k author-defined post-tax/FX EUR net, different title ages",
+        "RogueCraft: 1,674 reported first-year copies, 220 refunds, $14,992 gross and $11,888 ambiguous 'net' label",
+        "Rainswept (2019): self-reported $4,955 Steam plus $1,487 GOG net, against a stated $6,422 headline, unresolved $20 discrepancy",
+        "Starcom: Nexus (2020): approximately $400k gross, $25k external expenses and 30 equivalent developer months with pre-tax self-described return"
       ],
       "does_not_measure": "representative_developer_takehome_or_audited_after_labor_profit",
       "bias": "self_selected_public_postmortems_with_nonuniform_horizons_and_finance_labels"
@@ -124,6 +139,36 @@
         "exact_sales_units": null,
         "author_claimed_personal_proceeds_usd_at_early_snapshot": 0,
         "subsequent_lifetime_unknown": true
+      },
+      "studio_ortica_2026": {
+        "one_studio_three_titles": true,
+        "selected_gross_usd_approx": 354957,
+        "author_defined_post_tax_fx_net_eur_approx": 84682,
+        "identical_title_observation_age": false,
+        "bank_statement_verified": false
+      },
+      "roguecraft_2026": {
+        "first_year_reported_units": 1674,
+        "refunds": 220,
+        "gross_usd": 14992,
+        "author_labeled_net_usd": 11888,
+        "steam_platform_cut_explicitly_in_net_label": false,
+        "after_cost_profit": null
+      },
+      "rainswept_2019": {
+        "steam_author_reported_net_usd": 4955,
+        "gog_author_reported_net_usd": 1487,
+        "headline_author_reported_net_usd": 6422,
+        "by_store_sum_net_usd": 6442,
+        "unreconciled_gap_usd": 20,
+        "april_steam_net_estimated_not_settled": true
+      },
+      "starcom_2020": {
+        "steam_gross_usd_approx": 400000,
+        "external_expenses_usd_approx": 25000,
+        "equivalent_developer_months": 30,
+        "author_claimed_monthly_residual_before_income_tax_over_usd": 7000,
+        "verified_personal_net_salary": null
       }
     }
   },
@@ -182,7 +227,8 @@
     "actual_after_cost_indie_profit": null,
     "marketwide_break_even_probability": null,
     "causal_ad_conversion_uplift": null,
-    "actual_eligible_publisher_profitability_rate": null
+    "actual_eligible_publisher_profitability_rate": null,
+    "representative_financial_receipts_from_selected_bloggers": null
   },
   "no_real_merchant_data": true,
   "no_game_published": true,

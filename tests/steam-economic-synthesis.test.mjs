@@ -27,8 +27,18 @@ test('Public first-party accounts do not become authenticated payouts or market 
  assert.equal(examples.water_tastes_like_wine_2018.author_claimed_personal_proceeds_usd_at_early_snapshot,0);
  assert(Object.values(r.unknown).every(v=>v===null));
 });
+test('Recent self-reports retain inconsistent currency and payment definitions',()=>{
+ const v=r.observations.public_self_disclosure_examples;
+ assert.equal(v.studio_ortica_2026.one_studio_three_titles,true);
+ assert.equal(v.studio_ortica_2026.bank_statement_verified,false);
+ assert.equal(v.roguecraft_2026.after_cost_profit,null);
+ assert.equal(v.roguecraft_2026.steam_platform_cut_explicitly_in_net_label,false);
+ assert.equal(v.rainswept_2019.by_store_sum_net_usd-v.rainswept_2019.headline_author_reported_net_usd,20);
+ assert.equal(v.rainswept_2019.april_steam_net_estimated_not_settled,true);
+ assert.equal(v.starcom_2020.verified_personal_net_salary,null);
+});
 test('Every claim has real sources and the fixed inventory remains exactly 293 tasks',()=>{
- assert.equal(r.claim_ids.length,15);
+ assert.equal(r.claim_ids.length,22);
  for(const id of r.source_ids)assert(sourceIds.has(id),id);
  for(const id of r.claim_ids){assert(claimIds.has(id),id);assert(claimIds.get(id).source_ids.every(x=>sourceIds.has(x)));}
  const scores=[...p.detail_tasks.map(t=>t.percent),...q.queues.flatMap(g=>g.tasks.map(t=>t.progress))];
