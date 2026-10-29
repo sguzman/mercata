@@ -23,23 +23,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Check JavaScript syntax
+      - name: Check all project JavaScript syntax
         run: |
-          node --check scripts/intake.mjs
-          node --check scripts/verify.mjs
-          node --check scripts/source-provenance.mjs
-          node --check scripts/newcomer-income-audit.mjs
-          node --check scripts/production-effort-audit.mjs
-          node --check tests/production-effort.test.mjs
-          node --check tests/newcomer-cohort.test.mjs
-          node --check scripts/audit-youtube-sources.mjs
-          node --check tests/source-provenance.test.mjs
-          node --check site/app.js
-          node --check site/scenario.mjs
-          node --check site/metric-compatibility.mjs
-          node --check tests/youtube.test.mjs
-          node --check tests/site-smoke.mjs
-          node --check tests/metric-compatibility.test.mjs
+          # Include every project module and test, not a hand-maintained subset.
+          # -P limits startup overhead; a failed node --check fails the whole step.
+          find scripts site tests -type f \( -name '*.mjs' -o -name '*.js' \) -print0 | xargs -0 -P 6 -n 1 node --check
       - name: Check public ontology, catalog, queue and website
         run: node scripts/verify.mjs
       - name: Run repository tests
