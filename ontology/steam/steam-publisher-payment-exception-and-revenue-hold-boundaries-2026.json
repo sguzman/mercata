@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_publisher_cash_disposition_eligibility_and_possible_withholding_audit",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-onboarding-faq-current-2026",
+    "steam-reporting-faq-doc",
+    "steam-direct-fee-doc",
+    "steam-tax-faq-doc"
+  ],
+  "claim_ids": [
+    "steam-payout-valid-bank-tax-before-release",
+    "steam-payout-tax-validation-not-instant",
+    "steam-payout-threshold-not-sales-zero",
+    "steam-payout-voluntary-hold-not-enforcement",
+    "steam-payout-bank-change-cutoff-may-delay",
+    "steam-payout-failed-bank-transfer-next-batch",
+    "steam-payout-directfee-fraud-possible-withhold",
+    "steam-payout-directfee-recoup-distinct-from-payment",
+    "steam-payout-finance-trace-not-appeal",
+    "steam-payout-sanctions-contract-eligibility-separate",
+    "steam-payout-tax-withholding-distinct-from-held-cash",
+    "steam-payout-public-scenarios-no-prevalence"
+  ],
+  "conditions": {
+    "bank_tax_unverified": {
+      "category": "release_and_payment_gate",
+      "release_blocked": true,
+      "documented_payment_consequence": "cannot_pay_without_verified_information",
+      "punitive_enforcement_established": false
+    },
+    "tax_verification_pending": {
+      "category": "processing_gate",
+      "public_estimated_business_days": [
+        2,
+        7
+      ],
+      "guaranteed_max_days": null,
+      "release_blocked": true
+    },
+    "subminimum_payment_balance": {
+      "category": "settlement_threshold",
+      "documented_minimum_usd": 100,
+      "zero_sales_inferred": false,
+      "partner_can_select_higher_threshold": true
+    },
+    "voluntary_partner_threshold": {
+      "category": "partner_elected_settlement_delay",
+      "requires_actual_authority": true,
+      "punitive_enforcement_established": false
+    },
+    "late_bank_update": {
+      "category": "possible_operational_delay",
+      "recommended_change_day_of_month": 15,
+      "always_delayed": false
+    },
+    "returned_bank_transfer": {
+      "category": "failed_transfer",
+      "off_cycle_reissue_supported": false,
+      "next_regular_monthly_batch_after_correction": true
+    },
+    "charged_back_or_fraudulent_direct_fee": {
+      "category": "possible_withholding",
+      "sales_payments_may_be_withheld": true,
+      "app_fee_recoupment_may_be_withheld": true,
+      "actual_case_proven": false
+    },
+    "sanctioned_counterparty": {
+      "category": "contractual_access_restriction",
+      "not_same_as_observed_paid_sale": false,
+      "individual_status_checked": false
+    },
+    "missing_payment_with_valid_details": {
+      "category": "request_finance_trace",
+      "guaranteed_resolution_time_days": null,
+      "formal_appeal_established": false
+    }
+  },
+  "payment_reporting": {
+    "ordinary_royalties_and_fee_recoupment_distinct": true,
+    "bank_receipt_not_synonymous_with_gross_paid_order": true,
+    "us_source_tax_withholding_is_not_fraud_penalty": true,
+    "no_deposit_is_not_zero_sales": true
+  },
+  "unknown": {
+    "actual_zero_sale_rate": null,
+    "actual_revenue_hold_rate": null,
+    "actual_enforcement_rate": null,
+    "typical_payment_delay_days": null,
+    "actual_fraudulent_direct_fee_cases": null,
+    "merchant_ledger_units": null,
+    "developer_after_cost_profit": null
+  },
+  "synthetic_only": true,
+  "no_partner_account_or_bank_records_used": true
+}

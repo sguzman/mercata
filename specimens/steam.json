@@ -10724,6 +10724,129 @@
       "confidence": "high_public_official_documented_boundary",
       "observed_at": "2026-10-29",
       "limitations": "No actual sales or payout observed. Neither the underlying signed contract nor partner-specific financial data was examined."
+    },
+    {
+      "id": "steam-payout-valid-bank-tax-before-release",
+      "text": "Valve requires valid, verified banking and tax information before a Steamworks partner can release a game, so release eligibility and payment eligibility are operational gates rather than evidence of zero game sales.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high_public_procedure_not_outcome",
+      "observed_at": "2026-10-29",
+      "limitations": "This describes a pre-release process gate, not individual publisher account outcomes, elapsed launch delay or a measured sales distribution."
+    },
+    {
+      "id": "steam-payout-tax-validation-not-instant",
+      "text": "Valve's public onboarding FAQ describes third-party tax validation that may take two to seven business days and may require further documentation.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high_public_procedure_not_outcome",
+      "observed_at": "2026-10-29",
+      "limitations": "The published process interval is neither a guaranteed completion deadline nor observed distribution of onboarding times."
+    },
+    {
+      "id": "steam-payout-threshold-not-sales-zero",
+      "text": "Valve describes holding partner payments below the minimum $100 payout threshold, so no disbursement does not establish zero gross units or zero earned revenue.",
+      "source_ids": [
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "high_public_procedure_not_outcome",
+      "observed_at": "2026-10-29",
+      "limitations": "The threshold concerns payment to a partner, not game-level units or the total cash earned from every product."
+    },
+    {
+      "id": "steam-payout-voluntary-hold-not-enforcement",
+      "text": "A partner with Actual Authority may choose a higher payment-hold threshold to reduce the proportional effect of bank fees, which must be distinguished from punitive enforcement.",
+      "source_ids": [
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "high_public_procedure_not_outcome",
+      "observed_at": "2026-10-29",
+      "limitations": "A voluntary payout election neither establishes that any amount was withheld nor reveals the partner's actual sales or profits."
+    },
+    {
+      "id": "steam-payout-bank-change-cutoff-may-delay",
+      "text": "Valve requests banking and payment-threshold changes by the fifteenth of the month; later changes may make banking invalid for that cycle and delay a payment.",
+      "source_ids": [
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "high_public_procedure_not_outcome",
+      "observed_at": "2026-10-29",
+      "limitations": "The documented outcome is possible rather than certain; no per-partner banking change or delay was observed."
+    },
+    {
+      "id": "steam-payout-failed-bank-transfer-next-batch",
+      "text": "Valve describes failed or returned transfers rejoining the next regular monthly batch after correction, with no off-cycle payment support.",
+      "source_ids": [
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "high_public_procedure_not_outcome",
+      "observed_at": "2026-10-29",
+      "limitations": "A returned payment is a settlement event and cannot be used to infer zero game transactions or a contract breach."
+    },
+    {
+      "id": "steam-payout-directfee-fraud-possible-withhold",
+      "text": "Valve warns that a charged-back, refunded or fraudulent Steam Direct fee may result in withholding of sales payments and app-fee recoupment.",
+      "source_ids": [
+        "steam-direct-fee-doc"
+      ],
+      "confidence": "high_public_procedure_not_outcome",
+      "observed_at": "2026-10-29",
+      "limitations": "The source establishes a possible withholding ground, not any actual allegation, investigation rate, case outcome or amount."
+    },
+    {
+      "id": "steam-payout-directfee-recoup-distinct-from-payment",
+      "text": "Steam Direct fee recoupment after $1,000 adjusted gross is reported as a separate monthly line item and is not equivalent to ordinary partner royalty disbursement.",
+      "source_ids": [
+        "steam-direct-fee-doc"
+      ],
+      "confidence": "high_public_procedure_not_outcome",
+      "observed_at": "2026-10-29",
+      "limitations": "The qualifying threshold does not establish break-even or guarantee that an individual partner will receive cash."
+    },
+    {
+      "id": "steam-payout-finance-trace-not-appeal",
+      "text": "The official payment FAQ provides a finance-team payment-trace route if verified account information is complete but a payment is missing; this is not a formal enforcement appeal.",
+      "source_ids": [
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "high_public_procedure_not_outcome",
+      "observed_at": "2026-10-29",
+      "limitations": "Contact and trace availability do not guarantee reimbursement, reversal of restrictions, or a precise resolution time."
+    },
+    {
+      "id": "steam-payout-sanctions-contract-eligibility-separate",
+      "text": "Valve's onboarding FAQ identifies sanctions-based counterparties it will not do business with, a contractual eligibility boundary distinct from delayed monthly disbursement.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high_public_procedure_not_outcome",
+      "observed_at": "2026-10-29",
+      "limitations": "Restriction lists and individual facts change; this general policy does not classify an unspecified person or jurisdiction."
+    },
+    {
+      "id": "steam-payout-tax-withholding-distinct-from-held-cash",
+      "text": "Valve's financial FAQ distinguishes partner revenue share from applicable withholding taxes on the US-source share, not an arbitrary punitive bank-payment freeze.",
+      "source_ids": [
+        "steam-reporting-faq-doc",
+        "steam-tax-faq-doc"
+      ],
+      "confidence": "high_public_procedure_not_outcome",
+      "observed_at": "2026-10-29",
+      "limitations": "Individual treaty rates, taxpayer eligibility and actual withholding amounts are not observable without authorized records."
+    },
+    {
+      "id": "steam-payout-public-scenarios-no-prevalence",
+      "text": "Publicly documented payment hold and onboarding mechanisms cannot establish a population prevalence of enforcement, delayed bank deposits or zero-paid-game-order publishers.",
+      "source_ids": [
+        "steam-direct-fee-doc",
+        "steam-reporting-faq-doc",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high_public_procedure_not_outcome",
+      "observed_at": "2026-10-29",
+      "limitations": "No authenticated merchant cohort, bank statements, audited partner ledger population or individual case evidence was collected."
     }
   ],
   "observations": [],
@@ -10731,5 +10854,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Steam research distinguishes signed private publisher contracts from documented public obligations, including conditional open-source compatibility and separate commercial café licensing. Representative publisher earnings and zero-sales rates remain unresolved."
+  "summary": "Steam research distinguishes ordinary unpaid merchant balances, voluntary payout thresholds, bank failures and possible Direct-fee fraud withholding from zero Steam game sales. No representative publisher income or actual hold incidence is verified."
 }
