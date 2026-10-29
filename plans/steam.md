@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Store-country geography versus regional partner cash reporting
+
+The [Steam geographic sales report study](../ontology/steam/steam-country-store-geo-financial-reporting-boundaries-2026.md) distinguishes store country from physical location, public geography and near-real-time gross from secured monthly sales-by-country statements, and tax/contract share from bank credit. A tested illustrative two-country accounting bridge records no actual store-country demand. **89% complete** (exact **89.437%**, +0.085 pp); all 293 tasks preserved.
+
 ## Public review milestone missingness and catalog-denominator checkpoint
 
 The [review-count coverage audit](../ontology/steam/steam-public-review-milestone-coverage-bounds-2026.md) quantifies a public tracker with 58,033 observed counts out of 155,467 catalog games, keeps 97,434 missing observations separate from true zero reviews, and bounds possible low-review shares. Two other 2025 store catalogs disagree on their observed review bands; neither measures paid orders. **89% complete** (exact **89.352%**, +0.137 pp from preceding checkpoint) over the unchanged 293 original tasks.

@@ -1610,6 +1610,17 @@
       "evidence_class": "third_party_public_current_catalog_and_review_bands",
       "license": "Short independent source-level summary and link; no original graphics, catalog records or scraped dataset copied.",
       "notes": "Oct 2026 market page reports 2025 17651 paid-labelled and 2985 free-labelled releases, 61 percent below 10 reviews. Not verified identical AppID set to other trackers."
+    },
+    {
+      "id": "steam-account-store-country-help-2026",
+      "url": "https://help.steampowered.com/en/faqs/view/2B3F-DAEF-846B-A0E8",
+      "title": "Steam Store Country",
+      "publisher": "Valve / Steam Support",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_customer_store_country_policy",
+      "license": "Short independently authored summary of public rules, no account data.",
+      "notes": "Store country based on first purchase, may retain prices when travelling, can update through eligible purchase with local payment method, at most once per 3 months per public guidance."
     }
   ],
   "claims": [
@@ -10070,6 +10081,115 @@
       "confidence": "bounded_public_snapshot",
       "observed_at": "2026-10-28",
       "limitations": "First-paid status, full costs, publisher identity and representative data missing."
+    },
+    {
+      "id": "steam-geo-store-country-not-current-location",
+      "text": "Valve says a Steam account's store country is established by an initial purchase and can remain unchanged while the customer is travelling.",
+      "source_ids": [
+        "steam-account-store-country-help-2026"
+      ],
+      "confidence": "official_reporting_semantics_without_private_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Account store location is not evidence of GPS position, citizenship or permanent buyer residence."
+    },
+    {
+      "id": "steam-geo-country-change-payment-rule",
+      "text": "Steam's support guidance permits country change when making an eligible local purchase with a payment method from the new country, with changes limited to once per three months.",
+      "source_ids": [
+        "steam-account-store-country-help-2026"
+      ],
+      "confidence": "official_reporting_semantics_without_private_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Rules do not identify a user's current country, individual buyer population or country of taxable supply in a particular transaction."
+    },
+    {
+      "id": "steam-geo-near-realtime-gross-breakdowns",
+      "text": "The Steamworks Sales & Activations reporting portal offers near-real-time product metrics including geographic breakdowns, with gross revenue before refunds, chargebacks and taxes.",
+      "source_ids": [
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "official_reporting_semantics_without_private_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Confidential partner report, not verified here; gross geography is neither cash settlement nor a unique purchaser census."
+    },
+    {
+      "id": "steam-geo-monthly-sales-by-country-net",
+      "text": "Steamworks partners can access a monthly Steam Sales by Country report through the secure financial-reporting interface.",
+      "source_ids": [
+        "steam-reporting-faq-doc",
+        "steam-tax-faq-doc"
+      ],
+      "confidence": "official_reporting_semantics_without_private_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Permissioned monthly country report is not a public Steam-wide dataset and cannot be reconstructed from storefront country settings."
+    },
+    {
+      "id": "steam-geo-vat-additive-inclusive",
+      "text": "Valve says some VAT/GST amounts are included in displayed prices while some regional sales taxes are added at checkout, with taxes, refunds and chargebacks deducted before partner share.",
+      "source_ids": [
+        "steam-tax-faq-doc"
+      ],
+      "confidence": "official_reporting_semantics_without_private_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Tax and currency rules vary by country and transaction and change over time; there is no universal gross-to-net rate."
+    },
+    {
+      "id": "steam-geo-reporting-region-distinct",
+      "text": "Valve's reporting-region definitions group Mexico under Latin America rather than the separate North America group of the United States and Canada.",
+      "source_ids": [
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "official_reporting_semantics_without_private_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Steam's accounting group name is not continental geography or a claim about regional buyer demand."
+    },
+    {
+      "id": "steam-geo-country-revenue-not-publisher-origin",
+      "text": "Steam sale country, customer store setting, publisher legal residence, region pricing currency and U.S.-source withholding are different reporting dimensions.",
+      "source_ids": [
+        "steam-financial-reporting-doc",
+        "steam-tax-faq-doc",
+        "steam-account-store-country-help-2026"
+      ],
+      "confidence": "official_reporting_semantics_without_private_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Mixing these fields can double count or misallocate country revenues; no authenticated country ledger inspected."
+    },
+    {
+      "id": "steam-geo-aggregate-not-unique-paid-buyers",
+      "text": "A geographically segmented gross sales report alone does not reveal the number of distinct paying customers, first-time game buyers or per-country game profitability.",
+      "source_ids": [
+        "steam-financial-reporting-doc",
+        "steam-tax-faq-doc"
+      ],
+      "confidence": "official_reporting_semantics_without_private_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Need refunded checkout unit basis, country and cohort, contract, taxes, exchange conversion and publisher costs."
+    },
+    {
+      "id": "steam-geo-region-pricing-not-checkout-country",
+      "text": "Steam regional USD price groups and local-currency catalog prices are policy mechanisms, not observed geographic shares of paid completed checkouts.",
+      "source_ids": [
+        "steam-supported-currencies-pricing-20261028",
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "official_reporting_semantics_without_private_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "An unsupported price or key activation cannot be treated as a new paid Steam checkout."
+    },
+    {
+      "id": "steam-geo-no-public-nationwide-income",
+      "text": "The examined official public regional financial documentation does not publish a complete representative country-by-country dataset of independent Steam developer after-cost earnings.",
+      "source_ids": [
+        "steam-financial-reporting-doc",
+        "steam-reporting-faq-doc",
+        "steam-tax-faq-doc",
+        "steam-supported-currencies-pricing-20261028",
+        "steam-account-store-country-help-2026"
+      ],
+      "confidence": "official_reporting_semantics_without_private_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Lack of public merchant ledgers prevents country-specific typical payout, profit and zero-sales rates."
     }
   ],
   "observations": [],

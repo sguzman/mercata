@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_steam_country_report_definitions_and_synthetic_gross_to_payout_bridge",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-financial-reporting-doc",
+    "steam-reporting-faq-doc",
+    "steam-tax-faq-doc",
+    "steam-supported-currencies-pricing-20261028",
+    "steam-account-store-country-help-2026"
+  ],
+  "claim_ids": [
+    "steam-geo-store-country-not-current-location",
+    "steam-geo-country-change-payment-rule",
+    "steam-geo-near-realtime-gross-breakdowns",
+    "steam-geo-monthly-sales-by-country-net",
+    "steam-geo-vat-additive-inclusive",
+    "steam-geo-reporting-region-distinct",
+    "steam-geo-country-revenue-not-publisher-origin",
+    "steam-geo-aggregate-not-unique-paid-buyers",
+    "steam-geo-region-pricing-not-checkout-country",
+    "steam-geo-no-public-nationwide-income"
+  ],
+  "units": {
+    "store_country": "customer_account_store_country_not_verified_physical_location",
+    "reporting_region": "Valve_finance_classification_not_continent",
+    "publisher_tax_residence": "legal_partner_tax_jurisdiction_not_customer_country",
+    "geo_gross": "near_real_time_product_gross_before_refunds_chargebacks_taxes",
+    "monthly_sales_by_country": "permissioned_monthly_sale_financial_breakdown",
+    "partner_payout": "contractual_share_of_adjusted_revenue_less_applicable_withholding",
+    "actual_bank_deposit": "may_have_further_receiving_bank_costs",
+    "buyer_unique_count": "not_identified_by_gross_report"
+  },
+  "region_example": {
+    "mexico": "Latin America",
+    "united_states": "North America",
+    "canada": "North America"
+  },
+  "hypothetical": {
+    "currency": "USD_reported_cents_only",
+    "period": "2026-06",
+    "rows": [
+      {
+        "storeCountry": "MX",
+        "grossCents": 100000,
+        "refundAndChargebackCents": 12000,
+        "taxAdjustmentCents": 8000,
+        "partnerShareBps": 7000,
+        "withholdingCents": 0
+      },
+      {
+        "storeCountry": "US",
+        "grossCents": 100000,
+        "refundAndChargebackCents": 6000,
+        "taxAdjustmentCents": 7000,
+        "partnerShareBps": 7000,
+        "withholdingCents": 4000
+      }
+    ],
+    "no_actual_partner_report": true
+  },
+  "unknown": {
+    "representative_store_country_sales_mix": null,
+    "real_paid_checkout_by_country": null,
+    "unique_buyers_by_country": null,
+    "real_merchant_gross_and_net_by_country": null,
+    "typical_publisher_earnings_by_country": null,
+    "after_cost_profit": null
+  },
+  "model_path": "site/steam-country-cash-bridge.mjs",
+  "synthetic_only": true,
+  "no_private_partner_data": true
+}
