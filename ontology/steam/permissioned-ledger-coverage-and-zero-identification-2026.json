@@ -45,7 +45,8 @@
     "partial_positive_rules_out_full_period_gross_zero": true,
     "exclude_unknown_eligibility_from_identified_frame_but_flag_censoring": true,
     "complete_requires_package_to_game_checkout_attribution": true,
-    "partial_positive_requires_package_to_game_checkout_attribution": true
+    "partial_positive_requires_package_to_game_checkout_attribution": true,
+    "partial_positive_requires_authorized_financial_report": true
   },
   "publication_gates": {
     "complete_historical_launch_frame_required": true,
@@ -90,6 +91,7 @@
     "implementation": "site/steam-ledger-coverage.mjs",
     "tests": "tests/steam-ledger-coverage-gates.test.mjs",
     "package_to_game_attribution_required_for_confirmed_zero_and_partial_positive": true,
-    "primary_appid_only_additional_revenue_share_attribution": true
+    "primary_appid_only_additional_revenue_share_attribution": true,
+    "partial_positive_requires_authorized_ledger_attestation": true
   }
 }

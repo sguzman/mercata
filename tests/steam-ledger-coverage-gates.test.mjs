@@ -7,7 +7,7 @@ const rows=[
  {appid:102,eligibility:'eligible_paid_initially',ledger_status:'complete_reconciled',gross_paid_units:10,transfer_history_reconciled:true,authorized_ledger_attested:true,paid_checkout_attribution_attested:true},
  {appid:103,eligibility:'eligible_paid_initially',ledger_status:'partial',gross_paid_units:0},
  {appid:104,eligibility:'eligible_paid_initially',ledger_status:'missing',gross_paid_units:null},
- {appid:105,eligibility:'eligible_paid_initially',ledger_status:'partial',gross_paid_units:3,paid_checkout_attribution_attested:true}
+ {appid:105,eligibility:'eligible_paid_initially',ledger_status:'partial',gross_paid_units:3,paid_checkout_attribution_attested:true,authorized_ledger_attested:true}
 ];
 test('Synthetic frame has conditional 1/5–3/5 zero-unit bounds, no actual Steam figures',()=>{
  const x=auditLedgerCoverage(rows,{frameComplete:true});
@@ -55,7 +55,7 @@ const fixed=()=>[
  paid_checkout_attribution_attested:true,retired:true},
  {fixture_game_id:'fixture-b',eligibility:'eligible_paid_initially',first_paid_playable_date:'2026-01-02',
  ledger_status:'partial',observed_gross_paid_units:3,covered_from_day:'2026-01-02',covered_until_day_exclusive:'2026-01-10',
- paid_checkout_attribution_attested:true},
+ paid_checkout_attribution_attested:true,authorized_ledger_attested:true},
  {fixture_game_id:'fixture-c',eligibility:'eligible_paid_initially',first_paid_playable_date:'2026-01-03',
  ledger_status:'partial',observed_gross_paid_units:0,covered_from_day:'2026-01-03',covered_until_day_exclusive:'2026-01-05'},
  {fixture_game_id:'fixture-d',eligibility:'eligible_paid_initially',first_paid_playable_date:'2026-01-04',
@@ -133,4 +133,13 @@ test('Legacy whole-period bounds refuse zero or positive game claims without pac
  assert.equal(valid.zero_gross_unit_share_lower_conditional,.2);
  assert.equal(valid.zero_gross_unit_share_upper_conditional,.6);
  assert.equal(valid.primary_appid_alone_is_not_paid_game_checkout_attribution,true);
+});
+
+test('An unattributed or unauthorized positive partial report cannot certify sales in either analyzer',()=>{
+ const a={...rows[4]};delete a.authorized_ledger_attested;
+ assert.throws(()=>auditLedgerCoverage([a],{frameComplete:true}),/authorized ledger/);
+ const b=fixed();delete b[1].authorized_ledger_attested;
+ assert.throws(()=>auditSyntheticFixedHorizonZeroSales(b,window30),/authorized report/);
+ const c=fixed();c[1].authorized_ledger_attested=false;
+ assert.throws(()=>auditSyntheticFixedHorizonZeroSales(c,window30),/authorized report/);
 });

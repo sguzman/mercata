@@ -54,3 +54,8 @@ One intentionally invented five-game scenario includes a complete zero, a partia
 ### Consistent attribution gating in the original whole-period analyzer
 
 The original [whole-period synthetic coverage analyzer](../../site/steam-ledger-coverage.mjs) now applies the same package-to-base-game gate as the fixed-horizon extension. Complete zero observations require checkout attribution as well as historical financial access and transfer reconciliation; partial positive observations require attribution before ruling out zero. Its original 1/5–3/5 hypothetical example remains mathematically unchanged because the fixture explicitly attests the needed mapping. The additional tests reject a missing mapping for both zero and positive cases. A raw \`primary_appid\` field is still insufficient for game-license attribution.
+
+
+### Authentication of partial positives
+
+A **positive** partial report proves that a paid game had at least one sale within the relevant observed period only if the report is both authorized and attributable to the game. The legacy and fixed-horizon analyzers now require explicit financial-report access attestation for that inference, in addition to package-to-game mapping. An unverified self-report or unattributed package row cannot be promoted into a verified nonzero outcome; zero-only partial observations remain unknown regardless.

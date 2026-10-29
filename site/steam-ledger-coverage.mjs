@@ -27,8 +27,8 @@ export function auditLedgerCoverage(rows,{frameComplete=false}={}){
    counts.complete++;
   }else counts.partial++;
   if(x.gross_paid_units>0){
-   if(x.paid_checkout_attribution_attested!==true)
-    throw new TypeError('Positive gross paid game units require verified package-to-game attribution');
+   if(x.paid_checkout_attribution_attested!==true||x.authorized_ledger_attested!==true)
+    throw new TypeError('Positive gross paid game units require authorized ledger and verified package-to-game attribution');
    counts.known_gross_nonzero++;
   }
   else if(x.ledger_status==='complete_reconciled')counts.observed_gross_zero++;
@@ -109,8 +109,8 @@ export function auditSyntheticFixedHorizonZeroSales(rows,opts={}){
      r.covered_until_day_exclusive>plus(asOfDate,1))
      throw new RangeError('Partial report must lie within elapsed paid release horizon');
     if(r.observed_gross_paid_units>0){
-     if(r.paid_checkout_attribution_attested!==true)
-      throw new RangeError('Positive partial paid game units require verified package-to-game attribution');
+     if(r.paid_checkout_attribution_attested!==true||r.authorized_ledger_attested!==true)
+      throw new RangeError('Positive partial paid game units require authorized report and verified package-to-game attribution');
      zero_status='known_nonzero';
     }
    }
