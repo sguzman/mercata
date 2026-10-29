@@ -1852,6 +1852,17 @@
       "evidence_class": "official_primary_us_federal_statutory_procedure",
       "license": "Legislative source linked and independently summarized for research; not a substitute for jurisdiction-specific legal advice.",
       "notes": "Qualifying subsection 512(g) counter-notification requires identifying content, good-faith perjury statement, identity and court jurisdiction consent; 10–14 business day replacement framework subject to action seeking court order. Not a universal Valve developer contract or an automatic game reinstatement SLA."
+    },
+    {
+      "id": "steam-subscriber-agreement-age-20261029",
+      "url": "https://store.steampowered.com/agreement/?l=english",
+      "title": "Steam Subscriber Agreement: account age floor and country restrictions",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_consumer_account_agreement_not_partner_contract",
+      "license": "Public source URL and independently composed limited factual summary only; no contractual full text reproduced.",
+      "notes": "General Steam Subscriber Agreement forbids account subscribers under 13 and says additional country age restrictions may apply. Does not establish Steamworks partner agreement age/legal-signatory capacity."
     }
   ],
   "claims": [
@@ -12640,6 +12651,103 @@
       "confidence": "high_public_policy_not_empirical_legal_entity_census",
       "observed_at": "2026-10-29",
       "limitations": "No complete original paid-release population, historic entitlement ledger, individual contracts, private remittance history or full labor costs were obtained."
+    },
+    {
+      "id": "steam-subscriber-no-under13",
+      "text": "The Steam Subscriber Agreement says a person younger than 13 may not register as a Steam subscriber.",
+      "source_ids": [
+        "steam-subscriber-agreement-age-20261029"
+      ],
+      "confidence": "high_public_consumer_vs_partner_agreement_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "This is a Steam consumer-account age floor, not a universal age threshold for becoming an eligible commercial Steamworks publishing signatory."
+    },
+    {
+      "id": "steam-subscriber-local-age-additional",
+      "text": "The Subscriber Agreement warns that additional age limits may apply to users in their country.",
+      "source_ids": [
+        "steam-subscriber-agreement-age-20261029"
+      ],
+      "confidence": "high_public_consumer_vs_partner_agreement_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "The agreement does not enumerate each jurisdiction or disclose country-specific enforcement decisions for a particular prospective Steamworks partner."
+    },
+    {
+      "id": "steam-subscriber-13-not-publisher-clearance",
+      "text": "Meeting Steam's minimum subscriber-account age condition does not verify eligibility to sign a Steam Distribution Agreement.",
+      "source_ids": [
+        "steam-subscriber-agreement-age-20261029",
+        "steam-onboarding-doc"
+      ],
+      "confidence": "high_public_consumer_vs_partner_agreement_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "The distinct distribution agreement is not publicly audited here and contractual capacity also depends on legal identity, rights and applicable jurisdiction."
+    },
+    {
+      "id": "steam-subscriber-18-not-automatic-publisher",
+      "text": "A user aged 18 or older does not automatically meet Steamworks partner approval, banking, tax and game-rights requirements solely by meeting a consumer account age floor.",
+      "source_ids": [
+        "steam-subscriber-agreement-age-20261029",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high_public_consumer_vs_partner_agreement_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "This is a separation of procedural gates, not a jurisdiction-specific legal conclusion or a finding that any actual person was refused onboarding."
+    },
+    {
+      "id": "steam-subscriber-partner-legal-entity",
+      "text": "Steamworks asks that the person signing its distribution agreement identify the legally authorized rights holder or publisher, with matching official banking and tax information.",
+      "source_ids": [
+        "steam-onboarding-doc",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high_public_consumer_vs_partner_agreement_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "Public general instructions do not reveal the signed agreement, any individual partner's beneficial owner or competence of a particular signatory."
+    },
+    {
+      "id": "steam-subscriber-sole-proprietor-allowed",
+      "text": "Steamworks' official FAQ permits onboarding as a sole proprietor using the person's full legal name instead of a brand or DBA label.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high_public_consumer_vs_partner_agreement_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "Sole-proprietor availability is not a determination of a particular individual's legal capacity to sign or a substitute for applicable local tax law."
+    },
+    {
+      "id": "steam-subscriber-actual-authority-partner",
+      "text": "Steamworks identifies an Actual Authority permission for certain financial and account administrative actions, distinct from being a subscriber or appearing as a public developer name.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026",
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high_public_consumer_vs_partner_agreement_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "The presence or absence of this permission for a real account was not inspected; permission alone would not authenticate individual legal capacity."
+    },
+    {
+      "id": "steam-subscriber-unclear-minor-signatory-rule",
+      "text": "The audited public subscriber and onboarding pages do not establish one universally valid 13-, 16- or 18-year minimum for signing a Steamworks distribution contract across jurisdictions.",
+      "source_ids": [
+        "steam-subscriber-agreement-age-20261029",
+        "steam-onboarding-doc",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high_public_consumer_vs_partner_agreement_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "Lack of a single documented publisher-signatory threshold is a research gap, not affirmative proof that a minor can or cannot become the contractual rights holder."
+    },
+    {
+      "id": "steam-subscriber-age-not-earnings-proxy",
+      "text": "Neither a Steam user-account age floor nor Steamworks legal-identity paperwork measures the proportion of game studios accepted for publishing or their revenue.",
+      "source_ids": [
+        "steam-subscriber-agreement-age-20261029",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high_public_consumer_vs_partner_agreement_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "A representative applicant and merchant cohort, lawful demographic data and verified outcomes would be necessary; no personal age, account or financial records were collected."
     }
   ],
   "observations": [],
@@ -12647,5 +12755,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Steam research separates portfolio AppIDs, public multi-developer labels, Creator Homepages, franchise pages and transfer-effective-dated paying partners; public brand counts cannot identify legal publisher survival or after-cost income."
+  "summary": "Steam policy evidence now distinguishes a general subscriber under-13 age prohibition from the unresolved legal capacity to sign separate commercial Steamworks distribution agreements. Subscriber eligibility does not prove partner approval or income."
 }

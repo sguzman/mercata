@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "consumer_subscriber_age_floor_vs_unverified_commercial_publishing_capacity",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-subscriber-agreement-age-20261029",
+    "steam-onboarding-doc",
+    "steam-onboarding-faq-current-2026",
+    "steam-transfer-app-official-2026"
+  ],
+  "claim_ids": [
+    "steam-subscriber-no-under13",
+    "steam-subscriber-local-age-additional",
+    "steam-subscriber-13-not-publisher-clearance",
+    "steam-subscriber-18-not-automatic-publisher",
+    "steam-subscriber-partner-legal-entity",
+    "steam-subscriber-sole-proprietor-allowed",
+    "steam-subscriber-actual-authority-partner",
+    "steam-subscriber-unclear-minor-signatory-rule",
+    "steam-subscriber-age-not-earnings-proxy"
+  ],
+  "subscriber": {
+    "minimum_age_years": 13,
+    "under_13_may_register": false,
+    "extra_country_age_restrictions_possible": true,
+    "consumer_account_minimum_does_not_authorize_commercial_publishing": true
+  },
+  "partner": {
+    "requires_steam_distribution_agreement": true,
+    "requires_copyright_or_distribution_rights": true,
+    "requires_verified_bank_and_tax": true,
+    "sole_proprietorship_allowed": true,
+    "actual_authority_permission_separate": true,
+    "universal_signatory_minimum_age_published_in_audited_docs": null
+  },
+  "synthetic_cases": [
+    {
+      "age_years": 12,
+      "subscriber_age_gate": "barred_under_13",
+      "publisher_signatory_eligible": null
+    },
+    {
+      "age_years": 13,
+      "subscriber_age_gate": "meets_general_age_floor_only",
+      "publisher_signatory_eligible": null
+    },
+    {
+      "age_years": 17,
+      "subscriber_age_gate": "meets_general_age_floor_only",
+      "publisher_signatory_eligible": null
+    },
+    {
+      "age_years": 18,
+      "subscriber_age_gate": "meets_general_age_floor_only",
+      "publisher_signatory_eligible": null
+    }
+  ],
+  "unknown": {
+    "minor_partner_agreement_acceptance": null,
+    "jurisdiction_specific_minors_capacity": null,
+    "publisher_approval_frequency": null,
+    "actual_contract_signatory_age_distribution": null,
+    "legal_ownership_distribution": null,
+    "after_cost_profit": null
+  },
+  "no_real_person_or_account_records": true
+}
