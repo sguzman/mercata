@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_update_round_eligibility_blackout_and_impression_ceiling_not_revenue_study",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-update-visibility-rounds-official-oct2026",
+    "steam-upcoming-events-calendar-oct2026",
+    "steam-store-traffic-report-official-20261028"
+  ],
+  "claim_ids": [
+    "steam-update-rounds-shared-five",
+    "steam-update-rounds-extra-not-guaranteed",
+    "steam-update-rounds-30days-or-million",
+    "steam-update-rounds-holiday-blackout-clock",
+    "steam-update-rounds-fresh-event",
+    "steam-update-rounds-after-launch-visibility",
+    "steam-update-rounds-homepage-lottery",
+    "steam-update-rounds-wishlist-owner-exposure",
+    "steam-update-rounds-winter-2026-calendar",
+    "steam-update-rounds-example-11-days",
+    "steam-update-rounds-traffic-impression-not-click",
+    "steam-update-rounds-no-causal-revenue"
+  ],
+  "official_policy": {
+    "initial_rounds_per_base_product": 5,
+    "rounds_shared_early_access_and_full_release": true,
+    "additional_rounds_guaranteed": false,
+    "max_calendar_days": 30,
+    "impression_cap_homepage": 1000000,
+    "major_sale_days_pause_nominal_clock": false,
+    "major_sale_homepage_rounds_normally_absent": true,
+    "recent_community_announcement_max_age_days": 30,
+    "initial_launch_visibility_must_conclude": true,
+    "early_access_wait_after_launch_days": 14,
+    "selected_from_opted_in_pool": true
+  },
+  "public_example": {
+    "synthetic": true,
+    "round_start_date": "2026-12-10",
+    "nominal_end_exclusive": "2027-01-09",
+    "major_sale_start_date": "2026-12-17",
+    "major_sale_end_inclusive": "2027-01-04",
+    "nominal_calendar_days": 30,
+    "sale_blackout_calendar_days": 19,
+    "maximum_other_calendar_days": 11
+  },
+  "measurement": {
+    "impressions_not_unique_people": true,
+    "visits_not_purchases": true,
+    "rounds_not_paid_ad_inventory": true,
+    "calendar_gap_not_actual_exposure": true,
+    "private_partner_traffic_reports_collected": false
+  },
+  "unknown": {
+    "actual_available_impressions": null,
+    "actual_round_end_timestamp": null,
+    "unique_exposed_customers": null,
+    "incremental_paid_orders": null,
+    "extra_rounds_per_new_publisher": null,
+    "actual_incremental_profit": null
+  },
+  "no_partner_account_or_campaign_actions": true
+}
