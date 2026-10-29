@@ -26,3 +26,36 @@ export function contrastUnmatchedReleaseReviewFractions(a,b){
   actual_market_trend:null,paid_checkout_rate:null,causal_calendar_effect:null,
   note:'These are unmatched review count snapshots. Differences may reflect coverage, definitions, ages and data collection, not any causal or payout trend.'};
 }
+
+// Compare explicitly dated and incompatible public review snapshots. Arithmetic only, never longitudinal title transitions.
+const isoDay=(s,name)=>{
+ if(typeof s!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(s))throw new TypeError('Invalid '+name);
+ const t=Date.parse(s+'T00:00:00Z');
+ if(!Number.isFinite(t)||new Date(t).toISOString().slice(0,10)!==s)throw new TypeError('Invalid '+name);
+ return t;
+};
+export function compareUnmatchedDatedReviewFrames(early,late){
+ for(const [label,r] of [['early',early],['late',late]]){
+  if(!r||typeof r.provider!=='string'||!r.provider.trim())throw new TypeError('Missing '+label+' provider');
+  isoDay(r.published_date,label+' date');
+  for(const key of ['release_year','games','under_ten_reviews']){
+   if(!Number.isSafeInteger(r[key])||r[key]<0)throw new TypeError('Invalid '+label+' '+key);
+  }
+  if(!r.games||r.under_ten_reviews>r.games)throw new RangeError('Impossible '+label+' review counts');
+  if(r.zero_reviews!==null&&r.zero_reviews!==undefined&&(!Number.isSafeInteger(r.zero_reviews)||r.zero_reviews<0||r.zero_reviews>r.under_ten_reviews))
+   throw new RangeError('Impossible zero-review subset');
+ }
+ if(early.provider===late.provider)throw new TypeError('Distinct providers required for this cross-provider audit');
+ if(early.release_year!==late.release_year)throw new RangeError('Release year differs');
+ if(isoDay(early.published_date,'early date')>=isoDay(late.published_date,'late date'))throw new RangeError('Publication dates out of order');
+ return {release_year:early.release_year,
+  earlier_roster_count:early.games,later_roster_count:late.games,
+  roster_size_arithmetic_delta:late.games-early.games,
+  earlier_under_ten_fraction:early.under_ten_reviews/early.games,
+  later_under_ten_fraction:late.under_ten_reviews/late.games,
+  difference_percentage_points:100*(late.under_ten_reviews/late.games-early.under_ten_reviews/early.games),
+  earlier_zero_review_fraction:early.zero_reviews===null||early.zero_reviews===undefined?null:early.zero_reviews/early.games,
+  same_appid_frame_verified:false,observed_review_transitions:null,first30day_review_distribution:null,
+  number_of_new_2025_game_launches_between_snapshots:null,actual_paid_game_orders:null,developer_profit:null,
+  explanation:'Different provider rosters and observation dates forbid interpreting the difference as title-level progress or economic change.'};
+}

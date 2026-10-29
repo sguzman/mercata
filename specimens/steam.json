@@ -1753,6 +1753,17 @@
       "evidence_class": "official_public_steamworks_partner_marketing_policy",
       "license": "Public link and independently authored bounded facts only; no webpage text, images or proprietary analytics reproduced.",
       "notes": "Five shared initial rounds, up to 30 days or one million homepage impressions per round, qualifying major update announcement, sale-day blackout not pausing the clock."
+    },
+    {
+      "id": "steam-pcgamer-steamdb-reviews-dec12-2025",
+      "url": "https://www.pcgamer.com/gaming-industry/more-than-19-000-games-launched-on-steam-this-year-but-almost-half-have-fewer-than-10-reviews/",
+      "title": "More than 19,000 games launched on Steam this year—but almost half have fewer than 10 reviews",
+      "publisher": "Lincoln Carpenter / PC Gamer, reporting SteamDB",
+      "published_at": "2025-12-12",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "dated_secondhand_steamdb_public_catalog_review_snapshot",
+      "license": "Factual aggregate counts, public link and independently written short paraphrase only; source article or graphics not republished.",
+      "notes": "December 12, 2025 third-party reporting cites SteamDB 19112 calendar-2025 releases, 9327 with under ten reviews and 2229 with zero; snapshot before 2025 year end."
     }
   ],
   "claims": [
@@ -11185,6 +11196,91 @@
       "confidence": "high_official_procedure_or_conditional_calendar_arithmetic",
       "observed_at": "2026-10-29",
       "limitations": "The operator has not provided a randomized sales treatment/control dataset, authenticated merchant ledger or comprehensive cost sample."
+    },
+    {
+      "id": "steam-dec2025-steamdb-known-roster",
+      "text": "A December 12, 2025 PC Gamer article relayed a SteamDB catalog snapshot with 19,112 release-year-2025 games, still before the calendar year ended.",
+      "source_ids": [
+        "steam-pcgamer-steamdb-reviews-dec12-2025"
+      ],
+      "confidence": "bounded_historical_secondhand_snapshot_and_noncomparable_provider_arithmetic",
+      "observed_at": "2026-10-29",
+      "limitations": "SteamDB was reported secondhand at that date; the roster may exclude later games, later delistings and products with reassigned public release dates."
+    },
+    {
+      "id": "steam-dec2025-steamdb-under10",
+      "text": "The December 2025 SteamDB-reported 2025 release snapshot showed 9,327 of 19,112 titles with fewer than ten public user reviews, about 48.80%.",
+      "source_ids": [
+        "steam-pcgamer-steamdb-reviews-dec12-2025"
+      ],
+      "confidence": "bounded_historical_secondhand_snapshot_and_noncomparable_provider_arithmetic",
+      "observed_at": "2026-10-29",
+      "limitations": "A review-count milestone in a partly completed release year is not a same-age early-review rate, verified paid unit count, or publisher income."
+    },
+    {
+      "id": "steam-dec2025-steamdb-zero-review",
+      "text": "The same December 12 report counted 2,229 of 19,112 tracked release-year-2025 titles with no posted Steam reviews, approximately 11.66%.",
+      "source_ids": [
+        "steam-pcgamer-steamdb-reviews-dec12-2025"
+      ],
+      "confidence": "bounded_historical_secondhand_snapshot_and_noncomparable_provider_arithmetic",
+      "observed_at": "2026-10-29",
+      "limitations": "Zero visible reviews does not prove no owners, no players, no paid sales or zero publisher after-cost profit."
+    },
+    {
+      "id": "steam-dec2025-vgc-2026-denominator-shift",
+      "text": "A later October 2026 VideoGamesCritic summary counts 20,591 2025 releases, 1,479 more catalog entries than the December 2025 SteamDB-reported snapshot.",
+      "source_ids": [
+        "steam-pcgamer-steamdb-reviews-dec12-2025",
+        "steam-videogamescritic-oct25-2026-review-threshold"
+      ],
+      "confidence": "bounded_historical_secondhand_snapshot_and_noncomparable_provider_arithmetic",
+      "observed_at": "2026-10-29",
+      "limitations": "Different provider populations and observation dates mean this numerical gap cannot be assigned to new launches, recovered delistings, omissions or a single causal mechanism."
+    },
+    {
+      "id": "steam-dec2025-vgc-2026-threshold-shift",
+      "text": "The December 2025 SteamDB-reported 48.8% under-ten-review share and October 2026 VideoGamesCritic's approximately 49.6% are numerically close despite different rosters, dates and review ages.",
+      "source_ids": [
+        "steam-pcgamer-steamdb-reviews-dec12-2025",
+        "steam-videogamescritic-oct25-2026-review-threshold"
+      ],
+      "confidence": "bounded_historical_secondhand_snapshot_and_noncomparable_provider_arithmetic",
+      "observed_at": "2026-10-29",
+      "limitations": "Comparability is unverified; a small headline percentage difference does not demonstrate stable title-level reviews, improving discovery, or cohort convergence."
+    },
+    {
+      "id": "steam-dec2025-vgc-2026-no-observed-transitions",
+      "text": "The two public source aggregates supply no AppID-level linkage, so the number of titles crossing from fewer than ten to at least ten reviews between dates cannot be identified.",
+      "source_ids": [
+        "steam-pcgamer-steamdb-reviews-dec12-2025",
+        "steam-videogamescritic-oct25-2026-review-threshold"
+      ],
+      "confidence": "bounded_historical_secondhand_snapshot_and_noncomparable_provider_arithmetic",
+      "observed_at": "2026-10-29",
+      "limitations": "Some releases can appear in one roster only, and review counts may change; aggregate snapshots alone cannot identify a transition matrix."
+    },
+    {
+      "id": "steam-dec2025-vgc-2026-paid-frame-unknown",
+      "text": "Neither the December SteamDB-reported general release snapshot nor the later VideoGamesCritic all-game roster is a verified originally-paid-base-game frame with zero-order and retired-title coverage.",
+      "source_ids": [
+        "steam-pcgamer-steamdb-reviews-dec12-2025",
+        "steam-videogamescritic-oct25-2026-review-threshold"
+      ],
+      "confidence": "bounded_historical_secondhand_snapshot_and_noncomparable_provider_arithmetic",
+      "observed_at": "2026-10-29",
+      "limitations": "Both sources are public descriptive catalogs without authenticated purchases, partner identities, bank payouts or complete historical censoring treatment."
+    },
+    {
+      "id": "steam-dec2025-vgc-2026-no-earnings-inference",
+      "text": "Review thresholds over unmatched release-year cohorts cannot estimate the fraction of zero-selling publishers or developer earnings and profit.",
+      "source_ids": [
+        "steam-pcgamer-steamdb-reviews-dec12-2025",
+        "steam-videogamescritic-oct25-2026-review-threshold"
+      ],
+      "confidence": "bounded_historical_secondhand_snapshot_and_noncomparable_provider_arithmetic",
+      "observed_at": "2026-10-29",
+      "limitations": "Merchant financial records, matched-game denominators, legal publisher links and costs are absent, so all such outcomes remain unobserved."
     }
   ],
   "observations": [],
@@ -11192,5 +11288,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Steam research records official Update Visibility Round constraints: five shared initial rounds, thirty calendar days or one million impressions, and season-sale blackouts that still consume the time window. Game-level paid income and actual incremental conversion remain unknown."
+  "summary": "Steam research now distinguishes December 2025 near-launch review snapshot rosters from October 2026 full-year review snapshots. Similar published under-ten-review percentages do not establish title-level improvement, completed sales or publisher earnings."
 }

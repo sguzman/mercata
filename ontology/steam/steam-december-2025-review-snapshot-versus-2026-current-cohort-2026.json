@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "timestamped_retro_review_snapshot_and_unmatched_roster_comparability",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-pcgamer-steamdb-reviews-dec12-2025",
+    "steam-videogamescritic-oct25-2026-review-threshold"
+  ],
+  "claim_ids": [
+    "steam-dec2025-steamdb-known-roster",
+    "steam-dec2025-steamdb-under10",
+    "steam-dec2025-steamdb-zero-review",
+    "steam-dec2025-vgc-2026-denominator-shift",
+    "steam-dec2025-vgc-2026-threshold-shift",
+    "steam-dec2025-vgc-2026-no-observed-transitions",
+    "steam-dec2025-vgc-2026-paid-frame-unknown",
+    "steam-dec2025-vgc-2026-no-earnings-inference"
+  ],
+  "snapshots": [
+    {
+      "source_id": "steam-pcgamer-steamdb-reviews-dec12-2025",
+      "provider": "SteamDB as reported by PC Gamer",
+      "published_date": "2025-12-12",
+      "release_year": 2025,
+      "release_year_complete": false,
+      "games": 19112,
+      "under_ten_reviews": 9327,
+      "zero_reviews": 2229,
+      "source_type": "dated_article_reproducing_secondary_stat"
+    },
+    {
+      "source_id": "steam-videogamescritic-oct25-2026-review-threshold",
+      "provider": "VideoGamesCritic",
+      "published_date": "2026-10-25",
+      "release_year": 2025,
+      "release_year_complete": true,
+      "games": 20591,
+      "under_ten_reviews": 10217,
+      "zero_reviews": null,
+      "source_type": "later_live_public_database_snapshot"
+    }
+  ],
+  "compatibility": {
+    "same_appid_roster_verified": false,
+    "same_review_observation_date": false,
+    "originally_paid_historical_cohort_verified": false,
+    "matched_30_day_postlaunch_reviews": false,
+    "actual_game_sale_proceeds_verified": false
+  },
+  "unknown": {
+    "title_level_review_transitions": null,
+    "title_level_roster_additions": null,
+    "true_zero_paid_sale_fraction": null,
+    "first30day_review_frequency": null,
+    "after_labor_publisher_profit": null
+  },
+  "no_game_level_data_downloaded": true
+}
