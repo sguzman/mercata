@@ -1390,6 +1390,17 @@
       "evidence_class": "official_upstream_docs_or_identified_third_party_integration_2026",
       "license": "Only URL, source title and short independently authored technical paraphrase; no source code, downloads, media or copyrighted passages copied.",
       "notes": "Third-party MIT Steamworks binding, plugin incompatibilities and exported runtime caveats; not officially endorsed by Valve."
+    },
+    {
+      "id": "steam-manski-partial-identification-missingdata-2005",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0888613X04001124",
+      "title": "Partial identification with missing data: concepts and findings",
+      "publisher": "Charles F. Manski / International Journal of Approximate Reasoning",
+      "published_at": "2005-06",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "peer_reviewed_missing_data_partial_identification_methodology",
+      "license": "Citation and original short technical interpretation only; no article text, tables or paywalled material copied.",
+      "notes": "Methodological work on identified sets for missing-outcome distributions, including quantiles. Mercata's lower-order-median function and tests are independently written."
     }
   ],
   "claims": [
@@ -8290,6 +8301,132 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Engine choice still requires game-specific prototypes, workflow tests and matched outcome evidence."
+    },
+    {
+      "id": "missing-median-not-point-identified",
+      "text": "With nonrandom missing outcomes, the empirical distribution and its median need not be point identified without assumptions on unseen values.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The publication establishes a general method, not an estimated Steam game gross or permission to inspect seller accounts."
+    },
+    {
+      "id": "missing-median-bounded-set",
+      "text": "Partial identification treats plausible distributions of the missing outcomes as a set rather than silently imputing respondents' values to nonrespondents.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Intervals are conditional on having an independently complete and correctly defined population frame."
+    },
+    {
+      "id": "missing-values-extreme-assignments",
+      "text": "For a nonnegative variable with no finite upper bound, lower and upper rank-quantile bounds can be computed by filling missing values with zero or arbitrarily large numbers.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is an independently derived discrete order-statistic example; unbounded upper is not infinity dollars observed."
+    },
+    {
+      "id": "median-lower-order-statistic-rule",
+      "text": "The new Mercata QA routine explicitly uses the order statistic with rank ceil(N/2) as the lower median, including for even sample sizes.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a reproducibility convention, not the average-of-two-middle-values median used in some publications."
+    },
+    {
+      "id": "gross-sales-nonnegative-not-net-profit",
+      "text": "A nonnegative lower bound can reasonably describe gross paid checkout proceeds, but developer after-cost profit can be negative and requires a different measurement model.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Never transfer a gross-sales bound to net payouts, publisher royalty splits or economic profit."
+    },
+    {
+      "id": "known-values-not-random-sample",
+      "text": "A convenient set of successful studios volunteering gross reports is not a random sample of all original-paid Steam game releases.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Volunteering and successful survival introduce potential nonresponse bias; without randomization an estimated typical value cannot be generalized."
+    },
+    {
+      "id": "verified-frame-required-for-market-bounds",
+      "text": "No Steam-wide median interval should be published when AppID frame completeness, original-paid eligibility, delisting or transfer-period coverage remains unverified.",
+      "source_ids": [
+        "steam-retire-app-official",
+        "steam-financial-api-official",
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Even mathematically valid bounds on supplied rows do not correct an incomplete sampling frame."
+    },
+    {
+      "id": "finance-api-income-terms-distinct",
+      "text": "Steam's partner financial data distinguishes gross units, refunds, taxes and net sales rather than developer income or economic profit.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Complete merchant revenue still requires legally identified payees and contract-specific shares."
+    },
+    {
+      "id": "zero-and-median-different-questions",
+      "text": "A bounded gross-game median does not identify the exact proportion of games with zero paid checkouts or no post-cost earnings.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Zero counts depend on complete order ledgers; developer profitability additionally depends on labor and contract costs."
+    },
+    {
+      "id": "finite-upper-not-assumed",
+      "text": "Without a defensible upper bound on unobserved gross sales, the computed population median can be unbounded above when the quantile rank falls within missing observations.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "An unbounded upper bound is a knowledge limit, not a forecast of infinite revenue."
+    },
+    {
+      "id": "nonresponse-uncertainty-not-sampling-ci",
+      "text": "The interval returned by Mercata's synthetic routine is a finite-population missing-data identification bound, not a frequentist confidence interval for a random sample.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No sampling design, estimated variance or actual participating Steam publisher data exists."
+    },
+    {
+      "id": "partial-id-no-observed-income",
+      "text": "The missing-outcome bounds protocol used no real Steam publishers, AppIDs, prices, merchant statements or development cost records.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Its invented examples may demonstrate arithmetic, never actual Steam industry earnings."
     }
   ],
   "observations": [],
@@ -8297,5 +8434,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research includes documented engine export paths, optional partner-only Steamworks bindings, and SteamPipe build/patch QA gates. Real first-game profit, development hours and paid sales are still unobserved."
+  "summary": "Steam research adds source-grounded partial identification of median gross sales under missing outcome reports, with mathematical bounds only when an eligible population frame is complete. Real game medians, publisher net receipts, zero sales and profit remain unmeasured."
 }

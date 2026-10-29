@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Missing-outcome median partial identification checkpoint
+
+The [income nonresponse and median bounds study](../ontology/steam/nonresponse-gross-median-identification-bounds-2026.md), supported by peer-reviewed partial-identification methods and a [tested finite-population quantile implementation](../site/steam-gross-median-bounds.mjs), refuses to impute missing publisher outcomes or confuse gross game sales with developer profits. **Current score 87%** (exact 87.218%, Δ +0 pp from 87%). No real seller incomes observed.
+
 ## Engine integration, genre fit and SteamPipe QA checkpoint
 
 The [Ren'Py/Godot/SteamPipe engineering comparison](../ontology/steam/genre-engine-integration-and-steampipe-qa-2026.md) separates runnable operating-system builds, optional partner-authorized Steamworks bindings, distribution packages, update delivery and verified hardware testing. The [synthetic QA gate](../site/steam-engine-release-gates.mjs) treats missing tests as unverified rather than pass. **Current score 87%** (exact 87.014%; Δ +1 pp from 86%) across the unchanged 293 tasks. No shipped game or actual paid orders observed.
@@ -491,4 +495,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - **Designs documented, no live experiments:** Falsifiable low-risk launch and marketing experiments
 - **Implemented; maintain current:** Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 87%** rounded task-weighted progress across 293 tasks; prior snapshot 86%, change +1 percentage points (exact 87.014%). 69 fully verified, 224 partly researched; 125 sources and 669 bounded claims. No real seller sales, labor logs, contracts or games published.
+**Completion: 87%** rounded task-weighted progress across 293 tasks; previous checkpoint 87%, delta +0 pp (exact 87.218%). 69 fully verified, 224 partly researched; 126 sources and 681 claims. Real paid units, net payouts, developer profit and exact zero sales remain unknown.

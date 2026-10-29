@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "nonresponse_finite_population_median_partial_identification_protocol",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-manski-partial-identification-missingdata-2005",
+    "steam-financial-api-official",
+    "steam-retire-app-official"
+  ],
+  "claim_ids": [
+    "missing-median-not-point-identified",
+    "missing-median-bounded-set",
+    "missing-values-extreme-assignments",
+    "median-lower-order-statistic-rule",
+    "gross-sales-nonnegative-not-net-profit",
+    "known-values-not-random-sample",
+    "verified-frame-required-for-market-bounds",
+    "finance-api-income-terms-distinct",
+    "zero-and-median-different-questions",
+    "finite-upper-not-assumed",
+    "nonresponse-uncertainty-not-sampling-ci",
+    "partial-id-no-observed-income"
+  ],
+  "target": {
+    "unit": "one_originally_paid_base_game_appid",
+    "measure": "gross_paid_steam_checkout_usd_nonnegative",
+    "period": "a_predeclared_fixed_age_release_cohort",
+    "quantile": "lower_median_order_statistic_ceil_n_over_2",
+    "all_eligible_games_frame_confirmed": false,
+    "actual_gross_values_observed": 0
+  },
+  "assumptions": {
+    "observed_values_must_be_complete_reconciled": true,
+    "game_frame_must_be_complete": true,
+    "observed_data_nonnegative": true,
+    "missing_values_lower_support": 0,
+    "missing_values_finite_upper_bound_known": false,
+    "missing_at_random_assumed": false,
+    "missing_records_are_zero": false
+  },
+  "hypothetical_cases": [
+    {
+      "label": "complete five game sample",
+      "n": 5,
+      "observed": [
+        0,
+        10,
+        20,
+        50,
+        100
+      ],
+      "expected_lower": 20,
+      "expected_upper": 20
+    },
+    {
+      "label": "two missing among five",
+      "n": 5,
+      "observed": [
+        10,
+        20,
+        30
+      ],
+      "expected_lower": 0,
+      "expected_upper": 30
+    },
+    {
+      "label": "one missing among five",
+      "n": 5,
+      "observed": [
+        10,
+        20,
+        30,
+        40
+      ],
+      "expected_lower": 20,
+      "expected_upper": 30
+    },
+    {
+      "label": "three missing among five",
+      "n": 5,
+      "observed": [
+        10,
+        20
+      ],
+      "expected_lower": 0,
+      "expected_upper": null
+    }
+  ],
+  "unknown": {
+    "actual_steam_median_gross": null,
+    "actual_steam_median_publisher_net_proceeds": null,
+    "actual_zero_sales_fraction": null,
+    "actual_after_cost_profit": null,
+    "representative_consenting_respondents": null
+  },
+  "all_fixtures_synthetic": true,
+  "no_private_ledger_data": true
+}

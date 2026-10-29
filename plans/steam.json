@@ -296,7 +296,7 @@
         "steam/income/build-evidence-quality-classification-for-earnings"
       ],
       "phase": 3,
-      "progress_percent": 82
+      "progress_percent": 84
     },
     {
       "id": "rights",
@@ -2747,7 +2747,7 @@
       "objective": "Research require representative release cohort and label modeled versus merchant-observed values.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Require representative release cohort and label modeled versus merchant-observed values. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
@@ -2756,9 +2756,12 @@
         "ontology/steam/model-validation-and-low-end-bounds-2026.md",
         "ontology/steam/model-validation-and-low-end-bounds-2026.json",
         "ontology/steam/january-2026-modeled-zero-missingness-2026.md",
-        "ontology/steam/january-2026-modeled-zero-missingness-2026.json"
+        "ontology/steam/january-2026-modeled-zero-missingness-2026.json",
+        "ontology/steam/nonresponse-gross-median-identification-bounds-2026.md",
+        "ontology/steam/nonresponse-gross-median-identification-bounds-2026.json",
+        "site/steam-gross-median-bounds.mjs"
       ],
-      "artifact": "ontology/steam/january-2026-modeled-zero-missingness-2026.md",
+      "artifact": "ontology/steam/nonresponse-gross-median-identification-bounds-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -2770,16 +2773,19 @@
       "objective": "Research handle high revenue tails and coverage bias with same period and currency.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Handle high revenue tails and coverage bias with same period and currency. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 70,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
         "ontology/steam/january-2026-modeled-paid-release-distribution.json",
         "specimens/steam.json",
         "ontology/steam/model-validation-and-low-end-bounds-2026.md",
-        "ontology/steam/model-validation-and-low-end-bounds-2026.json"
+        "ontology/steam/model-validation-and-low-end-bounds-2026.json",
+        "ontology/steam/nonresponse-gross-median-identification-bounds-2026.md",
+        "ontology/steam/nonresponse-gross-median-identification-bounds-2026.json",
+        "site/steam-gross-median-bounds.mjs"
       ],
-      "artifact": "ontology/steam/model-validation-and-low-end-bounds-2026.md",
+      "artifact": "ontology/steam/nonresponse-gross-median-identification-bounds-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -2791,7 +2797,7 @@
       "objective": "Research trace discounts, returns, regional taxes, platform shares, partner splits and FX.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Trace discounts, returns, regional taxes, platform shares, partner splits and FX. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 30,
+      "percent": 45,
       "weight": 1,
       "evidence": [
         "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
@@ -2800,9 +2806,12 @@
         "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.md",
         "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.json",
         "site/steam-ledger-coverage.mjs",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/nonresponse-gross-median-identification-bounds-2026.md",
+        "ontology/steam/nonresponse-gross-median-identification-bounds-2026.json",
+        "site/steam-gross-median-bounds.mjs"
       ],
-      "artifact": "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.md",
+      "artifact": "ontology/steam/nonresponse-gross-median-identification-bounds-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -2814,7 +2823,7 @@
       "objective": "Research combine retained proceeds with labor, outsourcing, overhead and support costs.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Combine retained proceeds with labor, outsourcing, overhead and support costs. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 70,
       "weight": 1,
       "evidence": [
         "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
@@ -2829,9 +2838,12 @@
         "ontology/steam/paid-acquisition-incrementality-and-unit-margin-2026.md",
         "ontology/steam/paid-acquisition-incrementality-and-unit-margin-2026.json",
         "site/steam-acquisition-economics.mjs",
-        "tests/steam-acquisition-economics.test.mjs"
+        "tests/steam-acquisition-economics.test.mjs",
+        "ontology/steam/nonresponse-gross-median-identification-bounds-2026.md",
+        "ontology/steam/nonresponse-gross-median-identification-bounds-2026.json",
+        "site/steam-gross-median-bounds.mjs"
       ],
-      "artifact": "ontology/steam/paid-acquisition-incrementality-and-unit-margin-2026.md",
+      "artifact": "ontology/steam/nonresponse-gross-median-identification-bounds-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -2843,7 +2855,7 @@
       "objective": "Research separate zero paid orders, zero gross, zero net payout and loss-making products.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate zero paid orders, zero gross, zero net payout and loss-making products. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 50,
       "weight": 1,
       "evidence": [
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
@@ -2855,9 +2867,12 @@
         "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.json",
         "site/steam-ledger-coverage.mjs",
         "ontology/steam/january-2026-modeled-zero-missingness-2026.md",
-        "ontology/steam/january-2026-modeled-zero-missingness-2026.json"
+        "ontology/steam/january-2026-modeled-zero-missingness-2026.json",
+        "ontology/steam/nonresponse-gross-median-identification-bounds-2026.md",
+        "ontology/steam/nonresponse-gross-median-identification-bounds-2026.json",
+        "site/steam-gross-median-bounds.mjs"
       ],
-      "artifact": "ontology/steam/january-2026-modeled-zero-missingness-2026.md",
+      "artifact": "ontology/steam/nonresponse-gross-median-identification-bounds-2026.md",
       "priority": "high",
       "phase": 3
     },
