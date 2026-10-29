@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Low-budget Steam legal-payee choices, fee floors and future entity migration (October 29, 2026)
+
+The [Steamworks source and hypothetical budget comparison](../ontology/steam/steam-sole-proprietor-versus-company-form-cash-gates-2026.md) distinguishes individual sole-proprietor onboarding from forming a company before agreement paperwork, and documents that a later legal-payee change involves fresh onboarding and game-rights migration. Only Valve's published per-product USD 100 fee is quantified. Local liability, taxes, incorporation costs and transferred publisher cash remain unknown. Six official-source-backed claims advance the existing legal entity planning task by three points. Steam research **91.256%** (Δ **+0.010 pp**); original **293 tasks** retained.
+
 ## Wishlist purchase cohort and Pacific-time reporting semantics (October 29, 2026)
 
 The [Valve CSV field audit](../ontology/steam/steam-wishlist-month-cohort-pacific-reporting-lag-2026.md) separates the Pacific-time purchase date (DateLocal) from the **original wishlist-add month** (MonthCohort), calculates honest date-range bounds and rejects same-day incomplete reporting. Platform preference subsets and wishlist-originated purchase events are not complete paid-order denominators. Six new official-source-linked claims and tests increase the original wishlist-to-sale research task by two points, without new sources or additional tasks. Steam research **91.246%** (Δ **+0.007 pp**).

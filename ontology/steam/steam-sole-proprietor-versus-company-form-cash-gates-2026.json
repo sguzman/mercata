@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_legal_partner_form_choice_and_product_fee_floor_not_local_legal_advice",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-onboarding-faq-current-2026",
+    "steam-onboarding-doc",
+    "steam-direct-fee-doc"
+  ],
+  "claim_ids": [
+    "steam-entity-choice-corporation-not-required-20261029",
+    "steam-entity-choice-incorporate-before-paperwork-20261029",
+    "steam-entity-sole-proprietor-real-name-20261029",
+    "steam-entity-change-reonboarding-transfer-20261029",
+    "steam-entity-nonus-partnership-tax-details-20261029",
+    "steam-entity-choice-appfee-is-common-floor-20261029"
+  ],
+  "official_rules": {
+    "sole_proprietor_onboarding_allowed": true,
+    "incorporation_mandatory_for_all_publishers": false,
+    "formed_company_must_exist_before_onboarding": true,
+    "legal_name_must_match_bank_and_tax": true,
+    "legal_name_change_requires_new_partner_onboarding_and_rights_migration": true,
+    "non_us_partnership_pass_through_needs_each_partner_tax_details": true,
+    "usd100_application_fee_per_product": 100,
+    "usd1000_adjusted_gross_fee_recoupment_trigger_per_product": 1000,
+    "application_fee_is_refundable": false
+  },
+  "hypothetical_cases": [
+    {
+      "fixture_id": "fixture-individual-one",
+      "legal_form": "individual_sole_proprietor",
+      "new_product_app_count": 1,
+      "company_formed_before_paperwork": false,
+      "legal_name_bank_tax_consistent": true,
+      "publishing_rights_attested": true,
+      "bank_and_tax_validated": true,
+      "non_us_partner_taxed_individually": false,
+      "legal_entity_name_changing": false
+    },
+    {
+      "fixture_id": "fixture-future-company-one",
+      "legal_form": "incorporated_company",
+      "new_product_app_count": 1,
+      "company_formed_before_paperwork": false,
+      "legal_name_bank_tax_consistent": true,
+      "publishing_rights_attested": true,
+      "bank_and_tax_validated": false,
+      "non_us_partner_taxed_individually": false,
+      "legal_entity_name_changing": false
+    },
+    {
+      "fixture_id": "fixture-partnership-two",
+      "legal_form": "partnership",
+      "new_product_app_count": 2,
+      "company_formed_before_paperwork": true,
+      "legal_name_bank_tax_consistent": true,
+      "publishing_rights_attested": true,
+      "bank_and_tax_validated": false,
+      "non_us_partner_taxed_individually": true,
+      "legal_entity_name_changing": false
+    },
+    {
+      "fixture_id": "fixture-new-legal-name",
+      "legal_form": "individual_sole_proprietor",
+      "new_product_app_count": 1,
+      "company_formed_before_paperwork": false,
+      "legal_name_bank_tax_consistent": true,
+      "publishing_rights_attested": true,
+      "bank_and_tax_validated": true,
+      "non_us_partner_taxed_individually": false,
+      "legal_entity_name_changing": true
+    }
+  ],
+  "unknown": {
+    "actual_local_company_formation_cost_usd": null,
+    "actual_professional_legal_fees_usd": null,
+    "actual_legal_liability_or_personal_risk": null,
+    "actual_tax_withholding_or_treaty_rate": null,
+    "actual_bank_and_fx_fees_usd": null,
+    "actual_publisher_approval": null,
+    "real_release_review_delay": null,
+    "actual_game_remittance_or_profit": null
+  },
+  "model_path": "site/steam-legal-payee-budget-gates.mjs",
+  "test_path": "tests/steam-legal-payee-budget-gates.test.mjs",
+  "actual_private_identity_or_contracts_used": false
+}

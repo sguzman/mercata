@@ -13837,6 +13837,68 @@
       "observed_at": "2026-10-29",
       "confidence": "high_official_field_definitions_synthetic_derived_bounds",
       "limitations": "This is a deterministic synthetic interval assuming a purchase after the original add and complete truthful field values, not measured behavior of any Steam user."
+    },
+    {
+      "id": "steam-entity-choice-corporation-not-required-20261029",
+      "text": "Valve's current onboarding FAQ treats incorporation as a publisher choice, while its onboarding guide allows an individual to register as a sole proprietor.",
+      "limitations": "This is Valve's Steamworks partner enrollment rule, not a recommendation about local legal liability, legal capacity or national company-formation law.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026",
+        "steam-onboarding-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_valve_public_policy_and_synthetic_budget"
+    },
+    {
+      "id": "steam-entity-choice-incorporate-before-paperwork-20261029",
+      "text": "Valve advises partners who choose to form a legal entity to complete that formation before starting Steamworks digital onboarding paperwork.",
+      "limitations": "Local registration cost, processing time, corporate tax requirements and ownership documentation are not given by the FAQ.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_valve_public_policy_and_synthetic_budget"
+    },
+    {
+      "id": "steam-entity-sole-proprietor-real-name-20261029",
+      "text": "Steamworks asks an individual sole proprietor to use their full legal name rather than a DBA or public studio alias and requires the bank and tax records to match the contracting name.",
+      "limitations": "This requirement does not disclose, establish or validate any actual individual's identity, rights or bank account.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026",
+        "steam-onboarding-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_valve_public_policy_and_synthetic_budget"
+    },
+    {
+      "id": "steam-entity-change-reonboarding-transfer-20261029",
+      "text": "The Steamworks FAQ says a change of legal company/payee name involves re-onboarding to a new Steamworks partner account and transferring game rights after terminating the prior company's rights.",
+      "limitations": "An actual change requires case-specific documentation and Valve processing; timelines, costs and final approval are not supplied.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_valve_public_policy_and_synthetic_budget"
+    },
+    {
+      "id": "steam-entity-nonus-partnership-tax-details-20261029",
+      "text": "Valve accepts partnerships, but an outside-US partnership taxed at the individual partner level needs additional tax documentation for each partner.",
+      "limitations": "Country-specific classification, treaty rates, jurisdiction and treatment of any real partnership remain unverified.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_valve_public_policy_and_synthetic_budget"
+    },
+    {
+      "id": "steam-entity-choice-appfee-is-common-floor-20261029",
+      "text": "Valve's Steam Direct fee is USD 100 per product and is not refundable, with a separate recoupment condition once that product reaches USD 1,000 in adjusted gross revenue.",
+      "limitations": "The published per-product fee is not a complete startup budget; incorporation, contracts, taxes, bank fees, translation, labor and hosting may add unknown costs.",
+      "source_ids": [
+        "steam-direct-fee-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_valve_public_policy_and_synthetic_budget"
     }
   ],
   "observations": [],
