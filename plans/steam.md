@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## 2025 Steam game tags: nonexclusive genre supply and overlap lower bound
+
+The [SteamDB overlapping release-tag study](../ontology/steam/steam-2025-overlapping-release-tags-and-genre-denominators-2026.md) audits October 29 counts for Action, Adventure and Indie and proves the necessity of multiply tagged releases under a shared catalog frame. It does **not** misinterpret genre tags as distinct paid games, unique publishers or after-cost profit. **Current 90%** (exact 89.700%; Δ +0.068 pp). All 293 original tasks remain unchanged.
+
 ## February 2026 Next Fest survey versus all-demo follower estimates
 
 The [festival and demo availability study](../ontology/steam/steam-nextfest-demo-coverage-and-survey-selection-2026.md) contrasts a self-selected developer wishlist survey with GameDiscoverCo's broader follower-based festival frame, and records SteamDB's evolving 2025 demo-availability tag denominator. It preserves different metrics and excludes any inferred paid-sale conversion. **Current score 90%** (exact 89.631%; Δ +0.092 pp). The original 293 research tasks remain unchanged.

@@ -1687,6 +1687,39 @@
       "evidence_class": "provider_full_festival_field_public_follower_measure",
       "license": "Link and short numeric attribution only; no source article, database records, figures or proprietary analytics copied.",
       "notes": "Over 3500 demos, median 11 followers, approximate 350 followers at top 5%; wishlist conversions are provider guesses not audited game-ledger wishlists."
+    },
+    {
+      "id": "steamdb-2025-action-tag-oct29",
+      "url": "https://steamdb.info/stats/releases/?tagid=19",
+      "title": "Steam Action game releases by year",
+      "publisher": "SteamDB",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "dynamic_community_tag_count_of_games_by_release_year",
+      "license": "Source link and a brief independently written numeric observation only; source page, game listings and graphics not copied.",
+      "notes": "2025 Action tag has 7859 game releases in current live SteamDB view; tag classifications and counts may be revised and are not paid-only publisher identities."
+    },
+    {
+      "id": "steamdb-2025-adventure-tag-oct29",
+      "url": "https://steamdb.info/stats/releases/?tagid=21",
+      "title": "Steam Adventure game releases by year",
+      "publisher": "SteamDB",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "dynamic_community_tag_count_of_games_by_release_year",
+      "license": "Source link and a brief independently written numeric observation only; source page, game listings and graphics not copied.",
+      "notes": "2025 Adventure tag has 8338 game releases in current live SteamDB view; tag classifications and counts may be revised and are not paid-only publisher identities."
+    },
+    {
+      "id": "steamdb-2025-indie-tag-oct29",
+      "url": "https://steamdb.info/stats/releases/?tagid=492",
+      "title": "Steam Indie game releases by year",
+      "publisher": "SteamDB",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "dynamic_community_tag_count_of_games_by_release_year",
+      "license": "Source link and a brief independently written numeric observation only; source page, game listings and graphics not copied.",
+      "notes": "2025 Indie tag has 10731 game releases in current live SteamDB view; tag classifications and counts may be revised and are not paid-only publisher identities."
     }
   ],
   "claims": [
@@ -10474,6 +10507,110 @@
       "confidence": "bounded_nonrepresentative_survey_or_third_party_catalog",
       "observed_at": "2026-10-29",
       "limitations": "Unobserved conversion rates and development costs remain unknown."
+    },
+    {
+      "id": "steamdb-2025-action-tags-7859",
+      "text": "The Oct 29, 2026 SteamDB tag release summary shows 7,859 Action-tagged games with a release year of 2025.",
+      "source_ids": [
+        "steamdb-2025-action-tag-oct29"
+      ],
+      "confidence": "bounded_snapshot_and_conditional_mathematical_lower_bound",
+      "observed_at": "2026-10-29",
+      "limitations": "Current nonexclusive tag membership, not original paid game sales or unique studio count."
+    },
+    {
+      "id": "steamdb-2025-adventure-tags-8338",
+      "text": "SteamDB's Oct 29 tag release summary shows 8,338 Adventure-tagged games released during 2025.",
+      "source_ids": [
+        "steamdb-2025-adventure-tag-oct29"
+      ],
+      "confidence": "bounded_snapshot_and_conditional_mathematical_lower_bound",
+      "observed_at": "2026-10-29",
+      "limitations": "Tagged titles can overlap Action, Indie and other tags; current tag snapshot can change."
+    },
+    {
+      "id": "steamdb-2025-indie-tags-10731",
+      "text": "The corresponding SteamDB Indie tag count for released 2025 games is 10,731.",
+      "source_ids": [
+        "steamdb-2025-indie-tag-oct29"
+      ],
+      "confidence": "bounded_snapshot_and_conditional_mathematical_lower_bound",
+      "observed_at": "2026-10-29",
+      "limitations": "User-facing Indie tag is not independent proof of studio ownership, founder count or lack of publisher."
+    },
+    {
+      "id": "steamdb-2025-triple-category-sum",
+      "text": "Adding the three nonexclusive SteamDB 2025 tags yields 26,928 tag memberships, larger than the contemporaneous all-release count around 21,222.",
+      "source_ids": [
+        "steamdb-2025-action-tag-oct29",
+        "steamdb-2025-adventure-tag-oct29",
+        "steamdb-2025-indie-tag-oct29",
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "bounded_snapshot_and_conditional_mathematical_lower_bound",
+      "observed_at": "2026-10-29",
+      "limitations": "Multiple memberships are possible; a sum of tags is not a count of separate games."
+    },
+    {
+      "id": "steamdb-2025-forced-duplicated-memberships",
+      "text": "If the tag counts and total game count refer to the same stable 2025 catalog frame, at least 5,706 of the 26,928 tag memberships are above the maximum number of distinct releases.",
+      "source_ids": [
+        "steamdb-2025-action-tag-oct29",
+        "steamdb-2025-adventure-tag-oct29",
+        "steamdb-2025-indie-tag-oct29",
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "bounded_snapshot_and_conditional_mathematical_lower_bound",
+      "observed_at": "2026-10-29",
+      "limitations": "Conditional arithmetic on approximately synchronized secondary snapshots, not a verified database cross-join."
+    },
+    {
+      "id": "steamdb-2025-minimum-multitag-distinct",
+      "text": "Under identical frame assumptions, at least 2,853 distinct 2025 releases must have two or more of Action, Adventure, Indie tags, because each game can contribute no more than two additional memberships in three tags.",
+      "source_ids": [
+        "steamdb-2025-action-tag-oct29",
+        "steamdb-2025-adventure-tag-oct29",
+        "steamdb-2025-indie-tag-oct29",
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "bounded_snapshot_and_conditional_mathematical_lower_bound",
+      "observed_at": "2026-10-29",
+      "limitations": "Pigeonhole lower bound, not actual exact count or genre pair intersections; actual overlap may be much greater."
+    },
+    {
+      "id": "steamdb-2025-genre-exclusive-market-share-invalid",
+      "text": "SteamDB's Action, Adventure and Indie category percentages cannot be added as disjoint pieces of a single Steam 2025 release market-share pie.",
+      "source_ids": [
+        "steamdb-2025-action-tag-oct29",
+        "steamdb-2025-adventure-tag-oct29",
+        "steamdb-2025-indie-tag-oct29"
+      ],
+      "confidence": "bounded_snapshot_and_conditional_mathematical_lower_bound",
+      "observed_at": "2026-10-29",
+      "limitations": "The categories are overlapping classifications and multiple tags per title, not mutually exclusive release industries."
+    },
+    {
+      "id": "steamdb-2025-indie-not-payee-identity",
+      "text": "A game's Indie tag cannot establish whether its publishing rights belong to an individual developer, a large publisher, a studio, or a recently transferred AppID.",
+      "source_ids": [
+        "steamdb-2025-indie-tag-oct29"
+      ],
+      "confidence": "bounded_snapshot_and_conditional_mathematical_lower_bound",
+      "observed_at": "2026-10-29",
+      "limitations": "Legal publisher identity and age require historical partner/developer relationships, not tags."
+    },
+    {
+      "id": "steamdb-2025-tags-not-paid-genre-income",
+      "text": "Released-game tags and raw catalog counts do not identify originally paid launches, completed units sold, mean publisher take-home or after-cost Steam development profits.",
+      "source_ids": [
+        "steamdb-2025-action-tag-oct29",
+        "steamdb-2025-adventure-tag-oct29",
+        "steamdb-2025-indie-tag-oct29",
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "bounded_snapshot_and_conditional_mathematical_lower_bound",
+      "observed_at": "2026-10-29",
+      "limitations": "Free games, ambiguous product scope, incomplete sales and missing financial ledgers block earnings inference."
     }
   ],
   "observations": [],
