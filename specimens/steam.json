@@ -1995,6 +1995,17 @@
       "evidence_class": "developer_public_steam_gross_and_external_demo_browser_play_self_report",
       "license": "Public link, date and short independently paraphrased aggregate data only; no post content or participant identifiers republished.",
       "notes": "Author describes a Steam IT simulator launch about two months earlier: 3,042 units, USD 37,917 gross, ~27k launch wishlistings, 31k later wishlistings, >20k itch.io free browser demo play events, no authenticated cross-site user conversion or net bank receipt."
+    },
+    {
+      "id": "steam-official-topsellers-24h-all-spending-oct2026",
+      "url": "https://partner.steamgames.com/doc/store/top_sellers?l=english",
+      "title": "Top Sellers Lists",
+      "publisher": "Valve / Steamworks",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_top_sellers_spending_components_and_regional_chart_scope",
+      "license": "Only short independently written factual summaries with original public documentation URL, not copied site content, tables or images.",
+      "notes": "Valve describes trailing 24h player spending with greater weight for most recent 3h, across base games, DLC and microtransactions; coefficient undisclosed. Region and account filters change visible chart; no financial ledger accessed."
     }
   ],
   "claims": [
@@ -13899,6 +13910,68 @@
       ],
       "observed_at": "2026-10-29",
       "confidence": "high_valve_public_policy_and_synthetic_budget"
+    },
+    {
+      "id": "steam-topsellers-all-spending-not-units-20261029",
+      "text": "Steam's Top Sellers chart includes base-game purchases, DLC and in-game player spending rather than ranking solely by base-game copies sold.",
+      "limitations": "Public chart positions cannot be inverted into a unit-sales count for a particular game.",
+      "source_ids": [
+        "steam-official-topsellers-24h-all-spending-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_top_sellers_method_summary"
+    },
+    {
+      "id": "steam-topsellers-trailing24-recent3-weight-20261029",
+      "text": "Valve describes a 24-hour trailing player-spending window for real-time Top Sellers with additional weight on spending from the most recent three hours.",
+      "limitations": "The documentation does not publish the recent-spending coefficient or the complete ranking implementation.",
+      "source_ids": [
+        "steam-official-topsellers-24h-all-spending-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_top_sellers_method_summary"
+    },
+    {
+      "id": "steam-topsellers-freegames-can-chart-20261029",
+      "text": "Free-to-play products can appear in Top Sellers because optional purchases, season passes, expansions and other spending can contribute to the same game ranking.",
+      "limitations": "Chart inclusion does not imply the base product was ever sold for an upfront price.",
+      "source_ids": [
+        "steam-official-topsellers-24h-all-spending-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_top_sellers_method_summary"
+    },
+    {
+      "id": "steam-topsellers-territory-global-differ-20261029",
+      "text": "Valve offers separate territory-specific and global Top Sellers views; the default may show the user's country view when available.",
+      "limitations": "The default chart is not a global sales ranking, and differences cannot isolate a country's paid unit orders.",
+      "source_ids": [
+        "steam-official-topsellers-24h-all-spending-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_top_sellers_method_summary"
+    },
+    {
+      "id": "steam-topsellers-ownership-preference-visibility-20261029",
+      "text": "Steam Top Sellers visibility is affected by customer content preferences and ownership filters, and DLC may be surfaced differently to existing game owners.",
+      "limitations": "Two players viewing different storefront charts do not provide a controlled measurement of ranking or visibility.",
+      "source_ids": [
+        "steam-official-topsellers-24h-all-spending-oct2026",
+        "steam-visibility-official"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_top_sellers_method_summary"
+    },
+    {
+      "id": "steam-topsellers-no-profit-inference-20261029",
+      "text": "Valve's published Top Sellers methodology and public chart positions cannot identify tax-adjusted publisher receipts, unique paying customers, first-launch revenue or after-cost profit.",
+      "limitations": "No authenticated partner reporting, hourly purchase mix, recent-weight coefficient, refund history or complete eligible game population was accessed.",
+      "source_ids": [
+        "steam-official-topsellers-24h-all-spending-oct2026",
+        "steam-visibility-official"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_top_sellers_method_summary"
     }
   ],
   "observations": [],

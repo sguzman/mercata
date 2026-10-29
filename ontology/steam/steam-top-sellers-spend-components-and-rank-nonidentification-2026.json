@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_top_sellers_all_spending_not_paid_game_unit_ranking",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-official-topsellers-24h-all-spending-oct2026",
+    "steam-visibility-official"
+  ],
+  "claim_ids": [
+    "steam-topsellers-all-spending-not-units-20261029",
+    "steam-topsellers-trailing24-recent3-weight-20261029",
+    "steam-topsellers-freegames-can-chart-20261029",
+    "steam-topsellers-territory-global-differ-20261029",
+    "steam-topsellers-ownership-preference-visibility-20261029",
+    "steam-topsellers-no-profit-inference-20261029"
+  ],
+  "documented": {
+    "trailing_realtime_spend_window_hours": 24,
+    "extra_weight_spend_recent_hours": 3,
+    "base_game_spending_counts": true,
+    "dlc_spending_counts": true,
+    "in_game_spending_counts": true,
+    "free_to_play_products_may_rank": true,
+    "territory_and_global_views_exist": true,
+    "customer_content_preferences_can_filter": true,
+    "ranking_recent_weight_factor_published": false,
+    "public_chart_is_paid_game_units_ranking": false
+  },
+  "hypothetical_cases": [
+    {
+      "fixture_id": "fixture-f2p-game",
+      "product_type": "free_to_play",
+      "chart_scope": "global",
+      "prior_21h_spend_cents": {
+        "base": 0,
+        "dlc": 2000,
+        "microtransactions": 15000
+      },
+      "latest_3h_spend_cents": {
+        "base": 0,
+        "dlc": 1000,
+        "microtransactions": 3000
+      },
+      "partner_sales_attribution_verified": false,
+      "public_rank_observed": false
+    },
+    {
+      "fixture_id": "fixture-premium-game",
+      "product_type": "premium",
+      "chart_scope": "global",
+      "prior_21h_spend_cents": {
+        "base": 10000,
+        "dlc": 0,
+        "microtransactions": 0
+      },
+      "latest_3h_spend_cents": {
+        "base": 9000,
+        "dlc": 0,
+        "microtransactions": 0
+      },
+      "partner_sales_attribution_verified": false,
+      "public_rank_observed": false
+    }
+  ],
+  "unknown": {
+    "official_recent_hour_weight_multiplier": null,
+    "actual_top_seller_rank_for_fixtures": null,
+    "actual_steam_24h_game_spend": null,
+    "actual_base_paid_game_orders": null,
+    "country_to_global_conversion": null,
+    "net_partner_receipts": null,
+    "after_cost_profit": null
+  },
+  "model_path": "site/steam-top-sellers-synthetic-spending-guards.mjs",
+  "test_path": "tests/steam-top-sellers-synthetic-spending-guards.test.mjs",
+  "no_real_game_sales_or_accounts_used": true
+}

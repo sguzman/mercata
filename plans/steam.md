@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Steam Top Sellers spends, charts and nonidentification (October 29, 2026)
+
+The [official Top Sellers ranking-audit](../ontology/steam/steam-top-sellers-spend-components-and-rank-nonidentification-2026.md) establishes a trailing 24-hour player-spending metric with extra weight on the latest three hours. DLC and microtransactions contribute alongside base-game sales, so even a free-to-play game may rank without upfront paid units. Territory and customer-content filters change presentation; neither chart positions nor synthetic unweighted spend can reconstruct actual game orders or publisher profits. One new Valve primary source and six bounded claims advance the original ranking-research task by three points. Steam research **91.266%** (Δ **+0.010 pp**); **293 tasks** retained.
+
 ## Low-budget Steam legal-payee choices, fee floors and future entity migration (October 29, 2026)
 
 The [Steamworks source and hypothetical budget comparison](../ontology/steam/steam-sole-proprietor-versus-company-form-cash-gates-2026.md) distinguishes individual sole-proprietor onboarding from forming a company before agreement paperwork, and documents that a later legal-payee change involves fresh onboarding and game-rights migration. Only Valve's published per-product USD 100 fee is quantified. Local liability, taxes, incorporation costs and transferred publisher cash remain unknown. Six official-source-backed claims advance the existing legal entity planning task by three points. Steam research **91.256%** (Δ **+0.010 pp**); original **293 tasks** retained.
