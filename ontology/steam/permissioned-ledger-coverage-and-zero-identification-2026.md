@@ -59,3 +59,8 @@ The original [whole-period synthetic coverage analyzer](../../site/steam-ledger-
 ### Authentication of partial positives
 
 A **positive** partial report proves that a paid game had at least one sale within the relevant observed period only if the report is both authorized and attributable to the game. The legacy and fixed-horizon analyzers now require explicit financial-report access attestation for that inference, in addition to package-to-game mapping. An unverified self-report or unattributed package row cannot be promoted into a verified nonzero outcome; zero-only partial observations remain unknown regardless.
+
+
+### Excluded games and missing-ledger evidence validation
+
+The synthetic auditors reject incompatible evidence instead of silently dropping it. Initially free games, unresolved original-paid status, and games outside the fixed launch cohort cannot carry financial-report or access attestations into the paid-game numerator or denominator. A **missing** ledger cannot claim confirmed financial access, transfer reconciliation, or checkout attribution. An unrecognized field is rejected by the whole-period audit rather than discarded. These are input-integrity constraints, not new Steam-wide observations; they do not improve population coverage or change the hypothetical zero-sales bounds.
