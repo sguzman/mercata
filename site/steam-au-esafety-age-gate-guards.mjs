@@ -17,7 +17,7 @@ export function auditSteamAustraliaR18AgeGate(x={}){
  const scoped=jurisdiction==='AU'&&rating==='R18+'&&
   date>='2026-09-09'&&date<='2026-10-29';
  return {kind:'public_australian_regulatory_scope_not_customer_eligibility_or_sales_estimate',
-  report_observation_period_applies:history,
+  report_observation_period_applies:jurisdiction==='AU'&&history?true:null,
   australian_R18_store_age_gate_in_documented_window:scoped?true:null,
   steam_credit_card_check_reported_for_AU_R18:scoped?true:null,
   outside_source_scope_means_unregulated:false,

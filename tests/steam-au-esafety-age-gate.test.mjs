@@ -41,3 +41,10 @@ test('Official Australian sources and eight bounded claims preserve the fixed 29
  const scores=[...p.detail_tasks.map(x=>x.percent),...q.queues.flatMap(g=>g.tasks.map(x=>x.progress))];
  assert.equal(scores.length,293);assert.equal(p.progress_percent,Math.round(scores.reduce((a,b)=>a+b,0)/293));
 });
+
+test('Historical Australian notice scope cannot be generalized to other jurisdiction',()=>{
+ const au=audit({jurisdiction:'AU',rating:'other',date:'2026-03-31'});
+ const elsewhere=audit({jurisdiction:'other',rating:'other',date:'2026-03-31'});
+ assert.equal(au.report_observation_period_applies,true);
+ assert.equal(elsewhere.report_observation_period_applies,null);
+});
