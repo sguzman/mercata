@@ -13775,6 +13775,68 @@
       "confidence": "medium_voluntary_self_report",
       "observed_at": "2026-10-29",
       "limitations": "The prior game's platform, legal publisher, and detailed commercial history cannot be established from the public thread."
+    },
+    {
+      "id": "steam-wishlist-cohort-month-not-day-20261029",
+      "text": "Steam's MonthCohort records the calendar month of the original wishlist add, not its exact calendar day.",
+      "source_ids": [
+        "steam-wishlist-reporting-official-cohort-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_field_definitions_synthetic_derived_bounds",
+      "limitations": "An apparent precise wishlist-to-purchase delay derived by subtracting MonthCohort's first-of-month label is unjustified."
+    },
+    {
+      "id": "steam-wishlist-datelocal-pacific-purchase-20261029",
+      "text": "Steam defines DateLocal in the wishlist CSV as the Pacific-time calendar date of a purchase made from a wishlist.",
+      "source_ids": [
+        "steam-wishlist-reporting-official-cohort-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_field_definitions_synthetic_derived_bounds",
+      "limitations": "This date is neither UTC order time nor necessarily the user's local clock date."
+    },
+    {
+      "id": "steam-wishlist-current-day-not-final-20261029",
+      "text": "Steam's wishlist reporting is updated daily for the preceding day, so the date of the report request is not a completed sales observation.",
+      "source_ids": [
+        "steam-wishlist-reporting-official-cohort-2026",
+        "steam-wishlist-official"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_field_definitions_synthetic_derived_bounds",
+      "limitations": "A current-day empty or incomplete report cannot be interpreted as an observed zero-purchase cohort."
+    },
+    {
+      "id": "steam-wishlist-csv-numerators-not-conversion-rate-20261029",
+      "text": "The reporting CSV can group wishlist-originated purchases by wishlist-add month and purchase day, but those purchase events alone do not identify the original eligible wishlist population or conversion probability.",
+      "source_ids": [
+        "steam-wishlist-reporting-official-cohort-2026",
+        "steam-wishlist-official"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_field_definitions_synthetic_derived_bounds",
+      "limitations": "Valid same-AppID eligible wishlist cohort totals, date-aligned additions/removals, deduplication and customer/report permissions would be separately required."
+    },
+    {
+      "id": "steam-wishlist-platform-selection-not-total-20261029",
+      "text": "Steam describes platform-preference wishlisting as a subset because some customers never explicitly choose a device platform.",
+      "source_ids": [
+        "steam-wishlist-reporting-official-cohort-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_field_definitions_synthetic_derived_bounds",
+      "limitations": "Dividing an all-platform wishlist purchase count by only platform-preferring wishlists would mix nonmatching denominators."
+    },
+    {
+      "id": "steam-wishlist-date-only-interval-bounds-20261029",
+      "text": "With only a first-wishlist month and a Pacific-time purchase date, elapsed wishlist-to-purchase time can at most be represented as a calendar-day interval, not a single measured lag.",
+      "source_ids": [
+        "steam-wishlist-reporting-official-cohort-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_field_definitions_synthetic_derived_bounds",
+      "limitations": "This is a deterministic synthetic interval assuming a purchase after the original add and complete truthful field values, not measured behavior of any Steam user."
     }
   ],
   "observations": [],

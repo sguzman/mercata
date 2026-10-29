@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Wishlist purchase cohort and Pacific-time reporting semantics (October 29, 2026)
+
+The [Valve CSV field audit](../ontology/steam/steam-wishlist-month-cohort-pacific-reporting-lag-2026.md) separates the Pacific-time purchase date (DateLocal) from the **original wishlist-add month** (MonthCohort), calculates honest date-range bounds and rejects same-day incomplete reporting. Platform preference subsets and wishlist-originated purchase events are not complete paid-order denominators. Six new official-source-linked claims and tests increase the original wishlist-to-sale research task by two points, without new sources or additional tasks. Steam research **91.246%** (Δ **+0.007 pp**).
+
 ## External free browser demo plays versus Steam purchases (October 29, 2026)
 
 The [new first-person cross-market case](../ontology/steam/steam-itch-browser-demo-versus-paid-launch-identification-2026.md) records more than 20,000 free browser demo play events and 3,042 Steam sales alongside wishlist snapshots, but supplies **no** authorized user-level join or causal effect on full-game purchases. One new public source and six bounded claims raise the existing demo-to-paid-sales task by two points, without changing the **293-task** inventory. Overall research **91.239%** (Δ **+0.007 pp**).

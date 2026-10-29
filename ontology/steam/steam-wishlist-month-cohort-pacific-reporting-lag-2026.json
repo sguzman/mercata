@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_wishlist_csv_reporting_calendar_and_cohort_lag_bounds",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-wishlist-reporting-official-cohort-2026",
+    "steam-wishlist-official"
+  ],
+  "claim_ids": [
+    "steam-wishlist-cohort-month-not-day-20261029",
+    "steam-wishlist-datelocal-pacific-purchase-20261029",
+    "steam-wishlist-current-day-not-final-20261029",
+    "steam-wishlist-csv-numerators-not-conversion-rate-20261029",
+    "steam-wishlist-platform-selection-not-total-20261029",
+    "steam-wishlist-date-only-interval-bounds-20261029"
+  ],
+  "documented_fields": {
+    "DateLocal": "Pacific-time calendar date of purchase by an existing wishlister",
+    "MonthCohort": "first wishlist-add calendar month, not exact add day",
+    "latest_complete_local_date": "day before as-of local reporting date",
+    "platform_preference_breakdown_is_subset": true,
+    "report_contains_original_wishlister_cohort_denominator": false
+  },
+  "synthetic_fixture": {
+    "as_of_pacific_date": "2026-10-29",
+    "game_id": "fixture-game-one",
+    "rows": [
+      {
+        "fixture_id": "fixture-oct-purchase",
+        "purchase_date_local_pt": "2026-10-28",
+        "month_cohort": "2026-10-01",
+        "wishlist_purchase_events": 5
+      },
+      {
+        "fixture_id": "fixture-aug-purchase",
+        "purchase_date_local_pt": "2026-10-27",
+        "month_cohort": "2026-08-01",
+        "wishlist_purchase_events": 3
+      },
+      {
+        "fixture_id": "fixture-aug-earlier",
+        "purchase_date_local_pt": "2026-10-28",
+        "month_cohort": "2026-08-01",
+        "wishlist_purchase_events": 2
+      }
+    ]
+  },
+  "unknown": {
+    "actual_steam_wishlist_purchase_units": null,
+    "exact_initial_wishlist_add_days": null,
+    "actual_matched_cohort_eligible_counts": null,
+    "true_cohort_purchase_probability": null,
+    "current_day_wishlist_purchases": null,
+    "refund_adjusted_paid_orders": null,
+    "publisher_bank_remittances": null,
+    "mean_publisher_profit": null
+  },
+  "model_path": "site/steam-wishlist-month-cohort-guards.mjs",
+  "test_path": "tests/steam-wishlist-month-cohort-guards.test.mjs",
+  "no_private_partner_reports_or_user_ids_used": true
+}
