@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Steam content and AI eligibility source drift (October 29, 2026)
+
+The [official public rule-list comparison](../ontology/steam/steam-content-eligibility-page-drift-and-ai-disclosure-2026.md) documents 14 restrictions on the Steam Direct landing page against 15 in Steamworks onboarding, including an additional payment-network warning. It also records content-survey limits and the distinct requirements for live-generated AI, with synthetic review gates that do not presume approval or revenue. This adds five source-linked claims using three previously registered official sources and advances an existing content-eligibility task by two points. Current **91.212%** (Δ **+0.007 pp**), original 293 tasks unchanged.
+
 ## Author-reported first-game gross versus an ambiguous net label (October 29, 2026)
 
 The [two-week first-game self-report](../ontology/steam/steam-author-sim-firstgame-net-stage-2026.md) compares the author's USD 7,047 gross with USD 5,812 labeled net. A hypothetical same-base 30% platform deduction does not produce that net amount; neither number proves a bank deposit or earnings after labor. One additional public source and six bounded claims raise the unchanged **293-task** Steam score to **91.205%** (Δ **+0.003 pp**).

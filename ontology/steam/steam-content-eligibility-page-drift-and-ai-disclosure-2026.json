@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_public_content_guideline_page_drift_and_conditional_review_gate",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-onboarding-doc",
+    "steamdirect-public",
+    "steam-content-survey-official-oct2026"
+  ],
+  "claim_ids": [
+    "steam-oct29-onboarding-list-15-vs-landing-14",
+    "steam-oct29-payment-network-extra-restriction",
+    "steam-oct29-disclosure-not-approval",
+    "steam-oct29-postapproval-survey-support",
+    "steam-oct29-live-ai-service-payment-routes"
+  ],
+  "source_snapshots": [
+    {
+      "source_id": "steamdirect-public",
+      "reviewed_at": "2026-10-29",
+      "listed_content_restriction_count": 14,
+      "contains_payment_network_restriction": false
+    },
+    {
+      "source_id": "steam-onboarding-doc",
+      "reviewed_at": "2026-10-29",
+      "listed_content_restriction_count": 15,
+      "contains_payment_network_restriction": true
+    }
+  ],
+  "restriction_keys": {
+    "steamdirect_landing": [
+      "hate_speech",
+      "sexual_images_real_people",
+      "unlabeled_adult_content",
+      "defamation",
+      "inadequate_content_rights",
+      "unlawful_by_distribution_jurisdiction",
+      "shock_content",
+      "child_exploitation",
+      "malware",
+      "fraudulent_sensitive_data_capture",
+      "unrelated_video",
+      "noninteractive_vr_video",
+      "blockchain_issuance_or_exchange",
+      "advertising_based_model"
+    ],
+    "steamworks_onboarding": [
+      "hate_speech",
+      "sexual_images_real_people",
+      "unlabeled_adult_content",
+      "defamation",
+      "inadequate_content_rights",
+      "unlawful_by_distribution_jurisdiction",
+      "shock_content",
+      "child_exploitation",
+      "malware",
+      "fraudulent_sensitive_data_capture",
+      "unrelated_video",
+      "noninteractive_vr_video",
+      "blockchain_issuance_or_exchange",
+      "advertising_based_model",
+      "payment_network_provider_standards"
+    ]
+  },
+  "content_survey": {
+    "survey_required_before_store_and_build_review": true,
+    "adult_content_must_be_disclosed_even_when_inaccessible_in_build": true,
+    "disclosure_overrides_content_restrictions": false,
+    "live_generated_ai_needs_guardrail_description": true,
+    "live_generated_adult_only_sexual_content_supported": false,
+    "examples_of_cost_recovery": [
+      "base_price",
+      "microtransactions",
+      "subscriptions",
+      "dlc"
+    ],
+    "examples_are_approval_or_profit_guarantee": false
+  },
+  "synthetic_cases": [
+    {
+      "fixture_id": "fixture-ordinary",
+      "advertising_based_business_model": false,
+      "payment_network_concern": "unknown",
+      "content_survey_complete": true,
+      "live_ai": false,
+      "live_ai_guardrails_documented": false,
+      "live_ai_adult_only_sexual_content": false
+    },
+    {
+      "fixture_id": "fixture-advertising",
+      "advertising_based_business_model": true,
+      "payment_network_concern": "unknown",
+      "content_survey_complete": true,
+      "live_ai": false,
+      "live_ai_guardrails_documented": false,
+      "live_ai_adult_only_sexual_content": false
+    },
+    {
+      "fixture_id": "fixture-live-ai-no-guardrails",
+      "advertising_based_business_model": false,
+      "payment_network_concern": "unknown",
+      "content_survey_complete": true,
+      "live_ai": true,
+      "live_ai_guardrails_documented": false,
+      "live_ai_adult_only_sexual_content": false
+    },
+    {
+      "fixture_id": "fixture-network-review",
+      "advertising_based_business_model": false,
+      "payment_network_concern": "potential",
+      "content_survey_complete": true,
+      "live_ai": false,
+      "live_ai_guardrails_documented": false,
+      "live_ai_adult_only_sexual_content": false
+    }
+  ],
+  "model_path": "site/steam-content-eligibility-crosswalk.mjs",
+  "test_path": "tests/steam-content-eligibility-crosswalk.test.mjs",
+  "unknown": {
+    "exact_guideline_change_effective_date": null,
+    "partner_specific_contract_impact": null,
+    "specific_payment_processor_decision": null,
+    "actual_rejections_by_reason": null,
+    "actual_publisher_cash_loss": null,
+    "representative_ineligibility_rate": null
+  },
+  "real_developer_approval_decisions_used": false
+}
