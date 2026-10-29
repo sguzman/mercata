@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "historical_first_party_and_voluntary_selfreport_zero_income_labels_with_positive_game_sales",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-water-tastes-wine-primary-postmortem-mar2018",
+    "steam-zero-wishlist-buyer-2025-selfreport"
+  ],
+  "claim_ids": [
+    "steam-water-tastes-2018-paid-sales-nonzero",
+    "steam-water-tastes-zero-personal-proceeds",
+    "steam-water-tastes-2018-collaborator-expense",
+    "steam-water-tastes-publisher-payment-separation",
+    "steam-water-tastes-not-modern-average",
+    "steam-wishlist-2025-launch-stock-and-seven-sales",
+    "steam-wishlist-2025-no-outside-wishlist-buyers",
+    "steam-wishlist-2025-cost-and-labor",
+    "steam-zero-labels-need-denominator"
+  ],
+  "cases": [
+    {
+      "id": "water_tastes_like_wine_2018",
+      "source_id": "steam-water-tastes-wine-primary-postmortem-mar2018",
+      "reported_at": "2018-03-30",
+      "launch_date": "2018-02-28",
+      "seller_relationship": "developer_with_external_publisher_support",
+      "period": "approximately_first_month",
+      "reported": {
+        "steam_units_positive": true,
+        "steam_units_exact": null,
+        "author_personal_proceeds_usd_to_snapshot": 0,
+        "paid_collaborator_expenses_usd_approx": 140000,
+        "development_years_approx": 4
+      },
+      "definition": {
+        "actual_bank_credit_verified": false,
+        "exact_game_gross_usd": null,
+        "actual_total_studio_after_cost_profit_usd": null,
+        "developer_cashflow_needs_auditing": true
+      },
+      "denominators": [
+        "positive game sold units",
+        "zero self-reported developer personal proceeds",
+        "historical collaborator cash spending"
+      ],
+      "not_lifetime": true
+    },
+    {
+      "id": "low_sales_no_self_reported_wishlist_buyer_2025",
+      "source_id": "steam-zero-wishlist-buyer-2025-selfreport",
+      "reported_at": "2025-03-08",
+      "launch_date": null,
+      "seller_relationship": "anonymous_self_declared_first_game_developer",
+      "period": "unknown_early_release_age",
+      "reported": {
+        "launch_wishlist_count_approx": 150,
+        "sold_copies_reported": 7,
+        "copies_claimed_friends_family": 7,
+        "independent_prelaunch_wishlist_buys_claimed": 0,
+        "earnings_usd_approx": 10,
+        "steam_direct_fee_usd": 100,
+        "development_hours_approx": 300
+      },
+      "definition": {
+        "actual_wishlist_buyer_crosswalk_verified": false,
+        "actual_paid_order_ledger_verified": false,
+        "personal_bank_credit_verified": false,
+        "actual_after_labor_profit_usd": null,
+        "post_launch_followup_unobserved": true
+      },
+      "denominators": [
+        "wishlisted accounts",
+        "creator-described friend purchases",
+        "author-reported earnings",
+        "one-time publication fee"
+      ]
+    }
+  ],
+  "claim_boundaries": {
+    "zero_personal_proceeds_is_zero_game_sales": false,
+    "zero_self_declared_wishlister_buyers_is_zero_game_sales": false,
+    "reported_early_profit_is_lifetime_profit": false,
+    "observational_stories_are_representative": false,
+    "unknown_actual_zero_sale_fraction": null,
+    "unknown_publisher_profit_distribution": null
+  },
+  "no_real_financial_statements": true,
+  "no_private_customer_records": true
+}

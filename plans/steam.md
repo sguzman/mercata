@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Historical zero-proceeds versus zero-sales classification
+
+The [historical counterexample casebook](../ontology/steam/historical-zero-proceeds-versus-zero-sales-2026.md) distinguishes a 2018 game's positive sales and unrecouped developer proceeds from a 2025 first-game author's claimed zero external wishlist buyers despite seven reported purchases. Neither establishes actual market zero-sale shares or after-cost profits. **88%**, exact 88.242% (Δ +0.051 pp); the original 293 tasks are preserved.
+
 ## Publisher-level after-cost profit partial identification
 
 The [publisher profitability missing-data study](../ontology/steam/publisher-profitability-partial-identification-2026.md) adds a tested synthetic study-design bound on the fraction of **unique legal publishers** with positive profit after reconciled cash and labor costs. It rejects inferences from gross/Steam remittance to actual profit and does not invent individual incomes. **Score 88%** (exact 88.191%; Δ +0.051 pp). The 293-task inventory is unchanged.

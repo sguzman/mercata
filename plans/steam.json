@@ -2815,7 +2815,7 @@
       "objective": "Research trace discounts, returns, regional taxes, platform shares, partner splits and FX.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Trace discounts, returns, regional taxes, platform shares, partner splits and FX. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 60,
       "weight": 1,
       "evidence": [
         "ontology/steam/synthetic-first-game-break-even-scenarios-2026.md",
@@ -2833,9 +2833,12 @@
         "tests/steam-public-payout-cases.test.mjs",
         "ontology/steam/developer-operated-site-revenue-cases-2026.md",
         "ontology/steam/developer-operated-site-revenue-cases-2026.json",
-        "tests/steam-developer-site-revenue-cases.test.mjs"
+        "tests/steam-developer-site-revenue-cases.test.mjs",
+        "ontology/steam/historical-zero-proceeds-versus-zero-sales-2026.json",
+        "ontology/steam/historical-zero-proceeds-versus-zero-sales-2026.md",
+        "tests/steam-historical-zero-proceeds-cases.test.mjs"
       ],
-      "artifact": "ontology/steam/developer-operated-site-revenue-cases-2026.md",
+      "artifact": "ontology/steam/historical-zero-proceeds-versus-zero-sales-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -2889,7 +2892,7 @@
       "objective": "Research separate zero paid orders, zero gross, zero net payout and loss-making products.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate zero paid orders, zero gross, zero net payout and loss-making products. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 55,
       "weight": 1,
       "evidence": [
         "ontology/steam/january-2026-modeled-paid-release-distribution.md",
@@ -2904,9 +2907,12 @@
         "ontology/steam/january-2026-modeled-zero-missingness-2026.json",
         "ontology/steam/nonresponse-gross-median-identification-bounds-2026.md",
         "ontology/steam/nonresponse-gross-median-identification-bounds-2026.json",
-        "site/steam-gross-median-bounds.mjs"
+        "site/steam-gross-median-bounds.mjs",
+        "ontology/steam/historical-zero-proceeds-versus-zero-sales-2026.json",
+        "ontology/steam/historical-zero-proceeds-versus-zero-sales-2026.md",
+        "tests/steam-historical-zero-proceeds-cases.test.mjs"
       ],
-      "artifact": "ontology/steam/nonresponse-gross-median-identification-bounds-2026.md",
+      "artifact": "ontology/steam/historical-zero-proceeds-versus-zero-sales-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -3137,8 +3143,8 @@
       "emoji": "📊",
       "objective": "Research check calibration, forecast intervals and survival of unreleased wishlist pages.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Check calibration, forecast intervals and survival of unreleased wishlist pages. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "in_progress",
-      "percent": 95,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
@@ -3153,9 +3159,12 @@
         "ontology/steam/first-commercial-launch-paid-funnel-case-2026.json",
         "ontology/steam/first-commercial-launch-paid-funnel-case-2026.md",
         "site/steam-firstlaunch-funnel-audit.mjs",
-        "tests/steam-firstlaunch-funnel-audit.test.mjs"
+        "tests/steam-firstlaunch-funnel-audit.test.mjs",
+        "ontology/steam/historical-zero-proceeds-versus-zero-sales-2026.json",
+        "ontology/steam/historical-zero-proceeds-versus-zero-sales-2026.md",
+        "tests/steam-historical-zero-proceeds-cases.test.mjs"
       ],
-      "artifact": "ontology/steam/first-commercial-launch-paid-funnel-case-2026.md",
+      "artifact": "ontology/steam/historical-zero-proceeds-versus-zero-sales-2026.md",
       "priority": "high",
       "phase": 3
     },

@@ -1467,6 +1467,28 @@
       "evidence_class": "first_party_developer_self_report_single_title_store_sales_and_spend",
       "license": "Link/title and independently authored short numerical paraphrases only; no published graphics, original paragraphs, proprietary datasets or media copied.",
       "notes": "Undated first-person report describes roughly ten months after 2025-04-01 Steam launch; relative duration is not independently confirmed article publication date. Revenue, reviews, refund numbers, wishlists and ads are self-reported, not inspected Steamworks finance documents."
+    },
+    {
+      "id": "steam-water-tastes-wine-primary-postmortem-mar2018",
+      "url": "https://johnnemann.medium.com/where-the-water-tastes-like-wine-postmortem-211a1f9d791a",
+      "title": "Where the Water Tastes Like Wine Postmortem",
+      "publisher": "Johnnemann Nordhagen, first-party developer publication",
+      "published_at": "2018-03-30",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "dated_first_party_historical_developer_financial_self_report",
+      "license": "URL, source title and concise independently authored numerical paraphrases only; no full source passages, original graphics or other material reproduced.",
+      "notes": "Report approximately one month after 2018-02-28 launch. Reports positive sales without units, no proceeds earned personally to snapshot, roughly 140,000 USD paid to collaborators, four years production and third-party publisher support; not audited or lifetime."
+    },
+    {
+      "id": "steam-zero-wishlist-buyer-2025-selfreport",
+      "url": "https://www.reddit.com/r/GameDevelopment/comments/1j662w4/nobody_who_wishlist_my_game_bought_it/",
+      "title": "Nobody who wish-list my game bought it",
+      "publisher": "r/GameDevelopment, voluntary first-game developer account",
+      "published_at": "2025-03-08",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "anonymous_creator_post_low_selling_debut_wishlist_claim",
+      "license": "Original public link and independently authored short economic paraphrases; no username or original post text reproduced.",
+      "notes": "Self-reported 150 launch wishlists, seven copies described as friends/family, around USD 10 earned, USD 100 Steam Direct expense and 300 hours; no verified customer-level wishlist matching, payout history or source-time crosswalk."
     }
   ],
   "claims": [
@@ -9099,6 +9121,97 @@
       "confidence": "methodology_with_explicit_scope_limits",
       "observed_at": "2026-10-28",
       "limitations": "Product transfers and internal revenue allocations require audited entity reconciliation before any real publisher-income calculation."
+    },
+    {
+      "id": "steam-water-tastes-2018-paid-sales-nonzero",
+      "text": "The March 30, 2018 developer postmortem reports positive Steam game sales roughly a month after the February 28 launch but declines to give a precise unit count.",
+      "source_ids": [
+        "steam-water-tastes-wine-primary-postmortem-mar2018"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "The paid transactions and number sold cannot be reconstructed from a qualitative comparison to the author's follower count."
+    },
+    {
+      "id": "steam-water-tastes-zero-personal-proceeds",
+      "text": "The same developer reports having made USD 0 personally from the game as of that early postmortem.",
+      "source_ids": [
+        "steam-water-tastes-wine-primary-postmortem-mar2018"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Zero *reported personal proceeds to date* is neither zero Steam purchases nor an audited revenue-share amount, nor a lifetime outcome."
+    },
+    {
+      "id": "steam-water-tastes-2018-collaborator-expense",
+      "text": "The author reports approximately USD 140,000 paid to collaborators and contractors during a game production lasting nearly four years.",
+      "source_ids": [
+        "steam-water-tastes-wine-primary-postmortem-mar2018"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Self-reported partial cost, not an entire studio expense ledger; unrecorded wages, capital, co-financing, taxes and partner advances prevent exact full profit."
+    },
+    {
+      "id": "steam-water-tastes-publisher-payment-separation",
+      "text": "The 2018 postmortem describes support and financing from an external publisher while the developer separately reports personal cash recovery.",
+      "source_ids": [
+        "steam-water-tastes-wine-primary-postmortem-mar2018"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Publisher gross game sales, contractual recoup, production subsidy, and independent developer bank receipts are different units."
+    },
+    {
+      "id": "steam-water-tastes-not-modern-average",
+      "text": "A selected high-budget 2018 experimental narrative game cannot determine typical 2026 Steam first-game economics.",
+      "source_ids": [
+        "steam-water-tastes-wine-primary-postmortem-mar2018"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Historical market rules and production cost structures differ; one case selected into an extensive postmortem, not a fixed release sample."
+    },
+    {
+      "id": "steam-wishlist-2025-launch-stock-and-seven-sales",
+      "text": "A March 2025 first-game developer post reports about 150 launch wishlists, seven copies sold to friends/family and approximately USD 10 in earnings.",
+      "source_ids": [
+        "steam-zero-wishlist-buyer-2025-selfreport"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Anonymous unverified personal account; unit sales, earnings basis, source of purchases and platform reports were not independently authenticated."
+    },
+    {
+      "id": "steam-wishlist-2025-no-outside-wishlist-buyers",
+      "text": "The March 2025 developer asserts that no unrelated prelaunch wishlisters purchased their game at the time of posting.",
+      "source_ids": [
+        "steam-zero-wishlist-buyer-2025-selfreport"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Purchaser identities and prior wishlist cohorts cannot be verified; 'no wishlist conversion' is an author inference, not a measured matched-customer rate."
+    },
+    {
+      "id": "steam-wishlist-2025-cost-and-labor",
+      "text": "The same author reports roughly 300 hours of work and the $100 Steam Direct fee, exceeding the approximately $10 they say they earned.",
+      "source_ids": [
+        "steam-zero-wishlist-buyer-2025-selfreport"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Net publisher deposit, refund handling, additional cash costs, later sales and unpaid labor valuation all remain unverified."
+    },
+    {
+      "id": "steam-zero-labels-need-denominator",
+      "text": "A report of zero personal earnings or zero conversions by some wishlisters cannot establish zero paid orders for a Steam app or the prevalence of zero-sale publishers.",
+      "source_ids": [
+        "steam-water-tastes-wine-primary-postmortem-mar2018",
+        "steam-zero-wishlist-buyer-2025-selfreport"
+      ],
+      "confidence": "bounded_self_report",
+      "observed_at": "2026-10-28",
+      "limitations": "Separate game orders, buyer cohorts, legal partner proceeds, costs and follow-up periods; no complete representative population."
     }
   ],
   "observations": [],
