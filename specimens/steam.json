@@ -11281,6 +11281,106 @@
       "confidence": "bounded_historical_secondhand_snapshot_and_noncomparable_provider_arithmetic",
       "observed_at": "2026-10-29",
       "limitations": "Merchant financial records, matched-game denominators, legal publisher links and costs are absent, so all such outcomes remain unobserved."
+    },
+    {
+      "id": "steam-gdc-nested-counts-in-2025",
+      "text": "Game Developer reports Valve's GDC 2026 figure of 5,863 games above $100,000 in 2025 Steam revenue; GameDiscoverCo reports 2,395 games above $500,000 for the same calendar year.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds",
+        "steam-gdc-2026-analyst-500k-games"
+      ],
+      "confidence": "conditional_mathematical_floor_from_valve_attributed_secondary_reports",
+      "observed_at": "2026-10-29",
+      "limitations": "Both counts are secondhand presentations of Valve slides rather than audited merchant row-level data; matching revenue definitions are assumed for the nested arithmetic."
+    },
+    {
+      "id": "steam-gdc-nested-high-bin-2395",
+      "text": "On a common calendar-year gross-revenue game frame, the 2,395 games above $500,000 form a subset of the 5,863 above $100,000.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds",
+        "steam-gdc-2026-analyst-500k-games"
+      ],
+      "confidence": "conditional_mathematical_floor_from_valve_attributed_secondary_reports",
+      "observed_at": "2026-10-29",
+      "limitations": "The nested interpretation presumes consistent gross revenue measurement and game identity across the two separately reported Valve slides."
+    },
+    {
+      "id": "steam-gdc-nested-middle-bin-3468",
+      "text": "Under the same nested-frame assumption, 3,468 games exceeded $100,000 but did not exceed $500,000 of reported 2025 Steam game revenue.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds",
+        "steam-gdc-2026-analyst-500k-games"
+      ],
+      "confidence": "conditional_mathematical_floor_from_valve_attributed_secondary_reports",
+      "observed_at": "2026-10-29",
+      "limitations": "This is a set difference between two separately sourced threshold counts; individual game revenues remain undisclosed."
+    },
+    {
+      "id": "steam-gdc-2025-minimum-high-bin-usd",
+      "text": "The 2,395 games reported above $500,000 imply more than $1,197,500,000 in combined calendar-2025 Steam game revenue for that high-threshold group, conditional on the definitions matching.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds",
+        "steam-gdc-2026-analyst-500k-games"
+      ],
+      "confidence": "conditional_mathematical_floor_from_valve_attributed_secondary_reports",
+      "observed_at": "2026-10-29",
+      "limitations": "This is a strict mathematical floor based on Valve-attributed threshold counts, not a verified total or received publisher deposits."
+    },
+    {
+      "id": "steam-gdc-2025-minimum-mid-bin-usd",
+      "text": "The 3,468 games between the two reported annual thresholds contribute more than $346,800,000 on the same revenue basis.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds",
+        "steam-gdc-2026-analyst-500k-games"
+      ],
+      "confidence": "conditional_mathematical_floor_from_valve_attributed_secondary_reports",
+      "observed_at": "2026-10-29",
+      "limitations": "Unknown exact gross values, refunds and contractual shares prevent extrapolation to group net royalty payouts or profit."
+    },
+    {
+      "id": "steam-gdc-2025-nested-minimum-usd",
+      "text": "The two nested Valve-attributed annual threshold counts jointly imply strictly more than $1,544,300,000 in calendar-2025 Steam game revenue among games crossing $100,000, if both use the same gross-revenue basis.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds",
+        "steam-gdc-2026-analyst-500k-games"
+      ],
+      "confidence": "conditional_mathematical_floor_from_valve_attributed_secondary_reports",
+      "observed_at": "2026-10-29",
+      "limitations": "This is not the total 2025 Steam game-store gross, does not include lower earners, and provides neither a representative game's revenue nor total game count."
+    },
+    {
+      "id": "steam-gdc-2025-high-threshold-subset-share",
+      "text": "The conditional proportion of above-$100,000 games also passing $500,000 is 2,395 divided by 5,863, or about 40.8 percent; it is not a proportion of all Steam games.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds",
+        "steam-gdc-2026-analyst-500k-games"
+      ],
+      "confidence": "conditional_mathematical_floor_from_valve_attributed_secondary_reports",
+      "observed_at": "2026-10-29",
+      "limitations": "Unknown all-game and originally paid-new-launch denominators prevent a Steam-wide success probability or income percentile."
+    },
+    {
+      "id": "steam-gdc-2025-tail-not-newlaunch-cohort",
+      "text": "Valve's reported 2025 annual revenue thresholds cover Steam games of any original release year and cannot be divided by the number of games first launching in 2025.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds",
+        "steam-gdc-2026-analyst-500k-games"
+      ],
+      "confidence": "conditional_mathematical_floor_from_valve_attributed_secondary_reports",
+      "observed_at": "2026-10-29",
+      "limitations": "The study lacks verified revenue by launch cohort or legal publisher identity, and older live-service games may dominate aggregate gross."
+    },
+    {
+      "id": "steam-gdc-2025-total-and-income-still-unknown",
+      "text": "Valve's reported non-Valve 2025 aggregate publisher share of 76 percent does not identify the total annual gross underlying threshold slides, a typical publisher's remittance, or developer after-cost profit.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds",
+        "steam-gdc-2026-analyst-500k-games",
+        "steam-valve-2025-year-review-march2026"
+      ],
+      "confidence": "conditional_mathematical_floor_from_valve_attributed_secondary_reports",
+      "observed_at": "2026-10-29",
+      "limitations": "The share percentage applies to a separate revenue-weighted non-Valve aggregate and cannot be applied mechanically to game-count thresholds or individual developer earnings."
     }
   ],
   "observations": [],
@@ -11288,5 +11388,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Steam research now distinguishes December 2025 near-launch review snapshot rosters from October 2026 full-year review snapshots. Similar published under-ten-review percentages do not establish title-level improvement, completed sales or publisher earnings."
+  "summary": "Steam research adds a conditional strict lower bound above $1.5443 billion for 2025 game gross across Valve-attributed nested $100k/$500k annual cohorts, without assuming an all-game revenue total or a first-release income distribution."
 }

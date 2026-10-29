@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "conditional_nested_annual_game_revenue_threshold_lower_bound",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-gdc-2026-journalist-thresholds",
+    "steam-gdc-2026-analyst-500k-games",
+    "steam-valve-2025-year-review-march2026"
+  ],
+  "claim_ids": [
+    "steam-gdc-nested-counts-in-2025",
+    "steam-gdc-nested-high-bin-2395",
+    "steam-gdc-nested-middle-bin-3468",
+    "steam-gdc-2025-minimum-high-bin-usd",
+    "steam-gdc-2025-minimum-mid-bin-usd",
+    "steam-gdc-2025-nested-minimum-usd",
+    "steam-gdc-2025-high-threshold-subset-share",
+    "steam-gdc-2025-tail-not-newlaunch-cohort",
+    "steam-gdc-2025-total-and-income-still-unknown"
+  ],
+  "calendar_year": 2025,
+  "observations": {
+    "games_over_100k": 5863,
+    "games_over_500k": 2395,
+    "threshold_low_usd": 100000,
+    "threshold_high_usd": 500000,
+    "all_release_years": true,
+    "underlying_metric_match_independently_audited": false
+  },
+  "implied_arithmetic": {
+    "exclusive_middle_count": 3468,
+    "high_bin_floor_usd": 1197500000,
+    "middle_bin_floor_usd": 346800000,
+    "aggregate_strict_floor_usd": 1544300000,
+    "high_among_above_low_fraction": 0.4084939450793109
+  },
+  "not_estimated": {
+    "all_games_annual_gross_total_usd": null,
+    "annual_publisher_net_receipts_usd": null,
+    "firstyear_new_release_median_gross_usd": null,
+    "first_game_developer_profit_usd": null,
+    "marketwide_zero_sales_fraction": null
+  },
+  "data_limits": {
+    "no_raw_partner_records": true,
+    "no_first_launch_frame": true,
+    "overlap_between_threshold_groups_accounted_for": true,
+    "not_directly_audited_valve_presentations": true
+  },
+  "no_account_or_order_data_collected": true
+}
