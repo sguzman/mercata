@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## One-month festival, creator, and bundle measurement stages (October 29, 2026)
+
+The [first-person developer marketing funnel](../ontology/steam/steam-firstmonth-festival-creator-bundle-window-2026.md) documents festival impressions and visits, creator invitations and free-key activations, creator videos and concurrent bundle offers, with a separate first-month gross/units observation. A single self-selected case supports **no** causal channel ROI, matched paid-buyer attribution or exact bundle first-month fraction. One new source and seven claims raise the existing traffic attribution task by two points. Current Steam task progress **91.232%** (Δ **+0.007 pp**) across the same **293 tasks**.
+
 ## Self-reported Steam China regional concentration and pre-share finances (October 29, 2026)
 
 The [new two-week launch case](../ontology/steam/steam-two-week-china-concentration-and-preshare-report-2026.md) records one six-person team's approximate 90% China sales concentration, distinct gross/net units and the USD 59,000 versus USD 47,000 after-adjustments-before-platform-share revenue stages. It refuses to infer an exact refunded order count, regional effective price, matched wishlist conversion, cash receipt or profit. One new first-person public source and seven bounded claims support a two-point update to the original regional-purchase research task. Current **91.225%** (Δ **+0.007 pp**); inventory remains **293 tasks**.

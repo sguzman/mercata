@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "developer_reported_first_month_channels_with_unaligned_exposures_and_bundle_windows",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-planetharvester-firstmonth-marketing-funnel-20260919"
+  ],
+  "claim_ids": [
+    "steam-harvester-2500wishlists-firstmonth-outcome-20261029",
+    "steam-harvester-festival-impressions-visits-20261029",
+    "steam-harvester-creators-contact-keys-20261029",
+    "steam-harvester-creator-views-nonadditive-20261029",
+    "steam-harvester-bundles-post-snapshot-not-month-20261029",
+    "steam-harvester-refund-playtime-not-payout-20261029",
+    "steam-harvester-festival-bundle-no-causal-gains-20261029"
+  ],
+  "case": {
+    "game": "Planet Harvester: Incremental Odyssey",
+    "publisher_research_unit": "one_two_person_indie_team",
+    "post_date": "2026-09-19",
+    "url": "https://www.reddit.com/r/gamedev/comments/1wkqe7x/postmortem_first_fulltime_release_12000_and_2k/"
+  },
+  "self_report": {
+    "time_basis": "first_month_units_and_gross",
+    "launch_wishlists_approx": 2500,
+    "first_month_units_reported": 2325,
+    "first_month_gross_usd_reported": 12467,
+    "refund_rate_reported_percent_approx": 6.8,
+    "median_playtime_minutes_reported": 206,
+    "reviews_reported": 74,
+    "festival_impressions_approx": 158000,
+    "festival_store_visits_approx": 1700,
+    "contacted_video_creators": 170,
+    "creator_keys_activated": 20,
+    "creator_videos": 7,
+    "combined_creator_views_approx": 186000,
+    "active_bundle_count_at_post_approx": 30,
+    "author_bundle_sales_share_percent_approx": 20,
+    "bundle_share_same_first_month_window_verified": false,
+    "verified_unique_impression_reach": false,
+    "independently_verified_partner_sales": false,
+    "observed_incremental_campaign_orders": false
+  },
+  "unknown": {
+    "actual_firstmonth_net_partner_cash": null,
+    "attributable_festival_paid_orders": null,
+    "causal_creator_purchase_lift": null,
+    "creator_unique_reach": null,
+    "exact_firstmonth_bundle_sales": null,
+    "exact_wishlist_to_sale_rate": null,
+    "publisher_after_labor_profit": null,
+    "representative_solo_launch_outcome": null
+  },
+  "model_path": "site/steam-developer-launch-channel-guards.mjs",
+  "test_path": "tests/steam-developer-launch-channel-guards.test.mjs",
+  "private_data_used": false
+}
