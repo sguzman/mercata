@@ -2,7 +2,9 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {boundSyntheticSteamGrossMean as bound,conservativeSteamFourDecimalUsdCents as quantize} from '../site/steam-gross-mean-nonresponse-bounds.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
 const x=read('ontology/steam/steam-fixed-horizon-gross-mean-nonresponse-bounds-2026.json'),d=read('specimens/steam.json'),p=read('plans/steam.json'),q=read('queues/steam.json');
-const o=(id,amount,h=30)=>({fixture_id:'fixture-'+id,horizon_days:h,gross_usd_cents:amount,coverage:'complete_reconciled'});
+const o=(id,amount,h=30)=>({fixture_id:'fixture-'+id,horizon_days:h,gross_usd_cents:amount,
+ coverage:'complete_reconciled',financial_access_attested:true,transfer_history_reconciled:true,
+ paid_checkout_attribution_attested:true,release_horizon_reconciled:true});
 const m=(id,cap=null,verified=false,h=30)=>({fixture_id:'fixture-'+id,horizon_days:h,verified_upper_cap_usd_cents:cap,cap_verified:verified});
 const partial=(id,floor,cap=null,verified=false,h=30)=>({...m(id,cap,verified,h),
  observed_partial_gross_usd_cents:floor,partial_gross_verified:true,
@@ -111,4 +113,20 @@ test('Outward decimal rounding preserves partial gross floor below a finite cap'
  assert.equal(r.lower_mean_gross_usd_cents,700);
  assert.equal(r.upper_mean_gross_usd_cents,3000);
  assert.equal(r.actual_platform_mean_gross,null);
+});
+
+test('No complete gross figure is admitted without full financial and game attribution attestations',()=>{
+ const base=o('a',1000);
+ for(const field of ['financial_access_attested','transfer_history_reconciled',
+ 'paid_checkout_attribution_attested','release_horizon_reconciled']){
+  const bad={...base};delete bad[field];
+  assert.throws(()=>bound({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,
+   observed:[bad]}),/Complete gross requires/);
+  assert.throws(()=>bound({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,
+   observed:[{...base,[field]:false}]}),/Complete gross requires/);
+ }
+ const good=bound({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,observed:[base]});
+ assert.equal(good.lower_mean_gross_usd_cents,1000);
+ assert.equal(good.point_identified,true);
+ assert.equal(good.actual_platform_mean_gross,null);
 });

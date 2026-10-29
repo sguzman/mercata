@@ -37,3 +37,7 @@ A true first-30-day Steam-wide mean requires the population of originally-paid l
 ### Exact four-decimal USD conversion
 
 The [synthetic helper](../../site/steam-gross-mean-nonresponse-bounds.mjs) now parses Valve-style four-decimal, nonnegative USD strings using integer arithmetic before converting to safe integer cents. It exposes **both** conservative limits: `$12.3456` becomes a **1,234-cent lower floor** and a **1,235-cent upper cap**; `$12.3400` becomes 1,234 cents in both directions. The parser rejects negative, scientific-notation, noncanonical and unsafe amounts. These are isolated arithmetic tests, **not data drawn from a Steam merchant account**. Gross receipts should remain separate from signed returns, tax and developer bank remittances.
+
+### Complete financial-record eligibility gate
+
+An invented game total marked `complete_reconciled` is now accepted by the mean-bounds calculator only when the fixture separately attests authorized financial access, reconciled AppID transfers, defensible package-to-base-game attribution, and full first-paid-release horizon coverage. Merely labeling a value *complete* is insufficient. The flags are explicitly synthetic modeling assumptions: they **do not verify actual partner access or real publisher earnings**. A missing attestation fails before the aggregate can be reported.

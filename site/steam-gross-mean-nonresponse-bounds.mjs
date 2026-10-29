@@ -2,7 +2,9 @@
 const valid=(v,label)=>{if(!Number.isSafeInteger(v)||v<0)throw new TypeError('Nonnegative safe integer required: '+label);return v;};
 const add=(a,b,label)=>{const x=a+b;if(!Number.isSafeInteger(x))throw new RangeError('Unsafe '+label+' sum');return x;};
 const allowed=(obj,keys)=>obj&&typeof obj==='object'&&!Array.isArray(obj)&&Object.keys(obj).every(k=>keys.includes(k));
-const observedKeys=['fixture_id','horizon_days','coverage','gross_usd_cents'];
+const observedKeys=['fixture_id','horizon_days','coverage','gross_usd_cents',
+ 'financial_access_attested','transfer_history_reconciled',
+ 'paid_checkout_attribution_attested','release_horizon_reconciled'];
 const missingKeys=['fixture_id','horizon_days','verified_upper_cap_usd_cents','cap_verified',
  'observed_partial_gross_usd_cents','partial_gross_verified',
  'partial_horizon_attested','paid_checkout_attribution_attested'];
@@ -26,6 +28,9 @@ export function boundSyntheticSteamGrossMean(args={}){
    if(row.horizon_days!==horizonDays)throw new RangeError('Mixed horizons');
    if(kind==='observed'){
     if(row.coverage!=='complete_reconciled')throw new RangeError('Partial observed gross is not eligible');
+    if(row.financial_access_attested!==true||row.transfer_history_reconciled!==true||
+       row.paid_checkout_attribution_attested!==true||row.release_horizon_reconciled!==true)
+     throw new TypeError('Complete gross requires financial access, transfer, game attribution and fixed-horizon attestations');
     knownSum=add(knownSum,valid(row.gross_usd_cents,'observed gross'),'observed');
    }else{
     if(row.gross_usd_cents!==undefined)throw new TypeError('Missing gross must not be imputed');
