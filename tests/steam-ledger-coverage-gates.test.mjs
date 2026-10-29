@@ -49,6 +49,16 @@ test('Out-of-scope games cannot silently hide paid-unit evidence or unknown fiel
  assert.throws(()=>auditLedgerCoverage([{...rows[0],retired:'no'}]),/retirement status/);
  assert.equal(auditLedgerCoverage([unresolved,...rows],{frameComplete:true}).zero_gross_unit_share_upper_conditional,null);
 });
+test('Missing ledger records cannot claim access or attribution evidence',()=>{
+ for(const field of ['authorized_ledger_attested','transfer_history_reconciled',
+   'paid_checkout_attribution_attested']){
+  assert.throws(()=>auditLedgerCoverage([{...rows[3],[field]:true}]),/Missing ledger cannot claim/);
+  const fixedMissing=fixed();fixedMissing[3][field]=true;
+  assert.throws(()=>auditSyntheticFixedHorizonZeroSales(fixedMissing,window30),/Missing ledger cannot imply/);
+ }
+ assert.equal(auditLedgerCoverage(rows,{frameComplete:true}).counts.missing,1);
+ assert.equal(auditSyntheticFixedHorizonZeroSales(fixed(),window30).counts.unknown_zero,3);
+});
 test('Claims grounded and no genuine confidential financial records present',()=>{
  const s=new Set(d.evidence.map(x=>x.id)),c=new Map(d.claims.map(x=>[x.id,x]));
  assert.equal(r.source_ids.length,4);assert.equal(r.claim_ids.length,12);
