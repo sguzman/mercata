@@ -1896,6 +1896,17 @@
       "evidence_class": "official_public_api_documentation",
       "license": "Public documentation URL and independently written factual summaries only; source text not reproduced.",
       "notes": "Older app-list API is deprecated for scale, but replacement is a current-list API rather than an archive of original paid releases."
+    },
+    {
+      "id": "steam-profile-features-official-20261029",
+      "url": "https://partner.steamgames.com/doc/marketing/profile",
+      "publisher": "Valve Corporation — Steamworks public documentation",
+      "title": "Steam Community Profile Features eligibility and separate Store visibility rules",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_platform_discovery_policy",
+      "license": "Only public URL and independently written factual summary; no webpage body or media reproduced.",
+      "notes": "Profile features such as Trading Cards require Steam commercial and engagement signals but Valve says profile-feature state does not impact Store promotion; no exact threshold or causal revenue inference."
     }
   ],
   "claims": [
@@ -12925,6 +12936,82 @@
       "confidence": "high",
       "observed_at": "2026-10-29",
       "limitations": "This is the research project's explicit inclusion rule; Valve has not certified the resulting historical population."
+    },
+    {
+      "id": "steam-studio-20261029-label-groups-not-legal-entities",
+      "text": "PlayRecon counts storefront studio-name groups, not verified legal studios or payee entities; its 92,297 currently observed studio groups are a mutable public-store roster.",
+      "source_ids": [
+        "steam-playrecon-studios-2026",
+        "steam-playrecon-coverage-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "This catalog is not a population-complete legal studio census and may omit historically withdrawn or differently labeled titles."
+    },
+    {
+      "id": "steam-studio-20261029-gameorder-median-review-sequence",
+      "text": "PlayRecon's October 29 public view reports median review counts 13 for studio first games, 22 for second games and 35 for fifth games.",
+      "source_ids": [
+        "steam-playrecon-studios-2026",
+        "steam-playrecon-metrics-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "These are game-order conditional public review medians, not fixed-age purchases or earnings, and provider figures can update."
+    },
+    {
+      "id": "steam-studio-20261029-studio-repeat-sample-selection",
+      "text": "Conditioning on reaching a second or fifth game selects a different group of studio names and cannot identify the causal effect of game-making experience.",
+      "source_ids": [
+        "steam-playrecon-studios-2026",
+        "steam-playrecon-metrics-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "This is a study-design inference; game sequences differ by age, genre, financing, personnel and unmeasured quality."
+    },
+    {
+      "id": "steam-studio-20261029-publisher-review-median-gap",
+      "text": "PlayRecon's October 29 three-year view reports median 25 reviews for externally publisher-backed releases versus 6 for self-published releases.",
+      "source_ids": [
+        "steam-playrecon-studios-2026",
+        "steam-playrecon-metrics-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Publisher selection into promising titles and noncomparable populations prevent treating this gap as causal sales uplift."
+    },
+    {
+      "id": "steam-studio-20261029-no-observed-second-not-failure",
+      "text": "A studio label with one observed dated release cannot be declared failed merely because a second release has not yet appeared.",
+      "source_ids": [
+        "steam-playrecon-studios-2026",
+        "steam-playrecon-coverage-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The time at risk differs among studios, and future launches or activity outside the tracker remain unobserved."
+    },
+    {
+      "id": "steam-studio-20261029-profile-limits-not-ranking",
+      "text": "Valve says absence of Steam Community Profile Features including Trading Cards does not reduce a game's Store visibility, search or discovery placement.",
+      "source_ids": [
+        "steam-profile-features-official-20261029"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "This explicit separation does not establish any specific title's Store ranking, demand, sales or profit."
+    },
+    {
+      "id": "steam-studio-20261029-review-signal-not-sales",
+      "text": "Reviews and store developer credits are public visibility and affiliation signals, not validated game orders, canonical legal publisher identities, or developer profit.",
+      "source_ids": [
+        "steam-playrecon-metrics-2026",
+        "steam-playrecon-coverage-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Matched review counts cannot identify refunds, regional taxes, royalty splits, production labor or bank deposits."
     }
   ],
   "observations": [],
@@ -12932,5 +13019,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Steam policy evidence now distinguishes a general subscriber under-13 age prohibition from the unresolved legal capacity to sign separate commercial Steamworks distribution agreements. Subscriber eligibility does not prove partner approval or income."
+  "summary": "Steam market research now separates current store rosters from historical paid launches, and identifies survivor selection in apparent studio experience and external-publisher review advantages. Observed review medians cannot establish paid-unit effects or publisher income."
 }

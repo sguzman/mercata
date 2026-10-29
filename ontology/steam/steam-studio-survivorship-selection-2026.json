@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "studio_sequential_review_median_survivorship_and_publisher_selection_audit",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-playrecon-studios-2026",
+    "steam-playrecon-metrics-2026",
+    "steam-playrecon-coverage-2026",
+    "steam-visibility-official",
+    "steam-profile-features-official-20261029"
+  ],
+  "claim_ids": [
+    "steam-studio-20261029-label-groups-not-legal-entities",
+    "steam-studio-20261029-gameorder-median-review-sequence",
+    "steam-studio-20261029-studio-repeat-sample-selection",
+    "steam-studio-20261029-publisher-review-median-gap",
+    "steam-studio-20261029-no-observed-second-not-failure",
+    "steam-studio-20261029-profile-limits-not-ranking",
+    "steam-studio-20261029-review-signal-not-sales"
+  ],
+  "playrecon_observation": {
+    "captured_at": "2026-10-29",
+    "studio_label_groups_with_dated_release": 92297,
+    "first_only_reported_share_rounded": 0.77,
+    "median_gap_days_among_released_again": 203,
+    "calendar2026_first_observed_studio_release_share_rounded": 0.65,
+    "median_reviews_by_studio_sequence_number": {
+      "first": 13,
+      "second": 22,
+      "fifth": 35
+    },
+    "releases_last_three_years": {
+      "publisher_backed": 13932,
+      "self_published": 52902,
+      "median_reviews_publisher_backed": 25,
+      "median_reviews_self_published": 6
+    },
+    "unit": "public_storefront_studio_name_group_and_game_review_counts",
+    "not_verified_legal_publisher_count": true,
+    "not_historical_first_paid_launch_cohort": true,
+    "not_same_age_review_cohort": true,
+    "not_independent_paid_order_audit": true,
+    "source_may_recalculate": true
+  },
+  "synthetic_fixture": [
+    {
+      "fixture_studio_id": "fixture-one",
+      "first_release_date": "2024-01-01",
+      "first_game_reviews": 0,
+      "second_release_date": null,
+      "second_game_reviews": null
+    },
+    {
+      "fixture_studio_id": "fixture-two",
+      "first_release_date": "2024-02-01",
+      "first_game_reviews": 1,
+      "second_release_date": null,
+      "second_game_reviews": null
+    },
+    {
+      "fixture_studio_id": "fixture-three",
+      "first_release_date": "2024-03-01",
+      "first_game_reviews": 10,
+      "second_release_date": "2025-01-01",
+      "second_game_reviews": 8
+    },
+    {
+      "fixture_studio_id": "fixture-four",
+      "first_release_date": "2024-04-01",
+      "first_game_reviews": 20,
+      "second_release_date": "2025-05-01",
+      "second_game_reviews": 15
+    }
+  ],
+  "synthetic_window": {
+    "asOf": "2026-10-29",
+    "minFollowupDays": 365
+  },
+  "expected_synthetic": {
+    "all_first_median": 5.5,
+    "repeaters_first_median": 15,
+    "repeaters_second_median": 11.5,
+    "naive_unmatched_difference": 6,
+    "within_repeater_difference_of_medians": -3.5,
+    "median_paired_change": -3.5,
+    "repeaters": 2,
+    "no_second_observed_with_followup": 2,
+    "right_censored": 0
+  },
+  "unknown": {
+    "representative_new_studio_median_paid_orders": null,
+    "causal_game_order_review_gain": null,
+    "causal_publisher_effect": null,
+    "real_lifetime_studio_failure_fraction": null,
+    "first_game_publisher_after_cost_profit": null
+  },
+  "only_invented_fixture_studios": true,
+  "model_path": "site/steam-studio-survivorship-selection.mjs",
+  "tests_path": "tests/steam-studio-survivorship-selection.test.mjs"
+}
