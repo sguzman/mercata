@@ -10,7 +10,7 @@ export function auditSyntheticSteamDeveloperChannelReport(x){
  if(!x||typeof x!=='object'||Array.isArray(x)||Object.keys(x).some(k=>!keys.includes(k)))
   throw new TypeError('Only author-published aggregate reporting fields permitted');
  if(x.time_basis!=='first_month_units_and_gross')throw new TypeError('First month sales observation window required');
- for(const k of keys.slice(1,4).concat(keys.slice(5,15)))
+ for(const k of keys.slice(1,4).concat(keys.slice(5,14)))
   if(!nat(x[k]))throw new TypeError('Nonnegative integer channel aggregate required: '+k);
  for(const k of ['refund_rate_reported_percent_approx','author_bundle_sales_share_percent_approx'])
   if(typeof x[k]!=='number'||!Number.isFinite(x[k])||x[k]<0||x[k]>100)

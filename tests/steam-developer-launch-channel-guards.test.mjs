@@ -21,6 +21,8 @@ test('Fraudulent provenance, cross-window assumptions, illegal values and arbitr
  const y={...study.self_report,bundle_share_same_first_month_window_verified:true};assert.throws(()=>audit(y),/No same-month/);
  const z={...study.self_report,creator_keys_activated:171};assert.throws(()=>audit(z),/Contradictory/);
  const b={...study.self_report,refund_rate_reported_percent_approx:101};assert.throws(()=>audit(b),/Finite percentage/);
+ const valid={...study.self_report,author_bundle_sales_share_percent_approx:20.5,refund_rate_reported_percent_approx:6.75};
+ assert.equal(audit(valid).author_reported_bundle_percent,20.5);
  const c={...study.self_report,festival_store_visits_approx:158001};assert.throws(()=>audit(c),/Contradictory/);
 });
 test('Seven linked claims and original 293-task inventory remain auditable',()=>{
