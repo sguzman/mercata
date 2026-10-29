@@ -130,3 +130,55 @@ test('No complete gross figure is admitted without full financial and game attri
  assert.equal(good.point_identified,true);
  assert.equal(good.actual_platform_mean_gross,null);
 });
+
+test('Direct 4-decimal gross sales preserve interval bounds and never claim exact whole-cent revenue',()=>{
+ const base=o('a',1000);
+ delete base.gross_usd_cents;
+ base.gross_sales_usd_4dp='10.0001';
+ const x=bound({eligibleFrameSize:2,horizonDays:30,cohortFrameVerified:true,
+  observed:[base],missing:[m('b',500,true)]});
+ assert.equal(x.complete_observed_gross_usd_cents,null);
+ assert.equal(x.complete_observed_gross_lower_usd_cents,1000);
+ assert.equal(x.complete_observed_gross_upper_usd_cents,1001);
+ assert.equal(x.decimal_gross_observations,1);
+ assert.equal(x.lower_mean_gross_usd_cents,500);
+ assert.equal(x.upper_mean_gross_usd_cents,750.5);
+ assert.equal(x.point_identified,false);
+ assert.equal(x.actual_platform_mean_gross,null);
+});
+test('Direct 4-decimal partial floors and verified caps conservatively widen uncertainty',()=>{
+ const x=bound({eligibleFrameSize:2,horizonDays:30,cohortFrameVerified:true,
+  observed:[o('a',1000)],
+  missing:[{...m('b',null,false),observed_partial_gross_usd_4dp:'4.0001',
+   partial_gross_verified:true,partial_horizon_attested:true,
+   paid_checkout_attribution_attested:true,verified_upper_cap_usd_4dp:'49.9999',cap_verified:true}]});
+ assert.equal(x.lower_mean_gross_usd_cents,700);
+ assert.equal(x.upper_mean_gross_usd_cents,3000);
+ assert.equal(x.observed_partial_floor_games,1);
+ assert.equal(x.point_identified,false);
+});
+test('Reject incompatible amount representations, malformed four-decimal strings and missing totals',()=>{
+ const both={...o('a',1000),gross_sales_usd_4dp:'10.0000'};
+ assert.throws(()=>bound({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,
+  observed:[both]}),/Exactly one cents or four-decimal/);
+ const neither={...o('a',1000)};delete neither.gross_usd_cents;
+ assert.throws(()=>bound({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,
+  observed:[neither]}),/Exactly one cents or four-decimal/);
+ const b={...partial('b',400),observed_partial_gross_usd_4dp:'4.0001'};
+ assert.throws(()=>bound({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,
+  missing:[b]}),/Exactly one cents or four-decimal/);
+ const c={...m('c',500,true),verified_upper_cap_usd_4dp:'5.0001'};
+ assert.throws(()=>bound({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,
+  missing:[c]}),/Exactly one cents or four-decimal/);
+ const d={...o('d',10),gross_usd_cents:undefined,gross_sales_usd_4dp:'1.23'};
+ assert.throws(()=>bound({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,
+  observed:[d]}),/four-decimal/);
+});
+test('Gross values with fractional cents cannot point-identify a reported mean without a precision interval',()=>{
+ const a={...o('a',0),gross_sales_usd_4dp:'0.0001'};
+ delete a.gross_usd_cents;
+ const x=bound({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,observed:[a]});
+ assert.equal(x.lower_mean_gross_usd_cents,0);
+ assert.equal(x.upper_mean_gross_usd_cents,1);
+ assert.equal(x.point_identified,false);
+});
