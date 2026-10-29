@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const read=(p)=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const load=(p)=>JSON.parse(read(p));
+const isValidISODate=(value)=>typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&Number.isFinite(Date.parse(value+'T00:00:00Z'))&&new Date(value+'T00:00:00Z').toISOString().slice(0,10)===value;
 const dossier=load('specimens/steam.json'),study=load('ontology/steam/entry-review-and-reporting-2026.json');
 const plan=load('plans/steam.json'),queue=load('queues/steam.json'),gallery=load('gallery/index.json');
 test('The original nine partner documents and 23 claims remain independently attributable',()=>{
@@ -14,7 +15,7 @@ test('The original nine partner documents and 23 claims remain independently att
  const ids=new Set(dossier.evidence.map(x=>x.id));
  for(const s of dossier.evidence){
    assert(s.url.startsWith('https://'));
-   assert(/^2026-10-(28|29)$/.test(s.retrieved_at),'Expected independently dated October 2026 evidence');
+   assert(isValidISODate(s.retrieved_at)&&s.retrieved_at>='2026-10-28','Expected valid dated post-baseline source evidence');
    assert(s.publisher&&s.license&&s.notes);
  }
  for(const id of study.source_ids){
@@ -25,11 +26,18 @@ test('The original nine partner documents and 23 claims remain independently att
  }
  for(const c of dossier.claims){
    assert(c.source_ids.length>=1&&c.source_ids.every(x=>ids.has(x)));
-   assert(/^2026-10-(28|29)$/.test(c.observed_at),'Expected independently dated October 2026 claim');
+   assert(isValidISODate(c.observed_at)&&c.observed_at>='2026-10-28','Expected valid dated post-baseline claim evidence');
    assert(c.limitations.length>45);
  }
  assert(study.source_ids.every(x=>ids.has(x)));
  assert(study.claim_ids.every(x=>dossier.claims.some(y=>y.id===x&&y.observed_at==='2026-10-28')));
+});
+test('Evidence dates accept valid later research days without accepting impossible calendars',()=>{
+ assert(isValidISODate('2026-10-30'));
+ assert(isValidISODate('2027-02-28'));
+ assert.equal(isValidISODate('2026-02-30'),false);
+ assert.equal(isValidISODate('2026-13-01'),false);
+ assert.equal(isValidISODate('10/29/2026'),false);
 });
 test('Earlier 21-day wording is preserved while current public sources agree on 30 days',()=>{
  const a=study.documented.waiting_period_minimum_days_conflict;
