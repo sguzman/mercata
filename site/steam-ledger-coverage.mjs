@@ -3,15 +3,26 @@
 const good=n=>Number.isSafeInteger(n)&&n>=0;
 const STATES=new Set(['complete_reconciled','partial','missing']);
 const ELIGIBILITY=new Set(['eligible_paid_initially','ineligible_initially_free','unresolved']);
+const legacyRowKeys=['appid','eligibility','ledger_status','gross_paid_units','transfer_history_reconciled',
+ 'authorized_ledger_attested','paid_checkout_attribution_attested','retired'];
+const legacyFinancialKeys=['ledger_status','gross_paid_units','transfer_history_reconciled',
+ 'authorized_ledger_attested','paid_checkout_attribution_attested'];
 export function auditLedgerCoverage(rows,{frameComplete=false}={}){
  if(!Array.isArray(rows)||typeof frameComplete!=='boolean')throw new TypeError('Invalid frame');
  const seen=new Set(),counts={eligible:0,ineligible:0,unresolved_eligibility:0,complete:0,partial:0,missing:0,observed_gross_zero:0,known_gross_nonzero:0,unknown_zero:0,retired_eligible:0};
  for(const x of rows){
-  if(!x||!good(x.appid)||x.appid===0||seen.has(x.appid))throw new TypeError('Missing or duplicate AppID');
+  if(!allowed(x,legacyRowKeys)||!good(x.appid)||x.appid===0||seen.has(x.appid))
+   throw new TypeError('Missing or duplicate AppID, or unpermitted ledger row fields');
   seen.add(x.appid);
   if(!ELIGIBILITY.has(x.eligibility))throw new TypeError('Unrecognized initial paid eligibility');
-  if(x.eligibility==='ineligible_initially_free'){counts.ineligible++;continue;}
-  if(x.eligibility==='unresolved'){counts.unresolved_eligibility++;continue;}
+  if(x.retired!==undefined&&typeof x.retired!=='boolean')throw new TypeError('Invalid retirement status');
+  if(x.eligibility!=='eligible_paid_initially'){
+   // An excluded or unresolved game must not silently discard financial evidence.
+   if(legacyFinancialKeys.some(k=>x[k]!==undefined&&x[k]!==null))
+    throw new RangeError('Excluded or unresolved game cannot carry paid-game ledger evidence');
+   counts[x.eligibility==='ineligible_initially_free'?'ineligible':'unresolved_eligibility']++;
+   continue;
+  }
   counts.eligible++;
   if(x.retired===true)counts.retired_eligible++;
   if(!STATES.has(x.ledger_status))throw new TypeError('Unknown ledger status');
