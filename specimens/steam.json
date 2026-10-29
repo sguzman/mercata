@@ -10949,6 +10949,107 @@
       "confidence": "bounded_public_catalog_snapshot_conditional_math",
       "observed_at": "2026-10-29",
       "limitations": "A credible ROI comparison would require comparable game costs, fixed time horizons, region-level paid units and a causal price design."
+    },
+    {
+      "id": "steam-seasonal-release-month-frame",
+      "text": "The public steamlense market chart summarizes 108,969 game releases since 2015 by calendar month, combining historical months across years rather than a single release cohort.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "source_defined_public_catalog_review_proxy_not_causal",
+      "observed_at": "2026-10-29",
+      "limitations": "The provider's public catalog and coverage rules need not include delisted games and do not independently identify all originally paid titles."
+    },
+    {
+      "id": "steam-seasonal-october-most-launches",
+      "text": "The reported combined-year October cohort contains 10,685 releases, the largest of the twelve monthly totals shown on steamlense's October 2026 market page.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "source_defined_public_catalog_review_proxy_not_causal",
+      "observed_at": "2026-10-29",
+      "limitations": "These are repeated calendar-month aggregates across multiple years, not the number of games first launched in October 2026."
+    },
+    {
+      "id": "steam-seasonal-january-least-launches",
+      "text": "The reported combined-year January cohort contains 7,318 releases, the smallest month aggregate in the reviewed steamlense chart.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "source_defined_public_catalog_review_proxy_not_causal",
+      "observed_at": "2026-10-29",
+      "limitations": "Lower volume across multiple years does not establish less competition for a comparable new game in a particular year or niche."
+    },
+    {
+      "id": "steam-seasonal-volume-ratio",
+      "text": "The provider's displayed October release count is approximately 46 percent higher than January (10,685 versus 7,318).",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "source_defined_public_catalog_review_proxy_not_causal",
+      "observed_at": "2026-10-29",
+      "limitations": "This descriptive catalog comparison is not a measured causal relationship between launch timing, attention, sales or profits."
+    },
+    {
+      "id": "steam-seasonal-october-january-review-rates",
+      "text": "The same public chart reports 24.1 percent of October releases versus 24.4 percent of January releases reaching at least 50 reviews as of the provider snapshot.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "source_defined_public_catalog_review_proxy_not_causal",
+      "observed_at": "2026-10-29",
+      "limitations": "Reviews are accumulated over unequal exposure horizons and are not authenticated paid game copies, first-month conversion or publisher net income."
+    },
+    {
+      "id": "steam-seasonal-april-december-review-spread",
+      "text": "The highest displayed rate of eventually reaching 50 reviews is April at 26.0 percent; December is the lowest at 21.5 percent, a 4.5 percentage-point descriptive spread.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "source_defined_public_catalog_review_proxy_not_causal",
+      "observed_at": "2026-10-29",
+      "limitations": "The highest-minus-lowest spread is not causal calendar lift; changing release mix, 2026 partial coverage and elapsed review ages are not controlled."
+    },
+    {
+      "id": "steam-seasonal-chart-percentages-rounded",
+      "text": "The published 50-review reach percentages are rounded to one decimal point, so multiplying a displayed rate by its monthly count does not recover exact verified review-event populations.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "source_defined_public_catalog_review_proxy_not_causal",
+      "observed_at": "2026-10-29",
+      "limitations": "Provider-rounded percentage displays are insufficient to reconstruct a reproducible exact event-level panel without underlying release and review records."
+    },
+    {
+      "id": "steam-seasonal-not-early-reviews",
+      "text": "Review thresholds reached to date cannot be interpreted as reviews collected within the first 30 days of an original paid Steam launch.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026",
+        "steam-steamlense-estimation-method"
+      ],
+      "confidence": "source_defined_public_catalog_review_proxy_not_causal",
+      "observed_at": "2026-10-29",
+      "limitations": "Elapsed time since each release, changing review rules and different product types require matched-age outcomes and an eligible historical paid-game frame."
+    },
+    {
+      "id": "steam-seasonal-quieter-month-not-randomized",
+      "text": "The contemporaneous public monthly aggregation cannot prove that moving an otherwise identical game to a quieter launch month increases paid orders, profit or wishlist conversion.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "source_defined_public_catalog_review_proxy_not_causal",
+      "observed_at": "2026-10-29",
+      "limitations": "There is no random assignment, matched game treatment, synchronized exposure horizon, publisher financial validation or estimated causal coefficient."
+    },
+    {
+      "id": "steam-seasonal-no-publisher-income-measure",
+      "text": "Calendar-month game counts and current public review thresholds describe visible catalog and review events, not sale receipts, first-game publisher take-home or annual net profits.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "source_defined_public_catalog_review_proxy_not_causal",
+      "observed_at": "2026-10-29",
+      "limitations": "No publisher-identity census, actual game order ledgers, tax and refund records, revenue-sharing agreements or production cost data were observed."
     }
   ],
   "observations": [],
@@ -10956,5 +11057,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Steam research separates catalog launch-price bins from real paid checkout units: the provider's whole-dollar $0 bin largely consists of $0.99 paid titles. A common list price is not optimal price, seller revenue or profit."
+  "summary": "Steam public seasonal release counts and lifetime review milestones are now quantified across calendar months without claiming that a quieter launch month improves paid game sales or publisher profit. Actual seller outcomes remain unverified."
 }
