@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "incomplete_public_game_review_milestone_observability_and_source_comparability",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-gaugedb-oct25-2026-checked-reviews",
+    "steam-videogamescritic-oct25-2026-review-threshold",
+    "steam-steamlense-market-review-threshold-2026"
+  ],
+  "claim_ids": [
+    "steam-review-gauge-checked-fraction",
+    "steam-review-gauge-exact-bin-total",
+    "steam-review-gauge-unchecked-not-zero",
+    "steam-review-gauge-10plus-conditional",
+    "steam-review-gauge-under10-logical-bounds",
+    "steam-review-gauge-2025-coverage",
+    "steam-review-vgc-2025-release-count",
+    "steam-review-vgc-2025-tenplus",
+    "steam-review-steamlense-2025-cohort",
+    "steam-review-cross-provider-rate-gap",
+    "steam-review-cross-provider-denominators",
+    "steam-review-snapshot-not-early",
+    "steam-review-zero-not-zero-paid",
+    "steam-review-milestones-not-profit"
+  ],
+  "gaugedb": {
+    "source_snapshot_at": "2026-10-25T05:53:00Z",
+    "catalog_games": 155467,
+    "review_checked": 58033,
+    "review_unknown": 97434,
+    "review_count_disjoint_bins": [
+      {
+        "range": "0",
+        "count": 1677
+      },
+      {
+        "range": "1-9",
+        "count": 10974
+      },
+      {
+        "range": "10-99",
+        "count": 22673
+      },
+      {
+        "range": "100-999",
+        "count": 14735
+      },
+      {
+        "range": "1000+",
+        "count": 7974
+      }
+    ],
+    "review_under10_checked": 12651,
+    "review_10plus_checked": 45382,
+    "calendar2025_catalog": 24614,
+    "calendar2025_checked": 2533
+  },
+  "videogamescritic": {
+    "source_snapshot_at": "2026-10-25",
+    "release_year": 2025,
+    "game_count_including_f2p": 20591,
+    "reached_10reviews": 10374,
+    "under_10reviews": 10217,
+    "only_currently_listed": true,
+    "early_access_first_paid_release_verified": false
+  },
+  "steamlense": {
+    "source_snapshot_period": "October 2026",
+    "release_year": 2025,
+    "paid_label": 17651,
+    "free_label": 2985,
+    "total_2025": 20636,
+    "under_10reviews_share": 0.61,
+    "only_currently_listed": true,
+    "early_access_first_paid_release_verified": false
+  },
+  "caveats": {
+    "observed_zero_distinct_from_unchecked": true,
+    "game_appid_not_publisher": true,
+    "reported_10review_threshold_not_paid_orders": true,
+    "source_rosters_not_aligned": true,
+    "review_snapshot_not_initial_30days": true,
+    "not_independent_sales_validation": true
+  },
+  "unknown": {
+    "complete_initially_paid_release_frame": null,
+    "actual_first30day_reviews_distribution": null,
+    "actual_zero_paid_orders_share": null,
+    "median_publisher_receipts": null,
+    "developer_after_cost_profit": null
+  },
+  "model_path": "site/steam-review-coverage-bounds.mjs",
+  "tests_path": "tests/steam-review-coverage-bounds.test.mjs",
+  "no_merchant_data": true
+}

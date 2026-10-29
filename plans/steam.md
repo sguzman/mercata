@@ -4,6 +4,11 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Public review milestone missingness and catalog-denominator checkpoint
+
+The [review-count coverage audit](../ontology/steam/steam-public-review-milestone-coverage-bounds-2026.md) quantifies a public tracker with 58,033 observed counts out of 155,467 catalog games, keeps 97,434 missing observations separate from true zero reviews, and bounds possible low-review shares. Two other 2025 store catalogs disagree on their observed review bands; neither measures paid orders. **89% complete** (exact **89.352%**, +0.137 pp from preceding checkpoint) over the unchanged 293 original tasks.
+
+
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Representative seller earnings, audited full-release-cohort sales distributions and buyer populations remain unknown; selected historical developer disclosures are explicitly separated from those missing market-wide estimates. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
 ## Historical received cash and development-month earnings definitions

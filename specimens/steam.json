@@ -1577,6 +1577,39 @@
       "evidence_class": "historical_first_party_developer_gross_cost_labor_and_author_monthly_earnings_estimate",
       "license": "Original URL and independently authored bounded numerical paraphrases only; no copied article text or media.",
       "notes": "2020 retrospective less than four months after full Steam release: approximately $400k gross, 24k copies, $25k external costs, 30 full-time-equivalent development months, author claims a little over $7k/month of development time after expenses before income tax. Not audited, no precise net bank receipt or full owner labor valuation."
+    },
+    {
+      "id": "steam-gaugedb-oct25-2026-checked-reviews",
+      "url": "https://gaugedb.com/insights/steam-review-milestones",
+      "title": "How many Steam games reach 10, 100 or 1,000 reviews?",
+      "publisher": "GaugeDB",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "third_party_partially_checked_public_game_review_catalog",
+      "license": "Public link and independently authored numerical interpretation only; no original text, individual records or graphics copied.",
+      "notes": "Fixed extracted snapshot dated Oct 25, 2026 05:53 UTC on the page; 155467 catalog, 58033 reviewed, 97434 unknown. Mutable site, not an original paid-launch population."
+    },
+    {
+      "id": "steam-videogamescritic-oct25-2026-review-threshold",
+      "url": "https://videogamescritic.com/findings/how-many-games-release-on-steam-each-year",
+      "title": "How many games come out on Steam each year? Every release since 2006, counted",
+      "publisher": "VideoGamesCritic",
+      "published_at": "2026-09-11",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "third_party_public_current_listing_census_claim",
+      "license": "Short independent aggregation and URL only, not site graphics or record export.",
+      "notes": "Article dated Sep 11, live values counted as of Oct 25, 2026. For 2025 lists 20591 including F2P, of which 10374 have >=10 reviews, excludes delisted games and initial Early Access dates not verified."
+    },
+    {
+      "id": "steam-steamlense-market-review-threshold-2026",
+      "url": "https://steamlense.com/stats/market",
+      "title": "How many games are released on Steam each year",
+      "publisher": "steamlense",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "third_party_public_current_catalog_and_review_bands",
+      "license": "Short independent source-level summary and link; no original graphics, catalog records or scraped dataset copied.",
+      "notes": "Oct 2026 market page reports 2025 17651 paid-labelled and 2985 free-labelled releases, 61 percent below 10 reviews. Not verified identical AppID set to other trackers."
     }
   ],
   "claims": [
@@ -9888,6 +9921,155 @@
       "confidence": "bounded_historical_creator_disclosure",
       "observed_at": "2026-10-28",
       "limitations": "Voluntary reporting, old platform environment, nonuniform settlement timing and no complete eligible game and legal publisher frame."
+    },
+    {
+      "id": "steam-review-gauge-checked-fraction",
+      "text": "GaugeDB's October 25, 2026 snapshot tracks 155,467 catalog games, 58,033 checked review counts and 97,434 unchecked counts.",
+      "source_ids": [
+        "steam-gaugedb-oct25-2026-checked-reviews"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "Third-party catalog counts not independently audited; checked subset may not be representative."
+    },
+    {
+      "id": "steam-review-gauge-exact-bin-total",
+      "text": "The checked GaugeDB subset includes 1,677 zero-review, 10,974 one-to-nine, 22,673 ten-to-ninety-nine, 14,735 hundred-to-999 and 7,974 thousand-plus review games.",
+      "source_ids": [
+        "steam-gaugedb-oct25-2026-checked-reviews"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "A latest snapshot bin is not a same-age first month review count nor a paid order category."
+    },
+    {
+      "id": "steam-review-gauge-unchecked-not-zero",
+      "text": "GaugeDB distinguishes unchecked review records from games with an explicitly recorded count of zero reviews.",
+      "source_ids": [
+        "steam-gaugedb-oct25-2026-checked-reviews"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "Unchecked records cannot be imputed as review zero, and review zero is not no customer purchases."
+    },
+    {
+      "id": "steam-review-gauge-10plus-conditional",
+      "text": "In the GaugeDB checked subset 45,382 games had at least ten reviews, about 78.2 percent of checked games.",
+      "source_ids": [
+        "steam-gaugedb-oct25-2026-checked-reviews"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "Conditional on checking and not a rate over the stated entire catalog."
+    },
+    {
+      "id": "steam-review-gauge-under10-logical-bounds",
+      "text": "Among GaugeDB's 155,467 catalog games the 12,651 checked with fewer than ten reviews imply a possible range from 12,651 to 110,085 under-ten games when all unchecked outcomes remain unknown.",
+      "source_ids": [
+        "steam-gaugedb-oct25-2026-checked-reviews"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "No-assumptions finite-population bounds conditioned on the provider catalog and accurate checked classifications, not an estimated prevalence or confidence interval."
+    },
+    {
+      "id": "steam-review-gauge-2025-coverage",
+      "text": "GaugeDB only had checked counts for 2,533 of the 24,614 games classified to release year 2025 in its October 25 catalog snapshot.",
+      "source_ids": [
+        "steam-gaugedb-oct25-2026-checked-reviews"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "Its chosen timestamp, release-date definitions and missingness pattern differ from other trackers."
+    },
+    {
+      "id": "steam-review-vgc-2025-release-count",
+      "text": "VideoGamesCritic reported 20,591 currently listed game releases dated 2025 in its October 25, 2026 store census, including free-to-play and excluding removed titles.",
+      "source_ids": [
+        "steam-videogamescritic-oct25-2026-review-threshold"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "Current listed games, not historical initially paid AppID population or full Steam transfer history."
+    },
+    {
+      "id": "steam-review-vgc-2025-tenplus",
+      "text": "VideoGamesCritic reported 10,374 of 20,591 2025 releases had at least ten Steam reviews as of the October 2026 count.",
+      "source_ids": [
+        "steam-videogamescritic-oct25-2026-review-threshold"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "Cannot infer how many copies were actually sold or early post-release review velocity."
+    },
+    {
+      "id": "steam-review-steamlense-2025-cohort",
+      "text": "steamlense lists 17,651 paid and 2,985 free-labelled 2025 releases, and places about 61 percent of its 2025 catalog below ten reviews.",
+      "source_ids": [
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "Storefront status and review observations not matched at AppID level to the other trackers."
+    },
+    {
+      "id": "steam-review-cross-provider-rate-gap",
+      "text": "VideoGamesCritic's 2025 cohort implies 49.6 percent of its titles below ten reviews while steamlense reports 61.0 percent below ten for its separate 2025 cohort.",
+      "source_ids": [
+        "steam-videogamescritic-oct25-2026-review-threshold",
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "An approximately 11.4 percentage-point unharmonized discrepancy, not a causal trend or an average of like-for-like samples."
+    },
+    {
+      "id": "steam-review-cross-provider-denominators",
+      "text": "The public trackers' 2025 release denominators differ: VideoGamesCritic 20,591, steamlense 20,636 and GaugeDB 24,614 catalog records.",
+      "source_ids": [
+        "steam-gaugedb-oct25-2026-checked-reviews",
+        "steam-videogamescritic-oct25-2026-review-threshold",
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "No matched AppID roster, standardized launch event or common review update age established."
+    },
+    {
+      "id": "steam-review-snapshot-not-early",
+      "text": "Current accumulated review counts cannot determine the first 7-day or first 30-day review concentration for fixed paid Steam release cohorts.",
+      "source_ids": [
+        "steam-gaugedb-oct25-2026-checked-reviews",
+        "steam-videogamescritic-oct25-2026-review-threshold",
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "Game ages, delayed observation and Early Access status differ."
+    },
+    {
+      "id": "steam-review-zero-not-zero-paid",
+      "text": "Zero public reviews and missing reviews do not demonstrate zero paid Steam orders, developer bank receipts, or economic profit.",
+      "source_ids": [
+        "steam-gaugedb-oct25-2026-checked-reviews",
+        "steam-videogamescritic-oct25-2026-review-threshold",
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "Reviews may arise from non-Steam purchases, and sales require authorized financial transactions."
+    },
+    {
+      "id": "steam-review-milestones-not-profit",
+      "text": "Review threshold proportions and incompatible catalog release counts cannot identify a representative first-time publisher earnings distribution or an optimal launch month.",
+      "source_ids": [
+        "steam-gaugedb-oct25-2026-checked-reviews",
+        "steam-videogamescritic-oct25-2026-review-threshold",
+        "steam-steamlense-market-review-threshold-2026"
+      ],
+      "confidence": "bounded_public_snapshot",
+      "observed_at": "2026-10-28",
+      "limitations": "First-paid status, full costs, publisher identity and representative data missing."
     }
   ],
   "observations": [],
