@@ -11800,6 +11800,110 @@
       "confidence": "dated_curated_source_aggregate_not_causal_or_sales",
       "observed_at": "2026-10-29",
       "limitations": "The source's curated survivor pool excludes low-review releases and cannot establish customer preference effects for unlaunched games."
+    },
+    {
+      "id": "steam-mean-nonresponse-unbounded-upper",
+      "text": "For a verified complete paid-game cohort, even one missing nonnegative gross revenue observation prevents a finite worst-case upper bound on its population mean when the missing outcome has no proven cap.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005",
+        "steam-financial-api-official"
+      ],
+      "confidence": "methodological_partial_identification_no_empirical_gross_inference",
+      "observed_at": "2026-10-29",
+      "limitations": "This is a mathematical nonresponse result under unbounded support rather than a new measurement of actual Steam gross game revenue."
+    },
+    {
+      "id": "steam-mean-known-total-over-frame",
+      "text": "The sum of complete observed gross paid store revenue divided by the total verified eligible game frame size supplies a sharp lower bound when missing observations may equal zero.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "methodological_partial_identification_no_empirical_gross_inference",
+      "observed_at": "2026-10-29",
+      "limitations": "It is conditional on verified full game roster coverage and complete harmonized observations for each known revenue value."
+    },
+    {
+      "id": "steam-mean-observed-max-not-cap",
+      "text": "The highest observed revenue of a sampled Steam game is not independently proven to be an upper bound for unobserved titles, so it cannot legitimately cap missing outcomes.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "methodological_partial_identification_no_empirical_gross_inference",
+      "observed_at": "2026-10-29",
+      "limitations": "Missing publishers may differ systematically from disclosed successes and no population cap is established from observed examples."
+    },
+    {
+      "id": "steam-mean-caps-only-from-independent-evidence",
+      "text": "When independently authenticated finite upper caps exist for all missing outcomes, their sum added to observed gross yields a conditional finite upper mean bound after dividing by cohort size.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "methodological_partial_identification_no_empirical_gross_inference",
+      "observed_at": "2026-10-29",
+      "limitations": "No such authentic Steam game upper caps were obtained; the caps in this study are invented synthetic fixtures only."
+    },
+    {
+      "id": "steam-mean-incomplete-appid-frame",
+      "text": "A historically incomplete originally-paid AppID roster, including omitted retired games, cannot support a platformwide gross mean merely by filling revenue data missing inside the known subset.",
+      "source_ids": [
+        "steam-retire-app-official",
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "methodological_partial_identification_no_empirical_gross_inference",
+      "observed_at": "2026-10-29",
+      "limitations": "Population undercoverage and missing financial outcomes are distinct problems and neither is resolved by public price or review trackers."
+    },
+    {
+      "id": "steam-mean-fixed-age-horizons",
+      "text": "A 30-day first-paid-release mean requires complete gross sales over the first 30 days after each game's initial paid availability, not mixed calendar-year or lifetime totals.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "methodological_partial_identification_no_empirical_gross_inference",
+      "observed_at": "2026-10-29",
+      "limitations": "Release timestamps and item-level attribution across packages, bundles and transfers must be reconciled to the same period."
+    },
+    {
+      "id": "steam-mean-gross-not-profit",
+      "text": "Steam's protected financial API separates gross sales from returns, taxes and net sales, so nonnegative gross bounds cannot be silently reused for developer net cash or profit.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "methodological_partial_identification_no_empirical_gross_inference",
+      "observed_at": "2026-10-29",
+      "limitations": "Publisher contracts, settlement timing, development labor and external costs may yield negative after-cost profits despite positive gross."
+    },
+    {
+      "id": "steam-mean-missing-not-verified-zero",
+      "text": "No public financial record for a game is not a confirmed zero gross paid-order result; authorized complete period-matched reporting is necessary to distinguish zero from nonresponse.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "methodological_partial_identification_no_empirical_gross_inference",
+      "observed_at": "2026-10-29",
+      "limitations": "The source's partner-only API requires confidential credentials and complete pagination; Mercata accessed no merchant statements."
+    },
+    {
+      "id": "steam-mean-late-settlement-requery",
+      "text": "Valve documents repeating changed-date signals for corrected financial totals after late payment settlement and requires complete re-reading of affected dates.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "methodological_partial_identification_no_empirical_gross_inference",
+      "observed_at": "2026-10-29",
+      "limitations": "The general ingestion procedure does not establish that any particular developer, game or reporting date experienced a change."
+    },
+    {
+      "id": "steam-mean-no-representative-income-claim",
+      "text": "Without a fully verified cohort and authorized complete gross reports or validated missing-outcome caps, the current public evidence does not identify Steam's fixed-horizon mean gross revenue or any representative developer profit.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005",
+        "steam-financial-api-official"
+      ],
+      "confidence": "methodological_partial_identification_no_empirical_gross_inference",
+      "observed_at": "2026-10-29",
+      "limitations": "The mathematical bounds are intentionally exercised on synthetic fixtures, not actual game records, and no real average is reported."
     }
   ],
   "observations": [],
@@ -11807,5 +11911,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "An independent selected 6,954-game Steam reviewer-playtime study finds listed price, reviewer hours and sentiment covary; review-selection bias and reverse causality prevent inference about game length value, buyer checkouts or developer income."
+  "summary": "Complete fixed-horizon gross sales population means are only set-identified under nonresponse: a verified full game frame and observed gross records give a lower mean, but unbounded missing outcomes have no finite upper average. Real Steam-wide gross and publisher profit remain unknown."
 }

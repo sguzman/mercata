@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "partial_identification_of_mean_fixed_horizon_gross_paid_game_revenue_not_observed_income",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-financial-api-official",
+    "steam-manski-partial-identification-missingdata-2005",
+    "steam-retire-app-official"
+  ],
+  "claim_ids": [
+    "steam-mean-nonresponse-unbounded-upper",
+    "steam-mean-known-total-over-frame",
+    "steam-mean-observed-max-not-cap",
+    "steam-mean-caps-only-from-independent-evidence",
+    "steam-mean-incomplete-appid-frame",
+    "steam-mean-fixed-age-horizons",
+    "steam-mean-gross-not-profit",
+    "steam-mean-missing-not-verified-zero",
+    "steam-mean-late-settlement-requery",
+    "steam-mean-no-representative-income-claim"
+  ],
+  "target": {
+    "unit": "one_originally_paid_base_game_appid",
+    "measure": "gross_Steam_paid_store_sales_USD_cents",
+    "fixed_release_age_horizons_days": [
+      30,
+      90,
+      365
+    ],
+    "complete_paid_game_frame_verified": false,
+    "actual_financial_results_observed": 0
+  },
+  "identification": {
+    "gross_nonnegative": true,
+    "all_eligible_games_must_be_in_frame": true,
+    "missing_at_random_assumed": false,
+    "missing_gross_zero_assumed": false,
+    "finite_missing_cap_inferred_from_observed_max": false,
+    "complete_reconciled_ledger_required": true,
+    "missing_with_no_cap_leaves_upper_unbounded": true
+  },
+  "synthetic_examples": [
+    {
+      "label": "all_five_observed",
+      "N": 5,
+      "observed_cents": [
+        0,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      "missing_caps_cents": [],
+      "lower_mean_cents": 3600,
+      "upper_mean_cents": 3600
+    },
+    {
+      "label": "two_missing_unbounded",
+      "N": 5,
+      "observed_cents": [
+        1000,
+        2000,
+        3000
+      ],
+      "missing_caps_cents": [
+        null,
+        null
+      ],
+      "lower_mean_cents": 1200,
+      "upper_mean_cents": null
+    },
+    {
+      "label": "two_missing_with_verified_caps",
+      "N": 5,
+      "observed_cents": [
+        1000,
+        2000,
+        3000
+      ],
+      "missing_caps_cents": [
+        5000,
+        7000
+      ],
+      "lower_mean_cents": 1200,
+      "upper_mean_cents": 3600
+    }
+  ],
+  "unknown": {
+    "steam_first30day_mean_gross": null,
+    "steam_first90day_mean_gross": null,
+    "steam_first365day_mean_gross": null,
+    "actual_gross_upper_caps": null,
+    "developer_net_proceeds_mean": null,
+    "publisher_profit_mean": null,
+    "real_zero_paid_order_fraction": null
+  },
+  "all_computation_inputs_synthetic": true,
+  "merchant_api_not_accessed": true
+}
