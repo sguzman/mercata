@@ -12039,6 +12039,128 @@
       "confidence": "first_party_provider_methodology_observability_not_paid_sales",
       "observed_at": "2026-10-29",
       "limitations": "No authenticated Steamworks financial reports, publisher keys, private player profiles or real checkout totals were accessed in this research."
+    },
+    {
+      "id": "steam-playtest-limited-random-among-requests-20261029",
+      "text": "Valve selects limited Playtest invitees randomly among people who already requested access and may apply country restrictions.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_feature_rules_and_synthetic_bound_only",
+      "limitations": "The random assignment occurs only within volunteer requesters or eligible country subsets; it is not a random sample of Steam paying customers."
+    },
+    {
+      "id": "steam-playtest-open-auto-accept-20261029",
+      "text": "Open signup automatically admits Playtest requesters, whereas limited signup requires admitting batches of interested players.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_feature_rules_and_synthetic_bound_only",
+      "limitations": "Access admission does not establish installation, playtime, engagement, wishlist additions or actual checkout behavior."
+    },
+    {
+      "id": "steam-playtest-disjoint-key-distribution-20261029",
+      "text": "Valve allows Playtest keys to be distributed without a public request queue, a selection channel different from random limited-signup admission.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_feature_rules_and_synthetic_bound_only",
+      "limitations": "Recipients of developer-distributed keys cannot be folded into a randomly admitted cohort without verifying eligibility and selection mechanism."
+    },
+    {
+      "id": "steam-playtest-request-grant-play-distinct-20261029",
+      "text": "A Steam Playtest request, access grant and observed launch are separate states, none of which necessarily indicates a subsequent full-game paid purchase.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_feature_rules_and_synthetic_bound_only",
+      "limitations": "The public developer guide provides no matched authenticated player-level sales histories or completed conversion funnel."
+    },
+    {
+      "id": "steam-playtest-wishlist-refund-separate-20261029",
+      "text": "Steam Playtest has a distinct AppID: participation does not alter the base game's wishlist or review totals, nor its refund playtime calculation.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_feature_rules_and_synthetic_bound_only",
+      "limitations": "Separate app data do not imply permission to match personal records across products or that all testers become paid users."
+    },
+    {
+      "id": "steam-playtest-no-monetization-20261029",
+      "text": "Valve forbids paid Steam Playtest access, monetizing the Playtest with in-game purchases, and selling Playtest keys.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_feature_rules_and_synthetic_bound_only",
+      "limitations": "This policy is for free Playtest participation; it cannot establish base-game revenues, price optimization or development costs."
+    },
+    {
+      "id": "steam-demo-standalone-review-not-sale-20261029",
+      "text": "An optional separate demo page may carry demo reviews and links to the full game's store page, but a demo user review is not a paid full-game checkout.",
+      "source_ids": [
+        "steam-demo-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_feature_rules_and_synthetic_bound_only",
+      "limitations": "Demo AppID and full AppID may have different engagement and review populations, and actual purchase linkage remains unobserved."
+    },
+    {
+      "id": "steam-demo-republish-base-page-20261029",
+      "text": "Valve advises publishing the base game's page again after demo launch so the Download Demo button appears on the parent listing.",
+      "source_ids": [
+        "steam-demo-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_feature_rules_and_synthetic_bound_only",
+      "limitations": "A correctly configured button is not evidence of how many buyers saw it, installed the demo or later purchased the game."
+    },
+    {
+      "id": "steam-demo-one-time-notification-20261029",
+      "text": "The demo release allows a one-time wishlist notification triggered within two weeks of the demo first becoming playable, with a separate per-AppID cooldown.",
+      "source_ids": [
+        "steam-demo-app-management-2026",
+        "steam-wishlist-official"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_feature_rules_and_synthetic_bound_only",
+      "limitations": "Availability of a notification option does not establish delivery, opened messages, unique users, attributed checkouts or developer profit."
+    },
+    {
+      "id": "steam-demo-reenable-not-renotify-20261029",
+      "text": "Disabling and later reenabling a released demo does not restart the initial two-week eligibility window for its wishlist notification.",
+      "source_ids": [
+        "steam-demo-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_feature_rules_and_synthetic_bound_only",
+      "limitations": "The clock keys to the initial playable release; unknown partner-specific notification histories cannot be reconstructed from public pages."
+    },
+    {
+      "id": "steam-playtest-grant-activation-bounds-20261029",
+      "text": "Missing play-activation observations among approved Playtest requesters create a logical range rather than justification to count all grants as players.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_feature_rules_and_synthetic_bound_only",
+      "limitations": "The bound requires actual distinct verified counts, excludes non-random key distribution, and says nothing about future paid game orders."
+    },
+    {
+      "id": "steam-playtest-random-does-not-prove-sales-20261029",
+      "text": "Random selection of limited Playtest grants among volunteers does not by itself identify a causal effect on paid sales or representative publisher income.",
+      "source_ids": [
+        "steam-playtest-app-management-2026",
+        "steam-demo-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high_official_feature_rules_and_synthetic_bound_only",
+      "limitations": "No full base-game purchase outcome panel, sufficient non-admitted follow-up, comparable consented identities or costs was collected."
     }
   ],
   "observations": [],
@@ -12046,5 +12168,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "SteamDB publicly documents app and package metadata, historical prices, direct sampled CCU with Advance Access entitlement gaps, and usage limits. These do not establish store checkout sales, historical originally-paid game population or developer income."
+  "summary": "Steam Playtest random grants apply to volunteer requesters only. Grant, activation, demo reviews and wishlist notifications cannot establish paid full-game orders; actual Playtest and demo purchase conversion remain unknown."
 }

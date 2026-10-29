@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_limited_playtest_random_grants_and_demo_notifications_not_paid_conversions",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-playtest-app-management-2026",
+    "steam-demo-app-management-2026",
+    "steam-wishlist-official"
+  ],
+  "claim_ids": [
+    "steam-playtest-limited-random-among-requests-20261029",
+    "steam-playtest-open-auto-accept-20261029",
+    "steam-playtest-disjoint-key-distribution-20261029",
+    "steam-playtest-request-grant-play-distinct-20261029",
+    "steam-playtest-wishlist-refund-separate-20261029",
+    "steam-playtest-no-monetization-20261029",
+    "steam-demo-standalone-review-not-sale-20261029",
+    "steam-demo-republish-base-page-20261029",
+    "steam-demo-one-time-notification-20261029",
+    "steam-demo-reenable-not-renotify-20261029",
+    "steam-playtest-grant-activation-bounds-20261029",
+    "steam-playtest-random-does-not-prove-sales-20261029"
+  ],
+  "process": {
+    "limited_signup_random_grant_among_volunteers": true,
+    "optional_country_selection": true,
+    "open_signup_auto_admit": true,
+    "key_recipients_separate_non_random_route": true,
+    "playtest_is_free": true,
+    "playtest_appid_separate_from_paid_base": true,
+    "demo_appid_separate_from_paid_base": true,
+    "base_wishlists_and_reviews_not_modified_by_playtest": true,
+    "playtest_time_not_base_refund_time": true,
+    "one_time_demo_notification_window_days": 14,
+    "demo_page_republish_needed": true,
+    "reenable_restarts_demo_notification_clock": false
+  },
+  "invented_fixture": {
+    "requests": 1000,
+    "granted": 300,
+    "confirmed_activated": 120,
+    "confirmed_not_activated": 50,
+    "granted_activation_unknown": 130,
+    "not_granted": 700
+  },
+  "unknown": {
+    "real_playtest_purchase_conversion": null,
+    "real_demo_purchase_conversion": null,
+    "actual_activation_fraction": null,
+    "real_incremental_paid_orders": null,
+    "median_publisher_after_cost_profit": null
+  },
+  "no_partner_or_customer_records": true
+}
