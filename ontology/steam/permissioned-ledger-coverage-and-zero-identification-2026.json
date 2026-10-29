@@ -2,7 +2,7 @@
   "schema_version": 1,
   "specimen_id": "steam",
   "kind": "consented_financial_coverage_validation_protocol_no_real_records",
-  "reviewed_at": "2026-10-28",
+  "reviewed_at": "2026-10-29",
   "source_ids": [
     "steam-financial-api-official",
     "steam-transfer-app-official-2026",
@@ -72,5 +72,20 @@
     "actual_zero_fraction": null,
     "actual_publisher_profit": null
   },
-  "test_fixtures_synthetic": true
+  "test_fixtures_synthetic": true,
+  "fixed_horizon_synthetic_extension": {
+    "supported_horizon_days": [
+      30,
+      90,
+      365
+    ],
+    "day_aligned_window": true,
+    "all_complete_zeros_require_matured_period_and_historical_access": true,
+    "partial_positive_requires_within_horizon": true,
+    "partial_zero_and_right_censored_zero_are_unknown": true,
+    "real_ledger_records_accessed": 0,
+    "real_zero_share": null,
+    "implementation": "site/steam-ledger-coverage.mjs",
+    "tests": "tests/steam-ledger-coverage-gates.test.mjs"
+  }
 }
