@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Representative seller earnings, audited full-release-cohort sales distributions and buyer populations remain unknown; selected historical developer disclosures are explicitly separated from those missing market-wide estimates. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Match-ready Steam multiplayer capacity versus public concurrency
+
+The [compatible-match pool audit](../ontology/steam/steam-concurrency-match-pool-and-hosting-ceilings-2026.md) adds Valve's current-player API's online-only definition and a tested optimistic capacity ceiling partitioned by region/mode/build. It refuses to equate global concurrency with actual compatible matches or publisher revenue. **Current 89%** (exact 88.908%, Δ +0.171 pp). All 293 original Steam tasks remain unchanged.
+
 ## Publishing support, review failures, product retirement and key-revocation boundaries
 
 The [Steam enforcement/support study](../ontology/steam/steam-enforcement-support-and-key-revocation-boundaries-2026.md) records Valve's public developer-support route without inventing guaranteed appeals; it separates initial store/build feedback, voluntary retirement, customer entitlements and fraudulent-key revocations. No private enforcement cases or payout-loss figures were acquired. **89%** (exact 88.737%; Δ +0.307 pp) with the original 293 tasks intact.

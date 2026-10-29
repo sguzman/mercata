@@ -258,7 +258,7 @@
         "steam/competition/study-paid-marketing-acquisition-thresholds"
       ],
       "phase": 2,
-      "progress_percent": 76
+      "progress_percent": 78
     },
     {
       "id": "income",
@@ -496,7 +496,7 @@
         "steam/special-games/plan-live-game-maintenance-and-sunset"
       ],
       "phase": 2,
-      "progress_percent": 93
+      "progress_percent": 94
     }
   ],
   "deliverables": [
@@ -2671,14 +2671,18 @@
       "objective": "Research compare viable player counts, concurrency needs, hosting costs and price points.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare viable player counts, concurrency needs, hosting costs and price points. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
         "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/steam-concurrency-match-pool-and-hosting-ceilings-2026.json",
+        "ontology/steam/steam-concurrency-match-pool-and-hosting-ceilings-2026.md",
+        "site/steam-match-pool-ceiling.mjs",
+        "tests/steam-match-pool-ceiling.test.mjs"
       ],
-      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+      "artifact": "ontology/steam/steam-concurrency-match-pool-and-hosting-ceilings-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -5257,15 +5261,19 @@
       "emoji": "🎮",
       "objective": "Research compare Steamworks networking, own servers, third-party hosts and ongoing expense.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Compare Steamworks networking, own servers, third-party hosts and ongoing expense. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
-      "status": "in_progress",
-      "percent": 90,
+      "status": "complete",
+      "percent": 100,
       "weight": 1,
       "evidence": [
         "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
         "ontology/steam/multiplayer-network-and-steampipe-operations-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/steam-concurrency-match-pool-and-hosting-ceilings-2026.json",
+        "ontology/steam/steam-concurrency-match-pool-and-hosting-ceilings-2026.md",
+        "site/steam-match-pool-ceiling.mjs",
+        "tests/steam-match-pool-ceiling.test.mjs"
       ],
-      "artifact": "ontology/steam/multiplayer-network-and-steampipe-operations-2026.md",
+      "artifact": "ontology/steam/steam-concurrency-match-pool-and-hosting-ceilings-2026.md",
       "priority": "normal",
       "phase": 2
     },

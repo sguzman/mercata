@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "synthetic_disjoint_compatible_matchmaking_pool_upper_bound_and_steamworks_networking_cost_scope",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-multiplayer-architecture-2026",
+    "steam-multiplayer-lobby-service-2026",
+    "steam-multiplayer-dedicated-service-2026",
+    "steam-multiplayer-sdr-service-2026",
+    "steam-concurrent-webapi-online-limit-oct2026"
+  ],
+  "claim_ids": [
+    "steam-concurrency-current-online-not-sales",
+    "steam-concurrency-lobbies-not-transport",
+    "steam-concurrency-lobbies-max250-not-matchable",
+    "steam-concurrency-split-pools",
+    "steam-concurrency-synthetic-best-case-upper",
+    "steam-concurrency-networking-choices",
+    "steam-concurrency-sdr-hosting-distinction",
+    "steam-concurrency-no-universal-minimum"
+  ],
+  "steam_api": {
+    "endpoint": "ISteamUserStats/GetNumberOfCurrentPlayers/v1",
+    "unit": "currently_active_connected_to_steam_in_one_appid",
+    "excludes_steam_disconnected_play": true,
+    "unique_paying_buyers": false
+  },
+  "architecture": {
+    "steam_lobbies_gameplay_transport": false,
+    "matchmaking_filtering_supported": true,
+    "party_size_lobby_platform_max": 250,
+    "small_peer_to_peer_possible": true,
+    "community_hosted_dedicated_possible": true,
+    "steam_datagram_relay_publisher_server_host_free_guaranteed": false
+  },
+  "model": {
+    "path": "site/steam-match-pool-ceiling.mjs",
+    "tests_path": "tests/steam-match-pool-ceiling.test.mjs",
+    "scope": "invented snapshot of mutually exclusive region-mode-build compatible queues",
+    "party_size_required_positive_integer": true,
+    "matched_capacity_is_best_case_upper_bound": true,
+    "needs_cohort_paid_sales_for_profit_claim": true
+  },
+  "fixtures": [
+    {
+      "label": "eight in one compatible pool",
+      "concurrentPlayers": 8,
+      "partySize": 4,
+      "pools": [
+        {
+          "group": "region_1",
+          "ready": 8,
+          "busy": 0
+        }
+      ],
+      "max_complete_groups": 2,
+      "upper_bound_groupable": 8
+    },
+    {
+      "label": "six plus two split by mode",
+      "concurrentPlayers": 8,
+      "partySize": 4,
+      "pools": [
+        {
+          "group": "mode_A",
+          "ready": 6,
+          "busy": 0
+        },
+        {
+          "group": "mode_B",
+          "ready": 2,
+          "busy": 0
+        }
+      ],
+      "max_complete_groups": 1,
+      "upper_bound_groupable": 4
+    },
+    {
+      "label": "global concurrency with none ready",
+      "concurrentPlayers": 30,
+      "partySize": 4,
+      "pools": [
+        {
+          "group": "queue_A",
+          "ready": 0,
+          "busy": 10
+        }
+      ],
+      "max_complete_groups": 0,
+      "upper_bound_groupable": 0
+    }
+  ],
+  "unknown": {
+    "actual_matchmaking_ready_concurrency": null,
+    "actual_match_success_probability": null,
+    "real_queue_wait": null,
+    "actual_hosted_server_cost": null,
+    "online_unique_paid_buyers": null,
+    "game_revenue_from_multiplayer": null
+  },
+  "no_live_steam_api_queries": true,
+  "no_private_data": true
+}

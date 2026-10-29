@@ -1511,6 +1511,17 @@
       "evidence_class": "official_partner_support_ticket_contact_information",
       "license": "Public link and concise independent policy summary only.",
       "notes": "Developer support ticket form and discussion forums; the public guidance does not promise formal guaranteed appeals, review timelines or outcomes."
+    },
+    {
+      "id": "steam-concurrent-webapi-online-limit-oct2026",
+      "url": "https://partner.steamgames.com/doc/webapi/ISteamUserStats?language=english",
+      "title": "ISteamUserStats Web API: GetNumberOfCurrentPlayers",
+      "publisher": "Valve / Steamworks",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_current_players_api_limit_documentation",
+      "license": "Reference URL and independently written limited field description; no protected user stats or copied code.",
+      "notes": "GetNumberOfCurrentPlayers reflects concurrent players in an AppID connected to Steam; not unique buyers, online matchmaking-ready players or lifetime owned licenses. Does not count people playing while disconnected from Steam."
     }
   ],
   "claims": [
@@ -9440,6 +9451,90 @@
       "confidence": "high_on_publicly_stated_process_uncertain_for_dispute_outcomes",
       "observed_at": "2026-10-28",
       "limitations": "The absence of such figures on these pages is an evidence-coverage finding, not a platform-wide assertion that no remedies exist."
+    },
+    {
+      "id": "steam-concurrency-current-online-not-sales",
+      "text": "Valve's GetNumberOfCurrentPlayers Web API reports current active clients in an AppID on Steam, excluding players not connected to Steam.",
+      "source_ids": [
+        "steam-concurrent-webapi-online-limit-oct2026"
+      ],
+      "confidence": "documented_infrastructure_or_explicit_synthetic_model",
+      "observed_at": "2026-10-28",
+      "limitations": "A snapshot is not daily unique users, paying buyers, owned licenses or the number ready for online matchmaking."
+    },
+    {
+      "id": "steam-concurrency-lobbies-not-transport",
+      "text": "Valve's lobby system provides discovery and membership but requires a distinct network transport or game servers for actual gameplay.",
+      "source_ids": [
+        "steam-multiplayer-architecture-2026",
+        "steam-multiplayer-lobby-service-2026"
+      ],
+      "confidence": "documented_infrastructure_or_explicit_synthetic_model",
+      "observed_at": "2026-10-28",
+      "limitations": "Documented infrastructure capability does not prove a functioning multiplayer game or a paid order."
+    },
+    {
+      "id": "steam-concurrency-lobbies-max250-not-matchable",
+      "text": "Steam lobbies may contain up to 250 members, but their headcount does not imply that those users can all start a compatible match.",
+      "source_ids": [
+        "steam-multiplayer-lobby-service-2026"
+      ],
+      "confidence": "documented_infrastructure_or_explicit_synthetic_model",
+      "observed_at": "2026-10-28",
+      "limitations": "Players can be busy, in a different build, region, game mode or not participating in the same online session."
+    },
+    {
+      "id": "steam-concurrency-split-pools",
+      "text": "Real-time compatible multiplayer demand should be partitioned by matchmaking region, game version, mode, queue status, constraints and required party size, rather than comparing a global concurrency number directly with room size.",
+      "source_ids": [
+        "steam-multiplayer-lobby-service-2026"
+      ],
+      "confidence": "documented_infrastructure_or_explicit_synthetic_model",
+      "observed_at": "2026-10-28",
+      "limitations": "These are design dimensions supported by lobby filters, not Steam-wide measured partition distributions."
+    },
+    {
+      "id": "steam-concurrency-synthetic-best-case-upper",
+      "text": "Given invented disjoint compatible pools and required game-room size k, the sum of k times floor(ready_i/k) is an optimistic ceiling on players that could occupy complete groups at a snapshot.",
+      "source_ids": [
+        "steam-multiplayer-lobby-service-2026"
+      ],
+      "confidence": "documented_infrastructure_or_explicit_synthetic_model",
+      "observed_at": "2026-10-28",
+      "limitations": "It is only deterministic capacity arithmetic; ignores ping, priority, latency, friends, wait time, disconnects and organizer availability."
+    },
+    {
+      "id": "steam-concurrency-networking-choices",
+      "text": "Valve distinguishes small-party peer-to-peer lobbies, peer networking and community- or publisher-operated dedicated servers for persistent or competitive play.",
+      "source_ids": [
+        "steam-multiplayer-architecture-2026",
+        "steam-multiplayer-dedicated-service-2026"
+      ],
+      "confidence": "documented_infrastructure_or_explicit_synthetic_model",
+      "observed_at": "2026-10-28",
+      "limitations": "Neither option establishes actual support cost or the net sales from adding multiplayer."
+    },
+    {
+      "id": "steam-concurrency-sdr-hosting-distinction",
+      "text": "Steam Datagram Relay can relay authenticated player/server traffic, but a known data-center hosted dedicated server is not necessarily owned or run by Valve.",
+      "source_ids": [
+        "steam-multiplayer-sdr-service-2026"
+      ],
+      "confidence": "documented_infrastructure_or_explicit_synthetic_model",
+      "observed_at": "2026-10-28",
+      "limitations": "SDR availability and hosting needs may vary; relay transport support is not a promise of zero cloud or operating expense."
+    },
+    {
+      "id": "steam-concurrency-no-universal-minimum",
+      "text": "Steam's multiplayer documentation does not set a universal profitable concurrent-player threshold, player-to-sale ratio, game genre survival floor or retention minimum.",
+      "source_ids": [
+        "steam-multiplayer-architecture-2026",
+        "steam-multiplayer-lobby-service-2026",
+        "steam-concurrent-webapi-online-limit-oct2026"
+      ],
+      "confidence": "documented_infrastructure_or_explicit_synthetic_model",
+      "observed_at": "2026-10-28",
+      "limitations": "Absent actual eligible buyers, server sessions, sales and complete operating costs, these quantities are unknown."
     }
   ],
   "observations": [],
