@@ -26,7 +26,7 @@ const permitted=(obj,allowed)=>obj&&typeof obj==='object'&&!Array.isArray(obj)&&
 const kinds=new Set(['steam_package','retail_key_activation','microtransaction']);
 const batchKeys=['fixture_batch_id','financial_date_pt','visibility_scope','pages'];
 const pageKeys=['requested_highwatermark_id','returned_max_id','rows'];
-const rowKeys=['fixture_row_id','kind','gross_units_sold','gross_units_returned','gross_units_activated'];
+const rowKeys=['fixture_row_id','kind','gross_units_sold','gross_units_returned','gross_units_activated','reported_net_units_sold'];
 
 export function reconcileSyntheticSteamFinancialDays(batches){
  if(!Array.isArray(batches)||!batches.length)throw new TypeError('Nonempty synthetic daily reports required');
@@ -59,7 +59,15 @@ export function reconcileSyntheticSteamFinancialDays(batches){
      throw new TypeError('Sold and activated units must be nonnegative; returned units must be signed nonpositive safe integers');
     if(row.kind==='retail_key_activation'){
      if(row.gross_units_sold!==0||row.gross_units_returned!==0)throw new RangeError('Retail activation is not a Steam checkout');
-    }else if(row.gross_units_activated!==0)throw new RangeError('Steam checkout and microtransaction rows cannot be key activations');
+     if(row.reported_net_units_sold!==undefined)throw new TypeError('Retail activations have no net checkout units');
+    }else{
+     if(row.gross_units_activated!==0)throw new RangeError('Steam checkout and microtransaction rows cannot be key activations');
+     // Signed returned units already carry the negative adjustment. Never subtract them twice.
+     if(row.reported_net_units_sold!==undefined&&
+       (!Number.isSafeInteger(row.reported_net_units_sold)||
+        row.reported_net_units_sold!==row.gross_units_sold+row.gross_units_returned))
+      throw new RangeError('Reported net units disagree with gross sales plus signed returns');
+    }
     rows.push(row);
    }
    if(returned===cursor){

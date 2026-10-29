@@ -36,7 +36,8 @@
               "kind": "steam_package",
               "gross_units_sold": 10,
               "gross_units_returned": -1,
-              "gross_units_activated": 0
+              "gross_units_activated": 0,
+              "reported_net_units_sold": 9
             },
             {
               "fixture_row_id": "fixture-retail-a",
@@ -68,14 +69,16 @@
               "kind": "steam_package",
               "gross_units_sold": 2,
               "gross_units_returned": -4,
-              "gross_units_activated": 0
+              "gross_units_activated": 0,
+              "reported_net_units_sold": -2
             },
             {
               "fixture_row_id": "fixture-mtx-b",
               "kind": "microtransaction",
               "gross_units_sold": 5,
               "gross_units_returned": 0,
-              "gross_units_activated": 0
+              "gross_units_activated": 0,
+              "reported_net_units_sold": 5
             }
           ]
         },
@@ -100,7 +103,8 @@
               "kind": "steam_package",
               "gross_units_sold": 8,
               "gross_units_returned": -3,
-              "gross_units_activated": 0
+              "gross_units_activated": 0,
+              "reported_net_units_sold": 5
             }
           ]
         },
@@ -209,5 +213,11 @@
     "unsafe_javascript_number": "rejected",
     "representation_preserved_in_output": true,
     "actual_partner_marker_observed": false
+  },
+  "reported_net_units_integrity_contract": {
+    "package_and_microtransaction": "net_units_sold_equals_gross_units_sold_plus_signed_gross_units_returned",
+    "may_be_negative_on_refund_heavy_date": true,
+    "retail_keys": "net_checkout_units_not_applicable",
+    "merchant_ledger_observed": false
   }
 }

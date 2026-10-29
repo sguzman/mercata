@@ -34,6 +34,21 @@ test('A missing or duplicate fixture row, key-as-sale, and private-looking field
  const e=fixture();e[0].fixture_batch_id='real-report';assert.throws(()=>reconcile(e),/synthetic/);
  const f=fixture();f[1].visibility_scope='includes_view_grants';assert.throws(()=>reconcile(f),/visibility/);
 });
+test('Reported net units reconcile signed returns and refund-heavy days',()=>{
+ const f=fixture();
+ assert.equal(f[0].pages[0].rows[0].reported_net_units_sold,9);
+ assert.equal(f[1].pages[0].rows[0].reported_net_units_sold,-2);
+ assert.equal(f[2].pages[0].rows[0].reported_net_units_sold,5);
+ assert.equal(reconcile(f).totals.steam_package_period_net_units,3);
+ const doubleSubtract=fixture();doubleSubtract[1].pages[0].rows[0].reported_net_units_sold=6;
+ assert.throws(()=>reconcile(doubleSubtract),/Reported net units disagree/);
+ const retail=fixture();retail[0].pages[0].rows[1].reported_net_units_sold=0;
+ assert.throws(()=>reconcile(retail),/Retail activations have no net checkout units/);
+ const nonInteger=fixture();nonInteger[1].pages[0].rows[0].reported_net_units_sold=-2.5;
+ assert.throws(()=>reconcile(nonInteger),/Reported net units disagree/);
+ const optional=fixture();delete optional[1].pages[0].rows[0].reported_net_units_sold;
+ assert.equal(reconcile(optional).totals.steam_package_period_returns,7);
+});
 test('Valve-signed negative refunds are normalized only for period return totals',()=>{
  const signed=fixture();
  assert.equal(signed[1].pages[0].rows[0].gross_units_returned,-4);
