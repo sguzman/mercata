@@ -1247,6 +1247,28 @@
       "evidence_class": "official_public_drm_wrapper_and_developer_authenticity_guidance",
       "license": "Public link, title, independent short factual claims only; no source code, graphics or user data.",
       "notes": "Steam ownership wrapper intended for casual copying, not absolute piracy prevention or legal license portability."
+    },
+    {
+      "id": "steam-gdc-2026-survey-workweeks-p47",
+      "url": "https://investgame.net/wp-content/uploads/2026/01/2026-01-29-dec052f4_d88e_48ce_9f83_a18ce2f2a6e5_541400_GDC26_PDF_SOTI_Report.pdf",
+      "title": "GDC 2026 State of the Game Industry, work-hours section (p. 47)",
+      "publisher": "GDC Festival of Gaming / Omdia (public PDF mirror)",
+      "published_at": "2026-01-29",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "industry_professional_survey_over_2300_respondents_not_steam_seller_census",
+      "license": "Only source URL, metadata and independently worded aggregate facts; no report graphics, text or respondent-level data redistributed.",
+      "notes": "Page 47 original report describes revised question design, workweek groups and right denominators. GDC itself says YoY comparison is not reliable."
+    },
+    {
+      "id": "steam-unity-2026-development-telemetry",
+      "url": "https://unity.com/resources/gaming-report",
+      "title": "2026 Unity Game Development Report",
+      "publisher": "Unity Technologies",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "engine_ecosystem_editor_telemetry_and_independent_300_respondent_cint_survey",
+      "license": "Only public URL, metadata and original aggregate numeric paraphrases. No proprietary raw editor telemetry, participant records or media copied.",
+      "notes": "Explicitly distinguish 300 survey respondents from proprietary editor data involving nearly 5 million ecosystem developers. Telemetry covers active editor project time, not total labor to publish a Steam game."
     }
   ],
   "claims": [
@@ -7577,6 +7599,107 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "The causal quantity may differ from attributed counts; no random trial, creator study or measured uplift was performed."
+    },
+    {
+      "id": "hours-gdc2026-2300-industry-workers",
+      "text": "GDC's January 2026 annual survey involved more than 2,300 game-industry professionals, not a sample of all Steam publishing legal entities.",
+      "source_ids": [
+        "steam-gdc-2026-survey-workweeks-p47"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Survey respondents include employees, contractors, solo creators, publishers and other disciplines; selection and geographic biases persist."
+    },
+    {
+      "id": "hours-gdc2026-59pct-nonsolo40",
+      "text": "In GDC's revised 2026 workweek instrument, 59% of game-industry professionals excluding solo developers reported an average workweek of at least 40 hours.",
+      "source_ids": [
+        "steam-gdc-2026-survey-workweeks-p47"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A weekly work pattern does not provide the total labor hours spent creating and commercially launching one completed Steam game."
+    },
+    {
+      "id": "hours-gdc2026-11pct-nonsolo50",
+      "text": "GDC reported approximately 11% of those non-solo professionals averaged at least 50 hours of game work per week.",
+      "source_ids": [
+        "steam-gdc-2026-survey-workweeks-p47"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The percentage is not a share of Steam solo developers, paid indie titles or profitable publishers."
+    },
+    {
+      "id": "hours-gdc2026-35pct-smallgroupunder30",
+      "text": "The GDC survey separately reports 35% of contract workers, consultants and solo developers averaging fewer than 30 work hours per week.",
+      "source_ids": [
+        "steam-gdc-2026-survey-workweeks-p47"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The combined subgroup is heterogeneous and cannot establish the median schedule of solo Steam publishers specifically."
+    },
+    {
+      "id": "hours-gdc2026-37pct-soloweek60",
+      "text": "GDC says 37% of solo-developer respondents worked at least one 60-plus-hour week during the preceding year.",
+      "source_ids": [
+        "steam-gdc-2026-survey-workweeks-p47"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A maximum workweek is not an average week, a year-total work count, or a game-level time-to-launch."
+    },
+    {
+      "id": "hours-gdc2026-incomparable-2025",
+      "text": "GDC explicitly changed its 2026 work-hours question and hour ranges and cautions against direct year-on-year comparisons with 2025.",
+      "source_ids": [
+        "steam-gdc-2026-survey-workweeks-p47"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Do not treat changes between the 2025 and 2026 category percentages as a verified labor trend."
+    },
+    {
+      "id": "hours-unity-sample-two-populations",
+      "text": "Unity's 2026 game-development report combines a survey of 300 developers across engines and proprietary editor/ecosystem activity data involving nearly five million developers.",
+      "source_ids": [
+        "steam-unity-2026-development-telemetry"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The survey and telemetry do not share identical sampling frames or represent all Steam publishers."
+    },
+    {
+      "id": "hours-unity-editor-project-time-not-shipped-labor",
+      "text": "Unity's reported median editor project development time fell from around 91 recorded hours in January 2022 to around 21 hours in December 2025.",
+      "source_ids": [
+        "steam-unity-2026-development-telemetry"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Engine-editor telemetry does not include all writing, art, audio, marketing, engine switching, QA, localization, administration, support or years spent per finished product; never interpret as time to ship a Steam game."
+    },
+    {
+      "id": "hours-unity-survey-prototype67pct",
+      "text": "Unity's 300-respondent 2025 Cint survey reported about 67% prototype projects for three months or less.",
+      "source_ids": [
+        "steam-unity-2026-development-telemetry"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A prototype duration is not complete production time or successful paid Steam game time, and the survey is not representative of all solo developers."
+    },
+    {
+      "id": "hours-surveys-not-income",
+      "text": "Neither GDC's survey workweek percentages nor Unity's active editor hours identify the median net hourly compensation or full project labor of new Steam publishers.",
+      "source_ids": [
+        "steam-gdc-2026-survey-workweeks-p47",
+        "steam-unity-2026-development-telemetry"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Such measures require linked game/publisher ID, time tracking from inception through support and actual after-cost royalties."
     }
   ],
   "observations": [],
@@ -7584,5 +7707,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam public research distinguishes attribution, causal incremental sales, after-tax publisher receipts and synthetic paid acquisition break-even. No seller-wide true CAC, actual developer profits or representative publisher income measured."
+  "summary": "Steam public research now includes bounded GDC 2026 professional workweek surveys and Unity 2026 editor-activity metrics, with explicit distinctions from full paid-game labor and verified developer hourly profits."
 }
