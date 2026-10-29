@@ -1830,6 +1830,28 @@
       "evidence_class": "official_public_game_gift_region_eligibility_policy",
       "license": "Public source link and concise independently paraphrased facts only, no graphics or private account information.",
       "notes": "Gift redemption country restrictions appear at purchase and are subject to change; cannot infer geographic recipient purchase counts."
+    },
+    {
+      "id": "steam-dmca-copyright-report-form-20261029",
+      "url": "https://steamcommunity.com/dmca/create/?l=english",
+      "title": "Steam Community: Notice of Copyright Infringement",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "first_party_public_copyright_notice_intake_and_legal_warning",
+      "license": "Public source, short independent factual paraphrase only. No complainant data, form reproduction or submitted complaint examples.",
+      "notes": "Official copyright-holder notice intake, requires allegations and identity; warns of possible third-party disclosure and Section 512(f) liability for knowing material misrepresentation. Not a game-publisher appeal page."
+    },
+    {
+      "id": "us-copyright-office-512g-procedural-framework-20261029",
+      "url": "https://copyright.gov/title17/92chap5.html",
+      "title": "17 USC 512(g): Replacement of Removed or Disabled Material",
+      "publisher": "United States Copyright Office",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_primary_us_federal_statutory_procedure",
+      "license": "Legislative source linked and independently summarized for research; not a substitute for jurisdiction-specific legal advice.",
+      "notes": "Qualifying subsection 512(g) counter-notification requires identifying content, good-faith perjury statement, identity and court jurisdiction consent; 10–14 business day replacement framework subject to action seeking court order. Not a universal Valve developer contract or an automatic game reinstatement SLA."
     }
   ],
   "claims": [
@@ -12342,6 +12364,145 @@
       "observed_at": "2026-10-29",
       "confidence": "source_linked_official_public_gift_and_reporting_policy_not_merchant_observation",
       "limitations": "No customer activity logs, merchant transaction IDs, authorized AppID ledgers, partner cost records or population sampling were obtained."
+    },
+    {
+      "id": "steam-copyright-form-holder-not-appeal",
+      "text": "Valve provides a copyright-holder infringement notice form; it is an allegation intake, not a general Steamworks publisher appeal or direct game reinstatement request.",
+      "source_ids": [
+        "steam-dmca-copyright-report-form-20261029",
+        "steam-content-survey-official-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "The public form does not document a standard, universally available merchant appeal decision path or guaranteed response time."
+    },
+    {
+      "id": "steam-copyright-form-requires-claimed-work",
+      "text": "Valve's copyright report form requests identification of the allegedly infringing Valve-hosted material and the work claimed to be infringed.",
+      "source_ids": [
+        "steam-dmca-copyright-report-form-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "Filing requirements do not adjudicate whether any specific game, image, music or code actually infringes third-party rights."
+    },
+    {
+      "id": "steam-copyright-form-contact-disclosure",
+      "text": "Valve warns that the submitter's identifying complaint information may be shared with third parties or made public.",
+      "source_ids": [
+        "steam-dmca-copyright-report-form-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "The warning applies to notice information, not evidence that a particular complaint was disclosed; no personal report information was collected."
+    },
+    {
+      "id": "steam-copyright-form-misrepresentation-risk",
+      "text": "Valve's copyright reporting form highlights the U.S. DMCA Section 512(f) risk of liability for knowingly materially false infringement representations.",
+      "source_ids": [
+        "steam-dmca-copyright-report-form-20261029",
+        "us-copyright-office-512g-procedural-framework-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "Legal standards and individual liability are case- and jurisdiction-specific; no fraud or misrepresentation finding was made."
+    },
+    {
+      "id": "steam-copyright-512g-counter-is-distinct",
+      "text": "A qualifying U.S. DMCA section 512(g) counter-notice is a statutory response to disabled material following a notice, distinct from contacting Steamworks support.",
+      "source_ids": [
+        "us-copyright-office-512g-procedural-framework-20261029",
+        "steam-help-contact-publishing-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "Not every game distribution, content moderation, listing, licensing or contractual action is necessarily subject to the same statutory route."
+    },
+    {
+      "id": "steam-copyright-counter-identity-jurisdiction",
+      "text": "Under 17 U.S.C. 512(g)(3), a qualifying counter-notification requires legal identity/contact, an appropriate mistaken-removal statement and agreement about federal court jurisdiction and process.",
+      "source_ids": [
+        "us-copyright-office-512g-procedural-framework-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "This is a legal act with potential consequences, not a safe anonymous or one-click platform appeal; no legal filing was initiated."
+    },
+    {
+      "id": "steam-copyright-counter-10to14-conditional",
+      "text": "The U.S. section 512(g)(2) replacement framework describes ten to fourteen business days after qualifying counter-notification, absent timely notice of a court action.",
+      "source_ids": [
+        "us-copyright-office-512g-procedural-framework-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "The conditional U.S. statutory safe-harbor provision is not an observed Valve game reinstatement time, guaranteed partner resolution or deadline for all Steam removals."
+    },
+    {
+      "id": "steam-copyright-counter-lawsuit-exception",
+      "text": "Under section 512(g), replacement is not required on that timeline when the service provider receives notice of an action seeking a court order to restrain the alleged infringement.",
+      "source_ids": [
+        "us-copyright-office-512g-procedural-framework-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "Whether any action qualifies depends on case facts; this audit has no real litigant records or claims history."
+    },
+    {
+      "id": "steam-copyright-trademark-separate-route",
+      "text": "Steamworks Content Survey guidance directs rights holders toward a trademark complaint route separate from the copyright DMCA notice form.",
+      "source_ids": [
+        "steam-content-survey-official-oct2026",
+        "steam-dmca-copyright-report-form-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "A trademark dispute cannot automatically be described as a DMCA counter-notice case, and the actual trademark processing details were not evaluated."
+    },
+    {
+      "id": "steam-copyright-support-ticket-not-512g",
+      "text": "Steamworks developer support documentation offers partner help tickets but does not promise a statutory-style independent tribunal or guaranteed restoration of removed products.",
+      "source_ids": [
+        "steam-help-contact-publishing-2026",
+        "us-copyright-office-512g-procedural-framework-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "A support ticket may be the right operational contact in some cases, but its scope, contractual rights and response timing are not established by the cited pages."
+    },
+    {
+      "id": "steam-copyright-voluntary-retirement-distinct",
+      "text": "Steamworks voluntary app retirement is a separate publisher-requested distribution action and should not be confused with rights-holder notice enforcement.",
+      "source_ids": [
+        "steam-retire-app-official",
+        "steam-dmca-copyright-report-form-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "A title removed from new sale does not necessarily lose every existing customer library entitlement; private account records were not read."
+    },
+    {
+      "id": "steam-copyright-store-review-is-not-dmca",
+      "text": "A Steamworks store or build review rejection is a separate publication approval outcome, not proof of a copyright takedown notice or court adjudication.",
+      "source_ids": [
+        "steam-store-review-process-2026",
+        "steam-dmca-copyright-report-form-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "No individual rejection, appeal, legal complaint, game removal or settlement was observed."
+    },
+    {
+      "id": "steam-copyright-process-no-reinstatement-rate",
+      "text": "Public complaint forms and legal remedies do not measure actual publisher takedown frequency, successful appeals, withheld revenue, post-removal game sales or profitability.",
+      "source_ids": [
+        "steam-dmca-copyright-report-form-20261029",
+        "us-copyright-office-512g-procedural-framework-20261029",
+        "steam-help-contact-publishing-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "primary_public_policy_and_conditional_us_statute_not_case_outcome",
+      "limitations": "A representative publisher cohort, case disposition history, payment ledgers and contracts would be required before estimating any incidence or income effect."
     }
   ],
   "observations": [],
@@ -12349,5 +12510,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Gifted Steam purchases are distinct from acceptance, regional redemption, license activation and refunds. No gift conversion rate, distinct unique payer population, exact zero-paid-order fraction or representative developer proceeds are verified."
+  "summary": "Steam gift purchasing and copyright remedies are separated into empirically meaningful events: gift checkout is not recipient activation, and DMCA statutory counter-notice is not a guaranteed Steamworks game reinstatement appeal. Publisher profit and exact zero-paid-order incidence remain unverified."
 }
