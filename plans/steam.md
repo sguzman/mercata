@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Self-reported Steam China regional concentration and pre-share finances (October 29, 2026)
+
+The [new two-week launch case](../ontology/steam/steam-two-week-china-concentration-and-preshare-report-2026.md) records one six-person team's approximate 90% China sales concentration, distinct gross/net units and the USD 59,000 versus USD 47,000 after-adjustments-before-platform-share revenue stages. It refuses to infer an exact refunded order count, regional effective price, matched wishlist conversion, cash receipt or profit. One new first-person public source and seven bounded claims support a two-point update to the original regional-purchase research task. Current **91.225%** (Δ **+0.007 pp**); inventory remains **293 tasks**.
+
 ## Nonmatching 2025 Steam game-release catalogues (October 29, 2026)
 
 The [three-provider game release crosswalk](../ontology/steam/steam-2025-three-catalog-release-frame-divergence-2026.md) records 20,565 GameCharts releases, 21,222 in the existing dated SteamDB snapshot and 24,614 in GaugeDB's October 26 catalogue. Their **4,049-title numeric range is not a true-count confidence interval** because date and AppID populations differ. Two independent sources and five bounded claims expand the original **293-task** research scope without equating releases to paid checkouts. Current **91.218%** (Δ **+0.007 pp**).

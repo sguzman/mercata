@@ -1962,6 +1962,17 @@
       "evidence_class": "independent_provider_2025_release_year_game_count",
       "license": "Only public source URL and independently described counts; no dataset, scraped rows, tables, or page text copied.",
       "notes": "Provider labels its collection date October 26, 2026 UTC; lists 24,614 games with recorded 2025 release dates, and a separate review-checked sample. Not a complete historic game-release census."
+    },
+    {
+      "id": "steam-onelasthand-two-week-china-sales-20260901",
+      "url": "https://www.reddit.com/r/gamedev/comments/1w49lyh/we_launched_with_11k_wishlists_and_sold_12k/",
+      "publisher": "Developer-authored public post on r/gamedev",
+      "title": "We launched with 11k wishlists and sold 12k copies in 2 weeks - 90% of them in China",
+      "published_at": "2026-09-01",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "voluntary_game_developer_first_person_regional_two_week_financial_disclosure",
+      "license": "Public link, metadata and short independently authored numerical summaries only. No copied discussion or private financial records.",
+      "notes": "Six-person multiplayer party-game launch on Aug 14, 2026. Rough two-week gross/net units and money with separate pre-platform-share stage; sales described as approximately 90% China. No authenticated reporting or received payout."
     }
   ],
   "claims": [
@@ -13542,6 +13553,76 @@
       "confidence": "medium_public_cross_provider_comparability",
       "observed_at": "2026-10-29",
       "limitations": "Original-paid status, historical delistings, AppID identities, and permissioned account settlements remain unverified."
+    },
+    {
+      "id": "steam-onelasthand-aug14-launch-and-team-20261029",
+      "text": "The developer describes an August 14, 2026 Steam launch for a multiplayer party game produced by a six-person team.",
+      "source_ids": [
+        "steam-onelasthand-two-week-china-sales-20260901"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium_public_author_self_report",
+      "limitations": "Single author account; a public post does not independently establish legal owner/payee identities."
+    },
+    {
+      "id": "steam-onelasthand-approx-early-units-20261029",
+      "text": "The developer reports roughly 16,500 gross units and 12,000 net copies after the opening two weeks.",
+      "source_ids": [
+        "steam-onelasthand-two-week-china-sales-20260901"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium_public_author_self_report",
+      "limitations": "Both rounded and self-reported; their gap does not by itself identify an exact return count or matched purchase/refund cohorts."
+    },
+    {
+      "id": "steam-onelasthand-gross-net-preshare-20261029",
+      "text": "The developer reports about USD 59,000 gross revenue and USD 47,000 after returns, chargebacks and taxes but before the Steam platform share.",
+      "source_ids": [
+        "steam-onelasthand-two-week-china-sales-20260901"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium_public_author_self_report",
+      "limitations": "The latter is explicitly not received partner cash or developer profit; exact adjustments and individual payment schedules are unavailable."
+    },
+    {
+      "id": "steam-onelasthand-china-concentration-20261029",
+      "text": "The developer describes approximately 90 percent of early game sales as occurring in China.",
+      "source_ids": [
+        "steam-onelasthand-two-week-china-sales-20260901"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium_public_author_self_report",
+      "limitations": "The narrative does not establish whether the percentage counts buyer accounts, units or local-currency cash, nor billing geography or the publisher's jurisdiction."
+    },
+    {
+      "id": "steam-onelasthand-demo-and-streamer-selection-20261029",
+      "text": "In a follow-up, the developer describes about 2,000 peak concurrent players during the demo and small paid streamer campaigns preceding larger organic creator coverage in China.",
+      "source_ids": [
+        "steam-onelasthand-two-week-china-sales-20260901"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium_public_author_self_report",
+      "limitations": "The account is qualitative and retrospective; no randomized traffic or authenticated channel-level purchase attribution supports a causal uplift."
+    },
+    {
+      "id": "steam-onelasthand-wishlists-not-sales-20261029",
+      "text": "The game reportedly had around 11,000 wishlists before launch, but more net copies sold within two weeks; those unmatched totals are not a wishlist-to-paid-order conversion rate.",
+      "source_ids": [
+        "steam-onelasthand-two-week-china-sales-20260901"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium_public_author_self_report",
+      "limitations": "Some buyers never wishlisted and some wishlisters do not buy; cohort matching, cancellation and observation dates are not provided."
+    },
+    {
+      "id": "steam-onelasthand-launch-day-not-all-window-20261029",
+      "text": "The developer says more than 4,500 copies sold on launch day, but that statement does not establish which Steam revenue-reporting unit or refund-adjustment definition applies.",
+      "source_ids": [
+        "steam-onelasthand-two-week-china-sales-20260901"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium_public_author_self_report",
+      "limitations": "No exact release-hour cutoff or aligned day-level financial exports were inspected."
     }
   ],
   "observations": [],
