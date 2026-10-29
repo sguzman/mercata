@@ -1,5 +1,8 @@
 # Steam first-release waiting periods: updated source comparison
 
+
+> **Later October 29, 2026 source check:** Official English public pages again conflict (21-day Onboarding versus 30-day Steam Direct landing). The October 28 findings below are historical snapshots, not a currently resolved single rule. See [the dated cross-source recheck](steam-first-release-source-conflict-and-concurrent-approval-gates-2026.md).
+
 **Rechecked October 28, 2026.** [Structured findings](current-first-release-wait-recheck-2026.json) and [synthetic scheduling helper](../../site/steam-release-floor.mjs). No Steamworks partner account or release control was accessed.
 
 The earliest Mercata [onboarding checkpoint](entry-review-and-reporting-2026.md) recorded a real source-text discrepancy: **30 days** on [Valve's Steam Direct page](https://partner.steamgames.com/steamdirect), versus **21 days** on an earlier public reading of the [Steamworks Onboarding guide](https://partner.steamgames.com/doc/gettingstarted/onboarding). A fresh reading of those *same two official URLs* on October 28, 2026 shows **30 days on both**. Valve's [2017 Steam Direct announcement](https://store.steampowered.com/news/posts/?enddate=1497372843&feed=steam_blog) also described a 30-day first-developer wait.

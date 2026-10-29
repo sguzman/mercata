@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_first_release_onboarding_rule_conflict_and_concurrent_gate_audit",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steamdirect-public",
+    "steam-onboarding-21day-live-recheck-oct29",
+    "steam-onboarding-faq-current-2026",
+    "steam-store-review-process-2026",
+    "steam-release-process-doc",
+    "steam-coming-soon-doc"
+  ],
+  "claim_ids": [
+    "steam-release-policy-conflict-live-oct29",
+    "steam-release-28-to29-snapshot-drift",
+    "steam-release-no-authoritative-single-minimum",
+    "steam-release-same-date-14day-parallel",
+    "steam-release-reviews-two-stage-order",
+    "steam-release-review-business-day-buffer",
+    "steam-release-landing-1to5-review",
+    "steam-release-tax-review-description-drift",
+    "steam-release-manual-authorized-release",
+    "steam-release-scenario-21-vs30",
+    "steam-release-no-minimum-age-inferred",
+    "steam-release-timing-not-workload-or-sales"
+  ],
+  "primary_conflict": {
+    "steam_direct_landing_wait_days": 30,
+    "english_onboarding_wait_days": 21,
+    "same_observation_date": "2026-10-29",
+    "previous_2026_10_28_recheck_reported_both_30": true,
+    "private_partner_rule_verified": false,
+    "historical_edit_dates_verified": false
+  },
+  "separate_review_guidance": {
+    "steam_direct_landing_review_days_text": [
+      1,
+      5
+    ],
+    "review_guide_typical_business_days": [
+      3,
+      5
+    ],
+    "review_guide_submission_lead_business_days_recommended": 7,
+    "store_review_submitted_before_build_review": true,
+    "review_approval_guaranteed": false
+  },
+  "tax_review_guidance": {
+    "english_onboarding_may_take_up_to_days": 30,
+    "faq_typical_business_days": [
+      2,
+      7
+    ],
+    "guaranteed_resolution_time": null
+  },
+  "first_release": {
+    "public_coming_soon_min_calendar_days": 14,
+    "independent_fee_wait_and_coming_soon_gates": true,
+    "manual_release_required": true,
+    "permissions": [
+      "Publish app changes to Steam",
+      "Manage pricing and discounts"
+    ],
+    "developer_hours_measured": false,
+    "universal_signatory_minimum_age_verified": false
+  },
+  "synthetic_case": {
+    "fee_paid_on": "2026-11-01",
+    "coming_soon_published_on": "2026-11-15",
+    "store_review_approved_on": "2026-11-24",
+    "build_review_approved_on": "2026-11-27",
+    "fee_21day_candidate": "2026-11-29",
+    "fee_30day_candidate": "2026-12-01",
+    "guaranteed_release": null
+  },
+  "unknown": {
+    "actual_operator_wait_requirement": null,
+    "merchant_onboarding_duration": null,
+    "bank_tax_validation_completion": null,
+    "actual_release_time": null,
+    "person_hours_to_publish": null,
+    "universal_minor_signatory_eligibility": null,
+    "merchant_paid_sales": null,
+    "after_cost_publisher_profit": null
+  },
+  "no_partner_account_or_private_contracts": true
+}

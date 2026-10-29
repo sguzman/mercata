@@ -1,4 +1,7 @@
 # Steamworks onboarding, release and payment rules
+
+
+> **Later October 29, 2026 source check:** Official English public pages again conflict (21-day Onboarding versus 30-day Steam Direct landing). The October 28 findings below are historical snapshots, not a currently resolved single rule. See [the dated cross-source recheck](steam-first-release-source-conflict-and-concurrent-approval-gates-2026.md).
 **First source-backed research checkpoint: October 28, 2026.** [Machine-readable record](entry-review-and-reporting-2026.json) · [Public evidence and bounded claims](../../specimens/steam.json).
 
 ## Enrollment and entry costs

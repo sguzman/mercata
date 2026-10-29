@@ -1764,6 +1764,17 @@
       "evidence_class": "dated_secondhand_steamdb_public_catalog_review_snapshot",
       "license": "Factual aggregate counts, public link and independently written short paraphrase only; source article or graphics not republished.",
       "notes": "December 12, 2025 third-party reporting cites SteamDB 19112 calendar-2025 releases, 9327 with under ten reviews and 2229 with zero; snapshot before 2025 year end."
+    },
+    {
+      "id": "steam-onboarding-21day-live-recheck-oct29",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/onboarding?l=english",
+      "title": "Onboarding: 21-day wait shown in October 29 English-language reading",
+      "publisher": "Valve Corporation / Steamworks Documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "dated_official_documentation_version_discrepancy_observation",
+      "license": "Public source URL and independently summarized narrow facts only; no source text or private account data reproduced.",
+      "notes": "Oct 29 English onboarding content states 21-day app-fee wait and tax review up to 30 days, whereas the Steam Direct landing page says 30-day wait. Source may drift; not a verified partner account policy."
     }
   ],
   "claims": [
@@ -11381,6 +11392,139 @@
       "confidence": "conditional_mathematical_floor_from_valve_attributed_secondary_reports",
       "observed_at": "2026-10-29",
       "limitations": "The share percentage applies to a separate revenue-weighted non-Valve aggregate and cannot be applied mechanically to game-count thresholds or individual developer earnings."
+    },
+    {
+      "id": "steam-release-policy-conflict-live-oct29",
+      "text": "On October 29, Valve's Steam Direct public landing page displayed a 30-day first-release fee wait, while its English Onboarding documentation displayed a 21-day wait.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-onboarding-21day-live-recheck-oct29"
+      ],
+      "confidence": "official_public_procedure_and_dated_conflicting_source_text",
+      "observed_at": "2026-10-29",
+      "limitations": "Two official public texts are in conflict; the current condition enforced by an individual Steamworks account and exact editing chronology were not verified."
+    },
+    {
+      "id": "steam-release-28-to29-snapshot-drift",
+      "text": "An October 28 Mercata public-source recheck recorded 30 days on both official pages, but an October 29 English-language reading of Onboarding again displayed 21 days.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-onboarding-21day-live-recheck-oct29"
+      ],
+      "confidence": "official_public_procedure_and_dated_conflicting_source_text",
+      "observed_at": "2026-10-29",
+      "limitations": "The comparison is between dated public text observations, not immutable signed terms, a complete archival crawl, or authenticated account settings."
+    },
+    {
+      "id": "steam-release-no-authoritative-single-minimum",
+      "text": "The conflicting public 21-day and 30-day statements do not justify publishing a single guaranteed earliest launch date for a first Steam title.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-onboarding-21day-live-recheck-oct29"
+      ],
+      "confidence": "official_public_procedure_and_dated_conflicting_source_text",
+      "observed_at": "2026-10-29",
+      "limitations": "A longer planning buffer is a risk-management assumption and does not establish Valve's actual enforceable waiting condition for any partner."
+    },
+    {
+      "id": "steam-release-same-date-14day-parallel",
+      "text": "The Coming Soon page must be public for at least 14 days before a new Steam release; its clock is distinct from the app-fee wait and can run in parallel.",
+      "source_ids": [
+        "steam-coming-soon-doc",
+        "steamdirect-public"
+      ],
+      "confidence": "official_public_procedure_and_dated_conflicting_source_text",
+      "observed_at": "2026-10-29",
+      "limitations": "Other permissions, approvals and commercial release gates still apply, so parallel calendar eligibility is insufficient for automatic launch."
+    },
+    {
+      "id": "steam-release-reviews-two-stage-order",
+      "text": "Valve's release guide requires store-presence review submission before game-build review submission, and both must be approved before a normal release.",
+      "source_ids": [
+        "steam-release-process-doc",
+        "steam-store-review-process-2026"
+      ],
+      "confidence": "official_public_procedure_and_dated_conflicting_source_text",
+      "observed_at": "2026-10-29",
+      "limitations": "The public process does not identify an individual publisher's submitted dates, review queues, appeal outcomes or actual launch."
+    },
+    {
+      "id": "steam-release-review-business-day-buffer",
+      "text": "Valve's dedicated review guide reports typical 3–5 business days for store and build review and recommends submitting each at least seven business days in advance.",
+      "source_ids": [
+        "steam-store-review-process-2026"
+      ],
+      "confidence": "official_public_procedure_and_dated_conflicting_source_text",
+      "observed_at": "2026-10-29",
+      "limitations": "These are guidance estimates rather than hard seven-day holds, an approval guarantee, a measured review-time distribution or fixed worker-hours."
+    },
+    {
+      "id": "steam-release-landing-1to5-review",
+      "text": "The general Steam Direct landing page describes a 1–5-day review, which is not interchangeable with the more specific 3–5-business-day review guide and its contingency recommendation.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-store-review-process-2026"
+      ],
+      "confidence": "official_public_procedure_and_dated_conflicting_source_text",
+      "observed_at": "2026-10-29",
+      "limitations": "Different units and scoped descriptions are not evidence that two sequential reviews always complete in five days or exactly seven days."
+    },
+    {
+      "id": "steam-release-tax-review-description-drift",
+      "text": "The English Onboarding guide allows up to 30 days for third-party tax verification, while its official FAQ says verification may take 2–7 business days.",
+      "source_ids": [
+        "steam-onboarding-21day-live-recheck-oct29",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "official_public_procedure_and_dated_conflicting_source_text",
+      "observed_at": "2026-10-29",
+      "limitations": "The first is broad upper-language and the second a typical interval; neither is an independently measured service-level agreement or firm completion limit."
+    },
+    {
+      "id": "steam-release-manual-authorized-release",
+      "text": "Even after store and build approvals and the Coming Soon period, a user with Publish App Changes and Manage Pricing and Discounts permissions must manually activate the release controls.",
+      "source_ids": [
+        "steam-release-process-doc"
+      ],
+      "confidence": "official_public_procedure_and_dated_conflicting_source_text",
+      "observed_at": "2026-10-29",
+      "limitations": "The exact authorized account's permissions and review status were not examined; no game was actually released by this research."
+    },
+    {
+      "id": "steam-release-scenario-21-vs30",
+      "text": "For an invented fee payment on November 1, 2026 and Coming Soon publication on November 15 with review approvals by November 27, the public policy alternatives produce November 29 versus December 1 calendar candidates.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-onboarding-21day-live-recheck-oct29",
+        "steam-coming-soon-doc",
+        "steam-store-review-process-2026"
+      ],
+      "confidence": "official_public_procedure_and_dated_conflicting_source_text",
+      "observed_at": "2026-10-29",
+      "limitations": "The date-only scenario is a synthetic calculation, not a recommendation to launch, live partner eligibility, reviewer completion prediction or guaranteed payout."
+    },
+    {
+      "id": "steam-release-no-minimum-age-inferred",
+      "text": "The public onboarding material requires a legal contracting party and verified bank and tax details but the consulted pages do not supply a universal minimum age for signatories.",
+      "source_ids": [
+        "steam-onboarding-21day-live-recheck-oct29",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "official_public_procedure_and_dated_conflicting_source_text",
+      "observed_at": "2026-10-29",
+      "limitations": "The absence of a clear age rule in these materials cannot establish that a minor is legally eligible, ineligible or able to sign in a particular jurisdiction."
+    },
+    {
+      "id": "steam-release-timing-not-workload-or-sales",
+      "text": "The overlapping waiting periods, review lead-time guidance and identity verification obligations do not provide a validated number of developer labor hours, release success rate or first-game revenue.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-onboarding-21day-live-recheck-oct29",
+        "steam-store-review-process-2026"
+      ],
+      "confidence": "official_public_procedure_and_dated_conflicting_source_text",
+      "observed_at": "2026-10-29",
+      "limitations": "No partner-level process timing records, measured labor, merchant sales or after-cost income were accessed."
     }
   ],
   "observations": [],
@@ -11388,5 +11532,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Steam research adds a conditional strict lower bound above $1.5443 billion for 2025 game gross across Valve-attributed nested $100k/$500k annual cohorts, without assuming an all-game revenue total or a first-release income distribution."
+  "summary": "Official Steam first-release documents have a renewed live 21-day versus 30-day public wait conflict as of October 29. Publisher identity, Coming Soon, separate store/build reviews and manual release are distinct gates; actual first-release outcomes and earnings remain unknown."
 }
