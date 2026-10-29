@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Daily Steam financial corrections and per-date pagination (October 29, 2026)
+
+The [corrected-report audit](../ontology/steam/steam-financial-changed-date-requery-2026.md) now models Valve's re-query-entire-date and cursor-completion rules with fabricated reports. Corrected daily records replace earlier rows; Steam checkouts, retail keys and in-game payments remain distinct. No actual merchant or partner-key data were used. **Current 91%** (exact **91.160%**, Δ **+0.027 pp**), unchanged 293-task inventory.
+
 ## Zero-sale rate identification: modeled labels, classification error and missing games
 
 The [two-stage selection-sensitivity audit](../ontology/steam/steam-two-stage-model-and-frame-zero-sensitivity-2026.md) keeps the 19 missing provider estimates separate from potentially omitted games and sales-model classification errors. Executable, explicitly hypothetical cap scenarios demonstrate that **no actual fraction of zero-paid-order games is identified** without authenticated ledger validation and known original-paid release coverage. **Current 91%** (exact **91.133%**, Δ **+0.031 percentage points**), unchanged 293-task inventory.

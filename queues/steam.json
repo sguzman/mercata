@@ -279,13 +279,17 @@
           "title": "Separate payment processing charges",
           "acceptance": "Check transaction, currency conversion, refund and chargeback costs.",
           "weight": 1,
-          "progress": 90,
+          "progress": 92,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
             "ontology/steam/steam-direct-history-and-bank-remittance-2026.json",
             "specimens/steam.json",
-            "site/steam-remittance-bridge.mjs"
+            "site/steam-remittance-bridge.mjs",
+            "ontology/steam/steam-financial-changed-date-requery-2026.json",
+            "ontology/steam/steam-financial-changed-date-requery-2026.md",
+            "site/steam-financial-requery-guards.mjs",
+            "tests/steam-financial-requery-guards.test.mjs"
           ]
         },
         {
@@ -1239,7 +1243,7 @@
           "title": "Study refunds and disputes",
           "acceptance": "Identify who bears losses and processing charges.",
           "weight": 1,
-          "progress": 97,
+          "progress": 98,
           "status": "in_progress",
           "evidence": [
             "ontology/steam/fixed-paid-release-cohort-2026.md",
@@ -1252,7 +1256,11 @@
             "ontology/steam/steam-gift-checkout-redemption-refund-and-license-units-2026.md",
             "ontology/steam/steam-gift-checkout-redemption-refund-and-license-units-2026.json",
             "site/steam-gift-reconciliation-guards.mjs",
-            "tests/steam-gift-reconciliation-guards.test.mjs"
+            "tests/steam-gift-reconciliation-guards.test.mjs",
+            "ontology/steam/steam-financial-changed-date-requery-2026.json",
+            "ontology/steam/steam-financial-changed-date-requery-2026.md",
+            "site/steam-financial-requery-guards.mjs",
+            "tests/steam-financial-requery-guards.test.mjs"
           ]
         },
         {

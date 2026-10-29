@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "financial_api_changed_day_highwatermark_requery_and_append_avoidance",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-financial-api-official",
+    "steam-transfer-app-official-2026",
+    "steam-financial-reporting-doc"
+  ],
+  "claim_ids": [
+    "steam-finance-changed-dates-requery-whole-date-20261029",
+    "steam-finance-per-day-cursors-reset-zero-20261029",
+    "steam-finance-terminal-max-id-ends-page-20261029",
+    "steam-finance-day-updates-can-remove-records-20261029",
+    "steam-finance-retail-key-activations-not-steam-sales-20261029",
+    "steam-finance-api-partner-wide-key-sensitivity-20261029",
+    "steam-finance-full-date-not-full-historical-cohort-20261029"
+  ],
+  "unit": "daily_partner_aggregate_categories_not_original_paid_game_cohort",
+  "model_path": "site/steam-financial-requery-guards.mjs",
+  "test_path": "tests/steam-financial-requery-guards.test.mjs",
+  "date_basis": "PT_dates_from_Valve_source_not_converted",
+  "synthetic_batches": [
+    {
+      "fixture_batch_id": "fixture-initial-may1",
+      "financial_date_pt": "2026-05-01",
+      "visibility_scope": "own_partner_only",
+      "pages": [
+        {
+          "requested_highwatermark_id": 0,
+          "returned_max_id": 3,
+          "rows": [
+            {
+              "fixture_row_id": "fixture-store-a",
+              "kind": "steam_package",
+              "gross_units_sold": 10,
+              "gross_units_returned": 1,
+              "gross_units_activated": 0
+            },
+            {
+              "fixture_row_id": "fixture-retail-a",
+              "kind": "retail_key_activation",
+              "gross_units_sold": 0,
+              "gross_units_returned": 0,
+              "gross_units_activated": 7
+            }
+          ]
+        },
+        {
+          "requested_highwatermark_id": 3,
+          "returned_max_id": 3,
+          "rows": []
+        }
+      ]
+    },
+    {
+      "fixture_batch_id": "fixture-may2",
+      "financial_date_pt": "2026-05-02",
+      "visibility_scope": "own_partner_only",
+      "pages": [
+        {
+          "requested_highwatermark_id": 0,
+          "returned_max_id": 4,
+          "rows": [
+            {
+              "fixture_row_id": "fixture-store-b",
+              "kind": "steam_package",
+              "gross_units_sold": 2,
+              "gross_units_returned": 4,
+              "gross_units_activated": 0
+            },
+            {
+              "fixture_row_id": "fixture-mtx-b",
+              "kind": "microtransaction",
+              "gross_units_sold": 5,
+              "gross_units_returned": 0,
+              "gross_units_activated": 0
+            }
+          ]
+        },
+        {
+          "requested_highwatermark_id": 4,
+          "returned_max_id": 4,
+          "rows": []
+        }
+      ]
+    },
+    {
+      "fixture_batch_id": "fixture-corrected-may1",
+      "financial_date_pt": "2026-05-01",
+      "visibility_scope": "own_partner_only",
+      "pages": [
+        {
+          "requested_highwatermark_id": 0,
+          "returned_max_id": 9,
+          "rows": [
+            {
+              "fixture_row_id": "fixture-store-revised-a",
+              "kind": "steam_package",
+              "gross_units_sold": 8,
+              "gross_units_returned": 3,
+              "gross_units_activated": 0
+            }
+          ]
+        },
+        {
+          "requested_highwatermark_id": 9,
+          "returned_max_id": 9,
+          "rows": []
+        }
+      ]
+    }
+  ],
+  "expected": {
+    "date_count": 2,
+    "processed_batches": 3,
+    "replaced_previous_daily_snapshots": 1,
+    "steam_package_gross_units_sold": 10,
+    "steam_package_period_returns": 7,
+    "steam_package_period_net_units": 3,
+    "retail_key_units_activated": 0,
+    "microtransaction_gross_units_sold": 5,
+    "microtransaction_period_returns": 0
+  },
+  "unknown": {
+    "actual_appid_paid_units": null,
+    "actual_refund_rate": null,
+    "actual_partner_net_income": null,
+    "exact_zero_sales_fraction": null,
+    "historically_complete_appid_frame": null
+  },
+  "no_financial_key_no_partner_account_no_real_records": true
+}

@@ -13068,6 +13068,77 @@
       "confidence": "medium",
       "observed_at": "2026-10-29",
       "limitations": "The cap values are invented demonstration parameters, not calibrated from a validation sample or verified missing-frame census."
+    },
+    {
+      "id": "steam-finance-changed-dates-requery-whole-date-20261029",
+      "text": "Valve instructs financial API users to re-query all detailed rows for a changed date and replace previously saved rows, not append changes.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "The documentation covers protocol correctness, not the real-world frequency of corrected commercial orders."
+    },
+    {
+      "id": "steam-finance-per-day-cursors-reset-zero-20261029",
+      "text": "GetDetailedSales requires a highwatermark_id of zero for each newly selected Pacific Time reporting date.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "The cross-date changed-date cursor cannot be reused as a single day's pagination start."
+    },
+    {
+      "id": "steam-finance-terminal-max-id-ends-page-20261029",
+      "text": "Valve documents that GetDetailedSales ends a day's pagination when the returned max_id equals that request's highwatermark_id.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "This marker ends a daily query, not a historically complete publisher or game cohort."
+    },
+    {
+      "id": "steam-finance-day-updates-can-remove-records-20261029",
+      "text": "When changed-date data are recalculated, additions, updates or deletions require replacing a prior daily snapshot in full.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "No merchant data was requested or tested and this does not estimate actual settlement corrections."
+    },
+    {
+      "id": "steam-finance-retail-key-activations-not-steam-sales-20261029",
+      "text": "Valve separates Steam package purchases, third-party retail key activations and microtransactions through its financial API record categories.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "The API rows cannot directly establish distinct paying buyers, individual games sold, or developer profit."
+    },
+    {
+      "id": "steam-finance-api-partner-wide-key-sensitivity-20261029",
+      "text": "Valve's dedicated Financial API Group key provides sensitive access to partner-wide financial data across applications.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "No such credential is requested, stored or used; this project uses fabricated aggregate fixtures."
+    },
+    {
+      "id": "steam-finance-full-date-not-full-historical-cohort-20261029",
+      "text": "A completely paginated financial reporting day does not itself cover historical transfers, other partner payees, missing dates or the eligible original-paid AppID cohort.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "This is a methodology inference, not a measure of all-publisher financial coverage or actual missing sales."
     }
   ],
   "observations": [],
@@ -13075,5 +13146,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Steam market research now separates current store rosters from historical paid launches, and identifies survivor selection in apparent studio experience and external-publisher review advantages. Observed review medians cannot establish paid-unit effects or publisher income."
+  "summary": "The Steam corpus now includes a documented synthetic financial API changed-date and pagination check. Historic reporting corrections must replace previous daily results; paid store package sales, retail activations and in-game payments remain separate units. Representative merchant receipts and zero-sale fractions remain unknown."
 }
