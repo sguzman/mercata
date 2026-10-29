@@ -21,6 +21,7 @@ Read `CONSTITUTION.md` before editing this public repository.
 - Tasks need acceptance conditions, weights, evidence, and numeric progress. Do not award 100% for unverified work.
 - When itch.io task scores change, run `node scripts/sync-itch-io-status.mjs` to align current summary percentages in the plan, ontology, README and gallery; preserve historic checkpoint percentages.
 - When itch.io public source or claim records change, run `node scripts/sync-itch-io-sources.mjs` to align current dossier metadata summaries; do not rewrite earlier historical snapshots.
+- When Steam task scores or source/claim totals change, run `node scripts/sync-steam-status.mjs --write` to align the current five human-readable summaries; then `node scripts/sync-steam-status.mjs --check`. Preserve all historical checkpoint percentages.
 - Each specimen's hexadecimal color must remain unique and correspond to stored OKLCH coordinates. Never silently recolor existing specimens.
 
 ## Website and verification
