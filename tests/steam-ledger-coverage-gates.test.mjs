@@ -51,9 +51,11 @@ const window30={start:'2026-01-01',endExclusive:'2026-11-01',asOfDate:'2026-10-2
 const fixed=()=>[
  {fixture_game_id:'fixture-a',eligibility:'eligible_paid_initially',first_paid_playable_date:'2026-01-01',
  ledger_status:'complete_reconciled',observed_gross_paid_units:0,covered_from_day:'2026-01-01',
- covered_until_day_exclusive:'2026-01-31',authorized_ledger_attested:true,transfer_history_reconciled:true,retired:true},
+ covered_until_day_exclusive:'2026-01-31',authorized_ledger_attested:true,transfer_history_reconciled:true,
+ paid_checkout_attribution_attested:true,retired:true},
  {fixture_game_id:'fixture-b',eligibility:'eligible_paid_initially',first_paid_playable_date:'2026-01-02',
- ledger_status:'partial',observed_gross_paid_units:3,covered_from_day:'2026-01-02',covered_until_day_exclusive:'2026-01-10'},
+ ledger_status:'partial',observed_gross_paid_units:3,covered_from_day:'2026-01-02',covered_until_day_exclusive:'2026-01-10',
+ paid_checkout_attribution_attested:true},
  {fixture_game_id:'fixture-c',eligibility:'eligible_paid_initially',first_paid_playable_date:'2026-01-03',
  ledger_status:'partial',observed_gross_paid_units:0,covered_from_day:'2026-01-03',covered_until_day_exclusive:'2026-01-05'},
  {fixture_game_id:'fixture-d',eligibility:'eligible_paid_initially',first_paid_playable_date:'2026-01-04',
@@ -103,8 +105,21 @@ test('Missing ledgers, nonfixture IDs and hidden account fields cannot forge zer
 test('Leap year 365 calendar-day horizon ends on February 28',()=>{
  const a=[{fixture_game_id:'fixture-leap',eligibility:'eligible_paid_initially',first_paid_playable_date:'2024-02-29',
  ledger_status:'complete_reconciled',observed_gross_paid_units:0,covered_from_day:'2024-02-29',
- covered_until_day_exclusive:'2025-02-28',authorized_ledger_attested:true,transfer_history_reconciled:true}];
+ covered_until_day_exclusive:'2025-02-28',authorized_ledger_attested:true,transfer_history_reconciled:true,
+ paid_checkout_attribution_attested:true}];
  const x=auditSyntheticFixedHorizonZeroSales(a,{start:'2024-01-01',endExclusive:'2025-01-01',asOfDate:'2025-03-01',horizonDays:365,frameComplete:true});
  assert.equal(x.entries[0].horizon_end_exclusive,'2025-02-28');
  assert.equal(x.conditional_zero_share_lower,1);assert.equal(x.actual_publisher_income_median,null);
+});
+
+test('Package-to-base-game proof is mandatory before admitting a complete zero or partial positive',()=>{
+ const a=fixed();delete a[0].paid_checkout_attribution_attested;
+ assert.throws(()=>auditSyntheticFixedHorizonZeroSales(a,window30),/Complete ledger/);
+ const b=fixed();delete b[1].paid_checkout_attribution_attested;
+ assert.throws(()=>auditSyntheticFixedHorizonZeroSales(b,window30),/package-to-game attribution/);
+ const c=fixed();c[1].paid_checkout_attribution_attested=false;
+ assert.throws(()=>auditSyntheticFixedHorizonZeroSales(c,window30),/package-to-game attribution/);
+ const x=auditSyntheticFixedHorizonZeroSales(fixed(),window30);
+ assert.equal(x.primary_appid_by_itself_proves_paid_game_units,false);
+ assert.equal(x.conditional_zero_share_upper,.8);
 });

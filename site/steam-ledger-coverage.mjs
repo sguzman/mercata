@@ -45,7 +45,8 @@ const iso=x=>{if(typeof x!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(x))return fals
 const plus=(x,n)=>{const d=new Date(x+'T00:00:00Z');d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);};
 const allowed=(x,keys)=>x&&typeof x==='object'&&!Array.isArray(x)&&Object.keys(x).every(k=>keys.includes(k));
 const rowKeys=['fixture_game_id','eligibility','first_paid_playable_date','ledger_status','observed_gross_paid_units',
- 'covered_from_day','covered_until_day_exclusive','transfer_history_reconciled','authorized_ledger_attested','retired'];
+ 'covered_from_day','covered_until_day_exclusive','transfer_history_reconciled','authorized_ledger_attested','retired',
+ 'paid_checkout_attribution_attested'];
 export function auditSyntheticFixedHorizonZeroSales(rows,opts={}){
  if(!Array.isArray(rows)||!allowed(opts,['start','endExclusive','asOfDate','horizonDays','frameComplete']))
   throw new TypeError('Invalid fixed-horizon fixture or options');
@@ -92,14 +93,19 @@ export function auditSyntheticFixedHorizonZeroSales(rows,opts={}){
     throw new TypeError('Observed report needs safe gross units and bounded dates');
    if(r.ledger_status==='complete_reconciled'){
     if(!matured||r.covered_from_day!==date||r.covered_until_day_exclusive!==end||
-     r.authorized_ledger_attested!==true||r.transfer_history_reconciled!==true)
+     r.authorized_ledger_attested!==true||r.transfer_history_reconciled!==true||
+     r.paid_checkout_attribution_attested!==true)
      throw new RangeError('Complete ledger needs matured exact horizon and transfer/access attestations');
     zero_status=r.observed_gross_paid_units===0?'confirmed_zero':'known_nonzero';
    }else{
     if(r.covered_from_day<date||r.covered_until_day_exclusive>end||
      r.covered_until_day_exclusive>plus(asOfDate,1))
      throw new RangeError('Partial report must lie within elapsed paid release horizon');
-    if(r.observed_gross_paid_units>0)zero_status='known_nonzero';
+    if(r.observed_gross_paid_units>0){
+     if(r.paid_checkout_attribution_attested!==true)
+      throw new RangeError('Positive partial paid game units require verified package-to-game attribution');
+     zero_status='known_nonzero';
+    }
    }
   }else throw new TypeError('Explicit complete, partial or missing ledger state required');
   counts[zero_status==='unknown'?'unknown_zero':zero_status]++;
@@ -114,5 +120,6 @@ export function auditSyntheticFixedHorizonZeroSales(rows,opts={}){
   conditional_zero_share_upper:qualified?(counts.confirmed_zero+counts.unknown_zero)/counts.eligible:null,
   conditional_zero_share_point_identified:qualified&&counts.unknown_zero===0,
   actual_steam_zero_paid_order_share:null,actual_publisher_income_median:null,actual_ledger_records_used:false,
+  primary_appid_by_itself_proves_paid_game_units:false,
   limitation:'Fictitious fixtures only. Real original-paid frame, merchant reports, transfer permissions and late corrections remain unavailable.'};
 }
