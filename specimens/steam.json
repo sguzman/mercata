@@ -1940,6 +1940,28 @@
       "evidence_class": "voluntary_first_person_steam_developer_launch_disclosure",
       "license": "Only metadata, URL and concise independently authored numerical interpretations; no reproduced Reddit post body.",
       "notes": "First solo game reported after Aug 12 release: 820 sold, 82 returned, USD 7,047 gross, USD 5,812 labeled net, 5,175 launch wishlists. Unauthenticated finances; share, payout and production costs not established."
+    },
+    {
+      "id": "steam-gamecharts-releases-oct29-2026",
+      "url": "https://charts.game/charts/releases",
+      "publisher": "GameCharts — independent Steam Web API release catalogue",
+      "title": "Games released on Steam",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "independent_dynamic_public_game_release_year_count",
+      "license": "Only public URL, metadata, short descriptive counts and independently written limitations; no dataset copies.",
+      "notes": "On Oct 29, around 14:38 UTC, provider reported 20,565 Steam game apps dated in release year 2025; excludes demos, DLC, software, soundtracks, upcoming titles. Site's hourly catalog can revise counts."
+    },
+    {
+      "id": "steam-gaugedb-release-year-oct26-2026",
+      "url": "https://gaugedb.com/insights/steam-releases-per-year",
+      "publisher": "GaugeDB — independent collected Steam game catalogue",
+      "title": "How many games are released on Steam each year?",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "independent_provider_2025_release_year_game_count",
+      "license": "Only public source URL and independently described counts; no dataset, scraped rows, tables, or page text copied.",
+      "notes": "Provider labels its collection date October 26, 2026 UTC; lists 24,614 games with recorded 2025 release dates, and a separate review-checked sample. Not a complete historic game-release census."
     }
   ],
   "claims": [
@@ -13464,6 +13486,62 @@
       "confidence": "high_official_public_document_current_snapshot",
       "observed_at": "2026-10-29",
       "limitations": "Illustrative payment arrangements are not blanket approval of the specific AI outputs, product rights, jurisdiction, margin or business model."
+    },
+    {
+      "id": "steam-three-2025-catalogs-count-divergence-20261029",
+      "text": "Three independent public release-year reports differ for 2025: GameCharts counts 20,565 games, the existing SteamDB October 29 snapshot counted 21,222, and GaugeDB reports 24,614.",
+      "source_ids": [
+        "steam-gamecharts-releases-oct29-2026",
+        "steam-gaugedb-release-year-oct26-2026",
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "medium_public_cross_provider_comparability",
+      "observed_at": "2026-10-29",
+      "limitations": "Sources have independently selected game-app rosters and non-identical capture times; none is an audited historical original-paid game census."
+    },
+    {
+      "id": "steam-gamecharts-app-type-filter-20261029",
+      "text": "GameCharts defines the release count as Steam-classified game apps with recorded release dates, excluding demos, downloadable content, software, soundtracks and coming-soon titles.",
+      "source_ids": [
+        "steam-gamecharts-releases-oct29-2026"
+      ],
+      "confidence": "medium_public_cross_provider_comparability",
+      "observed_at": "2026-10-29",
+      "limitations": "The published class filter does not independently validate original paid availability or reinstated/deleted historical apps."
+    },
+    {
+      "id": "steam-gaugedb-observation-date-20261029",
+      "text": "The GaugeDB annual releases article identifies its underlying catalogue as counted on October 26, 2026, and separately distinguishes its reviewed subset from all catalogued games.",
+      "source_ids": [
+        "steam-gaugedb-release-year-oct26-2026"
+      ],
+      "confidence": "medium_public_cross_provider_comparability",
+      "observed_at": "2026-10-29",
+      "limitations": "Its review-checked sample is not a sales-paid cohort, and the count is not an exhaustive historical denominator."
+    },
+    {
+      "id": "steam-three-provider-arithmetic-not-confidence-20261029",
+      "text": "The observed 2025 release-year counts span 4,049 titles between their minimum and maximum and therefore cannot be silently pooled into a single exact public supply denominator.",
+      "source_ids": [
+        "steam-gamecharts-releases-oct29-2026",
+        "steam-gaugedb-release-year-oct26-2026",
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "medium_public_cross_provider_comparability",
+      "observed_at": "2026-10-29",
+      "limitations": "This range across incompatible provider snapshots is not a statistical uncertainty interval containing the true platform total."
+    },
+    {
+      "id": "steam-public-release-roster-not-paid-profit-20261029",
+      "text": "None of these three public release-year totals identifies how many titles initially charged money, had zero paid purchases, or yielded profit for legal publishing entities.",
+      "source_ids": [
+        "steam-gamecharts-releases-oct29-2026",
+        "steam-gaugedb-release-year-oct26-2026",
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "medium_public_cross_provider_comparability",
+      "observed_at": "2026-10-29",
+      "limitations": "Original-paid status, historical delistings, AppID identities, and permissioned account settlements remain unverified."
     }
   ],
   "observations": [],

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "unmatched_2025_game_release_catalog_count_divergence",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-gamecharts-releases-oct29-2026",
+    "steam-gaugedb-release-year-oct26-2026",
+    "steamdb-annual-release-snapshot-2026-10"
+  ],
+  "claim_ids": [
+    "steam-three-2025-catalogs-count-divergence-20261029",
+    "steam-gamecharts-app-type-filter-20261029",
+    "steam-gaugedb-observation-date-20261029",
+    "steam-three-provider-arithmetic-not-confidence-20261029",
+    "steam-public-release-roster-not-paid-profit-20261029"
+  ],
+  "count_rows": [
+    {
+      "source_id": "steam-gamecharts-releases-oct29-2026",
+      "provider": "GameCharts",
+      "release_year": 2025,
+      "reported_games": 20565,
+      "catalog_counted_at": "2026-10-29",
+      "observed_at": "2026-10-29",
+      "roster_type": "steam_classified_games_excludes_dlc_demo_software_and_upcoming",
+      "matched_appid_roster_available": false,
+      "original_paid_first_release_verified": false
+    },
+    {
+      "source_id": "steamdb-annual-release-snapshot-2026-10",
+      "provider": "SteamDB",
+      "release_year": 2025,
+      "reported_games": 21222,
+      "catalog_counted_at": null,
+      "observed_at": "2026-10-29",
+      "roster_type": "provider_release_year_game_classification",
+      "matched_appid_roster_available": false,
+      "original_paid_first_release_verified": false
+    },
+    {
+      "source_id": "steam-gaugedb-release-year-oct26-2026",
+      "provider": "GaugeDB",
+      "release_year": 2025,
+      "reported_games": 24614,
+      "catalog_counted_at": "2026-10-26",
+      "observed_at": "2026-10-29",
+      "roster_type": "provider_collected_catalog_games_recorded_release_year",
+      "matched_appid_roster_available": false,
+      "original_paid_first_release_verified": false
+    }
+  ],
+  "model_path": "site/steam-release-provider-frame-crosswalk.mjs",
+  "test_path": "tests/steam-release-provider-frame-crosswalk.test.mjs",
+  "unknown": {
+    "historically_complete_original_paid_game_count": null,
+    "matched_game_appid_roster": null,
+    "true_provider_count_error": null,
+    "verified_market_release_count": null,
+    "paid_release_zero_sale_share": null,
+    "publisher_net_income_mean": null,
+    "publisher_profit_median": null
+  },
+  "no_private_records_used": true
+}

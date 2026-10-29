@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Nonmatching 2025 Steam game-release catalogues (October 29, 2026)
+
+The [three-provider game release crosswalk](../ontology/steam/steam-2025-three-catalog-release-frame-divergence-2026.md) records 20,565 GameCharts releases, 21,222 in the existing dated SteamDB snapshot and 24,614 in GaugeDB's October 26 catalogue. Their **4,049-title numeric range is not a true-count confidence interval** because date and AppID populations differ. Two independent sources and five bounded claims expand the original **293-task** research scope without equating releases to paid checkouts. Current **91.218%** (Δ **+0.007 pp**).
+
 ## Steam content and AI eligibility source drift (October 29, 2026)
 
 The [official public rule-list comparison](../ontology/steam/steam-content-eligibility-page-drift-and-ai-disclosure-2026.md) documents 14 restrictions on the Steam Direct landing page against 15 in Steamworks onboarding, including an additional payment-network warning. It also records content-survey limits and the distinct requirements for live-generated AI, with synthetic review gates that do not presume approval or revenue. This adds five source-linked claims using three previously registered official sources and advances an existing content-eligibility task by two points. Current **91.212%** (Δ **+0.007 pp**), original 293 tasks unchanged.
