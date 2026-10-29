@@ -1,10 +1,14 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 87% task-weighted.** Verified official-document findings advanced selected tasks; many remain partially researched, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 88% task-weighted.** Verified official-document findings advanced selected tasks; many remain partially researched, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
+
+## Legal signatory and confidential distribution contract checkpoint
+
+The [Steamworks contracting-party and capacity audit](../ontology/steam/legal-signatory-onboarding-and-contract-scope-2026.md) confirms sole-proprietor onboarding and documented payee checks, while leaving minors' legal capacity and partner-specific agreement grants unresolved rather than invented. **Score 88%**, exact 87.560% (Δ +1 pp from 87%). No private documents or identity records accessed.
 
 ## Missing-outcome median partial identification checkpoint
 
@@ -495,4 +499,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - **Designs documented, no live experiments:** Falsifiable low-risk launch and marketing experiments
 - **Implemented; maintain current:** Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 87%** rounded task-weighted progress across 293 tasks; previous checkpoint 87%, delta +0 pp (exact 87.218%). 69 fully verified, 224 partly researched; 126 sources and 681 claims. Real paid units, net payouts, developer profit and exact zero sales remain unknown.
+**Completion: 88%** rounded task-weighted progress across 293 tasks; previous snapshot 87%, exact 87.560%. 71 fully verified, 222 partially researched. 126 sources, 693 bounded claims. Merchant earnings, contract clauses and legal capacity by jurisdiction remain unobserved.

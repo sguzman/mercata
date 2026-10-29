@@ -8427,6 +8427,133 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Its invented examples may demonstrate arithmetic, never actual Steam industry earnings."
+    },
+    {
+      "id": "steam-sign-steam-distribution-agreement",
+      "text": "Steamworks onboarding publicly requires a developer or publisher to sign a Steam Distribution Agreement and separate non-disclosure agreement electronically.",
+      "source_ids": [
+        "steam-onboarding-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The publicly accessible onboarding checklist does not reproduce the signed contract or identify its full grant-of-rights or royalty clauses."
+    },
+    {
+      "id": "steam-legal-signatory-must-own-publishing-right",
+      "text": "Valve says the registered legal company name must identify the entity owning or having the rights to publish the product on Steam.",
+      "source_ids": [
+        "steam-onboarding-doc",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The check is declarative onboarding guidance, not independent proof of actual game intellectual-property title."
+    },
+    {
+      "id": "steam-individual-sole-proprietor-permitted",
+      "text": "Steamworks states developers may onboard as an individual or sole proprietor rather than necessarily incorporating.",
+      "source_ids": [
+        "steam-onboarding-doc",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Whether a specific individual's jurisdiction permits a proposed business form remains a separate local legal issue."
+    },
+    {
+      "id": "steam-tax-bank-name-must-match",
+      "text": "Valve requires the payee bank-account holder's name to match the legal entity name on Steamworks enrollment and tax documentation.",
+      "source_ids": [
+        "steam-onboarding-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Public requirements do not establish an individual person's successful tax verification or bank eligibility."
+    },
+    {
+      "id": "steam-public-legal-names-not-dba",
+      "text": "Onboarding requires real legal names rather than public trade names or aliases for the contracting party.",
+      "source_ids": [
+        "steam-onboarding-doc",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A game may separately use branded public developer or publisher display names."
+    },
+    {
+      "id": "steam-tax-interview-required-to-release",
+      "text": "Steamworks' onboarding FAQ states a partner cannot publish before providing valid bank and tax information.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Official tax treatment and withholding rates depend on jurisdiction, tax residency and completed partner forms."
+    },
+    {
+      "id": "steam-partnership-can-require-supplemental-tax",
+      "text": "Valve states partnership arrangements can require additional partner-level tax information in some jurisdictions.",
+      "source_ids": [
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is not legal advice about the optimal entity structure or any specific business's tax rate."
+    },
+    {
+      "id": "steam-contract-licensing-terms-not-verified",
+      "text": "The public onboarding and FAQ documents identify the need to sign a distribution agreement, but do not supply the particular partner's signed license, termination and royalty wording.",
+      "source_ids": [
+        "steam-onboarding-doc",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Claiming Valve owns game IP, guarantees nonexclusivity or receives a fixed exact rate under an unseen agreement would be unsupported."
+    },
+    {
+      "id": "steam-minimum-signatory-age-undetermined",
+      "text": "The reviewed public onboarding and FAQ guidance does not establish a universal minimum Steamworks distribution-contract signing age applicable to every legal jurisdiction.",
+      "source_ids": [
+        "steam-onboarding-doc",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Contract capacity and possible minor signatories require authoritative local law and actual accepted Steamworks partner terms; no age threshold inferred."
+    },
+    {
+      "id": "steam-onboarding-not-account-proof",
+      "text": "Publication of partner onboarding instructions does not establish that a particular developer has a functioning partner account, signed agreement or verified payee.",
+      "source_ids": [
+        "steam-onboarding-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No account, identity evidence, financial data or contract was accessed."
+    },
+    {
+      "id": "steam-legal-entity-not-public-publisher-label",
+      "text": "Steamworks legal payee identities cannot safely be inferred from publicly branded developer or publisher labels on individual store pages.",
+      "source_ids": [
+        "steam-onboarding-doc",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Legal partners can contract across multiple projects, and storefront labels can change or represent contributors."
+    },
+    {
+      "id": "steam-legal-capacity-uncertain-remains-open",
+      "text": "A complete first-time developer legal-capacity assessment requires jurisdiction-specific rules and authoritative applicable contract terms; a public onboarding page is only one input.",
+      "source_ids": [
+        "steam-onboarding-doc",
+        "steam-onboarding-faq-current-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No jurisdiction-wide capacity census or per-person legal eligibility finding was computed."
     }
   ],
   "observations": [],
@@ -8434,5 +8561,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research adds source-grounded partial identification of median gross sales under missing outcome reports, with mathematical bounds only when an eligible population frame is complete. Real game medians, publisher net receipts, zero sales and profit remain unmeasured."
+  "summary": "Steam research now clarifies that a signed confidential Distribution Agreement governs the legal partner, not a storefront label. Public onboarding confirms sole proprietorship and payee verification but not a universal signatory age or any specific confidential license terms. Real developer income remains unavailable."
 }
