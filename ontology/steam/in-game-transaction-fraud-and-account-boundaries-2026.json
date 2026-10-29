@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "in_game_fraud_status_reconciliation_not_partner_payout_holds",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-mtx-fraud-guidance-20261028",
+    "steam-mtx-implementation-20261028",
+    "steam-dlc-app-guide-2026"
+  ],
+  "claim_ids": [
+    "steam-mtx-in-game-steam-wallet",
+    "steam-mtx-virtual-items-fraud-exposure",
+    "steam-mtx-active-trusted-locked",
+    "steam-mtx-trusted-90days-qualified",
+    "steam-mtx-locked-not-permanent",
+    "steam-mtx-most-fraud-detected-48hours",
+    "steam-mtx-getreport-daily-guidance",
+    "steam-mtx-tradable-72hour-hold",
+    "steam-mtx-init-approved-not-complete",
+    "steam-mtx-success-later-reversal",
+    "steam-mtx-partial-refund-item-specific",
+    "steam-mtx-reversal-categories-five",
+    "steam-mtx-fraud-clawback-recommended",
+    "steam-mtx-error14-user-billing-hold",
+    "steam-mtx-error104-transaction-denied",
+    "steam-mtx-getreport-types-different",
+    "steam-dlc-tradable-goods-discouraged",
+    "steam-partner-payout-hold-unverified"
+  ],
+  "consumer_account_statuses": [
+    "Active",
+    "Trusted",
+    "Locked"
+  ],
+  "trusted_minimum_transaction_age_days": 90,
+  "customer_locked_means_publisher_payout_held": false,
+  "locked_can_be_transient": true,
+  "mtx_statuses": [
+    "Init",
+    "Approved",
+    "Succeeded",
+    "Failed",
+    "Refunded",
+    "PartialRefund",
+    "Chargedback",
+    "RefundedSuspectedFraud",
+    "RefundedFriendlyFraud"
+  ],
+  "reversed_statuses": [
+    "Refunded",
+    "PartialRefund",
+    "Chargedback",
+    "RefundedSuspectedFraud",
+    "RefundedFriendlyFraud"
+  ],
+  "guidance": {
+    "most_fraud_detected_within_hours": 48,
+    "suggested_tradable_item_hold_hours_at_least": 72,
+    "reconcile_getreport_at_least_daily": true,
+    "claw_back_revoked_items_when_possible": true,
+    "preapproval_not_sale": true,
+    "confirmed_success_can_later_reverse": true,
+    "partial_refund_requires_item_level_reconciliation": true
+  },
+  "transaction_error_codes": {
+    "consumer_billing_agreement_hold_due_to_dispute": 14,
+    "denied_by_fraud_detection": 104,
+    "disabled_consumer_account": 102
+  },
+  "basis": {
+    "scope": "in_game_ISteamMicroTxn_orders_not_all_base_game_checkouts",
+    "publisher_bank_payout_hold_inferred_from_customer_error": false,
+    "each_latest_status_is_not_historical_final_settlement": true,
+    "status_report_filters_not_disjoint": true
+  },
+  "hypothetical": {
+    "label": "Synthetic order-state fixtures only; no real player or transaction identifiers",
+    "status_sequence": [
+      "Init",
+      "Approved",
+      "Succeeded",
+      "Failed",
+      "Refunded",
+      "PartialRefund",
+      "Chargedback",
+      "RefundedSuspectedFraud",
+      "RefundedFriendlyFraud"
+    ]
+  },
+  "unknown": {
+    "actual_fraud_or_chargeback_rate": null,
+    "actual_player_locked_share": null,
+    "partner_payment_restriction_frequency": null,
+    "partner_payment_hold_duration": null,
+    "actual_cash_after_reversals": null,
+    "actual_developer_profit": null
+  },
+  "no_account_data": true,
+  "no_partner_api_calls": true
+}

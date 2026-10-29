@@ -1214,6 +1214,28 @@
       "evidence_class": "official_public_currency_unit_and_region_group_documentation",
       "license": "Public URL, independently authored brief facts and minimal factual data; no source text or graphics republished.",
       "notes": "Current live-currency and four regional USD group policies, per-currency smallest-unit differences; not checkout history, authorized finance or guaranteed bank FX."
+    },
+    {
+      "id": "steam-mtx-fraud-guidance-20261028",
+      "url": "https://partner.steamgames.com/doc/features/microtransactions?l=english",
+      "title": "Microtransactions (In-Game Purchases)",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_microtransaction_fraud_prevention_and_player_status_guidance",
+      "license": "Public URL, source title and independent short factual paraphrases; no user information, vendor code or private records copied.",
+      "notes": "Applies to in-game items, wallets, tradable goods and anti-fraud measures, not automatically publisher payouts or base-game purchase rates."
+    },
+    {
+      "id": "steam-mtx-implementation-20261028",
+      "url": "https://partner.steamgames.com/doc/features/microtransactions/implementation?l=english",
+      "title": "Microtransactions Implementation Guide",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_in_game_transaction_lifecycle_and_reversal_states",
+      "license": "Public link and original short factual descriptions only; no API response data or proprietary code reproduced.",
+      "notes": "Order status and GetReport reconciliation including reversals; purchaser billing errors are not partner payment holds."
     }
   ],
   "claims": [
@@ -7172,6 +7194,190 @@
       "observed_at": "2026-10-28",
       "confidence": "high",
       "limitations": "Switching the purchase model is not a fresh paid release, and retained ownership is not new checkout."
+    },
+    {
+      "id": "steam-mtx-in-game-steam-wallet",
+      "text": "Steam requires Steam Wallet settlement through its microtransaction API for in-game purchases by Steam customers.",
+      "source_ids": [
+        "steam-mtx-fraud-guidance-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is not a statement that base-game package purchases and keys are microtransaction orders."
+    },
+    {
+      "id": "steam-mtx-virtual-items-fraud-exposure",
+      "text": "Valve warns that tradable or giftable virtual currencies and items enable fraudsters to move stolen-payment value to other accounts.",
+      "source_ids": [
+        "steam-mtx-fraud-guidance-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No prevalence of chargebacks or number of compromised accounts was measured."
+    },
+    {
+      "id": "steam-mtx-active-trusted-locked",
+      "text": "Steam's GetUserInfo account status can be Active, Trusted or Locked; these relate to customer spending checks.",
+      "source_ids": [
+        "steam-mtx-fraud-guidance-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A customer account restriction is not a Steamworks partner publishing suspension or partner bank-payment hold."
+    },
+    {
+      "id": "steam-mtx-trusted-90days-qualified",
+      "text": "Valve defines Trusted in this context as an account having a transaction older than 90 days with no associated chargeback.",
+      "source_ids": [
+        "steam-mtx-fraud-guidance-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Trusted is not a safe-or-genuine-person guarantee; users or accounts can still be compromised."
+    },
+    {
+      "id": "steam-mtx-locked-not-permanent",
+      "text": "Valve notes Locked customers may be temporarily unable to purchase due to fraud, chargeback, account hijack or Steam terms problems.",
+      "source_ids": [
+        "steam-mtx-fraud-guidance-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Account lock is not invariably permanent, not a developer's payout status and not evidence about specific individual users."
+    },
+    {
+      "id": "steam-mtx-most-fraud-detected-48hours",
+      "text": "Valve says its systems identify most fraudulent in-game transactions within 48 hours.",
+      "source_ids": [
+        "steam-mtx-fraud-guidance-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Qualitative official operational guidance, not a representative exact detection percentage or promise of zero late fraud."
+    },
+    {
+      "id": "steam-mtx-getreport-daily-guidance",
+      "text": "Valve recommends at least daily ISteamMicroTxn GetReport reconciliation because order settlement states can later change.",
+      "source_ids": [
+        "steam-mtx-fraud-guidance-20261028",
+        "steam-mtx-implementation-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Without authorized API calls, a modeled latest-state snapshot is not a verified merchant settlement report."
+    },
+    {
+      "id": "steam-mtx-tradable-72hour-hold",
+      "text": "Valve suggests preventing trade or gifting of newly purchased virtual items for at least 72 hours after purchase to mitigate fraud.",
+      "source_ids": [
+        "steam-mtx-fraud-guidance-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A developer recommendation, not an unconditional Steam-imposed holding period for publisher money."
+    },
+    {
+      "id": "steam-mtx-init-approved-not-complete",
+      "text": "Steam transaction Init/Approved statuses indicate creation and user authorization but not yet a completed Succeeded payment.",
+      "source_ids": [
+        "steam-mtx-implementation-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A pre-finalization event must not be counted as a successful paid unit."
+    },
+    {
+      "id": "steam-mtx-success-later-reversal",
+      "text": "An in-game order marked Succeeded can subsequently enter reversed statuses including Refunded, Chargedback or fraud-related returns.",
+      "source_ids": [
+        "steam-mtx-implementation-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A point-in-time succeeded count may overstate eventual net merchant receipts."
+    },
+    {
+      "id": "steam-mtx-partial-refund-item-specific",
+      "text": "PartialRefund means one or more cart items refunded and requires inspecting item-level status to determine the remaining entitlement.",
+      "source_ids": [
+        "steam-mtx-implementation-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Do not treat partial refund as all units retained or fully reversed without the item breakdown."
+    },
+    {
+      "id": "steam-mtx-reversal-categories-five",
+      "text": "Valve lists Refunded, PartialRefund, Chargedback, RefundedSuspectedFraud and RefundedFriendlyFraud as reversed in-game order states.",
+      "source_ids": [
+        "steam-mtx-implementation-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Names describe transaction lifecycle, not probability, payout hold or a unique count of malicious users."
+    },
+    {
+      "id": "steam-mtx-fraud-clawback-recommended",
+      "text": "Valve advises backends to claw back in-game items associated with a reversed transaction when possible.",
+      "source_ids": [
+        "steam-mtx-fraud-guidance-20261028",
+        "steam-mtx-implementation-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Technical remediation cannot guarantee the item has not been traded or consumed."
+    },
+    {
+      "id": "steam-mtx-error14-user-billing-hold",
+      "text": "Steam's in-game transaction implementation documents error 14 as a billing agreement on hold due to a billing dispute/chargeback.",
+      "source_ids": [
+        "steam-mtx-implementation-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A customer billing agreement is not a publisher remittance account."
+    },
+    {
+      "id": "steam-mtx-error104-transaction-denied",
+      "text": "Steam's implementation error 104 indicates a transaction denied by fraud detection.",
+      "source_ids": [
+        "steam-mtx-implementation-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A denial is not settled sale revenue or proof that a publisher account has been restricted."
+    },
+    {
+      "id": "steam-mtx-getreport-types-different",
+      "text": "GetReport offers distinct transaction type filters including settlement, game sales initialized via the microtransaction API, Steam store item-bearing package sales, and chargebacks.",
+      "source_ids": [
+        "steam-mtx-implementation-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Different API populations cannot be summed as disjoint categories without deduplication; they are not a census of all paid base games."
+    },
+    {
+      "id": "steam-dlc-tradable-goods-discouraged",
+      "text": "Valve advises against placing tradable in-game currency or items inside DLC packages because refund/chargeback fraud can be hard to reconcile.",
+      "source_ids": [
+        "steam-dlc-app-guide-2026",
+        "steam-mtx-fraud-guidance-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is qualitative prevention advice and does not imply ordinary cosmetic DLC is always fraudulent."
+    },
+    {
+      "id": "steam-partner-payout-hold-unverified",
+      "text": "The reviewed consumer microtransaction documents do not establish a universal publisher payout freeze, suspension appeal timeline or probability of withheld publisher funds.",
+      "source_ids": [
+        "steam-mtx-fraud-guidance-20261028",
+        "steam-mtx-implementation-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Publisher-specific agreements, compliance and finance inquiry would be needed; avoid extrapolating from consumer status errors."
     }
   ],
   "observations": [],
@@ -7179,5 +7385,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research now includes a source-backed regional pricing and qualitative game-value checklist, with a tested synthetic fixed-cohort checkout-realization model. Actual regional sales, prices, cash, marginal price elasticity, and developer profit remain unknown."
+  "summary": "Steam research adds Valve's customer microtransaction fraud/reversal states and prevention guidance while explicitly separating customer billing blocks from unobserved publisher payout holds. Actual seller net profit remains unknown."
 }

@@ -4,7 +4,7 @@
   "kind": "research_plan",
   "status": "researching",
   "generated_at": "2026-10-28",
-  "progress_percent": 84,
+  "progress_percent": 85,
   "permission_required_before_execution": false,
   "scope": "Steam PC game marketplace economics: a fixed paid-release population including failures; buyer, developer and publisher denominators; Steam Direct entry, Steamworks, discovery, wishlists, estimated versus audited sales, price, net proceeds, development labor, risk and experimental viability.",
   "baseline": {
@@ -394,7 +394,7 @@
         "steam/risk/build-downside-scenarios-for-small-studios"
       ],
       "phase": 3,
-      "progress_percent": 84
+      "progress_percent": 88
     },
     {
       "id": "strategy",
@@ -1394,7 +1394,7 @@
       "objective": "Research separate base game licenses, DLC purchase events, bundles and microtransactions.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate base game licenses, DLC purchase events, bundles and microtransactions. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/revenue-share-tiers-2018-2026.json",
@@ -1403,9 +1403,13 @@
         "ontology/steam/workshop-ugc-monetization-and-rights-2026.json",
         "specimens/steam.json",
         "ontology/steam/dlc-and-soundtrack-revenue-units-2026.md",
-        "ontology/steam/dlc-and-soundtrack-revenue-units-2026.json"
+        "ontology/steam/dlc-and-soundtrack-revenue-units-2026.json",
+        "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md",
+        "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.json",
+        "site/steam-mtx-status-guards.mjs",
+        "tests/steam-mtx-status-boundaries.test.mjs"
       ],
-      "artifact": "ontology/steam/dlc-and-soundtrack-revenue-units-2026.md",
+      "artifact": "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -3631,14 +3635,18 @@
       "objective": "Research specify compatible base owners, eligible customers and DLC paid units.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify compatible base owners, eligible customers and DLC paid units. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 85,
+      "percent": 90,
       "weight": 1,
       "evidence": [
         "ontology/steam/dlc-and-soundtrack-revenue-units-2026.md",
         "ontology/steam/dlc-and-soundtrack-revenue-units-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md",
+        "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.json",
+        "site/steam-mtx-status-guards.mjs",
+        "tests/steam-mtx-status-boundaries.test.mjs"
       ],
-      "artifact": "ontology/steam/dlc-and-soundtrack-revenue-units-2026.md",
+      "artifact": "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3823,15 +3831,19 @@
       "objective": "Research identify policy enforcement, payout suspensions and fraud investigation impacts.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Identify policy enforcement, payout suspensions and fraud investigation impacts. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 20,
+      "percent": 60,
       "weight": 1,
       "evidence": [
         "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.md",
         "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.json",
         "site/steam-ledger-coverage.mjs",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md",
+        "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.json",
+        "site/steam-mtx-status-guards.mjs",
+        "tests/steam-mtx-status-boundaries.test.mjs"
       ],
-      "artifact": "ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.md",
+      "artifact": "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3881,7 +3893,7 @@
       "objective": "Research create scenarios for return volume, fee treatment and net cash flow volatility.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Create scenarios for return volume, fee treatment and net cash flow volatility. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 90,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/fixed-paid-release-cohort-2026.md",
@@ -3892,9 +3904,13 @@
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
         "ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.md",
-        "ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.json"
+        "ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.json",
+        "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md",
+        "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.json",
+        "site/steam-mtx-status-guards.mjs",
+        "tests/steam-mtx-status-boundaries.test.mjs"
       ],
-      "artifact": "ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.md",
+      "artifact": "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md",
       "priority": "high",
       "phase": 3
     },
@@ -4020,16 +4036,20 @@
       "objective": "Research analyze rights clearance, music licenses, claims, takedowns and regional duties.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Analyze rights clearance, music licenses, claims, takedowns and regional duties. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/keys-cross-store-and-ai-disclosure-2026.md",
         "ontology/steam/keys-cross-store-and-ai-disclosure-2026.json",
         "specimens/steam.json",
         "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
-        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json"
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json",
+        "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md",
+        "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.json",
+        "site/steam-mtx-status-guards.mjs",
+        "tests/steam-mtx-status-boundaries.test.mjs"
       ],
-      "artifact": "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
+      "artifact": "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -4447,16 +4467,20 @@
       "objective": "Research define timely updates, accessible communication and rights-compliant fulfillment.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define timely updates, accessible communication and rights-compliant fulfillment. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
         "specimens/steam.json",
         "ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.md",
-        "ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.json"
+        "ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.json",
+        "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md",
+        "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.json",
+        "site/steam-mtx-status-guards.mjs",
+        "tests/steam-mtx-status-boundaries.test.mjs"
       ],
-      "artifact": "ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.md",
+      "artifact": "ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md",
       "priority": "high",
       "phase": 4
     },

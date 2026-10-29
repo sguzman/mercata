@@ -1,10 +1,14 @@
 # Steam game publishing economics — research inventory
 
-**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 84% task-weighted.** Verified official-document findings advanced selected tasks; many remain partially researched, and no commercial sales have been observed.
+**Research started October 28, 2026.** Initial findings are documented in the [Steamworks entry and payment checkpoint](../ontology/steam/entry-review-and-reporting-2026.md). Steam was already admitted on 2026-10-23. Its [existing 84 baseline tasks](../queues/steam.json) remain unchanged; this plan adds **209 Steam-specific atomic research questions**, for **293 total tasks** across 13 workstreams. **Current progress is 85% task-weighted.** Verified official-document findings advanced selected tasks; many remain partially researched, and no commercial sales have been observed.
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
+
+## Steam in-game fraud and customer account status checkpoint
+
+The [consumer in-game transaction and fraud-risk review](../ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md) distinguishes latest transaction states, possible reversals, preventive 48h/72h guidance, and customer billing restrictions from an **unverified publisher payout hold**. The [synthetic-only status validator](../site/steam-mtx-status-guards.mjs) refuses to treat Approved, PartialRefund or Chargedback as audited paid base-game orders. **Progress 85%** (exact 84.846%; Δ +1 pp after 84%). No account, transaction, or partner financial data accessed.
 
 ## Localized Steam checkout and player-value research
 
@@ -467,4 +471,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 84%** rounded task-weighted progress across 293 tasks; previous 84%, Δ +0 pp (exact 84.471%). 64 fully verified, 229 partially researched; 109 sources and 577 bounded claims. No merchant price/mix data, buyer records or commercial experiments.
+**Completion: 85%** rounded task-weighted progress across 293 tasks; previous 84%, Δ +1 pp (exact 84.846%). 64 fully verified, 229 partially researched; 111 public sources and 595 bounded claims. No customer records, paid experiments or actual publisher incomes.
