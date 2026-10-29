@@ -42,7 +42,10 @@
     "authenticated_partial_gross_lowers_missing_lower_bound": true,
     "partial_floor_requires_in_horizon_and_game_attribution": true,
     "cap_must_not_be_below_partial_floor": true,
-    "four_decimal_usd_to_cents_requires_conservative_bounds": true
+    "four_decimal_usd_to_cents_requires_conservative_bounds": true,
+    "valve_four_decimal_gross_to_cents_outward_quantization_helper": "conservativeSteamFourDecimalUsdCents",
+    "outward_rounding_lower_floor_down_upper_cap_up": true,
+    "decimal_string_parsed_as_bigint_not_float": true
   },
   "synthetic_examples": [
     {

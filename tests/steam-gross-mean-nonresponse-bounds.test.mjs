@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
-import {boundSyntheticSteamGrossMean as bound} from '../site/steam-gross-mean-nonresponse-bounds.mjs';
+import {boundSyntheticSteamGrossMean as bound,conservativeSteamFourDecimalUsdCents as quantize} from '../site/steam-gross-mean-nonresponse-bounds.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
 const x=read('ontology/steam/steam-fixed-horizon-gross-mean-nonresponse-bounds-2026.json'),d=read('specimens/steam.json'),p=read('plans/steam.json'),q=read('queues/steam.json');
 const o=(id,amount,h=30)=>({fixture_id:'fixture-'+id,horizon_days:h,gross_usd_cents:amount,coverage:'complete_reconciled'});
@@ -85,4 +85,30 @@ test('Partial floors and known complete grosses cannot exceed safe arithmetic',(
  observed:[big],missing:[partial('b',1)]}),/Unsafe known and partial lower/);
  assert.throws(()=>bound({eligibleFrameSize:2,horizonDays:30,cohortFrameVerified:true,
  observed:[big],missing:[m('b',1,true)]}),/Unsafe known and capped upper/);
+});
+
+test('Exact four-decimal gross sales strings yield outward-rounded integer cents',()=>{
+ assert.deepEqual(quantize('0.0000'),{lower_cents:0,upper_cents:0,exactly_whole_cents:true});
+ assert.deepEqual(quantize('0.0001'),{lower_cents:0,upper_cents:1,exactly_whole_cents:false});
+ assert.deepEqual(quantize('12.3456'),{lower_cents:1234,upper_cents:1235,exactly_whole_cents:false});
+ assert.deepEqual(quantize('12.3400'),{lower_cents:1234,upper_cents:1234,exactly_whole_cents:true});
+ assert.deepEqual(quantize('90071992547409.9100'),{lower_cents:Number.MAX_SAFE_INTEGER,
+  upper_cents:Number.MAX_SAFE_INTEGER,exactly_whole_cents:true});
+});
+test('Four-decimal converter rejects rounding hazards, unsafe magnitudes and noncanonical formats',()=>{
+ for(const x of ['12.34','12.34000','01.2300','-1.0000','1e2',' 1.0000',
+  '1.0000 ','NaN','Infinity','1,000.0000','100000000000000.0000',12.34,null]){
+  assert.throws(()=>quantize(x),/four-decimal/);
+ }
+ assert.throws(()=>quantize('90071992547409.9101'),/safe integer range/);
+});
+test('Outward decimal rounding preserves partial gross floor below a finite cap',()=>{
+ const floor=quantize('4.0001').lower_cents;
+ const cap=quantize('49.9999').upper_cents;
+ const r=bound({eligibleFrameSize:2,horizonDays:30,cohortFrameVerified:true,
+ observed:[o('a',1000)],missing:[p('b',floor,cap,true)]});
+ assert.equal(floor,400);assert.equal(cap,5000);
+ assert.equal(r.lower_mean_gross_usd_cents,700);
+ assert.equal(r.upper_mean_gross_usd_cents,3000);
+ assert.equal(r.actual_platform_mean_gross,null);
 });

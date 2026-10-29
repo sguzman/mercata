@@ -33,3 +33,7 @@ Valve documents distinct **Steam Package purchases**, **Retail key activations**
 A true first-30-day Steam-wide mean requires the population of originally-paid launches, proper initial paid release dates, accurate package and bundle attribution, authorized complete settlement histories, and explicit nonresponse tracking. A sample of voluntarily publishing successful developers cannot be promoted to a representative industry mean without justified sampling assumptions.
 
 **Remaining unknown:** Steam-wide first-year and launch-month gross averages, exact zero-sale frequency, mean publisher net proceeds and mean after-cost profit. The new numerical fixtures establish algebraic behavior and error handling, not missing empirical earnings observations.
+
+### Exact four-decimal USD conversion
+
+The [synthetic helper](../../site/steam-gross-mean-nonresponse-bounds.mjs) now parses Valve-style four-decimal, nonnegative USD strings using integer arithmetic before converting to safe integer cents. It exposes **both** conservative limits: `$12.3456` becomes a **1,234-cent lower floor** and a **1,235-cent upper cap**; `$12.3400` becomes 1,234 cents in both directions. The parser rejects negative, scientific-notation, noncanonical and unsafe amounts. These are isolated arithmetic tests, **not data drawn from a Steam merchant account**. Gross receipts should remain separate from signed returns, tax and developer bank remittances.

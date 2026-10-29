@@ -67,3 +67,18 @@ export function boundSyntheticSteamGrossMean(args={}){
   real_zero_paid_order_fraction:null,actual_platform_mean_gross:null,developer_net_cash_mean:null,publisher_profit_mean:null,
   note:'Hypothetical bounds only: authenticated partial floors require full in-horizon and package attribution, and independently verified caps cannot be inferred from observed hits. Steam API USD values have four decimals; any cents floor must round downward and any cap upward.'};
 }
+
+
+// Valve reports gross_sales_usd as a decimal string with exactly four USD places.
+// Quantize directionally for conservative integer-cent bounds without floating point.
+export function conservativeSteamFourDecimalUsdCents(value){
+ if(typeof value!=='string'||!/^(0|[1-9][0-9]{0,13})\.[0-9]{4}$/.test(value))
+  throw new TypeError('Canonical four-decimal nonnegative USD string required');
+ const [d,frac]=value.split('.');
+ const tenThousandths=BigInt(d)*10000n+BigInt(frac);
+ const lower=tenThousandths/100n,upper=(tenThousandths+99n)/100n;
+ if(upper>BigInt(Number.MAX_SAFE_INTEGER))
+  throw new RangeError('USD cents exceed the safe integer range');
+ return {lower_cents:Number(lower),upper_cents:Number(upper),
+  exactly_whole_cents:lower===upper};
+}
