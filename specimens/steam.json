@@ -1269,6 +1269,28 @@
       "evidence_class": "engine_ecosystem_editor_telemetry_and_independent_300_respondent_cint_survey",
       "license": "Only public URL, metadata and original aggregate numeric paraphrases. No proprietary raw editor telemetry, participant records or media copied.",
       "notes": "Explicitly distinguish 300 survey respondents from proprietary editor data involving nearly 5 million ecosystem developers. Telemetry covers active editor project time, not total labor to publish a Steam game."
+    },
+    {
+      "id": "steam-localization-official-oct2026",
+      "url": "https://partner.steamgames.com/doc/store/localization?language=english",
+      "title": "Localization and Languages",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_storefront_and_game_localization_policy",
+      "license": "Link and independently paraphrased brief facts only; no image, table or documentation text copied.",
+      "notes": "Separates store-page language, in-game language, name search suggestions and data/region considerations; not actual paid-order measurement."
+    },
+    {
+      "id": "steam-language-levels-official-oct2026",
+      "url": "https://partner.steamgames.com/doc/store/localization/languages?language=english",
+      "title": "Languages Supported on Steam",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_platform_vs_game_only_language_levels",
+      "license": "Link and independent short factual interpretation only.",
+      "notes": "Full platform client/UI/API support differs from Game Support Only filter languages; interface codes not interchangeable."
     }
   ],
   "claims": [
@@ -7700,6 +7722,107 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Such measures require linked game/publisher ID, time tracking from inception through support and actual after-cost royalties."
+    },
+    {
+      "id": "steam-language-platform-29",
+      "text": "Valve's localization guide describes 29 fully supported Steam platform languages.",
+      "source_ids": [
+        "steam-localization-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A platform support count does not equal number of languages translated for every game."
+    },
+    {
+      "id": "steam-language-60pct-client-nonenglish",
+      "text": "Valve's localization guide states more than 60% of Steam users operate in a language other than English.",
+      "source_ids": [
+        "steam-localization-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is Valve's platform-wide language-use statement without a complete published period or distinct purchaser/revenue denominator; it does not reveal country-specific paid demand."
+    },
+    {
+      "id": "steam-language-store-vs-game-separate",
+      "text": "Steam separates localized store-page text/artwork/trailers from in-game interface, subtitle and full-audio support.",
+      "source_ids": [
+        "steam-localization-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A translated store listing is not proof of translated gameplay, and language flags should be truthful."
+    },
+    {
+      "id": "steam-language-localized-name-search",
+      "text": "Steam says localized game names display for customers using the corresponding client language and are used in search suggestions, alongside the original name fallback.",
+      "source_ids": [
+        "steam-localization-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Search suggestions can improve discoverability but no causal increase in impressions, sales or net profits was measured."
+    },
+    {
+      "id": "steam-language-full-vs-game-only",
+      "text": "Valve defines Full Platform Support languages as those available in Steam client/store/community and APIs, whereas Game Support Only languages can be marked as game-supported but do not have general Steam UI/API support.",
+      "source_ids": [
+        "steam-language-levels-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Do not claim identical API language codes or Steam UI localization for all supported game languages."
+    },
+    {
+      "id": "steam-language-game-only-searchable-2022",
+      "text": "Valve says Game Support Only language support indicated by developers became searchable from October 2022.",
+      "source_ids": [
+        "steam-language-levels-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A dated availability policy is not a measured rank or conversion uplift for any language."
+    },
+    {
+      "id": "steam-language-depot-split-optional",
+      "text": "Steam supports one depot for a game with small translated assets or language-specific depots for larger language payloads.",
+      "source_ids": [
+        "steam-localization-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Separate depots can affect download size and patch testing but no bandwidth or developer cost is measured."
+    },
+    {
+      "id": "steam-language-new-locale-update",
+      "text": "Valve encourages developers to release new translations as product updates and announce them, potentially with a coincident campaign.",
+      "source_ids": [
+        "steam-localization-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is optional strategy guidance; no guarantee of revenue or increased retention."
+    },
+    {
+      "id": "steam-language-region-distinct",
+      "text": "Valve cautions against equating a customer's language preferences with country/region, since players can use other languages and should generally access supported localizations globally.",
+      "source_ids": [
+        "steam-localization-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Client language cannot be treated as verified nationality, sensitive demographic characteristic, unique buyer or location."
+    },
+    {
+      "id": "steam-language-localization-roi-not-observed",
+      "text": "Valve's localization documentation gives exposure and product-management guidance but no representative incremental paid sales or cost-return estimate for translating a first Steam game.",
+      "source_ids": [
+        "steam-localization-official-oct2026",
+        "steam-language-levels-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A credible ROI would need tagged traffic/actual orders, costs per language, appropriate controls, and language-aware sampling, not a platform-wide percentage."
     }
   ],
   "observations": [],
@@ -7707,5 +7830,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam public research now includes bounded GDC 2026 professional workweek surveys and Unity 2026 editor-activity metrics, with explicit distinctions from full paid-game labor and verified developer hourly profits."
+  "summary": "Mercata Steam research now includes bounded store-page vs in-game language support, localized search suggestions and optional depot architecture. Non-English users and localized attention are not paid buyers; economic return remains unknown."
 }

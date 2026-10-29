@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "steam_client_languages_localized_store_and_game_discovery_policy",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-localization-official-oct2026",
+    "steam-language-levels-official-oct2026"
+  ],
+  "claim_ids": [
+    "steam-language-platform-29",
+    "steam-language-60pct-client-nonenglish",
+    "steam-language-store-vs-game-separate",
+    "steam-language-localized-name-search",
+    "steam-language-full-vs-game-only",
+    "steam-language-game-only-searchable-2022",
+    "steam-language-depot-split-optional",
+    "steam-language-new-locale-update",
+    "steam-language-region-distinct",
+    "steam-language-localization-roi-not-observed"
+  ],
+  "platform": {
+    "full_client_platform_language_count_documented": 29,
+    "non_english_client_language_user_fraction_operator_claim_gt": 0.6,
+    "non_english_users_equal_paid_buyers": false,
+    "language_equal_country": false
+  },
+  "capabilities": {
+    "store_page_translation_independent_from_in_game": true,
+    "localize_store_written_assets": true,
+    "localized_game_names_contribute_to_search_suggestions": true,
+    "base_name_fallback": true,
+    "game_support_only_languages_searchable_since": "2022-10",
+    "game_support_only_languages_enable_platform_ui_api": false,
+    "in_game_interface_subtitle_full_audio_flags_separate": true,
+    "small_language_assets_one_depot_possible": true,
+    "large_assets_language_depots_supported": true
+  },
+  "proposed_study": {
+    "relevant_groups": [
+      "paid_game_AppID",
+      "historical_supported_locale",
+      "store_page_translation_date",
+      "game_text_audio_support",
+      "language_qualified_store_visits",
+      "matched_refunded_paid_orders",
+      "translation_hours_and_spend"
+    ],
+    "experimental_comparison_performed": false,
+    "publisher_source_analytics_read": false
+  },
+  "unknown": {
+    "incremental_locale_specific_orders": null,
+    "median_localization_roi": null,
+    "measured_search_rank_effect": null,
+    "actual_translation_costs": null,
+    "unique_paid_users_by_language": null
+  },
+  "no_real_campaign": true,
+  "no_steamworks_account_access": true
+}

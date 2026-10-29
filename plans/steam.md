@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Localization and language discoverability checkpoint
+
+The [official language and localization study](../ontology/steam/language-localization-and-discoverability-2026.md) separates client UI language, game language support, translated store pages, search suggestions and country-level sale eligibility. It does not infer paid purchases from platform language use or hypothetical localization benefits. **Score 86%** (exact 85.973%, Δ +0 pp from 86%) across 293 original tasks. No actual localization campaigns or merchant sales.
+
 ## Steam developer labor denominator checkpoint
 
 The [professional workweeks versus total game labor report](../ontology/steam/professional-hours-versus-shipping-labor-2026.md) identifies the separate GDC 2026 mixed professional survey and Unity 2026 editor activity populations, explicitly rejecting the use of editor hours as shipped-game labor or a proxy for hourly Steam income. **Progress 86%** (exact 85.717%; Δ +0 pp from 86%) across 293 original tasks. Representative game production hours and net earnings remain unknown.
@@ -459,7 +463,7 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 
 ## Evidence and stopping rules — current state
 
-- The Steam platform has an active source-backed dossier with **114 sources and 623 bounded claims**, not an empty dossier.
+- The Steam platform has an active source-backed dossier with **116 sources and 633 bounded claims**, not an empty dossier.
 - The original inventory is preserved at **84 baseline plus 209 specialist tasks = 293 tasks**; current task scores reflect partial evidence and acceptance criteria rather than an assertion of verified commercial outcomes.
 - Public documentation can validate platform policies, product types and report semantics. It cannot independently supply zero-sale counts, merchant take-home or developer profits.
 - Model-based or voluntary/success-selected economic estimates remain labeled, dated and bounded; source access and publication terms must be honored.
@@ -479,4 +483,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - **Designs documented, no live experiments:** Falsifiable low-risk launch and marketing experiments
 - **Implemented; maintain current:** Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 86%** rounded task-weighted progress across 293 tasks; previous 86%, Δ +0 pp (exact 85.717%). 65 fully verified, 228 partially researched; 114 sources, 623 bounded claims. No customer or developer private records, actual paid game labor or merchant income.
+**Completion: 86%** rounded task-weighted progress across 293 tasks; previous 86%, Δ +0 pp (exact 85.973%). 65 fully verified, 228 partially researched; 116 sources and 633 bounded claims. No actual merchant sales or experiments.
