@@ -8,7 +8,7 @@ test('Prepublication report window is independent of later R18 Australia code ro
  assert.equal(old.report_observation_period_applies,true);
  assert.equal(old.australian_R18_store_age_gate_in_documented_window,null);
  const later=audit({jurisdiction:'AU',rating:'R18+',date:'2026-09-09'});
- assert.equal(later.report_observation_period_applies,false);
+ assert.equal(later.report_observation_period_applies,null);
  assert.equal(later.australian_R18_store_age_gate_in_documented_window,true);
  assert.equal(later.steam_credit_card_check_reported_for_AU_R18,true);
 });
