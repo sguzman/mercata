@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
-import {boundGrossPaidGameLowerMedian} from '../site/steam-gross-median-bounds.mjs';
+import {boundGrossPaidGameLowerMedian,boundSyntheticSteamGrossOrderMedian as median} from '../site/steam-gross-median-bounds.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
 const x=read('ontology/steam/nonresponse-gross-median-identification-bounds-2026.json'),d=read('specimens/steam.json'),p=read('plans/steam.json'),q=read('queues/steam.json');
 test('Synthetic complete observed cohort gives a point identified lower median',()=>{
@@ -31,4 +31,64 @@ test('No empirical claims are created and original 293 tasks remain unchanged',(
  assert.equal(x.unknown.actual_steam_median_gross,null);
  const scores=[...p.detail_tasks.map(t=>t.percent),...q.queues.flatMap(g=>g.tasks.map(t=>t.progress))];
  assert.equal(scores.length,293);assert.equal(p.progress_percent,Math.round(scores.reduce((a,b)=>a+b,0)/293));
+});
+
+
+const verified=(id,gross,h=30)=>({fixture_id:'fixture-'+id,coverage:'complete_reconciled',
+ horizon_days:h,gross_usd_cents:gross,financial_access_attested:true,
+ transfer_history_reconciled:true,paid_checkout_attribution_attested:true,release_horizon_reconciled:true});
+const missingGame=(id,cap=null,h=30)=>({fixture_id:'fixture-'+id,horizon_days:h,
+ verified_upper_cap_usd_cents:cap,cap_verified:cap!==null});
+test('Authenticated fixed-horizon all-complete gross median matches legacy order statistic',()=>{
+ const x=median({eligibleFrameSize:5,horizonDays:30,cohortFrameVerified:true,
+ observed:[verified('a',0),verified('b',1000),verified('c',2000),verified('d',5000),verified('e',10000)]});
+ assert.equal(x.gross_lower_median_lower_bound_usd_cents,2000);
+ assert.equal(x.gross_lower_median_upper_bound_usd_cents,2000);
+ assert.equal(x.median_point_identified,true);
+ assert.equal(x.actual_steam_median_gross,null);
+});
+test('Missing games produce possible median bounds and preserve unbounded upper median',()=>{
+ const three=median({eligibleFrameSize:5,horizonDays:30,cohortFrameVerified:true,
+ observed:[verified('a',1000),verified('b',2000),verified('c',3000)],
+ missing:[missingGame('d'),missingGame('e')]});
+ assert.equal(three.gross_lower_median_lower_bound_usd_cents,1000);
+ assert.equal(three.gross_lower_median_upper_bound_usd_cents,3000);
+ const two=median({eligibleFrameSize:5,horizonDays:30,cohortFrameVerified:true,
+ observed:[verified('a',1000),verified('b',2000)],
+ missing:[missingGame('c'),missingGame('d'),missingGame('e')]});
+ assert.equal(two.gross_lower_median_lower_bound_usd_cents,0);
+ assert.equal(two.gross_lower_median_upper_bound_usd_cents,null);
+ assert.equal(two.median_upper_unbounded,true);
+});
+test('Authenticated partial sales floors and justified caps tighten median identification',()=>{
+ const a=missingGame('d',5000),b=missingGame('e',6000);
+ Object.assign(a,{observed_partial_gross_usd_cents:1500,partial_gross_verified:true,
+  partial_horizon_attested:true,paid_checkout_attribution_attested:true});
+ Object.assign(b,{observed_partial_gross_usd_cents:2500,partial_gross_verified:true,
+  partial_horizon_attested:true,paid_checkout_attribution_attested:true});
+ const x=median({eligibleFrameSize:5,horizonDays:30,cohortFrameVerified:true,
+ observed:[verified('a',1000),verified('b',2000),verified('c',3000)],missing:[a,b]});
+ assert.equal(x.gross_lower_median_lower_bound_usd_cents,2000);
+ assert.equal(x.gross_lower_median_upper_bound_usd_cents,3000);
+ assert.equal(x.median_point_identified,false);
+ assert.equal(x.verified_partial_floor_games,2);
+});
+test('Four-decimal complete observations retain an interval rather than invented exact cents',()=>{
+ const a={...verified('a',0),gross_sales_usd_4dp:'0.0001'};delete a.gross_usd_cents;
+ const x=median({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,observed:[a]});
+ assert.equal(x.gross_lower_median_lower_bound_usd_cents,0);
+ assert.equal(x.gross_lower_median_upper_bound_usd_cents,1);
+ assert.equal(x.median_point_identified,false);
+});
+test('Mean contract prevents median claims from unauthorized or missing population data',()=>{
+ const a=verified('a',1000);delete a.transfer_history_reconciled;
+ assert.throws(()=>median({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,observed:[a]}),/Complete gross requires/);
+ const b=missingGame('b',500);
+ b.observed_partial_gross_usd_cents=600;b.partial_gross_verified=true;
+ b.partial_horizon_attested=true;b.paid_checkout_attribution_attested=true;
+ assert.throws(()=>median({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,missing:[b]}),/below authenticated partial/);
+ const c=median({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:false,observed:[verified('c',500)]});
+ assert.equal(c.gross_lower_median_lower_bound_usd_cents,null);
+ assert.equal(c.gross_lower_median_upper_bound_usd_cents,null);
+ assert.equal(c.median_point_identified,false);
 });

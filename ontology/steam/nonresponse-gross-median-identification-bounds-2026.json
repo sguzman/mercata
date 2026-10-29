@@ -2,7 +2,7 @@
   "schema_version": 1,
   "specimen_id": "steam",
   "kind": "nonresponse_finite_population_median_partial_identification_protocol",
-  "reviewed_at": "2026-10-28",
+  "reviewed_at": "2026-10-29",
   "source_ids": [
     "steam-manski-partial-identification-missingdata-2005",
     "steam-financial-api-official",
@@ -37,7 +37,11 @@
     "missing_values_lower_support": 0,
     "missing_values_finite_upper_bound_known": false,
     "missing_at_random_assumed": false,
-    "missing_records_are_zero": false
+    "missing_records_are_zero": false,
+    "authenticated_partial_lower_floors_supported_for_median": true,
+    "justified_upper_caps_supported_for_median": true,
+    "median_order_bounds_use_same_mean_validation": true,
+    "four_decimal_gross_inputs_use_conservative_cent_intervals": true
   },
   "hypothetical_cases": [
     {
@@ -85,6 +89,25 @@
       ],
       "expected_lower": 0,
       "expected_upper": null
+    },
+    {
+      "label": "three_completed_two_partial_floor_and_cap",
+      "n": 5,
+      "observed_cents": [
+        1000,
+        2000,
+        3000
+      ],
+      "partial_lower_cents": [
+        1500,
+        2500
+      ],
+      "missing_caps_cents": [
+        5000,
+        6000
+      ],
+      "expected_lower_cents": 2000,
+      "expected_upper_cents": 3000
     }
   ],
   "unknown": {
