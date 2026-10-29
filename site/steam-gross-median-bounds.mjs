@@ -43,8 +43,8 @@ export function boundSyntheticSteamGrossOrderMedian(args={}){
   lows.push(b.lower_cents);highs.push(b.upper_cents);
  }
  for(const row of missing){
-  const partial=row.observed_partial_gross_usd_cents!==undefined||
-   row.observed_partial_gross_usd_4dp!==undefined;
+  const partial=row.observed_partial_gross_usd_cents!=null||
+   row.observed_partial_gross_usd_4dp!=null;
   const capped=row.verified_upper_cap_usd_cents!==undefined&&row.verified_upper_cap_usd_cents!==null||
    row.verified_upper_cap_usd_4dp!==undefined&&row.verified_upper_cap_usd_4dp!==null;
   lows.push(partial?amount(row,'observed_partial_gross_usd_cents','observed_partial_gross_usd_4dp').lower_cents:0);

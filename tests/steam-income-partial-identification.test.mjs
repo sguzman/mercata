@@ -92,3 +92,14 @@ test('Mean contract prevents median claims from unauthorized or missing populati
  assert.equal(c.gross_lower_median_upper_bound_usd_cents,null);
  assert.equal(c.median_point_identified,false);
 });
+
+test('Null optional partial fields remain unknown rather than a fabricated lower floor',()=>{
+ const missing=missingGame('unknown');
+ missing.observed_partial_gross_usd_cents=null;
+ missing.observed_partial_gross_usd_4dp=null;
+ const r=median({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,missing:[missing]});
+ assert.equal(r.gross_lower_median_lower_bound_usd_cents,0);
+ assert.equal(r.gross_lower_median_upper_bound_usd_cents,null);
+ assert.equal(r.verified_partial_floor_games,0);
+ assert.equal(r.median_upper_unbounded,true);
+});
