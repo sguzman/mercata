@@ -1,4 +1,5 @@
-// Research-only public minimum planning floor. Do not use as a Steamworks release authorization.
+// Historical October 28 public 30-day source snapshot; NOT current universal Steamworks eligibility.
+// October 29 public sources conflict (21 days onboarding vs 30 days Steam Direct).
 function asDate(day){
  if(typeof day!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(day))throw new TypeError('Expected ISO YYYY-MM-DD');
  const n=Date.parse(day+'T00:00:00.000Z');
@@ -14,7 +15,8 @@ export function publicFirstReleaseFloor({feePaidOn,comingSoonPublicOn,storeRevie
  const lowerBound=[feeFloor,pageFloor,storeReviewApprovedOn,buildReviewApprovedOn].sort().at(-1);
  return {published_rule_version:'2026-10-28_official_pages',fee_floor:feeFloor,coming_soon_floor:pageFloor,
   store_approval_on:storeReviewApprovedOn,build_approval_on:buildReviewApprovedOn,
-  earliest_candidate_calendar_date:lowerBound,guaranteed_release_date:null,
+  earliest_candidate_calendar_date:lowerBound,historical_snapshot_only:true,
+  current_public_wait_rule_conflicted_as_of:'2026-10-29',guaranteed_release_date:null,
   observed_partner_eligibility:null,
-  note:'Minimum hypothetical candidate only; permissions, policies, account state, reviews and publisher controls may delay release.'};
+  note:'Conditional 30-day calendar candidate from October 28 source snapshot only. October 29 public documents disagree (21 versus 30 days); this does not establish the current operative partner rule.'};
 }
