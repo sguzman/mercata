@@ -1720,6 +1720,28 @@
       "evidence_class": "dynamic_community_tag_count_of_games_by_release_year",
       "license": "Source link and a brief independently written numeric observation only; source page, game listings and graphics not copied.",
       "notes": "2025 Indie tag has 10731 game releases in current live SteamDB view; tag classifications and counts may be revised and are not paid-only publisher identities."
+    },
+    {
+      "id": "steam-open-source-steamworks-compatibility-2026",
+      "url": "https://partner.steamgames.com/doc/sdk/uploading/distributing_opensource",
+      "title": "Distributing Open Source Applications on Steam",
+      "publisher": "Valve Corporation / Steamworks Documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_partner_program_guide",
+      "license": "Public link and independently written bounded findings only; no website text or media replicated.",
+      "notes": "Valve identifies necessary rights warranty, general permissive license examples and conditional Steamworks SDK/copyleft compatibility problems."
+    },
+    {
+      "id": "steam-pc-cafe-publisher-licenses-2026",
+      "url": "https://partner.steamgames.com/doc/sitelicense/publisher",
+      "title": "Steam PC Café Program — Publishers",
+      "publisher": "Valve Corporation / Steamworks Documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_partner_program_guide",
+      "license": "Public link and independently written bounded findings only; no website text or media replicated.",
+      "notes": "Valve documents the separate commercial distribution addendum, actual authority, consumer game launch prerequisite and concurrent commercial license reporting."
     }
   ],
   "claims": [
@@ -10611,12 +10633,103 @@
       "confidence": "bounded_snapshot_and_conditional_mathematical_lower_bound",
       "observed_at": "2026-10-29",
       "limitations": "Free games, ambiguous product scope, incomplete sales and missing financial ledgers block earnings inference."
+    },
+    {
+      "id": "steam-license-signed-partner-agreement-not-public-text",
+      "text": "Valve's public onboarding and finance guidance confirm a signed SDA and direct partners to it, but do not provide the complete license-grant, termination or IP-assignment text.",
+      "source_ids": [
+        "steam-onboarding-doc",
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "high_public_official_documented_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "The absence of agreement text in the cited pages is not a claim about the terms of all executed contracts."
+    },
+    {
+      "id": "steam-oss-partner-warrants-necessary-rights",
+      "text": "Valve's open-source publishing guide states that Steam publishers warrant necessary distribution rights.",
+      "source_ids": [
+        "steam-open-source-steamworks-compatibility-2026"
+      ],
+      "confidence": "high_public_official_documented_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "This general warranty does not establish a particular developer's IP title."
+    },
+    {
+      "id": "steam-oss-permissive-licenses-general-guidance",
+      "text": "Valve names MIT, BSD and Apache 2.0 among licenses generally compatible with Steamworks SDK integration.",
+      "source_ids": [
+        "steam-open-source-steamworks-compatibility-2026"
+      ],
+      "confidence": "high_public_official_documented_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "This does not verify an actual dependency graph."
+    },
+    {
+      "id": "steam-oss-copyleft-risk-case-dependent",
+      "text": "Valve warns about copyleft license/SDK compatibility, but acknowledges that permission and technical integration can change the case-specific conclusion.",
+      "source_ids": [
+        "steam-open-source-steamworks-compatibility-2026"
+      ],
+      "confidence": "high_public_official_documented_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "It is not a universal GPL game ban; no code or legal terms examined."
+    },
+    {
+      "id": "steam-cafe-commercial-needs-separate-addendum",
+      "text": "Valve requires a Café Distribution Addendum for commercial PC-café licenses beyond ordinary consumer copies.",
+      "source_ids": [
+        "steam-pc-cafe-publisher-licenses-2026"
+      ],
+      "confidence": "high_public_official_documented_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "Neither signed agreement was inspected."
+    },
+    {
+      "id": "steam-cafe-license-offer-after-consumer-launch",
+      "text": "Valve enables the commercial-license package option after the ordinary consumer product launches.",
+      "source_ids": [
+        "steam-pc-cafe-publisher-licenses-2026"
+      ],
+      "confidence": "high_public_official_documented_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "Eligibility is not an actual sale."
+    },
+    {
+      "id": "steam-cafe-actual-authority-signs-addendum",
+      "text": "Valve limits signing the café addendum to Actual Authority accounts, and approves commercial package pricing before publication.",
+      "source_ids": [
+        "steam-pc-cafe-publisher-licenses-2026"
+      ],
+      "confidence": "high_public_official_documented_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "No account or price submission was made."
+    },
+    {
+      "id": "steam-cafe-commercial-license-pool-concurrent",
+      "text": "Valve describes floating commercial licenses shared as concurrent seats across a café's machines, not one personal purchase per visitor.",
+      "source_ids": [
+        "steam-pc-cafe-publisher-licenses-2026"
+      ],
+      "confidence": "high_public_official_documented_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "Access accounting and customer purchases differ."
+    },
+    {
+      "id": "steam-cafe-financials-reported-separately",
+      "text": "Valve says commercial café license sales appear separately in the partner's sales report when such sales occur.",
+      "source_ids": [
+        "steam-pc-cafe-publisher-licenses-2026"
+      ],
+      "confidence": "high_public_official_documented_boundary",
+      "observed_at": "2026-10-29",
+      "limitations": "No actual sales or payout observed."
     }
   ],
   "observations": [],
   "opportunities": [],
   "risks": [],
   "experiments": [],
-  "updated_at": "2026-10-28",
-  "summary": "Steam research now clarifies that a signed confidential Distribution Agreement governs the legal partner, not a storefront label. Public onboarding confirms sole proprietorship and payee verification but not a universal signatory age or any specific confidential license terms. Real developer income remains unavailable."
+  "updated_at": "2026-10-29",
+  "summary": "Steam research distinguishes signed private publisher contracts from documented public obligations, including conditional open-source compatibility and separate commercial café licensing. Representative publisher earnings and zero-sales rates remain unresolved."
 }
