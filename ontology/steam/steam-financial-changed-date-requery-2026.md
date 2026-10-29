@@ -9,6 +9,10 @@ The same official interface provides **an outer changed-date polling watermark**
 The additional [synthetic polling audit](../../site/steam-financial-requery-guards.mjs) uses three invented polls and two changed days, with May 1 repeated in successive polls. It checks monotonic outer cursor chaining, no duplicate dates within a single poll, and the separate date-level refresh requirement. No financial credentials, event timing or sales distributions were observed.
 
 
+### Exact 64-bit financial cursors
+
+Valve publishes the changed-date `highwatermark` as `uint64`, and per-date `max_id` as `int64`; the documented responses encode these markers as decimal strings. A JavaScript `Number` loses integer precision beyond 2^53 - 1, potentially skipping records or falsely checkpointing an incomplete refresh. The synthetic guard now compares cursors with local `BigInt`, accepts canonical unsigned decimal strings up to their documented 64-bit limits and legacy safe-integer fixtures, and **rejects unsafe numeric inputs**. Its JSON results preserve the input cursor representation, never serializing `BigInt` or disclosing actual merchant markers. Separate boundary tests exercise maximum-width markers, mismatched pagination and invalid encodings. This does not establish live API completeness.
+
 ## Poll-to-refresh checkpoint barrier
 
 The synthetic [refresh event log](steam-financial-changed-date-requery-2026.json) now joins changed-date notifications to complete daily batches. Each poll must process **each notified PT date exactly once**, including dates repeated in later polls, before its outer watermark can be committed. A duplicate batch, unannounced date, missing refresh, unlinked batch, out-of-order poll or prematurely saved watermark fails validation. A poll with no changed dates may commit without manufacturing zero-sale records. The reconciliation uses the **declared event sequence**, not the storage order of the underlying fixture array, when replacing corrected days.

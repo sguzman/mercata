@@ -202,5 +202,12 @@
       "stored_highwatermark": 120
     }
   ],
-  "refresh_log_model": "auditSyntheticSteamFinancialRefreshLog"
+  "refresh_log_model": "auditSyntheticSteamFinancialRefreshLog",
+  "cursor_precision_contract": {
+    "outer_changed_date_marker": "uint64_decimal_string_or_safe_integer_fixture",
+    "per_date_max_id": "nonnegative_int64_decimal_string_or_safe_integer_fixture",
+    "unsafe_javascript_number": "rejected",
+    "representation_preserved_in_output": true,
+    "actual_partner_marker_observed": false
+  }
 }

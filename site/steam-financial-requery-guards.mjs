@@ -7,6 +7,20 @@ const fixture=value=>typeof value==='string'&&/^fixture-[a-z0-9-]+$/.test(value)
 const natural=value=>Number.isSafeInteger(value)&&value>=0;
 // Valve's gross_units_returned is a signed adjustment (e.g. -2 for two returns).
 const signedReturns=value=>Number.isSafeInteger(value)&&value<=0;
+// Valve emits both cursor families as 64-bit IDs, often encoded as JSON decimal strings.
+// Never coerce a wide decimal marker through Number: that can silently skip pages.
+const UINT64_MAX=(1n<<64n)-1n,INT64_MAX=(1n<<63n)-1n;
+const marker=(value,limit,label)=>{
+ const decimal=typeof value==='number'
+  ? (natural(value)?String(value):null)
+  : (typeof value==='string'&&/^(0|[1-9][0-9]*)$/.test(value)?value:null);
+ if(decimal===null)throw new TypeError('Invalid '+label+' 64-bit decimal marker');
+ const parsed=BigInt(decimal);
+ if(parsed>limit)throw new RangeError(label+' 64-bit marker exceeds API range');
+ return parsed;
+};
+const dayMarker=value=>marker(value,INT64_MAX,'per-date');
+const outerMarker=value=>marker(value,UINT64_MAX,'changed-date');
 const safeAdd=(a,b,label)=>{const sum=a+b;if(!Number.isSafeInteger(sum))throw new RangeError('Unsafe accumulated units: '+label);return sum;};
 const permitted=(obj,allowed)=>obj&&typeof obj==='object'&&!Array.isArray(obj)&&Object.keys(obj).every(k=>allowed.includes(k));
 const kinds=new Set(['steam_package','retail_key_activation','microtransaction']);
@@ -27,14 +41,15 @@ export function reconcileSyntheticSteamFinancialDays(batches){
   if(visibility!==null&&visibility!==b.visibility_scope)throw new RangeError('Incompatible financial visibility scopes');
   visibility=b.visibility_scope;
   if(!Array.isArray(b.pages)||!b.pages.length)throw new TypeError('Every changed date must be fully paginated');
-  const observed=new Set(),rows=[];let cursor=0,ended=false;
+  const observed=new Set(),rows=[];let cursor=0n,cursorOutput=0,ended=false;
   for(let i=0;i<b.pages.length;i++){
    const page=b.pages[i];
-   if(!permitted(page,pageKeys)||!natural(page.requested_highwatermark_id)||!natural(page.returned_max_id)||!Array.isArray(page.rows))
+   if(!permitted(page,pageKeys)||!Array.isArray(page.rows))
     throw new TypeError('Invalid page, highwatermark or row list');
-   if(page.requested_highwatermark_id!==cursor||page.returned_max_id<cursor)
+   const requested=dayMarker(page.requested_highwatermark_id),returned=dayMarker(page.returned_max_id);
+   if(requested!==cursor||returned<cursor)
     throw new RangeError('Broken per-date highwatermark pagination');
-   if(page.returned_max_id>cursor&&page.rows.length===0)
+   if(returned>cursor&&page.rows.length===0)
     throw new RangeError('Advancing per-date page cursor requires at least one returned row');
    for(const row of page.rows){
     if(!permitted(row,rowKeys)||!fixture(row.fixture_row_id)||observed.has(row.fixture_row_id)||!kinds.has(row.kind))
@@ -47,17 +62,17 @@ export function reconcileSyntheticSteamFinancialDays(batches){
     }else if(row.gross_units_activated!==0)throw new RangeError('Steam checkout and microtransaction rows cannot be key activations');
     rows.push(row);
    }
-   if(page.returned_max_id===cursor){
+   if(returned===cursor){
     if(page.rows.length||i!==b.pages.length-1)throw new RangeError('Terminal cursor must have no rows and end the date');
     ended=true;
    }else if(i===b.pages.length-1)throw new RangeError('Incomplete daily page sequence');
-   cursor=page.returned_max_id;
+   cursor=returned;cursorOutput=page.returned_max_id;
   }
   if(!ended)throw new RangeError('Missing terminal page');
   // Per Valve, a changed date is fully re-fetched. Its prior rows must be removed, not accumulated.
   if(byDay.has(b.financial_date_pt))revisions++;
   byDay.set(b.financial_date_pt,{financial_date_pt:b.financial_date_pt,
-   final_cursor:cursor,fully_paginated:true,revised:batches.filter(x=>x.financial_date_pt===b.financial_date_pt).length>1,rows});
+   final_cursor:cursorOutput,fully_paginated:true,revised:batches.filter(x=>x.financial_date_pt===b.financial_date_pt).length>1,rows});
  }
  const days=[...byDay.values()].sort((a,b)=>a.financial_date_pt.localeCompare(b.financial_date_pt));
  const totals={steam_package_gross_units_sold:0,steam_package_period_returns:0,
@@ -91,28 +106,29 @@ export function reconcileSyntheticSteamFinancialDays(batches){
 
 export function auditSyntheticSteamChangedDatePolls(polls){
  if(!Array.isArray(polls)||polls.length===0)throw new TypeError('Nonempty synthetic changed-date polls required');
- const ids=new Set(),counts=new Map();let cursor=0;
+ const ids=new Set(),counts=new Map();let cursor=0n,cursorOutput=0;
  for(const poll of polls){
   if(!permitted(poll,['fixture_poll_id','input_highwatermark','result_highwatermark','changed_dates_pt'])||
    !fixture(poll.fixture_poll_id)||ids.has(poll.fixture_poll_id))throw new TypeError('Unique synthetic changed-date poll ID required');
   ids.add(poll.fixture_poll_id);
-  if(!natural(poll.input_highwatermark)||!natural(poll.result_highwatermark)||poll.input_highwatermark!==cursor||
-   poll.result_highwatermark<cursor)throw new RangeError('Broken changed-date highwatermark chain');
+  const inputMarker=outerMarker(poll.input_highwatermark),resultMarker=outerMarker(poll.result_highwatermark);
+  if(inputMarker!==cursor||resultMarker<cursor)
+   throw new RangeError('Broken changed-date highwatermark chain');
   if(!Array.isArray(poll.changed_dates_pt))throw new TypeError('Changed-date list must be present');
   const local=new Set();
   for(const day of poll.changed_dates_pt){
    if(!iso(day)||local.has(day))throw new TypeError('Unique valid Pacific-time changed date required per poll');
    local.add(day);counts.set(day,(counts.get(day)||0)+1);
   }
-  if(cursor===poll.result_highwatermark&&poll.changed_dates_pt.length>0)
+  if(cursor===resultMarker&&poll.changed_dates_pt.length>0)
    throw new RangeError('Unchanged marker cannot accompany new changed-date events');
-  cursor=poll.result_highwatermark;
+  cursor=resultMarker;cursorOutput=poll.result_highwatermark;
  }
  return {kind:'synthetic_changed_date_incremental_poll_audit',
   number_of_polls:polls.length,unique_changed_dates:counts.size,
   total_changed_date_notifications:[...counts.values()].reduce((a,b)=>a+b,0),
   repeated_date_notifications:[...counts.values()].reduce((a,b)=>a+b-1,0),
-  final_changed_date_highwatermark:cursor,
+  final_changed_date_highwatermark:cursorOutput,
   days_to_fully_requery:[...counts.keys()].sort(),
   repeat_notifications_require_full_date_replacement:true,
   outer_changed_date_marker_interchangeable_with_per_day_page_cursor:false,
@@ -141,7 +157,7 @@ export function auditSyntheticSteamFinancialRefreshLog({polls,batches,events}={}
   refresh:['kind','fixture_poll_id','fixture_batch_id'],
   checkpoint:['kind','fixture_poll_id','stored_highwatermark']
  };
- let nextPollIndex=0,active=null,committed=0;
+ let nextPollIndex=0,active=null,committed=0n,committedOutput=0;
  const used=new Set(),ordered=[],checkpoints=[];
  for(const event of events){
   if(!event||!allowed[event.kind]||!permitted(event,allowed[event.kind])||
@@ -151,7 +167,7 @@ export function auditSyntheticSteamFinancialRefreshLog({polls,batches,events}={}
    if(active||nextPollIndex>=polls.length||event.fixture_poll_id!==polls[nextPollIndex].fixture_poll_id)
     throw new RangeError('Poll events must follow committed checkpoint order');
    const poll=polls[nextPollIndex];
-   if(poll.input_highwatermark!==committed)
+   if(outerMarker(poll.input_highwatermark)!==committed)
     throw new RangeError('Poll must begin from the last committed outer highwatermark');
    active={poll,pending:new Set(poll.changed_dates_pt),refreshed:0};
   }else if(event.kind==='refresh'){
@@ -165,16 +181,16 @@ export function auditSyntheticSteamFinancialRefreshLog({polls,batches,events}={}
    active.pending.delete(batch.financial_date_pt);
    used.add(event.fixture_batch_id);ordered.push(batch);active.refreshed++;
   }else{
-   if(!active||event.fixture_poll_id!==active.poll.fixture_poll_id||
-    !natural(event.stored_highwatermark))
+   if(!active||event.fixture_poll_id!==active.poll.fixture_poll_id)
     throw new RangeError('Checkpoint must belong to the active poll');
+   const savedMarker=outerMarker(event.stored_highwatermark);
    if(active.pending.size)
     throw new RangeError('Cannot checkpoint before every notified day is refreshed');
-   if(event.stored_highwatermark!==active.poll.result_highwatermark)
+   if(savedMarker!==outerMarker(active.poll.result_highwatermark))
     throw new RangeError('Checkpoint must store the polled result highwatermark');
-   committed=event.stored_highwatermark;
+   committed=savedMarker;committedOutput=event.stored_highwatermark;
    checkpoints.push({fixture_poll_id:active.poll.fixture_poll_id,
-    refreshed_dates:active.refreshed,stored_highwatermark:committed});
+    refreshed_dates:active.refreshed,stored_highwatermark:committedOutput});
    active=null;nextPollIndex++;
   }
  }
@@ -188,7 +204,7 @@ export function auditSyntheticSteamFinancialRefreshLog({polls,batches,events}={}
   polls_committed:nextPollIndex,
   changed_date_notifications:pollSummary.total_changed_date_notifications,
   fully_refreshed_notifications:ordered.length,
-  final_committed_outer_highwatermark:committed,
+  final_committed_outer_highwatermark:committedOutput,
   checkpoints,reconciled,
   actual_checkpoint_write_durability:null,actual_partner_coverage:null,
   actual_paid_game_zero_fraction:null,

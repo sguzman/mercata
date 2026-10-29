@@ -62,6 +62,56 @@ test('Safe individual unit counts must not overflow aggregate arithmetic',()=>{
  keys[2].pages[0].rows.push(first,extra);
  assert.throws(()=>reconcile(keys),/Unsafe accumulated units: retail keys/);
 });
+test('64-bit string cursors remain exact through daily pagination and changed-date checkpoints',()=>{
+ const day=structuredClone(fixture()[1]);
+ const wideDay='9223372036854775807';
+ day.pages[0].requested_highwatermark_id='0';
+ day.pages[0].returned_max_id=wideDay;
+ day.pages[1].requested_highwatermark_id=wideDay;
+ day.pages[1].returned_max_id=wideDay;
+ const summary=reconcile([day]);
+ assert.equal(summary.days[0].last_full_page_cursor,wideDay);
+ assert.equal(summary.totals.steam_package_period_net_units,-2);
+ assert.doesNotThrow(()=>JSON.stringify(summary));
+ const wideOuter='18446744073709551615';
+ const polls=[
+  {fixture_poll_id:'fixture-wide-poll',input_highwatermark:'0',result_highwatermark:wideOuter,changed_dates_pt:['2026-05-02']},
+  {fixture_poll_id:'fixture-no-changes',input_highwatermark:wideOuter,result_highwatermark:wideOuter,changed_dates_pt:[]}
+ ];
+ assert.equal(auditPolls(polls).final_changed_date_highwatermark,wideOuter);
+ const result=auditRefreshLog({polls,batches:[day],events:[
+  {kind:'poll',fixture_poll_id:'fixture-wide-poll'},
+  {kind:'refresh',fixture_poll_id:'fixture-wide-poll',fixture_batch_id:day.fixture_batch_id},
+  {kind:'checkpoint',fixture_poll_id:'fixture-wide-poll',stored_highwatermark:wideOuter},
+  {kind:'poll',fixture_poll_id:'fixture-no-changes'},
+  {kind:'checkpoint',fixture_poll_id:'fixture-no-changes',stored_highwatermark:wideOuter}
+ ]});
+ assert.equal(result.final_committed_outer_highwatermark,wideOuter);
+ assert.equal(result.checkpoints[0].stored_highwatermark,wideOuter);
+ assert.equal(result.reconciled.days[0].last_full_page_cursor,wideDay);
+ assert.doesNotThrow(()=>JSON.stringify(result));
+});
+test('Unsafe Number cursors, out-of-range 64-bit strings and wrong exact markers fail closed',()=>{
+ const unsafe=fixture();unsafe[1].pages[0].returned_max_id=Number.MAX_SAFE_INTEGER+1;
+ assert.throws(()=>reconcile([unsafe[1]]),/64-bit decimal marker/);
+ const tooWide=fixture();tooWide[1].pages[0].returned_max_id='9223372036854775808';
+ assert.throws(()=>reconcile([tooWide[1]]),/exceeds API range/);
+ const negative=fixture();negative[1].pages[0].requested_highwatermark_id='-1';
+ assert.throws(()=>reconcile([negative[1]]),/64-bit decimal marker/);
+ const wrong=fixture();wrong[1].pages[0].returned_max_id='9007199254740993';
+ wrong[1].pages[1].requested_highwatermark_id='9007199254740992';
+ wrong[1].pages[1].returned_max_id='9007199254740992';
+ assert.throws(()=>reconcile([wrong[1]]),/pagination/);
+ const first=structuredClone(doc.synthetic_changed_date_polls[0]);
+ first.input_highwatermark='0';first.result_highwatermark='18446744073709551616';
+ assert.throws(()=>auditPolls([first]),/exceeds API range/);
+ const second=structuredClone(doc.synthetic_changed_date_polls[0]);
+ second.input_highwatermark=0;second.result_highwatermark=Number.MAX_SAFE_INTEGER+1;
+ assert.throws(()=>auditPolls([second]),/64-bit decimal marker/);
+ const noncanonical=structuredClone(doc.synthetic_changed_date_polls[0]);
+ noncanonical.result_highwatermark='0000120';
+ assert.throws(()=>auditPolls([noncanonical]),/64-bit decimal marker/);
+});
 test('Original 293 Steam tasks, public evidence and source/claim join remain intact',()=>{
  const sources=new Set(d.evidence.map(s=>s.id)),claims=new Map(d.claims.map(c=>[c.id,c]));
  assert.equal(doc.source_ids.length,3);assert.equal(doc.claim_ids.length,7);
