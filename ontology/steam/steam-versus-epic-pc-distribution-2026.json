@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "comparison_of_steam_to_epic_pc_distribution_public_terms_only",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-epic-publishing-2026",
+    "steam-epic-per-title-share-2026",
+    "steam-epic-share-announcement-2025",
+    "steam-epic-first-run-2026",
+    "steam-epic-crossplay-2026",
+    "steamdirect-public",
+    "steam-valve-2025-year-review-march2026"
+  ],
+  "claim_ids": [
+    "steam-epic-two-stores-100usd-fee",
+    "steam-epic-annual-share-1m-title",
+    "steam-epic-annual-reset-jan2026",
+    "steam-epic-threshold-per-title-not-publisher",
+    "steam-epic-transfer-keeps-threshold",
+    "steam-epic-recoup-first",
+    "steam-epic-first-run-exclusive-six-months",
+    "steam-epic-first-run-early-access-clock",
+    "steam-epic-first-run-other-retailer-keys",
+    "steam-epic-first-run-early-exit-retroactive",
+    "steam-epic-pc-online-multiplayer-crossplay",
+    "steam-epic-crossplay-fourweek-build",
+    "steam-epic-pc-achievement-parity",
+    "steam-epic-user-count-not-sales",
+    "steam-epic-no-causal-storefront-rank",
+    "steam-epic-steam-rates-not-verified-contract"
+  ],
+  "scope": {
+    "research_specimen": "steam",
+    "comparator": "Epic Games Store",
+    "new_specimen_admitted": false,
+    "scope_extension": false,
+    "observed_actual_same_game_sales": false,
+    "observed_merchant_profit": false,
+    "actual_partner_contracts_read": false
+  },
+  "steam": {
+    "application_fee_usd": 100,
+    "fee_recoup_adjusted_gross_usd": 1000,
+    "universal_individual_partner_share_verified": false,
+    "net_profit_per_appid": null,
+    "signed_contract_split": null
+  },
+  "epic": {
+    "application_fee_usd": 100,
+    "fee_recoup_threshold_term": "review_applicable_current_EGS_repayment_conditions",
+    "standard_share": {
+      "first_tier_limit_usd_net_revenue_per_title_per_calendar_year": 1000000,
+      "developer_share_first_tier": 1,
+      "developer_share_above": 0.88,
+      "epic_share_above": 0.12,
+      "annual_reset_from_2026": "January 1",
+      "title_transfer_resets": false,
+      "shared_across_epic_processed_pc_mobile_web_shop": true
+    },
+    "optional_first_run": {
+      "opt_in": true,
+      "initial_exclusivity_months": 6,
+      "dev_share_during_exclusivity": 1,
+      "simultaneous_standard_steam_pc_launch_compatible": false,
+      "early_access_counts": true,
+      "first_party_store_sales_possible": true,
+      "qualified_epic_keyless_retailer_fulfillment_possible": true,
+      "early_exit_retroactive_share_possible": true
+    },
+    "cross_store": {
+      "online_multiplayer_pc_crossplay_required": true,
+      "all_release_stages_including_beta_demo": true,
+      "prelaunch_test_build_lead_weeks": 4,
+      "achievement_parity_when_other_pc_stores_have_achievements": true
+    }
+  },
+  "unknown": {
+    "steam_game_median_net_payout": null,
+    "epic_game_median_net_payout": null,
+    "same_game_marginal_crossstore_profit": null,
+    "relative_causal_store_sales_lift": null,
+    "actual_multiplayer_porting_cost": null,
+    "real_exclusivity_opportunity_cost": null
+  },
+  "no_epic_publisher_account": true,
+  "no_storefront_publication": true,
+  "no_paid_promotions": true
+}

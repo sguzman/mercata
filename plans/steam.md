@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Steam versus Epic storefront terms checkpoint
+
+The [Steam/Epic PC distribution comparison](../ontology/steam/steam-versus-epic-pc-distribution-2026.md) documents the competing per-title annual net-revenue tier, optional six-month first-run exclusivity, cross-PC multiplayer/achievement integration obligations and the reason nominal royalty percentages cannot rank actual indie publisher profits. **Score 86%** (exact 86.468%, Δ +0 pp from 86%) over the original 293 Steam tasks; no new specimen or Epic research queue was opened.
+
 ## Localization and language discoverability checkpoint
 
 The [official language and localization study](../ontology/steam/language-localization-and-discoverability-2026.md) separates client UI language, game language support, translated store pages, search suggestions and country-level sale eligibility. It does not infer paid purchases from platform language use or hypothetical localization benefits. **Score 86%** (exact 85.973%, Δ +0 pp from 86%) across 293 original tasks. No actual localization campaigns or merchant sales.
@@ -483,4 +487,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - **Designs documented, no live experiments:** Falsifiable low-risk launch and marketing experiments
 - **Implemented; maintain current:** Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 86%** rounded task-weighted progress across 293 tasks; previous 86%, Δ +0 pp (exact 85.973%). 65 fully verified, 228 partially researched; 116 sources and 633 bounded claims. No actual merchant sales or experiments.
+**Completion: 86%** rounded task-weighted progress across 293 tasks; previous 86%, Δ +0 pp (exact 86.468%). 65 fully verified, 228 partially researched; 121 sources, 649 bounded claims. No merchant receipts, storefront releases, partner terms or paid campaigns executed.

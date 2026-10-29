@@ -1291,6 +1291,61 @@
       "evidence_class": "official_platform_vs_game_only_language_levels",
       "license": "Link and independent short factual interpretation only.",
       "notes": "Full platform client/UI/API support differs from Game Support Only filter languages; interface codes not interchangeable."
+    },
+    {
+      "id": "steam-epic-publishing-2026",
+      "url": "https://store.epicgames.com/distribution",
+      "title": "Epic Games Store Distribution FAQ",
+      "publisher": "Epic Games",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_competing_storefront_publishing_terms",
+      "license": "Public title, URL and independently authored factual paraphrases only. No public document text, graphics, private contracts or source datasets copied.",
+      "notes": "Epic's fee, engine-neutral distribution, cross-PC multiplayer and achievement parity; not Epic publisher earnings."
+    },
+    {
+      "id": "steam-epic-per-title-share-2026",
+      "url": "https://store.epicgames.com/distribution/revenue-programs/revenue-share",
+      "title": "Epic Developer Revenue Share FAQ",
+      "publisher": "Epic Games",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_title_level_net_revenue_share_schedule",
+      "license": "Public title, URL and independently authored factual paraphrases only. No public document text, graphics, private contracts or source datasets copied.",
+      "notes": "Revenue share measured on Epic-processed net revenue per product per calendar year; title transfer and mixed PC/mobile accounting."
+    },
+    {
+      "id": "steam-epic-share-announcement-2025",
+      "url": "https://store.epicgames.com/news/epic-games-store-updates-revenue-share-keep-100-of-the-first-1m-per-product-per-year",
+      "title": "Epic Games Store Revenue Share Update",
+      "publisher": "Epic Games",
+      "published_at": "2025-06-03",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "dated_official_revenue_share_policy_announcement",
+      "license": "Public title, URL and independently authored factual paraphrases only. No public document text, graphics, private contracts or source datasets copied.",
+      "notes": "June 2025 inception and annual January resets starting 2026; not signed individual payout terms."
+    },
+    {
+      "id": "steam-epic-first-run-2026",
+      "url": "https://store.epicgames.com/distribution/revenue-programs/epic-first-run-program",
+      "title": "Epic First Run Program",
+      "publisher": "Epic Games",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_optional_six_month_exclusivity_program",
+      "license": "Public title, URL and independently authored factual paraphrases only. No public document text, graphics, private contracts or source datasets copied.",
+      "notes": "Opt-in first-six-month PC-store exclusivity and revenue terms, with recoup consequences if exclusivity broken."
+    },
+    {
+      "id": "steam-epic-crossplay-2026",
+      "url": "https://dev.epicgames.com/docs/epic-games-store/requirements-guidelines/distribution-requirements/multiplayer-reqs?lang=en-US",
+      "title": "Cross-Platform Multiplayer Guidelines",
+      "publisher": "Epic Games",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_pc_online_multiplayer_and_submission_rules",
+      "license": "Public title, URL and independently authored factual paraphrases only. No public document text, graphics, private contracts or source datasets copied.",
+      "notes": "Requires crossplay across PC stores for online games; build submitted four weeks prelaunch."
     }
   ],
   "claims": [
@@ -7823,6 +7878,171 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "A credible ROI would need tagged traffic/actual orders, costs per language, appropriate controls, and language-aware sampling, not a platform-wide percentage."
+    },
+    {
+      "id": "steam-epic-two-stores-100usd-fee",
+      "text": "Steam Direct and Epic Games Store both document a $100 per-product submission fee with platform-specific recoupment rules.",
+      "source_ids": [
+        "steamdirect-public",
+        "steam-epic-publishing-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Fees are not identical contracts, country-specific tax additions vary, and recoup conditions must be checked separately."
+    },
+    {
+      "id": "steam-epic-annual-share-1m-title",
+      "text": "Epic's standard terms provide a 100% developer revenue share on the first $1 million of Epic-processed net title revenue per calendar year, then 88%/12% above that threshold.",
+      "source_ids": [
+        "steam-epic-per-title-share-2026",
+        "steam-epic-share-announcement-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Gross store checkout, net revenue before platform share, final developer bank payout and after-cost profit are different measures."
+    },
+    {
+      "id": "steam-epic-annual-reset-jan2026",
+      "text": "Epic's $1 million product threshold began June 1, 2025 for the rest of 2025 and resets every January 1 from 2026 onward.",
+      "source_ids": [
+        "steam-epic-share-announcement-2025"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Calendar-year rather than 12-month launch window, unlike a fixed 365-day first-sale research horizon."
+    },
+    {
+      "id": "steam-epic-threshold-per-title-not-publisher",
+      "text": "Epic's threshold is per title across associated offers, publishers and Epic-processed PC/mobile/Web Shop payments; it is not a per-publisher sales allowance.",
+      "source_ids": [
+        "steam-epic-per-title-share-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a revenue-share tier definition, not a publisher income census."
+    },
+    {
+      "id": "steam-epic-transfer-keeps-threshold",
+      "text": "Epic explicitly says a transfer to another publisher does not reset a title's annual threshold.",
+      "source_ids": [
+        "steam-epic-per-title-share-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A management transfer does not identify legal royalty splits, outstanding advances or historical payee cash."
+    },
+    {
+      "id": "steam-epic-recoup-first",
+      "text": "Epic states eligible titles with separate recoupable obligations may have those amounts recouped before the standard annual revenue-share schedule applies.",
+      "source_ids": [
+        "steam-epic-per-title-share-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "An unknown private deal cannot be replaced by the nominal published marginal share."
+    },
+    {
+      "id": "steam-epic-first-run-exclusive-six-months",
+      "text": "Epic First Run offers eligible launches 100% net revenue share for six months if they remain PC-store exclusive to Epic in the program.",
+      "source_ids": [
+        "steam-epic-first-run-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Opt-in and title eligibility apply; it is incompatible with simultaneously selling the same full PC game as a Steam-hosted product during exclusivity."
+    },
+    {
+      "id": "steam-epic-first-run-early-access-clock",
+      "text": "Epic counts a game's Early Access period toward its six-month First Run exclusivity term.",
+      "source_ids": [
+        "steam-epic-first-run-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Full 1.0 release does not restart the exclusion clock."
+    },
+    {
+      "id": "steam-epic-first-run-other-retailer-keys",
+      "text": "Epic First Run permits first-party store sales and third-party retail sales when purchases fulfill Epic access through the authorized keyless distribution system.",
+      "source_ids": [
+        "steam-epic-first-run-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Not equivalent to distributing the full game for PC on Steam itself during the exclusivity term."
+    },
+    {
+      "id": "steam-epic-first-run-early-exit-retroactive",
+      "text": "Epic describes retroactive application of standard distribution terms if a title ends First Run exclusivity early, with possible offsets against future payables.",
+      "source_ids": [
+        "steam-epic-first-run-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Potential financial adjustment needs signed distribution terms; cannot quantify liability in a particular case."
+    },
+    {
+      "id": "steam-epic-pc-online-multiplayer-crossplay",
+      "text": "Epic requires crossplay across PC storefronts for games offering online multiplayer, including Early Access, demo and beta versions.",
+      "source_ids": [
+        "steam-epic-crossplay-2026",
+        "steam-epic-publishing-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Applies to online games, not single-player-only Steam releases; Steam-specific backend may need additional integration."
+    },
+    {
+      "id": "steam-epic-crossplay-fourweek-build",
+      "text": "Epic's guidelines say developers must submit an eligible crossplay-enabled build at least four weeks before public release for review.",
+      "source_ids": [
+        "steam-epic-crossplay-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Documented crossplay submission lead time is not proof of individual review outcomes."
+    },
+    {
+      "id": "steam-epic-pc-achievement-parity",
+      "text": "Epic's self-publishing FAQ requires Epic achievement support for games onboarded after March 9, 2023 when the game has achievements on other PC stores.",
+      "source_ids": [
+        "steam-epic-publishing-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Cross-store parity creates possible integration costs; exceptions and detailed requirement handling need developer-specific review."
+    },
+    {
+      "id": "steam-epic-user-count-not-sales",
+      "text": "Epic's official distribution FAQ reports a large user-account reach but does not establish paid launch conversion, marketwide developer earnings, or Steam-equivalent sales per title.",
+      "source_ids": [
+        "steam-epic-publishing-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Registered users, active buyers, distinct paid orders and publisher revenue are different populations."
+    },
+    {
+      "id": "steam-epic-no-causal-storefront-rank",
+      "text": "The published nominal storefront shares alone cannot establish which storefront delivers greater after-cost game profit or first-game survival.",
+      "source_ids": [
+        "steam-epic-per-title-share-2026",
+        "steamdirect-public"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Need same-title or carefully matched revenue, consumer reach, discounts, contract terms, QA, support and multiplayer/achievement costs."
+    },
+    {
+      "id": "steam-epic-steam-rates-not-verified-contract",
+      "text": "Valve's 2025 platformwide reported 76% payout share and historical marginal tiers do not identify an individual Steam partner's signed current royalty terms.",
+      "source_ids": [
+        "steam-valve-2025-year-review-march2026",
+        "steam-epic-per-title-share-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Comparing a platformwide revenue-weighted Steam average with a published Epic schedule is not a valid per-developer profitability comparison."
     }
   ],
   "observations": [],
@@ -7830,5 +8050,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Mercata Steam research now includes bounded store-page vs in-game language support, localized search suggestions and optional depot architecture. Non-English users and localized attention are not paid buyers; economic return remains unknown."
+  "summary": "Steam research now includes an officially sourced comparison of Steam versus Epic PC publishing terms, annual title-level revenue tiers, optional exclusivity and multiplayer/achievement parity, without equating nominal shares or user bases to actual developer profit."
 }
