@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "technical_drm_and_save_portability_not_verified_customer_switching",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-drm-public-guidance-20261028",
+    "steam-user-ownership-repeat-2026",
+    "steam-cloud-cross-device-2026",
+    "steam-transfer-app-official-2026"
+  ],
+  "claim_ids": [
+    "steam-drm-wrapper-checks-ownership",
+    "steam-drm-not-effective-hard-antipiracy",
+    "steam-drm-steam-features-value",
+    "steam-auth-ownership-distinct-identity",
+    "steam-auth-offstore-drmfree-possible",
+    "steam-cloud-file-sync-not-license",
+    "steam-cloud-user-disable",
+    "steam-cloud-crossos-paths",
+    "steam-cloud-packet-bandwidth-cost",
+    "steam-reviews-and-wishlist-ecosystem-specific",
+    "steam-license-switching-not-price-conversion",
+    "steam-technical-dependence-not-profit"
+  ],
+  "distinctions": {
+    "steam_app_license": "platform_entitlement_not_store_independent_purchase",
+    "steam_cloud_save": "developer_configured_sync_not_guaranteed_portable_backup",
+    "drm_free_copy": "possible_if_developer_explicitly_provides",
+    "user_reviews": "steam_app_community_history_not_equivalent_to_new_store_reviews",
+    "developer_royalties": "private_partner_contract_not_drm_toggle"
+  },
+  "drm": {
+    "wrapper_protects_only_against_casual_copying": true,
+    "guarantees_no_piracy": false,
+    "guarantees_buyer_cross_store_transfer": false
+  },
+  "auth": {
+    "signed_or_encrypted_tickets_and_ownership_queries_available": true,
+    "developer_can_offer_owned_user_drm_free_web_build": true,
+    "developer_can_optionally_use_free_dlc_for_drm_free_build": true,
+    "automatic_cross_store_entitlement_export": false
+  },
+  "cloud": {
+    "user_can_disable_per_game": true,
+    "user_can_disable_globally": true,
+    "auto_cloud_cross_os_roots_require_configuration": true,
+    "files_guaranteed_interoperable_across_game_versions": false,
+    "cloud_file_sync_equals_purchase": false
+  },
+  "research_gates": [
+    "A named game must actually ship a DRM-free build before treating this as an observed option",
+    "Check real local-save formats and manual import/export for each supported OS",
+    "Identify ownership terms and storefront identity separately from save-file movement",
+    "Do not infer purchase conversion, seller earnings or lock-in from availability of APIs"
+  ],
+  "unknown": {
+    "share_of_steam_games_drmfree": null,
+    "cost_of_parallel_support": null,
+    "customer_cross_store_repurchase_rate": null,
+    "independent_save_portability_rate": null,
+    "causal_revenue_effect_of_steam_drm": null,
+    "actual_customer_switching_cost_usd": null
+  },
+  "no_game_build_tested": true,
+  "no_user_data": true
+}

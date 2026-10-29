@@ -1236,6 +1236,17 @@
       "evidence_class": "official_public_in_game_transaction_lifecycle_and_reversal_states",
       "license": "Public link and original short factual descriptions only; no API response data or proprietary code reproduced.",
       "notes": "Order status and GetReport reconciliation including reversals; purchaser billing errors are not partner payment holds."
+    },
+    {
+      "id": "steam-drm-public-guidance-20261028",
+      "url": "https://partner.steamgames.com/doc/features/drm?l=english",
+      "title": "Steam DRM",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_drm_wrapper_and_developer_authenticity_guidance",
+      "license": "Public link, title, independent short factual claims only; no source code, graphics or user data.",
+      "notes": "Steam ownership wrapper intended for casual copying, not absolute piracy prevention or legal license portability."
     }
   ],
   "claims": [
@@ -7378,6 +7389,130 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "Publisher-specific agreements, compliance and finance inquiry would be needed; avoid extrapolating from consumer status errors."
+    },
+    {
+      "id": "steam-drm-wrapper-checks-ownership",
+      "text": "Valve describes the optional Steam DRM wrapper as verifying ownership and opening the Steam client when launching a Steam build.",
+      "source_ids": [
+        "steam-drm-public-guidance-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A technical wrapper is not a copy of a signed customer license or assurance of long-term offline access."
+    },
+    {
+      "id": "steam-drm-not-effective-hard-antipiracy",
+      "text": "Valve cautions that its DRM wrapper mainly slows casual file copying and is not a robust anti-piracy solution against determined attackers.",
+      "source_ids": [
+        "steam-drm-public-guidance-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Does not quantify piracy reduction, sales uplift, support costs or legal enforceability."
+    },
+    {
+      "id": "steam-drm-steam-features-value",
+      "text": "Valve suggests using authenticated Steamworks features such as online multiplayer, achievements and leaderboards to increase the value of legitimate copies.",
+      "source_ids": [
+        "steam-drm-public-guidance-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "This is vendor advice, not a causal experiment proving Steam lock-in or revenue benefit."
+    },
+    {
+      "id": "steam-auth-ownership-distinct-identity",
+      "text": "Valve documents signed session tickets, encrypted app tickets, and ownership queries as distinct mechanisms for verifying Steam user identity and app license.",
+      "source_ids": [
+        "steam-user-ownership-repeat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "An ownership check is not a proof that the license can be resold or transferred to a competing storefront."
+    },
+    {
+      "id": "steam-auth-offstore-drmfree-possible",
+      "text": "Valve's authentication guide describes a publisher-operated route to unlock a DRM-free build on the developer's own website after verified Steam ownership, or providing a DRM-free build as optional free DLC.",
+      "source_ids": [
+        "steam-user-ownership-repeat-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A developer must actually choose to offer the build; this is not Steam automatically exporting a customer's executable or license."
+    },
+    {
+      "id": "steam-cloud-file-sync-not-license",
+      "text": "Steam Cloud is a game-developer-configured save-file syncing service and not a transfer mechanism for paid game licenses or store reviews.",
+      "source_ids": [
+        "steam-cloud-cross-device-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "A synchronized save can remain dependent on Steam/client and game file layout; format migration is not guaranteed."
+    },
+    {
+      "id": "steam-cloud-user-disable",
+      "text": "Valve documents that customers can disable Steam Cloud synchronization globally or for a particular game.",
+      "source_ids": [
+        "steam-cloud-cross-device-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Opting out of sync is not proof of portable local saves or a consumer's entitlement to downloadable backups."
+    },
+    {
+      "id": "steam-cloud-crossos-paths",
+      "text": "Valve describes OS-specific Auto-Cloud roots and overrides for sharing game-save data between Windows, macOS and Linux.",
+      "source_ids": [
+        "steam-cloud-cross-device-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Cross-platform file compatibility, game version migration and cloud conflicts must be tested for each game."
+    },
+    {
+      "id": "steam-cloud-packet-bandwidth-cost",
+      "text": "Valve warns that very large or many small cloud-save files can affect end-user bandwidth and shutdown/relaunch delays.",
+      "source_ids": [
+        "steam-cloud-cross-device-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No per-game bandwidth cost or usage measurement was obtained."
+    },
+    {
+      "id": "steam-reviews-and-wishlist-ecosystem-specific",
+      "text": "Steam's public app-transfer guidance preserves a game's reviews and wishlist history through a Steamworks partner transfer, but not as an export to another unrelated PC storefront.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "The public source does not establish any cross-store transfer capability; lack of documentation is not proof that all manual data migration is legally prohibited."
+    },
+    {
+      "id": "steam-license-switching-not-price-conversion",
+      "text": "A purchased Steam license, synchronized save file, optional developer-distributed DRM-free build, and publisher metadata rights are four different portability questions.",
+      "source_ids": [
+        "steam-drm-public-guidance-20261028",
+        "steam-user-ownership-repeat-2026",
+        "steam-cloud-cross-device-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "No complete catalog or buyer survey measured real-world switching costs or customer willingness to repurchase."
+    },
+    {
+      "id": "steam-technical-dependence-not-profit",
+      "text": "The public DRM/auth/cloud documents do not establish an average profit benefit of tighter integration or the cost of maintaining a parallel DRM-free distribution.",
+      "source_ids": [
+        "steam-drm-public-guidance-20261028",
+        "steam-user-ownership-repeat-2026",
+        "steam-cloud-cross-device-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-28",
+      "limitations": "Developer implementation labor, buyer activity and net publisher receipts remain unknown."
     }
   ],
   "observations": [],
@@ -7385,5 +7520,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam research adds Valve's customer microtransaction fraud/reversal states and prevention guidance while explicitly separating customer billing blocks from unobserved publisher payout holds. Actual seller net profit remains unknown."
+  "summary": "Mercata Steam research now documents DRM/authentication and save-file portability limits that influence buyer switching while retaining uncertainty about actual cross-store repurchases and publisher profits."
 }

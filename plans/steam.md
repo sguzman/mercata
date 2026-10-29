@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Steam DRM, cloud saves and customer switching checkpoint
+
+The [DRM and save-portability report](../ontology/steam/steam-drm-cloud-saves-and-switching-costs-2026.md) distinguishes authenticated Steam license ownership, DRM-free builds voluntarily offered by developers, cross-OS save sync and marketplace-specific reviews. **Score 85%** (exact 85.273%; Δ +0 pp from 85%) across 293 unchanged tasks. No actual switching costs, game builds or measured publisher incomes.
+
 ## Steam in-game fraud and customer account status checkpoint
 
 The [consumer in-game transaction and fraud-risk review](../ontology/steam/in-game-transaction-fraud-and-account-boundaries-2026.md) distinguishes latest transaction states, possible reversals, preventive 48h/72h guidance, and customer billing restrictions from an **unverified publisher payout hold**. The [synthetic-only status validator](../site/steam-mtx-status-guards.mjs) refuses to treat Approved, PartialRefund or Chargedback as audited paid base-game orders. **Progress 85%** (exact 84.846%; Δ +1 pp after 84%). No account, transaction, or partner financial data accessed.
@@ -471,4 +475,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 85%** rounded task-weighted progress across 293 tasks; previous 84%, Δ +1 pp (exact 84.846%). 64 fully verified, 229 partially researched; 111 public sources and 595 bounded claims. No customer records, paid experiments or actual publisher incomes.
+**Completion: 85%** rounded task-weighted progress across 293 tasks; prior 85%, Δ +0 pp (exact 85.273%). 64 fully verified and 229 partially researched; 112 public sources and 607 bounded claims. No account logins, game testing or merchant finances.
