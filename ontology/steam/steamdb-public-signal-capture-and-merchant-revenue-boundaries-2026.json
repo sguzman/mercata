@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_steamdb_catalog_price_and_concurrency_observability_not_merchant_sales",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steamdb-official-faq-method-20261029",
+    "steamdb-annual-release-snapshot-2026-10",
+    "steam-financial-api-official"
+  ],
+  "claim_ids": [
+    "steamdb-faq-appinfo-store-provenance",
+    "steamdb-faq-price-history-actual-checkout",
+    "steamdb-faq-ccu-api-direct",
+    "steamdb-faq-top800-5min-rest10min",
+    "steamdb-faq-ccu-privacy-independent",
+    "steamdb-faq-advance-access-gap",
+    "steamdb-faq-app-changenumber-not-activity",
+    "steamdb-faq-library-count-mismatch",
+    "steamdb-faq-no-public-bulk-api",
+    "steamdb-faq-release-stocks-incomplete",
+    "steamdb-faq-ccu-upper-no-sales",
+    "steamdb-faq-finance-api-separate"
+  ],
+  "source_methods": {
+    "app_and_package_metadata": "SteamKit and Valve update notifications, with some store parsing",
+    "current_top800_ccu_poll_minutes": 5,
+    "other_game_ccu_poll_minutes": 10,
+    "ccu_source": "Valve direct API counts",
+    "price_history": "public reported price history, not actual checkout",
+    "advance_access_may_require_bot_ownership": true,
+    "bot_entitlement_gaps_possible": true,
+    "private_profile_masks_ccu": false,
+    "open_bulk_api_available": false,
+    "scraping_without_permission_allowed": false,
+    "complete_original_paid_cohort_established": false
+  },
+  "interpretation": {
+    "player_concurrency_is_not_unique_paying_buyers": true,
+    "missing_advance_access_ccu_is_not_zero_players": true,
+    "game_metadata_changelist_is_not_evidence_of_development": true,
+    "store_list_price_is_not_transaction_price": true,
+    "public_sampled_ccu_peak_is_not_continuous_peak": true
+  },
+  "unknown": {
+    "actual_paid_order_units": null,
+    "actual_buyer_cohort": null,
+    "actual_advance_access_peak": null,
+    "real_population_peak_between_samples": null,
+    "developer_royalty_receipts": null,
+    "publisher_after_cost_profit": null,
+    "complete_premium_catalog_appids": null
+  },
+  "no_scraping_no_api_calls": true,
+  "synthetic_fixture_only": true
+}

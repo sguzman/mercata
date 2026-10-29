@@ -1797,6 +1797,17 @@
       "evidence_class": "independent_curated_steam_price_and_review_playtime_aggregates",
       "license": "Public aggregate figures and data are CC BY 4.0, credited to MarketYourIndie with canonical URL; no original charts or game-level records reproduced.",
       "notes": "Measured 2026-08-15; review-playtime window 2026-08-07 to 2026-08-08. Selected 6954 paid Steam games with >=50 reviews and >=10 recent-review playtime values, up to 100 most recent reviews/game. Highly visible non-random games and non-random reviewers; not paid checkout or actual profit."
+    },
+    {
+      "id": "steamdb-official-faq-method-20261029",
+      "url": "https://steamdb.info/faq/",
+      "title": "Frequently Asked Questions: SteamDB data acquisition, player counts, access and usage",
+      "publisher": "SteamDB (independent from Valve)",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "first_party_third_party_service_methodology_and_use_restrictions",
+      "license": "Public link and independently written summary only; no scraping, bulk data, full-page reproduction or original figures copied.",
+      "notes": "SteamDB public FAQ explains SteamKit app/package changes, store parsing, concurrent player snapshots, Advance Access entitlement gaps, 5/10-minute schedules, unauthorized crawling restrictions, price history and data accuracy caveats."
     }
   ],
   "claims": [
@@ -11904,6 +11915,130 @@
       "confidence": "methodological_partial_identification_no_empirical_gross_inference",
       "observed_at": "2026-10-29",
       "limitations": "The mathematical bounds are intentionally exercised on synthetic fixtures, not actual game records, and no real average is reported."
+    },
+    {
+      "id": "steamdb-faq-appinfo-store-provenance",
+      "text": "SteamDB says it uses SteamKit and the Steam update system to track application/package changes, and also parses Steam store pages for metadata not available in all APIs.",
+      "source_ids": [
+        "steamdb-official-faq-method-20261029"
+      ],
+      "confidence": "first_party_provider_methodology_observability_not_paid_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "These are public or Steam-client-accessible records, not official authenticated merchant sales ledgers or a guaranteed complete originally-paid launch frame."
+    },
+    {
+      "id": "steamdb-faq-price-history-actual-checkout",
+      "text": "SteamDB publicly provides per-game price history tables and price charts, but displayed historical list or discount prices are not purchaser-level checkout receipts.",
+      "source_ids": [
+        "steamdb-official-faq-method-20261029",
+        "steam-financial-api-official"
+      ],
+      "confidence": "first_party_provider_methodology_observability_not_paid_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "Buyers can pay region-specific prices, gifts or bundle prices; without actual period-matched transactions no revenue or sales units follow."
+    },
+    {
+      "id": "steamdb-faq-ccu-api-direct",
+      "text": "SteamDB says its concurrent player counts come directly from Valve's API rather than being estimated from public owner profiles or reviews.",
+      "source_ids": [
+        "steamdb-official-faq-method-20261029"
+      ],
+      "confidence": "first_party_provider_methodology_observability_not_paid_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "Direct API CCU readings describe instantaneous currently playing users, not unique people over a period, purchased game units or developer earnings."
+    },
+    {
+      "id": "steamdb-faq-top800-5min-rest10min",
+      "text": "SteamDB states it updates concurrency charts for the current top 800 games approximately every five minutes and other games every ten minutes.",
+      "source_ids": [
+        "steamdb-official-faq-method-20261029"
+      ],
+      "confidence": "first_party_provider_methodology_observability_not_paid_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "These collection intervals and Valve's own caching mean unseen within-interval peaks remain possible; the FAQ is not a live completeness audit."
+    },
+    {
+      "id": "steamdb-faq-ccu-privacy-independent",
+      "text": "SteamDB explains that Steam profile privacy settings do not affect the direct Steam API concurrent-player count it receives.",
+      "source_ids": [
+        "steamdb-official-faq-method-20261029"
+      ],
+      "confidence": "first_party_provider_methodology_observability_not_paid_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "This is about public concurrent player counts, not a user's public games library, legal purchasing status or Steam's financial partner reports."
+    },
+    {
+      "id": "steamdb-faq-advance-access-gap",
+      "text": "SteamDB says Advance Access before a game's public release can prevent its bot from observing concurrency without owning the game, so early peaks can be missed.",
+      "source_ids": [
+        "steamdb-official-faq-method-20261029"
+      ],
+      "confidence": "first_party_provider_methodology_observability_not_paid_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "This is conditional on entitlement and tracking; an absent chart is not proof that the game had zero players or zero paid early-access orders."
+    },
+    {
+      "id": "steamdb-faq-app-changenumber-not-activity",
+      "text": "SteamDB explains that a global app change number can increase due to Valve batch metadata edits and is not reliable evidence of genuine new game work.",
+      "source_ids": [
+        "steamdb-official-faq-method-20261029"
+      ],
+      "confidence": "first_party_provider_methodology_observability_not_paid_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "App-info change history can reflect non-content modifications, so an update counter is not observed shipping labor, retention or cash."
+    },
+    {
+      "id": "steamdb-faq-library-count-mismatch",
+      "text": "SteamDB acknowledges that official Steam library views and Web API game counts can disagree because of DLC and free-title inclusion or visibility rules.",
+      "source_ids": [
+        "steamdb-official-faq-method-20261029"
+      ],
+      "confidence": "first_party_provider_methodology_observability_not_paid_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "The exact mismatches depend on game types and APIs; public game-count filters are not independently audited originally-paid AppID populations."
+    },
+    {
+      "id": "steamdb-faq-no-public-bulk-api",
+      "text": "SteamDB's FAQ states it does not currently offer public bulk API access or data dumps and disallows unauthorized automated scraping and refreshing.",
+      "source_ids": [
+        "steamdb-official-faq-method-20261029"
+      ],
+      "confidence": "first_party_provider_methodology_observability_not_paid_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "Mercata did not crawl SteamDB or obtain permission for bulk data; lawful independently available metadata are a separate possible acquisition path."
+    },
+    {
+      "id": "steamdb-faq-release-stocks-incomplete",
+      "text": "SteamDB's current release listing can support a public observed catalog count but does not by itself certify all historical originally-paid paid-release and later-retired titles.",
+      "source_ids": [
+        "steamdb-annual-release-snapshot-2026-10",
+        "steamdb-official-faq-method-20261029"
+      ],
+      "confidence": "first_party_provider_methodology_observability_not_paid_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "A complete retrospective release frame needs independent AppID matching, first-paid eligibility and delisted-game treatment, not just the visible tracker."
+    },
+    {
+      "id": "steamdb-faq-ccu-upper-no-sales",
+      "text": "A sampled five- or ten-minute concurrency chart can certify a maximum among collected API readings, but not the maximum between samples, distinct game owners or paid orders.",
+      "source_ids": [
+        "steamdb-official-faq-method-20261029",
+        "steam-financial-api-official"
+      ],
+      "confidence": "first_party_provider_methodology_observability_not_paid_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "The difference between a sampled peak and actual continuous-time peak is not bounded absent assumptions about between-sample changes."
+    },
+    {
+      "id": "steamdb-faq-finance-api-separate",
+      "text": "Valve's protected financial service reports gross units sold, returns, taxes and money, whereas SteamDB's publicly described catalog, price and CCU data do not supply those merchant outcomes.",
+      "source_ids": [
+        "steamdb-official-faq-method-20261029",
+        "steam-financial-api-official"
+      ],
+      "confidence": "first_party_provider_methodology_observability_not_paid_sales",
+      "observed_at": "2026-10-29",
+      "limitations": "No authenticated Steamworks financial reports, publisher keys, private player profiles or real checkout totals were accessed in this research."
     }
   ],
   "observations": [],
@@ -11911,5 +12046,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Complete fixed-horizon gross sales population means are only set-identified under nonresponse: a verified full game frame and observed gross records give a lower mean, but unbounded missing outcomes have no finite upper average. Real Steam-wide gross and publisher profit remain unknown."
+  "summary": "SteamDB publicly documents app and package metadata, historical prices, direct sampled CCU with Advance Access entitlement gaps, and usage limits. These do not establish store checkout sales, historical originally-paid game population or developer income."
 }
