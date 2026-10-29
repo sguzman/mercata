@@ -34,12 +34,25 @@ test('A missing or duplicate fixture row, key-as-sale, and private-looking field
  const e=fixture();e[0].fixture_batch_id='real-report';assert.throws(()=>reconcile(e),/synthetic/);
  const f=fixture();f[1].visibility_scope='includes_view_grants';assert.throws(()=>reconcile(f),/visibility/);
 });
+test('Valve-signed negative refunds are normalized only for period return totals',()=>{
+ const signed=fixture();
+ assert.equal(signed[1].pages[0].rows[0].gross_units_returned,-4);
+ assert.equal(reconcile(signed).totals.steam_package_period_net_units,3);
+ const bad=fixture();bad[1].pages[0].rows[0].gross_units_returned=4;
+ assert.throws(()=>reconcile(bad),/signed nonpositive/);
+ const badFraction=fixture();badFraction[1].pages[0].rows[0].gross_units_returned=-0.5;
+ assert.throws(()=>reconcile(badFraction),/signed nonpositive/);
+ const mtx=fixture();mtx[1].pages[0].rows[1].gross_units_returned=-2;
+ const result=reconcile(mtx);
+ assert.equal(result.totals.microtransaction_period_returns,2);
+ assert.equal(result.totals.microtransaction_gross_units_sold,5);
+});
 test('Safe individual unit counts must not overflow aggregate arithmetic',()=>{
  const sales=fixture();
  sales[2].pages[0].rows[0].gross_units_sold=Number.MAX_SAFE_INTEGER;
  assert.throws(()=>reconcile(sales),/Unsafe accumulated units: steam sales/);
  const refunds=fixture();
- refunds[2].pages[0].rows[0].gross_units_returned=Number.MAX_SAFE_INTEGER;
+ refunds[2].pages[0].rows[0].gross_units_returned=-Number.MAX_SAFE_INTEGER;
  assert.throws(()=>reconcile(refunds),/Unsafe accumulated units: steam returns/);
  const keys=fixture();
  const first=structuredClone(keys[0].pages[0].rows[1]);

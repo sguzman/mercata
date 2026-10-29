@@ -5,6 +5,8 @@ const iso=value=>{
 };
 const fixture=value=>typeof value==='string'&&/^fixture-[a-z0-9-]+$/.test(value);
 const natural=value=>Number.isSafeInteger(value)&&value>=0;
+// Valve's gross_units_returned is a signed adjustment (e.g. -2 for two returns).
+const signedReturns=value=>Number.isSafeInteger(value)&&value<=0;
 const safeAdd=(a,b,label)=>{const sum=a+b;if(!Number.isSafeInteger(sum))throw new RangeError('Unsafe accumulated units: '+label);return sum;};
 const permitted=(obj,allowed)=>obj&&typeof obj==='object'&&!Array.isArray(obj)&&Object.keys(obj).every(k=>allowed.includes(k));
 const kinds=new Set(['steam_package','retail_key_activation','microtransaction']);
@@ -38,8 +40,8 @@ export function reconcileSyntheticSteamFinancialDays(batches){
     if(!permitted(row,rowKeys)||!fixture(row.fixture_row_id)||observed.has(row.fixture_row_id)||!kinds.has(row.kind))
      throw new TypeError('Duplicate, nonfixture or unsupported report row');
     observed.add(row.fixture_row_id);
-    if(!natural(row.gross_units_sold)||!natural(row.gross_units_returned)||!natural(row.gross_units_activated))
-     throw new TypeError('All aggregate units must be nonnegative safe integers');
+    if(!natural(row.gross_units_sold)||!signedReturns(row.gross_units_returned)||!natural(row.gross_units_activated))
+     throw new TypeError('Sold and activated units must be nonnegative; returned units must be signed nonpositive safe integers');
     if(row.kind==='retail_key_activation'){
      if(row.gross_units_sold!==0||row.gross_units_returned!==0)throw new RangeError('Retail activation is not a Steam checkout');
     }else if(row.gross_units_activated!==0)throw new RangeError('Steam checkout and microtransaction rows cannot be key activations');
@@ -64,12 +66,12 @@ export function reconcileSyntheticSteamFinancialDays(batches){
  for(const day of days)for(const row of day.rows){
   if(row.kind==='steam_package'){
    totals.steam_package_gross_units_sold=safeAdd(totals.steam_package_gross_units_sold,row.gross_units_sold,'steam sales');
-   totals.steam_package_period_returns=safeAdd(totals.steam_package_period_returns,row.gross_units_returned,'steam returns');
+   totals.steam_package_period_returns=safeAdd(totals.steam_package_period_returns,-row.gross_units_returned,'steam returns');
   }else if(row.kind==='retail_key_activation')
    totals.retail_key_units_activated=safeAdd(totals.retail_key_units_activated,row.gross_units_activated,'retail keys');
   else{
    totals.microtransaction_gross_units_sold=safeAdd(totals.microtransaction_gross_units_sold,row.gross_units_sold,'microtransactions');
-   totals.microtransaction_period_returns=safeAdd(totals.microtransaction_period_returns,row.gross_units_returned,'microtransaction returns');
+   totals.microtransaction_period_returns=safeAdd(totals.microtransaction_period_returns,-row.gross_units_returned,'microtransaction returns');
   }
  }
  // Different dates can include returns from earlier purchases; period net may be negative.
