@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "historical_honestly_disclosed_received_net_and_developer_time_return_cases",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-rainswept-2019-payout-postmortem",
+    "steam-starcom-nexus-apr2020-finance-story"
+  ],
+  "claim_ids": [
+    "steam-rainswept-2019-two-store-unit-bases",
+    "steam-rainswept-2019-store-revenue-pay",
+    "steam-rainswept-2019-monthly-net-lag",
+    "steam-rainswept-2019-monthly-gross-mismatch",
+    "steam-rainswept-2019-local-living-cost",
+    "steam-starcom-2020-gross-and-hours",
+    "steam-starcom-2020-expense-and-return",
+    "steam-starcom-2020-review-conversion-shift",
+    "steam-selfdisclosure-not-population-conclusion"
+  ],
+  "cases": [
+    {
+      "id": "rainswept_2019",
+      "source_id": "steam-rainswept-2019-payout-postmortem",
+      "reported_at": "2019-05-15",
+      "sales_period_start": "2019-02-01",
+      "sales_period_end": "2019-05-06",
+      "currency": "USD",
+      "reported": {
+        "steam_units": 978,
+        "gog_units": 271,
+        "all_units": 1249,
+        "steam_gross_usd": 9736,
+        "steam_author_received_net_usd": 4955,
+        "gog_gross_usd": 2512,
+        "gog_author_received_net_usd": 1487,
+        "all_gross_usd": 12248,
+        "all_author_received_net_usd": 6422,
+        "steam_feb_net_usd": 3966,
+        "steam_mar_net_usd": 988,
+        "steam_apr_estimated_net_usd": 565,
+        "steam_feb_gross_usd": 6793,
+        "steam_mar_gross_usd": 1771,
+        "steam_apr_gross_usd": 1029
+      },
+      "reconstruction": {
+        "feb_mar_net_subtotal_usd": 4954,
+        "feb_mar_net_rounding_difference_vs_reported_steam_net_usd": 1,
+        "three_month_gross_subtotal_usd": 9593,
+        "overall_minus_monthly_gross_gap_usd": 143,
+        "april_estimated_net_not_part_of_confirmed_bank_remittance": true
+      },
+      "revenue_author_claims_bank_receipts": true,
+      "merchant_or_bank_records_independently_verified": false,
+      "after_labor_profit_usd": null
+    },
+    {
+      "id": "starcom_nexus_2020",
+      "source_id": "steam-starcom-nexus-apr2020-finance-story",
+      "reported_at": "2020-04-10",
+      "after_full_release_elapsed_months_less_than": 4,
+      "currency": "USD",
+      "reported": {
+        "steam_gross_usd_approx": 400000,
+        "steam_copies_approx": 24000,
+        "external_development_expenses_usd_approx": 25000,
+        "equivalent_full_time_development_months": 30,
+        "author_claimed_monthly_after_expenses_before_personal_tax_usd_more_than": 7000
+      },
+      "after_personal_income_tax_usd": null,
+      "full_opportunity_cost_of_owner_labor_usd": null,
+      "actual_bank_receipts_verified": false,
+      "author_earnings_is_not_salary_benchmark": true
+    }
+  ],
+  "no_private_statements": true,
+  "unknown": {
+    "typical_first_game_publisher_net": null,
+    "typical_steam_developer_hourly_profit": null,
+    "zero_sale_publisher_fraction": null,
+    "representative_first_year_game_survival_rate": null
+  }
+}

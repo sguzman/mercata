@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Representative seller earnings, audited full-release-cohort sales distributions and buyer populations remain unknown; selected historical developer disclosures are explicitly separated from those missing market-wide estimates. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Historical received cash and development-month earnings definitions
+
+The [2019 Rainswept and 2020 Starcom earnings audit](../ontology/steam/steam-historical-received-net-versus-development-return-2026.md) differentiates Steam vs GOG receipts, settled February/March money from estimated April, and a self-reported income per equivalent development month from actual after-tax pay. These remain nonrepresentative historical reports, not publisher population income. **Score 89%** (exact 89.215%, Δ +0.068 pp); 293 tasks unchanged.
+
 ## Developer studio three-title cash definitions and first-year Steam comparison
 
 The [multi-title versus first-game disclosure audit](../ontology/steam/steam-three-title-studio-and-firstyear-gross-net-selfreports-2026.md) adds Studio Ortica's three distinct game outcomes under one studio, cross-currency monetary definitions, a post-publication update audit and RogueCraft's 12-month gross/refund/net reporting. No case is an authenticated representative publisher payout. **Current 89%** (exact 89.147%, Δ +0.085 pp); all 293 original tasks remain fixed.

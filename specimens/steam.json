@@ -1555,6 +1555,28 @@
       "evidence_class": "voluntary_self_report_firstyear_steam_game_units_refunds_gross_and_labeled_net",
       "license": "Original link and separately authored short factual paraphrases only.",
       "notes": "First game RogueCraft, reported 1,674 copies and 220 refunds, $14,992 gross and $11,888 described net after refunds, chargebacks, taxes and VAT. Steam's platform share and payout reconciliation not explicitly attested in author's net definition."
+    },
+    {
+      "id": "steam-rainswept-2019-payout-postmortem",
+      "url": "https://www.gamedeveloper.com/business/3-months-ago-i-released-my-first-game-was-it-worth-quitting-my-job-to-go-indie-detailed-earnings-report-",
+      "title": "3 months ago I released my first game — was it worth quitting my job to go indie?",
+      "publisher": "Armaan Sandhu, first-person guest post in Game Developer",
+      "published_at": "2019-05-15",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "historical_first_party_creator_self_disclosed_stores_and_remittances",
+      "license": "Public URL, title and concise independently written facts only, no reproduced article body or graphics.",
+      "notes": "Rainswept February 1–May 6 2019, 978 Steam + 271 GOG units; Steam $9736 gross $4955 net described as received, GOG $2512 gross $1487 net. February/March $3966+$988 net≈$4954, April $565 labeled estimated and must not be treated as already settled. Seller shares/actual accounting not verified."
+    },
+    {
+      "id": "steam-starcom-nexus-apr2020-finance-story",
+      "url": "https://www.starcomnexus.com/starcom-nexus-postmortem/",
+      "title": "Starcom: Nexus, An Indie Dev Story",
+      "publisher": "Starcom: Nexus developer website",
+      "published_at": "2020-04-10",
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "historical_first_party_developer_gross_cost_labor_and_author_monthly_earnings_estimate",
+      "license": "Original URL and independently authored bounded numerical paraphrases only; no copied article text or media.",
+      "notes": "2020 retrospective less than four months after full Steam release: approximately $400k gross, 24k copies, $25k external costs, 30 full-time-equivalent development months, author claims a little over $7k/month of development time after expenses before income tax. Not audited, no precise net bank receipt or full owner labor valuation."
     }
   ],
   "claims": [
@@ -9775,6 +9797,97 @@
       "confidence": "bounded_creator_self_disclosure",
       "observed_at": "2026-10-28",
       "limitations": "No authenticated merchant ledgers, complete first-game frame or matched expense histories to infer population income/profit."
+    },
+    {
+      "id": "steam-rainswept-2019-two-store-unit-bases",
+      "text": "The Rainswept developer's May 2019 account reports 978 Steam and 271 GOG copies in a February 1–May 6 observation window.",
+      "source_ids": [
+        "steam-rainswept-2019-payout-postmortem"
+      ],
+      "confidence": "bounded_historical_creator_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "Historical single-game two-store account; cannot pool orders into a Steam-only denominator."
+    },
+    {
+      "id": "steam-rainswept-2019-store-revenue-pay",
+      "text": "The same author reports Steam $9,736 gross / $4,955 self-described received net and GOG $2,512 gross / $1,487 received net, for $12,248 gross and $6,422 net across stores.",
+      "source_ids": [
+        "steam-rainswept-2019-payout-postmortem"
+      ],
+      "confidence": "bounded_historical_creator_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "Author-reported bank-money interpretation, no partner and bank statements inspected; mixes platforms if aggregated."
+    },
+    {
+      "id": "steam-rainswept-2019-monthly-net-lag",
+      "text": "The developer reports February $3,966 and March $988 Steam net, but labels April's $565 Steam net as estimated, not already received.",
+      "source_ids": [
+        "steam-rainswept-2019-payout-postmortem"
+      ],
+      "confidence": "bounded_historical_creator_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "February plus March differs by just $1 from overall reported $4,955, consistent with rounding/settlement timing; April cannot be double-counted as bank receipt."
+    },
+    {
+      "id": "steam-rainswept-2019-monthly-gross-mismatch",
+      "text": "The printed February–April gross Steam series is $6,793 + $1,771 + $1,029 = $9,593 versus reported Steam overall $9,736 through May 6.",
+      "source_ids": [
+        "steam-rainswept-2019-payout-postmortem"
+      ],
+      "confidence": "bounded_historical_creator_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "The $143 difference may involve early May or differing reports; cannot repair the source without dated individual reports."
+    },
+    {
+      "id": "steam-rainswept-2019-local-living-cost",
+      "text": "The author explicitly links viability of approximately $6,422 across the first months to very low personal living costs rather than calling it a market salary.",
+      "source_ids": [
+        "steam-rainswept-2019-payout-postmortem"
+      ],
+      "confidence": "bounded_historical_creator_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "Personal household circumstances are not a complete publisher expense/labor ledger or transferable expected outcome."
+    },
+    {
+      "id": "steam-starcom-2020-gross-and-hours",
+      "text": "The Starcom Nexus developer reports approximately $400,000 Steam gross, 24,000 copies and 30 full-time-equivalent development months less than four months after full release.",
+      "source_ids": [
+        "steam-starcom-nexus-apr2020-finance-story"
+      ],
+      "confidence": "bounded_historical_creator_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "Author's chosen development-time accounting may exclude initial pauses or sunk opportunity costs; not verified ledger."
+    },
+    {
+      "id": "steam-starcom-2020-expense-and-return",
+      "text": "The same 2020 account reports roughly $25,000 in external development costs and a little over $7,000 per development month remaining after the author's expenses, before personal income tax.",
+      "source_ids": [
+        "steam-starcom-nexus-apr2020-finance-story"
+      ],
+      "confidence": "bounded_historical_creator_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "The monthly rate is the author's definition and not an independently audited wage, net cash deposit, or full social-cost economic profit."
+    },
+    {
+      "id": "steam-starcom-2020-review-conversion-shift",
+      "text": "The developer describes around one review per 30 sales in Early Access, moving toward one review per 40–45 sales after full release.",
+      "source_ids": [
+        "steam-starcom-nexus-apr2020-finance-story"
+      ],
+      "confidence": "bounded_historical_creator_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "One title/time-window reporting behavior cannot become universal Steam sale-per-review coefficient."
+    },
+    {
+      "id": "steam-selfdisclosure-not-population-conclusion",
+      "text": "An above-average historical developer success and an early first-game remittance example cannot identify median publisher after-cost income, zero-sales fractions or how typical launch cohorts perform in 2026.",
+      "source_ids": [
+        "steam-rainswept-2019-payout-postmortem",
+        "steam-starcom-nexus-apr2020-finance-story"
+      ],
+      "confidence": "bounded_historical_creator_disclosure",
+      "observed_at": "2026-10-28",
+      "limitations": "Voluntary reporting, old platform environment, nonuniform settlement timing and no complete eligible game and legal publisher frame."
     }
   ],
   "observations": [],
