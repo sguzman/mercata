@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "dated_official_steam_sale_announcement_and_discount_eligibility_qa",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-upcoming-events-calendar-oct2026",
+    "steam-seasonal-sale-rules-2026",
+    "steam-discount-rules-2026",
+    "steam-nextfest-evergreen-2026"
+  ],
+  "claim_ids": [
+    "steam-event-winter-dec2026",
+    "steam-event-spring-summer2027",
+    "steam-event-2027-nextfest",
+    "steam-event-scream-v2026",
+    "steam-event-release-30day-wait",
+    "steam-event-price-rise-30day-wait",
+    "steam-event-seasonal-special-exemption",
+    "steam-event-launch-intro-exception",
+    "steam-event-calendar-is-not-causal"
+  ],
+  "events": [
+    {
+      "name": "Winter Sale 2026",
+      "start": "2026-12-17",
+      "end": "2027-01-04",
+      "kind": "seasonal"
+    },
+    {
+      "name": "Spring Sale 2027",
+      "start": "2027-03-18",
+      "end": "2027-03-25",
+      "kind": "seasonal"
+    },
+    {
+      "name": "Summer Sale 2027",
+      "start": "2027-06-24",
+      "end": "2027-07-08",
+      "kind": "seasonal"
+    },
+    {
+      "name": "Steam Scream V 2026",
+      "start": "2026-10-26",
+      "end": "2026-11-02",
+      "kind": "themed"
+    },
+    {
+      "name": "Steam Next Fest February 2027",
+      "start": "2027-02-22",
+      "end": "2027-03-01",
+      "kind": "next_fest"
+    },
+    {
+      "name": "Steam Next Fest June 2027",
+      "start": "2027-06-14",
+      "end": "2027-06-21",
+      "kind": "next_fest"
+    }
+  ],
+  "rules": {
+    "post_release_cooldown_days": 30,
+    "price_increase_cooldown_days": 30,
+    "seasonal_discount_to_discount_exemption": true,
+    "seasonal_post_release_exemption": false,
+    "seasonal_price_increase_exemption": false,
+    "launch_discount_separate_mechanism": true
+  },
+  "model_path": "site/steam-sale-date-eligibility.mjs",
+  "unknown": {
+    "actual_genre_release_conflicts": null,
+    "eligible_games_participating": null,
+    "discount_sales_uplift": null,
+    "best_launch_day": null,
+    "actual_first_game_profit": null
+  },
+  "synthetic_only": true,
+  "no_store_account_access": true
+}

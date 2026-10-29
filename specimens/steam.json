@@ -1522,6 +1522,17 @@
       "evidence_class": "official_current_players_api_limit_documentation",
       "license": "Reference URL and independently written limited field description; no protected user stats or copied code.",
       "notes": "GetNumberOfCurrentPlayers reflects concurrent players in an AppID connected to Steam; not unique buyers, online matchmaking-ready players or lifetime owned licenses. Does not count people playing while disconnected from Steam."
+    },
+    {
+      "id": "steam-upcoming-events-calendar-oct2026",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events",
+      "title": "Upcoming Steam Events",
+      "publisher": "Valve / Steamworks",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_mutable_2026_2027_sales_calendar",
+      "license": "Event names and dates as facts, brief independently authored commentary only.",
+      "notes": "Calendar is dynamic, source checked October 28, 2026; scheduled dates are not actual event attendance, Steam unit sales or a genre-specific release census."
     }
   ],
   "claims": [
@@ -9535,6 +9546,102 @@
       "confidence": "documented_infrastructure_or_explicit_synthetic_model",
       "observed_at": "2026-10-28",
       "limitations": "Absent actual eligible buyers, server sessions, sales and complete operating costs, these quantities are unknown."
+    },
+    {
+      "id": "steam-event-winter-dec2026",
+      "text": "Steamworks currently lists the 2026 Winter Sale from December 17, 2026 through January 4, 2027.",
+      "source_ids": [
+        "steam-upcoming-events-calendar-oct2026",
+        "steam-seasonal-sale-rules-2026"
+      ],
+      "confidence": "official_rule_or_bounded_study_design",
+      "observed_at": "2026-10-28",
+      "limitations": "Future scheduled event may change and does not imply demand or featured placement."
+    },
+    {
+      "id": "steam-event-spring-summer2027",
+      "text": "Steamworks lists the 2027 Spring Sale for March 18–25 and Summer Sale for June 24–July 8.",
+      "source_ids": [
+        "steam-upcoming-events-calendar-oct2026",
+        "steam-seasonal-sale-rules-2026"
+      ],
+      "confidence": "official_rule_or_bounded_study_design",
+      "observed_at": "2026-10-28",
+      "limitations": "Event dates are not consumer or creator counts."
+    },
+    {
+      "id": "steam-event-2027-nextfest",
+      "text": "Steamworks lists Next Fest February 22–March 1 and June 14–21, 2027, for eligible upcoming demo games.",
+      "source_ids": [
+        "steam-upcoming-events-calendar-oct2026",
+        "steam-nextfest-evergreen-2026"
+      ],
+      "confidence": "official_rule_or_bounded_study_design",
+      "observed_at": "2026-10-28",
+      "limitations": "Enrollment and demo availability are separate and dates may change."
+    },
+    {
+      "id": "steam-event-scream-v2026",
+      "text": "The 2026 Steam Scream V themed event is listed October 26–November 2.",
+      "source_ids": [
+        "steam-upcoming-events-calendar-oct2026"
+      ],
+      "confidence": "official_rule_or_bounded_study_design",
+      "observed_at": "2026-10-28",
+      "limitations": "Thematic Halloween and horror classification does not establish rank or paid sales."
+    },
+    {
+      "id": "steam-event-release-30day-wait",
+      "text": "Valve generally blocks ordinary seasonal discounts during the 30-day period after a title's paid release; joining late can be possible when the interval expires.",
+      "source_ids": [
+        "steam-seasonal-sale-rules-2026",
+        "steam-discount-rules-2026"
+      ],
+      "confidence": "official_rule_or_bounded_study_design",
+      "observed_at": "2026-10-28",
+      "limitations": "Account, package, timezone and official current rules still need partner confirmation."
+    },
+    {
+      "id": "steam-event-price-rise-30day-wait",
+      "text": "A base-price increase in any currency generally triggers a 30-day discount cooldown that Steam-wide seasonal sales do not waive.",
+      "source_ids": [
+        "steam-seasonal-sale-rules-2026",
+        "steam-discount-rules-2026"
+      ],
+      "confidence": "official_rule_or_bounded_study_design",
+      "observed_at": "2026-10-28",
+      "limitations": "A publisher needs complete regional price history; a single posted price is insufficient."
+    },
+    {
+      "id": "steam-event-seasonal-special-exemption",
+      "text": "Steam-wide seasonal sales exempt ordinary discount-to-discount cooldowns but not recent release or price increase restrictions.",
+      "source_ids": [
+        "steam-seasonal-sale-rules-2026",
+        "steam-discount-rules-2026"
+      ],
+      "confidence": "official_rule_or_bounded_study_design",
+      "observed_at": "2026-10-28",
+      "limitations": "Do not generalize to other promotional events."
+    },
+    {
+      "id": "steam-event-launch-intro-exception",
+      "text": "A launch discount has a separate optional introductory exception to ordinary release discount cooldowns and must be configured before release.",
+      "source_ids": [
+        "steam-discount-rules-2026"
+      ],
+      "confidence": "official_rule_or_bounded_study_design",
+      "observed_at": "2026-10-28",
+      "limitations": "This helper models post-launch seasonal discounts only, not launch-discount eligibility."
+    },
+    {
+      "id": "steam-event-calendar-is-not-causal",
+      "text": "Overlap between an event and a game launch is a documented scheduling condition, not measured cannibalization or incremental purchases.",
+      "source_ids": [
+        "steam-upcoming-events-calendar-oct2026"
+      ],
+      "confidence": "official_rule_or_bounded_study_design",
+      "observed_at": "2026-10-28",
+      "limitations": "A valid study requires comparable genre, quality, price, release-age and actually transacted buyer cohorts."
     }
   ],
   "observations": [],

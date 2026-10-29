@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Representative seller earnings, audited full-release-cohort sales distributions and buyer populations remain unknown; selected historical developer disclosures are explicitly separated from those missing market-wide estimates. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Announced seasonal sale timing and 30-day release eligibility
+
+The [Steam release calendar study](../ontology/steam/steam-sale-calendar-release-cooldown-eligibility-2026.md) records dated Winter 2026, Spring and Summer 2027 promotions, separate Next Fest events, and tested release/price-increase cooldown gates. This is schedule feasibility, not a measured causal launch effect. **89%** (exact 89.061%, Δ +0.154 pp); 293 tracked tasks unchanged.
+
 ## Match-ready Steam multiplayer capacity versus public concurrency
 
 The [compatible-match pool audit](../ontology/steam/steam-concurrency-match-pool-and-hosting-ceilings-2026.md) adds Valve's current-player API's online-only definition and a tested optimistic capacity ceiling partitioned by region/mode/build. It refuses to equate global concurrency with actual compatible matches or publisher revenue. **Current 89%** (exact 88.908%, Δ +0.171 pp). All 293 original Steam tasks remain unchanged.
