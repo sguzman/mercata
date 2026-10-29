@@ -116,3 +116,77 @@ export function auditSyntheticSteamChangedDatePolls(polls){
   actual_sales_change_distribution:null,
   caveat:'Invented change markers and dates only. Complete per-date page retrieval and prior-period access are independently necessary.'};
 }
+
+/**
+ * Simulate the commit barrier between changed-date polling and full-day replacement.
+ * Events are explicitly invented and chronologically ordered; this is not a live API client.
+ * A notification cannot be acknowledged until its complete daily refresh has been linked.
+ */
+export function auditSyntheticSteamFinancialRefreshLog({polls,batches,events}={}){
+ const pollSummary=auditSyntheticSteamChangedDatePolls(polls);
+ if(!Array.isArray(batches)||!Array.isArray(events)||events.length===0)
+  throw new TypeError('Synthetic batches and nonempty event log required');
+ const batchById=new Map();
+ for(const batch of batches){
+  if(!batch||!fixture(batch.fixture_batch_id)||batchById.has(batch.fixture_batch_id))
+   throw new TypeError('Unique synthetic refresh batch ID required');
+  batchById.set(batch.fixture_batch_id,batch);
+ }
+ const allowed={
+  poll:['kind','fixture_poll_id'],
+  refresh:['kind','fixture_poll_id','fixture_batch_id'],
+  checkpoint:['kind','fixture_poll_id','stored_highwatermark']
+ };
+ let nextPollIndex=0,active=null,committed=0;
+ const used=new Set(),ordered=[],checkpoints=[];
+ for(const event of events){
+  if(!event||!allowed[event.kind]||!permitted(event,allowed[event.kind])||
+   !fixture(event.fixture_poll_id))
+   throw new TypeError('Invalid or nonfixture financial event');
+  if(event.kind==='poll'){
+   if(active||nextPollIndex>=polls.length||event.fixture_poll_id!==polls[nextPollIndex].fixture_poll_id)
+    throw new RangeError('Poll events must follow committed checkpoint order');
+   const poll=polls[nextPollIndex];
+   if(poll.input_highwatermark!==committed)
+    throw new RangeError('Poll must begin from the last committed outer highwatermark');
+   active={poll,pending:new Set(poll.changed_dates_pt),refreshed:0};
+  }else if(event.kind==='refresh'){
+   if(!active||event.fixture_poll_id!==active.poll.fixture_poll_id)
+    throw new RangeError('Refresh must belong to the current uncommitted poll');
+   const batch=batchById.get(event.fixture_batch_id);
+   if(!batch||used.has(event.fixture_batch_id))
+    throw new RangeError('Every refresh must reference one unused synthetic batch');
+   if(!active.pending.has(batch.financial_date_pt))
+    throw new RangeError('Refresh date was not notified or was already refreshed in this poll');
+   active.pending.delete(batch.financial_date_pt);
+   used.add(event.fixture_batch_id);ordered.push(batch);active.refreshed++;
+  }else{
+   if(!active||event.fixture_poll_id!==active.poll.fixture_poll_id||
+    !natural(event.stored_highwatermark))
+    throw new RangeError('Checkpoint must belong to the active poll');
+   if(active.pending.size)
+    throw new RangeError('Cannot checkpoint before every notified day is refreshed');
+   if(event.stored_highwatermark!==active.poll.result_highwatermark)
+    throw new RangeError('Checkpoint must store the polled result highwatermark');
+   committed=event.stored_highwatermark;
+   checkpoints.push({fixture_poll_id:active.poll.fixture_poll_id,
+    refreshed_dates:active.refreshed,stored_highwatermark:committed});
+   active=null;nextPollIndex++;
+  }
+ }
+ if(active||nextPollIndex!==polls.length)
+  throw new RangeError('Every poll must finish with a checkpoint');
+ if(used.size!==batchById.size)
+  throw new RangeError('Unlinked synthetic batch cannot establish a complete refresh log');
+ // Ordered by declared poll events, not input-array order, so later corrections replace earlier days.
+ const reconciled=ordered.length?reconcileSyntheticSteamFinancialDays(ordered):null;
+ return {kind:'synthetic_change_poll_refresh_and_checkpoint_integrity_not_merchant_report',
+  polls_committed:nextPollIndex,
+  changed_date_notifications:pollSummary.total_changed_date_notifications,
+  fully_refreshed_notifications:ordered.length,
+  final_committed_outer_highwatermark:committed,
+  checkpoints,reconciled,
+  actual_checkpoint_write_durability:null,actual_partner_coverage:null,
+  actual_paid_game_zero_fraction:null,
+  limitation:'A fabricated sequential event log tests the refresh-before-checkpoint invariant; it does not prove live ordering, atomic writes, merchant access or historical cohort completeness.'};
+}

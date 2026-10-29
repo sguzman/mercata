@@ -79,3 +79,71 @@ test('Outer changed-date poll rejects stale markers and duplicates, while allowi
  const dupe=structuredClone(good);dupe[1].changed_dates_pt.push('2026-05-01');assert.throws(()=>auditPolls(dupe),/Unique/);
  const real=structuredClone(good);real[0].fixture_poll_id='actual-merchant';assert.throws(()=>auditPolls(real),/synthetic/);
 });
+
+import {auditSyntheticSteamFinancialRefreshLog as auditRefreshLog} from '../site/steam-financial-requery-guards.mjs';
+const refreshFixture=()=>({
+ polls:structuredClone(doc.synthetic_changed_date_polls),
+ batches:structuredClone(doc.synthetic_batches),
+ events:structuredClone(doc.synthetic_refresh_events)
+});
+test('A repeated change date requires a fresh fully paginated batch before its poll checkpoint',()=>{
+ const result=auditRefreshLog(refreshFixture());
+ assert.equal(result.polls_committed,3);
+ assert.equal(result.changed_date_notifications,3);
+ assert.equal(result.fully_refreshed_notifications,3);
+ assert.equal(result.final_committed_outer_highwatermark,120);
+ assert.deepEqual(result.checkpoints.map(x=>x.refreshed_dates),[1,2,0]);
+ assert.equal(result.reconciled.replaced_previous_daily_snapshots,1);
+ assert.equal(result.reconciled.totals.steam_package_gross_units_sold,10);
+ assert.equal(result.reconciled.totals.retail_key_units_activated,0);
+ assert.equal(result.actual_checkpoint_write_durability,null);
+ assert.equal(result.actual_paid_game_zero_fraction,null);
+});
+test('Unordered batch-array storage cannot reverse the event-log correction chronology',()=>{
+ const fixture=refreshFixture();
+ fixture.batches.reverse();
+ const result=auditRefreshLog(fixture);
+ assert.equal(result.reconciled.totals.steam_package_period_net_units,3);
+ assert.equal(result.reconciled.days.find(x=>x.financial_date_pt==='2026-05-01').revised_within_input,true);
+});
+test('Checkpoint before all notified dates or before a poll is complete is rejected',()=>{
+ const a=refreshFixture();
+ a.events=a.events.filter(e=>!(e.kind==='refresh'&&e.fixture_batch_id==='fixture-may2'));
+ assert.throws(()=>auditRefreshLog(a),/Cannot checkpoint before/);
+ const b=refreshFixture();[b.events[4],b.events[6]]=[b.events[6],b.events[4]];
+ assert.throws(()=>auditRefreshLog(b),/Cannot checkpoint before/);
+ const c=refreshFixture();c.events.splice(2,1);
+ assert.throws(()=>auditRefreshLog(c),/committed checkpoint order|Every poll must/);
+});
+test('No unnotified date, reused batch or orphan batch can be treated as a reconciled refresh',()=>{
+ const a=refreshFixture();a.events[1].fixture_batch_id='fixture-may2';
+ assert.throws(()=>auditRefreshLog(a),/not notified/);
+ const b=refreshFixture();b.events[5].fixture_batch_id='fixture-initial-may1';
+ assert.throws(()=>auditRefreshLog(b),/unused/);
+ const c=refreshFixture();const extra=structuredClone(c.batches[1]);
+ extra.fixture_batch_id='fixture-unlinked';
+ c.batches.push(extra);
+ assert.throws(()=>auditRefreshLog(c),/Unlinked/);
+});
+test('Wrong stored marker, incomplete pages, event order and data-bearing event fields fail closed',()=>{
+ const a=refreshFixture();a.events[6].stored_highwatermark=999;
+ assert.throws(()=>auditRefreshLog(a),/Checkpoint must store/);
+ const b=refreshFixture();b.batches[2].pages.pop();
+ assert.throws(()=>auditRefreshLog(b),/Incomplete|Missing terminal/);
+ const c=refreshFixture();c.events[4].private_partner_id='not-a-fixture';
+ assert.throws(()=>auditRefreshLog(c),/Invalid or nonfixture/);
+ const e=refreshFixture();e.events[0].fixture_poll_id='fixture-poll-next';
+ assert.throws(()=>auditRefreshLog(e),/checkpoint order/);
+});
+test('A synthetic no-change first poll can checkpoint without falsely asserting zero sales',()=>{
+ const r=auditRefreshLog({
+  polls:[{fixture_poll_id:'fixture-poll-empty',input_highwatermark:0,result_highwatermark:0,changed_dates_pt:[]}],
+  batches:[],events:[
+   {kind:'poll',fixture_poll_id:'fixture-poll-empty'},
+   {kind:'checkpoint',fixture_poll_id:'fixture-poll-empty',stored_highwatermark:0}
+  ]
+ });
+ assert.equal(r.fully_refreshed_notifications,0);
+ assert.equal(r.reconciled,null);
+ assert.equal(r.actual_partner_coverage,null);
+});

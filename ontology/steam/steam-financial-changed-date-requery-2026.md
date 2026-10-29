@@ -8,6 +8,13 @@ The same official interface provides **an outer changed-date polling watermark**
 
 The additional [synthetic polling audit](../../site/steam-financial-requery-guards.mjs) uses three invented polls and two changed days, with May 1 repeated in successive polls. It checks monotonic outer cursor chaining, no duplicate dates within a single poll, and the separate date-level refresh requirement. No financial credentials, event timing or sales distributions were observed.
 
+
+## Poll-to-refresh checkpoint barrier
+
+The synthetic [refresh event log](steam-financial-changed-date-requery-2026.json) now joins changed-date notifications to complete daily batches. Each poll must process **each notified PT date exactly once**, including dates repeated in later polls, before its outer watermark can be committed. A duplicate batch, unannounced date, missing refresh, unlinked batch, out-of-order poll or prematurely saved watermark fails validation. A poll with no changed dates may commit without manufacturing zero-sale records. The reconciliation uses the **declared event sequence**, not the storage order of the underlying fixture array, when replacing corrected days.
+
+Valve's [published integration sequence](https://partner.steamgames.com/doc/webapi/IPartnerFinancialsService?l=english) stores the returned changed-date watermark only after the detailed daily fetches are complete. The guard models that prerequisite, but an invented log cannot prove a real application's transactional durability, event timing, historical partner visibility or all-AppID population coverage. These fixture dates use ISO `YYYY-MM-DD`; Valve also accepts slash-separated dates and instructs clients to preserve the PT date without timezone conversion. No real financial records, API keys or new estimates enter this test.
+
 ## Date corrections are not new sales to append
 
 [Valve's IPartnerFinancialsService documentation](https://partner.steamgames.com/doc/webapi/IPartnerFinancialsService?l=english) defines `GetChangedDatesForPartner`, which reports a date again when its calculated sales data changes. Valve specifically instructs partners to **re-fetch the entire day and replace the prior stored results**. Later refunds, settlement changes and corrections may revise totals or remove previously returned rows. Appending the refreshed date instead would double-count old rows, overstate gross volume and misclassify real zero/nonzero results.

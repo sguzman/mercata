@@ -157,5 +157,50 @@
     }
   ],
   "changed_date_poll_model": "auditSyntheticSteamChangedDatePolls",
-  "outer_changed_date_marker_is_daily_pagination_cursor": false
+  "outer_changed_date_marker_is_daily_pagination_cursor": false,
+  "synthetic_refresh_events": [
+    {
+      "kind": "poll",
+      "fixture_poll_id": "fixture-poll-first"
+    },
+    {
+      "kind": "refresh",
+      "fixture_poll_id": "fixture-poll-first",
+      "fixture_batch_id": "fixture-initial-may1"
+    },
+    {
+      "kind": "checkpoint",
+      "fixture_poll_id": "fixture-poll-first",
+      "stored_highwatermark": 100
+    },
+    {
+      "kind": "poll",
+      "fixture_poll_id": "fixture-poll-next"
+    },
+    {
+      "kind": "refresh",
+      "fixture_poll_id": "fixture-poll-next",
+      "fixture_batch_id": "fixture-may2"
+    },
+    {
+      "kind": "refresh",
+      "fixture_poll_id": "fixture-poll-next",
+      "fixture_batch_id": "fixture-corrected-may1"
+    },
+    {
+      "kind": "checkpoint",
+      "fixture_poll_id": "fixture-poll-next",
+      "stored_highwatermark": 120
+    },
+    {
+      "kind": "poll",
+      "fixture_poll_id": "fixture-poll-empty"
+    },
+    {
+      "kind": "checkpoint",
+      "fixture_poll_id": "fixture-poll-empty",
+      "stored_highwatermark": 120
+    }
+  ],
+  "refresh_log_model": "auditSyntheticSteamFinancialRefreshLog"
 }
