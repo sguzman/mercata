@@ -1775,6 +1775,17 @@
       "evidence_class": "dated_official_documentation_version_discrepancy_observation",
       "license": "Public source URL and independently summarized narrow facts only; no source text or private account data reproduced.",
       "notes": "Oct 29 English onboarding content states 21-day app-fee wait and tax review up to 30 days, whereas the Steam Direct landing page says 30-day wait. Source may drift; not a verified partner account policy."
+    },
+    {
+      "id": "steamworks-platform-reach-landing-oct29-2026",
+      "url": "https://partner.steamgames.com/",
+      "title": "Steamworks public partner landing: monthly active users and daily impressions",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "first_party_current_undated_public_marketing_reach_claims",
+      "license": "Link and independently authored factual summaries only; no original images, creative assets or source article copies.",
+      "notes": "Landing says over 132 million monthly active users and approximately 1 trillion daily impressions; source does not show underlying measurement month, unique paying customer total or independently audited methodology."
     }
   ],
   "claims": [
@@ -11525,6 +11536,98 @@
       "confidence": "official_public_procedure_and_dated_conflicting_source_text",
       "observed_at": "2026-10-29",
       "limitations": "No partner-level process timing records, measured labor, merchant sales or after-cost income were accessed."
+    },
+    {
+      "id": "steamworks-landing-132m-monthly",
+      "text": "The Steamworks public landing page advertises over 132 million monthly active Steam users, but does not date the underlying measurement month.",
+      "source_ids": [
+        "steamworks-platform-reach-landing-oct29-2026"
+      ],
+      "confidence": "first_party_public_marketing_aggregate_not_payer_estimate",
+      "observed_at": "2026-10-29",
+      "limitations": "A current page-view date is not the underlying reporting date, and Valve does not identify paying customers or purchasing frequency within the monthly-active population."
+    },
+    {
+      "id": "steamworks-landing-1trillion-daily",
+      "text": "The same Steamworks public landing advertises approximately one trillion daily impressions across Steam's marketing and discovery opportunities.",
+      "source_ids": [
+        "steamworks-platform-reach-landing-oct29-2026"
+      ],
+      "confidence": "first_party_public_marketing_aggregate_not_payer_estimate",
+      "observed_at": "2026-10-29",
+      "limitations": "The figure is a promotional rounded platform event total without deduplicated viewer reach, app allocations, a transparent observation date or measured paid conversions."
+    },
+    {
+      "id": "steamworks-landing-impressions-are-events",
+      "text": "A daily impression count is an event volume rather than a count of distinct people, Steam accounts, players or purchasers of an individual game.",
+      "source_ids": [
+        "steamworks-platform-reach-landing-oct29-2026"
+      ],
+      "confidence": "first_party_public_marketing_aggregate_not_payer_estimate",
+      "observed_at": "2026-10-29",
+      "limitations": "The documented source does not define an account-level unique impression frequency or show how often the same person sees multiple promoted surfaces."
+    },
+    {
+      "id": "steamworks-monthly-users-not-buyers",
+      "text": "Valve's Steam monthly active user claim cannot be reused as the population of monthly paying buyers of premium indie games.",
+      "source_ids": [
+        "steamworks-platform-reach-landing-oct29-2026"
+      ],
+      "confidence": "first_party_public_marketing_aggregate_not_payer_estimate",
+      "observed_at": "2026-10-29",
+      "limitations": "The page does not disclose the share that bought anything, the share that bought an originally paid game, geographic eligibility or the count of unique purchase accounts."
+    },
+    {
+      "id": "steamworks-platform-undated-marketing-claim",
+      "text": "A Steamworks marketing-page active-user figure seen on October 29, 2026 does not prove Steam's measured MAU for October 2026 or an annual historical trend.",
+      "source_ids": [
+        "steamworks-platform-reach-landing-oct29-2026"
+      ],
+      "confidence": "first_party_public_marketing_aggregate_not_payer_estimate",
+      "observed_at": "2026-10-29",
+      "limitations": "The advertised figure may be from an unspecified underlying reporting period and has no public timestamped series or audited methodology attached."
+    },
+    {
+      "id": "steamworks-dailydeal-8p2m-not-same-period",
+      "text": "The 8.2 million reported purchasers of a 2025 Daily Deal represent a selected annual promotional segment, not the total number of Steam buyers or a monthly buyer fraction.",
+      "source_ids": [
+        "steam-gdc-2026-journalist-thresholds",
+        "steamworks-platform-reach-landing-oct29-2026"
+      ],
+      "confidence": "first_party_public_marketing_aggregate_not_payer_estimate",
+      "observed_at": "2026-10-29",
+      "limitations": "The annual promotion population and unspecified-month active-user claim have unmatched windows and potentially different user eligibility and deduplication."
+    },
+    {
+      "id": "steamworks-platform-reach-no-implied-revenue",
+      "text": "Neither 132 million monthly active Steam users nor one trillion platform daily impressions identifies the number of paid game orders, checkout amounts, median merchant receipts or net profitability.",
+      "source_ids": [
+        "steamworks-platform-reach-landing-oct29-2026",
+        "steam-valve-2025-year-review-march2026"
+      ],
+      "confidence": "first_party_public_marketing_aggregate_not_payer_estimate",
+      "observed_at": "2026-10-29",
+      "limitations": "No authorized transaction histories, publisher grouping, per-product exposure, tax adjustments or production costs are available from the public marketing page."
+    },
+    {
+      "id": "steamworks-250-territories-not-buyer-census",
+      "text": "Valve describes its audience as spanning 250 countries on the Steamworks landing, but this marketing geography claim does not provide eligible paid buyers by country.",
+      "source_ids": [
+        "steamworks-platform-reach-landing-oct29-2026"
+      ],
+      "confidence": "first_party_public_marketing_aggregate_not_payer_estimate",
+      "observed_at": "2026-10-29",
+      "limitations": "The source does not define territory counting, country-level payment access or the location and spend of actual transacting premium-game customers."
+    },
+    {
+      "id": "steamworks-monthly-plus-daily-no-ratio",
+      "text": "Dividing one trillion daily impressions by 132 million monthly users would mix incompatible time windows and yield neither a purchase conversion rate nor a valid unique exposure rate.",
+      "source_ids": [
+        "steamworks-platform-reach-landing-oct29-2026"
+      ],
+      "confidence": "first_party_public_marketing_aggregate_not_payer_estimate",
+      "observed_at": "2026-10-29",
+      "limitations": "Repeated and personalized impressions, undated reporting and missing user-level joins prevent a defensible per-person exposure or sales estimate."
     }
   ],
   "observations": [],
@@ -11532,5 +11635,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "Official Steam first-release documents have a renewed live 21-day versus 30-day public wait conflict as of October 29. Publisher identity, Coming Soon, separate store/build reviews and manual release are distinct gates; actual first-release outcomes and earnings remain unknown."
+  "summary": "Steamworks advertises over 132 million monthly active users and one trillion daily impressions, but neither supplies unique paying customers, indie premium-game buyers or publisher receipts. Dated, matched buyer denominators remain missing."
 }
