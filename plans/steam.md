@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Localized Steam checkout and player-value research
+
+The [regional price-realization and game-value study](../ontology/steam/regional-price-realization-and-value-2026.md) compares Steam's live currency and USD-region rules, optional tier conversion methods, minimum checkout eligibility, and value hypotheses against the absence of actual regional order prices. A [synthetic-only calculator](../site/steam-regional-checkout.mjs) verifies that unit-weighted prices cannot be reconstructed from today's US list price and estimated owners. **Progress 84%** (exact 84.471%; Δ +0 pp from 84%) across the unchanged 293 tasks. No merchant reports, live prices or games were collected.
+
 ## January 2026 modeled-zero missingness sensitivity
 
 The [modeled-zero missingness check](../ontology/steam/january-2026-modeled-zero-missingness-2026.md) explicitly bounds what 19 unavailable model estimates could change in a 1,230-game provider-defined cohort, while **not** converting model-zero labels to true zero-sales claims. [Synthetic arithmetic verification](../site/steam-modeled-zero-bounds.mjs) is included. **Score 84%** (exact 83.703%; Δ +0 pp from 84%), original 293 tasks.
@@ -463,4 +467,4 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - Falsifiable low-risk launch and marketing experiments, designed but not executed
 - Source-provenance and missing-data register with public human and machine summaries
 
-**Completion: 84%** rounded task-weighted progress across 293 tasks; previous 84%, Δ +0 pp (exact 83.703%). 64 fully verified, 229 partly researched; 108 public sources and 559 bounded claims. Model-zero is not observed zero paid transactions.
+**Completion: 84%** rounded task-weighted progress across 293 tasks; previous 84%, Δ +0 pp (exact 84.471%). 64 fully verified, 229 partially researched; 109 sources and 577 bounded claims. No merchant price/mix data, buyer records or commercial experiments.

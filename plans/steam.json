@@ -88,7 +88,7 @@
         "steam/identity/document-store-geography-and-languages"
       ],
       "phase": 1,
-      "progress_percent": 87
+      "progress_percent": 88
     },
     {
       "id": "access",
@@ -156,7 +156,7 @@
         "steam/economics/model-multi-currency-settlement-uncertainty"
       ],
       "phase": 1,
-      "progress_percent": 89
+      "progress_percent": 92
     },
     {
       "id": "market",
@@ -190,7 +190,7 @@
         "steam/market/document-cohort-coverage-uncertainty"
       ],
       "phase": 2,
-      "progress_percent": 78
+      "progress_percent": 79
     },
     {
       "id": "discovery",
@@ -258,7 +258,7 @@
         "steam/competition/study-paid-marketing-acquisition-thresholds"
       ],
       "phase": 2,
-      "progress_percent": 66
+      "progress_percent": 71
     },
     {
       "id": "income",
@@ -394,7 +394,7 @@
         "steam/risk/build-downside-scenarios-for-small-studios"
       ],
       "phase": 3,
-      "progress_percent": 83
+      "progress_percent": 84
     },
     {
       "id": "strategy",
@@ -791,14 +791,18 @@
       "objective": "Research define country, currency, interface localization, game languages and regional availability as distinct fields.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define country, currency, interface localization, game languages and regional availability as distinct fields. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/age-ratings-regional-market-access-2026.md",
         "ontology/steam/age-ratings-regional-market-access-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/regional-price-realization-and-value-2026.md",
+        "ontology/steam/regional-price-realization-and-value-2026.json",
+        "site/steam-regional-checkout.mjs",
+        "tests/steam-regional-checkout.test.mjs"
       ],
-      "artifact": "ontology/steam/age-ratings-regional-market-access-2026.md",
+      "artifact": "ontology/steam/regional-price-realization-and-value-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1155,7 +1159,7 @@
       "objective": "Research separate buyer display, charged currency, reporting currency, settlement and bank conversion.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate buyer display, charged currency, reporting currency, settlement and bank conversion. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 80,
+      "percent": 95,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
@@ -1163,9 +1167,13 @@
         "specimens/steam.json",
         "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
         "ontology/steam/steam-direct-history-and-bank-remittance-2026.json",
-        "site/steam-remittance-bridge.mjs"
+        "site/steam-remittance-bridge.mjs",
+        "ontology/steam/regional-price-realization-and-value-2026.md",
+        "ontology/steam/regional-price-realization-and-value-2026.json",
+        "site/steam-regional-checkout.mjs",
+        "tests/steam-regional-checkout.test.mjs"
       ],
-      "artifact": "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
+      "artifact": "ontology/steam/regional-price-realization-and-value-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1344,14 +1352,18 @@
       "objective": "Research distinguish suggested tiers, actual historical prices, region mix and discounts.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Distinguish suggested tiers, actual historical prices, region mix and discounts. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 45,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/regional-price-realization-and-value-2026.md",
+        "ontology/steam/regional-price-realization-and-value-2026.json",
+        "site/steam-regional-checkout.mjs",
+        "tests/steam-regional-checkout.test.mjs"
       ],
-      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+      "artifact": "ontology/steam/regional-price-realization-and-value-2026.md",
       "priority": "high",
       "phase": 1
     },
@@ -1473,7 +1485,7 @@
       "objective": "Research specify sensitivity to foreign exchange, refunds, payment dates and buyer geography.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Specify sensitivity to foreign exchange, refunds, payment dates and buyer geography. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 85,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
@@ -1484,9 +1496,13 @@
         "site/steam-hypothetical-break-even.mjs",
         "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
         "ontology/steam/steam-direct-history-and-bank-remittance-2026.json",
-        "site/steam-remittance-bridge.mjs"
+        "site/steam-remittance-bridge.mjs",
+        "ontology/steam/regional-price-realization-and-value-2026.md",
+        "ontology/steam/regional-price-realization-and-value-2026.json",
+        "site/steam-regional-checkout.mjs",
+        "tests/steam-regional-checkout.test.mjs"
       ],
-      "artifact": "ontology/steam/steam-direct-history-and-bank-remittance-2026.md",
+      "artifact": "ontology/steam/regional-price-realization-and-value-2026.md",
       "priority": "normal",
       "phase": 1
     },
@@ -1767,16 +1783,20 @@
       "objective": "Research separate account location, selling restrictions, purchase region and publisher origin.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate account location, selling restrictions, purchase region and publisher origin. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 70,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
         "specimens/steam.json",
         "ontology/steam/age-ratings-regional-market-access-2026.md",
-        "ontology/steam/age-ratings-regional-market-access-2026.json"
+        "ontology/steam/age-ratings-regional-market-access-2026.json",
+        "ontology/steam/regional-price-realization-and-value-2026.md",
+        "ontology/steam/regional-price-realization-and-value-2026.json",
+        "site/steam-regional-checkout.mjs",
+        "tests/steam-regional-checkout.test.mjs"
       ],
-      "artifact": "ontology/steam/age-ratings-regional-market-access-2026.md",
+      "artifact": "ontology/steam/regional-price-realization-and-value-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2342,16 +2362,20 @@
       "objective": "Research use full launch cohorts, contemporaneous region prices and discount-free list prices.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Use full launch cohorts, contemporaneous region prices and discount-free list prices. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
         "specimens/steam.json",
         "ontology/steam/paid-genre-supply-and-model-comparability-2026.md",
-        "ontology/steam/paid-genre-supply-and-model-comparability-2026.json"
+        "ontology/steam/paid-genre-supply-and-model-comparability-2026.json",
+        "ontology/steam/regional-price-realization-and-value-2026.md",
+        "ontology/steam/regional-price-realization-and-value-2026.json",
+        "site/steam-regional-checkout.mjs",
+        "tests/steam-regional-checkout.test.mjs"
       ],
-      "artifact": "ontology/steam/paid-genre-supply-and-model-comparability-2026.md",
+      "artifact": "ontology/steam/regional-price-realization-and-value-2026.md",
       "priority": "high",
       "phase": 2
     },
@@ -2472,14 +2496,18 @@
       "objective": "Research use public descriptions and legitimate aggregate surveys rather than inferring buyers from screenshots.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Use public descriptions and legitimate aggregate surveys rather than inferring buyers from screenshots. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 20,
+      "percent": 70,
       "weight": 1,
       "evidence": [
         "ontology/steam/paid-genre-supply-and-model-comparability-2026.md",
         "ontology/steam/paid-genre-supply-and-model-comparability-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/regional-price-realization-and-value-2026.md",
+        "ontology/steam/regional-price-realization-and-value-2026.json",
+        "site/steam-regional-checkout.mjs",
+        "tests/steam-regional-checkout.test.mjs"
       ],
-      "artifact": "ontology/steam/paid-genre-supply-and-model-comparability-2026.md",
+      "artifact": "ontology/steam/regional-price-realization-and-value-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -2577,14 +2605,18 @@
       "objective": "Research document sale depth, pre-promotion reference prices and time since launch.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Document sale depth, pre-promotion reference prices and time since launch. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 65,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/pricing-discounts-and-refund-economics-2026.json",
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/regional-price-realization-and-value-2026.md",
+        "ontology/steam/regional-price-realization-and-value-2026.json",
+        "site/steam-regional-checkout.mjs",
+        "tests/steam-regional-checkout.test.mjs"
       ],
-      "artifact": "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
+      "artifact": "ontology/steam/regional-price-realization-and-value-2026.md",
       "priority": "high",
       "phase": 2
     },
@@ -3695,7 +3727,7 @@
       "objective": "Research assess delayed purchases, announcement alerts and counterfactual calendar effects.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Assess delayed purchases, announcement alerts and counterfactual calendar effects. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
@@ -3704,9 +3736,13 @@
         "ontology/steam/pricing-discounts-and-refund-economics-2026.md",
         "specimens/steam.json",
         "ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.md",
-        "ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.json"
+        "ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.json",
+        "ontology/steam/regional-price-realization-and-value-2026.md",
+        "ontology/steam/regional-price-realization-and-value-2026.json",
+        "site/steam-regional-checkout.mjs",
+        "tests/steam-regional-checkout.test.mjs"
       ],
-      "artifact": "ontology/steam/refund-reporting-period-versus-purchase-cohort-2026.md",
+      "artifact": "ontology/steam/regional-price-realization-and-value-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -4005,14 +4041,18 @@
       "objective": "Research track jurisdiction changes, consumer protections and required disclosures.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Track jurisdiction changes, consumer protections and required disclosures. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/age-ratings-regional-market-access-2026.md",
         "ontology/steam/age-ratings-regional-market-access-2026.json",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/regional-price-realization-and-value-2026.md",
+        "ontology/steam/regional-price-realization-and-value-2026.json",
+        "site/steam-regional-checkout.mjs",
+        "tests/steam-regional-checkout.test.mjs"
       ],
-      "artifact": "ontology/steam/age-ratings-regional-market-access-2026.md",
+      "artifact": "ontology/steam/regional-price-realization-and-value-2026.md",
       "priority": "normal",
       "phase": 3
     },

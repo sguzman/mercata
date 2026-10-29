@@ -1203,6 +1203,17 @@
       "evidence_class": "official_report_unit_and_refund_reason_definition",
       "license": "Public source metadata and independently authored short interpretations; no customer refund messages, notes or partner reports reproduced.",
       "notes": "Refund Data package link, recent week/month/lifetime choices; same-window return count over purchase count, shifted sale/return timing and private reason text."
+    },
+    {
+      "id": "steam-supported-currencies-pricing-20261028",
+      "url": "https://partner.steamgames.com/doc/store/pricing/currencies?l=english",
+      "title": "Supported Currencies",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_public_currency_unit_and_region_group_documentation",
+      "license": "Public URL, independently authored brief facts and minimal factual data; no source text or graphics republished.",
+      "notes": "Current live-currency and four regional USD group policies, per-currency smallest-unit differences; not checkout history, authorized finance or guaranteed bank FX."
     }
   ],
   "claims": [
@@ -6977,6 +6988,190 @@
       "confidence": "high",
       "observed_at": "2026-10-28",
       "limitations": "One publisher may release multiple titles, hold licensed portfolios and earn from other platforms; legal partner data absent."
+    },
+    {
+      "id": "steam-pricing-37-currencies-4-groups",
+      "text": "Valve's public Steam pricing guide describes 37 currencies and four USD regional pricing groups for entering customer-facing package prices.",
+      "source_ids": [
+        "steam-price-rules-2026",
+        "steam-supported-currencies-pricing-20261028"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Not 41 guaranteed independent currencies; supported group/currency membership and exchange rates can change."
+    },
+    {
+      "id": "steam-pricing-three-optional-conversions",
+      "text": "Steamworks offers optional exchange-rate-only, purchasing-power-only and multi-variable pricing suggestions; partners retain pricing discretion.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Suggested regional tiers are not actual historic prices, average order prices, buyer counts or exchange rates."
+    },
+    {
+      "id": "steam-pricing-nonlocal-usd-or-eur",
+      "text": "Valve's Supported Currencies guide says regions without a live native currency generally use USD, except geographically European countries that use EUR.",
+      "source_ids": [
+        "steam-supported-currencies-pricing-20261028"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Country-level purchasing/price availability varies with pricing region and may be altered over time."
+    },
+    {
+      "id": "steam-pricing-cis-latam-mena-sasia",
+      "text": "Valve separately documents USD_CIS, USD_LATAM, USD_MENA and USD_SASIA region groups for markets without individually supported local currencies.",
+      "source_ids": [
+        "steam-supported-currencies-pricing-20261028"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Region groups are not legal/tax jurisdictions or observed buyer populations; avoid allocating assumed sale mix by group."
+    },
+    {
+      "id": "steam-pricing-minor-currency-variation",
+      "text": "Valve documents prices for some currencies with required increments larger than one minor unit, including JPY and VND.",
+      "source_ids": [
+        "steam-supported-currencies-pricing-20261028"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Never assume a cents-formatted input means a product is priced at any particular historical FX rate; input increments vary by currency."
+    },
+    {
+      "id": "steam-pricing-control-by-payee",
+      "text": "Valve requires the paid Steamworks partner and a user with Manage pricing and discounts rights to enter or edit prices.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "A storefront-listed co-developer cannot be presumed to control local package prices or receive financial proceeds."
+    },
+    {
+      "id": "steam-pricing-review-1-2-business-days",
+      "text": "Valve states that proposed initial and adjusted prices are reviewed and usually processed in one or two business days.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Not a guaranteed SLA and not a guarantee a planned launch discount or changed price takes effect instantly."
+    },
+    {
+      "id": "steam-pricing-minimum-base-tier-099",
+      "text": "Valve's minimum base-price policy uses per-currency equivalents of its USD $0.99 multivariable conversion tier.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "USD amount is the reference tier, not a universal local currency floor or an actual collected price."
+    },
+    {
+      "id": "steam-pricing-minimum-checkout-049",
+      "text": "Valve describes a lowest possible customer checkout equivalent near USD $0.49, constraining eligible discounts in each currency.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "The exact local thresholds, minimum increments, and available discounts differ; historical policy version must be matched."
+    },
+    {
+      "id": "steam-pricing-absence-market-nonavailability",
+      "text": "Valve says missing a configured price in a required local currency can make a game unavailable for purchase by users in that currency.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "No store price means not-eligible purchases in that market, not necessarily zero potential demand or zero historic revenue."
+    },
+    {
+      "id": "steam-pricing-low-discount-block",
+      "text": "Steam can block product availability or discount scheduling where base or resulting sale prices breach local price floors.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Cannot infer missing/failed orders without actual market visibility and a dated merchant ledger."
+    },
+    {
+      "id": "steam-pricing-player-value-considerations",
+      "text": "Valve recommends evaluating expected play length, replayability, multiplayer, Early Access and comparable entertainment when choosing initial price.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Qualitative guidance does not validate a specific price/length elasticity, genre-specific optimal price or causal demand effect."
+    },
+    {
+      "id": "steam-pricing-new-game-change-30days",
+      "text": "Valve generally asks publishers to wait about 30 days after release before base-price changes, subject to error correction.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Not a uniform historical freeze or real game-specific transaction audit."
+    },
+    {
+      "id": "steam-pricing-price-rise-discount-cooldown",
+      "text": "A price increase in any currency normally triggers a 30-day cooldown on discount eligibility under current guidance.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Does not reveal the date or amount a specific partner charged, or a causal price reference effect."
+    },
+    {
+      "id": "steam-pricing-owner-multiplier-not-gross",
+      "text": "A current US list price multiplied by modeled owners is not observed Steam gross checkout revenue because actual priced orders vary by region, date, bundle and promotion.",
+      "source_ids": [
+        "steam-price-rules-2026",
+        "steamspy-ownership-methods",
+        "steam-financial-api-official"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Even perfect gross units need tax, returns, key/comp exclusions and app/package allocation; model estimates are not merchant ledgers."
+    },
+    {
+      "id": "steam-pricing-reconciled-model-not-payout",
+      "text": "A labeled USD-cent arithmetic model can calculate a hypothetical unit-weighted regional gross and return/tax-adjusted subtotal while leaving publisher payout and developer profit unknown.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Not observed orders; real foreign currency rate conversions, legal shares and actual financial row definitions require authorized date-specific statements."
+    },
+    {
+      "id": "steam-pricing-freetopaid-business-model",
+      "text": "Steam instructs a developer switching from free-to-paid to notify customers at least one week in advance; existing free-license owners retain access.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Initially free converted paid games need a separate sample stratum from games paid on first public release."
+    },
+    {
+      "id": "steam-pricing-paidtofree-notice",
+      "text": "Steam asks for at least one week of public notice before changing a paid title to free, via partner support.",
+      "source_ids": [
+        "steam-price-rules-2026"
+      ],
+      "observed_at": "2026-10-28",
+      "confidence": "high",
+      "limitations": "Switching the purchase model is not a fresh paid release, and retained ownership is not new checkout."
     }
   ],
   "observations": [],
@@ -6984,5 +7179,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-28",
-  "summary": "Steam public research includes model-zero missingness sensitivity over an existing January 2026 estimated release cohort; the actual exact-zero paid order fraction and publisher earnings remain unknown."
+  "summary": "Steam research now includes a source-backed regional pricing and qualitative game-value checklist, with a tested synthetic fixed-cohort checkout-realization model. Actual regional sales, prices, cash, marginal price elasticity, and developer profit remain unknown."
 }

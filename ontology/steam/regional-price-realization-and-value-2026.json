@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_regional_pricing_and_synthetic_paid_checkout_realization",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-supported-currencies-pricing-20261028",
+    "steam-price-rules-2026",
+    "steam-financial-api-official",
+    "steamspy-ownership-methods"
+  ],
+  "claim_ids": [
+    "steam-pricing-37-currencies-4-groups",
+    "steam-pricing-three-optional-conversions",
+    "steam-pricing-nonlocal-usd-or-eur",
+    "steam-pricing-cis-latam-mena-sasia",
+    "steam-pricing-minor-currency-variation",
+    "steam-pricing-control-by-payee",
+    "steam-pricing-review-1-2-business-days",
+    "steam-pricing-minimum-base-tier-099",
+    "steam-pricing-minimum-checkout-049",
+    "steam-pricing-absence-market-nonavailability",
+    "steam-pricing-low-discount-block",
+    "steam-pricing-player-value-considerations",
+    "steam-pricing-new-game-change-30days",
+    "steam-pricing-price-rise-discount-cooldown",
+    "steam-pricing-owner-multiplier-not-gross",
+    "steam-pricing-reconciled-model-not-payout",
+    "steam-pricing-freetopaid-business-model",
+    "steam-pricing-paidtofree-notice"
+  ],
+  "currency_policy": {
+    "advertised_live_currencies": 37,
+    "usd_region_groups": [
+      "USD_CIS",
+      "USD_LATAM",
+      "USD_MENA",
+      "USD_SASIA"
+    ],
+    "optional_recommendation_methods": [
+      "exchange_rate_only",
+      "purchasing_power_only",
+      "multi_variable"
+    ],
+    "price_decided_by_paid_partner": true,
+    "requires_manage_pricing_and_discounts_permission": true,
+    "missing_eligible_market_price_blocks_purchase": true,
+    "supported_currencies_have_different_minor_unit_increments": true,
+    "usd_reference_minimum_base_tier": 0.99,
+    "rough_usd_reference_minimum_checkout": 0.49,
+    "minimums_are_not_uniform_local_prices": true
+  },
+  "cohort_rules": {
+    "unit": "initial_paid_base_game_checkout_package",
+    "fixed_purchaser_cohort_refunds_only": true,
+    "retail_keys_and_other_app_bundles_excluded": true,
+    "region_or_group_and_sale_date_must_be_identified": true,
+    "all_possible_market_coverage_known": false,
+    "initially_free_then_paid_separate_stratum": true,
+    "paid_then_free_preserve_first_launch_type": true
+  },
+  "hypothetical": {
+    "label": "Synthetic USD-accounted checkout rows only; no real currency conversion, orders or business results",
+    "rows": [
+      {
+        "market": "USD",
+        "period": "hypothetical_month_1",
+        "sale_channel": "Steam_store_checkout",
+        "product_scope": "single_base_game_package",
+        "gross_paid_units": 100,
+        "gross_sales_usd_cents": 100000,
+        "returned_paid_units": 10,
+        "returns_usd_cents": 10000,
+        "net_tax_usd_cents": 8000
+      },
+      {
+        "market": "MXN",
+        "period": "hypothetical_month_1",
+        "sale_channel": "Steam_store_checkout",
+        "product_scope": "single_base_game_package",
+        "gross_paid_units": 200,
+        "gross_sales_usd_cents": 90000,
+        "returned_paid_units": 20,
+        "returns_usd_cents": 9000,
+        "net_tax_usd_cents": 7000
+      },
+      {
+        "market": "USD_LATAM",
+        "period": "hypothetical_month_1",
+        "sale_channel": "Steam_store_checkout",
+        "product_scope": "single_base_game_package",
+        "gross_paid_units": 50,
+        "gross_sales_usd_cents": 20000,
+        "returned_paid_units": 0,
+        "returns_usd_cents": 0,
+        "net_tax_usd_cents": 1000
+      }
+    ],
+    "sample_us_current_list_price_usd": 10,
+    "real_sale_prices_available": false,
+    "real_forex_translations_performed": false
+  },
+  "unknown": {
+    "median_order_realization": null,
+    "mean_all_steam_region_order_realization": null,
+    "regional_real_paid_units": null,
+    "regional_net_tax_mix": null,
+    "refund_rate": null,
+    "merchant_publisher_receipts": null,
+    "game_developer_after_cost_profit": null,
+    "causal_price_elasticity": null,
+    "optimal_price_by_length": null
+  },
+  "no_private_data": true,
+  "no_real_market_checkout_included": true
+}
