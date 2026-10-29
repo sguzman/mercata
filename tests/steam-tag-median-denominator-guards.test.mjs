@@ -43,7 +43,7 @@ test('Reject contradictory tag tallies, duplicate tags, invalid modeled values o
 });
 test('Quoted model data refer to documented source and 293 existing tasks',()=>{
  const sources=new Set(d.evidence.map(x=>x.id)),claims=new Map(d.claims.map(x=>[x.id,x]));
- assert.equal(doc.source_ids.length,1);assert.equal(doc.claim_ids.length,9);
+ assert.equal(doc.source_ids.length,1);assert.equal(doc.claim_ids.length,4);
  for(const id of doc.source_ids)assert(sources.has(id),id);
  for(const id of doc.claim_ids){assert(claims.has(id),id);assert(claims.get(id).source_ids.every(s=>sources.has(s)),id);}
  assert(Object.values(doc.unknown).every(x=>x===null));

@@ -847,10 +847,10 @@
       "title": "What does the median game in your genre earn on Steam?",
       "publisher": "Immutable",
       "published_at": "2026-09-23",
-      "retrieved_at": "2026-10-28",
+      "retrieved_at": "2026-10-29",
       "evidence_class": "self_published_cross_age_genre_tag_model_with_20_middle_rank_samples",
       "license": "Public URL, source metadata and limited independently written numerical observations only; no charts or article prose copied.",
-      "notes": "107 tag genres, medians read from roughly 20 middle-ranked titles, revenue estimated at current list price rather than history."
+      "notes": "107 tag genres, medians read from roughly 20 middle-ranked titles, revenue estimated at current list price rather than history. Further October 29 audit confirms 2026-09-10 model data, copies medians include free plus paid while median gross is paid-only and uses current list price; about 20 near-midrank titles per tag."
     },
     {
       "id": "steam-gmd-puzzle-snapshot-2026",
@@ -1918,17 +1918,6 @@
       "evidence_class": "dated_first_person_game_developer_initial_7day_storefront_metrics",
       "license": "Source URL, metadata and independently paraphrased short monetary and count facts only; no post content, screenshots or user data copied.",
       "notes": "Developer says second commercial game and four-month build. Reports $1,749 first-week gross, 489 Steam units, 10 returns, 41 reviews, 1,927 later wishlists and an estimated future $900 bank receipt (not actual remittance)."
-    },
-    {
-      "id": "steam-immutable-2026-tag-revenue-median-snapshot",
-      "url": "https://www.immutable.com/insights/steam-genre-revenue-benchmarks",
-      "publisher": "Immutable (third-party marketing/insights)",
-      "title": "What does the median game in your genre earn on Steam?",
-      "published_at": "2026-09-23",
-      "retrieved_at": "2026-10-29",
-      "evidence_class": "third_party_tag_sales_model_midrank_sample_and_price_proxy",
-      "license": "Only link, bibliographic metadata, and independent short numerical summaries; no licensed model rows or figures downloaded or redistributed.",
-      "notes": "Source says 107 of 108 tags reported, median derived from approximately 20 titles near each rank midpoint, model data as of September 10, 2026. Median copies includes free and paid while median revenue is paid only and estimated units times current price. Tags overlap."
     }
   ],
   "claims": [
@@ -13244,30 +13233,10 @@
       "limitations": "Two voluntary unmatched stories lack the original-paid release sampling frame, consistent finance basis and controls."
     },
     {
-      "id": "steam-tag-immutable-107-tags-20261029",
-      "text": "Immutable reports model-based tag revenue medians for 107 of 108 Steam tags in a September 2026 data snapshot.",
-      "source_ids": [
-        "steam-immutable-2026-tag-revenue-median-snapshot"
-      ],
-      "confidence": "medium",
-      "observed_at": "2026-10-29",
-      "limitations": "These are third-party model outputs with nonaudited game coverage, not Valve financial reports."
-    },
-    {
-      "id": "steam-tag-immutable-20-near-middle-20261029",
-      "text": "Immutable describes obtaining each reported tag median from approximately twenty ranked games near that tag's middle, rather than every raw catalog game.",
-      "source_ids": [
-        "steam-immutable-2026-tag-revenue-median-snapshot"
-      ],
-      "confidence": "medium",
-      "observed_at": "2026-10-29",
-      "limitations": "The described middle-rank selection is not a representative random sample of each tag's revenue distribution."
-    },
-    {
       "id": "steam-tag-immutable-copies-free-paid-median-20261029",
       "text": "The provider states its median modeled copies figure combines paid and free titles with a tag.",
       "source_ids": [
-        "steam-immutable-2026-tag-revenue-median-snapshot"
+        "steam-immutable-genre-snapshot-2026"
       ],
       "confidence": "medium",
       "observed_at": "2026-10-29",
@@ -13277,37 +13246,17 @@
       "id": "steam-tag-immutable-gross-paid-only-median-20261029",
       "text": "The provider's median gross revenue proxy for a tag is computed among paid titles rather than both free and paid games.",
       "source_ids": [
-        "steam-immutable-2026-tag-revenue-median-snapshot"
+        "steam-immutable-genre-snapshot-2026"
       ],
       "confidence": "medium",
       "observed_at": "2026-10-29",
       "limitations": "The estimated gross proxy is not audited gross Steam checkout, net remittance or developer earnings."
     },
     {
-      "id": "steam-tag-immutable-price-present-not-checkout-20261029",
-      "text": "The provider calculates revenue from modeled copies and current listed prices, not observed historical regional checkout payments.",
-      "source_ids": [
-        "steam-immutable-2026-tag-revenue-median-snapshot"
-      ],
-      "confidence": "medium",
-      "observed_at": "2026-10-29",
-      "limitations": "Discounts, regional prices, package bundles, taxes, returns and historical prices are excluded."
-    },
-    {
-      "id": "steam-tag-immutable-2d-platformer-20261029",
-      "text": "Immutable reports 11,366 tagged 2D Platformer games, 209 estimated median all-title copies, and $1,040 modeled paid-only median revenue proxy.",
-      "source_ids": [
-        "steam-immutable-2026-tag-revenue-median-snapshot"
-      ],
-      "confidence": "medium",
-      "observed_at": "2026-10-29",
-      "limitations": "Tag supply is not a fixed originally paid release cohort; these medians are estimated on different populations."
-    },
-    {
       "id": "steam-tag-immutable-visual-novel-20261029",
       "text": "Immutable reports 12,646 Visual Novel tagged games, 1,140 estimated median all-title copies and $10,300 modeled paid-only median revenue proxy.",
       "source_ids": [
-        "steam-immutable-2026-tag-revenue-median-snapshot"
+        "steam-immutable-genre-snapshot-2026"
       ],
       "confidence": "medium",
       "observed_at": "2026-10-29",
@@ -13317,21 +13266,11 @@
       "id": "steam-tag-immutable-overlapping-tags-median-not-market-20261029",
       "text": "The provider reports 56 of 107 tag medians below $5,000 and 81 below $10,000, with an unweighted median of tag medians of $4,837.",
       "source_ids": [
-        "steam-immutable-2026-tag-revenue-median-snapshot"
+        "steam-immutable-genre-snapshot-2026"
       ],
       "confidence": "medium",
       "observed_at": "2026-10-29",
       "limitations": "Overlapping unequal tag rosters mean the median across tag medians cannot be treated as a game-level median."
-    },
-    {
-      "id": "steam-tag-immutable-genre-profit-unidentified-20261029",
-      "text": "The provider's tag revenues cannot identify net developer profitability or a causal return from selecting a genre.",
-      "source_ids": [
-        "steam-immutable-2026-tag-revenue-median-snapshot"
-      ],
-      "confidence": "medium",
-      "observed_at": "2026-10-29",
-      "limitations": "Production budgets, legal payout shares and observed purchase cohorts are unmeasured and noncomparable."
     }
   ],
   "observations": [],

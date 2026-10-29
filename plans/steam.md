@@ -6,7 +6,7 @@
 
 ## Steam paid-only revenue versus all-game copy medians by tag (October 29, 2026)
 
-The [Immutable modeled-tag median audit](../ontology/steam/steam-tag-median-denominator-2026.md) preserves an incompatible free-and-paid copy denominator versus paid-only modeled gross median, the provider's approximately twenty games per midrank sample, overlapping tags and its use of current list price rather than actual checkout. The 2D Platformer and Visual Novel tag medians are useful source-attributed estimates but **not actual genre profit, median paid game income or causal opportunity**. Score **91%** (exact **91.218%**, Δ **+0.031 pp**), fixed 293-task scope.
+The [existing-source Immutable modeled-tag median audit](../ontology/steam/steam-tag-median-denominator-2026.md) preserves an incompatible free-and-paid copy denominator versus paid-only modeled gross median, the provider's approximately twenty games per midrank sample, overlapping tags and its use of current list price rather than actual checkout. The 2D Platformer and Visual Novel tag medians are useful source-attributed estimates but **not actual genre profit, median paid game income or causal opportunity**. Score **91%** (exact **91.198%**, Δ **+0.010 pp**), fixed 293-task scope.
 
 ## Author-disclosed second-commercial-game first-week receipts (October 29, 2026)
 
