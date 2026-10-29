@@ -49,3 +49,8 @@ One intentionally invented five-game scenario includes a complete zero, a partia
 ### Package, bundle, and game-attribution evidence boundary
 
 [Valve's Detailed Sales schema](https://partner.steamgames.com/doc/webapi/IPartnerFinancialsService) uses package and bundle identifiers for checkout rows, while its \`primary_appid\` describes an association for **additional revenue-share accrual**, not an independent census of base-game licenses. Consequently, summing rows by a revenue-share AppID may misclassify a package/bundle purchase as a specific game's paid checkout. The fixed-horizon synthetic audit now requires separate \`paid_checkout_attribution_attested\` evidence before accepting either a complete game-level zero or an observed game-level positive. Missing attribution cannot be replaced by a present \`primary_appid\` or the absence of a package row. This safeguard still proves no real market outcome.
+
+
+### Consistent attribution gating in the original whole-period analyzer
+
+The original [whole-period synthetic coverage analyzer](../../site/steam-ledger-coverage.mjs) now applies the same package-to-base-game gate as the fixed-horizon extension. Complete zero observations require checkout attribution as well as historical financial access and transfer reconciliation; partial positive observations require attribution before ruling out zero. Its original 1/5–3/5 hypothetical example remains mathematically unchanged because the fixture explicitly attests the needed mapping. The additional tests reject a missing mapping for both zero and positive cases. A raw \`primary_appid\` field is still insufficient for game-license attribution.

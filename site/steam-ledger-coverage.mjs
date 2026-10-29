@@ -21,10 +21,16 @@ export function auditLedgerCoverage(rows,{frameComplete=false}={}){
   }
   if(!good(x.gross_paid_units))throw new TypeError('An observed ledger needs valid gross paid units');
   if(x.ledger_status==='complete_reconciled'){
-   if(x.transfer_history_reconciled!==true||x.authorized_ledger_attested!==true)throw new TypeError('Complete ledgers require transfer and access attestations');
+   if(x.transfer_history_reconciled!==true||x.authorized_ledger_attested!==true||
+    x.paid_checkout_attribution_attested!==true)
+    throw new TypeError('Complete ledgers require transfer, access and checkout attribution attestations');
    counts.complete++;
   }else counts.partial++;
-  if(x.gross_paid_units>0)counts.known_gross_nonzero++;
+  if(x.gross_paid_units>0){
+   if(x.paid_checkout_attribution_attested!==true)
+    throw new TypeError('Positive gross paid game units require verified package-to-game attribution');
+   counts.known_gross_nonzero++;
+  }
   else if(x.ledger_status==='complete_reconciled')counts.observed_gross_zero++;
   else counts.unknown_zero++;
  }
@@ -35,6 +41,7 @@ export function auditLedgerCoverage(rows,{frameComplete=false}={}){
   zero_gross_unit_share_lower_conditional:lower,zero_gross_unit_share_upper_conditional:upper,
   exact_zero_gross_unit_share:null,publisher_net_income_median:null,after_cost_profit_median:null,
   actually_verified_by_mercata:false,real_data_collected_by_mercata:false,
+  primary_appid_alone_is_not_paid_game_checkout_attribution:true,
   caveat:'Fractions are hypothetical conditional bounds over a supplied eligible AppID frame, not validated global Steam estimates.'};
 }
 

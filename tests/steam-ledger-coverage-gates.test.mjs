@@ -3,11 +3,11 @@ import {auditLedgerCoverage,auditSyntheticFixedHorizonZeroSales} from '../site/s
 const j=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
 const r=j('ontology/steam/permissioned-ledger-coverage-and-zero-identification-2026.json'),d=j('specimens/steam.json'),p=j('plans/steam.json'),q=j('queues/steam.json');
 const rows=[
- {appid:101,eligibility:'eligible_paid_initially',ledger_status:'complete_reconciled',gross_paid_units:0,transfer_history_reconciled:true,authorized_ledger_attested:true,retired:true},
- {appid:102,eligibility:'eligible_paid_initially',ledger_status:'complete_reconciled',gross_paid_units:10,transfer_history_reconciled:true,authorized_ledger_attested:true},
+ {appid:101,eligibility:'eligible_paid_initially',ledger_status:'complete_reconciled',gross_paid_units:0,transfer_history_reconciled:true,authorized_ledger_attested:true,paid_checkout_attribution_attested:true,retired:true},
+ {appid:102,eligibility:'eligible_paid_initially',ledger_status:'complete_reconciled',gross_paid_units:10,transfer_history_reconciled:true,authorized_ledger_attested:true,paid_checkout_attribution_attested:true},
  {appid:103,eligibility:'eligible_paid_initially',ledger_status:'partial',gross_paid_units:0},
  {appid:104,eligibility:'eligible_paid_initially',ledger_status:'missing',gross_paid_units:null},
- {appid:105,eligibility:'eligible_paid_initially',ledger_status:'partial',gross_paid_units:3}
+ {appid:105,eligibility:'eligible_paid_initially',ledger_status:'partial',gross_paid_units:3,paid_checkout_attribution_attested:true}
 ];
 test('Synthetic frame has conditional 1/5–3/5 zero-unit bounds, no actual Steam figures',()=>{
  const x=auditLedgerCoverage(rows,{frameComplete:true});
@@ -122,4 +122,15 @@ test('Package-to-base-game proof is mandatory before admitting a complete zero o
  const x=auditSyntheticFixedHorizonZeroSales(fixed(),window30);
  assert.equal(x.primary_appid_by_itself_proves_paid_game_units,false);
  assert.equal(x.conditional_zero_share_upper,.8);
+});
+
+test('Legacy whole-period bounds refuse zero or positive game claims without package attribution proof',()=>{
+ const noZero={...rows[0]};delete noZero.paid_checkout_attribution_attested;
+ assert.throws(()=>auditLedgerCoverage([noZero],{frameComplete:true}),/checkout attribution/);
+ const noPositive={...rows[4]};delete noPositive.paid_checkout_attribution_attested;
+ assert.throws(()=>auditLedgerCoverage([noPositive],{frameComplete:true}),/package-to-game attribution/);
+ const valid=auditLedgerCoverage(rows,{frameComplete:true});
+ assert.equal(valid.zero_gross_unit_share_lower_conditional,.2);
+ assert.equal(valid.zero_gross_unit_share_upper_conditional,.6);
+ assert.equal(valid.primary_appid_alone_is_not_paid_game_checkout_attribution,true);
 });
