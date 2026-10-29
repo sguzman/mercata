@@ -1,0 +1,19 @@
+# A second Steam commercial game: first-week gross and hypothetical bank receipts
+
+**Reviewed October 29, 2026.** [Source-linked observations](steam-author-first-week-cash-gap-2026.json) · [reproducible arithmetic guard](../../site/steam-author-first-week-cash-gap.mjs) · [tests](../../tests/steam-author-first-week-cash-gap.test.mjs). This is a **single voluntary, unaudited, publicly disclosed developer report**, not sampled or authenticated sales.
+
+## Seven days after launch: how gross differs from an expected deposit
+
+In an [April 17, 2026 first-person update](https://heartgamedev.substack.com/p/7-days-after-launching-my-indie-game), Heartbeast described a four-month production cycle for a **second commercial game**, *[Redacted] The Safehouse*. The author reported **$1,749 lifetime Steam gross** (only a week after launch), **489 reported Steam units**, and **10 returned units**, along with **41 reviews** and **70 minutes median playtime**.
+
+The author **expected** approximately **$900 to reach their bank account** after the platform's share, VAT and other taxes. They did not report receiving that amount or publish an authenticated settlement. Dividing that forecast by the reported week-one gross yields roughly **51.5%**; this is a descriptive **forecast-to-gross ratio for this one game**, *not* an observed universal Steam net rate. Gross divided by reported units is approximately **$3.58 per reported unit**, not a validated transaction price or take-home margin. The author did not supply full labor valuation, cash expenses, publishing agreements or settled tax records. The seven-day economic profit and personal hourly compensation are therefore **unknown**.
+
+The author describes **slightly more than 800 wishlists at launch**, growing to **1,927** in the first seven days, and separately reports a **10.4% Steam lifetime wishlist conversion metric**. Those numbers cannot be substituted for one another: the 1,927 wishlist stock includes people who joined *after* launch, Steam's reported conversion metric has its own denominator, and 489 sales are neither proven distinct launch-wishlist conversions nor a random subset of those 1,927 accounts. The 41 reviews do not prove 41 paid buyers or a representative review-to-purchase multiplier. Likewise the author's 70-minute median playtime cannot certify a completion rate without completion telemetry.
+
+## Why even a second public game does not establish an industry median
+
+The existing [Only Way is Down first-game postmortem](first-commercial-launch-paid-funnel-case-2026.md) reports a roughly **$19,851 gross / 3,091 copies** first week. The Heartbeast source describes **$1,749 / 489 units** over a first week for a second commercial game. The public materials are different voluntary disclosure cases, authored at different dates by different developers. Their unit conventions, genre, audiences, list prices, exposure and marketing are not matched; one of the sources is not independently publication-dated. **Do not pool the two game records into a population median or infer that first or second games have a causal earnings advantage.**
+
+The [pure audit module](../../site/steam-author-first-week-cash-gap.mjs) validates safe unit and cash arithmetic in **fabricated tests**, keeping projected bank receipts, reported gross, returns, wishlist signals and verified deposits distinct. The source's reported numbers are transcribed into a separate documented JSON observation. No Steamworks partner account was accessed. A representative 7/30/365-day first-paid release distribution would require a complete release frame (including unsuccessful and retired titles), consistent units and time zero, and permissioned paid-order ledgers.
+
+**Evidence status:** one additional primary first-week developer disclosure; **no real market-wide game or legal-publisher median, exact zero-sales rate, observed take-home, or after-cost profit measured**.

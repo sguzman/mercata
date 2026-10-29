@@ -1907,6 +1907,17 @@
       "evidence_class": "official_public_platform_discovery_policy",
       "license": "Only public URL and independently written factual summary; no webpage body or media reproduced.",
       "notes": "Profile features such as Trading Cards require Steam commercial and engagement signals but Valve says profile-feature state does not impact Store promotion; no exact threshold or causal revenue inference."
+    },
+    {
+      "id": "steam-heartbeast-first-week-safehouse-20260417",
+      "url": "https://heartgamedev.substack.com/p/7-days-after-launching-my-indie-game",
+      "publisher": "Heartbeast / Heart Gamedev Newsletter",
+      "title": "7 Days After Launching my Indie Game",
+      "published_at": "2026-04-17",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "dated_first_person_game_developer_initial_7day_storefront_metrics",
+      "license": "Source URL, metadata and independently paraphrased short monetary and count facts only; no post content, screenshots or user data copied.",
+      "notes": "Developer says second commercial game and four-month build. Reports $1,749 first-week gross, 489 Steam units, 10 returns, 41 reviews, 1,927 later wishlists and an estimated future $900 bank receipt (not actual remittance)."
     }
   ],
   "claims": [
@@ -13139,6 +13150,87 @@
       "confidence": "medium",
       "observed_at": "2026-10-29",
       "limitations": "This is a methodology inference, not a measure of all-publisher financial coverage or actual missing sales."
+    },
+    {
+      "id": "steam-heartbeast-second-commercial-firstweek-20261029",
+      "text": "In an April 17, 2026 first-person report, Heartbeast describes a second commercial Steam game after roughly four development months.",
+      "source_ids": [
+        "steam-heartbeast-first-week-safehouse-20260417"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "This voluntary individual developer report is not independently verified by an authenticated merchant account."
+    },
+    {
+      "id": "steam-heartbeast-1749gross-489units-20261029",
+      "text": "The developer reports $1,749 in first-week gross Steam revenue and 489 lifetime Steam units by the seven-day update.",
+      "source_ids": [
+        "steam-heartbeast-first-week-safehouse-20260417"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Gross, time window and reported unit basis are author-provided and not complete audited financial ledgers."
+    },
+    {
+      "id": "steam-heartbeast-10returns-20261029",
+      "text": "The same seven-day report lists ten Steam units returned and describes that as approximately two percent of reported units.",
+      "source_ids": [
+        "steam-heartbeast-first-week-safehouse-20260417"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The author does not establish a population-wide refund frequency or a lifetime order-cohort refund probability."
+    },
+    {
+      "id": "steam-heartbeast-reviews41-playtime70min-20261029",
+      "text": "Heartbeast also reports 41 reviews and 70 minutes of median playtime in the initial seven-day snapshot.",
+      "source_ids": [
+        "steam-heartbeast-first-week-safehouse-20260417"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Public reviews and playtime do not authenticate purchases or prove that individual buyers completed the game."
+    },
+    {
+      "id": "steam-heartbeast-wishlists-stock-vs-conversion-20261029",
+      "text": "Heartbeast reports over 800 wishlists at launch, 1,927 a week later, and a separate 10.4 percent lifetime wishlist conversion measure.",
+      "source_ids": [
+        "steam-heartbeast-first-week-safehouse-20260417"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "These metrics have different time windows and denominator eligibility and cannot be directly converted to units sold."
+    },
+    {
+      "id": "steam-heartbeast-estimated900-not-actual-deposit-20261029",
+      "text": "The developer anticipates roughly $900 reaching their bank from the $1,749 gross after platform and tax deductions.",
+      "source_ids": [
+        "steam-heartbeast-first-week-safehouse-20260417"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The $900 is an author forecast, not a reported bank deposit or verified net realized proceeds."
+    },
+    {
+      "id": "steam-heartbeast-no-seven-day-profit-20261029",
+      "text": "The reported gross and projected bank amount do not establish the game's net economic profit or developer hourly earnings.",
+      "source_ids": [
+        "steam-heartbeast-first-week-safehouse-20260417"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Development labor value, ongoing costs, settled transfers and full tax remittance are not supplied."
+    },
+    {
+      "id": "steam-heartbeast-first-second-case-no-median-20261029",
+      "text": "Heartbeast's self-reported second-game first week cannot be pooled with another first-game developer story to estimate the Steam-wide typical first-week receipts.",
+      "source_ids": [
+        "steam-heartbeast-first-week-safehouse-20260417",
+        "steam-onlywayisdown-firstgame-original-postmortem-2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Two voluntary unmatched stories lack the original-paid release sampling frame, consistent finance basis and controls."
     }
   ],
   "observations": [],
@@ -13146,5 +13238,5 @@
   "risks": [],
   "experiments": [],
   "updated_at": "2026-10-29",
-  "summary": "The Steam corpus now includes a documented synthetic financial API changed-date and pagination check. Historic reporting corrections must replace previous daily results; paid store package sales, retail activations and in-game payments remain separate units. Representative merchant receipts and zero-sale fractions remain unknown."
+  "summary": "Steam publisher-income and launch-window research now includes a dated second-commercial-game first-week disclosure, carefully separating reported gross, unit returns, wishlist counts, and a future bank-payout estimate. It does not identify representative first-game or publisher earnings."
 }

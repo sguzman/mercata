@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Author-disclosed second-commercial-game first-week receipts (October 29, 2026)
+
+The [dated Heartbeast seven-day self-report](../ontology/steam/steam-author-first-week-cash-gap-2026.md) documents $1,749 first-week gross, 489 reported units, ten returned units, wishlist stocks and an approximately $900 **predicted, not received** bank amount. The case is not an authenticated merchant report or representative market sample; new synthetic tests prohibit its conversion to a population median or profit. Steam research now **91%** (exact **91.188%**, Δ **+0.027 pp**) across the fixed 293 tasks.
+
 ## Daily Steam financial corrections and per-date pagination (October 29, 2026)
 
 The [corrected-report audit](../ontology/steam/steam-financial-changed-date-requery-2026.md) now models Valve's re-query-entire-date and cursor-completion rules with fabricated reports. Corrected daily records replace earlier rows; Steam checkouts, retail keys and in-game payments remain distinct. No actual merchant or partner-key data were used. **Current 91%** (exact **91.160%**, Δ **+0.027 pp**), unchanged 293-task inventory.

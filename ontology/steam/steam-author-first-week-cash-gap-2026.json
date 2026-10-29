@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "developer_first_week_second_game_public_self_report_not_net_income_census",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-heartbeast-first-week-safehouse-20260417",
+    "steam-onlywayisdown-firstgame-original-postmortem-2026"
+  ],
+  "claim_ids": [
+    "steam-heartbeast-second-commercial-firstweek-20261029",
+    "steam-heartbeast-1749gross-489units-20261029",
+    "steam-heartbeast-10returns-20261029",
+    "steam-heartbeast-reviews41-playtime70min-20261029",
+    "steam-heartbeast-wishlists-stock-vs-conversion-20261029",
+    "steam-heartbeast-estimated900-not-actual-deposit-20261029",
+    "steam-heartbeast-no-seven-day-profit-20261029",
+    "steam-heartbeast-first-second-case-no-median-20261029"
+  ],
+  "source_report": {
+    "author": "Heartbeast",
+    "title": "7 Days After Launching my Indie Game",
+    "url": "https://heartgamedev.substack.com/p/7-days-after-launching-my-indie-game",
+    "date": "2026-04-17",
+    "game": "[Redacted] The Safehouse",
+    "commercial_game_sequence_reported": 2,
+    "reported_development_months": 4,
+    "reporting_window": "first_seven_days_after_steam_launch",
+    "reported_gross_usd": 1749,
+    "reported_units": 489,
+    "reported_returns_units": 10,
+    "reported_reviews": 41,
+    "reported_positive_review_share": 1,
+    "reported_median_playtime_minutes": 70,
+    "reported_launch_wishlist_stock_lower_bound": 800,
+    "reported_week_one_wishlist_stock": 1927,
+    "reported_lifetime_wishlist_conversion_percentage": 10.4,
+    "predicted_bank_usd_not_received": 900,
+    "bank_guess_deductions": "steam_cut_vat_other_taxes_unspecified",
+    "authenticated_steamworks_ledger_observed": false,
+    "real_bank_deposit_observed": false,
+    "actual_production_costs_complete": false
+  },
+  "descriptive_comparison": {
+    "cases": [
+      {
+        "source_id": "steam-heartbeast-first-week-safehouse-20260417",
+        "first_week_paid_units": 489,
+        "first_week_gross_cents": 174900,
+        "evidence_class": "author_prose_self_report"
+      },
+      {
+        "source_id": "steam-onlywayisdown-firstgame-original-postmortem-2026",
+        "first_week_paid_units": 3091,
+        "first_week_gross_cents": 1985100,
+        "evidence_class": "author_prose_self_report"
+      }
+    ],
+    "observation_windows_comparable": true,
+    "same_game_genre_or_team_or_following": false,
+    "representative_steam_market_sample": false
+  },
+  "unknown": {
+    "received_bank_cash_usd": null,
+    "after_tax_profit_usd": null,
+    "actual_hourly_earnings_usd": null,
+    "actual_wishlist_to_paid_checkout_conversion": null,
+    "platform_median_firstweek_sales": null
+  },
+  "model_path": "site/steam-author-first-week-cash-gap.mjs",
+  "tests_path": "tests/steam-author-first-week-cash-gap.test.mjs",
+  "no_real_merchant_records": true
+}
