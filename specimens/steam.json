@@ -2050,6 +2050,39 @@
       "evidence_class": "official_public_multi_entity_publisher_collaboration_guidance",
       "license": "Public metadata and independently written factual synthesis; no panel transcript, private publishing contract or client data.",
       "notes": "Acknowledges publisher/developer collaboration and need to configure multiple entities' game-management access; does not disclose game-specific rights grants or royalties."
+    },
+    {
+      "id": "au-esafety-2026-steam-gaming-transparency-report",
+      "url": "https://www.esafety.gov.au/industry/basic-online-safety-expectations/online-game-and-gaming-adjacent-services",
+      "publisher": "Australian eSafety Commissioner / Australian Government",
+      "title": "Responses to transparency notices: Online game and gaming-adjacent services",
+      "published_at": "2026-10-02",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "australian_government_online_safety_provider_notice_report",
+      "license": "Official public URL and independently written short factual summaries; no personal reports or full published text reproduced.",
+      "notes": "October 2026 transparency report of compulsory April 1, 2026 notices covering provider practices for October 2025-March 2026; includes Steam and Steam Chat, September 9 R18 Australian code footnote."
+    },
+    {
+      "id": "au-esafety-2026-gaming-report-announcement",
+      "url": "https://www.esafety.gov.au/newsroom/media-releases/gaming-giants-urged-to-level-up-child-safety-measures",
+      "publisher": "Australian eSafety Commissioner / Australian Government",
+      "title": "Gaming giants urged to level-up child safety measures",
+      "published_at": "2026-10-02",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "regulator_announcement_provider_report_observation_period",
+      "license": "Public link and independently authored event summary only.",
+      "notes": "Identifies report publication date, compelled-notice period October 1 2025-March 31 2026, and provider self-report comparison across gaming services."
+    },
+    {
+      "id": "au-esafety-2026-age-restricted-code-guidance",
+      "url": "https://www.esafety.gov.au/industry/codes/faq-access-to-online-porn-and-other-adult-content",
+      "publisher": "Australian eSafety Commissioner / Australian Government",
+      "title": "FAQ: Accessing online porn and other adult content under the Age-Restricted Material Codes",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "australian_regulator_current_public_code_effective_dates",
+      "license": "Public link and original brief legal-process synopsis; no copyright-protected report reproduced.",
+      "notes": "Defines staged age-assurance requirements for Australian app distribution services, including September 9, 2026 date for R18+ app-download controls."
     }
   ],
   "claims": [
@@ -14154,6 +14187,91 @@
       "observed_at": "2026-10-29",
       "limitations": "Logical non-identification from separately documented public credit and account/contract roles, not a claim about a particular studio.",
       "confidence": "high_independently_synthesized_boundaries"
+    },
+    {
+      "id": "steam-au-report-2025oct-2026mar-observation-window",
+      "text": "Australia's eSafety Commissioner published an October 2, 2026 online-gaming transparency report on Steam and Steam Chat based on compelled provider reports for October 1, 2025 through March 31, 2026.",
+      "source_ids": [
+        "au-esafety-2026-steam-gaming-transparency-report",
+        "au-esafety-2026-gaming-report-announcement"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "A 2026 publication date does not make its earlier service-practice window current at the end of October 2026.",
+      "confidence": "high_public_regulator_event"
+    },
+    {
+      "id": "steam-au-report-prepublication-vs-postpublication-process",
+      "text": "The Australian eSafety report distinguishes Valve's prepublication game review for unlawful material from reliance on user reports to identify unlawful material in games already published during the reviewed period.",
+      "source_ids": [
+        "au-esafety-2026-steam-gaming-transparency-report"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "A report of provider moderation processes is not a census of rejected games, a proven statutory violation or evidence of current seller ban frequency.",
+      "confidence": "high_regulator_reported_process"
+    },
+    {
+      "id": "steam-au-report-absence-hashmatch-during-review-window",
+      "text": "For the report's 2025–March 2026 observation period, eSafety states Valve did not use hash-matching tools on Steam and Steam Chat for previously identified harmful content.",
+      "source_ids": [
+        "au-esafety-2026-steam-gaming-transparency-report",
+        "au-esafety-2026-gaming-report-announcement"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "A tool inventory observation is not a measurement of specific harmful events, game removals or later changes.",
+      "confidence": "high_public_regulator_report"
+    },
+    {
+      "id": "steam-au-report-chat-detection-limits-during-review-window",
+      "text": "The eSafety report states Valve lacked proactive detection of specified harms in Steam Chat text or voice during the reviewed period other than a URL detection tool principally aimed at scams.",
+      "source_ids": [
+        "au-esafety-2026-steam-gaming-transparency-report"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Steam Chat moderation is a separate operational surface from Steam seller financial payouts and AppID bans.",
+      "confidence": "high_public_regulator_report"
+    },
+    {
+      "id": "steam-au-report-selfdeclared-age-vs-sep2026-change",
+      "text": "eSafety describes reliance on age self-declaration and no other collected age-related information during its 2025–March 2026 review, distinct from the reported September 2026 Australian R18+ credit-card verification change.",
+      "source_ids": [
+        "au-esafety-2026-steam-gaming-transparency-report"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The earlier reporting period cannot be used to characterize all later Steam user age verification practices.",
+      "confidence": "high_temporal_source_interpretation"
+    },
+    {
+      "id": "steam-au-sep9-2026-r18-app-age-gate",
+      "text": "Australia's R18+ app-distribution age-gating requirement had a September 9, 2026 commencement; the regulator says Valve then began requiring Australian Steam users to provide credit-card verification to access R18+ games.",
+      "source_ids": [
+        "au-esafety-2026-steam-gaming-transparency-report",
+        "au-esafety-2026-age-restricted-code-guidance"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Australia-specific restriction for children and R18+ games, not a global prohibition on adult purchases or all content categories.",
+      "confidence": "high_australian_regulatory_guidance"
+    },
+    {
+      "id": "steam-au-report-no-adjudicated-seller-ban-rate",
+      "text": "The Australian online-gaming transparency report does not establish a measured Steam publisher-account suspension frequency or final adjudication that any specific game developer violated platform or Australian law.",
+      "source_ids": [
+        "au-esafety-2026-steam-gaming-transparency-report",
+        "au-esafety-2026-gaming-report-announcement"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The regulator reviewed platform-wide safety processes and provider responses, not a verified merchant-enforcement cohort.",
+      "confidence": "high_source_scope_boundary"
+    },
+    {
+      "id": "steam-au-age-gate-no-measured-sales-effects",
+      "text": "The public Australian R18+ verification guidance and the eSafety report provide no matched paid-checkout, revenue or publisher-profit comparison establishing the economic effect of the September 2026 age gate.",
+      "source_ids": [
+        "au-esafety-2026-steam-gaming-transparency-report",
+        "au-esafety-2026-age-restricted-code-guidance"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Neither a regulatory requirement nor a report of platform controls supplies a counterfactual game-sales panel.",
+      "confidence": "high_economic_identification_limit"
     }
   ],
   "observations": [],

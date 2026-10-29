@@ -36,6 +36,10 @@ The [three-provider game release crosswalk](../ontology/steam/steam-2025-three-c
 
 The [official public rule-list comparison](../ontology/steam/steam-content-eligibility-page-drift-and-ai-disclosure-2026.md) documents 14 restrictions on the Steam Direct landing page against 15 in Steamworks onboarding, including an additional payment-network warning. It also records content-survey limits and the distinct requirements for live-generated AI, with synthetic review gates that do not presume approval or revenue. This adds five source-linked claims using three previously registered official sources and advances an existing content-eligibility task by two points. Current **91.212%** (Δ **+0.007 pp**), original 293 tasks unchanged.
 
+## Australia 2026 Steam age-verification and moderation report (October 29, 2026)
+
+The [Australian eSafety transparency audit](../ontology/steam/steam-australia-esafety-2026-age-gate-and-report-scope.md) distinguishes a **2025–March 2026 reported platform-safety observation window** from **September 9, 2026** Australian R18+ age-verification requirements and the regulator's October 2 publication. Three official Australian sources and eight bounded claims document the regional rule without inferring any general game bans, publisher cash holds, sales losses or legal violation. The original 293 tasks now average **91.294%** exact source-backed progress; representative merchant income remains unavailable.
+
 ## Steam partner role and legal-rights crosswalk (October 29, 2026)
 
 The [official permission, application-sharing and transfer comparison](../ontology/steam/steam-partner-role-rights-crosswalk-2026.md) distinguishes game IP ownership, displayed store credits, the legal contracting party, the Steamworks payment partner, app-editing authority and financial-report viewing. Two additional Valve public sources support eight bounded claims, with the **full signed SDA license grants still unknown**. This extends the original 293-task inventory without inferring royalty arrangements or publisher earnings. Current exact research completion: **91.283%**.
