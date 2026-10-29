@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "demo_tag_released_game_frame_and_next_fest_self_selection_comparison",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steamdb-demo-available-2025-oct29",
+    "steamdb-annual-release-snapshot-2026-10",
+    "steam-nextfest-feb2026-zukowski-survey",
+    "steam-nextfest-feb2026-gdc"
+  ],
+  "claim_ids": [
+    "steam-festival-feb26-survey-median",
+    "steam-festival-feb26-survey-response-frame",
+    "steam-festival-feb26-gdc-demos",
+    "steam-festival-feb26-gdc-followers",
+    "steam-festival-feb26-gdc-wishlist-bridge",
+    "steam-festival-feb26-distinct-median-denominators",
+    "steam-festival-feb26-182-3500-not-response-rate",
+    "steamdb-2025-demo-tag-current",
+    "steamdb-2025-release-count-drift",
+    "steamdb-demo-current-tag-fraction-not-launch-prevalence",
+    "steam-nextfest-followers-not-publisher-profit"
+  ],
+  "steamdb_2025_snapshot": {
+    "demo_tagged_games": 4663,
+    "all_games_live_2026_10_29": 21222,
+    "all_games_live_2026_10_28": 21224,
+    "ratio_approx": 0.21972481387239656,
+    "tag_means_currently_demo_available": true,
+    "verified_demo_available_on_original_release": false,
+    "paid_only_games_frame": false
+  },
+  "february_2026_next_fest": {
+    "provider_participant_lower_bound_exclusive": 3500,
+    "provider_median_new_followers": 11,
+    "provider_p95_new_followers_approx": 350,
+    "provider_wishlists_from_follower_model_median_approx": 200,
+    "provider_wishlists_from_follower_model_p95_approx": 7000,
+    "voluntary_survey_responses": 182,
+    "voluntary_survey_per_question_usable_approx": [
+      170,
+      174
+    ],
+    "voluntary_survey_wishlists_p30": 382,
+    "voluntary_survey_wishlists_median": 806,
+    "voluntary_survey_wishlists_p70": 1839,
+    "voluntary_survey_wishlists_p95": 13461,
+    "representative_survey": false,
+    "comparable_metrics_between_reports": false,
+    "known_survey_response_probability": null
+  },
+  "unknown": {
+    "game_demo_at_original_release_rate": null,
+    "actual_studio_playtest_use_rate": null,
+    "actual_festival_purchase_median": null,
+    "causal_nextfest_sales_increase": null,
+    "developer_after_cost_profit": null
+  },
+  "model_path": "site/steam-demo-festival-coverage.mjs",
+  "tests_path": "tests/steam-demo-festival-coverage.test.mjs",
+  "uses_private_partner_data": false
+}

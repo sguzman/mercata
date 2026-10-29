@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## February 2026 Next Fest survey versus all-demo follower estimates
+
+The [festival and demo availability study](../ontology/steam/steam-nextfest-demo-coverage-and-survey-selection-2026.md) contrasts a self-selected developer wishlist survey with GameDiscoverCo's broader follower-based festival frame, and records SteamDB's evolving 2025 demo-availability tag denominator. It preserves different metrics and excludes any inferred paid-sale conversion. **Current score 90%** (exact 89.631%; Δ +0.092 pp). The original 293 research tasks remain unchanged.
+
 ## Steam Deck and Steam Machine controller verification constraints
 
 The [separately rated hardware input QA audit](../ontology/steam/steam-deck-machine-input-qa-and-compatibility-gates-2026.md) documents controller-default completeness, dynamic glyphs, text input and distinct 30 FPS resolution floors, with a deterministic synthetic checklist. It is not a real game/device test or a prediction that a Verified badge increases sales. **Steam task-weighted research rounds to 90%** (exact **89.539%**, +0.102 pp this checkpoint); 293 original tasks unchanged.

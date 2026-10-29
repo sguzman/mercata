@@ -165,10 +165,10 @@
       "title": "SteamDB game releases by year",
       "publisher": "SteamDB",
       "published_at": null,
-      "retrieved_at": "2026-10-28",
+      "retrieved_at": "2026-10-29",
       "evidence_class": "independent_mutable_game_catalog_count",
       "license": "Only short independent numeric description with source URL; no database export, underlying rows or visuals rehosted.",
-      "notes": "October 28 public rendered count of 2025 releases was 21,224; search indexing in same review returned 21,228, illustrating live recalculation. Third-party catalog, not Valve signed merchant records."
+      "notes": "October 28 public rendered count of 2025 releases was 21,224; search indexing in same review returned 21,228, illustrating live recalculation. Third-party catalog, not Valve signed merchant records. On October 29 another live reading found 21,222 games for 2025 (versus the October 28 rendered 21,224); maintain both dated counts, and treat contemporaneous category ratios as approximate."
     },
     {
       "id": "steamlense-2025-paid-release-review-snapshot",
@@ -1654,6 +1654,39 @@
       "evidence_class": "official_native_vs_legacy_controller_mapping_explanation",
       "license": "Public link and concise independent policy paraphrases, no copied diagrams or texts.",
       "notes": "Legacy mode emulates underlying mouse/key inputs and may mismatch controller glyphs. Native mode routes abstract actions with input-type glyph lookup."
+    },
+    {
+      "id": "steamdb-demo-available-2025-oct29",
+      "url": "https://steamdb.info/stats/releases/?tagid=21491",
+      "title": "Demo Available game releases by year",
+      "publisher": "SteamDB",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "secondary_mutable_current_tag_2025_release_year",
+      "license": "Link and short numeric attribution only; no source article, database records, figures or proprietary analytics copied.",
+      "notes": "Oct 29 2026: 4,663 2025-released games currently categorized Demo Available; tag need not have existed at release."
+    },
+    {
+      "id": "steam-nextfest-feb2026-zukowski-survey",
+      "url": "https://howtomarketagame.com/2026/04/13/making-sense-of-the-february-2026-steam-next-fest/",
+      "title": "Making sense of the February 2026 Steam Next Fest",
+      "publisher": "Chris Zukowski / How To Market A Game",
+      "published_at": "2026-04-13",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "first_party_voluntary_survey_of_festival_developers",
+      "license": "Link and short numeric attribution only; no source article, database records, figures or proprietary analytics copied.",
+      "notes": "Self-selected 182 respondent survey; 30th 382, median 806, 70th 1839, 95th 13461 wishlists. Per-question numbers may be lower."
+    },
+    {
+      "id": "steam-nextfest-feb2026-gdc",
+      "url": "https://newsletter.gamediscover.co/p/who-won-february-2026s-steam-next",
+      "title": "Who won February 2026's Steam Next Fest?",
+      "publisher": "Simon Carless / GameDiscoverCo",
+      "published_at": "2026-03-03",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "provider_full_festival_field_public_follower_measure",
+      "license": "Link and short numeric attribution only; no source article, database records, figures or proprietary analytics copied.",
+      "notes": "Over 3500 demos, median 11 followers, approximate 350 followers at top 5%; wishlist conversions are provider guesses not audited game-ledger wishlists."
     }
   ],
   "claims": [
@@ -10327,6 +10360,120 @@
       "confidence": "official_technical_requirements_not_merchant_economics",
       "observed_at": "2026-10-28",
       "limitations": "No matched sales, hardware user demographics, empirical conversion or labor costs in the public documentation."
+    },
+    {
+      "id": "steam-festival-feb26-survey-median",
+      "text": "Zukowski's self-selected February 2026 Next Fest respondent survey reports a median 806 wishlist additions, with 30th, 70th, 95th percentiles 382, 1839, 13461.",
+      "source_ids": [
+        "steam-nextfest-feb2026-zukowski-survey"
+      ],
+      "confidence": "bounded_nonrepresentative_survey_or_third_party_catalog",
+      "observed_at": "2026-10-29",
+      "limitations": "Not a weighted, random or all-participant survey; private respondent reporting not verified."
+    },
+    {
+      "id": "steam-festival-feb26-survey-response-frame",
+      "text": "The February 2026 Next Fest survey drew 182 developer responses, with differing usable counts across questions.",
+      "source_ids": [
+        "steam-nextfest-feb2026-zukowski-survey"
+      ],
+      "confidence": "bounded_nonrepresentative_survey_or_third_party_catalog",
+      "observed_at": "2026-10-29",
+      "limitations": "No universal invitation delivery count or verified response probability."
+    },
+    {
+      "id": "steam-festival-feb26-gdc-demos",
+      "text": "GameDiscoverCo reports more than 3500 eligible February 2026 Next Fest demos, 19% more than October 2025 and 51% more than February 2025.",
+      "source_ids": [
+        "steam-nextfest-feb2026-gdc"
+      ],
+      "confidence": "bounded_nonrepresentative_survey_or_third_party_catalog",
+      "observed_at": "2026-10-29",
+      "limitations": "Provider-defined eligible participation, not a paid-only Steam launch cohort."
+    },
+    {
+      "id": "steam-festival-feb26-gdc-followers",
+      "text": "GameDiscoverCo reports a median 11 new followers per participating demo and approximately 350 new followers at the top 5% in February 2026.",
+      "source_ids": [
+        "steam-nextfest-feb2026-gdc"
+      ],
+      "confidence": "bounded_nonrepresentative_survey_or_third_party_catalog",
+      "observed_at": "2026-10-29",
+      "limitations": "Follower changes are not observed wishlists, paid units or actual festival exposure causal effects."
+    },
+    {
+      "id": "steam-festival-feb26-gdc-wishlist-bridge",
+      "text": "GameDiscoverCo tentatively converts approximately 11 median follower gains to about 200 wishlists and 350 followers at the high end to approximately 7000 wishlists.",
+      "source_ids": [
+        "steam-nextfest-feb2026-gdc"
+      ],
+      "confidence": "bounded_nonrepresentative_survey_or_third_party_catalog",
+      "observed_at": "2026-10-29",
+      "limitations": "Followers-to-wishlists conversion is modeled and not a direct, audited wishlist ledger."
+    },
+    {
+      "id": "steam-festival-feb26-distinct-median-denominators",
+      "text": "A median of 806 self-reported wishlists among voluntary respondents and a median of 11 public followers across participating demos are not the same measure or sample.",
+      "source_ids": [
+        "steam-nextfest-feb2026-zukowski-survey",
+        "steam-nextfest-feb2026-gdc"
+      ],
+      "confidence": "bounded_nonrepresentative_survey_or_third_party_catalog",
+      "observed_at": "2026-10-29",
+      "limitations": "Do not divide or average mismatched medians to quantify selection bias."
+    },
+    {
+      "id": "steam-festival-feb26-182-3500-not-response-rate",
+      "text": "Dividing the 182 voluntary survey responses by a minimum 3500 participating demos does not yield a survey response rate because the contacted eligible response pool is unknown.",
+      "source_ids": [
+        "steam-nextfest-feb2026-zukowski-survey",
+        "steam-nextfest-feb2026-gdc"
+      ],
+      "confidence": "bounded_nonrepresentative_survey_or_third_party_catalog",
+      "observed_at": "2026-10-29",
+      "limitations": "Numerical upper bound on participant inclusion, not probability that a surveyed developer responded."
+    },
+    {
+      "id": "steamdb-2025-demo-tag-current",
+      "text": "SteamDB on October 29, 2026 listed 4663 games released in 2025 as currently Demo Available.",
+      "source_ids": [
+        "steamdb-demo-available-2025-oct29"
+      ],
+      "confidence": "bounded_nonrepresentative_survey_or_third_party_catalog",
+      "observed_at": "2026-10-29",
+      "limitations": "A demo may have been added after paid release; changing tags are not original launch states."
+    },
+    {
+      "id": "steamdb-2025-release-count-drift",
+      "text": "SteamDB listed 21224 released games for 2025 on October 28, but an October 29 reading showed 21222, demonstrating mutable catalog totals.",
+      "source_ids": [
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "bounded_nonrepresentative_survey_or_third_party_catalog",
+      "observed_at": "2026-10-29",
+      "limitations": "Different snapshot times and tags mean exact ratios have a small date-synchronization uncertainty."
+    },
+    {
+      "id": "steamdb-demo-current-tag-fraction-not-launch-prevalence",
+      "text": "In roughly concurrent SteamDB snapshots, 4663 Demo Available tags divided by about 21222 released 2025 games is approximately 22%; this is not demo-at-original-release frequency.",
+      "source_ids": [
+        "steamdb-demo-available-2025-oct29",
+        "steamdb-annual-release-snapshot-2026-10"
+      ],
+      "confidence": "bounded_nonrepresentative_survey_or_third_party_catalog",
+      "observed_at": "2026-10-29",
+      "limitations": "Tag presence is retrospective and game catalog may not be verified originally paid; do not infer Playtest adoption or paid checkout."
+    },
+    {
+      "id": "steam-nextfest-followers-not-publisher-profit",
+      "text": "Next Fest follower changes, paid game orders and publisher after-cost profit are distinct units not observed together in the two festival studies.",
+      "source_ids": [
+        "steam-nextfest-feb2026-zukowski-survey",
+        "steam-nextfest-feb2026-gdc"
+      ],
+      "confidence": "bounded_nonrepresentative_survey_or_third_party_catalog",
+      "observed_at": "2026-10-29",
+      "limitations": "Unobserved conversion rates and development costs remain unknown."
     }
   ],
   "observations": [],
