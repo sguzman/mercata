@@ -8845,6 +8845,57 @@
       "confidence": "bounded_public_case",
       "observed_at": "2026-10-28",
       "limitations": "Publisher identities, unknown zero-sellers, release ages, signed shares and complete business costs are not sampled or harmonized."
+    },
+    {
+      "id": "steam-tail-selects-successful-releases",
+      "text": "GameDiscoverCo's July 2026 longitudinal modeled study selected approximately 5,000 Steam games launched from July 2023 through July 2025 with over 1,000 modeled first-month copies.",
+      "source_ids": [
+        "gamediscoverco-2026-july-long-tail-selected-games"
+      ],
+      "confidence": "bounded_selection_and_reporting",
+      "observed_at": "2026-10-28",
+      "limitations": "Threshold-selected observed/projection cohort excludes very low and zero-sale games; estimated model units are not audited transactions."
+    },
+    {
+      "id": "steam-tail-firstweek-yearone-conditional-ratios",
+      "text": "The selected game's median first-week-to-year-one cumulative ratios were 2.59 for copies and 2.46 for modeled gross revenue.",
+      "source_ids": [
+        "gamediscoverco-2026-july-long-tail-selected-games"
+      ],
+      "confidence": "bounded_selection_and_reporting",
+      "observed_at": "2026-10-28",
+      "limitations": "Neither median is the expected multiplier of an arbitrary game's sales or its payout; sample conditioned on at least 1,001 estimated first-month units."
+    },
+    {
+      "id": "steam-tail-two-year-followup-unverified",
+      "text": "The July 2026 long-tail analysis' release window extends through July 2025, whose games cannot yet have 24 completed months after release by the article's July 21, 2026 publication.",
+      "source_ids": [
+        "gamediscoverco-2026-july-long-tail-selected-games"
+      ],
+      "confidence": "bounded_selection_and_reporting",
+      "observed_at": "2026-10-28",
+      "limitations": "The public report does not provide an independent complete-case count or an auditable per-horizon censoring method; the stated 24-month median may use a different subset or model forecast."
+    },
+    {
+      "id": "steam-tail-all-game-profit-inference-prohibited",
+      "text": "A success-filtered modeled game revenue ratio cannot establish the complete Steam paid-release population's median gross revenue, publisher net proceeds, or after-cost developer profit.",
+      "source_ids": [
+        "gamediscoverco-2026-july-long-tail-selected-games",
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "bounded_selection_and_reporting",
+      "observed_at": "2026-10-28",
+      "limitations": "Studio identities, partner shares, months observed, legal payouts, and labor costs are missing or incompletely defined."
+    },
+    {
+      "id": "steam-tail-2021-time-shift-not-causal",
+      "text": "The article contrasts a 2026 selected modeled first-week-to-first-year gross multiplier of 2.46 with an earlier 2021 self-reported comparison of 3.05.",
+      "source_ids": [
+        "gamediscoverco-2026-july-long-tail-selected-games"
+      ],
+      "confidence": "bounded_selection_and_reporting",
+      "observed_at": "2026-10-28",
+      "limitations": "Different cohorts, data collection methods, sales eligibility and market composition preclude treating the numerical contrast as a causal historical fall for all releases."
     }
   ],
   "observations": [],

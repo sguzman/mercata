@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "selected_longitudinal_steam_modeled_sales_and_right_censoring_qa",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "gamediscoverco-2026-july-long-tail-selected-games",
+    "steam-financial-reporting-doc"
+  ],
+  "claim_ids": [
+    "steam-tail-selects-successful-releases",
+    "steam-tail-firstweek-yearone-conditional-ratios",
+    "steam-tail-two-year-followup-unverified",
+    "steam-tail-all-game-profit-inference-prohibited",
+    "steam-tail-2021-time-shift-not-causal"
+  ],
+  "sample": {
+    "provider": "GameDiscoverCo",
+    "published_at": "2026-07-21",
+    "release_start": "2023-07-01",
+    "release_end": "2025-07-31",
+    "first_month_estimated_paid_units_strictly_greater_than": 1000,
+    "approx_games": 5000,
+    "model_sales_not_authenticated": true,
+    "inclusion_of_zero_sales": false,
+    "inclusion_of_low_sales": false
+  },
+  "reported_selected_median_multipliers": {
+    "week_one_to_year_one_copies": 2.59,
+    "week_one_to_year_one_gross": 2.46,
+    "month_one_to_year_one_copies": 1.79,
+    "month_one_to_year_one_gross": 1.67,
+    "month_one_to_year_two_copies": 2.27
+  },
+  "time_support": {
+    "publication_date": "2026-07-21",
+    "all_release_dates_24_month_mature": false,
+    "exact_24_month_study_denominator": null,
+    "source_24_month_handling_unverified": true
+  },
+  "boundaries": {
+    "synthetic_eligibility_gate_only": true,
+    "no_real_game_predictions": true,
+    "provider_model_not_audited": true,
+    "source_subgroup_median_not_population_median": true,
+    "do_not_extrapolate_to_excluded_games": true,
+    "do_not_compare_2021_and_2026_as_causal": true
+  },
+  "unknown": {
+    "actual_all_game_gross_median": null,
+    "actual_first_game_publisher_net_income_median": null,
+    "exact_zero_sales_fraction": null,
+    "after_labor_profit_median": null,
+    "provider_two_year_complete_case_denominator": null
+  }
+}

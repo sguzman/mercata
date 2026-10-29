@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Actual seller earnings, release-cohort sales and buyer populations remain unknown. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Selected long-tail release cohort and incomplete follow-up audit
+
+The [modeled long-tail eligibility audit](../ontology/steam/selected-long-tail-eligibility-and-censoring-2026.md) checks GameDiscoverCo's over-1,000 first-month units selection and publication-date right-censoring at 12 and 24 months. An executable synthetic gate refuses to extrapolate successful-game ratios into debut publisher profit. **Current score 88%** (exact 87.901%; +0.034 pp). The original 293 tasks are retained.
+
 ## Developer-site Steam finance terminology and low-return cases
 
 The [developer-operated site case audit](../ontology/steam/developer-operated-site-revenue-cases-2026.md) adds two first-party postmortems and a receipt-label comparison: a first Early Access game with reported $619 Net Steam Revenue and a historic single-game cross-store comparison disclosing Steam gross and claimed bank receipts with different settlement windows. **88% current task-weighted completion** (exact 87.867%; Δ +0.085 pp from the previous checkpoint); **293 tasks unchanged**, no real authenticated ledger or representative income statistics.
