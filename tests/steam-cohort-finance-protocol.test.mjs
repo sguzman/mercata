@@ -36,6 +36,32 @@ test('duplicate IDs, impossible dates and invalid cohort windows are never silen
  assert.throws(()=>classifyPaidRelease(a,{start:'2026-01-01',endExclusive:'2025-01-01'}),/Window/);
  assert.throws(()=>classifyPaidRelease({appid:-5},window),/AppID/);
 });
+test('preorder checkout alone is not a publicly playable paid game release',()=>{
+ const a={appid:31,app_type:'game',paid_on_first_public_release:true,initial_paid_release_mode:'preorder_only',first_store_paid_order_date:'2024-12-20',first_public_paid_release_date:null};
+ assert.deepEqual(classifyPaidRelease(a,window),{status:'unresolved',reason:'preorder_is_not_playable_release'});
+ assert.equal(summarizePaidReleaseCandidates([a],window).counts.unresolved,1);
+});
+test('Advance Access is distinct from version 1.0 and earlier paid Early Access',()=>{
+ const advance={appid:32,app_type:'game',paid_on_first_public_release:true,initial_paid_release_mode:'advance_access',first_store_paid_order_date:'2024-12-20',first_public_paid_release_date:'2025-01-03',full_1_0_date:'2025-01-06'};
+ assert.equal(classifyPaidRelease(advance,window).status,'eligible');
+ const early={appid:33,app_type:'game',paid_on_first_public_release:true,initial_paid_release_mode:'early_access',first_public_paid_release_date:'2024-12-20',full_1_0_date:'2025-01-06'};
+ assert.equal(classifyPaidRelease(early,window).reason,'outside_cohort_window');
+});
+test('bad event labels, impossible order dates and reversed full release are unresolved',()=>{
+ const a={appid:34,app_type:'game',paid_on_first_public_release:true,first_public_paid_release_date:'2025-04-01'};
+ assert.equal(classifyPaidRelease({...a,initial_paid_release_mode:'beta_only'},window).reason,'initial_paid_release_mode_unknown');
+ assert.equal(classifyPaidRelease({...a,first_store_paid_order_date:'2025-02-30'},window).reason,'first_store_paid_order_date_invalid');
+ assert.equal(classifyPaidRelease({...a,full_1_0_date:'2025-03-01'},window).reason,'full_release_date_invalid_or_precedes_initial_paid_release');
+ assert.equal(classifyPaidRelease({...a,first_store_paid_order_date:'2025-05-01'},window).status,'eligible');
+});
+test('dated claim links and unknown merchant outcomes stay intact',()=>{
+ assert.equal(cohort.launch_event_audit_20261029.preorder_only_is_playable_paid_release,false);
+ assert.equal(cohort.launch_event_audit_20261029.beta_test_playtime_exception,true);
+ assert.equal(cohort.launch_event_audit_20261029.real_refund_outcomes,null);
+ const ids=new Set(specimen.evidence.map(s=>s.id)),claims=new Map(specimen.claims.map(x=>[x.id,x]));
+ for(const id of cohort.source_ids)assert(ids.has(id),id);
+ for(const id of cohort.claim_ids){assert(claims.has(id),id);assert(claims.get(id).source_ids.every(x=>ids.has(x)),id);}
+});
 test('official financial API structure keeps Steam checkout, retail keys and micros separate',()=>{
  assert.equal(finance.financial_line_types.steam_package.package_sale_type,'Steam');
  assert.equal(finance.financial_line_types.retail_key.package_sale_type,'Retail');
@@ -46,7 +72,7 @@ test('official financial API structure keeps Steam checkout, retail keys and mic
  assert(finance.no_unqualified_crosswalks.includes('primary_appid_to_entire_package_sale'));
 });
 test('cohort/finance claims and sources are grounded, and progress retains 293 tasks',()=>{
- assert.equal(cohort.claim_ids.length,15);
+ assert.equal(cohort.claim_ids.length,21);
  assert.equal(finance.claim_ids.length,15);
  const sourceIds=new Set(specimen.evidence.map(s=>s.id)),claimIds=new Set(specimen.claims.map(c=>c.id));
  for(const s of cohort.source_ids.concat(finance.source_ids))assert(sourceIds.has(s),s);

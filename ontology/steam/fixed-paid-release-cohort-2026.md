@@ -1,6 +1,6 @@
 # Fixed paid-release cohorts: a defensible Steam denominator
 
-**Reviewed October 28, 2026.** [Structured protocol](fixed-paid-release-cohort-2026.json). This is a research design with synthetic eligibility tests, **not an observed Steam census**.
+**Reviewed October 29, 2026.** [Structured protocol](fixed-paid-release-cohort-2026.json). This is a research design with synthetic eligibility tests, **not an observed Steam census**.
 
 ## The cohort we actually want to measure
 
@@ -13,6 +13,16 @@ Primary question: *How do games that were first offered for payment on Steam dur
 - **Carry forward:** games with **zero reviews**, no owner estimate, no current buy button, and later-retired listings. The [Valve retirement guide](https://partner.steamgames.com/doc/store/retire_app?l=english) says retired titles are removed from active store listings but retained for prior owners.
 
 The operational classifier in [site/steam-cohort-frame.mjs](../../site/steam-cohort-frame.mjs) treats missing launch prices or dates as **unresolved**. It rejects duplicate AppIDs and does not use the number of reviews or current storefront visibility as an exclusion rule. Fixtures demonstrate the difference between **zero reviews** and **zero sales**; fixtures are not real games.
+
+## Preorder, Early Access and Advance Access launch clocks (October 29 audit)
+
+Valve's [pre-purchase guide](https://partner.steamgames.com/doc/store/prepurchase) restricts pre-purchase programs primarily to a small set of established partners and distinguishes them from ordinary Coming Soon pages that collect wishlists. Its [Early Access guide](https://partner.steamgames.com/doc/store/earlyaccess) describes a paid, currently playable developing game, not a delayed-delivery preorder. The [Advance Access FAQ](https://help.steampowered.com/en/faqs/view/453F-5C96-EAC2-9145) separately describes an eligible pre-purchase edition played before the standard release.
+
+For **first paid playable game-release** research, keep the following dates separate: Coming Soon visibility, the date money may first be collected for an authorized preorder, first paid *playable* availability (including paid Early Access or Advance Access), full version 1.0 release, and subsequent approved refunds. A preorder checkout by itself does **not** demonstrate that a game has launched to paying players; 1.0 after paid Early Access is not a second new base-game AppID. A distinct order-by-date cohort must use transaction dates instead.
+
+[Valve's refund policy](https://store.steampowered.com/steam_refunds/?l=english) says prerelease playtime counts toward the ordinary two-hour criterion except beta testing, while the standard 14-day window for prerelease purchases begins at release. That must not be generalized into an automatic fresh refund entitlement upon every Early Access-to-1.0 transition, nor treated as a measured merchant return rate.
+
+The [synthetic cohort classifier](../../site/steam-cohort-frame.mjs) now leaves preorder-only cases unresolved pending a first paid playable date, recognizes explicit Early Access and Advance Access modes, preserves separate order and full-release dates, and refuses reversed full-release chronology. Old fixtures without explicit modes remain supported. This is a method check, **not** observed Steam order, income, or refund data.
 
 ## Why a current catalog is not a historical census
 

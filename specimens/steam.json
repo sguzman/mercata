@@ -1863,6 +1863,28 @@
       "evidence_class": "official_public_consumer_account_agreement_not_partner_contract",
       "license": "Public source URL and independently composed limited factual summary only; no contractual full text reproduced.",
       "notes": "General Steam Subscriber Agreement forbids account subscribers under 13 and says additional country age restrictions may apply. Does not establish Steamworks partner agreement age/legal-signatory capacity."
+    },
+    {
+      "id": "steam-prepurchase-restricted-official-20261029",
+      "url": "https://partner.steamgames.com/doc/store/prepurchase",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Pre-Purchasing on Steam",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_partner_documentation",
+      "license": "Public source URL and independently authored summary only.",
+      "notes": "Generally reserved for established partners; does not measure approved preorders."
+    },
+    {
+      "id": "steam-advanceaccess-faq-official-20261029",
+      "url": "https://help.steampowered.com/en/faqs/view/453F-5C96-EAC2-9145",
+      "publisher": "Valve Corporation — official Steam Support",
+      "title": "Advance Access FAQ",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_support_faq",
+      "license": "Public source URL and independently authored summary only.",
+      "notes": "Pre-purchase edition may allow playing before general release; distinct from Steam Early Access."
     }
   ],
   "claims": [
@@ -12748,6 +12770,70 @@
       "confidence": "high_public_consumer_vs_partner_agreement_boundary",
       "observed_at": "2026-10-29",
       "limitations": "A representative applicant and merchant cohort, lawful demographic data and verified outcomes would be necessary; no personal age, account or financial records were collected."
+    },
+    {
+      "id": "steam-prepurchase-not-normal-selfpublisher-route-20261029",
+      "text": "Valve's pre-purchase policy generally restricts pre-order programs to established partners, so a normal Coming Soon page does not ensure pre-purchase is available.",
+      "source_ids": [
+        "steam-prepurchase-restricted-official-20261029"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "No measured preorder participation or sales."
+    },
+    {
+      "id": "steam-comingsoon-not-paid-checkout-20261029",
+      "text": "A Coming Soon page supports wishlists and discussion but is not itself a game checkout.",
+      "source_ids": [
+        "steam-prepurchase-restricted-official-20261029"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Page launch dates are not merchant transactions."
+    },
+    {
+      "id": "steam-earlyaccess-paid-playable-not-prepurchase-20261029",
+      "text": "Steam Early Access makes a developing game playable upon purchase, unlike pre-purchases whose delivery is later.",
+      "source_ids": [
+        "steam-earlyaccess-policy-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Later full release is not a second AppID launch cohort."
+    },
+    {
+      "id": "steam-advanceaccess-prepurchase-incentive-20261029",
+      "text": "Steam Advance Access is pre-release play associated with an eligible pre-purchase edition, distinct from the Early Access development model.",
+      "source_ids": [
+        "steam-advanceaccess-faq-official-20261029",
+        "steam-earlyaccess-policy-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "No causal sales uplift or universal partner eligibility inferred."
+    },
+    {
+      "id": "steam-prerelease-refund-playtime-and-clock-20261029",
+      "text": "Under Valve's refund policy, non-beta prerelease play counts toward the ordinary two-hour threshold, and the ordinary fourteen-day window on purchases before release begins at release.",
+      "source_ids": [
+        "steam-refund-rules-2026",
+        "steam-advanceaccess-faq-official-20261029"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Not a guaranteed approved refund, an estimated return rate or a blanket new window at version 1.0."
+    },
+    {
+      "id": "steam-cohort-event-clock-independent-of-order-20261029",
+      "text": "For Mercata's release-cohort classification, the first public paid playable date is different from a preorder checkout date or a later full 1.0 release milestone.",
+      "source_ids": [
+        "steam-prepurchase-restricted-official-20261029",
+        "steam-earlyaccess-policy-official",
+        "steam-advanceaccess-faq-official-20261029"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Mercata methodological choice; a paid-order cohort instead uses order timestamps."
     }
   ],
   "observations": [],

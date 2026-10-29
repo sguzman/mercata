@@ -13,9 +13,20 @@ export function classifyPaidRelease(record,window){
  const paid=record.paid_on_first_public_release;
  if(paid===false)return {status:'excluded',reason:'not_paid_on_initial_release'};
  if(paid!==true)return {status:'unresolved',reason:'initial_paid_status_unknown'};
+ // Optional explicit event type distinguishes a pre-order checkout from a playable launch.
+ const mode=record.initial_paid_release_mode;
+ if(mode!==null&&mode!==undefined&&!['early_access','advance_access','full_release','preorder_only'].includes(mode))
+  return {status:'unresolved',reason:'initial_paid_release_mode_unknown'};
+ if(mode==='preorder_only')return {status:'unresolved',reason:'preorder_is_not_playable_release'};
+ const orderDate=record.first_store_paid_order_date;
+ if(orderDate!==null&&orderDate!==undefined&&!isoDay(orderDate))
+  return {status:'unresolved',reason:'first_store_paid_order_date_invalid'};
  const date=record.first_public_paid_release_date;
  if(date===null||date===undefined)return {status:'unresolved',reason:'first_paid_release_date_unknown'};
  if(!isoDay(date))return {status:'unresolved',reason:'first_paid_release_date_invalid'};
+ const full=record.full_1_0_date;
+ if(full!==null&&full!==undefined&&(!isoDay(full)||full<date))
+  return {status:'unresolved',reason:'full_release_date_invalid_or_precedes_initial_paid_release'};
  if(date<window.start||date>=window.endExclusive)return {status:'excluded',reason:'outside_cohort_window'};
  return {status:'eligible',reason:'first_public_paid_release_in_window'};
 }

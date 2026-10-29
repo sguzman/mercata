@@ -2,7 +2,7 @@
   "schema_version": 1,
   "specimen_id": "steam",
   "kind": "original_paid_release_cohort_protocol_not_observed_dataset",
-  "reviewed_at": "2026-10-28",
+  "reviewed_at": "2026-10-29",
   "source_ids": [
     "steam-applications-official",
     "steam-packages-official",
@@ -15,7 +15,10 @@
     "steamdb-annual-release-snapshot-2026-10",
     "steamlense-2025-paid-release-review-snapshot",
     "steam-review-policy-2026",
-    "steam-financial-api-official"
+    "steam-financial-api-official",
+    "steam-prepurchase-restricted-official-20261029",
+    "steam-advanceaccess-faq-official-20261029",
+    "steam-refund-rules-2026"
   ],
   "claim_ids": [
     "steam-appid-is-not-sale",
@@ -32,13 +35,19 @@
     "steam-supply-frame-incomplete",
     "steamspy-estimated-owners-not-purchases",
     "steamspy-novice-selection-blind-spot",
-    "steam-release-frame-no-numerical-income"
+    "steam-release-frame-no-numerical-income",
+    "steam-prepurchase-not-normal-selfpublisher-route-20261029",
+    "steam-comingsoon-not-paid-checkout-20261029",
+    "steam-earlyaccess-paid-playable-not-prepurchase-20261029",
+    "steam-advanceaccess-prepurchase-incentive-20261029",
+    "steam-prerelease-refund-playtime-and-clock-20261029",
+    "steam-cohort-event-clock-independent-of-order-20261029"
   ],
   "population_definition": {
     "geography": "Steam worldwide commercial storefront for a fixed paid-release population; regional availability retained as a field",
     "primary_cohort": "initial_public_steam_release_of_base_game_was_paid",
     "unit": "one base-game AppID",
-    "time_zero": "first publicly purchasable date, including paid Early Access",
+    "time_zero": "first publicly playable paid base-game release (including Early Access and, if available, Advance Access); not preorder checkout date",
     "full_1_0_launch": "separate milestone, not a second entry",
     "period_example": {
       "start": "2025-01-01",
@@ -72,7 +81,9 @@
       "AppID and type",
       "original paid Early Access status",
       "retirement and regional availability"
-    ]
+    ],
+    "preorder_checkout_is_first_playable_release": false,
+    "full_1_0_is_second_base_game_cohort_entry": false
   },
   "public_catalog_provenance": {
     "official_current_game_list_requires_api_key": true,
@@ -106,5 +117,26 @@
     "coverage checks including retired and blocked listings",
     "nonresponse/survivorship sensitivity and reweighting",
     "permissioned aggregated transactions from unsuccessful participants"
-  ]
+  ],
+  "launch_event_audit_20261029": {
+    "mode_options": [
+      "early_access",
+      "advance_access",
+      "full_release",
+      "preorder_only"
+    ],
+    "preorder_only_is_playable_paid_release": false,
+    "coming_soon_implies_game_checkout": false,
+    "pre_purchase_rare_partner_approval_required": true,
+    "early_access_is_playable_paid_release": true,
+    "advance_access_not_early_access": true,
+    "prerelease_ordinary_playtime_counts_against_two_hour_refund_gate": true,
+    "beta_test_playtime_exception": true,
+    "standard_14_day_window_for_prerelease_purchases_starts_at_release": true,
+    "refund_request_approval_guaranteed": false,
+    "first_store_paid_order_date_is_release_time_zero": false,
+    "real_order_rows": null,
+    "real_refund_outcomes": null,
+    "real_paid_cohort_count": null
+  }
 }
