@@ -32,6 +32,8 @@ export function reconcileSyntheticSteamFinancialDays(batches){
     throw new TypeError('Invalid page, highwatermark or row list');
    if(page.requested_highwatermark_id!==cursor||page.returned_max_id<cursor)
     throw new RangeError('Broken per-date highwatermark pagination');
+   if(page.returned_max_id>cursor&&page.rows.length===0)
+    throw new RangeError('Advancing per-date page cursor requires at least one returned row');
    for(const row of page.rows){
     if(!permitted(row,rowKeys)||!fixture(row.fixture_row_id)||observed.has(row.fixture_row_id)||!kinds.has(row.kind))
      throw new TypeError('Duplicate, nonfixture or unsupported report row');

@@ -147,3 +147,12 @@ test('A synthetic no-change first poll can checkpoint without falsely asserting 
  assert.equal(r.reconciled,null);
  assert.equal(r.actual_partner_coverage,null);
 });
+test('An empty page cannot advance its record cursor and manufacture a zero-sales date',()=>{
+ const batches=fixture();
+ const latest=structuredClone(batches[1]);
+ latest.pages[0].rows=[];
+ assert.throws(()=>reconcile([latest]),/Advancing per-date page cursor requires/);
+ const unchanged=structuredClone(batches[1]);
+ unchanged.pages=[{requested_highwatermark_id:0,returned_max_id:0,rows:[]}];
+ assert.equal(reconcile([unchanged]).days[0].synthetic_rows_after_last_requery,0);
+});
