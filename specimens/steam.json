@@ -1489,6 +1489,17 @@
       "evidence_class": "anonymous_creator_post_low_selling_debut_wishlist_claim",
       "license": "Original public link and independently authored short economic paraphrases; no username or original post text reproduced.",
       "notes": "Self-reported 150 launch wishlists, seven copies described as friends/family, around USD 10 earned, USD 100 Steam Direct expense and 300 hours; no verified customer-level wishlist matching, payout history or source-time crosswalk."
+    },
+    {
+      "id": "steam-wishlist-reporting-official-cohort-2026",
+      "url": "https://partner.steamgames.com/doc/marketing/wishlist/reporting?l=english",
+      "title": "Steam Wishlist Reporting",
+      "publisher": "Valve / Steamworks",
+      "published_at": null,
+      "retrieved_at": "2026-10-28",
+      "evidence_class": "official_partner_wishlist_csv_field_definitions",
+      "license": "Source URL and independently written field summaries only. No protected partner data, screenshots or original text.",
+      "notes": "DateLocal purchase date Pacific time; MonthCohort first wishlist month; updated through previous day; no customer identities published."
     }
   ],
   "claims": [
@@ -9212,6 +9223,109 @@
       "confidence": "bounded_self_report",
       "observed_at": "2026-10-28",
       "limitations": "Separate game orders, buyer cohorts, legal partner proceeds, costs and follow-up periods; no complete representative population."
+    },
+    {
+      "id": "steam-wishreport-datelocal",
+      "text": "Valve defines wishlist reporting CSV DateLocal as the Pacific time date of a purchase from a wishlist.",
+      "source_ids": [
+        "steam-wishlist-reporting-official-cohort-2026"
+      ],
+      "confidence": "high_on_official_rules_not_empirical_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "This is a purchase event date, not a unique customer identifier."
+    },
+    {
+      "id": "steam-wishreport-monthcohort",
+      "text": "Valve defines wishlist CSV MonthCohort as the calendar month when the customer first added the game to their wishlist.",
+      "source_ids": [
+        "steam-wishlist-reporting-official-cohort-2026"
+      ],
+      "confidence": "high_on_official_rules_not_empirical_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Month granularity does not reveal all accounts originally at risk."
+    },
+    {
+      "id": "steam-wishreport-daylag",
+      "text": "Valve says wishlist report updates ordinarily exclude the current date and show data through the previous day.",
+      "source_ids": [
+        "steam-wishlist-reporting-official-cohort-2026"
+      ],
+      "confidence": "high_on_official_rules_not_empirical_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Does not imply merchant settlement is finalized."
+    },
+    {
+      "id": "steam-wishreport-platform-subset",
+      "text": "Steam says platform preference breakdowns are generally subsets of all wishlists because not everyone selects a preference.",
+      "source_ids": [
+        "steam-wishlist-reporting-official-cohort-2026"
+      ],
+      "confidence": "high_on_official_rules_not_empirical_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "A platform-specific wishlist total is not an all-wishlisters denominator."
+    },
+    {
+      "id": "steam-prelaunch-demo-not-sale",
+      "text": "A Steam demo is a separate free AppID linked to a paid base game and its download is not a base-game checkout.",
+      "source_ids": [
+        "steam-demo-app-management-2026"
+      ],
+      "confidence": "high_on_official_rules_not_empirical_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Demo activation is not proof of the same person's later purchase."
+    },
+    {
+      "id": "steam-prelaunch-playtest-not-sale",
+      "text": "Steam Playtest uses a separate free associated AppID and access signup; joining it does not purchase the base game.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "confidence": "high_on_official_rules_not_empirical_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Requested access, accepted access and actual play sessions are also distinct."
+    },
+    {
+      "id": "steam-prelaunch-utm-demo-and-playtest-excluded",
+      "text": "Steam excludes playtest conversions and demo-only base-page downloads from base-game UTM conversion reporting.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high_on_official_rules_not_empirical_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "An unreported conversion cannot be interpreted as a zero downstream sale."
+    },
+    {
+      "id": "steam-prelaunch-utm-payments-distinct",
+      "text": "Steam's UTM attribution uses an event window and reports purchases and key activations separately while later refunds may not be subtracted.",
+      "source_ids": [
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high_on_official_rules_not_empirical_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "UTM purchases do not establish incremental paid orders, matched bank settlements or after-cost profits."
+    },
+    {
+      "id": "steam-wishlist-cohort-purchase-not-probability",
+      "text": "Purchases grouped by wishlist MonthCohort without a complete original eligible wishlist denominator cannot identify a purchase probability.",
+      "source_ids": [
+        "steam-wishlist-reporting-official-cohort-2026",
+        "steam-wishlist-official"
+      ],
+      "confidence": "high_on_official_rules_not_empirical_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "Deletions, censoring, reporting periods and license types can differ."
+    },
+    {
+      "id": "steam-prelaunch-no-joined-demo-paid-cohort",
+      "text": "Public Steam documentation defines separate free demo and playtest reporting surfaces but does not provide a representative, user-linked demo/playtest-to-paid conversion dataset.",
+      "source_ids": [
+        "steam-playtest-app-management-2026",
+        "steam-demo-app-management-2026",
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high_on_official_rules_not_empirical_outcomes",
+      "observed_at": "2026-10-28",
+      "limitations": "A consented, matched and complete game population would be required to make a causal or typical purchase estimate."
     }
   ],
   "observations": [],

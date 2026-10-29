@@ -6,6 +6,10 @@
 
 This is a research inventory with an initial source-backed **policy and payment** checkpoint, not a market revenue report. Representative seller earnings, audited full-release-cohort sales distributions and buyer populations remain unknown; selected historical developer disclosures are explicitly separated from those missing market-wide estimates. Steamworks partner access, authenticated seller transactions, developer contact, experiments and actual game publishing are outside this planning action.
 
+## Official wishlist cohort dates and free prelaunch conversions
+
+The [prelaunch signals audit](../ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.md) adds Valve's `DateLocal` / `MonthCohort` partner wishlist report definitions and tested synthetic cohort grouping. Demos, Playtests and retail-key activations are not assumed to be verified paid checkouts; cohort purchase event totals lack an original eligible-account denominator. **88%** (exact 88.430%, Δ +0.188 pp); 293 tasks unchanged.
+
 ## Historical zero-proceeds versus zero-sales classification
 
 The [historical counterexample casebook](../ontology/steam/historical-zero-proceeds-versus-zero-sales-2026.md) distinguishes a 2018 game's positive sales and unrecouped developer proceeds from a 2025 first-game author's claimed zero external wishlist buyers despite seven reported purchases. Neither establishes actual market zero-sale shares or after-cost profits. **88%**, exact 88.242% (Δ +0.051 pp); the original 293 tasks are preserved.

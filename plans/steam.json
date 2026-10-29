@@ -190,7 +190,7 @@
         "steam/market/document-cohort-coverage-uncertainty"
       ],
       "phase": 2,
-      "progress_percent": 80
+      "progress_percent": 81
     },
     {
       "id": "discovery",
@@ -360,7 +360,7 @@
         "steam/sales/design-after-launch-retention-metrics"
       ],
       "phase": 3,
-      "progress_percent": 88
+      "progress_percent": 90
     },
     {
       "id": "risk",
@@ -1853,16 +1853,20 @@
       "objective": "Research define percent of comparable releases with demos, test builds and Coming Soon periods.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Define percent of comparable releases with demos, test builds and Coming Soon periods. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 50,
+      "percent": 60,
       "weight": 1,
       "evidence": [
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
         "specimens/steam.json",
         "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
-        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json"
+        "ontology/steam/workshop-ugc-monetization-and-rights-2026.json",
+        "ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.json",
+        "ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.md",
+        "site/steam-wishlist-cohort-guards.mjs",
+        "tests/steam-wishlist-cohort-guards.test.mjs"
       ],
-      "artifact": "ontology/steam/workshop-ugc-monetization-and-rights-2026.md",
+      "artifact": "ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.md",
       "priority": "normal",
       "phase": 2
     },
@@ -3621,7 +3625,7 @@
       "objective": "Research use consented publisher records with explicit cohort dates, conversions and deduplication.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Use consented publisher records with explicit cohort dates, conversions and deduplication. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 75,
+      "percent": 80,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
@@ -3634,9 +3638,13 @@
         "ontology/steam/first-commercial-launch-paid-funnel-case-2026.json",
         "ontology/steam/first-commercial-launch-paid-funnel-case-2026.md",
         "site/steam-firstlaunch-funnel-audit.mjs",
-        "tests/steam-firstlaunch-funnel-audit.test.mjs"
+        "tests/steam-firstlaunch-funnel-audit.test.mjs",
+        "ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.json",
+        "ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.md",
+        "site/steam-wishlist-cohort-guards.mjs",
+        "tests/steam-wishlist-cohort-guards.test.mjs"
       ],
-      "artifact": "ontology/steam/first-commercial-launch-paid-funnel-case-2026.md",
+      "artifact": "ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3713,16 +3721,20 @@
       "objective": "Research separate demo plays/downloads and actual game checkouts by tracked cohorts.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Separate demo plays/downloads and actual game checkouts by tracked cohorts. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/discovery-wishlists-and-visibility-2026.json",
         "ontology/steam/discovery-wishlists-and-visibility-2026.md",
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.json",
+        "ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.md",
+        "site/steam-wishlist-cohort-guards.mjs",
+        "tests/steam-wishlist-cohort-guards.test.mjs"
       ],
-      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+      "artifact": "ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.md",
       "priority": "normal",
       "phase": 3
     },
@@ -3734,14 +3746,18 @@
       "objective": "Research map player activation, wishlist outcomes and paid orders with permissioned joins.",
       "acceptance": "Provide dated attributable evidence or an explicit evidence-gap finding for: Map player activation, wishlist outcomes and paid orders with permissioned joins. Specify the affected population, measurement unit, reporting period, jurisdiction, source method, biases and remaining unknowns. Do not substitute attention or modeled estimates for completed purchases.",
       "status": "in_progress",
-      "percent": 55,
+      "percent": 75,
       "weight": 1,
       "evidence": [
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.json",
         "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
-        "specimens/steam.json"
+        "specimens/steam.json",
+        "ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.json",
+        "ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.md",
+        "site/steam-wishlist-cohort-guards.mjs",
+        "tests/steam-wishlist-cohort-guards.test.mjs"
       ],
-      "artifact": "ontology/steam/next-fest-demo-playtest-prelaunch-2026.md",
+      "artifact": "ontology/steam/steam-prelaunch-signal-observability-and-wishlist-cohorts-2026.md",
       "priority": "normal",
       "phase": 3
     },

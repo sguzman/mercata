@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_prelaunch_observability_and_wishlist_month_cohort_protocol",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-wishlist-reporting-official-cohort-2026",
+    "steam-playtest-app-management-2026",
+    "steam-demo-app-management-2026",
+    "steam-utm-analytics-official-20261028",
+    "steam-wishlist-official"
+  ],
+  "claim_ids": [
+    "steam-wishreport-datelocal",
+    "steam-wishreport-monthcohort",
+    "steam-wishreport-daylag",
+    "steam-wishreport-platform-subset",
+    "steam-prelaunch-demo-not-sale",
+    "steam-prelaunch-playtest-not-sale",
+    "steam-prelaunch-utm-demo-and-playtest-excluded",
+    "steam-prelaunch-utm-payments-distinct",
+    "steam-wishlist-cohort-purchase-not-probability",
+    "steam-prelaunch-no-joined-demo-paid-cohort"
+  ],
+  "app_units": {
+    "base": "paid_game_appid",
+    "demo": "associated_separate_free_appid",
+    "playtest": "associated_separate_free_appid"
+  },
+  "event_classes": {
+    "demo_download": {
+      "paid_checkout": false,
+      "base_utm_conversion": false
+    },
+    "playtest_signup": {
+      "paid_checkout": false,
+      "base_utm_conversion": false
+    },
+    "playtest_granted": {
+      "paid_checkout": false,
+      "base_utm_conversion": false
+    },
+    "base_wishlist": {
+      "paid_checkout": false
+    },
+    "wishlist_purchase": {
+      "paid_checkout_possible": true,
+      "refund_adjusted": false
+    },
+    "utm_purchase": {
+      "paid_checkout_possible": true,
+      "causal_incremental": false,
+      "late_refunds_reconciled": false
+    },
+    "retail_key_activation": {
+      "paid_steam_checkout": false
+    },
+    "partner_paid_base_checkout": {
+      "requires_authorized_financial_ledger": true
+    }
+  },
+  "wishlist_csv": {
+    "purchase_date_field": "DateLocal",
+    "date_timezone": "Pacific",
+    "cohort_month_field": "MonthCohort",
+    "report_lag_days": 1,
+    "cohort_population_denominator_from_these_fields": null,
+    "private_purchase_join_available": false
+  },
+  "unknown": {
+    "actual_demo_to_paid_conversion": null,
+    "actual_playtest_to_paid_conversion": null,
+    "universal_wishlist_purchase_conversion": null,
+    "incremental_paid_orders_from_fest": null,
+    "verified_steam_checkout_paid_units": null
+  },
+  "no_private_records": true,
+  "synthetic_tests_only": true
+}
