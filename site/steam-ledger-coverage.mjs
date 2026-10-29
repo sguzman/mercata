@@ -27,7 +27,11 @@ export function auditLedgerCoverage(rows,{frameComplete=false}={}){
   if(x.retired===true)counts.retired_eligible++;
   if(!STATES.has(x.ledger_status))throw new TypeError('Unknown ledger status');
   if(x.ledger_status==='missing'){
-   if(x.gross_paid_units!==null&&x.gross_paid_units!==undefined)throw new TypeError('Missing ledger cannot imply paid units');
+   if(x.gross_paid_units!==null&&x.gross_paid_units!==undefined)
+    throw new TypeError('Missing ledger cannot imply paid units');
+   if(x.authorized_ledger_attested===true||x.transfer_history_reconciled===true||
+      x.paid_checkout_attribution_attested===true)
+    throw new RangeError('Missing ledger cannot claim financial access, transfer or checkout attribution attestations');
    counts.missing++;counts.unknown_zero++;continue;
   }
   if(!good(x.gross_paid_units))throw new TypeError('An observed ledger needs valid gross paid units');
@@ -103,7 +107,8 @@ export function auditSyntheticFixedHorizonZeroSales(rows,opts={}){
   if(r.ledger_status==='missing'){
    if((r.observed_gross_paid_units!==undefined&&r.observed_gross_paid_units!==null)||
     r.covered_from_day!==undefined||r.covered_until_day_exclusive!==undefined||
-    r.authorized_ledger_attested===true||r.transfer_history_reconciled===true)
+    r.authorized_ledger_attested===true||r.transfer_history_reconciled===true||
+    r.paid_checkout_attribution_attested===true)
     throw new RangeError('Missing ledger cannot imply observed sales or coverage');
   }else if(r.ledger_status==='partial'||r.ledger_status==='complete_reconciled'){
    if(!good(r.observed_gross_paid_units)||!iso(r.covered_from_day)||!iso(r.covered_until_day_exclusive)||
