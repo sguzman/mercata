@@ -7,8 +7,11 @@ test('App sharing enables management but not second partner payment or price con
  const r=audit({arrangement:'app_share'});
  assert.equal(r.recipient_has_app_management_access,true);
  assert.equal(r.original_partner_retains_payment_rights,true);
- assert.equal(r.recipient_partner_payment_rights,false);
- assert.equal(r.recipient_partner_can_set_prices_and_discounts,false);
+ assert.equal(r.recipient_partner_payment_rights,null);
+ assert.equal(r.recipient_partner_can_set_prices_and_discounts,null);
+ assert.equal(r.sharing_itself_changes_payment_rights,false);
+ assert.equal(r.sharing_itself_grants_pricing_rights,false);
+ assert.equal(r.pricing_control_requires_payment_rights,true);
  assert.equal(r.recipient_user_can_view_current_partner_financials,false);
  assert.equal(r.actual_copyright_owner,null);
 });
@@ -16,7 +19,8 @@ test('Shared financial read needs both partner invite and individual viewer perm
  for(const [invite,user,expected] of [[false,false,false],[true,false,false],[false,true,false],[true,true,true]]){
   const r=audit({arrangement:'app_share',finance_invite_granted:invite,user_view_financials:user});
   assert.equal(r.recipient_user_can_view_current_partner_financials,expected);
-  assert.equal(r.recipient_partner_payment_rights,false);
+  assert.equal(r.recipient_partner_payment_rights,null);
+  assert.equal(r.sharing_itself_changes_payment_rights,false);
  }
 });
 test('Completed app transfer changes payee, not automatically historical financial visibility',()=>{
