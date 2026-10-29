@@ -77,6 +77,7 @@ test('Valve-signed negative refunds are normalized only for period return totals
  const badFraction=fixture();badFraction[1].pages[0].rows[0].gross_units_returned=-0.5;
  assert.throws(()=>reconcile(badFraction),/signed nonpositive/);
  const mtx=fixture();mtx[1].pages[0].rows[1].gross_units_returned=-2;
+ mtx[1].pages[0].rows[1].reported_net_units_sold=3;
  const result=reconcile(mtx);
  assert.equal(result.totals.microtransaction_period_returns,2);
  assert.equal(result.totals.microtransaction_gross_units_sold,5);
@@ -84,9 +85,11 @@ test('Valve-signed negative refunds are normalized only for period return totals
 test('Safe individual unit counts must not overflow aggregate arithmetic',()=>{
  const sales=fixture();
  sales[2].pages[0].rows[0].gross_units_sold=Number.MAX_SAFE_INTEGER;
+ sales[2].pages[0].rows[0].reported_net_units_sold=Number.MAX_SAFE_INTEGER-3;
  assert.throws(()=>reconcile(sales),/Unsafe accumulated units: steam sales/);
  const refunds=fixture();
  refunds[2].pages[0].rows[0].gross_units_returned=-Number.MAX_SAFE_INTEGER;
+ refunds[2].pages[0].rows[0].reported_net_units_sold=8-Number.MAX_SAFE_INTEGER;
  assert.throws(()=>reconcile(refunds),/Unsafe accumulated units: steam returns/);
  const keys=fixture();
  const first=structuredClone(keys[0].pages[0].rows[1]);
