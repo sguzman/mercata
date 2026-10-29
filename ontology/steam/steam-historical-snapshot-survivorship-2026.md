@@ -1,0 +1,27 @@
+# Steam historical storefront snapshots: denominator survival and contradiction rules
+
+**Reviewed October 29, 2026.** [Machine-readable audit](steam-historical-snapshot-survivorship-2026.json) · [pure snapshot reconciler](../../site/steam-snapshot-survivorship-guards.mjs) · [regression tests](../../tests/steam-snapshot-survivorship-guards.test.mjs). Every row used by the helper is **invented**. This study neither requests a Steam API key nor downloads a real historical game catalog.
+
+## Why a perfectly paginated current catalog is still not a launch census
+
+Valve's [IStoreService/GetAppList](https://partner.steamgames.com/doc/webapi/IStoreService?l=english) can page current Steam Store apps with a general Web API key, with up to 50,000 per page, continuation by last AppID, and a `last_modified` timestamp. The timestamp records changes to app information or prices; it is **not the initial paid launch date**. Valve [deprecates the older ISteamApps/GetAppList](https://partner.steamgames.com/doc/webapi/ISteamApps) as not scaling to the current catalog. Changing API routes therefore does not magically restore historical delistings or original price status.
+
+Valve's [release-date guide](https://partner.steamgames.com/doc/store/release_dates?language=english) separates the intended Steamworks date from the player-facing scheduled display, which can be just a year, month, quarter, or Coming Soon. None establishes the date when a player first could actually pay and play. [Retirement guidance](https://partner.steamgames.com/doc/store/retire_app?l=english) says retired games remain in owners' libraries and on accessible store pages but leave store listings. The absence of an AppID from a later catalog is not **proof** of retirement: filtering, partial pagination, availability or data errors may also explain it.
+
+Valve [describes app transfers](https://partner.steamgames.com/doc/gettingstarted/managing_apps/transfer?l=english) that preserve AppIDs while splitting default historical financial-report visibility by partner payee dates. A game roster alone never establishes the distinct legal publishers or their receipts.
+
+## A conservative synthetic reconciliation
+
+The helper keeps a union of **synthetic fixture IDs**, rather than silently dropping a title missing from the latest list. It rejects duplicate snapshot IDs, duplicate game rows, invalid calendar dates, mixed region/type filters and real-looking AppIDs. Different source roles are explicit: `current_store_list` provides **presence and metadata only**; `first_release_attestation` provides an independently established first publicly paid playable date, original paid status, and product type. The module cannot verify an attestation's external provenance; a real study must audit that before using it.
+
+A repeated identical first-offer attestation counts once. Contradictory first-offer assertions are **unresolved**, not majority-voted or resolved by later metadata. A missing original price, date or launch mode also remains unresolved. An initially free game is not retroactively classified as a paid first-release game because it is paid today. A paid Early Access title's later version 1.0 is not a second first-paid launch.
+
+For invented examples, the earliest catalog contains games A and B; the later list contains B and C. Two independently fabricated initial-offer attestations establish A and C as eligible in 2025. A is **absent from the later complete catalog**, but **retirement is still unverified**. B has no initial-offer evidence and remains unresolved. Thus *two known eligible among three observed fixtures* is a test of the method, **not** a Steam 2025 release count or a market percentage.
+
+A latest snapshot is used for absence comparisons only when its operator-declared pagination is complete and filter scope matches prior snapshots. Even then it is merely a snapshot of an **asserted** list, not verified whole-market completeness. The module returns `null` for missing-market counts, zero-sale fractions, paid order medians and publisher profits.
+
+## External evidence needed to measure the real market
+
+A rights-cleared versioned AppID archive, reproducible original-purchase and initial playable-release evidence, genuinely complete aligned geographic/product filters, a documented treatment of withdrawn or restricted apps, independent validation of archived errors and permissioned payment reports. Any percentage derived from a current-only list must report its denominator as **currently observed listings**, not all historically first-paid games.
+
+This complements [the first-paid-release protocol](fixed-paid-release-cohort-2026.md) and [the consented zero-sales ledger gate](permissioned-ledger-coverage-and-zero-identification-2026.md). It improves the observation instrument; it **does not identify an empirical survivor fraction or zero-paid-sale rate**.

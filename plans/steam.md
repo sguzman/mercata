@@ -4,6 +4,10 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Historical app-list survivorship and original-paid timing
+
+The [multi-snapshot survivorship audit](../ontology/steam/steam-historical-snapshot-survivorship-2026.md) adds a tested instrument for reconciling app presence across separately dated but aligned catalog snapshots, preserving vanished previously observed candidates without asserting they are necessarily retired. It separates current metadata from independently attested original paid-playable launches and flags contradictory historical attestations. All example IDs are invented; **no historic Steam cohort has been assembled**. Research score **91%** (exact **91.020%**, Δ **+0.048 percentage points**), with the original 293 tasks unchanged.
+
 ## 2025 Steam game tags: nonexclusive genre supply and overlap lower bound
 
 The [SteamDB overlapping release-tag study](../ontology/steam/steam-2025-overlapping-release-tags-and-genre-denominators-2026.md) audits October 29 counts for Action, Adventure and Indie and proves the necessity of multiply tagged releases under a shared catalog frame. It does **not** misinterpret genre tags as distinct paid games, unique publishers or after-cost profit. **Current 90%** (exact 89.700%; Δ +0.068 pp). All 293 original tasks remain unchanged.

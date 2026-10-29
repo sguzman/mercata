@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "synthetic_multi_snapshot_historical_eligibility_and_survivorship_audit",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-public-app-list-api",
+    "steam-release-dates-official",
+    "steam-retire-app-official",
+    "steam-transfer-app-official-2026",
+    "steam-legacy-app-list-deprecated-20261029"
+  ],
+  "claim_ids": [
+    "steam-legacy-applist-deprecated-20261029",
+    "steam-current-store-applist-is-not-historical-census-20261029",
+    "steam-modified-timestamp-is-not-first-paid-launch-20261029",
+    "steam-upcoming-display-date-is-not-completed-sale-20261029",
+    "steam-retired-games-can-be-absent-from-listings-20261029",
+    "steam-app-transfer-keeps-id-while-payee-history-splits-20261029",
+    "steam-snapshot-disappearance-does-not-prove-retirement-20261029",
+    "steam-historical-first-paid-attestation-needed-20261029"
+  ],
+  "population": {
+    "unit": "base_game_appid_first_public_paid_playable_release",
+    "candidate_sources": "synthetic_only",
+    "primary_cohort_window": {
+      "start": "2025-01-01",
+      "end_exclusive": "2026-01-01"
+    },
+    "current_catalog_snapshot_is_full_historical_population": false,
+    "current_last_modified_is_launch_date": false,
+    "prelaunch_scheduled_date_is_actual_first_paid_launch": false,
+    "retired_missing_current_store_must_remain_in_historical_frame": true,
+    "current_store_absence_proves_retirement": false,
+    "full_release_after_paid_early_access_is_second_game": false
+  },
+  "synthetic_snapshots": [
+    {
+      "snapshot_id": "fixture-old-snapshot",
+      "captured_at": "2025-06-01",
+      "kind": "current_store_list",
+      "frame_id": "fixture-game-worldwide",
+      "complete_pagination": true,
+      "records": [
+        {
+          "fixture_id": "fixture-a",
+          "last_modified": "2025-06-01"
+        },
+        {
+          "fixture_id": "fixture-b",
+          "last_modified": "2025-06-01"
+        }
+      ]
+    },
+    {
+      "snapshot_id": "fixture-new-snapshot",
+      "captured_at": "2026-10-29",
+      "kind": "current_store_list",
+      "frame_id": "fixture-game-worldwide",
+      "complete_pagination": true,
+      "records": [
+        {
+          "fixture_id": "fixture-b",
+          "last_modified": "2026-10-29"
+        },
+        {
+          "fixture_id": "fixture-c",
+          "last_modified": "2026-10-29"
+        }
+      ]
+    },
+    {
+      "snapshot_id": "fixture-first-offer-a",
+      "captured_at": "2025-06-02",
+      "kind": "first_release_attestation",
+      "records": [
+        {
+          "fixture_id": "fixture-a",
+          "app_type": "game",
+          "initial_paid_status": true,
+          "first_paid_playable_date": "2025-04-01",
+          "release_mode": "early_access"
+        }
+      ]
+    },
+    {
+      "snapshot_id": "fixture-first-offer-c",
+      "captured_at": "2026-10-29",
+      "kind": "first_release_attestation",
+      "records": [
+        {
+          "fixture_id": "fixture-c",
+          "app_type": "game",
+          "initial_paid_status": true,
+          "first_paid_playable_date": "2025-09-01",
+          "release_mode": "full_release"
+        }
+      ]
+    }
+  ],
+  "unknown": {
+    "observed_eligible_paid_game_count": null,
+    "observed_omitted_paid_game_count": null,
+    "market_zero_sale_fraction": null,
+    "paid_order_distribution": null,
+    "publisher_income_median": null,
+    "legal_publisher_census": null
+  },
+  "privacy": "No real Steam AppIDs, API keys, historical game records, merchant logs, or individual participant data used."
+}

@@ -1885,6 +1885,17 @@
       "evidence_class": "official_public_support_faq",
       "license": "Public source URL and independently authored summary only.",
       "notes": "Pre-purchase edition may allow playing before general release; distinct from Steam Early Access."
+    },
+    {
+      "id": "steam-legacy-app-list-deprecated-20261029",
+      "url": "https://partner.steamgames.com/doc/webapi/ISteamApps",
+      "publisher": "Valve Corporation — public Steamworks Web API documentation",
+      "title": "ISteamApps GetAppList deprecation and recommended IStoreService replacement",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_api_documentation",
+      "license": "Public documentation URL and independently written factual summaries only; source text not reproduced.",
+      "notes": "Older app-list API is deprecated for scale, but replacement is a current-list API rather than an archive of original paid releases."
     }
   ],
   "claims": [
@@ -12834,6 +12845,86 @@
       "confidence": "medium",
       "observed_at": "2026-10-29",
       "limitations": "Mercata methodological choice; a paid-order cohort instead uses order timestamps."
+    },
+    {
+      "id": "steam-legacy-applist-deprecated-20261029",
+      "text": "Valve marks the original ISteamApps GetAppList interface deprecated due to scale and recommends IStoreService GetAppList.",
+      "source_ids": [
+        "steam-legacy-app-list-deprecated-20261029"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "API replacement does not establish archived app coverage, historic launch-paid status, or market sales completeness."
+    },
+    {
+      "id": "steam-current-store-applist-is-not-historical-census-20261029",
+      "text": "Valve's IStoreService GetAppList pages apps available on the Steam Store rather than providing a verified historical originally paid base-game census.",
+      "source_ids": [
+        "steam-public-app-list-api"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Current availability and filters can omit old retired or regionally unavailable product histories and original prices."
+    },
+    {
+      "id": "steam-modified-timestamp-is-not-first-paid-launch-20261029",
+      "text": "Valve describes the IStoreService GetAppList last_modified field as reflecting game information or price changes, not initial public paid availability.",
+      "source_ids": [
+        "steam-public-app-list-api"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "A changing metadata timestamp cannot independently establish first public paid-playable release or a fixed age cohort."
+    },
+    {
+      "id": "steam-upcoming-display-date-is-not-completed-sale-20261029",
+      "text": "Valve permits expected release-date displays from exact dates to year-only or Coming Soon, separately from the specified planned date.",
+      "source_ids": [
+        "steam-release-dates-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "An intended or player-facing schedule is not an attested actual first playable launch or completed merchant purchase."
+    },
+    {
+      "id": "steam-retired-games-can-be-absent-from-listings-20261029",
+      "text": "Valve says retired games remain accessible in previous owners' libraries but are removed from Steam store listings.",
+      "source_ids": [
+        "steam-retire-app-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Not every missing catalog entry is a retired game; pagination, filters and other restrictions also affect snapshots."
+    },
+    {
+      "id": "steam-app-transfer-keeps-id-while-payee-history-splits-20261029",
+      "text": "Valve says approved game transfers preserve the AppID and customer history while default financial-report visibility is limited to periods in which the partner received payments.",
+      "source_ids": [
+        "steam-transfer-app-official-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Storefront identity does not reveal payee lineage or permit calculation of publisher earnings across transfer periods."
+    },
+    {
+      "id": "steam-snapshot-disappearance-does-not-prove-retirement-20261029",
+      "text": "A current-list disappearance cannot alone identify the reason a historical AppID is absent; Mercata records absence as a snapshot observation, not a certified retirement.",
+      "source_ids": [
+        "steam-public-app-list-api"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "This is a conservative study inference about imperfect observation, not an empirical estimate of retirement frequency."
+    },
+    {
+      "id": "steam-historical-first-paid-attestation-needed-20261029",
+      "text": "Mercata requires provenance-verified first paid-playable availability and original payment status before counting a candidate as a first paid game in a fixed release cohort.",
+      "source_ids": [
+        "steam-release-dates-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "This is the research project's explicit inclusion rule; Valve has not certified the resulting historical population."
     }
   ],
   "observations": [],
