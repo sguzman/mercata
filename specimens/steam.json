@@ -9027,6 +9027,78 @@
       "confidence": "bounded_first_party_self_report",
       "observed_at": "2026-10-28",
       "limitations": "Selection into public postmortems and launch cohort noncoverage block representative median and expected first-game earning inference."
+    },
+    {
+      "id": "steam-profit-framing-publishers-not-appids",
+      "text": "Publisher profitability requires an eligible legal-entity population and accounting coverage of all relevant games, contracts and cost obligations during the same defined horizon.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005",
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "methodology_with_explicit_scope_limits",
+      "observed_at": "2026-10-28",
+      "limitations": "Game AppIDs and publisher entities are not interchangeable; the method defines data requirements but no actual publisher frame has been independently verified."
+    },
+    {
+      "id": "steam-profit-sign-cost-gate",
+      "text": "A complete publisher after-cost profit sign cannot be inferred from Steam gross, net sales, the monthly revenue-share statement or an isolated self-reported bank deposit.",
+      "source_ids": [
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "methodology_with_explicit_scope_limits",
+      "observed_at": "2026-10-28",
+      "limitations": "A publisher must reconcile third-party revenue splits, labor valuation, non-Steam revenues and costs, and time-aligned expenses; methodology is synthetic."
+    },
+    {
+      "id": "steam-profit-partial-nonresponse-bounds",
+      "text": "Given an independently complete N-publisher population, verified positive-profit cases give a conditional lower bound on the fraction profitable, and every unresolved publisher could add to the upper bound.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "methodology_with_explicit_scope_limits",
+      "observed_at": "2026-10-28",
+      "limitations": "This finite-population logical bound is not a statistical confidence interval or missing-at-random inference; zero verified actual publisher records in Mercata."
+    },
+    {
+      "id": "steam-profit-unbounded-dollar-values",
+      "text": "Without a known support bound on missing signed profits, a missing publisher's after-cost profit may be negative or positive, unlike the nonnegative support of gross paid sales.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "methodology_with_explicit_scope_limits",
+      "observed_at": "2026-10-28",
+      "limitations": "The lower bound zero used for gross sales may not be transferred to after-cost profits or dollar medians."
+    },
+    {
+      "id": "steam-profit-no-winner-bias-cure",
+      "text": "Collecting only publisher volunteers who describe successful games does not resolve profit population medians or participation bias; nonrespondents require explicit uncertainty treatment.",
+      "source_ids": [
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "methodology_with_explicit_scope_limits",
+      "observed_at": "2026-10-28",
+      "limitations": "No representative sampling design, full publisher list, nonresponse follow-up or externally verified cost ledger has been executed."
+    },
+    {
+      "id": "steam-profit-cash-vs-economic-profit",
+      "text": "The sign of publisher accounting cash after explicit expenses can differ from economic profit after uncompensated owner labor and opportunity cost.",
+      "source_ids": [
+        "steam-financial-reporting-doc"
+      ],
+      "confidence": "methodology_with_explicit_scope_limits",
+      "observed_at": "2026-10-28",
+      "limitations": "Steam's payment documentation cannot itself establish a developer's foregone wages or business-wide total cost; this is a conceptual measurement boundary."
+    },
+    {
+      "id": "steam-profit-multi-game-double-count-gate",
+      "text": "When several game AppIDs belong to one legal publisher, they must be consolidated once at publisher-level for a publisher profitability fraction rather than counted as independent publishers.",
+      "source_ids": [
+        "steam-financial-reporting-doc",
+        "steam-manski-partial-identification-missingdata-2005"
+      ],
+      "confidence": "methodology_with_explicit_scope_limits",
+      "observed_at": "2026-10-28",
+      "limitations": "Product transfers and internal revenue allocations require audited entity reconciliation before any real publisher-income calculation."
     }
   ],
   "observations": [],

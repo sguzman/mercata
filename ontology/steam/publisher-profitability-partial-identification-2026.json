@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "publisher_level_after_cost_profit_sign_partial_identification_without_real_financial_records",
+  "reviewed_at": "2026-10-28",
+  "source_ids": [
+    "steam-manski-partial-identification-missingdata-2005",
+    "steam-financial-reporting-doc"
+  ],
+  "claim_ids": [
+    "steam-profit-framing-publishers-not-appids",
+    "steam-profit-sign-cost-gate",
+    "steam-profit-partial-nonresponse-bounds",
+    "steam-profit-unbounded-dollar-values",
+    "steam-profit-no-winner-bias-cure",
+    "steam-profit-cash-vs-economic-profit",
+    "steam-profit-multi-game-double-count-gate"
+  ],
+  "population": {
+    "unit": "unique_eligible_legal_publisher_entity",
+    "game_appids_consolidated_per_legal_publisher": true,
+    "all_storefronts_and_nonstore_cash_allocation_needed": true,
+    "horizon": "predeclared_common_observation_period",
+    "include_inactive_zero_revenue_publishers": true,
+    "owner_labor_economic_cost_required": true,
+    "net_cash_is_not_after_labor_profit": true
+  },
+  "status_options": [
+    "complete_reconciled",
+    "partial",
+    "missing"
+  ],
+  "completion_attestations": [
+    "permissioned_financial_reporting",
+    "all_partner_contracts_and_title_transfers_reconciled",
+    "all_development_support_and_overhead_costs_reconciled",
+    "labor_and_opportunity_costs_reconciled",
+    "common_horizon_and_currency_reconciled"
+  ],
+  "illustrative_bounds": {
+    "publisher_count": 5,
+    "observed_complete_positive": 1,
+    "observed_complete_zero": 0,
+    "observed_complete_negative": 1,
+    "partial_or_missing": 3,
+    "profit_fraction_lower_bound": 0.2,
+    "profit_fraction_upper_bound": 0.8
+  },
+  "unknown": {
+    "actual_eligible_publisher_count": null,
+    "actual_verified_publisher_profitability_fraction": null,
+    "actual_median_after_cost_profit_usd": null,
+    "actual_mean_after_cost_profit_usd": null,
+    "actual_publisher_net_payout_median_usd": null
+  },
+  "synthetic_fixtures_only": true,
+  "zero_actual_verified_publisher_cost_ledgers": true,
+  "no_private_records_published": true,
+  "model_path": "site/steam-publisher-profit-bounds.mjs"
+}
