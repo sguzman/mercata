@@ -8,23 +8,32 @@ const fixture=value=>typeof value==='string'&&/^fixture-[a-z0-9-]+$/.test(value)
 const modes=new Set(['early_access','advance_access','full_release']);
 const types=new Set(['game','demo','dlc','software','soundtrack']);
 const scalar=value=>value===null||value===undefined?'unknown':String(value);
+const only=(value,keys)=>value&&typeof value==='object'&&!Array.isArray(value)&&
+ Object.keys(value).every(key=>keys.includes(key));
+const snapshotKeys=['snapshot_id','captured_at','kind','frame_id','complete_pagination','records'];
+const catalogRecordKeys=['fixture_id','last_modified'];
+const attestationRecordKeys=['fixture_id','app_type','initial_paid_status','first_paid_playable_date','release_mode'];
 export function reconcileSyntheticSteamSnapshots(snapshots,window){
  if(!Array.isArray(snapshots)||!snapshots.length)throw new TypeError('Nonempty synthetic snapshot array required');
- if(!window||!isoDay(window.start)||!isoDay(window.endExclusive)||window.start>=window.endExclusive)
+ if(!only(window,['start','endExclusive'])||!isoDay(window.start)||!isoDay(window.endExclusive)||window.start>=window.endExclusive)
   throw new TypeError('Invalid date window');
- const ids=new Set(),games=new Map(),current=[],frames=new Set();
+ const ids=new Set(),games=new Map(),current=[],frames=new Set(),captureDays=new Set();
  for(const snap of snapshots){
-  if(!snap||!fixture(snap.snapshot_id)||ids.has(snap.snapshot_id))throw new TypeError('Unique synthetic snapshot ID required');
+  if(!only(snap,snapshotKeys)||!fixture(snap.snapshot_id)||ids.has(snap.snapshot_id))throw new TypeError('Unique synthetic snapshot ID and allowed fields required');
   ids.add(snap.snapshot_id);
   if(!isoDay(snap.captured_at)||!['current_store_list','first_release_attestation'].includes(snap.kind)||!Array.isArray(snap.records))
    throw new TypeError('Invalid date, kind or records');
   if(snap.kind==='current_store_list'){
    if(!fixture(snap.frame_id)||typeof snap.complete_pagination!=='boolean')throw new TypeError('Catalog scope and pagination completeness required');
+   if(captureDays.has(snap.captured_at))throw new RangeError('Ambiguous same-day catalog snapshots without sub-day ordering');
+   captureDays.add(snap.captured_at);
    frames.add(snap.frame_id);current.push(snap);
   } else if(snap.complete_pagination!==undefined||snap.frame_id!==undefined)throw new TypeError('Attestation is not a catalog census');
   const local=new Set();
   for(const r of snap.records){
-   if(!r||!fixture(r.fixture_id)||local.has(r.fixture_id))throw new TypeError('Unique synthetic game identifier required per snapshot');
+   if(!only(r,snap.kind==='current_store_list'?catalogRecordKeys:attestationRecordKeys)||
+    !fixture(r.fixture_id)||local.has(r.fixture_id))
+    throw new TypeError('Unique synthetic game identifier and allowed fields required per snapshot');
    local.add(r.fixture_id);
    if(!games.has(r.fixture_id))games.set(r.fixture_id,{id:r.fixture_id,seen_in_catalog:new Set(),assertions:[],last_modified_observations:[]});
    const g=games.get(r.fixture_id);
@@ -50,7 +59,7 @@ export function reconcileSyntheticSteamSnapshots(snapshots,window){
  }
  // Catalog comparisons are only meaningful when the declared type/filter/geography match.
  if(frames.size>1)throw new RangeError('Incompatible current catalog filters or geographies');
- current.sort((a,b)=>a.captured_at.localeCompare(b.captured_at)||a.snapshot_id.localeCompare(b.snapshot_id));
+ current.sort((a,b)=>a.captured_at.localeCompare(b.captured_at));
  const last=current.at(-1),complete=last?.complete_pagination===true;
  const latestIds=new Set(last?.records.map(r=>r.fixture_id)||[]);
  const previousIds=new Set(current.slice(0,-1).flatMap(s=>s.records.map(r=>r.fixture_id)));

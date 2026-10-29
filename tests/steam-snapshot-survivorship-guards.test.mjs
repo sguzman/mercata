@@ -59,3 +59,20 @@ test('Audited studies link public sources and remain a 293-task economic researc
  for(const k of ['observed_eligible_paid_game_count','observed_omitted_paid_game_count','market_zero_sale_fraction'])assert.equal(doc.unknown[k],null);
  assert.equal(audit(doc.synthetic_snapshots,window).counts.eligible,2);
 });
+test('Two same-day catalog captures cannot manufacture a latest snapshot by sorting synthetic IDs',()=>{
+ const a=catalog('fixture-z-last','2026-10-29',['fixture-a']);
+ const b=catalog('fixture-a-first','2026-10-29',[]);
+ assert.throws(()=>audit([a,b],window),/Ambiguous same-day catalog/);
+ assert.throws(()=>audit([b,a],window),/Ambiguous same-day catalog/);
+});
+test('Unexpected snapshot, record and cohort-window fields fail closed',()=>{
+ const a=catalog('fixture-list','2026-10-29',['fixture-a']);
+ a.partner_token='not-a-fixture';
+ assert.throws(()=>audit([a],window),/allowed fields/);
+ const b=catalog('fixture-list','2026-10-29',['fixture-a']);
+ b.records[0].private_owner='not-a-fixture';
+ assert.throws(()=>audit([b],window),/allowed fields/);
+ const c=attested('fixture-a');c.records[0].account_id='not-a-fixture';
+ assert.throws(()=>audit([c],window),/allowed fields/);
+ assert.throws(()=>audit([catalog('fixture-list','2026-10-29',['fixture-a'])],{...window,unverified:true}),/Invalid date window/);
+});
