@@ -7,6 +7,10 @@
 
 
 
+## Paid Early Access opening versus later full-release date (October 30, 2026)
+
+The [What Is The Ghost public case](../ontology/steam/what-is-the-ghost-earlyaccess-first-paid-v1-distinction-2026.md) establishes a **March 23, 2026 initial paid Early Access** offer versus the **October 1 full release** of the same AppID, not two first-paid launches. The July author report cites **183 sold units**, **14 returns**, and **$1,370 net after returns**, which cannot be treated as verified after-platform-share bank cash. It also documents pre-festival versus July wishlist-stock incompatibility and unverified marketing and multiplayer effects. Two new sources, eight claims and regression checks advance three existing tasks by one point each. Steam research **91.532%** (Δ **+0.010 pp**), 222 sources and 1358 claims, 293 tasks retained.
+
 ## Modelled September 2026 Steam revenue and ranked top-500 composition (October 30, 2026)
 
 [Alinea Analytics' October 1 platform estimate audit](../ontology/steam/alinea-september-2026-platform-gross-top500-vs-newcomer-income.md) records **$1.7B September gross**, **$5.5B Q3 gross**, and **$16.5B first-nine-month 2026 gross**, contrasted to the same analyst's $14.5B first nine months of 2025. The author's anticipated **over $20B full-year 2026** is explicitly a forecast, not an observed outcome. The selected **500 top revenue titles** account for roughly **three quarters** of modeled September revenue; **F2P** supplies 25.6% of top-500 revenue despite 16% of its titles. These are vendor-modeled title/market estimates, not legal publisher earnings, representative paid newcomer medians or the zero-paid-sale fraction. One source, ten linked claims and synthetic scope tests advance three original tasks by one point each. Steam research **91.522%** (Δ **+0.010 pp**), 220 public sources and 1350 claims, original 293 tasks preserved.

@@ -2435,6 +2435,28 @@
       "evidence_class": "original_vendor_month_quarter_ytd_aggregate_revenue_estimates_and_selected_top500_title_mix",
       "license": "Brief original factual paraphrases and arithmetic summaries; no images, charts, or original long-form text copied.",
       "notes": "Vendor's own model estimates for September and 2026 year-to-date; selected top 500 game cohort is estimated to account for about three quarters of September gross. Not Steam merchant statements, buyer unique counts or actual 2026 year-end receipts."
+    },
+    {
+      "id": "steam-whatisghost-jul2026-author-earlyaccess",
+      "url": "https://www.reddit.com/r/gamedev/comments/1v49g0o/my_first_steam_game_a_retrospective/",
+      "title": "My First Steam Game: A Retrospective",
+      "publisher": "First-person developer's public postmortem",
+      "published_at": "2026-07-23",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "voluntary_self_report_early_access_unaudited_paid_sales_after_returns",
+      "license": "Public reference and original short paraphrases only; no original text or images copied.",
+      "notes": "Self-reported 183 units, 14 returns, 1370 USD net after returns, 1300 current wishlists and 300 before festival. No audited legal publisher payment."
+    },
+    {
+      "id": "steam-whatisghost-3929260-fullrelease-2026",
+      "url": "https://store.steampowered.com/app/3929260/What_Is_The_Ghost/",
+      "title": "What Is The Ghost Steam store",
+      "publisher": "Valve Corporation",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "public_dynamic_release_dates_not_partner_financial_report",
+      "license": "Public release date and role metadata only.",
+      "notes": "Steam lists same AppID initial Early Access Release March 23, 2026, later full Release October 1, 2026, developer/publisher Deda Games."
     }
   ],
   "claims": [
@@ -16404,6 +16426,89 @@
       "confidence": "high",
       "observed_at": "2026-10-29",
       "limitations": "All release years, F2P in-game spend and selected large titles are mixed; individual original first-offer paid AppIDs and zeros are missing."
+    },
+    {
+      "id": "steam-whatisghost-early-access-first-offer-20261030",
+      "text": "The March 23, 2026 paid Early Access date and October 1 full release are two stages of the same Steam AppID, not separate initial paid game launches.",
+      "source_ids": [
+        "steam-whatisghost-3929260-fullrelease-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-report and dynamic storefront only; partner-level ledgers, costs and population completeness are not verified."
+    },
+    {
+      "id": "steam-whatisghost-voluntary-first-game-20261030",
+      "text": "The developer describes a first Steam title and about four months in Early Access as of July 23, 2026.",
+      "source_ids": [
+        "steam-whatisghost-jul2026-author-earlyaccess",
+        "steam-whatisghost-3929260-fullrelease-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-report and dynamic storefront only; partner-level ledgers, costs and population completeness are not verified."
+    },
+    {
+      "id": "steam-whatisghost-units-183-returns-14-20261030",
+      "text": "The author reports 183 copies and 14 returns without authenticated unit or refund transaction records.",
+      "source_ids": [
+        "steam-whatisghost-jul2026-author-earlyaccess"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-report and dynamic storefront only; partner-level ledgers, costs and population completeness are not verified."
+    },
+    {
+      "id": "steam-whatisghost-net-1370-after-returns-20261030",
+      "text": "The author labels USD 1,370 net only as after returns, not a verified remittance after Valve share or personal taxes.",
+      "source_ids": [
+        "steam-whatisghost-jul2026-author-earlyaccess",
+        "steam-reporting-faq-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-report and dynamic storefront only; partner-level ledgers, costs and population completeness are not verified."
+    },
+    {
+      "id": "steam-whatisghost-wishlist-stocks-not-conversion-20261030",
+      "text": "The developer reports 1,300 then-current wishlists and roughly 300 before an earlier Steam Next Fest; neither is a matched launch wishlist purchase denominator.",
+      "source_ids": [
+        "steam-whatisghost-jul2026-author-earlyaccess"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-report and dynamic storefront only; partner-level ledgers, costs and population completeness are not verified."
+    },
+    {
+      "id": "steam-whatisghost-reviews-playtime-not-retention-20261030",
+      "text": "The July self-report says 35 reviews and 110 minutes median playtime, neither a validated set of paid buyers or repeat-player cohort.",
+      "source_ids": [
+        "steam-whatisghost-jul2026-author-earlyaccess"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-report and dynamic storefront only; partner-level ledgers, costs and population completeness are not verified."
+    },
+    {
+      "id": "steam-whatisghost-marketing-experience-not-causal-20261030",
+      "text": "The author describes early demo issues, creator outreach to more than 50 channels and multiplayer development difficulties without measured counterfactual revenue.",
+      "source_ids": [
+        "steam-whatisghost-jul2026-author-earlyaccess"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-report and dynamic storefront only; partner-level ledgers, costs and population completeness are not verified."
+    },
+    {
+      "id": "steam-whatisghost-selection-not-net-population-20261030",
+      "text": "One voluntarily published and right-censored Early Access game cannot establish representative newcomer profit or the exact zero-paid-sale fraction.",
+      "source_ids": [
+        "steam-whatisghost-jul2026-author-earlyaccess",
+        "steam-whatisghost-3929260-fullrelease-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-report and dynamic storefront only; partner-level ledgers, costs and population completeness are not verified."
     }
   ],
   "observations": [],
