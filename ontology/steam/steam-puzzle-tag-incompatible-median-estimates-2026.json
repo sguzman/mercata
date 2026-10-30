@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "incompatible_selected_puzzle_tag_model_median_comparison_not_actual_sales",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median",
+    "steam-immutable-genre-snapshot-2026"
+  ],
+  "claim_ids": [
+    "steam-indiepilot-58650-priced-reviewed-frame",
+    "steam-indiepilot-review30-currentprice-proxy",
+    "steam-indiepilot-5997-selected-lifetime-median",
+    "steam-indiepilot-proxy-quantiles-median-to-p90",
+    "steam-indiepilot-puzzle1473-151347",
+    "steam-puzzle-immutable-26452-2390-crosswalk",
+    "steam-puzzle-model-median-ratio-not-genre-effect",
+    "steam-indiepilot-lifetime-snapshot-not-forever-outcome",
+    "steam-indiepilot-genre-median-not-profits-or-causal"
+  ],
+  "indiepilot": {
+    "observed_on": "2026-10-14",
+    "sample_priced_reviewed_games": 58650,
+    "model": "review_count_times_30_times_current_price",
+    "assumed_sales_per_review": 30,
+    "reported_selected_median_gross_usd": 5997,
+    "model_percentiles_usd": {
+      "p10": 280,
+      "p25": 1076,
+      "p50": 5997,
+      "p75": 46926,
+      "p90": 278682
+    },
+    "puzzle_tag_group_count": 1473,
+    "puzzle_tag_group_median_gross_usd": 151347,
+    "missing_or_zero_review_games_bounded": false,
+    "original_paid_release_status_verified": false,
+    "full_horizon_lifetime_finished": false
+  },
+  "immutable": {
+    "observed_on": "2026-09-10",
+    "all_puzzle_tagged_listings_reported": 26452,
+    "paid_title_median_estimated_gross_usd": 2390,
+    "method": "licensed_third_party_sales_estimates_roughly_twenty_near_middle_rank_per_tag",
+    "free_and_paid_tag_counts_but_paid_only_revenue_median": true
+  },
+  "comparability": {
+    "puzzle_tag_game_lists_joined": false,
+    "coverage_or_game_age_matched": false,
+    "source_date_matched": false,
+    "price_date_matched": false,
+    "method_matched": false,
+    "medians_estimate_same_population": false,
+    "observed_nominal_ratio": 63.32510460251046,
+    "no_inference_about_genre_causal_effect": true
+  },
+  "unknown": {
+    "true_puzzle_publisher_median_usd": null,
+    "matched_appid_count": null,
+    "zero_paid_sale_fraction": null,
+    "actual_developer_profit_usd": null,
+    "real_genre_earnings_advantage": null,
+    "typical_first_paid_2d_game_lifetime_gross_usd": null
+  },
+  "code_module": "site/steam-incompatible-genre-medians.mjs",
+  "tests_path": "tests/steam-incompatible-genre-medians.test.mjs",
+  "no_private_account_data": true
+}

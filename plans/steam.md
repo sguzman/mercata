@@ -7,6 +7,10 @@
 
 
 
+## Puzzle genre medians from two incompatible revenue estimation frames (October 29, 2026)
+
+The [IndiePilot/Immutable source comparability audit](../ontology/steam/steam-puzzle-tag-incompatible-median-estimates-2026.md) distinguishes an **IndiePilot** October 14 group of 1,473 selected Puzzle games at **$151,347 modeled median gross** from an **Immutable** September group of 26,452 tagged games at **$2,390 modeled paid-title median**. Their roughly **63.3×** quoted difference is not a matched cohort, game earnings effect or verified publisher payment. The former uses a fixed review × 30 × current-price estimate; the latter samples roughly 20 titles near a tag middle rank from a different licensed model. One new public source, nine bounded claims and synthetic comparability tests advance two original tasks by one point each. Steam research **91.478%** (Δ **+0.007 pp**), 210 sources and 1303 claims, preserving all 293 tasks.
+
 ## Modeled Steam launch-lever data and public reproducibility mismatches (October 29, 2026)
 
 The [SteamForecast panel audit](../ontology/steam/steamforecast-selected-lever-panel-provenance-and-reproducibility-2026.md) documents 10,403 **positive-model-estimate** launches, not all paid Steam releases. Source tiers sum to 7,652 owner-range estimates, 2,734 constrained review estimates, and 17 unconstrained review estimates; week-one gross is inferred from a *lifetime* ownership/price proxy. A public example exposes a documented **natural-log versus log10** mismatch; the released data's **10+ language** indicator conflicts with the study's **5+ language** framing, and advertised follower/tag covariates do not appear in the shared 19-column panel. Three operator-related public documents and eleven limited claims advance four existing research tasks by one point each; no actual sales or causal returns are inferred. Steam research **91.471%** (Δ **+0.014 pp**), 209 public sources and 1294 claims, with 293 unchanged tasks.

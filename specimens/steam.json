@@ -2314,6 +2314,17 @@
       "evidence_class": "third_party_developer_reported_model_validation_not_merchant_ground_truth",
       "license": "Outbound reference and original succinct summary only, no text or graphics reproduced.",
       "notes": "Describes separate 32,106-row modeling corpus and 6,422 held-out validation, accuracy against derived revenue ground truth. Site also offers a paid personalized launch report; not an independent validation source."
+    },
+    {
+      "id": "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median",
+      "url": "https://indiepilot.dev/reports/steam-indie-revenue-analysis/",
+      "publisher": "IndiePilot — commercial third-party Steam game analysis site",
+      "title": "Half of Paid Indie Games on Steam Earn an Estimated $6,000 or Less (58,650-Game Sample)",
+      "published_at": "2026-10-14",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "third_party_partial_game_database_price_times_review_multiplier_gross_estimates",
+      "license": "Public source metadata, outbound URL and independently authored bounded factual analysis only; no provider charts or game-level records reproduced.",
+      "notes": "Production database includes only 58,650 paid priced game rows with valid review data; review count multiplied by 30 and current price. No matching AppID roster for peer provider, historical first-paid status or private sales ledger."
     }
   ],
   "claims": [
@@ -15698,6 +15709,99 @@
       "confidence": "high",
       "observed_at": "2026-10-29",
       "limitations": "Commercial interest affects confidence calibration but is not itself proof the numerical results are false."
+    },
+    {
+      "id": "steam-indiepilot-58650-priced-reviewed-frame",
+      "text": "The October 14, 2026 IndiePilot analysis covers 58,650 paid products tagged as games in its own production database that have both valid current prices and review counts; this is not all historically released Steam games.",
+      "source_ids": [
+        "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Selection into the provider database, historical delistings, original paid launch mode and missing review data are not fully measured."
+    },
+    {
+      "id": "steam-indiepilot-review30-currentprice-proxy",
+      "text": "IndiePilot estimates lifetime gross using current review count multiplied by an assumed thirty sales per review and a currently listed price, rather than authenticated orders, regional price history or partner receipts.",
+      "source_ids": [
+        "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "A constant multiplier does not account for review propensity, discounts, bundles, gifts, taxes, refunds or free-period licenses."
+    },
+    {
+      "id": "steam-indiepilot-5997-selected-lifetime-median",
+      "text": "The provider reports $5,997 estimated lifetime gross median for its selected 58,650 paid-game database rows as of October 14, 2026.",
+      "source_ids": [
+        "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The source's model-derived stock-to-date median is not a verified representative full-market developer income median or forecast of future lifetime sales."
+    },
+    {
+      "id": "steam-indiepilot-proxy-quantiles-median-to-p90",
+      "text": "Within the same selected provider population, reported modeled gross percentiles include P10 $280, P25 $1,076, P75 $46,926 and P90 $278,682.",
+      "source_ids": [
+        "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Published percentiles were not recomputed from a provided complete AppID-level dataset; observed modeled gross, not legal-publisher income."
+    },
+    {
+      "id": "steam-indiepilot-puzzle1473-151347",
+      "text": "IndiePilot's user-tag grouping reports 1,473 Puzzle-group games with a modeled median gross of $151,347, not an authenticated transaction median.",
+      "source_ids": [
+        "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The provider's subset or tag rules cannot be matched to another source's Puzzle-tag frame without game-level join keys."
+    },
+    {
+      "id": "steam-puzzle-immutable-26452-2390-crosswalk",
+      "text": "Immutable's September 2026 tag table reports 26,452 Puzzle-tagged listings and a $2,390 modeled paid-title median, whereas IndiePilot's October 2026 selected Puzzle group reports 1,473 titles and $151,347 modeled median; those are incompatible estimands.",
+      "source_ids": [
+        "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median",
+        "steam-immutable-genre-snapshot-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Snapshots, classification, price inclusion, paid-only revenue denominator, middle-rank sampling and game coverage differ; no matched AppID roster or causal genre result."
+    },
+    {
+      "id": "steam-puzzle-model-median-ratio-not-genre-effect",
+      "text": "The two published Puzzle modeled medians differ numerically by about 63.3-fold, but their quotient is not evidence that Puzzle demand or profits differ by that factor, because neither study estimates the same eligible population with the same method.",
+      "source_ids": [
+        "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median",
+        "steam-immutable-genre-snapshot-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Numerical arithmetic on two incomparable source estimates; not a calibrated effect size."
+    },
+    {
+      "id": "steam-indiepilot-lifetime-snapshot-not-forever-outcome",
+      "text": "IndiePilot's present-day modeled lifetime gross for games still accumulating reviews cannot establish that half of all paid Steam games will never exceed the reported median in their full eventual commercial lifespan.",
+      "source_ids": [
+        "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Right-censoring by game age, partial provider population and static modeled list prices prevent a future-lifetime population assertion."
+    },
+    {
+      "id": "steam-indiepilot-genre-median-not-profits-or-causal",
+      "text": "A high selected-genre revenue-proxy median is not a studio profit estimate or evidence that selecting the tag causes higher earnings after development and marketing expenses.",
+      "source_ids": [
+        "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median",
+        "steam-immutable-genre-snapshot-2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Genre tags overlap and source populations differ; no matched labor costs, randomized assignment, contractual shares or after-tax proceeds."
     }
   ],
   "observations": [],
