@@ -7,6 +7,10 @@
 
 
 
+## Quiet Steam releases and later review-year rebounds (October 29, 2026)
+
+A [September 2026 survivor-cohort audit](../ontology/steam/steam-quiet-launch-yearly-review-comeback-selected-cohort-2026.md) records **4,209** currently listed US-priced Indie-tagged 2020–2022 games with 10–99 first-year reviews. The provider counts **233 (5.5%)** with a later year of more reviews. The first larger-review-year split is 130 in year two, 53 in year three, and 50 across years four–six. The eligibility frame excludes withdrawn and currently free games; reviews are not paid transactions, and update-post associations are not randomized experiments. The provider's commercial project-interest disclosure is explicit. One public study, ten bounded claims and denominator regression tests advance three existing tasks by one point each. Steam research **91.437%** (Δ **+0.010 pp**), 203 sources and 1263 claims; 293 original tasks preserved.
+
 ## First-game low-gross case with unpriced development labor (October 29, 2026)
 
 The [Hell Forge public author-disclosure audit](../ontology/steam/steam-hell-forge-low-gross-firstgame-labor-2026.md) records a developer's **450 reported copies and approximately USD $1,500 gross** by May 25 after a March 4 launch. The author's approximate 11-hour/day, six-month workload has no independently measured day count, hourly wage or settled-payout basis. The post's 20 first-month reviews must not be divided into the longer-window 450 copies. The Steam listing names a separate publisher; legal-payee share, refunds and after-cost profit remain unknown. Two distinct public sources, eight bounded claims, and regression tests advance three original income tasks by one point each. Steam research **91.427%** (Δ **+0.010 pp**), 202 sources and 1253 claims; 293 original tasks retained.

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "currently_listed_paid_indie_low_firstyear_review_cohort_not_sales_revenue",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-striketwo-2026-quiet-launch-review-comebacks"
+  ],
+  "claim_ids": [
+    "steam-quiet-revival-2020-22-survivor-frame",
+    "steam-quiet-revival-firstyear-bin-counts",
+    "steam-quiet-revival-233of4209-later-reviewyear",
+    "steam-quiet-revival-first-big-year-counts",
+    "steam-quiet-revival-hazards-conditional-atrisk",
+    "steam-quiet-revival-ea-update-groups-notcausal",
+    "steam-quiet-revival-2906-ever-later-review",
+    "steam-quiet-revival-audit-8-reviews-discrepancy",
+    "steam-quiet-revival-observational-commercial-interest",
+    "steam-quiet-revival-not-paid-sales-census"
+  ],
+  "sampling": {
+    "us_steam_store": true,
+    "indie_tag_at_snapshot": true,
+    "source_listing_date": "2026-09-16",
+    "price_check_date": "2026-09-21",
+    "historical_launch_from": "2020-01",
+    "historical_launch_to": "2022-12",
+    "priced_usd_above_zero_at_2026_snapshot": true,
+    "originally_paid_status_authenticated": false,
+    "removed_titles_included": false,
+    "now_free_titles_included": false,
+    "non_indie_tagged_games_included": false,
+    "independently_reproduced_raw_appids": false,
+    "source_commercial_interest_disclosed": true,
+    "reported_all_current_qualifying_listings": 12961
+  },
+  "firstyear_bins": {
+    "under_10_reviews": 7101,
+    "between_10_and_99_reviews": 4209,
+    "remaining_at_least_100_if_disjoint": 1651
+  },
+  "quiet_cohort": {
+    "games": 4209,
+    "median_firstyear_review_count": 22,
+    "with_bigger_later_review_year_by_aug2026": 233,
+    "first_bigger_year_bins": {
+      "year2": 130,
+      "year3": 53,
+      "year4_through_6_combined": 50
+    },
+    "qualifying_year2_at_risk_games": 4209,
+    "qualifying_year3_at_risk_games": 4079,
+    "first_bigger_year_at_risk_year4": 3672,
+    "year5_at_risk": 2318,
+    "year6_at_risk": 983,
+    "with_any_review_in_year_to_aug2026": 2906,
+    "with_at_least_monthly_reviews_in_last_year": 471
+  },
+  "descriptive_groups": {
+    "early_access_to_full_release": {
+      "n": 418,
+      "reported_bigger_year_percent": 15.8
+    },
+    "non_early_access_later_posts": {
+      "n": 560,
+      "reported_bigger_year_percent": 9.6
+    },
+    "non_early_access_no_later_posts": {
+      "n": 3231,
+      "reported_bigger_year_percent": 3.5
+    }
+  },
+  "reported_manual_validation": {
+    "games_spotchecked": 8,
+    "within_one_review": 6,
+    "mismatching_historical_histograms": 2,
+    "direction_of_bigger_year_unchanged_in_checks": true
+  },
+  "methodological_limits": {
+    "review_histogram_is_paid_order_ledger": false,
+    "year_one_start_uses_calendar_month_not_first_paid_day": true,
+    "early_access_inferred_from_prior_review_count": true,
+    "early_access_inference_crosschecked_games": 6,
+    "actual_longitudinal_legal_payee_panel": false,
+    "cohorts_through_full_2026_year": false,
+    "annual_review_recovery_is_causal_sale_impact": false
+  },
+  "unknown": {
+    "actual_paid_sale_fraction": null,
+    "all_originally_paid_games_count": null,
+    "representative_recovery_fraction": null,
+    "causal_effect_of_update_post": null,
+    "legal_publisher_revenue_median_usd": null,
+    "zero_sale_fraction": null,
+    "verified_after_cost_profit": null
+  },
+  "code_module": "site/steam-quiet-review-comeback-audit.mjs",
+  "tests_path": "tests/steam-quiet-review-comeback-audit.test.mjs",
+  "no_private_or_raw_appid_data": true
+}

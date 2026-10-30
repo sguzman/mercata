@@ -2237,6 +2237,17 @@
       "evidence_class": "public_dynamic_game_listing_not_sales_or_partner_records",
       "license": "Public metadata and original explanatory prose only; no media or full webpage reproduced.",
       "notes": "Independent public title/AppID and March 4, 2026 release-date corroboration. Store lists developer Gaby Rla and publisher LiberateGames; neither gross sales nor economic ownership verified. Dynamic price, review and publisher metadata may change."
+    },
+    {
+      "id": "steam-striketwo-2026-quiet-launch-review-comebacks",
+      "url": "https://striketwo.games/blog/indie-game-failed-launch",
+      "publisher": "Strike Two — developer-operated commercial analysis site",
+      "title": "5.5% of quiet indie launches on Steam later had a bigger year",
+      "published_at": "2026-09-21",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "third_party_public_review_histogram_surviving_currently_priced_indie_tagged_cohort_study",
+      "license": "Only source metadata, outbound URL and independently authored concise factual analysis; no source graphics, raw records or article text reproduced.",
+      "notes": "Analyzes current US-store Indie-tagged paid listings with 2020–2022 launch metadata, 2026 review-history snapshots; sample limited to still-on-sale games, excludes free/delisted and non-Indie listings. Method not independently replicated and provider solicits commercial game projects."
     }
   ],
   "claims": [
@@ -15195,6 +15206,106 @@
       "confidence": "high",
       "observed_at": "2026-10-29",
       "limitations": "Voluntary disclosure and different gameplay, payment, ownership and labor measurement denominators; no population sampling."
+    },
+    {
+      "id": "steam-quiet-revival-2020-22-survivor-frame",
+      "text": "A September 2026 third-party study selects 12,961 currently priced US-store Steam games tagged Indie and dated 2020–2022, not all games originally offered for money during those years.",
+      "source_ids": [
+        "steam-striketwo-2026-quiet-launch-review-comebacks"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Selection excludes delisted, now-free and no-longer-tagged listings; historical original paid status not authenticated."
+    },
+    {
+      "id": "steam-quiet-revival-firstyear-bin-counts",
+      "text": "Within the study's selected 12,961 currently priced games, 7,101 have fewer than 10 first-year Steam reviews and 4,209 have 10–99; other games and missing histories do not become proven high sales.",
+      "source_ids": [
+        "steam-striketwo-2026-quiet-launch-review-comebacks"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Review history is a behavior proxy, not units sold; the raw AppID and historical denominators are not independently audited."
+    },
+    {
+      "id": "steam-quiet-revival-233of4209-later-reviewyear",
+      "text": "The source says 233 of its 4,209 first-year 10–99-review games, about 5.5%, later had a year with more Steam reviews than their first year by August 2026.",
+      "source_ids": [
+        "steam-striketwo-2026-quiet-launch-review-comebacks"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Outcome means a larger annual review count, not positive developer profit, a cash rescue or general all-launch comeback probability."
+    },
+    {
+      "id": "steam-quiet-revival-first-big-year-counts",
+      "text": "Of the study's 233 first-later-bigger-review-year cases, the first larger year occurred in year two for 130 games, year three for 53, or years four through six combined for 50.",
+      "source_ids": [
+        "steam-striketwo-2026-quiet-launch-review-comebacks"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Later at-risk populations are age-censored; the 50 cannot be placed into one calendar year or denominator."
+    },
+    {
+      "id": "steam-quiet-revival-hazards-conditional-atrisk",
+      "text": "The study gives different at-risk denominators for the chance of a first larger review year: 4,209 in year two and 4,079 in year three; the resulting rates are conditional on remaining eligible without a previous larger year.",
+      "source_ids": [
+        "steam-striketwo-2026-quiet-launch-review-comebacks"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Eligibility and 12-month blocks are anchored to approximated release months; source methodology not independently reimplemented."
+    },
+    {
+      "id": "steam-quiet-revival-ea-update-groups-notcausal",
+      "text": "Within selected low-review listings, the source reports about 15.8% later bigger-review-year incidence among 418 Early Access graduates, 9.6% among 560 non-Early-Access titles with later update posts, and 3.5% among 3,231 without such posts.",
+      "source_ids": [
+        "steam-striketwo-2026-quiet-launch-review-comebacks"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Associations may reflect game quality, developer resources, launch readiness and survival selection; updates and 1.0 are not randomized interventions."
+    },
+    {
+      "id": "steam-quiet-revival-2906-ever-later-review",
+      "text": "The study reports 2,906 of 4,209 first-year 10–99-review survivors had at least one review in the year ending August 2026, a follow-up attention measure rather than sales or unique paying players.",
+      "source_ids": [
+        "steam-striketwo-2026-quiet-launch-review-comebacks"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Review event histories do not supply actual unit orders, publisher deposits or retention."
+    },
+    {
+      "id": "steam-quiet-revival-audit-8-reviews-discrepancy",
+      "text": "The source spot-checked yearly histogram counts against individual reviews for eight selected games: six matched within one, while two showed systematic overcounts without changing the relative larger-year classification.",
+      "source_ids": [
+        "steam-striketwo-2026-quiet-launch-review-comebacks"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Eight validation cases do not establish accuracy across more than four thousand games; no independent full AppID reproduction."
+    },
+    {
+      "id": "steam-quiet-revival-observational-commercial-interest",
+      "text": "The source expressly notes its commercial interest in acquiring or funding games and acknowledges missing delisted and free games, making its review-trajectory associations unsuitable as a causal investment recommendation.",
+      "source_ids": [
+        "steam-striketwo-2026-quiet-launch-review-comebacks"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Source self-discloses commercial participation; no competing-incentive adjustment or hidden dataset audit is available."
+    },
+    {
+      "id": "steam-quiet-revival-not-paid-sales-census",
+      "text": "Neither 233 review-year comebacks nor 2,906 later review-active titles identify verified paid game transactions, legal publisher income distributions or the exact initially-paid zero-sale fraction.",
+      "source_ids": [
+        "steam-striketwo-2026-quiet-launch-review-comebacks"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Survivor frame and reviews omit authenticated payment ledgers and initially paid withdrawn games."
     }
   ],
   "observations": [],
