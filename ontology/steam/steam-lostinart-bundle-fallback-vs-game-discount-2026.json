@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "developer_announced_game_discount_blocked_with_bundle_substitution_vs_calendar_only_qa",
+  "reviewed_at": "2026-10-30",
+  "case_game": "Lost in Art: a Miniature Realm",
+  "steam_appid": 2900050,
+  "source_ids": [
+    "steam-lostinart-official-app2900050-oct2026",
+    "steam-lostinart-developer-jul2026-summer-bundle-substitution",
+    "steam-bundles-repeat-2026",
+    "steam-discount-rules-2026"
+  ],
+  "claim_ids": [
+    "steam-lostinart-jun1-release-jul1-intended-discount",
+    "steam-lostinart-jul2-technical-base-game-block",
+    "steam-lostinart-jul2-bundle-50-percent-alternative",
+    "steam-lostinart-31days-release-does-not-approve",
+    "steam-bundle-price-reduction-is-not-package-notification",
+    "steam-lostinart-bundle-promotion-not-game-payout-proof"
+  ],
+  "dated_observations": {
+    "release_date": "2026-06-01",
+    "publisher_announced_summer_discount_date": "2026-06-25",
+    "publisher_intended_start": "2026-07-01",
+    "publisher_block_report_date": "2026-07-02",
+    "days_since_release_at_intended_start": 30,
+    "days_since_release_at_block_report": 31,
+    "base_game_discount_started_by_block_report": false,
+    "public_reason_description": "developer-reported technical issue; working with Steam Support",
+    "specific_steamworks_rejection_reason_verified": null,
+    "increase_bundle_discount_percent_reported": 50,
+    "bundle_discount_vs_game_package_discount_identical": false
+  },
+  "policy": {
+    "ordinary_postrelease_discount_calendar_wait_days": 30,
+    "official_summer_sale_waives_recent_release_gate": false,
+    "bundle_percentage_is_not_direct_package_reduction": true,
+    "bundle_discount_sends_wishlist_notification": false,
+    "bundle_sales_may_allocate_package_units_to_included_games": true,
+    "package_discount_wishlist_notification_depends_on_qualifying_package_discount": true
+  },
+  "model_check": {
+    "model_path": "site/steam-sale-date-eligibility.mjs",
+    "sample_release_date": "2026-06-01",
+    "sample_sale_start": "2026-07-01",
+    "sample_sale_end": "2026-07-09",
+    "first_calendar_eligible_date": "2026-07-01",
+    "conditional_release_gate_clear": true,
+    "actual_partner_discount_permission_verified": false,
+    "technical_issue_cause_identified": false,
+    "subscription_or_wishlist_customer_delivery_verified": false
+  },
+  "unknown": {
+    "cause_of_game_discount_block": null,
+    "earliest_actual_package_discount_start": null,
+    "package_discount_eligibility_at_report": null,
+    "number_of_bundle_purchases": null,
+    "incremental_base_game_paid_orders_from_bundle": null,
+    "triggered_wishlist_alert_recipients": null,
+    "net_revenue_from_bundle": null,
+    "developer_personal_profit": null
+  },
+  "publication": {
+    "official_developer_news_rolling_page": true,
+    "individual_article_permanent_link_located": false,
+    "private_store_or_steamworks_access": false
+  },
+  "regression_test": "tests/steam-bundle-fallback-vs-game-discount.test.mjs"
+}

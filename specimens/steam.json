@@ -2886,6 +2886,17 @@
       "evidence_class": "official_public_paid_product_release_and_developer_publisher_labels",
       "license": "Public store metadata link and concise original factual summary only; no media assets or private records included.",
       "notes": "AppID 4137920; January 7 2026 Steam commercial release; developer James Oliver and publisher Destined. This does not prove legal payee, self-reported first-month units or developer profit."
+    },
+    {
+      "id": "steam-lostinart-developer-jul2026-summer-bundle-substitution",
+      "url": "https://steamcommunity.com/app/2900050/allnews/",
+      "title": "Lost in Art: a Miniature Realm — official Summer Sale and July 2 50% bundle fallback announcements",
+      "publisher": "Archaic Game Studio — official product news hosted by Steam Community",
+      "published_at": "2026-07-02",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "first_party_developer_promotion_technical_block_and_bundle_discount_selfreport",
+      "license": "Public announcement index, dated headline and independently written short factual paraphrases only; no copyrighted original paragraphs/images reproduced.",
+      "notes": "Rolling official Steam product news records June 25 announcement of intended July 1 Summer Sale start and July 2 announcement that a technical issue prevented discounting the base game and support was contacted; alternative 50-percent bundle discount stated. Root is a rolling archive, not permanent unique article; exact Steamworks backend cause and whether the game later went on sale are not verified."
     }
   ],
   "claims": [
@@ -18809,6 +18820,70 @@
       "confidence": "bounded_first_party_author_selfreport_with_public_store_metadata",
       "observed_at": "2026-10-30",
       "limitations": "One deliberately selected positive postmortem with self-defined month, unmatched wishlist and ad exposure units, unverified merchant books, incomplete returns window and no population sampling frame."
+    },
+    {
+      "id": "steam-lostinart-jun1-release-jul1-intended-discount",
+      "text": "The June 1 paid release is verified by Steam; June 25 official developer news announced an intended July 1, 2026 Summer Sale promotion, precisely 30 calendar days after release.",
+      "source_ids": [
+        "steam-lostinart-official-app2900050-oct2026",
+        "steam-lostinart-developer-jul2026-summer-bundle-substitution"
+      ],
+      "confidence": "bounded_first_party_public_discount_event_with_official_platform_docs",
+      "observed_at": "2026-10-30",
+      "limitations": "Rolling public publisher news reports a technical incident without private Steamworks diagnosis; bundle discount differs from individual package sale, and no matched notification/purchase or financial ledger is available."
+    },
+    {
+      "id": "steam-lostinart-jul2-technical-base-game-block",
+      "text": "A July 2 publisher statement says the base game could not be discounted due to a technical issue and that Steam Support was being contacted; the root cause and eventual repair are unknown.",
+      "source_ids": [
+        "steam-lostinart-developer-jul2026-summer-bundle-substitution"
+      ],
+      "confidence": "bounded_first_party_public_discount_event_with_official_platform_docs",
+      "observed_at": "2026-10-30",
+      "limitations": "Rolling public publisher news reports a technical incident without private Steamworks diagnosis; bundle discount differs from individual package sale, and no matched notification/purchase or financial ledger is available."
+    },
+    {
+      "id": "steam-lostinart-jul2-bundle-50-percent-alternative",
+      "text": "The July 2 developer announcement instead increased an available bundle discount to 50 percent, without verifying that the standalone base-game package had a 50-percent discount.",
+      "source_ids": [
+        "steam-lostinart-developer-jul2026-summer-bundle-substitution"
+      ],
+      "confidence": "bounded_first_party_public_discount_event_with_official_platform_docs",
+      "observed_at": "2026-10-30",
+      "limitations": "Rolling public publisher news reports a technical incident without private Steamworks diagnosis; bundle discount differs from individual package sale, and no matched notification/purchase or financial ledger is available."
+    },
+    {
+      "id": "steam-lostinart-31days-release-does-not-approve",
+      "text": "Despite being 31 calendar days after release on July 2, the reported failed discount shows date-only release eligibility does not establish partner configuration, operational availability or reason for a technical block.",
+      "source_ids": [
+        "steam-lostinart-developer-jul2026-summer-bundle-substitution",
+        "steam-lostinart-official-app2900050-oct2026",
+        "steam-discount-rules-2026"
+      ],
+      "confidence": "bounded_first_party_public_discount_event_with_official_platform_docs",
+      "observed_at": "2026-10-30",
+      "limitations": "Rolling public publisher news reports a technical incident without private Steamworks diagnosis; bundle discount differs from individual package sale, and no matched notification/purchase or financial ledger is available."
+    },
+    {
+      "id": "steam-bundle-price-reduction-is-not-package-notification",
+      "text": "Valve's bundle documentation states that creating or changing a bundle discount does not send normal wishlist discount notifications for individual wishlisted products.",
+      "source_ids": [
+        "steam-bundles-repeat-2026"
+      ],
+      "confidence": "bounded_first_party_public_discount_event_with_official_platform_docs",
+      "observed_at": "2026-10-30",
+      "limitations": "Rolling public publisher news reports a technical incident without private Steamworks diagnosis; bundle discount differs from individual package sale, and no matched notification/purchase or financial ledger is available."
+    },
+    {
+      "id": "steam-lostinart-bundle-promotion-not-game-payout-proof",
+      "text": "A publisher-announced bundle price reduction alone does not identify additional standalone game discount transactions, attributed wishlister purchases, net partner cash or after-cost developer profit.",
+      "source_ids": [
+        "steam-lostinart-developer-jul2026-summer-bundle-substitution",
+        "steam-bundles-repeat-2026"
+      ],
+      "confidence": "bounded_first_party_public_discount_event_with_official_platform_docs",
+      "observed_at": "2026-10-30",
+      "limitations": "Rolling public publisher news reports a technical incident without private Steamworks diagnosis; bundle discount differs from individual package sale, and no matched notification/purchase or financial ledger is available."
     }
   ],
   "observations": [],
