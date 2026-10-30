@@ -2,7 +2,7 @@
   "schema_version": 1,
   "specimen_id": "steam",
   "kind": "synthetic_multi_snapshot_historical_eligibility_and_survivorship_audit",
-  "reviewed_at": "2026-10-29",
+  "reviewed_at": "2026-10-30",
   "source_ids": [
     "steam-public-app-list-api",
     "steam-release-dates-official",
@@ -108,5 +108,61 @@
     "publisher_income_median": null,
     "legal_publisher_census": null
   },
-  "privacy": "No real Steam AppIDs, API keys, historical game records, merchant logs, or individual participant data used."
+  "privacy": "No real Steam AppIDs, API keys, historical game records, merchant logs, or individual participant data used.",
+  "public_historical_archive_review": {
+    "model_path": "site/steam-archive-candidate-coverage.mjs",
+    "tests_path": "tests/steam-archive-candidate-coverage.test.mjs",
+    "public_source_review_date": "2026-10-30",
+    "sources": [
+      {
+        "name": "Valve IStoreService",
+        "url": "https://partner.steamgames.com/doc/webapi/IStoreService?l=english",
+        "type": "current_store_catalog",
+        "empirical_first_paid_population_complete": false
+      },
+      {
+        "name": "SteamDB price changes",
+        "url": "https://steamdb.info/pricechanges/",
+        "type": "long_running_price_archive",
+        "first_paid_playable_date_independently_verified": false
+      },
+      {
+        "name": "SteamRaw tracker description",
+        "url": "https://steamraw.com/about",
+        "type": "newer_appinfo_and_price_tracker",
+        "provider_reports_tracking_started": "2026-09",
+        "older_coverage_unknown": true
+      },
+      {
+        "name": "Curated removed Steam games list",
+        "url": "https://docs.google.com/spreadsheets/d/1aAbrEDNa2NmgntrKtij0RuxKneiFcTJisGyfMUv2nnM/edit?gid=975765620",
+        "type": "selected_removed_and_unreleased_catalog",
+        "representative_paid_launch_population": false
+      },
+      {
+        "name": "Steam Port Index",
+        "url": "https://steam-port-index.com/about.html",
+        "type": "selected_historical_port_curation",
+        "representative_paid_launch_population": false
+      }
+    ],
+    "removed_games_curated_list_observation": {
+      "captured_date": "2026-10-30",
+      "catalogued_entries": 3924,
+      "displayed_status_counts": {
+        "removed": 1219,
+        "unreleased": 703,
+        "delisted": 729,
+        "unpublished": 1249
+      },
+      "unallocated_difference": 24,
+      "category_partition_verified_complete": false,
+      "complete_first_paid_game_population": false,
+      "completed_paid_orders_observed": null,
+      "observational_unit": "curated_entries_not_originally_paid_base_games"
+    },
+    "no_live_appid_rows_imported": true,
+    "exact_historical_first_paid_launch_count": null,
+    "marketwide_zero_sale_fraction": null
+  }
 }
