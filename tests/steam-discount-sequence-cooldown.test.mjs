@@ -122,9 +122,13 @@ test('Earlier discounts cannot be used as valid history across a price-increase 
  const prior={kind:'standard',start:'2026-12-01',end:'2026-12-08'};
  const later={...base,discount_start:'2027-01-15',discount_end:'2027-01-21',
   discount_percent:20,previous_discount:prior};
- for(const last_price_increase_date of ['2026-12-01','2026-12-04','2026-12-08']){
+ for(const last_price_increase_date of ['2026-12-01','2026-12-04']){
   assert.throws(()=>check({...later,last_price_increase_date}),/cannot occur during a previous discount/);
  }
+ const sameEndDay=check({...later,last_price_increase_date:'2026-12-08'});
+ assert.equal(sameEndDay.conditional_calendar_rules_pass,null);
+ assert.equal(sameEndDay.calendar_status,'unresolved_same_day_price_increase_order');
+ assert.equal(sameEndDay.unresolved_same_day_price_increase_order,true);
  assert.throws(()=>check({...later,last_price_increase_date:'2026-11-02'}),
   /previous discount cannot begin during a price-increase cooldown/i);
  // 30 whole days, not a blanket 31-day prohibition.
@@ -254,8 +258,8 @@ test('A price increase during any earlier promotion is rejected',()=>{
  ];
  const fixture={...base,discount_start:'2027-01-15',discount_end:'2027-01-21',
   discount_percent:20,previous_discounts:history};
- for(const inDiscount of ['2026-10-01','2026-10-05','2026-10-07',
-  '2026-11-10','2026-11-14','2026-11-16']){
+ for(const inDiscount of ['2026-10-01','2026-10-05',
+  '2026-11-10','2026-11-14']){
   assert.throws(()=>check({...fixture,price_increase_dates:[inDiscount]}),
    /base-price increase cannot occur during a previous discount/);
  }
@@ -406,4 +410,24 @@ test('Standalone paid release remains distinct from modeled Early Access graduat
  assert.equal(graduated.launch_stage,'full_release');
  assert.equal(graduated.release_to_v1_early_access_transition_modeled,true);
  assert.equal(graduated.actual_partner_eligibility_verified,false);
+});
+
+test('The same-day price increase after a prior discount might be valid but is not hour-verified',()=>{
+ const preceding={kind:'standard',start:'2026-09-01',end:'2026-09-14'};
+ const fixture={...base,first_paid_release_date:'2026-01-15',
+  full_release_date:'2026-10-15',discount_kind:'launch',
+  discount_start:'2026-10-15',discount_end:'2026-10-21',
+  discount_percent:20,previous_discounts:[preceding],
+  price_increase_dates:['2026-09-14']};
+ const dateOnly=check(fixture);
+ assert.equal(dateOnly.conditional_calendar_rules_pass,null);
+ assert.equal(dateOnly.unresolved_same_day_price_increase_order,true);
+ assert.equal(dateOnly.first_allowed_start_date_from_known_cooldowns,null);
+ assert.equal(dateOnly.price_increase_cooldown_ends,'2026-10-14');
+ assert.equal(dateOnly.known_calendar_failures.length,0);
+ const unambiguous=check({...fixture,price_increase_dates:['2026-09-15']});
+ assert.equal(unambiguous.conditional_calendar_rules_pass,true);
+ const knownFailure=check({...fixture,discount_start:'2026-10-14',discount_end:'2026-10-20'});
+ assert.equal(knownFailure.conditional_calendar_rules_pass,false);
+ assert(knownFailure.known_calendar_failures.includes('launch_discount_not_on_release_day'));
 });

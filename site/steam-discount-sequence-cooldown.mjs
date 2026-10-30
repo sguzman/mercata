@@ -66,6 +66,7 @@ export function auditSyntheticSteamDiscountSequence(args={}){
    eventAttested:raw.kind==='official_seasonal'&&raw.official_seasonal_event_verified===true};
  });
  let latestNonseasonal=null;
+ let unresolvedPriceEndDayOrder=false;
  for(const [i,prior] of previousDiscounts.entries()){
   if(prior.end<prior.start||prior.start<release||prior.end>=start)
    throw new RangeError('Previous discount dates overlap current promotion or precede first paid release');
@@ -80,8 +81,13 @@ export function auditSyntheticSteamDiscountSequence(args={}){
   if(prior.kind==='launch'&&fullLaunch&&prior.start<plus30(release))
    throw new RangeError('A full-release launch discount needs 30 days since Early Access began');
   for(const increase of prices){
-   if(increase>=prior.start&&increase<=prior.end)
+   if(increase>=prior.start&&increase<prior.end)
     throw new RangeError('A base-price increase cannot occur during a previous discount');
+   // The document's v1.0 example permits a price rise immediately after a
+   // discount ends on the same calendar day. Date-only fixtures cannot prove
+   // the ordering within that day; do not manufacture an invalid history.
+   if(increase.getTime()===prior.end.getTime())
+    unresolvedPriceEndDayOrder=true;
    if(increase<prior.start&&prior.start<plus30(increase))
     throw new RangeError('A previous discount cannot begin during a price-increase cooldown');
   }
@@ -139,7 +145,7 @@ export function auditSyntheticSteamDiscountSequence(args={}){
  if(latestNonseasonal&&!seasonalEventAttested)earliestGates.push(plus30(latestNonseasonal.end));
  const firstKnown=maxDate(earliestGates);
  const history=args.relevant_discount_history_complete;
- const result=reasons.length?false:history&&!unverifiedSeasonalEvent?true:null;
+ const result=reasons.length?false:history&&!unverifiedSeasonalEvent&&!unresolvedPriceEndDayOrder?true:null;
  return Object.freeze({
   kind:'synthetic_first_paid_steam_discount_cooldown_not_account_authorization',
   fixture_id:args.fixture_id,discount_kind:args.discount_kind,
@@ -150,7 +156,7 @@ export function auditSyntheticSteamDiscountSequence(args={}){
   // A launch offer must begin on the actual release day. If that day misses a
   // cooldown, shifting the start date would no longer make it a launch offer.
   first_allowed_start_date_from_known_cooldowns:
-   unverifiedSeasonalEvent?null:args.discount_kind==='launch'?
+   unverifiedSeasonalEvent||unresolvedPriceEndDayOrder?null:args.discount_kind==='launch'?
     reasons.length?null:iso(start):iso(firstKnown),
   release_cooldown_ends:iso(plus30(release)),
   price_increase_count:prices.length,
@@ -164,17 +170,19 @@ export function auditSyntheticSteamDiscountSequence(args={}){
   official_seasonal_event_attested:seasonalEventAttested,
   previous_official_seasonal_event_attested:Boolean(previousEventAttested),
   unresolved_official_seasonal_event: Boolean(unverifiedSeasonalEvent),
+  unresolved_same_day_price_increase_order:Boolean(unresolvedPriceEndDayOrder),
   official_event_independently_verified_by_model:false,
   known_calendar_failures:reasons,
   relevant_discount_history_complete:history,
   conditional_calendar_rules_pass:result,
   calendar_status:result===true?'passes_known_rules_conditional_on_attested_history':
    result===false?'blocked_by_known_rules':unverifiedSeasonalEvent?
-   'unresolved_official_seasonal_event_attestation':'unresolved_prior_discount_history',
+   'unresolved_official_seasonal_event_attestation':unresolvedPriceEndDayOrder?
+   'unresolved_same_day_price_increase_order':'unresolved_prior_discount_history',
   actual_partner_eligibility_verified:false,
   local_currency_minimum_price_verified:false,
   verified_steam_discount_history:false,
   release_to_v1_early_access_transition_modeled:Boolean(full),
   causal_discount_revenue_increment:null,
-  note:'Official seasonal discounts skip only discount-to-discount cooldowns, never first-paid release or price-rise waits. Official-sale attestations are synthetic assertions, not independently checked event calendars. Release cooldowns apply separately to Early Access and full release; a launch discount is modeled only on the corresponding release date. Nonseasonal cooldowns are checked across the entire supplied ordered history, which is still only a synthetic attestation. Price-increase history is also only a dated fixture, not an authenticated price ledger. Date-only model ignores exact 10am Pacific cutoffs, country minimum prices, actual partner setup and unknown earlier discounts.'});
+  note:'Official seasonal discounts skip only discount-to-discount cooldowns, never first-paid release or price-rise waits. Official-sale attestations are synthetic assertions, not independently checked event calendars. Release cooldowns apply separately to Early Access and full release; a launch discount is modeled only on the corresponding release date. Nonseasonal cooldowns are checked across the entire supplied ordered history, which is still only a synthetic attestation. Price-increase history is also only a dated fixture, not an authenticated price ledger. Date-only model leaves same-day discount-end/price-increase ordering unresolved and ignores exact 10am Pacific cutoffs, country minimum prices, actual partner setup and unknown earlier discounts.'});
 }
