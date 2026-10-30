@@ -7,6 +7,9 @@
 
 
 
+## Post-launch event attention versus returning players (October 29, 2026)
+
+The [Valve reporting-source audit](../ontology/steam/steam-postlaunch-event-attention-versus-player-retention-2026.md) distinguishes logged-in unique event exposures and selected reads from repeat store visitors, actual returning players, paid purchases and retention cohorts. Direct off-platform event reads may exceed on-site event impressions, while current Steamworks documentation no longer supports Google Analytics. A synthetic regression guard prevents interpreting an impression/read ratio as a sales conversion or player retention estimate. Three new Valve primary documents and nine bounded claims advance two existing tasks by three total points, without altering the 293-task frame or inventing any financial outcomes. Steam research **91.413%** (Δ **+0.010 pp**), 199 sources and 1241 claims.
 ## Corrected local-tax base in an author-disclosed two-game Steam portfolio (October 29, 2026)
 
 The [public self-disclosure correction audit](../ontology/steam/public-developer-payout-and-portfolio-cases-2026.md) records the original author's own comment revising the local-tax calculation base from **$127,000** to **$172,000**. A claimed 15% of the corrected base is **$25,800**, consistent with the author's rounded **$26,000** local-tax line; independently subtracting the printed upstream deductions instead produces **$174,300**, leaving a **$2,300** still-unresolved base gap. These are approximate voluntary claims, not receipts, a universal tax rate or a population income measure. One original source-linked claim advances the existing median-developer-proceeds task by one point. Steam research **91.403%** (Δ **+0.003 pp**); 196 sources, 1232 claims and 293 original tasks.

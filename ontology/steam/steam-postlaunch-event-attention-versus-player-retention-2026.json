@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_postlaunch_marketing_attention_and_player_retention_measurement_boundary",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-google-analytics-retirement-official-oct2026",
+    "steam-event-attention-stats-official-oct2026",
+    "steam-event-visibility-placement-official-oct2026"
+  ],
+  "claim_ids": [
+    "steam-postlaunch-ga4-not-supported",
+    "steam-postlaunch-utm-three-day-visit-window",
+    "steam-postlaunch-returning-store-visitor-not-player",
+    "steam-postlaunch-event-first-location-unique-loggedin",
+    "steam-postlaunch-event-offsite-reads-can-exceed",
+    "steam-postlaunch-event-report-hourly-not-complete",
+    "steam-postlaunch-event-selected-click-only",
+    "steam-postlaunch-marketing-events-channel-dependent",
+    "steam-postlaunch-no-repeat-cash-from-attention"
+  ],
+  "google_analytics": {
+    "currently_supported": false,
+    "universal_analytics_to_ga4_transition": "2023-07-01",
+    "exact_steam_support_end_date": null,
+    "utm_attribution_window_days": 3,
+    "new_returning_metric_unit": "store_page_visitor_not_in_game_player"
+  },
+  "event_attention": {
+    "impressions": "unique_logged_in_users_whose_event_placement_was_visible",
+    "reads": "unique_logged_in_users_selecting_or_directly_opening_an_event",
+    "first_location_attribution": true,
+    "anonymous_visitors_counted": false,
+    "repeated_view_counts_included": false,
+    "update_frequency_hours": 1,
+    "offsite_direct_reads_without_corresponding_impression_possible": true,
+    "reads_may_exceed_impressions": true,
+    "event_read_to_paid_sale_conversion_identifiable": false
+  },
+  "placement_rules": {
+    "library_whats_new": "game_update_or_player_reengagement_attention_not_verified_return_play",
+    "discount_event_library_presence": false,
+    "cross_promotion_library_or_store_presence": false,
+    "event_visibility_requires_edit_app_marketing_data_permission": true
+  },
+  "event_signal_units": {
+    "event_impression": "unique_logged_in_user_event_visibility",
+    "event_read": "unique_logged_in_user_event_open",
+    "utm_returning_store_visitor": "returning_store_page_visitor",
+    "verified_return_play": "instrumented_gameplay_user_session_requires_permission",
+    "verified_paid_checkout": "authenticated_purchase_ledger_requires_permission"
+  },
+  "source_limitations": {
+    "no_partner_dashboard_access": true,
+    "no_merchant_data": true,
+    "existing_store_traffic_guide_is_complementary": true,
+    "measured_events_are_not_observed_gameplay_or_purchases": true,
+    "historical_policy_change_dates_unestablished": true
+  },
+  "unknown": {
+    "actual_returning_players": null,
+    "retained_paid_buyers": null,
+    "repeat_paid_units": null,
+    "refund_adjusted_sales": null,
+    "event_sales_uplift": null,
+    "developer_profit": null,
+    "full_audience_reach": null
+  },
+  "code_module": "site/steam-postlaunch-event-signal-guards.mjs",
+  "tests_path": "tests/steam-postlaunch-event-signal-guards.test.mjs",
+  "no_private_user_or_merchant_data": true
+}

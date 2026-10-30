@@ -2171,6 +2171,39 @@
       "evidence_class": "public_operator_self_reported_sales_disclosure_model_scorecard_distinct_selection_panels",
       "license": "Public link and original brief aggregate interpretation only; no game-level result tables, charts, or proprietary model data copied.",
       "notes": "32 recent sales disclosures: 17 within 50%; separately 132 disclosure-date-aligned reviews: 79 within 50%; 230 sale-size calibration cases, only 16 below 1000 units. Not an independent merchant audit or zero sales frame."
+    },
+    {
+      "id": "steam-google-analytics-retirement-official-oct2026",
+      "url": "https://partner.steamgames.com/doc/marketing/google_analytics?l=english",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Google Analytics (Steamworks Documentation)",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_partner_documentation",
+      "license": "Public metadata, outbound URL and independently authored factual summary; no source text or media reproduced.",
+      "notes": "Live public Steamworks documentation. July 1, 2023 describes Google's Universal Analytics transition, not a proven exact Valve support termination date."
+    },
+    {
+      "id": "steam-event-attention-stats-official-oct2026",
+      "url": "https://partner.steamgames.com/doc/marketing/event_tools/stats?l=english",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Events and Announcements Visibility Stats Reporting",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_partner_documentation",
+      "license": "Public metadata, outbound URL and independently authored factual summary; no source text or media reproduced.",
+      "notes": "Current public definitions for unique logged-in event exposure, clicks, first location, updates and direct off-platform reads. No publisher dashboard accessed."
+    },
+    {
+      "id": "steam-event-visibility-placement-official-oct2026",
+      "url": "https://partner.steamgames.com/doc/marketing/event_tools/visibility",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Events and Announcements Visibility",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_partner_documentation",
+      "license": "Public metadata, outbound URL and independently authored factual summary; no source text or media reproduced.",
+      "notes": "Public placement and event-type eligibility rules; no observed sales uplift or retention effect attributed."
     }
   ],
   "claims": [
@@ -14913,6 +14946,99 @@
       "observed_at": "2026-10-29",
       "limitations": "The listed gross and rounded deductions independently imply USD 174,300 before local tax, USD 2,300 above the author's corrected intermediate base. This is a self-report correction, not audited business cash or tax compliance evidence.",
       "confidence": "bounded_primary_author_comment_corrects_arithmetic_without_financial_ledger"
+    },
+    {
+      "id": "steam-postlaunch-ga4-not-supported",
+      "text": "Steam's current documentation says it no longer supports Google Analytics and identifies Google's July 2023 Universal Analytics transition as context, not a precise dated cessation of Valve support.",
+      "source_ids": [
+        "steam-google-analytics-retirement-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Current documentation snapshot; support termination date not independently established."
+    },
+    {
+      "id": "steam-postlaunch-utm-three-day-visit-window",
+      "text": "Valve's Google Analytics replacement guide describes Steam UTM conversion reporting with a three-day attribution window and regional, device and first-time-versus-returning store visitor breakdowns.",
+      "source_ids": [
+        "steam-google-analytics-retirement-official-oct2026",
+        "steam-utm-analytics-official-20261028"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "UTM-attributed visits or conversions cannot establish a causal ad effect or publisher net sales."
+    },
+    {
+      "id": "steam-postlaunch-returning-store-visitor-not-player",
+      "text": "The Steam new-versus-returning traffic split describes repeat store-page visitors, not gameplay return sessions, retained paying customers or repeat purchasers.",
+      "source_ids": [
+        "steam-google-analytics-retirement-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Player or payer retention requires distinct longitudinal denominators and appropriate permissions."
+    },
+    {
+      "id": "steam-postlaunch-event-first-location-unique-loggedin",
+      "text": "Steam event impression and read reporting uses unique logged-in users and assigns each to their first observed event location, rather than all repeated views across all locations.",
+      "source_ids": [
+        "steam-event-attention-stats-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Anonymous users are not counted; exposure does not demonstrate that a person read or acted on the content."
+    },
+    {
+      "id": "steam-postlaunch-event-offsite-reads-can-exceed",
+      "text": "A direct visit to a Steam event from outside the Steam site may count as a read without an on-site event impression, so the reported reads count can exceed impressions.",
+      "source_ids": [
+        "steam-event-attention-stats-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Reads divided by impressions is not a valid purchase or reactivation conversion estimator."
+    },
+    {
+      "id": "steam-postlaunch-event-report-hourly-not-complete",
+      "text": "Steam event attention statistics are updated hourly and exclude visitors who are not logged in.",
+      "source_ids": [
+        "steam-event-attention-stats-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Not an exhaustive audience, buyer, or real-time game-activity census."
+    },
+    {
+      "id": "steam-postlaunch-event-selected-click-only",
+      "text": "Steam counts the event selected in a pop-up as a click or read, not every subsequent event viewed while scrolling in that viewer.",
+      "source_ids": [
+        "steam-event-attention-stats-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "A reported read is not necessarily evidence of complete article consumption."
+    },
+    {
+      "id": "steam-postlaunch-marketing-events-channel-dependent",
+      "text": "Steam Library update events can reach existing game players, whereas discount events are excluded from the owners' Library placement and cross-promotion events do not appear in Library or store placements.",
+      "source_ids": [
+        "steam-event-visibility-placement-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Eligibility and visibility are not verified player re-engagement, revenue or causal promotion uplift."
+    },
+    {
+      "id": "steam-postlaunch-no-repeat-cash-from-attention",
+      "text": "Event impressions, event reads, and returning store visitors cannot identify active-player retention, repeat paid transactions, refunded orders or publisher profit.",
+      "source_ids": [
+        "steam-google-analytics-retirement-official-oct2026",
+        "steam-event-attention-stats-official-oct2026",
+        "steam-event-visibility-placement-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "No account, game telemetry, transaction ledger, refund report or publisher financial records were accessed."
     }
   ],
   "observations": [],
