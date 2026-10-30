@@ -16,6 +16,19 @@ Valve's launch-pricing guidance calls attention to expected play duration, repla
 
 Valve generally asks for about 30 days before normal price changes after launch, and rising base prices generally impose a 30-day discount cooldown. Converting an initially free game to paid (or paid to free) uses Steam support and at least **one week of customer notice** under the current policy. An initially free game that later charges money must not be silently counted as an originally-paid launch.
 
+
+## Regional minimum-price audit: base floor versus discounted transaction floor
+
+**Rechecked October 30, 2026.** Valve's [Pricing documentation](https://partner.steamgames.com/doc/store/pricing?language=english) separates **(1) the minimum base price for entering new package prices** from **(2) the minimum amount a customer may pay after a discount**. Those floors use Steam's regional multivariable pricing tier, not the same numeric $0.99/$0.49 in every currency. Valve gives illustrative maximum discount depths of approximately **50% at the $0.99 USD tier, 75% at $1.99 and 90% at $4.99**. Local denominations, available fractions and price increments differ; these illustrations are not an authoritative market-by-market threshold table.
+
+The linked per-currency [minimums table](https://partner.steamgames.com/pricing/minimums) redirected to Steamworks sign-in during the October 30 public review, so no complete or verified live table was captured. No numeric local minimums have been entered in this study. Any model predicting a price floor in MXN or JPY from a US-only threshold or a real-time exchange rate would manufacture evidence.
+
+Valve documents distinct consequences: a **missing local price** or a **base price below that market's transaction minimum** can make the product unavailable there; **any** base price below the transaction minimum can also prevent scheduling a new discount. A discount that would drive **any market's** final price below its transaction floor cannot be newly created under the Discounting guide. Previously scheduled discounts can instead leave a product unpurchasable in affected countries. **New base-price entry below the base minimum** is a separate validation condition; a legacy existing price between the two minima does not by itself prove local unavailability.
+
+The [synthetic regional floor checker](../../site/steam-regional-discount-floors.mjs) and [regression tests](../../tests/steam-regional-discount-floors.test.mjs) accept only explicitly supplied **market-specific integral price units, floors and hypothetical current or post-change base prices**. The audit distinguishes whether prices clear the base-entry floor, a proposed discount clears the transaction floor, and whether one currency blocks a new global promotion. If the local minimum is unknown, the market roster is incomplete, a proposed base-price update was not attested as published, or rounding could cross the floor, the result is **unresolved** rather than a fabricated permission. The fixture's local thresholds and roster completeness are **assertions**, not independently authenticated Steamworks data.
+
+Rounding is represented conservatively by lower and upper integral bounds around the raw percent calculation. If both fall above or both below the transaction minimum, the floor comparison is decisive; otherwise the actual store rounding increment is unresolved. The audit does not automatically convert any market to USD, merge region groups, infer customer demand from blocked purchase availability, or establish a publisher's local-currency net revenue. Discount calendar and account permissions require separate checks.
+
 ## Hypothetical paid checkout, not estimated real revenue
 
 Suppose one invented base-game package has three **hypothetical** markets, with each amount already specified in USD cents for arithmetic. These cents are invented values, *not conversions of real MXN or USD_LATAM transaction records*.

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "specimen_id": "steam",
   "kind": "official_regional_pricing_and_synthetic_paid_checkout_realization",
-  "reviewed_at": "2026-10-28",
+  "reviewed_at": "2026-10-30",
   "source_ids": [
     "steam-supported-currencies-pricing-20261028",
     "steam-price-rules-2026",
@@ -112,5 +112,19 @@
     "optimal_price_by_length": null
   },
   "no_private_data": true,
-  "no_real_market_checkout_included": true
+  "no_real_market_checkout_included": true,
+  "minimum_threshold_audit": {
+    "model_path": "site/steam-regional-discount-floors.mjs",
+    "test_path": "tests/steam-regional-discount-floors.test.mjs",
+    "authoritative_local_threshold_table_url": "https://partner.steamgames.com/pricing/minimums",
+    "authoritative_local_threshold_table_fetched": false,
+    "no_unauthenticated_currency_thresholds_added": true,
+    "dollar_tier_used_only_as_descriptive_example": true,
+    "local_price_input_unit": "market-specific integral price units, not converted USD cents",
+    "base_price_minimum_distinct_from_transaction_minimum": true,
+    "all_market_new_discount_schedule_sensitive_to_any_underfloor_currency": true,
+    "market_specific_missing_price_not_same_as_zero_demand": true,
+    "future_post_change_price_state_must_be_attested_as_published_in_fixture": true,
+    "real_partner_permission_verified": false
+  }
 }
