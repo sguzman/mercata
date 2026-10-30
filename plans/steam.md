@@ -7,6 +7,10 @@
 
 
 
+## Persistent game stats versus retained players (October 29, 2026)
+
+The [Valve Steamworks game-stat instrumentation addendum](../ontology/steam/steam-postlaunch-event-attention-versus-player-retention-2026.md) distinguishes persistent per-account game statistics and optional global aggregates from store visitors, event reads and actual longitudinal gameplay retention. `INT`, `FLOAT` and `AVGRATE` stats can support deliberately instrumented game sessions; no public cumulative total establishes a returned-player cohort or publisher net revenue. One new Valve primary document and four bounded claims advance the existing after-launch retention metric task by one point; 293 tasks are unchanged. Steam research **91.416%** (Δ **+0.003 pp**), 200 sources and 1245 claims.
+
 ## Post-launch event attention versus returning players (October 29, 2026)
 
 The [Valve reporting-source audit](../ontology/steam/steam-postlaunch-event-attention-versus-player-retention-2026.md) distinguishes logged-in unique event exposures and selected reads from repeat store visitors, actual returning players, paid purchases and retention cohorts. Direct off-platform event reads may exceed on-site event impressions, while current Steamworks documentation no longer supports Google Analytics. A synthetic regression guard prevents interpreting an impression/read ratio as a sales conversion or player retention estimate. Three new Valve primary documents and nine bounded claims advance two existing tasks by three total points, without altering the 293-task frame or inventing any financial outcomes. Steam research **91.413%** (Δ **+0.010 pp**), 199 sources and 1241 claims.

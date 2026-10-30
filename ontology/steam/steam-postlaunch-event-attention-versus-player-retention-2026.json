@@ -6,7 +6,8 @@
   "source_ids": [
     "steam-google-analytics-retirement-official-oct2026",
     "steam-event-attention-stats-official-oct2026",
-    "steam-event-visibility-placement-official-oct2026"
+    "steam-event-visibility-placement-official-oct2026",
+    "steam-game-stats-achievements-session-instrumentation-oct2026"
   ],
   "claim_ids": [
     "steam-postlaunch-ga4-not-supported",
@@ -17,7 +18,11 @@
     "steam-postlaunch-event-report-hourly-not-complete",
     "steam-postlaunch-event-selected-click-only",
     "steam-postlaunch-marketing-events-channel-dependent",
-    "steam-postlaunch-no-repeat-cash-from-attention"
+    "steam-postlaunch-no-repeat-cash-from-attention",
+    "steam-game-stats-persistent-user-session",
+    "steam-game-stats-types-global-not-retention",
+    "steam-game-stats-default-client-set-validation",
+    "steam-game-stats-not-partner-payout"
   ],
   "google_analytics": {
     "currently_supported": false,
@@ -68,5 +73,20 @@
   },
   "code_module": "site/steam-postlaunch-event-signal-guards.mjs",
   "tests_path": "tests/steam-postlaunch-event-signal-guards.test.mjs",
-  "no_private_user_or_merchant_data": true
+  "no_private_user_or_merchant_data": true,
+  "steamworks_game_statistics": {
+    "user_linked_persistent_stats_available": true,
+    "supported_types": [
+      "INT",
+      "FLOAT",
+      "AVGRATE"
+    ],
+    "configured_gameplay_stats_are_automatically_session_retention": false,
+    "global_aggregated_total_supported": true,
+    "global_aggregated_total_identifies_fixed_retention_cohort": false,
+    "default_stat_setter": "Client",
+    "integrity_and_privacy_design_required": true,
+    "authenticated_longitudinal_cohort_observations": null,
+    "authenticated_paid_sales": null
+  }
 }

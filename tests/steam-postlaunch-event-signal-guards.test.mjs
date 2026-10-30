@@ -10,6 +10,8 @@ test("Steam event traffic types never masquerade as gameplay retention or paid c
  assert.equal(classifySteamPostlaunchSignal("event_impression").unit,"unique_logged_in_user_event_visibility");
  assert.equal(classifySteamPostlaunchSignal("event_read").actual_paid_orders,null);
  assert.equal(classifySteamPostlaunchSignal("verified_return_play").attention_only,false);
+ assert.equal(classifySteamPostlaunchSignal("game_global_stat").actual_retained_players,null);
+ assert.equal(classifySteamPostlaunchSignal("game_global_stat").actual_paid_orders,null);
  assert.equal(classifySteamPostlaunchSignal("verified_paid_checkout").developer_profit,null);
  assert.throws(()=>classifySteamPostlaunchSignal("returning_paying_player"),/Unknown/);
 });
@@ -31,10 +33,12 @@ test("Synthetic attention classifier rejects private fields and invalid counters
 });
 test("Two dated official-document source groups and 293 baseline tasks remain linked",()=>{
  const s=new Set(dossier.evidence.map(e=>e.id)), c=new Map(dossier.claims.map(x=>[x.id,x]));
- assert.equal(study.source_ids.length,3);assert.equal(study.claim_ids.length,9);
+ assert.equal(study.source_ids.length,4);assert.equal(study.claim_ids.length,13);
  for(const id of study.source_ids)assert(s.has(id),id);
  for(const id of study.claim_ids){assert(c.has(id),id);assert(c.get(id).source_ids.every(t=>s.has(t)));}
  assert.equal(study.google_analytics.exact_steam_support_end_date,null);
+ assert.equal(study.steamworks_game_statistics.global_aggregated_total_identifies_fixed_retention_cohort,false);
+ assert.equal(study.steamworks_game_statistics.authenticated_longitudinal_cohort_observations,null);
  assert.equal(study.event_attention.reads_may_exceed_impressions,true);
  assert.equal(study.event_attention.event_read_to_paid_sale_conversion_identifiable,false);
  assert(Object.values(study.unknown).every(x=>x===null));

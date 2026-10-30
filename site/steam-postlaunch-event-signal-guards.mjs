@@ -3,6 +3,7 @@ export const SIGNAL_UNITS=Object.freeze({
  event_impression:"unique_logged_in_user_event_visibility",
  event_read:"unique_logged_in_user_event_open",
  utm_returning_store_visitor:"returning_store_page_visitor",
+ game_global_stat:"global_game_stat_total_not_returning_player_cohort",
  verified_return_play:"instrumented_gameplay_user_session_requires_permission",
  verified_paid_checkout:"authenticated_purchase_ledger_requires_permission"
 });

@@ -2204,6 +2204,17 @@
       "evidence_class": "official_public_partner_documentation",
       "license": "Public metadata, outbound URL and independently authored factual summary; no source text or media reproduced.",
       "notes": "Public placement and event-type eligibility rules; no observed sales uplift or retention effect attributed."
+    },
+    {
+      "id": "steam-game-stats-achievements-session-instrumentation-oct2026",
+      "url": "https://partner.steamgames.com/doc/features/achievements?l=english",
+      "publisher": "Valve Corporation — public Steamworks documentation",
+      "title": "Stats and Achievements",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_partner_documentation",
+      "license": "Public metadata, destination URL and independently authored interpretation only; no source text or media reproduced.",
+      "notes": "Game-defined per-account persistent stats, optional global totals and setters; current public documentation, not a sample of verified sessions, paid buyers or partner financials."
     }
   ],
   "claims": [
@@ -15039,6 +15050,46 @@
       "confidence": "high",
       "observed_at": "2026-10-29",
       "limitations": "No account, game telemetry, transaction ledger, refund report or publisher financial records were accessed."
+    },
+    {
+      "id": "steam-game-stats-persistent-user-session",
+      "text": "Steamworks game-defined statistics can persist across sessions and machines for an individual Steam account, providing an instrumentation route distinct from store visit or event impression reporting.",
+      "source_ids": [
+        "steam-game-stats-achievements-session-instrumentation-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "No actual developer stat configuration, consented gameplay sessions or authorized cohort records examined."
+    },
+    {
+      "id": "steam-game-stats-types-global-not-retention",
+      "text": "Steamworks supports INT, FLOAT and AVGRATE game stats, and an optional Aggregated global total. A cumulative global total is not a distinct returning-player cohort or a paid buyer retention rate.",
+      "source_ids": [
+        "steam-game-stats-achievements-session-instrumentation-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Retention inference requires predeclared individual session events, fixed denominator and measured eligible follow-up windows."
+    },
+    {
+      "id": "steam-game-stats-default-client-set-validation",
+      "text": "Steamworks game stats are Client-set by default and offer configuration constraints such as increment-only and maximum change, which require a deliberate integrity design before player-session data are treated as accurate measurements.",
+      "source_ids": [
+        "steam-game-stats-achievements-session-instrumentation-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Configurable stat guardrails do not prove the absence of fraudulent or missing telemetry."
+    },
+    {
+      "id": "steam-game-stats-not-partner-payout",
+      "text": "Steamworks gameplay statistics and achievements do not on their own establish paid orders, refunded sales, recurring customer payments, publisher settlements or developer profit.",
+      "source_ids": [
+        "steam-game-stats-achievements-session-instrumentation-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "No partner ledger or payment agreement examined; outcome separations are measurement logic, not a report of observed finances."
     }
   ],
   "observations": [],
