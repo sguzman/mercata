@@ -7,6 +7,10 @@
 
 
 
+## Major Update review-month comparisons and unreconciled contributor counts (October 29, 2026)
+
+Two September 2026 studies of the **same 1,312 selected Steam Indie games** are audited as one shared cohort, not independent replications. Across 520 eligible Major Update months, reported median monthly reviews were 1.38 times the prior quiet baseline, versus 0.86 times across 42,503 no-post months. The studies differ in contributor labels: **375 games versus 311 games** for the 520-month comparison; those eligibility descriptions have not been reconciled. Public announcement posts do not identify actual Steamworks Update Visibility Round use or incremental sales. The [auditable source-family and count study](../ontology/steam/steam-major-update-review-months-vs-visibility-rounds-2026.md) adds two public documents and ten bounded claims, advancing three original tasks by one point each; all financial outcomes remain unknown. Steam research **91.447%** (Δ **+0.010 pp**), 205 sources and 1273 claims. The original 293 tasks remain unchanged.
+
 ## Quiet Steam releases and later review-year rebounds (October 29, 2026)
 
 A [September 2026 survivor-cohort audit](../ontology/steam/steam-quiet-launch-yearly-review-comeback-selected-cohort-2026.md) records **4,209** currently listed US-priced Indie-tagged 2020–2022 games with 10–99 first-year reviews. The provider counts **233 (5.5%)** with a later year of more reviews. The first larger-review-year split is 130 in year two, 53 in year three, and 50 across years four–six. The eligibility frame excludes withdrawn and currently free games; reviews are not paid transactions, and update-post associations are not randomized experiments. The provider's commercial project-interest disclosure is explicit. One public study, ten bounded claims and denominator regression tests advance three existing tasks by one point each. Steam research **91.437%** (Δ **+0.010 pp**), 203 sources and 1263 claims; 293 original tasks preserved.

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "selected_same_cohort_major_update_review_activity_not_visibility_rounds_or_incremental_sales",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-striketwo-major-update-review-month-sep2026",
+    "steam-striketwo-game-review-longtail-sep2026",
+    "steam-update-visibility-rounds-official-oct2026"
+  ],
+  "claim_ids": [
+    "steam-majorupdate-1312-not-all-indies",
+    "steam-majorupdate-counts-of-post-months",
+    "steam-majorupdate-event-not-round-used",
+    "steam-majorupdate-520-months-median-138",
+    "steam-majorupdate-no-post-42503-months-086",
+    "steam-majorupdate-375-vs311-unique-games-not-reconciled",
+    "steam-majorupdate-665-never-posted-not-unused-rounds",
+    "steam-majorupdate-retrospective-47pct-after-yearone",
+    "steam-majorupdate-1year-versus-review-months",
+    "steam-majorupdate-two-articles-not-independent"
+  ],
+  "same_underlying_cohort": {
+    "n": 1312,
+    "source_articles_are_independent_samples": false,
+    "launch_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "first_year_reviews_at_least": 100,
+    "pre_listed_release_reviews_at_most": 5,
+    "current_retail_price_above_zero": true,
+    "indie_tagged": true,
+    "includes_removed_or_historical_free_games": false
+  },
+  "major_update_month_groups": {
+    "no_major_update_months": 665,
+    "one_major_update_month": 281,
+    "two_months": 132,
+    "three_or_four_months": 131,
+    "five_or_more_months": 103
+  },
+  "post_yearone_comparison": {
+    "minimum_prior_monthly_reviews": 2,
+    "prior_months_count": 3,
+    "prior_months_require_no_regular_or_major_update": true,
+    "major_update_qualifying_months": 520,
+    "major_update_month_median_reviews_relative_quiet_baseline": 1.38,
+    "no_post_qualifying_months": 42503,
+    "no_post_median_reviews_relative_quiet_baseline": 0.86,
+    "reported_major_update_contributor_games_in_sept18_article": 375,
+    "reported_major_update_contributor_games_in_sept16_article": 311,
+    "resolved_same_eligibility_contributor_game_count": null,
+    "posts_rather_than_round_activations_observed": true,
+    "major_update_causes_paid_orders": null
+  },
+  "longtail_review_history": {
+    "median_share_reviews_after_first_year_through_aug2026": 0.47,
+    "same_underlying_1312_games": true
+  },
+  "official_steamworks_rounds": {
+    "five_initial_rounds": true,
+    "shared_between_early_access_and_full_release": true,
+    "each_at_most_days": 30,
+    "each_at_most_impressions": 1000000,
+    "publicly_observable_round_activation": false,
+    "missing_major_update_post_proves_unused_rounds": false
+  },
+  "limitations": {
+    "release_cohort_high_firstyear_review_selected": true,
+    "age_and_current_store_survivorship": true,
+    "discount_and_concurrent_update_confounding": true,
+    "review_ratio_is_not_unit_sales_lift": true,
+    "authors_have_commercial_interests": true,
+    "raw_appid_panel_independently_reproduced": false
+  },
+  "unknown": {
+    "actual_rounds_used_per_game": null,
+    "incremental_paid_sales": null,
+    "causal_effect_of_major_update": null,
+    "actual_returned_players": null,
+    "developer_profit": null,
+    "representative_all_game_recovery_rate": null
+  },
+  "code_module": "site/steam-major-update-observability-audit.mjs",
+  "tests_path": "tests/steam-major-update-observability-audit.test.mjs",
+  "no_raw_appids_or_private_account_data": true
+}

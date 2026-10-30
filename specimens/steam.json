@@ -2248,6 +2248,28 @@
       "evidence_class": "third_party_public_review_histogram_surviving_currently_priced_indie_tagged_cohort_study",
       "license": "Only source metadata, outbound URL and independently authored concise factual analysis; no source graphics, raw records or article text reproduced.",
       "notes": "Analyzes current US-store Indie-tagged paid listings with 2020–2022 launch metadata, 2026 review-history snapshots; sample limited to still-on-sale games, excludes free/delisted and non-Indie listings. Method not independently replicated and provider solicits commercial game projects."
+    },
+    {
+      "id": "steam-striketwo-major-update-review-month-sep2026",
+      "url": "https://striketwo.games/blog/steam-update-visibility-rounds",
+      "publisher": "Strike Two — game developer and commercial game-project operator",
+      "title": "Steam update visibility rounds: what they are worth, and who spends them",
+      "published_at": "2026-09-18",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "third_party_selected_public_steam_event_month_reviews_2020_2022_same_underlying_cohort_family",
+      "license": "Public URL, metadata and independently written bounded summaries only, no text, chart or game-level data copied.",
+      "notes": "Uses the same underlying 1,312-game current priced Indie-tagged review cohort as the publisher's September 16 report; not independent validation. The source refers to 520 qualifying Major Update months from 375 games, unlike the earlier article's 311."
+    },
+    {
+      "id": "steam-striketwo-game-review-longtail-sep2026",
+      "url": "https://striketwo.games/blog/indie-game-sales-after-launch",
+      "publisher": "Strike Two — game developer and commercial game-project operator",
+      "title": "Indie games get nearly half their Steam reviews after year one",
+      "published_at": "2026-09-16",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "third_party_selected_public_steam_review_histories_same_underlying_cohort_family",
+      "license": "Public URL, metadata and independently written bounded summaries only, no text, chart or game-level data copied.",
+      "notes": "Same underlying 1,312-title selected review history as September 18 study, not a second independent random sample. Describes 520 Major Update months from 311 games, versus 375 in another report; eligible sample distinctions not fully explained."
     }
   ],
   "claims": [
@@ -15306,6 +15328,112 @@
       "confidence": "high",
       "observed_at": "2026-10-29",
       "limitations": "Survivor frame and reviews omit authenticated payment ledgers and initially paid withdrawn games."
+    },
+    {
+      "id": "steam-majorupdate-1312-not-all-indies",
+      "text": "A developer-operated analysis selects 1,312 currently priced Steam Indie-tagged 2020–2022 releases with at least 100 reviews in year one and at most five reviews before the listed release month.",
+      "source_ids": [
+        "steam-striketwo-major-update-review-month-sep2026",
+        "steam-striketwo-game-review-longtail-sep2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "A high-first-year-review and surviving-currently-priced selected group, not a representative first paid release frame."
+    },
+    {
+      "id": "steam-majorupdate-counts-of-post-months",
+      "text": "Among those 1,312 selected titles, the September 18 source partitions games by number of distinct months with Major Update announcements: 665 zero, 281 one, 132 two, 131 three or four, and 103 five or more.",
+      "source_ids": [
+        "steam-striketwo-major-update-review-month-sep2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Announcement months are not authenticated update-visibility-round activations; the event-type mapping was inferred and spot-checked."
+    },
+    {
+      "id": "steam-majorupdate-event-not-round-used",
+      "text": "The number of developer Major Update announcement months is not the number of actual Steam update visibility rounds purchased, activated or remaining; Valve's rounds are a separate Steamworks feature.",
+      "source_ids": [
+        "steam-striketwo-major-update-review-month-sep2026",
+        "steam-update-visibility-rounds-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Public event histories cannot reveal partner-only use of rounds or whether every major update had one."
+    },
+    {
+      "id": "steam-majorupdate-520-months-median-138",
+      "text": "For eligible post-year-one months following three quiet months with sufficient reviews, the September 18 source reports 520 months with Major Update posts and a median 1.38-fold review count versus the preceding three-month baseline.",
+      "source_ids": [
+        "steam-striketwo-major-update-review-month-sep2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Observational timing comparison; review count and discount context not authenticated as paid units or causal game revenue."
+    },
+    {
+      "id": "steam-majorupdate-no-post-42503-months-086",
+      "text": "The same source reports 42,503 qualifying months with no event post and a median 0.86-fold review count versus their quiet preceding period, not an experimental control group.",
+      "source_ids": [
+        "steam-striketwo-major-update-review-month-sep2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Selection into updates and unobserved discounts, news, quality or player reactions confound causal differences."
+    },
+    {
+      "id": "steam-majorupdate-375-vs311-unique-games-not-reconciled",
+      "text": "Two related Strike Two pages attribute a 520-month Major Update comparison to different counts of contributing games: one says 375 and the other says 311; the available wording does not independently prove an identical eligibility denominator.",
+      "source_ids": [
+        "steam-striketwo-major-update-review-month-sep2026",
+        "steam-striketwo-game-review-longtail-sep2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "375 may refer to all later-posting games and 311 to an eligible baseline subset, but the source descriptions do not establish a reconciled join; do not silently rewrite either."
+    },
+    {
+      "id": "steam-majorupdate-665-never-posted-not-unused-rounds",
+      "text": "The September 18 analysis reports 665 of 1,312 selected games with no Major Update announcement, but that public absence cannot prove the corresponding games have not used Steamworks update-visibility rounds.",
+      "source_ids": [
+        "steam-striketwo-major-update-review-month-sep2026",
+        "steam-update-visibility-rounds-official-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "A visibility round may be associated with a qualifying recent announcement other than the report's observed Major Update category."
+    },
+    {
+      "id": "steam-majorupdate-retrospective-47pct-after-yearone",
+      "text": "The September 16 source reports that among the same selected 1,312 high-first-year-review games, the median game had 47% of reviews through August 2026 written after its first year.",
+      "source_ids": [
+        "steam-striketwo-game-review-longtail-sep2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Age and survival selection, review chronology rather than sales, and the median of within-game percentages rather than an aggregate review share."
+    },
+    {
+      "id": "steam-majorupdate-1year-versus-review-months",
+      "text": "The source's quoted median 1.38-fold Major Update monthly review ratio is not a forecast that year-two sales, audience retention or developer income rises 38%, even for qualifying games.",
+      "source_ids": [
+        "steam-striketwo-major-update-review-month-sep2026",
+        "steam-striketwo-game-review-longtail-sep2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "No verified discount controls, event activation exposure, unique buyers, user sessions, net revenue or profit."
+    },
+    {
+      "id": "steam-majorupdate-two-articles-not-independent",
+      "text": "The September 16 and 18 analyses reuse one selected 1,312-game cohort; treating their review statistics as evidence from two independent cohorts would double-count shared underlying observations.",
+      "source_ids": [
+        "steam-striketwo-major-update-review-month-sep2026",
+        "steam-striketwo-game-review-longtail-sep2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Underlying game-level rows and full sampling implementation are not available for an external independence audit."
     }
   ],
   "observations": [],
