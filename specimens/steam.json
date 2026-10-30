@@ -2270,6 +2270,17 @@
       "evidence_class": "third_party_selected_public_steam_review_histories_same_underlying_cohort_family",
       "license": "Public URL, metadata and independently written bounded summaries only, no text, chart or game-level data copied.",
       "notes": "Same underlying 1,312-title selected review history as September 18 study, not a second independent random sample. Describes 520 Major Update months from 311 games, versus 375 in another report; eligible sample distinctions not fully explained."
+    },
+    {
+      "id": "steam-aiepa-2026-two-snapshot-filtered-catalog-and-price-proxies",
+      "url": "https://aiepa.ai/publications/working-paper-01-steam-2026-05",
+      "publisher": "AIEPA Lab at Universitas Islam Internasional Indonesia — author Yusya' A. Fitrachman",
+      "title": "A longitudinal analysis of the Steam catalogue, May 2024 to March 2025",
+      "published_at": "2026-05",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "public_non_peer_reviewed_working_paper_secondary_catalog_snapshots_revenue_proxy",
+      "license": "Public bibliographic metadata, outbound link, and independently written bounded factual summary only; no article text or charts reproduced.",
+      "notes": "Paper explicitly labels itself non-peer-reviewed, uses Kaggle-source May 2024 and March 2025 catalog snapshots, strict filtered versus raw populations and geometric midpoints of estimated owners. No original private Steam sales records or reproducible raw rows independently inspected."
     }
   ],
   "claims": [
@@ -15434,6 +15445,108 @@
       "confidence": "high",
       "observed_at": "2026-10-29",
       "limitations": "Underlying game-level rows and full sampling implementation are not available for an external independence audit."
+    },
+    {
+      "id": "steam-aiepa-raw-2024-2025-counts",
+      "text": "The May 2026 AIEPA working paper reports 87,806 raw May 2024 Steam catalogue rows and 94,948 raw March 2025 rows drawn from a third-party Kaggle dataset.",
+      "source_ids": [
+        "steam-aiepa-2026-two-snapshot-filtered-catalog-and-price-proxies"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Third-party catalog snapshots, not independently audited Steam first-paid release populations; raw rows include content not retained by the analytical filter."
+    },
+    {
+      "id": "steam-aiepa-strict-2024-2025-sample",
+      "text": "The same paper's strict filter retains 77,184 May 2024 rows and 81,251 March 2025 rows after removing specified demos, placeholders and future records.",
+      "source_ids": [
+        "steam-aiepa-2026-two-snapshot-filtered-catalog-and-price-proxies"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Exclusions remove non-game records but also owner-zero/review-zero game-like rows that cannot be equated with zero genuine paid checkouts."
+    },
+    {
+      "id": "steam-aiepa-zeroowner-zeroreview-exclusion",
+      "text": "The March 2025 source filter reports 13,656 owner-zero/review-zero rows excluded by one rule and 13,697 rows removed by its union of exclusions; those counts overlap the other exclusion rules.",
+      "source_ids": [
+        "steam-aiepa-2026-two-snapshot-filtered-catalog-and-price-proxies"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Owner ranges are estimated, not bank or order data; excluded records are neither verified zero sales nor verified nonexistent games."
+    },
+    {
+      "id": "steam-aiepa-raw-matched-catalog-partition",
+      "text": "The paper reports 78,264 titles in both raw snapshot sets, 16,684 present only in March 2025 and 9,542 present only in May 2024; these reconcile to the raw 94,948 and 87,806 totals, not to the filtered samples.",
+      "source_ids": [
+        "steam-aiepa-2026-two-snapshot-filtered-catalog-and-price-proxies"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Matching algorithm and raw AppID reconciliation were not independently reproduced; absence in one crawl is not independently confirmed delisting."
+    },
+    {
+      "id": "steam-aiepa-matched-over-strict-may-denominator",
+      "text": "The reported 78,264 shared-title count exceeds the strict May 2024 retained sample of 77,184 by 1,080 and therefore cannot be the intersection of two strict-filtered samples.",
+      "source_ids": [
+        "steam-aiepa-2026-two-snapshot-filtered-catalog-and-price-proxies"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "The paper does not always explicitly label raw and strict scope when interpreting survival; mathematical interpretation uses the printed counts only."
+    },
+    {
+      "id": "steam-aiepa-revenue-owner-currentprice-model",
+      "text": "The working paper estimates revenue from binned estimated owner ranges converted using geometric midpoints and titles' current prices, rather than authenticated paid game transactions at historical prices.",
+      "source_ids": [
+        "steam-aiepa-2026-two-snapshot-filtered-catalog-and-price-proxies",
+        "steamspy-ownership-methods"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Ownership includes gifts, keys and promotions; owner range provenance within the original Kaggle dataset is not independently validated."
+    },
+    {
+      "id": "steam-aiepa-price-tiers-81251-partition",
+      "text": "The March 2025 strict analytical sample is split into 6,921 free-to-play, 57,443 budget, 15,237 mid-price and 1,650 AAA-tier titles; these four counts sum to 81,251.",
+      "source_ids": [
+        "steam-aiepa-2026-two-snapshot-filtered-catalog-and-price-proxies"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Current-price classes are not prices on first playable paid release, and the F2P price category includes games with revenue beyond initial checkout."
+    },
+    {
+      "id": "steam-aiepa-tier-proxy-median-not-income",
+      "text": "For March 2025 price tiers, the paper prints proxy median revenues of $0 for free-to-play, $49,900 budget, $199,900 mid and $1,540,361 AAA; none is a verified net developer income estimate.",
+      "source_ids": [
+        "steam-aiepa-2026-two-snapshot-filtered-catalog-and-price-proxies"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The $0 F2P output is forced by a zero initial price; proxy medians use estimated owner range and current list price rather than refunds or financial reports."
+    },
+    {
+      "id": "steam-aiepa-synthetic-zero-f2p-not-zero-earners",
+      "text": "A free-to-play tier whose modeled price-times-owners revenue is zero does not establish that any counted free game had zero actual revenue or that any paid first-release game sold no copies.",
+      "source_ids": [
+        "steam-aiepa-2026-two-snapshot-filtered-catalog-and-price-proxies",
+        "steamspy-ownership-methods"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "F2P monetization is excluded by the proxy and publisher revenue from microtransactions, DLC or other sources is not observed."
+    },
+    {
+      "id": "steam-aiepa-prose-qualifier-median-internal-tension",
+      "text": "The paper describes near-zero typical tier revenues in some narrative passages although its numeric table reports positive non-F2P medians; the numeric table must not be rewritten as a measured near-zero all-game median.",
+      "source_ids": [
+        "steam-aiepa-2026-two-snapshot-filtered-catalog-and-price-proxies"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Interpretive tension is internal to the published narrative and table; no independent recalculation from per-title records."
     }
   ],
   "observations": [],

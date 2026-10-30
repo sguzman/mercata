@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "two_historical_catalog_snapshot_scope_and_ownership_price_proxy_audit",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-aiepa-2026-two-snapshot-filtered-catalog-and-price-proxies",
+    "steamspy-ownership-methods"
+  ],
+  "claim_ids": [
+    "steam-aiepa-raw-2024-2025-counts",
+    "steam-aiepa-strict-2024-2025-sample",
+    "steam-aiepa-zeroowner-zeroreview-exclusion",
+    "steam-aiepa-raw-matched-catalog-partition",
+    "steam-aiepa-matched-over-strict-may-denominator",
+    "steam-aiepa-revenue-owner-currentprice-model",
+    "steam-aiepa-price-tiers-81251-partition",
+    "steam-aiepa-tier-proxy-median-not-income",
+    "steam-aiepa-synthetic-zero-f2p-not-zero-earners",
+    "steam-aiepa-prose-qualifier-median-internal-tension"
+  ],
+  "source_status": {
+    "publication_kind": "non_peer_reviewed_working_paper",
+    "author_asserts_kaggle_origin": true,
+    "raw_kaggle_rows_audited_by_mercata": false,
+    "launch_paid_at_first_offer_identified": false
+  },
+  "catalog_snapshots": [
+    {
+      "snapshot": "2024-05",
+      "raw_rows": 87806,
+      "strict_retained_rows": 77184,
+      "strict_union_excluded_rows": 10622,
+      "excluded_zero_owner_and_zero_review_single_rule": 10575
+    },
+    {
+      "snapshot": "2025-03",
+      "raw_rows": 94948,
+      "strict_retained_rows": 81251,
+      "strict_union_excluded_rows": 13697,
+      "excluded_zero_owner_and_zero_review_single_rule": 13656
+    }
+  ],
+  "raw_cross_snapshot": {
+    "in_both_raw": 78264,
+    "only_in_2025_raw": 16684,
+    "only_in_2024_raw": 9542,
+    "intersection_of_two_strict_samples": null,
+    "verified_delistings": null
+  },
+  "march_2025_price_tiers": [
+    {
+      "tier": "free_to_play",
+      "count": 6921,
+      "proxy_median_revenue_usd": 0
+    },
+    {
+      "tier": "budget",
+      "count": 57443,
+      "proxy_median_revenue_usd": 49900
+    },
+    {
+      "tier": "mid",
+      "count": 15237,
+      "proxy_median_revenue_usd": 199900
+    },
+    {
+      "tier": "aaa",
+      "count": 1650,
+      "proxy_median_revenue_usd": 1540361
+    }
+  ],
+  "proxy_method": {
+    "owner_source": "third_party_binned_owner_ranges_provenance_unverified",
+    "owner_bin_point": "geometric_midpoint",
+    "transaction_source": "none",
+    "revenue_proxy": "estimated_owners_times_current_usd_price",
+    "free_to_play_zero_is_structural": true,
+    "refunds_included": false,
+    "historical_transaction_prices_included": false,
+    "zero_owner_review_row_is_authenticated_zero_paid_sales": false
+  },
+  "source_internal_tension": {
+    "prose_says_tier_medians_near_zero": true,
+    "table_non_f2p_medians_above_zero": true,
+    "resolved_actual_median": null
+  },
+  "unknown": {
+    "true_paid_release_population": null,
+    "actual_zero_paid_sale_fraction": null,
+    "historical_paid_game_revenue_median": null,
+    "real_publisher_net_income": null,
+    "true_removed_game_count": null,
+    "verified_2024_2025_intersection_strict": null
+  },
+  "code_module": "site/steam-aiepa-catalog-scope-audit.mjs",
+  "tests_path": "tests/steam-aiepa-catalog-scope-audit.test.mjs",
+  "no_private_merchant_or_raw_kaggle_rows_used": true
+}

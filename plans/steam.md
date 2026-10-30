@@ -7,6 +7,10 @@
 
 
 
+## Raw and filtered 2024–2025 catalogue economics in a 2026 working paper (October 29, 2026)
+
+The [AIEPA two-snapshot population audit](../ontology/steam/steam-aiepa-2024-2025-raw-vs-filtered-catalog-proxy-audit-2026.md) distinguishes **87,806 / 94,948 raw** May 2024 / March 2025 catalogue records from **77,184 / 81,251 strict retained** records. Its shared-title count of **78,264** reconciles only to raw populations, not to filtered records. The source's median revenue figures are geometric owner-bin × current-price **proxies**, not observed payouts, and a $0 F2P proxy does not identify zero earners. One non-peer-reviewed paper, ten bounded claims and synthetic denominator tests advance three existing tasks by one point each. Steam research **91.457%** (Δ **+0.010 pp**), 206 sources, 1283 claims and 293 unchanged tasks.
+
 ## Major Update review-month comparisons and unreconciled contributor counts (October 29, 2026)
 
 Two September 2026 studies of the **same 1,312 selected Steam Indie games** are audited as one shared cohort, not independent replications. Across 520 eligible Major Update months, reported median monthly reviews were 1.38 times the prior quiet baseline, versus 0.86 times across 42,503 no-post months. The studies differ in contributor labels: **375 games versus 311 games** for the 520-month comparison; those eligibility descriptions have not been reconciled. Public announcement posts do not identify actual Steamworks Update Visibility Round use or incremental sales. The [auditable source-family and count study](../ontology/steam/steam-major-update-review-months-vs-visibility-rounds-2026.md) adds two public documents and ten bounded claims, advancing three original tasks by one point each; all financial outcomes remain unknown. Steam research **91.447%** (Δ **+0.010 pp**), 205 sources and 1273 claims. The original 293 tasks remain unchanged.
