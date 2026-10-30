@@ -55,3 +55,33 @@ test('Crosswalk references current sources, claims and the original 293 Steam ta
  assert.equal(scores.length,293);
  assert.equal(p.progress_percent,Math.round(scores.reduce((a,b)=>a+b,0)/293));
 });
+
+
+test('Finance labels remain linked to their original public source fields, not all reclassified as gross',()=>{
+ const index=new Map(cross.rows.map(r=>[r.game_key,r]));
+ const studies={
+  go:read('ontology/steam/go-up-earliest-paid-ea-and-contributor-proceeds-2026.json'),
+  lucky:read('ontology/steam/luckyest-two-checkpoint-net-stage-correction-2026.json'),
+  triple:read('ontology/steam/first-commercial-mismatched-disclosure-windows-2026.json'),
+  immune:read('ontology/steam/immunica-firstgame-niche-event-wishlist-and-sales-windows-2026.json'),
+  hug:read('ontology/steam/hugbetray-fiveweek-zero-period-keys-bots-and-cash-2026.json')
+ };
+ assert.equal(index.get('go_up').reported_gross_usd,studies.go.public_author_report.gross_steam_usd_reported);
+ assert.equal(index.get('go_up').reported_author_net_usd,studies.go.public_author_report.net_steam_usd_reported_undefined_deduction_basis);
+ assert.equal(index.get('luckyest').reported_gross_usd,studies.lucky.public_author_reports.later.gross_usd_approx);
+ assert.equal(index.get('luckyest').reported_author_net_usd,studies.lucky.public_author_reports.later.net_usd_author_label);
+ assert.equal(index.get('luckyest').net_stage,'before_platform_share');
+ assert.equal(index.get('immunica').reported_gross_usd,studies.immune.public_author.reported_gross_usd);
+ assert.equal(index.get('immunica').reported_author_net_usd,studies.immune.public_author.reported_net_usd_approx);
+ assert.equal(index.get('off_the_beaten_track').reported_author_net_usd,
+  studies.triple.cases.find(r=>r.id==='off_the_beaten_track').reported_revenue_usd);
+ assert.equal(index.get('lone_survivors').reported_undefined_total_revenue_usd,
+  studies.triple.cases.find(r=>r.id==='lone_survivors').reported_revenue_usd);
+ assert.equal(index.get('vocator').reported_author_net_usd,null);
+ assert.equal(index.get('hugbetray').reported_gross_usd,null);
+ assert.equal(index.get('hugbetray').reported_undefined_total_revenue_usd,studies.hug.public_author.author_total_revenue_usd_approx);
+ assert.equal(index.get('hugbetray').reported_author_net_usd,studies.hug.public_author.author_net_earnings_usd_approx);
+ assert.equal(index.get('crazy_city_golf').reported_gross_usd,null);
+ assert.equal(index.get('crazy_city_golf').reported_author_net_usd,null);
+ for(const r of cross.rows){assert.equal(r.verified_legal_partner_cash,false);assert.equal(r.verified_developer_profit,false);}
+});
