@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "indie_tag_120day_review_milestone_selection_and_missingness_audit",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steamindiexp-2026-oct23-indie-review-hit-frame"
+  ],
+  "claim_ids": [
+    "steamindiexp-2026-recent-indie-frame",
+    "steamindiexp-2026-publisher-filter",
+    "steamindiexp-2026-hit-definition",
+    "steamindiexp-2026-stratified-theme-coding",
+    "steamindiexp-2026-disclosure-sample",
+    "steamindiexp-2026-festival-roster-divergence",
+    "steamindiexp-2026-method-access-limits"
+  ],
+  "source_issue_at": "2026-10-23",
+  "source_url": "https://steamindiexp.com/",
+  "frame": {
+    "label": "Steam Indie XP issue 3",
+    "latest_snapshot_date": "2026-10-23",
+    "previous_snapshot_date": "2026-10-17",
+    "recent_window_calendar_days": 120,
+    "indie_tag_required": true,
+    "released_or_early_access_graduated": true,
+    "reported_recent_indie_games": 5483,
+    "major_publishers_explicitly_excluded": 31,
+    "original_paid_release_frame_complete": false,
+    "early_access_initial_paid_release_reconciled": false
+  },
+  "review_milestone": {
+    "label": "hit",
+    "minimum_lifetime_reviews": 100,
+    "minimum_release_age_days": 21,
+    "maximum_release_age_days": 120,
+    "reported_theme_coded_hits": 311,
+    "sampled_nonhits": 881,
+    "sampled_nonhit_expansion_approx": 5,
+    "mature_21_120_population_count": null,
+    "actual_paid_game_sales": null,
+    "calculated_full_indie_hit_fraction": null
+  },
+  "ai_disclosure_sample": {
+    "sampling_claim": "source_reported_random",
+    "sampled_games": 220,
+    "reported_disclosure_games": 104,
+    "source_rounded_share_percent": 47,
+    "approximate_uncertainty_percentage_points": 7,
+    "disclosure_self_reported": true,
+    "independently_verified_ai_use_fraction": null
+  },
+  "next_fest_roster": {
+    "source_count_october_slopdodge": 7236,
+    "source_count_october_steamdb": 7164,
+    "slopdodge_snapshot_date": "2026-10-21",
+    "same_inclusion_rules_verified": false,
+    "actual_demo_player_total": null
+  },
+  "research_limits": {
+    "review_100plus_not_paid_sales": true,
+    "age_21_120_not_identical_to_all_120day_frame": true,
+    "stratified_hit_nonhit_coding_not_naive_rate": true,
+    "no_private_sales_ledger": true,
+    "missing_steam_community_lookups": true,
+    "historical_steam_frontpage_reconstruction_complete": false,
+    "original_paid_launch_census_available": false
+  },
+  "implementation": "site/steamindiexp-selection-audit.mjs",
+  "tests": "tests/steamindiexp-selection-audit.test.mjs"
+}

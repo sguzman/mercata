@@ -5,7 +5,11 @@
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
 
-## Review-estimator catalogue coverage and modeled gross concentration (October 29, 2026)
+### Recent Indie-tagged review-hit sampling and Next Fest roster differences (October 29, 2026)
+
+The [Steam Indie XP source-method audit](../ontology/steam/steamindiexp-october-2026-cohort-selection.md) documents an October 23 release/early-access-exit frame of 5,483 Indie-tagged games excluding 31 major publishers, and a separate 21–120-day hit definition of 100 or more lifetime reviews. Its 311 hit cases and 881 sampled non-hit cases are deliberately outcome-stratified; their naive quotient is not a store-wide commercial success probability. Another sample reports 104 of 220 stores with self-declared AI use, and 7,236 versus 7,164 October Next Fest roster counts reflect differing sources. Seven new source-linked claims advance three existing tasks by a point each; original 293-task inventory unchanged. Steam research **91.314%** (Δ **+0.010 pp**), 190 sources, 1191 claims; no merchant sales observed.
+
+# Review-estimator catalogue coverage and modeled gross concentration (October 29, 2026)
 
 The [WeLoveIt.io primary report denominator audit](../ontology/steam/steam-weloveit-review-revenue-snapshot-2026.md) records a live October 29 source snapshot with 142,797 catalogued games, of which 103,682 priced games have at least one review. Another 9,227 paid listings have no reviews; that is a review-model coverage gap, **not** an actual no-sales rate. The reported USD 3,493 lifetime median and top-one-percent 84.5% share are model-estimated gross, not audited cash. The source does not resolve the median headline's exact inclusion of zero-review paid games. Seven source-linked claims and executable census-count checks advance three existing tasks by one point each. The original 293-task scope is unchanged. Steam research **91.304%** (Δ **+0.010 pp**), with 189 public sources and 1184 source-linked claims.
 

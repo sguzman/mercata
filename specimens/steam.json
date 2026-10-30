@@ -2094,6 +2094,17 @@
       "evidence_class": "third_party_public_continuously_refreshed_review_based_steam_revenue_estimator",
       "license": "Public link and independently written brief methods and denominators only; no source code, charts or underlying game database reproduced.",
       "notes": "Observed October 29, 2026 live snapshot. The page models gross lifetime revenue from public review counts and current US prices; it does not expose authorized Steam financial records. Counts and displayed median may drift."
+    },
+    {
+      "id": "steamindiexp-2026-oct23-indie-review-hit-frame",
+      "url": "https://steamindiexp.com/",
+      "title": "Steam Indie XP, Issue 3: Next Fest has never been more crowded",
+      "publisher": "Steam Indie XP",
+      "published_at": "2026-10-23",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "third_party_public_indie_tagged_steam_cohort_review_milestone_snapshot",
+      "license": "Public source URL and original bounded factual summary; no screenshots, published rankings, dataset copying or private store information.",
+      "notes": "Issue 3 reports a 5,483 Indie-tagged 120-day cohort, 31 large publisher exclusions, 311 hits and a sampled 881 non-hits. Hit means >=100 lifetime reviews after 21 days. AI disclosure and festival roster use different denominators."
     }
   ],
   "claims": [
@@ -14353,6 +14364,76 @@
       "observed_at": "2026-10-29",
       "limitations": "Multiplier sensitivity is not independent validation; reported release years do not necessarily equal original paid Steam release dates.",
       "confidence": "high_public_source_description_not_financial_validation"
+    },
+    {
+      "id": "steamindiexp-2026-recent-indie-frame",
+      "text": "The October 23 Steam Indie XP snapshot reports 5,483 recent Indie-tagged Steam games released or exiting Early Access in the preceding 120 days after exclusions.",
+      "source_ids": [
+        "steamindiexp-2026-oct23-indie-review-hit-frame"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "An Indie tag and a completion/EA-graduation date do not define a complete initially paid base-game release cohort.",
+      "confidence": "medium_public_source_reported_method_no_merchant_validation"
+    },
+    {
+      "id": "steamindiexp-2026-publisher-filter",
+      "text": "Steam Indie XP's published protocol excludes 31 major publishers from its recent Indie-tagged frame.",
+      "source_ids": [
+        "steamindiexp-2026-oct23-indie-review-hit-frame"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The resulting rate cannot be extrapolated to large publishers, all games, or a population of legal developers.",
+      "confidence": "medium_public_source_reported_method_no_merchant_validation"
+    },
+    {
+      "id": "steamindiexp-2026-hit-definition",
+      "text": "Steam Indie XP defines a hit as a game with at least 100 lifetime reviews, using only games released 21–120 days earlier when evaluating hit rates.",
+      "source_ids": [
+        "steamindiexp-2026-oct23-indie-review-hit-frame"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The review threshold is not a paid-order, revenue, or profit threshold; younger titles remain right-censored.",
+      "confidence": "medium_public_source_reported_method_no_merchant_validation"
+    },
+    {
+      "id": "steamindiexp-2026-stratified-theme-coding",
+      "text": "For theme coding, Steam Indie XP used 311 review-threshold hits and a random sample of 881 non-hits; sampled non-hits were reweighted to represent roughly five releases apiece.",
+      "source_ids": [
+        "steamindiexp-2026-oct23-indie-review-hit-frame"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The reported theme-coded sample is outcome-stratified, not a representative sample from which a naive hit rate may be computed.",
+      "confidence": "medium_public_source_reported_method_no_merchant_validation"
+    },
+    {
+      "id": "steamindiexp-2026-disclosure-sample",
+      "text": "Steam Indie XP sampled 220 recent Indie-tagged games and counted 104 store pages with a self-reported AI-generated-content disclosure, approximately 47% with a quoted margin around seven percentage points.",
+      "source_ids": [
+        "steamindiexp-2026-oct23-indie-review-hit-frame"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "This is a sampled, self-reported page-disclosure share, not independently verified actual AI use.",
+      "confidence": "medium_public_source_reported_method_no_merchant_validation"
+    },
+    {
+      "id": "steamindiexp-2026-festival-roster-divergence",
+      "text": "Steam Indie XP reports 7,236 October Next Fest titles from the October 21 SlopDodge roster and cites a distinct SteamDB tally of 7,164 demos.",
+      "source_ids": [
+        "steamindiexp-2026-oct23-indie-review-hit-frame"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The differing source and counting rules are not reconciled and neither roster alone proves actual demo play, downloads, or paid sales.",
+      "confidence": "medium_public_source_reported_method_no_merchant_validation"
+    },
+    {
+      "id": "steamindiexp-2026-method-access-limits",
+      "text": "The issue documents missing or delayed Steam Community followers, unavailable review text, and one missed Popular Upcoming reading during its reporting week.",
+      "source_ids": [
+        "steamindiexp-2026-oct23-indie-review-hit-frame"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Coverage outages and selected analysis windows limit what can be inferred about launch mechanisms, rankings, and buyer conversion.",
+      "confidence": "medium_public_source_reported_method_no_merchant_validation"
     }
   ],
   "observations": [],
