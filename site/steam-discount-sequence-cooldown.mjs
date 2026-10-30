@@ -147,7 +147,11 @@ export function auditSyntheticSteamDiscountSequence(args={}){
   full_release_date:full?iso(full):null,
   full_release_cooldown_ends:full?iso(plus30(full)):null,
   discount_percent:args.discount_percent,discount_duration_calendar_days:duration,
-  first_allowed_start_date_from_known_cooldowns:unverifiedSeasonalEvent?null:iso(firstKnown),
+  // A launch offer must begin on the actual release day. If that day misses a
+  // cooldown, shifting the start date would no longer make it a launch offer.
+  first_allowed_start_date_from_known_cooldowns:
+   unverifiedSeasonalEvent?null:args.discount_kind==='launch'?
+    reasons.length?null:iso(start):iso(firstKnown),
   release_cooldown_ends:iso(plus30(release)),
   price_increase_count:prices.length,
   price_increase_cooldown_ends:price?iso(plus30(price)):null,

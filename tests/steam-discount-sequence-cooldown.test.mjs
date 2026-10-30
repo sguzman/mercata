@@ -380,3 +380,17 @@ test('A future graduation does not incorrectly block an ordinary Early Access di
  assert.equal(check({...base,discount_start:'2026-10-02',discount_end:'2026-10-08'})
   .full_release_date,null);
 });
+test('Launch offers do not suggest an impossible delayed launch date',()=>{
+ const good={...base,first_paid_release_date:'2026-01-15',full_release_date:'2026-10-15',
+  discount_kind:'launch',discount_start:'2026-10-15',discount_end:'2026-10-21',
+  discount_percent:20};
+ assert.equal(check(good).first_allowed_start_date_from_known_cooldowns,'2026-10-15');
+ const price=check({...good,last_price_increase_date:'2026-10-01'});
+ assert.equal(price.conditional_calendar_rules_pass,false);
+ assert.equal(price.first_allowed_start_date_from_known_cooldowns,null);
+ const recent=check({...good,first_paid_release_date:'2026-10-01'});
+ assert.equal(recent.conditional_calendar_rules_pass,false);
+ assert.equal(recent.first_allowed_start_date_from_known_cooldowns,null);
+ const early=check({...good,discount_start:'2026-01-15',discount_end:'2026-01-21'});
+ assert.equal(early.first_allowed_start_date_from_known_cooldowns,'2026-01-15');
+});
