@@ -2611,6 +2611,39 @@
       "evidence_class": "official_public_store_listing_release_date_developer_publisher_labels_not_financial_ledger",
       "license": "Public store URL and date/label metadata only; no images, review texts or copyrighted store narrative copied.",
       "notes": "AppID 4315220 release Mar 29 2026; developer/publisher labels eranboi. Storefront independently corroborates identity and date, not author's sales, festival attribution, historical localized prices, net deductions or legal payee bank receipts."
+    },
+    {
+      "id": "steam-crazycitygolf-oct27-4units-wishlist-friend-report",
+      "url": "https://www.reddit.com/r/gamemarketing/comments/1xgthsz/launched_yesterday_with_300_wishlists_sold_only_4/",
+      "title": "Launched yesterday with 300+ wishlists, sold only 4 copies",
+      "publisher": "r/gamemarketing — poster reporting a friend's game launch",
+      "published_at": "2026-10-27",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "public_second_person_early_launch_units_and_wishlist_metrics_without_independent_merchant_authentication",
+      "license": "Public URL and short independently authored aggregate summary only. No screenshots, user account identities or copyrighted prose reproduced.",
+      "notes": "Poster describes a friend's release yesterday, 300+ wishlists and four paid copies after more than one day, cites 0.3% wishlist conversion in an attached screenshot. Poster is not shown to be Steam legal payee; screenshot not independently authenticated. 0.3% has unknown numerator/time cohort and cannot be reconstructed as all four units divided by prelaunch wishlists."
+    },
+    {
+      "id": "steam-crazycitygolf-official-5347600-oct26",
+      "url": "https://store.steampowered.com/app/5347600/Crazy_City_Golf/",
+      "title": "Crazy City Golf on Steam",
+      "publisher": "Valve Corporation — public official Steam storefront",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_paid_game_release_and_sale_price_metadata_not_merchant_ledger",
+      "license": "Brief public metadata and link only; no artwork, reviews or long store text reproduced.",
+      "notes": "Oct 26 2026 released, Nulpoyo and Era Lab as public developer labels, Nulpoyo publisher label, app 5347600; current first-week 40% launch offer $9.99 US list -> $5.99 US offer to Nov 2. Store currently displays no user reviews, which is not proof of zero sales or the poster's four copies."
+    },
+    {
+      "id": "steam-crazycitygolf-demo-steamdb-app5382250",
+      "url": "https://steamdb.info/app/5382250/",
+      "title": "Crazy City Golf Demo AppID 5382250 release metadata",
+      "publisher": "SteamDB — third-party public Steam metadata tracker",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "third_party_public_demo_release_metadata_not_paid_merchant_transaction",
+      "license": "Short bibliographic citation and independent basic release metadata only; no screenshots or copied source narrative.",
+      "notes": "October 12 2026 free demo release, AppID 5382250, parent main game 5347600; demo is separate free content and must not be counted as first paid launch or paid copies."
     }
   ],
   "claims": [
@@ -17227,6 +17260,114 @@
       "observed_at": "2026-10-29",
       "confidence": "medium",
       "limitations": "Selected self-disclosure and contemporary public store listing only. Money labels lack authenticated Steamworks and bank reconciliation, event wishlist changes are not unique matched buyers or experimental causal treatment, and this single positive-sale title is not representative of first-paid-release outcomes."
+    },
+    {
+      "id": "steam-crazycity-oct26-initial-paid-release",
+      "text": "Valve lists Crazy City Golf, AppID 5347600, released as paid on October 26, 2026, with Nulpoyo and Era Lab publicly named as developers and Nulpoyo publisher; these are store labels, not proof of the legal payout recipient.",
+      "source_ids": [
+        "steam-crazycitygolf-official-5347600-oct26"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Second-person anecdotal public reporting within one day of release, not an authenticated Steam legal-payee ledger; 300+ wishlist stock and 0.3% dashboard label have incomplete unique-user/time-window definitions. Store price, reviews and free-demo downloads cannot verify paid orders."
+    },
+    {
+      "id": "steam-crazycity-demo-oct12-not-firstpaid",
+      "text": "The separately indexed free demo, AppID 5382250, was released October 12, 2026; its earlier date is not the first paid release of main AppID 5347600.",
+      "source_ids": [
+        "steam-crazycitygolf-official-5347600-oct26",
+        "steam-crazycitygolf-demo-steamdb-app5382250"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Second-person anecdotal public reporting within one day of release, not an authenticated Steam legal-payee ledger; 300+ wishlist stock and 0.3% dashboard label have incomplete unique-user/time-window definitions. Store price, reviews and free-demo downloads cannot verify paid orders."
+    },
+    {
+      "id": "steam-crazycity-four-afterday-one-friend",
+      "text": "A public October 27 poster described a friend's game and reported just four copies sold after more than one day; this is second-person disclosure, not independently reconciled Steam paid orders.",
+      "source_ids": [
+        "steam-crazycitygolf-oct27-4units-wishlist-friend-report",
+        "steam-crazycitygolf-official-5347600-oct26"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Second-person anecdotal public reporting within one day of release, not an authenticated Steam legal-payee ledger; 300+ wishlist stock and 0.3% dashboard label have incomplete unique-user/time-window definitions. Store price, reviews and free-demo downloads cannot verify paid orders."
+    },
+    {
+      "id": "steam-crazycity-wishlist-over300-and-03-authorlabel",
+      "text": "The same post reports more than 300 prelaunch wishlists and a screenshot-described 0.3% wishlist conversion, but without a defined matched purchaser numerator, exact eligible wishlist stock or reporting period.",
+      "source_ids": [
+        "steam-crazycitygolf-oct27-4units-wishlist-friend-report",
+        "steam-wishlist-reporting-official-cohort-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Second-person anecdotal public reporting within one day of release, not an authenticated Steam legal-payee ledger; 300+ wishlist stock and 0.3% dashboard label have incomplete unique-user/time-window definitions. Store price, reviews and free-demo downloads cannot verify paid orders."
+    },
+    {
+      "id": "steam-crazycity-no-conversion-4over300",
+      "text": "Four total copies divided by a rounded 300+ wishlist threshold is not the dashboard wishlist-conversion rate, because overall buyers may never have wishlisted and original wishlisters may purchase later.",
+      "source_ids": [
+        "steam-crazycitygolf-oct27-4units-wishlist-friend-report",
+        "steam-wishlist-reporting-official-cohort-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Second-person anecdotal public reporting within one day of release, not an authenticated Steam legal-payee ledger; 300+ wishlist stock and 0.3% dashboard label have incomplete unique-user/time-window definitions. Store price, reviews and free-demo downloads cannot verify paid orders."
+    },
+    {
+      "id": "steam-crazycity-40pc-offer-not-gross",
+      "text": "Steam's current US storefront displayed a $9.99 list price and a temporary $5.99, 40%-off launch offer; multiplying $5.99 by four reported copies would not verify actual gross paid sales after regional prices, tax and refunds.",
+      "source_ids": [
+        "steam-crazycitygolf-official-5347600-oct26",
+        "steam-crazycitygolf-oct27-4units-wishlist-friend-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Second-person anecdotal public reporting within one day of release, not an authenticated Steam legal-payee ledger; 300+ wishlist stock and 0.3% dashboard label have incomplete unique-user/time-window definitions. Store price, reviews and free-demo downloads cannot verify paid orders."
+    },
+    {
+      "id": "steam-crazycity-zero-reviews-not-zero-sales",
+      "text": "The live storefront displayed no user reviews, which cannot verify zero paid copies, contradict or independently substantiate the public post's reported four sales.",
+      "source_ids": [
+        "steam-crazycitygolf-official-5347600-oct26",
+        "steam-crazycitygolf-oct27-4units-wishlist-friend-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Second-person anecdotal public reporting within one day of release, not an authenticated Steam legal-payee ledger; 300+ wishlist stock and 0.3% dashboard label have incomplete unique-user/time-window definitions. Store price, reviews and free-demo downloads cannot verify paid orders."
+    },
+    {
+      "id": "steam-crazycity-press-exposure-not-causal",
+      "text": "The poster describes a store page and press release that received some coverage, but provides no controlled impression-to-order funnel, so the press campaign's incremental purchase effect is not measured.",
+      "source_ids": [
+        "steam-crazycitygolf-oct27-4units-wishlist-friend-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Second-person anecdotal public reporting within one day of release, not an authenticated Steam legal-payee ledger; 300+ wishlist stock and 0.3% dashboard label have incomplete unique-user/time-window definitions. Store price, reviews and free-demo downloads cannot verify paid orders."
+    },
+    {
+      "id": "steam-crazycity-censor-dayone-not-lifetime",
+      "text": "A one-day anecdote reporting four positive sales cannot be classified as a game with zero lifetime paid sales or used to estimate the true zero-sales fraction among all first-paid titles.",
+      "source_ids": [
+        "steam-crazycitygolf-oct27-4units-wishlist-friend-report",
+        "steam-crazycitygolf-official-5347600-oct26"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Second-person anecdotal public reporting within one day of release, not an authenticated Steam legal-payee ledger; 300+ wishlist stock and 0.3% dashboard label have incomplete unique-user/time-window definitions. Store price, reviews and free-demo downloads cannot verify paid orders."
+    },
+    {
+      "id": "steam-crazycity-short-window-not-income",
+      "text": "Even if four copies were verified, the disclosure lacks contemporaneous paid transaction prices, tax and refund reconciliation, legal partner remittance, development labor and marketing costs, so developer earnings and profit remain unknown.",
+      "source_ids": [
+        "steam-crazycitygolf-oct27-4units-wishlist-friend-report",
+        "steam-crazycitygolf-official-5347600-oct26"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Second-person anecdotal public reporting within one day of release, not an authenticated Steam legal-payee ledger; 300+ wishlist stock and 0.3% dashboard label have incomplete unique-user/time-window definitions. Store price, reviews and free-demo downloads cannot verify paid orders."
     }
   ],
   "observations": [],

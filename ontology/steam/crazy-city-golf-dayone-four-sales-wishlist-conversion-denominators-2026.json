@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "single_one_day_second_person_low_paid_sales_vs_wishlist_conversion_metric",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-crazycitygolf-oct27-4units-wishlist-friend-report",
+    "steam-crazycitygolf-official-5347600-oct26",
+    "steam-crazycitygolf-demo-steamdb-app5382250",
+    "steam-wishlist-reporting-official-cohort-2026"
+  ],
+  "claim_ids": [
+    "steam-crazycity-oct26-initial-paid-release",
+    "steam-crazycity-demo-oct12-not-firstpaid",
+    "steam-crazycity-four-afterday-one-friend",
+    "steam-crazycity-wishlist-over300-and-03-authorlabel",
+    "steam-crazycity-no-conversion-4over300",
+    "steam-crazycity-40pc-offer-not-gross",
+    "steam-crazycity-zero-reviews-not-zero-sales",
+    "steam-crazycity-press-exposure-not-causal",
+    "steam-crazycity-censor-dayone-not-lifetime",
+    "steam-crazycity-short-window-not-income"
+  ],
+  "identity": {
+    "main_paid_game_app_id": 5347600,
+    "free_demo_app_id": 5382250,
+    "free_demo_release": "2026-10-12",
+    "main_paid_release": "2026-10-26",
+    "report_date": "2026-10-27",
+    "main_first_paid_game_count": 1,
+    "demo_is_paid_game": false,
+    "store_verified_merchant_paid_sales": null
+  },
+  "public_report": {
+    "reporter_role": "friend_of_game_developer_not_authenticated_merchant",
+    "copies_sold_after_more_than_one_day_reported": 4,
+    "launch_wishlists_lower_bound_exclusive": 300,
+    "wishlist_conversion_pct_quoted": 0.3,
+    "conversion_basis": "not_disclosed",
+    "press_pickup_causal_paid_orders": null,
+    "authentic_steamworks_screenshot_reviewed": false
+  },
+  "contemporary_store_snapshot": {
+    "us_list_price_usd": 9.99,
+    "temporary_firstweek_us_offer_usd": 5.99,
+    "temporary_launch_discount_pct": 40,
+    "offer_end": "2026-11-02",
+    "public_reviews_at_retrieval": 0,
+    "store_price_is_actual_merchant_received_price": false,
+    "zero_reviews_proves_zero_sales": false
+  },
+  "interpretation": {
+    "reported_sales_are_positive_not_zero": true,
+    "short_one_day_window_not_lifetime": true,
+    "naive_total_units_divided_by_rounded_wishlist_count_is_not_wishlist_conversion": true,
+    "free_demo_not_paid_launch": true,
+    "no_firstgame_profit_observed": true
+  },
+  "unknown": {
+    "validated_paid_order_count": null,
+    "matched_wishlist_purchase_numerator": null,
+    "matched_wishlist_conversion_denominator": null,
+    "merchant_gross_usd": null,
+    "verified_bank_receipts_usd": null,
+    "refund_adjusted_paid_orders": null,
+    "legal_partner_payee": null,
+    "developer_after_cost_profit": null,
+    "actual_zero_paid_sales_population_fraction": null,
+    "verified_press_incremental_purchases": null
+  },
+  "model_path": "site/steam-short-launch-wishlist-metric-guard.mjs",
+  "test_path": "tests/steam-crazycity-short-launch-guard.test.mjs",
+  "private_records_accessed": false
+}
