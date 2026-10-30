@@ -65,3 +65,22 @@ test('Month-granularity source dates and unknown publication dates remain suppor
   assert.equal(r.valid,true,published+': '+r.errors.slice(0,5).join('; '));
  }
 });
+test('A complete status cannot conceal unfinished Steam task progress',()=>{
+ const r=inspect(p=>{p.detail_tasks[0].status='complete';});
+ assert.equal(r.valid,false);
+ assert(r.errors.some(e=>e.includes('complete status without 100 percent progress')));
+});
+test('Duplicated evidence is rejected even when the same path is the task artifact',()=>{
+ const r=inspect(p=>{
+  const task=p.detail_tasks[0];
+  task.artifact=task.evidence[0];
+  task.evidence.push(task.evidence[0]);
+ });
+ assert.equal(r.valid,false);
+ assert(r.errors.some(e=>e.includes('duplicate evidence path')));
+});
+test('One claim cannot cite the same source ID twice as separate support',()=>{
+ const r=inspect((p,q,d)=>{d.claims[0].source_ids.push(d.claims[0].source_ids[0]);});
+ assert.equal(r.valid,false);
+ assert(r.errors.some(e=>e.includes('Duplicate claim source ID')));
+});

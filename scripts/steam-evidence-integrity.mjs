@@ -45,16 +45,22 @@ export function auditSteamEvidenceIntegrity(plan, queue, dossier, root=process.c
   if(!Number.isInteger(score)||score<0||score>100){errors.push(task.id+': invalid progress');continue;}
   sum+=score;
   if(score===100){complete++;if(task.status!=='complete')errors.push(task.id+': completion without complete status');}
-  else if(score===0)unstarted++;else partial++;
+  else{
+   if(task.status==='complete')errors.push(task.id+': complete status without 100 percent progress');
+   if(score===0)unstarted++;else partial++;
+  }
   if(!Array.isArray(task.evidence)){errors.push(task.id+': invalid evidence list');continue;}
   if(score>0&&task.evidence.length===0)errors.push(task.id+': scored without evidence');
   const seen=new Set();
   const refsToCheck=[...task.evidence];
   if(task.artifact!==null&&task.artifact!==undefined)refsToCheck.push(task.artifact);
-  for(const ref of refsToCheck){
+  for(const [index,ref] of refsToCheck.entries()){
    refs++;
    if(!fileRef(ref)){errors.push(task.id+': unsafe evidence path');continue;}
-   if(seen.has(ref)&&ref!==task.artifact)errors.push(task.id+': duplicate evidence path '+ref);
+   // Repeating an evidence entry is invalid even when it also names the artifact.
+   // The separate artifact pointer may legitimately refer to one evidence file.
+   if(seen.has(ref)&&index<task.evidence.length)
+    errors.push(task.id+': duplicate evidence path '+ref);
    seen.add(ref);allPaths.add(ref);
    if(!isPresent(ref))errors.push(task.id+': missing or outside-repository evidence path '+ref);
   }
@@ -99,6 +105,8 @@ export function auditSteamEvidenceIntegrity(plan, queue, dossier, root=process.c
   if(!validDay(c?.observed_at))errors.push('Invalid claim observed_at: '+c?.id);
   if(!Array.isArray(c?.source_ids)||c.source_ids.length===0||c.source_ids.some(id=>!sourceIds.has(id)))
    errors.push('Unsourced claim: '+c?.id);
+  else if(new Set(c.source_ids).size!==c.source_ids.length)
+   errors.push('Duplicate claim source ID: '+c?.id);
  }
  return {valid:errors.length===0,errors,task_count:tasks.length,complete,partial,unstarted,
   exact_percent:sum/293,rounded_percent:rounded,evidence_references:refs,distinct_evidence_files:allPaths.size,
