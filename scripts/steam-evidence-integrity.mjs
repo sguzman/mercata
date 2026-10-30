@@ -5,11 +5,11 @@ import path from 'node:path';
 
 // Source dates can have day or month precision; claims and retrievals need full days.
 const validDay = x => {
- if(typeof x!=='string'||!/^\\d{4}-\\d{2}-\\d{2}$/.test(x))return false;
+ if(typeof x!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(x))return false;
  const d=new Date(x+'T00:00:00Z');
  return Number.isFinite(d.getTime())&&d.toISOString().slice(0,10)===x;
 };
-const validMonth = x => typeof x==='string'&&/^\\d{4}-(0[1-9]|1[0-2])$/.test(x);
+const validMonth = x => typeof x==='string'&&/^\d{4}-(0[1-9]|1[0-2])$/.test(x);
 const nonempty = x=>typeof x==='string'&&x.trim().length>0;
 const fileRef = x => typeof x === 'string' && !!x && x === x.trim() &&
  !x.includes('\\') && !x.includes(String.fromCharCode(0)) &&
