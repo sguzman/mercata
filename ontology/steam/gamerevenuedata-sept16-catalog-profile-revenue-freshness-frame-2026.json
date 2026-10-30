@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "operator_catalog_profile_rank_observation_freshness_denominators_not_verified_paid_sales",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-gamerevenuedata-2026-methodology-profile-vs-catalog",
+    "steam-gamerevenuedata-2026-sept16-release-manifest"
+  ],
+  "claim_ids": [
+    "steam-grd-catalog157684-profile23189",
+    "steam-grd-profile-revenue-stale20371-unknown2818",
+    "steam-grd-profile-player-stale1069-unknown22120",
+    "steam-grd-multiquery-not-atomic",
+    "steam-grd-catalog-vs-profile-coverage",
+    "steam-grd-catalog-excludes-delisted",
+    "steam-grd-topreview100-vs-revenue10",
+    "steam-grd-profile-top15000-plus-rankings",
+    "steam-grd-revenue-model-not-cash",
+    "steam-grd-confidence-not-interval",
+    "steam-grd-revenue-lifetime-not-releaseyear",
+    "steam-grd-rank1000-and-searchframes",
+    "steam-grd-missing-estimate-not-zero"
+  ],
+  "data_release": {
+    "manifest_release_id": "2f12e765a2b53cdfdc72f190",
+    "captured_at": "2026-09-16T06:04:25.035Z",
+    "catalog_entries": 157684,
+    "published_profiles": 23189,
+    "revenue_profile_freshness": {
+      "recent": 0,
+      "stale": 20371,
+      "unknown": 2818
+    },
+    "player_profile_freshness": {
+      "recent": 0,
+      "stale": 1069,
+      "unknown": 22120
+    },
+    "revenue_freshness_sum_equals_profiles": true,
+    "player_freshness_sum_equals_profiles": true,
+    "upstream_capture_is_atomic": false,
+    "profile_to_catalog_ratio_approx": 0.14705994267015043
+  },
+  "published_method": {
+    "tracked_catalog_includes_unestimated_games": true,
+    "profile_subset_top_revenue_count": 15000,
+    "ranking_display_limit": 1000,
+    "top_reviewed_minimum_reviews": 100,
+    "revenue_rank_minimum_reviews": 10,
+    "requires_modeled_estimate_for_revenue_rank": true,
+    "delisted_games_included": false,
+    "all_original_paid_release_cohort_included": false,
+    "gross_modeled_not_paid_merchant_orders": true,
+    "net_modeled_not_legal_partner_cash": true,
+    "confidence_score_is_calibrated_probability": false,
+    "revenue_is_current_observation_lifetime_not_release_year": true,
+    "paid_order_count_for_reviewless_games": null
+  },
+  "unknown": {
+    "actual_paid_orders_per_appid": null,
+    "full_historic_paid_release_app_population": null,
+    "all_games_with_no_reviews_paid_sales": null,
+    "verified_zero_sale_fraction": null,
+    "real_developer_bank_cash_median": null,
+    "model_accuracy_against_steam_ledger": null
+  },
+  "test_path": "tests/steam-gamerevenuedata-coverage-freshness-guard.test.mjs",
+  "model_path": "site/steam-catalog-profile-freshness-guard.mjs",
+  "private_financial_records_used": false
+}

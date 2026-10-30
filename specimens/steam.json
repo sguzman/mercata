@@ -2721,6 +2721,28 @@
       "evidence_class": "vendor_collected_selected_currently_paid_indie_tagged_2020_2022_public_steam_review_histogram_event_association_noncausal",
       "license": "Public bibliographic link and independently authored brief statistics and critique; no source charts, raw game roster, media, or substantial original prose copied.",
       "notes": "1651 currently paid US Indie-tagged 2020–2022 games with 100+ year-one purchase reviews; 1493 ever faded by Aug 2026, 195 at least one review-pace comeback. Defined fade from month18 with prior6-month monthly rate under one-third of year-one pace; comeback reaches year-one monthly pace. Distinct larger eligibility/snapshot roster than provider's September 1312 review-update panel; cannot assume same games or independent replication. Publisher sells post-release work, possible incentive/selection effects. Actions are not randomized, events and quiet months have different denominator units, source counts reviews not paid orders or profits."
+    },
+    {
+      "id": "steam-gamerevenuedata-2026-methodology-profile-vs-catalog",
+      "url": "https://gamerevenuedata.com/methodology/",
+      "title": "How We Estimate Steam Revenue",
+      "publisher": "GameRevenueData — public Steam analytics portal powered by PlayRev",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "operator_published_method_and_rank_eligibility_not_authenticated_partner_revenue",
+      "license": "Public source URL, short original method summaries and numeric thresholds only; no copyrighted site copy, images or dataset bulk reproduced.",
+      "notes": "Website generated Sep 16 2026. Method separates tracked catalog, published game profiles, modeled revenue ranking eligibility (at least 10 reviews and estimate), Top Reviewed eligibility (at least 100 reviews), and list/metric observation dates. Estimates range Boxleiter, net model not bank payout; profile upper limit 15000 plus ranking pages, 1000 rows per ranking. Catalog excludes delisted titles. Search pages are not original paid-release merchant census."
+    },
+    {
+      "id": "steam-gamerevenuedata-2026-sept16-release-manifest",
+      "url": "https://gamerevenuedata.com/data-release.json",
+      "title": "GameRevenueData data-release manifest: September 16, 2026",
+      "publisher": "GameRevenueData — operator-generated machine-readable release manifest",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "operator_data_export_manifest_coverage_and_observation_age_metadata_not_revenue_ground_truth",
+      "license": "Short factual metadata and original arithmetic only; public JSON manifest cited, no proprietary game or account rows copied.",
+      "notes": "Release 2f12e765a2b53cdfdc72f190, capture 2026-09-16T06:04:25.035Z; catalog 157,684; published profiles 23,189. For profiles revenue freshness recent=0 stale=20,371 unknown=2,818; player freshness recent=0 stale=1,069 unknown=22,120; each sums to 23,189. Source PlayRev Core/Analytics, multi-query capture not atomic upstream snapshot. Manifest capture time is not individual metric observation time."
     }
   ],
   "claims": [
@@ -18049,6 +18071,137 @@
       "confidence": "medium",
       "observed_at": "2026-10-29",
       "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-grd-catalog157684-profile23189",
+      "text": "The September 16 GameRevenueData release manifest reports 157,684 catalog entries and 23,189 published profiles; profile count is not all catalog games or authenticated purchased titles.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-sept16-release-manifest"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-grd-profile-revenue-stale20371-unknown2818",
+      "text": "In the 23,189-profile release, the revenue freshness cells are zero recent, 20,371 stale, and 2,818 unknown-age observations; those categories reconcile to the profile total, not true sales coverage.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-sept16-release-manifest"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-grd-profile-player-stale1069-unknown22120",
+      "text": "For the same profiles, player freshness counts are zero recent, 1,069 stale and 22,120 unknown-age; the source's capture date does not become a reliable live player observation date.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-sept16-release-manifest"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-grd-multiquery-not-atomic",
+      "text": "The manifest calls its upstream capture multi-query rather than an atomic snapshot, so same-export games and metric values cannot automatically be treated as synchronized at one observed instant.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-sept16-release-manifest"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-grd-catalog-vs-profile-coverage",
+      "text": "The documented profile count of 23,189 is 14.7% of 157,684 catalog entries, a fraction of published profile pages, not a complete-game population coverage rate or probability of positive sales.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-methodology-profile-vs-catalog",
+        "steam-gamerevenuedata-2026-sept16-release-manifest"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-grd-catalog-excludes-delisted",
+      "text": "GameRevenueData explicitly says its tracked catalog excludes delisted games, and so its current database cannot independently supply a complete historical first-paid-release frame.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-methodology-profile-vs-catalog"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-grd-topreview100-vs-revenue10",
+      "text": "The Top Reviewed ranking requires at least 100 reviews, while revenue-rank eligibility requires a published estimate and at least 10 reviews; these are distinct conditional populations.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-methodology-profile-vs-catalog"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-grd-profile-top15000-plus-rankings",
+      "text": "The site says dedicated profiles cover the top 15,000 revenue-eligible games plus ranking members, while the broader catalog can contain entries without profiles or revenue estimates.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-methodology-profile-vs-catalog"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-grd-revenue-model-not-cash",
+      "text": "The service's estimated revenue derives from review-to-sale model ranges, pricing/discount adjustments and assumed deductions, and is not an authenticated legal-publisher payout or after-cost profit.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-methodology-profile-vs-catalog"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-grd-confidence-not-interval",
+      "text": "The site's 0%–100% confidence score is an operator-defined relative support indicator, not a calibrated probability that reported revenue is correct; model ranges are not independently validated purchase records.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-methodology-profile-vs-catalog"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-grd-revenue-lifetime-not-releaseyear",
+      "text": "Displayed cumulative modeled revenue does not represent revenue earned during a game's release year, and the site's observations exclude DLC, in-game sales and other storefronts.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-methodology-profile-vs-catalog"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-grd-rank1000-and-searchframes",
+      "text": "The site displays at most 1,000 games per ranking, which should not be mistaken for all eligible catalog records, and overlapping genre tags cannot be added into independent counts.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-methodology-profile-vs-catalog"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-grd-missing-estimate-not-zero",
+      "text": "The site's own methodology warns missing revenue estimates are not zero, especially where review and profile thresholds exclude games; absent modeled income cannot identify exact zero paid orders.",
+      "source_ids": [
+        "steam-gamerevenuedata-2026-methodology-profile-vs-catalog"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "high",
+      "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
     }
   ],
   "observations": [],
