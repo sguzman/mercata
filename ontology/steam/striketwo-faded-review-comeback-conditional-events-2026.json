@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "selected_existing_paid_indie_review_histogram_recovery_month_events_not_sales_or_causes",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-striketwo-oct2026-faded-comeback-review-events-1651",
+    "steam-striketwo-major-update-review-month-sep2026"
+  ],
+  "claim_ids": [
+    "steam-striketwo-comeback-1651-selected-filter",
+    "steam-striketwo-comeback-1493-faded-not-allgames",
+    "steam-striketwo-comeback-195-recovery-month",
+    "steam-striketwo-comeback-future-age-censored",
+    "steam-striketwo-comeback-ea10-51of89",
+    "steam-striketwo-comeback-update-26of528",
+    "steam-striketwo-comeback-dlc7of126",
+    "steam-striketwo-comeback-sale15of683",
+    "steam-striketwo-comeback-quiet0p5-months",
+    "steam-striketwo-comeback-durability53of188",
+    "steam-striketwo-comeback-incomplete-visible-causes",
+    "steam-striketwo-comeback-distinct1312",
+    "steam-striketwo-comeback-reviews-not-purchases",
+    "steam-striketwo-comeback-no-causal-release-claim"
+  ],
+  "source_family_relationship": {
+    "related_to": "steam-strike-two-1312-paid-review-cohort-september2026",
+    "same_publisher": true,
+    "same_game_roster_verified": false,
+    "eligible_game_counts_differ": true,
+    "not_independent_replication": true
+  },
+  "selected_panel": {
+    "first_public_release_years": "2020-2022",
+    "us_indie_tag_and_current_paid_price_required": true,
+    "year_one_minimum_purchase_reviews": 100,
+    "selected_games": 1651,
+    "became_faded_at_least_once": 1493,
+    "first_comeback_games": 195,
+    "observations_through": "2026-08",
+    "faded_definition": "from_month18_rolling_prior6_months_under_one_third_year1_monthly_review_pace",
+    "comeback_definition": "faded_month_at_or_above_firstyear_average_monthly_review_count",
+    "verified_merchant_sales_in_sample": false
+  },
+  "events": [
+    {
+      "kind": "released_1_0_while_faded",
+      "units": "event_instances",
+      "events": 89,
+      "followed_by_comeback": 51,
+      "adjacent_to_1_0_exclusion_applies": false
+    },
+    {
+      "kind": "major_update_post_away_from_1_0",
+      "units": "event_instances",
+      "events": 528,
+      "followed_by_comeback": 26,
+      "adjacent_to_1_0_exclusion_applies": true
+    },
+    {
+      "kind": "paid_content_dlc_away_from_1_0",
+      "units": "event_instances",
+      "events": 126,
+      "followed_by_comeback": 7,
+      "adjacent_to_1_0_exclusion_applies": true
+    },
+    {
+      "kind": "posted_sale_away_from_1_0",
+      "units": "event_instances",
+      "events": 683,
+      "followed_by_comeback": 15,
+      "adjacent_to_1_0_exclusion_applies": true
+    }
+  ],
+  "quiet_comparator": {
+    "units": "calendar_months",
+    "quiet_months": 45724,
+    "reported_comeback_percent_rounded": 0.5
+  },
+  "follow_up": {
+    "durable_3month_two_thirds_firstyear_review_pace": 53,
+    "with_followup": 188,
+    "comebacks_without_visible_classified_move": 87,
+    "all_comeback_games": 195
+  },
+  "unknown": {
+    "market_first_paid_complete_population": null,
+    "actual_order_count_per_game": null,
+    "after_cost_incremental_return_to_major_update": null,
+    "causal_1_0_sales_uplift": null,
+    "causal_dlc_sales_uplift": null,
+    "matched_customer_repeat_purchase": null,
+    "publisher_income_distribution": null,
+    "zero_paid_sale_fraction": null,
+    "accurate_crossstudy_roster_overlap": null
+  },
+  "code_path": "site/steam-selected-review-comeback-denominator-guard.mjs",
+  "tests_path": "tests/steam-selected-review-comeback-denominator-guard.test.mjs",
+  "private_account_or_merchant_records_used": false
+}

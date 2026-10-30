@@ -2710,6 +2710,17 @@
       "evidence_class": "vendor_published_deterministic_hand_calibrated_review_based_heuristic_not_sales_validation",
       "license": "Public URL, numeric method coefficients and independently written analysis; no game-level imports, proprietary bulk copies, or original prose reproduced.",
       "notes": "Official v1.0 spec states NB base50 bounded15..150; review-count times NB for estimated units, fixed 0.6/1.4 display range, regional price 0.85/refund .04/store cut .3 -> net factor .5712. Explicitly excludes titles without reviews, validation runtime-parity not ground-truth backtesting, and distinguishes modeled net from publisher/tax effects. Related human explanation https://indielist.games/methodology is same operator/method, not independent validation."
+    },
+    {
+      "id": "steam-striketwo-oct2026-faded-comeback-review-events-1651",
+      "url": "https://striketwo.games/blog/revive-a-dying-indie-game",
+      "title": "How to revive a dying indie game: what 195 Steam comebacks did",
+      "publisher": "Strike Two — commercial post-release Steam game publishing service and study author",
+      "published_at": "2026-10-19",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "vendor_collected_selected_currently_paid_indie_tagged_2020_2022_public_steam_review_histogram_event_association_noncausal",
+      "license": "Public bibliographic link and independently authored brief statistics and critique; no source charts, raw game roster, media, or substantial original prose copied.",
+      "notes": "1651 currently paid US Indie-tagged 2020–2022 games with 100+ year-one purchase reviews; 1493 ever faded by Aug 2026, 195 at least one review-pace comeback. Defined fade from month18 with prior6-month monthly rate under one-third of year-one pace; comeback reaches year-one monthly pace. Distinct larger eligibility/snapshot roster than provider's September 1312 review-update panel; cannot assume same games or independent replication. Publisher sells post-release work, possible incentive/selection effects. Actions are not randomized, events and quiet months have different denominator units, source counts reviews not paid orders or profits."
     }
   ],
   "claims": [
@@ -17897,6 +17908,147 @@
       "observed_at": "2026-10-29",
       "confidence": "high",
       "limitations": "Valve's API document describes current store catalog pagination and changed metadata, not historical paid-launch eligibility or merchant transactions; synthetic fixtures do not prove all live Store rows were fetched, archived retired apps exist, or any publisher received cash."
+    },
+    {
+      "id": "steam-striketwo-comeback-1651-selected-filter",
+      "text": "Strike Two selected 1,651 paid US Indie-tagged games released 2020–2022 with at least 100 Steam-purchase reviews in year one, based on September 2026 visible store and review snapshots.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-1493-faded-not-allgames",
+      "text": "By August 2026 the operator classified 1,493 of 1,651 selected games as previously faded, defined by a six-month review pace below one-third of their first-year monthly review pace after month 18; this is not a Steam-wide fraction.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-195-recovery-month",
+      "text": "The operator reports 195 of 1,493 faded selected games later had at least one month with reviews back at or above their first-year monthly average (13.1%), not necessarily sustained sales or increased profit.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-future-age-censored",
+      "text": "The source counts first comebacks by years after release, but fewer source games are old enough to be observed in later years; year-two to year-seven counts are not equal-exposure recovery probabilities.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-ea10-51of89",
+      "text": "Among 89 faded selected Early Access games that shipped 1.0, 51 were followed by a review-pace comeback in that or the next month; this 57.3% association does not mean 1.0 causally causes a 57.3% recovery probability.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-update-26of528",
+      "text": "The operator reports 26 comeback-linked instances among 528 faded-game Major Update announcements (4.9%), excluding moves within one month of a 1.0; these are instances, not independently sampled new games.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-dlc7of126",
+      "text": "Paid content DLC announcements away from a nearby 1.0 were followed by a selected game review comeback in 7 of 126 event instances, about 5.6%, with no separately validated incremental profit.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-sale15of683",
+      "text": "Only 15 of 683 publicly posted sale events among faded selected titles had a comeback in the event or following month (2.2%); discounts not posted by developers were missed.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-quiet0p5-months",
+      "text": "The reported 0.5% quiet-month comeback comparator uses 45,724 monthly observations, not 45,724 different games; comparing it directly with game-level 57.3% without unit reconciliation is misleading.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-durability53of188",
+      "text": "Of 188 selected comeback episodes with sufficient follow-up, 53 maintained at least two-thirds of first-year review pace for the subsequent three months; most threshold-crossing months were not durable.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-incomplete-visible-causes",
+      "text": "The study says 87 of 195 comeback episodes lacked a classified public move in the event or preceding month; unobserved streamers, private campaigns, deals or algorithms can create confounding.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-distinct1312",
+      "text": "This new 1,651-game study and Strike Two's earlier 1,312-game September review-update panel overlap in publisher, release years and review filters but have different documented sampled counts and cannot be treated as identical cohorts or independent replication.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651",
+        "steam-striketwo-major-update-review-month-sep2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-reviews-not-purchases",
+      "text": "All reported 'comebacks' are observed monthly review rates, not merchant-reconciled purchase counts, repeated paying-customer retention or legal-publisher earnings.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
+    },
+    {
+      "id": "steam-striketwo-comeback-no-causal-release-claim",
+      "text": "Developers who issued DLC, 1.0 or Major Updates were self-selected active studios, often shipping multiple things around the same date, so event association cannot independently identify a causal policy or marketing return.",
+      "source_ids": [
+        "steam-striketwo-oct2026-faded-comeback-review-events-1651"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Operator-designed, US-store currently paid Indie-tagged ≥100 year-one-review selected survivor panel, based on observable monthly Steam-purchase review histograms. No matched per-game merchant sales, randomized promotion assignment, complete historic release population or after-cost ledger; event months, game counts and quiet months have different denominators, and developer selection confounds comparisons."
     }
   ],
   "observations": [],

@@ -8,7 +8,7 @@ test('Five reused cohort families plus one conflicting vendor version are regist
  assert.equal(r.registered_reused_cohort_families,5);
  assert.equal(r.registered_conflicting_version_families,1);
  assert.equal(registry.families.length,6);
- assert.equal(r.related_distinct_sample_documents,4);
+ assert.equal(r.related_distinct_sample_documents,5);
  assert.equal(registry.families[4].relation,'same_title_nested_cumulative_observations');
  assert.equal(r.unique_data_studies_in_entire_steam_dossier,null);
  assert.equal(r.verified_paid_order_count,null);
