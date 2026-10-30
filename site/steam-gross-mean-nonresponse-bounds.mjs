@@ -7,7 +7,7 @@ const observedKeys=['fixture_id','horizon_days','coverage','gross_usd_cents','gr
  'paid_checkout_attribution_attested','release_horizon_reconciled'];
 const missingKeys=['fixture_id','horizon_days','verified_upper_cap_usd_cents','verified_upper_cap_usd_4dp','cap_verified',
  'observed_partial_gross_usd_cents','observed_partial_gross_usd_4dp','partial_gross_verified',
- 'partial_horizon_attested','paid_checkout_attribution_attested'];
+ 'partial_horizon_attested','paid_checkout_attribution_attested','financial_access_attested'];
 
 const present=x=>x!==null&&x!==undefined;
 // Input amounts are either exact safe cents or canonical four-decimal USD, never both.
@@ -56,11 +56,11 @@ export function boundSyntheticSteamGrossMean(args={}){
      floor=amountBounds(row,'observed_partial_gross_usd_cents','observed_partial_gross_usd_4dp',
       'verified partial gross').lower_cents;
      if(row.partial_gross_verified!==true||row.partial_horizon_attested!==true||
-       row.paid_checkout_attribution_attested!==true)
-      throw new TypeError('Partial floor requires authenticated in-horizon game-attributed evidence');
+       row.paid_checkout_attribution_attested!==true||row.financial_access_attested!==true)
+      throw new TypeError('Partial floor requires authorized financial access and authenticated in-horizon game-attributed evidence');
      partialGames++;
     }else if(row.partial_gross_verified===true||row.partial_horizon_attested===true||
-             row.paid_checkout_attribution_attested===true)
+             row.paid_checkout_attribution_attested===true||row.financial_access_attested===true)
      throw new TypeError('Partial attestation without a partial amount is incomplete');
     partialFloorSum=add(partialFloorSum,floor,'partial floor');
     const hasCap=present(row.verified_upper_cap_usd_cents)||present(row.verified_upper_cap_usd_4dp);
@@ -92,7 +92,7 @@ export function boundSyntheticSteamGrossMean(args={}){
   upper_mean_gross_usd_cents:finite?upperTotal/eligibleFrameSize:null,
   upper_unbounded:report&&!finite,point_identified:finite&&lowerTotal===upperTotal,
   real_zero_paid_order_fraction:null,actual_platform_mean_gross:null,developer_net_cash_mean:null,publisher_profit_mean:null,
-  note:'Hypothetical bounds only: authenticated partial floors require full in-horizon and package attribution, and independently verified caps cannot be inferred from observed hits. Steam API USD values have four decimals; any cents floor must round downward and any cap upward.'};
+  note:'Hypothetical bounds only: authenticated partial floors require financial-report access, in-horizon and package attribution, and independently verified caps cannot be inferred from observed hits. Steam API USD values have four decimals; any cents floor must round downward and any cap upward.'};
 }
 
 

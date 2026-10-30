@@ -63,9 +63,9 @@ test('Missing games produce possible median bounds and preserve unbounded upper 
 test('Authenticated partial sales floors and justified caps tighten median identification',()=>{
  const a=missingGame('d',5000),b=missingGame('e',6000);
  Object.assign(a,{observed_partial_gross_usd_cents:1500,partial_gross_verified:true,
-  partial_horizon_attested:true,paid_checkout_attribution_attested:true});
+  partial_horizon_attested:true,paid_checkout_attribution_attested:true,financial_access_attested:true});
  Object.assign(b,{observed_partial_gross_usd_cents:2500,partial_gross_verified:true,
-  partial_horizon_attested:true,paid_checkout_attribution_attested:true});
+  partial_horizon_attested:true,paid_checkout_attribution_attested:true,financial_access_attested:true});
  const x=median({eligibleFrameSize:5,horizonDays:30,cohortFrameVerified:true,
  observed:[verified('a',1000),verified('b',2000),verified('c',3000)],missing:[a,b]});
  assert.equal(x.gross_lower_median_lower_bound_usd_cents,2000);
@@ -86,6 +86,7 @@ test('Mean contract prevents median claims from unauthorized or missing populati
  const b=missingGame('b',500);
  b.observed_partial_gross_usd_cents=600;b.partial_gross_verified=true;
  b.partial_horizon_attested=true;b.paid_checkout_attribution_attested=true;
+ b.financial_access_attested=true;
  assert.throws(()=>median({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,missing:[b]}),/below authenticated partial/);
  const c=median({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:false,observed:[verified('c',500)]});
  assert.equal(c.gross_lower_median_lower_bound_usd_cents,null);
@@ -93,6 +94,18 @@ test('Mean contract prevents median claims from unauthorized or missing populati
  assert.equal(c.median_point_identified,false);
 });
 
+test('Median rejects a partial gross floor without authorized financial access',()=>{
+ const missing=missingGame('partial');
+ Object.assign(missing,{observed_partial_gross_usd_cents:500,partial_gross_verified:true,
+  partial_horizon_attested:true,paid_checkout_attribution_attested:true});
+ assert.throws(()=>median({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,missing:[missing]}),
+  /Partial floor requires authorized financial access/);
+ missing.financial_access_attested=true;
+ const result=median({eligibleFrameSize:1,horizonDays:30,cohortFrameVerified:true,missing:[missing]});
+ assert.equal(result.gross_lower_median_lower_bound_usd_cents,500);
+ assert.equal(result.gross_lower_median_upper_bound_usd_cents,null);
+ assert.equal(result.actual_steam_median_gross,null);
+});
 test('Null optional partial fields remain unknown rather than a fabricated lower floor',()=>{
  const missing=missingGame('unknown');
  missing.observed_partial_gross_usd_cents=null;

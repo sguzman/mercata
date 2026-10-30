@@ -8,7 +8,7 @@ const o=(id,amount,h=30)=>({fixture_id:'fixture-'+id,horizon_days:h,gross_usd_ce
 const m=(id,cap=null,verified=false,h=30)=>({fixture_id:'fixture-'+id,horizon_days:h,verified_upper_cap_usd_cents:cap,cap_verified:verified});
 const partial=(id,floor,cap=null,verified=false,h=30)=>({...m(id,cap,verified,h),
  observed_partial_gross_usd_cents:floor,partial_gross_verified:true,
- partial_horizon_attested:true,paid_checkout_attribution_attested:true});
+ partial_horizon_attested:true,paid_checkout_attribution_attested:true,financial_access_attested:true});
 test('A synthetic complete five-game population point-identifies its gross mean',()=>{
  const a=bound({eligibleFrameSize:5,horizonDays:30,cohortFrameVerified:true,observed:[o('a',0),o('b',1000),o('c',2000),o('d',5000),o('e',10000)]});
  assert.equal(a.lower_mean_gross_usd_cents,3600);assert.equal(a.upper_mean_gross_usd_cents,3600);assert.equal(a.point_identified,true);assert.equal(a.publisher_profit_mean,null);
@@ -75,6 +75,10 @@ test('Unverified partial gross, misaligned horizon and implausible upper caps fa
  assert.throws(()=>bound({...base,missing:[{...partial('b',400),partial_gross_verified:false}]}),/Partial floor requires/);
  assert.throws(()=>bound({...base,missing:[{...partial('b',400),partial_horizon_attested:false}]}),/Partial floor requires/);
  assert.throws(()=>bound({...base,missing:[{...partial('b',400),paid_checkout_attribution_attested:false}]}),/Partial floor requires/);
+ assert.throws(()=>bound({...base,missing:[{...partial('b',400),financial_access_attested:false}]}),/Partial floor requires/);
+ const unauthorized=partial('b',400);delete unauthorized.financial_access_attested;
+ assert.throws(()=>bound({...base,missing:[unauthorized]}),/Partial floor requires/);
+ assert.throws(()=>bound({...base,missing:[{...m('b'),financial_access_attested:true}]}),/Partial attestation without/);
  assert.throws(()=>bound({...base,missing:[partial('b',400,399,true)]}),/below authenticated partial/);
  assert.throws(()=>bound({...base,missing:[{...m('b'),partial_gross_verified:true}]}),/Partial attestation without/);
  assert.throws(()=>bound({...base,missing:[{...partial('b',-1)}]}),/Nonnegative/);
@@ -150,7 +154,7 @@ test('Direct 4-decimal partial floors and verified caps conservatively widen unc
  const x=bound({eligibleFrameSize:2,horizonDays:30,cohortFrameVerified:true,
   observed:[o('a',1000)],
   missing:[{...m('b',null,false),observed_partial_gross_usd_4dp:'4.0001',
-   partial_gross_verified:true,partial_horizon_attested:true,
+   partial_gross_verified:true,partial_horizon_attested:true,financial_access_attested:true,
    paid_checkout_attribution_attested:true,verified_upper_cap_usd_4dp:'49.9999',cap_verified:true}]});
  assert.equal(x.lower_mean_gross_usd_cents,700);
  assert.equal(x.upper_mean_gross_usd_cents,3000);
