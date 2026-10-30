@@ -2578,6 +2578,17 @@
       "evidence_class": "public_official_storefront_first_paid_release_and_game_developer_labels_not_merchant_sales",
       "license": "Store metadata attribution and link only; no store text or media copied.",
       "notes": "September 23, 2025 release date, AppID 3803930, Mobmonks public developer and publisher labels. Listing cannot validate first-day orders, December totals, percentage refund denominator, or legal payee remittances."
+    },
+    {
+      "id": "steam-imho-graveyard-2026-library-ownership-playtime-cohort",
+      "url": "https://imho.run/reports/steam-graveyard",
+      "publisher": "imho.run, publisher of Steam-library gameplay report",
+      "title": "The Steam Graveyard: paid games owned but never played",
+      "published_at": "2026-09-30",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "operator_collected_nonprobability_public_library_game_copy_playtime_sample_not_transaction_data",
+      "license": "Report permits reusing numbers with attribution; only brief independently worded summaries and public link used. No dataset or private player records reproduced.",
+      "notes": "113,781 sampled public libraries and 9,658,442 library-game copies for current-price-positive apps; deterministic hash buckets of friend-graph discovered users; zero minutes is a playtime measure, not zero paid orders. Live US prices not transaction prices; bundle flags heuristic; dates, exclusions and conditional 2-hour denominator recorded in linked study."
     }
   ],
   "claims": [
@@ -16980,6 +16991,116 @@
       "observed_at": "2026-10-29",
       "confidence": "medium",
       "limitations": "Selected public same-author same-title milestones. No authenticated partner financial export or independent purchase ledger; later post's clarified net stage is still not bank cash. Changes over time are not a causal sales-growth experiment, and one successful survivor cannot represent initial paid releases."
+    },
+    {
+      "id": "steam-imho-graveyard-library-sample-20261029",
+      "text": "The publisher reports 113,781 sampled libraries containing 9,658,442 game-library copies currently classified as paid; neither count is a verified paid-order population.",
+      "source_ids": [
+        "steam-imho-graveyard-2026-library-ownership-playtime-cohort"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Nonprobability visible-library sample biased toward friend-network, engaged and observable users, not all initial paid releases; no authenticated transactions, original paid acquisition dates, original checkout prices, merchant remittances or representative developer income."
+    },
+    {
+      "id": "steam-imho-graveyard-never-launched-20261029",
+      "text": "The 32.4% never-launched share refers to sampled owned copies with reported zero minutes of recorded play, not first-paid-release games with zero orders.",
+      "source_ids": [
+        "steam-imho-graveyard-2026-library-ownership-playtime-cohort"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Nonprobability visible-library sample biased toward friend-network, engaged and observable users, not all initial paid releases; no authenticated transactions, original paid acquisition dates, original checkout prices, merchant remittances or representative developer income."
+    },
+    {
+      "id": "steam-imho-graveyard-under-two-hours-20261029",
+      "text": "The 27.9% under-two-hour fraction conditions on copies that were already launched, not all sampled owned copies; under two hours is not proof of refund.",
+      "source_ids": [
+        "steam-imho-graveyard-2026-library-ownership-playtime-cohort"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Nonprobability visible-library sample biased toward friend-network, engaged and observable users, not all initial paid releases; no authenticated transactions, original paid acquisition dates, original checkout prices, merchant remittances or representative developer income."
+    },
+    {
+      "id": "steam-imho-graveyard-flagged-vs-unflagged-20261029",
+      "text": "The publisher reports 59.1% never launched among likely bundle/giveaway copies versus 24.5% among unflagged copies, using heuristic acquisition flags.",
+      "source_ids": [
+        "steam-imho-graveyard-2026-library-ownership-playtime-cohort"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Nonprobability visible-library sample biased toward friend-network, engaged and observable users, not all initial paid releases; no authenticated transactions, original paid acquisition dates, original checkout prices, merchant remittances or representative developer income."
+    },
+    {
+      "id": "steam-imho-graveyard-nonrandom-selection-20261029",
+      "text": "The author describes 48 deterministic hash buckets from 2,722,860 friend-network-crawled Steam libraries, not a random sample of all Steam users or eligible paid-release AppIDs.",
+      "source_ids": [
+        "steam-imho-graveyard-2026-library-ownership-playtime-cohort"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Nonprobability visible-library sample biased toward friend-network, engaged and observable users, not all initial paid releases; no authenticated transactions, original paid acquisition dates, original checkout prices, merchant remittances or representative developer income."
+    },
+    {
+      "id": "steam-imho-graveyard-excluded-libraries-20261029",
+      "text": "Methodology excludes 14,343 libraries showing zero minutes for every game and 2,607 libraries with over a thousand games, shaping generalization and playtime privacy bias.",
+      "source_ids": [
+        "steam-imho-graveyard-2026-library-ownership-playtime-cohort"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Nonprobability visible-library sample biased toward friend-network, engaged and observable users, not all initial paid releases; no authenticated transactions, original paid acquisition dates, original checkout prices, merchant remittances or representative developer income."
+    },
+    {
+      "id": "steam-imho-graveyard-release-age-20261029",
+      "text": "Ranked games were released 2010–2025, and had at least 500 sampled owners; recent acquisitions and earlier playtime history cannot be aligned by exact purchase age.",
+      "source_ids": [
+        "steam-imho-graveyard-2026-library-ownership-playtime-cohort"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Nonprobability visible-library sample biased toward friend-network, engaged and observable users, not all initial paid releases; no authenticated transactions, original paid acquisition dates, original checkout prices, merchant remittances or representative developer income."
+    },
+    {
+      "id": "steam-imho-graveyard-current-price-20261029",
+      "text": "Current US price displayed on a game page is not the price, currency or payment route for each sampled library copy; ownership times list price cannot give actual revenue.",
+      "source_ids": [
+        "steam-imho-graveyard-2026-library-ownership-playtime-cohort"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Nonprobability visible-library sample biased toward friend-network, engaged and observable users, not all initial paid releases; no authenticated transactions, original paid acquisition dates, original checkout prices, merchant remittances or representative developer income."
+    },
+    {
+      "id": "steam-imho-graveyard-paid-classification-20261029",
+      "text": "A currently paid-priced Steam app may exist in accounts through giveaways, bundles or keys; its presence in a library does not prove a direct paid purchase.",
+      "source_ids": [
+        "steam-imho-graveyard-2026-library-ownership-playtime-cohort"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Nonprobability visible-library sample biased toward friend-network, engaged and observable users, not all initial paid releases; no authenticated transactions, original paid acquisition dates, original checkout prices, merchant remittances or representative developer income."
+    },
+    {
+      "id": "steam-imho-graveyard-cannot-identify-zero-sales-20261029",
+      "text": "A dataset conditioned on visible owner-game pairs cannot enumerate all initial paid releases with zero actual orders, and thus cannot measure the true zero-paid-sale AppID fraction.",
+      "source_ids": [
+        "steam-imho-graveyard-2026-library-ownership-playtime-cohort"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Nonprobability visible-library sample biased toward friend-network, engaged and observable users, not all initial paid releases; no authenticated transactions, original paid acquisition dates, original checkout prices, merchant remittances or representative developer income."
+    },
+    {
+      "id": "steam-imho-graveyard-playtime-not-repeat-purchase-20261029",
+      "text": "Game launch and playtime indicate use of a library entitlement, not repeat paid purchases, authenticated buyer retention, bank income or developer profit.",
+      "source_ids": [
+        "steam-imho-graveyard-2026-library-ownership-playtime-cohort"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Nonprobability visible-library sample biased toward friend-network, engaged and observable users, not all initial paid releases; no authenticated transactions, original paid acquisition dates, original checkout prices, merchant remittances or representative developer income."
     }
   ],
   "observations": [],

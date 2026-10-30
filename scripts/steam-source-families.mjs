@@ -9,7 +9,7 @@ export function auditSteamSourceFamilies(evidence,claims,registry){
   throw new TypeError('Steam source family registry and evidence required');
  const publicAudit=auditPublicSources(evidence,claims,registry);
  const byId=new Map(evidence.map(x=>[x.id,x])),seen=new Set(),familyIds=new Set(),errors=[];
- const expected=['same_underlying_dataset_different_urls'];
+ const expected=['same_underlying_dataset_different_urls','same_title_nested_cumulative_observations'];
  for(const f of registry.families){
   if(!nonempty(f.id)||familyIds.has(f.id)){errors.push('Duplicate or empty family ID');continue}
   familyIds.add(f.id);

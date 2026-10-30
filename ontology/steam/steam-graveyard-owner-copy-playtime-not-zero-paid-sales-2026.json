@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "sampled_owned_game_copies_zero_playtime_not_zero_paid_sales",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-imho-graveyard-2026-library-ownership-playtime-cohort"
+  ],
+  "claim_ids": [
+    "steam-imho-graveyard-library-sample-20261029",
+    "steam-imho-graveyard-never-launched-20261029",
+    "steam-imho-graveyard-under-two-hours-20261029",
+    "steam-imho-graveyard-flagged-vs-unflagged-20261029",
+    "steam-imho-graveyard-nonrandom-selection-20261029",
+    "steam-imho-graveyard-excluded-libraries-20261029",
+    "steam-imho-graveyard-release-age-20261029",
+    "steam-imho-graveyard-current-price-20261029",
+    "steam-imho-graveyard-paid-classification-20261029",
+    "steam-imho-graveyard-cannot-identify-zero-sales-20261029",
+    "steam-imho-graveyard-playtime-not-repeat-purchase-20261029"
+  ],
+  "sample": {
+    "libraries": 113781,
+    "current_price_positive_library_game_copies": 9658442,
+    "friend_network_crawled_library_pool": 2722860,
+    "hash_buckets": 48,
+    "all_zero_playtime_libraries_excluded": 14343,
+    "over_1000_game_collectors_excluded": 2607,
+    "refresh_start": "2026-05-03",
+    "refresh_end": "2026-09-29",
+    "ranked_release_years": [
+      2010,
+      2025
+    ],
+    "ranked_minimum_owned_copies": 500,
+    "probability_sample": false
+  },
+  "rates": {
+    "never_launched_pct_of_owned_copies": 32.4,
+    "under_2h_pct_given_positive_playtime": 27.9,
+    "never_launched_pct_bundle_giveaway_heuristic": 59.1,
+    "never_launched_pct_other_copies": 24.5,
+    "groups_have_distinct_denominators": true
+  },
+  "definitions": {
+    "never_launched": "reported_zero_minutes_playtime",
+    "under_two_hours": "played_between_one_and_119_minutes_conditional_on_launched",
+    "current_price": "US_list_price_not_checkout",
+    "ownership": "library_entitlement_not_paid_order",
+    "acquisition_dates_known": false,
+    "zero_owner_appids_included": false
+  },
+  "unknown": {
+    "verified_paid_transaction_count": null,
+    "zero_paid_sale_app_fraction": null,
+    "zero_income_legal_publisher_fraction": null,
+    "actual_paid_checkout_prices": null,
+    "actual_bundle_giveaway_unit_count": null,
+    "merchant_bank_receipts": null,
+    "creator_after_cost_profit": null,
+    "repeat_paying_buyer_retention": null
+  },
+  "code_path": "site/steam-owned-copy-playtime-denominator-guard.mjs",
+  "tests_path": "tests/steam-graveyard-playtime-sales-denominator.test.mjs",
+  "private_records_accessed": false
+}

@@ -7,6 +7,7 @@ test('Five declared source families prevent double-counting reused samples',()=>
  assert.equal(r.valid,true,r.errors.join('; '));
  assert.equal(r.registered_reused_cohort_families,5);
  assert.equal(r.related_distinct_sample_documents,4);
+ assert.equal(registry.families[4].relation,'same_title_nested_cumulative_observations');
  assert.equal(r.unique_data_studies_in_entire_steam_dossier,null);
  assert.equal(r.verified_paid_order_count,null);
 });
