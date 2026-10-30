@@ -20,6 +20,7 @@ test('Incomplete prior history remains unresolved even after release calendar co
  const r=sequence({fixture_id:'fixture-lostinart-calendar-only',
   first_paid_release_date:'2026-06-01',discount_kind:'official_seasonal',
   discount_start:'2026-07-01',discount_end:'2026-07-09',
+  official_seasonal_event_verified:true,
   discount_percent:50,relevant_discount_history_complete:false});
  assert.equal(r.conditional_calendar_rules_pass,null);
  assert.equal(r.calendar_status,'unresolved_prior_discount_history');

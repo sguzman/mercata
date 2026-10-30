@@ -10,6 +10,9 @@ An **official seasonal sale discount** is exempt from the third, ordinary discou
 
 The current [official Steam guide](https://partner.steamgames.com/doc/marketing/discounts?language=english) limits an introductory launch discount to **10–40%** and **7–14 days**, starting with the release. Ordinary custom discounts are **10–95%** and **1–14 days**. Official seasonal sale periods follow their own calendar and can be longer than fourteen days. Calendar days alone cannot establish price-threshold eligibility or the actual Steamworks configuration.
 
+
+The synthetic checker now requires an explicit `official_seasonal_event_verified: true` **fixture attestation** before allowing the seasonal exception. For a previous seasonally discounted title, its prior-discount record must independently carry the same hypothetical attestation. A bare `discount_kind: 'official_seasonal'` string is **not enough**: an unverified event produces an unresolved result rather than a false approval or an invented failed discount. Even an attested synthetic fixture does not independently validate Steam's event calendar or the account's participation.
+
 ## In & Out public example, without an invented approval
 
 The [public Steam listing](https://store.steampowered.com/app/4230140/) dates *In & Out*'s paid release to **August 31, 2026**. The [developer's October 2 announcement](https://www.reddit.com/r/puzzlevideogames/comments/1wvnlbm/) reports a **75% discount**. The announcement falls **32 calendar days** after the published paid release, clearing the *release-only* 30-day waiting period on a date basis. At 75%, it **cannot be a launch discount** under the present 40% ceiling.

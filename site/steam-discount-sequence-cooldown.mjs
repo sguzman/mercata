@@ -17,7 +17,8 @@ const kinds=['launch','standard','official_seasonal'];
 
 export function auditSyntheticSteamDiscountSequence(args={}){
  if(!allowed(args,['fixture_id','first_paid_release_date','discount_kind','discount_start','discount_end',
-  'discount_percent','last_price_increase_date','previous_discount','relevant_discount_history_complete'])||
+  'discount_percent','last_price_increase_date','previous_discount','relevant_discount_history_complete',
+  'official_seasonal_event_verified'])||
   typeof args.fixture_id!=='string'||!/^fixture-[a-z0-9-]+$/.test(args.fixture_id)||
   !kinds.includes(args.discount_kind)||!Number.isSafeInteger(args.discount_percent)||
   typeof args.relevant_discount_history_complete!=='boolean')
@@ -27,14 +28,23 @@ export function auditSyntheticSteamDiscountSequence(args={}){
  const end=asDate(args.discount_end,'end');
  if(end<start)throw new RangeError('Discount end precedes its start');
  const price=args.last_price_increase_date==null?null:asDate(args.last_price_increase_date,'last price increase');
+ const seasonalEventAttested=args.official_seasonal_event_verified===true;
+ if(args.official_seasonal_event_verified!==undefined&&
+    (typeof args.official_seasonal_event_verified!=='boolean'||args.discount_kind!=='official_seasonal'))
+  throw new TypeError('Official event attestation is only allowed for seasonal discounts');
  if(price&&price>start)throw new RangeError('Future price increase cannot be treated as past history');
  const prior=args.previous_discount??null;
- if(prior!==null&&(!allowed(prior,['kind','start','end'])||!kinds.includes(prior.kind)))
+ if(prior!==null&&(!allowed(prior,['kind','start','end','official_seasonal_event_verified'])||!kinds.includes(prior.kind)))
   throw new TypeError('Malformed previous synthetic discount');
  const previous=prior===null?null:{
   kind:prior.kind,start:asDate(prior.start,'previous discount start'),
   end:asDate(prior.end,'previous discount end')
  };
+ const previousEventAttested=previous?.kind==='official_seasonal'&&
+  prior.official_seasonal_event_verified===true;
+ if(previous&&prior.official_seasonal_event_verified!==undefined&&
+    (typeof prior.official_seasonal_event_verified!=='boolean'||previous.kind!=='official_seasonal'))
+  throw new TypeError('Previous official event attestation must refer to a seasonal sale');
  if(previous&&(previous.end<previous.start||previous.start<release||previous.end>=start))
   throw new RangeError('Previous discount dates overlap current promotion or precede first paid release');
  if(previous?.kind==='launch'&&previous.start.getTime()!==release.getTime())
@@ -63,34 +73,42 @@ export function auditSyntheticSteamDiscountSequence(args={}){
   if(start<plus30(release))reasons.push('release_cooldown_active');
  }
  if(price&&start<plus30(price))reasons.push('price_increase_cooldown_active');
- const skipPrior=args.discount_kind==='official_seasonal'||previous?.kind==='official_seasonal';
- if(previous&&!skipPrior&&start<plus30(previous.end))
+ const skipPrior=seasonalEventAttested||previousEventAttested;
+ const unverifiedSeasonalEvent=
+  args.discount_kind==='official_seasonal'&&!seasonalEventAttested||
+  previous?.kind==='official_seasonal'&&!previousEventAttested;
+ if(previous&&!skipPrior&&!unverifiedSeasonalEvent&&start<plus30(previous.end))
   reasons.push('discount_to_discount_cooldown_active');
  const earliestGates=[release];
  if(args.discount_kind!=='launch')earliestGates.push(plus30(release));
  if(price)earliestGates.push(plus30(price));
- if(previous&&!skipPrior)earliestGates.push(plus30(previous.end));
+ if(previous&&!skipPrior&&!unverifiedSeasonalEvent)earliestGates.push(plus30(previous.end));
  const firstKnown=maxDate(earliestGates);
  const history=args.relevant_discount_history_complete;
- const result=reasons.length?false:history?true:null;
+ const result=reasons.length?false:history&&!unverifiedSeasonalEvent?true:null;
  return Object.freeze({
   kind:'synthetic_first_paid_steam_discount_cooldown_not_account_authorization',
   fixture_id:args.fixture_id,discount_kind:args.discount_kind,
   discount_percent:args.discount_percent,discount_duration_calendar_days:duration,
-  first_allowed_start_date_from_known_cooldowns:iso(firstKnown),
+  first_allowed_start_date_from_known_cooldowns:unverifiedSeasonalEvent?null:iso(firstKnown),
   release_cooldown_ends:iso(plus30(release)),
   price_increase_cooldown_ends:price?iso(plus30(price)):null,
   previous_discount_cooldown_ends:previous?iso(plus30(previous.end)):null,
   prior_discount_cooldown_exemption_applied:Boolean(previous&&skipPrior),
+  official_seasonal_event_attested:seasonalEventAttested,
+  previous_official_seasonal_event_attested:Boolean(previousEventAttested),
+  unresolved_official_seasonal_event: Boolean(unverifiedSeasonalEvent),
+  official_event_independently_verified_by_model:false,
   known_calendar_failures:reasons,
   relevant_discount_history_complete:history,
   conditional_calendar_rules_pass:result,
   calendar_status:result===true?'passes_known_rules_conditional_on_attested_history':
-   result===false?'blocked_by_known_rules':'unresolved_prior_discount_history',
+   result===false?'blocked_by_known_rules':unverifiedSeasonalEvent?
+   'unresolved_official_seasonal_event_attestation':'unresolved_prior_discount_history',
   actual_partner_eligibility_verified:false,
   local_currency_minimum_price_verified:false,
   verified_steam_discount_history:false,
   release_to_v1_early_access_transition_modeled:false,
   causal_discount_revenue_increment:null,
-  note:'Official seasonal discounts skip only discount-to-discount cooldowns, never first-paid release or price-rise waits. Date-only model ignores exact 10am Pacific cutoffs, country minimum prices, actual partner setup and unknown earlier discounts.'});
+  note:'Official seasonal discounts skip only discount-to-discount cooldowns, never first-paid release or price-rise waits. Official-sale attestations are synthetic assertions, not independently checked event calendars. Date-only model ignores exact 10am Pacific cutoffs, country minimum prices, actual partner setup and unknown earlier discounts.'});
 }

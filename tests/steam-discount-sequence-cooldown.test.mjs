@@ -37,14 +37,14 @@ test('An ordinary custom promotion is not magically made seasonal by matching sa
  const custom=check(winter);
  assert.equal(custom.conditional_calendar_rules_pass,false);
  assert(custom.known_calendar_failures.includes('discount_to_discount_cooldown_active'));
- const seasonal=check({...winter,discount_kind:'official_seasonal',discount_end:'2027-01-04'});
+ const seasonal=check({...winter,discount_kind:'official_seasonal',official_seasonal_event_verified:true,discount_end:'2027-01-04'});
  assert.equal(seasonal.conditional_calendar_rules_pass,true);
  assert.equal(seasonal.prior_discount_cooldown_exemption_applied,true);
  assert.equal(seasonal.discount_duration_calendar_days,19);
 });
 test('Earlier official seasonal sale does not start a discount-to-discount cooldown',()=>{
  const out=check({...base,discount_start:'2027-01-05',discount_end:'2027-01-11',discount_percent:20,
-  previous_discount:{kind:'official_seasonal',start:'2026-12-17',end:'2027-01-04'}});
+  previous_discount:{kind:'official_seasonal',official_seasonal_event_verified:true,start:'2026-12-17',end:'2027-01-04'}});
  assert.equal(out.conditional_calendar_rules_pass,true);
  assert.equal(out.prior_discount_cooldown_exemption_applied,true);
 });
@@ -88,4 +88,33 @@ test('Structured source joins, unknown real economics and original 293-task inve
  assert(Object.values(x.unknown).every(v=>v===null));
  const scores=[...p.detail_tasks.map(t=>t.percent),...q.queues.flatMap(g=>g.tasks.map(t=>t.progress))];
  assert.equal(scores.length,293);assert.equal(p.progress_percent,Math.round(scores.reduce((a,b)=>a+b,0)/293));
+});
+
+test('A bare seasonal label must not manufacture an exemption for a fictional official event',()=>{
+ const prior={kind:'standard',start:'2026-12-01',end:'2026-12-08'};
+ const x=check({...base,discount_kind:'official_seasonal',discount_start:'2026-12-17',
+  discount_end:'2027-01-04',discount_percent:20,previous_discount:prior});
+ assert.equal(x.conditional_calendar_rules_pass,null);
+ assert.equal(x.calendar_status,'unresolved_official_seasonal_event_attestation');
+ assert.equal(x.prior_discount_cooldown_exemption_applied,false);
+ assert.equal(x.first_allowed_start_date_from_known_cooldowns,null);
+ assert.equal(x.official_event_independently_verified_by_model,false);
+});
+test('A previous unverified seasonal label does not silently remove the next discount cooldown',()=>{
+ const prev={kind:'official_seasonal',start:'2026-12-17',end:'2027-01-04'};
+ const unresolved=check({...base,discount_start:'2027-01-05',
+  discount_end:'2027-01-11',discount_percent:20,previous_discount:prev});
+ assert.equal(unresolved.conditional_calendar_rules_pass,null);
+ assert.equal(unresolved.unresolved_official_seasonal_event,true);
+ const attested=check({...base,discount_start:'2027-01-05',discount_end:'2027-01-11',
+  discount_percent:20,previous_discount:{...prev,official_seasonal_event_verified:true}});
+ assert.equal(attested.conditional_calendar_rules_pass,true);
+ assert.equal(attested.prior_discount_cooldown_exemption_applied,true);
+ assert.equal(attested.official_event_independently_verified_by_model,false);
+});
+test('A standard promotion cannot misrepresent an official seasonal-sale attestation',()=>{
+ assert.throws(()=>check({...base,official_seasonal_event_verified:true}),/only allowed for seasonal/);
+ assert.throws(()=>check({...base,official_seasonal_event_verified:'true'}),/only allowed for seasonal/);
+ assert.throws(()=>check({...base,previous_discount:{kind:'standard',start:'2026-09-30',
+  end:'2026-10-01',official_seasonal_event_verified:true}}),/Previous official event/);
 });
