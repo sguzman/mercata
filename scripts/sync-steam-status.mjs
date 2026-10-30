@@ -16,16 +16,25 @@ export function synchronizeSteamPlanWorkstreams(plan,queue){
   throw new RangeError('Steam requires original 293 valid scores');
  const index=new Map(scores.map(t=>[t.id,t.value]));
  if(index.size!==293)throw new RangeError('Steam task identifiers must be unique');
+ const owners=new Map([
+  ...detail.map(t=>[t.id,t.queue_id]),
+  ...queue.queues.flatMap(group=>(group.tasks||[]).map(t=>[t.id,group.id]))
+ ]);
+ const mapped=new Set();
  const workstreams=plan.workstreams.map(w=>{
   if(!Array.isArray(w.base_tasks)||!Array.isArray(w.detail_tasks))throw new TypeError('Workstream task arrays required');
   const ids=[...w.base_tasks,...w.detail_tasks];
   if(!ids.length||new Set(ids).size!==ids.length)throw new RangeError('Duplicated or missing workstream task');
   const total=ids.reduce((sum,id)=>{
    if(!index.has(id))throw new RangeError('Unknown Steam workstream task: '+id);
+   if(mapped.has(id))throw new RangeError('Steam task mapped to more than one workstream: '+id);
+   if(owners.get(id)!==w.id)throw new RangeError('Steam task assigned to wrong workstream: '+id);
+   mapped.add(id);
    return sum+index.get(id);
   },0);
   return {...w,progress_percent:Math.round(total/ids.length)};
  });
+ if(mapped.size!==293)throw new RangeError('Unmapped Steam workstream tasks: '+(293-mapped.size));
  const rounded=Math.round(scores.reduce((sum,t)=>sum+t.value,0)/293);
  return {...plan,progress_percent:rounded,workstreams};
 }

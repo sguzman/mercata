@@ -55,3 +55,15 @@ test('Canonical plan repairs stale overall score and rejects unknown task refere
  broken.workstreams[0].detail_tasks.push('nonexistent/research-task');
  assert.throws(()=>synchronizeSteamPlanWorkstreams(broken,q),/Unknown Steam workstream task/);
 });
+test('Steam workstream mapping cannot duplicate, omit or misclassify tracked tasks',()=>{
+ const q=json('queues/steam.json');
+ const duplicate=json('plans/steam.json');
+ duplicate.workstreams[1].detail_tasks[0]=duplicate.workstreams[0].detail_tasks[0];
+ assert.throws(()=>synchronizeSteamPlanWorkstreams(duplicate,q),/mapped to more than one workstream/);
+ const missing=json('plans/steam.json');
+ missing.workstreams[0].detail_tasks.pop();
+ assert.throws(()=>synchronizeSteamPlanWorkstreams(missing,q),/Unmapped Steam workstream tasks/);
+ const wrong=json('plans/steam.json');
+ wrong.detail_tasks[0].queue_id='sales';
+ assert.throws(()=>synchronizeSteamPlanWorkstreams(wrong,q),/assigned to wrong workstream/);
+});
