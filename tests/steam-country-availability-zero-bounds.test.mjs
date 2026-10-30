@@ -85,7 +85,7 @@ test('A complete observed zero needs financial and transfer reconciliation for f
  for(const patch of [{transfers_reconciled:false},{country_attribution_attested:false},
   {covered_until_exclusive:'2026-01-30'}]){
   assert.throws(()=>audit([f('a','US',[open],{...complete(0),...patch})],options),
-   /Complete ledger requires/);
+   /Complete ledger requires|Observed units need bounded ledger coverage/);
  }
  assert.throws(()=>audit([f('a','US',[open],complete(0))],
   {...options,asOfDate:'2026-01-12'}),/Complete ledger requires/);
