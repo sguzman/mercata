@@ -7,6 +7,10 @@
 
 
 
+## Modelled September 2026 Steam revenue and ranked top-500 composition (October 30, 2026)
+
+[Alinea Analytics' October 1 platform estimate audit](../ontology/steam/alinea-september-2026-platform-gross-top500-vs-newcomer-income.md) records **$1.7B September gross**, **$5.5B Q3 gross**, and **$16.5B first-nine-month 2026 gross**, contrasted to the same analyst's $14.5B first nine months of 2025. The author's anticipated **over $20B full-year 2026** is explicitly a forecast, not an observed outcome. The selected **500 top revenue titles** account for roughly **three quarters** of modeled September revenue; **F2P** supplies 25.6% of top-500 revenue despite 16% of its titles. These are vendor-modeled title/market estimates, not legal publisher earnings, representative paid newcomer medians or the zero-paid-sale fraction. One source, ten linked claims and synthetic scope tests advance three original tasks by one point each. Steam research **91.522%** (Δ **+0.010 pp**), 220 public sources and 1350 claims, original 293 tasks preserved.
+
 ## Coinsweeper first commercial game: 48-hour versus four-week self-reported gross and net (October 30, 2026)
 
 The [two-window Coinsweeper source audit](../ontology/steam/coinsweeper-two-window-first-launch-gross-vs-net-2026.md) records about **280 copies, $1,118 gross and $951 author-labelled net** by hour 48, versus **800 copies, $3,295 gross and $2,593 author-labelled net** at roughly four weeks after an April 28 release. The cumulative difference is **$2,177 gross** and **$1,642 unspecified net**, not verified bank cash. The launch-stock 1,900 wishlists are not a proven sales-conversion denominator. One voluntary author post plus the official store page, nine limited claims, and null-safe synthetic tests advance three existing tasks by one point each. Steam research **91.512%** (Δ **+0.010 pp**); all 293 tasks preserved, 219 sources, 1340 claims.

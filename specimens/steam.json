@@ -2424,6 +2424,17 @@
       "evidence_class": "public_dynamic_game_title_released_date_listing_not_sales_ledger",
       "license": "Public listing metadata referenced in original prose; no store images or copyrighted description reproduced.",
       "notes": "Confirms April 28, 2026 release date, Coinsweeper AppID 4321130 and Duo Forge Games developer/publisher labels, not sales, income or the post's historical 25% launch discount."
+    },
+    {
+      "id": "steam-alinea-sept2026-modelled-revenue-and-top500-share",
+      "url": "https://alineaanalytics.substack.com/p/steams-top-september-2026-games",
+      "publisher": "Alinea Analytics, original analyst Rhys Elliott",
+      "title": "Steam's top September 2026 games",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "original_vendor_month_quarter_ytd_aggregate_revenue_estimates_and_selected_top500_title_mix",
+      "license": "Brief original factual paraphrases and arithmetic summaries; no images, charts, or original long-form text copied.",
+      "notes": "Vendor's own model estimates for September and 2026 year-to-date; selected top 500 game cohort is estimated to account for about three quarters of September gross. Not Steam merchant statements, buyer unique counts or actual 2026 year-end receipts."
     }
   ],
   "claims": [
@@ -16293,6 +16304,106 @@
       "confidence": "high",
       "observed_at": "2026-10-29",
       "limitations": "Right-censored, voluntary single-title self-report without first-paid release market frame or authorized full transaction and cost histories."
+    },
+    {
+      "id": "steam-alinea-sept2026-17b-month-model",
+      "text": "Alinea Analytics estimates USD 1.7 billion Steam revenue in September 2026, describing it as 13% above September 2025; this is a third-party model estimate, not Steam partner account reconciliation.",
+      "source_ids": [
+        "steam-alinea-sept2026-modelled-revenue-and-top500-share"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Vendor model and inclusion definitions not independently audited; prior-year percentage and current estimate are rounded."
+    },
+    {
+      "id": "steam-alinea-q3-55b-versus-lastyear",
+      "text": "The same analyst estimates USD 5.5 billion Steam revenue for 2026 Q3, approximately 12% higher than Q3 2025, a partially year-aggregated estimate rather than annual close.",
+      "source_ids": [
+        "steam-alinea-sept2026-modelled-revenue-and-top500-share"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Market revenue methodology and classification not independently reproduced from game-level orders."
+    },
+    {
+      "id": "steam-alinea-ytd-165b-vs-145b-nine-months",
+      "text": "The report estimates USD 16.5 billion of Steam revenue during January–September 2026 against USD 14.5 billion for the same nine months in 2025, not full 2026 calendar-year sales.",
+      "source_ids": [
+        "steam-alinea-sept2026-modelled-revenue-and-top500-share"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Both are vendor-estimated, rounded aggregate revenue, with no realized remittance or partner margin frame."
+    },
+    {
+      "id": "steam-alinea-20b-forecast-not-annual-fact",
+      "text": "The author's expectation that Steam revenue will surpass USD 20 billion for full-year 2026 is a forecast made October 1, not verified 2026 annual performance.",
+      "source_ids": [
+        "steam-alinea-sept2026-modelled-revenue-and-top500-share"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "2026 had not ended at observation; subsequent sales, refunds and model revisions cannot be known from a September checkpoint."
+    },
+    {
+      "id": "steam-alinea-sept-top500-threequarters-concentration",
+      "text": "Alinea estimates that September 2026's 500 highest-grossing Steam titles account for approximately three quarters of its estimated platform-wide monthly revenue.",
+      "source_ids": [
+        "steam-alinea-sept2026-modelled-revenue-and-top500-share"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Approximate fraction and proprietary ranked model; no complete title-order ledger or independently measured concentration curve."
+    },
+    {
+      "id": "steam-alinea-top500-new-ip-205-old-795",
+      "text": "Within the analyst's selected September top-500 revenue group, newly introduced 2026 IP accounts for 20.5% of revenue and established IP for approximately 79.5%, including 3.8% described as remake/remaster.",
+      "source_ids": [
+        "steam-alinea-sept2026-modelled-revenue-and-top500-share"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "IP categorization is analyst-defined and about the top 500 only; not all games or all publishers, and remake share is nested inside established IP."
+    },
+    {
+      "id": "steam-alinea-top500-release-years-336-87-93",
+      "text": "The analyst assigns 33.6% of its September top-500 revenue to titles released in 2026, 8.7% to 2025 releases and 9.3% to 2024 releases, showing catalogue-stock revenue differs from current-year first-release earnings.",
+      "source_ids": [
+        "steam-alinea-sept2026-modelled-revenue-and-top500-share"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Release-year categories refer to currently estimated top-500 revenue, not the count or profits of new paid games."
+    },
+    {
+      "id": "steam-alinea-top500-f2p-256-versus-16titles",
+      "text": "Within the September top 500, the analyst attributes 25.6% of modeled revenue to free-to-play games, which represent 16% of those ranked titles; this is not a free-game zero-sales or per-user spending rate.",
+      "source_ids": [
+        "steam-alinea-sept2026-modelled-revenue-and-top500-share"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The F2P gross category may include in-game payments; the fraction refers only to a ranked high-revenue subset, not all F2P Steam games."
+    },
+    {
+      "id": "steam-alinea-sept-cs-apex-pubg-dota168m",
+      "text": "The analyst estimates that four named free-to-play games jointly accounted for nearly USD 168 million in September Steam revenue, demonstrating that free upfront price does not imply zero monetization in the vendor's model.",
+      "source_ids": [
+        "steam-alinea-sept2026-modelled-revenue-and-top500-share"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Modelled combined title gross, not original game sales, distinct purchases or verified net publisher cash."
+    },
+    {
+      "id": "steam-alinea-month-scope-no-newcomer-median",
+      "text": "The report's monthly platform aggregate and revenue-weighted top-500 title composition cannot identify the 30-day median gross or paid-zero-sale share of a fixed first-commercial-release cohort.",
+      "source_ids": [
+        "steam-alinea-sept2026-modelled-revenue-and-top500-share"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "All release years, F2P in-game spend and selected large titles are mixed; individual original first-offer paid AppIDs and zeros are missing."
     }
   ],
   "observations": [],

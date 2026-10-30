@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "third_party_partial_2026_steam_platform_revenue_and_top500_mix_not_first_paid_release_median",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-alinea-sept2026-modelled-revenue-and-top500-share"
+  ],
+  "claim_ids": [
+    "steam-alinea-sept2026-17b-month-model",
+    "steam-alinea-q3-55b-versus-lastyear",
+    "steam-alinea-ytd-165b-vs-145b-nine-months",
+    "steam-alinea-20b-forecast-not-annual-fact",
+    "steam-alinea-sept-top500-threequarters-concentration",
+    "steam-alinea-top500-new-ip-205-old-795",
+    "steam-alinea-top500-release-years-336-87-93",
+    "steam-alinea-top500-f2p-256-versus-16titles",
+    "steam-alinea-sept-cs-apex-pubg-dota168m",
+    "steam-alinea-month-scope-no-newcomer-median"
+  ],
+  "analyst": "Alinea Analytics",
+  "first_party_publication_date": "2026-10-01",
+  "platform_modelled_revenue_usd": {
+    "september_2026": 1700000000,
+    "quarter3_2026": 5500000000,
+    "january_through_september_2026": 16500000000,
+    "january_through_september_2025": 14500000000,
+    "september_yoy_reported_pct": 13,
+    "q3_yoy_reported_pct": 12,
+    "full_year_2026_actual": null,
+    "full_year_above_20b_is_prediction_only": true
+  },
+  "september_top500_selected_estimates": {
+    "ranked_titles": 500,
+    "share_of_all_september_revenue_approx": 0.75,
+    "from_new_2026_ip": 0.205,
+    "from_established_ip": 0.795,
+    "established_ip_including_remake_or_remaster": 0.038,
+    "game_released_2026": 0.336,
+    "game_released_2025": 0.087,
+    "game_released_2024": 0.093,
+    "remainder_other_release_years_if_disjoint": 0.484,
+    "free_to_play_revenue_share": 0.256,
+    "free_to_play_title_fraction": 0.16,
+    "selected_four_free_to_play_games_combined_estimated_usd_approx": 168000000,
+    "top500_game_roster_and_transactions_audited": false
+  },
+  "scope_limits": {
+    "full_month_not_full_calendar_year": true,
+    "all_prior_release_years_included": true,
+    "included_f2p_in_game_revenue": true,
+    "selected_highest_revenue_500_not_census_of_paid_launches": true,
+    "analyst_model_not_public_steam_partner_data": true,
+    "zero_sales_not_observable": true,
+    "title_gross_not_publisher_net_or_profit": true,
+    "independent_model_validation_not_performed": true
+  },
+  "unknown": {
+    "verified_2026_annual_steam_gross": null,
+    "representative_first_paid_monthly_median": null,
+    "first_paid_2026_release_frame": null,
+    "actual_zero_paid_sale_fraction": null,
+    "publisher_after_cost_profit": null,
+    "actual_bank_remittance": null
+  },
+  "model_path": "site/steam-month-revenue-top500-scope-guard.mjs",
+  "tests_path": "tests/steam-month-revenue-top500-scope-guard.test.mjs",
+  "no_private_merchant_data": true
+}
