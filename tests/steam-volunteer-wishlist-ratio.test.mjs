@@ -24,6 +24,18 @@ test('Velocity does not outscore wishlist stock in the later survey era',()=>{
  assert(Math.abs(r.combined_pool_in_sample_r_squared_gain-.02)<1e-10);
  assert.equal(r.verified_out_of_sample_forecast_advantage,null);
 });
+test('Units per wishlist may exceed one and rank correlations may be negative',()=>{
+ const x=inputs();
+ x.unit_ratio_benchmarks_from_summary.later.month6=1.15;
+ x.unit_ratio_benchmarks_from_summary.later.month12=1.55;
+ x.in_sample_associations_primary.era_2023_2025.spearman_total_wishlists=-0.15;
+ assert.doesNotThrow(()=>audit(x));
+ assert.equal(audit(x).matched_wishlister_purchase_fraction,null);
+ const invalid=inputs();invalid.unit_ratio_benchmarks_from_summary.later.month6=-0.1;
+ assert.throws(()=>audit(invalid),/Invalid cumulative/);
+ const badCorrelation=inputs();badCorrelation.in_sample_associations_primary.era_2023_2025.spearman_total_wishlists=-1.1;
+ assert.throws(()=>audit(badCorrelation),/Invalid era/);
+});
 test('Contradictory cohorts, source provenance, follow-up and private fields fail closed',()=>{
  const x=inputs();x.sample.total_games=161;
  assert.throws(()=>audit(x),/reconcile/);

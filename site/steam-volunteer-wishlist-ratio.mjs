@@ -1,5 +1,7 @@
 // Audit a voluntary developer survey, not a representative Steam sales predictor.
-const num=x=>typeof x==='number'&&Number.isFinite(x)&&x>=0&&x<=1;
+const ratio=x=>typeof x==='number'&&Number.isFinite(x)&&x>=0;
+const rSquared=x=>ratio(x)&&x<=1;
+const rankCorrelation=x=>typeof x==='number'&&Number.isFinite(x)&&x>=-1&&x<=1;
 const keys=(x,a)=>x&&typeof x==='object'&&!Array.isArray(x)&&Object.keys(x).every(k=>a.includes(k));
 export function auditWishlistVolunteerEraStudy(r){
  if(!keys(r,['sample','unit_ratio_benchmarks_from_summary','in_sample_associations_primary']))
@@ -20,17 +22,20 @@ export function auditWishlistVolunteerEraStudy(r){
   throw new RangeError('Voluntary sample sizes do not reconcile');
  for(const era of [v.earlier,v.later]){
   if(!keys(era,['month1','month6','month12'])||
-   [era.month1,era.month6,era.month12].some(x=>!num(x))||
+   [era.month1,era.month6,era.month12].some(x=>!ratio(x))||
    era.month1>era.month6||era.month6>era.month12)
    throw new RangeError('Invalid cumulative units-per-wishlist ratios');
  }
  for(const era of [a.era_2020_2022,a.era_2023_2025]){
   if(!keys(era,['total_wishlists_r_squared','last_30day_adds_r_squared','spearman_total_wishlists'])||
-    Object.values(era).some(x=>!num(x)))throw new RangeError('Invalid era associations');
+    !rSquared(era.total_wishlists_r_squared)||
+    !rSquared(era.last_30day_adds_r_squared)||
+    !rankCorrelation(era.spearman_total_wishlists))
+   throw new RangeError('Invalid era associations');
  }
  if(!keys(a.pooled_eras,['total_r_squared','adds_30day_r_squared',
   'adds_7day_r_squared','total_plus_adds30_r_squared'])||
-  Object.values(a.pooled_eras).some(x=>!num(x)))
+  Object.values(a.pooled_eras).some(x=>!rSquared(x)))
   throw new RangeError('Invalid pooled association values');
  if(s.game_level_raw_transactions_available_in_mercata!==false||
   s.full_12month_followup_for_each_game_verified!==false||
