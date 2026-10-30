@@ -2545,6 +2545,39 @@
       "evidence_class": "official_public_store_release_date_and_developer_publisher_labels",
       "license": "Public URL and brief independently worded aggregated metadata, with no copyrighted article body, screenshots, player identities or private financial records reproduced.",
       "notes": "January 27 2026 release, Ion Software developer/publisher labels, AppID 3682060. Store visibility and review count are not actual paid sales or financial ledger."
+    },
+    {
+      "id": "steam-luckyest-sep2025-first-24h-author-100plus",
+      "url": "https://www.reddit.com/r/IndieDev/comments/1nq2j1r/i_sold_100_copies_of_my_game_on_steam/",
+      "title": "I sold 100 copies of my game on Steam",
+      "publisher": "Self-identified Luckyest developer, r/IndieDev",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "first_person_voluntary_initial_day_game_unit_milestone_without_authenticated_sales_statement",
+      "license": "Public link and short independently drafted aggregate summary only; no screenshot, account identifier or copyrighted narrative reproduced.",
+      "notes": "Author said Luckyest passed 100 copies in 24 hours and had four reviews and approximately 90 wishlists at launch, after around 2.5 months development described in a reply. Exact original post date and signed Steam ledger not available. This is the same author's same game as the December follow-up."
+    },
+    {
+      "id": "steam-luckyest-dec2025-author-10525-correction",
+      "url": "https://www.reddit.com/r/IndieDev/comments/1ps1jy0/update_from_100_copies_to_10000_copies_sold_on/",
+      "title": "Update: from 100 copies to 10,000+ copies sold on Steam",
+      "publisher": "Self-identified Luckyest developer, r/IndieDev",
+      "published_at": "2025-12-21",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "first_person_voluntary_later_cumulative_steam_sales_and_revised_net_money_label",
+      "license": "Public link and short original quantitative summaries only; no copied text, private sales export, personal identifiers or screenshots.",
+      "notes": "Author reports 10,525 units, about $20k gross, about $16.5k 'net', about 7% refunds and about 3k pending wishlists. In an author reply, clarifies 16.5k is after returns/taxes but BEFORE Steam's 30% fee and further withholding/local tax; suggests about 55% of gross may eventually be received. Neither figure is authenticated bank cash. December numbers are later observations of the same game as earlier milestone."
+    },
+    {
+      "id": "steam-luckyest-official-app3803930",
+      "url": "https://store.steampowered.com/app/3803930/Luckyest/",
+      "title": "Luckyest on Steam",
+      "publisher": "Valve Corporation — public Steam storefront",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "public_official_storefront_first_paid_release_and_game_developer_labels_not_merchant_sales",
+      "license": "Store metadata attribution and link only; no store text or media copied.",
+      "notes": "September 23, 2025 release date, AppID 3803930, Mobmonks public developer and publisher labels. Listing cannot validate first-day orders, December totals, percentage refund denominator, or legal payee remittances."
     }
   ],
   "claims": [
@@ -16841,6 +16874,112 @@
       "observed_at": "2026-10-29",
       "confidence": "medium",
       "limitations": "Voluntary selected self-report, not an independently sampled or authenticated Steam sales export. Financial deduction stage, historical release completeness and individual payout recipients are unverified."
+    },
+    {
+      "id": "steam-luckyest-store-sept2025-first-paid",
+      "text": "Steam lists Luckyest (AppID 3803930) as first released September 23, 2025, by Mobmonks; a storefront confirms chronology and labels, not cumulative transactions.",
+      "source_ids": [
+        "steam-luckyest-official-app3803930"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected public same-author same-title milestones. No authenticated partner financial export or independent purchase ledger; later post's clarified net stage is still not bank cash. Changes over time are not a causal sales-growth experiment, and one successful survivor cannot represent initial paid releases."
+    },
+    {
+      "id": "steam-luckyest-firstday-over100-90wishlists",
+      "text": "In an early same-game developer post, the author says Luckyest exceeded 100 units in 24 hours with four reviews and about 90 launch wishlists; the precise count and matched wishlist conversion cohort are not verified.",
+      "source_ids": [
+        "steam-luckyest-sep2025-first-24h-author-100plus"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected public same-author same-title milestones. No authenticated partner financial export or independent purchase ledger; later post's clarified net stage is still not bank cash. Changes over time are not a causal sales-growth experiment, and one successful survivor cannot represent initial paid releases."
+    },
+    {
+      "id": "steam-luckyest-approx-2p5-months-work",
+      "text": "The early post's author describes developing Luckyest for roughly two and a half months, but not complete paid work hours or a full expense ledger.",
+      "source_ids": [
+        "steam-luckyest-sep2025-first-24h-author-100plus"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected public same-author same-title milestones. No authenticated partner financial export or independent purchase ledger; later post's clarified net stage is still not bank cash. Changes over time are not a causal sales-growth experiment, and one successful survivor cannot represent initial paid releases."
+    },
+    {
+      "id": "steam-luckyest-later-10525-units",
+      "text": "A December 21, 2025 update from the same author reports 10,525 Steam units; these two posts observe one evolving title, not two independent games.",
+      "source_ids": [
+        "steam-luckyest-sep2025-first-24h-author-100plus",
+        "steam-luckyest-dec2025-author-10525-correction"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected public same-author same-title milestones. No authenticated partner financial export or independent purchase ledger; later post's clarified net stage is still not bank cash. Changes over time are not a causal sales-growth experiment, and one successful survivor cannot represent initial paid releases."
+    },
+    {
+      "id": "steam-luckyest-dec-20k-gross",
+      "text": "The December report describes about $20,000 Steam gross across the cumulative game life to that point; it is not independently verified paid settlement.",
+      "source_ids": [
+        "steam-luckyest-dec2025-author-10525-correction"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected public same-author same-title milestones. No authenticated partner financial export or independent purchase ledger; later post's clarified net stage is still not bank cash. Changes over time are not a causal sales-growth experiment, and one successful survivor cannot represent initial paid releases."
+    },
+    {
+      "id": "steam-luckyest-dec-16500-net-labelled-corrected",
+      "text": "The author initially labels approximately $16,500 as net but clarifies in a direct reply that it is after refund/tax adjustments and before Steam's platform share; it must not be presented as settled personal receipts.",
+      "source_ids": [
+        "steam-luckyest-dec2025-author-10525-correction",
+        "steam-reporting-faq-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected public same-author same-title milestones. No authenticated partner financial export or independent purchase ledger; later post's clarified net stage is still not bank cash. Changes over time are not a causal sales-growth experiment, and one successful survivor cannot represent initial paid releases."
+    },
+    {
+      "id": "steam-luckyest-reported-7pct-refunds-not-ledger",
+      "text": "The follow-up describes an approximate 7% refund rate, without a linked refund-cohort transaction ledger or exact refund-unit reconciliation.",
+      "source_ids": [
+        "steam-luckyest-dec2025-author-10525-correction"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected public same-author same-title milestones. No authenticated partner financial export or independent purchase ledger; later post's clarified net stage is still not bank cash. Changes over time are not a causal sales-growth experiment, and one successful survivor cannot represent initial paid releases."
+    },
+    {
+      "id": "steam-luckyest-estimated-55pct-gross-not-bank-cash",
+      "text": "The author suggests an approximate eventual 55% gross-revenue retention rate after additional deductions, but also says personal country taxes would still apply; this hypothetical is not a verified payout.",
+      "source_ids": [
+        "steam-luckyest-dec2025-author-10525-correction",
+        "steam-reporting-faq-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected public same-author same-title milestones. No authenticated partner financial export or independent purchase ledger; later post's clarified net stage is still not bank cash. Changes over time are not a causal sales-growth experiment, and one successful survivor cannot represent initial paid releases."
+    },
+    {
+      "id": "steam-luckyest-90wishlist-10525-late-not-cohort",
+      "text": "Comparing roughly 90 launch wishlists with over 10,000 later cumulative units is not a wishlist conversion rate because the cohorts, acquisition sources and time windows differ.",
+      "source_ids": [
+        "steam-luckyest-sep2025-first-24h-author-100plus",
+        "steam-luckyest-dec2025-author-10525-correction"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected public same-author same-title milestones. No authenticated partner financial export or independent purchase ledger; later post's clarified net stage is still not bank cash. Changes over time are not a causal sales-growth experiment, and one successful survivor cannot represent initial paid releases."
+    },
+    {
+      "id": "steam-luckyest-recovery-selected-not-population",
+      "text": "One self-selected title with substantial later sales cannot establish that low initial exposure typically predicts recovery, or derive market-wide first-game median profit, income, or zero-paid-sale incidence.",
+      "source_ids": [
+        "steam-luckyest-sep2025-first-24h-author-100plus",
+        "steam-luckyest-dec2025-author-10525-correction",
+        "steam-luckyest-official-app3803930"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected public same-author same-title milestones. No authenticated partner financial export or independent purchase ledger; later post's clarified net stage is still not bank cash. Changes over time are not a causal sales-growth experiment, and one successful survivor cannot represent initial paid releases."
     }
   ],
   "observations": [],

@@ -13,7 +13,7 @@ test('All Steam task evidence links, source joins and current scores are sound',
  assert.equal(a.source_count,d.evidence.length);
  assert.equal(a.claim_count,d.claims.length);
  assert(a.distinct_evidence_files>25);
- assert.equal(a.registered_reused_sample_families,4);
+ assert.equal(a.registered_reused_sample_families,5);
 });
 test('Fails closed on missing, traversal, duplicate and absolute references',()=>{
  for(const f of ['ontology/steam/missing-thing.md','../private.txt','/etc/passwd','https://example.com/hello','ontology//bad.json']){

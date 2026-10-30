@@ -2,17 +2,17 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {auditSteamSourceFamilies as audit} from '../scripts/steam-source-families.mjs';
 const load=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
 const base=()=>({d:load('specimens/steam.json'),registry:load('ontology/steam/source-families.json')});
-test('Four declared source families prevent double-counting reused samples',()=>{
+test('Five declared source families prevent double-counting reused samples',()=>{
  const {d,registry}=base(),r=audit(d.evidence,d.claims,registry);
  assert.equal(r.valid,true,r.errors.join('; '));
- assert.equal(r.registered_reused_cohort_families,4);
- assert.equal(r.related_distinct_sample_documents,3);
+ assert.equal(r.registered_reused_cohort_families,5);
+ assert.equal(r.related_distinct_sample_documents,4);
  assert.equal(r.unique_data_studies_in_entire_steam_dossier,null);
  assert.equal(r.verified_paid_order_count,null);
 });
 test('Recognizes sharing of 1312 and 10403 data while retaining different sample frames',()=>{
  const {d,registry}=base(),families=registry.families;
- assert.deepEqual(families.map(x=>x.documented_selected_games),[1312,10403,1230,4]);
+ assert.deepEqual(families.map(x=>x.documented_selected_games),[1312,10403,1230,4,1]);
  assert.equal(registry.related_documents_not_independent_replications[0].relation,
  'same_publisher_review_history_collection_but_distinct_eligibility_filter');
  assert.equal(audit(d.evidence,d.claims,registry).valid,true);
