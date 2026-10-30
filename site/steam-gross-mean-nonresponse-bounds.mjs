@@ -10,6 +10,12 @@ const missingKeys=['fixture_id','horizon_days','verified_upper_cap_usd_cents','v
  'partial_horizon_attested','paid_checkout_attribution_attested','financial_access_attested'];
 
 const present=x=>x!==null&&x!==undefined;
+// Compare exact four-decimal USD before directional cent rounding, which
+// can otherwise conceal an inconsistent partial floor and verified cap.
+const exactTenThousandths=(row,centsKey,decimalKey)=>
+ present(row[centsKey])
+  ?BigInt(row[centsKey])*100n
+  :BigInt(row[decimalKey].replace('.',''));
 // Input amounts are either exact safe cents or canonical four-decimal USD, never both.
 const amountBounds=(row,centsKey,decimalKey,label)=>{
  const cents=present(row[centsKey]),decimal=present(row[decimalKey]);
@@ -71,7 +77,10 @@ export function boundSyntheticSteamGrossMean(args={}){
      if(row.cap_verified!==true)throw new TypeError('Finite cap requires verification');
      const top=amountBounds(row,'verified_upper_cap_usd_cents','verified_upper_cap_usd_4dp',
       'missing upper cap').upper_cents;
-     if(top<floor)throw new RangeError('Verified upper cap cannot be below authenticated partial gross floor');
+     const floorExact=hasFloor?exactTenThousandths(row,'observed_partial_gross_usd_cents','observed_partial_gross_usd_4dp'):0n;
+     const capExact=exactTenThousandths(row,'verified_upper_cap_usd_cents','verified_upper_cap_usd_4dp');
+     if(capExact<floorExact||top<floor)
+      throw new RangeError('Verified upper cap cannot be below authenticated partial gross floor before cent rounding');
      upperExtra=add(upperExtra,top,'upper caps');
     }
    }
