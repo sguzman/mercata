@@ -2644,6 +2644,28 @@
       "evidence_class": "third_party_public_demo_release_metadata_not_paid_merchant_transaction",
       "license": "Short bibliographic citation and independent basic release metadata only; no screenshots or copied source narrative.",
       "notes": "October 12 2026 free demo release, AppID 5382250, parent main game 5347600; demo is separate free content and must not be counted as first paid launch or paid copies."
+    },
+    {
+      "id": "steam-gamesstats-2026-q1-patreon-7478-model-report",
+      "url": "https://www.patreon.com/gamesstats/posts/indie-pocalypse-156244811",
+      "publisher": "Games-Stats.com Team — official Patreon post",
+      "title": "The Indie-pocalypse is here? Steam Q1 2026 Data Analysis",
+      "published_at": "2026-04-22",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "vendor_reported_modelled_games_release_cohort_with_internally_unreconciled_average_and_total",
+      "license": "Only bibliographic link and independently written short aggregate comparisons and arithmetic. No graphics, copyrighted narrative or raw paid reports copied.",
+      "notes": "April 22 original vendor Patreon report says 7,478 games Jan1–Apr16, around $110,000 per-game average, $250 median and $650M total estimated revenue; 7,478×$110k=$822.58M, inconsistent with $650M outside rounding. It labels Q1 despite April inclusion; gross/net treatment of $650M and top-three net not fully reconciled."
+    },
+    {
+      "id": "steam-gamesstats-2026-q1-site-6169-different-report",
+      "url": "https://games-stats.com/blog/Steam_in_Q12026/",
+      "publisher": "Games-Stats.com — public operator website",
+      "title": "The Indie-pocalypse is here? Steam Q1 2026 Data Analysis (operator website version)",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "same_vendor_conflicting_report_version_website_search_index_text_not_authenticated_sales",
+      "license": "Public link plus independently summarized aggregates, no charts or long-form source passages reproduced.",
+      "notes": "Website version visible in search index (direct page fetch returned 403) says 6,169 releases Jan1–Apr22, 1,048 F2P, 5,121 paid, around $120k mean, $290 all-game median, ~$350 paid-only median, ~$733M total. 6,169×$120k=$740.28M, plausibly rounded to $733M. Different population and later cutoff than Patreon version; no model-row provenance, cohort crosswalk or revision history available."
     }
   ],
   "claims": [
@@ -17368,6 +17390,130 @@
       "observed_at": "2026-10-29",
       "confidence": "medium",
       "limitations": "Second-person anecdotal public reporting within one day of release, not an authenticated Steam legal-payee ledger; 300+ wishlist stock and 0.3% dashboard label have incomplete unique-user/time-window definitions. Store price, reviews and free-demo downloads cannot verify paid orders."
+    },
+    {
+      "id": "steam-gamesstats-patreon-7478-through-apr16",
+      "text": "The Games-Stats Patreon Q1 report says it analyzed 7,478 games first released Jan 1–Apr 16, 2026; this includes 16 days of Q2 and is not a calendar-Q1-only cohort.",
+      "source_ids": [
+        "steam-gamesstats-2026-q1-patreon-7478-model-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
+    },
+    {
+      "id": "steam-gamesstats-site-6169-through-apr22",
+      "text": "The similarly titled operator website version instead reports 6,169 games through Apr 22, 2026; a later cutoff with fewer counted records requires a population/method revision explanation before comparison.",
+      "source_ids": [
+        "steam-gamesstats-2026-q1-site-6169-different-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
+    },
+    {
+      "id": "steam-gamesstats-two-reports-not-independent",
+      "text": "The two pages are from the same Games-Stats operator and apparently different versions of one named analysis, not two independently sampled confirmations of Steam earnings.",
+      "source_ids": [
+        "steam-gamesstats-2026-q1-patreon-7478-model-report",
+        "steam-gamesstats-2026-q1-site-6169-different-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
+    },
+    {
+      "id": "steam-gamesstats-patreon-110k-250median",
+      "text": "The Patreon report prints approximately $110,000 mean and $250 median per listed game, but does not expose authenticated per-game transaction or financial cohort data.",
+      "source_ids": [
+        "steam-gamesstats-2026-q1-patreon-7478-model-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
+    },
+    {
+      "id": "steam-gamesstats-site-120k-290median",
+      "text": "The website version reports a roughly $120,000 mean, $290 overall median and approximately $350 paid-game median for a different stated population.",
+      "source_ids": [
+        "steam-gamesstats-2026-q1-site-6169-different-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
+    },
+    {
+      "id": "steam-gamesstats-patreon-mean-total-reconcile",
+      "text": "For the Patreon printed figures 7,478 games times $110,000 mean implies $822.58M aggregate, not its $650M total; $650M implies roughly $86,922 mean, a material unresolved mismatch.",
+      "source_ids": [
+        "steam-gamesstats-2026-q1-patreon-7478-model-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
+    },
+    {
+      "id": "steam-gamesstats-site-mean-total-rounds",
+      "text": "The website's 6,169 games and $120,000 mean imply $740.28M versus its roughly $733M printed total, a near-1% discrepancy consistent with approximate rounding but not proof of revenue validity.",
+      "source_ids": [
+        "steam-gamesstats-2026-q1-site-6169-different-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
+    },
+    {
+      "id": "steam-gamesstats-paid-f2p-5121plus1048",
+      "text": "The site reports 5,121 paid games and 1,048 free-to-play in the 6,169-game sample; those figures sum exactly, but do not reveal original priced/free status, later reclassification or actual paid orders.",
+      "source_ids": [
+        "steam-gamesstats-2026-q1-site-6169-different-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
+    },
+    {
+      "id": "steam-gamesstats-paid-median-not-developer-income",
+      "text": "The website's roughly $350 median for selected paid games is a vendor model summary, not legal-publisher bank receipts, after-cost developer profit or the representative mean earnings of all Steam developers.",
+      "source_ids": [
+        "steam-gamesstats-2026-q1-site-6169-different-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
+    },
+    {
+      "id": "steam-gamesstats-top-three-share-mixing",
+      "text": "The Patreon version says top three generated approximately $300M net while describing $650M total revenue without a consistent gross/net basis; the website cites $314M top-three net and $733M total, so direct percentage comparisons require matched finance definitions.",
+      "source_ids": [
+        "steam-gamesstats-2026-q1-patreon-7478-model-report",
+        "steam-gamesstats-2026-q1-site-6169-different-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
+    },
+    {
+      "id": "steam-gamesstats-april-sample-q1-label",
+      "text": "Both vendor pages title the study Q1 2026 while extending reported release windows into April, making the quarter label misleading for a strict Jan–Mar denominator.",
+      "source_ids": [
+        "steam-gamesstats-2026-q1-patreon-7478-model-report",
+        "steam-gamesstats-2026-q1-site-6169-different-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
+    },
+    {
+      "id": "steam-gamesstats-model-uncertainty-zero-sales",
+      "text": "Neither version publishes complete first-paid-app transaction records or model nonresponse details; their medians cannot authenticate a true-zero paid-sale fraction or representative publisher income.",
+      "source_ids": [
+        "steam-gamesstats-2026-q1-patreon-7478-model-report",
+        "steam-gamesstats-2026-q1-site-6169-different-report"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
     }
   ],
   "observations": [],

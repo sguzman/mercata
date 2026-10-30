@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "same_vendor_two_public_report_versions_incompatible_release_frames_and_arithmetic",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-gamesstats-2026-q1-patreon-7478-model-report",
+    "steam-gamesstats-2026-q1-site-6169-different-report"
+  ],
+  "claim_ids": [
+    "steam-gamesstats-patreon-7478-through-apr16",
+    "steam-gamesstats-site-6169-through-apr22",
+    "steam-gamesstats-two-reports-not-independent",
+    "steam-gamesstats-patreon-110k-250median",
+    "steam-gamesstats-site-120k-290median",
+    "steam-gamesstats-patreon-mean-total-reconcile",
+    "steam-gamesstats-site-mean-total-rounds",
+    "steam-gamesstats-paid-f2p-5121plus1048",
+    "steam-gamesstats-paid-median-not-developer-income",
+    "steam-gamesstats-top-three-share-mixing",
+    "steam-gamesstats-april-sample-q1-label",
+    "steam-gamesstats-model-uncertainty-zero-sales"
+  ],
+  "report_versions": [
+    {
+      "label": "vendor_patreon_2026_04_22",
+      "source_id": "steam-gamesstats-2026-q1-patreon-7478-model-report",
+      "published_at": "2026-04-22",
+      "cohort_start": "2026-01-01",
+      "cohort_end": "2026-04-16",
+      "reported_game_count": 7478,
+      "mean_gross_usd_approx": 110000,
+      "median_gross_usd_approx": 250,
+      "total_gross_usd_approx": 650000000,
+      "paid_game_count": null,
+      "free_game_count": null,
+      "model_data_publicly_reproducible": false
+    },
+    {
+      "label": "vendor_website_index_snapshot",
+      "source_id": "steam-gamesstats-2026-q1-site-6169-different-report",
+      "published_at": null,
+      "cohort_start": "2026-01-01",
+      "cohort_end": "2026-04-22",
+      "reported_game_count": 6169,
+      "mean_gross_usd_approx": 120000,
+      "median_gross_usd_approx": 290,
+      "reported_paid_only_median_gross_usd_approx": 350,
+      "total_gross_usd_approx": 733000000,
+      "paid_game_count": 5121,
+      "free_game_count": 1048,
+      "model_data_publicly_reproducible": false
+    }
+  ],
+  "descriptive_arithmetic": {
+    "patreon_count_times_reported_mean_usd": 822580000,
+    "patreon_reported_total_usd": 650000000,
+    "patreon_implied_mean_from_total_usd": 86921.63680128376,
+    "patreon_dollar_discrepancy_total_minus_count_mean": -172580000,
+    "website_count_times_reported_mean_usd": 740280000,
+    "website_reported_total_usd": 733000000,
+    "website_implied_mean_from_total_usd": 118819.90598152051,
+    "website_dollar_discrepancy_total_minus_count_mean": -7280000,
+    "website_paid_plus_free_equals_total": true,
+    "strict_calendar_q1_end": "2026-03-31",
+    "both_reports_include_april": true
+  },
+  "cross_version": {
+    "same_vendor": true,
+    "same_title": true,
+    "cohort_counts_match": false,
+    "cutoff_dates_match": false,
+    "method_revision_published": false,
+    "can_merge_as_one_statistical_sample": false,
+    "can_treat_versions_as_independent_replications": false,
+    "site_direct_document_fetch_success": false,
+    "site_search_index_excerpt_used": true
+  },
+  "unknown": {
+    "true_report_population_crosswalk": null,
+    "authenticated_merchant_gross_revenue": null,
+    "exact_eligible_first_paid_game_count": null,
+    "typical_legal_publisher_after_platform_share_income": null,
+    "representative_earning_median": null,
+    "exact_zero_paid_sale_fraction": null,
+    "true_methodology_revision_date": null,
+    "reason_for_patreon_arithmetic_mismatch": null
+  },
+  "model_path": "site/steam-vendor-mean-total-consistency-guard.mjs",
+  "tests_path": "tests/steam-gamesstats-version-reconciliation.test.mjs",
+  "no_private_data": true
+}
