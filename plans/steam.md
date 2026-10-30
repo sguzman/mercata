@@ -7,6 +7,12 @@
 
 
 
+## First-paid discount history and seasonal exemption QA (October 30, 2026)
+
+The [official-rule and public-case crosswalk](../ontology/steam/steam-discount-history-firstpaid-eligibility-2026.md) improves discount planning beyond release-date-only checks. Its [synthetic checker](../site/steam-discount-sequence-cooldown.mjs) distinguishes **release**, **any price rise** and **prior discount end** as separate thirty-day clocks, plus the narrower exemption for *official* seasonal sales. It enforces launch percent/duration constraints, distinguishes 75% discounts from launch offers, and withholds even conditional calendar approval when the earlier discount history is incomplete. The August 31 *In & Out* paid release and October 2 promotion announcement are 32 calendar days apart; that clears only the release gate, not necessarily earlier-promotion waiting requirements. The [regression tests](../tests/steam-discount-sequence-cooldown.test.mjs) use invented first-paid fixtures and make no claim about partner authorization or causal sales. Four existing primary-source citations and prior case evidence support the clarification; no unverified public source or new market-income observations were added.
+
+Three existing tasks each gained one evidence-backed point; total Steam progress is **91.666%** (Δ **+0.010 percentage points**) across the same 293 tasks, 257 sources and 1,516 claims.
+
 ## Grime&Gold first-paid game versus early demo and net-pre-share label (October 30, 2026)
 
 The [Grime&Gold author disclosure audit](../ontology/steam/steam-grimegold-firstgame-net-stage-demo-window-2026.md) registers a self-selected **three-person** game's January 20 paid launch, a prior October 2024 free/demo stage, **642 self-reported sold copies**, and **$2,425 author-labelled Steam net before the 30% platform cut**. Neither the net amount nor the current price verifies bank remittance, member income or after-labor profit. The author reports a 151 + 559 = 710 wishlist Next Fest checkpoint and incompatible **~300 versus ~200 GX demo additions** without common observation windows; those and other festival events are not independent causal acquisition effects. Three source records, ten bounded claims and four regression tests advance four existing tasks by one point each. Steam research becomes **91.655%** (Δ **+0.014 percentage points**), **257 public sources**, **1,516 claims**, **293 original tasks** preserved.

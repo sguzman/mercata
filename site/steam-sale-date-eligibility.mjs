@@ -22,5 +22,5 @@ export function calendarDiscountEligibility({releaseDate,priceIncreaseDate=null,
   price_increase_cooldown_ends:price?add30(price).toISOString().slice(0,10):null,
   actual_partner_discount_permission_verified:false,
   observed_sales_increment:null,causal_event_uplift:null,
-  caveat:'Seasonal exemption for ordinary discount-to-discount cooldowns does not cancel release or price increase cooldowns. Day-level arithmetic ignores hour cutoff and configured package permissions.'};
+  caveat:'Seasonal exemption for ordinary discount-to-discount cooldowns does not cancel release or price increase cooldowns. Preliminary release/price-rise gate only: this function has no previous-discount history, so a true result is not proof the 30-day discount-to-discount cooldown is clear. For that decision use the synthetic sequence checker. Day-level arithmetic ignores hour cutoffs and configured package permissions.'};
 }

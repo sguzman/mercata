@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_first_paid_discount_cooldown_history_policy_and_public_selfreport_crosswalk",
+  "reviewed_at": "2026-10-30",
+  "model_path": "site/steam-discount-sequence-cooldown.mjs",
+  "test_path": "tests/steam-discount-sequence-cooldown.test.mjs",
+  "source_ids": [
+    "steam-discount-rules-2026",
+    "steam-inout-official-store-20261030",
+    "steam-inout-20261002-community-discount-post"
+  ],
+  "claim_ids": [
+    "steam-standard-launch-discount-seven-fourteen",
+    "steam-postlaunch-discount-bounds",
+    "steam-30day-postlaunch-cooldown",
+    "steam-30day-postincrease-cooldown",
+    "steam-seasonal-sale-exemption-narrow",
+    "steam-inout-discount-and-community-pack"
+  ],
+  "policy": {
+    "discount_after_another_regular_discount_wait_days": 30,
+    "ordinary_postrelease_wait_days": 30,
+    "price_increase_wait_days": 30,
+    "launch_percent_min": 10,
+    "launch_percent_max": 40,
+    "launch_days_min": 7,
+    "launch_days_max": 14,
+    "ordinary_percent_min": 10,
+    "ordinary_percent_max": 95,
+    "ordinary_days_min": 1,
+    "ordinary_days_max": 14,
+    "official_seasonal_waives_discount_to_discount_cooldown": true,
+    "seasonal_exception_waives_release_cooldown": false,
+    "seasonal_exception_waives_price_increase_cooldown": false,
+    "seasonal_discount_length_is_event_specific": true,
+    "calendar_day_qa_is_partner_permission": false
+  },
+  "first_paid_game_case": {
+    "title": "In & Out",
+    "first_paid_release_date": "2026-08-31",
+    "discount_announcement_date": "2026-10-02",
+    "discount_date": "2026-10-02",
+    "days_from_release_to_discount_announcement": 32,
+    "promotion_percent_reported": 75,
+    "discount_would_exceed_launch_discount_percent_max": true,
+    "standard_discount_release_cooldown_expired_by_announcement": true,
+    "actual_promotion_start_timestamp_verified": null,
+    "previous_discount_end_date_verified": null,
+    "any_prior_launch_discount_history_complete": false,
+    "official_seasonal_sale_participation_verified": null,
+    "actual_package_discount_eligibility_verified": null,
+    "observed_sale_increase_causal_discount_lift_verified": null
+  },
+  "synthetic_scenarios": [
+    {
+      "fixture_id": "fixture-inout-pattern",
+      "discount_kind": "standard",
+      "release_date": "2026-08-31",
+      "discount_start": "2026-10-02",
+      "discount_percent": 75,
+      "prior_history_complete": false,
+      "conditional_calendar_result": null
+    },
+    {
+      "fixture_id": "fixture-previous-launch",
+      "discount_kind": "standard",
+      "release_date": "2026-08-31",
+      "discount_start": "2026-10-02",
+      "discount_percent": 75,
+      "prior_discount_end": "2026-09-13",
+      "prior_discount_end_plus_30": "2026-10-13",
+      "conditional_calendar_result": false
+    },
+    {
+      "fixture_id": "fixture-official-seasonal",
+      "discount_kind": "official_seasonal",
+      "release_date": "2026-11-15",
+      "discount_start": "2026-12-17",
+      "discount_percent": 20,
+      "earlier_launch_discount_end": "2026-11-22",
+      "release_cooldown_ends": "2026-12-15",
+      "discount_cooldown_waived": true,
+      "conditional_calendar_result": true
+    }
+  ],
+  "unknown": {
+    "verified_actual_partner_discount_eligibility": null,
+    "verified_base_prices_in_every_currency": null,
+    "actual_prior_discount_end_date": null,
+    "causal_discount_paid_sale_lift": null,
+    "incremental_publisher_net_cash": null
+  },
+  "private_or_partner_data_accessed": false,
+  "original_task_count": 293
+}
