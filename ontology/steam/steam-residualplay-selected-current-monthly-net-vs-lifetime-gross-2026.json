@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "third_party_selected_model_net_per_month_bucket_and_noncomparable_lifetime_comparison",
+  "reviewed_at": "2026-10-30",
+  "source_ids": [
+    "steam-residualplay-oct2026-selected-indie-monthly-net-model",
+    "steam-residualplay-oct2026-api-net-proxy-method",
+    "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median"
+  ],
+  "claim_ids": [
+    "steam-residualplay-indie-tracked-1289-current",
+    "steam-residualplay-reported590-monthly-median",
+    "steam-residualplay-net-assumed55-percent",
+    "steam-residualplay-stated30to50-model-error",
+    "steam-residualplay-five-monthly-bin-counts",
+    "steam-residualplay-353-above2k-selected",
+    "steam-residualplay-no-survivorbias-assertion-unverified",
+    "steam-residualplay-genre-tag-not-independent-creators",
+    "steam-residualplay-monthly-vs-indiepilot-lifetime-incompatible"
+  ],
+  "vendor_group": {
+    "tags": [
+      "Indie"
+    ],
+    "release_year_from": 2022,
+    "release_year_through": 2026,
+    "tracked_titles": 1289,
+    "first_paid_release_frame_verified": false,
+    "delisted_games_verified_included": false,
+    "published_no_survivor_bias_assertion": true,
+    "complete_sampling_frame_documented": false,
+    "reported_monthly_net_median_usd": 590,
+    "under_100": 151,
+    "from_100_to_500": 447,
+    "from_500_to_2000": 338,
+    "from_2000_to_10000": 230,
+    "over_10000": 123,
+    "reported_over_2000": 353,
+    "net_income_equals_actual_developer_bank_receipts": false,
+    "review_snapshot_population_complete": false
+  },
+  "vendor_model": {
+    "modeled_net_to_gross_approx_ratio": 0.55,
+    "per_title_error_quoted_range_pct": [
+      30,
+      50
+    ],
+    "actual_merchant_ledger_validated": false,
+    "income_taxes_or_legal_publisher_contract_covered": false,
+    "month_horizon": "current_vendor_estimate_not_fixed_postlaunch_month"
+  },
+  "comparison": {
+    "other_vendor": "IndiePilot",
+    "other_vendor_selected_paid_games": 58650,
+    "other_vendor_selected_lifetime_gross_median_usd": 5997,
+    "matched_appids_and_game_age": false,
+    "comparable_report_horizon": false,
+    "same_earnings_category": false,
+    "actual_net_cash_ratio_from_these_medians": null
+  },
+  "unknown": {
+    "actual_monthly_legal_publisher_median_usd": null,
+    "representative_firstpaid_game_median_usd": null,
+    "true_zero_sale_rate": null,
+    "after_cost_developer_income_median": null,
+    "source_selection_survival_probability": null
+  },
+  "code_module": "site/steam-residualplay-bucket-scope-guard.mjs",
+  "tests_path": "tests/steam-residualplay-bucket-scope-guard.test.mjs",
+  "no_private_accounts_or_raw_bulk_extract": true
+}

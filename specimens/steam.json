@@ -2347,6 +2347,28 @@
       "evidence_class": "public_dynamic_store_listing_release_dates_and_roles_not_sales_ledger",
       "license": "Public metadata and original analysis; no reproduction of store media, screenshots or full text.",
       "notes": "Store lists early access June 14, 2022, full version September 25, 2024, developer David Jalbert, publisher Hellforge Studios. Dynamic listed publisher, reviews and price do not verify 2025 game sales or any bank deposits."
+    },
+    {
+      "id": "steam-residualplay-oct2026-selected-indie-monthly-net-model",
+      "url": "https://residualplay.com/niche/indie",
+      "publisher": "ResidualPlay — third-party commercial game analytics provider",
+      "title": "What does your genre actually earn? Indie-tagged Steam games",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "public_live_provider_selected_tracker_modelled_current_monthly_net_revenue_histogram",
+      "license": "Provider page cited through URL, metadata, brief independently written numerical summary; no source tables or game-level records reproduced.",
+      "notes": "Reports selected tracked 2022–2026 Indie-tagged current catalog subset of 1,289 and modeled median USD $590 per month after assumed platform/tax adjustments, not actual merchant cash. Self-described no-survivor-bias claim has no complete original-paid-launch frame on page."
+    },
+    {
+      "id": "steam-residualplay-oct2026-api-net-proxy-method",
+      "url": "https://www.residualplay.com/docs/",
+      "publisher": "ResidualPlay — operator-authored API/method documentation",
+      "title": "ResidualPlay API documentation: revenue figures and selection",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "operator_model_documentation_not_independent_payment_validation",
+      "license": "Source metadata and short independently written methodological summary only; no endpoint output dataset or bulk CSV redistributed.",
+      "notes": "Document states monthly net estimates approximate 55% of modeled gross, estimated per-title error about ±30–50%, and distinguishes review/month and promotions from sales. Bulk data is not fully openly published; source does not authenticate actual individual publisher royalty contracts."
     }
   ],
   "claims": [
@@ -15920,6 +15942,101 @@
       "confidence": "high",
       "observed_at": "2026-10-30",
       "limitations": "There is no complete original paid-release population, matched randomized release strategy or individual labor and publisher-contract ledger."
+    },
+    {
+      "id": "steam-residualplay-indie-tracked-1289-current",
+      "text": "A live ResidualPlay Indie niche page reports 1,289 tracked Indie-tagged Steam games in the 2022–2026 release-year selection, rather than disclosing a verified complete historical first-paid-game population.",
+      "source_ids": [
+        "steam-residualplay-oct2026-selected-indie-monthly-net-model"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Provider-selected and time-varying tracker; it does not demonstrate inclusion of removed, nontracked, originally paid or zero-activity titles."
+    },
+    {
+      "id": "steam-residualplay-reported590-monthly-median",
+      "text": "ResidualPlay reports a $590 monthly modeled 'net to developer' median across its selected 1,289 Indie-tagged tracked titles, not an authenticated legal-publisher deposit or fixed-horizon lifetime revenue measure.",
+      "source_ids": [
+        "steam-residualplay-oct2026-selected-indie-monthly-net-model",
+        "steam-residualplay-oct2026-api-net-proxy-method"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "The model's deductions are proxies and omit publisher-specific agreements, cost allocations, realized currency and income taxation."
+    },
+    {
+      "id": "steam-residualplay-net-assumed55-percent",
+      "text": "The provider documentation defines net/month as an estimated amount after notional VAT, refunds and platform share, generally around 55% of estimated gross; it does not establish actual contract-based payout percentages.",
+      "source_ids": [
+        "steam-residualplay-oct2026-api-net-proxy-method"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "A rule-of-thumb model is not transaction reconciled or comparable to a game's legal author-specific net."
+    },
+    {
+      "id": "steam-residualplay-stated30to50-model-error",
+      "text": "ResidualPlay warns that per-title estimates have roughly 30–50% uncertainty, so the $590 sample median should not be displayed as cents-precise real payment data.",
+      "source_ids": [
+        "steam-residualplay-oct2026-selected-indie-monthly-net-model",
+        "steam-residualplay-oct2026-api-net-proxy-method"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Quoted uncertainty band is vendor-reported and not independently validated against observed individual receipts."
+    },
+    {
+      "id": "steam-residualplay-five-monthly-bin-counts",
+      "text": "The Indie niche page prints modeled monthly net group counts of 151 below $100, 447 at $100–500, 338 at $500–2,000, 230 at $2,000–10,000 and 123 above $10,000, summing to 1,289.",
+      "source_ids": [
+        "steam-residualplay-oct2026-selected-indie-monthly-net-model"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Bucket edge inclusivity and true row-level amounts are not independently audited, and the groups describe vendor estimates not bank records."
+    },
+    {
+      "id": "steam-residualplay-353-above2k-selected",
+      "text": "The provider reports 353 of its 1,289 tracked Indie titles above a modeled $2,000/month, matching the 230 plus 123 printed upper bins, or approximately 27.4% in its selected sample.",
+      "source_ids": [
+        "steam-residualplay-oct2026-selected-indie-monthly-net-model"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "The fraction is not a share of all developers, legal publishers, full catalog or games yielding $2,000 actual monthly personal income."
+    },
+    {
+      "id": "steam-residualplay-no-survivorbias-assertion-unverified",
+      "text": "Although the ResidualPlay niche page says its tracked sample has no survivor bias, the provided page does not identify the complete population of originally paid Steam launches or show that every historical delisted or untracked record was included.",
+      "source_ids": [
+        "steam-residualplay-oct2026-selected-indie-monthly-net-model",
+        "steam-residualplay-oct2026-api-net-proxy-method"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "This audits absence of published frame evidence rather than proving a known missing-game count."
+    },
+    {
+      "id": "steam-residualplay-genre-tag-not-independent-creators",
+      "text": "A game bearing the Indie Steam tag is not proof of an individual solo developer or a particular legal payee; the source's top-ranked Indie examples include products from studios of different sizes.",
+      "source_ids": [
+        "steam-residualplay-oct2026-selected-indie-monthly-net-model"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Store tags are many-to-many content labels, not a census of employee counts or corporate beneficial ownership."
+    },
+    {
+      "id": "steam-residualplay-monthly-vs-indiepilot-lifetime-incompatible",
+      "text": "ResidualPlay's $590/month selected-tracker net estimate and IndiePilot's $5,997 selected-database modeled lifetime gross median are in different currencies-of-time, payee deduction definitions and eligible title frames and cannot be combined into an observed median developer income.",
+      "source_ids": [
+        "steam-residualplay-oct2026-selected-indie-monthly-net-model",
+        "steam-residualplay-oct2026-api-net-proxy-method",
+        "steam-indiepilot-2026-priced-reviewed-proxy-puzzle-median"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Neither provider supplies a matched first-paid game cohort or audited publisher remittances; lifetime cannot be divided into months without complete product age and earnings trajectories."
     }
   ],
   "observations": [],

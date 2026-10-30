@@ -7,6 +7,10 @@
 
 
 
+## ResidualPlay: selected monthly 'net' model versus unmatched lifetime gross (October 30, 2026)
+
+A [public selected-genre monthly-model audit](../ontology/steam/steam-residualplay-selected-current-monthly-net-vs-lifetime-gross-2026.md) records ResidualPlay's **$590/month modeled net** median across **1,289 tracked** 2022–2026 Indie-tagged games, not a complete first-paid release frame or actual legal-publisher remittance. Five published monthly buckets reconcile to 1,289, including 353 above an **estimated** $2,000/month. The provider explains that 'net' approximates 55% of modeled gross after standard deductions and acknowledges large per-title errors. Comparisons with IndiePilot's **$5,997 selected lifetime modeled gross** are invalid without matched games, horizons and payment categories. Two operator-authored public sources, nine bounded claims and aggregate integrity tests advance two existing tasks by one point each. Steam research **91.495%** (Δ **+0.007 pp**), 214 public sources and 1321 linked claims, with 293 original tasks.
+
 ## Extraneum: first-paid Early Access versus full-release income and wishlist stock (October 30, 2026)
 
 A [developer-authored 2025 postmortem and Steam listing audit](../ontology/steam/steam-extraneum-ea-firstpaid-vs-v1-payout-2026.md) establishes the distinction between the game's first paid Early Access offering in June 2022 and its September 2024 version 1.0 launch. The author reports approximately **2,400 lifetime game units and USD $12,000 after certain deductions** around October 2025, but exact cash to the creator, contractual publisher allocation, complete labor cost and pre/post-1.0 sales remain unresolved. Wishlist stocks of approximately 10,000 at full launch and 10,600 a year later do not give paid checkout conversion. Two public sources, nine bounded claims and synthetic timing/cash tests advance three original tasks by one point each. Steam research **91.488%** (Δ **+0.010 pp**), 212 sources and 1312 claims; 293 original tasks preserved.
