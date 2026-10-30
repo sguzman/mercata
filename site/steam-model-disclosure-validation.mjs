@@ -26,7 +26,7 @@ export function auditSteamModelDisclosurePanel(input){
   r.within_30_percent_count>r.within_50_percent_count||
   r.within_50_percent_count>r.compared_games||m.within_50_percent_count>m.sample_size)
   throw new RangeError('Inconsistent disclosure validation denominators');
- if(typeof r.cutoff!=='string'||!/^\\d{4}-\\d{2}-\\d{2}$/.test(r.cutoff)||
+ if(typeof r.cutoff!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(r.cutoff)||
   !finite(r.typical_estimated_units_to_disclosed_units_ratio)||
   !finite(m.typical_estimated_to_disclosed_units_ratio)||
   r.financial_ledger_independently_authenticated!==false||
