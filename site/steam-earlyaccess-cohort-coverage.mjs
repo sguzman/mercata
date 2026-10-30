@@ -76,8 +76,8 @@ export function auditSteamEarlyAccessSelection(snapshot){
  if(typeof pub!=='number'||!Number.isFinite(pub)||pub<0||pub>100||
   days.selected_graduated_within_five_years>gr.graduated_full_release||
   updates.games_with_10plus_reviews>total.reviewed_10plus||
-  !/^20\\d{2}-(0[1-9]|1[0-2])$/.test(updates.graduated_window_from)||
-  !/^20\\d{2}-(0[1-9]|1[0-2])$/.test(updates.graduated_window_to)||
+  !/^20\d{2}-(0[1-9]|1[0-2])$/.test(updates.graduated_window_from)||
+  !/^20\d{2}-(0[1-9]|1[0-2])$/.test(updates.graduated_window_to)||
   updates.graduated_window_from>updates.graduated_window_to)
   throw new RangeError('Invalid historical graduation/update window');
  return {

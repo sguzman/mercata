@@ -5,43 +5,43 @@
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
 
-### Recent Indie-tagged review-hit sampling and Next Fest roster differences (October 29, 2026)
+## Recent Indie-tagged review-hit sampling and Next Fest roster differences (October 29, 2026)
 
 The [Steam Indie XP source-method audit](../ontology/steam/steamindiexp-october-2026-cohort-selection.md) documents an October 23 release/early-access-exit frame of 5,483 Indie-tagged games excluding 31 major publishers, and a separate 21–120-day hit definition of 100 or more lifetime reviews. Its 311 hit cases and 881 sampled non-hit cases are deliberately outcome-stratified; their naive quotient is not a store-wide commercial success probability. Another sample reports 104 of 220 stores with self-declared AI use, and 7,236 versus 7,164 October Next Fest roster counts reflect differing sources. Seven new source-linked claims advance three existing tasks by a point each; original 293-task inventory unchanged. Steam research **91.314%** (Δ **+0.010 pp**), 190 sources, 1191 claims; no merchant sales observed.
 
-# Review-estimator catalogue coverage and modeled gross concentration (October 29, 2026)
+## Review-estimator catalogue coverage and modeled gross concentration (October 29, 2026)
 
 The [WeLoveIt.io primary report denominator audit](../ontology/steam/steam-weloveit-review-revenue-snapshot-2026.md) records a live October 29 source snapshot with 142,797 catalogued games, of which 103,682 priced games have at least one review. Another 9,227 paid listings have no reviews; that is a review-model coverage gap, **not** an actual no-sales rate. The reported USD 3,493 lifetime median and top-one-percent 84.5% share are model-estimated gross, not audited cash. The source does not resolve the median headline's exact inclusion of zero-review paid games. Seven source-linked claims and executable census-count checks advance three existing tasks by one point each. The original 293-task scope is unchanged. Steam research **91.304%** (Δ **+0.010 pp**), with 189 public sources and 1184 source-linked claims.
 
-### Voluntary Steam wishlist-to-sales ratio versus direct wishlister conversion (October 29, 2026)
+## Voluntary Steam wishlist-to-sales ratio versus direct wishlister conversion (October 29, 2026)
 
 The [October 2026 Zukowski volunteer survey audit](../ontology/steam/steam-voluntary-wishlist-ratio-2026-era-comparison.md) separates **160 developer-submitted games** (34 from 2020–2022 and 126 from 2023–2025) from a representative paid-launch frame. A secondary reading of the primary charts reports first-month **total units per launch wishlist** declining from 0.45 to 0.22; these are not fractions of wishlist owners who paid. The original study's in-sample log-log R² for total wishlists is 0.77 versus 0.72, still above 30-day velocity's 0.70 in the later period; no external forecasting validation is established. Two public sources and eight restricted claims advance three existing tasks by a point each, with no new task entries. Steam research **91.324%** (Δ **+0.010 pp**), 192 sources and 1199 claims.
 
-# Steam Top Sellers spends, charts and nonidentification (October 29, 2026)
+## Steam Top Sellers spends, charts and nonidentification (October 29, 2026)
 
 The [official Top Sellers ranking-audit](../ontology/steam/steam-top-sellers-spend-components-and-rank-nonidentification-2026.md) establishes a trailing 24-hour player-spending metric with extra weight on the latest three hours. DLC and microtransactions contribute alongside base-game sales, so even a free-to-play game may rank without upfront paid units. Territory and customer-content filters change presentation; neither chart positions nor synthetic unweighted spend can reconstruct actual game orders or publisher profits. One new Valve primary source and six bounded claims advance the original ranking-research task by three points. Steam research **91.266%** (Δ **+0.010 pp**); **293 tasks** retained.
 
-### Steam Playtest reset, revoked test access and cohort continuity (October 29, 2026)
+## Steam Playtest reset, revoked test access and cohort continuity (October 29, 2026)
 
 The [official Playtest reset and invitation state audit](../ontology/steam/steam-playtest-reset-and-invite-continuity-2026.md) distinguishes a reversible pause from an irreversible reset, which requires a stopped build, hidden store, limited signups, disabled/paused friend invitations, no multi-app package and published settings. The reset disables all Playtest keys, archives outstanding invitations and removes old participants or queued requesters. An executable synthetic preflight enforces these prerequisites without touching actual accounts. Seven new official-source-linked claims advance two existing operational/activation research tasks by two points each. No source or baseline tasks were added; no buyer data were inferred. Steam research **91.338%** (Δ **+0.014 pp**); 192 sources and 1206 claims.
 
-# Low-budget Steam legal-payee choices, fee floors and future entity migration (October 29, 2026)
+## Low-budget Steam legal-payee choices, fee floors and future entity migration (October 29, 2026)
 
 The [Steamworks source and hypothetical budget comparison](../ontology/steam/steam-sole-proprietor-versus-company-form-cash-gates-2026.md) distinguishes individual sole-proprietor onboarding from forming a company before agreement paperwork, and documents that a later legal-payee change involves fresh onboarding and game-rights migration. Only Valve's published per-product USD 100 fee is quantified. Local liability, taxes, incorporation costs and transferred publisher cash remain unknown. Six official-source-backed claims advance the existing legal entity planning task by three points. Steam research **91.256%** (Δ **+0.010 pp**); original **293 tasks** retained.
 
-### October 2026 Next Fest early roster, rank-partition gap and hourly CCU coverage (October 29, 2026)
+## October 2026 Next Fest early roster, rank-partition gap and hourly CCU coverage (October 29, 2026)
 
 The [two-source festival roster audit](../ontology/steam/steam-october-2026-fest-coverage-and-ccu-snapshots.md) compares an October 21 live-page report of 7,240 games to an independent October 26 final tracker with 7,310 demos, 6,542 reporting player activity and 768 without recorded activity. The early report's ranked bins cover only 7,042, leaving **198 unclassified** relative to its stated roster. No claim is made that the 70 nominal extra entries were newly admitted, that 768 demos had literally no players, or that follower–CCU associations identify paid-game sales. Two original public sources and seven limited claims advance three original tasks by four weighted points. Steam research **91.352%** (Δ **+0.014 pp**), 194 sources and 1213 claims; original 293 tasks unchanged.
 
-# Wishlist purchase cohort and Pacific-time reporting semantics (October 29, 2026)
+## Wishlist purchase cohort and Pacific-time reporting semantics (October 29, 2026)
 
 The [Valve CSV field audit](../ontology/steam/steam-wishlist-month-cohort-pacific-reporting-lag-2026.md) separates the Pacific-time purchase date (DateLocal) from the **original wishlist-add month** (MonthCohort), calculates honest date-range bounds and rejects same-day incomplete reporting. Platform preference subsets and wishlist-originated purchase events are not complete paid-order denominators. Six new official-source-linked claims and tests increase the original wishlist-to-sale research task by two points, without new sources or additional tasks. Steam research **91.246%** (Δ **+0.007 pp**).
 
-### Steam Early Access release survival, incomplete removals and review-threshold selection (October 29, 2026)
+## Steam Early Access release survival, incomplete removals and review-threshold selection (October 29, 2026)
 
 The [independent 23,247-game historical Early Access study audit](../ontology/steam/steam-early-access-release-survival-review-selection-2026.md) records a September 26, 2026 public snapshot, with **6,144 of 10,141** Early Access entries from 2013–2023 with at least 10 reviews reaching 1.0. Adding lower-review entrants yields **14,597** recovered historical games and a source-reported completion share near **51%** rather than the reviewed frame's 61%. The 10,141-game status partition is 6,144 graduates, 702 removed during EA, 2,672 with a Steam no-update notice and 623 without that notice; 404 removed **after** graduation are already inside the graduates. Author-disclosed pre-2014 misses and post-outcome review selection prevent marketwide extrapolation; updates, graduated status and no-update notes are not sales or income records. One source and eleven bounded claims advance five original tasks by eleven points. Steam research **91.389%** (Δ **+0.038 pp**); original 293-task scope, 195 sources and 1224 claims.
 
-# External free browser demo plays versus Steam purchases (October 29, 2026)
+## External free browser demo plays versus Steam purchases (October 29, 2026)
 
 The [new first-person cross-market case](../ontology/steam/steam-itch-browser-demo-versus-paid-launch-identification-2026.md) records more than 20,000 free browser demo play events and 3,042 Steam sales alongside wishlist snapshots, but supplies **no** authorized user-level join or causal effect on full-game purchases. One new public source and six bounded claims raise the existing demo-to-paid-sales task by two points, without changing the **293-task** inventory. Overall research **91.239%** (Δ **+0.007 pp**).
 
@@ -238,7 +238,7 @@ The [Family Sharing ownership and measurement study](../ontology/steam/family-sh
 
 ## Four research phases
 
-### 📐 Phase 1: Define Steam's commercial rules and measurement units
+## 📐 Phase 1: Define Steam's commercial rules and measurement units
 
 Specify independently verifiable definitions, contracting access and payment accounting; no market observations.
 
@@ -247,7 +247,7 @@ Specify independently verifiable definitions, contracting access and payment acc
 - 💳 Fees, costs and payouts: 18 dedicated questions plus 8 retained baseline tasks
 - 🔬 Verification and synthesis: 13 dedicated questions plus 7 retained baseline tasks
 
-### 🌍 Phase 2: Measure supply, competition and discovery
+## 🌍 Phase 2: Measure supply, competition and discovery
 
 Use dated cohorts and source-quality gates for game supply, visibility, launch formats and competition.
 
@@ -256,7 +256,7 @@ Use dated cohorts and source-quality gates for game supply, visibility, launch f
 - 🏁 Competition and prices: 16 dedicated questions plus 6 retained baseline tasks
 - 🎮 Game publishing: 18 dedicated questions plus 5 retained baseline tasks
 
-### 💸 Phase 3: Measure buyer transactions, seller outcomes and risks
+## 💸 Phase 3: Measure buyer transactions, seller outcomes and risks
 
 Distinguish transaction records from estimates and measure zero earning, revenue and profit only from qualified cohorts.
 
@@ -265,7 +265,7 @@ Distinguish transaction records from estimates and measure zero earning, revenue
 - 🛒 Sales, conversion and retention: 18 dedicated questions plus 6 retained baseline tasks
 - 🛡️ Risk, policy and continuity: 16 dedicated questions plus 7 retained baseline tasks
 
-### 🧪 Phase 4: Design viable game publishing experiments
+## 🧪 Phase 4: Design viable game publishing experiments
 
 Define falsifiable low-risk tests with stop rules, without performing any launch, paid campaign or account operation.
 
@@ -273,7 +273,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 
 ## Complete dedicated task inventory
 
-### 🪪 Market identity and boundaries (12 additional)
+## 🪪 Market identity and boundaries (12 additional)
 
 - [ ] **Define Steam distribution boundaries** (`steam/identity/define-steam-distribution-boundaries`): Research: differentiate the Steam store, Steamworks partner systems, runtime client, community and third-party key sellers. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Identify contracting entities** (`steam/identity/identify-contracting-entities`): Research: identify Valve entities, partner agreements, subsidiaries and jurisdiction-specific responsibilities. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
@@ -288,7 +288,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Map adjacent sales channels** (`steam/identity/map-adjacent-sales-channels`): Research: define comparability boundaries with itch.io, Epic, GOG, key resellers and direct storefronts. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Document store geography and languages** (`steam/identity/document-store-geography-and-languages`): Research: define country, currency, interface localization, game languages and regional availability as distinct fields. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
-### 🚪 Entry and eligibility (14 additional)
+## 🚪 Entry and eligibility (14 additional)
 
 - [ ] **Map Steamworks legal onboarding** (`steam/access/map-steamworks-legal-onboarding`): Research: research legal identity, banking, tax declarations and partner review prerequisites. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Audit Steam Direct product application fees** (`steam/access/audit-steam-direct-product-application-fees`): Research: separate entry fee per eligible product, recoupment rules and nonrefundable costs. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
@@ -305,7 +305,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Check unsupported or delayed launch outcomes** (`steam/access/check-unsupported-or-delayed-launch-outcomes`): Research: investigate rejected submissions, release suspensions and how to count unpublished paid games. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Plan low-budget legal entity scenarios** (`steam/access/plan-low-budget-legal-entity-scenarios`): Research: define documented self-publisher versus incorporated publisher choices and cash tradeoffs. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
-### 💳 Fees, costs and payouts (18 additional)
+## 💳 Fees, costs and payouts (18 additional)
 
 - [ ] **Verify current revenue-share schedule** (`steam/economics/verify-current-revenue-share-schedule`): Research: record platform share by revenue tier, tier threshold and contract scope with dates. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Audit tier measurement base** (`steam/economics/audit-tier-measurement-base`): Research: distinguish gross, adjusted revenue, refunds, chargebacks, taxes and tier eligibility. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
@@ -326,7 +326,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Compute unit and cash break-even** (`steam/economics/compute-unit-and-cash-break-even`): Research: model required paid net units for plausible costs and multiple refund/price assumptions. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Model multi-currency settlement uncertainty** (`steam/economics/model-multi-currency-settlement-uncertainty`): Research: specify sensitivity to foreign exchange, refunds, payment dates and buyer geography. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
-### 🌐 Market size and demand (17 additional)
+## 🌐 Market size and demand (17 additional)
 
 - [ ] **Define all live Steam app population** (`steam/market/define-all-live-steam-app-population`): Research: separate apps, game AppIDs, software, demos, DLC, soundtracks and unreleased pages. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Estimate first paid releases by month** (`steam/market/estimate-first-paid-releases-by-month`): Research: define first paid commercial release date and historical late listing changes. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
@@ -346,7 +346,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Investigate hidden and delisted titles** (`steam/market/investigate-hidden-and-delisted-titles`): Research: assess survivorship bias when catalogs omit removed products, retired publishers and blocked regions. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Document cohort coverage uncertainty** (`steam/market/document-cohort-coverage-uncertainty`): Research: quantify differences across official records, SteamDB, VG Insights and other available sources. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
-### 🧭 Discovery and acquisition (18 additional)
+## 🧭 Discovery and acquisition (18 additional)
 
 - [ ] **Map Steam store discovery surfaces** (`steam/discovery/map-steam-store-discovery-surfaces`): Research: enumerate personalized homepage, discovery queue, search, tags, charts, recommendations and community feeds. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Study official visibility guidance** (`steam/discovery/study-official-visibility-guidance`): Research: separate documented ranking inputs from community theories about Valve's systems. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
@@ -367,7 +367,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study updates and revived interest** (`steam/discovery/study-updates-and-revived-interest`): Research: compare traffic before and after launches, patches, events and major announcements. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Design controlled acquisition measurements** (`steam/discovery/design-controlled-acquisition-measurements`): Research: specify permissioned merchant attribution exports and causal limitations. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
-### 🏁 Competition and prices (16 additional)
+## 🏁 Competition and prices (16 additional)
 
 - [ ] **Construct like-for-like competitor sets** (`steam/competition/construct-like-for-like-competitor-sets`): Research: define comparable solo/small-team games by release date, price, genre, length and production effort. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Classify portfolio publishers** (`steam/competition/classify-portfolio-publishers`): Research: distinguish first-time release, multi-game studio and publisher-backed commercial titles. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
@@ -386,7 +386,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Analyze multiplayer network effects** (`steam/competition/analyze-multiplayer-network-effects`): Research: compare viable player counts, concurrency needs, hosting costs and price points. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Study paid marketing acquisition thresholds** (`steam/competition/study-paid-marketing-acquisition-thresholds`): Research: define CAC, CTR, conversion and budget from valid paid units only. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
-### 📊 Income and outcome distribution (19 additional)
+## 📊 Income and outcome distribution (19 additional)
 
 - [ ] **Define publisher versus AppID earnings denominator** (`steam/income/define-publisher-versus-appid-earnings-denominator`): Research: choose first paid game publisher cohort and separate developer-owner from publisher receipt recipient. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Design zero-selling publisher sampling frame** (`steam/income/design-zero-selling-publisher-sampling-frame`): Research: include no-review, removed, unpopular, inactive and zero-sale titles at fixed horizons. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
@@ -408,7 +408,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Study multi-title portfolio income** (`steam/income/study-multi-title-portfolio-income`): Research: separate per-title performance from publisher aggregate cash and launch frequency. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Build evidence quality classification for earnings** (`steam/income/build-evidence-quality-classification-for-earnings`): Research: rank audited receipts, permissioned aggregates, self-disclosure and modeled estimates; refuse unsupported market-wide inference. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
-### ⚖️ Rights, products and portability (12 additional)
+## ⚖️ Rights, products and portability (12 additional)
 
 - [ ] **Record Steam distribution contract license** (`steam/rights/record-steam-distribution-contract-license`): Research: review developer rights granted to Valve and whether platform holds publishing ownership. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Study exclusivity and platform parity** (`steam/rights/study-exclusivity-and-platform-parity`): Research: identify restrictions on competing stores, pricing representations and external key pricing. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
@@ -423,7 +423,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Check data portability and customer access** (`steam/rights/check-data-portability-and-customer-access`): Research: identify rights and restrictions for customer lists, reviews, purchase data and CRM export. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Document dispute, enforcement and appeals** (`steam/rights/document-dispute-enforcement-and-appeals`): Research: research content removals, claims, fraudulent keys and dispute escalation. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
-### 🛒 Sales, conversion and retention (18 additional)
+## 🛒 Sales, conversion and retention (18 additional)
 
 - [ ] **Map Coming Soon purchase funnel** (`steam/sales/map-coming-soon-purchase-funnel`): Research: separate exposure, click, wishlist, follow, prelaunch demo and launch order. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Define first purchase checkout** (`steam/sales/define-first-purchase-checkout`): Research: distinguish local currency price, cart items, gifts, tax, refund and order settlement. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
@@ -444,7 +444,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Assess prelaunch press and review keys** (`steam/sales/assess-prelaunch-press-and-review-keys`): Research: separate noncommercial keys from verified sold copies and marketing sample costs. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Design after-launch retention metrics** (`steam/sales/design-after-launch-retention-metrics`): Research: differentiate concurrency, playtime, refunds, repeat buying and net proceeds. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
-### 🛡️ Risk, policy and continuity (16 additional)
+## 🛡️ Risk, policy and continuity (16 additional)
 
 - [ ] **Study game rejection and distribution loss** (`steam/risk/study-game-rejection-and-distribution-loss`): Research: document publication denial, delisting and contractual dispute routes. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Investigate account restrictions and revenue holds** (`steam/risk/investigate-account-restrictions-and-revenue-holds`): Research: identify policy enforcement, payout suspensions and fraud investigation impacts. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
@@ -463,7 +463,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Assess business continuity from platform dependence** (`steam/risk/assess-business-continuity-from-platform-dependence`): Research: define exposure to one storefront's policy, discovery or fee changes. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Build downside scenarios for small studios** (`steam/risk/build-downside-scenarios-for-small-studios`): Research: model explicit sale, tax, fee, labor and cancellation assumptions without guarantees. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
-### 🧪 Strategies and earning experiments (18 additional)
+## 🧪 Strategies and earning experiments (18 additional)
 
 - [ ] **Define achievable first paid game scope** (`steam/strategy/define-achievable-first-paid-game-scope`): Research: choose measurable prototype, production envelope, QA checklist and completion gate. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Design prelaunch wishlist experiment** (`steam/strategy/design-prelaunch-wishlist-experiment`): Research: specify independent variable, permissioned metrics, time horizon, cost and stop condition. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
@@ -484,7 +484,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Define postlaunch long-tail plan** (`steam/strategy/define-postlaunch-long-tail-plan`): Research: plan patch cadence, events, DLC options and support costs with measurable thresholds. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Design selection-aware case study comparison** (`steam/strategy/design-selection-aware-case-study-comparison`): Research: sample unsuccessful and successful titles by release cohort rather than picking winners. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
-### 🔬 Verification and synthesis (13 additional)
+## 🔬 Verification and synthesis (13 additional)
 
 - [ ] **Establish public source provenance registry** (`steam/review/establish-public-source-provenance-registry`): Research: specify source identifiers, publication date precision, retrieval times and reuse permission notes. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Specify evidence hierarchy** (`steam/review/specify-evidence-hierarchy`): Research: separate first-party rules, transactional exports, survey data, independently modeled figures and anecdotes. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
@@ -500,7 +500,7 @@ Define falsifiable low-risk tests with stop rules, without performing any launch
 - [ ] **Record open research dependencies** (`steam/review/record-open-research-dependencies`): Research: list precise missing data, ethical access paths, candidate substitutes and stopping rules. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Prepare public publication QA checklist** (`steam/review/prepare-public-publication-qa-checklist`): Research: test provenance, accessibility, link integrity, percentages, mobile layout and no private data. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 
-### 🎮 Game publishing (18 additional)
+## 🎮 Game publishing (18 additional)
 
 - [ ] **Define Steamworks build release workflow** (`steam/special-games/define-steamworks-build-release-workflow`): Research: research depots, branches, build review and staged publication for first game. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
 - [ ] **Map supported game build targets** (`steam/special-games/map-supported-game-build-targets`): Research: compare Windows, macOS, Linux and Steam Deck support with verification requirements. Acceptance requires dated attributable evidence, a defined measurement population/period and an explicit account of missing data.
