@@ -14538,6 +14538,76 @@
       "observed_at": "2026-10-29",
       "limitations": "The public study does not publish a representative linked buyer-to-wishlist purchase cohort.",
       "confidence": "bounded_voluntary_sample_in_sample_association_no_population_validation"
+    },
+    {
+      "id": "steam-playtest-reset-six-operational-prerequisites",
+      "text": "Valve documents six categories of prerequisites for irreversible Playtest reset: deactivation, hidden visibility, limited signup, paused or disabled friend invites, no package containing other apps, and published store/Steamworks settings.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Official requirements describe Playtest dashboard controls, not a quantitative survey of developers.",
+      "confidence": "high_public_valve_process_documentation_no_empirical_finance"
+    },
+    {
+      "id": "steam-playtest-reset-removes-existing-and-pending",
+      "text": "A Steam Playtest reset removes admitted participants and requesters waiting for access; it should be treated as a cohort discontinuity rather than a simple pause.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "A removal from access is not a refund, sale or withdrawal of an existing purchased base-game license.",
+      "confidence": "high_public_valve_process_documentation_no_empirical_finance"
+    },
+    {
+      "id": "steam-playtest-reset-disables-all-keys",
+      "text": "Resetting Steam Playtest disables all its product keys, including keys not yet activated.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The rule concerns Playtest keys; it does not indicate invalidation of paid main-game keys.",
+      "confidence": "high_public_valve_process_documentation_no_empirical_finance"
+    },
+    {
+      "id": "steam-playtest-reset-archives-pending-invites",
+      "text": "Resetting Steam Playtest archives pending friend invitations.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Archiving invites is separate from pausing issuance of new friend invites.",
+      "confidence": "high_public_valve_process_documentation_no_empirical_finance"
+    },
+    {
+      "id": "steam-playtest-reopening-without-reset-retains-grants",
+      "text": "When developers stop a Playtest and later make it available again without resetting it, previously granted testers retain access without a new request or grant.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Retained access does not imply a participant will activate, play or buy the paid game.",
+      "confidence": "high_public_valve_process_documentation_no_empirical_finance"
+    },
+    {
+      "id": "steam-playtest-paused-friend-invites-still-active",
+      "text": "Pausing friend invites stops new invitations but does not expire invitations already sent.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "A pause is not the same as deleting a requester cohort or resetting the Playtest.",
+      "confidence": "high_public_valve_process_documentation_no_empirical_finance"
+    },
+    {
+      "id": "steam-playtest-friend-invite-network-selection",
+      "text": "Valve's experimental friend-invite Playtest feature allows one to three invites per eligible player and requires the inviter and friend to have been friends for at least 30 days.",
+      "source_ids": [
+        "steam-playtest-app-management-2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Friend-invite entrants are network-selected, not independent observations of all Steam users or randomly allocated paid customers.",
+      "confidence": "high_public_valve_process_documentation_no_empirical_finance"
     }
   ],
   "observations": [],

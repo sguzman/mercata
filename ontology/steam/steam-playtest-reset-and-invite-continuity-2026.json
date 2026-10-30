@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_playtest_reset_prerequisites_and_prelaunch_cohort_continuity_2026",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-playtest-app-management-2026"
+  ],
+  "claim_ids": [
+    "steam-playtest-reset-six-operational-prerequisites",
+    "steam-playtest-reset-removes-existing-and-pending",
+    "steam-playtest-reset-disables-all-keys",
+    "steam-playtest-reset-archives-pending-invites",
+    "steam-playtest-reopening-without-reset-retains-grants",
+    "steam-playtest-paused-friend-invites-still-active",
+    "steam-playtest-friend-invite-network-selection"
+  ],
+  "source_url": "https://partner.steamgames.com/doc/features/playtest?l=english",
+  "reset": {
+    "irreversible": true,
+    "prerequisites": {
+      "playtest_status": "not_playable",
+      "store_visibility": "hidden",
+      "signup_type": "limited",
+      "friend_invites": [
+        "paused",
+        "disabled"
+      ],
+      "shared_package_with_other_apps": false,
+      "store_page_settings_published": true,
+      "steamworks_settings_published": true
+    },
+    "effects": {
+      "participant_access_removed": true,
+      "waiting_access_requests_removed": true,
+      "all_playtest_product_keys_disabled": true,
+      "pending_friend_invites_archived": true,
+      "recent_participants_may_receive_email": true
+    }
+  },
+  "suspension_without_reset": {
+    "existing_grants_persist_when_reenabled": true,
+    "friend_invites_paused_does_not_revoke_sent_invites": true,
+    "playtest_product_keys_not_automatically_revoked_by_not_playable": true
+  },
+  "experimental_friend_invites": {
+    "permitted_invites_per_player": [
+      1,
+      2,
+      3
+    ],
+    "minimum_existing_friendship_days": 30,
+    "invite_acceptance_not_paid_checkout": true,
+    "participant_selection_independent_uniform_random": false
+  },
+  "unknown": {
+    "any_actual_reset_completion_frequency": null,
+    "actual_prelaunch_conversion": null,
+    "actual_postreset_activation_rate": null,
+    "real_lost_paid_orders": null,
+    "actual_publisher_profit": null
+  },
+  "fixtures_only": true,
+  "model_path": "site/steam-playtest-reset-guards.mjs",
+  "tests_path": "tests/steam-playtest-reset-guards.test.mjs"
+}

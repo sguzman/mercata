@@ -21,7 +21,11 @@ The [October 2026 Zukowski volunteer survey audit](../ontology/steam/steam-volun
 
 The [official Top Sellers ranking-audit](../ontology/steam/steam-top-sellers-spend-components-and-rank-nonidentification-2026.md) establishes a trailing 24-hour player-spending metric with extra weight on the latest three hours. DLC and microtransactions contribute alongside base-game sales, so even a free-to-play game may rank without upfront paid units. Territory and customer-content filters change presentation; neither chart positions nor synthetic unweighted spend can reconstruct actual game orders or publisher profits. One new Valve primary source and six bounded claims advance the original ranking-research task by three points. Steam research **91.266%** (Δ **+0.010 pp**); **293 tasks** retained.
 
-## Low-budget Steam legal-payee choices, fee floors and future entity migration (October 29, 2026)
+### Steam Playtest reset, revoked test access and cohort continuity (October 29, 2026)
+
+The [official Playtest reset and invitation state audit](../ontology/steam/steam-playtest-reset-and-invite-continuity-2026.md) distinguishes a reversible pause from an irreversible reset, which requires a stopped build, hidden store, limited signups, disabled/paused friend invitations, no multi-app package and published settings. The reset disables all Playtest keys, archives outstanding invitations and removes old participants or queued requesters. An executable synthetic preflight enforces these prerequisites without touching actual accounts. Seven new official-source-linked claims advance two existing operational/activation research tasks by two points each. No source or baseline tasks were added; no buyer data were inferred. Steam research **91.338%** (Δ **+0.014 pp**); 192 sources and 1206 claims.
+
+# Low-budget Steam legal-payee choices, fee floors and future entity migration (October 29, 2026)
 
 The [Steamworks source and hypothetical budget comparison](../ontology/steam/steam-sole-proprietor-versus-company-form-cash-gates-2026.md) distinguishes individual sole-proprietor onboarding from forming a company before agreement paperwork, and documents that a later legal-payee change involves fresh onboarding and game-rights migration. Only Valve's published per-product USD 100 fee is quantified. Local liability, taxes, incorporation costs and transferred publisher cash remain unknown. Six official-source-backed claims advance the existing legal entity planning task by three points. Steam research **91.256%** (Δ **+0.010 pp**); original **293 tasks** retained.
 
