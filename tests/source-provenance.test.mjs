@@ -87,3 +87,38 @@ test('Independent URL versions of one vendor report may be grouped without asser
  const b=auditPublicSources(sources,[],{families:[{...f,relation:'unregistered_vendor' }]});
  assert.equal(b.invalid_source_family_records.length,1);
 });
+
+test('Canonical URLs ignore Reddit title slugs and clients but distinguish individual comments',()=>{
+ const post='https://www.reddit.com/r/gamedev/comments/1r5jv4q/first_title/';
+ assert.equal(canonicalSourceUrl(post),
+  canonicalSourceUrl('https://old.reddit.com/r/gamedev/comments/1r5jv4q/another_title'));
+ assert.equal(canonicalSourceUrl(post),
+  canonicalSourceUrl('https://redd.it/1r5jv4q?utm_source=share'));
+ assert.equal(canonicalSourceUrl(post),
+  canonicalSourceUrl('https://new.reddit.com/comments/1r5jv4q'));
+ assert.notEqual(canonicalSourceUrl(post),
+  canonicalSourceUrl('https://www.reddit.com/r/gamedev/comments/1r5jv4q/first_title/abc123/'));
+ assert.notEqual(
+  canonicalSourceUrl('https://www.reddit.com/r/gamedev/comments/1r5jv4q/title/abc123/'),
+  canonicalSourceUrl('https://www.reddit.com/r/gamedev/comments/1r5jv4q/title/def456/'));
+});
+test('Steam AppID is stable across title slugs but country-specific prices remain distinct',()=>{
+ const plain='https://store.steampowered.com/app/4230140/';
+ assert.equal(canonicalSourceUrl(plain),
+  canonicalSourceUrl('https://store.steampowered.com/app/4230140/In__Out/?l=english#description'));
+ assert.notEqual(canonicalSourceUrl(plain),
+  canonicalSourceUrl('https://store.steampowered.com/app/4230141'));
+ assert.notEqual(canonicalSourceUrl(plain),
+  canonicalSourceUrl('https://store.steampowered.com/app/4230140/?cc=MX'));
+ assert.notEqual(canonicalSourceUrl('https://store.steampowered.com/app/4230140/?cc=MX'),
+  canonicalSourceUrl('https://store.steampowered.com/app/4230140/?cc=US'));
+});
+test('Reused Reddit post identifiers are detected even when titles or hosts change',()=>{
+ const evidence=[
+  {id:'first',url:'https://www.reddit.com/r/gamedev/comments/1r5jv4q/example/',publisher:'Author',retrieved_at:'2026-10-30'},
+  {id:'copy',url:'https://old.reddit.com/r/gamedev/comments/1r5jv4q/rewritten-title/',publisher:'Author',retrieved_at:'2026-10-30'}
+ ];
+ const audit=auditPublicSources(evidence,[{id:'a',source_ids:['first']}],{families:[]});
+ assert.equal(audit.unregistered_duplicate_documents.length,1);
+ assert.deepEqual(audit.unregistered_duplicate_documents[0].source_ids,['copy','first']);
+});

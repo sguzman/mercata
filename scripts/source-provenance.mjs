@@ -6,9 +6,29 @@ export function canonicalSourceUrl(value){
     const url=new URL(value.trim());
     if(url.protocol!=='https:')return '';
     url.hash='';
+    // Stable public identifiers beat cosmetic title slugs and Reddit client hosts.
+    // Preserve distinct Reddit *comments* and Steam country-specific store views.
+    const host=url.hostname.toLowerCase();
+    const redditHosts=['reddit.com','www.reddit.com','old.reddit.com','new.reddit.com','np.reddit.com'];
+    if(redditHosts.includes(host)){
+      url.hostname='www.reddit.com';
+      const match=url.pathname.match(/^\/(?:r\/[^/]+\/)?comments\/([a-z0-9]+)(?:\/[^/]+(?:\/([a-z0-9]+))?)?\/?$/i);
+      if(match)url.pathname='/comments/'+match[1].toLowerCase()+
+        (match[2]?'/comment/'+match[2].toLowerCase():'');
+    }else if(host==='redd.it'||host==='www.redd.it'){
+      const match=url.pathname.match(/^\/([a-z0-9]+)\/?$/i);
+      if(match){
+        url.hostname='www.reddit.com';
+        url.pathname='/comments/'+match[1].toLowerCase();
+      }
+    }else if(host==='store.steampowered.com'){
+      const match=url.pathname.match(/^\/app\/([0-9]+)(?:\/[^/]*)?\/?$/);
+      if(match)url.pathname='/app/'+match[1];
+    }
     if(url.pathname!=='/')url.pathname=url.pathname.replace(/\/+$/,'');
     const selectors=[...url.searchParams.entries()]
-      .filter(([key])=>!/^utm_/i.test(key)&&!['hl','fbclid','gclid','mc_cid','mc_eid'].includes(key.toLowerCase()))
+      .filter(([key])=>!/^utm_/i.test(key)&&!['hl','fbclid','gclid','mc_cid','mc_eid'].includes(key.toLowerCase())&&
+        !(url.hostname==='store.steampowered.com'&&key.toLowerCase()==='l'))
       .sort(([ak,av],[bk,bv])=>ak.localeCompare(bk)||av.localeCompare(bv));
     url.search='';
     for(const [key,entryValue] of selectors)url.searchParams.append(key,entryValue);
