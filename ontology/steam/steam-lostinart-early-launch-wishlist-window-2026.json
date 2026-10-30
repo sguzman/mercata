@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "selected_first_paid_launch_wishlist_stock_vs_early_sales_window_and_live_demo_confounds",
+  "reviewed_at": "2026-10-30",
+  "source_ids": [
+    "steam-lostinart-jun2026-author-14k-wishlist-187-early-sales",
+    "steam-lostinart-official-app2900050-oct2026"
+  ],
+  "claim_ids": [
+    "steam-lostinart-official-first-paid-june1",
+    "steam-lostinart-author-14k-wishlists-187-early-sales",
+    "steam-lostinart-snapshot-onepointfive-days",
+    "steam-lostinart-friends-unverified",
+    "steam-lostinart-wishlist-age-nested",
+    "steam-lostinart-demo-campaign-precedes-paid",
+    "steam-lostinart-low-review-early-window",
+    "steam-lostinart-team-duration-effort",
+    "steam-lostinart-referral-creator-no-sales",
+    "steam-lostinart-ratio-not-matched-conversion",
+    "steam-lostinart-selected-case-no-proceeds"
+  ],
+  "release": {
+    "game": "Lost in Art: a Miniature Realm",
+    "steam_appid": 2900050,
+    "first_paid_release_date": "2026-06-01",
+    "store_developer": "Archaic Game Studio",
+    "store_publisher": "Archaic Game Studio",
+    "genre_label": "point_and_click_puzzle_adventure",
+    "self_published_label": true
+  },
+  "developer_public_launch_report": {
+    "published_date": "2026-06-03",
+    "time_from_launch_author_comment_approx_days": 1.5,
+    "report_label": "launch_day_discussion_not_a_complete_first_week_or_fixed_day_cohort",
+    "prelaunch_outstanding_wishlists_approx": 14000,
+    "reported_units_sold_so_far": 187,
+    "unit_count_independently_verified": false,
+    "estimated_friends_and_family_units_lower": 10,
+    "estimated_friends_and_family_units_upper": 15,
+    "friends_purchase_verified": false,
+    "first_week_cumulative_paid_units_verified": null,
+    "first_month_cumulative_paid_units_verified": null,
+    "wishlist_to_units_mechanical_quotient": 0.013357142857142857,
+    "matched_wishlist_to_purchase_conversion_identified": false,
+    "wishlist_stock_is_eligible_buyers_cumulative_cohort": false
+  },
+  "author_comments": {
+    "store_page_live_approx_years": 2,
+    "developer_reported_wishlists_recent_year_approx": 9000,
+    "developer_reported_wishlists_last_three_months_approx": 5000,
+    "three_month_wishlists_part_of_recent_year": true,
+    "prior_demo_approx_years_min": 1,
+    "prior_demo_approx_years_max": 1.5,
+    "demo_updated_for_nextfest": "2026-02",
+    "festival_additions_per_reported_event_min": 300,
+    "festival_additions_per_reported_event_max": 500,
+    "genre_positioning_concern_raised_by_commenters": true,
+    "author_acknowledged_possible_storefront_puzzle_presentation_clarity_issue": true,
+    "creator_emails_approx_min": 50,
+    "creator_emails_approx_max": 60,
+    "creator_positive_response_reported": 1,
+    "creator_derived_paid_orders_verified": false,
+    "developer_project_calendar_elapsed_years": 3,
+    "developer_near_fulltime_work_years_approx": 2,
+    "team_members_reported": 2,
+    "per_developer_verified_hours": null,
+    "actual_creator_payout": null
+  },
+  "selection_notes": {
+    "selected_voluntary_post": true,
+    "one_game_one_reporting_team": true,
+    "reddit_comment_answers_same_source_family": true,
+    "official_store_verifies_game_identity_not_unit_sales": true,
+    "source_is_not_population_sampling_frame": true,
+    "six_month_longtail_sales_estimated": false,
+    "current_store_reviews_are_not_launch_day_review_count": true,
+    "no_private_records_used": true
+  },
+  "unknown": {
+    "matched_release_wishlist_cohort_buyers": null,
+    "verified_first_7day_sales": null,
+    "verified_after_refund_units": null,
+    "authentic_steam_sales_ledger": null,
+    "developer_net_partner_remittance": null,
+    "individual_team_payout": null,
+    "after_cost_or_labor_profit": null,
+    "typical_paid_game_conversion": null,
+    "causal_demo_festival_lift": null,
+    "zero_sales_population_fraction": null
+  },
+  "regression_test": "tests/steam-lostinart-early-launch-wishlist-window.test.mjs"
+}

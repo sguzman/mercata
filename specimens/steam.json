@@ -2842,6 +2842,28 @@
       "evidence_class": "author_public_prepaid_demo_milestone",
       "license": "Source URL, dates, numeric claims, and short independent analysis only; no source paragraphs, images or nonpublic records reproduced.",
       "notes": "Dated October 2024 free/demo stage precedes first paid Steam product, does not establish an earlier Steam purchase or exact future paid conversion."
+    },
+    {
+      "id": "steam-lostinart-jun2026-author-14k-wishlist-187-early-sales",
+      "url": "https://www.reddit.com/r/gamedev/comments/1tv9erh/how_was_your_release_day_mine_didnt_go_well_is/",
+      "title": "How was your release day? Mine didn’t go well. Is there any chance I can turn things around from here?",
+      "publisher": "Archaic Game Studio first-game developer — public r/gamedev voluntary disclosure and same-author replies",
+      "published_at": "2026-06-03",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "selected_single_title_first_party_initial_paid_steam_units_and_wishlist_stock_selfreport",
+      "license": "Public URL, source title, short original numerical paraphrases and date, without reproducing post/comments or users' personal details.",
+      "notes": "Author says 14k launch wishlist stock and 187 sold copies so far, then dates the discussion to roughly 1.5 days after the June 1 commercial launch. Same-author comments elaborate earlier free demo, wishlist aging, creator outreach, team effort. Not an authenticated Steam sales/finance report."
+    },
+    {
+      "id": "steam-lostinart-official-app2900050-oct2026",
+      "url": "https://store.steampowered.com/app/2900050/",
+      "title": "Lost in Art: a Miniature Realm — Steam listing",
+      "publisher": "Valve Corporation — public Steam storefront",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "official_public_paid_game_identity_release_and_developer_publisher_label",
+      "license": "Public metadata citation only; no storefront text, images, price history or user profiles republished.",
+      "notes": "Valve lists game AppID 2900050, commercial release 2026-06-01, Archaic Game Studio developer/publisher, point-and-click puzzle adventure. Listing does not independently authenticate author sales or launch wishlist counts."
     }
   ],
   "claims": [
@@ -18541,6 +18563,118 @@
       "observed_at": "2026-10-30",
       "confidence": "high",
       "limitations": "A single voluntary three-person game project, selected after its launch; author net stage is not realized cash, event attributions are nonrandom and may overlap, and the public store/demo verify only distinct product milestones."
+    },
+    {
+      "id": "steam-lostinart-official-first-paid-june1",
+      "text": "The official Steam listing identifies Lost in Art: a Miniature Realm, AppID 2900050, as an Archaic Game Studio self-published point-and-click puzzle title released June 1, 2026.",
+      "source_ids": [
+        "steam-lostinart-official-app2900050-oct2026"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "bounded_first_party_self_report_with_official_game_identity_metadata",
+      "limitations": "One selected same-team public disclosure with a non-fixed short launch window, ambiguous wishlist stock denominator, unverified buyers, no independently authenticated finance or population sampling."
+    },
+    {
+      "id": "steam-lostinart-author-14k-wishlists-187-early-sales",
+      "text": "In a June 3, 2026 first-game post, the developer reported roughly 14,000 prelaunch outstanding wishlists but only 187 cumulative sold copies by the early discussion window.",
+      "source_ids": [
+        "steam-lostinart-jun2026-author-14k-wishlist-187-early-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "bounded_first_party_self_report_with_official_game_identity_metadata",
+      "limitations": "One selected same-team public disclosure with a non-fixed short launch window, ambiguous wishlist stock denominator, unverified buyers, no independently authenticated finance or population sampling."
+    },
+    {
+      "id": "steam-lostinart-snapshot-onepointfive-days",
+      "text": "A same-author reply dates the reported result to approximately 1.5 days after a Monday June 1 paid release, not a full first-week purchasing window.",
+      "source_ids": [
+        "steam-lostinart-jun2026-author-14k-wishlist-187-early-sales",
+        "steam-lostinart-official-app2900050-oct2026"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "bounded_first_party_self_report_with_official_game_identity_metadata",
+      "limitations": "One selected same-team public disclosure with a non-fixed short launch window, ambiguous wishlist stock denominator, unverified buyers, no independently authenticated finance or population sampling."
+    },
+    {
+      "id": "steam-lostinart-friends-unverified",
+      "text": "The developer speculated that approximately 10–15 of the 187 early sold copies were bought by acquaintances, without independently verified buyer attribution.",
+      "source_ids": [
+        "steam-lostinart-jun2026-author-14k-wishlist-187-early-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "bounded_first_party_self_report_with_official_game_identity_metadata",
+      "limitations": "One selected same-team public disclosure with a non-fixed short launch window, ambiguous wishlist stock denominator, unverified buyers, no independently authenticated finance or population sampling."
+    },
+    {
+      "id": "steam-lostinart-wishlist-age-nested",
+      "text": "The developer described a roughly two-year-old store page, about 9,000 wishlist additions in the prior year and roughly 5,000 in the prior three months, which are nested periods and cannot be added as independent acquisitions.",
+      "source_ids": [
+        "steam-lostinart-jun2026-author-14k-wishlist-187-early-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "bounded_first_party_self_report_with_official_game_identity_metadata",
+      "limitations": "One selected same-team public disclosure with a non-fixed short launch window, ambiguous wishlist stock denominator, unverified buyers, no independently authenticated finance or population sampling."
+    },
+    {
+      "id": "steam-lostinart-demo-campaign-precedes-paid",
+      "text": "The developer described a prior 1–1.5-year demo, a February 2026 Next Fest update, and roughly 300–500 wishlist additions per event, none linked to a verified later purchaser cohort.",
+      "source_ids": [
+        "steam-lostinart-jun2026-author-14k-wishlist-187-early-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "bounded_first_party_self_report_with_official_game_identity_metadata",
+      "limitations": "One selected same-team public disclosure with a non-fixed short launch window, ambiguous wishlist stock denominator, unverified buyers, no independently authenticated finance or population sampling."
+    },
+    {
+      "id": "steam-lostinart-low-review-early-window",
+      "text": "The author said the game had not yet accumulated ten Steam reviews in the early June 2026 post-launch discussion, which is not equivalent to its October review count.",
+      "source_ids": [
+        "steam-lostinart-jun2026-author-14k-wishlist-187-early-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "bounded_first_party_self_report_with_official_game_identity_metadata",
+      "limitations": "One selected same-team public disclosure with a non-fixed short launch window, ambiguous wishlist stock denominator, unverified buyers, no independently authenticated finance or population sampling."
+    },
+    {
+      "id": "steam-lostinart-team-duration-effort",
+      "text": "The first-game developer described a two-person effort lasting about three elapsed years, including nearly two years of full-time work, without audited labor costs or realized member pay.",
+      "source_ids": [
+        "steam-lostinart-jun2026-author-14k-wishlist-187-early-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "bounded_first_party_self_report_with_official_game_identity_metadata",
+      "limitations": "One selected same-team public disclosure with a non-fixed short launch window, ambiguous wishlist stock denominator, unverified buyers, no independently authenticated finance or population sampling."
+    },
+    {
+      "id": "steam-lostinart-referral-creator-no-sales",
+      "text": "The author described approximately 50–60 relevant streamer contacts and one positive reply without confirmed stream coverage or channel-attributed paid orders.",
+      "source_ids": [
+        "steam-lostinart-jun2026-author-14k-wishlist-187-early-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "bounded_first_party_self_report_with_official_game_identity_metadata",
+      "limitations": "One selected same-team public disclosure with a non-fixed short launch window, ambiguous wishlist stock denominator, unverified buyers, no independently authenticated finance or population sampling."
+    },
+    {
+      "id": "steam-lostinart-ratio-not-matched-conversion",
+      "text": "Dividing 187 early sold copies by approximately 14,000 outstanding launch wishlists yields around 1.34% numerically but is not a matched wishlist-account paid purchase conversion rate.",
+      "source_ids": [
+        "steam-lostinart-jun2026-author-14k-wishlist-187-early-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "bounded_first_party_self_report_with_official_game_identity_metadata",
+      "limitations": "One selected same-team public disclosure with a non-fixed short launch window, ambiguous wishlist stock denominator, unverified buyers, no independently authenticated finance or population sampling."
+    },
+    {
+      "id": "steam-lostinart-selected-case-no-proceeds",
+      "text": "A voluntary single-title initial-launch post with no publisher settlement, refund-adjusted ledger, observed costs or representative release frame cannot identify actual partner income, profit or typical wishlist purchase response.",
+      "source_ids": [
+        "steam-lostinart-jun2026-author-14k-wishlist-187-early-sales",
+        "steam-lostinart-official-app2900050-oct2026"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "bounded_first_party_self_report_with_official_game_identity_metadata",
+      "limitations": "One selected same-team public disclosure with a non-fixed short launch window, ambiguous wishlist stock denominator, unverified buyers, no independently authenticated finance or population sampling."
     }
   ],
   "observations": [],
