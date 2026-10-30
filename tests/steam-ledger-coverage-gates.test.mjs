@@ -51,7 +51,8 @@ test('Out-of-scope games cannot silently hide paid-unit evidence or unknown fiel
 });
 test('Claims grounded and no genuine confidential financial records present',()=>{
  const s=new Set(d.evidence.map(x=>x.id)),c=new Map(d.claims.map(x=>[x.id,x]));
- assert.equal(r.source_ids.length,4);assert.equal(r.claim_ids.length,12);
+ assert.equal(r.source_ids.length,5);assert.equal(r.claim_ids.length,12);
+ assert(r.source_ids.includes('steam-price-rules-2026'));
  for(const id of r.source_ids)assert(s.has(id));
  for(const id of r.claim_ids){assert(c.has(id));assert(c.get(id).source_ids.every(sid=>s.has(sid)));}
  assert.equal(r.sample_state.real_authorized_ledger_reports,0);

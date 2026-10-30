@@ -143,3 +143,13 @@ test('Source and inventory contracts retain original 293 tasks without a real ze
  assert.equal(x.sample_state.real_authorized_ledger_reports,0);
  assert.equal(p.detail_tasks.length+q.queues.flatMap(g=>g.tasks).length,293);
 });
+test('Partial financial coverage cannot extend past the as-of observation date',()=>{
+ const rows=[f('a','US',[open],positive(2))];
+ assert.throws(()=>audit(rows,{...options,asOfDate:'2026-01-06'}),/Observed units need bounded ledger coverage/);
+ const mature=audit(rows,{...options,asOfDate:'2026-01-31'});
+ assert.equal(mature.counts.fully_purchasable_known_nonzero,1);
+ assert.equal(mature.observation_matured,true);
+ const immature=audit([f('a','US')],{...options,asOfDate:'2026-01-08'});
+ assert.equal(immature.observation_matured,false);
+ assert.equal(immature.fully_purchasable_country_window_zero_share_upper_conditional,null);
+});

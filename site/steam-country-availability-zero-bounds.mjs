@@ -90,6 +90,7 @@ export function auditSyntheticSteamCountryAvailabilityZeroBounds(rows,options={}
    if(!safe(row.observed_gross_paid_units)||!date(row.covered_from)||
      !date(row.covered_until_exclusive)||row.covered_from<options.start||
      row.covered_until_exclusive>options.endExclusive||
+     row.covered_until_exclusive>next(options.asOfDate)||
      row.covered_from>=row.covered_until_exclusive)
     throw new TypeError('Observed units need bounded ledger coverage');
    const allAttested=row.authorized_financials_attested===true&&
