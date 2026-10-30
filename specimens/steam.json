@@ -2666,6 +2666,39 @@
       "evidence_class": "same_vendor_conflicting_report_version_website_search_index_text_not_authenticated_sales",
       "license": "Public link plus independently summarized aggregates, no charts or long-form source passages reproduced.",
       "notes": "Website version visible in search index (direct page fetch returned 403) says 6,169 releases Jan1–Apr22, 1,048 F2P, 5,121 paid, around $120k mean, $290 all-game median, ~$350 paid-only median, ~$733M total. 6,169×$120k=$740.28M, plausibly rounded to $733M. Different population and later cutoff than Patreon version; no model-row provenance, cohort crosswalk or revision history available."
+    },
+    {
+      "id": "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator",
+      "url": "https://note.com/yattaaaaaaa777/n/nc92813e9b597?hl=en",
+      "title": "What happened to a game that only sold 3 copies: first five weeks of release",
+      "publisher": "Hiroasa — author-developer blog post on note.com",
+      "published_at": "2026-10-13",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "voluntary_first_person_public_single_game_steam_low_revenue_time_window_and_anonymous_traffic_report",
+      "license": "Public source link and brief original numeric paraphrases only. No screenshots, original long-form content, usernames, visitor identities or proprietary dashboards copied.",
+      "notes": "Author reports HUG&BETRAY Sept4 local release, $18 reported total and $12 called net, 4 Steam copies including one refund plus 1 via key, 8 players including test accounts; no sales Sep17–27, one sale Sep27–Oct12; 124k impressions and 7100 visits with 3291 direct and 753 bot-labeled traffic entries. Author suggests messaging-change improvements but sample and causal assignment unverified."
+    },
+    {
+      "id": "steam-hugbetray-official-store-app5051910",
+      "url": "https://store.steampowered.com/app/5051910/HUGBETRAY",
+      "title": "HUG＆BETRAY on Steam",
+      "publisher": "Valve Corporation — official public Steam storefront",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_store_listing_game_price_host_only_purchase_and_developer_label",
+      "license": "Link and brief public metadata only; no original store art or descriptions reproduced.",
+      "notes": "Store US-facing release date Sep3 2026, app 5051910, THBdesigns public developer/publisher labels, $5.99 currently, and host purchase permits friends/viewers free browser room entry. Neither store zero-review state nor listed price attests actual sales or bank revenue."
+    },
+    {
+      "id": "steam-hugbetray-steamdb-utc-release-info",
+      "url": "https://steamdb.info/app/5051910/info/",
+      "title": "HUG＆BETRAY SteamDB release metadata",
+      "publisher": "SteamDB — public third-party Steam metadata tracker",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "third_party_store_release_instant_with_utc_timestamp_not_sales",
+      "license": "Bibliographic reference and release timestamp only; no screenshots or source table reproduced.",
+      "notes": "Steam release timestamp 2026-09-04 03:01 UTC, consistent with Sep3 US/Pacific store date and Sep4 local Japan developer report; different calendar dates do not mean two initial paid launches."
     }
   ],
   "claims": [
@@ -17514,6 +17547,131 @@
       "observed_at": "2026-10-29",
       "confidence": "medium",
       "limitations": "Vendor-produced estimates without authenticated merchant transactions, model-input roster, eligibility frame or matched version dates. Different reports from the same publisher are not independent validation. Approximate rounded figures may differ slightly, but one discrepancy substantially exceeds plausible nearest-ten-thousand mean rounding; the true correction remains unknown."
+    },
+    {
+      "id": "steam-hugbetray-release-date-timezone-one-app",
+      "text": "The author's September 4 release date, Valve's September 3 storefront calendar date and SteamDB's September 4 03:01 UTC release can refer to the same single paid launch across time zones, not two games.",
+      "source_ids": [
+        "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator",
+        "steam-hugbetray-official-store-app5051910",
+        "steam-hugbetray-steamdb-utc-release-info"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
+    },
+    {
+      "id": "steam-hugbetray-five-week-four-steam-one-key",
+      "text": "In an October 13, 2026 five-week retrospective, the developer reports four copies through Steam including one refunded and one additional copy through a key; the key is not automatically a direct paid Steam checkout.",
+      "source_ids": [
+        "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
+    },
+    {
+      "id": "steam-hugbetray-author-18gross-12net",
+      "text": "The author reports approximately $18 total revenue and $12 called net earnings, without independently verified settled bank cash, comprehensive owner costs, actual key sale price or final taxes.",
+      "source_ids": [
+        "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator",
+        "steam-reporting-faq-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
+    },
+    {
+      "id": "steam-hugbetray-sept17-27-zero-interval",
+      "text": "The author reports zero sales over September 17–27 while later reporting positive cumulative units; a zero-sale interval is not zero lifetime sales or a true-zero first-paid-release AppID.",
+      "source_ids": [
+        "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
+    },
+    {
+      "id": "steam-hugbetray-sept27-oct12-one-interval",
+      "text": "The author reports one sale after changing the store copy between September 27 and October 12, but the before and after windows differ in length and have no causal controls.",
+      "source_ids": [
+        "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
+    },
+    {
+      "id": "steam-hugbetray-wishlists66-69-75-stocks",
+      "text": "The author reports wishlist stocks of 66, 69, and 75 across the before/after date boundaries; a stock is not the number of unique buyer conversions from a fixed wishlist cohort.",
+      "source_ids": [
+        "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
+    },
+    {
+      "id": "steam-hugbetray-impressions124k-visits7100",
+      "text": "The post describes 124,000 reported store impressions and 7,100 visits in five weeks; these are different event measurement units, not 124,000 distinct potential buyers or direct sales.",
+      "source_ids": [
+        "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
+    },
+    {
+      "id": "steam-hugbetray-bots753-direct3291",
+      "text": "The author lists 3,291 direct visits (believed mostly automated) and 753 visits classified as bots; source categories and filters are not proven mutually exclusive, so summing them into verified bot traffic is unjustified.",
+      "source_ids": [
+        "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
+    },
+    {
+      "id": "steam-hugbetray-eight-players-test-included",
+      "text": "The author reports eight people who played including test accounts, which is not an independently verified number of buying customers or retained players.",
+      "source_ids": [
+        "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
+    },
+    {
+      "id": "steam-hugbetray-host-pays-others-join-free",
+      "text": "The public store advertises that only a room host buys the game while other players may join for free in a browser, making multiplayer participation distinct from the count of paid game copies.",
+      "source_ids": [
+        "steam-hugbetray-official-store-app5051910"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
+    },
+    {
+      "id": "steam-hugbetray-no-reviews-not-zero-sales",
+      "text": "The public store has no user reviews at retrieval, which does not establish zero purchases or disprove the author's low positive sales report.",
+      "source_ids": [
+        "steam-hugbetray-official-store-app5051910",
+        "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
+    },
+    {
+      "id": "steam-hugbetray-owner-income-zero-rate-unknown",
+      "text": "The selected one-title case demonstrates why zero-day sales and low net-labeled revenue cannot identify population-level zero-selling publishers, after-cost earnings or a viable first-game hourly wage.",
+      "source_ids": [
+        "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator",
+        "steam-hugbetray-official-store-app5051910"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
     }
   ],
   "observations": [],

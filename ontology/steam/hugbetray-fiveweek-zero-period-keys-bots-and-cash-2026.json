@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "one_first_paid_game_selected_low_sales_zero_interval_key_vs_paid_and_multiplayer_denom",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-hugbetray-oct13-firstfiveweeks-zero-period-creator",
+    "steam-hugbetray-official-store-app5051910",
+    "steam-hugbetray-steamdb-utc-release-info",
+    "steam-reporting-faq-doc"
+  ],
+  "claim_ids": [
+    "steam-hugbetray-release-date-timezone-one-app",
+    "steam-hugbetray-five-week-four-steam-one-key",
+    "steam-hugbetray-author-18gross-12net",
+    "steam-hugbetray-sept17-27-zero-interval",
+    "steam-hugbetray-sept27-oct12-one-interval",
+    "steam-hugbetray-wishlists66-69-75-stocks",
+    "steam-hugbetray-impressions124k-visits7100",
+    "steam-hugbetray-bots753-direct3291",
+    "steam-hugbetray-eight-players-test-included",
+    "steam-hugbetray-host-pays-others-join-free",
+    "steam-hugbetray-no-reviews-not-zero-sales",
+    "steam-hugbetray-owner-income-zero-rate-unknown"
+  ],
+  "release": {
+    "main_app_id": 5051910,
+    "author_release_calendar_date": "2026-09-04",
+    "store_us_release_calendar_date": "2026-09-03",
+    "steamdb_release_instant_utc": "2026-09-04T03:01:00Z",
+    "first_paid_launches": 1
+  },
+  "public_author": {
+    "article_published_at": "2026-10-13",
+    "observation_window": "approximately_first_five_weeks",
+    "steam_units_reported": 4,
+    "steam_returns_reported_included": 1,
+    "key_delivered_copies_reported": 1,
+    "author_total_revenue_usd_approx": 18,
+    "author_net_earnings_usd_approx": 12,
+    "net_is_authenticated_bank_cash": false,
+    "zero_paid_sale_window_start": "2026-09-17",
+    "zero_paid_sale_window_end": "2026-09-27",
+    "reported_orders_during_zero_window": 0,
+    "later_window_start": "2026-09-27",
+    "later_window_end": "2026-10-12",
+    "reported_orders_in_later_window": 1,
+    "wishlist_stock_before": 66,
+    "wishlist_stock_at_change": 69,
+    "wishlist_stock_after": 75,
+    "store_impressions_reported": 124000,
+    "store_visits_reported": 7100,
+    "direct_visits_reported": 3291,
+    "bot_labeled_visits_reported": 753,
+    "reported_players_including_tests": 8
+  },
+  "store_evidence": {
+    "public_us_list_price_usd": 5.99,
+    "host_must_purchase": true,
+    "other_participants_may_join_free_browser": true,
+    "public_reviews_at_snapshot": 0,
+    "legal_payee_proven_from_labels": false
+  },
+  "descriptive_cautions": {
+    "one_key_distribution_is_not_automatically_paid_steam_transaction": true,
+    "interval_zero_is_not_lifetime_zero": true,
+    "different_calendar_release_dates_do_not_imply_multiple_launches": true,
+    "bot_direct_categories_known_disjoint": false,
+    "player_count_is_not_purchasers": true,
+    "page_copy_causal_sales_effect_verified": false,
+    "playtime_before_after_causal_effect_verified": false
+  },
+  "unknown": {
+    "authenticated_steam_paid_orders": null,
+    "verified_actual_steam_refunds": null,
+    "merchant_bank_receipt_usd": null,
+    "legal_partner_cash_profit": null,
+    "value_of_key_activation": null,
+    "matched_wishlist_purchase_conversion": null,
+    "unique_bot_visits": null,
+    "confirmed_paid_player_count": null,
+    "market_zero_paid_sale_fraction": null
+  },
+  "model_path": "site/steam-zero-window-key-copy-count-guard.mjs",
+  "tests_path": "tests/steam-hugbetray-zero-window-guard.test.mjs",
+  "private_personal_player_records_used": false
+}
