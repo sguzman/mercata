@@ -129,5 +129,17 @@
     "structural_zero_no_purchase_access_distinct_from_zero_with_exposure": true,
     "marketwide_zero_rate_observed": null,
     "actual_authorized_partner_financial_rows_accessed": 0
+  },
+  "study_evidence_join": {
+    "model_path": "site/steam-zero-study-evidence-join.mjs",
+    "test_path": "tests/steam-zero-study-evidence-join.test.mjs",
+    "historical_paid_game_census_not_implied_by_first_changed_date_poll": true,
+    "current_store_catalog_not_historical_paid_roster": true,
+    "changed_day_refresh_does_not_attest_nontransaction_games": true,
+    "check_full_payment_partner_eras_and_pretransfer_visibility": true,
+    "link_reconciled_financial_data_to_game_and_purchase_country_only_with_evidence": true,
+    "missing_or_false_coverage_gates_block_conditionally_reportable_zero_share": true,
+    "observed_steam_zero_sale_fraction": null,
+    "actual_steam_financial_records_used": 0
   }
 }
