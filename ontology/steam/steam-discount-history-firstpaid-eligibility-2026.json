@@ -36,7 +36,10 @@
     "seasonal_discount_length_is_event_specific": true,
     "calendar_day_qa_is_partner_permission": false,
     "synthetic_official_seasonal_event_attestation_required": true,
-    "synthetic_event_attestation_equals_real_steam_permission": false
+    "synthetic_event_attestation_equals_real_steam_permission": false,
+    "synthetic_ordered_prior_discounts_max_entries": 64,
+    "seasonal_discount_does_not_reset_nonseasonal_to_nonseasonal_cooldown": true,
+    "synthetic_complete_history_is_not_authenticated_history": true
   },
   "first_paid_game_case": {
     "title": "In & Out",
@@ -95,5 +98,11 @@
     "incremental_publisher_net_cash": null
   },
   "private_or_partner_data_accessed": false,
-  "original_task_count": 293
+  "original_task_count": 293,
+  "model_history_inputs": {
+    "previous_discount": "legacy single optional previous promotion",
+    "previous_discounts": "ordered synthetic promotional history, at most 64 entries, mutually exclusive with previous_discount",
+    "prior_discount_span_verified_by_partner": false,
+    "intervening_seasonal_discount_waives_other_regular_discounts_cooldown": false
+  }
 }

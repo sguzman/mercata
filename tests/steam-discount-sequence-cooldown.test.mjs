@@ -135,3 +135,92 @@ test('Earlier discounts cannot be used as valid history across a price-increase 
  assert.throws(()=>check({...later,previous_discount:official,last_price_increase_date:'2026-12-20'}),
   /cannot occur during a previous discount/);
 });
+test('Multiple previous standard discounts carry the latest cooldown forward',()=>{
+ const history=[
+  {kind:'standard',start:'2026-09-30',end:'2026-10-06'},
+  {kind:'standard',start:'2026-11-10',end:'2026-11-17'}
+ ];
+ const a=check({...base,discount_start:'2026-12-18',discount_end:'2026-12-24',
+  discount_percent:20,previous_discounts:history});
+ assert.equal(a.conditional_calendar_rules_pass,true);
+ assert.equal(a.previous_discount_count,2);
+ assert.equal(a.previous_discount_cooldown_ends,'2026-12-17');
+ assert.equal(a.latest_nonseasonal_discount_cooldown_ends,'2026-12-17');
+ assert.equal(a.first_allowed_start_date_from_known_cooldowns,'2026-12-17');
+ const b=check({...base,discount_start:'2026-12-16',discount_end:'2026-12-22',
+  discount_percent:20,previous_discounts:history});
+ assert.equal(b.conditional_calendar_rules_pass,false);
+ assert(b.known_calendar_failures.includes('discount_to_discount_cooldown_active'));
+});
+test('An attested intervening seasonal sale cannot erase an earlier regular cooldown',()=>{
+ const history=[
+  {kind:'standard',start:'2026-12-01',end:'2026-12-08'},
+  {kind:'official_seasonal',start:'2026-12-17',end:'2027-01-04',
+   official_seasonal_event_verified:true}
+ ];
+ const current={...base,discount_start:'2027-01-05',discount_end:'2027-01-11',
+  discount_percent:20,previous_discounts:history};
+ const blocked=check(current);
+ assert.equal(blocked.conditional_calendar_rules_pass,false);
+ assert.equal(blocked.previous_discount_cooldown_ends,'2027-02-03');
+ assert.equal(blocked.latest_nonseasonal_discount_cooldown_ends,'2027-01-07');
+ assert(blocked.known_calendar_failures.includes('discount_to_discount_cooldown_active'));
+ assert.equal(blocked.prior_discount_cooldown_exemption_applied,false);
+ const allowed=check({...current,discount_start:'2027-01-08',discount_end:'2027-01-14'});
+ assert.equal(allowed.conditional_calendar_rules_pass,true);
+ assert.equal(allowed.first_allowed_start_date_from_known_cooldowns,'2027-01-07');
+ assert.equal(allowed.prior_discount_cooldown_exemption_applied,true);
+});
+test('Seasonal events are exempt only with separate synthetic attestations',()=>{
+ const history=[{kind:'standard',start:'2026-12-01',end:'2026-12-08'}];
+ const current={...base,discount_kind:'official_seasonal',discount_start:'2026-12-17',
+  discount_end:'2027-01-04',discount_percent:20,previous_discounts:history};
+ assert.equal(check({...current,official_seasonal_event_verified:true}).conditional_calendar_rules_pass,true);
+ assert.equal(check(current).conditional_calendar_rules_pass,null);
+ const unknown=[...history,{kind:'official_seasonal',start:'2026-12-17',end:'2027-01-04'}];
+ const later={...base,discount_start:'2027-01-09',discount_end:'2027-01-15',
+  discount_percent:20,previous_discounts:unknown};
+ const unresolved=check(later);
+ assert.equal(unresolved.conditional_calendar_rules_pass,null);
+ assert.equal(unresolved.first_allowed_start_date_from_known_cooldowns,null);
+ const knownBlock=check({...later,discount_start:'2027-01-05',discount_end:'2027-01-11'});
+ assert.equal(knownBlock.conditional_calendar_rules_pass,false);
+});
+test('Earlier ordinary discounts remain separate even with seasonal sale between them',()=>{
+ const prior=[
+  {kind:'standard',start:'2026-12-01',end:'2026-12-08'},
+  {kind:'official_seasonal',start:'2026-12-17',end:'2027-01-04',
+   official_seasonal_event_verified:true},
+  {kind:'standard',start:'2027-01-05',end:'2027-01-11'}
+ ];
+ assert.throws(()=>check({...base,discount_start:'2027-03-01',discount_end:'2027-03-07',
+  discount_percent:20,previous_discounts:prior}),/nonseasonal discounts violate/);
+});
+test('Multiple discounts must be ordered, nonoverlapping and within price-increase gates',()=>{
+ const first={kind:'standard',start:'2026-10-01',end:'2026-10-07'};
+ const second={kind:'standard',start:'2026-11-10',end:'2026-11-16'};
+ const current={...base,discount_start:'2027-01-15',discount_end:'2027-01-21',
+  discount_percent:20,previous_discounts:[first,second]};
+ assert.throws(()=>check({...current,previous_discounts:[second,first]}),/chronological order/);
+ assert.throws(()=>check({...current,previous_discounts:[first,first]}),/overlaps/);
+ assert.throws(()=>check({...current,last_price_increase_date:'2026-10-04'}),
+  /cannot occur during a previous discount/);
+ assert.throws(()=>check({...current,last_price_increase_date:'2026-09-20'}),
+  /cannot begin during a price-increase cooldown/);
+ assert.throws(()=>check({...current,previous_discount:first}),/either previous_discount or previous_discounts/);
+ assert.throws(()=>check({...current,previous_discounts:null}),/array of at most/);
+ assert.throws(()=>check({...current,previous_discounts:Array(65).fill(first)}),/at most 64/);
+ const single=check({...base,discount_start:'2026-11-12',discount_end:'2026-11-18',
+  discount_percent:20,previous_discount:first});
+ const equivalent=check({...base,discount_start:'2026-11-12',discount_end:'2026-11-18',
+  discount_percent:20,previous_discounts:[first]});
+ assert.deepEqual(equivalent,single);
+});
+test('Complete empty history remains synthetic; missing history attestation remains unresolved',()=>{
+ const complete=check({...base,previous_discounts:[]});
+ assert.equal(complete.conditional_calendar_rules_pass,true);
+ assert.equal(complete.previous_discount_count,0);
+ assert.equal(complete.actual_partner_eligibility_verified,false);
+ assert.equal(check({...base,previous_discounts:[],relevant_discount_history_complete:false})
+  .conditional_calendar_rules_pass,null);
+});
