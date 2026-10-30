@@ -60,3 +60,18 @@ test('Unregistered shared URLs are rejected while unknown source date is allowed
  assert.equal(result.undated_publication_references,2);
  assert.equal(result.missing_claim_sources.length,0);
 });
+
+
+test('Successive same-title financial snapshots remain one source family without becoming duplicate documents',()=>{
+ const evidence=[
+  {id:'initial',url:'https://example.org/report/initial',publisher:'Author',retrieved_at:'2026-10-29',published_at:null},
+  {id:'followup',url:'https://example.org/report/followup',publisher:'Author',retrieved_at:'2026-10-29',published_at:null}
+ ];
+ const family={id:'one-game-two-checkpoints',source_ids:['initial','followup'],relation:'same_title_nested_cumulative_observations'};
+ const audit=auditPublicSources(evidence,[{id:'a',source_ids:['initial']},{id:'b',source_ids:['followup']}],{families:[family]});
+ assert.equal(audit.invalid_source_family_records.length,0);
+ assert.equal(audit.registered_shared_source_families,1);
+ assert.equal(audit.inferred_independent_studies,null);
+ const bad=auditPublicSources(evidence,[],{families:[{...family,relation:'unknown_untrusted_relation'}]});
+ assert.deepEqual(bad.invalid_source_family_records,['one-game-two-checkpoints']);
+});
