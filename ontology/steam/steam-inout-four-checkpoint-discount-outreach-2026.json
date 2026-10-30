@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "single_paid_game_same_author_cumulative_sales_discount_outreach_observation_not_causal",
+  "reviewed_at": "2026-10-30",
+  "source_ids": [
+    "steam-inout-20260923-update-81-sales",
+    "steam-inout-20261002-week-4-85-sales",
+    "steam-inout-20261002-community-discount-post",
+    "steam-inout-20261007-week-5-147-sales",
+    "steam-inout-20261014-week-6-162-sales",
+    "steam-inout-official-store-20261030"
+  ],
+  "source_family_id": "steam-inout-2026-nested-cumulative-sales-week3-week6",
+  "claim_ids": [
+    "steam-inout-release-game-identity",
+    "steam-inout-sep23-snapshot-81",
+    "steam-inout-oct02-snapshot-85",
+    "steam-inout-oct07-snapshot-147",
+    "steam-inout-oct14-snapshot-162",
+    "steam-inout-discount-and-community-pack",
+    "steam-inout-observation-spacing-not-fixed-week",
+    "steam-inout-cumulative-increments-reconcile",
+    "steam-inout-keys-and-contact-funnels-distinct",
+    "steam-inout-marketing-channels-not-causal",
+    "steam-inout-no-observed-publisher-cash",
+    "steam-inout-not-population-distribution"
+  ],
+  "game": {
+    "name": "In & Out",
+    "appid": 4230140,
+    "developer_label": "KASTEN",
+    "publisher_label": "KASTEN",
+    "steam_first_paid_release_date": "2026-08-31",
+    "release_date_verified_by_public_store": true
+  },
+  "reported_public_checkpoints": [
+    {
+      "post_date": "2026-09-23",
+      "cumulative_sales_units": 81,
+      "wishlist_stock": 852,
+      "previous_reported_units": 71,
+      "previous_reported_wishlists": 793,
+      "source_id": "steam-inout-20260923-update-81-sales",
+      "reviews_reported": 5
+    },
+    {
+      "post_date": "2026-10-02",
+      "cumulative_sales_units": 85,
+      "wishlist_stock": 872,
+      "previous_reported_units": 81,
+      "previous_reported_wishlists": 852,
+      "source_id": "steam-inout-20261002-week-4-85-sales",
+      "reviews_reported": null
+    },
+    {
+      "post_date": "2026-10-07",
+      "cumulative_sales_units": 147,
+      "wishlist_stock": 900,
+      "previous_reported_units": 85,
+      "previous_reported_wishlists": 872,
+      "source_id": "steam-inout-20261007-week-5-147-sales",
+      "reviews_reported": 11
+    },
+    {
+      "post_date": "2026-10-14",
+      "cumulative_sales_units": 162,
+      "wishlist_stock": 919,
+      "previous_reported_units": 147,
+      "previous_reported_wishlists": 900,
+      "source_id": "steam-inout-20261014-week-6-162-sales",
+      "reviews_reported": null
+    }
+  ],
+  "arithmetic": {
+    "checkpoint_elapsed_calendar_days": [
+      9,
+      5,
+      7
+    ],
+    "consecutive_sales_increments": [
+      4,
+      62,
+      15
+    ],
+    "consecutive_wishlist_stock_changes": [
+      20,
+      28,
+      19
+    ],
+    "reported_prior_sep23_increment": 10,
+    "reported_prior_sep23_wishlist_change": 59,
+    "identical_seven_day_windows": false
+  },
+  "promotion_context": {
+    "launch_discount_existed_before_sep23": true,
+    "october_promotion_discount_percent_reported": 75,
+    "october_promotion_source_id": "steam-inout-20261002-community-discount-post",
+    "community_pack_puzzles_from_players_reported": 50,
+    "concurrent_press_and_curator_activity": true,
+    "confounding_events_not_ruled_out": true,
+    "price_per_verified_transaction_usd": null
+  },
+  "marketing": {
+    "sep23_keymailer_keys_sent_cumulative_reported": 108,
+    "sep23_press_emails_sent_lower_bound_exclusive": 500,
+    "oct02_press_articles_reported": 2,
+    "oct02_twitch_keys_sent": 8,
+    "oct02_twitch_contacts": 46,
+    "oct07_twitch_keys_sent": 19,
+    "oct07_twitch_contacts": 116,
+    "oct14_twitch_replies": 25,
+    "oct14_twitch_new_contacts": 80,
+    "key_dispatches_are_sales": false,
+    "replies_are_confirmed_content_coverage": false,
+    "denominators_aligned_across_posts": false
+  },
+  "study_limits": {
+    "single_game_not_random": true,
+    "four_reporting_intervals_not_uniform": true,
+    "undisclosed_net_sales_refund_basis": true,
+    "unverified_developer_transaction_ledger": true,
+    "unverified_incremental_promotion_effect": true,
+    "unverified_post_promotion_retention": true,
+    "no_complete_publisher_cash_data": true,
+    "no_authenticated_development_costs": true,
+    "reporting_posts_are_not_independent_games": true
+  },
+  "unknown": {
+    "actual_gross_revenue_usd": null,
+    "publisher_net_remittance_usd": null,
+    "verified_bank_cash_usd": null,
+    "after_cost_profit_usd": null,
+    "verified_zero_sales_steam_fraction": null,
+    "causal_discount_sales_lift": null,
+    "causal_twitch_key_sales_lift": null,
+    "matched_sales_to_wishlist_cohort_conversion": null
+  },
+  "private_records_used": false,
+  "test_path": "tests/steam-inout-four-checkpoint-discount-confounds.test.mjs"
+}

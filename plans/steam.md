@@ -7,6 +7,10 @@
 
 
 
+## One-game promotion and marketing-confound audit: In & Out (October 30, 2026)
+
+The [In & Out multi-checkpoint source study](../ontology/steam/steam-inout-four-checkpoint-discount-outreach-2026.md) reconciles four selected same-team cumulative sales states (81, 85, 147 and 162) and outstanding wishlist stocks (852, 872, 900 and 919). Their post dates are **9, 5 and 7 days apart**, not equal weekly intervals. A public **75% discount** coincided with a community pack, press, creator-key outreach and curator visibility; the observed +4, +62 and +15 sales increments therefore cannot identify a causal discount effect. Creator contacts, keys, article coverage and sales remain different events; no net publisher income, customer cohort or profit is verified. Five dated developer posts form **one** nested-observation source family, and the official Steam listing verifies game identity but not units. Six new public sources, twelve claims and four regression tests advance four existing tasks by one point each, with the original 293-task scope preserved. Steam research now **91.642%** (Δ **+0.014 percentage points**), **254 sources** and **1,506 claims**.
+
 ## Paid Early Access opening versus later full-release date (October 30, 2026)
 
 The [What Is The Ghost public case](../ontology/steam/what-is-the-ghost-earlyaccess-first-paid-v1-distinction-2026.md) establishes a **March 23, 2026 initial paid Early Access** offer versus the **October 1 full release** of the same AppID, not two first-paid launches. The July author report cites **183 sold units**, **14 returns**, and **$1,370 net after returns**, which cannot be treated as verified after-platform-share bank cash. It also documents pre-festival versus July wishlist-stock incompatibility and unverified marketing and multiplayer effects. Two new sources, eight claims and regression checks advance three existing tasks by one point each. Steam research **91.532%** (Δ **+0.010 pp**), 222 sources and 1358 claims, 293 tasks retained.

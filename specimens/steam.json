@@ -2743,6 +2743,72 @@
       "evidence_class": "operator_data_export_manifest_coverage_and_observation_age_metadata_not_revenue_ground_truth",
       "license": "Short factual metadata and original arithmetic only; public JSON manifest cited, no proprietary game or account rows copied.",
       "notes": "Release 2f12e765a2b53cdfdc72f190, capture 2026-09-16T06:04:25.035Z; catalog 157,684; published profiles 23,189. For profiles revenue freshness recent=0 stale=20,371 unknown=2,818; player freshness recent=0 stale=1,069 unknown=22,120; each sums to 23,189. Source PlayRev Core/Analytics, multi-query capture not atomic upstream snapshot. Manifest capture time is not individual metric observation time."
+    },
+    {
+      "id": "steam-inout-20260923-update-81-sales",
+      "url": "https://www.reddit.com/r/gameDevMarketing/comments/1wnz6v8/in_out_update_3_81_sales_twitch_outreach_and_50/",
+      "publisher": "KASTEN / In & Out developers — public self-report",
+      "title": "IN & OUT update #3: 81 sales, outreach and 50 puzzles",
+      "published_at": "2026-09-23",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "selected_same_team_cumulative_game_sales_and_promotion_selfreport",
+      "license": "Public source URL, date, numerical facts and independently authored short analysis only; no original prose or images copied.",
+      "notes": "Same team, cumulative sales/wishlist self report; earlier 71 sales, 793 wishlists, 108 key outreach reports, >500 press emails. Keys are not paid orders."
+    },
+    {
+      "id": "steam-inout-20261002-week-4-85-sales",
+      "url": "https://www.reddit.com/r/gameDevMarketing/comments/1wvnst1/in_out_weekly_update_press_coverage_twitch/",
+      "publisher": "KASTEN / In & Out developers — public self-report",
+      "title": "IN & OUT follow-up: press coverage and 85 sales",
+      "published_at": "2026-10-02",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "selected_same_team_cumulative_game_sales_and_promotion_selfreport",
+      "license": "Public source URL, date, numerical facts and independently authored short analysis only; no original prose or images copied.",
+      "notes": "Same game: 81 to 85 cumulative paid sales, 852 to 872 wishlist stock, two press items and eight Twitch keys among 46 contacts."
+    },
+    {
+      "id": "steam-inout-20261002-community-discount-post",
+      "url": "https://www.reddit.com/r/puzzlevideogames/comments/1wvnlbm/you_sent_us_so_many_puzzles_that_we_turned_50_of/",
+      "publisher": "KASTEN / In & Out developers — public self-report",
+      "title": "IN & OUT community pack and 75 percent discount",
+      "published_at": "2026-10-02",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "selected_same_team_cumulative_game_sales_and_promotion_selfreport",
+      "license": "Public source URL, date, numerical facts and independently authored short analysis only; no original prose or images copied.",
+      "notes": "Same team's announcement of 50 user-submitted puzzles and a concurrent 75-percent promotion, without checkout prices or causal design."
+    },
+    {
+      "id": "steam-inout-20261007-week-5-147-sales",
+      "url": "https://www.reddit.com/r/gameDevMarketing/comments/1wzuyz4/in_out_62_sales_this_week_11_reviews_and_a/",
+      "publisher": "KASTEN / In & Out developers — public self-report",
+      "title": "IN & OUT week five: 147 cumulative sales",
+      "published_at": "2026-10-07",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "selected_same_team_cumulative_game_sales_and_promotion_selfreport",
+      "license": "Public source URL, date, numerical facts and independently authored short analysis only; no original prose or images copied.",
+      "notes": "Same game: 85 to 147 cumulative copies, 872 to 900 outstanding wishlists, 11 reviews, 19 Twitch keys among 116 contacts."
+    },
+    {
+      "id": "steam-inout-20261014-week-6-162-sales",
+      "url": "https://www.reddit.com/r/gameDevMarketing/comments/1x5pk72/in_out_sales_slowed_after_the_discount_week_6/",
+      "publisher": "KASTEN / In & Out developers — public self-report",
+      "title": "IN & OUT week six: 162 cumulative sales",
+      "published_at": "2026-10-14",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "selected_same_team_cumulative_game_sales_and_promotion_selfreport",
+      "license": "Public source URL, date, numerical facts and independently authored short analysis only; no original prose or images copied.",
+      "notes": "Same game: 147 to 162 paid units and 900 to 919 outstanding wishlists after promotion; 25 Twitch replies among 80 new contacts."
+    },
+    {
+      "id": "steam-inout-official-store-20261030",
+      "url": "https://store.steampowered.com/app/4230140/",
+      "publisher": "Valve Corporation — public Steam listing",
+      "title": "In & Out: Steam public game listing",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "official_current_store_game_identity_not_merchant_ledger",
+      "license": "Public source URL, date, numerical facts and independently authored short analysis only; no original prose or images copied.",
+      "notes": "Valve store verifies AppID, developer/publisher KASTEN, and August 31, 2026 store release; does not confirm author sales or bank payment."
     }
   ],
   "claims": [
@@ -18202,6 +18268,143 @@
       "observed_at": "2026-10-29",
       "confidence": "high",
       "limitations": "A public operator-selected Steam game catalog and modeled/dated profile export, not an audited all-initially-paid historical release census. No actual customer purchases or legal-publisher financial statements; model eligibility, catalog size, indexed profiles and recency are different denominators."
+    },
+    {
+      "id": "steam-inout-release-game-identity",
+      "text": "Valve's game listing identifies In & Out, AppID 4230140, as a KASTEN developer and publisher title, first released August 31, 2026.",
+      "source_ids": [
+        "steam-inout-official-store-20261030"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "high",
+      "limitations": "Voluntarily selected, author-reported cumulative observations for a single title, without authenticated merchant data, a matched promotion control, stable buyer cohorts, or representative market-wide outcomes."
+    },
+    {
+      "id": "steam-inout-sep23-snapshot-81",
+      "text": "The September 23 author report gives 81 cumulative units sold and 852 outstanding wishlists, against earlier 71 sales and 793 wishlists, and five reviews.",
+      "source_ids": [
+        "steam-inout-20260923-update-81-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "high",
+      "limitations": "Voluntarily selected, author-reported cumulative observations for a single title, without authenticated merchant data, a matched promotion control, stable buyer cohorts, or representative market-wide outcomes."
+    },
+    {
+      "id": "steam-inout-oct02-snapshot-85",
+      "text": "The October 2 author report gives 85 cumulative units sold and 872 outstanding wishlists, four and twenty more than the prior reported state.",
+      "source_ids": [
+        "steam-inout-20261002-week-4-85-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "high",
+      "limitations": "Voluntarily selected, author-reported cumulative observations for a single title, without authenticated merchant data, a matched promotion control, stable buyer cohorts, or representative market-wide outcomes."
+    },
+    {
+      "id": "steam-inout-oct07-snapshot-147",
+      "text": "The October 7 author report gives 147 cumulative sales and 900 outstanding wishlists, increases of 62 units and 28 wishlists from the prior update, alongside 11 reported reviews.",
+      "source_ids": [
+        "steam-inout-20261007-week-5-147-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "high",
+      "limitations": "Voluntarily selected, author-reported cumulative observations for a single title, without authenticated merchant data, a matched promotion control, stable buyer cohorts, or representative market-wide outcomes."
+    },
+    {
+      "id": "steam-inout-oct14-snapshot-162",
+      "text": "The October 14 report gives 162 cumulative sales and 919 outstanding wishlists, increases of 15 and 19 from the previous account after the discount period.",
+      "source_ids": [
+        "steam-inout-20261014-week-6-162-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "high",
+      "limitations": "Voluntarily selected, author-reported cumulative observations for a single title, without authenticated merchant data, a matched promotion control, stable buyer cohorts, or representative market-wide outcomes."
+    },
+    {
+      "id": "steam-inout-discount-and-community-pack",
+      "text": "The developer's October 2 community announcement describes a 75-percent Steam discount and an update containing 50 player-submitted puzzles.",
+      "source_ids": [
+        "steam-inout-20261002-community-discount-post"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "high",
+      "limitations": "Voluntarily selected, author-reported cumulative observations for a single title, without authenticated merchant data, a matched promotion control, stable buyer cohorts, or representative market-wide outcomes."
+    },
+    {
+      "id": "steam-inout-observation-spacing-not-fixed-week",
+      "text": "The four report publication dates are nine, five, and seven days apart; cumulative differences should not be interpreted as equal-length seven-day sales rates.",
+      "source_ids": [
+        "steam-inout-20260923-update-81-sales",
+        "steam-inout-20261002-week-4-85-sales",
+        "steam-inout-20261007-week-5-147-sales",
+        "steam-inout-20261014-week-6-162-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "high",
+      "limitations": "Voluntarily selected, author-reported cumulative observations for a single title, without authenticated merchant data, a matched promotion control, stable buyer cohorts, or representative market-wide outcomes."
+    },
+    {
+      "id": "steam-inout-cumulative-increments-reconcile",
+      "text": "Cross-post arithmetic yields 4, 62, 15 additional sales and 20, 28, 19 changes in outstanding wishlist stock across consecutive reporting dates.",
+      "source_ids": [
+        "steam-inout-20260923-update-81-sales",
+        "steam-inout-20261002-week-4-85-sales",
+        "steam-inout-20261007-week-5-147-sales",
+        "steam-inout-20261014-week-6-162-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "high",
+      "limitations": "Voluntarily selected, author-reported cumulative observations for a single title, without authenticated merchant data, a matched promotion control, stable buyer cohorts, or representative market-wide outcomes."
+    },
+    {
+      "id": "steam-inout-keys-and-contact-funnels-distinct",
+      "text": "108 earlier Keymailer key distributions, later eight keys out of 46 Twitch contacts and 19 out of 116 contacts, and 25 responses among 80 new contacts are different outreach units, not purchases.",
+      "source_ids": [
+        "steam-inout-20260923-update-81-sales",
+        "steam-inout-20261002-week-4-85-sales",
+        "steam-inout-20261007-week-5-147-sales",
+        "steam-inout-20261014-week-6-162-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "high",
+      "limitations": "Voluntarily selected, author-reported cumulative observations for a single title, without authenticated merchant data, a matched promotion control, stable buyer cohorts, or representative market-wide outcomes."
+    },
+    {
+      "id": "steam-inout-marketing-channels-not-causal",
+      "text": "Observed discount-associated sales changes overlap a community pack, press and curator attention, so the posts cannot establish incremental discount sales, price elasticity or creator conversion.",
+      "source_ids": [
+        "steam-inout-20261002-week-4-85-sales",
+        "steam-inout-20261002-community-discount-post",
+        "steam-inout-20261007-week-5-147-sales",
+        "steam-inout-20261014-week-6-162-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "high",
+      "limitations": "Voluntarily selected, author-reported cumulative observations for a single title, without authenticated merchant data, a matched promotion control, stable buyer cohorts, or representative market-wide outcomes."
+    },
+    {
+      "id": "steam-inout-no-observed-publisher-cash",
+      "text": "The case's public posts contain no authenticated gross revenue, fee deductions, bank remittance, refunded unit ledger or development profit despite reporting cumulative unit sales.",
+      "source_ids": [
+        "steam-inout-20260923-update-81-sales",
+        "steam-inout-20261007-week-5-147-sales",
+        "steam-inout-20261014-week-6-162-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "high",
+      "limitations": "Voluntarily selected, author-reported cumulative observations for a single title, without authenticated merchant data, a matched promotion control, stable buyer cohorts, or representative market-wide outcomes."
+    },
+    {
+      "id": "steam-inout-not-population-distribution",
+      "text": "The selected public updates concern one game from one reporting team rather than four independent publisher incomes or an exhaustive commercial release population.",
+      "source_ids": [
+        "steam-inout-20260923-update-81-sales",
+        "steam-inout-20261002-week-4-85-sales",
+        "steam-inout-20261007-week-5-147-sales",
+        "steam-inout-20261014-week-6-162-sales"
+      ],
+      "observed_at": "2026-10-30",
+      "confidence": "high",
+      "limitations": "Voluntarily selected, author-reported cumulative observations for a single title, without authenticated merchant data, a matched promotion control, stable buyer cohorts, or representative market-wide outcomes."
     }
   ],
   "observations": [],

@@ -80,6 +80,21 @@
       ],
       "independence": "two differently framed public versions from Games-Stats, not independent sampling or proof they share an identical release roster",
       "notes": "Operator Patreon states 7,478 Jan1-Apr16 releases and approx 110k average/650m total. Operator website says 6,169 Jan1-Apr22 and approx 120k average/733m total. Earlier larger cohort and Patreon mean-total discrepancy require missing crosswalk and original model data; do not pool them."
+    },
+    {
+      "id": "steam-inout-2026-nested-cumulative-sales-week3-week6",
+      "relation": "same_title_nested_cumulative_observations",
+      "observed_population": "one self-reporting game's uneven-calendar-spaced cumulative Steam sales and wishlist stock updates around a discount",
+      "documented_selected_games": 1,
+      "source_ids": [
+        "steam-inout-20260923-update-81-sales",
+        "steam-inout-20261002-week-4-85-sales",
+        "steam-inout-20261002-community-discount-post",
+        "steam-inout-20261007-week-5-147-sales",
+        "steam-inout-20261014-week-6-162-sales"
+      ],
+      "independence": "Five same-team public posts share one underlying game and changing cumulative counts; none is an independent release sample or authenticated Steam financial ledger.",
+      "notes": "Cumulative period differences are 4/62/15 units over 9/5/7 calendar days between publication dates, with a 75-percent price promotion, community content, press, creator and curator confounds. No causal discount revenue identified."
     }
   ],
   "related_documents_not_independent_replications": [
@@ -112,6 +127,12 @@
       "related_family_id": "steam-strike-two-1312-paid-review-cohort-september2026",
       "relation": "same_vendor_similar_high_review_paid_indie_selection_different_documented_eligibility_and_snapshot",
       "notes": "October revival report uses 1651 currently paid US Indie 2020-22 games with ≥100 year-one reviews, versus an earlier 1312-game September update panel. Missing AppID join means neither identical cohort nor independent replication should be inferred."
+    },
+    {
+      "source_id": "steam-inout-official-store-20261030",
+      "related_family_id": "steam-inout-2026-nested-cumulative-sales-week3-week6",
+      "relation": "official_store_identity_not_sales_authentication",
+      "notes": "The Steam store confirms app identity, self-publisher label and dated release, but no developer claim about cumulative sold copies or channel-dependent remittance."
     }
   ],
   "independent_study_count": null,
