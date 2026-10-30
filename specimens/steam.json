@@ -2864,6 +2864,28 @@
       "evidence_class": "official_public_paid_game_identity_release_and_developer_publisher_label",
       "license": "Public metadata citation only; no storefront text, images, price history or user profiles republished.",
       "notes": "Valve lists game AppID 2900050, commercial release 2026-06-01, Archaic Game Studio developer/publisher, point-and-click puzzle adventure. Listing does not independently authenticate author sales or launch wishlist counts."
+    },
+    {
+      "id": "steam-marbles-feb2026-author-firstmonth-30k-gross",
+      "url": "https://www.reddit.com/r/gamedev/comments/1r3ahi2/i_made_a_game_in_2_months_and_it_earned_30000_no/",
+      "title": "I Made a Game in 2 Months and It Earned $30,000. No demo, only 5.8k wishlists on launch. Here is how.",
+      "publisher": "Marble's Marbles first-person developer — public r/gamedev account",
+      "published_at": "2026-02-13",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "selected_voluntary_single_paid_game_firstmonth_gross_returns_and_promotional_funnel",
+      "license": "Public link, title, date and short independently authored numerical analysis only; no original paragraphs or copyrighted media reproduced.",
+      "notes": "Author reports ~4300 first-month units and >USD 30000 gross, ~6.5% returns, 5800 launch wishlists, ~22k later wishlists, 2.5m Steam impressions, ~30k trailer views, no demo and under two months development. Reports are not audited Steamworks payout records; exact windows for units and returns are unverified."
+    },
+    {
+      "id": "steam-marbles-official-app4137920-20261030",
+      "url": "https://store.steampowered.com/app/4137920/",
+      "title": "Marble's Marbles — official Steam game listing",
+      "publisher": "Valve Corporation — public Steam storefront",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "official_public_paid_product_release_and_developer_publisher_labels",
+      "license": "Public store metadata link and concise original factual summary only; no media assets or private records included.",
+      "notes": "AppID 4137920; January 7 2026 Steam commercial release; developer James Oliver and publisher Destined. This does not prove legal payee, self-reported first-month units or developer profit."
     }
   ],
   "claims": [
@@ -18675,6 +18697,118 @@
       "observed_at": "2026-10-30",
       "confidence": "bounded_first_party_self_report_with_official_game_identity_metadata",
       "limitations": "One selected same-team public disclosure with a non-fixed short launch window, ambiguous wishlist stock denominator, unverified buyers, no independently authenticated finance or population sampling."
+    },
+    {
+      "id": "steam-marbles-official-jan7-paid-release",
+      "text": "Steam publicly identifies Marble's Marbles, AppID 4137920, as released January 7, 2026, developed by James Oliver and published under Destined; the store does not establish the underlying legal payout relationship.",
+      "source_ids": [
+        "steam-marbles-official-app4137920-20261030"
+      ],
+      "confidence": "bounded_first_party_author_selfreport_with_public_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "One deliberately selected positive postmortem with self-defined month, unmatched wishlist and ad exposure units, unverified merchant books, incomplete returns window and no population sampling frame."
+    },
+    {
+      "id": "steam-marbles-one-month-gross-and-units",
+      "text": "The first-person February 13 post reports roughly 4300 sold copies and over USD 30000 gross in a self-described first month, without authenticated refunds or a precise fixed 30-day cutoff.",
+      "source_ids": [
+        "steam-marbles-feb2026-author-firstmonth-30k-gross"
+      ],
+      "confidence": "bounded_first_party_author_selfreport_with_public_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "One deliberately selected positive postmortem with self-defined month, unmatched wishlist and ad exposure units, unverified merchant books, incomplete returns window and no population sampling frame."
+    },
+    {
+      "id": "steam-marbles-sixpointfive-percent-refund-selfreport",
+      "text": "The author reports approximately 6.5 percent refunds and roughly two-hour gameplay, but provides no independently reconciled refund-unit denominator or causal evidence about game length.",
+      "source_ids": [
+        "steam-marbles-feb2026-author-firstmonth-30k-gross"
+      ],
+      "confidence": "bounded_first_party_author_selfreport_with_public_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "One deliberately selected positive postmortem with self-defined month, unmatched wishlist and ad exposure units, unverified merchant books, incomplete returns window and no population sampling frame."
+    },
+    {
+      "id": "steam-marbles-fastdevelopment-not-labor-hours",
+      "text": "The developer says production took less than two months, which is an elapsed-schedule self-report rather than audited person-hours or complete development costs.",
+      "source_ids": [
+        "steam-marbles-feb2026-author-firstmonth-30k-gross"
+      ],
+      "confidence": "bounded_first_party_author_selfreport_with_public_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "One deliberately selected positive postmortem with self-defined month, unmatched wishlist and ad exposure units, unverified merchant books, incomplete returns window and no population sampling frame."
+    },
+    {
+      "id": "steam-marbles-launch-wishlist-stock",
+      "text": "The author reports about 5800 outstanding wishlists at launch, less than 3000 a week before release; these are different dated stocks without tracked purchases.",
+      "source_ids": [
+        "steam-marbles-feb2026-author-firstmonth-30k-gross"
+      ],
+      "confidence": "bounded_first_party_author_selfreport_with_public_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "One deliberately selected positive postmortem with self-defined month, unmatched wishlist and ad exposure units, unverified merchant books, incomplete returns window and no population sampling frame."
+    },
+    {
+      "id": "steam-marbles-postlaunch-wishlist-stock",
+      "text": "The author describes a postlaunch wishlist stock reaching about 22000, which cannot be converted into cumulative purchased game units or isolated launch-day customers.",
+      "source_ids": [
+        "steam-marbles-feb2026-author-firstmonth-30k-gross"
+      ],
+      "confidence": "bounded_first_party_author_selfreport_with_public_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "One deliberately selected positive postmortem with self-defined month, unmatched wishlist and ad exposure units, unverified merchant books, incomplete returns window and no population sampling frame."
+    },
+    {
+      "id": "steam-marbles-trailer-views-no-attribution",
+      "text": "A developer-reported trailer placement drew approximately 30000 external views and coincided with substantial wishlist growth, but viewers were not linked to paying buyers.",
+      "source_ids": [
+        "steam-marbles-feb2026-author-firstmonth-30k-gross"
+      ],
+      "confidence": "bounded_first_party_author_selfreport_with_public_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "One deliberately selected positive postmortem with self-defined month, unmatched wishlist and ad exposure units, unverified merchant books, incomplete returns window and no population sampling frame."
+    },
+    {
+      "id": "steam-marbles-steam-impressions-not-buyers",
+      "text": "The author reports approximately 2.5 million postlaunch Steam discovery queue impressions, which do not identify unique customer accounts, paid conversions, or causal extra sales.",
+      "source_ids": [
+        "steam-marbles-feb2026-author-firstmonth-30k-gross"
+      ],
+      "confidence": "bounded_first_party_author_selfreport_with_public_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "One deliberately selected positive postmortem with self-defined month, unmatched wishlist and ad exposure units, unverified merchant books, incomplete returns window and no population sampling frame."
+    },
+    {
+      "id": "steam-marbles-no-demo-strategy-not-controlled",
+      "text": "The author says the short-development project launched without a demo, but with concurrent trailer coverage, storefront visibility and other outreach; the role of demo absence cannot be causally estimated.",
+      "source_ids": [
+        "steam-marbles-feb2026-author-firstmonth-30k-gross"
+      ],
+      "confidence": "bounded_first_party_author_selfreport_with_public_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "One deliberately selected positive postmortem with self-defined month, unmatched wishlist and ad exposure units, unverified merchant books, incomplete returns window and no population sampling frame."
+    },
+    {
+      "id": "steam-marbles-firstmonth-window-not-synced",
+      "text": "The sales post was published 37 calendar days after the official January 7 release while describing a first-month outcome, and cannot be directly compared to a different title's roughly 1.5-day snapshot.",
+      "source_ids": [
+        "steam-marbles-feb2026-author-firstmonth-30k-gross",
+        "steam-marbles-official-app4137920-20261030"
+      ],
+      "confidence": "bounded_first_party_author_selfreport_with_public_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "One deliberately selected positive postmortem with self-defined month, unmatched wishlist and ad exposure units, unverified merchant books, incomplete returns window and no population sampling frame."
+    },
+    {
+      "id": "steam-marbles-no-publisher-net-or-profit",
+      "text": "Self-reported gross, copies, public studio credits and platform impressions do not authenticate Steam partner net remittances, individual owner pay, after-cost profit or representative Steam earnings.",
+      "source_ids": [
+        "steam-marbles-feb2026-author-firstmonth-30k-gross",
+        "steam-marbles-official-app4137920-20261030"
+      ],
+      "confidence": "bounded_first_party_author_selfreport_with_public_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "One deliberately selected positive postmortem with self-defined month, unmatched wishlist and ad exposure units, unverified merchant books, incomplete returns window and no population sampling frame."
     }
   ],
   "observations": [],

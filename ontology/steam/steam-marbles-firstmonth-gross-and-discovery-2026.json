@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "selected_firstpaid_fastdevelopment_firstmonth_gross_sales_noncausal_launch_marketing",
+  "reviewed_at": "2026-10-30",
+  "source_ids": [
+    "steam-marbles-feb2026-author-firstmonth-30k-gross",
+    "steam-marbles-official-app4137920-20261030"
+  ],
+  "claim_ids": [
+    "steam-marbles-official-jan7-paid-release",
+    "steam-marbles-one-month-gross-and-units",
+    "steam-marbles-sixpointfive-percent-refund-selfreport",
+    "steam-marbles-fastdevelopment-not-labor-hours",
+    "steam-marbles-launch-wishlist-stock",
+    "steam-marbles-postlaunch-wishlist-stock",
+    "steam-marbles-trailer-views-no-attribution",
+    "steam-marbles-steam-impressions-not-buyers",
+    "steam-marbles-no-demo-strategy-not-controlled",
+    "steam-marbles-firstmonth-window-not-synced",
+    "steam-marbles-no-publisher-net-or-profit"
+  ],
+  "release": {
+    "title": "Marble's Marbles",
+    "app_id": 4137920,
+    "first_paid_release_date": "2026-01-07",
+    "store_developer": "James Oliver",
+    "store_publisher": "Destined",
+    "publisher_legal_agreement_verified": false,
+    "game_type": "short_physics_marble_game",
+    "user_reported_gameplay_duration_hours_approx": 2
+  },
+  "developer_self_report": {
+    "publication_date": "2026-02-13",
+    "release_to_post_elapsed_calendar_days": 37,
+    "reported_outcome_window_label": "first_month",
+    "exact_30_day_end_date_authenticated": false,
+    "approximate_units_reported": 4300,
+    "reported_gross_usd_more_than": 30000,
+    "reported_refund_rate_percent_approx": 6.5,
+    "refund_units_denominator_verified": false,
+    "price_usd_as_public_store_current_20261030": 7.99,
+    "price_for_each_historic_transaction_verified": false,
+    "reported_development_elapsed_months_upper_exclusive": 2,
+    "individual_labor_hours_audited": false,
+    "prelaunch_wishlist_stock_approx": 5800,
+    "wishlist_stock_about_one_week_before_launch_less_than": 3000,
+    "postlaunch_wishlist_stock_approx": 22000,
+    "postlaunch_stock_observation_exact_date_verified": false,
+    "postlaunch_discovery_impressions_approx": 2500000,
+    "impressions_unique_buyers_verified": false,
+    "external_trailer_views_approx": 30000,
+    "external_viewers_matched_to_paid_orders": false,
+    "no_demo_author_reported": true,
+    "matched_release_wishlisters_who_purchased_verified": false
+  },
+  "comparison_to_other_selected_cases": {
+    "comparison_game": "Lost in Art: a Miniature Realm",
+    "other_app_id": 2900050,
+    "other_self_reported_early_units": 187,
+    "other_self_reported_early_horizon_days_approx": 1.5,
+    "identical_observation_windows": false,
+    "same_genre_or_price_tier_held_fixed": false,
+    "randomized_launch_comparison": false,
+    "ratios_do_not_establish_representative_wishlist_conversion": true
+  },
+  "interpretation": {
+    "single_selected_author_case": true,
+    "official_store_independent_identity_only": true,
+    "zero_sales_population_inferred": false,
+    "refund_window_may_differ_from_unit_window": true,
+    "store_impressions_are_not_unique_purchasers": true,
+    "crosssite_trailer_views_are_not_purchases": true,
+    "developer_label_not_proof_of_legal_payout_recipient": true,
+    "no_private_records_used": true
+  },
+  "unknown": {
+    "authenticated_refund_adjusted_30day_units": null,
+    "exact_sold_unit_timecut": null,
+    "matched_wishlist_to_paid_buyers": null,
+    "causal_trailer_view_sales_effect": null,
+    "causal_steam_discovery_sales_effect": null,
+    "sales_region_discount_mix": null,
+    "platform_after_fee_remittance": null,
+    "legal_publisher_cash_receipt": null,
+    "personal_income_after_costs": null,
+    "representative_game_revenue_median": null,
+    "exact_zero_sales_platform_fraction": null
+  },
+  "regression_test": "tests/steam-marbles-firstmonth-gross-window.test.mjs"
+}
