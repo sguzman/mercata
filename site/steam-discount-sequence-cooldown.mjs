@@ -107,7 +107,7 @@ export function auditSyntheticSteamDiscountSequence(args={}){
  const previousEventAttested=previous?.kind==='official_seasonal'&&previous.eventAttested;
  const duration=days(start,end)+1;
  const launchStage=args.discount_kind==='launch'?
-  start.getTime()===release.getTime()?'early_access':
+  start.getTime()===release.getTime()?(full?'early_access':'first_paid_release'):
    full&&start.getTime()===full.getTime()?'full_release':null:null;
  const reasons=[];
  if(start<release)reasons.push('starts_before_first_paid_release');
@@ -174,7 +174,7 @@ export function auditSyntheticSteamDiscountSequence(args={}){
   actual_partner_eligibility_verified:false,
   local_currency_minimum_price_verified:false,
   verified_steam_discount_history:false,
-  release_to_v1_early_access_transition_modeled:false,
+  release_to_v1_early_access_transition_modeled:Boolean(full),
   causal_discount_revenue_increment:null,
   note:'Official seasonal discounts skip only discount-to-discount cooldowns, never first-paid release or price-rise waits. Official-sale attestations are synthetic assertions, not independently checked event calendars. Release cooldowns apply separately to Early Access and full release; a launch discount is modeled only on the corresponding release date. Nonseasonal cooldowns are checked across the entire supplied ordered history, which is still only a synthetic attestation. Price-increase history is also only a dated fixture, not an authenticated price ledger. Date-only model ignores exact 10am Pacific cutoffs, country minimum prices, actual partner setup and unknown earlier discounts.'});
 }

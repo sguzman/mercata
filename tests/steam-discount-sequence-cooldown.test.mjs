@@ -394,3 +394,16 @@ test('Launch offers do not suggest an impossible delayed launch date',()=>{
  const early=check({...good,discount_start:'2026-01-15',discount_end:'2026-01-21'});
  assert.equal(early.first_allowed_start_date_from_known_cooldowns,'2026-01-15');
 });
+test('Standalone paid release remains distinct from modeled Early Access graduation',()=>{
+ const standalone=check({...base,discount_kind:'launch',discount_start:'2026-08-31',
+  discount_end:'2026-09-06',discount_percent:20});
+ assert.equal(standalone.launch_stage,'first_paid_release');
+ assert.equal(standalone.release_to_v1_early_access_transition_modeled,false);
+ assert.equal(standalone.full_release_date,null);
+ const graduated=check({...base,first_paid_release_date:'2026-01-15',
+  full_release_date:'2026-10-15',discount_kind:'launch',
+  discount_start:'2026-10-15',discount_end:'2026-10-21',discount_percent:20});
+ assert.equal(graduated.launch_stage,'full_release');
+ assert.equal(graduated.release_to_v1_early_access_transition_modeled,true);
+ assert.equal(graduated.actual_partner_eligibility_verified,false);
+});
