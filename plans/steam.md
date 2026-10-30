@@ -7,6 +7,10 @@
 
 
 
+## First-game low-gross case with unpriced development labor (October 29, 2026)
+
+The [Hell Forge public author-disclosure audit](../ontology/steam/steam-hell-forge-low-gross-firstgame-labor-2026.md) records a developer's **450 reported copies and approximately USD $1,500 gross** by May 25 after a March 4 launch. The author's approximate 11-hour/day, six-month workload has no independently measured day count, hourly wage or settled-payout basis. The post's 20 first-month reviews must not be divided into the longer-window 450 copies. The Steam listing names a separate publisher; legal-payee share, refunds and after-cost profit remain unknown. Two distinct public sources, eight bounded claims, and regression tests advance three original income tasks by one point each. Steam research **91.427%** (Δ **+0.010 pp**), 202 sources and 1253 claims; 293 original tasks retained.
+
 ## Persistent game stats versus retained players (October 29, 2026)
 
 The [Valve Steamworks game-stat instrumentation addendum](../ontology/steam/steam-postlaunch-event-attention-versus-player-retention-2026.md) distinguishes persistent per-account game statistics and optional global aggregates from store visitors, event reads and actual longitudinal gameplay retention. `INT`, `FLOAT` and `AVGRATE` stats can support deliberately instrumented game sessions; no public cumulative total establishes a returned-player cohort or publisher net revenue. One new Valve primary document and four bounded claims advance the existing after-launch retention metric task by one point; 293 tasks are unchanged. Steam research **91.416%** (Δ **+0.003 pp**), 200 sources and 1245 claims.

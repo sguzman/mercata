@@ -2215,6 +2215,28 @@
       "evidence_class": "official_public_partner_documentation",
       "license": "Public metadata, destination URL and independently authored interpretation only; no source text or media reproduced.",
       "notes": "Game-defined per-account persistent stats, optional global totals and setters; current public documentation, not a sample of verified sessions, paid buyers or partner financials."
+    },
+    {
+      "id": "steam-gabylab-hellforge-firstgame-postmortem-may2026",
+      "url": "https://www.gabylab.com/blog/hell-forge-retrospective",
+      "publisher": "GabyLab — publicly authored first-game development postmortem",
+      "title": "I sold 450 copies of my first Steam game. Here's what I learned.",
+      "published_at": "2026-05-25",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "public_developer_voluntary_firstperson_game_gross_and_workload_disclosure",
+      "license": "Only public source metadata and independently written, brief factual summaries; no site text or screenshot reproduced.",
+      "notes": "Developer states approximately 450 copies and USD 1,500 gross as of May 25 after a March 2026 launch, plus intensive six-month work. Accompanying Steamworks image not authenticated as an original ledger."
+    },
+    {
+      "id": "steam-hellforge-official-app-4118220-oct2026",
+      "url": "https://store.steampowered.com/app/4118220/Hell_Forge/",
+      "publisher": "Valve Corporation — publicly visible Steam store listing",
+      "title": "Hell Forge on Steam",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "public_dynamic_game_listing_not_sales_or_partner_records",
+      "license": "Public metadata and original explanatory prose only; no media or full webpage reproduced.",
+      "notes": "Independent public title/AppID and March 4, 2026 release-date corroboration. Store lists developer Gaby Rla and publisher LiberateGames; neither gross sales nor economic ownership verified. Dynamic price, review and publisher metadata may change."
     }
   ],
   "claims": [
@@ -15090,6 +15112,89 @@
       "confidence": "high",
       "observed_at": "2026-10-29",
       "limitations": "No partner ledger or payment agreement examined; outcome separations are measurement logic, not a report of observed finances."
+    },
+    {
+      "id": "steam-hellforge-author-first-game-mar2026",
+      "text": "A May 25, 2026 developer-authored post describes Hell Forge as the author's first commercial Steam game, with a March 2026 launch; the public Steam store independently gives March 4, 2026 as release date.",
+      "source_ids": [
+        "steam-gabylab-hellforge-firstgame-postmortem-may2026",
+        "steam-hellforge-official-app-4118220-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Self-described first commercial game, not independently verified complete developer history or publisher payment ledger."
+    },
+    {
+      "id": "steam-hellforge-reported-450-units",
+      "text": "The developer reports 450 copies sold for Hell Forge as of a May 25, 2026 postmortem; the number is a voluntary, dated self-report, not authenticated purchase orders.",
+      "source_ids": [
+        "steam-gabylab-hellforge-firstgame-postmortem-may2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Exact unit definition, returns treatment, keys and authorized reports remain unverified."
+    },
+    {
+      "id": "steam-hellforge-reported-1500-gross",
+      "text": "The developer reports approximately USD 1,500 gross for Hell Forge by May 25, 2026, not the net Steamworks payment or a bank deposit.",
+      "source_ids": [
+        "steam-gabylab-hellforge-firstgame-postmortem-may2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Gross currency and amount reported by author, without complete refunds, taxation, revenue-share and publisher-contract reconciliation."
+    },
+    {
+      "id": "steam-hellforge-described-11hours-6months",
+      "text": "The author describes working roughly 11 hours per day for about six months during development, including weekends, rather than providing a measured timesheet.",
+      "source_ids": [
+        "steam-gabylab-hellforge-firstgame-postmortem-may2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "No recorded day count, time logs, labor market wage, outsourcing costs, or verified economic-profit statement."
+    },
+    {
+      "id": "steam-hellforge-firstmonth-20reviews",
+      "text": "The author reports 20 reviews in the game's first month, a narrower time window than the May 25 cumulative units and gross self-report.",
+      "source_ids": [
+        "steam-gabylab-hellforge-firstgame-postmortem-may2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "One-month review count is not a same-date sample matched to the cumulative May paid-unit count."
+    },
+    {
+      "id": "steam-hellforge-store-publisher-distinct",
+      "text": "The public Steam listing for Hell Forge names developer Gaby Rla and publisher LiberateGames, so the postmortem's game gross must not be equated with author net proceeds without a contractual allocation and cash evidence.",
+      "source_ids": [
+        "steam-gabylab-hellforge-firstgame-postmortem-may2026",
+        "steam-hellforge-official-app-4118220-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Named public roles do not prove which legal entity receives funds or how proceeds and costs are shared."
+    },
+    {
+      "id": "steam-hellforge-gross-per-reported-unit-only",
+      "text": "Dividing the author's approximate USD 1,500 gross by 450 reported copies gives approximately USD 3.33 per reported unit, a descriptive mixed-price ratio and not an observed single-sale price, platform share or realized developer income.",
+      "source_ids": [
+        "steam-gabylab-hellforge-firstgame-postmortem-may2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Unit and gross bases may differ in refunds, key redemption, region and discount; the ratio inherits self-report uncertainty."
+    },
+    {
+      "id": "steam-hellforge-not-representative-profit",
+      "text": "The single Hell Forge disclosure does not identify a representative first-commercial-game median, exact zero-sale fraction, developer hourly pay or after-cost profit.",
+      "source_ids": [
+        "steam-gabylab-hellforge-firstgame-postmortem-may2026",
+        "steam-hellforge-official-app-4118220-oct2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Voluntary disclosure and different gameplay, payment, ownership and labor measurement denominators; no population sampling."
     }
   ],
   "observations": [],

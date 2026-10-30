@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "single_author_public_first_paid_game_gross_labor_review_window_audit",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-gabylab-hellforge-firstgame-postmortem-may2026",
+    "steam-hellforge-official-app-4118220-oct2026"
+  ],
+  "claim_ids": [
+    "steam-hellforge-author-first-game-mar2026",
+    "steam-hellforge-reported-450-units",
+    "steam-hellforge-reported-1500-gross",
+    "steam-hellforge-described-11hours-6months",
+    "steam-hellforge-firstmonth-20reviews",
+    "steam-hellforge-store-publisher-distinct",
+    "steam-hellforge-gross-per-reported-unit-only",
+    "steam-hellforge-not-representative-profit"
+  ],
+  "public_post": {
+    "publication_date": "2026-05-25",
+    "described_first_commercial_game": true,
+    "game": "Hell Forge",
+    "app_id": 4118220,
+    "launch_month_reported": "2026-03",
+    "reported_cumulative_copies": 450,
+    "reported_cumulative_gross_usd_approx": 1500,
+    "reported_first_month_reviews": 20,
+    "reported_work_hours_per_day_approx": 11,
+    "reported_work_months_approx": 6,
+    "reported_work_includes_weekends": true,
+    "first_month_review_window_matches_cumulative_gross_window": false,
+    "exact_workdays": null,
+    "complete_work_hours": null,
+    "raw_sales_orders_not_provided": true,
+    "independently_authenticated_sales_ledger": false
+  },
+  "public_store": {
+    "source_id": "steam-hellforge-official-app-4118220-oct2026",
+    "release_date": "2026-03-04",
+    "developer_label": "Gaby Rla",
+    "publisher_label": "LiberateGames",
+    "store_listing_corrobates_sales": false,
+    "legal_payee_identified": false,
+    "royalty_or_publisher_contract_public": false
+  },
+  "descriptive_math": {
+    "approx_gross_per_reported_copy_usd": 3.3333333333333335,
+    "per_copy_is_actual_checkout_price": false,
+    "gross_over_total_work_hours_justified": false,
+    "first_month_reviews_per_cumulative_copies_valid": false,
+    "reported_units_refund_adjustment_verified": false
+  },
+  "outcome_bounds": {
+    "representative_first_game_median_gross_usd": null,
+    "representative_developer_net_usd": null,
+    "after_tax_developer_profit_usd": null,
+    "hourly_wage_usd": null,
+    "zero_paid_sale_fraction": null,
+    "actual_bank_deposit_usd": null,
+    "paid_steam_customer_count": null
+  },
+  "limitations": {
+    "self_selected_voluntary_disclosure": true,
+    "single_game_not_random": true,
+    "unverifiable_workday_count": true,
+    "launch_price_history_not_recovered": true,
+    "contractual_publisher_allocation_unavailable": true,
+    "game_gross_not_personal_income": true
+  },
+  "code_module": "site/steam-firstgame-selfreport-guard.mjs",
+  "tests_path": "tests/steam-firstgame-selfreport-guard.test.mjs",
+  "no_private_merchant_data": true
+}
