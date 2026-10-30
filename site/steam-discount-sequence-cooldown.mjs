@@ -102,7 +102,7 @@ export function auditSyntheticSteamDiscountSequence(args={}){
   previousDiscounts.some(p=>p.kind==='official_seasonal'&&!p.eventAttested);
  // Check the last nonseasonal discount, not merely the immediately preceding
  // event. An intervening seasonal sale does not waive this cooldown.
- if(latestNonseasonal&&!seasonalEventAttested&&start<plus30(latestNonseasonal.end))
+ if(latestNonseasonal&&args.discount_kind!=='official_seasonal'&&start<plus30(latestNonseasonal.end))
   reasons.push('discount_to_discount_cooldown_active');
  const earliestGates=[release];
  if(args.discount_kind!=='launch')earliestGates.push(plus30(release));
