@@ -49,7 +49,14 @@
     "full_release_launch_cannot_override_prior_regular_discount_cooldown": true,
     "synthetic_launch_offer_date_is_fixed_not_deferred": true,
     "first_paid_direct_launch_is_not_automatically_early_access": true,
-    "price_increase_on_discount_end_day_requires_intra_day_order_evidence": true
+    "price_increase_on_discount_end_day_requires_intra_day_order_evidence": true,
+    "price_change_pre_review_automatic_future_publication_supported": false,
+    "reviewed_price_change_manual_publication_supported": true,
+    "price_increase_any_currency_adds_30_day_discount_wait": true,
+    "price_decrease_adds_30_day_discount_wait": false,
+    "price_change_while_discount_already_scheduled_permitted": false,
+    "price_change_during_active_discount_permitted": false,
+    "price_change_during_initial_30_day_release_wait_normal_policy": false
   },
   "first_paid_game_case": {
     "title": "In & Out",
@@ -107,7 +114,10 @@
     "causal_discount_paid_sale_lift": null,
     "incremental_publisher_net_cash": null,
     "verified_early_access_to_v1_live_discount_approval": null,
-    "verified_price_increase_after_discount_end_timestamp": null
+    "verified_price_increase_after_discount_end_timestamp": null,
+    "actual_price_review_approved_date": null,
+    "actual_price_publish_timestamp": null,
+    "actual_discounts_already_scheduled_at_publication": null
   },
   "private_or_partner_data_accessed": false,
   "original_task_count": 293,
@@ -120,5 +130,7 @@
     "last_price_increase_date": "legacy optional single price increase",
     "price_increase_dates_verified_by_partner": false,
     "full_release_date": "optional synthetic v1.0 graduation date, later than first_paid_release_date, does not establish new paid-game cohort"
-  }
+  },
+  "price_publication_model_path": "site/steam-price-publication-guards.mjs",
+  "price_publication_test_path": "tests/steam-price-publication-guards.test.mjs"
 }
