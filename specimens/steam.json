@@ -2105,6 +2105,28 @@
       "evidence_class": "third_party_public_indie_tagged_steam_cohort_review_milestone_snapshot",
       "license": "Public source URL and original bounded factual summary; no screenshots, published rankings, dataset copying or private store information.",
       "notes": "Issue 3 reports a 5,483 Indie-tagged 120-day cohort, 31 large publisher exclusions, 311 hits and a sampled 881 non-hits. Hit means >=100 lifetime reviews after 21 days. AI disclosure and festival roster use different denominators."
+    },
+    {
+      "id": "steam-zukowski-2026-oct-volunteer-wishlist-purchase-survey",
+      "url": "https://howtomarketagame.com/2026/10/13/wishlist-inflation-is-real-but-they-are-still-important/",
+      "title": "Wishlist inflation is real, but you still need them",
+      "publisher": "Chris Zukowski / How To Market A Game",
+      "published_at": "2026-10-13",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "author_primary_volunteer_developer_wishlist_sales_survey_with_in_sample_association_tables",
+      "license": "Public citation and independently authored brief data summary; proprietary survey responses and charts not reproduced.",
+      "notes": "Primary explains 160 volunteer submitted game reports (34 versus 126) and publishes first-month sales association metrics. Chart numeric ratios are secondarily transcribed."
+    },
+    {
+      "id": "steam-gamedevreports-2026-oct-wishlist-survey-summary",
+      "url": "https://gamedevreports.substack.com/p/how-to-market-a-game-steam-wishlists",
+      "title": "How To Market A Game: Steam Wishlists Now Convert to Sales Half as Well",
+      "publisher": "Dmitriy Byshonkov / GameDev Reports",
+      "published_at": "2026-10-20",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "secondary_report_of_primary_volunteer_study_chart_numeric_ratios",
+      "license": "Public link and independently worded numerical paraphrase only; no charts or complete article replicated.",
+      "notes": "Secondary report supplies 0.45 versus 0.22 first-month, 0.82 versus 0.43 six-month, and 0.99 versus 0.70 one-year units per launch wishlist ratios; not independently validated merchant totals."
     }
   ],
   "claims": [
@@ -14434,6 +14456,88 @@
       "observed_at": "2026-10-29",
       "limitations": "Coverage outages and selected analysis windows limit what can be inferred about launch mechanisms, rankings, and buyer conversion.",
       "confidence": "medium_public_source_reported_method_no_merchant_validation"
+    },
+    {
+      "id": "steam-wishlist-volunteer-sample-160",
+      "text": "The October 2026 Chris Zukowski wishlist study covers 160 volunteer-submitted games: 34 launched in 2020–2022 and 126 in 2023–2025; launches in 2026 were excluded.",
+      "source_ids": [
+        "steam-zukowski-2026-oct-volunteer-wishlist-purchase-survey"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "A voluntary reader-submitted cohort is not a representative sampling frame of Steam paid launches.",
+      "confidence": "bounded_voluntary_sample_in_sample_association_no_population_validation"
+    },
+    {
+      "id": "steam-wishlist-units-per-launch-stock-contrast",
+      "text": "A secondary recap of the author's era charts reports median first-month total units per launch wishlist of 0.45 for 2020–2022 releases and 0.22 for 2023–2025 releases.",
+      "source_ids": [
+        "steam-zukowski-2026-oct-volunteer-wishlist-purchase-survey",
+        "steam-gamedevreports-2026-oct-wishlist-survey-summary"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The denominator is launch wishlist balance; the numerator includes all sales, not exclusively purchases by the wishlisters. Secondary numerical reading is not independently audited.",
+      "confidence": "bounded_voluntary_sample_in_sample_association_no_population_validation"
+    },
+    {
+      "id": "steam-wishlist-6mo-12mo-ratio-contrasts",
+      "text": "The published recap reports six-month total units per launch wishlist of 0.82 versus 0.43, and twelve-month values of 0.99 versus 0.70, comparing the earlier and later release groups.",
+      "source_ids": [
+        "steam-zukowski-2026-oct-volunteer-wishlist-purchase-survey",
+        "steam-gamedevreports-2026-oct-wishlist-survey-summary"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Historical groups differ; complete per-title elapsed 12-month coverage and nonresponse adjustment cannot be verified from the published summary.",
+      "confidence": "bounded_voluntary_sample_in_sample_association_no_population_validation"
+    },
+    {
+      "id": "steam-wishlist-r2-loglog-era",
+      "text": "Zukowski reports in-sample log-log R-squared values of 0.77 for 2020–2022 and 0.72 for 2023–2025, relating launch wishlists and first-month total game units.",
+      "source_ids": [
+        "steam-zukowski-2026-oct-volunteer-wishlist-purchase-survey"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "In-sample explanatory fit is not a prediction interval, cross-validation, causality, or a market-wide forecast.",
+      "confidence": "bounded_voluntary_sample_in_sample_association_no_population_validation"
+    },
+    {
+      "id": "steam-wishlist-spearman-era",
+      "text": "The same two groups have reported Spearman rank correlations between launch wishlists and first-month sales of 0.89 and 0.87, respectively.",
+      "source_ids": [
+        "steam-zukowski-2026-oct-volunteer-wishlist-purchase-survey"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Ranks do not calibrate dollar revenue, individual sale odds or cash settlement.",
+      "confidence": "bounded_voluntary_sample_in_sample_association_no_population_validation"
+    },
+    {
+      "id": "steam-wishlist-velocity-not-superior",
+      "text": "The source reports 30-day pre-launch wishlist-addition log-log R-squared of 0.77 and 0.70 in the two eras, versus 0.77 and 0.72 for total launch wishlist balance.",
+      "source_ids": [
+        "steam-zukowski-2026-oct-volunteer-wishlist-purchase-survey"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Difference in fit is not a verified statistically significant effect, and recent velocity is not superior under the reported in-sample metric.",
+      "confidence": "bounded_voluntary_sample_in_sample_association_no_population_validation"
+    },
+    {
+      "id": "steam-wishlist-combined-fit-in-sample",
+      "text": "Pooled across both eras, the source reports in-sample R-squared of 0.73 for total wishlist balance, 0.72 for last-30-day additions, 0.68 for last-seven-day additions and 0.75 for total plus 30-day additions.",
+      "source_ids": [
+        "steam-zukowski-2026-oct-volunteer-wishlist-purchase-survey"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "A two-feature in-sample improvement is not an externally validated forecasting advantage or a causal marketing result.",
+      "confidence": "bounded_voluntary_sample_in_sample_association_no_population_validation"
+    },
+    {
+      "id": "steam-wishlist-direct-purchase-conversion-not-observed",
+      "text": "An aggregate copies-sold-per-outstanding-wishlist ratio differs from Steamworks' matched wishlist-purchase rate and may exceed one when non-wishlisters buy.",
+      "source_ids": [
+        "steam-zukowski-2026-oct-volunteer-wishlist-purchase-survey"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The public study does not publish a representative linked buyer-to-wishlist purchase cohort.",
+      "confidence": "bounded_voluntary_sample_in_sample_association_no_population_validation"
     }
   ],
   "observations": [],

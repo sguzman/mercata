@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "voluntary_developer_wishlist_to_total_units_ratio_era_comparison",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-zukowski-2026-oct-volunteer-wishlist-purchase-survey",
+    "steam-gamedevreports-2026-oct-wishlist-survey-summary"
+  ],
+  "claim_ids": [
+    "steam-wishlist-volunteer-sample-160",
+    "steam-wishlist-units-per-launch-stock-contrast",
+    "steam-wishlist-6mo-12mo-ratio-contrasts",
+    "steam-wishlist-r2-loglog-era",
+    "steam-wishlist-spearman-era",
+    "steam-wishlist-velocity-not-superior",
+    "steam-wishlist-combined-fit-in-sample",
+    "steam-wishlist-direct-purchase-conversion-not-observed"
+  ],
+  "publication": {
+    "original_date": "2026-10-13",
+    "original_url": "https://howtomarketagame.com/2026/10/13/wishlist-inflation-is-real-but-they-are-still-important/",
+    "summary_date": "2026-10-20",
+    "summary_url": "https://gamedevreports.substack.com/p/how-to-market-a-game-steam-wishlists",
+    "participant_selection": "voluntary_developer_submitted",
+    "game_year_2026_excluded": true,
+    "representative_originally_paid_frame": false
+  },
+  "sample": {
+    "total_games": 160,
+    "cohort_2020_2022": 34,
+    "cohort_2023_2025": 126,
+    "game_level_raw_transactions_available_in_mercata": false,
+    "full_12month_followup_for_each_game_verified": false,
+    "sample_nonresponse_probability_known": false
+  },
+  "unit_ratio_benchmarks_from_summary": {
+    "unit": "total_game_units_sold_divided_by_outstanding_launch_wishlists",
+    "original_source_numeric_values_in_charts": true,
+    "values_transcribed_from_secondary_recapping_source": true,
+    "earlier": {
+      "month1": 0.45,
+      "month6": 0.82,
+      "month12": 0.99
+    },
+    "later": {
+      "month1": 0.22,
+      "month6": 0.43,
+      "month12": 0.7
+    },
+    "not_matched_wishlister_purchase_probability": true,
+    "no_population_forecast_interval": true
+  },
+  "in_sample_associations_primary": {
+    "target": "first_month_game_units",
+    "fitting_method": "log_log_for_r_squared",
+    "era_2020_2022": {
+      "total_wishlists_r_squared": 0.77,
+      "last_30day_adds_r_squared": 0.77,
+      "spearman_total_wishlists": 0.89
+    },
+    "era_2023_2025": {
+      "total_wishlists_r_squared": 0.72,
+      "last_30day_adds_r_squared": 0.7,
+      "spearman_total_wishlists": 0.87
+    },
+    "pooled_eras": {
+      "total_r_squared": 0.73,
+      "adds_30day_r_squared": 0.72,
+      "adds_7day_r_squared": 0.68,
+      "total_plus_adds30_r_squared": 0.75
+    },
+    "out_of_sample_validation_observed": false,
+    "causal_attribution_of_era_gap": null
+  },
+  "unknown": {
+    "representative_paid_launch_median_wishlist_ratio": null,
+    "matched_wishlister_purchase_fraction": null,
+    "actual_2026_new_release_unit_ratio": null,
+    "true_era_causal_effect": null,
+    "verified_game_level_12month_followup_rate": null,
+    "publisher_net_proceeds": null
+  },
+  "code": "site/steam-volunteer-wishlist-ratio.mjs",
+  "tests": "tests/steam-volunteer-wishlist-ratio.test.mjs"
+}
