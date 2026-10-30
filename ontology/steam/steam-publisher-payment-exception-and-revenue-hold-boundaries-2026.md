@@ -33,3 +33,7 @@ Valve provides a finance-team trace route for an apparently missing payment when
 To calculate how many publishers received **no bank deposit**, obtain a dated full partner population and authorized payout histories. To calculate **no paid Steam game sales**, independently construct the complete originally-paid AppID cohort and authenticate full-period paid checkout unit ledgers. Those are different populations. A bank statement alone cannot reveal all AppID sales, while gross store sales alone do not establish partner net proceeds, VAT/refunds, shares, payment delays or labor-adjusted profit.
 
 The accompanying deterministic classifier accepts **only labeled synthetic fixtures** and returns unknown actual units, deposits, fraud rates and economic outcomes. It tests classification invariants; it does not access accounts, adjudicate sanctions, collect identifiers or model real sales. **Actual revenue-hold incidence, actual zero-sales share, payout delays and developer profitability remain unknown.**
+
+### Synthetic fixture field boundaries
+
+The public scenario classifier explicitly accepts only invented `fixture_id` and documented `reason` keys. Extra fields carrying financial account identifiers, deposits or purported observed sales are rejected rather than silently ignored. Classification does not authenticate reports, assert that a payout is actually delayed or prove zero game sales. This is a code-safety improvement, not a new source observation.

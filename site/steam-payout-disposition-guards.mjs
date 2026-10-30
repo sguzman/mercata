@@ -14,8 +14,10 @@ export function classifySyntheticSteamCashDisposition(rows){
  if(!Array.isArray(rows))throw new TypeError('Expected synthetic payment scenarios');
  const seen=new Set(),out=[];
  for(const row of rows){
-  if(!row||typeof row!=='object'||typeof row.fixture_id!=='string'||!/^fixture-[a-z0-9-]+$/.test(row.fixture_id))
-   throw new TypeError('Only synthetic fixture IDs permitted');
+  if(!row||typeof row!=='object'||Array.isArray(row)||
+    Object.keys(row).some(key=>!['fixture_id','reason'].includes(key))||
+    typeof row.fixture_id!=='string'||!/^fixture-[a-z0-9-]+$/.test(row.fixture_id))
+   throw new TypeError('Only synthetic fixture IDs and permitted condition fields accepted');
   if(seen.has(row.fixture_id))throw new RangeError('Duplicate synthetic scenario');
   seen.add(row.fixture_id);
   if(typeof row.reason!=='string'||!Object.hasOwn(TYPES,row.reason))

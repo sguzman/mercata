@@ -16,6 +16,11 @@ test('synthetic remittance separates withholding and bank charges from not-prove
  assert.equal(a.actual_bank_deposit_usd,null);
  assert.equal(a.developer_profit_usd,null);
  assert.throws(()=>hypotheticalSteamRemittance({gross_usd:20,sales_tax_usd:50,returns_usd:0,chargebacks_usd:0,bank_fee_usd:0,assumed_partner_share:0.7,assumed_withholding_rate:0}),/Adjustments/);
+ const valid={gross_usd:1000,sales_tax_usd:100,returns_usd:100,chargebacks_usd:50,
+  bank_fee_usd:10,assumed_partner_share:0.7,assumed_withholding_rate:0.1};
+ assert.throws(()=>hypotheticalSteamRemittance({...valid,account_number:'redacted'}),/permitted synthetic/);
+ assert.throws(()=>hypotheticalSteamRemittance({...valid,actual_paid_units:100}),/permitted synthetic/);
+ assert.throws(()=>hypotheticalSteamRemittance([1000,100,100,50,10,.7,.1]),/permitted synthetic/);
 });
 test('reporting payment method/fees are distinct from actual bank receipt',()=>{
  assert.equal(x.payment.payout_currency,'USD');

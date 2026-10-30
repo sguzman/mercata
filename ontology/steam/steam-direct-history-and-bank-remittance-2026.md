@@ -23,3 +23,7 @@ Assume, purely for testing: **$1,000** gross customer receipts, **$100** tax, **
 The [companion pure function](../../site/steam-remittance-bridge.mjs) refuses invalid amounts or rates and leaves *actual* bank deposits and developer profits null. It does not invent a card-processing deduction.
 
 **Unresolved:** actual processor cost allocations, partner contracts, bank fees, effective FX rates, signed royalties, and net developer income. No individual merchant data or bank account was accessed.
+
+### Synthetic input strictness
+
+The hypothetical USD remittance calculator accepts only its seven named amount and assumed-rate fields. It rejects extraneous financial or account metadata rather than silently accepting real-looking bank or transaction identifiers. These checks do not turn the example into a real payout forecast or verify any partner's taxes or bank FX conversion. No additional research completion is credited for this code validation.

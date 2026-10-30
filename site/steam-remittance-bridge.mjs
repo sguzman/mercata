@@ -1,6 +1,9 @@
 // Strictly hypothetical Steam publisher remittance arithmetic. Never a real bank statement.
 export function hypotheticalSteamRemittance(x){
- if(!x||typeof x!=='object')throw new TypeError('Scenario is required');
+ if(!x||typeof x!=='object'||Array.isArray(x)||
+   Object.keys(x).some(key=>!['gross_usd','sales_tax_usd','returns_usd','chargebacks_usd',
+      'bank_fee_usd','assumed_partner_share','assumed_withholding_rate'].includes(key)))
+   throw new TypeError('Only permitted synthetic remittance amount and rate fields accepted');
  for(const key of ['gross_usd','sales_tax_usd','returns_usd','chargebacks_usd','bank_fee_usd']){
   if(typeof x[key]!=='number'||!Number.isFinite(x[key])||x[key]<0)throw new TypeError('Invalid amount: '+key);
  }

@@ -30,6 +30,9 @@ test('The classifier rejects real-looking IDs, duplicates and unsupported payout
  assert.throws(()=>classify([{fixture_id:'account-123',reason:'returned_bank_transfer'}]),/synthetic fixture/);
  assert.throws(()=>classify([{fixture_id:'fixture-a',reason:'returned_bank_transfer'},{fixture_id:'fixture-a',reason:'late_bank_update'}]),/Duplicate/);
  assert.throws(()=>classify([{fixture_id:'fixture-a',reason:'account_terminated'}]),/Unknown/);
+ assert.throws(()=>classify([{fixture_id:'fixture-a',reason:'returned_bank_transfer',private_partner_id:'redacted'}]),/permitted condition fields/);
+ assert.throws(()=>classify([{fixture_id:'fixture-a',reason:'returned_bank_transfer',actual_bank_deposit_usd:4}]),/permitted condition fields/);
+ assert.throws(()=>classify([['fixture-a','returned_bank_transfer']]),/synthetic fixture/);
  assert.equal(classify([]).scenario_count,0);
 });
 test('All claims and sources resolve while original research tasks and published progress remain intact',()=>{
