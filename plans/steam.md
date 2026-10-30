@@ -37,7 +37,11 @@ The [two-source festival roster audit](../ontology/steam/steam-october-2026-fest
 
 The [Valve CSV field audit](../ontology/steam/steam-wishlist-month-cohort-pacific-reporting-lag-2026.md) separates the Pacific-time purchase date (DateLocal) from the **original wishlist-add month** (MonthCohort), calculates honest date-range bounds and rejects same-day incomplete reporting. Platform preference subsets and wishlist-originated purchase events are not complete paid-order denominators. Six new official-source-linked claims and tests increase the original wishlist-to-sale research task by two points, without new sources or additional tasks. Steam research **91.246%** (Δ **+0.007 pp**).
 
-## External free browser demo plays versus Steam purchases (October 29, 2026)
+### Steam Early Access release survival, incomplete removals and review-threshold selection (October 29, 2026)
+
+The [independent 23,247-game historical Early Access study audit](../ontology/steam/steam-early-access-release-survival-review-selection-2026.md) records a September 26, 2026 public snapshot, with **6,144 of 10,141** Early Access entries from 2013–2023 with at least 10 reviews reaching 1.0. Adding lower-review entrants yields **14,597** recovered historical games and a source-reported completion share near **51%** rather than the reviewed frame's 61%. The 10,141-game status partition is 6,144 graduates, 702 removed during EA, 2,672 with a Steam no-update notice and 623 without that notice; 404 removed **after** graduation are already inside the graduates. Author-disclosed pre-2014 misses and post-outcome review selection prevent marketwide extrapolation; updates, graduated status and no-update notes are not sales or income records. One source and eleven bounded claims advance five original tasks by eleven points. Steam research **91.389%** (Δ **+0.038 pp**); original 293-task scope, 195 sources and 1224 claims.
+
+# External free browser demo plays versus Steam purchases (October 29, 2026)
 
 The [new first-person cross-market case](../ontology/steam/steam-itch-browser-demo-versus-paid-launch-identification-2026.md) records more than 20,000 free browser demo play events and 3,042 Steam sales alongside wishlist snapshots, but supplies **no** authorized user-level join or causal effect on full-game purchases. One new public source and six bounded claims raise the existing demo-to-paid-sales task by two points, without changing the **293-task** inventory. Overall research **91.239%** (Δ **+0.007 pp**).
 

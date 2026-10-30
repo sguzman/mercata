@@ -2149,6 +2149,17 @@
       "evidence_class": "third_party_october26_final_festival_demo_count_hourly_concurrent_player_tracker",
       "license": "Public URL and brief independently written aggregate measurement comparison only; no game-level chart rows or copied dataset.",
       "notes": "Final-chart report for Oct 26: 7,310 demos in festival, 6,542 with recorded players, 297,906 combined peak players; tracker methodology relies on hourly measurements and cannot identify unique demo users or Steam paid orders."
+    },
+    {
+      "id": "steam-gamerofpassion-earlyaccess-public-cohort-oct2026",
+      "url": "https://gamerofpassion.com/steam-early-access-study/",
+      "title": "Steam flags nearly 7,000 Early Access games as not updated in a year. Yet six in ten reviewed games reach full release",
+      "publisher": "Gamer of Passion / independent research",
+      "published_at": "2026-10-09",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "independent_sourced_steam_earlyaccess_23247_game_historical_snapshot_no_merchant_data",
+      "license": "Public link and independently authored brief aggregate interpretation only; no rows or reproductions of hosted CSV or charts.",
+      "notes": "Steam snapshots September 26 through October 3, 2026. Recovered 23,247 games; 10,141 2013-2023 entrants with 10+ reviews and 14,597 including low-review games. Incomplete early graduations/removals, no paid order outcomes."
     }
   ],
   "claims": [
@@ -14701,6 +14712,116 @@
       "observed_at": "2026-10-29",
       "limitations": "Group statistics are conditional on CCU rank and an internally incomplete partition, not an unbiased effect of followers or marketing spend.",
       "confidence": "high_for_public_snapshot_claim_not_financial_or_causal_inference"
+    },
+    {
+      "id": "steam-ea-public-study-23247",
+      "text": "An independent October 2026 Steam study recovered 23,247 games that had entered Early Access, using current public store data, review histories, announcements and archived app lists.",
+      "source_ids": [
+        "steam-gamerofpassion-earlyaccess-public-cohort-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The recovered cohort is not a complete original-paid game release frame: undated, very early graduates and certain delisted games are missing.",
+      "confidence": "high_public_research_aggregate_with_disclosed_noncoverage_no_sales_observed"
+    },
+    {
+      "id": "steam-ea-10141-mature-review-threshold",
+      "text": "For Early Access entries in 2013–2023 with at least ten reviews, 10,141 games form the report's headline cohort, with 6,144 having exited Early Access by full release as of September 26, 2026.",
+      "source_ids": [
+        "steam-gamerofpassion-earlyaccess-public-cohort-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "A later review count and cumulative release outcome have different clocks; the cohort excludes lower-review entrants.",
+      "confidence": "high_public_research_aggregate_with_disclosed_noncoverage_no_sales_observed"
+    },
+    {
+      "id": "steam-ea-statuses-disjoint-2013-2023",
+      "text": "In the study's 10,141-game 2013–2023 reviewed cohort, 6,144 reached full release, 702 were removed while still in Early Access, 2,672 remained in Early Access with a no-update note, and 623 remained active without that note.",
+      "source_ids": [
+        "steam-gamerofpassion-earlyaccess-public-cohort-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The update status is based on Steam's public rule and cannot establish a developer's intention or motive.",
+      "confidence": "high_public_research_aggregate_with_disclosed_noncoverage_no_sales_observed"
+    },
+    {
+      "id": "steam-ea-review-floor-51-versus-61",
+      "text": "The same study finds a roughly 51% cumulative full-release fraction among all 14,597 recovered 2013–2023 Early Access entrants, versus 6,144 of 10,141 (about 61%) among those with at least ten reviews.",
+      "source_ids": [
+        "steam-gamerofpassion-earlyaccess-public-cohort-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Small early graduates and removed games may be missed, especially in 2013–2016; neither share is a time-standardized causal effect or a future forecast.",
+      "confidence": "high_public_research_aggregate_with_disclosed_noncoverage_no_sales_observed"
+    },
+    {
+      "id": "steam-ea-lower-review-low-completion",
+      "text": "Among 4,456 recovered 2013–2023 Early Access games with fewer than ten reviews, the study reports 30.8% reaching full release; for 1,624 with at least 1,000 reviews it reports 78.8%.",
+      "source_ids": [
+        "steam-gamerofpassion-earlyaccess-public-cohort-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Reviews accumulate after full release as well; neither difference measures paid sales, nor can it prove reviews caused graduation.",
+      "confidence": "high_public_research_aggregate_with_disclosed_noncoverage_no_sales_observed"
+    },
+    {
+      "id": "steam-ea-removed-separate-graduated",
+      "text": "The study places 702 of the headline games as delisted before full release and 404 of the 6,144 full-release games as subsequently removed from sale.",
+      "source_ids": [
+        "steam-gamerofpassion-earlyaccess-public-cohort-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "A post-graduation removal is a subset of completed releases and must not be added as a separate status; removals are lower bounds.",
+      "confidence": "high_public_research_aggregate_with_disclosed_noncoverage_no_sales_observed"
+    },
+    {
+      "id": "steam-ea-no-update-not-proof-of-abandonment",
+      "text": "Of 12,320 live Steam Early Access games in the September 26 snapshot, 6,989 displayed Steam's no-update-in-over-a-year notice; 6,977 of 9,063 titles in Early Access at least one year displayed that notice.",
+      "source_ids": [
+        "steam-gamerofpassion-earlyaccess-public-cohort-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The note excludes beta-only build activity and off-Steam communications, and can be cleared by modest updates; it cannot diagnose abandonment or buyer losses.",
+      "confidence": "high_public_research_aggregate_with_disclosed_noncoverage_no_sales_observed"
+    },
+    {
+      "id": "steam-ea-missing-graduates-and-date-bias",
+      "text": "The study's method found 286 of 300 known older graduates, and acknowledged missing Early Access graduates from before approximately May 2014 because of absent Steam review flags.",
+      "source_ids": [
+        "steam-gamerofpassion-earlyaccess-public-cohort-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Estimated entry/exit dates and archive intervals can undercount both very early completed and delisted titles.",
+      "confidence": "high_public_research_aggregate_with_disclosed_noncoverage_no_sales_observed"
+    },
+    {
+      "id": "steam-ea-completion-duration-conditional",
+      "text": "For 3,547 reviewed 2013–2020 graduates reaching version 1.0 within five years, the study reports median Early Access duration of 315 days; the subset definition conditions on eventual graduation.",
+      "source_ids": [
+        "steam-gamerofpassion-earlyaccess-public-cohort-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The figure is not the median waiting time of an entrant including games never finishing, nor an expected development schedule.",
+      "confidence": "high_public_research_aggregate_with_disclosed_noncoverage_no_sales_observed"
+    },
+    {
+      "id": "steam-ea-completed-postlaunch-no-update",
+      "text": "Among 4,399 reviewed games leaving Early Access from August 2019 to July 2025, 51% had no Steam patch-note/update post in the period 3–15 months after full release.",
+      "source_ids": [
+        "steam-gamerofpassion-earlyaccess-public-cohort-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The absence of a publicly tagged post does not establish a missing software patch or a lack of post-launch support; Steam posts are an incomplete measurement.",
+      "confidence": "high_public_research_aggregate_with_disclosed_noncoverage_no_sales_observed"
+    },
+    {
+      "id": "steam-ea-graduation-not-sales-or-rights",
+      "text": "The third-party Early Access study uses public store and update metadata without publisher finance records and cannot determine gross sales, the zero-paid-order share, contractual rights or developer profits.",
+      "source_ids": [
+        "steam-gamerofpassion-earlyaccess-public-cohort-oct2026"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Observed version 1.0 or inactive-update status is an operational category, not verified economic performance.",
+      "confidence": "high_public_research_aggregate_with_disclosed_noncoverage_no_sales_observed"
     }
   ],
   "observations": [],

@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "historical_steam_earlyaccess_cumulative_graduation_and_review_selection_boundaries",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-gamerofpassion-earlyaccess-public-cohort-oct2026"
+  ],
+  "claim_ids": [
+    "steam-ea-public-study-23247",
+    "steam-ea-10141-mature-review-threshold",
+    "steam-ea-statuses-disjoint-2013-2023",
+    "steam-ea-review-floor-51-versus-61",
+    "steam-ea-lower-review-low-completion",
+    "steam-ea-removed-separate-graduated",
+    "steam-ea-no-update-not-proof-of-abandonment",
+    "steam-ea-missing-graduates-and-date-bias",
+    "steam-ea-completion-duration-conditional",
+    "steam-ea-completed-postlaunch-no-update",
+    "steam-ea-graduation-not-sales-or-rights"
+  ],
+  "source_url": "https://gamerofpassion.com/steam-early-access-study/",
+  "published_at": "2026-10-09",
+  "store_snapshot_date": "2026-09-26",
+  "collection_completed_approx": "2026-10-03",
+  "evidence_class": "independent_public_study_steam_store_reviews_news_archived_app_lists_no_sales_ledger",
+  "total_recovered_all_eras": {
+    "games": 23247,
+    "reviewed_10plus": 14513
+  },
+  "historical_2013_2023": {
+    "all_recovered_entrants": 14597,
+    "reviewed_10plus": {
+      "games": 10141,
+      "graduated_full_release": 6144,
+      "still_ea_with_no_update_notice": 2672,
+      "still_ea_recently_updated": 623,
+      "removed_while_in_ea": 702,
+      "graduated_subsequently_removed": 404
+    },
+    "review_bins": [
+      {
+        "reviews": "under_10",
+        "games": 4456,
+        "reported_graduation_percent": 30.8
+      },
+      {
+        "reviews": "10_to_99",
+        "games": 5540,
+        "reported_graduation_percent": 51.7
+      },
+      {
+        "reviews": "100_to_999",
+        "games": 2977,
+        "reported_graduation_percent": 67.1
+      },
+      {
+        "reviews": "1000_plus",
+        "games": 1624,
+        "reported_graduation_percent": 78.8
+      }
+    ],
+    "reported_full_release_percent_all_recovered": 51,
+    "reported_full_release_percent_10plus": 61,
+    "early_graduates_missing_due_review_flag": true
+  },
+  "live_as_of_snapshot": {
+    "still_early_access_games": 12320,
+    "have_no_update_over_year_notice": 6989,
+    "games_aged_one_year_or_more": 9063,
+    "aged_one_year_or_more_with_note": 6977,
+    "absence_of_note_proves_active_development": false,
+    "presence_of_note_proves_abandoned": false
+  },
+  "graduated_duration_subset": {
+    "entrant_start_year": 2013,
+    "entrant_end_year": 2020,
+    "selected_graduated_within_five_years": 3547,
+    "median_days_to_1_0": 315,
+    "outcome_conditioned": true
+  },
+  "post_full_release_update_post_subset": {
+    "graduated_window_from": "2019-08",
+    "graduated_window_to": "2025-07",
+    "games_with_10plus_reviews": 4399,
+    "percentage_without_public_steam_update_post_3_to_15_months": 51,
+    "cannot_identify_unposted_builds": true
+  },
+  "selection_limitations": {
+    "initial_paid_release_frame_complete": false,
+    "early_access_first_paid_sale_date_verified": false,
+    "omitted_removed_games_are_not_known_zero": true,
+    "historical_review_counts_post_outcome": true,
+    "original_review_epoch_older_graduates_incomplete": true,
+    "legal_publisher_deduplication": false,
+    "no_marketwide_paid_order_observations": true
+  },
+  "unknown": {
+    "actual_zero_paid_sale_fraction": null,
+    "representative_publisher_gross_median": null,
+    "actual_developer_net_proceeds": null,
+    "developer_after_cost_profit": null,
+    "original_paid_first_release_cohort": null,
+    "time_standardized_causal_completion_effect": null
+  },
+  "code_module": "site/steam-earlyaccess-cohort-coverage.mjs",
+  "tests_path": "tests/steam-earlyaccess-cohort-coverage.test.mjs",
+  "no_private_user_or_merchant_data": true
+}
