@@ -2083,6 +2083,17 @@
       "evidence_class": "australian_regulator_current_public_code_effective_dates",
       "license": "Public link and original brief legal-process synopsis; no copyright-protected report reproduced.",
       "notes": "Defines staged age-assurance requirements for Australian app distribution services, including September 9, 2026 date for R18+ app-download controls."
+    },
+    {
+      "id": "steam-weloveit-review-revenue-report-2026-10-29",
+      "url": "https://weloveit.io/developers/steam-revenue-report/",
+      "title": "The Steam Revenue Report",
+      "publisher": "WeLoveIt.io / Totally Human Media and collaborators",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "third_party_public_continuously_refreshed_review_based_steam_revenue_estimator",
+      "license": "Public link and independently written brief methods and denominators only; no source code, charts or underlying game database reproduced.",
+      "notes": "Observed October 29, 2026 live snapshot. The page models gross lifetime revenue from public review counts and current US prices; it does not expose authorized Steam financial records. Counts and displayed median may drift."
     }
   ],
   "claims": [
@@ -14272,6 +14283,76 @@
       "observed_at": "2026-10-29",
       "limitations": "Neither a regulatory requirement nor a report of platform controls supplies a counterfactual game-sales panel.",
       "confidence": "high_economic_identification_limit"
+    },
+    {
+      "id": "steam-weloveit-2026-catalog-frame",
+      "text": "The public report's October 29 live snapshot categorizes 142,797 game listings, but does not establish a historically complete originally paid Steam release cohort.",
+      "source_ids": [
+        "steam-weloveit-review-revenue-report-2026-10-29"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The reported catalogue excludes non-game software, adult-only releases and unreleased games; release-date and price filters also apply.",
+      "confidence": "high_public_source_description_not_financial_validation"
+    },
+    {
+      "id": "steam-weloveit-2026-measured-reviewed-price",
+      "text": "The report presents 103,682 priced games with at least one review as eligible for review-based gross revenue estimates.",
+      "source_ids": [
+        "steam-weloveit-review-revenue-report-2026-10-29"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The estimates are modeled rather than authenticated sales or bank payouts.",
+      "confidence": "high_public_source_description_not_financial_validation"
+    },
+    {
+      "id": "steam-weloveit-2026-zero-review-not-zero-sale",
+      "text": "The same snapshot identifies 9,227 paid games with no reviews; their lack of reviews cannot identify a zero-paid-order count.",
+      "source_ids": [
+        "steam-weloveit-review-revenue-report-2026-10-29"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Review-driven estimators have no observation of paid transactions for these games.",
+      "confidence": "high_public_source_description_not_financial_validation"
+    },
+    {
+      "id": "steam-weloveit-2026-free-no-price",
+      "text": "The report separately identifies 19,156 free games and 10,732 listings with no recorded price, neither assigned modeled upfront purchase revenue.",
+      "source_ids": [
+        "steam-weloveit-review-revenue-report-2026-10-29"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Neither category proves a game was always free or had zero monetization.",
+      "confidence": "high_public_source_description_not_financial_validation"
+    },
+    {
+      "id": "steam-weloveit-2026-model-median-ambiguous",
+      "text": "The headline lifetime revenue median is USD 3,493 at the default model setting; its exact population treatment of the zero-review paid group is not independently specified.",
+      "source_ids": [
+        "steam-weloveit-review-revenue-report-2026-10-29"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Do not present the published median as a representative 30-day revenue figure or a merchant-observed median.",
+      "confidence": "high_public_source_description_not_financial_validation"
+    },
+    {
+      "id": "steam-weloveit-2026-concentration-is-model",
+      "text": "The report's top one percent share of 84.5% refers to estimated gross revenue, not verified Steam receipts or publisher profits.",
+      "source_ids": [
+        "steam-weloveit-review-revenue-report-2026-10-29"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The report applies review-based inference and a common multiplier; no seller cash distribution is available.",
+      "confidence": "high_public_source_description_not_financial_validation"
+    },
+    {
+      "id": "steam-weloveit-2026-price-review-model-limits",
+      "text": "The report uses a default 35-sales-per-review assumption and current US list prices, with interactive 20x and 50x alternatives; it discloses discount, regional-price, DLC, bundle and review-rate limitations.",
+      "source_ids": [
+        "steam-weloveit-review-revenue-report-2026-10-29"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Multiplier sensitivity is not independent validation; reported release years do not necessarily equal original paid Steam release dates.",
+      "confidence": "high_public_source_description_not_financial_validation"
     }
   ],
   "observations": [],

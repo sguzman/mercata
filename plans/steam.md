@@ -4,6 +4,11 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+
+## Review-estimator catalogue coverage and modeled gross concentration (October 29, 2026)
+
+The [WeLoveIt.io primary report denominator audit](../ontology/steam/steam-weloveit-review-revenue-snapshot-2026.md) records a live October 29 source snapshot with 142,797 catalogued games, of which 103,682 priced games have at least one review. Another 9,227 paid listings have no reviews; that is a review-model coverage gap, **not** an actual no-sales rate. The reported USD 3,493 lifetime median and top-one-percent 84.5% share are model-estimated gross, not audited cash. The source does not resolve the median headline's exact inclusion of zero-review paid games. Seven source-linked claims and executable census-count checks advance three existing tasks by one point each. The original 293-task scope is unchanged. Steam research **91.304%** (Δ **+0.010 pp**), with 189 public sources and 1184 source-linked claims.
+
 ## Steam Top Sellers spends, charts and nonidentification (October 29, 2026)
 
 The [official Top Sellers ranking-audit](../ontology/steam/steam-top-sellers-spend-components-and-rank-nonidentification-2026.md) establishes a trailing 24-hour player-spending metric with extra weight on the latest three hours. DLC and microtransactions contribute alongside base-game sales, so even a free-to-play game may rank without upfront paid units. Territory and customer-content filters change presentation; neither chart positions nor synthetic unweighted spend can reconstruct actual game orders or publisher profits. One new Valve primary source and six bounded claims advance the original ranking-research task by three points. Steam research **91.266%** (Δ **+0.010 pp**); **293 tasks** retained.

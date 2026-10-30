@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_review_based_lifetime_gross_estimator_snapshot_with_selection_audit",
+  "reviewed_at": "2026-10-29",
+  "snapshot_date": "2026-10-29",
+  "source_ids": [
+    "steam-weloveit-review-revenue-report-2026-10-29"
+  ],
+  "claim_ids": [
+    "steam-weloveit-2026-catalog-frame",
+    "steam-weloveit-2026-measured-reviewed-price",
+    "steam-weloveit-2026-zero-review-not-zero-sale",
+    "steam-weloveit-2026-free-no-price",
+    "steam-weloveit-2026-model-median-ambiguous",
+    "steam-weloveit-2026-concentration-is-model",
+    "steam-weloveit-2026-price-review-model-limits"
+  ],
+  "primary_report": "https://weloveit.io/developers/steam-revenue-report/",
+  "observation_type": "live_public_page_snapshot_not_versioned_census",
+  "catalog": {
+    "reported_released_game_listings": 142797,
+    "priced_with_at_least_one_review": 103682,
+    "paid_with_zero_reviews": 9227,
+    "free_games": 19156,
+    "missing_published_price": 10732,
+    "expensive_listings_excluded_by_report": 366,
+    "expensive_exclusion_disjointness_attested": false,
+    "excludes_non_game_software": true,
+    "excludes_adult_only": true,
+    "excludes_unreleased": true,
+    "originally_paid_release_cohort_verified": false,
+    "delisted_status_and_release_age_reconciled": false
+  },
+  "published_model": {
+    "headline_lifetime_median_usd": 3493,
+    "headline_median_inclusion_of_zero_review_paid": "not_explicitly_resolved",
+    "top_one_percent_estimated_gross_share": 0.845,
+    "default_sales_per_review_multiplier": 35,
+    "published_selectable_multipliers": [
+      20,
+      35,
+      50
+    ],
+    "price_basis": "current_US_list_price_not_historical_transaction_price",
+    "outcome": "model_estimated_lifetime_gross_not_net_receipts"
+  },
+  "required_distinctions": {
+    "no_reviews_does_not_equal_no_sales": true,
+    "model_estimate_does_not_equal_authenticated_financial_report": true,
+    "no_price_record_does_not_equal_initially_free": true,
+    "game_appid_does_not_equal_legal_publisher": true,
+    "lifetime_estimates_different_from_fixed_30_90_365_day_release_horizons": true,
+    "multiplier_choice_does_not_validate_purchase_probability": true,
+    "cannot_extrapolate_to_omitted_or_delisted_games": true,
+    "cannot_compare_2026_cumulative_to_mature_historical_games_without_age_controls": true
+  },
+  "unknown": {
+    "actual_paid_game_zero_sale_share": null,
+    "original_paid_release_frame_total": null,
+    "actual_publisher_gross_revenue_median": null,
+    "actual_publisher_takehome_median": null,
+    "actual_developer_profit_median": null,
+    "source_headline_median_full_denominator": null
+  },
+  "audit_module": "site/steam-weloveit-review-coverage.mjs",
+  "regression_tests": "tests/steam-weloveit-review-coverage.test.mjs",
+  "no_private_financial_data": true
+}
