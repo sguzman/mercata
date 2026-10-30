@@ -105,7 +105,8 @@ test('Unresolved first-paid status cannot silently enter a paid-sale country sam
  const excluded={fixture_game_id:'fixture-x',store_country:'US',initial_paid_status:'ineligible_initially_free'};
  const unresolved={fixture_game_id:'fixture-y',store_country:'US',initial_paid_status:'unresolved'};
  const a=audit([excluded,unresolved],options);
- assert.equal(a.counts.ineligible_or_unresolved_windows,2);
+ assert.equal(a.counts.excluded_initially_free_windows,1);
+ assert.equal(a.counts.unresolved_initial_paid_status_windows,1);
  assert.equal(a.fully_purchasable_country_window_zero_share_lower_conditional,null);
  assert.throws(()=>audit([{...excluded,ledger_status:'complete_reconciled',
   observed_gross_paid_units:0}],options),/cannot carry paid checkout/);
@@ -153,4 +154,20 @@ test('Partial financial coverage cannot extend past the as-of observation date',
  const immature=audit([f('a','US')],{...options,asOfDate:'2026-01-08'});
  assert.equal(immature.observation_matured,false);
  assert.equal(immature.fully_purchasable_country_window_zero_share_upper_conditional,null);
+});
+test('Confirmed initially-free games are excluded without poisoning the paid-game denominator',()=>{
+ const free={fixture_game_id:'fixture-free',store_country:'US',
+  initial_paid_status:'ineligible_initially_free'};
+ const paid=f('paid','US',[open],complete(0));
+ const out=audit([free,paid],options);
+ assert.equal(out.counts.excluded_initially_free_windows,1);
+ assert.equal(out.counts.unresolved_initial_paid_status_windows,0);
+ assert.equal(out.counts.fully_purchasable_windows,1);
+ assert.equal(out.fully_purchasable_country_window_zero_share_lower_conditional,1);
+ assert.equal(out.fully_purchasable_country_window_zero_share_upper_conditional,1);
+ assert.equal(out.actual_steam_game_zero_sale_fraction,null);
+ const uncertain={fixture_game_id:'fixture-unknown',store_country:'US',initial_paid_status:'unresolved'};
+ const unresolved=audit([free,paid,uncertain],options);
+ assert.equal(unresolved.counts.unresolved_initial_paid_status_windows,1);
+ assert.equal(unresolved.fully_purchasable_country_window_zero_share_lower_conditional,null);
 });

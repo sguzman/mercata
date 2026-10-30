@@ -23,7 +23,8 @@ export function auditSyntheticSteamCountryAvailabilityZeroBounds(rows,options={}
   throw new TypeError('Bounded fixed-period synthetic observation frame required');
  const mature=options.endExclusive<=next(options.asOfDate);
  const ids=new Set();
- const counts={eligible_country_windows:0,ineligible_or_unresolved_windows:0,
+ const counts={eligible_country_windows:0,excluded_initially_free_windows:0,
+  unresolved_initial_paid_status_windows:0,
   fully_purchasable_windows:0,never_purchasable_windows:0,
   mixed_purchasability_windows:0,unresolved_purchasability_windows:0,
   fully_purchasable_confirmed_zero:0,fully_purchasable_known_nonzero:0,
@@ -46,9 +47,11 @@ export function auditSyntheticSteamCountryAvailabilityZeroBounds(rows,options={}
      row.transfers_reconciled!==undefined||row.checkout_attribution_attested!==undefined||
      row.country_attribution_attested!==undefined)
     throw new RangeError('Ineligible or unresolved initial paid status cannot carry paid checkout observations');
-   counts.ineligible_or_unresolved_windows++;
+   const knownFree=row.initial_paid_status==='ineligible_initially_free';
+   counts[knownFree?'excluded_initially_free_windows':'unresolved_initial_paid_status_windows']++;
    entries.push({fixture_game_id:row.fixture_game_id,store_country:row.store_country,
-    availability_class:'excluded_unresolved_initial_paid_status',zero_class:'not_identifiable'});
+    availability_class:knownFree?'excluded_initially_free':'unresolved_initial_paid_status',
+    zero_class:'not_identifiable'});
    continue;
   }
   counts.eligible_country_windows++;
@@ -129,7 +132,7 @@ export function auditSyntheticSteamCountryAvailabilityZeroBounds(rows,options={}
  }
  const denominatorIdentified=options.game_frame_complete&&options.country_roster_complete&&mature&&
    counts.unresolved_purchasability_windows===0&&
-   counts.ineligible_or_unresolved_windows===0&&counts.fully_purchasable_windows>0;
+   counts.unresolved_initial_paid_status_windows===0&&counts.fully_purchasable_windows>0;
  const lower=denominatorIdentified?
   counts.fully_purchasable_confirmed_zero/counts.fully_purchasable_windows:null;
  const upper=denominatorIdentified?
