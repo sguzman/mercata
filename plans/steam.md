@@ -6,6 +6,11 @@
 
 
 
+
+## Corrected local-tax base in an author-disclosed two-game Steam portfolio (October 29, 2026)
+
+The [public self-disclosure correction audit](../ontology/steam/public-developer-payout-and-portfolio-cases-2026.md) records the original author's own comment revising the local-tax calculation base from **$127,000** to **$172,000**. A claimed 15% of the corrected base is **$25,800**, consistent with the author's rounded **$26,000** local-tax line; independently subtracting the printed upstream deductions instead produces **$174,300**, leaving a **$2,300** still-unresolved base gap. These are approximate voluntary claims, not receipts, a universal tax rate or a population income measure. One original source-linked claim advances the existing median-developer-proceeds task by one point. Steam research **91.403%** (Δ **+0.003 pp**); 196 sources, 1232 claims and 293 original tasks.
+
 ## Public disclosed-sales estimator scorecard and the low-end calibration gap (October 29, 2026)
 
 The [SteamMaho model-disclosure sample audit](../ontology/steam/steam-steammaho-disclosure-validation-and-low-sales-bins-2026.md) separates a recent **32-game** model comparison (17 estimates within 50% of reported sales), a distinct **132-game** review-date-matched panel (79 within 50%), and a **230-game** sales-per-review calibration sample with just **16 cases below 1,000 units**. The provider's size-binned review multipliers cannot simply be assigned to unmeasured games, and these source-selected disclosures give no verified Steam-wide zero-paid-order or publisher-cash distribution. One new third-party public source and seven bounded claims advance two existing research tasks by three points. Steam research **91.399%** (Δ **+0.010 pp**), 196 sources and 1231 claims; the original 293-task frame remains unchanged.

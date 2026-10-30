@@ -47,9 +47,26 @@ test('No self-selected report silently becomes an actual population average or b
 });
 test('All source and claim joins exist and fixed Steam task inventory is preserved',()=>{
  const sources=new Set(d.evidence.map(s=>s.id)),claims=new Map(d.claims.map(c=>[c.id,c]));
- assert.equal(x.source_ids.length,3);assert.equal(x.claim_ids.length,14);
+ assert.equal(x.source_ids.length,3);assert.equal(x.claim_ids.length,15);
  for(const id of x.source_ids)assert(sources.has(id),id);
  for(const id of x.claim_ids){assert(claims.has(id),id);assert(claims.get(id).source_ids.every(z=>sources.has(z)),id);}
  const tasks=[...p.detail_tasks.map(t=>t.percent),...q.queues.flatMap(g=>g.tasks.map(t=>t.progress))];
  assert.equal(tasks.length,293);assert.equal(p.progress_percent,Math.round(tasks.reduce((a,b)=>a+b,0)/293));
+});
+
+test('Public author correction narrows one step but does not validate the complete cash waterfall',()=>{
+ const a=x.cases.find(c=>c.id==='two_game_five_year_portfolio');
+ const r=a.reported,c=a.author_followup_correction;
+ assert.equal(c.originally_mistaken_local_tax_base_usd,127000);
+ assert.equal(c.author_corrected_local_tax_base_usd,172000);
+ assert.equal(c.author_corrected_local_tax_base_usd*c.declared_local_tax_rate_percent/100,
+  c.expected_local_tax_from_corrected_base_usd);
+ assert.equal(c.source_rounded_local_tax_usd,26000);
+ const derived=r.gross_steam_sales_usd-r.refunds_usd-r.steam_platform_share_usd-
+  r.us_withholding_usd-r.third_party_publisher_share_usd;
+ assert.equal(derived,c.from_all_printed_deductions_before_local_tax_usd);
+ assert.equal(derived-c.author_corrected_local_tax_base_usd,
+  c.remaining_base_difference_vs_literal_rounded_deductions_usd);
+ assert.equal(c.independently_verified_ledger_or_tax_notice,false);
+ assert.equal(a.verified_publisher_bank_receipts_usd,null);
 });

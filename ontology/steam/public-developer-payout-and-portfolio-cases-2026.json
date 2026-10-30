@@ -2,7 +2,7 @@
   "schema_version": 1,
   "specimen_id": "steam",
   "kind": "voluntary_public_developer_cash_disclosures_not_population_estimates",
-  "reviewed_at": "2026-10-28",
+  "reviewed_at": "2026-10-29",
   "source_ids": [
     "steam-operator-two-games-waterfall-oct2026",
     "steam-small-portfolio-cash-march2026",
@@ -22,7 +22,8 @@
     "steam-low-firstweek-single-game-units",
     "steam-low-firstweek-single-game-labor",
     "steam-low-firstweek-no-positive-profit-inference",
-    "steam-low-firstweek-not-zero-or-lifetime"
+    "steam-low-firstweek-not-zero-or-lifetime",
+    "steam-operator-waterfall-author-corrected-local-tax-base"
   ],
   "cases": [
     {
@@ -58,7 +59,19 @@
       ],
       "real_authorized_steam_finance_export": false,
       "after_unpaid_labor_economic_profit_usd": null,
-      "verified_publisher_bank_receipts_usd": null
+      "verified_publisher_bank_receipts_usd": null,
+      "author_followup_correction": {
+        "source_location": "original_public_post_comment_replies",
+        "originally_mistaken_local_tax_base_usd": 127000,
+        "author_corrected_local_tax_base_usd": 172000,
+        "declared_local_tax_rate_percent": 15,
+        "expected_local_tax_from_corrected_base_usd": 25800,
+        "source_rounded_local_tax_usd": 26000,
+        "from_all_printed_deductions_before_local_tax_usd": 174300,
+        "remaining_base_difference_vs_literal_rounded_deductions_usd": 2300,
+        "independently_verified_ledger_or_tax_notice": false,
+        "correction_does_not_reconcile_full_bank_cash": true
+      }
     },
     {
       "id": "two_released_six_fee_scopes_portfolio",
