@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "one_first_commercial_game_two_cumulative_voluntary_cash_report_windows",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-coinsweeper-first-commercial-48h-to-4weeks-jun2026",
+    "steam-coinsweeper-official-app4321130-oct2026",
+    "steam-reporting-faq-doc"
+  ],
+  "claim_ids": [
+    "steam-coinsweeper-launch-date-and-firstgame-post",
+    "steam-coinsweeper-48h-280-1118-951",
+    "steam-coinsweeper-4w-800-3295-2593",
+    "steam-coinsweeper-reported-revenue-increment-arithmetic",
+    "steam-coinsweeper-25pct-launch-discount-price",
+    "steam-coinsweeper-wishlists-stock-1900-1949-2258",
+    "steam-coinsweeper-refundrate-12p5-not-transaction-ledger",
+    "steam-coinsweeper-pre-platform-net-payout-unknown",
+    "steam-coinsweeper-two-dates-not-lifetime-market"
+  ],
+  "public_post": {
+    "published_at": "2026-06-02",
+    "game": "Coinsweeper",
+    "release_date_reported": "2026-04-28",
+    "first_commercial_game_author_claim": true,
+    "production_months_approx": 8,
+    "reported_usd_list_price": 4.99,
+    "reported_launch_discount_pct": 25,
+    "cumulative_window_observations": [
+      {
+        "window": "48h",
+        "days_approx": 2,
+        "copies_approx": 280,
+        "gross_usd": 1118,
+        "author_net_usd_undefined_basis": 951,
+        "wishlists_stock": 1949
+      },
+      {
+        "window": "about_4_weeks",
+        "days_approx": 28,
+        "copies_approx": 800,
+        "gross_usd": 3295,
+        "author_net_usd_undefined_basis": 2593,
+        "wishlists_stock": 2258
+      }
+    ],
+    "launch_wishlist_stock_approx": 1900,
+    "reported_refund_rate_pct": 12.5,
+    "reviews_reported_approximately_four_weeks": 34
+  },
+  "public_steam_listing": {
+    "source_id": "steam-coinsweeper-official-app4321130-oct2026",
+    "app_id": 4321130,
+    "release_date": "2026-04-28",
+    "developer_label": "Duo Forge Games",
+    "publisher_label": "Duo Forge Games",
+    "store_independently_confirms_reported_units": false,
+    "store_independently_confirms_discount_history": false
+  },
+  "descriptive_differences_not_settlement": {
+    "gross_increase_usd": 2177,
+    "author_net_increase_usd": 1642,
+    "approximate_units_increase": 520,
+    "wishlist_stock_change": 309,
+    "net_deduction_basis_known": false,
+    "cohort_wishlist_conversion_identified": false
+  },
+  "unknown": {
+    "authenticated_gross_paid_orders": null,
+    "actual_monthly_steam_payout": null,
+    "steam_royalty_applied_to_author_net": null,
+    "completed_bank_receipt": null,
+    "after_labor_profit": null,
+    "matched_launch_wishlist_conversion": null,
+    "full_lifetime_gross": null,
+    "representative_launch_median": null,
+    "exact_paid_zero_sales_fraction": null
+  },
+  "model_path": "site/steam-two-window-selfreport-cash-guard.mjs",
+  "tests_path": "tests/steam-two-window-selfreport-cash-guard.test.mjs",
+  "no_private_partner_records": true
+}

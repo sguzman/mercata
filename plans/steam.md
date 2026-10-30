@@ -7,6 +7,10 @@
 
 
 
+## Coinsweeper first commercial game: 48-hour versus four-week self-reported gross and net (October 30, 2026)
+
+The [two-window Coinsweeper source audit](../ontology/steam/coinsweeper-two-window-first-launch-gross-vs-net-2026.md) records about **280 copies, $1,118 gross and $951 author-labelled net** by hour 48, versus **800 copies, $3,295 gross and $2,593 author-labelled net** at roughly four weeks after an April 28 release. The cumulative difference is **$2,177 gross** and **$1,642 unspecified net**, not verified bank cash. The launch-stock 1,900 wishlists are not a proven sales-conversion denominator. One voluntary author post plus the official store page, nine limited claims, and null-safe synthetic tests advance three existing tasks by one point each. Steam research **91.512%** (Δ **+0.010 pp**); all 293 tasks preserved, 219 sources, 1340 claims.
+
 ## Operator-verified Steam earnings windows versus complete merchant history (October 30, 2026)
 
 A [four-case reporting coverage audit](../ontology/steam/steam-gameselo-verified-partial-reporting-vs-modelled-lifetime-2026.md) distinguishes gamesELO's **four opt-in source-labelled Steam revenue windows** from its larger, changing **modelled lifetime Indie Focus** sample. On an October 30 public read, the four games show **22–29 observed reporting days** within inclusive calendar spans of **69–77 days**; missing calendar dates cannot be assigned zero sales. The operator describes Steam net before Valve's share, derived modeled creator take-home, and potentially combined DLC/in-game gross. No complete accounts, realized personal bank income, representative medians or actual zero-sale fraction are identified. Two pages covering the same four windows are added to the Steam shared-source-family registry; its methodology is explicitly not independent corroboration. Three public references, ten bounded claims and a synthetic calendar-span guard advance two existing tasks by one point each. Steam research **91.502%** (Δ **+0.007 pp**), 217 sources, 1331 claims and the original 293 tasks retained.

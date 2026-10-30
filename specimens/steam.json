@@ -2402,6 +2402,28 @@
       "evidence_class": "self_reported_readonly_partner_financial_data_connection_model_definition_not_independent_validation",
       "license": "Public link and independently worded methodological notes, without reproduction of internal documentation or account examples.",
       "notes": "Operator explains partner-wide financial API Group keys, publisher-selected games, modeled review-based gross versus partner data, Steam net before Valve share, DLC/In-game rollups and partial day coverage. Does not establish authors' legal ownership or post-cost net profit."
+    },
+    {
+      "id": "steam-coinsweeper-first-commercial-48h-to-4weeks-jun2026",
+      "url": "https://www.reddit.com/r/IndieDev/comments/1tusj3u/i_released_my_first_commercial_game_on_steam_here/",
+      "publisher": "Self-identified Coinsweeper indie game developer, r/IndieDev",
+      "title": "I released my first commercial game on Steam — real numbers after 48h and 4 weeks",
+      "published_at": "2026-06-02",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "public_first_person_voluntary_unverified_two_window_sales_report",
+      "license": "Only publication metadata and independently worded factual summaries, no copied screenshot or personal account details.",
+      "notes": "Author reports approximate 48-hour and 4-week units, gross, net, launch wishlist counts and initial sale; the 'net' accounting base is not defined as after Valve split or settled payout. No independently authenticated partner statement."
+    },
+    {
+      "id": "steam-coinsweeper-official-app4321130-oct2026",
+      "url": "https://store.steampowered.com/app/4321130/Coinsweeper/",
+      "publisher": "Valve Corporation — public Steam storefront metadata",
+      "title": "Coinsweeper on Steam",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "public_dynamic_game_title_released_date_listing_not_sales_ledger",
+      "license": "Public listing metadata referenced in original prose; no store images or copyrighted description reproduced.",
+      "notes": "Confirms April 28, 2026 release date, Coinsweeper AppID 4321130 and Duo Forge Games developer/publisher labels, not sales, income or the post's historical 25% launch discount."
     }
   ],
   "claims": [
@@ -16178,6 +16200,99 @@
       "confidence": "high",
       "observed_at": "2026-10-30",
       "limitations": "Even within those four games, the coverage changes as backfill proceeds; no account-level data or independent audits supplied."
+    },
+    {
+      "id": "steam-coinsweeper-launch-date-and-firstgame-post",
+      "text": "The developer describes Coinsweeper as a first commercial game with a roughly eight-month production cycle; Steam's public store separately corroborates April 28, 2026 as the release date.",
+      "source_ids": [
+        "steam-coinsweeper-first-commercial-48h-to-4weeks-jun2026",
+        "steam-coinsweeper-official-app4321130-oct2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The developer's complete commercial release history and labor hours are self-described; the public listing establishes date, not full history."
+    },
+    {
+      "id": "steam-coinsweeper-48h-280-1118-951",
+      "text": "For the first 48 hours, the author approximates 280 units sold, and reports USD 1,118 gross and USD 951 'net' without publishing a reconciled financial statement.",
+      "source_ids": [
+        "steam-coinsweeper-first-commercial-48h-to-4weeks-jun2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Units are approximate and the author does not establish which deductions or platform shares are represented by the net category."
+    },
+    {
+      "id": "steam-coinsweeper-4w-800-3295-2593",
+      "text": "At about four weeks, the same post reports roughly 800 cumulative units, USD 3,295 gross and USD 2,593 under its author-labelled 'net' category.",
+      "source_ids": [
+        "steam-coinsweeper-first-commercial-48h-to-4weeks-jun2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "The four-week cumulative values are unaudited self-report, and net is not authenticated deposited cash."
+    },
+    {
+      "id": "steam-coinsweeper-reported-revenue-increment-arithmetic",
+      "text": "Subtracting the published first-48-hour and approximately four-week snapshots yields USD 2,177 additional author-reported gross and USD 1,642 additional author-labelled net between the snapshots, not an observed payout period.",
+      "source_ids": [
+        "steam-coinsweeper-first-commercial-48h-to-4weeks-jun2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "This is arithmetic on rounded, same-author cumulative disclosures; independently posted transactions and reconciliation conventions were not supplied."
+    },
+    {
+      "id": "steam-coinsweeper-25pct-launch-discount-price",
+      "text": "The author reports a USD 4.99 list price and a 25% introductory discount; the public Steam listing independently displays the game's release and title, not the historical sale checkout prices.",
+      "source_ids": [
+        "steam-coinsweeper-first-commercial-48h-to-4weeks-jun2026",
+        "steam-coinsweeper-official-app4321130-oct2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Discount is reported, not independently reconstructed by dates, geography or actual paid order."
+    },
+    {
+      "id": "steam-coinsweeper-wishlists-stock-1900-1949-2258",
+      "text": "The author reports about 1,900 wishlists at launch, 1,949 at 48 hours and 2,258 after roughly four weeks; these cumulative stock numbers cannot be used as a cohort denominator for the reported game sales.",
+      "source_ids": [
+        "steam-coinsweeper-first-commercial-48h-to-4weeks-jun2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Subsequent wishlists include post-release interest and may exclude removals or prior conversions; sales are not a confirmed matched wishlist cohort."
+    },
+    {
+      "id": "steam-coinsweeper-refundrate-12p5-not-transaction-ledger",
+      "text": "The post reports a 12.5% refund rate and 34 reviews near the four-week observation, but neither the refund timing nor review-to-unit relationship is independently matched to paid purchase transactions.",
+      "source_ids": [
+        "steam-coinsweeper-first-commercial-48h-to-4weeks-jun2026"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "A percentage alone does not reveal exact refunded orders or the date-specific denominator."
+    },
+    {
+      "id": "steam-coinsweeper-pre-platform-net-payout-unknown",
+      "text": "The author's USD 2,593 'net' result must not automatically be treated as after-Valve-share bank cash, producer profit or individual earned wages, because the net adjustments, fees, rights and actual payout were not independently documented.",
+      "source_ids": [
+        "steam-coinsweeper-first-commercial-48h-to-4weeks-jun2026",
+        "steam-reporting-faq-doc"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Valve's authoritative monthly payout definitions do not establish which reporting field the author transcribed."
+    },
+    {
+      "id": "steam-coinsweeper-two-dates-not-lifetime-market",
+      "text": "Two cumulative observations about a selected first-game release cannot establish a representative first-commercial-launch earnings median, actual initial customer conversion rate or complete game lifetime revenue.",
+      "source_ids": [
+        "steam-coinsweeper-first-commercial-48h-to-4weeks-jun2026"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Right-censored, voluntary single-title self-report without first-paid release market frame or authorized full transaction and cost histories."
     }
   ],
   "observations": [],
