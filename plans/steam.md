@@ -7,10 +7,6 @@
 
 
 
-## One studio, three paid games: currency-stage and reporting-date audit (October 30, 2026)
-
-The [Studio Ortica first-person three-title study](../ontology/steam/steam-ortica-three-title-selfreport-currency-window-audit-2026.md) distinguishes approximately **$299,807 / $48,000 / $7,150 gross USD** from **€70,507 / €12,075 / €2,100 author-estimated after-tax EUR**. It registers three official first-paid releases and exposes an October 26 sales date appearing in an article dated September 30, without an authenticated revision history. These are correlated titles by one selected studio, not three independent publishers or verified bank payouts. Four public sources, 13 source-linked claims and case-integrity tests advance three existing tasks by one point each. The original **293** tasks remain intact; exact Steam progress **91.638%** (Δ **+0.010 pp**), **252** sources and **1,507** claims.
-
 ## Paid Early Access opening versus later full-release date (October 30, 2026)
 
 The [What Is The Ghost public case](../ontology/steam/what-is-the-ghost-earlyaccess-first-paid-v1-distinction-2026.md) establishes a **March 23, 2026 initial paid Early Access** offer versus the **October 1 full release** of the same AppID, not two first-paid launches. The July author report cites **183 sold units**, **14 returns**, and **$1,370 net after returns**, which cannot be treated as verified after-platform-share bank cash. It also documents pre-festival versus July wishlist-stock incompatibility and unverified marketing and multiplayer effects. Two new sources, eight claims and regression checks advance three existing tasks by one point each. Steam research **91.532%** (Δ **+0.010 pp**), 222 sources and 1358 claims, 293 tasks retained.
