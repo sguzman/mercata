@@ -37,7 +37,7 @@ test('Low multiplier clamped to 15 and all payee outcomes remain missing',()=>{
 });
 test('Synthetic guard rejects real AppIDs, unsupported categories and malformed inputs',()=>{
  for(const change of [{appid:123},{partner_id:'owner'},{price:4},{fixture_id:'real-game'},{reviews:-1},
-  {release_year:1900},{studio_size:'unknown_new'},{genre:'fantasy'},{price_usd_cents:10.1},{positive_pct:105}])
+  {release_year:1900},{studio_size:'unknown_new'},{genre:'fantasy'},{price_usd_cents:0},{price_usd_cents:10.1},{positive_pct:105}])
    assert.throws(()=>audit({...f(),...change}));
  assert.throws(()=>audit([10,2026,1000]));
 });
@@ -48,4 +48,15 @@ test('Source/claim joins preserve the original 293 Steam tasks',()=>{
  for(const id of study.claim_ids){assert(claims.has(id),id);assert(claims.get(id).source_ids.every(s=>ids.has(s)),id);}
  const scores=[...p.detail_tasks.map(x=>x.percent),...q.queues.flatMap(x=>x.tasks.map(t=>t.progress))];
  assert.equal(scores.length,293);assert.equal(p.progress_percent,Math.round(scores.reduce((a,b)=>a+b,0)/293));
+});
+
+
+test('Official model excludes free-to-play games, while null-price fallback is a paid-game assumption',()=>{
+ const actualZeroPrice={...f(),fixture_id:'fixture-free-title',price_usd_cents:0};
+ assert.throws(()=>audit(actualZeroPrice));
+ const assumedPaidPrice=audit({...f(),fixture_id:'fixture-missing-price',price_usd_cents:null});
+ assert.equal(assumedPaidPrice.review_signal_present,true);
+ assert.equal(assumedPaidPrice.estimator_status,'modeled_from_review_signal');
+ assert.equal(study.original_machine_spec.first_price_default_usd,15);
+ assert(study.original_machine_spec.excluded_classes.includes('free_to_play_titles'));
 });

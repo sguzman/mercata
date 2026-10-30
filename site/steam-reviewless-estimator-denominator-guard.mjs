@@ -8,7 +8,7 @@ export function auditSyntheticReviewlessEstimation(row){
   typeof row.fixture_id!=='string'||!/^fixture-[a-z0-9-]+$/.test(row.fixture_id)||
   !Number.isSafeInteger(row.reviews)||row.reviews<0||row.reviews>100000||
   !(row.release_year===null||Number.isSafeInteger(row.release_year)&&row.release_year>=1980&&row.release_year<=2100)||
-  !(row.price_usd_cents===null||Number.isSafeInteger(row.price_usd_cents)&&row.price_usd_cents>=0&&row.price_usd_cents<=100000)||
+  !(row.price_usd_cents===null||Number.isSafeInteger(row.price_usd_cents)&&row.price_usd_cents>0&&row.price_usd_cents<=100000)||
   !(row.positive_pct===null||Number.isSafeInteger(row.positive_pct)&&row.positive_pct>=0&&row.positive_pct<=100)||
   !Object.hasOwn(teams,row.studio_size)||!Object.hasOwn(genres,row.genre))
   throw new TypeError('Expected a bounded, explicitly synthetic review-based estimator fixture');
