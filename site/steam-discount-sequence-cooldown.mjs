@@ -49,6 +49,14 @@ export function auditSyntheticSteamDiscountSequence(args={}){
   throw new RangeError('Previous discount dates overlap current promotion or precede first paid release');
  if(previous?.kind==='launch'&&previous.start.getTime()!==release.getTime())
   throw new RangeError('An earlier launch discount must begin on first paid release');
+ // A previous promotion must itself have been possible when the last known base-price
+ // increase occurred; a later valid start does not legalize invalid discount history.
+ if(previous&&price){
+  if(price>=previous.start&&price<=previous.end)
+   throw new RangeError('A base-price increase cannot occur during a previous discount');
+  if(price<previous.start&&previous.start<plus30(price))
+   throw new RangeError('A previous discount cannot begin during a price-increase cooldown');
+ }
  if(previous){
   if(previous.kind!=='launch'&&previous.start<plus30(release))
    throw new RangeError('An earlier non-launch discount cannot bypass first paid release cooldown');

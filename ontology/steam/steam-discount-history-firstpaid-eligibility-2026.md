@@ -11,6 +11,8 @@ An **official seasonal sale discount** is exempt from the third, ordinary discou
 The current [official Steam guide](https://partner.steamgames.com/doc/marketing/discounts?language=english) limits an introductory launch discount to **10–40%** and **7–14 days**, starting with the release. Ordinary custom discounts are **10–95%** and **1–14 days**. Official seasonal sale periods follow their own calendar and can be longer than fourteen days. Calendar days alone cannot establish price-threshold eligibility or the actual Steamworks configuration.
 
 
+The synthetic checker also rejects a prior discount that would overlap the modeled base-price increase, or start inside the 30-day price-increase cooldown. An earlier promotion cannot be counted as valid history merely because the *later* proposal clears that increase. This is limited to the single supplied last price-increase date, not a complete price-change history.
+
 The synthetic checker now requires an explicit `official_seasonal_event_verified: true` **fixture attestation** before allowing the seasonal exception. For a previous seasonally discounted title, its prior-discount record must independently carry the same hypothetical attestation. A bare `discount_kind: 'official_seasonal'` string is **not enough**: an unverified event produces an unresolved result rather than a false approval or an invented failed discount. Even an attested synthetic fixture does not independently validate Steam's event calendar or the account's participation.
 
 ## In & Out public example, without an invented approval
@@ -23,6 +25,6 @@ The simultaneous community-pack update, outreach and other exposure leave the ob
 
 ## Software test contract
 
-The new **first-paid synthetic fixture checker** preserves three-valued results: `true` means conditional compliance with known calendar rules and an *attested complete* prior-discount history, `false` means a known rule fails, and `null` means the prior discount history is incomplete. Even `true` is **not verified store eligibility**. Tests cover the independent cooldowns, official-seasonal exception, launch caps, date-boundaries, missing prior history and hypothetical duplicate discounts.
+The new **first-paid synthetic fixture checker** preserves three-valued results: `true` means conditional compliance with known calendar rules and an *attested complete* prior-discount history, `false` means a known rule fails, and `null` means the prior discount history is incomplete. Even `true` is **not verified store eligibility**. Tests cover the independent cooldowns, prior price-increase chronology, official-seasonal exception, launch caps, date-boundaries, missing prior history and hypothetical duplicate discounts.
 
 The earlier [release-date-only checker](../../site/steam-sale-date-eligibility.mjs) remains available but is explicitly a preliminary gate that assumes no disqualifying previous promotion history. Neither checker estimates publisher cash, price elasticity, or zero-sale rates.

@@ -118,3 +118,20 @@ test('A standard promotion cannot misrepresent an official seasonal-sale attesta
  assert.throws(()=>check({...base,previous_discount:{kind:'standard',start:'2026-09-30',
   end:'2026-10-01',official_seasonal_event_verified:true}}),/Previous official event/);
 });
+test('Earlier discounts cannot be used as valid history across a price-increase conflict',()=>{
+ const prior={kind:'standard',start:'2026-12-01',end:'2026-12-08'};
+ const later={...base,discount_start:'2027-01-15',discount_end:'2027-01-21',
+  discount_percent:20,previous_discount:prior};
+ for(const last_price_increase_date of ['2026-12-01','2026-12-04','2026-12-08']){
+  assert.throws(()=>check({...later,last_price_increase_date}),/cannot occur during a previous discount/);
+ }
+ assert.throws(()=>check({...later,last_price_increase_date:'2026-11-02'}),
+  /previous discount cannot begin during a price-increase cooldown/i);
+ // 30 whole days, not a blanket 31-day prohibition.
+ assert.equal(check({...later,last_price_increase_date:'2026-11-01'}).conditional_calendar_rules_pass,true);
+ assert.equal(check({...later,last_price_increase_date:'2026-12-09'}).conditional_calendar_rules_pass,true);
+ const official={kind:'official_seasonal',start:'2026-12-17',end:'2027-01-04',
+  official_seasonal_event_verified:true};
+ assert.throws(()=>check({...later,previous_discount:official,last_price_increase_date:'2026-12-20'}),
+  /cannot occur during a previous discount/);
+});
