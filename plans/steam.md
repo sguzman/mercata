@@ -5,6 +5,11 @@
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
 
+
+## Public disclosed-sales estimator scorecard and the low-end calibration gap (October 29, 2026)
+
+The [SteamMaho model-disclosure sample audit](../ontology/steam/steam-steammaho-disclosure-validation-and-low-sales-bins-2026.md) separates a recent **32-game** model comparison (17 estimates within 50% of reported sales), a distinct **132-game** review-date-matched panel (79 within 50%), and a **230-game** sales-per-review calibration sample with just **16 cases below 1,000 units**. The provider's size-binned review multipliers cannot simply be assigned to unmeasured games, and these source-selected disclosures give no verified Steam-wide zero-paid-order or publisher-cash distribution. One new third-party public source and seven bounded claims advance two existing research tasks by three points. Steam research **91.399%** (Δ **+0.010 pp**), 196 sources and 1231 claims; the original 293-task frame remains unchanged.
+
 ## Recent Indie-tagged review-hit sampling and Next Fest roster differences (October 29, 2026)
 
 The [Steam Indie XP source-method audit](../ontology/steam/steamindiexp-october-2026-cohort-selection.md) documents an October 23 release/early-access-exit frame of 5,483 Indie-tagged games excluding 31 major publishers, and a separate 21–120-day hit definition of 100 or more lifetime reviews. Its 311 hit cases and 881 sampled non-hit cases are deliberately outcome-stratified; their naive quotient is not a store-wide commercial success probability. Another sample reports 104 of 220 stores with self-declared AI use, and 7,236 versus 7,164 October Next Fest roster counts reflect differing sources. Seven new source-linked claims advance three existing tasks by a point each; original 293-task inventory unchanged. Steam research **91.314%** (Δ **+0.010 pp**), 190 sources, 1191 claims; no merchant sales observed.

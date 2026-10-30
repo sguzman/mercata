@@ -2160,6 +2160,17 @@
       "evidence_class": "independent_sourced_steam_earlyaccess_23247_game_historical_snapshot_no_merchant_data",
       "license": "Public link and independently authored brief aggregate interpretation only; no rows or reproductions of hosted CSV or charts.",
       "notes": "Steam snapshots September 26 through October 3, 2026. Recovered 23,247 games; 10,141 2013-2023 entrants with 10+ reviews and 14,597 including low-review games. Incomplete early graduations/removals, no paid order outcomes."
+    },
+    {
+      "id": "steam-steammaho-2026-public-model-disclosure-scorecard",
+      "url": "https://steammaho.com/reports/scorecard",
+      "title": "Every forecast, graded — SteamMaho",
+      "publisher": "SteamMaho / public third-party game owner estimator",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "public_operator_self_reported_sales_disclosure_model_scorecard_distinct_selection_panels",
+      "license": "Public link and original brief aggregate interpretation only; no game-level result tables, charts, or proprietary model data copied.",
+      "notes": "32 recent sales disclosures: 17 within 50%; separately 132 disclosure-date-aligned reviews: 79 within 50%; 230 sale-size calibration cases, only 16 below 1000 units. Not an independent merchant audit or zero sales frame."
     }
   ],
   "claims": [
@@ -14822,6 +14833,76 @@
       "observed_at": "2026-10-29",
       "limitations": "Observed version 1.0 or inactive-update status is an operational category, not verified economic performance.",
       "confidence": "high_public_research_aggregate_with_disclosed_noncoverage_no_sales_observed"
+    },
+    {
+      "id": "steam-steammaho-32disclosure-17within50",
+      "text": "A public SteamMaho model scorecard reports 17 of 32 recently disclosed Steam game sales observations within 50% of the model's owner estimate, and 11 within 30%.",
+      "source_ids": [
+        "steam-steammaho-2026-public-model-disclosure-scorecard"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "This developer/public-documentation disclosure panel is selected and cannot validate accuracy for undisclosed or zero-sale releases.",
+      "confidence": "bounded_provider_self_scorecard_disclosed_sales_selection_only"
+    },
+    {
+      "id": "steam-steammaho-132review-matched-79within50",
+      "text": "SteamMaho separately reports 79 estimates within 50% of disclosed sales in a 132-game comparison where review counts were recorded at disclosure time.",
+      "source_ids": [
+        "steam-steammaho-2026-public-model-disclosure-scorecard"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The 132-case review-matched cohort and the 32-case recent-disclosure sample have different eligibility criteria; do not pool their percentages.",
+      "confidence": "bounded_provider_self_scorecard_disclosed_sales_selection_only"
+    },
+    {
+      "id": "steam-steammaho-230band-low16",
+      "text": "SteamMaho's published sales-per-review calibration consists of 230 disclosure cases across six sales bands, only 16 of them below 1,000 reported sales.",
+      "source_ids": [
+        "steam-steammaho-2026-public-model-disclosure-scorecard"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Low-sales examples remain a small, selected subset of public disclosures; zero-review and zero-order outcomes are not enumerated.",
+      "confidence": "bounded_provider_self_scorecard_disclosed_sales_selection_only"
+    },
+    {
+      "id": "steam-steammaho-lowend-review-ratio-9point9",
+      "text": "In the reported under-1,000-unit group, the operator's typical sales per review is 9.9, compared with 31.8 in the 1,000–9,999 group.",
+      "source_ids": [
+        "steam-steammaho-2026-public-model-disclosure-scorecard"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "This is an operator-reported conditional calibration, not a general review-to-sales conversion coefficient for unreviewed games.",
+      "confidence": "bounded_provider_self_scorecard_disclosed_sales_selection_only"
+    },
+    {
+      "id": "steam-steammaho-bands-not-global-coefficient",
+      "text": "The same reported disclosure calibration has typical sales-per-review values 56.8 for 10,000–49,999 reported sales and 41.1 for at least one million, contradicting a single universal review multiplier.",
+      "source_ids": [
+        "steam-steammaho-2026-public-model-disclosure-scorecard"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Band allocation depends on a game's reported sales size; using unknown true sales to choose a calibration band can introduce circularity.",
+      "confidence": "bounded_provider_self_scorecard_disclosed_sales_selection_only"
+    },
+    {
+      "id": "steam-steammaho-recent-relative-errors-not-income",
+      "text": "The source reports a typical 0.95 estimated-to-disclosed unit ratio for its recent 32-game validation panel, not publisher cash, lifetime profits, or an independent probability sample.",
+      "source_ids": [
+        "steam-steammaho-2026-public-model-disclosure-scorecard"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The operator uses its own evolving model, and reported units may be developer claims rather than authenticated Steam merchant exports.",
+      "confidence": "bounded_provider_self_scorecard_disclosed_sales_selection_only"
+    },
+    {
+      "id": "steam-steammaho-forecast-scorecard-different-outcome",
+      "text": "The same provider keeps a separately dated week-one peak-player forecast scorecard whose outcome is concurrent players rather than sold copies.",
+      "source_ids": [
+        "steam-steammaho-2026-public-model-disclosure-scorecard"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Backtesting concurrent-player forecasts does not validate paid-unit, gross-revenue or net-income forecasts.",
+      "confidence": "bounded_provider_self_scorecard_disclosed_sales_selection_only"
     }
   ],
   "observations": [],

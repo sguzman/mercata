@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "third_party_disclosed_sales_review_model_conditional_calibration_and_cohort_comparability",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-steammaho-2026-public-model-disclosure-scorecard"
+  ],
+  "claim_ids": [
+    "steam-steammaho-32disclosure-17within50",
+    "steam-steammaho-132review-matched-79within50",
+    "steam-steammaho-230band-low16",
+    "steam-steammaho-lowend-review-ratio-9point9",
+    "steam-steammaho-bands-not-global-coefficient",
+    "steam-steammaho-recent-relative-errors-not-income",
+    "steam-steammaho-forecast-scorecard-different-outcome"
+  ],
+  "source_url": "https://steammaho.com/reports/scorecard",
+  "source_publication_date": null,
+  "source_snapshot_at": "2026-10-29",
+  "recent_disclosed_sales_validation": {
+    "cutoff": "2026-09-02",
+    "lookback_days": 120,
+    "compared_games": 32,
+    "within_50_percent_count": 17,
+    "within_30_percent_count": 11,
+    "typical_estimated_units_to_disclosed_units_ratio": 0.95,
+    "financial_ledger_independently_authenticated": false,
+    "representative_paid_release_population": false
+  },
+  "review_matched_disclosed_sales_validation": {
+    "sample_size": 132,
+    "within_50_percent_count": 79,
+    "typical_estimated_to_disclosed_units_ratio": 0.91,
+    "matched_to_disclosure_time": true,
+    "independently_authenticated_merchant_sales": false
+  },
+  "sales_per_review_calibration": {
+    "disclosed_game_count": 230,
+    "bins": [
+      {
+        "sales_class": "under_1000",
+        "games": 16,
+        "typical_sales_per_review": 9.9,
+        "inner_half_low": 6.4,
+        "inner_half_high": 15.3
+      },
+      {
+        "sales_class": "1000_9999",
+        "games": 52,
+        "typical_sales_per_review": 31.8,
+        "inner_half_low": 23.8,
+        "inner_half_high": 43.5
+      },
+      {
+        "sales_class": "10000_49999",
+        "games": 34,
+        "typical_sales_per_review": 56.8,
+        "inner_half_low": 42.9,
+        "inner_half_high": 81.7
+      },
+      {
+        "sales_class": "50000_99999",
+        "games": 25,
+        "typical_sales_per_review": 63.2,
+        "inner_half_low": 31.7,
+        "inner_half_high": 86.7
+      },
+      {
+        "sales_class": "100000_999999",
+        "games": 60,
+        "typical_sales_per_review": 51.7,
+        "inner_half_low": 38.7,
+        "inner_half_high": 80.9
+      },
+      {
+        "sales_class": "1000000_plus",
+        "games": 43,
+        "typical_sales_per_review": 41.1,
+        "inner_half_low": 29.1,
+        "inner_half_high": 62.7
+      }
+    ],
+    "complete_zero_review_sampling_frame": false,
+    "account_for_games_with_no_reported_sales": false
+  },
+  "other_forecasts": {
+    "peak_players_week1_is_not_paid_sales": true,
+    "zero_concurrent_players_does_not_prove_zero_paid_orders": true,
+    "same_provider_is_not_independent_model_validation": true
+  },
+  "unresolved": {
+    "exact_real_zero_paid_order_share": null,
+    "actual_publisher_net_receipts": null,
+    "representative_first_year_gross_median": null,
+    "developer_after_cost_profit": null,
+    "game_level_merchant_authenticity": null,
+    "unreviewed_game_outcomes": null
+  },
+  "model_path": "site/steam-model-disclosure-validation.mjs",
+  "tests_path": "tests/steam-model-disclosure-validation.test.mjs",
+  "no_private_financial_data": true
+}
