@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "single_paid_early_access_game_cumulative_selfreport_and_creator_proceeds_allocation",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-go-up-author-aug31-postmortem-2026",
+    "steam-go-up-official-app2934520-earlyaccess-v1-2026",
+    "steam-reporting-faq-doc"
+  ],
+  "claim_ids": [
+    "steam-goup-original-paid-ea-2025-not-new-2026",
+    "steam-goup-public-studio-label-not-legal-payee",
+    "steam-goup-135steam-23retail-158total-20returns",
+    "steam-goup-gross675-net517-undefined-stage",
+    "steam-goup-about500-earmarked-external-contributors",
+    "steam-goup-developers-likely-unpaid-not-verified-zero",
+    "steam-goup-two-developers-two-years-not-hourly-income",
+    "steam-goup-wishlist-demo-distinct-not-sales",
+    "steam-goup-one-earlyaccess-game-not-market-median"
+  ],
+  "store_listing": {
+    "app_id": 2934520,
+    "developer_label": "Noble Whale Studios",
+    "publisher_label": "Noble Whale Studios",
+    "first_public_paid_early_access_date": "2025-07-11",
+    "later_full_release_date": "2026-08-31",
+    "distinct_first_paid_launches": 1,
+    "authenticated_paid_order_history": null,
+    "legal_partner_payee": null
+  },
+  "public_author_report": {
+    "published_at": "2026-08-31",
+    "time_window": "cumulative_at_full_release_after_roughly_one_year_of_paid_early_access",
+    "lifetime_steam_units_reported": 135,
+    "retail_units_reported": 23,
+    "total_units_reported": 158,
+    "returned_units_reported": 20,
+    "gross_steam_usd_reported": 675,
+    "net_steam_usd_reported_undefined_deduction_basis": 517,
+    "wishlist_stock_reported": 278,
+    "demo_players_reported": 231,
+    "demo_downloads_approx": 2000,
+    "proceeds_available_for_artist_and_musician_approx_usd": 500,
+    "contributor_allocation_statement": "author_says_funds_go_to_art_and_music_contributors",
+    "principal_developers_future_receipts_statement": "author_says_likely_zero_not_verified",
+    "principal_developers_reported": 2,
+    "development_years_approx": 2
+  },
+  "observation_controls": {
+    "gross_and_net_not_personal_income": true,
+    "retail_units_verified_direct_paid_sales": false,
+    "returned_units_cannot_be_reconciled_from_public_post": true,
+    "contractor_transfers_authenticated": false,
+    "author_forecast_not_zero_ledger_entry": true,
+    "release_date_cannot_be_reset_to_full_release": true,
+    "voluntary_case_not_random_sample": true
+  },
+  "unknown": {
+    "observed_actual_paid_steam_orders": null,
+    "real_refunded_order_denominator": null,
+    "steam_partner_after_platform_cut_receipts_usd": null,
+    "verified_legal_publisher_bank_receipts_usd": null,
+    "verified_contractor_disbursements_usd": null,
+    "verified_principal_developer_cash_usd": null,
+    "after_cost_profit_usd": null,
+    "fully_costed_work_hours": null,
+    "matched_wishlist_conversion": null,
+    "representative_newcomer_payout_median": null,
+    "exact_market_zero_paid_sale_fraction": null
+  },
+  "tests_path": "tests/steam-go-up-contributor-proceeds-audit.test.mjs",
+  "no_private_partner_records": true
+}
