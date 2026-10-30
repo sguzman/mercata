@@ -7,6 +7,10 @@
 
 
 
+## Extraneum: first-paid Early Access versus full-release income and wishlist stock (October 30, 2026)
+
+A [developer-authored 2025 postmortem and Steam listing audit](../ontology/steam/steam-extraneum-ea-firstpaid-vs-v1-payout-2026.md) establishes the distinction between the game's first paid Early Access offering in June 2022 and its September 2024 version 1.0 launch. The author reports approximately **2,400 lifetime game units and USD $12,000 after certain deductions** around October 2025, but exact cash to the creator, contractual publisher allocation, complete labor cost and pre/post-1.0 sales remain unresolved. Wishlist stocks of approximately 10,000 at full launch and 10,600 a year later do not give paid checkout conversion. Two public sources, nine bounded claims and synthetic timing/cash tests advance three original tasks by one point each. Steam research **91.488%** (Δ **+0.010 pp**), 212 sources and 1312 claims; 293 original tasks preserved.
+
 ## Puzzle genre medians from two incompatible revenue estimation frames (October 29, 2026)
 
 The [IndiePilot/Immutable source comparability audit](../ontology/steam/steam-puzzle-tag-incompatible-median-estimates-2026.md) distinguishes an **IndiePilot** October 14 group of 1,473 selected Puzzle games at **$151,347 modeled median gross** from an **Immutable** September group of 26,452 tagged games at **$2,390 modeled paid-title median**. Their roughly **63.3×** quoted difference is not a matched cohort, game earnings effect or verified publisher payment. The former uses a fixed review × 30 × current-price estimate; the latter samples roughly 20 titles near a tag middle rank from a different licensed model. One new public source, nine bounded claims and synthetic comparability tests advance two original tasks by one point each. Steam research **91.478%** (Δ **+0.007 pp**), 210 sources and 1303 claims, preserving all 293 tasks.

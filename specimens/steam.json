@@ -2325,6 +2325,28 @@
       "evidence_class": "third_party_partial_game_database_price_times_review_multiplier_gross_estimates",
       "license": "Public source metadata, outbound URL and independently authored bounded factual analysis only; no provider charts or game-level records reproduced.",
       "notes": "Production database includes only 58,650 paid priced game rows with valid review data; review count multiplied by 30 and current price. No matching AppID roster for peer provider, historical first-paid status or private sales ledger."
+    },
+    {
+      "id": "steam-extraneum-first-year-developer-postmortem-20251021",
+      "url": "https://davidjalbert.itch.io/extraneum/devlog/1090186/extraneum-post-mortem-one-year-later",
+      "publisher": "David Jalbert — game developer's original public devlog on itch.io",
+      "title": "Extraneum Post-Mortem, one year later",
+      "published_at": "2025-10-21",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "first_person_developer_public_unaudited_paid_early_access_and_full_release_cash_after_some_deductions",
+      "license": "Public author citation, URL and independently authored brief factual notes only; no screenshots, transcript or copied article prose.",
+      "notes": "Developer states roughly three years of work, 2,400 game units and USD $12,000 after Steam share, tax and refunds by one year after version 1.0. Early Access generated most receipts. No published authenticated bank statements, contract allocations, exact cost ledger, chronological paid units or withheld tax details."
+    },
+    {
+      "id": "steam-extraneum-official-store-ea-202206-full-202409",
+      "url": "https://store.steampowered.com/app/1999140?l=english",
+      "publisher": "Valve Corporation — publicly displayed Extraneum Steam game listing",
+      "title": "Extraneum on Steam",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "public_dynamic_store_listing_release_dates_and_roles_not_sales_ledger",
+      "license": "Public metadata and original analysis; no reproduction of store media, screenshots or full text.",
+      "notes": "Store lists early access June 14, 2022, full version September 25, 2024, developer David Jalbert, publisher Hellforge Studios. Dynamic listed publisher, reviews and price do not verify 2025 game sales or any bank deposits."
     }
   ],
   "claims": [
@@ -15802,6 +15824,102 @@
       "confidence": "high",
       "observed_at": "2026-10-29",
       "limitations": "Genre tags overlap and source populations differ; no matched labor costs, randomized assignment, contractual shares or after-tax proceeds."
+    },
+    {
+      "id": "steam-extraneum-first-paid-ea-2022-not-full2024",
+      "text": "Extraneum's public store lists June 14, 2022 as its Early Access release and September 25, 2024 as its full launch; an originally paid Early Access title's version 1.0 is not a second first commercial launch.",
+      "source_ids": [
+        "steam-extraneum-first-year-developer-postmortem-20251021",
+        "steam-extraneum-official-store-ea-202206-full-202409"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Store dates establish published milestones, not a complete date-resolved set of the title's initial completed paid transactions."
+    },
+    {
+      "id": "steam-extraneum-dev-reports-2400-sales",
+      "text": "In an October 21, 2025 first-person postmortem, Extraneum's creator reports roughly 2,400 game units sold about a year after version 1.0, not a verified count of distinct paying customers.",
+      "source_ids": [
+        "steam-extraneum-first-year-developer-postmortem-20251021"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-30",
+      "limitations": "Unverified source narrative with no explicit separate EA versus version 1.0 paid units, refund convention or partner raw order records."
+    },
+    {
+      "id": "steam-extraneum-approx-12k-after-some-deductions",
+      "text": "The Extraneum creator reports approximately USD $12,000 after the Steam cut, taxes and refunds from the title by one year after the full release, without independently verified receipts or a clear individual publisher-share allocation.",
+      "source_ids": [
+        "steam-extraneum-first-year-developer-postmortem-20251021",
+        "steam-extraneum-official-store-ea-202206-full-202409"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-30",
+      "limitations": "The author's phrase 'after ... etc.' does not establish a consistent bank-cash category, personal tax regime, accounting period or all-in development profit."
+    },
+    {
+      "id": "steam-extraneum-three-year-work-not-wage",
+      "text": "The creator describes roughly three years of development work, but does not publish hours, cost rates, full outsourcing spend or a verified labor-adjusted return; reported after-deduction game receipts are not an actual hourly wage.",
+      "source_ids": [
+        "steam-extraneum-first-year-developer-postmortem-20251021"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Three calendar years of development do not imply three continuous full-time paid work years."
+    },
+    {
+      "id": "steam-extraneum-ea-dominated-revenue-unquantified",
+      "text": "The creator reports that the majority of game revenue came during Early Access rather than after the September 2024 1.0 launch, without a quantified or independently audited cross-period split.",
+      "source_ids": [
+        "steam-extraneum-first-year-developer-postmortem-20251021",
+        "steam-extraneum-official-store-ea-202206-full-202409"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-30",
+      "limitations": "An author's qualitative majority statement cannot be transformed into exact pre/post launch sales or cash cohorts."
+    },
+    {
+      "id": "steam-extraneum-wishlist-stock-10k-to10600",
+      "text": "The author says around 10,000 Steam wishlists were outstanding near the version 1.0 launch and roughly 10,600 were outstanding a year later; these are separate stock snapshots, not verified sale-to-wishlist conversion.",
+      "source_ids": [
+        "steam-extraneum-first-year-developer-postmortem-20251021"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-30",
+      "limitations": "Wishlist additions, deletions, self-cancellations and purchases all affect stocks; identities and actual orders are not supplied."
+    },
+    {
+      "id": "steam-extraneum-named-separate-publisher",
+      "text": "Extraneum's Steam listing names David Jalbert as developer and Hellforge Studios as publisher; the devlog describes an external publishing deal, so the public $12,000 after-deduction figure cannot be assumed to be a directly deposited amount for the solo creator.",
+      "source_ids": [
+        "steam-extraneum-first-year-developer-postmortem-20251021",
+        "steam-extraneum-official-store-ea-202206-full-202409"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Public roles do not disclose royalty percentages, recoup priority, rights transfers, payer identity or bank settlement."
+    },
+    {
+      "id": "steam-extraneum-demo-before-paid-ea",
+      "text": "The developer describes an early itch.io demo in July 2021 and subsequent Steam Early Access in June 2022, making the demo, first paid availability and September 2024 full-release events temporally distinct.",
+      "source_ids": [
+        "steam-extraneum-first-year-developer-postmortem-20251021",
+        "steam-extraneum-official-store-ea-202206-full-202409"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-30",
+      "limitations": "Demo downloads, playtest participation and wishlists were not converted to a measured transaction cohort."
+    },
+    {
+      "id": "steam-extraneum-2400-not-zero-sales-population",
+      "text": "A single self-selected title reporting approximately 2,400 units and $12,000 after some deductions cannot establish the typical Steam developer income, total catalog zero-paid-sale fraction or causal effect of Early Access relative to direct full release.",
+      "source_ids": [
+        "steam-extraneum-first-year-developer-postmortem-20251021",
+        "steam-extraneum-official-store-ea-202206-full-202409"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "There is no complete original paid-release population, matched randomized release strategy or individual labor and publisher-contract ledger."
     }
   ],
   "observations": [],
