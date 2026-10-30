@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "official_current_store_appid_page_cursor_validation_not_historical_zero_sale_census",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-public-app-list-api",
+    "steam-legacy-app-list-deprecated-20261029"
+  ],
+  "claim_ids": [
+    "steam-istorse-current-game-appid-pagination",
+    "steam-istorse-paging-max50k",
+    "steam-istorse-game-filter-default",
+    "steam-istorse-key-requirement",
+    "steam-istorse-lastmodified-not-release",
+    "steam-istorse-pricechange-not-purchase",
+    "steam-istorse-modified-since-delta-not-base",
+    "steam-istorse-legacy-applist-deprecated",
+    "steam-istorse-cursor-guard-does-not-authenticate-frame",
+    "steam-istorse-no-zero-sales-from-public-list"
+  ],
+  "documented_service": {
+    "endpoint": "IStoreService/GetAppList/v1",
+    "web_api_key_required": true,
+    "pages_ordered_by": "appid",
+    "next_page_cursor": "last_appid",
+    "default_max_results": 10000,
+    "max_max_results": 50000,
+    "include_games_default": true,
+    "available_type_filters": [
+      "games",
+      "dlc",
+      "software",
+      "videos",
+      "hardware"
+    ],
+    "if_modified_since_is_delta_filter": true,
+    "last_modified_is_release_time": false,
+    "price_change_number_is_paid_sales": false
+  },
+  "limits": {
+    "current_store_only": true,
+    "complete_historic_delisted_frame": false,
+    "first_paid_release_eligibility_identified": false,
+    "actual_merchant_transactions_accessible": false,
+    "unmodified_full_frame_from_changed_only_query": false,
+    "pagination_complete_is_operator_assertion": true,
+    "real_api_request_performed": false
+  },
+  "unknown": {
+    "observed_total_store_catalog_games": null,
+    "historic_paid_base_game_population": null,
+    "eligible_first_paid_release_appids": null,
+    "actual_paid_orders_per_appid": null,
+    "zero_paid_sale_fraction": null,
+    "legal_publisher_bank_revenue": null
+  },
+  "model_path": "site/steam-store-api-pagination-synthetic-guard.mjs",
+  "tests_path": "tests/steam-store-api-pagination-synthetic-guard.test.mjs",
+  "no_credentials_or_private_data": true
+}
