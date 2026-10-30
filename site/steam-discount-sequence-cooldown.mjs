@@ -17,7 +17,7 @@ const kinds=['launch','standard','official_seasonal'];
 
 export function auditSyntheticSteamDiscountSequence(args={}){
  if(!allowed(args,['fixture_id','first_paid_release_date','discount_kind','discount_start','discount_end',
-  'discount_percent','last_price_increase_date','previous_discount','previous_discounts','relevant_discount_history_complete',
+  'discount_percent','last_price_increase_date','price_increase_dates','previous_discount','previous_discounts','relevant_discount_history_complete',
   'official_seasonal_event_verified'])||
   typeof args.fixture_id!=='string'||!/^fixture-[a-z0-9-]+$/.test(args.fixture_id)||
   !kinds.includes(args.discount_kind)||!Number.isSafeInteger(args.discount_percent)||
@@ -27,12 +27,24 @@ export function auditSyntheticSteamDiscountSequence(args={}){
  const start=asDate(args.discount_start,'start');
  const end=asDate(args.discount_end,'end');
  if(end<start)throw new RangeError('Discount end precedes its start');
- const price=args.last_price_increase_date==null?null:asDate(args.last_price_increase_date,'last price increase');
+ const singlePrice=Object.hasOwn(args,'last_price_increase_date');
+ const multiPrice=Object.hasOwn(args,'price_increase_dates');
+ if(singlePrice&&multiPrice)
+  throw new TypeError('Supply either last_price_increase_date or price_increase_dates, not both');
+ const priceInput=multiPrice?args.price_increase_dates:
+  args.last_price_increase_date==null?[]:[args.last_price_increase_date];
+ if(!Array.isArray(priceInput)||priceInput.length>64)
+  throw new TypeError('Price-increase history must be an array of at most 64 dates');
+ const prices=priceInput.map((value,i)=>asDate(value,'price increase '+i));
+ for(const [i,date] of prices.entries()){
+  if(date>start)throw new RangeError('Future price increase cannot be treated as past history');
+  if(i&&date<=prices[i-1])throw new RangeError('Price-increase dates must be strictly chronological');
+ }
+ const price=prices.at(-1)??null;
  const seasonalEventAttested=args.official_seasonal_event_verified===true;
  if(args.official_seasonal_event_verified!==undefined&&
     (typeof args.official_seasonal_event_verified!=='boolean'||args.discount_kind!=='official_seasonal'))
   throw new TypeError('Official event attestation is only allowed for seasonal discounts');
- if(price&&price>start)throw new RangeError('Future price increase cannot be treated as past history');
  const singleHistory=Object.hasOwn(args,'previous_discount');
  const arrayHistory=Object.hasOwn(args,'previous_discounts');
  if(singleHistory&&arrayHistory)
@@ -59,10 +71,10 @@ export function auditSyntheticSteamDiscountSequence(args={}){
    throw new RangeError('Previous discount history overlaps or is out of chronological order');
   if(prior.kind==='launch'&&(prior.start.getTime()!==release.getTime()||i!==0))
    throw new RangeError('An earlier launch discount must begin on first paid release and occur first');
-  if(price){
-   if(price>=prior.start&&price<=prior.end)
+  for(const increase of prices){
+   if(increase>=prior.start&&increase<=prior.end)
     throw new RangeError('A base-price increase cannot occur during a previous discount');
-   if(price<prior.start&&prior.start<plus30(price))
+   if(increase<prior.start&&prior.start<plus30(increase))
     throw new RangeError('A previous discount cannot begin during a price-increase cooldown');
   }
   if(prior.kind!=='launch'&&prior.start<plus30(release))
@@ -117,6 +129,7 @@ export function auditSyntheticSteamDiscountSequence(args={}){
   discount_percent:args.discount_percent,discount_duration_calendar_days:duration,
   first_allowed_start_date_from_known_cooldowns:unverifiedSeasonalEvent?null:iso(firstKnown),
   release_cooldown_ends:iso(plus30(release)),
+  price_increase_count:prices.length,
   price_increase_cooldown_ends:price?iso(plus30(price)):null,
   previous_discount_count:previousDiscounts.length,
   previous_discount_cooldown_ends:previous?iso(plus30(previous.end)):null,
@@ -139,5 +152,5 @@ export function auditSyntheticSteamDiscountSequence(args={}){
   verified_steam_discount_history:false,
   release_to_v1_early_access_transition_modeled:false,
   causal_discount_revenue_increment:null,
-  note:'Official seasonal discounts skip only discount-to-discount cooldowns, never first-paid release or price-rise waits. Official-sale attestations are synthetic assertions, not independently checked event calendars. Nonseasonal cooldowns are checked across the entire supplied ordered history, which is still only a synthetic attestation. Date-only model ignores exact 10am Pacific cutoffs, country minimum prices, actual partner setup and unknown earlier discounts.'});
+  note:'Official seasonal discounts skip only discount-to-discount cooldowns, never first-paid release or price-rise waits. Official-sale attestations are synthetic assertions, not independently checked event calendars. Nonseasonal cooldowns are checked across the entire supplied ordered history, which is still only a synthetic attestation. Price-increase history is also only a dated fixture, not an authenticated price ledger. Date-only model ignores exact 10am Pacific cutoffs, country minimum prices, actual partner setup and unknown earlier discounts.'});
 }

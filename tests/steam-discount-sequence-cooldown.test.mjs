@@ -224,3 +224,55 @@ test('Complete empty history remains synthetic; missing history attestation rema
  assert.equal(check({...base,previous_discounts:[],relevant_discount_history_complete:false})
   .conditional_calendar_rules_pass,null);
 });
+test('Ordered multiple price increases preserve their last active cooldown',()=>{
+ const fixture={...base,discount_start:'2026-12-15',discount_end:'2026-12-21',
+  discount_percent:20,price_increase_dates:['2026-09-05','2026-11-20']};
+ const valid=check(fixture);
+ assert.equal(valid.conditional_calendar_rules_pass,false);
+ assert.equal(valid.price_increase_count,2);
+ assert.equal(valid.price_increase_cooldown_ends,'2026-12-20');
+ assert(valid.known_calendar_failures.includes('price_increase_cooldown_active'));
+ const cleared=check({...fixture,discount_start:'2026-12-20',discount_end:'2026-12-26'});
+ assert.equal(cleared.conditional_calendar_rules_pass,true);
+ assert.equal(cleared.first_allowed_start_date_from_known_cooldowns,'2026-12-20');
+ assert.equal(cleared.actual_partner_eligibility_verified,false);
+});
+test('An older price increase cannot be hidden by a later price increase',()=>{
+ const prior={kind:'standard',start:'2026-10-15',end:'2026-10-21'};
+ const fixture={...base,discount_start:'2027-01-10',discount_end:'2027-01-16',
+  discount_percent:20,previous_discounts:[prior],
+  price_increase_dates:['2026-10-01','2026-11-20']};
+ assert.throws(()=>check(fixture),/previous discount cannot begin during a price-increase cooldown/i);
+ const permitted=check({...fixture,price_increase_dates:['2026-09-01','2026-11-20']});
+ assert.equal(permitted.conditional_calendar_rules_pass,true);
+ assert.equal(permitted.price_increase_count,2);
+});
+test('A price increase during any earlier promotion is rejected',()=>{
+ const history=[
+  {kind:'standard',start:'2026-10-01',end:'2026-10-07'},
+  {kind:'standard',start:'2026-11-10',end:'2026-11-16'}
+ ];
+ const fixture={...base,discount_start:'2027-01-15',discount_end:'2027-01-21',
+  discount_percent:20,previous_discounts:history};
+ for(const inDiscount of ['2026-10-01','2026-10-05','2026-10-07',
+  '2026-11-10','2026-11-14','2026-11-16']){
+  assert.throws(()=>check({...fixture,price_increase_dates:[inDiscount]}),
+   /base-price increase cannot occur during a previous discount/);
+ }
+});
+test('Price history is bounded, strictly chronological and backward compatible',()=>{
+ const fixture={...base,discount_start:'2027-01-15',discount_end:'2027-01-21',
+  discount_percent:20};
+ for(const dates of [null,Array(65).fill('2026-10-01')])
+  assert.throws(()=>check({...fixture,price_increase_dates:dates}),/at most 64 dates/);
+ assert.throws(()=>check({...fixture,price_increase_dates:['2026-11-10','2026-10-01']}),/strictly chronological/);
+ assert.throws(()=>check({...fixture,price_increase_dates:['2026-10-01','2026-10-01']}),/strictly chronological/);
+ assert.throws(()=>check({...fixture,price_increase_dates:['2027-02-01']}),/Future price increase/);
+ assert.throws(()=>check({...fixture,price_increase_dates:['2026-02-30']}),/Invalid calendar/);
+ assert.throws(()=>check({...fixture,last_price_increase_date:'2026-10-01',
+  price_increase_dates:['2026-10-01']}),/either last_price_increase_date or price_increase_dates/);
+ const legacy=check({...fixture,last_price_increase_date:'2026-10-01'});
+ const array=check({...fixture,price_increase_dates:['2026-10-01']});
+ assert.deepEqual(array,legacy);
+ assert.equal(check({...fixture,price_increase_dates:[]}).price_increase_cooldown_ends,null);
+});
