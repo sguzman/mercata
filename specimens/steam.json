@@ -2369,6 +2369,39 @@
       "evidence_class": "operator_model_documentation_not_independent_payment_validation",
       "license": "Source metadata and short independently written methodological summary only; no endpoint output dataset or bulk CSV redistributed.",
       "notes": "Document states monthly net estimates approximate 55% of modeled gross, estimated per-title error about ±30–50%, and distinguishes review/month and promotions from sales. Bulk data is not fully openly published; source does not authenticate actual individual publisher royalty contracts."
+    },
+    {
+      "id": "steam-gameselo-2026-live-indie-benchmark-verified-vs-modelled",
+      "url": "https://gameselo.com/reports/steam-revenue",
+      "publisher": "gamesELO — commercial Steam game analytics operator",
+      "title": "Indie Steam revenue benchmarks: our tracked catalog",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "operator_live_selected_indie_catalog_modelled_lifetime_median_with_separately_disclosed_verified_reporting",
+      "license": "Public link, original independently worded analysis and brief observed metadata only; no bulk data or media reproduced.",
+      "notes": "Live page's tracked games and estimated median change with crawling/backfill. It says four short opt-in source-verified reporting windows are not included in selected modeled lifetime chart or CSV; zero complete account histories. No archived dated fixed cohort."
+    },
+    {
+      "id": "steam-gameselo-2026-partial-verified-reporting-windows",
+      "url": "https://gameselo.com/leaderboard?tab=verified",
+      "publisher": "gamesELO — developer-opt-in financial reporting leaderboard",
+      "title": "The top-earning verified indie games on Steam",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "vendor_labelled_source_verified_developer_contributed_partial_daily_financial_windows_not_audited_by_mercata",
+      "license": "Public bibliographic link and independent description of four visible observation spans; no transaction rows or screenshots reprinted.",
+      "notes": "At October 30 review, four games showed only 22–29 observed days within substantially longer August–October first/last calendar spans. Displayed amounts and observation coverage update; origin of private API data not independently checked or downloaded. No complete account histories."
+    },
+    {
+      "id": "steam-gameselo-2026-operator-method-net-vs-gross",
+      "url": "https://gameselo.com/methodology",
+      "publisher": "gamesELO — first-party operator methodology",
+      "title": "How it works: modeled estimates versus developer-verified reporting",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "self_reported_readonly_partner_financial_data_connection_model_definition_not_independent_validation",
+      "license": "Public link and independently worded methodological notes, without reproduction of internal documentation or account examples.",
+      "notes": "Operator explains partner-wide financial API Group keys, publisher-selected games, modeled review-based gross versus partner data, Steam net before Valve share, DLC/In-game rollups and partial day coverage. Does not establish authors' legal ownership or post-cost net profit."
     }
   ],
   "claims": [
@@ -16037,6 +16070,114 @@
       "confidence": "high",
       "observed_at": "2026-10-30",
       "limitations": "Neither provider supplies a matched first-paid game cohort or audited publisher remittances; lifetime cannot be divided into months without complete product age and earnings trajectories."
+    },
+    {
+      "id": "steam-gameselo-current-focus-not-historical-census",
+      "text": "gamesELO's live Indie Focus revenue benchmark is a curated tracked and currently modeled subset rather than a complete frame of originally paid releases, including no-review and delisted games.",
+      "source_ids": [
+        "steam-gameselo-2026-live-indie-benchmark-verified-vs-modelled",
+        "steam-gameselo-2026-operator-method-net-vs-gross"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Game count and median change with operator backfill and page-cache versions; no complete original paid-release frame supplied."
+    },
+    {
+      "id": "steam-gameselo-4-verified-optin-windows-not-lifetime",
+      "text": "The operator labels four developer-opt-in games as having verified Steam reporting windows, explicitly stating these are short observed periods rather than full account history or lifetime returns.",
+      "source_ids": [
+        "steam-gameselo-2026-live-indie-benchmark-verified-vs-modelled",
+        "steam-gameselo-2026-partial-verified-reporting-windows",
+        "steam-gameselo-2026-operator-method-net-vs-gross"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Operator's 'verified' describes its access to source reports, not an independently inspected contract or audit by Mercata."
+    },
+    {
+      "id": "steam-gameselo-four-windows-bounded-days",
+      "text": "On an October 30 public leaderboard read, four verified-labelled games displayed only 29, 26, 26 and 22 observed reporting days, with first and last dates spanning 69, 77, 73 and 76 inclusive calendar days respectively.",
+      "source_ids": [
+        "steam-gameselo-2026-partial-verified-reporting-windows"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "A moving public dashboard changes as backfill continues; counts were independently checked only arithmetically from a single public read, not from provider raw daily reports."
+    },
+    {
+      "id": "steam-gameselo-partial-calendar-span-not-zero",
+      "text": "The disparity between displayed reporting days and first-to-last calendar spans cannot be filled with zero-income days or used to extrapolate a complete 30/90/365-day game revenue figure.",
+      "source_ids": [
+        "steam-gameselo-2026-partial-verified-reporting-windows",
+        "steam-gameselo-2026-operator-method-net-vs-gross"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "The exact dates of observed and missing calendar days are not published; the displayed count alone does not identify the unobserved days' sales."
+    },
+    {
+      "id": "steam-gameselo-verified-not-verified-payee-rights",
+      "text": "The provider says verification accesses a developer-authorized Steam financial reporting feed but does not prove product IP ownership, legal publisher authority, any signed contract, or the developer's after-cost personal income.",
+      "source_ids": [
+        "steam-gameselo-2026-operator-method-net-vs-gross"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Merchant API data and authorizing accounts were not independently accessed by this research."
+    },
+    {
+      "id": "steam-gameselo-steam-net-before-valve-cut",
+      "text": "gamesELO distinguishes partner-report Steam net, which removes refunds, chargebacks and tax, from a separately modeled take-home that applies an assumed Valve share; the reported net is not a verified personal bank deposit.",
+      "source_ids": [
+        "steam-gameselo-2026-operator-method-net-vs-gross",
+        "steam-financial-api-official"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Deductions, additional publisher shares, real partner terms and actual settlement timing may vary by transaction and payee."
+    },
+    {
+      "id": "steam-gameselo-publisher-wide-key-selective-publishing",
+      "text": "The operator says its verification key may access the entire Steamworks partner financial scope while only explicitly selected games' results are publicly displayed, so consent to publish a subset does not imply a publisher-complete revenue sample.",
+      "source_ids": [
+        "steam-gameselo-2026-operator-method-net-vs-gross"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Operator key handling and claims of read-only access are provider statements, not security independently evaluated here."
+    },
+    {
+      "id": "steam-gameselo-dlc-iap-rollup-not-base-unit-checkouts",
+      "text": "The provider says verified game gross can roll up DLC and in-game spending into a base game's reported figure, making these monetary observations unlike audited paid base-game unit counts.",
+      "source_ids": [
+        "steam-gameselo-2026-operator-method-net-vs-gross"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Actual component mix and gross paid base-game order counts are not public for the listed games."
+    },
+    {
+      "id": "steam-gameselo-four-volunteers-not-financial-median",
+      "text": "Four opt-in partial verified reporting windows cannot identify a population median of developer receipts or validate the separate lifetime estimated revenue median of a much larger selected game catalogue.",
+      "source_ids": [
+        "steam-gameselo-2026-live-indie-benchmark-verified-vs-modelled",
+        "steam-gameselo-2026-partial-verified-reporting-windows",
+        "steam-gameselo-2026-operator-method-net-vs-gross"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Selection probability, response history, consistent observation horizons, legal publisher mappings and missing paid game outcomes are unknown."
+    },
+    {
+      "id": "steam-gameselo-report-leaderboard-same-four-windows",
+      "text": "The revenue benchmark's four verified reporting entries and the verified leaderboard refer to the same provider records, not two independently recruited or independently validated publisher samples.",
+      "source_ids": [
+        "steam-gameselo-2026-live-indie-benchmark-verified-vs-modelled",
+        "steam-gameselo-2026-partial-verified-reporting-windows"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-30",
+      "limitations": "Even within those four games, the coverage changes as backfill proceeds; no account-level data or independent audits supplied."
     }
   ],
   "observations": [],

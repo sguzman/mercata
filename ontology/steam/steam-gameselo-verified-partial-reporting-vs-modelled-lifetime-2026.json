@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "self_labelled_developer_verified_partial_financial_windows_vs_vendor_modelled_indie_lifetime",
+  "reviewed_at": "2026-10-30",
+  "source_ids": [
+    "steam-gameselo-2026-live-indie-benchmark-verified-vs-modelled",
+    "steam-gameselo-2026-partial-verified-reporting-windows",
+    "steam-gameselo-2026-operator-method-net-vs-gross",
+    "steam-financial-api-official"
+  ],
+  "claim_ids": [
+    "steam-gameselo-current-focus-not-historical-census",
+    "steam-gameselo-4-verified-optin-windows-not-lifetime",
+    "steam-gameselo-four-windows-bounded-days",
+    "steam-gameselo-partial-calendar-span-not-zero",
+    "steam-gameselo-verified-not-verified-payee-rights",
+    "steam-gameselo-steam-net-before-valve-cut",
+    "steam-gameselo-publisher-wide-key-selective-publishing",
+    "steam-gameselo-dlc-iap-rollup-not-base-unit-checkouts",
+    "steam-gameselo-four-volunteers-not-financial-median",
+    "steam-gameselo-report-leaderboard-same-four-windows"
+  ],
+  "source_scope": {
+    "operator": "gamesELO",
+    "document_family": "same_four_live_merchant_reporting_windows_described_in_benchmark_and_leaderboard",
+    "tracked_indie_count_fixed_snapshot_verifiable": false,
+    "full_lifetime_indie_modelled_estimates_reconciled_to_actual": false,
+    "verified_optin_game_window_count": 4,
+    "complete_account_histories_in_benchmark": 0,
+    "verified_data_excluded_from_selected_modelled_lifetime_chart": true,
+    "verified_origin_independently_audited_by_mercata": false,
+    "verified_exact_zero_game_checkout_status_available": false
+  },
+  "partial_public_windows": {
+    "visible_as_of": "2026-10-30",
+    "rows": [
+      {
+        "label": "Particle Hearts",
+        "first": "2026-08-06",
+        "last": "2026-10-13",
+        "reported_days": 29,
+        "calendar_span_days": 69
+      },
+      {
+        "label": "Neighborhorde",
+        "first": "2026-08-02",
+        "last": "2026-10-17",
+        "reported_days": 26,
+        "calendar_span_days": 77
+      },
+      {
+        "label": "David.",
+        "first": "2026-08-02",
+        "last": "2026-10-13",
+        "reported_days": 26,
+        "calendar_span_days": 73
+      },
+      {
+        "label": "SPINGUN",
+        "first": "2026-08-14",
+        "last": "2026-10-28",
+        "reported_days": 22,
+        "calendar_span_days": 76
+      }
+    ],
+    "recorded_days_are_contiguous_between_endpoints": false,
+    "reported_day_dates_and_import_holes_identified": false,
+    "days_outside_reporting_window_assumed_zero": false,
+    "observed_window_dollar_totals_stable": false,
+    "complete_30_day_original_launch_cohort_data": false
+  },
+  "money_semantics": {
+    "steam_gross": "Steam reported gross for observed dates, potentially includes DLC and in-game revenue",
+    "steam_net": "gross less refunds, chargebacks, sales taxes; before Valve platform revenue share",
+    "provider_derived_takehome": "assumed fraction after platform share, not observed personal bank cash",
+    "gross_paid_game_checkout_units": null,
+    "publisher_royalty_agreement_verified": false,
+    "creator_actual_after_cost_profit": null
+  },
+  "credential_and_selection_boundary": {
+    "partner_financial_api_group_key_claimed_access_scope": "whole_partner_account",
+    "games_selected_for_public_display": "operator_reports_developer_opt_in",
+    "partner_credentials_accessed": false,
+    "no_private_account_data_committed": true
+  },
+  "unknown": {
+    "true_complete_game_lifetime_gross_usd": null,
+    "verified_firstyear_game_revenue_usd": null,
+    "representative_median_firstpaid_game_gross_usd": null,
+    "legal_publisher_median_received_cash_usd": null,
+    "all_paid_games_zero_order_fraction": null,
+    "amounts_for_unobserved_days": null,
+    "actual_creator_profit_usd": null
+  },
+  "code_module": "site/steam-verified-reporting-span-guard.mjs",
+  "tests_path": "tests/steam-verified-reporting-span-guard.test.mjs"
+}

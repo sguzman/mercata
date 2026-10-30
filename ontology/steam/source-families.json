@@ -40,6 +40,18 @@
       ],
       "independence": "one vendor release-month model disclosed in a newsletter and linked spreadsheet, not independent validation",
       "notes": "Publisher directly links entire January cohort chart to its Google Sheet. The source describes vendor-model results, not merchant-reconciled bank receipts."
+    },
+    {
+      "id": "steam-gameselo-four-optin-verified-windows-live-benchmark-2026",
+      "relation": "same_underlying_dataset_different_urls",
+      "observed_population": "four selected opt-in operator-verified Steam financial reporting windows, separate from site's modelled lifetime Indie Focus estimates",
+      "documented_selected_games": 4,
+      "source_ids": [
+        "steam-gameselo-2026-live-indie-benchmark-verified-vs-modelled",
+        "steam-gameselo-2026-partial-verified-reporting-windows"
+      ],
+      "independence": "the revenue benchmark and verified leaderboard reuse four public operator-labelled game reporting histories and are not independent source attestations",
+      "notes": "Dynamic site displays opt-in short windows with incomplete reporting spans; neither page supplies audited merchant data to this project or a representative paid launch cohort."
     }
   ],
   "related_documents_not_independent_replications": [
@@ -54,6 +66,12 @@
       "related_family_id": "steam-steamforecast-10403-selected-lever-model-panel-july2026",
       "relation": "same_vendor_methodology_but_separate_reported_modeling_population",
       "notes": "Methodology refers to 32,106 training/validation records and 6,422 held-out records, not an asserted one-to-one match with the 10,403 lever panel."
+    },
+    {
+      "source_id": "steam-gameselo-2026-operator-method-net-vs-gross",
+      "related_family_id": "steam-gameselo-four-optin-verified-windows-live-benchmark-2026",
+      "relation": "same_operator_method_document_without_independent_account_attestation",
+      "notes": "Operator methodology explains the same financial service, reporting labels and estimation formulas; a methods page is not a second merchant cohort."
     }
   ],
   "independent_study_count": null,
