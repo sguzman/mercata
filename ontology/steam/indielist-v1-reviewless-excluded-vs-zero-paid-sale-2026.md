@@ -21,3 +21,7 @@ A sampled revenue distribution based on reviews can exclude both titles with act
 The [synthetic guard](../../site/steam-reviewless-estimator-denominator-guard.mjs) accepts only explicitly labelled invented fixtures; tests check the additive factor boundary, the published net factor, and the null outcome for reviewless games. They **do not assert a model-accuracy rate** and never read real AppIDs, private partner histories or customer records.
 
 **Still unknown:** true paid orders in reviewless games, model selection and interval calibration against actual merchant records, legal-publisher cash, the first-game income median, and the exact market fraction with no paid sale.
+
+## Additional first-person selected counterexample — October 30, 2026
+
+The [Crane Game Master early-sales case](steam-crane-game-master-five-reported-copies-reviewless-2026.md) links the developer's July 9 public report of **about five copies sold** to Valve's June 30 release listing and its later October 30 **“No user reviews”** display. The author directly links their Steam game, making it stronger *attribution* than the earlier second-person Crazy City Golf anecdote, but still not an authenticated financial sale. **The review display and disclosure do not share an observation date**, and the review label must not be treated as an exact submitted review count. Neither selected anecdote calibrates an estimator or recovers excluded titles' actual purchase counts.

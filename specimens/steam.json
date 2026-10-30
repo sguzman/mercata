@@ -2897,6 +2897,28 @@
       "evidence_class": "first_party_developer_promotion_technical_block_and_bundle_discount_selfreport",
       "license": "Public announcement index, dated headline and independently written short factual paraphrases only; no copyrighted original paragraphs/images reproduced.",
       "notes": "Rolling official Steam product news records June 25 announcement of intended July 1 Summer Sale start and July 2 announcement that a technical issue prevented discounting the base game and support was contacted; alternative 50-percent bundle discount stated. Root is a rolling archive, not permanent unique article; exact Steamworks backend cause and whether the game later went on sale are not verified."
+    },
+    {
+      "id": "steam-cranegamemaster-jul9-2026-author-five-copies",
+      "url": "https://www.reddit.com/r/IndieDev/comments/1urmmu2/my_first_steam_game_sold_only_5_copies_how_do_you/",
+      "title": "My first Steam game sold only 5 copies. How do you stay motivated to keep making games?",
+      "publisher": "MAgaming_dev — first-person r/IndieDev developer disclosure and same-author replies",
+      "published_at": "2026-07-09",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "selected_first_party_early_paid_game_copies_sold_approximate_selfreport",
+      "license": "Public URL, dated title, and concise independent paraphrase of numerical disclosures; no posts, comments, personal details or screenshots reproduced.",
+      "notes": "The author directly links AppID 4825270 and reports about five sales by July 9 after June 30 release. Replies identify a solo first Steam commercial release. No Steamworks ledger, refunds, bank receipts or sale-country records authenticated."
+    },
+    {
+      "id": "steam-cranegamemaster-steam-app4825270-oct30-2026",
+      "url": "https://store.steampowered.com/app/4825270/Crane_Game_Master/",
+      "title": "Crane Game Master — official Steam store listing",
+      "publisher": "Valve Corporation — public Steam storefront metadata",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "official_game_identity_display_release_date_paid_offer_and_review_summary",
+      "license": "Public source URL, metadata and independently written factual paraphrase only; no artwork, copied descriptions or user profiles.",
+      "notes": "Official Steam page lists AppID 4825270, June 30 2026 release, developer/publisher MAgaming, a present paid offer and No user reviews display on October 30. Not a verified number of all reviews or sales, and not original launch price or legal payee proof."
     }
   ],
   "claims": [
@@ -18884,12 +18906,97 @@
       "confidence": "bounded_first_party_public_discount_event_with_official_platform_docs",
       "observed_at": "2026-10-30",
       "limitations": "Rolling public publisher news reports a technical incident without private Steamworks diagnosis; bundle discount differs from individual package sale, and no matched notification/purchase or financial ledger is available."
+    },
+    {
+      "id": "steam-cranegame-jun30-public-release",
+      "text": "Steam lists Crane Game Master AppID 4825270 with June 30, 2026 release and MAgaming developer/publisher labels; this does not verify the legal payee or launch paid price.",
+      "source_ids": [
+        "steam-cranegamemaster-steam-app4825270-oct30-2026"
+      ],
+      "confidence": "bounded_unaudited_first_party_disclosure_with_official_metadata_crosscheck",
+      "observed_at": "2026-10-30",
+      "limitations": "Selected voluntary report, not a permissioned merchant ledger or representative game cohort; Steam store metadata supplies no authenticated purchase count, remittance or development cost."
+    },
+    {
+      "id": "steam-cranegame-jul9-about-five-copies",
+      "text": "On July 9 the apparent developer linked the game and reported about five copies sold so far; Mercata did not authenticate any order record.",
+      "source_ids": [
+        "steam-cranegamemaster-jul9-2026-author-five-copies",
+        "steam-cranegamemaster-steam-app4825270-oct30-2026"
+      ],
+      "confidence": "bounded_unaudited_first_party_disclosure_with_official_metadata_crosscheck",
+      "observed_at": "2026-10-30",
+      "limitations": "Selected voluntary report, not a permissioned merchant ledger or representative game cohort; Steam store metadata supplies no authenticated purchase count, remittance or development cost."
+    },
+    {
+      "id": "steam-cranegame-first-steam-solo-selfreport",
+      "text": "In replies the author describes a first commercial Steam release and solo project; prior game history is a self-description.",
+      "source_ids": [
+        "steam-cranegamemaster-jul9-2026-author-five-copies"
+      ],
+      "confidence": "bounded_unaudited_first_party_disclosure_with_official_metadata_crosscheck",
+      "observed_at": "2026-10-30",
+      "limitations": "Selected voluntary report, not a permissioned merchant ledger or representative game cohort; Steam store metadata supplies no authenticated purchase count, remittance or development cost."
+    },
+    {
+      "id": "steam-cranegame-jul9-nine-calendar-day-gap",
+      "text": "July 9 is nine calendar days after the listed June 30 release, not a verified exact nine-day transaction horizon or first-paid-playable timestamp.",
+      "source_ids": [
+        "steam-cranegamemaster-jul9-2026-author-five-copies",
+        "steam-cranegamemaster-steam-app4825270-oct30-2026"
+      ],
+      "confidence": "bounded_unaudited_first_party_disclosure_with_official_metadata_crosscheck",
+      "observed_at": "2026-10-30",
+      "limitations": "Selected voluntary report, not a permissioned merchant ledger or representative game cohort; Steam store metadata supplies no authenticated purchase count, remittance or development cost."
+    },
+    {
+      "id": "steam-cranegame-oct30-no-user-reviews-label",
+      "text": "The October 30 observed Steam listing shows No user reviews; this public display is not an exact count of every submitted review or a merchant sales ledger.",
+      "source_ids": [
+        "steam-cranegamemaster-steam-app4825270-oct30-2026"
+      ],
+      "confidence": "bounded_unaudited_first_party_disclosure_with_official_metadata_crosscheck",
+      "observed_at": "2026-10-30",
+      "limitations": "Selected voluntary report, not a permissioned merchant ledger or representative game cohort; Steam store metadata supplies no authenticated purchase count, remittance or development cost."
+    },
+    {
+      "id": "steam-cranegame-positive-report-vs-reviewless-label",
+      "text": "A voluntary positive-copies report coexists with a later no-user-reviews storefront label, demonstrating why reviewless status must not be imputed as verified zero sales.",
+      "source_ids": [
+        "steam-cranegamemaster-jul9-2026-author-five-copies",
+        "steam-cranegamemaster-steam-app4825270-oct30-2026"
+      ],
+      "confidence": "bounded_unaudited_first_party_disclosure_with_official_metadata_crosscheck",
+      "observed_at": "2026-10-30",
+      "limitations": "Selected voluntary report, not a permissioned merchant ledger or representative game cohort; Steam store metadata supplies no authenticated purchase count, remittance or development cost."
+    },
+    {
+      "id": "steam-cranegame-sales-not-publisher-income",
+      "text": "The report does not identify reconciled gross checkout units, refunds, realized prices, contractual shares, bank receipts or after-cost developer income.",
+      "source_ids": [
+        "steam-cranegamemaster-jul9-2026-author-five-copies",
+        "steam-cranegamemaster-steam-app4825270-oct30-2026"
+      ],
+      "confidence": "bounded_unaudited_first_party_disclosure_with_official_metadata_crosscheck",
+      "observed_at": "2026-10-30",
+      "limitations": "Selected voluntary report, not a permissioned merchant ledger or representative game cohort; Steam store metadata supplies no authenticated purchase count, remittance or development cost."
+    },
+    {
+      "id": "steam-cranegame-not-zero-population-sample",
+      "text": "One self-selected low-sale first title provides neither an exhaustive initially-paid cohort nor a population-level zero-paid-sale numerator or denominator.",
+      "source_ids": [
+        "steam-cranegamemaster-jul9-2026-author-five-copies",
+        "steam-cranegamemaster-steam-app4825270-oct30-2026"
+      ],
+      "confidence": "bounded_unaudited_first_party_disclosure_with_official_metadata_crosscheck",
+      "observed_at": "2026-10-30",
+      "limitations": "Selected voluntary report, not a permissioned merchant ledger or representative game cohort; Steam store metadata supplies no authenticated purchase count, remittance or development cost."
     }
   ],
   "observations": [],
   "opportunities": [],
   "risks": [],
   "experiments": [],
-  "updated_at": "2026-10-29",
+  "updated_at": "2026-10-30",
   "summary": "Steam genre revenue research now distinguishes a third-party estimated paid-only gross median from an all-free-and-paid copy median, across overlapping tag populations. A 107-tag median is not a representative paid-game or developer income median."
 }

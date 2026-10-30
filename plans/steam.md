@@ -7,6 +7,12 @@
 
 
 
+## Five reported copies despite a later no-user-reviews display (October 30, 2026)
+
+The [selected first-party low-sales case](../ontology/steam/steam-crane-game-master-five-reported-copies-reviewless-2026.md) records a developer report of **about five copies** on July 9, nine calendar days after *Crane Game Master*'s [officially listed June 30 release](https://store.steampowered.com/app/4825270/Crane_Game_Master/). The game's public store later displayed **“No user reviews”** on October 30. This is a **different-day public review label**, not an exact independent review count or any merchant transaction evidence. The reported five units are unaudited and cannot be extrapolated to an income distribution, but the case shows why reviewless observations must not be counted as verified zero paid sales. Two new sources, eight bounded claims, and six regression tests support three existing tasks advancing by one point each. No new tasks were introduced.
+
+Steam research is **91.765%** (Δ **+0.010 pp**), with **264 sources** and **1552 source-linked claims** over the original 293 tasks. The actual marketwide zero-paid-sale fraction and developer bank income remain unidentified.
+
 ## Summer Sale game discount failure and bundle-only substitute (October 30, 2026)
 
 [First-party product announcements](https://steamcommunity.com/app/2900050/allnews/) describe the intended July 1 Summer Sale discount for *Lost in Art: a Miniature Realm* and a **July 2 technical problem** preventing the publisher from discounting the base game, despite being **31 calendar days after its June 1 paid release**. The publisher instead reported raising a **bundle discount to 50%**. The [bundle/payment-notification crosswalk](../ontology/steam/steam-lostinart-bundle-fallback-vs-game-discount-2026.md), paired with [Valve's official bundle rules](https://partner.steamgames.com/doc/store/application/bundles?language=english), shows that a bundle percentage is not an individual game package discount, and **a bundle reduction does not send normal wishlisted-game discount notifications**. The developer's unspecified technical issue does not establish a policy violation, a cause or observed purchases. New [synthetic QA tests](../tests/steam-bundle-fallback-vs-game-discount.test.mjs) verify that a release-date-only July 1 eligibility check is insufficient to authenticate Steamworks partner permission, while incomplete promotion history remains unresolved.

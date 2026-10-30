@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "selected_first_party_five_copies_with_later_no_user_reviews_public_display",
+  "reviewed_at": "2026-10-30",
+  "source_ids": [
+    "steam-cranegamemaster-jul9-2026-author-five-copies",
+    "steam-cranegamemaster-steam-app4825270-oct30-2026"
+  ],
+  "claim_ids": [
+    "steam-cranegame-jun30-public-release",
+    "steam-cranegame-jul9-about-five-copies",
+    "steam-cranegame-first-steam-solo-selfreport",
+    "steam-cranegame-jul9-nine-calendar-day-gap",
+    "steam-cranegame-oct30-no-user-reviews-label",
+    "steam-cranegame-positive-report-vs-reviewless-label",
+    "steam-cranegame-sales-not-publisher-income",
+    "steam-cranegame-not-zero-population-sample"
+  ],
+  "game": {
+    "appid": 4825270,
+    "title": "Crane Game Master",
+    "store_release_date": "2026-06-30",
+    "public_developer_label": "MAgaming",
+    "public_publisher_label": "MAgaming",
+    "paid_store_offer_at_review": true,
+    "original_first_paid_release_verified": null,
+    "legal_payment_partner_identified": null
+  },
+  "author_public_report": {
+    "published_on": "2026-07-09",
+    "approximate_copies_sold": 5,
+    "precision": "about",
+    "days_since_store_release_calendar": 9,
+    "scope": "sold_so_far_approximate_early_selfreport_not_reconciled_first_nine_days",
+    "first_commercial_steam_game_selfreported": true,
+    "solo_project_selfreported": true,
+    "voluntary_selected_disclosure": true,
+    "steamworks_ledger_authenticated": false
+  },
+  "observed_store_display": {
+    "observed_on": "2026-10-30",
+    "review_display": "No user reviews",
+    "exact_submitted_review_count": null,
+    "review_display_same_date_as_sales_report": false,
+    "paid_checkout_count": null
+  },
+  "interpretation": {
+    "reported_positive_not_verified_zero": true,
+    "missing_review_signal_does_not_prove_zero_paid_sales": true,
+    "merchant_verified_five_copies": false,
+    "representative_income_or_zero_sales_sample": false,
+    "store_review_label_independently_proves_positive_orders": false
+  },
+  "unknown": {
+    "actual_full_horizon_gross_paid_units": null,
+    "refund_adjusted_net_units": null,
+    "first_paid_playable_timestamp": null,
+    "original_sale_price_usd": null,
+    "historical_country_availability": null,
+    "merchant_gross_revenue_usd": null,
+    "bank_received_income_usd": null,
+    "developer_after_cost_profit_usd": null,
+    "review_to_sales_multiplier": null,
+    "marketwide_zero_paid_sales_fraction": null
+  },
+  "method_model_path": "site/steam-reviewless-estimator-denominator-guard.mjs",
+  "test_path": "tests/steam-crane-game-master-reviewless-positive-report.test.mjs",
+  "private_records_accessed": false
+}

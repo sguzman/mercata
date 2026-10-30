@@ -17,3 +17,7 @@ The 12,651 checked games with fewer than ten reviews are **21.8% of checked game
 ## What this research establishes
 
 Current review totals are right-skewed and capture at least some titles with very little public attention. They do **not** identify 30-day review distributions for a fixed first-paid-release cohort, and they cannot demonstrate how many games sold zero copies. Distinct game AppIDs cannot substitute for distinct legal publishers, and review milestones cannot be converted directly into gross sales, net bank payouts or after-cost developer profit. The most important missing evidence is a verified historical paid-release denominator with comparable age and genuine transaction data. The result is an **observability audit** rather than an income estimate.
+
+## A public game with an unaudited positive-sales report and no review summary — October 30, 2026
+
+The [Crane Game Master case](steam-crane-game-master-five-reported-copies-reviewless-2026.md) records a first-person claim of **about five sales** on July 9 alongside a later official Steam listing displaying **“No user reviews”** on October 30. This is not a matched same-day measurement, nor is the label an audited exact review count. It reinforces the review-coverage denominator problem: missing public-review signals cannot be safely recoded as zero paid checkouts. The case contributes no representative income observation or zero-sales prevalence estimate.
