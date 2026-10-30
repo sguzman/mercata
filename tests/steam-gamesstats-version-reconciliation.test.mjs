@@ -3,7 +3,7 @@ import {auditSyntheticVendorMeanTotal as audit} from '../site/steam-vendor-mean-
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
 const s=read('ontology/steam/gamesstats-q1-2026-conflicting-version-denominators-mean-total-audit.json'),
  d=read('specimens/steam.json'),p=read('plans/steam.json'),q=read('queues/steam.json');
-test('Same vendor's versions have different sample dates and denominators rather than independent replications',()=>{
+test("Same vendor versions have different sample dates and denominators rather than independent replications",()=>{
  assert.equal(s.report_versions[0].reported_game_count,7478);
  assert.equal(s.report_versions[1].reported_game_count,6169);
  assert.equal(s.report_versions[1].paid_game_count+s.report_versions[1].free_game_count,6169);
