@@ -30,3 +30,37 @@ test('Rejects duplicate task IDs and missing reported artifacts',()=>{
  const bad=inspect(p=>{p.detail_tasks[1].id=p.detail_tasks[0].id;p.detail_tasks[2].artifact='ontology/steam/not-created.md';});
  assert.equal(bad.valid,false);assert(bad.errors.some(x=>x.includes('Duplicate')));assert(bad.errors.some(x=>x.includes('missing or outside-repository')));
 });
+
+test('Rejects impossible source dates, publication chronology and incomplete provenance',()=>{
+ const cases=[
+  [d=>{d.evidence[0].retrieved_at='2026-02-30';},'Invalid source retrieved_at'],
+  [d=>{d.evidence[0].published_at='2026-11';d.evidence[0].retrieved_at='2026-10-29';},'Source publication after retrieval'],
+  [d=>{d.evidence[0].published_at='2026-10-30';d.evidence[0].retrieved_at='2026-10-29';},'Source publication after retrieval'],
+  [d=>{d.evidence[0].published_at='2026-02-30';},'Invalid source published_at'],
+  [d=>{d.evidence[0].published_at='2026-13';},'Invalid source published_at'],
+  [d=>{d.evidence[0].publisher=' ';},'Incomplete public source provenance']
+ ];
+ for(const [change,expected] of cases){
+  const r=inspect((p,q,d)=>change(d));
+  assert.equal(r.valid,false,expected);
+  assert(r.errors.some(e=>e.includes(expected)),expected);
+ }
+});
+test('Rejects impossible claim dates and claims without public confidence or limits',()=>{
+ for(const [key,value,expected] of [
+  ['observed_at','2026-02-30','Invalid claim observed_at'],
+  ['text',' ','Incomplete attributed claim'],
+  ['limitations','','Incomplete attributed claim'],
+  ['confidence',null,'Incomplete attributed claim']
+ ]){
+  const r=inspect((p,q,d)=>{d.claims[0][key]=value;});
+  assert.equal(r.valid,false,key);
+  assert(r.errors.some(e=>e.includes(expected)),key);
+ }
+});
+test('Month-granularity source dates and unknown publication dates remain supported',()=>{
+ for(const published of [null,'2005-06','2026-10','2026-10-01']){
+  const r=inspect((p,q,d)=>{d.evidence[0].retrieved_at='2026-10-29';d.evidence[0].published_at=published;});
+  assert.equal(r.valid,true,published+': '+r.errors.slice(0,5).join('; '));
+ }
+});

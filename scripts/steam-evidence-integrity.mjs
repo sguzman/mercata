@@ -3,6 +3,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+// Source dates can have day or month precision; claims and retrievals need full days.
+const validDay = x => {
+ if(typeof x!=='string'||!/^\\d{4}-\\d{2}-\\d{2}$/.test(x))return false;
+ const d=new Date(x+'T00:00:00Z');
+ return Number.isFinite(d.getTime())&&d.toISOString().slice(0,10)===x;
+};
+const validMonth = x => typeof x==='string'&&/^\\d{4}-(0[1-9]|1[0-2])$/.test(x);
+const nonempty = x=>typeof x==='string'&&x.trim().length>0;
 const fileRef = x => typeof x === 'string' && !!x && x === x.trim() &&
  !x.includes('\\') && !x.includes(String.fromCharCode(0)) &&
  !path.posix.isAbsolute(x) && !/^[A-Za-z]:/.test(x) &&
@@ -63,12 +71,25 @@ export function auditSteamEvidenceIntegrity(plan, queue, dossier, root=process.c
  for(const s of dossier.evidence){
   if(!s?.id||sourceIds.has(s.id))errors.push('Duplicate or missing source ID');
   if(!s?.url?.startsWith('https://')||sourceUrls.has(s.url))errors.push('Invalid or duplicate source URL');
+  if(!nonempty(s?.title)||!nonempty(s?.publisher)||!nonempty(s?.evidence_class)||
+     !nonempty(s?.license)||!nonempty(s?.notes))
+   errors.push('Incomplete public source provenance: '+s?.id);
+  if(!validDay(s?.retrieved_at))errors.push('Invalid source retrieved_at: '+s?.id);
+  if(s?.published_at!==null&&!validDay(s?.published_at)&&!validMonth(s?.published_at))
+   errors.push('Invalid source published_at: '+s?.id);
+  if(validDay(s?.retrieved_at)&&
+     (validDay(s?.published_at)&&s.published_at>s.retrieved_at||
+      validMonth(s?.published_at)&&s.published_at>s.retrieved_at.slice(0,7)))
+   errors.push('Source publication after retrieval: '+s?.id);
   sourceIds.add(s.id);sourceUrls.add(s.url);
  }
  const claimIds=new Set();
  for(const c of dossier.claims){
   if(!c?.id||claimIds.has(c.id))errors.push('Duplicate or missing claim ID');
   claimIds.add(c.id);
+  if(!nonempty(c?.text)||!nonempty(c?.limitations)||!nonempty(c?.confidence))
+   errors.push('Incomplete attributed claim: '+c?.id);
+  if(!validDay(c?.observed_at))errors.push('Invalid claim observed_at: '+c?.id);
   if(!Array.isArray(c?.source_ids)||c.source_ids.length===0||c.source_ids.some(id=>!sourceIds.has(id)))
    errors.push('Unsourced claim: '+c?.id);
  }
