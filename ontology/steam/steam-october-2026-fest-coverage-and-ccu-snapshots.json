@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "october2026_next_fest_early_vs_final_demo_roster_and_ccu_observability",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-zukowski-october2026-fest-early-ccu-snapshot",
+    "steam-outputlag-october2026-fest-final-hourly-ccu"
+  ],
+  "claim_ids": [
+    "steam-oct2026-fest-early-roster-author-7240",
+    "steam-oct2026-fest-author-partition-not-full-roster",
+    "steam-oct2026-fest-early-follower-ccu-correlations",
+    "steam-oct2026-fest-final-tracker-7310",
+    "steam-oct2026-fest-final-positive-ccu-6542",
+    "steam-oct2026-fest-combined-ccu-not-sales",
+    "steam-oct2026-fest-rank-conditional-follower-skew"
+  ],
+  "event": {
+    "name": "October 2026 Steam Next Fest",
+    "starts": "2026-10-19",
+    "ends": "2026-10-26",
+    "festival_listings_not_all_steam_paid_releases": true
+  },
+  "snapshots": {
+    "early": {
+      "source_id": "steam-zukowski-october2026-fest-early-ccu-snapshot",
+      "observed_at": "2026-10-21T10:00:00-07:00",
+      "participant_roster_reported": 7240,
+      "ranked_peak_ccu_segments": [
+        {
+          "rank": "1-25",
+          "count": 25,
+          "median_followers_pre_fest": 5519
+        },
+        {
+          "rank": "26-50",
+          "count": 25,
+          "median_followers_pre_fest": 3834
+        },
+        {
+          "rank": "51-100",
+          "count": 50,
+          "median_followers_pre_fest": 1605
+        },
+        {
+          "rank": "101_plus_as_labeled",
+          "count": 6942,
+          "median_followers_pre_fest": 15
+        }
+      ],
+      "full_rank_partition_verified": false,
+      "spearman_followers_pre_vs_peak_ccu": 0.55,
+      "spearman_follower_adds_absolute_vs_peak_ccu": 0.52,
+      "spearman_follower_growth_percent_vs_peak_ccu": -0.13,
+      "outcomes_relative_to_first_72hours": true
+    },
+    "final": {
+      "source_id": "steam-outputlag-october2026-fest-final-hourly-ccu",
+      "observed_at": "2026-10-26",
+      "tracker_demo_roster": 7310,
+      "demos_with_recorded_players": 6542,
+      "combined_peak_concurrent_players_reported": 297906,
+      "hourly_sample_frequency_claimed": true,
+      "unique_demo_users_identified": false
+    }
+  },
+  "status": {
+    "provider_frame_match_verified": false,
+    "exact_game_level_id_overlap_verified": false,
+    "paid_order_conversion_verified": false,
+    "non_recorded_ccu_proves_zero_demo_plays": false,
+    "wishlist_owners_cross_joined": false,
+    "source_rank_segments_reconciled": false
+  },
+  "unknown": {
+    "real_festival_incremental_paid_sales": null,
+    "actual_unique_demo_users": null,
+    "true_zero_play_demo_fraction": null,
+    "newly_added_demos_from_oct21_to_oct26": null,
+    "representative_paid_release_wishlist_conversion": null
+  },
+  "model": "site/steam-fest-snapshot-comparability.mjs",
+  "tests": "tests/steam-fest-snapshot-comparability.test.mjs",
+  "no_user_or_financial_records": true
+}

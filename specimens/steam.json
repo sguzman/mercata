@@ -2127,6 +2127,28 @@
       "evidence_class": "secondary_report_of_primary_volunteer_study_chart_numeric_ratios",
       "license": "Public link and independently worded numerical paraphrase only; no charts or complete article replicated.",
       "notes": "Secondary report supplies 0.45 versus 0.22 first-month, 0.82 versus 0.43 six-month, and 0.99 versus 0.70 one-year units per launch wishlist ratios; not independently validated merchant totals."
+    },
+    {
+      "id": "steam-zukowski-october2026-fest-early-ccu-snapshot",
+      "url": "https://howtomarketagame.com/2026/10/21/how-sloppy-is-the-october-2026-steam-next-fest/",
+      "title": "How sloppy is the October 2026 Steam Next Fest",
+      "publisher": "Chris Zukowski / How To Market A Game",
+      "published_at": "2026-10-21",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "public_author_scraped_first_two_days_next_fest_cohort_and_follower_ccu_comparison",
+      "license": "Public URL and independently authored short numerical synthesis; no ranking chart, scraped database, raw data or protected text reproduced.",
+      "notes": "Author dates snapshot October 21 10 AM PT. Reports 7,240 live page participants, early CCU-ranked follower segments, and Spearman associations; named residual segment covers 6,942 of the 7,140 games outside top 100, leaving 198 unexplained in the published partition."
+    },
+    {
+      "id": "steam-outputlag-october2026-fest-final-hourly-ccu",
+      "url": "https://outputlag.com/next-fest/",
+      "title": "Steam Next Fest: the final chart",
+      "publisher": "Output Lag",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "third_party_october26_final_festival_demo_count_hourly_concurrent_player_tracker",
+      "license": "Public URL and brief independently written aggregate measurement comparison only; no game-level chart rows or copied dataset.",
+      "notes": "Final-chart report for Oct 26: 7,310 demos in festival, 6,542 with recorded players, 297,906 combined peak players; tracker methodology relies on hourly measurements and cannot identify unique demo users or Steam paid orders."
     }
   ],
   "claims": [
@@ -14608,6 +14630,77 @@
       "observed_at": "2026-10-29",
       "limitations": "Friend-invite entrants are network-selected, not independent observations of all Steam users or randomly allocated paid customers.",
       "confidence": "high_public_valve_process_documentation_no_empirical_finance"
+    },
+    {
+      "id": "steam-oct2026-fest-early-roster-author-7240",
+      "text": "Chris Zukowski reports 7,240 games on the October 21 live October 2026 Steam Next Fest page, explicitly distinguishing the smaller live page from an earlier press-preview count.",
+      "source_ids": [
+        "steam-zukowski-october2026-fest-early-ccu-snapshot"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "A point-in-time scrape is not a definitive final roster; it omits nonparticipating Steam games.",
+      "confidence": "high_for_public_snapshot_claim_not_financial_or_causal_inference"
+    },
+    {
+      "id": "steam-oct2026-fest-author-partition-not-full-roster",
+      "text": "The primary October 21 article reports ranked groups of 25, 25, 50 and 6,942 games, totaling 7,042, 198 below the simultaneously stated 7,240-game roster.",
+      "source_ids": [
+        "steam-zukowski-october2026-fest-early-ccu-snapshot"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "The reported bins cannot be treated as an exhaustive partition until 198 unmatched games are reconciled.",
+      "confidence": "high_for_public_snapshot_claim_not_financial_or_causal_inference"
+    },
+    {
+      "id": "steam-oct2026-fest-early-follower-ccu-correlations",
+      "text": "Zukowski reports Spearman 0.55 for pre-festival follower count versus early peak demo CCU, 0.52 for recent absolute follower additions versus CCU, and -0.13 for percentage follower growth.",
+      "source_ids": [
+        "steam-zukowski-october2026-fest-early-ccu-snapshot"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Public follower counts proxy interest, not wishlist owner identity, sales orders or platform ranking causality.",
+      "confidence": "high_for_public_snapshot_claim_not_financial_or_causal_inference"
+    },
+    {
+      "id": "steam-oct2026-fest-final-tracker-7310",
+      "text": "Output Lag's October 26 final October 2026 Next Fest chart reports 7,310 demos on its monitored roster, compared with Zukowski's 7,240 earlier live-page games.",
+      "source_ids": [
+        "steam-outputlag-october2026-fest-final-hourly-ccu",
+        "steam-zukowski-october2026-fest-early-ccu-snapshot"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Differences in dates, categories, scraper rules and roster revision preclude treating the 70-item gap as newly admitted games.",
+      "confidence": "high_for_public_snapshot_claim_not_financial_or_causal_inference"
+    },
+    {
+      "id": "steam-oct2026-fest-final-positive-ccu-6542",
+      "text": "The Output Lag final chart reports 6,542 festival demos with at least one recorded player count among 7,310 monitored demos.",
+      "source_ids": [
+        "steam-outputlag-october2026-fest-final-hourly-ccu"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "No recorded concurrent players is not proof of zero unique demo players; the tracker samples player activity hourly.",
+      "confidence": "high_for_public_snapshot_claim_not_financial_or_causal_inference"
+    },
+    {
+      "id": "steam-oct2026-fest-combined-ccu-not-sales",
+      "text": "Output Lag reports 297,906 as combined peak players, which is a concurrency metric rather than independently deduplicated Steam purchasers.",
+      "source_ids": [
+        "steam-outputlag-october2026-fest-final-hourly-ccu"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "It cannot establish unique people reached, financial gross, wishlist additions or publisher payouts.",
+      "confidence": "high_for_public_snapshot_claim_not_financial_or_causal_inference"
+    },
+    {
+      "id": "steam-oct2026-fest-rank-conditional-follower-skew",
+      "text": "Zukowski's October 21 peak-CCU strata show median pre-festival followers of 5,519 for ranks 1–25 and 15 for the reported 6,942-game lower stratum.",
+      "source_ids": [
+        "steam-zukowski-october2026-fest-early-ccu-snapshot"
+      ],
+      "observed_at": "2026-10-29",
+      "limitations": "Group statistics are conditional on CCU rank and an internally incomplete partition, not an unbiased effect of followers or marketing spend.",
+      "confidence": "high_for_public_snapshot_claim_not_financial_or_causal_inference"
     }
   ],
   "observations": [],
