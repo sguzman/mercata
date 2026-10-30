@@ -41,7 +41,12 @@
     "seasonal_discount_does_not_reset_nonseasonal_to_nonseasonal_cooldown": true,
     "synthetic_complete_history_is_not_authenticated_history": true,
     "synthetic_ordered_price_increases_max_entries": 64,
-    "synthetic_price_increase_history_is_not_authenticated_prices": true
+    "synthetic_price_increase_history_is_not_authenticated_prices": true,
+    "full_release_generates_second_ordinary_discount_cooldown": true,
+    "full_release_launch_discount_allowed_on_graduation_day": true,
+    "full_release_launch_minimum_days_since_early_access": 30,
+    "full_release_launch_cannot_override_recent_price_increase": true,
+    "full_release_launch_cannot_override_prior_regular_discount_cooldown": true
   },
   "first_paid_game_case": {
     "title": "In & Out",
@@ -97,7 +102,8 @@
     "verified_base_prices_in_every_currency": null,
     "actual_prior_discount_end_date": null,
     "causal_discount_paid_sale_lift": null,
-    "incremental_publisher_net_cash": null
+    "incremental_publisher_net_cash": null,
+    "verified_early_access_to_v1_live_discount_approval": null
   },
   "private_or_partner_data_accessed": false,
   "original_task_count": 293,
@@ -108,6 +114,7 @@
     "intervening_seasonal_discount_waives_other_regular_discounts_cooldown": false,
     "price_increase_dates": "strictly ordered synthetic price-increase dates, at most 64, mutually exclusive with last_price_increase_date",
     "last_price_increase_date": "legacy optional single price increase",
-    "price_increase_dates_verified_by_partner": false
+    "price_increase_dates_verified_by_partner": false,
+    "full_release_date": "optional synthetic v1.0 graduation date, later than first_paid_release_date, does not establish new paid-game cohort"
   }
 }

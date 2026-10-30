@@ -276,3 +276,107 @@ test('Price history is bounded, strictly chronological and backward compatible',
  assert.deepEqual(array,legacy);
  assert.equal(check({...fixture,price_increase_dates:[]}).price_increase_cooldown_ends,null);
 });
+test('Early Access graduation creates a second release cooldown for standard and seasonal offers',()=>{
+ const fixture={...base,first_paid_release_date:'2026-01-15',full_release_date:'2026-10-15',
+  discount_start:'2026-10-20',discount_end:'2026-10-26',discount_percent:20};
+ const regular=check(fixture);
+ assert.equal(regular.full_release_cooldown_ends,'2026-11-14');
+ assert.equal(regular.full_release_date,'2026-10-15');
+ assert.equal(regular.conditional_calendar_rules_pass,false);
+ assert(regular.known_calendar_failures.includes('full_release_cooldown_active'));
+ assert.equal(regular.first_allowed_start_date_from_known_cooldowns,'2026-11-14');
+ const seasonal=check({...fixture,discount_kind:'official_seasonal',official_seasonal_event_verified:true});
+ assert.equal(seasonal.conditional_calendar_rules_pass,false);
+ assert(seasonal.known_calendar_failures.includes('full_release_cooldown_active'));
+ assert.equal(check({...fixture,discount_start:'2026-11-14',discount_end:'2026-11-20'})
+  .conditional_calendar_rules_pass,true);
+});
+test('Full-release launch offer is a distinct release-day exception, not a second first-paid launch',()=>{
+ const ea='2026-01-15',full='2026-10-15';
+ const scenario={...base,first_paid_release_date:ea,full_release_date:full,
+  discount_kind:'launch',discount_start:full,discount_end:'2026-10-21',discount_percent:20};
+ const result=check(scenario);
+ assert.equal(result.conditional_calendar_rules_pass,true);
+ assert.equal(result.launch_stage,'full_release');
+ assert.equal(result.release_cooldown_ends,'2026-02-14');
+ assert.equal(result.full_release_cooldown_ends,'2026-11-14');
+ assert.equal(result.actual_partner_eligibility_verified,false);
+ assert.equal(check({...scenario,discount_start:ea,discount_end:'2026-01-21'}).launch_stage,'early_access');
+ assert(check({...scenario,discount_start:'2026-10-16',discount_end:'2026-10-22'})
+  .known_calendar_failures.includes('launch_discount_not_on_release_day'));
+});
+test('An Early Access period shorter than 30 days blocks its full-release launch offer',()=>{
+ const scenario={...base,first_paid_release_date:'2026-10-01',full_release_date:'2026-10-25',
+  discount_kind:'launch',discount_start:'2026-10-25',discount_end:'2026-10-31',
+  discount_percent:20};
+ const out=check(scenario);
+ assert.equal(out.conditional_calendar_rules_pass,false);
+ assert(out.known_calendar_failures.includes('early_access_to_full_release_launch_cooldown_active'));
+ const boundary=check({...scenario,full_release_date:'2026-10-31',
+  discount_start:'2026-10-31',discount_end:'2026-11-06'});
+ assert.equal(boundary.conditional_calendar_rules_pass,true);
+});
+test('A near-graduation base-price increase prevents a v1 launch discount',()=>{
+ const scenario={...base,first_paid_release_date:'2026-01-15',full_release_date:'2026-10-15',
+  discount_kind:'launch',discount_start:'2026-10-15',discount_end:'2026-10-21',
+  discount_percent:20};
+ const blocked=check({...scenario,price_increase_dates:['2026-09-20']});
+ assert.equal(blocked.conditional_calendar_rules_pass,false);
+ assert(blocked.known_calendar_failures.includes('price_increase_cooldown_active'));
+ assert.equal(check({...scenario,price_increase_dates:['2026-09-15']}).conditional_calendar_rules_pass,true);
+ assert.equal(check({...scenario,price_increase_dates:['2026-10-15']}).conditional_calendar_rules_pass,false);
+});
+test('Full-release launch cannot evade an ordinary Early Access discount cooldown',()=>{
+ const prior={kind:'standard',start:'2026-09-15',end:'2026-09-25'};
+ const full='2026-10-15';
+ const scenario={...base,first_paid_release_date:'2026-01-15',full_release_date:full,
+  discount_kind:'launch',discount_start:full,discount_end:'2026-10-21',
+  discount_percent:20,previous_discounts:[prior]};
+ const blocked=check(scenario);
+ assert.equal(blocked.conditional_calendar_rules_pass,false);
+ assert(blocked.known_calendar_failures.includes('discount_to_discount_cooldown_active'));
+ const eligible=check({...scenario,previous_discounts:[{...prior,end:'2026-09-15'}]});
+ assert.equal(eligible.conditional_calendar_rules_pass,true);
+});
+test('Two independent release-day launch discounts are permitted in ordered history',()=>{
+ const ea='2026-01-15',full='2026-10-15';
+ const history=[
+  {kind:'launch',start:ea,end:'2026-01-21'},
+  {kind:'standard',start:'2026-05-01',end:'2026-05-07'},
+  {kind:'launch',start:full,end:'2026-10-21'}
+ ];
+ const proposed={...base,first_paid_release_date:ea,full_release_date:full,
+  discount_start:'2026-11-21',discount_end:'2026-11-27',
+  discount_percent:20,previous_discounts:history};
+ const result=check(proposed);
+ assert.equal(result.conditional_calendar_rules_pass,true);
+ assert.equal(result.previous_discount_count,3);
+ assert.equal(result.full_release_cooldown_ends,'2026-11-14');
+ assert.equal(result.latest_nonseasonal_discount_cooldown_ends,'2026-11-20');
+ const premature=check({...proposed,discount_start:'2026-11-18',discount_end:'2026-11-24'});
+ assert(premature.known_calendar_failures.includes('discount_to_discount_cooldown_active'));
+ const invalidHistory=[...history,{kind:'launch',start:'2026-12-01',end:'2026-12-07'}];
+ assert.throws(()=>check({...proposed,discount_start:'2027-01-15',discount_end:'2027-01-21',
+  previous_discounts:invalidHistory}),/must start on Early Access or full release day/);
+});
+test('Prior regular offers inside the full-release cooldown are invalid history',()=>{
+ const history=[{kind:'standard',start:'2026-10-20',end:'2026-10-25'}];
+ const scenario={...base,first_paid_release_date:'2026-01-15',full_release_date:'2026-10-15',
+  discount_start:'2026-12-15',discount_end:'2026-12-21',discount_percent:20,
+  previous_discounts:history};
+ assert.throws(()=>check(scenario),/cannot bypass full-release cooldown/);
+ assert.throws(()=>check({...scenario,full_release_date:'2026-01-15'}),/Full release must follow/);
+ assert.throws(()=>check({...scenario,full_release_date:'2025-12-31'}),/Full release must follow/);
+ assert.throws(()=>check({...scenario,full_release_date:'2026-02-30'}),/Invalid calendar/);
+});
+test('A future graduation does not incorrectly block an ordinary Early Access discount',()=>{
+ const proposed={...base,first_paid_release_date:'2026-01-15',
+  full_release_date:'2026-12-15',discount_start:'2026-09-20',
+  discount_end:'2026-09-26',discount_percent:20};
+ const result=check(proposed);
+ assert.equal(result.conditional_calendar_rules_pass,true);
+ assert.equal(result.first_allowed_start_date_from_known_cooldowns,'2026-02-14');
+ assert.equal(result.full_release_cooldown_ends,'2027-01-14');
+ assert.equal(check({...base,discount_start:'2026-10-02',discount_end:'2026-10-08'})
+  .full_release_date,null);
+});
