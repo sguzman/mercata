@@ -2699,6 +2699,17 @@
       "evidence_class": "third_party_store_release_instant_with_utc_timestamp_not_sales",
       "license": "Bibliographic reference and release timestamp only; no screenshots or source table reproduced.",
       "notes": "Steam release timestamp 2026-09-04 03:01 UTC, consistent with Sep3 US/Pacific store date and Sep4 local Japan developer report; different calendar dates do not mean two initial paid launches."
+    },
+    {
+      "id": "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029",
+      "url": "https://indielist.games/methodology/sales-v1.json",
+      "publisher": "IndieList — official machine-readable estimator model v1.0",
+      "title": "IndieList sales estimation v1.0 — machine-readable specification",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "vendor_published_deterministic_hand_calibrated_review_based_heuristic_not_sales_validation",
+      "license": "Public URL, numeric method coefficients and independently written analysis; no game-level imports, proprietary bulk copies, or original prose reproduced.",
+      "notes": "Official v1.0 spec states NB base50 bounded15..150; review-count times NB for estimated units, fixed 0.6/1.4 display range, regional price 0.85/refund .04/store cut .3 -> net factor .5712. Explicitly excludes titles without reviews, validation runtime-parity not ground-truth backtesting, and distinguishes modeled net from publisher/tax effects. Related human explanation https://indielist.games/methodology is same operator/method, not independent validation."
     }
   ],
   "claims": [
@@ -17672,6 +17683,120 @@
       "observed_at": "2026-10-29",
       "confidence": "medium",
       "limitations": "Voluntary one-game first-person report, not authenticated Steamworks merchant statements. Local time-zone display dates, key access, bot traffic and test players are not independent paid transactions; before/after interventions lack matched exposure cohorts and randomized or controlled design."
+    },
+    {
+      "id": "steam-indielist-nb-formula-bounded",
+      "text": "IndieList v1.0 publishes a hand-adjusted base 50 Boxleiter multiplier, with additive year, price, rating, team and genre adjustments clamped to 15–150; modeled units are reviews times this multiplier.",
+      "source_ids": [
+        "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "The vendor's hand-calibrated, review-derived model is not an authenticated Steam sales ledger, has no demonstrated statistical interval coverage or verified representative release frame, and explicitly excludes titles without reviews. A synthetic calculation verifies only the published formula, not real game revenue or its error."
+    },
+    {
+      "id": "steam-indielist-release2025-minus10",
+      "text": "The operator's 2025-and-later year adjustment is minus 10 multiplier points; its earlier-release year tiers differ, making pooled estimates across years model-dependent.",
+      "source_ids": [
+        "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "The vendor's hand-calibrated, review-derived model is not an authenticated Steam sales ledger, has no demonstrated statistical interval coverage or verified representative release frame, and explicitly excludes titles without reviews. A synthetic calculation verifies only the published formula, not real game revenue or its error."
+    },
+    {
+      "id": "steam-indielist-price-and-rating-defaults",
+      "text": "IndieList v1.0's machine spec substitutes a $15 starting price when absent, and the human documentation describes an 80% positive-rating fallback when unobserved; these are assumptions, not actual transactions or review sentiment.",
+      "source_ids": [
+        "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "The vendor's hand-calibrated, review-derived model is not an authenticated Steam sales ledger, has no demonstrated statistical interval coverage or verified representative release frame, and explicitly excludes titles without reviews. A synthetic calculation verifies only the published formula, not real game revenue or its error."
+    },
+    {
+      "id": "steam-indielist-no-review-excluded",
+      "text": "The machine spec explicitly excludes titles without reviews; absent or zero-review inputs are not authenticated zero-paid-sale games and cannot be recorded as observed zero merchant orders.",
+      "source_ids": [
+        "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "The vendor's hand-calibrated, review-derived model is not an authenticated Steam sales ledger, has no demonstrated statistical interval coverage or verified representative release frame, and explicitly excludes titles without reviews. A synthetic calculation verifies only the published formula, not real game revenue or its error."
+    },
+    {
+      "id": "steam-indielist-fixed-range-not-confidence",
+      "text": "Its displayed 0.6× to 1.4× modeled-unit range is a fixed heuristic display band, explicitly not a statistical confidence or prediction interval validated against merchant transactions.",
+      "source_ids": [
+        "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "The vendor's hand-calibrated, review-derived model is not an authenticated Steam sales ledger, has no demonstrated statistical interval coverage or verified representative release frame, and explicitly excludes titles without reviews. A synthetic calculation verifies only the published formula, not real game revenue or its error."
+    },
+    {
+      "id": "steam-indielist-net5712-before-final-payout",
+      "text": "The model multiplies list price by 0.85 regional/discount, 0.96 assumed post-refund and 0.7 assumed post-platform share (factor 0.5712) to label estimated net before publisher or tax effects; it does not reconstruct paid bank cash or after-labor profit.",
+      "source_ids": [
+        "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "The vendor's hand-calibrated, review-derived model is not an authenticated Steam sales ledger, has no demonstrated statistical interval coverage or verified representative release frame, and explicitly excludes titles without reviews. A synthetic calculation verifies only the published formula, not real game revenue or its error."
+    },
+    {
+      "id": "steam-indielist-runtime-parity-not-revenue-calibration",
+      "text": "The vendor reports cross-runtime deterministic parity but not official-ground-truth backtesting, so source-code and fixture reproducibility alone provide no proof of sales-estimate accuracy.",
+      "source_ids": [
+        "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "The vendor's hand-calibrated, review-derived model is not an authenticated Steam sales ledger, has no demonstrated statistical interval coverage or verified representative release frame, and explicitly excludes titles without reviews. A synthetic calculation verifies only the published formula, not real game revenue or its error."
+    },
+    {
+      "id": "steam-indielist-conditional-reviewed-population",
+      "text": "Any distribution over this service's reviewed-game estimates conditions on the review-present covered catalog and cannot identify the proportion of eligible first paid releases with zero orders.",
+      "source_ids": [
+        "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "The vendor's hand-calibrated, review-derived model is not an authenticated Steam sales ledger, has no demonstrated statistical interval coverage or verified representative release frame, and explicitly excludes titles without reviews. A synthetic calculation verifies only the published formula, not real game revenue or its error."
+    },
+    {
+      "id": "steam-indielist-list-price-not-realized-transaction",
+      "text": "The v1.0 estimator does not reconstruct historical sale prices, bundles, regional checkout mix, tax withholding, publisher contracts, or non-Steam income; model net and real payable cash are different accounting objects.",
+      "source_ids": [
+        "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "The vendor's hand-calibrated, review-derived model is not an authenticated Steam sales ledger, has no demonstrated statistical interval coverage or verified representative release frame, and explicitly excludes titles without reviews. A synthetic calculation verifies only the published formula, not real game revenue or its error."
+    },
+    {
+      "id": "steam-indielist-heuristic-zero-review-failclosed",
+      "text": "An illustrative game with zero visible reviews must receive an unavailable modeled estimate rather than zero authenticated orders, even if a public anecdote elsewhere reports a no-review game with some sales.",
+      "source_ids": [
+        "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029",
+        "steam-crazycitygolf-oct27-4units-wishlist-friend-report",
+        "steam-crazycitygolf-official-5347600-oct26"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "The vendor's hand-calibrated, review-derived model is not an authenticated Steam sales ledger, has no demonstrated statistical interval coverage or verified representative release frame, and explicitly excludes titles without reviews. A synthetic calculation verifies only the published formula, not real game revenue or its error."
+    },
+    {
+      "id": "steam-indielist-existing-low-review-postmortems-not-validation",
+      "text": "Public individual developer reports and low-review storefront snapshots do not constitute a matched representative, cross-validated ground-truth calibration sample for the IndieList model.",
+      "source_ids": [
+        "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029",
+        "steam-crazycitygolf-oct27-4units-wishlist-friend-report",
+        "steam-crazycitygolf-official-5347600-oct26"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "The vendor's hand-calibrated, review-derived model is not an authenticated Steam sales ledger, has no demonstrated statistical interval coverage or verified representative release frame, and explicitly excludes titles without reviews. A synthetic calculation verifies only the published formula, not real game revenue or its error."
     }
   ],
   "observations": [],

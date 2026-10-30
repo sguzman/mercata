@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "white_box_review_estimation_v1_excludes_reviewless_not_zero_selling_apps",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-indielist-v1-machine-model-no-reviews-not-zero-20261029",
+    "steam-crazycitygolf-oct27-4units-wishlist-friend-report",
+    "steam-crazycitygolf-official-5347600-oct26"
+  ],
+  "claim_ids": [
+    "steam-indielist-nb-formula-bounded",
+    "steam-indielist-release2025-minus10",
+    "steam-indielist-price-and-rating-defaults",
+    "steam-indielist-no-review-excluded",
+    "steam-indielist-fixed-range-not-confidence",
+    "steam-indielist-net5712-before-final-payout",
+    "steam-indielist-runtime-parity-not-revenue-calibration",
+    "steam-indielist-conditional-reviewed-population",
+    "steam-indielist-list-price-not-realized-transaction",
+    "steam-indielist-heuristic-zero-review-failclosed",
+    "steam-indielist-existing-low-review-postmortems-not-validation"
+  ],
+  "original_machine_spec": {
+    "url": "https://indielist.games/methodology/sales-v1.json",
+    "version": "v1.0",
+    "model": "heuristic_additive_boxleiter",
+    "nb_base": 50,
+    "nb_min": 15,
+    "nb_max": 150,
+    "unit_formula": "review_count * clamped_nb",
+    "fixed_heuristic_lower_factor": 0.6,
+    "fixed_heuristic_upper_factor": 1.4,
+    "first_price_default_usd": 15,
+    "positive_pct_fallback_from_public_human_method": 80,
+    "release_year_2025_plus_adjustment": -10,
+    "discount_regional_factor": 0.85,
+    "refund_rate_assumption": 0.04,
+    "steam_share_assumption": 0.3,
+    "net_list_price_factor": 0.5712,
+    "excluded_classes": [
+      "free_to_play_titles",
+      "titles_without_reviews"
+    ],
+    "provider_validation_status": "runtime_parity_tested_not_ground_truth_backtested"
+  },
+  "observation_controls": {
+    "unreviewed_means_not_estimated": true,
+    "review_count_zero_cannot_prove_zero_paid_sales": true,
+    "model_estimated_units_not_validated_orders": true,
+    "heuristic_range_is_not_confidence_interval": true,
+    "net_heuristic_not_publisher_cash": true,
+    "original_developer_ledger_accessed": false
+  },
+  "example_public_anecdote": {
+    "app_id": 5347600,
+    "reported_four_copies_source_id": "steam-crazycitygolf-oct27-4units-wishlist-friend-report",
+    "no_public_reviews_store_snapshot_source_id": "steam-crazycitygolf-official-5347600-oct26",
+    "report_authenticated_by_mercata": false
+  },
+  "unknown": {
+    "true_zero_paid_sale_fraction": null,
+    "paid_order_count_for_reviewless_appids": null,
+    "real_world_model_coverage": null,
+    "true_model_error_distribution": null,
+    "calibrated_interval_coverage": null,
+    "verified_publisher_cash": null,
+    "first_paid_newcomer_income_median": null
+  },
+  "model_path": "site/steam-reviewless-estimator-denominator-guard.mjs",
+  "tests_path": "tests/steam-reviewless-estimator-denominator-guard.test.mjs",
+  "source_family_method_not_independent_confirmation": true
+}
