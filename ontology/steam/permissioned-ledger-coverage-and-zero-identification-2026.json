@@ -116,5 +116,18 @@
     "partial_report_coverage_cannot_exceed_as_of_date": true,
     "known_initially_free_excluded_without_poisoning_paid_denominator": true,
     "unresolved_original_paid_status_blocks_population_bounds": true
+  },
+  "game_level_country_rollup": {
+    "model_path": "site/steam-game-country-zero-identification.mjs",
+    "test_path": "tests/steam-game-country-zero-identification.test.mjs",
+    "original_paid_game_roster_required": true,
+    "store_country_roster_required": true,
+    "country_codes_not_currency_region_groups": true,
+    "exhaustive_financial_country_reporting_attested": true,
+    "positive_in_one_country_proves_game_nonzero_with_authorized_attribution": true,
+    "zero_requires_all_country_complete_reconciled_full_period_reports": true,
+    "structural_zero_no_purchase_access_distinct_from_zero_with_exposure": true,
+    "marketwide_zero_rate_observed": null,
+    "actual_authorized_partner_financial_rows_accessed": 0
   }
 }
