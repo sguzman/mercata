@@ -112,6 +112,9 @@
   "public_historical_archive_review": {
     "model_path": "site/steam-archive-candidate-coverage.mjs",
     "tests_path": "tests/steam-archive-candidate-coverage.test.mjs",
+    "prelaunch_unreleased_labels_do_not_veto_later_attested_paid_launch": true,
+    "same_day_unreleased_labels_are_unresolved_due_to_date_granularity": true,
+    "first_paid_playable_observation_cannot_precede_claimed_launch": true,
     "public_source_review_date": "2026-10-30",
     "sources": [
       {

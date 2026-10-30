@@ -47,7 +47,7 @@ export function auditSyntheticSteamArchiveCandidateCoverage(input={}){
    if(source.role!=='release_attestation'||
     !types.includes(o.app_type)||![true,false,null].includes(o.initial_paid_status)||
     o.first_paid_playable_date!==null&&!iso(o.first_paid_playable_date)||
-    o.first_paid_playable_date!==null&&o.first_paid_playable_date>o.captured_on||
+    o.first_paid_playable_date!==null&&o.first_paid_playable_date>o.observed_on||
     ![...modes,null].includes(o.release_mode)||o.status_label!==undefined)
     throw new TypeError('Invalid independent first paid release attestation');
   }else if(o.kind==='curated_status_label'){
@@ -66,13 +66,16 @@ export function auditSyntheticSteamArchiveCandidateCoverage(input={}){
   }
   if(!entries.has(o.fixture_game_id))
    entries.set(o.fixture_game_id,{fixture_game_id:o.fixture_game_id,
-    att:[],sources:new Set(),flags:new Set(),curated:new Set(),earliest:null,imported:false});
+    att:[],sources:new Set(),flags:new Set(),curated:new Set(),curatedObservations:[],earliest:null,imported:false});
   const e=entries.get(o.fixture_game_id);
   e.sources.add(o.source_id);
   e.flags.add(o.kind);
   if(e.earliest===null||o.observed_on<e.earliest)e.earliest=o.observed_on;
   if(o.provenance==='imported_historical')e.imported=true;
-  if(o.kind==='curated_status_label')e.curated.add(o.status_label);
+  if(o.kind==='curated_status_label'){
+   e.curated.add(o.status_label);
+   e.curatedObservations.push({status_label:o.status_label,observed_on:o.observed_on});
+  }
   if(o.kind==='first_paid_release_attestation')e.att.push(o);
  }
  const counts={candidate_game_ids_observed:entries.size,first_paid_cohort_eligible:0,
@@ -95,8 +98,11 @@ export function auditSyntheticSteamArchiveCandidateCoverage(input={}){
     outcome='excluded';reason='first_paid_launch_outside_window';
    }else{outcome='eligible';reason='independently_attested_initial_paid_playable_date_in_window'}
   }
-  const contradictory=outcome==='eligible'&&
-   (e.curated.has('unreleased')||e.curated.has('unpublished'));
+  // An earlier "unreleased" snapshot can be true before the later paid launch.
+  // Same-day labels cannot be chronologically ordered with day-level dates.
+  const contradictory=outcome==='eligible'&&e.curatedObservations.some(o=>
+   (o.status_label==='unreleased'||o.status_label==='unpublished')&&
+   o.observed_on>=statement.first_paid_playable_date);
   if(contradictory){outcome='unresolved';reason='unreconciled_curated_unreleased_label_conflict';
    counts.conflicting_archive_labels++;}
   counts[outcome==='eligible'?'first_paid_cohort_eligible':
@@ -129,6 +135,6 @@ export function auditSyntheticSteamArchiveCandidateCoverage(input={}){
   actual_zero_paid_sale_fraction:null,
   publisher_income_distribution:null,
   actual_live_archive_rows_imported:false,
-  note:'Source archives have selected or unknown historical coverage. Positive price or playable presence only establishes a dated observed state, not original paid launch. Curated removal/unreleased tags cannot prove paid-sale eligibility, completed purchases, or zero demand. No independently complete historical population follows even if every supplied synthetic source declares complete pagination.'
+  note:'Source archives have selected or unknown historical coverage. A prelaunch unreleased/unpublished label does not conflict with a later attested paid launch; same-day or later labels are unresolved. Positive price or playable presence only establishes a dated observed state, not original paid launch. Curated removal/unreleased tags cannot prove paid-sale eligibility, completed purchases, or zero demand. No independently complete historical population follows even if every supplied synthetic source declares complete pagination.'
  });
 }

@@ -70,6 +70,36 @@ test('Curated unreleased label contradicting an independent first-paid record st
  assert.equal(r.counts.conflicting_archive_labels,1);
  assert.equal(r.entries.find(e=>e.fixture_game_id==='fixture-b').first_paid_cohort_status,'unresolved');
 });
+test('Prelaunch unreleased or unpublished labels are historical states, not permanent vetoes',()=>{
+ for(const label of ['unreleased','unpublished']){
+  const x=base();
+  x.observations.push(evt('prelaunch-a','a','curated','curated_status_label','2025-03-31',{status_label:label}));
+  const r=audit(x);
+  const a=r.entries.find(e=>e.fixture_game_id==='fixture-a');
+  assert.equal(a.first_paid_cohort_status,'eligible');
+  assert.equal(a.reason,'independently_attested_initial_paid_playable_date_in_window');
+  assert.equal(r.counts.conflicting_archive_labels,0);
+ }
+});
+test('Same-day and postlaunch unreleased or unpublished labels remain unresolved',()=>{
+ for(const date of ['2025-04-01','2025-04-02']){
+  for(const label of ['unreleased','unpublished']){
+   const x=base();
+   x.observations.push(evt('contradiction-a','a','curated','curated_status_label',date,{status_label:label}));
+   const r=audit(x);
+   const a=r.entries.find(e=>e.fixture_game_id==='fixture-a');
+   assert.equal(a.first_paid_cohort_status,'unresolved');
+   assert.equal(a.reason,'unreconciled_curated_unreleased_label_conflict');
+   assert.equal(r.counts.conflicting_archive_labels,1);
+  }
+ }
+});
+test('A first paid playable launch cannot be attested as already observed before it occurred',()=>{
+ const x=base();
+ const a=x.observations.find(o=>o.observation_id==='fixture-att-a');
+ a.observed_on='2025-03-31';
+ assert.throws(()=>audit(x),/Invalid independent first paid release attestation/);
+});
 test('Contradictory independent first paid dates never become a majority vote',()=>{
  const x=base();x.observations.push(attest('att-a2','a','2025-06-01'));
  const y=audit(x);
