@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "platform": "steam",
+  "as_of": "2026-10-30",
+  "kind": "document_to_reused_underlying_evidence_family",
+  "policy": "A linked page, report, spreadsheet or tool description is a source record, not automatically an independently sampled game cohort, authentic purchase ledger or external model validation.",
+  "families": [
+    {
+      "id": "steam-strike-two-1312-paid-review-cohort-september2026",
+      "relation": "same_underlying_dataset_different_urls",
+      "observed_population": "currently priced US Indie-tagged games first listed 2020–2022 with at least 100 reviews during year one",
+      "documented_selected_games": 1312,
+      "source_ids": [
+        "steam-striketwo-major-update-review-month-sep2026",
+        "steam-striketwo-game-review-longtail-sep2026"
+      ],
+      "independence": "one underlying selected game set; update-month measurement and long-tail analysis are separate estimates over overlapping records",
+      "notes": "Two publisher-authored September reports reuse one selected 1,312-game roster and review histories. Article-specific post-month contributor counts remain 375 vs 311, not independently reconciled."
+    },
+    {
+      "id": "steam-steamforecast-10403-selected-lever-model-panel-july2026",
+      "relation": "same_underlying_dataset_different_urls",
+      "observed_population": "selected currently paid positive-derived-first-week-revenue model rows; excludes unmeasurable and zero-estimated games",
+      "documented_selected_games": 10403,
+      "source_ids": [
+        "steam-steamforecast-hf-2026-10403-modelled-lever-panel",
+        "steam-steamforecast-2026-causal-levers-analysis"
+      ],
+      "independence": "one provider-derived panel and companion analysis, not two samples of authentic paid orders",
+      "notes": "Hugging Face public panel and provider's report share the 10,403-row estimated outcome; provider methodology additionally mentions a separate 32,106-row training corpus and is not asserted to be identical."
+    },
+    {
+      "id": "steam-gamediscoverco-january2026-model-sheet-and-newsletter",
+      "relation": "same_underlying_dataset_different_urls",
+      "observed_population": "GameDiscoverCo's provider-modeled lifetime gross outcomes for the January 2026 Steam release-month cohort",
+      "documented_selected_games": 1230,
+      "source_ids": [
+        "steam-gdc-2026-jan-cohort-primary",
+        "steam-gdc-jan2026-public-sheet"
+      ],
+      "independence": "one vendor release-month model disclosed in a newsletter and linked spreadsheet, not independent validation",
+      "notes": "Publisher directly links entire January cohort chart to its Google Sheet. The source describes vendor-model results, not merchant-reconciled bank receipts."
+    }
+  ],
+  "related_documents_not_independent_replications": [
+    {
+      "source_id": "steam-striketwo-2026-quiet-launch-review-comebacks",
+      "related_family_id": "steam-strike-two-1312-paid-review-cohort-september2026",
+      "relation": "same_publisher_review_history_collection_but_distinct_eligibility_filter",
+      "notes": "This article samples 4,209 low-first-year-review survivors out of a broader 12,961-currently-priced roster; it is not the same 1,312 higher-review games."
+    },
+    {
+      "source_id": "steam-steamforecast-2026-methodology-reported-heldout",
+      "related_family_id": "steam-steamforecast-10403-selected-lever-model-panel-july2026",
+      "relation": "same_vendor_methodology_but_separate_reported_modeling_population",
+      "notes": "Methodology refers to 32,106 training/validation records and 6,422 held-out records, not an asserted one-to-one match with the 10,403 lever panel."
+    }
+  ],
+  "independent_study_count": null,
+  "authenticated_merchant_sales_records": null,
+  "prohibited_inferences": [
+    "source_urls_to_independent_dataset_count",
+    "review_or_modeled_ownership_to_verified_paid_orders",
+    "modeled_outcome_validation_to_real_revenue_ground_truth",
+    "related_document_to_identical_cohort_without_population_crosswalk"
+  ],
+  "related_documents": [
+    "specimens/steam.json",
+    "ontology/steam/steam-major-update-review-months-vs-visibility-rounds-2026.json",
+    "ontology/steam/steamforecast-selected-lever-panel-provenance-and-reproducibility-2026.json"
+  ]
+}

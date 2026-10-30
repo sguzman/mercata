@@ -2,6 +2,7 @@
 // This checks public repository structure, not the factual truth of cited research.
 import fs from 'node:fs';
 import path from 'node:path';
+import {auditSteamSourceFamilies} from './steam-source-families.mjs';
 
 // Source dates can have day or month precision; claims and retrievals need full days.
 const validDay = x => {
@@ -67,6 +68,12 @@ export function auditSteamEvidenceIntegrity(plan, queue, dossier, root=process.c
   if(w.progress_percent!==Math.round(scores.reduce((a,b)=>a+b,0)/scores.length))
    errors.push('Workstream percent mismatch: '+w.id);
  }
+ let familyAudit=null;
+ try{
+  const registry=JSON.parse(fs.readFileSync(path.join(rootReal,'ontology/steam/source-families.json'),'utf8'));
+  familyAudit=auditSteamSourceFamilies(dossier.evidence,dossier.claims,registry);
+  if(!familyAudit.valid)errors.push(...familyAudit.errors.map(x=>'Steam source family: '+x));
+ }catch(e){errors.push('Steam source family registry invalid or missing: '+e.message);}
  const sourceIds=new Set(),sourceUrls=new Set();
  for(const s of dossier.evidence){
   if(!s?.id||sourceIds.has(s.id))errors.push('Duplicate or missing source ID');
@@ -96,5 +103,6 @@ export function auditSteamEvidenceIntegrity(plan, queue, dossier, root=process.c
  return {valid:errors.length===0,errors,task_count:tasks.length,complete,partial,unstarted,
   exact_percent:sum/293,rounded_percent:rounded,evidence_references:refs,distinct_evidence_files:allPaths.size,
   source_count:sourceIds.size,claim_count:claimIds.size,
+  registered_reused_sample_families:familyAudit?.registered_reused_cohort_families??0,
   limitation:'References and score arithmetic are auditable; source validity, privacy suitability and economic completeness still require judgment.'};
 }
