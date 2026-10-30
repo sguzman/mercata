@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "single_first_game_late_voluntary_cumulative_sales_and_unmatched_event_wishlist_observations",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-immunica-oct15-2026-author-firstgame-postmortem",
+    "steam-immunica-official-app4315220-march2026",
+    "steam-reporting-faq-doc"
+  ],
+  "claim_ids": [
+    "steam-immunica-first-paid-mar29-2026",
+    "steam-immunica-report-oct15-six-month-postlaunch",
+    "steam-immunica-first3d147-firstweek234",
+    "steam-immunica-cumulative895-later-unspecified",
+    "steam-immunica-2123-gross-1100-net-undefined-bank",
+    "steam-immunica-fest-474-vs160-not-causal",
+    "steam-immunica-before-fest82-launch700-not-conversion",
+    "steam-immunica-storepage-jan16-leadtime",
+    "steam-immunica-poland201-units-not-revenue-share",
+    "steam-immunica-event-sales-bias-no-generalized-rate"
+  ],
+  "store": {
+    "app_id": 4315220,
+    "public_label_developer": "eranboi",
+    "public_label_publisher": "eranboi",
+    "first_paid_release": "2026-03-29",
+    "verified_sales": null
+  },
+  "public_author": {
+    "published_at": "2026-10-15",
+    "production_months_approx": 3,
+    "page_first_published_author_says": "2026-01-16",
+    "cumulative_units_first_3_days": 147,
+    "cumulative_units_first_week": 234,
+    "cumulative_units_later_post": 895,
+    "reported_gross_usd": 2123,
+    "reported_net_usd_approx": 1100,
+    "reported_net_label": "author_describes_after_steam_cut_taxes_refunds_not_authenticated_bank_payout",
+    "wishlists_before_nextfest_month_approx": 82,
+    "wishlists_added_tiny_roguelikes_two_weeks": 474,
+    "wishlists_added_nextfest": 160,
+    "launch_wishlists_approx": 700,
+    "later_outstanding_wishlist_stock": 1081,
+    "reported_poland_units": 201,
+    "event_exposure_windows_identical": false,
+    "causal_event_assignment_verified": false,
+    "pricing_change_incremental_sales_verified": false
+  },
+  "descriptive_only": {
+    "incremental_units_firstweek_after_day3": 87,
+    "incremental_units_later_since_first_week": 661,
+    "niche_event_vs_nextfest_reported_wishlist_additions_ratio": 2.9625,
+    "report_is_only_three_months_sales": false,
+    "festival_ratio_is_causal_effect": false,
+    "retained_net_is_bank_cash": false
+  },
+  "unknown": {
+    "actual_paid_orders": null,
+    "verified_refund_counts": null,
+    "verified_legal_partner_payout_usd": null,
+    "after_cost_creator_profit_usd": null,
+    "matched_launch_wishlist_conversion_rate": null,
+    "incremental_festival_effect": null,
+    "price_change_attributable_units": null,
+    "representative_first_paid_median_usd": null,
+    "exact_zero_paid_sale_fraction": null
+  },
+  "model_path": "site/steam-event-wishlist-window-guard.mjs",
+  "tests_path": "tests/steam-immunica-event-window-audit.test.mjs",
+  "private_records_accessed": false
+}

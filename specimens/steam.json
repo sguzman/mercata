@@ -2589,6 +2589,28 @@
       "evidence_class": "operator_collected_nonprobability_public_library_game_copy_playtime_sample_not_transaction_data",
       "license": "Report permits reusing numbers with attribution; only brief independently worded summaries and public link used. No dataset or private player records reproduced.",
       "notes": "113,781 sampled public libraries and 9,658,442 library-game copies for current-price-positive apps; deterministic hash buckets of friend-graph discovered users; zero minutes is a playtime measure, not zero paid orders. Live US prices not transaction prices; bundle flags heuristic; dates, exclusions and conditional 2-hour denominator recorded in linked study."
+    },
+    {
+      "id": "steam-immunica-oct15-2026-author-firstgame-postmortem",
+      "url": "https://www.reddit.com/r/IndieDev/comments/1x707dr/numbers_from_my_first_3month_steam_game_700/",
+      "publisher": "Self-identified Immunica first-commercial-game author, r/IndieDev",
+      "title": "Numbers from my first 3-month Steam game (700 wishlists, $2,123 gross)",
+      "published_at": "2026-10-15",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "first_person_selected_cumulative_first_game_sales_wishlists_event_attribution_and_net_disclosure",
+      "license": "Short independently written aggregates and public bibliographic link only; no screenshots, author identifiers, unpublished records or copied original prose.",
+      "notes": "Author describes about three months' solo production; 147 copies in three days, 234 in one week, 895 by October 15; $2,123 gross and approximately $1,100 author-described net after deductions; +474 Tiny Roguelikes wishlists during 2 weeks vs +160 at Next Fest, around 700 launch wishlists and 82 pre-fest. Reply says page Jan 16, 2026. Store release is March 29, so report is six-plus months after launch, not a three-month revenue window. Developer's Poland pricing and marketing causal interpretations are unverified."
+    },
+    {
+      "id": "steam-immunica-official-app4315220-march2026",
+      "url": "https://store.steampowered.com/app/4315220/Immunica/",
+      "publisher": "Valve Corporation — public Steam storefront",
+      "title": "Immunica on Steam",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "official_public_store_listing_release_date_developer_publisher_labels_not_financial_ledger",
+      "license": "Public store URL and date/label metadata only; no images, review texts or copyrighted store narrative copied.",
+      "notes": "AppID 4315220 release Mar 29 2026; developer/publisher labels eranboi. Storefront independently corroborates identity and date, not author's sales, festival attribution, historical localized prices, net deductions or legal payee bank receipts."
     }
   ],
   "claims": [
@@ -17101,6 +17123,110 @@
       "observed_at": "2026-10-29",
       "confidence": "medium",
       "limitations": "Nonprobability visible-library sample biased toward friend-network, engaged and observable users, not all initial paid releases; no authenticated transactions, original paid acquisition dates, original checkout prices, merchant remittances or representative developer income."
+    },
+    {
+      "id": "steam-immunica-first-paid-mar29-2026",
+      "text": "Steam lists Immunica (AppID 4315220) as first released March 29, 2026, with eranboi as developer and publisher; the store is not independent proof of author-reported income.",
+      "source_ids": [
+        "steam-immunica-official-app4315220-march2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-disclosure and contemporary public store listing only. Money labels lack authenticated Steamworks and bank reconciliation, event wishlist changes are not unique matched buyers or experimental causal treatment, and this single positive-sale title is not representative of first-paid-release outcomes."
+    },
+    {
+      "id": "steam-immunica-report-oct15-six-month-postlaunch",
+      "text": "The developer's October 15, 2026 post recounts a March 29 release and roughly three months of solo development. Three months describes production, not the elapsed revenue observation window.",
+      "source_ids": [
+        "steam-immunica-oct15-2026-author-firstgame-postmortem",
+        "steam-immunica-official-app4315220-march2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-disclosure and contemporary public store listing only. Money labels lack authenticated Steamworks and bank reconciliation, event wishlist changes are not unique matched buyers or experimental causal treatment, and this single positive-sale title is not representative of first-paid-release outcomes."
+    },
+    {
+      "id": "steam-immunica-first3d147-firstweek234",
+      "text": "The developer reported 147 copies in the first three days and 234 through the first week; both are cumulative author checkpoints, not separate groups of purchases.",
+      "source_ids": [
+        "steam-immunica-oct15-2026-author-firstgame-postmortem"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-disclosure and contemporary public store listing only. Money labels lack authenticated Steamworks and bank reconciliation, event wishlist changes are not unique matched buyers or experimental causal treatment, and this single positive-sale title is not representative of first-paid-release outcomes."
+    },
+    {
+      "id": "steam-immunica-cumulative895-later-unspecified",
+      "text": "The same October report gives 895 total reported sales to date, without a signed sales statement, exact revenue-period cutoff, or verified historical refund reconciliation.",
+      "source_ids": [
+        "steam-immunica-oct15-2026-author-firstgame-postmortem"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-disclosure and contemporary public store listing only. Money labels lack authenticated Steamworks and bank reconciliation, event wishlist changes are not unique matched buyers or experimental causal treatment, and this single positive-sale title is not representative of first-paid-release outcomes."
+    },
+    {
+      "id": "steam-immunica-2123-gross-1100-net-undefined-bank",
+      "text": "The author reports $2,123 gross and approximately $1,100 net after platform cut, taxes and refunds, but neither amount establishes actual deposited cash, legal-publisher royalty split or after-labor profit.",
+      "source_ids": [
+        "steam-immunica-oct15-2026-author-firstgame-postmortem",
+        "steam-reporting-faq-doc"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-disclosure and contemporary public store listing only. Money labels lack authenticated Steamworks and bank reconciliation, event wishlist changes are not unique matched buyers or experimental causal treatment, and this single positive-sale title is not representative of first-paid-release outcomes."
+    },
+    {
+      "id": "steam-immunica-fest-474-vs160-not-causal",
+      "text": "The report assigns 474 wishlist additions over two weeks to the Tiny Roguelikes event and 160 additions to Steam Next Fest. These are different exposure conditions, not a randomized comparison demonstrating one event's causal impact.",
+      "source_ids": [
+        "steam-immunica-oct15-2026-author-firstgame-postmortem"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-disclosure and contemporary public store listing only. Money labels lack authenticated Steamworks and bank reconciliation, event wishlist changes are not unique matched buyers or experimental causal treatment, and this single positive-sale title is not representative of first-paid-release outcomes."
+    },
+    {
+      "id": "steam-immunica-before-fest82-launch700-not-conversion",
+      "text": "About 82 wishlists a month before Next Fest, roughly 700 at launch, and 1,081 still outstanding at the retrospective are distinct changing wishlist stocks; none supplies matched first-launch purchaser conversion.",
+      "source_ids": [
+        "steam-immunica-oct15-2026-author-firstgame-postmortem"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-disclosure and contemporary public store listing only. Money labels lack authenticated Steamworks and bank reconciliation, event wishlist changes are not unique matched buyers or experimental causal treatment, and this single positive-sale title is not representative of first-paid-release outcomes."
+    },
+    {
+      "id": "steam-immunica-storepage-jan16-leadtime",
+      "text": "In a public reply the developer says the Steam page was first put up January 16, 2026, ahead of the March 29 release; this is self-reported page timing, not an independent proof of all prelaunch traffic.",
+      "source_ids": [
+        "steam-immunica-oct15-2026-author-firstgame-postmortem",
+        "steam-immunica-official-app4315220-march2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-disclosure and contemporary public store listing only. Money labels lack authenticated Steamworks and bank reconciliation, event wishlist changes are not unique matched buyers or experimental causal treatment, and this single positive-sale title is not representative of first-paid-release outcomes."
+    },
+    {
+      "id": "steam-immunica-poland201-units-not-revenue-share",
+      "text": "The developer attributes 201 reported copies to Poland and mentions changing Polish prices; without matched regional price, tax and acquisition data, this does not determine Polish net revenue or whether a pricing change caused sales.",
+      "source_ids": [
+        "steam-immunica-oct15-2026-author-firstgame-postmortem"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-disclosure and contemporary public store listing only. Money labels lack authenticated Steamworks and bank reconciliation, event wishlist changes are not unique matched buyers or experimental causal treatment, and this single positive-sale title is not representative of first-paid-release outcomes."
+    },
+    {
+      "id": "steam-immunica-event-sales-bias-no-generalized-rate",
+      "text": "One opt-in report with positive sales, niche event participation and a later cumulative snapshot cannot identify expected festival uplift, representative newcomer income or exact zero-paid-sale incidence.",
+      "source_ids": [
+        "steam-immunica-oct15-2026-author-firstgame-postmortem",
+        "steam-immunica-official-app4315220-march2026"
+      ],
+      "observed_at": "2026-10-29",
+      "confidence": "medium",
+      "limitations": "Selected self-disclosure and contemporary public store listing only. Money labels lack authenticated Steamworks and bank reconciliation, event wishlist changes are not unique matched buyers or experimental causal treatment, and this single positive-sale title is not representative of first-paid-release outcomes."
     }
   ],
   "observations": [],
