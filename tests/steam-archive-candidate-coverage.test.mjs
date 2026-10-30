@@ -19,7 +19,7 @@ const evt=(id,g,s,kind,observed_on='2026-10-25',extra={})=>({
 });
 const attest=(id,g,date,paid=true)=>evt(id,g,'launch','first_paid_release_attestation','2026-10-25',{
  app_type:'game',initial_paid_status:paid,first_paid_playable_date:date,release_mode:'early_access'});
-const base=()=>({fixture_id:'fixture-archives',window,sources,observations:[
+const base=()=>({fixture_id:'fixture-archives',window,sources:structuredClone(sources),observations:[
  evt('curated-a','a','curated','curated_status_label','2026-10-20',{status_label:'delisted'}),
  evt('price-a','a','history','positive_price_observed','2025-08-01'),
  attest('att-a','a','2025-04-01'),
