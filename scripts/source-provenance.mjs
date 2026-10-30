@@ -55,7 +55,7 @@ export function auditPublicSources(evidence,claims,registry){
       const actual=byUrl.get(canonical)||[];
       if(actual.length!==ids.length||actual.some(id=>!ids.includes(id))){invalidFamilies.push(f.id);continue}
       registeredDuplicates.add(canonical);
-    }else if(f.relation==='same_underlying_survey_different_urls'||f.relation==='same_underlying_dataset_different_urls'||f.relation==='same_title_nested_cumulative_observations'){
+    }else if(f.relation==='same_underlying_survey_different_urls'||f.relation==='same_underlying_dataset_different_urls'||f.relation==='same_title_nested_cumulative_observations'||f.relation==='same_vendor_conflicting_report_versions'){
       if(new Set(ids.map(id=>canonicalSourceUrl(byId.get(id).url))).size<2)
         invalidFamilies.push(f.id);
     }else invalidFamilies.push(f.id);

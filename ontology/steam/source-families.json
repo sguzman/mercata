@@ -64,6 +64,22 @@
       ],
       "independence": "one underlying self-selected game with two successive postmortems, not two independent games or representative release cohorts",
       "notes": "Early milestone exceeded 100 units, later report claims 10,525 cumulative units and clarifies accounting stage of earlier 16.5k net label. Both from one author and one AppID; no private financial statements were authenticated."
+    },
+    {
+      "id": "steam-gamesstats-2026-operator-version-conflicting-frame",
+      "relation": "same_vendor_conflicting_report_versions",
+      "observed_population": "One vendor's similarly titled Q1 2026 modeled Steam revenue reports, with incompatible January-to-April release eligibility counts",
+      "documented_selected_games": null,
+      "reported_population_counts": [
+        7478,
+        6169
+      ],
+      "source_ids": [
+        "steam-gamesstats-2026-q1-patreon-7478-model-report",
+        "steam-gamesstats-2026-q1-site-6169-different-report"
+      ],
+      "independence": "two differently framed public versions from Games-Stats, not independent sampling or proof they share an identical release roster",
+      "notes": "Operator Patreon states 7,478 Jan1-Apr16 releases and approx 110k average/650m total. Operator website says 6,169 Jan1-Apr22 and approx 120k average/733m total. Earlier larger cohort and Patreon mean-total discrepancy require missing crosswalk and original model data; do not pool them."
     }
   ],
   "related_documents_not_independent_replications": [
@@ -98,11 +114,13 @@
     "source_urls_to_independent_dataset_count",
     "review_or_modeled_ownership_to_verified_paid_orders",
     "modeled_outcome_validation_to_real_revenue_ground_truth",
-    "related_document_to_identical_cohort_without_population_crosswalk"
+    "related_document_to_identical_cohort_without_population_crosswalk",
+    "same_vendor_conflicting_report_versions_to_independent_studies"
   ],
   "related_documents": [
     "specimens/steam.json",
     "ontology/steam/steam-major-update-review-months-vs-visibility-rounds-2026.json",
-    "ontology/steam/steamforecast-selected-lever-panel-provenance-and-reproducibility-2026.json"
+    "ontology/steam/steamforecast-selected-lever-panel-provenance-and-reproducibility-2026.json",
+    "ontology/steam/gamesstats-q1-2026-conflicting-version-denominators-mean-total-audit.json"
   ]
 }

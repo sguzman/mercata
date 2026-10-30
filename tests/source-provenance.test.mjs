@@ -75,3 +75,15 @@ test('Successive same-title financial snapshots remain one source family without
  const bad=auditPublicSources(evidence,[],{families:[{...family,relation:'unknown_untrusted_relation'}]});
  assert.deepEqual(bad.invalid_source_family_records,['one-game-two-checkpoints']);
 });
+
+test('Independent URL versions of one vendor report may be grouped without asserting one common dataset',()=>{
+ const sources=[{id:'a',url:'https://example.org/operator/post',publisher:'Operator',retrieved_at:'2026-10-29'},
+ {id:'b',url:'https://example.org/operator/revised',publisher:'Operator',retrieved_at:'2026-10-29'}];
+ const f={id:'synthetic-operator-revisions',relation:'same_vendor_conflicting_report_versions',source_ids:['a','b']};
+ const a=auditPublicSources(sources,[{id:'claim',source_ids:['a','b']}],{families:[f]});
+ assert.equal(a.invalid_source_family_records.length,0);
+ assert.equal(a.unregistered_duplicate_documents.length,0);
+ assert.equal(a.inferred_independent_studies,null);
+ const b=auditPublicSources(sources,[],{families:[{...f,relation:'unregistered_vendor' }]});
+ assert.equal(b.invalid_source_family_records.length,1);
+});
