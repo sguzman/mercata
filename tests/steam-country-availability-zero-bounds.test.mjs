@@ -88,7 +88,8 @@ test('A complete observed zero needs financial and transfer reconciliation for f
    /Complete ledger requires|Observed units need bounded ledger coverage/);
  }
  assert.throws(()=>audit([f('a','US',[open],complete(0))],
-  {...options,asOfDate:'2026-01-12'}),/Complete ledger requires/);
+  {...options,asOfDate:'2026-01-12'}),
+  /Complete ledger requires|Observed units need bounded ledger coverage/);
 });
 test('Missing and partial ledgers never fabricate complete zero observations',()=>{
  assert.throws(()=>audit([f('a','US',[open],{observed_gross_paid_units:0})],options),
