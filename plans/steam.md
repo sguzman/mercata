@@ -7,6 +7,10 @@
 
 
 
+## Modeled Steam launch-lever data and public reproducibility mismatches (October 29, 2026)
+
+The [SteamForecast panel audit](../ontology/steam/steamforecast-selected-lever-panel-provenance-and-reproducibility-2026.md) documents 10,403 **positive-model-estimate** launches, not all paid Steam releases. Source tiers sum to 7,652 owner-range estimates, 2,734 constrained review estimates, and 17 unconstrained review estimates; week-one gross is inferred from a *lifetime* ownership/price proxy. A public example exposes a documented **natural-log versus log10** mismatch; the released data's **10+ language** indicator conflicts with the study's **5+ language** framing, and advertised follower/tag covariates do not appear in the shared 19-column panel. Three operator-related public documents and eleven limited claims advance four existing research tasks by one point each; no actual sales or causal returns are inferred. Steam research **91.471%** (Δ **+0.014 pp**), 209 public sources and 1294 claims, with 293 unchanged tasks.
+
 ## Raw and filtered 2024–2025 catalogue economics in a 2026 working paper (October 29, 2026)
 
 The [AIEPA two-snapshot population audit](../ontology/steam/steam-aiepa-2024-2025-raw-vs-filtered-catalog-proxy-audit-2026.md) distinguishes **87,806 / 94,948 raw** May 2024 / March 2025 catalogue records from **77,184 / 81,251 strict retained** records. Its shared-title count of **78,264** reconciles only to raw populations, not to filtered records. The source's median revenue figures are geometric owner-bin × current-price **proxies**, not observed payouts, and a $0 F2P proxy does not identify zero earners. One non-peer-reviewed paper, ten bounded claims and synthetic denominator tests advance three existing tasks by one point each. Steam research **91.457%** (Δ **+0.010 pp**), 206 sources, 1283 claims and 293 unchanged tasks.

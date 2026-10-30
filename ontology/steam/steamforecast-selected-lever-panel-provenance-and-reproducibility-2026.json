@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_selected_model_derived_week_one_outcome_and_causal_claim_reproducibility_audit",
+  "reviewed_at": "2026-10-29",
+  "source_ids": [
+    "steam-steamforecast-hf-2026-10403-modelled-lever-panel",
+    "steam-steamforecast-2026-causal-levers-analysis",
+    "steam-steamforecast-2026-methodology-reported-heldout"
+  ],
+  "claim_ids": [
+    "steam-steamforecast-lever-panel-10403-selected",
+    "steam-steamforecast-quality-tier-counts-7652-2734-17",
+    "steam-steamforecast-derived-week1-lifetime-proxy",
+    "steam-steamforecast-189600-median-selected-only",
+    "steam-steamforecast-public-logfield-ln-vs-log10",
+    "steam-steamforecast-localization-five-vs-ten-language",
+    "steam-steamforecast-public-panel-missing-followers-tags",
+    "steam-steamforecast-1p26-1p09-1p02-reported-notcausal-audit",
+    "steam-steamforecast-6422-heldout-different-target",
+    "steam-steamforecast-modelled-selection-not-median-or-profit",
+    "steam-steamforecast-primary-website-commercial-product"
+  ],
+  "dataset_card": {
+    "selected_games": 10403,
+    "public_columns": 19,
+    "source_quality_counts": {
+      "C_steamspy_owner_geometric_mean": 7652,
+      "B_review_plus_owner_cap": 2734,
+      "D_review_only": 17
+    },
+    "release_date_min": "1997-06-30",
+    "release_date_max": "2026-05-01",
+    "inclusion_rules": [
+      "positive_derived_week1_revenue",
+      "positive_current_price",
+      "non_free",
+      "release_date_present"
+    ],
+    "omitted_low_visibility_and_undervaluable": true,
+    "complete_first_paid_release_frame": false,
+    "authors_reported_selected_median_estimated_weekone_gross_usd_approx": 189600,
+    "observed_paid_weekone_sales": null,
+    "outcome_field": "y_week1_cents",
+    "log_field": "y_log_week1",
+    "reported_log_definition": "log10",
+    "observed_displayed_log_matches": "natural_log_approximately",
+    "displayed_sample_cents_and_log": [
+      {
+        "derived_week1_cents": 353376223,
+        "reported_log": 19.683043837714514
+      },
+      {
+        "derived_week1_cents": 90464185,
+        "reported_log": 18.320464595539843
+      },
+      {
+        "derived_week1_cents": 9005689,
+        "reported_log": 16.01336715775444
+      }
+    ]
+  },
+  "weekone_derivation": {
+    "owner_counts_are_estimated": true,
+    "firstweek_shares_by_lifetime_owner_tier": {
+      "small_indie": 0.4,
+      "mid_tier": 0.3,
+      "mid_major": 0.2,
+      "aaa": 0.12
+    },
+    "discounted_regionally_priced_actual_orders_observed": false
+  },
+  "localization_definition_conflict": {
+    "provider_report_treated_threshold_min_languages": 5,
+    "public_panel_column_description_threshold_min_languages": 10,
+    "published_treated_fraction": 0.238,
+    "actual_model_treatment_rule_confirmed": null
+  },
+  "public_covariate_reproduction": {
+    "report_says_controls_include": [
+      "follower_count",
+      "tag_profile",
+      "recommendations",
+      "genre_cluster"
+    ],
+    "missing_in_public_19_column_file": [
+      "follower_count",
+      "tag_profile"
+    ],
+    "internal_model_features_confirmed": null,
+    "source_claimed_effects_reproduced_from_public_file": false
+  },
+  "reported_model_effects": {
+    "coop_median_multiplier": 1.26,
+    "demo_median_multiplier": 1.09,
+    "localization_median_multiplier": 1.02,
+    "actual_counterfactual_merchant_sales_validation": null,
+    "development_costs_included": false
+  },
+  "separate_validation": {
+    "modeling_corpus_rows": 32106,
+    "heldout_rows": 6422,
+    "validation_target": "derived_revenue_ground_truth_not_merchant_ledger"
+  },
+  "not_identified": {
+    "median_first_paid_game_gross_usd": null,
+    "zero_paid_sale_fraction": null,
+    "causal_demo_effect_on_paid_orders": null,
+    "causal_multiplayer_effect_on_paid_orders": null,
+    "causal_localization_effect_on_paid_orders": null,
+    "developer_net_income_usd": null,
+    "developer_profit_usd": null
+  },
+  "code_module": "site/steamforecast-lever-panel-audit.mjs",
+  "tests_path": "tests/steamforecast-lever-panel-audit.test.mjs",
+  "no_private_merchant_records": true,
+  "raw_complete_dataset_ingested": false
+}

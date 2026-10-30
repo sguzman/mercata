@@ -2281,6 +2281,39 @@
       "evidence_class": "public_non_peer_reviewed_working_paper_secondary_catalog_snapshots_revenue_proxy",
       "license": "Public bibliographic metadata, outbound link, and independently written bounded factual summary only; no article text or charts reproduced.",
       "notes": "Paper explicitly labels itself non-peer-reviewed, uses Kaggle-source May 2024 and March 2025 catalog snapshots, strict filtered versus raw populations and geometric midpoints of estimated owners. No original private Steam sales records or reproducible raw rows independently inspected."
+    },
+    {
+      "id": "steam-steamforecast-hf-2026-10403-modelled-lever-panel",
+      "url": "https://huggingface.co/datasets/steamforecast/steam-launch-lever-panel-2026",
+      "publisher": "SteamForecast — publicly published Hugging Face dataset card",
+      "title": "Steam Launch Lever Panel — 2026 (10,403 selected records)",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "third_party_public_cc_by_4_0_model_derived_launch_week_dataset_not_merchant_sales",
+      "license": "CC BY 4.0 dataset card; source metadata and brief independently authored findings cited with URL. No AppID rows or data tables redistributed here.",
+      "notes": "Card describes 10,403 selected derivable-positive-price revenue estimates, 19 published columns, source tiers B/C/D, and excludes unmeasurable games. Only public description and displayed sample rows reviewed, not all raw file rows."
+    },
+    {
+      "id": "steam-steamforecast-2026-causal-levers-analysis",
+      "url": "https://steamforecast.app/reports/steam-launch-lever-benchmarks",
+      "publisher": "SteamForecast — original analyst's commercial forecasting website",
+      "title": "What actually moves Steam launch revenue? Causal benchmark report",
+      "published_at": "2026-07-01",
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "third_party_observational_causal_model_on_modelled_revenue",
+      "license": "Only bibliographic data and original concise analytical text with attribution; no proprietary charts or model coefficients copied wholesale.",
+      "notes": "Provider's report on same selected panel; advertises revenue lever effects from causal forests, but outcomes are derived estimates and conditional identification assumptions not independently validated."
+    },
+    {
+      "id": "steam-steamforecast-2026-methodology-reported-heldout",
+      "url": "https://steamforecast.app/methodology",
+      "publisher": "SteamForecast — model methodology and validation explanations",
+      "title": "Steam Revenue Forecast Methodology — Validation and causal estimates",
+      "published_at": null,
+      "retrieved_at": "2026-10-29",
+      "evidence_class": "third_party_developer_reported_model_validation_not_merchant_ground_truth",
+      "license": "Outbound reference and original succinct summary only, no text or graphics reproduced.",
+      "notes": "Describes separate 32,106-row modeling corpus and 6,422 held-out validation, accuracy against derived revenue ground truth. Site also offers a paid personalized launch report; not an independent validation source."
     }
   ],
   "claims": [
@@ -15547,6 +15580,124 @@
       "confidence": "high",
       "observed_at": "2026-10-29",
       "limitations": "Interpretive tension is internal to the published narrative and table; no independent recalculation from per-title records."
+    },
+    {
+      "id": "steam-steamforecast-lever-panel-10403-selected",
+      "text": "SteamForecast's public lever panel includes 10,403 selected Steam products with positive derived week-one revenue and price, not a complete launch population including unmeasurable or zero-paid-order games.",
+      "source_ids": [
+        "steam-steamforecast-hf-2026-10403-modelled-lever-panel",
+        "steam-steamforecast-2026-causal-levers-analysis"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "The publicly visible source card was audited, not every record of the full released CSV; complete original paid-release AppID frame unverified."
+    },
+    {
+      "id": "steam-steamforecast-quality-tier-counts-7652-2734-17",
+      "text": "The dataset card assigns 7,652 modeled-revenue rows to SteamSpy owner-bin geometric means, 2,734 to review-based estimates capped by a SteamSpy owner bound, and 17 to uncapped review-based estimates.",
+      "source_ids": [
+        "steam-steamforecast-hf-2026-10403-modelled-lever-panel"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "These are estimation-method tiers, not independent observed order or cash provenance; published counts sum to 10,403."
+    },
+    {
+      "id": "steam-steamforecast-derived-week1-lifetime-proxy",
+      "text": "The panel constructs first-week gross estimates by multiplying an estimated lifetime owner count by price and an assumed first-week lifetime-revenue share of 0.40, 0.30, 0.20 or 0.12 according to owner-size tier.",
+      "source_ids": [
+        "steam-steamforecast-hf-2026-10403-modelled-lever-panel"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Current price and lifetime estimated ownership do not reconstruct actual launch-week paid checkout timing, regional discounts, refunds or settlement."
+    },
+    {
+      "id": "steam-steamforecast-189600-median-selected-only",
+      "text": "The dataset author reports an approximately USD $189,600 median derived week-one outcome within the selected 10,403-row panel, explicitly disclaiming it as a Steam-wide median.",
+      "source_ids": [
+        "steam-steamforecast-hf-2026-10403-modelled-lever-panel"
+      ],
+      "confidence": "medium",
+      "observed_at": "2026-10-29",
+      "limitations": "Reported median was not recomputed from all rows here, and is derived model output rather than independently observed merchant sales."
+    },
+    {
+      "id": "steam-steamforecast-public-logfield-ln-vs-log10",
+      "text": "The public dataset card describes y_log_week1 as a base-10 logarithm, but displayed sample values match the natural logarithm of the corresponding approximate USD-cent values rather than their base-10 logarithms.",
+      "source_ids": [
+        "steam-steamforecast-hf-2026-10403-modelled-lever-panel"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Computed from three displayed example rows only, with small underlying rounding differences; unreviewed full corpus may have exceptions."
+    },
+    {
+      "id": "steam-steamforecast-localization-five-vs-ten-language",
+      "text": "The July 2026 lever analysis labels its high-localization treatment as five or more languages, while the accompanying published panel describes T_languages_high as ten or more languages.",
+      "source_ids": [
+        "steam-steamforecast-hf-2026-10403-modelled-lever-panel",
+        "steam-steamforecast-2026-causal-levers-analysis"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "No accessible build-configuration trace independently reconciles the conflicting treatment definitions; reported 23.8% treated share cannot identify which definition was actually fitted."
+    },
+    {
+      "id": "steam-steamforecast-public-panel-missing-followers-tags",
+      "text": "The public panel exposes 19 columns but omits follower_count and store tags, although the related causal report describes conditioning on followers and tag profile; this published file alone is insufficient to replicate that advertised covariate set.",
+      "source_ids": [
+        "steam-steamforecast-hf-2026-10403-modelled-lever-panel",
+        "steam-steamforecast-2026-causal-levers-analysis"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "The original analyst may have used other unavailable internal fields; absence in the released file does not prove the trained model omitted these confounders."
+    },
+    {
+      "id": "steam-steamforecast-1p26-1p09-1p02-reported-notcausal-audit",
+      "text": "SteamForecast reports selected-panel median conditional model multipliers of 1.26 for co-op, 1.09 for demos and 1.02 for localization; these are analyst-estimated model effects, not externally validated causal increases in real paid sales.",
+      "source_ids": [
+        "steam-steamforecast-2026-causal-levers-analysis",
+        "steam-steamforecast-hf-2026-10403-modelled-lever-panel"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Missing low-outcome games, nonrandom treatments, modeled outcome error and unspecified/unreleased covariates limit identification; game production costs are not included."
+    },
+    {
+      "id": "steam-steamforecast-6422-heldout-different-target",
+      "text": "The provider's methodology describes a 32,106-row training/validation corpus with 6,422 held-out launches and explicitly grades against derived revenue ground truth, which is distinct from authentic publisher sales and from the separate 10,403-row lever panel.",
+      "source_ids": [
+        "steam-steamforecast-2026-methodology-reported-heldout",
+        "steam-steamforecast-hf-2026-10403-modelled-lever-panel"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Validation coverage does not authenticate revenue values or test counterfactual outcomes for all originally paid Steam releases."
+    },
+    {
+      "id": "steam-steamforecast-modelled-selection-not-median-or-profit",
+      "text": "Positive estimated first-week revenue as an inclusion filter removes exactly the low-visibility, zero-revenue and unestimable cases needed to estimate a complete Steam first-release zero-sale fraction or legal-publisher income median.",
+      "source_ids": [
+        "steam-steamforecast-hf-2026-10403-modelled-lever-panel",
+        "steam-steamforecast-2026-causal-levers-analysis"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Exclusion does not prove every excluded title sold nothing; neither paid orders nor legal-publisher income were observed."
+    },
+    {
+      "id": "steam-steamforecast-primary-website-commercial-product",
+      "text": "The report is published by a forecasting service that also markets paid launch analysis, and its public dataset, analysis report and methodology share an operator and underlying derived-data ecosystem rather than being independent confirmations.",
+      "source_ids": [
+        "steam-steamforecast-hf-2026-10403-modelled-lever-panel",
+        "steam-steamforecast-2026-causal-levers-analysis",
+        "steam-steamforecast-2026-methodology-reported-heldout"
+      ],
+      "confidence": "high",
+      "observed_at": "2026-10-29",
+      "limitations": "Commercial interest affects confidence calibration but is not itself proof the numerical results are false."
     }
   ],
   "observations": [],
