@@ -2974,6 +2974,17 @@
       "evidence_class": "official_paid_game_public_release_identity_and_publisher_label",
       "license": "Public URL and independent factual metadata summary; no images, screenshots, review texts or user profiles reproduced.",
       "notes": "Official Steam page identifies AppID 3470340, release July 22 2025, developer/publisher display CraftCoreGames and paid product offer. It does not independently corroborate the July 2026 author's sold copies, refund counts, financial waterfall or legal payee."
+    },
+    {
+      "id": "steam-sep2026-voluntary-hardware-language-survey-oct30",
+      "url": "https://store.steampowered.com/hwsurvey/hw/",
+      "title": "Steam Hardware & Software Survey — September 2026 combined platform summary",
+      "publisher": "Valve Corporation — Steam Hardware & Software Survey",
+      "published_at": "2026-09",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "official_monthly_optional_anonymous_participant_hardware_and_client_language_mix_not_purchaser_census",
+      "license": "Public survey URL, date and minimal independently transcribed percentage aggregates for research; no images, raw participant records or full page tables copied.",
+      "notes": "On October 30 page identifies September 2026 optional anonymous survey. In the combined-platform OS section Windows 95.03%, Linux 3.05%, OSX 1.92%; selected client-language results English 34.20%, Simplified Chinese 31.39%, Russian 9.05%, Japanese 2.41%, Latin America Spanish 0.75%. No survey N, response propensity, unique paid customers, geographic residency, account-level sales, or publisher income authenticated."
     }
   ],
   "claims": [
@@ -19274,6 +19285,89 @@
       "confidence": "bounded_developer_firstyear_self_report_crosschecked_with_official_store_metadata",
       "observed_at": "2026-10-30",
       "limitations": "Self-selected author-reported first-year accounting without authenticated Steamworks export; official store metadata independently supports product identity only. Matching refund cohorts, legal payee, platform share, bank deposits, costs and full first-paid release hour remain unverified."
+    },
+    {
+      "id": "steam-sep26-hwsurvey-optional-anonymous",
+      "text": "Valve describes its September 2026 Steam Hardware & Software Survey as monthly, optional and anonymous; the public display does not establish an all-user or paying-buyer probability sample.",
+      "source_ids": [
+        "steam-sep2026-voluntary-hardware-language-survey-oct30"
+      ],
+      "confidence": "bounded_valve_public_optional_survey_snapshot_not_customer_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Optional anonymous monthly survey lacks a disclosed population response denominator and does not authenticate buyer identities, spending, seller payee identity or measured localization uplift; metadata and selected aggregate percentages are not representative guaranteed forecasts."
+    },
+    {
+      "id": "steam-sep26-hwsurvey-combined-os-shares",
+      "text": "Valve's September 2026 combined-platform survey displays Windows 95.03%, Linux 3.05% and macOS 1.92% as OS platform totals; these percentages describe survey results, not Steam gross game sales.",
+      "source_ids": [
+        "steam-sep2026-voluntary-hardware-language-survey-oct30"
+      ],
+      "confidence": "bounded_valve_public_optional_survey_snapshot_not_customer_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Optional anonymous monthly survey lacks a disclosed population response denominator and does not authenticate buyer identities, spending, seller payee identity or measured localization uplift; metadata and selected aggregate percentages are not representative guaranteed forecasts."
+    },
+    {
+      "id": "steam-sep26-hwsurvey-selected-language-shares",
+      "text": "The survey lists English 34.20%, Simplified Chinese 31.39%, Russian 9.05%, Japanese 2.41% and Latin America Spanish 0.75% as selected client-language rows.",
+      "source_ids": [
+        "steam-sep2026-voluntary-hardware-language-survey-oct30"
+      ],
+      "confidence": "bounded_valve_public_optional_survey_snapshot_not_customer_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Optional anonymous monthly survey lacks a disclosed population response denominator and does not authenticate buyer identities, spending, seller payee identity or measured localization uplift; metadata and selected aggregate percentages are not representative guaranteed forecasts."
+    },
+    {
+      "id": "steam-sep26-hwsurvey-language-is-not-country",
+      "text": "Client language is not an observed country of residence, payment currency or store-country purchase location; Valve's localization guidance independently warns against equating language with geography.",
+      "source_ids": [
+        "steam-sep2026-voluntary-hardware-language-survey-oct30",
+        "steam-localization-official-oct2026"
+      ],
+      "confidence": "bounded_valve_public_optional_survey_snapshot_not_customer_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Optional anonymous monthly survey lacks a disclosed population response denominator and does not authenticate buyer identities, spending, seller payee identity or measured localization uplift; metadata and selected aggregate percentages are not representative guaranteed forecasts."
+    },
+    {
+      "id": "steam-sep26-hwsurvey-cannot-scale-to-132m-payers",
+      "text": "The optional September participant shares cannot be multiplied by an undated Steamworks monthly-active-user marketing floor to identify monthly unique purchasers, paid-game demand or legal publisher proceeds.",
+      "source_ids": [
+        "steam-sep2026-voluntary-hardware-language-survey-oct30",
+        "steamworks-platform-reach-landing-oct29-2026"
+      ],
+      "confidence": "bounded_valve_public_optional_survey_snapshot_not_customer_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Optional anonymous monthly survey lacks a disclosed population response denominator and does not authenticate buyer identities, spending, seller payee identity or measured localization uplift; metadata and selected aggregate percentages are not representative guaranteed forecasts."
+    },
+    {
+      "id": "steam-sep26-hwsurvey-platform-os-not-version-rows",
+      "text": "Combined OS platform totals must not be added to version-specific categories or to percentages filtered to Windows-only, macOS-only or Linux-only survey views.",
+      "source_ids": [
+        "steam-sep2026-voluntary-hardware-language-survey-oct30"
+      ],
+      "confidence": "bounded_valve_public_optional_survey_snapshot_not_customer_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Optional anonymous monthly survey lacks a disclosed population response denominator and does not authenticate buyer identities, spending, seller payee identity or measured localization uplift; metadata and selected aggregate percentages are not representative guaranteed forecasts."
+    },
+    {
+      "id": "steam-sep26-hwsurvey-single-month-not-trend",
+      "text": "The September 2026 snapshot is a single participant-composition observation; its displayed month-over-month changes are not measured changes in the number of unique paying buyers.",
+      "source_ids": [
+        "steam-sep2026-voluntary-hardware-language-survey-oct30"
+      ],
+      "confidence": "bounded_valve_public_optional_survey_snapshot_not_customer_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Optional anonymous monthly survey lacks a disclosed population response denominator and does not authenticate buyer identities, spending, seller payee identity or measured localization uplift; metadata and selected aggregate percentages are not representative guaranteed forecasts."
+    },
+    {
+      "id": "steam-sep26-hwsurvey-language-localization-not-roi",
+      "text": "A high client-language survey share may inform a language/localization research hypothesis, but not a causal, first-game translation sales lift or cost-return calculation without matched product exposures and purchases.",
+      "source_ids": [
+        "steam-sep2026-voluntary-hardware-language-survey-oct30",
+        "steam-localization-official-oct2026"
+      ],
+      "confidence": "bounded_valve_public_optional_survey_snapshot_not_customer_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Optional anonymous monthly survey lacks a disclosed population response denominator and does not authenticate buyer identities, spending, seller payee identity or measured localization uplift; metadata and selected aggregate percentages are not representative guaranteed forecasts."
     }
   ],
   "observations": [],
