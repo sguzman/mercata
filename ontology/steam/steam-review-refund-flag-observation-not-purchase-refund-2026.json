@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "review_refund_flag_transaction_denominator_separation",
+  "reviewed_at": "2026-10-30",
+  "source_ids": [
+    "steam-review-api-2026"
+  ],
+  "claim_ids": [
+    "steam-review-refundflag-review-author-not-orders",
+    "steam-review-refundflag-review-selection-biased",
+    "steam-review-refundflag-origin-and-free-not-cash",
+    "steam-review-refundflag-filter-and-cache-horizon"
+  ],
+  "task_ids": [
+    "steam/income/study-refund-adjusted-sold-units",
+    "steam/risk/measure-refund-and-chargeback-exposure",
+    "sales/reputation",
+    "review/privacy"
+  ],
+  "source_url": "https://partner.steamgames.com/doc/webapi/IUserReviewsService",
+  "example": {
+    "fictional_review_rows": 3,
+    "refunded_true": 1,
+    "refunded_false": 1,
+    "flag_unobserved": 1,
+    "review_flag_share_lower": 0.3333333333333333,
+    "review_flag_share_upper": 0.6666666666666666
+  },
+  "unknown": {
+    "actual_review_refund_flag_fraction": null,
+    "actual_paid_order_refund_rate": null,
+    "matched_purchase_cohort_refund_rate": null,
+    "publisher_refund_loss_usd": null,
+    "developer_profit_usd": null,
+    "marketwide_zero_paid_sales_fraction": null
+  },
+  "model_path": "site/steam-review-refund-flag-audit.mjs",
+  "test_path": "tests/steam-review-refund-flag-audit.test.mjs",
+  "real_review_records_accessed": false,
+  "real_financial_records_accessed": false,
+  "existing_official_source_reused": true
+}
