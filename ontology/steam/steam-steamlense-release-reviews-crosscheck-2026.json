@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_provider_current_catalog_paid_free_and_review_counts_not_historical_paid_sales_census",
+  "observed_at": "2026-10-31",
+  "source_ids": [
+    "steam-steamlense-release-review-stats-20261031",
+    "steam-steamlense-methodology-20261031"
+  ],
+  "claim_ids": [
+    "steam-steamlense-2024-2025-paid-free-current-catalog-split",
+    "steam-steamlense-2025-under-ten-reviews-not-zero-orders",
+    "steam-steamlense-catalog-status-not-originally-paid-census"
+  ],
+  "provider": "Steamlense",
+  "provider_snapshot_url": "https://steamlense.com/stats",
+  "provider_method_url": "https://steamlense.com/methodology",
+  "provider_release_year_rows": [
+    {
+      "year": 2024,
+      "reported_paid_games": 14574,
+      "reported_free_to_play_games": 3230,
+      "reported_all_games": 17804
+    },
+    {
+      "year": 2025,
+      "reported_paid_games": 17644,
+      "reported_free_to_play_games": 2988,
+      "reported_all_games": 20632
+    }
+  ],
+  "provider_review_count_row": {
+    "release_year": 2025,
+    "reported_share_below_ten_reviews_percent": 61,
+    "denominator": "all_currently_observed_2025_released_games_in_provider_catalog_including_free_to_play",
+    "observation_window": "reviews_accumulated_by_public_snapshot_not_matched_fixed_age_after_release"
+  },
+  "method_limitations": [
+    "Provider release-year figures describe its currently observed catalog; historical removed/untracked titles can be absent.",
+    "Provider paid/free-to-play classification is not independently verified original positive-price status at first playable release.",
+    "The observed under-ten-review share covers paid and free-to-play titles together and is not an early fixed-age cohort.",
+    "Public review counts do not establish paid units, refunds, zero paid orders, publisher profits or buyer conversion.",
+    "Provider pages are mutable, and category or count changes between reads are not a matched AppID reconciliation."
+  ],
+  "appids_imported": 0,
+  "financial_records_imported": 0,
+  "independent_origin_price_histories_reconciled": false,
+  "unknown": {
+    "complete_historical_originally_paid_2024_game_count": null,
+    "complete_historical_originally_paid_2025_game_count": null,
+    "paid_2025_games_with_exactly_zero_orders": null,
+    "share_of_originally_paid_releases_below_ten_reviews": null,
+    "actual_steam_wide_publisher_income_distribution": null
+  },
+  "model_path": "site/steam-steamlense-release-reviews-crosscheck.mjs",
+  "test_path": "tests/steam-steamlense-release-reviews-crosscheck.test.mjs"
+}

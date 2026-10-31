@@ -3084,6 +3084,28 @@
       "evidence_class": "voluntary_selected_developer_four_game_unit_counts_not_finance_ledger",
       "license": "Public link and small attributed aggregate game counts only; no personal account, customer transaction, identifying game metadata or private documents imported.",
       "notes": "One developer voluntarily reports 276,253,131,69 copies for four Steam game releases in 2019, 2021, 2022, 2023; current outstanding wishlists 360,375,267,147; a not-yet-released sequel page had ten wishlists after two weeks. Counts are self reported as of February 2026, with longer lifetime observation for older games. No authenticated financial report, matching wishlist conversion, legal payee or causal effect verified."
+    },
+    {
+      "id": "steam-steamlense-release-review-stats-20261031",
+      "url": "https://steamlense.com/stats",
+      "title": "Steamlense current catalog: annual paid/free game counts and review bands",
+      "publisher": "Steamlense",
+      "published_at": null,
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "third_party_live_current_catalog_aggregate_counts_not_originally_paid_release_frame",
+      "license": "Public source link and independently described, small attributed aggregate figures only; no game-level records, exports or site text reproduced.",
+      "notes": "Snapshot 2024 paid 14574/free 3230; 2025 paid 17644/free 2988; 2025 all-game under-ten-review share 61.0%. Mutable catalog snapshots and review exposure windows; no initial paid price, complete delisted frame or authorized financial data."
+    },
+    {
+      "id": "steam-steamlense-methodology-20261031",
+      "url": "https://steamlense.com/methodology",
+      "title": "Steamlense collection and revenue-estimation method and known gaps",
+      "publisher": "Steamlense",
+      "published_at": null,
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "public_provider_methodology_coverage_frequency_and_review_estimator_limitations",
+      "license": "Public source link and original methodological critique; no source text, game records or financial datasets imported.",
+      "notes": "Uses Steam catalog and store APIs with review histograms, third-party price histories and estimated sales-per-review bands; price/review refresh differs by game size. Public review counts are not sales and inferred revenue is not authenticated publisher net cash."
     }
   ],
   "claims": [
@@ -19754,6 +19776,38 @@
       "confidence": "bounded_single_voluntary_public_developer_self_report_no_partner_verification",
       "observed_at": "2026-10-31",
       "limitations": "One developer's public account with no supplied authenticated Steam partner transaction exports, dates of first paid playable availability, consistent fixed-age follow-up, game-level revenue, matched wishlists, legal payee or labor and publisher costs."
+    },
+    {
+      "id": "steam-steamlense-2024-2025-paid-free-current-catalog-split",
+      "text": "At a 2026-10-31 snapshot, Steamlense reported 14,574 paid and 3,230 free-to-play currently cataloged games with 2024 release dates (17,804 combined), versus 17,644 paid and 2,988 free-to-play games with 2025 release dates (20,632 combined).",
+      "source_ids": [
+        "steam-steamlense-release-review-stats-20261031"
+      ],
+      "confidence": "attributed_mutable_third_party_catalog_snapshot_no_appid_origin_reconciliation",
+      "observed_at": "2026-10-31",
+      "limitations": "Current catalog classifications, historical release-date changes, missing delisted games, and uncertain first playable paid launch; counts are not a historical originally-paid census."
+    },
+    {
+      "id": "steam-steamlense-2025-under-ten-reviews-not-zero-orders",
+      "text": "Steamlense reported that 61.0% of its currently observed 2025 release-year games had fewer than ten public reviews at capture, combining currently paid and free-to-play titles. This is not a count of zero-sale or first-month zero-review paid releases.",
+      "source_ids": [
+        "steam-steamlense-release-review-stats-20261031",
+        "steam-steamlense-methodology-20261031"
+      ],
+      "confidence": "attributed_provider_current_catalog_review_threshold_not_paid_unit_observation",
+      "observed_at": "2026-10-31",
+      "limitations": "No game-level time-since-launch matching, no original paid status or independent checkout transactions; public reviews need not track the number of purchases."
+    },
+    {
+      "id": "steam-steamlense-catalog-status-not-originally-paid-census",
+      "text": "Steamlense annual paid/free aggregates cannot supply the complete originally-paid Steam release population or a zero-order denominator because historical launch price and removed-title coverage are not independently reconciled; its review-based sales model is explicitly an estimate, not a merchant settlement report.",
+      "source_ids": [
+        "steam-steamlense-release-review-stats-20261031",
+        "steam-steamlense-methodology-20261031"
+      ],
+      "confidence": "public_provider_methodology_and_explicit_nonidentifiability",
+      "observed_at": "2026-10-31",
+      "limitations": "No AppID-by-AppID historical first-paid-playable roster, transfer-era financial access, full-period checkout data, or representative developer net-income evidence."
     }
   ],
   "observations": [],
