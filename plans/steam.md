@@ -821,3 +821,7 @@ The [dated GameCharts genre supply study](../ontology/steam/steam-four-tag-2024-
 ## Conditional four-tag overlap arithmetic (October 31, 2026)
 
 The [dated GameCharts study](../ontology/steam/steam-four-tag-2024-2025-public-release-supply-2026.md) now applies Mercata's existing nonexclusive-tag pigeonhole method to the four observed 2024 and 2025 supply tallies. If the independent pages were captured in the same frozen frame, the 2025 counts would require at least **1,070** redundant memberships or **357** multiply tagged games; the unverified snapshot alignment prevents claiming an empirical measured overlap. One original genre-intersection task advances to **92%** with linked arithmetic QA. Exact project score **91.860%** (Δ **+0.003 pp**), 275 sources, 1597 claims; complete originally paid game frame and publisher profit remain unknown.
+
+## Reconciled calendar-month release counts (October 31, 2026)
+
+The [public GameCharts monthly study](../ontology/steam/steam-four-tag-2024-2025-public-release-supply-2026.md) reconciles twelve 2024 monthly Steam game release counts to 17,393 and twelve 2025 counts to 20,561. November 2025 has 2,102 recorded listings. These observations strengthen research into seasonal *supply* without estimating seasonal consumer purchasing or profit. Original seasonality task advances one point; exact research progress **91.863%** (Δ **+0.003 pp**), 275 source records, 1599 linked claims and 293 unchanged tasks.

@@ -19,7 +19,9 @@
     "steam-gamecharts-tag-assignments-overlap-change",
     "steam-gamecharts-genre-frames-not-originally-paid",
     "steam-gamecharts-current-feed-omits-older-retired",
-    "steam-gamecharts-fourtag-conditional-overlap-pigeonhole-20261031"
+    "steam-gamecharts-fourtag-conditional-overlap-pigeonhole-20261031",
+    "steam-gamecharts-monthly-year-total-reconciliation-20261031",
+    "steam-gamecharts-monthly-supply-not-buyer-demand-20261031"
   ],
   "observed_aggregate": {
     "provider": "GameCharts",
@@ -130,5 +132,69 @@
     "original_paid_game_overlap": null,
     "publisher_revenue_overlap": null,
     "exact_tag_pair_intersections": null
+  },
+  "monthly_store_game_release_supply_20261031": {
+    "observed_on": "2026-10-31",
+    "source_id": "steam-gamecharts-releases-oct29-2026",
+    "source_url": "https://charts.game/charts/releases",
+    "months": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "year_2024_release_counts": [
+      1136,
+      1362,
+      1320,
+      1288,
+      1479,
+      1340,
+      1462,
+      1578,
+      1379,
+      1742,
+      1730,
+      1577
+    ],
+    "year_2025_release_counts": [
+      1402,
+      1352,
+      1782,
+      1725,
+      1649,
+      1626,
+      1817,
+      1753,
+      1592,
+      2008,
+      2102,
+      1753
+    ],
+    "sum_2024": 17393,
+    "sum_2025": 20561,
+    "year_totals_reconcile": true,
+    "peak_month_2024": "Oct",
+    "peak_count_2024": 1742,
+    "peak_month_2025": "Nov",
+    "peak_count_2025": 2102,
+    "quiet_month_2025": "Feb",
+    "quiet_count_2025": 1352,
+    "october_november_2024": 3472,
+    "october_november_2025": 4110,
+    "partial_2026_excluded": true,
+    "paid_releases_by_month": null,
+    "buyer_demand_by_month": null,
+    "publisher_income_by_month": null,
+    "causal_best_launch_month": null,
+    "note": "Source is dynamically updated current game release-year catalog data, not a fixed originally paid launch frame, buyer checkout history or revenue report."
   }
 }

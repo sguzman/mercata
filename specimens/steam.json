@@ -1950,7 +1950,7 @@
       "retrieved_at": "2026-10-29",
       "evidence_class": "independent_dynamic_public_game_release_year_count",
       "license": "Only public URL, metadata, short descriptive counts and independently written limitations; no dataset copies.",
-      "notes": "On Oct 29, around 14:38 UTC, provider reported 20,565 Steam game apps dated in release year 2025; excludes demos, DLC, software, soundtracks, upcoming titles. Site's hourly catalog can revise counts. October 30, 2026 second capture of the same provider release-year URL reported 17,393 games with 2024 release dates and 20,561 with 2025 release dates; previously observed 2025 count of 20,565 on October 29 is preserved as a historical snapshot. The URL was reused rather than registering a duplicate source."
+      "notes": "On Oct 29, around 14:38 UTC, provider reported 20,565 Steam game apps dated in release year 2025; excludes demos, DLC, software, soundtracks, upcoming titles. Site's hourly catalog can revise counts. October 30, 2026 second capture of the same provider release-year URL reported 17,393 games with 2024 release dates and 20,561 with 2025 release dates; previously observed 2025 count of 20,565 on October 29 is preserved as a historical snapshot. The URL was reused rather than registering a duplicate source. October 31 second check: GameCharts' 2024 and 2025 twelve-month release tables sum respectively to 17,393 and 20,561, with November 2025 maximum 2,102; these are release-listing counts, not sales."
     },
     {
       "id": "steam-gaugedb-release-year-oct26-2026",
@@ -19596,6 +19596,26 @@
       "confidence": "conditional_deterministic_pigeonhole_math_on_unmatched_mutable_provider_snapshots",
       "observed_at": "2026-10-31",
       "limitations": "Provider tags overlap and can change, source pages were not captured at exactly the same time, and a subsequent one-game revision proves drift. Consequently the conditional figures do not constitute empirical matched-roster lower bounds, paid-only game counts or sales data."
+    },
+    {
+      "id": "steam-gamecharts-monthly-year-total-reconciliation-20261031",
+      "text": "The GameCharts October 31, 2026 catalog table's 2024 monthly Steam game-release counts add to 17,393 and its 2025 monthly counts add to 20,561; November 2025 has the most cataloged releases (2,102) while February has the fewest (1,352).",
+      "source_ids": [
+        "steam-gamecharts-releases-oct29-2026"
+      ],
+      "confidence": "high_for_date_specific_single_provider_arithmetic",
+      "observed_at": "2026-10-31",
+      "limitations": "Current store-classified release dates can be revised and exclude historical delistings. There is no independently verified first-paid launch cohort, demand, sales or payout denominator."
+    },
+    {
+      "id": "steam-gamecharts-monthly-supply-not-buyer-demand-20261031",
+      "text": "Differences in GameCharts' 2024–2025 monthly game release listing volumes cannot establish changes in buyer demand, paid orders, genre-level revenue, conversion, or an optimal calendar month to launch a paid Steam game.",
+      "source_ids": [
+        "steam-gamecharts-releases-oct29-2026"
+      ],
+      "confidence": "high_for_source_unit_boundary_not_causal_economic_inference",
+      "observed_at": "2026-10-31",
+      "limitations": "No matched sale cohorts, impressions, marketing effort, seasonal consumer purchases, refund-adjusted receipts or profit; current catalog dates and historical coverage drift."
     }
   ],
   "observations": [],

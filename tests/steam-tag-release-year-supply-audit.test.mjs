@@ -105,3 +105,21 @@ test('Conditional four-tag overlap arithmetic never invents observed paid-game j
  assert.equal(study.conditional_overlap_checks.actual_multi_tagged_game_count,null);
  assert.equal(study.conditional_overlap_checks.original_paid_game_overlap,null);
 });
+
+test('Complete 2024 and 2025 monthly release rows reconcile to reported yearly totals without creating buyer demand',()=>{
+ const s=study.monthly_store_game_release_supply_20261031;
+ assert.equal(s.months.length,12);
+ assert.equal(new Set(s.months).size,12);
+ for(const [year,field] of [[2024,'year_2024_release_counts'],[2025,'year_2025_release_counts']]){
+  assert.equal(s[field].length,12);
+  assert(s[field].every(n=>Number.isSafeInteger(n)&&n>=0));
+  assert.equal(s[field].reduce((a,b)=>a+b,0),
+   study.observed_aggregate.year_totals.find(row=>row.year===year).store_game_releases);
+ }
+ assert.equal(s.peak_month_2025,'Nov');
+ assert.equal(s.peak_count_2025,2102);
+ assert.equal(s.quiet_count_2025,1352);
+ assert.equal(s.october_november_2025,4110);
+ for(const field of ['paid_releases_by_month','buyer_demand_by_month','publisher_income_by_month',
+  'causal_best_launch_month'])assert.equal(s[field],null);
+});

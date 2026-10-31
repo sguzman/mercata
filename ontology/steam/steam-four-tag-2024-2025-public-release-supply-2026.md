@@ -38,3 +38,27 @@ The [existing Steam tag-overlap bound helper](../../site/steam-tag-overlap-bound
 **If** each group and the all-game total were measured in the **same** game population at the **same instant**, at least **880** (2024) and **1,070** (2025) memberships would be redundant. Because a game can contribute no more than three extra memberships among these four tags, the corresponding *conditional necessary lower bounds* are **294** and **357** distinct games with multiple selected tags. These are pigeonhole arithmetic results, **not** measured overlaps: the provider's pages refresh at different times, tag assignments are mutable, and the October 31 recheck already changed one Puzzle entry.
 
 A real lower-bound estimate for a fixed historical paid-release population would require same-instant, AppID-aligned source data and validated initial paid status. The project's helper explicitly returns `null` for exact pair intersections, and this study does not assert any observed cross-tag AppIDs, publisher counts, genre paid sales or cash receipts.
+
+## Calendar-month release-supply check — October 31, 2026
+
+The independent [GameCharts release-year table](https://charts.game/charts/releases) provides twelve monthly Steam-game release counts in each full calendar year. The month sums match the corresponding reported **2024 total of 17,393** and **2025 total of 20,561**. The currently observed records are:
+
+| Month | 2024 game listings dated to this month | 2025 game listings dated to this month |
+| --- | ---: | ---: |
+| Jan | 1,136 | 1,402 |
+| Feb | 1,362 | 1,352 |
+| Mar | 1,320 | 1,782 |
+| Apr | 1,288 | 1,725 |
+| May | 1,479 | 1,649 |
+| Jun | 1,340 | 1,626 |
+| Jul | 1,462 | 1,817 |
+| Aug | 1,578 | 1,753 |
+| Sep | 1,379 | 1,592 |
+| Oct | 1,742 | 2,008 |
+| Nov | 1,730 | 2,102 |
+| Dec | 1,577 | 1,753 |
+| **Total** | **17,393** | **20,561** |
+
+For 2024 the highest counted month was **October (1,742)**; for 2025 it was **November (2,102)**, versus a February 2025 low of **1,352**. October and November together contribute **3,472** (2024) and **4,110** (2025) entries under the same provider's definitions. This is a descriptive *listing supply* comparison from its current catalog, not an originally paid game launch census. Early Access time zero, retired-title omissions, edited release dates and different regional paid status are not independently reconciled.
+
+**No demand measurement follows from this:** neither monthly consumer purchases, conversion, launch visibility, refund-adjusted revenue, developer income nor the causal best calendar month to release is available. The incomplete 2026 calendar year is excluded rather than compared to a full-year total.
