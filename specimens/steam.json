@@ -2963,6 +2963,17 @@
       "evidence_class": "official_legacy_review_endpoint_deprecation_and_new_review_api_migration_pointer",
       "license": "Official public documentation URL and original short factual paraphrase only, without copying API content or review data.",
       "notes": "Valve marks old User Reviews Get List endpoint deprecated and directs users to IUserReviewsService GetAppReviews. Method reference separately documents all-language, purchase-origin, off-topic, pagination and query-summary caveats. No authenticated merchant or reviewer data accessed."
+    },
+    {
+      "id": "steam-roguecraft-official-app3470340-oct2026",
+      "url": "https://store.steampowered.com/app/3470340/RogueCraft/",
+      "title": "RogueCraft — official Steam game listing",
+      "publisher": "Valve Corporation — public Steam store",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "official_paid_game_public_release_identity_and_publisher_label",
+      "license": "Public URL and independent factual metadata summary; no images, screenshots, review texts or user profiles reproduced.",
+      "notes": "Official Steam page identifies AppID 3470340, release July 22 2025, developer/publisher display CraftCoreGames and paid product offer. It does not independently corroborate the July 2026 author's sold copies, refund counts, financial waterfall or legal payee."
     }
   ],
   "claims": [
@@ -19181,6 +19192,88 @@
       "confidence": "bounded_official_steamworks_api_documentation_and_synthetic_query_guard",
       "observed_at": "2026-10-30",
       "limitations": "Only official interface semantics and invented query/page fixtures were checked. No live review endpoint, public user-level review record, historical paid game cohort, developer financial report or actual purchase count was retrieved."
+    },
+    {
+      "id": "steam-roguecraft-official-firstpaid-2025-jul22",
+      "text": "Valve's current listing identifies RogueCraft AppID 3470340 as a paid product with July 22, 2025 release and CraftCoreGames developer/publisher display labels; this does not authenticate first checkout time or the legal payment entity.",
+      "source_ids": [
+        "steam-roguecraft-official-app3470340-oct2026"
+      ],
+      "confidence": "bounded_developer_firstyear_self_report_crosschecked_with_official_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "Self-selected author-reported first-year accounting without authenticated Steamworks export; official store metadata independently supports product identity only. Matching refund cohorts, legal payee, platform share, bank deposits, costs and full first-paid release hour remain unverified."
+    },
+    {
+      "id": "steam-roguecraft-yearone-refund-quotient-approx",
+      "text": "The July 28, 2026 developer post reports 1,674 copies and 220 refunds; 220 divided by 1,674 is approximately 13.14%, consistent with the author-rounded 13.1%, not a validated original-purchase-cohort refund rate.",
+      "source_ids": [
+        "steam-roguecraft-firstyear-report-jul2026"
+      ],
+      "confidence": "bounded_developer_firstyear_self_report_crosschecked_with_official_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "Self-selected author-reported first-year accounting without authenticated Steamworks export; official store metadata independently supports product identity only. Matching refund cohorts, legal payee, platform share, bank deposits, costs and full first-paid release hour remain unverified."
+    },
+    {
+      "id": "steam-roguecraft-yearone-gross-net-difference",
+      "text": "The reported $14,992 gross minus $11,888 author-labeled net equals $3,104, but that residual cannot be assigned uniquely to refunds, chargebacks, taxes, Steam fees or other adjustments.",
+      "source_ids": [
+        "steam-roguecraft-firstyear-report-jul2026"
+      ],
+      "confidence": "bounded_developer_firstyear_self_report_crosschecked_with_official_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "Self-selected author-reported first-year accounting without authenticated Steamworks export; official store metadata independently supports product identity only. Matching refund cohorts, legal payee, platform share, bank deposits, costs and full first-paid release hour remain unverified."
+    },
+    {
+      "id": "steam-roguecraft-net-label-not-post-platform-cash",
+      "text": "The author describes net revenue after refunds, chargebacks, taxes and VAT but does not unambiguously attest deduction of Valve's platform share, legal publisher allocations or actual bank remittances.",
+      "source_ids": [
+        "steam-roguecraft-firstyear-report-jul2026"
+      ],
+      "confidence": "bounded_developer_firstyear_self_report_crosschecked_with_official_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "Self-selected author-reported first-year accounting without authenticated Steamworks export; official store metadata independently supports product identity only. Matching refund cohorts, legal payee, platform share, bank deposits, costs and full first-paid release hour remain unverified."
+    },
+    {
+      "id": "steam-roguecraft-observation-not-exact-365days",
+      "text": "The public July 22, 2025 Steam release and July 28, 2026 author post are 371 calendar days apart, so the approximate first-year report is not a verified precisely aligned 365-day paid cohort.",
+      "source_ids": [
+        "steam-roguecraft-firstyear-report-jul2026",
+        "steam-roguecraft-official-app3470340-oct2026"
+      ],
+      "confidence": "bounded_developer_firstyear_self_report_crosschecked_with_official_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "Self-selected author-reported first-year accounting without authenticated Steamworks export; official store metadata independently supports product identity only. Matching refund cohorts, legal payee, platform share, bank deposits, costs and full first-paid release hour remain unverified."
+    },
+    {
+      "id": "steam-roguecraft-lifetime-players-not-paid-sales",
+      "text": "The author's 1,578 lifetime players are distinct from 1,674 reported copies sold, and the two aggregates cannot be identified as matched unique purchasers or used to infer game refunds.",
+      "source_ids": [
+        "steam-roguecraft-firstyear-report-jul2026"
+      ],
+      "confidence": "bounded_developer_firstyear_self_report_crosschecked_with_official_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "Self-selected author-reported first-year accounting without authenticated Steamworks export; official store metadata independently supports product identity only. Matching refund cohorts, legal payee, platform share, bank deposits, costs and full first-paid release hour remain unverified."
+    },
+    {
+      "id": "steam-roguecraft-demo-wishlist-not-matched-conversion",
+      "text": "The same author reports approximately 900 Next Fest demo players, 1,166 prelaunch wishlists and 4,105 later outstanding wishlists; none is linked to the purchased-unit records as a matched conversion cohort.",
+      "source_ids": [
+        "steam-roguecraft-firstyear-report-jul2026"
+      ],
+      "confidence": "bounded_developer_firstyear_self_report_crosschecked_with_official_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "Self-selected author-reported first-year accounting without authenticated Steamworks export; official store metadata independently supports product identity only. Matching refund cohorts, legal payee, platform share, bank deposits, costs and full first-paid release hour remain unverified."
+    },
+    {
+      "id": "steam-roguecraft-selected-firstgame-not-earnings-distribution",
+      "text": "The selected first-game disclosure, even when rounded gross and refunds are arithmetically consistent, cannot estimate the median publisher payout, lifetime profitability or market zero-paid-sale prevalence.",
+      "source_ids": [
+        "steam-roguecraft-firstyear-report-jul2026",
+        "steam-roguecraft-official-app3470340-oct2026"
+      ],
+      "confidence": "bounded_developer_firstyear_self_report_crosschecked_with_official_store_metadata",
+      "observed_at": "2026-10-30",
+      "limitations": "Self-selected author-reported first-year accounting without authenticated Steamworks export; official store metadata independently supports product identity only. Matching refund cohorts, legal payee, platform share, bank deposits, costs and full first-paid release hour remain unverified."
     }
   ],
   "observations": [],

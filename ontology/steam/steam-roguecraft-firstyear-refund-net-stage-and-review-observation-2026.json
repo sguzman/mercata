@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "selected_firstyear_game_refund_gross_net_and_player_denominator_stage_audit",
+  "reviewed_at": "2026-10-30",
+  "source_ids": [
+    "steam-roguecraft-firstyear-report-jul2026",
+    "steam-roguecraft-official-app3470340-oct2026"
+  ],
+  "claim_ids": [
+    "steam-roguecraft-official-firstpaid-2025-jul22",
+    "steam-roguecraft-yearone-refund-quotient-approx",
+    "steam-roguecraft-yearone-gross-net-difference",
+    "steam-roguecraft-net-label-not-post-platform-cash",
+    "steam-roguecraft-observation-not-exact-365days",
+    "steam-roguecraft-lifetime-players-not-paid-sales",
+    "steam-roguecraft-demo-wishlist-not-matched-conversion",
+    "steam-roguecraft-selected-firstgame-not-earnings-distribution"
+  ],
+  "game": {
+    "appid": 3470340,
+    "title": "RogueCraft",
+    "store_release_date": "2025-07-22",
+    "developer_display": "CraftCoreGames",
+    "publisher_display": "CraftCoreGames",
+    "publisher_bank_payee_verified": null
+  },
+  "disclosure": {
+    "published_at": "2026-07-28",
+    "report_period": "approximate_first_year",
+    "gross_copies_reported": 1674,
+    "refunds_reported": 220,
+    "rounded_refund_percentage_reported": 13.1,
+    "gross_revenue_usd_reported": 14992,
+    "net_revenue_usd_reported": 11888,
+    "author_net_definition": "after_refunds_chargebacks_taxes_and_vat_no_explicit_platform_share_attestation",
+    "reported_lifetime_players": 1578,
+    "average_playtime_minutes": 375,
+    "median_playtime_minutes": 147,
+    "prelaunch_wishlists_approximate": 1166,
+    "current_outstanding_wishlists": 4105,
+    "nextfest_demo_players_approximate": 900,
+    "authorized_financial_export_provided": false
+  },
+  "arithmetic": {
+    "calendar_days_release_to_post": 371,
+    "refund_over_reported_units_fraction": 0.13142174432497014,
+    "author_rounded_percentage_consistent": true,
+    "reported_gross_minus_author_net_usd": 3104,
+    "exact_matched_365day_window": false,
+    "refund_count_from_same_purchase_cohort_verified": false,
+    "net_less_platform_share_verified": false,
+    "net_reported_is_publisher_bank_receipts": false,
+    "lifetime_players_distinct_from_paid_purchases": true
+  },
+  "unknown": {
+    "matched_gross_paid_units": null,
+    "matched_refund_units": null,
+    "same_calendar_horizon_gross_and_net": null,
+    "steam_platform_share_usd": null,
+    "contract_publisher_split_usd": null,
+    "after_platform_remitted_income_usd": null,
+    "developer_paid_labor_cost_usd": null,
+    "developer_after_cost_profit_usd": null,
+    "matched_wishlist_conversion_rate": null,
+    "matched_demo_conversion_rate": null,
+    "representative_income_median": null,
+    "real_marketwide_zero_sales_fraction": null
+  },
+  "model_path": "site/steam-firstyear-selfreport-stage-guard.mjs",
+  "test_path": "tests/steam-firstyear-roguecraft-cash-stage.test.mjs",
+  "reviewer_or_customer_data_collected": false,
+  "original_author_post_is_previously_cited_same_case": true
+}
