@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_independent_provider_comparable_year_genre_tagged_release_counts",
+  "reviewed_at": "2026-10-30",
+  "observed_on": "2026-10-30",
+  "provider": "GameCharts",
+  "source_ids": [
+    "steam-gamecharts-release-year-20261030",
+    "steam-gamecharts-action-2024-2025-20261030",
+    "steam-gamecharts-simulation-2024-2025-20261030",
+    "steam-gamecharts-strategy-2024-2025-20261030",
+    "steam-gamecharts-puzzle-2024-2025-20261030"
+  ],
+  "claim_ids": [
+    "steam-gamecharts-2025-current-game-catalog-vintage",
+    "steam-gamecharts-four-tag-supply-2024-2025",
+    "steam-gamecharts-relative-genre-share-not-sales",
+    "steam-gamecharts-tag-assignments-overlap-change",
+    "steam-gamecharts-genre-frames-not-originally-paid",
+    "steam-gamecharts-current-feed-omits-older-retired"
+  ],
+  "observed_aggregate": {
+    "provider": "GameCharts",
+    "observed_on": "2026-10-30",
+    "year_totals": [
+      {
+        "year": 2024,
+        "store_game_releases": 17393
+      },
+      {
+        "year": 2025,
+        "store_game_releases": 20561
+      }
+    ],
+    "tag_rows": [
+      {
+        "tag": "Action",
+        "release_count_2024": 6896,
+        "release_count_2025": 7730,
+        "provider_share_pct_2024": 39.6,
+        "provider_share_pct_2025": 37.6,
+        "source_id": "steam-gamecharts-action-2024-2025-20261030"
+      },
+      {
+        "tag": "Simulation",
+        "release_count_2024": 3926,
+        "release_count_2025": 5138,
+        "provider_share_pct_2024": 22.6,
+        "provider_share_pct_2025": 25,
+        "source_id": "steam-gamecharts-simulation-2024-2025-20261030"
+      },
+      {
+        "tag": "Strategy",
+        "release_count_2024": 3598,
+        "release_count_2025": 4389,
+        "provider_share_pct_2024": 20.7,
+        "provider_share_pct_2025": 21.3,
+        "source_id": "steam-gamecharts-strategy-2024-2025-20261030"
+      },
+      {
+        "tag": "Puzzle",
+        "release_count_2024": 3853,
+        "release_count_2025": 4374,
+        "provider_share_pct_2024": 22.2,
+        "provider_share_pct_2025": 21.3,
+        "source_id": "steam-gamecharts-puzzle-2024-2025-20261030"
+      }
+    ]
+  },
+  "method": "Public year-by-year release-year/tag aggregates on four GameCharts trend pages plus a separate overall release-year page. Counts selected at date of study; page clocks need not coincide. No individual games scraped or downloaded.",
+  "selection_limitations": [
+    "Current user-assigned Steam tags can change and overlap",
+    "Provider began catalog in October 2026, so some earlier removed games may be missing",
+    "Original launch paid status not part of these release count denominators",
+    "Cross-page captures are not exactly simultaneous",
+    "The four-tag sum is not a unique-game count"
+  ],
+  "unknown": {
+    "original_paid_base_game_release_count_2024": null,
+    "original_paid_base_game_release_count_2025": null,
+    "unique_games_with_any_selected_tag": null,
+    "actual_paid_order_zero_fraction": null,
+    "genre_level_publisher_cash_income": null
+  },
+  "model_path": "site/steam-tag-release-year-supply-audit.mjs",
+  "test_path": "tests/steam-tag-release-year-supply-audit.test.mjs",
+  "appids_imported": 0,
+  "commercial_transactions_imported": 0,
+  "live_api_called": false
+}
