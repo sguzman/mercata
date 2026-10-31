@@ -25,3 +25,21 @@ test('Missing matched sales horizons, actual zero paid games and developer incom
  assert.equal(j.no_real_appids_or_accounts_collected,true);
  assert.equal(j.source_ids.length,1);assert.equal(j.claim_ids.length,4);
 });
+
+test('Self-report claim provenance and original 293-task portfolio scores remain linked',()=>{
+ const root=new URL('../',import.meta.url);
+ const read=p=>JSON.parse(fs.readFileSync(new URL(p,root),'utf8'));
+ const d=read('specimens/steam.json'),p=read('plans/steam.json'),q=read('queues/steam.json');
+ const ss=new Set(d.evidence.map(e=>e.id)),claims=new Map(d.claims.map(x=>[x.id,x]));
+ for(const id of j.source_ids)assert(ss.has(id),id);
+ for(const id of j.claim_ids){
+  const c=claims.get(id);assert(c,id);assert(c.source_ids.every(s=>ss.has(s)),id);
+ }
+ const all=[...p.detail_tasks,...q.queues.flatMap(g=>g.tasks)];
+ assert.equal(all.length,293);assert.equal(new Set(all.map(x=>x.id)).size,293);
+ for(const id of ["steam/market/distinguish-indie-solo-and-studio-supply","steam/competition/classify-portfolio-publishers"]){
+  const t=all.find(x=>x.id===id);assert(t,id);
+  for(const ref of ["ontology/steam/steam-four-releases-one-author-self-reported-unmatched-horizons-2026.md","ontology/steam/steam-four-releases-one-author-self-reported-unmatched-horizons-2026.json","tests/steam-four-releases-one-author-self-reported-unmatched-horizons-2026.test.mjs"])assert(t.evidence.includes(ref),ref);
+ }
+ assert.equal(p.progress_percent,Math.round(all.reduce((s,t)=>s+(t.percent??t.progress),0)/293));
+});

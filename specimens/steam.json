@@ -3073,6 +3073,17 @@
       "evidence_class": "selected_launch_calendar_days_aggregates_from_third_party_estimator_or_public_reviews",
       "license": "Public links, small aggregate counts and independently drafted methodological notes only; no app-level records, reviewer data or source text reproduced.",
       "notes": "69 author-assessed paid releases with review bands 24,26,11,8 after about 30 days; 24 have fewer than ten reviews, not verified zero paid sales."
+    },
+    {
+      "id": "steam-2026-four-release-one-author-2019-2023-portfolio",
+      "url": "https://www.reddit.com/r/GameDevelopment/comments/1rb3xrj/failed_at_game_developement_a_report_of_a/",
+      "title": "February 2026 author-reported four Steam game copy totals (2019, 2021, 2022, 2023 releases)",
+      "publisher": "Public voluntary game developer self-report",
+      "published_at": "2026-02-21",
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "voluntary_selected_developer_four_game_unit_counts_not_finance_ledger",
+      "license": "Public link and small attributed aggregate game counts only; no personal account, customer transaction, identifying game metadata or private documents imported.",
+      "notes": "One developer voluntarily reports 276,253,131,69 copies for four Steam game releases in 2019, 2021, 2022, 2023; current outstanding wishlists 360,375,267,147; a not-yet-released sequel page had ten wishlists after two weeks. Counts are self reported as of February 2026, with longer lifetime observation for older games. No authenticated financial report, matching wishlist conversion, legal payee or causal effect verified."
     }
   ],
   "claims": [
@@ -19703,6 +19714,46 @@
       "confidence": "bounded_public_researcher_selected_samples_without_merchant_ledger",
       "observed_at": "2026-10-31",
       "limitations": "Nonrandom selected launch days, two Gamalytic-estimated panels with different horizons and one review-count panel; no validated paid order, exact-zero transactions, complete first-paid game population or publisher returns."
+    },
+    {
+      "id": "steam-four-release-author-selfreported-2019-2023-copies",
+      "text": "A February 2026 developer post self-reports four sequential Steam release-year title copy totals: 276 (2019), 253 (2021), 131 (2022), and 69 (2023), adding to 729 title copies but not 729 distinct purchasing accounts or verified sales.",
+      "source_ids": [
+        "steam-2026-four-release-one-author-2019-2023-portfolio"
+      ],
+      "confidence": "bounded_single_voluntary_public_developer_self_report_no_partner_verification",
+      "observed_at": "2026-10-31",
+      "limitations": "One developer's public account with no supplied authenticated Steam partner transaction exports, dates of first paid playable availability, consistent fixed-age follow-up, game-level revenue, matched wishlists, legal payee or labor and publisher costs."
+    },
+    {
+      "id": "steam-four-release-wishlist-stock-not-buyer-cohort",
+      "text": "The same self-report gives outstanding wishlist counts of 360, 375, 267, and 147 at the February 2026 observation, but these stocks are not a time-matched eligible launch wishlist-to-purchase cohort.",
+      "source_ids": [
+        "steam-2026-four-release-one-author-2019-2023-portfolio"
+      ],
+      "confidence": "bounded_single_voluntary_public_developer_self_report_no_partner_verification",
+      "observed_at": "2026-10-31",
+      "limitations": "One developer's public account with no supplied authenticated Steam partner transaction exports, dates of first paid playable availability, consistent fixed-age follow-up, game-level revenue, matched wishlists, legal payee or labor and publisher costs."
+    },
+    {
+      "id": "steam-four-release-age-and-selection-confound",
+      "text": "The four source-reported title counts cover substantially different lengths of time since launch and a single voluntary author; their descending sequence cannot establish a general Steam publisher sales trend or causal marketing outcome.",
+      "source_ids": [
+        "steam-2026-four-release-one-author-2019-2023-portfolio"
+      ],
+      "confidence": "bounded_single_voluntary_public_developer_self_report_no_partner_verification",
+      "observed_at": "2026-10-31",
+      "limitations": "One developer's public account with no supplied authenticated Steam partner transaction exports, dates of first paid playable availability, consistent fixed-age follow-up, game-level revenue, matched wishlists, legal payee or labor and publisher costs."
+    },
+    {
+      "id": "steam-four-release-prelaunch-sequel-not-fifth-paid-launch",
+      "text": "The source also mentions ten wishlists after approximately two weeks for a planned sequel's Steam store page; this is not a fifth paid release with zero copy sales, and the first four reported titles all had positive reported copies.",
+      "source_ids": [
+        "steam-2026-four-release-one-author-2019-2023-portfolio"
+      ],
+      "confidence": "bounded_single_voluntary_public_developer_self_report_no_partner_verification",
+      "observed_at": "2026-10-31",
+      "limitations": "One developer's public account with no supplied authenticated Steam partner transaction exports, dates of first paid playable availability, consistent fixed-age follow-up, game-level revenue, matched wishlists, legal payee or labor and publisher costs."
     }
   ],
   "observations": [],
