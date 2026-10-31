@@ -34,11 +34,11 @@ test('Ten policy claims join to public sources, and Steam remains 293 tasks',()=
 });
 
 test('Deck Verified entails Machine Verified, but per-device badge inference is one-way',()=>{
- const x=d.hardware.rating_inference;
- assert.equal(x.ratings_issued_per_device,true);
- assert.equal(x.deck_verified_guarantees_machine_verified,true);
- assert.equal(x.machine_verified_guarantees_deck_verified,false);
- assert.equal(x.other_badge_transfers_proven,false);
- assert.equal(x.badge_status_required_for_release,false);
- assert.equal(x.empirical_device_sales_from_rating,null);
+ const rating=x.hardware.rating_inference;
+ assert.equal(rating.ratings_issued_per_device,true);
+ assert.equal(rating.deck_verified_guarantees_machine_verified,true);
+ assert.equal(rating.machine_verified_guarantees_deck_verified,false);
+ assert.equal(rating.other_badge_transfers_proven,false);
+ assert.equal(rating.badge_status_required_for_release,false);
+ assert.equal(rating.empirical_device_sales_from_rating,null);
 });
