@@ -19368,6 +19368,46 @@
       "confidence": "bounded_valve_public_optional_survey_snapshot_not_customer_census",
       "observed_at": "2026-10-30",
       "limitations": "Optional anonymous monthly survey lacks a disclosed population response denominator and does not authenticate buyer identities, spending, seller payee identity or measured localization uplift; metadata and selected aggregate percentages are not representative guaranteed forecasts."
+    },
+    {
+      "id": "steam-review-refundflag-review-author-not-orders",
+      "text": "Valve's current GetAppReviews response includes a per-review refunded boolean indicating whether the review author was refunded for the app; it is not a count of refunded paid purchases.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "confidence": "high_for_official_field_definition_not_empirical_paid_orders",
+      "observed_at": "2026-10-30",
+      "limitations": "First-party API schema only; no real reviews, account identifiers, matched buyer/refund transactions, publisher cash, game-population sample, or profit verified."
+    },
+    {
+      "id": "steam-review-refundflag-review-selection-biased",
+      "text": "Public review-level refund flags observe authors who reviewed, not the complete population of customers who bought, refunded, or did not review the game.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "confidence": "high_for_official_field_definition_not_empirical_paid_orders",
+      "observed_at": "2026-10-30",
+      "limitations": "First-party API schema only; no real reviews, account identifiers, matched buyer/refund transactions, publisher cash, game-population sample, or profit verified."
+    },
+    {
+      "id": "steam-review-refundflag-origin-and-free-not-cash",
+      "text": "The steam_purchase and received_for_free review fields describe review-author metadata and cannot verify a publisher transaction ledger, matched net unit sales or bank remittance.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "confidence": "high_for_official_field_definition_not_empirical_paid_orders",
+      "observed_at": "2026-10-30",
+      "limitations": "First-party API schema only; no real reviews, account identifiers, matched buyer/refund transactions, publisher cash, game-population sample, or profit verified."
+    },
+    {
+      "id": "steam-review-refundflag-filter-and-cache-horizon",
+      "text": "GetAppReviews language, purchase-origin, review-type, off-topic and optional other query filters, plus potentially cached anonymous responses, constrain review observations and cannot identify financial refund amounts.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "confidence": "high_for_official_field_definition_not_empirical_paid_orders",
+      "observed_at": "2026-10-30",
+      "limitations": "First-party API schema only; no real reviews, account identifiers, matched buyer/refund transactions, publisher cash, game-population sample, or profit verified."
     }
   ],
   "observations": [],

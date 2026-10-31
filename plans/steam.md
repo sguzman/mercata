@@ -4,6 +4,14 @@
 
 [Machine-readable inventory](steam.json) · [Steam research dossier](../specimens/steam.json) · [Gallery](../gallery/README.md).
 
+## Review-author refunds versus actual purchase refunds (October 30, 2026)
+
+The [new source-backed review field audit](../ontology/steam/steam-review-refund-flag-observation-not-purchase-refund-2026.md) distinguishes Valve's per-review `refunded` flag from refunded paid orders, cash exposure and matched purchase-cohort return rates. A pure [aggregate validator](../site/steam-review-refund-flag-audit.mjs) accepts only invented review-flag counts tied to the existing page-chain checker, never real reviewer identifiers or merchant data. Observed and unobserved review flags can bound a *synthetic review-row proportion*, but cannot establish actual purchaser refund rates. An already-registered primary Valve source supports four newly bounded claims; four existing tasks each advance one point without adding to the original **293** tasks.
+
+Steam research: **91.836%** (Δ **+0.014 pp**), **270 public sources**, **1586 source-linked claims**. Marketwide actual purchase returns, publisher cash and true-zero sales remain unknown.
+
+
+
 
 
 
