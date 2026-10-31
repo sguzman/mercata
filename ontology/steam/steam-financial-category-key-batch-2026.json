@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "first_party_financial_api_category_and_key_request_boundaries_not_public_sales_sample",
+  "reviewed_on": "2026-10-31",
+  "source_ids": [
+    "steam-financial-api-official",
+    "steam-valve-2025-year-review-march2026"
+  ],
+  "claim_ids": [
+    "steam-financial-2025-key-request-activation-not-sold",
+    "steam-financial-store-package-vs-retail-key-vs-microtransaction",
+    "steam-financial-return-zero-net-not-zero-gross",
+    "steam-financial-complete-zero-qualified-by-partner-period-access"
+  ],
+  "api_documentation": "https://partner.steamgames.com/doc/webapi/IPartnerFinancialsService?l=english",
+  "year_review": "https://steamcommunity.com/groups/steamworks/announcements/detail/528746884222682053",
+  "reporting": {
+    "source_role": "official_partner_only_api_specification_not_observed_private_partner_financials",
+    "category_definitions": [
+      {
+        "kind": "steam_store_package",
+        "line_item_type": "Package",
+        "package_sale_type": "Steam",
+        "quantity_field": "gross_units_sold",
+        "returns_field": "gross_units_returned",
+        "paid_product_attribution_needed": true
+      },
+      {
+        "kind": "retail_key_activation",
+        "line_item_type": "Package",
+        "package_sale_type": "Retail",
+        "quantity_field": "gross_units_activated",
+        "batch_identifier": "key_request_id",
+        "paid_external_transaction_unverified": true
+      },
+      {
+        "kind": "microtransaction",
+        "line_item_type": "MicroTxn",
+        "quantity_field": "gross_units_sold",
+        "paid_base_game_checkout_class": false
+      }
+    ],
+    "key_request_id_added_in_2025_sales_data_api": true,
+    "key_request_id_exposes_activation_by_issued_batch_not_store_checkout": true,
+    "full_partner_financial_access_required": true,
+    "historical_transfer_view_grants_required": true,
+    "whole_date_pagination_requery_required": true,
+    "customer_identity_and_personal_records_needed": false,
+    "publicly_observable_paid_base_game_sales_sample_present": false
+  },
+  "interpretive_cases": [
+    {
+      "fixture_name": "refunded_paid_package_and_activated_key",
+      "gross_positive_price_steam_units": 2,
+      "returned_steam_units": 2,
+      "reported_retail_key_activations": 7,
+      "microtransaction_units": 4,
+      "zero_gross_paid_store_units": false,
+      "zero_net_steam_store_units": true,
+      "external_key_paid_sales_known": false
+    },
+    {
+      "fixture_name": "complete_zero_steam_store_with_retail_activations",
+      "gross_positive_price_steam_units": 0,
+      "returned_steam_units": 0,
+      "reported_retail_key_activations": 7,
+      "microtransaction_units": 4,
+      "zero_gross_paid_store_units": true,
+      "zero_net_steam_store_units": true,
+      "external_key_paid_sales_known": false
+    }
+  ],
+  "unknown": {
+    "actual_game_order_count": null,
+    "actual_zero_sales_fraction": null,
+    "original_paid_historical_population": null,
+    "authenticated_legal_partner_takehome": null,
+    "net_studio_profit": null
+  },
+  "privacy": {
+    "no_actual_app_ids": true,
+    "no_partner_keys": true,
+    "no_real_customer_data": true
+  },
+  "model_path": "site/steam-financial-key-batch-boundaries.mjs",
+  "test_path": "tests/steam-financial-key-batch-boundaries.test.mjs"
+}

@@ -19975,6 +19975,48 @@
       "confidence": "explicit_provider_model_inclusion_and_exclusion_rules",
       "observed_at": "2026-10-31",
       "limitations": "A $0 modeled output for zero reviews is not zero paid orders; the WeLoveIt median denominator is not independently reconciled. Different catalogs, price gaps, bundle and refund treatment prevent marketwide publisher estimates."
+    },
+    {
+      "id": "steam-financial-2025-key-request-activation-not-sold",
+      "text": "Valve's 2025 Steamworks Sales Data API added per-key-request activation reporting via key_request_id, distinguishing activated Steam key batches from direct paid Steam-store units; keys can represent QA, promotional, press or externally retailed entitlements.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-valve-2025-year-review-march2026"
+      ],
+      "confidence": "first_party_steamworks_api_schema_and_march2026_operational_review",
+      "observed_at": "2026-10-31",
+      "limitations": "Activation is not evidence of an external paid transaction and does not identify publisher net cash. Financial API is partner-only; no private rows retrieved."
+    },
+    {
+      "id": "steam-financial-store-package-vs-retail-key-vs-microtransaction",
+      "text": "Valve's GetDetailedSales distinguishes package_sale_type Steam store package rows with gross_units_sold, Retail key activation rows with gross_units_activated and key_request_id, and separate MicroTxn rows; combining them as base-game paid orders would overstate the relevant checkout population.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "official_first_party_type_and_field_mapping",
+      "observed_at": "2026-10-31",
+      "limitations": "An authorized package-to-base-game entitlement mapping and positive-price classification are still necessary, and private partner access and transfer history have not been verified."
+    },
+    {
+      "id": "steam-financial-return-zero-net-not-zero-gross",
+      "text": "A Steam-store reporting window with two gross paid units and two returned units has zero net retained units but is not a zero-gross-sales window. Retail key activations and MicroTxn units remain separate even if a base game shares the entitlements.",
+      "source_ids": [
+        "steam-financial-api-official"
+      ],
+      "confidence": "arithmetic_and_official_gross_returned_field_semantics_synthetic_example",
+      "observed_at": "2026-10-31",
+      "limitations": "Two sale units and two returns are invented for a regression fixture, not an empirical Steam report; period returns may not correspond to sales made in that same period."
+    },
+    {
+      "id": "steam-financial-complete-zero-qualified-by-partner-period-access",
+      "text": "Identifying zero paid Steam-store checkout units for a specific game and period requires complete authorized reporting, transfer-visible history, all date pages and updates, and corroborated price-positive package-to-game attribution. A zero observed with missing coverage is unknown; a key activation alone cannot establish a Steam-store paid sale.",
+      "source_ids": [
+        "steam-financial-api-official",
+        "steam-valve-2025-year-review-march2026"
+      ],
+      "confidence": "first_party_documented_reporting_procedures_and_synthetic_missingness_logic",
+      "observed_at": "2026-10-31",
+      "limitations": "Not an audited full historical paid-game population or sampled earnings dataset; authenticated real owner-level financial data and legal publishing cash remain unavailable."
     }
   ],
   "observations": [],
