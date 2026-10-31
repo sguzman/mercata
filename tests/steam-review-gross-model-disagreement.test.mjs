@@ -18,6 +18,9 @@ test('Published seven PureGameStats outcome bins reconcile to reviewed priced ga
 test('Two sites model gross only; no zero-paid-order or publisher after-cost inference',()=>{
  const a=audit(sample());
  assert.equal(a.provider_b_reported_reviewless_priced_games,9300);
+ assert.equal(a.provider_b_headline_median_reviewless_inclusion_verified,false);
+ assert.equal(a.provider_b_headline_median_includes_reviewless,null);
+ assert.equal(study.scope.weloveit_headline_median_includes_zero_review_class,null);
  for(const k of ['actual_zero_paid_order_count','actual_paid_order_distribution',
   'verified_legal_publisher_income_median','verified_studio_net_profit_median',
   'total_paid_games_historically_launched'])assert.equal(a[k],null,k);

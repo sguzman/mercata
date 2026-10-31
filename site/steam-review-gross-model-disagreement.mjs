@@ -52,6 +52,8 @@ export function auditSteamReviewGrossModelDisagreement(rows){
   reported_count_difference_b_minus_a:b.priced_reviewed_games-a.priced_reviewed_games,
   reported_model_median_ratio_b_to_a:b.model_estimated_lifetime_median_gross_usd/a.model_estimated_lifetime_median_gross_usd,
   provider_b_reported_reviewless_priced_games:b.priced_zero_review_games,
+  provider_b_headline_median_reviewless_inclusion_verified:false,
+  provider_b_headline_median_includes_reviewless:null,
   total_paid_games_historically_launched:null,
   compared_game_rosters_matched:false,
   top_one_percent_measures_verified_actual_revenue:false,

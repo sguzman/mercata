@@ -19967,14 +19967,14 @@
     },
     {
       "id": "steam-two-review-models-exclude-unreviewed-paid-order-zeros",
-      "text": "Both public headline gross models require at least one review and a usable price; WeLoveIt additionally reports 9,300 priced zero-review games in its separate catalog category. Such reviewless games may have paid sales, and neither model can establish an exact-zero paid-order fraction or after-cost publisher earnings.",
+      "text": "PureGameStats explicitly excludes zero-review games from its priced review-bearing model. WeLoveIt separately lists 9,300 paid games with zero reviews as below its positive-review measurement floor, but its public description does not unambiguously establish whether that category enters its displayed headline median. Neither estimator can identify a zero-paid-order fraction or actual developer net income.",
       "source_ids": [
         "steam-puregamestats-review-gross-model-snapshot-oct2026",
         "steam-weloveit-review-revenue-report-2026-10-29"
       ],
       "confidence": "explicit_provider_model_inclusion_and_exclusion_rules",
       "observed_at": "2026-10-31",
-      "limitations": "Review status is not payment status; optional exclusions, unmatched AppIDs, other current price gaps, and nonrepresentative reporting prevent a historical zero-order denominator."
+      "limitations": "A $0 modeled output for zero reviews is not zero paid orders; the WeLoveIt median denominator is not independently reconciled. Different catalogs, price gaps, bundle and refund treatment prevent marketwide publisher estimates."
     }
   ],
   "observations": [],
