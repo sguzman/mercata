@@ -58,12 +58,13 @@ export function auditSyntheticSteamReviewQueryCoverage(input={}){
  const visited=new Set();
  for(let i=0;i<pages.length;i++){
   const page=pages[i];
-  if(!shape(page,['http_status','response_envelope','cursor_in','cursor_out','num_reviews','total_matching','score_total_reviews'])||
+  if(!shape(page,['http_status','response_envelope','cursor_in','cursor_out','num_reviews','returned_reviews_length','total_matching','score_total_reviews'])||
    page.http_status!==200||page.response_envelope!=='response'||
    page.cursor_in!==nextCursor||visited.has(page.cursor_in)||
    !(page.cursor_in==='*'||cursor(page.cursor_in))||
    !(page.cursor_out===null||cursor(page.cursor_out))||
    !counts(page.num_reviews)||page.num_reviews>input.request.num_per_page||
+   !counts(page.returned_reviews_length)||page.returned_reviews_length!==page.num_reviews||
    !counts(page.total_matching)||
    page.score_total_reviews!==undefined&&(!counts(page.score_total_reviews)||
     i!==0||input.request.review_type!==0))
@@ -107,6 +108,7 @@ export function auditSyntheticSteamReviewQueryCoverage(input={}){
   terminal_empty_page_seen:emptyTerminal,
   internal_count_chain_reconciled:emptyTerminal&&observed===matching,
   synthetic_http_200_envelope_pages:pages.length,
+  page_summary_counts_match_fictional_array_lengths:true,
   failed_http_pages_admitted:false,
   legacy_success_field_admitted:false,
   all_origin_all_language_query_chain_candidate:fullScope&&historicalSort&&
@@ -120,6 +122,6 @@ export function auditSyntheticSteamReviewQueryCoverage(input={}){
   publisher_cash_or_profit:null,
   network_requests_executed:false,
   private_customer_data_ingested:false,
-  caveat:'Fictional HTTP-200 and response-envelope assertions reject synthetic rate-limit, server-error and legacy payload shapes, but do not authenticate a real request. Count and cursor consistency in invented pages does not authenticate the Steam API, verify unique reviews, freeze a moving catalog, or identify paid checkouts. Default English/Steam-origin/off-topic filters change the observed query frame; Helpful/Funny ordering cannot be assumed to exhaust all historical reviews. First-page score summary differs from per-page counts and from transaction units.'
+  caveat:'Fictional HTTP-200 and response-envelope assertions reject synthetic rate-limit, server-error and legacy payload shapes, but do not authenticate a real request. Query-summary page counts and invented review-array lengths must agree, but no actual review text or reviewer identities are ingested. Count and cursor consistency in invented pages does not authenticate the Steam API, verify unique reviews, freeze a moving catalog, or identify paid checkouts. Default English/Steam-origin/off-topic filters change the observed query frame; Helpful/Funny ordering cannot be assumed to exhaust all historical reviews. First-page score summary differs from per-page counts and from transaction units.'
  });
 }

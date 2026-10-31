@@ -49,7 +49,9 @@
     "http_status_200_required_for_each_synthetic_page": true,
     "current_response_envelope_required_for_each_synthetic_page": "response",
     "failed_or_rate_limited_http_response_may_terminate_review_count": false,
-    "legacy_success_field_allowed_in_fixture": false
+    "legacy_success_field_allowed_in_fixture": false,
+    "synthetic_page_count_must_match_review_array_length": true,
+    "raw_review_array_content_in_fixture_allowed": false
   },
   "unknown": {
     "live_endpoint_operational_read": null,

@@ -11,9 +11,9 @@ const query=()=>({fixture_id:'fixture-reviews',
   languages:['all'],purchase_type:1,review_type:0,num_per_page:2,
   filter_offtopic_activity:false},
  pages:[
-  {http_status:200,response_envelope:'response',cursor_in:'*',cursor_out:'fixture-cursor-a',num_reviews:2,total_matching:3,score_total_reviews:2},
-  {http_status:200,response_envelope:'response',cursor_in:'fixture-cursor-a',cursor_out:'fixture-cursor-b',num_reviews:1,total_matching:3},
-  {http_status:200,response_envelope:'response',cursor_in:'fixture-cursor-b',cursor_out:'fixture-cursor-c',num_reviews:0,total_matching:3}
+  {http_status:200,response_envelope:'response',cursor_in:'*',cursor_out:'fixture-cursor-a',num_reviews:2,returned_reviews_length:2,total_matching:3,score_total_reviews:2},
+  {http_status:200,response_envelope:'response',cursor_in:'fixture-cursor-a',cursor_out:'fixture-cursor-b',num_reviews:1,returned_reviews_length:1,total_matching:3},
+  {http_status:200,response_envelope:'response',cursor_in:'fixture-cursor-b',cursor_out:'fixture-cursor-c',num_reviews:0,returned_reviews_length:0,total_matching:3}
  ]});
 test('Explicit legacy labels translate to current numeric enums without a network call',()=>{
  const z=migrate({fixture_id:'fixture-a',filter:'recent',language:'all',
@@ -35,6 +35,7 @@ test('A count-matched, empty-terminated, unfiltered synthetic query is still not
  const r=audit(query());
  assert.equal(r.internal_count_chain_reconciled,true);
  assert.equal(r.synthetic_http_200_envelope_pages,3);
+ assert.equal(r.page_summary_counts_match_fictional_array_lengths,true);
  assert.equal(r.failed_http_pages_admitted,false);
  assert.equal(r.legacy_success_field_admitted,false);
  assert.equal(r.observed_review_rows_in_fixture,3);
@@ -102,6 +103,16 @@ test('HTTP 429 and non-200 or legacy response shapes never count as a terminal e
  assert.throws(()=>audit(c),/Malformed synthetic page/);
  const d=query();delete d.pages[2].response_envelope;
  assert.throws(()=>audit(d),/Malformed synthetic page/);
+});
+test('Summary page counts must match independently supplied fictional review-array lengths',()=>{
+ for(const [index,length] of [[0,1],[1,0],[2,1]]){
+  const x=query();x.pages[index].returned_reviews_length=length;
+  assert.throws(()=>audit(x),/Malformed synthetic page/);
+ }
+ const missing=query();delete missing.pages[1].returned_reviews_length;
+ assert.throws(()=>audit(missing),/Malformed synthetic page/);
+ const huge=query();huge.pages[0].returned_reviews_length=Number.MAX_SAFE_INTEGER+1;
+ assert.throws(()=>audit(huge),/Malformed synthetic page/);
 });
 test('Score total is first-page and all-review-type only, never a sum across pages',()=>{
  const a=query();a.pages[1].score_total_reviews=5;
