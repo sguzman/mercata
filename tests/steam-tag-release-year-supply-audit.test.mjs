@@ -49,3 +49,37 @@ test('Source metadata explicitly preserves only game-tag supply and unknown fina
  assert(Object.values(study.unknown).every(v=>v===null));
  assert.equal(study.appids_imported,0);assert.equal(study.commercial_transactions_imported,0);
 });
+
+test('Documented next-day Puzzle snapshot is a dated revision, not extra paid game sales',()=>{
+ const r=study.followup_public_snapshot;
+ assert.equal(r.observed_on,'2026-10-31');
+ assert.equal(r.earlier_observation_on,'2026-10-30');
+ assert.equal(r.original_tagged_release_count,4374);
+ assert.equal(r.followup_tagged_release_count,4373);
+ assert.equal(r.changed_tagged_release_count,-1);
+ assert.equal(study.observed_aggregate.tag_rows.find(x=>x.tag==='Puzzle').release_count_2025,4374);
+ assert.equal(r.changes_retroactively_edit_original_record,false);
+ assert.equal(r.actual_paid_sales_estimate,null);
+});
+test('Reject fake observation calendar date and reuse of one provider URL for multiple tag series',()=>{
+ const a=f();a.observed_on='2026-02-30';assert.throws(()=>audit(a),/Two adjacent/);
+ const b=f();b.tag_rows[1].source_id=b.tag_rows[0].source_id;
+ assert.throws(()=>audit(b),/Invalid or duplicate public tag aggregate/);
+});
+test('Registered source claims and original Steam task weights match the public study',()=>{
+ const d=read('specimens/steam.json'),p=read('plans/steam.json'),q=read('queues/steam.json');
+ const sources=new Set(d.evidence.map(x=>x.id)),claims=new Map(d.claims.map(x=>[x.id,x]));
+ for(const id of study.source_ids)assert(sources.has(id),id);
+ for(const id of study.claim_ids){
+  const x=claims.get(id);assert(x,id);
+  assert(x.source_ids.every(s=>sources.has(s)),id);
+ }
+ const all=[...p.detail_tasks,...q.queues.flatMap(g=>g.tasks)];
+ assert.equal(all.length,293);assert.equal(new Set(all.map(x=>x.id)).size,293);
+ for(const id of ['steam/market/study-genre-paid-release-supply',
+  'steam/market/assess-steam-catalog-growth','steam/competition/audit-genre-intersections']){
+  const x=all.find(t=>t.id===id);assert(x,id);
+  assert(x.evidence.includes('ontology/steam/steam-four-tag-2024-2025-public-release-supply-2026.json'));
+ }
+ assert.equal(p.progress_percent,Math.round(all.reduce((a,x)=>a+(x.percent??x.progress),0)/293));
+});
