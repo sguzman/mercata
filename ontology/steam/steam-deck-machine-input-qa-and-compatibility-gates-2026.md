@@ -2,9 +2,9 @@
 
 **Reviewed October 28, 2026.** [Structured public requirements](steam-deck-machine-input-qa-and-compatibility-gates-2026.json) · [synthetic device QA guard](../../site/steam-controller-compat-qa.mjs) · [tests](../../tests/steam-controller-compat-qa.test.mjs). No game was built or run, no controller was connected, and no official badge was requested.
 
-## Independent hardware ratings and measurable requirements
+## Per-device hardware ratings with one-way Deck Verified inheritance
 
-[Valve's current compatibility review guide](https://partner.steamgames.com/doc/steamhardware/compat) explicitly treats Steam Deck and Steam Machine as **separately rated devices**. Their four public classes are **Verified**, **Playable**, **Unsupported**, and **Unknown**. An Unknown title may simply be unreviewed; it should not be classified as unplayable.
+[Valve's current compatibility review guide](https://partner.steamgames.com/doc/steamhardware/compat) issues **separate Steam Deck and Steam Machine ratings**, but also gives a **one-way Verified guarantee**: every game that is **Deck Verified** will also be **Machine Verified**. The reverse is not guaranteed. Other device badge categories should not be copied blindly between the two platforms. Their four public classes are **Verified**, **Playable**, **Unsupported**, and **Unknown**. An Unknown title may simply be unreviewed; it should not be classified as unplayable.
 
 To pass the *input* portion of the Verified criteria, the default control mapping must access **all game functionality** without a user needing to turn on controller support in settings. On-screen button glyphs must match the **currently active physical device**, and any text field must either summon appropriate gamepad on-screen text input or provide a complete controller-only alternative. A launcher requiring a touchscreen or manually bringing up the keyboard is more consistent with **Playable** than friction-free Verified.
 
