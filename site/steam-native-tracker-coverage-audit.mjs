@@ -5,14 +5,14 @@ const iso=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&
  Number.isFinite(Date.parse(x+'T00:00:00Z'))&&new Date(x+'T00:00:00Z').toISOString().slice(0,10)===x;
 const n=x=>Number.isSafeInteger(x)&&x>=0&&x<=10000000;
 export function auditPublicSteamCollectorCoverage(data){
- const fields=['provider','status_page_collector_date','reported_total_app_records',
+ const fields=['provider','provider_status_url','status_page_collector_date','reported_total_app_records',
   'reported_raw_appinfo_records','reported_apps_with_player_tracking_in_coverage',
   'reported_apps_tracked_in_player_collector',
   'reported_currently_unavailable_player_apps',
   'reported_failed_last_player_collection_attempt',
   'pics_changelist_history_since','native_price_history_since',
   'primary_archive_covers_base_games_only'];
- if(!plain(data,fields)||data.provider!=='SteamRaw'||!iso(data.status_page_collector_date)||
+ if(!plain(data,fields)||data.provider!=='SteamRaw'||data.provider_status_url!=='https://steamraw.com/status'||!iso(data.status_page_collector_date)||
   !iso(data.pics_changelist_history_since)||!iso(data.native_price_history_since)||
   data.pics_changelist_history_since>data.status_page_collector_date||
   data.native_price_history_since>data.status_page_collector_date||
