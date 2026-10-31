@@ -3,7 +3,8 @@
 const shape=(x,fields)=>x!==null&&typeof x==='object'&&!Array.isArray(x)&&
  Object.keys(x).every(k=>fields.includes(k));
 const fixture=x=>typeof x==='string'&&/^fixture-[a-z0-9-]+$/.test(x);
-const counts=x=>Number.isSafeInteger(x)&&x>=0;
+// The service reports review counts as uint32, not arbitrary JavaScript integers.
+const counts=x=>Number.isSafeInteger(x)&&x>=0&&x<=0xffffffff;
 const filter={all:0,recent:1,updated:2};
 const purchase={steam:0,all:1,non_steam_purchase:2};
 const review={all:0,positive:1,negative:2};

@@ -114,6 +114,14 @@ test('Summary page counts must match independently supplied fictional review-arr
  const huge=query();huge.pages[0].returned_reviews_length=Number.MAX_SAFE_INTEGER+1;
  assert.throws(()=>audit(huge),/Malformed synthetic page/);
 });
+test('Review response counters honor the service unsigned 32-bit range',()=>{
+ for(const field of ['total_matching','score_total_reviews']){
+  const x=query();x.pages[0][field]=4294967296;
+  assert.throws(()=>audit(x),/Malformed synthetic page/);
+ }
+ const valid=query();valid.pages[0].score_total_reviews=4294967295;
+ assert.equal(audit(valid).first_page_score_total_reviews_if_supplied,4294967295);
+});
 test('Score total is first-page and all-review-type only, never a sum across pages',()=>{
  const a=query();a.pages[1].score_total_reviews=5;
  assert.throws(()=>audit(a),/Malformed synthetic page/);
