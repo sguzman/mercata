@@ -3084,6 +3084,17 @@
       "evidence_class": "voluntary_selected_developer_four_game_unit_counts_not_finance_ledger",
       "license": "Public link and small attributed aggregate game counts only; no personal account, customer transaction, identifying game metadata or private documents imported.",
       "notes": "One developer voluntarily reports 276,253,131,69 copies for four Steam game releases in 2019, 2021, 2022, 2023; current outstanding wishlists 360,375,267,147; a not-yet-released sequel page had ten wishlists after two weeks. Counts are self reported as of February 2026, with longer lifetime observation for older games. No authenticated financial report, matching wishlist conversion, legal payee or causal effect verified."
+    },
+    {
+      "id": "steam-fountain-2025-augsep-api-catalog-snapshot",
+      "url": "https://github.com/vintagedon/steam-dataset-2025/blob/main/steam-dataset-2025-v1/DATASET_CARD.md",
+      "title": "Steam Dataset 2025 dataset card: August–September API catalog collection and limits",
+      "publisher": "Donald Fountain (VintageDon), public GitHub dataset documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "licensed_public_research_dataset_methodology_snapshot_app_level_not_paid_game_census",
+      "license": "Source reports CC BY 4.0 for compiled dataset (underlying Steam API terms also apply); Mercata quotes only small attributable numerical counts and newly authored scope analysis. No app/review-level dataset redistributed.",
+      "notes": "Author reports Aug 31–Sep 29 2025 collection, 263890 initial app IDs, 239664 application rows, 56% detail-request success and 1048148 review records with initial sample of 10 per app. Scope includes games and non-games, delisted/region-locked gaps; review records contain Steam IDs and text and are not imported. The 56% and 239664 counts do not share a verified denominator."
     }
   ],
   "claims": [
@@ -19764,6 +19775,36 @@
       "confidence": "attributed_mutable_third_party_catalog_snapshot_no_appid_origin_reconciliation",
       "observed_at": "2026-10-31",
       "limitations": "The already registered same-provider earlier snapshot reported 17,651 paid-labelled and 2,985 free-labelled 2025 games. Current category labels and catalog coverage can change; no independent first-paid playable release or delisted-title reconciliation."
+    },
+    {
+      "id": "steam-fountain-2025-app-roster-detail-success-distinct-denominators",
+      "text": "The published Steam Dataset 2025 describes collecting 263,890 master-list AppIDs and retaining 239,664 application rows across games, DLC and other app types during August 31–September 29, 2025. The difference is 24,226 AppID records, but the dataset card's separate 56% detail-retrieval success statistic does not identify the same denominator, and neither count is a paid-game release population.",
+      "source_ids": [
+        "steam-fountain-2025-augsep-api-catalog-snapshot"
+      ],
+      "confidence": "author_documented_archive_methodology_arithmetic_not_independently_reproduced",
+      "observed_at": "2026-10-31",
+      "limitations": "Published author-reported counts without a reproduced row-level archive download; stored roster may contain partial app records; no detailed outcome ledger or AppID-matched frame closure."
+    },
+    {
+      "id": "steam-fountain-2025-archive-current-status-not-first-paid-frame",
+      "text": "The 2025 archive is a dated historical observation that could help identify previously cataloged candidates absent from later live lists, but its current-at-capture is_free, type and release_date fields do not independently attest to each game's first playable paid launch or complete inclusion of removed games and zero paid orders.",
+      "source_ids": [
+        "steam-fountain-2025-augsep-api-catalog-snapshot"
+      ],
+      "confidence": "published_api_field_semantics_and_methodological_nonidentifiability",
+      "observed_at": "2026-10-31",
+      "limitations": "Games and other app types are mixed; coverage and geographic access are incomplete, and no original-price paid-launch change history, authorized payment ledger or whole-market survivor count was independently verified."
+    },
+    {
+      "id": "steam-fountain-2025-snapshot-review-data-excluded-for-privacy",
+      "text": "The published 2025 dataset includes reviewer Steam IDs and review text alongside 1,048,148 sampled review records; Mercata uses only source-level aggregate metadata and does not import reviewer-level or application-level source files.",
+      "source_ids": [
+        "steam-fountain-2025-augsep-api-catalog-snapshot"
+      ],
+      "confidence": "published_dataset_card_contents_and_mercata_aggregate_only_process",
+      "observed_at": "2026-10-31",
+      "limitations": "No reviewer population or representative sales-to-review relation can be inferred from a small sampled review set, and no personal records are ingested."
     }
   ],
   "observations": [],

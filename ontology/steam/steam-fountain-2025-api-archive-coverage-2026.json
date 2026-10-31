@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "attributed_published_2025_steam_api_catalog_archive_coverage_and_missingness_not_paid_game_census",
+  "reviewed_on": "2026-10-31",
+  "author": "Donald Fountain (VintageDon)",
+  "collection_start": "2025-08-31",
+  "collection_end": "2025-09-29",
+  "source_ids": [
+    "steam-fountain-2025-augsep-api-catalog-snapshot"
+  ],
+  "claim_ids": [
+    "steam-fountain-2025-app-roster-detail-success-distinct-denominators",
+    "steam-fountain-2025-archive-current-status-not-first-paid-frame",
+    "steam-fountain-2025-snapshot-review-data-excluded-for-privacy"
+  ],
+  "source_document": "https://github.com/vintagedon/steam-dataset-2025/blob/main/steam-dataset-2025-v1/DATASET_CARD.md",
+  "source_repo": "https://github.com/vintagedon/steam-dataset-2025",
+  "license_claimed_by_author": "CC BY 4.0 dataset, with underlying Steam API terms applicable",
+  "public_document_report": {
+    "master_list_application_ids": 263890,
+    "stored_application_rows": 239664,
+    "reported_detail_request_success_percent": 56,
+    "reported_review_records": 1048148,
+    "initially_sampled_reviews_per_application": 10,
+    "app_categories_mixed": true,
+    "download_in_this_study": false
+  },
+  "coverage_questions": [
+    "The reported 263890 master-list AppIDs and 239664 stored application rows are distinct counts; the 24226 difference is not independently attributed to removals, refunds, free games or never-sellers.",
+    "The separately reported 56% detail-request success metric is not stated as 56% of the stored application rows; it must not be substituted for the row retention rate.",
+    "Applications include games, DLC, demos, software and media; a non-game AppID must not enter the denominator of initially paid base-game launches.",
+    "A one-period storefront crawl does not recover the originally paid status or first playable paid release date of every prior game, including delisted ones.",
+    "Reported API retrieval failures may involve geographic restrictions, nonpublic records, temporary failures or other unverified causes; no per-cause rates can be assigned from the aggregate report.",
+    "The published dataset includes reviewer identifiers and review text; Mercata imports no game, reviewer or buyer records and retains only attributed source-level aggregate methods and counts."
+  ],
+  "private_data_imported": false,
+  "appid_rows_imported": 0,
+  "review_rows_imported": 0,
+  "unknown": {
+    "confirmed_originally_paid_base_games_in_2025": null,
+    "verified_2025_historical_complete_paid_roster": null,
+    "paid_games_with_exactly_zero_orders": null,
+    "number_of_removed_paid_games": null,
+    "successful_game_detail_rows": null,
+    "publisher_net_profit_distribution": null
+  },
+  "model_path": "site/steam-fountain-2025-api-archive-coverage.mjs",
+  "test_path": "tests/steam-fountain-2025-api-archive-coverage.test.mjs"
+}
