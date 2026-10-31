@@ -41,11 +41,30 @@ test('Even a harmonized synthetic observation is not a random population estimat
 test('Reject real game identifiers, unknown financial stages and malformed synthetic observations',()=>{
  for(const change of [
   {app_id:3752960},{fixture_id:'real-game'},{window:'lifetime'},{units:-1},
-  {returns:50},{revenue_cents:2.3},{revenue_stage:'bank_receipt'},
+  {returns:-1},{revenue_cents:2.3},{revenue_stage:'bank_receipt'},
   {revenue_cents:null},{fixture_id:'fixture-b'}
  ])assert.throws(()=>audit([{...fixture()[0],...change},...fixture().slice(1)]));
  assert.throws(()=>audit([]));
  assert.throws(()=>audit([{...fixture()[0],returns:2.5},...fixture().slice(1)]));
+});
+test('Period refund events need not be a subset of same-window sales units',()=>{
+ const f=fixture();f[0].returns=50;
+ const x=audit(f);
+ assert.equal(x.period_refunds_may_include_other_purchase_cohorts,true);
+ assert.equal(x.matched_original_purchase_cohort_refund_rate,null);
+ assert.equal(x.representative_developer_bank_income,null);
+});
+test('Hypothetically aligned unit and cash aggregates reject unsafe integer overflow',()=>{
+ const a=fixture().slice(0,2).map(x=>({...x,window:'first_week',
+  revenue_stage:'author_label_net_undefined_stage'}));
+ a[0].units=Number.MAX_SAFE_INTEGER;
+ a[1].units=1;
+ assert.throws(()=>audit(a),/Unsafe synthetic units total/);
+ const b=fixture().slice(0,2).map(x=>({...x,window:'first_week',
+  revenue_stage:'author_label_net_undefined_stage'}));
+ b[0].revenue_cents=Number.MAX_SAFE_INTEGER;
+ b[1].revenue_cents=1;
+ assert.throws(()=>audit(b),/Unsafe synthetic revenue_cents total/);
 });
 test('Sources, claims and 293 fixed original tasks retain integrity',()=>{
  const ids=new Set(dossier.evidence.map(x=>x.id)),claims=new Map(dossier.claims.map(x=>[x.id,x]));

@@ -91,7 +91,10 @@
     "observed_zero_paid_sales_cases": 0,
     "observed_nonrandom_cases": 3,
     "can_estimate_market_zero_paid_fraction": false,
-    "can_estimate_population_median": false
+    "can_estimate_population_median": false,
+    "period_refunds_may_include_earlier_purchase_cohorts": true,
+    "period_refund_events_can_exceed_current_window_units": true,
+    "safe_integer_rollup_is_enforced": true
   },
   "missing": {
     "authenticated_merchant_paid_orders": null,
@@ -102,7 +105,8 @@
     "actual_legal_partner_remittance": null,
     "individual_after_cost_profit": null,
     "representative_first_game_median": null,
-    "true_zero_paid_sale_fraction": null
+    "true_zero_paid_sale_fraction": null,
+    "matched_original_purchase_cohort_refund_rate": null
   },
   "test_path": "tests/steam-firstgame-three-window-comparability.test.mjs",
   "private_records_accessed": false

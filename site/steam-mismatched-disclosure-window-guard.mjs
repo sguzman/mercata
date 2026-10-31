@@ -7,12 +7,22 @@ export function auditSyntheticLaunchDisclosureWindows(rows){
  const allowed=new Set(['fixture_id','window','units','returns','revenue_cents','revenue_stage']);
  if(rows.some((r,i)=>!r||Array.isArray(r)||typeof r!=='object'||Object.keys(r).some(k=>!allowed.has(k))||
   typeof r.fixture_id!=='string'||!/^fixture-[a-z0-9-]+$/.test(r.fixture_id)||!windows.has(r.window)||
-  !Number.isSafeInteger(r.units)||r.units<0||!(r.returns===null||Number.isSafeInteger(r.returns)&&r.returns>=0&&r.returns<=r.units)||
+  !Number.isSafeInteger(r.units)||r.units<0||!(r.returns===null||Number.isSafeInteger(r.returns)&&r.returns>=0)||
   !(r.revenue_cents===null||Number.isSafeInteger(r.revenue_cents)&&r.revenue_cents>=0)||
   !stages.has(r.revenue_stage)||
   (r.revenue_stage==='not_disclosed')!==(r.revenue_cents===null)))
   throw new TypeError('Malformed or untrusted synthetic disclosure');
  if(new Set(rows.map(r=>r.fixture_id)).size!==rows.length)throw new RangeError('Duplicate synthetic fixture');
+ // Period refund events can relate to earlier purchases; they are not a matched
+ // subset of new period units. Reject unsafe aggregate arithmetic as well.
+ const safeTotal=(field)=>{
+  let n=0;
+  for(const row of rows){
+   n+=row[field];
+   if(!Number.isSafeInteger(n))throw new RangeError('Unsafe synthetic '+field+' total');
+  }
+  return n;
+ };
  const sameWindow=rows.every(r=>r.window===rows[0].window);
  const sameFinancialStage=rows.every(r=>r.revenue_stage===rows[0].revenue_stage&&r.revenue_cents!==null);
  return Object.freeze({
@@ -21,8 +31,10 @@ export function auditSyntheticLaunchDisclosureWindows(rows){
   same_reported_financial_stage:sameFinancialStage,
   sampled_paid_release_population:false,
   published_positive_sale_examples:rows.filter(r=>r.units>0).length,
-  descriptive_total_units_if_same_window:sameWindow?rows.reduce((a,r)=>a+r.units,0):null,
-  descriptive_total_revenue_cents_if_same_window_and_financial_stage:sameWindow&&sameFinancialStage?rows.reduce((a,r)=>a+r.revenue_cents,0):null,
+  descriptive_total_units_if_same_window:sameWindow?safeTotal('units'):null,
+  descriptive_total_revenue_cents_if_same_window_and_financial_stage:sameWindow&&sameFinancialStage?safeTotal('revenue_cents'):null,
+  period_refunds_may_include_other_purchase_cohorts:true,
+  matched_original_purchase_cohort_refund_rate:null,
   representative_first_paid_game_median:null,
   representative_developer_bank_income:null,
   actual_zero_paid_sale_fraction:null,
