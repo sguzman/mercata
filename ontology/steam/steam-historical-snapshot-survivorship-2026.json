@@ -8,7 +8,8 @@
     "steam-release-dates-official",
     "steam-retire-app-official",
     "steam-transfer-app-official-2026",
-    "steam-legacy-app-list-deprecated-20261029"
+    "steam-legacy-app-list-deprecated-20261029",
+    "steam-woctezuma-may2021-applist-snapshot-archive-20261030"
   ],
   "claim_ids": [
     "steam-legacy-applist-deprecated-20261029",
@@ -18,7 +19,11 @@
     "steam-retired-games-can-be-absent-from-listings-20261029",
     "steam-app-transfer-keeps-id-while-payee-history-splits-20261029",
     "steam-snapshot-disappearance-does-not-prove-retirement-20261029",
-    "steam-historical-first-paid-attestation-needed-20261029"
+    "steam-historical-first-paid-attestation-needed-20261029",
+    "steam-archive-woctezuma-app-data-updated-may2021",
+    "steam-archive-woctezuma-readme-date-not-snapshot",
+    "steam-archive-store-presence-not-first-paid-status",
+    "steam-archive-end-date-controls-observation-vintage"
   ],
   "population": {
     "unit": "base_game_appid_first_public_paid_playable_release",
@@ -181,6 +186,43 @@
     },
     "no_live_appid_rows_imported": true,
     "exact_historical_first_paid_launch_count": null,
-    "marketwide_zero_sale_fraction": null
+    "marketwide_zero_sale_fraction": null,
+    "public_snapshot_file_vintage_audit": {
+      "reviewed_at": "2026-10-30",
+      "source_id": "steam-woctezuma-may2021-applist-snapshot-archive-20261030",
+      "repository_url": "https://github.com/woctezuma/steam-store-snapshots",
+      "public_file_histories": [
+        {
+          "path": "data/ISteamApps.json",
+          "last_data_commit": "fd87163ac63e4e0c77471c5e6c3d4e542687906a",
+          "last_data_commit_date": "2021-05-29",
+          "kind": "historical_legacy_unfiltered_public_applist"
+        },
+        {
+          "path": "data/IStoreService.json",
+          "last_data_commit": "3a59594f01bf2e8e20c15435e9ca6f5b5013269e",
+          "last_data_commit_date": "2021-05-29",
+          "kind": "historical_store_game_listing_first_page"
+        },
+        {
+          "path": "data/IStoreService_page_2.json",
+          "last_data_commit": "790118f7c1bd29454e526e9c7620fa9561bc7668",
+          "last_data_commit_date": "2021-05-29",
+          "kind": "historical_store_game_listing_second_page"
+        }
+      ],
+      "documentation_only_update_date": "2025-11-25",
+      "documentation_update_is_new_data_snapshot": false,
+      "latest_archived_app_data_as_of": "2021-05-29",
+      "qualifies_as_2025_original_paid_launch_frame": false,
+      "archived_appid_presence_proves_paid_checkout": false,
+      "original_launch_price_attested": false,
+      "real_2025_appids_imported": 0,
+      "complete_2025_paid_frame": null,
+      "zero_paid_sales_fraction": null,
+      "model_path": "site/steam-archive-candidate-coverage.mjs",
+      "test_path": "tests/steam-archive-candidate-coverage.test.mjs",
+      "synthetic_time_bound_rule": "Observed source events after the declared tracking_ended_on must be rejected regardless of imported-historical provenance."
+    }
   }
 }
