@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "source_coverage_and_native_imported_history_crosswalk_not_historical_paid_launch_census",
+  "reviewed_on": "2026-10-31",
+  "source_ids": [
+    "steam-steamraw-operational-coverage-20261030",
+    "steam-opensteamdb-public-archive-provenance-20261031"
+  ],
+  "claim_ids": [
+    "steamraw-appinfo-snapshot-coverage-not-paid-frame",
+    "steamraw-crosschannel-coverage-counts-not-common-denominator",
+    "steam-archive-imported-history-not-native-attestation"
+  ],
+  "public_snapshot": {
+    "provider": "SteamRaw",
+    "provider_status_url": "https://steamraw.com/status",
+    "status_page_collector_date": "2026-10-30",
+    "reported_total_app_records": 420362,
+    "reported_raw_appinfo_records": 419636,
+    "reported_apps_with_player_tracking_in_coverage": 146094,
+    "reported_apps_tracked_in_player_collector": 325429,
+    "reported_currently_unavailable_player_apps": 117111,
+    "reported_failed_last_player_collection_attempt": 198,
+    "pics_changelist_history_since": "2026-09-11",
+    "native_price_history_since": "2026-09-11",
+    "primary_archive_covers_base_games_only": false
+  },
+  "provenance": {
+    "second_provider": "Open-SteamDB",
+    "native_change_tracking": true,
+    "older_prices_may_be_imported_from": "IsThereAnyDeal",
+    "older_player_counts_may_be_imported_from": "Steam Charts",
+    "historical_imports_source_separated": true,
+    "second_provider_native_tracking_start_known": false,
+    "permission_for_bulk_dataset_redistribution_established": false
+  },
+  "assertions": {
+    "same_denominator_for_reported_tracking_sections": false,
+    "appinfo_absence_is_confirmed_delisting": false,
+    "collector_native_history_backfills_2025_paid_launches": false,
+    "app_counts_are_2025_first_paid_base_game_population": false,
+    "customer_or_authorized_sales_records_included": false
+  },
+  "unknown": {
+    "historical_first_paid_base_game_count": null,
+    "missing_originally_paid_releases": null,
+    "exact_zero_paid_games": null,
+    "representative_publisher_profit": null
+  },
+  "model_path": "site/steam-native-tracker-coverage-audit.mjs",
+  "test_path": "tests/steam-native-tracker-coverage-audit.test.mjs",
+  "appids_imported": 0,
+  "private_records_imported": 0
+}

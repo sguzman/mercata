@@ -3095,6 +3095,28 @@
       "evidence_class": "licensed_public_research_dataset_methodology_snapshot_app_level_not_paid_game_census",
       "license": "Source reports CC BY 4.0 for compiled dataset (underlying Steam API terms also apply); Mercata quotes only small attributable numerical counts and newly authored scope analysis. No app/review-level dataset redistributed.",
       "notes": "Author reports Aug 31–Sep 29 2025 collection, 263890 initial app IDs, 239664 application rows, 56% detail-request success and 1048148 review records with initial sample of 10 per app. Scope includes games and non-games, delisted/region-locked gaps; review records contain Steam IDs and text and are not imported. The 56% and 239664 counts do not share a verified denominator."
+    },
+    {
+      "id": "steam-steamraw-operational-coverage-20261030",
+      "url": "https://steamraw.com/status",
+      "title": "SteamRaw data collector status: current appinfo, price history and upstream availability",
+      "publisher": "SteamRaw independent public Steam catalog collector",
+      "published_at": null,
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "dated_public_operational_catalog_coverage_and_upstream_reliability_not_first_paid_sales",
+      "license": "Only attributed transient aggregate counts, published native-tracking start dates and independently written limitations; no AppIDs, reviews, player identities or source charts copied.",
+      "notes": "Public status snapshot as displayed for October 30 2026 about 13:54 UTC: 420362 apps, 419636 raw-appinfo records, 146094 with player tracking (coverage line). Separate player-tracking operational section says 325429 apps tracked and 117111 currently unavailable. Native PICS changelists and price history begin September 11 2026. Provider has SteamSpy-dependent catalog import, variable upstream access. Values dynamic, not independently verified historical paid-launch cohort."
+    },
+    {
+      "id": "steam-opensteamdb-public-archive-provenance-20261031",
+      "url": "https://github.com/LOVAHE/Open-SteamDB",
+      "title": "Open-SteamDB public README: native per-app change tracking and separated imported price/player histories",
+      "publisher": "LOVAHE independent public GitHub Steam tracking archive",
+      "published_at": null,
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "public_archive_native_vs_imported_provenance_methods_no_verified_historical_population",
+      "license": "Provider describes its archive as intended for non-commercial use; only short attributed public methodological facts and link used, no archived app rows or imported third-party datasets republished.",
+      "notes": "GitHub README reports per-AppID regional prices, reviews and release status updates, with historical prices from IsThereAnyDeal and older player counts from Steam Charts. Older imported price points are stored separately from tracker-observed points. No documented complete originally-paid launch roster, tracking inception date or verified sales census; archive completeness explicitly not guaranteed."
     }
   ],
   "claims": [
@@ -19805,6 +19827,36 @@
       "confidence": "published_dataset_card_contents_and_mercata_aggregate_only_process",
       "observed_at": "2026-10-31",
       "limitations": "No reviewer population or representative sales-to-review relation can be inferred from a small sampled review set, and no personal records are ingested."
+    },
+    {
+      "id": "steamraw-appinfo-snapshot-coverage-not-paid-frame",
+      "text": "SteamRaw's public status view displayed 420,362 apps in its collected database and 419,636 with raw appinfo around October 30, 2026. The difference of 726 is only an internal coverage gap between these provider-labelled app quantities; neither is a count of originally paid base games, delistings or true zero-order products.",
+      "source_ids": [
+        "steam-steamraw-operational-coverage-20261030"
+      ],
+      "confidence": "third_party_public_dynamic_operational_snapshot_not_independently_reproduced",
+      "observed_at": "2026-10-30",
+      "limitations": "Live provider inventory includes non-games and revisions; 726 is not a verified count of excluded or commercially unsuccessful games. No AppID-matched released-paid classification."
+    },
+    {
+      "id": "steamraw-crosschannel-coverage-counts-not-common-denominator",
+      "text": "The same SteamRaw status view separately displayed 146,094 apps with player tracking in a coverage summary and 325,429 apps tracked in its player-collection operational section, including 117,111 currently unavailable. These metrics use different reporting stages and cannot be subtracted or pooled as a single denominator. Native PICS changelists and price history begin September 11, 2026.",
+      "source_ids": [
+        "steam-steamraw-operational-coverage-20261030"
+      ],
+      "confidence": "attributed_dynamic_service_status_with_uncertain_crossstage_definitions",
+      "observed_at": "2026-10-30",
+      "limitations": "Operational counts need not be nested or disjoint; player-collection success does not measure paid purchasers; native 2026 tracking cannot attest independently to 2025 first-paid events."
+    },
+    {
+      "id": "steam-archive-imported-history-not-native-attestation",
+      "text": "Open-SteamDB documents recording its own contemporary app and price changes while including distinguishable older imported IsThereAnyDeal prices and Steam Charts player histories. Imported historical price or player observations and a later collector's raw-app record do not independently establish when a game first became paid and playable or whether it had paid orders.",
+      "source_ids": [
+        "steam-opensteamdb-public-archive-provenance-20261031"
+      ],
+      "confidence": "public_repository_method_description_and_conservative_paid_origin_nonidentifiability",
+      "observed_at": "2026-10-31",
+      "limitations": "Collector states gaps can remain and restricts intended use to noncommercial purposes. No archive row extraction, license inference for upstream imported data, or first-paid historical population audit performed."
     }
   ],
   "observations": [],
