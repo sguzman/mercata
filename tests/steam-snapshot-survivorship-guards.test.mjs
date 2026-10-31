@@ -50,7 +50,8 @@ test('Reject duplicate ID, malformed dates, real-looking IDs and improperly clai
  assert.throws(()=>audit([attested('fixture-future','2026-10-30')],window),/postdate evidence capture/);
 });
 test('Audited studies link public sources and remain a 293-task economic research project',()=>{
- assert.equal(doc.claim_ids.length,8);assert.equal(doc.source_ids.length,5);
+ assert.equal(doc.claim_ids.length,12);assert.equal(doc.source_ids.length,6);
+ assert.equal(new Set(doc.claim_ids).size,12);assert.equal(new Set(doc.source_ids).size,6);
  const sources=new Set(d.evidence.map(x=>x.id)),claims=new Map(d.claims.map(x=>[x.id,x]));
  for(const id of doc.source_ids)assert(sources.has(id),id);
  for(const id of doc.claim_ids){assert(claims.has(id),id);assert(claims.get(id).source_ids.every(s=>sources.has(s)),id)}
