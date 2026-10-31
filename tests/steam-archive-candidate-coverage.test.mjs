@@ -166,3 +166,42 @@ test('Existing public provenance and fixed 293-task inventory survive',()=>{
  assert.equal(scores.length,293);
  assert.equal(p.progress_percent,Math.round(scores.reduce((a,b)=>a+b,0)/293));
 });
+
+test('A 2021-only app-list archive cannot silently supply native 2025 observations',()=>{
+ const x=base();
+ const prior=x.sources.find(s=>s.source_id==='fixture-history');
+ prior.tracking_ended_on='2021-05-29';
+ x.observations=x.observations.filter(o=>o.source_id!=='fixture-history');
+ const early=evt('archive-old','old','history','positive_price_observed','2021-05-01',{
+  captured_on:'2021-05-29',provenance:'provider_observed'});
+ x.observations.push(early);
+ assert.equal(audit(x).sources_with_declared_tracking_end,1);
+ const bad=structuredClone(x);bad.observations.push(evt('invented-price2025','new','history',
+  'positive_price_observed','2025-04-01',{provenance:'provider_observed'}));
+ assert.throws(()=>audit(bad),/postdates declared tracking end/);
+});
+test('Imported historical rows also cannot postdate a frozen archive last snapshot',()=>{
+ const x=base();
+ const src=x.sources.find(s=>s.source_id==='fixture-history');
+ src.tracking_started_on='2021-01-09';src.tracking_ended_on='2021-05-29';
+ x.observations=x.observations.filter(o=>o.source_id!=='fixture-history');
+ const imported=evt('old-import','old','history','positive_price_observed','2020-12-31',{
+  provenance:'imported_historical'});
+ x.observations.push(imported);
+ assert.equal(audit(x).entries.find(e=>e.fixture_game_id==='fixture-old').has_imported_historical_record,true);
+ imported.observed_on='2025-05-01';
+ assert.throws(()=>audit(x),/postdates declared tracking end/);
+});
+test('Archive end-date metadata rejects reversed or malformed tracking windows',()=>{
+ for(const end of ['2011-12-31','2026-13-01','yesterday',null,42]){
+  const x=base();x.sources[0].tracking_ended_on=end;
+  assert.throws(()=>audit(x),/Invalid or duplicate archive source coverage declaration/);
+ }
+});
+test('No end date is an unresolved source coverage claim, never a verified full archive',()=>{
+ const r=audit(base());
+ assert.equal(r.sources_with_declared_tracking_end,0);
+ assert.equal(r.declared_tracking_end_dates_are_provenance_claims_not_independently_verified,true);
+ assert.equal(r.any_source_snapshot_proves_complete_2025_paid_game_cohort,false);
+ assert.equal(r.true_historical_first_paid_cohort_size,null);
+});

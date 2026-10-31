@@ -21,9 +21,12 @@ export function auditSyntheticSteamArchiveCandidateCoverage(input={}){
   throw new TypeError('Bounded synthetic historical archive audit required');
  const sourceMap=new Map();
  for(const s of input.sources){
-  if(!keys(s,['source_id','role','tracking_started_on','scope','observed_source_completeness'])||
+  if(!keys(s,['source_id','role','tracking_started_on','tracking_ended_on','scope','observed_source_completeness'])||
    !fixture(s.source_id)||sourceMap.has(s.source_id)||!roles.includes(s.role)||
-   !iso(s.tracking_started_on)||typeof s.scope!=='string'||
+   !iso(s.tracking_started_on)||
+   (s.tracking_ended_on!==undefined&&
+    (!iso(s.tracking_ended_on)||s.tracking_ended_on<s.tracking_started_on))||
+   typeof s.scope!=='string'||
    !['selected','observed_catalog','unknown'].includes(s.scope)||
    ![true,false,null].includes(s.observed_source_completeness))
    throw new TypeError('Invalid or duplicate archive source coverage declaration');
@@ -43,6 +46,9 @@ export function auditSyntheticSteamArchiveCandidateCoverage(input={}){
   const source=sourceMap.get(o.source_id);
   if(o.provenance==='provider_observed'&&o.observed_on<source.tracking_started_on)
    throw new RangeError('Provider-observed evidence predates declared tracking start');
+  // A frozen public archive cannot natively or retroactively attest observations after its last snapshot.
+  if(source.tracking_ended_on!==undefined&&o.observed_on>source.tracking_ended_on)
+   throw new RangeError('Claimed archive observation postdates declared tracking end');
   if(o.kind==='first_paid_release_attestation'){
    if(source.role!=='release_attestation'||
     !types.includes(o.app_type)||![true,false,null].includes(o.initial_paid_status)||
@@ -125,7 +131,11 @@ export function auditSyntheticSteamArchiveCandidateCoverage(input={}){
  return Object.freeze({
   kind:'synthetic_historical_archive_candidate_union_not_full_steam_census',
   fixture_id:input.fixture_id,cohort_window:input.window,
-  sources_declared:sourceMap.size,counts,entries:rows,
+  sources_declared:sourceMap.size,
+  sources_with_declared_tracking_end:[...sourceMap.values()].filter(s=>s.tracking_ended_on!==undefined).length,
+  declared_tracking_end_dates_are_provenance_claims_not_independently_verified:true,
+  any_source_snapshot_proves_complete_2025_paid_game_cohort:false,
+  counts,entries:rows,
   earliest_observed_price_is_initial_paid_launch:false,
   curated_delisted_label_is_proof_of_prior_paid_sale:false,
   curated_unreleased_is_verified_zero_sales:false,
@@ -135,6 +145,6 @@ export function auditSyntheticSteamArchiveCandidateCoverage(input={}){
   actual_zero_paid_sale_fraction:null,
   publisher_income_distribution:null,
   actual_live_archive_rows_imported:false,
-  note:'Source archives have selected or unknown historical coverage. A prelaunch unreleased/unpublished label does not conflict with a later attested paid launch; same-day or later labels are unresolved. Positive price or playable presence only establishes a dated observed state, not original paid launch. Curated removal/unreleased tags cannot prove paid-sale eligibility, completed purchases, or zero demand. No independently complete historical population follows even if every supplied synthetic source declares complete pagination.'
+  note:'Source archives have selected, time-bounded or unknown historical coverage. A prelaunch unreleased/unpublished label does not conflict with a later attested paid launch; same-day or later labels are unresolved. Positive price or playable presence only establishes a dated observed state, not original paid launch. Curated removal/unreleased tags cannot prove paid-sale eligibility, completed purchases, or zero demand. No independently complete historical population follows even if every supplied synthetic source declares complete pagination.'
  });
 }
