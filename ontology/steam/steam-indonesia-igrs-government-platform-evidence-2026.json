@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "indonesian_rating_label_regulator_platform_primary_source_crosscheck_no_regional_sales",
+  "reviewed_on": "2026-10-31",
+  "source_ids": [
+    "steam-indonesia-ratings-official-2026",
+    "steam-komdigi-april2026-igrs-unverified-label-statement",
+    "steam-komdigi-april7-2026-rating-badge-removal-followup"
+  ],
+  "claim_ids": [
+    "steam-indonesia-gov-2026-selfrated-igrs-label-disputed",
+    "steam-indonesia-gov-2026-badges-removed-not-game-delisting",
+    "steam-indonesia-two-rating-mechanisms-distinct",
+    "steam-indonesia-rating-dispute-not-a-purchase-or-zero-region-study"
+  ],
+  "chronology": [
+    {
+      "date": "2026-04-05",
+      "source_id": "steam-komdigi-april2026-igrs-unverified-label-statement",
+      "action": "government_public_dispute_of_unverified_IGRS_rating_label",
+      "adjudicated_individual_games": false,
+      "reported_displayed_ratings_verified_by_official_IGRS": false,
+      "entire_game_removed_from_steam": null,
+      "government_final_compliance_ruling": null
+    },
+    {
+      "date": "2026-04-07",
+      "source_id": "steam-komdigi-april7-2026-rating-badge-removal-followup",
+      "action": "government_report_that_steam_removed_problematic_age_rating_badges",
+      "adjudicated_individual_games": false,
+      "reported_displayed_ratings_verified_by_official_IGRS": null,
+      "entire_game_removed_from_steam": null,
+      "government_final_compliance_ruling": null
+    }
+  ],
+  "category_crosswalk": {
+    "valve_documented_platform_age_rating": "Steam/Valve content-survey-based rating",
+    "ministry_verified_indonesian_rating": "IGRS/Komdigi officially verified classification",
+    "self_declared_rating_equals_official_IGRS": false,
+    "self_rating_can_be_a_steam_storefront_route_per_valve": true,
+    "label_removed_not_entire_game_removed": true,
+    "content_survey_completion_guarantees_indonesia_sale": false,
+    "affected_existing_owners_have_platform_access_per_valve": true,
+    "mandatory_indonesia_unrated_game_hiding_effective_date_verified": null
+  },
+  "unknown": {
+    "games_with_badge_removal": null,
+    "games_actually_delisted": null,
+    "relevant_historical_first_paid_games": null,
+    "removed_new_buyer_options": null,
+    "affected_purchase_units": null,
+    "lost_indonesian_sales_usd": null,
+    "legal_partner_profit_effect": null
+  },
+  "privacy": {
+    "no_user_accounts": true,
+    "no_game_level_catalog_import": true,
+    "no_financials": true
+  },
+  "tests_path": "tests/steam-indonesia-igrs-government-platform-evidence.test.mjs"
+}

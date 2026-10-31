@@ -3161,6 +3161,28 @@
       "evidence_class": "review_based_modelled_lifetime_gross_selected_paid_reviewed_games_not_steam_financials",
       "license": "Only short attributable public aggregate counts, numerical estimates and original methodological discussion. No charts, underlying AppIDs or source text reproduced.",
       "notes": "Page snapshot explicitly dated 2026-10-30 21:54:46 UTC: 99,015 priced games with at least one review, estimated $102.2B lifetime gross, $1,436 median, 82.6% top-one-percent gross share. Seven modeled revenue tier counts sum to 99,015. Uses per-game estimator with current regional price fallback; excludes F2P, DLC, demos and reviewless games. No actual Steam partner ledgers."
+    },
+    {
+      "id": "steam-komdigi-april2026-igrs-unverified-label-statement",
+      "url": "https://eppid.komdigi.go.id/berita/detail/kemkomdigi-rating-gim-di-steam-bukan-rating-resmi-berpotensi-langgar-ketentuan-di-indonesia",
+      "title": "Kemkomdigi: Steam-displayed IGRS labels not officially verified by Indonesian government",
+      "publisher": "Indonesia Ministry of Communication and Digital Affairs (Kemkomdigi), official PPID publication",
+      "published_at": null,
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "first_party_indonesian_government_regulator_statement_not_actual_storefront_or_revenue_measurement",
+      "license": "Attributed short factual summary of official public regulator statement, no source photos or extended text reproduced.",
+      "notes": "Ministry statement describes concerns raised around April 5 2026 over internally self-declared age ratings labeled as official IGRS without government verification. Official article itself lacks a clearly labeled publication date; uses dated statement. Alleged labeling/verification defect, not observed game removals or a zero-sales statistic."
+    },
+    {
+      "id": "steam-komdigi-april7-2026-rating-badge-removal-followup",
+      "url": "https://portal.komdigi.go.id/kanal-publik/berita-kini/10138",
+      "title": "Kemkomdigi April 7 2026 follow-up: Steam removed disputed game-age-rating badges",
+      "publisher": "Indonesia Ministry of Communication and Digital Affairs (Kemkomdigi), official press release",
+      "published_at": "2026-04-07",
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "first_party_government_reported_platform_badge_remediation_not_game_takedown_or_financials",
+      "license": "Attributed concise public regulator statement, independently written explanation, no pictures or copyrighted material imported.",
+      "notes": "April 7 dated ministry update reports investigation and communications with Steam, including Steam takedown of problematic displayed game ratings/badges. It does not establish the underlying games were removed or give any count of unavailable paid titles, affected users or lost purchases."
     }
   ],
   "claims": [
@@ -20017,6 +20039,49 @@
       "confidence": "first_party_documented_reporting_procedures_and_synthetic_missingness_logic",
       "observed_at": "2026-10-31",
       "limitations": "Not an audited full historical paid-game population or sampled earnings dataset; authenticated real owner-level financial data and legal publishing cash remain unavailable."
+    },
+    {
+      "id": "steam-indonesia-gov-2026-selfrated-igrs-label-disputed",
+      "text": "Indonesia's communications ministry said on April 5, 2026 that IGRS labels displayed on some Steam games were generated through internal/self-declared classification rather than verified government IGRS ratings and flagged possible misleading labeling. This is the regulator's account, not an adjudicated finding for every game.",
+      "source_ids": [
+        "steam-komdigi-april2026-igrs-unverified-label-statement"
+      ],
+      "confidence": "primary_regulator_statement_with_attributed_allegation_not_independent_game_by_game_audit",
+      "observed_at": "2026-04-05",
+      "limitations": "No comprehensive case inventory, final enforcement ruling or verified number of affected titles in the public statement; publication date of the ministry page is not independently displayed."
+    },
+    {
+      "id": "steam-indonesia-gov-2026-badges-removed-not-game-delisting",
+      "text": "In its April 7, 2026 update, Indonesia's communications ministry said Steam had taken down the disputed rating displays while the parties reviewed classification compliance. It did not say Steam delisted the underlying games or reveal country-specific sales losses.",
+      "source_ids": [
+        "steam-komdigi-april7-2026-rating-badge-removal-followup"
+      ],
+      "confidence": "dated_primary_regulator_report_of_remediation_action_not_independent_store_catalog_audit",
+      "observed_at": "2026-04-07",
+      "limitations": "No public list of affected games or timestamped storefront before/after captures; regulator-reported badge removal is not proof of game removal or a permanent classification outcome."
+    },
+    {
+      "id": "steam-indonesia-two-rating-mechanisms-distinct",
+      "text": "Valve's public Indonesian Steamworks guidance treats an IGRS-issued rating and a Steam-generated survey rating as distinct routes for potential storefront eligibility. The Indonesian government's April 2026 complaint specifically concerned unverified internal ratings being presented with an official IGRS label, not proof that Valve's distinct self-rating process or all regional listings were forbidden.",
+      "source_ids": [
+        "steam-indonesia-ratings-official-2026",
+        "steam-komdigi-april2026-igrs-unverified-label-statement",
+        "steam-komdigi-april7-2026-rating-badge-removal-followup"
+      ],
+      "confidence": "primary_platform_guidance_crossread_with_independent_government_account",
+      "observed_at": "2026-10-31",
+      "limitations": "Current Valve documentation does not establish a definite regional cutoff date; evolving policy implementation and government interpretation require rechecking before operational compliance decisions."
+    },
+    {
+      "id": "steam-indonesia-rating-dispute-not-a-purchase-or-zero-region-study",
+      "text": "Age-rating display disputes and removal of a badge do not identify a paid game's actual Indonesian storefront accessibility history, original paid eligibility, paid customer orders, zero-region demand, or losses of publisher income.",
+      "source_ids": [
+        "steam-indonesia-ratings-official-2026",
+        "steam-komdigi-april7-2026-rating-badge-removal-followup"
+      ],
+      "confidence": "separation_of_regulatory_public_claim_from_missing_app_and_transaction_data",
+      "observed_at": "2026-10-31",
+      "limitations": "Neither source provides a versioned complete regional game roster, matched age-rating audit, buyer transactions or representative legal publisher cash accounts."
     }
   ],
   "observations": [],
