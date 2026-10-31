@@ -3117,6 +3117,39 @@
       "evidence_class": "public_archive_native_vs_imported_provenance_methods_no_verified_historical_population",
       "license": "Provider describes its archive as intended for non-commercial use; only short attributed public methodological facts and link used, no archived app rows or imported third-party datasets republished.",
       "notes": "GitHub README reports per-AppID regional prices, reviews and release status updates, with historical prices from IsThereAnyDeal and older player counts from Steam Charts. Older imported price points are stored separately from tracker-observed points. No documented complete originally-paid launch roster, tracking inception date or verified sales census; archive completeness explicitly not guaranteed."
+    },
+    {
+      "id": "steam-carriercommand2-bundled-vr-firstparty-2021",
+      "url": "https://steamcommunity.com/games/1489630/announcements/detail/4182139342044187406",
+      "title": "July 2021 Carrier Command 2 developer announcement: VR and standard entitlement bundled",
+      "publisher": "Carrier Command 2 development team, public Steam community announcement",
+      "published_at": "2021-07-22",
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "first_party_release_entitlement_bundle_not_transaction_count",
+      "license": "Public original developer announcement: only separately authored summary and short facts; no screenshots, artwork or player data copied.",
+      "notes": "Developer announced both standard and VR as linked ownership: one purchase grants both. Announcement is not a separate independently paid VR checkout proof."
+    },
+    {
+      "id": "steam-carriercommand2-vr-attribution-update-2022",
+      "url": "https://steamdb.info/patchnotes/8690851/",
+      "title": "May 2022 Carrier Command 2 v1.2.7 release note: linked VR app zero-sales attribution",
+      "publisher": "Carrier Command 2 development team release note, publicly mirrored by SteamDB",
+      "published_at": "2022-05-06",
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "first_party_operator_claim_publicly_mirrored_linked_app_store_credit_zero",
+      "license": "Short independently paraphrased developer attribution claim with source link; no SteamDB data dump, private partner reports or text reproduction.",
+      "notes": "Developer explains sales of linked standard/VR versions were assigned to the base game, so the VR app appeared to Steam as having zero copy sales and did not obtain VR-category promotion. Planned to integrate VR as base-game launch option. No authenticated partner-level units or buyer counts provided."
+    },
+    {
+      "id": "steam-carriercommand2-retired-vr-app-2026",
+      "url": "https://steamdb.info/app/1657900/",
+      "title": "Carrier Command 2 VR application public metadata: retired linked VR edition",
+      "publisher": "SteamDB independent public Steam app metadata provider",
+      "published_at": null,
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "current_app_status_only_not_paid_origin_or_sales_evidence",
+      "license": "Public link and limited attributed status facts only; no scraping, raw app history export, pricing histories or source assets imported.",
+      "notes": "Provider public application page classifies Carrier Command 2 VR as game, lists August 10 2021 release, and currently notes retired publisher-request status. No evidence of a separate first paid checkout or exact paid orders."
     }
   ],
   "claims": [
@@ -19857,6 +19890,38 @@
       "confidence": "public_repository_method_description_and_conservative_paid_origin_nonidentifiability",
       "observed_at": "2026-10-31",
       "limitations": "Collector states gaps can remain and restricts intended use to noncommercial purposes. No archive row extraction, license inference for upstream imported data, or first-paid historical population audit performed."
+    },
+    {
+      "id": "steam-linked-vr-app-zero-credits-not-zero-product-buyers",
+      "text": "In a public May 2022 Carrier Command 2 update, the developer said Steam attributed sales for its bundled standard and separate VR apps to the base game, leaving the VR app recorded as zero sales and without standalone VR-category promotion. A zero-attributed app is not evidence the linked product had no paying users.",
+      "source_ids": [
+        "steam-carriercommand2-vr-attribution-update-2022",
+        "steam-carriercommand2-bundled-vr-firstparty-2021"
+      ],
+      "confidence": "first_party_public_distribution_attribution_description_not_authenticated_merchant_ledger",
+      "observed_at": "2026-10-31",
+      "limitations": "No downloadable partner report, exact units or date-scoped financial ledger. The statement concerns a linked special edition and not a random sample of independently paid original releases."
+    },
+    {
+      "id": "steam-bundled-vr-entitlement-not-independent-purchase",
+      "text": "The Carrier Command 2 developer's July 2021 announcement says the standard and VR experiences are bundled with one purchase granting access to both; counting the VR AppID as a second independent paid launch would double-count one commercial entitlement.",
+      "source_ids": [
+        "steam-carriercommand2-bundled-vr-firstparty-2021"
+      ],
+      "confidence": "first_party_public_product_packaging_explanation",
+      "observed_at": "2026-10-31",
+      "limitations": "No independent checkout verification for the linked VR app, detailed SKU/package timeline, or user-level entitlement records."
+    },
+    {
+      "id": "steam-retired-linked-vr-listing-not-validated-zero-paid-launch",
+      "text": "A later public SteamDB snapshot describes Carrier Command 2 VR as a retired game AppID, but its historical listing and removal status do not make it an originally paid independent release or certify a zero-order product.",
+      "source_ids": [
+        "steam-carriercommand2-retired-vr-app-2026",
+        "steam-carriercommand2-vr-attribution-update-2022"
+      ],
+      "confidence": "public_app_metadata_and_explicit_not_first_paid_origin",
+      "observed_at": "2026-10-31",
+      "limitations": "A provider's current retired status and old game type are not a verified first-paid launch chronology, financial record, or representative market sample."
     }
   ],
   "observations": [],
