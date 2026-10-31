@@ -74,7 +74,7 @@ test('Missing terminal empty page cannot be called a finished page chain',()=>{
  assert.equal(r.all_origin_all_language_query_chain_candidate,false);
 });
 test('A terminal empty page rejects mismatched total counts and moving page totals',()=>{
- const a=query();a.pages[1].num_reviews=0;
+ const a=query();a.pages[1].num_reviews=0;a.pages[1].returned_reviews_length=0;
  assert.throws(()=>audit(a),/Empty review page/);
  const b=query();b.pages[2].total_matching=4;
  assert.throws(()=>audit(b),/total_matching changed/);
