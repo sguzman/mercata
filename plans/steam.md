@@ -809,3 +809,7 @@ The [multiplayer and SteamPipe economic boundaries](../ontology/steam/multiplaye
 - **Implemented; maintain current:** Source-provenance and missing-data register with public human and machine summaries
 
 **Completion: 88%** rounded task-weighted progress across 293 tasks; previous snapshot 87%, exact 87.560%. 71 fully verified, 222 partially researched. 126 sources, 693 bounded claims. Merchant earnings, contract clauses and legal capacity by jurisdiction remain unobserved.
+
+## Dated public archive source boundary — October 30, 2026
+
+A [version-controlled public app-list snapshot archive](../ontology/steam/steam-historical-snapshot-survivorship-2026.md) has **May 2021** as the latest examined revision date of all three archived data files; a **November 2025** documentation change is not a refreshed app dataset. The revised [historical source gate](../site/steam-archive-candidate-coverage.mjs) rejects fictional observations dated later than a declared source tracking end. This supports one additional dated public source, four bounded claims, and one-point gains in two original tasks; it does **not** establish a 2025 paid-release census, zero-sales fraction or merchant income. Exact current research progress: **91.843%** (round Δ **+0.007 percentage points**), 271 sources and 1590 claims, 293 unchanged tasks.

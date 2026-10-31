@@ -2985,6 +2985,17 @@
       "evidence_class": "official_monthly_optional_anonymous_participant_hardware_and_client_language_mix_not_purchaser_census",
       "license": "Public survey URL, date and minimal independently transcribed percentage aggregates for research; no images, raw participant records or full page tables copied.",
       "notes": "Observed October 30; September 2026 is the survey measurement month, not a verified page-publication month. The page identifies an optional anonymous survey. In the combined-platform OS section Windows 95.03%, Linux 3.05%, OSX 1.92%; selected client-language results English 34.20%, Simplified Chinese 31.39%, Russian 9.05%, Japanese 2.41%, Latin America Spanish 0.75%. No survey N, response propensity, unique paid customers, geographic residency, account-level sales, or publisher income authenticated."
+    },
+    {
+      "id": "steam-woctezuma-may2021-applist-snapshot-archive-20261030",
+      "url": "https://github.com/woctezuma/steam-store-snapshots",
+      "title": "Steam Store Snapshots — public Git revision history for archived app-list files",
+      "publisher": "woctezuma, independent public GitHub archival repository",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "independent_versioned_2021_app_list_archival_metadata_not_2025_cohort",
+      "license": "Only public file names, dates and Git revision metadata used; no dataset, AppIDs, profiles or financial details republished.",
+      "notes": "Three public data-file histories last updated May 29, 2021: ISteamApps.json fd87163ac, IStoreService.json 3a59594f, IStoreService_page_2.json 790118f7. Repository README commit b9565ca9 of Nov 25, 2025 does not refresh these data files. Git history independently checked Oct 30, 2026. This archive cannot contain newly released 2025 base game records or purchase outcomes."
     }
   ],
   "claims": [
@@ -19408,6 +19419,50 @@
       "confidence": "high_for_official_field_definition_not_empirical_paid_orders",
       "observed_at": "2026-10-30",
       "limitations": "First-party API schema only; no real reviews, account identifiers, matched buyer/refund transactions, publisher cash, game-population sample, or profit verified."
+    },
+    {
+      "id": "steam-archive-woctezuma-app-data-updated-may2021",
+      "text": "A public GitHub app-list snapshot archive's three listed Steam app-list data files were last changed in May 2021, so those records cannot enumerate new 2025 first-paid game releases.",
+      "source_ids": [
+        "steam-woctezuma-may2021-applist-snapshot-archive-20261030",
+        "steam-public-app-list-api"
+      ],
+      "confidence": "high_for_versioned_file_dates_and_official_api_contract_not_complete_historical_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Only public GitHub commit metadata and official app-list interface documentation were consulted; no third-party roster rows downloaded, original paid price, launch-clock attestations, financial reports or 2025 paid-game population observed."
+    },
+    {
+      "id": "steam-archive-woctezuma-readme-date-not-snapshot",
+      "text": "The same archive's November 2025 repository documentation revision was not a refresh of its 2021 app-list files; a repository update date is not necessarily a dataset observation date.",
+      "source_ids": [
+        "steam-woctezuma-may2021-applist-snapshot-archive-20261030",
+        "steam-public-app-list-api"
+      ],
+      "confidence": "high_for_versioned_file_dates_and_official_api_contract_not_complete_historical_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Only public GitHub commit metadata and official app-list interface documentation were consulted; no third-party roster rows downloaded, original paid price, launch-clock attestations, financial reports or 2025 paid-game population observed."
+    },
+    {
+      "id": "steam-archive-store-presence-not-first-paid-status",
+      "text": "Archived Store app-list presence records cannot on their own verify when a base game first became paid and publicly playable, the original launch price, or any completed paid order.",
+      "source_ids": [
+        "steam-woctezuma-may2021-applist-snapshot-archive-20261030",
+        "steam-public-app-list-api"
+      ],
+      "confidence": "high_for_versioned_file_dates_and_official_api_contract_not_complete_historical_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Only public GitHub commit metadata and official app-list interface documentation were consulted; no third-party roster rows downloaded, original paid price, launch-clock attestations, financial reports or 2025 paid-game population observed."
+    },
+    {
+      "id": "steam-archive-end-date-controls-observation-vintage",
+      "text": "A frozen app-list archive requires a final data snapshot date to evaluate temporal suitability: an alleged post-snapshot observation should not be attributed to that source, even when styled an imported historical record.",
+      "source_ids": [
+        "steam-woctezuma-may2021-applist-snapshot-archive-20261030",
+        "steam-public-app-list-api"
+      ],
+      "confidence": "high_for_versioned_file_dates_and_official_api_contract_not_complete_historical_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Only public GitHub commit metadata and official app-list interface documentation were consulted; no third-party roster rows downloaded, original paid price, launch-clock attestations, financial reports or 2025 paid-game population observed."
     }
   ],
   "observations": [],

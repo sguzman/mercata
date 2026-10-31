@@ -205,3 +205,29 @@ test('No end date is an unresolved source coverage claim, never a verified full 
  assert.equal(r.any_source_snapshot_proves_complete_2025_paid_game_cohort,false);
  assert.equal(r.true_historical_first_paid_cohort_size,null);
 });
+
+test('Versioned public May 2021 archive source is present but not a 2025 paid-release census',()=>{
+ const d=read('specimens/steam.json'),study=read('ontology/steam/steam-historical-snapshot-survivorship-2026.json');
+ const p=read('plans/steam.json'),q=read('queues/steam.json');
+ const id='steam-woctezuma-may2021-applist-snapshot-archive-20261030',entry=d.evidence.find(s=>s.id===id);
+ assert(entry,id);assert(study.source_ids.includes(id));
+ const v=study.public_historical_archive_review.public_snapshot_file_vintage_audit;
+ assert.equal(v.source_id,id);
+ assert.equal(v.latest_archived_app_data_as_of,'2021-05-29');
+ assert.equal(v.qualifies_as_2025_original_paid_launch_frame,false);
+ assert.equal(v.real_2025_appids_imported,0);
+ assert.equal(v.complete_2025_paid_frame,null);
+ assert.equal(v.public_file_histories.length,3);
+ for(const item of v.public_file_histories)assert.equal(item.last_data_commit_date,'2021-05-29');
+ for(const cid of ["steam-archive-woctezuma-app-data-updated-may2021","steam-archive-woctezuma-readme-date-not-snapshot","steam-archive-store-presence-not-first-paid-status","steam-archive-end-date-controls-observation-vintage"]){
+  const x=d.claims.find(c=>c.id===cid);
+  assert(x,cid);assert(x.source_ids.includes(id));
+ }
+ const all=[...p.detail_tasks,...q.queues.flatMap(g=>g.tasks)];
+ assert.equal(all.length,293);
+ for(const tid of ["steam/market/count-eligible-paid-releases-including-zeros","steam/market/assess-steam-catalog-growth"]){
+  const t=all.find(x=>x.id===tid);
+  assert(t,tid);assert(t.evidence.includes('ontology/steam/steam-historical-snapshot-survivorship-2026.md'));
+ }
+ assert.equal(p.progress_percent,Math.round(all.reduce((s,x)=>s+(x.percent??x.progress),0)/293));
+});
