@@ -6,12 +6,18 @@ const load=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'
 const study=load('ontology/steam/steam-steamlense-release-reviews-crosscheck-2026.json');
 const fixture=()=>({observed_at:study.observed_at,provider:study.provider,
  provider_release_year_rows:structuredClone(study.provider_release_year_rows),
- provider_review_count_row:structuredClone(study.provider_review_count_row)});
+ provider_review_count_row:structuredClone(study.provider_review_count_row),
+ prior_provider_2025_snapshot:structuredClone(study.prior_provider_2025_snapshot)});
 test('Public current-catalog paid/free annual totals reconcile without turning into an origin census',()=>{
  const a=audit(fixture());
  assert.deepEqual(a.years.map(x=>x.provider_reported_current_catalog_total),[17804,20632]);
  assert.equal(a.provider_reported_catalog_game_count_increase_2024_to_2025,2828);
  assert.equal(a.provider_reported_paid_category_count_increase_2024_to_2025,3070);
+ assert.deepEqual(a.same_provider_2025_count_revision_since_prior_snapshot,{
+  earlier_observed_at:'2026-10-28',paid_category_change:-7,
+  free_category_change:3,total_category_change:-4
+ });
+ assert.equal(a.independent_source_replication_count,0);
  assert.equal(a.originally_paid_first_public_launch_verified,false);
  assert.equal(a.delisted_historical_games_fully_included,false);
  for(const k of ['actual_zero_paid_sale_rate','verified_paid_units','legal_publisher_income'])assert.equal(a[k],null);
@@ -36,6 +42,8 @@ test('Malformed captured calendar date, changed denominators, hidden app rows an
   x=>x.provider_review_count_row.denominator='paid-games-only',
   x=>x.observed_at='2026-02-30',
   x=>x.financial_api_key='private',
+  x=>x.prior_provider_2025_snapshot.reported_all_games=1,
+  x=>x.prior_provider_2025_snapshot.observed_at='2026-11-01',
   x=>x.provider='Unknown'
  ];
  for(const f of change){const x=fixture();f(x);assert.throws(()=>audit(x));}

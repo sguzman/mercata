@@ -5,7 +5,7 @@ const plain=(o,fields)=>o!==null&&typeof o==='object'&&!Array.isArray(o)&&
  Object.keys(o).every(k=>fields.includes(k));
 const integer=x=>Number.isSafeInteger(x)&&x>=0&&x<=1000000;
 export function auditSteamLensePublicCatalogSnapshot(data){
- if(!plain(data,['observed_at','provider','provider_release_year_rows','provider_review_count_row'])||
+ if(!plain(data,['observed_at','provider','provider_release_year_rows','provider_review_count_row','prior_provider_2025_snapshot'])||
   !iso(data.observed_at)||data.provider!=='Steamlense'||
   !Array.isArray(data.provider_release_year_rows)||data.provider_release_year_rows.length!==2)
   throw new TypeError('Dated public Steamlense aggregate snapshot required');
@@ -18,6 +18,13 @@ export function auditSteamLensePublicCatalogSnapshot(data){
    r.reported_paid_games+r.reported_free_to_play_games!==r.reported_all_games)
    throw new RangeError('Incompatible year, category or aggregate total');
  }
+ const older=data.prior_provider_2025_snapshot;
+ if(!plain(older,['observed_at','year','reported_paid_games','reported_free_to_play_games','reported_all_games'])||
+  !iso(older.observed_at)||older.observed_at>=data.observed_at||
+  older.year!==2025||!integer(older.reported_paid_games)||
+  !integer(older.reported_free_to_play_games)||!integer(older.reported_all_games)||
+  older.reported_paid_games+older.reported_free_to_play_games!==older.reported_all_games)
+  throw new TypeError('Earlier dated same-provider category snapshot must reconcile');
  const review=data.provider_review_count_row;
  if(!plain(review,['release_year','reported_share_below_ten_reviews_percent','denominator','observation_window'])||
   review.release_year!==2025||
@@ -39,6 +46,13 @@ export function auditSteamLensePublicCatalogSnapshot(data){
   })),
   provider_reported_catalog_game_count_increase_2024_to_2025:rows[1].reported_all_games-rows[0].reported_all_games,
   provider_reported_paid_category_count_increase_2024_to_2025:rows[1].reported_paid_games-rows[0].reported_paid_games,
+  same_provider_2025_count_revision_since_prior_snapshot:{
+   earlier_observed_at:older.observed_at,
+   paid_category_change:rows[1].reported_paid_games-older.reported_paid_games,
+   free_category_change:rows[1].reported_free_to_play_games-older.reported_free_to_play_games,
+   total_category_change:rows[1].reported_all_games-older.reported_all_games
+  },
+  independent_source_replication_count:0,
   fraction_of_2025_current_catalog_under_ten_public_reviews:review.reported_share_below_ten_reviews_percent/100,
   share_is_all_paid_and_free_games_combined:true,
   measured_at_fixed_age_after_first_paid_release:false,

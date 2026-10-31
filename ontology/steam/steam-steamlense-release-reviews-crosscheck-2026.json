@@ -4,13 +4,11 @@
   "kind": "public_provider_current_catalog_paid_free_and_review_counts_not_historical_paid_sales_census",
   "observed_at": "2026-10-31",
   "source_ids": [
-    "steam-steamlense-release-review-stats-20261031",
-    "steam-steamlense-methodology-20261031"
+    "steamlense-2025-paid-release-review-snapshot",
+    "steam-steamlense-estimation-method"
   ],
   "claim_ids": [
-    "steam-steamlense-2024-2025-paid-free-current-catalog-split",
-    "steam-steamlense-2025-under-ten-reviews-not-zero-orders",
-    "steam-steamlense-catalog-status-not-originally-paid-census"
+    "steam-steamlense-2024-2025-paid-free-current-catalog-split"
   ],
   "provider": "Steamlense",
   "provider_snapshot_url": "https://steamlense.com/stats",
@@ -40,7 +38,8 @@
     "Provider paid/free-to-play classification is not independently verified original positive-price status at first playable release.",
     "The observed under-ten-review share covers paid and free-to-play titles together and is not an early fixed-age cohort.",
     "Public review counts do not establish paid units, refunds, zero paid orders, publisher profits or buyer conversion.",
-    "Provider pages are mutable, and category or count changes between reads are not a matched AppID reconciliation."
+    "Provider pages are mutable, and category or count changes between reads are not a matched AppID reconciliation.",
+    "An earlier October 2026 snapshot of this same provider reported 20,636 games in the 2025 cohort; the later 20,632 is revision evidence, not an independent replication."
   ],
   "appids_imported": 0,
   "financial_records_imported": 0,
@@ -53,5 +52,12 @@
     "actual_steam_wide_publisher_income_distribution": null
   },
   "model_path": "site/steam-steamlense-release-reviews-crosscheck.mjs",
-  "test_path": "tests/steam-steamlense-release-reviews-crosscheck.test.mjs"
+  "test_path": "tests/steam-steamlense-release-reviews-crosscheck.test.mjs",
+  "prior_provider_2025_snapshot": {
+    "observed_at": "2026-10-28",
+    "year": 2025,
+    "reported_paid_games": 17651,
+    "reported_free_to_play_games": 2985,
+    "reported_all_games": 20636
+  }
 }
