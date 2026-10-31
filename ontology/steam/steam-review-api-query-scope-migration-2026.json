@@ -45,7 +45,11 @@
     ],
     "input_json_parameter_required": true,
     "first_page_score_totals_only_for_review_type_all": true,
-    "private_review_ids_allowed_in_fixture": false
+    "private_review_ids_allowed_in_fixture": false,
+    "http_status_200_required_for_each_synthetic_page": true,
+    "current_response_envelope_required_for_each_synthetic_page": "response",
+    "failed_or_rate_limited_http_response_may_terminate_review_count": false,
+    "legacy_success_field_allowed_in_fixture": false
   },
   "unknown": {
     "live_endpoint_operational_read": null,

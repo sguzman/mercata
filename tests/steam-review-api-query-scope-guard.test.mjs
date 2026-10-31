@@ -11,9 +11,9 @@ const query=()=>({fixture_id:'fixture-reviews',
   languages:['all'],purchase_type:1,review_type:0,num_per_page:2,
   filter_offtopic_activity:false},
  pages:[
-  {cursor_in:'*',cursor_out:'fixture-cursor-a',num_reviews:2,total_matching:3,score_total_reviews:2},
-  {cursor_in:'fixture-cursor-a',cursor_out:'fixture-cursor-b',num_reviews:1,total_matching:3},
-  {cursor_in:'fixture-cursor-b',cursor_out:'fixture-cursor-c',num_reviews:0,total_matching:3}
+  {http_status:200,response_envelope:'response',cursor_in:'*',cursor_out:'fixture-cursor-a',num_reviews:2,total_matching:3,score_total_reviews:2},
+  {http_status:200,response_envelope:'response',cursor_in:'fixture-cursor-a',cursor_out:'fixture-cursor-b',num_reviews:1,total_matching:3},
+  {http_status:200,response_envelope:'response',cursor_in:'fixture-cursor-b',cursor_out:'fixture-cursor-c',num_reviews:0,total_matching:3}
  ]});
 test('Explicit legacy labels translate to current numeric enums without a network call',()=>{
  const z=migrate({fixture_id:'fixture-a',filter:'recent',language:'all',
@@ -34,6 +34,9 @@ test('Explicit legacy labels translate to current numeric enums without a networ
 test('A count-matched, empty-terminated, unfiltered synthetic query is still not live verified',()=>{
  const r=audit(query());
  assert.equal(r.internal_count_chain_reconciled,true);
+ assert.equal(r.synthetic_http_200_envelope_pages,3);
+ assert.equal(r.failed_http_pages_admitted,false);
+ assert.equal(r.legacy_success_field_admitted,false);
  assert.equal(r.observed_review_rows_in_fixture,3);
  assert.equal(r.reported_total_matching_in_fixture,3);
  assert.equal(r.first_page_score_total_reviews_if_supplied,2);
@@ -85,6 +88,20 @@ test('Duplicate, disconnected and nonadvancing cursors fail closed',()=>{
  assert.throws(()=>audit(b),/Nonempty page must have an advancing/);
  const c=query();c.pages[1].cursor_out='*';
  assert.throws(()=>audit(c),/Malformed synthetic page/);
+});
+test('HTTP 429 and non-200 or legacy response shapes never count as a terminal empty page',()=>{
+ for(const status of [429,500,404,0,null,undefined]){
+  const x=query();x.pages[2].http_status=status;
+  assert.throws(()=>audit(x),/Malformed synthetic page/);
+ }
+ const a=query();delete a.pages[0].http_status;
+ assert.throws(()=>audit(a),/Malformed synthetic page/);
+ const b=query();b.pages[1].response_envelope='legacy_success';
+ assert.throws(()=>audit(b),/Malformed synthetic page/);
+ const c=query();c.pages[1].success=1;
+ assert.throws(()=>audit(c),/Malformed synthetic page/);
+ const d=query();delete d.pages[2].response_envelope;
+ assert.throws(()=>audit(d),/Malformed synthetic page/);
 });
 test('Score total is first-page and all-review-type only, never a sum across pages',()=>{
  const a=query();a.pages[1].score_total_reviews=5;
