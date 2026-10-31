@@ -2996,6 +2996,61 @@
       "evidence_class": "independent_versioned_2021_app_list_archival_metadata_not_2025_cohort",
       "license": "Only public file names, dates and Git revision metadata used; no dataset, AppIDs, profiles or financial details republished.",
       "notes": "Three public data-file histories last updated May 29, 2021: ISteamApps.json fd87163ac, IStoreService.json 3a59594f, IStoreService_page_2.json 790118f7. Repository README commit b9565ca9 of Nov 25, 2025 does not refresh these data files. Git history independently checked Oct 30, 2026. This archive cannot contain newly released 2025 base game records or purchase outcomes."
+    },
+    {
+      "id": "steam-gamecharts-release-year-20261030",
+      "url": "https://charts.game/charts/releases",
+      "title": "GameCharts — 2024 and 2025 Steam-classified game release-year totals",
+      "publisher": "GameCharts — independent public Steam metrics site, not Valve",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "dated_independent_current_catalog_steam_game_release_year_tag_aggregate_not_initially_paid_game_frame",
+      "license": "Public links, date and a few independently recorded aggregate counters; no AppIDs, user reviews, images or catalog row content reproduced.",
+      "notes": "2024 17,393; 2025 20,561 on original October 30 2026 capture. Provider excludes DLC, demos, software, soundtracks and coming-soon from this catalog; presently visible titles are not a complete original paid cohort. The five URLs are from one provider, not independent samples; tag membership can overlap and change."
+    },
+    {
+      "id": "steam-gamecharts-action-2024-2025-20261030",
+      "url": "https://charts.game/trends/action",
+      "title": "GameCharts — Action-tagged Steam game releases in 2024 and 2025",
+      "publisher": "GameCharts — independent public Steam metrics site, not Valve",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "dated_independent_current_catalog_steam_game_release_year_tag_aggregate_not_initially_paid_game_frame",
+      "license": "Public links, date and a few independently recorded aggregate counters; no AppIDs, user reviews, images or catalog row content reproduced.",
+      "notes": "Provider reported 6,896 (2024), 7,730 (2025), 39.6% and 37.6% annual shares. The five URLs are from one provider, not independent samples; tag membership can overlap and change."
+    },
+    {
+      "id": "steam-gamecharts-simulation-2024-2025-20261030",
+      "url": "https://charts.game/trends/simulation",
+      "title": "GameCharts — Simulation-tagged Steam game releases in 2024 and 2025",
+      "publisher": "GameCharts — independent public Steam metrics site, not Valve",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "dated_independent_current_catalog_steam_game_release_year_tag_aggregate_not_initially_paid_game_frame",
+      "license": "Public links, date and a few independently recorded aggregate counters; no AppIDs, user reviews, images or catalog row content reproduced.",
+      "notes": "Provider reported 3,926 (2024), 5,138 (2025), 22.6% and 25.0% annual shares. The five URLs are from one provider, not independent samples; tag membership can overlap and change."
+    },
+    {
+      "id": "steam-gamecharts-strategy-2024-2025-20261030",
+      "url": "https://charts.game/trends/strategy",
+      "title": "GameCharts — Strategy-tagged Steam game releases in 2024 and 2025",
+      "publisher": "GameCharts — independent public Steam metrics site, not Valve",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "dated_independent_current_catalog_steam_game_release_year_tag_aggregate_not_initially_paid_game_frame",
+      "license": "Public links, date and a few independently recorded aggregate counters; no AppIDs, user reviews, images or catalog row content reproduced.",
+      "notes": "Provider reported 3,598 (2024), 4,389 (2025), 20.7% and 21.3% annual shares. The five URLs are from one provider, not independent samples; tag membership can overlap and change."
+    },
+    {
+      "id": "steam-gamecharts-puzzle-2024-2025-20261030",
+      "url": "https://charts.game/trends/puzzle",
+      "title": "GameCharts — Puzzle-tagged Steam game releases in 2024 and 2025",
+      "publisher": "GameCharts — independent public Steam metrics site, not Valve",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "dated_independent_current_catalog_steam_game_release_year_tag_aggregate_not_initially_paid_game_frame",
+      "license": "Public links, date and a few independently recorded aggregate counters; no AppIDs, user reviews, images or catalog row content reproduced.",
+      "notes": "Provider reported 3,853 (2024), 4,374 (2025), 22.2% and 21.3% annual shares on October 30. October 31 page recheck showed 4,373 for 2025: a changing catalog, not fixed sales data. The five URLs are from one provider, not independent samples; tag membership can overlap and change."
     }
   ],
   "claims": [
@@ -19463,6 +19518,81 @@
       "confidence": "high_for_versioned_file_dates_and_official_api_contract_not_complete_historical_census",
       "observed_at": "2026-10-30",
       "limitations": "Only public GitHub commit metadata and official app-list interface documentation were consulted; no third-party roster rows downloaded, original paid price, launch-clock attestations, financial reports or 2025 paid-game population observed."
+    },
+    {
+      "id": "steam-gamecharts-2025-current-game-catalog-vintage",
+      "text": "GameCharts reported 17,393 Steam-classified games with 2024 release dates and 20,561 with 2025 release dates in its October 30 2026 current catalog capture; these are not official historically complete initially paid release totals.",
+      "source_ids": [
+        "steam-gamecharts-release-year-20261030"
+      ],
+      "confidence": "bounded_provider_published_current_catalog_aggregates_not_official_historical_paid_game_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Single dynamically updated third-party provider; five URLs not independent methods. Different page refresh times, evolving user tags, missing retired titles and unknown initial paid status. No paid orders, legal publisher payees, transaction cohorts, income or true-zero games verified."
+    },
+    {
+      "id": "steam-gamecharts-four-tag-supply-2024-2025",
+      "text": "In an October 30 GameCharts aggregate snapshot, Action, Simulation, Strategy and Puzzle each had more currently tagged games dated 2025 than dated 2024; their tag counts were non-exclusive and did not identify original paid releases.",
+      "source_ids": [
+        "steam-gamecharts-release-year-20261030",
+        "steam-gamecharts-action-2024-2025-20261030",
+        "steam-gamecharts-simulation-2024-2025-20261030",
+        "steam-gamecharts-strategy-2024-2025-20261030",
+        "steam-gamecharts-puzzle-2024-2025-20261030"
+      ],
+      "confidence": "bounded_provider_published_current_catalog_aggregates_not_official_historical_paid_game_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Single dynamically updated third-party provider; five URLs not independent methods. Different page refresh times, evolving user tags, missing retired titles and unknown initial paid status. No paid orders, legal publisher payees, transaction cohorts, income or true-zero games verified."
+    },
+    {
+      "id": "steam-gamecharts-relative-genre-share-not-sales",
+      "text": "In GameCharts release-year counts, Action and Puzzle gained absolute 2025 tagged releases but lost percentage share of all reported game releases relative to 2024; those supply shares measure neither sales nor market demand.",
+      "source_ids": [
+        "steam-gamecharts-release-year-20261030",
+        "steam-gamecharts-action-2024-2025-20261030",
+        "steam-gamecharts-simulation-2024-2025-20261030",
+        "steam-gamecharts-strategy-2024-2025-20261030",
+        "steam-gamecharts-puzzle-2024-2025-20261030"
+      ],
+      "confidence": "bounded_provider_published_current_catalog_aggregates_not_official_historical_paid_game_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Single dynamically updated third-party provider; five URLs not independent methods. Different page refresh times, evolving user tags, missing retired titles and unknown initial paid status. No paid orders, legal publisher payees, transaction cohorts, income or true-zero games verified."
+    },
+    {
+      "id": "steam-gamecharts-tag-assignments-overlap-change",
+      "text": "GameCharts tag-based release counts use currently assigned Steam user tags projected onto older release years, so historical game labels can drift and multiple tag counts cannot be summed into distinct game counts.",
+      "source_ids": [
+        "steam-gamecharts-action-2024-2025-20261030",
+        "steam-gamecharts-simulation-2024-2025-20261030",
+        "steam-gamecharts-strategy-2024-2025-20261030",
+        "steam-gamecharts-puzzle-2024-2025-20261030"
+      ],
+      "confidence": "bounded_provider_published_current_catalog_aggregates_not_official_historical_paid_game_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Single dynamically updated third-party provider; five URLs not independent methods. Different page refresh times, evolving user tags, missing retired titles and unknown initial paid status. No paid orders, legal publisher payees, transaction cohorts, income or true-zero games verified."
+    },
+    {
+      "id": "steam-gamecharts-genre-frames-not-originally-paid",
+      "text": "GameCharts store-classified release-year tag totals do not separately certify paid-at-first-playable-launch status, sale counts, refund-adjusted revenue, or creator income.",
+      "source_ids": [
+        "steam-gamecharts-release-year-20261030",
+        "steam-gamecharts-action-2024-2025-20261030",
+        "steam-gamecharts-simulation-2024-2025-20261030",
+        "steam-gamecharts-strategy-2024-2025-20261030",
+        "steam-gamecharts-puzzle-2024-2025-20261030"
+      ],
+      "confidence": "bounded_provider_published_current_catalog_aggregates_not_official_historical_paid_game_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Single dynamically updated third-party provider; five URLs not independent methods. Different page refresh times, evolving user tags, missing retired titles and unknown initial paid status. No paid orders, legal publisher payees, transaction cohorts, income or true-zero games verified."
+    },
+    {
+      "id": "steam-gamecharts-current-feed-omits-older-retired",
+      "text": "GameCharts states it began its own Steam catalog collection on October 19 2026; present accessible catalog observations may omit previously removed titles and cannot alone reconstruct every historical originally paid game.",
+      "source_ids": [
+        "steam-gamecharts-release-year-20261030"
+      ],
+      "confidence": "bounded_provider_published_current_catalog_aggregates_not_official_historical_paid_game_census",
+      "observed_at": "2026-10-30",
+      "limitations": "Single dynamically updated third-party provider; five URLs not independent methods. Different page refresh times, evolving user tags, missing retired titles and unknown initial paid status. No paid orders, legal publisher payees, transaction cohorts, income or true-zero games verified."
     }
   ],
   "observations": [],
