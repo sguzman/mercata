@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {auditPublicSteamTagReleaseYearSupply as audit} from '../site/steam-tag-release-year-supply-audit.mjs';
+import {boundReleaseTagOverlap} from '../site/steam-tag-overlap-bounds.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
 const study=read('ontology/steam/steam-four-tag-2024-2025-public-release-supply-2026.json');
 const f=()=>structuredClone(study.observed_aggregate);
@@ -82,4 +83,25 @@ test('Registered source claims and original Steam task weights match the public 
   assert(x.evidence.includes('ontology/steam/steam-four-tag-2024-2025-public-release-supply-2026.json'));
  }
  assert.equal(p.progress_percent,Math.round(all.reduce((a,x)=>a+(x.percent??x.progress),0)/293));
+});
+
+test('Conditional four-tag overlap arithmetic never invents observed paid-game joins',()=>{
+ const rows=study.observed_aggregate.tag_rows;
+ const y=study.observed_aggregate.year_totals;
+ for(const item of study.conditional_overlap_checks.arithmetic){
+  const year=item.year,denom=y.find(x=>x.year===year).store_game_releases;
+  const tagCounts=rows.map(r=>({tag:r.tag,games:r['release_count_'+year]}));
+  const b=boundReleaseTagOverlap({allReleasedGames:denom,tagCounts});
+  assert.equal(item.all_released_games,denom);
+  assert.equal(b.sum_nonexclusive_tag_memberships,item.sum_four_tag_memberships);
+  assert.equal(b.forced_redundant_memberships_lower_bound,
+   item.necessary_redundant_memberships_if_same_frame);
+  assert.equal(b.forced_distinct_games_with_two_or_more_tags_lower_bound,
+   item.necessary_distinct_multi_tagged_games_if_same_frame);
+  assert.equal(b.exact_pairwise_tag_overlaps,null);
+  assert.equal(b.paid_only_release_frame_verified,false);
+ }
+ assert.equal(study.conditional_overlap_checks.frame_same_capture_and_membership_verified,false);
+ assert.equal(study.conditional_overlap_checks.actual_multi_tagged_game_count,null);
+ assert.equal(study.conditional_overlap_checks.original_paid_game_overlap,null);
 });

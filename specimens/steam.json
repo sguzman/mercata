@@ -19582,6 +19582,20 @@
       "confidence": "bounded_provider_published_current_catalog_aggregates_not_official_historical_paid_game_census",
       "observed_at": "2026-10-30",
       "limitations": "Single dynamically updated third-party provider; five URLs not independent methods. Different page refresh times, evolving user tags, missing retired titles and unknown initial paid status. No paid orders, legal publisher payees, transaction cohorts, income or true-zero games verified."
+    },
+    {
+      "id": "steam-gamecharts-fourtag-conditional-overlap-pigeonhole-20261031",
+      "text": "Conditional on treating the October 30 GameCharts release-year tag and all-game counts as one common frozen population, four selected 2024 tags sum to 18,273 memberships over 17,393 games (at least 880 redundant memberships and 294 multi-tag games), while four 2025 tags sum to 21,631 over 20,561 (at least 1,070 redundancies and 357 multi-tag games). No aligned per-AppID overlap was verified.",
+      "source_ids": [
+        "steam-gamecharts-releases-oct29-2026",
+        "steam-gamecharts-action-2024-2025-20261030",
+        "steam-gamecharts-simulation-2024-2025-20261030",
+        "steam-gamecharts-strategy-2024-2025-20261030",
+        "steam-gamecharts-puzzle-2024-2025-20261030"
+      ],
+      "confidence": "conditional_deterministic_pigeonhole_math_on_unmatched_mutable_provider_snapshots",
+      "observed_at": "2026-10-31",
+      "limitations": "Provider tags overlap and can change, source pages were not captured at exactly the same time, and a subsequent one-game revision proves drift. Consequently the conditional figures do not constitute empirical matched-roster lower bounds, paid-only game counts or sales data."
     }
   ],
   "observations": [],

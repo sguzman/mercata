@@ -18,7 +18,8 @@
     "steam-gamecharts-relative-genre-share-not-sales",
     "steam-gamecharts-tag-assignments-overlap-change",
     "steam-gamecharts-genre-frames-not-originally-paid",
-    "steam-gamecharts-current-feed-omits-older-retired"
+    "steam-gamecharts-current-feed-omits-older-retired",
+    "steam-gamecharts-fourtag-conditional-overlap-pigeonhole-20261031"
   ],
   "observed_aggregate": {
     "provider": "GameCharts",
@@ -103,5 +104,31 @@
     "changes_retroactively_edit_original_record": false,
     "identifies_removal_or_reclassification_cause": false,
     "actual_paid_sales_estimate": null
+  },
+  "conditional_overlap_checks": {
+    "frame_same_capture_and_membership_verified": false,
+    "method_path": "site/steam-tag-overlap-bounds.mjs",
+    "conditional_only": true,
+    "arithmetic": [
+      {
+        "year": 2024,
+        "all_released_games": 17393,
+        "sum_four_tag_memberships": 18273,
+        "necessary_redundant_memberships_if_same_frame": 880,
+        "necessary_distinct_multi_tagged_games_if_same_frame": 294
+      },
+      {
+        "year": 2025,
+        "all_released_games": 20561,
+        "sum_four_tag_memberships": 21631,
+        "necessary_redundant_memberships_if_same_frame": 1070,
+        "necessary_distinct_multi_tagged_games_if_same_frame": 357
+      }
+    ],
+    "matched_game_ids_observed": 0,
+    "actual_multi_tagged_game_count": null,
+    "original_paid_game_overlap": null,
+    "publisher_revenue_overlap": null,
+    "exact_tag_pair_intersections": null
   }
 }

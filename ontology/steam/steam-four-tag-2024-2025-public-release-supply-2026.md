@@ -30,3 +30,11 @@ The [pure aggregate audit](../../site/steam-tag-release-year-supply-audit.mjs) c
 ## October 31 public recheck: catalog drift without a sale event
 
 The [Puzzle page](https://charts.game/trends/puzzle) showed **4,373** currently tagged games dated to 2025 in a new October 31 UTC check, compared with **4,374** on the October 30 record above. The reported share remains **21.3%**. This is a **one-entry revision of a current catalog aggregate**, not evidence that a paid game was newly launched, removed, refunded, or resold. The original October 30 snapshot is intentionally retained. The provider does not furnish a matched AppID-level change log here, so neither the cause nor the exact time of revision is independently identified. The [structured record](steam-four-tag-2024-2025-public-release-supply-2026.json) preserves both observations and their timestamps without replacing one with the other.
+
+## Conditional multi-tag overlap, not observed AppID intersections
+
+The [existing Steam tag-overlap bound helper](../../site/steam-tag-overlap-bounds.mjs) shows why the four tag counts must not be summed into unique games. For the **October 30 recorded numbers only**, the four 2024 counts add to **18,273 memberships**, exceeding the **17,393** reported overall release-year games by **880**. In 2025 they add to **21,631 memberships**, exceeding the reported **20,561** total by **1,070**.
+
+**If** each group and the all-game total were measured in the **same** game population at the **same instant**, at least **880** (2024) and **1,070** (2025) memberships would be redundant. Because a game can contribute no more than three extra memberships among these four tags, the corresponding *conditional necessary lower bounds* are **294** and **357** distinct games with multiple selected tags. These are pigeonhole arithmetic results, **not** measured overlaps: the provider's pages refresh at different times, tag assignments are mutable, and the October 31 recheck already changed one Puzzle entry.
+
+A real lower-bound estimate for a fixed historical paid-release population would require same-instant, AppID-aligned source data and validated initial paid status. The project's helper explicitly returns `null` for exact pair intersections, and this study does not assert any observed cross-tag AppIDs, publisher counts, genre paid sales or cash receipts.
