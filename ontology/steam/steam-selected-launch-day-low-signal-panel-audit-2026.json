@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "public_selected_launch_day_modelled_near_zero_vs_review_threshold_noncomparable_panels",
+  "reviewed_at": "2026-10-31",
+  "source_ids": [
+    "steam-selected-june2025-53-modelled-games-20261031",
+    "steam-selected-june2026-67-modelled-games-20261031",
+    "steam-selected-july2026-69-review-games-20261031"
+  ],
+  "claim_ids": [
+    "steam-selected-2025-2026-june-nearzero-estimates-not-truezero",
+    "steam-selected-june2026-35of67-not-53percent",
+    "steam-selected-july2026-24of69-low-review-not-no-sales",
+    "steam-selected-day-panel-year-comparison-invalid",
+    "steam-selected-gamalytic-window-revenue-not-publisher-net"
+  ],
+  "selected_panels": [
+    {
+      "panel_id": "fixture-june-2025",
+      "source_id": "steam-selected-june2025-53-modelled-games-20261031",
+      "release_days": [
+        "2025-06-02"
+      ],
+      "release_scope": "author_selected_uncertified_paid_origin",
+      "observed_followup_days_approx": 16,
+      "outcome_measure": "third_party_estimated_near_zero_sales",
+      "estimated_by": "Gamalytic",
+      "reported_eligible_games": 53,
+      "reported_bucket_counts": [
+        13,
+        18,
+        10,
+        10,
+        2
+      ],
+      "low_signal_count": 13,
+      "author_reported_low_signal_percent": null
+    },
+    {
+      "panel_id": "fixture-june-2026",
+      "source_id": "steam-selected-june2026-67-modelled-games-20261031",
+      "release_days": [
+        "2026-06-03",
+        "2026-06-04"
+      ],
+      "release_scope": "author_selected_uncertified_paid_origin",
+      "observed_followup_days_approx": 30,
+      "outcome_measure": "third_party_estimated_near_zero_sales",
+      "estimated_by": "Gamalytic",
+      "reported_eligible_games": 67,
+      "reported_bucket_counts": [
+        35,
+        6,
+        13,
+        7,
+        6
+      ],
+      "low_signal_count": 35,
+      "author_reported_low_signal_percent": 53
+    },
+    {
+      "panel_id": "fixture-july-2026",
+      "source_id": "steam-selected-july2026-69-review-games-20261031",
+      "release_days": [
+        "2026-07-21"
+      ],
+      "release_scope": "author_filtered_paid_apps_unverified_first_paid_origin",
+      "observed_followup_days_approx": 30,
+      "outcome_measure": "public_review_count_below_ten",
+      "estimated_by": null,
+      "reported_eligible_games": 69,
+      "reported_bucket_counts": [
+        24,
+        26,
+        11,
+        8
+      ],
+      "low_signal_count": 24,
+      "author_reported_low_signal_percent": 35
+    }
+  ],
+  "observation": {
+    "panel_count": 3,
+    "panels_same_author": false,
+    "first_two_panels_same_gamalytic_estimator": true,
+    "distinct_selected_release_days": true,
+    "panel_game_ids_independently_verified": false,
+    "appids_collected": 0,
+    "customer_data_collected": false,
+    "independent_paid_checkout_ledgers_provided": false,
+    "unobserved_games_outside_selected_days_unknown": true,
+    "historical_launch_paid_status_verified": false,
+    "representative_game_population": false,
+    "original_paid_release_frame_total": null,
+    "actual_zero_paid_sale_fraction": null,
+    "publisher_income_median": null,
+    "proven_year_over_year_near_zero_change": null,
+    "paid_zero_order_app_count": null
+  },
+  "model_path": "site/steam-selected-launch-day-low-signal-audit.mjs",
+  "test_path": "tests/steam-selected-launch-day-low-signal-audit.test.mjs"
+}
