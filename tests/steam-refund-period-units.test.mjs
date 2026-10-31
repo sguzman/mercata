@@ -13,6 +13,17 @@ test('No purchases means undefined ratio, not zero or Infinity',()=>{
  assert.equal(v.period_refund_events_over_period_purchases,null);
  assert.throws(()=>periodRefundRatio({period_purchases:1,period_returned:-1}),/Invalid period returns/);
 });
+test('Unrelated review flags and private or malformed fields cannot enter the financial period calculation',()=>{
+ const good={period_purchases:4,period_returned:6};
+ assert.equal(periodRefundRatio(good).period_refund_events_over_period_purchases,1.5);
+ for(const extra of [
+  {review_author_refunded_true:1},{review_flag_fraction:0.25},
+  {steamid:'private'},{purchase_country:'US'},{transaction_details:[]}
+ ])assert.throws(()=>periodRefundRatio({...good,...extra}),/Only explicit aggregate/);
+ for(const invalid of [[],null,42,'aggregate',{period_purchases:4},{period_returned:6}]){
+  assert.throws(()=>periodRefundRatio(invalid),/Only explicit aggregate/);
+ }
+});
 test('Official reporting source mapped, all 293 tasks remain fixed',()=>{
  assert.equal(x.official_rate.same_purchase_cohort_not_guaranteed,true);
  assert.equal(x.access.individual_notes_collected,false);

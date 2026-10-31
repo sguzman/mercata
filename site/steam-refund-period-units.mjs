@@ -1,6 +1,9 @@
 // Demonstration only: period events and paid cohort refunds are not interchangeable.
 export function periodRefundRatio(input){
- if(!input||typeof input!=='object')throw new TypeError('Expected aggregate');
+ if(!input||typeof input!=='object'||Array.isArray(input)||
+  Object.keys(input).length!==2||
+  !Object.keys(input).every(k=>['period_purchases','period_returned'].includes(k)))
+  throw new TypeError('Only explicit aggregate financial period purchases and returns are permitted');
  const {period_purchases,period_returned}=input;
  if(!Number.isSafeInteger(period_purchases)||period_purchases<0)throw new TypeError('Invalid period purchases');
  if(!Number.isSafeInteger(period_returned)||period_returned<0)throw new TypeError('Invalid period returns');
