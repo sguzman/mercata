@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "two_live_provider_review_count_gross_models_different_coverage_no_merchant_reconciliation",
+  "reviewed_on": "2026-10-31",
+  "snapshots_source_date": "2026-10-30",
+  "source_ids": [
+    "steam-puregamestats-review-gross-model-snapshot-oct2026",
+    "steam-weloveit-review-revenue-report-2026-10-29"
+  ],
+  "claim_ids": [
+    "steam-puregamestats-lifetime-review-gross-selects-pricing-and-reviews",
+    "steam-weloveit-oct30-review-model-refresh",
+    "steam-two-models-unmatched-median-spread-not-validated-income",
+    "steam-two-review-models-exclude-unreviewed-paid-order-zeros"
+  ],
+  "providers": [
+    {
+      "id": "puregamestats",
+      "source_id": "steam-puregamestats-review-gross-model-snapshot-oct2026",
+      "observed_on": "2026-10-30",
+      "report_url": "https://www.puregamestats.com/data/steam-economy",
+      "priced_reviewed_games": 99015,
+      "model_estimated_lifetime_gross_usd_billions": 102.2,
+      "model_estimated_lifetime_median_gross_usd": 1436,
+      "model_top_one_percent_share": 0.826,
+      "priced_zero_review_games": null,
+      "publisher_income_known": false,
+      "review_based_sales_estimation": true,
+      "cohort_appids_matched_with_other_provider": false,
+      "outcome_tier_counts": [
+        69776,
+        19796,
+        4536,
+        3698,
+        1006,
+        195,
+        8
+      ],
+      "outcome_tiers_usd": [
+        "under_10000",
+        "10000_to_249999",
+        "250000_to_999999",
+        "1000000_to_9999999",
+        "10000000_to_99999999",
+        "100000000_to_999999999",
+        "1000000000_plus"
+      ]
+    },
+    {
+      "id": "weloveit",
+      "source_id": "steam-weloveit-review-revenue-report-2026-10-29",
+      "observed_on": "2026-10-30",
+      "report_url": "https://weloveit.io/developers/steam-revenue-report/",
+      "priced_reviewed_games": 103776,
+      "model_estimated_lifetime_gross_usd_billions": 132.5,
+      "model_estimated_lifetime_median_gross_usd": 3493,
+      "model_top_one_percent_share": 0.845,
+      "priced_zero_review_games": 9300,
+      "publisher_income_known": false,
+      "review_based_sales_estimation": true,
+      "cohort_appids_matched_with_other_provider": false,
+      "outcome_tier_counts": null,
+      "outcome_tiers_usd": null
+    }
+  ],
+  "scope": {
+    "numerator_units": "third_party_estimated_US_dollar_lifetime_gross_by_game_not_publisher_receipts",
+    "source_counts_are_2026_snapshot_totals_not_2025_first_paid_launch_cohorts": true,
+    "matched_game_identifiers_across_providers_available": false,
+    "completed_orders_verified": false,
+    "zero_review_paid_games_can_have_paid_sales": true,
+    "zero_review_paid_games_excluded_from_both_headline_positive_review_models": true,
+    "open_methodological_uncertainty": "Different selection, regional/current price handling, reviews-to-sales multipliers, game metadata and refresh timings can move the estimate. Exact contributions not identifiable without reconciled records.",
+    "exact_zero_sale_population_fraction": null,
+    "median_legal_publisher_net_income": null,
+    "profit_after_costs": null
+  },
+  "privacy": {
+    "appid_rows_imported": 0,
+    "reviewer_rows_imported": 0,
+    "account_financials_imported": 0
+  },
+  "model_path": "site/steam-review-gross-model-disagreement.mjs",
+  "test_path": "tests/steam-review-gross-model-disagreement.test.mjs"
+}

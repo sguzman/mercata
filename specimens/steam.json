@@ -3150,6 +3150,17 @@
       "evidence_class": "current_app_status_only_not_paid_origin_or_sales_evidence",
       "license": "Public link and limited attributed status facts only; no scraping, raw app history export, pricing histories or source assets imported.",
       "notes": "Provider public application page classifies Carrier Command 2 VR as game, lists August 10 2021 release, and currently notes retired publisher-request status. No evidence of a separate first paid checkout or exact paid orders."
+    },
+    {
+      "id": "steam-puregamestats-review-gross-model-snapshot-oct2026",
+      "url": "https://www.puregamestats.com/data/steam-economy",
+      "title": "PureGameStats Steam Revenue Report — review-gated estimated lifetime gross (October 30 2026 snapshot)",
+      "publisher": "PureGameStats, independent third-party Steam statistics provider",
+      "published_at": null,
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "review_based_modelled_lifetime_gross_selected_paid_reviewed_games_not_steam_financials",
+      "license": "Only short attributable public aggregate counts, numerical estimates and original methodological discussion. No charts, underlying AppIDs or source text reproduced.",
+      "notes": "Page snapshot explicitly dated 2026-10-30 21:54:46 UTC: 99,015 priced games with at least one review, estimated $102.2B lifetime gross, $1,436 median, 82.6% top-one-percent gross share. Seven modeled revenue tier counts sum to 99,015. Uses per-game estimator with current regional price fallback; excludes F2P, DLC, demos and reviewless games. No actual Steam partner ledgers."
     }
   ],
   "claims": [
@@ -19922,6 +19933,48 @@
       "confidence": "public_app_metadata_and_explicit_not_first_paid_origin",
       "observed_at": "2026-10-31",
       "limitations": "A provider's current retired status and old game type are not a verified first-paid launch chronology, financial record, or representative market sample."
+    },
+    {
+      "id": "steam-puregamestats-lifetime-review-gross-selects-pricing-and-reviews",
+      "text": "PureGameStats' dated October 30, 2026 public estimate reports 99,015 priced Steam games with at least one review, $102.2 billion modeled lifetime gross, a $1,436 modeled median, and 82.6% of modeled revenue in the top 1%; its seven displayed revenue bins reconcile to 99,015 titles. None is authenticated order or publisher-income data.",
+      "source_ids": [
+        "steam-puregamestats-review-gross-model-snapshot-oct2026"
+      ],
+      "confidence": "attributed_live_public_review_price_model_with_summarized_aggregate_arithmetic",
+      "observed_at": "2026-10-30",
+      "limitations": "Review-gated currently covered games, price-fallback modeling, no zero-review paid games, delisted or original paid-release roster audit, or real earnings reports."
+    },
+    {
+      "id": "steam-weloveit-oct30-review-model-refresh",
+      "text": "WeLoveIt's October 30, 2026 public review-price estimator separately reported 103,776 priced review-bearing games, $132.5 billion modeled lifetime gross, a $3,493 modeled median, an 84.5% top-one-percent modeled gross share, and 9,300 priced games with zero reviews below its measurement floor.",
+      "source_ids": [
+        "steam-weloveit-review-revenue-report-2026-10-29"
+      ],
+      "confidence": "attributed_continuously_refreshed_third_party_review_multiplier_model",
+      "observed_at": "2026-10-30",
+      "limitations": "Live values can drift; model uses current US list price and reviews with a default 35-times multiplier. Reviewless paid products are not verified zero-sale games. No authenticated finance."
+    },
+    {
+      "id": "steam-two-models-unmatched-median-spread-not-validated-income",
+      "text": "Two public 2026 lifetime gross models reported different covered game counts (99,015 and 103,776) and medians ($1,436 and $3,493). Their displayed medians differ by roughly 2.43 times, but the games and price/multiplier assumptions are not AppID-matched; the difference is estimator disagreement, not a statistical error interval or measured change in real publisher earnings.",
+      "source_ids": [
+        "steam-puregamestats-review-gross-model-snapshot-oct2026",
+        "steam-weloveit-review-revenue-report-2026-10-29"
+      ],
+      "confidence": "reproducible_arithmetic_from_unmatched_model_outputs",
+      "observed_at": "2026-10-31",
+      "limitations": "Different providers and continuously refreshed snapshots; difference cannot be causally decomposed or used as a validated lower and upper bound on a marketwide population median."
+    },
+    {
+      "id": "steam-two-review-models-exclude-unreviewed-paid-order-zeros",
+      "text": "Both public headline gross models require at least one review and a usable price; WeLoveIt additionally reports 9,300 priced zero-review games in its separate catalog category. Such reviewless games may have paid sales, and neither model can establish an exact-zero paid-order fraction or after-cost publisher earnings.",
+      "source_ids": [
+        "steam-puregamestats-review-gross-model-snapshot-oct2026",
+        "steam-weloveit-review-revenue-report-2026-10-29"
+      ],
+      "confidence": "explicit_provider_model_inclusion_and_exclusion_rules",
+      "observed_at": "2026-10-31",
+      "limitations": "Review status is not payment status; optional exclusions, unmatched AppIDs, other current price gaps, and nonrepresentative reporting prevent a historical zero-order denominator."
     }
   ],
   "observations": [],
