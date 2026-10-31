@@ -825,3 +825,7 @@ The [dated GameCharts study](../ontology/steam/steam-four-tag-2024-2025-public-r
 ## Reconciled calendar-month release counts (October 31, 2026)
 
 The [public GameCharts monthly study](../ontology/steam/steam-four-tag-2024-2025-public-release-supply-2026.md) reconciles twelve 2024 monthly Steam game release counts to 17,393 and twelve 2025 counts to 20,561. November 2025 has 2,102 recorded listings. These observations strengthen research into seasonal *supply* without estimating seasonal consumer purchasing or profit. Original seasonality task advances one point; exact research progress **91.863%** (Δ **+0.003 pp**), 275 source records, 1599 linked claims and 293 unchanged tasks.
+
+## Selected low-signal launch-day research panels (October 31, 2026)
+
+The [public selected-game comparison](../ontology/steam/steam-selected-launch-day-low-signal-panel-audit-2026.md) records June 2025 (13 of 53 modeled near-zero titles after 16 days), June 2026 (35 of 67 after about one month), and July 2026 (24 of 69 selected paid games with under ten reviews after about one month). The June author labels 35/67 as 53%, whereas the fraction is **52.2%**. These three observations use different selected launch days and two fundamentally different measurements, so **no exact paid-order zero fraction, longitudinal trend or payout inference** is supported. Four existing tasks each advance one point, with no invented tasks. Progress: **91.877%**, Δ **+0.014 pp**, **278 public sources** and **1604 linked claims**.

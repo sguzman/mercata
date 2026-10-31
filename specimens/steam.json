@@ -3040,6 +3040,39 @@
       "evidence_class": "dated_independent_current_catalog_steam_game_release_year_tag_aggregate_not_initially_paid_game_frame",
       "license": "Public links, date and a few independently recorded aggregate counters; no AppIDs, user reviews, images or catalog row content reproduced.",
       "notes": "Provider reported 3,853 (2024), 4,374 (2025), 22.2% and 21.3% annual shares on October 30. October 31 page recheck showed 4,373 for 2025: a changing catalog, not fixed sales data. The five URLs are from one provider, not independent samples; tag membership can overlap and change."
+    },
+    {
+      "id": "steam-selected-june2025-53-modelled-games-20261031",
+      "url": "https://www.reddit.com/r/gamedev/comments/1lfd9z6/i_analyzed_every_steam_game_released_in_a_day/",
+      "title": "June 2 2025 selected-release Gamalytic model snapshot",
+      "publisher": "Independent public game-release research author in r/gamedev",
+      "published_at": null,
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "selected_launch_calendar_days_aggregates_from_third_party_estimator_or_public_reviews",
+      "license": "Public links, small aggregate counts and independently drafted methodological notes only; no app-level records, reviewer data or source text reproduced.",
+      "notes": "53 selected game entries, bin sizes 13,18,10,10,2 after 16 days; low bin is zero or almost zero modeled copies, not verified paid orders."
+    },
+    {
+      "id": "steam-selected-june2026-67-modelled-games-20261031",
+      "url": "https://www.reddit.com/r/gamedev/comments/1vyumii/i_analyzed_every_steam_game_released_in_a_day_and/",
+      "title": "June 3–4 2026 selected-release Gamalytic model snapshot",
+      "publisher": "Independent public game-release research author in r/gamedev",
+      "published_at": null,
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "selected_launch_calendar_days_aggregates_from_third_party_estimator_or_public_reviews",
+      "license": "Public links, small aggregate counts and independently drafted methodological notes only; no app-level records, reviewer data or source text reproduced.",
+      "notes": "67 selected game entries, bin sizes 35,6,13,7,6 after about 30 days; the author's 53% for 35/67 differs from arithmetic 52.24%."
+    },
+    {
+      "id": "steam-selected-july2026-69-review-games-20261031",
+      "url": "https://www.reddit.com/r/gamedev/comments/1vyuxgl/i_analyzed_every_steam_game_released_on_july_21/",
+      "title": "July 21 2026 selected-release public-review threshold snapshot",
+      "publisher": "Independent public game-release research author in r/gamedev",
+      "published_at": null,
+      "retrieved_at": "2026-10-31",
+      "evidence_class": "selected_launch_calendar_days_aggregates_from_third_party_estimator_or_public_reviews",
+      "license": "Public links, small aggregate counts and independently drafted methodological notes only; no app-level records, reviewer data or source text reproduced.",
+      "notes": "69 author-assessed paid releases with review bands 24,26,11,8 after about 30 days; 24 have fewer than ten reviews, not verified zero paid sales."
     }
   ],
   "claims": [
@@ -19616,6 +19649,60 @@
       "confidence": "high_for_source_unit_boundary_not_causal_economic_inference",
       "observed_at": "2026-10-31",
       "limitations": "No matched sale cohorts, impressions, marketing effort, seasonal consumer purchases, refund-adjusted receipts or profit; current catalog dates and historical coverage drift."
+    },
+    {
+      "id": "steam-selected-2025-2026-june-nearzero-estimates-not-truezero",
+      "text": "Selected June 2025 and June 2026 Steam launch-day posts reported respectively 13 of 53 and 35 of 67 games in zero-or-almost-zero modeled copy buckets using Gamalytic; neither constitutes verified zero paid-sale transactions.",
+      "source_ids": [
+        "steam-selected-june2025-53-modelled-games-20261031",
+        "steam-selected-june2026-67-modelled-games-20261031"
+      ],
+      "confidence": "bounded_public_researcher_selected_samples_without_merchant_ledger",
+      "observed_at": "2026-10-31",
+      "limitations": "Nonrandom selected launch days, two Gamalytic-estimated panels with different horizons and one review-count panel; no validated paid order, exact-zero transactions, complete first-paid game population or publisher returns."
+    },
+    {
+      "id": "steam-selected-june2026-35of67-not-53percent",
+      "text": "The June 2026 author printed 53% for a low-model bin of 35 out of 67, but the corresponding fraction is approximately 52.24%, conventionally 52% to the nearest integer.",
+      "source_ids": [
+        "steam-selected-june2026-67-modelled-games-20261031"
+      ],
+      "confidence": "bounded_public_researcher_selected_samples_without_merchant_ledger",
+      "observed_at": "2026-10-31",
+      "limitations": "Nonrandom selected launch days, two Gamalytic-estimated panels with different horizons and one review-count panel; no validated paid order, exact-zero transactions, complete first-paid game population or publisher returns."
+    },
+    {
+      "id": "steam-selected-july2026-24of69-low-review-not-no-sales",
+      "text": "A separate July 2026 selected-day post counted 24 of 69 author-classified paid game releases with fewer than ten public reviews after about one month; this is a review-count bucket, not an exact zero paid-sale rate.",
+      "source_ids": [
+        "steam-selected-july2026-69-review-games-20261031"
+      ],
+      "confidence": "bounded_public_researcher_selected_samples_without_merchant_ledger",
+      "observed_at": "2026-10-31",
+      "limitations": "Nonrandom selected launch days, two Gamalytic-estimated panels with different horizons and one review-count panel; no validated paid order, exact-zero transactions, complete first-paid game population or publisher returns."
+    },
+    {
+      "id": "steam-selected-day-panel-year-comparison-invalid",
+      "text": "The selected June 2025, June 2026 and July 2026 posts differ in release-date selection, follow-up time and whether they use modeled copies or public reviews; their low-signal percentages do not prove a Steam-wide or year-over-year zero-sales trend.",
+      "source_ids": [
+        "steam-selected-june2025-53-modelled-games-20261031",
+        "steam-selected-june2026-67-modelled-games-20261031",
+        "steam-selected-july2026-69-review-games-20261031"
+      ],
+      "confidence": "bounded_public_researcher_selected_samples_without_merchant_ledger",
+      "observed_at": "2026-10-31",
+      "limitations": "Nonrandom selected launch days, two Gamalytic-estimated panels with different horizons and one review-count panel; no validated paid order, exact-zero transactions, complete first-paid game population or publisher returns."
+    },
+    {
+      "id": "steam-selected-gamalytic-window-revenue-not-publisher-net",
+      "text": "Third-party modeled gross brackets for selected game launch days cannot independently verify actual refunded paid orders, Steam Direct adjusted-gross fee recoupment, publisher bank remittances or developer after-cost profit.",
+      "source_ids": [
+        "steam-selected-june2025-53-modelled-games-20261031",
+        "steam-selected-june2026-67-modelled-games-20261031"
+      ],
+      "confidence": "bounded_public_researcher_selected_samples_without_merchant_ledger",
+      "observed_at": "2026-10-31",
+      "limitations": "Nonrandom selected launch days, two Gamalytic-estimated panels with different horizons and one review-count panel; no validated paid order, exact-zero transactions, complete first-paid game population or publisher returns."
     }
   ],
   "observations": [],

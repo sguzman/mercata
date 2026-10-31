@@ -69,3 +69,19 @@ test('Structured study preserves all unknown financial quantities',()=>{
  assert.equal(study.observation.appids_collected,0);
  assert.equal(study.observation.independent_paid_checkout_ledgers_provided,false);
 });
+
+test('Registered public sources, claim joins and unchanged 293 tasks agree with the audit',()=>{
+ const d=load('specimens/steam.json'),p=load('plans/steam.json'),q=load('queues/steam.json');
+ const sourceIDs=new Set(d.evidence.map(e=>e.id)),claims=new Map(d.claims.map(c=>[c.id,c]));
+ for(const id of study.source_ids)assert(sourceIDs.has(id),id);
+ for(const id of study.claim_ids){
+  const c=claims.get(id);assert(c,id);assert(c.source_ids.every(s=>sourceIDs.has(s)),id);
+ }
+ const all=[...p.detail_tasks,...q.queues.flatMap(g=>g.tasks)];
+ assert.equal(all.length,293);assert.equal(new Set(all.map(x=>x.id)).size,293);
+ for(const id of ["steam/income/measure-exact-zero-sale-fraction","steam/competition/study-early-review-count-concentration","steam/competition/study-model-estimated-sales-concentration","income/zeros"]){
+  const x=all.find(t=>t.id===id);assert(x,id);
+  for(const ref of ["ontology/steam/steam-selected-launch-day-low-signal-panel-audit-2026.md","ontology/steam/steam-selected-launch-day-low-signal-panel-audit-2026.json","site/steam-selected-launch-day-low-signal-audit.mjs","tests/steam-selected-launch-day-low-signal-audit.test.mjs"])assert(x.evidence.includes(ref),id+' '+ref);
+ }
+ assert.equal(p.progress_percent,Math.round(all.reduce((a,t)=>a+(t.percent??t.progress),0)/293));
+});
