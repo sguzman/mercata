@@ -2919,6 +2919,39 @@
       "evidence_class": "official_game_identity_display_release_date_paid_offer_and_review_summary",
       "license": "Public source URL, metadata and independently written factual paraphrase only; no artwork, copied descriptions or user profiles.",
       "notes": "Official Steam page lists AppID 4825270, June 30 2026 release, developer/publisher MAgaming, a present paid offer and No user reviews display on October 30. Not a verified number of all reviews or sales, and not original launch price or legal payee proof."
+    },
+    {
+      "id": "steam-rollscape-jun2024-creator-video-author-correction",
+      "url": "https://www.reddit.com/r/gamedev/comments/1d7szns/a_vietnamese_youtuber_played_my_game_with_800k/",
+      "title": "A Vietnamese youtuber played my game with 800k subscribers. It got 100k views and he loved the game. It translated to ZERO sales. What the hell is happening haha",
+      "publisher": "LeonardotheVinchy — game developer's public Reddit post and same-thread correction",
+      "published_at": "2024-06-04",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "selected_first_party_influencer_reach_selfreport_direct_navigation_and_country_sale_revision",
+      "license": "Public post URL/title and short independent reporting of numerical claims and correction; no entire post, comments, video, profiles or private information republished.",
+      "notes": "Author links RollScape AppID 2904290 and describes roughly 100k views of a Vietnamese video, a direct-navigation rise, originally claimed zero incremental sales, then corrects to one sale from Vietnam with unknown buyer. Neither video metrics nor geographic sale attribution validated against channel/partner dashboards."
+    },
+    {
+      "id": "steam-rollscape-official-app2904290-oct2026",
+      "url": "https://store.steampowered.com/app/2904290/RollScape/",
+      "title": "RollScape — official Steam store listing",
+      "publisher": "Valve Corporation — public Steam Store",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "official_public_paid_game_identity_release_date_and_publisher_labels",
+      "license": "Public store metadata citation with independently written concise factual summary; no product artwork or copyrighted prose replicated.",
+      "notes": "Steam lists RollScape AppID 2904290, May 22 2024 release, developer and publisher label Leonardo the Vinchy. Page does not corroborate early 2024 purchase counts, video influence, actual per-country access or legal payee."
+    },
+    {
+      "id": "steam-vnexpress-may31-2024-steam-store-block-reported",
+      "url": "https://e.vnexpress.net/news/business/companies/gaming-platform-steam-blocked-in-vietnam-for-refusal-to-cooperate-with-authorities-4752391.html",
+      "title": "Gaming platform Steam blocked in Vietnam for refusal to cooperate with authorities",
+      "publisher": "VnExpress International — May 31, 2024 reporting quoting Vietnamese communications official",
+      "published_at": "2024-05-31",
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "contemporaneous_reported_country_level_steam_store_and_checkout_access_restrictions",
+      "license": "Public article URL, publication date and concise independently written factual summary; no original paragraphs or media reproduced.",
+      "notes": "News reports early May 2024 store/payment-access failures among users in Vietnam and quotes a regulatory official about restrictions. It does not prove uniformly blocked access for every viewer, every ISP, every game, or individual buyer purchase ability."
     }
   ],
   "claims": [
@@ -18991,6 +19024,110 @@
       "confidence": "bounded_unaudited_first_party_disclosure_with_official_metadata_crosscheck",
       "observed_at": "2026-10-30",
       "limitations": "Selected voluntary report, not a permissioned merchant ledger or representative game cohort; Steam store metadata supplies no authenticated purchase count, remittance or development cost."
+    },
+    {
+      "id": "steam-rollscape-may22-official-paid-listing",
+      "text": "Steam lists RollScape AppID 2904290, release May 22, 2024, developer/publisher label Leonardo the Vinchy; current store metadata does not authenticate 2024 sales.",
+      "source_ids": [
+        "steam-rollscape-official-app2904290-oct2026"
+      ],
+      "confidence": "bounded_contemporaneous_author_report_and_country_news_not_verified_attribution",
+      "observed_at": "2026-10-30",
+      "limitations": "Different public evidence classes: author-reported reach/visits and sale counts, official game identity, and contemporaneous national access reporting. No matched buyers, randomized marketing exposure, verified UTM attribution, transaction ledger or full-market sample."
+    },
+    {
+      "id": "steam-rollscape-jun4-author-creator-audience",
+      "text": "In a June 4 developer post, the author reported a Vietnamese creator of roughly 800,000 subscribers and around 100,000 video views; neither number was audited by Mercata.",
+      "source_ids": [
+        "steam-rollscape-jun2024-creator-video-author-correction"
+      ],
+      "confidence": "bounded_contemporaneous_author_report_and_country_news_not_verified_attribution",
+      "observed_at": "2026-10-30",
+      "limitations": "Different public evidence classes: author-reported reach/visits and sale counts, official game identity, and contemporaneous national access reporting. No matched buyers, randomized marketing exposure, verified UTM attribution, transaction ledger or full-market sample."
+    },
+    {
+      "id": "steam-rollscape-creator-spike-direct-navigation",
+      "text": "The author reported a large rise in direct Steam navigation after the video, not matched buyer identities or channel-specific checkouts.",
+      "source_ids": [
+        "steam-rollscape-jun2024-creator-video-author-correction"
+      ],
+      "confidence": "bounded_contemporaneous_author_report_and_country_news_not_verified_attribution",
+      "observed_at": "2026-10-30",
+      "limitations": "Different public evidence classes: author-reported reach/visits and sale counts, official game identity, and contemporaneous national access reporting. No matched buyers, randomized marketing exposure, verified UTM attribution, transaction ledger or full-market sample."
+    },
+    {
+      "id": "steam-rollscape-initial-zero-sales-claim",
+      "text": "The report's headline and opening described no attributable sales effect from the video, an informal causal assertion without a controlled counterfactual.",
+      "source_ids": [
+        "steam-rollscape-jun2024-creator-video-author-correction"
+      ],
+      "confidence": "bounded_contemporaneous_author_report_and_country_news_not_verified_attribution",
+      "observed_at": "2026-10-30",
+      "limitations": "Different public evidence classes: author-reported reach/visits and sale counts, official game identity, and contemporaneous national access reporting. No matched buyers, randomized marketing exposure, verified UTM attribution, transaction ledger or full-market sample."
+    },
+    {
+      "id": "steam-rollscape-one-vietnam-sale-correction",
+      "text": "In a same-thread comment, the author corrected the zero headline to one sale attributed to Vietnam in the preceding day; buyer identity and channel attribution were unknown.",
+      "source_ids": [
+        "steam-rollscape-jun2024-creator-video-author-correction"
+      ],
+      "confidence": "bounded_contemporaneous_author_report_and_country_news_not_verified_attribution",
+      "observed_at": "2026-10-30",
+      "limitations": "Different public evidence classes: author-reported reach/visits and sale counts, official game identity, and contemporaneous national access reporting. No matched buyers, randomized marketing exposure, verified UTM attribution, transaction ledger or full-market sample."
+    },
+    {
+      "id": "steam-rollscape-one-sale-not-proved-creator-conversion",
+      "text": "The one reported Vietnam-country sale cannot be attributed to the video or treated as a verified no-incremental-sales outcome, and a purchase-country label does not prove physical residence.",
+      "source_ids": [
+        "steam-rollscape-jun2024-creator-video-author-correction"
+      ],
+      "confidence": "bounded_contemporaneous_author_report_and_country_news_not_verified_attribution",
+      "observed_at": "2026-10-30",
+      "limitations": "Different public evidence classes: author-reported reach/visits and sale counts, official game identity, and contemporaneous national access reporting. No matched buyers, randomized marketing exposure, verified UTM attribution, transaction ledger or full-market sample."
+    },
+    {
+      "id": "steam-vietnam-may2024-store-payment-access-reported",
+      "text": "A May 31, 2024 report quoted a Vietnamese regulatory official on Steam restrictions and described store browsing/payment access difficulties since early May, without proving every viewer was blocked.",
+      "source_ids": [
+        "steam-vnexpress-may31-2024-steam-store-block-reported"
+      ],
+      "confidence": "bounded_contemporaneous_author_report_and_country_news_not_verified_attribution",
+      "observed_at": "2026-10-30",
+      "limitations": "Different public evidence classes: author-reported reach/visits and sale counts, official game identity, and contemporaneous national access reporting. No matched buyers, randomized marketing exposure, verified UTM attribution, transaction ledger or full-market sample."
+    },
+    {
+      "id": "steam-rollscape-access-restriction-precedes-video",
+      "text": "The reported Vietnam store/payment restrictions predate the June 4 video-sales discussion and thus plausibly affect regional checkout opportunity, although no viewer-level purchase-ability census is available.",
+      "source_ids": [
+        "steam-rollscape-jun2024-creator-video-author-correction",
+        "steam-vnexpress-may31-2024-steam-store-block-reported"
+      ],
+      "confidence": "bounded_contemporaneous_author_report_and_country_news_not_verified_attribution",
+      "observed_at": "2026-10-30",
+      "limitations": "Different public evidence classes: author-reported reach/visits and sale counts, official game identity, and contemporaneous national access reporting. No matched buyers, randomized marketing exposure, verified UTM attribution, transaction ledger or full-market sample."
+    },
+    {
+      "id": "steam-rollscape-video-views-are-not-exposed-checkout-denominator",
+      "text": "Video views, account subscribers, direct store visits, accessible store-country users and completed paid transactions are different populations, so the case cannot identify creator conversion or campaign uplift.",
+      "source_ids": [
+        "steam-rollscape-jun2024-creator-video-author-correction",
+        "steam-vnexpress-may31-2024-steam-store-block-reported"
+      ],
+      "confidence": "bounded_contemporaneous_author_report_and_country_news_not_verified_attribution",
+      "observed_at": "2026-10-30",
+      "limitations": "Different public evidence classes: author-reported reach/visits and sale counts, official game identity, and contemporaneous national access reporting. No matched buyers, randomized marketing exposure, verified UTM attribution, transaction ledger or full-market sample."
+    },
+    {
+      "id": "steam-rollscape-corrected-early-anecdote-not-truezero",
+      "text": "The corrected author statement is not zero lifetime paid units for RollScape, a complete country ledger, a publisher bank-receipts figure, or a representative marketwide zero-sale statistic.",
+      "source_ids": [
+        "steam-rollscape-jun2024-creator-video-author-correction",
+        "steam-rollscape-official-app2904290-oct2026",
+        "steam-vnexpress-may31-2024-steam-store-block-reported"
+      ],
+      "confidence": "bounded_contemporaneous_author_report_and_country_news_not_verified_attribution",
+      "observed_at": "2026-10-30",
+      "limitations": "Different public evidence classes: author-reported reach/visits and sale counts, official game identity, and contemporaneous national access reporting. No matched buyers, randomized marketing exposure, verified UTM attribution, transaction ledger or full-market sample."
     }
   ],
   "observations": [],

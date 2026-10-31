@@ -7,6 +7,12 @@
 
 
 
+## RollScape: corrected creator-channel zero-sales claim and Vietnam checkout restrictions (October 30, 2026)
+
+[The June 2024 selected creator-promotion study](../ontology/steam/steam-rollscape-vietnam-creator-regional-access-correction-2024.md) combines a [developer's public post](https://www.reddit.com/r/gamedev/comments/1d7szns/a_vietnamese_youtuber_played_my_game_with_800k/), an [official Steam listing](https://store.steampowered.com/app/2904290/RollScape/) and [May 31 Vietnam store-access reporting](https://e.vnexpress.net/news/business/companies/gaming-platform-steam-blocked-in-vietnam-for-refusal-to-cooperate-with-authorities-4752391.html). The author initially described zero incremental sales after an estimated 100,000-video-view campaign but **corrected the same-thread record to one Vietnam-attributed sale**. That sale cannot be attributed to the video or interpreted as actual viewer conversion. Concurrent Steam store and payment-access restrictions plausibly constrained opportunities to buy, but neither viewer access nor campaign lift was measured. Three new sources, ten bounded claims and six regression checks advance five existing tasks one point each, retaining 293 tasks and no marketwide income claim.
+
+Steam research is now **91.782%** (Δ **+0.017 pp**), **267 public sources**, **1,562 claims**. No authenticated regional sales ledger or causal marketing estimate was produced.
+
 ## Five reported copies despite a later no-user-reviews display (October 30, 2026)
 
 The [selected first-party low-sales case](../ontology/steam/steam-crane-game-master-five-reported-copies-reviewless-2026.md) records a developer report of **about five copies** on July 9, nine calendar days after *Crane Game Master*'s [officially listed June 30 release](https://store.steampowered.com/app/4825270/Crane_Game_Master/). The game's public store later displayed **“No user reviews”** on October 30. This is a **different-day public review label**, not an exact independent review count or any merchant transaction evidence. The reported five units are unaudited and cannot be extrapolated to an income distribution, but the case shows why reviewless observations must not be counted as verified zero paid sales. Two new sources, eight bounded claims, and six regression tests support three existing tasks advancing by one point each. No new tasks were introduced.
