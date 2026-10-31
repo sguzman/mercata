@@ -70,6 +70,10 @@ test('Language shares cannot exceed all observations, or contain user-level meta
  assert.throws(()=>audit(c),/Explicit public survey/);
 });
 test('Public observation, source references and original 293 Steam task inventory stay joined',()=>{
+ const surveySource=d.evidence.find(x=>x.id==='steam-sep2026-voluntary-hardware-language-survey-oct30');
+ assert(surveySource);
+ assert.equal(surveySource.published_at,null,'measurement month is not an authenticated publication month');
+ assert.equal(surveySource.retrieved_at,'2026-10-30');
  assert.equal(doc.reviewed_at,'2026-10-30');
  assert.equal(doc.official_snapshot.reported_month,'2026-09');
  const src=new Set(d.evidence.map(x=>x.id)),claims=new Map(d.claims.map(x=>[x.id,x]));
