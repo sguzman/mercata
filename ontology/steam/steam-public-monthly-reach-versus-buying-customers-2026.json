@@ -65,5 +65,16 @@
     "matching_monthly_unique_payer_denominator": null,
     "valid_multiply_platform_mau_by_survey_os_share": false,
     "valid_infer_residence_from_client_language": false
+  },
+  "aggregate_input_contract": {
+    "fields_only": [
+      "advertisedMonthlyActiveFloor",
+      "advertisedDailyImpressions",
+      "selectedAnnualPromotionBuyers"
+    ],
+    "unknown_input_fields_rejected": true,
+    "personal_account_or_purchase_fields_allowed": false,
+    "unknown_user_payer_statistics": null,
+    "test_path": "tests/steam-audience-denominator-guards.test.mjs"
   }
 }

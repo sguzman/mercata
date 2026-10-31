@@ -27,3 +27,7 @@ A usable market denominator requires an authoritative and dated platform-level *
 ## New independent volunteer-survey denominator — September 2026
 
 The [September 2026 first-party Steam Hardware & Software Survey audit](september-2026-voluntary-hardware-language-survey-buyer-boundaries.md) records a genuinely dated, optional, anonymous participant-composition source. Its Windows/Linux/macOS and selected client-language percentages cannot safely be multiplied by the **undated** monthly active-user marketing floor recorded above: the two sources have different known sampling populations, response inclusion and temporal support. Survey operating-system or language fractions are **not paid buyers** or country revenue, and no identified cross-source economic denominator has been added. See the [aggregate-only consistency tests](../../tests/steam-hardware-survey-segmentation-guard.test.mjs).
+
+## Input-scope validation — October 30, 2026
+
+The [public reach-denominator helper](../../site/steam-audience-denominator-guards.mjs) now requires **only its three explicitly named aggregate totals**. Fields representing buyer accounts, per-person histories, residence or invented survey weights are rejected instead of silently ignored; invalid root structures also fail closed. This improves study-input privacy and auditability without implying that a platform's monthly users or daily impressions represent unique purchasers. No new source claims, buyer counts, task progress or private material are added by this stricter test contract.

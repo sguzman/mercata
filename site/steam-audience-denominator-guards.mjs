@@ -1,6 +1,11 @@
 // Prevent denominator laundering across first-party platform reach and selected annual promotions.
 const positive=(x,k)=>{if(!Number.isSafeInteger(x)||x<=0)throw new TypeError('Positive safe integer required for '+k);return x;};
-export function auditSteamPublicAudienceDenominators({advertisedMonthlyActiveFloor,advertisedDailyImpressions,selectedAnnualPromotionBuyers}={}){
+const fields=['advertisedMonthlyActiveFloor','advertisedDailyImpressions','selectedAnnualPromotionBuyers'];
+export function auditSteamPublicAudienceDenominators(input={}){
+ if(input===null||typeof input!=='object'||Array.isArray(input)||
+  Object.keys(input).some(key=>!fields.includes(key)))
+  throw new TypeError('Public aggregate reach fields only; no accounts or buyer identifiers');
+ const {advertisedMonthlyActiveFloor,advertisedDailyImpressions,selectedAnnualPromotionBuyers}=input;
  const monthlyActive=positive(advertisedMonthlyActiveFloor,'monthly active floor');
  const dailyImpressions=positive(advertisedDailyImpressions,'daily impressions');
  const annualDealBuyers=positive(selectedAnnualPromotionBuyers,'annual promotion buyers');

@@ -26,6 +26,21 @@ test('Impossible or unsafe reach values are rejected and never converted to prof
  assert.throws(()=>audit({...inp,selectedAnnualPromotionBuyers:8.2}),/Positive/);
  assert.throws(()=>audit({...inp,advertisedDailyImpressions:Number.MAX_SAFE_INTEGER+1}),/Positive/);
 });
+test('Unexpected identity, regional payer or per-user fields cannot hide in aggregate research input',()=>{
+ for(const change of [{buyer_account_id:'private'}, {country_of_residence:'MX'},
+  {steamid:'not-a-fixture'}, {personal_purchase_history:[]}, {survey_sample_weight:1}]){
+  assert.throws(()=>audit({...inp,...change}),/Public aggregate reach fields only/);
+ }
+ assert.equal(audit(inp).verified_paid_buyer_count,null);
+});
+test('Only named aggregate measurements are accepted, rejecting other root shapes',()=>{
+ for(const bad of [null,[],42,'reach',true]){
+  assert.throws(()=>audit(bad),/Public aggregate reach fields only/);
+ }
+ const clean={...inp};
+ assert.equal(audit(clean).monthly_active_users_advertised_floor,132000000);
+ assert.deepEqual(clean,inp);
+});
 test('Public source and claim integrity preserves exactly 293 original tasks',()=>{
  const sources=new Set(d.evidence.map(e=>e.id)),claims=new Map(d.claims.map(c=>[c.id,c]));
  assert.equal(x.source_ids.length,3);assert.equal(x.claim_ids.length,9);
