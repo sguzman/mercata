@@ -44,8 +44,9 @@ test('Public author, store and national-news sources join ten bounded claim reco
   const c=claims.get(id);assert(c,id);
   assert(c.source_ids.length>0&&c.source_ids.every(id=>sources.has(id)));
  }
- assert.equal(dossier.evidence.length,267);
- assert.equal(dossier.claims.length,1562);
+ // Verify this case's provenance without freezing mutable global source totals.
+ assert(dossier.evidence.length>=x.source_ids.length);
+ assert(dossier.claims.length>=x.claim_ids.length);
 });
 test('Existing five credited tasks and fixed 293-task Steam frame preserve honest progress',()=>{
  const tasks=[...plan.detail_tasks,...queue.queues.flatMap(g=>g.tasks)];

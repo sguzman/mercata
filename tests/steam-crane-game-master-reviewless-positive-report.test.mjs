@@ -49,8 +49,9 @@ test('Two public sources and eight claims are present and joined in the Steam do
   const c=claims.get(id);assert(c,id);
   assert(c.source_ids.every(id=>ids.has(id)));
  }
- assert.equal(d.evidence.length,264);
- assert.equal(d.claims.length,1552);
+ // Global source totals can grow as independent studies are added.
+ assert(d.evidence.length>=study.source_ids.length);
+ assert(d.claims.length>=study.claim_ids.length);
 });
 test('Original Steam task inventory and updated source-linked progress remain coherent',()=>{
  const tasks=[...p.detail_tasks,...q.queues.flatMap(x=>x.tasks)];
