@@ -2952,6 +2952,17 @@
       "evidence_class": "contemporaneous_reported_country_level_steam_store_and_checkout_access_restrictions",
       "license": "Public article URL, publication date and concise independently written factual summary; no original paragraphs or media reproduced.",
       "notes": "News reports early May 2024 store/payment-access failures among users in Vietnam and quotes a regulatory official about restrictions. It does not prove uniformly blocked access for every viewer, every ISP, every game, or individual buyer purchase ability."
+    },
+    {
+      "id": "steam-getreviews-legacy-route-deprecated-official-20261030",
+      "url": "https://partner.steamgames.com/doc/store/getreviews?l=english",
+      "title": "User Reviews - Get List: deprecated endpoint",
+      "publisher": "Valve Corporation — Steamworks official documentation",
+      "published_at": null,
+      "retrieved_at": "2026-10-30",
+      "evidence_class": "official_legacy_review_endpoint_deprecation_and_new_review_api_migration_pointer",
+      "license": "Official public documentation URL and original short factual paraphrase only, without copying API content or review data.",
+      "notes": "Valve marks old User Reviews Get List endpoint deprecated and directs users to IUserReviewsService GetAppReviews. Method reference separately documents all-language, purchase-origin, off-topic, pagination and query-summary caveats. No authenticated merchant or reviewer data accessed."
     }
   ],
   "claims": [
@@ -19128,6 +19139,48 @@
       "confidence": "bounded_contemporaneous_author_report_and_country_news_not_verified_attribution",
       "observed_at": "2026-10-30",
       "limitations": "Different public evidence classes: author-reported reach/visits and sale counts, official game identity, and contemporaneous national access reporting. No matched buyers, randomized marketing exposure, verified UTM attribution, transaction ledger or full-market sample."
+    },
+    {
+      "id": "steam-review-query-migration-old-getlist-officially-deprecated",
+      "text": "Valve marks the old review list route deprecated and directs integrations to IUserReviewsService GetAppReviews; this audit does not independently probe the old route.",
+      "source_ids": [
+        "steam-review-api-2026",
+        "steam-getreviews-legacy-route-deprecated-official-20261030"
+      ],
+      "confidence": "bounded_official_steamworks_api_documentation_and_synthetic_query_guard",
+      "observed_at": "2026-10-30",
+      "limitations": "Only official interface semantics and invented query/page fixtures were checked. No live review endpoint, public user-level review record, historical paid game cohort, developer financial report or actual purchase count was retrieved."
+    },
+    {
+      "id": "steam-review-query-migration-enum-and-language-purchase-mapping",
+      "text": "The current review method requires an input_json request and numeric filter, review-type and purchase-type enum values; languages is a list, not the old language scalar.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "confidence": "bounded_official_steamworks_api_documentation_and_synthetic_query_guard",
+      "observed_at": "2026-10-30",
+      "limitations": "Only official interface semantics and invented query/page fixtures were checked. No live review endpoint, public user-level review record, historical paid game cohort, developer financial report or actual purchase count was retrieved."
+    },
+    {
+      "id": "steam-review-query-migration-full-history-cursors",
+      "text": "Valve recommends Recent or Updated sorting for eventual empty-page traversal; Helpful may expand its date range and cannot be treated as a stable exhaustive history crawl.",
+      "source_ids": [
+        "steam-review-api-2026"
+      ],
+      "confidence": "bounded_official_steamworks_api_documentation_and_synthetic_query_guard",
+      "observed_at": "2026-10-30",
+      "limitations": "Only official interface semantics and invented query/page fixtures were checked. No live review endpoint, public user-level review record, historical paid game cohort, developer financial report or actual purchase count was retrieved."
+    },
+    {
+      "id": "steam-review-query-migration-firstpage-score-vs-count",
+      "text": "Query-summary score totals are supplied only on the first page and only when review_type is All; these totals must not be treated as per-page increments or paid checkout counts.",
+      "source_ids": [
+        "steam-review-api-2026",
+        "steam-review-policy-2026"
+      ],
+      "confidence": "bounded_official_steamworks_api_documentation_and_synthetic_query_guard",
+      "observed_at": "2026-10-30",
+      "limitations": "Only official interface semantics and invented query/page fixtures were checked. No live review endpoint, public user-level review record, historical paid game cohort, developer financial report or actual purchase count was retrieved."
     }
   ],
   "observations": [],

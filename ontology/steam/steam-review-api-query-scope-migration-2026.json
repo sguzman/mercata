@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "specimen_id": "steam",
+  "kind": "synthetic_review_query_migration_comparability_and_pagination_guard",
+  "reviewed_at": "2026-10-30",
+  "source_ids": [
+    "steam-review-api-2026",
+    "steam-review-policy-2026",
+    "steam-getreviews-legacy-route-deprecated-official-20261030"
+  ],
+  "claim_ids": [
+    "steam-review-query-migration-old-getlist-officially-deprecated",
+    "steam-review-query-migration-enum-and-language-purchase-mapping",
+    "steam-review-query-migration-full-history-cursors",
+    "steam-review-query-migration-firstpage-score-vs-count"
+  ],
+  "reference_route": "https://partner.steamgames.com/doc/webapi/IUserReviewsService",
+  "deprecated_reference": "https://partner.steamgames.com/doc/store/getreviews?l=english",
+  "controls": {
+    "service": "IUserReviewsService/GetAppReviews/v1",
+    "legacy_route_deprecated": true,
+    "legacy_scalar_language_is_now_languages_array": true,
+    "numeric_filter_enums": {
+      "helpful": 0,
+      "recent": 1,
+      "updated": 2,
+      "funny": 3
+    },
+    "numeric_purchase_enums": {
+      "steam": 0,
+      "all": 1,
+      "non_steam": 2
+    },
+    "numeric_review_type_enums": {
+      "all": 0,
+      "positive": 1,
+      "negative": 2
+    },
+    "unspecified_language_default": "english",
+    "unspecified_purchase_type_default": "steam",
+    "unspecified_offtopic_filter_default": true,
+    "stable_historical_pagination_sort": [
+      "recent",
+      "updated"
+    ],
+    "input_json_parameter_required": true,
+    "first_page_score_totals_only_for_review_type_all": true,
+    "private_review_ids_allowed_in_fixture": false
+  },
+  "unknown": {
+    "live_endpoint_operational_read": null,
+    "real_full_review_count": null,
+    "real_first_30day_review_count": null,
+    "authenticated_paid_checkout_units": null,
+    "actual_original_paid_games_without_reviews": null,
+    "actual_zero_paid_sales_fraction": null,
+    "user_level_review_data": null,
+    "publisher_net_income": null
+  },
+  "model_path": "site/steam-review-api-query-scope-guard.mjs",
+  "test_path": "tests/steam-review-api-query-scope-guard.test.mjs",
+  "reviewers_or_real_appids_imported": false,
+  "live_endpoint_called": false
+}

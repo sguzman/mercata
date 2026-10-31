@@ -152,5 +152,23 @@
     "underlying_paid_estimator_database_downloaded": false,
     "merchant_login_used": false,
     "paid_experiment_conducted": false
+  },
+  "supplemental_review_api_query_audit": {
+    "source_ids": [
+      "steam-review-api-2026",
+      "steam-review-policy-2026",
+      "steam-getreviews-legacy-route-deprecated-official-20261030"
+    ],
+    "claim_ids": [
+      "steam-review-query-migration-old-getlist-officially-deprecated",
+      "steam-review-query-migration-enum-and-language-purchase-mapping",
+      "steam-review-query-migration-full-history-cursors",
+      "steam-review-query-migration-firstpage-score-vs-count"
+    ],
+    "model_path": "site/steam-review-api-query-scope-guard.mjs",
+    "test_path": "tests/steam-review-api-query-scope-guard.test.mjs",
+    "fake_summary_pages_only": true,
+    "actual_unique_review_census": null,
+    "actual_paid_orders": null
   }
 }
